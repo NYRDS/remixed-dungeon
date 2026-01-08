@@ -1770,6 +1770,7 @@
     <string name="Shaman_Name_Objective">豺狼萨满</string>
     <string name="Shaman_ZapMiss">*地精的咒骂*</string>
     <string name="Sheep_Desc">这是一只魔法绵羊。为什么叫魔法绵羊？因为你没法杀死它。它只会站在那里直到魔法失效，在它消失前，它只会站在这儿咀嚼反刍物，神情空洞。</string>
+    <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">魔法绵羊</string>
     <string name="Sheep_Name_Objective">魔法绵羊</string>
     <string name="ShieldBuffNotReady_Info">你的盾牌还没准备好抵挡下一次攻击。</string>
@@ -2733,6 +2734,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -1357,6 +1357,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="OverpricedRation_Info">Standart porsiyon gibi görünüyor ama daha küçük.</string>
     <string name="OverpricedRation_Message">Bu yemek güzeldi.</string>
     <string name="OverpricedRation_Name">kazık fiyatlı porsiyon</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Bu ok kürar ile kaplanmış.</string>
     <string name="ParalysisArrow_Name">felç edici ok</string>
     <string name="ParalysisBuff_Info">Tamamen Felçli!</string>
@@ -2792,6 +2793,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

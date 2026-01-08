@@ -2025,6 +2025,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_barrel_wine_desc">Utilizzato per conservare una bevanda così preziosa come il vino.</string>
     <string name="town_deco_barrel_wine_name">Botte di vino</string>
     <string name="town_deco_beige_carpet_name">Tappeto</string>
+    <string name="town_deco_bell_desc">Una tipica campana di chiesa. Sembra che nessuno l'abbia suonata per molto tempo e persino la corda è sparita.</string>
     <string name="town_deco_bell_name">Campana</string>
     <string name="town_deco_bell_tower_name">Campanile</string>
     <string name="town_deco_blue_carpet_desc">Un lussuoso tappeto blu, decorato con ornamenti viola.</string>
@@ -2138,6 +2139,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
