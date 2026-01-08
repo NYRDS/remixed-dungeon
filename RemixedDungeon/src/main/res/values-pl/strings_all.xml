@@ -315,7 +315,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Brute_Name">gnoll okrutnik</string>
     <string name="Brute_Name_Objective">gnoll okrutnik</string>
     <string name="Brute_StaEnraged">wściekły</string>
-    <string name="BuffParam_Cooldown">Odnowienie %.2f</string>
+    <string name="BuffParam_Cooldown">Czas odnowienia: %.2f</string>
     <string name="BurningBuff_Info">Twe ciało pochłaniają płomienie!</string>
     <string name="BurningBuff_Name">Pożoga</string>
     <string name="BurningFist_Desc">Płonąca Pięść Prastarego Boga</string>
@@ -2995,5 +2995,8 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
+
 
 </resources>

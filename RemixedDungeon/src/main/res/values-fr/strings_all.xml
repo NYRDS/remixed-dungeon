@@ -234,7 +234,7 @@
     <string name="Bishop_title">Évêque</string>
     <string name="BlackCat_AiStatus">Ce chat noir domestique ne fait rien de plus qu\'un chat ordinaire</string>
     <string name="BlackCat_Desc">C\'est un chat noir</string>
-    <string name="BlackCat_Gender">masculine</string>
+    <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Name">Chat noir</string>
     <string name="BlackCat_Name_Objective">Chat</string>
     <string name="BlackCat_Phrases_0">Ron-ron</string>
@@ -2877,6 +2877,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 
