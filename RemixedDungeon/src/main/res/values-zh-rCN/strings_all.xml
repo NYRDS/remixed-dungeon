@@ -1052,6 +1052,7 @@
     <string name="Knuckles_Info">一块专门切合指节轮廓的铁片。</string>
     <string name="Knuckles_Name">指虎</string>
     <string name="KoboldIcemancer_Desc">蓝袍狗头人是狗头人中的精英。它们既是战士，也是法师，更是科学家。古代冰师掌握了指挥冰的艺术，创造了用特殊咒语加强的复杂机械。 </string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">%s的冰锥捅死了你……</string>
     <string name="KoboldIcemancer_Name">蓝袍狗头人</string>
     <string name="KoboldIcemancer_Name_Objective">蓝袍狗头人</string>
@@ -2734,6 +2735,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -810,6 +810,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="HealerNPC_Name_Objective">sacerdote</string>
     <string name="Healing_Info">Este hechizo es vital para los aventureros. Restaura 1/3 del máximo de salud a quien lanza el hechizo.</string>
     <string name="Healing_Name">Curación</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Esta flecha está cubierta con poción de curación.</string>
     <string name="HealthArrow_Name">Flecha de curación</string>
     <string name="HealthDart_Info">La punta de este dardo está cubierta con poción de curación.</string>
@@ -2737,6 +2738,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

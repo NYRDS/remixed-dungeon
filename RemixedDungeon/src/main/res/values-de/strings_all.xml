@@ -491,6 +491,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="Crystal_Desc">Ein großer leuchtender Kristall schwebt in der Luft. Wahrscheinlich steckt ein starker Zauber drin.</string>
     <string name="Crystal_Name">Fließender Kristall</string>
     <string name="Crystal_Name_Objective">Fließender Kristall</string>
+    <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">Diese kleinen Pfeile machen nicht viel Schaden, dafür aber können sie den Gegner lähmen.</string>
     <string name="CurareDart_Name">Lähmender Pfeil</string>
     <string name="DM300_Desc">Diese Maschine wurde vor vielen Jahrhunderten von den Zwergen erschaffen. Die Zwerge begannen damit, ihre Maschinen durch Golems, Elementare und sogar Dämonen zu ersetzen. Dies führte möglicherweise zum Niedergang ihrer Zivilisation. Die DM-300 und andere Maschinen wurden üblicherweise für Bau- und Minenarbeiten genutzt, manchmal auch zur Stadtverteidigung.</string>
@@ -2603,6 +2604,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
