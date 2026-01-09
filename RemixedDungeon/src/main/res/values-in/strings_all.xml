@@ -1258,6 +1258,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="MoongraceBuff_Name">Manna surgawi</string>
     <string name="Moongrace_Desc">Tumbuhan ini tumbuh dalam jumlah kecil dan dikenal sebagai sumber keajaiban alam.</string>
     <string name="Moongrace_Name">Moongrace</string>
+    <string name="Movement_Speed">Kecepatan gerak</string>
     <string name="Multiplicity_Txt">%s penggandaan</string>
     <string name="Mushroom_Eat_Message">Jamur itu terasa aneh!</string>
     <string name="MysteryMeat_Info">Makan dan tanggung risiko anda sendiri!</string>
@@ -2710,6 +2711,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

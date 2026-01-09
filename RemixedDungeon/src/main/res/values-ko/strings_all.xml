@@ -1984,6 +1984,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndHero_StaJournal">일지</string>
     <string name="WndHero_StaTitle">Level %1$d %2$s</string>
     <string name="WndHero_Stats">스탯</string>
+    <string name="WndHero_Stealth">은밀성</string>
     <string name="WndHero_Str">힘</string>
     <string name="WndImp_Message">오 좋아! 큰 신세를 졌어!
 당장 줄 돈은 없지만, 그것보다 더 좋은 게 있어. 이 반지는 우리 집안의 가보인데, 울 할아버지가 죽은 성기사의 손가락에서 빼내온 거라고 해.</string>
@@ -2332,6 +2333,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
