@@ -13,6 +13,7 @@
     <string name="AboutScene_OurSite">İnternet sitemiz:</string>
     <string name="AboutScene_Snd">E-Posta Gönder</string>
     <string name="AboutScene_Sound">Ses:</string>
+    <string name="AboutScene_SourceCode">Remixed Dungeon kaynak kodlarını alın:</string>
     <string name="AboutScene_Thanks">Teşekkürler:</string>
     <string name="AboutScene_Translation">Yerelleştirme:</string>
     <string name="AboutScene_Translation_Names">Topluluk</string>
@@ -2795,6 +2796,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

@@ -1766,6 +1766,7 @@ otro lugar del nivel.</string>
     <string name="ShadowLord_Name">maestro de las sombras</string>
     <string name="ShadowLord_Name_Objective">Maestro de las Sombras</string>
     <string name="Shadow_Desc">Las sombras deambulan silenciosamente por las ruinas de la antigua prisión. Solo a veces se muestran antes los aventureros... Normalmente en su última aventura.</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name">sombra</string>
     <string name="Shadow_Name_Objective">sombra</string>
     <string name="ShadowsBuff_Info">Es más difícil detectar algo entre las sombras.</string>
@@ -2738,6 +2739,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
