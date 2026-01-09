@@ -568,6 +568,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DonateButton_pleaseDonate">Por favor, considere doar</string>
     <string name="DonateButton_thanks">Obrigado pelo seu apoio!</string>
     <string name="DreadKnight_Desc">Um cavaleiro temido é um antigo guerreiro, que jamais foi justo ou bondoso em toda a sua vida.  Por causa dos seus pecados ele foi amaldiçoado à ser um morto-vivo pela eternidade. E, a todo momento de sua existência, ele é atormentado com a dor e o sofrimento daqueles que foram suas vítimas.</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">Cavaleiro temido</string>
     <string name="DreadKnight_Name_Objective">Cavaleiro temido</string>
     <string name="Dreamweed_Desc">Ela secreta uma nuvem brilhante de gás da confusão.</string>
@@ -2711,6 +2712,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

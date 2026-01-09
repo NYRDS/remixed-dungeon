@@ -524,6 +524,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Eye_Kill">%s\'s raggio mortale ti ha ucciso...</string>
     <string name="Eye_Name">malocchio </string>
     <string name="Eye_Name_Objective">Malocchio</string>
+    <string name="Facilitations_Descriptions_3">Stringendo la cintura di pelle di orco, tramandata ad ogni nuova generazione, fai un passo verso l'ignoto che ti attende.</string>
     <string name="Fadeleaf_Desc">Toccare una Svanifoglia farà teletrasportare qualsiasi creatura in un posto a caso sul livello attuale.</string>
     <string name="Fadeleaf_Name">Svanifoglia</string>
     <string name="FetidRat_Desc">Questo topo marsupiale è molto più grande rispetto ad uno normale. Ed è circondato da una nuvola di gas puzzolente.</string>
@@ -2102,6 +2103,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_shop_sign_name">Insegna del negozio</string>
     <string name="town_deco_skullboard_desc">Questo teschio cattura perfettamente il momento di orrore inaspettato.</string>
     <string name="town_deco_skullboard_name">Porta trofei</string>
+    <string name="town_deco_slush_desc">Questa neve ha cominciato a sciogliersi, rendendo la zona circostante fangosa.</string>
     <string name="town_deco_snow_desc">Nonostante la fama di questo posto tra gli avventurieri, sorprendentemente c\'è molta neve qui. Sembra che camminino per queste strade in molto pochi</string>
     <string name="town_deco_snow_name">Neve</string>
     <string name="town_deco_snowman_desc">Il pupazzo di neve è una decorazione tradizionale del paese durante il periodo delle feste, messo in questo posto per celebrare specialmente il giorno di \&quot;Dungeonale\&quot;, quando i mostri invasero il dungeon</string>
@@ -2143,6 +2145,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
