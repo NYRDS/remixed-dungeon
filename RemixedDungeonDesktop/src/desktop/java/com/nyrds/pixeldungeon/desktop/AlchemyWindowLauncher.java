@@ -60,6 +60,9 @@ public class AlchemyWindowLauncher extends RemixedDungeon {
             Ring.initGems();
             Scroll.initLabels();
             Potion.initColors();
+
+            // Initialize the hero to avoid null pointer exceptions
+            com.watabou.pixeldungeon.Dungeon.hero = new com.watabou.pixeldungeon.actors.hero.Hero();
         } catch (Exception e) {
             GLog.w("Error initializing static handlers: " + e.getMessage());
         }

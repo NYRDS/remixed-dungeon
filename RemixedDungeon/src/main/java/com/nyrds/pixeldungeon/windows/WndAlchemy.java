@@ -1,52 +1,36 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
-import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.util.GuiProperties;
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Text;
-import com.watabou.noosa.TouchArea;
-import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.ui.ItemSlot;
+import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.ui.RedButton;
-import com.nyrds.pixeldungeon.windows.HBox;
-import com.nyrds.pixeldungeon.windows.VBox;
-import com.watabou.utils.GameMath;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-
-import com.nyrds.platform.input.Touchscreen.Touch;
 
 /**
  * Window for displaying and executing alchemy recipes
  */
 public class WndAlchemy extends Window {
 
-    private static final int SLOT_SIZE = 24;
     private static final int MARGIN = 2;
     private static final int TITLE_COLOR = 0xFFFF44;
     private final VBox mainLayout;
 
     // Track selected recipe
     private Entry<List<String>, String> selectedRecipe;
-    private HBox selectedRow;
-    private ColorBlock selectedBackground;
+    private RecipeListItem selectedRow;
     private RedButton executeButton;
 
-    // Track recipe rows and backgrounds for selection
-    private java.util.ArrayList<HBox> recipeRows = new java.util.ArrayList<>();
-    private java.util.ArrayList<ColorBlock> recipeBackgrounds = new java.util.ArrayList<>();
+    // Track recipe rows for selection
+    private java.util.ArrayList<RecipeListItem> recipeRows = new java.util.ArrayList<>();
 
     public WndAlchemy() {
         super();
@@ -78,75 +62,14 @@ public class WndAlchemy extends Window {
         Map<List<String>, String> allRecipes = AlchemyRecipes.getAllRecipes();
         if (!allRecipes.isEmpty()) {
             for (Entry<List<String>, String> recipeEntry : allRecipes.entrySet()) {
-                HBox recipeRow = new HBox(windowWidth - 4 * MARGIN);
-                recipeRow.setGap(2);
+                // Create a recipe list item
+                RecipeListItem recipeItem = getRecipeListItem(recipeEntry, windowWidth);
 
-                // Add input ingredients as text
-                for (String input : recipeEntry.getKey()) {
-                    // Try to create item if possible, otherwise just show text
-                    String substring = input.substring(0, Math.min(input.length(), 6));
-                    try {
-                        Item dummyItem = ItemFactory.itemByName(input);
-                        if (dummyItem != null) {
-                            ItemSlot inputSlot = new ItemSlot(dummyItem);
-                            inputSlot.setSize(SLOT_SIZE, SLOT_SIZE);
-                            recipeRow.add(inputSlot);
-                        } else {
-                            // If item creation fails, show text representation
-                            Text inputText = PixelScene.createText(substring, GuiProperties.smallFontSize());
-                            inputText.hardlight(TITLE_COLOR);
-                            recipeRow.add(inputText);
-                        }
-                    } catch (Exception e) {
-                        // Show text representation if item creation fails
-                        Text inputText = PixelScene.createText(substring, GuiProperties.smallFontSize());
-                        inputText.hardlight(TITLE_COLOR);
-                        recipeRow.add(inputText);
-                    }
-                }
+                // Add the recipe item to the recipes container
+                recipesContainer.add(recipeItem);
 
-                // Add arrow symbol
-                Text arrow = PixelScene.createText("->", GuiProperties.regularFontSize());
-                arrow.hardlight(TITLE_COLOR);
-                recipeRow.add(arrow);
-
-                // Add output item as text
-                try {
-                    Item outputItem = ItemFactory.itemByName(recipeEntry.getValue());
-                    if (outputItem != null) {
-                        ItemSlot outputSlot = new ItemSlot(outputItem);
-                        outputSlot.setSize(SLOT_SIZE, SLOT_SIZE);
-                        recipeRow.add(outputSlot);
-                    } else {
-                        // If item creation fails, show text representation
-                        Text outputText = PixelScene.createText(recipeEntry.getValue().substring(0, Math.min(recipeEntry.getValue().length(), 6)), GuiProperties.smallFontSize());
-                        outputText.hardlight(TITLE_COLOR);
-                        recipeRow.add(outputText);
-                    }
-                } catch (Exception e) {
-                    // Show text representation if item creation fails
-                    Text outputText = PixelScene.createText(recipeEntry.getValue().substring(0, Math.min(recipeEntry.getValue().length(), 6)), GuiProperties.smallFontSize());
-                    outputText.hardlight(TITLE_COLOR);
-                    recipeRow.add(outputText);
-                }
-
-                // Create a custom container for the recipe row to handle clicks
-                final Entry<List<String>, String> currentRecipe = recipeEntry;
-
-                // Add the recipe row to the recipes container first to ensure proper layout
-                recipesContainer.add(recipeRow);
-
-                // Add a background color block that will serve as the clickable area
-                ColorBlock background = new ColorBlock(recipeRow.width(), recipeRow.height(), 0x00000000); // Transparent initially
-                // Position the background to match the recipe row
-                background.setPos(recipeRow.getX(), recipeRow.getY());
-
-                // Add the background to the recipes container
-                recipesContainer.add(background);
-
-                // Track this recipe row and background for selection
-                recipeRows.add(recipeRow);
-                recipeBackgrounds.add(background);
+                // Track this recipe item for selection
+                recipeRows.add(recipeItem);
             }
         } else {
             // If no recipes are available, show a message
@@ -159,47 +82,9 @@ public class WndAlchemy extends Window {
         float scrollHeight = windowHeight - mainLayout.childsHeight() - 60; // Account for title, padding, and buttons
 
         // Create the scroll pane and override the onClick method to handle recipe selection
-        ScrollPane recipeScrollPane = new ScrollPane(recipesContainer) {
-            @Override
-            public void onClick(float x, float y) {
-                // Iterate through the recipe rows to find which one was clicked
-                for (int i = 0; i < recipeRows.size(); i++) {
-                    HBox recipeRow = recipeRows.get(i);
-                    ColorBlock background = recipeBackgrounds.get(i);
 
-                    // Check if the click is within the bounds of this recipe row
-                    if (recipeRow.inside(x, y)) {
-                        // Deselect previous selection
-                        if (selectedRow != null && selectedBackground != null) {
-                            selectedBackground.color(0x00000000); // Transparent
-                        }
 
-                        // Select current row
-                        selectedRow = recipeRow;
-                        selectedBackground = background;
-
-                        // Find the corresponding recipe entry for this row
-                        // We need to iterate through the original allRecipes to find the right one
-                        int currentIndex = 0;
-                        for (Entry<List<String>, String> recipeEntry : allRecipes.entrySet()) {
-                            if (currentIndex == i) {
-                                selectedRecipe = recipeEntry;
-                                break;
-                            }
-                            currentIndex++;
-                        }
-
-                        // Highlight the selected row
-                        background.color(0x88888888); // Gray tint for selection
-
-                        // Update button to reflect selection
-                        updateExecuteButton();
-                        break;
-                    }
-                }
-            }
-        };
-        recipeScrollPane.scrollTo(0,0);
+        ScrollPane recipeScrollPane = createScrollPane(recipesContainer, allRecipes);
         recipeScrollPane.setRect(0, 0, windowWidth - 4 * MARGIN, scrollHeight); // Almost fullscreen height for scrollable area
         recipeScrollPane.measure();
         mainLayout.add(recipeScrollPane);
@@ -234,6 +119,65 @@ public class WndAlchemy extends Window {
         // Update the layout
         mainLayout.layout();
         resize((int)windowWidth, (int)windowHeight);
+    }
+
+    private RecipeListItem getRecipeListItem(Entry<List<String>, String> recipeEntry, float windowWidth) {
+        RecipeListItem recipeItem = new RecipeListItem(recipeEntry.getKey(), recipeEntry.getValue());
+
+        // Set the size for the recipe item
+        recipeItem.setSize(windowWidth - 4 * MARGIN, 30); // Height can be adjusted as needed
+
+        // Click handling is now done in the recipe item itself
+        recipeItem.setOnClickListener(() -> {
+            // Deselect previous selection
+            if (selectedRow != null) {
+                selectedRow.setSelected(false);
+            }
+
+            // Update selection
+            selectedRow = recipeItem;
+            selectedRecipe = recipeEntry;
+
+            // Highlight the selected row
+            selectedRow.setSelected(true);
+
+            // Update button to reflect selection
+            updateExecuteButton();
+        });
+        return recipeItem;
+    }
+
+    private ScrollPane createScrollPane(VBox recipesContainer, Map<List<String>, String> allRecipes) {
+        ScrollPane recipeScrollPane = new ScrollPane(recipesContainer) {
+            @Override
+            public void onClick(float x, float y) {
+                // Iterate through the recipe items to find which one was clicked
+                for (int i = 0; i < recipeRows.size(); i++) {
+                    RecipeListItem recipeItem = recipeRows.get(i);
+
+                    // Check if the click is within the bounds of this recipe item
+                    if (recipeItem.inside(x, y)) {
+                        // Deselect previous selection
+                        if (selectedRow != null) {
+                            selectedRow.setSelected(false);
+                        }
+
+                        // Select current item
+                        selectedRow = recipeItem;
+                        selectedRecipe = allRecipes.entrySet().toArray(new Entry[0])[i];
+
+                        // Highlight the selected row
+                        selectedRow.setSelected(true);
+
+                        // Update button to reflect selection
+                        updateExecuteButton();
+                        break;
+                    }
+                }
+            }
+        };
+        recipeScrollPane.scrollTo(0,0);
+        return recipeScrollPane;
     }
 
     private void updateExecuteButton() {
