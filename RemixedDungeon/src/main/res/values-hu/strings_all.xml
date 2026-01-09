@@ -1619,6 +1619,7 @@ egy másik helyre a szinten. </string>
     <string name="Sheep_Desc">Ez egy mágikus bárány. Mi annyira varázslatos benne? Nem tudod megölni. Addig áll ott amíg egyszer csak el nem tűnik, közben csak rágcsál és bámul maga elé üres tekintettel.</string>
     <string name="Sheep_Name">bárány</string>
     <string name="Sheep_Name_Objective">bárány</string>
+    <string name="ShieldBuffReady_Info">A pajzsod készen áll a következő támadás blokkolására.</string>
     <string name="ShieldInfoTemplate">Ez a pajzs maximum %1$d -át fogja fel a kapott sebzésnek. %2$d%% eséllyel. %3$3.1f másodpercbe fog telni, hogy kiheverd a sikeres védekezést.</string>
     <string name="ShieldStrTemplate">A pajzs tulajdonosának legalább %1$d Erő ponttal kell rendelkeznie, ahhoz, hogy megfelelően tudja használni.</string>
     <string name="Shielded_Defense">kivédett</string>
@@ -2436,6 +2437,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

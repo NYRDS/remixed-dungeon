@@ -513,6 +513,7 @@
     <string name="Deathling_Name">死靈</string>
     <string name="Deathling_Name_Objective">死靈</string>
     <string name="DeepSnail_Desc">這種軟體動物經常出現在水源附近，而且比普通蝸牛速度快得多。不過要小心牠們的咬傷，可能會對你的皮膚造成不適。</string>
+    <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamage_Killed_Txt">%s 殺了您……</string>
     <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">吞噬</string>
@@ -2508,6 +2509,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
