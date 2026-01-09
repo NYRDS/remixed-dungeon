@@ -21,6 +21,7 @@
     <string name="Acidic_Name_Objective">酸蝕蠍子</string>
     <string name="Affection_Txt">魅惑 %s</string>
     <string name="AirElemental_Desc">風元素是由有生命的氣體構成的飛行元素生物。</string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">風元素</string>
     <string name="AirElemental_Name_Objective">風元素</string>
     <string name="AlarmTrap_Desc">這個陷阱發出的刺耳聲音回蕩在地牢中！</string>
@@ -2507,6 +2508,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

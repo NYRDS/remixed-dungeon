@@ -1016,6 +1016,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Name">Bercahaya</string>
+    <string name="LightningBolt_Name">Sambaran kilat</string>
     <string name="LightningTrap_Desc">Anda terbunuh kerana ada nyahcas dari perangkap panahan kiliat...</string>
     <string name="LightningTrap_Name">perangkap panahan kilat</string>
     <string name="LloidsBeacon_ACReturn">KEMBALI</string>
@@ -2410,6 +2411,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

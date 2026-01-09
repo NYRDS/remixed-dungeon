@@ -2275,6 +2275,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndModInstall_Version">Versi</string>
     <string name="WndModSelect_AreYouSure">Menghapus mod: %s, apa kau yakin?</string>
     <string name="WndModSelect_ReallyDelete">Yakin ingin dihapus?</string>
+    <string name="WndModsDisclaimer_install">Pasang mod lokal</string>
     <string name="WndModsDisclaimer_title">Mod</string>
     <string name="WndMovieTheatre_Bye">Kembalilah kapan saja, kami selalu senang melihat Anda!</string>
     <string name="WndMovieTheatre_Instruction">Salam dan selamat datang di bioskop kami! Kami menyediakan layanan khusus, di mana Anda dapat menonton film khusus yang disebut iklan secara gratis. Dan jika Anda menonton sampai selesai, Anda akan mendapatkan hadiah %d koin emas!</string>
@@ -2711,6 +2712,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
