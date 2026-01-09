@@ -933,6 +933,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="KindOfWeapon_EquipCursed">Megrezzensz amikor a markod akaratlanul kezdi el szóritani a(z) %s-t</string>
     <string name="King_Defense">kivédve</string>
     <string name="King_Desc">Az utolső törp király az élet és a halál működéséről szerzett alapos tudásáról volt ismert. Meggyőzte a hűséges követőit hogy vegyenek részt egy szertartáson, ami által örök fiatalságot fognak kapni. A szertartás végeztével a király volt az egyetlen aki megkapta ezt - egy sereg élőhalott csontvázzal egyetemben.</string>
+    <string name="King_Gender">masculine</string>
     <string name="King_Info1">Nem tudsz megölni, %s... Én... halhatatlan vagyok...</string>
     <string name="King_Info2">Emelkedjetek, rabszolgák!</string>
     <string name="King_Info3">Hogy merészelsz!</string>
@@ -1097,6 +1098,7 @@ Ennek a viselése azt jelenti, hogy odafigyelsz másokra.</string>
     <string name="Mimic_Desc">Az Utánzók mágikus teremtmények amelyek képesek bármilyen alak felvételére akaratuk szerint. A kazamatában legtöbbször egy kincsesláda képében jelennek meg, mivel pontosan tudják, hogy mivel lehet egy kalandor figyelmét felhívni.</string>
     <string name="Mimic_Name">utánzó</string>
     <string name="Mimic_Name_Objective">utánzó</string>
+    <string name="MindVisionBuff_Name">Mentális Látás</string>
     <string name="MirrorImage_Desc">Az illúzió nagyon hasonlít rád, de kicsit halványabb és picit rángatózik.</string>
     <string name="MirrorImage_Name">tükörkép</string>
     <string name="MirrorImage_Name_Objective">tükörkép</string>
@@ -2437,6 +2439,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

@@ -600,6 +600,7 @@
     <string name="Dungeon_Tips_7">Голод не наносить шкоди, що не скажеш про виснаження.</string>
     <string name="Dungeon_Tips_8">Несподівана атака має більшу влучність. Наприклад, ти можеш зачекати ворога за зачиненими дверима, маючи впевненість, що він наближається.</string>
     <string name="Dungeon_Tips_9">Не випускай Тенґу!</string>
+    <string name="Dungeon_saveIoError">При спробі створити файл збереження:</string>
     <string name="DwarfToken_Info">Багато хто з дворфів та їхні масивні витвори носили при собі ці маленькі металеві штучки. Яку роль вони грали, так і лишилося загадкою. Чи може це була прикраса, чи щось схоже на перепустку. Дворфи дивний народ.</string>
     <string name="DwarfToken_Name">дворфський жетон</string>
     <string name="EarthElemental_Desc">Земляні елементалі - це глиби землі, рухомі силами природи.</string>
@@ -2583,6 +2584,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
