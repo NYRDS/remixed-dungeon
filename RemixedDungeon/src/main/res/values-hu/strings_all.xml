@@ -533,6 +533,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="DriedRose_Name">kiszárított rózsa</string>
     <string name="Drink_ACDrink">IDD MEG</string>
     <string name="Drink_Message">Ez az ital felrissítő volt!</string>
+    <string name="Drunkard_Phrase_3">Ez a sör így néz ki, mint a por</string>
     <string name="Dungeon_DeadEnd">Mit keresel te itt?!</string>
     <string name="Dungeon_NoTips">A szöveg kibetűzhetetlen...</string>
     <string name="Dungeon_Tips_0">Ne becsüld túl az erődet, csak olyan fegyvert és páncélt használj amivel meg is tudsz bírkozni.</string>
@@ -1328,6 +1329,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="PseudoPasty_Info">Ez az igazi kelta pástétom marhahússal és krumplival van töltve .</string>
     <string name="PseudoPasty_Name">pástétom</string>
     <string name="PseudoRat_Desc">A szörnyű lény, ami a patkányhullából alakult ki, semmilyen rágcsálóhoz vagy más állathoz nem hasonlít amit valaha is láttál. Iszonyú száj, tele pengeéles fogakkal, szinte az egész testét betölti.</string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">Pseudo-Patkány</string>
     <string name="PseudoRat_Name_Objective">Pseudo-Patkány</string>
     <string name="PumpkinPie_Info">Finom tökös pite, olyan, amit anyukád szokott sütni.</string>
@@ -2433,6 +2435,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
