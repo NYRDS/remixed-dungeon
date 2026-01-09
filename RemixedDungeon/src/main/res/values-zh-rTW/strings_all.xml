@@ -2303,6 +2303,7 @@
     <string name="town_deco_INN_sign_name">酒館招牌</string>
     <string name="town_deco_armoronhanger_desc">一些不同樣式的盔甲掛在盔甲架上。</string>
     <string name="town_deco_armoronhanger_name">盔甲</string>
+    <string name="town_deco_armorstand_leather_name">皮革護甲</string>
     <string name="town_deco_banner_desc">一面優雅的旗幟，上面的繡花描繪著這個小酒館的象徵標誌。</string>
     <string name="town_deco_banner_name">旗幟</string>
     <string name="town_deco_barrel_desc">一個普通的桶，有些破損。</string>
@@ -2505,6 +2506,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
