@@ -301,6 +301,7 @@
     <string name="ChaosArmor_Name">혼돈 갑옷</string>
     <string name="ChaosBow_Info">이 공포스러운 활은 혼돈의 힘으로 차있습니다. 화살들은 혼돈의 기운을 담아 목표물에게 발사 될 것입니다. 하지만 만약 빗나가게 되면...</string>
     <string name="ChaosBow_Name">혼돈 활</string>
+    <string name="ChaosCrystal_ArmorFused">크리스탈이 갑옷과 융합되어 혼돈의 형태를 띠게 되었다.</string>
     <string name="ChaosCrystal_BowFused">수정이 당신의 활을 흡수했고, 활의 형태가 되었습니다.</string>
     <string name="ChaosCrystal_Fuse">융합</string>
     <string name="ChaosCrystal_Info">쥐고 있는 동안 손으로 흘러 들어오는 에너지의 흐름이 느껴진다.</string>
@@ -2333,6 +2334,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

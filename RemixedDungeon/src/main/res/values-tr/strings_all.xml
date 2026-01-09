@@ -1857,6 +1857,7 @@ seviyenin başka bir yeri.</string>
     <string name="SociologistNPC_AlreadyTaken">Bu anketi çoktan doldurdunuz, lütfen daha sonra tekrar gelin.</string>
     <string name="SociologistNPC_Desc">Bu sosyolog, toplumun görüşlerini derlemek gibi kutsal bir vazifeyi üstlenmiş.</string>
     <string name="SociologistNPC_DownloadError">Bir yerde bir yanlışlık oldu galiba, daha sonra tekrar deneyebilir misiniz?</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Hi">Merhabalar!\n
 Birkaç dakikanızı ayırıp anketimizi doldurmak ister misiniz?\n
 (İnternet bağlantısı gerekmektedir.)\n
@@ -2794,6 +2795,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
