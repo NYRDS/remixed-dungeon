@@ -2373,6 +2373,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_scrolls_name">Mágikus Tekercs</string>
     <string name="town_deco_shelf_desc">Üres polcok</string>
     <string name="town_deco_shelf_name">Polcok</string>
+    <string name="town_deco_shelving_desc">Egy lenyűgöző méretű állvány, amelynek polcain különféle italokat és harapnivalókat találsz.</string>
     <string name="town_deco_shieldboard_desc">Különböző pajzsok vannak kint a deszkán. Még nem eladók.</string>
     <string name="town_deco_shieldboard_name">Pajzsok</string>
     <string name="town_deco_shop_sign_desc">Űgy tűnik van egy bolt az épület belsejében.</string>
@@ -2435,6 +2436,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
