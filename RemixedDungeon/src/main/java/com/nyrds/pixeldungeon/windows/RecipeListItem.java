@@ -126,7 +126,7 @@ public class RecipeListItem extends Component implements IClickable {
         outputBox.add(outputSlotTemp);
 
         // Create background color block for selection highlighting
-        ColorBlock background = new ColorBlock(100, 30, UNSELECTED_COLOR);
+        ColorBlock background = new ColorBlock(width, height, UNSELECTED_COLOR);
 
         // Add components to this list item in the correct order (background first)
         add(background);
@@ -148,21 +148,26 @@ public class RecipeListItem extends Component implements IClickable {
     public void layout() {
         super.layout();
 
-        // Position the ingredients box on the left
-        ingredientsBox.setPos(x, y);
-        ingredientsBox.setSize(width / 3 - 10, height); // About 1/3 of the width for ingredients
+        // Layout ingredients tightly together
+        float totalIngredientsWidth = 0;
+        for (int i = 0; i < ingredientsBox.getLength(); i++) {
+            GrayableItemSlot slot = (GrayableItemSlot) ingredientsBox.getMember(i);
+            slot.setRect(x + totalIngredientsWidth, y, slot.width(), height);
+            totalIngredientsWidth += slot.width() + 2; // 2 pixels spacing between items
+        }
 
-        // Position the arrow in the middle
-        arrow.setX(ingredientsBox.right() + 10); // Space between ingredients and arrow
+        // Position the arrow after the ingredients
+        arrow.setX(totalIngredientsWidth + 5); // 5 pixels space after ingredients
         arrow.setY(PixelScene.align(y + (height - arrow.baseLine()) / 2));
 
-        // Position the output box to the right of the arrow
-        outputBox.setPos(arrow.getX() + arrow.width() + 10, y); // Space between arrow and output
-        outputBox.setSize(width / 3 - 10, height); // About 1/3 of the width for output
+        // Position the output box to the far right
+        outputBox.setPos(width - outputBox.width(), y); // Align to the right edge of the component
+        outputBox.setSize(outputBox.width(), height);
 
-        // Call layout on child boxes
-        ingredientsBox.layout();
-        outputBox.layout();
+        // Adjust arrow position if output box overlaps
+        if (arrow.getX() + arrow.width() >= outputBox.left()) {
+            arrow.setX(outputBox.left() - arrow.width() - 5); // Ensure space between arrow and output
+        }
     }
 
     public void setOnClickListener(Runnable listener) {
