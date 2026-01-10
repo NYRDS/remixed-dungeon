@@ -1098,6 +1098,7 @@ Potrebbe bruciare?</string>
     <string name="PlagueDoctorNPC_Desc">L'intero corpo di questa persona ingobbita è nascosto sotto una tuta di pelle. Inoltre, da lui proviene un amaro odore di medicinali e... aglio?</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Riesci a crederci? Quegli idioti non hanno ancora capito quanto pericolose siano queste dannate fogne! Come se guardie e avventurieri potessero proteggere il paese da qualunque cosa. Hah! Non esiste arma che possa fermare la diffusione di una malattia. Ma mi servono prove, potresti aiutarmi?  Portami %d pelli di ratto, in modo che possa fare altri test.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Riesci a crederci? Quegli idioti non hanno ancora capito quanto pericolose siano queste dannate fogne! Come se guardie e avventurieri potessero proteggere il paese da qualunque cosa. Hah! Non esiste arma che possa fermare la diffusione di una malattia. Ma mi servono prove, potresti aiutarmi?  Portami %d pelli di ratto, in modo che possa fare altri test.</string>
+    <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Nani! Quegli ostinati abitanti sotterranei, ossessionati da gemme e oro. Ma sono i _Stregoni Nani_ che io bramo... la loro magia distorta, alimentata dalle stesse profondità in cui risiedono. Cinque, ho bisogno di cinque di quelle anime avvizzite! I loro corpi contengono la chiave per comprendere un certo... fenomeno. Qualcosa riguardo al canalizzare energie arcane attraverso la terra stessa. Credo di essere vicino alla svolta, ma ho bisogno della loro essenza, la loro magia corrotta! *Tossisce violentemente nel suo fazzoletto, una macchia scura si diffonde sul delicato tessuto*</string>
     <string name="Plant_ACPlant">PIANTA</string>
     <string name="Plant_Info">Gettare questo seme nel il luogo in cui si vuol far crescere %1$s.\n\n%2$s</string>
     <string name="Plant_Seed">Seme di %s</string>
@@ -2147,6 +2148,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
