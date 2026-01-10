@@ -383,6 +383,7 @@
     <string name="Char_StaRooted">пустив коріння</string>
     <string name="Char_StaSlowed">сповільнений</string>
     <string name="Char_StaVision">бачення</string>
+    <string name="Char_Stole_2">%1 викрав(-ла) %2 у %3!</string>
     <string name="Char_YouMissed">%1$s %2$s від твоєї атаки</string>
     <string name="ChargrilledMeat_Info">Виглядає як пристойний біфштекс.</string>
     <string name="ChargrilledMeat_Name">смажене м\'ясо</string>
@@ -2585,6 +2586,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

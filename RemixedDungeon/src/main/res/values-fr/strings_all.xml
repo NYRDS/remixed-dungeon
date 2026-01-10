@@ -2178,6 +2178,8 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="VampireSkull_Name">Crâne vampire</string>
     <string name="VertigoBuff_Info">La tête légère rend difficile le fait de marcher droit !</string>
     <string name="VertigoBuff_Name">Vertige</string>
+    <string name="VileEssence_Info">Une essence concentrée de corruption récoltée sur un ennemi vaincu. Cette substance sombre palpite d'énergie malveillante et est très prisée dans les processus alchimiques.</string>
+    <string name="VileEssence_Name">Essence Vile</string>
     <string name="Viscosity_Status">%d différée</string>
     <string name="Viscosity_Txt">%s visqueuse</string>
     <string name="WandHolster_Info">La fine hotte est faite du cuir d\'un animal exotique. Elle vous permettra de porter jusqu\'à %d sceptres.</string>
@@ -2883,6 +2885,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 

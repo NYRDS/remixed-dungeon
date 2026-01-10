@@ -644,8 +644,9 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="HealthDart_Info">La punta del dardo è coperta da pozione guaritrice.</string>
     <string name="HealthDart_Name">Dardo curante</string>
     <string name="Heap_Mimic">Questo è un imitatore!</string>
-    <string name="HeartOfDarkness_Info">Cuore nero pulsante dello Spirito Sleale.</string>
-    <string name="HeartOfDarkness_Name">Cuore tenebroso</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
+    <string name="HeartOfDarkness_Info">Cuore nero pulsante dello Spirito Infido</string>
+    <string name="HeartOfDarkness_Name">Cuore dell'oscurità</string>
     <string name="Hedgehog_Desc">Questo riccio sembra nervoso.</string>
     <string name="Hedgehog_ImLate">Sono in ritardo, sono terribilmente in ritardo...</string>
     <string name="Hedgehog_Info1">Sei alla ricerca dell\'orso anche tu?</string>
@@ -2149,6 +2150,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 
