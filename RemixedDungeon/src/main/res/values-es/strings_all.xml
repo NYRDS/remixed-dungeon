@@ -2006,6 +2006,7 @@ otro lugar del nivel.</string>
     <string name="ToughShield_desc">Este escudo reforzado con correas de cuero parece más resistente que uno de madera. Sin duda puede bloquear más daño.</string>
     <string name="ToughShield_name">Escudo reforzado de cuero</string>
     <string name="TownGuardNPC_Desc">Un guardia normal.</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">Camina.</string>
     <string name="TownGuardNPC_Message2">Gracias a los aventureros como usted, hay paz aquí arriba.</string>
     <string name="TownGuardNPC_Message3">¿Crees que hay bastantes guardias en este pueblo? Bueno, eso es porque este es el único con un gigantesco calabozo infestado de monstruos, no es así?</string>
@@ -2742,6 +2743,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

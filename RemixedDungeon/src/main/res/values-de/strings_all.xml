@@ -825,6 +825,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HeroSubClass_DescBers">Wenn ein _Berserker_ schwer verletzt ist, erreicht er einen Zustand wilder Wut, in dem sein Schaden deutlich erhöht ist.</string>
     <string name="HeroSubClass_DescFreR">Der _Windläufer_ kann fast doppelt so schnell laufen wie die meisten Monster. Während er rennt ist der Windläufer deutlich schwerer zu treffen. Dafür darf er nicht überladen und am Verhungern sein.</string>
     <string name="HeroSubClass_DescGlad">Ein erfolgreicher Angriff mit einer Nahkampfwaffe erlaubt es dem _Gladiator_ , einen Komboangriff einzusetzen, in dem jeder erfolgreiche Treffer mehr Schaden verursacht.</string>
+    <string name="HeroSubClass_DescGuardian">Durch geschicktes defensives Wissen kann der _Wächter_ mit seinem Schild kontern und wird dadurch für alle, die es wagen, diese lebende Festung anzugreifen, zu einem formidablen Gegner.</string>
     <string name="HeroSubClass_DescNone"/>
     <string name="HeroSubClass_DescScout">Elfen_Späher_sind Meister der Heimlichkeit. Wenn sie hohes Gras zertrampeln, gewährt ihnen dies einen vorübergehenden Unsichtbarkeitseffekt. Außerdem sind sie noch schneller als normale Elfen.</string>
     <string name="HeroSubClass_DescShaman">Elfen_Schamanen_ können Zauberstäbe als Nahkampfwaffe benutzen. Erfolgreiche Treffer haben die Chance, die Fahigkeit des Zauberstabes auf ein Ziel zu wirken, ohne eine Ladung zu benutzen.</string>
@@ -2607,6 +2608,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
