@@ -10,6 +10,9 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.IClickable;
 import com.watabou.pixeldungeon.ui.ItemSlot;
+import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.nyrds.pixeldungeon.windows.ItemSpriteWrapper;
+import com.nyrds.pixeldungeon.windows.GrayableItemSprite;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +37,7 @@ public class RecipeListItem extends Component implements IClickable {
     private final HBox outputBox;
     private final Text arrow;
     private final List<Item> inputItems; // Store actual item instances to check against hero inventory
-    private final List<GrayableItemSlot> ingredientSlots; // Store references to item slots
+    private final List<GrayableItemSprite> ingredientSlots; // Store references to item slots
     private ColorBlock background; // Store reference to background
     private Runnable clickListener;
     protected boolean clickable = false;
@@ -68,30 +71,30 @@ public class RecipeListItem extends Component implements IClickable {
                 // Store the ingredient for later inventory checking
                 inputItems.add(ingredient);
 
-                // Create a GrayableItemSlot with the ingredient
-                GrayableItemSlot inputSlot = new GrayableItemSlot(ingredient);
-                inputSlot.setSize(SLOT_SIZE, SLOT_SIZE);
+                // Create a GrayableItemSprite with the ingredient
+                GrayableItemSprite inputSprite = new GrayableItemSprite(ingredient);
+                inputSprite.setSize(SLOT_SIZE, SLOT_SIZE);
 
-                // Initially set the item slot to not grayed out
+                // Initially set the item sprite to not grayed out
                 // The actual state will be updated when the recipe list is refreshed
-                inputSlot.setGrayedOut(false);
+                inputSprite.setGrayedOut(false);
 
                 // Check if the hero has this ingredient in inventory
                 boolean hasIngredient = checkHeroHasItem(ingredient);
 
-                // Gray out the item slot if the ingredient is missing
-                inputSlot.setGrayedOut(!hasIngredient);
+                // Gray out the item sprite if the ingredient is missing
+                inputSprite.setGrayedOut(!hasIngredient);
 
-                ingredientsBox.add(inputSlot);
-                ingredientSlots.add(inputSlot); // Add to our list of slots
+                ingredientsBox.add(inputSprite);
+                ingredientSlots.add(inputSprite); // Add to our list of sprites
             } else {
-                // Create an empty GrayableItemSlot as placeholder
-                GrayableItemSlot inputSlot = new GrayableItemSlot();
-                inputSlot.setSize(SLOT_SIZE, SLOT_SIZE);
-                ingredientsBox.add(inputSlot);
+                // Create an empty GrayableItemSprite as placeholder
+                GrayableItemSprite inputSprite = new GrayableItemSprite();
+                inputSprite.setSize(SLOT_SIZE, SLOT_SIZE);
+                ingredientsBox.add(inputSprite);
 
-                // Add to our list of slots (will be grayed out by default)
-                ingredientSlots.add(inputSlot);
+                // Add to our list of sprites (will be grayed out by default)
+                ingredientSlots.add(inputSprite);
 
                 // Add null to maintain index alignment
                 inputItems.add(null);
@@ -110,20 +113,20 @@ public class RecipeListItem extends Component implements IClickable {
             // If item creation fails, outputItem remains null
         }
 
-        ItemSlot outputSlotTemp = null;
+        ItemSpriteWrapper outputSpriteTemp = null;
         if (outputItem != null) {
-            outputSlotTemp = new ItemSlot(outputItem);
-            outputSlotTemp.setSize(SLOT_SIZE, SLOT_SIZE);
+            outputSpriteTemp = new ItemSpriteWrapper(outputItem);
+            outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
         } else {
-            // Create an empty ItemSlot as placeholder
-            outputSlotTemp = new ItemSlot();
-            outputSlotTemp.setSize(SLOT_SIZE, SLOT_SIZE);
+            // Create an empty ItemSpriteWrapper as placeholder
+            outputSpriteTemp = new ItemSpriteWrapper();
+            outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
         }
 
         // Create HBox for output
         outputBox = new HBox(100); // Will be resized later
         outputBox.setGap(2);
-        outputBox.add(outputSlotTemp);
+        outputBox.add(outputSpriteTemp);
 
         // Create background color block for selection highlighting
         ColorBlock background = new ColorBlock(width, height, UNSELECTED_COLOR);
@@ -151,13 +154,13 @@ public class RecipeListItem extends Component implements IClickable {
         // Layout ingredients tightly together
         float totalIngredientsWidth = 0;
         for (int i = 0; i < ingredientsBox.getLength(); i++) {
-            GrayableItemSlot slot = (GrayableItemSlot) ingredientsBox.getMember(i);
-            slot.setRect(x + totalIngredientsWidth, y, slot.width(), height);
-            totalIngredientsWidth += slot.width() + 2; // 2 pixels spacing between items
+            GrayableItemSprite sprite = (GrayableItemSprite) ingredientsBox.getMember(i);
+            sprite.setPos(x + totalIngredientsWidth, y + (height - sprite.height()) / 2);
+            totalIngredientsWidth += sprite.width() - 10; // 2 pixels spacing between items
         }
 
         // Position the arrow after the ingredients
-        arrow.setX(totalIngredientsWidth + 5); // 5 pixels space after ingredients
+        arrow.setX(width - 24); // 5 pixels space after ingredients
         arrow.setY(PixelScene.align(y + (height - arrow.baseLine()) / 2));
 
         // Position the output box to the far right
