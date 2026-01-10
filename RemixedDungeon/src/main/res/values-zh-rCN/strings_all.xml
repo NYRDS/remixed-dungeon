@@ -1373,6 +1373,7 @@
     <string name="PlagueDoctorNPC_Quest_Reminder">给我 %d 张老鼠皮。</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿 %d 张老鼠皮，这样我就可以做一些额外的测试了。</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿 %d 张老鼠皮，这样我就可以做一些额外的测试了。</string>
+    <string name="PlagueDoctorQuest_2_1_InProgress">寻找 _月光草_，那里黑暗与微弱的月光交相辉映。_两颗种子_，其精华，将揭示隐藏的秘密。</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*他的思绪飘忽，声音越来越小，几乎成了耳语。* 带两只活的魅魔给我……活着的。她们的……力量……令人着迷。</string>
     <string name="PlagueDoctor_Desc">散发奇怪味道的……皮革？下面应该是个人吧……</string>
 
@@ -2737,6 +2738,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
