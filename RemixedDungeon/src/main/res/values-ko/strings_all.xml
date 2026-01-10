@@ -469,6 +469,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Darkness_Info">영원한 어둠의 조각이 공중에 피어오른다.</string>
     <string name="Dart_Info">이 간단한 금속 스파이크는 사실 날리기 부담스러운 무게지만 맞은 사람을 괴롭게 한다.</string>
     <string name="Dart_Name">다트</string>
+    <string name="DashSpell_TooFar">그만큼 멀리 돌진할 수 없습니다.</string>
     <string name="DeathKnight_Desc">겉보기에는 육중한 방어구를 두른 막강한 전사 같지만, 해골의 모습이 그러한 느낌을 없애 버립니다. 죽음의 기사는 맹세를 지키지 못한 기사의 영혼으로, 그의 저주로 인해 그는 영원히 땅을 떠돌며,어떤 것을 지키려고 하였는지 기억을 못한 채로 전투를 하여 무고한 사람을 죽여 자신의 명예를 회복하는 것을 추구할 것입니다.  </string>
     <string name="DeathKnight_Name">죽음의 기사</string>
     <string name="DeathKnight_Name_Objective">죽음의 기사</string>
@@ -2335,6 +2336,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

@@ -881,6 +881,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="InventoryScroll_Title">Pilih satu item</string>
     <string name="InventoryScroll_Warning">Anda pasti mahu batalkan penggunaan skrol ini? Malangnya ia tetap digunakan.</string>
     <string name="InventoryScroll_Yes">Ya, Saya pasti</string>
+    <string name="InvisibilityBuff_Info">Invisible sepenuhnya, yang boleh sama ada membantu mengelakkan bahaya atau menjadi satu bahaya.</string>
     <string name="InvisibilityBuff_Name">Halimunan</string>
     <string name="IronKey_FromDepth">kunci besi dari kedalaman %d</string>
     <string name="IronKey_Info">gigi kunci purba ini kelihatan sudah lusuh digunakan; tali kulit kunci ini tampak lusuh dimamah usia. Hmm pintu manakah yang boleh dibuka dengan kunci ini?</string>
@@ -2412,6 +2413,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
