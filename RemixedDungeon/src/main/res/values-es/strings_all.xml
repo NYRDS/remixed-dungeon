@@ -2213,6 +2213,7 @@ otro lugar del nivel.</string>
     <string name="WndChooseWay_Cancel">Decidiré más tarde</string>
     <string name="WndChooseWay_Message">¿Qué camino seguirás?</string>
     <string name="WndClass_Mastery">Maestría</string>
+    <string name="WndCryptoDonate_monero">Monero</string>
     <string name="WndCustomizations_Title">Personalizaciones</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - gratis para todos y siempre lo será.\n\nSin embargo, puedes ayudarnos a hacer el juego mucho mejor.\n\nEn adición a nuestro cordial agradecimiento, recibirás algunos cosméticos.</string>
     <string name="WndDonate_donate">donar:</string>
@@ -2739,6 +2740,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

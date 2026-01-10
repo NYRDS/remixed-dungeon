@@ -1655,6 +1655,7 @@ Potrebbe bruciare?</string>
     <string name="Undead_Name_Objective">nano zombie</string>
     <string name="Ushanka_Info">Un caldo e comodo cappello ushanka decorato con una stella rossa. Il compagno perfetto per lottare in questo malvagio e freddo Dungeon.</string>
     <string name="Ushanka_Name">Cappello Ushanka </string>
+    <string name="Using_Failed_Because_Blind">Non puoi usare &quot;%s&quot; mentre sei accecato.</string>
     <string name="VampireSkull_Info">Questa maschera è fatta col teschio di un vampiro. Infatti è il teschio di un vampiro... il teschio di un grande vampiro. Spaventoso.</string>
     <string name="VampireSkull_Name">teschio di vampiro</string>
     <string name="VertigoBuff_Name">Vertigini</string>
@@ -2145,6 +2146,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

@@ -548,6 +548,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="Dagger_Gender">feminine</string>
     <string name="Dagger_Info">Une dague de fer simple avec une poignée de bois bien ancrée.</string>
     <string name="Dagger_Name">dague</string>
+    <string name="Damage_Reduction">Réduction de dégâts</string>
     <string name="DarkGold_Info">Ce métal n\'est pas appelé noir à cause de sa couleur (en fait, on dirait de l\'or), mais parce qu\'il fond à la lumière du jour, le rendant inutile à la surface.</string>
     <string name="DarkGold_Name">minerai d\'or noir</string>
     <string name="DarkSacrifice_Hint">Choisissez le fidèle serviteur à sacrifier !</string>
@@ -2879,6 +2880,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

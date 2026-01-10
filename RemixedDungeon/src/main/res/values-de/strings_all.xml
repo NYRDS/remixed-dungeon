@@ -2166,6 +2166,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndInfoItem_Tomb">Grab</string>
     <string name="WndInfoItem_WontKnow">Du wirst erst wissen was darin ist, wenn du es geöffnet hast!</string>
     <string name="WndInstallingMod_deleting_file">Lösche %s</string>
+    <string name="WndInstallingMod_skipping_file">Überspringe %s</string>
     <string name="WndJournal_Levels">Levels</string>
     <string name="WndJournal_Logbook">Logbuch</string>
     <string name="WndJournal_Title">Logbuch</string>
@@ -2605,6 +2606,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
