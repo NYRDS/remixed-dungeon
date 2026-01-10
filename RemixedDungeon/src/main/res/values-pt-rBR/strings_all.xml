@@ -269,6 +269,7 @@
     <string name="BodyArmorBuff_Name">Armadura Corporal</string>
     <string name="BodyArmorSpell_Info">Ativa o poder muscular reservado, os tornando mais fortes temporariamente, isso aumentará sua defesa, porem diminuirá sua velocidade de movimento.</string>
     <string name="BodyArmorSpell_Name">Armadura Corporal</string>
+    <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Lançada para o inimigo esse míssil liso de madeira curvada voltará para as mãos de seu lançador.</string>
     <string name="Boomerang_Name">bumerangue</string>
     <string name="Bounce_Txt">%s de salto</string>
@@ -2712,6 +2713,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

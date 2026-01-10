@@ -166,6 +166,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Badges_StrengthAttained4">19 Stärkepunkte erhalten</string>
     <string name="Badges_StrengthAttained5">21 Stärkepunkte erhalten</string>
     <string name="Badges_Supporter">Danke für deine Unterstützung!</string>
+    <string name="Badges_ThisIsSparta">Das ist Sparta!!!</string>
     <string name="Badges_Victory">Amulett von Yendor erhalten</string>
     <string name="Badges_VictoryAll">Amulett von Yendor mit allen Klassen erhalten</string>
     <string name="Badges_Yasd">Tod durch Feuer, Gift, giftige Gase und Hunger</string>
@@ -2609,6 +2610,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

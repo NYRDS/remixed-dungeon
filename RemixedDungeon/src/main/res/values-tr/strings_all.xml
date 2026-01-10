@@ -315,6 +315,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Candy_Warning_2">Şimdi gerçekten çok fazla yedin. Karnın ağrıyor çünkü çok fazla şeker yedin.</string>
     <string name="Capotain_Info">Uzun taçlı, dar kenarlı bir şapka. Genelde Püritiler ile ilişkilidir, ancak onu giymek için dindar olmanız gerekmez. Bazı nedenlerden dolayı \&quot;Solomon\&quot; yazan bir isim levhası var.</string>
     <string name="Capotain_Name">Capotain</string>
+    <string name="Carcass_Necromancy_Failed">%s cesedini diriltme girişiminiz başarısız oldu!</string>
     <string name="Caves_TileDescBookshelf">Kim bir mağarada kitaplığa ihtiyaç duyar ki?</string>
     <string name="Caves_TileDescDeco">Duvarda bir maden damarı gözüküyor, Altın olmasın?</string>
     <string name="Caves_TileDescEntrance">Merdiven, bir üst derinliğe inmenizi sağlar.</string>
@@ -2797,6 +2798,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
