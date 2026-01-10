@@ -2256,6 +2256,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_INN_sign_name">Kocsma tábla</string>
     <string name="town_deco_armoronhanger_desc">Valamiféle páncél az akasztón.</string>
     <string name="town_deco_armoronhanger_name">Páncél</string>
+    <string name="town_deco_banner_desc">Egy elegáns zászló, amely e tivornyázóhely szimbólumait ábrázolja.</string>
     <string name="town_deco_barrel_desc">Egy normális hordó, de nem a legjobb állapotban.</string>
     <string name="town_deco_barrel_name">Hordó</string>
     <string name="town_deco_beige_carpet_name">Szőnyeg</string>
@@ -2440,6 +2441,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

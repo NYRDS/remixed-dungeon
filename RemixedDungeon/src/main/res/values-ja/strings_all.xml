@@ -716,6 +716,7 @@
     <string name="FireArrow_Info">この矢は、矢じりから暖かい赤い光が放射されている以外は、普通の矢と同じように見える。</string>
     <string name="FireArrow_Name">炎の矢</string>
     <string name="FireElemental_Desc">放浪する火のエレメンタルは、大いなる存在を召喚する際の副産物である。彼らはその性質があまりに混沌としているため、最も強力な悪魔研究者でさえ制御できない。</string>
+    <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">火のエレメンタル</string>
     <string name="FireElemental_Name_Objective">火のエレメンタル</string>
     <string name="Fire_Info">ここで炎が燃え盛っている。</string>
@@ -2853,6 +2854,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
