@@ -958,6 +958,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="IceGuardianCoreModule_Name">Núcleo del guardián de hielo</string>
     <string name="IceGuardianCore_Desc">Los Guardianes de hielo fueron fabricados por kobolds antiguos, para proteger sus cuevas. La energía almacenada en su núcleo permite al guardián del hielo reconstruirse mientras tenga suficiente energía.</string>
     <string name="IceGuardianCore_DieInfo">Hace tanto frío aquí, mejor regreso al nivel 14 y trato de encontrar un camino a un lugar más cálido.</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name">guardián de hielo</string>
     <string name="IceGuardianCore_Name_Objective">guardián de hielo</string>
     <string name="IceGuardian_Desc">Los Guardianes de hielo fueron fabricados por kobolds antiguos, para proteger sus cuevas. La energía almacenada en su núcleo permite al guardián del hielo reconstruirse mientras tenga suficiente energía.</string>
@@ -2741,6 +2742,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
