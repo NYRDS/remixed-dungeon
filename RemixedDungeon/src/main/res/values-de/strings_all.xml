@@ -1293,6 +1293,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="PlagueDoctorNPC_After_Quest">Ich werd\'s ihnen zeigen. Ihnen allen!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Du bist immernoch da? Hier! Nimm das.</string>
     <string name="PlagueDoctorNPC_Desc">Dieser bucklige Mann ist komplett mit Leder bezogen. Er riecht stark nach Medikamenten und ... Knoblauch?</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">Virendoktor</string>
     <string name="PlagueDoctorNPC_Name_Objective">Virendoktor</string>
     <string name="PlagueDoctorNPC_Quest_End">Ah, danke, ich hoffe, dass die eine Spur einer Krankheit haben werden. Frühere Beispiele waren absolut harmlos. Also habe ich das für Sie gemacht, während ich auf neue Proben gewartet habe.</string>
@@ -2608,6 +2609,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

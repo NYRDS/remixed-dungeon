@@ -1280,6 +1280,7 @@
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Ця стріла змочена в кураре.</string>
     <string name="ParalysisArrow_Name">паралізуюча стріла</string>
+    <string name="ParalysisBuff_Name">Паралізований</string>
     <string name="Paralysis_Name_0">Приголомшливе %s</string>
     <string name="Paralysis_Name_1">Приголомшливий %s</string>
     <string name="Paralysis_Name_2">Приголомшлива %s</string>
@@ -1560,6 +1561,7 @@
     <string name="RottenFood_Message">бридота!</string>
     <string name="RottenMeat_Info">шматок гнилого м\'яса</string>
     <string name="RottenMeat_Name">гниле м\'ясо</string>
+    <string name="RottenOrgan_Name">Гнилий Орган</string>
     <string name="RottenPasty_Info">цей пиріг виглядає так огидно</string>
     <string name="RottenPasty_Name">зіпсований пиріг</string>
     <string name="RottenPumpkinPie_Info">Який би не був добрий цей пиріг, доки він був свіжим, зараз його їсти не слід.</string>
@@ -2586,6 +2588,8 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 
