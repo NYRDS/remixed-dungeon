@@ -286,6 +286,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Brute_Name">gnoll besar</string>
     <string name="Brute_Name_Objective">gnoll besar</string>
     <string name="Brute_StaEnraged">marah</string>
+    <string name="BuffParam_Cooldown">Waktu Tunggu: %.2f</string>
     <string name="BurningBuff_Info">Tubuh dilalap api yang mengamuk!</string>
     <string name="BurningBuff_Name">Terbakar</string>
     <string name="BurningFist_Desc">Tinjuan Api dari Dewa Tua</string>
@@ -2713,6 +2714,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

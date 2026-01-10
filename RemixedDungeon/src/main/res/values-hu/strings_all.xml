@@ -1615,6 +1615,7 @@ egy másik helyre a szinten. </string>
     <string name="Shadow_Name_Objective">árnyék</string>
     <string name="ShadowsBuff_Name">Átjár a sötétség</string>
     <string name="Shaman_Desc">A leginteligensebb gnollok tudják csak elsajátítani a sámánidztikud mágiát. A gnoll sámánok a csatában a varázslatokat részesítik előnyben mivel nem különösebben erősek, egyáltalán nem haboznak használni tudásokat ha valaki megkérdőjelezi helyüket a falkában.</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">%s villám gömbje megölt téged...</string>
     <string name="Shaman_Name">gnoll sámán</string>
     <string name="Shaman_Name_Objective">gnoll sámán</string>
@@ -2439,6 +2440,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

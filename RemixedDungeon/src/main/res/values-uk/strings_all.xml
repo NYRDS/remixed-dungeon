@@ -1697,6 +1697,7 @@
     <string name="Senior_Name">старший монах</string>
     <string name="Senior_Name_Objective">старшого монаха</string>
     <string name="ServantNPC_Gender">masculine</string>
+    <string name="ServantNPC_Name">слуга готелю</string>
     <string name="ServiceManNPC_Desc">Рядовий робочий місцевих закладів.</string>
     <string name="ServiceManNPC_Limit">Мені шкода, але кожен новий шукач пригод може переглянути лише %d фільмів.</string>
     <string name="ServiceManNPC_Limit_Reached">Прошу пробачення, але ви вичерпали свій поточний ліміт. Але після отримання нового рівня, ви ще зможете скористатися нашим сервісом!</string>
@@ -2584,6 +2585,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
