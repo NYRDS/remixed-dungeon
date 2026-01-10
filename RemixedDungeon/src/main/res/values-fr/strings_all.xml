@@ -1703,6 +1703,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="RottenFood_Message">dégoûtant !</string>
     <string name="RottenMeat_Info">Morceau de viande pourrie</string>
     <string name="RottenMeat_Name">viande pourrie</string>
+    <string name="RottenOrgan_Info">Un organe en décomposition récolté sur un ennemi vaincu. Malgré son état putride, il contient des composés précieux pour les procédés alchimiques.</string>
     <string name="RottenPasty_Info">Ce vieux pâté en croûte a l\'air vraiment dégoutant</string>
     <string name="RottenPasty_Name">pâté en croute pourri</string>
     <string name="RottenPumpkinPie_Info">Peu importe combien bonne était cette tarte encore fraîche, il n\'y a aucune chance pour qu\'elle soit encore consommable.</string>
@@ -2880,6 +2881,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 

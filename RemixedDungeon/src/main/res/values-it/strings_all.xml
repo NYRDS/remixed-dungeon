@@ -1340,6 +1340,7 @@ Potrebbe bruciare?</string>
     <string name="Rudolph_Info">Cosa potrebbe esserci di più festoso di un naso rosso acceso? Insieme a un paio di corna, ovviamente.</string>
     <string name="Rudolph_Name">Naso rosso e corna</string>
     <string name="RunicSkull_Desc">Per qualcosa fatta artificialmente, questo scheletro sembra esserne uno vero un po\' troppo. Puoi vedere un debole bagliore che lo avvolge.</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">teschio runico</string>
     <string name="RunicSkull_Name_Objective">teschio runico</string>
     <string name="SacrificialSword_Info">A prima vista questa vecchia spada di bronzo ricoperta di polvere sembra inutile. Ma una sorta di vecchio, arcaico potere, dorme al suo interno. Questi poteri possono rendere quasi tutte le creature in schiavi senza volontà. Serve solo trovare la maniera giusta per svegliarli... </string>
@@ -2146,6 +2147,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
