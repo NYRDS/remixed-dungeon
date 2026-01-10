@@ -12,6 +12,7 @@
     <string name="AboutScene_OurSite">Weblapunk:</string>
     <string name="AboutScene_Snd">Email küldése</string>
     <string name="AboutScene_Sound">Hang:</string>
+    <string name="AboutScene_SourceCode">Szerezd be a Remixed Dungeon forráskódját:</string>
     <string name="AboutScene_Thanks">Külön köszönet:</string>
     <string name="AboutScene_Translation">Fordította:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901</string>
@@ -2444,6 +2445,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

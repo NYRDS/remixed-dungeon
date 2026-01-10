@@ -2277,6 +2277,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_potions_desc">여러 물약이 찬장에 진열되어 있다.</string>
     <string name="town_deco_potions_name">물약</string>
     <string name="town_deco_projector_desc">영화를 상영하여 사람들을 즐겁게 해주는 낡은 장치이다.</string>
+    <string name="town_deco_red_carpet_desc">소문에 따르면 비슷한 붉은 카펫이 드워프 대도시의 전당을 장식하고 있다고 합니다.</string>
     <string name="town_deco_red_carpet_name">카펫</string>
     <string name="town_deco_roof_desc">단순한 타일 지붕이다.</string>
     <string name="town_deco_roof_name">지붕</string>
@@ -2324,6 +2325,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wardrobe_name">나무 옷장</string>
     <string name="town_deco_weaponboard_desc">여러 무기가 벽에 걸려 있다.</string>
     <string name="town_deco_weaponboard_name">무기</string>
+    <string name="town_deco_weaponrack_desc">이 선밤판에는 당신에게 너무 비싼 무기들이 놓여 있습니다.</string>
     <string name="town_deco_window_desc">일반적인 유리창으로, 특별한 점은 없다.</string>
     <string name="town_deco_window_name">창문</string>
     <string name="town_deco_wood_wall_name">통나무로 된 벽</string>
@@ -2336,6 +2338,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 
