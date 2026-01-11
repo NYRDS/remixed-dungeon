@@ -1425,6 +1425,8 @@
     <string name="RawFish_Info">生魚肉，最好別生吃。</string>
     <string name="RawFish_Name">生魚</string>
     <string name="RawFish_Taste">魚腥！</string>
+    <string name="RegenerationBuff_Info">自然回復的功能以一種增益的形式呈現，讓事情變得更容易。</string>
+    <string name="RegenerationBuff_Name">自然回復</string>
     <string name="RemixedPixelDungeonApp_sendCrash">遊戲崩了...\n 抱歉。 \n請發送崩潰報告來讓我們更快修復它。</string>
     <string name="ResultDescriptions_Bleeding">在第 %d 層流血而死</string>
     <string name="ResultDescriptions_Boss">在第 %2$d 層被 %1$s 殺死了</string>
@@ -2515,6 +2517,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

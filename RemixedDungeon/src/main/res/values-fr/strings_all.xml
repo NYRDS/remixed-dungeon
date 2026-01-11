@@ -2351,6 +2351,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndChooseWay_Cancel">Je choisirai plus tard</string>
     <string name="WndChooseWay_Message">Quelle voie choisirez-vous ?</string>
     <string name="WndClass_Mastery">Spécialisation</string>
+    <string name="WndCryptoDonate_currency">Devise</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_warningText">AVERTISSEMENT : Vérifiez toujours l'adresse avant d'envoyer des fonds. Les transactions de cryptomonnaies sont irréversibles !</string>
     <string name="WndCustomizations_Title">Customisations</string>
@@ -2892,6 +2893,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
