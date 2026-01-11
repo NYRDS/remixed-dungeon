@@ -1617,6 +1617,7 @@ Parede
     <string name="RoyalShield_name">Escudo Real</string>
     <string name="RubyBow_Info">Apenas os melhores arqueiros conseguem usar este arco de rubi. Quase todas as flechas atravessam o inimigos, deixando um buraco em seu corpo, mas uma extrema força é necessário para puxar o arco.</string>
     <string name="RubyBow_Name">arco de rubi</string>
+    <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Info">Esta arma mortífera é verdadeiramente uma obra-prima da engenharia dwarven.</string>
     <string name="RubyCrossbow_Name">Besta de ruby</string>
     <string name="Rudolph_Info">O que poderia ser mais festivo do que um nariz brilhante vermelho? e um par de chifres, naturalmente.</string>
@@ -2715,6 +2716,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -627,6 +627,7 @@
     <string name="DwarfToken_Info">很多矮人和他们的造物都携带着这种小块金属，理由不详。大概它是装饰品或者什么身份识别吧。矮人都挺奇怪的。</string>
     <string name="DwarfToken_Name">矮人徽记</string>
     <string name="EarthElemental_Desc">土元素是由凝缩的自然之力所操纵着的土块。</string>
+    <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">土元素</string>
     <string name="EarthElemental_Name_Objective">土元素</string>
     <string name="EarthrootBuff_Info">根从地面发芽，提供自然护甲。</string>
@@ -2739,6 +2740,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

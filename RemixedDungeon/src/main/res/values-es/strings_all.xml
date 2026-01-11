@@ -1058,6 +1058,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="KoboldIcemancer_Name">kobold - mago del hielo.</string>
     <string name="KoboldIcemancer_Name_Objective">kobold - mago del hielo.</string>
     <string name="Kobold_Desc">Los kobolds se consideraban una leyenda. Un ancestro de los gnolls comunes, los kobolds habitan en cuevas profundas y frías. Se cree que su gente dominó la ingeniería y la maquinaria mucho antes de los enanos. Sin embargo, se desconoce por qué desaparecieron hace tantos años ...</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="KrampusHead_Info">¿Alguna vez te has preguntado cómo se sentiría asumir un papel más siniestro mientras haces Dungeoneering? Bueno, seguramente traerás horror a las crías de rata locales con esta apariencia diabólica.</string>
@@ -2746,6 +2747,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
