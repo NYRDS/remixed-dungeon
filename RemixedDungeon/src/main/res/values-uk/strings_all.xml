@@ -1797,6 +1797,7 @@
     <string name="SpellBook_Info_Identified">Серед сторінок виявився повний текст закляття \&quot;%1$s\&quot;.\n\&quot;%2$s\&quot;</string>
     <string name="SpellBook_Name">Книга Заклять</string>
     <string name="Spell_SelectACell">Оберіть ціль.</string>
+    <string name="Spell_SelectAChar">Оберіть істоту-ціль.</string>
     <string name="Spells_NotEnoughSP">Тобі не вистачає мани для закляття «%1$s».</string>
     <string name="Spells_NotInOwnBody">Ти не можеш використовувати %sдоки твоя душа поза тілом.</string>
     <string name="Spells_NotTooFast">%s ще не готове до використання</string>
@@ -2590,6 +2591,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

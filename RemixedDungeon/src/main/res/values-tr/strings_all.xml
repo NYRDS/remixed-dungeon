@@ -1394,6 +1394,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
 </string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Olacak iş değil! Şu ahmaklar hala lağımların ne kadar tehlikeli olduğunu idrak edemiyor. Sanki gardiyan ve maceracı bozmaları, Kasaba\'yı her bir şeyden koruyabilirmiş gibi... Bu hastalığın yayılmasını hiçbir silah durduramaz. Biraz yardımın lazım. Bana %d sıçan derisi getir ki araştırmalarıma devam edebileyim. 
 </string>
+    <string name="PlagueDoctorQuest_3_2_Prologue">Bir _Ölüm Şövalyesi_! *Heyecanla sesi titrer, kemiksi parmakları köpüren ve fosforesan sıvıyla dolu bir şikeyi sıkıca tutarken*. Böyle bir yaratık... ölümsüzlüğün habercisi! Biri canlı olarak yakalamak... muazzam olurdu. Ne gibi sırları çözebiliriz diye düşün! İskelet damarlarından akan güç! Evet, bir _Ölüm Şövalyesi_! Araştırmalarım için çok önemli! Çünkü yaşam ve ölümün derinliklerine inmemizi sağlayacak... öylesine!</string>
     <string name="PlagueDoctor_Desc">Bu kambur kişinin tüm vücudu deri bir tulumun altında gizlidir. Ayrıca, ondan acı bir ilaç ve ... sarımsak kokusu geliyor?</string>
 
     <string name="PlagueDoctor_Name">veba doktoru</string>
@@ -2798,6 +2799,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

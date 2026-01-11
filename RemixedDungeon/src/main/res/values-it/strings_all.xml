@@ -755,6 +755,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="HuntressArmor_Name">mantello della cacciatrice</string>
     <string name="HuntressArmor_NoEnemies">Nessun nemico in vista</string>
     <string name="HuntressArmor_NotHuntress">Solo la cacciatrice può usare quest\'armatura!</string>
+    <string name="IceCaves_TileDescDeco">Questo gnoll è stato congelato vivo. Apparentemente, è rimasto lì per molto tempo.</string>
     <string name="IceCaves_TileDescStatue">Un\'altra orribile statua... Oh, aspetta. È uno gnoll congelato.</string>
     <string name="IceCaves_TileStatue">Gnoll Congelato</string>
     <string name="IceElemental_Desc">Tra tutti gli elementali che esistono nel dungeon, gli elementali del ghiaccio difficilmente possono essere considerati potenti, ma possono davvero essere definiti tra i più pericolosi. L\'aura di gelo che emette dai loro corpi può rallentare qualsiasi nemico.</string>
@@ -2154,6 +2155,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
