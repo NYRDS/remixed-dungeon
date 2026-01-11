@@ -541,6 +541,7 @@
     <string name="Deathling_Name">смертлик</string>
     <string name="Deathling_Name_Objective">смертлика</string>
     <string name="DeepSnail_Gender">masculine</string>
+    <string name="DeepSnail_Name">глибокий равлик</string>
     <string name="DeferedDamageBuff_Info">Біль був перетворений на вповільнювальний біль, зменшуючи шкоду, що отримується одразу.\nШкоди залишилося отримати %d</string>
     <string name="DeferedDamage_Killed_Txt">%s вбив тебе...</string>
     <string name="DevourBuff_Info"/>
@@ -948,6 +949,7 @@
     <string name="IncendiaryDart_Info">Кінчик дротика розрахований на те, аби надійно впитися в ціль, в той час як суміш, якою він змащений, охопить жертву полум\'ям.</string>
     <string name="IncendiaryDart_Name">вогняний дротик</string>
     <string name="InnKeeperNPC_Gender">masculine</string>
+    <string name="InnServant_Phrase_4">Ой, сьогодні так багато гостей</string>
     <string name="Instability_Name_0">Нестабільне %s</string>
     <string name="Instability_Name_1">Нестабільний %s</string>
     <string name="Instability_Name_2">Нестабільна %s</string>
@@ -2591,6 +2593,8 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

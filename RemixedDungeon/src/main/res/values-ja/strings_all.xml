@@ -546,6 +546,7 @@
     <string name="CurareDart_Info">この邪悪な小さなダーツは大したダメージは与えないが、標的を麻痺させ、しばらくの間無力化することができる。</string>
     <string name="CurareDart_Name">クラーレダーツ</string>
     <string name="DM300_Desc">この機械は数世紀前にドワーフによって作られた。その後、ドワーフは機械をゴーレムやエレメンタル、さらには悪魔に置き換え始め、やがてそれが彼らの文明を衰退へと導いた。DM-300と同様の機械は通常、建設や採掘に使われ、場合によっては都市の防衛にも使われた。</string>
+    <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300は自己修復した！</string>
     <string name="DM300_Info2">ミッション失敗。シャットダウン。</string>
     <string name="DM300_Info3">侵入者発見。</string>
@@ -2855,6 +2856,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

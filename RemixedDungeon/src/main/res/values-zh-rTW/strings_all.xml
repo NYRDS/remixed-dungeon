@@ -1855,6 +1855,7 @@
     <string name="Torch_Name">火把</string>
     <string name="ToughShield_name">皮制圓盾</string>
     <string name="TownGuardNPC_Desc">一個正常的城鎮守衛。</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">我沒什麼好說的了，繼續前進吧。</string>
     <string name="TownGuardNPC_Message2">感謝像您一樣的冒險家，這裏十分和平。</string>
     <string name="TownGuardNPC_Message3">你覺得這個鎮上守衛太多了嗎？嗯，那是因為這是唯一一個有著邪神出沒的地牢的城鎮，不是嗎？</string>
@@ -2517,6 +2518,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
