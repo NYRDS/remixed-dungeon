@@ -11,30 +11,63 @@ local function registerCustomRecipes()
     table.insert(sungrassRecipe, "Sungrass.Seed")
     table.insert(sungrassRecipe, "DewVial")
     RPD.AlchemyRecipes.registerRecipeFromLua(sungrassRecipe, "PotionOfHealing")
-    
+
     -- Recipe: 1 Firebloom seed + 1 Mystery Meat = Potion of Liquid Flame
     local firebloomRecipe = {}
     table.insert(firebloomRecipe, "Firebloom.Seed")
     table.insert(firebloomRecipe, "MysteryMeat")
     RPD.AlchemyRecipes.registerRecipeFromLua(firebloomRecipe, "PotionOfLiquidFlame")
-    
+
     -- Recipe: 1 Icecap seed + 1 Water = Potion of Frost
     local icecapRecipe = {}
     table.insert(icecapRecipe, "Icecap.Seed")
     table.insert(icecapRecipe, "Dewdrop") -- Dewdrop represents water
     RPD.AlchemyRecipes.registerRecipeFromLua(icecapRecipe, "PotionOfFrost")
-    
+
     -- Recipe: 1 Sorrowmoss seed + 1 Corpse Dust = Potion of Toxic Gas
     local sorrowmossRecipe = {}
     table.insert(sorrowmossRecipe, "Sorrowmoss.Seed")
     table.insert(sorrowmossRecipe, "CorpseDust")
     RPD.AlchemyRecipes.registerRecipeFromLua(sorrowmossRecipe, "PotionOfToxicGas")
-    
+
     -- Recipe: 1 Dreamweed seed + 1 Rat Hide = Potion of Invisibility
     local dreamweedRecipe = {}
     table.insert(dreamweedRecipe, "Dreamweed.Seed")
     table.insert(dreamweedRecipe, "RatHide")
     RPD.AlchemyRecipes.registerRecipeFromLua(dreamweedRecipe, "PotionOfInvisibility")
+
+    -- NEW RECIPES WITH MOB OUTPUT:
+    
+    -- Recipe: 3 Rat Skulls + 1 Skeleton Key = Skeleton
+    local skeletonRecipe = {}
+    table.insert(skeletonRecipe, "RatSkull")
+    table.insert(skeletonRecipe, "RatSkull")
+    table.insert(skeletonRecipe, "RatSkull")
+    table.insert(skeletonRecipe, "SkeletonKey")
+    RPD.AlchemyRecipes.registerRecipeFromLua(skeletonRecipe, "Skeleton")
+    
+    -- Recipe: 2 Corpse Dust + 1 Dew Vial = Fetid Rat
+    local fetidRatRecipe = {}
+    table.insert(fetidRatRecipe, "CorpseDust")
+    table.insert(fetidRatRecipe, "CorpseDust")
+    table.insert(fetidRatRecipe, "DewVial")
+    RPD.AlchemyRecipes.registerRecipeFromLua(fetidRatRecipe, "FetidRat")
+    
+    -- Recipe: 1 Gold + 1 Iron Key = Mimic
+    local mimicRecipe = {}
+    table.insert(mimicRecipe, "Gold")
+    table.insert(mimicRecipe, "IronKey")
+    RPD.AlchemyRecipes.registerRecipeFromLua(mimicRecipe, "Mimic")
+    
+    -- Recipe: 5 Mystery Meat + 1 Dewdrop = Piranha
+    local piranhaRecipe = {}
+    table.insert(piranhaRecipe, "MysteryMeat")
+    table.insert(piranhaRecipe, "MysteryMeat")
+    table.insert(piranhaRecipe, "MysteryMeat")
+    table.insert(piranhaRecipe, "MysteryMeat")
+    table.insert(piranhaRecipe, "MysteryMeat")
+    table.insert(piranhaRecipe, "Dewdrop")
+    RPD.AlchemyRecipes.registerRecipeFromLua(piranhaRecipe, "Piranha")
     
     RPD.glog("Custom alchemy recipes registered from Lua")
 end

@@ -15,6 +15,26 @@
     {
       "input": ["Sorrowmoss.Seed", "CorpseDust"],
       "output": "PotionOfToxicGas"
+    },
+    {
+      "input": ["Dreamweed.Seed", "RatHide"],
+      "output": "PotionOfInvisibility"
+    },
+    {
+      "input": ["RatSkull", "RatSkull", "RatSkull", "SkeletonKey"],
+      "output": "Skeleton"
+    },
+    {
+      "input": ["CorpseDust", "CorpseDust", "DewVial"],
+      "output": "FetidRat"
+    },
+    {
+      "input": ["Gold", "IronKey"],
+      "output": "Mimic"
+    },
+    {
+      "input": ["MysteryMeat", "MysteryMeat", "MysteryMeat", "MysteryMeat", "MysteryMeat", "Dewdrop"],
+      "output": "Piranha"
     }
   ]
 }

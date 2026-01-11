@@ -3,18 +3,16 @@ package com.nyrds.pixeldungeon.alchemy;
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.plants.Seed;
-import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,8 +23,17 @@ import java.util.Map;
  */
 public class AlchemyRecipes {
 
-    // Recipe structure: input ingredients -> output item
+    // Recipe structure: input ingredients -> output (can be item or mob)
     private static Map<List<String>, String> recipes = new HashMap<>();
+
+    // Recipe output types
+    public enum OutputType {
+        ITEM,
+        MOB
+    }
+
+    // Extended recipe info to track output type
+    private static Map<List<String>, OutputType> recipeTypes = new HashMap<>();
 
     // Static initialization to load recipes
     static {
@@ -56,9 +63,13 @@ public class AlchemyRecipes {
                     // Parse output item
                     String output = recipe.getString("output");
 
+                    // Determine output type (item or mob)
+                    OutputType outputType = determineOutputType(output);
+
                     // Validate entities before adding to recipes
-                    if (areAllEntitiesValid(inputList) && isEntityValid(output)) {
+                    if (areAllEntitiesValid(inputList) && isEntityValid(output, outputType)) {
                         recipes.put(inputList, output);
+                        recipeTypes.put(inputList, outputType);
                     }
                 }
             }
@@ -69,12 +80,12 @@ public class AlchemyRecipes {
     }
 
     /**
-     * Check if a single entity (item name) is valid
+     * Determine the output type (item or mob) based on the entity name
      */
-    private static boolean isEntityValid(String entityName) {
-        // Check if it's a valid item class
+    private static OutputType determineOutputType(String entityName) {
+        // Check if it's a valid item class first
         if (ItemFactory.isValidItemClass(entityName)) {
-            return true;
+            return OutputType.ITEM;
         }
 
         // Check if it's a seed (special case)
@@ -88,7 +99,7 @@ public class AlchemyRecipes {
             entityName.equals("Fadeleaf.Seed") ||
             entityName.equals("Moongrace.Seed") ||
             entityName.equals("Rotberry.Seed")) {
-            return true;
+            return OutputType.ITEM;
         }
 
         // Check for other special cases that might be valid in alchemy
@@ -98,11 +109,68 @@ public class AlchemyRecipes {
             // Extract the simple class name and check if it's valid
             String[] parts = entityName.split("\\.");
             String className = parts[parts.length - 1];
-            return ItemFactory.isValidItemClass(className);
+            if (ItemFactory.isValidItemClass(className)) {
+                return OutputType.ITEM;
+            }
+        }
+
+        // If it's not an item, check if it's a mob
+        if (MobFactory.hasMob(entityName)) {
+            return OutputType.MOB;
+        }
+
+        // Default to item for backward compatibility
+        return OutputType.ITEM;
+    }
+
+    /**
+     * Check if a single entity (item or mob name) is valid
+     */
+    private static boolean isEntityValid(String entityName, OutputType outputType) {
+        if (outputType == OutputType.ITEM) {
+            // Check if it's a valid item class
+            if (ItemFactory.isValidItemClass(entityName)) {
+                return true;
+            }
+
+            // Check if it's a seed (special case)
+            if (entityName.endsWith(".Seed") ||
+                entityName.equals("Sungrass.Seed") ||
+                entityName.equals("Firebloom.Seed") ||
+                entityName.equals("Icecap.Seed") ||
+                entityName.equals("Sorrowmoss.Seed") ||
+                entityName.equals("Dreamweed.Seed") ||
+                entityName.equals("Earthroot.Seed") ||
+                entityName.equals("Fadeleaf.Seed") ||
+                entityName.equals("Moongrace.Seed") ||
+                entityName.equals("Rotberry.Seed")) {
+                return true;
+            }
+
+            // Check for other special cases that might be valid in alchemy
+            // For example, some items might be referenced by their full class name
+            if (entityName.startsWith("com.watabou.pixeldungeon.items.") ||
+                entityName.startsWith("com.nyrds.pixeldungeon.items.")) {
+                // Extract the simple class name and check if it's valid
+                String[] parts = entityName.split("\\.");
+                String className = parts[parts.length - 1];
+                return ItemFactory.isValidItemClass(className);
+            }
+        } else if (outputType == OutputType.MOB) {
+            // Check if it's a valid mob class
+            return MobFactory.hasMob(entityName);
         }
 
         // Additional validation could be added here for other entity types
         return false;
+    }
+
+    /**
+     * Check if a single entity (item name) is valid - legacy method for backward compatibility
+     */
+    private static boolean isEntityValid(String entityName) {
+        // Default to checking as an item for backward compatibility
+        return isEntityValid(entityName, OutputType.ITEM);
     }
 
     /**
@@ -122,12 +190,24 @@ public class AlchemyRecipes {
      */
     @LuaInterface
     public static boolean addRecipe(List<String> input, String output) {
-        if (areAllEntitiesValid(input) && isEntityValid(output)) {
-            // Additional validation: try to create the output item to ensure it's valid
-            Item testItem = ItemFactory.itemByName(output);
-            if (testItem != null) {
-                recipes.put(new ArrayList<>(input), output);
-                return true;
+        OutputType outputType = determineOutputType(output);
+
+        if (areAllEntitiesValid(input) && isEntityValid(output, outputType)) {
+            // Additional validation: try to create the output to ensure it's valid
+            if (outputType == OutputType.ITEM) {
+                Item testItem = ItemFactory.itemByName(output);
+                if (testItem != null) {
+                    recipes.put(new ArrayList<>(input), output);
+                    recipeTypes.put(new ArrayList<>(input), outputType);
+                    return true;
+                }
+            } else if (outputType == OutputType.MOB) {
+                // For mobs, just validate that the mob exists
+                if (MobFactory.hasMob(output)) {
+                    recipes.put(new ArrayList<>(input), output);
+                    recipeTypes.put(new ArrayList<>(input), outputType);
+                    return true;
+                }
             }
         }
         return false; // Recipe not added due to invalid entities
@@ -185,9 +265,41 @@ public class AlchemyRecipes {
     public static Item createOutputItem(List<String> input) {
         String outputKind = getOutputForInput(input);
         if (outputKind != null) {
-            return ItemFactory.itemByName(outputKind);
+            OutputType outputType = getOutputTypeForInput(input);
+            if (outputType == OutputType.ITEM) {
+                return ItemFactory.itemByName(outputKind);
+            }
         }
         return null;
+    }
+
+    /**
+     * Create a mob based on the recipe output
+     */
+    public static com.watabou.pixeldungeon.actors.mobs.Mob createOutputMob(List<String> input) {
+        String outputKind = getOutputForInput(input);
+        if (outputKind != null) {
+            OutputType outputType = getOutputTypeForInput(input);
+            if (outputType == OutputType.MOB) {
+                return MobFactory.mobByName(outputKind);
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Get the output type for the given input
+     */
+    public static OutputType getOutputTypeForInput(List<String> input) {
+        // Try to find exact match
+        for (Map.Entry<List<String>, OutputType> entry : recipeTypes.entrySet()) {
+            if (entry.getKey().size() == input.size() &&
+                entry.getKey().containsAll(input) &&
+                input.containsAll(entry.getKey())) {
+                return entry.getValue();
+            }
+        }
+        return OutputType.ITEM; // Default to item for backward compatibility
     }
 
     /**
@@ -215,6 +327,7 @@ public class AlchemyRecipes {
     @LuaInterface
     public static void clearRecipes() {
         recipes.clear();
+        recipeTypes.clear();
     }
 
     /**

@@ -1,18 +1,19 @@
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.ColorBlock;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.IClickable;
-import com.watabou.pixeldungeon.ui.ItemSlot;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.nyrds.pixeldungeon.windows.ItemSpriteWrapper;
-import com.nyrds.pixeldungeon.windows.GrayableItemSprite;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,7 @@ public class RecipeListItem extends Component implements IClickable {
     @Getter
     private final String output;
     private final HBox ingredientsBox;
+    private final com.watabou.noosa.ui.Component outputComponent; // Container for output display
     private final HBox outputBox;
     private final Text arrow;
     private final List<Item> inputItems; // Store actual item instances to check against hero inventory
@@ -105,28 +107,97 @@ public class RecipeListItem extends Component implements IClickable {
         arrow = PixelScene.createText("→", GuiProperties.regularFontSize()); // Using unicode arrow
         arrow.hardlight(TITLE_COLOR);
 
-        // Create output slot
-        Item outputItem = null;
-        try {
-            outputItem = ItemFactory.itemByName(output);
-        } catch (Exception e) {
-            // If item creation fails, outputItem remains null
-        }
+        // Determine output type and create appropriate output component
+        AlchemyRecipes.OutputType outputType = determineOutputType(output);
 
-        ItemSpriteWrapper outputSpriteTemp = null;
-        if (outputItem != null) {
-            outputSpriteTemp = new ItemSpriteWrapper(outputItem);
-            outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
+        if (outputType == AlchemyRecipes.OutputType.ITEM) {
+            // Create output slot for item
+            Item outputItem = null;
+            try {
+                outputItem = ItemFactory.itemByName(output);
+            } catch (Exception e) {
+                // If item creation fails, outputItem remains null
+            }
+
+            final ItemSpriteWrapper outputSpriteTemp;
+            if (outputItem != null) {
+                outputSpriteTemp = new ItemSpriteWrapper(outputItem);
+                outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
+            } else {
+                // Create an empty ItemSpriteWrapper as placeholder
+                outputSpriteTemp = new ItemSpriteWrapper();
+                outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
+            }
+            // Wrap the ItemSpriteWrapper in a Component-compatible wrapper
+            Component wrappedItemComponent = new com.watabou.noosa.ui.Component() {
+                {
+                    add(outputSpriteTemp);
+                }
+
+                @Override
+                public void layout() {
+                    super.layout();
+                    outputSpriteTemp.x = this.x;
+                    outputSpriteTemp.y = this.y;
+                }
+            };
+            wrappedItemComponent.setSize(SLOT_SIZE, SLOT_SIZE);
+            outputComponent = wrappedItemComponent;
+        } else if (outputType == AlchemyRecipes.OutputType.MOB) {
+            // Create output slot for mob
+            Image outputSpriteTemp;
+            try {
+                Mob mob = MobFactory.mobByName(output);
+                CharSprite sprite = mob.newSprite();
+                outputSpriteTemp = sprite.avatar();
+                outputSpriteTemp.scale.set(SLOT_SIZE / outputSpriteTemp.width(), SLOT_SIZE / outputSpriteTemp.height());
+            } catch (Exception e) {
+                // If mob creation fails, create an empty Image as placeholder
+                outputSpriteTemp = new Image();
+                outputSpriteTemp.scale.set(SLOT_SIZE / outputSpriteTemp.width(), SLOT_SIZE / outputSpriteTemp.height());
+            }
+
+            final Image finalOutputSpriteTemp = outputSpriteTemp;
+            // Wrap the Image in a Component-compatible wrapper
+            Component wrappedComponent = new Component() {
+                {
+                    add(finalOutputSpriteTemp);
+                }
+
+                @Override
+                public void layout() {
+                    super.layout();
+                    finalOutputSpriteTemp.x = this.x;
+                    finalOutputSpriteTemp.y = this.y;
+                }
+            };
+            wrappedComponent.setSize(SLOT_SIZE, SLOT_SIZE);
+            outputComponent = wrappedComponent;
         } else {
-            // Create an empty ItemSpriteWrapper as placeholder
-            outputSpriteTemp = new ItemSpriteWrapper();
-            outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
+            // Default to item if type is unknown
+            final ItemSpriteWrapper defaultSprite = new ItemSpriteWrapper();
+            defaultSprite.setSize(SLOT_SIZE, SLOT_SIZE);
+            // Wrap the default ItemSpriteWrapper in a Component-compatible wrapper
+            Component wrappedDefaultComponent = new Component() {
+                {
+                    add(defaultSprite);
+                }
+
+                @Override
+                public void layout() {
+                    super.layout();
+                    defaultSprite.x = this.x;
+                    defaultSprite.y = this.y;
+                }
+            };
+            wrappedDefaultComponent.setSize(SLOT_SIZE, SLOT_SIZE);
+            outputComponent = wrappedDefaultComponent;
         }
 
         // Create HBox for output
         outputBox = new HBox(100); // Will be resized later
         outputBox.setGap(2);
-        outputBox.add(outputSpriteTemp);
+        outputBox.add(outputComponent);
 
         // Create background color block for selection highlighting
         ColorBlock background = new ColorBlock(width, height, UNSELECTED_COLOR);
@@ -136,6 +207,50 @@ public class RecipeListItem extends Component implements IClickable {
         add(ingredientsBox);
         add(arrow);
         add(outputBox);
+    }
+
+    /**
+     * Determine the output type (item or mob) based on the entity name
+     */
+    private AlchemyRecipes.OutputType determineOutputType(String entityName) {
+        // Check if it's a valid item class first
+        if (ItemFactory.isValidItemClass(entityName)) {
+            return AlchemyRecipes.OutputType.ITEM;
+        }
+
+        // Check if it's a seed (special case)
+        if (entityName.endsWith(".Seed") ||
+            entityName.equals("Sungrass.Seed") ||
+            entityName.equals("Firebloom.Seed") ||
+            entityName.equals("Icecap.Seed") ||
+            entityName.equals("Sorrowmoss.Seed") ||
+            entityName.equals("Dreamweed.Seed") ||
+            entityName.equals("Earthroot.Seed") ||
+            entityName.equals("Fadeleaf.Seed") ||
+            entityName.equals("Moongrace.Seed") ||
+            entityName.equals("Rotberry.Seed")) {
+            return AlchemyRecipes.OutputType.ITEM;
+        }
+
+        // Check for other special cases that might be valid in alchemy
+        // For example, some items might be referenced by their full class name
+        if (entityName.startsWith("com.watabou.pixeldungeon.items.") ||
+            entityName.startsWith("com.nyrds.pixeldungeon.items.")) {
+            // Extract the simple class name and check if it's valid
+            String[] parts = entityName.split("\\.");
+            String className = parts[parts.length - 1];
+            if (ItemFactory.isValidItemClass(className)) {
+                return AlchemyRecipes.OutputType.ITEM;
+            }
+        }
+
+        // If it's not an item, check if it's a mob
+        if (MobFactory.hasMob(entityName)) {
+            return AlchemyRecipes.OutputType.MOB;
+        }
+
+        // Default to item for backward compatibility
+        return AlchemyRecipes.OutputType.ITEM;
     }
 
     private boolean checkHeroHasItem(Item item) {
@@ -160,17 +275,17 @@ public class RecipeListItem extends Component implements IClickable {
         }
 
         // Position the arrow after the ingredients
-        arrow.setX(width - 24); // 5 pixels space after ingredients
+        arrow.setX(totalIngredientsWidth + 5); // 5 pixels space after ingredients
         arrow.setY(PixelScene.align(y + (height - arrow.baseLine()) / 2));
 
-        // Position the output box to the far right
-        outputBox.setPos(width - outputBox.width(), y); // Align to the right edge of the component
-        outputBox.setSize(outputBox.width(), height);
+        // Position the output component to the far right
+        float outputWidth = outputComponent.width();
+        float outputHeight = outputComponent.height();
+        outputComponent.setPos(x + width - outputWidth, y + (height - outputHeight) / 2);
 
-        // Adjust arrow position if output box overlaps
-        if (arrow.getX() + arrow.width() >= outputBox.left()) {
-            arrow.setX(outputBox.left() - arrow.width() - 5); // Ensure space between arrow and output
-        }
+        // Position the outputBox container to match the outputComponent
+        outputBox.setPos(outputComponent.left(), outputComponent.top());
+        outputBox.setSize(outputWidth, outputHeight);
     }
 
     public void setOnClickListener(Runnable listener) {
@@ -182,12 +297,6 @@ public class RecipeListItem extends Component implements IClickable {
     public void setSelected(boolean selected) {
         isSelected = selected;
 
-        // Update the background color to highlight the entire row
-        if (background != null) {
-            background.color(selected ? SELECTED_COLOR : UNSELECTED_COLOR);
-        }
-
-        // Also highlight the arrow text
         arrow.hardlight(selected ? SELECTED_COLOR : TITLE_COLOR);
     }
 
