@@ -2012,6 +2012,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="TrapWnd_Step">Apakah Anda benar-benar ingin menginjak jebakan ini? Anda mungkin bisa mati.</string>
     <string name="TrapWnd_Title">Jebakan</string>
     <string name="TreacherousSpirit_Desc">Makhluk mengerikan ini terlihat seperti awan kegelapan yang hidup. Mata raksasa itu menatap Anda, sambil berdenyut dengan setiap gerakan yang Anda lakukan.</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">Roh pengkhianat</string>
     <string name="TreacherousSpirit_Name_Objective">Roh pengkhianat</string>
     <string name="Undead_Defense">tertahan</string>
@@ -2717,6 +2718,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

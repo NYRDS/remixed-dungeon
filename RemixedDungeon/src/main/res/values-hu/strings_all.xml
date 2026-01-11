@@ -447,6 +447,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="ColdSpirit_Name_Objective">fagyott lélek</string>
     <string name="ComboBuff_Name">Kombó</string>
     <string name="Combo_Combo">%d sorozatos találat!</string>
+    <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">Szokványos fanyíl vas heggyel.</string>
     <string name="CommonArrow_Name">nyíl</string>
     <string name="CompositeCrossbow_Info">Ez a megerősített nyílpuska bizonyítja hogy sokkal hatékonyabb a fából készült társainál.</string>
@@ -537,6 +538,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="DriedRose_Name">kiszárított rózsa</string>
     <string name="Drink_ACDrink">IDD MEG</string>
     <string name="Drink_Message">Ez az ital felrissítő volt!</string>
+    <string name="DrunkardNPC_Name">részeges</string>
     <string name="Drunkard_Phrase_3">Ez a sör így néz ki, mint a por</string>
     <string name="Dungeon_DeadEnd">Mit keresel te itt?!</string>
     <string name="Dungeon_NoTips">A szöveg kibetűzhetetlen...</string>
@@ -2448,6 +2450,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
