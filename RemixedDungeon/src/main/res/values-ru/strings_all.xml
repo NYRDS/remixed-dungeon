@@ -905,6 +905,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HealthDart_Info">Наконечник этого дротика покрыт исцеляющим зельем.</string>
     <string name="HealthDart_Name">Исцеляющий Дротик</string>
     <string name="Heap_Mimic">Это мимик!</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Чёрное пульсирующее сердце Предательского духа.</string>
     <string name="HeartOfDarkness_Name">Сердце тьмы</string>
     <string name="Hedgehog_Desc">Ёжик беспокойно глядит по сторонам.</string>
@@ -3026,6 +3027,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 

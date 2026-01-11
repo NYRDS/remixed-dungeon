@@ -2455,6 +2455,7 @@ otro lugar del nivel.</string>
     <string name="WoodenShield_desc">Un escudo de madera cruda es el escudo más sencillo que existe. Es redondo y puede bloquear algún daño de vez en cuando.</string>
     <string name="WoodenShield_name">Escudo de madera</string>
     <string name="Worm_Desc">No hay forma para saber qué tan grande es este gusano. Emerge parcialmente de la planta, su está cubierto con trozos de carne podrida y limo. Sus mandíbulas gigantes te dan una idea clara de cómo este monstruo hace su camino a través de la superficie.</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">gusano</string>
     <string name="Worm_Name_Objective">gusano</string>
     <string name="Wraith_Defense">esquivado</string>
@@ -2745,6 +2746,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

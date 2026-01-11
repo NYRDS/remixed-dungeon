@@ -753,6 +753,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="GoldenKey_Info">Os entalhes nesta chave de ouro são minúsculos e intrincados. Talvez ele pode abrir alguns cofres fechados!?</string>
     <string name="GoldenKey_Name">chave de ouro</string>
     <string name="GoldenStatue_Desc">É bastante difícil de acreditar que esta estátua magnífica não é apenas uma decoração, mas sim uma criatura maligna esperando por um aventureiro desavisado. À primeira vista você poderia jurar que a _%s_ era apenas parte de seu braço.</string>
+    <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">Estátua Dourada</string>
     <string name="GoldenStatue_Name_Objective">Estátua Dourada</string>
     <string name="GoldenSword_Info">Normalmente, uma arma feita de um metal macio como ouro, é considerada apenas uma decoração. Apesar disso, a lâmina dessa espada parece ser capaz de cortar muito bem.</string>
@@ -2028,6 +2029,7 @@ outro local do nível.</string>
     <string name="VampireSkull_Name">Crânio de Vampiro</string>
     <string name="VertigoBuff_Info">A sensação de tontura torna mais difícil andar em linha reta!</string>
     <string name="VertigoBuff_Name">Vertigem</string>
+    <string name="View_Distance">Distância de visão</string>
     <string name="Viscosity_Status">deferido %d</string>
     <string name="Viscosity_Txt">%s de viscosidade</string>
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Ele permite levar de forma compacta até %d varinhas.</string>
@@ -2713,6 +2715,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

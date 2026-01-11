@@ -1801,6 +1801,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="VampireSkull_Name">흡혈귀의 해골</string>
     <string name="VertigoBuff_Info">현기증이 나서 똑바로 걷기 어려워집니다!</string>
     <string name="VertigoBuff_Name">어지러움</string>
+    <string name="View_Distance">시야 거리</string>
     <string name="Viscosity_Status">지속적으로 %d</string>
     <string name="Viscosity_Txt">점성의의 %s</string>
     <string name="WandHolster_Info">이 얇은 마법 막대 보관함은 이국적인 동물의 가죽으로 만들었습니다. 이것은 당신에게 %d개의 마법 막대를 보관할 수 있게 해줍니다.</string>
@@ -2338,6 +2339,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

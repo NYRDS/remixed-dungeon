@@ -1706,6 +1706,7 @@
     <string name="SociologistNPC_Name_Objective">調研員</string>
     <string name="Sorrowmoss_Desc">斷腸苔並不是一種苔蘚，而是一種有極強毒性，花瓣利如刀片的花。</string>
     <string name="Sorrowmoss_Name">斷腸苔</string>
+    <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">這是你從靈魂之罐的殘余中拿取的一塊碎片。它散發著神秘的能量，也許有人會對這東西感興趣。</string>
     <string name="SoulShard_Name">靈魂碎片</string>
     <string name="Spear_Info">這是一根裝著鋒銳鐵戈的細幼木杖。</string>
@@ -1899,6 +1900,7 @@
     <string name="VampireSkull_Info">這個面具是由一個完全野生的吸血鬼頭骨制成的。一個吸血鬼的頭骨...一個大頭吸血鬼的頭骨...嚇。</string>
     <string name="VampireSkull_Name">吸血鬼頭骨</string>
     <string name="VertigoBuff_Name">眩暈</string>
+    <string name="View_Distance">視野距離</string>
     <string name="Viscosity_Status">延緩 %d 點傷害</string>
     <string name="Viscosity_Txt">粘稠 %s</string>
     <string name="WandHolster_Info">這個法杖套是由一些有異國情調的動物皮革製成的，它可以裝入%d 枝法杖。</string>
@@ -2513,6 +2515,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

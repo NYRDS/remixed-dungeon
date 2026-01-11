@@ -1816,6 +1816,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="VampireSkull_Info">Topeng ini diperbuat daripada tengkorak pontianak asli. Sebenarnya ia adalah tengkorak pontianak... Menakutkan.</string>
     <string name="VampireSkull_Name">Tengkorak pontianak</string>
     <string name="VertigoBuff_Name">Pening Gayat</string>
+    <string name="View_Distance">Jarak penglihatan</string>
     <string name="Viscosity_Status">ditangguh %d</string>
     <string name="Viscosity_Txt">%s kelikatan</string>
     <string name="WandHolster_Info">Sarung tongkat sakti nipis ini diperbuat daripada kulit haiwan eksotik. Ia dapat membawa sehingga %d batang tongkat sakti.</string>
@@ -2414,6 +2415,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

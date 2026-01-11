@@ -1992,6 +1992,7 @@
     <string name="VampireSkull_Info">Цю маску виготовлено з повністю натурального черепа вампіра. Фактично це і є череп вампіра... череп вампіра з великою головою. Який жах.</string>
     <string name="VampireSkull_Name">Щелепа вампіра</string>
     <string name="VertigoBuff_Name">Запаморочений</string>
+    <string name="View_Distance">Відстань огляду</string>
     <string name="Viscosity_Status">відкладено %d</string>
     <string name="Viscosity_Txt">%s в\'язкості</string>
     <string name="WandHolster_Info">Це - тонкий пенал зі шкіри екзотичної тварини. Він дозволяє компактно тримати до %d паличок.</string>
@@ -2589,6 +2590,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

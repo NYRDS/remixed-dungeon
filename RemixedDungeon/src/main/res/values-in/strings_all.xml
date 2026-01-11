@@ -2027,6 +2027,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="VampireSkull_Name">Tengkorak vampir</string>
     <string name="VertigoBuff_Info">Perasaan pusing membuat lebih sulit untuk berjalan lurus!</string>
     <string name="VertigoBuff_Name">Pusing</string>
+    <string name="View_Distance">Jarak pandangan</string>
     <string name="Viscosity_Status">penundaan %d</string>
     <string name="Viscosity_Txt">%s kelekatan</string>
     <string name="WandHolster_Info">Pemegang ramping ini terbuat dari kulit beberapa hewan eksotis. Ini memungkinkan untuk membawa hingga %d tongkat secara kompak.</string>
@@ -2716,6 +2717,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

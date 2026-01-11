@@ -1664,6 +1664,7 @@ Potrebbe bruciare?</string>
     <string name="VampireSkull_Info">Questa maschera è fatta col teschio di un vampiro. Infatti è il teschio di un vampiro... il teschio di un grande vampiro. Spaventoso.</string>
     <string name="VampireSkull_Name">teschio di vampiro</string>
     <string name="VertigoBuff_Name">Vertigini</string>
+    <string name="View_Distance">Distanza visiva</string>
     <string name="Viscosity_Status">differito %d</string>
     <string name="Viscosity_Txt">%s della viscosità</string>
     <string name="WandHolster_Info">Questa sottile custodia è fatta di pelle di qualche animale esotico. Ti permette di trasportare compattamente fino a %d bacchette.</string>
@@ -2074,6 +2075,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_identifier_sign_name">Insegna della Palla di Cristallo</string>
     <string name="town_deco_inn_bed_desc">Sembra un letto molto comodo.</string>
     <string name="town_deco_inn_bed_name">Letto</string>
+    <string name="town_deco_ladder_desc">Una vecchia scala, dall'aspetto inaffidabile.</string>
     <string name="town_deco_library_sign_desc">Pare che ci sia una biblioteca in quell\'edificio</string>
     <string name="town_deco_library_sign_name">Insegna della Biblioteca</string>
     <string name="town_deco_locked_door_name">Porta bloccata</string>
@@ -2152,6 +2154,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

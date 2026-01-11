@@ -1861,6 +1861,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="VampireSkull_Info">Ez a maszk egy igaz vámpír koponyájából készült. Sőt, ez maga egy vámpír koponya...egy nagyfejű vámpíré. Ijesztő.</string>
     <string name="VampireSkull_Name">Vámpír koponya</string>
     <string name="VertigoBuff_Name">Szédülés</string>
+    <string name="View_Distance">Látótávolság</string>
     <string name="Viscosity_Status">%d sebzést késleltetett</string>
     <string name="Viscosity_Txt">Nyúlós %s</string>
     <string name="WandHolster_Info">Ez a vékony kis tartó valami egzotikus állat bőréből készült. Lehetővé teszi hogy kompakt módon tárolj maximum %d pálcát.</string>
@@ -2447,6 +2448,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
