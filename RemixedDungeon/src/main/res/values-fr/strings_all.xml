@@ -1449,6 +1449,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Est-ce seulement croyable ? Ces imbéciles n\'ont toujours pas compris à quel point ce foutu égoût est dangereux. Comme si les gardes et les aventuriers pouvaient les protéger de tout. Hah! Aucune arme ne pourra empêcher une maladie de s\'étendre. Mais j\'ai besoin d\'une preuve. Vous pouvez m\'aider ? Rapportez-moi %d peaux de rat, pour mes tests additionnels.\n</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Est-ce seulement croyable ? Ces imbéciles n\'ont toujours pas compris à quel point ce foutu égoût est dangereux. Comme si les gardes et les aventuriers pouvaient les protéger de tout. Hah! Aucune arme ne pourra empêcher une maladie de s\'étendre. Mais j\'ai besoin d\'une preuve. Vous pouvez m\'aider ? Rapportez-moi %d peaux de rat, pour mes tests additionnels.\n</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Deux graines de soleil_ . Leurs pétales dorés recèlent un pouvoir que je cherche à comprendre. Trouvez-les, et que leur essence soit révélée !</string>
+    <string name="PlagueDoctorQuest_4_1_InProgress">Cinq _Sorciers Nains_, leurs corps palpitant encore des faibles échos de magie noire ! Ramenez-les-moi, et je vous récompenserai avec une potion d'une puissance inégalée – une _Potion de Puissance_ qui vous dotera de la force de dix hommes !</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Achoo ! Les Nains ! Ces obstinés habitants des profondeurs, obsédés par les gemmes et l'or. Mais ce sont les _Sorcières Naines_ que je convoite... leur magie tordue, alimentée par les abysses mêmes qu'ils habitent. Cinq, j'ai besoin de cinq de ces âmes flétries ! Leurs corps recèlent la clé pour comprendre un certain... phénomène. Quelque chose à propos de la canalisation des énergies arcaniques à travers la terre elle-même. Je crois que je suis proche d'une percée, mais j'ai besoin de leur essence, de leur magie corrompue ! *Il tousse violemment dans son mouchoir, une tache sombre s'étalant sur le tissu délicat*</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Récupérez cinq _Kobolds Icemancers_ morts ! Leurs corps gelés contiennent la clé permettant de découvrir les secrets de leur magie glaçante !</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Il bredouille, sa voix se brisant comme un petit bout de bois sec*. A-ah, _succubes_! Deux... oui, deux, vivantes ! C'est... hum... pour mes recherches ! Voyez-vous... leurs phéromones... c'est crucial pour comprendre l'équilibre délicat de... ah... *Il s'interrompt, sa main osseuse s'élevant nerveusement pour ajuster son masque, ses yeux lançant des éclairs vers vous avec une intensité fébrile.* Leur... essence... c'est une énigme... une magnifique, énigmatique énigme ! *Il tousse violemment, tentant de retrouver sa contenance.* Je vous le promets, pour m'avoir apporté deux de ces... créatures... vous aurez toute ma gratitude éternelle. Considérez cela comme... une faveur à la connaissance ! Oui ! À la connaissance !</string>
@@ -1577,7 +1578,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Quarterstaff_Name">penn bazh</string>
     <string name="QuickSlot_SelectSlot">Choisissez un raccourci</string>
     <string name="QuickSlot_SelectedItem">Choisissez un objet à mettre en raccourci</string>
-    <string name="Quiver_Gender">masculine</string>
+    <string name="Quiver_Gender">neuter</string>
     <string name="Quiver_Info">Carquois en cuir pouvant contenir n\'importe quelle quantité de flèches</string>
     <string name="Quiver_Name">carquois</string>
     <string name="RabbitEars_Info">Cette légende est connue : les lapins sont des créatures chanceuses, et leur chance se transférerait à ceux qui obtiennent une partie du corps du lapin. En y repensant être tué pour une décoration faite avec vos oreilles ne vous rend pas particulièrement chanceux.</string>
@@ -2888,6 +2889,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 

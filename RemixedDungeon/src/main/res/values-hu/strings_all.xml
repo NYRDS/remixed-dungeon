@@ -1118,6 +1118,7 @@ Ennek a viselése azt jelenti, hogy odafigyelsz másokra.</string>
     <string name="Mob_Cannot_Be_Pet">Túl erős a(z) \&quot;%s\&quot; akarata hogy irányítsd!</string>
     <string name="Mob_Desc">Hamarosan valódi leírás kerül ide!</string>
     <string name="Mob_Died">Hallod hogy valami meghalt a távolban </string>
+    <string name="Mob_GoingTo">Már megy!</string>
     <string name="Mob_ReadyForOrder">%skészen áll a parancsodra.</string>
     <string name="Mob_StaAmokStatus">Ez a(z) %1$s ámokfutásba kezdett.</string>
     <string name="Mob_StaControlledStatus"> %s - átkozott megszállás alatt</string>
@@ -2446,6 +2447,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

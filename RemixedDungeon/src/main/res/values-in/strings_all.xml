@@ -1471,6 +1471,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Quarterstaff_Name">tongkat kuat</string>
     <string name="QuickSlot_SelectSlot">Pilih slot cepat untuk itu</string>
     <string name="QuickSlot_SelectedItem">Pilih item untuk slot cepat</string>
+    <string name="Quiver_Gender">neuter</string>
     <string name="Quiver_Info">Kantung panah yang terbuat dari kulit cocok untuk menampung anak panah</string>
     <string name="Quiver_Name">kantung panah</string>
     <string name="RabbitEars_Info">Ada kepercayaan bahwa kelinci dilahirkan dalam keberuntungan dan bahwa seseorang yang memperoleh bagian dari hewan itu akan disertai dengan keberuntungan yang melekat pada binatang itu. Dipikir-pikir lagi, dibunuh demi telingamu, dari mana dekorasi akan dibuat, tidak terdengar sangat beruntung.</string>
@@ -2715,6 +2716,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
