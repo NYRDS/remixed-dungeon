@@ -519,6 +519,7 @@
     <string name="DarkSacrifice_Ok">Моє життя в твоїх руках!</string>
     <string name="DarkSacrifice_Resist">Ти не маєш влади надімною!</string>
     <string name="DarkSacrifice_Self">За Батіг!</string>
+    <string name="DarkVeilBuff_Info">Вінок темряви оточує власника, викликаючи духа щоразу, коли завдається шкода.</string>
     <string name="DarkVeilBuff_Name">Темна вуаль</string>
     <string name="Darkness_Info">Схоже на шматки вічної темряви, що плавають у повітрі</string>
     <string name="Dart_Gender">masculine</string>
@@ -2588,6 +2589,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

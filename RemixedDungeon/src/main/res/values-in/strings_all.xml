@@ -1350,6 +1350,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Bawakan aku %d kulit tikus.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Bisakah kamu percaya?! Para idiot itu masih belum menyadari betapa berbahayanya selokan sialan ini! Seperti penjaga dan petualang yang bisa melindungi kota dari apapun. Hah! Tidak ada senjata yang dapat menghentikan penyebaran penyakit. Tapi saya butuh bukti, mungkin Anda bisa membantu saya dengan itu? Bawakan saya %d kulit tikus, sehingga saya bisa melakukan beberapa tes tambahan.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bisakah kamu percaya?! Para idiot itu masih belum menyadari betapa berbahayanya selokan sialan ini! Seperti penjaga dan petualang yang bisa melindungi kota dari apapun. Hah! Tidak ada senjata yang dapat menghentikan penyebaran penyakit. Tapi saya butuh bukti, mungkin Anda bisa membantu saya dengan itu? Bawakan saya %d kulit tikus, sehingga saya bisa melakukan beberapa tes tambahan.</string>
+    <string name="PlagueDoctorQuest_4_1_Epilogue">Sempurna! Para _Dwarf Warlocks_, esensi mereka kini bisa kuteliti! Begitu menyimpang dan terkorupsi sihirnya... sungguh menakjubkan. *Ia mengangkat sebuah botol berisi cairan merah kental yang berpendar.* Ini, untukmu: sebuah _Potion of Might_! Minumlah kekuatannya, dan kau akan merasakan kekuatan gunung-gunung mengalir dalam darahmu! Ingatlah, pengetahuan yang diperoleh dari pengorbanan ini pada akhirnya akan melayani tujuan yang lebih tinggi... mungkin bahkan menyelamatkan kita semua dari nasib yang lebih buruk dari kematian. </string>
     <string name="PlagueDoctor_Desc">Seluruh tubuh orang bungkuk ini disembunyikan di bawah jumpsuit kulit. Juga, dari dia datang bau obat yang pahit dan ... bawang putih?</string>
 
     <string name="PlagueDoctor_Name">dokter wabah</string>
@@ -2714,6 +2715,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

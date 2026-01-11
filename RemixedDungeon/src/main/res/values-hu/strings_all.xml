@@ -170,6 +170,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Bandit_Desc">A kazamata mélyebb szintjei mindig remek bűvóhelyül szolgáltak minden féle bűnözőnek. Nem mind tudta megőrizni a józan eszét hosszú ideig távol a napfénytől. Ezek az őrült banditák már réges régen elfelejtették, hogy kik ők és hogy miért lopnak. Úgy tűnik ennek a banditának tőre valamivel be van vonva.</string>
     <string name="Bandit_Name">őrült bandita</string>
     <string name="Bandit_Name_Objective">őrült banditát</string>
+    <string name="BardSong_1">Feleségemmel együtt teljesen egyedül élünk,\nEgy kis faházban, melyet sajátunknak hívtunk,\nŐ szerette a gint, én meg a rumot,\nMondom én nektek, volt rengeteg mulatnivalónk.</string>
     <string name="BarkskinBuff_Name">Kérges bőr</string>
     <string name="Barrel_Desc">Egyszerű fahordónak látszik. De közelebbről eléggé olajszagú. Elég könnyű, el tudod tolni.</string>
     <string name="Barrel_Name">Hordó</string>
@@ -2445,6 +2446,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
