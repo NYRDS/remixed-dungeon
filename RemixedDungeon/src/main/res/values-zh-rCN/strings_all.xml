@@ -504,6 +504,7 @@
     <string name="CorpseDust_Name">尸尘</string>
     <string name="Crab_Defense">招架</string>
     <string name="Crab_Desc">这些巨型的螃蟹位居下水道食物链的顶端。它们行动极其迅速，并且厚重的甲壳能承受沉重的打击。</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">下水道螃蟹</string>
     <string name="Crab_Name_Objective">下水道螃蟹</string>
     <string name="CrippleBuff_Info">身虽残，但目标仍鉴定，战斗还在继续。</string>
@@ -2738,6 +2739,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

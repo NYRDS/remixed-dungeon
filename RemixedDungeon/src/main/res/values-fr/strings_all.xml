@@ -1437,6 +1437,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Piranha_Name_Objective">piranha géant</string>
     <string name="PirateSet_Info">Arr! s\'rais tu un mousaillon... ou un satané marin d\'eau douce ? J\'espère pas, enfin je veux dire que cet équipement est pour les pirates... Arr!</string>
     <string name="PirateSet_Name">Set du Pirate</string>
+    <string name="PlagueDoctorMask_Info">Ceci... ce n'est pas qu'un simple masque. C'est... une barrière. Un bouclier contre les forces de décomposition contre lesquelles le médecin de peste lutte sans relâche. Fabriqué à partir du plus fin bois d'ébène, minutieusement sculpté avec la figure d'un crâne vorace. Ses orbites creuses sont remplies de pierres précieuses en améthyste scintillantes qui pulsent faiblement, comme les braises mourantes d'un feu. Chaque respiration que vous prenez, chaque parole que vous prononcez, est filtrée à travers un réseau labyrinthique de tubes et de filtres. Une mixture d'herbes puissantes et d'épices exotiques imprègne l'air à l'intérieur, masquant la puanteur de la mort qui s'accroche à vous comme un linceul.</string>
     <string name="PlagueDoctorNPC_After_Quest">Je vais leur montrer, je vais leur montrer à tous !</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Tu es toujours là ? Tiens ! Prend ça.</string>
     <string name="PlagueDoctorNPC_Desc">Cet homme bossu est complètement recouvert de cuir. Il sent très fort les préparations médicinales et... l\'aïl ?</string>
@@ -2887,6 +2888,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

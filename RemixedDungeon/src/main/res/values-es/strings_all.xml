@@ -1064,6 +1064,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="KrampusHead_Name">cabeza de Krampus</string>
     <string name="KunaiThrow_Info">Este lanzamiento de Kunai mortal se hará extremadamente rápido, tanto que ni siquiera podrás seleccionar un objetivo.\n\nLos verdaderos maestros son capaces de lanzar más de un Kunai a la vez.</string>
     <string name="KunaiThrow_Name">Lanzamiento de Kunai</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Este arma consiste en una hoz unida a una cadena de metal con un peso de acero al final. </string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">TIRAR</string>
@@ -2744,6 +2745,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -778,6 +778,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Hedgehog_Info4">Nimm diese Torte</string>
     <string name="Hedgehog_Name">Igel</string>
     <string name="HeroClass_Elf">Elf</string>
+    <string name="HeroClass_ElfPerks_0">Elfen beginnen mit 15 Gesundheitspunkten und 9 Stärkepunkten.</string>
     <string name="HeroClass_ElfPerks_1">Elfen sind immun zu festsetzen.</string>
     <string name="HeroClass_ElfPerks_2">Elfen beginnen mit einem verstärkten Holzbogen und ein paar Pfeilen.</string>
     <string name="HeroClass_ElfPerks_3">Elfen sind sehr effektiv mit Bögen und sind agil.</string>
@@ -2610,6 +2611,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

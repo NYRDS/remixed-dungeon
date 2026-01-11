@@ -299,6 +299,7 @@
     <string name="BodyArmorSpell_Name">Тело-щит</string>
     <string name="BoneSaw_Info">Хирургическая пила тонкой работы, созданная для быстрого вскрытия. Её урон и скорость атаки растут с мастерством Чумного доктора. Критические удары выбивают дополнительные собираемые части, безжалостно эффективна против парализованных врагов.</string>
     <string name="BoneSaw_Name">Костяная пила</string>
+    <string name="BoneShard_Name">Осколок кости</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Брошенное во врага, это изогнутое деревянное оружие вернётся в руку владельца.</string>
     <string name="Boomerang_Name">бумеранг</string>
@@ -3025,6 +3026,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 
