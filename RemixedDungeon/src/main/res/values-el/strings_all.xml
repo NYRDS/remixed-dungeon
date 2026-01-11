@@ -2849,7 +2849,7 @@
   <string name="WndTilesKind_text">Πρόκειται να μπεις σε μια κατακόμβη που έχει κυριευτεί από τη διαβολική μαγεία· τουλάχιστον μπορείς να επιλέξεις πώς θα τη βλέπεις.\nΘέλεις να είναι με σύγχρονα ψευδο-3D γραφικά ή με την κλασική επίπεδη εμφάνιση;\nΜπορείς να το αλλάξεις αργότερα στο μενού ρυθμίσεων του παιχνιδιού.</string>
   <string name="WndTilesKind_NewLook">Νέα εμφάνιση</string>
   <string name="WndTilesKind_ClassicLook">Κλασική εμφάνιση</string>
-  <string name="MobAi_status">- %s: %s</string>
+  <string name="MobAi_status">- %1$s: %2$s</string>
   <string name="WndCustomizations_Title">Προσαρμογές</string>
   <string name="IceGuardianCore_DieInfo">Κάνει τόσο κρύο εδώ... Καλύτερα να επιστρέψω στο επίπεδο #14 και να βρω ένα πιο ζεστό μέρος.</string>
   <string name="Lich_DieInfo">Ποτέ δεν συμπάθησα αυτόν τον νεκρομάντη. Ώρα να επιστρέψω στο επίπεδο #7 και να αναζητήσω την επόμενη περιπέτεια.</string>

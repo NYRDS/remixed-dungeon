@@ -1239,7 +1239,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="MissileWeapon_No">No, he cambiado de opinión</string>
     <string name="MissileWeapon_Sure">¿De verdad quieres equiparla como arma cuerpo a cuerpo?</string>
     <string name="MissileWeapon_Yes">Sí, se lo que estoy haciendo</string>
-    <string name="MobAi_status">esto%s es %s</string>
+    <string name="MobAi_status">esto%1$s es %2$s</string>
     <string name="Mob_Cannot_Be_Pet">¡La voluntad de \&quot;%s\&quot;  es demasiado fuerte para controlarla!</string>
     <string name="Mob_CantDoIt">No puedo hacer esto. Tengo patas pequeñas.</string>
     <string name="Mob_Desc">¡Pronto tendremos una descripción más fiable!</string>

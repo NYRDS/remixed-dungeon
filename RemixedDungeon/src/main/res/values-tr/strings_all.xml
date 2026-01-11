@@ -1262,7 +1262,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="MissileWeapon_No">Hayır, fikrimi değiştirdim</string>
     <string name="MissileWeapon_Sure">Saldırı silahı olarak kullanmak istediğine emin misin?</string>
     <string name="MissileWeapon_Yes">Evet, ne yaptığımı biliyorum</string>
-    <string name="MobAi_status">Bu %s, %s</string>
+    <string name="MobAi_status">Bu %1$s, %2$s</string>
     <string name="Mob_Cannot_Be_Pet">\&quot;%s\&quot; iradesinin kontrol edilmesi için çok güçlü!</string>
     <string name="Mob_CantDoIt">Yapamam. Küçük pençelerim var.</string>
     <string name="Mob_Desc">Gerçek açıklama yakında gelecek!</string>

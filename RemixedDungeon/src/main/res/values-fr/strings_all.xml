@@ -1305,7 +1305,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="MissileWeapon_No">Non, j\'ai changé d\'avis</string>
     <string name="MissileWeapon_Sure">Voulez vous vraiment vous en équiper en tant qu\'arme de mêlée ?</string>
     <string name="MissileWeapon_Yes">Oui, je sais ce que je fais</string>
-    <string name="MobAi_status">Ce %s est %s</string>
+    <string name="MobAi_status">Ce %1$s est %2$s</string>
     <string name="Mob_Cannot_Be_Pet">La volonté de \&quot;%s\&quot; est trop forte pour être contrôlée !</string>
     <string name="Mob_CantDoIt">Je ne peux pas le faire. J\'ai des petites pattes.</string>
     <string name="Mob_Desc">La vraie description arrive bientôt !</string>

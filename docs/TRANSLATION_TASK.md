@@ -334,6 +334,12 @@ After adding translations:
 - **Problem**: Unescaped special characters like ampersands (&) can break XML parsing
 - **Solution**: Use proper XML entities (`&amp;` instead of `&`, `&quot;` instead of `"`, etc.)
 
+### Multiple Placeholders Issues
+- **Problem**: Multiple `%s` placeholders without positional identifiers can cause Android build failures
+- **Solution**: Use positional identifiers (`%1$s`, `%2$s`, etc.) for multiple placeholders
+- **Example**: Instead of `"This %s is %s"`, use `"This %1$s is %2$s"`
+- **Important**: When translating strings with multiple placeholders, ensure the order matches the code usage. For example, if the code calls `Utils.format(R.string.MobAi_status, me.getName(), getTag())`, then `%1$s` should correspond to the mob name and `%2$s` to the status tag.
+
 ## Common String Patterns
 
 ### UI Elements

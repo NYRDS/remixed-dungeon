@@ -2843,7 +2843,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
   <string name="WndTilesKind_text">Zamierzasz wejść do Lochu opętanego przez pokręconą magię, ale teraz możesz wybrać, jak chcesz to zobaczyć:\n Czy wolisz nowoczesny pseudo-3D czy klasyczny płaski widok?\nPóźniej będziesz mógł to zmienić w menu opcji gry.</string>
   <string name="WndTilesKind_NewLook">Nowy wygląd</string>
   <string name="WndTilesKind_ClassicLook">Wygląd klasyczny</string>
-  <string name="MobAi_status">%sto%s</string>
+  <string name="MobAi_status">%1$sto%2$s</string>
   <string name="WndCustomizations_Title">Modyfikacje</string>
   <string name="IceGuardianCore_DieInfo">Zimno tutaj, Lepiej wrócę na poziom 14 i poszukam jakiegoś cieplejszego miejsca.</string>
   <string name="Lich_DieInfo">Nigdy nie polubie tego Nekromanty. To dobra pora by wrócić na poziom 7 i poszukać drogi ku nowej przygodzie.</string>
