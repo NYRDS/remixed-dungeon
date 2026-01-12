@@ -1290,6 +1290,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Piercing_Name_1">Durchdringender %s</string>
     <string name="Piercing_Name_2">Durchdringender %s</string>
     <string name="Piranha_Desc">Diese fleischfressenden Fische sind keine natürlichen Bewohner der Untergrundbecken. Sie wurden extra dafür gezüchtet, überschwemmte Schatzgewölbe zu bewachen.</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">Riesiger Piranha</string>
     <string name="Piranha_Name_Objective">Riesiger Piranha</string>
     <string name="PirateSet_Info">Arr! Hälst du dich für einen Matrosen oder für ein verdammtes Landei!? Ich hoffe du bist keins, das Zeug ist nur für Piraten, sag ich dir...Arr!</string>
@@ -2616,6 +2617,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
