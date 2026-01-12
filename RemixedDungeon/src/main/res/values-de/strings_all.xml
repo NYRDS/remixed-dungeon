@@ -1584,6 +1584,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="ScaleArmor_Desc">Die Metallplättchen, die auf eine Lederjacke aufgenäht wurden, gewähren eine flexible und doch auch schützende Panzerung.</string>
     <string name="ScaleArmor_Name">Schuppenrüstung</string>
     <string name="ScarecrowNPC_Desc">Es gibt keinen Zweifel ... diese Vogelscheuche beobachtet jede deiner Bewegungen. Seine rot leuchtenden Augen durchbohren dich, aber überraschenderweise, fühlst du sich nicht bedroht.</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">Vogelscheuche</string>
     <string name="ScarecrowNPC_Name_Objective">Vogelscheuche</string>
     <string name="ScarecrowNPC_Quest_End">Wie lustig, wie gut!\n Für das kriegst du das eigentliche Essen!</string>
@@ -2617,6 +2618,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

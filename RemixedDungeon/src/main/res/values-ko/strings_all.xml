@@ -1082,6 +1082,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Mob_Cannot_Be_Pet">\&quot;%s\&quot;의 의지는 조종당하기엔 너무 강했습니다!</string>
     <string name="Mob_Desc">진짜 설명은 곧 나올 예정입니다!</string>
     <string name="Mob_Died">당신은 저 멀리서 무언가가 죽는 소리를 들었습니다.</string>
+    <string name="Mob_ReadyForOrder">%s이(가) 명령을 받기를 기다리고 있습니다.</string>
     <string name="Mob_StaAmokStatus">이 %1$s은/는 광란에 빠졌습니다</string>
     <string name="Mob_StaControlledStatus">이 %s는 사악한 존재에게 정신을 지배당하고 있습니다.</string>
     <string name="Mob_StaFleeingStatus">이 %s 은/는 혼비백산하고 있습니다.</string>
@@ -2342,6 +2343,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
