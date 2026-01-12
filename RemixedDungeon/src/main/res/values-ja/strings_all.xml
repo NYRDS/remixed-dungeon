@@ -2032,6 +2032,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SuspiciousRat_Name_Objective">怪しいネズミ</string>
     <string name="Swarm_Defense">回避した</string>
     <string name="Swarm_Desc">致命的なハエの大群が怒り狂ったように唸る。魔法以外の攻撃はすべて、より小さいが同様に危険な2つの群れに分裂させる。</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">ハエの群れ</string>
     <string name="Swarm_Name_Objective">ハエの群れ</string>
     <string name="Swing_Name_0">野蛮な %s</string>
@@ -2857,6 +2858,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

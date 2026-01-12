@@ -1098,6 +1098,7 @@ Potrebbe bruciare?</string>
     <string name="Piranha_Name_Objective">Piranha gigante</string>
     <string name="PirateSet_Info">Arr! Ti senti un compare... O sei solo un dannato marinaio di acqua dolce!? Spero che tu non lo sia, questa roba è per i pirati dopo tutto, intendo... Arr! </string>
     <string name="PirateSet_Name">Set Pirata</string>
+    <string name="PlagueDoctorMaskHood_Name">Maschera del Dottore della Peste con cappuccio</string>
     <string name="PlagueDoctorNPC_Desc">L'intero corpo di questa persona ingobbita è nascosto sotto una tuta di pelle. Inoltre, da lui proviene un amaro odore di medicinali e... aglio?</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Riesci a crederci? Quegli idioti non hanno ancora capito quanto pericolose siano queste dannate fogne! Come se guardie e avventurieri potessero proteggere il paese da qualunque cosa. Hah! Non esiste arma che possa fermare la diffusione di una malattia. Ma mi servono prove, potresti aiutarmi?  Portami %d pelli di ratto, in modo che possa fare altri test.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Riesci a crederci? Quegli idioti non hanno ancora capito quanto pericolose siano queste dannate fogne! Come se guardie e avventurieri potessero proteggere il paese da qualunque cosa. Hah! Non esiste arma che possa fermare la diffusione di una malattia. Ma mi servono prove, potresti aiutarmi?  Portami %d pelli di ratto, in modo che possa fare altri test.</string>
@@ -2157,6 +2158,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
