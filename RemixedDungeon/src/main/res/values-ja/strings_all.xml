@@ -1704,6 +1704,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="RottenRation_Info">昔は食べられただろう</string>
     <string name="RottenRation_Name">腐った糧食</string>
     <string name="RottingFist_Desc">古き神の腐った拳</string>
+    <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">腐った拳</string>
     <string name="RottingFist_Name_Objective">腐った拳</string>
     <string name="RoyalShield_desc">フルメタル製のシールド。確かに重いが、これだけが最高の防御を提供できる。</string>
@@ -2856,6 +2857,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

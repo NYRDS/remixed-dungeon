@@ -329,6 +329,7 @@
     <string name="Challenges_Names_6">Заборонені руни</string>
     <string name="Challenges_Names_7">Пацифізм</string>
     <string name="ChampionOfAirBuff_Name">Чемпіон Повітря</string>
+    <string name="ChampionOfWaterBuff_Name">Чемпіон Води</string>
     <string name="ChaosArmor_Info">Криваво червоні пластини цієї броні з\'єднані темно-червоними ланцюгами. Вини випромінюють енергію Хаосу, щоразу, як тільки ти її торкаєшся.</string>
     <string name="ChaosArmor_Name">Обладунки Хаосу</string>
     <string name="ChaosBow_Gender">masculine</string>
@@ -2595,6 +2596,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
