@@ -194,212 +194,86 @@ public class WndAlchemy extends Window {
             AlchemyRecipes.OutputType outputType = AlchemyRecipes.getOutputTypeForInput(selectedRecipe.getKey());
 
             if (outputType == AlchemyRecipes.OutputType.ITEM) {
-                // Create the output item based on the recipe
-                Item outputItem = AlchemyRecipes.createOutputItem(selectedRecipe.getKey());
-
-                if (outputItem != null) {
-                    // Add the item to the player's inventory
-                    if (outputItem.collect(Dungeon.hero)) {
-                        // Item was successfully added to inventory
-                        GameScene.show(new Window() {
-                            {
-                                Text message = PixelScene.createText("Recipe executed successfully!\nOutput: " + selectedRecipe.getValue(), GuiProperties.regularFontSize());
-                                message.hardlight(0x44FF44); // Green color for success
-                                add(message);
-
-                                RedButton okButton = new RedButton("OK") {
-                                    @Override
-                                    protected void onClick() {
-                                        hide();
-                                        hide(); // Close the parent window too
-                                    }
-                                };
-                                okButton.setSize(40, 18);
-                                add(okButton);
-
-                                float msgWidth = Math.max(message.width() + 10, 120);
-                                float msgHeight = message.height() + 28;
-
-                                message.setPos(5, 5);
-                                okButton.setPos((msgWidth - okButton.width()) / 2, message.height() + 10);
-
-                                resize((int)msgWidth, (int)msgHeight);
-                            }
-                        });
-                    } else {
-                        // Inventory is full
-                        GameScene.show(new Window() {
-                            {
-                                Text message = PixelScene.createText("Cannot execute recipe:\nInventory is full!", GuiProperties.regularFontSize());
-                                message.hardlight(0xFF4444); // Red color for error
-                                add(message);
-
-                                RedButton okButton = new RedButton("OK") {
-                                    @Override
-                                    protected void onClick() {
-                                        hide();
-                                    }
-                                };
-                                okButton.setSize(40, 18);
-                                add(okButton);
-
-                                float msgWidth = Math.max(message.width() + 10, 120);
-                                float msgHeight = message.height() + 28;
-
-                                message.setPos(5, 5);
-                                okButton.setPos((msgWidth - okButton.width()) / 2, message.height() + 10);
-
-                                resize((int)msgWidth, (int)msgHeight);
-                            }
-                        });
-                    }
-                } else {
-                    // Failed to create output item
-                    GameScene.show(new Window() {
-                        {
-                            Text message = PixelScene.createText("Failed to execute recipe:\nCould not create output item!", GuiProperties.regularFontSize());
-                            message.hardlight(0xFF4444); // Red color for error
-                            add(message);
-
-                            RedButton okButton = new RedButton("OK") {
-                                @Override
-                                protected void onClick() {
-                                    hide();
-                                }
-                            };
-                            okButton.setSize(40, 18);
-                            add(okButton);
-
-                            float msgWidth = Math.max(message.width() + 10, 150);
-                            float msgHeight = message.height() + 28;
-
-                            message.setPos(5, 5);
-                            okButton.setPos((msgWidth - okButton.width()) / 2, message.height() + 10);
-
-                            resize((int)msgWidth, (int)msgHeight);
-                        }
-                    });
-                }
+                executeItemRecipe();
             } else if (outputType == AlchemyRecipes.OutputType.MOB) {
-                // Create the output mob based on the recipe
-                Mob outputMob = AlchemyRecipes.createOutputMob(selectedRecipe.getKey());
-
-                if (outputMob != null) {
-                    // Spawn the mob near the hero
-                    int spawnPos = Dungeon.level.getEmptyCellNextTo(Dungeon.hero.pos);
-                    if (spawnPos != -1) {
-                        outputMob.pos = spawnPos;
-
-                        Dungeon.level.spawnMob(outputMob);
-
-                        // Show success message
-                        GameScene.show(new Window() {
-                            {
-                                Text message = PixelScene.createText("Recipe executed successfully!\nSpawned: " + selectedRecipe.getValue(), GuiProperties.regularFontSize());
-                                message.hardlight(0x44FF44); // Green color for success
-                                add(message);
-
-                                RedButton okButton = new RedButton("OK") {
-                                    @Override
-                                    protected void onClick() {
-                                        hide();
-                                        hide(); // Close the parent window too
-                                    }
-                                };
-                                okButton.setSize(40, 18);
-                                add(okButton);
-
-                                float msgWidth = Math.max(message.width() + 10, 120);
-                                float msgHeight = message.height() + 28;
-
-                                message.setPos(5, 5);
-                                okButton.setPos((msgWidth - okButton.width()) / 2, message.height() + 10);
-
-                                resize((int)msgWidth, (int)msgHeight);
-                            }
-                        });
-                    } else {
-                        // Could not find a position to spawn the mob
-                        GameScene.show(new Window() {
-                            {
-                                Text message = PixelScene.createText("Cannot execute recipe:\nNo space to spawn mob!", GuiProperties.regularFontSize());
-                                message.hardlight(0xFF4444); // Red color for error
-                                add(message);
-
-                                RedButton okButton = new RedButton("OK") {
-                                    @Override
-                                    protected void onClick() {
-                                        hide();
-                                    }
-                                };
-                                okButton.setSize(40, 18);
-                                add(okButton);
-
-                                float msgWidth = Math.max(message.width() + 10, 150);
-                                float msgHeight = message.height() + 28;
-
-                                message.setPos(5, 5);
-                                okButton.setPos((msgWidth - okButton.width()) / 2, message.height() + 10);
-
-                                resize((int)msgWidth, (int)msgHeight);
-                            }
-                        });
-                    }
-                } else {
-                    // Failed to create output mob
-                    GameScene.show(new Window() {
-                        {
-                            Text message = PixelScene.createText("Failed to execute recipe:\nCould not create output mob!", GuiProperties.regularFontSize());
-                            message.hardlight(0xFF4444); // Red color for error
-                            add(message);
-
-                            RedButton okButton = new RedButton("OK") {
-                                @Override
-                                protected void onClick() {
-                                    hide();
-                                }
-                            };
-                            okButton.setSize(40, 18);
-                            add(okButton);
-
-                            float msgWidth = Math.max(message.width() + 10, 150);
-                            float msgHeight = message.height() + 28;
-
-                            message.setPos(5, 5);
-                            okButton.setPos((msgWidth - okButton.width()) / 2, message.height() + 10);
-
-                            resize((int)msgWidth, (int)msgHeight);
-                        }
-                    });
-                }
+                executeMobRecipe();
             } else {
                 // Unknown output type
-                GameScene.show(new Window() {
-                    {
-                        Text message = PixelScene.createText("Failed to execute recipe:\nUnknown output type!", GuiProperties.regularFontSize());
-                        message.hardlight(0xFF4444); // Red color for error
-                        add(message);
-
-                        RedButton okButton = new RedButton("OK") {
-                            @Override
-                            protected void onClick() {
-                                hide();
-                            }
-                        };
-                        okButton.setSize(40, 18);
-                        add(okButton);
-
-                        float msgWidth = Math.max(message.width() + 10, 150);
-                        float msgHeight = message.height() + 28;
-
-                        message.setPos(5, 5);
-                        okButton.setPos((msgWidth - okButton.width()) / 2, message.height() + 10);
-
-                        resize((int)msgWidth, (int)msgHeight);
-                    }
-                });
+                showMessageWindow("Failed to execute recipe:\nUnknown output type!", 0xFF4444, false);
             }
         }
+    }
+
+    private void executeItemRecipe() {
+        // Create the output item based on the recipe
+        Item outputItem = AlchemyRecipes.createOutputItem(selectedRecipe.getKey());
+
+        if (outputItem != null) {
+            // Add the item to the player's inventory
+            if (outputItem.collect(Dungeon.hero)) {
+                // Item was successfully added to inventory
+                showMessageWindow("Recipe executed successfully!\nOutput: " + selectedRecipe.getValue(), 0x44FF44, true);
+            } else {
+                // Inventory is full
+                showMessageWindow("Cannot execute recipe:\nInventory is full!", 0xFF4444, false);
+            }
+        } else {
+            // Failed to create output item
+            showMessageWindow("Failed to execute recipe:\nCould not create output item!", 0xFF4444, false);
+        }
+    }
+
+    private void executeMobRecipe() {
+        // Create the output mob based on the recipe
+        Mob outputMob = AlchemyRecipes.createOutputMob(selectedRecipe.getKey());
+
+        if (outputMob != null) {
+            // Spawn the mob near the hero
+            int spawnPos = Dungeon.level.getEmptyCellNextTo(Dungeon.hero.pos);
+            if (spawnPos != -1) {
+                outputMob.pos = spawnPos;
+                Dungeon.level.spawnMob(outputMob);
+
+                // Show success message
+                showMessageWindow("Recipe executed successfully!\nSpawned: " + selectedRecipe.getValue(), 0x44FF44, true);
+            } else {
+                // Could not find a position to spawn the mob
+                showMessageWindow("Cannot execute recipe:\nNo space to spawn mob!", 0xFF4444, false);
+            }
+        } else {
+            // Failed to create output mob
+            showMessageWindow("Failed to execute recipe:\nCould not create output mob!", 0xFF4444, false);
+        }
+    }
+
+    private void showMessageWindow(String messageText, int color, boolean closeParent) {
+        GameScene.show(new Window() {
+            {
+                Text message = PixelScene.createText(messageText, GuiProperties.regularFontSize());
+                message.hardlight(color);
+                add(message);
+
+                RedButton okButton = new RedButton("OK") {
+                    @Override
+                    protected void onClick() {
+                        hide();
+                        if (closeParent) {
+                            hide(); // Close the parent window too
+                        }
+                    }
+                };
+                okButton.setSize(40, 18);
+                add(okButton);
+
+                float msgWidth = Math.max(message.width() + 10, 120);
+                float msgHeight = message.height() + 28;
+
+                message.setPos(5, 5);
+                okButton.setPos((msgWidth - okButton.width()) / 2, message.height() + 10);
+
+                resize((int)msgWidth, (int)msgHeight);
+            }
+        });
     }
 
     @Override
