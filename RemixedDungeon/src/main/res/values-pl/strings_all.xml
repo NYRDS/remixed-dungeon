@@ -302,6 +302,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BodyArmorSpell_Name">Napierśnik</string>
     <string name="BoneSaw_Info">Precyzyjnie zaprojektowana chirurgiczna piła z przeznaczona do sekcji zwłok. Jej obrażenia i prędkość ataku stają się bardziej śmiercionośne dzięki umiejętnościom lekarza plagi. Krytyczne trafienia odrzynają dodatkowe części ciała  wrogów ,bezwzględnie wydajna wobec sparaliżowanych przeciwników.</string>
     <string name="BoneSaw_Name">Piła chirurgiczna</string>
+    <string name="BoneShard_Name">Odłamek kości</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Po rzuceniu we wroga, ten płaski, zakrzywiony kawałek drewna powróci do swego właściciela.</string>
     <string name="Boomerang_Name">bumerang</string>
@@ -2995,6 +2996,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
