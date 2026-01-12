@@ -2489,6 +2489,7 @@
     <string name="town_deco_identifier_sign_desc">Схоже ворожка знаходиться в цій будівлі.</string>
     <string name="town_deco_identifier_sign_name">Вивіска магічної кулі</string>
     <string name="town_deco_inn_bed_name">Ліжко</string>
+    <string name="town_deco_ladder_desc">Стара драбина, не надійна на вигляд.</string>
     <string name="town_deco_library_books_desc">Це навіть краще за книги з підземелля.</string>
     <string name="town_deco_library_books_name">Періодика</string>
     <string name="town_deco_library_sign_desc">Скоріш за все тут знаходиться будівля бібліотеки.</string>
@@ -2596,6 +2597,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

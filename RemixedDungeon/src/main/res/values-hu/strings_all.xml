@@ -1233,6 +1233,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Hozz nekem %d patkánybőrt</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Á, hát nem hihetetlen? Ezek az idióták még mindig nem látják, milyen szörnyen veszélyesek a szennycsatornák! Mintha az őrök, vagy a kalandorok bármitől is meg tudnának védeni... Peeersze! Fegyver nem állíthatja meg a fertőzés terjedését! De bizonyítékra van szükségem, segítenél?  Hozz nekem %d patkánybőrt, és akkor további teszteket végezhetek!</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Á, hát nem hihetetlen? Ezek az idióták még mindig nem látják, milyen szörnyen veszélyesek a szennycsatornák! Mintha az őrök, vagy a kalandorok bármitől is meg tudnának védeni... Peeersze! Fegyver nem állíthatja meg a fertőzés terjedését! De bizonyítékra van szükségem, segítenél?  Hozz nekem %d patkánybőrt, és akkor további teszteket végezhetek!</string>
+    <string name="PlagueDoctorQuest_4_1_InProgress">Öt _Törpe Boszorkánymester_, testük még mindig pulzál a sötét mágia gyenge visszhangjától! Hozd őket nekem, és jutalmul olyan italt adok, amely páratlan erővel felruház – egy _Erőesszenciát_, amely tíz férfi erejével telít meg!</string>
     <string name="PlagueDoctor_Desc">Ennek a púpos hátú alaknak az egész teste egy bőrből készült kezeslábasban van. Ráadásul keserű gyógyszer és ... hagymaszagot áraszt.</string>
 
     <string name="PlagueDoctor_Name">pestis doktor</string>
@@ -2451,6 +2452,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

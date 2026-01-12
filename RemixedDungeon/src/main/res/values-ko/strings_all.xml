@@ -1623,6 +1623,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SociologistNPC_Name_Objective">사회학자</string>
     <string name="Sorrowmoss_Desc">슬픔이끼는 면도날처럼 날카롭고 치명적인 독이 묻은 꽃잎으로된 꽃이다(이끼가 아님).</string>
     <string name="Sorrowmoss_Name">슬픔이끼</string>
+    <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">이것은 당신이 영혼의 단지의 잔존물으로부터 얻은 조각입니다.이것이 신비한 힘으로 빛나고 있는 것을 보면 아마도 여러가지 물건들에 흥미를 가질 수 도 있는 누군가가 있을 것 같습니다.</string>
     <string name="SoulShard_Name">영혼 조각</string>
     <string name="Spear_Info">가느다란 나무 막대 끝에  날카로운 쇠조각을 덧댔습니다.</string>
@@ -2344,6 +2345,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
