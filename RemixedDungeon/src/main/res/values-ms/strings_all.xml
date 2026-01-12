@@ -1615,6 +1615,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SkeletonKey_Name">kunci rangka</string>
     <string name="Skeleton_Defense">disekat</string>
     <string name="Skeleton_Desc">Rangka terdiri dari tulang manusia daripada pengembara malang dan penghuni kurungan bawah tanah. bergerak dengan kuasa sihir kejahatan yang ada di bawah ini. Selepas mereka dikalahkan, mereka akan meletupkan diri mereka sendiri.</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">Anda terbunuh oleh letupan tulang-tulang...</string>
     <string name="Skeleton_Name">rangka</string>
     <string name="Skeleton_Name_Objective">rangka</string>
@@ -2416,6 +2417,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

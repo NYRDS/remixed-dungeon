@@ -337,6 +337,7 @@
     <string name="ChaosStaff_Name">混沌法杖</string>
     <string name="ChaosSword_Info">混亂為刃，力量蘊內。刀身發顫，砍山分洪，力無不逮。唯有強者，方能使用。</string>
     <string name="ChaosSword_Name">混沌劍</string>
+    <string name="CharAction_Charm">魅惑</string>
     <string name="Char_Defeat_0">%1$s擊殺了%2$s</string>
     <string name="Char_Defeat_1">%1$s擊殺了%2$s</string>
     <string name="Char_Defeat_2">%1$s擊殺了%2$s</string>
@@ -2518,6 +2519,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

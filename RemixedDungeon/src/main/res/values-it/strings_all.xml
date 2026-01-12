@@ -1958,6 +1958,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndSettings_ZoomDef">Zoom predefinito</string>
     <string name="WndSettings_ZoomIn">+</string>
     <string name="WndSettings_ZoomOut">-</string>
+    <string name="WndSettings_moveTimeout">Tempo limite mossa: %s</string>
     <string name="WndSpells_Level">Livello magico:</string>
     <string name="WndSpells_Title">Magie</string>
     <string name="WndStory_Caves">Le cave, che si estendono al di sotto della prigione abbandonata, sono scarsamente popolate. Si trovano troppo in profondità per venire sfruttate dalla Città e sono troppo povere di minerali per interessare i nani. In passato c\'era un avamposto commerciale da queste parti sul percorso tra questi due stati, ma è decaduto dopo il declino della Metropoli Nanica. Solo gli onnipresenti gnoll e gli animali sotterranei dimorano qui ora.</string>
@@ -2156,6 +2157,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
