@@ -82,6 +82,7 @@
     <string name="AzuterronNPC_Quest_End">Bagus. Ambil posyen ini, sudah pasti anda mendapat manafaat darinya.</string>
     <string name="AzuterronNPC_Quest_Reminder">Bantu saya dan saya akan bantu anda kelak.</string>
     <string name="AzuterronNPC_Quest_Start">Haa, kenapa... alamak, awak boleh lihat saya, betul ke ni? Maknanya awak bukanlah salah seorang dari \&quot;mereka\&quot;. Hmm awak juga tidak suka dengan raksaksa-raksaksa itu. Boleh tak tolong saya, nanti saya akan bantu apa yang saya mampu. Pada suatu tempat dalam aras ini, awak akan berjumpa dengan binatang kegelapan, iaitu _Hantu Khianat_. Bunuh kedua-duanya, ambil _hatinya_ dan beri pada saya. Satu lagi, jika awak mahu membeli bekalan saya, saya akan jual dengan senang hati</string>
+    <string name="Backstab_Aware">Mangsa sepatutnya tidak sedar akan kehadiran awak untuk serangan belakang yang baik.</string>
     <string name="Backstab_Name">Tikam Belakang</string>
     <string name="BadgesScene_Title">Lencana Anda</string>
     <string name="Badges_AllBags">Semua beg dibeli</string>
@@ -2417,6 +2418,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
