@@ -930,6 +930,7 @@
     <string name="InventoryScroll_Title">選擇一個物品</string>
     <string name="InventoryScroll_Warning">您確定您要打斷此卷軸的法術嗎？反正它早晚也會被用掉。</string>
     <string name="InventoryScroll_Yes"> 是的</string>
+    <string name="InvisibilityBuff_Info">完全隱形，這既能幫助你躲避危險，也可能讓你成為危險。</string>
     <string name="InvisibilityBuff_Name">隱形</string>
     <string name="IronKey_FromDepth">第%d層的鐵鑰匙</string>
     <string name="IronKey_Info">這把鐵鑰匙的凹凸處精細不再；其繫索亦歷盡風霜，還能打開甚麼門嗎？</string>
@@ -2519,6 +2520,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
