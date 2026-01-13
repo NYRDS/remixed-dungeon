@@ -35,6 +35,26 @@
     {
       "input": ["MysteryMeat", "MysteryMeat", "MysteryMeat", "MysteryMeat", "MysteryMeat", "Dewdrop"],
       "output": "Piranha"
+    },
+    {
+      "input": ["Carcass of Rat", "SkeletonKey"],
+      "output": "Skeleton"
+    },
+    {
+      "input": ["Carcass of Albino", "CorpseDust"],
+      "output": "FetidRat"
+    },
+    {
+      "input": ["Carcass of Thief", "DriedRose"],
+      "output": "Ghost"
+    },
+    {
+      "input": ["Rat.meat", "Rat.skull"],
+      "outputs": ["PotionOfHealing", "Skeleton"]
+    },
+    {
+      "input": ["CorpseDust", "Dewdrop", "BoneShard"],
+      "outputs": ["FetidRat", "PotionOfMight"]
     }
   ]
 }

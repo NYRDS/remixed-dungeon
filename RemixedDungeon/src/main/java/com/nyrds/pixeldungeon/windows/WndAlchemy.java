@@ -27,7 +27,7 @@ public class WndAlchemy extends Window {
     private final VBox mainLayout;
 
     // Track selected recipe
-    private Entry<List<String>, String> selectedRecipe;
+    private Entry<List<String>, List<String>> selectedRecipe;
     private RecipeListItem selectedRow;
     private RedButton executeButton;
 
@@ -61,9 +61,9 @@ public class WndAlchemy extends Window {
         recipesContainer.setRect(0, 0, windowWidth - 4 * MARGIN, 0);
         recipesContainer.setGap(2);
 
-        Map<List<String>, String> allRecipes = AlchemyRecipes.getAllRecipes();
+        Map<List<String>, List<String>> allRecipes = AlchemyRecipes.getAllRecipes();
         if (!allRecipes.isEmpty()) {
-            for (Entry<List<String>, String> recipeEntry : allRecipes.entrySet()) {
+            for (Entry<List<String>, List<String>> recipeEntry : allRecipes.entrySet()) {
                 // Create a recipe list item
                 RecipeListItem recipeItem = getRecipeListItem(recipeEntry, windowWidth);
 
@@ -123,7 +123,7 @@ public class WndAlchemy extends Window {
         resize((int)windowWidth, (int)windowHeight);
     }
 
-    private RecipeListItem getRecipeListItem(Entry<List<String>, String> recipeEntry, float windowWidth) {
+    private RecipeListItem getRecipeListItem(Entry<List<String>, List<String>> recipeEntry, float windowWidth) {
         RecipeListItem recipeItem = new RecipeListItem(recipeEntry.getKey(), recipeEntry.getValue());
 
         // Set the size for the recipe item
@@ -149,7 +149,7 @@ public class WndAlchemy extends Window {
         return recipeItem;
     }
 
-    private ScrollPane createScrollPane(VBox recipesContainer, Map<List<String>, String> allRecipes) {
+    private ScrollPane createScrollPane(VBox recipesContainer, Map<List<String>, List<String>> allRecipes) {
         ScrollPane recipeScrollPane = new ScrollPane(recipesContainer) {
             @Override
             public void onClick(float x, float y) {
@@ -166,7 +166,8 @@ public class WndAlchemy extends Window {
 
                         // Select current item
                         selectedRow = recipeItem;
-                        selectedRecipe = allRecipes.entrySet().toArray(new Entry[0])[i];
+                        Object[] recipeArray = allRecipes.entrySet().toArray();
+                        selectedRecipe = (Entry<List<String>, List<String>>) recipeArray[i];
 
                         // Highlight the selected row
                         selectedRow.setSelected(true);
@@ -190,12 +191,22 @@ public class WndAlchemy extends Window {
 
     private void executeSelectedRecipe() {
         if (selectedRecipe != null) {
-            // Determine the output type (item or mob)
-            AlchemyRecipes.OutputType outputType = AlchemyRecipes.getOutputTypeForInput(selectedRecipe.getKey());
+            // Get all output types for this recipe
+            java.util.List<AlchemyRecipes.OutputType> outputTypes = AlchemyRecipes.getOutputTypeForInput(selectedRecipe.getKey());
 
-            if (outputType == AlchemyRecipes.OutputType.ITEM) {
+            // Check if there are any item outputs
+            boolean hasItemOutput = outputTypes.stream().anyMatch(type -> type == AlchemyRecipes.OutputType.ITEM);
+            // Check if there are any mob outputs
+            boolean hasMobOutput = outputTypes.stream().anyMatch(type -> type == AlchemyRecipes.OutputType.MOB);
+
+            if (hasItemOutput && hasMobOutput) {
+                // Handle mixed outputs (both items and mobs)
+                executeMixedRecipe();
+            } else if (hasItemOutput) {
+                // Handle item-only outputs
                 executeItemRecipe();
-            } else if (outputType == AlchemyRecipes.OutputType.MOB) {
+            } else if (hasMobOutput) {
+                // Handle mob-only outputs
                 executeMobRecipe();
             } else {
                 // Unknown output type
@@ -205,44 +216,144 @@ public class WndAlchemy extends Window {
     }
 
     private void executeItemRecipe() {
-        // Create the output item based on the recipe
-        Item outputItem = AlchemyRecipes.createOutputItem(selectedRecipe.getKey());
+        // Get all outputs for this recipe
+        java.util.List<String> outputs = AlchemyRecipes.getOutputForInput(selectedRecipe.getKey());
+        java.util.List<AlchemyRecipes.OutputType> outputTypes = AlchemyRecipes.getOutputTypeForInput(selectedRecipe.getKey());
 
-        if (outputItem != null) {
-            // Add the item to the player's inventory
-            if (outputItem.collect(Dungeon.hero)) {
-                // Item was successfully added to inventory
-                showMessageWindow("Recipe executed successfully!\nOutput: " + selectedRecipe.getValue(), 0x44FF44, true);
+        // Collect all item outputs
+        java.util.List<Item> outputItems = new java.util.ArrayList<>();
+        for (int i = 0; i < outputs.size(); i++) {
+            if (outputTypes.get(i) == AlchemyRecipes.OutputType.ITEM) {
+                Item item = AlchemyRecipes.createOutputItem(java.util.Collections.singletonList(outputs.get(i)));
+                if (item != null) {
+                    outputItems.add(item);
+                }
+            }
+        }
+
+        if (!outputItems.isEmpty()) {
+            boolean allAdded = true;
+            for (Item outputItem : outputItems) {
+                if (!outputItem.collect(Dungeon.hero)) {
+                    allAdded = false;
+                    break;
+                }
+            }
+
+            if (allAdded) {
+                // All items were successfully added to inventory
+                showMessageWindow("Recipe executed successfully!\nOutputs: " + String.join(", ", outputs), 0x44FF44, true);
             } else {
-                // Inventory is full
-                showMessageWindow("Cannot execute recipe:\nInventory is full!", 0xFF4444, false);
+                // At least one item couldn't be added (inventory full)
+                showMessageWindow("Recipe executed successfully, but some items couldn't be added due to full inventory!", 0xFFAA44, true);
             }
         } else {
-            // Failed to create output item
-            showMessageWindow("Failed to execute recipe:\nCould not create output item!", 0xFF4444, false);
+            // Failed to create any output items
+            showMessageWindow("Failed to execute recipe:\nCould not create output items!", 0xFF4444, false);
         }
     }
 
     private void executeMobRecipe() {
-        // Create the output mob based on the recipe
-        Mob outputMob = AlchemyRecipes.createOutputMob(selectedRecipe.getKey());
+        // Get all outputs for this recipe
+        java.util.List<String> outputs = AlchemyRecipes.getOutputForInput(selectedRecipe.getKey());
+        java.util.List<AlchemyRecipes.OutputType> outputTypes = AlchemyRecipes.getOutputTypeForInput(selectedRecipe.getKey());
 
-        if (outputMob != null) {
-            // Spawn the mob near the hero
-            int spawnPos = Dungeon.level.getEmptyCellNextTo(Dungeon.hero.pos);
-            if (spawnPos != -1) {
-                outputMob.pos = spawnPos;
-                Dungeon.level.spawnMob(outputMob);
+        // Collect all mob outputs
+        java.util.List<Mob> outputMobs = new java.util.ArrayList<>();
+        for (int i = 0; i < outputs.size(); i++) {
+            if (outputTypes.get(i) == AlchemyRecipes.OutputType.MOB) {
+                Mob mob = AlchemyRecipes.createOutputMob(java.util.Collections.singletonList(outputs.get(i)));
+                if (mob != null) {
+                    outputMobs.add(mob);
+                }
+            }
+        }
 
-                // Show success message
-                showMessageWindow("Recipe executed successfully!\nSpawned: " + selectedRecipe.getValue(), 0x44FF44, true);
+        if (!outputMobs.isEmpty()) {
+            // Try to spawn all mobs near the hero
+            boolean allSpawned = true;
+            for (Mob outputMob : outputMobs) {
+                int spawnPos = Dungeon.level.getEmptyCellNextTo(Dungeon.hero.pos);
+                if (spawnPos != -1) {
+                    outputMob.pos = spawnPos;
+                    Dungeon.level.spawnMob(outputMob);
+                } else {
+                    allSpawned = false;
+                }
+            }
+
+            if (allSpawned) {
+                // All mobs were successfully spawned
+                showMessageWindow("Recipe executed successfully!\nSpawned: " + String.join(", ", outputs), 0x44FF44, true);
             } else {
-                // Could not find a position to spawn the mob
-                showMessageWindow("Cannot execute recipe:\nNo space to spawn mob!", 0xFF4444, false);
+                // At least one mob couldn't be spawned (no space)
+                showMessageWindow("Recipe executed successfully, but some mobs couldn't be spawned due to lack of space!", 0xFFAA44, true);
             }
         } else {
-            // Failed to create output mob
-            showMessageWindow("Failed to execute recipe:\nCould not create output mob!", 0xFF4444, false);
+            // Failed to create any output mobs
+            showMessageWindow("Failed to execute recipe:\nCould not create output mobs!", 0xFF4444, false);
+        }
+    }
+
+    private void executeMixedRecipe() {
+        // Get all outputs for this recipe
+        java.util.List<String> outputs = AlchemyRecipes.getOutputForInput(selectedRecipe.getKey());
+        java.util.List<AlchemyRecipes.OutputType> outputTypes = AlchemyRecipes.getOutputTypeForInput(selectedRecipe.getKey());
+
+        // Collect all item and mob outputs
+        java.util.List<Item> outputItems = new java.util.ArrayList<>();
+        java.util.List<Mob> outputMobs = new java.util.ArrayList<>();
+
+        for (int i = 0; i < outputs.size(); i++) {
+            if (outputTypes.get(i) == AlchemyRecipes.OutputType.ITEM) {
+                Item item = AlchemyRecipes.createOutputItem(java.util.Collections.singletonList(outputs.get(i)));
+                if (item != null) {
+                    outputItems.add(item);
+                }
+            } else if (outputTypes.get(i) == AlchemyRecipes.OutputType.MOB) {
+                Mob mob = AlchemyRecipes.createOutputMob(java.util.Collections.singletonList(outputs.get(i)));
+                if (mob != null) {
+                    outputMobs.add(mob);
+                }
+            }
+        }
+
+        boolean itemsAdded = true;
+        boolean mobsSpawned = true;
+
+        // Add items to inventory
+        if (!outputItems.isEmpty()) {
+            for (Item outputItem : outputItems) {
+                if (!outputItem.collect(Dungeon.hero)) {
+                    itemsAdded = false;
+                    break;
+                }
+            }
+        }
+
+        // Spawn mobs
+        if (!outputMobs.isEmpty()) {
+            for (Mob outputMob : outputMobs) {
+                int spawnPos = Dungeon.level.getEmptyCellNextTo(Dungeon.hero.pos);
+                if (spawnPos != -1) {
+                    outputMob.pos = spawnPos;
+                    Dungeon.level.spawnMob(outputMob);
+                } else {
+                    mobsSpawned = false;
+                    break;
+                }
+            }
+        }
+
+        // Show appropriate message based on results
+        if (itemsAdded && mobsSpawned) {
+            showMessageWindow("Recipe executed successfully!\nItems: " + outputItems.size() + " | Mobs: " + outputMobs.size(), 0x44FF44, true);
+        } else if (itemsAdded && !mobsSpawned) {
+            showMessageWindow("Recipe executed partially!\nItems added but some mobs couldn't be spawned due to lack of space!", 0xFFAA44, true);
+        } else if (!itemsAdded && mobsSpawned) {
+            showMessageWindow("Recipe executed partially!\nMobs spawned but some items couldn't be added due to full inventory!", 0xFFAA44, true);
+        } else {
+            showMessageWindow("Recipe executed partially!\nSome items couldn't be added and some mobs couldn't be spawned!", 0xFFAA44, true);
         }
     }
 

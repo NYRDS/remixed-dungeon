@@ -16,6 +16,7 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.IClickable;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import lombok.Getter;
@@ -33,7 +34,8 @@ public class RecipeListItem extends Component implements IClickable {
     @Getter
     private final List<String> inputs;
     @Getter
-    private final String output;
+    private final String output; // First output for backward compatibility
+    private final List<String> outputs; // All outputs
     private final HBox ingredientsBox;
     private final com.watabou.noosa.ui.Component outputComponent; // Container for output display
     private final HBox outputBox;
@@ -47,10 +49,15 @@ public class RecipeListItem extends Component implements IClickable {
     private boolean isSelected = false;
 
     public RecipeListItem(List<String> inputs, String output) {
+        this(inputs, Arrays.asList(output));
+    }
+
+    public RecipeListItem(List<String> inputs, List<String> outputs) {
         super();
 
         this.inputs = inputs;
-        this.output = output;
+        this.outputs = outputs != null ? new ArrayList<>(outputs) : new ArrayList<>();
+        this.output = this.outputs.isEmpty() ? "" : this.outputs.get(0); // Use first output for display
 
         // Initialize the input items and ingredient slots lists
         inputItems = new ArrayList<>();
@@ -197,7 +204,104 @@ public class RecipeListItem extends Component implements IClickable {
         // Create HBox for output
         outputBox = new HBox(100); // Will be resized later
         outputBox.setGap(2);
-        outputBox.add(outputComponent);
+
+        // Add all output components to the output box
+        for (String singleOutput : outputs) {
+            AlchemyRecipes.OutputType singleOutputType = determineOutputType(singleOutput);
+
+            if (singleOutputType == AlchemyRecipes.OutputType.ITEM) {
+                // Create output slot for item
+                Item outputItem = null;
+                try {
+                    outputItem = ItemFactory.itemByName(singleOutput);
+                } catch (Exception e) {
+                    // If item creation fails, outputItem remains null
+                }
+
+                final ItemSpriteWrapper outputSpriteTemp;
+                if (outputItem != null) {
+                    outputSpriteTemp = new ItemSpriteWrapper(outputItem);
+                    outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
+                } else {
+                    // Create an empty ItemSpriteWrapper as placeholder
+                    outputSpriteTemp = new ItemSpriteWrapper();
+                    outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
+                }
+
+                // Wrap the ItemSpriteWrapper in a Component-compatible wrapper
+                com.watabou.noosa.ui.Component wrappedItemComponent = new com.watabou.noosa.ui.Component() {
+                    {
+                        add(outputSpriteTemp);
+                    }
+
+                    @Override
+                    public void layout() {
+                        super.layout();
+                        outputSpriteTemp.x = this.x;
+                        outputSpriteTemp.y = this.y;
+                    }
+                };
+                wrappedItemComponent.setSize(SLOT_SIZE, SLOT_SIZE);
+
+                outputBox.add(wrappedItemComponent);
+            } else if (singleOutputType == AlchemyRecipes.OutputType.MOB) {
+                // Create output slot for mob
+                Image outputSpriteTemp;
+                try {
+                    com.watabou.pixeldungeon.actors.mobs.Mob mob = MobFactory.mobByName(singleOutput);
+                    if (mob != null) {
+                        CharSprite sprite = mob.newSprite();
+                        outputSpriteTemp = sprite.avatar();
+                        outputSpriteTemp.scale.set(SLOT_SIZE / outputSpriteTemp.width(), SLOT_SIZE / outputSpriteTemp.height());
+                    } else {
+                        outputSpriteTemp = new Image();
+                        outputSpriteTemp.scale.set(SLOT_SIZE / outputSpriteTemp.width(), SLOT_SIZE / outputSpriteTemp.height());
+                    }
+                } catch (Exception e) {
+                    // If mob creation fails, create an empty Image as placeholder
+                    outputSpriteTemp = new Image();
+                    outputSpriteTemp.scale.set(SLOT_SIZE / outputSpriteTemp.width(), SLOT_SIZE / outputSpriteTemp.height());
+                }
+
+                final Image finalOutputSpriteTemp = outputSpriteTemp;
+                // Wrap the Image in a Component-compatible wrapper
+                com.watabou.noosa.ui.Component wrappedComponent = new com.watabou.noosa.ui.Component() {
+                    {
+                        add(finalOutputSpriteTemp);
+                    }
+
+                    @Override
+                    public void layout() {
+                        super.layout();
+                        finalOutputSpriteTemp.x = this.x;
+                        finalOutputSpriteTemp.y = this.y;
+                    }
+                };
+                wrappedComponent.setSize(SLOT_SIZE, SLOT_SIZE);
+
+                outputBox.add(wrappedComponent);
+            } else {
+                // Default to item if type is unknown
+                final ItemSpriteWrapper defaultSprite = new ItemSpriteWrapper();
+                defaultSprite.setSize(SLOT_SIZE, SLOT_SIZE);
+                // Wrap the default ItemSpriteWrapper in a Component-compatible wrapper
+                com.watabou.noosa.ui.Component wrappedDefaultComponent = new com.watabou.noosa.ui.Component() {
+                    {
+                        add(defaultSprite);
+                    }
+
+                    @Override
+                    public void layout() {
+                        super.layout();
+                        defaultSprite.x = this.x;
+                        defaultSprite.y = this.y;
+                    }
+                };
+                wrappedDefaultComponent.setSize(SLOT_SIZE, SLOT_SIZE);
+
+                outputBox.add(wrappedDefaultComponent);
+            }
+        }
 
         // Create background color block for selection highlighting
         ColorBlock background = new ColorBlock(width, height, UNSELECTED_COLOR);
@@ -278,14 +382,28 @@ public class RecipeListItem extends Component implements IClickable {
         arrow.setX(totalIngredientsWidth + 5); // 5 pixels space after ingredients
         arrow.setY(PixelScene.align(y + (height - arrow.baseLine()) / 2));
 
-        // Position the output component to the far right
-        float outputWidth = outputComponent.width();
-        float outputHeight = outputComponent.height();
-        outputComponent.setPos(x + width - outputWidth, y + (height - outputHeight) / 2);
+        // Calculate total width of all outputs
+        float totalOutputWidth = 0;
+        for (int i = 0; i < outputBox.getLength(); i++) {
+            com.watabou.noosa.ui.Component outputComponent = (com.watabou.noosa.ui.Component) outputBox.getMember(i);
+            totalOutputWidth += outputComponent.width() - 10; // 2 pixels spacing between outputs
+        }
 
-        // Position the outputBox container to match the outputComponent
-        outputBox.setPos(outputComponent.left(), outputComponent.top());
-        outputBox.setSize(outputWidth, outputHeight);
+        // Position the outputBox container to the far right
+        float outputBoxX = x + width - totalOutputWidth;
+        // Ensure it doesn't go past the arrow
+        float minOutputX = x + totalIngredientsWidth + arrow.width() + 10;
+        outputBox.setPos(Math.max(outputBoxX, minOutputX), y + (height - outputBox.height()) / 2);
+
+        // Layout the output box with all outputs from right to left
+        float currentOutputX = 0;
+        for (int i = 0; i < outputBox.getLength(); i++) {
+            com.watabou.noosa.ui.Component outputComponent = (com.watabou.noosa.ui.Component) outputBox.getMember(i);
+            outputComponent.setPos(currentOutputX, 0); // Position relative to outputBox
+            currentOutputX += outputComponent.width() - 10; // 2 pixels spacing between outputs
+        }
+
+        outputBox.setSize(totalOutputWidth, height);
     }
 
     public void setOnClickListener(Runnable listener) {

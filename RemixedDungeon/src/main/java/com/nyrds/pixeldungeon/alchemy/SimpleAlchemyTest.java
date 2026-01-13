@@ -26,9 +26,9 @@ public class SimpleAlchemyTest {
         System.out.println("New recipe count: " + AlchemyRecipes.getRecipeCount());
         
         // Test finding the recipe
-        String output = AlchemyRecipes.getOutputForInput(input);
-        System.out.println("Output for input: " + output);
-        
+        List<String> outputs = AlchemyRecipes.getOutputForInput(input);
+        System.out.println("Output for input: " + (outputs != null ? String.join(", ", outputs) : "null"));
+
         // Test creating an item
         Item item = AlchemyRecipes.createOutputItem(input);
         System.out.println("Created item: " + (item != null ? item.getEntityKind() : "null"));

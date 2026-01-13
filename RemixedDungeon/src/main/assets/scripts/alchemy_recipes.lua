@@ -68,7 +68,44 @@ local function registerCustomRecipes()
     table.insert(piranhaRecipe, "MysteryMeat")
     table.insert(piranhaRecipe, "Dewdrop")
     RPD.AlchemyRecipes.registerRecipeFromLua(piranhaRecipe, "Piranha")
-    
+
+    -- NEW RECIPES USING CARCASSES:
+
+    -- Recipe: 1 Carcass of Rat + 1 Skeleton Key = Skeleton
+    local skeletonFromCarcassRecipe = {}
+    table.insert(skeletonFromCarcassRecipe, "Carcass of Rat")
+    table.insert(skeletonFromCarcassRecipe, "SkeletonKey")
+    RPD.AlchemyRecipes.registerRecipeFromLua(skeletonFromCarcassRecipe, "Skeleton")
+
+    -- Recipe: 1 Carcass of Albino + 1 Corpse Dust = Fetid Rat
+    local fetidRatFromCarcassRecipe = {}
+    table.insert(fetidRatFromCarcassRecipe, "Carcass of Albino")
+    table.insert(fetidRatFromCarcassRecipe, "CorpseDust")
+    RPD.AlchemyRecipes.registerRecipeFromLua(fetidRatFromCarcassRecipe, "FetidRat")
+
+    -- Recipe: 1 Carcass of Thief + 1 Dried Rose = Ghost
+    local ghostFromCarcassRecipe = {}
+    table.insert(ghostFromCarcassRecipe, "Carcass of Thief")
+    table.insert(ghostFromCarcassRecipe, "DriedRose")
+    RPD.AlchemyRecipes.registerRecipeFromLua(ghostFromCarcassRecipe, "Ghost")
+
+    -- NEW RECIPES WITH MULTIPLE OUTPUTS:
+
+    -- Recipe: 1 Rat Meat + 1 Rat Skull = 1 Potion of Healing + 1 Skeleton
+    local multiOutputRecipe1 = {}
+    table.insert(multiOutputRecipe1, "Rat.meat")
+    table.insert(multiOutputRecipe1, "Rat.skull")
+    local outputs1 = {"PotionOfHealing", "Skeleton"}
+    RPD.AlchemyRecipes.registerRecipeFromLua(multiOutputRecipe1, outputs1)
+
+    -- Recipe: 1 Corpse Dust + 1 Dewdrop + 1 Bone Shard = 1 Fetid Rat + 1 Potion of Might
+    local multiOutputRecipe2 = {}
+    table.insert(multiOutputRecipe2, "CorpseDust")
+    table.insert(multiOutputRecipe2, "Dewdrop")
+    table.insert(multiOutputRecipe2, "BoneShard")
+    local outputs2 = {"FetidRat", "PotionOfMight"}
+    RPD.AlchemyRecipes.registerRecipeFromLua(multiOutputRecipe2, outputs2)
+
     RPD.glog("Custom alchemy recipes registered from Lua")
 end
 
