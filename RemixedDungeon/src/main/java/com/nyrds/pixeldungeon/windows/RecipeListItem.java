@@ -389,11 +389,26 @@ public class RecipeListItem extends Component implements IClickable {
             totalOutputWidth += outputComponent.width() - 10; // 2 pixels spacing between outputs
         }
 
-        // Position the outputBox container to the far right
-        float outputBoxX = x + width - totalOutputWidth;
-        // Ensure it doesn't go past the arrow
+        // Calculate available space for outputs
+        float availableSpace = width - (totalIngredientsWidth + arrow.width() + 10);
+
+        float outputBoxX;
+        // Position the outputBox so that it's right-aligned with the container
+        // but with enough margin to ensure it's fully visible
+        outputBoxX = x + width - totalOutputWidth - 5; // 5 pixels margin from right edge
+
+        // Ensure the outputBox doesn't go beyond the right border of the container
+        float rightmostPosition = x + width - 5; // Account for 5 pixels margin
+        float outputBoxRightEdge = outputBoxX + totalOutputWidth;
+        if (outputBoxRightEdge > rightmostPosition) {
+            outputBoxX = rightmostPosition - totalOutputWidth;
+        }
+
+        // Ensure the outputBox doesn't go before the arrow or ingredients
         float minOutputX = x + totalIngredientsWidth + arrow.width() + 10;
-        outputBox.setPos(Math.max(outputBoxX, minOutputX), y + (height - outputBox.height()) / 2);
+        outputBoxX = Math.max(outputBoxX, minOutputX);
+
+        outputBox.setPos(outputBoxX, y + (height - outputBox.height()) / 2);
 
         // Layout the output box with all outputs from right to left
         float currentOutputX = 0;
@@ -404,6 +419,37 @@ public class RecipeListItem extends Component implements IClickable {
         }
 
         outputBox.setSize(totalOutputWidth, height);
+
+        // If the outputs still go beyond the available space, we need to implement a fallback
+        float actualAvailableSpace = x + width - outputBoxX - 5; // 5 pixels margin
+        if (totalOutputWidth > actualAvailableSpace && actualAvailableSpace > 0) {
+            // If outputs are too wide to fit, we'll need to reduce spacing between them
+            // Calculate how much space we need to save
+            float excessWidth = totalOutputWidth - actualAvailableSpace;
+            int numOutputs = outputBox.getLength();
+            if (numOutputs > 1) {
+                // Distribute the excess reduction across the spaces between outputs
+                float spacingReduction = excessWidth / (numOutputs - 1);
+
+                // Reset positions with reduced spacing
+                currentOutputX = 0;
+                for (int i = 0; i < outputBox.getLength(); i++) {
+                    com.watabou.noosa.ui.Component outputComponent = (com.watabou.noosa.ui.Component) outputBox.getMember(i);
+                    outputComponent.setPos(currentOutputX, 0); // Position relative to outputBox
+
+                    float componentWidth = outputComponent.width();
+                    // Apply reduced spacing except after the last element
+                    if (i < outputBox.getLength() - 1) {
+                        currentOutputX += componentWidth - spacingReduction;
+                    } else {
+                        currentOutputX += componentWidth; // Last element doesn't need spacing after
+                    }
+                }
+            }
+            // Update the total width after spacing adjustment
+            outputBox.setSize(actualAvailableSpace, height);
+        }
+
     }
 
     public void setOnClickListener(Runnable listener) {
