@@ -303,6 +303,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Candy_Warning_2">Jetzt hattest du wirklich zu viel. Dein Magen schmerzt, weil du so viele Süßigkeiten gegessen hast.</string>
     <string name="Capotain_Info">Ein hochgekrönter, schmalkrempiger Hut. Er wird normalerweise mit Puritanern in Verbindung gebracht, aber du musst nicht religiös sein, um ihn tragen zu können. Aus irgendeinem Grund hat er eine Plakette mit dem Namen \&quot;Solomon\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
+    <string name="Carcass_DissectMessage">Du sezierst die Leiche und erhältst %s.</string>
     <string name="Carcass_Kick">Dieses %s ist völlig tot, keinen Grund es zu treten.</string>
     <string name="Carcass_Name">Überreste von %s</string>
     <string name="Caves_TileDescBookshelf">Wer braucht denn ein Bücherregal in einer Höhle?</string>
@@ -2304,6 +2305,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndStory_Sewers">Der Dungeon liegt direkt unter der Stadt, die oberen Ebenen bilden sozusagen das Abwassersystem der Stadt. Daher sollten sie nicht allzu schwer sein. Keiner nennt sie einen sicheren Platz, aber du wirst hier nicht gegen mächtige Magie kämpfen müssen.</string>
     <string name="WndStory_Spiders">Vor vielen, vielen Jahren gab es eine reichhaltige Mine, voll mit magischen Steinen. Aber als die Mineral-Minen erschöpft waren verliessen die Minenarbeiter die Mine und hinterließen ein weites Netzwerk an Tunneln.
 Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen, lauernd in der Dunkelheit, waren nicht genug um die Mutigen und Wahnsinnigen davon abzuhalten, sehensüchtig nach den Schätzen zu suchen, die hier vielleicht zu finden sind. Für die Größe der Gefahr gibt es immer eine große Menge an Gerüchten über magische Artefakte. Vor langer Zeit wanderte mal eine böse Hexe in die Tunnel, um vor Hexenjägern zu flüchten. Die Abergläubischen wagten es nicht in die Dunkelheit zu treten. Also warteten sie. Aber niemand hat sie je wieder gesehen. Vielleicht hat die Hexe einen Weg raus gefunden, vielleicht hat sie sich an den Wachen vorbeigeschliechen... Oder sie starb, umgeben vom Rascheln der Kreaturen in der Dunkelheit.</string>
+    <string name="WndTilesKind_Title">Nur noch eine Kleinigkeit:</string>
     <string name="WndTradeItem_Bought">Du hast %1$s für %2$dg gekauft</string>
     <string name="WndTradeItem_Buy">Kaufen für %dg</string>
     <string name="WndTradeItem_BuyAll">Kaufe alles für %d g</string>
@@ -2619,6 +2621,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

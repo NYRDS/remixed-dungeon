@@ -41,6 +41,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="AmokArrow_Name">Anak Panah Amuk</string>
     <string name="AmokBuff_Info">Rasakan amuknya, merenggut nyawa mereka yang malang.</string>
     <string name="AmokBuff_Name">Amuk</string>
+    <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">Solusi di ujung panah ini akan mengubah siapa pun menjadi pengamuk tanpa ampun.</string>
     <string name="AmokDart_Name">Amuk Dart</string>
     <string name="AmuletScene_Exit">Selesai sudah</string>
@@ -2719,6 +2720,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

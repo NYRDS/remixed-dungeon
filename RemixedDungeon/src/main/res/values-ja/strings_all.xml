@@ -322,6 +322,7 @@
     <string name="Capotain_Info">高い冠をかぶったつばの狭い帽子。一般的にはピューリタンにちなむが、宗教に関係なくかぶることができる。なぜか「ソロモン」と書かれたラベルが付いている。</string>
     <string name="Capotain_Name">カポテイン</string>
     <string name="Carcass_Devoured">あなたは %sの死体を食い尽くした！</string>
+    <string name="Carcass_DissectMessage">死骸を解剖して %s を得た。</string>
     <string name="Carcass_Info">完全に死んだ %sの死体</string>
     <string name="Carcass_Kick">この %sは完全に死んでいるので、蹴る必要はない。</string>
     <string name="Carcass_Name">%sの死体</string>
@@ -1213,6 +1214,7 @@
     <string name="Luck_Name_0">幸運の %s</string>
     <string name="Luck_Name_1">幸運の %s</string>
     <string name="Luck_Name_2">幸運の %s</string>
+    <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">この武器の鉄の頭はかなりのダメージを与える。</string>
     <string name="Mace_Name">メイス</string>
     <string name="MageArmor_ACSpecial">大地の怒り</string>
@@ -2858,6 +2860,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

@@ -312,6 +312,7 @@
     <string name="Candy_Warning_2">От ця вже точно була зайва. Через переїдання цукерок у тебе прихопило живіт.</string>
     <string name="Capotain_Info">високий капелюх, що звужується по краях, Він зазвичай асоціюється з пуританами, але вам не обов\'язково бути досить релігійними, аби носити її. З якоїсь причини на ній є ярлик, з написом \&quot;Соломон\&quot;.</string>
     <string name="Capotain_Name">Ковпак</string>
+    <string name="Carcass_DissectMessage">Ви розчленували труп і отримали %s.</string>
     <string name="Caves_TileDescBookshelf">Кому в підземеллі знадобилася книжкова шафа?</string>
     <string name="Caves_TileDescDeco">На стіні видно відкриту жилу якоїсь руди. Чи то не золото?</string>
     <string name="Caves_TileDescEntrance">Драбина веде догори.</string>
@@ -646,6 +647,7 @@
     <string name="Eye_Kill">%s вбиває тебе поглядом смерті...</string>
     <string name="Eye_Name">зле око</string>
     <string name="Eye_Name_Objective">зле око</string>
+    <string name="Facilitations_Names_0">Без голоду</string>
     <string name="Fadeleaf_Desc">Доторк до Портальця перенесе тебе у випадкове місце цього рівня</string>
     <string name="Fadeleaf_Name">Порталець</string>
     <string name="FetidRat_Desc">Цей сумчастий щур більший ніж звичайний, і він оточений смердючою хмарою.</string>
@@ -1144,6 +1146,7 @@
     <string name="MailArmor_Name">кольчуга</string>
     <string name="ManaPotion_Info">Це зілля відновить твої духовну енергію.</string>
     <string name="ManaPotion_Name">Зілля мани</string>
+    <string name="ManaRegenerationBuff_Name">Регенерація мани</string>
     <string name="Mana_Cost">Потрібно мани:</string>
     <string name="Mana_Title">Мана</string>
     <string name="MedicineMask_Info">Хірургічна маска призначена для вловлювання мікроорганізмів, що потрапляють у краплі рідини та аерозолі з рота та носа користувача. 
@@ -2598,6 +2601,9 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
 
 
 
