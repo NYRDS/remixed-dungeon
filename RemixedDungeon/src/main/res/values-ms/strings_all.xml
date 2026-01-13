@@ -846,6 +846,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="IceGuardianCore_Name">pengawal ais</string>
     <string name="IceGuardianCore_Name_Objective">pengawal ais</string>
     <string name="IceGuardian_Desc">Pengawal asi dihasilkan oleh kobold purba bertujuan untuk melindungi gua mereka. Kuasa tersimpan di dalam terasnya membolehkan pengawal ais membina dirinya sendiri selagi tenaganya masih mencukupi.</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">pengawal ais</string>
     <string name="IceGuardian_Name_Objective">pengawal ais</string>
     <string name="IceKey_Info">Kunci ini diperbuat dari ais, tetapi kerasnya seperti keluli.</string>
@@ -2421,6 +2422,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

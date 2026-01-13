@@ -1377,6 +1377,7 @@
     <string name="PlagueDoctorNPC_Quest_Start_Female">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿 %d 张老鼠皮，这样我就可以做一些额外的测试了。</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿 %d 张老鼠皮，这样我就可以做一些额外的测试了。</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">寻找 _月光草_，那里黑暗与微弱的月光交相辉映。_两颗种子_，其精华，将揭示隐藏的秘密。</string>
+    <string name="PlagueDoctorQuest_5_1_Epilogue">*他凝视着两个_女妖_，面罩下露出幸福的笑容。* 好极了！太棒了！这将开启如此多的……可能性！*他转向你，声音因感激……还有一些别的东西而变得浓重。*你的努力……不会被遗忘。我欠你最深的感谢。*他的目光在_女妖_身上停留得太久，然后他退回到实验室，喃喃自语着要解锁诱惑的秘密。*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*他的思绪飘忽，声音越来越小，几乎成了耳语。* 带两只活的魅魔给我……活着的。她们的……力量……令人着迷。</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*他结结巴巴地说，声音像干树枝一样沙哑*。啊，_女妖精_！两个……是的，两个，活着的！这是……嗯……为了我的研究！你看……她们的信息素……对理解微妙的平衡至关重要……啊……*他停顿了一下，骨瘦如柴的手伸起来紧张地调整面具，发烧般的眼神朝你投来*她们……的本质……是个谜……一个美丽而神秘的谜！*他剧烈地咳嗽，试图恢复镇定*我保证，如果你给我带来这两个……生物……你将得到我永恒的感激。把它看作是……对知识的馈赠！是的！为了知识！</string>
     <string name="PlagueDoctor_Desc">散发奇怪味道的……皮革？下面应该是个人吧……</string>
@@ -2742,6 +2743,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

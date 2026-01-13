@@ -315,6 +315,7 @@
     <string name="Capotain_Info">Un sombrero alto de ala pequeña. Por lo general lo usan los puritanos, pero no se debe de ser religioso para usarlo. Por alguna razón, tiene una placa de identificación, dice \&quot;Salomón\&quot;.</string>
     <string name="Capotain_Name">Tricornio</string>
     <string name="Carcass_DissectResult">Del %s obtienes %d %s.</string>
+    <string name="Carcass_Kick">Este %s está completamente muerto, no hay necesidad de patearlo.</string>
     <string name="Caves_TileDescBookshelf">¿Quién necesita una estantería en una caverna?</string>
     <string name="Caves_TileDescDeco">La veta de algún material puede verse en la pared. ¿Oro?</string>
     <string name="Caves_TileDescEntrance">La escalera lleva a la profundidad superior.</string>
@@ -2748,6 +2749,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
