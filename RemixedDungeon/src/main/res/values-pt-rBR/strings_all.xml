@@ -944,6 +944,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="IceGuardianCoreModule_Name">Núcleo do Guardião de Gelo</string>
     <string name="IceGuardianCore_Desc">Os Guardiões de Gelo são produzidos por Kbolds anciãos para proteger as suas cavernas. O poder armazenado no seu núcleo permite o Guardião de gelo reconstruir-se, desde que tenha energia suficiente.</string>
     <string name="IceGuardianCore_DieInfo">Está tão frio aqui, é melhor eu voltar para o nível 14 e tentar encontrar um caminho para um lugar mais quente.</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name">Guardião de gelo</string>
     <string name="IceGuardianCore_Name_Objective">Guardião de gelo</string>
     <string name="IceGuardian_Desc">Os Guardiões de Gelo são produzidos por Kbolds anciãos para proteger as suas cavernas. O poder armazenado no seu núcleo permite o Guardião de gelo reconstruir-se, desde que tenha energia suficiente.</string>
@@ -2718,6 +2719,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

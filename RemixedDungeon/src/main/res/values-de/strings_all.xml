@@ -1953,6 +1953,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="TrapWnd_Step">Willst du wirklich auf diese Falle treten? Du könntest womöglich sterben.</string>
     <string name="TrapWnd_Title">Falle</string>
     <string name="TreacherousSpirit_Desc">Diese monströse Kreatur sieht wie eine Wolke lebender Dunkelheit aus. Sein lidloses Auge auf dich gerichtet, pulsiert es bei jeder deiner Bewegungen.</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">Heimtückischer Geist</string>
     <string name="TreacherousSpirit_Name_Objective">Heimtückischer Geist</string>
     <string name="Undead_Defense">abgeblockt</string>
@@ -2623,6 +2624,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

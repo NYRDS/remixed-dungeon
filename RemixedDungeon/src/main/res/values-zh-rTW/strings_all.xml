@@ -787,6 +787,7 @@
     <string name="HeroClass_NecromancerPerks_2">死靈法師初始擁有一件獨特的靈魂長袍。裝備後，每殺死一個生物會給他提供1點法力值。</string>
     <string name="HeroClass_NecromancerPerks_3">死靈法師開局有一把7層的骷髏鑰匙。</string>
     <string name="HeroClass_NecromancerPerks_4">治療藥水開局時就已經鑒定好了。</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">麻痹氣體和毒性氣體的藥水已預先辨識。</string>
     <string name="HeroClass_Rog">盜賊</string>
     <string name="HeroClass_RogPerks_0">盜賊起始擁有一枚+1的暗影指環。</string>
     <string name="HeroClass_RogPerks_1">盜賊在裝備指環時能自動鑒定其類型。</string>
@@ -2520,6 +2521,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
