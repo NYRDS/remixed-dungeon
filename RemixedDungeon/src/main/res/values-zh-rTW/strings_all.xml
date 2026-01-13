@@ -1734,6 +1734,7 @@
     <string name="SpiderEgg_Name">蜘蛛蛋</string>
     <string name="SpiderEgg_Name_Objective">蜘蛛蛋</string>
     <string name="SpiderExploding_Desc">這些蜘蛛工人在和平時期一直努力工作，可是一旦遇到敵人，就會毫不猶豫的抓起自己路過的第一株植物，並把自己當成活體炸彈沖向他們。</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">蜘蛛工人</string>
     <string name="SpiderExploding_Name_Objective">蜘蛛工人</string>
     <string name="SpiderGuard_Desc">這個蜘蛛守衛像是士兵一樣發誓要保護它們的王國。守衛的猛毒是用來麻痹它們的目標的。</string>
@@ -2127,6 +2128,7 @@
     <string name="WndLibrary_Items_Btn">道具</string>
     <string name="WndLibrary_Levels_Btn">地牢</string>
     <string name="WndLibrary_Mobs_Btn">怪物</string>
+    <string name="WndLocalModInstall_text">選擇要從哪裡安裝模組的目錄。</string>
     <string name="WndModsDisclaimer_title">模組</string>
     <string name="WndMovieTheatre_Bye">想回來的時候就回來，我們對您的到來而感到高興！</string>
     <string name="WndMovieTheatre_Instruction_2">您累計最多可看 %2$d 次，而您已經觀看了 %1$d 次。每當您升一級，您便可獲得額外一次欣賞電影的機會。</string>
@@ -2521,6 +2523,9 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 
