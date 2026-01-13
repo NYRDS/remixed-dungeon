@@ -7,7 +7,7 @@ Remixed Dungeon
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/NYRDS/remixed-dungeon)
 =====================
 
-Classic roguelike with pixel graphics and simple interface.
+Classic roguelike with pixel graphics, simple interface and extensive modding features.
 
 This is fork of Famous Pixel Dungeon featuring English, Russian and many more localizations.
 
@@ -15,37 +15,14 @@ Remixed Dungeon in [Google Play](https://play.google.com/store/apps/details?id=c
 
 [Remixed Dungeon translation project](https://app.transifex.com/nyrds/remixed-dungeon/)
 
-[Facebook](https://www.facebook.com/RemixedDungeon)
 [VK](https://vk.com/pixel_dungeon_remix)
 [Wiki](https://wiki.nyrds.net/)
 [YouTube](https://www.youtube.com/c/NYRDS)
 [Telegram](https://t.me/RemixedDungeon)
 
+## SAST Tools
 
-Классический рогалик с пиксельной графикой и простым интерфейсом.
-
-Это форк Знаменитой Pixel Dungeon с Английской, Русской и множеством других локализаций.
-
-Андроид версия Remixed Dungeon в [Google Play](https://play.google.com/store/apps/details?id=com.nyrds.pixeldungeon.ml&referrer=utm_source%3Dgithub%26utm_content%3Dreadme), в [ruStore](https://apps.rustore.ru/app/com.nyrds.pixeldungeon.ml)
-
-ПК версия Remixed Dungeon в [VkPlay](https://vkplay.ru/play/game/remixed-dungeon-pixel-rogue/)
-
-### Web
-```bash
-# Build the HTML version
-./gradlew :RemixedDungeonHtml:build
-
-# Generate JavaScript using TeaVM (work in progress with recent improvements)
-./gradlew :RemixedDungeonHtml:generateJavaScript  # Work in progress
-```
-
-[Проект по переводу Remixed Dungeon](https://app.transifex.com/nyrds/remixed-dungeon/)
-
-[Facebook](https://www.facebook.com/RemixedDungeon)
-[VK](https://vk.com/pixel_dungeon_remix)
-[Wiki](https://wiki.nyrds.net/)
-[YouTube](https://www.youtube.com/c/NYRDS)
-[Telegram](https://t.me/RemixedDungeon)
+[PVS-Studio](https://pvs-studio.com/pvs-studio/?utm_source=website&utm_medium=github&utm_campaign=open_source) - static analyzer for C, C++, C#, and Java code.
 
 ## Star History
 
