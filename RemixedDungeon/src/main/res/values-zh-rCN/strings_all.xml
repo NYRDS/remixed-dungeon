@@ -178,6 +178,7 @@
     <string name="Bandit_Name">疯狂强盗</string>
     <string name="Bandit_Name_Objective">疯狂强盗</string>
     <string name="BardNPC_Desc">镇上的吟游诗人正在弹他的琵琶。</string>
+    <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">吟游诗人</string>
     <string name="BardNPC_Name_Objective">吟游诗人</string>
     <string name="BardSong_1">我与妻子单独生活\n在一间我们自己的小木屋\n她喜欢杜松子酒而我喜欢朗姆酒\n我告诉你我们快乐极了</string>
@@ -2743,6 +2744,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

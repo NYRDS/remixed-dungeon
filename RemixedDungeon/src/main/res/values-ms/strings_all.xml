@@ -40,6 +40,7 @@
     <string name="AllowStatisticsCollectionScene_Title">Koleksi statistik penggunaan</string>
     <string name="AmokArrow_Info">Hujung anak panah ini disaluti dengan cecair yang menyebabkan anda mengamuk tanpa sebab.</string>
     <string name="AmokArrow_Name">Anak Panah Mengamok</string>
+    <string name="AmokBuff_Info">Rasakan amoknya, mengambil nyawa mereka yang malang.</string>
     <string name="AmokBuff_Name">Mengamok</string>
     <string name="AmokDart_Info">Hujung damak ini disaluti dengan cecair yang menyebabkan anda mengamuk tanpa sebab.</string>
     <string name="AmokDart_Name">Damak Mengamok</string>
@@ -2422,6 +2423,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
