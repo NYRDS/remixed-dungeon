@@ -1788,6 +1788,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="RottenFood_Message">Paskudztwo!</string>
     <string name="RottenMeat_Info">kawałek starego, zgniłego mięsa</string>
     <string name="RottenMeat_Name">zgniłe mięso</string>
+    <string name="RottenOrgan_Info">Rozkładający się organ zdobyty z pokonanego wroga. Pomimo swojego zgniłego stanu zawiera cenne związki do procesów alchemicznych.</string>
     <string name="RottenPasty_Info">Ten pasztecik niestety spaszteciał.</string>
     <string name="RottenPasty_Name">zgniły pasztecik</string>
     <string name="RottenPumpkinPie_Info">Nieważne jakie to było smaczne jeszcze zanim się zepsuło, nie ma mowy żeby wciąż było jadalne.</string>
@@ -2996,6 +2997,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
