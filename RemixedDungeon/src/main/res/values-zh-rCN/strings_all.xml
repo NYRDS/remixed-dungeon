@@ -19,6 +19,7 @@
     <string name="Acidic_Desc">这些巨大的节肢类恶魔生物会尽可能地避免近距离战斗，并且在远处射出能致残的锯齿尖刺。</string>
     <string name="Acidic_Name">酸蚀蝎子</string>
     <string name="Acidic_Name_Objective">酸蚀蝎子</string>
+    <string name="Actions_Speed">行动速度等级</string>
     <string name="Affection_Txt">魅惑%s</string>
     <string name="AirElemental_Desc">风元素是由有生命的气体构成的飞行元素生物。</string>
     <string name="AirElemental_Name">风元素</string>
@@ -2744,6 +2745,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
