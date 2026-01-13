@@ -661,6 +661,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Food_ACEat">ESSEN</string>
     <string name="Food_Message">Dieses Essen schmeckt köstlich!</string>
     <string name="FortuneTellerNPC_Desc">Diese Frau trägt eine lange helle Robe. Sie sieht überraschend jung aus, für jemanden, der die Kunst des Wahrsagens gemeistert hat. Wenn man näher kommt, kann man sie murmeln hören, währand sie in ihre Kristall-Kugel starrt.</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">Wahrsagerin</string>
     <string name="FortuneTellerNPC_Name_Objective">Wahrsagerin</string>
     <string name="FreezeGlobe_Info">Friert ausgewählten Charakter ein und macht es ihm für eine kurze Zeit unmöglich jedwede Aktion auszuführen.</string>
@@ -2342,6 +2343,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="Wraith_Name">Geist</string>
     <string name="Wraith_Name_Objective">Geist</string>
     <string name="WrnExperimental_hint">Falls diese seltsame und verworrene Welt zu grausam für dich ist, deaktiviere bitte diese Optionen über Startbildschirm-&gt;Optionen-&gt;Gameplay-Menü und starte ein neues Spiel oder lade einen anderen Speicherstand.</string>
+    <string name="WrnExperimental_moveTimeout">Zeitlimit für Zug auf %d Millisekunden gesetzt, denk schnell!</string>
     <string name="Yog_Desc">Yog-Dzewa ist eine alte Gottheit, ein mächtiges Wesen aus dem Reich des Chaos. Ein Jahrhundert zuvor konnten die alten Zwerge den Krieg gegen seine Armeen von Dämonen endlich gewinnen, waren aber nicht in der Lage, die Gottheit selbst zu töten. Stattdessen haben sie ihn in den Hallen unter ihrer Stadt eingesperrt, daran glaubend, dass er zu schwach sei, sich jemals wieder zu erheben</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">Hoffnung ist eine Illusion...</string>
@@ -2621,6 +2623,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 
