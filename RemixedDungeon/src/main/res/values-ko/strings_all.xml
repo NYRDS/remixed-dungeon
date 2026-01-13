@@ -1511,6 +1511,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ScrollOfTeleportation_Info">이 두루마리에 적힌 마법은 시전자를 즉시 같은층의 무작위 장소로 이동시켜 줄 것입니다. 이것은 위험한 상황에서 탈출하는데 사용할 수도 있지만 불운한 경우에는 시전자를 더 위험한 장소로 이동시킬 수도 있습니다.</string>
     <string name="ScrollOfTeleportation_Name">순간이동의 두루마리</string>
     <string name="ScrollOfTeleportation_NoTeleport">이곳의 강력한 마법장이 순간이동을 못하게 막고 있습니다!</string>
+    <string name="ScrollOfTeleportation_NoTeleport2">이 강력한 마법 기운은 %s(이)가 순간이동하는 것을 방해한다!</string>
     <string name="ScrollOfTeleportation_Teleport">순식간에 다른장소로 순간이동 했습니다.</string>
     <string name="ScrollOfTerror_Info">붉은 빛의 플래시의 공포가 시야의 모든 생물을 압도하며 모두 도망칩니다. 달아나는 적을 공격하면 공포효과가 풀립니다.</string>
     <string name="ScrollOfTerror_Info1">두루마리가 붉은 빛을 밝게 방출하였습니다.</string>
@@ -2345,6 +2346,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

@@ -1817,6 +1817,7 @@
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">павуче яйце</string>
     <string name="SpiderEgg_Name_Objective">павуче яйце</string>
+    <string name="SpiderElite_Desc">Як і солдати, павукоподібні вартові поклялися захищати свою країну. Отрута елітного вартового використовується для дезорієнтації мети.</string>
     <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderExploding_Desc">В спокійний для колонії час ці трудяги безпечні, але при появі загрози, хапають першу рослину, що росте поряд, і кидаються на ворога, наче камікадзе.</string>
     <string name="SpiderExploding_Gender">masculine</string>
@@ -2597,6 +2598,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

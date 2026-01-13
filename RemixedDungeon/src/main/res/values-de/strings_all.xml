@@ -1577,6 +1577,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="RunicSkull_Desc">Für etwas, das künstlich erstellt wurde, sieht dieser Schädel ein bisschen zu real aus. Du kannst ein schwaches glühen um den Schädel sehen.</string>
     <string name="RunicSkull_Name">Runen-Schädel</string>
     <string name="RunicSkull_Name_Objective">Runen-Schädel</string>
+    <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">Auf den ersten Blick scheint dieses alte Bronzeschwert, das mit Dreck bedeckt ist, absolut nutzlos zu sein. Doch eine gewisse veraltete Kraft schläft darin. Diese Kraft kann beinahe jede Kreatur in eine willenlose Marionette verwandeln. Man muss nur den richtigen finden, um es aufzuwecken...</string>
     <string name="SacrificialSword_Name">Opfernde Klinge</string>
     <string name="SantaHat_Info">Nichts sagt Weihdungeon mehr, als ein roter seidiger Hut von Santa den Lord der Tiefe.</string>
@@ -2618,6 +2619,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
