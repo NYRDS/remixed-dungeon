@@ -13,6 +13,7 @@ import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -61,9 +62,9 @@ public class WndAlchemy extends Window {
         recipesContainer.setRect(0, 0, windowWidth - 4 * MARGIN, 0);
         recipesContainer.setGap(2);
 
-        Map<List<String>, List<String>> allRecipes = AlchemyRecipes.getAllRecipes();
+        var allRecipes = AlchemyRecipes.getAllRecipes();
         if (!allRecipes.isEmpty()) {
-            for (Entry<List<String>, List<String>> recipeEntry : allRecipes.entrySet()) {
+            for (var recipeEntry : allRecipes.entrySet()) {
                 // Create a recipe list item
                 RecipeListItem recipeItem = getRecipeListItem(recipeEntry, windowWidth);
 
@@ -217,14 +218,14 @@ public class WndAlchemy extends Window {
 
     private void executeItemRecipe() {
         // Get all outputs for this recipe
-        java.util.List<String> outputs = AlchemyRecipes.getOutputForInput(selectedRecipe.getKey());
-        java.util.List<AlchemyRecipes.OutputType> outputTypes = AlchemyRecipes.getOutputTypeForInput(selectedRecipe.getKey());
+        var outputs = AlchemyRecipes.getOutputForInput(selectedRecipe.getKey());
+        var outputTypes = AlchemyRecipes.getOutputTypeForInput(selectedRecipe.getKey());
 
         // Collect all item outputs
-        java.util.List<Item> outputItems = new java.util.ArrayList<>();
+        List<Item> outputItems = new ArrayList<>();
         for (int i = 0; i < outputs.size(); i++) {
             if (outputTypes.get(i) == AlchemyRecipes.OutputType.ITEM) {
-                Item item = AlchemyRecipes.createOutputItem(java.util.Collections.singletonList(outputs.get(i)));
+                Item item = AlchemyRecipes.createOutputItem(Collections.singletonList(outputs.get(i)));
                 if (item != null) {
                     outputItems.add(item);
                 }
@@ -255,14 +256,14 @@ public class WndAlchemy extends Window {
 
     private void executeMobRecipe() {
         // Get all outputs for this recipe
-        java.util.List<String> outputs = AlchemyRecipes.getOutputForInput(selectedRecipe.getKey());
-        java.util.List<AlchemyRecipes.OutputType> outputTypes = AlchemyRecipes.getOutputTypeForInput(selectedRecipe.getKey());
+        var outputs = AlchemyRecipes.getOutputForInput(selectedRecipe.getKey());
+        var outputTypes = AlchemyRecipes.getOutputTypeForInput(selectedRecipe.getKey());
 
         // Collect all mob outputs
-        java.util.List<Mob> outputMobs = new java.util.ArrayList<>();
+        List<Mob> outputMobs = new ArrayList<>();
         for (int i = 0; i < outputs.size(); i++) {
             if (outputTypes.get(i) == AlchemyRecipes.OutputType.MOB) {
-                Mob mob = AlchemyRecipes.createOutputMob(java.util.Collections.singletonList(outputs.get(i)));
+                Mob mob = AlchemyRecipes.createOutputMob(Collections.singletonList(outputs.get(i)));
                 if (mob != null) {
                     outputMobs.add(mob);
                 }
@@ -297,21 +298,21 @@ public class WndAlchemy extends Window {
 
     private void executeMixedRecipe() {
         // Get all outputs for this recipe
-        java.util.List<String> outputs = AlchemyRecipes.getOutputForInput(selectedRecipe.getKey());
-        java.util.List<AlchemyRecipes.OutputType> outputTypes = AlchemyRecipes.getOutputTypeForInput(selectedRecipe.getKey());
+        var outputs = AlchemyRecipes.getOutputForInput(selectedRecipe.getKey());
+        var outputTypes = AlchemyRecipes.getOutputTypeForInput(selectedRecipe.getKey());
 
         // Collect all item and mob outputs
-        java.util.List<Item> outputItems = new java.util.ArrayList<>();
-        java.util.List<Mob> outputMobs = new java.util.ArrayList<>();
+        List<Item> outputItems = new ArrayList<>();
+        List<Mob> outputMobs = new ArrayList<>();
 
         for (int i = 0; i < outputs.size(); i++) {
             if (outputTypes.get(i) == AlchemyRecipes.OutputType.ITEM) {
-                Item item = AlchemyRecipes.createOutputItem(java.util.Collections.singletonList(outputs.get(i)));
+                Item item = AlchemyRecipes.createOutputItem(Collections.singletonList(outputs.get(i)));
                 if (item != null) {
                     outputItems.add(item);
                 }
             } else if (outputTypes.get(i) == AlchemyRecipes.OutputType.MOB) {
-                Mob mob = AlchemyRecipes.createOutputMob(java.util.Collections.singletonList(outputs.get(i)));
+                Mob mob = AlchemyRecipes.createOutputMob(Collections.singletonList(outputs.get(i)));
                 if (mob != null) {
                     outputMobs.add(mob);
                 }
@@ -393,7 +394,7 @@ public class WndAlchemy extends Window {
         // Update the layout
         mainLayout.layout();
         float windowHeight = PixelScene.uiCamera.height - 20; // 10px margin on each side
-        resize((int)(PixelScene.uiCamera.width - 20), (int)windowHeight);
+        resize(PixelScene.uiCamera.width - 20, (int)windowHeight);
     }
 
     @Override

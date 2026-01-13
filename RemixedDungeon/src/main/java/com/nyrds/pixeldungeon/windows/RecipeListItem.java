@@ -36,13 +36,14 @@ public class RecipeListItem extends Component implements IClickable {
     @Getter
     private final String output; // First output for backward compatibility
     private final List<String> outputs; // All outputs
+
+    private final HBox rowBox = new HBox(100); // Will be resized later
     private final HBox ingredientsBox;
-    private final com.watabou.noosa.ui.Component outputComponent; // Container for output display
+    private final Component outputComponent; // Container for output display
     private final HBox outputBox;
     private final Text arrow;
     private final List<Item> inputItems; // Store actual item instances to check against hero inventory
     private final List<GrayableItemSprite> ingredientSlots; // Store references to item slots
-    private ColorBlock background; // Store reference to background
     private Runnable clickListener;
     protected boolean clickable = false;
     @Getter
@@ -65,7 +66,7 @@ public class RecipeListItem extends Component implements IClickable {
 
         // Create HBox for ingredients
         ingredientsBox = new HBox(100); // Will be resized later
-        ingredientsBox.setGap(2);
+        ingredientsBox.setGap(-10);
 
         // Add input ingredients to the ingredients box as ItemSlots
         for (String input : inputs) {
@@ -229,7 +230,7 @@ public class RecipeListItem extends Component implements IClickable {
                 }
 
                 // Wrap the ItemSpriteWrapper in a Component-compatible wrapper
-                com.watabou.noosa.ui.Component wrappedItemComponent = new com.watabou.noosa.ui.Component() {
+                Component wrappedItemComponent = new Component() {
                     {
                         add(outputSpriteTemp);
                     }
@@ -248,7 +249,7 @@ public class RecipeListItem extends Component implements IClickable {
                 // Create output slot for mob
                 Image outputSpriteTemp;
                 try {
-                    com.watabou.pixeldungeon.actors.mobs.Mob mob = MobFactory.mobByName(singleOutput);
+                    Mob mob = MobFactory.mobByName(singleOutput);
                     if (mob != null) {
                         CharSprite sprite = mob.newSprite();
                         outputSpriteTemp = sprite.avatar();
@@ -265,7 +266,7 @@ public class RecipeListItem extends Component implements IClickable {
 
                 final Image finalOutputSpriteTemp = outputSpriteTemp;
                 // Wrap the Image in a Component-compatible wrapper
-                com.watabou.noosa.ui.Component wrappedComponent = new com.watabou.noosa.ui.Component() {
+                Component wrappedComponent = new Component() {
                     {
                         add(finalOutputSpriteTemp);
                     }
@@ -285,7 +286,7 @@ public class RecipeListItem extends Component implements IClickable {
                 final ItemSpriteWrapper defaultSprite = new ItemSpriteWrapper();
                 defaultSprite.setSize(SLOT_SIZE, SLOT_SIZE);
                 // Wrap the default ItemSpriteWrapper in a Component-compatible wrapper
-                com.watabou.noosa.ui.Component wrappedDefaultComponent = new com.watabou.noosa.ui.Component() {
+                Component wrappedDefaultComponent = new Component() {
                     {
                         add(defaultSprite);
                     }
@@ -307,10 +308,16 @@ public class RecipeListItem extends Component implements IClickable {
         ColorBlock background = new ColorBlock(width, height, UNSELECTED_COLOR);
 
         // Add components to this list item in the correct order (background first)
-        add(background);
-        add(ingredientsBox);
-        add(arrow);
-        add(outputBox);
+        //add(background);
+        rowBox.add(ingredientsBox);
+        rowBox.add(arrow);
+        rowBox.add(outputBox);
+        add(rowBox);
+        rowBox.layout();
+        rowBox.setPos(x,y);
+
+        setSize(rowBox.width(), rowBox.height());
+
     }
 
     /**
@@ -320,32 +327,6 @@ public class RecipeListItem extends Component implements IClickable {
         // Check if it's a valid item class first
         if (ItemFactory.isValidItemClass(entityName)) {
             return AlchemyRecipes.OutputType.ITEM;
-        }
-
-        // Check if it's a seed (special case)
-        if (entityName.endsWith(".Seed") ||
-            entityName.equals("Sungrass.Seed") ||
-            entityName.equals("Firebloom.Seed") ||
-            entityName.equals("Icecap.Seed") ||
-            entityName.equals("Sorrowmoss.Seed") ||
-            entityName.equals("Dreamweed.Seed") ||
-            entityName.equals("Earthroot.Seed") ||
-            entityName.equals("Fadeleaf.Seed") ||
-            entityName.equals("Moongrace.Seed") ||
-            entityName.equals("Rotberry.Seed")) {
-            return AlchemyRecipes.OutputType.ITEM;
-        }
-
-        // Check for other special cases that might be valid in alchemy
-        // For example, some items might be referenced by their full class name
-        if (entityName.startsWith("com.watabou.pixeldungeon.items.") ||
-            entityName.startsWith("com.nyrds.pixeldungeon.items.")) {
-            // Extract the simple class name and check if it's valid
-            String[] parts = entityName.split("\\.");
-            String className = parts[parts.length - 1];
-            if (ItemFactory.isValidItemClass(className)) {
-                return AlchemyRecipes.OutputType.ITEM;
-            }
         }
 
         // If it's not an item, check if it's a mob
@@ -370,6 +351,7 @@ public class RecipeListItem extends Component implements IClickable {
     public void layout() {
         super.layout();
 
+/*
         // Layout ingredients tightly together
         float totalIngredientsWidth = 0;
         for (int i = 0; i < ingredientsBox.getLength(); i++) {
@@ -385,8 +367,8 @@ public class RecipeListItem extends Component implements IClickable {
         // Calculate total width of all outputs
         float totalOutputWidth = 0;
         for (int i = 0; i < outputBox.getLength(); i++) {
-            com.watabou.noosa.ui.Component outputComponent = (com.watabou.noosa.ui.Component) outputBox.getMember(i);
-            totalOutputWidth += outputComponent.width() - 10; // 2 pixels spacing between outputs
+            Component outputComponent = (Component) outputBox.getMember(i);
+            totalOutputWidth += outputComponent.width(); // 2 pixels spacing between outputs
         }
 
         // Calculate available space for outputs
@@ -413,7 +395,7 @@ public class RecipeListItem extends Component implements IClickable {
         // Layout the output box with all outputs from right to left
         float currentOutputX = 0;
         for (int i = 0; i < outputBox.getLength(); i++) {
-            com.watabou.noosa.ui.Component outputComponent = (com.watabou.noosa.ui.Component) outputBox.getMember(i);
+            Component outputComponent = (Component) outputBox.getMember(i);
             outputComponent.setPos(currentOutputX, 0); // Position relative to outputBox
             currentOutputX += outputComponent.width() - 10; // 2 pixels spacing between outputs
         }
@@ -450,6 +432,7 @@ public class RecipeListItem extends Component implements IClickable {
             outputBox.setSize(actualAvailableSpace, height);
         }
 
+ */
     }
 
     public void setOnClickListener(Runnable listener) {
