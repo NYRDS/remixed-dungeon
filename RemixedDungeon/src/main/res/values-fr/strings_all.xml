@@ -808,6 +808,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="GoldenKey_Info">Les encoches de cette clé dorée sont petites et complexes. Peut-être que ça peut ouvrir une serrure de coffre ?</string>
     <string name="GoldenKey_Name">Clé dorée</string>
     <string name="GoldenStatue_Desc">C\'est impensable, cette magnifique statue n\'est pas une décoration, mais une créature malicieuse attendant l\'aventurier sans méfiance. Au premier abord vous auriez juré que cette _%s_ était juste une partie de son bras.</string>
+    <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">statue en or</string>
     <string name="GoldenStatue_Name_Objective">statue en or</string>
     <string name="GoldenSword_Gender">feminine</string>
@@ -2894,6 +2895,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

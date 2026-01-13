@@ -167,6 +167,7 @@
     <string name="Bandit_Desc">Aras lebih dalam kurungan bawah tanah merupakan tempat persembunyian semua kategori penjenayah. Bukan semua yang dapat mengawal kewarasan diri ketika berada di sini. Dahulu, ramai pencuri dan perompak menjadi gila dan lupa diri mereka apa yang mereka telah lakukan. Perompak-perompak ini telah menyelaputi pisau mereka dengan sesuatu!</string>
     <string name="Bandit_Name">perompak gila</string>
     <string name="Bandit_Name_Objective">perompak gila</string>
+    <string name="BardNPC_Gender">masculine</string>
     <string name="BarkskinBuff_Name">Kulit kayu</string>
     <string name="Barrel_Desc">Nampak seperti tong kayu biasa. Tetapi bila anda lihat lebih dekat anda terbau minyak. Tong ini agak ringan, anda boleh menolaknya.</string>
     <string name="Barrel_Name">tong</string>
@@ -585,6 +586,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Eye_Kill">Renungan maut %s telah membunuh anda...</string>
     <string name="Eye_Name">mata jahat</string>
     <string name="Eye_Name_Objective">mata jahat</string>
+    <string name="Facilitations_Names_1">Badan gergasi</string>
     <string name="Fadeleaf_Desc">Menyentuh Daun Lenyap akan pindahkan sesiapa sahaja ke lokasi secara rawak dalam aras yang sama</string>
     <string name="Fadeleaf_Name">Daun Lenyap</string>
     <string name="FetidRat_Desc">Tikus marsupial ini lebih besar berbanding tikus biasa. Bau pun busuk.</string>
@@ -1796,6 +1798,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="TownsfolkNPC_Name">penduduk pekan</string>
     <string name="TownsfolkNPC_Name_Objective">penduduk pekan</string>
     <string name="TownsfolkSilentNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal.</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message1">Hmph!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hmmm...</string>
@@ -2418,6 +2421,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 
