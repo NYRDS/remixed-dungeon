@@ -2013,6 +2013,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="Wraith_Desc">Un wraith è lo spirito vendicativo di un peccatore a cui fu  disturbata la lapide o la tomba. Essendo una creatura eterea, è veramente difficile da colpire con un\'arma normale. </string>
     <string name="Wraith_Name">Spettro</string>
     <string name="Wraith_Name_Objective">Spettro</string>
+    <string name="WrnExperimental_realtime">Modalità Realtime! abilitata: ora questo è un roguelike in tempo reale, premi velocemente o muori.\nVuoi controllare l'inventario?\nBuona fortuna nel farlo mentre il granchio delle fognature sta controllando le tue viscere.</string>
     <string name="Yog_Desc">Yog-Dzewa è un vecchio dio,una potente entità dei regni del caos.Un secolo fa,gli antichi nani hanno vinto a malapena la guerra contro il suo esercito di demoni,ma non erano in grado di uccidere il Dio stesso. Invece,lo hanno imprigionato nelle sale sotto la loro città,credendo che fosse troppo debole per non risalire più.</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">La speranza è un\'illusione...</string>
@@ -2171,6 +2172,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
