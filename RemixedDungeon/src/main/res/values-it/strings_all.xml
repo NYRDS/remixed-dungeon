@@ -759,6 +759,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="IceCaves_TileDescStatue">Un\'altra orribile statua... Oh, aspetta. È uno gnoll congelato.</string>
     <string name="IceCaves_TileStatue">Gnoll Congelato</string>
     <string name="IceElemental_Desc">Tra tutti gli elementali che esistono nel dungeon, gli elementali del ghiaccio difficilmente possono essere considerati potenti, ma possono davvero essere definiti tra i più pericolosi. L\'aura di gelo che emette dai loro corpi può rallentare qualsiasi nemico.</string>
+    <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">elementale del ghiaccio</string>
     <string name="IceElemental_Name_Objective">elementale del ghiaccio</string>
     <string name="IceGuardianCore_Desc">I Guardiani del Ghiaccio venivano fabbricati dagli antichi coboldi per proteggere le loro grotte. Il potere immagazzinato nel suo nucleo consente al Guardiano del Ghaccio di ricostruirsi fintanto che ha abbastanza energia.</string>
@@ -1656,6 +1657,7 @@ Potrebbe bruciare?</string>
     <string name="TownsfolkSilentNPC_Name_Objective">paesano</string>
     <string name="ToxicGas_Info">Una nube verdastra di gas tossico sta vorticando qua.</string>
     <string name="ToxicGas_Info1">Sei morto a causa delle esalazioni di gas tossico... </string>
+    <string name="ToxicGland_Name">Ghiandola Tossica</string>
     <string name="TreacherousSpirit_Desc">Questa mostruosa creatura sembra una nuvola vivente di oscurità. I suoi occhi senza vita ti fissano, pulsando con ognuno dei tuoi movimenti. </string>
     <string name="TreacherousSpirit_Name">Spirito traditore</string>
     <string name="TreacherousSpirit_Name_Objective">Spirito traditore</string>
@@ -2169,6 +2171,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

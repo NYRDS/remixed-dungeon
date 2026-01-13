@@ -907,6 +907,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="IceCaves_TileHighGrass">Gefrorenes hohes Gras</string>
     <string name="IceCaves_TileStatue">Gefrorener Gnoll</string>
     <string name="IceElemental_Desc">Unter allen Elementen, die im Dungeon existieren, sind die Eiselemente vielleicht nicht die widerstandsfähigsten Elementare, sie zählen aber mit Sicherheit zu den gefährlichsten. Ihr Körper strahlt Kälte ab, wodurch ihre Feinde verlangsamt werden.</string>
+    <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">Eisgeist</string>
     <string name="IceElemental_Name_Objective">EIsgeist</string>
     <string name="IceGuardianCoreModule_Info">Es ist eine komplexe Struktur aus magischem Eis. Ein glühender Kristall ist in der mitte des sonderbaren Geräts platziert.</string>
@@ -1820,6 +1821,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="Spinner_Name">Höhlenspinne</string>
     <string name="Spinner_Name_Objective">Höhlenspinne</string>
     <string name="SpiritOfPain_Desc">Ein Stück lebende Dunkelheit</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">Geist der Schmerzen</string>
     <string name="SpiritOfPain_Name_Objective">Geist der Schmerzen</string>
     <string name="Sprout_Name">Sprießen</string>
@@ -2624,6 +2626,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

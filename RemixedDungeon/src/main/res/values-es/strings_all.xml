@@ -953,6 +953,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="IceCaves_TileHighGrass">Hierba alta congelada</string>
     <string name="IceCaves_TileStatue">Gnoll congelado</string>
     <string name="IceElemental_Desc">Entre todos los elementales que existen en la mazmorra, el elemental de hielo podría no ser el más difícil, pero si debe considerarse como uno muy peligroso. Su cuerpo irradia frío, alentando a sus enemigos.</string>
+    <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">elemental de hielo</string>
     <string name="IceElemental_Name_Objective">elemental de hielo</string>
     <string name="IceGuardianCoreModule_Info">Es una compleja estructura hecha de hielo mágico. Una brillante gema está puesta en el centro de este extraño dispositivo.</string>
@@ -2749,6 +2750,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
