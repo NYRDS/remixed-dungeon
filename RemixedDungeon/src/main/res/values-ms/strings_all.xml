@@ -1945,6 +1945,14 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Weightstone_WndChoice">Bagaimana anda mahu seimbangkan %s anda?</string>
     <string name="Weightstone_WndSpeed">Untuk kelajuan</string>
     <string name="Welcome_Ok">Baiklah!</string>
+    <string name="Welcome_Text_31_1">
+    remix.31.1\n
+    - Permainan:\n
+    -- Penyesuaian Baharu!\n
+    -- Jenis Labah-labah Baharu!\n
+    -- Labah-Psi kini akan memberi kesan baik kepada labah-labah lain berbanding memberi kesan buruk kepada Wira.\n
+    - Pepijat telah dibaiki\n
+    </string>
     <string name="Welcome_Title">Selamat Datang!</string>
     <string name="WindGust_Info">Hembuskan angin kencang yang dapat menolak keluar karakter terpilih.</string>
     <string name="WindGust_Name">Tiupan angin kencang</string>
@@ -2425,6 +2433,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

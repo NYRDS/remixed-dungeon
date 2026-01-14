@@ -739,6 +739,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_NecromancerPerks_2">강령술사는 7레벨 스켈레톤 키를 지니고 시작합니다.</string>
     <string name="HeroClass_NecromancerPerks_3">회복의 물약이 처음부터 식별되어 있습니다.</string>
     <string name="HeroClass_NecromancerPerks_4">회복의 물약이 처음부터 식별되어 있습니다.</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">역병의 의사들은 처치한 적들로부터 독성 선, 부패한 장기, 뼈 조각 및 악랄한 정수를 수확합니다. 피는 시간이 지남에 따라 수집되어 연금술을 수행하는 데 사용됩니다.</string>
     <string name="HeroClass_Rog">도적</string>
     <string name="HeroClass_RogPerks_0">도적은 그림자의 반지+1을 가지고 시작한다.</string>
     <string name="HeroClass_RogPerks_1">도적은 반지를 착용하자마자 그 반지의 종류를 알아낼 수 있다.</string>
@@ -2352,6 +2353,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

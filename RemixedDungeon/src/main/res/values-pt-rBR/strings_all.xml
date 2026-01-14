@@ -666,6 +666,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
     <string name="Fadeleaf_Name">planta de teleporte</string>
     <string name="FetidRat_Desc">O rato marsupial é muito maior que um normal. É cercado por uma nuvem poluída.</string>
+    <string name="FetidRat_Gender">masculine</string>
     <string name="FetidRat_Name">rato fedorento</string>
     <string name="FetidRat_Name_Objective">Rato fedido.</string>
     <string name="Fez_Info">É um cocar de feltro em forma de um cone truncado feito de feltro vermelho, com uma borla anexada ao topo. E não, isso não faz mundo em 3 dimensões.</string>
@@ -2719,6 +2720,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
