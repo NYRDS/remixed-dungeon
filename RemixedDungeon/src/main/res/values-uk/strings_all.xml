@@ -1111,6 +1111,7 @@
     <string name="LibraryBook_Description">Цей том виглядає величезним. Він містить всі знання, що шукачі пригод винесли з підземелля.</string>
     <string name="LibraryBook_Name">Бібліотечна книга</string>
     <string name="Lich_Desc">Некромант знайшов свою смерть в глибинах Некрополісу, і злі сили, що влилися в його тіло, перетворили його ліча. В мага-мерця, зневолену маріонетку, якою керують темні сили...</string>
+    <string name="Lich_DieInfo">Мені ніколи не подобався цей Некромант. Тож настав час повернутися до 7 рівня і знайти інший шлях у нову пригоду.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">ліч</string>
     <string name="Lich_Name_Objective">ліча</string>
@@ -1282,6 +1283,7 @@
     <string name="Nightmare_Name_Objective">сонна мара</string>
     <string name="No_Valid_Cell">Поблизу немає необхідної клітинки.</string>
     <string name="Ooze_Death">%s вбив тебе...</string>
+    <string name="Order_Info">З належною зосередженістю ваші накази майже невідворотні.</string>
     <string name="OverpricedRation_Info">Він виглядає так само, як і стандартний сухий пайок, але менший.</string>
     <string name="OverpricedRation_Message">Ця їжа добра на смак.</string>
     <string name="OverpricedRation_Name">дорогий сухий пайок</string>
@@ -2601,6 +2603,8 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

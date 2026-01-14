@@ -257,6 +257,7 @@
     <string name="BodyArmorBuff_Name">重甲</string>
     <string name="BodyArmorSpell_Info">激活身體的肌肉力量，使你暫時變強，從而增加你的護甲，但會減少移動速度。</string>
     <string name="BodyArmorSpell_Name">格擋</string>
+    <string name="BoneShard_Name">骨片</string>
     <string name="Boomerang_Info">扔出，命中，回手，就是這麼簡單。</string>
     <string name="Boomerang_Name"> 回力鏢</string>
     <string name="Bounce_Txt">反彈 %s</string>
@@ -2525,6 +2526,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
