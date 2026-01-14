@@ -1938,6 +1938,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SpiderCharm_Name">クモのお守り</string>
     <string name="SpiderCharm_Use">使う</string>
     <string name="SpiderEgg_Desc">この脆い卵は短く脈動している。あなたはこの中に沢山の何かの足を見ることができる。</string>
+    <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">クモの卵</string>
     <string name="SpiderEgg_Name_Objective">クモの卵</string>
     <string name="SpiderElite_Desc">兵士のように、クモの警備兵は王国を守ることを誓う。エリートの毒は標的を混乱させるために使われる。</string>
@@ -2113,6 +2114,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="TownsfolkSilentNPC_Name_Objective">都市の住人</string>
     <string name="ToxicGas_Info">緑がかった有毒のガスが渦巻いている。</string>
     <string name="ToxicGas_Info1">あなたは有毒のガスを吸って死んだ。</string>
+    <string name="ToxicGland_Name">毒腺</string>
     <string name="TrapWnd_Step">本当にこの罠を踏みたいのか？死ぬかもしれないぞ。</string>
     <string name="TrapWnd_Title">罠</string>
     <string name="TreacherousSpirit_Desc">この怪物のような生き物は、まるで生きた闇の雲のようだ。その巨大な目はあなたを見つめ、あなたが動くたびに脈動する。</string>
@@ -2861,6 +2863,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

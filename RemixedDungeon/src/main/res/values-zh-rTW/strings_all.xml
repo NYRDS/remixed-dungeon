@@ -312,6 +312,7 @@
     <string name="Challenges_Names_5">沒入黑暗</string>
     <string name="Challenges_Names_6">禁忌符文</string>
     <string name="Challenges_Names_7">和平主義</string>
+    <string name="ChampionOfAirBuff_Name">風之勇士</string>
     <string name="ChaosArmor_Info">這件盔甲的血紅色金屬板被暗紅的鐵鏈縫接在一起，當你觸碰它時會迸發出混沌能量。</string>
     <string name="ChaosArmor_Name">混沌護甲</string>
     <string name="ChaosBow_Info">一把充斥著混沌之力的駭人魔弓，每一發從它這裡射出的箭矢都會攜帶有一些混沌能量。但萬一失手……</string>
@@ -2524,6 +2525,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
