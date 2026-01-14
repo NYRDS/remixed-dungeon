@@ -419,6 +419,7 @@ Ein blutroter Helm ist ein wesentliches Symbol eines Chaos Kriegers.</string>
     <string name="ClassArmor_NotEquipped">Du musst diese Rüstung tragen um ihre besondere Kraft nutzen zu können.</string>
     <string name="Claymore_Info">Dieses massive Schwert dürfte in der Lage sein, durch alles zu schneiden.</string>
     <string name="Claymore_Name">Claymore</string>
+    <string name="CloakBuff_Info">Ein dunkler Umhang verbirgt dich in den Schatten und macht dich für Feinde weniger sichtbar.</string>
     <string name="CloakBuff_Name">Verhüllt.</string>
     <string name="CloakSpell_EnemiesNearby">Du kannst nicht in die Schatten treten, während Gegner anwesend sind.</string>
     <string name="CloakSpell_Info">Trete in die Schatten um nicht mehr gesehen werden zu können. Dies reduziert die Chancen erheblich gesehen zu werden. Es kann nicht genutzt werden, während Gegner in der Nähe sind.</string>
@@ -2628,6 +2629,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

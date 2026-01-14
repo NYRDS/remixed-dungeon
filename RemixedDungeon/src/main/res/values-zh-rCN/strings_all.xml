@@ -1637,6 +1637,7 @@
     <string name="RottenRation_Info">从前，这也是一份能吃的口粮</string>
     <string name="RottenRation_Name">腐烂口粮</string>
     <string name="RottingFist_Desc">古神的腐烂之拳</string>
+    <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">腐烂之拳</string>
     <string name="RottingFist_Name_Objective">腐烂之拳</string>
     <string name="RoyalShield_desc">全金属制盾牌。因此，它很重，但只有它能给你最好的保护。</string>
@@ -2746,6 +2747,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

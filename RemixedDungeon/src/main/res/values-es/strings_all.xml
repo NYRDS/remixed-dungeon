@@ -858,6 +858,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="HeroClass_NecromancerPerks_2">Los nigromantes comienzan con una túnica de nigromante, que otorga 1 punto de maná por cada criatura muerta.</string>
     <string name="HeroClass_NecromancerPerks_3">Los nigromantes comienzan con una llave esqueleto para el nivel 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Las pociones de curación son identificadas desde el comienzo.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Las pociones de Gas Paralizante y Gas Tóxico están pre-identificadas.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Los enemigos matados por el Gas Tóxico explotan en forma de Niebla Tóxica, sanándote 1 punto de vida por cada enemigo afectado.</string>
     <string name="HeroClass_Rog">granuja</string>
     <string name="HeroClass_RogPerks_0">Los granujas empiezan con un Anillo de las Sombras +1.</string>
@@ -2751,6 +2752,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -316,6 +316,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Capotain_Info">Topi bermahkota tinggi, bertepi sempit. Biasanya diasosiasikan dengan puritan, tetapi Anda tidak harus religius untuk memakainya.  Untuk beberapa alasan ia memiliki label, yang mengatakan \&quot;Salomo\&quot; di atasnya.</string>
     <string name="Capotain_Name">Kapten</string>
     <string name="Carcass_Devoured">Anda telah melahap bangkai dari %s!</string>
+    <string name="Carcass_DissectResult">Dari %s kamu memperoleh %d %s.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang butuh rak buku di gua?</string>
     <string name="Caves_TileDescDeco">Kilauan dari beberapa logam terlihat pada tembok. Emas?</string>
     <string name="Caves_TileDescEntrance">Tangga yang membawa ke tempat yang lebih tinggi.</string>
@@ -628,6 +629,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ElfArmor_NotElf">Hanya elf yang dapat menggunakan zirah ini!</string>
     <string name="ElvenBow_Info">Contoh keahlian elf yang luar biasa. Ini jelas lebih efektif dan akurat daripada busur kayu biasa.</string>
     <string name="ElvenBow_Name">busur elf</string>
+    <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Senjata ini dibuat dari campuran logam spesial, yang membuatnya lebih ringan dibandingkan pisau biasa.</string>
     <string name="ElvenDagger_Name">pisau elf</string>
     <string name="EncumbranceBuff_CharAct_2">Benda %s ini terlalu berat bagi saya untuk digunakan secara efektif.</string>
@@ -2720,6 +2722,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
