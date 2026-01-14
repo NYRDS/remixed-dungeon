@@ -523,6 +523,7 @@
     <string name="Combo_Combo">%d ヒットコンボ！</string>
     <string name="CommonArrow_Info">鉄の矢じりが付いた一般的な木製の矢。</string>
     <string name="CommonArrow_Name">矢</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">この強化クロスボウは、木製のものと比べてより効率的な道具であることが証明された。</string>
     <string name="CompositeCrossbow_Name">複合クロスボウ</string>
     <string name="CompoundBow_Info">この弓から放たれる矢は大きなダメージを与え、木製の弓よりも命中精度が向上するが、その代償として速度が落ちる。</string>
@@ -2860,6 +2861,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

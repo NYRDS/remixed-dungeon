@@ -87,6 +87,7 @@
     <string name="Badges_AllRings">Tutti gli anelli identificati\&quot;</string>
     <string name="Badges_AllScrolls">Tutti gli incantesimi identificati</string>
     <string name="Badges_AllWands">Tutte le bacchette identificate\&quot;</string>
+    <string name="Badges_BossSlain3">DM-300 è stato ucciso</string>
     <string name="Badges_Champion">Sfida vinta</string>
     <string name="Badges_DeathFalling">Morte a causa di una caduta</string>
     <string name="Badges_DeathFire">Morto bruciato</string>
@@ -2172,6 +2173,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

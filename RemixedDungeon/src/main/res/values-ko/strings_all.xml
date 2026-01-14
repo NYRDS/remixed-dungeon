@@ -1198,6 +1198,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
 </string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">아하… 훌륭하다! _달팽이_의 그 비밀이 달빛 아래에서 꽃잎처럼 서서히 펼쳐지는구나. 정말 방대한 정보로구나! 하지만 말이 맞네, _50 골드_라니 그다지 어울리는 보상은 아니지. *광적으로 웃음을 터뜨린다*.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">욱수! _해초_의 황금빛 정수가 생명력으로 요동친다. 나는 이미 그 섬세한 구조에서 많은 것을 배웠다. *그가 당신에게 _생명의 물약_을 건네주며, 액체는 희미한 황금빛으로 반짝인다.* 이걸 마셨을 때 세상이 무겁게 느껴지면 태양의 따뜻함이 당신의 영혼을 회복시켜 줄 것이다.</string>
+    <string name="PlagueDoctorQuest_5_1_Prologue">*그는 더듬거리며 목소리는 부러진 나뭇가지처럼 갈라졌다*. 아-아, 서큐버스! 둘…… 네, 둘이 살아 있어요! 그것은…… 어흠…… 제 연구를 위한 것이에요! 보세요…… 그들의 페로몬은…… 이해하는 데 중요한…… 미묘한 균형 말이죠…… 어…… *그는 말을 흐리며, 마스크를 긴장하게 고치려 손을 뻗으며, 열띤 강광으로 당신을 바라보았다.* 그들의…… 정수는…… 수수께끼…… 아름답고 신비로운 수수께끼에요! *그는 격하게 기침하며 자세를 바로 하려고 애썼다.* 제가 약속할게요. 이…… 존재들 중 두 마리를 저에게 데려다 주신다면, 제가 영원히 감사를 드릴 것입니다. 이것을…… 지식에 대한 은혜로 생각하세요! 네! 지식을 위해 말이죠!</string>
     <string name="PlagueDoctor_Desc">이 곱추 남성은 가죽으로 둘러쌓여 있고, 강한 약냄새가..아니, 마늘 냄새도 나는 것 같다?</string>
 
     <string name="PlagueDoctor_Name">역병 의사</string>
@@ -2351,6 +2352,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
