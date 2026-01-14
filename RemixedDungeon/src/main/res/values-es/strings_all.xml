@@ -1890,6 +1890,7 @@ otro lugar del nivel.</string>
     <string name="SpiderMind_Name">Psico-araña</string>
     <string name="SpiderMind_Name_Objective">Psico-Araña</string>
     <string name="SpiderNest_Desc">Este capullo está formado por una fina seda, y hay algo vivo en su interior.</string>
+    <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderNest_Name">capullo de araña</string>
     <string name="SpiderNest_Name_Objective">capullo de araña</string>
     <string name="SpiderQueenCarapace_Info">Un pedazo del caparazón de la Reina Araña. Puedes ver una glándula de telaraña dentro de él. Casi parece estar vivo.</string>
@@ -2752,6 +2753,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

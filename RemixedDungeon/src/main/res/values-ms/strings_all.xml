@@ -1371,6 +1371,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="RawFish_Name">ikan mentah</string>
     <string name="RawFish_Taste">Berbau ikan!</string>
     <string name="RegenerationBuff_Info">Fungsi untuk regenerasi semula secara semula jadi adalah dalam bentuk peningkatan untuk memudahkan segala-galanya.</string>
+    <string name="RegenerationBuff_Name">Regenerasi Semula Jadi</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Permainan kami mengalami kerosakan...\n Mohon Maaf.\nSila hantar laporan kerosakan supaya kami dapat membaikinya.</string>
     <string name="ResultDescriptions_Bleeding">Berdarah hingga mati pada aras %d</string>
     <string name="ResultDescriptions_Boss">Dibunuh oleh %1$s pada aras %2$d</string>
@@ -1674,6 +1675,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpiderMindAmber_Name">lelabah ambar</string>
     <string name="SpiderMindAmber_Name_Objective">lelabah ambar</string>
     <string name="SpiderMind_Desc">Lelabah yang nampak lemah ini memiliki kuasa minda yang unik, membolehkan mereka kawal keseluruhan koloni. Psi-Lelabah berupaya mengawal apa jua makhluk hidup, tetapi mereka penakut.</string>
+    <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Psi-Lelabah</string>
     <string name="SpiderMind_Name_Objective">Psi-Lelabah</string>
     <string name="SpiderNest_Desc">Kokun ini diselaputi dengan sutera paling nipis dan menampakkan ada sesuatu yang hidup di dalamnya.</string>
@@ -2433,6 +2435,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
