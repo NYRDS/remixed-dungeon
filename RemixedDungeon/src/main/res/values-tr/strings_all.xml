@@ -186,6 +186,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Bandit_Name">Çılgın Haydut</string>
     <string name="Bandit_Name_Objective">çılgın haydut</string>
     <string name="BardNPC_Desc">Kasabalı ozan udunu çalıyor.</string>
+    <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">ozan</string>
     <string name="BardNPC_Name_Objective">ozan</string>
     <string name="BardSong_1">Karım ve ben, kendimize ait\ndediğimiz küçük bir kulübede tek\nbaşımıza yaşıyoruz. O cin severdi,\n ben de rom severdim.</string>
@@ -2800,6 +2801,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
