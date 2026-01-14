@@ -717,6 +717,7 @@
     <string name="FilteredMask_Info">呼吸器は、煙、蒸気、ガス、粉塵や浮遊微生物などの粒子状物質を含む危険な雰囲気の吸入から着用者を保護するために設計された装置である。
 しかし、このマスクは装飾的な役割しか果たしていない。</string>
     <string name="FilteredMask_Name">N95マスク</string>
+    <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">この矢は、矢じりから暖かい赤い光が放射されている以外は、普通の矢と同じように見える。</string>
     <string name="FireArrow_Name">炎の矢</string>
     <string name="FireElemental_Desc">放浪する火のエレメンタルは、大いなる存在を召喚する際の副産物である。彼らはその性質があまりに混沌としているため、最も強力な悪魔研究者でさえ制御できない。</string>
@@ -2863,6 +2864,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

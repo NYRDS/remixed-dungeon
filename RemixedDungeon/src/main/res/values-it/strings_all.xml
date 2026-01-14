@@ -625,6 +625,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Guts_TileGrass">arbusto secco</string>
     <string name="Guts_TileHighGrass">arbusto secco</string>
     <string name="Guts_TileWater">Strano liquido viscido</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">Un\'alabarda consiste in un\'ascia all\'estremo di un bastone. </string>
     <string name="Halberd_Name">Alabarda</string>
     <string name="Halls_TileDescBookshelf">Libri in lingue antiche nella libreria.</string>
@@ -1499,6 +1500,7 @@ Potrebbe bruciare?</string>
     <string name="Slow_Name_0">del Freddo %s</string>
     <string name="Slow_Name_1">del Freddo %s</string>
     <string name="Slow_Name_2">del Freddo %s</string>
+    <string name="Snail_Desc">Questo piccolo mollusco è cresciuto abbastanza mangiando fogna, ma è ancora molto lento, il che lo rende un avversario facile da affrontare.</string>
     <string name="SociologistNPC_AlreadyTaken">Hai già partecipato al sondaggio, per favore torna più tardi</string>
     <string name="SociologistNPC_Desc">Questo sociologo è nella sua sacra impresa di raccogliere le opinioni del pubblico</string>
     <string name="SociologistNPC_DownloadError">Scusa, qualcosa è andato storto, riprova di nuovo</string>
@@ -2177,6 +2179,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

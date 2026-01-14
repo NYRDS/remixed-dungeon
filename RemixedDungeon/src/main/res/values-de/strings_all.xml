@@ -1315,6 +1315,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
 </string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, Sie sind zurückgekehrt! _Fünf tote Ratten_, perfekt! Ihre Felle werden für meine Forschung entscheidend sein. Und wie versprochen, für Ihren tapferen Einsatz habe ich Ihnen aus ihren eigenen Fellen diese Rüstung gefertigt. Sie ist mit einem Hauch der Pest versehen, aber keine Sorge! Sie ist kontrolliert, sie schützt! Jetzt gehen Sie! Beschützen Sie die Stadt!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… magnificent! Die _Schnecken_, ihre Geheimnisse entfalten sich langsam wie Blüten im Mondlicht. In der Tat eine Fülle an Informationen! Aber Sie haben Recht, _fünfzig Gold_ ist kaum eine angemessene Belohnung. *Manisch kichernd*.</string>
+    <string name="PlagueDoctorQuest_3_1_Epilogue">*Er hält die _Fledermaus_ sanft in seinen behandschuhten Händen und untersucht ihre winzige Gestalt mit beunruhigender Faszination*  Herrlich! Die Echoortung der _Fledermaus_… sie ist wie nichts, was ich bisher kennengelernt habe. Solche Präzision… solche… Kontrolle. *Er wendet sich Ihnen zu, sein Gesicht von seiner Maske verdeckt* Als Dank für Ihre Bemühungen, eine _Schriftrolle des Aufwertens_. Nutzen Sie sie weise, denn sie birgt das Potenzial, um… Ihr ganzes Wesen zu veredeln. *Er überreicht Ihnen die Schriftrolle, seine Stimme zu einem gedämpften Flüstern senkend* Diese _Fledermaus_, sie ist… ein Fenster in eine verborgene Welt. Eine Welt…, wo Schatten tanzen und Geheimnisse flüstern.</string>
     <string name="PlagueDoctor_Desc">Dieser bucklige Mann ist komplett mit Leder bezogen. Er riecht stark nach Medikamenten und ... Knoblauch?</string>
 
     <string name="PlagueDoctor_Name">Virendoktor</string>
@@ -1762,6 +1763,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SmashSpell_Info">Springe aufwärts und erzeuge einen kraftvollen Schlag nachdem der Boden getroffen ist, was temporär Gegner in der Nähe betäubt und ihnen physischen Schaden zufügt.</string>
     <string name="SmashSpell_Name">Zerschmettern</string>
     <string name="SmashSpell_NeedWeapon">Ich brauche eine Waffe für diese Aktion.</string>
+    <string name="Snail_Desc">Dieser kleine Weichtier ist durch die Ernährung mit Abwässern ziemlich groß geworden, aber er ist immer noch sehr langsam, was ihn zu einem leichten Gegner macht.</string>
     <string name="SnipersMarkBuff_Info">Die Markierung wurde von einem Scharfschützen gemacht.</string>
     <string name="SnipersMarkBuff_Name">Scharfschützenzeichen</string>
     <string name="SociologistNPC_AlreadyTaken">Du hast diese Umfrage bereits gemacht, bitte komm später wieder</string>
@@ -2631,6 +2633,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

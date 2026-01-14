@@ -799,6 +799,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="HeroSubClass_NameBers">berzerker</string>
     <string name="HeroSubClass_NameFreR">szabadfutó</string>
     <string name="HeroSubClass_NameGlad">gladiátor</string>
+    <string name="HeroSubClass_NameGuardian">őrző</string>
     <string name="HeroSubClass_NameLich">holttest</string>
     <string name="HeroSubClass_NameScout">felderítő</string>
     <string name="HeroSubClass_NameShaman">sámán</string>
@@ -2455,6 +2456,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

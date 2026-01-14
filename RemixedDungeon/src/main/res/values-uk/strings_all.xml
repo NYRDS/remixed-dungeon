@@ -1786,6 +1786,7 @@
     <string name="SmashSpell_Info">Підстрибує, і з силою врізається у землю, приголомшуючи противників навколо, та наносячи фізичну шкоду.</string>
     <string name="SmashSpell_Name">Приголомшливий удар</string>
     <string name="SmashSpell_NeedWeapon">Мені необхідна зброя для цього прийому.</string>
+    <string name="Snail_Desc">Цей малий молюск значно виросла, харчуючись стічними водами, але вона все ще дуже повільна, що робить її легкою здобиччю.</string>
     <string name="Snail_Gender">masculine</string>
     <string name="SociologistNPC_AlreadyTaken">Ти вже брав участь у опитуванні, приходь пізніше</string>
     <string name="SociologistNPC_Desc">Цей соціолог має священну мету, збір суспільної думки</string>
@@ -2603,6 +2604,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
