@@ -309,6 +309,7 @@
     <string name="Candy_Warning_2">Realmente eram muitos. Sua barriga dói por você ter comido muitos doces.</string>
     <string name="Capotain_Info">Um chapéu alto de aba pequena. Geralmente é usado por puritanos, mas você não precisa ser religioso para usa-lo. Por algum motivo, possui uma placa de identificação, que diz \&quot;Salomão\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
+    <string name="Carcass_DissectResult">Do %s você obtém %d colheita %s.</string>
     <string name="Caves_TileDescBookshelf">Quem precisa de uma estante de livros em uma caverna?</string>
     <string name="Caves_TileDescDeco">Um veio de algum minério está visível na parede. Será Ouro?</string>
     <string name="Caves_TileDescEntrance">A escada te levará ao piso superior.</string>
@@ -2720,6 +2721,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

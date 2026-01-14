@@ -2453,6 +2453,7 @@ remix.32\n
     <string name="WndChooseWay_Cancel">Θα αποφασίσω αργότερα</string>
     <string name="WndChooseWay_Message">Ποια πορεία θα ακολουθήσεις;</string>
     <string name="WndClass_Mastery">Εξειδίκευση</string>
+    <string name="WndCryptoDonate_warningText">ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Επαληθεύετε πάντα τη διεύθυνση πριν στείλετε χρήματα. Οι συναλλαγές κρυπτονομισμάτων είναι μη αναστρέψιμες!</string>
     <string name="WndCustomizations_Title">Προσαρμογές</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - Δωρεάν σε όλους και έτσι θα είναι πάντα.\n\nΠαρόλα αυτά, μπορείς να μας βοηθήσεις να το κάνουμε ακόμα καλύτερο.\n\nΜαζί με τις εγκάρδιες ευχαριστίες μας, θα λάβεις και κάποια αισθητικά πρόσθετα.</string>
     <string name="WndDonate_donate">δωρεά:</string>
@@ -2999,5 +3000,6 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 </resources>
