@@ -769,6 +769,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="HeroClass_NecromancerPerks_2">A Halottidézők egy egyedi Halottidéző köpennyel kezdenek, ami 1 manát ad minden legyőzött lény után.</string>
     <string name="HeroClass_NecromancerPerks_3">A Halottidézők egy 7-es szintű csont kulccsal kezdenek.</string>
     <string name="HeroClass_NecromancerPerks_4">A Gyógyító italokat az elejétől kezdve felismered.</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">A pestis doktorok mérgező mirigyeket, rothadt szerveket, csontszilánkokat és gonosz esszenciát gyűjtenek a legyőzött ellenségektől. A vért idővel gyűjtik össze, és alkímiához használják fel.</string>
     <string name="HeroClass_Rog">tolvaj</string>
     <string name="HeroClass_RogPerks_0">A Zsiványok az Árnyék Gyűrűjével +1 kezdenek. </string>
     <string name="HeroClass_RogPerks_1">A Zsiványok felvétel után azonnal azonosítani tudják a gyűrűket.</string>
@@ -1867,6 +1868,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="VampireSkull_Name">Vámpír koponya</string>
     <string name="VertigoBuff_Name">Szédülés</string>
     <string name="View_Distance">Látótávolság</string>
+    <string name="VileEssence_Info">Egy összetömörített romlottság esszenciája, amit egy legyőzött ellenségből nyertek. Ez a sötét anyag rosszindulatú energiával pulzál, és nagy áron becsülik az alkímiai folyamatokban.</string>
     <string name="Viscosity_Status">%d sebzést késleltetett</string>
     <string name="Viscosity_Txt">Nyúlós %s</string>
     <string name="WandHolster_Info">Ez a vékony kis tartó valami egzotikus állat bőréből készült. Lehetővé teszi hogy kompakt módon tárolj maximum %d pálcát.</string>
@@ -2453,6 +2455,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
