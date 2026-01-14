@@ -1885,6 +1885,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="Swing_Name_0">Wilder %s</string>
     <string name="Swing_Name_1">Wilder %s</string>
     <string name="Swing_Name_2">Wilder %s</string>
+    <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">Diese rasiermesserscharfe Stahlklinge glänzt auf beruhigende Weise.</string>
     <string name="Sword_Name">Schwert</string>
     <string name="Tamahawk_Info">Diese Wurfaxt ist nicht besonders schwer, aber benötigt dennoch relativ viel Kraft um effizient eingesetzt werden zu können.</string>
@@ -2630,6 +2631,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

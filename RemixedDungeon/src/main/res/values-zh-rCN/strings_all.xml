@@ -778,6 +778,7 @@
     <string name="Golem_Name">魔像</string>
     <string name="Golem_Name_Objective">魔像</string>
     <string name="Goo_Desc">人们对粘咕知之甚少。它很有可能甚至不是一个生物，而是获得了自由意志的下水道物质聚合物。至少很明显黑魔法在它身上起了作用。</string>
+    <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">粘咕正在不断地抽动！</string>
     <string name="Goo_Info2">咕……咕……</string>
     <string name="Goo_Info3">咕-咕！</string>
@@ -2747,6 +2748,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
