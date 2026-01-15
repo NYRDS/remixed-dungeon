@@ -637,6 +637,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="ElvenBow_Name"> arco élfico</string>
     <string name="ElvenDagger_Info">Esta arma é feita de liga de metálica especial, tornando-a muito mais leve em comparação a uma adaga comum.</string>
     <string name="ElvenDagger_Name">adaga élfica </string>
+    <string name="EncumbranceBuff_CharAct_3">Preciso trabalhar na minha força antes de poder usar %s.</string>
     <string name="EncumbranceBuff_Info">Não há força suficiente para usar %s de forma eficaz.</string>
     <string name="EncumbranceBuff_Name">Fardo</string>
     <string name="EnslavedSoul_Desc">Você quase pode ver através desta aparição fantasmagórica. Mesmo que pareça um crânio, às vezes, por uma fração de segundo, pode-se ver que um rosto aparece, um rosto cheio de sofrimento e dor.</string>
@@ -2723,6 +2724,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
