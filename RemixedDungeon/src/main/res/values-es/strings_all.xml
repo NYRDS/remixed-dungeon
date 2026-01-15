@@ -664,6 +664,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Exhumation_NoGrave">No hay una tumba aquí para exhumar.</string>
     <string name="Exhumation_Ok">Te obedeceré.</string>
     <string name="ExplodingSkull_Desc">Este cráneo flotante y llameante parece extremadamente frágil, como si fuera a estallar en cualquier momento.</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">craneo explosivo</string>
     <string name="ExplodingSkull_Name_Objective">craneo explosivo</string>
     <string name="Eye_Desc">Otro de los nombres de estos demonios es \&quot;orbe del odio\&quot;, porque al ver a un enemigo usa su mirada de la muerte de forma imprudente, a veces ignorando e hiriendo a sus aliados.</string>
@@ -1384,6 +1385,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PlagueDoctorQuest_3_2_Prologue">¡Un _Caballero de la Muerte_! *Su voz se quiebra de emoción, sus huesudos dedos tiemblan mientras aferra un frasco burbujeante lleno de un líquido turbio y fosforescente*. ¡Tal criatura… un faro de no-muerte! ¡Capturar uno, vivo… sería… monumental! ¡Imagina los secretos que podríamos descubrir! ¡El poder que fluye a través de sus venas esqueléticas! ¡Sí, un _Caballero de la Muerte_! Es crucial para mi investigación. ¡Pues me permitirá adentrarme más profundamente… en los misterios de la vida… y de la muerte misma!</string>
     <string name="PlagueDoctor_Desc">Este hombre jorobado está vestido completamente con cuero. Huele fuertemente a medicamentos y ... ¿ajo?</string>
 
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">doctor de la plaga</string>
     <string name="PlagueDoctor_Name_Objective">doctor de la plaga</string>
     <string name="Plant_ACPlant">PLANTAR</string>
@@ -2755,6 +2757,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
