@@ -7,7 +7,7 @@ Características del juego:
 - ¡Este juego soporta mods creados por el usuario! Y a medida que desarrollemos más esta característica, ¡pronto podrás crear un juego completamente nuevo dentro de Remixed Dungeon!
 - ¡Experiencia hardcore roguelike!
 - 7 clases de héroe para elegir
-- Town hub te prepara para tu viaje y te presenta el mundo del juego.
+El Pueblo te preparará para tu viaje y te presentará el mundo del juego.
 - Más de 30 niveles de mazmorra de mazmorra principal divididos en 6 tipos de mazmorra
 - 3 mazmorras opcionales: Spider Lair, Necropolis, Ice Caves
 - Decenas de artículos y monstruos.
