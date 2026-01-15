@@ -3,10 +3,7 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.util.GuiProperties;
-import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Image;
-import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -16,7 +13,6 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.IClickable;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import lombok.Getter;
@@ -29,19 +25,13 @@ public class RecipeListItem extends Component implements IClickable {
     private static final int SLOT_SIZE = 24;
     private static final int TITLE_COLOR = 0xFFFF44;
     private static final int SELECTED_COLOR = 0xFFCC00; // Yellow tint for selection
-    private static final int UNSELECTED_COLOR = 0x00000000; // Transparent
 
     @Getter
     private final List<String> inputs;
     @Getter
     private final String output; // First output for backward compatibility
-    private final List<String> outputs; // All outputs
 
-    private final HBox rowBox = new HBox(100); // Will be resized later
-    private final HBox ingredientsBox;
-    private final Component outputComponent; // Container for output display
-    private final HBox outputBox;
-    private final Text arrow;
+    private final HBox rowBox;
     private final List<Item> inputItems; // Store actual item instances to check against hero inventory
     private final List<GrayableItemSprite> ingredientSlots; // Store references to item slots
     private Runnable clickListener;
@@ -49,75 +39,53 @@ public class RecipeListItem extends Component implements IClickable {
     @Getter
     private boolean isSelected = false;
 
-    public RecipeListItem(List<String> inputs, String output) {
-        this(inputs, Arrays.asList(output));
-    }
 
     public RecipeListItem(List<String> inputs, List<String> outputs) {
         super();
 
         this.inputs = inputs;
-        this.outputs = outputs != null ? new ArrayList<>(outputs) : new ArrayList<>();
-        this.output = this.outputs.isEmpty() ? "" : this.outputs.get(0); // Use first output for display
+        // All outputs
+        List<String> outputs1 = outputs != null ? new ArrayList<>(outputs) : new ArrayList<>();
+        this.output = outputs1.isEmpty() ? "" : outputs1.get(0); // Use first output for display
 
         // Initialize the input items and ingredient slots lists
         inputItems = new ArrayList<>();
         ingredientSlots = new ArrayList<>();
 
+        rowBox = new HBox(150); // Will be resized later
         // Create HBox for ingredients
-        ingredientsBox = new HBox(100); // Will be resized later
+        HBox ingredientsBox = new HBox(100); // Will be resized later
         ingredientsBox.setGap(-10);
 
         // Add input ingredients to the ingredients box as ItemSlots
         for (String input : inputs) {
-            Item ingredient = null;
-            try {
-                ingredient = ItemFactory.itemByName(input);
-            } catch (Exception e) {
-                // If item creation fails, ingredient remains null
-            }
+            Item ingredient = ItemFactory.itemByName(input);
+            // Store the ingredient for later inventory checking
+            inputItems.add(ingredient);
 
-            if (ingredient != null) {
-                // Store the ingredient for later inventory checking
-                inputItems.add(ingredient);
+            // Create a GrayableItemSprite with the ingredient
+            GrayableItemSprite inputSprite = new GrayableItemSprite(ingredient);
+            inputSprite.setSize(SLOT_SIZE, SLOT_SIZE);
 
-                // Create a GrayableItemSprite with the ingredient
-                GrayableItemSprite inputSprite = new GrayableItemSprite(ingredient);
-                inputSprite.setSize(SLOT_SIZE, SLOT_SIZE);
+            // Initially set the item sprite to not grayed out
+            // The actual state will be updated when the recipe list is refreshed
+            inputSprite.setGrayedOut(false);
 
-                // Initially set the item sprite to not grayed out
-                // The actual state will be updated when the recipe list is refreshed
-                inputSprite.setGrayedOut(false);
+            // Check if the hero has this ingredient in inventory
+            boolean hasIngredient = checkHeroHasItem(ingredient);
 
-                // Check if the hero has this ingredient in inventory
-                boolean hasIngredient = checkHeroHasItem(ingredient);
+            // Gray out the item sprite if the ingredient is missing
+            inputSprite.setGrayedOut(!hasIngredient);
 
-                // Gray out the item sprite if the ingredient is missing
-                inputSprite.setGrayedOut(!hasIngredient);
-
-                ingredientsBox.add(inputSprite);
-                ingredientSlots.add(inputSprite); // Add to our list of sprites
-            } else {
-                // Create an empty GrayableItemSprite as placeholder
-                GrayableItemSprite inputSprite = new GrayableItemSprite();
-                inputSprite.setSize(SLOT_SIZE, SLOT_SIZE);
-                ingredientsBox.add(inputSprite);
-
-                // Add to our list of sprites (will be grayed out by default)
-                ingredientSlots.add(inputSprite);
-
-                // Add null to maintain index alignment
-                inputItems.add(null);
-            }
+            ingredientsBox.add(inputSprite);
+            ingredientSlots.add(inputSprite); // Add to our list of sprites
         }
-
-        // Create arrow symbol
-        arrow = PixelScene.createText("→", GuiProperties.regularFontSize()); // Using unicode arrow
-        arrow.hardlight(TITLE_COLOR);
 
         // Determine output type and create appropriate output component
         AlchemyRecipes.OutputType outputType = determineOutputType(output);
 
+        // Container for output display
+        Component outputComponent;
         if (outputType == AlchemyRecipes.OutputType.ITEM) {
             // Create output slot for item
             Item outputItem = null;
@@ -127,15 +95,8 @@ public class RecipeListItem extends Component implements IClickable {
                 // If item creation fails, outputItem remains null
             }
 
-            final ItemSpriteWrapper outputSpriteTemp;
-            if (outputItem != null) {
-                outputSpriteTemp = new ItemSpriteWrapper(outputItem);
+            final ItemSpriteWrapper outputSpriteTemp = new ItemSpriteWrapper(outputItem);
                 outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
-            } else {
-                // Create an empty ItemSpriteWrapper as placeholder
-                outputSpriteTemp = new ItemSpriteWrapper();
-                outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
-            }
             // Wrap the ItemSpriteWrapper in a Component-compatible wrapper
             Component wrappedItemComponent = new com.watabou.noosa.ui.Component() {
                 {
@@ -150,20 +111,14 @@ public class RecipeListItem extends Component implements IClickable {
                 }
             };
             wrappedItemComponent.setSize(SLOT_SIZE, SLOT_SIZE);
-            outputComponent = wrappedItemComponent;
         } else if (outputType == AlchemyRecipes.OutputType.MOB) {
             // Create output slot for mob
             Image outputSpriteTemp;
-            try {
+
                 Mob mob = MobFactory.mobByName(output);
                 CharSprite sprite = mob.newSprite();
                 outputSpriteTemp = sprite.avatar();
                 outputSpriteTemp.scale.set(SLOT_SIZE / outputSpriteTemp.width(), SLOT_SIZE / outputSpriteTemp.height());
-            } catch (Exception e) {
-                // If mob creation fails, create an empty Image as placeholder
-                outputSpriteTemp = new Image();
-                outputSpriteTemp.scale.set(SLOT_SIZE / outputSpriteTemp.width(), SLOT_SIZE / outputSpriteTemp.height());
-            }
 
             final Image finalOutputSpriteTemp = outputSpriteTemp;
             // Wrap the Image in a Component-compatible wrapper
@@ -181,29 +136,11 @@ public class RecipeListItem extends Component implements IClickable {
             };
             wrappedComponent.setSize(SLOT_SIZE, SLOT_SIZE);
             outputComponent = wrappedComponent;
-        } else {
-            // Default to item if type is unknown
-            final ItemSpriteWrapper defaultSprite = new ItemSpriteWrapper();
-            defaultSprite.setSize(SLOT_SIZE, SLOT_SIZE);
-            // Wrap the default ItemSpriteWrapper in a Component-compatible wrapper
-            Component wrappedDefaultComponent = new Component() {
-                {
-                    add(defaultSprite);
-                }
 
-                @Override
-                public void layout() {
-                    super.layout();
-                    defaultSprite.x = this.x;
-                    defaultSprite.y = this.y;
-                }
-            };
-            wrappedDefaultComponent.setSize(SLOT_SIZE, SLOT_SIZE);
-            outputComponent = wrappedDefaultComponent;
         }
 
         // Create HBox for output
-        outputBox = new HBox(100); // Will be resized later
+        HBox outputBox = new HBox(100); // Will be resized later
         outputBox.setGap(2);
 
         // Add all output components to the output box
@@ -219,15 +156,8 @@ public class RecipeListItem extends Component implements IClickable {
                     // If item creation fails, outputItem remains null
                 }
 
-                final ItemSpriteWrapper outputSpriteTemp;
-                if (outputItem != null) {
-                    outputSpriteTemp = new ItemSpriteWrapper(outputItem);
-                    outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
-                } else {
-                    // Create an empty ItemSpriteWrapper as placeholder
-                    outputSpriteTemp = new ItemSpriteWrapper();
-                    outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
-                }
+                final ItemSpriteWrapper outputSpriteTemp = new ItemSpriteWrapper(outputItem);
+                outputSpriteTemp.setSize(SLOT_SIZE, SLOT_SIZE);
 
                 // Wrap the ItemSpriteWrapper in a Component-compatible wrapper
                 Component wrappedItemComponent = new Component() {
@@ -248,21 +178,12 @@ public class RecipeListItem extends Component implements IClickable {
             } else if (singleOutputType == AlchemyRecipes.OutputType.MOB) {
                 // Create output slot for mob
                 Image outputSpriteTemp;
-                try {
-                    Mob mob = MobFactory.mobByName(singleOutput);
-                    if (mob != null) {
-                        CharSprite sprite = mob.newSprite();
-                        outputSpriteTemp = sprite.avatar();
-                        outputSpriteTemp.scale.set(SLOT_SIZE / outputSpriteTemp.width(), SLOT_SIZE / outputSpriteTemp.height());
-                    } else {
-                        outputSpriteTemp = new Image();
-                        outputSpriteTemp.scale.set(SLOT_SIZE / outputSpriteTemp.width(), SLOT_SIZE / outputSpriteTemp.height());
-                    }
-                } catch (Exception e) {
-                    // If mob creation fails, create an empty Image as placeholder
-                    outputSpriteTemp = new Image();
-                    outputSpriteTemp.scale.set(SLOT_SIZE / outputSpriteTemp.width(), SLOT_SIZE / outputSpriteTemp.height());
-                }
+
+                Mob mob = MobFactory.mobByName(singleOutput);
+
+                CharSprite sprite = mob.newSprite();
+                outputSpriteTemp = sprite.avatar();
+                outputSpriteTemp.scale.set(SLOT_SIZE / outputSpriteTemp.width(), SLOT_SIZE / outputSpriteTemp.height());
 
                 final Image finalOutputSpriteTemp = outputSpriteTemp;
                 // Wrap the Image in a Component-compatible wrapper
@@ -281,40 +202,17 @@ public class RecipeListItem extends Component implements IClickable {
                 wrappedComponent.setSize(SLOT_SIZE, SLOT_SIZE);
 
                 outputBox.add(wrappedComponent);
-            } else {
-                // Default to item if type is unknown
-                final ItemSpriteWrapper defaultSprite = new ItemSpriteWrapper();
-                defaultSprite.setSize(SLOT_SIZE, SLOT_SIZE);
-                // Wrap the default ItemSpriteWrapper in a Component-compatible wrapper
-                Component wrappedDefaultComponent = new Component() {
-                    {
-                        add(defaultSprite);
-                    }
-
-                    @Override
-                    public void layout() {
-                        super.layout();
-                        defaultSprite.x = this.x;
-                        defaultSprite.y = this.y;
-                    }
-                };
-                wrappedDefaultComponent.setSize(SLOT_SIZE, SLOT_SIZE);
-
-                outputBox.add(wrappedDefaultComponent);
             }
         }
 
-        // Create background color block for selection highlighting
-        ColorBlock background = new ColorBlock(width, height, UNSELECTED_COLOR);
-
-        // Add components to this list item in the correct order (background first)
-        //add(background);
         rowBox.add(ingredientsBox);
-        rowBox.add(arrow);
+//        rowBox.add(arrow);
         rowBox.add(outputBox);
+        rowBox.setSize(width, height);
+        rowBox.setAlign(HBox.Align.Width);
         add(rowBox);
         rowBox.layout();
-        rowBox.setPos(x,y);
+        rowBox.setPos(x, y);
 
         setSize(rowBox.width(), rowBox.height());
 
@@ -350,89 +248,9 @@ public class RecipeListItem extends Component implements IClickable {
     @Override
     public void layout() {
         super.layout();
+        rowBox.setMaxWidth(width);
 
-/*
-        // Layout ingredients tightly together
-        float totalIngredientsWidth = 0;
-        for (int i = 0; i < ingredientsBox.getLength(); i++) {
-            GrayableItemSprite sprite = (GrayableItemSprite) ingredientsBox.getMember(i);
-            sprite.setPos(x + totalIngredientsWidth, y + (height - sprite.height()) / 2);
-            totalIngredientsWidth += sprite.width() - 10; // 2 pixels spacing between items
-        }
-
-        // Position the arrow after the ingredients
-        arrow.setX(totalIngredientsWidth + 5); // 5 pixels space after ingredients
-        arrow.setY(PixelScene.align(y + (height - arrow.baseLine()) / 2));
-
-        // Calculate total width of all outputs
-        float totalOutputWidth = 0;
-        for (int i = 0; i < outputBox.getLength(); i++) {
-            Component outputComponent = (Component) outputBox.getMember(i);
-            totalOutputWidth += outputComponent.width(); // 2 pixels spacing between outputs
-        }
-
-        // Calculate available space for outputs
-        float availableSpace = width - (totalIngredientsWidth + arrow.width() + 10);
-
-        float outputBoxX;
-        // Position the outputBox so that it's right-aligned with the container
-        // but with enough margin to ensure it's fully visible
-        outputBoxX = x + width - totalOutputWidth - 5; // 5 pixels margin from right edge
-
-        // Ensure the outputBox doesn't go beyond the right border of the container
-        float rightmostPosition = x + width - 5; // Account for 5 pixels margin
-        float outputBoxRightEdge = outputBoxX + totalOutputWidth;
-        if (outputBoxRightEdge > rightmostPosition) {
-            outputBoxX = rightmostPosition - totalOutputWidth;
-        }
-
-        // Ensure the outputBox doesn't go before the arrow or ingredients
-        float minOutputX = x + totalIngredientsWidth + arrow.width() + 10;
-        outputBoxX = Math.max(outputBoxX, minOutputX);
-
-        outputBox.setPos(outputBoxX, y + (height - outputBox.height()) / 2);
-
-        // Layout the output box with all outputs from right to left
-        float currentOutputX = 0;
-        for (int i = 0; i < outputBox.getLength(); i++) {
-            Component outputComponent = (Component) outputBox.getMember(i);
-            outputComponent.setPos(currentOutputX, 0); // Position relative to outputBox
-            currentOutputX += outputComponent.width() - 10; // 2 pixels spacing between outputs
-        }
-
-        outputBox.setSize(totalOutputWidth, height);
-
-        // If the outputs still go beyond the available space, we need to implement a fallback
-        float actualAvailableSpace = x + width - outputBoxX - 5; // 5 pixels margin
-        if (totalOutputWidth > actualAvailableSpace && actualAvailableSpace > 0) {
-            // If outputs are too wide to fit, we'll need to reduce spacing between them
-            // Calculate how much space we need to save
-            float excessWidth = totalOutputWidth - actualAvailableSpace;
-            int numOutputs = outputBox.getLength();
-            if (numOutputs > 1) {
-                // Distribute the excess reduction across the spaces between outputs
-                float spacingReduction = excessWidth / (numOutputs - 1);
-
-                // Reset positions with reduced spacing
-                currentOutputX = 0;
-                for (int i = 0; i < outputBox.getLength(); i++) {
-                    com.watabou.noosa.ui.Component outputComponent = (com.watabou.noosa.ui.Component) outputBox.getMember(i);
-                    outputComponent.setPos(currentOutputX, 0); // Position relative to outputBox
-
-                    float componentWidth = outputComponent.width();
-                    // Apply reduced spacing except after the last element
-                    if (i < outputBox.getLength() - 1) {
-                        currentOutputX += componentWidth - spacingReduction;
-                    } else {
-                        currentOutputX += componentWidth; // Last element doesn't need spacing after
-                    }
-                }
-            }
-            // Update the total width after spacing adjustment
-            outputBox.setSize(actualAvailableSpace, height);
-        }
-
- */
+        rowBox.setPos(PixelScene.align(x), PixelScene.align(y));
     }
 
     public void setOnClickListener(Runnable listener) {
@@ -443,12 +261,14 @@ public class RecipeListItem extends Component implements IClickable {
 
     public void setSelected(boolean selected) {
         isSelected = selected;
-
-        arrow.hardlight(selected ? SELECTED_COLOR : TITLE_COLOR);
+        for (var item:ingredientSlots) {
+            item.setGrayedOut(!selected);
+        }
     }
 
     /**
      * Gets the items that are used as ingredients in this recipe
+     *
      * @return List of ingredient items
      */
     public List<Item> getIngredientItems() {

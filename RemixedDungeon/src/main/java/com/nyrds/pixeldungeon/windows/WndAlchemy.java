@@ -60,41 +60,36 @@ public class WndAlchemy extends Window {
         // Recipes container
         VBox recipesContainer = new VBox();
         recipesContainer.setRect(0, 0, windowWidth - 4 * MARGIN, 0);
-        recipesContainer.setGap(2);
+        recipesContainer.setGap(0);
 
         var allRecipes = AlchemyRecipes.getAllRecipes();
-        if (!allRecipes.isEmpty()) {
-            for (var recipeEntry : allRecipes.entrySet()) {
-                // Create a recipe list item
-                RecipeListItem recipeItem = getRecipeListItem(recipeEntry, windowWidth);
 
-                // Add the recipe item to the recipes container
-                recipesContainer.add(recipeItem);
+        for (var recipeEntry : allRecipes.entrySet()) {
+            // Create a recipe list item
+            RecipeListItem recipeItem = getRecipeListItem(recipeEntry, windowWidth);
 
-                // Track this recipe item for selection
-                recipeRows.add(recipeItem);
-            }
-        } else {
-            // If no recipes are available, show a message
-            Text noRecipesText = PixelScene.createText("No recipes available", GuiProperties.regularFontSize());
-            noRecipesText.hardlight(TITLE_COLOR);
-            recipesContainer.add(noRecipesText);
+            // Add the recipe item to the recipes container
+            recipesContainer.add(recipeItem);
+
+            // Track this recipe item for selection
+            recipeRows.add(recipeItem);
         }
 
+
         // Add scroll pane for recipes with almost fullscreen height
-        float scrollHeight = windowHeight - mainLayout.childsHeight() - 60; // Account for title, padding, and buttons
+        float scrollHeight = windowHeight - mainLayout.childsHeight() - 40; // Account for title, padding, and buttons
 
         // Create the scroll pane and override the onClick method to handle recipe selection
 
 
         ScrollPane recipeScrollPane = createScrollPane(recipesContainer, allRecipes);
-        recipeScrollPane.setRect(0, 0, windowWidth - 4 * MARGIN, scrollHeight); // Almost fullscreen height for scrollable area
+        recipeScrollPane.setRect(0, 0, windowWidth, scrollHeight); // Almost fullscreen height for scrollable area
         recipeScrollPane.measure();
         mainLayout.add(recipeScrollPane);
 
         // Execute and Close buttons container
         HBox buttonsContainer = new HBox(windowWidth - 2 * MARGIN);
-        buttonsContainer.setGap(5);
+        buttonsContainer.setAlign(HBox.Align.Width);
 
         // Execute button
         executeButton = new RedButton("Execute Recipe") {
@@ -118,9 +113,9 @@ public class WndAlchemy extends Window {
         buttonsContainer.add(closeButton);
 
         mainLayout.add(buttonsContainer);
-
         // Update the layout
         mainLayout.layout();
+
         resize((int)windowWidth, (int)windowHeight);
     }
 
@@ -128,8 +123,7 @@ public class WndAlchemy extends Window {
         RecipeListItem recipeItem = new RecipeListItem(recipeEntry.getKey(), recipeEntry.getValue());
 
         // Set the size for the recipe item
-        recipeItem.setSize(windowWidth - 4 * MARGIN, 30); // Height can be adjusted as needed
-
+        recipeItem.setSize(windowWidth, recipeItem.height());
         // Click handling is now done in the recipe item itself
         recipeItem.setOnClickListener(() -> {
             // Deselect previous selection
