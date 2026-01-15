@@ -760,6 +760,7 @@
     <string name="Gnoll_BecomeGuardianDesc">成为一名守卫</string>
     <string name="Gnoll_BecomeWitchdoctorDesc">成为一位巫医</string>
     <string name="Gnoll_Desc">豺狼人是像鬣狗一样的人型生物。它们居住在下水道和地牢中，不时向上突袭试图向地表发起进攻。豺狼斥候是它们种群里最普通的一员，它们不像暴徒们那样强壮，也没有萨满们那么聪明。</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">豺狼斥候</string>
     <string name="Gnoll_Name_Objective">豺狼斥候</string>
     <string name="Gold_Collect">收集金币以便在之后的商店里消费</string>
@@ -2749,6 +2750,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
