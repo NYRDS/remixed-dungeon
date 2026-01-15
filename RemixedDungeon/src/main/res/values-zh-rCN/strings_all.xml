@@ -485,6 +485,7 @@
     <string name="Codex_Story_8">迟滞刻纹—英雄将获得伤害延迟debuff，这将使英雄每回合受到1点伤害，而不是一次得到全部伤害。</string>
     <string name="Codex_Story_9">位移刻印纹—每当英雄被击中时，都有几率将英雄传送到一个随机可见的格子上。此刻纹在Boss地层失效。 </string>
     <string name="ColdSpirit_Desc">寒冰精灵是冰霜最纯粹的化身。作为无意识的魔法能量块，他听从创造者的指令或者根据本能来行动。</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">寒冰精灵</string>
     <string name="ColdSpirit_Name_Objective">寒冰精灵</string>
     <string name="ComboBuff_Info">你的下一次攻击将是一次二连击</string>
@@ -2751,6 +2752,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

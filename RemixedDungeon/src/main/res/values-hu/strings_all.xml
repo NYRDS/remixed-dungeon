@@ -794,6 +794,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="HeroSubClass_DescSnip">Az _Orvlövész_ képes észrevenni a gyenge pontokat az ellenfél páncélján, ezáltal könnyen tudja sebzését bevinni lőfegyverrel a páncélt kikerülve.</string>
     <string name="HeroSubClass_DescWarL">Minden megölt ellenség után a _Boszorkánymester_ elnyeli az áldozata lelkét. A lélek begyógyítja a sebeit és enyhíti az éhségét is.</string>
     <string name="HeroSubClass_DescWard">Az _Őrző_ erős kapcsolatban áll a természettel, és képes arra hogy magokat és harmatcseppeket gyűjtsön a növényekből. Magas fűben közlekedve ideiglenes páncélzat módosítót kap.</string>
+    <string name="HeroSubClass_DescWitchdoctor">A varázslás megajándékozza a _Boszorkánymestert_ egy mágikus pajzzsal, ami teljesen megvédi a rárontó sebzésektől.</string>
     <string name="HeroSubClass_NameAssa">gyilkos</string>
     <string name="HeroSubClass_NameBatM">harci mágus</string>
     <string name="HeroSubClass_NameBers">berzerker</string>
@@ -2457,6 +2458,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

@@ -936,6 +936,7 @@ Potrebbe bruciare?</string>
     <string name="LibrarianNPC_Name_Objective">bibliotecaria</string>
     <string name="LibraryBook_Description">Questo tomo è davvero enorme. Racchiude tutta la conoscenza che gli avventurieri hanno scoperto e portato dal dungeon.</string>
     <string name="Lich_Desc">Il negromante incontrò la morte nelle profondità della Necropoli, e come l\'energia maligna di questo posto fluì nel suo corpo, eventualmente, si trasformò in un lich. Il mago non morto, una marionetta senza coscienza, controllata da potrei malevoli.</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Name">Illuminato</string>
@@ -2181,6 +2182,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
