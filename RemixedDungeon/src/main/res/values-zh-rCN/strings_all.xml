@@ -809,6 +809,7 @@
     <string name="Heal_Info">在地牢这是个很有用的咒语，对吧？</string>
     <string name="Heal_Name">治愈</string>
     <string name="HealerNPC_Desc">虚无缥缈的直觉告诉我，眼前的老人懂得如何制作法杖。</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">免费为冒险者治疗！</string>
     <string name="HealerNPC_Message2">当你受伤或饥饿时欢迎回来！</string>
     <string name="HealerNPC_Message3">奇怪，为什么教会不允许我们戴帽子…外面真的很冷。</string>
@@ -2750,6 +2751,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
