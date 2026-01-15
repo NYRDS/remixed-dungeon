@@ -17,6 +17,7 @@
     <string name="AboutScene_Translation_Names">Ukrainian transifex team\n
 (місце для тих, хто зможе це все вичитати та перевірити :) )</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon від NYRDS основана на Pixel Dungeon Source від Watabou.</string>
+    <string name="Accuracy_Decreased">Чому я подумав, що зможу використати %s? Неправильний інструмент, неправильні руки!</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Порожні руки заражають мою техніку. Без чіткого різу Пилки моя ціль перетворюється на хаос.</string>
     <string name="Acidic_Desc">Ці величезні членистоногі намагаються уникати ближнього бою, стріляючи отруйними голками з великої відстані.</string>
     <string name="Acidic_Gender">masculine</string>
@@ -2605,6 +2606,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

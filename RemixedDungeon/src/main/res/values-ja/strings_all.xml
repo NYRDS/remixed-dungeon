@@ -2233,6 +2233,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="WarriorArmor_NotWarrior">この鎧を使えるのはウォリアーだけだ！</string>
     <string name="WarriorArmor_Prompt">跳躍する方向を選んでください。</string>
     <string name="WaterElemental_Desc">水のエレメンタルは大きな水塊の近くに生息している。通常、これらの魔法で結合された波は、ただ彷徨っているだけだ。</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name">水のエレメンタル</string>
     <string name="WaterElemental_Name_Objective">水のエレメンタル</string>
     <string name="WaterOfAwareness_Info">この井戸の水からは知識の力が放たれている。一口飲めば、装備したアイテムの秘密がすべて明らかになるだろう。</string>
@@ -2865,6 +2866,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
