@@ -507,6 +507,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="DM300_Name_Objective">DM-300</string>
     <string name="Dagger_Info">Ein einfacher eisener Dolch mit einem stark abgenutzten Holzgriff.</string>
     <string name="Dagger_Name">Dolch</string>
+    <string name="Damage_Reduction">Schadensreduzierung</string>
     <string name="DarkGold_Info">Dieses Metall wird nicht wegen seiner Farbe dunkel genannt (Es unterscheidet sich nicht von normalem Gold), sondern weil es bei Tageslicht schmilzt, was es unnütz auf der Oberfläche macht.</string>
     <string name="DarkGold_Name">Dunkles Golderz</string>
     <string name="DarkSacrifice_Hint">Wähle deinen loyalen Diener für die Opferung!</string>
@@ -2633,6 +2634,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
