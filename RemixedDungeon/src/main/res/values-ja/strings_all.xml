@@ -1029,6 +1029,7 @@
     <string name="IncendiaryDart_Info">このダーツは、取り付けられた不安定な化合物が鮮やかな炎を上げる間、ターゲットに固定されるように設計されている。</string>
     <string name="IncendiaryDart_Name">焼夷性ダーツ</string>
     <string name="InnKeeperNPC_Desc">宿の主人は誇らしげだ。</string>
+    <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">宿の番人</string>
     <string name="InnKeeperNPC_Name_Objective">宿の番人</string>
     <string name="InnServant_Phrase_1">うう、まだやることがたくさんある！</string>
@@ -2864,6 +2865,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

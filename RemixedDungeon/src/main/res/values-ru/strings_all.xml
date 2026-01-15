@@ -1789,6 +1789,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="RottenMeat_Info">кусок гнилого мяса</string>
     <string name="RottenMeat_Name">гнилое мясо</string>
     <string name="RottenOrgan_Info">Разлагающийся орган, добытый из побеждённого врага. Несмотря на его гнилое состояние, он содержит ценные соединения для алхимических процессов.</string>
+    <string name="RottenOrgan_Name">Гнилой Орган</string>
     <string name="RottenPasty_Info">выглядит мерзко</string>
     <string name="RottenPasty_Name">тухлый пирог</string>
     <string name="RottenPumpkinPie_Info">Как бы хорош ни был этот пирог, будучи свежим, теперь его есть точно не стоит.</string>
@@ -3030,6 +3031,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 
