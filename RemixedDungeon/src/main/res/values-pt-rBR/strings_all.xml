@@ -290,6 +290,7 @@
     <string name="Burning_Burns">%s está queimando!</string>
     <string name="Burning_Death">Você queimou até a morte ...</string>
     <string name="CagedKobold_Desc">Um kobold, em uma jaula.</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">Ei... EI! Você é aquela coisa de aventureiro? me ajuda cara, aqueles militaristas sangrentos me trancaram. Eles pretendem reativar uma arma antiga para conquistar as coisas humanas acima! Eu fiquei contra isso porque é muito perigoso, e eles me jogaram fora do conselho e me acorrentaram nessa jaula. Por favor encontra a chave dessa jaula, em troca eu irei te ajudar no melhor que posso.</string>
     <string name="CagedKobold_Message1">por favor...</string>
     <string name="CagedKobold_Message2">Você tem que me ajudar, camarada</string>
@@ -2721,6 +2722,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

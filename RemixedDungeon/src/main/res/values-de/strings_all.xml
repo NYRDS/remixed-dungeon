@@ -729,6 +729,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="GoldenStatue_Desc">Es ist wirklich schwer zu glauben, dass diese prächtige Statue nicht einfach nur Dekoration, sondern eine tückische Kreatur ist, die auf unwissende Abenteurer wartet. Auf den ersten Blick hättest du schwören können, dass dessen _%s_ ein Teil seines Armes ist.</string>
     <string name="GoldenStatue_Name">goldene Statue</string>
     <string name="GoldenStatue_Name_Objective">goldene Statue</string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="GoldenSword_Info">Normalerweise werden Waffen aus solch einem weichen Metall wie Gold nicht für mehr, außer als Dekoration, bedacht. Jedoch scheint es dieser Klinge möglich zu sein, ziemlich gut durch Dinge zu schneiden.</string>
     <string name="GoldenSword_Name">goldenes Schwert</string>
     <string name="Golem_Defense">abgeblockt</string>
@@ -2635,6 +2636,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

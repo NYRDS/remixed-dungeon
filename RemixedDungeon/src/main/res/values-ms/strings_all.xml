@@ -304,6 +304,7 @@
     <string name="ChaosArmor_Name">Perisai Chaos</string>
     <string name="ChaosBow_Info">Busur hebat yang diperkasa dengan kuasa Chaos. Setiap anak panah yang ditembak akan membawa tenaga chaos ke sasaran. Sebaliknya jika anda tersilap atau tersasar...</string>
     <string name="ChaosBow_Name">busur chaos</string>
+    <string name="ChaosCrystal_ArmorFused">Kristal ini telah bercantum dengan perisai anda, dan ia mengambil bentuk kacau.</string>
     <string name="ChaosCrystal_BowFused">Kristal menyerap masuk ke dalam busur anda, dan membentuk Busur</string>
     <string name="ChaosCrystal_Fuse">SEPADU</string>
     <string name="ChaosCrystal_Info">Anda rasai aliran tenaga, meluru masuk dari tangan anda ketika memegangnya.</string>
@@ -2435,6 +2436,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
