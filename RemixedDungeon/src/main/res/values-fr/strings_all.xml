@@ -2344,6 +2344,19 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     -- L\'araignée psy renforcera les autres araignées au lieu d\'affaiblir le héros.\n
     - Bugs corrigés\n
     </string>
+    <string name="Welcome_Text_32_1">
+    remix.32.1\n
+    - Jouabilité:\n
+    -- Ligne de quête du Docteur en peste\n
+    -- Les cadavres de monstres sont désormais des objets utilisables\n
+    -- Meilleur contrôle des animaux de compagnie\n
+    - UX:\n
+    -- Amélioration de la gestion des sauvegardes\n
+    - Modification:\n
+    -- Méthodes d'installation locales de modules\n
+    -- Les objets personnalisés peuvent maintenant effectuer des actions même s'ils sont regroupés\n
+    - Corrections de bugs\n
+    </string>
     <string name="Welcome_Title">Bienvenue!</string>
     <string name="WindGust_Info">Fait souffler une rafale de vent repoussant le personnage sélectionné.</string>
     <string name="WindGust_Name">Rafale de vent</string>
@@ -2902,6 +2915,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
