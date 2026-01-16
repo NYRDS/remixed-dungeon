@@ -1150,6 +1150,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="LevitationBuff_Info">El cuerpo se eleva sobre el suelo, evitando trampas y otros peligros terrestres.</string>
     <string name="LevitationBuff_Name">Levitando</string>
     <string name="LibrarianNPC_Desc">Se ve como una persona muy tímida. Tiene un suéter de aspecto incómodo y gafas muy gruesas.</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">Ho-hola. Bienvenido a la Biblioteca. Aquí puedes encontrar información sobre muchas cosas, cosas que puedes encontrar en la mazmorra... pero solo es conocimiento que nos han proporcionado los aventureros. Es... un poco vergonzoso. Cada vez que nos visites, probablemente encuentres nueva información.</string>
     <string name="LibrarianNPC_Message_Not_Ready">Lo... Lo siento, la biblioteca no esta abierta... aún.</string>
     <string name="LibrarianNPC_Name">bibliotecario</string>
@@ -2758,6 +2759,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

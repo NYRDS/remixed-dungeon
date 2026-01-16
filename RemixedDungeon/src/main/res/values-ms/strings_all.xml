@@ -986,6 +986,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Level_TileDescInactiveTrap">Perangkap telah dirungkai sebelum ini dan tidak lagi merbahaya.</string>
     <string name="Level_TileDescLockedDoor">Pintu ini dikunci, anda perlukan anak kunci yang sesuai untuk membukanya.</string>
     <string name="Level_TileDescLockedExit">Palang berat menutup lalui tangga ke arah bawah.</string>
+    <string name="Level_TileDescPileOfStones">Satu timbunan batu yang sangat berat, kelihatannya tidak boleh digerakkan.</string>
     <string name="Level_TileDescSign">Anda tidak dapat membaca teks dari sini.</string>
     <string name="Level_TileDescStatue">Ada orang mahu hias tempat ini, tetapi gagal melakukannya.</string>
     <string name="Level_TileDescTrap">Memijak pada salah satu plat tekanan tersembunyi akan aktifkan jerangkap.</string>
@@ -2044,6 +2045,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndInfoItem_Tomb">Makam</string>
     <string name="WndInfoItem_WontKnow">Anda tidak tahu apa-apa di dalamnya sehinggalah anda membukanya!</string>
     <string name="WndInstallingMod_deleting_file">Memadam %s</string>
+    <string name="WndInstallingMod_please_wait">Memasang mod, sila tunggu...</string>
     <string name="WndJournal_Levels">Aras</string>
     <string name="WndJournal_Logbook">Buku Log</string>
     <string name="WndJournal_Title">Jurnal</string>
@@ -2436,6 +2438,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
