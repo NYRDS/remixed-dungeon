@@ -17,6 +17,7 @@
     <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901;丘比</string>
     <string name="AboutScene_Txt_Intro">混合地牢是由NYRDS以Watabou的Pixel Dungeon源碼為基礎制作的。</string>
     <string name="Acidic_Desc">這些巨大的節肢類惡魔生物會盡可能的避免近距離戰鬥，並且在遠處射出能致殘的鋸齒尖刺。</string>
+    <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">酸蝕蠍子</string>
     <string name="Acidic_Name_Objective">酸蝕蠍子</string>
     <string name="Affection_Txt">魅惑 %s</string>
@@ -2526,6 +2527,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
