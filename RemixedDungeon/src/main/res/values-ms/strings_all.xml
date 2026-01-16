@@ -21,6 +21,7 @@
     <string name="Acidic_Name_Objective">jengking berasid</string>
     <string name="Affection_Txt">%s penyisihan</string>
     <string name="AirElemental_Desc">Keunsuran udara merupakan makhluk sihir terbang yang diperbuat dari udara hidup.</string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">keunsuran udara</string>
     <string name="AirElemental_Name_Objective">keunsuran udara</string>
     <string name="AlarmTrap_Desc">Perangkap ini mengeluarkan bunyi bingit yang bergema di serata kurungan bawah tanah!</string>
@@ -2438,6 +2439,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

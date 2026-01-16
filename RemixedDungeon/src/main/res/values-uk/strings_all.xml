@@ -269,6 +269,7 @@
     <string name="BleedingBuff_Name">Кровотеча</string>
     <string name="Bleeding_Death">Твоя кровотеча призвела до смерті...</string>
     <string name="BlessedBuff_Name">Благословенний</string>
+    <string name="BlindnessBuff_Info">Повністю осліплено, можна почути лише звуки навколо.</string>
     <string name="BlindnessBuff_Name">Засліплений</string>
     <string name="BodyArmorBuff_Info">Захист збільшено за рахунок швидкості пересування.</string>
     <string name="BodyArmorBuff_Name">Міць тіла</string>
@@ -2608,6 +2609,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
