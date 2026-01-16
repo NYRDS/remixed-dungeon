@@ -1242,6 +1242,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="MindVisionBuff_Info">La visión interior permite ver claramente el movimiento de todos los seres vivos en el suelo.</string>
     <string name="MindVisionBuff_Name">Visión Mental</string>
     <string name="MirrorImage_Desc">La ilusión se parece a ti, pero es mas pálida y vibra un poco.</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">imagen espejo</string>
     <string name="MirrorImage_Name_Objective">imagen espejo</string>
     <string name="MissileWeapon_Info1">
@@ -2757,6 +2758,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

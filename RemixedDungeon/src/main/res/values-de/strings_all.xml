@@ -2208,6 +2208,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndModInstall_InstallingMod">Mod wird installiert</string>
     <string name="WndModInstall_PleaseUpdate">Bitte aktualisiere Remixed Dungeon bevor du diesen Mod installierst</string>
     <string name="WndModInstall_Version">Version</string>
+    <string name="WndModsDisclaimer_manage">Mods-Liste verwalten</string>
     <string name="WndModsDisclaimer_title">Mods</string>
     <string name="WndMovieTheatre_Bye">Komm jederzeit zurück, wir freuen uns auf dich!</string>
     <string name="WndMovieTheatre_Instruction_2">Du hast %1$d von %2$d mal geguckt. Du wirst zusätzliche Gelegenheiten um Filme zu gucken erhalten, für jeden neuen Level.</string>
@@ -2637,6 +2638,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

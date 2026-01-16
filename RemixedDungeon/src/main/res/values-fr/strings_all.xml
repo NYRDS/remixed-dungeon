@@ -1453,6 +1453,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Rapportez moi %d peaux de rat.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Est-ce seulement croyable ? Ces imbéciles n\'ont toujours pas compris à quel point ce foutu égoût est dangereux. Comme si les gardes et les aventuriers pouvaient les protéger de tout. Hah! Aucune arme ne pourra empêcher une maladie de s\'étendre. Mais j\'ai besoin d\'une preuve. Vous pouvez m\'aider ? Rapportez-moi %d peaux de rat, pour mes tests additionnels.\n</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Est-ce seulement croyable ? Ces imbéciles n\'ont toujours pas compris à quel point ce foutu égoût est dangereux. Comme si les gardes et les aventuriers pouvaient les protéger de tout. Hah! Aucune arme ne pourra empêcher une maladie de s\'étendre. Mais j\'ai besoin d\'une preuve. Vous pouvez m\'aider ? Rapportez-moi %d peaux de rat, pour mes tests additionnels.\n</string>
+    <string name="PlagueDoctorQuest_1_1_Prologue">Atchoum !\n Maudite peste infernale ! Elle se propage dans la ville comme un feu de forêt, s'infectant dans les os de la population inconsciente ! BAH ! Pensez-vous que ces gardes pathétiques aient une chance contre ce fléau insidieux ? Toi, là-bas ! Spécimen fort et en bonne santé. Peut-être peux-tu m'aider. Ces ignobles _rats_ des égouts... ils la portent, je vous le dis, les graines de la peste dans leurs corps putrides ! Apportez-moi _cinq_ de ces misérables créatures, _mortes_, bien sûr ! Leurs peaux seront inestimables pour mes recherches. Je façonnerai pour toi une armure merveilleuse, une barrière protectrice contre la peste même dont elle provient !</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Cherchez la _lunette_, là où l'obscurité rencontre le plus faible reflet de la lumière lunaire. _Deux graines_, leur essence, révéleront des secrets cachés.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Deux graines de soleil_ . Leurs pétales dorés recèlent un pouvoir que je cherche à comprendre. Trouvez-les, et que leur essence soit révélée !</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">Cinq _Sorciers Nains_, leurs corps palpitant encore des faibles échos de magie noire ! Ramenez-les-moi, et je vous récompenserai avec une potion d'une puissance inégalée – une _Potion de Puissance_ qui vous dotera de la force de dix hommes !</string>
@@ -2900,6 +2901,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
