@@ -325,7 +325,7 @@
     <string name="ChaosCrystal_Info_1">混亂的力量在這塊晶石內攪動，也許它能派上什麼用場。</string>
     <string name="ChaosCrystal_Info_2">好極了！現在您知道，您可以將其與您的一項物件融合，但是下一步是什麼呢？</string>
     <string name="ChaosCrystal_Name">奇怪的水晶</string>
-    <string name="ChaosCrystal_Name_1">混亂水晶</string>
+    <string name="ChaosCrystal_Name_1">混沌水晶</string>
     <string name="ChaosCrystal_Name_2">混沌晶石·融合體</string>
     <string name="ChaosCrystal_Prompt">選擇一個地點釋放混沌標記</string>
     <string name="ChaosCrystal_ScrollFused">鐫刻在卷軸上的符文吸收了這枚晶石，現在它變成了%s</string>
@@ -2031,6 +2031,7 @@
     <string name="Weightstone_WndChoice">您希望怎樣強化這件%s?</string>
     <string name="Weightstone_WndSpeed">速度</string>
     <string name="Welcome_Ok">棒極了！</string>
+    <string name="Welcome_Text_31_1">remix.31.1\n- 遊戲玩法：\n-- 新的自定義功能！\n-- 新種類蜘蛛！\n-- 現在心靈蜘蛛會增強其他蜘蛛，而不是削弱英雄。\n- 錯誤修復\n</string>
     <string name="Welcome_Title">歡迎！</string>
     <string name="WindGust_Info">召喚一陣狂風，將選定生物吹走。</string>
     <string name="WindGust_Name">狂風</string>
@@ -2372,7 +2373,7 @@
     <string name="town_deco_crossroad_name">路口指示牌</string>
     <string name="town_deco_curtains_desc">擋住一些不需要的光線，同時也作為一個漂亮的裝飾。</string>
     <string name="town_deco_curtains_name">窗簾</string>
-    <string name="town_deco_door_desc">平凡不過的木板門。</string>
+    <string name="town_deco_door_desc">一個簡單的木門。</string>
     <string name="town_deco_door_name">門</string>
     <string name="town_deco_dungeon_door_desc">地牢的入口。</string>
     <string name="town_deco_dungeon_door_name">入口</string>
@@ -2437,6 +2438,7 @@
     <string name="town_deco_pole_name">桿子</string>
     <string name="town_deco_porch_desc">木製的門廊</string>
     <string name="town_deco_porch_name">門廊</string>
+    <string name="town_deco_poster_name">海報</string>
     <string name="town_deco_potions_desc">各種藥水放在藥水架上</string>
     <string name="town_deco_potions_name">藥水</string>
     <string name="town_deco_projector_desc">用來放電影娛樂人們的老舊設備。</string>
@@ -2527,6 +2529,10 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
 
 
 
