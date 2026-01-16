@@ -2095,6 +2095,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_curtains_name">Tende</string>
     <string name="town_deco_door_desc">Una semplice porta di legno</string>
     <string name="town_deco_door_name">Porta</string>
+    <string name="town_deco_exit_desc">Non si sa cosa ti aspetta se scendi questi scalini.</string>
     <string name="town_deco_fence_name">Recinzione</string>
     <string name="town_deco_filmtape_name">Film</string>
     <string name="town_deco_floor_name">Pavimento</string>
@@ -2185,6 +2186,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

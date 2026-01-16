@@ -1461,6 +1461,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Rudolph_Info">빛나는 붉은 코와 한 쌍의 뿔보다 자연스럽게 크리스마스 분위기를 내는 것이 있을까요?</string>
     <string name="Rudolph_Name">루돌프 사슴코와 사슴뿔</string>
     <string name="RunicSkull_Desc">인공적으로 만들어진 이 해골은 진짜 해골과 닮았습니다. 당신은 희미한 빛이 이것을 둘러싸고 있는 것을 볼 수 있습니다.</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">신비한 해골</string>
     <string name="RunicSkull_Name_Objective">신비한 해골</string>
     <string name="SacrificialSword_Info">얼핏 보기엔 푸른 녹이 슨 이 낡은 동 검은 전혀 쓸모없어 보입니다. 하지만 오래된 고대의 힘이 잠들어 있습니다. 이 검의 힘은 거의 모든 생명체들을 무기력한 노예로 만들 수 있습니다. 그들을 깨울 올바른 방법을 찾아야겠군요...</string>
@@ -2356,6 +2357,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
