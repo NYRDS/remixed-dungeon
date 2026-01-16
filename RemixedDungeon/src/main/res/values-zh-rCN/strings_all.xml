@@ -1123,7 +1123,7 @@
     <string name="Level_TileDescStatue">有人想装饰一下这里，但显然他没能成功。</string>
     <string name="Level_TileDescTrap">踩到隐藏的压力板会启动这个陷阱。</string>
     <string name="Level_TileDescWater">着火的时候踩进水里可以灭火。</string>
-    <string name="Level_TileDescWell"/>
+    <string name="Level_TileDescWell">一口神秘的井。你能感觉到从它散发出的魔力。</string>
     <string name="Level_TileEmbers">灰烬</string>
     <string name="Level_TileEmptyWell">空荡荡的水井</string>
     <string name="Level_TileEntrance">楼层入口</string>
@@ -2280,6 +2280,7 @@ remix.31.1\n
     <string name="WndHero_Exp">经验值</string>
     <string name="WndHero_Gold">已收集金币数</string>
     <string name="WndHero_Health">生命值</string>
+    <string name="WndHero_Info">信息</string>
     <string name="WndHero_Satiety">饱食</string>
     <string name="WndHero_SkillLevel">技能等级</string>
     <string name="WndHero_StaCatalogus">目录</string>
@@ -2753,6 +2754,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

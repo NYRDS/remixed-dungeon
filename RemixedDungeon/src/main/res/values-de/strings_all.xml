@@ -304,6 +304,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Candy_Warning_2">Jetzt hattest du wirklich zu viel. Dein Magen schmerzt, weil du so viele Süßigkeiten gegessen hast.</string>
     <string name="Capotain_Info">Ein hochgekrönter, schmalkrempiger Hut. Er wird normalerweise mit Puritanern in Verbindung gebracht, aber du musst nicht religiös sein, um ihn tragen zu können. Aus irgendeinem Grund hat er eine Plakette mit dem Namen \&quot;Solomon\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
+    <string name="Carcass_Devoured">Du hast den Kadaver von %s verzehrt!</string>
     <string name="Carcass_DissectMessage">Du sezierst die Leiche und erhältst %s.</string>
     <string name="Carcass_Kick">Dieses %s ist völlig tot, keinen Grund es zu treten.</string>
     <string name="Carcass_Name">Überreste von %s</string>
@@ -1063,6 +1064,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Level_TileDescStatue">Jemand wollte diesen Ort dekorieren, ist daran aber offensichtlich gescheitert.</string>
     <string name="Level_TileDescTrap">Wenn du auf eine verborgene Druckplatte trittst, löst dies die Falle aus.</string>
     <string name="Level_TileDescWater">Wenn du Feuer gefangen hast, stelle dich in Wasser um das Feuer zu löschen.</string>
+    <string name="Level_TileDescWell">Ein mysteriöser Brunnen. Du spürst die magische Kraft, die von ihm ausgeht.</string>
     <string name="Level_TileEmbers">Glühende Kohlen</string>
     <string name="Level_TileEmptyWell">Leerer Brunnen</string>
     <string name="Level_TileEntrance">Eingang in die Tiefe</string>
@@ -1179,6 +1181,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="MindVisionBuff_Info">Durch die innere Sicht ist es möglich, die Bewegung aller Lebewesen auf dem Boden deutlich zu erkennen.</string>
     <string name="MindVisionBuff_Name">Vorstellungskraft</string>
     <string name="MirrorImage_Desc">Diese Illusion kommt nahe an dich heran, ist jedoch ein bisschen blasser und flackert ein wenig.</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">Spiegelbild</string>
     <string name="MirrorImage_Name_Objective">Spiegelbild</string>
     <string name="MissileWeapon_Info1">\n\nDer durchschnittliche Schaden dieser Waffe ist %d punkte pro Treffer.</string>
@@ -2638,6 +2641,9 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
 
 
 

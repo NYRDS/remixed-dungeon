@@ -1223,7 +1223,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Level_TileDescStatue">Декоратор у этого места не самый лучший.</string>
     <string name="Level_TileDescTrap">Встав на прижимную плиту, ты активируешь ловушку.</string>
     <string name="Level_TileDescWater">Если загоришься, зайди в воду, чтобы потухнуть.</string>
-    <string name="Level_TileDescWell"/>
+    <string name="Level_TileDescWell">Таинственный колодец. Вы чувствуете, как от него исходит магическая сила.</string>
     <string name="Level_TileEmbers">Тлеющие угли</string>
     <string name="Level_TileEmptyWell">Пустой источник</string>
     <string name="Level_TileEntrance">Подъём</string>
@@ -3031,6 +3031,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 
