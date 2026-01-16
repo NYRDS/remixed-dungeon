@@ -23,6 +23,7 @@
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">кислотний скорпіон</string>
     <string name="Acidic_Name_Objective">кислотного скорпіона</string>
+    <string name="Actions_Speed">Рівень поспішності</string>
     <string name="Affection_Txt">%s пристрасті</string>
     <string name="AirElemental_Desc">Повітряні елементалі - магічні істоти з ожилого повітря що літають.</string>
     <string name="AirElemental_Gender">masculine</string>
@@ -2607,6 +2608,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
