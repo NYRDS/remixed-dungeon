@@ -245,6 +245,7 @@
     <string name="Brute_StaEnraged">격분</string>
     <string name="BurningBuff_Name">불타는</string>
     <string name="BurningFist_Desc">고대 신의 불타는 주먹</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">불타는 주먹</string>
     <string name="BurningFist_Name_Objective">불타는 주먹</string>
     <string name="Burning_Burns">%s 이/가 불탔습니다!</string>
@@ -2355,6 +2356,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

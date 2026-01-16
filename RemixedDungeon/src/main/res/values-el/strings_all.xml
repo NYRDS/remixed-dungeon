@@ -2259,6 +2259,7 @@
     <string name="VertigoBuff_Info">Ένα μεθυστικό συναίσθημα που κάνει δύσκολο το σταθερό περπάτημα!</string>
     <string name="VertigoBuff_Name">Ζαλάδα</string>
     <string name="View_Distance">Οπτικό πεδίο</string>
+    <string name="VileEssence_Info">Ένα συγκεντρωμένο άκρο κακοήθειας που συλλέγεται από έναν νικημένο εχθρό. Η μαύρη αυτή ουσία δονείται με κακόβουλη ενέργεια και χρησιμοποιείται ευρέως σε αλχημικές διαδικασίες.</string>
     <string name="Viscosity_Status">Αναβεβλημένη %d</string>
     <string name="Viscosity_Txt">%s αναβλητικότητας</string>
     <string name="WandHolster_Info">Αυτή η λεπτή θήκη είναι φτιαγμένη από το δέρμα κάποιου εξωτικού ζώου. Σου επιτρέπει να κουβαλάς μέχρι και %d ραβδιά.</string>
@@ -3000,6 +3001,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 </resources>
