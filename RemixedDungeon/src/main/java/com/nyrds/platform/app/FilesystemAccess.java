@@ -1,5 +1,6 @@
 package com.nyrds.platform.app;
 
+import com.nyrds.platform.EventCollector;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.GLog;
 
@@ -20,10 +21,7 @@ public class FilesystemAccess {
     public static InputStream getInputStream(String path) {
         // Try to get from mod resources first
         try {
-            InputStream stream = ModdingMode.getInputStream(path);
-            if (stream != null) {
-                return stream;
-            }
+            return ModdingMode.getInputStream(path);
         } catch (Exception e) {
             GLog.debug("Failed to get input stream from ModdingMode for path: " + path + ", error: " + e.getMessage());
         }
@@ -124,8 +122,8 @@ public class FilesystemAccess {
         if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
             // Try to list the path, if it has content it's a directory
             try {
-                java.util.List<String> contents = ModdingMode.listResources(path, (dir, name) -> true);
-                return contents != null && contents.size() > 0;
+                List<String> contents = ModdingMode.listResources(path, (dir, name) -> true);
+                return !contents.isEmpty();
             } catch (Exception e) {
                 GLog.debug("Error checking if path is directory in Remixed mod: " + path + ", error: " + e.getMessage());
             }
@@ -133,8 +131,8 @@ public class FilesystemAccess {
 
         // For other mods, try to list resources as well
         try {
-            java.util.List<String> contents = ModdingMode.listResources(path, (dir, name) -> true);
-            return contents != null && contents.size() > 0;
+            List<String> contents = ModdingMode.listResources(path, (dir, name) -> true);
+            return !contents.isEmpty();
         } catch (Exception e) {
             GLog.debug("Error checking if path is directory in other mod: " + path + ", error: " + e.getMessage());
         }
@@ -149,9 +147,9 @@ public class FilesystemAccess {
     public static String[] listDirectoryContents(String path) {
         try {
             // Get all resources from the mod that start with the given path
-            java.util.List<String> resourceList = ModdingMode.listResources(path, (dir, name) -> true);
+            List<String> resourceList = ModdingMode.listResources(path, (dir, name) -> true);
 
-            GLog.debug("ModdingMode.listResources returned " + (resourceList != null ? resourceList.size() : 0) + " items for path: '" + path + "'");
+            GLog.debug("ModdingMode.listResources returned " + resourceList.size() + " items for path: '" + path + "'");
 
             // ModdingMode.listResources returns direct child names, so no path prefix filtering is needed
             // Filter the resources to only include direct children, not nested items
@@ -169,7 +167,7 @@ public class FilesystemAccess {
             return filteredList.toArray(new String[0]);
         } catch (Exception e) {
             GLog.debug("Error listing directory contents: " + e.getMessage());
-            e.printStackTrace();
+            EventCollector.logException(e);
             return null;
         }
     }

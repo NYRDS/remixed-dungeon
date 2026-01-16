@@ -48,54 +48,52 @@ public class AlchemyRecipes {
     private static void loadRecipesFromJson() {
         try {
             String jsonContent = ModdingMode.getResource("scripts/alchemy_recipes.json");
-            if (jsonContent != null) {
-                JSONObject json = JsonHelper.readJsonFromString(jsonContent);
-                JSONArray recipesArray = json.getJSONArray("recipes");
+            JSONObject json = JsonHelper.readJsonFromString(jsonContent);
+            JSONArray recipesArray = json.getJSONArray("recipes");
 
-                for (int i = 0; i < recipesArray.length(); i++) {
-                    JSONObject recipe = recipesArray.getJSONObject(i);
+            for (int i = 0; i < recipesArray.length(); i++) {
+                JSONObject recipe = recipesArray.getJSONObject(i);
 
-                    // Parse input ingredients
-                    JSONArray inputs = recipe.getJSONArray("input");
-                    List<String> inputList = new ArrayList<>();
-                    for (int j = 0; j < inputs.length(); j++) {
-                        inputList.add(inputs.getString(j));
+                // Parse input ingredients
+                JSONArray inputs = recipe.getJSONArray("input");
+                List<String> inputList = new ArrayList<>();
+                for (int j = 0; j < inputs.length(); j++) {
+                    inputList.add(inputs.getString(j));
+                }
+
+                // Check if output is a single string or an array of outputs
+                List<String> outputs = new ArrayList<>();
+
+                if (recipe.has("output")) {
+                    // Single output
+                    String output = recipe.getString("output");
+                    outputs.add(output);
+                } else if (recipe.has("outputs")) {
+                    // Multiple outputs
+                    JSONArray outputsArray = recipe.getJSONArray("outputs");
+                    for (int k = 0; k < outputsArray.length(); k++) {
+                        outputs.add(outputsArray.getString(k));
                     }
+                }
 
-                    // Check if output is a single string or an array of outputs
-                    List<String> outputs = new ArrayList<>();
+                // Validate all outputs
+                List<OutputType> outputTypes = new ArrayList<>();
+                boolean allValid = true;
 
-                    if (recipe.has("output")) {
-                        // Single output
-                        String output = recipe.getString("output");
-                        outputs.add(output);
-                    } else if (recipe.has("outputs")) {
-                        // Multiple outputs
-                        JSONArray outputsArray = recipe.getJSONArray("outputs");
-                        for (int k = 0; k < outputsArray.length(); k++) {
-                            outputs.add(outputsArray.getString(k));
-                        }
+                for (String output : outputs) {
+                    OutputType outputType = determineOutputType(output);
+                    outputTypes.add(outputType);
+
+                    if (!isEntityValid(output, outputType)) {
+                        allValid = false;
+                        break;
                     }
+                }
 
-                    // Validate all outputs
-                    List<OutputType> outputTypes = new ArrayList<>();
-                    boolean allValid = true;
-
-                    for (String output : outputs) {
-                        OutputType outputType = determineOutputType(output);
-                        outputTypes.add(outputType);
-
-                        if (!isEntityValid(output, outputType)) {
-                            allValid = false;
-                            break;
-                        }
-                    }
-
-                    // Validate entities before adding to recipes
-                    if (areAllEntitiesValid(inputList) && allValid) {
-                        recipes.put(inputList, outputs);
-                        recipeTypes.put(inputList, outputTypes);
-                    }
+                // Validate entities before adding to recipes
+                if (areAllEntitiesValid(inputList) && allValid) {
+                    recipes.put(inputList, outputs);
+                    recipeTypes.put(inputList, outputTypes);
                 }
             }
         } catch (JSONException e) {

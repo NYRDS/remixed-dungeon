@@ -18,6 +18,7 @@ import java.net.SocketException;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Map;
+import java.util.Scanner;
 
 import fi.iki.elonen.NanoHTTPD;
 
@@ -332,20 +333,15 @@ public abstract class BaseWebServer extends NanoHTTPD {
             // Use ModdingMode to access the template file from the current mod assets
             InputStream inputStream = ModdingMode.getInputStream("html/" + templateName);
 
-            if (inputStream != null) {
-                java.util.Scanner scanner = new java.util.Scanner(inputStream, "UTF-8").useDelimiter("\\A");
-                String template = scanner.hasNext() ? scanner.next() : "";
+            Scanner scanner = new Scanner(inputStream, "UTF-8").useDelimiter("\\A");
+            String template = scanner.hasNext() ? scanner.next() : "";
 
-                // Process replacements (they come in pairs: placeholder, replacement)
-                for (int i = 0; i < replacements.length; i += 2) {
-                    template = template.replace(replacements[i], replacements[i + 1]);
-                }
-
-                return template;
-            } else {
-                GLog.w("Template not found: " + templateName + " in current mod: " + ModdingMode.activeMod());
-                return "<html><body><h1>Template Error</h1><p>Template not found: " + templateName + "</p></body></html>";
+            // Process replacements (they come in pairs: placeholder, replacement)
+            for (int i = 0; i < replacements.length; i += 2) {
+                template = template.replace(replacements[i], replacements[i + 1]);
             }
+
+            return template;
         } catch (Exception e) {
             GLog.w("Failed to generate HTML from template: " + templateName + ", error: " + e.getMessage());
             return "<html><body><h1>Template Error</h1><p>Failed to process template: " + templateName + "</p></body></html>";
@@ -941,7 +937,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             }
 
             // Open the file as an input stream
-            java.io.FileInputStream fis = new java.io.FileInputStream(logFile);
+            FileInputStream fis = new FileInputStream(logFile);
 
             // Create response with appropriate headers for file download
             Response response = newFixedLengthResponse(Response.Status.OK, "text/plain", fis, logFile.length());
