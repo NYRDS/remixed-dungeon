@@ -2463,6 +2463,7 @@ otro lugar del nivel.</string>
     <string name="Wnd_Button_Yes">Si</string>
     <string name="WoodenBow_Info">Este simple arco de madera podría llegar a ser útil, una vez encuentres algunas flechas.</string>
     <string name="WoodenBow_Name">arco de madera</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Una básica ballesta de madera, parece que fué diseñada para disparar flechas de arco.</string>
     <string name="WoodenCrossbow_Name">Ballesta de madera</string>
     <string name="WoodenShield_desc">Un escudo de madera cruda es el escudo más sencillo que existe. Es redondo y puede bloquear algún daño de vez en cuando.</string>
@@ -2759,6 +2760,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

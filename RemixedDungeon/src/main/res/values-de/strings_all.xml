@@ -1307,6 +1307,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="PirateSet_Info">Arr! Hälst du dich für einen Matrosen oder für ein verdammtes Landei!? Ich hoffe du bist keins, das Zeug ist nur für Piraten, sag ich dir...Arr!</string>
     <string name="PirateSet_Name">Piratenset</string>
     <string name="PlagueDoctorMaskHood_Info">Ein geschnitzter Ebenholzschädel, dessen hohle Augenhöhlen mit dem unwirklichen Schimmer von Amethyststeinen glühen. Jeder Atemzug, den Sie tun, flüstert durch ein Labyrinth aus Röhren und Filtern und trägt den Duft starker Kräuter und Gewürze mit sich, die den Verfall überdecken, der an Ihnen haftet. Doch es ist nicht nur die Maske. Ein schwerer Kuttenschober aus samtenem Mitternachtsblau hüllt Ihr Gesicht und Ihren Kopf in Schatten. Der Kapuzen, wie der Flügel einer Raben, fließt Ihren Rücken hinab, seine Ränder mit einer Fransen aus knochenweißer Spitze besetzt, ein unheimlich schöner Kontrast. Zusammen schaffen Maske und Kapuze eine gespenstische Erscheinung, ein düsteres Zeugnis des unendlichen Kampfes gegen die Kräfte des Verfalls.</string>
+    <string name="PlagueDoctorMaskHood_Name">Plague Doctor Maske mit Kapuze</string>
     <string name="PlagueDoctorMask_Info">Dies... dies ist keine gewöhnliche Maske. Sie ist... eine Barriere. Ein Schild gegen die Kräfte des Verfalls, gegen die sich der Pestarzt unermüdlich stellt. Gefertigt aus dem feinsten Ebenholz, kunstvoll geschnitzt mit dem Antlitz eines gierigen Schädels. Ihre hohlen Augenhöhlen sind gefüllt mit funkelnden Amethyst-Edelsteinen, die schwach pulsieren, wie die erlöschenden Glutstücke eines Feuers. Jeder Atemzug, jede Äußerung, die du tust, wird durch ein labyrinthisches Netzwerk aus Röhren und Filtern geleitet. Eine Mischung aus starken Kräutern und exotischen Gewürzen durchdringt die Luft darin und überdeckt den Gestank des Todes, der an dir klebt wie ein Leichentuch.</string>
     <string name="PlagueDoctorNPC_After_Quest">Ich werd\'s ihnen zeigen. Ihnen allen!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Du bist immernoch da? Hier! Nimm das.</string>
@@ -2641,6 +2642,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

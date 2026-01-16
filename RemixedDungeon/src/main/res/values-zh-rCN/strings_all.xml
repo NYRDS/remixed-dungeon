@@ -1655,6 +1655,7 @@
     <string name="Rudolph_Info">还有什么比红鼻子更喜庆的呢？当然还有一对鹿角。</string>
     <string name="Rudolph_Name">鹿角帽加红鼻</string>
     <string name="RunicSkull_Desc">作为人造物，这块头骨看上去就和真的一样。你可以看到它周围发出微弱的光。</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">符文头骨</string>
     <string name="RunicSkull_Name_Objective">符文头骨</string>
     <string name="SacrificialSword_Info">这把锈渍斑斑的老旧青铜剑看起来相当无用，可是你感到其中沉睡着某种古老的力量。这种力量能够将几乎任何生物变成无意识的奴隶，仅当你能找到唤醒它的方法的话……</string>
@@ -2754,6 +2755,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
