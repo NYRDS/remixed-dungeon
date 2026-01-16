@@ -1,16 +1,24 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.util.GuiProperties;
+import com.watabou.noosa.Gizmo;
+import com.watabou.noosa.Group;
 import com.watabou.noosa.Text;
+import com.watabou.noosa.TouchArea;
+import com.watabou.noosa.particles.Emitter;
+import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.particles.AlchemyParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
+import com.nyrds.platform.input.Touchscreen.Touch;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,6 +42,9 @@ public class WndAlchemy extends Window {
 
     // Track recipe rows for selection
     private ArrayList<RecipeListItem> recipeRows = new ArrayList<>();
+
+    // Transmutation circle for alchemy effects
+    private TransmutationCircle transmutationCircle;
 
     public WndAlchemy() {
         super();
@@ -112,11 +123,25 @@ public class WndAlchemy extends Window {
         closeButton.setSize(Math.min(60, windowWidth/5), 18);
         buttonsContainer.add(closeButton);
 
+        // Add transmutation circle for alchemy effects on background FIRST (so it's behind other elements)
+        setupTransmutationCircle(windowWidth, windowHeight);
+
         mainLayout.add(buttonsContainer);
+
         // Update the layout
         mainLayout.layout();
 
         resize((int)windowWidth, (int)windowHeight);
+    }
+
+    private void setupTransmutationCircle(float windowWidth, float windowHeight) {
+        // Create the transmutation circle
+        transmutationCircle = new TransmutationCircle();
+        transmutationCircle.setSize(windowWidth, windowHeight);
+        transmutationCircle.setRecipeSeed("initial"); // Set initial seed
+        // Add it to the window first so it appears behind other elements
+        add(transmutationCircle);
+        bringToFront(transmutationCircle);
     }
 
     private RecipeListItem getRecipeListItem(Entry<List<String>, List<String>> recipeEntry, float windowWidth) {
@@ -140,6 +165,19 @@ public class WndAlchemy extends Window {
 
             // Update button to reflect selection
             updateExecuteButton();
+
+            // Update the transmutation circle with the selected recipe as seed
+            if (transmutationCircle != null) {
+                // Create a seed string from the recipe ingredients
+                StringBuilder seedBuilder = new StringBuilder();
+                for (String ingredient : recipeEntry.getKey()) {
+                    seedBuilder.append(ingredient).append(":");
+                }
+                for (String output : recipeEntry.getValue()) {
+                    seedBuilder.append(output).append(":");
+                }
+                transmutationCircle.setRecipeSeed(seedBuilder.toString());
+            }
         });
         return recipeItem;
     }
@@ -169,6 +207,19 @@ public class WndAlchemy extends Window {
 
                         // Update button to reflect selection
                         updateExecuteButton();
+
+                        // Update the transmutation circle with the selected recipe as seed
+                        if (transmutationCircle != null) {
+                            // Create a seed string from the recipe ingredients
+                            StringBuilder seedBuilder = new StringBuilder();
+                            for (String ingredient : selectedRecipe.getKey()) {
+                                seedBuilder.append(ingredient).append(":");
+                            }
+                            for (String output : selectedRecipe.getValue()) {
+                                seedBuilder.append(output).append(":");
+                            }
+                            transmutationCircle.setRecipeSeed(seedBuilder.toString());
+                        }
                         break;
                     }
                 }
@@ -406,6 +457,12 @@ public class WndAlchemy extends Window {
         // Update the layout
         mainLayout.setRect(MARGIN, MARGIN, windowWidth - 2 * MARGIN, 0);
         mainLayout.layout();
+
+        // Update transmutation circle size based on new window size
+        if (transmutationCircle != null) {
+            transmutationCircle.setSize(windowWidth, windowHeight);
+        }
+
         resize((int)windowWidth, (int)windowHeight);
     }
 }
