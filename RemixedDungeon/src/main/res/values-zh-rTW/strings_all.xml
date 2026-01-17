@@ -1142,6 +1142,7 @@
     <string name="MimicAmulet_Name">擬形怪</string>
     <string name="MimicAmulet_Name_Objective">擬形怪</string>
     <string name="MimicPie_Desc">擬形怪是一種能夠變成任何形態的魔法生物。這一只看起來像一大塊美味的燒餅。</string>
+    <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">擬形怪</string>
     <string name="MimicPie_Name_Objective">擬形怪</string>
     <string name="Mimic_Desc">擬形怪是一種能夠變成任何形態的魔法生物。在地牢裏它們幾乎一直以寶箱形態出現，因為它們明白怎樣才能引誘到到冒險者。</string>
@@ -2532,6 +2533,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
