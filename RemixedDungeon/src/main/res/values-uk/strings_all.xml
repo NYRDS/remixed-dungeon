@@ -2564,6 +2564,7 @@
     <string name="town_deco_sofa_name">Затишний диван</string>
     <string name="town_deco_stakes_desc">Ці загострені кілки виглядають моторошно, але самі по собі доволі безкорисні.</string>
     <string name="town_deco_stakes_name">Кілки</string>
+    <string name="town_deco_statue_blood_name">Статуя Ангела</string>
     <string name="town_deco_stock_desc">Тут зберігаються припаси, а також трохи різноманітного та різнокольорового мотлоху.</string>
     <string name="town_deco_stock_name">Припаси</string>
     <string name="town_deco_stone_wall_broken_desc">Стара камʼяна стіна, в поганому стані</string>
@@ -2609,6 +2610,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
