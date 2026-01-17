@@ -849,6 +849,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HeroClass_NecromancerPerks_2">Necromantes começam com o manto do Necromante.</string>
     <string name="HeroClass_NecromancerPerks_3">Necromantes começam com a chave esqueleto do nível 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Poção de cura é identificada do começo.</string>
+    <string name="HeroClass_Priest">Sacerdote</string>
     <string name="HeroClass_Rog">ladrão</string>
     <string name="HeroClass_RogPerks_0">Ladrões começam com um Anel de Sombras +1.</string>
     <string name="HeroClass_RogPerks_1">Ladrões podem identificar um anel ao equipa-lo.</string>
@@ -1633,6 +1634,7 @@ Parede
     <string name="RunicSkull_Desc">Para algo feito artificialmente, este crânio se parece muito com um verdadeiro. Você pode ver um brilho fraco em torno dele.</string>
     <string name="RunicSkull_Name">Crânio runico</string>
     <string name="RunicSkull_Name_Objective">Crânio runico</string>
+    <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">À primeira vista, esta antiga espada de bronze coberta com manchas oxidadas parece absolutamente inútil. Mas algum tipo de poder arcaico está adormecido no seu interior. Esse poder pode transformar quase qualquer criatura em seu escravo. Só, é preciso encontrar caminho certo para faze-lo...</string>
     <string name="SacrificialSword_Name">espada do sacrifício</string>
     <string name="SantaHat_Info">Nada diz que Dungeonatal é como o chapéu de seda vermelho do Papai Noel, o Senhor das Profundezas.</string>
@@ -2725,6 +2727,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
