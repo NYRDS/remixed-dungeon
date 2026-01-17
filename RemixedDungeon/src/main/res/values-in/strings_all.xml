@@ -1936,6 +1936,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SuspiciousRat_Name_Objective">Tikus mencurigakan</string>
     <string name="Swarm_Defense">menghindar</string>
     <string name="Swarm_Desc">Gerombolan lalat yang mematikan berdengung dengan marah. Semua serang non-sihir akan membelahnya menjadi dua gerombolan lebih kecil yang sama bahayanya.</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">gerombolan lalat</string>
     <string name="Swarm_Name_Objective">gerombolan lalat</string>
     <string name="Swing_Name_0">Liar %s</string>
@@ -2000,6 +2001,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="TownsfolkMovieNPC_Name">penduduk lokal</string>
     <string name="TownsfolkMovieNPC_Name_Objective">penduduk lokal</string>
     <string name="TownsfolkNPC_Desc">Salah satu penduduk setempat. Meskipun ini jelas orang biasa, pakaian itu memang terlihat mahal.</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">Ah! Petualang lain, bagus! Pastikan untuk mengambil barang berharga sebanyak yang kau bisa!</string>
     <string name="TownsfolkNPC_Message2">Kota menjadi sangat kaya berkat dungeon itu, sehingga semua orang di kota dapat pergi berlibur kapan pun kita mau! Sebenarnya itu sebabnya ada begitu sedikit orang di sini sekarang.</string>
     <string name="TownsfolkNPC_Message3">Hari yang indah.</string>
@@ -2723,6 +2725,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
