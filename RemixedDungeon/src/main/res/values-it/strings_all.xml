@@ -130,6 +130,7 @@
     <string name="Badges_MonsterSlain2">50 nemici sconfitti</string>
     <string name="Badges_MonsterSlain3">150 nemici sconfitti</string>
     <string name="Badges_MonsterSlain4">250 nemici sconfitti</string>
+    <string name="Badges_MonsterSlain5">1000 nemici uccisi</string>
     <string name="Badges_NightHunter">5 mostri uccisi nelle ore notturne</string>
     <string name="Badges_NoMonsterSlain">Livello completato senza uccidere mostri</string>
     <string name="Badges_Piranhas">6 piranha uccisi</string>
@@ -2186,6 +2187,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

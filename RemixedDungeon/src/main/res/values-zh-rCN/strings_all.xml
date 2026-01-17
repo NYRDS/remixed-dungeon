@@ -2016,6 +2016,7 @@
     <string name="ToughShield_desc">这面皮革带加固的盾牌看起来比木制的更坚固。它当然可以抵挡更多的伤害。</string>
     <string name="ToughShield_name">皮制圆盾</string>
     <string name="TownGuardNPC_Desc">一名城镇正规军守卫。</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">我没什么好说的了，继续前进吧。</string>
     <string name="TownGuardNPC_Message2">感谢像你一样的冒险家，这里十分和平。</string>
     <string name="TownGuardNPC_Message3">你觉得这座镇上守卫太多了吗？嗯，那是因为这是唯一一个有着邪神出没的地牢的城镇，不是吗？</string>
@@ -2756,6 +2757,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

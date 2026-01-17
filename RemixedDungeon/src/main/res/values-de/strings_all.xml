@@ -623,6 +623,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="EncumbranceBuff_CharAct_2">Diese %s ist zu schwer für mich, um sie effektiv zu benutzen.</string>
     <string name="EnslavedSoul_Desc">Sie können diese geisterhafte Erscheinung fast sehen. Obwohl es für einen Bruchteil einer Sekunde wie ein Schädel aussieht, erscheint ein Gesicht voller Leiden und Qualen für einen Bruchteil einer Sekunde.
 Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schädel aussieht, erscheint manchmal für den Bruchteil einer Sekunde ein Gesicht voller Schmerzen und Folter.</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name">Versklavte Seele</string>
     <string name="EnslavedSoul_Name_Objective">Versklavte Seele</string>
     <string name="Entanglement_Txt">%s der Verschränkung</string>
@@ -2643,6 +2644,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
