@@ -991,6 +991,7 @@
     <string name="Kobold_Desc">狗頭人被認為是一個傳說。雖然它們和豺狼人有著同樣的祖先，但是它們居住在冰霜洞穴中。同時它們也有很高的工程機械造詣。但沒人知道為什麼它們消失了這麼多年...</string>
     <string name="Kobold_Name">狗頭人</string>
     <string name="Kobold_Name_Objective">狗頭人</string>
+    <string name="KunaiThrow_Info">這種致命的苦無投擲會極其迅速地完成，快到你甚至無法選擇目標。\n\n真正的大師能夠一次投擲多把苦無。</string>
     <string name="KunaiThrow_Name">投擲苦無</string>
     <string name="Kusarigama_Info">這件武器由鐮刀，鐵球，鎖鏈三部分所構成，鐵球和鐮刀分別在鎖鏈的兩端。</string>
     <string name="Kusarigama_Name">錘鎖鎌</string>
@@ -2533,6 +2534,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

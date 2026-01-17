@@ -1440,6 +1440,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="PumpkinPie_Name">Kürbiskuchen</string>
     <string name="Pumpkin_Info">In früheren Jahren waren die Kürbisleute eine stolze und wohlhabende Nation. Aber nachdem die Menschen auftauchten, endete alles in Ruinen. Abgetrennte, geschnitzte Köpfe von lang verstorbenen Kürbisstämmen, gelten als Denkmal für diese schrecklichen Ereignisse.</string>
     <string name="Pumpkin_Name">Kürbis</string>
+    <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">Ein mit Eisen beschlagener Laubholzstab.</string>
     <string name="Quarterstaff_Name">Kampfstab</string>
     <string name="QuickSlot_SelectSlot">Wähle dafür einen Schnellzugriff</string>
@@ -2644,6 +2645,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

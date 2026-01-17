@@ -1097,6 +1097,7 @@ Potrebbe bruciare?</string>
     <string name="Pasty_Name">pasticcio</string>
     <string name="Pickaxe_ACMine">ESTRAI</string>
     <string name="Pickaxe_Info">Questo è un grosso e resistente attrezzo per spaccare pietre. Probabilmente può venir usato come arma.</string>
+    <string name="Pickaxe_InsufficientStr">Non hai abbastanza forza per scavare!</string>
     <string name="Pickaxe_Name">piccone</string>
     <string name="Pickaxe_NoVein">Non c\'è alcuna vena aurifera oscura vicino a te da estratte</string>
     <string name="Piercing_Name_0">Perforante %s</string>
@@ -1446,6 +1447,7 @@ Potrebbe bruciare?</string>
     <string name="Senior_Name">Monaco anziano</string>
     <string name="Senior_Name_Objective">Monaco anziano</string>
     <string name="ServantNPC_Name_Objective">cameriere della locanda</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Mi scuso, ma ogni nuovo avventuriero può guardare solo %d film in totale.</string>
     <string name="ServiceManNPC_Limit_Reached">Mi scuso, ma hai raggiunto il limite attuale. Potrai usare di nuovo il nostro servizio per ogni livello eroe che ricevi!</string>
     <string name="ServiceManNPC_Name">lavoratore</string>
@@ -2189,6 +2191,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
