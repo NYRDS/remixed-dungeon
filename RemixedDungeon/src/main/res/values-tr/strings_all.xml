@@ -1789,6 +1789,7 @@ seviyenin başka bir yeri.</string>
     <string name="ShadowLord_Name">gölge tanrısı</string>
     <string name="ShadowLord_Name_Objective">Gölge Tanrısı</string>
     <string name="Shadow_Desc">Gölgeler antik hapishanenin yıkıntıları arasında sessizce dolanırlar. Bazen maceracılara , onların son macerası olarak göründükleri olur.</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name">gölge</string>
     <string name="Shadow_Name_Objective">gölge</string>
     <string name="ShadowsBuff_Info">Gölgeler arasında bir şeyler tespit etmek daha zordur.</string>
@@ -2803,6 +2804,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

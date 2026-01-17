@@ -2508,6 +2508,7 @@ otro lugar del nivel.</string>
     <string name="ZombieMask_Info">¿Alguna vez has deseado ser un héroe no-muerto que falló en su misión en repetidas ocasiones? Bueno, ahora es tu oportunidad.</string>
     <string name="ZombieMask_Name">Mascara zombi</string>
     <string name="Zombie_Desc">La mazmorra es un lugar peligroso y muchos aventureros han perecido en este lugar. Pero los más desafortunados de todos encontraron su fin en la Necrópolis, ahora condenados a vagar como cadáveres podridos.</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">zombi</string>
     <string name="Zombie_Name_Objective">zombi</string>
     <string name="deco_candle_desc">Vela grande</string>
@@ -2763,6 +2764,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
