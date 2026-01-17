@@ -123,25 +123,31 @@ public class WndAlchemy extends Window {
         closeButton.setSize(Math.min(60, windowWidth/5), 18);
         buttonsContainer.add(closeButton);
 
-        // Add transmutation circle for alchemy effects on background FIRST (so it's behind other elements)
-        setupTransmutationCircle(windowWidth, windowHeight);
-
         mainLayout.add(buttonsContainer);
+
+
 
         // Update the layout
         mainLayout.layout();
+        // Add transmutation circle for alchemy effects on background FIRST (so it's behind other elements)
+        setupTransmutationCircle(windowWidth, windowHeight);
 
+        addAfter(transmutationCircle,chrome);
         resize((int)windowWidth, (int)windowHeight);
     }
 
     private void setupTransmutationCircle(float windowWidth, float windowHeight) {
         // Create the transmutation circle
         transmutationCircle = new TransmutationCircle();
-        transmutationCircle.setSize(windowWidth, windowHeight);
+        //transmutationCircle.setSize(windowWidth, windowHeight);
         transmutationCircle.setRecipeSeed("initial"); // Set initial seed
+
+        float scale = 0.25f;
+
+        transmutationCircle.setPos(windowWidth/2 - transmutationCircle.width/2 * scale, windowHeight/2 - transmutationCircle.height/2 * scale);
+
+        transmutationCircle.setScale(scale);
         // Add it to the window first so it appears behind other elements
-        add(transmutationCircle);
-        bringToFront(transmutationCircle);
     }
 
     private RecipeListItem getRecipeListItem(Entry<List<String>, List<String>> recipeEntry, float windowWidth) {
@@ -460,7 +466,7 @@ public class WndAlchemy extends Window {
 
         // Update transmutation circle size based on new window size
         if (transmutationCircle != null) {
-            transmutationCircle.setSize(windowWidth, windowHeight);
+            //transmutationCircle.setSize(windowWidth, windowHeight);
         }
 
         resize((int)windowWidth, (int)windowHeight);
