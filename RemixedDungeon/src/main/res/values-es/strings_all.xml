@@ -1289,6 +1289,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Monk_Defense">repelido</string>
     <string name="Monk_Desc">Estos monjes son fanáticos, que se dedicaron a proteger los secretos de su ciudad de cualquier extranjero. No usan armadura o armas, confiando plenamente en el arte del combate mano a mano.</string>
     <string name="Monk_Disarm">¡ %1$s te ha quitado%2$s de las manos!</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">monje enano</string>
     <string name="Monk_Name_Objective">monje enano</string>
     <string name="MoongraceBuff_Info">El aire que lo rodea se vuelve más saturado, lo que permite una mejor concentración y restauración de las reservas mágicas.</string>
@@ -2764,6 +2765,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
