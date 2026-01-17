@@ -634,6 +634,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Ghost_Rat2">제발... 도와주게...그 끔찍한 놈을 없애 주게...</string>
     <string name="Ghost_Rose1">반갑네 모험가여... 한때는 나도 당신과 같았다네 - 강하고 자신감이 넘쳤지... 하지만 지금은 죽었어... 하지만 난 이곳을 떠날수 없네... 내 _마른 장미_를 찾기 전까지는 말야... 나한텐 매우 중요한 것이네... 어떤 몬스터가 내게서 훔쳐갔어...</string>
     <string name="Ghost_Rose2">제발... 도와주게... 장미를 찾아 주시게...</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Info">이 폴암은 막대기 끝에 날이 달려있는 구조 입니다.</string>
     <string name="Glaive_Name">글레이브</string>
     <string name="GnollArmor_ACSpecial">지배</string>
@@ -2357,6 +2358,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
