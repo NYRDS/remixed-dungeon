@@ -48,6 +48,7 @@
     <string name="AmokArrow_Name">逆上の矢</string>
     <string name="AmokBuff_Info">不運な人々の命を奪う暴挙を感じろ。</string>
     <string name="AmokBuff_Name">逆上</string>
+    <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">このダーツの先端についた溶液は、誰をも心なき無慈悲な凶暴者に変えてしまう。</string>
     <string name="AmokDart_Name">逆上のダーツ</string>
     <string name="AmuletScene_Exit">今日はこれで終わりにしよう</string>
@@ -2867,6 +2868,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

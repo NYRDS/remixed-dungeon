@@ -350,6 +350,7 @@ Ein blutroter Helm ist ein wesentliches Symbol eines Chaos Kriegers.</string>
     <string name="ChaosHelmet_Name">Chaos Helm</string>
     <string name="ChaosStaff_Info">Ein mit der Kraft des Chaos getränkter Stab! Worüber sonst können Magier Träumen oder sich Fürchten?</string>
     <string name="ChaosStaff_Name">Chaosstab</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">Die Klinge des Schwertes wurde aus purem Chaos geschmiedet und vibriert sachte von Zeit zu Zeit. Große Macht ist in dieser Waffe eingeschlossen, die fast alles zerteilen kann. Jedoch sind außerordentliche Fähigkeiten von Nöten, um diese gewaltige Kraft zu meistern.</string>
     <string name="ChaosSword_Name">Chaosschwert</string>
     <string name="CharAction_Charm">bezaubern</string>
@@ -2645,6 +2646,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

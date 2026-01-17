@@ -2149,6 +2149,7 @@
     <string name="WndChooseWay_Cancel">Вирішу пізніше</string>
     <string name="WndChooseWay_Message">Яким шляхом підеш?</string>
     <string name="WndClass_Mastery">Майстерність</string>
+    <string name="WndCryptoDonate_infoText">Ви можете підтримати розробку Remixed Dungeon, надіславши пожертви криптовалютою на наведені нижче адреси. Дякуємо за вашу щедру підтримку!</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - безкоштовний для всіх та завжди таким буде.\n\nОднак, Ви можете допомогти нам зробити гру кращою.\n\nОкрім нашої щирої вдячності, ви отримаєте деякі косметичні вдосконалення.</string>
     <string name="WndDonate_donate">пожертвувати:</string>
     <string name="WndDonate_gold">золото</string>
@@ -2611,6 +2612,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
