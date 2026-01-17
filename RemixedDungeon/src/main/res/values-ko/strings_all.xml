@@ -1180,6 +1180,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Pickaxe_Info">이 크고 튼튼한 도구는 바위를 파괴하기 위한 도구입니다. 아마 무기로도 사용할 수 있을꺼 같네요.</string>
     <string name="Pickaxe_Name">곡괭이</string>
     <string name="Pickaxe_NoVein">근처에 캘 수 있는 어두운 금 원석이 없습니다.</string>
+    <string name="Pickaxe_NothingToMine">여기서 캘 것이 없습니다!</string>
     <string name="Piercing_Name_0">관통의 %s</string>
     <string name="Piercing_Name_1">관통의 %s</string>
     <string name="Piercing_Name_2">관통의 %s</string>
@@ -2358,6 +2359,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
