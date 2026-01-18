@@ -567,6 +567,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ElfArmor_NotElf">Hanya bunian boleh guna perisai ini!</string>
     <string name="ElvenBow_Info">Contoh luar biasa kehalusan kerja tangan puak bunian. Sememangnya lebih efektif dan lebih tepat berbanding busur kayu biasa.</string>
     <string name="ElvenBow_Name">busur bunian</string>
+    <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Senjata ini diperbuat dari aloi logam istimewa, menjadikannya lebih ringan berbanding pisau biasa.</string>
     <string name="ElvenDagger_Name">pisau bunian</string>
     <string name="EncumbranceBuff_CharAct_4">Saya kekurangan kekuatan untuk menggunakan %s secara sepenuhnya.</string>
@@ -2442,6 +2443,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
