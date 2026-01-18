@@ -2549,6 +2549,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="ZombieMask_Info">Hiç görevinde defalarca başarısız olan ölümsüz bir kahraman gibi görünmek istediniz mi? İşte size fırsat.</string>
     <string name="ZombieMask_Name">Zombi Maskesi</string>
     <string name="Zombie_Desc">Zindan bir çok maceracı için tehlikeli bir yerdir. Birçok maceracı burada felaketleri ile buluşmuştur. Onların en şanssızları ise Necropolis\'te ölenlerdir.Burada çürüyen bir vücut içinde dolaşmakla lanetlenmişlerdir.</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">Zombi</string>
     <string name="Zombie_Name_Objective">Zombi</string>
     <string name="deco_candle_desc">Büyük mum</string>
@@ -2804,6 +2805,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

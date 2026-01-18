@@ -170,6 +170,7 @@
     <string name="Badges_Yog_Slain">擊殺猶格-德澤瓦</string>
     <string name="Bag_ACOpen">打開</string>
     <string name="Bandit_Desc">地牢的深處總是各式罪犯的藏身之地。不是所有人都能在漫長的歲月中保持清醒的神智，在很久以前，這些瘋狂的小偷和強盜就已經忘記了自己是誰，為什麼要偷東西。這個強盜看起來在他的匕首上塗了什麼東西！</string>
+    <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">瘋狂強盜</string>
     <string name="Bandit_Name_Objective">瘋狂強盜</string>
     <string name="BardNPC_Gender">masculine</string>
@@ -2537,6 +2538,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

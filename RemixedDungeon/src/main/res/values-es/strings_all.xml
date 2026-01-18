@@ -1239,6 +1239,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="MimicPie_Name">mímico</string>
     <string name="MimicPie_Name_Objective">mímico</string>
     <string name="Mimic_Desc">Los mímicos son criaturas mágicas que pueden adoptar la forma que deseen. En las mazmorras casi siempre eligen la forma de cofres del tesoro, ya que saben como atraer a un aventurero. \&quot;;</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">mímico</string>
     <string name="Mimic_Name_Objective">mímico</string>
     <string name="MindVisionBuff_Info">La visión interior permite ver claramente el movimiento de todos los seres vivos en el suelo.</string>
@@ -2765,6 +2766,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
