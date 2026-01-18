@@ -841,6 +841,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="HeroClass_NecromancerPerks_3">Necromancer mulai dengan kunci kerangka level 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Ramuan Penyembuhan diidentifikasi dari awal.</string>
     <string name="HeroClass_PlagueDoctorPerks_0">Dokter Plague memanen Kelenjar Beracun, Organ Busuk, Serpihan Tulang, dan Intisari Jahat dari musuh yang terbunuh. Darah dikumpulkan seiring waktu dan digunakan untuk melakukan alkemi.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Ramuan Gas Paralisis dan Gas Toksik telah dikenali sebelumnya.</string>
     <string name="HeroClass_Rog">penjahat</string>
     <string name="HeroClass_RogPerks_0">Penjahat mulai dengan cincin kegelapan+1.</string>
     <string name="HeroClass_RogPerks_1">Penjahat dapat mengetahui cincin secara langsung saat memakainya.</string>
@@ -2725,6 +2726,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
