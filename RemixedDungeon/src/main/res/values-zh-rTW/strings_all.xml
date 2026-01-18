@@ -533,6 +533,7 @@
     <string name="DewVial_Name">露珠瓶</string>
     <string name="Dewdrop_Info">一顆透亮的露珠。</string>
     <string name="Dewdrop_Name">露珠</string>
+    <string name="DieHardBuff_Info">再生速度提高。</string>
     <string name="DieHardBuff_Name">頑固</string>
     <string name="DieHardSpell_Info">會暫時增加你的回復速度，讓你成為真正的死神。</string>
     <string name="DieHardSpell_Name">再起</string>
@@ -1203,6 +1204,7 @@
     <string name="MysteryMeat_Info4">你吃撐了。</string>
     <string name="MysteryMeat_Message">這玩意吃起來……有點奇怪。</string>
     <string name="MysteryMeat_Name">神秘肉</string>
+    <string name="NatureArmorSpell_Name">自然護甲</string>
     <string name="NecromancerArmor_Info">這件護甲允許死靈法師消耗5個靈魂來召喚2只死靈來為它戰鬥。這些死靈會跟隨它們的主人，並隨著它們的主人的升級而變強。</string>
     <string name="NecromancerArmor_Info2">身穿這種盔甲，死靈法師可以使用“死靈”能力，這將傳播一個魔法瘟疫，這可能會感染附近的任何生命體，無論死活。</string>
     <string name="NecromancerArmor_Name">骨甲</string>
@@ -2535,6 +2537,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
