@@ -2208,6 +2208,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ZombieMask_Info">당신은 언젠가 계속 목적 달성에 실패한 언데드 영웅처럼 보이고 싶었습니까? 여기 당신에게 기회가 있습니다.</string>
     <string name="ZombieMask_Name">좀비 가면</string>
     <string name="Zombie_Desc">던전은 위험한 장소이고 많은 모험가들이 이곳에서 죽었습니다. 가장 불운한 모험가들이 네크로폴리스에서 운명을 맞이하게 되었고, 그들은 이제 썩어가는 시체의 형태로 복도를 돌아다니는 운명을 맞이하게 되었습니다.</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">좀비</string>
     <string name="Zombie_Name_Objective">좀비</string>
     <string name="deco_candle_desc">큰 양초</string>
@@ -2365,6 +2366,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
