@@ -3,21 +3,24 @@ package com.nyrds.pixeldungeon.desktop;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.windows.WndAlchemy;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.utils.SystemTime;
 
 public class AlchemyWindowLauncher extends RemixedDungeon {
 
     // A simple scene to host the alchemy window
     public static class AlchemyScene extends PixelScene {
-        private float elapsedTime = 0f;
 
         @Override
         public void create() {
@@ -28,7 +31,7 @@ public class AlchemyWindowLauncher extends RemixedDungeon {
                 add(new WndAlchemy());
             } catch (Exception e) {
                 GLog.w("Error creating alchemy window: " + e.getMessage());
-                e.printStackTrace();
+                EventCollector.logException(e);
             }
 
             fadeIn();
@@ -38,9 +41,9 @@ public class AlchemyWindowLauncher extends RemixedDungeon {
         public void update() {
             super.update();
 
-            // Track elapsed time and exit after 30 seconds
-            elapsedTime += com.nyrds.pixeldungeon.game.GameLoop.elapsed;
-            if (elapsedTime >= 30f) {
+            long time =  GameLoop.getMonotoneMillis();
+
+            if (time >= 30f * 1000) {
                 Gdx.app.exit();
             }
         }
@@ -62,7 +65,7 @@ public class AlchemyWindowLauncher extends RemixedDungeon {
             Potion.initColors();
 
             // Initialize the hero to avoid null pointer exceptions
-            com.watabou.pixeldungeon.Dungeon.hero = new com.watabou.pixeldungeon.actors.hero.Hero();
+            Dungeon.hero = new Hero();
         } catch (Exception e) {
             GLog.w("Error initializing static handlers: " + e.getMessage());
         }

@@ -2,51 +2,51 @@
   "recipes": [
     {
       "input": ["Sungrass.Seed", "Sungrass.Seed", "DewVial"],
-      "output": "PotionOfHealing"
+      "outputs": ["PotionOfHealing"]
     },
     {
       "input": ["Firebloom.Seed", "MysteryMeat"],
-      "output": "PotionOfLiquidFlame"
+      "outputs": ["PotionOfLiquidFlame"]
     },
     {
       "input": ["Icecap.Seed", "Dewdrop"],
-      "output": "PotionOfFrost"
+      "outputs": ["PotionOfFrost"]
     },
     {
       "input": ["Sorrowmoss.Seed", "CorpseDust"],
-      "output": "PotionOfToxicGas"
+      "outputs": ["PotionOfToxicGas"]
     },
     {
       "input": ["Dreamweed.Seed", "RatHide"],
-      "output": "PotionOfInvisibility"
+      "outputs": ["PotionOfInvisibility"]
     },
     {
       "input": ["RatSkull", "RatSkull", "RatSkull", "SkeletonKey"],
-      "output": "Skeleton"
+      "outputs": ["Skeleton"]
     },
     {
       "input": ["CorpseDust", "CorpseDust", "DewVial"],
-      "output": "FetidRat"
+      "outputs": ["FetidRat"]
     },
     {
       "input": ["Gold", "IronKey"],
-      "output": "Mimic"
+      "outputs": ["Mimic"]
     },
     {
       "input": ["MysteryMeat", "MysteryMeat", "MysteryMeat", "MysteryMeat", "MysteryMeat", "Dewdrop"],
-      "output": "Piranha"
+      "outputs": ["Piranha"]
     },
     {
       "input": ["Carcass of Rat", "SkeletonKey"],
-      "output": "Skeleton"
+      "outputs": ["Skeleton"]
     },
     {
       "input": ["Carcass of Albino", "CorpseDust"],
-      "output": "FetidRat"
+      "outputs": ["FetidRat"]
     },
     {
       "input": ["Carcass of Thief", "DriedRose"],
-      "output": "Ghost"
+      "outputs": ["Ghost"]
     },
     {
       "input": ["Rat.meat", "Rat.skull"],

@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.IClickable;
 
@@ -69,22 +68,24 @@ public class RecipeListItem extends Component implements IClickable {
 
         // Add all output components to the output box
         for (String singleOutput : outputs) {
-            AlchemyRecipes.OutputType singleOutputType = determineOutputType(singleOutput);
+            AlchemyRecipes.EntityType singleEntityType = AlchemyRecipes.determineEntityType(singleOutput);
 
-            if (singleOutputType == AlchemyRecipes.OutputType.ITEM) {
+            Image sprite = null;
+
+            if (singleEntityType == AlchemyRecipes.EntityType.ITEM || singleEntityType == AlchemyRecipes.EntityType.CARCASS) {
                 Item outputItem  = ItemFactory.itemByName(singleOutput);
-                ItemSprite outputSprite = new ItemSprite(outputItem);
-                outputSprite.brightness(0.5f);
+                sprite = new ItemSprite(outputItem);
 
-                outputBox.add(outputSprite);
-            } else if (singleOutputType == AlchemyRecipes.OutputType.MOB) {
+            } else if (singleEntityType == AlchemyRecipes.EntityType.MOB) {
 
                 Mob mob = MobFactory.mobByName(singleOutput);
-                Image sprite = mob.newSprite().avatar();
-                sprite.brightness(0.5f);
-
-                outputBox.add(sprite);
+                sprite = mob.newSprite().avatar();
             }
+
+            assert sprite != null;
+
+            sprite.brightness(0.5f);
+            outputBox.add(sprite);
         }
         outputBox.add( new Component() {
             @Override
@@ -109,24 +110,6 @@ public class RecipeListItem extends Component implements IClickable {
 
         setSize(rowBox.width(), rowBox.height());
 
-    }
-
-    /**
-     * Determine the output type (item or mob) based on the entity name
-     */
-    private AlchemyRecipes.OutputType determineOutputType(String entityName) {
-        // Check if it's a valid item class first
-        if (ItemFactory.isValidItemClass(entityName)) {
-            return AlchemyRecipes.OutputType.ITEM;
-        }
-
-        // If it's not an item, check if it's a mob
-        if (MobFactory.hasMob(entityName)) {
-            return AlchemyRecipes.OutputType.MOB;
-        }
-
-        // Default to item for backward compatibility
-        return AlchemyRecipes.OutputType.ITEM;
     }
 
     private boolean checkHeroHasItem(Item item) {
@@ -166,15 +149,6 @@ public class RecipeListItem extends Component implements IClickable {
             }
         }
 
-    }
-
-    /**
-     * Gets the items that are used as ingredients in this recipe
-     *
-     * @return List of ingredient items
-     */
-    public List<Item> getIngredientItems() {
-        return inputItems;
     }
 
     @Override

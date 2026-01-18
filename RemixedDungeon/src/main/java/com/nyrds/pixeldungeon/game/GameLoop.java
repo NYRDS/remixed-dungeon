@@ -34,6 +34,7 @@ import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import java.util.Queue;
 import java.util.concurrent.Future;
 
+import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.val;
 
@@ -72,6 +73,9 @@ public class GameLoop {
 
     public Scene scene;
     protected boolean requestedReset = true;
+
+    @Getter
+    private static long monotoneMillis = 0;
 
     private long now;
     private long step;
@@ -171,6 +175,7 @@ public class GameLoop {
 
     public void onResume() {
         now = 0;
+        monotoneMillis = 0;
 
         SystemTime.tick();
         SystemTime.updateLastActionTime();
@@ -197,6 +202,8 @@ public class GameLoop {
         long rightNow = SystemTime.now();
         step = Math.min((now == 0 ? 0 : rightNow - now), 250);
         now = rightNow;
+
+        monotoneMillis += step;
 
         framesSinceInit++;
 

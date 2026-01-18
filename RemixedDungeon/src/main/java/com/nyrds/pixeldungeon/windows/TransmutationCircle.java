@@ -1,25 +1,34 @@
 package com.nyrds.pixeldungeon.windows;
 
-import com.watabou.noosa.Image;
-import com.watabou.gltextures.SmartTexture;
-import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gfx.BitmapData;
+import com.watabou.gltextures.SmartTexture;
+import com.watabou.noosa.Image;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 /**
  * High-fidelity procedural Transmutation Circle.
- * Features:
- * - 512x512 Resolution
- * - True Star Polygons (Pentagrams, Hexagrams) via Vertex Skipping
- * - Complex Grid-based Runes
- * - Additive Glowing Aesthetics
+ *
+ * Contextual updates:
+ * - Visuals now react to Recipe Complexity.
+ * - Inputs determine outer node count.
+ * - Total complexity determines central polygon sides.
+ * - "Organic" or "Mob" ingredients shift color palette to "Forbidden/Blood" magic.
  */
 public class TransmutationCircle extends Image {
 
-    private String currentRecipeSeed = "";
+    private String currentRecipeHash = "";
     private boolean needsUpdate = true;
+
+    // Current Recipe Data
+    private int inputCount = 0;
+    private int outputCount = 0;
+    private boolean isDarkMagic = false; // Triggered by Mob Corpses
 
     // Resolution
     private static final int SIZE = 512;
@@ -31,6 +40,8 @@ public class TransmutationCircle extends Image {
 
     public TransmutationCircle() {
         super();
+        // Default initialization
+        setRecipe(new ArrayList<>(), new ArrayList<>());
         updateTexture();
         alpha(0.9f);
     }
@@ -42,117 +53,172 @@ public class TransmutationCircle extends Image {
             updateTexture();
             needsUpdate = false;
         }
+        setOrigin(SIZE/2);
+        angularSpeed = 100f; // Rotates slowly
+        dirtyMatrix = true;
     }
 
-    public void setRecipeSeed(String recipeSeed) {
-        if (!currentRecipeSeed.equals(recipeSeed)) {
-            currentRecipeSeed = recipeSeed;
+    /**
+     * Updates the circle based on the complexity and type of ingredients.
+     */
+    public void setRecipe(List<String> inputs, List<String> outputs) {
+        // 1. Generate a stable hash for this specific combination
+        List<String> combined = new ArrayList<>(inputs);
+        combined.addAll(outputs);
+        Collections.sort(combined); // Ensure order doesn't change seed
+        String newHash = combined.toString();
+
+        if (!currentRecipeHash.equals(newHash)) {
+            currentRecipeHash = newHash;
+
+            this.inputCount = inputs.size();
+            this.outputCount = outputs.size();
+
+            // 2. Analyze for "Dark Magic" (Corpses/Mobs)
+            // You can adapt this logic to match your specific Item IDs or Class names
+            this.isDarkMagic = false;
+            for (String s : combined) {
+                String lower = s.toLowerCase();
+                if (lower.contains("corpse") || lower.contains("blood") || lower.contains("remains") || lower.contains("soul")) {
+                    this.isDarkMagic = true;
+                    break;
+                }
+            }
+
             needsUpdate = true;
         }
     }
 
     private void updateTexture() {
-        SmartTexture tex = generateAlchemyArray(currentRecipeSeed);
+        SmartTexture tex = generateAlchemyArray();
         texture(tex);
         setWidth(SIZE);
         setHeight(SIZE);
         frame(new RectF(0, 0, 1, 1));
     }
 
-    private SmartTexture generateAlchemyArray(String seed) {
+    private SmartTexture generateAlchemyArray() {
         int[] pixels = new int[SIZE * SIZE];
         Arrays.fill(pixels, 0x00000000);
 
-        long seedNum = seed.hashCode();
+        long seedNum = currentRecipeHash.hashCode();
         Random rng = new Random(seedNum);
 
-        // --- Color Palette ---
-        float hue = rng.nextFloat();
-        // Shift hues towards Red/Purple/Cyan (Alchemy colors)
-        if (hue > 0.15f && hue < 0.45f) hue += 0.5f;
-
-        int baseColor = getColorFromHSB(hue, 0.7f, 1.0f);
+        // --- 1. Determine Color Palette ---
+        int baseColor;
+        if (isDarkMagic) {
+            // Blood Red / Purple for Necromancy/Mob transmutation
+            float hue = 0.95f + (rng.nextFloat() * 0.1f); // Red to Purple range
+            if (hue > 1.0f) hue -= 1.0f;
+            baseColor = getColorFromHSB(hue, 0.85f, 1.0f);
+        } else {
+            // Cyan / Gold for Standard transmutation
+            float hue = rng.nextBoolean() ?
+                    0.5f + (rng.nextFloat() * 0.15f) : // Cyan/Blue
+                    0.1f + (rng.nextFloat() * 0.1f);   // Gold
+            baseColor = getColorFromHSB(hue, 0.65f, 1.0f);
+        }
 
         float centerX = SIZE / 2.0f;
         float centerY = SIZE / 2.0f;
         float maxRadius = (SIZE / 2.0f) * 0.96f;
 
-        // --- Layer 1: Outer Container & Rune Band ---
-        // Typical FMA: Double circle on outside, text inside
+        // --- 2. Layer 1: Container Rings ---
         float outerRingR = maxRadius;
         float innerRingR = maxRadius * 0.82f;
 
         drawRing(pixels, centerX, centerY, outerRingR, baseColor, 1.0f, MAIN_LINE_THICKNESS);
-        drawRing(pixels, centerX, centerY, outerRingR * 0.985f, baseColor, 0.6f, MAIN_LINE_THICKNESS * 0.5f);
         drawRing(pixels, centerX, centerY, innerRingR, baseColor, 0.9f, MAIN_LINE_THICKNESS);
 
-        // Runes
-        float runeCenterR = (outerRingR + innerRingR) / 2.0f;
-        float runeHeight = (outerRingR - innerRingR) * 0.65f;
-        drawComplexRunes(pixels, centerX, centerY, runeCenterR, runeHeight, baseColor, seedNum, 0);
+        // --- 3. Input Nodes (Representation of Ingredients) ---
+        // Draw small circles on the outer rim representing the number of input items
+        if (inputCount > 0) {
+            int nodesToDraw = Math.min(inputCount, 12); // Cap visuals at 12 to prevent overcrowding
+            float angleStep = (float)(2 * Math.PI) / nodesToDraw;
+            float nodeRadius = (outerRingR - innerRingR) * 0.35f;
 
-        // --- Layer 2: Main Geometry (Pentagrams/Hexagrams) ---
+            for (int i = 0; i < nodesToDraw; i++) {
+                float angle = i * angleStep - (float)Math.PI / 2;
+                float nx = centerX + (float)Math.cos(angle) * ((outerRingR + innerRingR) / 2);
+                float ny = centerY + (float)Math.sin(angle) * ((outerRingR + innerRingR) / 2);
+
+                drawRing(pixels, nx, ny, nodeRadius, baseColor, 1.0f, MAIN_LINE_THICKNESS);
+
+                // Connect node to center if it's a dark recipe (channeling energy)
+                if (isDarkMagic && rng.nextBoolean()) {
+                    float ex = centerX + (float)Math.cos(angle) * innerRingR;
+                    float ey = centerY + (float)Math.sin(angle) * innerRingR;
+                    drawLine(pixels, ex, ey, nx, ny, baseColor, 0.5f, 1.0f);
+                }
+            }
+        } else {
+            // Fallback Text Runes if no specific inputs defined yet
+            float runeCenterR = (outerRingR + innerRingR) / 2.0f;
+            float runeHeight = (outerRingR - innerRingR) * 0.65f;
+            drawComplexRunes(pixels, centerX, centerY, runeCenterR, runeHeight, baseColor, seedNum, 0);
+        }
+
+        // --- 4. Main Geometry (Complexity based on Total Mass) ---
         float geoRadius = innerRingR * 0.95f;
 
-        // Weighted Random for Sides: Favor 5 (Pentagram) and 6 (Hexagram)
-        // 3=Tri, 4=Square, 5=Pent, 6=Hex, 8=Oct
-        int[] sideOptions = {3, 4, 5, 5, 5, 6, 6, 8};
-        int sides = sideOptions[rng.nextInt(sideOptions.length)];
+        // Calculate sides based on complexity (Input + Output)
+        // Min 3 (Triangle), Max 9 (Nonagon).
+        // 1 item -> Triangle. 2 items -> Square. 3 items -> Pentagram, etc.
+        int totalComplexity = Math.max(1, inputCount + outputCount);
+        int sides = Math.max(3, Math.min(9, totalComplexity + 2));
+
+        // If it's a standard transmutation (e.g. 1 seed -> 1 potion), use 6 (Hexagram) as it's the "Standard" alchemy shape
+        if (inputCount == 1 && outputCount == 1) sides = 6;
 
         float angleOffset = rng.nextFloat() * (float)Math.PI;
 
-        boolean isStar = rng.nextBoolean() || sides == 5; // Always prioritize stars for pentagons
+        // Determine if Star or Polygon
+        boolean isStar = sides >= 5;
 
-        if (isStar && sides >= 5) {
-            // Draw a proper Star Polygon (connect vertices with step 2 or 3)
-            int step = (sides >= 7) ? 3 : 2; // For 8 sides, step 3 looks sharper
+        if (isStar) {
+            // Step 2 for Pentagram (5/2), Step 3 for Heptagram/Octagram (7/3, 8/3)
+            int step = (sides >= 7) ? 3 : 2;
+
             drawStarPolygon(pixels, centerX, centerY, sides, geoRadius, angleOffset, step, baseColor, 1.0f);
-
-            // Draw a Circle Enclosing the star points (very common in FMA)
             drawRing(pixels, centerX, centerY, geoRadius, baseColor, 0.7f, MAIN_LINE_THICKNESS);
 
-            // Recursive: Draw smaller shape inside the central polygon of the star
-            // Calculate inner radius roughly based on step
-            float innerStarR = geoRadius * (float)(Math.cos(Math.PI * step / sides) / Math.cos(Math.PI * (step - 1) / sides)) * 0.5f;
-            // Simplified inner radius for visuals
-            if (sides == 5) innerStarR = geoRadius * 0.382f;
-            if (sides == 6) innerStarR = geoRadius * 0.577f;
-
+            // Inner circle proportional to the hole in the star
+            float innerStarR = geoRadius * 0.5f;
             drawRing(pixels, centerX, centerY, innerStarR, baseColor, 0.8f, MAIN_LINE_THICKNESS);
 
-            // Inner Text
-            drawComplexRunes(pixels, centerX, centerY, innerStarR * 0.85f, innerStarR * 0.15f, baseColor, seedNum + 1, 1);
+            // Draw Inner Runes representing the Result
+            if (outputCount > 0) {
+                drawComplexRunes(pixels, centerX, centerY, innerStarR * 0.85f, innerStarR * 0.15f, baseColor, seedNum + 1, 1);
+            }
 
         } else {
-            // Regular Polygon (Triangle, Square, or non-star Pent/Hex)
+            // Simple geometry for simple recipes
             float[] mainVerts = getPolygonVerts(sides, geoRadius, angleOffset);
             drawPolygon(pixels, centerX, centerY, mainVerts, baseColor, 1.0f, MAIN_LINE_THICKNESS);
 
-            // Overlapping rotated copy? (e.g. Square + Rotated Square = Octagram)
-            if (rng.nextBoolean()) {
+            // If Dark Magic and simple geometry, double it up (rotated)
+            if (isDarkMagic) {
                 float[] secVerts = getPolygonVerts(sides, geoRadius, angleOffset + (float)Math.PI/sides);
                 drawPolygon(pixels, centerX, centerY, secVerts, baseColor, 0.8f, MAIN_LINE_THICKNESS);
             }
 
-            // Inner details
-            if (sides == 3) {
-                // Eye in triangle or circle in triangle
-                drawRing(pixels, centerX, centerY, geoRadius * 0.5f, baseColor, 1.0f, MAIN_LINE_THICKNESS);
-            }
+            // Eye/Core
+            drawRing(pixels, centerX, centerY, geoRadius * 0.5f, baseColor, 1.0f, MAIN_LINE_THICKNESS);
         }
 
-        // --- Layer 4: Center Details ---
-        if (rng.nextBoolean()) {
-            // Center Flux Lines
-            int lines = 2 + rng.nextInt(3);
-            for(int k=0; k<lines; k++) {
-                float a = k * (float)Math.PI / lines + rng.nextFloat();
-                float x1 = centerX + (float)Math.cos(a) * geoRadius * 0.9f;
-                float y1 = centerY + (float)Math.sin(a) * geoRadius * 0.9f;
-                float x2 = centerX - (float)Math.cos(a) * geoRadius * 0.9f;
-                float y2 = centerY - (float)Math.sin(a) * geoRadius * 0.9f;
-                drawLine(pixels, x1, y1, x2, y2, baseColor, 0.4f, MAIN_LINE_THICKNESS);
-            }
+        // --- 5. Center Flux (The Reaction) ---
+        // More output items = More chaotic lines in center
+        int fluxLines = outputCount * 2 + (isDarkMagic ? 3 : 0);
+        fluxLines = Math.min(fluxLines, 10);
+
+        for(int k=0; k<fluxLines; k++) {
+            float a = k * (float)Math.PI / (fluxLines/2f) + rng.nextFloat();
+            float len = geoRadius * 0.9f;
+            float x1 = centerX + (float)Math.cos(a) * len;
+            float y1 = centerY + (float)Math.sin(a) * len;
+            float x2 = centerX - (float)Math.cos(a) * len;
+            float y2 = centerY - (float)Math.sin(a) * len;
+            drawLine(pixels, x1, y1, x2, y2, baseColor, 0.3f, MAIN_LINE_THICKNESS);
         }
 
         // Center Dot
@@ -169,14 +235,9 @@ public class TransmutationCircle extends Image {
 
     /**
      * Draws a Star Polygon {n/k}.
-     * Handles both unicursal stars (Pentagram) and compound stars (Hexagram/Star of David).
      */
     private void drawStarPolygon(int[] pixels, float cx, float cy, int sides, float r, float angleOffset, int step, int color, float intensity) {
         float[] verts = getPolygonVerts(sides, r, angleOffset);
-
-        // Calculate GCD to determine number of disjoint loops
-        // e.g. Sides=6, Step=2 -> GCD=2. We need 2 loops (0-2-4 and 1-3-5).
-        // e.g. Sides=5, Step=2 -> GCD=1. We need 1 loop (0-2-4-1-3).
         int loops = gcd(sides, step);
         int pointsPerLoop = sides / loops;
 
@@ -184,15 +245,11 @@ public class TransmutationCircle extends Image {
             int currentIdx = l;
             for (int i = 0; i < pointsPerLoop; i++) {
                 int nextIdx = (currentIdx + step) % sides;
-
-                // Draw line from current vertex to next vertex
                 float x1 = verts[currentIdx * 2] + cx;
                 float y1 = verts[currentIdx * 2 + 1] + cy;
                 float x2 = verts[nextIdx * 2] + cx;
                 float y2 = verts[nextIdx * 2 + 1] + cy;
-
                 drawLine(pixels, x1, y1, x2, y2, color, intensity, MAIN_LINE_THICKNESS);
-
                 currentIdx = nextIdx;
             }
         }
@@ -235,33 +292,21 @@ public class TransmutationCircle extends Image {
                 float rx2 = lx2 * sin + ly2 * cos;
                 float ry2 = lx2 * -cos + ly2 * sin;
 
-                float globalX1 = cx + (cos * radiusCenter) + rx1;
-                float globalY1 = cy + (sin * radiusCenter) + ry1;
-                float globalX2 = cx + (cos * radiusCenter) + rx2;
-                float globalY2 = cy + (sin * radiusCenter) + ry2;
-
-                drawLine(pixels, globalX1, globalY1, globalX2, globalY2, color, 0.9f, RUNE_LINE_THICKNESS);
-            }
-
-            // Dot detail
-            if (runeRng.nextFloat() > 0.7f) {
-                float lx = gridX[1] * runeWidth; // Center column is index 1
-                float ly = gridY[runeRng.nextInt(3)] * runeHalfHeight;
-
-                float rx = lx * sin + ly * cos;
-                float ry = lx * -cos + ly * sin;
-                drawRing(pixels, cx + (cos * radiusCenter) + rx, cy + (sin * radiusCenter) + ry, 2.5f, color, 1.0f, 0.9f);
+                drawLine(pixels, cx + (cos * radiusCenter) + rx1, cy + (sin * radiusCenter) + ry1,
+                        cx + (cos * radiusCenter) + rx2, cy + (sin * radiusCenter) + ry2,
+                        color, 0.9f, RUNE_LINE_THICKNESS);
             }
         }
     }
 
-    // --- Drawing Primitives ---
+    // --- Drawing Primitives (Glow Logic) ---
 
     private void drawRing(int[] pixels, float cx, float cy, float r, int color, float intensity, float thickness) {
-        int minX = Math.max(0, (int)(cx - r - GLOW_FALLOFF - thickness));
-        int maxX = Math.min(SIZE, (int)(cx + r + GLOW_FALLOFF + thickness));
-        int minY = Math.max(0, (int)(cy - r - GLOW_FALLOFF - thickness));
-        int maxY = Math.min(SIZE, (int)(cy + r + GLOW_FALLOFF + thickness));
+        int range = (int)(GLOW_FALLOFF + thickness + 1);
+        int minX = Math.max(0, (int)(cx - r - range));
+        int maxX = Math.min(SIZE, (int)(cx + r + range));
+        int minY = Math.max(0, (int)(cy - r - range));
+        int maxY = Math.min(SIZE, (int)(cy + r + range));
 
         for (int y = minY; y < maxY; y++) {
             for (int x = minX; x < maxX; x++) {
@@ -269,7 +314,6 @@ public class TransmutationCircle extends Image {
                 float dy = y - cy;
                 float dist = (float)Math.sqrt(dx*dx + dy*dy);
                 float distFromRing = Math.abs(dist - r);
-
                 float alpha = getGlowIntensity(distFromRing, thickness) * intensity;
                 if (alpha > 0) blendPixel(pixels, x, y, color, alpha);
             }
@@ -303,8 +347,6 @@ public class TransmutationCircle extends Image {
         }
     }
 
-    // --- Math Helpers ---
-
     private float[] getPolygonVerts(int sides, float r, float angleOffset) {
         float[] verts = new float[sides * 2];
         for (int i = 0; i < sides; i++) {
@@ -334,7 +376,6 @@ public class TransmutationCircle extends Image {
 
     private void blendPixel(int[] pixels, int x, int y, int color, float alpha) {
         if (x < 0 || x >= SIZE || y < 0 || y >= SIZE) return;
-
         int idx = y * SIZE + x;
         int current = pixels[idx];
 
@@ -346,8 +387,9 @@ public class TransmutationCircle extends Image {
         int r2 = (color >> 16) & 0xFF;
         int g2 = (color >> 8) & 0xFF;
         int b2 = color & 0xFF;
-        int a2 = (int)(255 * Math.min(1.0f, alpha));
+        int a2 = (int)(255 * Math.min(1.0f, alpha)); // Glow strength
 
+        // Additive blending for glow effect
         int rOut = Math.min(255, r1 + (int)(r2 * alpha));
         int gOut = Math.min(255, g1 + (int)(g2 * alpha));
         int bOut = Math.min(255, b1 + (int)(b2 * alpha));
@@ -361,19 +403,13 @@ public class TransmutationCircle extends Image {
         float hp = h * 6;
         float x = c * (1 - Math.abs((hp % 2) - 1));
         float r = 0, g = 0, bl = 0;
-
         if (hp < 1) { r = c; g = x; bl = 0; }
         else if (hp < 2) { r = x; g = c; bl = 0; }
         else if (hp < 3) { r = 0; g = c; bl = x; }
         else if (hp < 4) { r = 0; g = x; bl = c; }
         else if (hp < 5) { r = x; g = 0; bl = c; }
         else { r = c; g = 0; bl = x; }
-
         float m = b - c;
-        int red = (int) ((r + m) * 255);
-        int green = (int) ((g + m) * 255);
-        int blue = (int) ((bl + m) * 255);
-
-        return (red << 16) | (green << 8) | blue;
+        return ((int)((r + m) * 255) << 16) | ((int)((g + m) * 255) << 8) | (int)((bl + m) * 255);
     }
 }
