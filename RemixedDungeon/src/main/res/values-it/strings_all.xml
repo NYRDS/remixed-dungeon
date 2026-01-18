@@ -1580,6 +1580,7 @@ Potrebbe bruciare?</string>
     <string name="StartScene_New">Nuova partita</string>
     <string name="StartScene_No">No, ritorna al menù principale</string>
     <string name="StartScene_Really">Vuoi veramente iniziare una nuova partita?</string>
+    <string name="StartScene_UnlockElf">Per sbloccare questa classe di personaggi, sconfiggi il boss Re con qualsiasi altra classe</string>
     <string name="StartScene_UnlockGnoll">Per sbloccare questa classe devi persuadere il prete di paese a guarire uno Gnoll Bruto</string>
     <string name="StartScene_UnlockNecromancer">Per sbloccare questo personaggio, sconfiggi il Lich con una qualunque altra classe.</string>
     <string name="StartScene_Warning">I progressi della tua partita corrente saranno cancellati.</string>
@@ -2124,6 +2125,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_medicine_name">Medicina</string>
     <string name="town_deco_movies_door_name">Porta</string>
     <string name="town_deco_mud_name">Fango</string>
+    <string name="town_deco_painting_desc">Un bellissimo pezzo d'arte.</string>
     <string name="town_deco_painting_name">Dipinto</string>
     <string name="town_deco_pedestal_desc">Piedistallo con sopra un libro sacro.</string>
     <string name="town_deco_pedestal_name">Piedistallo</string>
@@ -2195,6 +2197,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

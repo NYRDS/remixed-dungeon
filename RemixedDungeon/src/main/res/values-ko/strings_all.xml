@@ -1586,6 +1586,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Shadow_Name">그림자</string>
     <string name="Shadow_Name_Objective">그림자</string>
     <string name="ShadowsBuff_Name">그림자숨기</string>
+    <string name="ShamanElder_Desc">이 특별한 늑대인간은 다른 주술사들보다 훨씬 나이가 많아 보이며 부족 내에서 확실히 더 높은 지위를 가지고 있습니다. 그의 주변에는 이상한 오러가 천천히 형성되며, 닿는 모든 것을 반사하는 것 같습니다.</string>
     <string name="Shaman_Desc">아주 지능이 뛰어난 놀만이 주술사의 주술을 익힐 수 있다. 놀 주술사는 힘이 약하기 때문에 전투 마법 사용을 좋아하며, 부족에서 자신의 지위를 의심하는 자에게는 이를 사용하길 꺼리지 않습니다.</string>
     <string name="Shaman_Killed">%s의 번개 화살이 당신을 죽였다...</string>
     <string name="Shaman_Name">놀 주술사</string>
@@ -1823,6 +1824,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="VertigoBuff_Info">현기증이 나서 똑바로 걷기 어려워집니다!</string>
     <string name="VertigoBuff_Name">어지러움</string>
     <string name="View_Distance">시야 거리</string>
+    <string name="VileEssence_Info">패배한 적으로부터 수확한 부패의 정수입니다. 이 어두운 물질은 악의적인 에너지로 울렁거리며 연금술 과정에서 높은 가치를 지니고 있습니다.</string>
     <string name="Viscosity_Status">지속적으로 %d</string>
     <string name="Viscosity_Txt">점성의의 %s</string>
     <string name="WandHolster_Info">이 얇은 마법 막대 보관함은 이국적인 동물의 가죽으로 만들었습니다. 이것은 당신에게 %d개의 마법 막대를 보관할 수 있게 해줍니다.</string>
@@ -2363,6 +2365,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 
