@@ -1225,6 +1225,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Monk_Defense">pariert</string>
     <string name="Monk_Desc">Diese Mönche sind Fanatiker, die sich dem Schutz der Geheimnisse ihrer Stadt vor allen Fremden verschrieben haben. Sie benutzen keine Rüstung oder Waffen und verlassen sich ausschließlich auf die Kunst des unbewaffneten Kampfes.</string>
     <string name="Monk_Disarm">Der %1$s hat dein %2$s aus deinen Händen geschmettert!</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">Zwergenmönch</string>
     <string name="Monk_Name_Objective">Zwergenmönch</string>
     <string name="MoongraceBuff_Info">Die Luft in der Nähe wird gesättigter, was eine bessere Konzentration und Wiederherstellung der magischen Reserven ermöglicht.</string>
@@ -2648,6 +2649,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

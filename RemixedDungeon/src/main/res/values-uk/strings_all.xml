@@ -1240,6 +1240,7 @@
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">дворф-монах</string>
     <string name="Monk_Name_Objective">дворфа-монаха</string>
+    <string name="Moongrace_Desc">Ці рослини ростуть невеликими кількостями і є джерелом природної магії.</string>
     <string name="Multiplicity_Txt">%s помноження</string>
     <string name="Mushroom_Eat_Message">Цей гриб має дивний присмак!</string>
     <string name="MysteryMeat_Info">Скуштуй на свій острах!</string>
@@ -2612,6 +2613,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

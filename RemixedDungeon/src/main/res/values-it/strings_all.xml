@@ -430,6 +430,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DarkSacrifice_Self">Per il Flagello!</string>
     <string name="DarkVeilBuff_Name">Velo scuro</string>
     <string name="Darkness_Info">Sembrerebbero dei frammenti di oscurità eterna fluttuanti nell\'aria</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Queste semplici punte di metallo sono calibrate per volare e colpire le loro vittime con un semplice movimento di polso. </string>
     <string name="Dart_Name">Dardo</string>
     <string name="DashSpell_Name">Corsa</string>
@@ -1552,6 +1553,7 @@ Potrebbe bruciare?</string>
     <string name="SpiderNest_Desc">Questo bozzolo è fatto di seta sottile e nasconde qualcosa di vivo all\'interno.</string>
     <string name="SpiderNest_Name">ragno bozzolo</string>
     <string name="SpiderNest_Name_Objective">ragno bozzolo</string>
+    <string name="SpiderQueenCarapace_Name">Carapace della Regina Ragno</string>
     <string name="SpiderQueen_Desc">Un corpo di una bella donna incrociato con un\'orribile ragno.Ogni essere vivente di questo covo è il suo servo. Rispondere a questa straordinaria donna può rivelarsi un\'esperienza mortale. Perché tu sei un trasgressore</string>
     <string name="SpiderQueen_DieInfo">La Regina Ragno è stata sconfitta! Ora dovrei tornare al livello 5 e continuare il mio viaggio verso gli Abissi.</string>
     <string name="SpiderQueen_Gender">feminine</string>
@@ -2193,6 +2195,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
