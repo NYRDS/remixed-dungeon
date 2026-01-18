@@ -1672,6 +1672,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">telur lelabah</string>
     <string name="SpiderEgg_Name_Objective">spider egg</string>
+    <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderExploding_Desc">Pekerja semasa aman, makhluk ini tidak teragak-agak meluru ke pihak musuh dan mengambil tumbuhan yang dihadapannya, kemudian menjadikan dirinya sebagai bom hidup.</string>
     <string name="SpiderExploding_Name">pekerja lelabah</string>
     <string name="SpiderExploding_Name_Objective">pekerja lelabah</string>
@@ -2443,6 +2444,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

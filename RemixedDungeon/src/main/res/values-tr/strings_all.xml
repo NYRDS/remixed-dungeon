@@ -1932,6 +1932,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="Spinner_Name">nişancı mağara örümceği</string>
     <string name="Spinner_Name_Objective">nişancı mağara örümceği</string>
     <string name="SpiritOfPain_Desc">Yaşayan karanlığın parçası.</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">acının ruhu</string>
     <string name="SpiritOfPain_Name_Objective">acının ruhu</string>
     <string name="Sprout_Info">Uyuyan tohumları uyandırın.\nAncak, bu büyünün başarılı olması için yerde biraz yeşillik olması gerekir.</string>
@@ -2805,6 +2806,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

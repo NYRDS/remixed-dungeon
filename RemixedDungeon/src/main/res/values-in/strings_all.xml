@@ -1632,6 +1632,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ScaleArmor_Desc">Sisik-sisik logam dibentuk pada rompi kulit untuk membuat zirah kuat dan fleksibel.</string>
     <string name="ScaleArmor_Name">zirah sisik</string>
     <string name="ScarecrowNPC_Desc">Tidak ada keraguan... bahwa orang-orangan sawah ini mengawasi tiap langkah Anda. Mata merah berkilaunya menembus Anda, tapi anehnya, Anda tidak merasa terancam.</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">orang-orangan sawah</string>
     <string name="ScarecrowNPC_Name_Objective">orang-orangan sawah</string>
     <string name="ScarecrowNPC_Quest_End">Oh bahagia, oh bagus!\n Untuk ini, Anda akan mendapatkan sebuah makanan asli!</string>
@@ -2726,6 +2727,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
