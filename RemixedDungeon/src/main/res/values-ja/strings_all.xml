@@ -1715,6 +1715,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="RottingFist_Name_Objective">腐った拳</string>
     <string name="RoyalShield_desc">フルメタル製のシールド。確かに重いが、これだけが最高の防御を提供できる。</string>
     <string name="RoyalShield_name">ロイヤルシールド</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">このルビーの弓を使えるのは、最強の弓手だけだ。ほとんどすべての矢が敵を貫き、体に大きな穴を残すが、弓の弦を引くには非常に強い力が必要だ。</string>
     <string name="RubyBow_Name">ルビーの弓</string>
     <string name="RubyCrossbow_Info">この致命的な武器は、まさにドワーフ工学の傑作である。</string>
@@ -2868,6 +2869,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
