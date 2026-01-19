@@ -1598,6 +1598,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Sheep_Name">양</string>
     <string name="Sheep_Name_Objective">양</string>
     <string name="ShieldStrTemplate">이 방패를 제대로 사용하기 위해서는 착용자에게 최소한 %1$d의 힘 수치가 필요합니다.</string>
+    <string name="ShieldWeaponInfo">무기로 사용될 때 이 방패는 평균적으로 %1의 피해를 입힙니다.</string>
     <string name="Shielded_Defense">막음</string>
     <string name="Shielded_Desc">방패 놀 정예병은 놀 중에서도 가장 크고 강하며 터프한 녀석이다. 큰 상처를 입게 되면, 이 녀석은 격분하면서 적에게 보다 큰 데미지를 준다. 이 녀석은 거대한 방패를 들고 있다.</string>
     <string name="Shielded_Name">방패 놀 정예병</string>
@@ -2371,6 +2372,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

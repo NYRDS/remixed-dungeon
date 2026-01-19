@@ -1891,6 +1891,7 @@ outro local do nível.</string>
     <string name="SpiritOfPain_Name_Objective">espírito da dor</string>
     <string name="Sprout_Info">Desperte as sementes adormecidas.\nNo entanto, deve haver alguma vegetação no chão para que este feitiço tenha sucesso.</string>
     <string name="Sprout_Name">Brotar</string>
+    <string name="StartScene_ContinueLatest">Continue seu último jogo ou escolha um slot de salvamento</string>
     <string name="StartScene_Depth">Profundidade: %1$d, level: %2$d</string>
     <string name="StartScene_DifficultyEasy">Fácil (com propaganda)</string>
     <string name="StartScene_DifficultyEasyNoAds">Fácil</string>
@@ -2729,6 +2730,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
