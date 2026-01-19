@@ -2506,6 +2506,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="Wnd_Button_No">Hayır</string>
     <string name="Wnd_Button_Ok">Tamam</string>
     <string name="Wnd_Button_Yes">Evet</string>
+    <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Bu basit tahta yay biraz ok bulduğunda işe yarayabileceğini gösteriyor.</string>
     <string name="WoodenBow_Name">tahta yay</string>
     <string name="WoodenCrossbow_Info">Tahtadan yapılma bir arbalet, görünüşe göre ok fırlatmak için yapılmış.</string>
@@ -2806,6 +2807,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

@@ -2193,6 +2193,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="YogsBrain_Name">요그의 뇌</string>
     <string name="YogsBrain_Name_Objective">요그의 뇌</string>
     <string name="YogsEye_Desc">영원한 증오가 가득 찬 채 만물을 응시하는 고대신의 눈입니다. 당신은  이것이 당신의 영혼을 꿰뚫어 본다는 것을 느낄 수 있습니다.</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">요그의 눈</string>
     <string name="YogsEye_Name_Objective">요그의 눈</string>
     <string name="YogsHeart_Desc">수세기동안 사람들은 정말 심장이 없다고 해도 될 정도로 무정한 생물체들만이 순수한 악행을  저지를수 있다고 믿었습니다. 그리고 아직까지 여기에는 크게 박동하는 고대신의 심장이 있습니다.</string>
@@ -2366,6 +2367,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

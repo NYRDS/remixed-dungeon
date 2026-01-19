@@ -671,6 +671,7 @@
     <string name="ElfArmor_Desc">このマントの助けを借りて、エルフは自然の力そのものを呼び出すことができる。固い石を突き破り瞬く間に高い草が生え、視界に入るすべての敵を動けなくする。</string>
     <string name="ElfArmor_Name">エルフのマント</string>
     <string name="ElfArmor_NotElf">エルフだけがこの鎧を使うことができます。</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">エルフの卓越した職人技によって作られている。普通の木の弓よりも明らかに効果的で正確だ。</string>
     <string name="ElvenBow_Name">エルフの弓</string>
     <string name="ElvenDagger_Info">この武器は特殊な金属合金でできており、通常の短剣に比べてかなり軽い。</string>
@@ -2869,6 +2870,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
