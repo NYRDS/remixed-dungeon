@@ -1083,6 +1083,7 @@
     <string name="Kusarigama_Name">锤锁镰</string>
     <string name="Kusarigama_Pull">拉扯</string>
     <string name="Larva_Desc">古神的幼虫</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">古神幼虫</string>
     <string name="Larva_Name_Objective">古神幼虫</string>
     <string name="LastLevel_TileDescStatue">这根柱子是由真正的类人生物头骨制成的，真酷。</string>
@@ -2761,6 +2762,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

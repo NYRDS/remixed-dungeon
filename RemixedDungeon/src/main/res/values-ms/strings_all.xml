@@ -1472,6 +1472,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="RottingFist_Desc">Tumbukan Mereput Dewa Purba</string>
     <string name="RottingFist_Name">tumbukan mereput</string>
     <string name="RottingFist_Name_Objective">tumbukan mereput</string>
+    <string name="RoyalShield_name">Perisai Diraja</string>
     <string name="RubyBow_Info">Hanya pemanah terhebat dapat guna busur delima ini. Hampir setiap anak panah yang dilepaskan mengenai pihak musuh, mewujudkan lubang kecederaan besar pada badannya, tetapi memerlukan tenaga sangat kuat untuk menarik tali busur tersebut.</string>
     <string name="RubyBow_Name">busur delima</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -1768,6 +1769,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Tengu_Info3">Dah jumpa, %s!</string>
     <string name="Tengu_Name">Tengu</string>
     <string name="Tengu_Name_Objective">Tengu</string>
+    <string name="TerrorBuff_Name">Terkejut</string>
     <string name="Thief_Carries">\n\n%1$s membawa _%2$s_. Hasil curi.</string>
     <string name="Thief_Desc">Aras lebih dalam kurungan bawah tanah merupakan tempat persembunyian semua kategori penjenayah. Bukan semua yang dapat mengawal kewarasan diri ketika berada di sini. Dahulu, ramai pencuri dan perompak menjadi gila dan lupa diri mereka apa yang mereka telah lakukan.</string>
     <string name="Thief_Name">pencuri gila</string>
@@ -2449,6 +2451,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

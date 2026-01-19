@@ -2750,7 +2750,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_deco_statue_water_desc">Bir kase su tutan bir meleğin görkemli bir heykeli.</string>
     <string name="town_deco_statue_water_name">Melek heykeli</string>
     <string name="town_deco_stock_desc">Burada gıda malzemelerinin yanı sıra her türden ve renkten bir sürü farklı ıvır zıvır depolanmaktadır.</string>
-    <string name="town_deco_stock_name">Stok,Birikim</string>
+    <string name="town_deco_stock_name">Stok</string>
     <string name="town_deco_stone_wall_broken_desc">Eski taş duvar, kötü durumda</string>
     <string name="town_deco_stone_wall_broken_name">Kırık duvar</string>
     <string name="town_deco_stone_wall_desc">bu duvar ısıyı emiyor ve biraz ıslak gözüküyor.</string>
@@ -2807,6 +2807,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
