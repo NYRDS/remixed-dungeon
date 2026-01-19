@@ -1728,6 +1728,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Succubus_Name_Objective">서큐버스</string>
     <string name="SummonDeathling_Info">언데드 동료를 소환합니다. 데슬링의 체력과 피해량은 영웅 레벨에 따라 성장합니다. \n\n 소환 최대량: %1$d ( 매 마법 레벨마다 +1)</string>
     <string name="SummonDeathling_Name">데슬링 소환</string>
+    <string name="SungrassBuff_Info">뿌리가 땅에서 자라나 치유 효과가 있는 약초를 제공합니다.</string>
     <string name="SungrassBuff_Name">약초 요법</string>
     <string name="Sungrass_Desc">태양초는  그 수액의 회복 효과로 유명하다.</string>
     <string name="Sungrass_Name">태양초</string>
@@ -2370,6 +2371,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
