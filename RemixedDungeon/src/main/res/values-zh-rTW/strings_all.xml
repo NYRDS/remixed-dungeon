@@ -1535,6 +1535,7 @@
     <string name="RottingFist_Name_Objective">腐爛之拳</string>
     <string name="RoyalShield_desc">全金屬制盾牌。因此，它很重，但只有它能給你最好的保護。</string>
     <string name="RoyalShield_name">皇家鳶形盾</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">只有最優秀的射手才能靈活運用此弓。幾乎每一發箭矢都能貫穿敵人，並在他們身上留下大洞。然而，拉弓需要極大的力量。</string>
     <string name="RubyBow_Name">紅寶石弓</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -2539,6 +2540,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

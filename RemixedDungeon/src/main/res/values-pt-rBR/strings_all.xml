@@ -1911,6 +1911,7 @@ outro local do nível.</string>
     <string name="StartScene_WinGame">Para desbloquear \&quot;Desafios\&quot;, ganhe o jogo com pelo menus uma classe de jogador.</string>
     <string name="StartScene_Yes">Sim, iniciar novo jogo</string>
     <string name="Statue_Desc">Você poderia pensar que é apenas uma outra estátua feia deste calabouço, mas os seus olhos vermelhos podem ser vistos à distância. Enquanto a estátua em si é feita de pedra, o _%s_ que está empunhando parece bem real.</string>
+    <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">estátua animada</string>
     <string name="Statue_Name_Objective">estátua animada</string>
     <string name="Stench_Txt">%s de mau cheiro</string>
@@ -2727,6 +2728,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

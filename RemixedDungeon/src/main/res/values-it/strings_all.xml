@@ -1509,6 +1509,8 @@ Potrebbe bruciare?</string>
     <string name="Slow_Name_1">del Freddo %s</string>
     <string name="Slow_Name_2">del Freddo %s</string>
     <string name="Snail_Desc">Questo piccolo mollusco è cresciuto abbastanza mangiando fogna, ma è ancora molto lento, il che lo rende un avversario facile da affrontare.</string>
+    <string name="SnipersMarkBuff_Info">Il marchio è stato lasciato da un cecchino.</string>
+    <string name="SnipersMarkBuff_Name">Marchio del Cecchino</string>
     <string name="SociologistNPC_AlreadyTaken">Hai già partecipato al sondaggio, per favore torna più tardi</string>
     <string name="SociologistNPC_Desc">Questo sociologo è nella sua sacra impresa di raccogliere le opinioni del pubblico</string>
     <string name="SociologistNPC_DownloadError">Scusa, qualcosa è andato storto, riprova di nuovo</string>
@@ -1849,6 +1851,7 @@ Potrebbe bruciare?</string>
     <string name="WndDonate_silverDonateText2">Disabilita anche le ads in tutte le modalità di gioco e sblocca la Cacciatrice ad inizio gioco.</string>
     <string name="WndDontLikeAds_NotThisTime">Non ora</string>
     <string name="WndError_Title">ERRORE</string>
+    <string name="WndFortuneTeller_IdentifyAll">Tutto</string>
     <string name="WndFortuneTeller_Instruction">Posso rivelare i segreti dietro gli oggetti che possiedi.\nUn\'identificazione ti costerà %d monete.</string>
     <string name="WndFortuneTeller_No_Item">Attento, non vuoi spendere i tuoi soldi per niente, giusto? Non ci sono oggetti non identificati nel tuo inventario.</string>
     <string name="WndFortuneTeller_Title">Chiromante</string>
@@ -2198,6 +2201,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 
