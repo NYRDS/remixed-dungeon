@@ -1563,6 +1563,7 @@
     <string name="ScarecrowNPC_Quest_Start_Male">你好啊小鬼，最近怎樣？\n 我有一個令你驚喜的消息！\n\n 如果你為我收集一些糖果的話，\n 我會十分感激你的！\n\n
 </string>
     <string name="Scorpio_Desc">這些巨大的節肢類惡魔生物會盡可能的避免近距離戰鬥，並且在遠處射出能致殘的鋸齒尖刺。</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">惡魔蠍子</string>
     <string name="Scorpio_Name_Objective">惡魔蠍子</string>
     <string name="ScrollHolder_Info">你可以把很多卷軸放在裏面，既節省了空間，又保證了它們不會被火所燒毀。</string>
@@ -2540,6 +2541,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
