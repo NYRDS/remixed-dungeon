@@ -828,6 +828,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HeroClass_NecromancerPerks_3">Heiltränke sind von Anfang an identifiziert.</string>
     <string name="HeroClass_NecromancerPerks_4">Heiltränke sind von Anfang an identifiziert.</string>
     <string name="HeroClass_None">Bürgerlicher</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">Plague Doctors ernten Giftige Drüsen, Verrottete Organe, Knochensplitter und Üble Essenz von besiegten Gegnern. Blut wird im Laufe der Zeit gesammelt und zur Alchemie verwendet.</string>
     <string name="HeroClass_Rog">Schurke</string>
     <string name="HeroClass_RogPerks_0">Schurken beginnen mit einem Schattenring+1.</string>
     <string name="HeroClass_RogPerks_1">Schurken identifizieren den Typ eines Ringes, indem sie ihn ausrüsten. </string>
@@ -2655,6 +2656,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

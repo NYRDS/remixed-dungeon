@@ -1379,6 +1379,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Piranha_Name_Objective">piraña gigante</string>
     <string name="PirateSet_Info">¡Arr! ¿¡Sientes que eres un pirata... o solo como cachorro de mar!? Espero que no sea así, después de todo es solo para piratas de verdad, quiero decir... ¡Arr!</string>
     <string name="PirateSet_Name">Set Pirata</string>
+    <string name="PlagueDoctorMask_Name">Máscara de médico de la peste</string>
     <string name="PlagueDoctorNPC_After_Quest">¡Les demostrare a todos, a todos!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">¿Todavía estás aquí? Ten, toma esto.</string>
     <string name="PlagueDoctorNPC_Desc">Este hombre jorobado está vestido completamente con cuero. Huele fuertemente a medicamentos y ... ¿ajo?</string>
@@ -2769,6 +2770,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

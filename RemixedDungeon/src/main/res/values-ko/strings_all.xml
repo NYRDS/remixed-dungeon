@@ -1014,6 +1014,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Lich_Name">리치</string>
     <string name="Lich_Name_Objective">리치</string>
     <string name="LightBuff_Name">섬광</string>
+    <string name="LightningBolt_Info">고대의 무당들이 공유하는 마법으로, 특히 물 위에 서 있는 어리석은 적들에게 두 배로 더 효과적으로 전격을 가할 수 있습니다.</string>
     <string name="LightningTrap_Desc">당신은 번개 함정의 방전으로 사망했습니다...</string>
     <string name="LightningTrap_Name">번개 함정</string>
     <string name="LloidsBeacon_ACReturn">돌아가기</string>
@@ -2372,6 +2373,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
