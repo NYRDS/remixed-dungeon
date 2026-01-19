@@ -1660,6 +1660,7 @@
     <string name="Shades_Name">墨鏡</string>
     <string name="ShadowLord_Death">不！！！！！！</string>
     <string name="ShadowLord_Desc">由純粹的邪惡與黑暗構成的生物。許多人因為為他的強大力量就堅信他是古神本尊，而其他人認為他只不過是古神內庭中的一個守護者而已。</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">做好準備！</string>
     <string name="ShadowLord_Name">影之霸主</string>
     <string name="ShadowLord_Name_Objective">影之霸主</string>
@@ -1683,6 +1684,7 @@
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">持盾暴徒</string>
     <string name="Shielded_Name_Objective">持盾暴徒</string>
+    <string name="ShootInEye_Name">百步穿楊</string>
     <string name="Shopkeeper_Buy">選擇要購買的物品</string>
     <string name="Shopkeeper_BuyPrompt">讓我們看看您的庫存</string>
     <string name="Shopkeeper_Desc">這種人更應該在城市裏做買賣而不是在這。當然，他的價格解釋了一切。</string>
@@ -2541,6 +2543,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

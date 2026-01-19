@@ -849,6 +849,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HeroClass_NecromancerPerks_2">Necromantes começam com o manto do Necromante.</string>
     <string name="HeroClass_NecromancerPerks_3">Necromantes começam com a chave esqueleto do nível 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Poção de cura é identificada do começo.</string>
+    <string name="HeroClass_None">camponês</string>
     <string name="HeroClass_Priest">Sacerdote</string>
     <string name="HeroClass_Rog">ladrão</string>
     <string name="HeroClass_RogPerks_0">Ladrões começam com um Anel de Sombras +1.</string>
@@ -2728,6 +2729,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
