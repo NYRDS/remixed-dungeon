@@ -1149,6 +1149,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="LloidsBeacon_Preventing">Suatu aura sihir yang kuat yang ada di sini mencegah Anda menggunakan lloyd\'s beacon!</string>
     <string name="LloidsBeacon_Return">Lloyd beacon berhasil ditetapkan di lokasi Anda saat ini, sekarang Anda dapat kembali ke sini kapan saja.</string>
     <string name="LloidsBeacon_Set">Suar ini dipasang di suatu tempat pada level %d dari Remixed Dungeon.</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Info">Pedang panjang ini menyebabkan serangan berat dengan meletakan bebannya di tiap sabetan.</string>
     <string name="Longsword_Name">pedang panjang</string>
     <string name="Luck_Name_0">beruntung %s</string>
@@ -2727,6 +2728,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

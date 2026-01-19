@@ -1095,6 +1095,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MimicPie_Name">mimik</string>
     <string name="MimicPie_Name_Objective">mimik</string>
     <string name="Mimic_Desc">Mimik merupakan sejenis makhluk ajaib yang dapat meniru rupa yang dikehendaki. Dalam kurungan bawah tanah meraka suka memilih rupa peti harta-karun, kerana mereka tahu mengumpan pengembara.\&quot;;</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">mimik</string>
     <string name="Mimic_Name_Objective">mimik</string>
     <string name="MirrorImage_Desc">Beruang ilusi ini hampir menyerupai anda, tetapi lebih pucat dan sedikit bergetar.</string>
@@ -2444,6 +2445,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
