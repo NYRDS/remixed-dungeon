@@ -558,6 +558,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="EarthElemental_Desc">Keunsuran tanah adalah jasad tanah yang diperkasakan dengan tenaga alam.</string>
     <string name="EarthElemental_Name">keunsuran tanah</string>
     <string name="EarthElemental_Name_Objective">keunsuran tanah</string>
+    <string name="EarthrootBuff_Info">Akar-akar telah tumbuh dari tanah memberikan perisai semula jadi.</string>
     <string name="EarthrootBuff_Name">Perisai Herba</string>
     <string name="Earthroot_Desc">Sebaik sahaja seseorang menyentuh Akar Tanah, akarnya akan membentuk perisai alamiah disekelilingnya.</string>
     <string name="Earthroot_Name">Akar Tanah</string>
@@ -2198,6 +2199,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WoodenBow_Name">busur kayu</string>
     <string name="WoodenCrossbow_Info">Busur silang kayu asas, yang direka khas untuk menembak anak panah busur.</string>
     <string name="WoodenCrossbow_Name">Busur silang kayu</string>
+    <string name="WoodenShield_name">Pengadang Kayu</string>
     <string name="Worm_Desc">Tak dapat gambarkan betapa besarnya cacing ini. Sebahagian badannya masih di bawah lantai, badan makhluk tersebut diselaputi dengan cebisan daging dan lendir. Mandibel gergasi merupakan cara ia bergerak terus ke permukaan.</string>
     <string name="Worm_Name">cacing</string>
     <string name="Worm_Name_Objective">cacing</string>
@@ -2445,6 +2447,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
