@@ -516,6 +516,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DriedRose_Name">매마른 장미</string>
     <string name="Drink_ACDrink">마신다</string>
     <string name="Drink_Message">상쾌한 기분이 든다!</string>
+    <string name="Drunkard_Phrase_1">술 좀 주세요!</string>
     <string name="Dungeon_DeadEnd">당신 여기서 뭐하시는 겁니까?!</string>
     <string name="Dungeon_NoTips">글을 해석할 수 없습니다..</string>
     <string name="Dungeon_Tips_0">당신의 힘을 과대평가하지 마세요. 제대로 다룰 수 있는 무기와 방어구를 사용하세요.</string>
@@ -2369,6 +2370,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

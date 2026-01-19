@@ -722,6 +722,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="GnollArmor_NotGnoll">Nur Gnolle können Gnollrüstung tragen!</string>
     <string name="GnollCostume_Info">Ein unglaublich warmes und flauschiges Kostüm. Wer dieses Kostüm trägt, sieht aus wie... jemand, der versucht sich als Gnoll zu verkleiden. Aber Gnolle werden darauf nicht hereinfallen, sie werden dich trotzdem angreifen.</string>
     <string name="GnollCostume_Name">Gnoll Kostüm</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">Traditionelles Tomahawk von Gnoll-Handwerkern gefertigt, jeder Klan hat sein eigenes einzigartiges Design. Dieses Tomahawk ist deutlich leichter als das Gegenstück, das von Menschen ist.</string>
     <string name="GnollTamahawk_Name">Gnoll Tomahawk</string>
     <string name="Gnoll_Desc">Gnolle sind menschliche Wesen, die Hyänen ähneln. Sie leben in Abwässerkanälen und Höhlen, von wo sie von Zeit zu Zeit zu Raubzügen an die Oberfläche ziehen. Gnollspäher sind anerkannte Mitglieder ihres Rudels, aber nicht so stark wie Schläger und nicht so intelligent wie Schamanen.</string>
@@ -2651,6 +2652,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
