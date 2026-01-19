@@ -299,6 +299,7 @@
     <string name="BodyArmorSpell_Name">Тело-щит</string>
     <string name="BoneSaw_Info">Хирургическая пила тонкой работы, созданная для быстрого вскрытия. Её урон и скорость атаки растут с мастерством Чумного доктора. Критические удары выбивают дополнительные собираемые части, безжалостно эффективна против парализованных врагов.</string>
     <string name="BoneSaw_Name">Костяная пила</string>
+    <string name="BoneShard_Info">Острый осколок кости, добытый из побеждённого врага. Эти осколки удивительно прочны и полезны в изготовлении.</string>
     <string name="BoneShard_Name">Осколок кости</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Брошенное во врага, это изогнутое деревянное оружие вернётся в руку владельца.</string>
@@ -2261,6 +2262,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="TownsfolkSilentNPC_Name_Objective">горожанина</string>
     <string name="ToxicGas_Info">Здесь витает зеленоватое облако токсичного газа.</string>
     <string name="ToxicGas_Info1">Ты отравился токсичным газом..</string>
+    <string name="ToxicGland_Name">Токсичная железа</string>
     <string name="TrapWnd_Step">Вы уверенны, что хотите наступить на эту ловушку? Может статься, что вы умрёте.</string>
     <string name="TrapWnd_Title">Ловушка</string>
     <string name="TreacherousSpirit_Desc">Это чудовищное создание выглядит как ожившее облако тьмы. Его гигантский глаз сверлит тебя взглядом, кротко вздрагивая от каждого твоего движения.</string>
@@ -3032,6 +3034,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
+
 
 
 

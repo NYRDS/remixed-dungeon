@@ -640,6 +640,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Exhumation_NoGrave">Hier ist kein Grab um eine Exhumierung durchzuführen.</string>
     <string name="Exhumation_Ok">Ich werde dir gehorchen.</string>
     <string name="ExplodingSkull_Desc">Dieser schwebende, brennende Schädel scheint extrem zerbrechlich zu sein, es sieht so aus, als ob er jede Sekunde bersten könnte.</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">Explodierender Schädel</string>
     <string name="ExplodingSkull_Name_Objective">Explodierender Schädel</string>
     <string name="Eye_Desc">Ein anderer Name dieses Dämons ist \&quot;Kugel des Hasses\&quot;. Wenn er einen Feind erblickt, benutzt er seinen Todesblick ohne Rücksicht auf Verbündete in der Nähe und verwundet diese dabei oft.</string>
@@ -2118,6 +2119,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="Weightstone_WndChoice">Wie möchtest du dein %s ausgleichen?</string>
     <string name="Weightstone_WndSpeed">Für Schnelligkeit</string>
     <string name="Welcome_Ok">Okay!</string>
+    <string name="Welcome_Text_32_1">    remix.32.1\n    - Gameplay:\n    -- Plague Doctor Questreihe\n    -- Mob-Kadaver sind nun teilweise nutzbare Gegenstände\n    -- Verbesserte Haustierkontrolle\n    - UX:\n    -- Verbessertes Spielstand-Management\n    - Modding:\n    -- Lokale Mod-Installationsmethoden\n    -- Benutzerdefinierte Gegenstände können jetzt Aktionen ausführen, während sie in Stapeln sind\n    - Fehler behoben\n    </string>
     <string name="Welcome_Title">Herzlich willkommen!</string>
     <string name="WindGust_Info">Bläst einen Windstoß gegen den ausgewählten Charakter und stößt in weg.</string>
     <string name="WindGust_Name">Windstoß</string>
@@ -2653,6 +2655,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

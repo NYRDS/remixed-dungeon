@@ -81,6 +81,7 @@
     <string name="AwarenessBuff_Info">感官变得敏锐，对周围环境的感知变得更强了。</string>
     <string name="AwarenessBuff_Name">察觉</string>
     <string name="AzuterronNPC_Desc">被黑雾包围着的神秘人</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">陌生人</string>
     <string name="AzuterronNPC_Name_Objective">陌生人</string>
     <string name="AzuterronNPC_Quest_End">棒极了。把这瓶药水拿去吧，当然，它是有益的。</string>
@@ -2760,6 +2761,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
