@@ -2497,6 +2497,7 @@ remix.31.1\n
     <string name="YogsTeeth_Name">Yog之牙</string>
     <string name="YogsTeeth_Name_Objective">Yog之牙</string>
     <string name="ZombieGnoll_Desc">扭曲、破损、不再具有人形的豺狼人僵尸。由一堆腐烂的肉、骨头以及毁灭、杀戮的意识组成。</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">豺狼僵尸死而复生了！</string>
     <string name="ZombieGnoll_Name">豺狼僵尸</string>
     <string name="ZombieGnoll_Name_Objective">豺狼僵尸</string>
@@ -2758,6 +2759,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

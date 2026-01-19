@@ -180,6 +180,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BardNPC_Desc">Der Barde der Stadt spielt seine Laute.</string>
     <string name="BardNPC_Name">Barde</string>
     <string name="BardNPC_Name_Objective">Barde</string>
+    <string name="BardSong_1">Meine Frau und ich leben ganz allein,\nIn einem kleinen Blockhaus, das unser eigen.\nSie liebte Gin, ich liebte Rum,\nIch sag euch, wir hatten viel Spaß darum.</string>
     <string name="BarkskinBuff_Info">Der Körper ist mit Rinde bedeckt, die einen Teil des Schadens abwehrt.</string>
     <string name="BarkskinBuff_Name">Zusäztliche Rüstung</string>
     <string name="Barrel_Desc">Sieht aus wie ein einfaches Holzfass. Wenn du näher kommst, kannst du einen Hauch Öl riechen. Das Fass scheint ziemlich leicht zu sein, du könntest es vielleicht schieben.</string>
@@ -2652,6 +2653,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

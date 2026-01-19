@@ -1370,6 +1370,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Pickaxe_Info">Esto es una herramienta grande y robusta para romper rocas. Probablemente pueda usarse como arma. </string>
     <string name="Pickaxe_Name">pico</string>
     <string name="Pickaxe_NoVein">No hay ninguna veta de oro oscuro cerca </string>
+    <string name="Pickaxe_NothingToMine">¡No hay nada que excavar aquí!</string>
     <string name="Piercing_Name_0">%s perforador.</string>
     <string name="Piercing_Name_1">%s perforador.</string>
     <string name="Piercing_Name_2">%s perforador.</string>
@@ -2768,6 +2769,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -868,6 +868,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="HealthDart_Info">La pointe de cette fléchette a été trempée dans une potion de guérison.</string>
     <string name="HealthDart_Name">Fléchette de guérison</string>
     <string name="Heap_Mimic">C\'est une ophrys !</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Le coeur noir et palpitant de l\'Esprit perfide.</string>
     <string name="HeartOfDarkness_Name">Coeur des ténébres</string>
     <string name="Hedgehog_Desc">Ce hérisson a l\'air nerveux.</string>
@@ -2918,6 +2919,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
