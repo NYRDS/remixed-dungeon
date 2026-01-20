@@ -1468,6 +1468,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PseudoPasty_Info">Pastel jagung autentik dengan isi tradisional berupa daging dan kentang.</string>
     <string name="PseudoPasty_Name">pastel</string>
     <string name="PseudoRat_Desc">Makhluk mengerikan yang keluar dari mayat tikus yang tidak terlihat seperti pengerat atau binatang lainnya yang Anda pernah lihat. Mulut besar, penuh dengan gigi yang tajam, menyelubungi kebanyakan dari tubuhnya.</string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">Tikus-pseudo</string>
     <string name="PseudoRat_Name_Objective">Tikus-pseudo</string>
     <string name="PumpkinPie_Info">Pie labu yang enak, sama seperti yang ibumu biasanya panggang.</string>
@@ -2729,6 +2730,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

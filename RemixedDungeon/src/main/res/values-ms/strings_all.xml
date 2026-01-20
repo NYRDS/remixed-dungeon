@@ -947,6 +947,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="KoboldIcemancer_Name">pengguna ais kobold</string>
     <string name="KoboldIcemancer_Name_Objective">pengguna ais kobold</string>
     <string name="Kobold_Desc">Kewujudan kobold merupakan satu lagenda.  Leluhur gnoll, kobold tinggal jauh di dalam gua sejuk. Dipercayai mereka menguasai kejuruteraan dan mesin sebelum orang kerdil. Tetapi tidak diketahui kenapa mereka menghilangkan diri...</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="KrampusHead_Info">Pernahkah anda tertanya-tanya bagaimana rasanya mengambil peranan yang lebih jahat semasa menjelajahi dungeon? Nah, anda pastinya akan membawa ketakutan kepada tikus-tikus kecil di sekitar dengan penampilan seperti syaitan ini.</string>
@@ -1144,6 +1145,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Monk_Disarm">%1$s telah mengetuk jatuh %2$s dari pegangan anda!</string>
     <string name="Monk_Name">sami orang kerdil</string>
     <string name="Monk_Name_Objective">sami orang kerdil</string>
+    <string name="Movement_Speed">Kelajuan pergerakan</string>
     <string name="Multiplicity_Txt">%s penggandaan</string>
     <string name="Mushroom_Eat_Message">Cendawan ini rasanya pelik!</string>
     <string name="MysteryMeat_Info">Makanlah tetapi tanggung risiko sendiri!</string>
@@ -2453,6 +2455,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
