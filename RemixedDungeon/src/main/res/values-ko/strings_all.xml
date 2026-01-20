@@ -602,6 +602,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Food_ACEat">먹기</string>
     <string name="Food_Message">그 음식은 맛있었습니다!</string>
     <string name="FortuneTellerNPC_Desc">이 여성은 길고 밝게 칠해진 로브를 입었습니다. 그녀는 예언의 마술에 통달한 누군가에게는 매우 어려보일 것입니다. 가까이 가보면, 그녀가 수정구를 응시하며 중얼거리는 소리를 들을 수 있을 것입니다.</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">예언가</string>
     <string name="FortuneTellerNPC_Name_Objective">예언가</string>
     <string name="FreezeGlobe_Info">선택한 캐릭터를 잠시 아무런 행동을 하지 못하게 냉동시킵니다.</string>
@@ -2374,6 +2375,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
