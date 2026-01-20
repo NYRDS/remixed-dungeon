@@ -2138,6 +2138,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndChooseWay_Cancel">Ich entscheide mich später</string>
     <string name="WndChooseWay_Message">Welchen Weg schlägst du ein?</string>
     <string name="WndClass_Mastery">Meisterschaft</string>
+    <string name="WndCryptoDonate_copyAddress">Adresse kopieren</string>
     <string name="WndCryptoDonate_currency">Währung</string>
     <string name="WndCryptoDonate_supportDev">Entwickler unterstützen</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - für jeden kostenlos und wird es auch immer bleiben.\n\nAllerdings können Sie uns dabei helfen, das Spiel noch besser zu machen.\n\nNeben unserem herzlichen Dank bekommst du auch einige kosmetische Verbesserungen.</string>
@@ -2657,6 +2658,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

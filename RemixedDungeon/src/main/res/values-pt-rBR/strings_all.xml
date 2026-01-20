@@ -221,6 +221,7 @@
     <string name="Bishop_title">Bispo</string>
     <string name="BlackCat_AiStatus">Este gato está fazendo coisas comuns de gato</string>
     <string name="BlackCat_Desc">Isso é um gato preto</string>
+    <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Name">Gato preto</string>
     <string name="BlackCat_Name_Objective">gato</string>
     <string name="BlackCat_Phrases_0">Prrrrrrr</string>
@@ -2730,6 +2731,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

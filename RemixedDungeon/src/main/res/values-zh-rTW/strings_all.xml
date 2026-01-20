@@ -273,6 +273,7 @@
     <string name="Brute_StaEnraged">激怒</string>
     <string name="BurningBuff_Name">燃燒</string>
     <string name="BurningFist_Desc">上古之神的燃燒之拳</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">燃燒之拳</string>
     <string name="BurningFist_Name_Objective">燃燒之拳</string>
     <string name="Burning_Burns">%s被燒掉了！</string>
@@ -2544,6 +2545,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

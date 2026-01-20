@@ -880,6 +880,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="Hedgehog_Info4">Prends cette tarte</string>
     <string name="Hedgehog_Name">hérisson</string>
     <string name="HeroClass_Elf">elfe</string>
+    <string name="HeroClass_ElfPerks_0">Les Elfes commencent avec 15 points de Santé et 9 points de Force.</string>
     <string name="HeroClass_ElfPerks_1">Les Elfes ne peuvent pas être immobilisés.</string>
     <string name="HeroClass_ElfPerks_2">Les Elfes commencent avec un arc en bois amélioré et des flèches</string>
     <string name="HeroClass_ElfPerks_3">Les Elfes sont extrêmement efficaces avec les arcs et sont agiles</string>
@@ -2920,6 +2921,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

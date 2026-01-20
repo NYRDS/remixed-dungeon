@@ -297,6 +297,7 @@
     <string name="Burning_Burns">¡%s se quema!</string>
     <string name="Burning_Death">Te has quemado hasta morir...</string>
     <string name="CagedKobold_Desc">Un kobold, en una jaula.</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">Hey ... HEY! ¿Eres un aventurero? Ayúdame a salir, esos malvados militares me encerraron. Tienen la intención de reactivar una antigua arma para conquistar a los humanas de arriba! Me opuse porque era peligroso, y ellos simplemente encerraron en esta jaula. Por favor, encuentra la llave de la jaula, a cambio le ayudaré lo mejor que pueda.</string>
     <string name="CagedKobold_Message1">Por favor...</string>
     <string name="CagedKobold_Message2">Tienes que ayudarme a salir amigo.</string>
@@ -2772,6 +2773,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
