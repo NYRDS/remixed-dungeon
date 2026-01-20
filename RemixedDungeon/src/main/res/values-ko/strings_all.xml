@@ -1464,6 +1464,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="RottenRation_Info">옛날 옛적에 이 음식은 먹을 수 있었을 것입니다.</string>
     <string name="RottenRation_Name">썩은 비상 식량</string>
     <string name="RottingFist_Desc">고대 신의 썩어가는 주먹</string>
+    <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">썩어가는 주먹</string>
     <string name="RottingFist_Name_Objective">썩어가는 주먹</string>
     <string name="RubyBow_Info">오직 최고의 궁수만이 루비 활을 이용할 수 있습니다. 활시위를 당기기 위해선 엄청난 힘이 필요하지만, 그렇게 발사된 화살 대부분은 적의 몸통에 바람구멍을 내어 버린다고 합니다.</string>
@@ -2378,6 +2379,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

@@ -1732,6 +1732,7 @@ Potrebbe bruciare?</string>
     <string name="WandOfFlock_SheepBaa_3">Baa...</string>
     <string name="WandOfFlock_SheepBaa_4">Bee...</string>
     <string name="WandOfFlock_SheepBaa_5">Ble...</string>
+    <string name="WandOfIcebolt_Name">Bacchetta del Fulmine di Ghiaccio</string>
     <string name="WandOfLightning_Info">Questa bacchetta genera fasci mortali di elettricità, provocando danni a diverse creature vicine tra loro.</string>
     <string name="WandOfLightning_Info1">Ti sei ucciso da solo con la bacchetta del Fulmine...</string>
     <string name="WandOfLightning_Name">Bacchetta del Fulmine</string>
@@ -2207,6 +2208,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
