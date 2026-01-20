@@ -67,6 +67,7 @@
     <string name="Armor_Info8">\n\n %s안에 해로운 마법이 숨어있음을 느낄 수 있다.</string>
     <string name="Armor_ToString">%1$s :%2$d</string>
     <string name="ArmoredStatue_Desc">당신은 이 조각상이 다른 못생긴 조각상들과 같다고 도저히 생각할 수가 없습니다. 붉게 타오르는 눈들뿐만이 아니라 아무도 저런 물건에게 진짜 %s 을/를 착용시키진 않을 것이기 떄문입니다..</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">살아 움직이는 조각상</string>
     <string name="ArmoredStatue_Name_Objective">살아 움직이는 조각상</string>
     <string name="Artifact_Limit">유물은 동시에 2개까지 착용할 수 있습니다.</string>
@@ -2377,6 +2378,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

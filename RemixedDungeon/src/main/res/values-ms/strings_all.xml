@@ -77,6 +77,7 @@
     <string name="ArmoredStatue_Name">patung hidup</string>
     <string name="ArmoredStatue_Name_Objective">patung hidup</string>
     <string name="Artifact_Limit">Anda hanya boleh pakai 2 artifak dalam satu masa.</string>
+    <string name="Attack_Cooldown">Tempoh menunggu serangan</string>
     <string name="AwarenessBuff_Name">Kesedaran</string>
     <string name="AzuterronNPC_Desc">FIgura misteri yang diselubungi dengan kabut hitam.</string>
     <string name="AzuterronNPC_Name">Orang Asing</string>
@@ -295,6 +296,7 @@
     <string name="Caves_TileGrass">Lumut berpendarflour</string>
     <string name="Caves_TileHighGrass">Cendawan berpendarflour</string>
     <string name="Caves_TileWater">Air sejuk membeku</string>
+    <string name="Challenges_Descriptions_8">Perjalanan anda akan bermula di dalam lubang gelap dan berbahaya di bandar, dengan satu-satunya jalan ke permukaan disekat. Lebih teruk lagi, anda hanya boleh menggunakan peralatan yang anda jumpai dalam penjara bawah tanah. Dengan sumber dan peralatan yang terhad, hidup atau mati anda bergantung pada kemahiran dan strategi anda.</string>
     <string name="Challenges_Names_0">Menjaga pemakanan</string>
     <string name="Challenges_Names_1">Kepercayaan ialah perisai saya</string>
     <string name="Challenges_Names_2">Takut ubat</string>
@@ -2451,6 +2453,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
