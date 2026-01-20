@@ -502,6 +502,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="CrippleBuff_Info">Der Körper ist verkrüppelt, aber der Kampf geht weiter.</string>
     <string name="CrippleBuff_Name">Angeschlagen</string>
     <string name="Crystal_Desc">Ein großer leuchtender Kristall schwebt in der Luft. Wahrscheinlich steckt ein starker Zauber drin.</string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">Fließender Kristall</string>
     <string name="Crystal_Name_Objective">Fließender Kristall</string>
     <string name="CurareDart_Gender">masculine</string>
@@ -2659,6 +2660,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

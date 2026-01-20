@@ -2052,6 +2052,7 @@
     <string name="TownsfolkSilentNPC_Name_Objective">城镇居民</string>
     <string name="ToxicGas_Info">这里漂浮着一团绿色毒云</string>
     <string name="ToxicGas_Info1">你死于吸毒……</string>
+    <string name="ToxicGland_Name">毒性腺体</string>
     <string name="TrapWnd_Step">你当真要踏上此陷阱？你可能会因此失命。</string>
     <string name="TrapWnd_Title">陷阱</string>
     <string name="TreacherousSpirit_Desc">这个巨大的怪物看起来像是一片有生命的黑暗之云。它无眼睑的眼睛凝视这你，随着你的每个动作而颤动。</string>
@@ -2763,6 +2764,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

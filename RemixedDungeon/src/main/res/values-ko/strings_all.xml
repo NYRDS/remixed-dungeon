@@ -702,8 +702,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HealerNPC_Name_Objective">마을 사제</string>
     <string name="Healing_Info">이 주문은 모든 모험가들에게 중요합니다. 시전자의 최대 체력의 1/3을 회복합니다.</string>
     <string name="Healing_Name">회복</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">이 화살의 촉에는 회복 물약이 발려 있습니다.</string>
     <string name="HealthArrow_Name">회복 화살</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">이 다트의 촉에는 회복 물약이 발려 있습니다.</string>
     <string name="HealthDart_Name">회복 다트</string>
     <string name="Heap_Mimic">이것은 미믹이다!</string>
@@ -2375,6 +2377,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 

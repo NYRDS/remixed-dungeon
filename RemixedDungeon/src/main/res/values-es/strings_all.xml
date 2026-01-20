@@ -82,6 +82,7 @@
     <string name="ArmoredStatue_Name">estatua animada</string>
     <string name="ArmoredStatue_Name_Objective">estatua animada</string>
     <string name="Artifact_Limit">Solo puedes usar 2 artefactos al mismo tiempo.</string>
+    <string name="AttackDelay_Increased">No puedes manejar el %s así. Golpes lentos, respiraciones pesadas...</string>
     <string name="Attack_Cooldown">Enfriamiento de ataque</string>
     <string name="Attack_Range">Rango de ataque</string>
     <string name="AwarenessBuff_Info">Los sentidos se han agudizado, dando más conciencia del entorno.</string>
@@ -2774,6 +2775,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
