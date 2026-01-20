@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "warnings": [
+    {
+      "code": "Trial",
+      "cwe": 0,
+      "level": 0,
+      "positions": [
+        {
+          "file": "",
+          "line": 1,
+          "endLine": 1,
+          "column": 1,
+          "endColumn": 1,
+          "navigation": {
+            "previousLine": 0,
+            "currentLine": 0,
+            "nextLine": 0,
+            "columns": 0
+          }
+        }
+      ],
+      "message": "License was not entered. Please enter a valid PVS-Studio license or request a trial license at https://pvs-studio.com/en/pvs-studio/try-free/.",
+      "projects": [],
+      "favorite": false,
+      "falseAlarm": false,
+      "analyzedSourceFiles": []
+    }
+  ]
+}

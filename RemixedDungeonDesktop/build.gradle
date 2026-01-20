@@ -88,6 +88,8 @@ tasks.register('quickModTest', JavaExec) {
     jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
 }
 
+
+
 // Add a task for running the game with a specific mod for a given number of turns
 tasks.register('runModForTurns', JavaExec) {
     dependsOn classes

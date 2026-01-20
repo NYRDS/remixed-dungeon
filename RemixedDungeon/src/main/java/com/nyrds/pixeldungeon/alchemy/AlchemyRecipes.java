@@ -280,4 +280,108 @@ public class AlchemyRecipes {
     public static int getRecipeCount() {
         return recipes.size();
     }
+
+    /**
+     * Register a recipe from Lua with validation
+     * This method is called from Lua scripts to register custom recipes at runtime
+     */
+    @LuaInterface
+    public static boolean registerRecipeFromLua(List<String> input, Object output) {
+        List<String> outputs = new ArrayList<>();
+
+        // Handle both single output (string) and multiple outputs (table/array)
+        if (output instanceof String) {
+            outputs.add((String) output);
+        } else if (output instanceof List) {
+            outputs.addAll((List<String>) output);
+        } else {
+            return false; // Invalid output type
+        }
+
+        // Use the existing addRecipe method which handles validation
+        return addRecipe(input, outputs);
+    }
+
+    /**
+     * Check if a specific item is part of any recipe's input
+     * @param itemName The name of the item to check
+     * @return A list of recipes that use this item as an ingredient
+     */
+    @LuaInterface
+    public static List<Map.Entry<List<String>, List<String>>> getRecipesWithItem(String itemName) {
+        List<Map.Entry<List<String>, List<String>>> matchingRecipes = new ArrayList<>();
+
+        for (Map.Entry<List<String>, List<String>> recipe : recipes.entrySet()) {
+            if (recipe.getKey().contains(itemName)) {
+                matchingRecipes.add(recipe);
+            }
+        }
+
+        return matchingRecipes;
+    }
+
+
+    /**
+     * Check if the player has all required ingredients for a specific recipe
+     * @param inputIngredients The list of ingredients required by the recipe
+     * @param playerInventory The player's current inventory
+     * @return True if the player has all required ingredients in sufficient quantities
+     */
+    public static boolean hasRequiredIngredients(List<String> inputIngredients, Map<String, Integer> playerInventory) {
+        // Count required quantities for each ingredient
+        Map<String, Integer> requiredQuantities = new HashMap<>();
+        for (String ingredient : inputIngredients) {
+            requiredQuantities.put(ingredient, requiredQuantities.getOrDefault(ingredient, 0) + 1);
+        }
+
+        // Check if player has enough of each required ingredient
+        for (Map.Entry<String, Integer> required : requiredQuantities.entrySet()) {
+            String ingredient = required.getKey();
+            int requiredQty = required.getValue();
+
+            int availableQty = playerInventory.getOrDefault(ingredient, 0);
+
+            if (availableQty < requiredQty) {
+                return false; // Not enough of this ingredient
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Get all recipes for which the player has all required ingredients
+     * @param playerInventory The player's current inventory with quantities
+     * @return A list of recipes for which the player has all required ingredients
+     */
+    public static List<Map.Entry<List<String>, List<String>>> getAvailableRecipes(Map<String, Integer> playerInventory) {
+        List<Map.Entry<List<String>, List<String>>> availableRecipes = new ArrayList<>();
+
+        for (Map.Entry<List<String>, List<String>> recipe : recipes.entrySet()) {
+            if (hasRequiredIngredients(recipe.getKey(), playerInventory)) {
+                availableRecipes.add(recipe);
+            }
+        }
+
+        return availableRecipes;
+    }
+
+    /**
+     * Get all recipes that contain a specific item as an ingredient
+     * @param itemName The name of the item to search for
+     * @return A list of recipes that use this item as an ingredient
+     */
+    @LuaInterface
+    public static List<Map.Entry<List<String>, List<String>>> getRecipesContainingItem(String itemName) {
+        List<Map.Entry<List<String>, List<String>>> matchingRecipes = new ArrayList<>();
+
+        for (Map.Entry<List<String>, List<String>> recipe : recipes.entrySet()) {
+            if (recipe.getKey().contains(itemName)) {
+                matchingRecipes.add(recipe);
+            }
+        }
+
+        return matchingRecipes;
+    }
+
 }

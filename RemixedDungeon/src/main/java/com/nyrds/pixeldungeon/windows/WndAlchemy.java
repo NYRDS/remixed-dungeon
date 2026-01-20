@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
@@ -100,6 +101,17 @@ public class WndAlchemy extends Window {
         executeButton.enable(false); // Initially disabled until a recipe is selected
         buttonsContainer.add(executeButton);
 
+        // Check Available Recipes button
+        RedButton checkRecipesButton = new RedButton("Check Available") {
+            @Override
+            protected void onClick() {
+                hide();
+                GameScene.show(new WndRecipeChecker());
+            }
+        };
+        checkRecipesButton.setSize(Math.min(100, windowWidth/3), 18);
+        buttonsContainer.add(checkRecipesButton);
+
         // Close button
         RedButton closeButton = new RedButton("Close") {
             @Override
@@ -125,7 +137,7 @@ public class WndAlchemy extends Window {
     private void setupTransmutationCircle(float windowWidth, float windowHeight) {
         // Create the transmutation circle
         transmutationCircle = new TransmutationCircle();
-        float scale = 0.25f;
+        float scale = 0.4f;
 
         transmutationCircle.alpha(0.3f);
         //transmutationCircle.brightness(0.5f);

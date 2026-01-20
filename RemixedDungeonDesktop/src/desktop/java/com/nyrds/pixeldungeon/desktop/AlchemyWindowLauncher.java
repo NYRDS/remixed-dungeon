@@ -26,6 +26,13 @@ public class AlchemyWindowLauncher extends RemixedDungeon {
         public void create() {
             super.create();
 
+            try {
+                // Access the LuaEngine to ensure it's initialized with proper resource finder
+                com.nyrds.lua.LuaEngine.call("print"); // Just a simple call to ensure initialization
+            } catch (Exception e) {
+                GLog.w("Error initializing Lua engine: %s", e.getMessage());
+            }
+
             // Add the alchemy window to this scene
             try {
                 add(new WndAlchemy());
