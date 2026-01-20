@@ -912,6 +912,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="HeroClass_NecromancerPerks_4">Les Potions de soins sont identifiées dès le début.</string>
     <string name="HeroClass_None">commun</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Commencez avec un Masque de peste (immunité à tous les gaz) et une Scie en os. Les coups critiques laissent tomber des parties supplémentaires, et la scie inflige +50% de dégâts aux ennemis paralysés.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Les médecins pestiférés subissent de grandes pénalités de précision sans leur bien-aimée Scie en Os en main et ne peuvent pas utiliser d'armes à distance.</string>
     <string name="HeroClass_Rog">voleur</string>
     <string name="HeroClass_RogPerks_0">Les voleurs commencent avec un anneau des ténèbres +1.</string>
     <string name="HeroClass_RogPerks_1">Les voleurs identifient le type d\'un anneau en l\'équipant.</string>
@@ -2921,6 +2922,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

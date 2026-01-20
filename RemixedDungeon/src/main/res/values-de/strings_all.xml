@@ -2363,6 +2363,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
     <string name="Wnd_Button_No">Nein</string>
     <string name="Wnd_Button_Ok">Ok</string>
     <string name="Wnd_Button_Yes">Ja</string>
+    <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Dieser einfache Holzbogen könnte sich als hilfreich erweisen, wenn du erst mal Pfeile gefunden hast.</string>
     <string name="WoodenBow_Name">Holzbogen</string>
     <string name="WoodenCrossbow_Info">Eine klassische, hölzerne Armbrust. Es sieht so aus, als ob sie dafür entworfen wurde, Pfeile zu verschiessen</string>
@@ -2658,6 +2659,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
