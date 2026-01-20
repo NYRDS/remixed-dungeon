@@ -1003,6 +1003,7 @@ Potrebbe bruciare?</string>
     <string name="MimicAmulet_Name">imitatore</string>
     <string name="MimicAmulet_Name_Objective">imitatore</string>
     <string name="MimicPie_Desc">I Replicanti sono creature magiche possono prendere qualsiasi forma essi desiderino. Questo qui assomiglia a un grande e saporito pasticcio.</string>
+    <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">replicante</string>
     <string name="MimicPie_Name_Objective">replicante</string>
     <string name="Mimic_Desc">I Replicanti sono creature magiche che possono prendere qualsiasi forma essi desiderino. Nei dungeon scelgono quasi sempre la forma di bauli del tesoro, poiché sanno come attirare un avventuriero.</string>
@@ -2205,6 +2206,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

@@ -373,6 +373,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Char_YouMissed">%1$s %2$s a támadásodat.</string>
     <string name="ChargrilledMeat_Info">Úgy néz ki mint egy jó steak.</string>
     <string name="ChargrilledMeat_Name">Rostonsült hús</string>
+    <string name="CharmBuff_Info">Elbájolta az elmét és a testet!</string>
     <string name="CharmBuff_Name">Megbűvölt</string>
     <string name="Chasm_Chasm">Szakadék</string>
     <string name="Chasm_Info">Szörnyet haltál... </string>
@@ -1982,6 +1983,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WaterOfHealth_Info">A kút vizéből sugárzik az életerő. Igyál egy kortyot és minden sebed meggyógyul, valamint az éhséged is elmúlik.</string>
     <string name="WaterOfHealth_Procced">Ahogy iszod a vizet érzed, hogy az összes sebed begyógyul.</string>
     <string name="WaterOfTransmutation_Info">A kút vizéből sugárzik a változás ereje. Dobj bele egy tárgyat és a kút átváltoztatja azt valami mássá.</string>
+    <string name="WeaknessBuff_Info">A gyengeség ellepi a testet, amely könnyebb célponttá teszi birtokosát.</string>
     <string name="WeaknessBuff_Name">Legyengült</string>
     <string name="Weapon_Identify">Eléggé megismerted a %1$s-ed. Ez egy %2$s.</string>
     <string name="Weapon_Incompatible">A különféle mágiák ellenhatása törölte a varázst erről a fegyverről!</string>
@@ -2013,6 +2015,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndChooseWay_Cancel">Később döntök majd</string>
     <string name="WndChooseWay_Message">Melyik utat fogod követni?</string>
     <string name="WndClass_Mastery">Kiválóság</string>
+    <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - Mindenki számára ingyenes, és az is marad.\n\nAzonban segíthetsz jobbá tenni a játékot.\n\nHálás köszönetünk mellett némi kozmetikai extrára is számíthatsz.</string>
     <string name="WndDonate_donate">támogatás:</string>
     <string name="WndDonate_gold">arany</string>
@@ -2467,6 +2470,9 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
 
 
 

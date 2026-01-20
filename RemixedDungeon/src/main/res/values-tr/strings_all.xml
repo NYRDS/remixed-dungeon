@@ -1988,6 +1988,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="Sungrass_Name">Güneş Çimeni</string>
     <string name="SurfaceScene_GameOver">Oyun Bitti</string>
     <string name="SuspiciousRat_Desc">Sıçanlar zindanlarda görmeye alışık olduğun yaratıklardır. Bu her hareket ettiğinde tüm vücudu spazmlar ile kasııyor.</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">Kuşkucu sıçan şiddetle seyiriyor.</string>
     <string name="SuspiciousRat_Name">şüpheli fare</string>
     <string name="SuspiciousRat_Name_Objective">Şüpheli sıçan</string>
@@ -2808,6 +2809,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
