@@ -16,6 +16,7 @@
     <string name="AboutScene_Translation">Localización por:</string>
     <string name="AboutScene_Translation_Names">Andrés Javaloy Asensio &amp;  MLGMan &amp;  Iván Cadilla</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon por NYRDS basado en la Fuente de Pixel Dungeon por Watabou.</string>
+    <string name="Accuracy_DecreasedDoctorBareHands">Las manos desnudas infectan mi técnica. Sin el corte limpio de la Sierra, mi puntería se corrompe en caos.</string>
     <string name="Acidic_Desc">Estos demonios arácnidos evitan el combate cercano a toda costa, disparando proyectiles paralizantes desde lejos.</string>
     <string name="Acidic_Name">escorpión ácido</string>
     <string name="Acidic_Name_Objective">escorpión ácido</string>
@@ -346,6 +347,7 @@
     <string name="Challenges_Names_8">Niguna ciudad.</string>
     <string name="ChaosArmor_Info">Las placas color rojo sangre de esta armadura unidas con cadenas de color rojo oscuro. Irradia energía caótica al tocarla.</string>
     <string name="ChaosArmor_Name">Armadura de caos</string>
+    <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Un atroz arco que contiene el poder del Caos. Cada flecha lanzada desde él llevará consigo un poco de energía de caos hacia el objetivo. Pero si fallas...</string>
     <string name="ChaosBow_Name">arco de caos</string>
     <string name="ChaosCrystal_BowFused">El cristal absorbe tu arco, y toma la forma de un arco. </string>
@@ -2770,6 +2772,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

@@ -311,6 +311,7 @@
     <string name="Candy_Warning_2">现在你感觉到了一些你身体上的变化。因为吃了太多糖，你的肚子痛了。</string>
     <string name="Capotain_Info">一顶高高的、窄边的冠冕。它通常和基督教徒有关，但你并不需要虔诚地戴上它。出于某些原因它上边带着铭牌，写着“所罗门”。</string>
     <string name="Capotain_Name">朝圣平顶帽</string>
+    <string name="Carcass_Info">完全死亡的 %s 的残骸。</string>
     <string name="Carcass_Necromancy">你复活了%s的尸体！</string>
     <string name="Caves_TileDescBookshelf">谁会需要在矿洞里放个书架？</string>
     <string name="Caves_TileDescDeco">一些矿脉在墙上清晰可见。是金子吗？</string>
@@ -2762,6 +2763,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
