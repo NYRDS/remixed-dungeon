@@ -363,6 +363,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ChaosCrystal_Use">GUNAKAN</string>
     <string name="ChaosHelmet_Info">Helm bewarna merah darah adalah simbol esensial dari prajurit kekacauan</string>
     <string name="ChaosHelmet_Name">Helm kekacauan</string>
+    <string name="ChaosShield_name">Tameng Kekacauan</string>
     <string name="ChaosStaff_Info">Tongkat yang dijiwai Kekuatan Khaos! Apa lagi yang dapat seorang penyihir mimpikan atau takuti?</string>
     <string name="ChaosStaff_Name">tongkat khaos</string>
     <string name="ChaosSword_Info">Mata pedang dari pedang ini dibuat dari khaos murni dan kadang bergetar sedikit. Kekuatan besar disimpan di dalam senjata ini, yang dapat memotong hampir semuanya jadi dua. Tapi, keahlian besar dibutuhkan, untuk menggunakan kekuatan besar dari senjata ini.</string>
@@ -2730,6 +2731,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
