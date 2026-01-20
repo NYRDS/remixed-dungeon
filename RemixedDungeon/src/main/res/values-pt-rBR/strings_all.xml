@@ -808,6 +808,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Healing_Name">Cura</string>
     <string name="HealthArrow_Info">A ponta dessa flecha está coberta com poção de cura.</string>
     <string name="HealthArrow_Name">Flecha de Cura</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">A ponta desse dardo está coberta com poção de cura.</string>
     <string name="HealthDart_Name">Dardo de Cura</string>
     <string name="Heap_Mimic">Isto é uma imitação!</string>
@@ -2731,6 +2732,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

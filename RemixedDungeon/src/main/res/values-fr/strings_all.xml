@@ -332,6 +332,7 @@
     <string name="Capotain_Info">Un chapeau à haute coiffe et à bord étroit. Il est habituellement associé aux puritains, mais il ne faut pas être religieux pour le porter. Pour une raison quelconque, il a une plaque, sur laquelle est écrite \&quot;Salomon\&quot;.</string>
     <string name="Capotain_Name">Capotaine</string>
     <string name="Carcass_DissectResult">Du %s, vous obtenez %d %s.</string>
+    <string name="Carcass_Info">Restes de %s totalement mort.</string>
     <string name="Carcass_Necromancy">Vous avez ressuscité le cadavre de %s!</string>
     <string name="Carcass_Necromancy_Failed">Votre tentative de réanimation du cadavre de %s a échoué!</string>
     <string name="Caves_TileDescBookshelf">Qui aurait besoin d\'une bibliothèque dans une grotte ?</string>
@@ -865,7 +866,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">La pointe de cette flèche a été trempée dans une potion de guérison.</string>
     <string name="HealthArrow_Name">Flèche de guérison</string>
-    <string name="HealthDart_Gender">feminine</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">La pointe de cette fléchette a été trempée dans une potion de guérison.</string>
     <string name="HealthDart_Name">Fléchette de guérison</string>
     <string name="Heap_Mimic">C\'est une ophrys !</string>
@@ -2922,6 +2923,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 
