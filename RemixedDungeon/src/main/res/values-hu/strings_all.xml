@@ -2420,6 +2420,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_sofa_name">Kényelmes kanapé</string>
     <string name="town_deco_stakes_desc">Ezek a kihegyezett farönkök félelmetesen néznek ki, de valójában teljesen haszontalanok egymagukban.</string>
     <string name="town_deco_stakes_name">Karók</string>
+    <string name="town_deco_statue_water_desc">Egy méltóságos angyalszobor, amely egy tál vízzel van ellátva.</string>
     <string name="town_deco_stock_desc">A kaja utánpótlást itt tárolják, ahogy mindenféle színű és formájú szemetet.</string>
     <string name="town_deco_stock_name">Készlet</string>
     <string name="town_deco_stone_wall_broken_desc">Egy régi kőfal, rossz állapotban</string>
@@ -2465,6 +2466,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

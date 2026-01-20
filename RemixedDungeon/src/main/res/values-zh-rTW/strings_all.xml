@@ -616,6 +616,7 @@
     <string name="Exhumation_NoGrave">這裏沒有墳墓可以進行施法。</string>
     <string name="Exhumation_Ok">我會服從於你。</string>
     <string name="ExplodingSkull_Desc">這個漂浮的燃燒頭骨看起來相當脆弱，仿佛每一秒都有爆炸的危險。</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">爆炸頭骨</string>
     <string name="ExplodingSkull_Name_Objective">爆炸頭骨</string>
     <string name="Eye_Desc">這種惡魔的另一個別名為\&quot;憎惡之球\&quot;，因為它一旦看到敵人就會毫無顧忌地使用它們的死亡凝視，即使這會傷害到它的友軍。</string>
@@ -2545,6 +2546,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
