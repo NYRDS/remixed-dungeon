@@ -1080,7 +1080,7 @@ Potrebbe bruciare?</string>
     <string name="Piranha_Name_Objective">Piranha gigante</string>
     <string name="PirateSet_Info">Arr! Ti senti un compare... O sei solo un dannato marinaio di acqua dolce!? Spero che tu non lo sia, questa roba è per i pirati dopo tutto, intendo... Arr! </string>
     <string name="PirateSet_Name">Set Pirata</string>
-    <string name="PlagueDoctorNPC_Desc">L'intero corpo di questa persona ingobbita è nascosto sotto una tuta di pelle. Inoltre, da lui proviene un amaro odore di medicinali e... aglio?</string>
+    <string name="PlagueDoctorNPC_Desc">L\'intero corpo di questa persona ingobbita è nascosto sotto una tuta di pelle. Inoltre, da lui proviene un amaro odore di medicinali e... aglio?</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Riesci a crederci? Quegli idioti non hanno ancora capito quanto pericolose siano queste dannate fogne! Come se guardie e avventurieri potessero proteggere il paese da qualunque cosa. Hah! Non esiste arma che possa fermare la diffusione di una malattia. Ma mi servono prove, potresti aiutarmi?  Portami %d pelli di ratto, in modo che possa fare altri test.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Riesci a crederci? Quegli idioti non hanno ancora capito quanto pericolose siano queste dannate fogne! Come se guardie e avventurieri potessero proteggere il paese da qualunque cosa. Hah! Non esiste arma che possa fermare la diffusione di una malattia. Ma mi servono prove, potresti aiutarmi?  Portami %d pelli di ratto, in modo che possa fare altri test.</string>
     <string name="Plant_ACPlant">PIANTA</string>
@@ -2088,7 +2088,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_snowy_plate_name">Targa innevata</string>
     <string name="town_deco_sofa_desc">Sembra che questo cinema provi davvero a fornire i migliori posti per i propri clienti</string>
     <string name="town_deco_sofa_name">Divano comodo</string>
-    <string name="town_deco_statue_water_desc">Una maestosa statua di un angelo che tiene una ciotola d'acqua.</string>
+    <string name="town_deco_statue_water_desc">Una maestosa statua di un angelo che tiene una ciotola d\'acqua.</string>
     <string name="town_deco_stone_wall_name">Muro di pietra</string>
     <string name="town_deco_stool_broken_desc">Questo sgabello ha visto giorni migliori.</string>
     <string name="town_deco_stool_broken_name">Sgabello rotto</string>

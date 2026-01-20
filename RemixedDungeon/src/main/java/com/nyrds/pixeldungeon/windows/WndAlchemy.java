@@ -149,7 +149,6 @@ public class WndAlchemy extends Window {
 
         // Add it to the window first so it appears behind other elements
     }
-
     private RecipeListItem getRecipeListItem(Entry<List<String>, List<String>> recipeEntry, float windowWidth) {
         RecipeListItem recipeItem = new RecipeListItem(recipeEntry.getKey(), recipeEntry.getValue());
 

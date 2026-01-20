@@ -187,6 +187,7 @@ dependencies {
         exclude group: "com.unity3d.ads-mediation", module: "verve-adapter"
         exclude group: "com.unity3d.ads-mediation", module: "vungle-adapter"
         exclude group: "com.unity3d.ads-mediation", module: "yandex-adapter"
+        exclude group: "com.unity3d.ads-mediation", module: "yandex-adapter"
         exclude group: "io.bidmachine", module: "ads.adapters.ironsource"
         exclude group: "io.bidmachine", module: "ads.networks.meta_audience"
         exclude group: "org.bidon", module: "meta-adapter"
@@ -219,6 +220,10 @@ dependencies {
     huaweiImplementation 'com.huawei.hms:hianalytics:5.0.0.300'
     huaweiImplementation 'com.huawei.agconnect:agconnect-crash:1.4.1.300'
  */
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.10.3'
+    testImplementation 'androidx.test:core:1.5.0'
 }
 
 if (getGradle().getStartParameter().getTaskRequests()

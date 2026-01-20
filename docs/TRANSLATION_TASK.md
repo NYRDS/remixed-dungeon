@@ -333,12 +333,33 @@ After adding translations:
 ### Special Character Issues
 - **Problem**: Unescaped special characters like ampersands (&) can break XML parsing
 - **Solution**: Use proper XML entities (`&amp;` instead of `&`, `&quot;` instead of `"`, etc.)
+- **Note**: Apostrophes (') and quotes (") in non-English languages need to be properly escaped in XML using `\'` or `&apos;` and `&quot;` respectively
 
 ### Multiple Placeholders Issues
 - **Problem**: Multiple `%s` placeholders without positional identifiers can cause Android build failures
 - **Solution**: Use positional identifiers (`%1$s`, `%2$s`, etc.) for multiple placeholders
 - **Example**: Instead of `"This %s is %s"`, use `"This %1$s is %2$s"`
 - **Important**: When translating strings with multiple placeholders, ensure the order matches the code usage. For example, if the code calls `Utils.format(R.string.MobAi_status, me.getName(), getTag())`, then `%1$s` should correspond to the mob name and `%2$s` to the status tag.
+
+### XML Formatting Issues
+- **Problem**: Improperly formatted XML strings can cause build failures
+- **Common Issues**:
+  - Unescaped apostrophes in any language (e.g., "l'objet" should be "l\'objet" or "l&apos;objet")
+  - Unescaped quotes in any language
+  - Malformed XML tags
+  - Invalid Unicode escape sequences
+- **Solution**: Always validate your XML after adding translations
+- **Best Practice**: Use the validation script regularly: `python3 tools/validate_translations.py /path/to/remixed-dungeon`
+
+### Validation Checklist
+Before submitting translations, ensure:
+1. All apostrophes are properly escaped in any language using `\'` or `&apos;`
+2. All quotes are properly escaped using `\"` or `&quot;`
+3. Multiple placeholders use positional identifiers (%1$s, %2$s, etc.)
+4. Special characters are converted to proper XML entities
+5. The XML file is well-formed and can be parsed without errors
+6. Gender values are in English and lowercase (feminine, masculine, neuter)
+7. The translated string maintains the same meaning and context as the original
 
 ## Common String Patterns
 
