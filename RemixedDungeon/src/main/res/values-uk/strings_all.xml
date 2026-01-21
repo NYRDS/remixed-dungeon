@@ -1906,6 +1906,7 @@
     <string name="Succubus_Desc">Сукуби - демони, які набувають подоби гарних (зазвичай в готичному стилі) дівчат. Використовуючи магію, сукуби причаровують героя, позбавляючи його здатності атакувати, доки чари не розвіються.</string>
     <string name="Succubus_Name">сукуб</string>
     <string name="Succubus_Name_Objective">сукуба</string>
+    <string name="SummonBeast_Info">Спроба викликати орду могутніх істот під вашу команду.\nРеальні результати можуть відрізнятися.</string>
     <string name="SummonDeathling_Info">Прикликає прислужника із нежиті. Сила та здоров\'я смертлика росте із рівнем героя. \n\nЛіміт прикликання: %1$d(+1 за кожен магічний рівень)</string>
     <string name="SummonDeathling_Name">Прикликати смертлика</string>
     <string name="SungrassBuff_Name">Природне зцілення</string>
@@ -2616,6 +2617,7 @@
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

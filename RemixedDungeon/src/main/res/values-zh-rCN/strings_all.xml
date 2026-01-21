@@ -73,6 +73,7 @@
     <string name="Armor_Info8">\n\n你能感受到%s中潜伏着一股恶毒的魔力。</string>
     <string name="Armor_ToString">%1$s ： %2$d</string>
     <string name="ArmoredStatue_Desc">你无法相信这只是地牢另一座丑陋的雕像。不仅因为它眼中发着红光，事实上，如果它只是一座雕像的话，不会有人把真正的_%s_放在它身上。</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">活化石像</string>
     <string name="ArmoredStatue_Name_Objective">活化石像</string>
     <string name="Artifact_Limit">你最多只能同时佩戴2件饰品。</string>
@@ -2766,6 +2767,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
