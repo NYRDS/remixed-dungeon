@@ -2205,6 +2205,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Wnd_Button_Yes">Ya</string>
     <string name="WoodenBow_Info">Busur kayu ringkas yang mungkin berguna, jika anda temui beberapa anak panah.</string>
     <string name="WoodenBow_Name">busur kayu</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Busur silang kayu asas, yang direka khas untuk menembak anak panah busur.</string>
     <string name="WoodenCrossbow_Name">Busur silang kayu</string>
     <string name="WoodenShield_name">Pengadang Kayu</string>
@@ -2455,6 +2456,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
