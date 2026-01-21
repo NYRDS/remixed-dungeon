@@ -1919,6 +1919,7 @@
     <string name="SpiritOfPain_Name_Objective">痛苦之魂</string>
     <string name="Sprout_Info">唤醒休眠的种子。\n然而，地面上应该有一些绿色植物，才能让这个咒语成功。</string>
     <string name="Sprout_Name">发芽</string>
+    <string name="StartScene_ComingSoon">即将推出</string>
     <string name="StartScene_Depth">层数：%1$d\n等级： %2$d</string>
     <string name="StartScene_DifficultyEasy">简单模式（有广告）</string>
     <string name="StartScene_DifficultyEasyNoAds">容易</string>
@@ -2764,6 +2765,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
