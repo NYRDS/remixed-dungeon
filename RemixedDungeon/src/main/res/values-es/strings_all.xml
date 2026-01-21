@@ -1996,6 +1996,7 @@ otro lugar del nivel.</string>
     <string name="TenguLiver_Info">Este hígado pertenece a un poderoso enemigo. Sólo con mirarlo, tus instintos salvajes se apoderan de ti y sientes el impulso de consumirlo.</string>
     <string name="TenguLiver_Name">Hígado de Tengu</string>
     <string name="Tengu_Desc">Los Tengu son miembros de un antiguo clan de asesinos, también llamado Tengu. Estos asesinos son conocidos por su uso del shuriken y las trampas.</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">Al fin libre...</string>
     <string name="Tengu_Info2">¡Te tengo, %s!</string>
     <string name="Tengu_Info3">Atrapado, %s!</string>
@@ -2775,6 +2776,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

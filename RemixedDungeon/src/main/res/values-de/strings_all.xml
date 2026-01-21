@@ -1339,6 +1339,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… magnificent! Die _Schnecken_, ihre Geheimnisse entfalten sich langsam wie Blüten im Mondlicht. In der Tat eine Fülle an Informationen! Aber Sie haben Recht, _fünfzig Gold_ ist kaum eine angemessene Belohnung. *Manisch kichernd*.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Er hält die _Fledermaus_ sanft in seinen behandschuhten Händen und untersucht ihre winzige Gestalt mit beunruhigender Faszination*  Herrlich! Die Echoortung der _Fledermaus_… sie ist wie nichts, was ich bisher kennengelernt habe. Solche Präzision… solche… Kontrolle. *Er wendet sich Ihnen zu, sein Gesicht von seiner Maske verdeckt* Als Dank für Ihre Bemühungen, eine _Schriftrolle des Aufwertens_. Nutzen Sie sie weise, denn sie birgt das Potenzial, um… Ihr ganzes Wesen zu veredeln. *Er überreicht Ihnen die Schriftrolle, seine Stimme zu einem gedämpften Flüstern senkend* Diese _Fledermaus_, sie ist… ein Fenster in eine verborgene Welt. Eine Welt…, wo Schatten tanzen und Geheimnisse flüstern.</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*Seine Augen glänzen mit einer seltsamen, fiebrigen Intensität* Ach, die _Vampirfledermaus_! Eine Kreatur der Nacht, die sich vom Lebenssaft ihrer Beute ernährt. Faszinierend... wirklich faszinierend. Ich brauche eine lebendige, um ihre einzigartige Physiologie zu studieren. Es geht darum... das... das... *Er bricht ab und murmelt vor sich hin, spricht eine Reihe von geheimnisvollen Begriffen*. Ja! Die Echoortung der _Fledermaus_, ihre Fähigkeit, sich in völliger Dunkelheit zurechtzufinden... sie ist der Schlüssel zum Entriegeln eines Geheimnisses.</string>
+    <string name="PlagueDoctorQuest_5_1_InProgress">*Sein Geist schweift ab, während er spricht, seine Stimme wird leiser, kaum ein Flüstern.* Bringt mir zwei _Sukkuben_… lebendig. Ihre… Kraft… ist faszinierend.</string>
     <string name="PlagueDoctor_Desc">Dieser bucklige Mann ist komplett mit Leder bezogen. Er riecht stark nach Medikamenten und ... Knoblauch?</string>
 
     <string name="PlagueDoctor_Name">Virendoktor</string>
@@ -2662,6 +2663,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
