@@ -2310,6 +2310,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndSelectLanguage_ImproveTranslation">Bitte hilf die Übersetzungen von Remixed Dungeon zu verbessern</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Klicke hier um dem Remixed Dungeon Übersetzungsteam beizutreten</string>
     <string name="WndSettingsInGame_GameLog">Spielprotokoll</string>
+    <string name="WndSettingsInGame_IsometricTiles">Isometrische Kacheln</string>
     <string name="WndSettings_ActionButtonSize">Aktionsknopfgröße</string>
     <string name="WndSettings_Brightness">Helligkeit</string>
     <string name="WndSettings_ClassicFont">Klassische Schrift</string>
@@ -2663,6 +2664,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

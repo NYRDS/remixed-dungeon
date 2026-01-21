@@ -826,6 +826,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Horror_Name_0">Eldritch %s</string>
     <string name="Horror_Name_1">Eldritch %s</string>
     <string name="Horror_Name_2">Eldritch %s</string>
+    <string name="HungerBuff_Info1">Awak lapar!</string>
     <string name="HungerBuff_Name1">Lapar</string>
     <string name="HungerBuff_Name2">Kebuluran</string>
     <string name="Hunger_Death">Anda mati kerana kelaparan...</string>
@@ -2457,6 +2458,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
