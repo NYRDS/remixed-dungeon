@@ -2467,6 +2467,7 @@ remix.31.1\n
     <string name="YogsHeart_Name">Coração de Yog</string>
     <string name="YogsHeart_Name_Objective">Coração de Yog</string>
     <string name="YogsTeeth_Desc">A enorme boca do Deus Antigo cheia de dentes afiados. Uma manifestação muito adequada do seu desejo de destruir e devorar todo.</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">dente de yog</string>
     <string name="YogsTeeth_Name_Objective">Dente de Yog</string>
     <string name="ZombieGnoll_Desc">O corpo torcido e quebrado de um Gnoll-Zumbi já não se parece com humanoide ou hiena. É apenas um monte de carne podre e ossos cheios de desejo maligno de matar e comer.</string>
@@ -2732,6 +2733,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
