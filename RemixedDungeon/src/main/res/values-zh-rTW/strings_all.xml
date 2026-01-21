@@ -1063,6 +1063,7 @@
     <string name="Level_TileOpenDoor">開著的門</string>
     <string name="Level_TileParalyticTrap">麻痹氣體陷阱</string>
     <string name="Level_TilePedestal">臺座</string>
+    <string name="Level_TilePileOfStones">一堆石頭</string>
     <string name="Level_TilePoisonTrap">毒鏢陷阱</string>
     <string name="Level_TileSign">標牌</string>
     <string name="Level_TileStatue">雕像</string>
@@ -2549,6 +2550,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
