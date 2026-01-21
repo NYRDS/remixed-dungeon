@@ -182,6 +182,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Bat_Name_Objective">vámpír denevér</string>
     <string name="BattleAxe_Info">A hatalmas acél fej jelentős lendülettel látje el ennek a csatabárdnak minden csapását.</string>
     <string name="BattleAxe_Name">csatabárd</string>
+    <string name="Bee_Name">méh</string>
     <string name="BellaNPC_Amulet_F">Üdvözöllek cukipofa, mi van a kezedben? Azta, micsoda rendkívüli amulett! Mintha te... te sokkal fényesebben ragyognál másokhoz képest. Mit szólnál ahhoz, ha elmennénk sétálni és közben megbeszélnénk a közös jövőnket?</string>
     <string name="BellaNPC_Amulet_M">Üdvözöllek szépfiú, mi van a kezedben? Azta, micsoda rendkívüli amulett! Mintha te... te sokkal fényesebben ragyognál másokhoz képest. Mit szólnál ahhoz, ha elmennénk sétálni és közben megbeszélnénk a közös jövőnket?</string>
     <string name="BellaNPC_Angry">Hogy mered te kis proli!</string>
@@ -2471,6 +2472,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
