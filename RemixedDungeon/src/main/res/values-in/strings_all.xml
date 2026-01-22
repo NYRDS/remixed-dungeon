@@ -1006,6 +1006,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Item_Name">smth</string>
     <string name="Item_PackFull">Tas Anda terlalu penuh untuk %s</string>
     <string name="JarOfSouls_Desc">Mata yang bersinar pada tengkorak yang digambarkan pada tempayan tua ini, serta energi aneh yang dihasilkannya, membuat anda merasa gelisah</string>
+    <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name">toples jiwa</string>
     <string name="JarOfSouls_Name_Objective">toples jiwa</string>
     <string name="Javelin_Info">Sebatang logam ini telah diseimbangkan untuk menahan ujungnya di depan saat melayang melewati udara.</string>
@@ -2732,6 +2733,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
