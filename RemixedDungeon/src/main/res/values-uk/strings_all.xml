@@ -1211,6 +1211,7 @@
     <string name="MissileWeapon_Sure">Ти впевнений, що хочеш використовувати це в якості зброї ближнього бою?</string>
     <string name="MissileWeapon_Yes">Так, я знаю що роблю.</string>
     <string name="Mob_Cannot_Be_Pet">\&quot;%s\&quot; занадто сильний, аби контролювати його!</string>
+    <string name="Mob_CantDoIt">Не можу цього зробити. У мене маленькі лапки.</string>
     <string name="Mob_Desc">Справжній опис буде пізніше!</string>
     <string name="Mob_Died">Ти чуєш, що щось померло в далечі</string>
     <string name="Mob_StaAmokStatus">%1$s поводиться несамовито</string>
@@ -2618,6 +2619,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

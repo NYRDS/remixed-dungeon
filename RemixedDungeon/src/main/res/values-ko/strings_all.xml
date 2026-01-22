@@ -1213,6 +1213,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
 </string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">아하… 훌륭하다! _달팽이_의 그 비밀이 달빛 아래에서 꽃잎처럼 서서히 펼쳐지는구나. 정말 방대한 정보로구나! 하지만 말이 맞네, _50 골드_라니 그다지 어울리는 보상은 아니지. *광적으로 웃음을 터뜨린다*.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">욱수! _해초_의 황금빛 정수가 생명력으로 요동친다. 나는 이미 그 섬세한 구조에서 많은 것을 배웠다. *그가 당신에게 _생명의 물약_을 건네주며, 액체는 희미한 황금빛으로 반짝인다.* 이걸 마셨을 때 세상이 무겁게 느껴지면 태양의 따뜻함이 당신의 영혼을 회복시켜 줄 것이다.</string>
+    <string name="PlagueDoctorQuest_2_2_InProgress">_태양풀_ 씨앗 두 개. 그 황금빛 꽃잎에는 내가 이해하고자 하는 힘이 담겨 있다. 그것들을 찾아내고, 그 본질을 밝혀라!</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*그의 눈동자에는 이상하고 열광적인 강도가 빛나고 있었다.* 아아, _뱀파이어 박쥐_! 밤의 존재로, 자기 사냥감의 생명력을 먹으며 살아가는 생물이지. 흥미롭군... 정말 흥미롭군. 내가 그걸 한 마리라도 잡아 그 독특한 생리학적 구조를 연구해야 해. 다 이해하는 것에 달려 있어... 그... 그에 대해 말이다... *그는 중얼거리며 알 수 없는 용어들로 혼잣말을 한다.* 그래! _박쥐_의 음향 위치 탐지 기능, 그것이 완전한 어둠 속에서 길을 찾는 능력... 비밀을 풀 수 있는 열쇠가 되지.*</string>
     <string name="PlagueDoctorQuest_4_2_InProgress"> '_코볼드 아이스맨서_' 5마리의 시신을 회수하라! 그들의 얼어붙은 몸에는 차가운 마법의 비밀을 풀 수 있는 열쇠가 숨겨져 있다! </string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*그는 더듬거리며 목소리는 부러진 나뭇가지처럼 갈라졌다*. 아-아, 서큐버스! 둘…… 네, 둘이 살아 있어요! 그것은…… 어흠…… 제 연구를 위한 것이에요! 보세요…… 그들의 페로몬은…… 이해하는 데 중요한…… 미묘한 균형 말이죠…… 어…… *그는 말을 흐리며, 마스크를 긴장하게 고치려 손을 뻗으며, 열띤 강광으로 당신을 바라보았다.* 그들의…… 정수는…… 수수께끼…… 아름답고 신비로운 수수께끼에요! *그는 격하게 기침하며 자세를 바로 하려고 애썼다.* 제가 약속할게요. 이…… 존재들 중 두 마리를 저에게 데려다 주신다면, 제가 영원히 감사를 드릴 것입니다. 이것을…… 지식에 대한 은혜로 생각하세요! 네! 지식을 위해 말이죠!</string>
@@ -2385,6 +2386,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
