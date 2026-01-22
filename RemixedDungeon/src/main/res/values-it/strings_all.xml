@@ -2191,6 +2191,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_trapdoor_desc">Dove potrà mai portare.</string>
     <string name="town_deco_tree_desc">Una strana sensazione sorge guardando questo albero vivo e così pacifico albero. D\'altronde, non molto lontano da qui giace un dungeon stipato di ogni sorta di orrore e morte.</string>
     <string name="town_deco_tree_name">Albero</string>
+    <string name="town_deco_urn_name">Urna</string>
     <string name="town_deco_wall_brazier_desc">Il vapore che esce dalle braci ardenti riempie la stanza di piacevoli aromi.</string>
     <string name="town_deco_wall_brazier_name">Braciere</string>
     <string name="town_deco_wall_candles_name">Candele</string>
@@ -2213,6 +2214,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
