@@ -346,6 +346,7 @@
     <string name="Capotain_Name">Пуританская Шляпа</string>
     <string name="Carcass_Devoured">Ты пожрал труп %s!</string>
     <string name="Carcass_DissectFailed">Вы рассекли %s, но не нашли ничего ценного.</string>
+    <string name="Carcass_DissectResult">Из %s вы получили %d урожай %s.</string>
     <string name="Carcass_Info">Останки абсолютно мертвого монстра %s.</string>
     <string name="Carcass_Kick">Это существо, %s, совершенно мертво, нет смысла бить его дальше.</string>
     <string name="Carcass_Name">Останки %s</string>
@@ -3034,6 +3035,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 

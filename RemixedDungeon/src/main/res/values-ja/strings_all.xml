@@ -1275,6 +1275,7 @@
     <string name="MimicAmulet_Name">ミミック</string>
     <string name="MimicAmulet_Name_Objective">ミミック</string>
     <string name="MimicPie_Desc">ミミックはどんな姿にもなれる魔法生物である。これは大きなおいしそうなパスティのようだ。</string>
+    <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">ミミック</string>
     <string name="MimicPie_Name_Objective">ミミック</string>
     <string name="Mimic_Desc">ミミックはどんな姿にもなれる魔法生物である。しかし冒険者が訪れるダンジョンでは、ほとんどの場合、宝箱の形を選ぶ。</string>
@@ -2872,6 +2873,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

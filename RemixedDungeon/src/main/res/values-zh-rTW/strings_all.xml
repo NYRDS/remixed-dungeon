@@ -2378,6 +2378,7 @@
     <string name="town_deco_chimney_name">煙囪</string>
     <string name="town_deco_cinema_sign_desc">裏面有個影院</string>
     <string name="town_deco_cinema_sign_name">影院招牌</string>
+    <string name="town_deco_clock_desc">這些的指針早已被凍結在一個位置上。</string>
     <string name="town_deco_common_bed_desc">普通的一張床</string>
     <string name="town_deco_common_bed_name">床</string>
     <string name="town_deco_common_door_desc">有禮的冒險家不應不請自來。</string>
@@ -2552,6 +2553,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

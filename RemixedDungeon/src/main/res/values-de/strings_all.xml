@@ -2103,6 +2103,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WarriorArmor_NotWarrior">Nur Krieger können diese Rüstung nutzen.</string>
     <string name="WarriorArmor_Prompt">Wähle die Richtung für deinen Sprung.</string>
     <string name="WaterElemental_Desc">Wassergeister können in der Nähe von großen Wassermassen gefunden werden. Üblicherweise wandern diese magiegebundenen Wesen einfach nur umher.</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name">Wassergeist</string>
     <string name="WaterElemental_Name_Objective">Wassergeist</string>
     <string name="WaterOfAwareness_Info">Die Kraft des Wissens strömt durch das Wasser dieses Brunnens. Nimm einen Schluck, um alle Geheimnisse über deine ausgerüsteten Gegenstände zu erfahren.</string>
@@ -2665,6 +2666,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

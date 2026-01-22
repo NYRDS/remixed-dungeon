@@ -684,6 +684,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="ElvenDagger_Info">Cette arme est faite d\'un alliage spécial, la rendant plus légère qu\'une dague classique.</string>
     <string name="ElvenDagger_Name">Dague Elfique</string>
     <string name="EncumbranceBuff_CharAct_1">Je ne suis pas assez fort pour manier %s correctement.</string>
+    <string name="EncumbranceBuff_CharAct_2">Cet objet %s est trop lourd pour que je l'utilise efficacement.</string>
     <string name="EncumbranceBuff_CharAct_5">%s est trop lourd pour moi en ce moment.</string>
     <string name="EncumbranceBuff_Info">Pas assez de force pour utiliser efficacement : %s.</string>
     <string name="EncumbranceBuff_Name">Fardeau</string>
@@ -2927,6 +2928,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
