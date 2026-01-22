@@ -19,6 +19,7 @@
     <string name="Acidic_Desc">Dieses riesige, spinnenartige, dämonische Wesen vermeidet Nahkampf mit allen Mitteln. Es schießt gezackte Dornen mit lähmender Wirkung aus großer Entfernung ab.</string>
     <string name="Acidic_Name">Giftiger Skorpion</string>
     <string name="Acidic_Name_Objective">Giftiger Skorpion</string>
+    <string name="Actions_Speed">Tempo der Aktionen</string>
     <string name="Affection_Txt">%s der Zuneigung</string>
     <string name="AirElemental_Desc">Luftgeister sind fliegende, magische Wesen, die aus lebendiger Luft bestehen.</string>
     <string name="AirElemental_Name">Luftgeist</string>
@@ -1449,6 +1450,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="PseudoPasty_Info">Dies ist eine original cornwallsche Fleischpastete mit einer traditionellen Füllung aus Rindfleisch und Kartoffeln.</string>
     <string name="PseudoPasty_Name">Pastete</string>
     <string name="PseudoRat_Desc">Ein entsetzliches Biest, dass sich aus der Leiche der Ratte herausgeschält hat und jede Ähnlichkeit, mit einem Nagetier oder irgendeinem anderen Tier, das du je gesehen hast, entbehrt.</string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">Pseudo-Ratte</string>
     <string name="PseudoRat_Name_Objective">Pseudo-Ratte</string>
     <string name="PumpkinPie_Info">Ein deliziöser Kürbiskuchen, so wie ihn deine Mutti immer gemacht hat.</string>
@@ -1728,6 +1730,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="Shades_Name">Sonnenbrille</string>
     <string name="ShadowLord_Death">Neeeeeeeiiiiiiiinnnnn...</string>
     <string name="ShadowLord_Desc">Kreatur aus purem Übel und Dunkelheit, viele glauben, dass er der alte Gott selbst ist, berücksichtigt man, wie stark er ist. Während andere vermuten, dass er aber der Wächter der Kammer des alten Gottes ist.</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Bereite dich vor!</string>
     <string name="ShadowLord_Name">schattenherr</string>
     <string name="ShadowLord_Name_Objective">Schattenherr</string>
@@ -2666,6 +2669,9 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
 
 
 

@@ -2329,6 +2329,7 @@ remix.31.1\n
     <string name="WndModInstall_Version">版本</string>
     <string name="WndModSelect_AreYouSure">删除mod：%s，你确定吗？</string>
     <string name="WndModSelect_ReallyDelete">真的要删除吗？</string>
+    <string name="WndModsDisclaimer_install">安装本地模组</string>
     <string name="WndModsDisclaimer_title">MOD</string>
     <string name="WndMovieTheatre_Bye">想回来的时候就回来，我们对你的到来而感到高兴！</string>
     <string name="WndMovieTheatre_Instruction">欢迎来到我们的电影院！我们正在提供一项特别服务，你可以免费观看一部叫“广告”的特殊电影。如果全部看完，你将得到 %d 枚金币的奖励！</string>
@@ -2767,6 +2768,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
