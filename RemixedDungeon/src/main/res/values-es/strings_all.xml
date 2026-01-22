@@ -1893,6 +1893,7 @@ otro lugar del nivel.</string>
     <string name="SpiderElite_Name">Araña guardian de élite.</string>
     <string name="SpiderElite_Name_Objective">Araña guardian de élite.</string>
     <string name="SpiderExploding_Desc">Incansables obreros durante épocas de paz, estas criaturas no dudarán en abalanzarse contra sus enemigos, cogiendo lo primero que tengan a mano y convirtiéndose así en bombas andantes. </string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">araña obrera</string>
     <string name="SpiderExploding_Name_Objective">araña obrera</string>
     <string name="SpiderGuard_Desc">Al igual que los soldados los guardianes arácnidos han jurado proteger su reino. Su veneno se utiliza para inmovilizar a los objetivos provocando parálisis.</string>
@@ -2777,6 +2778,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

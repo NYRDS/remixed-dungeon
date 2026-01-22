@@ -84,6 +84,7 @@
     <string name="ArmoredStatue_Name_Objective">statue animée</string>
     <string name="Artifact_Limit">Vous ne pouvez équiper que 2 artefacts en même temps</string>
     <string name="AttackDelay_Increased">Impossible d'utiliser %s comme ça. Mouvements lents, respirations lourdes...</string>
+    <string name="Attack_Cooldown">Temps de recharge de l'attaque</string>
     <string name="AwarenessBuff_Info">Les sens se sont aiguisés, donnant plus de conscience des environs.</string>
     <string name="AwarenessBuff_Name">Conscience</string>
     <string name="AzuterronNPC_Desc">Un personnage mystérieux entouré d\'une brume noire.</string>
@@ -2926,6 +2927,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

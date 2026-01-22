@@ -1771,6 +1771,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Sword_Name">pedang</string>
     <string name="Tamahawk_Info">Kapak lontar ini tidaklah begitu berat, tetapi masih memerlukan kekuatan yang mencukupi untuk berkesan.</string>
     <string name="Tamahawk_Name">tomahawk</string>
+    <string name="TenguLiver_Info">Hati ini milik musuh yang hebat. Cukup dengan melihatnya, naluri liar anda mengambil alih, dan anda merasakan keinginan untuk memakannya.</string>
     <string name="Tengu_Desc">Tengu merupakan ahli puak pembunuh purba, yang juga dikenali sebagai Tengu. Pembunuh ini diketahui kerap menggunakan shuriken dan memasang perangkap.</string>
     <string name="Tengu_Info1">Bebas akhirnya...</string>
     <string name="Tengu_Info2">Dah jumpa, %s!</string>
@@ -2460,6 +2461,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
