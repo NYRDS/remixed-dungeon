@@ -171,6 +171,7 @@
     <string name="Bat_Name_Objective">흡혈 박쥐</string>
     <string name="BattleAxe_Info">이 전투 도끼의 엄청난 스틸 헤드는 각각의 스트로크 뒤에 상당한 영향력을 줍니다.</string>
     <string name="BattleAxe_Name">배틀 엑스</string>
+    <string name="Bee_Desc">작은 크기에도 불구하고, 벌들은 자신의 둥지를 치열하게 지키려는 경향이 있다. 하지만 오래 살지는 못한다.</string>
     <string name="BellaNPC_Amulet_F">안녕 거기 귀염둥이! 거기서 뭐해? 정말 멋진 목걸이네! 그리고 너는.. 너는 다른 사람들보다 더 빛나는것 같아. 잠깐 산책하면서 우리의 미래에 대해 함께 이야기해보는게 어떨까?</string>
     <string name="BellaNPC_Amulet_M">안녕 거기 잘생긴 분! 거기서 뭐해? 정말 멋진 목걸이네! 그리고 넌... 넌 저 서민들을 능가하는것 같아. 잠깐 산책하면서 우리의 미래에 대해 함께 이야기해보는게 어떨까?</string>
     <string name="BellaNPC_Angry">감히 너가... 이 서민 같으니!</string>
@@ -2388,6 +2389,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

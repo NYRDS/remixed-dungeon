@@ -561,6 +561,7 @@
     <string name="DewVial_Name">фіал для роси</string>
     <string name="Dewdrop_Info">Кристально чиста крапля роси</string>
     <string name="Dewdrop_Name">крапля роси</string>
+    <string name="DieHardBuff_Info">Швидкість регенерації підвищено.</string>
     <string name="DieHardBuff_Name">Міцний горішок</string>
     <string name="DieHardSpell_Info">Тимчасово прискорює регенерацію і робить з тебе справжнього Міцного Горішка.</string>
     <string name="DieHardSpell_Name">Міцний горішок</string>
@@ -2619,6 +2620,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

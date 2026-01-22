@@ -1618,6 +1618,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="RottenRation_Info">dulunya mungkin dapat dimakan</string>
     <string name="RottenRation_Name">ransum makanan busuk</string>
     <string name="RottingFist_Desc">Tinjuan Pembusukan dari Dewa Tua</string>
+    <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">tinjuan pembusukan</string>
     <string name="RottingFist_Name_Objective">tinjuan pembusukan</string>
     <string name="RoyalShield_desc">Sebuah perisai logam penuh. Ya, itu berat, tetapi hanya itu yang bisa memberi Anda perlindungan terbaik.</string>
@@ -2734,6 +2735,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
