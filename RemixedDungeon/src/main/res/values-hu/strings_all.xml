@@ -2273,6 +2273,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="ZombieMask_Info">Kivántad valaha, hogy bárcsak úgy néznél ki mint egy élőhalott harcos, aki sorozatosan bukott el a küldetései során? Hát a lehetőség most a tied.</string>
     <string name="ZombieMask_Name">Zombi álarc</string>
     <string name="Zombie_Desc">A kazamatát mindig is egy veszélyes helynek tartották, számos kalandor vesztette itt életét. De a legszerencsétlenebbek a Temetőben végezték és most az a sorsuk, hogy rothadó hullákként járják a város termeit.</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">Zombi</string>
     <string name="Zombie_Name_Objective">Zombi</string>
     <string name="deco_candle_desc">Nagy gyertya</string>
@@ -2477,6 +2478,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
