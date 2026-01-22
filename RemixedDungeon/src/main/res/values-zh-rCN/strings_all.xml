@@ -1169,6 +1169,7 @@
     <string name="LibraryBook_Name">图书</string>
     <string name="Lich_Desc">死灵法师在亡灵之城的深处死了，然后这个地方的邪恶能量进入了他的身体，将他转化为巫妖。他是不死的巫师，一个由邪恶力量操控的提线木偶。</string>
     <string name="Lich_DieInfo">我挺讨厌这个死灵法师的。是时候回到第7层找条前往地牢下方的路继续我的冒险。</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">巫妖</string>
     <string name="Lich_Name_Objective">巫妖</string>
     <string name="LightBuff_Info">光从体内流出，点亮每一处黑暗的角落。</string>
@@ -2768,6 +2769,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

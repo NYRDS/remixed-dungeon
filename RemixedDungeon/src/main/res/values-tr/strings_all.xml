@@ -2548,6 +2548,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="YogsTeeth_Name">yog\'un dişleri</string>
     <string name="YogsTeeth_Name_Objective">Yog\'un dişleri</string>
     <string name="ZombieGnoll_Desc">Bükülmü ve kırılmış vücudu artık insansı veya sırtlansı görünümünden uzaktır.Zombi gnoll öldürme ve tüketme dürtüsü ile varolan bir kemik ve et yığını gibidir</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">Gnoll zombi diriliyor!</string>
     <string name="ZombieGnoll_Name">gnoll-zombi</string>
     <string name="ZombieGnoll_Name_Objective">gnoll-zombi</string>
@@ -2810,6 +2811,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
