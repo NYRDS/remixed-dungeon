@@ -842,6 +842,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="HeroClass_NecromancerPerks_2">Necromancer mulai dengan yang unik Jubah Necromancer, Yang memberikan 1 poin mana untuk setiap makhluk yang terbunuh.</string>
     <string name="HeroClass_NecromancerPerks_3">Necromancer mulai dengan kunci kerangka level 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Ramuan Penyembuhan diidentifikasi dari awal.</string>
+    <string name="HeroClass_None">biasa</string>
     <string name="HeroClass_PlagueDoctorPerks_0">Dokter Plague memanen Kelenjar Beracun, Organ Busuk, Serpihan Tulang, dan Intisari Jahat dari musuh yang terbunuh. Darah dikumpulkan seiring waktu dan digunakan untuk melakukan alkemi.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Ramuan Gas Paralisis dan Gas Toksik telah dikenali sebelumnya.</string>
     <string name="HeroClass_Rog">penjahat</string>
@@ -2733,6 +2734,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

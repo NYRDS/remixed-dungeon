@@ -2184,6 +2184,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_stakes_desc">Questi tronchi appuntiti hanno un aspetto minaccioso, ma di fatto sono piuttosto inutili di per sé.</string>
     <string name="town_deco_statue_water_desc">Una maestosa statua di un angelo che tiene una ciotola d'acqua.</string>
     <string name="town_deco_stock_name">Scorta</string>
+    <string name="town_deco_stone_wall_broken_desc">Vecchio muro di pietra, in cattive condizioni</string>
     <string name="town_deco_stone_wall_name">Muro di pietra</string>
     <string name="town_deco_stool_broken_desc">Questo sgabello ha visto giorni migliori.</string>
     <string name="town_deco_stool_broken_name">Sgabello rotto</string>
@@ -2217,6 +2218,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

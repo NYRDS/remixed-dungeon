@@ -1770,6 +1770,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="TerrorBuff_Name">공포</string>
     <string name="Thief_Carries">\n\n%1$s 이 _%2$s_를 들고 있다. 훔친 것이 분명하다.</string>
     <string name="Thief_Desc">던전 깊이 들어가면 갈수록 언제나 오만 가지의 범죄자들이 숨는 소굴이 있습니다. 햇빛을 제대로 보지 못했기 때문에 정신을 차리고 있는 자들은 몇 되지 않습니다. 오래 전부터 이 정신나간 도둑들은 자신이 누구이며 도둑질을 하는 이유조차 잊어버렸습니다 .</string>
+    <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">미친 도둑</string>
     <string name="Thief_Name_Objective">미친 도둑</string>
     <string name="Thief_Stole">%1$s 이 당신한테서 %2$s 을/를 훔쳤다!</string>
@@ -2387,6 +2388,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 
