@@ -1457,6 +1457,7 @@
     <string name="ResultDescriptions_Hunger">在第 %d 層饑餓致死</string>
     <string name="ResultDescriptions_Immured">在第%d層被囚禁於牆中</string>
     <string name="ResultDescriptions_Mob">在第 %2$d 層被 %1$s 殺死了</string>
+    <string name="ResultDescriptions_Necromancy">試圖在第 %d 層復活屍體時耗盡了生命力</string>
     <string name="ResultDescriptions_Necrotism">在第%d層死於壞死</string>
     <string name="ResultDescriptions_Ooze">在第 %d 層被腐蝕淤泥殺死</string>
     <string name="ResultDescriptions_Poison">在第 %d 層死於劇毒</string>
@@ -2550,6 +2551,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
