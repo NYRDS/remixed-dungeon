@@ -1684,6 +1684,7 @@
     <string name="Sheep_Desc">這是一隻魔法綿羊。為什麼叫魔法綿羊？因為你沒法殺死它。它只會站在那裡直到魔法失效，在它消失前，它只會站在這咀嚼反芻物，神情空洞。</string>
     <string name="Sheep_Name">魔法綿羊</string>
     <string name="Sheep_Name_Objective">魔法綿羊</string>
+    <string name="ShieldBuffReady_Info">你的盾牌已準備好抵擋下一次攻擊。</string>
     <string name="ShieldInfoTemplate">這個盾牌最多可以格擋%1$d傷害。  格擋幾率為%2$d %% 。 成功格擋後需要%3$3.1f個回合來恢復。</string>
     <string name="ShieldStrTemplate">盾牌的佩戴者應至少具有%1$d力量才能正常的使用它。</string>
     <string name="Shielded_Defense">格擋</string>
@@ -2551,6 +2552,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

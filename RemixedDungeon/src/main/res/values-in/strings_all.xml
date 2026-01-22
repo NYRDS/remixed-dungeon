@@ -513,6 +513,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="DM300_Info3">Personil tak terautorisasi terditeksi.</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Sebilah pisau besi dengan gagang kayu yang baik.</string>
     <string name="Dagger_Name">pisau</string>
     <string name="DarkGold_Info">Logam ini disebut gelap bukan karena warnanya (tidak berbeda dengan emas biasa), tetapi karena meleleh di bawah sinar matahari, sehingga tidak berguna di permukaan.</string>
@@ -2731,6 +2732,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
