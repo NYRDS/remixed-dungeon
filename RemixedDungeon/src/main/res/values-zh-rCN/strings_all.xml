@@ -873,6 +873,7 @@
     <string name="HeroClass_NecromancerPerks_4">治疗药水开局时就已经鉴定好了。</string>
     <string name="HeroClass_None">平民</string>
     <string name="HeroClass_PlagueDoctorPerks_3">被毒气杀死的敌人会爆炸成毒雾，每影响一个敌人为你恢复 1 点生命值。</string>
+    <string name="HeroClass_Priest">牧师</string>
     <string name="HeroClass_Rog">盗贼</string>
     <string name="HeroClass_RogPerks_0">盗贼起始拥有一枚+1的暗影戒指。</string>
     <string name="HeroClass_RogPerks_1">盗贼在装备戒指时能自动鉴定其类型。</string>
@@ -2769,6 +2770,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
