@@ -493,6 +493,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Deathling_Desc">Makhluk Kematian ialah roh adiwira yang telah mati, tetapi malangnya telah dipanggil dengan kuasa Necromatik oleh rakan pengembara mereka.</string>
     <string name="Deathling_Name">makhluk kematian</string>
     <string name="Deathling_Name_Objective">makhluk kematian</string>
+    <string name="DeferedDamageBuff_Info">Rasa sakit telah bertukar menjadi sakit yang perlahan, mengurangkan kerosakan yang diterima sekaligus.\nKerosakan yang tinggal untuk diterima %d</string>
     <string name="DeferedDamage_Killed_Txt">%s telah membunuh anda...</string>
     <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">Baham</string>
@@ -2458,6 +2459,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

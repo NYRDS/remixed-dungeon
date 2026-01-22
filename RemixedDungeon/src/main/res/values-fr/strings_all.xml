@@ -333,6 +333,7 @@
     <string name="Capotain_Name">Capotaine</string>
     <string name="Carcass_DissectResult">Du %s, vous obtenez %d %s.</string>
     <string name="Carcass_Info">Restes de %s totalement mort.</string>
+    <string name="Carcass_Name">Restes de %s</string>
     <string name="Carcass_Necromancy">Vous avez ressuscité le cadavre de %s!</string>
     <string name="Carcass_Necromancy_Failed">Votre tentative de réanimation du cadavre de %s a échoué!</string>
     <string name="Caves_TileDescBookshelf">Qui aurait besoin d\'une bibliothèque dans une grotte ?</string>
@@ -2925,6 +2926,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

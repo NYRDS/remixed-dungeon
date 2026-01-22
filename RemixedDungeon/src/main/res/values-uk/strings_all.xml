@@ -2615,8 +2615,10 @@
     <string name="town_deco_wooden_stairs_name">Сходи</string>
     <string name="town_deco_wooden_table_desc">Це надійний, дерев\'яний стіл.</string>
     <string name="town_deco_wooden_table_name">Дерев\'яний стіл</string>
+    <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
