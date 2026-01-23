@@ -814,6 +814,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Hero_StaWeakness">당신은 약화되었다!</string>
     <string name="Hero_Wait">...</string>
     <string name="Hero_YouNowHave">%s을/를 얻었다.</string>
+    <string name="HideInGrassSpell_Name">풀숲에 숨기</string>
     <string name="Horror_Name_0">섬뜩한 %s</string>
     <string name="Horror_Name_1">섬뜩한 %s</string>
     <string name="Horror_Name_2">섬뜩한 %s</string>
@@ -1608,6 +1609,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Sheep_Desc">이 양은 마법 양입니다. 어떤 마법이 있냐고요? 당신은 그 양을 죽일 수 없습니다. 그 양은 멍한 눈으로 되새김질이나 하면서, 마법이 없어질 때까지 계속 있을 겁니다.</string>
     <string name="Sheep_Name">양</string>
     <string name="Sheep_Name_Objective">양</string>
+    <string name="ShieldBuffNotReady_Info">방패가 다음 공격을 막을 준비가 되지 않았습니다.</string>
     <string name="ShieldStrTemplate">이 방패를 제대로 사용하기 위해서는 착용자에게 최소한 %1$d의 힘 수치가 필요합니다.</string>
     <string name="ShieldWeaponInfo">무기로 사용될 때 이 방패는 평균적으로 %1의 피해를 입힙니다.</string>
     <string name="Shielded_Defense">막음</string>
@@ -2390,6 +2392,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 

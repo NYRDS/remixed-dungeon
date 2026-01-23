@@ -840,6 +840,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Journal_Ghost">Fantasma triste</string>
     <string name="Journal_Imp">Diavoletto ambizioso</string>
     <string name="Journal_PlagueDoctorNPC">Dottore della peste</string>
+    <string name="Journal_ScarecrowNPC">Spaventapasseri</string>
     <string name="Journal_Statue">Statua Animata</string>
     <string name="Journal_Troll">Fabbro troll</string>
     <string name="Journal_Wandmaker">Vecchio fabbricante di bacchette</string>
@@ -2222,6 +2223,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
