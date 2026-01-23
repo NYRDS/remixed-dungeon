@@ -2006,6 +2006,7 @@
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">Підступний дух</string>
     <string name="TreacherousSpirit_Name_Objective">Підступного духа</string>
+    <string name="Typical_Damage">Типовий урон</string>
     <string name="Undead_Defense">прикрився</string>
     <string name="Undead_Desc">Ці мертві дворфи, які повстали по волі свого царя, буди колись частиною його придворної свити. Ззовні вони виглядають як скелети з значними бородами.</string>
     <string name="Undead_Gender">masculine</string>
@@ -2622,6 +2623,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

@@ -1995,6 +1995,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">Heimtückischer Geist</string>
     <string name="TreacherousSpirit_Name_Objective">Heimtückischer Geist</string>
+    <string name="Typical_Damage">Typischer Schaden</string>
     <string name="Undead_Defense">abgeblockt</string>
     <string name="Undead_Desc">Diese untoten Zwerge, erschaffen durch den Willen des Zwergenkönigs, waren einst Mitglieder seines Rates. Sie sehen aus wie Skelette mit einer beeindruckenden Gesichtsbehaarung.</string>
     <string name="Undead_Name">Untoter Zwerg</string>
@@ -2671,6 +2672,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

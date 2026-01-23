@@ -1876,6 +1876,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="TreacherousSpirit_Desc">Ez az irtózatos teremtmény úgy néz ki, mint egy felhőnyi élő sötétség. Héj nélküli szeme téged bámul, pulzálva minden mozdulatodra.</string>
     <string name="TreacherousSpirit_Name">Álnok lélek</string>
     <string name="TreacherousSpirit_Name_Objective">Álnok lélek</string>
+    <string name="Typical_Damage">Tipikus sebzés</string>
     <string name="Undead_Defense">elzáródott</string>
     <string name="Undead_Desc">Ezek az élőhalott törpök a Törpök Királyának akaratából éledtek fel aki hűséges alattvalóit szólította. Úgy néznek ki mint egy normális csontváz, csak sokkoló mennyiségű arcszőrzettel.</string>
     <string name="Undead_Gender">masculine</string>
@@ -2484,6 +2485,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

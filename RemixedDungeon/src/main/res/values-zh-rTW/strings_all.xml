@@ -1921,6 +1921,7 @@
     <string name="TreacherousSpirit_Desc">這個巨大的怪物看起來像是一片有生命的黑暗之雲。它無眼瞼的眼睛凝視這你，隨著你的每個動作而顫動。</string>
     <string name="TreacherousSpirit_Name">背叛的精神</string>
     <string name="TreacherousSpirit_Name_Objective">背叛的精神</string>
+    <string name="Typical_Damage">典型傷害</string>
     <string name="Undead_Defense">格擋</string>
     <string name="Undead_Desc">由矮人國王的意誌喚醒的矮人亡靈，曾經的皇室成員，以長著厚實胡須的骷髏的姿態出現。</string>
     <string name="Undead_Name">矮人亡靈</string>
@@ -2233,6 +2234,7 @@
     <string name="WndSaveSlotSelect_dontLike">不喜歡廣告？進行捐獻吧！廣告會永遠的消失。</string>
     <string name="WndSelectLanguage_ImproveTranslation">請幫助混合地牢的多種語言翻譯。</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">點擊此處幫助我們翻譯混合地牢</string>
+    <string name="WndSettingsInGame_GameLog">遊戲記錄</string>
     <string name="WndSettings_ActionButtonSize">按鈕大小</string>
     <string name="WndSettings_Brightness">光暗度</string>
     <string name="WndSettings_ClassicFont">經典字體</string>
@@ -2554,6 +2556,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

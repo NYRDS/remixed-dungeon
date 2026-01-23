@@ -16,6 +16,7 @@
     <string name="AboutScene_Translation">本地化的功臣：</string>
     <string name="AboutScene_Translation_Names">丘比</string>
     <string name="AboutScene_Txt_Intro">混合地牢是由NYRDS以Watabou的像素地牢源码为基础制作的。</string>
+    <string name="Accuracy_DecreasedDoctorBareHands">赤手空拳会污染我的技术。没有锯子的干净切割，我的瞄准就会陷入混乱。</string>
     <string name="Acidic_Desc">这些巨大的节肢类恶魔生物会尽可能地避免近距离战斗，并且在远处射出能致残的锯齿尖刺。</string>
     <string name="Acidic_Name">酸蚀蝎子</string>
     <string name="Acidic_Name_Objective">酸蚀蝎子</string>
@@ -2772,6 +2773,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

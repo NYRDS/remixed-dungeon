@@ -2142,6 +2142,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndSaveSlotSelect_SelectSlot">슬롯을 정하세요.</string>
     <string name="WndSaveSlotSelect_dontLike">광고가 싫으신가요? 기부를 하신다면, 영구적으로 없어질 것입니다.</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">리믹스드 던전 번역 팀에 합류하려면 여기를 클릭하세요</string>
+    <string name="WndSettingsInGame_GameLog">게임 로그</string>
     <string name="WndSettings_ActionButtonSize">액션 버튼 크기</string>
     <string name="WndSettings_Brightness">밝기</string>
     <string name="WndSettings_ClassicFont">클래식 폰트</string>
@@ -2395,6 +2396,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

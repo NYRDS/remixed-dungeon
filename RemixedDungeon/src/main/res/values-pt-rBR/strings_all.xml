@@ -2035,6 +2035,7 @@ outro local do nível.</string>
     <string name="TreacherousSpirit_Desc">Esta criatura monstruosa parece uma nuvem de pura escuridão. Seus olhos arregalados lhe encaram, pulsando à cada movimento seu.</string>
     <string name="TreacherousSpirit_Name">Espírito traçoeiro</string>
     <string name="TreacherousSpirit_Name_Objective">Espírito traçoeiro</string>
+    <string name="Typical_Damage">Dano típico</string>
     <string name="Undead_Defense">bloqueado</string>
     <string name="Undead_Desc">Estes anões zumbi, aumentados pela vontade do rei dos anões, eram membros de sua corte. Eles aparecem como esqueletos com uma quantidade impressionante de cabelo em sua face.</string>
     <string name="Undead_Name">anão morto-vivo</string>
@@ -2734,6 +2735,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
