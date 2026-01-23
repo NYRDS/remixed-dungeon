@@ -1676,6 +1676,7 @@
     <string name="Shadow_Name">陰影</string>
     <string name="Shadow_Name_Objective">陰影</string>
     <string name="ShadowsBuff_Name">暗影融合</string>
+    <string name="ShamanElder_Name">長老薩滿</string>
     <string name="ShamanElder_Name_Objective">長老薩滿</string>
     <string name="Shaman_Desc">只有那些最聰明的豺狼人才能掌握薩滿魔法。豺狼薩滿更喜歡用戰鬥魔法來彌補力量上的不足。任何敢於質疑它們在部落裏地位的人都會被薩滿用法術毫不留情地消滅。</string>
     <string name="Shaman_Killed">%s的閃電殺死了你……</string>
@@ -2553,6 +2554,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

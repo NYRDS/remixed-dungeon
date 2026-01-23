@@ -304,6 +304,7 @@
     <string name="Challenges_Names_4">Kepintaran kerumun</string>
     <string name="Challenges_Names_5">Ke dalam kegelapan</string>
     <string name="ChampionOfEarthBuff_Info">Juara Bumi menggambarkan keteguhan yang tidak goyah, kerana ciri ini meningkatkan rintangan kerosakan makhluk tersebut dan meningkatkan vitaliti maksimumnya. Penjelmaan ini menjadikannya musuh yang menakutkan di kedalaman yang berbahaya, mampu meleraikan serangan dengan mudah dan bertahan dalam pertempuran panjang dengan ketabahan yang tidak berubah.</string>
+    <string name="ChampionOfEarthBuff_Name">Juara Bumi</string>
     <string name="ChaosArmor_Info">Plat berwarna merah darah perisai ini disulam bersama-sama dengan rantai merah. Ia diselimuti dengan tenaga kekacauan bilamana anda menyentuhnya.</string>
     <string name="ChaosArmor_Name">Perisai Chaos</string>
     <string name="ChaosBow_Info">Busur hebat yang diperkasa dengan kuasa Chaos. Setiap anak panah yang ditembak akan membawa tenaga chaos ke sasaran. Sebaliknya jika anda tersilap atau tersasar...</string>
@@ -2462,6 +2463,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
