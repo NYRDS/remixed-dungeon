@@ -283,6 +283,7 @@
     <string name="Brute_Name">gnoll Brutamonte</string>
     <string name="Brute_Name_Objective">gnoll Brutamonte</string>
     <string name="Brute_StaEnraged">irritado</string>
+    <string name="BuffParam_Cooldown">Recarga: %.2f</string>
     <string name="BurningBuff_Info">O corpo está envolto em chamas furiosas!</string>
     <string name="BurningBuff_Name">Queimando</string>
     <string name="BurningFist_Desc">Punho Queimando do Deus Antigo</string>
@@ -2733,6 +2734,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

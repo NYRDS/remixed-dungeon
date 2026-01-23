@@ -1390,6 +1390,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="RatKingCrown_Name">A patkány király koronája</string>
     <string name="RatKing_Desc">Ez a patkány egy kicsit nagyobb egy átlagos erszényes patkánynál és egy parányi koronát visel.</string>
     <string name="RatKing_Died">Meghalt a Király. Éljen a Király!</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">Nem alszom!</string>
     <string name="RatKing_Info2">Miaz? Nincs időm az ilyen sületlenségekre. A királyságom nem fogja irányítani saját magát!</string>
     <string name="RatKing_Info3">Hogy merészeled, te jelentéktelen teremtmény, zavarni Ő Patkányságát?!</string>
@@ -2483,6 +2484,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

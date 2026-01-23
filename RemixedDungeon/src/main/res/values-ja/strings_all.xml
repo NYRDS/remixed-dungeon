@@ -1721,6 +1721,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">このルビーの弓を使えるのは、最強の弓手だけだ。ほとんどすべての矢が敵を貫き、体に大きな穴を残すが、弓の弦を引くには非常に強い力が必要だ。</string>
     <string name="RubyBow_Name">ルビーの弓</string>
+    <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Info">この致命的な武器は、まさにドワーフ工学の傑作である。</string>
     <string name="RubyCrossbow_Name">ルビークロスボウ</string>
     <string name="Rudolph_Info">赤く輝く鼻ほどおめでたいものがあるだろうか？もちろん、角も一緒で。</string>
@@ -2874,6 +2875,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
