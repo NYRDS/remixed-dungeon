@@ -559,6 +559,7 @@
     <string name="Death_Name_1">冷酷%s</string>
     <string name="Death_Name_2">冷酷%s</string>
     <string name="Deathling_Desc">死灵是一个堕落英雄的灵魂，他不幸被一位练习死灵术的冒险者召唤。 </string>
+    <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">死灵</string>
     <string name="Deathling_Name_Objective">死灵</string>
     <string name="DeepSnail_Desc">这种软体动物经常在水源附近出没，速度比普通蜗牛快得多。但是要小心被咬伤，它们会对你的皮肤产生令人不快的影响。</string>
@@ -2770,6 +2771,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

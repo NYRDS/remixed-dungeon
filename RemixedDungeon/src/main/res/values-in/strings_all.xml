@@ -1341,6 +1341,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Pasty_Info">Ini adalah pastel jagung autentik dengan isi tradisional berupa daging sapi dan kentang.</string>
     <string name="Pasty_Name">pastel</string>
     <string name="Pickaxe_ACMine">TAMBANG</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Ini adalah alat yang besar dan kokoh untuk memecahkan batu. Itu mungkin bisa digunakan sebagai senjata.</string>
     <string name="Pickaxe_Name">beliung</string>
     <string name="Pickaxe_NoVein">Tidak ada emas gelap disekitarmu yang bisa digali</string>
@@ -2737,6 +2738,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

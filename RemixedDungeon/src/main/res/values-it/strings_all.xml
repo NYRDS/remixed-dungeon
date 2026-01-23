@@ -1847,6 +1847,7 @@ Potrebbe bruciare?</string>
     <string name="WndChooseWay_Message">Quale strada seguirete?</string>
     <string name="WndClass_Mastery">Padronanza</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+    <string name="WndCryptoDonate_copyAddress">Copia Indirizzo</string>
     <string name="WndCustomizations_Title">Personalizzazioni</string>
     <string name="WndDonate_donate">dona:</string>
     <string name="WndDonate_gold">oro</string>
@@ -2223,6 +2224,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

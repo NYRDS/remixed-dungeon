@@ -2485,6 +2485,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndCryptoDonate_copyAddress">Копировать адрес</string>
     <string name="WndCryptoDonate_currency">Валюта</string>
     <string name="WndCryptoDonate_infoText">Вы можете поддержать разработку Remixed Dungeon, отправив криптовалютные пожертвования на адреса, указанные ниже. Спасибо за вашу щедрую поддержку!</string>
+    <string name="WndCryptoDonate_monero">Монеро</string>
     <string name="WndCryptoDonate_openWallet">Открыть кошелек</string>
     <string name="WndCryptoDonate_walletAddress">Адрес кошелька</string>
     <string name="WndCustomizations_Title">Кастомизации</string>
@@ -3036,6 +3037,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 
