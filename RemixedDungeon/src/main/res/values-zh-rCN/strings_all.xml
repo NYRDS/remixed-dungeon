@@ -198,6 +198,7 @@
     <string name="BattleAxe_Info">这把有着巨大钢制头部的战斧能将庞大的力量倾注在每次挥击之中。</string>
     <string name="BattleAxe_Name">战斧</string>
     <string name="Bee_Desc">尽管蜜蜂体型很小，但它们倾向于激烈地保护自己的蜂巢。不过它们活不长。</string>
+    <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name">蜜蜂</string>
     <string name="Bee_Name_Objective">蜜蜂</string>
     <string name="BellaNPC_Amulet_F">你好，小可爱，你怎么在那里。啊，好精致的护身符！而你…………与任何人相比，你的光芒都是那么耀眼。我们出去走走，讨论我们共同的未来，怎么样？</string>
@@ -2771,6 +2772,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

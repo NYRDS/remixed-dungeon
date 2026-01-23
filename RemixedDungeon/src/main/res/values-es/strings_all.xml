@@ -1181,6 +1181,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="LloidsBeacon_Preventing">¡El fuerte aura mágica de este lugar te impide usar la baliza de Lloyd!</string>
     <string name="LloidsBeacon_Return">La baliza de Lloyd se fija correctamente a tu posición actual. Ahora puedes regresar aquí cuando quieras.</string>
     <string name="LloidsBeacon_Set">\n\nÉste faro ha sido colocado en alguna parte del nivel %d de Remixed Dungeon.</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Info">Esta imponente espada inflige gran daño con cada golpe gracias a su peso. </string>
     <string name="Longsword_Name">espada larga</string>
     <string name="Luck_Name_0">%s con suerte</string>
@@ -2779,6 +2780,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

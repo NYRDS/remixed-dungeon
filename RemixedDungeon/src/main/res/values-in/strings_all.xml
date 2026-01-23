@@ -940,6 +940,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="IceCaves_TileHighGrass">Rumput tinggi beku</string>
     <string name="IceCaves_TileStatue">Gnoll beku</string>
     <string name="IceElemental_Desc">Di antara semua elemental yang ada di dungeon, elemental es hampir tidak bisa dianggap kuat, tapi mereka benar-benar bisa disebut salah satu yang paling berbahaya. Aura es yang terpancar dari tubuh mereka dapat memperlambat musuh mana pun.</string>
+    <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">elemen es</string>
     <string name="IceElemental_Name_Objective">elemen air</string>
     <string name="IceGuardianCoreModule_Info">Ini adalah sebuah bangunan rumit yang terbuat dari es bersihir. Sebuah permata berkilau diletakkan di tengah alat aneh ini.</string>
@@ -2739,6 +2740,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

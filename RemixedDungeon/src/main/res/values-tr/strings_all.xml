@@ -80,6 +80,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Armor_Info8">\n\nKötü niyetli bir büyünün %s içinde gizlendiğini hissediyorsun.</string>
     <string name="Armor_ToString">%1$s :%2$d</string>
     <string name="ArmoredStatue_Desc">Kimse bunun sıradan bir heykel olduğunu düşünmeye bile başlayamaz. Sadece kırmızı parlayan gözler değil, kimsenin böyle bir şeye gerçek bir _%s_ takmayacağı gerçeği de var.</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">canlandırılmış heykel</string>
     <string name="ArmoredStatue_Name_Objective">canlandırılmış heykel</string>
     <string name="Artifact_Limit">Tek seferde sadece 2 eser giyebilirsiniz.</string>
@@ -2812,6 +2813,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
