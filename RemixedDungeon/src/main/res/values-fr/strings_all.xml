@@ -178,6 +178,7 @@
     <string name="Badges_StrengthAttained4">19 points de force obtenus</string>
     <string name="Badges_StrengthAttained5">21 points de force obtenus</string>
     <string name="Badges_Supporter">Merci pour votre soutien !</string>
+    <string name="Badges_ThisIsSparta">C'est Sparte!!!</string>
     <string name="Badges_Victory">Amulette de Yendor obtenue</string>
     <string name="Badges_VictoryAll">Amulette de Yendor obtenue par toutes les classes</string>
     <string name="Badges_Yasd">Mort par le feu, le poison, les gaz toxiques et la faim</string>
@@ -2928,6 +2929,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

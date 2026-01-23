@@ -1701,6 +1701,7 @@ egy másik helyre a szinten. </string>
     <string name="SoulShard_Name">Lélek szilánk</string>
     <string name="Spear_Info">Vékony farúd, a végén hegyes vassal.</string>
     <string name="Spear_Name">Lándzsa</string>
+    <string name="SpeedBuff_Name">Sebesség</string>
     <string name="SpellBook_Info">Úgy néz ki inkább mint néhány összegyűjtött lap amit összevartak, minthogy egy tényleges könyv. Talán kihozhatsz belőle még valamit, ha elég figyelmet fordítasz rá.</string>
     <string name="SpellBook_Info_Identified">
 Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&quot; %2$s \&quot;</string>
@@ -2481,6 +2482,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
