@@ -1049,6 +1049,7 @@ Potrebbe bruciare?</string>
     <string name="Monk_Disarm">%1$s ti ha tolto %2$s dalle tue mani!</string>
     <string name="Monk_Name">Monaco Nano</string>
     <string name="Monk_Name_Objective">Monaco Nano</string>
+    <string name="MoongraceBuff_Name">Manna celeste</string>
     <string name="Multiplicity_Txt">%s della molteplicità</string>
     <string name="Mushroom_Eat_Message">Quel fungo sapeva di strano!</string>
     <string name="MysteryMeat_Info">mangialo a tuo rischio!</string>
@@ -2227,6 +2228,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

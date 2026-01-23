@@ -1707,6 +1707,7 @@ egy másik helyre a szinten. </string>
 Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&quot; %2$s \&quot;</string>
     <string name="SpellBook_Name">Varázskönyv</string>
     <string name="Spell_SelectACell">Válassz ki egy mezőt.</string>
+    <string name="Spell_SelectAChar">Válassz egy célt</string>
     <string name="Spells_NotEnoughSP">Nincs elég manád hogy a \&quot;%1$s\&quot; varázst elvesd.</string>
     <string name="Spells_NotInOwnBody">Nem tudod végrehajtani %s amíg a lelked el van választva a testedtől.</string>
     <string name="Spells_NotTooFast">%s még nem használható</string>
@@ -2482,6 +2483,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
