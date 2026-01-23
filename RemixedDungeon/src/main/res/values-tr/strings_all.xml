@@ -177,6 +177,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Badges_StrengthAttained4">19 Güç puanına ulaşıldı</string>
     <string name="Badges_StrengthAttained5">Güç seviyesi 21 puana yükseltildi</string>
     <string name="Badges_Supporter">Desteğiniz için teşekkürler!</string>
+    <string name="Badges_ThisIsSparta">Bu Spartaaaaa!!!</string>
     <string name="Badges_Victory">Yendor\'un Tılsımı kazanıldı</string>
     <string name="Badges_VictoryAll">Yendor\'un Tılsımı tüm karakter türleri tarafından kazanıldı</string>
     <string name="Badges_Yasd">Ateş, zehir, zehirli gaz ve açlık yüzünden ölüm</string>
@@ -2811,6 +2812,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

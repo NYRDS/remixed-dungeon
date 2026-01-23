@@ -258,6 +258,7 @@
     <string name="Caves_TileGrass">Muschio fluorescente</string>
     <string name="Caves_TileHighGrass">Funghi fosforescenti</string>
     <string name="Caves_TileWater">Acqua Ghiacciata</string>
+    <string name="Challenges_Descriptions_0">Il cibo e l'acqua sono da tempo andati a male, facendo impazzire ogni avventuriero al pensiero della morte per paura e fame. Può la tua dieta aiutarti a resistere abbastanza a lungo?</string>
     <string name="Challenges_Names_0">Sulla dieta</string>
     <string name="Challenges_Names_1">La fede è la mia armatura</string>
     <string name="Challenges_Names_2">Pharmacophobia</string>
@@ -269,6 +270,7 @@
     <string name="ChaosArmor_Name">Armatura del caos. </string>
     <string name="ChaosBow_Info">Un terribile arco colmo con il potere del Caos. Ogni freccia scoccata porterà un pezzo di energia del Caos al bersaglio. Ma se manchi il bersaglio...puoi vedere come  </string>
     <string name="ChaosBow_Name">Arco del caos</string>
+    <string name="ChaosCrystal_ArmorFused">Il cristallo si è fuso con la tua armatura e ha assunto la forma caotica.</string>
     <string name="ChaosCrystal_BowFused">Il Cristallo assorbe l\'arco, e ha preso la forma di un arco</string>
     <string name="ChaosCrystal_Fuse">FONDI</string>
     <string name="ChaosCrystal_Info">Senti i flussi d\'energia, che ti attraversano le mani mentre lo impugni.</string>
@@ -323,6 +325,7 @@
     <string name="ChargrilledMeat_Info">Sembra una bistecca decente.</string>
     <string name="ChargrilledMeat_Name">carne grigliata</string>
     <string name="CharmBuff_Name">Affascinato</string>
+    <string name="CharmSpell_Info">Ognuno merita un po' d'amore, vero?</string>
     <string name="Chasm_Chasm">Baratro</string>
     <string name="Chasm_Info">Sei caduto da un posto alto...</string>
     <string name="Chasm_Jump">Vuoi davvero fare un salto nel baratro? Probabilmente si può morire.</string>
@@ -2224,6 +2227,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 
