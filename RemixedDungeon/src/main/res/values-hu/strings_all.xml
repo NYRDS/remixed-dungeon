@@ -896,6 +896,10 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Imp_Name">becsvágyó kisördög</string>
     <string name="IncendiaryDart_Info">Ezeknek a dartoknak a hegye arra lett tervezve, hogy belefúródjon a célba, viszont a rákötött instabil összetevők szép kis tüzet okoznak becsapódáskor.</string>
     <string name="IncendiaryDart_Name">Gyujtós dobónyíl</string>
+    <string name="InnKeeperNPC_Desc">A fogadós büszke magára.</string>
+    <string name="InnKeeperNPC_Gender">masculine</string>
+    <string name="InnKeeperNPC_Name">fogadós</string>
+    <string name="InnKeeperNPC_Name_Objective">fogadóst</string>
     <string name="InnServant_Phrase_3">Nekem tisztának tűnik</string>
     <string name="Instability_Name_0">Instabil %s</string>
     <string name="Instability_Name_1">Instabil %s</string>
@@ -2486,6 +2490,10 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
 
 
 

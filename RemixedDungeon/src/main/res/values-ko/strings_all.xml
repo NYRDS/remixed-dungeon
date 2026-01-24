@@ -567,6 +567,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ElvenBow_Name">엘프 활</string>
     <string name="ElvenDagger_Info">이 무기는 특수한 합금으로 만들어졌기 때문에 통상의 단검보다 훨씬 가볍다.</string>
     <string name="ElvenDagger_Name">엘프제 단검</string>
+    <string name="EncumbranceBuff_CharAct_4">나는 %s의 잠재력을 최대한 발휘할 힘이 부족하다.</string>
     <string name="EnslavedSoul_Desc">당신은 이 유령의 속을 꿰뚫어 볼 수 있습니다. 해골같은 모습을 하고 있으나 가끔씩 순간적으로 해골 대신 고통과 괴로움으로 가득찬 얼굴이 나타납니다.</string>
     <string name="EnslavedSoul_Name">노예화된 영혼</string>
     <string name="EnslavedSoul_Name_Objective">노예화된 영혼</string>
@@ -2397,6 +2398,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
