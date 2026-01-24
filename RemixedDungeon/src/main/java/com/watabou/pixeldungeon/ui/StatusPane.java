@@ -119,26 +119,26 @@ public class StatusPane extends Component {
         exp_img = new Image(Assets.XP_BAR);
         add(exp_img);
 
-        hpText = new BitmapText(PixelScene.font1x);
+        hpText = new BitmapText(PixelScene.getFont1x());
         hpText.hardlight(0x777777);
         hpText.setScaleXY(0.5f,0.5f);
         add(hpText);
 
-        manaText = new BitmapText(PixelScene.font1x);
+        manaText = new BitmapText(PixelScene.getFont1x());
         manaText.hardlight(0xaaaaaa);
         manaText.setScaleXY(0.5f,0.5f);
         add(manaText);
 
-        level = new BitmapText(PixelScene.font1x);
+        level = new BitmapText(PixelScene.getFont1x());
         level.hardlight(0xFFEBA4);
         add(level);
 
-        depth = new BitmapText(Integer.toString(Dungeon.depth), PixelScene.font1x);
+        depth = new BitmapText(Integer.toString(Dungeon.depth), PixelScene.getFont1x());
         depth.hardlight(0xCACFC2);
         add(depth);
 
         IronKey.countIronKeys();
-        keys = new BitmapText(PixelScene.font1x);
+        keys = new BitmapText(PixelScene.getFont1x());
         keys.hardlight(0xCACFC2);
         add(keys);
 
@@ -163,7 +163,7 @@ public class StatusPane extends Component {
 
         add(btnHats);
 
-        verText = new BitmapText(PixelScene.font1x);
+        verText = new BitmapText(PixelScene.getFont1x());
         verText.text(String.valueOf(Utils.isAndroid() ? GameLoop.versionCode - 10000 : GameLoop.versionCode));
         verText.hardlight(0xaaaaaa);
         verText.alpha(0.6f);

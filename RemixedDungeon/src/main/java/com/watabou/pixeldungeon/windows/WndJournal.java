@@ -80,7 +80,7 @@ public class WndJournal extends WndTabbed {
             feature = PixelScene.createText(GuiProperties.titleFontSize());
             add(feature);
 
-            depth = Text.createBasicText(PixelScene.font1x);
+            depth = Text.createBasicText(PixelScene.getFont1x());
             add(depth);
 
             icon = Icons.get(Icons.DEPTH);

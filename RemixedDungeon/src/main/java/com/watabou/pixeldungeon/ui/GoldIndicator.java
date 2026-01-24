@@ -24,7 +24,7 @@ public class GoldIndicator extends Component {
 
 	GoldIndicator() {
 		super();
-		tf = new BitmapText( PixelScene.font1x );
+		tf = new BitmapText(PixelScene.getFont1x());
 		tf.hardlight( 0xFFFF00 );
 		add( tf );
 

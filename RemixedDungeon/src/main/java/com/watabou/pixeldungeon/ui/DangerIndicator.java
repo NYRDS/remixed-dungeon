@@ -36,7 +36,7 @@ public class DangerIndicator extends Tag {
 	protected void createChildren() {
 		super.createChildren();
 		
-		number = new BitmapText(PixelScene.font1x);
+		number = new BitmapText(PixelScene.getFont1x());
 
 		add( number );
 		

@@ -290,7 +290,7 @@ public class RankingsScene extends PixelScene {
             shield = new ItemSprite(Assets.ITEMS, ItemSpriteSheet.TOMB, null);
             add(shield);
 
-            position = new BitmapText(PixelScene.font1x);
+            position = new BitmapText(PixelScene.getFont1x());
             add(position);
 
             desc = createMultiline(GuiProperties.regularFontSize());

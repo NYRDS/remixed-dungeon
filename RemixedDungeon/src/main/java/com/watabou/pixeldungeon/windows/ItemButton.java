@@ -1,9 +1,11 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.gltextures.TextureCache;
+import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -19,8 +21,13 @@ import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.plants.Seed;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.QuickSlot;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 class ItemButton extends ItemSlot {
     
@@ -30,6 +37,7 @@ class ItemButton extends ItemSlot {
     private final WndBag wndBag;
     private final Item item;
     private ColorBlock bg;
+    private BitmapText alchemyIndicator;
     
     public ItemButton(WndBag wndBag, Item item) {
         
@@ -47,10 +55,16 @@ class ItemButton extends ItemSlot {
     }
     
     @Override
-    protected void createChildren() {	
+    protected void createChildren() {
         bg = new ColorBlock( WndBag.SLOT_SIZE, WndBag.SLOT_SIZE, NORMAL );
         add( bg );
-        
+
+        // Create alchemy indicator
+        alchemyIndicator = new BitmapText(PixelScene.getFont1x());
+        alchemyIndicator.text("*");
+        alchemyIndicator.hardlight(0xFFFF00); // Yellow color for alchemy indicator
+        add(alchemyIndicator);
+
         super.createChildren();
     }
     
@@ -58,7 +72,13 @@ class ItemButton extends ItemSlot {
     public void layout() {
         bg.setX(x);
         bg.setY(y);
-        
+
+        // Position the alchemy indicator in the top-right corner
+        if (alchemyIndicator != null) {
+            alchemyIndicator.x = x + width - alchemyIndicator.width() - 1;
+            alchemyIndicator.y = y + 1;
+        }
+
         super.layout();
     }
 
@@ -67,6 +87,33 @@ class ItemButton extends ItemSlot {
 
             bg.texture( TextureCache.createSolid( item.isEquipped( Dungeon.hero ) ? EQUIPPED : NORMAL ) );
             ItemUtils.tintBackground(item, bg);
+
+            // Check if this item can be used in alchemy recipes
+            boolean isUsableInAlchemy = false;
+            if (mode == WndBag.Mode.ALL || mode == WndBag.Mode.QUICKSLOT) {
+                // Calculate player's inventory
+                Map<String, Integer> playerInventory = new HashMap<>();
+                for (Item inventoryItem : Dungeon.hero.getBelongings().backpack.items) {
+                    String itemName = inventoryItem.getEntityKind();
+                    playerInventory.put(itemName, playerInventory.getOrDefault(itemName, 0) + inventoryItem.quantity());
+                }
+
+                // Check if the player has enough ingredients for recipes that include this item
+                List<Map.Entry<List<String>, List<String>>> recipesWithItem =
+                    AlchemyRecipes.getRecipesContainingItem(item.getEntityKind());
+
+                for (Map.Entry<java.util.List<String>, List<String>> recipe : recipesWithItem) {
+                    if (AlchemyRecipes.hasRequiredIngredients(recipe.getKey(), playerInventory)) {
+                        isUsableInAlchemy = true;
+                        break;
+                    }
+                }
+            }
+
+            // Show or hide the alchemy indicator
+            if (alchemyIndicator != null) {
+                alchemyIndicator.setVisible(isUsableInAlchemy);
+            }
 
             if(item.selectedForAction() || item instanceof ItemPlaceholder) {
                 enable(false);
@@ -134,6 +181,9 @@ class ItemButton extends ItemSlot {
             }
         } else {
             bg.color( NORMAL );
+            if (alchemyIndicator != null) {
+                alchemyIndicator.setVisible(false);
+            }
         }
     }
 
