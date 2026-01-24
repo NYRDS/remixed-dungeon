@@ -545,6 +545,7 @@
     <string name="CrippleBuff_Info">体は不自由になっても、戦いは続く。</string>
     <string name="CrippleBuff_Name">鈍化</string>
     <string name="Crystal_Desc">空中に浮かぶ大きな輝くクリスタル。おそらく強力な魔力で満たされているのだろう。</string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">浮遊クリスタル</string>
     <string name="Crystal_Name_Objective">浮遊クリスタル</string>
     <string name="CurareDart_Info">この邪悪な小さなダーツは大したダメージは与えないが、標的を麻痺させ、しばらくの間無力化することができる。</string>
@@ -2878,6 +2879,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
