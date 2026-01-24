@@ -782,6 +782,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="IceElemental_Name">elementale del ghiaccio</string>
     <string name="IceElemental_Name_Objective">elementale del ghiaccio</string>
     <string name="IceGuardianCore_Desc">I Guardiani del Ghiaccio venivano fabbricati dagli antichi coboldi per proteggere le loro grotte. Il potere immagazzinato nel suo nucleo consente al Guardiano del Ghaccio di ricostruirsi fintanto che ha abbastanza energia.</string>
+    <string name="IceGuardianCore_DieInfo">Fa così freddo qui, è meglio tornare al livello 14 e cercare una via verso un posto più caldo.</string>
     <string name="IceGuardianCore_Name">guardiano del ghiaccio</string>
     <string name="IceGuardianCore_Name_Objective">guardiano del ghiaccio</string>
     <string name="IceGuardian_Desc">I Guardiani del Ghiaccio sono stati creati dagli antichi coboldi per proteggere le loro caverne. Finché il nucleo del Guardiano contiene abbastanza energia, è in grado di ricostruire se stesso proprio nel pieno della battaglia.</string>
@@ -2138,6 +2139,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_crate_bottles_name">Cassa di birra</string>
     <string name="town_deco_cross_desc">Una croce di argento, il simbolo della religione locale - \&quot;I Testimoni di Santa il Signore delle Profondità\&quot;</string>
     <string name="town_deco_cross_name">Croce</string>
+    <string name="town_deco_crossroad_name">Cartello stradale</string>
     <string name="town_deco_curtains_name">Tende</string>
     <string name="town_deco_door_desc">Una semplice porta di legno</string>
     <string name="town_deco_door_name">Porta</string>
@@ -2239,6 +2241,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
