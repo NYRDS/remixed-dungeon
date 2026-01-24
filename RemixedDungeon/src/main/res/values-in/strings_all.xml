@@ -2299,6 +2299,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndLibrary_Items_Btn">Item</string>
     <string name="WndLibrary_Levels_Btn">Dungeon</string>
     <string name="WndLibrary_Mobs_Btn">raksasa</string>
+    <string name="WndLocalModInstall_text">Pilih direktori untuk menginstal mod dari sana.</string>
     <string name="WndModInstall_InstallingMod">Menginstal mod</string>
     <string name="WndModInstall_PleaseUpdate">Harap perbarui Remixed Dungeon sebelum menginstal mod ini</string>
     <string name="WndModInstall_Version">Versi</string>
@@ -2741,6 +2742,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

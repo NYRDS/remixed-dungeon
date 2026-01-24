@@ -2492,6 +2492,8 @@
     <string name="town_deco_shop_sign_name">商店標示牌</string>
     <string name="town_deco_skullboard_desc">這個頭骨完美地捕捉到了恐怖意外的剎那間。</string>
     <string name="town_deco_skullboard_name">戰利品框架</string>
+    <string name="town_deco_skulls_desc">屬於地牢生物的拋光頭骨</string>
+    <string name="town_deco_skulls_name">頭骨</string>
     <string name="town_deco_slush_desc">雪融化後，把周圍的地方變成了糊狀。</string>
     <string name="town_deco_slush_name">爛泥</string>
     <string name="town_deco_snow_desc">儘管有傳聞說這個地方有多受冒險者歡迎，但這裏雪很多，仿彿不曾有人踏雪留痕。</string>
@@ -2559,6 +2561,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

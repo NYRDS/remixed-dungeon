@@ -2232,6 +2232,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Wraith_Desc">Hantu merupakan roh berdendam sesorang yang berdosa, yang mana kuburnya telah diganggu. Merupakan entiti alam ghaib, ia sangat sukar diserang dengan senjata biasa.</string>
     <string name="Wraith_Name">hantu</string>
     <string name="Wraith_Name_Objective">hantu</string>
+    <string name="WrnExperimental_moveTimeout">Masa gerak ditetapkan ke %d milisaat, fikir cepat!</string>
     <string name="Yog_Desc">Yog-Dzewa ialah Dewa Purba, satu entiti berkuasa dari dunia chaos. Berabad-abad dahulu, orang kerdil purba berjaya mengalahkan tentera setannya walaupun menang tipis, mereka gagal membunuh dewa ini. Sebaliknya, mereka mengurung dewa ini dalam suatu ruangan di bawah bandar mereka, dengan harapan dia terlalu lemah untuk bangkit semula.</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">Harapan adalah sebuah ilusi...</string>
@@ -2472,6 +2473,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
