@@ -1,5 +1,6 @@
 <resources>
     <string name="AC_Devour">Devorar</string>
+    <string name="AC_Kick">Patear</string>
     <string name="AC_Necromancy">Nigromancia</string>
     <string name="Abilities_Common">Hechizos comunes</string>
     <string name="Abilities_Default">Maestría</string>
@@ -2782,6 +2783,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

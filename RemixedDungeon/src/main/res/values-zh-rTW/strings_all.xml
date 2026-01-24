@@ -699,6 +699,7 @@
     <string name="GnollArmor_NotGnoll">只有豺狼才能穿豺狼甲!</string>
     <string name="GnollCostume_Info">一件非常溫暖且毛茸茸的服裝。儘管誰穿上它，他／她或許看上去跟其他真 ‧ 豺狼沒有兩樣，但真 ‧ 豺狼不會上當，它們會照樣襲擊您。</string>
     <string name="GnollCostume_Name">豺狼服裝</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">一種傳統的戰斧，由豺狼工匠創造，每個部落都有自己獨特的設計。這種戰斧比同類戰斧輕一些，更適合於投擲。</string>
     <string name="GnollTamahawk_Name">豺狼戰斧</string>
     <string name="Gnoll_Desc">豺狼人是像鬣狗一樣的人型生物。他們居住在下水道和地牢中，不時向上突襲試圖向地表發起進攻。豺狼斥候是它們種群裏最普通的一員，它們不像暴徒們那樣強壯，也沒有薩滿們那麼聰明。</string>
@@ -1597,7 +1598,7 @@
     <string name="ScrollOfMagicMapping_Info">讀了這張卷軸後，你清楚知道了這層的地形、陷阱、隱藏門。但你不知道這層有什麼怪物和物品。</string>
     <string name="ScrollOfMagicMapping_Layout">你現在知道這層的結構了。</string>
     <string name="ScrollOfMagicMapping_Name">魔法地圖卷軸</string>
-    <string name="ScrollOfMirrorImage_Info">創造幾個自身的鏡像，攻擊它們遇見的敵人。</string>
+    <string name="ScrollOfMirrorImage_Info">此捲軸上的咒語將創造閱讀者的幻象雙胞胎，他們會追逐敵人。</string>
     <string name="ScrollOfMirrorImage_Name">鏡像卷軸</string>
     <string name="ScrollOfPsionicBlast_Info">致盲所以視野中的生物並對敵對生物造成傷害。</string>
     <string name="ScrollOfPsionicBlast_Name">靈能爆破卷軸</string>
@@ -1727,6 +1728,7 @@
     <string name="SmashSpell_Info">向上躍起，進行落地猛擊，暫時震暈周圍敵人，同時造成物理傷害。</string>
     <string name="SmashSpell_Name">猛劈</string>
     <string name="SmashSpell_NeedWeapon">我需要一個武器來完成這個行動。</string>
+    <string name="Snail_Desc">這個小軟體動物透過進食污物長得相當大，但他仍然非常緩慢，這使他成為一個容易面對的敵人。</string>
     <string name="Snail_Gender">masculine</string>
     <string name="SociologistNPC_AlreadyTaken">你已經反饋過了。請稍後再來</string>
     <string name="SociologistNPC_Desc">這位調研員專門收集你對這款混合地牢的意見和建議</string>
@@ -2563,6 +2565,9 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

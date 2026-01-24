@@ -2243,6 +2243,7 @@
     <string name="WndLibrary_Levels_Btn">Підземелля</string>
     <string name="WndLibrary_Mobs_Btn">Монстри</string>
     <string name="WndModInstall_InstallingMod">Встановлення мода</string>
+    <string name="WndModSelect_AreYouSure">Видалити мод: %s, впевнені?</string>
     <string name="WndModsDisclaimer_title">Модифікації</string>
     <string name="WndMovieTheatre_Bye">Повертайся будь-коли, ми завжди раді вас бачити!</string>
     <string name="WndMovieTheatre_Instruction_2">Ви переглянули %1$d разів з %2$d. Ви отримаєте ще один квиток на сеанс за кожен рівень героя.</string>
@@ -2624,6 +2625,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
