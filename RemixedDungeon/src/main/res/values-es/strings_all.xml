@@ -497,6 +497,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="ComboBuff_Info">El siguiente ataque será un ataque combinado.</string>
     <string name="ComboBuff_Name">Combo</string>
     <string name="Combo_Combo">¡Combo de %d golpes!</string>
+    <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">Flecha común de madera con punta de hierro.</string>
     <string name="CommonArrow_Name">flecha</string>
     <string name="CompositeCrossbow_Info">Esta ballesta reforzada es una herramienta más eficaz comparandola con una hecha de madera.</string>
@@ -2780,6 +2781,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

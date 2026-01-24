@@ -1782,6 +1782,7 @@
     <string name="RottenFood_Message">Αηδιαστικό!</string>
     <string name="RottenMeat_Info">Ένα κομμάτι σάπιου κρέατος.</string>
     <string name="RottenMeat_Name">σάπιο κρέας</string>
+    <string name="RottenOrgan_Info">Ένα αποσυντιθέμενο όργανο που εξορύχθηκε από έναν νικημένο εχθρό. Παρά την αποσυντεταγμένη κατάστασή του, περιέχει πολύτιμες ενώσεις για αλχημικές διεργασίες.</string>
     <string name="RottenPasty_Info">Αυτή η πίτα φαίνεται αηδιαστική.</string>
     <string name="RottenPasty_Name">σάπια πίτα</string>
     <string name="RottenPumpkinPie_Info">Άσχετα του πόσο καλή ήταν φρέσκια, δεν υπάρχει περίπτωση να τρώγεται πλέον.</string>
@@ -3003,6 +3004,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

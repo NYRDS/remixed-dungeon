@@ -390,6 +390,7 @@
     <string name="ChaosHelmet_Name">混沌の兜</string>
     <string name="ChaosShield_desc">混沌の盾は混沌のクリスタルを普通の盾と融合させたもので、ブロックに成功すると混沌の力によるランダムな効果を発現する。</string>
     <string name="ChaosShield_name">混沌の盾</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">混沌の力を宿した杖！魔導士が夢見るもの、恐れるものが他にあるだろうか？</string>
     <string name="ChaosStaff_Name">混沌の杖</string>
     <string name="ChaosSword_Info">この剣の刃は純粋な混沌でできており、時折微かに振動する。この武器に秘められた偉大な力は、ほとんどのものを真っ二つにすることができるが、それを扱うには熟練の技が必要とされている。</string>
@@ -2875,6 +2876,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
