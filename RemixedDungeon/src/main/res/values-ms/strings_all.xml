@@ -2197,6 +2197,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndStory_Prision">Bertahun-tahun dahulu sebuah penjara bawah tanah telah dibina khas untuk penjenayah paling bahaya. Pada ketika itu, ia adalah ide yang terbaik, kerana sukar melarikan diri. Tetapi semenjak kehadiran miasma yang muncul dari bawah tanah, para warden dan penghuni penjara menjadi gila. Akhirnya penjara ini telah diabaikan, walaupun masih ada tahanan yang terkurung di dalamnya.</string>
     <string name="WndStory_Sewers">Kurungan Bawah Tanah betul-betul berada di bawah Pekan ini, bahagian paling atas merupakan sistem pembentungan Pekan. Walaupun ia merupakan sebahagian dari Pekan, aras ini tidaklah begitu merbahaya. Walaubagaimanapun, tidak semestinya ianya sepenuhnya selemat, sekurang-kurangnya anda tidak risau dengan sihir kejahatan di sini. </string>
     <string name="WndStory_Spiders">Pada zaman dahulu ada sebuah lombong berharga, yang dipenuhi dengan batu ajaib. Tetapi setelah ia habis digali pelombong telah beralih ke tempat lain, meninggalkan satu rangkaian terowong yang luas. Lama-kelamaan tempat ini didiami oleh sejenis lelabah. Walaupun ia merupakan makhluk yang merbahaya, ia tidak dapat menghindari kedatangan pengembara yang berani atau gila masuk mencari harta karun yang boleh ditemui dalam terowong ini. Walaupun semakin tinggi risiko semakin berharga harta ajaib di dalamnya. Sebelum ini, pernah seorang dukun jahat masuk ke dalam terowong untuk lari daripada pendakwa. Mereka mempercayai khabar angin hanya menunggu pintu masuk terowong tersebut. Malangnya sidukun jahat tidak lagi muncul keluar, mungkin dia berjaya lari keluar dari pengawal... atau mati, dimakan makhluk kegelapan terowong itu.</string>
+    <string name="WndTilesKind_NewLook">Penampilan Baru</string>
     <string name="WndTradeItem_Bought">Anda membeli %1$s dengan harga %2$dg</string>
     <string name="WndTradeItem_Buy">Beli dengan harga %dg</string>
     <string name="WndTradeItem_BuyAll">Beli semua dengan harga %dg</string>
@@ -2470,6 +2471,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

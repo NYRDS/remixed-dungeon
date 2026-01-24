@@ -851,6 +851,7 @@
     <string name="Healing_Name">癒しを</string>
     <string name="HealthArrow_Info">この矢の先は治癒のポーションで覆われている。</string>
     <string name="HealthArrow_Name">治癒の矢</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">このダーツの先端は治癒のポーションで覆われている。</string>
     <string name="HealthDart_Name">治癒のダーツ</string>
     <string name="Heap_Mimic">ミミックだ！</string>
@@ -2876,6 +2877,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
