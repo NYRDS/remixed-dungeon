@@ -200,6 +200,7 @@
     <string name="Belongings_CantWearBoth">你不能同時裝備%1$s和%2$s!</string>
     <string name="Belongings_Name">背包</string>
     <string name="BishopNPC_Desc">聖誕老人 \&quot; 深淵領主 \&quot; 的神聖殿堂大主教</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">主教</string>
     <string name="BishopNPC_Name_Objective">主教</string>
     <string name="Bishop_bye">我將會為您祈禱的，我的孩子。</string>
@@ -2442,6 +2443,7 @@
     <string name="town_deco_library_sign_name">圖書館招牌</string>
     <string name="town_deco_locked_door_desc">不知後面會有甚麼呢？</string>
     <string name="town_deco_locked_door_name">已上鎖的門</string>
+    <string name="town_deco_magenta_carpet_desc">這塊地毯的洋紅色讓人聯想到當地的酒。</string>
     <string name="town_deco_magenta_carpet_name">地毯</string>
     <string name="town_deco_medicine_desc">將燒瓶和其他醫療原料小心地放在這些架子上。</string>
     <string name="town_deco_medicine_name">藥水架</string>
@@ -2556,6 +2558,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

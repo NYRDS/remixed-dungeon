@@ -1234,6 +1234,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PlagueDoctorNPC_Quest_Start_Female">Hmph! Memang tak masuk akal?! Penduduk di sini masih tidak tahu betapa bahaya pembentung di bawah pekan ini! Pengawal dan pengembara bolehlah lindungi pekan dari apa-saja yang mendatang. Tapi! Tiada senjata dapat menghentikan sebaran penyakit. Oleh itu, saya perlukan bukti, bolehkah awak bantu saya? Bawa balik %d keping kulit tikus, untuk saya jalankan beberapa ujian tambahan.\n</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Hmph! Memang tak masuk akal?! Penduduk di sini masih tidak tahu betapa bahaya pembentung di bawah pekan ini! Pengawal dan pengembara bolehlah lindungi pekan dari apa-saja yang mendatang. Tapi! Tiada senjata dapat menghentikan sebaran penyakit. Oleh itu, saya perlukan bukti, bolehkah awak bantu saya? Bawa balik %d keping kulit tikus, untuk saya jalankan beberapa ujian tambahan.\n</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Ini bukan haiwan biasa! Ia adalah karya jasad yang menunjukkan kuasa nekromansi! Tangkap satu, dalam keadaan hidup dan tidak tercedera! _Kesatria Maut_... itulah kuncinya!</string>
+    <string name="PlagueDoctorQuest_4_1_InProgress">Lima _Ahli Sihir Kurcaci_, tubuh mereka masih berdenyut dengan sisa sihir gelap! Bawakan mereka kepadaku, dan aku akan memberimu ramuan yang sangat hebat – _Ramuan Kekuatan_ yang akan mengisi dirimu dengan kekuatan sepuluh lelaki!</string>
     <string name="PlagueDoctor_Desc">Sibongkok ini sepenuh diliputi dengan pakaian berkulit. Dia berbau ubat dan juga... bawang putih?</string>
 
     <string name="PlagueDoctor_Name">doktor wabak</string>
@@ -2465,6 +2466,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
