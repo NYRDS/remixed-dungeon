@@ -977,7 +977,7 @@
     <string name="IceGuardianCoreModule_Info">这是一个由魔冰形成的复杂结构。一颗闪闪发光的宝石在这个奇特装置的正中。</string>
     <string name="IceGuardianCoreModule_Name">冰霜守卫的核心装置</string>
     <string name="IceGuardianCore_Desc">冰霜巨人是被狗头人所建造的为保护它们的洞穴的古老产物。它的核心允许其他冰霜巨人在接受足够的能量后重生。</string>
-    <string name="IceGuardianCore_DieInfo">这里太冷了，我最好回到14层找个暖和点的地方。</string>
+    <string name="IceGuardianCore_DieInfo">这里太冷了，我最好回到第14层，找条路去个更暖和的地方。</string>
     <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name">冰霜巨人</string>
     <string name="IceGuardianCore_Name_Objective">冰霜巨人</string>
@@ -1273,6 +1273,7 @@
     <string name="Mob_CantDoIt">我做不到。我的手太小了。</string>
     <string name="Mob_Desc">真正的说明即将到来！</string>
     <string name="Mob_Died">远处传来死亡的声音。</string>
+    <string name="Mob_GoingTo">已经在路上了！</string>
     <string name="Mob_ReadyForOrder">%s已准备执行你的命令</string>
     <string name="Mob_StaAmokStatus">这个%1$s正在发狂</string>
     <string name="Mob_StaControlledStatus">这个%s已被邪恶的力量所控制</string>
@@ -2594,7 +2595,7 @@ remix.31.1\n
     <string name="town_deco_cross_desc">一枚结实的银十字架。它是这片地方的宗教象征—“深渊领主、圣诞老人的见证者”。</string>
     <string name="town_deco_cross_name">十字架</string>
     <string name="town_deco_crossroad_desc">粗糙的木柱，上面刻有模糊的箭头形文字，可能是由于恶劣的气候而褪色了。</string>
-    <string name="town_deco_crossroad_name">路口指示牌</string>
+    <string name="town_deco_crossroad_name">十字路口标志</string>
     <string name="town_deco_curtains_desc">挡住一些不需要的光线，同时也作为一个漂亮的装饰。</string>
     <string name="town_deco_curtains_name">窗帘</string>
     <string name="town_deco_door_desc">一扇普通的木门</string>
@@ -2773,6 +2774,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 
