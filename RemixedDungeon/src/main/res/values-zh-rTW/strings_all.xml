@@ -1935,6 +1935,7 @@
     <string name="VampireSkull_Name">吸血鬼頭骨</string>
     <string name="VertigoBuff_Name">眩暈</string>
     <string name="View_Distance">視野距離</string>
+    <string name="VileEssence_Name">邪惡精華</string>
     <string name="Viscosity_Status">延緩 %d 點傷害</string>
     <string name="Viscosity_Txt">粘稠 %s</string>
     <string name="WandHolster_Info">這個法杖套是由一些有異國情調的動物皮革製成的，它可以裝入%d 枝法杖。</string>
@@ -2558,6 +2559,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
