@@ -2162,6 +2162,7 @@
     <string name="WndLibrary_Levels_Btn">地牢</string>
     <string name="WndLibrary_Mobs_Btn">怪物</string>
     <string name="WndLocalModInstall_text">選擇要從哪裡安裝模組的目錄。</string>
+    <string name="WndLocalModInstall_title">從本地目錄安裝模組</string>
     <string name="WndModsDisclaimer_title">模組</string>
     <string name="WndMovieTheatre_Bye">想回來的時候就回來，我們對您的到來而感到高興！</string>
     <string name="WndMovieTheatre_Instruction_2">您累計最多可看 %2$d 次，而您已經觀看了 %1$d 次。每當您升一級，您便可獲得額外一次欣賞電影的機會。</string>
@@ -2565,6 +2566,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

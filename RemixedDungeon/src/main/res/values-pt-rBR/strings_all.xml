@@ -483,6 +483,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Codex_Story_8">Glifo Viscoso - O Herói receberá o debuff de dano deferido, o que faz o Herói  receber 1 dano por turno, em vez de receber tudo de uma vez.</string>
     <string name="Codex_Story_9">Glifo do Deslocamento - Quando o Herói for atingido há uma chance do Herói ser teleportado para outro lugar visível. Não funciona em níveis de Chefe.</string>
     <string name="ColdSpirit_Desc">O espírito gelado é a manifestação do frio, na sua forma mais pura. Eles  são cascas sem consciência, criados por magia, agindo sobre a vontade dos seus criadores ou através dos seus instintos e reflexos.</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">Espírito gelado</string>
     <string name="ColdSpirit_Name_Objective">espítiro gelado</string>
     <string name="ComboBuff_Info">O próximo ataque será um ataque combinado.</string>
@@ -2737,6 +2738,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

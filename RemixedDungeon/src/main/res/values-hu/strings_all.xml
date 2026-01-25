@@ -2255,6 +2255,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WoodenCrossbow_Name">fa számszeríj</string>
     <string name="WoodenShield_name">Fapajzs</string>
     <string name="Worm_Desc">Egyszerűen nem lehet szavakban kifejezni milyen nagy is ez a féreg. Egy része kiemelkedik a padlóból, testét rohadt húsból álló csomók, és nyálka alkotja. A gigantikus állkapcsa ad néhány ötletet arra, hogy hogyan is képes magát átrágni a felszínen.</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">féreg</string>
     <string name="Worm_Name_Objective">féreg</string>
     <string name="Wraith_Defense">kikerülve</string>
@@ -2491,6 +2492,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

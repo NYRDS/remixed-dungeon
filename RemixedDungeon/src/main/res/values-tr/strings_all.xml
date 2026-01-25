@@ -1861,6 +1861,7 @@ seviyenin başka bir yeri.</string>
     <string name="SmashSpell_Name">Ez</string>
     <string name="SmashSpell_NeedWeapon">Bu eylem için bir silaha ihtiyacım var. </string>
     <string name="Snail_Desc">Bu küçük yumuşakça lağım suyuyla beslenerek oldukça büyümüştür, ancak hala çok yavaştır ve bu da onu yüzleşmesi kolay bir düşman yapar.</string>
+    <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">Sümüklüböcek</string>
     <string name="Snail_Name_Objective">Sümüklüböcek</string>
     <string name="SnipersMarkBuff_Info">İşaret bir keskin nişancı tarafından yapıldı.</string>
@@ -2813,6 +2814,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

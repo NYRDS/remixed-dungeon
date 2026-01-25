@@ -21,6 +21,7 @@
     <string name="Acidic_Name_Objective">skorpio beracun</string>
     <string name="Affection_Txt">%s ketertarikan</string>
     <string name="AirElemental_Desc">Elemental angin adalah sihir terbang yang terbuat dari angin hidup.</string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">elemental angin</string>
     <string name="AirElemental_Name_Objective">elemental angin</string>
     <string name="AlarmTrap_Desc">Perangkap itu mengeluarkan suara menusuk yang bergema di seluruh dungeons ini!</string>
@@ -2742,6 +2743,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
