@@ -1246,6 +1246,7 @@ Parede
     <string name="Mob_CantDoIt">Eu não posso fazer isso. Eu tenho patas pequenas.</string>
     <string name="Mob_Desc">A descrição real está chegando em breve!</string>
     <string name="Mob_Died">Você ouve algo morrer a distância.</string>
+    <string name="Mob_GoingTo">Já está indo!</string>
     <string name="Mob_ReadyForOrder">%s pronto para o seu pedido.</string>
     <string name="Mob_StaAmokStatus">%1$s está enlouquecendo</string>
     <string name="Mob_StaControlledStatus">Este %s está sob possessão maligna</string>
@@ -2736,6 +2737,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
