@@ -16,6 +16,7 @@
     <string name="AboutScene_Translation">Penempatan oleh:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon oleh NYRDS berdasarkan pixel Dungeon sumber oleh Watabou. sumber</string>
+    <string name="Accuracy_Decreased">Kenapa aku berpikir bisa menggunakan %s? Alat salah, tangan pun salah!</string>
     <string name="Acidic_Desc">Arachnida raksasa ini adalah makhluk yang menghindari serangan jarak dekat dengan segala cara, menembak duri bergerigi yang melumpuhkan dari jarak jauh.</string>
     <string name="Acidic_Name">skorpio beracun</string>
     <string name="Acidic_Name_Objective">skorpio beracun</string>
@@ -2743,6 +2744,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
