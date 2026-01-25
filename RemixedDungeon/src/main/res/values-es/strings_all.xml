@@ -647,6 +647,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="ElfArmor_Desc">Con ayuda de este manto los elfos pueden convocar a las mismísimas fuerzas de la naturaleza. La hierba crecerá en un abrir y cerrar de ojos, inmovilizando a todos los enemigos en su campo de visión.</string>
     <string name="ElfArmor_Name">capa élfica</string>
     <string name="ElfArmor_NotElf">¡Sólo los elfos pueden usar esta armadura!</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Un gran ejemplo de artesanía élfica. Es claramente mas efectivo y preciso que un arco de madera normal.</string>
     <string name="ElvenBow_Name">arco élfico</string>
     <string name="ElvenDagger_Gender">masculine</string>
@@ -2783,6 +2784,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

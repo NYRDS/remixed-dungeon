@@ -2089,6 +2089,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndLocalModInstall_title">Pasang mod dari direktori setempat</string>
     <string name="WndModsDisclaimer_title">Mod</string>
     <string name="WndMovieTheatre_Bye">Sila datang lagi, kami sentiasa menunggu kehadiran anda!</string>
+    <string name="WndMovieTheatre_Instruction">Salam dan selamat datang ke pawagam kami! Kami menyediakan perkhidmatan istimewa, di mana anda boleh menonton filem istimewa yang dipanggil iklan secara percuma. Dan jika anda menontonnya sehingga habis, anda akan diberi ganjaran sebanyak %d syiling emas!</string>
     <string name="WndMovieTheatre_Instruction_2">Anda telah menonton sebanyak %1$d dari %2$d. Anda akan mendapat peluang menonton cereka lagi bagi setiap tahap adiwira baharu.</string>
     <string name="WndMovieTheatre_No">keluar</string>
     <string name="WndMovieTheatre_Ok">Anda berjaya menonton video \&quot;ganjaran\&quot;!</string>
@@ -2473,6 +2474,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

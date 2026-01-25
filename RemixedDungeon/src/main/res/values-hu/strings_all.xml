@@ -1077,6 +1077,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="MageArmor_Desc">Ezt az elbűvölő köpenyt viselve a mágus olvadt föld varázslatot idézhet: a látótávolságban tartózkodó összes ellenfél meggyullad, és mozgásképtelenné válik.</string>
     <string name="MageArmor_Name">mágus köpeny</string>
     <string name="MageArmor_NotMage">Csak mágusok viselhetik ezt a páncélt.</string>
+    <string name="MagicArrow_Name">Varázslövés</string>
     <string name="MagicTorch_Info">Egy varázslat mely fényt varázsol, ezzel megvilágítva a sötét zugait a kazamatának</string>
     <string name="MagicTorch_Name">Mágikus Fáklya</string>
     <string name="MailArmor_Desc">Egymáshoz kapcsolódó láncok alkotják ezt a mozgékony, de szívós páncélt.</string>
@@ -2492,6 +2493,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
