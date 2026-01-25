@@ -1897,6 +1897,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpiritOfPain_Name_Objective">roh dari kesakitan</string>
     <string name="Sprout_Info">Bangunkan benih yang tidak aktif.\nNamun, harus ada tanaman hijau di tanah agar mantra ini berhasil.</string>
     <string name="Sprout_Name">Tumbuh</string>
+    <string name="StartScene_ComingSoon">Segera hadir</string>
     <string name="StartScene_Depth">Kedalaman: %1$d\nTingkat: %2$d</string>
     <string name="StartScene_DifficultyEasy">Mudah (dengan iklan)</string>
     <string name="StartScene_DifficultyEasyNoAds">Mudah</string>
@@ -2744,6 +2745,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

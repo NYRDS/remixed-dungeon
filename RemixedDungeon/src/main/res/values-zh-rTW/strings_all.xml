@@ -1088,6 +1088,7 @@
     <string name="LibraryBook_Description">這本巨著真厚。裏頭盛滿所有有關冒險者在地牢中下發掘的事物的知識。</string>
     <string name="LibraryBook_Name">圖書</string>
     <string name="Lich_Desc">死靈法師在亡靈之城的深處死了，然後這個地方的邪惡能量進入了他的身體，將他轉化為巫妖。他是不死的巫師，一個由邪惡力量操控的提線木偶。</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">巫妖</string>
     <string name="Lich_Name_Objective">巫妖</string>
     <string name="LightBuff_Name">照明</string>
@@ -2569,6 +2570,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

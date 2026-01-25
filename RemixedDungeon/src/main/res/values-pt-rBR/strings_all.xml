@@ -280,6 +280,7 @@
     <string name="Bowknot_Name">Pica-pau</string>
     <string name="Brute_Desc">Brutamontes são os maiores, mais fortes e mais resistentes de todos os gnolls. Quando gravemente feridos, eles ficam furiosos, causando ainda mais danos aos seus inimigos.</string>
     <string name="Brute_Enraged">%s fica enfurecido!</string>
+    <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">gnoll Brutamonte</string>
     <string name="Brute_Name_Objective">gnoll Brutamonte</string>
     <string name="Brute_StaEnraged">irritado</string>
@@ -2738,6 +2739,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
