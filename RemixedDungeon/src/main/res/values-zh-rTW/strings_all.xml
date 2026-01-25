@@ -822,6 +822,7 @@
     <string name="HeroSubClass_DescBers">當_狂戰士_嚴重受傷時，會進入狂暴狀態。此狀態生效時，其傷害將顯著地提高</string>
     <string name="HeroSubClass_DescFreR">當_疾行者_處於不負重和不饑餓的狀態下，能以絕大多數怪物兩倍的速度移動，奔跑期間，敵人攻擊更難命中。</string>
     <string name="HeroSubClass_DescGlad">一次成功的近戰攻擊可以讓_角鬥士_找回節奏，開始連擊。接下來每次近戰攻擊命中都會造成更多傷害。</string>
+    <string name="HeroSubClass_DescGuardian">熟練的防禦知識使_守護者_能夠用盾牌反擊，讓那些敢於攻擊這座移動堡壘的人面對一個可怕的敵人。</string>
     <string name="HeroSubClass_DescNone"/>
     <string name="HeroSubClass_DescScout">精靈_斥候_是隱匿大師，踩踏高草會讓他們獲得一個短暫的隱身狀態。此外，他們比通常的精靈更快更靈敏。</string>
     <string name="HeroSubClass_DescShaman">精靈_薩滿_能夠將法杖作為近戰武器使用。近戰攻擊命中將有機會對敵人釋放法杖的能量，且不捎耗充能。</string>
@@ -2568,6 +2569,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

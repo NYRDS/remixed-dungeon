@@ -1669,6 +1669,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Rudolph_Info">¿Qué podría ser más festivo que una nariz roja brillante? Ah, y un par de astas.</string>
     <string name="Rudolph_Name">Nariz roja y astas</string>
     <string name="RunicSkull_Desc">Algo hecho artificialmente, este cráneo se parece mucho a uno real. Puede ver un tenue resplandor que lo rodea.</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">cráneo rúnico</string>
     <string name="RunicSkull_Name_Objective">cráneo rúnico</string>
     <string name="SacrificialSword_Info">A primera vista, esta vieja espada de bronce cubierta de óxido parece totalmente inútil. Pero en ella descansan algún tipo de poderes arcaicos. Esos poderes pueden convertir en tu esclavo a casi cualquier criatura. Solo necesitas encontrar la manera de despertarlos...</string>
@@ -2785,6 +2786,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
