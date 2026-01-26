@@ -16,6 +16,7 @@
     <string name="AboutScene_Translation">Diterjemah oleh:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901</string>
     <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon oleh NYRDS berdasarkan Sumber Pixel Dungeon oleh Watabou.</string>
+    <string name="Accuracy_DecreasedDoctorBareHands">Tangan kosong mencemarkan teknik saya. Tanpa potongan bersih Gergaji, bidikanku menjadi kacau.</string>
     <string name="Acidic_Desc">Makhluk seakan-labah-labah bersaiz besar dan menakutkan itu tidak suka bertempur dalam jarak dekat, ia menembak runcing bergerigi beracun yang dapat melumpuhkan mangsa dari jarak jauh.</string>
     <string name="Acidic_Name">jengking berasid</string>
     <string name="Acidic_Name_Objective">jengking berasid</string>
@@ -332,6 +333,7 @@
     <string name="ChaosSword_Info">Bilah pedang ini diperbuat dari chaos tulen dan kadangkala ia bergetar. Kuasa hebat tersimpan di dalamnya senjata ini, yang dapat memotong bersih hampir apa jua benda. Sebaliknya, kemahiran terbaik diperlukan, untuk setanding dengan kekuatan senjata ini.</string>
     <string name="ChaosSword_Name">pedang chaos</string>
     <string name="CharAction_Give">beri</string>
+    <string name="CharAction_Push">tolak</string>
     <string name="CharAction_Steal">curi</string>
     <string name="Char_Defeat_0">%1$s menewaskan %2$s</string>
     <string name="Char_Defeat_1">%1$s menewaskan %2$s</string>
@@ -1983,6 +1985,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Weightstone_WndChoice">Bagaimana anda mahu seimbangkan %s anda?</string>
     <string name="Weightstone_WndSpeed">Untuk kelajuan</string>
     <string name="Welcome_Ok">Baiklah!</string>
+    <string name="Welcome_Text_30_1">remix.30.1\n- Permainan:\n-- Subkelas Gnohl!\n-- Siput!\n-- Kemajuan Item Chaos telah diperlemah.\n-- Ramuan Mantera kini merupakan ramuan biasa mulai sekarang.\n-- Lencana sekarang dapat diperoleh ketika bermain DLC (tetapi bukan modifikasi).\n- Bug telah diperbaiki\n</string>
     <string name="Welcome_Text_31_1">
     remix.31.1\n
     - Permainan:\n
@@ -2478,6 +2481,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 
