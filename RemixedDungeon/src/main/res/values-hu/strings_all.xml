@@ -781,6 +781,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="HeroClass_NecromancerPerks_3">A Halottidézők egy 7-es szintű csont kulccsal kezdenek.</string>
     <string name="HeroClass_NecromancerPerks_4">A Gyógyító italokat az elejétől kezdve felismered.</string>
     <string name="HeroClass_PlagueDoctorPerks_0">A pestis doktorok mérgező mirigyeket, rothadt szerveket, csontszilánkokat és gonosz esszenciát gyűjtenek a legyőzött ellenségektől. A vért idővel gyűjtik össze, és alkímiához használják fel.</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">Kezdjük egy pestismaszkkal (immunis minden gázhatás ellen) és egy csontfűrésszel. A kritikus találatok extrarészeket dobhatnak, és a fűrész +50% sebzést ejt a bénult ellenfeleken.</string>
     <string name="HeroClass_Rog">tolvaj</string>
     <string name="HeroClass_RogPerks_0">A Zsiványok az Árnyék Gyűrűjével +1 kezdenek. </string>
     <string name="HeroClass_RogPerks_1">A Zsiványok felvétel után azonnal azonosítani tudják a gyűrűket.</string>
@@ -1116,6 +1117,7 @@ Ennek a viselése azt jelenti, hogy odafigyelsz másokra.</string>
     <string name="MeleeWeapon_Info7c">Ártalmas varázslatot érzel bújkálni ebben a(z) %s-ban.</string>
     <string name="Metabolism_Txt">Anyagcserélő %s</string>
     <string name="MimicAmulet_Desc">A kalandozó karriered legfényesebb pontja kiderült, hogy csak egy csapda.</string>
+    <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">utánzó</string>
     <string name="MimicAmulet_Name_Objective">utánzó</string>
     <string name="MimicPie_Desc">Az Utánzók mágikus teremtmények amelyek képesek bármilyen alak felvételére akaratuk szerint. Ez most épp úgy néz ki mint egy nagy szép szaftos pástétom\&quot;;</string>
@@ -2034,6 +2036,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndChooseWay_Cancel">Később döntök majd</string>
     <string name="WndChooseWay_Message">Melyik utat fogod követni?</string>
     <string name="WndClass_Mastery">Kiválóság</string>
+    <string name="WndCryptoDonate_openWallet">Nyissa meg a pénztárcát</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - Mindenki számára ingyenes, és az is marad.\n\nAzonban segíthetsz jobbá tenni a játékot.\n\nHálás köszönetünk mellett némi kozmetikai extrára is számíthatsz.</string>
     <string name="WndDonate_donate">támogatás:</string>
@@ -2494,6 +2497,10 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
 
 
 

@@ -878,6 +878,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="HeroClass_NecromancerPerks_3">Ölü Çağıranlar 7. seviye bir iskelet anahtarıyla başlar.</string>
     <string name="HeroClass_NecromancerPerks_4">İyileştirme İksiri en başından itibaren tanımlanmıştır.</string>
     <string name="HeroClass_None">halktan biri</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">Veba Maskesi (tüm Gazlara karşı bağışık) ve Kemik Testeresi ile başlar. Kritik vuruşlar fazladan parça düşürür ve Testere felçli dusmanlara +%50 daha fazla hasar verir.</string>
     <string name="HeroClass_Rog">haydut</string>
     <string name="HeroClass_RogPerks_0">Düzenbazlar Gölgeler Yüzüğü+1 ile başlar.</string>
     <string name="HeroClass_RogPerks_1">Düzenbazlar bir yüzüğü kuşandıklarında yüzüğün türünü belirler.</string>
@@ -1245,6 +1246,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="MercenaryNPC_Name_Objective">paralı asker</string>
     <string name="Metabolism_Txt">Metabolizmanın %sı</string>
     <string name="MimicAmulet_Desc">Macera kariyerindeki en heyacanlı an bir tuzağa dönüyor.</string>
+    <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">taklitçi</string>
     <string name="MimicAmulet_Name_Objective">taklitçi</string>
     <string name="MimicPie_Desc">Taklitçiler herhangi bir şekle girebilirler. Bu büyük ve lezzetli bir börek gibi görünüyor.</string>
@@ -2814,6 +2816,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

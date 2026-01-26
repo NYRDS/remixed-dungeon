@@ -875,6 +875,7 @@
     <string name="HeroClass_NecromancerPerks_3">死灵法师开局有一把7层的骷髅钥匙。</string>
     <string name="HeroClass_NecromancerPerks_4">治疗药水开局时就已经鉴定好了。</string>
     <string name="HeroClass_None">平民</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">开始时拥有瘟疫面具（对所有气体免疫）和骨锯。暴击会掉落额外部件，锯子对麻痹敌人造成+50%伤害。</string>
     <string name="HeroClass_PlagueDoctorPerks_3">被毒气杀死的敌人会爆炸成毒雾，每影响一个敌人为你恢复 1 点生命值。</string>
     <string name="HeroClass_Priest">牧师</string>
     <string name="HeroClass_Rog">盗贼</string>
@@ -1246,6 +1247,7 @@
     <string name="MercenaryNPC_Name_Objective">雇佣兵</string>
     <string name="Metabolism_Txt">代谢%s</string>
     <string name="MimicAmulet_Desc">你冒险旅程中最光荣的时刻原来是个陷阱。</string>
+    <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">拟形怪</string>
     <string name="MimicAmulet_Name_Objective">拟形怪</string>
     <string name="MimicPie_Desc">拟形怪是一种能够变成任何形态的魔法生物。这一只看起来像一大块美味的烧饼。</string>
@@ -2774,6 +2776,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

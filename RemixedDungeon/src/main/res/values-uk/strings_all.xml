@@ -835,6 +835,7 @@
     <string name="HeroClass_NecromancerPerks_2">Некроманти починають з унікальною робою некроманта, яка дає 1 бал мани за кожну вбиту істоту.</string>
     <string name="HeroClass_NecromancerPerks_3">Некроманти мають на початку ключ-череп від рівня 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Зілля лікування ідентифіковані з самого початку.</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">Починаєте з маскою чуми (імунітет до всіх газів) і кістковою пилою. Критичні удари викидають додаткові частини, а пила завдає +50% шкоди паралізованим ворогам.</string>
     <string name="HeroClass_Rog">крадій</string>
     <string name="HeroClass_RogPerks_0">Крадії починають з кільцем тіней +1.</string>
     <string name="HeroClass_RogPerks_1">Крадії ідентифікують кільця одразу, як тільки одягають їх.</string>
@@ -2588,6 +2589,7 @@
     <string name="town_deco_stone_wall_name">Кам\'яна стіна</string>
     <string name="town_deco_stones_desc">Просто купа каміння.</string>
     <string name="town_deco_stones_name">Каміння</string>
+    <string name="town_deco_stool_sturdy_name">Стілець</string>
     <string name="town_deco_stove_desc">Ця піч, що палає, розповсюджує приємне тепло</string>
     <string name="town_deco_stove_name">Кам\'яна піч</string>
     <string name="town_deco_tile_desc">Час не пощадив ці плитки.</string>
@@ -2626,6 +2628,8 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

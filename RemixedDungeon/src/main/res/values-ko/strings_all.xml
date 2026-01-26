@@ -757,6 +757,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_NecromancerPerks_3">회복의 물약이 처음부터 식별되어 있습니다.</string>
     <string name="HeroClass_NecromancerPerks_4">회복의 물약이 처음부터 식별되어 있습니다.</string>
     <string name="HeroClass_PlagueDoctorPerks_0">역병의 의사들은 처치한 적들로부터 독성 선, 부패한 장기, 뼈 조각 및 악랄한 정수를 수확합니다. 피는 시간이 지남에 따라 수집되어 연금술을 수행하는 데 사용됩니다.</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">시작 시 전염병 마스크(모든 가스에 면역)와 뼈 톱을 가지고 시작합니다. 치명타는 추가 부품을 떨어뜨리며, 톱은 마비된 적에게 +50%의 피해를 입힙니다.</string>
     <string name="HeroClass_Rog">도적</string>
     <string name="HeroClass_RogPerks_0">도적은 그림자의 반지+1을 가지고 시작한다.</string>
     <string name="HeroClass_RogPerks_1">도적은 반지를 착용하자마자 그 반지의 종류를 알아낼 수 있다.</string>
@@ -1082,6 +1083,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MeleeWeapon_Info7c">당신은 %s 안에 숨어있는 악의적인 마법을 느낄 수 있습니다.</string>
     <string name="Metabolism_Txt">신진대사의 %s</string>
     <string name="MimicAmulet_Desc">당신이 한 모험의 가장 영광스러운 순간은 그저 함정이었을 뿐이었다.</string>
+    <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">미믹</string>
     <string name="MimicAmulet_Name_Objective">미믹</string>
     <string name="MimicPie_Desc">미믹은 자기가 원하는 어떤 형상으로도 변할 수 있는 마법 생물이다. 이 놈은 크고 맛있는 파스티처럼 생겼다.</string>
@@ -2400,6 +2402,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 

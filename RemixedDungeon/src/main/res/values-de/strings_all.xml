@@ -1188,6 +1188,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="MercenaryNPC_Name_Objective">Söldner</string>
     <string name="Metabolism_Txt">%s des Metabolismus</string>
     <string name="MimicAmulet_Desc">Der glorreichste Moment deiner Karriere als Abenteurer erwies sich gerade als eine Falle.</string>
+    <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">Mimic</string>
     <string name="MimicAmulet_Name_Objective">Mimic</string>
     <string name="MimicPie_Desc">Mimics sind magische Wesen, die jede beliebige Form annehmen können. Dieser hier sieht wie eine große leckere Pastete aus.</string>
@@ -2676,6 +2677,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
