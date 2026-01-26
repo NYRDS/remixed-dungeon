@@ -294,6 +294,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="BurningBuff_Info">Tubuh dilalap api yang mengamuk!</string>
     <string name="BurningBuff_Name">Terbakar</string>
     <string name="BurningFist_Desc">Tinjuan Api dari Dewa Tua</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">tinjuan api</string>
     <string name="BurningFist_Name_Objective">tinjuan api</string>
     <string name="Burning_Burns">%s hangus terbakar!</string>
@@ -2748,6 +2749,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

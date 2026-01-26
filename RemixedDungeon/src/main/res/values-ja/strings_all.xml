@@ -2584,6 +2584,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Wnd_Button_No">いいえ</string>
     <string name="Wnd_Button_Ok">OK</string>
     <string name="Wnd_Button_Yes">はい</string>
+    <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">このシンプルな木の弓は、矢が見つかれば役に立つかもしれない。</string>
     <string name="WoodenBow_Name">木製の弓</string>
     <string name="WoodenCrossbow_Gender">masculine</string>
@@ -2882,6 +2883,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

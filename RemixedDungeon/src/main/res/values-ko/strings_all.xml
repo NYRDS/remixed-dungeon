@@ -799,6 +799,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroSubClass_NameSnip">저격수</string>
     <string name="HeroSubClass_NameWarL">흑마법사</string>
     <string name="HeroSubClass_NameWard">숲지기</string>
+    <string name="HeroSubClass_NameWitchdoctor">주술사</string>
     <string name="Hero_AnotherTry">당신은 죽었습니다.\n 재도전 하시겠습니까?</string>
     <string name="Hero_Leave">누구도 쉽사리 리믹스드 던전을 빠져나가지 못한다.</string>
     <string name="Hero_LevelUp">레벨 업!</string>
@@ -2411,6 +2412,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
