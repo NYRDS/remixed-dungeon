@@ -2016,6 +2016,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="TownShopkeeper_Name">penjaga toko</string>
     <string name="TownShopkeeper_Objective">penjaga toko</string>
     <string name="TownsfolkMovieNPC_Desc">Salah satu penduduk setempat. Meskipun ini jelas orang biasa, pakaian itu memang terlihat mahal.</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Message">Apakah Anda tahu tentang layanan khusus yang disediakan oleh \&quot;bioskop\&quot;? Sayang sekali mereka meminta sesuatu yang eksotis yang disebut \&quot;Internet\&quot;, saya bahkan tidak pernah mendengar tentang hal seperti itu.</string>
     <string name="TownsfolkMovieNPC_Name">penduduk lokal</string>
     <string name="TownsfolkMovieNPC_Name_Objective">penduduk lokal</string>
@@ -2747,6 +2748,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

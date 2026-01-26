@@ -2058,6 +2058,7 @@ otro lugar del nivel.</string>
     <string name="TownShopkeeper_Name">comerciante</string>
     <string name="TownShopkeeper_Objective">comerciante</string>
     <string name="TownsfolkMovieNPC_Desc">Una persona de la localidad. A pesar de ser un plebeyo, sus ropas se ven costosas.</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Message">¿Conoces ese servicio especial que brinda el \&quot;cine\&quot;? Lástima que pidan algo exótico llamado \&quot;Internet\&quot;, nunca escuché sobre tal cosa.</string>
     <string name="TownsfolkMovieNPC_Name">ciudadano</string>
     <string name="TownsfolkMovieNPC_Name_Objective">ciudadano</string>
@@ -2788,6 +2789,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

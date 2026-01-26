@@ -2062,6 +2062,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="TownShopkeeper_Name">dükkan sahibi</string>
     <string name="TownShopkeeper_Objective">dükkan sahibi</string>
     <string name="TownsfolkMovieNPC_Desc">Sakinlerden biri. Avamlığı bariz de olsa elbiseleri epey pahalı duruyor.</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Message">\&quot;Sinema salonunun\&quot; sağladığı özel hizmeti biliyor musunuz? \&quot;İnternet\&quot; diye egzotik bir şey istemeleri çok kötü, böyle bir şeyi hiç duymadım bile.</string>
     <string name="TownsfolkMovieNPC_Name">köylü</string>
     <string name="TownsfolkMovieNPC_Name_Objective">kasaba halkı</string>
@@ -2816,6 +2817,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

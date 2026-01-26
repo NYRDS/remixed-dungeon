@@ -1697,6 +1697,7 @@ Potrebbe bruciare?</string>
     <string name="TownScript_NeedWeapon">Non andrò nel dungeon a mani nude!\n Forse è il caso di visitare il negozio del paese prima?</string>
     <string name="TownShopkeeper_Name">Negoziante</string>
     <string name="TownShopkeeper_Objective">Negoziante</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Name">paesano</string>
     <string name="TownsfolkMovieNPC_Name_Objective">paesano</string>
     <string name="TownsfolkNPC_Message1">Ah! Un altro avventuriero, forte! Assicurati di fare bottino di più cose preziose possibile!</string>
@@ -2270,6 +2271,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

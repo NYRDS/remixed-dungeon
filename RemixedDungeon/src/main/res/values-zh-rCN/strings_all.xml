@@ -2045,6 +2045,7 @@
     <string name="TownShopkeeper_Name">商人</string>
     <string name="TownShopkeeper_Objective">商店店主</string>
     <string name="TownsfolkMovieNPC_Desc">城镇居民之一。显而易见，他只是泛泛布衣，但他的衣服看起来价值不菲。</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Message">你知道“电影院”提供的那种特殊服务吗？太糟糕了，他们需要叫“互联网”的东西才能使用，我从来没有听说过叫“互联网”的东西。</string>
     <string name="TownsfolkMovieNPC_Name">城镇居民</string>
     <string name="TownsfolkMovieNPC_Name_Objective">城镇居民</string>
@@ -2776,6 +2777,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

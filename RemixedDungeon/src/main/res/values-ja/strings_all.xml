@@ -2110,6 +2110,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="TownShopkeeper_Name">店主</string>
     <string name="TownShopkeeper_Objective">店主</string>
     <string name="TownsfolkMovieNPC_Desc">地元民の一人。明らかに庶民なのに、その服は高そうに見える。</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Message">「映画館」が提供する特別なサービスをご存知だろうか？「いんたーねっと」なんてエキゾチックなものを要求されるのが残念だ。そんなもの聞いたこともない。</string>
     <string name="TownsfolkMovieNPC_Name">都市の住人</string>
     <string name="TownsfolkMovieNPC_Name_Objective">都市の住人</string>
@@ -2881,6 +2882,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

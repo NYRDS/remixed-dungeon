@@ -1831,6 +1831,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="TownShopkeeper_Name">pekedai</string>
     <string name="TownShopkeeper_Objective">pekedai</string>
     <string name="TownsfolkMovieNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal.</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Name">penduduk pekan</string>
     <string name="TownsfolkMovieNPC_Name_Objective">penduduk pekan</string>
     <string name="TownsfolkNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal</string>
@@ -2481,6 +2482,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -1977,6 +1977,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="TownShopkeeper_Name">Händler</string>
     <string name="TownShopkeeper_Objective">Händler</string>
     <string name="TownsfolkMovieNPC_Desc">Einer der Einheimischen. Obwohl dies eindeutig einer aus der Mittelschicht ist, sehen diese Kleider teuer aus</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Name">Dorfbewohner</string>
     <string name="TownsfolkMovieNPC_Name_Objective">Dorfbewohner</string>
     <string name="TownsfolkNPC_Desc">Einer der Einheimischen. Obwohl dies eindeutig einer aus der Mittelschicht ist, sehen diese Kleider teuer aus</string>
@@ -2677,6 +2678,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

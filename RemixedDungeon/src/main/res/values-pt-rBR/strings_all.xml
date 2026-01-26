@@ -2015,6 +2015,7 @@ outro local do nível.</string>
     <string name="TownShopkeeper_Name">comerciante</string>
     <string name="TownShopkeeper_Objective">comerciante</string>
     <string name="TownsfolkMovieNPC_Desc">Um dos moradores. Mesmo pareça claramente com um plebeu, aquelas roupas parecem caras</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Message">Você conhece aquele serviço especial que o \&quot;cinema\&quot; oferece? Pena que pedem uma coisa exótica chamada \&quot;Internet\&quot;, nunca ouvi falar de tal coisa.</string>
     <string name="TownsfolkMovieNPC_Name">cidadão</string>
     <string name="TownsfolkMovieNPC_Name_Objective">cidadão</string>
@@ -2741,6 +2742,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
