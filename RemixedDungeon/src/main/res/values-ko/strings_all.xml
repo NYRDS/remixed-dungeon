@@ -1024,6 +1024,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Level_TileWell">우물</string>
     <string name="LevitationBuff_Name">공중부양</string>
     <string name="LibrarianNPC_Desc">매우 수줍은 사람으로, 어색한 스웨터와 매우 두꺼운 안경을 쓰고 있다.</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">아.. 안녕하세요. 도서관에 오신 것을 환영해요. 여기서 당신은 던전에서 볼 수 있는 모든 분류의 정보들을 찾을 수 있을 거예요. 사실 우리는 모험가들로부터 밝혀진 정보만을 제공해요. 부..부끄럽네요. 그래서 당신이 도서관을 방문할때마다 아마도, 새로운 읽을거리가 생겨날 거예요</string>
     <string name="LibrarianNPC_Message_Not_Ready">미...미안해요.. 도서관은 아직 개방되지 않았어요..</string>
     <string name="LibrarianNPC_Name">사서</string>
@@ -2412,6 +2413,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
