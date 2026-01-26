@@ -1109,6 +1109,7 @@
     <string name="Luck_Name_0">幸運%s</string>
     <string name="Luck_Name_1">幸運%s</string>
     <string name="Luck_Name_2">幸運%s</string>
+    <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">鐵頭在上，腦袋開花。</string>
     <string name="Mace_Name">硬頭錘</string>
     <string name="MageArmor_ACSpecial">熔融之土</string>
@@ -2081,6 +2082,7 @@
     <string name="WndChooseWay_Cancel">我待會再決定</string>
     <string name="WndChooseWay_Message">您選擇步上哪條路？</string>
     <string name="WndClass_Mastery">專精</string>
+    <string name="WndCryptoDonate_infoText">您可以通過將加密貨幣捐贈發送到以下地址來支持 Remixed Dungeon 的開發。感謝您的慷慨支持！</string>
     <string name="WndDonate_commonDonateText">混合地牢——永遠對所有人免費。
 但是，你能幫我們讓這個遊戲變得更好。
 除了我們的衷心感謝以外，你還將獲得一些界面上的美化。</string>
@@ -2571,6 +2573,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

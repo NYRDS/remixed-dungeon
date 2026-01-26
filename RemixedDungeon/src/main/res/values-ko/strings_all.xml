@@ -459,6 +459,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Crystal_Desc">크고 빛나는 크리스탈이 공중에 떠있습니다. 아마도 이것은 강력한 마법으로 가득 차 있을 것입니다.</string>
     <string name="Crystal_Name">공중에 떠있는 크리스탈</string>
     <string name="Crystal_Name_Objective">공중에 떠있는 크리스탈</string>
+    <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">이 작고 사악한 다트는 많은 피해를 주지 않지만 대상을 마비켜서 잠시동안 무력화되게 할 수 있습니다.</string>
     <string name="CurareDart_Name">큐라레 다트</string>
     <string name="DM300_Desc">이 기계는 드워프에 의해 수세기 전에 만들어 졌다. 시대가 흐르며 이들은 골렘, 정령, 심지어는 악마들로 교체되어 갔고, 이 때문에 드워프의 문명은 쇠퇴하게 되었다. DM-300 및 이와 유사한 기계는 건설, 채광, 또는 도시 방어를 위해 사용되었다.</string>
@@ -1462,6 +1463,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Ring_Info3b">그리고 저주로 인해, 당신은 그것을 벗을 수가 없습니다</string>
     <string name="Ring_Info4">%1$s\n\n당신의 %2$s안에 숨어있는 마법의 기운을 느낄 수 있습니다.</string>
     <string name="Ring_Name">%s 반지</string>
+    <string name="Roar_Name">포효</string>
     <string name="RogueArmor_ACSpecial">연막탄</string>
     <string name="RogueArmor_Desc">이 어둠의 의복을 입는다면, 로그는 \&quot;연막탄\&quot; 이라는 기술를 부릴 수 있게 된다 (폭발물을 사용하진 않지만): 적들의 눈을 멀게 하고 옆으로 회피한다.</string>
     <string name="RogueArmor_Fov">시야 내의 빈 위치에만 이동할 수 있다.</string>
@@ -1661,6 +1663,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Slow_Name_0">냉기의 %s</string>
     <string name="Slow_Name_1">냉기의 %s</string>
     <string name="Slow_Name_2">냉기의 %s</string>
+    <string name="SmashSpell_Info">위로 점프하여 착지할 때 강력한 충격을 일으켜 주변의 적들을 잠시 기절시키고 동시에 물리적 피해를 입힙니다.</string>
     <string name="SnipersMarkBuff_Name">저격수의 표식</string>
     <string name="SociologistNPC_AlreadyTaken">당신은 이미 설문조사를 완료했습니다. 나중에 다시 와주세요.</string>
     <string name="SociologistNPC_Desc">여론을 수집하는 신성한 임무를 받은 사회학자입니다.</string>
@@ -2413,6 +2416,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 

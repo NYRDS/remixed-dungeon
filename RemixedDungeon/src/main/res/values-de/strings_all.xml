@@ -653,6 +653,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Eye_Kill">Der Todesblick des %s hat dich getötet...</string>
     <string name="Eye_Name">Böses Auge</string>
     <string name="Eye_Name_Objective">Böses Auge</string>
+    <string name="Facilitations_Descriptions_2">Ein tiefgreifendes und gründliches Studium der Natur als Energiequelle ermöglicht es Ihnen, Ihre magischen Reserven während der Reise wieder aufzufüllen.</string>
     <string name="Fadeleaf_Desc">Das berühren eines Verblassenden Blattes, teleportiert irgendeine Kreatur an einen zufälligen Platz der aktuellen Ebene.</string>
     <string name="Fadeleaf_Name">Verblassendes Blatt</string>
     <string name="FetidRat_Desc">Diese Beutelratte ist viel größer als normal. Sie wird von einer fauligen Aura umgeben.</string>
@@ -1847,6 +1848,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiderMind_Name">Psi-Spinne</string>
     <string name="SpiderMind_Name_Objective">Psi-Spinne</string>
     <string name="SpiderNest_Desc">Dieser Kokon besteht aus feinster Seide und enthält etwas lebendiges.</string>
+    <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderNest_Name">Spinnenkokon</string>
     <string name="SpiderNest_Name_Objective">Spinnenkokon</string>
     <string name="SpiderQueenCarapace_Info">Ein splitter des Panzers der Spinnenkönigin. Du kannst einen Teil der Spinnendrüse im Panzer sehen, es ist noch am Leben.</string>
@@ -2424,6 +2426,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="ZombieMask_Info">Wolltest du schon mal wie ein untoter Held aussehen, der an seiner Aufgabe wiederholt scheiterte? Nun, hier ist deine Chance.</string>
     <string name="ZombieMask_Name">Zombiemaske</string>
     <string name="Zombie_Desc">Der Dungeon ist ein gefährlicher Platz und viele Abenteurer haben ihr Verhängnis in diesem Platz gefunden. Aber die Unglücklichsten haben ihr Ende in der Nekropole gefunden, wo sie nun als verrottende Leiche herumwandern.</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">Zombie</string>
     <string name="Zombie_Name_Objective">Zombie</string>
     <string name="deco_candle_desc">Große Kerze</string>
@@ -2679,6 +2682,9 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
 
 
 
