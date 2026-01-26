@@ -237,6 +237,8 @@
     <string name="BlessedBuff_Name">축복받은</string>
     <string name="BlindnessBuff_Name">실명</string>
     <string name="BodyArmorBuff_Info">이동 속도를 희생하여 방어력이 증가합니다.</string>
+    <string name="BoneShard_Info">패배한 적으로부터 얻은 날카로운 뼈 조각이다. 이 조각들은 놀랍도록 견고하며 제작에 유용하게 쓰인다.</string>
+    <string name="BoneShard_Name">뼈 조각</string>
     <string name="Boomerang_Info">곡선의 나무 미사일 - 부메랑 - 을 적에게 던지면, 던진사람에게 다시 돌아옵니다.</string>
     <string name="Boomerang_Name">부메랑</string>
     <string name="Bounce_Txt">탄력의 %s</string>
@@ -595,6 +597,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="FetidRat_Name_Objective">악취 쥐</string>
     <string name="Fez_Info">윗부분이 잘린 원뿔 모양의 붉은 펠트 머리덮개로, 꼭대기에 장식이 달려 있다. 당연히 세상이 3차원이 되는 마법 같은건 걸려있지 않다.</string>
     <string name="Fez_Name">페즈</string>
+    <string name="FilteredMask_Info">호흡기 보호구는 연기, 증기, 가스 및 먼지와 공중 미생물과 같은 유해한 대기를 흡입하는 것에서 착용자를 보호하도록 설계된 장치입니다.\n\n하지만 이 마스크는 장식용으로만 사용됩니다.</string>
+    <string name="FilteredMask_Name">N95 마스크</string>
     <string name="FireArrow_Info">이 화살은 평범해 보이지만 화살촉에서 붉고 따뜻한 빛이 새어나온다.</string>
     <string name="FireArrow_Name">불 화살</string>
     <string name="FireElemental_Desc">방황하는 불 정령은 고위 괴물 소환의 부산물입니다. 녀석은 너무나 혼돈스러운 본능을 가지고 있어서 최고의 악마학자마저 조종할 수 없습니다.</string>
@@ -655,8 +659,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="GnollArmor_NotGnoll">놀들만이 놀 방어구를 착용할 수 있습니다!</string>
     <string name="GnollCostume_Info">굉장히 따뜻하고 복실복실한 코스튬입니다. 누구든 이 코스튬을 입는다면.. 누군가는 놀처럼 변장할 것이지만, 놀들은 넘어가지 않을 것이며 여전히 당신을 공격할 것입니다. </string>
     <string name="GnollCostume_Name">놀 코스튬</string>
-    <string name="GnollTamahawk_Info">놀 예술가들로부터 만들어진 전통 토마호크입니다. 각 부족마다 그들의 특별한 생김새를 가지고 있습니다. 이 토마호크는 인간들에 의해 만들어진 모조품들보다 살짝 가볍습니다.</string>
-    <string name="GnollTamahawk_Name">놀 토마호크</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
+    <string name="GnollTamahawk_Info">그놀 마스터들이 만든 전통적인 토마호크로, 각 클랜마다 고유한 디자인을 가지고 있습니다. 이 토마호크는 동료 토마호크보다 약간 가볍습니다.</string>
+    <string name="GnollTamahawk_Name">그놀 토마호크</string>
     <string name="Gnoll_Desc">놀은 하이에나처럼 생긴 인간형 괴수이다. 녀석은 하수구나 던전에 살면서 때때로 지상을 습격한다. 놀 정찰병은 그들 무리의 일반 구성원이다. 녀석은 놀 정예병만큼 강하지도 않고 놀 주술사만큼 똑똑하지도 않다.</string>
     <string name="Gnoll_Name">놀 정찰병</string>
     <string name="Gnoll_Name_Objective">놀 정찰병</string>
@@ -2402,6 +2407,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
+
 
 
 
