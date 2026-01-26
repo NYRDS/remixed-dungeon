@@ -389,6 +389,7 @@
     <string name="ClassArmor_NotEquipped">Anda perlu memakai perisai ini supaya dapat guna kuasa istimewanya!</string>
     <string name="Claymore_Info">Pedang besar ini dapat memotong apa sahaja.</string>
     <string name="Claymore_Name">Claymore</string>
+    <string name="CloakBuff_Info">Sebuah jubah gelap menyembunyikan anda dalam bayangan, menjadikan anda kurang ketara oleh musuh.</string>
     <string name="CloakBuff_Name">Berselubung</string>
     <string name="CloakSpell_EnemiesNearby">Anda tidak boleh melangkah dalam bayang ketika pihak musuh berhampiran anda.</string>
     <string name="CloakSpell_Info">Gerak langkah dibalik bayang menjadikan anda halimunan. Dapat mengurangkan secara mendadak peluang anda dikesan oleh pihak musuh. Tidak boleh digunakan ketika pihak musuh berhampiran anda.</string>
@@ -2483,6 +2484,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
