@@ -1657,6 +1657,7 @@ egy másik helyre a szinten. </string>
     <string name="Shaman_Killed">%s villám gömbje megölt téged...</string>
     <string name="Shaman_Name">gnoll sámán</string>
     <string name="Shaman_Name_Objective">gnoll sámán</string>
+    <string name="Shaman_ZapMiss">*Káromkodik a gnoll nyelven*</string>
     <string name="Sheep_Desc">Ez egy mágikus bárány. Mi annyira varázslatos benne? Nem tudod megölni. Addig áll ott amíg egyszer csak el nem tűnik, közben csak rágcsál és bámul maga elé üres tekintettel.</string>
     <string name="Sheep_Name">bárány</string>
     <string name="Sheep_Name_Objective">bárány</string>
@@ -2500,6 +2501,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

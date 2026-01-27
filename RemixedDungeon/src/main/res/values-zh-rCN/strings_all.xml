@@ -2487,6 +2487,7 @@ remix.31.1\n
     <string name="WoodenShield_desc">一面粗糙的木制盾牌是最简单的盾牌。它是圆形的，有时可以抵挡一些伤害。</string>
     <string name="WoodenShield_name">木盾</string>
     <string name="Worm_Desc">没人知道这巨大的虫子是什么。从地下钻出，身上覆盖着腐肉和烂泥。它巨大的下颚告诉了你它钻出地面的方法。</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">古神巨虫</string>
     <string name="Worm_Name_Objective">古神巨虫</string>
     <string name="Wraith_Defense">回避</string>
@@ -2777,6 +2778,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
