@@ -481,6 +481,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Codex_Story_8">Viscosity Glyph - Pahlawan akan mendapatkan debuff yang ditangguhkan, yang akan menyebabkan Pahlawan menerima 1 kerusakan per giliran, alih-alih menerima seluruh jumlah dalam satu tembakan.</string>
     <string name="Codex_Story_9">Displacement Glyph - Setiap kali Pahlawan terkena, ada kemungkinan Pahlawan akan diteleportasi ke ubin acak yang terlihat. glyph ini tidak berfungsi pada level bos.</string>
     <string name="ColdSpirit_Desc">Semangat dingin adalah perwujudan dari embun beku, dalam bentuknya yang paling murni. Menjadi segumpal energi magis yang tidak ada artinya, dia mematuhi kehendak penyihir yang memanggilnya atau sebaliknya bertindak sesuai dengan naluri dasar.</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">arwah dingin</string>
     <string name="ColdSpirit_Name_Objective">arwah dingin</string>
     <string name="ComboBuff_Info">Serangan selanjutnya adalah serangan kombo.</string>
@@ -2485,6 +2486,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="YogsHeart_Name">hati yog</string>
     <string name="YogsHeart_Name_Objective">hati Yog</string>
     <string name="YogsTeeth_Desc">Mulut besar dari Dewa Tua terisi oleh gigi-gigi yang sangat tajam. Sebuah manifestasi yang cocok mengenai keinginannya untuk menghancurkan dan memakan semua makhluk.</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">gigi yog</string>
     <string name="YogsTeeth_Name_Objective">gigi Yog</string>
     <string name="ZombieGnoll_Desc">Tubuh rusak, bengkok dari zombie gnoll tidak lagi seperti manusia atau hyena. Hanya setumpuk daging busuk dan tulang yang terisi niat jahat untuk membunuh dan memakan.</string>
@@ -2749,6 +2751,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

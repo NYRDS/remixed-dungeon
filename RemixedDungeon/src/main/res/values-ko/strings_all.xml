@@ -2091,6 +2091,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndMovieTheatre_Sorry">뭔가가 잘못되었기 때문에 영상의 보상을 받지 못했습니다...</string>
     <string name="WndMovieTheatre_Thank_You">참여해 주셔셔 갑사합니다!</string>
     <string name="WndMovieTheatre_Title">영화관</string>
+    <string name="WndMovieTheatre_Watch">광고 보기</string>
     <string name="WndPlayGames_BackupProgress">게임 진행 상태 백업하기</string>
     <string name="WndPlayGames_Connecting">Google Play Games에 연결 중입니다. 그러니 잠시만 기다려 주세요.</string>
     <string name="WndPlayGames_RestoreProgress">게임 진행 상태 복구하기</string>
@@ -2417,6 +2418,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
