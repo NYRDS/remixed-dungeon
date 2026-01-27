@@ -81,6 +81,7 @@
     <string name="AzuterronNPC_Quest_End">Eccellente. Prendi questa pozione, sicuramente, la troverete utile.</string>
     <string name="AzuterronNPC_Quest_Reminder">Aiutami e io ti aiuterò.</string>
     <string name="AzuterronNPC_Quest_Start">Eh, perché... oh, mi vedi, vero? Ciò significa che non sei uno di \&quot;loro\&quot;. Vedo che anche a te non piacciono tutti questi mostri. Ti dico una cosa, se mi aiuti con un piccolo problema, allora ti offro la mia assistenza. Da qualche parte in questo livello troverai una bestia dell\'oscurità, uno _Spirito traditore_. Uccidilo, prendi il suo cuore e torna da me. E ancora una cosa, se sei interessato all\'acquisto delle mie forniture, non esitare a chiedere</string>
+    <string name="Backstab_Aware">La vittima non deve accorgersi di te per un buon colpo alle spalle.</string>
     <string name="Backstab_Name">Pugnalata alle Spalle</string>
     <string name="BadgesScene_Title">Le tue medaglie</string>
     <string name="Badges_AllBags">Tutte le borse comprate</string>
@@ -2273,6 +2274,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

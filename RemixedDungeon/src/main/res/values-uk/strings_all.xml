@@ -780,6 +780,7 @@
     <string name="Halls_TileHighGrass">Вугле-гриб</string>
     <string name="Halls_TileStatue">Стовп</string>
     <string name="Halls_TileWater">Холодна лава</string>
+    <string name="Heal_Info">Досить корисне закляття у Підземеллі, правда?</string>
     <string name="HealerNPC_Desc">Цей старий схожий на того, хто міг би займатись виробництвом чарівних паличок.</string>
     <string name="HealerNPC_Message1">Безкоштовне лікування для кожного шукача пригод!</string>
     <string name="HealerNPC_Message2">Якщо зголодніли чи вас , борони вас боже, поранили - повертайтеся!</string>
@@ -2628,6 +2629,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
