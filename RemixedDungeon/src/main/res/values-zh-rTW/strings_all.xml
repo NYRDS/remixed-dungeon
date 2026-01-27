@@ -2321,6 +2321,7 @@
     <string name="Wraith_Desc">幽魂來自於被驚擾的墓穴中渴望復仇的冒險者之魂。其飄渺的存在使它很難被通常武器擊中。</string>
     <string name="Wraith_Name">幽魂</string>
     <string name="Wraith_Name_Objective">幽魂</string>
+    <string name="WrnExperimental_hint">如果這個奇怪而扭曲的世界對你來說太過嚴苛，請使用以下方式關閉這些選項：\n開始畫面-&gt;選項-&gt;遊戲玩法\n選單，然後開始新的遊戲或載入其他存檔。</string>
     <string name="Yog_Desc">猶格-德澤瓦是一位上古之神，來源於混沌中的強大存在。一個世紀前，古代矮人們雖然勉強贏得了與惡魔軍團的戰爭，卻無法將古神殺死。作為替代方案，矮人們將它封印在城市下的大堂中，並相信虛弱的它無法再度復蘇。</string>
     <string name="Yog_Info1">……</string>
     <string name="Yog_Info2">希望的存在只是幻覺……</string>
@@ -2575,6 +2576,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -1685,6 +1685,7 @@ egy másik helyre a szinten. </string>
     <string name="ShortSword_NotBoomerang">nem tudsz így fejleszteni boomerangot</string>
     <string name="ShortSword_Reforged">belekovácsoltad a rövidkardot és így feljavítottad ezt: %s</string>
     <string name="ShortSword_Select">Válassz ki a fegyvert a fejlesztéshez</string>
+    <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Csillag formájú fém darabok borotva éles pengékkel amelyek szignifikáns sérülést tudnak okozni a célpontnak. Nagyon gyorsan lehet egymás után dobálni őket.</string>
     <string name="Shuriken_Name">Dobócsillag</string>
     <string name="SkeletonKey_Info">Ez a kulcs nagyon komolyan néz ki. A feje koponya alakú. Valószínüleg valami hasonlóan komoly ajtót nyithat.</string>
@@ -2272,6 +2273,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Wraith_Desc">A lidérc egy bosszuálló szelleme a bűnősnek, akinek a sírját megbolygatták. Mivel egy más síkról jött entitás, ezért normál fegyverekkel nagyon nehéz megsebezni.</string>
     <string name="Wraith_Name">lidérc</string>
     <string name="Wraith_Name_Objective">lidérc</string>
+    <string name="WrnExperimental_hint">Ha ez a furcsa és torz világ túl kemény Önhöz, kérem kapcsolja ki ezeket az opciókat:\nKezdőképernyő -&gt; Beállítások -&gt; Játékmenet\nmenü segítségével, majd indítson új játékot vagy töltsön be egy másik mentést.</string>
     <string name="Yog_Desc">Yog-Dzewa egy Öreg Isten, egy hatalmas erejű entitás a káosz síkjáról. Egy évezreddel ezelőtt, az ősi törp birodalom hatalmas áldozatok árán épphogy meg tudta nyerni a háborút a démoni seregei ellen, azonban képtelenek voltak elpusztítani magát az Öreg Istent. Helyette bebörtönözték egy a városuk alatt fekvő tárnában, reménykedve hogy sosem lesz újra ereje ahhoz hogy támadjon.</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">A remény csupán illúzió...</string>
@@ -2503,6 +2505,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

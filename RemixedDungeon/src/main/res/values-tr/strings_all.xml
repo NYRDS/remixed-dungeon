@@ -1929,6 +1929,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="SpiderQueenCarapace_Name">Örümcek Kraliçe Kabuğu</string>
     <string name="SpiderQueen_Desc">Güzel bir kadın vücudu ile iğrenç bir örümceğin karışımı.Bu yuvada yaşayan her şey onun hizmetkarı, bu muhteşem kadınla tanışmak ölümcül bir deneyim olabilir. Çünkü sen burada izinsiz bulunuyorsun!</string>
     <string name="SpiderQueen_DieInfo">Örümcek Kraliçe öldürüldü! Şimdi 5. seviyeye geri dönmeli ve Derinlere yolculuğuma devam etmeliyim.</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">örümcek kraliçe</string>
     <string name="SpiderQueen_Name_Objective">örümcek kraliçe</string>
     <string name="SpiderServant_Desc">Örümcek yuvasının en kalabalık birimi askerlerdir.Bölgelerini korumak için doğmuşlardır.Askerlerin iğneleri düşmaını zehirleyen keseler ile doludur.</string>
@@ -2818,6 +2819,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
