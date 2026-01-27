@@ -1856,6 +1856,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiderQueenCarapace_Name">Panzer der Spinnenkönigin</string>
     <string name="SpiderQueen_Desc">Der Körper einer wunderschönen Frau gekreuzt mit einer scheußlichen Spinne. Jedes Lebewesen auf dieser Ebene ist ihr Sklave. Eine Begegnung mit dieser besonderen Lady könnte sich als tödliche Erfahrung erweisen, denn du bist ein Eindringling!</string>
     <string name="SpiderQueen_DieInfo">Die Spinnenkönigin wurde besiegt! Jetzt sollte ich zur Ebene 5 zurückkehren und meine Reise zu den Tiefen fortsetzen.</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">Spinnenkönigin</string>
     <string name="SpiderQueen_Name_Objective">Spinnenkönigin</string>
     <string name="SpiderServant_Desc">Krieger sind die meist anzutreffenden Einheiten der Spinnenhöhle. Geboren, um ihr Territorium zu beschützen. Ihre gewaltigen Drüsen wurden entwickelt, um ihre Gegner zu vergiften.</string>
@@ -2683,6 +2684,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

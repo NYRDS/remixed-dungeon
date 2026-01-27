@@ -2250,6 +2250,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Yog_Name">Yog-Dzewa</string>
     <string name="Yog_Name_Objective">Yog-Dzewa</string>
     <string name="YogsBrain_Desc">Otak Yog-Dzewa. Sumber semua kejahatan yang keluar dari kurungan bawah tanah.</string>
+    <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name">otak yog</string>
     <string name="YogsBrain_Name_Objective">Otak yog</string>
     <string name="YogsEye_Desc">Mata dewa purba, melihat dengan kebencian abadi. Anda dapat rasai ia melihat menembusi roh anda.</string>
@@ -2484,6 +2485,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

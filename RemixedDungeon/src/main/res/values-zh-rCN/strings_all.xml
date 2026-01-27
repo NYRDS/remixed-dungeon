@@ -343,6 +343,8 @@
     <string name="Challenges_Names_6">禁忌符文</string>
     <string name="Challenges_Names_7">和平主义</string>
     <string name="Challenges_Names_8">没有城镇</string>
+    <string name="ChampionOfAirBuff_Info">这种特质赋予生物风的本质，提高其敏捷性和战斗能力。风之冠军成为了一个强大的对手，有能力发动迅速而毁灭性的攻击，可以快速改变战斗的进程。</string>
+    <string name="ChampionOfAirBuff_Name">风之冠军</string>
     <string name="ChampionOfEarthBuff_Name">大地勇士</string>
     <string name="ChampionOfFireBuff_Info">“注入了火焰的狂暴，这一特质增强了生物的凶猛和战斗力。火焰冠军是一个可怕的对手，它能发动毁灭性的攻击，将敌人吞没在灼热的火焰中，让所有敢于对抗它的人感到恐惧。</string>
     <string name="ChampionOfFireBuff_Name">火焰君王</string>
@@ -2780,6 +2782,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
