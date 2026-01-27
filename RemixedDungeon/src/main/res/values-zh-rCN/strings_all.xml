@@ -1407,6 +1407,7 @@
     <string name="PlagueDoctorQuest_5_1_Prologue">*他结结巴巴地说，声音像干树枝一样沙哑*。啊，_女妖精_！两个……是的，两个，活着的！这是……嗯……为了我的研究！你看……她们的信息素……对理解微妙的平衡至关重要……啊……*他停顿了一下，骨瘦如柴的手伸起来紧张地调整面具，发烧般的眼神朝你投来*她们……的本质……是个谜……一个美丽而神秘的谜！*他剧烈地咳嗽，试图恢复镇定*我保证，如果你给我带来这两个……生物……你将得到我永恒的感激。把它看作是……对知识的馈赠！是的！为了知识！</string>
     <string name="PlagueDoctor_Desc">散发奇怪味道的……皮革？下面应该是个人吧……</string>
 
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">瘟疫巫医</string>
     <string name="PlagueDoctor_Name_Objective">瘟疫巫医</string>
     <string name="Plant_ACPlant">种植</string>
@@ -2778,6 +2779,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
