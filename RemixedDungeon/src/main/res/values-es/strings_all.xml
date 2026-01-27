@@ -2239,6 +2239,7 @@ otro lugar del nivel.</string>
 -- Psi-Spider ahora mejorará a otras arañas en lugar de debilitar al heroe.\n
 - Errores corregidos\n
 </string>
+    <string name="Welcome_Text_32">    remix.32\n    - Jugabilidad:\n    -- Ahora los mobs y mascotas pueden ganar experiencia y niveles\n    -- Escudo del Caos\n    -- Campeones\n    -- Rebalanceo de la batalla contra Yog\n    -- Ajustes de balance\n    - UX:\n    -- Estadísticas detalladas de héroes y mobs\n    -- Mejor interfaz de personalización\n    -- Cámara suave\n    - Modding:\n    -- Animaciones personalizadas\n    -- Scripts personalizados para mobs integrados\n    -- Brillo para mobs\n    - Errores corregidos\n    </string>
     <string name="Welcome_Text_32_1">    remix.32.1\n    - Gameplay:\n    -- Línea de misión del Médico de la Peste\n    -- Ahora los cadáveres de los enemigos son en cierta medida objetos útiles\n    -- Mejor control de mascotas\n    - UX:\n    -- Mejora en la gestión de partidas guardadas\n    - Modding:\n    -- Métodos de instalación local de mods\n    -- Los objetos personalizados ahora pueden realizar acciones mientras están en montones\n    - Errores corregidos\n    </string>
     <string name="Welcome_Title">¡Bienvenido!</string>
     <string name="WindGust_Info">Una ráfaga de viento que aleja al objetivo seleccionado.</string>
@@ -2789,6 +2790,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
