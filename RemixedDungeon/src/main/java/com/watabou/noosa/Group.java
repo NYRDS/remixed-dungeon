@@ -98,6 +98,18 @@ public class Group extends Gizmo {
 			return g;
 		}
 	}
+
+	public Gizmo addBefore(Gizmo g, Gizmo before) {
+		int i = members.indexOf(before);
+		if (i == -1) {
+			return add(g);
+		} else {
+			members.add(i, g);
+			g.setParent(this);
+			sorted = false;
+			return g;
+		}
+	}
 	@SneakyThrows
 	public Gizmo recycle(@NotNull Class<? extends Gizmo> c) {
 

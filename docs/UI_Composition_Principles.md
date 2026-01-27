@@ -1110,4 +1110,182 @@ float alignedY = PixelScene.align(y);
    - Verify component creation and destruction
    - Test event handling logic
 
+## New UI Components and Patterns
+
+### Dynamic Indicators in Item Slots
+
+The `ItemButton` class in `ItemButton.java` was enhanced with dynamic indicator capabilities:
+
+```java
+// ItemButton now supports dynamic indicators
+public class ItemButton extends ItemSlot {
+    private BitmapText alchemyIndicator; // Dynamic indicator text
+
+    // Shows contextual indicators based on item properties
+    // Positioned in top-right corner of item slot
+    // Conditionally visible based on context
+}
+```
+
+Concrete implementation:
+- **ItemButton.java**: The enhanced item slot component
+- **BitmapText**: Used for the indicator text
+- **PixelScene.font**: Font used for the indicator
+- **setVisible()**: Method to control indicator visibility
+- **WndBag.Mode**: Determines when indicators are shown
+
+Pattern features:
+- **Dynamic Indicators**: Visual indicators can be added to item slots
+- **Context-Aware**: Visibility determined by current UI context (WndBag.Mode.ALL, WndBag.Mode.QUICKSLOT)
+- **Visual Positioning**: Indicators placed in consistent positions (top-right corner)
+- **Conditional Logic**: Indicators appear based on item properties or game state
+- **Extensible Design**: Framework for adding various types of indicators
+
+### Single-Line Data Display
+
+A pattern for displaying complex data in a single-line format, implemented in `WndItemAlchemy.java`:
+
+```java
+// Format complex data relationships in a single line
+StringBuilder display = new StringBuilder();
+display.append("Prefix: ");
+
+// Add first group of items
+boolean first = true;
+for (Map.Entry<String, Integer> entry : dataMap.entrySet()) {
+    if (!first) {
+        display.append(" + ");
+    }
+    first = false;
+
+    String item = entry.getKey();
+    int count = entry.getValue();
+
+    if (count > 1) {
+        display.append(item).append(" x").append(count);
+    } else {
+        display.append(item);
+    }
+}
+
+display.append(" → "); // Separator between input and output
+
+// Add second group of items with similar pattern
+```
+
+Concrete implementation:
+- **WndItemAlchemy.java**: Contains the single-line display implementation
+- **StringBuilder**: Used for efficient string construction
+- **HashMap**: For counting item occurrences
+- **ItemFactory.itemByName()**: For retrieving item names
+- **Text**: For displaying the formatted string
+
+Pattern components:
+- **Compact Layout**: Single line reduces vertical space usage
+- **Group Separation**: Clear distinction between different data groups
+- **Quantity Display**: Efficient notation for repeated items ("x2", "x3", etc.)
+- **Connector Symbols**: Visual separators ("+", "→") for different relationships
+- **Conditional Formatting**: Adjusts display based on data properties
+
+### Flexible Layout Spacing
+
+A technique for positioning UI elements at specific locations within containers, implemented in `WndItemAlchemy.java`:
+
+```java
+// Add flexible spacer to push elements to specific positions
+float totalHeight = container.bottom();
+float targetY = windowHeight - margin - buttons.height();
+float availableSpace = targetY - totalHeight;
+
+if (availableSpace > 0) {
+    // Add empty space to push buttons to the bottom
+    Component spacer = new Component() {
+        @Override
+        public void layout() {
+            height = availableSpace;
+        }
+    };
+    container.add(spacer);
+}
+```
+
+Concrete implementation:
+- **WndItemAlchemy.java**: Uses flexible spacing to position buttons
+- **Component**: Custom component for flexible spacing
+- **VBox**: Layout container that manages the spacing
+- **layout()**: Method overridden to set dynamic height
+- **add()**: Method to insert spacer in the container hierarchy
+
+Technique benefits:
+- **Bottom Alignment**: Positions elements at bottom of container
+- **Flexible Spacing**: Dynamically adjusts to fill available space
+- **Responsive Layout**: Adapts to different content sizes
+- **Clean Positioning**: Maintains consistent element placement
+- **Container Independence**: Works with various container types
+
+### Contextual Item Filtering
+
+A pattern for filtering and displaying items based on contextual requirements, implemented in `ItemButton.java`:
+
+```java
+// Filter items based on current context and player state
+Map<String, Integer> playerInventory = new HashMap<>();
+for (Item inventoryItem : Dungeon.hero.getBelongings().backpack.items) {
+    String itemName = inventoryItem.getEntityKind();
+    playerInventory.put(itemName, playerInventory.getOrDefault(itemName, 0) + inventoryItem.quantity());
+}
+
+// Apply filtering logic based on context
+List<FilteredItem> filteredItems = new ArrayList<>();
+for (Item candidate : allItems) {
+    if (shouldShowItem(candidate, playerInventory, context)) {
+        filteredItems.add(candidate);
+    }
+}
+```
+
+Concrete implementation:
+- **ItemButton.java**: Contains the filtering logic
+- **AlchemyRecipes.getRecipesContainingItem()**: Gets recipes for specific items
+- **AlchemyRecipes.hasRequiredIngredients()**: Checks if player has required ingredients
+- **Dungeon.hero.getBelongings()**: Accesses player's inventory
+- **Item.getEntityKind()**: Gets the internal name of items
+
+Pattern features:
+- **Dynamic Filtering**: Items filtered based on current context
+- **State Awareness**: Considers player state and inventory
+- **Efficient Processing**: Uses maps for quick lookups
+- **Context Sensitivity**: Behavior adapts to different UI modes
+- **Scalable Design**: Can handle varying numbers of items
+
+### Responsive Window Design
+
+Principles for creating windows that adapt to different content and screen sizes, implemented in `WndItemAlchemy.java`:
+
+- **WndItemAlchemy.java**: Implements responsive window design
+- **VBox**: Vertical layout container with adjustable spacing
+- **HBox**: Horizontal container for buttons
+- **PixelScene.uiCamera**: References screen dimensions
+- **resize()**: Method to adjust window size
+- **layout()**: Method to recalculate positions
+
+Specific implementations:
+- **Tighter Margins**: Reduced margins (from 20px to 10px) for more efficient space usage
+- **Consistent Gaps**: Uniform spacing using SMALL_GAP constant (1px)
+- **Adaptive Sizing**: Elements adjust to available window space
+- **Flexible Components**: UI elements that can expand or contract as needed
+- **Content Prioritization**: Important elements remain visible regardless of space constraints
+- **Layout Hierarchy**: Proper ordering of elements for optimal visual flow
+
+### Integration with Existing UI Systems
+
+New components integrate seamlessly with existing UI patterns:
+
+- **WndBag Compatibility**: Works with existing inventory selection system (WndBag.Mode.ALL, WndBag.Mode.QUICKSLOT)
+- **Component Hierarchy**: Follows established inheritance patterns (ItemButton extends ItemSlot)
+- **Window Management**: Conforms to standard window creation (extends Window)
+- **Layout Containers**: Uses VBox and HBox for consistent layout management
+- **Event Handling**: Integrates with existing touch and click handling systems
+- **Theming Consistency**: Maintains visual consistency with existing UI elements
+
 This architecture provides a flexible yet lightweight UI system that's well-suited for a mobile game, with clear separation of concerns between visual rendering, interaction handling, and game logic integration.

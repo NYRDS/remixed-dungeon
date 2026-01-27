@@ -1,9 +1,13 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
+import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -29,18 +33,16 @@ public class WndItemAlchemy extends Window {
     // Track selected recipe
     private Entry<List<String>, List<String>> selectedRecipe;
     private RecipeListItem selectedRow;
-    private RedButton executeButton;
-    private Item item;
+    private final RedButton executeButton;
 
     // Track recipe rows for selection
-    private ArrayList<RecipeListItem> recipeRows = new ArrayList<>();
+    private final ArrayList<RecipeListItem> recipeRows = new ArrayList<>();
 
     // Recipe description text
-    private Text recipeDescription;
+    private final Text recipeDescription;
 
     public WndItemAlchemy(Item item) {
         super();
-        this.item = item;
 
         // Calculate almost fullscreen dimensions
         float screenWidth = PixelScene.uiCamera.width;
@@ -57,7 +59,7 @@ public class WndItemAlchemy extends Window {
         add(mainLayout);
 
         // Title
-        Text title = PixelScene.createText("Alchemy with " + item.name(), GuiProperties.titleFontSize());
+        Text title = PixelScene.createText("Alchemy recipes with " + item.name(), GuiProperties.titleFontSize());
         title.hardlight(TITLE_COLOR);
         title.setX(MARGIN);
         mainLayout.add(title);
@@ -112,7 +114,7 @@ public class WndItemAlchemy extends Window {
         }
 
         // Recipe description area
-        recipeDescription = PixelScene.createMultiline("", 6); // Smaller font for tighter fit
+        recipeDescription = PixelScene.createMultiline("Select recipe", 6); // Smaller font for tighter fit
         recipeDescription.maxWidth((int)(windowWidth - 4 * MARGIN));
         mainLayout.add(recipeDescription);
 
@@ -155,13 +157,13 @@ public class WndItemAlchemy extends Window {
 
         if (availableSpace > 0) {
             // Add empty space at the end to push buttons to the bottom
-            com.watabou.noosa.ui.Component spacer = new com.watabou.noosa.ui.Component() {
+            Component spacer = new Component() {
                 @Override
                 public void layout() {
                     height = availableSpace;
                 }
             };
-            mainLayout.add(spacer);
+            mainLayout.addBefore(spacer, buttonsContainer);
         }
 
         mainLayout.layout();
@@ -261,23 +263,15 @@ public class WndItemAlchemy extends Window {
                 String input = entry.getKey();
                 int count = entry.getValue();
 
-                Item inputItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(input);
-                if (inputItem != null) {
-                    if (count > 1) {
-                        description.append(inputItem.name()).append(" x").append(count);
-                    } else {
-                        description.append(inputItem.name());
-                    }
+                Item inputItem = ItemFactory.itemByName(input);
+                if (count > 1) {
+                    description.append(inputItem.name()).append(" x").append(count);
                 } else {
-                    if (count > 1) {
-                        description.append(input).append(" x").append(count);
-                    } else {
-                        description.append(input);
-                    }
+                    description.append(inputItem.name());
                 }
             }
 
-            description.append(" → ");
+            description.append(" = ");
 
             // Count occurrences of each output
             Map<String, Integer> outputCounts = new HashMap<>();
@@ -296,25 +290,38 @@ public class WndItemAlchemy extends Window {
                 String output = entry.getKey();
                 int count = entry.getValue();
 
-                Item outputItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(output);
-                if (outputItem != null) {
-                    if (count > 1) {
-                        description.append(outputItem.name()).append(" x").append(count);
-                    } else {
-                        description.append(outputItem.name());
+                Item outputItem = ItemFactory.itemByName(output);
+                // Determine the entity type to handle items, mobs, and carcasses differently
+                AlchemyRecipes.EntityType entityType =
+                    AlchemyRecipes.determineEntityType(output);
+
+                String displayName = output; // Default to the raw name
+
+                if (entityType == AlchemyRecipes.EntityType.ITEM ||
+                    entityType == AlchemyRecipes.EntityType.CARCASS) {
+                    // Handle items and carcasses
+                    displayName = outputItem.name();
+                } else if (entityType == AlchemyRecipes.EntityType.MOB) {
+                    // Handle mobs - try to get mob name
+                    try {
+                        Mob mob = MobFactory.mobByName(output);
+                        displayName = mob.name();
+                    } catch (Exception e) {
+                        // If we can't get the mob name, use the raw name
+                        displayName = output;
                     }
+                }
+
+                if (count > 1) {
+                    description.append(displayName).append(" x").append(count);
                 } else {
-                    if (count > 1) {
-                        description.append(output).append(" x").append(count);
-                    } else {
-                        description.append(output);
-                    }
+                    description.append(displayName);
                 }
             }
 
             recipeDescription.text(description.toString());
         } else {
-            recipeDescription.text("");
+            recipeDescription.text("Select recipe");
         }
 
         // Update the layout to accommodate the new text
@@ -361,12 +368,37 @@ public class WndItemAlchemy extends Window {
                 }
             }
 
-            // Add the output items to the player's inventory
+            // Process the output items and mobs
             List<String> outputs = selectedRecipe.getValue();
             for (String outputName : outputs) {
-                Item outputItem = com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(outputName);
-                if (outputItem != null) {
-                    Dungeon.level.drop(outputItem, Dungeon.hero.getPos()).sprite.drop();
+                // Determine the entity type to handle items, mobs, and carcasses differently
+                AlchemyRecipes.EntityType entityType = AlchemyRecipes.determineEntityType(outputName);
+
+                if (entityType == AlchemyRecipes.EntityType.ITEM ||
+                    entityType == AlchemyRecipes.EntityType.CARCASS) {
+                    // Handle items and carcasses
+                    Item outputItem = ItemFactory.itemByName(outputName);
+                    if (outputItem != null) {
+                        Dungeon.level.drop(outputItem, Dungeon.hero.getPos()).sprite.drop();
+                    }
+                } else if (entityType == AlchemyRecipes.EntityType.MOB) {
+                    // Handle mobs - spawn them at the hero's position
+                    try {
+                        com.watabou.pixeldungeon.actors.mobs.Mob mob = MobFactory.mobByName(outputName);
+                        if (mob != null) {
+                            // Place the mob at the hero's position
+                            mob.pos = Dungeon.hero.getPos();
+
+                            // Add the mob to the level
+                            Dungeon.level.mobs.add(mob);
+
+                            // Refresh the level to show the new mob
+                            mob.getSprite().place(mob.getPos());
+                        }
+                    } catch (Exception e) {
+                        // If there's an error spawning the mob, log it but continue
+                        com.nyrds.platform.EventCollector.logException(e);
+                    }
                 }
             }
 
