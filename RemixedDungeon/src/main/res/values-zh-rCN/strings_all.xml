@@ -2334,6 +2334,7 @@ remix.31.1\n
     <string name="WndLibrary_Items_Btn">道具</string>
     <string name="WndLibrary_Levels_Btn">地牢</string>
     <string name="WndLibrary_Mobs_Btn">怪物</string>
+    <string name="WndLocalModInstall_title">从本地目录安装模组</string>
     <string name="WndModInstall_InstallingMod">安装MOD</string>
     <string name="WndModInstall_PleaseUpdate">请在安装这个MOD之前更新混合地牢</string>
     <string name="WndModInstall_Version">版本</string>
@@ -2779,6 +2780,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
