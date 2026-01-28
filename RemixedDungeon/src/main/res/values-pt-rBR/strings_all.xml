@@ -951,6 +951,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="IceCaves_TileHighGrass">Grama alta congelada</string>
     <string name="IceCaves_TileStatue">Gnoll congelado</string>
     <string name="IceElemental_Desc">Entre todos os elemantais existentes na masmorra, o elemental de gelo poderá não ser o mais forte, mas ele consegue facilmente ser considerado um dos mais perigosos. O seu corpo irradia gelo, abrandando os seus inimigos.</string>
+    <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">elemental de gelo</string>
     <string name="IceElemental_Name_Objective">elemental do gelo</string>
     <string name="IceGuardianCoreModule_Info">É uma estrutura complexa feita de gelo mágico. Há uma joia brilhante no centro deste dispositivo estranho.</string>
@@ -2743,6 +2744,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
