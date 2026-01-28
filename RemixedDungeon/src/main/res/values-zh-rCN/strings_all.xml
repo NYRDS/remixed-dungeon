@@ -1840,6 +1840,7 @@
     <string name="ShortSword_NotBoomerang">你不能以这种方式为回力镖升级</string>
     <string name="ShortSword_Reforged">你将你的短剑重铸以升级你的%s</string>
     <string name="ShortSword_Select">选择你要强化的武器</string>
+    <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">星形铁片，配上尖锐刀锋，轻巧得很伤害又高，据说只有加藤鹰忍士才能完美驾驭此物。</string>
     <string name="Shuriken_Name">手里剑</string>
     <string name="SkeletonKey_Info">这把钥匙看起来很严肃：它上半部分形状像块头骨。也许它能打开一扇正经的门。</string>
@@ -2783,6 +2784,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
