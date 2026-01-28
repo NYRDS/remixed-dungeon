@@ -719,6 +719,7 @@
   <string name="ZombieGnoll_Info">Гнолл-зомби восстал из мёртвых!</string>
   <string name="HeartOfDarkness_Name">Сердце тьмы</string>
   <string name="HeartOfDarkness_Info">Чёрное пульсирующее сердце Предательского духа.</string>
+  <string name="HeartOfDarkness_Gender">бесполый</string>
   <string name="Badges_Yog_Slain">Йог-Джева побеждён</string>
   <string name="Badges_ShadowLord_Slain">Владыка Теней побеждён</string>
   <string name="Badges_SpiderQueen_Slain">Королева Пауков побеждена</string>
@@ -803,6 +804,19 @@
   <string name="WndDonate_donate">поддержать:  </string>
   <string name="WndDonate_notConnected">нет связи :(</string>
   <string name="WndDonate_commonDonateText">Remixed Dungeon - свободна и бесплатна для всех, и так будет всегда.\n\nОднако Вы можете помочь нам сделать игру ещё лучше.\n\nКроме нашей сердечной благодарности Вы получите некоторые косметические улучшения, однако не влияющие на геймплей.</string>
+  
+  <!-- Crypto Donation Strings -->
+  <string name="WndCryptoDonate_supportDev">Поддержите разработчика</string>
+  <string name="WndCryptoDonate_infoText">Вы можете поддержать разработку Remixed Dungeon, отправив пожертвование в криптовалюте на один из адресов ниже. Спасибо за вашу щедрость!</string>
+  <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+  <string name="WndCryptoDonate_ethereum">Ethereum</string>
+  <string name="WndCryptoDonate_monero">Monero</string>
+  <string name="WndCryptoDonate_ton">TON</string>
+  <string name="WndCryptoDonate_currency">Криптовалюта</string>
+  <string name="WndCryptoDonate_walletAddress">Адрес кошелька</string>
+  <string name="WndCryptoDonate_openWallet">Открыть кошелёк</string>
+  <string name="WndCryptoDonate_copyAddress">Скопировать адрес</string>
+  <string name="WndCryptoDonate_warningText">ВНИМАНИЕ: Всегда проверяйте адрес перед отправкой средств. Криптовалютные транзакции необратимы!</string>
   <string name="WndDonate_silverDonate">серебряное пожертвование</string>
   <string name="WndDonate_goldDonate">золотое пожертвование</string>
   <string name="WndDonate_rubyDonate">рубиновое пожертвование</string>
@@ -2813,7 +2827,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="EncumbranceBuff_Name">Тяжесть</string>
   <string name="EncumbranceBuff_Info">Недостаточно силы чтобы использовать предмет %s эффективно.</string>
   <string name="Level_TileDescPedestal">Небольшой пьедестал.</string>
-  <string name="Level_TileDescWell"/>
+  <string name="Level_TileDescWell">Загадочный колодец. Вы ощущаете исходящую из него магическую силу.</string>
   <string name="Welcome_Text_31_0">
     remix.31.0\n
     - Геймплей:\n
@@ -2995,29 +3009,48 @@ No, there was no place for her in the light, not anymore. She turned from the me
 - Багофиксы\n
 </string>
   <string name="WndInstallingMod_deleting_file">Удаляем 1%s</string>
+
   <string name="Badges_ThisIsSparta">Это Спарта!!!</string>
   <string name="WndSettings_FpsLimit">Ограничение FPS</string>
   <string name="StartScene_ContinueLatest">Продолжить последнюю игру или выбрать слот сохранения</string>
   <string name="StartScene_ChooseFromSlot">Выбери слот сохранения</string>
+
   <string name="AboutScene_SourceCode">Получить исходники Remixed Dungeon:</string>
   <string name="HeroClass_Priest">Священник</string>
   <string name="HeroClass_Doctor">Чумной Доктор</string>
   <string name="StartScene_ComingSoon">Скоро будет</string>
+
   <string name="AC_Dissect">Вскрытие</string>
+
   <string name="HeroClass_PlagueDoctorPerks_0">Чумные доктора собирают Токсические железы, Гнилые органы, Осколки костей и Гнусную эссенцию с поверженных врагов. Кровь собирается со временем и используется для алхимии.</string>
   <string name="HeroClass_PlagueDoctorPerks_1">Начинают с Маской Чумного Доктора (иммунитет ко всем газам) и Костяной пилой. Критические удары выбивают дополнительные части, а Пила наносит +50% урона парализованным врагам.</string>
   <string name="HeroClass_PlagueDoctorPerks_2">Зелья Парализующего газа и Токсичного газа опознаны изначально.</string>
   <string name="HeroClass_PlagueDoctorPerks_3">Враги, убитые Токсичным газом, взрываются в Ядовитым Туманом, восстанавливая вам 1 HP за каждого поверженного врага.</string>
   <string name="HeroClass_PlagueDoctorPerks_4">Чумные доктора получают большой штраф к меткости без своей Костяной пилы и не могут использовать дальнобойное оружие.</string>
+
   <string name="BoneSaw_Name">Костяная пила</string>
   <string name="BoneSaw_Info">Хирургическая пила тонкой работы, созданная для быстрого вскрытия. Её урон и скорость атаки растут с мастерством Чумного доктора. Критические удары выбивают дополнительные собираемые части, безжалостно эффективна против парализованных врагов.</string>
+
   <string name="Accuracy_Decreased">Зачем я думал, что смогу использовать предмет %s? Не тот инструмент, не те руки!</string>
   <string name="Accuracy_DecreasedDoctor">Каждый взмах этим предметом %s сеет несовершенство. Моя Пила лечит… а это калечит.</string>
   <string name="Accuracy_DecreasedDoctorBareHands">Голые руки оскверняют технику. Без чистого реза Пилы моя точность никуда не годиться.</string>
+
   <string name="AttackDelay_Increased">Не получается использовать предмет %s как следует. Медленные взмахи, тяжёлое дыхание…</string>
   <string name="Mob_GoingTo">Уже бегу!</string>
   <string name="Mob_Attacking">Считай этого %s мёртвым!</string>
   <string name="BuffParam_Cooldown">Время: 1%.2f</string>
   <string name="Challenges_Names_9">Амнезия</string>
-  <string name="Challenges_Descriptions_9">Новый \'медикамент\' Доктора выжег вам ориентацию в пространстве. Всё, что скрыто из виду — тут же забывается.</string>
+  <string name="Challenges_Descriptions_9">Последнее «лекарство» Доктора Чумы стёрло вашу пространственную память. Теперь вы не помните ничего, что находится вне поля зрения.</string>
+
+  <string name="ToxicGland_Name">Ядовитая железа</string>
+  <string name="ToxicGland_Info">Ядовитая железа, добытая с поверженного врага. Наполнена сильнодействующими токсинами и пригодится для алхимических рецептов.</string>
+  <string name="RottenOrgan_Name">Гнилой орган</string>
+  <string name="RottenOrgan_Info">Гниющий орган, добытый с поверженного противника. Несмотря на отвратительный вид, содержит ценные соединения для алхимии.</string>
+  <string name="BoneShard_Name">Костяной осколок</string>
+  <string name="BoneShard_Info">Острый осколок кости, добытый с поверженного врага. Удивительно прочен и пригодится для ремесла.</string>
+  <string name="VileEssence_Name">Зловещая эссенция</string>
+  <string name="VileEssence_Info">Концентрированная эссенция порчи, добытая с поверженного врага. Эта тёмная субстанция пульсирует злобной энергией и весьма ценится алхимиками.</string>
+  <string name="Carcass_DissectMessage">Вы разделываете тушу и находите %s.</string>
+  <string name="Carcass_DissectResult" formatted="false">Из %s вы получаете %d собирая %s</string>
+  <string name="Carcass_DissectFailed">Вы разделываете %s но ничего ценного не обнаруживаете.</string>
 </resources>
