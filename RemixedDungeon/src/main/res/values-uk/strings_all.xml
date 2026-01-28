@@ -1109,6 +1109,7 @@
     <string name="Level_TileWall">Стіна</string>
     <string name="Level_TileWater">Вода</string>
     <string name="Level_TileWell">Колодязь</string>
+    <string name="LevitationBuff_Info">Тіло зависає над землею, уникаючи пасток та інших земних небезпек.</string>
     <string name="LevitationBuff_Name">Левітуєш</string>
     <string name="LibrarianNPC_Desc">Дуже несмілива людина, в поношеному незграбному светрі та дуже товстими окулярами.</string>
     <string name="LibrarianNPC_Gender">masculine</string>
@@ -2631,6 +2632,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

@@ -2188,6 +2188,7 @@ otro lugar del nivel.</string>
     <string name="WarHammer_Info">Pocas criaturas pueden resistir el golpe demoledor de esta masa de plomo y acero, pero solo los aventureros más fuertes pueden manejarla. </string>
     <string name="WarHammer_Name">maza de guerra</string>
     <string name="Warlock_Desc">Cuando el interés de los enanos cambió de la ingeniería a las artes arcanas, los brujos ganaron poder en las ciudades. Empezaron con la magia elemental, pero pronto se cambiaron a la demonología y la necromancia.</string>
+    <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">El rayo de %s te ha matado...</string>
     <string name="Warlock_Name">brujo enano</string>
     <string name="Warlock_Name_Objective">brujo enano</string>
@@ -2794,6 +2795,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
