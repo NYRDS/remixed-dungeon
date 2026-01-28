@@ -2070,6 +2070,7 @@
     <string name="TownsfolkSilentNPC_Name_Objective">城镇居民</string>
     <string name="ToxicGas_Info">这里漂浮着一团绿色毒云</string>
     <string name="ToxicGas_Info1">你死于吸毒……</string>
+    <string name="ToxicGland_Info">从被击败的敌人身上收获的有毒腺体。这些腺体充满了强效毒素，可用于炼金术过程。</string>
     <string name="ToxicGland_Name">毒性腺体</string>
     <string name="TrapWnd_Step">你当真要踏上此陷阱？你可能会因此失命。</string>
     <string name="TrapWnd_Title">陷阱</string>
@@ -2785,6 +2786,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -831,6 +831,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="HealthDart_Info">La punta de este dardo está cubierta con poción de curación.</string>
     <string name="HealthDart_Name">Dardo de curación</string>
     <string name="Heap_Mimic">¡Es un mímico!</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Palpitante corazón negro del Espíritu Traicionero.</string>
     <string name="HeartOfDarkness_Name">Corazón de la oscuridad</string>
     <string name="Hedgehog_Desc">Ese erizo parece nervioso.</string>
@@ -2793,6 +2794,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
