@@ -1000,6 +1000,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="JarOfSouls_Desc">Die glühenden Augen eines Schädels, die auf diesem alten Glas abgebildet sind, sowie die unheimliche Energie, die es absondert, lässt dich unruhig werden.</string>
     <string name="JarOfSouls_Name">Gefäß der Seelen</string>
     <string name="JarOfSouls_Name_Objective">Gefäß der Seelen</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">Dieses Stück Metall ist so gebaut, dass das spitze Ende im Flug immer nach vorne zeigt.</string>
     <string name="Javelin_Name">Wurfspeer</string>
     <string name="Journal_Alchemy">Alchemiekessel</string>
@@ -2687,6 +2688,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

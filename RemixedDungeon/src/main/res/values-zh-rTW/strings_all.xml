@@ -39,6 +39,7 @@
      - 不時發布有趣的統計數據\n
     您可以隨時更改決定（單擊標題屏幕上的圖表圖標）</string>
     <string name="AllowStatisticsCollectionScene_Title">用戶使用統計報告</string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">這個箭頭尖端的瘋狂詛咒的力量將使任何生物變得無情、狂暴，兇殘無比。</string>
     <string name="AmokArrow_Name">狂亂箭</string>
     <string name="AmokBuff_Name">狂亂</string>
@@ -2581,6 +2582,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

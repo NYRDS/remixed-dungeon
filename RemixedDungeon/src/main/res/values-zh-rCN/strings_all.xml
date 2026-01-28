@@ -1908,6 +1908,7 @@
     <string name="SpiderGuard_Name">蜘蛛守卫</string>
     <string name="SpiderGuard_Name_Objective">蜘蛛守卫</string>
     <string name="SpiderMindAmber_Desc">琥珀蜘蛛是一种神秘而罕见的物种，拥有和灵能蜘蛛一样的精神力量，但比它要强壮得多。“琥珀”来源于它巨大脑袋的颜色，伴随着琥珀蜘蛛的精神和物理攻击，一个又一个受害者成为了它们的食物。</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">琥珀蜘蛛</string>
     <string name="SpiderMindAmber_Name_Objective">琥珀蜘蛛</string>
     <string name="SpiderMind_Desc">这些看似弱小的蜘蛛掌握着独一无二的精神力量，使它们能够掌控一个群体。灵能蜘蛛能够掌控所有活着的生物，但是它们身体相当脆弱。</string>
@@ -2784,6 +2785,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
