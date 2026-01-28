@@ -1913,6 +1913,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="SpiderExploding_Name">işçi örümcek</string>
     <string name="SpiderExploding_Name_Objective">işçi örümcek</string>
     <string name="SpiderGuard_Desc">Askerler gibi örümcek muhafızlarda krallıklarını korumak için yemin etmiştir.Muhafızın zehri düşmanlarını felç ederek hareket etmelerini engeller.</string>
+    <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">örümcek gardiyan</string>
     <string name="SpiderGuard_Name_Objective">örümcek gardiyan</string>
     <string name="SpiderMindAmber_Desc">Kehribar örümcekler, normal psi-örümceklere benzer psişik güçlere sahip, ancak fiziksel olarak çok daha sert olan gizemli ve nadir yaratıklardır. \&quot;Kehribar\&quot; adı, Kehribar Örümcekler güçlerini kullanarak saldırdıklarında kurbanlarının önünde ortaya çıkan dev beyin çuvallarının rengine atıfta bulunur.</string>
@@ -2820,6 +2821,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

@@ -491,6 +491,7 @@
     <string name="CurareDart_Info">這些提摩般邪惡的飛鏢傷害不大，但能把目標麻痺，剩它靜立無助一會。</string>
     <string name="CurareDart_Name">麻痹飛鏢</string>
     <string name="DM300_Desc">數個世紀前矮人們制造了這個機器。但此後，矮人們開始使用魔像、元素生物甚至是惡魔來替換機器，最終導致其文明的衰敗。DM-300及類似的機器通常用於建設和挖掘，在某些情況下，也會用於城防。</string>
+    <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300修復了自己！</string>
     <string name="DM300_Info2">任務失敗，系統關閉。</string>
     <string name="DM300_Info3">檢測到未授權人員。</string>
@@ -2577,6 +2578,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
