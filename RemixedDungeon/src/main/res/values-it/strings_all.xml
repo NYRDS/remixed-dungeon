@@ -1042,6 +1042,7 @@ Potrebbe bruciare?</string>
     <string name="MissileWeapon_No">No, ho cambiato idea</string>
     <string name="MissileWeapon_Sure">Vuoi davvero equipaggiarla come arma da mischia?</string>
     <string name="MissileWeapon_Yes">Sì, so quello che faccio</string>
+    <string name="Mob_Attacking">Conta questo %s come morto!</string>
     <string name="Mob_Desc">La vera descrizione arriverà presto!</string>
     <string name="Mob_Died">Senti qualcosa morire a distanza.</string>
     <string name="Mob_StaControlledStatus">Questo %s è sotto una possessione maledetta</string>
@@ -2275,6 +2276,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

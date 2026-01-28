@@ -1213,6 +1213,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="MissileWeapon_No">Nein, ich habe meine Meinung geändert.</string>
     <string name="MissileWeapon_Sure">Willst du es wirklich als Nahkampfwaffe ausrüsten?</string>
     <string name="MissileWeapon_Yes">Ja, ich weiß was ich tue.</string>
+    <string name="Mob_Attacking">Zähle diesen %s als tot!</string>
     <string name="Mob_Cannot_Be_Pet">Der Wille eines \&quot;%s\&quot; ist schwach genug um es zu kontrolieren!</string>
     <string name="Mob_CantDoIt">Ich kann das nicht machen. Ich habe kleine Pfoten.</string>
     <string name="Mob_Desc">Richtige Beschreibung folgt!</string>
@@ -1870,6 +1871,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiritOfPain_Name">Geist der Schmerzen</string>
     <string name="SpiritOfPain_Name_Objective">Geist der Schmerzen</string>
     <string name="Sprout_Name">Sprießen</string>
+    <string name="StartScene_ContinueLatest">Setze dein letztes Spiel fort oder wähle einen Speicherplatz</string>
     <string name="StartScene_Depth">Ebene: %1$d\nLevel: %2$d</string>
     <string name="StartScene_DifficultyEasy">Einfach (mit Werbung)</string>
     <string name="StartScene_DifficultyEasyNoAds">Leicht</string>
@@ -2684,6 +2686,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

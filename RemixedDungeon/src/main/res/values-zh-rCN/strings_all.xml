@@ -1273,6 +1273,7 @@
     <string name="MissileWeapon_Sure">你确定要将其用作近战武器？</string>
     <string name="MissileWeapon_Yes">是的，我知道我在做什么</string>
     <string name="MobAi_status">此%s是%s</string>
+    <string name="Mob_Attacking">将这个 %s 视为已死亡！</string>
     <string name="Mob_Cannot_Be_Pet">你没法控制住“%s”！</string>
     <string name="Mob_CantDoIt">我做不到。我的手太小了。</string>
     <string name="Mob_Desc">真正的说明即将到来！</string>
@@ -2782,6 +2783,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

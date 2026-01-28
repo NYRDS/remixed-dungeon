@@ -1332,6 +1332,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="MissileWeapon_Sure">Voulez vous vraiment vous en équiper en tant qu\'arme de mêlée ?</string>
     <string name="MissileWeapon_Yes">Oui, je sais ce que je fais</string>
     <string name="MobAi_status">Ce %s est %s</string>
+    <string name="Mob_Attacking">Considère ce %s comme mort !</string>
     <string name="Mob_Cannot_Be_Pet">La volonté de \&quot;%s\&quot; est trop forte pour être contrôlée !</string>
     <string name="Mob_CantDoIt">Je ne peux pas le faire. J\'ai des petites pattes.</string>
     <string name="Mob_Desc">La vraie description arrive bientôt !</string>
@@ -2932,6 +2933,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

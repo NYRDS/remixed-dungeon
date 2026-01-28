@@ -1242,6 +1242,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="MissileWeapon_Sure">Apakah Anda yakin akan menggunakan ini sebagai senjata jarak dekat?</string>
     <string name="MissileWeapon_Yes">Ya, aku yakin apa yang kulakukan</string>
     <string name="MobAi_status">Ini %s adalah %s</string>
+    <string name="Mob_Attacking">Hitung %s ini sebagai sudah mati!</string>
     <string name="Mob_Cannot_Be_Pet">Keinginan \&quot;%s\&quot; adalah kuat untuk dikendalikan!</string>
     <string name="Mob_CantDoIt">Saya tidak bisa melakukannya. Saya memiliki cakar kecil.</string>
     <string name="Mob_Desc">Deskripsi sebenarnya akan datang!</string>
@@ -2753,6 +2754,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

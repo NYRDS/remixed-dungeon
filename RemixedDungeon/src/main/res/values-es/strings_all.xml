@@ -279,6 +279,7 @@
     <string name="BodyArmorBuff_Name">Armadura Corporal</string>
     <string name="BodyArmorSpell_Info">Activa la fuerza de tus músculos reservada, haciéndolos temporalmente más fuertes, así aumentando enormemente tu armadura pero a coste de tu velocidad de movimiento.</string>
     <string name="BodyArmorSpell_Name">Armadura Corporal</string>
+    <string name="BoneShard_Name">Fragmento de hueso</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Al ser lanzado contra un enemigo, esta arma curva de madera volverá a su lanzador.</string>
     <string name="Boomerang_Name">boomerang</string>
@@ -1272,6 +1273,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="MissileWeapon_Sure">¿De verdad quieres equiparla como arma cuerpo a cuerpo?</string>
     <string name="MissileWeapon_Yes">Sí, se lo que estoy haciendo</string>
     <string name="MobAi_status">esto%s es %s</string>
+    <string name="Mob_Attacking">¡Considera a este %s como muerto!</string>
     <string name="Mob_Cannot_Be_Pet">¡La voluntad de \&quot;%s\&quot;  es demasiado fuerte para controlarla!</string>
     <string name="Mob_CantDoIt">No puedo hacer esto. Tengo patas pequeñas.</string>
     <string name="Mob_Desc">¡Pronto tendremos una descripción más fiable!</string>
@@ -2790,6 +2792,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

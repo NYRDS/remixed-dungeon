@@ -1141,6 +1141,7 @@ Ennek a viselése azt jelenti, hogy odafigyelsz másokra.</string>
     <string name="MissileWeapon_No">Nem, meggondoltam magam</string>
     <string name="MissileWeapon_Sure">Ezt tényleg kézifegyverként akarod hordani?</string>
     <string name="MissileWeapon_Yes">Igen, tudom mit csinálok</string>
+    <string name="Mob_Attacking">Számold ezt a %s-t halottnak!</string>
     <string name="Mob_Cannot_Be_Pet">Túl erős a(z) \&quot;%s\&quot; akarata hogy irányítsd!</string>
     <string name="Mob_CantDoIt">Nem tudom megtenni. Apró mancsaim vannak.</string>
     <string name="Mob_Desc">Hamarosan valódi leírás kerül ide!</string>
@@ -2505,6 +2506,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

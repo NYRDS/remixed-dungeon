@@ -1117,6 +1117,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MissileWeapon_No">아니, 생각을 바꿨어</string>
     <string name="MissileWeapon_Sure">정말로 이걸 근접 무기로 장착하시겠습니까?</string>
     <string name="MissileWeapon_Yes">그래, 뭘 하려는지 알고 있다</string>
+    <string name="Mob_Attacking">이 %s를 죽은 것으로 간주하라!</string>
     <string name="Mob_Cannot_Be_Pet">\&quot;%s\&quot;의 의지는 조종당하기엔 너무 강했습니다!</string>
     <string name="Mob_Desc">진짜 설명은 곧 나올 예정입니다!</string>
     <string name="Mob_Died">당신은 저 멀리서 무언가가 죽는 소리를 들었습니다.</string>
@@ -2419,6 +2420,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
