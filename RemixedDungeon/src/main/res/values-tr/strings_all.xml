@@ -763,7 +763,8 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Ghost_Rat2">Lütfen... Yardım et... Nefret ettiğim sıçanı öldür...</string>
     <string name="Ghost_Rose1">Merhaba maceracı. Bir zamanlar ben de senin gibiydim - güçlü ve kendinden emin... Ve şimdi öldüm. Ama burayı terk edemem. _Kurutulmuş gülümü_ almadan olmaz. O benim için çok önemli. Bir canavar onu bedenimden çaldı.</string>
     <string name="Ghost_Rose2">Lütfen... Bana yardım et... Gülü bul...</string>
-    <string name="Glaive_Info">Bir sırığın ucundaki kılıçtan oluşan bir sırıklı silah.</string>
+    <string name="Glaive_Gender">feminine</string>
+    <string name="Glaive_Info">Ucunda kılıç ağzı bulunan bir sırık şeklindeki silah.</string>
     <string name="Glaive_Name">Glaive</string>
     <string name="GnollArmor_ACSpecial">HÜKMET</string>
     <string name="GnollArmor_Info">Sırtlanadam teğmenlerinin takımlarından giyenler, kraliyetin sadık hizmetkarları olarak, son derece saldırgan çeteleri dahi sakinleştirebilir.</string>
@@ -2819,6 +2820,9 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
 
 
 
