@@ -1402,6 +1402,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="NecromancerRobe_PetLimitReached">Nécromancie : limite d\'invocation atteinte (Max actuel: %d)! </string>
     <string name="Necromancer_ACSpecial">NECROMANCIE</string>
     <string name="Necromancy_BecameALich">You êtes désormais une Liche ! Vos pouvoirs grandissent et vous pouvez récolter deux fois plus d\'âmes ! Mais vous avez perdu %1$d points de force.</string>
+    <string name="Necromancy_Death">Vous avez épuisé toute votre force vitale en pratiquant la nécromancie.</string>
     <string name="Necromancy_NotEnoughSouls">Vous n\'avez pas assez d\'âmes pour jeter un sort \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_ReincarnationName">Réincarnation</string>
     <string name="Necromancy_ReincarnationTriggered">Vos pouvoirs défient la mort ! Mais vous avez perdu toutes les âmes collectées et vos possessions. </string>
@@ -2933,6 +2934,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

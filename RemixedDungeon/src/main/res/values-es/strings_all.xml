@@ -702,6 +702,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="FireArrow_Info">Parece una flecha normal, pero su punta emite una cálida luz roja.</string>
     <string name="FireArrow_Name">flecha ígnea</string>
     <string name="FireElemental_Desc">Los elementales de fuego son la consecuencia de invocar entidades mayores. Su naturaleza es demasiado caótica para ser controlada incluso por el demonólogo más poderoso.</string>
+    <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">elemental de fuego</string>
     <string name="FireElemental_Name_Objective">elemental de fuego</string>
     <string name="Fire_Info">Hay un violento incendio aquí.</string>
@@ -783,6 +784,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="GoldenStatue_Desc">Es realmente difícil creer que, esta magnífica estatua no es sólo un adorno, es una criatura maliciosa esperando por un aventurero desprevenido. Al verla por primera vez podrías haber jurado que la _%s_ era una parte la mano.</string>
     <string name="GoldenStatue_Name">estatua dorada</string>
     <string name="GoldenStatue_Name_Objective">estatua dorada</string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="GoldenSword_Info">Usualmente un arma hecha de metal blando como el oro, es considerado más como una decoración. A pesar de eso, la hoja de la espada parece ser capaz de cortar bastante bien.</string>
     <string name="GoldenSword_Name">espada dorada</string>
     <string name="Golem_Defense">bloqueado</string>
@@ -2797,6 +2799,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
