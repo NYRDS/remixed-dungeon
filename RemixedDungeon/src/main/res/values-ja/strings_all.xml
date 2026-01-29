@@ -815,6 +815,7 @@
     <string name="Golem_Name">ゴーレム</string>
     <string name="Golem_Name_Objective">ゴーレム</string>
     <string name="Goo_Desc">グゥについてはほとんど知られていない。生き物ですらなく、なぜか自由意志を得た下水道内の物質の集合体である可能性が高い。いずれにせよ、闇の魔法が働いているのは明らかだ。</string>
+    <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">グゥは自らを奮い立たせている！</string>
     <string name="Goo_Info2">グプン...グプン...</string>
     <string name="Goo_Info3">グプン-グプン！</string>
@@ -2884,6 +2885,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

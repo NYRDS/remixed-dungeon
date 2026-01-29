@@ -766,6 +766,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="GnollArmor_NotGnoll">Solo los gnolls pueden usar armadura gnoll!</string>
     <string name="GnollCostume_Info">Un increíble traje cálido y esponjoso. Quien lleve este traje se verá como... alguien disfrazado de gnoll. Pero los gnoll no caerán en eso, aun te atacaran.</string>
     <string name="GnollCostume_Name">Disfraz Gnoll</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">Esta hacha arrojadiza tradicional, creada por Gnoll artesanos, cada clan tiene su propio diseño único. Este Tomahawk es un poco mas ligero que las contrapartes hechas por humanos. </string>
     <string name="GnollTamahawk_Name">tomahawk gnoll</string>
     <string name="Gnoll_BecomeGuardianDesc">Conviértete en guardián</string>
@@ -2795,6 +2796,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
