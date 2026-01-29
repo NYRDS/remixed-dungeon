@@ -819,6 +819,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Heal_Info">Un hechizo bastante útil en las mazmorras, ¿verdad?</string>
     <string name="Heal_Name">Curar</string>
     <string name="HealerNPC_Desc">Un hombre viejo, se ve como alguien que hace varitas.</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">¡Tratamiento gratis para los aventureros!</string>
     <string name="HealerNPC_Message2">¡Vuelve cuando te sientas enfermo o hambriento!</string>
     <string name="HealerNPC_Message3">Me pregunto por qué la iglesia nos prohíbe usar sombreros... hace mucho frío aquí afuera.</string>
@@ -2796,6 +2797,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
