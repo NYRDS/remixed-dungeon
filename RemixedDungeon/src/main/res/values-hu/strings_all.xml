@@ -1993,6 +1993,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Wand_Wood_Types_7">mahagóni</string>
     <string name="Wand_Wood_Types_8">bambusz</string>
     <string name="Wand_Wood_Types_9">bíborfa</string>
+    <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">Csak néhány lény képes kibírni zúzóerejét ennek a pokoli tömegű ólomnak és acélnak, de csak a legerősebb kalandorok képesek hatékonyan használni.</string>
     <string name="WarHammer_Name">Csatakalapács</string>
     <string name="Warlock_Desc">A törpök érdeklődése szépen lassan a mérnöki tudományokról a misztikus művészetek felé tolódott el, emiatt a városban a boszorkánymesterek egyre nagyob hatalmat tudtak gyakorolni. Kezdetben elementális varázslatokat használtak, de hamar áttértek a démonológiára és a szellemidézésre.</string>
@@ -2507,6 +2508,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
