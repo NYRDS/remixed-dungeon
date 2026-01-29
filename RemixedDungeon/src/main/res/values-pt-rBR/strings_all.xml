@@ -2301,6 +2301,7 @@ remix.31.1\n
     <string name="WndLibrary_Items_Btn">Itens</string>
     <string name="WndLibrary_Levels_Btn">Calabouço</string>
     <string name="WndLibrary_Mobs_Btn">Monstros</string>
+    <string name="WndLocalModInstall_pick">Escolher diretório do mod</string>
     <string name="WndModInstall_InstallingMod">Instalando o mod</string>
     <string name="WndModInstall_PleaseUpdate">Atualize o Remixed Dungeon antes de instalar este mod</string>
     <string name="WndModInstall_Version">versão</string>
@@ -2744,6 +2745,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -1115,6 +1115,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="LevitationBuff_Info">Der Körper schwebt über dem Boden und vermeidet Fallen und andere irdische Gefahren.</string>
     <string name="LevitationBuff_Name">Schwebend</string>
     <string name="LibrarianNPC_Desc">Eine sehr schüchterne Person, die einen peinlich aussehenden Pullover und eine sehr dicke Brille trägt.</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">H-hallo. Willkommen in der Bücherei. Hier kannst du Informationen über alles, was im Dungeon gefunden werden kann... tatsächlich können wir nur Wissen bereitstellen, das von Abenteurern entdeckt wurde. Es... es ist so hindernd. Jedes Mal, dass du uns besuchst können neue Dinge drinstehen.</string>
     <string name="LibrarianNPC_Message_Not_Ready">Es... Es tut mir leid, d-die Bücherei h-hat momentan n-nicht... geöffnet.</string>
     <string name="LibrarianNPC_Name">Bilbliothekar</string>
@@ -2688,6 +2689,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
