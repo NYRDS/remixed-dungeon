@@ -2319,6 +2319,7 @@
     <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">一種基礎的木制弩，看起來是設計用來發射弓箭的。</string>
     <string name="WoodenCrossbow_Name">木制弩</string>
+    <string name="WoodenShield_desc">粗糙製作的木製盾牌是最簡單的可用盾牌。它是圓形的，可以偶爾抵擋一些傷害。</string>
     <string name="WoodenShield_name">木制盾牌</string>
     <string name="Worm_Desc">沒人知道這巨大的蟲子是什麼。從地下鉆出，身上覆蓋著腐肉和爛泥。它巨大的下顎告訴了你它鉆出地面的方法。</string>
     <string name="Worm_Gender">masculine</string>
@@ -2583,6 +2584,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
