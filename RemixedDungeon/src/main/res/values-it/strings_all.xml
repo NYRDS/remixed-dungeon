@@ -1857,6 +1857,7 @@ Potrebbe bruciare?</string>
     <string name="Weightstone_WndChoice">Come vorresti bilanciare il/la tuo/tua %s?</string>
     <string name="Weightstone_WndSpeed">Per la velocità</string>
     <string name="Welcome_Ok">Vabbene!</string>
+    <string name="Welcome_Text_31_0">\n    remix.31.0\n\n    - Gioco:\n\n    -- Modalità isometrica opzionale!\n\n    - Modding:\n\n    -- Oggetti livello modificabili\n\n    - Bug risolti\n\n    </string>
     <string name="Welcome_Text_31_1">
     remix.31.1\n
     - Gioco:\n
@@ -2282,6 +2283,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
