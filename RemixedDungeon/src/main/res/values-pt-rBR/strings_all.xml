@@ -2452,7 +2452,7 @@ remix.31.1\n
     <string name="WoodenBow_Name">arco de madeira</string>
     <string name="WoodenCrossbow_Info">Uma besta de madeira básica, parece que foi desenhada para atirar flechas.</string>
     <string name="WoodenCrossbow_Name">Besta de madeira</string>
-    <string name="WoodenShield_desc">Um escudo de madeira grosseiramente feito é o escudo mais simples disponível. É redondo e pode bloquear alguns danos de tempos em tempos.</string>
+    <string name="WoodenShield_desc">Um escudo de madeira grosseiramente feito é o escudo mais simples disponível. É redondo e pode bloquear algum dano de vez em quando.</string>
     <string name="WoodenShield_name">Escudo de Madeira</string>
     <string name="Worm_Desc">Não há maneira de saber o quão grande é esta minhoca. Parcialmente emergindo deste andar, o corpo daquela criatura está coberto em pedaços de pele podre e lodo. Mandíbulas gigantes te dá uma clara ideia de como este monstro faz o seu caminho através da superfície.</string>
     <string name="Worm_Name">minhoca</string>
@@ -2746,6 +2746,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
