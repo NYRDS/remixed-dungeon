@@ -1302,6 +1302,7 @@ Parede
     <string name="NecromancerArmor_Name">Armadura de Osso</string>
     <string name="NecromancerArmor_NotNecromancer">Apenas necromantes podem usar essa armadura!</string>
     <string name="NecromancerNPC_Desc">Este homem de meia idade parece estar meio irritado e animado ao mesmo tempo. Ele verte uma armadura composta feita de fragmentos de ossos.</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">Ah! Que visão rara! Um companheiro aventureiro que não está morto. Excepcional! Oh ... Eu peço desculpas, às vezes eu fico muito animado. Como pode ver, eu sou um necromante. Apesar de estudar os mortos e a morte ser minha maneira de ganhar a vida, ver a mesma coisa várias e várias vezes, é extremamente chato. Entretanto, é exatamente por isso que estou aqui. De acordo com meus cálculos em apenas um par de semanas, em algum lugar neste calabouço, algo espetacular vai acontecer. A _Necropolis_, uma antiga cidade dos mortos, vai abrir as suas portas. E... eu não posso falar muito, já perdi muito tempo. Preciso me preparar para, volte mais tarde.</string>
     <string name="NecromancerNPC_Intro2">Ah! Um companheiro aventureiro que não está morto. Excepcional! Oh ... Me desculpe. Como pode ver, eu sou um necromante. Apesar de estudar os mortos e a morte ser minha maneira de ganhar a vida, ver a mesma coisa várias e várias vezes, é extremamente chato. Entretanto, é exatamente por isso que estou aqui. A _Necropolis_, uma antiga cidade dos mortos, vai abrir as suas portas. E... falo com você depois, pegue esta chave e vá na frente, quero dizer, você gosta de aventuras, não é? Eu vou depois de você, tenho que me preparar antes.</string>
     <string name="NecromancerNPC_Message1">tão pouco tempo, tão pouco tempo...</string>
@@ -2746,6 +2747,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

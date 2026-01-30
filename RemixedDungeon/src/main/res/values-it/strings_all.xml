@@ -622,6 +622,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="GoldenKey_Info">Le tacche su questa chiave dorata sono piccole ed intricate. Forse può aprire la serratura di qualche scrigno?</string>
     <string name="GoldenKey_Name">chiave d\'oro</string>
     <string name="GoldenStatue_Desc">È davvero difficile crederci, questa magnifica statua non è solo un ornamento, ma una maligna creatura che attende avventurieri sprovveduti. A prima vista avresti potuto giurare che  il suo _%s_ fosse solo una parte del suo braccio. </string>
+    <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">statua d\'oro</string>
     <string name="GoldenStatue_Name_Objective">statua d\'oro </string>
     <string name="GoldenSword_Info">Le armi forgiate con un metallo cosí morbido come l\'oro vengono considerate solitamente nient\'altro che decorazioni. Nonostante ció, questa lama sembra essere in grado di tagliare bene.</string>
@@ -2284,6 +2285,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

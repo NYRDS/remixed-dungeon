@@ -235,6 +235,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BlackSkullOfMastery_Title">Du könntest den Zauberspruch kaputt machen. Oder du könntest die magische Formel so verändern, dass du den Spruch und das Artefakt in dich aufnimmst und dich in einen Lich verwandelst.</string>
     <string name="BlackSkull_Activated">Der schwarze Schädel ist erwacht!</string>
     <string name="BlackSkull_Deactivated">Der schwarze Schädel ruht wieder...</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Ein kleiner Obsidianschädel. Es war eine Quelle der Nekropolis-Energie, aber nach der Niederlage des Lichs scheint es all seine Kräfte verloren zu haben. Aber als du es hältst, fährt dir ein fremder Gedanke durch den Kopf: \&quot;Es Hungert\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">Der Schädel pulsiert kraftvoll, du kannst sie aus den leeren Augen des Schädels fließen sehen. Und wenn du es in deiner Hand hältst, kannst du eine schreckliche Stimme hören: \&quot;Die Todesmärsche\&quot;</string>
     <string name="BlackSkull_Name">Schwarzer Schädel</string>
@@ -2691,6 +2692,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
