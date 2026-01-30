@@ -1857,6 +1857,7 @@ otro lugar del nivel.</string>
     <string name="SkeletonKey_Name">llave esqueleto</string>
     <string name="Skeleton_Defense">bloqueado</string>
     <string name="Skeleton_Desc">Los esqueletos están compuestos de huesos de los cadáveres de desafortunados aventureros y habitantes de la mazmorra, y viven gracias a las emanaciones de magia maligna de las profundidades. Cuando reciben suficiente daño se desintegran en una explosión de huesos. </string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">Una explosión de huesos te ha matado...</string>
     <string name="Skeleton_Name">esqueleto</string>
     <string name="Skeleton_Name_Objective">esqueleto</string>
@@ -2799,6 +2800,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

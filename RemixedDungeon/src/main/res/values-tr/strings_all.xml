@@ -1886,6 +1886,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="Sorrowmoss_Name">Keder Yosunu</string>
     <string name="SoulShard_Info">Ruhlar Kavanozu\'nun kalıntılarından alınmış bir parça. Gizemli bir güçle parıldıyor, belki böyle bir şeyle ilgilenebilecek birileri vardır.</string>
     <string name="SoulShard_Name">ruh parçacığı</string>
+    <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">Ucu sivriltilmiş demirle kaplı ince bir tahta çubuk.</string>
     <string name="Spear_Name">Mızrak</string>
     <string name="SpeedBuff_Info">Canlılık ve enerji vücuttan yayılır ve hareketler normalden daha hızlı hissedilir.</string>
@@ -2822,6 +2823,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
