@@ -300,6 +300,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Caves_TileHighGrass">Fluoreszkáló gomba.</string>
     <string name="Caves_TileWater">Fagyasztóan hideg víz.</string>
     <string name="Challenges_Descriptions_5">Az első dolog, ami a gonoszhoz járult, egy sűrű és áthatolhatatlan köd volt, amely szinte lehetetlenné teszi az alvilág végtelen folyosóinak világos tájékozódását.</string>
+    <string name="Challenges_Descriptions_9">A Pest Orvos legújabb 'gyógyírja' kitörölte a térbeli emlékezeted. Nem emlékszel meg semmire azon kívül, ami közvetlen látótégeden kívül van.</string>
     <string name="Challenges_Names_0">Diétázom</string>
     <string name="Challenges_Names_1">A Hit az én páncélom</string>
     <string name="Challenges_Names_2">Gyógyszerfóbia</string>
@@ -1526,6 +1527,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="RunicSkull_Desc">Valahogyan mesterségesen alkották meg, de ez a koponya mégis olyan mintha valódi lenne. Valamint halvány ragyogást is látsz körülötte.</string>
     <string name="RunicSkull_Name">rúnás koponya</string>
     <string name="RunicSkull_Name_Objective">rúnás koponya</string>
+    <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">Első ránézésre ez az elöregedett, rozsdafoltokkal borított kard teljesen haszontalannak tűnik. De valamilyen ősrégi erő lakozik benne. Ez az erő képes bármilyen lényt akarat nélküli szolgává változtatni. Már csak meg kéne találnod a módját, hogy felébreszd...</string>
     <string name="SacrificialSword_Name">Áldozó kard</string>
     <string name="SantaHat_Info">Semmi nem hoz annyira a \&quot;Kazamatázás\&quot; lázába, mint a Mikulás piros selyemsapkája.</string>
@@ -2511,6 +2513,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

@@ -780,6 +780,7 @@
     <string name="Hedgehog_Info4">拿上這個派吧</string>
     <string name="Hedgehog_Name">刺猬</string>
     <string name="HeroClass_Elf">精靈</string>
+    <string name="HeroClass_ElfPerks_0">精靈以15點生命值和9點力量開始遊戲。</string>
     <string name="HeroClass_ElfPerks_1">精靈免疫纏繞狀態。</string>
     <string name="HeroClass_ElfPerks_2">精靈開局時擁有一把升級過的弓和一些箭加上一把匕首。 </string>
     <string name="HeroClass_ElfPerks_3">精靈十分敏捷，並且十分精通弓箭。</string>
@@ -2590,6 +2591,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

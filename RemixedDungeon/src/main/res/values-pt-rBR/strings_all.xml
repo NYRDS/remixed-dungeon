@@ -1637,6 +1637,7 @@ Parede
     <string name="RottingFist_Name_Objective">punho apodrecendo</string>
     <string name="RoyalShield_desc">Um escudo cheio de metal. Sim, é pesado, mas somente ele pode fornecer a melhor proteção.</string>
     <string name="RoyalShield_name">Escudo Real</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Apenas os melhores arqueiros conseguem usar este arco de rubi. Quase todas as flechas atravessam o inimigos, deixando um buraco em seu corpo, mas uma extrema força é necessário para puxar o arco.</string>
     <string name="RubyBow_Name">arco de rubi</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -2748,6 +2749,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
