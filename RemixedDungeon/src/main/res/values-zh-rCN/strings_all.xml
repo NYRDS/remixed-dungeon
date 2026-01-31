@@ -1525,6 +1525,7 @@
     <string name="PumpkinPie_Name">南瓜派</string>
     <string name="Pumpkin_Info">过去南瓜族是一个繁荣和自豪的名族。但是当人类入侵后一切都毁了。被斩断的南瓜头成了幸存的南瓜族人的心理阴影。</string>
     <string name="Pumpkin_Name">南瓜</string>
+    <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">木制短棍，两头镶铁。</string>
     <string name="Quarterstaff_Name">铁头棍</string>
     <string name="QuickSlot_SelectSlot">更改快捷使用</string>
@@ -2787,6 +2788,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

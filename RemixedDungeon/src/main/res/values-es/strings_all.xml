@@ -1783,6 +1783,7 @@ otro lugar del nivel.</string>
     <string name="SeedPouch_Info">Esta pequeña bolsa de terciopelo te permite guardar dentro cualquier cantidad de semillas. Muy útil.</string>
     <string name="SeedPouch_Name">bolsa de semillas</string>
     <string name="Senior_Desc">Estos monjes son fanáticos, que se dedicaron a proteger los secretos de su ciudad de cualquier extranjero. No usan armadura o armas, confiando plenamente en el arte del combate mano a mano.</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">alto monje</string>
     <string name="Senior_Name_Objective">alto monje</string>
     <string name="ServantNPC_Desc">Un servidor de la posada muy ocupado.</string>
@@ -2802,6 +2803,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
