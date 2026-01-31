@@ -112,6 +112,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -2339,6 +2340,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public WndBag.Mode buyMode(Char chr) {
         return (WndBag.Mode) getScript().run("_buyMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.ALL);
+    }
+
+    public void detachItemList(List<Item> itemsToRemove) {
+        for (Item itemToRemove : itemsToRemove) {
+            itemToRemove.detachAll(getBelongings().backpack);
+        }
     }
 
     // Check if this attack is a critical hit based on the difference between attack and defense rolls

@@ -101,6 +101,11 @@ public class SystemText extends SystemTextBase {
             width = glyphLayout.width;
             height = glyphLayout.height;
         }
+
+        // Respect minimum height
+        if (height < minHeight) {
+            setHeight(minHeight);
+        }
     }
     
     @Override

@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.quest.DwarfToken;
@@ -47,13 +48,13 @@ public class WndImp extends Window {
 	}
 	
 	private void takeReward( Imp imp, DwarfToken tokens, Item reward ) {
-		
+		Char hero = Dungeon.hero;
 		hide();
 		
-		tokens.detachAll( Dungeon.hero.getBelongings().backpack );
+		tokens.detachAll( hero.getBelongings().backpack );
 
 		reward.identify();
-		Dungeon.hero.collectAnimated(reward);
+		hero.collectAnimated(reward);
 		imp.flee();
 		
 		Imp.Quest.complete();

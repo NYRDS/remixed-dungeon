@@ -351,6 +351,7 @@ public class SystemText extends SystemTextBase {
         return contourPaint.measureText(symbol) / oversample;
     }
 
+    @Override
     public void measure() {
         if (Math.abs(scale.x) < 0.001) {
             return;
@@ -362,6 +363,11 @@ public class SystemText extends SystemTextBase {
                     / oversample;
             createText();
             dirty=false;
+        }
+
+        // Respect minimum height
+        if (height < minHeight) {
+            setHeight(minHeight);
         }
     }
 

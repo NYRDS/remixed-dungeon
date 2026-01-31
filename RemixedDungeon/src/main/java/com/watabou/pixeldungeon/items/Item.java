@@ -240,7 +240,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
                 CharUtils.tryPickUp(chr, this);
                 break;
             case AC_ALCHEMY:
-                GameScene.show(new WndItemAlchemy(this));
+                GameScene.show(new WndItemAlchemy(this, chr));
                 break;
         }
     }

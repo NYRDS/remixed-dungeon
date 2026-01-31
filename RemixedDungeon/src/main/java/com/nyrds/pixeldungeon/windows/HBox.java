@@ -2,12 +2,17 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.watabou.noosa.Gizmo;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Created by mike on 01.05.2018.
  * This file is part of Remixed Pixel Dungeon.
  */
 public class HBox extends BasicBox {
 
+    @Getter
+    @Setter
     private float maxWidth;
 
     public enum Align {
@@ -24,14 +29,6 @@ public class HBox extends BasicBox {
 
     public void wrapContent() {
         maxWidth = childsWidth();
-    }
-
-    public void setMaxWidth(float maxWidth) {
-        this.maxWidth = maxWidth;
-    }
-
-    public float getMaxWidth() {
-        return maxWidth;
     }
 
     public void setAlign(Align align) {

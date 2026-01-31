@@ -143,8 +143,14 @@ public class BitmapText extends Text {
 		}
 	}
 
+	@Override
 	protected void measure() {
 		updateVertices();
+
+		// Respect minimum height
+		if (height < minHeight) {
+			setHeight(minHeight);
+		}
 	}
 	
 	public float baseLine() {

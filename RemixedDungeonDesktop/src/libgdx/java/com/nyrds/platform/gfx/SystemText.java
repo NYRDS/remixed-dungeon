@@ -236,6 +236,11 @@ public class SystemText extends SystemTextBase {
             setHeight(totalHeight);
             dirty = false;
         }
+
+        // Respect minimum height
+        if (height < minHeight) {
+            setHeight(minHeight);
+        }
     }
 
     @Override

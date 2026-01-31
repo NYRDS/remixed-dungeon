@@ -3,25 +3,27 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.platform.game.Game;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.prefs.Preferences;
 
 /**
  * Window for displaying and executing alchemy recipes that include a specific item
@@ -43,9 +45,12 @@ public class WndItemAlchemy extends Window {
 
     // Recipe description text
     private final Text recipeDescription;
+    final private Char hero;
 
-    public WndItemAlchemy(Item item) {
+    public WndItemAlchemy(Item item, @NotNull Char chr) {
         super();
+
+        hero = chr;
 
         // Calculate almost fullscreen dimensions
         float screenWidth = RemixedDungeon.landscape() ? Window.STD_WIDTH_L : Window.STD_WIDTH_P;
@@ -69,14 +74,14 @@ public class WndItemAlchemy extends Window {
 
         // Calculate player's inventory
         Map<String, Integer> playerInventory = new HashMap<>();
-        for (Item inventoryItem : Dungeon.hero.getBelongings().backpack.items) {
+        for (Item inventoryItem : hero.getBelongings().backpack.items) {
             String itemName = inventoryItem.getEntityKind(); // Use getEntityKind() to get the class name
             playerInventory.put(itemName, playerInventory.getOrDefault(itemName, 0) + inventoryItem.quantity());
         }
 
         // Get recipes that contain this specific item
         List<Entry<List<String>, List<String>>> recipesWithItem =
-            AlchemyRecipes.getRecipesContainingItem(item.getEntityKind());
+                AlchemyRecipes.getRecipesContainingItem(item.getEntityKind());
 
         // Filter to only show recipes for which the player has all required ingredients
         List<Entry<List<String>, List<String>>> availableRecipes = new ArrayList<>();
@@ -93,7 +98,7 @@ public class WndItemAlchemy extends Window {
 
         if (availableRecipes.isEmpty()) {
             Text noRecipes = PixelScene.createMultiline("No recipes available with this item and your current inventory.", 8);
-            noRecipes.maxWidth((int)(windowWidth - 4 * MARGIN));
+            noRecipes.maxWidth((int) (windowWidth - 4 * MARGIN));
             mainLayout.add(noRecipes);
         } else {
             for (var recipeEntry : availableRecipes) {
@@ -108,18 +113,24 @@ public class WndItemAlchemy extends Window {
             }
 
             // Add scroll pane for recipes - limit height for better layout
-            float scrollHeight = Math.min(windowHeight * 0.4f, 120); // Limit recipe list height for better layout
+            float scrollHeight =  windowHeight - 40;
 
             ScrollPane recipeScrollPane = createScrollPane(recipesContainer, availableRecipes);
-            recipeScrollPane.setRect(0, 0, windowWidth - 4 * MARGIN, scrollHeight);
+            recipeScrollPane.setRect(0, 0, windowWidth, scrollHeight);
             recipeScrollPane.measure();
             mainLayout.add(recipeScrollPane);
         }
 
+
+        VBox controlsBox = new VBox();
+
         // Recipe description area
-        recipeDescription = PixelScene.createMultiline("Select recipe", 6); // Smaller font for tighter fit
-        recipeDescription.maxWidth((int)(windowWidth - 4 * MARGIN));
-        mainLayout.add(recipeDescription);
+        recipeDescription = PixelScene.createMultiline("Select recipe", GuiProperties.regularFontSize());
+        recipeDescription.maxWidth((int) (windowWidth - 4 * MARGIN));
+        recipeDescription.minHeight(60);
+        controlsBox.add(recipeDescription);
+
+        controlsBox.layout();
 
         // Execute and Close buttons container
         HBox buttonsContainer = new HBox(windowWidth - 2 * MARGIN);
@@ -133,8 +144,9 @@ public class WndItemAlchemy extends Window {
                 executeSelectedRecipe();
             }
         };
-        executeButton.setSize(Math.min(80, windowWidth/4), 16); // Smaller button height for tighter fit
-        executeButton.enable(selectedRecipe != null); // Initially disabled until a recipe is selected
+        executeButton.autoSize();
+
+        executeButton.enable(selectedRecipe != null);
         buttonsContainer.add(executeButton);
 
         // Close button
@@ -144,33 +156,17 @@ public class WndItemAlchemy extends Window {
                 hide();
             }
         };
-        closeButton.setSize(Math.min(60, windowWidth/5), 16); // Smaller button height for tighter fit
+
+        closeButton.autoSize();
         buttonsContainer.add(closeButton);
 
         // Add the buttons container to the main layout
-        mainLayout.add(buttonsContainer);
+        controlsBox.add(buttonsContainer);
 
-        // Update the layout
-        mainLayout.layout();
-
-        // Calculate remaining space to fill and add a flexible spacer
-        float totalHeight = mainLayout.bottom();
-        float buttonsY = windowHeight - MARGIN - buttonsContainer.height();
-        float availableSpace = buttonsY - totalHeight;
-
-        if (availableSpace > 0) {
-            // Add empty space at the end to push buttons to the bottom
-            Component spacer = new Component() {
-                @Override
-                public void layout() {
-                    height = availableSpace;
-                }
-            };
-            mainLayout.addBefore(spacer, buttonsContainer);
-        }
+        mainLayout.add(controlsBox);
 
         mainLayout.layout();
-        resize((int)windowWidth, (int)windowHeight);
+        resize((int) windowWidth, (int) windowHeight);
     }
 
     private RecipeListItem getRecipeListItem(Entry<List<String>, List<String>> recipeEntry, float windowWidth) {
@@ -233,7 +229,7 @@ public class WndItemAlchemy extends Window {
                 }
             }
         };
-        recipeScrollPane.scrollTo(0,0);
+        recipeScrollPane.scrollTo(0, 0);
         return recipeScrollPane;
     }
 
@@ -296,12 +292,12 @@ public class WndItemAlchemy extends Window {
                 Item outputItem = ItemFactory.itemByName(output);
                 // Determine the entity type to handle items, mobs, and carcasses differently
                 AlchemyRecipes.EntityType entityType =
-                    AlchemyRecipes.determineEntityType(output);
+                        AlchemyRecipes.determineEntityType(output);
 
                 String displayName = output; // Default to the raw name
 
                 if (entityType == AlchemyRecipes.EntityType.ITEM ||
-                    entityType == AlchemyRecipes.EntityType.CARCASS) {
+                        entityType == AlchemyRecipes.EntityType.CARCASS) {
                     // Handle items and carcasses
                     displayName = outputItem.name();
                 } else if (entityType == AlchemyRecipes.EntityType.MOB) {
@@ -332,6 +328,9 @@ public class WndItemAlchemy extends Window {
     }
 
     private void executeSelectedRecipe() {
+        Level level = hero.level();
+        int pos = hero.getPos();
+
         if (selectedRecipe != null) {
             // Remove the required ingredients from the player's inventory
             List<String> inputs = selectedRecipe.getKey();
@@ -351,7 +350,7 @@ public class WndItemAlchemy extends Window {
                 List<Item> itemsToRemove = new ArrayList<>();
                 int removedCount = 0;
 
-                for (Item inventoryItem : Dungeon.hero.getBelongings().backpack.items) {
+                for (Item inventoryItem : hero.getBelongings()) {
                     if (inventoryItem.getEntityKind().equals(ingredientName) && removedCount < requiredQty) {
                         int qtyToRemove = Math.min(inventoryItem.quantity(), requiredQty - removedCount);
 
@@ -365,10 +364,7 @@ public class WndItemAlchemy extends Window {
                     }
                 }
 
-                // Actually remove the items
-                for (Item itemToRemove : itemsToRemove) {
-                    itemToRemove.detachAll(Dungeon.hero.getBelongings().backpack);
-                }
+                hero.detachItemList(itemsToRemove);
             }
 
             // Process the output items and mobs
@@ -376,35 +372,28 @@ public class WndItemAlchemy extends Window {
             for (String outputName : outputs) {
                 // Determine the entity type to handle items, mobs, and carcasses differently
                 AlchemyRecipes.EntityType entityType = AlchemyRecipes.determineEntityType(outputName);
+                try {
+                    if (entityType == AlchemyRecipes.EntityType.ITEM ||
+                            entityType == AlchemyRecipes.EntityType.CARCASS) {
+                        // Handle items and carcasses
+                        Item outputItem = ItemFactory.itemByName(outputName);
+                        level.animatedDrop(outputItem, pos);
+                    } else if (entityType == AlchemyRecipes.EntityType.MOB) {
+                        // Handle mobs - spawn them at the hero's position
 
-                if (entityType == AlchemyRecipes.EntityType.ITEM ||
-                    entityType == AlchemyRecipes.EntityType.CARCASS) {
-                    // Handle items and carcasses
-                    Item outputItem = ItemFactory.itemByName(outputName);
-                    if (outputItem != null) {
-                        Dungeon.level.drop(outputItem, Dungeon.hero.getPos()).sprite.drop();
-                    }
-                } else if (entityType == AlchemyRecipes.EntityType.MOB) {
-                    // Handle mobs - spawn them at the hero's position
-                    try {
-                        com.watabou.pixeldungeon.actors.mobs.Mob mob = MobFactory.mobByName(outputName);
-                        if (mob != null) {
-                            // Place the mob at the hero's position
-                            mob.pos = Dungeon.hero.getPos();
-
-                            // Add the mob to the level
-                            Dungeon.level.mobs.add(mob);
-
-                            // Refresh the level to show the new mob
-                            mob.getSprite().place(mob.getPos());
+                        Mob mob = MobFactory.mobByName(outputName);
+                        int mobPos = level.getEmptyCellNextTo(pos);
+                        if (level.cellValid(mobPos)) {
+                            level.spawnMob(mob);
+                        } else {
+                            level.animatedDrop(mob.carcass(), mobPos);
                         }
-                    } catch (Exception e) {
-                        // If there's an error spawning the mob, log it but continue
-                        com.nyrds.platform.EventCollector.logException(e);
                     }
+                } catch (Exception e) {
+                    // If there's an error spawning the mob, log it but continue
+                    EventCollector.logException(e);
                 }
             }
-
             // Close the window after executing the recipe
             hide();
         }

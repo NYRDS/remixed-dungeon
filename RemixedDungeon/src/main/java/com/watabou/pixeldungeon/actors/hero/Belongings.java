@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -392,6 +393,11 @@ public class Belongings implements Iterable<Item>, Bundlable {
         return ret;
     }
 
+    public void removeItemList(List<Item> itemList) {
+        for(Item item:itemList) {
+            removeItem(item);
+        }
+    }
     public boolean removeItem(Item itemToRemove) {
         if (itemToRemove instanceof EquipableItem && isEquipped(itemToRemove)) {
             var eItem = (EquipableItem) itemToRemove;
