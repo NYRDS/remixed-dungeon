@@ -123,4 +123,8 @@ public abstract class Text extends Visual implements IPlaceable {
     public IPlaceable shadowOf() {
         return baseText;
     }
+
+    public static String color(String txt, String color) {
+        return Utils.format("[%s:%s]", color, txt);
+    }
 }

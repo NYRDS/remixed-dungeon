@@ -7,7 +7,6 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
-import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
@@ -32,7 +31,6 @@ public class WndItemAlchemy extends Window {
 
     private static final int MARGIN = 2;
     private static final int SMALL_GAP = 1;
-    private static final int TITLE_COLOR = 0xFFFF44;
     private final VBox mainLayout;
 
     // Track selected recipe
@@ -67,8 +65,9 @@ public class WndItemAlchemy extends Window {
         add(mainLayout);
 
         // Title
-        Text title = PixelScene.createText("Alchemy recipes with " + item.name(), GuiProperties.titleFontSize());
-        title.hardlight(TITLE_COLOR);
+        Text title = PixelScene.createMultiline("Alchemy recipes with " + item.name(), GuiProperties.titleFontSize());
+        title.maxWidth((int) windowWidth);
+        title.hardlight(Window.TITLE_COLOR);
         title.setX(MARGIN);
         mainLayout.add(title);
 
@@ -113,7 +112,7 @@ public class WndItemAlchemy extends Window {
             }
 
             // Add scroll pane for recipes - limit height for better layout
-            float scrollHeight =  windowHeight - 40;
+            float scrollHeight =  windowHeight - 60;
 
             ScrollPane recipeScrollPane = createScrollPane(recipesContainer, availableRecipes);
             recipeScrollPane.setRect(0, 0, windowWidth, scrollHeight);
@@ -127,10 +126,8 @@ public class WndItemAlchemy extends Window {
         // Recipe description area
         recipeDescription = PixelScene.createMultiline("Select recipe", GuiProperties.regularFontSize());
         recipeDescription.maxWidth((int) (windowWidth - 4 * MARGIN));
-        recipeDescription.minHeight(60);
+        //recipeDescription.minHeight(60);
         controlsBox.add(recipeDescription);
-
-        controlsBox.layout();
 
         // Execute and Close buttons container
         HBox buttonsContainer = new HBox(windowWidth - 2 * MARGIN);
@@ -162,6 +159,9 @@ public class WndItemAlchemy extends Window {
 
         // Add the buttons container to the main layout
         controlsBox.add(buttonsContainer);
+        controlsBox.setMaxHeight(40);
+        controlsBox.setAlign(VBox.Align.Height);
+        controlsBox.layout();
 
         mainLayout.add(controlsBox);
 
@@ -171,6 +171,7 @@ public class WndItemAlchemy extends Window {
 
     private RecipeListItem getRecipeListItem(Entry<List<String>, List<String>> recipeEntry, float windowWidth) {
         RecipeListItem recipeItem = new RecipeListItem(recipeEntry.getKey(), recipeEntry.getValue());
+        recipeItem.setSelected(false);
 
         // Set the size for the recipe item
         recipeItem.setSize(windowWidth, recipeItem.height());
@@ -260,13 +261,18 @@ public class WndItemAlchemy extends Window {
                 first = false;
 
                 String input = entry.getKey();
+                Item inputItem = ItemFactory.itemByName(input);
+                input = input.toLowerCase();
                 int count = entry.getValue();
 
-                Item inputItem = ItemFactory.itemByName(input);
+                String color = "green";
+                if (input.contains("remains")) {
+                    color = "red";
+                }
+
+                description.append(Text.color(inputItem.name(), color));
                 if (count > 1) {
-                    description.append(inputItem.name()).append(" x").append(count);
-                } else {
-                    description.append(inputItem.name());
+                    description.append(" x").append(count);
                 }
             }
 
@@ -287,34 +293,35 @@ public class WndItemAlchemy extends Window {
                 first = false;
 
                 String output = entry.getKey();
+                String lower_output = output.toLowerCase();
                 int count = entry.getValue();
 
-                Item outputItem = ItemFactory.itemByName(output);
                 // Determine the entity type to handle items, mobs, and carcasses differently
                 AlchemyRecipes.EntityType entityType =
                         AlchemyRecipes.determineEntityType(output);
 
                 String displayName = output; // Default to the raw name
 
-                if (entityType == AlchemyRecipes.EntityType.ITEM ||
-                        entityType == AlchemyRecipes.EntityType.CARCASS) {
-                    // Handle items and carcasses
-                    displayName = outputItem.name();
-                } else if (entityType == AlchemyRecipes.EntityType.MOB) {
-                    // Handle mobs - try to get mob name
-                    try {
-                        Mob mob = MobFactory.mobByName(output);
-                        displayName = mob.name();
-                    } catch (Exception e) {
-                        // If we can't get the mob name, use the raw name
-                        displayName = output;
-                    }
+                String color = "green";
+                if (lower_output.contains("remains")) {
+                    color = "red";
                 }
 
+                if (entityType == AlchemyRecipes.EntityType.ITEM ||
+                        entityType == AlchemyRecipes.EntityType.CARCASS) {
+                    Item outputItem = ItemFactory.itemByName(output);
+                    // Handle items and carcasses
+                    displayName = outputItem.name();
+
+                } else if (entityType == AlchemyRecipes.EntityType.MOB) {
+                    Mob mob = MobFactory.mobByName(output);
+                    displayName = mob.name();
+                    color = "purple";
+                }
+
+                description.append(Text.color(displayName.toLowerCase(), color));
                 if (count > 1) {
-                    description.append(displayName).append(" x").append(count);
-                } else {
-                    description.append(displayName);
+                    description.append(" x").append(count);
                 }
             }
 
@@ -384,9 +391,11 @@ public class WndItemAlchemy extends Window {
                         Mob mob = MobFactory.mobByName(outputName);
                         int mobPos = level.getEmptyCellNextTo(pos);
                         if (level.cellValid(mobPos)) {
-                            level.spawnMob(mob);
+                            mob.setPos(mobPos);
+                            mob.makePet(hero);
+                            level.spawnMob(mob, 0, pos);
                         } else {
-                            level.animatedDrop(mob.carcass(), mobPos);
+                            level.animatedDrop(mob.carcass(), pos);
                         }
                     }
                 } catch (Exception e) {

@@ -73,10 +73,10 @@ class ItemButton extends ItemSlot {
         bg.setX(x);
         bg.setY(y);
 
-        // Position the alchemy indicator in the top-right corner
+        // Position the alchemy indicator in the bottom-left corner
         if (alchemyIndicator != null) {
-            alchemyIndicator.x = x + width - alchemyIndicator.width() - 1;
-            alchemyIndicator.y = y + 1;
+            alchemyIndicator.x = x + 1;
+            alchemyIndicator.y = y + height - alchemyIndicator.height() - 1;
         }
 
         super.layout();

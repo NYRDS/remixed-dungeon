@@ -6,6 +6,7 @@ import com.watabou.noosa.Gizmo;
 
 import org.jetbrains.annotations.NotNull;
 
+import lombok.Getter;
 import lombok.Setter;
 
 /**
@@ -21,6 +22,10 @@ public class VBox extends BasicBox {
 
     private Align align = Align.Top;
     private int gap = 0;
+
+    @Getter
+    @Setter
+    private float maxHeight = 0;
 
     private void alignTop() {
         float pos = top();
@@ -100,7 +105,7 @@ public class VBox extends BasicBox {
     private void alignHeight() {
         if(members.size() > 1) {
             gap = 0;
-            float totalGap = height() - childsHeight();
+            float totalGap = maxHeight - childsHeight();
             gap = (int) (totalGap / (members.size() - 1));
         }
         alignTop();
