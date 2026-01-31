@@ -3,6 +3,7 @@ package com.nyrds.platform.app;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.PUtil;
 
@@ -32,6 +33,7 @@ public class RemixedDungeonApp {
 
         // Check for web server parameter and start if requested
         int webServerPort = -1;
+        boolean windowed = false;
         for (String arg : args) {
             if (arg != null) {
                 if (arg.startsWith("--webserver=") || arg.startsWith("-webserver=")) {
@@ -43,6 +45,9 @@ public class RemixedDungeonApp {
                     }
                 } else if (arg.equals("--webserver") || arg.equals("-webserver")) {
                     webServerPort = 8080; // default port
+                }
+                if (arg.startsWith("--windowed")) {
+                    windowed = true;
                 }
             }
         }
@@ -57,7 +62,7 @@ public class RemixedDungeonApp {
                 System.out.println("Game will continue to run alongside the WebServer.");
             } catch (Exception e) {
                 System.err.println("Failed to start WebServer: " + e.getMessage());
-                e.printStackTrace();
+                EventCollector.logException(e);
             }
         }
 
@@ -88,7 +93,7 @@ public class RemixedDungeonApp {
                 System.setOut(new PrintStream(new FileOutputStream(logPath + "stdout.log")));
                 System.setErr(new PrintStream(new FileOutputStream(logPath + "stderr.log")));
             } catch (FileNotFoundException e) {
-                e.printStackTrace();
+                EventCollector.logException(e);
             }
         }
 
@@ -102,7 +107,7 @@ public class RemixedDungeonApp {
         cfg.setBackBufferConfig(8, 8, 8, 8, 16, 0, 0);
         cfg.setForegroundFPS(60);
 
-        if(BuildConfig.DEBUG) {
+        if(windowed) {
             cfg.setWindowedMode(800,480);
         } else {
             cfg.setFullscreenMode(Lwjgl3ApplicationConfiguration.getDisplayMode());

@@ -3,6 +3,8 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.platform.game.Game;
+import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
@@ -19,6 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.prefs.Preferences;
 
 /**
  * Window for displaying and executing alchemy recipes that include a specific item
@@ -45,8 +48,8 @@ public class WndItemAlchemy extends Window {
         super();
 
         // Calculate almost fullscreen dimensions
-        float screenWidth = PixelScene.uiCamera.width;
-        float screenHeight = PixelScene.uiCamera.height;
+        float screenWidth = RemixedDungeon.landscape() ? Window.STD_WIDTH_L : Window.STD_WIDTH_P;
+        float screenHeight = 120;
 
         // Leave some margin around the window
         float windowWidth = screenWidth - 10; // Reduced margin for tighter fit

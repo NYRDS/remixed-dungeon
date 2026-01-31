@@ -165,6 +165,14 @@
       "outputs": ["Skeleton"]
     },
     {
+      "input": ["Carcass of Snail", "Carcass of Snail"],
+      "outputs": ["Snail"]
+    },
+    {
+      "input": ["Carcass of Snail", "Carcass of Snail", "Carcass of Gnoll"],
+      "outputs": ["Shaman"]
+    },
+    {
       "input": ["Sungrass.Seed", "MysteryMeat", "DewVial", "CorpseDust"],
       "outputs": ["PotionOfHealing", "PotionOfStrength"]
     },
