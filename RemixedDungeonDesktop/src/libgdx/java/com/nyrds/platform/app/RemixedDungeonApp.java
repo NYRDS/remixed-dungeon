@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.nio.file.FileSystems;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -178,14 +179,17 @@ public class RemixedDungeonApp {
     }
 
     private static String getUserDataPath() {
-        // Check if SNAP_USER_DATA is available via user.home system property
-        String snapUserData = System.getProperty("user.home");
-        if (snapUserData != null && !snapUserData.isEmpty()) {
-            // Use a specific subdirectory for Remixed Dungeon data in user's home
-            return snapUserData + System.getProperty("file.separator") + ".local" + 
-                   System.getProperty("file.separator") + "share" + 
-                   System.getProperty("file.separator") + "remixed-dungeon" + 
-                   System.getProperty("file.separator");
+        if (BuildConfig.FLAVOR_market.equals("snap")) {
+            // Check if SNAP_USER_DATA is available via user.home system property
+            String snapUserData = System.getProperty("user.home");
+            if (snapUserData != null && !snapUserData.isEmpty()) {
+                // Use a specific subdirectory for Remixed Dungeon data in user's home
+                String separator = FileSystems.getDefault().getSeparator();
+                return snapUserData + separator + ".local" +
+                        separator + "share" +
+                        separator + "remixed-dungeon" +
+                        separator;
+            }
         }
 
         // Fallback to the original relative path behavior

@@ -173,6 +173,14 @@
       "outputs": ["Shaman"]
     },
     {
+      "input": ["Carcass of Gnoll", "Carcass of Gnoll", "WoodenShield"],
+      "outputs": ["Brute"]
+    },
+    {
+      "input": ["Carcass of Rat", "ClothArmor"],
+      "outputs": ["RatArmor"]
+    },
+    {
       "input": ["Sungrass.Seed", "MysteryMeat", "DewVial", "CorpseDust"],
       "outputs": ["PotionOfHealing", "PotionOfStrength"]
     },
