@@ -1270,6 +1270,7 @@
     <string name="Nightmare_Name_Objective">夢魘</string>
     <string name="No_Valid_Cell">沒有召喚的空間</string>
     <string name="OozeBuff_Info">腐蝕性黏液正在侵蝕血肉！</string>
+    <string name="OozeBuff_Name">腐蝕黏液</string>
     <string name="Ooze_Death">%s殺了您……</string>
     <string name="OverpricedRation_Info">這看起來就是一份普通的口糧，雖然小了一些</string>
     <string name="OverpricedRation_Message">這份食物吃起來還不錯。</string>
@@ -2591,6 +2592,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

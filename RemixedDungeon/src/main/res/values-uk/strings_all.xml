@@ -718,6 +718,7 @@
     <string name="GameScene_Water">Ти чуєш плескіт води поблизу.</string>
     <string name="GameScene_Welcome">Ласкаво просимо на %d рівні Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">З поверненням на %d рівень Remixed Dungeon!</string>
+    <string name="GasImmuneBuff_Name">Імунітет до газу</string>
     <string name="Ghost_Defense">ухилився</string>
     <string name="Ghost_Desc">Ти ледь можеш розгледіти привида. Він більше схожий на димку з сумним обличчям.</string>
     <string name="Ghost_Name">Сумний привид</string>
@@ -2640,6 +2641,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
