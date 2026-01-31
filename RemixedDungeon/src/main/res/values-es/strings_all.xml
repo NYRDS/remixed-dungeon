@@ -1534,6 +1534,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Quarterstaff_Name">vara</string>
     <string name="QuickSlot_SelectSlot">Selecciona la ranura rápida para esto</string>
     <string name="QuickSlot_SelectedItem">Selecciona un objeto para el acceso rápido</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">Carcaj de cuero válido para cualquier cantidad de flechas.</string>
     <string name="Quiver_Name">carcaj</string>
     <string name="RabbitEars_Info">Es una creencia muy conocida que los conejos son de la suerte, y su suerte puede obtenerse a través de alguna parte de su cuerpo. Pero bueno, las orejas no son particularmente de la suerte.</string>
@@ -2800,6 +2801,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

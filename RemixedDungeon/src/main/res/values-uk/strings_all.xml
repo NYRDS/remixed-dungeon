@@ -324,6 +324,7 @@
     <string name="Caves_TileGrass">Мох, що світиться</string>
     <string name="Caves_TileHighGrass">Люмінесцентні гриби</string>
     <string name="Caves_TileWater">Крижана вода.</string>
+    <string name="Challenges_Descriptions_9">Останній 'засіб' Чумного лікаря витер ваш просторовий зміст. Ви не можете згадати нічого за межами вашого безпосереднього огляду.</string>
     <string name="Challenges_Names_0">На дієті</string>
     <string name="Challenges_Names_1">Віра замінить мені обладунки</string>
     <string name="Challenges_Names_2">Ніяких ліків!</string>
@@ -1327,6 +1328,7 @@
     <string name="Piranha_Name_Objective">велику піранью</string>
     <string name="PirateSet_Info">Арр! відчуваєш в собі сили приєднатися до наших хлопців!? Чи ти просто ще один сухопутний щур? Сподіваюся що ні, адже ці штуковина лише для справжніх піратів, в сенсі... Арр!</string>
     <string name="PirateSet_Name">Піратський набір</string>
+    <string name="PlagueDoctorMaskHood_Info">Скована з ебонового дерева маска у формі черепа, порожнечі якої сяють неземним мерехтінням аметистових самоцвітів. Кожен вдих пронизує лабіринт трубок і фільтрів, несе аромат могутніх трав та спецій, що приховують гниль, яка до вас прилипла. Але це не просто маска. Густий капюшон з північного оксамиту ховає обличчя і голову в тіні. Капюшон, наче крило ворона, спливає до спини, його краї прикрашені бахромою з кістяного мережива, жахливо-красивий контраст. Разом маска і капюшон створюють примарний вигляд, сумний твір безкінечної боротьби з силами руйнування.</string>
     <string name="PlagueDoctorNPC_After_Quest">Я їм покажу, я покажу усім їм!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Ви все ще тут? Ось! Візьміть це</string>
     <string name="PlagueDoctorNPC_Desc">Цей горбатий чоловік повністю вкритий шкірою. Від нього тхне гострий запах ліків і... часнику?</string>
@@ -2636,6 +2638,8 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 
