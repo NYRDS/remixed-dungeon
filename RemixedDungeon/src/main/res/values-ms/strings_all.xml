@@ -96,6 +96,7 @@
     <string name="Badges_AllScrolls">Semua skrol dikenalpasti</string>
     <string name="Badges_AllWands">Semua tongkat sakti dikenalpasti</string>
     <string name="Badges_BossSlain2">Tengu telah dibunuh</string>
+    <string name="Badges_BossSlain3">DM-300 telah dibunuh</string>
     <string name="Badges_Champion">Cabaran dimenangi</string>
     <string name="Badges_DeathFalling">Maut disebabkan terjatuh</string>
     <string name="Badges_DeathFire">Maut disebabkan api</string>
@@ -2491,6 +2492,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
