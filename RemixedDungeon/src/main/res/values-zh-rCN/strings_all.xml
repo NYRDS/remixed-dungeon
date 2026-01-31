@@ -2063,6 +2063,7 @@
     <string name="TownsfolkNPC_Name">城镇居民</string>
     <string name="TownsfolkNPC_Name_Objective">城镇居民</string>
     <string name="TownsfolkSilentNPC_Desc">城镇居民之一。显而易见，他只是泛泛布衣，但他的衣服看起来价值不菲。</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message1">哼！</string>
     <string name="TownsfolkSilentNPC_Message2">……</string>
     <string name="TownsfolkSilentNPC_Message3">嗯……</string>
@@ -2786,6 +2787,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

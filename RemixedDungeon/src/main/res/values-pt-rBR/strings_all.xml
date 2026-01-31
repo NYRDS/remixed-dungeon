@@ -2031,6 +2031,7 @@ outro local do nível.</string>
     <string name="TownsfolkNPC_Name">Pessoal da cidade</string>
     <string name="TownsfolkNPC_Name_Objective">Pessoal da cidade</string>
     <string name="TownsfolkSilentNPC_Desc">Um dos moradores. Mesmo pareça claramente com um plebeu, aquelas roupas parecem caras</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message1">Hmph!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hmmm...</string>
@@ -2747,6 +2748,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

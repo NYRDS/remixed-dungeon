@@ -2080,6 +2080,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="TownsfolkNPC_Name">köylü</string>
     <string name="TownsfolkNPC_Name_Objective">köylü</string>
     <string name="TownsfolkSilentNPC_Desc">Sakinlerden biri. Avamlığı bariz de olsa elbiseleri epey pahalı duruyor.</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message1">hımh.</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">hmmmm</string>
@@ -2823,6 +2824,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

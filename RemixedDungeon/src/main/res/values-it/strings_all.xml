@@ -1720,6 +1720,7 @@ Potrebbe bruciare?</string>
     <string name="TownsfolkNPC_Name">paesano</string>
     <string name="TownsfolkNPC_Name_Objective">paesano</string>
     <string name="TownsfolkSilentNPC_Desc">Uno dei locali. Anche se è chiaramente un comune cittadino, quegli indumenti sembrano proprio costosi.</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message1">Hmph!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hmm...</string>
@@ -2287,6 +2288,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

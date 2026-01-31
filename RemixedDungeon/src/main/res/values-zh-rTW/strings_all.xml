@@ -352,6 +352,7 @@
     <string name="CharAction_Charm">魅惑</string>
     <string name="CharAction_Push">推</string>
     <string name="CharAction_Steal">偷</string>
+    <string name="CharAction_Taunt">嘲諷</string>
     <string name="CharInfo_Level">這是 %1 級的 %2。</string>
     <string name="Char_Defeat_0">%1$s擊殺了%2$s</string>
     <string name="Char_Defeat_1">%1$s擊殺了%2$s</string>
@@ -2589,6 +2590,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

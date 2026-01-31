@@ -221,6 +221,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Bishop_title">Bischof</string>
     <string name="BlackCat_AiStatus">Diese Katze macht ganz normale Katzensachen.</string>
     <string name="BlackCat_Desc">Das ist eine Schwarze Katze</string>
+    <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Name">Schwarze Katze</string>
     <string name="BlackCat_Name_Objective">Katze</string>
     <string name="BlackCat_Phrases_0">Prrrrrrr</string>
@@ -1999,6 +2000,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="TownsfolkNPC_Name">Stadtbewohner</string>
     <string name="TownsfolkNPC_Name_Objective">Dorfbewohner</string>
     <string name="TownsfolkSilentNPC_Desc">Einer der Einheimischen. Obwohl dies eindeutig einer aus der Mittelschicht ist, sehen diese Kleider teuer aus</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message1">Hmpf!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hmmm...</string>
@@ -2692,6 +2694,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

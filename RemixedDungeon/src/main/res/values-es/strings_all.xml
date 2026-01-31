@@ -2080,6 +2080,7 @@ otro lugar del nivel.</string>
     <string name="TownsfolkNPC_Name">ciudadano</string>
     <string name="TownsfolkNPC_Name_Objective">ciudadano</string>
     <string name="TownsfolkSilentNPC_Desc">Una persona de la localidad. A pesar de ser un plebeyo, sus ropas se ven costosas.</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message1">¡Hmph!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hmm...</string>
@@ -2801,6 +2802,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

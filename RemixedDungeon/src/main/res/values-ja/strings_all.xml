@@ -2123,6 +2123,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="TownsfolkNPC_Name">街の住人</string>
     <string name="TownsfolkNPC_Name_Objective">街の住人</string>
     <string name="TownsfolkSilentNPC_Desc">地元民の一人。明らかに庶民なのに、その服は高そうに見える。</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message1">ふん！</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">うーん...</string>
@@ -2885,6 +2886,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

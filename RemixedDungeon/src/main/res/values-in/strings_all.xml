@@ -2033,6 +2033,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="TownsfolkNPC_Name">penduduk kota</string>
     <string name="TownsfolkNPC_Name_Objective">penduduk lokal</string>
     <string name="TownsfolkSilentNPC_Desc">Salah satu penduduk setempat. Meskipun ini jelas orang biasa, pakaian itu memang terlihat mahal.</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message1">Hmph! </string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hmmm.....</string>
@@ -2755,6 +2756,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
