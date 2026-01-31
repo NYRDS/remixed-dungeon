@@ -1752,6 +1752,7 @@ outro local do nível.</string>
     <string name="ServantNPC_Name">serva da pousada</string>
     <string name="ServantNPC_Name_Objective">serva da pousada</string>
     <string name="ServiceManNPC_Desc">Um trabalhador regular do estabelecimento local.</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Eu peço desculpa, mas todos os novos aventureiros poder apenas ver %d filmes no total.</string>
     <string name="ServiceManNPC_Limit_Reached">Me desculpe, mas você atingiu seu limite atual. Mas você poderá usar nosso serviço novamente cada vez que o nível de herói subir!</string>
     <string name="ServiceManNPC_Name">empregado</string>
@@ -2749,6 +2750,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

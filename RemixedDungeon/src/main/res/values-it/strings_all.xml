@@ -553,6 +553,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="FetidRat_Name_Objective">ratto puzzolente</string>
     <string name="Fez_Info">È un copricapo a forma di cono di tronco in feltro rosso, con una nappa fissata sulla parte superiore. E no, non rende il mondo in 3 dimensioni.</string>
     <string name="Fez_Name">Fez</string>
+    <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">Questa freccia sembra normale, tranne per la calda luce rossa che irradia dalla sua testa.</string>
     <string name="FireArrow_Name">freccia di fuoco</string>
     <string name="FireElemental_Desc">Gli elementali del fuoco erranti sono un sottoprodotto dell\'evocazione di più grandi entità. Sono troppo caotici nella loro forma per essere controllati anche dal più potente demonologo.</string>
@@ -2289,6 +2290,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

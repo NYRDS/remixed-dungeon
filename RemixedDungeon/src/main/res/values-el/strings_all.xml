@@ -340,6 +340,7 @@
     <string name="Capotain_Info">Ένα ψηλό και στενόμακρο καπέλο. Συνήθως συσχετίζεται με τους Πουριτανούς, αλλά δεν χρειάζεται να πιστεύεις για να το φορέσεις. Για κάποιον λόγο έχει μια ταμπέλα που αναγράφει «Σολομών».</string>
     <string name="Capotain_Name">Ημίψηλο</string>
     <string name="Carcass_Devoured">Καταβρόχθισες τη σορό του πλάσματος: %s!</string>
+    <string name="Carcass_DissectResult">Από το %s λαμβάνετε %d συγκομιδή %s.</string>
     <string name="Carcass_Info">Λείψανα ενός παντελώς νεκρού πλάσματος (%s).</string>
     <string name="Carcass_Kick">Το πλάσμα (%s) τα έχει τινάξει ήδη. Δεν χρειάζεται να το κλωτσάς.</string>
     <string name="Carcass_Name">Λείψανα (%s)</string>
@@ -3004,6 +3005,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 
