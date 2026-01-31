@@ -2223,6 +2223,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndChooseWay_Message">Jalan mana yang Anda ingin ikuti?</string>
     <string name="WndClass_Mastery">Penguasaan</string>
     <string name="WndCryptoDonate_copyAddress">Salin Alamat</string>
+    <string name="WndCryptoDonate_monero">Monero</string>
     <string name="WndCryptoDonate_openWallet">Buka Dompet</string>
     <string name="WndCryptoDonate_supportDev">Dukung Pengembang</string>
     <string name="WndCustomizations_Title">Penyesuaian </string>
@@ -2754,6 +2755,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -2472,6 +2472,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_stone_wall_name">Kő fal</string>
     <string name="town_deco_stones_desc">Csak egy rakás kő.</string>
     <string name="town_deco_stones_name">Kavicsok</string>
+    <string name="town_deco_stool_sturdy_desc">Egy átlagos bárszék ellenálló fából készült.</string>
     <string name="town_deco_stove_desc">Ez a tűzhely kellemes meleget áraszt.</string>
     <string name="town_deco_stove_name">Kő kályha</string>
     <string name="town_deco_tile_desc">Ezek a csempék eléggé lehasználódtak az idővel.</string>
@@ -2509,6 +2510,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
