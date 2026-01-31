@@ -3,8 +3,10 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.actors.Char;
@@ -15,6 +17,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -65,7 +68,7 @@ public class WndItemAlchemy extends Window {
         add(mainLayout);
 
         // Title
-        Text title = PixelScene.createMultiline("Alchemy recipes with " + item.name(), GuiProperties.titleFontSize());
+        Text title = PixelScene.createMultiline(Utils.format(R.string.WndItemAlchemy_Title, item.name()), GuiProperties.titleFontSize());
         title.maxWidth((int) windowWidth);
         title.hardlight(Window.TITLE_COLOR);
         title.setX(MARGIN);
@@ -96,7 +99,7 @@ public class WndItemAlchemy extends Window {
         recipesContainer.setGap(SMALL_GAP); // Reduced gap for tighter fit
 
         if (availableRecipes.isEmpty()) {
-            Text noRecipes = PixelScene.createMultiline("No recipes available with this item and your current inventory.", 8);
+            Text noRecipes = PixelScene.createMultiline(R.string.WndItemAlchemy_NoRecipes, 8);
             noRecipes.maxWidth((int) (windowWidth - 4 * MARGIN));
             mainLayout.add(noRecipes);
         } else {
@@ -124,7 +127,7 @@ public class WndItemAlchemy extends Window {
         VBox controlsBox = new VBox();
 
         // Recipe description area
-        recipeDescription = PixelScene.createMultiline("Select recipe", GuiProperties.regularFontSize());
+        recipeDescription = PixelScene.createMultiline(R.string.WndItemAlchemy_SelectRecipe, GuiProperties.regularFontSize());
         recipeDescription.maxWidth((int) (windowWidth - 4 * MARGIN));
         //recipeDescription.minHeight(60);
         controlsBox.add(recipeDescription);
@@ -135,7 +138,7 @@ public class WndItemAlchemy extends Window {
         buttonsContainer.setGap(SMALL_GAP); // Reduced gap for tighter fit
 
         // Execute button
-        executeButton = new RedButton("Execute Recipe") {
+        executeButton = new RedButton(R.string.WndItemAlchemy_ExecuteRecipe) {
             @Override
             protected void onClick() {
                 executeSelectedRecipe();
@@ -147,7 +150,7 @@ public class WndItemAlchemy extends Window {
         buttonsContainer.add(executeButton);
 
         // Close button
-        RedButton closeButton = new RedButton("Close") {
+        RedButton closeButton = new RedButton(R.string.Wnd_Button_Close) {
             @Override
             protected void onClick() {
                 hide();
@@ -327,7 +330,7 @@ public class WndItemAlchemy extends Window {
 
             recipeDescription.text(description.toString());
         } else {
-            recipeDescription.text("Select recipe");
+            recipeDescription.text(R.string.WndItemAlchemy_SelectRecipe);
         }
 
         // Update the layout to accommodate the new text

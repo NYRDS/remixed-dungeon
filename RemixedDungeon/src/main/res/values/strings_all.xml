@@ -2150,6 +2150,11 @@
   <string name="Sewer_TileDescDeco">Wet yellowish moss covers the floor.</string>
   <string name="Sewer_TileDescBookshelf">The bookshelf is packed with cheap useless books. Might it burn?</string>
   <string name="AlchemyPot_SelectSeed">Select a seed to throw</string>
+  <string name="Item_ACAlchemy">ALCHEMY</string>
+  <string name="WndItemAlchemy_Title">Alchemy recipes with %s</string>
+  <string name="WndItemAlchemy_NoRecipes">No recipes available with this item and your current inventory.</string>
+  <string name="WndItemAlchemy_SelectRecipe">Select recipe</string>
+  <string name="WndItemAlchemy_ExecuteRecipe">Execute Recipe</string>
   <string name="Chasm_Chasm">Chasm</string>
   <string name="Chasm_Yes">Yes, I know what I\'m doing</string>
   <string name="Chasm_No">No, I changed my mind</string>
