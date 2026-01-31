@@ -713,6 +713,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Halls_TileHighGrass">화롯불버섯</string>
     <string name="Halls_TileStatue">기둥</string>
     <string name="Halls_TileWater">차가운 용암</string>
+    <string name="Haste_Info">신속은 사용자가 극도로 빠른 속도로 이동할 수 있게 해주어 마치 주변의 모든 것이 정지해 있는 것처럼 보이게 합니다. 이러한 신속은 많은 에너지를 소비하므로 오직 짧은 시간 동안만 사용할 수 있습니다.\n\n숙련된 마스터들은 더 오랜 시간 동안 신속 상태를 유지할 수 있습니다.</string>
     <string name="HealerNPC_Desc">어째서인지 마법봉을 만드는 누군가와 닮은 노인이다.</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">모든 모험가들을 무료로 치료해줍니다!</string>
@@ -2425,6 +2426,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
