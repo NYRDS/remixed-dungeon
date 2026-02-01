@@ -1425,6 +1425,7 @@
     <string name="PumpkinPie_Name">南瓜派</string>
     <string name="Pumpkin_Info">過去南瓜族是一個繁榮和自豪的名族。但是當人類入侵後一切都毀了。被斬斷的南瓜頭成了幸存的南瓜族人的心理陰影。</string>
     <string name="Pumpkin_Name">南瓜</string>
+    <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">木製短棍，兩頭鑲鐵。</string>
     <string name="Quarterstaff_Name">鐵頭棍</string>
     <string name="QuickSlot_SelectSlot">更改快捷使用</string>
@@ -2593,6 +2594,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

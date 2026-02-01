@@ -1525,6 +1525,7 @@ Potrebbe bruciare?</string>
     <string name="Sheep_Name">pecora</string>
     <string name="Sheep_Name_Objective">pecora</string>
     <string name="ShieldBuffNotReady_Name">Scudo non pronto</string>
+    <string name="ShieldInfoTemplate">Questo scudo bloccherà fino a %1$d danni in arrivo. Con una probabilità del %2$d %. Occorreranno %3$3.1f secondi per riprendersi dopo un blocco riuscito.</string>
     <string name="ShieldStrTemplate">Chi indossa lo scudo deve avere almeno %1$d punti di Forza per usarlo correttamente.</string>
     <string name="Shielded_Defense">Bloccato</string>
     <string name="Shielded_Desc">I bruti sono i più grandi, i più forti e i più duri di tutti gli gnoll. Quando gravemente feriti, si infuriano, infliggendo danni maggiori ai loro nemici. Questo bruto porta con se uno scudo gigante!</string>
@@ -2297,6 +2298,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
