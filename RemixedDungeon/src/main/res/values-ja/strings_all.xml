@@ -2136,6 +2136,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="TrapWnd_Step">本当にこの罠を踏みたいのか？死ぬかもしれないぞ。</string>
     <string name="TrapWnd_Title">罠</string>
     <string name="TreacherousSpirit_Desc">この怪物のような生き物は、まるで生きた闇の雲のようだ。その巨大な目はあなたを見つめ、あなたが動くたびに脈動する。</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">裏切りの精霊</string>
     <string name="TreacherousSpirit_Name_Objective">裏切りの精霊</string>
     <string name="Typical_Damage">典型的なダメージ</string>
@@ -2887,6 +2888,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
