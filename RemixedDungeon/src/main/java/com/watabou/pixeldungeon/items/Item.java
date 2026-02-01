@@ -170,7 +170,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
         boolean hasRecipesWithItem = false;
         for (var  recipe : recipesWithItem) {
-            if (AlchemyRecipes.hasRequiredIngredients(recipe.getKey(), playerInventory)) {
+            if (AlchemyRecipes.hasRequiredIngredients(recipe.getInput(), playerInventory)) {
                 hasRecipesWithItem = true;
                 break;
             }

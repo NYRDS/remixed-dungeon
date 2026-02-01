@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.alchemy.AlchemyRecipe;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
@@ -32,7 +33,7 @@ public class WndRecipeChecker extends Window {
         }
 
         // Get available recipes
-        List<Map.Entry<List<String>, List<String>>> availableRecipes = AlchemyRecipes.getAvailableRecipes(playerInventory);
+        List<AlchemyRecipe> availableRecipes = AlchemyRecipes.getAvailableRecipes(playerInventory);
 
         // Create title
         Text title = PixelScene.createMultiline("Available Recipes", 9);
@@ -61,11 +62,11 @@ public class WndRecipeChecker extends Window {
             Component content = new Component();
             float listHeight = 0;
 
-            for (Map.Entry<List<String>, List<String>> recipe : availableRecipes) {
+            for (AlchemyRecipe recipe : availableRecipes) {
                 // Format input ingredients
                 StringBuilder inputStr = new StringBuilder();
                 Map<String, Integer> inputCounts = new HashMap<>();
-                for (String input : recipe.getKey()) {
+                for (String input : recipe.getInput()) {
                     inputCounts.put(input, inputCounts.getOrDefault(input, 0) + 1);
                 }
 
@@ -77,7 +78,7 @@ public class WndRecipeChecker extends Window {
                 // Format output items
                 StringBuilder outputStr = new StringBuilder();
                 Map<String, Integer> outputCounts = new HashMap<>();
-                for (String output : recipe.getValue()) {
+                for (String output : recipe.getOutput()) {
                     outputCounts.put(output, outputCounts.getOrDefault(output, 0) + 1);
                 }
 

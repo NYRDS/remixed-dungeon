@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.alchemy.AlchemyRecipe;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -36,7 +37,7 @@ public class WndItemAlchemy extends Window {
     private final VBox mainLayout;
 
     // Track selected recipe
-    private Entry<List<String>, List<String>> selectedRecipe;
+    private AlchemyRecipe selectedRecipe;
     private RecipeListItem selectedRow;
     private final RedButton executeButton;
 
@@ -87,9 +88,9 @@ public class WndItemAlchemy extends Window {
                 AlchemyRecipes.getRecipesContainingItem(baseItem.getEntityKind());
 
         // Filter to only show recipes for which the player has all required ingredients
-        List<Entry<List<String>, List<String>>> availableRecipes = new ArrayList<>();
+        List<AlchemyRecipe> availableRecipes = new ArrayList<>();
         for (var recipe : recipesWithItem) {
-            if (AlchemyRecipes.hasRequiredIngredients(recipe.getKey(), playerInventory)) {
+            if (AlchemyRecipes.hasRequiredIngredients(recipe.getInput(), playerInventory)) {
                 availableRecipes.add(recipe);
             }
         }
@@ -173,8 +174,8 @@ public class WndItemAlchemy extends Window {
         resize((int) windowWidth, (int) windowHeight);
     }
 
-    private RecipeListItem getRecipeListItem(Entry<List<String>, List<String>> recipeEntry, float windowWidth) {
-        RecipeListItem recipeItem = new RecipeListItem(recipeEntry.getKey(), recipeEntry.getValue());
+    private RecipeListItem getRecipeListItem(AlchemyRecipe recipeEntry, float windowWidth) {
+        RecipeListItem recipeItem = new RecipeListItem(recipeEntry.getInput(), recipeEntry.getOutput());
         recipeItem.setSelected(false);
 
         // Set the size for the recipe item
@@ -202,7 +203,7 @@ public class WndItemAlchemy extends Window {
         return recipeItem;
     }
 
-    private ScrollPane createScrollPane(VBox recipesContainer, List<Entry<List<String>, List<String>>> availableRecipes) {
+    private ScrollPane createScrollPane(VBox recipesContainer, List<AlchemyRecipe> availableRecipes) {
         ScrollPane recipeScrollPane = new ScrollPane(recipesContainer) {
             @Override
             public void onClick(float x, float y) {
@@ -244,8 +245,8 @@ public class WndItemAlchemy extends Window {
 
     private void updateRecipeDescription() {
         if (selectedRecipe != null) {
-            var inputs = selectedRecipe.getKey();
-            var outputs = selectedRecipe.getValue();
+            var inputs = selectedRecipe.getInput();
+            var outputs = selectedRecipe.getOutput();
 
             StringBuilder description = new StringBuilder();
             description.append("Recipe: ");
@@ -344,7 +345,7 @@ public class WndItemAlchemy extends Window {
 
         if (selectedRecipe != null) {
             // Remove the required ingredients from the player's inventory
-            var inputs = selectedRecipe.getKey();
+            var inputs = selectedRecipe.getInput();
 
             // Count required quantities for each ingredient
             Map<String, Integer> requiredQuantities = new HashMap<>();
@@ -379,7 +380,7 @@ public class WndItemAlchemy extends Window {
             }
 
             // Process the output items and mobs
-            List<String> outputs = selectedRecipe.getValue();
+            List<String> outputs = selectedRecipe.getOutput();
             for (String outputName : outputs) {
                 // Determine the entity type to handle items, mobs, and carcasses differently
                 AlchemyRecipes.EntityType entityType = AlchemyRecipes.determineEntityType(outputName);

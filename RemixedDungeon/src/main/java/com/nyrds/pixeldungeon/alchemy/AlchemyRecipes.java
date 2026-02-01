@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Class to manage alchemy recipes, supporting both JSON loading and Lua generation
@@ -26,7 +27,7 @@ import java.util.Map;
 public class AlchemyRecipes {
 
     // Recipe structure: input ingredients -> outputs (can be multiple items or mobs)
-    private static final Map<List<String>, List<String>> recipes = new HashMap<>();
+    private static final List<AlchemyRecipe> recipes = new ArrayList<>();
 
     // Recipe output types
     public enum EntityType {
@@ -86,7 +87,7 @@ public class AlchemyRecipes {
                     }
                 }
 
-                recipes.put(inputs, outputs);
+                recipes.add(new AlchemyRecipe(inputs, outputs));
             }
         } catch (JSONException e) {
             EventCollector.logException(e);
@@ -180,7 +181,7 @@ public class AlchemyRecipes {
             // Additional validation: try to create the output to ensure it's valid
             if (entityType == EntityType.ITEM) {
                 Item testItem = ItemFactory.itemByName(output);
-                if (testItem.valid()) {
+                if (!testItem.valid()) {
                     return false; // Invalid item
                 }
             } else if (entityType == EntityType.MOB) {
@@ -192,7 +193,7 @@ public class AlchemyRecipes {
         }
 
         if (areAllEntitiesValid(input)) {
-            recipes.put(new ArrayList<>(input), new ArrayList<>(outputs));
+            recipes.add(new AlchemyRecipe(new ArrayList<>(input), new ArrayList<>(outputs)));
             return true;
         }
         return false; // Recipe not added due to invalid entities
@@ -206,11 +207,12 @@ public class AlchemyRecipes {
         List<String> normalizedInput = normalizeInput(input);
 
         // Try to find exact match
-        for (Map.Entry<List<String>, List<String>> entry : recipes.entrySet()) {
-            if (entry.getKey().size() == normalizedInput.size() &&
-                entry.getKey().containsAll(normalizedInput) &&
-                normalizedInput.containsAll(entry.getKey())) {
-                return entry.getValue();
+        for (AlchemyRecipe recipe : recipes) {
+            List<String> recipeInput = recipe.getInput();
+            if (recipeInput.size() == normalizedInput.size() &&
+                recipeInput.containsAll(normalizedInput) &&
+                normalizedInput.containsAll(recipeInput)) {
+                return recipe.getOutput();
             }
         }
         return null; // No recipe found
@@ -243,20 +245,13 @@ public class AlchemyRecipes {
     /**
      * Get a random valid recipe for testing purposes
      */
-    public static Map.Entry<List<String>, List<String>> getRandomRecipe() {
+    public static AlchemyRecipe getRandomRecipe() {
         if (recipes.isEmpty()) {
             return null;
         }
 
         int index = Random.Int(recipes.size());
-        int i = 0;
-        for (Map.Entry<List<String>, List<String>> entry : recipes.entrySet()) {
-            if (i == index) {
-                return entry;
-            }
-            i++;
-        }
-        return null;
+        return recipes.get(index);
     }
 
     /**
@@ -270,8 +265,8 @@ public class AlchemyRecipes {
     /**
      * Get all recipes
      */
-    public static Map<List<String>, List<String>> getAllRecipes() {
-        return new HashMap<>(recipes);
+    public static List<AlchemyRecipe> getAllRecipes() {
+        return new ArrayList<>(recipes);
     }
 
     /**
@@ -308,11 +303,11 @@ public class AlchemyRecipes {
      * @return A list of recipes that use this item as an ingredient
      */
     @LuaInterface
-    public static List<Map.Entry<List<String>, List<String>>> getRecipesWithItem(String itemName) {
-        List<Map.Entry<List<String>, List<String>>> matchingRecipes = new ArrayList<>();
+    public static List<AlchemyRecipe> getRecipesWithItem(String itemName) {
+        List<AlchemyRecipe> matchingRecipes = new ArrayList<>();
 
-        for (Map.Entry<List<String>, List<String>> recipe : recipes.entrySet()) {
-            if (recipe.getKey().contains(itemName)) {
+        for (AlchemyRecipe recipe : recipes) {
+            if (recipe.getInput().contains(itemName)) {
                 matchingRecipes.add(recipe);
             }
         }
@@ -365,11 +360,11 @@ public class AlchemyRecipes {
      * @param playerInventory The player's current inventory with quantities
      * @return A list of recipes for which the player has all required ingredients
      */
-    public static List<Map.Entry<List<String>, List<String>>> getAvailableRecipes(Map<String, Integer> playerInventory) {
-        List<Map.Entry<List<String>, List<String>>> availableRecipes = new ArrayList<>();
+    public static List<AlchemyRecipe> getAvailableRecipes(Map<String, Integer> playerInventory) {
+        List<AlchemyRecipe> availableRecipes = new ArrayList<>();
 
-        for (var recipe : recipes.entrySet()) {
-            if (hasRequiredIngredients(recipe.getKey(), playerInventory)) {
+        for (AlchemyRecipe recipe : recipes) {
+            if (hasRequiredIngredients(recipe.getInput(), playerInventory)) {
                 availableRecipes.add(recipe);
             }
         }
@@ -383,11 +378,11 @@ public class AlchemyRecipes {
      * @return A list of recipes that use this item as an ingredient
      */
     @LuaInterface
-    public static List<Map.Entry<List<String>, List<String>>> getRecipesContainingItem(String itemName) {
-        List<Map.Entry<List<String>, List<String>>> matchingRecipes = new ArrayList<>();
+    public static List<AlchemyRecipe> getRecipesContainingItem(String itemName) {
+        List<AlchemyRecipe> matchingRecipes = new ArrayList<>();
 
-        for (Map.Entry<List<String>, List<String>> recipe : recipes.entrySet()) {
-            if (recipe.getKey().contains(itemName)) {
+        for (AlchemyRecipe recipe : recipes) {
+            if (recipe.getInput().contains(itemName)) {
                 matchingRecipes.add(recipe);
             }
         }

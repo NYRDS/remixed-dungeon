@@ -100,7 +100,7 @@ class ItemButton extends ItemSlot {
                     AlchemyRecipes.getRecipesContainingItem(item.getEntityKind());
 
                 for (var recipe : recipesWithItem) {
-                    if (AlchemyRecipes.hasRequiredIngredients(recipe.getKey(), playerInventory)) {
+                    if (AlchemyRecipes.hasRequiredIngredients(recipe.getInput(), playerInventory)) {
                         isUsableInAlchemy = true;
                         break;
                     }

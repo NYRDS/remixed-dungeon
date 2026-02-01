@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.alchemy.AlchemyRecipe;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
@@ -24,7 +25,7 @@ public class WndAlchemy extends Window {
     private final VBox mainLayout;
 
     // Track selected recipe
-    private Entry<List<String>, List<String>> selectedRecipe;
+    private AlchemyRecipe selectedRecipe;
     private RecipeListItem selectedRow;
     private RedButton executeButton;
 
@@ -63,7 +64,7 @@ public class WndAlchemy extends Window {
 
         var allRecipes = AlchemyRecipes.getAllRecipes();
 
-        for (var recipeEntry : allRecipes.entrySet()) {
+        for (var recipeEntry : allRecipes) {
             // Create a recipe list item
             RecipeListItem recipeItem = getRecipeListItem(recipeEntry, windowWidth);
 
@@ -149,8 +150,8 @@ public class WndAlchemy extends Window {
 
         // Add it to the window first so it appears behind other elements
     }
-    private RecipeListItem getRecipeListItem(Entry<List<String>, List<String>> recipeEntry, float windowWidth) {
-        RecipeListItem recipeItem = new RecipeListItem(recipeEntry.getKey(), recipeEntry.getValue());
+    private RecipeListItem getRecipeListItem(AlchemyRecipe recipeEntry, float windowWidth) {
+        RecipeListItem recipeItem = new RecipeListItem(recipeEntry.getInput(), recipeEntry.getOutput());
 
         // Set the size for the recipe item
         recipeItem.setSize(windowWidth, recipeItem.height());
@@ -173,13 +174,13 @@ public class WndAlchemy extends Window {
 
             // Update the transmutation circle with the selected recipe as seed
             if (transmutationCircle != null) {
-                transmutationCircle.setRecipe(recipeEntry.getKey(), recipeEntry.getValue());
+                transmutationCircle.setRecipe(recipeEntry.getInput(), recipeEntry.getOutput());
             }
         });
         return recipeItem;
     }
 
-    private ScrollPane createScrollPane(VBox recipesContainer, Map<List<String>, List<String>> allRecipes) {
+    private ScrollPane createScrollPane(VBox recipesContainer, List<AlchemyRecipe> allRecipes) {
         ScrollPane recipeScrollPane = new ScrollPane(recipesContainer) {
             @Override
             public void onClick(float x, float y) {
@@ -196,8 +197,7 @@ public class WndAlchemy extends Window {
 
                         // Select current item
                         selectedRow = recipeItem;
-                        Object[] recipeArray = allRecipes.entrySet().toArray();
-                        selectedRecipe = (Entry<List<String>, List<String>>) recipeArray[i];
+                        selectedRecipe = allRecipes.get(i);
 
                         // Highlight the selected row
                         selectedRow.setSelected(true);
@@ -207,7 +207,7 @@ public class WndAlchemy extends Window {
 
                         // Update the transmutation circle with the selected recipe as seed
                         if (transmutationCircle != null) {
-                            transmutationCircle.setRecipe(selectedRecipe.getKey(), selectedRecipe.getValue());
+                            transmutationCircle.setRecipe(selectedRecipe.getInput(), selectedRecipe.getOutput());
                         }
                         break;
                     }
