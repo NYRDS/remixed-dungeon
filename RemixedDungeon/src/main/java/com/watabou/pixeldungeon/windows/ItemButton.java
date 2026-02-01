@@ -9,6 +9,7 @@ import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -84,25 +85,21 @@ class ItemButton extends ItemSlot {
 
     public void placeItem( Item item, WndBag.Mode mode ) {
         if (item.valid()) {
-
-            bg.texture( TextureCache.createSolid( item.isEquipped( Dungeon.hero ) ? EQUIPPED : NORMAL ) );
+            Char owner = item.getOwner();
+            bg.texture( TextureCache.createSolid( item.isEquipped( owner ) ? EQUIPPED : NORMAL ) );
             ItemUtils.tintBackground(item, bg);
 
             // Check if this item can be used in alchemy recipes
             boolean isUsableInAlchemy = false;
             if (mode == WndBag.Mode.ALL || mode == WndBag.Mode.QUICKSLOT) {
                 // Calculate player's inventory
-                Map<String, Integer> playerInventory = new HashMap<>();
-                for (Item inventoryItem : Dungeon.hero.getBelongings().backpack.items) {
-                    String itemName = inventoryItem.getEntityKind();
-                    playerInventory.put(itemName, playerInventory.getOrDefault(itemName, 0) + inventoryItem.quantity());
-                }
+                var playerInventory = AlchemyRecipes.buildAlchemyInventory(owner);
 
                 // Check if the player has enough ingredients for recipes that include this item
-                List<Map.Entry<List<String>, List<String>>> recipesWithItem =
+                var recipesWithItem =
                     AlchemyRecipes.getRecipesContainingItem(item.getEntityKind());
 
-                for (Map.Entry<java.util.List<String>, List<String>> recipe : recipesWithItem) {
+                for (var recipe : recipesWithItem) {
                     if (AlchemyRecipes.hasRequiredIngredients(recipe.getKey(), playerInventory)) {
                         isUsableInAlchemy = true;
                         break;
@@ -133,7 +130,7 @@ class ItemButton extends ItemSlot {
                         enableItem = item.isUpgradable();
                         break;
                     case FOR_SALE:
-                        enableItem=(item.price() > 0) && (!item.isEquipped(Dungeon.hero) || !item.isCursed());
+                        enableItem=(item.price() > 0) && (!item.isEquipped(owner) || !item.isCursed());
                         break;
                     case WEAPON:
                         enableItem=(!(item instanceof KindOfBow) && (item instanceof MeleeWeapon || item instanceof Boomerang));
@@ -203,7 +200,7 @@ class ItemButton extends ItemSlot {
             if(wndBag.hideOnSelect()) {
                 wndBag.hide();
             }
-            wndBag.getListener().onSelect( item, Dungeon.hero);
+            wndBag.getListener().onSelect( item, item.getOwner());
         } else {
             wndBag.add( new WndItem(wndBag, item ) );
         }

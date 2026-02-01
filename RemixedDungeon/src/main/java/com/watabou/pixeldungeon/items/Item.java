@@ -162,18 +162,14 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         ArrayList<String> actions = new ArrayList<>();
 
         // Calculate player's inventory
-        Map<String, Integer> playerInventory = new HashMap<>();
-        for (Item inventoryItem : hero.getBelongings().backpack.items) {
-            String itemName = inventoryItem.getEntityKind();
-            playerInventory.put(itemName, playerInventory.getOrDefault(itemName, 0) + inventoryItem.quantity());
-        }
+        var playerInventory = AlchemyRecipes.buildAlchemyInventory(hero);
 
         // Check if the player has enough ingredients for recipes that include this item
-        List<Map.Entry<List<String>, List<String>>> recipesWithItem =
+        var recipesWithItem =
             AlchemyRecipes.getRecipesContainingItem(getEntityKind());
 
         boolean hasRecipesWithItem = false;
-        for (Map.Entry<List<String>, List<String>> recipe : recipesWithItem) {
+        for (var  recipe : recipesWithItem) {
             if (AlchemyRecipes.hasRequiredIngredients(recipe.getKey(), playerInventory)) {
                 hasRecipesWithItem = true;
                 break;

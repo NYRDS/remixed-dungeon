@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
@@ -349,6 +350,17 @@ public class AlchemyRecipes {
         return true;
     }
 
+    public static Map<String, Integer> buildAlchemyInventory(Char hero) {
+        Map<String, Integer> inventory = new HashMap<>();
+        for (Item item : hero.getBelongings()) {
+            if (item.isIdentified()) {
+                String itemName = item.getEntityKind();
+                inventory.put(itemName, inventory.getOrDefault(itemName, 0) + item.quantity());
+            }
+        }
+        return inventory;
+    }
+
     /**
      * Get all recipes for which the player has all required ingredients
      * @param playerInventory The player's current inventory with quantities
@@ -357,7 +369,7 @@ public class AlchemyRecipes {
     public static List<Map.Entry<List<String>, List<String>>> getAvailableRecipes(Map<String, Integer> playerInventory) {
         List<Map.Entry<List<String>, List<String>>> availableRecipes = new ArrayList<>();
 
-        for (Map.Entry<List<String>, List<String>> recipe : recipes.entrySet()) {
+        for (var recipe : recipes.entrySet()) {
             if (hasRequiredIngredients(recipe.getKey(), playerInventory)) {
                 availableRecipes.add(recipe);
             }

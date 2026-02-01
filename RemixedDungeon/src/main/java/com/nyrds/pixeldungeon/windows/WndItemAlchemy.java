@@ -75,7 +75,7 @@ public class WndItemAlchemy extends Window {
 
         // Calculate player's inventory
         Map<String, Integer> playerInventory = new HashMap<>();
-        for (Item item : hero.getBelongings().backpack.items) {
+        for (Item item : hero.getBelongings()) {
             if(item.isIdentified()) {
                 String itemName = item.getEntityKind();
                 playerInventory.put(itemName, playerInventory.getOrDefault(itemName, 0) + item.quantity());
@@ -83,12 +83,12 @@ public class WndItemAlchemy extends Window {
         }
 
         // Get recipes that contain this specific baseItem
-        List<Entry<List<String>, List<String>>> recipesWithItem =
+        var recipesWithItem =
                 AlchemyRecipes.getRecipesContainingItem(baseItem.getEntityKind());
 
         // Filter to only show recipes for which the player has all required ingredients
         List<Entry<List<String>, List<String>>> availableRecipes = new ArrayList<>();
-        for (Entry<List<String>, List<String>> recipe : recipesWithItem) {
+        for (var recipe : recipesWithItem) {
             if (AlchemyRecipes.hasRequiredIngredients(recipe.getKey(), playerInventory)) {
                 availableRecipes.add(recipe);
             }
@@ -244,8 +244,8 @@ public class WndItemAlchemy extends Window {
 
     private void updateRecipeDescription() {
         if (selectedRecipe != null) {
-            List<String> inputs = selectedRecipe.getKey();
-            List<String> outputs = selectedRecipe.getValue();
+            var inputs = selectedRecipe.getKey();
+            var outputs = selectedRecipe.getValue();
 
             StringBuilder description = new StringBuilder();
             description.append("Recipe: ");
@@ -258,7 +258,7 @@ public class WndItemAlchemy extends Window {
 
             // Add input ingredients with counts
             boolean first = true;
-            for (Map.Entry<String, Integer> entry : inputCounts.entrySet()) {
+            for (var entry : inputCounts.entrySet()) {
                 if (!first) {
                     description.append(" + ");
                 }
@@ -344,7 +344,7 @@ public class WndItemAlchemy extends Window {
 
         if (selectedRecipe != null) {
             // Remove the required ingredients from the player's inventory
-            List<String> inputs = selectedRecipe.getKey();
+            var inputs = selectedRecipe.getKey();
 
             // Count required quantities for each ingredient
             Map<String, Integer> requiredQuantities = new HashMap<>();
@@ -353,7 +353,7 @@ public class WndItemAlchemy extends Window {
             }
 
             // Remove ingredients from inventory
-            for (Map.Entry<String, Integer> required : requiredQuantities.entrySet()) {
+            for (var required : requiredQuantities.entrySet()) {
                 String ingredientName = required.getKey();
                 int requiredQty = required.getValue();
 
