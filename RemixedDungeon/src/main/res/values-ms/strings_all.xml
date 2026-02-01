@@ -448,6 +448,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="CommonArrow_Name">anak panah</string>
     <string name="CompositeCrossbow_Info">Busur silang diperkukuh ini membuktikan ada bahan yang lebih efisyen berbanding komponen kayu.</string>
     <string name="CompositeCrossbow_Name">Busur silang komposit</string>
+    <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">Anak panah yang dilepaskan dari busur campuran ini dapat menghasilkan kecederaan besar dan ketepatan lebih baik berbanding busur kayu tetapi rugi dari segi kelajuan.</string>
     <string name="CompoundBow_Name">busur campuran</string>
     <string name="ConcreteBlock_Description">Nampaknya blok ini memerlukan %d mata kekuatan untuk ditolak</string>
@@ -2420,6 +2421,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_scrolls_desc">Rak berdebu yang penuh dengan skrol-skrol dan buku-buku.</string>
     <string name="town_deco_scrolls_name">Skrol</string>
     <string name="town_deco_shelf_desc">Para kosong.</string>
+    <string name="town_deco_shelf_full_name">Rak</string>
     <string name="town_deco_shelf_name">Para</string>
     <string name="town_deco_shelving_desc">Rak yang mengagumkan, di atas para anda dapati terdapat pelbagai jenis minuman dan snek.</string>
     <string name="town_deco_shelving_name">Para</string>
@@ -2495,6 +2497,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

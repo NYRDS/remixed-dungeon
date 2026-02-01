@@ -1911,6 +1911,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Using_Failed_Because_Magic">Egy erős mágia meggátol hogy használd a(z) %s-t.</string>
     <string name="VampireSkull_Info">Ez a maszk egy igaz vámpír koponyájából készült. Sőt, ez maga egy vámpír koponya...egy nagyfejű vámpíré. Ijesztő.</string>
     <string name="VampireSkull_Name">Vámpír koponya</string>
+    <string name="VertigoBuff_Info">A szédüléstől nehezebb egyenesen járni!</string>
     <string name="VertigoBuff_Name">Szédülés</string>
     <string name="View_Distance">Látótávolság</string>
     <string name="VileEssence_Info">Egy összetömörített romlottság esszenciája, amit egy legyőzött ellenségből nyertek. Ez a sötét anyag rosszindulatú energiával pulzál, és nagy áron becsülik az alkímiai folyamatokban.</string>
@@ -2516,6 +2517,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
