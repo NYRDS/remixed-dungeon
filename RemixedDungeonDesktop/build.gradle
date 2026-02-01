@@ -446,6 +446,18 @@ tasks.register('generateSpritesFromFactories', JavaExec) {
     workingDir = file('src/desktop/rundir')
 }
 
+// Add a task to test Lua scripts in a game environment
+tasks.register('testLuaScripts', JavaExec) {
+    dependsOn classes
+    mainClass = 'com.nyrds.pixeldungeon.desktop.LuaScriptTester' // This class will need to be created
+    classpath = sourceSets.main.runtimeClasspath
+
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+
+    // Set working directory to rundir to ensure proper asset access
+    workingDir = file('src/desktop/rundir')
+}
+
 tasks.register('buildAllBundles') {
     dependsOn 'packageLinuxX64', 'packageMacM1', 'packageWinX64'
 }
