@@ -2018,6 +2018,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndChooseWay_Cancel">Saya fikirkan kemudian</string>
     <string name="WndChooseWay_Message">Laluan mana yang anda mahu ikut?</string>
     <string name="WndClass_Mastery">Kepakaran</string>
+    <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_currency">Mata Wang</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_warningText">AMARAN: Sentiasa sahkan alamat sebelum menghantar dana. Transaksi mata wang kripto adalah tidak boleh diubah!</string>
@@ -2492,6 +2493,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

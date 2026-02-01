@@ -270,6 +270,7 @@
     <string name="Challenges_Names_4">Swarm intelligence</string>
     <string name="Challenges_Names_5">nel buio</string>
     <string name="Challenges_Names_6">Rune Proibite</string>
+    <string name="ChampionOfAirBuff_Info">Questa caratteristica dona alla creatura l'essenza dei venti, migliorando la sua agilità e abilità in combattimento. Il Campione dell'Aria diventa un avversario formidabile, capace di scatenare attacchi rapidi e devastanti che possono cambiare rapidamente il corso della battaglia.</string>
     <string name="ChampionOfFireBuff_Info">Infuso con la furia delle fiamme, questo attributo potenzia la ferocia e le capacità di combattimento della creatura. Il Campione del Fuoco emerge come un avversario temibile, scatenando attacchi devastanti che possono avvolgere i nemici in fiamme roventi, instillando terrore in tutti coloro che osano opporsi ad esso.</string>
     <string name="ChampionOfFireBuff_Name">Campione del Fuoco</string>
     <string name="ChaosArmor_Info">Le placche rosso sangue di questa armatura sono tenute insieme con catene rosse oscure. Irradia energia del Caos quando la tocchi. </string>
@@ -2292,6 +2293,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
