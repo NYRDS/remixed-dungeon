@@ -1843,6 +1843,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiderEgg_Desc">Dieses zerbrechliche Ei pulsiert sanft, in seinem Inneren kann man etwas mit vielen Beinen sehen</string>
     <string name="SpiderEgg_Name">Spinnenei</string>
     <string name="SpiderEgg_Name_Objective">Spinnenei</string>
+    <string name="SpiderElite_Name">Spinnen-Elitewächter</string>
     <string name="SpiderExploding_Desc">Sie sind harte Arbeiter während friedlichen Zeiten, zögern aber keine Sekunde, um ihre Gegner aufzuspüren und sich die nächsten Pflanze zu greifen, um sich in lebende Bomben zu verwandeln.</string>
     <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">Arbeiterspinne</string>
@@ -2696,6 +2697,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
