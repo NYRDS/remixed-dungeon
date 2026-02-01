@@ -87,7 +87,7 @@ return item.init{
 
             local itemToDrop = RPD.ItemFactory:itemByName(randomItem)
             if itemToDrop then
-                RPD.Dungeon.level:drop(itemToDrop, defender:getPos())
+                RPD.Dungeon.level:animatedDrop(itemToDrop, defender:getPos())
                 RPD.glog("BoneSaw dropped extra part: " .. randomItem .. " at position " .. defender:getPos())
             else
                 RPD.glog("BoneSaw failed to create harvest item: " .. randomItem)

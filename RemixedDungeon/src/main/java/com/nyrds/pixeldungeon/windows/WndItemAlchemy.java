@@ -6,7 +6,6 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
-import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.actors.Char;
@@ -48,7 +47,7 @@ public class WndItemAlchemy extends Window {
     private final Text recipeDescription;
     final private Char hero;
 
-    public WndItemAlchemy(Item item, @NotNull Char chr) {
+    public WndItemAlchemy(Item baseItem, @NotNull Char chr) {
         super();
 
         hero = chr;
@@ -68,7 +67,7 @@ public class WndItemAlchemy extends Window {
         add(mainLayout);
 
         // Title
-        Text title = PixelScene.createMultiline(Utils.format(R.string.WndItemAlchemy_Title, item.name()), GuiProperties.titleFontSize());
+        Text title = PixelScene.createMultiline(Utils.format(R.string.WndItemAlchemy_Title, baseItem.name()), GuiProperties.titleFontSize());
         title.maxWidth((int) windowWidth);
         title.hardlight(Window.TITLE_COLOR);
         title.setX(MARGIN);
@@ -76,14 +75,16 @@ public class WndItemAlchemy extends Window {
 
         // Calculate player's inventory
         Map<String, Integer> playerInventory = new HashMap<>();
-        for (Item inventoryItem : hero.getBelongings().backpack.items) {
-            String itemName = inventoryItem.getEntityKind(); // Use getEntityKind() to get the class name
-            playerInventory.put(itemName, playerInventory.getOrDefault(itemName, 0) + inventoryItem.quantity());
+        for (Item item : hero.getBelongings().backpack.items) {
+            if(item.isIdentified()) {
+                String itemName = item.getEntityKind();
+                playerInventory.put(itemName, playerInventory.getOrDefault(itemName, 0) + item.quantity());
+            }
         }
 
-        // Get recipes that contain this specific item
+        // Get recipes that contain this specific baseItem
         List<Entry<List<String>, List<String>>> recipesWithItem =
-                AlchemyRecipes.getRecipesContainingItem(item.getEntityKind());
+                AlchemyRecipes.getRecipesContainingItem(baseItem.getEntityKind());
 
         // Filter to only show recipes for which the player has all required ingredients
         List<Entry<List<String>, List<String>>> availableRecipes = new ArrayList<>();
@@ -104,13 +105,13 @@ public class WndItemAlchemy extends Window {
             mainLayout.add(noRecipes);
         } else {
             for (var recipeEntry : availableRecipes) {
-                // Create a recipe list item
+                // Create a recipe list baseItem
                 RecipeListItem recipeItem = getRecipeListItem(recipeEntry, windowWidth);
 
-                // Add the recipe item to the recipes container
+                // Add the recipe baseItem to the recipes container
                 recipesContainer.add(recipeItem);
 
-                // Track this recipe item for selection
+                // Track this recipe baseItem for selection
                 recipeRows.add(recipeItem);
             }
 
@@ -396,7 +397,7 @@ public class WndItemAlchemy extends Window {
                         if (level.cellValid(mobPos)) {
                             mob.setPos(mobPos);
                             mob.makePet(hero);
-                            level.spawnMob(mob, 0, pos);
+                            level.spawnMob(mob, -1, pos);
                         } else {
                             level.animatedDrop(mob.carcass(), pos);
                         }
