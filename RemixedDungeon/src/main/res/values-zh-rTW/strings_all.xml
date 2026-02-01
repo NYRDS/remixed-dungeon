@@ -1678,6 +1678,7 @@
     <string name="Senior_Name">武僧大師</string>
     <string name="Senior_Name_Objective">武僧大師</string>
     <string name="ServiceManNPC_Desc">當地企業一名中規中矩的員工。</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">本人真誠向閣下道歉，無奈每位新的冒險者只能看最多 %d 齣電影。</string>
     <string name="ServiceManNPC_Limit_Reached">抱歉，目前您已達界限，但每升一級，您便可以再次享用我們的服務！</string>
     <string name="ServiceManNPC_Name">職員</string>
@@ -2592,6 +2593,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
