@@ -1174,6 +1174,7 @@ Parede
     <string name="Luck_Name_0">%s da Sorte</string>
     <string name="Luck_Name_1">%s da Sorte</string>
     <string name="Luck_Name_2">%s da Sorte</string>
+    <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">A cabeça de ferro desta arma causa danos substanciais.</string>
     <string name="Mace_Name">Bastão</string>
     <string name="MageArmor_ACSpecial">TERRA DERRETIDA</string>
@@ -2750,6 +2751,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

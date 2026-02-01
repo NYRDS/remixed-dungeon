@@ -1500,6 +1500,7 @@
     <string name="RatKing_Info3">Як ти посмів, квола істота, турбувати нашого короля?!</string>
     <string name="RatKing_Name">король щурів</string>
     <string name="RatKing_Name_Objective">короля щурів</string>
+    <string name="RatSkullBuff_Info">Їдка воня розпугує всіх навколишніх гризунів, змушуючи їх тікати від носія черепа.</string>
     <string name="RatSkullBuff_Name">Щуролов</string>
     <string name="RatSkull_Info">Він міг бути непоганим трофеєм, але не має жодного бажання вішати на стіну предмет від якого так тхне.</string>
     <string name="RatSkull_Info2">З іншого боку, одразу видно, що власник такого трофею може вбивати щурів, навіть таких величезних та огидних.</string>
@@ -2642,6 +2643,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
