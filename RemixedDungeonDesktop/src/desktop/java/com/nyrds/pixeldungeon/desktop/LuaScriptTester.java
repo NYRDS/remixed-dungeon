@@ -1,10 +1,14 @@
 package com.nyrds.pixeldungeon.desktop;
 
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Files;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3NativesLoader;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.nyrds.platform.game.RemixedDungeon;
+import com.watabou.utils.Bundle;
 
 import java.io.File;
-import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
@@ -17,6 +21,12 @@ public class LuaScriptTester {
         System.out.println("Current working directory: " + System.getProperty("user.dir"));
 
         try {
+            // Initialize LibGDX framework
+            initializeLibGDX();
+
+            // Initialize basic game systems needed for script testing
+            initializeGameEnvironment();
+
             // Test the BoneSaw script specifically
             testBoneSawScript();
 
@@ -28,6 +38,27 @@ public class LuaScriptTester {
         }
     }
 
+    private static void initializeLibGDX() {
+        System.out.println("Initializing LibGDX framework...");
+
+        // Load natives
+        Lwjgl3NativesLoader.load();
+
+        // Initialize Gdx.files with Lwjgl3Files implementation
+        com.badlogic.gdx.Files files = new Lwjgl3Files();
+        com.badlogic.gdx.Gdx.files = files;
+
+        System.out.println("LibGDX framework initialized.");
+    }
+
+    private static void initializeGameEnvironment() {
+        System.out.println("Initializing game environment...");
+
+        // Note: Bundle.init() and RemixedDungeon.init() don't exist as static methods
+        // We'll skip full game initialization for now since it requires complex setup
+        System.out.println("Skipped full game initialization (requires complex setup).");
+    }
+
     private static void testBoneSawScript() {
         System.out.println("Testing BoneSaw script...");
 
@@ -36,7 +67,7 @@ public class LuaScriptTester {
             String projectRoot = System.getProperty("user.dir").replace("/RemixedDungeonDesktop/src/desktop/rundir", "");
             String scriptPath = projectRoot + "/RemixedDungeon/src/main/assets/scripts/items/BoneSaw.lua";
 
-            if (Files.exists(Paths.get(scriptPath))) {
+            if (java.nio.file.Files.exists(Paths.get(scriptPath))) {
                 System.out.println("BoneSaw.lua file found at: " + scriptPath);
 
                 // Try to create a LuaScript instance to test if the script loads without errors
@@ -47,7 +78,6 @@ public class LuaScriptTester {
                     System.out.println("BoneSaw script loaded successfully without syntax errors.");
 
                     // Try to run a basic function to ensure it works
-                    // Note: This might fail due to missing game environment, which is expected
                     try {
                         Object result = script.runOptional("getVisualName", "BoneSaw");
                         System.out.println("BoneSaw getVisualName function executed (result: " + result + ")");
@@ -58,10 +88,8 @@ public class LuaScriptTester {
 
                         System.out.println("BoneSaw script functions executed successfully.");
                     } catch (Exception runtimeException) {
-                        // This is expected when running outside the game environment
-                        System.out.println("Note: Runtime error occurred (expected when running outside game environment): " +
-                                         runtimeException.getMessage());
-                        System.out.println("However, the script syntax is valid.");
+                        System.err.println("Runtime error occurred while executing BoneSaw script functions:");
+                        runtimeException.printStackTrace();
                     }
 
                 } catch (Exception e) {
