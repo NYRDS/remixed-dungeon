@@ -660,6 +660,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Halls_TileHighGrass">Fungo di fuoco</string>
     <string name="Halls_TileStatue">Pilastro</string>
     <string name="Halls_TileWater">Lava fredda</string>
+    <string name="Haste_Info">La corsa permetterà al personaggio di muoversi con una velocità tale che tutto intorno a lui apparirà statico. Una tale fretta consumerà molta energia, quindi è possibile usarla solo per un breve periodo di tempo.\n\nI maestri esperti sono in grado di rimanere veloci per un periodo di tempo più lungo.</string>
     <string name="Haste_Name">Corsa Estrema</string>
     <string name="Heal_Info">Un incantesimo piuttosto utile nel Dungeon, vero?</string>
     <string name="Heal_Name">Guarigione</string>
@@ -2161,6 +2162,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_armorstand_leather_name">Armatura di cuoio</string>
     <string name="town_deco_armorstand_plate_desc">Secondo il mercante, questa pesante armatura una volta apparteneva a un grande guerriero.</string>
     <string name="town_deco_armorstand_plate_name">Armatura di piastre</string>
+    <string name="town_deco_armorstand_scale_name">Armatura a scaglie</string>
     <string name="town_deco_banner_desc">Un elegante stendardo raffigurante i simboli di questa osteria.</string>
     <string name="town_deco_banner_name">Stendardo</string>
     <string name="town_deco_barrel_name">Barile</string>
@@ -2294,6 +2296,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
