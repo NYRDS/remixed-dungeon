@@ -668,6 +668,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="EncumbranceBuff_Info">%s\'yi etkili bir şekilde kullanmak için yeterli güç yok.</string>
     <string name="EncumbranceBuff_Name">Yük</string>
     <string name="EnslavedSoul_Desc">Neredeyse bu hayalet görüntünün içini görebiliyorsunuz. Ve bir kafatası gibi görünmesine rağmen, bazen bir anlığına acı ve ıstırap dolu bir yüz beliriyor.</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name">köleleştirilmiş ruh</string>
     <string name="EnslavedSoul_Name_Objective">esir ruh</string>
     <string name="Entanglement_Txt">dolaşıklığın %s\'ı</string>
@@ -2824,6 +2825,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

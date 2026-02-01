@@ -835,6 +835,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Hero_StaWeakness">당신은 약화되었다!</string>
     <string name="Hero_Wait">...</string>
     <string name="Hero_YouNowHave">%s을/를 얻었다.</string>
+    <string name="HideInGrassSpell_Info">숨바꼭질의 달인이 되셨습니다.</string>
     <string name="HideInGrassSpell_Name">풀숲에 숨기</string>
     <string name="Horror_Name_0">섬뜩한 %s</string>
     <string name="Horror_Name_1">섬뜩한 %s</string>
@@ -2430,6 +2431,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

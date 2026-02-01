@@ -518,6 +518,7 @@
     <string name="Codex_Story_8">遅延の刻印 - ヒーローはダメージ遅延デバフを獲得し、一度に全ダメージを受けるのではなく、ターンごとに 1 ダメージを受けるようになる。</string>
     <string name="Codex_Story_9">追放の刻印- ヒーローが攻撃を受けるたびに、視界内のランダムな位置にテレポートする可能性がある。この刻印はボス階層では機能しない。</string>
     <string name="ColdSpirit_Desc">冷気の元素霊は、最も純粋な形で冷気を具現化したものである。心を持たない魔力の塊であるため、自分を呼び出した魔道士の意志に従うか、あるいはその代わりに基本的な本能に従って行動する。</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">冷気の元素霊</string>
     <string name="ColdSpirit_Name_Objective">冷気の元素霊</string>
     <string name="ComboBuff_Info">次の攻撃はコンボ攻撃だ。</string>
@@ -2886,6 +2887,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
