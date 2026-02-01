@@ -4,7 +4,6 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.storage.FileSystem;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.apache.commons.io.input.BOMInputStream;
@@ -99,7 +98,6 @@ public class ModdingMode extends ModdingBase {
     public static boolean isSoundExists(String id) {
         String resourceId = "sound/" + id;
         String foundId = getSoundById(resourceId);
-        GLog.debug("sound: %s -> %s", id, foundId);
         return !foundId.isEmpty();
     }
 
@@ -221,16 +219,12 @@ public class ModdingMode extends ModdingBase {
     }
 
     public static @NotNull InputStream getInputStream(String resName) {
-        GLog.i("ModdingMode: Attempting to get input stream for: %s", resName);
         try {
             if (isModdingAllowed(resName)) {
-                GLog.i("ModdingMode: Using mod storage for: %s", resName);
                 return new FileInputStream(FileSystem.getInternalStorageFile(resName));
             }
-            GLog.i("ModdingMode: Using base storage for: %s", resName);
             return new FileInputStream(FileSystem.getInternalStorageFileBase(resName));
         } catch (IOException | SecurityException | ModError e) {
-            GLog.w("ModdingMode: Exception getting input stream for %s: %s", resName, e.getMessage());
             throw new ModError("Missing file: " + resName, e);
         }
     }

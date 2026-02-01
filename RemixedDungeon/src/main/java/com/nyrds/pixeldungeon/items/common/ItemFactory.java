@@ -452,7 +452,8 @@ public class ItemFactory {
         return mItemsList.containsKey(itemClass);
     }
 
-    public static Item itemByName(@NotNull String selectedItemClass) {
+    @NotNull
+    public static Item  itemByName(@NotNull String selectedItemClass) {
         try {
             {
                 Class<? extends Item> itemClass = mItemsList.get(selectedItemClass);

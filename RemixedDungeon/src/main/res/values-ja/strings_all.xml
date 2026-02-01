@@ -1301,7 +1301,7 @@
     <string name="MissileWeapon_No">いや、気が変わった</string>
     <string name="MissileWeapon_Sure">本当にそれを近接武器として装備するのか？</string>
     <string name="MissileWeapon_Yes">ああ、自分が何をしているかは分かっている</string>
-    <string name="MobAi_status">この%sは%sである</string>
+    <string name="MobAi_status">この%1$sは%2$sである</string>
     <string name="Mob_Attacking">%sは死んだことにしてくれ！</string>
     <string name="Mob_Cannot_Be_Pet">\&quot;%s\&quot; の意志は制御できないほど強い！</string>
     <string name="Mob_CantDoIt">僕にはできないよ。前足が小さいから。</string>

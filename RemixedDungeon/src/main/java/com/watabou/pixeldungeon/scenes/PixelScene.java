@@ -38,12 +38,24 @@ public class PixelScene extends Scene {
 
 	public static Camera uiCamera;
 
-	public static Font font1x;
-	public static Font font25x;
+	private static Font font1x;
 
-	public static Font font;
 
-	private static void viewportSizeChanged() {
+	public static Font getFont1x() {
+		if (font1x==null) {
+			font1x = Font.colorMarked(Assets.FONTS1X,
+					Font.LATIN_FULL);
+			font1x.baseLine = 6;
+			font1x.tracking = -1;
+		}
+		return font1x;
+	}
+
+	@Override
+	public void create() {
+
+		super.create();
+
 		float minWidth, minHeight;
 
 		if (RemixedDungeon.landscape()) {
@@ -75,23 +87,6 @@ public class PixelScene extends Scene {
 		Camera.add(uiCamera);
 	}
 
-	@Override
-	public void create() {
-
-		super.create();
-
-		viewportSizeChanged();
-		createFonts();
-	}
-
-	static private void createFonts() {
-		// 3x5 (6)
-		font1x = Font.colorMarked(Assets.FONTS1X,
-				Font.LATIN_FULL);
-		font1x.baseLine = 6;
-		font1x.tracking = -1;
-
-	}
 
 	@Override
 	public void destroy() {
@@ -100,20 +95,6 @@ public class PixelScene extends Scene {
 	}
 
 	public static float scale;
-
-	public static Font chooseFont(float size) {
-		scale = size / 14.f;
-
-		scale /= 1.8f;
-
-		if(Game.smallResScreen()) {
-			scale /= 2;
-		}
-
-		font = font25x;
-
-		return font;
-	}
 
 	public static Text createText(float size) {
 		return createText(Utils.EMPTY_STRING, size);
@@ -146,8 +127,7 @@ public class PixelScene extends Scene {
 	 * @return SystemText object with parsed markup
 	 */
 	public static Text createMultilineHighlighted(final String text, float size) {
-		Text txt = new SystemText(text, size, true);
-		return txt;
+        return new SystemText(text, size, true);
 	}
 
 	public static float align(Camera camera, float pos) {
@@ -193,14 +173,6 @@ public class PixelScene extends Scene {
 					(banner.camera.height - banner.height) / 3);
 			GameLoop.addToScene(banner);
 		}
-	}
-
-	public static Font font() {
-		return font;
-	}
-
-	public static void font(Font font) {
-		PixelScene.font = font;
 	}
 
 	private static class Fader extends ColorBlock {

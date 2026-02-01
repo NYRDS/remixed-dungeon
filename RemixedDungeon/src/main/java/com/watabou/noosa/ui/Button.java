@@ -128,7 +128,7 @@ public class Button extends Component {
 	}
 
 	@Override
-	protected void layout() {
+    public void layout() {
 		//GLog.debug("hot area: %3.0f %3.0f %3.0f %3.0f", x, y, width, height);
 		hotArea.setX(x);
 		hotArea.setY(y);

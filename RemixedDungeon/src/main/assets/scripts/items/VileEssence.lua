@@ -6,17 +6,20 @@
 
 local RPD = require "scripts/lib/commonClasses"
 
-local item = require "scripts/lib/item"
+local itemLib = require "scripts/lib/item"
 
-return item.init{
+return itemLib.init{
     desc  = function ()
         return {
-            image     = 6,
-            imageFile = "items/materials.png",
+            image     = 81+16,
+            imageFile = "items.png",
             name      = "VileEssence_Name",
             info      = "VileEssence_Info",
             price     = 10,
             stackable = true
         }
-    end
+    end,
+    glowing = function(self, item)
+        return itemLib.makeGlowing(0xFF550055, 2)
+    end,
 }

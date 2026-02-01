@@ -44,11 +44,11 @@ Lufix
     <string name="AlchemyPot_SelectSeed">Wybierz nasiono które chcesz wrzucić</string>
     <string name="AllowStatisticsCollectionScene_Allow">Pozwól</string>
     <string name="AllowStatisticsCollectionScene_Deny">Odmów</string>
-    <string name="AllowStatisticsCollectionScene_Request">Jeśli pozwolisz, Remixed Dungeon będzie zbierać dane odnośnie Twojej rozgrywki. Informacje to posłużą do: 
+    <string name="AllowStatisticsCollectionScene_Request">Jeśli pozwolisz, Remixed Dungeon będzie zbierać dane odnośnie Twojej rozgrywki. Informacje to posłużą do:
 - namierzania i naprawy pomniejszych błędów
 - poprawy balansu rozgrywki
 - naprawy problemów z wydajnością na poszczególnych urządzeniach
-- publikowania zabawnych ciekawostek od czasu do czasu :) 
+- publikowania zabawnych ciekawostek od czasu do czasu :)
 W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="AllowStatisticsCollectionScene_Title">Wykres statystyk użytkowania</string>
     <string name="AmokArrow_Gender">feminine</string>

@@ -1,0 +1,412 @@
+{
+  "recipes": [
+    {
+      "input": ["Sungrass.Seed", "Sungrass.Seed", "DewVial"],
+      "outputs": ["PotionOfHealing"]
+    },
+    {
+      "input": ["Firebloom.Seed", "MysteryMeat"],
+      "outputs": ["PotionOfLiquidFlame"]
+    },
+    {
+      "input": ["Icecap.Seed", "Dewdrop"],
+      "outputs": ["PotionOfFrost"]
+    },
+    {
+      "input": ["Sorrowmoss.Seed", "CorpseDust"],
+      "outputs": ["PotionOfToxicGas"]
+    },
+    {
+      "input": ["Dreamweed.Seed", "RatHide"],
+      "outputs": ["PotionOfInvisibility"]
+    },
+    {
+      "input": ["Fadeleaf.Seed", "Dewdrop"],
+      "outputs": ["PotionOfMindVision"]
+    },
+    {
+      "input": ["Earthroot.Seed", "CorpseDust"],
+      "outputs": ["PotionOfParalyticGas"]
+    },
+    {
+      "input": ["Moongrace.Seed", "DewVial"],
+      "outputs": ["PotionOfMana"]
+    },
+    {
+      "input": ["RatSkull", "RatSkull", "RatSkull", "SkeletonKey"],
+      "outputs": ["Skeleton"]
+    },
+    {
+      "input": ["CorpseDust", "CorpseDust", "DewVial"],
+      "outputs": ["FetidRat"]
+    },
+    {
+      "input": ["Gold", "IronKey"],
+      "outputs": ["Mimic"]
+    },
+    {
+      "input": ["MysteryMeat", "MysteryMeat", "MysteryMeat", "MysteryMeat", "MysteryMeat", "Dewdrop"],
+      "outputs": ["Piranha"]
+    },
+    {
+      "input": ["Carcass of Rat", "SkeletonKey"],
+      "outputs": ["Skeleton"]
+    },
+    {
+      "input": ["Carcass of Albino", "CorpseDust"],
+      "outputs": ["FetidRat"]
+    },
+    {
+      "input": ["Carcass of Thief", "DriedRose"],
+      "outputs": ["Ghost"]
+    },
+    {
+      "input": ["MysteryMeat", "RatSkull"],
+      "outputs": ["PotionOfHealing", "Skeleton"]
+    },
+    {
+      "input": ["CorpseDust", "Dewdrop", "BoneShard"],
+      "outputs": ["FetidRat", "PotionOfMight"]
+    },
+    {
+      "input": ["DewVial", "DewVial", "Dewdrop"],
+      "outputs": ["PotionOfHealing"]
+    },
+    {
+      "input": ["RatHide", "RatHide", "Dewdrop"],
+      "outputs": ["PotionOfHealing"]
+    },
+    {
+      "input": ["Gold", "Gold", "Gold", "DewVial"],
+      "outputs": ["PotionOfStrength"]
+    },
+    {
+      "input": ["IronKey", "SkeletonKey", "GoldenKey"],
+      "outputs": ["DewVial"]
+    },
+    {
+      "input": ["CorpseDust", "Dewdrop", "DwarfToken"],
+      "outputs": ["PotionOfExperience"]
+    },
+    {
+      "input": ["Carcass of Scorpio", "Dewdrop", "CorpseDust"],
+      "outputs": ["PotionOfLevitation"]
+    },
+    {
+      "input": ["Rotberry.Seed", "DewVial", "BoneShard"],
+      "outputs": ["PotionOfPurity"]
+    },
+    {
+      "input": ["Carcass of Golem", "Dewdrop", "DewVial"],
+      "outputs": ["Golem"]
+    },
+    {
+      "input": ["Carcass of Shaman", "CorpseDust", "Firebloom.Seed"],
+      "outputs": ["BurningFist"]
+    },
+    {
+      "input": ["Carcass of Bat", "Carcass of Rat", "Dewdrop"],
+      "outputs": ["Bat"]
+    },
+    {
+      "input": ["CorpseDust", "CorpseDust", "CorpseDust", "CorpseDust", "Dewdrop"],
+      "outputs": ["Skeleton", "Skeleton"]
+    },
+    {
+      "input": ["MysteryMeat", "MysteryMeat", "RatHide"],
+      "outputs": ["PotionOfHealing", "OverpricedRation"]
+    },
+    {
+      "input": ["Dewdrop", "Dewdrop", "Sungrass.Seed"],
+      "outputs": ["PotionOfHealing"]
+    },
+    {
+      "input": ["CorpseDust", "IronKey", "DewVial"],
+      "outputs": ["Skeleton"]
+    },
+    {
+      "input": ["DwarfToken", "Dewdrop", "CorpseDust"],
+      "outputs": ["PotionOfFrost"]
+    },
+    {
+      "input": ["RatHide", "CorpseDust", "Dewdrop"],
+      "outputs": ["PotionOfInvisibility"]
+    },
+    {
+      "input": ["MysteryMeat", "MysteryMeat", "MysteryMeat", "DewVial"],
+      "outputs": ["PotionOfStrength"]
+    },
+    {
+      "input": ["BoneShard", "BoneShard", "CorpseDust"],
+      "outputs": ["PotionOfParalyticGas"]
+    },
+    {
+      "input": ["Carcass of Crab", "DewVial"],
+      "outputs": ["Piranha"]
+    },
+    {
+      "input": ["Carcass of Scorpio", "CorpseDust"],
+      "outputs": ["Skeleton"]
+    },
+    {
+      "input": ["Carcass of Golem", "Carcass of Golem"],
+      "outputs": ["Golem"]
+    },
+    {
+      "input": ["DewVial", "CorpseDust", "Firebloom.Seed"],
+      "outputs": ["PotionOfLiquidFlame"]
+    },
+    {
+      "input": ["Dewdrop", "Dewdrop", "Dewdrop", "Dewdrop"],
+      "outputs": ["DewVial"]
+    },
+    {
+      "input": ["Carcass of Rat", "Carcass of Rat", "Carcass of Rat"],
+      "outputs": ["Skeleton"]
+    },
+    {
+      "input": ["Carcass of Snail", "Carcass of Snail"],
+      "outputs": ["Snail"]
+    },
+    {
+      "input": ["Carcass of Snail", "Carcass of Snail", "Carcass of Gnoll"],
+      "outputs": ["Shaman"]
+    },
+    {
+      "input": ["Carcass of Gnoll", "Carcass of Gnoll", "WoodenShield"],
+      "outputs": ["Brute"]
+    },
+    {
+      "input": ["Carcass of Rat", "ClothArmor"],
+      "outputs": ["RatArmor"]
+    },
+    {
+      "input": ["Sungrass.Seed", "MysteryMeat", "DewVial", "CorpseDust"],
+      "outputs": ["PotionOfHealing", "PotionOfStrength"]
+    },
+    {
+      "input": ["Firebloom.Seed", "Icecap.Seed", "Dewdrop", "Dewdrop"],
+      "outputs": ["PotionOfLiquidFlame", "PotionOfFrost"]
+    },
+    {
+      "input": ["Sorrowmoss.Seed", "Dreamweed.Seed", "CorpseDust", "RatHide"],
+      "outputs": ["PotionOfToxicGas", "PotionOfInvisibility"]
+    },
+    {
+      "input": ["Earthroot.Seed", "Fadeleaf.Seed", "BoneShard", "DewVial"],
+      "outputs": ["PotionOfParalyticGas", "PotionOfMindVision"]
+    },
+    {
+      "input": ["Moongrace.Seed", "Rotberry.Seed", "Dewdrop", "CorpseDust"],
+      "outputs": ["PotionOfMana", "PotionOfPurity"]
+    },
+    {
+      "input": ["Carcass of Golem", "Carcass of Shaman", "DewVial"],
+      "outputs": ["Golem", "BurningFist"]
+    },
+    {
+      "input": ["Carcass of Crab", "Carcass of Scorpio", "Dewdrop"],
+      "outputs": ["Piranha", "Skeleton"]
+    },
+    {
+      "input": ["CorpseDust", "CorpseDust", "CorpseDust", "DwarfToken", "DewVial"],
+      "outputs": ["FetidRat", "PotionOfExperience"]
+    },
+    {
+      "input": ["RatHide", "RatSkull", "MysteryMeat", "Dewdrop"],
+      "outputs": ["PotionOfHealing", "Skeleton"]
+    },
+    {
+      "input": ["IronKey", "SkeletonKey", "GoldenKey", "Gold", "Gold"],
+      "outputs": ["DewVial", "PotionOfStrength"]
+    },
+    {
+      "input": ["DewVial", "DewVial", "DewVial", "Dewdrop", "CorpseDust"],
+      "outputs": ["PotionOfHealing", "PotionOfMight", "Dewdrop"]
+    },
+    {
+      "input": ["Carcass of Bat", "Carcass of Thief", "DriedRose", "DewVial"],
+      "outputs": ["Bat", "Ghost", "PotionOfInvisibility"]
+    },
+    {
+      "input": ["BoneShard", "BoneShard", "BoneShard", "CorpseDust", "CorpseDust"],
+      "outputs": ["PotionOfParalyticGas", "Skeleton", "Skeleton"]
+    },
+    {
+      "input": ["MysteryMeat", "MysteryMeat", "MysteryMeat", "MysteryMeat", "MysteryMeat", "MysteryMeat"],
+      "outputs": ["PotionOfStrength", "PotionOfHealing", "OverpricedRation"]
+    },
+    {
+      "input": ["CommonArrow", "PotionOfLiquidFlame"],
+      "outputs": ["FireArrow"]
+    },
+    {
+      "input": ["CommonArrow", "PotionOfFrost"],
+      "outputs": ["FrostArrow"]
+    },
+    {
+      "input": ["CommonArrow", "PotionOfToxicGas"],
+      "outputs": ["PoisonArrow"]
+    },
+    {
+      "input": ["CommonArrow", "PotionOfHealing"],
+      "outputs": ["HealthArrow"]
+    },
+    {
+      "input": ["CommonArrow", "PotionOfParalyticGas"],
+      "outputs": ["ParalysisArrow"]
+    },
+    {
+      "input": ["CommonArrow", "PotionOfStrength"],
+      "outputs": ["AmokArrow"]
+    },
+    {
+      "input": ["ScrollOfIdentify", "PotionOfInvisibility"],
+      "outputs": ["BlankScroll"]
+    },
+    {
+      "input": ["RottenMeat", "PotionOfPurity"],
+      "outputs": []
+    },
+    {
+      "input": ["Sungrass.Seed", "Dewdrop"],
+      "outputs": ["Sungrass.Seed", "Sungrass.Seed"]
+    },
+    {
+      "input": ["Firebloom.Seed", "Dewdrop"],
+      "outputs": ["Firebloom.Seed", "Firebloom.Seed"]
+    },
+    {
+      "input": ["Icecap.Seed", "Dewdrop"],
+      "outputs": ["Icecap.Seed", "Icecap.Seed"]
+    },
+    {
+      "input": ["Sorrowmoss.Seed", "Dewdrop"],
+      "outputs": ["Sorrowmoss.Seed", "Sorrowmoss.Seed"]
+    },
+    {
+      "input": ["Dreamweed.Seed", "Dewdrop"],
+      "outputs": ["Dreamweed.Seed", "Dreamweed.Seed"]
+    },
+    {
+      "input": ["Fadeleaf.Seed", "Dewdrop"],
+      "outputs": ["Fadeleaf.Seed", "Fadeleaf.Seed"]
+    },
+    {
+      "input": ["Earthroot.Seed", "Dewdrop"],
+      "outputs": ["Earthroot.Seed", "Earthroot.Seed"]
+    },
+    {
+      "input": ["Moongrace.Seed", "Dewdrop"],
+      "outputs": ["Moongrace.Seed", "Moongrace.Seed"]
+    },
+    {
+      "input": ["Sungrass.Seed", "MysteryMeat", "DewVial"],
+      "outputs": ["PotionOfHealing", "PotionOfStrength"]
+    },
+    {
+      "input": ["Firebloom.Seed", "CorpseDust", "Dewdrop"],
+      "outputs": ["PotionOfLiquidFlame", "PotionOfStrength"]
+    },
+    {
+      "input": ["Icecap.Seed", "RatHide", "DewVial"],
+      "outputs": ["PotionOfFrost", "PotionOfHealing"]
+    },
+    {
+      "input": ["Sorrowmoss.Seed", "BoneShard", "Dewdrop"],
+      "outputs": ["PotionOfToxicGas", "PotionOfParalyticGas"]
+    },
+    {
+      "input": ["Dreamweed.Seed", "CorpseDust", "DewVial"],
+      "outputs": ["PotionOfInvisibility", "PotionOfMindVision"]
+    },
+    {
+      "input": ["Fadeleaf.Seed", "RatHide", "Dewdrop"],
+      "outputs": ["PotionOfMindVision", "PotionOfHealing"]
+    },
+    {
+      "input": ["Earthroot.Seed", "MysteryMeat", "DewVial"],
+      "outputs": ["PotionOfParalyticGas", "PotionOfStrength"]
+    },
+    {
+      "input": ["Moongrace.Seed", "CorpseDust", "Dewdrop"],
+      "outputs": ["PotionOfMana", "PotionOfExperience"]
+    },
+    {
+      "input": ["Rotberry.Seed", "DewVial", "Dewdrop"],
+      "outputs": ["PotionOfPurity", "PotionOfHealing"]
+    },
+    {
+      "input": ["Dewdrop", "Dewdrop", "Dewdrop", "Dewdrop", "Dewdrop"],
+      "outputs": ["DewVial"]
+    },
+    {
+      "input": ["DewVial", "DewVial"],
+      "outputs": ["Dewdrop", "Dewdrop", "Dewdrop", "Dewdrop"]
+    },
+    {
+      "input": ["CorpseDust", "Dewdrop", "DwarfToken"],
+      "outputs": ["Skeleton"]
+    },
+    {
+      "input": ["Carcass of Rat", "Carcass of Gnoll", "DewVial"],
+      "outputs": ["Bandit"]
+    },
+    {
+      "input": ["Carcass of Golem", "IronKey", "DewVial"],
+      "outputs": ["Statue"]
+    },
+    {
+      "input": ["Carcass of Piranha", "Dewdrop", "Dewdrop"],
+      "outputs": ["RottingFist"]
+    },
+    {
+      "input": ["Carcass of Scorpio", "DwarfToken", "DewVial"],
+      "outputs": ["Senior"]
+    },
+    {
+      "input": ["CorpseDust", "CorpseDust", "CorpseDust", "CorpseDust", "CorpseDust", "DewVial"],
+      "outputs": ["Skeleton", "Skeleton", "Skeleton"]
+    },
+    {
+      "input": ["MysteryMeat", "MysteryMeat", "CorpseDust", "DewVial"],
+      "outputs": ["FetidRat", "PotionOfHealing"]
+    },
+    {
+      "input": ["RatHide", "RatSkull", "Dewdrop", "CorpseDust"],
+      "outputs": ["Skeleton", "PotionOfHealing"]
+    },
+    {
+      "input": ["DwarfToken", "Dewdrop", "Dewdrop", "Dewdrop"],
+      "outputs": ["PotionOfExperience"]
+    },
+    {
+      "input": ["BoneShard", "BoneShard", "BoneShard", "DewVial"],
+      "outputs": ["PotionOfParalyticGas", "PotionOfStrength"]
+    },
+    {
+      "input": ["Carcass of Thief", "DriedRose", "DewVial"],
+      "outputs": ["Ghost"]
+    },
+    {
+      "input": ["Carcass of Bandit", "Dewdrop", "CorpseDust"],
+      "outputs": ["Skeleton"]
+    },
+    {
+      "input": ["Carcass of Crab", "Carcass of Piranha", "DewVial"],
+      "outputs": ["Tengu"]
+    },
+    {
+      "input": ["Carcass of Monk", "DewVial", "DewVial"],
+      "outputs": ["Warlock"]
+    },
+    {
+      "input": ["Carcass of Golem", "Carcass of Statue", "DewVial"],
+      "outputs": ["DM300"]
+    },
+    {
+      "input": ["Carcass of Yog", "SoulShard", "DewVial"],
+      "outputs": ["YogsBrain", "YogsEye", "YogsHeart", "YogsTeeth"]
+    }
+  ]
+}

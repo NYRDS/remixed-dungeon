@@ -52,7 +52,7 @@ public class ModsButton extends ImageButton implements InterstitialPoint, Downlo
 
 
     @Override
-    protected void layout() {
+    public void layout() {
         super.layout();
 
         image.setX(PixelScene.align(x + (width - image.width()) / 2));

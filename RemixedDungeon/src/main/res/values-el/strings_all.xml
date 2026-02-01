@@ -1867,7 +1867,7 @@
     <string name="ScrollOfTeleportation_Info">Το ξόρκι αυτής της περγαμηνής τηλεμεταφέρει άμεσα τον αναγνώστη σε ένα τυχαίο σημείο του ορόφου. Μπορεί να χρησιμοποιηθεί για να ξεφύγεις από μια επικίνδυνη κατάσταση - αλλά ένας άτυχος αναγνώστης μπορεί να βρεθεί σε ένα ακόμα πιο επικίνδυνο μέρος.</string>
     <string name="ScrollOfTeleportation_Name">πάπυρος τηλεμεταφοράς</string>
     <string name="ScrollOfTeleportation_NoTeleport">Η ισχυρή μαγική αύρα αυτού του μέρους εμποδίζει την τηλεμεταφορά!</string>
-    <string name="ScrollOfTeleportation_NoTeleport2">Η ισχυρή μαγική αύρα αυτού του μέρους εμποδίζει την τηλεμεταφορά 
+    <string name="ScrollOfTeleportation_NoTeleport2">Η ισχυρή μαγική αύρα αυτού του μέρους εμποδίζει την τηλεμεταφορά
     του πλάσματος (%s)!</string>
     <string name="ScrollOfTeleportation_Teleport">Τηλεμεταφέρθηκες εν ριπή οφθαλμού σε ένα άλλο σημείο του ορόφου.</string>
     <string name="ScrollOfTeleportation_Teleport2">%s: τηλεμεταφέρθηκε σε ένα άλλο σημείο του επιπέδου.</string>
@@ -2411,7 +2411,44 @@
     -- Η ψυχο-αράχνη ενδυναμώνει τις άλλες αράχνες αντί να αποδυναμώνει τον ήρωα.\n
     - Διορθώσεις σφαλμάτων\n
     </string>
-    <string name="Welcome_Text_32">
+  <string name="WndTilesKind_Title">Και κάτι ακόμη:</string>
+  <string name="WndTilesKind_text">Πρόκειται να μπεις σε μια κατακόμβη που έχει κυριευτεί από τη διαβολική μαγεία· τουλάχιστον μπορείς να επιλέξεις πώς θα τη βλέπεις.\nΘέλεις να είναι με σύγχρονα ψευδο-3D γραφικά ή με την κλασική επίπεδη εμφάνιση;\nΜπορείς να το αλλάξεις αργότερα στο μενού ρυθμίσεων του παιχνιδιού.</string>
+  <string name="WndTilesKind_NewLook">Νέα εμφάνιση</string>
+  <string name="WndTilesKind_ClassicLook">Κλασική εμφάνιση</string>
+  <string name="MobAi_status">- %s: %s</string>
+  <string name="WndCustomizations_Title">Προσαρμογές</string>
+  <string name="IceGuardianCore_DieInfo">Κάνει τόσο κρύο εδώ... Καλύτερα να επιστρέψω στο επίπεδο #14 και να βρω ένα πιο ζεστό μέρος.</string>
+  <string name="Lich_DieInfo">Ποτέ δεν συμπάθησα αυτόν τον νεκρομάντη. Ώρα να επιστρέψω στο επίπεδο #7 και να αναζητήσω την επόμενη περιπέτεια.</string>
+  <string name="SpiderQueen_DieInfo">Η βασίλισσα αράχνη εξουδετερώθηκε! Τώρα πρέπει να επιστρέψω στο επίπεδο #5 και να συνεχίσω το ταξίδι μου στα βάθη.</string>
+  <string name="WndModSelect_ReallyDelete">Διαγραφή σίγουρα;</string>
+  <string name="WndModSelect_AreYouSure">Διαγραφή τροποποίησης: %s. Σίγουρα;</string>
+  <string name="Challenges_Names_8">Χωρίς την πόλη</string>
+  <string name="Challenges_Descriptions_8">Το ταξίδι σου ξεκινά μες στους σκοτεινούς κι επικίνδυνους υπονόμους της πόλης, και η μόνη σου διέξοδος προς την επιφάνεια είναι φραγμένη. Σαν να μην έφτανε αυτό, μπορείς να χρησιμοποιείς μόνο τον εξοπλισμό που βρίσκεις μες στην κατακόμβη. Έχοντας περιορισμένους πόρους κι εξοπλισμό, μόνο οι ικανότητες και η στρατηγική θα κρίνουν το αν θα επιβιώσεις.</string>
+  <string name="EncumbranceBuff_CharAct_1">Δεν έχω αρκετή δύναμη για να κρατήσω καλά το εφόδιο (%s).</string>
+  <string name="EncumbranceBuff_CharAct_2">Αυτό το εφόδιο (%s) μού είναι πολύ βαρύ για να το χρησιμοποιήσω αποτελεσματικά.</string>
+  <string name="EncumbranceBuff_CharAct_3">Πρέπει να δουλέψω με τη δύναμή μου για να χρησιμοποιήσω το εφόδιο (%s).</string>
+  <string name="EncumbranceBuff_CharAct_4">Μου λείπει η δύναμη για να αξιοποιήσω το εφόδιο (%s) πλήρως.</string>
+  <string name="EncumbranceBuff_CharAct_5">Το εφόδιο (%s) είναι πολύ βαρύ για να το αντέξω.</string>
+  <string name="Typical_Damage">Τυπική ζημιά</string>
+  <string name="Damage_Reduction">Μείωση ζημιάς</string>
+  <string name="Attack_Range">Εμβέλεια επίθεσης</string>
+  <string name="Movement_Speed">Ταχύτητα κίνησης</string>
+  <string name="Attack_Cooldown">Αναπλήρωση επίθεσης</string>
+  <string name="View_Distance">Οπτικό πεδίο</string>
+  <string name="WndHero_Info">Πληροφορίες</string>
+  <string name="ChaosShield_name">ασπίδα του χάους</string>
+  <string name="ChaosShield_desc">Η ασπίδα του χάους είναι το αποτέλεσμα της ανάμειξης ενός κρυστάλλου του χάους με μια κοινή ασπίδα. Υλοποιεί τυχαίες χαοτικές επιδράσεις με κάθε επιτυχημένο χτύπημα.</string>
+  <string name="ChaosCrystal_ShieldFused">Ο κρύσταλλος ενώθηκε με την ασπίδα σου και πήρε τη μορφή του χάους.</string>
+  <string name="Actions_Speed">Επίπεδο φούριας</string>
+  <string name="ChampionOfAirBuff_Name">Μαχητής του αέρα</string>
+  <string name="ChampionOfAirBuff_Info">Αυτό το χαρακτηριστικό δίνει στο πλάσμα την ουσία των ανέμων, ενισχύοντας την ευκινησία και τη μαχητική του δεινότητα. Ο μαχητής του αέρα είναι ένας τρομερός αντίπαλος, ικανός να εξαπολύει ταχείες και καταστροφικές επιθέσεις που αλλάζουν γρήγορα την πορεία της μάχης.</string>
+  <string name="ChampionOfWaterBuff_Name">Μαχητής του νερού</string>
+  <string name="ChampionOfWaterBuff_Info">Ο μαχητής του νερού ενσαρκώνει την ακατάβλητη ισχύ των οκεανών, ενισχύοντας την αντοχή και τη γενναιοψυχία του. Ως αποτέλεσμα, γίνεται ένας θαραλλέος αντίπαλος, ικανός να αντέχει και να στέκεται ως ακλόνητος φρουρός μπροστά στις αντιξοότητες.</string>
+  <string name="ChampionOfFireBuff_Name">Μαχητής της φωτιάς</string>
+  <string name="ChampionOfFireBuff_Info">Εμποτισμένο με την οργή της φλόγας, αυτό το χαρακτηριστικό αυξάνει την αγριότητα και τη μαχητική δεινότητα του πλάσματος. Ο μαχητής της φωτιάς εγείρεται ως ένας φοβερός αντίπαλος, εξαπολύοντας καταστροφικές επιθέσεις που τυλίγουν τους εχθρούς στις φλόγες και προκαλώντας τον τρόμο σε όλους όσους τολμούν να του αντιταχθούν.</string>
+  <string name="ChampionOfEarthBuff_Name">Μαχητής της γης</string>
+  <string name="ChampionOfEarthBuff_Info">Ο μαχητής της γης ενσαρκώνει μια ακατανίκητη δύναμη, μιας και το χαρακτηριστικό αυτό ενισχύει την αντοχή του στη ζημιά και τη μέγιστη ζωτική του ισχύ. Αυτή η μεταμόρφωση τον καθιστά έναν τρομακτικό αντίπαλο μες στα άγνωστα βάθη, ικανό να αγνοεί τις επιθέσεις και να αντέχει παρατεταμένες μάχες με ακλόνητη αποφασιστικότητα.</string>
+  <string name="Welcome_Text_32">
 remix.32\n
     - Παιχνίδι:\n
     -- Οι εχθροί και οι σύμμαχοι μπορούν πλέον να αποκτούν εμπειρία και επίπεδα\n

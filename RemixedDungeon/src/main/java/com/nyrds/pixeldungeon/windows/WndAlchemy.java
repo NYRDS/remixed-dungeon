@@ -1,199 +1,258 @@
 package com.nyrds.pixeldungeon.windows;
 
-import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.input.Touchscreen;
-import com.nyrds.util.Util;
-import com.watabou.noosa.TouchArea;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.items.Item;
+import com.nyrds.pixeldungeon.alchemy.AlchemyRecipe;
+import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
+import com.nyrds.util.GuiProperties;
+import com.watabou.noosa.Text;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.PointF;
-import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
+/**
+ * Window for displaying and executing alchemy recipes
+ */
 public class WndAlchemy extends Window {
 
-    TouchController touch;
-    List<ItemSprite> sprites = new ArrayList<>();
+    private static final int MARGIN = 2;
+    private static final int TITLE_COLOR = 0xFFFF44;
+    private final VBox mainLayout;
 
-    float timer = 0;
-    private static final float REPULSION_FORCE = 1.5f;
-    private static final float BORDER_MARGIN = 5f; // Margin to keep items within window
+    // Track selected recipe
+    private AlchemyRecipe selectedRecipe;
+    private RecipeListItem selectedRow;
+    private RedButton executeButton;
+
+    // Track recipe rows for selection
+    private ArrayList<RecipeListItem> recipeRows = new ArrayList<>();
+
+    // Transmutation circle for alchemy effects
+    private TransmutationCircle transmutationCircle;
 
     public WndAlchemy() {
-        int windowWidth = 160;
-        int windowHeight = 120;
+        super();
 
-        for (Item item : Dungeon.hero.getBelongings()) {
-            ItemSprite sprite = new ItemSprite(item);
+        // Calculate almost fullscreen dimensions
+        float screenWidth = PixelScene.uiCamera.width;
+        float screenHeight = PixelScene.uiCamera.height;
 
-            // Calculate random position within window boundaries
-            float maxX = windowWidth - sprite.width() - BORDER_MARGIN;
-            float maxY = windowHeight - sprite.height() - BORDER_MARGIN;
+        // Leave some margin around the window
+        float windowWidth = screenWidth - 20; // 10px margin on each side
+        float windowHeight = screenHeight - 20; // 10px margin on each side
 
-            // Ensure random position stays within bounds
-            float randomX = Math.max(BORDER_MARGIN, Random.Float(maxX));
-            float randomY = Math.max(BORDER_MARGIN, Random.Float(maxY));
+        // Main layout
+        mainLayout = new VBox();
+        mainLayout.setRect(MARGIN, MARGIN, windowWidth - 2 * MARGIN, 0);
+        add(mainLayout);
 
-            sprite.setPos(randomX, randomY);
-            sprites.add(sprite);
-            add(sprite);
+        // Title
+        Text title = PixelScene.createText("Alchemy Recipes", GuiProperties.titleFontSize());
+        title.hardlight(TITLE_COLOR);
+        title.setX(MARGIN);
+        mainLayout.add(title);
+
+        // Recipes container
+        VBox recipesContainer = new VBox();
+        recipesContainer.setRect(0, 0, windowWidth - 4 * MARGIN, 0);
+        recipesContainer.setGap(0);
+
+        var allRecipes = AlchemyRecipes.getAllRecipes();
+
+        for (var recipeEntry : allRecipes) {
+            // Create a recipe list item
+            RecipeListItem recipeItem = getRecipeListItem(recipeEntry, windowWidth);
+
+            // Add the recipe item to the recipes container
+            recipesContainer.add(recipeItem);
+
+            // Track this recipe item for selection
+            recipeRows.add(recipeItem);
         }
 
-        touch = new TouchController();
-        touch.camera = PixelScene.uiCamera;
-        add(touch);
 
-        resize(windowWidth, windowHeight);
+        // Add scroll pane for recipes with almost fullscreen height
+        float scrollHeight = windowHeight - mainLayout.childsHeight() - 40; // Account for title, padding, and buttons
+
+        // Create the scroll pane and override the onClick method to handle recipe selection
+
+
+        ScrollPane recipeScrollPane = createScrollPane(recipesContainer, allRecipes);
+        recipeScrollPane.setRect(0, 0, windowWidth, scrollHeight); // Almost fullscreen height for scrollable area
+        recipeScrollPane.measure();
+        mainLayout.add(recipeScrollPane);
+
+        // Execute and Close buttons container
+        HBox buttonsContainer = new HBox(windowWidth - 2 * MARGIN);
+        buttonsContainer.setAlign(HBox.Align.Width);
+
+        // Execute button
+        executeButton = new RedButton("Execute Recipe") {
+            @Override
+            protected void onClick() {
+                executeSelectedRecipe();
+            }
+        };
+        executeButton.setSize(Math.min(80, windowWidth/4), 18);
+        executeButton.enable(false); // Initially disabled until a recipe is selected
+        buttonsContainer.add(executeButton);
+
+        // Check Available Recipes button
+        RedButton checkRecipesButton = new RedButton("Check Available") {
+            @Override
+            protected void onClick() {
+                hide();
+                GameScene.show(new WndRecipeChecker());
+            }
+        };
+        checkRecipesButton.setSize(Math.min(100, windowWidth/3), 18);
+        buttonsContainer.add(checkRecipesButton);
+
+        // Close button
+        RedButton closeButton = new RedButton("Close") {
+            @Override
+            protected void onClick() {
+                hide();
+            }
+        };
+        closeButton.setSize(Math.min(60, windowWidth/5), 18);
+        buttonsContainer.add(closeButton);
+
+        mainLayout.add(buttonsContainer);
+
+
+
+        // Update the layout
+        mainLayout.layout();
+        setupTransmutationCircle(windowWidth, windowHeight);
+
+        addAfter(transmutationCircle,chrome);
+        resize((int)windowWidth, (int)windowHeight);
+    }
+
+    private void setupTransmutationCircle(float windowWidth, float windowHeight) {
+        // Create the transmutation circle
+        transmutationCircle = new TransmutationCircle();
+        float scale = 0.4f;
+
+        transmutationCircle.alpha(0.3f);
+        //transmutationCircle.brightness(0.5f);
+
+        transmutationCircle.setScale(scale);
+
+        transmutationCircle.setPos(windowWidth/2 - transmutationCircle.width/2, windowHeight/2 - transmutationCircle.height/2);
+
+
+        // Add it to the window first so it appears behind other elements
+    }
+    private RecipeListItem getRecipeListItem(AlchemyRecipe recipeEntry, float windowWidth) {
+        RecipeListItem recipeItem = new RecipeListItem(recipeEntry.getInput(), recipeEntry.getOutput());
+
+        // Set the size for the recipe item
+        recipeItem.setSize(windowWidth, recipeItem.height());
+        // Click handling is now done in the recipe item itself
+        recipeItem.setOnClickListener(() -> {
+            // Deselect previous selection
+            if (selectedRow != null) {
+                selectedRow.setSelected(false);
+            }
+
+            // Update selection
+            selectedRow = recipeItem;
+            selectedRecipe = recipeEntry;
+
+            // Highlight the selected row
+            selectedRow.setSelected(true);
+
+            // Update button to reflect selection
+            updateExecuteButton();
+
+            // Update the transmutation circle with the selected recipe as seed
+            if (transmutationCircle != null) {
+                transmutationCircle.setRecipe(recipeEntry.getInput(), recipeEntry.getOutput());
+            }
+        });
+        return recipeItem;
+    }
+
+    private ScrollPane createScrollPane(VBox recipesContainer, List<AlchemyRecipe> allRecipes) {
+        ScrollPane recipeScrollPane = new ScrollPane(recipesContainer) {
+            @Override
+            public void onClick(float x, float y) {
+                // Iterate through the recipe items to find which one was clicked
+                for (int i = 0; i < recipeRows.size(); i++) {
+                    RecipeListItem recipeItem = recipeRows.get(i);
+
+                    // Check if the click is within the bounds of this recipe item
+                    if (recipeItem.inside(x, y)) {
+                        // Deselect previous selection
+                        if (selectedRow != null) {
+                            selectedRow.setSelected(false);
+                        }
+
+                        // Select current item
+                        selectedRow = recipeItem;
+                        selectedRecipe = allRecipes.get(i);
+
+                        // Highlight the selected row
+                        selectedRow.setSelected(true);
+
+                        // Update button to reflect selection
+                        updateExecuteButton();
+
+                        // Update the transmutation circle with the selected recipe as seed
+                        if (transmutationCircle != null) {
+                            transmutationCircle.setRecipe(selectedRecipe.getInput(), selectedRecipe.getOutput());
+                        }
+                        break;
+                    }
+                }
+            }
+        };
+        recipeScrollPane.scrollTo(0,0);
+        return recipeScrollPane;
+    }
+
+    private void updateExecuteButton() {
+        // Find the execute button and enable/disable it based on selection
+        // We'll store a reference to the execute button instead of searching each time
+        executeButton.enable(selectedRecipe != null);
+    }
+
+    private void executeSelectedRecipe() {
+        //TODO - implement
     }
 
     @Override
     public void update() {
         super.update();
-        timer += GameLoop.elapsed;
-
-        // Apply repulsive forces between sprites and enforce boundaries
-        for (int i = 0; i < sprites.size(); i++) {
-            ItemSprite sprite = sprites.get(i);
-
-            // Only apply physics to non-dragged sprites
-            if (sprite != touch.draggedSprite) {
-                // Apply repulsion with other sprites
-                for (int j = 0; j < sprites.size(); j++) {
-                    if (i != j) {
-                        ItemSprite other = sprites.get(j);
-                        applyRepulsion(sprite, other);
-                    }
-                }
-
-                // Keep sprite within window boundaries
-                enforceBoundaries(sprite);
-            }
-        }
+        // Update the layout
+        mainLayout.layout();
+        float windowHeight = PixelScene.uiCamera.height - 20; // 10px margin on each side
+        resize(PixelScene.uiCamera.width - 20, (int)windowHeight);
     }
 
-    // Keep sprite within window boundaries
-    private void enforceBoundaries(ItemSprite sprite) {
-        float minX = BORDER_MARGIN;
-        float minY = BORDER_MARGIN;
-        float maxX = width - sprite.width() - BORDER_MARGIN;
-        float maxY = height - sprite.height() - BORDER_MARGIN;
+    @Override
+    public void layout() {
+        super.layout();
 
-        float newX = Util.clamp(sprite.getX(), minX, maxX);
-        float newY = Util.clamp(sprite.getY(), minX, maxY);
+        // Calculate almost fullscreen dimensions
+        float screenWidth = PixelScene.uiCamera.width;
+        float screenHeight = PixelScene.uiCamera.height;
 
-        if (sprite.getX() != newX || sprite.getY() != newY) {
-            sprite.setPos(newX, newY);
-        }
-    }
+        // Leave some margin around the window
+        float windowWidth = screenWidth - 20; // 10px margin on each side
+        float windowHeight = screenHeight - 20; // 10px margin on each side
 
-    private void applyRepulsion(ItemSprite s1, ItemSprite s2) {
-        // Skip if either sprite is being dragged
-        if (s1 == touch.draggedSprite || s2 == touch.draggedSprite) {
-            return;
-        }
+        // Update the layout
+        mainLayout.setRect(MARGIN, MARGIN, windowWidth - 2 * MARGIN, 0);
+        mainLayout.layout();
 
-        // Calculate distance between sprite centers
-        float dx = s2.center().x - s1.center().x;
-        float dy = s2.center().y - s1.center().y;
-        float distance = (float) Math.sqrt(dx * dx + dy * dy);
-
-        // Avoid division by zero
-        if (distance == 0) {
-            return;
-        }
-
-        // Calculate minimum distance where sprites don't overlap
-        float minDistance = (s1.width() + s2.width()) / 2 * 0.8f;
-
-        // If sprites are overlapping
-        if (distance < minDistance) {
-            // Calculate overlap amount
-            float overlap = minDistance - distance;
-
-            // Normalize direction vector
-            dx /= distance;
-            dy /= distance;
-
-            // Apply repulsion proportional to overlap
-            float force = overlap * REPULSION_FORCE * GameLoop.elapsed;
-
-            // Move sprites apart
-            s1.setPos(s1.getX() - dx * force, s1.getY() - dy * force);
-            s2.setPos(s2.getX() + dx * force, s2.getY() + dy * force);
-        }
-    }
-
-    public class TouchController extends TouchArea {
-
-        private final float dragThreshold;
-        private boolean touchStartedOnSprite = false;
-        private boolean dragging = false;
-        private ItemSprite draggedSprite;
-        private final PointF lastPos = new PointF();
-
-        public TouchController() {
-            super(WndAlchemy.this.chrome);
-            dragThreshold = PixelScene.defaultZoom * 8;
-        }
-
-        @Override
-        protected void onTouchDown(Touchscreen.Touch touch) {
-            touchStartedOnSprite = false;
-            for (int i = sprites.size() - 1; i >= 0; i--) {
-                ItemSprite sprite = sprites.get(i);
-                if (sprite.overlapsScreenPoint((int) touch.current.x, (int) touch.current.y)) {
-                    touchStartedOnSprite = true;
-                    draggedSprite = sprite;
-                    break;
-                }
-            }
-            GLog.debug("Touch: %3.0f %3.0f", touch.current.x, touch.current.y);
-            super.onTouchDown(touch);
-        }
-
-        @Override
-        protected void onDrag(Touchscreen.Touch t) {
-            if (dragging) {
-                PointF scrollStep = PointF.diff(lastPos, t.current);
-                float zoom = camera.zoom;
-
-                scrollStep.x /= zoom;
-                scrollStep.y /= zoom;
-
-                if (draggedSprite != null) {
-                    // Calculate new position
-                    float newX = draggedSprite.getX() - scrollStep.x;
-                    float newY = draggedSprite.getY() - scrollStep.y;
-                    draggedSprite.setPos(newX, newY);
-
-                    enforceBoundaries(draggedSprite);
-                }
-
-                GLog.debug("scroll this: %3.0f : %3.0f", scrollStep.x, scrollStep.y);
-            } else if (PointF.distance(t.current, t.start) > dragThreshold) {
-                if (touchStartedOnSprite) {
-                    dragging = true;
-                }
-            }
-            lastPos.set(t.current);
-        }
-
-        @Override
-        protected void onTouchUp(Touchscreen.Touch touch) {
-            touchStartedOnSprite = false;
-            dragging = false;
-
-            // Clear dragged sprite after release
-            draggedSprite = null;
-
-            GLog.debug("Touch: %3.0f %3.0f", touch.current.x, touch.current.y);
-            super.onTouchUp(touch);
-        }
+        resize((int)windowWidth, (int)windowHeight);
     }
 }

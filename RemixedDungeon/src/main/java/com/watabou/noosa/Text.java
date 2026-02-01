@@ -9,17 +9,13 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.regex.Pattern;
-
 public abstract class Text extends Visual implements IPlaceable {
 
     @NotNull
     protected String text = Utils.EMPTY_STRING;
 
-
-    protected static final Pattern PARAGRAPH = Pattern.compile("\n");
-    protected static final Pattern WORD = Pattern.compile("\\s+");
     protected int maxWidth = Integer.MAX_VALUE;
+    protected float minHeight = 0;
 
     protected boolean dirty = true;
 
@@ -56,10 +52,6 @@ public abstract class Text extends Visual implements IPlaceable {
     public void draw() {
         clean();
         super.draw();
-    }
-
-    public int getMaxWidth() {
-        return maxWidth;
     }
 
     protected void clean() {
@@ -118,8 +110,21 @@ public abstract class Text extends Visual implements IPlaceable {
 
     public abstract int lines();
 
+    public float minHeight() {
+        return minHeight;
+    }
+
+    public void minHeight(float minHeight) {
+        this.minHeight = minHeight;
+        dirty = true;
+    }
+
     @Override
     public IPlaceable shadowOf() {
         return baseText;
+    }
+
+    public static String color(String txt, String color) {
+        return Utils.format("[%s:%s]", color, txt);
     }
 }

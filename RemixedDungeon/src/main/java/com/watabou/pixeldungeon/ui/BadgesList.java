@@ -35,7 +35,7 @@ public class BadgesList extends ScrollPane {
 	}
 	
 	@Override
-	protected void layout() {
+    public void layout() {
 		super.layout();
 		
 		float pos = 0;
@@ -86,7 +86,7 @@ public class BadgesList extends ScrollPane {
 		}
 		
 		@Override
-		protected void layout() {
+        public void layout() {
 			icon.setX(x);
 			icon.setY(PixelScene.align( y + (height - icon.height) / 2 ));
 

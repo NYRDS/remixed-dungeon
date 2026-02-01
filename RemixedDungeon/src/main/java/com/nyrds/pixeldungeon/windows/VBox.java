@@ -6,26 +6,26 @@ import com.watabou.noosa.Gizmo;
 
 import org.jetbrains.annotations.NotNull;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Created by mike on 01.05.2018.
  * This file is part of Remixed Pixel Dungeon.
  */
+@Setter
 public class VBox extends BasicBox {
 
     public enum Align {
-      Top,Bottom,Center
+      Top,Bottom,Center,Height
     }
 
     private Align align = Align.Top;
     private int gap = 0;
 
-    public void setAlign(Align align) {
-        this.align = align;
-    }
-
-    public void setGap(int gap) {
-        this.gap = gap;
-    }
+    @Getter
+    @Setter
+    private float maxHeight = 0;
 
     private void alignTop() {
         float pos = top();
@@ -102,6 +102,15 @@ public class VBox extends BasicBox {
         }
     }
 
+    private void alignHeight() {
+        if(members.size() > 1) {
+            gap = 0;
+            float totalGap = maxHeight - childsHeight();
+            gap = (int) (totalGap / (members.size() - 1));
+        }
+        alignTop();
+    }
+
     @Override
     public float top() {
         if(align == Align.Bottom) {
@@ -131,7 +140,7 @@ public class VBox extends BasicBox {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         switch (align) {
 
             case Top:
@@ -142,6 +151,9 @@ public class VBox extends BasicBox {
                 break;
             case Center:
                 alignCenter();
+                break;
+            case Height:
+                alignHeight();
                 break;
         }
         super.layout();

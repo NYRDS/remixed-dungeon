@@ -70,7 +70,7 @@ public class Toast extends Component implements IWindow {
 	}
 
 	@Override
-	protected void layout() {
+    public void layout() {
 		super.layout();
 
 		bg.setX(x);

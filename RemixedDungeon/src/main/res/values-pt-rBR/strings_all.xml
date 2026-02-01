@@ -1248,7 +1248,7 @@ Parede
     <string name="MissileWeapon_No">Não, eu mudei de idéia</string>
     <string name="MissileWeapon_Sure">Você realmente quer equipar isto como uma arma?</string>
     <string name="MissileWeapon_Yes">Sim, tenho certeza</string>
-    <string name="MobAi_status">Este %s é %s</string>
+    <string name="MobAi_status">Este %1$s é %2$s</string>
     <string name="Mob_Attacking">Conte este %s como morto!</string>
     <string name="Mob_Cannot_Be_Pet">A vontade de \&quot;%s\&quot;  é muito forte para controlar-lo!</string>
     <string name="Mob_CantDoIt">Eu não posso fazer isso. Eu tenho patas pequenas.</string>

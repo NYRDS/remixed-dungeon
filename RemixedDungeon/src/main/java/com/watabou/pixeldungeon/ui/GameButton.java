@@ -25,7 +25,7 @@ public class GameButton extends RedButton {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         super.layout();
 
         if (!secondary.text().isEmpty()) {

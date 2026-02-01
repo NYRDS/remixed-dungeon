@@ -27,7 +27,7 @@ while true; do
     fi
 
     echo "[$(date)] Running $TASK_NAME: $COMMAND"
-    eval 'time $COMMAND'
+    eval 'timeout 30m time $COMMAND'
 
     # Check exit status of the command
     CMD_STATUS=$?

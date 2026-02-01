@@ -141,7 +141,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
         add(slot);
         
         // Add hotkey display
-        hotkeyDisplay = new BitmapText(PixelScene.font1x);
+        hotkeyDisplay = new BitmapText(PixelScene.getFont1x());
         hotkeyDisplay.setScaleXY(0.6f, 0.6f);
         hotkeyDisplay.setVisible(false);
         add(hotkeyDisplay);
@@ -155,7 +155,7 @@ public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         super.layout();
 
         slot.fill(this);

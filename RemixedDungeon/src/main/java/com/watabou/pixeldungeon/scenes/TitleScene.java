@@ -136,7 +136,7 @@ public class TitleScene extends PixelScene {
         archs.setSize(w, h);
         sendToBack(archs);
 
-        Text version = Text.createBasicText(GameLoop.version, font1x);
+        Text version = Text.createBasicText(GameLoop.version, getFont1x());
         version.hardlight(0x888888);
         version.setPos(w - version.width(), h - version.height());
         add(version);

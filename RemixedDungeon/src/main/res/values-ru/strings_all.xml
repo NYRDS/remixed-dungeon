@@ -1367,7 +1367,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MissileWeapon_No">Нет, я передумал</string>
     <string name="MissileWeapon_Sure">Ты уверен, что хочешь использовать это в качестве оружия ближнего боя?</string>
     <string name="MissileWeapon_Yes">Да, я знаю, что делаю</string>
-    <string name="MobAi_status"> %s сейчас %s</string>
+    <string name="MobAi_status"> %1$s сейчас %2$s</string>
     <string name="Mob_Attacking">Считай этого %s мёртвым!</string>
     <string name="Mob_Cannot_Be_Pet">\&quot;%s\&quot; обладает слишком сильной волей!</string>
     <string name="Mob_CantDoIt">Я это не умею. У меня лапки.</string>

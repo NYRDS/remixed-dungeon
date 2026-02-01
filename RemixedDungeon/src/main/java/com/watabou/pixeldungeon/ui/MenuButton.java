@@ -25,7 +25,7 @@ class MenuButton extends ImageButton {
 	}
 
 	@Override
-	protected void layout() {
+    public void layout() {
 		super.layout();
 
 		image.setX(x + 2);

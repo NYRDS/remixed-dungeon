@@ -13,6 +13,13 @@ public abstract class BasicBox extends Component{
     @Override
     public void measure() {
         if (dirty) {
+
+            for (Gizmo gizmo: members) {
+                if (gizmo instanceof Component) {
+                    ((Component) gizmo).measure();
+                }
+            }
+
             _measure();
             dirty = false;
 
@@ -55,7 +62,15 @@ public abstract class BasicBox extends Component{
     protected abstract void _measure();
 
     @Override
-    protected void layout() {
+    public void layout() {
+        dirty = true;
+
+        for (Gizmo gizmo: members) {
+            if (gizmo instanceof Component) {
+                ((Component) gizmo).layout();
+            }
+        }
+
         super.layout();
         measure();
         //GLog.i("layout : %s",getClass().getSimpleName());

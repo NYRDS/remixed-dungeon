@@ -91,7 +91,7 @@ for root, dirs, files in os.walk(values_dir):
     for file in files:
 
         if file.endswith(xml_ext):
-            print(root, file, locale_code)
+            #print(root, file, locale_code)
             process_xml(root + "/" + file, jsonData)
 
     jsonData.close()

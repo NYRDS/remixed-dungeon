@@ -23,7 +23,7 @@ public class LabeledTab extends Tab {
 	}
 
 	@Override
-	protected void layout() {
+    public void layout() {
 		super.layout();
 
 		btLabel.setX(PixelScene.align(x + (width  - btLabel.width()) / 2));

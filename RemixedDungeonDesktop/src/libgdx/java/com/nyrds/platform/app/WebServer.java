@@ -1,30 +1,16 @@
 package com.nyrds.platform.app;
 
-import com.badlogic.gdx.Gdx;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.utils.GLog;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.util.Collections;
-import java.util.Enumeration;
+import java.util.List;
 import java.util.Map;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import fi.iki.elonen.NanoHTTPD;
 
 /**
  * WebServer implementation for desktop platforms.
@@ -884,7 +870,7 @@ public class WebServer extends BaseWebServer {
         GLog.debug("serveDebugList called with path: '" + path + "'");
 
         try {
-            java.util.List<String> resourceList = ModdingMode.listResources(path, (dir, name) -> {
+            List<String> resourceList = ModdingMode.listResources(path, (dir, name) -> {
                 // Include all items in the directory
                 return true;
             });
@@ -893,41 +879,35 @@ public class WebServer extends BaseWebServer {
             response.append("<h1>Debug List Resources for Path: '").append(path).append("'</h1>");
             response.append("<p>Active mod: ").append(ModdingMode.activeMod()).append("</p>");
 
-            if (resourceList != null) {
-                response.append("<p>Total resources found: ").append(resourceList.size()).append("</p>");
-                response.append("<ul>");
-                for (String resource : resourceList) {
-                    response.append("<li>").append(resource).append("</li>");
-                }
-                response.append("</ul>");
-            } else {
-                response.append("<p>Resource list is null</p>");
+            response.append("<p>Total resources found: ").append(resourceList.size()).append("</p>");
+            response.append("<ul>");
+            for (String resource : resourceList) {
+                response.append("<li>").append(resource).append("</li>");
             }
+            response.append("</ul>");
 
             // Also show what our filtering logic would return (updated)
             response.append("<h2>Filtering Logic Results (Fixed):</h2>");
-            if (resourceList != null) {
-                java.util.List<String> filteredList = new java.util.ArrayList<>();
+            List<String> filteredList = new java.util.ArrayList<>();
 
-                for (String resource : resourceList) {
-                    // Only include direct children, not nested items
-                    if (!resource.contains("/")) {
-                        filteredList.add(resource);
-                    }
+            for (String resource : resourceList) {
+                // Only include direct children, not nested items
+                if (!resource.contains("/")) {
+                    filteredList.add(resource);
                 }
-
-                response.append("<p>After filtering for direct children: ").append(filteredList.size()).append("</p>");
-                response.append("<ul>");
-                for (String item : filteredList) {
-                    response.append("<li>").append(item).append("</li>");
-                }
-                response.append("</ul>");
             }
+
+            response.append("<p>After filtering for direct children: ").append(filteredList.size()).append("</p>");
+            response.append("<ul>");
+            for (String item : filteredList) {
+                response.append("<li>").append(item).append("</li>");
+            }
+            response.append("</ul>");
 
             return newFixedLengthResponse(Response.Status.OK, "text/html", response.toString());
         } catch (Exception e) {
             GLog.debug("Error in serveDebugList: " + e.getMessage());
-            e.printStackTrace();
+            EventCollector.logException(e);
             return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html",
                 "<h1>Error in serveDebugList</h1><p>" + e.getMessage() + "</p>");
         }

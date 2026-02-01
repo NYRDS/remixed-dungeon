@@ -27,7 +27,7 @@ public class ImageButton extends Button {
 	public void hardlight(float r, float g, float b) {image.hardlight(r,g,b);}
 
 	@Override
-	protected void layout() {
+    public void layout() {
 		super.layout();
 
 		image.setX(x);

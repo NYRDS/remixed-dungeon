@@ -112,6 +112,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -467,10 +468,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             effectiveDamage = enemy.defenseProc(this, effectiveDamage);
             enemy.damage(effectiveDamage, this);
 
-            // Handle critical hit effects for Doctor class
-            if (isCriticalHit &&  this.getHeroClass() == HeroClass.DOCTOR) {
-                dropExtraParts(enemy);
-            }
 
             if (effectiveDamage > 0) {
                 for (Item item : getBelongings()) {
@@ -2341,6 +2338,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return (WndBag.Mode) getScript().run("_buyMode", chr).optuserdata(WndBag.Mode.class, WndBag.Mode.ALL);
     }
 
+    public void detachItemList(List<Item> itemsToRemove) {
+        for (Item itemToRemove : itemsToRemove) {
+            itemToRemove.detachAll(getBelongings().backpack);
+        }
+    }
+
     // Check if this attack is a critical hit based on the difference between attack and defense rolls
     private boolean checkCriticalHit(Char enemy) {
         // Calculate attack and defense skills
@@ -2356,21 +2359,4 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return acuRoll > defRoll * 2f;
     }
 
-    // Drop extra parts when the Doctor scores a critical hit
-    private void dropExtraParts(Char enemy) {
-        // Create random harvestable items to drop
-        String[] harvestItems = {"ToxicGland", "RottenOrgan", "BoneShard", "VileEssence"};
-        String randomItem = Random.element(harvestItems);
-
-        try {
-            Item item = ItemFactory.itemByName(randomItem);
-            if (item.valid()) {
-                level().animatedDrop(item, enemy.getPos());
-
-            }
-        } catch (Exception e) {
-            // If the item doesn't exist, skip dropping it
-            GLog.debug("Could not create harvest item: " + randomItem);
-        }
-    }
 }

@@ -5,6 +5,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.generated.BundleHelper;
 import com.nyrds.lua.LuaUtils;
+import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.items.ItemOwner;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
@@ -19,6 +20,7 @@ import com.nyrds.pixeldungeon.ml.actions.UseItem;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.ItemsList;
+import com.nyrds.pixeldungeon.windows.WndItemAlchemy;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -55,6 +57,9 @@ import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -77,6 +82,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     protected static final String AC_DROP = "Item_ACDrop";
     protected static final String AC_THROW = "Item_ACThrow";
     private static final String AC_PICK_UP = "Item_ACPickup";
+    private static final String AC_ALCHEMY = "Item_ACAlchemy";
 
     @NotNull
     private String defaultAction = AC_THROW;
@@ -154,11 +160,32 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
     public ArrayList<String> actions(Char hero) {
         ArrayList<String> actions = new ArrayList<>();
+
+        // Calculate player's inventory
+        var playerInventory = AlchemyRecipes.buildAlchemyInventory(hero);
+
+        // Check if the player has enough ingredients for recipes that include this item
+        var recipesWithItem =
+            AlchemyRecipes.getRecipesContainingItem(getEntityKind());
+
+        boolean hasRecipesWithItem = false;
+        for (var  recipe : recipesWithItem) {
+            if (AlchemyRecipes.hasRequiredIngredients(recipe.getInput(), playerInventory)) {
+                hasRecipesWithItem = true;
+                break;
+            }
+        }
+
         if (heap == null) {
             if (!isEquipped(hero)) {
                 actions.add(AC_DROP);
             }
             actions.add(AC_THROW);
+
+            // Add ALCHEMY action if player has recipes that include this item and has enough ingredients
+            if (hasRecipesWithItem) {
+                actions.add(AC_ALCHEMY);
+            }
         } else {
             actions.add(AC_PICK_UP);
         }
@@ -207,6 +234,9 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
                 break;
             case AC_PICK_UP:
                 CharUtils.tryPickUp(chr, this);
+                break;
+            case AC_ALCHEMY:
+                GameScene.show(new WndItemAlchemy(this, chr));
                 break;
         }
     }

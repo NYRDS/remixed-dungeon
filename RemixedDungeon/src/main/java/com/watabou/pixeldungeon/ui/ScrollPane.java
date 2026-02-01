@@ -49,7 +49,7 @@ public class ScrollPane extends Component {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
 
         content.setPos(0, 0);
         controller.setX(x);

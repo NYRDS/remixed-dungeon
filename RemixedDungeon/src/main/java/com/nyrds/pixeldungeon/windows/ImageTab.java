@@ -23,7 +23,7 @@ public class ImageTab extends Tab {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         super.layout();
 
         //icon.copy( icon );

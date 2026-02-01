@@ -80,21 +80,21 @@ public class ItemSlot extends Button {
         emitter = new Emitter();
         add(emitter);
 
-        topLeft = new BitmapText(PixelScene.font1x);
+        topLeft = new BitmapText(PixelScene.getFont1x());
         topLeft.setScaleXY(0.8f, 0.8f);
         add(topLeft);
 
-        topRight = new BitmapText(PixelScene.font1x);
+        topRight = new BitmapText(PixelScene.getFont1x());
         topRight.setScaleXY(0.8f, 0.8f);
         add(topRight);
 
-        bottomRight = new BitmapText(PixelScene.font1x);
+        bottomRight = new BitmapText(PixelScene.getFont1x());
         bottomRight.setScaleXY(0.8f, 0.8f);
         add(bottomRight);
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         super.layout();
 
         icon.setX(x + (width - icon.width * icon.scale.x) / 2);

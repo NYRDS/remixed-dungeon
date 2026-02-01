@@ -59,3 +59,5 @@ wiki_redirects_report.txt
 __pycache__/
 *.pyc
 *.pyo
+.PVS-Studio/
+test_multilevel_list.txt

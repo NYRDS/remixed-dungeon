@@ -307,7 +307,7 @@ public class WndRanking extends WndTabbed {
         }
 
         @Override
-        protected void layout() {
+        public void layout() {
             bg.setX(x);
             bg.setY(y);
 

@@ -1825,6 +1825,7 @@
   <string name="Blacksmith_Verify5">It\'s a junk, the quality is too poor!</string>
   <string name="Blacksmith_Verify6">I can\'t reforge these items!</string>
   <string name="Ghost_Name">sad ghost</string>
+  <string name="Ghost_Name_Objective">ghost</string>
   <string name="Ghost_Desc">The ghost is barely visible. It looks like a shapeless spot of faint light with a sorrowful face.</string>
   <string name="Ghost_Rose1">Hello adventurer... Once I was like you - strong and confident... And now I\'m dead... But I can\'t leave this place... Not until I have my _dried rose_... It\'s very important to me... Some monster stole it from my body...</string>
   <string name="Ghost_Rose2">Please... Help me... Find the rose...</string>
@@ -2149,6 +2150,11 @@
   <string name="Sewer_TileDescDeco">Wet yellowish moss covers the floor.</string>
   <string name="Sewer_TileDescBookshelf">The bookshelf is packed with cheap useless books. Might it burn?</string>
   <string name="AlchemyPot_SelectSeed">Select a seed to throw</string>
+  <string name="Item_ACAlchemy">ALCHEMY</string>
+  <string name="WndItemAlchemy_Title">Alchemy recipes with %s</string>
+  <string name="WndItemAlchemy_NoRecipes">No recipes available with this item and your current inventory.</string>
+  <string name="WndItemAlchemy_SelectRecipe">Select recipe</string>
+  <string name="WndItemAlchemy_ExecuteRecipe">Execute Recipe</string>
   <string name="Chasm_Chasm">Chasm</string>
   <string name="Chasm_Yes">Yes, I know what I\'m doing</string>
   <string name="Chasm_No">No, I changed my mind</string>
@@ -2864,7 +2870,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="WndTilesKind_text">You\'re about to enter a Dungeon possessed by twisted magic, yet you now would choose how do you see it:\n Do you like it to be in modern pseudo 3d or classic flat view?\nYou will be able to change it later in game options menu.</string>
   <string name="WndTilesKind_NewLook">New Look</string>
   <string name="WndTilesKind_ClassicLook">Classic look</string>
-  <string name="MobAi_status">This %s is %s</string>
+  <string name="MobAi_status">This %1$s is %2$s</string>
   <string name="WndCustomizations_Title">Customizations</string>
   <string name="IceGuardianCore_DieInfo">It is so cold here, I better go back to level 14 and try to find a way to a warmer place.</string>
   <string name="Lich_DieInfo">I never liked this Necromancer. So it is time to return to level 7 and find another way down to the new adventure.</string>
@@ -2917,8 +2923,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     </string>
   <string name="Pickaxe_NothingToMine">Nothing to mine here!</string>
   <string name="Pickaxe_InsufficientStr">Not enough strength to mine!</string>
-  <string name="Carcass_Name">Remains of %s</string>
-  <string name="Carcass_Info">Remains of totally dead %s.</string>
+  <string name="Carcass_Name">remains of %s</string>
+  <string name="Carcass_Info">remains of totally dead %s.</string>
   <string name="ResultDescriptions_Necromancy">Depleted of life force while trying to animate corpse on level %d</string>
   <string name="Item_ACPickup">Pick up</string>
   <string name="Necromancy_Death">You depleted all your life force while practising necromancy.</string>

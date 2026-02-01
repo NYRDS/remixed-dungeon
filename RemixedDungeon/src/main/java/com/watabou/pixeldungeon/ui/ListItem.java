@@ -24,7 +24,7 @@ public abstract class ListItem extends Component implements IClickable {
 	}
 
 	@Override
-	protected void layout() {
+    public void layout() {
 		sprite.setY(PixelScene.align(y + (height - sprite.height + sprite.visualOffsetY()) / 2));
 
 		sprite.setX(PixelScene.align(x + sprite.visualOffsetX()));

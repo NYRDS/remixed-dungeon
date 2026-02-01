@@ -41,7 +41,7 @@ class InventoryTool extends Tool {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         super.layout();
         gold.fill(this);
     }

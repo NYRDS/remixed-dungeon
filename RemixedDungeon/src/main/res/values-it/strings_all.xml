@@ -1152,7 +1152,7 @@ Potrebbe bruciare?</string>
     <string name="PirateSet_Info">Arr! Ti senti un compare... O sei solo un dannato marinaio di acqua dolce!? Spero che tu non lo sia, questa roba è per i pirati dopo tutto, intendo... Arr! </string>
     <string name="PirateSet_Name">Set Pirata</string>
     <string name="PlagueDoctorMaskHood_Name">Maschera del Dottore della Peste con cappuccio</string>
-    <string name="PlagueDoctorNPC_Desc">L'intero corpo di questa persona ingobbita è nascosto sotto una tuta di pelle. Inoltre, da lui proviene un amaro odore di medicinali e... aglio?</string>
+    <string name="PlagueDoctorNPC_Desc">L\'intero corpo di questa persona ingobbita è nascosto sotto una tuta di pelle. Inoltre, da lui proviene un amaro odore di medicinali e... aglio?</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Riesci a crederci? Quegli idioti non hanno ancora capito quanto pericolose siano queste dannate fogne! Come se guardie e avventurieri potessero proteggere il paese da qualunque cosa. Hah! Non esiste arma che possa fermare la diffusione di una malattia. Ma mi servono prove, potresti aiutarmi?  Portami %d pelli di ratto, in modo che possa fare altri test.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Riesci a crederci? Quegli idioti non hanno ancora capito quanto pericolose siano queste dannate fogne! Come se guardie e avventurieri potessero proteggere il paese da qualunque cosa. Hah! Non esiste arma che possa fermare la diffusione di una malattia. Ma mi servono prove, potresti aiutarmi?  Portami %d pelli di ratto, in modo che possa fare altri test.</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">Achooo!\n Che maledizione questa dannata peste! Si sta diffondendo per la città come un incendio, infettando le ossa della popolazione ignara! BAH! Pensate che quelle patetiche guardie abbiano una sola possibilità contro questo micidiale morbo? Tu, là! Esemplare forte e sano. Forse puoi aiutarmi. Quegli sporchi _ratti_ delle fogne… li portano con sé, ve lo dico io, i semi della pestilenza nei loro corpi putridi! Portatemi _cinque_ di quelle creature miserabili, _morti_, ovviamente! Le loro pelli saranno preziosissime per la mia ricerca. Farò per voi una meravigliosa armatura, una barriera protettiva contro la stessa peste da cui proviene!</string>
@@ -2261,7 +2261,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_sofa_desc">Sembra che questo cinema provi davvero a fornire i migliori posti per i propri clienti</string>
     <string name="town_deco_sofa_name">Divano comodo</string>
     <string name="town_deco_stakes_desc">Questi tronchi appuntiti hanno un aspetto minaccioso, ma di fatto sono piuttosto inutili di per sé.</string>
-    <string name="town_deco_statue_water_desc">Una maestosa statua di un angelo che tiene una ciotola d'acqua.</string>
+    <string name="town_deco_statue_water_desc">Una maestosa statua di un angelo che tiene una ciotola d\'acqua.</string>
     <string name="town_deco_stock_name">Scorta</string>
     <string name="town_deco_stone_wall_broken_desc">Vecchio muro di pietra, in cattive condizioni</string>
     <string name="town_deco_stone_wall_name">Muro di pietra</string>

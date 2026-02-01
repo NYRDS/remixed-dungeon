@@ -40,7 +40,7 @@ public class DashboardItem extends Button {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         super.layout();
 
         image.setX(PixelScene.align(x + (width - image.width()) / 2));

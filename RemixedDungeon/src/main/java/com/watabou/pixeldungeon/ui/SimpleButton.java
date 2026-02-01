@@ -42,7 +42,7 @@ public class SimpleButton extends Component {
     }
 
     @Override
-    protected void layout() {
+    public void layout() {
         image.setX(x + (width - image.width()) / 2);
         image.setY(y + (height - image.height()) / 2);
     }

@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.windows.WndAlchemy;
 import com.nyrds.pixeldungeon.windows.WndGameplayCustomization;
+import com.nyrds.pixeldungeon.windows.WndRecipeChecker;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
@@ -28,6 +29,24 @@ public class WndInGameMenu extends WndMenuCommon {
 			GameLoop.switchScene(TitleScene.class);
 			return;
 		}
+
+		// Add alchemy button for regular gameplay
+		menuItems.add(new MenuButton("Alchemy") {
+			@Override
+			protected void onClick() {
+				super.onClick();
+				GameScene.show(new WndAlchemy());
+			}
+		});
+
+		// Add recipe checker button
+		menuItems.add(new MenuButton("Check Recipes") {
+			@Override
+			protected void onClick() {
+				super.onClick();
+				GameScene.show(new WndRecipeChecker());
+			}
+		});
 
 		if (BuildConfig.DEBUG) {
 			menuItems.add(new MenuButton("AlchemyTest") {

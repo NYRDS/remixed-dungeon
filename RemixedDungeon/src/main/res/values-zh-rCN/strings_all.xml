@@ -1273,7 +1273,7 @@
     <string name="MissileWeapon_No">不，我改变主意了</string>
     <string name="MissileWeapon_Sure">你确定要将其用作近战武器？</string>
     <string name="MissileWeapon_Yes">是的，我知道我在做什么</string>
-    <string name="MobAi_status">此%s是%s</string>
+    <string name="MobAi_status">此%1$s是%2$s</string>
     <string name="Mob_Attacking">将这个 %s 视为已死亡！</string>
     <string name="Mob_Cannot_Be_Pet">你没法控制住“%s”！</string>
     <string name="Mob_CantDoIt">我做不到。我的手太小了。</string>

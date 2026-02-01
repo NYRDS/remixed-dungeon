@@ -45,7 +45,7 @@ public class IconTitle extends Component {
 	}
 	
 	@Override
-	protected void layout() {
+    public void layout() {
 		imIcon.setX(x - imIcon.visualOffsetX());
 		float yShift = imIcon.height() - imIcon.visualHeight();
 		imIcon.setY(y - yShift);

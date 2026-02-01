@@ -1,12 +1,15 @@
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.gltextures.TextureCache;
+import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -19,8 +22,13 @@ import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.plants.Seed;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.QuickSlot;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 class ItemButton extends ItemSlot {
     
@@ -30,6 +38,7 @@ class ItemButton extends ItemSlot {
     private final WndBag wndBag;
     private final Item item;
     private ColorBlock bg;
+    private BitmapText alchemyIndicator;
     
     public ItemButton(WndBag wndBag, Item item) {
         
@@ -47,26 +56,61 @@ class ItemButton extends ItemSlot {
     }
     
     @Override
-    protected void createChildren() {	
+    protected void createChildren() {
         bg = new ColorBlock( WndBag.SLOT_SIZE, WndBag.SLOT_SIZE, NORMAL );
         add( bg );
-        
+
+        // Create alchemy indicator
+        alchemyIndicator = new BitmapText(PixelScene.getFont1x());
+        alchemyIndicator.text("*");
+        alchemyIndicator.hardlight(0xFFFF00); // Yellow color for alchemy indicator
+        add(alchemyIndicator);
+
         super.createChildren();
     }
     
     @Override
-    protected void layout() {
+    public void layout() {
         bg.setX(x);
         bg.setY(y);
-        
+
+        // Position the alchemy indicator in the bottom-left corner
+        if (alchemyIndicator != null) {
+            alchemyIndicator.x = x + 1;
+            alchemyIndicator.y = y + height - alchemyIndicator.height() - 1;
+        }
+
         super.layout();
     }
 
     public void placeItem( Item item, WndBag.Mode mode ) {
         if (item.valid()) {
-
-            bg.texture( TextureCache.createSolid( item.isEquipped( Dungeon.hero ) ? EQUIPPED : NORMAL ) );
+            Char owner = item.getOwner();
+            bg.texture( TextureCache.createSolid( item.isEquipped( owner ) ? EQUIPPED : NORMAL ) );
             ItemUtils.tintBackground(item, bg);
+
+            // Check if this item can be used in alchemy recipes
+            boolean isUsableInAlchemy = false;
+            if (mode == WndBag.Mode.ALL || mode == WndBag.Mode.QUICKSLOT) {
+                // Calculate player's inventory
+                var playerInventory = AlchemyRecipes.buildAlchemyInventory(owner);
+
+                // Check if the player has enough ingredients for recipes that include this item
+                var recipesWithItem =
+                    AlchemyRecipes.getRecipesContainingItem(item.getEntityKind());
+
+                for (var recipe : recipesWithItem) {
+                    if (AlchemyRecipes.hasRequiredIngredients(recipe.getInput(), playerInventory)) {
+                        isUsableInAlchemy = true;
+                        break;
+                    }
+                }
+            }
+
+            // Show or hide the alchemy indicator
+            if (alchemyIndicator != null) {
+                alchemyIndicator.setVisible(isUsableInAlchemy);
+            }
 
             if(item.selectedForAction() || item instanceof ItemPlaceholder) {
                 enable(false);
@@ -86,7 +130,7 @@ class ItemButton extends ItemSlot {
                         enableItem = item.isUpgradable();
                         break;
                     case FOR_SALE:
-                        enableItem=(item.price() > 0) && (!item.isEquipped(Dungeon.hero) || !item.isCursed());
+                        enableItem=(item.price() > 0) && (!item.isEquipped(owner) || !item.isCursed());
                         break;
                     case WEAPON:
                         enableItem=(!(item instanceof KindOfBow) && (item instanceof MeleeWeapon || item instanceof Boomerang));
@@ -134,6 +178,9 @@ class ItemButton extends ItemSlot {
             }
         } else {
             bg.color( NORMAL );
+            if (alchemyIndicator != null) {
+                alchemyIndicator.setVisible(false);
+            }
         }
     }
 
@@ -153,7 +200,7 @@ class ItemButton extends ItemSlot {
             if(wndBag.hideOnSelect()) {
                 wndBag.hide();
             }
-            wndBag.getListener().onSelect( item, Dungeon.hero);
+            wndBag.getListener().onSelect( item, item.getOwner());
         } else {
             wndBag.add( new WndItem(wndBag, item ) );
         }

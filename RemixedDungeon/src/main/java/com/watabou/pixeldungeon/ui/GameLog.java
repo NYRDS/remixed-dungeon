@@ -100,7 +100,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 	}
 	
 	@Override
-	protected void layout() {
+    public void layout() {
 		float pos = y;
 		for (int i = getLength() -1; i >= 0; i--) {
 			Visual entry = (Visual) members.get( i );

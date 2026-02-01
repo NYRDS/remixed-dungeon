@@ -18,7 +18,7 @@ public class CheckBox extends RedButton {
 	}
 
 	@Override
-	protected void layout() {
+    public void layout() {
 		super.layout();
 		
 		float margin = (height - text.baseLine()) / 2;

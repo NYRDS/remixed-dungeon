@@ -223,6 +223,7 @@ local RPD = {
     ItemFactory = ItemFactory,
     EffectsFactory = EffectsFactory,
     SpellFactory = SpellFactory,
+    AlchemyRecipes = luajava.bindClass("com.nyrds.pixeldungeon.alchemy.AlchemyRecipes"),
     Journal = luajava.bindClass("com.watabou.pixeldungeon.Journal"),
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
     Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),
