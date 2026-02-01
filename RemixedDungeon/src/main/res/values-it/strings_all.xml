@@ -298,6 +298,7 @@
     <string name="ChaosStaff_Name">Vega del caos</string>
     <string name="ChaosSword_Info">La lama di questa spada è fatta di caos puro e vibra moderatamente a volte. Un grosso potere è celato dentro l\'arma, che può tagliare a metà praticamente ogni cosa. d\'altronde, ci vuole una grande abilità, per tener testa alla potente forza dell\'arma.</string>
     <string name="ChaosSword_Name">Spada del caos</string>
+    <string name="CharAction_Order">ordinare</string>
     <string name="CharAction_Push">spingere</string>
     <string name="CharAction_Scare">spaventare</string>
     <string name="CharAction_Steal">rubare</string>
@@ -2296,6 +2297,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
