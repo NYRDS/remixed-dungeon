@@ -8,7 +8,6 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
 
@@ -181,7 +180,7 @@ public class AlchemyRecipes {
             // Additional validation: try to create the output to ensure it's valid
             if (entityType == EntityType.ITEM) {
                 Item testItem = ItemFactory.itemByName(output);
-                if (testItem == null) {
+                if (testItem.valid()) {
                     return false; // Invalid item
                 }
             } else if (entityType == EntityType.MOB) {
