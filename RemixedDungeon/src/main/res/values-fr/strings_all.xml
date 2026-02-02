@@ -396,6 +396,7 @@
     <string name="ChaosSword_Info">La lame de cette épée est faite de chaos pur et parfois vibre légèrement. Un grand pouvoir loge dans cette arme, qui peut couper en deux presque n\'importe quoi. Néanmoins, un habileté importante est requise pour maîtriser l\'énorme puissance de cette arme.</string>
     <string name="ChaosSword_Name">épée du Chaos</string>
     <string name="CharAction_Charm">charmer</string>
+    <string name="CharAction_Expel">expulser</string>
     <string name="CharAction_Give">donner</string>
     <string name="CharAction_Hit">frapper</string>
     <string name="CharAction_Order">commander</string>
@@ -2036,7 +2037,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="SpiderQueen_Name">reine des araignées</string>
     <string name="SpiderQueen_Name_Objective">reine des araignées</string>
     <string name="SpiderServant_Desc">Il se trouve que les soldats sont les occupants les plus nombreux du repaire arachnéen. Nés pour protéger leur territoire. Les chélicères des soldats développent des glandes venimeuses pour empoisonner leurs ennemis.</string>
-    <string name="SpiderServant_Gender">feminine</string>
+    <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">araignée soldat</string>
     <string name="SpiderServant_Name_Objective">araignée soldat</string>
     <string name="Spinner_Desc">Ces araignées verdâtres et poilues évitent le combat direct, préférant attendre à distance alors que leurs victimes, prises dans leur toile, succombent lentement d\'une morsure empoisonnée.</string>
@@ -2938,6 +2939,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 

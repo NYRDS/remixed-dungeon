@@ -505,6 +505,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="CommonArrow_Name">flecha</string>
     <string name="CompositeCrossbow_Info">Esta ballesta reforzada es una herramienta más eficaz comparandola con una hecha de madera.</string>
     <string name="CompositeCrossbow_Name">Ballesta compuesta</string>
+    <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">Las flechas disparadas con un arco compuesto hacen gran cantidad de daño y van mejor dirigidas, a costa de ser más lentas.</string>
     <string name="CompoundBow_Name">arco compuesto</string>
     <string name="ConcreteBlock_Description">Parece que para mover este bloque de concreto se necesita %d de fuerza</string>
@@ -2805,6 +2806,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

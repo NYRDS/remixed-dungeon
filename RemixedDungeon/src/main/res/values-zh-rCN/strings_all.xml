@@ -1929,6 +1929,7 @@
     <string name="SpiderQueen_Name">蜘蛛女王</string>
     <string name="SpiderQueen_Name_Objective">蜘蛛女王</string>
     <string name="SpiderServant_Desc">蜘蛛士兵是蜘蛛巢穴中最为常见的单位，保护它们的领土是它们天生的使命。士兵的前肢进化出了毒腺来使它们的敌人中毒。</string>
+    <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">蜘蛛士兵</string>
     <string name="SpiderServant_Name_Objective">蜘蛛士兵</string>
     <string name="Spinner_Desc">这些有着许多绿色绒毛的洞穴蜘蛛会试着去闪避直接的战斗，它们更喜欢在远处等待其猎物卷入蜘网，在毒素中慢慢死去。</string>
@@ -2792,6 +2793,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
