@@ -2490,6 +2490,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndCryptoDonate_openWallet">Открыть кошелек</string>
     <string name="WndCryptoDonate_supportDev">Поддержать разработчика</string>
     <string name="WndCryptoDonate_walletAddress">Адрес кошелька</string>
+    <string name="WndCryptoDonate_warningText">ВНИМАНИЕ: Всегда проверяйте адрес перед отправкой средств. Транзакции криптовалюты необратимы!</string>
     <string name="WndCustomizations_Title">Кастомизации</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - свободна и бесплатна для всех, и так будет всегда.\n\nОднако Вы можете помочь нам сделать игру ещё лучше.\n\nКроме нашей сердечной благодарности Вы получите некоторые косметические улучшения, однако не влияющие на геймплей.</string>
     <string name="WndDonate_donate">поддержать:  </string>
@@ -3039,6 +3040,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 
