@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Baham</string>
     <string name="AC_Necromancy">Necromancy</string>
@@ -51,13 +50,13 @@
     <string name="AmuletScene_Stay">Saya belum selesai lagi</string>
     <string name="AmuletScene_Txt">Akhirnya, Azimat Yendor berada ditangan anda. Dengan kuasa azimat ini anda boleh menguasai dunia atau memberi keamanan dan kesenangan kepada sesiapa sahaja. Dengan azimat ini, kehidupan anda akan berubah selamanya dan juga permainan ini juga berakhir di sini. Ataupun anda masih boleh lagi berkelana di dalam Kurungan Bawah Tanah...</string>
     <string name="Amulet_ACEnd">PENGEMBARAAN BERAKHIR</string>
-    <string name="Amulet_Info">Azimat Yendor merupakan artifak terkenal yang sangat berkuasa tetapi tidak diketahui asal usulnya. Dikatakan azimat ini berupaya memenuhi apa jua keinginan pemiliknya dengan syarat dia mampu \"memujuk\" azimat tersebut merealisasikan hasratnya.</string>
+    <string name="Amulet_Info">Azimat Yendor merupakan artifak terkenal yang sangat berkuasa tetapi tidak diketahui asal usulnya. Dikatakan azimat ini berupaya memenuhi apa jua keinginan pemiliknya dengan syarat dia mampu \&quot;memujuk\&quot; azimat tersebut merealisasikan hasratnya.</string>
     <string name="Amulet_Name">Azimat Yendor</string>
     <string name="Ankh_Info">Simbol purba keabadian yang dapat mengembalikan nyawa selepas kematian. Jika dibangkitkan semula semua item yang dimiliki akan hilang kecuali yang masih dipakai.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">%s anti-entropi</string>
     <string name="ArmorKit_ACAplly">GUNA</string>
-    <string name="ArmorKit_Info">Dengan bantuan kit alatan dan material kecil ini sesiapa sahaja dapat mengubah apa jua perisai menjadi \"perisai epik\", sekaligus dapat mengekalkan semua sifat perisal asalnya. Selain itu, ia juga memberikan keupayaan istimewa tetapi bergantung pada jenis kelasnya. Tidak perlu kemahiran menjahit, kemahiran mengendalikan kulit atau kemahiran menempa diperlukan.</string>
+    <string name="ArmorKit_Info">Dengan bantuan kit alatan dan material kecil ini sesiapa sahaja dapat mengubah apa jua perisai menjadi \&quot;perisai epik\&quot;, sekaligus dapat mengekalkan semua sifat perisal asalnya. Selain itu, ia juga memberikan keupayaan istimewa tetapi bergantung pada jenis kelasnya. Tidak perlu kemahiran menjahit, kemahiran mengendalikan kulit atau kemahiran menempa diperlukan.</string>
     <string name="ArmorKit_Name">kit perisai</string>
     <string name="ArmorKit_SelectArmor">Pilih perisai untuk ditatarkan</string>
     <string name="ArmorKit_Upgraded">Anda menggunakan kit perisai untuk tatarkan %s anda</string>
@@ -65,7 +64,7 @@
     <string name="Armor_Glyph">glif</string>
     <string name="Armor_Identify">anda kini sudah biasa dengan %1$s anda untuk mengecamnya. Ia adalah %2$s.</string>
     <string name="Armor_Incompatible">Interaksi pelbagai jenis sihir telah memadam glif di atas perisai ini!</string>
-    <string name="Armor_Info1">%1$s ini menawarkan penyerapan kecederaan sehingga \"%2$d\" mata per serangan.</string>
+    <string name="Armor_Info1">%1$s ini menawarkan penyerapan kecederaan sehingga \&quot;%2$d\&quot; mata per serangan.</string>
     <string name="Armor_Info2">\n\nOleh kerana kekuatan anda tidak mencukupi, kelajuan pergerakan dan kemahiran pertahanan anda telah berkurangan. </string>
     <string name="Armor_Info3">\n\nOleh kerana kekuatan anda tidak mencukupi untuk memakai perisai ini, kelajuan pergerakan dan kemahiran pertahanan anda telah berkurangan. </string>
     <string name="Armor_Info4">\n\n%1$s biasanya menawarkan penyerapan kecederaan sehingga %2$d mata per serangan dan memerlukan %3$d mata kekuatan.</string>
@@ -86,7 +85,7 @@
     <string name="AzuterronNPC_Name_Objective">Orang Asing</string>
     <string name="AzuterronNPC_Quest_End">Bagus. Ambil posyen ini, sudah pasti anda mendapat manafaat darinya.</string>
     <string name="AzuterronNPC_Quest_Reminder">Bantu saya dan saya akan bantu anda kelak.</string>
-    <string name="AzuterronNPC_Quest_Start">Haa, kenapa... alamak, awak boleh lihat saya, betul ke ni? Maknanya awak bukanlah salah seorang dari \"mereka\". Hmm awak juga tidak suka dengan raksaksa-raksaksa itu. Boleh tak tolong saya, nanti saya akan bantu apa yang saya mampu. Pada suatu tempat dalam aras ini, awak akan berjumpa dengan binatang kegelapan, iaitu _Hantu Khianat_. Bunuh kedua-duanya, ambil _hatinya_ dan beri pada saya. Satu lagi, jika awak mahu membeli bekalan saya, saya akan jual dengan senang hati</string>
+    <string name="AzuterronNPC_Quest_Start">Haa, kenapa... alamak, awak boleh lihat saya, betul ke ni? Maknanya awak bukanlah salah seorang dari \&quot;mereka\&quot;. Hmm awak juga tidak suka dengan raksaksa-raksaksa itu. Boleh tak tolong saya, nanti saya akan bantu apa yang saya mampu. Pada suatu tempat dalam aras ini, awak akan berjumpa dengan binatang kegelapan, iaitu _Hantu Khianat_. Bunuh kedua-duanya, ambil _hatinya_ dan beri pada saya. Satu lagi, jika awak mahu membeli bekalan saya, saya akan jual dengan senang hati</string>
     <string name="Backstab_Aware">Mangsa sepatutnya tidak sedar akan kehadiran awak untuk serangan belakang yang baik.</string>
     <string name="Backstab_Name">Tikam Belakang</string>
     <string name="BadgesScene_Title">Lencana Anda</string>
@@ -188,7 +187,7 @@
     <string name="BellaNPC_Amulet_F">Hai si kacak, apa benda yang berkilauan tu. Azimat yang luar biasa! Hmmm, awak... lebih menonjol dan lebih hebat dari yang lain. Marilah kita berbual-bual dan berbincang tentang masa hadapan kita bersama?</string>
     <string name="BellaNPC_Amulet_M">Hai si kacak, apa benda tu yang berkilauan. Azimat yang luar biasa! Dan awak... lebih hebat dari golongan kelas bawahan yang lain. Marilah kita berbual-bual dan berbincang tentang masa hadapan kita bersama?</string>
     <string name="BellaNPC_Angry">Kurang ajar... memang dasar golongan kelas bawahan!</string>
-    <string name="BellaNPC_Desc">Gadis yang berpenampilan mewah dan anggun. Kelakuan dia seolah-olah \"Saya lebih baik dan bergaya dari orang lain.\"</string>
+    <string name="BellaNPC_Desc">Gadis yang berpenampilan mewah dan anggun. Kelakuan dia seolah-olah \&quot;Saya lebih baik dan bergaya dari orang lain.\&quot;</string>
     <string name="BellaNPC_Message">Saya tidak minat orang berkelas rendah seperti awak!</string>
     <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
@@ -222,8 +221,8 @@
     <string name="BlackSkullOfMastery_Title">Anda boleh tawarkan mantera. Atau anda boleh manipulasi formula ajaib supaya anda boleh telan kedua-dua mantera dan artifak tersebut, membolehkan diri anda menjadi Lich.</string>
     <string name="BlackSkull_Activated">Tengkorak Hitam telah dibangunkan!</string>
     <string name="BlackSkull_Deactivated">Tengkorak Hitam tidur kembali...</string>
-    <string name="BlackSkull_Info">Sebuah tengkorak obsidian kecil. Ia merupakan sumber kuasa Necropolis, tetapi selepas Lich dikalahkan ia kehilangan semua kuasanya. Tetapi jika anda memegangnya satu tanggapan pelik melintasi minda anda: \"Aku lapar\".</string>
-    <string name="BlackSkull_Info_Awakened">Tengkorak berdenyut-denyut dengan kuasa, anda dapat lihat ia keluar dari soket mata tengkorak. Jika anda memegangnya dapat mendengar suara menakutkan: \"Kawat maut:</string>
+    <string name="BlackSkull_Info">Sebuah tengkorak obsidian kecil. Ia merupakan sumber kuasa Necropolis, tetapi selepas Lich dikalahkan ia kehilangan semua kuasanya. Tetapi jika anda memegangnya satu tanggapan pelik melintasi minda anda: \&quot;Aku lapar\&quot;.</string>
+    <string name="BlackSkull_Info_Awakened">Tengkorak berdenyut-denyut dengan kuasa, anda dapat lihat ia keluar dari soket mata tengkorak. Jika anda memegangnya dapat mendengar suara menakutkan: \&quot;Kawat maut:</string>
     <string name="BlackSkull_Name">tengkorak hitam</string>
     <string name="BlackSkull_Name_Awakened">tengkorak hitam hidup</string>
     <string name="BlackSkull_Ressurrect">Tengkorak Hitam telah memanggil raksaksa kematian berkhidmat untuk anda!</string>
@@ -288,7 +287,7 @@
     <string name="Candy_Name">gula-gula</string>
     <string name="Candy_Warning_1">Anda tidak sepatutnya makan gula-gula tersebut. Anda telah pun berjanji menghadiahkannya kepada seseorang. Ia tidak memberi manafaat kepada anda, rasa lapar masih ada, gula-gula itu tidak mencukupi.</string>
     <string name="Candy_Warning_2">Oleh kerana anda makan terlalu banyak, perut anda mulai sakit.</string>
-    <string name="Capotain_Info">Topi bertepi lebar dan tinggi. Ia dikaitkan dengan orang alim, tetapi tidak perlu tahu selok-belok agama untuk memakainya. Atas sebab tertentu ia mempunyai tanda nama, iaitu \"Sulaiman\".</string>
+    <string name="Capotain_Info">Topi bertepi lebar dan tinggi. Ia dikaitkan dengan orang alim, tetapi tidak perlu tahu selok-belok agama untuk memakainya. Atas sebab tertentu ia mempunyai tanda nama, iaitu \&quot;Sulaiman\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_Info">Bangkai %s yang benar-benar mati</string>
     <string name="Caves_TileDescBookshelf">Siapa yang perlukan rak buku di dalam gua?</string>
@@ -424,7 +423,7 @@
     <string name="Codex_Story_23">Buku ini ditulis dalam bahasa orang kerdil</string>
     <string name="Codex_Story_24">Buku ini ditulis dalam bahasa bunian</string>
     <string name="Codex_Story_25">Dia berhenti seketika, kaku, di pintu besar oak, matanya meliar pada cahaya yang menembusi bingkai pintu. Dipenjuru minda beliau, mengatakan.\n
-\"Cahaya Matahari..\" dia berbisik sendirian. Berapa lamakah beliau di sini? Dalam kegelapan Kurungan Bawah Tanah, sudah lama tidak mengetahui hari-hari yang telah berlalu. Cahaya yang berpancaran itu mengimbau ingatan lampaunya. Dia teringat latihan sukar yang dilaluinya, hari-hari berlatih dengan \'senjata\', membaca, dan melukis peta. Teringat juga mantera dan disiplin yang membolehkan beliau kekal waras di dalam kegelapan. Apa yang tidak diingatinya ialah, orang yang disekitar sebelum ini.\n
+\&quot;Cahaya Matahari..\&quot; dia berbisik sendirian. Berapa lamakah beliau di sini? Dalam kegelapan Kurungan Bawah Tanah, sudah lama tidak mengetahui hari-hari yang telah berlalu. Cahaya yang berpancaran itu mengimbau ingatan lampaunya. Dia teringat latihan sukar yang dilaluinya, hari-hari berlatih dengan \'senjata\', membaca, dan melukis peta. Teringat juga mantera dan disiplin yang membolehkan beliau kekal waras di dalam kegelapan. Apa yang tidak diingatinya ialah, orang yang disekitar sebelum ini.\n
 Dia masih mengingati suara mereka, perintah mereka, dan amaran mereka, tetapi bukannya wajah mereka, mahupun sentuhan mereka.\n
 Kesakitan telah melatih dia, Mengingati bahaya, senantiasa bahaya. Haiwan gila, orang hidup semula, penyamun gila, dan ninja licik semuanya tersungkur kalah. Dia telah menghadapi luka-luka, terbakar, ditikam, dan terkena racun sepanjang pengembaraan merempuhi makhluk dibenci, setan, dan pembangkit mayat gila. Dewa pun telah beliau kalahkan.\n
 Dia telah berjaya menjejak Yog dalam neraka dunia, sebelum menidurkannya buat selama-lamanya. Yog sebenarnya adalah hamba bagi salah satu kuasa ghaib yang lebih hebat darinya.\n
@@ -512,7 +511,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DeepSnail_Name_Objective">siput gua</string>
     <string name="DeferedDamageBuff_Info">Rasa sakit telah bertukar menjadi sakit yang perlahan, mengurangkan kerosakan yang diterima sekaligus.\nKerosakan yang tinggal untuk diterima %d</string>
     <string name="DeferedDamage_Killed_Txt">%s telah membunuh anda...</string>
-    <string name="DevourBuff_Info" />
+    <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">Baham</string>
     <string name="DewVial_ACDRINK">MINUM</string>
     <string name="DewVial_AutoDrink">Bebuli embun telah dihabiskan untuk memulihkan luka anda.</string>
@@ -608,7 +607,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ExplodingSkull_Desc">Tengkorak terbakar yang terapung ini kelihatan sangat rapuh, seakan-akan ia akan meledak pada bila-bila masa.</string>
     <string name="ExplodingSkull_Name">tengkorak meledak</string>
     <string name="ExplodingSkull_Name_Objective">tengkorak meledak</string>
-    <string name="Eye_Desc">Salah nama setan ini ialah \"bebola kebencian\", kerana bila ia melihat musuhnya, ia menggunakan renungan maut secara mendadak, tidak kira lawan atau kawan.</string>
+    <string name="Eye_Desc">Salah nama setan ini ialah \&quot;bebola kebencian\&quot;, kerana bila ia melihat musuhnya, ia menggunakan renungan maut secara mendadak, tidak kira lawan atau kawan.</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">Renungan maut %s telah membunuh anda...</string>
     <string name="Eye_Name">mata jahat</string>
@@ -700,7 +699,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="GoldenSword_Info">Kebiasaannya senjata yang diperbuat dari logam lembut seperti emas tidak berguna selain dari hiasan. Sebaliknya pedang ini dapat memotong dengan baik.</string>
     <string name="GoldenSword_Name">pedang emas</string>
     <string name="Golem_Defense">disekat</string>
-    <string name="Golem_Desc">Orang kerdil cuba menggabungkan pengetahuan mekanikal dengan kuasa terbaharu ditemui iaitu pengikatan unsur. Mereka cuba guna semangat tahan sebagai \"roh\" untuk jasad mekanikal golem, yang mereka percayai paling mudah dikawal. Sebaliknya, jika tersilap sedikit semasa upacara boleh menyebabkan bencana.</string>
+    <string name="Golem_Desc">Orang kerdil cuba menggabungkan pengetahuan mekanikal dengan kuasa terbaharu ditemui iaitu pengikatan unsur. Mereka cuba guna semangat tahan sebagai \&quot;roh\&quot; untuk jasad mekanikal golem, yang mereka percayai paling mudah dikawal. Sebaliknya, jika tersilap sedikit semasa upacara boleh menyebabkan bencana.</string>
     <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">golem</string>
     <string name="Goo_Info1">Goo mengepam dirinya sendiri!</string>
@@ -769,7 +768,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HeroClass_HunPerks_3">Pemburu memperoleh lebih tenaga hayat daripada titisan embun.</string>
     <string name="HeroClass_HunPerks_4">Pemburu dapat merasakan kehadiran raksaksa berhampiran walaupun ia tersembunyi disebalik halangan.</string>
     <string name="HeroClass_Mag">ahli sihir</string>
-    <string name="HeroClass_MagPerks_0">Ahli sihir bermula dengan Tongkat Sakti Misil Ajaib. Tongkat sakti ini boleh \"dinyahsihirkan\" supaya dapat ditatar menjadi tongkat sakti lain.</string>
+    <string name="HeroClass_MagPerks_0">Ahli sihir bermula dengan Tongkat Sakti Misil Ajaib. Tongkat sakti ini boleh \&quot;dinyahsihirkan\&quot; supaya dapat ditatar menjadi tongkat sakti lain.</string>
     <string name="HeroClass_MagPerks_1">Ahli sihir dapat mengecas semula tongkat sakti mereka lebih pantas.</string>
     <string name="HeroClass_MagPerks_2">Bila makan, apa jua makanan dapat memulihkan 1 cas untuk semua jenis tongkat sakti di dalam simpanan.</string>
     <string name="HeroClass_MagPerks_3">Ahli sihir oleh gunakan tongkat sakti sebagai senjata tempur.</string>
@@ -790,7 +789,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HeroClass_RogPerks_5">Skrol Pemetaan Ajaib boleh dikenal pasti pada awal pengembaraan.</string>
     <string name="HeroClass_War">satria</string>
     <string name="HeroClass_WarPerks_0">Satria bermula dengan 11 mata Kekuatan.</string>
-    <string name="HeroClass_WarPerks_1">Satria bermula dengan pedang pendek yang unik. Pedang ini boleh \"ditempa semula\" kemudian untuk ditatar menjadi senjata tempur yang lain.</string>
+    <string name="HeroClass_WarPerks_1">Satria bermula dengan pedang pendek yang unik. Pedang ini boleh \&quot;ditempa semula\&quot; kemudian untuk ditatar menjadi senjata tempur yang lain.</string>
     <string name="HeroClass_WarPerks_2">Satria kurang cekap mengendalikan senjata bermisil.</string>
     <string name="HeroClass_WarPerks_3">Apa jua jenis makanan dapat memulihkan tenaga hayat bila dimakan.</string>
     <string name="HeroClass_WarPerks_4">Posyen Kekuatan sudah dapat dikenal pasti pada awal pengembaraan.</string>
@@ -799,7 +798,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HeroSubClass_DescBers">Jika mendapat cedera parah, _Berserker_ menjadi marah gila yang dapat meningkatkan output kecederaan yang dikenakan kepada pihak musuh.</string>
     <string name="HeroSubClass_DescFreR">_Pelari Bebas_ dapat bergerak dua kali ganda lebih cepat berbanding kebanyakan raksaksa. Ketika berlari, beliau lebih sukar dipukul. Untuk kelebihan ini beliau tidak boleh terlebih beban dan tidak berada dalam keadaan kelaparan.</string>
     <string name="HeroSubClass_DescGlad">Serangan berjaya dengan senjata jarak dekat membolehkan _Gladiator_ memulakan satu kombo, dimana bagi setiap pukulan yang berjaya dapat hasilkan lebih banyak kecederaan.</string>
-    <string name="HeroSubClass_DescNone" />
+    <string name="HeroSubClass_DescNone"/>
     <string name="HeroSubClass_DescScout">_Peninjau_ Bunian adalah pakar dalam penyelinapan. Pengayaman lalang membolehkan mereka hasilkan halimunan buat sementara. Mereka juga lebih pantas berbanding Bunian biasa.</string>
     <string name="HeroSubClass_DescShaman">_Pawang_ Bunian boleh menggunakan tongkat sakti sebagai senjata jarak dekat. Serangan yang berjaya dapat peluang mengaktifkan kuasa tongkat sakti pada sasaran tanpa perlu mengecas.</string>
     <string name="HeroSubClass_DescSnip">_Penembak Hendap_ dapat mengenalpasti titik lemah pada perisai pihak musuh, dan dapat menembusi perisai jika menggunakan senjata bermisil.</string>
@@ -1120,10 +1119,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">mimik</string>
     <string name="MimicAmulet_Name_Objective">mimik</string>
-    <string name="MimicPie_Desc">Mimik merupakan sejenis makhluk ajaib yang dapat meniru rupa yang dikehendaki. Yang ini rupa sebijik macam pasty besar yang sedap\".;</string>
+    <string name="MimicPie_Desc">Mimik merupakan sejenis makhluk ajaib yang dapat meniru rupa yang dikehendaki. Yang ini rupa sebijik macam pasty besar yang sedap\&quot;.;</string>
     <string name="MimicPie_Name">mimik</string>
     <string name="MimicPie_Name_Objective">mimik</string>
-    <string name="Mimic_Desc">Mimik merupakan sejenis makhluk ajaib yang dapat meniru rupa yang dikehendaki. Dalam kurungan bawah tanah meraka suka memilih rupa peti harta-karun, kerana mereka tahu mengumpan pengembara.\";</string>
+    <string name="Mimic_Desc">Mimik merupakan sejenis makhluk ajaib yang dapat meniru rupa yang dikehendaki. Dalam kurungan bawah tanah meraka suka memilih rupa peti harta-karun, kerana mereka tahu mengumpan pengembara.\&quot;;</string>
     <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">mimik</string>
     <string name="Mimic_Name_Objective">mimik</string>
@@ -1138,7 +1137,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MissileWeapon_No">Tidak, Saya ubah pendirian saya</string>
     <string name="MissileWeapon_Sure">Anda pasti mahu memakainya sebagai senjata tempur?</string>
     <string name="MissileWeapon_Yes">Ya, Saya tahu apa yang saya buat</string>
-    <string name="Mob_Cannot_Be_Pet">Semangat \"%s\" terlalu kuat untuk dikawal!</string>
+    <string name="Mob_Cannot_Be_Pet">Semangat \&quot;%s\&quot; terlalu kuat untuk dikawal!</string>
     <string name="Mob_Desc">Keterangan sebenar akan muncul sebentar lagi!</string>
     <string name="Mob_Died">Anda dengar ada benda yang mati dari jauh</string>
     <string name="Mob_ReadyForOrder">%s sedia menerima arahan anda.</string>
@@ -1180,7 +1179,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MysteryMeat_Message">Makanan ini berasa... pelik.</string>
     <string name="MysteryMeat_Name">daging misteri</string>
     <string name="NecromancerArmor_Info">Perisai ini membolehkan Pembangkit mayat memanggil sehingga 2 unit Makhluk Kematian pada kos 5 roh setiap satu. Pembantu hidup semula ini akan mengikut tuannya dan menyerang musuh tuan. Makhluk kematian ini menjadi semakin kuat jika tahap adiwira meningkat.</string>
-    <string name="NecromancerArmor_Info2">Jika memakai perisai ini pembangkit mayat dapat guna keupayaan \"Necrotisme\", berupaya menyebarkan  wabak magik, menjangkiti makhluk disekitar, sama ada yang telah mati atau masih hidup.</string>
+    <string name="NecromancerArmor_Info2">Jika memakai perisai ini pembangkit mayat dapat guna keupayaan \&quot;Necrotisme\&quot;, berupaya menyebarkan  wabak magik, menjangkiti makhluk disekitar, sama ada yang telah mati atau masih hidup.</string>
     <string name="NecromancerArmor_Name">Perisai tulang</string>
     <string name="NecromancerArmor_NotNecromancer">Hanya pembangkit mayat boleh guna perisai ini!</string>
     <string name="NecromancerNPC_Desc">Lelaki pertengahan usia ini kelihatan menjengkelkan dan teruja pada masa yang sama. Dia memakai perisai komposit yang diperbuat dari cebisan tulang.</string>
@@ -1198,7 +1197,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="NecromancerRobe_PetLimitReached">Necromancy: had panggilan dicapai (Maks semasa: %d)!</string>
     <string name="Necromancer_ACSpecial">NECROMANCY</string>
     <string name="Necromancy_BecameALich">Anda bertukar menjadi Lich! Kuasa anda semakin kuat dan muatan roh anda bertambah sekali ganda! Tetapi anda telah kehilangan %1$d mata kekuatan.</string>
-    <string name="Necromancy_NotEnoughSouls">Anda tidak mempunyai roh yang mencukupi untuk menyihir mantera \"%1$s\".</string>
+    <string name="Necromancy_NotEnoughSouls">Anda tidak mempunyai roh yang mencukupi untuk menyihir mantera \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_ReincarnationName">Penjelmaan Semula</string>
     <string name="Necromancy_ReincarnationTriggered">Kuasa anda melangkaui kematian! Tetapi anda kehilangan semua roh dan barangan yang telah dikumpul</string>
     <string name="Necromancy_SoulsCountLabel">Roh</string>
@@ -1481,7 +1480,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Ring_Info4">%1$s\n\nAnda dapat rasai kuasa ajaib berunsur kejahatan berlingkar-lingkar di dalam %2$s.</string>
     <string name="Ring_Name">Cincin %s</string>
     <string name="RogueArmor_ACSpecial">BOM ASAP</string>
-    <string name="RogueArmor_Desc">Jika memakai pakaian gelap ini, gasar boleh melakukan trik, iaitu \"bom asap\" (tiada letupan sebenar digunakan): dia menjadikan pihak musuh buta dan melompat ditepinya.</string>
+    <string name="RogueArmor_Desc">Jika memakai pakaian gelap ini, gasar boleh melakukan trik, iaitu \&quot;bom asap\&quot; (tiada letupan sebenar digunakan): dia menjadikan pihak musuh buta dan melompat ditepinya.</string>
     <string name="RogueArmor_Fov">Anda hanya boleh lompat ke lokasi kosong dalam pandangan anda</string>
     <string name="RogueArmor_Name">pakaian gasar</string>
     <string name="RogueArmor_NotRogue">Hanya gasar boleh guna perisai ini!</string>
@@ -1589,7 +1588,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Scroll_ACRead">BACA</string>
     <string name="Scroll_Blinded">Anda tidak boleh membaca skrol kerana tidak nampak</string>
     <string name="Scroll_Info">Kertas kekulit ini dipenuhi dengan tulis yang sukar dibaca, dan terdapat tajuk rune %s. Siapa tahu apa yang ia lakukan jika dibaca dengan kuat?</string>
-    <string name="Scroll_Name">skrol \"%s\"</string>
+    <string name="Scroll_Name">skrol \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="Scroll_Runes_1">SOWILO</string>
     <string name="Scroll_Runes_10">ODAL</string>
@@ -1630,6 +1629,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ShadowLord_Name">penguasa bayang</string>
     <string name="ShadowLord_Name_Objective">Penguasa Bayang</string>
     <string name="Shadow_Desc">Bayang merayap secara senyap dalam runtuhan penjara purba, jarang menunjukkan dirinya, terutamanya dalam pengembaraan terkini mereka.</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name">bayang</string>
     <string name="Shadow_Name_Objective">bayang</string>
     <string name="ShadowsBuff_Name">Shadowmelded</string>
@@ -1694,10 +1694,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Spear_Info">batang kayu panjang yang mana salah satu hujungnya dicemat dengan bilah besi tajam.</string>
     <string name="Spear_Name">lembing</string>
     <string name="SpellBook_Info">Buku ini merupakan kompilasi pelbagai halaman yang dijahit menjadi satu buku. Anda boleh mengambil manafaat di dalamnya jika anda lebih teliti.</string>
-    <string name="SpellBook_Info_Identified">Di dalam halaman ini anda menemui teks lengkap  bagi mantera \"%1$s\".\n\" %2$s\"</string>
+    <string name="SpellBook_Info_Identified">Di dalam halaman ini anda menemui teks lengkap  bagi mantera \&quot;%1$s\&quot;.\n\&quot; %2$s\&quot;</string>
     <string name="SpellBook_Name">Buku Mantera</string>
     <string name="Spell_SelectACell">Pilih satu sel sasaran.</string>
-    <string name="Spells_NotEnoughSP">Anda tidak mempunyai mana yang mencukupi untuk menyihir mantera \"%1$s\".</string>
+    <string name="Spells_NotEnoughSP">Anda tidak mempunyai mana yang mencukupi untuk menyihir mantera \&quot;%1$s\&quot;.</string>
     <string name="Spells_NotInOwnBody">Anda tidak boleh buat %s ketika roh anda  tidak berada di dalam jasad anda.</string>
     <string name="Spells_NotTooFast">%s belum boleh digunakan lagi</string>
     <string name="Spells_SummonLimitReached">%1$s: had panggilan dicapai (Maks semasa: %2$d)!</string>
@@ -1718,7 +1718,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpiderGuard_Desc">Seperti juga askar, pengawal lelabah telah bersumpah untuk melindungi Kerajaan mereka. Racun dari pengawal ini digunakan untuk melumpuhkan sasaran mereka.</string>
     <string name="SpiderGuard_Name">pengawal lelabah</string>
     <string name="SpiderGuard_Name_Objective">pengawal lelabah</string>
-    <string name="SpiderMindAmber_Desc">Lelabah ambar merupakan makhluk misteri yang sukar ditemui. Mereka mempunyai kuasa psikik seakan psi-lelabah tetapi lebih kuat berbanding saudaranya yang lain. Nama \"ambar\" merujuk pada warna selaput otak gergasinya.</string>
+    <string name="SpiderMindAmber_Desc">Lelabah ambar merupakan makhluk misteri yang sukar ditemui. Mereka mempunyai kuasa psikik seakan psi-lelabah tetapi lebih kuat berbanding saudaranya yang lain. Nama \&quot;ambar\&quot; merujuk pada warna selaput otak gergasinya.</string>
     <string name="SpiderMindAmber_Name">lelabah ambar</string>
     <string name="SpiderMindAmber_Name_Objective">lelabah ambar</string>
     <string name="SpiderMind_Desc">Lelabah yang nampak lemah ini memiliki kuasa minda yang unik, membolehkan mereka kawal keseluruhan koloni. Psi-Lelabah berupaya mengawal apa jua makhluk hidup, tetapi mereka penakut.</string>
@@ -1760,7 +1760,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="StartScene_UnlockGnoll">Untuk membuka kelas ini anda mesti pujuk paderi pekan supaya sembuhkan Gnoll Ganas.</string>
     <string name="StartScene_UnlockNecromancer">Untuk membuka kelas karakter ini, bunuh Lich dengan lain-lain kelas.</string>
     <string name="StartScene_Warning">Kemajuan permainan semasa anda akan dipadamkan.</string>
-    <string name="StartScene_WinGame">Untuk membuka \"Cabaran\", menangi permainan dengan mana-mana kelas watak.</string>
+    <string name="StartScene_WinGame">Untuk membuka \&quot;Cabaran\&quot;, menangi permainan dengan mana-mana kelas watak.</string>
     <string name="StartScene_Yes">Ya, mulakan permainan baharu</string>
     <string name="Statue_Desc">Anda dapat ia hanyalah sebuah patung hodoh di dalam kurungan bawah tanah, tetapi mata merah bersinar-sinar. Patung sebenar diperbuat daripada batu, manakala _%s_, adalah berpenampilan seperti patung.</string>
     <string name="Statue_Name">patung hidup</string>
@@ -1872,8 +1872,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Undead_Name_Objective">orang kerdil hidup semula</string>
     <string name="Ushanka_Info">Topi serkup ushanka yang hangat dihiasi dengan bintang merah klasik. Pendamping yang sesuai untuk rakan-rakan yang berjuang melawan kurungan bawah tanah yang sejuk dan jahat. </string>
     <string name="Ushanka_Name">Ushanka</string>
-    <string name="Using_Failed_Because_Blind">Anda tidak boleh guna \"%s\" kerana tidak nampak.</string>
-    <string name="Using_Failed_Because_Magic">Satu kuasa sihir yang kuat menghalang anda menggunakan \"%s\".</string>
+    <string name="Using_Failed_Because_Blind">Anda tidak boleh guna \&quot;%s\&quot; kerana tidak nampak.</string>
+    <string name="Using_Failed_Because_Magic">Satu kuasa sihir yang kuat menghalang anda menggunakan \&quot;%s\&quot;.</string>
     <string name="VampireSkull_Info">Topeng ini diperbuat daripada tengkorak pontianak asli. Sebenarnya ia adalah tengkorak pontianak... Menakutkan.</string>
     <string name="VampireSkull_Name">Tengkorak pontianak</string>
     <string name="VertigoBuff_Name">Pening Gayat</string>
@@ -1928,7 +1928,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WandOfPoison_Info">Tembakan berbisa dari batang kayu terpiuh ini akan membenamkan bisa yang membawa maut kepada sasarannya. Makhluk yang terkena bisa ini akan merana kesakitan dalam tempoh yang lama sehingga kesannya hilang. Tempoh keberkesanannya meningkat jika tahap tongkat sakti ini meningkat.</string>
     <string name="WandOfPoison_Info1">tiada apa-apa berlaku</string>
     <string name="WandOfPoison_Name">Tongkat Sakti Beracun</string>
-    <string name="WandOfRegrowth_Info">\"Bila hayat sampai ke penghujungnya, kehidupan baharu akan bermula... kitaran abadi akan senantiasa keka selamanya!\"</string>
+    <string name="WandOfRegrowth_Info">\&quot;Bila hayat sampai ke penghujungnya, kehidupan baharu akan bermula... kitaran abadi akan senantiasa keka selamanya!\&quot;</string>
     <string name="WandOfRegrowth_Info1">tiada apa-apa berlaku</string>
     <string name="WandOfRegrowth_Name">Tongkat Sakti Hiudp Semula</string>
     <string name="WandOfShadowbolt_Info">Tongkat sakti ini memancarkan tenaga gelap yang jahat.</string>
@@ -2040,7 +2040,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndDonate_ruby">delima</string>
     <string name="WndDonate_rubyDonate">sumbangan delima</string>
     <string name="WndDonate_rubyDonateText">Kemurahan hati anda dapat membantu kami terus menambahbaik Remixed Dungeon!</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
     <string name="WndDonate_silver">perak</string>
     <string name="WndDonate_silverDonate">sumbangan perak</string>
     <string name="WndDonate_silverDonateText">Semua pendermaan akan membantu pembangunan projek ini</string>
@@ -2115,7 +2115,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndMovieTheatre_Instruction">Salam dan selamat datang ke pawagam kami! Kami menyediakan perkhidmatan istimewa, di mana anda boleh menonton filem istimewa yang dipanggil iklan secara percuma. Dan jika anda menontonnya sehingga habis, anda akan diberi ganjaran sebanyak %d syiling emas!</string>
     <string name="WndMovieTheatre_Instruction_2">Anda telah menonton sebanyak %1$d dari %2$d. Anda akan mendapat peluang menonton cereka lagi bagi setiap tahap adiwira baharu.</string>
     <string name="WndMovieTheatre_No">keluar</string>
-    <string name="WndMovieTheatre_Ok">Anda berjaya menonton video \"ganjaran\"!</string>
+    <string name="WndMovieTheatre_Ok">Anda berjaya menonton video \&quot;ganjaran\&quot;!</string>
     <string name="WndMovieTheatre_Sorry">Alamak ada masalah, kami tidak dapat memberi ganjaran video kepada anda...</string>
     <string name="WndMovieTheatre_Thank_You">Terima kasih atas sumbangan anda!</string>
     <string name="WndMovieTheatre_Title">Panggung Wayang</string>
@@ -2173,7 +2173,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndResurrect_Yes">Ya, Saya akan terus berlawan!</string>
     <string name="WndSadGhostNecro_No">Tidak, mari berbincang.</string>
     <string name="WndSadGhostNecro_Persuaded">Hantu sedu telah berjaya dikuasai!</string>
-    <string name="WndSadGhostNecro_Text">\"Semangat ini masih bertarung dengan sumpahannya. Ia tampaknya mahu sesuatu daripada saya. Jika saya gunakan kuasa necromatik, saya boleh pujuk dia dan beritahu saya telah tunaikan permintaannya. Jadi saya tidak perlu bazirkan masa di sini. Patutkah saya lakukannya?\"</string>
+    <string name="WndSadGhostNecro_Text">\&quot;Semangat ini masih bertarung dengan sumpahannya. Ia tampaknya mahu sesuatu daripada saya. Jika saya gunakan kuasa necromatik, saya boleh pujuk dia dan beritahu saya telah tunaikan permintaannya. Jadi saya tidak perlu bazirkan masa di sini. Patutkah saya lakukannya?\&quot;</string>
     <string name="WndSadGhostNecro_Yes">Ya, kalahkan dengan kemahuan anda.</string>
     <string name="WndSadGhost_Armor">Perisai hantu</string>
     <string name="WndSadGhost_Farewell">Selamat tinggal, pengembara!</string>
@@ -2337,7 +2337,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_crate_bottles_desc">Bir dalam botol telah menjadi satu fenomena pada masa dahulu dalam kalangan tuan punya rumah penginapan.</string>
     <string name="town_deco_crate_bottles_name">Pak bir</string>
     <string name="town_deco_crate_desc">Sebuah peti kayu yang kukuh yang menyimpan rahsianya di dalam.</string>
-    <string name="town_deco_cross_desc">Palang logam perak, simbol bagai agama tempatan - \"Saksi Santa Penguasa Bawah Tanah\".</string>
+    <string name="town_deco_cross_desc">Palang logam perak, simbol bagai agama tempatan - \&quot;Saksi Santa Penguasa Bawah Tanah\&quot;.</string>
     <string name="town_deco_cross_name">Palang</string>
     <string name="town_deco_crossroad_name">Tanda simpang</string>
     <string name="town_deco_curtains_desc">Hentikan semua cahaya yang tidak diperlukan dan juga bertindak sebagai hiasan yang baik.</string>
@@ -2418,7 +2418,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_rope_name">Tali</string>
     <string name="town_deco_rug_desc">Direka dengan citarasa yang menakjubkan.</string>
     <string name="town_deco_rug_name">Ambal</string>
-    <string name="town_deco_screen_desc">Kanvas misteri ini dikenali sebagai \"skrin\" dan ia dapat memaparkan gambar bergerak</string>
+    <string name="town_deco_screen_desc">Kanvas misteri ini dikenali sebagai \&quot;skrin\&quot; dan ia dapat memaparkan gambar bergerak</string>
     <string name="town_deco_screen_name">Skrin</string>
     <string name="town_deco_scrolls_desc">Rak berdebu yang penuh dengan skrol-skrol dan buku-buku.</string>
     <string name="town_deco_scrolls_name">Skrol</string>
@@ -2440,7 +2440,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_snow_name">Salji</string>
     <string name="town_deco_snowdrift_desc">Satu longgokan besar salji dan nampaknya tiada siapa yang mahu bersihkannya.</string>
     <string name="town_deco_snowdrift_name">Hanyutan Salji</string>
-    <string name="town_deco_snowman_desc">Orang salji adalah hiasan tradisional pekan bagi musim perayaan, ketika pendudukan merayai  hari \"Dungeonmas\", iaitu ketika raksaksa menakluki kurungan bawah tanah.</string>
+    <string name="town_deco_snowman_desc">Orang salji adalah hiasan tradisional pekan bagi musim perayaan, ketika pendudukan merayai  hari \&quot;Dungeonmas\&quot;, iaitu ketika raksaksa menakluki kurungan bawah tanah.</string>
     <string name="town_deco_snowman_name">Orang salji</string>
     <string name="town_deco_snowy_plate_desc">Plat purba ini dilitupi dengan salji</string>
     <string name="town_deco_snowy_plate_name">Plat bersalji</string>
@@ -2499,6 +2499,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Поглинання</string>
     <string name="AC_Kick">Копнути</string>
@@ -57,13 +56,13 @@
     <string name="AmuletScene_Stay">Я, мабуть, ще оглянуся навколо.</string>
     <string name="AmuletScene_Txt">Нарешті він у твоїх руках, Амулет Ендора. Ти отримаєш могутність, яка дозволить підкорити всіх і вся, чи подаруєш людству мир та процвітання, чи щось схоже на це. У будь-якому разі, твоє життя зміниться назавжди, а гра на цьому закінчиться. З іншого боку, ти маєш можливість ще трохи побути жалюгідним смертним.</string>
     <string name="Amulet_ACEnd">ЗАВЕРШИТИ ГРУ</string>
-    <string name="Amulet_Info">Амулет Ендора - могутній артефакт, невідомого походження. Вважається, що він може виконати будь-яке бажання, якщо воля власника буде достатньо сильною, аби \"вмовити\" амулет виконати його.</string>
+    <string name="Amulet_Info">Амулет Ендора - могутній артефакт, невідомого походження. Вважається, що він може виконати будь-яке бажання, якщо воля власника буде достатньо сильною, аби \&quot;вмовити\&quot; амулет виконати його.</string>
     <string name="Amulet_Name">Амулет Ендора</string>
     <string name="Ankh_Info">Древній символ безсмертя, який дарує можливість повернення після смерті. При воскресінні всі одягнуті речі губляться.</string>
     <string name="Ankh_Name">Анкх</string>
     <string name="AntiEntropy_Txt">%s анти-ентропії</string>
     <string name="ArmorKit_ACAplly">ЗАСТОСУВАТИ</string>
-    <string name="ArmorKit_Info">Використовуючи цей набір матеріалів та інструментів, будь-хто може переробити свою броню в \"епічну\", зберігаючи попередні властивості, ще й додаючи особливу здібність, яка залежить від класу героя. Жодних навичок шиття, коваля чи кожум\'яки не потребується.</string>
+    <string name="ArmorKit_Info">Використовуючи цей набір матеріалів та інструментів, будь-хто може переробити свою броню в \&quot;епічну\&quot;, зберігаючи попередні властивості, ще й додаючи особливу здібність, яка залежить від класу героя. Жодних навичок шиття, коваля чи кожум\'яки не потребується.</string>
     <string name="ArmorKit_Name">інструменти</string>
     <string name="ArmorKit_SelectArmor">Оберіть броню для покращення</string>
     <string name="ArmorKit_Upgraded">Ти застосував набір інструментів для покращення свого предмета %s</string>
@@ -100,7 +99,7 @@
     <string name="AzuterronNPC_Name_Objective">Незнайомця</string>
     <string name="AzuterronNPC_Quest_End">Чудово. Візьми це зілля, я впевнений, воно стане тобі в нагоді.</string>
     <string name="AzuterronNPC_Quest_Reminder">Допоможи мені, і я допоможу тобі.</string>
-    <string name="AzuterronNPC_Quest_Start">Хм, чому... ох, ти можеш мене бачити, чи не так? Стало бути ти не один з \"них\". Я так бачу ти теж не в захваті від цього засилля монстрів. Знаєш що, якби ти мені допоміг в одні справі, то я стався б тобі в нагоді. Десь тут причаївся _Підступний дух_. Вбий його, та принеси мені його _серце_. І звичайно ж, якщо забажаєш придбати щось з моїх припасів, звертайся.</string>
+    <string name="AzuterronNPC_Quest_Start">Хм, чому... ох, ти можеш мене бачити, чи не так? Стало бути ти не один з \&quot;них\&quot;. Я так бачу ти теж не в захваті від цього засилля монстрів. Знаєш що, якби ти мені допоміг в одні справі, то я стався б тобі в нагоді. Десь тут причаївся _Підступний дух_. Вбий його, та принеси мені його _серце_. І звичайно ж, якщо забажаєш придбати щось з моїх припасів, звертайся.</string>
     <string name="BadgesScene_Title">Твої значки</string>
     <string name="Badges_AllBags">Всі торби придбано</string>
     <string name="Badges_AllItems">Усі зілля, сувої, кільця та чарівні палички ідентифіковано</string>
@@ -203,7 +202,7 @@
     <string name="BellaNPC_Amulet_F">Чому б апетитний пиріг не був таким гарним, це те що у вас є. Ах, такий вишуканий амулет! А ти ... ти так яскраво сяєш в порівнянні з будь-ким. Що якщо ми прогуляємося і обговорити наше взаємне майбутнє?</string>
     <string name="BellaNPC_Amulet_M">Чому б привітання не було таке гарне, це те що у вас є. Ах, такий вишуканий амулет! А ти ... ти стоїш над цими плебеями. Що якщо ми прогуляємося і обговорити наше взаємне майбутнє?</string>
     <string name="BellaNPC_Angry">Як смієш ти... ти плебей!</string>
-    <string name="BellaNPC_Desc">Дівчина виглядає дуже шикарно. Весь її зовнішній вигляд говорить вам: \"Я занадто гарна для всіх.\"</string>
+    <string name="BellaNPC_Desc">Дівчина виглядає дуже шикарно. Весь її зовнішній вигляд говорить вам: \&quot;Я занадто гарна для всіх.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Я не маю ніякого інтересу до таких плебеїв як ти сам!</string>
     <string name="BellaNPC_Name">Белла</string>
@@ -242,8 +241,8 @@
     <string name="BlackSkull_Activated">Чорний череп пробудився!</string>
     <string name="BlackSkull_Deactivated">Чорний череп знову дрімає...</string>
     <string name="BlackSkull_Gender">masculine</string>
-    <string name="BlackSkull_Info">Маленький обсидіановий череп. Він був джерелом сили Некрополісу, але, після поразки ліча, втратив їх. Однак коли ти тримаєш його в руках, тебе навідує чужа думка: \"він жадає\".</string>
-    <string name="BlackSkull_Info_Awakened">Череп дихає силою, видно як вона ллється крізь його порожні зіниці. Тримаючи його в руках ти чуєш жахливий голос: \"Смерть крокує\".</string>
+    <string name="BlackSkull_Info">Маленький обсидіановий череп. Він був джерелом сили Некрополісу, але, після поразки ліча, втратив їх. Однак коли ти тримаєш його в руках, тебе навідує чужа думка: \&quot;він жадає\&quot;.</string>
+    <string name="BlackSkull_Info_Awakened">Череп дихає силою, видно як вона ллється крізь його порожні зіниці. Тримаючи його в руках ти чуєш жахливий голос: \&quot;Смерть крокує\&quot;.</string>
     <string name="BlackSkull_Name">чорний череп</string>
     <string name="BlackSkull_Name_Awakened">пробуджений чорний череп</string>
     <string name="BlackSkull_Ressurrect">Чорний череп відродив вмерлого монстра тобі в прислугу!</string>
@@ -315,7 +314,7 @@
     <string name="Candy_Name">цукерка</string>
     <string name="Candy_Warning_1">Не слід було їсти цю цукерку. Ти пообіцяв віддати її власнику. Не те щоб вона справила на тебе якийсь помітний ефект, голод вона не втамувала. Це лише цукерка.</string>
     <string name="Candy_Warning_2">От ця вже точно була зайва. Через переїдання цукерок у тебе прихопило живіт.</string>
-    <string name="Capotain_Info">високий капелюх, що звужується по краях, Він зазвичай асоціюється з пуританами, але вам не обов\'язково бути досить релігійними, аби носити її. З якоїсь причини на ній є ярлик, з написом \"Соломон\".</string>
+    <string name="Capotain_Info">високий капелюх, що звужується по краях, Він зазвичай асоціюється з пуританами, але вам не обов\'язково бути досить релігійними, аби носити її. З якоїсь причини на ній є ярлик, з написом \&quot;Соломон\&quot;.</string>
     <string name="Capotain_Name">Ковпак</string>
     <string name="Carcass_DissectMessage">Ви розчленували труп і отримали %s.</string>
     <string name="Caves_TileDescBookshelf">Кому в підземеллі знадобилася книжкова шафа?</string>
@@ -451,7 +450,7 @@
     <string name="Codex_Story_24">Ця книга написана мовою ельфів</string>
     <string name="Codex_Story_25">Вона зупинилася і завмерла, на важких дубових дверях побачила світло що йде крізь них. З якогось забутого куточка її свідомості, спливло усвідомлення.
 
-\"Сонячне світло...\" пробурмотіла вона. Як давно це було? У вічному мороці темниці вона вже давно перестала лічити дні. Світло висвітлювало занедбані спогади. Вона згадала своє навчання, довгі дні напруженої практики брязкання лезами, дерев\'яного схову і створення карт. Вона згадала мантри і дисципліни, призначених зберегти бодай якусь подобу здорового глузду у невідомих глибинах. Те, що вона не пам\'ятає, не може згадати, так це людей.
+\&quot;Сонячне світло...\&quot; пробурмотіла вона. Як давно це було? У вічному мороці темниці вона вже давно перестала лічити дні. Світло висвітлювало занедбані спогади. Вона згадала своє навчання, довгі дні напруженої практики брязкання лезами, дерев\'яного схову і створення карт. Вона згадала мантри і дисципліни, призначених зберегти бодай якусь подобу здорового глузду у невідомих глибинах. Те, що вона не пам\'ятає, не може згадати, так це людей.
 
 Вона згадала їхні голоси, їх команди та їхні попередження, але не обличчя, а ні їхнього дотику.
 
@@ -555,7 +554,7 @@
     <string name="DeepSnail_Name">глибокий равлик</string>
     <string name="DeferedDamageBuff_Info">Біль був перетворений на вповільнювальний біль, зменшуючи шкоду, що отримується одразу.\nШкоди залишилося отримати %d</string>
     <string name="DeferedDamage_Killed_Txt">%s вбив тебе...</string>
-    <string name="DevourBuff_Info" />
+    <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">Поглинання</string>
     <string name="DewVial_ACDRINK">ВИПИТИ</string>
     <string name="DewVial_AutoDrink">Ти спустошив фіал з росою, аби загоїти рани.</string>
@@ -757,7 +756,7 @@
     <string name="GoldenSword_Info">Зазвичай зброя, виготовлена з такого м\'якого металу, як золото, використовується в якості прикраси. Але не дивлячись на це, вона здатна щось розрубати.</string>
     <string name="GoldenSword_Name">золотий меч</string>
     <string name="Golem_Defense">прикрився</string>
-    <string name="Golem_Desc">Дворфи намагалися поєднати механізми зі ново-отриманими знаннями про природу стихій. Духи землі замінювали \"душу\" механічного каркаса голема, вважалось, що їх легше контролювати. Попри це, найдрібніша неточність в ритуалі могла призвести до нищівних наслідків.</string>
+    <string name="Golem_Desc">Дворфи намагалися поєднати механізми зі ново-отриманими знаннями про природу стихій. Духи землі замінювали \&quot;душу\&quot; механічного каркаса голема, вважалось, що їх легше контролювати. Попри це, найдрібніша неточність в ритуалі могла призвести до нищівних наслідків.</string>
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">голем</string>
     <string name="Golem_Name_Objective">голема</string>
@@ -833,12 +832,12 @@
     <string name="HeroClass_HunPerks_3">Мисливиці отримують більше одиниць здоров\'я з краплин роси.</string>
     <string name="HeroClass_HunPerks_4">Мисливиці відчувають монстрів, що поряд, навіть якщо вони ховаються за перешкодами.</string>
     <string name="HeroClass_Mag">маг</string>
-    <string name="HeroClass_MagPerks_0">Маги починають з унікальною паличкою \"Магічних снарядів\". Пізніше цю паличку можна \"зачарувати\" для покращення іншої палички.</string>
+    <string name="HeroClass_MagPerks_0">Маги починають з унікальною паличкою \&quot;Магічних снарядів\&quot;. Пізніше цю паличку можна \&quot;зачарувати\&quot; для покращення іншої палички.</string>
     <string name="HeroClass_MagPerks_1">Маги швидше перезаряджають свої палички.</string>
     <string name="HeroClass_MagPerks_2">Під час їжі, одна порція поновлює 1 заряд кожної палички в інвентарі.</string>
     <string name="HeroClass_MagPerks_3">Маги можуть використовувати палички в ближньому бою.</string>
     <string name="HeroClass_MagPerks_4">Маги використовують ману для створення стихійних заклять.</string>
-    <string name="HeroClass_MagPerks_5">Сувої \"розпізнавання\" відомі з самого початку.</string>
+    <string name="HeroClass_MagPerks_5">Сувої \&quot;розпізнавання\&quot; відомі з самого початку.</string>
     <string name="HeroClass_Necromancer">некромант</string>
     <string name="HeroClass_NecromancerPerks_1">Некроманти використовують ману для заклять смерті.</string>
     <string name="HeroClass_NecromancerPerks_2">Некроманти починають з унікальною робою некроманта, яка дає 1 бал мани за кожну вбиту істоту.</string>
@@ -851,10 +850,10 @@
     <string name="HeroClass_RogPerks_2">Крадії добре вправляються з легкою бронею, вони краще ухиляються в ній.</string>
     <string name="HeroClass_RogPerks_3">Крадії є майстрами в пошуку прихованих дверей та пасток.</string>
     <string name="HeroClass_RogPerks_4">Крадії можуть довше можуть триматися без їжі.</string>
-    <string name="HeroClass_RogPerks_5">Сувої \"магічної карти\" ідентифіковані з самого початку.</string>
+    <string name="HeroClass_RogPerks_5">Сувої \&quot;магічної карти\&quot; ідентифіковані з самого початку.</string>
     <string name="HeroClass_War">воїн</string>
     <string name="HeroClass_WarPerks_0">Воїни починають з 11 балами сили.</string>
-    <string name="HeroClass_WarPerks_1">Воїни починають з унікальним коротким мечем. Який, в майбутньому, можна \"перекувати\" для покращення іншої зброї ближнього бою.</string>
+    <string name="HeroClass_WarPerks_1">Воїни починають з унікальним коротким мечем. Який, в майбутньому, можна \&quot;перекувати\&quot; для покращення іншої зброї ближнього бою.</string>
     <string name="HeroClass_WarPerks_2">Воїни погано пристосовані до зброї дальнього бою.</string>
     <string name="HeroClass_WarPerks_3">Під час їжі воїн відновлює трохи здоров\'я.</string>
     <string name="HeroClass_WarPerks_4">Зілля сили розпізнані з самого початку.</string>
@@ -863,7 +862,7 @@
     <string name="HeroSubClass_DescBers">Будучі сильно пораненим, _Берсеркер_ впадає в стан несамовитої люті, значно збільшуючи свої показники нанесення шкоди.</string>
     <string name="HeroSubClass_DescFreR">_Бігун_ може пересуватися в двічі швидше за багатьох монстрів. В бігуна тяжче поцілити під час руху. Але лише тоді, коли він не голодний і не перевантажений.</string>
     <string name="HeroSubClass_DescGlad">Вдала атака ближнього бою дозволяє _Гладіатору_ почати серію комбо-ударів, на протязі яких кожне наступне вдале попадання наносить більше шкоди.</string>
-    <string name="HeroSubClass_DescNone" />
+    <string name="HeroSubClass_DescNone"/>
     <string name="HeroSubClass_DescScout">Ельфійські _Слідопити_ майстри скритності. Витоптування високої трави  дає тимчасовий ефект невидимості. До того ж вони швидші за ельфів.</string>
     <string name="HeroSubClass_DescShaman">Ельфійські _Шамани_ можуть використовувати палички як зброю ближнього бою. Під час вдалого попадання в ціль заряд палички не втрачається.</string>
     <string name="HeroSubClass_DescSnip">_Снайпери_ здатні помітити вади у ворожій броні, практично ігноруючи її при використанні зброї дальнього бою.</string>
@@ -991,6 +990,7 @@
     <string name="IronKey_Name">залізний ключ</string>
     <string name="ItemSprite_Info1">викинути в сторону: %1$.1f %2$.1f</string>
     <string name="Item_ACDrop">ВИКЛАСТИ</string>
+    <string name="Item_ACPickup">Підібрати</string>
     <string name="Item_ACThrow">КИНУТИ</string>
     <string name="Item_DirThrow">Обери напрям для кидка</string>
     <string name="Item_Info">опис предмета</string>
@@ -1224,7 +1224,7 @@
     <string name="MissileWeapon_Sure">Ти впевнений, що хочеш використовувати це в якості зброї ближнього бою?</string>
     <string name="MissileWeapon_Yes">Так, я знаю що роблю.</string>
     <string name="Mob_Attacking">Вважайте цього %s мертвим!</string>
-    <string name="Mob_Cannot_Be_Pet">\"%s\" занадто сильний, аби контролювати його!</string>
+    <string name="Mob_Cannot_Be_Pet">\&quot;%s\&quot; занадто сильний, аби контролювати його!</string>
     <string name="Mob_CantDoIt">Не можу цього зробити. У мене маленькі лапки.</string>
     <string name="Mob_Desc">Справжній опис буде пізніше!</string>
     <string name="Mob_Died">Ти чуєш, що щось померло в далечі</string>
@@ -1266,7 +1266,7 @@
     <string name="MysteryMeat_Message">Ця їжа на смак... дивна.</string>
     <string name="MysteryMeat_Name">таємниче м\'ясо</string>
     <string name="NecromancerArmor_Info">Ця броня дозволяє некроманту викликати до 2х смертликів, ціною в 5 душ за кожного. Ця нежить-прислужники будуть йти за своїм володарем і атакувати його ворогів. Смертлики стають сильнішими з кожним рівнем героя.</string>
-    <string name="NecromancerArmor_Info2">В цій броні некромант може викликати \"Некротизм\", жахливу хворобу, яка вражає будь-яку істоту в полі зору, неважливо мертве вони чи живе.</string>
+    <string name="NecromancerArmor_Info2">В цій броні некромант може викликати \&quot;Некротизм\&quot;, жахливу хворобу, яка вражає будь-яку істоту в полі зору, неважливо мертве вони чи живе.</string>
     <string name="NecromancerArmor_Name">Броня з кісток</string>
     <string name="NecromancerArmor_NotNecromancer">Лише некроманти можуть використовувати цю броню!</string>
     <string name="NecromancerNPC_Desc">Цей чолов\'яга середніх літ виглядає трохи роздратованим та схвильованим одночасно. Він вдягнутий в складені обладунки у вигляді скріплених кісток.</string>
@@ -1285,7 +1285,7 @@
     <string name="NecromancerRobe_PetLimitReached">Некромантія: досягнуто ліміт прислужників (Поточний максимум: %d)!</string>
     <string name="Necromancer_ACSpecial">НЕКРОМАНТІЯ</string>
     <string name="Necromancy_BecameALich">Ти став лічем! Твоя могутність зросла і тепер ти можеш вміщувати в два рази більше душ! Але ти втратив %1$d одиниць сили.</string>
-    <string name="Necromancy_NotEnoughSouls">Не достатньо душ для виклику закляття \"%1$s\".</string>
+    <string name="Necromancy_NotEnoughSouls">Не достатньо душ для виклику закляття \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_ReincarnationName">Реінкарнація</string>
     <string name="Necromancy_ReincarnationTriggered">Твоя могутність не признає смерть! Але ти втратив всі свої речі та душі.</string>
     <string name="Necromancy_SoulsCountLabel">Душі</string>
@@ -1352,7 +1352,7 @@
     <string name="PlagueDoctorQuest_4_1_Epilogue">Блискотливо! _Гноми-чаклуни_, тепер їхню сутність можна досліджувати! Така перекручена, підла магія... справді захоплює. *Він піднімає переливчастий флакон, заповнений густою, багряною рідиною.* Ось, для тебе: _Еліксир могуті_! Випий його силу, і ти відчуєш, як через твої вени тече сила гір! Пам\'ятай, знання, отримані внаслідок цих жертв, зрештою слугуватимуть вищій меті... можливо, навіть врятують нас усіх від долі, гіршої за смерть.</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Апчі! Дварфи! Ці вперті підземні мешканці, одержимі дорогоцінним камінням та золотом. Але саме _Ґноми-Чорнокнижники_ мені потрібні... їхня спотворена магія, підживлювана самими надрами, в яких вони мешкають. П’ятеро, мені треба п’ятьох з цих висушенних душ! У їхніх тілах міститься ключ до розуміння певного... феномену. Щось про те, як керувати таємничою енергією через саму землю. Вважаю, я близький до прориву, але мені потрібна їхня сутність, їхня зіпсована магія! *Він насильно кашляє у носовичок, і темна пляма розповзається по тонкій тканині*</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Його кістляві пальці ритмічно стукають по бульбашковому казану, повітря навколо насичене гострим запахом сірки та гниття*\n_Кобольди-кригоманти_! Ті жалюгідні істоти, що збиваються в своїх замерзлих печерах, відчайдушно тримаються за свою крижану магію. Мені потрібно п\'ятеро з них, їхні замерзлі трупи будуть... освітлювати. Їхнє володіння льодом, це... дивне. Я вважаю, вони використовують первинну енергію, силу, що дрімає під поверхнею цілком цього світу.</string>
-    <string name="PlagueDoctorQuest_AllDone">*Він видав сухий, хрипкий регіт.* \"Ваші діла відкрили безмірні таємниці! Знання, здобуті... вони пульсують у мені, як симфонія відкриття. Але знання\", - додає він, понизивши голос до змовницького шепоту, \"знання - це сила. І влада... о, це найспокусливіший еліксир\". Він з цікавістю дивиться на вас на мить, його аметистові очі палають нездоровим блиском. \"Можливо,\" - промовляє він, \"наші шляхи знову перетнуться. Для є ще багато... таємниць... які ще треба розгадати.\"</string>
+    <string name="PlagueDoctorQuest_AllDone">*Він видав сухий, хрипкий регіт.* \&quot;Ваші діла відкрили безмірні таємниці! Знання, здобуті... вони пульсують у мені, як симфонія відкриття. Але знання\&quot;, - додає він, понизивши голос до змовницького шепоту, \&quot;знання - це сила. І влада... о, це найспокусливіший еліксир\&quot;. Він з цікавістю дивиться на вас на мить, його аметистові очі палають нездоровим блиском. \&quot;Можливо,\&quot; - промовляє він, \&quot;наші шляхи знову перетнуться. Для є ще багато... таємниць... які ще треба розгадати.\&quot;</string>
     <string name="PlagueDoctor_Desc">Цей горбатий чоловік повністю вкритий шкірою. Від нього тхне гострий запах ліків і... часнику?</string>
 
     <string name="PlagueDoctor_Gender">masculine</string>
@@ -1519,20 +1519,20 @@
     <string name="RegenerationBuff_Name">Природна регенерація</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Наша гра перервалася...\n Вибачте.\nБудь ласка, надішліть звіт, аби допомогти виправити це.</string>
     <string name="ResultDescriptions_Bleeding">Стік кров\'ю на рівні %d</string>
-    <string name="ResultDescriptions_Boss">Вбитий босом \"%1$s\" на %2$d рівні</string>
+    <string name="ResultDescriptions_Boss">Вбитий босом \&quot;%1$s\&quot; на %2$d рівні</string>
     <string name="ResultDescriptions_Burning">Згорів заживо на рівні %d</string>
     <string name="ResultDescriptions_Fall">Розбився на рівні %d</string>
     <string name="ResultDescriptions_Gas">Загинув від токсичного газу на рівні %d</string>
-    <string name="ResultDescriptions_Glyph">Вбитий \"%1$s\" на %2$d рівні</string>
+    <string name="ResultDescriptions_Glyph">Вбитий \&quot;%1$s\&quot; на %2$d рівні</string>
     <string name="ResultDescriptions_Hunger">Заморився голодом на рівні %d</string>
     <string name="ResultDescriptions_Immured">Замуровано в камені на рівні %d</string>
-    <string name="ResultDescriptions_Mob">Вбитий монстром \"%1$s\" на %2$d рівні</string>
+    <string name="ResultDescriptions_Mob">Вбитий монстром \&quot;%1$s\&quot; на %2$d рівні</string>
     <string name="ResultDescriptions_Necrotism">Помер від некротизму на рівні %d</string>
     <string name="ResultDescriptions_Ooze">Вбитий їдким слизом на рівні %d </string>
     <string name="ResultDescriptions_Poison">Отруївся на рівні %d</string>
-    <string name="ResultDescriptions_Trap">Вбитий пасткою \"%1$s\" на рівні %2$d</string>
+    <string name="ResultDescriptions_Trap">Вбитий пасткою \&quot;%1$s\&quot; на рівні %2$d</string>
     <string name="ResultDescriptions_Unknown">Загинув за містичних обставин на рівні %d</string>
-    <string name="ResultDescriptions_Wand">Вбитий своєю ж паличкою \"%1$s\" на %2$d рівні</string>
+    <string name="ResultDescriptions_Wand">Вбитий своєю ж паличкою \&quot;%1$s\&quot; на %2$d рівні</string>
     <string name="ResultDescriptions_Win">Отримав амулет Ендора</string>
     <string name="RingOfAccuracy_Info">Цей перстень покращить твій шанс попасти по ворогу.</string>
     <string name="RingOfAccuracy_Name">Перстень влучності</string>
@@ -1585,7 +1585,7 @@
     <string name="Ring_Info4">%1$s\n\nТи відчуваєш зловісну магію, що прокралась в %2$s.</string>
     <string name="Ring_Name">перстень з %s</string>
     <string name="RogueArmor_ACSpecial">ДИМОВА БОМБА</string>
-    <string name="RogueArmor_Desc">Одягнувши цей темний одяг, крадій може виконати трюк, який називається \"димова бомба\" (хоча ніякі реальні вибухові речовини не використовуються): він засліплює ворогів, які могли бачити його і відскакує.</string>
+    <string name="RogueArmor_Desc">Одягнувши цей темний одяг, крадій може виконати трюк, який називається \&quot;димова бомба\&quot; (хоча ніякі реальні вибухові речовини не використовуються): він засліплює ворогів, які могли бачити його і відскакує.</string>
     <string name="RogueArmor_Fov">Ти можеш стрибнути тільки на порожнє місце в полі зору.</string>
     <string name="RogueArmor_Name">одяг крадія</string>
     <string name="RogueArmor_NotRogue">Тільки крадії можуть використовувати цю броню!</string>
@@ -1714,7 +1714,7 @@
     <string name="Scroll_ACRead">ЧИТАТИ</string>
     <string name="Scroll_Blinded">Ти не можеш читати, поки ти осліплений</string>
     <string name="Scroll_Info">Цей сувій покрито незрозумілими символами та позначений руною %s. Хто знає, що станеться якщо прочитати його вголос.</string>
-    <string name="Scroll_Name">сувій \"%s\"</string>
+    <string name="Scroll_Name">сувій \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_0">КАУНАН</string>
     <string name="Scroll_Runes_1">СОУІЛО</string>
     <string name="Scroll_Runes_10">ОДАЛ</string>
@@ -1834,7 +1834,7 @@
     <string name="Spear_Info">Тоненьке ратище із залізним вістрям.</string>
     <string name="Spear_Name">спис</string>
     <string name="SpellBook_Info">Це скоріш за все схоже на кіпку сторінок, а ніж на книгу. Проте є можливість з неї щось дістати, якщо приділити достатню увагу.</string>
-    <string name="SpellBook_Info_Identified">Серед сторінок виявився повний текст закляття \"%1$s\".\n\"%2$s\"</string>
+    <string name="SpellBook_Info_Identified">Серед сторінок виявився повний текст закляття \&quot;%1$s\&quot;.\n\&quot;%2$s\&quot;</string>
     <string name="SpellBook_Name">Книга Заклять</string>
     <string name="Spell_SelectACell">Оберіть ціль.</string>
     <string name="Spell_SelectAChar">Оберіть істоту-ціль.</string>
@@ -1908,7 +1908,7 @@
     <string name="StartScene_UnlockGnoll">Для розблокування даного класу необхідно переконати священика вилікувати Гнолла-громилу</string>
     <string name="StartScene_UnlockNecromancer">Щоб відкрити цей клас персонажа, убийте ліча будь-яким іншим класом.</string>
     <string name="StartScene_Warning">Твій поточний ігровий прогрес буде втрачено.</string>
-    <string name="StartScene_WinGame">Щоб відкрити \"Випробування\", пройдіть гру будь-яким персонажем.</string>
+    <string name="StartScene_WinGame">Щоб відкрити \&quot;Випробування\&quot;, пройдіть гру будь-яким персонажем.</string>
     <string name="StartScene_Yes">Так, розпочати нову гру</string>
     <string name="Statue_Desc">Може здатися, що це просто ще одна звичайна статуя, але червоні очі, що виблискують в темряві, не приховують свої злі наміри. Хоча вона і зроблена з каменю, її _%s_ виглядає справжнім.</string>
     <string name="Statue_Gender">feminine</string>
@@ -2031,8 +2031,8 @@
     <string name="Undead_Name_Objective">дворфа-нежить</string>
     <string name="Ushanka_Info">Тепла та зручна шапка-вушанка прикрашена червоною зіркою. Чудовий компаньйон для битві проти злого та холодного підземелля.</string>
     <string name="Ushanka_Name">Вушанка</string>
-    <string name="Using_Failed_Because_Blind">Ти не можеш використати \"%s\", поки осліплений.</string>
-    <string name="Using_Failed_Because_Magic">Могутня магія не дозволяє використовувати \"%s\".</string>
+    <string name="Using_Failed_Because_Blind">Ти не можеш використати \&quot;%s\&quot;, поки осліплений.</string>
+    <string name="Using_Failed_Because_Magic">Могутня магія не дозволяє використовувати \&quot;%s\&quot;.</string>
     <string name="VampireSkull_Info">Цю маску виготовлено з повністю натурального черепа вампіра. Фактично це і є череп вампіра... череп вампіра з великою головою. Який жах.</string>
     <string name="VampireSkull_Name">Щелепа вампіра</string>
     <string name="VertigoBuff_Name">Запаморочений</string>
@@ -2087,7 +2087,7 @@
     <string name="WandOfPoison_Info">Цей міцний кусень деревини випускає згусток отрути, що отруює ціль. Отруєна істота отримує періодичну шкоду на протязі дії ефекту. Час дії залежить від сили палички.</string>
     <string name="WandOfPoison_Info1">нічого не трапилося</string>
     <string name="WandOfPoison_Name">Паличка отрути</string>
-    <string name="WandOfRegrowth_Info">\"Коли обривається життя, нове починає зростати... Безкінечний цикл не перервати!\"</string>
+    <string name="WandOfRegrowth_Info">\&quot;Коли обривається життя, нове починає зростати... Безкінечний цикл не перервати!\&quot;</string>
     <string name="WandOfRegrowth_Info1">нічого не трапилося</string>
     <string name="WandOfRegrowth_Name">Паличка росту</string>
     <string name="WandOfShadowbolt_Info">Ця паличка випромінює темну, зловісну енергію.</string>
@@ -2190,7 +2190,7 @@
     <string name="WndDonate_ruby">рубін</string>
     <string name="WndDonate_rubyDonate">рубінова підтримка</string>
     <string name="WndDonate_rubyDonateText">Ваша щедрість допоможе нам далі покращувати Remixed Dungeon!</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
     <string name="WndDonate_silver">срібло</string>
     <string name="WndDonate_silverDonate">срібна підтримка</string>
     <string name="WndDonate_silverDonateText">Будь-яке пожертвування допоможе в розробці проекту</string>
@@ -2265,7 +2265,7 @@
     <string name="WndMovieTheatre_Bye">Повертайся будь-коли, ми завжди раді вас бачити!</string>
     <string name="WndMovieTheatre_Instruction_2">Ви переглянули %1$d разів з %2$d. Ви отримаєте ще один квиток на сеанс за кожен рівень героя.</string>
     <string name="WndMovieTheatre_No">піти</string>
-    <string name="WndMovieTheatre_Ok">Ви успішно переглянули фільм за \"винагороду\"!</string>
+    <string name="WndMovieTheatre_Ok">Ви успішно переглянули фільм за \&quot;винагороду\&quot;!</string>
     <string name="WndMovieTheatre_Sorry">Щось пішло не так, ми не змогли отримати вашу винагороду за відео...</string>
     <string name="WndMovieTheatre_Thank_You">Дякуємо за участь!</string>
     <string name="WndMovieTheatre_Title">Кінотеатр</string>
@@ -2324,7 +2324,7 @@
     <string name="WndResurrect_Yes">Так, я продовжу боротися!</string>
     <string name="WndSadGhostNecro_No">Ні, нехай говорить.</string>
     <string name="WndSadGhostNecro_Persuaded">Сумного привида підкорено!</string>
-    <string name="WndSadGhostNecro_Text">\"Над цим привидом висить прокляття. Здається він хоче про щось мене попрохати. З допомогою некромантії я можу переконати його, що прохання виконано. Це зекономить мені час. Але чи варто так робити?\"</string>
+    <string name="WndSadGhostNecro_Text">\&quot;Над цим привидом висить прокляття. Здається він хоче про щось мене попрохати. З допомогою некромантії я можу переконати його, що прохання виконано. Це зекономить мені час. Але чи варто так робити?\&quot;</string>
     <string name="WndSadGhostNecro_Yes">Так, підкорити його волю.</string>
     <string name="WndSadGhost_Armor">Обладунки привида</string>
     <string name="WndSadGhost_Farewell">Прощавай, шукач пригод!</string>
@@ -2491,7 +2491,7 @@
     <string name="town_deco_counter_name">Прилавок</string>
     <string name="town_deco_covered_table_desc">Дерев\'яний стіл накритий білою скатертиною.</string>
     <string name="town_deco_covered_table_name">Стіл</string>
-    <string name="town_deco_cross_desc">Литий срібний хрест, символ місцевої релігії - \"Свідки Санти - Володаря Глибин\".</string>
+    <string name="town_deco_cross_desc">Литий срібний хрест, символ місцевої релігії - \&quot;Свідки Санти - Володаря Глибин\&quot;.</string>
     <string name="town_deco_cross_name">Хрест</string>
     <string name="town_deco_crossroad_desc">Грубо зроблений стовп із прибитими дощечками у вигляді стрілок, текст на них давно вигорів, схоже через погані погодні умови.</string>
     <string name="town_deco_crossroad_name">Вказівник на роздоріжжі</string>
@@ -2572,7 +2572,7 @@
     <string name="town_deco_rope_name">Мотузка</string>
     <string name="town_deco_rug_desc">Виткано з гарним смаком.</string>
     <string name="town_deco_rug_name">Килим</string>
-    <string name="town_deco_screen_desc">Ця магічна поверхня зветься \"екран\" і він може показувати рухомі картинки</string>
+    <string name="town_deco_screen_desc">Ця магічна поверхня зветься \&quot;екран\&quot; і він може показувати рухомі картинки</string>
     <string name="town_deco_screen_name">Екран</string>
     <string name="town_deco_scrolls_desc">Запилена шафа із купою різноманітних сувоїв та книг.</string>
     <string name="town_deco_scrolls_name">Сувої</string>
@@ -2588,7 +2588,7 @@
     <string name="town_deco_snow_name">Сніг</string>
     <string name="town_deco_snowdrift_desc">Величезний перемет, і схоже ніхто не збирається його розбирати.</string>
     <string name="town_deco_snowdrift_name">Перемет</string>
-    <string name="town_deco_snowman_desc">Сніговик - це традиційна вулична прикраса передсвяткової пори, коли люди святкують \"Підземвство\". День, коли монстри заполонили підземелля.</string>
+    <string name="town_deco_snowman_desc">Сніговик - це традиційна вулична прикраса передсвяткової пори, коли люди святкують \&quot;Підземвство\&quot;. День, коли монстри заполонили підземелля.</string>
     <string name="town_deco_snowman_name">Сніговик</string>
     <string name="town_deco_snowy_plate_desc">Ця старовинна плита вкрита снігом</string>
     <string name="town_deco_snowy_plate_name">Засніжена плита</string>
@@ -2645,6 +2645,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
