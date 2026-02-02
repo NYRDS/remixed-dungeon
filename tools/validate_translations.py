@@ -76,25 +76,9 @@ def auto_fix_trivial_issues(file_path):
             fixed_text = temp_fixed_text
 
             # Fix unescaped quotes in any language (should be \")
-            # Only escape quotes that are not already escaped or part of &quot; entity
-            # This is a more complex operation - we need to go through the string character by character
-            temp_fixed_text = ""
-            i = 0
-            while i < len(fixed_text):
-                if fixed_text[i] == '"' and (i == 0 or fixed_text[i-1] != '\\'):
-                    # Check if this is part of &quot; entity
-                    is_entity = (i >= 5 and fixed_text[i-5:i+1] == '&quot;') or \
-                               (i >= 4 and fixed_text[i-4:i+1] == '&quot') or \
-                               (i < len(fixed_text)-5 and fixed_text[i:i+6] == '&quot;')
-
-                    if not is_entity:
-                        temp_fixed_text += '\\"'
-                    else:
-                        temp_fixed_text += fixed_text[i]
-                else:
-                    temp_fixed_text += fixed_text[i]
-                i += 1
-            fixed_text = temp_fixed_text
+            # Only escape quotes that are not already escaped
+            # Prefer \" over &quot; for Android string resources
+            fixed_text = re.sub(r'(?<!\\)"', '\\"', fixed_text)
 
             # Fix unescaped @ symbols (these need to be escaped in Android XML as \@)
             fixed_text = re.sub(r'(?<!\\)@', '\\@', fixed_text)
@@ -215,6 +199,20 @@ def validate_special_characters(file_path):
                     print(f"Error: String content wrapped in quotes found in string '{name}' in {file_path}: '{value}'. Quotes should not wrap entire string content in Android XML.")
                     all_valid = False
 
+            # Check for unescaped quotes in any language (should be \")
+            # Properly identify quotes that are NOT escaped with \
+            i = 0
+            while i < len(value):
+                if value[i] == '"':
+                    # Check if this quote is escaped with backslash
+                    is_escaped = (i > 0 and value[i-1] == '\\')
+
+                    if not is_escaped:
+                        print(f"Error: Unescaped quote found in string '{name}' in {file_path}: '{value}'. Use \\\" instead.")
+                        all_valid = False
+                        break
+                i += 1
+
             # Check for unescaped apostrophes in any language (should be \' or &apos;)
             # This is particularly important for contractions in various languages
             # Check for apostrophes that are not preceded by \ and not part of &apos; entity
@@ -237,19 +235,16 @@ def validate_special_characters(file_path):
                         break
                 i += 1
 
-            # Check for unescaped quotes in any language (should be \" or &quot;)
-            # Properly identify quotes that are NOT escaped with \ or part of &quot; entity
+            # Check for unescaped quotes in any language (should be \")
+            # Properly identify quotes that are NOT escaped with \
             i = 0
             while i < len(value):
                 if value[i] == '"':
-                    # Check if this quote is escaped with backslash or part of &quot; entity
+                    # Check if this quote is escaped with backslash
                     is_escaped = (i > 0 and value[i-1] == '\\')
-                    is_entity = (i >= 5 and value[i-5:i+1] == '&quot;') or \
-                               (i >= 4 and value[i-4:i+1] == '&quot') or \
-                               (i < len(value)-5 and value[i:i+6] == '&quot;')
 
-                    if not is_escaped and not is_entity:
-                        print(f"Error: Unescaped quote found in string '{name}' in {file_path}: '{value}'. Use \\\" or &quot; instead.")
+                    if not is_escaped:
+                        print(f"Error: Unescaped quote found in string '{name}' in {file_path}: '{value}'. Use \\\" instead.")
                         all_valid = False
                         break
                 i += 1
