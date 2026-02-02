@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Melahap</string>
     <string name="AC_Necromancy">Penujuman</string>
@@ -14,7 +15,7 @@
     <string name="AboutScene_Sound">Suara:</string>
     <string name="AboutScene_Thanks">Terimakasih Khusus kepada:</string>
     <string name="AboutScene_Translation">Penempatan oleh:</string>
-    <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901</string>
+    <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon oleh NYRDS berdasarkan pixel Dungeon sumber oleh Watabou. sumber</string>
     <string name="Accuracy_Decreased">Kenapa aku berpikir bisa menggunakan %s? Alat salah, tangan pun salah!</string>
     <string name="Acidic_Desc">Arachnida raksasa ini adalah makhluk yang menghindari serangan jarak dekat dengan segala cara, menembak duri bergerigi yang melumpuhkan dari jarak jauh.</string>
@@ -50,13 +51,13 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="AmuletScene_Stay">Saya belum selesai</string>
     <string name="AmuletScene_Txt">Anda akhirnya mendapatkannya di tangan Anda, Jimat Yendor. Menggunakan kekuatannya Anda dapat mengambil alih dunia atau membawa damai dan kemakmuran ke orang-orang atau apapun juga. Lagipula, hidup Anda akan berubah selamanya dan permainan ini berakhir di sini. Atau Anda dapat tinggal di sini lebih lama sedikit.</string>
     <string name="Amulet_ACEnd">AKHIRI PERMAINAN</string>
-    <string name="Amulet_Info">Jimat Yendor adalah harta terkenal terkuat dengan asal muasal yang tidak diketahui. Dikatakan bahwa jimat ini dapat memenuhi semua permintaan jika kekuatan keinginan pemiliknya cukup kuat untuk \&quot;menarik\&quot;nya melakukan hal itu.</string>
+    <string name="Amulet_Info">Jimat Yendor adalah harta terkenal terkuat dengan asal muasal yang tidak diketahui. Dikatakan bahwa jimat ini dapat memenuhi semua permintaan jika kekuatan keinginan pemiliknya cukup kuat untuk \"menarik\"nya melakukan hal itu.</string>
     <string name="Amulet_Name">Jimat Yendor</string>
     <string name="Ankh_Info">Simbol kuno tentang hidup abadi memberikan kehebatan untuk hidup kembali setelah mati. Saat pembangkitan semua item yang tidak dipakai hilang.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">%santi-entropi</string>
     <string name="ArmorKit_ACAplly">TERAPKAN</string>
-    <string name="ArmorKit_Info">Menggunakan kit alat dan bahan kecil ini, siapa pun dapat mengubah baju besi apa pun menjadi \&quot;baju besi epik\&quot;, yang akan menyimpan semua properti dari baju besi asli, tetapi juga akan memberikan pemakainya kemampuan khusus tergantung pada kelasnya. Tidak diperlukan keahlian menjahit, pengerjaan kulit, atau pandai besi.</string>
+    <string name="ArmorKit_Info">Menggunakan kit alat dan bahan kecil ini, siapa pun dapat mengubah baju besi apa pun menjadi \"baju besi epik\", yang akan menyimpan semua properti dari baju besi asli, tetapi juga akan memberikan pemakainya kemampuan khusus tergantung pada kelasnya. Tidak diperlukan keahlian menjahit, pengerjaan kulit, atau pandai besi.</string>
     <string name="ArmorKit_Name">Perlengkapan zirah</string>
     <string name="ArmorKit_SelectArmor">Pilih zirah untuk ditingkatkan</string>
     <string name="ArmorKit_Upgraded">Anda mengaplikasikan perlengkapan zirah untuk meningkatkan %s Anda</string>
@@ -64,7 +65,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Armor_Glyph">glif</string>
     <string name="Armor_Identify">sekarang Anda sudah mengenal %1$s Anda dengan cukup baik untuk mengenalinya. Ini adalah %2$s.</string>
     <string name="Armor_Incompatible">Interaksi dari berbagai tipe sihir telah menghapuskan sihir di zirah ini!</string>
-    <string name="Armor_Info1"> %1$s menyediakan pengurangan serangan musuh yang didapat sampai dengan \&quot;%2$d\&quot;  poin per serangan musuh.</string>
+    <string name="Armor_Info1"> %1$s menyediakan pengurangan serangan musuh yang didapat sampai dengan \"%2$d\"  poin per serangan musuh.</string>
     <string name="Armor_Info2">
 \n\nKarena kekuatan yang tidak memadai kecepatan gerak Anda dan keterampilan pertahanan berkurang. </string>
     <string name="Armor_Info3">
@@ -91,14 +92,14 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="AzuterronNPC_Name_Objective">Orang asing</string>
     <string name="AzuterronNPC_Quest_End">Bagus sekali. Silahkan ambil ramuan ini, pasti, Anda akan menemukannya berguna.</string>
     <string name="AzuterronNPC_Quest_Reminder">Tolong saya dan saya akan membantumu.</string>
-    <string name="AzuterronNPC_Quest_Start">Huh, kenapa... oh, kau melihatku, bukan? Itu berarti Anda bukan salah satu dari \&quot;mereka\&quot;. Saya melihat Anda tidak menyukai semua monster ini juga. Katakan apa, jika Anda akan membantu saya dengan sedikit masalah, maka saya akan menawarkan bantuan saya. Di suatu tempat di tingkat ini Anda akan menemukan binatang kegelapan, _Roh Pengkhianat_. Bunuh, ambil _hati_-nya dan kembali padaku. Dan satu hal lagi, jika Anda tertarik untuk membeli perlengkapan saya, jangan ragu untuk bertanya</string>
+    <string name="AzuterronNPC_Quest_Start">Huh, kenapa... oh, kau melihatku, bukan? Itu berarti Anda bukan salah satu dari \"mereka\". Saya melihat Anda tidak menyukai semua monster ini juga. Katakan apa, jika Anda akan membantu saya dengan sedikit masalah, maka saya akan menawarkan bantuan saya. Di suatu tempat di tingkat ini Anda akan menemukan binatang kegelapan, _Roh Pengkhianat_. Bunuh, ambil _hati_-nya dan kembali padaku. Dan satu hal lagi, jika Anda tertarik untuk membeli perlengkapan saya, jangan ragu untuk bertanya</string>
     <string name="Backstab_Aware">Korban seharusnya tidak menyadari Anda untuk tusuk belakang yang baik.</string>
     <string name="Backstab_Info">Pukulan diam di belakang. Kerusakan backstab yang tidak jujur, tetapi sangat efektif, akan bertambah seiring dengan tingkat keterampilan pemain.\n\nBackstab yang berhasil akan sepenuhnya mengabaikan armor korban atau kemampuan pertahanan khusus.</string>
     <string name="Backstab_Name">tusukan belakang</string>
     <string name="Backstab_TooFar">Korban terlalu jauh untuk sukses memukul.</string>
     <string name="BadgesScene_Title">Medali Anda</string>
     <string name="Badges_AllBags">Semua tas dibeli</string>
-    <string name="Badges_AllItems">Semua ramuan, gulungan, cincin &amp; tongkat diketahui</string>
+    <string name="Badges_AllItems">Semua ramuan, gulungan, cincin &amp;amp; tongkat diketahui</string>
     <string name="Badges_AllPotions">Mengetahui semua ramuan</string>
     <string name="Badges_AllRings">Semua cincin diidentifikasi</string>
     <string name="Badges_AllScrolls">Mengetahui semua gulungan</string>
@@ -179,7 +180,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Badges_ThisIsSparta">Inilah Sparta!!!</string>
     <string name="Badges_Victory">Mendapat Jimat Yendor</string>
     <string name="Badges_VictoryAll">Jimat Yendor diperoleh oleh semua kelas</string>
-    <string name="Badges_Yasd">Mati karena api, ramuan, gas beracun &amp; kelaparan</string>
+    <string name="Badges_Yasd">Mati karena api, ramuan, gas beracun &amp;amp; kelaparan</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa dibunuh</string>
     <string name="Bag_ACOpen">BUKA</string>
     <string name="Bandit_Desc">Tingkat lebih dalam dari Dungeon selalu menjadi persembunyian berbagai macam kriminal. Tidak semuanya dapat memiliki pikiran jernih di waktu yang lebih lama jauh dari sinar matahari. Dahulu, pencuri dan penjahat gila ini telah lupa siapa mereka dan mengapa mereka mencuri. Penjahat ini sepertinya telah melapisi pisaunya dengan sesuatu!</string>
@@ -208,7 +209,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="BellaNPC_Amulet_F">Mengapa halo ada kue manis, mengapa Anda memiliki di sana. Ah, jimat yang sangat indah! Dan kamu... kamu bersinar jauh lebih terang dibandingkan dengan siapa pun. Bagaimana jika kita berjalan-jalan dan mendiskusikan masa depan kita bersama?</string>
     <string name="BellaNPC_Amulet_M">Mengapa halo di sana tampan, apa yang Anda miliki di sana. Ah, jimat yang sangat indah! Dan Anda... Anda berdiri di atas orang-orang bodoh itu. Bagaimana jika kita berjalan-jalan dan mendiskusikan masa depan kita bersama?</string>
     <string name="BellaNPC_Angry">Beraninya kau... dasar brengsek!</string>
-    <string name="BellaNPC_Desc">Seorang gadis yang terlihat sangat mewah. Seluruh penampilannya memberitahu Anda \&quot;Saya baik untuk semua orang.\&quot;</string>
+    <string name="BellaNPC_Desc">Seorang gadis yang terlihat sangat mewah. Seluruh penampilannya memberitahu Anda \"Saya baik untuk semua orang.\"</string>
     <string name="BellaNPC_Message">Saya tidak tertarik pada plebs seperti Anda!</string>
     <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
@@ -244,8 +245,8 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="BlackSkullOfMastery_Title">Anda bisa mematahkan mantranya. Atau Anda dapat memanipulasi formula ajaibnya dengan cara tertentu, yang memungkinkan Anda untuk menggunakan kekuatan mantra dan artefak itu sendiri, mengubah diri Anda menjadi seorang Lich.</string>
     <string name="BlackSkull_Activated">Tengkorak Hitam telah terbangun!</string>
     <string name="BlackSkull_Deactivated">Tengkorak Hitam tidak aktif, sekali lagi...</string>
-    <string name="BlackSkull_Info">Tengkorak obsidian kecil. Itu adalah sumber kekuatan Necropolis, tetapi setelah kekalahan Lich tampaknya telah kehilangan semua kekuatannya. Namun, ketika Anda memegangnya di tangan Anda, sebuah pikiran aneh terlintas di benak Anda: \&quot;Ini lapar\&quot;.</string>
-    <string name="BlackSkull_Info_Awakened">Tengkorak berdenyut dengan kekuatan, dan Anda dapat melihat bagaimana ia mengalir dari rongga matanya yang kosong. Dan sambil memegangnya di tangan Anda, Anda mendengar suara yang menakutkan: \&quot;Lihatlah barisan kematian\&quot;.</string>
+    <string name="BlackSkull_Info">Tengkorak obsidian kecil. Itu adalah sumber kekuatan Necropolis, tetapi setelah kekalahan Lich tampaknya telah kehilangan semua kekuatannya. Namun, ketika Anda memegangnya di tangan Anda, sebuah pikiran aneh terlintas di benak Anda: \"Ini lapar\".</string>
+    <string name="BlackSkull_Info_Awakened">Tengkorak berdenyut dengan kekuatan, dan Anda dapat melihat bagaimana ia mengalir dari rongga matanya yang kosong. Dan sambil memegangnya di tangan Anda, Anda mendengar suara yang menakutkan: \"Lihatlah barisan kematian\".</string>
     <string name="BlackSkull_Name">Tengkorak hitam</string>
     <string name="BlackSkull_Name_Awakened">tengkorak hitam yang terbangun</string>
     <string name="BlackSkull_Ressurrect">Tengkorak Hitam telah membangkitkan monster mati untuk melayani Anda!</string>
@@ -318,10 +319,10 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Candy_Name">permen</string>
     <string name="Candy_Warning_1">Anda tidak seharusnya memakan permen itu. Anda berjanji untuk memberikannya kepada orang lain. Kelihatannya permen ini tidak berpengaruh pada Anda dari semua sudut pandang, kelaparan Anda tidak menghilang, lagipula ini hanyalah permen.</string>
     <string name="Candy_Warning_2">Sekarang Anda memang telah makan terlalu banyak. Perut Anda sakit karena Anda telah makan banyak permen.</string>
-    <string name="Capotain_Info">Topi bermahkota tinggi, bertepi sempit. Biasanya diasosiasikan dengan puritan, tetapi Anda tidak harus religius untuk memakainya.  Untuk beberapa alasan ia memiliki label, yang mengatakan \&quot;Salomo\&quot; di atasnya.</string>
+    <string name="Capotain_Info">Topi bermahkota tinggi, bertepi sempit. Biasanya diasosiasikan dengan puritan, tetapi Anda tidak harus religius untuk memakainya.  Untuk beberapa alasan ia memiliki label, yang mengatakan \"Salomo\" di atasnya.</string>
     <string name="Capotain_Name">Kapten</string>
     <string name="Carcass_Devoured">Anda telah melahap bangkai dari %s!</string>
-    <string name="Carcass_DissectResult">Dari %s kamu memperoleh %d %s.</string>
+    <string name="Carcass_DissectResult">Dari %1$s kamu memperoleh %2$d %3$s.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang butuh rak buku di gua?</string>
     <string name="Caves_TileDescDeco">Kilauan dari beberapa logam terlihat pada tembok. Emas?</string>
     <string name="Caves_TileDescEntrance">Tangga yang membawa ke tempat yang lebih tinggi.</string>
@@ -472,7 +473,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Codex_Story_22">Buku ini ditulis dalam bahasa iblis</string>
     <string name="Codex_Story_23">Buku ini ditulis dalam bahasa kurcaci</string>
     <string name="Codex_Story_24">Buku ini ditulis dalam bahasa elf</string>
-    <string name="Codex_Story_25">Dia berhenti, membeku, di pintu kayu ek yang berat, dan menatap cahaya yang muncul dari batas pintu. Dari sudut pikirannya yang terabaikan, pengakuan.\n\&quot;Sinar matahari..\&quot; gumamnya pada dirinya sendiri. Sudah berapa lama? Dalam kegelapan abadi Dungeon, dia sudah lama menyerah untuk melacak hari-hari. Cahaya menerangi kenangan yang tidak terpakai. Dia ingat pelatihannya, hari-hari panjang latihan yang sulit dengan \'rang dan pisau, penyimpanan kayu, dan pembuatan peta. Dia ingat mantra dan disiplin yang dimaksudkan untuk memungkinkannya mempertahankan semacam kewarasan saat dia menyelami kedalaman yang tidak diketahui. Apa yang dia tidak ingat, tidak ingat, adalah manusia.\nDia ingat suara mereka, perintah mereka, dan peringatan mereka, tapi tidak wajah mereka, atau sentuhan mereka.\nRasa sakit telah melatihnya. Ingat bahayanya, selalu bahayanya. Hewan-hewan gila, undead, perampok gila, dan ninja-ninja licik telah jatuh di hadapannya. Dia telah memotong, membakar, menikam, dan meracuni jalannya melalui kekejian, setan, kekejian jarum jam, dan ahli nujum gila. Bahkan Dewa telah jatuh di hadapannya.\nDia telah melacak Yog melalui Surga dan Neraka, sebelum membungkam bisikannya yang merusak selamanya. Bahkan kemudian, ada pekerjaan yang harus dilakukan. Yog adalah pelayan dari salah satu ilmu gaib dan lebih kuat dari dirinya sendiri.\nJadi dia menggali lebih jauh, lebih dalam. Jurnal penyihir tua itu, yang masih memancarkan kekuatan, telah menunjukkan jalan padanya. Dengan keajaiban di halaman-halamannya, dia melakukan perjalanan ke tanah baru yang liar, sebuah desa kecil yang berlindung di hutan yang luas. Di sana, dia akhirnya melacak kejahatan ke sumber labirinnya, dan mengalahkan semua orang yang berdiri di depannya.\nSekarang, di siang hari yang redup, dia memeriksa dirinya sendiri di genangan air gua. Tubuhnya melengkung hampir tak bisa dikenali oleh sihir. Kulitnya, pucat sampai tembus pandang, dilumuri kotoran, debu, dan jelaga. Kalung cincinnya bisa membayar tebusan raja, dan sarung tongkatnya mengandung energi magis yang cukup untuk menghancurkan pasukan. Dia mencengkeram senjatanya, benar-benar cukup baik untuk menebas para dewa. Sungguh, dia telah menjadi penguasa alam gelap ini, gurun keputusasaan ini.\nDia telah mengejar kejahatan ke sudut terjauh dari multiverse, tetapi sekarang dia lumpuh karena ketakutan. Bagaimana jika mereka menolaknya? Bagaimana jika mereka tidak melakukannya? Bagaimana dia bisa berinteraksi dengan orang-orang ini lagi? Sial, dia telah kehilangan hitungan berapa kali kematian telah merenggutnya, hanya untuk ditarik dari genggamannya yang sedingin es.\nTidak, tidak ada tempat baginya dalam terang, tidak lagi. Dia berbalik dari cahaya redup, dan turun ke kegelapan, mungkin untuk terakhir 
+    <string name="Codex_Story_25">Dia berhenti, membeku, di pintu kayu ek yang berat, dan menatap cahaya yang muncul dari batas pintu. Dari sudut pikirannya yang terabaikan, pengakuan.\n\"Sinar matahari..\" gumamnya pada dirinya sendiri. Sudah berapa lama? Dalam kegelapan abadi Dungeon, dia sudah lama menyerah untuk melacak hari-hari. Cahaya menerangi kenangan yang tidak terpakai. Dia ingat pelatihannya, hari-hari panjang latihan yang sulit dengan \'rang dan pisau, penyimpanan kayu, dan pembuatan peta. Dia ingat mantra dan disiplin yang dimaksudkan untuk memungkinkannya mempertahankan semacam kewarasan saat dia menyelami kedalaman yang tidak diketahui. Apa yang dia tidak ingat, tidak ingat, adalah manusia.\nDia ingat suara mereka, perintah mereka, dan peringatan mereka, tapi tidak wajah mereka, atau sentuhan mereka.\nRasa sakit telah melatihnya. Ingat bahayanya, selalu bahayanya. Hewan-hewan gila, undead, perampok gila, dan ninja-ninja licik telah jatuh di hadapannya. Dia telah memotong, membakar, menikam, dan meracuni jalannya melalui kekejian, setan, kekejian jarum jam, dan ahli nujum gila. Bahkan Dewa telah jatuh di hadapannya.\nDia telah melacak Yog melalui Surga dan Neraka, sebelum membungkam bisikannya yang merusak selamanya. Bahkan kemudian, ada pekerjaan yang harus dilakukan. Yog adalah pelayan dari salah satu ilmu gaib dan lebih kuat dari dirinya sendiri.\nJadi dia menggali lebih jauh, lebih dalam. Jurnal penyihir tua itu, yang masih memancarkan kekuatan, telah menunjukkan jalan padanya. Dengan keajaiban di halaman-halamannya, dia melakukan perjalanan ke tanah baru yang liar, sebuah desa kecil yang berlindung di hutan yang luas. Di sana, dia akhirnya melacak kejahatan ke sumber labirinnya, dan mengalahkan semua orang yang berdiri di depannya.\nSekarang, di siang hari yang redup, dia memeriksa dirinya sendiri di genangan air gua. Tubuhnya melengkung hampir tak bisa dikenali oleh sihir. Kulitnya, pucat sampai tembus pandang, dilumuri kotoran, debu, dan jelaga. Kalung cincinnya bisa membayar tebusan raja, dan sarung tongkatnya mengandung energi magis yang cukup untuk menghancurkan pasukan. Dia mencengkeram senjatanya, benar-benar cukup baik untuk menebas para dewa. Sungguh, dia telah menjadi penguasa alam gelap ini, gurun keputusasaan ini.\nDia telah mengejar kejahatan ke sudut terjauh dari multiverse, tetapi sekarang dia lumpuh karena ketakutan. Bagaimana jika mereka menolaknya? Bagaimana jika mereka tidak melakukannya? Bagaimana dia bisa berinteraksi dengan orang-orang ini lagi? Sial, dia telah kehilangan hitungan berapa kali kematian telah merenggutnya, hanya untuk ditarik dari genggamannya yang sedingin es.\nTidak, tidak ada tempat baginya dalam terang, tidak lagi. Dia berbalik dari cahaya redup, dan turun ke kegelapan, mungkin untuk terakhir 
 kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Codex_Story_3">Anti-entropy Glyph - Pahlawan akan menyala dan terbakar, dan musuh akan dibekukan.</string>
     <string name="Codex_Story_4">Multiplicity Glyph - Efek ini menyebabkan Pahlawan menelurkan bayangan cermin tetapi rusak. Ini bisa membunuh Pahlawan.</string>
@@ -554,7 +555,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="DeferedDamageBuff_Info">Rasa sakit telah berubah menjadi rasa sakit yang melambat, mengurangi kerusakan yang diterima sekaligus.\nKerusakan tersisa untuk menerima %d</string>
     <string name="DeferedDamageBuff_Name">Kerusakan Ditangguhkan (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s membunuh anda...</string>
-    <string name="DevourBuff_Info"/>
+    <string name="DevourBuff_Info" />
     <string name="DevourBuff_Name">Melahap</string>
     <string name="DewVial_ACDRINK">MINUM</string>
     <string name="DewVial_AutoDrink">Tabung dew sudah kosong untuk menyembuhkan lukamu.</string>
@@ -657,7 +658,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ExplodingSkull_Desc">Tengkorak yang mengambang dan terbakar ini tampak sangat rapuh, dan sepertinya akan pecah berkeping-keping setiap saat.</string>
     <string name="ExplodingSkull_Name">tengkorak meledak</string>
     <string name="ExplodingSkull_Name_Objective">tengkorak meledak</string>
-    <string name="Eye_Desc">Nama lain dari setan ini adalah \&quot;bola kebencian\&quot;, karena saat dia melihat musuh, dia menggunakan tatapan mematikannya dengan sembrono, kadang tidak mempedulikan sekutunya dan melukai mereka.</string>
+    <string name="Eye_Desc">Nama lain dari setan ini adalah \"bola kebencian\", karena saat dia melihat musuh, dia menggunakan tatapan mematikannya dengan sembrono, kadang tidak mempedulikan sekutunya dan melukai mereka.</string>
     <string name="Eye_Kill">Tatapan kematian %s membunuh Anda...</string>
     <string name="Eye_Name">mata jahat</string>
     <string name="Eye_Name_Objective">mata jahat</string>
@@ -837,7 +838,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="HeroClass_HunPerks_3">Pemburu mendapat lebih banyak nyawa dari tetesan air.</string>
     <string name="HeroClass_HunPerks_4">Pemburu dapat merasakan monster di sekitar walaupun mereka ada di belakang ringtangan.</string>
     <string name="HeroClass_Mag">penyihir</string>
-    <string name="HeroClass_MagPerks_0">Penyihir mulai dengan Rudal Tongkat Sihir yang unik. Tongkat ini nantinya bisa \&quot;digunakan\&quot; untuk mengupgrade tongkat lain.</string>
+    <string name="HeroClass_MagPerks_0">Penyihir mulai dengan Rudal Tongkat Sihir yang unik. Tongkat ini nantinya bisa \"digunakan\" untuk mengupgrade tongkat lain.</string>
     <string name="HeroClass_MagPerks_1">Penyihir mengisi ulang tongkat mereka lebih cepat.</string>
     <string name="HeroClass_MagPerks_2">Saat dimakan, setiap makanan mengembalikan 1 cas untuk semua tongkat di inventaris.</string>
     <string name="HeroClass_MagPerks_3">Penyihir dapat menggunakan tongkat sihir sebagai senjata jarak dekat.</string>
@@ -861,7 +862,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="HeroClass_RogPerks_5">Gulungan Pemetaan Sihir sudah diketahui dari awal.</string>
     <string name="HeroClass_War">pejuang</string>
     <string name="HeroClass_WarPerks_0">Pejuang mulai dengan 11 poin Kekuatan.</string>
-    <string name="HeroClass_WarPerks_1">Pejuang mulai dengan pedang pendek unik. Pedang ini dapat \&quot;dilebur\&quot; nanti untuk memperbaharui senjata jarak pendek lain .</string>
+    <string name="HeroClass_WarPerks_1">Pejuang mulai dengan pedang pendek unik. Pedang ini dapat \"dilebur\" nanti untuk memperbaharui senjata jarak pendek lain .</string>
     <string name="HeroClass_WarPerks_2">Pejuang kurang pandai menggunakan senjata jarak jauh .</string>
     <string name="HeroClass_WarPerks_3">Jenis makanan apapun memulihkan nyawa saat dimakan.</string>
     <string name="HeroClass_WarPerks_4">Ramuan Kekuatan sudah diketahui dari awal.</string>
@@ -871,7 +872,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="HeroSubClass_DescFreR">_Pelari_ dapat bergerak hampir dua kali lipat lebih cepat daripada kebanyakan monster. Saat dia berlari, Pelari jadi lebih susah untuk dipukul. Untuk melakukan itu dia tidak boleh keberatan dan kelaparan.</string>
     <string name="HeroSubClass_DescGlad">Serangan berhasil dengan senjata jarak dekat memperbolehkan _Gladiator_ untuk memulai sebuah kombo, dengan setiap serangan berhasil mengakibatkan serangan lebih kuat.</string>
     <string name="HeroSubClass_DescGuardian">Pengetahuan defensif yang terampil memungkinkan _Guardian_ untuk melakukan serangan balik dengan perisai, menjadikannya musuh yang tangguh bagi mereka yang berani menyerang benteng berjalan ini.</string>
-    <string name="HeroSubClass_DescNone"/>
+    <string name="HeroSubClass_DescNone" />
     <string name="HeroSubClass_DescScout">_Pengintai_ Elf adalah ahli persembunyian. Menginjak rumput tinggi memberikan mereka bantuan tidak terlihat sementara. Juga mereka lebih cepat dari Elf biasa.</string>
     <string name="HeroSubClass_DescShaman">_Dukun_ Elf dapat menggunakan tongkat sebagai senjata jarak dekat. Pukulan berhasil memiliki kemungkinan untuk mengaktifkan kekuatan tongkat pada target tanpa menggunakan energi.</string>
     <string name="HeroSubClass_DescSnip">_Penembak jitu_ dapat mendeteksi titik kelemahan di zirah musuh, sangat efektif mengabaikan zirah musuh itu dengan senjata jarak jauh.</string>
@@ -1107,7 +1108,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Level_TileDescStatue">Seseorang ingin menghias tempat ini, tapi gagal, yang pastinya.</string>
     <string name="Level_TileDescTrap">Menginjak tombol tidak terlihat akan mengaktivasi jebakan.</string>
     <string name="Level_TileDescWater">Saat terbakar injak air untuk memadamkan api.</string>
-    <string name="Level_TileDescWell"/>
+    <string name="Level_TileDescWell" />
     <string name="Level_TileEmbers">Bara api</string>
     <string name="Level_TileEmptyWell">Sumur kosong</string>
     <string name="Level_TileEntrance">Pintu masuk tingkat</string>
@@ -1221,10 +1222,10 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">mimik</string>
     <string name="MimicAmulet_Name_Objective">mimik</string>
-    <string name="MimicPie_Desc">Mimik adalah makhluk ajaib yang dapat berubah jadi bentuk apapun sesuai keinginan mereka. Yang ini terlihat seperti sebuah pastel besar yang enak\&quot;;</string>
+    <string name="MimicPie_Desc">Mimik adalah makhluk ajaib yang dapat berubah jadi bentuk apapun sesuai keinginan mereka. Yang ini terlihat seperti sebuah pastel besar yang enak\";</string>
     <string name="MimicPie_Name">mimik</string>
     <string name="MimicPie_Name_Objective">mimik</string>
-    <string name="Mimic_Desc">Mimik adalah makhluk ajaib yang dapat merubah bentuk ke bentuk apapun yang mereka mau. Di dungeon mereka selalu memilih bentuk peti harta karun, karena mereka tahu cara menarik perhatian petualang.\&quot;;</string>
+    <string name="Mimic_Desc">Mimik adalah makhluk ajaib yang dapat merubah bentuk ke bentuk apapun yang mereka mau. Di dungeon mereka selalu memilih bentuk peti harta karun, karena mereka tahu cara menarik perhatian petualang.\";</string>
     <string name="Mimic_Name">mimik</string>
     <string name="Mimic_Name_Objective">mimik</string>
     <string name="MindVisionBuff_Info">Penglihatan batin memungkinkan untuk melihat dengan jelas pergerakan semua makhluk hidup di lantai.</string>
@@ -1244,7 +1245,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="MissileWeapon_Yes">Ya, aku yakin apa yang kulakukan</string>
     <string name="MobAi_status">Ini %1$s adalah %2$s</string>
     <string name="Mob_Attacking">Hitung %s ini sebagai sudah mati!</string>
-    <string name="Mob_Cannot_Be_Pet">Keinginan \&quot;%s\&quot; adalah kuat untuk dikendalikan!</string>
+    <string name="Mob_Cannot_Be_Pet">Keinginan \"%s\" adalah kuat untuk dikendalikan!</string>
     <string name="Mob_CantDoIt">Saya tidak bisa melakukannya. Saya memiliki cakar kecil.</string>
     <string name="Mob_Desc">Deskripsi sebenarnya akan datang!</string>
     <string name="Mob_Died">Anda mendengar ada sesuatu mati di kejauhan</string>
@@ -1293,7 +1294,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="NatureArmorSpell_Info">Elf bisa jadi tangguh juga, terutama ketika dilindungi oleh Ibu Alam sendiri.</string>
     <string name="NatureArmorSpell_Name">Armor Alam</string>
     <string name="NecromancerArmor_Info">Armor ini akan memungkinkan Necromancer untuk memanggil hingga dua Deathlings dengan biaya masing-masing 5 jiwa. Para pelayan mayat hidup ini akan mengikuti tuan mereka dan menyerang musuh-musuhnya. The Deathlings menjadi lebih kuat dengan setiap level pahlawan.</string>
-    <string name="NecromancerArmor_Info2">Mengenakan zirah ini memungkinkan ahli necromancer untuk menggunakan kemampuan \&quot;Nekrotisme\&quot;, yang akan menyebarkan wabah ajaib, yang dapat menginfeksi makhluk apa pun di sekitarnya, mati atau hidup.</string>
+    <string name="NecromancerArmor_Info2">Mengenakan zirah ini memungkinkan ahli necromancer untuk menggunakan kemampuan \"Nekrotisme\", yang akan menyebarkan wabah ajaib, yang dapat menginfeksi makhluk apa pun di sekitarnya, mati atau hidup.</string>
     <string name="NecromancerArmor_Name">zirah tulang</string>
     <string name="NecromancerArmor_NotNecromancer">hanya necromancers yang bisa memakai zirah ini!</string>
     <string name="NecromancerNPC_Desc">Pria zaman pertengahan ini terlihat sedikit terganggu dan bahagia di waktu yang sama. Dia memakai sebuah zirah buatan dari pecahan tulang.</string>
@@ -1311,7 +1312,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: batas pemanggilan tercapai (Maksimum saat ini: %d )!</string>
     <string name="Necromancer_ACSpecial">NECROMANCY</string>
     <string name="Necromancy_BecameALich">Anda menjadi seorang Lich! Kekuatan Anda tumbuh dan kapasitas jiwa Anda telah berlipat ganda! Tapi Anda kehilangan %1$d poin kekuatan.</string>
-    <string name="Necromancy_NotEnoughSouls">Anda tidak memiliki cukup jiwa untuk mengucapkan mantra \&quot;%1$s\&quot;.</string>
+    <string name="Necromancy_NotEnoughSouls">Anda tidak memiliki cukup jiwa untuk mengucapkan mantra \"%1$s\".</string>
     <string name="Necromancy_ReincarnationName">Reinkarnasi</string>
     <string name="Necromancy_ReincarnationTriggered">Kekuatanmu menolak kematian itu sendiri! Tetapi Anda kehilangan semua jiwa dan harta milik Anda yang terkumpul.</string>
     <string name="Necromancy_SoulsCountLabel">Jiwa</string>
@@ -1609,7 +1610,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Roar_Info">Raungan yang kuat pasti akan menakuti musuh Anda dan menginspirasi sekutu.</string>
     <string name="Roar_Name">Mengaum</string>
     <string name="RogueArmor_ACSpecial">BOM ASAP</string>
-    <string name="RogueArmor_Desc">Saat mengenakan pakaian gelap ini, seorang penjahat dapat melakukan sebuah trik, yang dinamakan \&quot;bom asap\&quot; (walaupun tidak ada peledak asli yang digunakan): dia dapat membutakan musuh yang dapat melihatnya dan pergi menghindari.</string>
+    <string name="RogueArmor_Desc">Saat mengenakan pakaian gelap ini, seorang penjahat dapat melakukan sebuah trik, yang dinamakan \"bom asap\" (walaupun tidak ada peledak asli yang digunakan): dia dapat membutakan musuh yang dapat melihatnya dan pergi menghindari.</string>
     <string name="RogueArmor_Fov">Anda hanya dapat melompat ke tempat yang kosong di pandangan Anda</string>
     <string name="RogueArmor_Name">pakaian penjahat</string>
     <string name="RogueArmor_NotRogue">Hanya penjahat yang dapat menggunakan zirah ini!</string>
@@ -1725,7 +1726,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Scroll_ACRead">BACA</string>
     <string name="Scroll_Blinded">Anda tidak dapat membaca gulungan saat dibutakan</string>
     <string name="Scroll_Info">Perkamen ini ditutupi dengan tulisan tak terbaca, dan menyandang gelar rune %s. Siapa yang tahu apa yang akan dilakukannya ketika dibacakan?</string>
-    <string name="Scroll_Name">Gulungan \&quot;%s\&quot;</string>
+    <string name="Scroll_Name">Gulungan \"%s\"</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="Scroll_Runes_1">SOWILO</string>
     <string name="Scroll_Runes_10">ODAL</string>
@@ -1852,11 +1853,11 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpeedBuff_Info">Kelincahan dan energi memancar dari tubuh, dan gerakan terasa lebih cepat dari biasanya.</string>
     <string name="SpeedBuff_Name">Kecepatan</string>
     <string name="SpellBook_Info">Itu mungkin terlihat seperti kumpulan bermacam macam halaman yang disatukan dan menjadi buku yang sesungguhnya. kamu mungkin dapat mengeluarkan sesuatu darinya bila kamu menaruh perhatian penuh kepadanya</string>
-    <string name="SpellBook_Info_Identified">Dengan halaman halaman ini kamu sudah menemukan kalimat utuh dari mantra\&quot;%1$s\&quot;.\n\&quot;%2$s\&quot;</string>
+    <string name="SpellBook_Info_Identified">Dengan halaman halaman ini kamu sudah menemukan kalimat utuh dari mantra\"%1$s\".\n\"%2$s\"</string>
     <string name="SpellBook_Name">Buku Mantra</string>
     <string name="Spell_SelectACell">pilih sel target</string>
     <string name="Spell_SelectAChar">Pilih makhluk target.</string>
-    <string name="Spells_NotEnoughSP">Kamu tidak memiliki cukup mana untuk merapal mantra \&quot;%1$s\&quot;.</string>
+    <string name="Spells_NotEnoughSP">Kamu tidak memiliki cukup mana untuk merapal mantra \"%1$s\".</string>
     <string name="Spells_NotInOwnBody">Anda tidak dapat melakukan %s saat jiwa Anda terpisah dari tubuh.</string>
     <string name="Spells_NotTooFast">%s belum siap digunakan</string>
     <string name="Spells_SummonLimitReached">%1$s: batas pemanggilan tercapai (Batas saat ini: %2$d)!</string>
@@ -1877,7 +1878,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpiderGuard_Desc">Mirip seperti tentara laba-laba penjaga telah bersumpah untuk melindungi kerajaan mereka. Racun dari penjaga dipakai untuk membekukan target mereka yang menyebabkan kelumpuhan.</string>
     <string name="SpiderGuard_Name">laba-laba penjaga</string>
     <string name="SpiderGuard_Name_Objective">laba-laba penjaga</string>
-    <string name="SpiderMindAmber_Desc">Laba-laba amber adalah makhluk langka dan misterius yang memiliki kekuatan pikiran sehingga mirip dengan laba-laba-psi, tapi lebih kuat dari peranakan mereka biasanya. Nama \&quot;amber\&quot; mengarah ke warna kantung otak raksasa mereka, yang diperlihatkan di depan korban mereka, saat Laba-laba Amber menyerang dengan kekuatan mereka.</string>
+    <string name="SpiderMindAmber_Desc">Laba-laba amber adalah makhluk langka dan misterius yang memiliki kekuatan pikiran sehingga mirip dengan laba-laba-psi, tapi lebih kuat dari peranakan mereka biasanya. Nama \"amber\" mengarah ke warna kantung otak raksasa mereka, yang diperlihatkan di depan korban mereka, saat Laba-laba Amber menyerang dengan kekuatan mereka.</string>
     <string name="SpiderMindAmber_Name">laba-laba amber</string>
     <string name="SpiderMindAmber_Name_Objective">laba-laba amber</string>
     <string name="SpiderMind_Desc">Laba-laba yang kelihatan lemah ini memiliki kekuatan mental yang unik, yang memperbolehkan mereka untuk mengontrol seluruh koloni. Laba-laba-Psi dapat mengontrol semua makhluk hidup, tapi laba-laba ini agak penakut.</string>
@@ -1924,7 +1925,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="StartScene_UnlockGnoll">Untuk membuka kelas ini, Anda harus membujuk pendeta kota untuk menyembuhkan Gnoll Kasar</string>
     <string name="StartScene_UnlockNecromancer">Untuk membuka kelas karakter ini, bunuh Lich dengan kelas lain.</string>
     <string name="StartScene_Warning">Permainan kamu saat ini akan di hapus.</string>
-    <string name="StartScene_WinGame">Untuk membuka \&quot;Tantangan\&quot;, menangkan permainan dengan karakter kelas apapun</string>
+    <string name="StartScene_WinGame">Untuk membuka \"Tantangan\", menangkan permainan dengan karakter kelas apapun</string>
     <string name="StartScene_Yes">Iya, mulai permainan baru</string>
     <string name="Statue_Desc">Anda akan berpikir ini hanyalah patung jelek lainnya dari dungeon ini, tapi mata merah berkilaunya membuka kedoknya. Walaupun patungnya sendiri terbuat dari batu,  _%s_, yang dipegannya, terlihat nyata.</string>
     <string name="Statue_Name">patung tersihir</string>
@@ -2023,7 +2024,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="TownShopkeeper_Objective">penjaga toko</string>
     <string name="TownsfolkMovieNPC_Desc">Salah satu penduduk setempat. Meskipun ini jelas orang biasa, pakaian itu memang terlihat mahal.</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
-    <string name="TownsfolkMovieNPC_Message">Apakah Anda tahu tentang layanan khusus yang disediakan oleh \&quot;bioskop\&quot;? Sayang sekali mereka meminta sesuatu yang eksotis yang disebut \&quot;Internet\&quot;, saya bahkan tidak pernah mendengar tentang hal seperti itu.</string>
+    <string name="TownsfolkMovieNPC_Message">Apakah Anda tahu tentang layanan khusus yang disediakan oleh \"bioskop\"? Sayang sekali mereka meminta sesuatu yang eksotis yang disebut \"Internet\", saya bahkan tidak pernah mendengar tentang hal seperti itu.</string>
     <string name="TownsfolkMovieNPC_Name">penduduk lokal</string>
     <string name="TownsfolkMovieNPC_Name_Objective">penduduk lokal</string>
     <string name="TownsfolkNPC_Desc">Salah satu penduduk setempat. Meskipun ini jelas orang biasa, pakaian itu memang terlihat mahal.</string>
@@ -2057,8 +2058,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Undead_Name_Objective">mayat hidup kurcaci</string>
     <string name="Ushanka_Info">Topi ushanka hangat dan nyaman dengan bintang merah yang keren. Sebuah teman yang tepat untuk seorang kamrad yang bertarung melawan dungeon dingin yang jahat.</string>
     <string name="Ushanka_Name">Ushanka</string>
-    <string name="Using_Failed_Because_Blind">Anda tidak dapat menggunakan \&quot;%s\&quot; saat buta</string>
-    <string name="Using_Failed_Because_Magic">Sihir yang kuat mencegah Anda menggunakan \&quot;%s\&quot;.</string>
+    <string name="Using_Failed_Because_Blind">Anda tidak dapat menggunakan \"%s\" saat buta</string>
+    <string name="Using_Failed_Because_Magic">Sihir yang kuat mencegah Anda menggunakan \"%s\".</string>
     <string name="VampireSkull_Info">Topeng ini terbuat dari tengkorak vampir yang seluruhnya alami. Memang ini adalah tengkorak vampir... tengkorak dari vampir berkepala besar. Seram.</string>
     <string name="VampireSkull_Name">Tengkorak vampir</string>
     <string name="VertigoBuff_Info">Perasaan pusing membuat lebih sulit untuk berjalan lurus!</string>
@@ -2114,7 +2115,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WandOfPoison_Info">Ledakan keji dari potongan kayu yang bengkok ini akan melapisi targetnya dengan racun yang mematikan. Makhluk yang diracuni akan mengalami kerusakan berkala sampai efeknya berakhir. Durasi efeknya meningkat seiring dengan level tongkat.</string>
     <string name="WandOfPoison_Info1">tidak terjadi apa-apa</string>
     <string name="WandOfPoison_Name">Tongkat Racun</string>
-    <string name="WandOfRegrowth_Info">\&quot;Ketika kehidupan berhenti, kehidupan baru selalu mulai tumbuh ... Siklus abadi selalu tetap!\&quot;</string>
+    <string name="WandOfRegrowth_Info">\"Ketika kehidupan berhenti, kehidupan baru selalu mulai tumbuh ... Siklus abadi selalu tetap!\"</string>
     <string name="WandOfRegrowth_Info1">tidak terjadi apa-apa</string>
     <string name="WandOfRegrowth_Name">Tongkat Pertumbuhan Kembali</string>
     <string name="WandOfShadowbolt_Info">Tongkat ini mengeluarkan energi gelap, dan jahat.</string>
@@ -2244,7 +2245,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndDonate_ruby">permata</string>
     <string name="WndDonate_rubyDonate">donasi rubi</string>
     <string name="WndDonate_rubyDonateText">Kemurahan hati Anda akan membantu kami terus meningkatkan Remixed Dungeon!</string>
-    <string name="WndDonate_rubyDonateText2"/>
+    <string name="WndDonate_rubyDonateText2" />
     <string name="WndDonate_silver">perak</string>
     <string name="WndDonate_silverDonate">donasi perak</string>
     <string name="WndDonate_silverDonateText">Donasi apapun akan membantu pembuatan proyek.</string>
@@ -2326,7 +2327,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndMovieTheatre_Instruction">Salam dan selamat datang di bioskop kami! Kami menyediakan layanan khusus, di mana Anda dapat menonton film khusus yang disebut iklan secara gratis. Dan jika Anda menonton sampai selesai, Anda akan mendapatkan hadiah %d koin emas!</string>
     <string name="WndMovieTheatre_Instruction_2">Anda menonton %1$d dari %2$d kali. Anda akan mendapatkan kesempatan tambahan untuk menonton film untuk setiap level pahlawan baru yang dicapai.</string>
     <string name="WndMovieTheatre_No">meninggalkan</string>
-    <string name="WndMovieTheatre_Ok">Anda telah berhasil menonton video \&quot;hadiah\&quot;!</string>
+    <string name="WndMovieTheatre_Ok">Anda telah berhasil menonton video \"hadiah\"!</string>
     <string name="WndMovieTheatre_Sorry">Ada yang tidak beres dan kami tidak dapat mengirimkan hadiah Anda...</string>
     <string name="WndMovieTheatre_Thank_You">Terima kasih atas partisipasinya!</string>
     <string name="WndMovieTheatre_Title">Bioskop</string>
@@ -2576,7 +2577,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_deco_crate_name">Crate</string>
     <string name="town_deco_crate_scrolls_desc">Peti ini diisi sampai penuh dengan pengetahuan rahasia.</string>
     <string name="town_deco_crate_scrolls_name">Peti dengan gulungan</string>
-    <string name="town_deco_cross_desc">Salib perak padat, simbol agama lokal - \&quot;Saksi-Saksi Santa Sang Penguasa Kedalaman\&quot;.</string>
+    <string name="town_deco_cross_desc">Salib perak padat, simbol agama lokal - \"Saksi-Saksi Santa Sang Penguasa Kedalaman\".</string>
     <string name="town_deco_cross_name">salib</string>
     <string name="town_deco_crossroad_desc">Pilar kayu mentah dengan teks pelat berbentuk panah yang sudah lama memudar mungkin karena kondisi cuaca yang keras.</string>
     <string name="town_deco_crossroad_name">Tanda persimpangan jalan</string>
@@ -2664,7 +2665,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_deco_rope_name">Tali</string>
     <string name="town_deco_rug_desc">Didesain dengan selera yang baik</string>
     <string name="town_deco_rug_name">Karpet</string>
-    <string name="town_deco_screen_desc">Kanvas misteri ini disebut \&quot;layar\&quot; dan dapat menampilkan gambar bergerak</string>
+    <string name="town_deco_screen_desc">Kanvas misteri ini disebut \"layar\" dan dapat menampilkan gambar bergerak</string>
     <string name="town_deco_screen_name">Layar</string>
     <string name="town_deco_scrolls_desc">Rak berdebu ini penuh dengan berbagai macam gulungan dan buku.</string>
     <string name="town_deco_scrolls_name">Gulungan</string>
@@ -2688,7 +2689,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_deco_snow_name">Salju</string>
     <string name="town_deco_snowdrift_desc">Ini adalah tumpukan salju yang agak besar dan tampaknya tidak ada yang akan membersihkannya.</string>
     <string name="town_deco_snowdrift_name">tumpukan salju</string>
-    <string name="town_deco_snowman_desc">manusia salju adalah dekorasi kota tradisional untuk musim liburan, ditempatkan di tempat ini khusus untuk merayakan \&quot;Dungeonmans\&quot; sehari, ketika monster menyerbu dungeon.</string>
+    <string name="town_deco_snowman_desc">manusia salju adalah dekorasi kota tradisional untuk musim liburan, ditempatkan di tempat ini khusus untuk merayakan \"Dungeonmans\" sehari, ketika monster menyerbu dungeon.</string>
     <string name="town_deco_snowman_name">Manusia salju</string>
     <string name="town_deco_snowy_plate_desc">Lempeng kuno ini tertutup salju</string>
     <string name="town_deco_snowy_plate_name">lempengan salju</string>

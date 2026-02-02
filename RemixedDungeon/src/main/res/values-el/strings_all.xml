@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Καταβρόχθιση</string>
     <string name="AC_Dissect">Τεμαχισμός</string>
@@ -106,7 +107,7 @@
     <string name="Backstab_TooFar">Το θύμα είναι πολύ μακριά για επιτυχημένο χτύπημα.</string>
     <string name="BadgesScene_Title">Τα εμβλήματά σου</string>
     <string name="Badges_AllBags">Αποκτήθηκαν όλοι οι αποθηκευτικοί χώροι</string>
-    <string name="Badges_AllItems">Αναγνωρίστηκε κάθε φίλτρο, πάπυρος, δαχτυλίδι &amp; ραβδί</string>
+    <string name="Badges_AllItems">Αναγνωρίστηκε κάθε φίλτρο, πάπυρος, δαχτυλίδι &amp;amp; ραβδί</string>
     <string name="Badges_AllPotions">Αναγνωρίστηκαν όλα τα φίλτρα</string>
     <string name="Badges_AllRings">Αναγνωρίστηκαν όλα τα δαχτυλίδια</string>
     <string name="Badges_AllScrolls">Αναγνωρίστηκαν όλοι οι πάπυροι</string>
@@ -187,7 +188,7 @@
     <string name="Badges_ThisIsSparta">Εδώ είναι Σπάρτη!!!</string>
     <string name="Badges_Victory">Αποκτήθηκε το Φυλακτό του Γέντορ</string>
     <string name="Badges_VictoryAll">Αποκτήθηκε το Φυλακτό του Γέντορ από κάθε κλάση</string>
-    <string name="Badges_Yasd">Θάνατος από φωτιά, δηλητήριο, τοξικό αέριο &amp; πείνα</string>
+    <string name="Badges_Yasd">Θάνατος από φωτιά, δηλητήριο, τοξικό αέριο &amp;amp; πείνα</string>
     <string name="Badges_Yog_Slain">Εξοντώθηκε ο Yog-Dzewa</string>
     <string name="Bag_ACOpen">ΑΝΟΙΓΜΑ</string>
     <string name="Bandit_Desc">Τα έγκατα της κατακόμβης ήταν πάντοτε το καταφύγιο κάθε λογής εγκληματιών. Δεν κατάφεραν όλοι να διατηρήσουν σώας τας φρένας, έχοντας μείνει τόσο καιρό μακριά από το φως. Οι τρελοί ληστές και συμμορίτες έχουν ξεχάσει εδώ και πολύ καιρό ποιοι είναι και γιατί κλέβουν. Αυτός ο συμμορίτης φαίνεται να έχει επικαλύψει το μαχαίρι του με κάτι!</string>
@@ -340,7 +341,7 @@
     <string name="Capotain_Info">Ένα ψηλό και στενόμακρο καπέλο. Συνήθως συσχετίζεται με τους Πουριτανούς, αλλά δεν χρειάζεται να πιστεύεις για να το φορέσεις. Για κάποιον λόγο έχει μια ταμπέλα που αναγράφει «Σολομών».</string>
     <string name="Capotain_Name">Ημίψηλο</string>
     <string name="Carcass_Devoured">Καταβρόχθισες τη σορό του πλάσματος: %s!</string>
-    <string name="Carcass_DissectResult">Από το %s λαμβάνετε %d συγκομιδή %s.</string>
+    <string name="Carcass_DissectResult">Από το %1$s λαμβάνετε %2$d συγκομιδή %3$s.</string>
     <string name="Carcass_Info">Λείψανα ενός παντελώς νεκρού πλάσματος (%s).</string>
     <string name="Carcass_Kick">Το πλάσμα (%s) τα έχει τινάξει ήδη. Δεν χρειάζεται να το κλωτσάς.</string>
     <string name="Carcass_Name">Λείψανα (%s)</string>
@@ -618,7 +619,7 @@
     <string name="DeferedDamageBuff_Info">Ο πόνος έχει γίνει σταδιακός και η ζημιά δεν λαμβάνεται όλη απευθείας.\nΖημιά που απομένει να ληφθεί: %d</string>
     <string name="DeferedDamageBuff_Name">Αναβεβλημένη ζημιά (%d)</string>
     <string name="DeferedDamage_Killed_Txt">Η %s σε εξόντωσε...</string>
-    <string name="DevourBuff_Info"/>
+    <string name="DevourBuff_Info" />
     <string name="DevourBuff_Name">Καταβρόχθιση</string>
     <string name="DewVial_ACDRINK">ΠΙΕΣ</string>
     <string name="DewVial_AutoDrink">Το φιαλίδιο δρόσου άδειασε και θεράπευσε τις πληγές σου.</string>
@@ -970,7 +971,7 @@
     <string name="HeroSubClass_DescFreR">Ο _Δρομέας_ μπορεί να τρέχει με σχεδόν διπλάσια ταχύτητα από τα περισσότερα πλάσματα. Είναι, επίσης, πολύ ικανότερος στην αποφυγή χτυπημάτων ενώ τρέχει. Για να ισχύσει αυτό, θα πρέπει να μην είναι επιβαρυμένος και να μη λιμοκτονεί.</string>
     <string name="HeroSubClass_DescGlad">Μια επιτυχημένη επίθεση με όπλο κοντινής μάχης επιτρέπει στον _Μονομάχο_ να ξεκινήσει μια διαδοχή χτυπημάτων, κατά την οποία κάθε επακόλουθο χτύπημα προκαλεί επιπλέον ζημιά.</string>
     <string name="HeroSubClass_DescGuardian">Η αμυντική επιδεξιότητα του _Φύλακα_ του επιτρέπει να αντεπιτίθεται με την ασπίδα του. Αυτό τον κάνει έναν επικίνδυνο εχθρό για όσους τολμήσουν να επιτεθούν σε αυτό το κινούμενο οχυρό.</string>
-    <string name="HeroSubClass_DescNone"/>
+    <string name="HeroSubClass_DescNone" />
     <string name="HeroSubClass_DescScout">Οι _Ανιχνευτές_ των ξωτικών είναι αυθεντίες στην κάλυψη. Λαμβάνουν μια προσωρινή επίδραση αορατότητας όποτε ποδοπατούν το ψηλό γρασίδι. Είναι, επίσης, ταχύτεροι από τα κοινά ξωτικά.</string>
     <string name="HeroSubClass_DescShaman">Οι _Σαμάνοι_ των ξωτικών χρησιμοποιούν τα ραβδιά τους ως όπλα μάχης σώμα-με-σώμα. Ένα επιτυχημένο χτύπημα έχει την πιθανότητα να ενεργοποιήσει τη δύναμη του ραβδιού χωρίς να ξοδέψει φορτίο.</string>
     <string name="HeroSubClass_DescSnip">Η _Σκοπεύτρια_ μπορεί να εντοπίζει αδύναμα σημεία στην πανοπλία του εχθρού, και πρακτικά την παρακάμπτει όποτε χρησιμοποιεί όπλα απόστασης.</string>
@@ -1219,7 +1220,7 @@
     <string name="Level_TileDescStatue">Κάποιος θέλησε να διακοσμήσει τον χώρο, αλλά προφανώς απέτυχε.</string>
     <string name="Level_TileDescTrap">Η παγίδα ενεργοποιείται με το πάτημα του κρυφού ποδομοχλού.</string>
     <string name="Level_TileDescWater">Σε περίπτωση που καίγεσαι, πάτα στο νερό για να σβήσεις τη φωτιά.</string>
-    <string name="Level_TileDescWell"/>
+    <string name="Level_TileDescWell" />
     <string name="Level_TileEmbers">Κάρβουνα</string>
     <string name="Level_TileEmptyWell">Άδειο πηγάδι</string>
     <string name="Level_TileEntrance">Είσοδος ορόφου</string>
@@ -1359,7 +1360,7 @@
     <string name="MissileWeapon_No">Όχι, άλλαξα γνώμη</string>
     <string name="MissileWeapon_Sure">Θέλεις σίγουρα να το χρησιμοποιήσεις ως όπλο μάχης σώμα με σώμα;</string>
     <string name="MissileWeapon_Yes">Ναι, ξέρω τι κάνω</string>
-    <string name="MobAi_status">- %s: %s</string>
+    <string name="MobAi_status">- %1$s: %2$s</string>
     <string name="Mob_Attacking">%s; Πες ότι εξοντώθηκε ήδη!</string>
     <string name="Mob_Cannot_Be_Pet">Η θέληση του πλάσματος «%s» είναι υπερβολικά ισχυρή!</string>
     <string name="Mob_CantDoIt">Δεν μπορώ να το κάνω αυτό.</string>
@@ -2059,7 +2060,7 @@
     <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">αραχνοφρουρός</string>
     <string name="SpiderGuard_Name_Objective">αραχνοφρουρός</string>
-    <string name="SpiderMindAmber_Desc">Οι κεχριμπαρένιες αράχνες είναι σπάνια και μυστηριώδη πλάσματα που κατέχουν ψυχικές δυνάμεις παρόμοιες με τις κανονικές ψυχο-αράχνες, αλλά είναι και σωματικά ανθεκτικότερες. Ο χαρακτηρισμός \&quot;κεχριμπαρένια\&quot; αναφέρεται στο χρώμα της γιγάντιας μεμβράνης του εγκεφάλου της, η οποία αποκαλύπτεται στα θύματα όταν η αράχνη επιτίθεται με τις δυνάμεις της.</string>
+    <string name="SpiderMindAmber_Desc">Οι κεχριμπαρένιες αράχνες είναι σπάνια και μυστηριώδη πλάσματα που κατέχουν ψυχικές δυνάμεις παρόμοιες με τις κανονικές ψυχο-αράχνες, αλλά είναι και σωματικά ανθεκτικότερες. Ο χαρακτηρισμός \"κεχριμπαρένια\" αναφέρεται στο χρώμα της γιγάντιας μεμβράνης του εγκεφάλου της, η οποία αποκαλύπτεται στα θύματα όταν η αράχνη επιτίθεται με τις δυνάμεις της.</string>
     <string name="SpiderMindAmber_Gender">feminine</string>
     <string name="SpiderMindAmber_Name">κεχριμπαρένια αράχνη</string>
     <string name="SpiderMindAmber_Name_Objective">κεχριμπαρένια αράχνη</string>
@@ -2415,39 +2416,10 @@
   <string name="WndTilesKind_text">Πρόκειται να μπεις σε μια κατακόμβη που έχει κυριευτεί από τη διαβολική μαγεία· τουλάχιστον μπορείς να επιλέξεις πώς θα τη βλέπεις.\nΘέλεις να είναι με σύγχρονα ψευδο-3D γραφικά ή με την κλασική επίπεδη εμφάνιση;\nΜπορείς να το αλλάξεις αργότερα στο μενού ρυθμίσεων του παιχνιδιού.</string>
   <string name="WndTilesKind_NewLook">Νέα εμφάνιση</string>
   <string name="WndTilesKind_ClassicLook">Κλασική εμφάνιση</string>
-  <string name="MobAi_status">- %s: %s</string>
   <string name="WndCustomizations_Title">Προσαρμογές</string>
-  <string name="IceGuardianCore_DieInfo">Κάνει τόσο κρύο εδώ... Καλύτερα να επιστρέψω στο επίπεδο #14 και να βρω ένα πιο ζεστό μέρος.</string>
-  <string name="Lich_DieInfo">Ποτέ δεν συμπάθησα αυτόν τον νεκρομάντη. Ώρα να επιστρέψω στο επίπεδο #7 και να αναζητήσω την επόμενη περιπέτεια.</string>
-  <string name="SpiderQueen_DieInfo">Η βασίλισσα αράχνη εξουδετερώθηκε! Τώρα πρέπει να επιστρέψω στο επίπεδο #5 και να συνεχίσω το ταξίδι μου στα βάθη.</string>
   <string name="WndModSelect_ReallyDelete">Διαγραφή σίγουρα;</string>
   <string name="WndModSelect_AreYouSure">Διαγραφή τροποποίησης: %s. Σίγουρα;</string>
-  <string name="Challenges_Names_8">Χωρίς την πόλη</string>
-  <string name="Challenges_Descriptions_8">Το ταξίδι σου ξεκινά μες στους σκοτεινούς κι επικίνδυνους υπονόμους της πόλης, και η μόνη σου διέξοδος προς την επιφάνεια είναι φραγμένη. Σαν να μην έφτανε αυτό, μπορείς να χρησιμοποιείς μόνο τον εξοπλισμό που βρίσκεις μες στην κατακόμβη. Έχοντας περιορισμένους πόρους κι εξοπλισμό, μόνο οι ικανότητες και η στρατηγική θα κρίνουν το αν θα επιβιώσεις.</string>
-  <string name="EncumbranceBuff_CharAct_1">Δεν έχω αρκετή δύναμη για να κρατήσω καλά το εφόδιο (%s).</string>
-  <string name="EncumbranceBuff_CharAct_2">Αυτό το εφόδιο (%s) μού είναι πολύ βαρύ για να το χρησιμοποιήσω αποτελεσματικά.</string>
-  <string name="EncumbranceBuff_CharAct_3">Πρέπει να δουλέψω με τη δύναμή μου για να χρησιμοποιήσω το εφόδιο (%s).</string>
-  <string name="EncumbranceBuff_CharAct_4">Μου λείπει η δύναμη για να αξιοποιήσω το εφόδιο (%s) πλήρως.</string>
-  <string name="EncumbranceBuff_CharAct_5">Το εφόδιο (%s) είναι πολύ βαρύ για να το αντέξω.</string>
-  <string name="Typical_Damage">Τυπική ζημιά</string>
-  <string name="Damage_Reduction">Μείωση ζημιάς</string>
-  <string name="Attack_Range">Εμβέλεια επίθεσης</string>
-  <string name="Movement_Speed">Ταχύτητα κίνησης</string>
-  <string name="Attack_Cooldown">Αναπλήρωση επίθεσης</string>
-  <string name="View_Distance">Οπτικό πεδίο</string>
   <string name="WndHero_Info">Πληροφορίες</string>
-  <string name="ChaosShield_name">ασπίδα του χάους</string>
-  <string name="ChaosShield_desc">Η ασπίδα του χάους είναι το αποτέλεσμα της ανάμειξης ενός κρυστάλλου του χάους με μια κοινή ασπίδα. Υλοποιεί τυχαίες χαοτικές επιδράσεις με κάθε επιτυχημένο χτύπημα.</string>
-  <string name="ChaosCrystal_ShieldFused">Ο κρύσταλλος ενώθηκε με την ασπίδα σου και πήρε τη μορφή του χάους.</string>
-  <string name="Actions_Speed">Επίπεδο φούριας</string>
-  <string name="ChampionOfAirBuff_Name">Μαχητής του αέρα</string>
-  <string name="ChampionOfAirBuff_Info">Αυτό το χαρακτηριστικό δίνει στο πλάσμα την ουσία των ανέμων, ενισχύοντας την ευκινησία και τη μαχητική του δεινότητα. Ο μαχητής του αέρα είναι ένας τρομερός αντίπαλος, ικανός να εξαπολύει ταχείες και καταστροφικές επιθέσεις που αλλάζουν γρήγορα την πορεία της μάχης.</string>
-  <string name="ChampionOfWaterBuff_Name">Μαχητής του νερού</string>
-  <string name="ChampionOfWaterBuff_Info">Ο μαχητής του νερού ενσαρκώνει την ακατάβλητη ισχύ των οκεανών, ενισχύοντας την αντοχή και τη γενναιοψυχία του. Ως αποτέλεσμα, γίνεται ένας θαραλλέος αντίπαλος, ικανός να αντέχει και να στέκεται ως ακλόνητος φρουρός μπροστά στις αντιξοότητες.</string>
-  <string name="ChampionOfFireBuff_Name">Μαχητής της φωτιάς</string>
-  <string name="ChampionOfFireBuff_Info">Εμποτισμένο με την οργή της φλόγας, αυτό το χαρακτηριστικό αυξάνει την αγριότητα και τη μαχητική δεινότητα του πλάσματος. Ο μαχητής της φωτιάς εγείρεται ως ένας φοβερός αντίπαλος, εξαπολύοντας καταστροφικές επιθέσεις που τυλίγουν τους εχθρούς στις φλόγες και προκαλώντας τον τρόμο σε όλους όσους τολμούν να του αντιταχθούν.</string>
-  <string name="ChampionOfEarthBuff_Name">Μαχητής της γης</string>
-  <string name="ChampionOfEarthBuff_Info">Ο μαχητής της γης ενσαρκώνει μια ακατανίκητη δύναμη, μιας και το χαρακτηριστικό αυτό ενισχύει την αντοχή του στη ζημιά και τη μέγιστη ζωτική του ισχύ. Αυτή η μεταμόρφωση τον καθιστά έναν τρομακτικό αντίπαλο μες στα άγνωστα βάθη, ικανό να αγνοεί τις επιθέσεις και να αντέχει παρατεταμένες μάχες με ακλόνητη αποφασιστικότητα.</string>
   <string name="Welcome_Text_32">
 remix.32\n
     - Παιχνίδι:\n
@@ -2496,7 +2468,6 @@ remix.32\n
     <string name="WndCryptoDonate_copyAddress">Αντιγραφή Διεύθυνσης</string>
     <string name="WndCryptoDonate_monero">Μονέρο</string>
     <string name="WndCryptoDonate_warningText">ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Επαληθεύετε πάντα τη διεύθυνση πριν στείλετε χρήματα. Οι συναλλαγές κρυπτονομισμάτων είναι μη αναστρέψιμες!</string>
-    <string name="WndCustomizations_Title">Προσαρμογές</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - Δωρεάν σε όλους και έτσι θα είναι πάντα.\n\nΠαρόλα αυτά, μπορείς να μας βοηθήσεις να το κάνουμε ακόμα καλύτερο.\n\nΜαζί με τις εγκάρδιες ευχαριστίες μας, θα λάβεις και κάποια αισθητικά πρόσθετα.</string>
     <string name="WndDonate_donate">δωρεά:</string>
     <string name="WndDonate_gold">Χρυσή</string>
@@ -2511,7 +2482,7 @@ remix.32\n
     <string name="WndDonate_ruby">Ρουμπινένια</string>
     <string name="WndDonate_rubyDonate">Ρουμπινένια δωρεά</string>
     <string name="WndDonate_rubyDonateText">Η γενναιοδωρία σου μας βοηθά να συνεχίσουμε τη βελτίωση του Remixed Dungeon!</string>
-    <string name="WndDonate_rubyDonateText2"/>
+    <string name="WndDonate_rubyDonateText2" />
     <string name="WndDonate_silver">Ασημένια</string>
     <string name="WndDonate_silverDonate">Ασημένια δωρεά</string>
     <string name="WndDonate_silverDonateText">Κάθε δωρεά βοηθά στην ανάπτυξη του παιχνιδιού.</string>
@@ -2549,7 +2520,6 @@ remix.32\n
     <string name="WndHero_Exp">Εμπειρία</string>
     <string name="WndHero_Gold">Χρυσός που συλλέχθηκε</string>
     <string name="WndHero_Health">Ζωή</string>
-    <string name="WndHero_Info">Πληροφορίες</string>
     <string name="WndHero_Satiety">Κορεσμός</string>
     <string name="WndHero_SkillLevel">Επίπεδο ικανότητας</string>
     <string name="WndHero_StaCatalogus">Κατάλογος</string>
@@ -2590,8 +2560,6 @@ remix.32\n
     <string name="WndModInstall_InstallingMod">Εγκατάσταση τροποποίησης</string>
     <string name="WndModInstall_PleaseUpdate">Παρακαλούμε ενημέρωσε το Remixed Dungeon προτού εγκαταστήσεις αυτήν την τροποποίηση.</string>
     <string name="WndModInstall_Version">έκδοση</string>
-    <string name="WndModSelect_AreYouSure">Διαγραφή τροποποίησης: %s. Σίγουρα;</string>
-    <string name="WndModSelect_ReallyDelete">Διαγραφή σίγουρα;</string>
     <string name="WndModsDisclaimer_install">Εγκατάσταση τροποποίησης από συσκευή</string>
     <string name="WndModsDisclaimer_manage">Διαχείριση λίστας τροποποιήσεων</string>
     <string name="WndModsDisclaimer_title">Τροποποιήσεις</string>
@@ -2710,10 +2678,6 @@ remix.32\n
     <string name="WndStory_Prision">Πολλά χρόνια πριν, μια υπόγεια φυλακή είχε χτιστεί εδώ κάτω για τους πιο επικίνδυνους εγκληματίες. Εκείνον τον καιρό ήταν πολύ έξυπνη ιδέα· είναι πραγματικά δύσκολο να δραπετεύσει κανείς από εδώ. Σύντομα, όμως, άρχισε να αναδίδεται ένα σκοτεινό μίασμα από κάτω, το οποίο οδηγούσε στην τρέλα τόσο τους φύλακες όσο και τους κρατούμενους. Στο τέλος η φυλακή εγκαταλείφθηκε, αλλά κάποιοι κατάδικοι έμειναν κλειδωμένοι εδώ μέσα...</string>
     <string name="WndStory_Sewers">Η κατακόμβη βρίσκεται ακριβώς κάτω από την πόλη· τα ανώτερα επίπεδα αποτελούν το αποχετευτικό της σύστημα. Δεν είναι και πολύ επικίνδυνα αυτά τα επίπεδα μιας και αποτελούν τμήμα της πόλης. Δεν το λες κι ασφαλές μέρος, αλλά εδώ δεν έχει επικρατήσει ακόμα η διαβολική μαγεία.</string>
     <string name="WndStory_Spiders">Πολλά, πολλά χρόνια πριν υπήρχε ένα πλούσιο ορυχείο γεμάτο μαγικά πετρώματα. Αλλά μόλις τα ορυκτά εξαντλήθηκαν, οι ανθρακωρύχοι εγκατέλειψαν το μέρος κι άφησαν πίσω τους ένα ευρύ δίκτυο από σήραγγες. Τελικά η περιοχή αποικήθηκε από αράχνες. Αλλά ακόμα κι αυτά τα επικίνδυνα πλάσματα, που καραδοκούν στο σκοτάδι, δεν ήταν αρκετά να αποθαρρύνουν τους θαραλλέους και τους τρελούς που αναζητούσαν χαμένους θησαυρούς. Γιατί ο κίνδυνος είναι πάντα αναλογικός με το πλήθος των θρύλων περί μαγικών τεχνουργημάτων. Κάποτε, μια κακιά μάγισσα περιπλανιόταν στις σήραγγες ελπίζοντας να ξεφύγει από τους κατήγορούς της. Αλλά τα προληπτικά αυτά άτομα δεν τολμούσαν να μπουν στο σκοτάδι. Γι\' αυτό και την περίμεναν... μα δεν εμφανίστηκε ποτέ. Ίσως να βρήκε άλλη διέξοδο ή να πέρασε κρυφά μπροστά από τους φρουρούς. Ίσως και να βρήκε τον θάνατό της, περιτριγυρισμένη από βοές τεράτων κρυμμένων στο σκοτάδι.</string>
-    <string name="WndTilesKind_ClassicLook">Κλασική εμφάνιση</string>
-    <string name="WndTilesKind_NewLook">Νέα εμφάνιση</string>
-    <string name="WndTilesKind_Title">Και κάτι ακόμη:</string>
-    <string name="WndTilesKind_text">Πρόκειται να μπεις σε μια κατακόμβη που έχει κυριευτεί από τη διαβολική μαγεία· τουλάχιστον μπορείς να επιλέξεις πώς θα τη βλέπεις.\nΘέλεις να είναι με σύγχρονα ψευδο-3D γραφικά ή με την κλασική επίπεδη εμφάνιση;\nΜπορείς να το αλλάξεις αργότερα στο μενού ρυθμίσεων του παιχνιδιού.</string>
     <string name="WndTradeItem_Bought">Αγόρασες: %1$s για %2$dχρ</string>
     <string name="WndTradeItem_Buy">Αγορά για %dχρ</string>
     <string name="WndTradeItem_BuyAll">Αγορά όλων για %dχρ</string>

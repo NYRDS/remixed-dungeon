@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Devorar</string>
     <string name="AC_Dissect">Dissecar</string>
@@ -15,7 +16,7 @@
     <string name="AboutScene_Sound">Som:</string>
     <string name="AboutScene_Thanks">Agradecimentos especiais para:</string>
     <string name="AboutScene_Translation">Localização por: </string>
-    <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901</string>
+    <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon por NYRDS baseado em Pixel Dungeon Source por Watabou.</string>
     <string name="Acidic_Desc">Estas enormes criaturas demoníacas parecidas com aracnídeos evitam o combate de perto, disparando pontas serrilhadas de longas distâncias.</string>
     <string name="Acidic_Name">escorpião ácido</string>
@@ -49,13 +50,13 @@
     <string name="AmuletScene_Stay">Eu não acabei ainda</string>
     <string name="AmuletScene_Txt">Você finalmente segurou em suas mãos o Amuleto de Yendor. Usando o seu poder, você pode dominar o mundo ou trazer paz e prosperidade para as pessoas ou o que quiser. De qualquer forma, sua vida vai mudar para sempre e este jogo vai terminar aqui. Ou você pode continuar um mero mortal um pouco mais.</string>
     <string name="Amulet_ACEnd">FIM DO JOGO</string>
-    <string name="Amulet_Info">O Amuleto de Yendor é o mais poderoso artefato conhecido de origem desconhecida. Diz-se que o amuleto é capaz de cumprir qualquer desejo se a força de vontade do seu dono é forte o suficiente para \&quot;convencer\&quot; a fazê-lo.</string>
+    <string name="Amulet_Info">O Amuleto de Yendor é o mais poderoso artefato conhecido de origem desconhecida. Diz-se que o amuleto é capaz de cumprir qualquer desejo se a força de vontade do seu dono é forte o suficiente para \"convencer\" a fazê-lo.</string>
     <string name="Amulet_Name">Amuleto de Yendor</string>
     <string name="Ankh_Info">O antigo símbolo da imortalidade concede uma capacidade de voltar à vida após a morte. Após a ressurreição todos os itens não equipados são perdidos.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">%s de anti-entropia</string>
     <string name="ArmorKit_ACAplly">APLICAR</string>
-    <string name="ArmorKit_Info">Usando este kit de pequenas ferramentas e materiais qualquer um pode transformar qualquer armadura em uma \&quot;Armadura Épica\&quot;, que irá manter todas as propriedades da armadura original e também irá fornecer seu portador uma habilidade especial conforme sua classe. Nenhuma habilidade em costura, trabalho do couro ou de ferreiro são necessárias.</string>
+    <string name="ArmorKit_Info">Usando este kit de pequenas ferramentas e materiais qualquer um pode transformar qualquer armadura em uma \"Armadura Épica\", que irá manter todas as propriedades da armadura original e também irá fornecer seu portador uma habilidade especial conforme sua classe. Nenhuma habilidade em costura, trabalho do couro ou de ferreiro são necessárias.</string>
     <string name="ArmorKit_Name">kit armadura</string>
     <string name="ArmorKit_SelectArmor">Selecione uma armadura para atualizar</string>
     <string name="ArmorKit_Upgraded">você aplicou o kit armadura para atualizar seu %s</string>
@@ -63,7 +64,7 @@
     <string name="Armor_Glyph">glifo</string>
     <string name="Armor_Identify">agora você está bastante familiarizado com seu %1$s e pode identificá-lo como %2$s.</string>
     <string name="Armor_Incompatible">Interação de diferentes tipos de magia apagaram o hieróglifo desta armadura!</string>
-    <string name="Armor_Info1">\n\nEsta %1$s concede até \&quot;%2$d\&quot; pontos de absorção de danos por ataque.</string>
+    <string name="Armor_Info1">\n\nEsta %1$s concede até \"%2$d\" pontos de absorção de danos por ataque.</string>
     <string name="Armor_Info2">\n\nPor causa de sua força inadequada, sua velocidade de movimento e habilidade de defesa será diminuída.</string>
     <string name="Armor_Info3">\n\nPor causa de sua força inadequada, vestindo esta armadura irá diminuir a sua velocidade de movimento e habilidade de defesa.</string>
     <string name="Armor_Info4">\n\nUm típico %1$s fornece absorção de danos de até %2$d pontos por ataque e precisa de %3$d pontos de força.\u0020</string>
@@ -85,14 +86,14 @@
     <string name="AzuterronNPC_Name_Objective">Estranho</string>
     <string name="AzuterronNPC_Quest_End">Excelente. Pegue esta poção, certamente você a achará útil.</string>
     <string name="AzuterronNPC_Quest_Reminder">Ajude-me e eu lhe ajudarei.</string>
-    <string name="AzuterronNPC_Quest_Start">Hun, porquê... oh, você consegue me ver, não consegue? Isso significa que você não é um \&quot;deles\&quot;. Eu vejo que você também não se afeiçoou por todos esses monstros. Te digo uma coisa, se você me ajudar com esse pequeno problema, então eu irei te oferecer a minha assistência. Em algum lugar neste nível, você irá encontrar a besta da escuridão, um espírito traiçoeiro. Mate-o, pegue o seu coração e volte para mim. E mais uma coisa, se você está interessado em comprar meus suprimentos, não hesite em perguntar.</string>
+    <string name="AzuterronNPC_Quest_Start">Hun, porquê... oh, você consegue me ver, não consegue? Isso significa que você não é um \"deles\". Eu vejo que você também não se afeiçoou por todos esses monstros. Te digo uma coisa, se você me ajudar com esse pequeno problema, então eu irei te oferecer a minha assistência. Em algum lugar neste nível, você irá encontrar a besta da escuridão, um espírito traiçoeiro. Mate-o, pegue o seu coração e volte para mim. E mais uma coisa, se você está interessado em comprar meus suprimentos, não hesite em perguntar.</string>
     <string name="Backstab_Aware">A vítima não deve estar ciente de você para uma boa facada nas costas.</string>
     <string name="Backstab_Info">Um golpe silencioso nas costas. Desonesto, mas extremamente eficaz, o dano de apunhalar irá aumentar com o nível de habilidade do usuário.\n\nUma punhalada bem sucedida irá ignorar completamente a armadura ou habilidades defensivas da vítima.</string>
     <string name="Backstab_Name">Apunhalar</string>
     <string name="Backstab_TooFar">A vítima está muito longe para conseguir acertar.</string>
     <string name="BadgesScene_Title">Suas Medalhas.</string>
     <string name="Badges_AllBags">Todos os compartimentos comprados</string>
-    <string name="Badges_AllItems">Todas as Poções, Pergaminhos, Anéis &amp; Varinhas identificados</string>
+    <string name="Badges_AllItems">Todas as Poções, Pergaminhos, Anéis &amp;amp; Varinhas identificados</string>
     <string name="Badges_AllPotions">Todas as Poções identificadas</string>
     <string name="Badges_AllRings">Todos os anéis identificados</string>
     <string name="Badges_AllScrolls">Todos os Pergaminhos identificados</string>
@@ -172,7 +173,7 @@
     <string name="Badges_Supporter">Obrigado pelo seu apoio!</string>
     <string name="Badges_Victory">Amuleto de Yendor adquirido</string>
     <string name="Badges_VictoryAll">Amuleto de Yendor adquirido por todas as classes</string>
-    <string name="Badges_Yasd">Morto por Fogo, Envenenamento, Gás Tóxico &amp; Fome</string>
+    <string name="Badges_Yasd">Morto por Fogo, Envenenamento, Gás Tóxico &amp;amp; Fome</string>
     <string name="Badges_Yog_Slain">Matador do Yog-Dzewa</string>
     <string name="Bag_ACOpen">ABRIR</string>
     <string name="Bandit_Desc">Níveis mais profundos da masmorra sempre foram um esconderijo para todos os tipos de criminosos. Nem todos eles poderiam manter uma mente clara durante os longos períodos longe de luz do dia. Há muito tempo, esses ladrões loucos e bandidos se esqueceram quem são e por que eles roubam. Este bandido parece ter revestido o punhal com alguma coisa!</string>
@@ -201,7 +202,7 @@
     <string name="BellaNPC_Amulet_F">Oi querida, o que você tem aí? Ah, que amuleto elegante! E você ... você não parece ser uma plebeia. Gostaria de dar um passeio e discutir o nosso futuro juntos?</string>
     <string name="BellaNPC_Amulet_M">Oi gatinho, o que você tem aí? Ah, que amuleto elegante! E você ... você não parece ser um plebeu. Gostaria de dar um passeio e discutir o nosso futuro juntos?</string>
     <string name="BellaNPC_Angry">Como se atreve... plebeia!</string>
-    <string name="BellaNPC_Desc">Uma menina muito elegante. Sua aparência diz \&quot;Eu sou boazinha com todo mundo.\&quot;</string>
+    <string name="BellaNPC_Desc">Uma menina muito elegante. Sua aparência diz \"Eu sou boazinha com todo mundo.\"</string>
     <string name="BellaNPC_Message">Eu não tenho interesse em plebeus como você!</string>
     <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
@@ -237,8 +238,8 @@
     <string name="BlackSkullOfMastery_Title">Você pode quebrar o feitiço. Ou você pode manipular a magia de uma forma que lhe permita consumir o poder do feitiço e próprio artefato em si, tornando-se um Lich.</string>
     <string name="BlackSkull_Activated">O Crânio Negro despertou!</string>
     <string name="BlackSkull_Deactivated">O Crânio Negro adormeceu, mais uma vez...</string>
-    <string name="BlackSkull_Info">Um pequeno crânio de obsidiana. Era uma das fontes dos poderes de Necropolis, mas após a derrota do Lich, parece que perdeu todos os seus poderes. Mas, enquanto você a segura em suas mãos, um pensamento estranho vem à sua mente: \&quot;Estou com fome\&quot;.</string>
-    <string name="BlackSkull_Info_Awakened">O crânio está emitindo poder, você pode vê-lo escorrendo dos olhos vazios do crânio. E, enquanto você a segura em suas mãos, você pode ouvir a voz tenebrosa dizendo: \&quot;A morte se aproxima\&quot;</string>
+    <string name="BlackSkull_Info">Um pequeno crânio de obsidiana. Era uma das fontes dos poderes de Necropolis, mas após a derrota do Lich, parece que perdeu todos os seus poderes. Mas, enquanto você a segura em suas mãos, um pensamento estranho vem à sua mente: \"Estou com fome\".</string>
+    <string name="BlackSkull_Info_Awakened">O crânio está emitindo poder, você pode vê-lo escorrendo dos olhos vazios do crânio. E, enquanto você a segura em suas mãos, você pode ouvir a voz tenebrosa dizendo: \"A morte se aproxima\"</string>
     <string name="BlackSkull_Name">crânio negro</string>
     <string name="BlackSkull_Name_Awakened">crânio negro acordado</string>
     <string name="BlackSkull_Ressurrect">O Crânio Negro levantou o monstro morto para servi-lo!</string>
@@ -312,9 +313,9 @@
     <string name="Candy_Name">Doce</string>
     <string name="Candy_Warning_1">Você não devia ter comido o doce. Você prometeu dá-lo a alguém. Ele não parece ter lhe afetado de qualquer maneira, porém, você ainda está com fome, afinal, é apenas doce.</string>
     <string name="Candy_Warning_2">Realmente eram muitos. Sua barriga dói por você ter comido muitos doces.</string>
-    <string name="Capotain_Info">Um chapéu alto de aba pequena. Geralmente é usado por puritanos, mas você não precisa ser religioso para usa-lo. Por algum motivo, possui uma placa de identificação, que diz \&quot;Salomão\&quot;.</string>
+    <string name="Capotain_Info">Um chapéu alto de aba pequena. Geralmente é usado por puritanos, mas você não precisa ser religioso para usa-lo. Por algum motivo, possui uma placa de identificação, que diz \"Salomão\".</string>
     <string name="Capotain_Name">Capotain</string>
-    <string name="Carcass_DissectResult">Do %s você obtém %d colheita %s.</string>
+    <string name="Carcass_DissectResult">Do %1$s você obtém %2$d colheita %3$s.</string>
     <string name="Caves_TileDescBookshelf">Quem precisa de uma estante de livros em uma caverna?</string>
     <string name="Caves_TileDescDeco">Um veio de algum minério está visível na parede. Será Ouro?</string>
     <string name="Caves_TileDescEntrance">A escada te levará ao piso superior.</string>
@@ -467,7 +468,7 @@
     <string name="Codex_Story_23">Este livro está escrito linguagem anã</string>
     <string name="Codex_Story_24">Este livro está escrito em linguagem élfica</string>
     <string name="Codex_Story_25">Ela parou, congelada, na pesada porta de carvalho, e olhou a luz emergindo pelas bordas da porta. De algum canto negligenciado de sua mente, reconheceu.\n
-\&quot;Luz do sol...\&quot; ela murmurou para si mesma. Quanto tempo demorou? Na escuridão eterna do Calabouço, há muito tempo desistira de contar os dias. A luz iluminou usas memórias em desuso. Lembrou-se de seu treinamento, longos dias de prática árdua com o som das lâminas, manutenção de registros e confecção de mapas. Lembrou-se dos mantras e disciplinas destinados a permitir que ela mantivesse sua sanidade enquanto sondava as profundezas desconhecidas. O que ela não lembrava, não conseguia lembrar, eram das pessoas.\n
+\"Luz do sol...\" ela murmurou para si mesma. Quanto tempo demorou? Na escuridão eterna do Calabouço, há muito tempo desistira de contar os dias. A luz iluminou usas memórias em desuso. Lembrou-se de seu treinamento, longos dias de prática árdua com o som das lâminas, manutenção de registros e confecção de mapas. Lembrou-se dos mantras e disciplinas destinados a permitir que ela mantivesse sua sanidade enquanto sondava as profundezas desconhecidas. O que ela não lembrava, não conseguia lembrar, eram das pessoas.\n
 Ela lembrou-se de suas vozes, suas ordens e seus avisos, mas não seus rostos, nem seu toque.\n
 A dor a treinou. Lembre-se dos perigos, sempre os perigos. Animais raivosos, mortos-vivos, bandidos insanos e ninjas astuciosos haviam caído diante dela. Ela havia cortado, queimado, esfaqueado e envenenado seu caminho através de abominações, demônios, abominações do tempo e necromantes insanos. Até mesmo deuses haviam caído diante dela.\n
 Ela havia rastreado Yog pelo Céu e Inferno, antes de silenciar seus sussurros corrompidos pela eternidade. Mesmo assim, havia trabalho a ser feito. Yog era um servo de algo ainda mais oculto e poderoso que ele.\n
@@ -556,7 +557,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
     <string name="DeferedDamageBuff_Name">Danos Diferidos (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s te matou...</string>
-    <string name="DevourBuff_Info"/>
+    <string name="DevourBuff_Info" />
     <string name="DevourBuff_Name">Devorar</string>
     <string name="DewVial_ACDRINK">TOMAR</string>
     <string name="DewVial_AutoDrink">O frasco de orvalho foi esvaziado para curar suas feridas.</string>
@@ -660,7 +661,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="ExplodingSkull_Desc">Este crânio flutuante em chamas, aparenta ser extremamente frágil, parece que vai explodir a qualquer momento.</string>
     <string name="ExplodingSkull_Name">crânio explosivo</string>
     <string name="ExplodingSkull_Name_Objective">crânio explosivo</string>
-    <string name="Eye_Desc">Um dos outros nomes deste demônio é \&quot;esfera de ódio\&quot;, porque quando vê um inimigo, ele usa seu Olhar da Morte de forma imprudente, muitas vezes ignorando seus aliados e ferindo-os.</string>
+    <string name="Eye_Desc">Um dos outros nomes deste demônio é \"esfera de ódio\", porque quando vê um inimigo, ele usa seu Olhar da Morte de forma imprudente, muitas vezes ignorando seus aliados e ferindo-os.</string>
     <string name="Eye_Kill">Olhar da Morte de %s matou você...</string>
     <string name="Eye_Name">olho do mal</string>
     <string name="Eye_Name_Objective">olho do mal</string>
@@ -770,7 +771,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="GoldenSword_Info">Normalmente, uma arma feita de um metal macio como ouro, é considerada apenas uma decoração. Apesar disso, a lâmina dessa espada parece ser capaz de cortar muito bem.</string>
     <string name="GoldenSword_Name">Espada dourada</string>
     <string name="Golem_Defense">bloqueou</string>
-    <string name="Golem_Desc">Os Anões tentaram combinar seu conhecimento mecânico com o poder de elementais. Eles usaram espíritos da terra, como uma \&quot;alma\&quot; dos órgãos mecânicos dos golems, que se acreditava ser mais controlável de todas. Apesar disso, o menor erro no ritual poderia causar um surto.</string>
+    <string name="Golem_Desc">Os Anões tentaram combinar seu conhecimento mecânico com o poder de elementais. Eles usaram espíritos da terra, como uma \"alma\" dos órgãos mecânicos dos golems, que se acreditava ser mais controlável de todas. Apesar disso, o menor erro no ritual poderia causar um surto.</string>
     <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">golem</string>
     <string name="Goo_Desc">Há pouco conhecimento sobre o Goo. É bem possível que ele não seja nem mesmo uma criatura, mas sim um conglomerado de substâncias provenientes dos esgotos que ganharam rudimentos de livre-arbítrio. De qualquer das formas, é óbvio que a magia negra está trabalhando aqui.</string>
@@ -844,14 +845,14 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HeroClass_HunPerks_3">Caçadoras ganham mais vida a partir de gotas de orvalho.</string>
     <string name="HeroClass_HunPerks_4">Caçadoras podem sentir monstros por perto, mesmo que eles estejam escondidos atrás de obstáculos.</string>
     <string name="HeroClass_Mag">mago</string>
-    <string name="HeroClass_MagPerks_0">Magos começam com uma Varinha Míssel Mágico. Esta varinha pode ser \&quot;desencantada\&quot; para se transformar em outra varinha.</string>
+    <string name="HeroClass_MagPerks_0">Magos começam com uma Varinha Míssel Mágico. Esta varinha pode ser \"desencantada\" para se transformar em outra varinha.</string>
     <string name="HeroClass_MagPerks_1">Magos recarregam suas varinhas mais rápido.</string>
     <string name="HeroClass_MagPerks_2">Quando ingerido, qualquer pedaço de comida recupera 1 carga de todas as varinhas no inventário.</string>
     <string name="HeroClass_MagPerks_3">Magos podem usar varinhas como uma arma de combate.</string>
     <string name="HeroClass_MagPerks_4">Magos usam mana para lançar feitiços Elementais.</string>
     <string name="HeroClass_MagPerks_5">Pergaminhos de Identificação são identificados desde o início.</string>
     <string name="HeroClass_Necromancer">necromante</string>
-    <string name="HeroClass_NecromancerPerks_1">Necromantes possuem um recurso único \&quot;almas\&quot;, usadas para conjurar feitiços. Cada monstro morto concede uma alma.</string>
+    <string name="HeroClass_NecromancerPerks_1">Necromantes possuem um recurso único \"almas\", usadas para conjurar feitiços. Cada monstro morto concede uma alma.</string>
     <string name="HeroClass_NecromancerPerks_2">Necromantes começam com o manto do Necromante.</string>
     <string name="HeroClass_NecromancerPerks_3">Necromantes começam com a chave esqueleto do nível 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Poção de cura é identificada do começo.</string>
@@ -867,7 +868,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HeroClass_RogPerks_5">Pergaminhos de Mapeamento de Magia são identificados desde o início.</string>
     <string name="HeroClass_War">guerreiro</string>
     <string name="HeroClass_WarPerks_0">Guerreiros começam com 11 pontos de força.</string>
-    <string name="HeroClass_WarPerks_1">Guerreiros começam com uma Espada Curta. Esta espada pode ser \&quot;reforjada\&quot; para se transformar em outra arma.</string>
+    <string name="HeroClass_WarPerks_1">Guerreiros começam com uma Espada Curta. Esta espada pode ser \"reforjada\" para se transformar em outra arma.</string>
     <string name="HeroClass_WarPerks_2">Guerreiros são menos hábeis com armas de arremesso.</string>
     <string name="HeroClass_WarPerks_3">Qualquer pedaço de comida recupera um pouco de vida quando comidos.</string>
     <string name="HeroClass_WarPerks_4">Poções de Força são identificadas desde o início.</string>
@@ -877,7 +878,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HeroSubClass_DescFreR">O _Corredor_ pode se mover quase duas vezes mais rápido do que a maioria dos monstros. Quando ele estiver em correndo, é muito mais difícil de acertá-lo. Para isso, ele deve estar livre e não ficar com fome.</string>
     <string name="HeroSubClass_DescGlad">Um ataque bem sucedido com arma branca permite que o _Gladiador_ inicie um combo, onde no próximo ataque causa mais danos</string>
     <string name="HeroSubClass_DescGuardian">O conhecimento defensivo habilidoso permite ao _Guardian_ contra-atacar com um escudo, tornando-o um inimigo formidável para aqueles que se atrevem a atacar este bastião ambulante.</string>
-    <string name="HeroSubClass_DescNone"/>
+    <string name="HeroSubClass_DescNone" />
     <string name="HeroSubClass_DescScout">_Escoteiros_ Élficos são mestres da furtividade. Entrar na grama alta lhes concede um bônus temporário de invisibilidade. Eles também são mais rápidos que Elfos normais.</string>
     <string name="HeroSubClass_DescShaman">_Xamãs_ Élficos podem usar varinhas como armas corpo a corpo. Ataques sucedidos possuem uma chance de ativar o poder da varinha no alvo, mesmo sem carga.</string>
     <string name="HeroSubClass_DescSnip">_Atirador_ é capaz de detectar pontos fracos na armadura de um inimigo mais efetivamente quando estiver usando uma arma de mísseis.</string>
@@ -1071,18 +1072,18 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Larva_Desc">Larva do Deus Antigo</string>
     <string name="Larva_Name">larva de deus</string>
     <string name="Larva_Name_Objective">larva de deus</string>
-    <string name="LastLevel_TileDescStatue">@string/Halls_TileDescStatue</string>
-    <string name="LastLevel_TileDescWater">@string/Halls_TileDescWater</string>
-    <string name="LastLevel_TileGrass">@string/Halls_TileGrass</string>
-    <string name="LastLevel_TileHighGrass">@string/Halls_TileHighGrass</string>
-    <string name="LastLevel_TileStatue">@string/Halls_TileStatue</string>
-    <string name="LastLevel_TileWater">@string/Halls_TileWater</string>
-    <string name="LastShopLevel_TileDescDeco">@string/City_TileDescDeco</string>
-    <string name="LastShopLevel_TileDescEmptySP">@string/City_TileDescEmptySP</string>
-    <string name="LastShopLevel_TileDescEntrance">@string/City_TileDescEntrance</string>
-    <string name="LastShopLevel_TileDescExit">@string/City_TileDescExit</string>
-    <string name="LastShopLevel_TileHighGrass">@string/City_TileHighGrass</string>
-    <string name="LastShopLevel_TileWater">@string/City_TileWater</string>
+    <string name="LastLevel_TileDescStatue">\@string/Halls_TileDescStatue</string>
+    <string name="LastLevel_TileDescWater">\@string/Halls_TileDescWater</string>
+    <string name="LastLevel_TileGrass">\@string/Halls_TileGrass</string>
+    <string name="LastLevel_TileHighGrass">\@string/Halls_TileHighGrass</string>
+    <string name="LastLevel_TileStatue">\@string/Halls_TileStatue</string>
+    <string name="LastLevel_TileWater">\@string/Halls_TileWater</string>
+    <string name="LastShopLevel_TileDescDeco">\@string/City_TileDescDeco</string>
+    <string name="LastShopLevel_TileDescEmptySP">\@string/City_TileDescEmptySP</string>
+    <string name="LastShopLevel_TileDescEntrance">\@string/City_TileDescEntrance</string>
+    <string name="LastShopLevel_TileDescExit">\@string/City_TileDescExit</string>
+    <string name="LastShopLevel_TileHighGrass">\@string/City_TileHighGrass</string>
+    <string name="LastShopLevel_TileWater">\@string/City_TileWater</string>
     <string name="LeatherArmor_Desc">Armadura feita de couro de monstro. Não é tão leve como armadura de pano, mas ofereçe uma proteção melhor.</string>
     <string name="LeatherArmor_Name">armadura de couro</string>
     <string name="Leech_Name_0">%s Vampírico(a)</string>
@@ -1113,7 +1114,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Level_TileDescStatue">Alguém queria decoram este lugar, mas obviamente não conseguiu.</string>
     <string name="Level_TileDescTrap">Pisar em uma placa de pressão oculta irá ativar a armadilha.</string>
     <string name="Level_TileDescWater">Caso você se queime, pule na água para apagar o fogo.</string>
-    <string name="Level_TileDescWell"/>
+    <string name="Level_TileDescWell" />
     <string name="Level_TileEmbers">Cinzas</string>
     <string name="Level_TileEmptyWell">Poço vazio.</string>
     <string name="Level_TileEntrance">Entrada </string>
@@ -1229,7 +1230,7 @@ Parede
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">mímico</string>
     <string name="MimicAmulet_Name_Objective">mímico</string>
-    <string name="MimicPie_Desc">Imitações são criaturas mágicas que pode assumir qualquer forma que desejarem. Esse aqui parece um grande e delicioso pastel\&quot;;</string>
+    <string name="MimicPie_Desc">Imitações são criaturas mágicas que pode assumir qualquer forma que desejarem. Esse aqui parece um grande e delicioso pastel\";</string>
     <string name="MimicPie_Name">imitação</string>
     <string name="MimicPie_Name_Objective">imitação</string>
     <string name="Mimic_Desc">Imitações são criaturas mágicas que pode assumir qualquer forma que desejarem. Em masmorras eles quase sempre escolher a forma de um baú do tesouro, porque eles sabem como atrair aventureiros.</string>
@@ -1250,7 +1251,7 @@ Parede
     <string name="MissileWeapon_Yes">Sim, tenho certeza</string>
     <string name="MobAi_status">Este %1$s é %2$s</string>
     <string name="Mob_Attacking">Conte este %s como morto!</string>
-    <string name="Mob_Cannot_Be_Pet">A vontade de \&quot;%s\&quot;  é muito forte para controlar-lo!</string>
+    <string name="Mob_Cannot_Be_Pet">A vontade de \"%s\"  é muito forte para controlar-lo!</string>
     <string name="Mob_CantDoIt">Eu não posso fazer isso. Eu tenho patas pequenas.</string>
     <string name="Mob_Desc">A descrição real está chegando em breve!</string>
     <string name="Mob_Died">Você ouve algo morrer a distância.</string>
@@ -1299,7 +1300,7 @@ Parede
     <string name="NatureArmorSpell_Info">Elfos também podem ser durões, especialmente quando protegidos pela própria Mãe Natureza.</string>
     <string name="NatureArmorSpell_Name">Armadura da Natureza</string>
     <string name="NecromancerArmor_Info">Esta armadura permite que o Necromante invocar até 2 Devoradores de Mortos ao custo 5 almas cada. Estes servos mortos-vivos seguirão seu mestre e atacarão a seus inimigos. Os Devoradores de Mortos ficam mais fortes a cada nível de herói.</string>
-    <string name="NecromancerArmor_Info2">Vestir essa Armadura Permitirá Que o necromante Use o \&quot;Necrotismo\&quot; Habilidade, Que irá espalhar uma praga mágica,E Irá infectar qualquer criatura próxima, Esteja ela Morta ou Viva.</string>
+    <string name="NecromancerArmor_Info2">Vestir essa Armadura Permitirá Que o necromante Use o \"Necrotismo\" Habilidade, Que irá espalhar uma praga mágica,E Irá infectar qualquer criatura próxima, Esteja ela Morta ou Viva.</string>
     <string name="NecromancerArmor_Name">Armadura de Osso</string>
     <string name="NecromancerArmor_NotNecromancer">Apenas necromantes podem usar essa armadura!</string>
     <string name="NecromancerNPC_Desc">Este homem de meia idade parece estar meio irritado e animado ao mesmo tempo. Ele verte uma armadura composta feita de fragmentos de ossos.</string>
@@ -1318,7 +1319,7 @@ Parede
     <string name="NecromancerRobe_PetLimitReached">Necromancia: limite de invocação atingido (Limite atual: %d)!</string>
     <string name="Necromancer_ACSpecial">NECROMANCIA</string>
     <string name="Necromancy_BecameALich">Você tornou-se o Lich! Seu poder cresceu e sua capacidade de almas dobrou! Mas você perdeu %1$d pontos de força.</string>
-    <string name="Necromancy_NotEnoughSouls">Você não possui almas suficientes para conjurar um feitiço de \&quot;%1$s\&quot;.</string>
+    <string name="Necromancy_NotEnoughSouls">Você não possui almas suficientes para conjurar um feitiço de \"%1$s\".</string>
     <string name="Necromancy_ReincarnationName">Reencarnação</string>
     <string name="Necromancy_ReincarnationTriggered">Seus poderes desafiam a morte! Mas você perdeu todas as almas coletadas e posses.</string>
     <string name="Necromancy_SoulsCountLabel">Almas</string>
@@ -1612,7 +1613,7 @@ Parede
     <string name="Roar_Info">O rugido poderoso certamente aterrorizará seus inimigos e inspirará aliados.</string>
     <string name="Roar_Name">Rugido</string>
     <string name="RogueArmor_ACSpecial">BOMBA DE FUMAÇA</string>
-    <string name="RogueArmor_Desc">Vestindo esta farda escura, um ladrão pode realizar um truque que é chamado de \&quot;bomba de fumaça\&quot;(mesmo sem usar explosivos reais): ele cega inimigos que podem vê-lo e pula para o lado.</string>
+    <string name="RogueArmor_Desc">Vestindo esta farda escura, um ladrão pode realizar um truque que é chamado de \"bomba de fumaça\"(mesmo sem usar explosivos reais): ele cega inimigos que podem vê-lo e pula para o lado.</string>
     <string name="RogueArmor_Fov">Você só pode pular para um lugar vazio no seu campo de visão</string>
     <string name="RogueArmor_Name">traje de ladrão</string>
     <string name="RogueArmor_NotRogue">Só ladrões pode usar esta armadura!</string>
@@ -1727,7 +1728,7 @@ outro local do nível.</string>
     <string name="Scroll_ACRead">LER</string>
     <string name="Scroll_Blinded">Você não pode ler um pergaminho enquanto cego</string>
     <string name="Scroll_Info">Este pergaminho é tem uma escrita indecifrável, e tem um título de runa %s. Quem sabe o que vai acontecer quando lido em voz alta?</string>
-    <string name="Scroll_Name">pergaminho \&quot;%s\&quot;</string>
+    <string name="Scroll_Name">pergaminho \"%s\"</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="Scroll_Runes_1">SOWILO</string>
     <string name="Scroll_Runes_10">ODAL</string>
@@ -1855,7 +1856,7 @@ outro local do nível.</string>
     <string name="SpeedBuff_Info">Vivacidade e energia emanam do corpo, e os movimentos parecem mais rápidos que o normal.</string>
     <string name="SpeedBuff_Name">Velocidade</string>
     <string name="SpellBook_Info">Isso parece mais como uma compilação de paginas sortidas que foram colocas juntas, do que um livro. Você  talvez seja capaz de aprender alguma coisa se você dar atenção o suficiente.</string>
-    <string name="SpellBook_Info_Identified">Entre as páginas você descobriu um texto completo com o feitiço \&quot;%1$s\&quot;.\n\&quot;%2$s\&quot;</string>
+    <string name="SpellBook_Info_Identified">Entre as páginas você descobriu um texto completo com o feitiço \"%1$s\".\n\"%2$s\"</string>
     <string name="SpellBook_Name">Livro de feitiços</string>
     <string name="Spell_SelectACell">Selecione a Célula Alvo</string>
     <string name="Spell_SelectAChar">Selecione um alvo.</string>
@@ -1880,7 +1881,7 @@ outro local do nível.</string>
     <string name="SpiderGuard_Desc">Igual a soldados, as aranhas Guardião estão jurados em proteger o se reino. O veneno de Guardião é usado para imobilizar os seus alvos, causando paralisia.</string>
     <string name="SpiderGuard_Name">aranha Guardião </string>
     <string name="SpiderGuard_Name_Objective">aranha Guardião </string>
-    <string name="SpiderMindAmber_Desc">As Aranhas de âmbar são criaturas misteriosas e raras que possuem poderes psíquicos similares às psi-aranhas, mas são mais fortes do que as suas irmãs regulares. O nome \&quot;âmbar\&quot; refere-se com a cor dos seus sacos cerebrais gigantes, que são revelado às suas vítimas,  enquanto as Aranhas de âmbar atacam com seus poderes.</string>
+    <string name="SpiderMindAmber_Desc">As Aranhas de âmbar são criaturas misteriosas e raras que possuem poderes psíquicos similares às psi-aranhas, mas são mais fortes do que as suas irmãs regulares. O nome \"âmbar\" refere-se com a cor dos seus sacos cerebrais gigantes, que são revelado às suas vítimas,  enquanto as Aranhas de âmbar atacam com seus poderes.</string>
     <string name="SpiderMindAmber_Name">Aranha de âmbar</string>
     <string name="SpiderMindAmber_Name_Objective">Aranha de âmbar</string>
     <string name="SpiderMind_Desc">Estas aranhas aparentemente frágeis possuem poderes mentais únicos, que lhes permite controlar toda a colônia. Aranhas Psíquicas são capazes de controlar qualquer criatura viva, mas ela é muito covarde.</string>
@@ -1925,7 +1926,7 @@ outro local do nível.</string>
     <string name="StartScene_UnlockGnoll">Para desbloquear esta classe você deve persuadir o padre da cidade a curar o Gnoll Brutamonte</string>
     <string name="StartScene_UnlockNecromancer">Para desbloquear esta classe, mate o Lich com qualquer classe.</string>
     <string name="StartScene_Warning">O seu progresso no jogo atual será apagado.</string>
-    <string name="StartScene_WinGame">Para desbloquear \&quot;Desafios\&quot;, ganhe o jogo com pelo menus uma classe de jogador.</string>
+    <string name="StartScene_WinGame">Para desbloquear \"Desafios\", ganhe o jogo com pelo menus uma classe de jogador.</string>
     <string name="StartScene_Yes">Sim, iniciar novo jogo</string>
     <string name="Statue_Desc">Você poderia pensar que é apenas uma outra estátua feia deste calabouço, mas os seus olhos vermelhos podem ser vistos à distância. Enquanto a estátua em si é feita de pedra, o _%s_ que está empunhando parece bem real.</string>
     <string name="Statue_Gender">feminine</string>
@@ -2023,7 +2024,7 @@ outro local do nível.</string>
     <string name="TownShopkeeper_Objective">comerciante</string>
     <string name="TownsfolkMovieNPC_Desc">Um dos moradores. Mesmo pareça claramente com um plebeu, aquelas roupas parecem caras</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
-    <string name="TownsfolkMovieNPC_Message">Você conhece aquele serviço especial que o \&quot;cinema\&quot; oferece? Pena que pedem uma coisa exótica chamada \&quot;Internet\&quot;, nunca ouvi falar de tal coisa.</string>
+    <string name="TownsfolkMovieNPC_Message">Você conhece aquele serviço especial que o \"cinema\" oferece? Pena que pedem uma coisa exótica chamada \"Internet\", nunca ouvi falar de tal coisa.</string>
     <string name="TownsfolkMovieNPC_Name">cidadão</string>
     <string name="TownsfolkMovieNPC_Name_Objective">cidadão</string>
     <string name="TownsfolkNPC_Desc">Um dos locais. Apesar de claramente ser um cliente, essas roupas parecem ser caras</string>
@@ -2056,8 +2057,8 @@ outro local do nível.</string>
     <string name="Undead_Name_Objective">anão morto-vivo</string>
     <string name="Ushanka_Info">Um chapéu Ushanka, quente e acolhedor, decorado com uma elegante estrela vermelha. A companhia perfeita para alguém nesse calabouço frio e tenebroso.</string>
     <string name="Ushanka_Name">Ushanka</string>
-    <string name="Using_Failed_Because_Blind">Você não pode usar \&quot;%s\&quot; enquanto está cego!</string>
-    <string name="Using_Failed_Because_Magic">A Poderosa Magia Prevenir Você de usar \&quot;%s\&quot;</string>
+    <string name="Using_Failed_Because_Blind">Você não pode usar \"%s\" enquanto está cego!</string>
+    <string name="Using_Failed_Because_Magic">A Poderosa Magia Prevenir Você de usar \"%s\"</string>
     <string name="VampireSkull_Info">Esta máscara é feita a partir do crânio de um vampiro. É realmente o crânio de um vampiro... o crânio de um vampiro com a cabeça grande. Assustador.</string>
     <string name="VampireSkull_Name">Crânio de Vampiro</string>
     <string name="VertigoBuff_Info">A sensação de tontura torna mais difícil andar em linha reta!</string>
@@ -2113,7 +2114,7 @@ outro local do nível.</string>
     <string name="WandOfPoison_Info">A explosão vil desta pequena madeira torcida vai impregnar seu alvo com um veneno mortal. Uma criatura que está envenenada sofrerá dano periódico até que o efeito termine. A duração de seu efeito aumenta conforme seu level.</string>
     <string name="WandOfPoison_Info1">nada aconteceu</string>
     <string name="WandOfPoison_Name">Varinha de Veneno</string>
-    <string name="WandOfRegrowth_Info">\&quot;Quando a vida cessa, uma nova vida começa a crescer ... O eterno ciclo permanece sempre!\&quot;</string>
+    <string name="WandOfRegrowth_Info">\"Quando a vida cessa, uma nova vida começa a crescer ... O eterno ciclo permanece sempre!\"</string>
     <string name="WandOfRegrowth_Info1">nada aconteceu</string>
     <string name="WandOfRegrowth_Name">Varinha dos Brotos</string>
     <string name="WandOfShadowbolt_Info">Esta varinha emite uma negra, maliciosa energia.</string>
@@ -2238,7 +2239,7 @@ remix.31.1\n
     <string name="WndDonate_ruby">rubi</string>
     <string name="WndDonate_rubyDonate">doação de rubi</string>
     <string name="WndDonate_rubyDonateText">Sua generosidade nos ajudará a continuar melhorando o Remixed Dungeon!</string>
-    <string name="WndDonate_rubyDonateText2"/>
+    <string name="WndDonate_rubyDonateText2" />
     <string name="WndDonate_silver">prata</string>
     <string name="WndDonate_silverDonate">doação de prata</string>
     <string name="WndDonate_silverDonateText">Qualquer doação ajudará o desenvolvimento do projeto</string>
@@ -2318,7 +2319,7 @@ remix.31.1\n
     <string name="WndMovieTheatre_Instruction">Saudações e bem-vindo ao nosso cinema! Nós fornecemos um serviço especial, onde você pode assistir a um filme de graça. E se você assisti-lo todo, você será recompensado com %d moedas de ouro!</string>
     <string name="WndMovieTheatre_Instruction_2">Você assistiu a %1$d de %2$d vezes. Você terá mais oportunidade de assistir a um filme a cada vez que o nível herói subir.</string>
     <string name="WndMovieTheatre_No">sair</string>
-    <string name="WndMovieTheatre_Ok">Você assistiu o vídeo de \&quot;recompensa\&quot; com sucesso!</string>
+    <string name="WndMovieTheatre_Ok">Você assistiu o vídeo de \"recompensa\" com sucesso!</string>
     <string name="WndMovieTheatre_Sorry">Algo deu errado, não conseguimos obter a sua recompensa do vídeo...</string>
     <string name="WndMovieTheatre_Thank_You">Obrigado pela sua participação!</string>
     <string name="WndMovieTheatre_Title">Cinema</string>
@@ -2363,21 +2364,21 @@ remix.31.1\n
     <string name="WndRanking_StaAlchemy">Poções Feitas</string>
     <string name="WndRanking_StaAnkhs">Ankhs Usados</string>
     <string name="WndRanking_StaChallenges">Desafios</string>
-    <string name="WndRanking_StaDepth">@string/WndHero_Depth</string>
+    <string name="WndRanking_StaDepth">\@string/WndHero_Depth</string>
     <string name="WndRanking_StaDuration">Duração Jogo</string>
     <string name="WndRanking_StaEnemies">Mobs Mortos</string>
     <string name="WndRanking_StaFood">Comida Usada</string>
-    <string name="WndRanking_StaGold">@string/WndHero_Gold</string>
-    <string name="WndRanking_StaHealth">@string/WndHero_Health</string>
-    <string name="WndRanking_StaStr">@string/WndHero_Str</string>
-    <string name="WndRanking_StaTitle">@string/WndHero_StaTitle</string>
-    <string name="WndRanking_Stats">@string/WndHero_Stats</string>
+    <string name="WndRanking_StaGold">\@string/WndHero_Gold</string>
+    <string name="WndRanking_StaHealth">\@string/WndHero_Health</string>
+    <string name="WndRanking_StaStr">\@string/WndHero_Str</string>
+    <string name="WndRanking_StaTitle">\@string/WndHero_StaTitle</string>
+    <string name="WndRanking_Stats">\@string/WndHero_Stats</string>
     <string name="WndResurrect_Message">Você morreu, porém ainda há esperanças e você recebeu uma nova chance de continuar. Deseja Continuar?</string>
     <string name="WndResurrect_No">Não, eu desisto.</string>
     <string name="WndResurrect_Yes">Sim, eu vou lutar!</string>
     <string name="WndSadGhostNecro_No">Não, deixe-o falar.</string>
     <string name="WndSadGhostNecro_Persuaded">O fantasma triste foi dominado!</string>
-    <string name="WndSadGhostNecro_Text">\&quot;Este espírito parece estar lutando em sua maldição. Ele parece querer algo de mim.Se eu usar meus poderes necromânticos, devo ser capaz de persuadi-lo de já ter feito o que ele pediu.Então não precisarei desperdiçar meu tempo aqui. Eu deveria fazer tal coisa? \&quot;</string>
+    <string name="WndSadGhostNecro_Text">\"Este espírito parece estar lutando em sua maldição. Ele parece querer algo de mim.Se eu usar meus poderes necromânticos, devo ser capaz de persuadi-lo de já ter feito o que ele pediu.Então não precisarei desperdiçar meu tempo aqui. Eu deveria fazer tal coisa? \"</string>
     <string name="WndSadGhostNecro_Yes">Sim, dominar o fantasma.</string>
     <string name="WndSadGhost_Armor">Armadura do Fantasma</string>
     <string name="WndSadGhost_Farewell">Adeus, aventureiro!</string>
@@ -2569,7 +2570,7 @@ remix.31.1\n
     <string name="town_deco_crate_name">Caixa</string>
     <string name="town_deco_crate_scrolls_desc">Essa caixa está cheia até a boca com conhecimento secreto</string>
     <string name="town_deco_crate_scrolls_name">Caixa com pergaminhos</string>
-    <string name="town_deco_cross_desc">Uma cruz de prata sólida, o símbolo da religião local - \&quot;A Testemunha de Santa o Senhor da Profundidade\&quot;.</string>
+    <string name="town_deco_cross_desc">Uma cruz de prata sólida, o símbolo da religião local - \"A Testemunha de Santa o Senhor da Profundidade\".</string>
     <string name="town_deco_cross_name">Cruz</string>
     <string name="town_deco_crossroad_desc">Pilar de madeira bruto com texto em placas em forma de flecha, desbotado há muito tempo, provavelmente devido a condições climáticas adversas.</string>
     <string name="town_deco_crossroad_name">Sinal de encruzilhada</string>
@@ -2657,7 +2658,7 @@ remix.31.1\n
     <string name="town_deco_rope_name">Corda</string>
     <string name="town_deco_rug_desc">Feito com bom gosto!</string>
     <string name="town_deco_rug_name">Tapete</string>
-    <string name="town_deco_screen_desc">Esta pintura misteriosa chamada \&quot;tela\&quot; pode mostrar imagens em movimento</string>
+    <string name="town_deco_screen_desc">Esta pintura misteriosa chamada \"tela\" pode mostrar imagens em movimento</string>
     <string name="town_deco_screen_name">Tela</string>
     <string name="town_deco_scrolls_desc">Esta prateleira empoeirada contém vários livros e pergaminhos.</string>
     <string name="town_deco_scrolls_name">Pergaminhos</string>
@@ -2681,7 +2682,7 @@ remix.31.1\n
     <string name="town_deco_snow_name">Neve</string>
     <string name="town_deco_snowdrift_desc">É uma pilha de neve bem grande e aparentemente ninguém vai limpa-la</string>
     <string name="town_deco_snowdrift_name">Monte de neve</string>
-    <string name="town_deco_snowman_desc">O Boneco de neve é uma decoração tradicional da cidade para a época de feriado, quando as pessoas celebram o dia \&quot;Dungeonmas\&quot;, quando os monstros invadiram a masmorra.</string>
+    <string name="town_deco_snowman_desc">O Boneco de neve é uma decoração tradicional da cidade para a época de feriado, quando as pessoas celebram o dia \"Dungeonmas\", quando os monstros invadiram a masmorra.</string>
     <string name="town_deco_snowman_name">Boneco de neve</string>
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
     <string name="town_deco_snowy_plate_name">Piso com neve</string>

@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Pożerać ?</string>
     <string name="AC_Dissect">Sekcja zwłok</string>
@@ -62,13 +63,13 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="AmuletScene_Stay">To jeszcze nie koniec</string>
     <string name="AmuletScene_Txt">W końcu trzymasz to w swoich rękach, Amulet Yendoru. Wykorzystując jego moc, możesz przejąć świat lub przynieść pokój i dobrobyt ludziom lub cokolwiek innego. W każdym razie twoje życie zmieni się na zawsze, a ta gra się skończy. Możesz też pozostać zwykłym śmiertelnikiem trochę dłużej.</string>
     <string name="Amulet_ACEnd">SKOŃCZ GRĘ</string>
-    <string name="Amulet_Info">Amulet Yendora to najpotężniejszy znany artefakt niewiadomego pochodzenia. Mówi się, że amulet może spełnić każde życzenie jego właściciela, oczywiście jeśli jego siła woli jest na tyle potężna by \&quot;przekonać\&quot; artefakt do współpracy.</string>
+    <string name="Amulet_Info">Amulet Yendora to najpotężniejszy znany artefakt niewiadomego pochodzenia. Mówi się, że amulet może spełnić każde życzenie jego właściciela, oczywiście jeśli jego siła woli jest na tyle potężna by \"przekonać\" artefakt do współpracy.</string>
     <string name="Amulet_Name">Amulet Yendora</string>
     <string name="Ankh_Info">Starożytny symbol nieśmiertelności daje możliwość zmartwychwstania po zgonie. Po wskrzeszeniu, wszystkie przedmioty, które nie są wyposażone zostaną utracone.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">%s chaotycznej magii</string>
     <string name="ArmorKit_ACAplly">ULEPSZ</string>
-    <string name="ArmorKit_Info">Używając tego zestawu małych narzędzi i materiałów, każdy może przemienić jakąkolwiek zbroję w \&quot;epicką zbroję\&quot;, która zachowa właściwości oryginalnego pancerza, ale też zapewni specjalną zdolność zależną od klasy postaci. Żadne umiejętności krawiectwa, garbowania skóry lub kowalstwa nie są wymagane.</string>
+    <string name="ArmorKit_Info">Używając tego zestawu małych narzędzi i materiałów, każdy może przemienić jakąkolwiek zbroję w \"epicką zbroję\", która zachowa właściwości oryginalnego pancerza, ale też zapewni specjalną zdolność zależną od klasy postaci. Żadne umiejętności krawiectwa, garbowania skóry lub kowalstwa nie są wymagane.</string>
     <string name="ArmorKit_Name">zestaw narzędzi płatnerskich</string>
     <string name="ArmorKit_SelectArmor">Wybierz pancerz do ulepszenia</string>
     <string name="ArmorKit_Upgraded">%s została ulepszona dzięki zestawowi narzędzi</string>
@@ -76,7 +77,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Armor_Glyph">glif</string>
     <string name="Armor_Identify">zaznajomiłeś się już wystarczająco z %1$s, aby go zidentyfikować. Jest to %2$s.</string>
     <string name="Armor_Incompatible">Interakcja różnych typów magii usunęła glif z tej zbroi!</string>
-    <string name="Armor_Info1">Ta %1$s wchłania \&quot;%2$d\&quot;  obrażeń.</string>
+    <string name="Armor_Info1">Ta %1$s wchłania \"%2$d\"  obrażeń.</string>
     <string name="Armor_Info2">
 \n\nPonieważ twoja siła jest niewystarczająca, twoja szybkość i zdolności obronne są obniżone. </string>
     <string name="Armor_Info3">
@@ -105,14 +106,14 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="AzuterronNPC_Name_Objective">Nieznajomy</string>
     <string name="AzuterronNPC_Quest_End">Doskonale. Proszę weź ten eliksir, na pewno ci się przyda.</string>
     <string name="AzuterronNPC_Quest_Reminder">Pomóż mi, a ja ci się odwdzięczę.</string>
-    <string name="AzuterronNPC_Quest_Start">Huh, dlaczego... oh, możesz mnie zobaczyć, czyż nie? To znaczy, że nie jesteś jednym z \&quot;nich\&quot;. Widzę, że także nie lubisz tych wszystkich potworów. Wiesz co, jeśli pomożesz mi z małym problemem, zaoferuję ci moje wsparcie. Gdzieś na tym poziomie znajdziesz cienistą bestię, _Zdradliwego Ducha_. Zabij go, weź jego _serce_ i wróć do mnie. A i jeszcze jedno, jeśli jesteś zainteresowany kupnem moich artykułów, nie wahaj się zapytać.</string>
+    <string name="AzuterronNPC_Quest_Start">Huh, dlaczego... oh, możesz mnie zobaczyć, czyż nie? To znaczy, że nie jesteś jednym z \"nich\". Widzę, że także nie lubisz tych wszystkich potworów. Wiesz co, jeśli pomożesz mi z małym problemem, zaoferuję ci moje wsparcie. Gdzieś na tym poziomie znajdziesz cienistą bestię, _Zdradliwego Ducha_. Zabij go, weź jego _serce_ i wróć do mnie. A i jeszcze jedno, jeśli jesteś zainteresowany kupnem moich artykułów, nie wahaj się zapytać.</string>
     <string name="Backstab_Aware">Ofiara nie powinna się spodziewać dobrego dźganka w plecy.</string>
     <string name="Backstab_Info">Cichy cios w plecy. Nieuczciwy ale ekstremalnie efektywny, obrażenia będą rosnąc razem z poziom postaci.n\n Udany cios ignoruje pancerz  i specjalne umiejętności obronne ofiary.</string>
     <string name="Backstab_Name">Cios w plecy</string>
     <string name="Backstab_TooFar">Ofiara jest za daleko.</string>
     <string name="BadgesScene_Title">Twoje Odznaki</string>
     <string name="Badges_AllBags">Każdy rodzaj torby kupiony</string>
-    <string name="Badges_AllItems">Wszystkie eliksiry, pierścienie &amp; kostury zidentyfikowane</string>
+    <string name="Badges_AllItems">Wszystkie eliksiry, pierścienie &amp;amp; kostury zidentyfikowane</string>
     <string name="Badges_AllPotions">Wszystkie eliksiry zidentyfikowane</string>
     <string name="Badges_AllRings">Wszystkie pierścienie zidentyfikowane</string>
     <string name="Badges_AllScrolls">Wszystkie zwoje zidentyfikowane</string>
@@ -193,7 +194,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Badges_ThisIsSparta">TO JEST SPARTA!</string>
     <string name="Badges_Victory">Amulet Yendora zdobyty</string>
     <string name="Badges_VictoryAll">Amulet Yendora zdobyty przez wszystkie klasy.</string>
-    <string name="Badges_Yasd">Śmierć przez ogień, truciznę, toksyczny gaz &amp; i głód</string>
+    <string name="Badges_Yasd">Śmierć przez ogień, truciznę, toksyczny gaz &amp;amp; i głód</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa pokonany</string>
     <string name="Bag_ACOpen">OTWÓRZ</string>
     <string name="Bandit_Desc">Niższe poziomy lochu od zawsze były kryjówką dla kryminalistów wszelakiego sortu. Nie wszyscy mogli zachować jasność umysłu po tak długim okresie przebywania z dala od słońca. Dawno temu ci szaleni złodzieje i bandyci zapomnieli kim są i dlaczego kradną. Wygląda że ten bandyta pokrył swój sztylet jakąś substancją!</string>
@@ -226,7 +227,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BellaNPC_Amulet_F">Witaj kochana. Co ty tutaj masz... ach, cóż za niesamowity amulet! A ty... ty lśnisz znacznie jaśniej w porównaniu do reszty. Co powiesz na spacer i omówienie naszej wspólnej przyszłości?</string>
     <string name="BellaNPC_Amulet_M">Witaj przystojniaku. Co ty tutaj masz... ach, cóż za niesamowity amulet! A ty... ty jesteś ponad tym plebsem. Może przejdziemy się i omówimy naszą wspólną przyszłosć?</string>
     <string name="BellaNPC_Angry">Jak śmiesz... ty plebsie!</string>
-    <string name="BellaNPC_Desc">Nadzwyczaj wykwintnie wyglądająca dziewczyna. Jej cała postura stara się powiedzieć \&quot;Jestem miła dla wszystkich wokół\&quot;.</string>
+    <string name="BellaNPC_Desc">Nadzwyczaj wykwintnie wyglądająca dziewczyna. Jej cała postura stara się powiedzieć \"Jestem miła dla wszystkich wokół\".</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Nie przywiązuję wagi do takiego plebsu jak ty!</string>
     <string name="BellaNPC_Name">Bella</string>
@@ -265,8 +266,8 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BlackSkull_Activated">Czarna Czaszka została przebudzona!</string>
     <string name="BlackSkull_Deactivated">Moc Czarnej Czaszki zostaje uśpiona, raz jeszcze...</string>
     <string name="BlackSkull_Gender">feminine</string>
-    <string name="BlackSkull_Info">Niewielka, obsydianowa czaszka. Niegdyś była źródłem mocy Nekropolii, lecz po porażce Licza odnosisz wrażenie że utraciła całą swą moc magiczną. Jednakże, gdy trzymasz ją w swych dłoniach, dziwna myśl przechodzi przez twój umysł: \&quot;Głoduje\&quot;.</string>
-    <string name="BlackSkull_Info_Awakened">Czaszka pulsuje mocą, która wylewa się z jej pustych oczodołów. Gdy ją trzymasz w ręce, możesz okazjonalnie dosłyszeć mroczny głos mówiący: \&quot;Strzeż się orszaku śmierci\&quot;.</string>
+    <string name="BlackSkull_Info">Niewielka, obsydianowa czaszka. Niegdyś była źródłem mocy Nekropolii, lecz po porażce Licza odnosisz wrażenie że utraciła całą swą moc magiczną. Jednakże, gdy trzymasz ją w swych dłoniach, dziwna myśl przechodzi przez twój umysł: \"Głoduje\".</string>
+    <string name="BlackSkull_Info_Awakened">Czaszka pulsuje mocą, która wylewa się z jej pustych oczodołów. Gdy ją trzymasz w ręce, możesz okazjonalnie dosłyszeć mroczny głos mówiący: \"Strzeż się orszaku śmierci\".</string>
     <string name="BlackSkull_Name">czarna czaszka</string>
     <string name="BlackSkull_Name_Awakened">przebudzona czarna czaszka</string>
     <string name="BlackSkull_Ressurrect">Czarna Czaszka ożywiła martwe potwory, by mogły ci służyć!</string>
@@ -344,7 +345,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Candy_Name">cukierek</string>
     <string name="Candy_Warning_1">Nie powinieneś był jeść tego cukierka. Obiecałeś go podarować komuś innemu. Nie wygląda na to aby jakkolwiek na ciebie zadziałał, głód nie ustępuje, w końcu to cukierek.</string>
     <string name="Candy_Warning_2">Dobra teraz to naprawdę przesadziłeś. Przez to że zjadeś tyle cukierków teraz boli cię brzuch.</string>
-    <string name="Capotain_Info">Ten wysoko zwieńczony kapelusz z wąskim rondem zazwyczaj jest utożsamiany z Purytanami, lecz nie musisz być religijnym człowiekiem by go nosić. Z bliżej nieznanego ci powodu widnieje na nim metka z napisem \&quot;Solomon\&quot;.</string>
+    <string name="Capotain_Info">Ten wysoko zwieńczony kapelusz z wąskim rondem zazwyczaj jest utożsamiany z Purytanami, lecz nie musisz być religijnym człowiekiem by go nosić. Z bliżej nieznanego ci powodu widnieje na nim metka z napisem \"Solomon\".</string>
     <string name="Capotain_Name">Kapelusz Purytanina</string>
     <string name="Carcass_Devoured">Pożarto zwłoki %s!</string>
     <string name="Carcass_Info">Szczątki totalnie martwego %s,</string>
@@ -504,7 +505,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Codex_Blinded">Nie możesz czytać będąc oślepionym</string>
     <string name="Codex_Info">Jedna z wielu książek które jesteś w stanie znaleźć niemalże w każdej bibliotece</string>
     <string name="Codex_Name">Kodeks</string>
-    <string name="Codex_Story_0">I stworzył Watabou \&quot;Pixel Dungeon\&quot;, tedy wejrzał  na swoje dzieło. I widział że było dobre!</string>
+    <string name="Codex_Story_0">I stworzył Watabou \"Pixel Dungeon\", tedy wejrzał  na swoje dzieło. I widział że było dobre!</string>
     <string name="Codex_Story_1">Glif Odbicia - sprawia że wrogowie atakujący Bohatera zostają odbici z powrotem.</string>
     <string name="Codex_Story_10">Glif Spętania - sprawi, że zaatakowany Bohater może otrzymać naturalny pancerz, kosztem, będąc jednak w tym samym czasie spętany korzeniami.</string>
     <string name="Codex_Story_11">Śmiercionośna broń - przy pomyślnym użyciu, szansa na natychmiastowe zabicie celu (lub zadanie 2x obrażeń bossowi).</string>
@@ -594,7 +595,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="DarkSacrifice_Name">Mroczne Poświęcenie</string>
     <string name="DarkSacrifice_Ok">Moje życie spoczywa w twoich rękach!</string>
     <string name="DarkSacrifice_Resist">Nie masz nade mną żadnej władzy!</string>
-    <string name="DarkSacrifice_Self">\&quot;Za Narnię i za Aslana!\&quot;</string>
+    <string name="DarkSacrifice_Self">\"Za Narnię i za Aslana!\"</string>
     <string name="DarkVeilBuff_Info">Welon mroku spowija właściciela, za każdym razem gdy otrzymane zostaną obrażenia przyzwana zostaje dusza. </string>
     <string name="DarkVeilBuff_Name">Czarny welon</string>
     <string name="Darkness_Info">Wygląda to jak unoszące się w powietrzu kawałki odwiecznego mroku</string>
@@ -623,7 +624,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="DeferedDamageBuff_Info">Ból został zamieniony w spowolniony ból, zmniejszając otrzymywane obrażenia. \nDamage wobec %d.</string>
     <string name="DeferedDamageBuff_Name">Opóźnione Obrażenia (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s zabił cię...</string>
-    <string name="DevourBuff_Info"/>
+    <string name="DevourBuff_Info" />
     <string name="DevourBuff_Name">Pożerać ?</string>
     <string name="DewVial_ACDRINK">WYPIJ</string>
     <string name="DewVial_AutoDrink">Flakonik został opróżniony by uleczyć twe rany.</string>
@@ -736,7 +737,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="ExplodingSkull_Gender">feminine</string>
     <string name="ExplodingSkull_Name">wybuchająca czaszka</string>
     <string name="ExplodingSkull_Name_Objective">wybuchająca czaszka</string>
-    <string name="Eye_Desc">Jedno z imion tego demona brzmi \&quot;kula nienawiści\&quot;, ponieważ gdy tylko dostrzega wroga, bezmyślnie używa swego zabójczego wzroku, częstokroć ignorując swych przeciwników raniąc ich dotkliwie.</string>
+    <string name="Eye_Desc">Jedno z imion tego demona brzmi \"kula nienawiści\", ponieważ gdy tylko dostrzega wroga, bezmyślnie używa swego zabójczego wzroku, częstokroć ignorując swych przeciwników raniąc ich dotkliwie.</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">%s zabiło cię swym zabójczym wzrokiem</string>
     <string name="Eye_Name">złe oko</string>
@@ -855,7 +856,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="GoldenSword_Info">Zazwyczaj bronie wykonane z tak miękkiego metalu, jakim jest złoto, najczęściej są wykorzystywane jako dekoracja. Pomimo tego ostrze to wygląda na stanowiące solidny oręż w walce.</string>
     <string name="GoldenSword_Name">złoty miecz</string>
     <string name="Golem_Defense">blok</string>
-    <string name="Golem_Desc">Krasnoludy próbowały połączyć swą wiedzę o mechanizmach oraz nowo odkrytą umiejętność przędzenia żywiołów. Jako źródło zasilania do mechanicznego ciała golema, istoty mającej być najbardziej podległa woli stwórcy, służyła \&quot;dusza\&quot; wykonana z duchów ziemi. Mimo wielu środków ostrożności, najmniejszy nawet błąd w przeprowadzaniu rytuału mógłby skutkować zupełnym kataklizmem.</string>
+    <string name="Golem_Desc">Krasnoludy próbowały połączyć swą wiedzę o mechanizmach oraz nowo odkrytą umiejętność przędzenia żywiołów. Jako źródło zasilania do mechanicznego ciała golema, istoty mającej być najbardziej podległa woli stwórcy, służyła \"dusza\" wykonana z duchów ziemi. Mimo wielu środków ostrożności, najmniejszy nawet błąd w przeprowadzaniu rytuału mógłby skutkować zupełnym kataklizmem.</string>
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">golem</string>
@@ -963,7 +964,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="HeroClass_RogPerks_5">Zwoje Magicznej Mapy są ci znane od samego początku rozgrywki.</string>
     <string name="HeroClass_War">wojownik</string>
     <string name="HeroClass_WarPerks_0">Wojownicy zaczynają z 11 punktami siły.</string>
-    <string name="HeroClass_WarPerks_1">Wojownicy zaczynają z unikatowym krótkim mieczem. Ten miecz może zostać później \&quot;przekuty\&quot; by wzmocnić inną broń białą.</string>
+    <string name="HeroClass_WarPerks_1">Wojownicy zaczynają z unikatowym krótkim mieczem. Ten miecz może zostać później \"przekuty\" by wzmocnić inną broń białą.</string>
     <string name="HeroClass_WarPerks_2">Wojownicy są mniej biegli w używaniu broni dystansowej.</string>
     <string name="HeroClass_WarPerks_3">Każdy posiłek regeneruje nieco żywotności po spożyciu.</string>
     <string name="HeroClass_WarPerks_4">Eliksir Siły jest ci znany od samego początku rozgrywki.</string>
@@ -973,7 +974,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="HeroSubClass_DescFreR">_Sprinter_ przemieszcza się niemalże dwa razy szybciej niż większość potworów. Sprinter jest znacznie trudniejszy do trafienia w czasie biegu. By to uzyskać musi być dobrze najedzony i na jego drodze nie może stać żaden przeciwnik.</string>
     <string name="HeroSubClass_DescGlad">Udany atak bronią krótkodystansową  _Gladiatora_ rozpoczyna kombinację, w której ilość obrażeń wzrasta wraz z każdym kolejnym uderzeniem.</string>
     <string name="HeroSubClass_DescGuardian">Nabyta wiedza o obronie pozwoliła _Obrońcy_ na kontrę z użyciem tarczy, stał się więc on więc grożny  przeciwnikem dla tych co śmią atakować tę chodzącą fortecę. </string>
-    <string name="HeroSubClass_DescNone"/>
+    <string name="HeroSubClass_DescNone" />
     <string name="HeroSubClass_DescScout">Elficcy _Zwiadowcy_ są mistrzami skradania się.  Ponadto przemieszczanie się wśród wysokich traw daje im tymczasową umiejętność niewidzialności. Są one również znacznie szybsze od zwyczajnych Elfów.</string>
     <string name="HeroSubClass_DescShaman">Elficcy _Szamani_ mogą używać kosturów jako broni białej. Mają oni szansę na uderzenie wroga bez straty ładunków.</string>
     <string name="HeroSubClass_DescSnip">_Snajperzy_ potrafią namierzyć słabe punkty w opancerzeniu przeciwnika, skutecznie eliminując jego potencjał podczas używania broni dystansowej.</string>
@@ -1223,7 +1224,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Level_TileDescStatue">Ktoś chciał ozdobić nieco to miejsce, ale oczywiście mu się nie udało.</string>
     <string name="Level_TileDescTrap">Stanięcie na płycie naciskowej aktywuje pułapkę.</string>
     <string name="Level_TileDescWater">Kiedy się palisz wejdź do wody by ugasić płomienie.</string>
-    <string name="Level_TileDescWell"/>
+    <string name="Level_TileDescWell" />
     <string name="Level_TileEmbers">Rozżarzone węgielki</string>
     <string name="Level_TileEmptyWell">Pusta studnia</string>
     <string name="Level_TileEntrance">Wyjście z podziemi</string>
@@ -1363,9 +1364,9 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="MissileWeapon_No">Nie, zmieniłem zdanie</string>
     <string name="MissileWeapon_Sure">Czy aby na pewno chcesz tego używać jako broni białej?</string>
     <string name="MissileWeapon_Yes">Tak, wiem co robię</string>
-    <string name="MobAi_status">%sto%s</string>
+    <string name="MobAi_status">%1$sto %2$s</string>
     <string name="Mob_Attacking">Uznaj %sza trupa</string>
-    <string name="Mob_Cannot_Be_Pet">Wola  \&quot;%s\&quot;  jest zbyt silna by mogła być kontrolowana</string>
+    <string name="Mob_Cannot_Be_Pet">Wola  \"%s\"  jest zbyt silna by mogła być kontrolowana</string>
     <string name="Mob_CantDoIt">Nie mogę tego zrobić. Mam drobne łapy.</string>
     <string name="Mob_Desc">Prawdziwe opisy pojawią się wkrótce!</string>
     <string name="Mob_Died">Usłyszałeś jak coś gdzieś umarło.</string>
@@ -1415,7 +1416,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="NatureArmorSpell_Info">Elfy również potrafią być twarde, w szczególności kiedy są chronione przez samą Matkę Naturę.</string>
     <string name="NatureArmorSpell_Name">Zbroja Przyrody.</string>
     <string name="NecromancerArmor_Info">Ten pancerz umożliwi Nekromancie przyzwanie do 2-ch Trupiarzy kosztem 5 dusz za każdego. Ci nieumarli słudzy będą podążać za swoim mistrzem i zaatakują jego wrogów. Trupiarze rosną w siłę z każdym poziomem bohatera.</string>
-    <string name="NecromancerArmor_Info2">Wyposażenie tej zbroi pozwala nekromancie na użycie umiejętności \&quot;Nekrozy\&quot;, która to rozsiewa magiczną plagę mogącą wpłynąć na każde stworzenie w pobliżu, nieważne czy żywe czy też i nie.</string>
+    <string name="NecromancerArmor_Info2">Wyposażenie tej zbroi pozwala nekromancie na użycie umiejętności \"Nekrozy\", która to rozsiewa magiczną plagę mogącą wpłynąć na każde stworzenie w pobliżu, nieważne czy żywe czy też i nie.</string>
     <string name="NecromancerArmor_Name">Kościana zbroja</string>
     <string name="NecromancerArmor_NotNecromancer">Tylko nekromanci mogą używać tej zbroi!</string>
     <string name="NecromancerNPC_Desc">Ten mężczyzna w średnim wieku wydaje się być ciut zdenerwowany. ale zarazem podekscytowany. Nosi on na sobie zbroję kompozytową wykonaną ze złączonych ze sobą kawałków kości.</string>
@@ -1435,7 +1436,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Necromancer_ACSpecial">NEKROMANCJA</string>
     <string name="Necromancy_BecameALich">Stajesz się Liczem! Twoja potęga rośnie, a ilość Dusz możliwych do złapania zostaje podwojona! Jednakże straciłeś  %1$d punktów Siły.</string>
     <string name="Necromancy_Death">Wyczerpano siły witalne w trakcje praktykowania nekromancji,</string>
-    <string name="Necromancy_NotEnoughSouls">Nie masz wystarczającej ilości Dusz by rzucić zaklęcie \&quot;%1$s\&quot;.</string>
+    <string name="Necromancy_NotEnoughSouls">Nie masz wystarczającej ilości Dusz by rzucić zaklęcie \"%1$s\".</string>
     <string name="Necromancy_ReincarnationName">Reinkarnacja</string>
     <string name="Necromancy_ReincarnationTriggered">Twa potęga przeciwstawiła się śmierci! Niestety wskutek tego utraciłeś wszystkie dusze i powiązania z innymi istotami.</string>
     <string name="Necromancy_SoulsCountLabel">Dusze</string>
@@ -1773,7 +1774,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="Roar_Info">Ten donośny ryk wzbudza grozę wsród twych przeciwników jednocześnie inspirując kompanów.</string>
     <string name="Roar_Name">Ryk</string>
     <string name="RogueArmor_ACSpecial">BOMBA DYMNA</string>
-    <string name="RogueArmor_Desc">Kiedy łotrzyk nosi ten ciemny strój, może przygotować specjalny ruch, zwany \&quot;bombą dymną\&quot; (żadne prawdziwe ładunki wybuchowe nie są używane), która oślepia wrogów umożliwiając mu ukrycie się przed ich wzrokiem.</string>
+    <string name="RogueArmor_Desc">Kiedy łotrzyk nosi ten ciemny strój, może przygotować specjalny ruch, zwany \"bombą dymną\" (żadne prawdziwe ładunki wybuchowe nie są używane), która oślepia wrogów umożliwiając mu ukrycie się przed ich wzrokiem.</string>
     <string name="RogueArmor_Fov">Możesz przeskoczyć w puste miejsce znajdujące się w zasięgu wzroku.</string>
     <string name="RogueArmor_Name">przebranie łotrzyka</string>
     <string name="RogueArmor_NotRogue">Tylko łotrzyki mogą nosić tę zbroję!</string>
@@ -1816,7 +1817,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">Na pierwszy rzut oka, ten stary, pokryty plamami patyny, brązowy miecz wydaje się absolutnie bezużyteczny; Jednakże drzemie w nim prastara moc, zdolna przemienić niemalże każdą istotę w pozbawionego wolnej woli sługusa. Musisz jednak odkryć sposób by ją zbudzić.</string>
     <string name="SacrificialSword_Name">rytualny miecz</string>
-    <string name="SantaHat_Info">Nic tak wprawia cię w nastrój świąt \&quot;Zlochowacenia\&quot; jak czerwona jedwabna czapka Santy, Władcy Otchłani.</string>
+    <string name="SantaHat_Info">Nic tak wprawia cię w nastrój świąt \"Zlochowacenia\" jak czerwona jedwabna czapka Santy, Władcy Otchłani.</string>
     <string name="SantaHat_Name">Czapka Santy</string>
     <string name="ScaleArmor_Desc">Przyszyte do skórzanej zbroi łuski tworzą elastyczny, acz dobrze chroniący pancerz.</string>
     <string name="ScaleArmor_Name">zbroja łuskowa</string>
@@ -1891,7 +1892,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="Scroll_ACRead">CZYTAJ</string>
     <string name="Scroll_Blinded">Nie możesz przeczytać tego zwoju kiedy jesteś oślepiony</string>
     <string name="Scroll_Info">Ten pergamin jest pokryty jest niemożliwymi do odczytania napisami i nosi tytuł runy %s. Któż wie co sprawi przeczytanie go na głos?</string>
-    <string name="Scroll_Name">zwój \&quot;%s\&quot;</string>
+    <string name="Scroll_Name">zwój \"%s\"</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="Scroll_Runes_1">SOWILO</string>
     <string name="Scroll_Runes_10">ODAL</string>
@@ -1930,7 +1931,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="Sewer_TileDescBookshelf">Ta biblioteczka jest pełna tanich i bezużytecznych książek. Może się spali?</string>
     <string name="Sewer_TileDescDeco">Mokry, żółtawy mech pokrywa podłogę.</string>
     <string name="Sewer_TileWater">Brudna woda</string>
-    <string name="Shades_Info">Niektórzy są zdania, że w lochach jest za ciemno by je nosić. Nie słuchaj ich! Oni po prostu nie są wystarczająco \&quot;cool\&quot;.</string>
+    <string name="Shades_Info">Niektórzy są zdania, że w lochach jest za ciemno by je nosić. Nie słuchaj ich! Oni po prostu nie są wystarczająco \"cool\".</string>
     <string name="Shades_Name">Okulary Przeciwsłoneczne</string>
     <string name="ShadowLord_Death">Nieeee...</string>
     <string name="ShadowLord_Desc">Poczwara utworzona z czystego zła i niezgłębionego mroku. Wielu którzy doświadczyli jego potęgi skrycie wierzy że jest on Starym Bogiem we własnej osobie. Pozostali są zdania że jest to po prostu strażnik komnat Prastarego Boga.</string>
@@ -2030,11 +2031,11 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="SpeedBuff_Info">Rześkość i energia emanują z ciała, czyniąc ruchy szybszymi niż zazwyczaj.</string>
     <string name="SpeedBuff_Name">Szybkość</string>
     <string name="SpellBook_Info">Wygląda to bardziej na zbiór zszytych losowych stronic, aniżeli na pełnoprawną księgę. Być może jeśli odpowiednio się skupisz, uda ci się coś z tego rozczytać. </string>
-    <string name="SpellBook_Info_Identified">Pośród kartek odnalazłeś pełny tekst zaklęcia \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
+    <string name="SpellBook_Info_Identified">Pośród kartek odnalazłeś pełny tekst zaklęcia \"%1$s\".\n\" %2$s \"</string>
     <string name="SpellBook_Name">Księga Zaklęć</string>
     <string name="Spell_SelectACell">Wybierz cel </string>
     <string name="Spell_SelectAChar">Wybierz istotę jako cel.</string>
-    <string name="Spells_NotEnoughSP">Nie masz wystarczająco punktów many aby rzucić zaklęcie  \&quot;%1$s\&quot; .</string>
+    <string name="Spells_NotEnoughSP">Nie masz wystarczająco punktów many aby rzucić zaklęcie  \"%1$s\" .</string>
     <string name="Spells_NotInOwnBody">Nie możesz wykonać %s, gdy twoja dusza oddzieliła się od ciała.</string>
     <string name="Spells_NotTooFast">%s nie jest jeszcze gotowy do użycia.</string>
     <string name="Spells_SummonLimitReached">%1$s : osiągnięty limit przyzwanych jednostek  (Maksymalna ilość %2$d)!</string>
@@ -2113,7 +2114,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="StartScene_UnlockGnoll">Aby odblokować tę klasę musisz przekonać miastowego duchownego aby uleczył Gnolla Okrutnika</string>
     <string name="StartScene_UnlockNecromancer">By odblokować tę klasę postaci, zabij Licza dowolną klasą.</string>
     <string name="StartScene_Warning">Twoja obecna gra zostanie usunięta.</string>
-    <string name="StartScene_WinGame">Aby odblokować \&quot;Wyzwania\&quot;, przejdź grę jakąkolwiek postacią.</string>
+    <string name="StartScene_WinGame">Aby odblokować \"Wyzwania\", przejdź grę jakąkolwiek postacią.</string>
     <string name="StartScene_Yes">Tak, zacznij nową grę</string>
     <string name="Statue_Desc">Pomyślałbyś że to kolejny brzydki posąg, który można znaleźć w tym lochu, gdyby nie te czerwone oczy połyskujące w mroku. Podczas gdy sam wykonany jest z kamienia, _%s_ w jego dłoniach wygląda na zupełnie prawdziwy.</string>
     <string name="Statue_Gender">masculine</string>
@@ -2219,7 +2220,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="TownShopkeeper_Objective">handlarz</string>
     <string name="TownsfolkMovieNPC_Desc">Jeden z lokalsów. Mimo, że wygląda nadzwyczaj zwyczajnie, przyodziany jest w drogo wyglądające szaty.</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
-    <string name="TownsfolkMovieNPC_Message">Czy wiesz o tej specjalnej usłudze, którą zapewnia „kino”? Szkoda, że ​​proszą o jakąś egzotyczną rzecz zwaną \&quot;Internetem\&quot;, nigdy o czymś takim nie słyszałem.</string>
+    <string name="TownsfolkMovieNPC_Message">Czy wiesz o tej specjalnej usłudze, którą zapewnia „kino”? Szkoda, że ​​proszą o jakąś egzotyczną rzecz zwaną \"Internetem\", nigdy o czymś takim nie słyszałem.</string>
     <string name="TownsfolkMovieNPC_Name">mieszczanin</string>
     <string name="TownsfolkMovieNPC_Name_Objective">mieszczanin</string>
     <string name="TownsfolkNPC_Desc">Jeden z lokalsów. Mimo, że wygląda nadzwyczaj zwyczajnie, przyodziany jest w drogo wyglądające szaty.</string>
@@ -2253,8 +2254,8 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="Undead_Name_Objective">nieumarły krasnolud</string>
     <string name="Ushanka_Info">Ciepłe zimowe nakrycie głowy, udekorowane wielką czerwoną gwiazdą. Idealna dla każdego towarzysza przemierzającego te zimne i złowrogie lochy.</string>
     <string name="Ushanka_Name">Uszanka</string>
-    <string name="Using_Failed_Because_Blind">Nie możesz użyć  \&quot;%s\&quot;  kiedy jesteś oślepiony.</string>
-    <string name="Using_Failed_Because_Magic">Potężna magia uniemożliwia ci użycie  \&quot;%s\&quot;.</string>
+    <string name="Using_Failed_Because_Blind">Nie możesz użyć  \"%s\"  kiedy jesteś oślepiony.</string>
+    <string name="Using_Failed_Because_Magic">Potężna magia uniemożliwia ci użycie  \"%s\".</string>
     <string name="VampireSkull_Info">Maska ta jest stworzona w pełni z naturalnych wampirzych czaszek. W sumie to wampirza czaszka... czaszka wielkogłowego wampira.  Straszne.</string>
     <string name="VampireSkull_Name">Czaszka wampira</string>
     <string name="VertigoBuff_Info">Zawroty głowy sprawiają trudności z objęciem prostej trajektorii chodu!</string>
@@ -2310,7 +2311,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="WandOfPoison_Info">Ohydny powiew wywołany tym spaczonym kawałkiem drewna napełni ciało ofiary śmiercionośnym jadem. Otrute stworzenie będzie otrzymywać ciągłe obrażenia dopóki efekt się nie skończy. Im wyższy poziom kostura, tym dłuższy będzie czas działania trucizny.</string>
     <string name="WandOfPoison_Info1">nic się nie wydarzyło</string>
     <string name="WandOfPoison_Name">Kostur Trucizny</string>
-    <string name="WandOfRegrowth_Info">\&quot;Kiedy jedno życie się kończy, drugie zawsze wzrasta... Wieczny cykl zawsze będzie trwać!\&quot;</string>
+    <string name="WandOfRegrowth_Info">\"Kiedy jedno życie się kończy, drugie zawsze wzrasta... Wieczny cykl zawsze będzie trwać!\"</string>
     <string name="WandOfRegrowth_Info1">nic się nie wydarzyło</string>
     <string name="WandOfRegrowth_Name">Kostur Natury</string>
     <string name="WandOfShadowbolt_Info">Ten kostur emanuje mroczną, złowrogą energią.</string>
@@ -2466,7 +2467,7 @@ remix.32.1\n
     <string name="WndDonate_ruby">rubin</string>
     <string name="WndDonate_rubyDonate">rubinowa darowizna</string>
     <string name="WndDonate_rubyDonateText">Twoja szczodrość pomoże nam dalej rozwijać Remixed Dungeon!</string>
-    <string name="WndDonate_rubyDonateText2"/>
+    <string name="WndDonate_rubyDonateText2" />
     <string name="WndDonate_silver">srebro</string>
     <string name="WndDonate_silverDonate">srebna darowizna</string>
     <string name="WndDonate_silverDonateText">Każda darowizna pomaga nam w ulepszaniu projektu</string>
@@ -2554,7 +2555,7 @@ remix.32.1\n
     <string name="WndMovieTheatre_Instruction">Pozdrawiamy i zapraszamy do naszego kina! Zapewniamy specjalną usługę, w której możesz bezpłatnie obejrzeć specjalny film o nazwie reklama. A jeśli przejrzysz to wszystko, zostaniesz nagrodzony %dzłotymi monetami!</string>
     <string name="WndMovieTheatre_Instruction_2">Obejrzałeś %1$d z %2$d dostępnych filmów.  Dostaniesz dodatkową okazję na obejrzenie filmu za każdy nowy poziom bohatera.</string>
     <string name="WndMovieTheatre_No">wyjdź</string>
-    <string name="WndMovieTheatre_Ok">Pomyślnie udało ci się obejrzeć film \&quot;nagrody\&quot;</string>
+    <string name="WndMovieTheatre_Ok">Pomyślnie udało ci się obejrzeć film \"nagrody\"</string>
     <string name="WndMovieTheatre_Sorry">Coś poszło nie tak, nie mogliśmy przyznać ci nagrody za obejrzenie filmu...</string>
     <string name="WndMovieTheatre_Thank_You">Dziękujemy za udział!</string>
     <string name="WndMovieTheatre_Title">Kino</string>
@@ -2613,7 +2614,7 @@ remix.32.1\n
     <string name="WndResurrect_Yes">Tak, będę walczyć!</string>
     <string name="WndSadGhostNecro_No">Nie, pozwól mu mówić.</string>
     <string name="WndSadGhostNecro_Persuaded">Smutny Duch został zdominowany!</string>
-    <string name="WndSadGhostNecro_Text">\&quot;Ten duch wydaje się zmagać ze swoją klątwą. Wygląda na to, że czegoś ode mnie chce. Jeśli użyję mojej nekromanckiej mocy, będę w stanie przekonać go, że wykonałem jego prośbę. Nie będę wtedy musiał marnować tutaj mojego czasu. Czy powinienem to uczynić?\&quot;</string>
+    <string name="WndSadGhostNecro_Text">\"Ten duch wydaje się zmagać ze swoją klątwą. Wygląda na to, że czegoś ode mnie chce. Jeśli użyję mojej nekromanckiej mocy, będę w stanie przekonać go, że wykonałem jego prośbę. Nie będę wtedy musiał marnować tutaj mojego czasu. Czy powinienem to uczynić?\"</string>
     <string name="WndSadGhostNecro_Yes">Tak, przyporządkuj go swojej woli.</string>
     <string name="WndSadGhost_Armor">Zbroja Ducha</string>
     <string name="WndSadGhost_Farewell">Żegnaj, wędrowcze!</string>
@@ -2626,7 +2627,7 @@ remix.32.1\n
     <string name="WndSaveSlotSelect_LoadAutoSave">Wczytaj auto-zapis</string>
     <string name="WndSaveSlotSelect_SelectSlot">Wybierz slot</string>
     <string name="WndSaveSlotSelect_dontLike">Nie lubisz reklam? Złóż jakąkolwiek darowiznę i znikną. Na zawsze.</string>
-    <string name="WndSelectLanguage_ImproveTranslation">Pomóż proszę udoskonalić tłumaczenia w \&quot;Remixed Dungeon\&quot;</string>
+    <string name="WndSelectLanguage_ImproveTranslation">Pomóż proszę udoskonalić tłumaczenia w \"Remixed Dungeon\"</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Kliknij tutaj, by wstąpić w szeregi tłumaczy gry</string>
     <string name="WndSettingsInGame_GameLog">Logi gry</string>
     <string name="WndSettingsInGame_IsometricTiles">Płytki izometryczne.</string>
@@ -2647,7 +2648,7 @@ remix.32.1\n
     <string name="WndSettings_SelectLanguage">Wybierz język</string>
     <string name="WndSettings_Sound">Odgłosy</string>
     <string name="WndSettings_SwitchLand">Przełącz do widoku panoramicznego </string>
-    <string name="WndSettings_SwitchPort">Przełącz do widoku \&quot;portretowego\&quot; </string>
+    <string name="WndSettings_SwitchPort">Przełącz do widoku \"portretowego\" </string>
     <string name="WndSettings_TextScaleDefault">Domyślna czcionka</string>
     <string name="WndSettings_ThirdQuickslot">Trzeci slot szybkiego wyboru</string>
     <string name="WndSettings_UiScale">Skalowanie interfejsu.</string>
@@ -2815,7 +2816,7 @@ remix.32.1\n
     <string name="town_deco_crate_name">Skrzynia</string>
     <string name="town_deco_crate_scrolls_desc">Tajemnicze zwoje wypełniają skyrznię po brzegi.</string>
     <string name="town_deco_crate_scrolls_name">Skrznia ze zwojami</string>
-    <string name="town_deco_cross_desc">Solidny, srebrny krzyż, symbol miejscowego wyznania - \&quot;Świadków Santy, Władcy Otchłani\&quot;</string>
+    <string name="town_deco_cross_desc">Solidny, srebrny krzyż, symbol miejscowego wyznania - \"Świadków Santy, Władcy Otchłani\"</string>
     <string name="town_deco_cross_name">Krzyż</string>
     <string name="town_deco_crossroad_desc">Szorstki drewniany słup z tekstem w kształcie strzałek, na którym już dawno wyblakły, prawdopodobnie z powodu trudnych warunków pogodowych.</string>
     <string name="town_deco_crossroad_name">Tabliczka na rozdrożu </string>
@@ -2903,7 +2904,7 @@ remix.32.1\n
     <string name="town_deco_rope_name">Lina</string>
     <string name="town_deco_rug_desc">Zaprojektowany z dobrym gustem.</string>
     <string name="town_deco_rug_name">Dywanik</string>
-    <string name="town_deco_screen_desc">To tajemnicze płótno zwane \&quot;ekranem\&quot; na którym poruszają się obrazki</string>
+    <string name="town_deco_screen_desc">To tajemnicze płótno zwane \"ekranem\" na którym poruszają się obrazki</string>
     <string name="town_deco_screen_name">Ekran</string>
     <string name="town_deco_scrolls_desc">Ta zakurzona półka jest pełna różnego rodzaju zwojów i książek.</string>
     <string name="town_deco_scrolls_name">Zwoje</string>
@@ -2927,7 +2928,7 @@ remix.32.1\n
     <string name="town_deco_snow_name">Śnieg</string>
     <string name="town_deco_snowdrift_desc">Jest to dość spory stos śniegu, którego najwyraźniej nikomu się nie chce odśnieżyć.</string>
     <string name="town_deco_snowdrift_name">Zaspa</string>
-    <string name="town_deco_snowman_desc">Bałwan jest tradycyjną, miejską ozdobą na czas świąt, gdy miejscowi obchodzą Święto \&quot;Zlochowacenia\&quot;, rocznicę dnia zalęgnięcia się w lochach pierwszych potworów.</string>
+    <string name="town_deco_snowman_desc">Bałwan jest tradycyjną, miejską ozdobą na czas świąt, gdy miejscowi obchodzą Święto \"Zlochowacenia\", rocznicę dnia zalęgnięcia się w lochach pierwszych potworów.</string>
     <string name="town_deco_snowman_name">Bałwan</string>
     <string name="town_deco_snowy_plate_desc">Ta starożytna płytka jest pokryta śniegiem</string>
     <string name="town_deco_snowy_plate_name">Zaśnieżona płytka</string>

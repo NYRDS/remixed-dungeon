@@ -1,4 +1,5 @@
-<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:ns0="http://schemas.android.com/tools" ns0:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
   <string name="ChaosHelmet_Name">Chaos Helmet</string>
   <string name="ChaosHelmet_Info">A blood red helmet is an essential symbol of a chaos warrior.</string>
   <string name="Spells_SummonLimitReached">%1$s: summon limit reached (Current max: %2$d)!</string>
@@ -257,7 +258,7 @@
   <string name="PortalExit_Desc_Necropolis">Necropolis</string>
   <string name="PortalExit_Desc_IceCaves">Ice Caves</string>
   <string name="DevourBuff_Name">Devour</string>
-  <string name="DevourBuff_Info"/>
+  <string name="DevourBuff_Info" />
   <string name="StoneBloodBuff_Name">Stone blood</string>
   <string name="StoneBloodBuff_Info">The blood turns stone which merges with the walls nearby and makes traversing them much easier, but at what cost.</string>
   <string name="Welcome_Ok">Okay!</string>
@@ -271,10 +272,10 @@
   <string name="SociologistNPC_Gender">masculine</string>
   <string name="SociologistNPC_Name_Objective">Sociologist</string>
   <string name="SociologistNPC_Desc">This sociologist is on a holy quest of collecting public opinions</string>
-  <string name="SociologistNPC_AlreadyTaken">"You already took part in this survey, please come back later"</string>
-  <string name="SociologistNPC_Hi">"Hi!\nDid you want to take part in our survey?(Internet access will be required)\nYour opinion matters!"</string>
-  <string name="SociologistNPC_InternetRequired">"Sorry, but without access to the Internet you cannot pass our survey"</string>
-  <string name="SociologistNPC_DownloadError">"Sorry, something went wrong, please try again later"</string>
+  <string name="SociologistNPC_AlreadyTaken">\"You already took part in this survey, please come back later\"</string>
+  <string name="SociologistNPC_Hi">\"Hi!\nDid you want to take part in our survey?(Internet access will be required)\nYour opinion matters!\"</string>
+  <string name="SociologistNPC_InternetRequired">\"Sorry, but without access to the Internet you cannot pass our survey\"</string>
+  <string name="SociologistNPC_DownloadError">\"Sorry, something went wrong, please try again later\"</string>
   <string name="town_deco_library_sign_name">Library sign</string>
   <string name="town_deco_library_sign_desc">Seems like there is a library inside that building.</string>
   <string name="town_deco_identifier_sign_name">Magic Ball sign</string>
@@ -301,7 +302,7 @@
   <string name="town_deco_book_name">Book</string>
   <string name="town_deco_book_desc">This book looks like someone negligently left it</string>
   <string name="town_deco_screen_name">Screen</string>
-  <string name="town_deco_screen_desc">This mystery canvas is called a "screen" and it can show moving pictures</string>
+  <string name="town_deco_screen_desc">This mystery canvas is called a \"screen\" and it can show moving pictures</string>
   <string name="town_deco_stove_name">Stone stove</string>
   <string name="town_deco_stove_desc">This stove gives some pleasurable warmth</string>
   <string name="town_deco_wooden_chair_name">Wooden chair</string>
@@ -642,7 +643,7 @@
   <string name="AboutScene_OurSite">Our web site:</string>
   <string name="AboutScene_Snd">Send E-Mail</string>
   <string name="AboutScene_Translation">Localization by:</string>
-  <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901</string>
+  <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
   <string name="RankingsScene_Title">Top Rankings</string>
   <string name="RankingsScene_Total">Total games played: </string>
   <string name="RankingsScene_NoGames">No games have been played yet.</string>
@@ -789,7 +790,7 @@
   <string name="gdpr_text">Remixed Dungeon personalizes your advertising experience using Admob and Appodeal (further Ad providers). Ad providers and their partners may collect and process personal data such as device identifiers, demographic and interest data to provide advertising experience tailored to you. By consenting to this improved ad experience, you`ll see ads that Ad providers and their partners believe are more relevant to you.\n\nBy agreeing, you confirm that you are over the age of 16 and would like a personalized ad experience.\n\n</string>
   <string name="gdpr_agree">Yes, I agree</string>
   <string name="gdpr_disagree">No, thank you</string>
-  <string name="gdpr_choose">"Please make your choice"</string>
+  <string name="gdpr_choose">\"Please make your choice\"</string>
   <string name="Mob_StaHuntingStatus2">This %1$s is hunting %2$s</string>
   <string name="Mob_StaFleeingStatus2">This %1$s is fleeing from %2$s</string>
   <string name="Mob_StaTerrorStatus">This %1$s is horrified</string>
@@ -804,7 +805,7 @@
   <string name="WndDonate_notConnected">no connection :(</string>
   <string name="WndDonate_commonDonateText">Remixed Dungeon - free to everyone and always will be.\n\nHowever, You can help us make the game even better.\n\nIn addition to our heartfelt thanks you\'ll get some cosmetic improvements.</string>
   
-  <!-- Crypto Donation Strings -->
+  
   <string name="WndCryptoDonate_supportDev">Support Developer</string>
   <string name="WndCryptoDonate_infoText">You can support the development of Remixed Dungeon by sending cryptocurrency donations to the addresses below. Thank you for your generous support!</string>
   <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
@@ -824,7 +825,7 @@
   <string name="WndDonate_rubyDonateText">Your generosity will help us continue to improve Remixed Dungeon!</string>
   <string name="WndDonate_silverDonateText2">Also disable ads in all game modes and unlock huntress from start.</string>
   <string name="WndDonate_goldDonateText2">Also unlocks elf from start.</string>
-  <string name="WndDonate_rubyDonateText2"/>
+  <string name="WndDonate_rubyDonateText2" />
   <string name="WndPremiumSettings_std">standard</string>
   <string name="WndPremiumSettings_silver">silver</string>
   <string name="WndPremiumSettings_gold">gold</string>
@@ -870,7 +871,7 @@
   <string name="Shades_Name">Shades</string>
   <string name="Shades_Info">Some people say that dungeons are to dark to wear those. And you say that those people just aren\'t cool enough.</string>
   <string name="Capotain_Name">Capotain</string>
-  <string name="Capotain_Info">A tall-crowned, narrow-brimmed hat. It\'s usually associated with Puritans, but you don\'t have to be religious to wear it. For some reason it has a label, that says "Solomon" on it.</string>
+  <string name="Capotain_Info">A tall-crowned, narrow-brimmed hat. It\'s usually associated with Puritans, but you don\'t have to be religious to wear it. For some reason it has a label, that says \"Solomon\" on it.</string>
   <string name="Fez_Name">Fez</string>
   <string name="Fez_Info">It\'s a headdress in the shape of a truncated cone made out of red fabric, with a tassel attached to the top. And no, it doesn\'t make the world 3-dimensional.</string>
   <string name="NekoEars_Name">Neko Ears</string>
@@ -950,7 +951,7 @@
   <string name="SpiderMindAmber_Name">amber spider</string>
   <string name="SpiderMindAmber_Gender">masculine</string>
   <string name="SpiderMindAmber_Name_Objective">amber spider</string>
-  <string name="SpiderMindAmber_Desc">Amber spiders are mysterious and rare creatures that poses psychic powers similar to regular psi-spiders, but are much tougher physically. The name "amber" refers to the color of their giant brain-sacks, that are revealed before their victims as Amber Spiders strike using their powers.</string>
+  <string name="SpiderMindAmber_Desc">Amber spiders are mysterious and rare creatures that poses psychic powers similar to regular psi-spiders, but are much tougher physically. The name \"amber\" refers to the color of their giant brain-sacks, that are revealed before their victims as Amber Spiders strike using their powers.</string>
   <string name="PirateSet_Name">Pirate Set</string>
   <string name="PirateSet_Info">Arr! Do you have the guts to join our lads !? Or are you just another land rat? I hope not, because this thing is only for pirates after all, uh, i mean.. Arr!</string>
   <string name="WndSaveSlotSelect_Delete_Yes">Yes, delete it!</string>
@@ -988,7 +989,7 @@
   <string name="HeroClass_Elf">elf</string>
   <string name="HeroClass_None">commoner</string>
   <string name="HeroSubClass_NameNone">none</string>
-  <string name="HeroSubClass_DescNone"/>
+  <string name="HeroSubClass_DescNone" />
   <string name="HeroSubClass_NameGlad">gladiator</string>
   <string name="HeroSubClass_DescGlad">A successful attack with a melee weapon allows the _Gladiator_ to start a combo, in which every next successful hit inflicts more damage.</string>
   <string name="HeroSubClass_NameBers">berserker</string>
@@ -1010,7 +1011,7 @@
   <string name="HeroSubClass_NameShaman">shaman</string>
   <string name="HeroSubClass_DescShaman">Elven _Shamans_ can use wands as melee weapons. Successful hits have a chance to activate the wand\'s power on a target without using a charge.</string>
   <string name="SantaHat_Name">Santa hat</string>
-  <string name="SantaHat_Info">Nothing puts you into the "Dungeoning" mood as much as the red silk hat of Santa, Lord of the Depths.</string>
+  <string name="SantaHat_Info">Nothing puts you into the \"Dungeoning\" mood as much as the red silk hat of Santa, Lord of the Depths.</string>
   <string name="Rudolph_Name">Red nose and antlers</string>
   <string name="Rudolph_Info">What could be more festive than a glowing red nose? Together with a pair of antlers, of course.</string>
   <string name="Kobold_Name">kobold</string>
@@ -1501,7 +1502,7 @@
   <string name="Badges_AllScrolls">All scrolls identified</string>
   <string name="Badges_AllRings">All rings identified</string>
   <string name="Badges_AllWands">All wands identified</string>
-  <string name="Badges_AllItems">All potions, scrolls, rings &amp; wands identified</string>
+  <string name="Badges_AllItems">All potions, scrolls, rings &amp;amp; wands identified</string>
   <string name="Badges_AllBags">All bags bought</string>
   <string name="Badges_DeathFire">Death from fire</string>
   <string name="Badges_DeathPoison">Death from poison</string>
@@ -1509,7 +1510,7 @@
   <string name="Badges_DeathHunger">Death from hunger</string>
   <string name="Badges_DeathGlyph">Death from a glyph</string>
   <string name="Badges_DeathFalling">Death from falling down</string>
-  <string name="Badges_Yasd">Death from fire, poison, toxic gas &amp; hunger</string>
+  <string name="Badges_Yasd">Death from fire, poison, toxic gas &amp;amp; hunger</string>
   <string name="Badges_BossSlain1">Goo has been slain</string>
   <string name="Badges_BossSlain2">Tengu has been slain</string>
   <string name="Badges_BossSlain3">DM-300 has been slain</string>
@@ -2537,7 +2538,7 @@
   <string name="Codex_Story_23">This book is written in dwarf language</string>
   <string name="Codex_Story_24">This book is written in elven language</string>
   <string name="Codex_Story_25">She stopped, frozen, at the heavy oaken door, and eyed the light emerging from the door\'s borders. From some neglected corner of her mind, recognition.\n
-"Sunlight.." she muttered to herself. How long had it been? In the eternal gloom of the Dungeon, she had long ago given up on tracking the days. The light illuminated disused memories. She remembered her training, long days of arduous practice with \'rang and blade, of log keeping, and map making. She remembered the mantras and disciplines intended to allow her to retain some semblance of sanity as she plumbed the unknown depths. What she didn\'t remember, couldn\'t remember, were people.\n
+\"Sunlight..\" she muttered to herself. How long had it been? In the eternal gloom of the Dungeon, she had long ago given up on tracking the days. The light illuminated disused memories. She remembered her training, long days of arduous practice with \'rang and blade, of log keeping, and map making. She remembered the mantras and disciplines intended to allow her to retain some semblance of sanity as she plumbed the unknown depths. What she didn\'t remember, couldn\'t remember, were people.\n
 She remembered their voices, their commands, and their warnings, but not their faces, nor their touch.\n
 Pain had trained her. Remember the dangers, always the dangers. Rabid animals, undead, insane brigands, and cunning ninjas had fallen before her. She had cut, burned, stabbed, and poisoned her way through abominations, demons, clockwork abominations, and insane necromancers. Even Gods had fallen before her.\n
 She had tracked Yog through Heaven and Hell, before silencing his corrupting whispers forever. Even then, there was work to be done. Yog was a servant of one even more occult and powerful than himself.\n
@@ -2790,7 +2791,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="CharInfo_Level">This is a level %1$d %2$s.</string>
   <string name="WrnExperimental_realtime">Realtime! mode enabled: this is realtime roguelike now, tap fast or die.\nWant to check inventory?\nGood luck to do so while sewer crab was checking your guts.</string>
   <string name="WrnExperimental_moveTimeout">Move timeout set to %d milliseconds, think fast!</string>
-  <string name="WrnExperimental_hint">If this strange and twisted world too harsh for you please disable those options using\nStart Screen->Options->Gameplay\nmenu and start new game or load another save.</string>
+  <string name="WrnExperimental_hint">If this strange and twisted world too harsh for you please disable those options using\nStart Screen-&gt;Options-&gt;Gameplay\nmenu and start new game or load another save.</string>
   <string name="WrnExperimental_title">Experimental options enabled!</string>
   <string name="Welcome_Text_30_1">
     remix.30.1\n
@@ -2882,7 +2883,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="EncumbranceBuff_CharAct_1">I\'m not strong enough to wield %s properly.</string>
   <string name="EncumbranceBuff_CharAct_2">This %s is too heavy for me to use effectively.</string>
   <string name="EncumbranceBuff_CharAct_3">I need to work on my strength before I can use %s.</string>
-  <string name="EncumbranceBuff_CharAct_4">I lack the strength to use %s to its full potential."</string>
+  <string name="EncumbranceBuff_CharAct_4">I lack the strength to use %s to its full potential.\"</string>
   <string name="EncumbranceBuff_CharAct_5">%s is too much for me to handle right now.</string>
   <string name="Typical_Damage">Typical damage</string>
   <string name="Damage_Reduction">Damage reduction</string>
@@ -2900,7 +2901,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="ChampionOfWaterBuff_Name">Champion of Water</string>
   <string name="ChampionOfWaterBuff_Info">The Champion of Water embodies the indomitable force of the oceans, enhancing the creature\'s resilience and fortitude. As a result, it becomes a stalwart adversary, capable of enduring a relentless barrage of attacks and standing as an unyielding guardian in the face of adversity.</string>
   <string name="ChampionOfFireBuff_Name">Champion of Fire</string>
-  <string name="ChampionOfFireBuff_Info">"Infused with the fury of the flames, this trait amplifies the creature\'s ferocity and combat prowess. The Champion of Fire emerges as a fearsome adversary, unleashing devastating attacks that can engulf its foes in searing flames, instilling terror in all who dare to oppose it.</string>
+  <string name="ChampionOfFireBuff_Info">\"Infused with the fury of the flames, this trait amplifies the creature\'s ferocity and combat prowess. The Champion of Fire emerges as a fearsome adversary, unleashing devastating attacks that can engulf its foes in searing flames, instilling terror in all who dare to oppose it.</string>
   <string name="ChampionOfEarthBuff_Name">Champion of Earth</string>
   <string name="ChampionOfEarthBuff_Info">The Champion of Earth embodies unyielding strength, as this trait enhances the creature\'s damage resistance and increases its maximum vitality. This transformation makes it a daunting adversary in the treacherous depths, capable of shrugging off attacks with ease and enduring prolonged battles with unwavering resolve.</string>
   <string name="Welcome_Text_32">
@@ -2932,12 +2933,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="AC_Devour">Devour</string>
   <string name="AC_Kick">Kick</string>
   <string name="Carcass_Kick">This %s is totally dead, no need to kick it.</string>
-  <string name="Carcass_Devoured">"You have devoured corpse of %s!"</string>
-  <string name="Carcass_Necromancy">"You have raised corpse of %s!"</string>
-  <string name="Carcass_Necromancy_Failed">"Your attempt to raise corpse of %s failed!"</string>
+  <string name="Carcass_Devoured">\"You have devoured corpse of %s!\"</string>
+  <string name="Carcass_Necromancy">\"You have raised corpse of %s!\"</string>
+  <string name="Carcass_Necromancy_Failed">\"Your attempt to raise corpse of %s failed!\"</string>
   <string name="WndInstallingMod_please_wait">Installing mod, please wait...</string>
   <string name="WndInstallingMod_copying_file">Copying %s to Remixed Dungeon storage</string>
-  <string name="WndInstallingMod_skipping_file">"Skipping %s"</string>
+  <string name="WndInstallingMod_skipping_file">\"Skipping %s\"</string>
   <string name="WndLocalModInstall_title">Install mod from local directory</string>
   <string name="WndLocalModInstall_text">Select directory to install mod from.</string>
   <string name="WndLocalModInstall_pick">Pick mod directory</string>
@@ -2979,7 +2980,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="PlagueDoctorMask_Info">This… this is no mere mask. It\'s… a barrier. A shield against the forces of decay that Plague Doctor tirelessly battle against. Crafted from the finest ebony wood, intricately carved with the visage of a ravenous skull. Its hollow eye sockets are filled with glittering, amethyst gemstones that pulse faintly, like the dying embers of a fire. Each breath you take, each utterance you make, is filtered through a labyrinthine network of tubes and filters. A concoction of potent herbs and exotic spices infuses the air within, masking the stench of death that clings to you like a shroud.</string>
   <string name="PlagueDoctorMaskHood_Name">Plague Doctor mask with hood</string>
   <string name="PlagueDoctorMaskHood_Info">A sculpted ebony skull, its hollow sockets glowing with the ethereal shimmer of amethyst gems. Each breath you draw whispers through a labyrinth of tubes and filters, carrying the scent of potent herbs and spices that mask the decay that clings to you. But it\'s not merely the mask. A heavy cowl of midnight velvet, shrouding your face and head in shadows. The hood, like a raven\'s wing, flows down your back, its edges trimmed with a fringe of bone-white lace, a chillingly beautiful contrast. Together, mask and hood create a spectral visage, a grim testament to the unending battle against the forces of decay.</string>
-  <string name="PlagueDoctorQuest_AllDone">*He lets out a dry, wheezing laugh.* "Your deeds, they have unlocked secrets beyond measure! The knowledge gained… it pulses within me, a symphony of discovery. But knowledge," he adds, his voice dropping to a conspiratorial whisper, "knowledge is power. And power… ah… that is a most intoxicating elixir.” He stares intently at you for a moment, his amethyst eyes burning with a feverish intensity. “Perhaps,” he murmurs, “our paths will cross again. For there are still many… mysteries… yet to be unravelled.”</string>
+  <string name="PlagueDoctorQuest_AllDone">*He lets out a dry, wheezing laugh.* \"Your deeds, they have unlocked secrets beyond measure! The knowledge gained… it pulses within me, a symphony of discovery. But knowledge,\" he adds, his voice dropping to a conspiratorial whisper, \"knowledge is power. And power… ah… that is a most intoxicating elixir.” He stares intently at you for a moment, his amethyst eyes burning with a feverish intensity. “Perhaps,” he murmurs, “our paths will cross again. For there are still many… mysteries… yet to be unravelled.”</string>
   <string name="CharAction_Expel">expel</string>
   <string name="Welcome_Text_32_1">
     remix.32.1\n
@@ -3037,6 +3038,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="VileEssence_Name">Vile Essence</string>
   <string name="VileEssence_Info">A concentrated essence of corruption harvested from a defeated enemy. This dark substance pulses with malevolent energy and is highly valued in alchemical processes.</string>
   <string name="Carcass_DissectMessage">You dissect the carcass and obtain a %s.</string>
-  <string name="Carcass_DissectResult" formatted="false">From the %s you obtain %d harvest %s.</string>
+  <string name="Carcass_DissectResult">From the %1$s you obtain %2$d harvest %3$s.</string>
   <string name="Carcass_DissectFailed">You dissect the %s but find nothing of value.</string>
 </resources>

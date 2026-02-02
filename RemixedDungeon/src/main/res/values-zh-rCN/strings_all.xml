@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">吞噬</string>
     <string name="AC_Necromancy">死灵术</string>
@@ -478,7 +479,7 @@
     <string name="Codex_Story_23">这本书是用矮人语写的</string>
     <string name="Codex_Story_24">这本书是用精灵语写的</string>
     <string name="Codex_Story_25">她在厚重的橡木门前停下，如被冻住一般。门框边闪烁的微光吸引了她的眼球，令她逐渐回想起了一些被遗忘的往事。\n
-\&quot;光……\&quot;她喃呢着。过去了多久？在永远黑暗的地牢中，她早就忘记去记录时间了。这微光使她回想起了过去。她想起了她过去的练习，长时间的挥舞和穿刺，以及对地图和事件的记录训练。她想起她曾经用祈祷和知识来使她能在未知的地方保留一点点的理智。但是她想不起，也记不起，那些她遇见过的人。\n
+\"光……\"她喃呢着。过去了多久？在永远黑暗的地牢中，她早就忘记去记录时间了。这微光使她回想起了过去。她想起了她过去的练习，长时间的挥舞和穿刺，以及对地图和事件的记录训练。她想起她曾经用祈祷和知识来使她能在未知的地方保留一点点的理智。但是她想不起，也记不起，那些她遇见过的人。\n
 她回想起了他们声音、他们的指令、他们的警告，但记不起他们的脸、他们的触感。\n
 疼痛使她成长，记住危机，面对危险。险恶之地，险象丛生。发狂的动物、不灭的亡灵、疯颠的盗贼、狡诈的忍者在她面前一一倒下。烧、砍、刺、毒，她想尽一切办法击败一切阻挡她的物体。恶魔倒下了，魔像倒下了，术士倒下了，最后连神也在她面前倒下了。
 
@@ -573,7 +574,7 @@
     <string name="DeferedDamageBuff_Info">疼痛已经变成了一种缓慢的疼痛，减少即将受到的伤害。\n待承受的伤害 %d 点</string>
     <string name="DeferedDamageBuff_Name">延时伤害 (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s杀死了你</string>
-    <string name="DevourBuff_Info"/>
+    <string name="DevourBuff_Info" />
     <string name="DevourBuff_Name">吞噬</string>
     <string name="DewVial_ACDRINK">饮用</string>
     <string name="DewVial_AutoDrink">空露珠瓶没法用来治疗伤口。</string>
@@ -900,7 +901,7 @@
     <string name="HeroSubClass_DescFreR">当_疾行者_处于不负重和不饥肠辘辘的状态下，能以绝大多数怪物两倍的速度移动，奔跑期间，敌人攻击更难命中。</string>
     <string name="HeroSubClass_DescGlad">一次成功的近战攻击可以让_角斗士_找回节奏，开始连击。接下来每次近战攻击命中都会造成更多伤害。</string>
     <string name="HeroSubClass_DescGuardian">熟练的防御知识使守卫能够用盾牌进行反击，使他成为那些敢于攻击这座行走堡垒的人的可怕敌人。</string>
-    <string name="HeroSubClass_DescNone"/>
+    <string name="HeroSubClass_DescNone" />
     <string name="HeroSubClass_DescScout">精灵_斥候_是隐匿大师，踩踏高草会让他们获得短暂的隐身状态。此外，他们比通常的精灵更快更灵敏。</string>
     <string name="HeroSubClass_DescShaman">精灵_萨满_能够将法杖作为近战武器使用。近战攻击命中将有机会对敌人释放法杖的能量，且不消耗充能。</string>
     <string name="HeroSubClass_DescSnip">_狙击手_见微知着，能够找出敌人护甲的脆弱点，使用远程武器攻击时，能有效地无视敌人护甲打出伤害。</string>
@@ -1884,7 +1885,7 @@
     <string name="SpeedBuff_Info">身躯散发着活力和能量，移动也快于寻常。</string>
     <string name="SpeedBuff_Name">速度</string>
     <string name="SpellBook_Info">它看起来更像是一个拼凑在一起的各种页面的汇编，而不是一本真正的书。如果你足够注意的话，也许能从中得到一些东西。</string>
-    <string name="SpellBook_Info_Identified">阅读完这些页面你发现\&quot;%1$s\&quot;咒语的全文。\n\&quot;%2$s\&quot;</string>
+    <string name="SpellBook_Info_Identified">阅读完这些页面你发现\"%1$s\"咒语的全文。\n\"%2$s\"</string>
     <string name="SpellBook_Name">咒语书</string>
     <string name="Spell_SelectACell">选择一个位置</string>
     <string name="Spell_SelectAChar">选择一个目标对象。</string>
@@ -2169,18 +2170,18 @@
     <string name="Wand_SelfTarget">你不能以自己为施法目标。</string>
     <string name="Wand_Weapon">你可以将这根法杖当近战武器使用。</string>
     <string name="Wand_Wood">这根%s法杖摸上去很暖和。谁能知道使用它会发生什么事？</string>
-    <string name="Wand_Wood_Types_0">&quot;冬青&quot;</string>
-    <string name="Wand_Wood_Types_1">&quot;红豆杉&quot;</string>
-    <string name="Wand_Wood_Types_10">&quot;橡木&quot;</string>
-    <string name="Wand_Wood_Types_11">&quot;桦木&quot;</string>
-    <string name="Wand_Wood_Types_2">&quot;乌木&quot;</string>
-    <string name="Wand_Wood_Types_3">&quot;樱桃&quot;</string>
-    <string name="Wand_Wood_Types_4">&quot;柚木&quot;</string>
-    <string name="Wand_Wood_Types_5">&quot;花楸&quot;</string>
-    <string name="Wand_Wood_Types_6">&quot;柳&quot;</string>
-    <string name="Wand_Wood_Types_7">&quot;桃花心木&quot;</string>
-    <string name="Wand_Wood_Types_8">&quot;竹&quot;</string>
-    <string name="Wand_Wood_Types_9">&quot;紫心&quot;</string>
+    <string name="Wand_Wood_Types_0">\"冬青\"</string>
+    <string name="Wand_Wood_Types_1">\"红豆杉\"</string>
+    <string name="Wand_Wood_Types_10">\"橡木\"</string>
+    <string name="Wand_Wood_Types_11">\"桦木\"</string>
+    <string name="Wand_Wood_Types_2">\"乌木\"</string>
+    <string name="Wand_Wood_Types_3">\"樱桃\"</string>
+    <string name="Wand_Wood_Types_4">\"柚木\"</string>
+    <string name="Wand_Wood_Types_5">\"花楸\"</string>
+    <string name="Wand_Wood_Types_6">\"柳\"</string>
+    <string name="Wand_Wood_Types_7">\"桃花心木\"</string>
+    <string name="Wand_Wood_Types_8">\"竹\"</string>
+    <string name="Wand_Wood_Types_9">\"紫心\"</string>
     <string name="WarHammer_Info">没有多少生物可以承受这种武器的碾压，但只有少数强者才可以精通它。</string>
     <string name="WarHammer_Name">战锤</string>
     <string name="Warlock_Desc">当矮人们的兴趣由工程转向奥术时，城市中的权力开始被术士掌握。他们最开始研究元素魔法，但不久就转为研究恶魔学和死灵术。</string>
@@ -2274,7 +2275,7 @@ remix.31.1\n
     <string name="WndDonate_ruby">红宝石</string>
     <string name="WndDonate_rubyDonate">红宝石级捐献</string>
     <string name="WndDonate_rubyDonateText">你的慷慨将会帮助我们改善混合地牢！</string>
-    <string name="WndDonate_rubyDonateText2"/>
+    <string name="WndDonate_rubyDonateText2" />
     <string name="WndDonate_silver">白银</string>
     <string name="WndDonate_silverDonate">白银级捐献</string>
     <string name="WndDonate_silverDonateText">任何捐献皆作此游戏之开发用途。</string>

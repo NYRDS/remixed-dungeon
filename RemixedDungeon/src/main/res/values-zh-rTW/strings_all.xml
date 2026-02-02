@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">吞噬</string>
     <string name="AC_Necromancy">死靈法術</string>
@@ -14,7 +15,7 @@
     <string name="AboutScene_Sound">音效：</string>
     <string name="AboutScene_Thanks">特別感謝：</string>
     <string name="AboutScene_Translation">本地化的功臣：</string>
-    <string name="AboutScene_Translation_Names">NYRDS &amp; Omen267901;丘比</string>
+    <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901;丘比</string>
     <string name="AboutScene_Txt_Intro">混合地牢是由NYRDS以Watabou的Pixel Dungeon源碼為基礎制作的。</string>
     <string name="Acidic_Desc">這些巨大的節肢類惡魔生物會盡可能的避免近距離戰鬥，並且在遠處射出能致殘的鋸齒尖刺。</string>
     <string name="Acidic_Gender">masculine</string>
@@ -55,7 +56,7 @@
     <string name="Ankh_Name">十字架</string>
     <string name="AntiEntropy_Txt">反熵 %s</string>
     <string name="ArmorKit_ACAplly">添上</string>
-    <string name="ArmorKit_Info">使用這配件包裡的工具和材料，任何人都能將任意防具打造成 \&quot;史詩護甲\&quot;，它會繼承原護甲的所有屬性，並依據職業為穿戴者提供一個特殊能力。完全無需裁縫、製皮或打鐵。</string>
+    <string name="ArmorKit_Info">使用這配件包裡的工具和材料，任何人都能將任意防具打造成 \"史詩護甲\"，它會繼承原護甲的所有屬性，並依據職業為穿戴者提供一個特殊能力。完全無需裁縫、製皮或打鐵。</string>
     <string name="ArmorKit_Name">護甲改造包</string>
     <string name="ArmorKit_SelectArmor">選擇升級一件護甲</string>
     <string name="ArmorKit_Upgraded">您將護甲升級包用以提升您的%s</string>
@@ -201,14 +202,14 @@
     <string name="BellaNPC_Yes_End_Game">好啊(結束遊戲)</string>
     <string name="Belongings_CantWearBoth">你不能同時裝備%1$s和%2$s!</string>
     <string name="Belongings_Name">背包</string>
-    <string name="BishopNPC_Desc">聖誕老人 \&quot; 深淵領主 \&quot; 的神聖殿堂大主教</string>
+    <string name="BishopNPC_Desc">聖誕老人 \" 深淵領主 \" 的神聖殿堂大主教</string>
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">主教</string>
     <string name="BishopNPC_Name_Objective">主教</string>
     <string name="Bishop_bye">我將會為您祈禱的，我的孩子。</string>
     <string name="Bishop_great_bless">大聲讚頌！！ - %d g</string>
     <string name="Bishop_lesser_bless">誠心默禱！ - %d g</string>
-    <string name="Bishop_no_money">下次記得提 \&quot; 錢 \&quot; 來排隊啊~</string>
+    <string name="Bishop_no_money">下次記得提 \" 錢 \" 來排隊啊~</string>
     <string name="Bishop_not_interested">離開</string>
     <string name="Bishop_remove_curse">聖光除咒！！！ - %d g</string>
     <string name="Bishop_text">我的孩子啊！我日夜的為您祈禱！</string>
@@ -441,7 +442,7 @@
     <string name="Codex_Story_24">這本書是用精靈語寫的</string>
     <string name="Codex_Story_25">她在厚重的橡木門前停下，如被凍住一般。門框邊閃爍的微光吸引了她的眼球，令她逐漸回想起了一些被遺忘的往事。\n
 
-\&quot;光...\&quot;她喃呢著。過去了多久?在永遠黑暗的地牢中,她早就忘記去記錄時間了。這微光使她回想起了過去。她想起了她過去的練習,長時間的揮舞和穿刺,以及對地圖和事件的記錄訓練。她想起她曾經用祈禱和知識來使她能在未知的地方保留一點點的理智。但是她想不起，也記不起，那些她遇見過的人。\n
+\"光...\"她喃呢著。過去了多久?在永遠黑暗的地牢中,她早就忘記去記錄時間了。這微光使她回想起了過去。她想起了她過去的練習,長時間的揮舞和穿刺,以及對地圖和事件的記錄訓練。她想起她曾經用祈禱和知識來使她能在未知的地方保留一點點的理智。但是她想不起，也記不起，那些她遇見過的人。\n
 
 她回想起了他們聲音，他們的指令，他們的警告，但記不起他們的臉，他們的觸感。\n
 
@@ -534,7 +535,7 @@
     <string name="DeepSnail_Desc">這種軟體動物經常出現在水源附近，而且比普通蝸牛速度快得多。不過要小心牠們的咬傷，可能會對你的皮膚造成不適。</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamage_Killed_Txt">%s 殺了您……</string>
-    <string name="DevourBuff_Info"/>
+    <string name="DevourBuff_Info" />
     <string name="DevourBuff_Name">吞噬</string>
     <string name="DewVial_ACDRINK">飲下</string>
     <string name="DewVial_AutoDrink">空的露水瓶沒法用來治療傷口。</string>
@@ -630,7 +631,7 @@
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">爆炸頭骨</string>
     <string name="ExplodingSkull_Name_Objective">爆炸頭骨</string>
-    <string name="Eye_Desc">這種惡魔的另一個別名為\&quot;憎惡之球\&quot;，因為它一旦看到敵人就會毫無顧忌地使用它們的死亡凝視，即使這會傷害到它的友軍。</string>
+    <string name="Eye_Desc">這種惡魔的另一個別名為\"憎惡之球\"，因為它一旦看到敵人就會毫無顧忌地使用它們的死亡凝視，即使這會傷害到它的友軍。</string>
     <string name="Eye_Kill">%s的死亡凝視殺死了你……</string>
     <string name="Eye_Name">邪眼</string>
     <string name="Eye_Name_Objective">邪眼</string>
@@ -728,7 +729,7 @@
     <string name="GoldenSword_Info">通常用這種柔軟的金屬制造而成的武器只會被視為裝飾品，盡管它的劍刃看起來能輕易的切斷物品。</string>
     <string name="GoldenSword_Name">黃金劍</string>
     <string name="Golem_Defense">格擋</string>
-    <string name="Golem_Desc">矮人們嘗試將他們關於機械的知識與新發現的元素力量相結合。土之靈作為公認的最容易掌控的元素之靈，被用來當作機械的\&quot;靈魂\&quot;。即使這樣，儀式中任何細微的失誤都會造成嚴重的爆炸。</string>
+    <string name="Golem_Desc">矮人們嘗試將他們關於機械的知識與新發現的元素力量相結合。土之靈作為公認的最容易掌控的元素之靈，被用來當作機械的\"靈魂\"。即使這樣，儀式中任何細微的失誤都會造成嚴重的爆炸。</string>
     <string name="Golem_Name">魔像</string>
     <string name="Golem_Name_Objective">魔像</string>
     <string name="Goo_Info1">粘咕正在不斷地抽動！</string>
@@ -833,7 +834,7 @@
     <string name="HeroSubClass_DescFreR">當_疾行者_處於不負重和不饑餓的狀態下，能以絕大多數怪物兩倍的速度移動，奔跑期間，敵人攻擊更難命中。</string>
     <string name="HeroSubClass_DescGlad">一次成功的近戰攻擊可以讓_角鬥士_找回節奏，開始連擊。接下來每次近戰攻擊命中都會造成更多傷害。</string>
     <string name="HeroSubClass_DescGuardian">熟練的防禦知識使_守護者_能夠用盾牌反擊，讓那些敢於攻擊這座移動堡壘的人面對一個可怕的敵人。</string>
-    <string name="HeroSubClass_DescNone"/>
+    <string name="HeroSubClass_DescNone" />
     <string name="HeroSubClass_DescScout">精靈_斥候_是隱匿大師，踩踏高草會讓他們獲得一個短暫的隱身狀態。此外，他們比通常的精靈更快更靈敏。</string>
     <string name="HeroSubClass_DescShaman">精靈_薩滿_能夠將法杖作為近戰武器使用。近戰攻擊命中將有機會對敵人釋放法杖的能量，且不捎耗充能。</string>
     <string name="HeroSubClass_DescSnip">_狙擊手_見微知著，能夠找出敵人護甲的脆弱點，使用遠程武器攻擊時，能有效地無視敵人護甲打出傷害。</string>
@@ -1190,7 +1191,7 @@
     <string name="MissileWeapon_No">不，我改主意了</string>
     <string name="MissileWeapon_Sure">您確定要將其用作近戰武器？</string>
     <string name="MissileWeapon_Yes">是的，我知道我在做什麼</string>
-    <string name="Mob_Cannot_Be_Pet">你沒法控制住 \&quot;%s\&quot;</string>
+    <string name="Mob_Cannot_Be_Pet">你沒法控制住 \"%s\"</string>
     <string name="Mob_Desc">真正的說明即將到來！</string>
     <string name="Mob_Died">你聽到有什麼東西在遠處死去了</string>
     <string name="Mob_GoingTo">已經在路上了！</string>
@@ -1251,7 +1252,7 @@
     <string name="NecromancerRobe_PetLimitReached">亡靈法師:召喚上限重置(最大召喚數:%d)!</string>
     <string name="Necromancer_ACSpecial">死靈術</string>
     <string name="Necromancy_BecameALich">你成為了巫妖！你的身體正在變化，同時你的靈魂容量提升了一倍！但是你失去了 %1$d 點力量。</string>
-    <string name="Necromancy_NotEnoughSouls">你沒有足夠的靈魂來施放 \&quot;%1$s\&quot; 法術。</string>
+    <string name="Necromancy_NotEnoughSouls">你沒有足夠的靈魂來施放 \"%1$s\" 法術。</string>
     <string name="Necromancy_ReincarnationName">轉生</string>
     <string name="Necromancy_ReincarnationTriggered">你的力量使你從死亡中歸來！但你失去了所有已收集的靈魂和所有物。</string>
     <string name="Necromancy_SoulsCountLabel">靈魂</string>
@@ -1336,7 +1337,7 @@
     <string name="PortalGate_Name">傳送門</string>
     <string name="PortalGate_Used">你觸碰了傳送門……門沒有任何反應。</string>
     <string name="Possess_CantPossessSelf">你不能對自己使用</string>
-    <string name="Possess_Info">黑暗的藝術 \&quot; 心靈控制 \&quot;。施法者可以扭曲大多數生物的意志。</string>
+    <string name="Possess_Info">黑暗的藝術 \" 心靈控制 \"。施法者可以扭曲大多數生物的意志。</string>
     <string name="Possess_Name">靈魂控制</string>
     <string name="Possess_Possessed">%s正在等待您的命令</string>
     <string name="Possess_PossessionFailed">%s的自我意識太過強烈</string>
@@ -1447,7 +1448,7 @@
     <string name="RatHide_Info">又臟又臭的帶毛肉皮,這真的有用嗎?</string>
     <string name="RatHide_Name">老鼠腿</string>
     <string name="RatKingCrownBuff_Name">鼠王殿下</string>
-    <string name="RatKingCrown_Info">純金的鼠王王冠，鼠國的 \&quot; 永恆 \&quot; 與 \&quot; 力量 \&quot; 的象徵！</string>
+    <string name="RatKingCrown_Info">純金的鼠王王冠，鼠國的 \" 永恆 \" 與 \" 力量 \" 的象徵！</string>
     <string name="RatKingCrown_Name">鼠王之冠</string>
     <string name="RatKing_Desc">這只老鼠比普通的老鼠更大，並且頭上戴著一個小小的皇冠。</string>
     <string name="RatKing_Died">舊王已死，新皇當立！</string>
@@ -1514,7 +1515,7 @@
     <string name="RingOfSatiety_Name">飽足之戒</string>
     <string name="RingOfShadows_Info">如果您戴上這枚戒指，敵人將更難注意到您。退化的暗影戒指會警告那些沒有意識到您存在的敵人。</string>
     <string name="RingOfShadows_Name">暗影之戒</string>
-    <string name="RingOfStoneWalking_ImmuredInStone">你\&quot; 融入 \&quot;石牆了。永遠~</string>
+    <string name="RingOfStoneWalking_ImmuredInStone">你\" 融入 \"石牆了。永遠~</string>
     <string name="RingOfStoneWalking_Info">這枚奇怪的戒指是由某種堅硬的石頭制成的。 你最初認為鑲嵌物是紅寶石，實際上是被某種力量限制的血液。在這血液之中，有一個箭頭指向一堵牆，伴隨著一顆破碎之心的牆……這枚戒指可以做什麼？</string>
     <string name="RingOfStoneWalking_Name">血石戒指</string>
     <string name="RingOfThorns_Info">雖然這枚戒指並沒有真正的荊棘，但當敵人攻擊你時，他們所造成傷害的一小部分會反饋回他們身上。升級這枚戒指不會給予任何額外加成。</string>
@@ -1656,7 +1657,7 @@
     <string name="Scroll_ACRead">閱讀</string>
     <string name="Scroll_Blinded">您暫時失明，不能閱讀</string>
     <string name="Scroll_Info">這張羊皮紙上寫滿了難以破譯的文字，並帶有%s的符文。高聲朗誦它時不知會有甚麼神奇的事發生呢？</string>
-    <string name="Scroll_Name">\&quot;%s\&quot;卷軸</string>
+    <string name="Scroll_Name">\"%s\"卷軸</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="Scroll_Runes_1">SOWILO</string>
     <string name="Scroll_Runes_10">ODAL</string>
@@ -1770,10 +1771,10 @@
     <string name="Spear_Info">這是一根裝著鋒銳鐵戈的細幼木杖。</string>
     <string name="Spear_Name">長矛</string>
     <string name="SpellBook_Info">它看起來更像是各種頁面縫在一起拼湊的，而不是一本實際的書。如果您付出足夠的時間的話，您也許可以從中獲益。</string>
-    <string name="SpellBook_Info_Identified">閱覽完這些頁面你發現\&quot;%1$s\&quot;術式的全文.\n\&quot; %2$s \&quot;</string>
+    <string name="SpellBook_Info_Identified">閱覽完這些頁面你發現\"%1$s\"術式的全文.\n\" %2$s \"</string>
     <string name="SpellBook_Name">魔法書殘頁</string>
     <string name="Spell_SelectACell">選擇一個位置</string>
-    <string name="Spells_NotEnoughSP">你沒有足夠的瑪那來釋放 \&quot;%1$s\&quot; 這個技能</string>
+    <string name="Spells_NotEnoughSP">你沒有足夠的瑪那來釋放 \"%1$s\" 這個技能</string>
     <string name="Spells_NotInOwnBody">當你的靈魂與身體分離時，你不能%s。</string>
     <string name="Spells_NotTooFast">%s 沒有準備好使用</string>
     <string name="Spells_SummonLimitReached">%1$s: 召喚上限提升 (最大值: %2$d)!</string>
@@ -1956,8 +1957,8 @@
     <string name="Undead_Name_Objective">矮人亡靈</string>
     <string name="Ushanka_Info">帶有閃耀紅星的溫暖舒適的蘇聯毛帽。讓共產主義的光輝照亮這個邪惡冷酷的地牢。</string>
     <string name="Ushanka_Name">蘇聯毛帽</string>
-    <string name="Using_Failed_Because_Blind">失明狀態下 \&quot;%s\&quot;無法使用</string>
-    <string name="Using_Failed_Because_Magic">強大魔力阻止使用 \&quot;%s\&quot;。</string>
+    <string name="Using_Failed_Because_Blind">失明狀態下 \"%s\"無法使用</string>
+    <string name="Using_Failed_Because_Magic">強大魔力阻止使用 \"%s\"。</string>
     <string name="VampireSkull_Info">這個面具是由一個完全野生的吸血鬼頭骨制成的。一個吸血鬼的頭骨...一個大頭吸血鬼的頭骨...嚇。</string>
     <string name="VampireSkull_Name">吸血鬼頭骨</string>
     <string name="VertigoBuff_Name">眩暈</string>
@@ -2036,18 +2037,18 @@
     <string name="Wand_SelfTarget">你不能以自己為施法目標。</string>
     <string name="Wand_Weapon">你可以將這根法杖當近戰武器使用。</string>
     <string name="Wand_Wood">這根%s法杖摸上去很暖和。誰能知道使用它會發生什麼事？</string>
-    <string name="Wand_Wood_Types_0">&quot;冬青&quot;</string>
-    <string name="Wand_Wood_Types_1">&quot;紅豆杉&quot;</string>
-    <string name="Wand_Wood_Types_10">&quot;橡木&quot;</string>
-    <string name="Wand_Wood_Types_11">&quot;樺木&quot;</string>
-    <string name="Wand_Wood_Types_2">&quot;烏木&quot;</string>
-    <string name="Wand_Wood_Types_3">&quot;櫻桃&quot;</string>
-    <string name="Wand_Wood_Types_4">&quot;柚木&quot;</string>
-    <string name="Wand_Wood_Types_5">&quot;花楸&quot;</string>
-    <string name="Wand_Wood_Types_6">&quot;柳&quot;</string>
-    <string name="Wand_Wood_Types_7">&quot;桃花心木&quot;</string>
-    <string name="Wand_Wood_Types_8">&quot;竹&quot;</string>
-    <string name="Wand_Wood_Types_9">&quot;紫心&quot;</string>
+    <string name="Wand_Wood_Types_0">\"冬青\"</string>
+    <string name="Wand_Wood_Types_1">\"紅豆杉\"</string>
+    <string name="Wand_Wood_Types_10">\"橡木\"</string>
+    <string name="Wand_Wood_Types_11">\"樺木\"</string>
+    <string name="Wand_Wood_Types_2">\"烏木\"</string>
+    <string name="Wand_Wood_Types_3">\"櫻桃\"</string>
+    <string name="Wand_Wood_Types_4">\"柚木\"</string>
+    <string name="Wand_Wood_Types_5">\"花楸\"</string>
+    <string name="Wand_Wood_Types_6">\"柳\"</string>
+    <string name="Wand_Wood_Types_7">\"桃花心木\"</string>
+    <string name="Wand_Wood_Types_8">\"竹\"</string>
+    <string name="Wand_Wood_Types_9">\"紫心\"</string>
     <string name="WarHammer_Info">沒有多少生物可以承受這種武器的碾壓，但只有少數強者才可以精通它。</string>
     <string name="WarHammer_Name">戰錘</string>
     <string name="Warlock_Desc">當矮人們的興趣由工程轉向奧術時，城市中的權力開始被術士掌握。他們最開始研究元素魔法，但不久就轉為研究惡魔學和死靈術。</string>
@@ -2116,7 +2117,7 @@
     <string name="WndDonate_ruby">紅寶石</string>
     <string name="WndDonate_rubyDonate">紅寶石級捐獻</string>
     <string name="WndDonate_rubyDonateText">您的慷慨將會幫助我們改善混合的像素地牢！</string>
-    <string name="WndDonate_rubyDonateText2"/>
+    <string name="WndDonate_rubyDonateText2" />
     <string name="WndDonate_silver">白銀</string>
     <string name="WndDonate_silverDonate">白銀級捐獻</string>
     <string name="WndDonate_silverDonateText">任何捐獻皆作此遊戲之開發用途。</string>
