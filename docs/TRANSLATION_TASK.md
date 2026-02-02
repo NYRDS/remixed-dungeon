@@ -341,6 +341,12 @@ After adding translations:
 - **Example**: Instead of `"This %s is %s"`, use `"This %1$s is %2$s"`
 - **Important**: When translating strings with multiple placeholders, ensure the order matches the code usage. For example, if the code calls `Utils.format(R.string.MobAi_status, me.getName(), getTag())`, then `%1$s` should correspond to the mob name and `%2$s` to the status tag.
 
+### Apostrophe Escaping Issues
+- **Problem**: Apostrophes in contractions like `po'` (meaning "of" in some languages) need to be properly escaped
+- **Solution**: Use `\'` to escape apostrophes that are not part of XML entities like `&apos;`
+- **Example**: `Starò con te per un po'.` should be `Starò con te per un po\'.` (the apostrophe before the period needs escaping)
+- **Note**: The validation and auto-fix tools now properly detect and fix this pattern
+
 ### XML Formatting Issues
 - **Problem**: Improperly formatted XML strings can cause build failures
 - **Common Issues**:
@@ -351,6 +357,31 @@ After adding translations:
 - **Solution**: Always validate your XML after adding translations
 - **Best Practice**: Use the validation script regularly: `python3 tools/validate_translations.py /path/to/remixed-dungeon`
 
+### Android-Specific String Resource Requirements
+- **Problem**: Android has specific requirements for string resources that differ from standard XML
+- **Solutions**:
+  - Escape `@` symbols as `\@` when they appear in strings
+  - Escape `?` symbols as `\?` when they appear at the beginning of strings
+  - Properly format Unicode escapes as `\uXXXX` (4-digit hex codes)
+  - Ensure all HTML-like tags within strings are properly closed
+  - Handle whitespace correctly - if a string starts or ends with spaces, consider wrapping in quotes
+
+### Android Build Issues
+- **Problem**: Android builds can fail due to various localization issues:
+  - Multiple substitutions in non-positional format (e.g., multiple `%s` without positional identifiers) - **THIS WILL CAUSE BUILD FAILURE**
+  - Invalid unicode escape sequences (appearing as `{str}`) - **THIS WILL CAUSE BUILD FAILURE**
+  - Malformed XML strings - **THIS WILL CAUSE BUILD FAILURE**
+  - Duplicate string entries - **THIS WILL CAUSE BUILD FAILURE**
+  - Unescaped special characters (apostrophes, quotes, ampersands) - **THIS WILL CAUSE BUILD FAILURE**
+  - Improperly formatted Unicode escapes - **THIS WILL CAUSE BUILD FAILURE**
+  - Unclosed HTML tags within strings - **THIS CAN CAUSE RUNTIME ERRORS**
+- **Solution**:
+  - Always use positional identifiers for multiple placeholders: `%1$s`, `%2$s`, etc.
+  - Ensure all special characters are properly escaped in XML format
+  - Run the validation script before committing changes
+  - Test the Android build after adding new translations
+  - Use the insertion tools (`insert_translated_string.py`) which help prevent these issues
+
 ### Validation Checklist
 Before submitting translations, ensure:
 1. All apostrophes are properly escaped in any language using `\'` or `&apos;`
@@ -360,6 +391,99 @@ Before submitting translations, ensure:
 5. The XML file is well-formed and can be parsed without errors
 6. Gender values are in English and lowercase (feminine, masculine, neuter)
 7. The translated string maintains the same meaning and context as the original
+8. Positional identifiers are used for all placeholders when there are multiple in a string
+9. No invalid unicode escape sequences are present
+10. All `@` symbols are escaped as `\@`
+11. All `?` symbols at the beginning of strings are escaped as `\?`
+12. Unicode escapes are properly formatted as `\uXXXX`
+13. All HTML-like tags within strings are properly closed
+14. Strings with leading/trailing spaces are handled correctly
+15. Contractions with apostrophes (like `po'`) are properly escaped as `po\'`
+16. The auto-fix script has been run to address trivial escape issues: `python3 tools/validate_translations.py --auto-fix`
+
+## Auto-Fix Functionality
+
+### Overview
+The project includes an auto-fix functionality that automatically resolves common escape issues in localization files:
+
+**Script location:** `tools/validate_translations.py`
+
+**Usage:**
+```bash
+python3 tools/validate_translations.py /path/to/remixed-dungeon --auto-fix
+```
+
+### Issues Addressed by Auto-Fix
+The auto-fix functionality addresses the following common issues:
+- Unescaped apostrophes (e.g., `po'` becomes `po\'`)
+- Unescaped quotes (e.g., `"` becomes `\"`)
+- Unescaped ampersands (e.g., `&` becomes `&amp;`)
+- Unescaped @ symbols (e.g., `@` becomes `\@`)
+- Unescaped ? symbols at the beginning of strings (e.g., `?` becomes `\?`)
+- Invalid unicode escape sequences (e.g., `{str}` gets removed)
+- Duplicate string entries (removes duplicates, keeps first occurrence)
+
+### Benefits
+- Significantly reduces manual work required to fix common issues
+- Ensures consistent formatting across all localization files
+- Helps maintain Android buildability by preventing common XML parsing errors
+- Automatically handles the `po'` apostrophe case and other contractions
+
+### Workflow Integration
+1. Run the auto-fix script before committing changes: `python3 tools/validate_translations.py --auto-fix`
+2. Review the changes made by the auto-fix script
+3. Run the validation script again to ensure all issues are resolved: `python3 tools/validate_translations.py`
+4. Test the Android build to confirm buildability
+
+## Duplicate String Detection and Removal
+
+### Problem
+Localization files can sometimes contain duplicate string entries, which cause Android build failures with errors like:
+```
+ERROR: .../strings_all.xml: Resource and asset merger: Found item String/[string_name] more than one time
+```
+
+### Detection Methods
+
+#### Method 1: Using grep to find duplicate entries
+```bash
+# Find all duplicate string names in a localization file
+grep -o 'name="[^"]*"' RemixedDungeon/src/main/res/values-[lang]/strings_all.xml | sort | uniq -d
+```
+
+#### Method 2: Using a dedicated script
+The project includes a script to detect and report duplicate strings across all localization files:
+
+**Script location:** `tools/check_duplicate_strings.py`
+
+**Usage:**
+```bash
+python3 tools/check_duplicate_strings.py /path/to/remixed-dungeon [language_code]
+```
+
+This script will:
+- Scan all string entries in the specified language's strings_all.xml file
+- Identify and list any duplicate string names
+- Report the line numbers where duplicates occur
+- Support scanning all languages if no language code is specified
+
+### Removal Process
+
+#### Manual Removal
+1. Identify the duplicate strings using one of the detection methods above
+2. Open the localization file in an editor
+3. Remove the duplicate entries, keeping only the correct/updated version
+4. Verify the XML remains well-formed after removal
+5. Test the build to ensure the issue is resolved
+
+#### Automated Removal
+For cases with many duplicates (like the Greek localization), manual removal is tedious. The auto-fix functionality in `validate_translations.py` now handles this automatically.
+
+### Prevention
+- Always use the insertion tools (`insert_translated_string.py`) which prevent duplicate entries
+- Regularly run duplicate checks as part of the localization workflow
+- Validate localization files before committing changes using the validation script: `python3 tools/validate_translations.py /path/to/remixed-dungeon`
+- The validation script now includes checks for duplicate strings as part of the standard validation process
 
 ## Common String Patterns
 
