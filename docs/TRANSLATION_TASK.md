@@ -209,6 +209,8 @@ This will add the string to the appropriate localization file with proper format
 - Be careful with special characters that might have meaning in XML
 - Use appropriate escape sequences if needed
 - Preserve formatting placeholders like `%1$s`, `%d`, etc.
+- Avoid wrapping entire string content with quotes (e.g., `"This is text"` should be `This is text`)
+- For quotes within strings, use `\"` (preferred) or `&quot;` to escape them
 
 ### Gender Values
 - For strings with IDs ending in `_Gender`, only specific lowercase values are allowed:
@@ -382,10 +384,17 @@ After adding translations:
   - Test the Android build after adding new translations
   - Use the insertion tools (`insert_translated_string.py`) which help prevent these issues
 
+### Wrapped Quotes Issues
+- **Problem**: Sometimes strings get wrapped with quotes in the XML (e.g., `<string name="example">"This text is wrapped"</string>`) - **THIS WILL CAUSE BUILD ISSUES**
+- **Solution**:
+  - Remove the outer quotes from the string content: `<string name="example">This text is wrapped</string>`
+  - If you need quotes within the string content, use `\"` (preferred) or `&quot;` to escape them
+  - The validation script will detect and auto-fix this issue when using `--auto-fix` option
+
 ### Validation Checklist
 Before submitting translations, ensure:
 1. All apostrophes are properly escaped in any language using `\'` or `&apos;`
-2. All quotes are properly escaped using `\"` or `&quot;`
+2. All quotes are properly escaped using `\"` (preferred) or `&quot;`
 3. Multiple placeholders use positional identifiers (%1$s, %2$s, etc.)
 4. Special characters are converted to proper XML entities
 5. The XML file is well-formed and can be parsed without errors
@@ -399,7 +408,8 @@ Before submitting translations, ensure:
 13. All HTML-like tags within strings are properly closed
 14. Strings with leading/trailing spaces are handled correctly
 15. Contractions with apostrophes (like `po'`) are properly escaped as `po\'`
-16. The auto-fix script has been run to address trivial escape issues: `python3 tools/validate_translations.py --auto-fix`
+16. Avoid wrapping entire string content with quotes (e.g., `"This is text"` should be `This is text`)
+17. The auto-fix script has been run to address trivial escape issues: `python3 tools/validate_translations.py --auto-fix`
 
 ## Auto-Fix Functionality
 
@@ -416,18 +426,21 @@ python3 tools/validate_translations.py /path/to/remixed-dungeon --auto-fix
 ### Issues Addressed by Auto-Fix
 The auto-fix functionality addresses the following common issues:
 - Unescaped apostrophes (e.g., `po'` becomes `po\'`)
-- Unescaped quotes (e.g., `"` becomes `\"`)
+- Unescaped quotes (e.g., `"` becomes `\"`) - now consistently uses `\"` notation
 - Unescaped ampersands (e.g., `&` becomes `&amp;`)
 - Unescaped @ symbols (e.g., `@` becomes `\@`)
 - Unescaped ? symbols at the beginning of strings (e.g., `?` becomes `\?`)
 - Invalid unicode escape sequences (e.g., `{str}` gets removed)
 - Duplicate string entries (removes duplicates, keeps first occurrence)
+- Strings with quotes wrapping entire content (e.g., `"This text"` becomes `This text`)
 
 ### Benefits
 - Significantly reduces manual work required to fix common issues
 - Ensures consistent formatting across all localization files
 - Helps maintain Android buildability by preventing common XML parsing errors
 - Automatically handles the `po'` apostrophe case and other contractions
+- Automatically detects and fixes strings with quotes wrapping entire content
+- Consistently applies `\"` notation for quote escaping throughout all files
 
 ### Workflow Integration
 1. Run the auto-fix script before committing changes: `python3 tools/validate_translations.py --auto-fix`
