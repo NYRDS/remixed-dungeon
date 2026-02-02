@@ -272,10 +272,12 @@
   <string name="SociologistNPC_Gender">masculine</string>
   <string name="SociologistNPC_Name_Objective">Sociologist</string>
   <string name="SociologistNPC_Desc">This sociologist is on a holy quest of collecting public opinions</string>
-  <string name="SociologistNPC_AlreadyTaken">\"You already took part in this survey, please come back later\"</string>
-  <string name="SociologistNPC_Hi">\"Hi!\nDid you want to take part in our survey?(Internet access will be required)\nYour opinion matters!\"</string>
-  <string name="SociologistNPC_InternetRequired">\"Sorry, but without access to the Internet you cannot pass our survey\"</string>
-  <string name="SociologistNPC_DownloadError">\"Sorry, something went wrong, please try again later\"</string>
+  <string name="SociologistNPC_AlreadyTaken">You already took part in this survey, please come back later</string>
+  <string name="SociologistNPC_Hi">Hi!
+Did you want to take part in our survey?(Internet access will be required)
+Your opinion matters!</string>
+  <string name="SociologistNPC_InternetRequired">Sorry, but without access to the Internet you cannot pass our survey</string>
+  <string name="SociologistNPC_DownloadError">Sorry, something went wrong, please try again later</string>
   <string name="town_deco_library_sign_name">Library sign</string>
   <string name="town_deco_library_sign_desc">Seems like there is a library inside that building.</string>
   <string name="town_deco_identifier_sign_name">Magic Ball sign</string>

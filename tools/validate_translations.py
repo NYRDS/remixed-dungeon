@@ -36,6 +36,16 @@ def auto_fix_trivial_issues(file_path):
 
             fixed_text = original_text
 
+            # Fix wrapped quotes around entire string content (e.g., "This is a quote")
+            # This removes the outer quotes if the entire string is wrapped in them
+            if (fixed_text.startswith('"') and fixed_text.endswith('"') and len(fixed_text) >= 2):
+                # Check if it's actually a string wrapped in quotes (not just a string that happens to start/end with ")
+                # This is a simple heuristic: if there are no other quotes in the middle, it's likely wrapped
+                inner_content = fixed_text[1:-1]  # Remove first and last character
+                if '"' not in inner_content or inner_content.count('"') < fixed_text.count('"'):
+                    fixed_text = inner_content
+                    changes_made = True
+
             # Fix unescaped ampersands that are not part of XML entities
             fixed_text = re.sub(r'&(?![a-zA-Z]+;|#[0-9]+;|#x[0-9a-fA-F]+;)', '&amp;', fixed_text)
 
@@ -195,6 +205,15 @@ def validate_special_characters(file_path):
         for string_elem in root.findall('string'):
             name = string_elem.get('name')
             value = string_elem.text or ""
+
+            # Check for wrapped quotes around entire string content (e.g., "This is a quote")
+            if (value.startswith('"') and value.endswith('"') and len(value) >= 2):
+                # Check if it's actually a string wrapped in quotes (not just a string that happens to start/end with ")
+                # This is a simple heuristic: if there are no other quotes in the middle, it's likely wrapped
+                inner_content = value[1:-1]  # Remove first and last character
+                if '"' not in inner_content or inner_content.count('"') < value.count('"'):
+                    print(f"Error: String content wrapped in quotes found in string '{name}' in {file_path}: '{value}'. Quotes should not wrap entire string content in Android XML.")
+                    all_valid = False
 
             # Check for unescaped apostrophes in any language (should be \' or &apos;)
             # This is particularly important for contractions in various languages
