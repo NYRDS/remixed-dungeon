@@ -210,7 +210,7 @@ This will add the string to the appropriate localization file with proper format
 - Use appropriate escape sequences if needed
 - Preserve formatting placeholders like `%1$s`, `%d`, etc.
 - Avoid wrapping entire string content with quotes (e.g., `"This is text"` should be `This is text`)
-- For quotes within strings, use `\"` (preferred) or `&quot;` to escape them
+- For quotes within strings, use `\"` to escape them
 - Note: `&quot;` should be treated as an error and replaced with `\"` during validation
 
 ### Gender Values
@@ -395,7 +395,7 @@ After adding translations:
 ### Validation Checklist
 Before submitting translations, ensure:
 1. All apostrophes are properly escaped in any language using `\'` or `&apos;`
-2. All quotes are properly escaped using `\"` (preferred) or `&quot;`
+2. All quotes are properly escaped using `\"`
 3. Multiple placeholders use positional identifiers (%1$s, %2$s, etc.)
 4. Special characters are converted to proper XML entities
 5. The XML file is well-formed and can be parsed without errors

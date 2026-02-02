@@ -78,7 +78,7 @@ def auto_fix_trivial_issues(file_path):
             # Fix unescaped quotes in any language (should be \")
             # Only escape quotes that are not already escaped
             # Also replace existing &quot; with \"
-            # Prefer \" over &quot; for Android string resources
+            # Only use \" for Android string resources
             fixed_text = re.sub(r'(?<!\\)"', '\\"', fixed_text)
             # Replace any existing &quot; with \"
             fixed_text = re.sub(r'&quot;', '\\"', fixed_text)
@@ -216,7 +216,7 @@ def validate_special_characters(file_path):
                         break
                 i += 1
 
-            # Check for unescaped apostrophes in any language (should be \' or &apos;)
+            # Check for unescaped apostrophes in any language (should be \')
             # This is particularly important for contractions in various languages
             # Check for apostrophes that are not preceded by \ and not part of &apos; entity
             i = 0
@@ -233,7 +233,7 @@ def validate_special_characters(file_path):
                                (i < len(value)-3 and value[i:i+4] == '&apo')
 
                     if not is_entity:
-                        print(f"Error: Unescaped apostrophe found in string '{name}' in {file_path}: '{value}'. Use \\' or &apos; instead.")
+                        print(f"Error: Unescaped apostrophe found in string '{name}' in {file_path}: '{value}'. Use \\' instead.")
                         all_valid = False
                         break
                 i += 1
