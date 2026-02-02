@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">포식</string>
     <string name="AC_Kick">차기</string>
@@ -49,7 +50,7 @@
     <string name="Ankh_Name">앙크</string>
     <string name="AntiEntropy_Txt">반 엔트로피의 %s</string>
     <string name="ArmorKit_ACAplly">적용</string>
-    <string name="ArmorKit_Info">이 키트를 사용하면 기존 방어구의 모든 속성을 유지한 상태로 \&quot;에픽 방어구\&quot;로 변환할 수 있습니다. 이 키트를 사용하면 자신의 직업에 따른 특별한 기능을 제공하며,  여기에 재봉술이나 무두질 또는 대장장이 기술 같은 능력은 필요하지 않습니다.</string>
+    <string name="ArmorKit_Info">이 키트를 사용하면 기존 방어구의 모든 속성을 유지한 상태로 \"에픽 방어구\"로 변환할 수 있습니다. 이 키트를 사용하면 자신의 직업에 따른 특별한 기능을 제공하며,  여기에 재봉술이나 무두질 또는 대장장이 기술 같은 능력은 필요하지 않습니다.</string>
     <string name="ArmorKit_Name">방어구 키트</string>
     <string name="ArmorKit_SelectArmor">강화할 방어구를 선택하세요.</string>
     <string name="ArmorKit_Upgraded">%s 에 방어구 키트를 적용했습니다.</string>
@@ -57,7 +58,7 @@
     <string name="Armor_Glyph">문양</string>
     <string name="Armor_Identify">당신은 이제 %1$s 을 식별할 수 있을 만큼 충분히 익숙해졌습니다. 이것은 %2$s 입니다.</string>
     <string name="Armor_Incompatible">서로 다른 마법간의 상호작용으로 갑옷의 각인이 지워져 버렸다!</string>
-    <string name="Armor_Info1">이 %1$s 은/는 공격 당 최대  \&quot;%2$d\&quot; 데미지를 흡수할 수 있다</string>
+    <string name="Armor_Info1">이 %1$s 은/는 공격 당 최대  \"%2$d\" 데미지를 흡수할 수 있다</string>
     <string name="Armor_Info2">\n\n힘이 부족하여 움직임이 느려지고 방어능력이 떨어졌습니다.</string>
     <string name="Armor_Info3">\n\n이 갑옷을 입기 위한 힘이 부족하여 착용하면 움직임이 느려지고 방어 능력이 떨어질 것이다.</string>
     <string name="Armor_Info4">\n\n일반적인 %1$s 은/는 최대 %2$d 데미지를 흡수하고 힘 %3$d을 필요로 한다.</string>
@@ -84,7 +85,7 @@
     <string name="Badges_AllPotions">모든 물약 감정됨</string>
     <string name="Badges_AllRings">모든 반지 감정됨</string>
     <string name="Badges_AllScrolls">모든 주문서 감정됨</string>
-    <string name="Badges_AllWands">모든 마법봉을 식별함\&quot;</string>
+    <string name="Badges_AllWands">모든 마법봉을 식별함\"</string>
     <string name="Badges_BossSlain4">왕이 살해되었다</string>
     <string name="Badges_Champion">도전 성공</string>
     <string name="Badges_DeathFalling">추락 데미지로 인해 사망</string>
@@ -209,7 +210,7 @@
     <string name="BlackSkull_Activated">검은 해골이 깨어났습니다!</string>
     <string name="BlackSkull_Deactivated">검은 해골은 다시 휴식기에 들어갔습니다..</string>
     <string name="BlackSkull_Info">작은 흑요석 해골입니다. 네크로폴리스의 힘의 원천이었지만, 리치가 쓰러진 후 모든 힘을 잃은것으로 보입니다. 하지만 손에 쥐고 있으면 이것이 굶주리고 있다는 이상한 생각이 스칩니다.</string>
-    <string name="BlackSkull_Info_Awakened">당신은 해골의 빈 눈으로부터 강한 힘이 진동하는 것을 볼 수 있습니다. 그리고 당신이 해골을 들 때마다 당신은 \&quot;죽음이 행진한다\&quot;라는 공포스러운 목소리를 들을 수 있습니다.</string>
+    <string name="BlackSkull_Info_Awakened">당신은 해골의 빈 눈으로부터 강한 힘이 진동하는 것을 볼 수 있습니다. 그리고 당신이 해골을 들 때마다 당신은 \"죽음이 행진한다\"라는 공포스러운 목소리를 들을 수 있습니다.</string>
     <string name="BlackSkull_Name">검은 해골</string>
     <string name="BlackSkull_Name_Awakened">깨어난 검은 해골</string>
     <string name="BlackSkull_Ressurrect">검은 해골이 죽은 몬스터가 당신을 섬기게 일으켰습니다!</string>
@@ -276,7 +277,7 @@
     <string name="Candy_Name">사탕</string>
     <string name="Candy_Warning_1">당신은 사탕을 먹지 말았어야 합니다. 당신은 누군가에게 이것을 주기로 약속했습니다. 이건 당신을 어떻게든 유혹한 것처럼 보이지 않지만, 당신의 허기는 사라지지 않습니다. 이건 그냥 사탕입니다.</string>
     <string name="Candy_Warning_2">당신은 정말 많은 사탕을 먹었고, 당신의 배가 많은 사탕때문에 아픕니다.</string>
-    <string name="Capotain_Info">길이가 길고 챙이 좁은 모자다. 대부분 청교도들이 쓰는 모자이지만, 굳이 그것에 연연할 필요는 없다. 무슨 이유인지 \&quot;솔로몬\&quot;이라는 이름표가 붙어있다.</string>
+    <string name="Capotain_Info">길이가 길고 챙이 좁은 모자다. 대부분 청교도들이 쓰는 모자이지만, 굳이 그것에 연연할 필요는 없다. 무슨 이유인지 \"솔로몬\"이라는 이름표가 붙어있다.</string>
     <string name="Capotain_Name">카포텡</string>
     <string name="Carcass_DissectFailed">%s을(를) 해부했지만 아무것도 얻지 못했다.</string>
     <string name="Carcass_DissectMessage">시신을 해부하여 %s 을(를) 얻었다.</string>
@@ -419,7 +420,7 @@
     <string name="Codex_Story_23">이 책은 드워프의 언어로 적혀 있습니다 .</string>
     <string name="Codex_Story_24">이 책은 엘프의 언어로 적혀 있습니다. </string>
     <string name="Codex_Story_25">She stopped, frozen, at the heavy oaken door, and eyed the light emerging from the door\'s borders. From some neglected corner of her mind, recognition.\n
-\&quot;Sunlight..\&quot; she muttered to herself. How long had it been? In the eternal gloom of the Dungeon, she had long ago given up on tracking the days. The light illuminated disused memories. She remembered her training, long days of arduous practice with \'rang and blade, of log keeping, and map making. She remembered the mantras and disciplines intended to allow her to retain some semblance of sanity as she plumbed the unknown depths. What she didn\'t remember, couldn\'t remember, were people.\n
+\"Sunlight..\" she muttered to herself. How long had it been? In the eternal gloom of the Dungeon, she had long ago given up on tracking the days. The light illuminated disused memories. She remembered her training, long days of arduous practice with \'rang and blade, of log keeping, and map making. She remembered the mantras and disciplines intended to allow her to retain some semblance of sanity as she plumbed the unknown depths. What she didn\'t remember, couldn\'t remember, were people.\n
 She remembered their voices, their commands, and their warnings, but not their faces, nor their touch.\n
 Pain had trained her. Remember the dangers, always the dangers. Rabid animals, undead, insane brigands, and cunning ninjas had fallen before her. She had cut, burned, stabbed, and poisoned her way through abominations, demons, clockwork abominations, and insane necromancers. Even Gods had fallen before her.\n
 She had tracked Yog through Heaven and Hell, before silencing his corrupting whispers forever. Even then, there was work to be done. Yog was a servant of one even more occult and powerful than himself.\n
@@ -499,7 +500,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Deathling_Name">사령</string>
     <string name="Deathling_Name_Objective">사령</string>
     <string name="DeferedDamage_Killed_Txt">%s 이/가 당신을 죽였습니다...</string>
-    <string name="DevourBuff_Info"/>
+    <string name="DevourBuff_Info" />
     <string name="DevourBuff_Name">포식</string>
     <string name="DewVial_ACDRINK">마시기</string>
     <string name="DewVial_AutoDrink">이슬병이 당신의 상처를 치유하기 위해 비워졌습니다.</string>
@@ -593,7 +594,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ExplodingSkull_Desc">이 떠다니는, 불타는 해골은 매우 불안정해 보이고 언제든지 폭발할 것 같습니다.</string>
     <string name="ExplodingSkull_Name">폭발하는 해골</string>
     <string name="ExplodingSkull_Name_Objective">폭발하는 해골</string>
-    <string name="Eye_Desc">이 악마의 또다른 이름은 \&quot;증오의 구슬\&quot;이다. 왜냐하면 한 번 적을 본 녀석은 주변에 아군이 있든 말든 무시하고 죽음의 광선을 사용하여 아군도 상처 입히기 때문이다.</string>
+    <string name="Eye_Desc">이 악마의 또다른 이름은 \"증오의 구슬\"이다. 왜냐하면 한 번 적을 본 녀석은 주변에 아군이 있든 말든 무시하고 죽음의 광선을 사용하여 아군도 상처 입히기 때문이다.</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">%s의 죽음의 광선이 당신을 죽였다...</string>
     <string name="Eye_Name">눈알 악마</string>
@@ -686,7 +687,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="GoldenSword_Info">보통 금과 같은 무른 금속으로 만들어진 무기는 장식으로만 쓰입니다. 하지만 이 칼은 여러가지를 꽤나 잘 베어버릴 수 있어 보입니다.</string>
     <string name="GoldenSword_Name">금 칼</string>
     <string name="Golem_Defense">막음</string>
-    <string name="Golem_Desc">드워프는 그들의 기계에 대한 지식과 새로 발견한 정령의 힘을 서로 융합하려고 하였다. 그들은 토양의 정기를 \&quot;영혼\&quot;으로 이용하여 골렘의 기계로 된 몸체에 넣었고, 이를 조종할 수 있을 거라고 믿어 의심치 않았다. 그럼에도 불구하고, 의식 도중에 아주 사소한 실수라도 재앙을 초래할 수 있다.</string>
+    <string name="Golem_Desc">드워프는 그들의 기계에 대한 지식과 새로 발견한 정령의 힘을 서로 융합하려고 하였다. 그들은 토양의 정기를 \"영혼\"으로 이용하여 골렘의 기계로 된 몸체에 넣었고, 이를 조종할 수 있을 거라고 믿어 의심치 않았다. 그럼에도 불구하고, 의식 도중에 아주 사소한 실수라도 재앙을 초래할 수 있다.</string>
     <string name="Golem_Name">골렘</string>
     <string name="Golem_Name_Objective">골렘</string>
     <string name="Goo_Desc">구에 대해서 알려진 것은 많지 않습니다. 아마도 구는 원래 생물체가 아니며, 하수구에 있던 유독한 물질들이 모여서 아주 기초적인 지성을 얻게 된 것 같습니다. 방법이야 어찌 되었든, 어두운 마법의 힘이 구를 존재하게 하는 것은 틀림없어 보입니다.</string>
@@ -760,7 +761,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_HunPerks_3">사냥꾼은 이슬로부터 더 많은 양의 체력을 회복합니다.</string>
     <string name="HeroClass_HunPerks_4">사냥꾼은 근처에 있는 적이 장애물 뒤에 숨어 있어도 인식할 수 있습니다.</string>
     <string name="HeroClass_Mag">마법사</string>
-    <string name="HeroClass_MagPerks_0">마법사는 특별한 마탄의 지팡이를 가지고 시작합니다. 이 지팡이는 나중에 다른 지팡이를 강화하기 위해 \&quot;마법 해체\&quot;를 사용할 수 있습니다.</string>
+    <string name="HeroClass_MagPerks_0">마법사는 특별한 마탄의 지팡이를 가지고 시작합니다. 이 지팡이는 나중에 다른 지팡이를 강화하기 위해 \"마법 해체\"를 사용할 수 있습니다.</string>
     <string name="HeroClass_MagPerks_1">마법사는 지팡이가 더 빨리 충전됩니다.</string>
     <string name="HeroClass_MagPerks_2">음식을 먹으면, 가방 안에 있는 모든 지팡이가 1스택 충전됩니다.</string>
     <string name="HeroClass_MagPerks_3">마법사는 지팡이를 근접무기로 사용할 수 있습니다.</string>
@@ -791,7 +792,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroSubClass_DescBers">부상이 심하면, _광전사_는 광분 상태가 되며 공격력이 크게 상승한다.</string>
     <string name="HeroSubClass_DescFreR">_프리러너_는 대부분의 몬스터보다 거의 두 배 가까이 빠르게 달릴 수 있습니다. 프리러너가 달리는 중에는 회피율이 크게 증가하지만, 그 조건으로 힘에 맞는 장비를 착용 중이며 굶주린 상태가 아니어야 합니다.</string>
     <string name="HeroSubClass_DescGlad">근접 무기를 이용한 공격에 성공하면 _검투사_는 연타를 시작하고, 다음 공격이 성공할 때마다 추가로 데미지를 입힌다.</string>
-    <string name="HeroSubClass_DescNone"/>
+    <string name="HeroSubClass_DescNone" />
     <string name="HeroSubClass_DescScout">엘프 _정찰병_은 은신의 달인립니다. 높게 자란 풀 위에 올라서면 잠시 동안 은신 상태가 됩니다. 또한 평범한 엘프보다 날랩니다.</string>
     <string name="HeroSubClass_DescShaman">엘프 _주술사_는 마법 막대를 근접 무기로 사용할 수 있습니다. 공격에 성공하면 마법 막대의 능력을 충전량을 사용하지 않고 대상에게 가할 확률이 있습니다.</string>
     <string name="HeroSubClass_DescSnip">_저격수_는 적의 갑옷의 취약점을 파악할 수 있어, 원거리 무기를 사용할 시 적의 방어를 효과적으로 무시할 수 있습니다.</string>
@@ -1125,7 +1126,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MissileWeapon_Sure">정말로 이걸 근접 무기로 장착하시겠습니까?</string>
     <string name="MissileWeapon_Yes">그래, 뭘 하려는지 알고 있다</string>
     <string name="Mob_Attacking">이 %s를 죽은 것으로 간주하라!</string>
-    <string name="Mob_Cannot_Be_Pet">\&quot;%s\&quot;의 의지는 조종당하기엔 너무 강했습니다!</string>
+    <string name="Mob_Cannot_Be_Pet">\"%s\"의 의지는 조종당하기엔 너무 강했습니다!</string>
     <string name="Mob_Desc">진짜 설명은 곧 나올 예정입니다!</string>
     <string name="Mob_Died">당신은 저 멀리서 무언가가 죽는 소리를 들었습니다.</string>
     <string name="Mob_ReadyForOrder">%s이(가) 명령을 받기를 기다리고 있습니다.</string>
@@ -1169,7 +1170,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MysteryMeat_Message">이 음식.... 맛이 이상하군.</string>
     <string name="MysteryMeat_Name">알 수 없는 고기</string>
     <string name="NatureArmorSpell_Name">자연의 갑옷</string>
-    <string name="NecromancerArmor_Info2">이 갑옷을 입는다면 강령술사는 \&quot;네크로티즘\&quot; 기술을 사용해 마법의 독을 뿌려서 근처의 모든 생물체에게 죽던 살던 강력한  영향을 끼칠 것입니다.</string>
+    <string name="NecromancerArmor_Info2">이 갑옷을 입는다면 강령술사는 \"네크로티즘\" 기술을 사용해 마법의 독을 뿌려서 근처의 모든 생물체에게 죽던 살던 강력한  영향을 끼칠 것입니다.</string>
     <string name="NecromancerArmor_Name">뼈 갑옷</string>
     <string name="NecromancerArmor_NotNecromancer">강령술사만이 이 갑옷을 입을 수 있습니다!</string>
     <string name="NecromancerNPC_Desc">이 중년 남자는 약간 짜증을 내면서 흥분하는 것 같습니다. 그는 뼈 조각으로 만든 합성 갑옷을 입고 있습니다.</string>
@@ -1186,7 +1187,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="NecromancerRobe_PetLimitReached">강령술: 최대 소환 수에 도달했습니다(현재 최대 소환 수: 1%d)!</string>
     <string name="Necromancer_ACSpecial">강령술</string>
     <string name="Necromancy_BecameALich">당신은 리치가 되었습니다! 당신의 힘이 자라고 영혼 용량이 두 배가 되었지만, %1$d의 힘을 잃었습니다.</string>
-    <string name="Necromancy_NotEnoughSouls">당신은 \&quot;1%1$s\&quot;마법을 시전하기에 충분한 영혼이 없습니다.</string>
+    <string name="Necromancy_NotEnoughSouls">당신은 \"1%1$s\"마법을 시전하기에 충분한 영혼이 없습니다.</string>
     <string name="Necromancy_ReincarnationName">환생</string>
     <string name="Necromancy_SoulsCountLabel">영혼들</string>
     <string name="Necromancy_SummonDeathlingName">데슬링 소환</string>
@@ -1476,7 +1477,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Ring_Name">%s 반지</string>
     <string name="Roar_Name">포효</string>
     <string name="RogueArmor_ACSpecial">연막탄</string>
-    <string name="RogueArmor_Desc">이 어둠의 의복을 입는다면, 로그는 \&quot;연막탄\&quot; 이라는 기술를 부릴 수 있게 된다 (폭발물을 사용하진 않지만): 적들의 눈을 멀게 하고 옆으로 회피한다.</string>
+    <string name="RogueArmor_Desc">이 어둠의 의복을 입는다면, 로그는 \"연막탄\" 이라는 기술를 부릴 수 있게 된다 (폭발물을 사용하진 않지만): 적들의 눈을 멀게 하고 옆으로 회피한다.</string>
     <string name="RogueArmor_Fov">시야 내의 빈 위치에만 이동할 수 있다.</string>
     <string name="RogueArmor_Name">도적의 의복</string>
     <string name="RogueArmor_NotRogue">이 갑옷은 도적만 착용 가능하다</string>
@@ -1585,7 +1586,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Scroll_ACRead">읽기</string>
     <string name="Scroll_Blinded">눈이 먼 상태에서는 두루마리를 읽을 수 없습니다.</string>
     <string name="Scroll_Info">이 양피지는 판독할 수 없는 룬 문자 %s로 덮여있습니다. 누가 이것을 소리내어 읽을때 어떤 일이 일어날까요?</string>
-    <string name="Scroll_Name">\&quot;%s\&quot; 두루마리</string>
+    <string name="Scroll_Name">\"%s\" 두루마리</string>
     <string name="Scroll_Runes_0">카우난</string>
     <string name="Scroll_Runes_1">소윌로</string>
     <string name="Scroll_Runes_10">오쌀란</string>
@@ -1694,10 +1695,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SpeedBuff_Info">몸에서 활력과 에너지가 나오며, 움직임이 평소보다 빠르게 느껴집니다.</string>
     <string name="SpeedBuff_Name">신속</string>
     <string name="SpellBook_Info">이건 책보다는 편집본으로 보입니다. 당신이 이것에 충분히 집중한다면 무언가 해낼 수 있을 것 같습니다. </string>
-    <string name="SpellBook_Info_Identified">주문서에서 당신은 \&quot;%1$s\&quot;마법의 주문을 발견하였습니다. \n \&quot;%2$s\&quot;</string>
+    <string name="SpellBook_Info_Identified">주문서에서 당신은 \"%1$s\"마법의 주문을 발견하였습니다. \n \"%2$s\"</string>
     <string name="SpellBook_Name">주문서</string>
     <string name="Spell_SelectACell">대상 위치를 선택하세요.</string>
-    <string name="Spells_NotEnoughSP">\&quot;%1$s\&quot; 주문을 사용할 마나가 없습니다.</string>
+    <string name="Spells_NotEnoughSP">\"%1$s\" 주문을 사용할 마나가 없습니다.</string>
     <string name="Spells_NotInOwnBody">영혼이 몸에서 빠져나온 상태에서는 %s를 할 수 없습니다.</string>
     <string name="Spells_SummonLimitReached">%1$s: 소환 최대량에 다다랐습니다(현재 최대량: %2$d)!</string>
     <string name="SpiderArmor_Info">이 갑옷은 거미의 껍질과 이상한 옷감으로 만들어졌습니다. 놀랍게도 잘 작동하는 방적돌기가 있습니다. 갑옷에 충분한 압력을 주면 거미줄을 발사할 것이고, 신발에 난 돌기는 당신이 거미줄에서 자유롭게 이동할 수 있게 해 줄 것입니다.</string>
@@ -1714,7 +1715,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SpiderGuard_Desc">병사들처럼 거미 경비병도 그들의 왕국을 지킨다고 맹세했습니다. 거미 경비병의 독은 목표물을 마비시켜 움직이지 못하게 하는데 사용됩니다.</string>
     <string name="SpiderGuard_Name">거미 경비병</string>
     <string name="SpiderGuard_Name_Objective">거미 경비병</string>
-    <string name="SpiderMindAmber_Desc">호박 거미는 사이코 파워를 가진 신비롭고 희귀한 동물입니다. 하지만 평범한 같은 종 보다는 훨씬 강합니다. \&quot;호박\&quot;이라는 이름은 공격당한 희생자들이 본 호박 거미의 커다란 뇌의 색을 말합니다.</string>
+    <string name="SpiderMindAmber_Desc">호박 거미는 사이코 파워를 가진 신비롭고 희귀한 동물입니다. 하지만 평범한 같은 종 보다는 훨씬 강합니다. \"호박\"이라는 이름은 공격당한 희생자들이 본 호박 거미의 커다란 뇌의 색을 말합니다.</string>
     <string name="SpiderMindAmber_Name">호박 거미</string>
     <string name="SpiderMindAmber_Name_Objective">호박 거미</string>
     <string name="SpiderMind_Desc">보기에 연약해 보이는 이 거미들은 특별한 정신적 힘을 가지고 있어서, 콜로니 전체를 컨트롤 할 수 있다. 정신 거미는 어떤 살아있는 생물도 조종할 수 있지만, 다소 겁이 많다.</string>
@@ -1755,7 +1756,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="StartScene_UnlockGnoll">이 클래스를 해금하기 위해서는 당신은 마을 사제를 설득해 놀 정예병을 치료해야 합니다.</string>
     <string name="StartScene_UnlockNecromancer">이 캐릭터를 잠금 해제하기 위해서는, 리치를 아무 직업으로 물리치세요.</string>
     <string name="StartScene_Warning">현재 게임 진행 상황은 지워집니다.</string>
-    <string name="StartScene_WinGame">\&quot;도전\&quot;을 해제하려면, 아무 직업으로 게임을 클리어 하세요.</string>
+    <string name="StartScene_WinGame">\"도전\"을 해제하려면, 아무 직업으로 게임을 클리어 하세요.</string>
     <string name="StartScene_Yes">네, 새로운 게임 시작</string>
     <string name="Statue_Desc">당신은 이 조각상을 던전에 있는 못생긴 여느 조각상과 다를바 없다고 생각 할 수도 있겠지만, 붉게 빛나는 눈이 그런 생각을 사라지게 합니다. 조각상 자체는 돌로 만들어져 있지만, 착용한  _%s_는 진짜 같습니다.</string>
     <string name="Statue_Name">살아있는 조각상</string>
@@ -1871,8 +1872,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Undead_Name_Objective">언데드 드워프</string>
     <string name="Ushanka_Info">붉은색 별이 달린 따뜻하고 포근한 우산카 모자로,  사악하고 냉혹한 던전의 악당을 물리치는 동무들의 참 좋은 길동무입니다.</string>
     <string name="Ushanka_Name">우산카</string>
-    <string name="Using_Failed_Because_Blind">눈이 먼 상태에서 당신은 \&quot;%s\&quot;를 사용할 수 없습니다.</string>
-    <string name="Using_Failed_Because_Magic">강력한 마법이 당신이 \&quot;%s\&quot;를 사용하는 것을 막았습니다.</string>
+    <string name="Using_Failed_Because_Blind">눈이 먼 상태에서 당신은 \"%s\"를 사용할 수 없습니다.</string>
+    <string name="Using_Failed_Because_Magic">강력한 마법이 당신이 \"%s\"를 사용하는 것을 막았습니다.</string>
     <string name="VampireSkull_Info">이 마스크는 모든 자연산 뱀파이어 뼈로 만들어졌습니다. 사실 이건 뱀파이어의 해골... 그것도 대두 뱀파이어의 해골입니다. 무섭군요.</string>
     <string name="VampireSkull_Name">흡혈귀의 해골</string>
     <string name="VertigoBuff_Info">현기증이 나서 똑바로 걷기 어려워집니다!</string>
@@ -1929,7 +1930,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WandOfPoison_Info">비틀린 나뭇가지의 사악한 저주는 목표물에 맹독이 스며들게 합니다. 맹독에 걸린 생물은 효과가 끝날 때까지 지속적인 중독 피해를 입게 됩니다. 효과의 지속 시간은 지팡이의 레벨에 따라 늘어납니다.</string>
     <string name="WandOfPoison_Info1">아무 일도 일어나지 않았습니다</string>
     <string name="WandOfPoison_Name">맹독의 마법 막대</string>
-    <string name="WandOfRegrowth_Info">\&quot;한 생명이 죽으면 또 다른 생명이 태어나는 법... 그리고 영원한 순환은 언제나 계속될지니!\&quot;</string>
+    <string name="WandOfRegrowth_Info">\"한 생명이 죽으면 또 다른 생명이 태어나는 법... 그리고 영원한 순환은 언제나 계속될지니!\"</string>
     <string name="WandOfRegrowth_Info1">아무 일도 일어나지 않았습니다</string>
     <string name="WandOfRegrowth_Name">재성장의 마법 막대</string>
     <string name="WandOfShadowbolt_Info">이 지팡이는 검고 사악한 에너지를 내뿜고 있습니다.</string>
@@ -2028,7 +2029,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndDonate_royalDonateText2">또한 당신은 현금 상점에서의 모든 모자들을 받게 되고, 앞으로도 나오는 모든 모자들 역시 받게 될 것입니다.</string>
     <string name="WndDonate_ruby">루비</string>
     <string name="WndDonate_rubyDonate">루비 기부</string>
-    <string name="WndDonate_rubyDonateText2"/>
+    <string name="WndDonate_rubyDonateText2" />
     <string name="WndDonate_silver">은</string>
     <string name="WndDonate_silverDonate">은 기부</string>
     <string name="WndDonate_silverDonateText">어떤한 기부라도 저희 개발 프로젝트에 도움이 됩니다.</string>
@@ -2100,7 +2101,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndMovieTheatre_Bye">언제든지 돌아오세요!</string>
     <string name="WndMovieTheatre_Instruction_2">당신은 %2$d번 중 %1$d 번 보셨습니다. 당신은 영화를 볼 있는 추가적인 기회를 새 영웅 레벨마다 받을 수 있을 것입니다.</string>
     <string name="WndMovieTheatre_No">떠나기</string>
-    <string name="WndMovieTheatre_Ok">당신은 성공적으로 \&quot;보상\&quot; 비디오를 보셨습니다!</string>
+    <string name="WndMovieTheatre_Ok">당신은 성공적으로 \"보상\" 비디오를 보셨습니다!</string>
     <string name="WndMovieTheatre_Sorry">뭔가가 잘못되었기 때문에 영상의 보상을 받지 못했습니다...</string>
     <string name="WndMovieTheatre_Thank_You">참여해 주셔셔 갑사합니다!</string>
     <string name="WndMovieTheatre_Title">영화관</string>
@@ -2319,7 +2320,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_crate_bottles_name">맥주 상자</string>
     <string name="town_deco_crate_name">상자</string>
     <string name="town_deco_crate_scrolls_name">스크롤이 든 상자</string>
-    <string name="town_deco_cross_desc">토착 종교 \&quot;심연의 군주 산타의 증인들\&quot;의 상징인 은 십자가입니다. </string>
+    <string name="town_deco_cross_desc">토착 종교 \"심연의 군주 산타의 증인들\"의 상징인 은 십자가입니다. </string>
     <string name="town_deco_cross_name">십자가</string>
     <string name="town_deco_curtains_name">커튼</string>
     <string name="town_deco_door_desc">평범힌 나무 문이다.</string>
@@ -2388,7 +2389,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_skullboard_name">트로피 진열대</string>
     <string name="town_deco_snow_desc">모험가들에 대한 이곳의 저명함에도 불구하고, 마치 어떤 외부인도 발을 들이지 않은 것처럼 많은 눈이 쌓여 있다.</string>
     <string name="town_deco_snow_name">눈</string>
-    <string name="town_deco_snowman_desc">눈사람은 몬스터들이 던전을 침략한 날인 \&quot;던전마스\&quot;를 기념하기 위한 마을의 전통적인 장식물이다.</string>
+    <string name="town_deco_snowman_desc">눈사람은 몬스터들이 던전을 침략한 날인 \"던전마스\"를 기념하기 위한 마을의 전통적인 장식물이다.</string>
     <string name="town_deco_snowman_name">눈사람</string>
     <string name="town_deco_snowy_plate_desc">이 고대의 판은 눈으로 뒤덮여 있다.</string>
     <string name="town_deco_snowy_plate_name">눈 플레이트</string>

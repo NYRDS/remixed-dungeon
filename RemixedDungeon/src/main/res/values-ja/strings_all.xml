@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">ディバウアー</string>
     <string name="AC_Dissect">解剖</string>
@@ -55,13 +56,13 @@
     <string name="AmuletScene_Stay">まだ終わっていない</string>
     <string name="AmuletScene_Txt">あなたはついにイェンダーの魔除けを手にした。その力を使えば、世界を征服することも、人々に平和と繁栄をもたらすことも、何でもできる。いずれにせよ、あなたの人生は永遠に変わり、このゲームはここで終わる。あるいは、もう少しだけただの人間のままでいることもできる。</string>
     <string name="Amulet_ACEnd">ゲーム終了</string>
-    <string name="Amulet_Info">イェンダーの魔除けは起源不明の最も強力なアーティファクトとして知られている。この魔除けは、持ち主が十分に強い意志の力で\&quot;説得\&quot;することが出来れば、どんな願いでも叶えることができると言われている。</string>
+    <string name="Amulet_Info">イェンダーの魔除けは起源不明の最も強力なアーティファクトとして知られている。この魔除けは、持ち主が十分に強い意志の力で\"説得\"することが出来れば、どんな願いでも叶えることができると言われている。</string>
     <string name="Amulet_Name">イェンダーの魔除け</string>
     <string name="Ankh_Info">この古代の不死のシンボルは、死後に蘇る能力を与える。復活すると、装備していないアイテムはすべて失われる。</string>
     <string name="Ankh_Name">アンク</string>
     <string name="AntiEntropy_Txt">反エントロピーの%s</string>
     <string name="ArmorKit_ACAplly">適応する</string>
-    <string name="ArmorKit_Info">この小さなツールと材料キットを使えば、誰でもどんな鎧でも \&quot;エピック・アーマー \&quot;に作り変えることができる。\&quot;エピック・アーマー \&quot;は元の鎧の特性はそのままに、着用者のクラスに応じて特別な能力を発揮する。仕立てや革細工、鍛冶の技術は必要ない。</string>
+    <string name="ArmorKit_Info">この小さなツールと材料キットを使えば、誰でもどんな鎧でも \"エピック・アーマー \"に作り変えることができる。\"エピック・アーマー \"は元の鎧の特性はそのままに、着用者のクラスに応じて特別な能力を発揮する。仕立てや革細工、鍛冶の技術は必要ない。</string>
     <string name="ArmorKit_Name">アーマーキット</string>
     <string name="ArmorKit_SelectArmor">強化する鎧を選択</string>
     <string name="ArmorKit_Upgraded">あなたは、アーマーキットで %s を強化した</string>
@@ -69,7 +70,7 @@
     <string name="Armor_Glyph">刻印</string>
     <string name="Armor_Identify">あなたは今 %1$s を識別するために十分精通している。これは %2$s だ。</string>
     <string name="Armor_Incompatible">異なる種類の魔法の相互作用によって、この鎧の刻印は消されてしまった！</string>
-    <string name="Armor_Info1">この %1$s は攻撃ごとに \&quot;%2$d\&quot; のダメージを防ぐ。</string>
+    <string name="Armor_Info1">この %1$s は攻撃ごとに \"%2$d\" のダメージを防ぐ。</string>
     <string name="Armor_Info2">あなたの力が不足しているため、移動速度と防御スキルが低下する。</string>
     <string name="Armor_Info3">あなたの力が不足しているため、この鎧を着用すると移動速度と防御スキルが低下する。</string>
     <string name="Armor_Info4">一般的な%1$sは、1回の攻撃につき%2$d点までのダメージを防ぐ事ができ、%3$dの力を必要とする。</string>
@@ -94,7 +95,7 @@
     <string name="AzuterronNPC_Name_Objective">見知らぬ者</string>
     <string name="AzuterronNPC_Quest_End">素晴らしい。この薬をあげよう。きっと役に立つ。</string>
     <string name="AzuterronNPC_Quest_Reminder">助けて欲しい！必ずお礼はする</string>
-    <string name="AzuterronNPC_Quest_Start">はぁ、どうして......あぁ、僕が見えるんだね？つまり、君は \&quot;彼ら \&quot;の仲間ではないということだ。君だって、この怪物たちが嫌いなんだね。そうだ、ちょっと困ったことがあるんだが、手伝ってくれないか？この階層のどこかに闇の獣、「裏切りの精霊」がいるはずだ。それを倒し、その「心臓」を奪って、僕のところに持って来てほしい。それともう一つ、もし僕の物資を購入することに興味があれば、遠慮なく尋ねてほしい。</string>
+    <string name="AzuterronNPC_Quest_Start">はぁ、どうして......あぁ、僕が見えるんだね？つまり、君は \"彼ら \"の仲間ではないということだ。君だって、この怪物たちが嫌いなんだね。そうだ、ちょっと困ったことがあるんだが、手伝ってくれないか？この階層のどこかに闇の獣、「裏切りの精霊」がいるはずだ。それを倒し、その「心臓」を奪って、僕のところに持って来てほしい。それともう一つ、もし僕の物資を購入することに興味があれば、遠慮なく尋ねてほしい。</string>
     <string name="Backstab_Aware">裏をかくためには、対象があなたのことを認識していてはいけない。</string>
     <string name="Backstab_Info">静かに背中を打つ。不誠実だが非常に効果的で、使用者のスキルレベルに応じてバックスタブのダメージが増加する。バックスタブに成功すると、被害者の鎧や特殊な防御能力を完全に無視する。</string>
     <string name="Backstab_Name">バックスタブ</string>
@@ -210,7 +211,7 @@
     <string name="BellaNPC_Amulet_F">こんにちは、かわいい人。ああ、この上なく美しいお守り！そしてあなたは...誰よりも輝いている。散歩がてら、お互いの将来について話し合ってみない？</string>
     <string name="BellaNPC_Amulet_M">こんにちわ、ハンサムさん、あなた何を持ってるの？まぁ、素晴らしいお守りだわ！そしてあなたは...そこらの平民よりずっと良いわね。散歩がてら、お互いの将来について話し合わない？</string>
     <string name="BellaNPC_Angry">よくもそんなことを...！</string>
-    <string name="BellaNPC_Desc">とても上品そうな女の子。彼女の外見全体が、\&quot;私は誰に対しても善良なのだ\&quot;ということを物語っている。</string>
+    <string name="BellaNPC_Desc">とても上品そうな女の子。彼女の外見全体が、\"私は誰に対しても善良なのだ\"ということを物語っている。</string>
     <string name="BellaNPC_Message">平民が私に話しかけないで頂戴</string>
     <string name="BellaNPC_Name">ベラ</string>
     <string name="BellaNPC_Name_Objective">ベラ</string>
@@ -309,7 +310,7 @@
     <string name="CagedKobold_Message3">この檻のすべてが嫌いだ</string>
     <string name="CagedKobold_Name">檻の中のコボルド</string>
     <string name="CagedKobold_Name_Objective">檻の中のコボルド</string>
-    <string name="CagedKobold_Quest_End">ああ、ありがとう、本当にありがとう！どうやって鍵を見つけたんだ？武器を破壊したのか？信じられない！あのな、俺はお前を助けると言ったろ。そして、そのための最善の方法を知っていると思う。しばらくの間、付き合うよ。\&quot;檻の中のコボルト\&quot;はロウソクになった。</string>
+    <string name="CagedKobold_Quest_End">ああ、ありがとう、本当にありがとう！どうやって鍵を見つけたんだ？武器を破壊したのか？信じられない！あのな、俺はお前を助けると言ったろ。そして、そのための最善の方法を知っていると思う。しばらくの間、付き合うよ。\"檻の中のコボルト\"はロウソクになった。</string>
     <string name="Calm_Info">この辺りには攻撃的な生き物がたくさんいる。彼らを落ち着かせてあげよう。</string>
     <string name="Calm_Name">カーム</string>
     <string name="CandleOfMindVision_Info">見た目は普通のロウソクで、危険なダンジョンにあるとは思えない。奇妙なことに、まだ火が点いていないにもかかわらず、触るとかなり温かい。</string>
@@ -593,7 +594,7 @@
     <string name="DeferedDamageBuff_Info">痛みが鈍り、一度に受けるダメージが減った。残されたダメージ%d</string>
     <string name="DeferedDamageBuff_Name">遅延ダメージ（%d）</string>
     <string name="DeferedDamage_Killed_Txt">%s はあなたを殺した...</string>
-    <string name="DevourBuff_Info"/>
+    <string name="DevourBuff_Info" />
     <string name="DevourBuff_Name">ディバウアー</string>
     <string name="DewVial_ACDRINK">飲む</string>
     <string name="DewVial_AutoDrink">雫用の瓶は、あなたの傷を癒やして空になった。</string>
@@ -701,7 +702,7 @@
     <string name="ExplodingSkull_Desc">この浮遊し、燃えている頭蓋骨は非常にもろく、今にも粉々になりそうだ。</string>
     <string name="ExplodingSkull_Name">爆発する頭蓋骨</string>
     <string name="ExplodingSkull_Name_Objective">爆発する頭蓋骨</string>
-    <string name="Eye_Desc">この悪魔の別名に \&quot;憎悪のオーブ \&quot;があるが、これは敵を見つけるとデスゲイズを無謀に使い、しばしば味方を無視して負傷させるからである。</string>
+    <string name="Eye_Desc">この悪魔の別名に \"憎悪のオーブ \"があるが、これは敵を見つけるとデスゲイズを無謀に使い、しばしば味方を無視して負傷させるからである。</string>
     <string name="Eye_Kill">%s のデスゲイズがあなたを殺した...</string>
     <string name="Eye_Name">イビルアイ</string>
     <string name="Eye_Name_Objective">イビルアイ</string>
@@ -812,7 +813,7 @@
     <string name="GoldenSword_Info">通常、金のような柔らかい金属で作られた武器は飾り程度にしかならない。にもかかわらず、この剣の刃はかなり物を切ることができるようだ。</string>
     <string name="GoldenSword_Name">金の剣</string>
     <string name="Golem_Defense">ブロックした</string>
-    <string name="Golem_Desc">ドワーフたちは、彼らの機械に関する知識と、新たに発見した元素結合の力を組み合わせようとした。彼らはゴーレムの機械体の \&quot;魂 \&quot;として、最も制御しやすいと考えた大地の精霊を使ったが、儀式にほんのわずかなミスがあれば、大災害を引き起こす可能性もあった。</string>
+    <string name="Golem_Desc">ドワーフたちは、彼らの機械に関する知識と、新たに発見した元素結合の力を組み合わせようとした。彼らはゴーレムの機械体の \"魂 \"として、最も制御しやすいと考えた大地の精霊を使ったが、儀式にほんのわずかなミスがあれば、大災害を引き起こす可能性もあった。</string>
     <string name="Golem_Name">ゴーレム</string>
     <string name="Golem_Name_Objective">ゴーレム</string>
     <string name="Goo_Desc">グゥについてはほとんど知られていない。生き物ですらなく、なぜか自由意志を得た下水道内の物質の集合体である可能性が高い。いずれにせよ、闇の魔法が働いているのは明らかだ。</string>
@@ -927,7 +928,7 @@
     <string name="HeroSubClass_DescFreR">「フリーランナー」はほとんどのモンスターよりも2倍近く速く移動できる。彼が走っている時に攻撃を当てるのは困難だろう。ただそのためには、フリーランナーは動き続けなければならず、飢餓状態であってはならない。</string>
     <string name="HeroSubClass_DescGlad">近接武器による攻撃に成功すると、「グラディエーター」はコンボを開始することができ、次の攻撃が成功するたびにダメージが増加する。</string>
     <string name="HeroSubClass_DescGuardian">巧みな防御の知識により、「ガーディアン」は盾で反撃することができる。この歩く砦を攻撃しようとする者にとって、彼は手強い敵となるだろう。</string>
-    <string name="HeroSubClass_DescNone"/>
+    <string name="HeroSubClass_DescNone" />
     <string name="HeroSubClass_DescScout">エルフの「スカウト」はステルスの達人である。高い草に触れると、一時的に不可視のバフが付与される。また、彼らは通常のエルフよりもさらに速い。</string>
     <string name="HeroSubClass_DescShaman">エルフの「シャーマン」は杖を近接武器として使用でき、杖による攻撃が命中した時、チャージを使わずに杖の力を対象に発動させることができる。</string>
     <string name="HeroSubClass_DescSnip">「スナイパー」は敵の装甲の弱点を探知することができ、遠隔兵器を使用する際、装甲を効果的に無視することができる。</string>
@@ -1056,7 +1057,7 @@
     <string name="InterLevelScene_Loading">ロード中...</string>
     <string name="InterLevelScene_Resurrecting">復活中...</string>
     <string name="InterLevelScene_Returning">帰還中...</string>
-    <string name="IntroScene_Txt">ダンジョンには様々な冒険者が先陣を切って進入した。そして、そのうちの何人かは財宝や魔法のアーティファクトを持って帰ってきた。しかし、ダンジョンの奥深くに隠されているという \&quot;イェンダーの魔除け\&quot;の奪還に成功した者はいない。あなたは挑戦の準備はできていると考えているが、最も重要なのは、幸運があなたに微笑んでいると感じていることだ。さあ、冒険の始まりだ！</string>
+    <string name="IntroScene_Txt">ダンジョンには様々な冒険者が先陣を切って進入した。そして、そのうちの何人かは財宝や魔法のアーティファクトを持って帰ってきた。しかし、ダンジョンの奥深くに隠されているという \"イェンダーの魔除け\"の奪還に成功した者はいない。あなたは挑戦の準備はできていると考えているが、最も重要なのは、幸運があなたに微笑んでいると感じていることだ。さあ、冒険の始まりだ！</string>
     <string name="InventoryScroll_No">いや、気が変わった</string>
     <string name="InventoryScroll_Title">アイテムを選択</string>
     <string name="InventoryScroll_Warning">本当にこのスクロールの使用をキャンセルするのですか？キャンセルしてもスクロールは消費はされます。</string>
@@ -1167,7 +1168,7 @@
     <string name="Level_TileDescStatue">誰かがこの場所を飾りたかったようだが、明らかに失敗している。</string>
     <string name="Level_TileDescTrap">隠された感圧板を踏むと、罠が作動する。</string>
     <string name="Level_TileDescWater">燃えた場合は、水の中に入って消火する。</string>
-    <string name="Level_TileDescWell"/>
+    <string name="Level_TileDescWell" />
     <string name="Level_TileEmbers">熾火</string>
     <string name="Level_TileEmptyWell">空っぽの井戸</string>
     <string name="Level_TileEntrance">深層の入り口</string>
@@ -1303,7 +1304,7 @@
     <string name="MissileWeapon_Yes">ああ、自分が何をしているかは分かっている</string>
     <string name="MobAi_status">この%1$sは%2$sである</string>
     <string name="Mob_Attacking">%sは死んだことにしてくれ！</string>
-    <string name="Mob_Cannot_Be_Pet">\&quot;%s\&quot; の意志は制御できないほど強い！</string>
+    <string name="Mob_Cannot_Be_Pet">\"%s\" の意志は制御できないほど強い！</string>
     <string name="Mob_CantDoIt">僕にはできないよ。前足が小さいから。</string>
     <string name="Mob_Desc">本当の説明は近日公開！</string>
     <string name="Mob_Died">あなたは何かが死ぬ音を聞いた</string>
@@ -1698,7 +1699,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Roar_Info">強大な咆哮は敵を恐怖に陥れ、味方を鼓舞すること間違いない。</string>
     <string name="Roar_Name">ロアー</string>
     <string name="RogueArmor_ACSpecial">スモークボム</string>
-    <string name="RogueArmor_Desc">この暗い衣装を身にまとったローグは、\&quot;スモークボム\&quot;と呼ばれるトリックを繰り出すことができ、敵の目をくらまし、脇をすり抜ける。（ただし、本物の爆薬は使用しない）</string>
+    <string name="RogueArmor_Desc">この暗い衣装を身にまとったローグは、\"スモークボム\"と呼ばれるトリックを繰り出すことができ、敵の目をくらまし、脇をすり抜ける。（ただし、本物の爆薬は使用しない）</string>
     <string name="RogueArmor_Fov">あなたは跳んでフィールドを眺めることができます。</string>
     <string name="RogueArmor_Name">ローグの服</string>
     <string name="RogueArmor_NotRogue">ローグだけがこの鎧を使うことができます！</string>
@@ -1812,7 +1813,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Scroll_ACRead">読む</string>
     <string name="Scroll_Blinded">あなたは盲目なためスクロールを読むことが出来ない</string>
     <string name="Scroll_Info">この羊皮紙には解読不能な文字が書かれており、%sのルーン文字がタイトルに記されている。声に出して読んだらどうなるかは誰にもわからない。</string>
-    <string name="Scroll_Name">スクロール \&quot;%s\&quot;</string>
+    <string name="Scroll_Name">スクロール \"%s\"</string>
     <string name="Scroll_Runes_0">のちなみちみ</string>
     <string name="Scroll_Runes_1">とらてにりら</string>
     <string name="Scroll_Runes_10">らしちり</string>
@@ -2014,7 +2015,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="StartScene_UnlockGnoll">このクラスをアンロックするには、街の司祭を説得してノールブルートを治療する必要があります。</string>
     <string name="StartScene_UnlockNecromancer">このキャラクタークラスをアンロックするには、他のクラスでリッチを倒す必要があります。</string>
     <string name="StartScene_Warning">現在進行中のゲームが消去されます。</string>
-    <string name="StartScene_WinGame">\&quot;挑戦\&quot;をアンロックするには、いずれかのキャラクタークラスでゲームをクリアする必要があります。</string>
+    <string name="StartScene_WinGame">\"挑戦\"をアンロックするには、いずれかのキャラクタークラスでゲームをクリアする必要があります。</string>
     <string name="StartScene_Yes">はい、新しいゲームを始めます</string>
     <string name="Statue_Desc">このダンジョンにある醜い彫像のひとつかと思いきや、赤く光る目がそうではないと物語っている。像自体は石でできているが、振り回している「%s」は本物のように見える。</string>
     <string name="Statue_Name">生ける彫像</string>
@@ -2146,8 +2147,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Undead_Name_Objective">アンデッドドワーフ</string>
     <string name="Ushanka_Info">上品な赤い星があしらわれた、暖かく肌触りの良いウシャンカ帽。邪悪で寒いダンジョンと戦うあなたにぴったりのお供。</string>
     <string name="Ushanka_Name">ウシャンカ帽</string>
-    <string name="Using_Failed_Because_Blind">あなたは盲目なため、\&quot;%s\&quot;を読むことが出来ない。</string>
-    <string name="Using_Failed_Because_Magic">強力な魔法により、\&quot;%s\&quot;を使用できません。</string>
+    <string name="Using_Failed_Because_Blind">あなたは盲目なため、\"%s\"を読むことが出来ない。</string>
+    <string name="Using_Failed_Because_Magic">強力な魔法により、\"%s\"を使用できません。</string>
     <string name="VampireSkull_Info">このマスクは天然の吸血鬼の頭蓋骨から作られている。そう、吸血鬼の頭蓋骨...大きな頭の吸血鬼の頭蓋骨…不気味。</string>
     <string name="VampireSkull_Name">吸血鬼の頭蓋骨</string>
     <string name="VertigoBuff_Info">クラクラして、まっすぐ歩くのが難しくなる！</string>
@@ -2203,7 +2204,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="WandOfPoison_Info">このねじれた木片からの下劣な爆風は、対象を致命的な毒で覆う。毒に冒された生き物は効果が終了するまで持続ダメージを受け続ける。効果時間は杖のレベルに応じて増加する。</string>
     <string name="WandOfPoison_Info1">何も起こらなかった</string>
     <string name="WandOfPoison_Name">毒の杖</string>
-    <string name="WandOfRegrowth_Info">\&quot;生命が絶えるとき、常に新しい生命が芽生え始める...。永遠のサイクルは常に続いている\&quot;</string>
+    <string name="WandOfRegrowth_Info">\"生命が絶えるとき、常に新しい生命が芽生え始める...。永遠のサイクルは常に続いている\"</string>
     <string name="WandOfRegrowth_Info1">何も起こらなかった</string>
     <string name="WandOfRegrowth_Name">萌芽の杖</string>
     <string name="WandOfShadowbolt_Info">この杖は暗黒の悪意のあるエネルギーを発する。</string>
@@ -2364,7 +2365,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="WndDonate_ruby">ルビー</string>
     <string name="WndDonate_rubyDonate">ルビーの寄付</string>
     <string name="WndDonate_rubyDonateText">皆様のご厚意は、Remixed Dungeon!の継続的な改善に役立てられます！</string>
-    <string name="WndDonate_rubyDonateText2"/>
+    <string name="WndDonate_rubyDonateText2" />
     <string name="WndDonate_silver">シルバー</string>
     <string name="WndDonate_silverDonate">シルバーの寄付</string>
     <string name="WndDonate_silverDonateText">寄付金はプロジェクトの開発を支援します</string>
@@ -2706,7 +2707,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_deco_crate_name">木箱</string>
     <string name="town_deco_crate_scrolls_desc">この木箱は秘密の知識でいっぱいだ。</string>
     <string name="town_deco_crate_scrolls_name">巻物入り木箱</string>
-    <string name="town_deco_cross_desc">銀の十字架は、この地方の宗教のシンボルである \&quot;サンタ・ザ・デプス・ロードの証人 \&quot;である。</string>
+    <string name="town_deco_cross_desc">銀の十字架は、この地方の宗教のシンボルである \"サンタ・ザ・デプス・ロードの証人 \"である。</string>
     <string name="town_deco_cross_name">十字架</string>
     <string name="town_deco_crossroad_desc">粗末な木製の柱には矢のような形の文字が書かれているが、厳しい気象条件のためか、かなり前に色あせてしまっている。</string>
     <string name="town_deco_crossroad_name">交差点の看板</string>
@@ -2818,7 +2819,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_deco_snow_name">雪</string>
     <string name="town_deco_snowdrift_desc">かなり大きな雪の山だが、どうやら誰も掃除しないらしい。</string>
     <string name="town_deco_snowdrift_name">雪の吹きだまり</string>
-    <string name="town_deco_snowman_desc">雪だるまは、モンスターがダンジョンに侵入する日 \&quot;ダンジョンマス \&quot;を祝うために特別にこの場所に置かれた、ホリデーシーズンの伝統的な街の飾りである。</string>
+    <string name="town_deco_snowman_desc">雪だるまは、モンスターがダンジョンに侵入する日 \"ダンジョンマス \"を祝うために特別にこの場所に置かれた、ホリデーシーズンの伝統的な街の飾りである。</string>
     <string name="town_deco_snowman_name">雪だるま</string>
     <string name="town_deco_snowy_plate_desc">雪に覆われた古代のプレート</string>
     <string name="town_deco_snowy_plate_name">雪のプレート</string>
