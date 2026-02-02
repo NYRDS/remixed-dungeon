@@ -122,7 +122,7 @@ def auto_fix_trivial_issues(file_path):
                 print(f"Auto-fixed trivial escape issues in {file_path}")
             return True
         else:
-            print(f"No trivial escape issues found in {file_path}")
+            # Only print if we're in auto-fix mode to maintain backward compatibility
             return False
 
     except ET.ParseError as e:
@@ -410,7 +410,25 @@ def validate_all_localization_files(base_path, auto_fix=False):
 
     all_valid = True
 
+    # First, get the English strings as reference
+    english_file = os.path.join(values_dir, "values", "strings_all.xml")
+    english_strings = set()
+
+    if os.path.exists(english_file):
+        try:
+            tree = ET.parse(english_file)
+            root = tree.getroot()
+            for string_elem in root.findall('string'):
+                name = string_elem.get('name')
+                if name:
+                    english_strings.add(name)
+        except ET.ParseError:
+            print(f"Warning: Could not parse English strings file {english_file}")
+    else:
+        print(f"Warning: English strings file {english_file} not found")
+
     # Find all values directories
+    all_lang_stats = []
     for dir_name in os.listdir(values_dir):
         if dir_name.startswith("values"):
             lang_dir = os.path.join(values_dir, dir_name)
@@ -418,7 +436,9 @@ def validate_all_localization_files(base_path, auto_fix=False):
                 strings_file = os.path.join(lang_dir, "strings_all.xml")
 
                 if os.path.exists(strings_file):
-                    print(f"Validating {strings_file}...")
+                    # Only print validation start if auto-fix is enabled or if there might be issues
+                    if auto_fix:
+                        print(f"Validating {strings_file}...")
 
                     # Auto-fix trivial issues if requested
                     if auto_fix:
@@ -434,13 +454,67 @@ def validate_all_localization_files(base_path, auto_fix=False):
 
                     file_all_valid = xml_valid and gender_valid and char_valid and format_valid and android_valid and duplicate_valid
 
+                    # Calculate completion stats for this language
+                    try:
+                        tree = ET.parse(strings_file)
+                        root = tree.getroot()
+                        lang_strings = set()
+                        for string_elem in root.findall('string'):
+                            name = string_elem.get('name')
+                            if name:
+                                lang_strings.add(name)
+
+                        # Calculate completion percentage
+                        if english_strings:
+                            common_strings = lang_strings.intersection(english_strings)
+                            completion_percentage = (len(common_strings) / len(english_strings)) * 100
+                        else:
+                            completion_percentage = 0
+
+                        # Determine language code
+                        if dir_name == "values":
+                            lang_code = "en (reference)"
+                        else:
+                            # Extract language code from directory name (e.g., values-es -> es)
+                            lang_code = dir_name.replace("values-", "") or "unknown"
+
+                        all_lang_stats.append({
+                            'lang_code': lang_code,
+                            'total_strings': len(lang_strings),
+                            'completion_percentage': completion_percentage,
+                            'valid': file_all_valid
+                        })
+
+                    except ET.ParseError:
+                        print(f"Warning: Could not parse strings file {strings_file}")
+                        all_lang_stats.append({
+                            'lang_code': dir_name.replace("values-", "") or "unknown",
+                            'total_strings': 0,
+                            'completion_percentage': 0,
+                            'valid': False
+                        })
+
                     if file_all_valid:
-                        print(f"  ✓ All checks passed for {strings_file}")
+                        # Only print success message if auto-fix was performed and there were issues to fix
+                        # Don't print success for every file when no issues exist
+                        pass  # Silent success
                     else:
                         all_valid = False
                         print(f"  ✗ Some checks failed for {strings_file}")
                 else:
                     print(f"  Warning: strings_all.xml not found in {lang_dir}")
+
+    # Print completion statistics
+    print("\nCompletion Statistics (compared to English reference):")
+    print("-" * 60)
+    print(f"{'Language':<12} {'Strings':<8} {'Completion':<12} {'Status':<8}")
+    print("-" * 60)
+
+    for stat in all_lang_stats:
+        status = "✓" if stat['valid'] else "✗"
+        print(f"{stat['lang_code']:<12} {stat['total_strings']:<8} {stat['completion_percentage']:>6.1f}%     {status:<8}")
+
+    print("-" * 60)
 
     return all_valid
 
