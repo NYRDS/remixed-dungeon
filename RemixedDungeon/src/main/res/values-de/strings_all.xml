@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Verschlingen</string>
     <string name="AC_Necromancy">Nekromantie</string>
@@ -64,7 +63,7 @@ Du kannst deine Entscheidung jederzeit ändern (Klicke auf das Diagrammsymbol be
     <string name="Armor_Glyph">Glyphe</string>
     <string name="Armor_Identify">Du bist nun vertraut genug mit deiner %1$s um sie zu identifizieren. Es ist eine %2$s.</string>
     <string name="Armor_Incompatible">Eine Überlagerung verschiedener Magiearten hat die Glyphe von dieser Rüstung entfernt.</string>
-    <string name="Armor_Info1">Diese %1$s bietet bis zu \"%2$d\" Schadensreduzierung pro Angriff.</string>
+    <string name="Armor_Info1">Diese %1$s bietet bis zu \&quot;%2$d\&quot; Schadensreduzierung pro Angriff.</string>
     <string name="Armor_Info2">
 \n\nDeine Stärke ist zu gering. Deine Bewegungsgeschwindigkeit und deine Verteidigungsfähigkeit sind verringert, solange du diese Rüstung trägst.</string>
     <string name="Armor_Info3">
@@ -91,7 +90,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="AzuterronNPC_Name_Objective">Fremder</string>
     <string name="AzuterronNPC_Quest_End">Exzellent. Hier, nimm diesen Trank, du wirst ihn sicher großartig finden.</string>
     <string name="AzuterronNPC_Quest_Reminder">Hilf mir und ich werde dir helfen</string>
-    <string name="AzuterronNPC_Quest_Start">Huh, warum... oh, du kannst mich sehen, nicht wahr? Das bedeutet, das du nicht zu \"Ihnen\" gehörst. Dazu sehe ich, dass du all diese Monster nicht lieb hast. Weißt du was? Wenn du mir mit einem kleinen Problem hilfst, biete ich dir meinen Beistand an. Irgendwo auf dieser Ebene wirst du ein Monster der Dunkelheit finden, einen _Heimtückischen Geist_. Vernichte ihn, nimm sein _Herz_ und komm zurück zu mir. Und eines noch! Wenn du daran interessiert bist, meine Angebote zu kaufen, scheue dich nicht, zu fragen.</string>
+    <string name="AzuterronNPC_Quest_Start">Huh, warum... oh, du kannst mich sehen, nicht wahr? Das bedeutet, das du nicht zu \&quot;Ihnen\&quot; gehörst. Dazu sehe ich, dass du all diese Monster nicht lieb hast. Weißt du was? Wenn du mir mit einem kleinen Problem hilfst, biete ich dir meinen Beistand an. Irgendwo auf dieser Ebene wirst du ein Monster der Dunkelheit finden, einen _Heimtückischen Geist_. Vernichte ihn, nimm sein _Herz_ und komm zurück zu mir. Und eines noch! Wenn du daran interessiert bist, meine Angebote zu kaufen, scheue dich nicht, zu fragen.</string>
     <string name="Backstab_Aware">Das Opfer sollte dich nicht bemerken, um erfolgreich gemeuchelt zu werden.</string>
     <string name="Backstab_Info">Stiller Schlag in den Rücken. Unehrlicher, aber äußerst effektiv. Meuchel-Schaden wächst mit der Fähigkeitsstufe.\n\nErfolgreiches Meucheln ignoriert die Rüstung des Opfers oder spezielle Verteidigungsfähigkeiten vollständig.</string>
     <string name="Backstab_Name">Meucheln</string>
@@ -202,7 +201,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BellaNPC_Amulet_F">Was hast du Schöne dort drüben? Ah, solch ein schönes Amulett! Und du ... du strahlst so viel heller als jeder andere. Was wenn wir einen Spaziergang machen und unsere gemeinsame Zukunft besprechen?</string>
     <string name="BellaNPC_Amulet_M">Was hast du Gutaussehender dort drüben? Ah, solch ein schönes Amulett! Und du ... du stehst über diesen Pöbeln. Was wenn wir einen Spaziergang machen und unsere gemeinsame Zukunft besprechen?</string>
     <string name="BellaNPC_Angry">Wie kannst du es wagen...du Tölpel!</string>
-    <string name="BellaNPC_Desc">Ein sehr schick aussehendes Mädchen. Ihr ganzes Aussehen sagt dir: \"Ich bin zu gut für jeden.\"</string>
+    <string name="BellaNPC_Desc">Ein sehr schick aussehendes Mädchen. Ihr ganzes Aussehen sagt dir: \&quot;Ich bin zu gut für jeden.\&quot;</string>
     <string name="BellaNPC_Message">Ich habe kein Interesse an solchen Pöbeln wie dich!</string>
     <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
@@ -239,8 +238,8 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BlackSkull_Activated">Der schwarze Schädel ist erwacht!</string>
     <string name="BlackSkull_Deactivated">Der schwarze Schädel ruht wieder...</string>
     <string name="BlackSkull_Gender">masculine</string>
-    <string name="BlackSkull_Info">Ein kleiner Obsidianschädel. Es war eine Quelle der Nekropolis-Energie, aber nach der Niederlage des Lichs scheint es all seine Kräfte verloren zu haben. Aber als du es hältst, fährt dir ein fremder Gedanke durch den Kopf: \"Es Hungert\".</string>
-    <string name="BlackSkull_Info_Awakened">Der Schädel pulsiert kraftvoll, du kannst sie aus den leeren Augen des Schädels fließen sehen. Und wenn du es in deiner Hand hältst, kannst du eine schreckliche Stimme hören: \"Die Todesmärsche\"</string>
+    <string name="BlackSkull_Info">Ein kleiner Obsidianschädel. Es war eine Quelle der Nekropolis-Energie, aber nach der Niederlage des Lichs scheint es all seine Kräfte verloren zu haben. Aber als du es hältst, fährt dir ein fremder Gedanke durch den Kopf: \&quot;Es Hungert\&quot;.</string>
+    <string name="BlackSkull_Info_Awakened">Der Schädel pulsiert kraftvoll, du kannst sie aus den leeren Augen des Schädels fließen sehen. Und wenn du es in deiner Hand hältst, kannst du eine schreckliche Stimme hören: \&quot;Die Todesmärsche\&quot;</string>
     <string name="BlackSkull_Name">Schwarzer Schädel</string>
     <string name="BlackSkull_Name_Awakened">Erweckter schwarzer Schädel</string>
     <string name="BlackSkull_Ressurrect">Der schwarze Schädel hat das tote Monster erweckt um dir zu dienen!</string>
@@ -312,7 +311,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Candy_Name">Süßigkeiten</string>
     <string name="Candy_Warning_1">Du hättest die Süßigkeiten nicht essen sollen. Du hattest versprochen, es jemand anderem zu geben. Außerdem hat es dir nichts gebracht, dein Hunger bleibt, denn es sind ja nur Süßigkeiten.</string>
     <string name="Candy_Warning_2">Jetzt hattest du wirklich zu viel. Dein Magen schmerzt, weil du so viele Süßigkeiten gegessen hast.</string>
-    <string name="Capotain_Info">Ein hochgekrönter, schmalkrempiger Hut. Er wird normalerweise mit Puritanern in Verbindung gebracht, aber du musst nicht religiös sein, um ihn tragen zu können. Aus irgendeinem Grund hat er eine Plakette mit dem Namen \"Solomon\".</string>
+    <string name="Capotain_Info">Ein hochgekrönter, schmalkrempiger Hut. Er wird normalerweise mit Puritanern in Verbindung gebracht, aber du musst nicht religiös sein, um ihn tragen zu können. Aus irgendeinem Grund hat er eine Plakette mit dem Namen \&quot;Solomon\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_Devoured">Du hast den Kadaver von %s verzehrt!</string>
     <string name="Carcass_DissectMessage">Du sezierst die Leiche und erhältst %s.</string>
@@ -466,7 +465,7 @@ Ein blutroter Helm ist ein wesentliches Symbol eines Chaos Kriegers.</string>
     <string name="Codex_Story_23">Dieses Buch ist in der Sprache der Zwerge geschrieben</string>
     <string name="Codex_Story_24">Dieses Buch ist in der Sprache der Elfen geschrieben</string>
     <string name="Codex_Story_25">Sie stoppte, gefroren an der schweren Eichentür und sah das Licht um die Ränder der Tür.Daran erinnert sie sich aus einem dunklen Winkel in ihrem Geist.\n
-\"Sonnenlicht...\" Murmelt sie zu sich selbst. Wie lang ist es her? In der ewigen Dunkelheit des Dungeons, hat sie schon lange aufgegeben die Tage zu zählen. Das Licht scheint auf ihre ungenutzte Erinnerungen. Sie erinnert sich an ihr Training, lange anstrengende Tage mit Übungen und Karten erstellen. Sie erinnert sich an ihre Mantras und Disziplinen die ihr erlauben den Anschein der Geistigen Gesundheit zu wahren, als sie die unbekannten Tiefen ausgelotet hat. An was sie sich nicht erinnern kann, sind Menschen.\n
+\&quot;Sonnenlicht...\&quot; Murmelt sie zu sich selbst. Wie lang ist es her? In der ewigen Dunkelheit des Dungeons, hat sie schon lange aufgegeben die Tage zu zählen. Das Licht scheint auf ihre ungenutzte Erinnerungen. Sie erinnert sich an ihr Training, lange anstrengende Tage mit Übungen und Karten erstellen. Sie erinnert sich an ihre Mantras und Disziplinen die ihr erlauben den Anschein der Geistigen Gesundheit zu wahren, als sie die unbekannten Tiefen ausgelotet hat. An was sie sich nicht erinnern kann, sind Menschen.\n
 Sie erinnert sich an ihre Stimmen, ihre Befehle und ihre Warnungen, aber nicht ihre Gesichter, oder ihre Berührung.\n
 Schmerz hat sie trainiert. Erinnere dich an dich an die Gefahren, immer die Gefahren. Wilde Tiere, Untote, verrückte Räuber und Geschickte Ninjas sind vor ihr gefallen. Sie hat sich ihren Weg durch Abscheulichkeiten, Dämonen, Uhrwerk-Abscheulichkeiten und verrückte Nekromanten geschnitten, verbrannt, erstochen und vergiftet. Sogar Götter sind vor ihr Gefallen.\n
 Sie hat Yog durch Himmel und Hölle verfolgt, bevor sein korrumpierendes Flüstern für immer verstummt ist. Sogar dann war noch Arbeit da, die erledigt werden will. Yog war ein Diener eines verborgenen und mächtigeren als sich selbst.\n
@@ -524,6 +523,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="DM300_Info3">Nicht autorisierter Zugang registriert.</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Ein einfacher eisener Dolch mit einem stark abgenutzten Holzgriff.</string>
     <string name="Dagger_Name">Dolch</string>
     <string name="Damage_Reduction">Schadensreduzierung</string>
@@ -555,7 +555,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="Deathling_Name_Objective">Untoter</string>
     <string name="DeferedDamageBuff_Name">Verzögerter Schaden (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s hat dich getötet...</string>
-    <string name="DevourBuff_Info" />
+    <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">Verschlingen</string>
     <string name="DewVial_ACDRINK">TRINKEN</string>
     <string name="DewVial_AutoDrink">Deine Tauflasche wurde benutzt, um deine Wunden zu heilen.</string>
@@ -655,7 +655,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">Explodierender Schädel</string>
     <string name="ExplodingSkull_Name_Objective">Explodierender Schädel</string>
-    <string name="Eye_Desc">Ein anderer Name dieses Dämons ist \"Kugel des Hasses\". Wenn er einen Feind erblickt, benutzt er seinen Todesblick ohne Rücksicht auf Verbündete in der Nähe und verwundet diese dabei oft.</string>
+    <string name="Eye_Desc">Ein anderer Name dieses Dämons ist \&quot;Kugel des Hasses\&quot;. Wenn er einen Feind erblickt, benutzt er seinen Todesblick ohne Rücksicht auf Verbündete in der Nähe und verwundet diese dabei oft.</string>
     <string name="Eye_Kill">Der Todesblick des %s hat dich getötet...</string>
     <string name="Eye_Name">Böses Auge</string>
     <string name="Eye_Name_Objective">Böses Auge</string>
@@ -758,7 +758,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="GoldenSword_Info">Normalerweise werden Waffen aus solch einem weichen Metall wie Gold nicht für mehr, außer als Dekoration, bedacht. Jedoch scheint es dieser Klinge möglich zu sein, ziemlich gut durch Dinge zu schneiden.</string>
     <string name="GoldenSword_Name">goldenes Schwert</string>
     <string name="Golem_Defense">abgeblockt</string>
-    <string name="Golem_Desc">Die Zwerge versuchten, ihr technisches Wissen mit ihrer neu gewonnen Kraft der elementaren Beschwörung zu kombinieren. Sie nutzen Erdelementare, um ihre mechanischen Golemkörper zu \"beseelen\" welche als besonders einfach zu kontrollieren galten. Allerdings konnte schon der kleinste Fehler im Bindungsritual eine Katastrophe herbeiführen.</string>
+    <string name="Golem_Desc">Die Zwerge versuchten, ihr technisches Wissen mit ihrer neu gewonnen Kraft der elementaren Beschwörung zu kombinieren. Sie nutzen Erdelementare, um ihre mechanischen Golemkörper zu \&quot;beseelen\&quot; welche als besonders einfach zu kontrollieren galten. Allerdings konnte schon der kleinste Fehler im Bindungsritual eine Katastrophe herbeiführen.</string>
     <string name="Golem_Name">Golem</string>
     <string name="Golem_Name_Objective">Golem</string>
     <string name="Goo_Info1">Goo lädt sich auf!</string>
@@ -831,7 +831,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HeroClass_HunPerks_3">Jägerinnen erhalten mehr Gesundheit von Tautropfen.</string>
     <string name="HeroClass_HunPerks_4">Jägerinnen spüren benachbarte Monster sogar dann, wenn sie hinter Hindernissen versteckt sind.</string>
     <string name="HeroClass_Mag">Magier</string>
-    <string name="HeroClass_MagPerks_0">Magier beginnen mit einem einzigartigen Wand of Magic Missile. Dieser Stab kann später \"entzaubert\" werden, um einen andereb Stab zu verbessern.</string>
+    <string name="HeroClass_MagPerks_0">Magier beginnen mit einem einzigartigen Wand of Magic Missile. Dieser Stab kann später \&quot;entzaubert\&quot; werden, um einen andereb Stab zu verbessern.</string>
     <string name="HeroClass_MagPerks_1">Magier können schneller nach ihren Stäben greifen.</string>
     <string name="HeroClass_MagPerks_2">Wenn gegessen, gibt jede Form von Nahrung eine Aufladung für alle Stäbe im Inventar.</string>
     <string name="HeroClass_MagPerks_3">Magier können Stäbe als Nahkampfwaffe verwenden.</string>
@@ -855,7 +855,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HeroClass_RogPerks_5">Schriftrollen des Vermessens sind schon zu Beginn bekannt. </string>
     <string name="HeroClass_War">Krieger</string>
     <string name="HeroClass_WarPerks_0">Krieger beginnen mit 11 Stärkepunkten.</string>
-    <string name="HeroClass_WarPerks_1">Krieger starten mit einem einzigartigen Schwert. Dieses Schwert kann später \"umgeschmiedet\" werden um eine andere Nahkampfwaffe zu verbessern.</string>
+    <string name="HeroClass_WarPerks_1">Krieger starten mit einem einzigartigen Schwert. Dieses Schwert kann später \&quot;umgeschmiedet\&quot; werden um eine andere Nahkampfwaffe zu verbessern.</string>
     <string name="HeroClass_WarPerks_2">Krieger sind weniger effektiv im Umgang mit Fernkampfwaffen.</string>
     <string name="HeroClass_WarPerks_3">Jede Form von Nahrung gibt beim Verzehr etwas Gesundheit zurück.</string>
     <string name="HeroClass_WarPerks_4">Stärketränke sind von Beginn an bekannt.</string>
@@ -865,7 +865,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HeroSubClass_DescFreR">Der _Windläufer_ kann fast doppelt so schnell laufen wie die meisten Monster. Während er rennt ist der Windläufer deutlich schwerer zu treffen. Dafür darf er nicht überladen und am Verhungern sein.</string>
     <string name="HeroSubClass_DescGlad">Ein erfolgreicher Angriff mit einer Nahkampfwaffe erlaubt es dem _Gladiator_ , einen Komboangriff einzusetzen, in dem jeder erfolgreiche Treffer mehr Schaden verursacht.</string>
     <string name="HeroSubClass_DescGuardian">Durch geschicktes defensives Wissen kann der _Wächter_ mit seinem Schild kontern und wird dadurch für alle, die es wagen, diese lebende Festung anzugreifen, zu einem formidablen Gegner.</string>
-    <string name="HeroSubClass_DescNone" />
+    <string name="HeroSubClass_DescNone"/>
     <string name="HeroSubClass_DescScout">Elfen_Späher_sind Meister der Heimlichkeit. Wenn sie hohes Gras zertrampeln, gewährt ihnen dies einen vorübergehenden Unsichtbarkeitseffekt. Außerdem sind sie noch schneller als normale Elfen.</string>
     <string name="HeroSubClass_DescShaman">Elfen_Schamanen_ können Zauberstäbe als Nahkampfwaffe benutzen. Erfolgreiche Treffer haben die Chance, die Fahigkeit des Zauberstabes auf ein Ziel zu wirken, ohne eine Ladung zu benutzen.</string>
     <string name="HeroSubClass_DescSnip">_Scharfschützen_ sind dazu in der Lage, Schwachpunkte in der gegnerischen Rüstung zu erkennen und diese effektiv zu umgehen wenn sie eine Fernkampfwaffe nutzen.</string>
@@ -1154,7 +1154,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="Mace_Info">Der eiserne Kopf dieser Waffe verursacht erheblichen Schaden.</string>
     <string name="Mace_Name">Morgenstern</string>
     <string name="MageArmor_ACSpecial">GESCHMOLZENE ERDE</string>
-    <string name="MageArmor_Desc">Ein Magier kann den Zauber \"geschmolzene Erde\" wirken während er diese prächtige Rüstung trägt. Alle Feinde in seinem Sichtfeld werden in Flammen aufgehen und können sich gleichzeitig nicht mehr bewegen.</string>
+    <string name="MageArmor_Desc">Ein Magier kann den Zauber \&quot;geschmolzene Erde\&quot; wirken während er diese prächtige Rüstung trägt. Alle Feinde in seinem Sichtfeld werden in Flammen aufgehen und können sich gleichzeitig nicht mehr bewegen.</string>
     <string name="MageArmor_Name">Magierrobe</string>
     <string name="MageArmor_NotMage">Nur Magier können diese Rüstung nutzen.</string>
     <string name="MagicArrow_Info">Der gute alte Magische Pfeil, die richtige Entscheidung wenn dir die Munition ausgeht.</string>
@@ -1222,7 +1222,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="MissileWeapon_Sure">Willst du es wirklich als Nahkampfwaffe ausrüsten?</string>
     <string name="MissileWeapon_Yes">Ja, ich weiß was ich tue.</string>
     <string name="Mob_Attacking">Zähle diesen %s als tot!</string>
-    <string name="Mob_Cannot_Be_Pet">Der Wille eines \"%s\" ist schwach genug um es zu kontrolieren!</string>
+    <string name="Mob_Cannot_Be_Pet">Der Wille eines \&quot;%s\&quot; ist schwach genug um es zu kontrolieren!</string>
     <string name="Mob_CantDoIt">Ich kann das nicht machen. Ich habe kleine Pfoten.</string>
     <string name="Mob_Desc">Richtige Beschreibung folgt!</string>
     <string name="Mob_Died">Du hörst wie etwas in der Ferne stirbt</string>
@@ -1268,7 +1268,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="NatureArmorSpell_Info">Elfen können auch zäh sein, vor allem wenn sie von Mutter Natur selbst beschützt werden.</string>
     <string name="NatureArmorSpell_Name">Natur-Rüstung</string>
     <string name="NecromancerArmor_Info">Dieser Harnisch erlaubt es dem Nekromanten, bis zu 2 Untote zu erschaffen, die dir folgen und Gegner angreifen wobei jeder 5 Seelen kostet. Die Untoten werden mit jedem Level stärker.</string>
-    <string name="NecromancerArmor_Info2">Diese Rüstung  verleiht dem Nekromanten die Fähigkeit \"Nekrose\", welche eine magische Seuche, welche einige Kreaturen in der näheren Umgebung infiziert, tot oder lebendig.</string>
+    <string name="NecromancerArmor_Info2">Diese Rüstung  verleiht dem Nekromanten die Fähigkeit \&quot;Nekrose\&quot;, welche eine magische Seuche, welche einige Kreaturen in der näheren Umgebung infiziert, tot oder lebendig.</string>
     <string name="NecromancerArmor_Name">Knochenrüstung</string>
     <string name="NecromancerArmor_NotNecromancer">Nur Totenbeschwörer können diese Rüstung nutzen!</string>
     <string name="NecromancerNPC_Desc">Dieser Mann mittleren Alters scheint leicht verärgert und aufgeregt zugleich zu sein. Er trägt eine zusammengesetzte Rüstung, gefertigt aus Knochenfragmenten.</string>
@@ -1286,7 +1286,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="NecromancerRobe_PetLimitReached">Nekromantie: Beschwörungslimit erreicht (Momentanes Maximum: %d)!</string>
     <string name="Necromancer_ACSpecial">NEKROMANTIE</string>
     <string name="Necromancy_BecameALich">Du bist zu einem Lich geworden! Deine Kraft wächst und deine Seelenkapazität hat sich verdoppelt! Aber du hast %1$d Stärkepunkt(e) verloren.</string>
-    <string name="Necromancy_NotEnoughSouls">Du hast nicht genug Seelen, um einen \"%1$s\" Zauberspruch freizusetzen.</string>
+    <string name="Necromancy_NotEnoughSouls">Du hast nicht genug Seelen, um einen \&quot;%1$s\&quot; Zauberspruch freizusetzen.</string>
     <string name="Necromancy_ReincarnationName">Reinkarnation</string>
     <string name="Necromancy_ReincarnationTriggered">Deine Kräfte trotzen dem Tod! Aber du hast alle gesammelten Seelen und Besitztümer verloren.</string>
     <string name="Necromancy_SoulsCountLabel">Seelen</string>
@@ -1592,7 +1592,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Roar_Info">Ein machtvoller Schrei wird mit Sicherheit Gegner erschrecken und Verbündete inspirieren.</string>
     <string name="Roar_Name">Schrei</string>
     <string name="RogueArmor_ACSpecial">RAUCHBOMBE</string>
-    <string name="RogueArmor_Desc">Während er dieses dunkle Kleidungsstück trägt, kann ein Schurke den sogenannten \"Rauchbomben\"-Trick anweden ( bei dem allerdings keine echten Explosionen vorkommen ): Er blendet Gegner, welche ihn sehen können, und springt dann zur Seite.</string>
+    <string name="RogueArmor_Desc">Während er dieses dunkle Kleidungsstück trägt, kann ein Schurke den sogenannten \&quot;Rauchbomben\&quot;-Trick anweden ( bei dem allerdings keine echten Explosionen vorkommen ): Er blendet Gegner, welche ihn sehen können, und springt dann zur Seite.</string>
     <string name="RogueArmor_Fov">Du kannst nur an einen leeren Platz in deinem Sichtfeld springen.</string>
     <string name="RogueArmor_Name">Schurkentracht</string>
     <string name="RogueArmor_NotRogue">Nur Schurken können diese Rüstung nutzen!</string>
@@ -1707,7 +1707,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="Scroll_ACRead">LESEN</string>
     <string name="Scroll_Blinded">Du kannst keine Schriftrolle lesen, solange Du geblendet bist</string>
     <string name="Scroll_Info">Dieses Pergament ist mit nicht entzifferbaren Schriftzeichen übersät und enthält die Rune %s. Wer weiß, was passiert, wenn diese laut vorgelesen wird? </string>
-    <string name="Scroll_Name">Schriftrolle \"%s\"</string>
+    <string name="Scroll_Name">Schriftrolle \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="Scroll_Runes_1">SOWILO</string>
     <string name="Scroll_Runes_10">ODAL</string>
@@ -1828,11 +1828,11 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpeedBuff_Info">Der Körper strahlt Lebendigkeit und Energie aus und die Bewegungen fühlen sich schneller an als sonst.</string>
     <string name="SpeedBuff_Name">Geschwindigkeit</string>
     <string name="SpellBook_Info">Es sieht eher wie eine Zusammenstellung von zusammengenähten Seiten aus, als wie ein richtiges Buch. Du kannst vielleicht etwas daraus machen, wenn du dich genug darauf konzentrierst.</string>
-    <string name="SpellBook_Info_Identified">In diesen Seiten hast du den kompletten Text eines \"%1$s\" Zaubers gefunden.\n\" %2$s \"</string>
+    <string name="SpellBook_Info_Identified">In diesen Seiten hast du den kompletten Text eines \&quot;%1$s\&quot; Zaubers gefunden.\n\&quot; %2$s \&quot;</string>
     <string name="SpellBook_Name">Zauberbuch</string>
     <string name="Spell_SelectACell">Wähle ein Zielfeld.</string>
     <string name="Spell_SelectAChar">Wähle ein Lebewesen als Ziel aus.</string>
-    <string name="Spells_NotEnoughSP">Du hast nicht genug Mana um einen \"%1$s\" Zauberspruch zu wirken.</string>
+    <string name="Spells_NotEnoughSP">Du hast nicht genug Mana um einen \&quot;%1$s\&quot; Zauberspruch zu wirken.</string>
     <string name="Spells_NotInOwnBody">Du kannst %s nicht ausführen, solange deine Seele von deinem Körper getrennt ist.</string>
     <string name="Spells_NotTooFast">%s ist noch nicht zum Benutzen bereit</string>
     <string name="Spells_SummonLimitReached">%1$s: Beschwörungslimit erreicht (derzeitiges Maximum: %2$d)!</string>
@@ -1852,7 +1852,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiderGuard_Desc">Ähnlich den Spinnensoldaten,, haben die Spinnenwächter geschworen, ihr Königreich zu beschützen. Der Stachel der Wächter ist dazu da, seine Ziele bewegungsunfähig zu machen</string>
     <string name="SpiderGuard_Name">Spinnenwächter</string>
     <string name="SpiderGuard_Name_Objective">Spinnenwächter</string>
-    <string name="SpiderMindAmber_Desc">Bernsteinspinnen sind geheimnisvolle und seltene Kreaturen, die psychische Kraft aufweisen, ähnlich den Psychospinnen aber mehr aushalten als ihre normalen Artgenossen. Der Begriff \"Bernstein\" bezieht sich auf die Farbe ihrer riesigen Gehirn-Säcke die auftauchen, bevor ihre Opfer von der Kraft der Bernsteinspinnen getroffen werden</string>
+    <string name="SpiderMindAmber_Desc">Bernsteinspinnen sind geheimnisvolle und seltene Kreaturen, die psychische Kraft aufweisen, ähnlich den Psychospinnen aber mehr aushalten als ihre normalen Artgenossen. Der Begriff \&quot;Bernstein\&quot; bezieht sich auf die Farbe ihrer riesigen Gehirn-Säcke die auftauchen, bevor ihre Opfer von der Kraft der Bernsteinspinnen getroffen werden</string>
     <string name="SpiderMindAmber_Name">Bernsteinspinne</string>
     <string name="SpiderMindAmber_Name_Objective">Bernsteinspinne</string>
     <string name="SpiderMind_Desc">Diese zerbrechlich wirkenden Spinnen weisen einzigartige mentale Kräfte auf, welche es ihnen erlauben die gesamte Kolonie zu kontrollieren. Psi-Spinnen sind in der Lage, jedes lebendige Wesen zu kontrollieren, aber sie sind ziemliche Feiglinge.</string>
@@ -2024,8 +2024,8 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="Undead_Name_Objective">Untoter Zwerg</string>
     <string name="Ushanka_Info">Warmer und gemütlicher Ushanka Hut, dekoriert mit einem edlem rotem Stern. Ein perfekter Begleiter für einen Kameradenkampf gegen den bösen kalten Dungeon.</string>
     <string name="Ushanka_Name">Ushanka</string>
-    <string name="Using_Failed_Because_Blind">Du kannst die \"%s\" nicht benutzen, wenn du geblendet bist.</string>
-    <string name="Using_Failed_Because_Magic">Eine mächtige Magie hindert dich daran, die \"%s\" zu benutzen.</string>
+    <string name="Using_Failed_Because_Blind">Du kannst die \&quot;%s\&quot; nicht benutzen, wenn du geblendet bist.</string>
+    <string name="Using_Failed_Because_Magic">Eine mächtige Magie hindert dich daran, die \&quot;%s\&quot; zu benutzen.</string>
     <string name="VampireSkull_Info">Diese Maske besteht aus einem natürlichen Vampirschädel. Tatsächlich ist es ein Vampirschädel ... Der Schädel eines großköpfigen Vampirs. Gruselig...</string>
     <string name="VampireSkull_Name">Vampirschädel</string>
     <string name="VertigoBuff_Info">Die Benommenheit macht es schwieriger, geradeaus zu gehen!</string>
@@ -2190,7 +2190,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndDonate_ruby">Rubin</string>
     <string name="WndDonate_rubyDonate">Rubinspende</string>
     <string name="WndDonate_rubyDonateText">Deine Großzügigkeit wird uns helfen, Remixed Dungeon weiter zu verbessern!</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
     <string name="WndDonate_silver">Silber</string>
     <string name="WndDonate_silverDonate">Silberspende</string>
     <string name="WndDonate_silverDonateText">Jede Spende wird zur Entwicklung des Projekts beitragen</string>
@@ -2269,7 +2269,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndMovieTheatre_Instruction">Hallo und willkommen in unserem Kino! Wir bieten einen besonderen Service, bei dem Sie sich kostenlos einen speziellen Film namens Werbung ansehen können. Und wenn Sie ihn komplett durchschauen, erhalten Sie als Belohnung %d Goldmünzen!</string>
     <string name="WndMovieTheatre_Instruction_2">Du hast %1$d von %2$d mal geguckt. Du wirst zusätzliche Gelegenheiten um Filme zu gucken erhalten, für jeden neuen Level.</string>
     <string name="WndMovieTheatre_No">Verlassen</string>
-    <string name="WndMovieTheatre_Ok">Du hast erfolgreich ein \"Belohnungs\" Video angeschaut!</string>
+    <string name="WndMovieTheatre_Ok">Du hast erfolgreich ein \&quot;Belohnungs\&quot; Video angeschaut!</string>
     <string name="WndMovieTheatre_Sorry">Irgendwas ist schiefgelaufen, deshalb können wir dir nicht die Belohnung vom Video geben...</string>
     <string name="WndMovieTheatre_Thank_You">Danke, dass du teilgenommen hast!</string>
     <string name="WndMovieTheatre_Title">Kino</string>
@@ -2327,7 +2327,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndResurrect_Yes">Ja, ich werde kämpfen!</string>
     <string name="WndSadGhostNecro_No">Nein, lass es sprechen.</string>
     <string name="WndSadGhostNecro_Persuaded">Der traurige Geist wurde beherrscht!</string>
-    <string name="WndSadGhostNecro_Text">\"Dieser Geist scheint mit seinem Fluch zu kämpfen. Es scheint, dass er etwas von mir will. Wenn ich meine nekromantischen Kräfte benutze, werde ich ihn überreden können, dass ich schon das getan habe, was er von mir wollte. Auf diese Weise werde ich meine Zeit hier nicht verschwenden müssen. Sollte ich so etwas tun?\"</string>
+    <string name="WndSadGhostNecro_Text">\&quot;Dieser Geist scheint mit seinem Fluch zu kämpfen. Es scheint, dass er etwas von mir will. Wenn ich meine nekromantischen Kräfte benutze, werde ich ihn überreden können, dass ich schon das getan habe, was er von mir wollte. Auf diese Weise werde ich meine Zeit hier nicht verschwenden müssen. Sollte ich so etwas tun?\&quot;</string>
     <string name="WndSadGhostNecro_Yes">Ja, zwing es deinen Willen auf.</string>
     <string name="WndSadGhost_Armor">Rüstung des Geists</string>
     <string name="WndSadGhost_Farewell">Lebe wohl, Abenteurer!</string>
@@ -2516,7 +2516,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_deco_crate_name">Holzkiste</string>
     <string name="town_deco_crate_scrolls_desc">Diese Holzkiste ist bis zum Rand mit geheimem Wissen gefüllt.</string>
     <string name="town_deco_crate_scrolls_name">Holzkiste mit Schriftrollen</string>
-    <string name="town_deco_cross_desc">Ein solides silbernes Kreuz, ein Symbol der lokalen Religion- \"Die Zeugen von Santa dem Herrn der Tiefe\".</string>
+    <string name="town_deco_cross_desc">Ein solides silbernes Kreuz, ein Symbol der lokalen Religion- \&quot;Die Zeugen von Santa dem Herrn der Tiefe\&quot;.</string>
     <string name="town_deco_cross_name">Kreuz</string>
     <string name="town_deco_crossroad_desc">Grobe Holzsäule mit pfeilförmigen Platten, auf denen der Text vor langer Zeit verblasst ist, wahrscheinlich aufgrund der rauen Wetterbedingungen.</string>
     <string name="town_deco_crossroad_name">Kreuzungsschild</string>
@@ -2604,7 +2604,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_deco_rope_name">Seil</string>
     <string name="town_deco_rug_desc">Mit einem guten Geschmack entworfen.</string>
     <string name="town_deco_rug_name">Teppich</string>
-    <string name="town_deco_screen_desc">Diese Mysteriöse Leinwand wird \"Bildschirm\" genannt unt kann bewegende Bilder zeigen</string>
+    <string name="town_deco_screen_desc">Diese Mysteriöse Leinwand wird \&quot;Bildschirm\&quot; genannt unt kann bewegende Bilder zeigen</string>
     <string name="town_deco_screen_name">Bildschirm</string>
     <string name="town_deco_scrolls_desc">Dieses staubige Regal ist voll mit verschieden Schriftrollen und Büchern.</string>
     <string name="town_deco_scrolls_name">Schriftrollen</string>
@@ -2628,7 +2628,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_deco_snow_name">Schnee</string>
     <string name="town_deco_snowdrift_desc">Es ist ein recht großer Haufen Schnee und offentsichtlich ist niemand bereit es zu entfernen.</string>
     <string name="town_deco_snowdrift_name">Schneeverwehung</string>
-    <string name="town_deco_snowman_desc">Schneemänner sind eine Traditionelle Stadt Dekoration für die Ferienzeit, während die Leute \"Weihdungeon\" feiern, der Tag, als die Monster den Dungeon erobert haben.</string>
+    <string name="town_deco_snowman_desc">Schneemänner sind eine Traditionelle Stadt Dekoration für die Ferienzeit, während die Leute \&quot;Weihdungeon\&quot; feiern, der Tag, als die Monster den Dungeon erobert haben.</string>
     <string name="town_deco_snowman_name">Schneemann</string>
     <string name="town_deco_snowy_plate_desc">Diese antike Platte ist mit Schnee bedeckt</string>
     <string name="town_deco_snowy_plate_name">Verschneite Platte</string>
@@ -2698,6 +2698,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

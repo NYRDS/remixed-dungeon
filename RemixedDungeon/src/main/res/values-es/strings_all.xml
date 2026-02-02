@@ -1910,6 +1910,7 @@ otro lugar del nivel.</string>
     <string name="SpiderCharm_Name">Encanto de Araña</string>
     <string name="SpiderCharm_Use">USAR</string>
     <string name="SpiderEgg_Desc">Este frágil huevo palpita débilmente. Dentro puedes ver algo con muchas patas.</string>
+    <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">huevo de araña</string>
     <string name="SpiderEgg_Name_Objective">huevo de araña</string>
     <string name="SpiderElite_Desc">Al igual que los soldados, las arañas guardian juran proteger su reino. El veneno de las arañas de élite se usa para desorientar a su objetivo.</string>
@@ -2805,6 +2806,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
