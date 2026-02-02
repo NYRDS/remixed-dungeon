@@ -75,10 +75,13 @@ def auto_fix_trivial_issues(file_path):
                 i += 1
             fixed_text = temp_fixed_text
 
-            # Fix unescaped quotes in any language (should be \")
+            # Fix unescaped quotes in any language (should be &quot;)
             # Only escape quotes that are not already escaped
-            # Prefer \" over &quot; for Android string resources
-            fixed_text = re.sub(r'(?<!\\)"', '\\"', fixed_text)
+            # Also replace existing \" with &quot;
+            # Prefer &quot; over \" for Android string resources
+            fixed_text = re.sub(r'(?<!\\)"', '&quot;', fixed_text)
+            # Replace any existing \" with &quot;
+            fixed_text = re.sub(r'\\"', '&quot;', fixed_text)
 
             # Fix unescaped @ symbols (these need to be escaped in Android XML as \@)
             fixed_text = re.sub(r'(?<!\\)@', '\\@', fixed_text)
@@ -199,7 +202,7 @@ def validate_special_characters(file_path):
                     print(f"Error: String content wrapped in quotes found in string '{name}' in {file_path}: '{value}'. Quotes should not wrap entire string content in Android XML.")
                     all_valid = False
 
-            # Check for unescaped quotes in any language (should be \")
+            # Check for unescaped quotes in any language (should be &quot;)
             # Properly identify quotes that are NOT escaped with \
             i = 0
             while i < len(value):
@@ -208,7 +211,7 @@ def validate_special_characters(file_path):
                     is_escaped = (i > 0 and value[i-1] == '\\')
 
                     if not is_escaped:
-                        print(f"Error: Unescaped quote found in string '{name}' in {file_path}: '{value}'. Use \\\" instead.")
+                        print(f"Error: Unescaped quote found in string '{name}' in {file_path}: '{value}'. Use &quot; instead.")
                         all_valid = False
                         break
                 i += 1
@@ -235,19 +238,12 @@ def validate_special_characters(file_path):
                         break
                 i += 1
 
-            # Check for unescaped quotes in any language (should be \")
-            # Properly identify quotes that are NOT escaped with \
-            i = 0
-            while i < len(value):
-                if value[i] == '"':
-                    # Check if this quote is escaped with backslash
-                    is_escaped = (i > 0 and value[i-1] == '\\')
-
-                    if not is_escaped:
-                        print(f"Error: Unescaped quote found in string '{name}' in {file_path}: '{value}'. Use \\\" instead.")
-                        all_valid = False
-                        break
-                i += 1
+            # Check for escaped quotes using \" (should be &quot;)
+            # According to new requirements, treat \" as an error and recommend &quot;
+            escaped_quotes = re.findall(r'\\"', value)
+            if escaped_quotes:
+                print(f"Error: Escaped quote using \\\" found in string '{name}' in {file_path}: '{value}'. Use &quot; instead.")
+                all_valid = False
 
             # Check for unescaped ampersands that are not part of XML entities
             unescaped_ampersands = re.findall(r'&(?![a-zA-Z]+;|#[0-9]+;|#x[0-9a-fA-F]+;)', value)

@@ -210,7 +210,8 @@ This will add the string to the appropriate localization file with proper format
 - Use appropriate escape sequences if needed
 - Preserve formatting placeholders like `%1$s`, `%d`, etc.
 - Avoid wrapping entire string content with quotes (e.g., `"This is text"` should be `This is text`)
-- For quotes within strings, use `\"` (preferred) or `&quot;` to escape them
+- For quotes within strings, use `&quot;` (preferred) or `\"` to escape them
+- Note: `\"` should be treated as an error and replaced with `&quot;` during validation
 
 ### Gender Values
 - For strings with IDs ending in `_Gender`, only specific lowercase values are allowed:
@@ -394,7 +395,7 @@ After adding translations:
 ### Validation Checklist
 Before submitting translations, ensure:
 1. All apostrophes are properly escaped in any language using `\'` or `&apos;`
-2. All quotes are properly escaped using `\"` (preferred) or `&quot;`
+2. All quotes are properly escaped using `&quot;` (preferred) or `\"`
 3. Multiple placeholders use positional identifiers (%1$s, %2$s, etc.)
 4. Special characters are converted to proper XML entities
 5. The XML file is well-formed and can be parsed without errors
@@ -426,7 +427,7 @@ python3 tools/validate_translations.py /path/to/remixed-dungeon --auto-fix
 ### Issues Addressed by Auto-Fix
 The auto-fix functionality addresses the following common issues:
 - Unescaped apostrophes (e.g., `po'` becomes `po\'`)
-- Unescaped quotes (e.g., `"` becomes `\"`) - now consistently uses `\"` notation
+- Unescaped quotes (e.g., `"` becomes `&quot;`) - now consistently uses `&quot;` notation
 - Unescaped ampersands (e.g., `&` becomes `&amp;`)
 - Unescaped @ symbols (e.g., `@` becomes `\@`)
 - Unescaped ? symbols at the beginning of strings (e.g., `?` becomes `\?`)
@@ -440,7 +441,7 @@ The auto-fix functionality addresses the following common issues:
 - Helps maintain Android buildability by preventing common XML parsing errors
 - Automatically handles the `po'` apostrophe case and other contractions
 - Automatically detects and fixes strings with quotes wrapping entire content
-- Consistently applies `\"` notation for quote escaping throughout all files
+- Consistently applies `&quot;` notation for quote escaping throughout all files
 
 ### Workflow Integration
 1. Run the auto-fix script before committing changes: `python3 tools/validate_translations.py --auto-fix`
