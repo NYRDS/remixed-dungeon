@@ -1657,6 +1657,7 @@ Potrebbe bruciare?</string>
     <string name="Succubus_Desc">Le succubi sono demoni che sembrano seducenti (in una lontana maniera gotic) ragazze. Usando la loro magia, le succubi possono affascinare l\'eroe, che sarà impossibilitato ad attaccare fin quando la fascinazione svanisce. </string>
     <string name="Succubus_Name">succube</string>
     <string name="Succubus_Name_Objective">succube</string>
+    <string name="SummonBeast_Name">Richiamo della Bestia</string>
     <string name="SummonDeathling_Info">Evoca un Gregario della Morte. I suoi HP e danni crescono con il livello dell\'eroe. \n\nLimite di evocazione: %1$d (+1 ogni Livello di Magia)</string>
     <string name="SummonDeathling_Name">Evoca Gregario della Morte</string>
     <string name="SungrassBuff_Name">guarigione delle erbe</string>
@@ -2298,6 +2299,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
