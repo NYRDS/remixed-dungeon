@@ -2090,6 +2090,7 @@ otro lugar del nivel.</string>
     <string name="TownsfolkSilentNPC_Name_Objective">ciudadano</string>
     <string name="ToxicGas_Info">Una nube verdosa de gas tóxico flota en el aire.</string>
     <string name="ToxicGas_Info1">Has muerto por el gas tóxico...</string>
+    <string name="ToxicGland_Name">Glándula Tóxica</string>
     <string name="TrapWnd_Step">¿Realmente quieres pisar esta trampa? Probablemente mueras.</string>
     <string name="TrapWnd_Title">Trampa</string>
     <string name="TreacherousSpirit_Desc">Esta monstruosa criatura parecida a una nube oscura viviente. Su ojo sin párpado mirándote, palpitando con cada uno de tus movimientos.</string>
@@ -2804,6 +2805,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

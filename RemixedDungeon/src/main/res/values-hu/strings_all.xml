@@ -1093,6 +1093,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="ManaPotion_Info">Ez a főzet újratölti a spirituális energiádat.</string>
     <string name="ManaPotion_Name">Mana Főzet</string>
     <string name="ManaShieldBuff_Info">Egy varázspajzs jelent meg, amely teljesen blokkolja a következő bejövő támadást.</string>
+    <string name="ManaShieldBuff_Name">Varázspajzs</string>
     <string name="Mana_Cost">Mana Igény:</string>
     <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Info">A Sebészi maszk arra lett kitalálva, hogy megállítsa a viselő szájából kijövő, cseppfolyós mikroorganizmusokat és aeroszolokat.
@@ -2517,6 +2518,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
