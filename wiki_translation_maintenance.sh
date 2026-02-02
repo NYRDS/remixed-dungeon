@@ -22,7 +22,7 @@ while true; do
         TASK_NAME="Wiki maintenance"
     else
         # Translation task
-        COMMAND="qwen -y 'read @docs/TRANSLATION_TASK.md, pull repo master, identify few random missing strings in random languages (use tools/select_random_missing_string.py), find their context using tools/find_string_usage.py, translate them properly based on English reference and code context, add translations to appropriate strings_all.xml files, verify consistency with existing translations, also select few random strings and ensure it consistency among all languages, commit your changes, push it. Focus on maintaining consistency with existing translations, proper grammar, and cultural appropriateness for target languages.'"
+        COMMAND="qwen -y 'read @docs/TRANSLATION_TASK.md, pull repo master, identify few random missing strings in random languages (use tools/select_random_missing_string.py), find their context using tools/find_string_usage.py, translate them properly based on English reference and code context, add translations to appropriate strings_all.xml files using tools/insert_translated_string.py, verify consistency with existing translations, run tools/validate_translations.py to check for formatting issues, also select few random strings and ensure consistency among all languages, commit your changes, push it. Focus on maintaining consistency with existing translations, proper grammar, cultural appropriateness for target languages, and proper string formatting following Android XML standards.'"
         TASK_NAME="Translation task"
     fi
 
@@ -53,14 +53,19 @@ while true; do
             else
                 # Translation task - commit translation changes
                 git add RemixedDungeon/src/main/res/values-*/strings_all.xml
-                
+                git add tools/validate_translations.py 2>/dev/null || true
+                git add tools/insert_translated_string.py 2>/dev/null || true
+                git add tools/find_string_usage.py 2>/dev/null || true
+                git add tools/check_missing_strings.py 2>/dev/null || true
+
                 COMMIT_MSG="Auto-translation: Add missing string translations"
             fi
 
             # Commit with a descriptive message
             git commit -m "$COMMIT_MSG
 
-            Automated commit to $([ $TASK_CHOICE -eq 0 ] && echo 'update wiki pages' || echo 'add missing translations') identified during iteration."
+            Automated commit to $([ $TASK_CHOICE -eq 0 ] && echo 'update wiki pages' || echo 'add missing translations') identified during iteration.
+            Includes validation of string formatting and consistency checks."
 
             # Push changes to the current branch
             git push origin HEAD
