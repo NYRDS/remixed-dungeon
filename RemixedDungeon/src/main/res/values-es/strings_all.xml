@@ -19,6 +19,7 @@
     <string name="AboutScene_Txt_Intro">Remixed Dungeon por NYRDS basado en la Fuente de Pixel Dungeon por Watabou.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Las manos desnudas infectan mi técnica. Sin el corte limpio de la Sierra, mi puntería se corrompe en caos.</string>
     <string name="Acidic_Desc">Estos demonios arácnidos evitan el combate cercano a toda costa, disparando proyectiles paralizantes desde lejos.</string>
+    <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">escorpión ácido</string>
     <string name="Acidic_Name_Objective">escorpión ácido</string>
     <string name="Affection_Txt">%s de afecto</string>
@@ -2803,6 +2804,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

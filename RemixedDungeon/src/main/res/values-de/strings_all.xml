@@ -1809,6 +1809,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SmashSpell_Name">Zerschmettern</string>
     <string name="SmashSpell_NeedWeapon">Ich brauche eine Waffe für diese Aktion.</string>
     <string name="Snail_Desc">Dieser kleine Weichtier ist durch die Ernährung mit Abwässern ziemlich groß geworden, aber er ist immer noch sehr langsam, was ihn zu einem leichten Gegner macht.</string>
+    <string name="Snail_Name_Objective">Schnecke</string>
     <string name="SnipersMarkBuff_Info">Die Markierung wurde von einem Scharfschützen gemacht.</string>
     <string name="SnipersMarkBuff_Name">Scharfschützenzeichen</string>
     <string name="SociologistNPC_AlreadyTaken">Du hast diese Umfrage bereits gemacht, bitte komm später wieder</string>
@@ -2697,6 +2698,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

@@ -289,6 +289,7 @@
     <string name="BodyArmorSpell_Info">Active votre réserve de puissance musculaire, la rendant temporairement plus forte, augmentant ainsi considérablement votre armure, mais au détriment de votre vitesse de déplacement.</string>
     <string name="BodyArmorSpell_Name">Body Armor</string>
     <string name="BoneSaw_Name">Scie à os</string>
+    <string name="BoneShard_Name">Éclat d'os</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Cette arme de jet plate et incurvée retournera dans les mains de son propriétaire après avoir été lancée sur un ennemi.</string>
     <string name="Boomerang_Name">boomerang</string>
@@ -2937,6 +2938,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
