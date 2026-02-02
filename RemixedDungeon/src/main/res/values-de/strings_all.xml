@@ -661,6 +661,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Eye_Name">Böses Auge</string>
     <string name="Eye_Name_Objective">Böses Auge</string>
     <string name="Facilitations_Descriptions_2">Ein tiefgreifendes und gründliches Studium der Natur als Energiequelle ermöglicht es Ihnen, Ihre magischen Reserven während der Reise wieder aufzufüllen.</string>
+    <string name="Facilitations_Descriptions_3">Wenn Sie den Gürtel aus Ogerhaut enger ziehen, der von Generation zu Generation weitergegeben wurde, machen Sie einen Schritt nach vorne in das Unbekannte.</string>
     <string name="Fadeleaf_Desc">Das berühren eines Verblassenden Blattes, teleportiert irgendeine Kreatur an einen zufälligen Platz der aktuellen Ebene.</string>
     <string name="Fadeleaf_Name">Verblassendes Blatt</string>
     <string name="FetidRat_Desc">Diese Beutelratte ist viel größer als normal. Sie wird von einer fauligen Aura umgeben.</string>
@@ -2700,6 +2701,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

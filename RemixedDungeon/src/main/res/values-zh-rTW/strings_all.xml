@@ -1822,6 +1822,7 @@
     <string name="SpiritOfPain_Desc">黑暗的一部分</string>
     <string name="SpiritOfPain_Name">痛苦之魂</string>
     <string name="SpiritOfPain_Name_Objective">痛苦之魂</string>
+    <string name="StartScene_ChooseFromSlot">從存檔欄位中選擇</string>
     <string name="StartScene_Depth">層數：%1$d\n等級: %2$d</string>
     <string name="StartScene_DifficultyEasy">簡單模式(有廣告)</string>
     <string name="StartScene_DifficultyEasyNoAds">容易</string>
@@ -2595,6 +2596,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
