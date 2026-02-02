@@ -354,7 +354,7 @@
     <string name="CharAction_Push">推</string>
     <string name="CharAction_Steal">偷</string>
     <string name="CharAction_Taunt">嘲諷</string>
-    <string name="CharInfo_Level">這是 %1 級的 %2。</string>
+    <string name="CharInfo_Level">這是 %1$s 級的 %2$s。</string>
     <string name="Char_Defeat_0">%1$s擊殺了%2$s</string>
     <string name="Char_Defeat_1">%1$s擊殺了%2$s</string>
     <string name="Char_Defeat_2">%1$s擊殺了%2$s</string>

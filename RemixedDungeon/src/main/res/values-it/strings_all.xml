@@ -1063,7 +1063,7 @@ Potrebbe bruciare?</string>
     <string name="Mob_StaPassiveStatus">Questo %s è passivo.</string>
     <string name="Mob_StaSleepingStatus">Questo %s sta dormendo.</string>
     <string name="Mob_StaTerrorStatus">Questo %1 è inorridito</string>
-    <string name="Mob_StaTerrorStatus2">Questo %1 è inorridito da %2</string>
+    <string name="Mob_StaTerrorStatus2">Questo %1$s è inorridito da %2$s</string>
     <string name="Mob_StaWanderingStatus">Questo %s sta girovagando.</string>
     <string name="ModsButton_SelectMod">Seleziona modifica</string>
     <string name="Mods_AuthorEmail">Email autore:</string>
@@ -1526,7 +1526,7 @@ Potrebbe bruciare?</string>
     <string name="Sheep_Name">pecora</string>
     <string name="Sheep_Name_Objective">pecora</string>
     <string name="ShieldBuffNotReady_Name">Scudo non pronto</string>
-    <string name="ShieldInfoTemplate">Questo scudo bloccherà fino a %1$d danni in arrivo. Con una probabilità del %2$d %. Occorreranno %3$3.1f secondi per riprendersi dopo un blocco riuscito.</string>
+    <string name="ShieldInfoTemplate">Questo scudo bloccherà fino a %1$d danni in arrivo. Con una probabilità del %2$d %% . Occorreranno %3$3.1f secondi per riprendersi dopo un blocco riuscito.</string>
     <string name="ShieldStrTemplate">Chi indossa lo scudo deve avere almeno %1$d punti di Forza per usarlo correttamente.</string>
     <string name="Shielded_Defense">Bloccato</string>
     <string name="Shielded_Desc">I bruti sono i più grandi, i più forti e i più duri di tutti gli gnoll. Quando gravemente feriti, si infuriano, infliggendo danni maggiori ai loro nemici. Questo bruto porta con se uno scudo gigante!</string>

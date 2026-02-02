@@ -367,7 +367,7 @@
     <string name="Char_StaRooted">구속</string>
     <string name="Char_StaSlowed">감속</string>
     <string name="Char_StaVision">비전</string>
-    <string name="Char_Stole_1">%1가 %3로부터 %2를 훔쳤다!</string>
+    <string name="Char_Stole_1">%1$s가 %3$s로부터 %2$s를 훔쳤다!</string>
     <string name="Char_YouMissed">%1$s %2$s 당신의 공격</string>
     <string name="ChargrilledMeat_Info">괜찮은 스테이크처럼 구워졌다.</string>
     <string name="ChargrilledMeat_Name">익힌 고기</string>
