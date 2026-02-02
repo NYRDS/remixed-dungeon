@@ -53,10 +53,6 @@ while true; do
             else
                 # Translation task - commit translation changes
                 git add RemixedDungeon/src/main/res/values-*/strings_all.xml
-                git add tools/validate_translations.py 2>/dev/null || true
-                git add tools/insert_translated_string.py 2>/dev/null || true
-                git add tools/find_string_usage.py 2>/dev/null || true
-                git add tools/check_missing_strings.py 2>/dev/null || true
 
                 COMMIT_MSG="Auto-translation: Add missing string translations"
             fi
@@ -64,8 +60,7 @@ while true; do
             # Commit with a descriptive message
             git commit -m "$COMMIT_MSG
 
-            Automated commit to $([ $TASK_CHOICE -eq 0 ] && echo 'update wiki pages' || echo 'add missing translations') identified during iteration.
-            Includes validation of string formatting and consistency checks."
+            Automated commit to $([ $TASK_CHOICE -eq 0 ] && echo 'update wiki pages' || echo 'add missing translations') identified during iteration."
 
             # Push changes to the current branch
             git push origin HEAD
