@@ -68,7 +68,7 @@ public class Texture {
 
     private void uploadPixelData() {
         if (dataDirty) {
-            if (bitmapData != null) {
+            if (bitmapData != null && bitmapData.bmp != null) {
                 GLUtils.texImage2D(GLES20.GL_TEXTURE_2D, 0, bitmapData.bmp, 0);
                 if (autoDisposeBitmapData) {
                     bitmapData.dispose(); // Dispose the bitmap data after uploading
