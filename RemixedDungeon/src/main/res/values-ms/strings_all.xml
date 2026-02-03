@@ -182,6 +182,7 @@
     <string name="Bat_Desc">Penghuni gua yang cergas dan kuat ini dapat mengalahkan musuh yang lebih besar darinya dengan pendekatan menyembuhkan diri bagi setiap serangan yang berjaya.</string>
     <string name="Bat_Name">kelawar pontianak</string>
     <string name="Bat_Name_Objective">kelawar pontianak</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">Kepala kapak perang keluli bersaiz besar ini memberikan angkatan yang agak sukar bagi setiap pukulan.</string>
     <string name="BattleAxe_Name">kapak perang</string>
     <string name="BellaNPC_Amulet_F">Hai si kacak, apa benda yang berkilauan tu. Azimat yang luar biasa! Hmmm, awak... lebih menonjol dan lebih hebat dari yang lain. Marilah kita berbual-bual dan berbincang tentang masa hadapan kita bersama?</string>
@@ -2499,6 +2500,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

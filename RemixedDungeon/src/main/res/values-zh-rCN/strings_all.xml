@@ -1048,6 +1048,7 @@
     <string name="JarOfSouls_Desc">这个旧罐子上描绘的头骨里的眼睛正在闪闪发亮，以及它散发出的奇怪能量，让你感到不安。</string>
     <string name="JarOfSouls_Name">魂之灵龛</string>
     <string name="JarOfSouls_Name_Objective">魂之灵龛</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">经德国认证，枪头能稳定俯前，直至击中目标。</string>
     <string name="Javelin_Name">标枪</string>
     <string name="Journal_Alchemy">炼金釜</string>
@@ -2791,6 +2792,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
