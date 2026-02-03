@@ -219,6 +219,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Belongings_CantWearBoth">%1$s ve %2$s öğelerini aynı anda kuşanamazsın!</string>
     <string name="Belongings_Name">sırt çantası</string>
     <string name="BishopNPC_Desc">Kutsal Santa Kilisesi Piskoposu Derinlik Lordu</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Piskopos</string>
     <string name="BishopNPC_Name_Objective">Piskopos</string>
     <string name="Bishop_bye">Senin için dua edeceğim evladım.</string>
@@ -2091,6 +2092,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="TownsfolkSilentNPC_Name_Objective">köylü</string>
     <string name="ToxicGas_Info">Burada yeşilimsi bir zehirli gaz bulutu dönüyor.</string>
     <string name="ToxicGas_Info1">Zehirli gazı soluyarak öldün.</string>
+    <string name="ToxicGland_Name">Zehirli Bez</string>
     <string name="TrapWnd_Step">Gerçekten de bu tuzağın üstüne basmak istiyor musun? Ölme ihtimalin var. </string>
     <string name="TrapWnd_Title">Tuzak</string>
     <string name="TreacherousSpirit_Desc">Bu korkunç yaratık, yaşayan bir karanlık bulutuna benziyor. Devasa gözleri size bakarken, yaptığınız her hareketle birlikte nabız gibi atıyor.</string>
@@ -2827,6 +2829,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

@@ -1876,6 +1876,7 @@ otro lugar del nivel.</string>
     <string name="SmashSpell_Name">Impacto</string>
     <string name="SmashSpell_NeedWeapon">Necesito un arma para este movimiento.</string>
     <string name="Snail_Desc">Este pequeño molusco ha crecido bastante al alimentarse de aguas residuales, pero sigue siendo muy lento, lo que le convierte en un enemigo fácil de enfrentar.</string>
+    <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">caracol</string>
     <string name="Snail_Name_Objective">caracol</string>
     <string name="SnipersMarkBuff_Info">La marca fue hecha por un francotirador.</string>
@@ -2807,6 +2808,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -1517,6 +1517,7 @@
     <string name="RawFish_Info">Сира риба, їж на свій ризик</string>
     <string name="RawFish_Name">сира риба</string>
     <string name="RawFish_Taste">Рибка!</string>
+    <string name="RegenerationBuff_Info">Функція природної регенерації у вигляді бафу, щоб зробити речі простішими.</string>
     <string name="RegenerationBuff_Name">Природна регенерація</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Наша гра перервалася...\n Вибачте.\nБудь ласка, надішліть звіт, аби допомогти виправити це.</string>
     <string name="ResultDescriptions_Bleeding">Стік кров\'ю на рівні %d</string>
@@ -2646,6 +2647,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
