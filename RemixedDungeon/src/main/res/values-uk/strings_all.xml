@@ -905,6 +905,7 @@
     <string name="Hero_StaWeakness">Тебе послаблено!</string>
     <string name="Hero_Wait">...</string>
     <string name="Hero_YouNowHave">Отримано предмет: %s</string>
+    <string name="HideInGrassSpell_NeedGrassToHide">Навіть я не можу сховатися на видному місці.</string>
     <string name="Horror_Name_0">Жахливе %s</string>
     <string name="Horror_Name_1">Жахливий %s</string>
     <string name="Horror_Name_2">Жахлива %s</string>
@@ -2645,6 +2646,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

@@ -639,6 +639,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Food_ACEat">MAKAN</string>
     <string name="Food_Message">Sedapnya makanan!</string>
     <string name="FortuneTellerNPC_Desc">Perempuan ini memakai jubah labuh, berwarna terang. Dia nampak masih muda, berbanding penilik-nasib yang menguasai seni misteri menilik-nasib. Anda menghampirinya, dapat mendengar dia menggumam sendirian, ketika dia menilik bola kristal.</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">penilik-nasib</string>
     <string name="FortuneTellerNPC_Name_Objective">penilik-nasib</string>
     <string name="FreezeGlobe_Info">Bekukan karakter terpilih yang menyebabkan ia tidak dapat bergerak dalam tempoh singkat.</string>
@@ -2500,6 +2501,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Felfalás</string>
     <string name="AC_Necromancy">Nekromácia</string>
@@ -64,7 +63,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Armor_Glyph">mágiajel</string>
     <string name="Armor_Identify">már kitapasztaltad a(z) %1$s tárgyat, és sikerült beazonosítanod. Ez egy %2$s.</string>
     <string name="Armor_Incompatible">A különböző mágiák találkozása eltávolított a mágiajelet erről a páncélról.</string>
-    <string name="Armor_Info1">Ez a(z) %1$s sebzés elnyelést biztosít támadásonként \"%2$d\" pontig.</string>
+    <string name="Armor_Info1">Ez a(z) %1$s sebzés elnyelést biztosít támadásonként \&quot;%2$d\&quot; pontig.</string>
     <string name="Armor_Info2">\n\nA nem megfelelő erőd miatt csökken a mozgási sebességed és a védelmi képességed.</string>
     <string name="Armor_Info3">\n\nA nem megfelelő erőd miatt ez a páncél csökkenti a mozgási sebességedet és a védelmi képességedet.</string>
     <string name="Armor_Info4">\n\nÁltalánosan %1$s sebzés elnyelést biztosít támadásonként %2$d pontig, és %3$d pontnyi erőt igényel a használata.</string>
@@ -85,7 +84,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="AzuterronNPC_Name_Objective">Idegent</string>
     <string name="AzuterronNPC_Quest_End">Kitűnő. Nézd, fogd ezt a bájitalt, biztos, hogy előnyösnek találod majd.</string>
     <string name="AzuterronNPC_Quest_Reminder">Segíts nekem és én segítek neked.</string>
-    <string name="AzuterronNPC_Quest_Start">Hah, miért... ó, látsz engem, ugye? Ez azt jelenti, hogy nem vagy \"közülük\". Látom, ezeket a szörnyeket sem kedveled. Ha segítesz egy apró problémában, felajánlom neked a segítségem. Valahol ezen a szinten találhatsz a sötétség egy szörnyetegét, egy _Álnok Lelket_. Öld meg, vedd el a _szívét_ és térj vissza hozzám. És még egy dolog, ha érdeklődsz az ellátmányaimból való vásárlás iránt, kérdezz bátran</string>
+    <string name="AzuterronNPC_Quest_Start">Hah, miért... ó, látsz engem, ugye? Ez azt jelenti, hogy nem vagy \&quot;közülük\&quot;. Látom, ezeket a szörnyeket sem kedveled. Ha segítesz egy apró problémában, felajánlom neked a segítségem. Valahol ezen a szinten találhatsz a sötétség egy szörnyetegét, egy _Álnok Lelket_. Öld meg, vedd el a _szívét_ és térj vissza hozzám. És még egy dolog, ha érdeklődsz az ellátmányaimból való vásárlás iránt, kérdezz bátran</string>
     <string name="Backstab_Info">Nesztelen hátbadöfés. Sunyi, de extrém hatásos, a hátbadöfés hatékonysága a végrehajtó szintjével nő.\n\nEgy sikeres döfés teljesen lényegtelenné teszi, hogy az áldozat milyen páncélt visel vagy milyen speciális védelme van.</string>
     <string name="Backstab_Name">Hátbaszúrás</string>
     <string name="Backstab_TooFar">Az áldozat túl messze van egy sikeres támadáshoz.</string>
@@ -189,7 +188,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="BellaNPC_Amulet_F">Üdvözöllek cukipofa, mi van a kezedben? Azta, micsoda rendkívüli amulett! Mintha te... te sokkal fényesebben ragyognál másokhoz képest. Mit szólnál ahhoz, ha elmennénk sétálni és közben megbeszélnénk a közös jövőnket?</string>
     <string name="BellaNPC_Amulet_M">Üdvözöllek szépfiú, mi van a kezedben? Azta, micsoda rendkívüli amulett! Mintha te... te sokkal fényesebben ragyognál másokhoz képest. Mit szólnál ahhoz, ha elmennénk sétálni és közben megbeszélnénk a közös jövőnket?</string>
     <string name="BellaNPC_Angry">Hogy mered te kis proli!</string>
-    <string name="BellaNPC_Desc">Nagyon flancos csaj. Az egész megjelenése azt sugallja, hogy \"bárkivel elmegyek\".</string>
+    <string name="BellaNPC_Desc">Nagyon flancos csaj. Az egész megjelenése azt sugallja, hogy \&quot;bárkivel elmegyek\&quot;.</string>
     <string name="BellaNPC_Message">Nem érdekelnek az olyan csórók, mint te!</string>
     <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
@@ -224,8 +223,8 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="BlackSkullOfMastery_Title">Megtörheted a varázst. Vagy akár manipulálhatod a formáját, hogy lehetővé tegye neked, hogy befogadd a varázst és a tárgyat is együtt, hogy Lich váljék belőled.</string>
     <string name="BlackSkull_Activated">A Fekete Koponya felébredt!</string>
     <string name="BlackSkull_Deactivated">A Fekete Koponya szunnyad, még egyszer...</string>
-    <string name="BlackSkull_Info">Egy kicsi, obszidián koponya. Ez volt Necropolis hatalmának forrása, de miután a Lich legyőzte, elhagyta az ereje. De azért, ahogy a kezedben tartod, az különös érzésed támad, mintha \"éhezne\".</string>
-    <string name="BlackSkull_Info_Awakened">A koponya energiától lüktet, ami látod, ahogy áramlik ki az üres szemgödreiből. Amíg a kezedben tartod, hallod is félelmetes hangját: \"Vigyázd a halál lépteit!\"</string>
+    <string name="BlackSkull_Info">Egy kicsi, obszidián koponya. Ez volt Necropolis hatalmának forrása, de miután a Lich legyőzte, elhagyta az ereje. De azért, ahogy a kezedben tartod, az különös érzésed támad, mintha \&quot;éhezne\&quot;.</string>
+    <string name="BlackSkull_Info_Awakened">A koponya energiától lüktet, ami látod, ahogy áramlik ki az üres szemgödreiből. Amíg a kezedben tartod, hallod is félelmetes hangját: \&quot;Vigyázd a halál lépteit!\&quot;</string>
     <string name="BlackSkull_Name">fekete koponya</string>
     <string name="BlackSkull_Name_Awakened">éber fekete koponya</string>
     <string name="BlackSkull_Ressurrect">A Fekete Koponya feltámasztotta a szörnyet, a szolgálatodra!</string>
@@ -289,7 +288,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Candy_Name">édesség</string>
     <string name="Candy_Warning_1">Nem kellett volna ezt a cukorkát megenned. Megígérted, hogy odaadod valaki másnak. Viszont úgy tűnik semmilyen hatással nem volt rád, csak nem múlik el az éhséged. Elvégre ez csak egy cukorka.</string>
     <string name="Candy_Warning_2">Na mos már tényleg eleget ettél, a pocakod fáj a sok cukorkától!</string>
-    <string name="Capotain_Info">Egy magas, szűk karimájú kalap. Általában a Puritánokhoz társítják, de nem kell vallásosnak lenned a viseléséhez. Valamilyen oknál fogva egy címke van rajta, ami azt mondja: \"Solomon\".</string>
+    <string name="Capotain_Info">Egy magas, szűk karimájú kalap. Általában a Puritánokhoz társítják, de nem kell vallásosnak lenned a viseléséhez. Valamilyen oknál fogva egy címke van rajta, ami azt mondja: \&quot;Solomon\&quot;.</string>
     <string name="Capotain_Name">Kapitány</string>
     <string name="Carcass_Devoured">Megfaladtad %s tetemét!</string>
     <string name="Carcass_Kick">Ez a(z) %s teljesen halott, nincs értelme rugdosni.</string>
@@ -338,6 +337,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="ChaosSword_Info">Ennek a kardnak a pengéje tiszta káoszból készült és néha enyhén vibrál. A beléje szorult hatalom által szinte bármit képes kettészelni. Mindazonáltal jelentős gyakorlat szükséges a fegyver elképesztő erejének kihasználásához.</string>
     <string name="ChaosSword_Name">Káosz kard</string>
     <string name="CharAction_Charm">elbűvöl</string>
+    <string name="CharAction_Expel">eltávolít</string>
     <string name="CharAction_Give">odaad</string>
     <string name="CharAction_Hit">megüt</string>
     <string name="CharAction_Order">parancsol</string>
@@ -434,7 +434,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Codex_Story_23">Ez a könyv egy ismeretlen démoni nyelven írodott</string>
     <string name="Codex_Story_24">Ez a könyv egy ismeretlen démoni nyelven írodott</string>
     <string name="Codex_Story_25">A lány megállt, megdermedt a nehéz tölgy ajtó előtt, és nézte az ajtó rései között növekvő fényt. Mélyen az agya egy eldugott kis része felismerte hogy mi ez.\n
-\"Napfény..\" motyogta magában. Mióta nem láttam? A kazamata végtelen sötétjében már rég feladta, hogy számolja a napokat. A fény megvilágította az elfeledett emlékeket. Eszébe jutott a kiképzése, hosszú napok, fáradságos gyakorlása karddal valamint jegyzet és térképkészítéssel. Eszébe jutottak a mantrák és azok tudományágak, amelyek lehetővé tették számára, hogy megtartsa a józan eszét, miközben bejárta az ismeretlen mélységeket. Amire viszont nem emlékezett és nem is tudott visszaemlékezni azok az emberek voltak.\n
+\&quot;Napfény..\&quot; motyogta magában. Mióta nem láttam? A kazamata végtelen sötétjében már rég feladta, hogy számolja a napokat. A fény megvilágította az elfeledett emlékeket. Eszébe jutott a kiképzése, hosszú napok, fáradságos gyakorlása karddal valamint jegyzet és térképkészítéssel. Eszébe jutottak a mantrák és azok tudományágak, amelyek lehetővé tették számára, hogy megtartsa a józan eszét, miközben bejárta az ismeretlen mélységeket. Amire viszont nem emlékezett és nem is tudott visszaemlékezni azok az emberek voltak.\n
 Emlékezett a hangjukra a parancsokra amiket kapott és a figyelmeztetéseikre, de az arcukra már egyáltalán nem.\n
 A fájdalom megtanította rá. Emlékezz a veszélyekre, mindíg a veszélyekre. Vadászó állatok, élőhalottok, őrült banditák és ravasz nindzsák estek el a keze által. Tűzzel, vassal, mérgekkel, és mágiával kűzdötte át magát a förtelmeken, démonokon, mechanikus teremtményeken és az őrült halottidézőkön. Még Istenek is pusztultak el általa.\n
 Végig Yog nyomában volt Mennyen és Poklon át, mielőtt a rontásba csábító suttogását örökre elnémította volna. Még ezt követően is volt megoldatlan feladat. Yog csak egy szolgája volt valaminek ami nála is sokkal rejtélyesebb és hatalmasabb.\n
@@ -517,7 +517,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="Deathling_Name">halandó</string>
     <string name="Deathling_Name_Objective">halandó</string>
     <string name="DeferedDamage_Killed_Txt">%s megölt téged...</string>
-    <string name="DevourBuff_Info" />
+    <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">Felfalás</string>
     <string name="DewVial_ACDRINK">IDD MEG</string>
     <string name="DewVial_AutoDrink">A harmat fiola kiürült miközben a sebeidet gyógyítota.</string>
@@ -610,7 +610,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="ExplodingSkull_Desc">Ez a lebegő, lángoló koponya nagyon törékenynek látszik, bármelyik pillanatban darabokra robbanhat.</string>
     <string name="ExplodingSkull_Name">robbanó koponya</string>
     <string name="ExplodingSkull_Name_Objective">robbanó koponya</string>
-    <string name="Eye_Desc">Ezt a démont úgy is ismerik mint a \"gyűlölet gömbje\", mivel amikor megpillant egy ellenséget, azonnal halálsugarat bocsájt ki rá, attól függetlenül, hogy a közelben van e szövetségese vagy sem, így ilyenkor gyakran azokat is megsebzi.</string>
+    <string name="Eye_Desc">Ezt a démont úgy is ismerik mint a \&quot;gyűlölet gömbje\&quot;, mivel amikor megpillant egy ellenséget, azonnal halálsugarat bocsájt ki rá, attól függetlenül, hogy a közelben van e szövetségese vagy sem, így ilyenkor gyakran azokat is megsebzi.</string>
     <string name="Eye_Kill">%s halálsugara megölt téged...</string>
     <string name="Eye_Name">gonosz szem</string>
     <string name="Eye_Name_Objective">gonosz szem</string>
@@ -693,7 +693,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Gnoll_Name">gnoll felderítő</string>
     <string name="Gnoll_Name_Objective">gnoll felderítő</string>
     <string name="Gold_Collect">gyűjtsd az arany tallérokat, hogy később elkölthesd őket a boltban.</string>
-    <string name="Gold_Info">Egy rakás \"%d\" arany tallér</string>
+    <string name="Gold_Info">Egy rakás \&quot;%d\&quot; arany tallér</string>
     <string name="Gold_Info1">Egy arany tallér.</string>
     <string name="Gold_Name">arany</string>
     <string name="GoldenKey_Info">Aprók és bonyolultak a bevágások ezen az arany kulcson. Lehet hogy egy láda zárját nyitja?</string>
@@ -798,7 +798,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="HeroClass_RogPerks_5">A Mágikus Térképészet Tekercse már a kezdetekkor ismert.</string>
     <string name="HeroClass_War">harcos</string>
     <string name="HeroClass_WarPerks_0">A Harcosok 11 Erő ponttal kezdenek.</string>
-    <string name="HeroClass_WarPerks_1">A Harcosok egy egyedi rövid karddal kezdenek. Ezt a kardot \"újra kovácsolhatják\" hogy más közelharci fegyvert fejlesszenek vele.</string>
+    <string name="HeroClass_WarPerks_1">A Harcosok egy egyedi rövid karddal kezdenek. Ezt a kardot \&quot;újra kovácsolhatják\&quot; hogy más közelharci fegyvert fejlesszenek vele.</string>
     <string name="HeroClass_WarPerks_2">A Harcosok kevésbé profik a távolsági fegyverek használatában.</string>
     <string name="HeroClass_WarPerks_3">Akármilyen darabka élelem visszatölt némi életet amikor megeszed.</string>
     <string name="HeroClass_WarPerks_4">Az Erő Főzete már a kezdetekkor ismert</string>
@@ -807,7 +807,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="HeroSubClass_DescBers">Ha súlyosan megsebesül a _Dühödt Harcos_ belép a vad őrület állapotába amitől jelentősen megnövekszik a sebzése.</string>
     <string name="HeroSubClass_DescFreR">A _Szabadúszó_ majdnem kétszer olyan gyorsan mozog, mint a legtöbb szörnyeteg. Amikor szalad, a Szabadúszót sokkal nehezebb eltalálni. Azonban ehhez tehermentesnek kell lennie és nem szabad éheznie.</string>
     <string name="HeroSubClass_DescGlad">Minden sikeres találat egy közelharci fegyverrel lehetővé teszi a _Gladiátornak_ hogy sorozatos kombót kezdjen, amelyben minden egymást követő ütés nagyobbat sebez az előzőnél.</string>
-    <string name="HeroSubClass_DescNone" />
+    <string name="HeroSubClass_DescNone"/>
     <string name="HeroSubClass_DescScout">A Tünde _Felderítő_k a rejtőzködés nagymesterei. Magas fűben közlekedve ideiglenes láthatatlanság módosítót kapnak. Az átlagos Tündéknél sokkal gyorsabbak.</string>
     <string name="HeroSubClass_DescShaman">A Tünde _Sámán_ok képesek pálcát használni közelharci fegyverként. Sikeres találat esetén esély van arra hogy aktiválódik a pálca ereje anélkül hogy töltetet használna.</string>
     <string name="HeroSubClass_DescSnip">Az _Orvlövész_ képes észrevenni a gyenge pontokat az ellenfél páncélján, ezáltal könnyen tudja sebzését bevinni lőfegyverrel a páncélt kikerülve.</string>
@@ -1127,7 +1127,7 @@ Ennek a viselése azt jelenti, hogy odafigyelsz másokra.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">utánzó</string>
     <string name="MimicAmulet_Name_Objective">utánzó</string>
-    <string name="MimicPie_Desc">Az Utánzók mágikus teremtmények amelyek képesek bármilyen alak felvételére akaratuk szerint. Ez most épp úgy néz ki mint egy nagy szép szaftos pástétom\";</string>
+    <string name="MimicPie_Desc">Az Utánzók mágikus teremtmények amelyek képesek bármilyen alak felvételére akaratuk szerint. Ez most épp úgy néz ki mint egy nagy szép szaftos pástétom\&quot;;</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">utánzó</string>
     <string name="MimicPie_Name_Objective">utánzó</string>
@@ -1147,7 +1147,7 @@ Ennek a viselése azt jelenti, hogy odafigyelsz másokra.</string>
     <string name="MissileWeapon_Sure">Ezt tényleg kézifegyverként akarod hordani?</string>
     <string name="MissileWeapon_Yes">Igen, tudom mit csinálok</string>
     <string name="Mob_Attacking">Számold ezt a %s-t halottnak!</string>
-    <string name="Mob_Cannot_Be_Pet">Túl erős a(z) \"%s\" akarata hogy irányítsd!</string>
+    <string name="Mob_Cannot_Be_Pet">Túl erős a(z) \&quot;%s\&quot; akarata hogy irányítsd!</string>
     <string name="Mob_CantDoIt">Nem tudom megtenni. Apró mancsaim vannak.</string>
     <string name="Mob_Desc">Hamarosan valódi leírás kerül ide!</string>
     <string name="Mob_Died">Hallod hogy valami meghalt a távolban </string>
@@ -1192,7 +1192,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="MysteryMeat_Name">titokzatos hús</string>
     <string name="NatureArmorSpell_Info">Az ősi fajok kemények is lehetnek, különösen amikor maga az anya természet védelmezi őket.</string>
     <string name="NecromancerArmor_Info">Ezzel a páncéllal a Nekromata akár 2 Halállényt is megidézhet, egyenként 5 lélekért. Ezek az élőhalott szolgák követik mesterük és megtámadják ellenségeit. A Halállények egyre erősödnek a hős szintjével együtt.</string>
-    <string name="NecromancerArmor_Info2">Ezt a páncélt hordva a nekromata \"Nekrotizmus\" képességet kap, amivel varázspestist szórhat szét, megfertőzhet lényeket a környezetében, élőt és halottat.</string>
+    <string name="NecromancerArmor_Info2">Ezt a páncélt hordva a nekromata \&quot;Nekrotizmus\&quot; képességet kap, amivel varázspestist szórhat szét, megfertőzhet lényeket a környezetében, élőt és halottat.</string>
     <string name="NecromancerArmor_Name">Csont páncél</string>
     <string name="NecromancerArmor_NotNecromancer"> Csak Nekromaták használhatják ezt a páncélt!</string>
     <string name="NecromancerNPC_Desc">Ez a középkorú fickó egyszerre tűnik idegesnek és izgatottnak. Kompozit páncélja egybedolgozott csontdarabokból készült.</string>
@@ -1210,7 +1210,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: idézési limit elérve (Aktuális max: %d)!</string>
     <string name="Necromancer_ACSpecial">NEKROMÁCIA</string>
     <string name="Necromancy_BecameALich">Linch lett belőled! A hatalmad megnőtt és a lélektároló kapacitásod duplázódott! De viszont elvesztettél %1$d pont erőt.</string>
-    <string name="Necromancy_NotEnoughSouls">Nincs elég lelked hogy varázsolj \"%1$s\" mágiát.</string>
+    <string name="Necromancy_NotEnoughSouls">Nincs elég lelked hogy varázsolj \&quot;%1$s\&quot; mágiát.</string>
     <string name="Necromancy_ReincarnationName">Reinkarnáció</string>
     <string name="Necromancy_ReincarnationTriggered">A hatalmad megtagadja a halált! De viszont elvesztetted a gyűjtött lelkeidet és tulajdonod.</string>
     <string name="Necromancy_SoulsCountLabel">Lelkek</string>
@@ -1534,7 +1534,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">Első ránézésre ez az elöregedett, rozsdafoltokkal borított kard teljesen haszontalannak tűnik. De valamilyen ősrégi erő lakozik benne. Ez az erő képes bármilyen lényt akarat nélküli szolgává változtatni. Már csak meg kéne találnod a módját, hogy felébreszd...</string>
     <string name="SacrificialSword_Name">Áldozó kard</string>
-    <string name="SantaHat_Info">Semmi nem hoz annyira a \"Kazamatázás\" lázába, mint a Mikulás piros selyemsapkája.</string>
+    <string name="SantaHat_Info">Semmi nem hoz annyira a \&quot;Kazamatázás\&quot; lázába, mint a Mikulás piros selyemsapkája.</string>
     <string name="SantaHat_Name">Mikulás kalap</string>
     <string name="ScaleArmor_Desc">A bőr mellvértbe varrt fémlemezek egy mozgékony, de mégis védelmet nyújtó páncélt alkotnak.</string>
     <string name="ScaleArmor_Name">lemezpáncél</string>
@@ -1616,7 +1616,7 @@ egy másik helyre a szinten. </string>
     <string name="Scroll_ACRead">Olvasni</string>
     <string name="Scroll_Blinded">Vakon nem tudod olvasni a tekercset</string>
     <string name="Scroll_Info">Ezt a pergamaent kibetűzhetetlen írás borítja és a %s rúna címet viseli. Ki tudja mi történik, ha hangosan kimondod?</string>
-    <string name="Scroll_Name">\"%s\" tekercs</string>
+    <string name="Scroll_Name">\&quot;%s\&quot; tekercs</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="Scroll_Runes_1">SOWILO</string>
     <string name="Scroll_Runes_10">ODAL</string>
@@ -1727,11 +1727,11 @@ egy másik helyre a szinten. </string>
     <string name="SpeedBuff_Name">Sebesség</string>
     <string name="SpellBook_Info">Úgy néz ki inkább mint néhány összegyűjtött lap amit összevartak, minthogy egy tényleges könyv. Talán kihozhatsz belőle még valamit, ha elég figyelmet fordítasz rá.</string>
     <string name="SpellBook_Info_Identified">
-Ezen lapok közt egy teljes varázsszövegre bukkantál: \"%1$s\" \n\" %2$s \"</string>
+Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&quot; %2$s \&quot;</string>
     <string name="SpellBook_Name">Varázskönyv</string>
     <string name="Spell_SelectACell">Válassz ki egy mezőt.</string>
     <string name="Spell_SelectAChar">Válassz egy célt</string>
-    <string name="Spells_NotEnoughSP">Nincs elég manád hogy a \"%1$s\" varázst elvesd.</string>
+    <string name="Spells_NotEnoughSP">Nincs elég manád hogy a \&quot;%1$s\&quot; varázst elvesd.</string>
     <string name="Spells_NotInOwnBody">Nem tudod végrehajtani %s amíg a lelked el van választva a testedtől.</string>
     <string name="Spells_NotTooFast">%s még nem használható</string>
     <string name="Spells_SummonLimitReached">%1$s: elérted az idézési limited (Jelenlegi max: %2$d)!</string>
@@ -1750,7 +1750,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \"%1$s\" \n\" %2$s \"</
     <string name="SpiderGuard_Desc">Akár a katonák, a pókőrök is a királyságuk védelméért élnek. Az őr mérge megbénítja az áldozatát, amitől könnyű prédává válik.</string>
     <string name="SpiderGuard_Name">pók őr</string>
     <string name="SpiderGuard_Name_Objective">pók őr</string>
-    <string name="SpiderMindAmber_Desc">A Borostyánpókok titokzatos és ritka lények, pszionikus képességekkel, csakúgy, mint a pszí-pókok, de fizikailag sokkal erősebbek. A \"borostyán\" elnevezés a hatalmas agyhólyagjaik színére utal, amit áldozatuk előtt fednek fel a Borostyánpókok, amikor hatalmukat használják.</string>
+    <string name="SpiderMindAmber_Desc">A Borostyánpókok titokzatos és ritka lények, pszionikus képességekkel, csakúgy, mint a pszí-pókok, de fizikailag sokkal erősebbek. A \&quot;borostyán\&quot; elnevezés a hatalmas agyhólyagjaik színére utal, amit áldozatuk előtt fednek fel a Borostyánpókok, amikor hatalmukat használják.</string>
     <string name="SpiderMindAmber_Name">borostyán pók</string>
     <string name="SpiderMindAmber_Name_Objective">borostyán pók</string>
     <string name="SpiderMind_Desc">Ezek a látszólag törékeny pókok egyedi mentális erő birtokában vannak, amely lehetővé teszi számukra egész kolóniák irányítását. A Pszichó-Pók képes irányitani bármely élő teremtményt, de elég gyáva is.</string>
@@ -1792,7 +1792,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \"%1$s\" \n\" %2$s \"</
     <string name="StartScene_UnlockGnoll">Ahhoz, hogy feloldd ezt az osztályt, meg kell győznöd a helyi papot, hogy gyógyítsa meg a Gnoll Brute-ot.</string>
     <string name="StartScene_UnlockNecromancer">Ez a karakterosztály akkor választható, ha legyőzöl egy Linch-et.</string>
     <string name="StartScene_Warning">Az aktuális játékmeneted el fog veszni.</string>
-    <string name="StartScene_WinGame">A \"Kihívások\" eléréséhez nyerj meg egy játékot bármely karakterosztállyal!</string>
+    <string name="StartScene_WinGame">A \&quot;Kihívások\&quot; eléréséhez nyerj meg egy játékot bármely karakterosztállyal!</string>
     <string name="StartScene_Yes">Igen, új játékot kezdek.</string>
     <string name="Statue_Desc">Azt hihetnéd hogy ez csak egy másik ronda szobra ennek a kazamatának, de a vörösen izzó szeme hamar elfeledteti veled ezt. Míg a szobor maga kőből készült addíg a _%s_ a kezében valódinak tűnik.</string>
     <string name="Statue_Name">eleven szobor</string>
@@ -1908,7 +1908,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \"%1$s\" \n\" %2$s \"</
     <string name="Undead_Name_Objective">élőhalott törp</string>
     <string name="Ushanka_Info">Egy meleg és kényelmes ushanka sapka, amit egy előkelő piros csillaggal díszítettek. A tökéletes társa a gonosz és a hideg kazamata ellen harcoló bajtársnak.</string>
     <string name="Ushanka_Name">Usanka</string>
-    <string name="Using_Failed_Because_Blind">Nem használhatod a \"%s\" -t miközben nem látsz</string>
+    <string name="Using_Failed_Because_Blind">Nem használhatod a \&quot;%s\&quot; -t miközben nem látsz</string>
     <string name="Using_Failed_Because_Magic">Egy erős mágia meggátol hogy használd a(z) %s-t.</string>
     <string name="VampireSkull_Info">Ez a maszk egy igaz vámpír koponyájából készült. Sőt, ez maga egy vámpír koponya...egy nagyfejű vámpíré. Ijesztő.</string>
     <string name="VampireSkull_Name">Vámpír koponya</string>
@@ -1966,7 +1966,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \"%1$s\" \n\" %2$s \"</
     <string name="WandOfPoison_Info">Ennek a csavart fadarabnak a gonosz sugara halálos méreggel teríti be áldozatát. A megmérgezett lény ismétlődő sérüléseket szenved amíg a hatás tart. A hatás időtartama a pálca szintjével nő.</string>
     <string name="WandOfPoison_Info1">semmi nem történt</string>
     <string name="WandOfPoison_Name">Méreg Varázsbot</string>
-    <string name="WandOfRegrowth_Info">\"Az élet megszűnésekor új élet sarjad... Az örök ciklus sosem szakad meg!\"</string>
+    <string name="WandOfRegrowth_Info">\&quot;Az élet megszűnésekor új élet sarjad... Az örök ciklus sosem szakad meg!\&quot;</string>
     <string name="WandOfRegrowth_Info1">semmi nem történt</string>
     <string name="WandOfRegrowth_Name">Újjászületés Varázsbotja</string>
     <string name="WandOfShadowbolt_Info">Ez a pálca sötét, gonosz energiát sugároz.</string>
@@ -2069,7 +2069,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \"%1$s\" \n\" %2$s \"</
     <string name="WndDonate_ruby">rubin</string>
     <string name="WndDonate_rubyDonate">rubin támogatás</string>
     <string name="WndDonate_rubyDonateText">A nagylelkűséged segít abban, hogy folytassuk a Remixed Pixel Dungeon fejlesztését!</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
     <string name="WndDonate_silver">ezüst</string>
     <string name="WndDonate_silverDonate">ezüst támogatás</string>
     <string name="WndDonate_silverDonateText">Bármilyen támogatás segíteni fogja a projekt fejlesztését</string>
@@ -2144,7 +2144,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \"%1$s\" \n\" %2$s \"</
     <string name="WndMovieTheatre_Bye">Gyere máskor is! Szívesen látunk!</string>
     <string name="WndMovieTheatre_Instruction_2">Megnéztél ennyit: %1$d az ennyiből: %2$d . Lesz még lehetőséged videót nézni minden egyes szint után, amit a hősöd meglépett.</string>
     <string name="WndMovieTheatre_No">távozás</string>
-    <string name="WndMovieTheatre_Ok">Sikeresen megtekintettél egy \"jutalom\" videót!</string>
+    <string name="WndMovieTheatre_Ok">Sikeresen megtekintettél egy \&quot;jutalom\&quot; videót!</string>
     <string name="WndMovieTheatre_Sorry">Valami közbejött és nem tudtuk eljuttatni hozzád a jutalmad...</string>
     <string name="WndMovieTheatre_Thank_You">Köszönjük a részvételt!</string>
     <string name="WndMovieTheatre_Title">Film Színház</string>
@@ -2366,7 +2366,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_covered_table_name">Asztal</string>
     <string name="town_deco_crate_desc">Egy erős fakocka, amely a titkait rejti magában.</string>
     <string name="town_deco_crate_name">Láda</string>
-    <string name="town_deco_cross_desc">Egy tömör ezüst kereszt, ami a helyi vallás szimbóluma - \"Santa a Mélység Urának Tanui\"</string>
+    <string name="town_deco_cross_desc">Egy tömör ezüst kereszt, ami a helyi vallás szimbóluma - \&quot;Santa a Mélység Urának Tanui\&quot;</string>
     <string name="town_deco_cross_name">Kereszt</string>
     <string name="town_deco_crossroad_desc">Egy durva fából készült oszlop, amin nyíl alakú táblák mutatják az irányt. A szöveg rajtuk már rég elmosódott, valószínűleg a kemény környezeti hatások miatt.</string>
     <string name="town_deco_crossroad_name">Útkereszteződést jelző tábla</string>
@@ -2446,7 +2446,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_rope_name">Kötél</string>
     <string name="town_deco_rug_desc">Jó ízléssel tervezték.</string>
     <string name="town_deco_rug_name">Szőnyeg</string>
-    <string name="town_deco_screen_desc">Ez a titokzatos vászon, úgynevezett \"képernyő\" mozgó képeket képes vetíteni</string>
+    <string name="town_deco_screen_desc">Ez a titokzatos vászon, úgynevezett \&quot;képernyő\&quot; mozgó képeket képes vetíteni</string>
     <string name="town_deco_screen_name">Képernyő</string>
     <string name="town_deco_scrolls_desc">Ez a poros polc tele van különböző tekercsekkel és könyvekkel.</string>
     <string name="town_deco_scrolls_name">Mágikus Tekercs</string>
@@ -2463,7 +2463,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_snow_name">Hó</string>
     <string name="town_deco_snowdrift_desc">Egy elég nagy rakás hó, amit nyilván senki nem fog eltakarítani.</string>
     <string name="town_deco_snowdrift_name">Hófúvás</string>
-    <string name="town_deco_snowman_desc">A hóember egy tradicionális díszítőeleme a városkának ünnepi szezonban, szerepe ezen a helyen különösen a \"Kazamatacsony\" napját ünnepli, amikor a szörnyek elárasztották a kazamatát.</string>
+    <string name="town_deco_snowman_desc">A hóember egy tradicionális díszítőeleme a városkának ünnepi szezonban, szerepe ezen a helyen különösen a \&quot;Kazamatacsony\&quot; napját ünnepli, amikor a szörnyek elárasztották a kazamatát.</string>
     <string name="town_deco_snowman_name">Hóember</string>
     <string name="town_deco_snowy_plate_desc">Hó takarja ezt az ősi táblát</string>
     <string name="town_deco_snowy_plate_name">Havas tálca</string>
@@ -2518,6 +2518,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
