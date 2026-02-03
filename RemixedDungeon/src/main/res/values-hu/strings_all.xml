@@ -1245,6 +1245,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="Pickaxe_Info">Ez egy nagy és erős szerszám amit kövek széttörésére használnak. Valószínűleg fegyverként is ugyan ilyen hatékonyan lehet használni.</string>
     <string name="Pickaxe_Name">csákány</string>
     <string name="Pickaxe_NoVein">Nincs a közeledben sötét arany telér amit ki tudnál bányászni</string>
+    <string name="Pickaxe_NothingToMine">Nincs itt semmi, amit ki lehetne ásni!</string>
     <string name="Piercing_Name_0">Szúró %s</string>
     <string name="Piercing_Name_1">Szúró %s</string>
     <string name="Piercing_Name_2">Szúró %s</string>
@@ -2518,6 +2519,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
