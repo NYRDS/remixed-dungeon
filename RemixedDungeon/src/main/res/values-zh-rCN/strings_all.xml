@@ -179,6 +179,7 @@
     <string name="Badges_Yog_Slain">击杀Yog-Dzewa</string>
     <string name="Bag_ACOpen">打开</string>
     <string name="Bandit_Desc">地牢的深处总是各式罪犯的藏身之地。不是所有人都能在漫长的岁月中保持清醒的神智，在很久以前，这些疯狂的小偷和强盗就已经忘记了自己是谁，为什么要偷东西。这个强盗看起来在他的匕首上涂了什么东西！</string>
+    <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">疯狂强盗</string>
     <string name="Bandit_Name_Objective">疯狂强盗</string>
     <string name="BardNPC_Desc">镇上的吟游诗人正在弹他的琵琶。</string>
@@ -2792,6 +2793,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
