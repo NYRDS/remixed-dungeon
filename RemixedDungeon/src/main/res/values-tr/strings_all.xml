@@ -200,6 +200,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Barrel_Pumpkin_Name">bal kabağı</string>
     <string name="Bat_Defense">savuşturdu</string>
     <string name="Bat_Desc">Bu mağara kubbeleri altında yaşayan inatçı ve hareketli yaratıklar kendilerinde çok büyük düşmanları başarılı her saldırılarında canlarını yenileyerek atl edebilir</string>
+    <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">vampir yarasa</string>
     <string name="Bat_Name_Objective">vampir yarasa</string>
     <string name="BattleAxe_Info">Bu devasa çelik başlı balta her darbede arkasında büyük hasarlar bırakır.</string>
@@ -2829,6 +2830,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

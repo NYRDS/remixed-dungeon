@@ -98,6 +98,7 @@
     <string name="Badges_AllRings">鑒定所有戒指</string>
     <string name="Badges_AllScrolls">大學者:鑒定所有卷軸</string>
     <string name="Badges_AllWands">鑒定所有法杖</string>
+    <string name="Badges_BossSlain1">史萊姆已被殺死</string>
     <string name="Badges_Champion">挑戰成功</string>
     <string name="Badges_DeathFalling">刺客教條玩上腦</string>
     <string name="Badges_DeathFire">燃燒生命 ,照亮別人</string>
@@ -2102,6 +2103,7 @@
     <string name="WndChooseWay_Message">您選擇步上哪條路？</string>
     <string name="WndClass_Mastery">專精</string>
     <string name="WndCryptoDonate_infoText">您可以通過將加密貨幣捐贈發送到以下地址來支持 Remixed Dungeon 的開發。感謝您的慷慨支持！</string>
+    <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndDonate_commonDonateText">混合地牢——永遠對所有人免費。
 但是，你能幫我們讓這個遊戲變得更好。
 除了我們的衷心感謝以外，你還將獲得一些界面上的美化。</string>
@@ -2598,6 +2600,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
