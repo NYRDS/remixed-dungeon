@@ -1200,6 +1200,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Nightcap_Info">밤에 던전을 정복하는 것은 매우 피곤한 일일 겁니다. 따뜻하고 아늑한 모자를 써서 진정되고 당신의 걱정들을 없애 보는건 어떨까요?</string>
     <string name="Nightcap_Name">잠옷 모자</string>
     <string name="Nightmare_Desc">경련하는 살점 촉수로 이루어진 기괴한 생명체입니다. 이 악몽들은 고대신의 불길한 계획의 확실한 징후입니다.</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name">악몽</string>
     <string name="Nightmare_Name_Objective">악몽</string>
     <string name="No_Valid_Cell">근처에 맞는 방이 없습니다.</string>
@@ -1654,6 +1655,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Shopkeeper_text">픽셀 마트 분점에 오신 걸 환영합니다.\n무엇을 도와드릴까요?</string>
     <string name="Shopkeeper_title">상점</string>
     <string name="ShortSword_ACReforge">재주조</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">이건 엄청 짧은데 단검보다도 몇 인치 짧습니다.</string>
     <string name="ShortSword_Name">숏 소드</string>
     <string name="ShortSword_NotBoomerang">이 방법으로 부메랑을 업그레이드 할 수 없습니다.</string>
@@ -2313,6 +2315,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_chimney_name">굴뚝</string>
     <string name="town_deco_cinema_sign_desc">이 안에 영화관이 있는 것 같다.</string>
     <string name="town_deco_cinema_sign_name">영화관 표지판</string>
+    <string name="town_deco_clock_name">시계</string>
     <string name="town_deco_common_bed_desc">평범한 침대</string>
     <string name="town_deco_common_bed_name">침대</string>
     <string name="town_deco_common_door_desc">매너있는 모험가들은 절대 개인 사생활을 허락 없이 침해해서는 안됩니다.</string>
@@ -2439,6 +2442,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 

@@ -272,6 +272,7 @@
     <string name="Challenges_Names_5">nel buio</string>
     <string name="Challenges_Names_6">Rune Proibite</string>
     <string name="ChampionOfAirBuff_Info">Questa caratteristica dona alla creatura l\'essenza dei venti, migliorando la sua agilità e abilità in combattimento. Il Campione dell\'Aria diventa un avversario formidabile, capace di scatenare attacchi rapidi e devastanti che possono cambiare rapidamente il corso della battaglia.</string>
+    <string name="ChampionOfEarthBuff_Info">Il Campione della Terra incarna una forza inflessibile, poiché questo attributo aumenta la resistenza ai danni della creatura e incrementa la sua vitalità massima. Questa trasformazione lo rende un avversario temibile nelle profondità insidiose, capace di ignorare facilmente gli attacchi e di resistere a lunghe battaglie con fermezza incrollabile.</string>
     <string name="ChampionOfFireBuff_Info">Infuso con la furia delle fiamme, questo attributo potenzia la ferocia e le capacità di combattimento della creatura. Il Campione del Fuoco emerge come un avversario temibile, scatenando attacchi devastanti che possono avvolgere i nemici in fiamme roventi, instillando terrore in tutti coloro che osano opporsi ad esso.</string>
     <string name="ChampionOfFireBuff_Name">Campione del Fuoco</string>
     <string name="ChaosArmor_Info">Le placche rosso sangue di questa armatura sono tenute insieme con catene rosse oscure. Irradia energia del Caos quando la tocchi. </string>
@@ -1321,6 +1322,7 @@ Potrebbe bruciare?</string>
     <string name="ResultDescriptions_Hunger">sei morto di fame nel livello %d</string>
     <string name="ResultDescriptions_Immured">Murato con la pietra nel livello %d</string>
     <string name="ResultDescriptions_Mob">Ucciso da %1$s nel livello %2$d</string>
+    <string name="ResultDescriptions_Necromancy">Esaurita la forza vitale nel tentativo di animare il cadavere al livello %d</string>
     <string name="ResultDescriptions_Necrotism">Morto di Necrotismo al livello %d</string>
     <string name="ResultDescriptions_Ooze">Ucciso da un liquido caustico nel livello %d</string>
     <string name="ResultDescriptions_Poison">Ucciso dal veleno nel livello %d</string>
@@ -1532,6 +1534,7 @@ Potrebbe bruciare?</string>
     <string name="Shielded_Desc">I bruti sono i più grandi, i più forti e i più duri di tutti gli gnoll. Quando gravemente feriti, si infuriano, infliggendo danni maggiori ai loro nemici. Questo bruto porta con se uno scudo gigante!</string>
     <string name="Shielded_Name">Bruto schermato</string>
     <string name="Shielded_Name_Objective">Bruto schermato</string>
+    <string name="ShootInEye_Name">Colpo nell\'Occhio</string>
     <string name="Shopkeeper_Buy">Seleziona l\'oggetto da acquistare</string>
     <string name="Shopkeeper_BuyPrompt">Vediamo cos\'hai</string>
     <string name="Shopkeeper_Desc">Questo tipo stout sembra più appropriato per un distretto del commercio in qualche grande città che per un dungeon. I suoi prezzi spiegano perché preferisce fare affari qui.</string>
@@ -2301,6 +2304,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 
