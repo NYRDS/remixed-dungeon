@@ -1620,6 +1620,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="RottingFist_Name_Objective">faulige Faust</string>
     <string name="RoyalShield_desc">Ein Schild vollständig aus Metall. Ja, er ist schwer, aber nur er bietet den besten Schutz.</string>
     <string name="RoyalShield_name">Königlicher Schild</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Nur die besten Bogenschützen können den Rubinbogen benutzen. So gut wie jeder Pfeil durchdringt den Feind und hinterlässt dabei ein großes Loch in seinem Körper. Es benötigt viel Kraft um den Bogen zu spannen.</string>
     <string name="RubyBow_Name">Rubinbogen</string>
     <string name="RubyCrossbow_Info">Diese tödliche Waffe ist wahrlich ein Meisterwerk des zwergischen Ingenieurwesens.</string>
@@ -2699,6 +2700,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

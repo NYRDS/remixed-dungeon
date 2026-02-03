@@ -1311,6 +1311,7 @@
 </string>
     <string name="PlagueDoctorQuest_2_1_Prologue">「月花種子」……那些空靈的花朵，帶著月亮本身的魔力低語。我已經研究了它們奇特的發光現象幾個星期。它們的精華中蘊含著某種潛能，一種隱藏的能量，這可能是打開……某些事物的關鍵。*他若有所思地用骨指敲擊下巴*\n但可惜，它們很稀有。只在最深的洞穴中才能找到，那裡幾乎沒有月光照入。我需要兩顆。兩顆種子來解鎖它們力量的秘密。作為回報，我可以給你一些……純淨而強大的魔法。一瓶「魔力藥水」，充滿著月花的精髓。它將滋養你疲憊的靈魂，讓你能以全新的力量運用神秘法術。</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">卓越！_陽光草_，其金色精華充滿活力地跳動著。我已從它細緻的結構學到了很多。*他遞給你一瓶_健康藥水_，液體散發出淡淡的金光。* 當世界壓在你身上時喝下它，感受陽光的溫暖喚醒你的精神。</string>
+    <string name="PlagueDoctorQuest_2_2_Prologue">「啊，是 _陽光草_！這是一朵嬌嫩的花朵，其花瓣散發著太陽的溫暖。我相信它的精華中蘊含著關鍵……啊，暫時先別管細節了。總而言之，對我的研究至關重要。我需要 _兩顆陽光草種子_。為我取得它們，作為回報，我會贈予你在冒險中一定用得上的東西——一瓶 _生命藥水_，其中充滿了太陽的生命力。」</string>
     <string name="PlagueDoctor_Desc">散發奇怪味道的...皮革?下面應該是個人吧...</string>
 
     <string name="PlagueDoctor_Name">瘟疫巫醫</string>
@@ -2597,6 +2598,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
