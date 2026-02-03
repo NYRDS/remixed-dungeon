@@ -506,6 +506,7 @@
     <string name="DM300_Name_Objective">DM-300</string>
     <string name="Dagger_Info">一把木柄嚴重磨損的普通鐵匕首。</string>
     <string name="Dagger_Name">匕首</string>
+    <string name="Damage_Reduction">傷害減免</string>
     <string name="DarkGold_Info">這種金屬名中的暗並非源於其色澤(它看起來和普通金子一樣)，而是因為它會在陽光下熔化，令其在地表上毫無用處。</string>
     <string name="DarkGold_Name">暗金礦</string>
     <string name="DarkSacrifice_Hint">選擇你忠誠的仆人來獻祭！</string>
@@ -2600,6 +2601,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

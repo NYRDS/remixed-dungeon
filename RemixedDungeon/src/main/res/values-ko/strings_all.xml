@@ -598,6 +598,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Eye_Kill">%s의 죽음의 광선이 당신을 죽였다...</string>
     <string name="Eye_Name">눈알 악마</string>
     <string name="Eye_Name_Objective">눈알 악마</string>
+    <string name="Facilitations_Descriptions_0">변이체들은 항상 경멸과 두려움을 가지고 대우받았지만, 배고픔이 없는 것이 다시 한 번 당신에게 우월성을 줄 것입니다. 이번에는 던전의 심연을 정복하는 데 있어 말입니다.</string>
     <string name="Facilitations_Names_0">배고픔 없음</string>
     <string name="Fadeleaf_Desc">미명초를 만지면 현재 층의 무작위 위치로 보낼 것이다. </string>
     <string name="Fadeleaf_Name">미명초</string>
@@ -2242,6 +2243,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Wraith_Desc">그들의 묘지의 유령들은 복수심에 불타는 죄인의 영혼이다. 영체로 이루어져 있기 때문에 일반 무기로 맞추기가 매우 어렵다.</string>
     <string name="Wraith_Name">유령</string>
     <string name="Wraith_Name_Objective">유령</string>
+    <string name="WrnExperimental_realtime">실시간 모드 활성화됨: 이제 이 게임은 실시간으로 진행됩니다. 빠르게 조작하지 않으면 죽습니다.\n인벤토리를 확인하시겠습니까?\n하수도 게으름이 당신의 속을 뒤지는 동안 그렇게 하려는 것은 운 좋게 여겨지지 않습니다.</string>
     <string name="Yog_Desc">요그-제바는 혼돈의 왕국의 강력한 고대의 신이다. 한 세기 전, 고대 드워프들은 악마의 군대와 싸워 간신히 이겼지만, 신을 죽이지 못했다. 그 대신, 그들은 자신들의 도시 아래에 있는 홀에 이 신을 가두고는, 그가 다시는 일어서지 못할 정도로 약해지기를 바랬다.</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">희망은 환상에 불과하리...</string>
@@ -2437,6 +2439,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 
