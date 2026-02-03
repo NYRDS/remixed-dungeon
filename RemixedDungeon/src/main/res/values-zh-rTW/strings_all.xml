@@ -1434,6 +1434,7 @@
     <string name="Quarterstaff_Name">鐵頭棍</string>
     <string name="QuickSlot_SelectSlot">更改快捷使用</string>
     <string name="QuickSlot_SelectedItem">選取加入快速使用欄的物品</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">皮製箭袋能容納任意數量的箭矢</string>
     <string name="Quiver_Name">箭袋</string>
     <string name="RabbitEars_Info">兔子通常以幸運著稱，而它的運氣也許會轉移到獲得它身體一個部位的人。可轉念一想，兔子被殺掉並用來做你耳朵的裝飾也談不上特別的幸運。</string>
@@ -2601,6 +2602,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

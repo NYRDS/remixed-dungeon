@@ -1945,6 +1945,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="Sword_Name">Schwert</string>
     <string name="Tamahawk_Info">Diese Wurfaxt ist nicht besonders schwer, aber benötigt dennoch relativ viel Kraft um effizient eingesetzt werden zu können.</string>
     <string name="Tamahawk_Name">Tomahawk</string>
+    <string name="TenguLiver_Info">Diese Leber gehört einem mächtigen Feind. Allein beim Anblick übernehmen Ihre tierischen Instinkte die Kontrolle, und Sie spüren das Verlangen, sie zu verzehren.</string>
     <string name="Tengu_Desc">Tengu sind Mitglieder eines uralten Assassinen-Clans. Auch der Clan hört auf den Namen Tengu. Seine Assassinen sind berüchtigt für ihren exzessiven Einsatz von Shuriken sowie das Legen von Fallen.</string>
     <string name="Tengu_Info1">Endlich frei...</string>
     <string name="Tengu_Info2">Hab dich, %s!</string>
@@ -2700,6 +2701,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
