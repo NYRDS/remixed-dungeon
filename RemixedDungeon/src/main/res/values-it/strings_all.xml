@@ -1046,6 +1046,7 @@ Potrebbe bruciare?</string>
     <string name="Mimic_Name">replicante</string>
     <string name="Mimic_Name_Objective">replicante</string>
     <string name="MirrorImage_Desc">Questa illusione ha una stretta somiglianza con te, ma è più pallida e si deforma un po\'.</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">Immagine Riflessa </string>
     <string name="MirrorImage_Name_Objective">Immagine Riflessa </string>
     <string name="MissileWeapon_Info1">
@@ -2307,6 +2308,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

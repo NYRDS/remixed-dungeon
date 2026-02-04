@@ -2323,6 +2323,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_broken_wall_desc">Kayu balak pada bahagian dinding ini telah reput dan tidak memberi manfaat lagi.</string>
     <string name="town_deco_broken_wall_name">Dinding rosak</string>
     <string name="town_deco_brown_carpet_name">Permaidani</string>
+    <string name="town_deco_cabinet_desc">Sebuah almari besar dengan banyak pintu dan rak.</string>
     <string name="town_deco_canvas_desc">Helaian kain tebal yang tergantung di atas dinding.</string>
     <string name="town_deco_canvas_name">Kanvas</string>
     <string name="town_deco_carpet_desc">Permaidani merah yang mewah khusus untuk tetamu istimewa.</string>
@@ -2509,6 +2510,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
