@@ -21,6 +21,7 @@
     <string name="Acidic_Name_Objective">scorpione acido</string>
     <string name="Affection_Txt">%s dell\'affetto</string>
     <string name="AirElemental_Desc">Gli elementali dell\'acqua sono esseri magici volanti fatti di aria viva. </string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">elementare dell\'aria</string>
     <string name="AirElemental_Name_Objective">elementare dell\'aria</string>
     <string name="AlarmTrap_Desc">La trappola emette un suono acuto che riecheggia per tutto il dungeon!</string>
@@ -2304,6 +2305,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

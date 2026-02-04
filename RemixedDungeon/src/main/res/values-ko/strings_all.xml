@@ -1188,6 +1188,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="NecromancerRobe_PetLimitReached">강령술: 최대 소환 수에 도달했습니다(현재 최대 소환 수: 1%d)!</string>
     <string name="Necromancer_ACSpecial">강령술</string>
     <string name="Necromancy_BecameALich">당신은 리치가 되었습니다! 당신의 힘이 자라고 영혼 용량이 두 배가 되었지만, %1$d의 힘을 잃었습니다.</string>
+    <string name="Necromancy_Death">당신은 네크로맨서를 연습하면서 모든 생명력을 소진했습니다.</string>
     <string name="Necromancy_NotEnoughSouls">당신은 \&quot;1%1$s\&quot;마법을 시전하기에 충분한 영혼이 없습니다.</string>
     <string name="Necromancy_ReincarnationName">환생</string>
     <string name="Necromancy_SoulsCountLabel">영혼들</string>
@@ -2445,6 +2446,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

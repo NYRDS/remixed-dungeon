@@ -723,6 +723,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Guts_TileGrass">Kiszáradt bokor</string>
     <string name="Guts_TileHighGrass">Kiszáradt bokor</string>
     <string name="Guts_TileWater">Fura nyálkás folyadék</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">Balta egy hosszú rúd végén.</string>
     <string name="Halberd_Name">Alabárd</string>
     <string name="Halls_TileDescBookshelf">Ezek a könyvek hamvadnak a polcon.</string>
@@ -2527,6 +2528,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
