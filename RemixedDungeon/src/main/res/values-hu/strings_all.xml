@@ -2038,6 +2038,13 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Weightstone_WndChoice">Mire szeretnéd kiegyensúlyozni a(z) %s-t?</string>
     <string name="Weightstone_WndSpeed">Gyorsaságra</string>
     <string name="Welcome_Ok">Oké!</string>
+    <string name="Welcome_Text_31_1">    remix.31.1\n
+    - Játékmenet:\n
+    -- Új testreszabások!\n
+    -- Új pókfaj!\n
+    -- A Psi-Pókok mostantól erősítik a többi pókot, ahelyett hogy meggyengítenék a hőst.\n
+    - Hibajavítások\n
+</string>
     <string name="Welcome_Title">Üdv!</string>
     <string name="WindGust_Info">Megidéz egy széllöketet, ami arrébblöki a kiválasztott karaktert</string>
     <string name="WindGust_Name">Széllöket</string>
@@ -2519,6 +2526,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
