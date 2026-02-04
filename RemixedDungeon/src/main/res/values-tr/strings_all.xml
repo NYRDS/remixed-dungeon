@@ -247,6 +247,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BlackSkullOfMastery_Title">İstersen büyüyü kırabilirsin. Ya da büyülü içeriğini, bir şekilde, özümseyip bir Kara Büyücü\'ye dönüşebilirsin ki bu da sana, elindeki antikanın kendisinin ve büyülerinin gücünü bahşedecektir.</string>
     <string name="BlackSkull_Activated">Siyah Kurukafa Uyandı !</string>
     <string name="BlackSkull_Deactivated">Kara Kurukafa Bir Kez Daha Uykuya Daldı.</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Küçük bir obsidyen kafatası. Nekropolis\'in güçlerinin kaynağıydı, ancak Lich\'in yenilgisinden sonra tüm güçlerini kaybetmiş gibi görünüyor. Ancak, onu elinizde tuttuğunuzda aklınızdan garip bir düşünce geçiyor: \&quot;Açlık çekiyor\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">Kafatası güçle titreşiyor ve boş göz çukurlarından nasıl aktığını görebiliyorsunuz. Ve onu elinizde tutarken korkunç bir ses duyuyorsunuz: \&quot;Ölümün yürüyüşünü izleyin\&quot;.</string>
     <string name="BlackSkull_Name">siyah kurukafa</string>
@@ -2831,6 +2832,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

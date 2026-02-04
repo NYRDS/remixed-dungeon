@@ -1953,6 +1953,7 @@ otro lugar del nivel.</string>
     <string name="Sprout_Info">Despiertan las semillas dormidas.\nSin embargo, debe haber algo de vegetación en el suelo para que este hechizo tenga éxito.</string>
     <string name="Sprout_Name">Brote</string>
     <string name="StartScene_ChooseFromSlot">Elige una ranura de guardado</string>
+    <string name="StartScene_ComingSoon">Próximamente</string>
     <string name="StartScene_ContinueLatest">Continúa tu última partida o elige una ranura de guardado</string>
     <string name="StartScene_Depth">Profundidad: %1$d\nNivel: %2$d</string>
     <string name="StartScene_DifficultyEasy">Fácil (con anuncios)</string>
@@ -2809,6 +2810,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

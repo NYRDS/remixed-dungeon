@@ -1018,6 +1018,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name">toples jiwa</string>
     <string name="JarOfSouls_Name_Objective">toples jiwa</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">Sebatang logam ini telah diseimbangkan untuk menahan ujungnya di depan saat melayang melewati udara.</string>
     <string name="Javelin_Name">lembing</string>
     <string name="Journal_Alchemy">Panci alkimia</string>
@@ -2759,6 +2760,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
