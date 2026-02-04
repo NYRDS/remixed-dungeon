@@ -2116,6 +2116,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndLibrary_Mobs_Btn">Raksaksa</string>
     <string name="WndLocalModInstall_pick">Pilih direktori mod</string>
     <string name="WndLocalModInstall_title">Pasang mod dari direktori setempat</string>
+    <string name="WndModsDisclaimer_manage">Urus senarai mod</string>
     <string name="WndModsDisclaimer_title">Mod</string>
     <string name="WndMovieTheatre_Bye">Sila datang lagi, kami sentiasa menunggu kehadiran anda!</string>
     <string name="WndMovieTheatre_Instruction">Salam dan selamat datang ke pawagam kami! Kami menyediakan perkhidmatan istimewa, di mana anda boleh menonton filem istimewa yang dipanggil iklan secara percuma. Dan jika anda menontonnya sehingga habis, anda akan diberi ganjaran sebanyak %d syiling emas!</string>
@@ -2508,6 +2509,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

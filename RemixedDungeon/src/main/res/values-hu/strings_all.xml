@@ -2137,6 +2137,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndInfoItem_Tomb">Sír</string>
     <string name="WndInfoItem_WontKnow">Nem tudod, hogy mi van benne amíg ki nem nyitod!</string>
     <string name="WndInstallingMod_deleting_file">Törlés: %s</string>
+    <string name="WndInstallingMod_skipping_file">Kihagyás: %s</string>
     <string name="WndJournal_Levels">Szintek</string>
     <string name="WndJournal_Logbook">Eseménynapló</string>
     <string name="WndJournal_Title">Napló</string>
@@ -2528,6 +2529,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
