@@ -1401,6 +1401,7 @@
     <string name="PlagueDoctorNPC_After_Quest">我会证明的，我会证明给他们看！</string>
     <string name="PlagueDoctorNPC_After_Quest_2">你还在吗？来这里！拿着这个。 </string>
     <string name="PlagueDoctorNPC_Desc">散发奇怪味道的……皮革？下面应该是个人吧……</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">瘟疫巫医</string>
     <string name="PlagueDoctorNPC_Name_Objective">瘟疫巫医</string>
     <string name="PlagueDoctorNPC_Quest_End">啊，谢谢，我希望我能找到病原体。过去我什么都没找到。所以我在等你的时候为你做了这个。</string>
@@ -2794,6 +2795,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
