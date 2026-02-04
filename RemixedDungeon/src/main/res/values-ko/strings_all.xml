@@ -707,6 +707,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Guts_TileGrass">마른 덤불</string>
     <string name="Guts_TileHighGrass">마른 덤불</string>
     <string name="Guts_TileWater">이상한 점액질 액체</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">끝에 도끼가 달린 냉병기이다.</string>
     <string name="Halberd_Name">미늘창</string>
     <string name="Halls_TileDescBookshelf">고대의 언어로 쓰여진 책들이 책장에 가득하다.</string>
@@ -1231,6 +1232,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Piranha_Name_Objective">거대 피라냐</string>
     <string name="PirateSet_Info">아르! 너는 동료처럼 느껴지나... 아니면 그냥 망할 풋내기 선원처럼 느껴지나!? 그렇지 않길 빌어, 이 물건들은 해적들을 위한 것이거든. 그러니까 내 말은... 아르!</string>
     <string name="PirateSet_Name">해적 세트</string>
+    <string name="PlagueDoctorMaskHood_Info">조각된 검은 호박나무로 된 해골, 그 빈 눈구멍에는 자수정 보석의 윤기 있는 빛이 어른거린다. 당신이 들이마신 숨결은 복도처럼 얽힌 튜브와 필터를 지나며, 당신에게 달라붙은 부패를 가리는 강한 허브와 향신료의 향기를 전해준다. 하지만 그것이 단지 가면일 뿐은 아니다. 한밤중 같은 벨벳으로 만들어진 두꺼운 수도복 후드가 얼굴과 머리를 어둠 속에 가린다. 까마귀 날개처럼 생긴 이 후드는 등줄기를 따라 늘어뜨려져 있으며, 가장자리는 뼈처럼 하얀 레이스 장식으로 마감되어 충격적이지만 아름다운 대비를 이룬다. 마스크와 후드가 함께 어우러져 유령 같은 초상, 즉 부패의 힘에 맞서는 끝없는 싸움을 보여주는 음산한 증표를 만들었다.</string>
     <string name="PlagueDoctorNPC_After_Quest">그들에게 보여주겠어, 그들에게 모두 보여주겠어!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">아직까지 여기 있었던거야? 자! 받아.</string>
     <string name="PlagueDoctorNPC_Desc">이 곱추 남성은 가죽으로 둘러쌓여 있고, 강한 약냄새가..아니, 마늘 냄새도 나는 것 같다?</string>
@@ -1637,6 +1639,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Shaman_Name">놀 주술사</string>
     <string name="Shaman_Name_Objective">놀 주술사</string>
     <string name="Sheep_Desc">이 양은 마법 양입니다. 어떤 마법이 있냐고요? 당신은 그 양을 죽일 수 없습니다. 그 양은 멍한 눈으로 되새김질이나 하면서, 마법이 없어질 때까지 계속 있을 겁니다.</string>
+    <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">양</string>
     <string name="Sheep_Name_Objective">양</string>
     <string name="ShieldBuffNotReady_Info">방패가 다음 공격을 막을 준비가 되지 않았습니다.</string>
@@ -2442,6 +2445,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 
