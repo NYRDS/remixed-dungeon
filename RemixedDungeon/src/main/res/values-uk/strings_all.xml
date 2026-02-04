@@ -199,6 +199,7 @@
     <string name="BattleAxe_Info">В кожному помаху цієї грізної зброї відчувається вага сталевого леза.</string>
     <string name="BattleAxe_Name">бойова сокира</string>
     <string name="Bee_Gender">masculine</string>
+    <string name="Bee_Name_Objective">бджолу</string>
     <string name="BellaNPC_Amulet_F">Чому б апетитний пиріг не був таким гарним, це те що у вас є. Ах, такий вишуканий амулет! А ти ... ти так яскраво сяєш в порівнянні з будь-ким. Що якщо ми прогуляємося і обговорити наше взаємне майбутнє?</string>
     <string name="BellaNPC_Amulet_M">Чому б привітання не було таке гарне, це те що у вас є. Ах, такий вишуканий амулет! А ти ... ти стоїш над цими плебеями. Що якщо ми прогуляємося і обговорити наше взаємне майбутнє?</string>
     <string name="BellaNPC_Angry">Як смієш ти... ти плебей!</string>
@@ -2647,6 +2648,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
