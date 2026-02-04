@@ -173,6 +173,7 @@
     <string name="Bandit_Name">perompak gila</string>
     <string name="Bandit_Name_Objective">perompak gila</string>
     <string name="BardNPC_Gender">masculine</string>
+    <string name="BardNPC_Name_Objective">biduan</string>
     <string name="BarkskinBuff_Name">Kulit kayu</string>
     <string name="Barrel_Desc">Nampak seperti tong kayu biasa. Tetapi bila anda lihat lebih dekat anda terbau minyak. Tong ini agak ringan, anda boleh menolaknya.</string>
     <string name="Barrel_Name">tong</string>
@@ -2332,6 +2333,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_chimney_name">Cerobong</string>
     <string name="town_deco_cinema_sign_desc">Rupanya ada wayang berada di dalam bangunan tersebut.</string>
     <string name="town_deco_cinema_sign_name">Tanda wayang</string>
+    <string name="town_deco_clock_desc">Anak panah pada jam ini telah lama terbeku dalam satu kedudukan.</string>
     <string name="town_deco_common_bed_desc">Katil biasa.</string>
     <string name="town_deco_common_bed_name">Katil</string>
     <string name="town_deco_common_door_desc">Pengembara yang sopan dan bertingkah laku baik tidak sepatutnya masuk rumah orang tanpa kebenaran.</string>
@@ -2506,6 +2508,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
