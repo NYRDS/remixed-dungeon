@@ -1388,6 +1388,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="Pasty_Name">börek</string>
     <string name="Pickaxe_ACMine">KAZ</string>
     <string name="Pickaxe_Info">Bu büyük ve sağlam araç ile kayaları kırabilirsin.Bir silah olarakta kullanılabilir.</string>
+    <string name="Pickaxe_InsufficientStr">Madenciğini kazmak için yeterli gücün yok!</string>
     <string name="Pickaxe_Name">kazma</string>
     <string name="Pickaxe_NoVein">Yakında kazılacak bir kara altın damarı yok</string>
     <string name="Pickaxe_NothingToMine">Burada kazılacak bir şey yok!</string>
@@ -2832,6 +2833,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

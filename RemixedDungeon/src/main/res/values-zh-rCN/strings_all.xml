@@ -1692,6 +1692,7 @@
     <string name="ScaleArmor_Desc">用铁鳞片缝在皮背心上造就了一副灵活却可靠的护甲。</string>
     <string name="ScaleArmor_Name">鳞甲</string>
     <string name="ScarecrowNPC_Desc">毫无疑问……这个稻草人正在注视着你。它的红色眼睛看上去很吓人，但令你吃惊的是，你从它身上感受不到任何威胁。</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">稻草人</string>
     <string name="ScarecrowNPC_Name_Objective">稻草人</string>
     <string name="ScarecrowNPC_Quest_End">哦，开心，棒极了！\n为此，你可以得到一份实在的食物！</string>
@@ -2796,6 +2797,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

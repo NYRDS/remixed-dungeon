@@ -2429,6 +2429,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="Yog_Name">Yog-Dzewa</string>
     <string name="Yog_Name_Objective">Yog-Dzewa</string>
     <string name="YogsBrain_Desc">Das Gehirn von Yog-Dzewa. Die Quelle alles Bösen, das jemals aus dem Dungeon kam.</string>
+    <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name">Yogs Gehirn</string>
     <string name="YogsBrain_Name_Objective">Yogs Gehirn</string>
     <string name="YogsEye_Desc">Das Auge des Alten Gottes, ein allsehender Blick gefüllt mit ewigem Hass. Du fühlst, wie es gezielt durch deine Seele blickt.</string>
@@ -2703,6 +2704,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
