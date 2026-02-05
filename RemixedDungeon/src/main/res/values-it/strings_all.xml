@@ -250,6 +250,7 @@
     <string name="CagedKobold_Name">coboldo in gabbia</string>
     <string name="CagedKobold_Name_Objective">coboldo in gabbia</string>
     <string name="CagedKobold_Quest_End">Oh, grazie, grazie mille! Come hai fatto a trovare la chiave? Tu... hai distrutto l\'arma?! È incredibile! Sai una cosa, ho detto che ti avrei aiutato, e penso di sapere il modo migliore per farlo. Starò con te per un po\'. * Il Kobold imprigionato si è trasformato in una candela</string>
+    <string name="CandleOfMindVision_Info">Sembra una candela normale, niente che ti aspetteresti di trovare in una pericolosa sottoterra. Stranamente è piuttosto calda al tatto, nonostante non sia ancora stata accesa.</string>
     <string name="Candy_Info">Questa caramella sembra davvero bella e il suo odore è altrettanto buono. Vuoi davvero lasciarla a qualcun\'altro?</string>
     <string name="Candy_Name">caramella</string>
     <string name="Candy_Warning_2">Ora hai davvero esagerato. La tua pancia fa male perché hai mangiato troppe caramelle.</string>
@@ -2313,6 +2314,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

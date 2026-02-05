@@ -1784,6 +1784,7 @@
     <string name="Shielded_Name">громила-щитовик</string>
     <string name="Shielded_Name_Objective">громилу-щитовика</string>
     <string name="ShootInEye_Info">Використовуйте свої виняткові навички стрільби, щоб влучити у ворога прямо в око, якщо воно, звісно, у нього є.</string>
+    <string name="ShootInEye_Name">Постріл у око</string>
     <string name="Shopkeeper_Buy">Оберіть товар для придбання</string>
     <string name="Shopkeeper_BuyPrompt">Подивимося ваш інвентар</string>
     <string name="Shopkeeper_Desc">Цей трохи пухлий індивідуум більше підходить для торгівлі десь в міському кварталі, а ніж в підземеллі. Хоча, судячи по цінах, йому і тут непогано.</string>
@@ -2651,6 +2652,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
