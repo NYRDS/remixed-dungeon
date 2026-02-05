@@ -1112,6 +1112,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MimicPie_Name">미믹 파이</string>
     <string name="MimicPie_Name_Objective">미믹 파이</string>
     <string name="Mimic_Desc">미믹은 자기가 원하는 어떤 형상으로도 변할 수 있는 마법 생물이다. 던전에서 어떻게 해야 모험가를 유인할 수 있는지 잘 알기 때문에 녀석은 거의 보물상자 형상을 하고 있다.</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">미믹</string>
     <string name="Mimic_Name_Objective">미믹</string>
     <string name="MindVisionBuff_Name">심안</string>
@@ -2448,6 +2449,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
