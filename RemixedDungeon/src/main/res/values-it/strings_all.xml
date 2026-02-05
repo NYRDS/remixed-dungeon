@@ -2149,6 +2149,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="YogsEye_Name">l\'occhio di yog</string>
     <string name="YogsEye_Name_Objective">l\'occhio di yog</string>
     <string name="YogsHeart_Desc">Per secoli la gente ha creduto che solo una creatura davvero senza cuore sono cappable di atti di pura malvagità. Eppure eccolo qui, enorme cuore pulsante di un vecchio Dio stesso.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">il cuore di yog</string>
     <string name="YogsHeart_Name_Objective">il cuore di yog</string>
     <string name="YogsTeeth_Desc">enorme bocca di un vecchio Dio pieno di denti affilati come rasoi. Una manifestazione molto montaggio della sua voglia di distruggere e divorare tutti gli esseri.</string>
@@ -2310,6 +2311,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

@@ -2265,6 +2265,7 @@ remix.31.1\n
     <string name="WndClass_Mastery">精通</string>
     <string name="WndCryptoDonate_bitcoin">比特币</string>
     <string name="WndCryptoDonate_copyAddress">复制地址</string>
+    <string name="WndCryptoDonate_currency">货币</string>
     <string name="WndCustomizations_Title">自定义设置</string>
     <string name="WndDonate_commonDonateText">混合地牢——永远对所有人免费。\n\n但是，你能帮我们让这款游戏变得更好。\n\n除了我们的衷心感谢以外，你还将获得一些界面上的美化。</string>
     <string name="WndDonate_donate">捐献：</string>
@@ -2797,6 +2798,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
