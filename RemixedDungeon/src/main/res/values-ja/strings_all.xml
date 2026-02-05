@@ -1124,6 +1124,7 @@
     <string name="Kusarigama_Name">鎖鎌</string>
     <string name="Kusarigama_Pull">引く</string>
     <string name="Larva_Desc">古き神の幼生</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">神の幼生</string>
     <string name="Larva_Name_Objective">神の幼生</string>
     <string name="LastLevel_TileDescStatue">なんと、この柱は本物の頭蓋骨でできているようだ。</string>
@@ -2890,6 +2891,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
