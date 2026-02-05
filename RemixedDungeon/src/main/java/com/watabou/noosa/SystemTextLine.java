@@ -8,8 +8,6 @@ import com.watabou.gltextures.SmartTexture;
 import com.watabou.glwrap.Quad;
 
 import java.nio.FloatBuffer;
-import java.util.Map;
-import java.util.WeakHashMap;
 
 public class SystemTextLine extends Visual {
 
@@ -22,7 +20,6 @@ public class SystemTextLine extends Visual {
 	private boolean dirty;
 
 	static final public SystemTextLine emptyLine = new SystemTextLine();
-	static final Map<String, SystemTextLine> linesCache = new WeakHashMap<>();
 
 	public SystemTextLine() {
 		super( 0, 0, 0, 0 );
@@ -92,7 +89,7 @@ public class SystemTextLine extends Visual {
 
 	@Override
 	public void draw() {
-		if(texture == null) { // used as empty rows
+		if(width == 0 || texture == null) { // used as empty rows
 			return;
 		}
 

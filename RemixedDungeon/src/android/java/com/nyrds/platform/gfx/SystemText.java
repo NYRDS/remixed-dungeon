@@ -220,21 +220,26 @@ public class SystemText extends SystemTextBase {
 
                     String key = Utils.format("%fx%f_%s", lineWidth, fontHeight, currentLine);
 
-                    if (!bitmapCache.containsKey(key)) {
-                        BitmapData bitmap = BitmapData.createBitmap(
+                    BitmapData bitmap = bitmapCache.get(key);
+
+                    if (bitmap == null) {
+                        bitmap = BitmapData.createBitmap(
                                 (int) (lineWidth * oversample),
                                 (int) (fontHeight * oversample + textPaint.descent()));
-                        bitmapCache.put(key, bitmap);
+
 
                         Canvas canvas = new Canvas(bitmap.bmp);
                         drawTextLine(line, canvas, contourPaint);
                         drawTextLine(line, canvas, textPaint);
 
+
+                        bitmapCache.put(key, bitmap);
+
                         cacheMiss++;
                     } else {
                         cacheHits++;
                     }
-                    SystemTextLine text_line = new SystemTextLine(bitmapCache.get(key));
+                    SystemTextLine text_line = new SystemTextLine(bitmap);
                     text_line.setVisible(getVisible());
                     lineImage.add(text_line);
                 } else {
