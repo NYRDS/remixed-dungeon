@@ -1024,6 +1024,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="JarOfSouls_Desc">Os olhos brilhantes de um crânio neste jarro velho, assim como a energia estranha que ele emite, faz você se sentir desconfortável.</string>
     <string name="JarOfSouls_Name">Jarro de almas</string>
     <string name="JarOfSouls_Name_Objective">Jarro de almas</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">Este pesado metal comprido tem uma ponta em sua extremidade, cortando o ar em seu caminho.</string>
     <string name="Javelin_Name">lança</string>
     <string name="Journal_Alchemy">Pote de Alquimia</string>
@@ -2756,6 +2757,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

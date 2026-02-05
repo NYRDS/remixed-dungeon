@@ -1048,6 +1048,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="JarOfSouls_Desc">Los brillantes ojos de un cráneo representado en esta vieja jarra, como la extraña energía que emite, te hacen sentir inquieto.</string>
     <string name="JarOfSouls_Name">tarro de almas</string>
     <string name="JarOfSouls_Name_Objective">tarro de almas</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">Esta arma metálica está diseñada para mantener su punta recta mientras viaja por el aire.</string>
     <string name="Javelin_Name">jabalina </string>
     <string name="Journal_Alchemy">Olla de alquimia</string>
@@ -2811,6 +2812,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

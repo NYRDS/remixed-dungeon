@@ -2620,6 +2620,7 @@
     <string name="town_deco_trapdoor_name">Люк</string>
     <string name="town_deco_tree_desc">Виникає дивне відчуття, дивлячись на живе дерево в безпосередній близькості від входу до підземелля, наповнені жахом та смертю.</string>
     <string name="town_deco_tree_name">Дерево</string>
+    <string name="town_deco_vat_desc">Цей кам\'яний чан заповнений святій водою до самого верху.</string>
     <string name="town_deco_wall_beam_desc">Досить надійна опора для даної споруди.</string>
     <string name="town_deco_wall_beam_name">Балка</string>
     <string name="town_deco_wall_brazier_desc">Пара, що йде від тліючих вуглин наповнює кімнату приємними ароматами.</string>
@@ -2650,6 +2651,8 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

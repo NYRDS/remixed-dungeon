@@ -1052,6 +1052,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="JarOfSouls_Desc">Bu eski kavanozda tasvir edilen kafatasının parlayan gözleri ve yaydığı garip enerji seni rahatsız ediyor.</string>
     <string name="JarOfSouls_Name">ruhlar kavanozu</string>
     <string name="JarOfSouls_Name_Objective">ruhlar kavanozu</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">Bu metal uzunluk, havada kurbanına doğru süzülürken sivri ucu en önde tutacak şekilde ağırlıklandırılmıştır</string>
     <string name="Javelin_Name">Cirit</string>
     <string name="Journal_Alchemy">Simya potası</string>
@@ -1099,6 +1100,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">ÇEK</string>
     <string name="Larva_Desc">Larva Eski Tanrı</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">Tanrı\'nın Larvası</string>
     <string name="Larva_Name_Objective">Tanrı\'nın Larvası</string>
     <string name="LastLevel_TileDescStatue">Bu sütun gerçek insan kafatalarından yapılmış. Muhteşem.</string>
@@ -2833,6 +2835,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

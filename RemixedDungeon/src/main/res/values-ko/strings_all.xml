@@ -929,6 +929,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="JarOfSouls_Desc">이 오래된 항아리에 새겨진 해골 문양의 빛나는 눈과 이것이 내뿜는 이상한 에니지가, 당신이 불길함을 느끼도록 합니다. </string>
     <string name="JarOfSouls_Name">영혼의 단지</string>
     <string name="JarOfSouls_Name_Objective">영혼의 단지</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">이 금속이 스파이크를 유지하며 날아가도록 한다.</string>
     <string name="Javelin_Name">자벨린</string>
     <string name="Journal_Alchemy">연금술 솥</string>
@@ -2450,6 +2451,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

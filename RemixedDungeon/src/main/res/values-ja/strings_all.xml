@@ -1079,6 +1079,7 @@
     <string name="JarOfSouls_Desc">この古い壺に描かれたドクロの光る目、そしてそれが発する奇妙なエネルギーは、あなたを不安にさせる。</string>
     <string name="JarOfSouls_Name">魂の壺</string>
     <string name="JarOfSouls_Name_Objective">魂の壺</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">この金属の長さは、犠牲者に向かって宙を舞うとき、その先端が必ず前を向くように重みが加えられている。</string>
     <string name="Javelin_Name">ジャベリン</string>
     <string name="Journal_Alchemy">錬金釜</string>
@@ -2891,6 +2892,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

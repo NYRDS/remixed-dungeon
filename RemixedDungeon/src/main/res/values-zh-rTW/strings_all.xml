@@ -981,6 +981,7 @@
     <string name="JarOfSouls_Desc">這個舊罐子上描繪的頭骨裏的眼睛正在閃閃發亮，以及它散發出的奇怪能量，讓你感到不安。</string>
     <string name="JarOfSouls_Name">魂之靈龕</string>
     <string name="JarOfSouls_Name_Objective">魂之靈龕</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">經德國認證，槍頭能穩定俯前，直至擊中目標。</string>
     <string name="Javelin_Name">標槍</string>
     <string name="Journal_Alchemy">煉藥鍋</string>
@@ -2608,6 +2609,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

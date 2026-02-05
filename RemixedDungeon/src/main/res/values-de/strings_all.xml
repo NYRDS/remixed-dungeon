@@ -105,6 +105,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Badges_AllWands">Alle Zauberstäbe identifiziert</string>
     <string name="Badges_BossSlain1">Goo wurde besiegt</string>
     <string name="Badges_BossSlain1All">Goo wurde von allen Klassen besiegt</string>
+    <string name="Badges_BossSlain2">Tengu wurde besiegt</string>
     <string name="Badges_BossSlain3All">DM-300 wurde von allen Subklassen getötet</string>
     <string name="Badges_BossSlain4">König wurde besiegt</string>
     <string name="Badges_Champion">Herausforderung gewonnen</string>
@@ -2704,6 +2705,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

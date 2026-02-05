@@ -763,6 +763,7 @@
     <string name="Ghost_Rat2">求求你……帮帮我……杀死那个令人憎恨的东西……</string>
     <string name="Ghost_Rose1">你好冒险者……曾经我也像你一样——强壮而自信……虽然现在我已经死了……但是我无法离开这个地方……除非我拿到我的_干枯玫瑰_……那是对我非常重要的东西……一些怪物从我的身上偷走了它……</string>
     <string name="Ghost_Rose2">求求你……帮帮我……找到那朵玫瑰……</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Info">一把在末端嵌有剑刃的长柄武器。</string>
     <string name="Glaive_Name">关刀</string>
     <string name="GnollArmor_ACSpecial">号召</string>
@@ -2798,6 +2799,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
