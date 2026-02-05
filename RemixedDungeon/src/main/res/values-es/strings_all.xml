@@ -1561,6 +1561,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="RatKingCrown_Name">Corona del rey rata</string>
     <string name="RatKing_Desc">Esta rata es un poco mas grande que una rata normal, y lleva una pequeña corona en la cabeza.</string>
     <string name="RatKing_Died">El rey está muerto. ¡Larga vida al rey!</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">¡No estoy durmiendo!</string>
     <string name="RatKing_Info2">¿Qué pasa? No tengo tiempo para este sinsentido. ¡Mi reino no va a gobernarse solo!</string>
     <string name="RatKing_Info3">¿Cómo te atreves, insignificante criatura, a molestar a Nuestra Majestad?</string>
@@ -2812,6 +2813,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

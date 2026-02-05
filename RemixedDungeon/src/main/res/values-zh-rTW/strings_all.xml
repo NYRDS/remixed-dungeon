@@ -2592,6 +2592,7 @@
     <string name="town_deco_wardrobe_name">木製衣櫃</string>
     <string name="town_deco_weaponboard_desc">各式各樣的武器掛在鑲板上。</string>
     <string name="town_deco_weaponboard_name">武器</string>
+    <string name="town_deco_weaponrack_desc">架子上的武器對你來說明顯太昂貴了。</string>
     <string name="town_deco_weaponrack_name">武器架</string>
     <string name="town_deco_window_desc">普通的窗戶，沒甚麼特別。</string>
     <string name="town_deco_window_name">窗戶</string>
@@ -2609,6 +2610,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
