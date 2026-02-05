@@ -1832,6 +1832,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Swing_Name_2">Vad %s</string>
     <string name="Sword_Info">A pengeéles acél bíztatóan fénylik.</string>
     <string name="Sword_Name">kard</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Bár ez a dobóbalta nem olyan nehéz, azért jelentős erő kell hatékony használatához.</string>
     <string name="Tamahawk_Name">Csatabárd</string>
     <string name="Tengu_Desc">Tengu-nak hívták a tagjait egy ősi bérgyilkos klánnak, aminek a neve szintén Tengu. Ezek a bérgyilkosok a széleskörben használt csapdáikról és dobócsillagjaikról voltak híresek.</string>
@@ -2529,6 +2530,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

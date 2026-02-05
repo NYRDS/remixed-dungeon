@@ -2020,6 +2020,8 @@
     <string name="TownsfolkSilentNPC_Name_Objective">городянина</string>
     <string name="ToxicGas_Info">Тут крутиться зелена хмара токсичного газу.</string>
     <string name="ToxicGas_Info1">Ти отруївся токсичним газом...</string>
+    <string name="ToxicGland_Info">Токсична залоза, отримана з переможеного ворога. Ці залози наповнені потужними токсинами і можуть бути використані в алхімічних процесах.</string>
+    <string name="ToxicGland_Name">Токсична залоза</string>
     <string name="TrapWnd_Step">Ти впевнений що бажаєш увійти до пастки? Можеш загинути.</string>
     <string name="TrapWnd_Title">Пастка</string>
     <string name="TreacherousSpirit_Desc">Ця потворна істота виглядає наче жива хмара темряви. Його величезне око пронизає тебе поглядом, посмикуючись від кожного твого руху.</string>
@@ -2648,6 +2650,8 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

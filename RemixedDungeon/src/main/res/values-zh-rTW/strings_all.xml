@@ -688,6 +688,7 @@
     <string name="FullFaceMask_Info">防毒面具是用來防止佩戴者吸入空氣中的汙染物和有毒氣體的面具。面具在鼻子、嘴和眼睛上形成一個密封罩。 
  \n\n這個面具上沒有過濾器，但是看起來很酷。</string>
     <string name="FullFaceMask_Name">防毒面具</string>
+    <string name="FuryBuff_Info">眼睛因內心的憤怒而變得通紅。</string>
     <string name="FuryBuff_Name">暴怒</string>
     <string name="GameScene_Chasm">你的腳步在地牢裏回響。</string>
     <string name="GameScene_Grass">空氣中彌漫著濃濃的青草香味。</string>
@@ -2605,6 +2606,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
