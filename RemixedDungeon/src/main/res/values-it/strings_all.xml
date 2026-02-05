@@ -549,6 +549,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Eye_Kill">%s\'s raggio mortale ti ha ucciso...</string>
     <string name="Eye_Name">malocchio </string>
     <string name="Eye_Name_Objective">Malocchio</string>
+    <string name="Facilitations_Descriptions_0">I mutanti sono sempre stati trattati con disprezzo e paura, ma l\'assenza della fame ti darà di nuovo superiorità, questa volta nel conquistare le profondità del sotterraneo.</string>
     <string name="Facilitations_Descriptions_1">Non è ancora noto chi fossero i tuoi genitori, ma la rigenerazione naturale simile a quella del troll ti aiuterà a rimarginare tutte le ferite di battaglia.</string>
     <string name="Facilitations_Descriptions_3">Stringendo la cintura di pelle di orco, tramandata ad ogni nuova generazione, fai un passo verso l\'ignoto che ti attende.</string>
     <string name="Fadeleaf_Desc">Toccare una Svanifoglia farà teletrasportare qualsiasi creatura in un posto a caso sul livello attuale.</string>
@@ -1045,6 +1046,7 @@ Potrebbe bruciare?</string>
     <string name="Mimic_Name">replicante</string>
     <string name="Mimic_Name_Objective">replicante</string>
     <string name="MirrorImage_Desc">Questa illusione ha una stretta somiglianza con te, ma è più pallida e si deforma un po\'.</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">Immagine Riflessa </string>
     <string name="MirrorImage_Name_Objective">Immagine Riflessa </string>
     <string name="MissileWeapon_Info1">
@@ -2272,6 +2274,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_stock_name">Scorta</string>
     <string name="town_deco_stone_wall_broken_desc">Vecchio muro di pietra, in cattive condizioni</string>
     <string name="town_deco_stone_wall_name">Muro di pietra</string>
+    <string name="town_deco_stones_desc">Solo un mucchio di pietre.</string>
     <string name="town_deco_stool_broken_desc">Questo sgabello ha visto giorni migliori.</string>
     <string name="town_deco_stool_broken_name">Sgabello rotto</string>
     <string name="town_deco_stool_sturdy_desc">Uno sgabello regolare realizzato in legno resistente.</string>
@@ -2305,6 +2308,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 

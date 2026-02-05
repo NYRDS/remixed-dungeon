@@ -173,6 +173,7 @@
     <string name="Bandit_Name">perompak gila</string>
     <string name="Bandit_Name_Objective">perompak gila</string>
     <string name="BardNPC_Gender">masculine</string>
+    <string name="BardNPC_Name_Objective">biduan</string>
     <string name="BarkskinBuff_Name">Kulit kayu</string>
     <string name="Barrel_Desc">Nampak seperti tong kayu biasa. Tetapi bila anda lihat lebih dekat anda terbau minyak. Tong ini agak ringan, anda boleh menolaknya.</string>
     <string name="Barrel_Name">tong</string>
@@ -1057,6 +1058,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="LibraryBook_Description">Buku ini sangat besar. Ia mengandungi semua jenis pengetahuan, yang pengembara temui di dalam kurungan bawah tanah.</string>
     <string name="LibraryBook_Name">Buku pustaka</string>
     <string name="Lich_Desc">Pembangkit mayat telah menemui ajalnya di dalam Necropolis, dan tenaga kejahatan tempat ini telah masuk ke dalam jasadnya, dia menjelma sebagai Lich. Iaitu ahli sihir hidup semula, patung hidup tanpa kemahuan, yang dikawal oleh kuasa jahat.</string>
+    <string name="Lich_DieInfo">Saya tidak pernah menyukai Ahli Sihir Mayat ini. Jadi sekarang waktunya untuk kembali ke tingkat 7 dan mencari jalan lain ke pengembaraan baru.</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Name">Bercahaya</string>
@@ -2115,6 +2117,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndLibrary_Mobs_Btn">Raksaksa</string>
     <string name="WndLocalModInstall_pick">Pilih direktori mod</string>
     <string name="WndLocalModInstall_title">Pasang mod dari direktori setempat</string>
+    <string name="WndModsDisclaimer_manage">Urus senarai mod</string>
     <string name="WndModsDisclaimer_title">Mod</string>
     <string name="WndMovieTheatre_Bye">Sila datang lagi, kami sentiasa menunggu kehadiran anda!</string>
     <string name="WndMovieTheatre_Instruction">Salam dan selamat datang ke pawagam kami! Kami menyediakan perkhidmatan istimewa, di mana anda boleh menonton filem istimewa yang dipanggil iklan secara percuma. Dan jika anda menontonnya sehingga habis, anda akan diberi ganjaran sebanyak %d syiling emas!</string>
@@ -2321,6 +2324,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_broken_wall_desc">Kayu balak pada bahagian dinding ini telah reput dan tidak memberi manfaat lagi.</string>
     <string name="town_deco_broken_wall_name">Dinding rosak</string>
     <string name="town_deco_brown_carpet_name">Permaidani</string>
+    <string name="town_deco_cabinet_desc">Sebuah almari besar dengan banyak pintu dan rak.</string>
     <string name="town_deco_canvas_desc">Helaian kain tebal yang tergantung di atas dinding.</string>
     <string name="town_deco_canvas_name">Kanvas</string>
     <string name="town_deco_carpet_desc">Permaidani merah yang mewah khusus untuk tetamu istimewa.</string>
@@ -2332,6 +2336,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_chimney_name">Cerobong</string>
     <string name="town_deco_cinema_sign_desc">Rupanya ada wayang berada di dalam bangunan tersebut.</string>
     <string name="town_deco_cinema_sign_name">Tanda wayang</string>
+    <string name="town_deco_clock_desc">Anak panah pada jam ini telah lama terbeku dalam satu kedudukan.</string>
     <string name="town_deco_common_bed_desc">Katil biasa.</string>
     <string name="town_deco_common_bed_name">Katil</string>
     <string name="town_deco_common_door_desc">Pengembara yang sopan dan bertingkah laku baik tidak sepatutnya masuk rumah orang tanpa kebenaran.</string>
@@ -2506,6 +2511,11 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
 
 
 

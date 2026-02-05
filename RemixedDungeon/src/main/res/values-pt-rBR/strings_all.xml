@@ -1781,6 +1781,7 @@ outro local do nível.</string>
     <string name="ShamanElder_Name">xamã ancião</string>
     <string name="ShamanElder_Name_Objective">xamã ancião</string>
     <string name="Shaman_Desc">Os gnolls mais inteligentes podem dominar magia Xamã. Gnolls Xamãs preferem uma batalha de feitiços para compensar a falta de coragem, não hesitando em usá-los sobre aqueles que questionam o seu status na tribo.</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">O raio de %s matou você...</string>
     <string name="Shaman_Name">gnoll Xamã</string>
     <string name="Shaman_Name_Objective">gnoll xamã</string>
@@ -2315,6 +2316,7 @@ remix.31.1\n
     <string name="WndModInstall_Version">versão</string>
     <string name="WndModSelect_AreYouSure">Eliminando mod: %s, tem a certeza?</string>
     <string name="WndModSelect_ReallyDelete">Realmente eliminar?</string>
+    <string name="WndModsDisclaimer_install">Instalar mod local</string>
     <string name="WndModsDisclaimer_title">Mods</string>
     <string name="WndMovieTheatre_Bye">Volte a qualquer hora, nós estamos sempre felizes em vê-lo!</string>
     <string name="WndMovieTheatre_Instruction">Saudações e bem-vindo ao nosso cinema! Nós fornecemos um serviço especial, onde você pode assistir a um filme de graça. E se você assisti-lo todo, você será recompensado com %d moedas de ouro!</string>
@@ -2753,6 +2755,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

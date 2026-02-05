@@ -2287,6 +2287,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="VertigoBuff_Info">Ощущение головокружения значительно затрудняет дальнейшее движение!</string>
     <string name="VertigoBuff_Name">Завихрение</string>
     <string name="View_Distance">Дальность обзора</string>
+    <string name="VileEssence_Name">Презренная субстанция</string>
     <string name="Viscosity_Status">отложено %d</string>
     <string name="Viscosity_Txt">%s вязкости</string>
     <string name="WandHolster_Info">Изящное изделие, сработанное из кожи экзотического зверя, уместит в себе волшебные палочки в количестве до %d.</string>
@@ -3041,6 +3042,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 

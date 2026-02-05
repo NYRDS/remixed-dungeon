@@ -278,6 +278,7 @@
     <string name="Candy_Warning_2">당신은 정말 많은 사탕을 먹었고, 당신의 배가 많은 사탕때문에 아픕니다.</string>
     <string name="Capotain_Info">길이가 길고 챙이 좁은 모자다. 대부분 청교도들이 쓰는 모자이지만, 굳이 그것에 연연할 필요는 없다. 무슨 이유인지 \&quot;솔로몬\&quot;이라는 이름표가 붙어있다.</string>
     <string name="Capotain_Name">카포텡</string>
+    <string name="Carcass_Devoured">당신은 %s의 시신을 삼켰습니다!</string>
     <string name="Carcass_DissectFailed">%s을(를) 해부했지만 아무것도 얻지 못했다.</string>
     <string name="Carcass_DissectMessage">시신을 해부하여 %s 을(를) 얻었다.</string>
     <string name="Caves_TileDescBookshelf">동굴에 책장이 대체 왜 필요한 거지?</string>
@@ -893,6 +894,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Imp_Monks1">모험가이신가요? 전 모험가들이 좋아요! 누군가를 죽이고 싶을땐 언제나 그들에게 믿고 맡길 수 있죠. 내 말이 맞죠? 당연히 댓가도 드리죠. :)\n제 경우엔 _수도승_을 죽이고 싶어요. 보세요. 여기서 조그만한 사업을 하나 시작하려고 하는데요, 이 미치광이들은 아무 것도 안 살 거고 손님들만 겁줘서 쫒아낼 거에요. 그러니 제발, 좀 죽여줘요... 한.._8 마리_정도면 보상하겠습니다.</string>
     <string name="Imp_Monks2">오, 당신 아직 살아 있네요! 역시 당신의 쿵푸가 더 강할줄 알았아요 :) 드워프 토큰 챙기는거 잊지 마요.</string>
     <string name="Imp_Name">야망있는 임프</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Info">이 다트끝에 있는 스파이크는 목표물에 도달하면 화려한 불꽃을 내며 폭발하도록 설계되어 있습니다.</string>
     <string name="IncendiaryDart_Name">방화 다트</string>
     <string name="InnKeeperNPC_Desc">여관 주인은 스스로를 자랑스러워합니다.</string>
@@ -2446,6 +2448,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 
