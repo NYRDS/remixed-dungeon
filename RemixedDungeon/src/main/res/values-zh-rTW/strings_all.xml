@@ -20,6 +20,7 @@
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">酸蝕蠍子</string>
     <string name="Acidic_Name_Objective">酸蝕蠍子</string>
+    <string name="Actions_Speed">加速等級</string>
     <string name="Affection_Txt">魅惑 %s</string>
     <string name="AirElemental_Desc">風元素是由有生命的氣體構成的飛行元素生物。</string>
     <string name="AirElemental_Gender">masculine</string>
@@ -1861,6 +1862,7 @@
     <string name="Stylus_Name">奧術刻筆</string>
     <string name="Stylus_SelectArmor">選擇鐫刻一件物品</string>
     <string name="Succubus_Desc">魅魔是外表誘人(帶有些哥特風格)的女性惡魔。魅魔可以通過使用魔法魅惑英雄，使英雄在魅惑消退前無法攻擊它。</string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">魅魔</string>
     <string name="Succubus_Name_Objective">魅魔</string>
     <string name="SummonDeathling_Info">召喚亡靈。亡靈的生命力及攻擊力將隨你的等級的提升而增長。\n\n召喚上限 %1$d （每提升一魔力等級上限+1）</string>
@@ -2606,6 +2608,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

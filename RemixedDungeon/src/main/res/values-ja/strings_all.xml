@@ -579,6 +579,7 @@
     <string name="DashSpell_OnSelf">その場ではダッシュできない。</string>
     <string name="DashSpell_TooFar">そこまではダッシュできない。</string>
     <string name="DeathKnight_Desc">一見、重厚な鎧に身を包んだ屈強な戦士だが、死人のような笑みを浮かべていることで、その正体がわかる。死の騎士は、誓いを果たせなかった騎士の魂の現れである。そして呪われた状態のまま、彼は常に戦いでの粛清を求めてさまよい、罪のない者を殺し、誰を守ると誓ったのかも思い出すことができない。</string>
+    <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name">死の騎士</string>
     <string name="DeathKnight_Name_Objective">死の騎士</string>
     <string name="Death_Name_0">致命の %s</string>
@@ -2889,6 +2890,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
