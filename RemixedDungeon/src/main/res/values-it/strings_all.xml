@@ -1563,6 +1563,7 @@ Potrebbe bruciare?</string>
     <string name="Skeleton_Killed">sei stato ucciso dall\'esplosione di ossa...</string>
     <string name="Skeleton_Name">Scheletro</string>
     <string name="Skeleton_Name_Objective">Scheletro</string>
+    <string name="SlowBuff_Info">Il senso di lentezza rende qualcuno più lento del solito.</string>
     <string name="SlowBuff_Name">Rallentato</string>
     <string name="Slow_Name_0">del Freddo %s</string>
     <string name="Slow_Name_1">del Freddo %s</string>
@@ -2309,6 +2310,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
