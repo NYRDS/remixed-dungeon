@@ -72,6 +72,7 @@
 \n\nPuoi sentire una magia malevola celarsi all\'interno del/dello/della/dell\' %s.</string>
     <string name="Armor_ToString">%1$s :%2$d</string>
     <string name="ArmoredStatue_Desc">Non puoi nemmeno iniziare a pensare che sia solamente un\'altra statua brutta, ma il fatto che nessuno metta un _%s_ su quella cosa. </string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">statua animata</string>
     <string name="ArmoredStatue_Name_Objective">statua animata</string>
     <string name="Artifact_Limit">Puoi indossare solo 2 anelli alla volta.</string>
@@ -1167,7 +1168,7 @@ Potrebbe bruciare?</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">Achooo!\n Che maledizione questa dannata peste! Si sta diffondendo per la città come un incendio, infettando le ossa della popolazione ignara! BAH! Pensate che quelle patetiche guardie abbiano una sola possibilità contro questo micidiale morbo? Tu, là! Esemplare forte e sano. Forse puoi aiutarmi. Quegli sporchi _ratti_ delle fogne… li portano con sé, ve lo dico io, i semi della pestilenza nei loro corpi putridi! Portatemi _cinque_ di quelle creature miserabili, _morti_, ovviamente! Le loro pelli saranno preziosissime per la mia ricerca. Farò per voi una meravigliosa armatura, una barriera protettiva contro la stessa peste da cui proviene!</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">_Dieci lumache_, dieci sussurri dall\'abisso! La loro bava sarà analizzata, la loro essenza scrutinata. I segreti che custodiscono sono a portata di mano.</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Nani! Quegli ostinati abitanti sotterranei, ossessionati da gemme e oro. Ma sono i _Stregoni Nani_ che io bramo... la loro magia distorta, alimentata dalle stesse profondità in cui risiedono. Cinque, ho bisogno di cinque di quelle anime avvizzite! I loro corpi contengono la chiave per comprendere un certo... fenomeno. Qualcosa riguardo al canalizzare energie arcane attraverso la terra stessa. Credo di essere vicino alla svolta, ma ho bisogno della loro essenza, la loro magia corrotta! *Tossisce violentemente nel suo fazzoletto, una macchia scura si diffonde sul delicato tessuto*</string>
-    <string name="PlagueDoctorQuest_5_1_Epilogue">*Lui osserva le due _succhiatrici_, con un sorriso beato che si diffonde sotto la sua maschera.* Splendido! Magnifico! Questo sbloccherà così tante... possibilità! *Si rivolge a te, con la voce densa di gratitudine... e qualcos\'altro.* I vostri sforzi... non saranno dimenticati. Vi sono debitore della mia più profonda gratitudine. *Il suo sguardo indugia sulla _succhiatrice_ per un momento troppo lungo, prima di ritirarsi nel suo laboratorio, biascicando qualcosa a proposito di svelare i segreti della seduzione.*</string>
+    <string name="PlagueDoctorQuest_5_1_Epilogue">*Lui osserva fissamente le due _succhiatrici_, con un sorriso beato che si diffonde sotto la sua maschera.* Splendido! Magnifico! Questo sbloccherà così tante... possibilità! *Si volta verso di te, la sua voce densa di gratitudine... e qualcos\'altro.* I tuoi sforzi... non saranno dimenticati. Sono debitore della mia più profonda gratitudine. *Il suo sguardo indugia sulle _succhiatrici_ per un momento troppo prolungato, prima di ritirarsi nel suo laboratorio, mormorando qualcosa riguardo lo sblocco dei segreti della seduzione.*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*La sua mente vaga mentre parla, la sua voce si fa sempre più debole, appena un sussurro.* Portami due _succubi_… vive. Il loro… potere… è affascinante.</string>
     <string name="PlagueDoctorQuest_AllDone">*Lui ride secco e con un sibilo.* Le tue azioni hanno sbloccato segreti oltre ogni misura! La conoscenza ottenuta... pulsa dentro di me, una sinfonia della scoperta. Ma la conoscenza,\&quot; aggiunge, abbassando la voce a un sussurro cospiratorio, \&quot;la conoscenza è potere. E il potere... ah... che è un elisirro più inebriante.\&quot; Ti fissa intensamente per un momento, i suoi occhi di ametista bruciano con un\'intensità febbrile. \&quot;Forse,\&quot; mormora, \&quot;le nostre strade si incroceranno ancora. Perché ci sono ancora molti... misteri... da svelare.</string>
     <string name="PlagueDoctor_Name">Dottore della peste</string>
@@ -2315,6 +2316,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 

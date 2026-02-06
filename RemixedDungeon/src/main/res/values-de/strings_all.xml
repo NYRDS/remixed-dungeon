@@ -999,6 +999,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="IronKey_Name">Eisener Schlüssel</string>
     <string name="ItemSprite_Info1">Falle zurseite: %1$.1f %2$.1f</string>
     <string name="Item_ACDrop">FALLEN LASSEN</string>
+    <string name="Item_ACPickup">Aufheben</string>
     <string name="Item_ACThrow">WERFEN</string>
     <string name="Item_DirThrow">Zielposition auswählen</string>
     <string name="Item_Info">etw.</string>
@@ -2705,6 +2706,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

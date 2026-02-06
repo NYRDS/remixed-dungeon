@@ -366,6 +366,7 @@
     <string name="Challenges_Names_7">Pacifisme</string>
     <string name="Challenges_Names_8">Pas de ville</string>
     <string name="ChampionOfAirBuff_Info">Ce trait confère à la créature l\'essence des vents, améliorant son agilité et ses prouesses au combat. Le Champion de l\'Air devient un adversaire redoutable, capable d\'un déchaîner des attaques rapides et dévastatrices qui peuvent rapidement changer le cours de la bataille.</string>
+    <string name="ChampionOfEarthBuff_Name">Champion de la Terre</string>
     <string name="ChampionOfFireBuff_Info">Imprégné de la fureur des flammes, ce trait amplifie la férocité et les capacités de combat de la créature. Le Champion du Feu émerge comme un adversaire redoutable, déchaînant des attaques dévastatrices pouvant engloutir ses ennemis dans des flammes brûlantes, inspirant la terreur chez tous ceux qui osent s\'opposer à lui.</string>
     <string name="ChaosArmor_Info">Les plaques rouge sang de cette armure sont fusionnées avec des chaînes rouge foncé. Elle rayonne d\'une énergie chaotique quand vous la touchez.</string>
     <string name="ChaosArmor_Name">Armure du chaos</string>
@@ -2940,6 +2941,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
