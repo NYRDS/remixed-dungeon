@@ -247,6 +247,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BlackSkullOfMastery_Title">İstersen büyüyü kırabilirsin. Ya da büyülü içeriğini, bir şekilde, özümseyip bir Kara Büyücü\'ye dönüşebilirsin ki bu da sana, elindeki antikanın kendisinin ve büyülerinin gücünü bahşedecektir.</string>
     <string name="BlackSkull_Activated">Siyah Kurukafa Uyandı !</string>
     <string name="BlackSkull_Deactivated">Kara Kurukafa Bir Kez Daha Uykuya Daldı.</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Küçük bir obsidyen kafatası. Nekropolis\'in güçlerinin kaynağıydı, ancak Lich\'in yenilgisinden sonra tüm güçlerini kaybetmiş gibi görünüyor. Ancak, onu elinizde tuttuğunuzda aklınızdan garip bir düşünce geçiyor: \&quot;Açlık çekiyor\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">Kafatası güçle titreşiyor ve boş göz çukurlarından nasıl aktığını görebiliyorsunuz. Ve onu elinizde tutarken korkunç bir ses duyuyorsunuz: \&quot;Ölümün yürüyüşünü izleyin\&quot;.</string>
     <string name="BlackSkull_Name">siyah kurukafa</string>
@@ -1051,6 +1052,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="JarOfSouls_Desc">Bu eski kavanozda tasvir edilen kafatasının parlayan gözleri ve yaydığı garip enerji seni rahatsız ediyor.</string>
     <string name="JarOfSouls_Name">ruhlar kavanozu</string>
     <string name="JarOfSouls_Name_Objective">ruhlar kavanozu</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">Bu metal uzunluk, havada kurbanına doğru süzülürken sivri ucu en önde tutacak şekilde ağırlıklandırılmıştır</string>
     <string name="Javelin_Name">Cirit</string>
     <string name="Journal_Alchemy">Simya potası</string>
@@ -1098,6 +1100,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">ÇEK</string>
     <string name="Larva_Desc">Larva Eski Tanrı</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">Tanrı\'nın Larvası</string>
     <string name="Larva_Name_Objective">Tanrı\'nın Larvası</string>
     <string name="LastLevel_TileDescStatue">Bu sütun gerçek insan kafatalarından yapılmış. Muhteşem.</string>
@@ -1267,6 +1270,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="MindVisionBuff_Info">İç görüş, yerdeki tüm canlıların hareketini net bir şekilde görmeyi sağlar.</string>
     <string name="MindVisionBuff_Name">Zihin Görüşü</string>
     <string name="MirrorImage_Desc">Bu ilüzyon sana soluk olması ve hafif titreşmesi dışında oldukça benzer.</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">ayna görüntüsü</string>
     <string name="MirrorImage_Name_Objective">ayna görüntüsü</string>
     <string name="MissileWeapon_Info1">\n\nBu silahın ortalama saldırı gücü %d puandır.</string>
@@ -1386,6 +1390,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="Pasty_Name">börek</string>
     <string name="Pickaxe_ACMine">KAZ</string>
     <string name="Pickaxe_Info">Bu büyük ve sağlam araç ile kayaları kırabilirsin.Bir silah olarakta kullanılabilir.</string>
+    <string name="Pickaxe_InsufficientStr">Madenciğini kazmak için yeterli gücün yok!</string>
     <string name="Pickaxe_Name">kazma</string>
     <string name="Pickaxe_NoVein">Yakında kazılacak bir kara altın damarı yok</string>
     <string name="Pickaxe_NothingToMine">Burada kazılacak bir şey yok!</string>
@@ -2830,6 +2835,11 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
+
+
 
 
 

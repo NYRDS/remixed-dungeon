@@ -832,6 +832,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Esta flecha está cubierta con poción de curación.</string>
     <string name="HealthArrow_Name">Flecha de curación</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">La punta de este dardo está cubierta con poción de curación.</string>
     <string name="HealthDart_Name">Dardo de curación</string>
     <string name="Heap_Mimic">¡Es un mímico!</string>
@@ -1048,6 +1049,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="JarOfSouls_Desc">Los brillantes ojos de un cráneo representado en esta vieja jarra, como la extraña energía que emite, te hacen sentir inquieto.</string>
     <string name="JarOfSouls_Name">tarro de almas</string>
     <string name="JarOfSouls_Name_Objective">tarro de almas</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">Esta arma metálica está diseñada para mantener su punta recta mientras viaja por el aire.</string>
     <string name="Javelin_Name">jabalina </string>
     <string name="Journal_Alchemy">Olla de alquimia</string>
@@ -1413,8 +1415,10 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PlagueDoctorNPC_Quest_Start_Male">¡Bah! ¡¿Puedes creerlo?! ¡Esos tontos no se han dado cuenta del peligro de las alcantarillas! Guardias y aventureros pueden proteger la ciudad de cualquier cosa. Pero ningún arma puede detener que las enfermedades se contagien. Pero necesito pruebas, ¿puedes ayudarme? Tráeme %d pieles de rata, así podre hacer algunas pruebas adicionales.\n</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh\u2026 \u00a1magn\u00edfico! Las _caracolas_, sus secretos se desvelan lentamente como p\u00e9talos bajo la luz de la luna. \u00a1Realmente una abundancia de informaci\u00f3n! Pero tienes raz\u00f3n, _cincuenta piezas de oro_ apenas es una recompensa adecuada. *Se r\u00ede man\u00edacamente*.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Tose violentamente* ¡Achú!\n _Las babosas_… se deslizan. Se filtran. Y susurran secretos de una era olvidada. Las necesito, _diez_ de ellas, con sus conchas aún intactas. ¿Crees que _cincuenta monedas de oro_ son suficientes para un conocimiento tan preciado?\n ¡Bah! No importa. La información que contienen podría ser la clave para detener esta plaga. O… podría conducirnos a algo aún más terrible. Tú decides.</string>
+    <string name="PlagueDoctorQuest_3_1_Prologue">*Sus ojos brillan con una intensidad extraña y febril* ¡Ah, el _murciélago vampiro_! Una criatura de la noche, alimentándose de la fuerza vital de su presa. Fascinante… verdaderamente fascinante. Necesito uno vivo para estudiar su fisiología única. Se trata de… comprender… el… *Se interrumpe, murmurando para sí mismo en una serie de términos arcanos*. ¡Sí! La ecolocación del _murciélago_, su capacidad para navegar en completa oscuridad… es clave para desbloquear un secreto.</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">¡Un _Caballero de la Muerte_! *Su voz se quiebra de emoción, sus huesudos dedos tiemblan mientras aferra un frasco burbujeante lleno de un líquido turbio y fosforescente*. ¡Tal criatura… un faro de no-muerte! ¡Capturar uno, vivo… sería… monumental! ¡Imagina los secretos que podríamos descubrir! ¡El poder que fluye a través de sus venas esqueléticas! ¡Sí, un _Caballero de la Muerte_! Es crucial para mi investigación. ¡Pues me permitirá adentrarme más profundamente… en los misterios de la vida… y de la muerte misma!</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">¡Cinco _Brujos Enanos_, sus cuerpos aún palpitan con el débil eco de magia oscura! Tráemelos, y te recompensaré con una poción de poder sin precedentes: una _Poción de Poder_ que te impregnará con la fuerza de diez hombres.</string>
+    <string name="PlagueDoctorQuest_5_1_Epilogue">*Él mira fijamente a las dos _súcubos_, con una sonrisa beatífica extendiéndose bajo su máscara.* ¡Espléndido! ¡Magnífico! Esto desbloqueará tantas... posibilidades! *Se vuelve hacia ti, su voz gruesa de gratitud... y algo más.* Tus esfuerzos... no serán olvidados. Le debo las gracias más profundas. *Su mirada se demora en las _súcubos_ un momento demasiado largo, antes de retirarse a su laboratorio, murmurando sobre cómo desbloquear los secretos de la seducción.*</string>
     <string name="PlagueDoctor_Desc">Este hombre jorobado está vestido completamente con cuero. Huele fuertemente a medicamentos y ... ¿ajo?</string>
 
     <string name="PlagueDoctor_Gender">masculine</string>
@@ -1559,6 +1563,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="RatKingCrown_Name">Corona del rey rata</string>
     <string name="RatKing_Desc">Esta rata es un poco mas grande que una rata normal, y lleva una pequeña corona en la cabeza.</string>
     <string name="RatKing_Died">El rey está muerto. ¡Larga vida al rey!</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">¡No estoy durmiendo!</string>
     <string name="RatKing_Info2">¿Qué pasa? No tengo tiempo para este sinsentido. ¡Mi reino no va a gobernarse solo!</string>
     <string name="RatKing_Info3">¿Cómo te atreves, insignificante criatura, a molestar a Nuestra Majestad?</string>
@@ -1953,6 +1958,7 @@ otro lugar del nivel.</string>
     <string name="Sprout_Info">Despiertan las semillas dormidas.\nSin embargo, debe haber algo de vegetación en el suelo para que este hechizo tenga éxito.</string>
     <string name="Sprout_Name">Brote</string>
     <string name="StartScene_ChooseFromSlot">Elige una ranura de guardado</string>
+    <string name="StartScene_ComingSoon">Próximamente</string>
     <string name="StartScene_ContinueLatest">Continúa tu última partida o elige una ranura de guardado</string>
     <string name="StartScene_Depth">Profundidad: %1$d\nNivel: %2$d</string>
     <string name="StartScene_DifficultyEasy">Fácil (con anuncios)</string>
@@ -2197,6 +2203,7 @@ otro lugar del nivel.</string>
     <string name="Wand_Wood_Types_7">caoba</string>
     <string name="Wand_Wood_Types_8">bambú</string>
     <string name="Wand_Wood_Types_9">amaranto</string>
+    <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">Pocas criaturas pueden resistir el golpe demoledor de esta masa de plomo y acero, pero solo los aventureros más fuertes pueden manejarla. </string>
     <string name="WarHammer_Name">maza de guerra</string>
     <string name="Warlock_Desc">Cuando el interés de los enanos cambió de la ingeniería a las artes arcanas, los brujos ganaron poder en las ciudades. Empezaron con la magia elemental, pero pronto se cambiaron a la demonología y la necromancia.</string>
@@ -2808,6 +2815,13 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
 
 
 

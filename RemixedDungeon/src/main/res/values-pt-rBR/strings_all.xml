@@ -17,6 +17,7 @@
     <string name="AboutScene_Translation">Localização por: </string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon por NYRDS baseado em Pixel Dungeon Source por Watabou.</string>
+    <string name="Accuracy_DecreasedDoctor">Cada golpe deste %s espalha imperfeição. Meu Serra Óssea cura… isso infecta.</string>
     <string name="Acidic_Desc">Estas enormes criaturas demoníacas parecidas com aracnídeos evitam o combate de perto, disparando pontas serrilhadas de longas distâncias.</string>
     <string name="Acidic_Name">escorpião ácido</string>
     <string name="Acidic_Name_Objective">escorpião ácido</string>
@@ -1024,6 +1025,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="JarOfSouls_Desc">Os olhos brilhantes de um crânio neste jarro velho, assim como a energia estranha que ele emite, faz você se sentir desconfortável.</string>
     <string name="JarOfSouls_Name">Jarro de almas</string>
     <string name="JarOfSouls_Name_Objective">Jarro de almas</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">Este pesado metal comprido tem uma ponta em sua extremidade, cortando o ar em seu caminho.</string>
     <string name="Javelin_Name">lança</string>
     <string name="Journal_Alchemy">Pote de Alquimia</string>
@@ -1781,6 +1783,7 @@ outro local do nível.</string>
     <string name="ShamanElder_Name">xamã ancião</string>
     <string name="ShamanElder_Name_Objective">xamã ancião</string>
     <string name="Shaman_Desc">Os gnolls mais inteligentes podem dominar magia Xamã. Gnolls Xamãs preferem uma batalha de feitiços para compensar a falta de coragem, não hesitando em usá-los sobre aqueles que questionam o seu status na tribo.</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">O raio de %s matou você...</string>
     <string name="Shaman_Name">gnoll Xamã</string>
     <string name="Shaman_Name_Objective">gnoll xamã</string>
@@ -1907,6 +1910,7 @@ outro local do nível.</string>
     <string name="SpiritOfPain_Name_Objective">espírito da dor</string>
     <string name="Sprout_Info">Desperte as sementes adormecidas.\nNo entanto, deve haver alguma vegetação no chão para que este feitiço tenha sucesso.</string>
     <string name="Sprout_Name">Brotar</string>
+    <string name="StartScene_ComingSoon">Em breve</string>
     <string name="StartScene_ContinueLatest">Continue seu último jogo ou escolha um slot de salvamento</string>
     <string name="StartScene_Depth">Profundidade: %1$d, level: %2$d</string>
     <string name="StartScene_DifficultyEasy">Fácil (com propaganda)</string>
@@ -2315,6 +2319,7 @@ remix.31.1\n
     <string name="WndModInstall_Version">versão</string>
     <string name="WndModSelect_AreYouSure">Eliminando mod: %s, tem a certeza?</string>
     <string name="WndModSelect_ReallyDelete">Realmente eliminar?</string>
+    <string name="WndModsDisclaimer_install">Instalar mod local</string>
     <string name="WndModsDisclaimer_title">Mods</string>
     <string name="WndMovieTheatre_Bye">Volte a qualquer hora, nós estamos sempre felizes em vê-lo!</string>
     <string name="WndMovieTheatre_Instruction">Saudações e bem-vindo ao nosso cinema! Nós fornecemos um serviço especial, onde você pode assistir a um filme de graça. E se você assisti-lo todo, você será recompensado com %d moedas de ouro!</string>
@@ -2753,6 +2758,11 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
 
 
 

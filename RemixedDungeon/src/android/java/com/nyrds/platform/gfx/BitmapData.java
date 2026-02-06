@@ -358,6 +358,6 @@ public class BitmapData {
         // Note: We're not disposing of the bitmap here to avoid native crashes
         // The garbage collector will handle cleanup
         // If bmp != null, bmp.recycle() could cause issues in some cases
-        bmp = null;
+        //bmp = null;
     }
 }

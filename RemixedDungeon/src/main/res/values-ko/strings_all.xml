@@ -278,6 +278,7 @@
     <string name="Candy_Warning_2">당신은 정말 많은 사탕을 먹었고, 당신의 배가 많은 사탕때문에 아픕니다.</string>
     <string name="Capotain_Info">길이가 길고 챙이 좁은 모자다. 대부분 청교도들이 쓰는 모자이지만, 굳이 그것에 연연할 필요는 없다. 무슨 이유인지 \&quot;솔로몬\&quot;이라는 이름표가 붙어있다.</string>
     <string name="Capotain_Name">카포텡</string>
+    <string name="Carcass_Devoured">당신은 %s의 시신을 삼켰습니다!</string>
     <string name="Carcass_DissectFailed">%s을(를) 해부했지만 아무것도 얻지 못했다.</string>
     <string name="Carcass_DissectMessage">시신을 해부하여 %s 을(를) 얻었다.</string>
     <string name="Caves_TileDescBookshelf">동굴에 책장이 대체 왜 필요한 거지?</string>
@@ -707,6 +708,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Guts_TileGrass">마른 덤불</string>
     <string name="Guts_TileHighGrass">마른 덤불</string>
     <string name="Guts_TileWater">이상한 점액질 액체</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">끝에 도끼가 달린 냉병기이다.</string>
     <string name="Halberd_Name">미늘창</string>
     <string name="Halls_TileDescBookshelf">고대의 언어로 쓰여진 책들이 책장에 가득하다.</string>
@@ -892,6 +894,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Imp_Monks1">모험가이신가요? 전 모험가들이 좋아요! 누군가를 죽이고 싶을땐 언제나 그들에게 믿고 맡길 수 있죠. 내 말이 맞죠? 당연히 댓가도 드리죠. :)\n제 경우엔 _수도승_을 죽이고 싶어요. 보세요. 여기서 조그만한 사업을 하나 시작하려고 하는데요, 이 미치광이들은 아무 것도 안 살 거고 손님들만 겁줘서 쫒아낼 거에요. 그러니 제발, 좀 죽여줘요... 한.._8 마리_정도면 보상하겠습니다.</string>
     <string name="Imp_Monks2">오, 당신 아직 살아 있네요! 역시 당신의 쿵푸가 더 강할줄 알았아요 :) 드워프 토큰 챙기는거 잊지 마요.</string>
     <string name="Imp_Name">야망있는 임프</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Info">이 다트끝에 있는 스파이크는 목표물에 도달하면 화려한 불꽃을 내며 폭발하도록 설계되어 있습니다.</string>
     <string name="IncendiaryDart_Name">방화 다트</string>
     <string name="InnKeeperNPC_Desc">여관 주인은 스스로를 자랑스러워합니다.</string>
@@ -926,6 +929,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="JarOfSouls_Desc">이 오래된 항아리에 새겨진 해골 문양의 빛나는 눈과 이것이 내뿜는 이상한 에니지가, 당신이 불길함을 느끼도록 합니다. </string>
     <string name="JarOfSouls_Name">영혼의 단지</string>
     <string name="JarOfSouls_Name_Objective">영혼의 단지</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">이 금속이 스파이크를 유지하며 날아가도록 한다.</string>
     <string name="Javelin_Name">자벨린</string>
     <string name="Journal_Alchemy">연금술 솥</string>
@@ -1109,6 +1113,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MimicPie_Name">미믹 파이</string>
     <string name="MimicPie_Name_Objective">미믹 파이</string>
     <string name="Mimic_Desc">미믹은 자기가 원하는 어떤 형상으로도 변할 수 있는 마법 생물이다. 던전에서 어떻게 해야 모험가를 유인할 수 있는지 잘 알기 때문에 녀석은 거의 보물상자 형상을 하고 있다.</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">미믹</string>
     <string name="Mimic_Name_Objective">미믹</string>
     <string name="MindVisionBuff_Name">심안</string>
@@ -1187,6 +1192,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="NecromancerRobe_PetLimitReached">강령술: 최대 소환 수에 도달했습니다(현재 최대 소환 수: 1%d)!</string>
     <string name="Necromancer_ACSpecial">강령술</string>
     <string name="Necromancy_BecameALich">당신은 리치가 되었습니다! 당신의 힘이 자라고 영혼 용량이 두 배가 되었지만, %1$d의 힘을 잃었습니다.</string>
+    <string name="Necromancy_Death">당신은 네크로맨서를 연습하면서 모든 생명력을 소진했습니다.</string>
     <string name="Necromancy_NotEnoughSouls">당신은 \&quot;1%1$s\&quot;마법을 시전하기에 충분한 영혼이 없습니다.</string>
     <string name="Necromancy_ReincarnationName">환생</string>
     <string name="Necromancy_SoulsCountLabel">영혼들</string>
@@ -1219,6 +1225,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Pasty_Info">소고기와 감자를 넣어 전통 방법으로 요리한 영국식 파스티이다.</string>
     <string name="Pasty_Name">파스티</string>
     <string name="Pickaxe_ACMine">광산</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">이 크고 튼튼한 도구는 바위를 파괴하기 위한 도구입니다. 아마 무기로도 사용할 수 있을꺼 같네요.</string>
     <string name="Pickaxe_Name">곡괭이</string>
     <string name="Pickaxe_NoVein">근처에 캘 수 있는 어두운 금 원석이 없습니다.</string>
@@ -1231,6 +1238,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Piranha_Name_Objective">거대 피라냐</string>
     <string name="PirateSet_Info">아르! 너는 동료처럼 느껴지나... 아니면 그냥 망할 풋내기 선원처럼 느껴지나!? 그렇지 않길 빌어, 이 물건들은 해적들을 위한 것이거든. 그러니까 내 말은... 아르!</string>
     <string name="PirateSet_Name">해적 세트</string>
+    <string name="PlagueDoctorMaskHood_Info">조각된 검은 호박나무로 된 해골, 그 빈 눈구멍에는 자수정 보석의 윤기 있는 빛이 어른거린다. 당신이 들이마신 숨결은 복도처럼 얽힌 튜브와 필터를 지나며, 당신에게 달라붙은 부패를 가리는 강한 허브와 향신료의 향기를 전해준다. 하지만 그것이 단지 가면일 뿐은 아니다. 한밤중 같은 벨벳으로 만들어진 두꺼운 수도복 후드가 얼굴과 머리를 어둠 속에 가린다. 까마귀 날개처럼 생긴 이 후드는 등줄기를 따라 늘어뜨려져 있으며, 가장자리는 뼈처럼 하얀 레이스 장식으로 마감되어 충격적이지만 아름다운 대비를 이룬다. 마스크와 후드가 함께 어우러져 유령 같은 초상, 즉 부패의 힘에 맞서는 끝없는 싸움을 보여주는 음산한 증표를 만들었다.</string>
     <string name="PlagueDoctorNPC_After_Quest">그들에게 보여주겠어, 그들에게 모두 보여주겠어!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">아직까지 여기 있었던거야? 자! 받아.</string>
     <string name="PlagueDoctorNPC_Desc">이 곱추 남성은 가죽으로 둘러쌓여 있고, 강한 약냄새가..아니, 마늘 냄새도 나는 것 같다?</string>
@@ -1637,6 +1645,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Shaman_Name">놀 주술사</string>
     <string name="Shaman_Name_Objective">놀 주술사</string>
     <string name="Sheep_Desc">이 양은 마법 양입니다. 어떤 마법이 있냐고요? 당신은 그 양을 죽일 수 없습니다. 그 양은 멍한 눈으로 되새김질이나 하면서, 마법이 없어질 때까지 계속 있을 겁니다.</string>
+    <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">양</string>
     <string name="Sheep_Name_Objective">양</string>
     <string name="ShieldBuffNotReady_Info">방패가 다음 공격을 막을 준비가 되지 않았습니다.</string>
@@ -2017,6 +2026,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndChooseWay_Cancel">나중에 결정할게</string>
     <string name="WndChooseWay_Message">어느 길을 걸으시겠습니까?</string>
     <string name="WndClass_Mastery">마스터리</string>
+    <string name="WndCryptoDonate_copyAddress">주소 복사</string>
     <string name="WndCryptoDonate_ethereum">이더리움</string>
     <string name="WndCryptoDonate_warningText">경고: 자금을 보내기 전에 항상 주소를 확인하십시오. 암호화폐 거래는 되돌릴 수 없습니다!</string>
     <string name="WndDonate_donate">기부하세요:</string>
@@ -2409,6 +2419,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_stone_wall_broken_name">부숴진 벽</string>
     <string name="town_deco_stone_wall_desc">어떻게든 이 벽은 열을 방출하고 살짝 젖어 있다.</string>
     <string name="town_deco_stone_wall_name">석재 벽</string>
+    <string name="town_deco_stool_broken_desc">이 의자는 더 좋은 날을 겪었었다.</string>
     <string name="town_deco_stool_broken_name">부서진 의자</string>
     <string name="town_deco_stool_sturdy_desc">단단한 나무로 만들어진 평범한 의자다.</string>
     <string name="town_deco_stool_sturdy_name">의자</string>
@@ -2442,6 +2453,18 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

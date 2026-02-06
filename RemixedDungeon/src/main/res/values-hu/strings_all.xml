@@ -164,6 +164,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Badges_StrengthAttained4">19 pontnyi erő elérve</string>
     <string name="Badges_StrengthAttained5">21 pont erő megszerezve</string>
     <string name="Badges_Supporter">Köszönjük a támogatásodat!</string>
+    <string name="Badges_ThisIsSparta">Ez Spárta!</string>
     <string name="Badges_Victory">Yendor amulettje megszerezve</string>
     <string name="Badges_VictoryAll">Yendor amulettje megszerezve minden kaszt által</string>
     <string name="Badges_Yasd">Tűz, méreg, gáz és éhség általi halál</string>
@@ -310,7 +311,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Challenges_Names_5">A sötétségbe</string>
     <string name="Challenges_Names_6">Tiltott Rúnák</string>
     <string name="Challenges_Names_7">Békesség</string>
-    <string name="Challenges_Names_9">Amenzia</string>
+    <string name="Challenges_Names_9">Amnesia</string>
     <string name="ChaosArmor_Info">Ez a páncél sötétvörös láncokkal összefűzött vérvörös lemezekből áll. Kaotikus energiát sugároz, ahogy megérinted.</string>
     <string name="ChaosArmor_Name">Káosz páncél</string>
     <string name="ChaosBow_Info">Egy halálos íj a Káosz hatalmával töltve. Minden nyílvessző amit kilő egy darabka káoszenergiát hordoz. De ha elvéted a célt...</string>
@@ -552,6 +553,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="DrunkardNPC_Desc">Rendszeres vendég természetes állapotban.</string>
     <string name="DrunkardNPC_Name">részeges</string>
     <string name="Drunkard_Phrase_3">Ez a sör így néz ki, mint a por</string>
+    <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_DeadEnd">Mit keresel te itt?!</string>
     <string name="Dungeon_NoTips">A szöveg kibetűzhetetlen...</string>
     <string name="Dungeon_Tips_0">Ne becsüld túl az erődet, csak olyan fegyvert és páncélt használj amivel meg is tudsz bírkozni.</string>
@@ -614,9 +616,11 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="Eye_Kill">%s halálsugara megölt téged...</string>
     <string name="Eye_Name">gonosz szem</string>
     <string name="Eye_Name_Objective">gonosz szem</string>
+    <string name="Facilitations_Descriptions_1">Még mindig nem tudni, hogy kik voltak a szüleid, de a természetes troll-szerű regeneráció segít majd begyógyítani az összes közelgő csata sebeit.</string>
     <string name="Fadeleaf_Desc">Egy Fakultlevélhez érve elteleportál bármely lényt egy véletlen helyre az adott szinten.</string>
     <string name="Fadeleaf_Name">Fakultlevél</string>
     <string name="FetidRat_Desc">Ez az erszényes patkány sokkal nagyobb mint a normális példányok. Valami féle felhő veszi körül. </string>
+    <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">bűzös patkány</string>
     <string name="FetidRat_Name_Objective">bűzös patkány</string>
     <string name="Fez_Info">Ez a csonkakúp alakú fejdísz piros szövetből készült egy bojttal a tetején. És nem, nem teszi a világot 3 dimenzióssá.</string>
@@ -723,6 +727,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Guts_TileGrass">Kiszáradt bokor</string>
     <string name="Guts_TileHighGrass">Kiszáradt bokor</string>
     <string name="Guts_TileWater">Fura nyálkás folyadék</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">Balta egy hosszú rúd végén.</string>
     <string name="Halberd_Name">Alabárd</string>
     <string name="Halls_TileDescBookshelf">Ezek a könyvek hamvadnak a polcon.</string>
@@ -1662,6 +1667,7 @@ egy másik helyre a szinten. </string>
     <string name="Shadow_Name">árnyék</string>
     <string name="Shadow_Name_Objective">árnyék</string>
     <string name="ShadowsBuff_Name">Átjár a sötétség</string>
+    <string name="ShamanElder_Name">vének sámán</string>
     <string name="Shaman_Desc">A leginteligensebb gnollok tudják csak elsajátítani a sámánidztikud mágiát. A gnoll sámánok a csatában a varázslatokat részesítik előnyben mivel nem különösebben erősek, egyáltalán nem haboznak használni tudásokat ha valaki megkérdőjelezi helyüket a falkában.</string>
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">%s villám gömbje megölt téged...</string>
@@ -1830,6 +1836,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Swing_Name_2">Vad %s</string>
     <string name="Sword_Info">A pengeéles acél bíztatóan fénylik.</string>
     <string name="Sword_Name">kard</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Bár ez a dobóbalta nem olyan nehéz, azért jelentős erő kell hatékony használatához.</string>
     <string name="Tamahawk_Name">Csatabárd</string>
     <string name="Tengu_Desc">Tengu-nak hívták a tagjait egy ősi bérgyilkos klánnak, aminek a neve szintén Tengu. Ezek a bérgyilkosok a széleskörben használt csapdáikról és dobócsillagjaikról voltak híresek.</string>
@@ -2038,6 +2045,13 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Weightstone_WndChoice">Mire szeretnéd kiegyensúlyozni a(z) %s-t?</string>
     <string name="Weightstone_WndSpeed">Gyorsaságra</string>
     <string name="Welcome_Ok">Oké!</string>
+    <string name="Welcome_Text_31_1">    remix.31.1\n
+    - Játékmenet:\n
+    -- Új testreszabások!\n
+    -- Új pókfaj!\n
+    -- A Psi-Pókok mostantól erősítik a többi pókot, ahelyett hogy meggyengítenék a hőst.\n
+    - Hibajavítások\n
+</string>
     <string name="Welcome_Title">Üdv!</string>
     <string name="WindGust_Info">Megidéz egy széllöketet, ami arrébblöki a kiválasztott karaktert</string>
     <string name="WindGust_Name">Széllöket</string>
@@ -2128,6 +2142,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndInfoItem_Tomb">Sír</string>
     <string name="WndInfoItem_WontKnow">Nem tudod, hogy mi van benne amíg ki nem nyitod!</string>
     <string name="WndInstallingMod_deleting_file">Törlés: %s</string>
+    <string name="WndInstallingMod_skipping_file">Kihagyás: %s</string>
     <string name="WndJournal_Levels">Szintek</string>
     <string name="WndJournal_Logbook">Eseménynapló</string>
     <string name="WndJournal_Title">Napló</string>
@@ -2452,6 +2467,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_scrolls_desc">Ez a poros polc tele van különböző tekercsekkel és könyvekkel.</string>
     <string name="town_deco_scrolls_name">Mágikus Tekercs</string>
     <string name="town_deco_shelf_desc">Üres polcok</string>
+    <string name="town_deco_shelf_full_name">Polc</string>
     <string name="town_deco_shelf_name">Polcok</string>
     <string name="town_deco_shelving_desc">Egy lenyűgöző méretű állvány, amelynek polcain különféle italokat és harapnivalókat találsz.</string>
     <string name="town_deco_shieldboard_desc">Különböző pajzsok vannak kint a deszkán. Még nem eladók.</string>
@@ -2482,6 +2498,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_stones_desc">Csak egy rakás kő.</string>
     <string name="town_deco_stones_name">Kavicsok</string>
     <string name="town_deco_stool_sturdy_desc">Egy átlagos bárszék ellenálló fából készült.</string>
+    <string name="town_deco_stool_sturdy_name">Taburett</string>
     <string name="town_deco_stove_desc">Ez a tűzhely kellemes meleget áraszt.</string>
     <string name="town_deco_stove_name">Kő kályha</string>
     <string name="town_deco_tile_desc">Ezek a csempék eléggé lehasználódtak az idővel.</string>
@@ -2519,6 +2536,18 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

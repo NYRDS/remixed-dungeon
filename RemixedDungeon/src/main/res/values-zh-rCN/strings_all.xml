@@ -763,6 +763,7 @@
     <string name="Ghost_Rat2">求求你……帮帮我……杀死那个令人憎恨的东西……</string>
     <string name="Ghost_Rose1">你好冒险者……曾经我也像你一样——强壮而自信……虽然现在我已经死了……但是我无法离开这个地方……除非我拿到我的_干枯玫瑰_……那是对我非常重要的东西……一些怪物从我的身上偷走了它……</string>
     <string name="Ghost_Rose2">求求你……帮帮我……找到那朵玫瑰……</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Info">一把在末端嵌有剑刃的长柄武器。</string>
     <string name="Glaive_Name">关刀</string>
     <string name="GnollArmor_ACSpecial">号召</string>
@@ -1047,6 +1048,7 @@
     <string name="Item_Name">某物</string>
     <string name="Item_PackFull">你的背包满了，没法装下%s</string>
     <string name="JarOfSouls_Desc">这个旧罐子上描绘的头骨里的眼睛正在闪闪发亮，以及它散发出的奇怪能量，让你感到不安。</string>
+    <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name">魂之灵龛</string>
     <string name="JarOfSouls_Name_Objective">魂之灵龛</string>
     <string name="Javelin_Gender">neuter</string>
@@ -1401,6 +1403,7 @@
     <string name="PlagueDoctorNPC_After_Quest">我会证明的，我会证明给他们看！</string>
     <string name="PlagueDoctorNPC_After_Quest_2">你还在吗？来这里！拿着这个。 </string>
     <string name="PlagueDoctorNPC_Desc">散发奇怪味道的……皮革？下面应该是个人吧……</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">瘟疫巫医</string>
     <string name="PlagueDoctorNPC_Name_Objective">瘟疫巫医</string>
     <string name="PlagueDoctorNPC_Quest_End">啊，谢谢，我希望我能找到病原体。过去我什么都没找到。所以我在等你的时候为你做了这个。</string>
@@ -1690,6 +1693,7 @@
     <string name="ScaleArmor_Desc">用铁鳞片缝在皮背心上造就了一副灵活却可靠的护甲。</string>
     <string name="ScaleArmor_Name">鳞甲</string>
     <string name="ScarecrowNPC_Desc">毫无疑问……这个稻草人正在注视着你。它的红色眼睛看上去很吓人，但令你吃惊的是，你从它身上感受不到任何威胁。</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">稻草人</string>
     <string name="ScarecrowNPC_Name_Objective">稻草人</string>
     <string name="ScarecrowNPC_Quest_End">哦，开心，棒极了！\n为此，你可以得到一份实在的食物！</string>
@@ -2262,6 +2266,7 @@ remix.31.1\n
     <string name="WndClass_Mastery">精通</string>
     <string name="WndCryptoDonate_bitcoin">比特币</string>
     <string name="WndCryptoDonate_copyAddress">复制地址</string>
+    <string name="WndCryptoDonate_currency">货币</string>
     <string name="WndCustomizations_Title">自定义设置</string>
     <string name="WndDonate_commonDonateText">混合地牢——永远对所有人免费。\n\n但是，你能帮我们让这款游戏变得更好。\n\n除了我们的衷心感谢以外，你还将获得一些界面上的美化。</string>
     <string name="WndDonate_donate">捐献：</string>
@@ -2794,6 +2799,11 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
 
 
 

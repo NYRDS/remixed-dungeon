@@ -10,9 +10,6 @@ import org.jetbrains.annotations.NotNull;
 
 public class SmartTexture extends Texture {
 
-	public int width;
-	public int height;
-
 	public Atlas atlas;
 
 	public SmartTexture() {

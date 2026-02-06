@@ -105,6 +105,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Badges_AllWands">Alle Zauberstäbe identifiziert</string>
     <string name="Badges_BossSlain1">Goo wurde besiegt</string>
     <string name="Badges_BossSlain1All">Goo wurde von allen Klassen besiegt</string>
+    <string name="Badges_BossSlain2">Tengu wurde besiegt</string>
     <string name="Badges_BossSlain3All">DM-300 wurde von allen Subklassen getötet</string>
     <string name="Badges_BossSlain4">König wurde besiegt</string>
     <string name="Badges_Champion">Herausforderung gewonnen</string>
@@ -638,6 +639,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="ElvenBow_Name">Elfenbogen</string>
     <string name="ElvenDagger_Info">Diese Waffe ist aus einer speziellen Metalllegierung, die es viel leichter als einen normalen Dolch macht.</string>
     <string name="ElvenDagger_Name">Elfendolch</string>
+    <string name="EncumbranceBuff_CharAct_1">Ich bin nicht stark genug, um %s richtig zu führen.</string>
     <string name="EncumbranceBuff_CharAct_2">Diese %s ist zu schwer für mich, um sie effektiv zu benutzen.</string>
     <string name="EnslavedSoul_Desc">Sie können diese geisterhafte Erscheinung fast sehen. Obwohl es für einen Bruchteil einer Sekunde wie ein Schädel aussieht, erscheint ein Gesicht voller Leiden und Qualen für einen Bruchteil einer Sekunde.
 Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schädel aussieht, erscheint manchmal für den Bruchteil einer Sekunde ein Gesicht voller Schmerzen und Folter.</string>
@@ -997,6 +999,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="IronKey_Name">Eisener Schlüssel</string>
     <string name="ItemSprite_Info1">Falle zurseite: %1$.1f %2$.1f</string>
     <string name="Item_ACDrop">FALLEN LASSEN</string>
+    <string name="Item_ACPickup">Aufheben</string>
     <string name="Item_ACThrow">WERFEN</string>
     <string name="Item_DirThrow">Zielposition auswählen</string>
     <string name="Item_Info">etw.</string>
@@ -1166,6 +1169,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="MailArmor_Name">Kettenrüstung</string>
     <string name="ManaPotion_Info">Dieser Trank wird deine spirituelle Energie wiederherstellen.</string>
     <string name="ManaPotion_Name">Mana Trank</string>
+    <string name="ManaShieldBuff_Name">Magischer Schild</string>
     <string name="Mana_Cost">Mana Kosten:</string>
     <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Info">Eine OP-Maske dient dazu, Mikroorganismen, die sich in Flüssigkeitströpfchen und Aerosolen befinden, aus Mund und Nase des Trägers abzuhalten.
@@ -1287,6 +1291,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="NecromancerRobe_PetLimitReached">Nekromantie: Beschwörungslimit erreicht (Momentanes Maximum: %d)!</string>
     <string name="Necromancer_ACSpecial">NEKROMANTIE</string>
     <string name="Necromancy_BecameALich">Du bist zu einem Lich geworden! Deine Kraft wächst und deine Seelenkapazität hat sich verdoppelt! Aber du hast %1$d Stärkepunkt(e) verloren.</string>
+    <string name="Necromancy_Death">Du hast all deine Lebenskraft verbraucht, während du mit der Totenbeschwörung geübt hast.</string>
     <string name="Necromancy_NotEnoughSouls">Du hast nicht genug Seelen, um einen \&quot;%1$s\&quot; Zauberspruch freizusetzen.</string>
     <string name="Necromancy_ReincarnationName">Reinkarnation</string>
     <string name="Necromancy_ReincarnationTriggered">Deine Kräfte trotzen dem Tod! Aber du hast alle gesammelten Seelen und Besitztümer verloren.</string>
@@ -1945,6 +1950,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="Sword_Name">Schwert</string>
     <string name="Tamahawk_Info">Diese Wurfaxt ist nicht besonders schwer, aber benötigt dennoch relativ viel Kraft um effizient eingesetzt werden zu können.</string>
     <string name="Tamahawk_Name">Tomahawk</string>
+    <string name="TenguLiver_Info">Diese Leber gehört einem mächtigen Feind. Allein beim Anblick übernehmen Ihre tierischen Instinkte die Kontrolle, und Sie spüren das Verlangen, sie zu verzehren.</string>
     <string name="Tengu_Desc">Tengu sind Mitglieder eines uralten Assassinen-Clans. Auch der Clan hört auf den Namen Tengu. Seine Assassinen sind berüchtigt für ihren exzessiven Einsatz von Shuriken sowie das Legen von Fallen.</string>
     <string name="Tengu_Info1">Endlich frei...</string>
     <string name="Tengu_Info2">Hab dich, %s!</string>
@@ -2426,6 +2432,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="Yog_Name">Yog-Dzewa</string>
     <string name="Yog_Name_Objective">Yog-Dzewa</string>
     <string name="YogsBrain_Desc">Das Gehirn von Yog-Dzewa. Die Quelle alles Bösen, das jemals aus dem Dungeon kam.</string>
+    <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name">Yogs Gehirn</string>
     <string name="YogsBrain_Name_Objective">Yogs Gehirn</string>
     <string name="YogsEye_Desc">Das Auge des Alten Gottes, ein allsehender Blick gefüllt mit ewigem Hass. Du fühlst, wie es gezielt durch deine Seele blickt.</string>
@@ -2700,6 +2707,13 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
+
 
 
 

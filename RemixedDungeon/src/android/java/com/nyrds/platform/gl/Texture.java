@@ -3,6 +3,7 @@ package com.nyrds.platform.gl;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
 
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.gfx.BitmapData;
 
 import java.nio.ByteBuffer;
@@ -28,8 +29,8 @@ public class Texture {
     private int wrapS = CLAMP;
     private int wrapT = CLAMP;
     private int[] pixels;
-    private int width;
-    private int height;
+    public int width;
+    public int height;
     private byte[] bytePixels;
     private boolean dataDirty = false;
 
@@ -69,6 +70,9 @@ public class Texture {
     private void uploadPixelData() {
         if (dataDirty) {
             if (bitmapData != null && bitmapData.bmp != null) {
+                if(bitmapData.bmp==null) {
+                    EventCollector.logException();
+                }
                 GLUtils.texImage2D(GLES20.GL_TEXTURE_2D, 0, bitmapData.bmp, 0);
                 if (autoDisposeBitmapData) {
                     bitmapData.dispose(); // Dispose the bitmap data after uploading
@@ -146,6 +150,11 @@ public class Texture {
 
     public void bitmap(BitmapData bitmap) {
         this.bitmapData = bitmap;
+
+        if(bitmap.bmp==null){
+            EventCollector.logException();
+        }
+
         this.dataDirty = true;
     }
 

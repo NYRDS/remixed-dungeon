@@ -199,6 +199,7 @@
     <string name="BattleAxe_Info">В кожному помаху цієї грізної зброї відчувається вага сталевого леза.</string>
     <string name="BattleAxe_Name">бойова сокира</string>
     <string name="Bee_Gender">masculine</string>
+    <string name="Bee_Name_Objective">бджолу</string>
     <string name="BellaNPC_Amulet_F">Чому б апетитний пиріг не був таким гарним, це те що у вас є. Ах, такий вишуканий амулет! А ти ... ти так яскраво сяєш в порівнянні з будь-ким. Що якщо ми прогуляємося і обговорити наше взаємне майбутнє?</string>
     <string name="BellaNPC_Amulet_M">Чому б привітання не було таке гарне, це те що у вас є. Ах, такий вишуканий амулет! А ти ... ти стоїш над цими плебеями. Що якщо ми прогуляємося і обговорити наше взаємне майбутнє?</string>
     <string name="BellaNPC_Angry">Як смієш ти... ти плебей!</string>
@@ -657,6 +658,7 @@
     <string name="Eye_Name">зле око</string>
     <string name="Eye_Name_Objective">зле око</string>
     <string name="Facilitations_Names_0">Без голоду</string>
+    <string name="Facilitations_Names_2">Дух джина</string>
     <string name="Fadeleaf_Desc">Доторк до Портальця перенесе тебе у випадкове місце цього рівня</string>
     <string name="Fadeleaf_Name">Порталець</string>
     <string name="FetidRat_Desc">Цей сумчастий щур більший ніж звичайний, і він оточений смердючою хмарою.</string>
@@ -1783,6 +1785,7 @@
     <string name="Shielded_Name">громила-щитовик</string>
     <string name="Shielded_Name_Objective">громилу-щитовика</string>
     <string name="ShootInEye_Info">Використовуйте свої виняткові навички стрільби, щоб влучити у ворога прямо в око, якщо воно, звісно, у нього є.</string>
+    <string name="ShootInEye_Name">Постріл у око</string>
     <string name="Shopkeeper_Buy">Оберіть товар для придбання</string>
     <string name="Shopkeeper_BuyPrompt">Подивимося ваш інвентар</string>
     <string name="Shopkeeper_Desc">Цей трохи пухлий індивідуум більше підходить для торгівлі десь в міському кварталі, а ніж в підземеллі. Хоча, судячи по цінах, йому і тут непогано.</string>
@@ -2019,6 +2022,8 @@
     <string name="TownsfolkSilentNPC_Name_Objective">городянина</string>
     <string name="ToxicGas_Info">Тут крутиться зелена хмара токсичного газу.</string>
     <string name="ToxicGas_Info1">Ти отруївся токсичним газом...</string>
+    <string name="ToxicGland_Info">Токсична залоза, отримана з переможеного ворога. Ці залози наповнені потужними токсинами і можуть бути використані в алхімічних процесах.</string>
+    <string name="ToxicGland_Name">Токсична залоза</string>
     <string name="TrapWnd_Step">Ти впевнений що бажаєш увійти до пастки? Можеш загинути.</string>
     <string name="TrapWnd_Title">Пастка</string>
     <string name="TreacherousSpirit_Desc">Ця потворна істота виглядає наче жива хмара темряви. Його величезне око пронизає тебе поглядом, посмикуючись від кожного твого руху.</string>
@@ -2617,6 +2622,7 @@
     <string name="town_deco_trapdoor_name">Люк</string>
     <string name="town_deco_tree_desc">Виникає дивне відчуття, дивлячись на живе дерево в безпосередній близькості від входу до підземелля, наповнені жахом та смертю.</string>
     <string name="town_deco_tree_name">Дерево</string>
+    <string name="town_deco_vat_desc">Цей кам\'яний чан заповнений святій водою до самого верху.</string>
     <string name="town_deco_wall_beam_desc">Досить надійна опора для даної споруди.</string>
     <string name="town_deco_wall_beam_name">Балка</string>
     <string name="town_deco_wall_brazier_desc">Пара, що йде від тліючих вуглин наповнює кімнату приємними ароматами.</string>
@@ -2647,6 +2653,13 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
+
+
 
 
 

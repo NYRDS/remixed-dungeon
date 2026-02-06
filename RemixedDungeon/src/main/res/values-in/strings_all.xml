@@ -348,6 +348,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Challenges_Names_6">Rune Terlarang</string>
     <string name="Challenges_Names_7">Pasifisme</string>
     <string name="Challenges_Names_8">Tidak ada kota</string>
+    <string name="Challenges_Names_9">Amnesia</string>
     <string name="ChaosArmor_Info">Sebuah lapisan merah darah dipasang bersama dengan rantai merah tua. Zirah ini mengeluarkan energi khaos saat Anda menyentuhnya.</string>
     <string name="ChaosArmor_Name">Zirah khaos</string>
     <string name="ChaosBow_Info">Sebuah busur mengerikan dengan kekuatan dari Khaos. Tiap anak panah yang ditembakan dari ini akan membawa sedikit dari kekuatan khaos pada target. Jika Anda meleset...</string>
@@ -1018,6 +1019,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name">toples jiwa</string>
     <string name="JarOfSouls_Name_Objective">toples jiwa</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">Sebatang logam ini telah diseimbangkan untuk menahan ujungnya di depan saat melayang melewati udara.</string>
     <string name="Javelin_Name">lembing</string>
     <string name="Journal_Alchemy">Panci alkimia</string>
@@ -1371,10 +1373,12 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Bawakan aku %d kulit tikus.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Bisakah kamu percaya?! Para idiot itu masih belum menyadari betapa berbahayanya selokan sialan ini! Seperti penjaga dan petualang yang bisa melindungi kota dari apapun. Hah! Tidak ada senjata yang dapat menghentikan penyebaran penyakit. Tapi saya butuh bukti, mungkin Anda bisa membantu saya dengan itu? Bawakan saya %d kulit tikus, sehingga saya bisa melakukan beberapa tes tambahan.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bisakah kamu percaya?! Para idiot itu masih belum menyadari betapa berbahayanya selokan sialan ini! Seperti penjaga dan petualang yang bisa melindungi kota dari apapun. Hah! Tidak ada senjata yang dapat menghentikan penyebaran penyakit. Tapi saya butuh bukti, mungkin Anda bisa membantu saya dengan itu? Bawakan saya %d kulit tikus, sehingga saya bisa melakukan beberapa tes tambahan.</string>
+    <string name="PlagueDoctorQuest_1_1_InProgress">Bawakan saya _lima ekor tikus mati_! Setiap satu yang engkau bawakan mendekatkan kita pada pemahaman tentang wabah mengerikan ini.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Dia memeluk _kelelawar_ dengan lembut di tangan berkantungnya, mengamati wujud kecil itu dengan kagum yang menakutkan* Hebat! Ekolokasi kelelawar... tidak seperti apa pun yang pernah saya temui. Begitu presisi... begitu... kendali. *Dia menoleh kepadamu, wajahnya tersembunyi oleh topengnya* Atas usahamu, sebuah _Gulungan Peningkatan_. Gunakanlah dengan bijak, karena ia menyimpan potensi untuk... menyempurnakan esensimu. *Dia memberimu gulungan itu, suaranya berbisik pelan* _Kelelawar_ ini, adalah... jendela ke dunia tersembunyi. Dunia... tempat bayangan menari dan rahasia berbisik.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*Ia menengadahkan kepala dan tertawa keras, suara tawa menggema di laboratorium lembabnya* Luar biasa! Seorang _Ksatria Kematian_, berdiri di hadapan kita! Kekuatan yang memancar dari wujudnya... memabukkan! *Ia menoleh kepadamu, mata bersinar penuh intensitas demam* Dan untukmu, hadiah yang pantas atas keberanianmu: sebuah _Potion of Strength_! Semoga memberimu kekuatan untuk mengalahkan musuh apa pun! Sekarang... mari kita teliti subjek kita. Inti dari wujudnya menyimpan rahasia yang bisa mengubah hukum kehidupan itu sendiri! *Ia mendekati _Ksatria Kematian_ dengan senyum maniak, mengacungkan sebuah botol cairan hijau yang mendidih*</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">Sempurna! Para _Dwarf Warlocks_, esensi mereka kini bisa kuteliti! Begitu menyimpang dan terkorupsi sihirnya... sungguh menakjubkan. *Ia mengangkat sebuah botol berisi cairan merah kental yang berpendar.* Ini, untukmu: sebuah _Potion of Might_! Minumlah kekuatannya, dan kau akan merasakan kekuatan gunung-gunung mengalir dalam darahmu! Ingatlah, pengetahuan yang diperoleh dari pengorbanan ini pada akhirnya akan melayani tujuan yang lebih tinggi... mungkin bahkan menyelamatkan kita semua dari nasib yang lebih buruk dari kematian. </string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Ambil lima _Kobold Icemancer_ mati! Tubuh beku mereka menyimpan kunci untuk membuka rahasia sihir dingin mereka!</string>
+    <string name="PlagueDoctorQuest_5_1_Prologue">*Dia gagap, suaranya serak seperti ranting rapuh*. A-ah, _succubi_! Dua... ya, dua, hidup! Ini... hem... untuk penelitian saya! Anda lihat... feromon mereka... ini penting untuk memahami keseimbangan halus dari... ah... *Ia terdiam, tangannya yang berotot mencoba menyesuaikan topengnya dengan gugup, matanya menatap Anda dengan intensitas demam.* Mereka... esensi... ini sebuah teka-teki... teka-teki indah, misterius! *Ia batuk keras, mencoba mengumpulkan kembali ketenangannya.* Saya berjanji, untuk membawa saya dua dari makhluk... ini... Anda akan mendapatkan rasa terima kasih saya selamanya. Anggap saja ini sebagai... ganjaran ilmu pengetahuan! Ya! Untuk ilmu pengetahuan!</string>
     <string name="PlagueDoctor_Desc">Seluruh tubuh orang bungkuk ini disembunyikan di bawah jumpsuit kulit. Juga, dari dia datang bau obat yang pahit dan ... bawang putih?</string>
 
     <string name="PlagueDoctor_Name">dokter wabah</string>
@@ -1585,7 +1589,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="RingOfStoneWalking_Name">Cincin Batu Berdarah</string>
     <string name="RingOfThorns_Info">Meski tidak punya duri sungguhan, musuh yang akan terkena sebagian dampak serangan mereka. Mengembangkan cincin ini tidak memberi bonus tambahan.</string>
     <string name="RingOfThorns_Name">Cincin Berduri</string>
-    <string name="Ring_BuffKnown">Ini adalah%s</string>
+    <string name="Ring_BuffKnown">Ini adalah %s</string>
     <string name="Ring_Gems_0">berlian</string>
     <string name="Ring_Gems_1">opal</string>
     <string name="Ring_Gems_10">kuarsa</string>
@@ -1745,6 +1749,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SeedPouch_Info">Kantong beludru kecil ini memungkinkan Anda menyimpan sejumlah biji di dalamnya. Sangat mudah.</string>
     <string name="SeedPouch_Name">kantong benih</string>
     <string name="Senior_Desc">Biksu ini adalah fanatik, yang membaktikan diri mereka untuk menjaga rahasia kota mereka dari semua makhluk asing. Mereka tidak menggunakan pengaman atau senjata, hanya mengandalkan seni dari pertempuran tangan. Biksu ini telah menguasai seni melumpuhkan musuhnya.</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">biksu senior</string>
     <string name="Senior_Name_Objective">biksu senior</string>
     <string name="ServantNPC_Desc">Seorang pelayan penginapan yang sangat sibuk.</string>
@@ -2306,6 +2311,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndInfoItem_WontKnow">Anda tidak akan tahu apa di dalamnya sampai Anda membukanya!</string>
     <string name="WndInstallingMod_deleting_file">Menghapus %s</string>
     <string name="WndInstallingMod_please_wait">Memasang mod, harap tunggu...</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Jalankan Resep</string>
     <string name="WndJournal_Levels">Level</string>
     <string name="WndJournal_Logbook">Buku catatan</string>
     <string name="WndJournal_Title">Jurnal</string>
@@ -2759,6 +2765,13 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
 
 
 

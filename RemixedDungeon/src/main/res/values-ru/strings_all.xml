@@ -2287,6 +2287,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="VertigoBuff_Info">Ощущение головокружения значительно затрудняет дальнейшее движение!</string>
     <string name="VertigoBuff_Name">Завихрение</string>
     <string name="View_Distance">Дальность обзора</string>
+    <string name="VileEssence_Name">Презренная субстанция</string>
     <string name="Viscosity_Status">отложено %d</string>
     <string name="Viscosity_Txt">%s вязкости</string>
     <string name="WandHolster_Info">Изящное изделие, сработанное из кожи экзотического зверя, уместит в себе волшебные палочки в количестве до %d.</string>
@@ -2489,6 +2490,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndCryptoDonate_monero">Монеро</string>
     <string name="WndCryptoDonate_openWallet">Открыть кошелек</string>
     <string name="WndCryptoDonate_supportDev">Поддержать разработчика</string>
+    <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_walletAddress">Адрес кошелька</string>
     <string name="WndCustomizations_Title">Кастомизации</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - свободна и бесплатна для всех, и так будет всегда.\n\nОднако Вы можете помочь нам сделать игру ещё лучше.\n\nКроме нашей сердечной благодарности Вы получите некоторые косметические улучшения, однако не влияющие на геймплей.</string>
@@ -3040,6 +3042,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
+
 
 
 

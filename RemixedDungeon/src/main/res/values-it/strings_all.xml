@@ -21,6 +21,7 @@
     <string name="Acidic_Name_Objective">scorpione acido</string>
     <string name="Affection_Txt">%s dell\'affetto</string>
     <string name="AirElemental_Desc">Gli elementali dell\'acqua sono esseri magici volanti fatti di aria viva. </string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">elementare dell\'aria</string>
     <string name="AirElemental_Name_Objective">elementare dell\'aria</string>
     <string name="AlarmTrap_Desc">La trappola emette un suono acuto che riecheggia per tutto il dungeon!</string>
@@ -71,6 +72,7 @@
 \n\nPuoi sentire una magia malevola celarsi all\'interno del/dello/della/dell\' %s.</string>
     <string name="Armor_ToString">%1$s :%2$d</string>
     <string name="ArmoredStatue_Desc">Non puoi nemmeno iniziare a pensare che sia solamente un\'altra statua brutta, ma il fatto che nessuno metta un _%s_ su quella cosa. </string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">statua animata</string>
     <string name="ArmoredStatue_Name_Objective">statua animata</string>
     <string name="Artifact_Limit">Puoi indossare solo 2 anelli alla volta.</string>
@@ -225,6 +227,7 @@
     <string name="BlindnessBuff_Name">Accecato </string>
     <string name="BodyArmorBuff_Name">Armatura Corporea</string>
     <string name="BodyArmorSpell_Name">Armatura Corporea</string>
+    <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Quando lanciato ai nemici questo sottile, curvo, missile di legno tornerà nelle mani del lanciatore. </string>
     <string name="Boomerang_Name">bumerang</string>
     <string name="Bounce_Txt">%s del rimbalzo</string>
@@ -249,6 +252,7 @@
     <string name="CagedKobold_Name">coboldo in gabbia</string>
     <string name="CagedKobold_Name_Objective">coboldo in gabbia</string>
     <string name="CagedKobold_Quest_End">Oh, grazie, grazie mille! Come hai fatto a trovare la chiave? Tu... hai distrutto l\'arma?! È incredibile! Sai una cosa, ho detto che ti avrei aiutato, e penso di sapere il modo migliore per farlo. Starò con te per un po\'. * Il Kobold imprigionato si è trasformato in una candela</string>
+    <string name="CandleOfMindVision_Info">Sembra una candela normale, niente che ti aspetteresti di trovare in una pericolosa sottoterra. Stranamente è piuttosto calda al tatto, nonostante non sia ancora stata accesa.</string>
     <string name="Candy_Info">Questa caramella sembra davvero bella e il suo odore è altrettanto buono. Vuoi davvero lasciarla a qualcun\'altro?</string>
     <string name="Candy_Name">caramella</string>
     <string name="Candy_Warning_2">Ora hai davvero esagerato. La tua pancia fa male perché hai mangiato troppe caramelle.</string>
@@ -271,6 +275,7 @@
     <string name="Challenges_Names_4">Swarm intelligence</string>
     <string name="Challenges_Names_5">nel buio</string>
     <string name="Challenges_Names_6">Rune Proibite</string>
+    <string name="Challenges_Names_7">Pacifismo</string>
     <string name="ChampionOfAirBuff_Info">Questa caratteristica dona alla creatura l\'essenza dei venti, migliorando la sua agilità e abilità in combattimento. Il Campione dell\'Aria diventa un avversario formidabile, capace di scatenare attacchi rapidi e devastanti che possono cambiare rapidamente il corso della battaglia.</string>
     <string name="ChampionOfEarthBuff_Info">Il Campione della Terra incarna una forza inflessibile, poiché questo attributo aumenta la resistenza ai danni della creatura e incrementa la sua vitalità massima. Questa trasformazione lo rende un avversario temibile nelle profondità insidiose, capace di ignorare facilmente gli attacchi e di resistere a lunghe battaglie con fermezza incrollabile.</string>
     <string name="ChampionOfFireBuff_Info">Infuso con la furia delle fiamme, questo attributo potenzia la ferocia e le capacità di combattimento della creatura. Il Campione del Fuoco emerge come un avversario temibile, scatenando attacchi devastanti che possono avvolgere i nemici in fiamme roventi, instillando terrore in tutti coloro che osano opporsi ad esso.</string>
@@ -300,6 +305,7 @@
     <string name="ChaosStaff_Name">Vega del caos</string>
     <string name="ChaosSword_Info">La lama di questa spada è fatta di caos puro e vibra moderatamente a volte. Un grosso potere è celato dentro l\'arma, che può tagliare a metà praticamente ogni cosa. d\'altronde, ci vuole una grande abilità, per tener testa alla potente forza dell\'arma.</string>
     <string name="ChaosSword_Name">Spada del caos</string>
+    <string name="CharAction_Charm">affascina</string>
     <string name="CharAction_Order">ordinare</string>
     <string name="CharAction_Push">spingere</string>
     <string name="CharAction_Scare">spaventare</string>
@@ -331,6 +337,7 @@
     <string name="Char_StaPoisoned">avvelenato</string>
     <string name="Char_StaRooted">radicato</string>
     <string name="Char_StaSlowed">rallentato</string>
+    <string name="Char_StaStunned">stordito</string>
     <string name="Char_StaVision">visione</string>
     <string name="Char_YouMissed">%1$s %2$s il tuo attacco</string>
     <string name="ChargrilledMeat_Info">Sembra una bistecca decente.</string>
@@ -548,6 +555,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Eye_Kill">%s\'s raggio mortale ti ha ucciso...</string>
     <string name="Eye_Name">malocchio </string>
     <string name="Eye_Name_Objective">Malocchio</string>
+    <string name="Facilitations_Descriptions_0">I mutanti sono sempre stati trattati con disprezzo e paura, ma l\'assenza della fame ti darà di nuovo superiorità, questa volta nel conquistare le profondità del sotterraneo.</string>
     <string name="Facilitations_Descriptions_1">Non è ancora noto chi fossero i tuoi genitori, ma la rigenerazione naturale simile a quella del troll ti aiuterà a rimarginare tutte le ferite di battaglia.</string>
     <string name="Facilitations_Descriptions_3">Stringendo la cintura di pelle di orco, tramandata ad ogni nuova generazione, fai un passo verso l\'ignoto che ti attende.</string>
     <string name="Fadeleaf_Desc">Toccare una Svanifoglia farà teletrasportare qualsiasi creatura in un posto a caso sul livello attuale.</string>
@@ -858,6 +866,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="JarOfSouls_Desc">Gli occhi luminosi di un teschio raffigurato su questa vecchia giara, così come la strana energia che emette, ti fanno sentire a disagio.</string>
     <string name="JarOfSouls_Name">vaso delle anime</string>
     <string name="JarOfSouls_Name_Objective">vaso delle anime</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Name">giavellotto</string>
     <string name="Journal_Alchemy">Calderone alchemico</string>
     <string name="Journal_Azuterron">Sconosciuto</string>
@@ -1044,6 +1053,7 @@ Potrebbe bruciare?</string>
     <string name="Mimic_Name">replicante</string>
     <string name="Mimic_Name_Objective">replicante</string>
     <string name="MirrorImage_Desc">Questa illusione ha una stretta somiglianza con te, ma è più pallida e si deforma un po\'.</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">Immagine Riflessa </string>
     <string name="MirrorImage_Name_Objective">Immagine Riflessa </string>
     <string name="MissileWeapon_Info1">
@@ -1160,7 +1170,7 @@ Potrebbe bruciare?</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">Achooo!\n Che maledizione questa dannata peste! Si sta diffondendo per la città come un incendio, infettando le ossa della popolazione ignara! BAH! Pensate che quelle patetiche guardie abbiano una sola possibilità contro questo micidiale morbo? Tu, là! Esemplare forte e sano. Forse puoi aiutarmi. Quegli sporchi _ratti_ delle fogne… li portano con sé, ve lo dico io, i semi della pestilenza nei loro corpi putridi! Portatemi _cinque_ di quelle creature miserabili, _morti_, ovviamente! Le loro pelli saranno preziosissime per la mia ricerca. Farò per voi una meravigliosa armatura, una barriera protettiva contro la stessa peste da cui proviene!</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">_Dieci lumache_, dieci sussurri dall\'abisso! La loro bava sarà analizzata, la loro essenza scrutinata. I segreti che custodiscono sono a portata di mano.</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Nani! Quegli ostinati abitanti sotterranei, ossessionati da gemme e oro. Ma sono i _Stregoni Nani_ che io bramo... la loro magia distorta, alimentata dalle stesse profondità in cui risiedono. Cinque, ho bisogno di cinque di quelle anime avvizzite! I loro corpi contengono la chiave per comprendere un certo... fenomeno. Qualcosa riguardo al canalizzare energie arcane attraverso la terra stessa. Credo di essere vicino alla svolta, ma ho bisogno della loro essenza, la loro magia corrotta! *Tossisce violentemente nel suo fazzoletto, una macchia scura si diffonde sul delicato tessuto*</string>
-    <string name="PlagueDoctorQuest_5_1_Epilogue">*Lui osserva le due _succhiatrici_, con un sorriso beato che si diffonde sotto la sua maschera.* Splendido! Magnifico! Questo sbloccherà così tante... possibilità! *Si rivolge a te, con la voce densa di gratitudine... e qualcos\'altro.* I vostri sforzi... non saranno dimenticati. Vi sono debitore della mia più profonda gratitudine. *Il suo sguardo indugia sulla _succhiatrice_ per un momento troppo lungo, prima di ritirarsi nel suo laboratorio, biascicando qualcosa a proposito di svelare i segreti della seduzione.*</string>
+    <string name="PlagueDoctorQuest_5_1_Epilogue">*Lui osserva fissamente le due _succhiatrici_, con un sorriso beato che si diffonde sotto la sua maschera.* Splendido! Magnifico! Questo sbloccherà così tante... possibilità! *Si volta verso di te, la sua voce densa di gratitudine... e qualcos\'altro.* I tuoi sforzi... non saranno dimenticati. Sono debitore della mia più profonda gratitudine. *Il suo sguardo indugia sulle _succhiatrici_ per un momento troppo prolungato, prima di ritirarsi nel suo laboratorio, mormorando qualcosa riguardo lo sblocco dei segreti della seduzione.*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*La sua mente vaga mentre parla, la sua voce si fa sempre più debole, appena un sussurro.* Portami due _succubi_… vive. Il loro… potere… è affascinante.</string>
     <string name="PlagueDoctorQuest_AllDone">*Lui ride secco e con un sibilo.* Le tue azioni hanno sbloccato segreti oltre ogni misura! La conoscenza ottenuta... pulsa dentro di me, una sinfonia della scoperta. Ma la conoscenza,\&quot; aggiunge, abbassando la voce a un sussurro cospiratorio, \&quot;la conoscenza è potere. E il potere... ah... che è un elisirro più inebriante.\&quot; Ti fissa intensamente per un momento, i suoi occhi di ametista bruciano con un\'intensità febbrile. \&quot;Forse,\&quot; mormora, \&quot;le nostre strade si incroceranno ancora. Perché ci sono ancora molti... misteri... da svelare.</string>
     <string name="PlagueDoctor_Name">Dottore della peste</string>
@@ -1417,6 +1427,7 @@ Potrebbe bruciare?</string>
     <string name="SantaHat_Name">Cappello da Babbo Natale</string>
     <string name="ScaleArmor_Desc">Le scaglie metalliche cucite su una veste di pelle creano un\'armatura flessibile ma protettiva.</string>
     <string name="ScaleArmor_Name">armatura a scaglie</string>
+    <string name="ScarecrowNPC_Desc">Non c\'è dubbio... questo spaventapasseri sta osservando ogni tuo movimento. I suoi occhi rossi luminosi ti trapassano, ma sorprendentemente non ti senti minacciato da esso.</string>
     <string name="ScarecrowNPC_Name_Objective">spaventapasseri</string>
     <string name="ScarecrowNPC_Quest_Start_Male">Perché ciao ragazzone, come stai?\nHo qualcosa di emozionante per te!\n\nOh quanto sarei grato,\nSe andassi a raccogliere un po\' di caramelle per me!\n\n</string>
     <string name="Scorpio_Desc">Queste creature demoniche simili ad aracnidi evitano i combattimenti ravvicinati ad ogni costo, lanciando punte paralizzanti da lunghe distanze.</string>
@@ -1559,6 +1570,7 @@ Potrebbe bruciare?</string>
     <string name="Skeleton_Killed">sei stato ucciso dall\'esplosione di ossa...</string>
     <string name="Skeleton_Name">Scheletro</string>
     <string name="Skeleton_Name_Objective">Scheletro</string>
+    <string name="SlowBuff_Info">Il senso di lentezza rende qualcuno più lento del solito.</string>
     <string name="SlowBuff_Name">Rallentato</string>
     <string name="Slow_Name_0">del Freddo %s</string>
     <string name="Slow_Name_1">del Freddo %s</string>
@@ -1739,6 +1751,7 @@ Potrebbe bruciare?</string>
     <string name="TownsfolkSilentNPC_Name_Objective">paesano</string>
     <string name="ToxicGas_Info">Una nube verdastra di gas tossico sta vorticando qua.</string>
     <string name="ToxicGas_Info1">Sei morto a causa delle esalazioni di gas tossico... </string>
+    <string name="ToxicGland_Info">Una ghiandola tossica raccolta da un nemico sconfitto. Queste ghiandole sono piene di potenti tossine e possono essere utilizzate in processi alchemici.</string>
     <string name="ToxicGland_Name">Ghiandola Tossica</string>
     <string name="TreacherousSpirit_Desc">Questa mostruosa creatura sembra una nuvola vivente di oscurità. I suoi occhi senza vita ti fissano, pulsando con ognuno dei tuoi movimenti. </string>
     <string name="TreacherousSpirit_Gender">masculine</string>
@@ -1998,6 +2011,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndLibrary_Items_Btn">Items</string>
     <string name="WndLibrary_Levels_Btn">Dungeon</string>
     <string name="WndLibrary_Mobs_Btn">Mostri</string>
+    <string name="WndLocalModInstall_title">Installa mod dalla directory locale</string>
     <string name="WndModSelect_AreYouSure">Eliminare mod: %s, sei sicuro?</string>
     <string name="WndModSelect_ReallyDelete">Vuoi davvero eliminare?</string>
     <string name="WndMovieTheatre_Title">Cinema</string>
@@ -2144,6 +2158,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="YogsEye_Name">l\'occhio di yog</string>
     <string name="YogsEye_Name_Objective">l\'occhio di yog</string>
     <string name="YogsHeart_Desc">Per secoli la gente ha creduto che solo una creatura davvero senza cuore sono cappable di atti di pura malvagità. Eppure eccolo qui, enorme cuore pulsante di un vecchio Dio stesso.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">il cuore di yog</string>
     <string name="YogsHeart_Name_Objective">il cuore di yog</string>
     <string name="YogsTeeth_Desc">enorme bocca di un vecchio Dio pieno di denti affilati come rasoi. Una manifestazione molto montaggio della sua voglia di distruggere e divorare tutti gli esseri.</string>
@@ -2271,6 +2286,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_stock_name">Scorta</string>
     <string name="town_deco_stone_wall_broken_desc">Vecchio muro di pietra, in cattive condizioni</string>
     <string name="town_deco_stone_wall_name">Muro di pietra</string>
+    <string name="town_deco_stones_desc">Solo un mucchio di pietre.</string>
     <string name="town_deco_stool_broken_desc">Questo sgabello ha visto giorni migliori.</string>
     <string name="town_deco_stool_broken_name">Sgabello rotto</string>
     <string name="town_deco_stool_sturdy_desc">Uno sgabello regolare realizzato in legno resistente.</string>
@@ -2304,6 +2320,24 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

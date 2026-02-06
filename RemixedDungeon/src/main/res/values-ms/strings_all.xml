@@ -173,6 +173,7 @@
     <string name="Bandit_Name">perompak gila</string>
     <string name="Bandit_Name_Objective">perompak gila</string>
     <string name="BardNPC_Gender">masculine</string>
+    <string name="BardNPC_Name_Objective">biduan</string>
     <string name="BarkskinBuff_Name">Kulit kayu</string>
     <string name="Barrel_Desc">Nampak seperti tong kayu biasa. Tetapi bila anda lihat lebih dekat anda terbau minyak. Tong ini agak ringan, anda boleh menolaknya.</string>
     <string name="Barrel_Name">tong</string>
@@ -980,6 +981,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">TARIK</string>
     <string name="Larva_Desc">Larva Dewa Purba</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">larva dewa</string>
     <string name="Larva_Name_Objective">larva dewa</string>
     <string name="LastLevel_TileDescStatue">Tiang ini diperbuat dari tengkorak manusia. Mengerikan tetapi hebat.</string>
@@ -1057,6 +1059,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="LibraryBook_Description">Buku ini sangat besar. Ia mengandungi semua jenis pengetahuan, yang pengembara temui di dalam kurungan bawah tanah.</string>
     <string name="LibraryBook_Name">Buku pustaka</string>
     <string name="Lich_Desc">Pembangkit mayat telah menemui ajalnya di dalam Necropolis, dan tenaga kejahatan tempat ini telah masuk ke dalam jasadnya, dia menjelma sebagai Lich. Iaitu ahli sihir hidup semula, patung hidup tanpa kemahuan, yang dikawal oleh kuasa jahat.</string>
+    <string name="Lich_DieInfo">Saya tidak pernah menyukai Ahli Sihir Mayat ini. Jadi sekarang waktunya untuk kembali ke tingkat 7 dan mencari jalan lain ke pengembaraan baru.</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Name">Bercahaya</string>
@@ -1255,6 +1258,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PlagueDoctorNPC_Quest_Start_Male">Hmph! Memang tak masuk akal?! Penduduk di sini masih tidak tahu betapa bahaya pembentung di bawah pekan ini! Pengawal dan pengembara bolehlah lindungi pekan dari apa-saja yang mendatang. Tapi! Tiada senjata dapat menghentikan sebaran penyakit. Oleh itu, saya perlukan bukti, bolehkah awak bantu saya? Bawa balik %d keping kulit tikus, untuk saya jalankan beberapa ujian tambahan.\n</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">Hebat sekali! _Rumput matahari_, esensinya yang keemasan berdenyut dengan vitaliti. Saya sudah banyak belajar dari struktur halusnya. *Dia memberimu _Posyen Kesihatan_, cecair di dalamnya berkilauan dengan cahaya keemasan yang samar.* Minumlah ini apabila dunia terasa berat menghimpitmu, dan rasakan kehangatan matahari mengembalikan semangatmu.</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Ini bukan haiwan biasa! Ia adalah karya jasad yang menunjukkan kuasa nekromansi! Tangkap satu, dalam keadaan hidup dan tidak tercedera! _Kesatria Maut_... itulah kuncinya!</string>
+    <string name="PlagueDoctorQuest_4_1_Epilogue">Hebat! _Ahli Sihir Kerdil_, esensi mereka kini milikku untuk diteroka! Sihir yang terpelintir dan tercemar… benar-benar menakjubkan. *Dia mengangkat sebuah botol kecil yang berisi cecair merah jambu yang likat.* Ini, adalah untukmu: _Ramuan Kekuatan_! Seraplah kuasanya, dan engkau akan merasakan kekuatan gunung-ganang mengalir dalam urat darahmu! Ingat, pengetahuan yang diperoleh dari pengorbanan ini akhirnya akan melayani tujuan yang lebih tinggi… mungkin bahkan menyelamatkan kita semua dari nasib yang lebih buruk dari kematian.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">Lima _Ahli Sihir Kurcaci_, tubuh mereka masih berdenyut dengan sisa sihir gelap! Bawakan mereka kepadaku, dan aku akan memberimu ramuan yang sangat hebat – _Ramuan Kekuatan_ yang akan mengisi dirimu dengan kekuatan sepuluh lelaki!</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Fikirannya melayang-layang semasa bercakap, suaranya semakin perlahan, hampir berbisik.* Bawa saya dua _succubi_… hidup-hidup. Kuasa mereka… mempesona.</string>
     <string name="PlagueDoctor_Desc">Sibongkok ini sepenuh diliputi dengan pakaian berkulit. Dia berbau ubat dan juga... bawang putih?</string>
@@ -1425,6 +1429,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ResultDescriptions_Hunger">Kebuluran sehingga mati pada aras %d</string>
     <string name="ResultDescriptions_Immured">Terkurung dalam batu pada aras %d</string>
     <string name="ResultDescriptions_Mob">Dibunuh oleh %1$s pada aras %2$d</string>
+    <string name="ResultDescriptions_Necromancy">Keletihan tenaga hayat semasa cuba menghidupkan mayat di peringkat %d</string>
     <string name="ResultDescriptions_Necrotism">Mati disebabkan Necrotisma pada aras %d</string>
     <string name="ResultDescriptions_Ooze">Dibunuh oleh lelehan kaustik pada aras %d</string>
     <string name="ResultDescriptions_Poison">Mati disebabkan keracunan pada aras %d</string>
@@ -2054,6 +2059,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndFortuneTeller_No_Item">Hati-hati, anda tidak perlu belanja perkara yang sia-sia? Tiada item yang tidak dikenalpasti dalam inventori anda.</string>
     <string name="WndFortuneTeller_Title">Penilik-nasib</string>
     <string name="WndGame_Challenges">Cabaran</string>
+    <string name="WndGame_Customizations">Penyesuaian</string>
     <string name="WndGame_Exit">Keluar dari Remixed Dungeon</string>
     <string name="WndGame_Load">Muat</string>
     <string name="WndGame_Ranking">Kedudukan</string>
@@ -2113,6 +2119,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndLibrary_Mobs_Btn">Raksaksa</string>
     <string name="WndLocalModInstall_pick">Pilih direktori mod</string>
     <string name="WndLocalModInstall_title">Pasang mod dari direktori setempat</string>
+    <string name="WndModsDisclaimer_manage">Urus senarai mod</string>
     <string name="WndModsDisclaimer_title">Mod</string>
     <string name="WndMovieTheatre_Bye">Sila datang lagi, kami sentiasa menunggu kehadiran anda!</string>
     <string name="WndMovieTheatre_Instruction">Salam dan selamat datang ke pawagam kami! Kami menyediakan perkhidmatan istimewa, di mana anda boleh menonton filem istimewa yang dipanggil iklan secara percuma. Dan jika anda menontonnya sehingga habis, anda akan diberi ganjaran sebanyak %d syiling emas!</string>
@@ -2319,6 +2326,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_broken_wall_desc">Kayu balak pada bahagian dinding ini telah reput dan tidak memberi manfaat lagi.</string>
     <string name="town_deco_broken_wall_name">Dinding rosak</string>
     <string name="town_deco_brown_carpet_name">Permaidani</string>
+    <string name="town_deco_cabinet_desc">Sebuah almari besar dengan banyak pintu dan rak.</string>
     <string name="town_deco_canvas_desc">Helaian kain tebal yang tergantung di atas dinding.</string>
     <string name="town_deco_canvas_name">Kanvas</string>
     <string name="town_deco_carpet_desc">Permaidani merah yang mewah khusus untuk tetamu istimewa.</string>
@@ -2330,6 +2338,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_chimney_name">Cerobong</string>
     <string name="town_deco_cinema_sign_desc">Rupanya ada wayang berada di dalam bangunan tersebut.</string>
     <string name="town_deco_cinema_sign_name">Tanda wayang</string>
+    <string name="town_deco_clock_desc">Anak panah pada jam ini telah lama terbeku dalam satu kedudukan.</string>
     <string name="town_deco_common_bed_desc">Katil biasa.</string>
     <string name="town_deco_common_bed_name">Katil</string>
     <string name="town_deco_common_door_desc">Pengembara yang sopan dan bertingkah laku baik tidak sepatutnya masuk rumah orang tanpa kebenaran.</string>
@@ -2487,6 +2496,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_weaponboard_desc">Ada senjata digantung di tengah-tengah papan.</string>
     <string name="town_deco_weaponboard_name">Senjata</string>
     <string name="town_deco_weaponrack_desc">Di atas rak ini terdapat senjata yang jelas terlalu mahal untuk anda.</string>
+    <string name="town_deco_weaponrack_name">Rak Senjata</string>
     <string name="town_deco_window_desc">Tingkap kaca biasa, tiada apa-apa yang istimewa.</string>
     <string name="town_deco_window_name">Tingkap</string>
     <string name="town_deco_wood_wall_desc">Dinding balak yang nampak tegar.</string>
@@ -2503,6 +2513,16 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
