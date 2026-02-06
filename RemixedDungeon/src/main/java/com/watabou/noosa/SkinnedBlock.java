@@ -35,8 +35,8 @@ public class SkinnedBlock extends Image {
 	@Override
 	protected void updateFrame() {
 		
-		float tw = 1f / texture.width;
-		float th = 1f / texture.height;
+		float tw = 1f / texture.getWidth();
+		float th = 1f / texture.getHeight();
 		
 		float u0 = wrapTexCoord(offsetX * tw);
 		float v0 = wrapTexCoord(offsetY * th);

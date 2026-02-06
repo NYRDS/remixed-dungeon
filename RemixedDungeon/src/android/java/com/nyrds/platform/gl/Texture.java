@@ -29,8 +29,8 @@ public class Texture {
     private int wrapS = CLAMP;
     private int wrapT = CLAMP;
     private int[] pixels;
-    public int width;
-    public int height;
+    protected int width;
+    protected int height;
     private byte[] bytePixels;
     private boolean dataDirty = false;
 
@@ -189,5 +189,21 @@ public class Texture {
      */
     public BitmapData getBitmapData() {
         return this.bitmapData;
+    }
+
+    /**
+     * Get the width of this texture
+     * @return The width of the texture
+     */
+    public int getWidth() {
+        return this.width;
+    }
+
+    /**
+     * Get the height of this texture
+     * @return The height of the texture
+     */
+    public int getHeight() {
+        return this.height;
     }
 }

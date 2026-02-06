@@ -31,7 +31,7 @@ public class ImageTab extends Tab {
         icon.setY(y + (height - icon.height) / 2 - (selected ? 0 : 1));
         if (!selected && icon.getY() < y + CUT) {
             RectF frame = icon.frame();
-            frame.top += (y + CUT - icon.getY()) / icon.texture.height;
+            frame.top += (y + CUT - icon.getY()) / icon.texture.getHeight();
             icon.frame( frame );
             icon.setY(y + CUT);
         }

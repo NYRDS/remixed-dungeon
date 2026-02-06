@@ -33,10 +33,10 @@ public class Archs extends Component {
 	@Override
     public void layout() {
 		arcsBg.size( width, height );
-		arcsBg.offset( arcsBg.texture.width / 4 - (width % arcsBg.texture.width) / 2, 0 );
-		
+		arcsBg.offset( arcsBg.texture.getWidth() / 4 - (width % arcsBg.texture.getWidth()) / 2, 0 );
+
 		arcsFg.size( width, height );
-		arcsFg.offset( arcsFg.texture.width / 4 - (width % arcsFg.texture.width) / 2, 0 );
+		arcsFg.offset( arcsFg.texture.getWidth() / 4 - (width % arcsFg.texture.getWidth()) / 2, 0 );
 	}
 	
 	@Override

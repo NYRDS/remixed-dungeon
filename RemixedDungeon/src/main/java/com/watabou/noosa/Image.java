@@ -82,8 +82,8 @@ public class Image extends Visual implements IPlaceable {
             throw new ModError("frame out of bounds");
         }
 
-        setWidth(frame.width() * texture.width);
-        setHeight(frame.height() * texture.height);
+        setWidth(frame.width() * texture.getWidth());
+        setHeight(frame.height() * texture.getHeight());
 
         updateFrame();
         updateVertices();

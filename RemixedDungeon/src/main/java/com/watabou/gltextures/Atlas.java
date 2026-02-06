@@ -34,18 +34,18 @@ public class Atlas {
 	}
 	
 	public void grid( int width ) {
-		grid( width, tx.height );
+		grid( width, tx.getHeight() );
 	}
-	
+
 	public void grid( int width, int height ) {
-		grid( 0, 0, width, height, tx.width / width );
+		grid( 0, 0, width, height, tx.getWidth() / width );
 	}
-	
+
 	public void grid( int left, int top, int width, int height, int cols ) {
-		uvLeft	= (float)left	/ tx.width;
-		uvTop	= (float)top	/ tx.height;
-		uvWidth	= (float)width	/ tx.width;
-		uvHeight= (float)height	/ tx.height;
+		uvLeft	= (float)left	/ tx.getWidth();
+		uvTop	= (float)top	/ tx.getHeight();
+		uvWidth	= (float)width	/ tx.getWidth();
+		uvHeight= (float)height	/ tx.getHeight();
 		this.cols = cols;
 	}
 	
@@ -62,18 +62,18 @@ public class Atlas {
 	}
 	
 	public float width( RectF rect ) {
-		return rect.width() * tx.width;
+		return rect.width() * tx.getWidth();
 	}
-	
+
 	public float height( RectF rect ) {
-		return rect.height() * tx.height;
+		return rect.height() * tx.getHeight();
 	}
-	
+
 	public static RectF uvRect( SmartTexture tx, int left, int top, int right, int bottom ) {
 		return new RectF(
-			(float)left		/ tx.width,
-			(float)top		/ tx.height,
-			(float)right	/ tx.width,
-			(float)bottom	/ tx.height );
+			(float)left		/ tx.getWidth(),
+			(float)top		/ tx.getHeight(),
+			(float)right	/ tx.getWidth(),
+			(float)bottom	/ tx.getHeight() );
 	}
 }

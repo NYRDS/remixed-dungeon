@@ -153,7 +153,7 @@ public class MobSpriteDef extends MobSprite {
                 initialState.add(CharSprite.State.valueOf(state.toUpperCase(Locale.ROOT)));
             }
 
-            framesInRow = texture.width / width;
+            framesInRow = texture.getWidth() / width;
 
             idle = readAnimation(json, "idle", film);
             run = readAnimation(json, "run", film);

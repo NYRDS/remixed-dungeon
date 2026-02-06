@@ -241,8 +241,8 @@ public class FactorySpriteGenerator extends RemixedDungeon {
         if (textureBitmap != null) {
             // Calculate the actual pixel coordinates in the texture
             com.nyrds.platform.compatibility.RectF frame = image.frame();
-            int srcWidth = smartTexture.width;
-            int srcHeight = smartTexture.height;
+            int srcWidth = smartTexture.getWidth();
+            int srcHeight = smartTexture.getHeight();
 
             int x = (int) (frame.left * srcWidth);
             int y = (int) (frame.top * srcHeight);
@@ -278,8 +278,8 @@ public class FactorySpriteGenerator extends RemixedDungeon {
 
         // Calculate the actual pixel coordinates in the texture
         com.nyrds.platform.compatibility.RectF frame = image.frame();
-        int srcWidth = smartTexture.width;
-        int srcHeight = smartTexture.height;
+        int srcWidth = smartTexture.getWidth();
+        int srcHeight = smartTexture.getHeight();
 
         int x = (int) (frame.left * srcWidth);
         int y = (int) (frame.top * srcHeight);
