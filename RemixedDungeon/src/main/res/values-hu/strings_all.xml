@@ -615,6 +615,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="Eye_Kill">%s halálsugara megölt téged...</string>
     <string name="Eye_Name">gonosz szem</string>
     <string name="Eye_Name_Objective">gonosz szem</string>
+    <string name="Facilitations_Descriptions_1">Még mindig nem tudni, hogy kik voltak a szüleid, de a természetes troll-szerű regeneráció segít majd begyógyítani az összes közelgő csata sebeit.</string>
     <string name="Fadeleaf_Desc">Egy Fakultlevélhez érve elteleportál bármely lényt egy véletlen helyre az adott szinten.</string>
     <string name="Fadeleaf_Name">Fakultlevél</string>
     <string name="FetidRat_Desc">Ez az erszényes patkány sokkal nagyobb mint a normális példányok. Valami féle felhő veszi körül. </string>
@@ -2496,6 +2497,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_stones_desc">Csak egy rakás kő.</string>
     <string name="town_deco_stones_name">Kavicsok</string>
     <string name="town_deco_stool_sturdy_desc">Egy átlagos bárszék ellenálló fából készült.</string>
+    <string name="town_deco_stool_sturdy_name">Taburett</string>
     <string name="town_deco_stove_desc">Ez a tűzhely kellemes meleget áraszt.</string>
     <string name="town_deco_stove_name">Kő kályha</string>
     <string name="town_deco_tile_desc">Ezek a csempék eléggé lehasználódtak az idővel.</string>
@@ -2533,6 +2535,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
