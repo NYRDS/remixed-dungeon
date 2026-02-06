@@ -1749,6 +1749,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SeedPouch_Info">Kantong beludru kecil ini memungkinkan Anda menyimpan sejumlah biji di dalamnya. Sangat mudah.</string>
     <string name="SeedPouch_Name">kantong benih</string>
     <string name="Senior_Desc">Biksu ini adalah fanatik, yang membaktikan diri mereka untuk menjaga rahasia kota mereka dari semua makhluk asing. Mereka tidak menggunakan pengaman atau senjata, hanya mengandalkan seni dari pertempuran tangan. Biksu ini telah menguasai seni melumpuhkan musuhnya.</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">biksu senior</string>
     <string name="Senior_Name_Objective">biksu senior</string>
     <string name="ServantNPC_Desc">Seorang pelayan penginapan yang sangat sibuk.</string>
@@ -2763,6 +2764,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

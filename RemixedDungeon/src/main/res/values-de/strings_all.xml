@@ -1291,6 +1291,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="NecromancerRobe_PetLimitReached">Nekromantie: Beschwörungslimit erreicht (Momentanes Maximum: %d)!</string>
     <string name="Necromancer_ACSpecial">NEKROMANTIE</string>
     <string name="Necromancy_BecameALich">Du bist zu einem Lich geworden! Deine Kraft wächst und deine Seelenkapazität hat sich verdoppelt! Aber du hast %1$d Stärkepunkt(e) verloren.</string>
+    <string name="Necromancy_Death">Du hast all deine Lebenskraft verbraucht, während du mit der Totenbeschwörung geübt hast.</string>
     <string name="Necromancy_NotEnoughSouls">Du hast nicht genug Seelen, um einen \&quot;%1$s\&quot; Zauberspruch freizusetzen.</string>
     <string name="Necromancy_ReincarnationName">Reinkarnation</string>
     <string name="Necromancy_ReincarnationTriggered">Deine Kräfte trotzen dem Tod! Aber du hast alle gesammelten Seelen und Besitztümer verloren.</string>
@@ -2706,6 +2707,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
