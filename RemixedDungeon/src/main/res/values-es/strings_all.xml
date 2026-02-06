@@ -832,6 +832,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Esta flecha está cubierta con poción de curación.</string>
     <string name="HealthArrow_Name">Flecha de curación</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">La punta de este dardo está cubierta con poción de curación.</string>
     <string name="HealthDart_Name">Dardo de curación</string>
     <string name="Heap_Mimic">¡Es un mímico!</string>
@@ -2814,6 +2815,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
