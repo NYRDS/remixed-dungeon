@@ -185,6 +185,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Badges_Yog_Slain">Yog-Dzewa öldürüldü</string>
     <string name="Bag_ACOpen">AÇ</string>
     <string name="Bandit_Desc">Zindanın derin seviyeleri her zaman her türden suçlular için bir saklanma noktası olmuştur. Bazıları gün ışığından uzaktaki uzun sürelerde berrak bir zihinle düşünmeyi başaramamıştır. Uzun süre önce, bu çılgın hırsız ve haydutlar kim olduğunu ve niye çaldıklarını unuttular. Bu haydut belli ki hançerini bir şey ile kaplamış!</string>
+    <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">Çılgın Haydut</string>
     <string name="Bandit_Name_Objective">çılgın haydut</string>
     <string name="BardNPC_Desc">Kasabalı ozan udunu çalıyor.</string>
@@ -1350,6 +1351,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="NecromancerRobe_PetLimitReached">Nekromansi : Çağırma Limiti Doldu (Şuanki Sınır : %d)!</string>
     <string name="Necromancer_ACSpecial">kara büyü</string>
     <string name="Necromancy_BecameALich">Kara Büyücü oldun! Güçlerin gelişti ve maksimum ruh kapasiten ikiye katlandı! Ancak %1$d güç kaybettin</string>
+    <string name="Necromancy_Death">Nekromansi pratiği yaparken tüm yaşam enerjinizi tükettiniz.</string>
     <string name="Necromancy_NotEnoughSouls">\&quot;%1$s\&quot; büyüsünü yapmak için yeterli manan yok.</string>
     <string name="Necromancy_ReincarnationName">Ruh göçü</string>
     <string name="Necromancy_ReincarnationTriggered">Güçlerin, bizzat ölümü reddediyor. Ancak, ne yazık ki, topladığın tüm eşyaların ve ruhların yok oldu</string>
@@ -2392,6 +2394,7 @@ remix.30.1\n
     <string name="WndModInstall_Version">versiyon</string>
     <string name="WndModSelect_AreYouSure">Mod siliniyor: %s, emin misin?</string>
     <string name="WndModSelect_ReallyDelete">Gerçekten silecek misin?</string>
+    <string name="WndModsDisclaimer_manage">Mod listesini yönet</string>
     <string name="WndModsDisclaimer_title">Modlar</string>
     <string name="WndMovieTheatre_Bye">Sizi gördüğümüze sevindik, yine bekleriz!</string>
     <string name="WndMovieTheatre_Instruction">Merhaba ve sinemamıza hoş geldiniz! Özel bir hizmet sunuyoruz: ücretsiz olarak \&quot;reklam\&quot; adlı özel bir filmi izleyebilirsiniz. Eğer tamamını izlerseniz, %d altın paralarla ödüllendirileceksiniz!</string>
@@ -2835,6 +2838,9 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
 
 
 
