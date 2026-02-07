@@ -302,6 +302,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Caves_TileHighGrass">Fluoreszkáló gomba.</string>
     <string name="Caves_TileWater">Fagyasztóan hideg víz.</string>
     <string name="Challenges_Descriptions_5">Az első dolog, ami a gonoszhoz járult, egy sűrű és áthatolhatatlan köd volt, amely szinte lehetetlenné teszi az alvilág végtelen folyosóinak világos tájékozódását.</string>
+    <string name="Challenges_Descriptions_7">Megszoktad azt a tényt, hogy a fegyverzet birtoklása és használata erkölcsileg nem helyes, de mi más védelmezhet a lent barangoló lényektől?</string>
     <string name="Challenges_Descriptions_9">A Pest Orvos legújabb \'gyógyírja\' kitörölte a térbeli emlékezeted. Nem emlékszel meg semmire azon kívül, ami közvetlen látótégeden kívül van.</string>
     <string name="Challenges_Names_0">Diétázom</string>
     <string name="Challenges_Names_1">A Hit az én páncélom</string>
@@ -2537,6 +2538,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
