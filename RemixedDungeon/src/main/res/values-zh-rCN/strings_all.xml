@@ -552,6 +552,7 @@
     <string name="DarkVeilBuff_Info">每当受到伤害时，围绕着拥有者的黑暗面纱会召唤一个灵体。</string>
     <string name="DarkVeilBuff_Name">暗黑面纱</string>
     <string name="Darkness_Info">就像一片片永恒的黑暗飘浮在空中</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">挥动手腕，翶击长空，伤敌千里。</string>
     <string name="Dart_Name">飞镖</string>
     <string name="DashSpell_Info">冲向指定方向，与敌人相撞，造成伤害并残废敌人。</string>
@@ -2800,6 +2801,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

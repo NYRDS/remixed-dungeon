@@ -2532,6 +2532,7 @@
     <string name="town_deco_scrolls_desc">這個滿是灰塵的架子上擺滿了各種各樣的卷軸和書。</string>
     <string name="town_deco_scrolls_name">卷軸架</string>
     <string name="town_deco_shelf_desc">空的貨架</string>
+    <string name="town_deco_shelf_full_name">架子</string>
     <string name="town_deco_shelf_name">貨架</string>
     <string name="town_deco_shelving_desc">一個令人印象深刻的架子，在架子上可以找到各種飲料和小吃。</string>
     <string name="town_deco_shelving_name">貨架</string>
@@ -2611,6 +2612,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -477,6 +477,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DM300_Name_Objective">DM-300</string>
     <string name="Dagger_Info">낡은 나무 손잡이가 달린 단순한 단검입니다.</string>
     <string name="Dagger_Name">대거</string>
+    <string name="Damage_Reduction">데미지 감소</string>
     <string name="DarkGold_Info">이 금속이 이러한 이름이 붙은 이유는 사실 평범한 금과 별로 달라 보이지 않지만, 태양빛 아래에 두면 녹아버려 쓸모가 없어져 버리기 때문입니다.</string>
     <string name="DarkGold_Name">어두운 금 원석</string>
     <string name="DarkSacrifice_Hint">희생시킬 당신의 충성스러운 하수인을 선택하세요.</string>
@@ -2456,6 +2457,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
