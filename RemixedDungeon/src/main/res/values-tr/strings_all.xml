@@ -988,6 +988,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="IceGuardianCoreModule_Name">Buz Gardiyanı Çekirdeği</string>
     <string name="IceGuardianCore_Desc">Buz Gardiyanları antik koboldlar tarafından mağaralarını korumak için yaratılmıştır. Gardiyanların çekirdeğinde yeterince enerji varsa, savaşın ortasında kendisini yeniden yapılandırabilir.</string>
     <string name="IceGuardianCore_DieInfo">Burası çok soğuk, 14. seviyeye geri dönüp daha sıcak bir yer bulmaya çalışsam iyi olacak.</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name">buz gardiyanı</string>
     <string name="IceGuardianCore_Name_Objective">buz gardiyanı</string>
     <string name="IceGuardian_Desc">Buz Gardiyanları antik koboldlar tarafından mağaralarını korumak için yaratılmıştır. Gardiyanların çekirdeğinde yeterince enerji varsa, savaşın ortasında kendisini yeniden yapılandırabilir.</string>
@@ -2839,6 +2840,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

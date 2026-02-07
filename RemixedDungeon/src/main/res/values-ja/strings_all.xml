@@ -1912,6 +1912,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SkeletonKey_Name">骸骨の鍵</string>
     <string name="Skeleton_Defense">ブロックした</string>
     <string name="Skeleton_Desc">スケルトンは、不運な冒険者やダンジョンの住人の死体の骨で構成され、地下からの邪悪な魔力によって動いている。彼らは十分なダメージを受けると、骨の爆発によって崩壊する。</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">あなたは骨の爆散によって倒された...</string>
     <string name="Skeleton_Name">スケルトン</string>
     <string name="Skeleton_Name_Objective">スケルトン</string>
@@ -2894,6 +2895,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

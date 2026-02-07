@@ -1558,6 +1558,7 @@ Potrebbe bruciare?</string>
     <string name="Shopkeeper_text">Benvenuto alla filiale locale di Pixel-Mart.\nCome posso aiutarti?</string>
     <string name="Shopkeeper_title">Negozio</string>
     <string name="ShortSword_ACReforge">riforgia</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">È sicuramente un po\' corta, solo qualche pollice in più  di pugnale. </string>
     <string name="ShortSword_Name">spada corta</string>
     <string name="ShortSword_NotBoomerang">non puoi aggiornare un boomerang in questo modo </string>
@@ -2325,6 +2326,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
