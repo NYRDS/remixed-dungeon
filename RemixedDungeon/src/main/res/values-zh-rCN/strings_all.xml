@@ -1788,6 +1788,7 @@
     <string name="ServantNPC_Name">旅店服务员</string>
     <string name="ServantNPC_Name_Objective">旅店服务员</string>
     <string name="ServiceManNPC_Desc">当地企业一名中规中矩的员工。</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">本人真诚地向阁下道歉，无奈每位新的冒险者只能看最多 %d 出电影。</string>
     <string name="ServiceManNPC_Limit_Reached">抱歉，目前你已达界限，但每升一级，你便可以再次享用我们的服务！</string>
     <string name="ServiceManNPC_Name">职员</string>
@@ -2799,6 +2800,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

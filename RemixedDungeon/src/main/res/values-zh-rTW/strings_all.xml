@@ -1065,6 +1065,7 @@
     <string name="Level_TileDescInactiveTrap">這個陷阱已經被觸發過了，現在不再危險。</string>
     <string name="Level_TileDescLockedDoor">這扇門鎖上了，你需要一把配對的鑰匙來打開它。</string>
     <string name="Level_TileDescLockedExit">沈重的鐵欄桿封鎖住了向下的樓梯。</string>
+    <string name="Level_TileDescPedestal">一個小底座。</string>
     <string name="Level_TileDescSign">你從這裏看不到上面寫著什麼。</string>
     <string name="Level_TileDescStatue">有人想裝飾一下這裏，但顯然他沒能成功。</string>
     <string name="Level_TileDescTrap">踩到隱藏的壓力板會啟動這個陷阱。</string>
@@ -2610,6 +2611,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

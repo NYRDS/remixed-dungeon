@@ -211,6 +211,7 @@
     <string name="BellaNPC_Amulet_M">こんにちわ、ハンサムさん、あなた何を持ってるの？まぁ、素晴らしいお守りだわ！そしてあなたは...そこらの平民よりずっと良いわね。散歩がてら、お互いの将来について話し合わない？</string>
     <string name="BellaNPC_Angry">よくもそんなことを...！</string>
     <string name="BellaNPC_Desc">とても上品そうな女の子。彼女の外見全体が、\&quot;私は誰に対しても善良なのだ\&quot;ということを物語っている。</string>
+    <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">平民が私に話しかけないで頂戴</string>
     <string name="BellaNPC_Name">ベラ</string>
     <string name="BellaNPC_Name_Objective">ベラ</string>
@@ -2893,6 +2894,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
