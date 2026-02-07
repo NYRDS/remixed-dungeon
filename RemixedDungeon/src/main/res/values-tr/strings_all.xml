@@ -2379,6 +2379,7 @@ remix.30.1\n
     <string name="WndInfoItem_Tomb">Mezar</string>
     <string name="WndInfoItem_WontKnow">Açmadan içinde ne olduğunu bilemezsin!</string>
     <string name="WndInstallingMod_deleting_file">Siliniyor %s</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Tarifi Uygula</string>
     <string name="WndJournal_Levels">Seviyeler</string>
     <string name="WndJournal_Logbook">Kayıt defteri</string>
     <string name="WndJournal_Title">Dergi</string>
@@ -2838,6 +2839,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

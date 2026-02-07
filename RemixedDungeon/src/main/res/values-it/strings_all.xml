@@ -278,6 +278,7 @@
     <string name="Challenges_Names_7">Pacifismo</string>
     <string name="ChampionOfAirBuff_Info">Questa caratteristica dona alla creatura l\'essenza dei venti, migliorando la sua agilità e abilità in combattimento. Il Campione dell\'Aria diventa un avversario formidabile, capace di scatenare attacchi rapidi e devastanti che possono cambiare rapidamente il corso della battaglia.</string>
     <string name="ChampionOfEarthBuff_Info">Il Campione della Terra incarna una forza inflessibile, poiché questo attributo aumenta la resistenza ai danni della creatura e incrementa la sua vitalità massima. Questa trasformazione lo rende un avversario temibile nelle profondità insidiose, capace di ignorare facilmente gli attacchi e di resistere a lunghe battaglie con fermezza incrollabile.</string>
+    <string name="ChampionOfEarthBuff_Name">Campione della Terra</string>
     <string name="ChampionOfFireBuff_Info">Infuso con la furia delle fiamme, questo attributo potenzia la ferocia e le capacità di combattimento della creatura. Il Campione del Fuoco emerge come un avversario temibile, scatenando attacchi devastanti che possono avvolgere i nemici in fiamme roventi, instillando terrore in tutti coloro che osano opporsi ad esso.</string>
     <string name="ChampionOfFireBuff_Name">Campione del Fuoco</string>
     <string name="ChaosArmor_Info">Le placche rosso sangue di questa armatura sono tenute insieme con catene rosse oscure. Irradia energia del Caos quando la tocchi. </string>
@@ -593,6 +594,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Puoi sentire un\'aurea ghiacciata venire emanata dalla punta di questa freccia.</string>
     <string name="FrostArrow_Name">freccia di ghiaccio</string>
+    <string name="FrostAuraBuff_Name">Aura di Ghiaccio</string>
     <string name="FrostBuff_Info">Congelato solido, impedendo di compiere qualsiasi azione.</string>
     <string name="FrostBuff_Name">Ghiacciato</string>
     <string name="Frost_Shatter">Il freddo manda in frantumi %s!</string>
@@ -1975,6 +1977,7 @@ Potrebbe bruciare?</string>
     <string name="WndHats_Purchased">Chiaro!</string>
     <string name="WndHats_SlotTitle">Equipaggiato/a</string>
     <string name="WndHats_UnequipButton">Rimuovi</string>
+    <string name="WndHero_AttackSkill">Abilità d\'Attacco</string>
     <string name="WndHero_Buffs">Buffs</string>
     <string name="WndHero_Depth">Profondità massima</string>
     <string name="WndHero_Exp">Esperienza</string>
@@ -2322,6 +2325,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 
