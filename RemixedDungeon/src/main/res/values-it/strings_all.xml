@@ -301,6 +301,7 @@
     <string name="ChaosCrystal_Use">USA</string>
     <string name="ChaosHelmet_Info">Un elmetto rosso sangue è un simbolo essenziale di un guerriero del caos.</string>
     <string name="ChaosHelmet_Name">Elmo del Caos</string>
+    <string name="ChaosShield_name">Scudo del Caos</string>
     <string name="ChaosStaff_Info">Una bacchetta imbevuta con il Potere del Caos! Cos\'altro un mago può desiderare... O avere paura? </string>
     <string name="ChaosStaff_Name">Vega del caos</string>
     <string name="ChaosSword_Info">La lama di questa spada è fatta di caos puro e vibra moderatamente a volte. Un grosso potere è celato dentro l\'arma, che può tagliare a metà praticamente ogni cosa. d\'altronde, ci vuole una grande abilità, per tener testa alla potente forza dell\'arma.</string>
@@ -2321,6 +2322,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
