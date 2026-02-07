@@ -649,6 +649,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">Golem</string>
     <string name="Goo_Desc">Poco si sa sul Goo. È molto probabile che non sia nemmeno una creatura, ma piuttosto un conglomerato di sostanze delle fognature che hanno acquisito i rudimenti della libera volontà. In ogni caso, è evidente che qui c\'è al lavoro una magia oscura.</string>
+    <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">Goo si sta pompando!</string>
     <string name="Goo_Info2">glurp... glurp...</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -1070,6 +1071,7 @@ Potrebbe bruciare?</string>
     <string name="MissileWeapon_Sure">Vuoi davvero equipaggiarla come arma da mischia?</string>
     <string name="MissileWeapon_Yes">Sì, so quello che faccio</string>
     <string name="Mob_Attacking">Conta questo %s come morto!</string>
+    <string name="Mob_CantDoIt">Non posso farlo. Ho delle zampette piccole.</string>
     <string name="Mob_Desc">La vera descrizione arriverà presto!</string>
     <string name="Mob_Died">Senti qualcosa morire a distanza.</string>
     <string name="Mob_StaControlledStatus">Questo %s è sotto una possessione maledetta</string>
@@ -2327,6 +2329,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

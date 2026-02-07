@@ -937,6 +937,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="IronKey_Info">Kopottak a bevágások ezen az öreg vas kulcson. Megviselte az eltelt idő a vékony bőrszíjat is melyen függ. Vajon milyen ajtót nyithat?</string>
     <string name="IronKey_Name">vas kulcs</string>
     <string name="ItemSprite_Info1">dobd félre: %1$.1f%2$.1f</string>
+    <string name="Item_ACAlchemy">ALKÍMIA</string>
     <string name="Item_ACDrop">LETESZ</string>
     <string name="Item_ACThrow">ELDOBNI</string>
     <string name="Item_DirThrow">Válassz irányt a dobáshoz</string>
@@ -2536,6 +2537,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

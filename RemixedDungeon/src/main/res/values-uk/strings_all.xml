@@ -658,6 +658,7 @@
     <string name="Eye_Name">зле око</string>
     <string name="Eye_Name_Objective">зле око</string>
     <string name="Facilitations_Names_0">Без голоду</string>
+    <string name="Facilitations_Names_1">Тіло троля</string>
     <string name="Facilitations_Names_2">Дух джина</string>
     <string name="Fadeleaf_Desc">Доторк до Портальця перенесе тебе у випадкове місце цього рівня</string>
     <string name="Fadeleaf_Name">Порталець</string>
@@ -2656,6 +2657,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
