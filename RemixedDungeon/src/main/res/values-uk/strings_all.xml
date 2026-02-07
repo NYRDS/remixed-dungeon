@@ -1168,6 +1168,7 @@
     <string name="ManaPotion_Info">Це зілля відновить твої духовну енергію.</string>
     <string name="ManaPotion_Name">Зілля мани</string>
     <string name="ManaRegenerationBuff_Name">Регенерація мани</string>
+    <string name="ManaShieldBuff_Info">З\'явився магічний щит, який повністю нейтралізує наступну атаку.</string>
     <string name="Mana_Cost">Потрібно мани:</string>
     <string name="Mana_Title">Мана</string>
     <string name="MedicineMask_Info">Хірургічна маска призначена для вловлювання мікроорганізмів, що потрапляють у краплі рідини та аерозолі з рота та носа користувача. 
@@ -2653,6 +2654,8 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

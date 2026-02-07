@@ -219,6 +219,7 @@
     <string name="Belongings_CantWearBoth">%1$sと%2$sを同時に装備することはできない！</string>
     <string name="Belongings_Name">バックパック</string>
     <string name="BishopNPC_Desc">サンタ・デプス・ロード教会司教</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">司教</string>
     <string name="BishopNPC_Name_Objective">司教</string>
     <string name="Bishop_bye">あなたのために祈りましょう。</string>
@@ -2892,6 +2893,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
