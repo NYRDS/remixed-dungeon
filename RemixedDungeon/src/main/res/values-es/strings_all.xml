@@ -40,6 +40,7 @@
     Puedes cambiar tu decisión en cualquier momento ( tocando el icono de barras en el menú principal )
     </string>
     <string name="AllowStatisticsCollectionScene_Title">Uso de las estadísticas recolectadas</string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">La mezcla que tiene esta flecha convertirá a cualquiera en un loco sin piedad.</string>
     <string name="AmokArrow_Name">Flecha de locura</string>
     <string name="AmokBuff_Info">Siente el descontrol, quitando la vida a los desafortunados.</string>
@@ -2815,6 +2816,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

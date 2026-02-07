@@ -859,6 +859,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="IronKey_Info">Le tacche in questa antica chiave di ferro sono logore; il suo cordoncino di pelle è martoriato dalla vecchiaia. Che porta potrebbe aprire?</string>
     <string name="IronKey_Name">chiave di ferro</string>
     <string name="ItemSprite_Info1">fai cadere/abbassare: %1$.1f %2$.1f</string>
+    <string name="Item_ACAlchemy">ALCHIMIA</string>
     <string name="Item_ACDrop">GETTA</string>
     <string name="Item_ACThrow">LANCIA</string>
     <string name="Item_DirThrow">Scegliere la direzione di tiro</string>
@@ -2326,6 +2327,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

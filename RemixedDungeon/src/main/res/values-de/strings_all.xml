@@ -2127,6 +2127,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="Wand_Wood_Types_7">Mahagoni</string>
     <string name="Wand_Wood_Types_8">Bambus</string>
     <string name="Wand_Wood_Types_9">Purpurherz</string>
+    <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">Nur wenige Kreaturen können dem zerschmetternden Schlag dieser gewaltigen Masse aus Blei und Stahl standhalten, aber nur die stärksten Abenteurer können sie effizient einsetzen.</string>
     <string name="WarHammer_Name">Kriegshammer</string>
     <string name="Warlock_Desc">Als sich das Interesse der Zwerge vom Maschinenbau zur obskuren Kunst wandelte, kamen die Hexenmeister an die Macht. Es fing alles mit Elementarzauber an, wurde jedoch schnell zu Dämonologie und Nekromantie.</string>
@@ -2708,6 +2709,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
