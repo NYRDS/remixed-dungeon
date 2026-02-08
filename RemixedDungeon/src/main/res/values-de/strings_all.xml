@@ -1113,6 +1113,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Level_TileOpenDoor">Geöffnete Tür</string>
     <string name="Level_TileParalyticTrap">Falle mit lähmendem Gas</string>
     <string name="Level_TilePedestal">Podest</string>
+    <string name="Level_TilePileOfStones">Ein Haufen Steine</string>
     <string name="Level_TilePoisonTrap">Giftpfeil-Falle</string>
     <string name="Level_TileSign">Schild</string>
     <string name="Level_TileStatue">Statue</string>
@@ -2710,6 +2711,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
