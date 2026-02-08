@@ -1070,6 +1070,7 @@
     <string name="IronKey_Info">この古びた鉄の鍵の刻み目はよく磨り減り、革のヒモは年季が入ってボロボロになっている。どんなドアを開けるのだろう？</string>
     <string name="IronKey_Name">鉄の鍵</string>
     <string name="ItemSprite_Info1">わきへ落とす: %1$.1f %2$.1f</string>
+    <string name="Item_ACAlchemy">炼金術</string>
     <string name="Item_ACDrop">落とす</string>
     <string name="Item_ACPickup">拾う</string>
     <string name="Item_ACThrow">投げる</string>
@@ -2628,6 +2629,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="YogsEye_Name">ヨグの眼</string>
     <string name="YogsEye_Name_Objective">ヨグの眼</string>
     <string name="YogsHeart_Desc">何世紀もの間、純粋な悪を行うことができるのは、心のない生き物だけだと信じられてきた。しかし、あなたの目の前で鼓動している巨大な心臓は、旧神自身のものなのだ。</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">ヨグの心臓</string>
     <string name="YogsHeart_Name_Objective">ヨグの心臓</string>
     <string name="YogsTeeth_Desc">カミソリのような鋭い歯で満たされた旧神の巨大な口。あらゆる存在を破壊し、貪り尽くそうとする彼の衝動にふさわしい造形だ。</string>
@@ -2895,6 +2897,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

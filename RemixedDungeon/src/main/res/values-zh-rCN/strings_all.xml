@@ -883,6 +883,7 @@
     <string name="HeroClass_NecromancerPerks_3">死灵法师开局有一把7层的骷髅钥匙。</string>
     <string name="HeroClass_NecromancerPerks_4">治疗药水开局时就已经鉴定好了。</string>
     <string name="HeroClass_None">平民</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">瘟疫医生会从被杀死的敌人身上收获毒素腺体、腐烂器官、骨片和邪恶精华。血液会随着时间推移而收集起来用于炼金术。</string>
     <string name="HeroClass_PlagueDoctorPerks_1">开始时拥有瘟疫面具（对所有气体免疫）和骨锯。暴击会掉落额外部件，锯子对麻痹敌人造成+50%伤害。</string>
     <string name="HeroClass_PlagueDoctorPerks_3">被毒气杀死的敌人会爆炸成毒雾，每影响一个敌人为你恢复 1 点生命值。</string>
     <string name="HeroClass_Priest">牧师</string>
@@ -2802,6 +2803,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
