@@ -1793,6 +1793,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="Shopkeeper_text">Willkommen bei der lokalen Pixel-Mart-Filiale.\nWie kann ich Ihnen helfen?</string>
     <string name="Shopkeeper_title">Geschäft</string>
     <string name="ShortSword_ACReforge">WIEDERVERWERTEN</string>
+    <string name="ShortSword_Gender">neuter</string>
     <string name="ShortSword_Info">Dieses Schwert ist in der Tat sehr kurz. Nur wenige Zentimeter länger als ein Dolch.</string>
     <string name="ShortSword_Name">Kurzschwert</string>
     <string name="ShortSword_NotBoomerang">Du kannst auf diese Weise keinen Bumerang verbessern.</string>
@@ -2709,6 +2710,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

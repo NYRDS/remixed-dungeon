@@ -1403,6 +1403,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Piranha_Name_Objective">piraña gigante</string>
     <string name="PirateSet_Info">¡Arr! ¿¡Sientes que eres un pirata... o solo como cachorro de mar!? Espero que no sea así, después de todo es solo para piratas de verdad, quiero decir... ¡Arr!</string>
     <string name="PirateSet_Name">Set Pirata</string>
+    <string name="PlagueDoctorMaskHood_Info">Una calavera de ébano tallada, sus cuencas vacías brillando con el resplandor etéreo de gemas de amatista. Cada respiración que inhalas susurra a través de un laberinto de tubos y filtros, llevando el aroma de hierbas y especias potentes que enmascaran la descomposición que se aferra a ti. Pero no es simplemente la máscara. Una capucha pesada de terciopelo negro envuelve tu rostro y cabeza en sombras. La capucha, como ala de cuervo, fluye por tu espalda, sus bordes adornados con una franja de encaje blanco hueso, un contraste aterradoramente hermoso. Juntas, máscara y capucha crean una visión espectral, un sombrío testimonio de la batalla interminable contra las fuerzas de la descomposición.</string>
     <string name="PlagueDoctorMaskHood_Name">Máscara de Médico de la Peste con capucha</string>
     <string name="PlagueDoctorMask_Name">Máscara de médico de la peste</string>
     <string name="PlagueDoctorNPC_After_Quest">¡Les demostrare a todos, a todos!</string>
@@ -2816,6 +2817,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

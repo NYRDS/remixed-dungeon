@@ -792,6 +792,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="Ghost_Defense">esquivé</string>
     <string name="Ghost_Desc">Le fantôme est à peine visible. On dirait un miasme de lumières défaillantes avec un visage des plus attristés.</string>
     <string name="Ghost_Name">fantôme triste</string>
+    <string name="Ghost_Name_Objective">fantôme</string>
     <string name="Ghost_Rat1">Boujour aventurier... J\'étais comme vous, un jour, fort et confiant... Et maintenant je suis décédé... Mais je ne peux pas quitter cet endroit... Pas tant que je n\'aurai pas pris ma revanche... Tuez le _rat fétide_, celui qui a pris ma vie...</string>
     <string name="Ghost_Rat2">S\'il vous plaît... Aidez-moi... Détruisez cette abomination...</string>
     <string name="Ghost_Rose1">Bonjour aventurier... J\'étais comme vous, un jour, fort et confiant... Je suis mort désormais... Mais je ne peux pas partir... Pas tant que je n\'aurai pas retrouvé ma _rose séchée_... Elle est très importante à mes yeux... Un monstre l\'a prise sur mon cadavre...</string>
@@ -2941,6 +2942,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
