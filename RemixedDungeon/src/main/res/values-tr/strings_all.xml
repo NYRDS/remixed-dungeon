@@ -881,6 +881,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="HeroClass_MagPerks_4">Büyücüler Element büyüleri yapmak için mana kullanır.</string>
     <string name="HeroClass_MagPerks_5">Tanımlama Parşömenleri en başından itibaren tanımlanmıştır.</string>
     <string name="HeroClass_Necromancer">ruhçağıran</string>
+    <string name="HeroClass_NecromancerPerks_0">Nekromanserler 15 Sağlık puanı ile başlar.</string>
     <string name="HeroClass_NecromancerPerks_1">Ölü Çağıranlar Ölüm büyüleri yapmak için mana kullanır.</string>
     <string name="HeroClass_NecromancerPerks_2">Ölü Çağıranlar, öldürülen her yaratık için 1 mana puanı veren benzersiz bir Ölü Çağıran cübbesi ile başlar.</string>
     <string name="HeroClass_NecromancerPerks_3">Ölü Çağıranlar 7. seviye bir iskelet anahtarıyla başlar.</string>
@@ -2840,6 +2841,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

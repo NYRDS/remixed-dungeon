@@ -2285,6 +2285,7 @@ remix.31.1\n
     <string name="WndHero_Exp">Experiência</string>
     <string name="WndHero_Gold">Ouro Coletado</string>
     <string name="WndHero_Health">Vida</string>
+    <string name="WndHero_Info">Info</string>
     <string name="WndHero_Satiety">Saciedade</string>
     <string name="WndHero_SkillLevel">Nível de habilidade</string>
     <string name="WndHero_StaCatalogus">Catálogo</string>
@@ -2761,6 +2762,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
