@@ -292,6 +292,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Capotain_Info">Egy magas, szűk karimájú kalap. Általában a Puritánokhoz társítják, de nem kell vallásosnak lenned a viseléséhez. Valamilyen oknál fogva egy címke van rajta, ami azt mondja: \&quot;Solomon\&quot;.</string>
     <string name="Capotain_Name">Kapitány</string>
     <string name="Carcass_Devoured">Megfaladtad %s tetemét!</string>
+    <string name="Carcass_DissectMessage">Széttéped a tetemet és %s tárgyat szerzel.</string>
     <string name="Carcass_Kick">Ez a(z) %s teljesen halott, nincs értelme rugdosni.</string>
     <string name="Caves_TileDescBookshelf">Minek kéne neked egy könyvespolc egy bányába?</string>
     <string name="Caves_TileDescDeco">Érctelérek láthatók a falon. Talán arany?</string>
@@ -2538,6 +2539,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

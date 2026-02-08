@@ -84,6 +84,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ArmoredStatue_Name">patung tersihir</string>
     <string name="ArmoredStatue_Name_Objective">patung tersihir</string>
     <string name="Artifact_Limit">Anda hanya bisa memakai 2 artefak sekaligus.</string>
+    <string name="AttackDelay_Increased">Tidak bisa memakai %s seperti ini. Ayunan lambat, napas berat...</string>
     <string name="AwarenessBuff_Info">Indra telah mempertajam, memberikan lebih banyak kesadaran tentang lingkungan.</string>
     <string name="AwarenessBuff_Name">kesadaran</string>
     <string name="AzuterronNPC_Desc">Figur yang misterius dikelilingi oleh kabut hitam.</string>
@@ -2765,6 +2766,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
