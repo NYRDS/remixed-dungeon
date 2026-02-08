@@ -337,6 +337,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Challenges_Names_6">Verbotene Runen</string>
     <string name="Challenges_Names_7">Pazifismus</string>
     <string name="ChampionOfAirBuff_Info">Diese Eigenschaft verleiht der Kreatur das Wesen der Winde, verbessert ihre Beweglichkeit und Kampfkraft. Der Champion der Luft wird zu einem gefährlichen Gegner, der in der Lage ist, schnelle und verheerende Angriffe auszuführen, die den Verlauf der Schlacht rasch verändern können.</string>
+    <string name="ChampionOfAirBuff_Name">Champion der Luft</string>
     <string name="ChampionOfEarthBuff_Name">Champion der Erde</string>
     <string name="ChampionOfFireBuff_Info">Mit dem Zorn der Flammen erfüllt, verstärkt dieses Merkmal die Wildheit und Kampfkraft der Kreatur. Der Feuerchampion tritt als furchteinflößender Gegner hervor, entfesselt verheerende Angriffe, die seine Feinde in lodernde Flammen hüllen und Schrecken in alle einflößen, die es wagen, ihm entgegenzutreten.</string>
     <string name="ChampionOfWaterBuff_Info">Der Wasserkämpfer verkörpert die unbesiegbare Kraft der Ozeane und steigert die Widerstandskraft und Standhaftigkeit des Wesens. Dadurch wird es zu einem unbeugsamen Gegner, der eine unerbittliche Flut von Angriffen aushalten und als unnachgiebiger Wächter gegen Widrigkeiten bestehen kann.</string>
@@ -1113,6 +1114,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Level_TileOpenDoor">Geöffnete Tür</string>
     <string name="Level_TileParalyticTrap">Falle mit lähmendem Gas</string>
     <string name="Level_TilePedestal">Podest</string>
+    <string name="Level_TilePileOfStones">Ein Haufen Steine</string>
     <string name="Level_TilePoisonTrap">Giftpfeil-Falle</string>
     <string name="Level_TileSign">Schild</string>
     <string name="Level_TileStatue">Statue</string>
@@ -2710,6 +2712,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

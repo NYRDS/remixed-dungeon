@@ -877,6 +877,7 @@
     <string name="HeroSubClass_NameFreR">бігун</string>
     <string name="HeroSubClass_NameGlad">гладіатор</string>
     <string name="HeroSubClass_NameLich">ліч</string>
+    <string name="HeroSubClass_NameNone">немає</string>
     <string name="HeroSubClass_NameScout">слідопит</string>
     <string name="HeroSubClass_NameShaman">шаман</string>
     <string name="HeroSubClass_NameSnip">снайпер</string>
@@ -1968,6 +1969,7 @@
     <string name="Tengu_Info3">Попався, %s!</string>
     <string name="Tengu_Name">Тенґу</string>
     <string name="Tengu_Name_Objective">Тенґу</string>
+    <string name="TerrorBuff_Name">Наляканий</string>
     <string name="Thief_Carries">\n\n%1$s носить _%2$s_. Звичайно ж крадене.</string>
     <string name="Thief_Desc">Глибинні рівні підземелля завжди слугували надійним схроном для будь-якого злочинця. Проте не кожний міг зберегти здоровий глузд надовго покинувши денне світло. Вже досить давно ці безумні бандити позабували хто вони є, і навіщо займаються своїми темними справами.</string>
     <string name="Thief_Gender">masculine</string>
@@ -2658,6 +2660,8 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 
