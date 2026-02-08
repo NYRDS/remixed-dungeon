@@ -72,8 +72,6 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.effects.Wound;
-import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
@@ -454,12 +452,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
             int dmg = damageRoll();
 
-            // Check for critical hit - when attack roll significantly exceeds defense roll
+
             boolean isCriticalHit = checkCriticalHit(enemy);
 
-            // Apply critical hit bonus if applicable
+
             if (isCriticalHit) {
-                dmg = (int) (dmg * 1.5f); // 50% damage bonus for critical hits
+                dmg = (int) (dmg * 1.5f);
+                enemy.getSprite().showStatus(CharSprite.NEGATIVE, "CRIT!");
             }
 
             int effectiveDamage = Math.max(dmg, 0);
@@ -2344,18 +2343,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
     }
 
-    // Check if this attack is a critical hit based on the difference between attack and defense rolls
     private boolean checkCriticalHit(Char enemy) {
-        // Calculate attack and defense skills
         int attackSkill = attackSkill(enemy);
         int defenseSkill = enemy.defenseSkill(this);
 
-        // Calculate the rolls that were used for the hit check
         float acuRoll = Random.Float(attackSkill);
         float defRoll = Random.Float(defenseSkill);
 
-        // A critical hit occurs when the attack roll significantly exceeds the defense roll
-        // This is a simplified approach - a critical hit when the attack roll is more than 1.5x the defense roll
         return acuRoll > defRoll * 2f;
     }
 

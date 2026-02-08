@@ -117,7 +117,7 @@ public class Statue extends Mob {
 				((MeleeWeapon) chosenItem).enchant(Enchantment.random());
 			}
 
-			STR(Math.max(12,chosenItem.requiredSTR()));
+			STR(Math.min(12,chosenItem.requiredSTR()));
 			chosenItem.doEquip(this);
 		}
 		return getItemFromSlot(Belongings.Slot.WEAPON);

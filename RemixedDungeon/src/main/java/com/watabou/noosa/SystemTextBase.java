@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 
 public abstract class SystemTextBase extends Text {
     // Combined markup pattern for violet highlighting (_text_), bronze ("text"), and generic color tags ([color:text])
-    protected static final Pattern MARKUP_PATTERN = Pattern.compile("_(.*?)_|\"(.*?)\"|\\[(#?[a-zA-Z0-9]+):(.*?)?\\]");
+    protected static final Pattern MARKUP_PATTERN = Pattern.compile("_(.*?)_|\"(.*?)\"|\\[(#?[a-zA-Z0-9]+):(.*?)?]");
 
     private static final Map<String, Integer> COLOR_MAP = new HashMap<>();
     static {
@@ -96,7 +96,7 @@ public abstract class SystemTextBase extends Text {
         // Remove underscore, quote, and color tag markup
         return str.replaceAll("_(.*?)_", "$1")
                   .replaceAll("\"(.*?)\"", "$1")
-                  .replaceAll("\\[(#?[a-zA-Z0-9]+):(.*?)?\\]", "$2");
+                  .replaceAll("\\[(#?[a-zA-Z0-9]+):(.*?)?]", "$2");
     }
     
     /**
@@ -160,10 +160,10 @@ public abstract class SystemTextBase extends Text {
         if (colorStr.startsWith("#")) {
             try {
                 long color = Long.parseLong(colorStr.substring(1), 16);
-                if (colorStr.length() == 7) { // #RRGGBB
-                    return (int) (0xFF000000L | color);
-                } else if (colorStr.length() == 9) { // #AARRGGBB
+                if (colorStr.length() == 9) { // #AARRGGBB
                     return (int) color;
+                } else {
+                    return (int) (0xFF000000L | color);
                 }
             } catch (NumberFormatException ignored) {}
         }

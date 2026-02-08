@@ -24,6 +24,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingBase;
 import com.nyrds.util.Scrambler;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Bones;
@@ -105,8 +106,6 @@ public class Hero extends Char {
 
     private HeroClass heroClass = HeroClass.ROGUE;
     private HeroSubClass subClass = HeroSubClass.NONE;
-
-    private boolean ready = false;
 
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
     public int controlTargetId;
@@ -329,7 +328,6 @@ public class Hero extends Char {
 
     public void readyAndIdle() {
         setCurAction(null);
-        ready = true;
 
         GameScene.ready();
         getSprite().idle();
@@ -353,14 +351,17 @@ public class Hero extends Char {
     }
 
     public void itemPickedUp(Item item) {
+
+        var itemText = item.name();
+
         if (item.announcePickUp()) {
             if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade) item).isKnown())
                     || (item instanceof PotionOfStrength && ((PotionOfStrength) item).isKnown())) {
-                GLog.p(StringsManager.getVar(R.string.Hero_YouNowHave), item.name());
-            } else {
-                GLog.i(StringsManager.getVar(R.string.Hero_YouNowHave), item.name() );
+                itemText = Text.color(item.name(), CharSprite.POSITIVE);
             }
         }
+
+        GLog.i(StringsManager.getVar(R.string.Hero_YouNowHave), itemText );
     }
 
     @Override

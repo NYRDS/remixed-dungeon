@@ -40,7 +40,7 @@ public class SacrificialSword extends MeleeWeapon {
 			classBonus = 2.0;
 		}
 
-		if(hero.getHeroClass() == HeroClass.NECROMANCER) {
+		if(hero.getHeroClass() == HeroClass.NECROMANCER || hero.getHeroClass() == HeroClass.DOCTOR) {
 			classBonus = 3.0;
 		}
 

@@ -61,7 +61,7 @@ public class AlchemyRecipes {
                         Object inputObj = inputsArray.get(j);
                         if (inputObj instanceof String) {
                             // Backward compatibility: single string means count of 1
-                            inputs.add(new InputItem((String) inputObj, 1));
+                            inputs.add(new InputItem((String) inputObj));
                         } else if (inputObj instanceof JSONObject) {
                             JSONObject inputJson = (JSONObject) inputObj;
                             String name = inputJson.getString("name");
@@ -80,7 +80,7 @@ public class AlchemyRecipes {
                         Object outputObj = outputsArray.get(k);
                         if (outputObj instanceof String) {
                             // Backward compatibility: single string means count of 1
-                            outputs.add(new OutputItem((String) outputObj, 1));
+                            outputs.add(new OutputItem((String) outputObj));
                         } else if (outputObj instanceof JSONObject) {
                             JSONObject outputJson = (JSONObject) outputObj;
                             String name = outputJson.getString("name");
@@ -312,14 +312,18 @@ public class AlchemyRecipes {
         for (Object inputObj : input) {
             if (inputObj instanceof String) {
                 // Backward compatibility: single string means count of 1
-                inputs.add(new InputItem((String) inputObj, 1));
+                inputs.add(new InputItem((String) inputObj));
             } else if (inputObj instanceof Map) {
                 // New format: object with name and count properties
                 Map<?, ?> inputMap = (Map<?, ?>) inputObj;
                 String name = (String) inputMap.get("name");
                 Integer count = (Integer) inputMap.get("count");
-                if (name != null && count != null) {
-                    inputs.add(new InputItem(name, count));
+                if (name != null) {
+                    if (count != null) {
+                        inputs.add(new InputItem(name, count));
+                    } else {
+                        inputs.add(new InputItem(name)); // Default count to 1
+                    }
                 } else {
                     return false; // Invalid input format
                 }
@@ -330,18 +334,22 @@ public class AlchemyRecipes {
 
         // Handle both single output (string) and multiple outputs (table/array)
         if (output instanceof String) {
-            outputs.add(new OutputItem((String) output, 1)); // Default count to 1
+            outputs.add(new OutputItem((String) output)); // Default count to 1
         } else if (output instanceof List) {
             for (Object obj : (List<?>) output) {
                 if (obj instanceof String) {
-                    outputs.add(new OutputItem((String) obj, 1)); // Default count to 1
+                    outputs.add(new OutputItem((String) obj)); // Default count to 1
                 } else if (obj instanceof Map) {
                     // New format: object with name and count properties
                     Map<?, ?> outputMap = (Map<?, ?>) obj;
                     String name = (String) outputMap.get("name");
                     Integer count = (Integer) outputMap.get("count");
-                    if (name != null && count != null) {
-                        outputs.add(new OutputItem(name, count));
+                    if (name != null) {
+                        if (count != null) {
+                            outputs.add(new OutputItem(name, count));
+                        } else {
+                            outputs.add(new OutputItem(name)); // Default count to 1
+                        }
                     } else {
                         return false; // Invalid output format
                     }

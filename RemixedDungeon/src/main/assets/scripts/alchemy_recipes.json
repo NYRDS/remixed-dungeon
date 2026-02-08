@@ -2,35 +2,53 @@
   "recipes": [
     {
       "input": [
-        {"name": "Sungrass.Seed", "count": 2},
-        {"name": "DewVial", "count": 1}
+        {"name": "ClothArmor", "count": 1},
+        {"name": "Carcass of Rat", "count": 10}
       ],
       "outputs": [
-        {"name": "PotionOfHealing", "count": 1}
+        {"name": "RatArmor", "count": 1}
       ]
     },
     {
       "input": [
-        {"name": "Firebloom.Seed", "count": 1},
-        {"name": "MysteryMeat", "count": 1}
+        {"name": "Carcass of Rat", "count": 5},
+        {"name": "VileEssence", "count": 1}
       ],
       "outputs": [
-        {"name": "PotionOfLiquidFlame", "count": 1}
+        {"name": "FetidRat", "count": 1}
       ]
     },
     {
       "input": [
-        {"name": "Icecap.Seed", "count": 1},
-        {"name": "Dewdrop", "count": 1}
+        {"name": "Carcass of Rat", "count": 5},
+        {"name": "VileEssence", "count": 10}
       ],
       "outputs": [
-        {"name": "PotionOfFrost", "count": 1}
+        {"name": "SuspiciousRat", "count": 1}
       ]
     },
     {
       "input": [
-        {"name": "Sorrowmoss.Seed", "count": 1},
-        {"name": "CorpseDust", "count": 1}
+        {"name": "Carcass of Rat", "count": 5},
+        {"name": "VileEssence", "count": 100}
+      ],
+      "outputs": [
+        {"name": "PseudoRat", "count": 1}
+      ]
+    },
+    {
+      "input": [
+        {"name": "ClothArmor", "count": 1},
+        {"name": "Carcass of SpiderGuard", "count": 20}
+      ],
+      "outputs": [
+        {"name": "SpiderArmor", "count": 1}
+      ]
+    },
+    {
+      "input": [
+        {"name": "RottenMeat", "count": 3},
+        {"name": "VileEssence", "count": 1}
       ],
       "outputs": [
         {"name": "PotionOfToxicGas", "count": 1}
@@ -38,17 +56,27 @@
     },
     {
       "input": [
-        {"name": "Dreamweed.Seed", "count": 1},
-        {"name": "RatHide", "count": 1}
+        {"name": "RottenMeat", "count": 10},
+        {"name": "BoneShard", "count": 5}
       ],
       "outputs": [
-        {"name": "PotionOfInvisibility", "count": 1}
+        {"name": "Zombie", "count": 3}
       ]
     },
     {
       "input": [
-        {"name": "Fadeleaf.Seed", "count": 1},
-        {"name": "Dewdrop", "count": 1}
+        {"name": "BoneShard", "count": 1},
+        {"name": "RottenOrgan", "count": 1},
+        {"name": "ToxicGland", "count": 1}
+      ],
+      "outputs": [
+        {"name": "VileEssence", "count": 1}
+      ]
+    },
+    {
+      "input": [
+        {"name": "VileEssence", "count": 10},
+        {"name": "Dagger", "count": 1}
       ],
       "outputs": [
         {"name": "PotionOfMindVision", "count": 1}
@@ -56,20 +84,20 @@
     },
     {
       "input": [
-        {"name": "Earthroot.Seed", "count": 1},
-        {"name": "CorpseDust", "count": 1}
+        {"name": "Sword", "count": 1},
+        {"name": "VileEssence", "count": 5}
       ],
       "outputs": [
-        {"name": "PotionOfParalyticGas", "count": 1}
+        {"name": "SacrificialSword", "count": 1}
       ]
     },
     {
       "input": [
         {"name": "Moongrace.Seed", "count": 1},
-        {"name": "DewVial", "count": 1}
+        {"name": "Sungrass.Seed", "count": 1}
       ],
       "outputs": [
-        {"name": "PotionOfMana", "count": 1}
+        {"name": "", "count": 1}
       ]
     },
     {

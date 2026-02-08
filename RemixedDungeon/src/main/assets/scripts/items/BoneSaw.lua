@@ -51,9 +51,6 @@ return item.init{
     attackProc        = function(self, item, attacker, defender, damage)
         RPD.affectBuff(defender,"Bleeding",3)
 
-        -- Log attack details
-        RPD.glog("BoneSaw attack: Attacker=" .. attacker:getEntityKind() .. ", Defender=" .. defender:getEntityKind() .. ", Base Damage=" .. damage)
-
         -- Check if attacker is a Doctor and if this is a critical hit
         local isDoctor = attacker:getHeroClass():getEntityKind() == "DOCTOR"
 
@@ -68,39 +65,29 @@ return item.init{
         -- A critical hit occurs when the attack roll significantly exceeds the defense roll
         local isCriticalHit = acuRoll > defRoll * 2
 
-        -- Log critical hit calculation
-        RPD.glog("BoneSaw critical hit check: AttackSkill=" .. attackSkill .. ", DefenseSkill=" .. defenseSkill ..
-                     ", AcuRoll=" .. acuRoll .. ", DefRoll=" .. defRoll .. ", IsCritical=" .. tostring(isCriticalHit))
-
         -- Apply critical hit bonus if applicable
         local finalDamage = damage
         if isCriticalHit then
             finalDamage = damage * 1.5  -- 50% damage bonus for critical hits
-            RPD.glog("BoneSaw critical hit! Damage increased from " .. damage .. " to " .. finalDamage)
         end
 
         -- Handle critical hit effects for Doctor class - drop extra parts
         if isCriticalHit and isDoctor then
             -- Create random harvestable items to drop
-            local harvestItems = {"ToxicGland", "RottenOrgan", "BoneShard", "VileEssence"}
+            local harvestItems = {"ToxicGland", "RottenOrgan", "BoneShard"}
             local randomItem = harvestItems[math.random(1, #harvestItems)]
 
             local itemToDrop = RPD.ItemFactory:itemByName(randomItem)
             if itemToDrop then
                 RPD.Dungeon.level:animatedDrop(itemToDrop, defender:getPos())
-                RPD.glog("BoneSaw dropped extra part: " .. randomItem .. " at position " .. defender:getPos())
-            else
-                RPD.glog("BoneSaw failed to create harvest item: " .. randomItem)
             end
         end
 
         -- Apply 50% damage bonus against paralyzed foes if attacker is Doctor
         if defender.paralysed and isDoctor then
-            finalDamage = finalDamage * 1.5
-            RPD.glog("BoneSaw bonus vs paralyzed: Damage increased to " .. finalDamage)
+            finalDamage = finalDamage * 2
         end
 
-        RPD.glog("BoneSaw final damage: " .. finalDamage)
         return finalDamage
     end,
 

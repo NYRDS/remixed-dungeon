@@ -7,9 +7,13 @@ public class InputItem {
     private final String name;
     private final int count;
 
+    public InputItem(String name) {
+        this(name, 1);
+    }
+
     public InputItem(String name, int count) {
         this.name = name;
-        this.count = count;
+        this.count = count <= 0 ? 1 : count; // Ensure count is at least 1
     }
 
     public String getName() {
