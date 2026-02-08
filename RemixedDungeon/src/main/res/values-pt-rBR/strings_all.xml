@@ -1370,6 +1370,7 @@ Parede
     <string name="Piranha_Name_Objective">piranha gigante</string>
     <string name="PirateSet_Info">Arr! Você se sente como um amigo ... ou você é apenas um maldito latifundiário !? Espero que não, essas coisas são para piratas depois de tudo, quero dizer ... Arr!</string>
     <string name="PirateSet_Name">Conjunto de Pirata</string>
+    <string name="PlagueDoctorMask_Name">máscara de Médico da Peste</string>
     <string name="PlagueDoctorNPC_After_Quest">Eu vou mostrar a eles, a todos eles!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Você ainda está aqui? Tome! Pegue isso.</string>
     <string name="PlagueDoctorNPC_Desc">Este homem corcunda está totalmente vestido com couro. Ele tem cheiro forte de medicamentos e... alho?</string>
@@ -2760,6 +2761,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
