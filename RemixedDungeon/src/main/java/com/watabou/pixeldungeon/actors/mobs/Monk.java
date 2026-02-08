@@ -13,10 +13,11 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
+
+import lombok.val;
 
 public class Monk extends Mob {
 
@@ -48,16 +49,11 @@ public class Monk extends Mob {
 	@Override
 	public boolean actMeleeAttack(Char enemy) {
 		if (Random.Float() < 0.5f) {
-			// Play kick animation with callback to trigger attack logic
-			getSprite().playExtra("kick", new Callback() {
-				@Override
-				public void call() {
-					// After kick animation completes, perform the actual attack
-					if (isAlive()) {
-						onAttackComplete();
-					}
-				}
-			});
+			getSprite().playExtra("kick", () -> {
+                if (isAlive()) {
+                    onAttackComplete();
+                }
+            });
 			getSprite().turnTo(getPos(), enemy.getPos());
 			spend(attackDelay());
 			return false;
@@ -74,15 +70,19 @@ public class Monk extends Mob {
 
 	@Override
 	public int attackProc(@NotNull Char enemy, int damage ) {
-		
-		if (Random.Int( 6 ) == 0) {
-			EquipableItem weapon = enemy.getItemFromSlot(Belongings.Slot.WEAPON);
 
-			if (!(weapon instanceof Knuckles) && !weapon.isCursed() && enemy.getBelongings().drop(weapon)) {
-                GLog.w(StringsManager.getVar(R.string.Monk_Disarm), getName(), weapon.name() );
+		Belongings.Slot [] slots = {Belongings.Slot.WEAPON, Belongings.Slot.LEFT_HAND};
+		for (val slot : slots) {
+			if (Random.Int(6) == 0) {
+				EquipableItem weapon = enemy.getItemFromSlot(slot);
+
+				if (!(weapon instanceof Knuckles) && !weapon.isCursed() && enemy.getBelongings().drop(weapon)) {
+					GLog.w(StringsManager.getVar(R.string.Monk_Disarm), getName(), weapon.name());
+					break;
+				}
 			}
 		}
-		
+
 		return damage;
 	}
 }
