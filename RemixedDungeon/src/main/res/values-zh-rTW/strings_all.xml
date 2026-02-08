@@ -2423,6 +2423,7 @@
     <string name="town_deco_canvas_name">帆布</string>
     <string name="town_deco_carpet_desc">為貴客準備的豪華紅地毯。</string>
     <string name="town_deco_carpet_name">地毯</string>
+    <string name="town_deco_charcoal_carpet_desc">為了追求客人的舒適，電影院的管理部門選擇了最高質量的炭黑色地毯。</string>
     <string name="town_deco_charcoal_carpet_name">地毯</string>
     <string name="town_deco_chest_desc">用來方便存放不同物品和珠寶的家具。</string>
     <string name="town_deco_chest_name">寶箱</string>
@@ -2613,6 +2614,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -447,6 +447,7 @@
     <string name="ClassArmor_LowHealt">你的血量太低了！</string>
     <string name="ClassArmor_LowMana">魔力耗尽</string>
     <string name="ClassArmor_NotEquipped">你必须穿上这件防具才能使用它的特殊能力！</string>
+    <string name="Claymore_Gender">neuter</string>
     <string name="Claymore_Info">这把结实的剑也许能切断任何东西。</string>
     <string name="Claymore_Name">阔剑</string>
     <string name="CloakBuff_Info">一件黑色的斗篷使你隐藏于阴影之中，让你更不容易被敌人看到。</string>
@@ -2801,6 +2802,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
