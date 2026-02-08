@@ -1280,6 +1280,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="NecromancerArmor_Name">Knochenrüstung</string>
     <string name="NecromancerArmor_NotNecromancer">Nur Totenbeschwörer können diese Rüstung nutzen!</string>
     <string name="NecromancerNPC_Desc">Dieser Mann mittleren Alters scheint leicht verärgert und aufgeregt zugleich zu sein. Er trägt eine zusammengesetzte Rüstung, gefertigt aus Knochenfragmenten.</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">Oh! Welch seltener Anblick! Ein Abenteurer, der nicht tot ist! Bemerkenswert! Oh... Ich bitte um Verzeihung, manchmal werde ich zu aufgeregt. Wie du siehst, bin ich ein Nekromant. Und auch wenn Tod und den Tod selbst zu studieren mein Leben ist, ist es manchmal wirklich langweilig. Anders gesehen ist das eigentlich exakt der Grund, warum ich hier bin. Gemäß meinen Berechnungen wird schon sehr bald irgendwo in diesem Dungeon etwas spektakuläres passieren! _Nekropolis_, eine antike Stadt der Toten, wird seine Tore öffnen! Und... Ich kann wirklich nicht weiterplaudern, ich habe genug Zeit verschwendet. Ich muss mich bereit machen, _komm\' später wieder_.</string>
     <string name="NecromancerNPC_Intro2">Ah! Ein Abenteurer, der nicht tot ist. Hervorragend! Oh ... ich bitte um Verzeihung. Sie sehen, ich bin selbst ein Nekromant. Und auch wenn die Toten und selbst der Tod ist, was ich ein Leben lang studieren werde, sehen gleiche Sachen immer und immer wieder extrem langweilig aus. Auf der anderen Seite, das ist genau, warum ich hier bin. Etwas spektakuläres ist vor kurzem passiert. Eine Nekropole, eine alte Stadt der Toten hat endlich seine Türen geöffnet. In der Tat stehen wir direkt neben dem Eingang. Und ... Weißt du was, nimm diesen Schlüssel und geh zuerst, ich meine, du magst Abenteuer und so? Und ich werde direkt nach dir kommen, ich muss mich nur noch fertig machen.</string>
     <string name="NecromancerNPC_Message1">So wenig Zeit, so wenig Zeit...</string>
@@ -2712,6 +2713,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
