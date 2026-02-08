@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Class to manage alchemy recipes, supporting both JSON loading and Lua generation
@@ -54,35 +53,55 @@ public class AlchemyRecipes {
                 JSONObject recipe = recipesArray.getJSONObject(i);
 
                 // Parse input ingredients
-                JSONArray inputsArray = recipe.getJSONArray("input");
-                List<String> inputs = new ArrayList<>();
-                for (int j = 0; j < inputsArray.length(); j++) {
-                    inputs.add(inputsArray.getString(j));
-                }
-
-                // Check if output is a single string or an array of outputs
-                List<String> outputs = new ArrayList<>();
-
-                if (recipe.has("outputs")) {
-                    // Multiple outputs
-                    JSONArray outputsArray = recipe.getJSONArray("outputs");
-                    for (int k = 0; k < outputsArray.length(); k++) {
-                        outputs.add(outputsArray.getString(k));
+                List<InputItem> inputs = new ArrayList<>();
+                
+                if (recipe.has("input")) {
+                    JSONArray inputsArray = recipe.getJSONArray("input");
+                    for (int j = 0; j < inputsArray.length(); j++) {
+                        Object inputObj = inputsArray.get(j);
+                        if (inputObj instanceof String) {
+                            // Backward compatibility: single string means count of 1
+                            inputs.add(new InputItem((String) inputObj, 1));
+                        } else if (inputObj instanceof JSONObject) {
+                            JSONObject inputJson = (JSONObject) inputObj;
+                            String name = inputJson.getString("name");
+                            int count = inputJson.optInt("count", 1); // Default to 1 if count not specified
+                            inputs.add(new InputItem(name, count));
+                        }
                     }
                 }
 
-                for (String output : outputs) {
-                    EntityType entityType = determineEntityType(output);
+                // Parse output ingredients
+                List<OutputItem> outputs = new ArrayList<>();
+                
+                if (recipe.has("outputs")) {
+                    JSONArray outputsArray = recipe.getJSONArray("outputs");
+                    for (int k = 0; k < outputsArray.length(); k++) {
+                        Object outputObj = outputsArray.get(k);
+                        if (outputObj instanceof String) {
+                            // Backward compatibility: single string means count of 1
+                            outputs.add(new OutputItem((String) outputObj, 1));
+                        } else if (outputObj instanceof JSONObject) {
+                            JSONObject outputJson = (JSONObject) outputObj;
+                            String name = outputJson.getString("name");
+                            int count = outputJson.optInt("count", 1); // Default to 1 if count not specified
+                            outputs.add(new OutputItem(name, count));
+                        }
+                    }
+                }
 
-                    if (!isEntityValid(output, entityType)) {
+                for (OutputItem output : outputs) {
+                    EntityType entityType = determineEntityType(output.getName());
+
+                    if (!isEntityValid(output.getName(), entityType)) {
                         break;
                     }
                 }
 
-                for (String input : inputs) {
-                    EntityType entityType = determineEntityType(input);
+                for (InputItem input : inputs) {
+                    EntityType entityType = determineEntityType(input.getName());
 
-                    if (!isEntityValid(input, entityType)) {
+                    if (!isEntityValid(input.getName(), entityType)) {
                         break;
                     }
                 }
@@ -166,49 +185,53 @@ public class AlchemyRecipes {
      * Add a recipe with multiple outputs with validation
      */
     @LuaInterface
-    public static boolean addRecipe(List<String> input, List<String> outputs) {
+    public static boolean addRecipe(List<InputItem> input, List<OutputItem> outputs) {
         List<EntityType> entityTypes = new ArrayList<>();
 
         // Validate all outputs
-        for (String output : outputs) {
-            EntityType entityType = determineEntityType(output);
+        for (OutputItem output : outputs) {
+            EntityType entityType = determineEntityType(output.getName());
             entityTypes.add(entityType);
 
-            if (!isEntityValid(output, entityType)) {
+            if (!isEntityValid(output.getName(), entityType)) {
                 return false; // Invalid output
             }
 
             // Additional validation: try to create the output to ensure it's valid
             if (entityType == EntityType.ITEM) {
-                Item testItem = ItemFactory.itemByName(output);
+                Item testItem = ItemFactory.itemByName(output.getName());
                 if (!testItem.valid()) {
                     return false; // Invalid item
                 }
             } else if (entityType == EntityType.MOB) {
                 // For mobs, just validate that the mob exists
-                if (!MobFactory.hasMob(output)) {
+                if (!MobFactory.hasMob(output.getName())) {
                     return false; // Invalid mob
                 }
             }
         }
 
-        if (areAllEntitiesValid(input)) {
-            recipes.add(new AlchemyRecipe(new ArrayList<>(input), new ArrayList<>(outputs)));
-            return true;
+        // Validate all inputs
+        for (InputItem inputItem : input) {
+            if (!isEntityValid(inputItem.getName())) {
+                return false; // Invalid input
+            }
         }
-        return false; // Recipe not added due to invalid entities
+
+        recipes.add(new AlchemyRecipe(new ArrayList<>(input), new ArrayList<>(outputs)));
+        return true;
     }
 
     /**
      * Get output items for given input ingredients
      */
-    public static List<String> getOutputForInput(List<String> input) {
+    public static List<OutputItem> getOutputForInput(List<InputItem> input) {
         // Normalize the input to handle carcasses
-        List<String> normalizedInput = normalizeInput(input);
+        List<InputItem> normalizedInput = normalizeInput(input);
 
         // Try to find exact match
         for (AlchemyRecipe recipe : recipes) {
-            List<String> recipeInput = recipe.getInput();
+            List<InputItem> recipeInput = recipe.getInput();
             if (recipeInput.size() == normalizedInput.size() &&
                 recipeInput.containsAll(normalizedInput) &&
                 normalizedInput.containsAll(recipeInput)) {
@@ -221,13 +244,13 @@ public class AlchemyRecipes {
     /**
      * Normalize input to handle carcasses by extracting the mob name from carcass items
      */
-    private static List<String> normalizeInput(List<String> input) {
-        List<String> normalized = new ArrayList<>();
-        for (String item : input) {
-            if (item.startsWith(Carcass.CARCASS_OF)) {
+    private static List<InputItem> normalizeInput(List<InputItem> input) {
+        List<InputItem> normalized = new ArrayList<>();
+        for (InputItem item : input) {
+            if (item.getName().startsWith(Carcass.CARCASS_OF)) {
                 // Extract the mob name from the carcass
-                String mobName = item.substring(Carcass.CARCASS_OF.length());
-                normalized.add(mobName);
+                String mobName = item.getName().substring(Carcass.CARCASS_OF.length());
+                normalized.add(new InputItem(mobName, item.getCount()));
             } else {
                 normalized.add(item);
             }
@@ -238,7 +261,7 @@ public class AlchemyRecipes {
     /**
      * Check if a recipe exists for the given inputs
      */
-    public static boolean hasRecipe(List<String> input) {
+    public static boolean hasRecipe(List<InputItem> input) {
         return getOutputForInput(input) != null;
     }
 
@@ -281,20 +304,55 @@ public class AlchemyRecipes {
      * This method is called from Lua scripts to register custom recipes at runtime
      */
     @LuaInterface
-    public static boolean registerRecipeFromLua(List<String> input, Object output) {
-        List<String> outputs = new ArrayList<>();
+    public static boolean registerRecipeFromLua(List<Object> input, Object output) {
+        List<InputItem> inputs = new ArrayList<>();
+        List<OutputItem> outputs = new ArrayList<>();
+
+        // Process input items - handle both string format (backward compatibility) and object format
+        for (Object inputObj : input) {
+            if (inputObj instanceof String) {
+                // Backward compatibility: single string means count of 1
+                inputs.add(new InputItem((String) inputObj, 1));
+            } else if (inputObj instanceof Map) {
+                // New format: object with name and count properties
+                Map<?, ?> inputMap = (Map<?, ?>) inputObj;
+                String name = (String) inputMap.get("name");
+                Integer count = (Integer) inputMap.get("count");
+                if (name != null && count != null) {
+                    inputs.add(new InputItem(name, count));
+                } else {
+                    return false; // Invalid input format
+                }
+            } else {
+                return false; // Invalid input type
+            }
+        }
 
         // Handle both single output (string) and multiple outputs (table/array)
         if (output instanceof String) {
-            outputs.add((String) output);
+            outputs.add(new OutputItem((String) output, 1)); // Default count to 1
         } else if (output instanceof List) {
-            outputs.addAll((List<String>) output);
+            for (Object obj : (List<?>) output) {
+                if (obj instanceof String) {
+                    outputs.add(new OutputItem((String) obj, 1)); // Default count to 1
+                } else if (obj instanceof Map) {
+                    // New format: object with name and count properties
+                    Map<?, ?> outputMap = (Map<?, ?>) obj;
+                    String name = (String) outputMap.get("name");
+                    Integer count = (Integer) outputMap.get("count");
+                    if (name != null && count != null) {
+                        outputs.add(new OutputItem(name, count));
+                    } else {
+                        return false; // Invalid output format
+                    }
+                }
+            }
         } else {
             return false; // Invalid output type
         }
 
         // Use the existing addRecipe method which handles validation
-        return addRecipe(input, outputs);
+        return addRecipe(inputs, outputs);
     }
 
     /**
@@ -307,8 +365,11 @@ public class AlchemyRecipes {
         List<AlchemyRecipe> matchingRecipes = new ArrayList<>();
 
         for (AlchemyRecipe recipe : recipes) {
-            if (recipe.getInput().contains(itemName)) {
-                matchingRecipes.add(recipe);
+            for (InputItem inputItem : recipe.getInput()) {
+                if (inputItem.getName().equals(itemName)) {
+                    matchingRecipes.add(recipe);
+                    break; // Found in this recipe, move to next recipe
+                }
             }
         }
 
@@ -322,19 +383,13 @@ public class AlchemyRecipes {
      * @param playerInventory The player's current inventory
      * @return True if the player has all required ingredients in sufficient quantities
      */
-    public static boolean hasRequiredIngredients(List<String> inputIngredients, Map<String, Integer> playerInventory) {
-        // Count required quantities for each ingredient
-        Map<String, Integer> requiredQuantities = new HashMap<>();
-        for (String ingredient : inputIngredients) {
-            requiredQuantities.put(ingredient, requiredQuantities.getOrDefault(ingredient, 0) + 1);
-        }
-
+    public static boolean hasRequiredIngredients(List<InputItem> inputIngredients, Map<String, Integer> playerInventory) {
         // Check if player has enough of each required ingredient
-        for (Map.Entry<String, Integer> required : requiredQuantities.entrySet()) {
-            String ingredient = required.getKey();
-            int requiredQty = required.getValue();
+        for (InputItem ingredient : inputIngredients) {
+            String ingredientName = ingredient.getName();
+            int requiredQty = ingredient.getCount();
 
-            int availableQty = playerInventory.getOrDefault(ingredient, 0);
+            int availableQty = playerInventory.getOrDefault(ingredientName, 0);
 
             if (availableQty < requiredQty) {
                 return false; // Not enough of this ingredient
@@ -382,8 +437,11 @@ public class AlchemyRecipes {
         List<AlchemyRecipe> matchingRecipes = new ArrayList<>();
 
         for (AlchemyRecipe recipe : recipes) {
-            if (recipe.getInput().contains(itemName)) {
-                matchingRecipes.add(recipe);
+            for (InputItem inputItem : recipe.getInput()) {
+                if (inputItem.getName().equals(itemName)) {
+                    matchingRecipes.add(recipe);
+                    break; // Found in this recipe, move to next recipe
+                }
             }
         }
 

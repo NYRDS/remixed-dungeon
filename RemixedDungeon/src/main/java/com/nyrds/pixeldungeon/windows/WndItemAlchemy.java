@@ -2,9 +2,10 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipe;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
+import com.nyrds.pixeldungeon.alchemy.OutputItem;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.GuiProperties;
@@ -25,7 +26,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 /**
  * Window for displaying and executing alchemy recipes that include a specific item
@@ -251,31 +251,25 @@ public class WndItemAlchemy extends Window {
             StringBuilder description = new StringBuilder();
             description.append("Recipe: ");
 
-            // Count occurrences of each ingredient
-            Map<String, Integer> inputCounts = new HashMap<>();
-            for (String input : inputs) {
-                inputCounts.put(input, inputCounts.getOrDefault(input, 0) + 1);
-            }
-
             // Add input ingredients with counts
             boolean first = true;
-            for (var entry : inputCounts.entrySet()) {
+            for (var inputItem : inputs) {
                 if (!first) {
                     description.append(" + ");
                 }
                 first = false;
 
-                String input = entry.getKey();
-                Item inputItem = ItemFactory.itemByName(input);
+                String input = inputItem.getName();
+                Item inputItemInstance = ItemFactory.itemByName(input);
                 input = input.toLowerCase();
-                int count = entry.getValue();
+                int count = inputItem.getCount();
 
                 String color = "green";
                 if (input.contains("remains")) {
                     color = "red";
                 }
 
-                description.append(Text.color(inputItem.name(), color));
+                description.append(Text.color(inputItemInstance.name(), color));
                 if (count > 1) {
                     description.append(" x").append(count);
                 }
@@ -283,23 +277,17 @@ public class WndItemAlchemy extends Window {
 
             description.append(" = ");
 
-            // Count occurrences of each output
-            Map<String, Integer> outputCounts = new HashMap<>();
-            for (String output : outputs) {
-                outputCounts.put(output, outputCounts.getOrDefault(output, 0) + 1);
-            }
-
             // Add output items with counts
             first = true;
-            for (Map.Entry<String, Integer> entry : outputCounts.entrySet()) {
+            for (var outputItem : outputs) {
                 if (!first) {
                     description.append(" + ");
                 }
                 first = false;
 
-                String output = entry.getKey();
+                String output = outputItem.getName();
                 String lower_output = output.toLowerCase();
-                int count = entry.getValue();
+                int count = outputItem.getCount();
 
                 // Determine the entity type to handle items, mobs, and carcasses differently
                 AlchemyRecipes.EntityType entityType =
@@ -314,9 +302,9 @@ public class WndItemAlchemy extends Window {
 
                 if (entityType == AlchemyRecipes.EntityType.ITEM ||
                         entityType == AlchemyRecipes.EntityType.CARCASS) {
-                    Item outputItem = ItemFactory.itemByName(output);
+                    Item outputItemInstance = ItemFactory.itemByName(output);
                     // Handle items and carcasses
-                    displayName = outputItem.name();
+                    displayName = outputItemInstance.name();
 
                 } else if (entityType == AlchemyRecipes.EntityType.MOB) {
                     Mob mob = MobFactory.mobByName(output);
@@ -347,16 +335,10 @@ public class WndItemAlchemy extends Window {
             // Remove the required ingredients from the player's inventory
             var inputs = selectedRecipe.getInput();
 
-            // Count required quantities for each ingredient
-            Map<String, Integer> requiredQuantities = new HashMap<>();
-            for (String ingredient : inputs) {
-                requiredQuantities.put(ingredient, requiredQuantities.getOrDefault(ingredient, 0) + 1);
-            }
-
             // Remove ingredients from inventory
-            for (var required : requiredQuantities.entrySet()) {
-                String ingredientName = required.getKey();
-                int requiredQty = required.getValue();
+            for (var inputItem : inputs) {
+                String ingredientName = inputItem.getName();
+                int requiredQty = inputItem.getCount();
 
                 // Find and remove the required items
                 List<Item> itemsToRemove = new ArrayList<>();
@@ -380,27 +362,33 @@ public class WndItemAlchemy extends Window {
             }
 
             // Process the output items and mobs
-            List<String> outputs = selectedRecipe.getOutput();
-            for (String outputName : outputs) {
+            List<OutputItem> outputs = selectedRecipe.getOutput();
+            for (OutputItem outputItem : outputs) {
+                String outputName = outputItem.getName();
+                int outputCount = outputItem.getCount();
+                
                 // Determine the entity type to handle items, mobs, and carcasses differently
                 AlchemyRecipes.EntityType entityType = AlchemyRecipes.determineEntityType(outputName);
                 try {
                     if (entityType == AlchemyRecipes.EntityType.ITEM ||
                             entityType == AlchemyRecipes.EntityType.CARCASS) {
                         // Handle items and carcasses
-                        Item outputItem = ItemFactory.itemByName(outputName);
-                        level.animatedDrop(outputItem, pos);
+                        for (int i = 0; i < outputCount; i++) {
+                            Item outputItemInstance = ItemFactory.itemByName(outputName);
+                            level.animatedDrop(outputItemInstance, pos);
+                        }
                     } else if (entityType == AlchemyRecipes.EntityType.MOB) {
                         // Handle mobs - spawn them at the hero's position
-
-                        Mob mob = MobFactory.mobByName(outputName);
-                        int mobPos = level.getEmptyCellNextTo(pos);
-                        if (level.cellValid(mobPos)) {
-                            mob.setPos(mobPos);
-                            mob.makePet(hero);
-                            level.spawnMob(mob, -1, pos);
-                        } else {
-                            level.animatedDrop(mob.carcass(), pos);
+                        for (int i = 0; i < outputCount; i++) {
+                            Mob mob = MobFactory.mobByName(outputName);
+                            int mobPos = level.getEmptyCellNextTo(pos);
+                            if (level.cellValid(mobPos)) {
+                                mob.setPos(mobPos);
+                                mob.makePet(hero);
+                                level.spawnMob(mob, -1, pos);
+                            } else {
+                                level.animatedDrop(mob.carcass(), pos);
+                            }
                         }
                     }
                 } catch (Exception e) {

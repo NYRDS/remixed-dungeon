@@ -4,22 +4,22 @@ import java.util.List;
 
 /**
  * Pod class representing a single alchemy recipe
- * Contains input ingredients and output products
+ * Contains input ingredients and output products with their respective counts
  */
 public class AlchemyRecipe {
-    private final List<String> input;
-    private final List<String> output;
+    private final List<InputItem> input;
+    private final List<OutputItem> output;
 
-    public AlchemyRecipe(List<String> input, List<String> output) {
+    public AlchemyRecipe(List<InputItem> input, List<OutputItem> output) {
         this.input = input;
         this.output = output;
     }
 
-    public List<String> getInput() {
+    public List<InputItem> getInput() {
         return input;
     }
 
-    public List<String> getOutput() {
+    public List<OutputItem> getOutput() {
         return output;
     }
 

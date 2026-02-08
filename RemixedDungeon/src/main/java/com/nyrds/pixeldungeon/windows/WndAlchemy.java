@@ -2,6 +2,8 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipe;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
+import com.nyrds.pixeldungeon.alchemy.InputItem;
+import com.nyrds.pixeldungeon.alchemy.OutputItem;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -12,8 +14,7 @@ import com.watabou.pixeldungeon.ui.Window;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 /**
  * Window for displaying and executing alchemy recipes
@@ -174,7 +175,10 @@ public class WndAlchemy extends Window {
 
             // Update the transmutation circle with the selected recipe as seed
             if (transmutationCircle != null) {
-                transmutationCircle.setRecipe(recipeEntry.getInput(), recipeEntry.getOutput());
+                transmutationCircle.setRecipe(
+                    recipeEntry.getInput().stream().map(InputItem::getName).collect(Collectors.toList()),
+                    recipeEntry.getOutput().stream().map(OutputItem::getName).collect(Collectors.toList())
+                );
             }
         });
         return recipeItem;
@@ -207,7 +211,10 @@ public class WndAlchemy extends Window {
 
                         // Update the transmutation circle with the selected recipe as seed
                         if (transmutationCircle != null) {
-                            transmutationCircle.setRecipe(selectedRecipe.getInput(), selectedRecipe.getOutput());
+                            transmutationCircle.setRecipe(
+                                selectedRecipe.getInput().stream().map(InputItem::getName).collect(Collectors.toList()),
+                                selectedRecipe.getOutput().stream().map(OutputItem::getName).collect(Collectors.toList())
+                            );
                         }
                         break;
                     }

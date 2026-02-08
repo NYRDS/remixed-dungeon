@@ -1,8 +1,11 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
+import com.nyrds.pixeldungeon.alchemy.InputItem;
+import com.nyrds.pixeldungeon.alchemy.OutputItem;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
@@ -23,7 +26,7 @@ import lombok.Getter;
 public class RecipeListItem extends Component implements IClickable {
 
     @Getter
-    private final List<String> inputs;
+    private final List<InputItem> inputs;
 
     private final HBox rowBox;
     private final List<Item> inputItems; // Store actual item instances to check against hero inventory
@@ -35,7 +38,7 @@ public class RecipeListItem extends Component implements IClickable {
     private boolean isSelected = false;
 
 
-    public RecipeListItem(List<String> inputs, List<String> outputs) {
+    public RecipeListItem(List<InputItem> inputs, List<OutputItem> outputs) {
         super();
 
         this.inputs = inputs;
@@ -43,14 +46,15 @@ public class RecipeListItem extends Component implements IClickable {
         // Initialize the input items and ingredient slots lists
         inputItems = new ArrayList<>();
 
-        rowBox = new HBox(150); 
+        rowBox = new HBox(150);
         // Create HBox for ingredients
         ingredientsBox = new HBox(100);
-        ingredientsBox.setGap(-10);
+        ingredientsBox.setGap(-2);
+        ingredientsBox.setAlign(VBox.Align.Center);
 
         // Add input ingredients to the ingredients box as ItemSlots
-        for (String input : inputs) {
-            Item ingredient = ItemFactory.itemByName(input);
+        for (InputItem input : inputs) {
+            Item ingredient = ItemFactory.itemByName(input.getName());
             inputItems.add(ingredient);
 
             ItemSprite inputSprite = new ItemSprite(ingredient);
@@ -60,32 +64,51 @@ public class RecipeListItem extends Component implements IClickable {
             inputSprite.brightness(hasIngredient ? 1f : 0.5f);
 
             ingredientsBox.add(inputSprite);
+            if(input.getCount() > 1) {
+                // Add count text overlay
+                BitmapText countText = new BitmapText("x"+input.getCount(), PixelScene.getFont1x());
+                countText.hardlight(0xFFFF00); // Yellow color for visibility
+
+                // Add the count text to the parent container
+                ingredientsBox.add(countText);
+            }
+
         }
 
         // Create HBox for output
         outputBox = new HBox(100);
-        outputBox.setGap(-5);
+        outputBox.setGap(-2);
+        outputBox.setAlign(VBox.Align.Center);
 
         // Add all output components to the output box
-        for (String singleOutput : outputs) {
-            AlchemyRecipes.EntityType singleEntityType = AlchemyRecipes.determineEntityType(singleOutput);
+        for (OutputItem singleOutput : outputs) {
+            AlchemyRecipes.EntityType singleEntityType = AlchemyRecipes.determineEntityType(singleOutput.getName());
 
             Image sprite = null;
 
             if (singleEntityType == AlchemyRecipes.EntityType.ITEM || singleEntityType == AlchemyRecipes.EntityType.CARCASS) {
-                Item outputItem  = ItemFactory.itemByName(singleOutput);
+                Item outputItem  = ItemFactory.itemByName(singleOutput.getName());
                 sprite = new ItemSprite(outputItem);
 
             } else if (singleEntityType == AlchemyRecipes.EntityType.MOB) {
 
-                Mob mob = MobFactory.mobByName(singleOutput);
+                Mob mob = MobFactory.mobByName(singleOutput.getName());
                 sprite = mob.newSprite().avatar();
             }
 
             assert sprite != null;
 
             sprite.brightness(0.5f);
+
             outputBox.add(sprite);
+
+            if(singleOutput.getCount()>1) {
+                // Add count text overlay for output
+                BitmapText countText = new BitmapText("x"+singleOutput.getCount(), PixelScene.getFont1x());
+                countText.hardlight(0xFFFF00); // Yellow color for visibility
+                // Add the count text to the parent container
+                outputBox.add(countText);
+            }
         }
         outputBox.add( new Component() {
             @Override

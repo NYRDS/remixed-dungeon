@@ -2,15 +2,16 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipe;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
+import com.nyrds.pixeldungeon.alchemy.InputItem;
+import com.nyrds.pixeldungeon.alchemy.OutputItem;
+import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.noosa.Text;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -65,26 +66,18 @@ public class WndRecipeChecker extends Window {
             for (AlchemyRecipe recipe : availableRecipes) {
                 // Format input ingredients
                 StringBuilder inputStr = new StringBuilder();
-                Map<String, Integer> inputCounts = new HashMap<>();
-                for (String input : recipe.getInput()) {
-                    inputCounts.put(input, inputCounts.getOrDefault(input, 0) + 1);
-                }
-
-                for (Map.Entry<String, Integer> entry : inputCounts.entrySet()) {
-                    if (inputStr.length() > 0) inputStr.append(", ");
-                    inputStr.append(entry.getValue()).append("x ").append(entry.getKey());
+                for (int i = 0; i < recipe.getInput().size(); i++) {
+                    InputItem input = recipe.getInput().get(i);
+                    if (i > 0) inputStr.append(", ");
+                    inputStr.append(input.getCount()).append("x ").append(input.getName());
                 }
 
                 // Format output items
                 StringBuilder outputStr = new StringBuilder();
-                Map<String, Integer> outputCounts = new HashMap<>();
-                for (String output : recipe.getOutput()) {
-                    outputCounts.put(output, outputCounts.getOrDefault(output, 0) + 1);
-                }
-
-                for (Map.Entry<String, Integer> entry : outputCounts.entrySet()) {
-                    if (outputStr.length() > 0) outputStr.append(", ");
-                    outputStr.append(entry.getValue()).append("x ").append(entry.getKey());
+                for (int i = 0; i < recipe.getOutput().size(); i++) {
+                    OutputItem output = recipe.getOutput().get(i);
+                    if (i > 0) outputStr.append(", ");
+                    outputStr.append(output.getCount()).append("x ").append(output.getName());
                 }
 
                 // Create recipe display
