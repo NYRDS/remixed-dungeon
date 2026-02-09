@@ -38,6 +38,7 @@ public class AlchemyRecipes {
     // Static initialization to load recipes
     static {
         loadRecipesFromJson();
+        generateMobResurrectionRecipes();
     }
 
     /**
@@ -59,10 +60,7 @@ public class AlchemyRecipes {
                     JSONArray inputsArray = recipe.getJSONArray("input");
                     for (int j = 0; j < inputsArray.length(); j++) {
                         Object inputObj = inputsArray.get(j);
-                        if (inputObj instanceof String) {
-                            // Backward compatibility: single string means count of 1
-                            inputs.add(new InputItem((String) inputObj));
-                        } else if (inputObj instanceof JSONObject) {
+                        if (inputObj instanceof JSONObject) {
                             JSONObject inputJson = (JSONObject) inputObj;
                             String name = inputJson.getString("name");
                             int count = inputJson.optInt("count", 1); // Default to 1 if count not specified
@@ -78,10 +76,7 @@ public class AlchemyRecipes {
                     JSONArray outputsArray = recipe.getJSONArray("outputs");
                     for (int k = 0; k < outputsArray.length(); k++) {
                         Object outputObj = outputsArray.get(k);
-                        if (outputObj instanceof String) {
-                            // Backward compatibility: single string means count of 1
-                            outputs.add(new OutputItem((String) outputObj));
-                        } else if (outputObj instanceof JSONObject) {
+                        if (outputObj instanceof JSONObject) {
                             JSONObject outputJson = (JSONObject) outputObj;
                             String name = outputJson.getString("name");
                             int count = outputJson.optInt("count", 1); // Default to 1 if count not specified
@@ -110,6 +105,95 @@ public class AlchemyRecipes {
             }
         } catch (JSONException e) {
             EventCollector.logException(e);
+        }
+    }
+
+    /**
+     * Generate mob resurrection recipes programmatically
+     * Creates recipes: 5x mob carcass + varying amounts of VileEssence based on mob power = mob
+     */
+    private static void generateMobResurrectionRecipes() {
+        // Get all available mob names from the factory
+        for (String mobName : MobFactory.getAllMobNames()) {
+            // Skip NPCs and special mobs that shouldn't be resurrectable
+            if (isNonResurrectableMob(mobName)) {
+                continue;
+            }
+
+            // Calculate VileEssence requirement based on mob power/level
+            int vileEssenceReq = calculateVileEssenceRequirement(mobName);
+            
+            // Create the recipe: 5x carcass + Xx VileEssence = mob
+            List<InputItem> inputs = new ArrayList<>();
+            inputs.add(new InputItem(Carcass.CARCASS_OF + mobName, 5)); // 5x mob carcass
+            inputs.add(new InputItem("VileEssence", vileEssenceReq));   // Variable VileEssence based on mob power
+            
+            List<OutputItem> outputs = new ArrayList<>();
+            outputs.add(new OutputItem(mobName, 1)); // 1x the original mob
+            
+            // Add the recipe if it's valid
+            if (addRecipe(inputs, outputs)) {
+                // Optionally log the generated recipe for debugging
+                // GLog.debug("Generated resurrection recipe: 5x %s + %dx VileEssence = 1x %s", 
+                //           Carcass.CARCASS_OF + mobName, vileEssenceReq, mobName);
+            }
+        }
+    }
+
+    /**
+     * Check if a mob should not be resurrectable (NPCs, special mobs, etc.)
+     */
+    private static boolean isNonResurrectableMob(String mobName) {
+        // Skip NPCs
+        if (mobName.endsWith("NPC")) {
+            return true;
+        }
+        
+        // Skip special mobs that shouldn't be resurrectable
+        String[] nonResurrectableMobs = {
+            "MirrorImage", "Wraith", "Skeleton", "FetidRat", "SuspiciousRat", 
+            "PseudoRat", "Ghost", "Undead", "Shopkeeper", "TownShopkeeper",
+            "Sheep", "Mimic", "MimicPie", "MimicAmulet", "Statue", "ArmoredStatue", "GoldenStatue"
+        };
+        
+        for (String nonResurrectable : nonResurrectableMobs) {
+            if (mobName.equals(nonResurrectable)) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+
+    /**
+     * Calculate VileEssence requirement based on mob power/level
+     * More powerful mobs require more VileEssence
+     */
+    private static int calculateVileEssenceRequirement(String mobName) {
+        try {
+            // Create a temporary instance to get mob stats
+            com.watabou.pixeldungeon.actors.mobs.Mob mob = MobFactory.mobByName(mobName);
+            
+            // Base calculation on expForKill (a measure of mob strength) and HP
+            int expFactor = Math.max(1, mob.expForKill); // Higher exp reward = stronger mob
+            int hpFactor = Math.max(1, mob.ht() / 10); // Factor in based on HP
+            
+            // Calculate requirement (higher for stronger mobs)
+            int requirement = Math.max(3, (expFactor + hpFactor) / 3);
+            
+            return requirement;
+            
+        } catch (Exception e) {
+            // If we can't instantiate the mob, use a default value
+            // Base level mobs get 3-5 essence, higher level mobs get more
+            if (mobName.contains("King") || mobName.contains("Boss") || mobName.contains("Yog")) {
+                return 20; // High value for bosses
+            } else if (mobName.contains("Elemental") || mobName.contains("Golem") || 
+                       mobName.contains("Scorpio") || mobName.contains("Tengu")) {
+                return 10; // Medium-high value for strong mobs
+            } else {
+                return 5; // Default for regular mobs
+            }
         }
     }
 

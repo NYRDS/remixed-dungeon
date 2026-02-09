@@ -1,11 +1,15 @@
 package com.nyrds.pixeldungeon.alchemy;
 
 import java.util.List;
+import java.util.Objects;
+
+import lombok.Getter;
 
 /**
  * Pod class representing a single alchemy recipe
  * Contains input ingredients and output products with their respective counts
  */
+@Getter
 public class AlchemyRecipe {
     private final List<InputItem> input;
     private final List<OutputItem> output;
@@ -15,14 +19,6 @@ public class AlchemyRecipe {
         this.output = output;
     }
 
-    public List<InputItem> getInput() {
-        return input;
-    }
-
-    public List<OutputItem> getOutput() {
-        return output;
-    }
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -30,8 +26,8 @@ public class AlchemyRecipe {
 
         AlchemyRecipe that = (AlchemyRecipe) obj;
 
-        if (input != null ? !input.equals(that.input) : that.input != null) return false;
-        return output != null ? output.equals(that.output) : that.output == null;
+        if (!Objects.equals(input, that.input)) return false;
+        return Objects.equals(output, that.output);
     }
 
     @Override
