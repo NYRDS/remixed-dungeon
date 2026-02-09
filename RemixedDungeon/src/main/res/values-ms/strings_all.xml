@@ -190,6 +190,7 @@
     <string name="BellaNPC_Amulet_M">Hai si kacak, apa benda tu yang berkilauan. Azimat yang luar biasa! Dan awak... lebih hebat dari golongan kelas bawahan yang lain. Marilah kita berbual-bual dan berbincang tentang masa hadapan kita bersama?</string>
     <string name="BellaNPC_Angry">Kurang ajar... memang dasar golongan kelas bawahan!</string>
     <string name="BellaNPC_Desc">Gadis yang berpenampilan mewah dan anggun. Kelakuan dia seolah-olah \&quot;Saya lebih baik dan bergaya dari orang lain.\&quot;</string>
+    <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Saya tidak minat orang berkelas rendah seperti awak!</string>
     <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
@@ -2514,6 +2515,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

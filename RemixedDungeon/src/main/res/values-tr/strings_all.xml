@@ -89,6 +89,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="AwarenessBuff_Info">Duyular keskinleşti ve çevre hakkında daha fazla farkındalık sağladı.</string>
     <string name="AwarenessBuff_Name">Farkındalık</string>
     <string name="AzuterronNPC_Desc">Siyah bir sis ile kaplı gizemli bir figür.</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">Yabancı</string>
     <string name="AzuterronNPC_Name_Objective">Yabancı</string>
     <string name="AzuterronNPC_Quest_End">Harika. Bu iksiri al, faydasını göreceksin.</string>
@@ -2841,6 +2842,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
