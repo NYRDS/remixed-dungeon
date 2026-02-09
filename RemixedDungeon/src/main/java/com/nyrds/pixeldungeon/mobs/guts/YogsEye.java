@@ -42,7 +42,7 @@ public class YogsEye extends Boss {
     int [] trace;
     int distance = 0;
 
-    public YogsEye() {;
+    public YogsEye() {
         movable = false;
         hp(ht(1000));
 
@@ -103,14 +103,9 @@ public class YogsEye extends Boss {
 
         dmg >>= damageShift;
 
-        super.damage(dmg, src);
-    }
-
-    @Override
-    public int defenseProc(Char enemy, int damage) {
         CharUtils.spawnOnNextCell(this, "Larva", (int) (10 * GameLoop.getDifficultyFactor()));
 
-        return super.defenseProc(enemy, damage);
+        super.damage(dmg, src);
     }
 
 
