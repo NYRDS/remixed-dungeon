@@ -2572,6 +2572,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndInstallingMod_deleting_file">Удаляем 1%s</string>
     <string name="WndInstallingMod_please_wait">Устанавливаем мод, подождите...</string>
     <string name="WndInstallingMod_skipping_file">Пропускаем %s</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Выполнить рецепт</string>
     <string name="WndItemAlchemy_Title">Рецепты алхимии с %s</string>
     <string name="WndJournal_Levels">Уровни</string>
     <string name="WndJournal_Logbook">Журнал</string>
@@ -3043,6 +3044,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 

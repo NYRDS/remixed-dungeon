@@ -350,6 +350,7 @@
     <string name="Challenges_Names_6">Runas Prohibidas</string>
     <string name="Challenges_Names_7">Pacifismo</string>
     <string name="Challenges_Names_8">Niguna ciudad.</string>
+    <string name="ChampionOfAirBuff_Info">Este rasgo otorga a la criatura la esencia de los vientos, mejorando su agilidad y destreza en combate. El Campeón del Aire se convierte en un adversario formidable, capaz de desatar ataques rápidos y devastadores que pueden cambiar rápidamente el curso de la batalla.</string>
     <string name="ChaosArmor_Info">Las placas color rojo sangre de esta armadura unidas con cadenas de color rojo oscuro. Irradia energía caótica al tocarla.</string>
     <string name="ChaosArmor_Name">Armadura de caos</string>
     <string name="ChaosBow_Gender">masculine</string>
@@ -2818,6 +2819,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
