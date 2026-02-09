@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
@@ -32,6 +33,12 @@ public class Invisibility extends FlavourBuff {
 	@Override
 	public int icon() {
 		return BuffIndicator.INVISIBLE;
+	}
+
+	@Override
+	public void spellCasted(Char caster, Spell spell) {
+		dispel(caster);
+		super.spellCasted(caster, spell);
 	}
 
 	public static void dispel(@NotNull Char tgt) {
