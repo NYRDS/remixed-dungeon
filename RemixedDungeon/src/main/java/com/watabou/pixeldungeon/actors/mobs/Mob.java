@@ -251,6 +251,8 @@ public abstract class Mob extends Char {
             setState(MobAi.getStateByClass(Horrified.class));
         } else if (buff instanceof Sleep) {
             new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
+            
+            // Use regular Sleeping AI (it will handle pain immunity internally)
             setState(MobAi.getStateByClass(Sleeping.class));
             postpone(Sleep.SWS);
         }

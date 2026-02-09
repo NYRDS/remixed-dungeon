@@ -579,6 +579,8 @@ Your opinion matters!</string>
   <string name="FuryBuff_Info">The eyes went bloody red from all that fury inside.</string>
   <string name="GasImmuneBuff_Name">Gas Immunity</string>
   <string name="GasImmuneBuff_Info">Immune to all gases.</string>
+  <string name="AnesthesiaBuff_Name">Anesthesia</string>
+  <string name="AnesthesiaBuff_Info">Feels no pain and won\'t wake up from attacks, but still takes damage.</string>
   <string name="Hunger_Death">You starved to death...</string>
   <string name="HungerBuff_Name1">Hungry</string>
   <string name="HungerBuff_Info1">You\'re hungry!</string>
@@ -2687,6 +2689,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="LightningBolt_Info">A spell that is shared among ancient shamans, that will shock your enemies twice as effectively, especially if they are foolish enough to be on standing on water.</string>
   <string name="Heal_Name">Heal</string>
   <string name="Heal_Info">A pretty useful spell in Dungeon, right?</string>
+  <string name="Anesthesia_Name">Anesthesia</string>
+  <string name="Anesthesia_Info">Puts target to deep sleep. Target won\'t wake up when attacked.</string>
   <string name="Order_Name">Order</string>
   <string name="Order_Info">With proper concentration, your orders are almost undeniable.</string>
   <string name="Order_Resist">How dare you?!!</string>

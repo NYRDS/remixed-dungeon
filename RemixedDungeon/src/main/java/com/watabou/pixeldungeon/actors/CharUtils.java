@@ -12,6 +12,7 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Ascend;
 import com.nyrds.pixeldungeon.ml.actions.Attack;
@@ -257,7 +258,7 @@ public class CharUtils {
             if (target.friendly(controlTarget)) {
                 return new Interact(target);
             } else {
-                if (!(target.state instanceof Sleeping)) {
+                if (!(target.state instanceof Sleeping) || target.hasBuff(BuffFactory.ANESTHESIA)) {
                     return new Attack(target);
                 } else {
 
