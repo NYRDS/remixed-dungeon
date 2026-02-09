@@ -795,6 +795,7 @@
     <string name="GoldenSword_Name">黄金剑</string>
     <string name="Golem_Defense">格挡</string>
     <string name="Golem_Desc">矮人们尝试将他们关于机械的知识与新发现的元素力量相结合。土之灵作为公认的最容易掌控的元素之灵，被用来当作机械的“灵魂”。即使这样，仪式中任何细微的失误都会造成严重的爆炸。</string>
+    <string name="Golem_Gender">neuter</string>
     <string name="Golem_Name">魔像</string>
     <string name="Golem_Name_Objective">魔像</string>
     <string name="Goo_Desc">人们对粘咕知之甚少。它很有可能甚至不是一个生物，而是获得了自由意志的下水道物质聚合物。至少很明显黑魔法在它身上起了作用。</string>
@@ -2803,6 +2804,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
