@@ -2505,6 +2505,7 @@
     <string name="town_deco_counter_name">Прилавок</string>
     <string name="town_deco_covered_table_desc">Дерев\'яний стіл накритий білою скатертиною.</string>
     <string name="town_deco_covered_table_name">Стіл</string>
+    <string name="town_deco_crate_desc">Міцний дерев\'яний ящик, у якому зберігаються його таємниці.</string>
     <string name="town_deco_cross_desc">Литий срібний хрест, символ місцевої релігії - \&quot;Свідки Санти - Володаря Глибин\&quot;.</string>
     <string name="town_deco_cross_name">Хрест</string>
     <string name="town_deco_crossroad_desc">Грубо зроблений стовп із прибитими дощечками у вигляді стрілок, текст на них давно вигорів, схоже через погані погодні умови.</string>
@@ -2660,6 +2661,8 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

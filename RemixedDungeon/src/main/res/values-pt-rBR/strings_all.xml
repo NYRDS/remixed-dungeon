@@ -1539,6 +1539,7 @@ Parede
     <string name="RatSkull_Info2">e por outro lado, demonstra que o dono é capaz de matar ratos, até os maiores e malcheirosos.</string>
     <string name="RatSkull_Name">crânio de rato gigante</string>
     <string name="Rat_Desc">Ratos marsupiais são habitantes agressivos, mas fracos de esgotos. Eles só podem ser perigosos em grandes números.</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">rato marsupial</string>
     <string name="Rat_Name_Objective">rato marsupial</string>
     <string name="Ration_Info">Nada de especial aqui: carne seca, alguns biscoitos - coisas deste tipo.</string>
@@ -2781,6 +2782,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

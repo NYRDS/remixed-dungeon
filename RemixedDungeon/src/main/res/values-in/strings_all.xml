@@ -185,6 +185,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Badges_Yog_Slain">Yog-Dzewa dibunuh</string>
     <string name="Bag_ACOpen">BUKA</string>
     <string name="Bandit_Desc">Tingkat lebih dalam dari Dungeon selalu menjadi persembunyian berbagai macam kriminal. Tidak semuanya dapat memiliki pikiran jernih di waktu yang lebih lama jauh dari sinar matahari. Dahulu, pencuri dan penjahat gila ini telah lupa siapa mereka dan mengapa mereka mencuri. Penjahat ini sepertinya telah melapisi pisaunya dengan sesuatu!</string>
+    <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">penjahat gila</string>
     <string name="Bandit_Name_Objective">penjahat gila</string>
     <string name="BardNPC_Desc">Penyair kota memainkan kecapinya.</string>
@@ -2767,6 +2768,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
