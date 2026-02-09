@@ -1874,6 +1874,7 @@
     <string name="Sungrass_Name">陽春草</string>
     <string name="SurfaceScene_GameOver">遊戲結束，人生苦短，及時行樂 :D</string>
     <string name="SuspiciousRat_Desc">老鼠在地牢中並不少見，可是居住在如此深的地方……當它移動時，你能清楚的看到它整個身體是如何顫動的。</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">可疑老鼠的正在猛烈的抽搐。</string>
     <string name="SuspiciousRat_Name">可疑的老鼠</string>
     <string name="SuspiciousRat_Name_Objective">可疑的老鼠</string>
@@ -2614,6 +2615,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
