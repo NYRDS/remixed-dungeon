@@ -1361,6 +1361,7 @@ Parede
     <string name="Pasty_Name">pastel de carne</string>
     <string name="Pickaxe_ACMine">MINERAR</string>
     <string name="Pickaxe_Info">Esta é uma ferramenta grande e resistente para quebrar rochas. Provavelmente isto pode ser usado como uma arma.</string>
+    <string name="Pickaxe_InsufficientStr">Força insuficiente para minerar!</string>
     <string name="Pickaxe_Name">picareta</string>
     <string name="Pickaxe_NoVein">Não há nenhum veio de ouro escuro perto de você para minerar</string>
     <string name="Piercing_Name_0">%s Perfurante</string>
@@ -2784,6 +2785,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

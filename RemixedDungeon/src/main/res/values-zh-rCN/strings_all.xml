@@ -351,6 +351,7 @@
     <string name="ChampionOfEarthBuff_Name">大地勇士</string>
     <string name="ChampionOfFireBuff_Info">“注入了火焰的狂暴，这一特质增强了生物的凶猛和战斗力。火焰冠军是一个可怕的对手，它能发动毁灭性的攻击，将敌人吞没在灼热的火焰中，让所有敢于对抗它的人感到恐惧。</string>
     <string name="ChampionOfFireBuff_Name">火焰君王</string>
+    <string name="ChampionOfWaterBuff_Info">水之勇士体现了海洋不可战胜的力量，增强了生物的韧性与坚毅。因此，它成为了坚定的对手，能够承受持续不断的攻击，并在逆境面前成为坚定不移的守护者。</string>
     <string name="ChaosArmor_Info">这件盔甲的血红色金属板被暗红的铁链缝接在一起，当你触碰它时会迸发出混沌能量。</string>
     <string name="ChaosArmor_Name">混沌护甲</string>
     <string name="ChaosBow_Info">一把充斥着混沌之力的骇人魔弓，每一发从它这里射出的箭矢都会携带有一些混沌能量。但万一失手……</string>
@@ -2807,6 +2808,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
