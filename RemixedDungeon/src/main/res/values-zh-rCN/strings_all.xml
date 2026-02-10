@@ -78,6 +78,7 @@
     <string name="ArmoredStatue_Name">活化石像</string>
     <string name="ArmoredStatue_Name_Objective">活化石像</string>
     <string name="Artifact_Limit">你最多只能同时佩戴2件饰品。</string>
+    <string name="AttackDelay_Increased">无法像这样使用%s。挥动缓慢，呼吸沉重……</string>
     <string name="Attack_Cooldown">攻击间隔</string>
     <string name="Attack_Range">攻击范围</string>
     <string name="AwarenessBuff_Info">感官变得敏锐，对周围环境的感知变得更强了。</string>
@@ -1224,7 +1225,7 @@
     <string name="ManaPotion_Name">魔力药水</string>
     <string name="ManaRegenerationBuff_Info">魔法恢复是一种buff，这能让一些事情变得简单一些。</string>
     <string name="ManaRegenerationBuff_Name">魔法恢复</string>
-    <string name="ManaShieldBuff_Info">一面魔法盾出现了，可以抵挡下一次来袭的攻击。</string>
+    <string name="ManaShieldBuff_Info">一个魔法护盾出现了，完全抵消了下一次受到的攻击。</string>
     <string name="ManaShieldBuff_Name">魔法护盾</string>
     <string name="Mana_Cost">魔法消耗：</string>
     <string name="Mana_Title">魔力</string>
@@ -2804,6 +2805,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

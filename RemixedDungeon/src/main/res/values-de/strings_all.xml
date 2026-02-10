@@ -1009,6 +1009,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Item_Name">etwas</string>
     <string name="Item_PackFull">Du hast keinen Platz mehr für %s</string>
     <string name="JarOfSouls_Desc">Die glühenden Augen eines Schädels, die auf diesem alten Glas abgebildet sind, sowie die unheimliche Energie, die es absondert, lässt dich unruhig werden.</string>
+    <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name">Gefäß der Seelen</string>
     <string name="JarOfSouls_Name_Objective">Gefäß der Seelen</string>
     <string name="Javelin_Gender">neuter</string>
@@ -1172,6 +1173,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="MailArmor_Name">Kettenrüstung</string>
     <string name="ManaPotion_Info">Dieser Trank wird deine spirituelle Energie wiederherstellen.</string>
     <string name="ManaPotion_Name">Mana Trank</string>
+    <string name="ManaShieldBuff_Info">Ein magischer Schild ist erschienen, der den nächsten eingehenden Angriff vollständig abwehrt.</string>
     <string name="ManaShieldBuff_Name">Magischer Schild</string>
     <string name="Mana_Cost">Mana Kosten:</string>
     <string name="Mana_Title">Mana</string>
@@ -2714,6 +2716,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 
