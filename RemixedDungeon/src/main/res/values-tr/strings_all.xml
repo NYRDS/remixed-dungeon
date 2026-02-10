@@ -45,6 +45,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="AmokArrow_Name">Delidana Oku</string>
     <string name="AmokBuff_Info">Talihsizlerin hayatlarını alarak, çılgınlığı hissedin.</string>
     <string name="AmokBuff_Name">Cinnet</string>
+    <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">Bu dartın ucundaki solüsyon herkesi akılsız, acımasız bir çılgına dönüştürecektir.</string>
     <string name="AmokDart_Name">Delidana Dartı</string>
     <string name="AmuletScene_Exit">Bugünlük bu kadar yeter</string>
@@ -2844,6 +2845,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

@@ -172,6 +172,7 @@
     <string name="Bandit_Desc">Aras lebih dalam kurungan bawah tanah merupakan tempat persembunyian semua kategori penjenayah. Bukan semua yang dapat mengawal kewarasan diri ketika berada di sini. Dahulu, ramai pencuri dan perompak menjadi gila dan lupa diri mereka apa yang mereka telah lakukan. Perompak-perompak ini telah menyelaputi pisau mereka dengan sesuatu!</string>
     <string name="Bandit_Name">perompak gila</string>
     <string name="Bandit_Name_Objective">perompak gila</string>
+    <string name="BardNPC_Desc">Pujangga bandar sedang memainkan gambusnya.</string>
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name_Objective">biduan</string>
     <string name="BarkskinBuff_Name">Kulit kayu</string>
@@ -2518,6 +2519,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -645,6 +645,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Senjata ini dibuat dari campuran logam spesial, yang membuatnya lebih ringan dibandingkan pisau biasa.</string>
     <string name="ElvenDagger_Name">pisau elf</string>
+    <string name="EncumbranceBuff_CharAct_1">Saya tidak cukup kuat untuk menggunakkan %s dengan benar.</string>
     <string name="EncumbranceBuff_CharAct_2">Benda %s ini terlalu berat bagi saya untuk digunakan secara efektif.</string>
     <string name="EncumbranceBuff_Info">Tidak cukup kekuatan untuk menggunakan %s secara efektif.</string>
     <string name="EncumbranceBuff_Name">Beban</string>
@@ -2769,6 +2770,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
