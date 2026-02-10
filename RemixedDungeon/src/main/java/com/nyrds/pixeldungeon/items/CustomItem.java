@@ -57,7 +57,7 @@ public class CustomItem extends EquipableItem {
     }
 
     private void initItem() {
-        script = new LuaScript("scripts/items/"+scriptFile, this);
+        script = new LuaScript("scripts/items/" +scriptFile, this);
         script.asInstance();
 
         LuaTable desc = script.run("itemDesc").checktable();

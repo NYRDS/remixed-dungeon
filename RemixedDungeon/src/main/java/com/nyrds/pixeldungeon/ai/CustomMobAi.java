@@ -15,7 +15,7 @@ public class CustomMobAi extends MobAi implements AiState {
 
     CustomMobAi(String scriptFile) {
         this.scriptFile = scriptFile;
-        script = new LuaScript("scripts/ai/"+scriptFile, this);
+        script = new LuaScript("scripts/ai/" +scriptFile, this);
     }
 
     @Override

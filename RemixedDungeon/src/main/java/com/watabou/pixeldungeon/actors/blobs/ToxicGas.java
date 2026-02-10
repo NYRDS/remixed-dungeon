@@ -61,15 +61,6 @@ public class ToxicGas extends Blob implements Doom {
 			}
 			
 			ch.damage( damage, this );
-			Char hero = Dungeon.hero;
-
-			// Check if the character died from this toxic gas damage and if the hero is a Doctor
-			if (!ch.isAlive() && ch != hero) {
-				// If the hero is a Doctor class, heal them for 1 HP per enemy killed by toxic gas
-				if (hero.getHeroClass() == HeroClass.DOCTOR) {
-					hero.heal(1);
-				}
-			}
 		}
 
 		Heap heap = Dungeon.level.getHeap( pos );

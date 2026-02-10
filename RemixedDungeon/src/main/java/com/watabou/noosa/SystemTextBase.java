@@ -35,7 +35,7 @@ public abstract class SystemTextBase extends Text {
     // Color properties
     static protected int highlightColor = 0xFFCC33FF; // Default violet highlight color (ARGB)
     static protected int defaultColor = 0xFFFFFFFF; // White color (ARGB)
-    static protected int bronzeColor = 0xFFCD7F32; // Bronze color for quoted text (ARGB)
+    static protected int bronzeColor = 0xFFFFFF00; // Bronze color for quoted text (ARGB)
     protected boolean hasMarkup = false;
     protected String originalText = "";
     

@@ -6,7 +6,7 @@ return spell.init{
     desc  = function ()
         return {
             image         = 2,
-            imageFile     = "spellsicons/plaguedoctor.png",
+            imageFile     = "spellsIcons/doctor.png",
             name          = "BloodTransfusion_Name",
             info          = "BloodTransfusion_Info",
             magicAffinity = "PlagueDoctor",

@@ -52,15 +52,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
+import lombok.Getter;
 
 
 public class Badges {
 
-	public static boolean isSaveNeeded() {
-		return saveNeeded;
-	}
-
-	public static void setSaveNeeded(boolean saveNeeded) {
+    public static void setSaveNeeded(boolean saveNeeded) {
 		Badges.saveNeeded = saveNeeded;
 		if(saveNeeded) {
 			saveGlobal();
@@ -230,7 +227,8 @@ public class Badges {
 	private static HashSet<Badge> global;
 	private static HashSet<Badge> local = new HashSet<>();
 
-	private static boolean saveNeeded = false;
+	@Getter
+    private static boolean saveNeeded = false;
 
 	public static void reset() {
 		local.clear();
@@ -962,7 +960,6 @@ public class Badges {
 				GLog.h(StringsManager.getVar(R.string.Badges_Info1), badge.description);
 			}
 		} else {
-
 			global.add(badge);
 			setSaveNeeded(true);
 			EventCollector.badgeUnlocked(badge.name());

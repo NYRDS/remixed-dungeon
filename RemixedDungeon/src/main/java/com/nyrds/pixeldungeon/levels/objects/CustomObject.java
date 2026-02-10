@@ -32,7 +32,7 @@ public class CustomObject extends Deco {
     private void initObject() {
         final JSONObject objectDef = defMap.get(objectDesc);
         String scriptFile = objectDef.getString("script");
-        script = new LuaScript("scripts/objects/"+ scriptFile, this);
+        script = new LuaScript("scripts/objects/" + scriptFile, this);
         script.asInstance();
     }
 

@@ -137,7 +137,7 @@ public class LuaEngine implements ResourceFinder {
 		globals.finder = this;
 		globals.set("loadResource", new resLoader());
 
-		stp = call("require","scripts/lib/StackTracePlus");
+		stp = call("require", "scripts/lib/StackTracePlus");
 		globals.loadfile("scripts/startup/quirks.lua").call();
 	}
 
