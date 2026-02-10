@@ -213,6 +213,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Belongings_CantWearBoth">Du kannst %1$s und %2$s nicht gleichzeitig tragen!</string>
     <string name="Belongings_Name">Rucksack</string>
     <string name="BishopNPC_Desc">Bischof der heiligen Kirche von Santa dem Tiefenfürst</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Bischof</string>
     <string name="BishopNPC_Name_Objective">Bischof</string>
     <string name="Bishop_bye">Ich werde für dich beten, mein Kind.</string>
@@ -2716,6 +2717,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

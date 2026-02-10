@@ -1353,6 +1353,7 @@
     <string name="NecromancerRobe_PetLimitReached">亡灵法师：召唤上限重置（最大召唤数：%d）！</string>
     <string name="Necromancer_ACSpecial">死灵术</string>
     <string name="Necromancy_BecameALich">你成为了巫妖！你的身体正在变化，同时你的灵魂容量提升了一倍！但是你失去了 %1$d 点力量。</string>
+    <string name="Necromancy_Death">你在练习死灵法术时耗尽了全部生命力。</string>
     <string name="Necromancy_NotEnoughSouls">你没有足够的灵魂来施放“%1$s”咒语。</string>
     <string name="Necromancy_ReincarnationName">转生</string>
     <string name="Necromancy_ReincarnationTriggered">你的力量使你从死亡中归来！但你失去了所有已收集的灵魂和所有物。</string>
@@ -2805,6 +2806,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

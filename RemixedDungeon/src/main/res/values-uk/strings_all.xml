@@ -365,6 +365,7 @@
     <string name="ChaosSword_Info">Клин цього меча створений з самого хаосу і інколи подриґує в передчутті. Велика сила, прихована у ньому, може розсікти практично все що завгодно навпіл. Проте він потребує не абиякої майстерності.</string>
     <string name="ChaosSword_Name">меч хаосу</string>
     <string name="CharAction_Expel">Вигнати</string>
+    <string name="CharAction_Push">штовхнути</string>
     <string name="CharAction_Steal">викрасти</string>
     <string name="Char_Defeat_0">%1$s здолало %2$s</string>
     <string name="Char_Defeat_1">%1$s здолав %2$s</string>
@@ -2661,6 +2662,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
