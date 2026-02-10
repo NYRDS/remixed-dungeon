@@ -1940,6 +1940,7 @@
     <string name="SummonBeast_Info">Спроба викликати орду могутніх істот під вашу команду.\nРеальні результати можуть відрізнятися.</string>
     <string name="SummonDeathling_Info">Прикликає прислужника із нежиті. Сила та здоров\'я смертлика росте із рівнем героя. \n\nЛіміт прикликання: %1$d(+1 за кожен магічний рівень)</string>
     <string name="SummonDeathling_Name">Прикликати смертлика</string>
+    <string name="SungrassBuff_Info">З землі виростають корені, що забезпечують цілющими травами.</string>
     <string name="SungrassBuff_Name">Природне зцілення</string>
     <string name="Sungrass_Desc">Сонях славиться своїми лікувальними властивостями.</string>
     <string name="Sungrass_Name">Сонях</string>
@@ -2662,6 +2663,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
