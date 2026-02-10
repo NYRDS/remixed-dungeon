@@ -505,6 +505,7 @@
     <string name="DM300_Info3">檢測到未授權人員。</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">一把木柄嚴重磨損的普通鐵匕首。</string>
     <string name="Dagger_Name">匕首</string>
     <string name="Damage_Reduction">傷害減免</string>
@@ -2615,6 +2616,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
