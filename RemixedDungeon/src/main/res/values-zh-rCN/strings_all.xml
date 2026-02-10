@@ -729,6 +729,7 @@
     <string name="FriedFish_Info">烤鱼，看起来很好吃。丘比认证：绝对美味</string>
     <string name="FriedFish_Name">熟鱼</string>
     <string name="FriedFish_Taste">美味！</string>
+    <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">你能感受到从箭头涌出的霜寒气息。</string>
     <string name="FrostArrow_Name">寒霜箭</string>
     <string name="FrostAuraBuff_Info">环绕着身躯的冰霜会使所有接近者减速。</string>
@@ -2806,6 +2807,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
