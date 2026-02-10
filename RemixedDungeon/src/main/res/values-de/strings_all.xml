@@ -329,6 +329,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Caves_TileGrass">Leuchtendes Moos</string>
     <string name="Caves_TileHighGrass">Leuchtende Pilze</string>
     <string name="Caves_TileWater">Gefrierendes, kaltes Wasser</string>
+    <string name="Challenges_Descriptions_9">Die neueste \'Heilmethode\' des Pestarztes hat Ihr räumliches Gedächtnis gelöscht. Sie können sich an nichts erinnern, was außerhalb Ihrer direkten Sicht ist.</string>
     <string name="Challenges_Names_0">Auf Diät</string>
     <string name="Challenges_Names_1">Der Glaube ist meine Rüstung</string>
     <string name="Challenges_Names_2">Pharmacophobie</string>
@@ -2720,6 +2721,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 
