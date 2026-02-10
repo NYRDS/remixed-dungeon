@@ -277,6 +277,7 @@
     <string name="BodyArmorBuff_Name">Міць тіла</string>
     <string name="BodyArmorSpell_Info">Активує резерви м\'язів, тимчасово збільшуючи їх силу значно підвищуючи захист, але ціною швидкості пересування.</string>
     <string name="BodyArmorSpell_Name">Міць тіла</string>
+    <string name="BoneShard_Name">Уламок кістки</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Ця дерев\'яна вигнута зброя, кинута у ворога, повертається до руки власника.</string>
     <string name="Boomerang_Name">бумеранг</string>
@@ -2664,6 +2665,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
