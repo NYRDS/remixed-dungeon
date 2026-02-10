@@ -171,6 +171,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Badges_Yog_Slain">Yog-Dzewa lemészárolva</string>
     <string name="Bag_ACOpen">NYITVA</string>
     <string name="Bandit_Desc">A kazamata mélyebb szintjei mindig remek bűvóhelyül szolgáltak minden féle bűnözőnek. Nem mind tudta megőrizni a józan eszét hosszú ideig távol a napfénytől. Ezek az őrült banditák már réges régen elfelejtették, hogy kik ők és hogy miért lopnak. Úgy tűnik ennek a banditának tőre valamivel be van vonva.</string>
+    <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">őrült bandita</string>
     <string name="Bandit_Name_Objective">őrült banditát</string>
     <string name="BardSong_1">Feleségemmel együtt teljesen egyedül élünk,\nEgy kis faházban, melyet sajátunknak hívtunk,\nŐ szerette a gint, én meg a rumot,\nMondom én nektek, volt rengeteg mulatnivalónk.</string>
@@ -1883,6 +1884,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="TownGuardNPC_Message3">Most asszed, hogy túl sok őr van it, he? Hát azé\', me\' ez egy az egyetlen város egy bazinagy szörnnyel teli katakombával, vagy nem? De.</string>
     <string name="TownGuardNPC_Name">városi őr</string>
     <string name="TownGuardNPC_Name_Objective">egy átlagos városi őr</string>
+    <string name="TownPortal_Info">Ez a varázslat lehetővé teszi, hogy azonnal biztonságba juss. Azonban a közelben lévő erős mágikus források megakadályozhatják, hogy a varázslat a szándék szerint működjön.</string>
     <string name="TownPortal_Name">Hazajutási Portál</string>
     <string name="TownScript_NeedWeapon">Nem megyek le a kazamatába üres kézzel!\nTalán érdemes lenne meglátogatni a város boltját elsőnek?</string>
     <string name="TownShopkeeper_Desc">Ez a fickó egy tipikus boltos. Már látod rajta, hogy meg tudja mondani mennyibe kerülsz.</string>
@@ -2541,6 +2543,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

@@ -1896,6 +1896,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">Geist der Schmerzen</string>
     <string name="SpiritOfPain_Name_Objective">Geist der Schmerzen</string>
+    <string name="Sprout_Info">Erwecke die schlafenden Samen.\nAllerdings muss Grünzeug auf dem Boden vorhanden sein, damit der Zauber wirkt.</string>
     <string name="Sprout_Name">Sprießen</string>
     <string name="StartScene_ContinueLatest">Setze dein letztes Spiel fort oder wähle einen Speicherplatz</string>
     <string name="StartScene_Depth">Ebene: %1$d\nLevel: %2$d</string>
@@ -2718,6 +2719,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
