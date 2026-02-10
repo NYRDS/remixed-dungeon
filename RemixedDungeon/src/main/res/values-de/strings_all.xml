@@ -213,6 +213,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Belongings_CantWearBoth">Du kannst %1$s und %2$s nicht gleichzeitig tragen!</string>
     <string name="Belongings_Name">Rucksack</string>
     <string name="BishopNPC_Desc">Bischof der heiligen Kirche von Santa dem Tiefenfürst</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Bischof</string>
     <string name="BishopNPC_Name_Objective">Bischof</string>
     <string name="Bishop_bye">Ich werde für dich beten, mein Kind.</string>
@@ -328,6 +329,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Caves_TileGrass">Leuchtendes Moos</string>
     <string name="Caves_TileHighGrass">Leuchtende Pilze</string>
     <string name="Caves_TileWater">Gefrierendes, kaltes Wasser</string>
+    <string name="Challenges_Descriptions_9">Die neueste \'Heilmethode\' des Pestarztes hat Ihr räumliches Gedächtnis gelöscht. Sie können sich an nichts erinnern, was außerhalb Ihrer direkten Sicht ist.</string>
     <string name="Challenges_Names_0">Auf Diät</string>
     <string name="Challenges_Names_1">Der Glaube ist meine Rüstung</string>
     <string name="Challenges_Names_2">Pharmacophobie</string>
@@ -357,6 +359,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="ChaosCrystal_Prompt">Wähle den Ort, an dem du das Chaoszeichen platzieren willst</string>
     <string name="ChaosCrystal_ScrollFused">Der Kristall wurde von der Rune, welche auf der Schriftrolle eingraviert war, absorbiert und nun ist es ein %s</string>
     <string name="ChaosCrystal_SelectForFuse">Wähle den Gegenstand, mit dem du den Chaos Kristall verschmelzen willst</string>
+    <string name="ChaosCrystal_ShieldFused">Der Kristall verschmolz mit deinem Schild und nahm die Chaossform an.</string>
     <string name="ChaosCrystal_StaffFused">Der Kristall absorbiert deinen Zauberstab und hat die Gestalt eines Zauberstabs angenommen</string>
     <string name="ChaosCrystal_SwordFused">Der Kristall absorbiert deine Waffe und hat die Gestalt eines Schwertes angenommen</string>
     <string name="ChaosCrystal_Use">BENUTZEN</string>
@@ -676,6 +679,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="FilteredMask_Info">Ein Atemschutzgerät ist ein Gerät, das den Träger vor dem Einatmen gefährlicher Substanzen wie Dämpfe, Gase und Partikel wie Stäube und Mikroorganismen in der Luft schützt.
 \n\nDiese Maske jedoch dient nur zu dekorativen Zwecken.</string>
     <string name="FilteredMask_Name">N95-Maske</string>
+    <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">Dieser Pfeil sieht, bis auf das warme, rote Licht, das seine Spitze ausstrahlt, normal aus.</string>
     <string name="FireArrow_Name">Feuerpfeil</string>
     <string name="FireElemental_Desc">Umherziehende Feuergeister sind ein Nebenprodukt von mächtigeren Beschwörungen. Ihre chaotische Natur macht es selbst den mächtigsten Dämonologen nahezu unmöglich, sie zu kontrollieren. </string>
@@ -1894,6 +1898,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">Geist der Schmerzen</string>
     <string name="SpiritOfPain_Name_Objective">Geist der Schmerzen</string>
+    <string name="Sprout_Info">Erwecke die schlafenden Samen.\nAllerdings muss Grünzeug auf dem Boden vorhanden sein, damit der Zauber wirkt.</string>
     <string name="Sprout_Name">Sprießen</string>
     <string name="StartScene_ContinueLatest">Setze dein letztes Spiel fort oder wähle einen Speicherplatz</string>
     <string name="StartScene_Depth">Ebene: %1$d\nLevel: %2$d</string>
@@ -2716,6 +2721,12 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
 
 
 

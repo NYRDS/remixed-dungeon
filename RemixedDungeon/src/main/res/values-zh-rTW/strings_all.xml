@@ -1868,6 +1868,7 @@
     <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">魅魔</string>
     <string name="Succubus_Name_Objective">魅魔</string>
+    <string name="SummonBeast_Name">野獸召喚</string>
     <string name="SummonDeathling_Info">召喚亡靈。亡靈的生命力及攻擊力將隨你的等級的提升而增長。\n\n召喚上限 %1$d （每提升一魔力等級上限+1）</string>
     <string name="SummonDeathling_Name">亡靈召喚</string>
     <string name="SungrassBuff_Name">草藥療養</string>
@@ -2616,6 +2617,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

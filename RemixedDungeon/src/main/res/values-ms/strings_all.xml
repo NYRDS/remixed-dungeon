@@ -1652,6 +1652,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Sheep_Name">kambing biri-biri</string>
     <string name="Sheep_Name_Objective">kambing biri-biri</string>
     <string name="ShieldStrTemplate">Pemakai perisai ini mestilah mempunyai sekurang-kurangnya %1$d mata kekuatan untuk menggunakannya dengan betul.</string>
+    <string name="ShieldWeaponInfo">Apabila digunakan sebagai senjata, perisai ini akan menyebabkan %1$d kerosakan secara purata.</string>
     <string name="Shielded_Defense">disekat</string>
     <string name="Shielded_Desc">Si ganas merupakan gnoll terbesar, terkuat dan paling sukar dikalahkan. Jika tercedera teruk, mereka menjadi gila dan dapat mencederakan teruk pihak musuh. Si ganas ini memakai pengadang gergasi!</string>
     <string name="Shielded_Name">si ganas berpengadang</string>
@@ -2517,6 +2518,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
