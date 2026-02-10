@@ -1575,6 +1575,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="RatSkull_Info2">Öte yandan, sahibinin büyük ve kötü kokulu fareleri bile öldürebileceğini göstermektedir.</string>
     <string name="RatSkull_Name">dev sıçan kafatası</string>
     <string name="Rat_Desc">Keseli sıçanlar lağımların sinirli ancak zayıf müdavimleridir.Çok fazla sayıda olduklarında tehlikeli olabilirler.</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">keseli sıçan</string>
     <string name="Rat_Name_Objective">keseli sıçan</string>
     <string name="Ration_Info">Pek büyütülecek bişey değil: kuru et, biraz bisküvi falan filan.</string>
@@ -2306,6 +2307,7 @@ remix.30.1\n
     <string name="WndChooseWay_Message">Hangi yolu takip edeceksiniz?</string>
     <string name="WndClass_Mastery">Uzmanlık</string>
     <string name="WndCryptoDonate_copyAddress">Adresi Kopyala</string>
+    <string name="WndCryptoDonate_infoText">Remixed Dungeon\'ın geliştirilmesini, aşağıda belirtilen adreslere kripto para bağışları göndererek destekleyebilirsiniz. Câmilerinize teşekkür ederiz!</string>
     <string name="WndCustomizations_Title">Özelleştirmeler</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - her zaman ve herkes için ücretsiz.\n\nEğer isterseniz oyunu daha iyi bir hale getirmek için bize yardımcı olabilirsiniz.\n\nİçten şükranlarımızın yanı sıra bir kozmetik seti alacaksınız.</string>
     <string name="WndDonate_donate">bağış:</string>
@@ -2842,6 +2844,9 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
 
 
 
