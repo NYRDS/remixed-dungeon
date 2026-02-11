@@ -1633,6 +1633,7 @@ Potrebbe bruciare?</string>
     <string name="SpiderMindAmber_Name">ragno ambrato </string>
     <string name="SpiderMindAmber_Name_Objective">ragno ambrato </string>
     <string name="SpiderMind_Desc">Questo ragno apparentemente fragile possiede unicamente poteri mentali, che permettono loro di controllare l\'intera colonia. Psico-ragno è capace di controllare ogni creatura, ma è un po\' codardo. </string>
+    <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">ragno psico</string>
     <string name="SpiderMind_Name_Objective">ragno psico</string>
     <string name="SpiderNest_Desc">Questo bozzolo è fatto di seta sottile e nasconde qualcosa di vivo all\'interno.</string>
@@ -2341,6 +2342,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

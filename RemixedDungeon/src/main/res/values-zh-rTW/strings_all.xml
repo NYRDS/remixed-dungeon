@@ -620,6 +620,7 @@
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">此武器以特製合金製造，故它比一般匕首更輕。</string>
     <string name="ElvenDagger_Name">矮人匕首</string>
+    <string name="EncumbranceBuff_Name">負擔</string>
     <string name="EnslavedSoul_Desc">這個幽靈幾乎是透明的。即使它看起來就是一個頭骨，但有那麼幾個瞬間，你能看到上邊浮現出一幅充滿痛苦與折磨的面孔。</string>
     <string name="EnslavedSoul_Name">被奴役的靈魂</string>
     <string name="EnslavedSoul_Name_Objective">被奴役的靈魂</string>
@@ -2619,6 +2620,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
