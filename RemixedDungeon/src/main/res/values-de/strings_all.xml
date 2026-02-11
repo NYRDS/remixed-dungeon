@@ -278,6 +278,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BodyArmorSpell_Info">Aktiviert ungenutzte Kraftreserven, um die Muskeln temporär stärker zu machen, was die Rüstung deutlich verstärkt, aber die Bewegungsgeschwindigkeit drastisch reduziert.</string>
     <string name="BodyArmorSpell_Name">Körperrüstung</string>
     <string name="BoneShard_Name">Knochensplitter</string>
+    <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Auf den Gegner geworfen findet dieses hölzerne Wurfgeschoss wieder zurück in die Hand des Angreifes.</string>
     <string name="Boomerang_Name">Boomerang</string>
     <string name="Bounce_Txt">%s des Rückstoßes</string>
@@ -2721,6 +2722,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

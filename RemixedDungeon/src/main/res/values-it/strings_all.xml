@@ -1095,6 +1095,7 @@ Potrebbe bruciare?</string>
     <string name="Monk_Defense">Parata</string>
     <string name="Monk_Desc">Questi monaci sono dei fanatici, che hanno dedicato loro stessi nel proteggere i segreti della loro città da tutti gli stranieri. Non usano alcuna armatura o arma, affidandosi solamente all\'arte del combattimento corpo a corpo.</string>
     <string name="Monk_Disarm">%1$s ti ha tolto %2$s dalle tue mani!</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">Monaco Nano</string>
     <string name="Monk_Name_Objective">Monaco Nano</string>
     <string name="MoongraceBuff_Info">L\'aria circostante diventa più saturata, consentendo una migliore concentrazione e il ripristino delle riserve magiche.</string>
@@ -1609,6 +1610,7 @@ Potrebbe bruciare?</string>
     <string name="SpellBook_Name">Libro di magia</string>
     <string name="Spell_SelectACell">Seleziona una cella bersaglio.</string>
     <string name="Spells_NotEnoughSP">Non hai abbastanza mana per lanciare la magia \&quot;%1$s\&quot;</string>
+    <string name="Spells_NotInOwnBody">Non puoi eseguire %s mentre la tua anima è separata dal corpo.</string>
     <string name="Spells_NotTooFast">%s non è ancora pronto per essere usato</string>
     <string name="Spells_SummonLimitReached">%1$s: limite di evocazioni raggiunto (Limite attuale: %2$d)!</string>
     <string name="SpiderArmor_Info">Quest\'armatura é composta di vecchie carcasse di ragno e uno strano tessuto. Incredibilmente, trovi ghiandole filatrici ancora funzionanti. Applicando la giusta pressione su una delle piastre, lancia ragnatele. Gli spuntoni sotto gli stivali ti permettono di camminare su di esse.</string>
@@ -2342,6 +2344,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
