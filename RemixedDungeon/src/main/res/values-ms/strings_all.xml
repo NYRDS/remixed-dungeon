@@ -1149,6 +1149,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MissileWeapon_Sure">Anda pasti mahu memakainya sebagai senjata tempur?</string>
     <string name="MissileWeapon_Yes">Ya, Saya tahu apa yang saya buat</string>
     <string name="Mob_Cannot_Be_Pet">Semangat \&quot;%s\&quot; terlalu kuat untuk dikawal!</string>
+    <string name="Mob_CantDoIt">I tak boleh buat. Aku ada kaki kecil.</string>
     <string name="Mob_Desc">Keterangan sebenar akan muncul sebentar lagi!</string>
     <string name="Mob_Died">Anda dengar ada benda yang mati dari jauh</string>
     <string name="Mob_ReadyForOrder">%s sedia menerima arahan anda.</string>
@@ -2522,6 +2523,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

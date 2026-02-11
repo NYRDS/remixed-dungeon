@@ -2161,6 +2161,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="VertigoBuff_Info">クラクラして、まっすぐ歩くのが難しくなる！</string>
     <string name="VertigoBuff_Name">目眩</string>
     <string name="View_Distance">視認距離</string>
+    <string name="VileEssence_Name">邪悪なエッセンス</string>
     <string name="Viscosity_Status">遅延%d</string>
     <string name="Viscosity_Txt">遅延の %s</string>
     <string name="WandHolster_Info">エキゾチックな動物の革を使用したスリムなホルダー。 %d 本までの杖をコンパクトに収納することが出来る。</string>
@@ -2897,6 +2898,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
