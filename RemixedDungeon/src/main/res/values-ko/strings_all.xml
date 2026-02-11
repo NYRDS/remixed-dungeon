@@ -334,6 +334,7 @@
     <string name="ChaosCrystal_Use">사용</string>
     <string name="ChaosHelmet_Info"> 혼돈의 전사의 상징인 혈적색 투구입니다.</string>
     <string name="ChaosHelmet_Name">혼돈의 투구</string>
+    <string name="ChaosShield_name">카오스 방패</string>
     <string name="ChaosStaff_Info">지팡이에 혼돈의 힘이 스며들었습니다! 어떤 마법사가 꿈꾸거나 두려워할 수나있을까요?</string>
     <string name="ChaosStaff_Name">혼돈 지팡이</string>
     <string name="ChaosSword_Info">이 검의 칼날은 순수한 혼돈으로 만들어졌으며 때때로 가끔 진동합니다. 큰 힘은 무기 안에 저장되어 거의 모든 것을 반으로 줄입니다. 무기의 강력한 힘에 대처하기 위해서는 훌륭한 기술이 필요합니다.</string>
@@ -2467,6 +2468,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

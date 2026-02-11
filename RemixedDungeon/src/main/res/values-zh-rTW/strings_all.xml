@@ -2495,6 +2495,7 @@
     <string name="town_deco_identifier_sign_name">占蔔屋招牌</string>
     <string name="town_deco_inn_bed_desc"> 看起來很舒適的床。</string>
     <string name="town_deco_inn_bed_name">床</string>
+    <string name="town_deco_ladder_desc">一個古老的梯子，看起來不太可靠。</string>
     <string name="town_deco_library_books_desc">比地牢裏的書還要好。</string>
     <string name="town_deco_library_books_name">閱讀物</string>
     <string name="town_deco_library_sign_desc">裏面是圖書館</string>
@@ -2620,6 +2621,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
