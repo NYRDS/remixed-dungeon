@@ -1906,6 +1906,7 @@ outro local do nível.</string>
     <string name="SpiderQueenCarapace_Name">Carapaça da Aranha Rainha</string>
     <string name="SpiderQueen_Desc">Um corpo de mulher bonita cruzou com aranha horrenda. Todo ser vivo neste covil é seu servo. Juntar-se a esta dama extraordinária pode ser uma experiência mortal. Porque você é um intruso!</string>
     <string name="SpiderQueen_DieInfo">A Aranha Rainha foi morta! Agora eu devo voltar para o nível 5 e continuar a minha jornada para as Profundezas.</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">aranha rainha</string>
     <string name="SpiderQueen_Name_Objective">aranha rainha</string>
     <string name="SpiderServant_Desc">Soldados são as mais numerosas unidades da toca da aranha. Nascido para proteger o seu território. As Aranhas Soldado desenvolveram glândulas venenosas em suas garras, para envenenar seus inimigos.</string>
@@ -2786,6 +2787,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
