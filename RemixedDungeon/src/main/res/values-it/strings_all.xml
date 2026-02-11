@@ -709,7 +709,11 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="HeroClass_ElfPerks_4">Gli elfi guadagnano molta più salute dalle gocce di ruggiada.</string>
     <string name="HeroClass_ElfPerks_5">Gli elfi sono meno bravi con le armi da mischia.</string>
     <string name="HeroClass_Gnoll">Gnoll</string>
+    <string name="HeroClass_GnollPerks_0">I Gnoll iniziano con 15 punti forza</string>
+    <string name="HeroClass_GnollPerks_1">I Gnoll iniziano con 5 punti salute</string>
+    <string name="HeroClass_GnollPerks_2">I Gnoll iniziano senza alcuna armatura ma con un tomahawk unico</string>
     <string name="HeroClass_GnollPerks_3">Gli Gnoll non possono leggere e scrivere</string>
+    <string name="HeroClass_GnollPerks_4">I Gnoll non attaccano un altro Gnoll se non provocati</string>
     <string name="HeroClass_Hun">cacciatrice</string>
     <string name="HeroClass_HunPerks_0">Le cacciatrici iniziano con 15 punti di salute.</string>
     <string name="HeroClass_HunPerks_1">Le cacciatrici iniziano con un boomerang aggiornabile unico.</string>
@@ -2022,6 +2026,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndInfoItem_WontKnow">Non si sa cosa ci sia dentro fin quando non l\'aprirai!</string>
     <string name="WndInstallingMod_deleting_file">Eliminazione di %s</string>
     <string name="WndInstallingMod_skipping_file">Salto %s</string>
+    <string name="WndItemAlchemy_NoRecipes">Nessuna ricetta disponibile con questo oggetto e il tuo inventario attuale.</string>
     <string name="WndJournal_Levels">Livelli</string>
     <string name="WndJournal_Logbook">Registro attività</string>
     <string name="WndJournal_Title">Diario</string>
@@ -2344,6 +2349,11 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
 
 
 
