@@ -204,6 +204,7 @@
     <string name="BlackCat_Phrases_1">야옹...</string>
     <string name="BlackCat_Phrases_2">야옹!</string>
     <string name="BlackSkullOfMastery_Info">고대의 유물로써, 죽은 자의 영혼을 모으기 위해 첫 세대의 강령술사들이 만들어냈습니다. 당신의 강령술 능력을 감지하여, 강력한 주문으로 봉인되어 있습니다. 하지만 이 주문은 아주 오래된 것이라, 쉽게 파괴할 수 있을 것입니다.</string>
+    <string name="BlackSkullOfMastery_Lich">리치가 되세요</string>
     <string name="BlackSkullOfMastery_Name">영혼을 부르는 자</string>
     <string name="BlackSkullOfMastery_Necromancer">마법을 파괴하기</string>
     <string name="BlackSkull_Activated">검은 해골이 깨어났습니다!</string>
@@ -1755,6 +1756,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SpiritOfPain_Desc">살아있는 어둠의 조각이다.</string>
     <string name="SpiritOfPain_Name">고통의 영혼</string>
     <string name="SpiritOfPain_Name_Objective">고통의 영혼</string>
+    <string name="Sprout_Name">새싹</string>
     <string name="StartScene_Depth">진행 깊이: %1$d\n층 수: %2$d</string>
     <string name="StartScene_DifficultyEasy">쉬움(광고)</string>
     <string name="StartScene_DifficultyEasyNoAds">쉬움</string>
@@ -2464,6 +2466,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 
