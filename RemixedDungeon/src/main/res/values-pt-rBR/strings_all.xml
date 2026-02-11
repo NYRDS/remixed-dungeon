@@ -1509,6 +1509,7 @@ Parede
     <string name="Quarterstaff_Name">Cajado</string>
     <string name="QuickSlot_SelectSlot">Escolha um atalho rápido para isso</string>
     <string name="QuickSlot_SelectedItem">Selecione um item para o QuickSlot</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">A Aljava de couro é perfeita para carregar qualquer quantia de flechas.</string>
     <string name="Quiver_Name">Aljava</string>
     <string name="RabbitEars_Info">É uma crença popular que coelhos dão sorte, e sua sorte será transferida para aqueles que obtiverem parte do seu corpo. Pensando bem, ser morto parra que seja feito um chapel com suas orelhas, não é bem ser sortudo.</string>
@@ -2785,6 +2786,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

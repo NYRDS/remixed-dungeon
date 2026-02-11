@@ -1278,6 +1278,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Á, hát nem hihetetlen? Ezek az idióták még mindig nem látják, milyen szörnyen veszélyesek a szennycsatornák! Mintha az őrök, vagy a kalandorok bármitől is meg tudnának védeni... Peeersze! Fegyver nem állíthatja meg a fertőzés terjedését! De bizonyítékra van szükségem, segítenél?  Hozz nekem %d patkánybőrt, és akkor további teszteket végezhetek!</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Á, hát nem hihetetlen? Ezek az idióták még mindig nem látják, milyen szörnyen veszélyesek a szennycsatornák! Mintha az őrök, vagy a kalandorok bármitől is meg tudnának védeni... Peeersze! Fegyver nem állíthatja meg a fertőzés terjedését! De bizonyítékra van szükségem, segítenél?  Hozz nekem %d patkánybőrt, és akkor további teszteket végezhetek!</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">Ápszi!\n Átkozott ez az ördögi járvány! Olyan gyorsan terjed a városban, mint a tűzvész, és megfertőzi az ártatlan nép csontjait! UH! Véleményed szerint van esélye ezeknek a nyomorult őröknek e szörnyű betegség ellen? Te ott! Erős, egészséges egyén. Talán segíthetsz nekem. Ezek a mocskos csatorna_katatúk_... bennük hordozzák, mondom én neked, a ragály magvait a gusztustalan kis testükben! Hozz nekem _öt_ darabot ezekből a nyomorult lényekből, _halott_, persze! A bőrük aranyat érne a kutatásaimhoz. Páncélt készítek neked, mely megvédi a testet attól a ragálytól, amelyből származnak!</string>
+    <string name="PlagueDoctorQuest_1_2_InProgress">_Tíz csiga_, tíz suttogás a mélységből! A nyáluk elemzésre kerül, lényegük alaposan megvizsgálásra. A titkok, amelyeket őriznek, már a közelben vannak.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">Öt _Törpe Boszorkánymester_, testük még mindig pulzál a sötét mágia gyenge visszhangjától! Hozd őket nekem, és jutalmul olyan italt adok, amely páratlan erővel felruház – egy _Erőesszenciát_, amely tíz férfi erejével telít meg!</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Elismerés! Öt _Kobold Jégvarázsló_, jégeszenciájukat most már én kutathatom! A kapcsolatuk a fagyos pusztákhoz, ez valóban lenyűgöző. Ahogyan magát a vizet is irányítják... valóban figyelemre méltó. *Átad neked egy csillogó üvegcsét, tele élénk vörös folyadékkal* Ez, a bátor erőfeszítéseidért való: Egy _Erőital_! Igyál belőle és érezd tíz harcos erejének áramlását az erekben! Ne feledd, az ismeret hatalom... és a hatalom az egyetlen fegyverünk a közelgő sötétség ellen. Most pedig... boncoljuk fel ezeket a jégszemélyiségeket és tárd fel dermesztő titkaikat!</string>
     <string name="PlagueDoctor_Desc">Ennek a púpos hátú alaknak az egész teste egy bőrből készült kezeslábasban van. Ráadásul keserű gyógyszer és ... hagymaszagot áraszt.</string>
@@ -2297,6 +2298,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Wnd_Button_Yes">Igen</string>
     <string name="WoodenBow_Info">Ez a fa íj lehet, hogy használható lesz, amint találsz hozzá nyilat.</string>
     <string name="WoodenBow_Name">fa íj</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Kezdetleges fa íj, nyílvesszők kilövésére tervezve.</string>
     <string name="WoodenCrossbow_Name">fa számszeríj</string>
     <string name="WoodenShield_name">Fapajzs</string>
@@ -2545,6 +2547,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

@@ -534,6 +534,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">süzülen kristal</string>
     <string name="Crystal_Name_Objective">yüzen kristal</string>
+    <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">Bu küçük oklar fazla zarar vermese de rakibini hareketsiz ve savunmasız bırakabilir</string>
     <string name="CurareDart_Name">zehirli ok</string>
     <string name="DM300_Desc">Bu makine birkaç yüzyıl önce Cüceler tarafından yapıldı. Sonra Cüceler golemleri, elementalleri ve hatta şeytanları makineler yerine kullanmaya başladı. Bu eninde sonunda onların uygarlıklarını düşüşe zorladı. DM-300 ve benzeri makineler genellikle inşaat ve madencilikte ve bazı durumlarda şehir savunmasında kullanıldı.</string>
@@ -2847,6 +2848,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
