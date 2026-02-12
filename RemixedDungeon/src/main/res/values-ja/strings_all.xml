@@ -248,6 +248,7 @@
     <string name="BlackSkullOfMastery_Title">呪文を破ることもできる。あるいは、呪文とアーティファクトそのもののパワーを消費し、自分をリッチに変身させるような方法で、呪文の魔法式を操作することもできる。</string>
     <string name="BlackSkull_Activated">黒い頭蓋骨が覚醒した！</string>
     <string name="BlackSkull_Deactivated">黒い頭蓋骨は再び眠りについた…</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">小さな黒曜石の頭蓋骨。ネクロポリスの力の源だったが、リッチの死後、その力はすべて失われたようだ。しかし、それを手にしたとき、奇妙な考えが頭をよぎる。「それは飢えている。」</string>
     <string name="BlackSkull_Info_Awakened">頭蓋骨は力強く脈打ち、空っぽの眼窩から力が溢れ出ているのがわかる。そして手に持っていると、「死の行進を見よ」という恐ろしい声が聞こえてくる。</string>
     <string name="BlackSkull_Name">黒い頭蓋骨</string>
@@ -2898,6 +2899,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

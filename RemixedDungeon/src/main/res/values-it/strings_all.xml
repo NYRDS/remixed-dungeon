@@ -26,6 +26,7 @@
     <string name="AirElemental_Name_Objective">elementare dell\'aria</string>
     <string name="AlarmTrap_Desc">La trappola emette un suono acuto che riecheggia per tutto il dungeon!</string>
     <string name="Albino_Desc">I ratti marsupiali sono aggressivi, ma abitanti piuttosto deboli delle fogne. Possono essere pericolosi solo in grandi numeri. Questo particolare ratto sembra essere un albino. Ha anche dei denti aguzzi anomali.</string>
+    <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name">ratto albino</string>
     <string name="Albino_Name_Objective">ratto albino</string>
     <string name="AlchemyPot_SelectSeed">Seleziona un seme da lanciare</string>
@@ -1446,6 +1447,7 @@ Potrebbe bruciare?</string>
     <string name="ScaleArmor_Name">armatura a scaglie</string>
     <string name="ScarecrowNPC_Desc">Non c\'è dubbio... questo spaventapasseri sta osservando ogni tuo movimento. I suoi occhi rossi luminosi ti trapassano, ma sorprendentemente non ti senti minacciato da esso.</string>
     <string name="ScarecrowNPC_Name_Objective">spaventapasseri</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">Allora ciao ragazzina, come stai?\nHo qualcosa di eccitante per te!\n\nOh quanto sarei grato,\nSe andassi a raccogliere qualche caramella per me!\n\n</string>
     <string name="ScarecrowNPC_Quest_Start_Male">Perché ciao ragazzone, come stai?\nHo qualcosa di emozionante per te!\n\nOh quanto sarei grato,\nSe andassi a raccogliere un po\' di caramelle per me!\n\n</string>
     <string name="Scorpio_Desc">Queste creature demoniche simili ad aracnidi evitano i combattimenti ravvicinati ad ogni costo, lanciando punte paralizzanti da lunghe distanze.</string>
     <string name="Scorpio_Name">Scorpione</string>
@@ -1605,6 +1607,7 @@ Potrebbe bruciare?</string>
     <string name="SociologistNPC_Name_Objective">Sociologo</string>
     <string name="Sorrowmoss_Desc">Un Sorrowmoss è un fiore (non un muschio), con petali nitidissime, ricoperte da uno veleno mortale.</string>
     <string name="Sorrowmoss_Name">Muschio della sventura</string>
+    <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">E\' un frammento che hai preso dai resti di Jar delle Anime. Arde di un\' energia mistica, probabilmente c\'è qualcuno che potrebbe essere interessato a questa cosa.</string>
     <string name="SoulShard_Name">frammento d\' anima</string>
     <string name="Spear_Info">Un\'asta di legno sottile che termina con una lama affilata. </string>
@@ -2269,6 +2272,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_magenta_carpet_name">Tappeto</string>
     <string name="town_deco_medicine_desc">Fiaschette e altri ingredienti medici vengono messi con cautela su questi scaffali.</string>
     <string name="town_deco_medicine_name">Medicina</string>
+    <string name="town_deco_misc_name">Cianfrusaglie</string>
     <string name="town_deco_movies_door_name">Porta</string>
     <string name="town_deco_mud_name">Fango</string>
     <string name="town_deco_painting_desc">Un bellissimo pezzo d\'arte.</string>
@@ -2349,6 +2353,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 
