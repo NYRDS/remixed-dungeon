@@ -2296,6 +2296,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_rope_desc">Corda intrecciata a mano</string>
     <string name="town_deco_rope_name">Corda</string>
     <string name="town_deco_rug_desc">Fatto con buon gusto.</string>
+    <string name="town_deco_rug_name">Tappeto</string>
     <string name="town_deco_screen_desc">Questa tela misteriosa è chiamata \&quot;schermo\&quot; e può mostrare immagini in movimento</string>
     <string name="town_deco_screen_name">Schermo</string>
     <string name="town_deco_scrolls_name">Pergamene</string>
@@ -2356,6 +2357,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
