@@ -412,6 +412,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Codex_Story_8">Glifo della viscosità - L\'eroe otterrà il danno differito debuff, che farà sì che l\'eroe riceva 1 danno per turno, invece di ricevere l\'intera quantità in un solo colpo.</string>
     <string name="Codex_Story_9">Glifo del dislocamento - Ogni volta che l\'eroe è colpito, c\'è la possibilità che l\'eroe sarà teletrasportato a una tessera visibile casuale. Questo glifo non funziona su livelli boss.</string>
     <string name="ColdSpirit_Desc">Lo spirito freddo è l\'incarnazione del gelo, nella sua forma più pura. Essendo un insensato grumo di energia magica, obbedisce alla volontà del mago che lo ha chiamato o agisce invece secondo gli istinti di base.</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">spirito freddo</string>
     <string name="ColdSpirit_Name_Objective">spirito freddo</string>
     <string name="ComboBuff_Name">Combinazione</string>
@@ -2357,6 +2358,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
