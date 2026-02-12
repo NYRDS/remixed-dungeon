@@ -1531,6 +1531,7 @@ Potrebbe bruciare?</string>
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">Monaco anziano</string>
     <string name="Senior_Name_Objective">Monaco anziano</string>
+    <string name="ServantNPC_Gender">masculine</string>
     <string name="ServantNPC_Name_Objective">cameriere della locanda</string>
     <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Mi scuso, ma ogni nuovo avventuriero può guardare solo %d film in totale.</string>
@@ -2355,6 +2356,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

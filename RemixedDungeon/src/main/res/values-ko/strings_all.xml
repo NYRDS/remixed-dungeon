@@ -2021,6 +2021,24 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Weightstone_WndChoice">%s 의 무게중심을 어떻게 조절하시겠습니까?</string>
     <string name="Weightstone_WndSpeed">공격 속도</string>
     <string name="Welcome_Ok">알겠습니다!</string>
+    <string name="Welcome_Text_32">
+    remix.32\n
+    - 게임플레이:\n
+    -- 몹과 펫들이 경험치와 레벨을 얻을 수 있습니다\n
+    -- 카오스 실드\n
+    -- 챔피언\n
+    -- 요그 보스전 밸런스 조정\n
+    -- 밸런스 조정\n
+    - 사용자 인터페이스:\n
+    -- 상세한 영웅 및 몹 스탯\n
+    -- 개선된 맞춤 설정 인터페이스\n
+    -- 부드러운 카메라\n
+    - 모딩:\n
+    -- 사용자 정의 애니메이션\n
+    -- 내장 몹들을 위한 사용자 정의 스크립트\n
+    -- 몹들을 위한 발광 효과\n
+    - 버그 수정\n
+    </string>
     <string name="Welcome_Title">환영합니다!</string>
     <string name="WindGust_Info">돌풍을 일으켜 선택한 캐릭터를 밀쳐냅니다.</string>
     <string name="WindGust_Name">돌풍</string>
@@ -2472,6 +2490,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
