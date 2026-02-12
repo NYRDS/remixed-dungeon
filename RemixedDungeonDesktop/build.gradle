@@ -140,6 +140,48 @@ tasks.register('runAlchemyWindow', JavaExec) {
     workingDir = file('src/desktop/rundir')
 }
 
+// Explicit task to run the desktop game with proper configuration
+tasks.register('runDesktopGame', JavaExec) {
+    dependsOn classes
+    mainClass = 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
+    classpath = sourceSets.main.runtimeClasspath
+
+    // Allow passing arguments to the application
+    if (project.hasProperty('args')) {
+        args = project.property('args').toString().split(' ')
+    }
+
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+
+    // Set working directory to rundir to ensure proper asset access
+    workingDir = file('src/desktop/rundir')
+    
+    // Enable standard input for user interaction
+    standardInput = System.in
+}
+
+// Explicit task to run the desktop game with web server
+tasks.register('runDesktopGameWithWebServer', JavaExec) {
+    dependsOn classes
+    mainClass = 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
+    classpath = sourceSets.main.runtimeClasspath
+
+    // Set default arguments to start web server on port 8080
+    if (project.hasProperty('args')) {
+        args = project.property('args').toString().split(' ')
+    } else {
+        args = ['--webserver=8080']
+    }
+
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+
+    // Set working directory to rundir to ensure proper asset access
+    workingDir = file('src/desktop/rundir')
+    
+    // Enable standard input for user interaction
+    standardInput = System.in
+}
+
 tasks.withType(JavaExec).configureEach {
     jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
 }
