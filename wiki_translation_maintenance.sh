@@ -18,7 +18,7 @@ while true; do
     if [ $TASK_CHOICE -eq 0 ]; then
         # Wiki task
         echo "[$(date)] Running wiki maintenance command"
-        COMMAND="qwen -y 'read @docs/WIKI_DOCUMENTATION.md, pull repo master, pick 5 random wiki pages using tools/pick_random_wiki_pages.sh, analyze them for compliance with wiki standards, identify issues like missing images, invalid headers, incorrect links, improper formatting, run dokuwiki linter on them, fix identified issues based on documentation standards, verify all links point to existing lowercase files, ensure proper image references exist, commit your changes to wiki-data and push it, don't commit or push into main repo. Focus on maintaining consistency with wiki documentation standards.'"
+        COMMAND="qwen -y 'read @docs/WIKI_DOCUMENTATION.md, pull repo master, pick 5 random wiki pages using tools/pick_random_wiki_pages.sh, analyze them for compliance with wiki standards, identify issues like missing images, invalid headers, incorrect links, improper formatting, run dokuwiki linter on them, fix identified issues based on documentation standards, verify all links point to existing lowercase files, ensure proper image references exist, for mr: namespace pages use tools/find_entity_usage.py to analyze entity implementation and usage in code, also check wiki pages in all supported languages (en, ru, es, fr, de, it, pl, pt-rBR, ja, ko, zh-rCN, zh-rTW, uk, hu, tr, el, in, ms) to ensure consistency with game translations, commit your changes to wiki-data and push it, don't commit or push into main repo. Focus on maintaining consistency with wiki documentation standards.'"
         TASK_NAME="Wiki maintenance"
     else
         # Translation task

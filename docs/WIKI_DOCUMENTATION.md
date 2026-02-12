@@ -28,6 +28,23 @@ Always include references to the source code when documenting game mechanics, as
 - Reference Lua scripts like `RemixedDungeon/src/main/assets/scripts/spells/heal.lua`
 - Reference JSON configuration files like `RemixedDungeon/src/main/assets/levelsDesc/Bestiary.json`
 
+## Entity Usage Analysis Tool
+
+### find_entity_usage.py
+- **Purpose**: Finds usage of game entities (mobs, items, spells, etc.) in Java, Lua, and JSON files with contextual information
+- **Usage**: `python3 tools/find_entity_usage.py <entity_name> [project_base_path]`
+- **Features**:
+  - Searches for entity usage in Java code with context
+  - Locates and displays the full content of the entity's Java class file
+  - Finds entity references in Lua scripts
+  - Identifies entity usage in JSON configuration files
+  - Lists potential string resource references related to the entity
+  - Essential for creating machine-readable (mr:) namespace pages with accurate code references
+
+**Important Note**: The script output provides only basic context. Rigorous codebase research is always necessary to fully understand entity behavior and relationships. The script serves as a starting point for deeper investigation, not as a definitive source of truth.
+
+**Mandatory Usage for mr: Pages**: When creating or updating machine-readable namespace pages (mr:), this script is mandatory to ensure accurate code references and complete understanding of entity implementation. The output provides essential information about where and how entities are used throughout the codebase, which is critical for creating comprehensive mr: pages that serve as reference material for AI and automated tools.
+
 ## Localization for Multiple Languages
 
 The Remixed Dungeon game has localization available in multiple languages in the string resource files. When creating or updating wiki pages for a specific language, use the corresponding `strings_all.xml` file as the authoritative source for text content. These files contain all localized strings used in the game including:
@@ -38,13 +55,12 @@ The Remixed Dungeon game has localization available in multiple languages in the
 - UI messages and prompts
 - Game mechanics descriptions
 
+**Priority Languages**: English and Russian serve as the primary reference languages for wiki content, with English being the default and Russian having special significance as it's frequently used as a source of truth for Russian wiki pages.
+
 ### Available Languages and Their String Resource Files
 
-**Chinese (Simplified)**: `RemixedDungeon/src/main/res/values-zh-rCN/strings_all.xml`
-For Chinese wiki pages located in the `wiki-data/pages/cn/` directory, ensure consistency with the official Chinese translation provided in this file.
-
-**Chinese (Traditional)**: `RemixedDungeon/src/main/res/values-zh-rTW/strings_all.xml`
-For Traditional Chinese wiki pages located in the `wiki-data/pages/zh/` directory, ensure consistency with the official Traditional Chinese translation provided in this file.
+**English (Default)**: `RemixedDungeon/src/main/res/values/strings_all.xml`
+For English wiki pages located in the `wiki-data/pages/en/rpd/` directory, ensure consistency with the official English translation provided in this file.
 
 **Russian**: `RemixedDungeon/src/main/res/values-ru/strings_all.xml`
 For Russian wiki pages located in the `wiki-data/pages/ru/` directory, ensure consistency with the official Russian translation provided in this file.
@@ -70,6 +86,12 @@ For Japanese wiki pages located in the `wiki-data/pages/ja/` directory, ensure c
 **Korean**: `RemixedDungeon/src/main/res/values-ko/strings_all.xml`
 For Korean wiki pages located in the `wiki-data/pages/ko/` directory, ensure consistency with the official Korean translation provided in this file.
 
+**Chinese (Simplified)**: `RemixedDungeon/src/main/res/values-zh-rCN/strings_all.xml`
+For Chinese wiki pages located in the `wiki-data/pages/cn/` directory, ensure consistency with the official Chinese translation provided in this file.
+
+**Chinese (Traditional)**: `RemixedDungeon/src/main/res/values-zh-rTW/strings_all.xml`
+For Traditional Chinese wiki pages located in the `wiki-data/pages/zh/` directory, ensure consistency with the official Traditional Chinese translation provided in this file.
+
 **Polish**: `RemixedDungeon/src/main/res/values-pl/strings_all.xml`
 For Polish wiki pages located in the `wiki-data/pages/pl/` directory, ensure consistency with the official Polish translation provided in this file.
 
@@ -82,14 +104,14 @@ For Hungarian wiki pages located in the `wiki-data/pages/hu/` directory, ensure 
 **Turkish**: `RemixedDungeon/src/main/res/values-tr/strings_all.xml`
 For Turkish wiki pages located in the `wiki-data/pages/tr/` directory, ensure consistency with the official Turkish translation provided in this file.
 
+**Greek**: `RemixedDungeon/src/main/res/values-el/strings_all.xml`
+For Greek wiki pages located in the `wiki-data/pages/el/` directory, ensure consistency with the official Greek translation provided in this file.
+
 **Indonesian**: `RemixedDungeon/src/main/res/values-in/strings_all.xml`
 For Indonesian wiki pages located in the `wiki-data/pages/id/` directory, ensure consistency with the official Indonesian translation provided in this file.
 
 **Malay**: `RemixedDungeon/src/main/res/values-ms/strings_all.xml`
 For Malay wiki pages located in the `wiki-data/pages/ms/` directory, ensure consistency with the official Malay translation provided in this file.
-
-**Greek**: `RemixedDungeon/src/main/res/values-el/strings_all.xml`
-For Greek wiki pages located in the `wiki-data/pages/el/` directory, ensure consistency with the official Greek translation provided in this file.
 
 Using the appropriate string resource file for each language ensures that wiki content matches the in-game experience for speakers of that language.
 

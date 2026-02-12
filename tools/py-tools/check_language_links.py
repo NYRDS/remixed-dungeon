@@ -74,11 +74,7 @@ def get_page_language(page_name: str) -> str:
     """
     parts = page_name.split(':')
     # Define common language codes
-    language_codes = {'ru', 'en', 'cn', 'de', 'fr', 'es', 'it', 'pt', 'ja', 'ko', 'zh', 'pl', 'cs', 'uk', 'be', 'bg',
-                      'hr', 'ro', 'sr', 'mk', 'sl', 'hu', 'sk', 'nl', 'da', 'sv', 'no', 'fi', 'et', 'lv', 'lt',
-                      'mt', 'ga', 'cy', 'eu', 'ca', 'gl', 'ast', 'an', 'oc', 'ia', 'eo', 'la', 'vo', 'fy', 'lb',
-                      'af', 'zu', 'xh', 'st', 'tn', 'ts', 'ss', 've', 'nr', 'sw', 'rw', 'rn', 'mg', 'co', 'gd',
-                      'kw', 'br', 'gv'}
+    language_codes = {'ru', 'en', 'cn', 'de', 'fr', 'es', 'it', 'pt', 'ja', 'ko', 'zh', 'pl', 'uk', 'hu', 'tr', 'el', 'in', 'ms'}
 
     if len(parts) >= 2 and parts[0] in language_codes:
         return parts[0]

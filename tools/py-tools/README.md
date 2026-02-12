@@ -12,6 +12,27 @@ This directory contains Python scripts that are useful for maintaining and devel
 - `update_links.py` - Updates links in wiki content
 - `update_links_specific.py` - Updates specific links in wiki content
 
+### Language Support
+The wiki tools support all languages available in the game:
+- English (en) - Default language
+- Russian (ru)
+- Spanish (es)
+- French (fr)
+- German (de)
+- Portuguese (pt) - Brazilian Portuguese specifically
+- Italian (it)
+- Japanese (ja)
+- Korean (ko)
+- Chinese (cn) - Simplified Chinese
+- Traditional Chinese (zh)
+- Polish (pl)
+- Ukrainian (uk)
+- Hungarian (hu)
+- Turkish (tr)
+- Greek (el)
+- Indonesian (in)
+- Malay (ms)
+
 ### Sprite and Asset Extraction
 - `extract_item_sprites.py` - Extracts item sprites from the main sprite sheet
 - `extract_all_item_sprites.py` - Extracts items from multiple specialized sheets
