@@ -5,7 +5,7 @@ local spell = require "scripts/lib/spell"
 return spell.init{
     desc  = function ()
         return {
-            image         = 2,
+            image         = 0,
             imageFile     = "spellsIcons/doctor.png",
             name          = "BloodTransfusion_Name",
             info          = "BloodTransfusion_Info",
