@@ -477,6 +477,8 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="CorpseDust_Info">A kislabda nagyságú hullapor golyó nem különbözik egy közönséges kiszáradt sárlabdától. Mindazonáltal tudod hogy valahogy jobb ha mielőbb megszabadulsz tőle.</string>
     <string name="CorpseDust_Info2">Talán csak azért mert nálad van de máris duhösnek és idegesnek érzed magad.</string>
     <string name="CorpseDust_Name">hullapor</string>
+    <string name="CorpseExplosion_Info">Felpattan egy hulla, mérgesítve és sebezve minden közelben lévő ellenséget.</string>
+    <string name="CorpseExplosion_Name">Hulla Robbanás</string>
     <string name="Crab_Defense">kivédve</string>
     <string name="Crab_Desc">Ezek az óriási rákok a tápláléklánc tetején vannak a csatornákban. Hihetetlen gyorsak és vastag páncéljuk erős ütéseknek is ellenáll.</string>
     <string name="Crab_Name">csatornarák</string>
@@ -2549,6 +2551,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
