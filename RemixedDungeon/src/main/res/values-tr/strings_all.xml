@@ -1423,6 +1423,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, geri döndünüz! _Beş ölü sıçan_, harika! Derileri araştırmalarım için çok önemli olacak. Söylediğim gibi, cesur çabanız karşılığında bu zırhı onların derisinden yaptım. Üzerinde biraz veba var, ama endişelenmeyin! Kontrollü, sizi koruyor! Şimdi gidin! Şehri koruyun!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Beş ölü fare getirin! Her biri getirdiğinizde bu korkunç salgını anlayışımıza katkı sağlıyor.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Şiddetli öksürür* Achoo!\n _Salyangozlar_… süzülüyorlar. Akıyorlar. Ve unutulmuş çağların sırlarını fısıldıyorlar. Onlara ihtiyacım var, _on tanesine_, hâlâ kabukları tamamen sağlam. Böyle değerli bilgi için sadece _elli altın coin_ yeterli olur mu dersin?\n Bah! Önemli değil. İçerdikleri bilgi bu vebayı durdurmanın anahtarı olabilir. Veya… bizi daha korkunç bir şeye götürebilir. Sen karar ver.</string>
+    <string name="PlagueDoctorQuest_2_2_Prologue">Ah, _güneşotu_! Narin bir çiçek, taç yaprakları güneşin sıcaklığını yayıyor. Esansının anahtarı olduğunu düşünüyorum... ah, şimdilik detayları unutun. Yeter ki araştırmam için kritik öneme sahip olduğunu söyleyeyim. _İki güneşotu tohumu_. Bunları bana getirin, ve maceralarınızda mutlaka işinize yarayacak bir şey veririm - güneşi içeren bir _İksir Sağlığı_, tamamen canlandırıcı güçle dolu.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Eldivenli elleriyle _yarasa_yı nazikçe kucaklayarak minik formunu rahatsız edici bir merakla inceliyor* Muhteşem! Bu yarasanın yer tespiti... şimdiye kadar deneyimlediğim hiçbir şeye benzemiyor. Ne kadar hassas... ne kadar... kontrol. *Yüzünü maskeyle kaplı halde size döner* Emekleriniz için, bir _Geliştirme Parşömeni_. Potansiyelin... varlığını sırf rafine etme potansiyeline sahip olduğundan dolayı dikkatli kullanın. *Parşömeni size uzatır, sesi fısıltıya dönüşür* Bu _yarasa_... gizli bir dünyaya bir pencere. Bir dünya... gölgelerin dans ettiği ve sırların fısıldadığı bir yer.</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">Bir _Ölüm Şövalyesi_! *Heyecanla sesi titrer, kemiksi parmakları köpüren ve fosforesan sıvıyla dolu bir şikeyi sıkıca tutarken*. Böyle bir yaratık... ölümsüzlüğün habercisi! Biri canlı olarak yakalamak... muazzam olurdu. Ne gibi sırları çözebiliriz diye düşün! İskelet damarlarından akan güç! Evet, bir _Ölüm Şövalyesi_! Araştırmalarım için çok önemli! Çünkü yaşam ve ölümün derinliklerine inmemizi sağlayacak... öylesine!</string>
     <string name="PlagueDoctor_Desc">Bu kambur kişinin tüm vücudu deri bir tulumun altında gizlidir. Ayrıca, ondan acı bir ilaç ve ... sarımsak kokusu geliyor?</string>
@@ -2849,6 +2850,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

@@ -519,6 +519,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="CurareDart_Info">Anak panah kecil yang jahat ini tidak memberikan banyak kerusakan, tetapi mereka dapat melumpuhkan target sehingga membuatnya tidak berdaya dan tidak bergerak untuk beberapa waktu.</string>
     <string name="CurareDart_Name">curare dart</string>
     <string name="DM300_Desc">Mesin ini dibuat oleh para kurcaci beberapa abad yang lalu. Lalu, setelah para kurcaci mulai mengganti mesin dengan monster batu, elemental dan setan. Itu membuat peradaban mereka mengarah ke penolakan. DM-300 dan mesin lainnya digunakan untuk konstruksi dan menambang, dan dalam keadaan tertentu, untuk pertahanan kota.</string>
+    <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300 membetulkan diri sendiri!</string>
     <string name="DM300_Info2">Misi gagal. Mematikan.</string>
     <string name="DM300_Info3">Personil tak terautorisasi terditeksi.</string>
@@ -2772,6 +2773,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
