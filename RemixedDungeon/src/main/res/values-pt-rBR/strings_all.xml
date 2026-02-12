@@ -1388,6 +1388,7 @@ Parede
     <string name="PlagueDoctorQuest_2_2_Prologue">Ah, _grama-solar_! Uma flor delicada, cujas pétalas irradiam o calor do sol. Acredito que sua essência contém a chave para... ah, esqueça os detalhes por enquanto. Basta dizer que é crucial para minha pesquisa. _Duas sementes de grama-solar_. Traga-as para mim, e eu recompensarei você com algo que certamente será útil em suas aventuras - uma _Poção de Saúde_, transbordando com a própria vitalidade do sol.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Traga-me um _morcego vampiro_, vivo e ileso! Seu sangue, suas asas... eles contêm segredos que devo descobrir!</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*Seus olhos brilham com uma intensidade estranha e febril* Ah, o _morcego vampiro_! Uma criatura da noite, alimentando-se da força vital de sua presa. Fascinante... verdadeiramente fascinante. Preciso de um vivo para estudar sua fisiologia única. É tudo sobre... entender o... a... *Ele se cala, murmurando para si mesmo uma série de termos arcanos*. Sim! A ecolocalização do _morcego_, sua capacidade de navegar na escuridão completa... é a chave para desvendar um segredo.</string>
+    <string name="PlagueDoctorQuest_5_1_Epilogue">*Ele encara os dois _succubi_, um sorriso feliz se espalhando sob sua máscara.* Esplêndido! Magnífico! Isso desbloqueará tantas… possibilidades! *Ele se vira para você, sua voz grossa de gratidão… e algo mais.* Seus esforços… não serão esquecidos. Eu lhe devo minhas mais profundas gratidões. *Seu olhar permanece nos _succubi_ por um momento demasiadamente longo, antes de ele se retirar em seu laboratório, murmurando sobre desvendar os segredos da sedução.*</string>
     <string name="PlagueDoctorQuest_AllDone">*Ele solta uma risada seca e ofegante.* \&quot;Suas ações desbloquearam segredos sem medida! O conhecimento adquirido... ele pulsa dentro de mim, uma sinfonia de descobertas. Mas o conhecimento,\&quot; ele acrescenta, sua voz caindo para um sussurro conspiratório, \&quot;conhecimento é poder. E poder... ah... esse é um elixir mais embriagante.\&quot; Ele encara você intensamente por um momento, seus olhos de ametista queimando com uma intensidade febril. \&quot;Talvez,\&quot; murmura ele, \&quot;nossos caminhos se cruzem novamente. Pois ainda há muitos... mistérios... a serem desvendados.\&quot;</string>
     <string name="PlagueDoctor_Desc">Este homem corcunda está totalmente vestido com couro. Ele tem cheiro forte de medicamentos e... alho?</string>
 
@@ -2788,6 +2789,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -2039,6 +2039,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndClass_Mastery">마스터리</string>
     <string name="WndCryptoDonate_copyAddress">주소 복사</string>
     <string name="WndCryptoDonate_ethereum">이더리움</string>
+    <string name="WndCryptoDonate_walletAddress">지갑 주소</string>
     <string name="WndCryptoDonate_warningText">경고: 자금을 보내기 전에 항상 주소를 확인하십시오. 암호화폐 거래는 되돌릴 수 없습니다!</string>
     <string name="WndDonate_donate">기부하세요:</string>
     <string name="WndDonate_gold">금화</string>
@@ -2469,6 +2470,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
