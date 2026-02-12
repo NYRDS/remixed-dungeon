@@ -65,6 +65,10 @@ public class Bundle {
     public String serialize() {
         return data.toString();
     }
+    
+    public String toJson() {
+        return data.toString();
+    }
 
     public boolean isNull() {
         return data == null;
