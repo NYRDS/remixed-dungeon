@@ -953,6 +953,7 @@
     <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Info">鏢頭牢牢插在敵人身上，而鏢身上的不穩定無機熔點低分子混合物（燃料）繼以起燃。</string>
     <string name="IncendiaryDart_Name">引燃飛鏢</string>
+    <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnServant_Phrase_3">我看起來很乾淨</string>
     <string name="InnServant_Phrase_4">我的天，今天這麼多的客人</string>
     <string name="Instability_Name_0">紊亂%s</string>
@@ -2627,6 +2628,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

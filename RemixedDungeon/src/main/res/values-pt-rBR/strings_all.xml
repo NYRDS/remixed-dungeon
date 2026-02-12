@@ -700,6 +700,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Food_ACEat">COMER</string>
     <string name="Food_Message">A comida estava deliciosa!</string>
     <string name="FortuneTellerNPC_Desc">Esta mulher está vestindo uma roupa longa, brilhantemente e colorida. Ela parece bastante jovem para alguém que domina as artes arcanas da adivinhação. Ao aproximar-se, você pode ouvi-la murmurar, enquanto olha fixamente a bola de cristal.</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">vidente</string>
     <string name="FortuneTellerNPC_Name_Objective">vidente</string>
     <string name="FreezeGlobe_Info">Congela o mob selecionado tornando-o incapaz de executar qualquer ação por um curto período de tempo.</string>
@@ -2789,6 +2790,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

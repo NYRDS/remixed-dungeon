@@ -384,6 +384,7 @@ Ein blutroter Helm ist ein wesentliches Symbol eines Chaos Kriegers.</string>
     <string name="CharAction_Steal">stehlen</string>
     <string name="CharAction_Take">nehmen</string>
     <string name="CharAction_Taunt">verspotten</string>
+    <string name="CharInfo_Level">Dies ist ein Level-%1$d %2$s.</string>
     <string name="Char_Defeat_0">%1$s vernichtest %2$s</string>
     <string name="Char_Defeat_1">%1$s vernichtest %2$s</string>
     <string name="Char_Defeat_2">%1$s vernichtest %2$s</string>
@@ -2727,6 +2728,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
