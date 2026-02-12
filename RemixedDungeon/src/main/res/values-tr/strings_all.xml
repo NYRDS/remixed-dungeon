@@ -1420,6 +1420,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
 </string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Olacak iş değil! Şu ahmaklar hala lağımların ne kadar tehlikeli olduğunu idrak edemiyor. Sanki gardiyan ve maceracı bozmaları, Kasaba\'yı her bir şeyden koruyabilirmiş gibi... Bu hastalığın yayılmasını hiçbir silah durduramaz. Biraz yardımın lazım. Bana %d sıçan derisi getir ki araştırmalarıma devam edebileyim. 
 </string>
+    <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, geri döndünüz! _Beş ölü sıçan_, harika! Derileri araştırmalarım için çok önemli olacak. Söylediğim gibi, cesur çabanız karşılığında bu zırhı onların derisinden yaptım. Üzerinde biraz veba var, ama endişelenmeyin! Kontrollü, sizi koruyor! Şimdi gidin! Şehri koruyun!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Beş ölü fare getirin! Her biri getirdiğinizde bu korkunç salgını anlayışımıza katkı sağlıyor.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Şiddetli öksürür* Achoo!\n _Salyangozlar_… süzülüyorlar. Akıyorlar. Ve unutulmuş çağların sırlarını fısıldıyorlar. Onlara ihtiyacım var, _on tanesine_, hâlâ kabukları tamamen sağlam. Böyle değerli bilgi için sadece _elli altın coin_ yeterli olur mu dersin?\n Bah! Önemli değil. İçerdikleri bilgi bu vebayı durdurmanın anahtarı olabilir. Veya… bizi daha korkunç bir şeye götürebilir. Sen karar ver.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Eldivenli elleriyle _yarasa_yı nazikçe kucaklayarak minik formunu rahatsız edici bir merakla inceliyor* Muhteşem! Bu yarasanın yer tespiti... şimdiye kadar deneyimlediğim hiçbir şeye benzemiyor. Ne kadar hassas... ne kadar... kontrol. *Yüzünü maskeyle kaplı halde size döner* Emekleriniz için, bir _Geliştirme Parşömeni_. Potansiyelin... varlığını sırf rafine etme potansiyeline sahip olduğundan dolayı dikkatli kullanın. *Parşömeni size uzatır, sesi fısıltıya dönüşür* Bu _yarasa_... gizli bir dünyaya bir pencere. Bir dünya... gölgelerin dans ettiği ve sırların fısıldadığı bir yer.</string>
@@ -2848,6 +2849,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

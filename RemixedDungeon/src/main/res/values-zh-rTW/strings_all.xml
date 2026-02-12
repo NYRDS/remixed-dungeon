@@ -1851,6 +1851,7 @@
     <string name="StartScene_New">新遊戲</string>
     <string name="StartScene_No">不，返回主目錄</string>
     <string name="StartScene_Really">確定要重新開始？</string>
+    <string name="StartScene_UnlockDoctor">解鎖瘟疫醫生 - 完成舊的瘟疫醫生任務</string>
     <string name="StartScene_UnlockGnoll">控制一只豺狼暴徒，並且帶它回小鎮找牧師治療解鎖</string>
     <string name="StartScene_UnlockNecromancer">使用其他角色擊敗巫妖來解鎖這個角色。</string>
     <string name="StartScene_Warning">您當前的所有進度會被清除。</string>
@@ -2624,6 +2625,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
