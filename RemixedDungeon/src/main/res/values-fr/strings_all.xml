@@ -333,6 +333,7 @@
     <string name="Candy_Warning_2">Là vous en avez vraiment trop avalés. Votre ventre vous fait mal puisque vous avez mangé trop de bonbons.</string>
     <string name="Capotain_Info">Un chapeau à haute coiffe et à bord étroit. Il est habituellement associé aux puritains, mais il ne faut pas être religieux pour le porter. Pour une raison quelconque, il a une plaque, sur laquelle est écrite \&quot;Salomon\&quot;.</string>
     <string name="Capotain_Name">Capotaine</string>
+    <string name="Carcass_Devoured">Vous avez dévoré le cadavre de %s !</string>
     <string name="Carcass_DissectFailed">Vous disséquez le %s mais ne trouvez rien de valeur.</string>
     <string name="Carcass_DissectResult">Du %1$s, vous obtenez %2$d %3$s.</string>
     <string name="Carcass_Info">Restes de %s totalement mort.</string>
@@ -2947,6 +2948,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

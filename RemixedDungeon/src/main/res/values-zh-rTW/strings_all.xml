@@ -82,6 +82,7 @@
     <string name="ArmoredStatue_Name">活化石像</string>
     <string name="ArmoredStatue_Name_Objective">活化石像</string>
     <string name="Artifact_Limit">你最多只能同時佩戴2件飾品。</string>
+    <string name="Attack_Cooldown">攻擊冷卻時間</string>
     <string name="AwarenessBuff_Name">察覺</string>
     <string name="AzuterronNPC_Desc">被黑霧包圍著的神秘人</string>
     <string name="AzuterronNPC_Name">陌生人</string>
@@ -847,6 +848,7 @@
     <string name="HeroSubClass_DescSnip">_狙擊手_見微知著，能夠找出敵人護甲的脆弱點，使用遠程武器攻擊時，能有效地無視敵人護甲打出傷害。</string>
     <string name="HeroSubClass_DescWarL">_術士_殺死一個敵人後，會吸取它們的靈魂來治癒自己的傷口和充饑。</string>
     <string name="HeroSubClass_DescWard">跟自然之力強大的聯繫讓_守望者_能從植物中收集露珠和種子，並且在踩踏高草時獲得短暫的根甲保護。</string>
+    <string name="HeroSubClass_DescWitchdoctor">施法使_巫醫_獲得一面魔法護盾，完全保護他免受即將到來的傷害。</string>
     <string name="HeroSubClass_NameAssa">刺客</string>
     <string name="HeroSubClass_NameBatM">鬥法家</string>
     <string name="HeroSubClass_NameBers">狂戰士</string>
@@ -2625,6 +2627,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
