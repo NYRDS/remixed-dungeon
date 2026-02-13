@@ -1270,6 +1270,7 @@
     <string name="MimicPie_Name">拟形怪</string>
     <string name="MimicPie_Name_Objective">拟形怪</string>
     <string name="Mimic_Desc">拟形怪是一种能够变成任何形态的魔法生物。在地牢里它们几乎一直以宝箱形态出现，因为它们明白怎样才能引诱到到冒险者。</string>
+    <string name="Mimic_Gender">neuter</string>
     <string name="Mimic_Name">拟形怪</string>
     <string name="Mimic_Name_Objective">拟形怪</string>
     <string name="MindVisionBuff_Info">心灵的静笃，可观生物之行动。</string>
@@ -2809,6 +2810,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
