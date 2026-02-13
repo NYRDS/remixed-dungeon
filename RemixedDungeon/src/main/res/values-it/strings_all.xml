@@ -354,6 +354,7 @@
     <string name="Chasm_Jump">Vuoi davvero fare un salto nel baratro? Probabilmente si può morire.</string>
     <string name="Chasm_No">No, ho cambiato idea</string>
     <string name="Chasm_Yes">Sì, so quello che faccio</string>
+    <string name="ChristmasTurkey_Info">Il modo migliore per celebrare il Dungeonmas è mangiare una fetta di tacchino al forno. Per celebrare il giorno in cui i mostri hanno invaso il dungeon. Il quale, alla fine, ha attirato un numero incredibile di turisti e viaggiatori da tutto il mondo, migliorando la situazione economica della regione.</string>
     <string name="City_TileDescBookshelf">una fila di libri su diverse discipline riempiono la libreria.</string>
     <string name="City_TileDescDeco">Diverse piastrelle mancanti qui.</string>
     <string name="City_TileDescEmptySP">una moquette spessa copre il pavimento.</string>
@@ -412,6 +413,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Codex_Story_8">Glifo della viscosità - L\'eroe otterrà il danno differito debuff, che farà sì che l\'eroe riceva 1 danno per turno, invece di ricevere l\'intera quantità in un solo colpo.</string>
     <string name="Codex_Story_9">Glifo del dislocamento - Ogni volta che l\'eroe è colpito, c\'è la possibilità che l\'eroe sarà teletrasportato a una tessera visibile casuale. Questo glifo non funziona su livelli boss.</string>
     <string name="ColdSpirit_Desc">Lo spirito freddo è l\'incarnazione del gelo, nella sua forma più pura. Essendo un insensato grumo di energia magica, obbedisce alla volontà del mago che lo ha chiamato o agisce invece secondo gli istinti di base.</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">spirito freddo</string>
     <string name="ColdSpirit_Name_Objective">spirito freddo</string>
     <string name="ComboBuff_Name">Combinazione</string>
@@ -797,6 +799,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Hero_StaWeakness">Ti senti debole!</string>
     <string name="Hero_Wait">...</string>
     <string name="Hero_YouNowHave">Tu ora hai %s</string>
+    <string name="HideInGrassSpell_NeedGrassToHide">Nemmeno io posso nascondermi così allo scoperto.</string>
     <string name="Horror_Name_0">Soprannaturale %s</string>
     <string name="Horror_Name_1">Soprannaturale %s</string>
     <string name="Horror_Name_2">Soprannaturale %s</string>
@@ -2320,6 +2323,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_sofa_name">Divano comodo</string>
     <string name="town_deco_stakes_desc">Questi tronchi appuntiti hanno un aspetto minaccioso, ma di fatto sono piuttosto inutili di per sé.</string>
     <string name="town_deco_statue_water_desc">Una maestosa statua di un angelo che tiene una ciotola d\'acqua.</string>
+    <string name="town_deco_statue_water_name">Statua di angelo</string>
     <string name="town_deco_stock_name">Scorta</string>
     <string name="town_deco_stone_wall_broken_desc">Vecchio muro di pietra, in cattive condizioni</string>
     <string name="town_deco_stone_wall_name">Muro di pietra</string>
@@ -2357,6 +2361,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 

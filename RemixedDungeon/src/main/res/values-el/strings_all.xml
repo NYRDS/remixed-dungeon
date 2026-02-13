@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Καταβρόχθιση</string>
     <string name="AC_Dissect">Τεμαχισμός</string>
@@ -619,7 +618,7 @@
     <string name="DeferedDamageBuff_Info">Ο πόνος έχει γίνει σταδιακός και η ζημιά δεν λαμβάνεται όλη απευθείας.\nΖημιά που απομένει να ληφθεί: %d</string>
     <string name="DeferedDamageBuff_Name">Αναβεβλημένη ζημιά (%d)</string>
     <string name="DeferedDamage_Killed_Txt">Η %s σε εξόντωσε...</string>
-    <string name="DevourBuff_Info" />
+    <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">Καταβρόχθιση</string>
     <string name="DewVial_ACDRINK">ΠΙΕΣ</string>
     <string name="DewVial_AutoDrink">Το φιαλίδιο δρόσου άδειασε και θεράπευσε τις πληγές σου.</string>
@@ -971,7 +970,7 @@
     <string name="HeroSubClass_DescFreR">Ο _Δρομέας_ μπορεί να τρέχει με σχεδόν διπλάσια ταχύτητα από τα περισσότερα πλάσματα. Είναι, επίσης, πολύ ικανότερος στην αποφυγή χτυπημάτων ενώ τρέχει. Για να ισχύσει αυτό, θα πρέπει να μην είναι επιβαρυμένος και να μη λιμοκτονεί.</string>
     <string name="HeroSubClass_DescGlad">Μια επιτυχημένη επίθεση με όπλο κοντινής μάχης επιτρέπει στον _Μονομάχο_ να ξεκινήσει μια διαδοχή χτυπημάτων, κατά την οποία κάθε επακόλουθο χτύπημα προκαλεί επιπλέον ζημιά.</string>
     <string name="HeroSubClass_DescGuardian">Η αμυντική επιδεξιότητα του _Φύλακα_ του επιτρέπει να αντεπιτίθεται με την ασπίδα του. Αυτό τον κάνει έναν επικίνδυνο εχθρό για όσους τολμήσουν να επιτεθούν σε αυτό το κινούμενο οχυρό.</string>
-    <string name="HeroSubClass_DescNone" />
+    <string name="HeroSubClass_DescNone"/>
     <string name="HeroSubClass_DescScout">Οι _Ανιχνευτές_ των ξωτικών είναι αυθεντίες στην κάλυψη. Λαμβάνουν μια προσωρινή επίδραση αορατότητας όποτε ποδοπατούν το ψηλό γρασίδι. Είναι, επίσης, ταχύτεροι από τα κοινά ξωτικά.</string>
     <string name="HeroSubClass_DescShaman">Οι _Σαμάνοι_ των ξωτικών χρησιμοποιούν τα ραβδιά τους ως όπλα μάχης σώμα-με-σώμα. Ένα επιτυχημένο χτύπημα έχει την πιθανότητα να ενεργοποιήσει τη δύναμη του ραβδιού χωρίς να ξοδέψει φορτίο.</string>
     <string name="HeroSubClass_DescSnip">Η _Σκοπεύτρια_ μπορεί να εντοπίζει αδύναμα σημεία στην πανοπλία του εχθρού, και πρακτικά την παρακάμπτει όποτε χρησιμοποιεί όπλα απόστασης.</string>
@@ -1220,7 +1219,7 @@
     <string name="Level_TileDescStatue">Κάποιος θέλησε να διακοσμήσει τον χώρο, αλλά προφανώς απέτυχε.</string>
     <string name="Level_TileDescTrap">Η παγίδα ενεργοποιείται με το πάτημα του κρυφού ποδομοχλού.</string>
     <string name="Level_TileDescWater">Σε περίπτωση που καίγεσαι, πάτα στο νερό για να σβήσεις τη φωτιά.</string>
-    <string name="Level_TileDescWell" />
+    <string name="Level_TileDescWell"/>
     <string name="Level_TileEmbers">Κάρβουνα</string>
     <string name="Level_TileEmptyWell">Άδειο πηγάδι</string>
     <string name="Level_TileEntrance">Είσοδος ορόφου</string>
@@ -2060,7 +2059,7 @@
     <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">αραχνοφρουρός</string>
     <string name="SpiderGuard_Name_Objective">αραχνοφρουρός</string>
-    <string name="SpiderMindAmber_Desc">Οι κεχριμπαρένιες αράχνες είναι σπάνια και μυστηριώδη πλάσματα που κατέχουν ψυχικές δυνάμεις παρόμοιες με τις κανονικές ψυχο-αράχνες, αλλά είναι και σωματικά ανθεκτικότερες. Ο χαρακτηρισμός \"κεχριμπαρένια\" αναφέρεται στο χρώμα της γιγάντιας μεμβράνης του εγκεφάλου της, η οποία αποκαλύπτεται στα θύματα όταν η αράχνη επιτίθεται με τις δυνάμεις της.</string>
+    <string name="SpiderMindAmber_Desc">Οι κεχριμπαρένιες αράχνες είναι σπάνια και μυστηριώδη πλάσματα που κατέχουν ψυχικές δυνάμεις παρόμοιες με τις κανονικές ψυχο-αράχνες, αλλά είναι και σωματικά ανθεκτικότερες. Ο χαρακτηρισμός \&quot;κεχριμπαρένια\&quot; αναφέρεται στο χρώμα της γιγάντιας μεμβράνης του εγκεφάλου της, η οποία αποκαλύπτεται στα θύματα όταν η αράχνη επιτίθεται με τις δυνάμεις της.</string>
     <string name="SpiderMindAmber_Gender">feminine</string>
     <string name="SpiderMindAmber_Name">κεχριμπαρένια αράχνη</string>
     <string name="SpiderMindAmber_Name_Objective">κεχριμπαρένια αράχνη</string>
@@ -2412,15 +2411,7 @@
     -- Η ψυχο-αράχνη ενδυναμώνει τις άλλες αράχνες αντί να αποδυναμώνει τον ήρωα.\n
     - Διορθώσεις σφαλμάτων\n
     </string>
-  <string name="WndTilesKind_Title">Και κάτι ακόμη:</string>
-  <string name="WndTilesKind_text">Πρόκειται να μπεις σε μια κατακόμβη που έχει κυριευτεί από τη διαβολική μαγεία· τουλάχιστον μπορείς να επιλέξεις πώς θα τη βλέπεις.\nΘέλεις να είναι με σύγχρονα ψευδο-3D γραφικά ή με την κλασική επίπεδη εμφάνιση;\nΜπορείς να το αλλάξεις αργότερα στο μενού ρυθμίσεων του παιχνιδιού.</string>
-  <string name="WndTilesKind_NewLook">Νέα εμφάνιση</string>
-  <string name="WndTilesKind_ClassicLook">Κλασική εμφάνιση</string>
-  <string name="WndCustomizations_Title">Προσαρμογές</string>
-  <string name="WndModSelect_ReallyDelete">Διαγραφή σίγουρα;</string>
-  <string name="WndModSelect_AreYouSure">Διαγραφή τροποποίησης: %s. Σίγουρα;</string>
-  <string name="WndHero_Info">Πληροφορίες</string>
-  <string name="Welcome_Text_32">
+    <string name="Welcome_Text_32">
 remix.32\n
     - Παιχνίδι:\n
     -- Οι εχθροί και οι σύμμαχοι μπορούν πλέον να αποκτούν εμπειρία και επίπεδα\n
@@ -2466,8 +2457,10 @@ remix.32\n
     <string name="WndChooseWay_Message">Ποια πορεία θα ακολουθήσεις;</string>
     <string name="WndClass_Mastery">Εξειδίκευση</string>
     <string name="WndCryptoDonate_copyAddress">Αντιγραφή Διεύθυνσης</string>
+    <string name="WndCryptoDonate_currency">Νόμισμα</string>
     <string name="WndCryptoDonate_monero">Μονέρο</string>
     <string name="WndCryptoDonate_warningText">ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Επαληθεύετε πάντα τη διεύθυνση πριν στείλετε χρήματα. Οι συναλλαγές κρυπτονομισμάτων είναι μη αναστρέψιμες!</string>
+    <string name="WndCustomizations_Title">Προσαρμογές</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - Δωρεάν σε όλους και έτσι θα είναι πάντα.\n\nΠαρόλα αυτά, μπορείς να μας βοηθήσεις να το κάνουμε ακόμα καλύτερο.\n\nΜαζί με τις εγκάρδιες ευχαριστίες μας, θα λάβεις και κάποια αισθητικά πρόσθετα.</string>
     <string name="WndDonate_donate">δωρεά:</string>
     <string name="WndDonate_gold">Χρυσή</string>
@@ -2482,7 +2475,7 @@ remix.32\n
     <string name="WndDonate_ruby">Ρουμπινένια</string>
     <string name="WndDonate_rubyDonate">Ρουμπινένια δωρεά</string>
     <string name="WndDonate_rubyDonateText">Η γενναιοδωρία σου μας βοηθά να συνεχίσουμε τη βελτίωση του Remixed Dungeon!</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
     <string name="WndDonate_silver">Ασημένια</string>
     <string name="WndDonate_silverDonate">Ασημένια δωρεά</string>
     <string name="WndDonate_silverDonateText">Κάθε δωρεά βοηθά στην ανάπτυξη του παιχνιδιού.</string>
@@ -2520,6 +2513,7 @@ remix.32\n
     <string name="WndHero_Exp">Εμπειρία</string>
     <string name="WndHero_Gold">Χρυσός που συλλέχθηκε</string>
     <string name="WndHero_Health">Ζωή</string>
+    <string name="WndHero_Info">Πληροφορίες</string>
     <string name="WndHero_Satiety">Κορεσμός</string>
     <string name="WndHero_SkillLevel">Επίπεδο ικανότητας</string>
     <string name="WndHero_StaCatalogus">Κατάλογος</string>
@@ -2560,6 +2554,8 @@ remix.32\n
     <string name="WndModInstall_InstallingMod">Εγκατάσταση τροποποίησης</string>
     <string name="WndModInstall_PleaseUpdate">Παρακαλούμε ενημέρωσε το Remixed Dungeon προτού εγκαταστήσεις αυτήν την τροποποίηση.</string>
     <string name="WndModInstall_Version">έκδοση</string>
+    <string name="WndModSelect_AreYouSure">Διαγραφή τροποποίησης: %s. Σίγουρα;</string>
+    <string name="WndModSelect_ReallyDelete">Διαγραφή σίγουρα;</string>
     <string name="WndModsDisclaimer_install">Εγκατάσταση τροποποίησης από συσκευή</string>
     <string name="WndModsDisclaimer_manage">Διαχείριση λίστας τροποποιήσεων</string>
     <string name="WndModsDisclaimer_title">Τροποποιήσεις</string>
@@ -2678,6 +2674,10 @@ remix.32\n
     <string name="WndStory_Prision">Πολλά χρόνια πριν, μια υπόγεια φυλακή είχε χτιστεί εδώ κάτω για τους πιο επικίνδυνους εγκληματίες. Εκείνον τον καιρό ήταν πολύ έξυπνη ιδέα· είναι πραγματικά δύσκολο να δραπετεύσει κανείς από εδώ. Σύντομα, όμως, άρχισε να αναδίδεται ένα σκοτεινό μίασμα από κάτω, το οποίο οδηγούσε στην τρέλα τόσο τους φύλακες όσο και τους κρατούμενους. Στο τέλος η φυλακή εγκαταλείφθηκε, αλλά κάποιοι κατάδικοι έμειναν κλειδωμένοι εδώ μέσα...</string>
     <string name="WndStory_Sewers">Η κατακόμβη βρίσκεται ακριβώς κάτω από την πόλη· τα ανώτερα επίπεδα αποτελούν το αποχετευτικό της σύστημα. Δεν είναι και πολύ επικίνδυνα αυτά τα επίπεδα μιας και αποτελούν τμήμα της πόλης. Δεν το λες κι ασφαλές μέρος, αλλά εδώ δεν έχει επικρατήσει ακόμα η διαβολική μαγεία.</string>
     <string name="WndStory_Spiders">Πολλά, πολλά χρόνια πριν υπήρχε ένα πλούσιο ορυχείο γεμάτο μαγικά πετρώματα. Αλλά μόλις τα ορυκτά εξαντλήθηκαν, οι ανθρακωρύχοι εγκατέλειψαν το μέρος κι άφησαν πίσω τους ένα ευρύ δίκτυο από σήραγγες. Τελικά η περιοχή αποικήθηκε από αράχνες. Αλλά ακόμα κι αυτά τα επικίνδυνα πλάσματα, που καραδοκούν στο σκοτάδι, δεν ήταν αρκετά να αποθαρρύνουν τους θαραλλέους και τους τρελούς που αναζητούσαν χαμένους θησαυρούς. Γιατί ο κίνδυνος είναι πάντα αναλογικός με το πλήθος των θρύλων περί μαγικών τεχνουργημάτων. Κάποτε, μια κακιά μάγισσα περιπλανιόταν στις σήραγγες ελπίζοντας να ξεφύγει από τους κατήγορούς της. Αλλά τα προληπτικά αυτά άτομα δεν τολμούσαν να μπουν στο σκοτάδι. Γι\' αυτό και την περίμεναν... μα δεν εμφανίστηκε ποτέ. Ίσως να βρήκε άλλη διέξοδο ή να πέρασε κρυφά μπροστά από τους φρουρούς. Ίσως και να βρήκε τον θάνατό της, περιτριγυρισμένη από βοές τεράτων κρυμμένων στο σκοτάδι.</string>
+    <string name="WndTilesKind_ClassicLook">Κλασική εμφάνιση</string>
+    <string name="WndTilesKind_NewLook">Νέα εμφάνιση</string>
+    <string name="WndTilesKind_Title">Και κάτι ακόμη:</string>
+    <string name="WndTilesKind_text">Πρόκειται να μπεις σε μια κατακόμβη που έχει κυριευτεί από τη διαβολική μαγεία· τουλάχιστον μπορείς να επιλέξεις πώς θα τη βλέπεις.\nΘέλεις να είναι με σύγχρονα ψευδο-3D γραφικά ή με την κλασική επίπεδη εμφάνιση;\nΜπορείς να το αλλάξεις αργότερα στο μενού ρυθμίσεων του παιχνιδιού.</string>
     <string name="WndTradeItem_Bought">Αγόρασες: %1$s για %2$dχρ</string>
     <string name="WndTradeItem_Buy">Αγορά για %dχρ</string>
     <string name="WndTradeItem_BuyAll">Αγορά όλων για %dχρ</string>
@@ -3006,6 +3006,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

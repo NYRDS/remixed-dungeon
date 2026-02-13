@@ -891,6 +891,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="HeroClass_NecromancerPerks_3">Ölü Çağıranlar 7. seviye bir iskelet anahtarıyla başlar.</string>
     <string name="HeroClass_NecromancerPerks_4">İyileştirme İksiri en başından itibaren tanımlanmıştır.</string>
     <string name="HeroClass_None">halktan biri</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">Veba doktorları, öldürülmüş düşmanlardan [yellow:Toksin Bezleri], [yellow:Çürümüş Organlar], [yellow:Kemik Parçaları] toplar.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Veba Maskesi (tüm Gazlara karşı bağışık) ve Kemik Testeresi ile başlar. Kritik vuruşlar fazladan parça düşürür ve Testere felçli dusmanlara +%50 daha fazla hasar verir.</string>
     <string name="HeroClass_Rog">haydut</string>
     <string name="HeroClass_RogPerks_0">Düzenbazlar Gölgeler Yüzüğü+1 ile başlar.</string>
@@ -1097,6 +1098,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="KoboldIcemancer_Name">cüce buzbüyücüsü</string>
     <string name="KoboldIcemancer_Name_Objective">cüce buzbüyücüsü</string>
     <string name="Kobold_Desc">Koboldların efsaneden başka bişey olmadıklarına inanılmıştır. Çoğu gnolların atası koboldlar, mağaraların derin ve serin yerlerinde yaşamıştır. Üstelik söylentilere göre onların ırkları cücelerden çok daha önce mühendislikte ustalaşmışlardır.</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">cüce</string>
     <string name="Kobold_Name_Objective">cüce</string>
     <string name="KrampusHead_Info">Hiç Zindan Keşfi yaparken daha uğursuz bir rol üstlenmenin nasıl bir his olduğunu merak ettiniz mi? Bu şeytani görünümle yerel bebek farelere korku salacağınız kesin.</string>
@@ -1932,6 +1934,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="SpiderEgg_Name">örümcek yumurtası</string>
     <string name="SpiderEgg_Name_Objective">örümcek yumurtası</string>
     <string name="SpiderElite_Desc">Tıpkı askerler gibi örümcek muhafızlar da krallıklarını korumaya yeminlidir. Seçkin muhafızların zehri hedeflerini şaşırtmak için kullanılır.</string>
+    <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">Elit örümcek muhafız </string>
     <string name="SpiderElite_Name_Objective">Elit örümcek muhafız </string>
     <string name="SpiderExploding_Desc">Normal zamanda çok çalışkan olan bu örümcekler , düşmanlarına saldırmakta ve kendilerini canlı bomba gibi kullanmakta hiç tereddüt etmezler.</string>
@@ -2852,6 +2855,9 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
 
 
 

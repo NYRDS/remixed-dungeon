@@ -201,6 +201,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Bat_Name_Objective">Vampirfledermaus</string>
     <string name="BattleAxe_Info">Der enorme stählerne Kopf dieser Axt bringt eine beachtliche Kraft in jeden deiner Schläge.</string>
     <string name="BattleAxe_Name">Streitaxt</string>
+    <string name="Bee_Gender">feminine</string>
     <string name="BellaNPC_Amulet_F">Was hast du Schöne dort drüben? Ah, solch ein schönes Amulett! Und du ... du strahlst so viel heller als jeder andere. Was wenn wir einen Spaziergang machen und unsere gemeinsame Zukunft besprechen?</string>
     <string name="BellaNPC_Amulet_M">Was hast du Gutaussehender dort drüben? Ah, solch ein schönes Amulett! Und du ... du stehst über diesen Pöbeln. Was wenn wir einen Spaziergang machen und unsere gemeinsame Zukunft besprechen?</string>
     <string name="BellaNPC_Angry">Wie kannst du es wagen...du Tölpel!</string>
@@ -980,6 +981,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Imp_Monks1">Bist du ein Abenteurer ? Ich mag Abenteurer. Du kannst dich immer auf sie verlassen wenn etwas getötet werden muss. Hab ich recht ? Natürlich nur für eine Belohnung ;)\nIn. In meinem Fall sind es _Mönche_ die getötet werden müssen. Wie du siehst bau ich mir hier gerade ein kleines Geschäft auf, aber diese Mönche kaufen nie etwas und verschrecken nur andere Kunden. Also ... könntest du _ 8 von denen_ töten, dann bekommst du eine Belohnung.</string>
     <string name="Imp_Monks2">Oh, du lebst noch. Ich wusste doch das dein Kung-Fu besser ist als ihres :) Aber vergiss nicht, dir die Mönch-Abzeichen zu holen.</string>
     <string name="Imp_Name">Ehrgeiziger Kobold</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Info">Jede dieser Pfeilspitzen ist dafür gemacht, solange in einem Gegner zu verweilen, bis dieser in hellen Flammen aufgeht.</string>
     <string name="IncendiaryDart_Name">Feuerpfeil</string>
     <string name="InnKeeperNPC_Desc">Der Tavernenwirt ist stolz aud sich selbst.</string>
@@ -1867,6 +1869,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiderCharm_Name">Spinnenanhänger</string>
     <string name="SpiderCharm_Use">BENUTZEN</string>
     <string name="SpiderEgg_Desc">Dieses zerbrechliche Ei pulsiert sanft, in seinem Inneren kann man etwas mit vielen Beinen sehen</string>
+    <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">Spinnenei</string>
     <string name="SpiderEgg_Name_Objective">Spinnenei</string>
     <string name="SpiderElite_Name">Spinnen-Elitewächter</string>
@@ -2728,6 +2731,9 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
 
 
 

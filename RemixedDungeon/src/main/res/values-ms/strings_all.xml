@@ -295,6 +295,7 @@
     <string name="Capotain_Info">Topi bertepi lebar dan tinggi. Ia dikaitkan dengan orang alim, tetapi tidak perlu tahu selok-belok agama untuk memakainya. Atas sebab tertentu ia mempunyai tanda nama, iaitu \&quot;Sulaiman\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_DissectFailed">Anda menyiasat %s tetapi tidak menemui apa-apa yang berharga.</string>
+    <string name="Carcass_DissectMessage">Anda menyiasat bangkai dan mendapat %s.</string>
     <string name="Carcass_Info">Bangkai %s yang benar-benar mati</string>
     <string name="Caves_TileDescBookshelf">Siapa yang perlukan rak buku di dalam gua?</string>
     <string name="Caves_TileDescDeco">Ada telerang bijih yang kelihatan menonjol di atas dinding. Adakah ia Emas?</string>
@@ -345,6 +346,7 @@
     <string name="CharAction_Give">beri</string>
     <string name="CharAction_Push">tolak</string>
     <string name="CharAction_Steal">curi</string>
+    <string name="CharAction_Take">ambil</string>
     <string name="Char_Defeat_0">%1$s menewaskan %2$s</string>
     <string name="Char_Defeat_1">%1$s menewaskan %2$s</string>
     <string name="Char_Defeat_2">%1$s menewaskan %2$s</string>
@@ -1235,6 +1237,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Anak panah ini disalut dengan kurare.</string>
     <string name="ParalysisArrow_Name">anak panah melumpuh</string>
+    <string name="ParalysisBuff_Name">Lumpuh</string>
     <string name="Paralysis_Name_0">%s Memegun</string>
     <string name="Paralysis_Name_1">%s Memegun</string>
     <string name="Paralysis_Name_2">%s Memegun</string>
@@ -2525,6 +2528,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 
