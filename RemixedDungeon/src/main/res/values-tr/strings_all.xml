@@ -1098,6 +1098,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="KoboldIcemancer_Name">cüce buzbüyücüsü</string>
     <string name="KoboldIcemancer_Name_Objective">cüce buzbüyücüsü</string>
     <string name="Kobold_Desc">Koboldların efsaneden başka bişey olmadıklarına inanılmıştır. Çoğu gnolların atası koboldlar, mağaraların derin ve serin yerlerinde yaşamıştır. Üstelik söylentilere göre onların ırkları cücelerden çok daha önce mühendislikte ustalaşmışlardır.</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">cüce</string>
     <string name="Kobold_Name_Objective">cüce</string>
     <string name="KrampusHead_Info">Hiç Zindan Keşfi yaparken daha uğursuz bir rol üstlenmenin nasıl bir his olduğunu merak ettiniz mi? Bu şeytani görünümle yerel bebek farelere korku salacağınız kesin.</string>
@@ -2853,6 +2854,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
