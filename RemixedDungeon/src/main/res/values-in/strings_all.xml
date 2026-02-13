@@ -1058,6 +1058,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Knuckles_Info">Sepotong besi berbentuk untuk muat di lipatan jari.</string>
     <string name="Knuckles_Name">knuckle</string>
     <string name="KoboldIcemancer_Desc">Kobold Icemancers adalah elit masyarakat. Prajurit terkenal, penyihir dan yang paling penting, ilmuwan. Ahli es kuno memanfaatkan seni memerintah es, menciptakan mekanisme kompleks yang diperkuat dengan mantra khusus.</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">%s sambaran es membunuhmu</string>
     <string name="KoboldIcemancer_Name">kobold icemancer</string>
     <string name="KoboldIcemancer_Name_Objective">kobold icemancer</string>
@@ -2774,6 +2775,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

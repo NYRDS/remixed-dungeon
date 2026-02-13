@@ -2485,6 +2485,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndInfoItem_WontKnow">Vous ne saurez pas ce qu\'il y a dedans tant que vous ne l\'ouvrirez pas !</string>
     <string name="WndInstallingMod_copying_file">Copie de %s dans le stockage de Remixed Dungeon</string>
     <string name="WndInstallingMod_deleting_file">Suppression de %s</string>
+    <string name="WndItemAlchemy_Title">Recettes d\'alchimie avec %s</string>
     <string name="WndJournal_Levels">Niveaux</string>
     <string name="WndJournal_Logbook">Journal</string>
     <string name="WndJournal_Title">Journal</string>
@@ -2949,6 +2950,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 
