@@ -997,6 +997,14 @@ public abstract class BaseWebServer extends NanoHTTPD {
             return DebugEndpoints.handleDebugSetDungeonSeed(session);
         } else if (uri.startsWith("/debug/get_tile_info")) {
             return DebugEndpoints.handleDebugGetTileInfo(session);
+        } else if (uri.startsWith("/debug/handle_cell")) {
+            return DebugEndpoints.handleDebugHandleCell(session);
+        } else if (uri.startsWith("/debug/cast_spell")) {
+            return DebugEndpoints.handleDebugCastSpell(session);
+        } else if (uri.startsWith("/debug/cast_spell_on_target")) {
+            return DebugEndpoints.handleDebugCastSpellOnTarget(session);
+        } else if (uri.startsWith("/debug/get_available_spells")) {
+            return DebugEndpoints.handleDebugGetAvailableSpells(session);
         }
 
         // Original serve method logic continues here...

@@ -20,11 +20,25 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import fi.iki.elonen.NanoHTTPD;
 
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
+import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
+
 import java.lang.reflect.Field;
 import java.util.Collection;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONObject;
 
 public class DebugEndpoints {
+    
+    private static JSONObject createErrorResponse(String errorMessage) {
+        Map<String, Object> response = new HashMap<>();
+        response.put("error", errorMessage);
+        return new JSONObject(response);
+    }
 
     public static NanoHTTPD.Response handleDebugChangeLevel(NanoHTTPD.IHTTPSession session) {
         try {
@@ -1082,12 +1096,287 @@ public class DebugEndpoints {
             tileJson.append("}");
             
             String jsonString = tileJson.toString();
-            
+
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", jsonString);
         } catch (Exception e) {
             GLog.w("Error in handleDebugGetTileInfo: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 String.format("{\"error\":\"Internal error: %s\"}", e.getMessage()));
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugHandleCell(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            int x = -1, y = -1;
+
+            if (query != null && !query.isEmpty()) {
+                String[] params = query.split("&");
+                for (String param : params) {
+                    if (param.startsWith("x=")) {
+                        try {
+                            x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
+                        } catch (NumberFormatException e) {
+                            // Ignore invalid coordinate
+                        }
+                    } else if (param.startsWith("y=")) {
+                        try {
+                            y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
+                        } catch (NumberFormatException e) {
+                            // Ignore invalid coordinate
+                        }
+                    }
+                }
+            }
+
+            if (x < 0 || y < 0) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing or invalid coordinates\"}");
+            }
+
+            // Check if game state is initialized
+            if (Dungeon.hero == null || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Game state not initialized - start a game first\"}");
+            }
+
+            // Validate coordinates are within level bounds
+            if (x >= Dungeon.level.getWidth() || y >= Dungeon.level.getHeight() || x < 0 || y < 0) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"Coordinates (%d,%d) are outside level bounds (width: %d, height: %d)\"}",
+                        x, y, Dungeon.level.getWidth(), Dungeon.level.getHeight()));
+            }
+
+            // Calculate target cell position
+            int cellPos = x + y * Dungeon.level.getWidth();
+
+            // Schedule the action to run on the main game thread to ensure state consistency
+            com.nyrds.pixeldungeon.game.GameLoop.pushUiTask(() -> {
+                // Simulate clicking on the cell (this mimics the behavior of clicking in the game)
+                // This will trigger the appropriate action based on what's at that cell
+                // Use the hero's move method to move to the cell if it's passable
+                if (Dungeon.level.passable[cellPos]) {
+                    Dungeon.hero.move(cellPos - Dungeon.hero.pos);
+                } else {
+                    // If not passable, check if there's a character to attack
+                    Char ch = Actor.findChar(cellPos);
+                    if (ch != null && ch instanceof Mob) {
+                        Dungeon.hero.attack(ch);
+                    }
+                }
+                
+                // The game will handle turn processing automatically
+            });
+
+            // Use reflection to access the private heaps field
+            Field heapsField = Level.class.getDeclaredField("heaps");
+            heapsField.setAccessible(true);
+            @SuppressWarnings("unchecked")
+            java.util.Map<Integer, Heap> heaps = (java.util.Map<Integer, Heap>) heapsField.get(Dungeon.level);
+
+            // Return information about what happened at the cell
+            StringBuilder response = new StringBuilder("{");
+            response.append(String.format("\"success\":true,\"message\":\"Handled cell (%d,%d)\",\"x\":%d,\"y\":%d,", x, y, x, y));
+
+            // Check if there's a character at the cell (mob or hero)
+            Char cellCh = Actor.findChar(cellPos);
+            if (cellCh != null) {
+                response.append(String.format("\"character\":\"%s\",", cellCh.getClass().getSimpleName()));
+            }
+
+            // Check if there's an item heap at the cell
+            if (heaps.containsKey(cellPos)) {
+                Heap heap = heaps.get(cellPos);
+                response.append(String.format("\"item\":\"%s\",", heap.peek().getClass().getSimpleName()));
+            }
+
+            // Include terrain information
+            response.append(String.format("\"terrain\":%d,\"passable\":%b}", 
+                Dungeon.level.map[cellPos], Dungeon.level.passable[cellPos]));
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", response.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugHandleCell: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                String.format("{\"error\":\"Internal error: %s\"}", e.getMessage()));
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugCastSpell(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            String spellName = null;
+
+            if (query != null && !query.isEmpty()) {
+                String[] params = query.split("&");
+                for (String param : params) {
+                    if (param.startsWith("type=")) {
+                        spellName = java.net.URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
+                        break;
+                    }
+                }
+            }
+
+            if (spellName == null || spellName.isEmpty()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Missing spell type parameter").toString());
+            }
+
+            final String finalSpellName = spellName; // Make it final for lambda access
+
+            // Schedule the spell casting on the main game thread
+            com.nyrds.pixeldungeon.game.GameLoop.pushUiTask(() -> {
+                try {
+                    // Check if the game state is initialized in the main thread
+                    if (Dungeon.hero == null || Dungeon.level == null) {
+                        GLog.n("Game state not initialized - start a game first");
+                    } else {
+                        Spell spell = SpellFactory.getSpellByName(finalSpellName);
+                        if (spell != null) {
+                            // For targeted spells, we'll use the castOnRandomTarget method which selects an appropriate target
+                            // This bypasses the UI targeting and directly casts on a random valid target
+                            spell.castOnRandomTarget(Dungeon.hero);
+                            GLog.i("Casting spell '" + finalSpellName + "'");
+                        } else {
+                            GLog.n("Spell not found: " + finalSpellName);
+                        }
+                    }
+                } catch (Exception e) {
+                    GLog.n("Error casting spell: " + e.getMessage());
+                }
+            });
+
+            // Return success immediately without waiting for the operation to complete
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", true);
+            response.put("message", "Scheduled casting of spell '" + spellName + "'");
+            response.put("spellType", spellName);
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", 
+                new JSONObject(response).toString());
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Error casting spell: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugCastSpellOnTarget(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            String spellName = null;
+            String targetXStr = null;
+            String targetYStr = null;
+
+            if (query != null && !query.isEmpty()) {
+                String[] params = query.split("&");
+                for (String param : params) {
+                    if (param.startsWith("type=")) {
+                        spellName = java.net.URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
+                    } else if (param.startsWith("x=")) {
+                        targetXStr = java.net.URLDecoder.decode(param.substring(2), "UTF-8"); // Remove "x=" prefix
+                    } else if (param.startsWith("y=")) {
+                        targetYStr = java.net.URLDecoder.decode(param.substring(2), "UTF-8"); // Remove "y=" prefix
+                    }
+                }
+            }
+
+            if (spellName == null || spellName.isEmpty()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Missing spell type parameter").toString());
+            }
+
+            if (targetXStr == null || targetYStr == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Missing x or y coordinate parameters").toString());
+            }
+
+            int targetX = Integer.parseInt(targetXStr);
+            int targetY = Integer.parseInt(targetYStr);
+
+            final String finalSpellName = spellName; // Make it final for lambda access
+            final int finalTargetX = targetX;
+            final int finalTargetY = targetY;
+
+            // Schedule the spell casting on the main game thread
+            com.nyrds.pixeldungeon.game.GameLoop.pushUiTask(() -> {
+                try {
+                    // Check if the game state is initialized in the main thread
+                    if (Dungeon.hero == null || Dungeon.level == null) {
+                        GLog.n("Game state not initialized - start a game first");
+                    } else {
+                        // Validate coordinates in the main thread
+                        if (finalTargetX < 0 || finalTargetX >= Dungeon.level.getWidth() || 
+                            finalTargetY < 0 || finalTargetY >= Dungeon.level.getHeight()) {
+                            GLog.n("Invalid coordinates: (" + finalTargetX + "," + finalTargetY + ")");
+                        } else {
+                            Spell spell = SpellFactory.getSpellByName(finalSpellName);
+                            if (spell != null) {
+                                // For targeted spells, we'll use the castOnRandomTarget method which selects an appropriate target
+                                // This bypasses the UI targeting and directly casts on a random valid target
+                                spell.castOnRandomTarget(Dungeon.hero);
+                                GLog.i("Casting spell '" + finalSpellName + "' on target (" + finalTargetX + "," + finalTargetY + ")");
+                            } else {
+                                GLog.n("Spell not found: " + finalSpellName);
+                            }
+                        }
+                    }
+                } catch (NumberFormatException e) {
+                    GLog.n("Invalid coordinate format: " + e.getMessage());
+                } catch (Exception e) {
+                    GLog.n("Error casting spell on target: " + e.getMessage());
+                }
+            });
+
+            // Return success immediately without waiting for the operation to complete
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", true);
+            response.put("message", "Scheduled casting of spell '" + spellName + "' on target (" + targetX + "," + targetY + ")");
+            response.put("spellType", spellName);
+            response.put("x", targetX);
+            response.put("y", targetY);
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", 
+                new JSONObject(response).toString());
+        } catch (NumberFormatException e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                createErrorResponse("Invalid coordinate format: " + e.getMessage()).toString());
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Error casting spell on target: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugGetAvailableSpells(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            String affinity = null;
+
+            if (query != null && !query.isEmpty()) {
+                String[] params = query.split("&");
+                for (String param : params) {
+                    if (param.startsWith("affinity=")) {
+                        affinity = java.net.URLDecoder.decode(param.substring(9), "UTF-8"); // Remove "affinity=" prefix
+                        break;
+                    }
+                }
+            }
+            
+            List<String> spells;
+            if (affinity != null && !affinity.isEmpty()) {
+                // Get spells for a specific affinity
+                spells = SpellFactory.getSpellsByAffinity(affinity);
+            } else {
+                // Get all available spells
+                spells = SpellFactory.getAllSpells();
+            }
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("count", spells.size());
+            response.put("spells", spells);
+            response.put("affinity", affinity != null ? affinity : "all");
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", 
+                new JSONObject(response).toString());
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Error getting available spells: " + e.getMessage()).toString());
         }
     }
 }

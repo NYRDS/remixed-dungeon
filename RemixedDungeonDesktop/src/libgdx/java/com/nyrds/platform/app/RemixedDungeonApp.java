@@ -49,6 +49,7 @@ public class RemixedDungeonApp {
                 }
                 if (arg.startsWith("--windowed")) {
                     windowed = true;
+                    System.out.println("Windowed mode enabled via command line flag: " + arg);
                 }
             }
         }
@@ -110,8 +111,10 @@ public class RemixedDungeonApp {
 
         if(windowed) {
             cfg.setWindowedMode(800,480);
+            System.out.println("Game configured to run in windowed mode: 800x480");
         } else {
             cfg.setFullscreenMode(Lwjgl3ApplicationConfiguration.getDisplayMode());
+            System.out.println("Game configured to run in fullscreen mode");
         }
         cfg.enableGLDebugOutput(true, System.err);
 
