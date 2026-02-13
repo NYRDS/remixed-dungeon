@@ -981,6 +981,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Imp_Monks1">Bist du ein Abenteurer ? Ich mag Abenteurer. Du kannst dich immer auf sie verlassen wenn etwas getötet werden muss. Hab ich recht ? Natürlich nur für eine Belohnung ;)\nIn. In meinem Fall sind es _Mönche_ die getötet werden müssen. Wie du siehst bau ich mir hier gerade ein kleines Geschäft auf, aber diese Mönche kaufen nie etwas und verschrecken nur andere Kunden. Also ... könntest du _ 8 von denen_ töten, dann bekommst du eine Belohnung.</string>
     <string name="Imp_Monks2">Oh, du lebst noch. Ich wusste doch das dein Kung-Fu besser ist als ihres :) Aber vergiss nicht, dir die Mönch-Abzeichen zu holen.</string>
     <string name="Imp_Name">Ehrgeiziger Kobold</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Info">Jede dieser Pfeilspitzen ist dafür gemacht, solange in einem Gegner zu verweilen, bis dieser in hellen Flammen aufgeht.</string>
     <string name="IncendiaryDart_Name">Feuerpfeil</string>
     <string name="InnKeeperNPC_Desc">Der Tavernenwirt ist stolz aud sich selbst.</string>
@@ -2730,6 +2731,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

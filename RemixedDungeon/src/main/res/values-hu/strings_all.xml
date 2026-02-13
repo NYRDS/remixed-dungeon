@@ -1135,6 +1135,7 @@ Ennek a viselése azt jelenti, hogy odafigyelsz másokra.</string>
     <string name="MeleeWeapon_Info7a">A %1$s-t tartod a kezedben ami kész a(z) %2$s.</string>
     <string name="MeleeWeapon_Info7b">, és mivel meg van átkozva, képtelen vagy elengedni</string>
     <string name="MeleeWeapon_Info7c">Ártalmas varázslatot érzel bújkálni ebben a(z) %s-ban.</string>
+    <string name="MercenaryNPC_Name_Objective">zsolddost</string>
     <string name="Metabolism_Txt">Anyagcserélő %s</string>
     <string name="MimicAmulet_Desc">A kalandozó karriered legfényesebb pontja kiderült, hogy csak egy csapda.</string>
     <string name="MimicAmulet_Gender">masculine</string>
@@ -2551,6 +2552,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
