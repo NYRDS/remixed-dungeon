@@ -354,6 +354,7 @@
     <string name="Chasm_Jump">Vuoi davvero fare un salto nel baratro? Probabilmente si può morire.</string>
     <string name="Chasm_No">No, ho cambiato idea</string>
     <string name="Chasm_Yes">Sì, so quello che faccio</string>
+    <string name="ChristmasTurkey_Info">Il modo migliore per celebrare il Dungeonmas è mangiare una fetta di tacchino al forno. Per celebrare il giorno in cui i mostri hanno invaso il dungeon. Il quale, alla fine, ha attirato un numero incredibile di turisti e viaggiatori da tutto il mondo, migliorando la situazione economica della regione.</string>
     <string name="City_TileDescBookshelf">una fila di libri su diverse discipline riempiono la libreria.</string>
     <string name="City_TileDescDeco">Diverse piastrelle mancanti qui.</string>
     <string name="City_TileDescEmptySP">una moquette spessa copre il pavimento.</string>
@@ -2360,6 +2361,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
