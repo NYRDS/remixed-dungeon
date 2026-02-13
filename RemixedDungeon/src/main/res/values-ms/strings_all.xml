@@ -346,6 +346,7 @@
     <string name="CharAction_Give">beri</string>
     <string name="CharAction_Push">tolak</string>
     <string name="CharAction_Steal">curi</string>
+    <string name="CharAction_Take">ambil</string>
     <string name="Char_Defeat_0">%1$s menewaskan %2$s</string>
     <string name="Char_Defeat_1">%1$s menewaskan %2$s</string>
     <string name="Char_Defeat_2">%1$s menewaskan %2$s</string>
@@ -2527,6 +2528,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
