@@ -2186,6 +2186,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="Weightstone_WndChoice">Wie möchtest du dein %s ausgleichen?</string>
     <string name="Weightstone_WndSpeed">Für Schnelligkeit</string>
     <string name="Welcome_Ok">Okay!</string>
+    <string name="Welcome_Text_30_1">remix.30.1\n- Spielmechanik:\n-- Gnoll-Unterklassen!\n-- Schnecken!\n-- Chaos-Gegenstände Skalierung abgeschwächt.\n-- Mana-Trank ist ab jetzt ein normaler Trank.\n-- Abzeichen können jetzt auch in offiziellen DLCs erhalten werden (aber nicht in Mods).\n-- Fehler behoben\n</string>
     <string name="Welcome_Text_32_1">    remix.32.1\n    - Gameplay:\n    -- Plague Doctor Questreihe\n    -- Mob-Kadaver sind nun teilweise nutzbare Gegenstände\n    -- Verbesserte Haustierkontrolle\n    - UX:\n    -- Verbessertes Spielstand-Management\n    - Modding:\n    -- Lokale Mod-Installationsmethoden\n    -- Benutzerdefinierte Gegenstände können jetzt Aktionen ausführen, während sie in Stapeln sind\n    - Fehler behoben\n    </string>
     <string name="Welcome_Title">Herzlich willkommen!</string>
     <string name="WindGust_Info">Bläst einen Windstoß gegen den ausgewählten Charakter und stößt in weg.</string>
@@ -2731,6 +2732,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

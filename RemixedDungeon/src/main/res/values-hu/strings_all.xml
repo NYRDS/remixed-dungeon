@@ -586,6 +586,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="Dungeon_Tips_7">Éhesnek lenni nem probléma, azonban éhezni már fáj!</string>
     <string name="Dungeon_Tips_8">A váratlan megelepetés szerű támadások nagyobb eséllyel találnak. Például rajtaüthetsz egy ellenségen egy ajtó mögül amikor tudod hogy ő épp közeledik.</string>
     <string name="Dungeon_Tips_9">Ne engedd ki A Tengut!</string>
+    <string name="Dungeon_saveIoError">A mentési fájl létrehozásakor:</string>
     <string name="DwarfToken_Info">Sok törp és néhány nagyobb teremtményük hordoz ilyen kis fémdarabokat, de nem tudni hogy miért. Talán ékszerek vagy valamiféle azonosításra szolgálnak. A törpök különös népek.</string>
     <string name="DwarfToken_Name">törpe zseton</string>
     <string name="EarthElemental_Desc">A Föld-elementálok a természet ereje által irányított földdarabok.</string>
@@ -2538,6 +2539,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wardrobe_name">Fából készült ruhásszekrény</string>
     <string name="town_deco_weaponboard_desc">Valamiféle fegyver lóg a táblán.</string>
     <string name="town_deco_weaponboard_name">Fegyver</string>
+    <string name="town_deco_weaponrack_desc">Ezen az állványon olyan fegyverek vannak, amelyek egyértelműen túl drágák az ön számára.</string>
     <string name="town_deco_window_desc">Egy átlagos üvegablak, semmi extra.</string>
     <string name="town_deco_window_name">Ablak</string>
     <string name="town_deco_wood_wall_desc">Egy erős, farönkökből készült fal.</string>
@@ -2555,6 +2557,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
