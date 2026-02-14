@@ -2281,6 +2281,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndStory_Prision">Sok sok évvel ezelőtt egy földalatti börtön épült itt a legveszedelmesebb bűnözőknek. Akkor remek ötletnek tűnt mivel innen nagyon nehéz megszökni. Azonban egy sötét és gonosz erő kezdett az alsóbb szintekről átszivárogni. Az őrök és a foglyok szép lassan megőrültek. Aki tudta az végül elmenekült, de voltak foglyok akik rács mögött maradtak örökre.</string>
     <string name="WndStory_Sewers">A Kazamata pont a város alatt húzódik, A felsőbb szintjei tulajdonképp a város csatornarendszerének részei. Tulajdonképp pont emiatt ezek a szintek nem is olyan veszélyesek. Persze senki sem mondja hogy biztonságos, de legalább a legveszedelmesebb gonosz mágiával nem kell itt megkűzdened.</string>
     <string name="WndStory_Spiders">Sok sok évvel ezelőtt volt egy gazdag bánya, telis tele mágikus drágakövekkel és nyersanyagokkal. De amikor az érclelő helyek kimerültek a bányászok elhagyták ezt a sokszáz alagútból álló tárnarendszert. Végül a helyet ember nagyságú pókok népesítették be, melyet azóta otthonuknak tekintenek. Még ezek a veszedelmes fenevadak sem tudták elriasztani azokat a kalandorakat akik elég bátrak és őrültek voltak ahhoz hogy lemerészkedjenek kutatni némi használható kincs után.  A hatalmasabb erejű értékesebb ereklyéket övező pletykák, valamint az azt körülvevő veszélyek is mindig sokkal nagyobbak. Egy napon egy gonosz boszorkány tévedt az alagutakba miközben az üldözői elöl menekült. Soha többet nem hallotak róla. Lehet talált egy másik kivezető utat, lehet hogy valahogy sikerült kicsúsznia az őrök markából... vagy egyszerűen csak meghalt, körülvéve a sötétség teremtményeinek suttogásával.</string>
+    <string name="WndTilesKind_NewLook">Új kinézet</string>
     <string name="WndTradeItem_Bought">Vettél egy %1$s-t %2$daranyért</string>
     <string name="WndTradeItem_Buy">Vedd meg %daranyért</string>
     <string name="WndTradeItem_BuyAll">Összes megvétele %d g- ért</string>
@@ -2553,6 +2554,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

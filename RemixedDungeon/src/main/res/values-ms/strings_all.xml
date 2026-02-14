@@ -1100,6 +1100,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MailArmor_Name">perisai zirah</string>
     <string name="ManaPotion_Info">Posyen ini dapat memulihkan tenaga rohani anda.</string>
     <string name="ManaPotion_Name">Posyen Mana</string>
+    <string name="ManaRegenerationBuff_Name">Regenerasi Mana</string>
     <string name="Mana_Cost">Kos Mana:</string>
     <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Name">Topeng muka juru bedah</string>
@@ -2529,6 +2530,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
