@@ -2598,6 +2598,7 @@
     <string name="town_deco_trapdoor_name">活板門</string>
     <string name="town_deco_tree_desc">一棵生在充滿了恐怖和死亡的地牢入口旁邊的樹，感覺十分怪異。</string>
     <string name="town_deco_tree_name">樹</string>
+    <string name="town_deco_vat_name">大桶</string>
     <string name="town_deco_wall_beam_desc">為建築物提供可靠的支持力。</string>
     <string name="town_deco_wall_beam_name">梁</string>
     <string name="town_deco_wall_brazier_desc">來自陰燃餘燼的燻煙使房間充滿宜人的香氣。</string>
@@ -2630,6 +2631,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

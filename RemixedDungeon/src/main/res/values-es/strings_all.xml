@@ -1942,6 +1942,7 @@ otro lugar del nivel.</string>
     <string name="SpiderMindAmber_Name">arañas ámbar</string>
     <string name="SpiderMindAmber_Name_Objective">arañas ámbar</string>
     <string name="SpiderMind_Desc">Estas, aparentemente frágiles, arañas poseen poderes mentales únicos, lo que les permite controlar toda la colonia. Las psico-arañas pueden controlas cualquier criatura, pero son bastante cobardes.</string>
+    <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Psico-araña</string>
     <string name="SpiderMind_Name_Objective">Psico-Araña</string>
     <string name="SpiderNest_Desc">Este capullo está formado por una fina seda, y hay algo vivo en su interior.</string>
@@ -2824,6 +2825,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
