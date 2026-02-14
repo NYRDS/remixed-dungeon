@@ -1970,6 +1970,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SpiderElite_Name">スパイダーエリートガード</string>
     <string name="SpiderElite_Name_Objective">スパイダーエリートガード</string>
     <string name="SpiderExploding_Desc">平和な時代には働き者であるこの生き物は、敵に突撃することをためらわず、最初に出くわした植物をつかみ、自らを生きた爆弾に変えてしまう。</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">スパイダーワーカー</string>
     <string name="SpiderExploding_Name_Objective">スパイダーワーカー</string>
     <string name="SpiderGuard_Desc">兵士のように、クモの警備兵は王国を守ることを誓う。ガードマンの毒は標的を動けなくするために使われ、麻痺を引き起こし、簡単に獲物にしてしまう。</string>
@@ -2899,6 +2900,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
