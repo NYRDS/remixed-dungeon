@@ -1780,6 +1780,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="Shadow_Name_Objective">Schatten</string>
     <string name="ShadowsBuff_Info">Es ist schwieriger, im Schatten etwas zu erkennen.</string>
     <string name="ShadowsBuff_Name">Eins mit dem Schatten</string>
+    <string name="ShamanElder_Desc">Dieser besondere Gnoll sieht viel älter aus als andere Schamanen und hat sicherlich einen höheren Status im Stamm. Eine seltsame Aura bildet sich langsam um ihn herum, die anscheinend alles reflektiert, was sie berührt.</string>
     <string name="Shaman_Desc">Die intelligentesten Gnolle können schamanische Magie meistern. Gnollschamanen bevorzugen Kampfzauber um ihre fehlende Stärke auszugleichen. Sie zögern nicht, sie auf jeden anzuwenden der ihre Stellung im Stamm anzweifelt.</string>
     <string name="Shaman_Killed">Der Blitzschlag des %s hat dich getötet...</string>
     <string name="Shaman_Name">Gnollschamane</string>
@@ -2732,6 +2733,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

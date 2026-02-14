@@ -258,6 +258,7 @@
     <string name="BodyArmorBuff_Name">Perisai Badan</string>
     <string name="BodyArmorSpell_Info">Aktifkan kuasa otot simpanan, jadi lebih kuat buat sementara, seterusnya meningkatkan perisai anda tetapi menjejaskan kelajuan pergerakan anda.</string>
     <string name="BodyArmorSpell_Name">Perisai Badan</string>
+    <string name="BoneSaw_Info">Gergaji pembedahan yang direka secara tepat untuk pembahagian pantas. Kerosakan dan kelajuan serangannya menjadi lebih mati-mati dengan kemahiran Doktor Pesakit. Serangan kritikal mengorek bahagian tambahan yang boleh dituai dari musuh, dan ia menyerang dengan kecekapan tanpa belas terhadap musuh yang lumpuh.</string>
     <string name="Boomerang_Info">Setelah dilontar kepada pihak musuh, misil kayu rata yang berlekuk ini akan kembali semula kepada pelontarnya.</string>
     <string name="Boomerang_Name">boomerang</string>
     <string name="Bounce_Txt">%s lantunan</string>
@@ -2532,6 +2533,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
