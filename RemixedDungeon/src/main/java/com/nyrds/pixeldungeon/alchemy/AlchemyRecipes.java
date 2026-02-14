@@ -28,6 +28,15 @@ public class AlchemyRecipes {
     // Recipe structure: input ingredients -> outputs (can be multiple items or mobs)
     private static final List<AlchemyRecipe> recipes = new ArrayList<>();
 
+    public static List<AlchemyRecipe> getRecipes() {
+        if(!recipesInitialized) {
+            recipesInitialized = true;
+            loadRecipesFromJson();
+            generateMobResurrectionRecipes();
+        }
+        return recipes;
+    }
+
     // Recipe output types
     public enum EntityType {
         ITEM,
@@ -35,11 +44,7 @@ public class AlchemyRecipes {
         CARCASS
     }
 
-    // Static initialization to load recipes
-    static {
-        loadRecipesFromJson();
-        generateMobResurrectionRecipes();
-    }
+    private static boolean recipesInitialized = false;
 
     /**
      * Load recipes from JSON file
@@ -101,7 +106,7 @@ public class AlchemyRecipes {
                     }
                 }
 
-                recipes.add(new AlchemyRecipe(inputs, outputs));
+                getRecipes().add(new AlchemyRecipe(inputs, outputs));
             }
         } catch (JSONException e) {
             EventCollector.logException(e);
@@ -302,7 +307,7 @@ public class AlchemyRecipes {
             }
         }
 
-        recipes.add(new AlchemyRecipe(new ArrayList<>(input), new ArrayList<>(outputs)));
+        getRecipes().add(new AlchemyRecipe(new ArrayList<>(input), new ArrayList<>(outputs)));
         return true;
     }
 
@@ -314,7 +319,7 @@ public class AlchemyRecipes {
         List<InputItem> normalizedInput = normalizeInput(input);
 
         // Try to find exact match
-        for (AlchemyRecipe recipe : recipes) {
+        for (AlchemyRecipe recipe : getRecipes()) {
             List<InputItem> recipeInput = recipe.getInput();
             if (recipeInput.size() == normalizedInput.size() &&
                 recipeInput.containsAll(normalizedInput) &&
@@ -353,12 +358,12 @@ public class AlchemyRecipes {
      * Get a random valid recipe for testing purposes
      */
     public static AlchemyRecipe getRandomRecipe() {
-        if (recipes.isEmpty()) {
+        if (getRecipes().isEmpty()) {
             return null;
         }
 
-        int index = Random.Int(recipes.size());
-        return recipes.get(index);
+        int index = Random.Int(getRecipes().size());
+        return getRecipes().get(index);
     }
 
     /**
@@ -366,21 +371,21 @@ public class AlchemyRecipes {
      */
     @LuaInterface
     public static void clearRecipes() {
-        recipes.clear();
+        getRecipes().clear();
     }
 
     /**
      * Get all recipes
      */
     public static List<AlchemyRecipe> getAllRecipes() {
-        return new ArrayList<>(recipes);
+        return new ArrayList<>(getRecipes());
     }
 
     /**
      * Get the number of loaded recipes
      */
     public static int getRecipeCount() {
-        return recipes.size();
+        return getRecipes().size();
     }
 
     /**
@@ -456,7 +461,7 @@ public class AlchemyRecipes {
     public static List<AlchemyRecipe> getRecipesWithItem(String itemName) {
         List<AlchemyRecipe> matchingRecipes = new ArrayList<>();
 
-        for (AlchemyRecipe recipe : recipes) {
+        for (AlchemyRecipe recipe : getRecipes()) {
             for (InputItem inputItem : recipe.getInput()) {
                 if (inputItem.getName().equals(itemName)) {
                     matchingRecipes.add(recipe);
@@ -510,7 +515,7 @@ public class AlchemyRecipes {
     public static List<AlchemyRecipe> getAvailableRecipes(Map<String, Integer> playerInventory) {
         List<AlchemyRecipe> availableRecipes = new ArrayList<>();
 
-        for (AlchemyRecipe recipe : recipes) {
+        for (AlchemyRecipe recipe : getRecipes()) {
             if (hasRequiredIngredients(recipe.getInput(), playerInventory)) {
                 availableRecipes.add(recipe);
             }
@@ -528,7 +533,7 @@ public class AlchemyRecipes {
     public static List<AlchemyRecipe> getRecipesContainingItem(String itemName) {
         List<AlchemyRecipe> matchingRecipes = new ArrayList<>();
 
-        for (AlchemyRecipe recipe : recipes) {
+        for (AlchemyRecipe recipe : getRecipes()) {
             for (InputItem inputItem : recipe.getInput()) {
                 if (inputItem.getName().equals(itemName)) {
                     matchingRecipes.add(recipe);

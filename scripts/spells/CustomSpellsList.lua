@@ -14,7 +14,7 @@ spells["Witchcraft"] = {"Roar","LightningBolt","Heal","Order"}
 spells["Huntress"] = {"Calm","Charm","ShootInEye","SummonBeast"}
 spells["Elf"] = {"MagicArrow","Sprout","HideInGrass","NatureArmor"}
 spells["Priest"] = {"Heal","Calm","Charm","Order"}
-spells["PlagueDoctor"] = {"Heal","Calm","Charm","Order","Anesthesia","CorpseExplosion","BloodTransfusion"}
+spells["PlagueDoctor"] = {"Anesthesia","Heal","BloodTransfusion","CorpseExplosion"}
 
 spells["Dev"] = {"TestSpell", "CurseItem"}
 

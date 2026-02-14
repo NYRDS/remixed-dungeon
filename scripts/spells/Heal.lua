@@ -22,7 +22,7 @@ return spell.init{
             level         = 2,
             castTime      = 1,
             spellCost     = 5,
-            cooldown      = 2
+            cooldown      = 3
         }
     end,
 

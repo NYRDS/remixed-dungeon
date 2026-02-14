@@ -2690,13 +2690,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Heal_Name">Heal</string>
   <string name="Heal_Info">A pretty useful spell in Dungeon, right?</string>
   <string name="Anesthesia_Name">Anesthesia</string>
-  <string name="Anesthesia_Info">Puts target to deep sleep. Target won\'t wake up when attacked.</string>
+  <string name="Anesthesia_Info">Induces a deep, unnatural sleep in your target. Even the most violent attacks won\'t wake them from this slumber.</string>
   <string name="CorpseExplosion_Name">Corpse Explosion</string>
-  <string name="CorpseExplosion_Info">Detonates a corpse, poisoning and damaging all nearby enemies.</string>
+  <string name="CorpseExplosion_Info">Transforms a corpse into a deadly cloud of toxic gas, spreading disease and poison to all nearby enemies.</string>
   <string name="BloodTransfusion_Name">Blood Transfusion</string>
-  <string name="BloodTransfusion_Info">Drains blood from an ally to heal the caster.</string>
+  <string name="BloodTransfusion_Info">Drains nearly all blood from a target to heal yourself. A dark ritual of sacrifice and survival.</string>
   <string name="CorpseExplosion_NoCorpse">There is no corpse at that location.</string>
-  <string name="BloodTransfusion_TargetLowHp">Target does not have enough health to drain.</string>
+  <string name="BloodTransfusion_WontAgreed">The target resists the extraction of its life essence.</string>
   <string name="Order_Name">Order</string>
   <string name="Order_Info">With proper concentration, your orders are almost undeniable.</string>
   <string name="Order_Resist">How dare you?!!</string>
