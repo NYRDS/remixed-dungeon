@@ -643,6 +643,7 @@
     <string name="Eye_Kill">%s的死亡凝視殺死了你……</string>
     <string name="Eye_Name">邪眼</string>
     <string name="Eye_Name_Objective">邪眼</string>
+    <string name="Facilitations_Descriptions_2">對大自然作為能量來源進行深入而徹底的研究，將使你在旅程中補充魔法儲備。</string>
     <string name="Fadeleaf_Desc">觸碰到消逝草的任何生物都會被傳送至當前層的一個隨機地點。</string>
     <string name="Fadeleaf_Name">消逝草</string>
     <string name="FetidRat_Desc">這只有袋的老鼠比通常的更大。他身邊圍繞著一圈惡臭雲霧。</string>
@@ -2629,6 +2630,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

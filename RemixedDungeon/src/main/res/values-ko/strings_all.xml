@@ -2469,6 +2469,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_trapdoor_name">함정 문</string>
     <string name="town_deco_tree_desc">공포와 죽음이 가득한 던전의 입구의 바로 오른쪽에서 살아있는 나무를 보는 것은 이상한 기분이 듭니다.</string>
     <string name="town_deco_tree_name">나무</string>
+    <string name="town_deco_vat_name">증류기</string>
     <string name="town_deco_wall_brazier_desc">그을린 불씨에서 나오는 연기가 실내를 기분 좋은 향기로 가득 채운다.</string>
     <string name="town_deco_wall_candles_desc">아직도 기분 좋은 아로마 향을 내고 있는 꺼진 양초이다.</string>
     <string name="town_deco_wall_candles_name">양초들</string>
@@ -2493,6 +2494,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

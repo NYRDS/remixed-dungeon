@@ -2383,6 +2383,7 @@ otro lugar del nivel.</string>
     <string name="WndModInstall_Version">versión</string>
     <string name="WndModSelect_AreYouSure">Borrar mod: %s, estas seguro?</string>
     <string name="WndModSelect_ReallyDelete">borrar de verdad?</string>
+    <string name="WndModsDisclaimer_install">Instalar mod local</string>
     <string name="WndModsDisclaimer_title">Mods</string>
     <string name="WndMovieTheatre_Bye">¡Vuelve cuando quieras, siempre estaremos felices de verte!</string>
     <string name="WndMovieTheatre_Instruction">¡Saludos y bienvenidos a nuestra sala de cine! Brindamos un servicio especial, donde puede ver una película especial llamada anuncio de forma gratuita. ¡Y si lo miras todo, serás recompensado con %d monedas de oro.</string>
@@ -2823,6 +2824,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

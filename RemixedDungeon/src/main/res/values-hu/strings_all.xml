@@ -649,6 +649,7 @@ Ez a maszk azonban csak dekoratív célt szolgál.</string>
     <string name="Food_ACEat">MEGESZEM</string>
     <string name="Food_Message">Ez finom volt!</string>
     <string name="FortuneTellerNPC_Desc">Ez a nő egy hosszú, rikító színű köpenyt hord. Meglepően fiatalnak tűnik ahhoz képest, hogy mestere a jövendőmondás tudományának. Ahogy közelebb érsz, hallhatod ahogy mormog míg a kristálygömbjébe bámul.</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">Jövendő mondó</string>
     <string name="FortuneTellerNPC_Name_Objective">Jövendő mondó</string>
     <string name="FreezeGlobe_Info">Megfagyasztja a kiválasztott karaktert, ezzel megakadályozva hogy bármilyen mozdulatot végrehajtson</string>
@@ -2554,6 +2555,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

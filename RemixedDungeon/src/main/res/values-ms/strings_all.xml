@@ -1591,6 +1591,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ScrollOfTeleportation_Info">Mantera dalam kertas kekulit ini mengalih pembaca serta-merta ke lokasi lain secara rawak dalam aras kurungan bawah tanah. Ia boleh digunakan untuk lari dari situasi merbahaya, tetapi pembaca malang mungkin beralih ke tempat yang lebih bahaya.</string>
     <string name="ScrollOfTeleportation_Name">Skrol Teleportasi</string>
     <string name="ScrollOfTeleportation_NoTeleport">Aura tenaga ajaib yang kuat dalam tempat ini menghalang anda beralih lokasi!</string>
+    <string name="ScrollOfTeleportation_NoTeleport2">Aura magik yang kuat di tempat ini mencegah %s\nsupaya tidak dapat teleportasi!</string>
     <string name="ScrollOfTeleportation_Teleport">Dalam sekelip mata anda beralih ke lokasi lain dalam aras ini.</string>
     <string name="ScrollOfTerror_Info">Satu denyar cahaya merah yang menyelubungi semua makhluk dalam pandangan anda menyebabkan mereka ketakutan, berpatah balik dan lari ketakutan. Jika menyerang musuh yang melarikan diri akan membatalkan kesan ini.</string>
     <string name="ScrollOfTerror_Info1">Skrol memancarkan denyar cahaya merah yang terang</string>
@@ -2530,6 +2531,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
