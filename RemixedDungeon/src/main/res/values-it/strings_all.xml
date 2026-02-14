@@ -1456,6 +1456,7 @@ Potrebbe bruciare?</string>
     <string name="ScarecrowNPC_Quest_Start_Female">Allora ciao ragazzina, come stai?\nHo qualcosa di eccitante per te!\n\nOh quanto sarei grato,\nSe andassi a raccogliere qualche caramella per me!\n\n</string>
     <string name="ScarecrowNPC_Quest_Start_Male">Perché ciao ragazzone, come stai?\nHo qualcosa di emozionante per te!\n\nOh quanto sarei grato,\nSe andassi a raccogliere un po\' di caramelle per me!\n\n</string>
     <string name="Scorpio_Desc">Queste creature demoniche simili ad aracnidi evitano i combattimenti ravvicinati ad ogni costo, lanciando punte paralizzanti da lunghe distanze.</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">Scorpione</string>
     <string name="Scorpio_Name_Objective">Scorpione</string>
     <string name="ScrollHolder_Info">Puoi mettere un numero qualsiasi di pergamene in questo contenitore tubulare. Risparmia spazio nel tuo zaino e protegge le pergamene dal fuoco.</string>
@@ -2363,6 +2364,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

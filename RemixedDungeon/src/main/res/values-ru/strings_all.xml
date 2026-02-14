@@ -293,6 +293,7 @@
     <string name="BlessedBuff_Name">Благословлён</string>
     <string name="BlindnessBuff_Info">Полностью ослеплен, разве что слышны звуки вокруг.</string>
     <string name="BlindnessBuff_Name">Ослеплён</string>
+    <string name="BloodTransfusion_Info">Переливает кровь от союзника к колдующему, чтобы исцелить его.</string>
     <string name="BodyArmorBuff_Info">Броня улучшена за счет скорости ходьбы.</string>
     <string name="BodyArmorBuff_Name">Тело-щит</string>
     <string name="BodyArmorSpell_Info">Активирует скрытые резервы мышц, делая их крепче и повышая защиту ценой скорости передвижения.</string>
@@ -3044,6 +3045,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 
