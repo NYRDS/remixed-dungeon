@@ -755,6 +755,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="HealerNPC_Name_Objective">Városi pap</string>
     <string name="Healing_Info">Ez a varázsalt kritikus minden kalandornak. A varázslat használójának élete 1/3-át visszatölti.</string>
     <string name="Healing_Name">Gyógyítás</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">A nyíl vége gyógyító bájitallal van átitatva.</string>
     <string name="HealthArrow_Name">Gyógyító Nyíl</string>
     <string name="HealthDart_Info">Ennek a dobónyílnak a vége gyógyító főzettel lett átitatva</string>
@@ -1541,6 +1542,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="RottingFist_Name_Objective">rothadó ököl</string>
     <string name="RoyalShield_desc">Egy teljesen fémből készült pajzs. Igen, elég nehéz, de egyedül ez képes a legtöbb védelmet nyújtani neked.</string>
     <string name="RoyalShield_name">Királyi Pajzs</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Csak a legjobb íjászok képesek használni ezt a rubin íjat. Szinte minden nyílvessző áthetol az ellenfeleket, hatalmas lyukat hagyva maga mögött a testükön, de hatalmas erő szükséges a felajzásukhoz.</string>
     <string name="RubyBow_Name">rubin íj</string>
     <string name="RubyCrossbow_Info">Ez a halálos fegyver egy igazi mesterműve a törpök mérnökeinek.</string>
@@ -1731,6 +1733,7 @@ egy másik helyre a szinten. </string>
     <string name="SmashSpell_Info">Ugorj fel, hogy visszaérkezéskor nagy erővel sújts le a földre. Ez a mozdulat egyszerre bénítja meg ideiglenesen az ellenségeket és okoz sebzést körülötted.</string>
     <string name="SmashSpell_Name">Összezúzás</string>
     <string name="SmashSpell_NeedWeapon">Szükségem van egy fegyverre ehhez a lépéshez.</string>
+    <string name="Snail_Name">csiga</string>
     <string name="SociologistNPC_AlreadyTaken">Már résztvettél a kérdőív kitöltésében. Látogass vissza később.</string>
     <string name="SociologistNPC_Desc">Ez a szociológus szent küldetésén dolgozik, közvéleménykutatáson.</string>
     <string name="SociologistNPC_DownloadError">Elnézést, valami hiba történt, kérlek később próbáld újra.</string>
@@ -2169,6 +2172,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndLibrary_Items_Btn">Tárgyak</string>
     <string name="WndLibrary_Levels_Btn">Kazamata</string>
     <string name="WndLibrary_Mobs_Btn">Szörnyek</string>
+    <string name="WndLocalModInstall_text">Válassza ki a könyvtárat, amelyből a modot telepíteni szeretné.</string>
     <string name="WndModInstall_InstallingMod">Mod telepítése</string>
     <string name="WndModInstall_PleaseUpdate">Kérlek frissítsd a Remixed Pixel Dungeon-t mielőtt telepítenéd a modot.</string>
     <string name="WndModInstall_Version">verzió</string>
@@ -2338,6 +2342,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="YogsTeeth_Name">yog foga</string>
     <string name="YogsTeeth_Name_Objective">Yog foga</string>
     <string name="ZombieGnoll_Desc">A zombi Gnoll kitekert, törött teste többé nem hasonlít semmilyen emberszabásúra vagy hiénára. Mindössze egy rothadó hús és csontrakás maradt hátra, aminek gonosz vágya, hogy megöljön és felfaljon.</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">Gnoll-zombi ébredt fel a holtak közül!</string>
     <string name="ZombieGnoll_Name">gnoll zombi</string>
     <string name="ZombieGnoll_Name_Objective">gnoll zombi</string>
@@ -2557,6 +2562,11 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
 
 
 
