@@ -2391,6 +2391,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_flowerinthepot_name">화분 속 꽃</string>
     <string name="town_deco_furnace_desc">전통적인 방식으로 만들어진, 신뢰감 있는 화덕이다.</string>
     <string name="town_deco_furnace_name">화덕</string>
+    <string name="town_deco_glass_desc">이 유리는 다른 것보다 더 넓어서 분명히 더 많은 빛을 들여보낸다.</string>
     <string name="town_deco_glass_name">넓은 창문</string>
     <string name="town_deco_grandclock_desc">꽤 낡았지만 아직 잘 작동하고 있다.</string>
     <string name="town_deco_grave_desc">풍화되어 깎여나간 평범한 묘비석이다.</string>
@@ -2494,6 +2495,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

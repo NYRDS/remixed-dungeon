@@ -532,6 +532,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DewVial_Name">bebuli embun</string>
     <string name="Dewdrop_Info">Titisan embun yang jernih.</string>
     <string name="Dewdrop_Name">titisan embun</string>
+    <string name="DieHardBuff_Info">Kadar regenerasi meningkat.</string>
     <string name="DieHardBuff_Name">Sukar Mati</string>
     <string name="DieHardSpell_Info">Akan meningkatkan kadar penjanaan semula buat sementara yang menyebabkan anda Sukar Mati.</string>
     <string name="DieHardSpell_Name">Sukar Mati</string>
@@ -2531,6 +2532,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
