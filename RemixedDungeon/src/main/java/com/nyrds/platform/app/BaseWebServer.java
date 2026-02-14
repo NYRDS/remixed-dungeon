@@ -1005,6 +1005,8 @@ public abstract class BaseWebServer extends NanoHTTPD {
             return DebugEndpoints.handleDebugCastSpellOnTarget(session);
         } else if (uri.startsWith("/debug/get_available_spells")) {
             return DebugEndpoints.handleDebugGetAvailableSpells(session);
+        } else if (uri.startsWith("/debug/get_recent_logs")) {
+            return DebugEndpoints.handleDebugGetRecentLogs(session);
         }
 
         // Original serve method logic continues here...

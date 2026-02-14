@@ -1358,7 +1358,7 @@ public class DebugEndpoints {
                     }
                 }
             }
-            
+
             List<String> spells;
             if (affinity != null && !affinity.isEmpty()) {
                 // Get spells for a specific affinity
@@ -1372,11 +1372,30 @@ public class DebugEndpoints {
             response.put("count", spells.size());
             response.put("spells", spells);
             response.put("affinity", affinity != null ? affinity : "all");
-            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", 
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 new JSONObject(response).toString());
         } catch (Exception e) {
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse("Error getting available spells: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugGetRecentLogs(NanoHTTPD.IHTTPSession session) {
+        try {
+            // Get recent log messages since the last call
+            String[] recentLogs = GLog.getRecentMessagesSinceLastCall();
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("count", recentLogs.length);
+            response.put("logs", recentLogs);
+            response.put("message", "Retrieved " + recentLogs.length + " recent log messages");
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                new JSONObject(response).toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugGetRecentLogs: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Error getting recent logs: " + e.getMessage()).toString());
         }
     }
 }

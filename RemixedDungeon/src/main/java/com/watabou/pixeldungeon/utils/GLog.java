@@ -12,6 +12,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class GLog {
 
@@ -25,6 +27,22 @@ public class GLog {
 	public static final String HIGHLIGHT	= "@@ ";
 
 	public static final Signal<String> update = new Signal<>();
+	
+	// Queue to store recent log messages with timestamps
+	private static final int MAX_LOG_MESSAGES = 100;
+	private static Queue<TimedLogMessage> recentMessages = new LinkedList<>();
+	private static volatile long lastCallTimestamp = 0;
+	
+	// Inner class to hold log messages with timestamps
+	private static class TimedLogMessage {
+		public final String message;
+		public final long timestamp;
+		
+		public TimedLogMessage(String message) {
+			this.message = message;
+			this.timestamp = System.currentTimeMillis();
+		}
+	}
 
 	private static FileWriter logWriter;
 	private static boolean readonlySd = false;
@@ -95,6 +113,14 @@ public class GLog {
 			PUtil.slog(TAG, text);
 		}
 
+		// Add to recent messages queue
+		synchronized(recentMessages) {
+			recentMessages.offer(new TimedLogMessage(finalText));
+			while (recentMessages.size() > MAX_LOG_MESSAGES) {
+				recentMessages.poll();
+			}
+		}
+
 		GameLoop.pushUiTask(() -> update.dispatch(finalText));
 	}
 
@@ -130,5 +156,41 @@ public class GLog {
 
 			PUtil.slog(TAG, text);
 		}
+	}
+	
+	/**
+	 * Get recent log messages since the last call to this method
+	 * @return Array of recent log messages
+	 */
+	public static String[] getRecentMessagesSinceLastCall() {
+		long currentTimestamp = System.currentTimeMillis();
+		java.util.List<String> messages = new java.util.ArrayList<>();
+		
+		synchronized(recentMessages) {
+			for (TimedLogMessage timedMsg : recentMessages) {
+				if (timedMsg.timestamp >= lastCallTimestamp) {
+					messages.add(timedMsg.message);
+				}
+			}
+		}
+		
+		lastCallTimestamp = currentTimestamp;
+		return messages.toArray(new String[0]);
+	}
+	
+	/**
+	 * Get all recent log messages
+	 * @return Array of recent log messages
+	 */
+	public static String[] getAllRecentMessages() {
+		java.util.List<String> messages = new java.util.ArrayList<>();
+		
+		synchronized(recentMessages) {
+			for (TimedLogMessage timedMsg : recentMessages) {
+				messages.add(timedMsg.message);
+			}
+		}
+		
+		return messages.toArray(new String[0]);
 	}
 }

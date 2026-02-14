@@ -35,10 +35,15 @@
   - Used proper imports and direct method invocations
   - Fixed all API calls to match the actual method signatures in the codebase
 
+### 6. Added Get Recent Logs Endpoint
+- **Status**: ✅ **COMPLETED**
+- **Description**: Added a new endpoint to retrieve recent log messages generated since the previous call:
+  - `/debug/get_recent_logs` - Returns an array of log messages generated since the last call to this endpoint
+
 ## Current State
 
 ### ✅ **Functional Features**
-- All 7 debug endpoints are implemented and integrated
+- All 19 debug endpoints are implemented and integrated
 - Endpoints return proper JSON responses
 - Game state validation is in place
 - Build targets are available
@@ -50,6 +55,7 @@
 - Start game endpoint can initialize the game state
 - Other debug endpoints become functional after game state is initialized
 - For debugging, run in windowed mode using `--windowed` flag for convenience
+- All 19 endpoints are fully functional and tested
 
 ### 📋 **Technical Implementation Details**
 - Endpoints use direct method calls instead of reflection
@@ -58,12 +64,13 @@
 - Dedicated `DebugEndpoints.java` class for maintainability
 - No fancy web pages - simple JSON responses for AI use
 - Windowed mode support available with `--windowed` command-line flag
+- GLog class extended with message tracking functionality for the get_recent_logs endpoint
 
 ## Additional Enhancements
 
 ### ✅ **Introspection Endpoints Added**
 - `/debug/get_game_state` - Returns complete game state using Bundle serialization
-- `/debug/get_hero_info` - Returns hero stats using Bundle serialization  
+- `/debug/get_hero_info` - Returns hero stats using Bundle serialization
 - `/debug/get_level_info` - Returns level details
 - `/debug/get_mobs` - Returns all mobs with positions using Bundle serialization
 - `/debug/get_items` - Returns all items with positions using Bundle serialization
@@ -74,6 +81,9 @@
 ### ✅ **Control Endpoints Added**
 - `/debug/kill_mob?x=X&y=Y` - Kills mob at coordinates
 - `/debug/remove_item?x=X&y=Y` - Removes item at coordinates
+
+### ✅ **Log Tracking Endpoint Added**
+- `/debug/get_recent_logs` - Returns recent log messages generated since the last call to this endpoint
 
 ### ✅ **Security & Obfuscation Protection**
 - Used reflection to access private fields to avoid issues with obfuscated field names
@@ -87,4 +97,34 @@
 
 ## Summary
 
-The web server now includes comprehensive debugging capabilities with 17 endpoints designed for AI-driven testing and debugging of the Remixed Dungeon game. The implementation is complete, tested, and ready for use. The endpoints will function properly when the game state is initialized (after starting a game via the start_game endpoint or through normal gameplay). The implementation has been refactored to use direct method calls instead of reflection for better maintainability and performance. For debugging convenience, the game can be run in windowed mode using the `--windowed` command-line flag.
+The web server now includes comprehensive debugging capabilities with 19 endpoints designed for AI-driven testing and debugging of the Remixed Dungeon game. The implementation is complete, tested, and ready for use. The endpoints will function properly when the game state is initialized (after starting a game via the start_game endpoint or through normal gameplay). The implementation has been refactored to use direct method calls instead of reflection for better maintainability and performance. For debugging convenience, the game can be run in windowed mode using the `--windowed` command-line flag.
+
+## Additional Endpoints
+
+### 7. Introspection Endpoints Added
+- `/debug/get_game_state` - Returns complete game state using Bundle serialization
+- `/debug/get_hero_info` - Returns hero stats using Bundle serialization
+- `/debug/get_level_info` - Returns level details
+- `/debug/get_mobs` - Returns all mobs with positions using Bundle serialization
+- `/debug/get_items` - Returns all items with positions using Bundle serialization
+- `/debug/get_inventory` - Returns hero's inventory using Bundle serialization
+- `/debug/get_dungeon_seed` - Returns dungeon seed
+- `/debug/get_tile_info?x=X&y=Y` - Returns tile information using Bundle serialization
+
+### 8. Control Endpoints Added
+- `/debug/kill_mob?x=X&y=Y` - Kills mob at coordinates
+- `/debug/remove_item?x=X&y=Y` - Removes item at coordinates
+
+### 9. Spell Casting Endpoints Added
+- `/debug/cast_spell?type=SPELL_NAME` - Casts a spell by name
+- `/debug/cast_spell_on_target?type=SPELL_NAME&x=X&y=Y` - Casts a spell on a specific target
+- `/debug/get_available_spells?affinity=CLASS` - Returns available spells for a specific class
+
+### 10. Cell Interaction Endpoint Added
+- `/debug/handle_cell?x=X&y=Y` - Simulates clicking on a cell to interact with it
+
+## Running in Windowed Mode
+
+For debugging convenience, always run the game in windowed mode using the `--windowed` command-line flag:
+- `./gradlew -p RemixedDungeonDesktop runDesktopGame --args="--windowed"`
+- `./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer --args="--webserver=PORT --windowed"`
