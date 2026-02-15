@@ -706,6 +706,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Hedgehog_Info3">Ti piace il tè con la marmellata di lamponi?</string>
     <string name="Hedgehog_Info4">Prendi questa torta</string>
     <string name="Hedgehog_Name">riccio</string>
+    <string name="HeroClass_Doctor">Dottore della Peste</string>
     <string name="HeroClass_Elf">elfo</string>
     <string name="HeroClass_ElfPerks_1">Gli elfi sono immuni al radicamento.</string>
     <string name="HeroClass_ElfPerks_2">Gli elfi iniziano con un aggiornato arco di legno e delle frecce.</string>
@@ -734,7 +735,6 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="HeroClass_NecromancerPerks_1">I Negromanti partono con una chiave scheletrica da livello 7.</string>
     <string name="HeroClass_NecromancerPerks_2">Le Pozioni di Cura vengono identificate subito.</string>
     <string name="HeroClass_NecromancerPerks_3">I Negromanti partono con una chiave scheletrica da livello 7.</string>
-    <string name="HeroClass_Doctor">Dottore della Peste</string>
     <string name="HeroClass_NecromancerPerks_4">Le Pozioni di Cura vengono identificate subito.</string>
     <string name="HeroClass_None">contadino</string>
     <string name="HeroClass_PlagueDoctorPerks_0">I Dottori della Peste raccolgono Ghiandole Tossiche, Organi Marci, Frammenti d\'Osso e Essenza Vile dai nemici sconfitti. Il sangue viene raccolto nel tempo e utilizzato per l\'alchimia.</string>
@@ -1066,6 +1066,7 @@ Potrebbe bruciare?</string>
     <string name="MeleeWeapon_Info7b">,e dato che questo è maledetto,tu sei impedito dal andartene</string>
     <string name="MeleeWeapon_Info7c">Puoi percepire un\'energia malevola aleggiare all interno del%s. </string>
     <string name="MercenaryNPC_Name">mercenario</string>
+    <string name="MercenaryNPC_Name_Objective">mercenario</string>
     <string name="Metabolism_Txt">%s del metabolismo</string>
     <string name="MimicAmulet_Desc">il momento più glorioso della sua carriera  d\'avventure è stato appena si è rivelato ad essere una trappola.</string>
     <string name="MimicAmulet_Gender">masculine</string>
@@ -1192,10 +1193,10 @@ Potrebbe bruciare?</string>
     <string name="Piranha_Name_Objective">Piranha gigante</string>
     <string name="PirateSet_Info">Arr! Ti senti un compare... O sei solo un dannato marinaio di acqua dolce!? Spero che tu non lo sia, questa roba è per i pirati dopo tutto, intendo... Arr! </string>
     <string name="PirateSet_Name">Set Pirata</string>
-    <string name="PlagueDoctorMask_Name">Maschera del Dottore della Peste</string>
-    <string name="PlagueDoctorMaskHood_Name">Maschera del Dottore della Peste con cappuccio</string>
     <string name="PlagueDoctorMaskHood_Info">Un teschio scolpito nell\'ebano, le sue orbite vuote che brillano con lo scintillio etereo di gemme di ametista. Ogni respiro che fai sussurra attraverso un labirinto di tubi e filtri, portando con sé il profumo di erbe e spezie potenti che mascherano la decomposizione che ti si attacca. Ma non è solo la maschera. Un pesante cappuccio di velluto nero avvolge il tuo viso e la tua testa nell\'oscurità. Il cappuccio, come l\'ala di un corvo, scorre giù per la schiena, i suoi bordi rifiniti con una frangia di pizzo bianco d\'osso, un contrasto terribilmente bello. Insieme, maschera e cappuccio creano un\'apparizione spettrale, una cupa testimonianza della battaglia infinita contro le forze della decomposizione.</string>
+    <string name="PlagueDoctorMaskHood_Name">Maschera del Dottore della Peste con cappuccio</string>
     <string name="PlagueDoctorMask_Info">Questo… non è solo una maschera. È… una barriera. Uno scudo contro le forze della decadenza contro cui il Dottore della Peste combatte instancabilmente. Realizzata nel miglior legno di ebano, accuratamente scolpita con il volto di un teschio famelico. Le sue orbite vuote sono piene di gemme di ametista scintillanti che pulsano debolmente, come carboni morenti di un fuoco. Ogni respiro che fai, ogni parola che pronunci, è filtrata attraverso una rete labirintica di tubi e filtri. Una mistura di erbe potenti e spezie esotiche impregna l\'aria all\'interno, mascherando la puzza di morte che ti si attacca addosso come un sudario.</string>
+    <string name="PlagueDoctorMask_Name">Maschera del Dottore della Peste</string>
     <string name="PlagueDoctorNPC_Desc">L\'intero corpo di questa persona ingobbita è nascosto sotto una tuta di pelle. Inoltre, da lui proviene un amaro odore di medicinali e... aglio?</string>
     <string name="PlagueDoctorNPC_Name">dottore della peste</string>
     <string name="PlagueDoctorNPC_Quest_End">Ah, grazie, spero che questi abbiano qualche traccia di malattia. I campioni precedenti erano assolutamente innocui. Così ho fatto questo per te mentre aspettavo nuovi campioni.</string>
@@ -1226,9 +1227,9 @@ Potrebbe bruciare?</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Splendido! Cinque _Glaciatori Kobold_, la loro essenza gelida ora è mia da esplorare! Il loro legame con le distese congelate è davvero affascinante. Il modo in cui manipolano l\'acqua stessa… davvero notevole. *Ti consegna una fiala scintillante piena di un liquido cremisi vivido* Questo, è per i tuoi coraggiosi sforzi: una _Pozione di Potenza_! Bevila a fondo e senti la forza di dieci guerrieri scorrerti nelle vene! Ricorda, la conoscenza è potere… e il potere è l\'unica arma che abbiamo contro l\'oscurità crescente. Ora… sezioniamo queste anime ghiacciate e scopriamo i loro terrificanti segreti!</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Recupera cinque _Glaciatori Kobold_ morti! I loro corpi congelati contengono la chiave per sbloccare i segreti della loro magia gelida!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Le sue dita scheletriche tamburellano ritmicamente contro un calderone ribollente, l\'aria intorno spessa per il pungente odore di zolfo e decomposizione*\n_Glaciatori Kobold_! Quelle patetiche creature, accovacciate nelle loro grotte congelate, disperatamente attaccate alla loro magia del ghiaccio. Ne ho bisogno cinque, i loro cadaveri congelati saranno… illuminanti. La loro padronanza del ghiaccio, è… peculiare. Credo che attingano a un\'energia primordiale, un potere dormiente sotto la superficie di questo stesso mondo.</string>
-    <string name="PlagueDoctorQuest_5_1_Prologue">*Balbetta, la sua voce si spezza come un rametto fragile*. A-ah, _succubi_! Due… sì, due, vive! È… ehm… per la mia ricerca! Vedi… i loro feromoni… è cruciale per capire l\'equilibrio delicato di… ah… *Si interrompe, la sua mano ossuta si alza nervosamente per aggiustare la maschera, i suoi occhi vagano verso di te con un\'intensità febbrile.* La loro… essenza… è un rompicapo… un rompicapo bellissimo e misterioso! *Tosse violentemente, cercando di riprendersi.* Lo prometto, per avermi portato due di queste… creature… avrai la mia eterna gratitudine. Consideralo come… un dono della conoscenza! Sì! Alla conoscenza!</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Lui osserva fissamente le due _succhiatrici_, con un sorriso beato che si diffonde sotto la sua maschera.* Splendido! Magnifico! Questo sbloccherà così tante... possibilità! *Si volta verso di te, la sua voce densa di gratitudine... e qualcos\'altro.* I tuoi sforzi... non saranno dimenticati. Sono debitore della mia più profonda gratitudine. *Il suo sguardo indugia sulle _succhiatrici_ per un momento troppo prolungato, prima di ritirarsi nel suo laboratorio, mormorando qualcosa riguardo lo sblocco dei segreti della seduzione.*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*La sua mente vaga mentre parla, la sua voce si fa sempre più debole, appena un sussurro.* Portami due _succubi_… vive. Il loro… potere… è affascinante.</string>
+    <string name="PlagueDoctorQuest_5_1_Prologue">*Balbetta, la sua voce si spezza come un rametto fragile*. A-ah, _succubi_! Due… sì, due, vive! È… ehm… per la mia ricerca! Vedi… i loro feromoni… è cruciale per capire l\'equilibrio delicato di… ah… *Si interrompe, la sua mano ossuta si alza nervosamente per aggiustare la maschera, i suoi occhi vagano verso di te con un\'intensità febbrile.* La loro… essenza… è un rompicapo… un rompicapo bellissimo e misterioso! *Tosse violentemente, cercando di riprendersi.* Lo prometto, per avermi portato due di queste… creature… avrai la mia eterna gratitudine. Consideralo come… un dono della conoscenza! Sì! Alla conoscenza!</string>
     <string name="PlagueDoctorQuest_AllDone">*Lui ride secco e con un sibilo.* Le tue azioni hanno sbloccato segreti oltre ogni misura! La conoscenza ottenuta... pulsa dentro di me, una sinfonia della scoperta. Ma la conoscenza,\&quot; aggiunge, abbassando la voce a un sussurro cospiratorio, \&quot;la conoscenza è potere. E il potere... ah... che è un elisirro più inebriante.\&quot; Ti fissa intensamente per un momento, i suoi occhi di ametista bruciano con un\'intensità febbrile. \&quot;Forse,\&quot; mormora, \&quot;le nostre strade si incroceranno ancora. Perché ci sono ancora molti... misteri... da svelare.</string>
     <string name="PlagueDoctor_Name">Dottore della peste</string>
     <string name="PlagueDoctor_Name_Objective">Dottore della peste</string>
@@ -2399,6 +2400,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
