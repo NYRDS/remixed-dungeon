@@ -13,7 +13,9 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndHatInfo;
@@ -25,6 +27,16 @@ import com.watabou.utils.Random;
 public class PlagueDoctorNPC extends ImmortalNPC {
 
     public PlagueDoctorNPC() {
+    }
+    
+    @Override
+    public void onSpawn(Level level) {
+        super.onSpawn(level);
+        
+        // Check if the hero class is DOCTOR and remove the NPC if so
+        if (Dungeon.hero.getHeroClass() == HeroClass.DOCTOR) {
+            destroy();
+        }
     }
 
     @LuaInterface
