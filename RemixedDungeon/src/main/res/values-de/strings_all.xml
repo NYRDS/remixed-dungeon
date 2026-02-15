@@ -1924,6 +1924,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="StartScene_New">Neues Spiel</string>
     <string name="StartScene_No">Nein, kehr zum Hauptmenü zurück</string>
     <string name="StartScene_Really">Willst du wirklich ein neues Spiel starten?</string>
+    <string name="StartScene_UnlockDoctor">Um den Seuchenarzt freizuschalten - beende die alte Seuchenarztquest</string>
     <string name="StartScene_UnlockGnoll">Um diese Klasses freizuschalten musst du den Stadt-Heiler davon überzeugen den Gnoll-Schläger zu heilen</string>
     <string name="StartScene_UnlockNecromancer">Um diesen Charakter freizuschalten musst du den Lich mit irgendeiner anderen Klasse besiegen.</string>
     <string name="StartScene_Warning">Dein aktueller Spielfortschritt wird gelöscht.</string>
@@ -2733,6 +2734,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
