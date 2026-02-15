@@ -377,6 +377,7 @@
     <string name="Char_StaSlowed">menjadi lembab</string>
     <string name="Char_StaStunned">terpukul</string>
     <string name="Char_StaVision">penglihatan</string>
+    <string name="Char_Stole_2">%1 mencuri %2 dari %3!</string>
     <string name="Char_YouMissed">%1$s %2$s serangan anda</string>
     <string name="ChargrilledMeat_Info">Kelihatan seperti stik biasa.</string>
     <string name="ChargrilledMeat_Name">daging dibakar dengan arang</string>
@@ -1863,6 +1864,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="TownGuardNPC_Message3">Anda fikir terlalu ramai pengawal dalam pekan ini? Sebenarnya hanyalah pekan kecil dengan kurungan bawah tanah gergasi yang dikuasai oleh raksaksa, kan begitu?</string>
     <string name="TownGuardNPC_Name">pengawal pekan</string>
     <string name="TownGuardNPC_Name_Objective">pengawal pekan</string>
+    <string name="TownPortal_Info">Sihir ini membolehkan anda kembali ke tempat selamat dengan serta-merta. Walau bagaimanapun, sumber-sumber magik yang kuat di sekitar mungkin menghalangnya daripada berfungsi seperti yang dikehendaki.</string>
     <string name="TownPortal_Name">Portal Pekan</string>
     <string name="TownScript_NeedWeapon">Saya tak mau masuk ke dalam kurungan bawah tanah dengan tangan kosong!\nLebih baik pergi ke kedai dahulu sebelum masuk?</string>
     <string name="TownShopkeeper_Desc">Lelaki ini merupakan seorang pekedai biasa. Anda boleh agak dia dah tahu harga yang anda berikan.</string>
@@ -2537,6 +2539,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
