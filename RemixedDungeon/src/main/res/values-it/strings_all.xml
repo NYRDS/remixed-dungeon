@@ -1181,6 +1181,7 @@ Potrebbe bruciare?</string>
     <string name="Piercing_Name_1">Perforante %s</string>
     <string name="Piercing_Name_2">Perforante %s</string>
     <string name="Piranha_Desc">Questi pesci carnivori non sono abitanti naturali delle pozze sotterranee. Sono stati allevati specificamente per proteggere le camere del tesoro allagate.</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">Piranha gigante</string>
     <string name="Piranha_Name_Objective">Piranha gigante</string>
     <string name="PirateSet_Info">Arr! Ti senti un compare... O sei solo un dannato marinaio di acqua dolce!? Spero che tu non lo sia, questa roba è per i pirati dopo tutto, intendo... Arr! </string>
@@ -2364,6 +2365,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

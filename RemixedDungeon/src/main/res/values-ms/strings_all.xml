@@ -715,6 +715,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="GoldenSword_Name">pedang emas</string>
     <string name="Golem_Defense">disekat</string>
     <string name="Golem_Desc">Orang kerdil cuba menggabungkan pengetahuan mekanikal dengan kuasa terbaharu ditemui iaitu pengikatan unsur. Mereka cuba guna semangat tahan sebagai \&quot;roh\&quot; untuk jasad mekanikal golem, yang mereka percayai paling mudah dikawal. Sebaliknya, jika tersilap sedikit semasa upacara boleh menyebabkan bencana.</string>
+    <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">golem</string>
     <string name="Goo_Info1">Goo mengepam dirinya sendiri!</string>
@@ -2137,6 +2138,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndLocalModInstall_pick">Pilih direktori mod</string>
     <string name="WndLocalModInstall_title">Pasang mod dari direktori setempat</string>
     <string name="WndModInstall_PleaseUpdate">Sila kemas kini Remixed Dungeon sebelum memasang mod ini</string>
+    <string name="WndModsDisclaimer_install">Pasang mod tempatan</string>
     <string name="WndModsDisclaimer_manage">Urus senarai mod</string>
     <string name="WndModsDisclaimer_title">Mod</string>
     <string name="WndMovieTheatre_Bye">Sila datang lagi, kami sentiasa menunggu kehadiran anda!</string>
@@ -2534,6 +2536,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
