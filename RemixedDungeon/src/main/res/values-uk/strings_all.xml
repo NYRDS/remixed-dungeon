@@ -1849,6 +1849,7 @@
     <string name="Spear_Gender">masculine</string>
     <string name="Spear_Info">Тоненьке ратище із залізним вістрям.</string>
     <string name="Spear_Name">спис</string>
+    <string name="SpeedBuff_Name">Швидкість</string>
     <string name="SpellBook_Info">Це скоріш за все схоже на кіпку сторінок, а ніж на книгу. Проте є можливість з неї щось дістати, якщо приділити достатню увагу.</string>
     <string name="SpellBook_Info_Identified">Серед сторінок виявився повний текст закляття \&quot;%1$s\&quot;.\n\&quot;%2$s\&quot;</string>
     <string name="SpellBook_Name">Книга Заклять</string>
@@ -2671,6 +2672,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

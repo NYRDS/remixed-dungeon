@@ -1695,6 +1695,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Skeleton_Killed">Anda terbunuh oleh letupan tulang-tulang...</string>
     <string name="Skeleton_Name">rangka</string>
     <string name="Skeleton_Name_Objective">rangka</string>
+    <string name="SleepBuff_Name">Tidur</string>
     <string name="SlowBuff_Info">Rasa lembab menyebabkan seseorang menjadi lebih perlahan dari biasa.</string>
     <string name="SlowBuff_Name">Menjadi Lembab</string>
     <string name="Slow_Name_0">%s Sejuk</string>
@@ -2536,6 +2537,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
