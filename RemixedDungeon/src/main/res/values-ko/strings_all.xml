@@ -376,6 +376,7 @@
     <string name="ChargrilledMeat_Info">괜찮은 스테이크처럼 구워졌다.</string>
     <string name="ChargrilledMeat_Name">익힌 고기</string>
     <string name="CharmBuff_Name">매혹</string>
+    <string name="CharmSpell_Name">매혹</string>
     <string name="Chasm_Chasm">틈</string>
     <string name="Chasm_Info">추락하여 사망했습니다...</string>
     <string name="Chasm_Jump">정말로 이 틈 아래로 뛰어 들겠습니까? 죽을 수도 있습니다.</string>
@@ -2310,6 +2311,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="YogsTeeth_Name">요그의 이빨</string>
     <string name="YogsTeeth_Name_Objective">요그의 이빨</string>
     <string name="ZombieGnoll_Desc">좀비 놀의 뒤틀리고 부숴진 몸은 더 이상 사람으로도, 하이에나로도 보이지 않는다. 죽이고 먹고 싶어하는 잔혹한 충동으로 가득 찬 썩은 살과 뼈의 더미일 뿐이다.</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">놀 좀비가 부활했다!</string>
     <string name="ZombieGnoll_Name">놀 좀비</string>
     <string name="ZombieGnoll_Name_Objective">놀 좀비</string>
@@ -2495,6 +2497,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 
