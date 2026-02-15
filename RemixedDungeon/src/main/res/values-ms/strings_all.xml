@@ -2303,6 +2303,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="YogsHeart_Name">jantung yog</string>
     <string name="YogsHeart_Name_Objective">Jantung yog</string>
     <string name="YogsTeeth_Desc">Gigi Dewa Purba yang sangat besar terdiri dari gigi-gigi tajam. Sesuai dengan sikapnya yang mahu musnah dan baham semua benda hidup.</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">gigi yog</string>
     <string name="YogsTeeth_Name_Objective">Gigi yog</string>
     <string name="ZombieGnoll_Desc">Jasad gnoll zombi yang terpiuh dan cacat tidak lagi menampakkan ciri-ciri manusia atau dubuk. Seolah-olah selonggok daging dan tulang membusuk yang hidup untuk membunuh dan makan.</string>
@@ -2533,6 +2534,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
