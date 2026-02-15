@@ -36,15 +36,16 @@ public class Statue extends Mob {
 	public Statue() {
 		expForKill = 0;
 		carcassChance = 0;
+		int depth = Dungeon.depth;
 
 		setState(MobAi.getStateByClass(Passive.class));
 
-		hp(ht(15 + Dungeon.depth * 5));
-		baseDefenseSkill = 4 + Dungeon.depth;
+		hp(ht(15 + depth * 5));
+		baseDefenseSkill = 4 + depth;
 		baseAttackSkill  = baseDefenseSkill;
 
-		dmgMin = Dungeon.depth / 4 + 1;
-		dmgMax = Dungeon.depth;
+		dmgMin = depth / 4 + 1;
+		dmgMax = depth;
 
 		addImmunity( ToxicGas.class );
 		addImmunity( Poison.class );
@@ -100,7 +101,9 @@ public class Statue extends Mob {
 
 	@NotNull
 	public EquipableItem getItem() {
-		if(getItemFromSlot(Belongings.Slot.WEAPON) == ItemsList.DUMMY) {
+		var item = getItemFromSlot(Belongings.Slot.WEAPON);
+
+		if(!item.valid()) {
 			Item weaponCandidate;
 			do {
 				weaponCandidate = Treasury.getLevelTreasury().random(Treasury.Category.WEAPON );
@@ -117,9 +120,11 @@ public class Statue extends Mob {
 				((MeleeWeapon) chosenItem).enchant(Enchantment.random());
 			}
 
-			STR(Math.min(12,chosenItem.requiredSTR()));
 			chosenItem.doEquip(this);
+			item = chosenItem;
 		}
-		return getItemFromSlot(Belongings.Slot.WEAPON);
+
+		STR(Math.max(12,item.requiredSTR()));
+		return item;
 	}
 }

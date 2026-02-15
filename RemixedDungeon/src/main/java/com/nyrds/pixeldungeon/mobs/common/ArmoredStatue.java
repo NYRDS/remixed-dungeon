@@ -46,7 +46,8 @@ public class ArmoredStatue extends Statue {
 	@NotNull
     @Override
 	public EquipableItem getItem() {
-		if(getItemFromSlot(Belongings.Slot.ARMOR) == ItemsList.DUMMY) {
+		var item = getItemFromSlot(Belongings.Slot.ARMOR);
+		if( !item.valid()) {
 			Item armorCandidate;
 			do {
 				armorCandidate = Treasury.getLevelTreasury().random(Treasury.Category.ARMOR);
@@ -60,11 +61,12 @@ public class ArmoredStatue extends Statue {
 			armor.identify();
 
 			if(armor instanceof Armor) {
-				((Armor)armor).inscribe(Armor.Glyph.random());
+				((Armor) armor).inscribe(Armor.Glyph.random());
 			}
-			STR(Math.min(12,armor.requiredSTR()));
 			armor.doEquip(this);
+			item = armor;
 		}
-		return getItemFromSlot(Belongings.Slot.ARMOR);
+		STR(Math.max(12,item.requiredSTR()));
+		return item;
 	}
 }
