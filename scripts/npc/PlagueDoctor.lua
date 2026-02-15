@@ -205,5 +205,11 @@ return mob.init({
             data["questInProgress"] = false
             mob.storeData(me, data)
         end
+        
+        -- Check if the hero class is DOCTOR and remove the NPC if so
+        local hero = RPD.Dungeon.hero
+        if hero and hero:getHeroClass():getEntityKind() == "DOCTOR" then
+            me:destroy()
+        end
     end
 })
