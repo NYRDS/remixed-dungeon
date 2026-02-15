@@ -2135,6 +2135,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="StartScene_No">Нет, вернуться в меню</string>
     <string name="StartScene_Really">Вы точно хотите начать новую игру?</string>
     <string name="StartScene_Unlock">Чтобы открыть этот класс персонажа, убейте босса ДМ-300 любым другим классом</string>
+    <string name="StartScene_UnlockDoctor">Чтобы открыть Чумного Доктора - выполните задание старого Чумного Доктора</string>
     <string name="StartScene_UnlockElf">Чтобы открыть этот класс персонажа, убейте босса Царь Дворфов любым другим классом</string>
     <string name="StartScene_UnlockGnoll">Чтобы разблокировать этот класс, вам нужно убедить городского священика подлатать Гнолла-Громилу</string>
     <string name="StartScene_UnlockNecromancer">Чтобы открыть этот класс, убейте Лича любым другим классом.</string>

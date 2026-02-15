@@ -2109,6 +2109,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="StartScene_No">Nie, wróć do menu głównego</string>
     <string name="StartScene_Really">Czy na pewno chcesz rozpocząć nową grę?</string>
     <string name="StartScene_Unlock">By odblokować tę klasę postaci, pokonaj DM-300 jakąkolwiek inną postacią</string>
+    <string name="StartScene_UnlockDoctor">Aby odblokować Czarodzieja Plagi - ukończ zadanie starego Czarodzieja Plagi</string>
     <string name="StartScene_UnlockElf">By odblokować tę klasę postaci, pokonaj króla jakąkolwiek inną postacią</string>
     <string name="StartScene_UnlockGnoll">Aby odblokować tę klasę musisz przekonać miastowego duchownego aby uleczył Gnolla Okrutnika</string>
     <string name="StartScene_UnlockNecromancer">By odblokować tę klasę postaci, zabij Licza dowolną klasą.</string>

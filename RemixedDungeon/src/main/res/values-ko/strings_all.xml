@@ -1777,6 +1777,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="StartScene_No">아니오, 메인 메뉴로</string>
     <string name="StartScene_Really">정말 게임을 새로 시작 하시겠습니까?</string>
     <string name="StartScene_Unlock">이 캐릭터 직업을 해금하기 위해서는 아무 직업으로 DM-300을 처치하세요.</string>
+    <string name="StartScene_UnlockDoctor">역병의 의사 직업을 해금하려면 - 옛 역병의 의사의 퀘스트를 완료하세요</string>
     <string name="StartScene_UnlockElf">이 캐릭터 직업을 해금하기 위해서는 아무 직업으로 드워프 왕을 처치하세요.</string>
     <string name="StartScene_UnlockGnoll">이 클래스를 해금하기 위해서는 당신은 마을 사제를 설득해 놀 정예병을 치료해야 합니다.</string>
     <string name="StartScene_UnlockNecromancer">이 캐릭터를 잠금 해제하기 위해서는, 리치를 아무 직업으로 물리치세요.</string>

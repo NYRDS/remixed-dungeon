@@ -1922,6 +1922,9 @@
     <string name="StartScene_New">Нова гра</string>
     <string name="StartScene_No">Ні, повернутися до головного меню</string>
     <string name="StartScene_Really">Ти справді бажаєш розпочати нову гру?</string>
+    <string name="StartScene_Unlock">Щоб розблокувати цей клас персонажа, переможи боса DM-300 будь-яким іншим класом</string>
+    <string name="StartScene_UnlockDoctor">Щоб розблокувати Чумного лікаря - виконай завдання старого Чумного лікаря</string>
+    <string name="StartScene_UnlockElf">Щоб розблокувати цей клас персонажа, переможи боса Короля дварфів будь-яким іншим класом</string>
     <string name="StartScene_UnlockGnoll">Для розблокування даного класу необхідно переконати священика вилікувати Гнолла-громилу</string>
     <string name="StartScene_UnlockNecromancer">Щоб відкрити цей клас персонажа, убийте ліча будь-яким іншим класом.</string>
     <string name="StartScene_Warning">Твій поточний ігровий прогрес буде втрачено.</string>

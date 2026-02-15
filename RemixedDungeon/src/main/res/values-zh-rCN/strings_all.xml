@@ -1972,6 +1972,7 @@
     <string name="StartScene_No">不，返回主目录</string>
     <string name="StartScene_Really">确定要重新开始？</string>
     <string name="StartScene_Unlock">使用其他角色击杀DM-300来解锁此角色</string>
+    <string name="StartScene_UnlockDoctor">解锁瘟疫医生 - 完成老瘟疫医生的任务</string>
     <string name="StartScene_UnlockElf">使用其他角色击杀矮人之王来解锁此角色</string>
     <string name="StartScene_UnlockGnoll">控制一只豺狼暴徒，并且带它回小镇找牧师治疗解锁</string>
     <string name="StartScene_UnlockNecromancer">使用其他角色击败巫妖来解锁此角色。</string>

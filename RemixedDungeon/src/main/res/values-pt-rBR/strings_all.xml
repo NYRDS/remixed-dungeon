@@ -1941,6 +1941,7 @@ outro local do nível.</string>
     <string name="StartScene_No">Não, voltar ao menu principal</string>
     <string name="StartScene_Really">Você realmente quer começar um novo jogo?</string>
     <string name="StartScene_Unlock">Para desbloquear esta classe de personagem, mate o chefe DM-300 com qualquer outra classe</string>
+    <string name="StartScene_UnlockDoctor">Para desbloquear o Médico da Peste - complete a missão do antigo Médico da Peste</string>
     <string name="StartScene_UnlockElf">Para desbloquear esta classe de personagem, mate o chefe Rei com qualquer outra classe</string>
     <string name="StartScene_UnlockGnoll">Para desbloquear esta classe você deve persuadir o padre da cidade a curar o Gnoll Brutamonte</string>
     <string name="StartScene_UnlockNecromancer">Para desbloquear esta classe, mate o Lich com qualquer classe.</string>

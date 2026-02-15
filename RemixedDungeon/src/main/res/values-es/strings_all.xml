@@ -880,7 +880,9 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="HeroClass_NecromancerPerks_2">Los nigromantes comienzan con una túnica de nigromante, que otorga 1 punto de maná por cada criatura muerta.</string>
     <string name="HeroClass_NecromancerPerks_3">Los nigromantes comienzan con una llave esqueleto para el nivel 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Las pociones de curación son identificadas desde el comienzo.</string>
+    <string name="HeroClass_Doctor">Médico de la Peste</string>
     <string name="HeroClass_None">campesino</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">Los Médicos de la Peste cosechan Glándulas Tóxicas, Órganos Putrefactos, Fragmentos de Hueso y Esencia Vil de enemigos derrotados. La sangre se recoge con el tiempo y se usa para alquimia.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Comienza con una Máscara de Plaga (inmune a todos los gases) y una Sierra de Hueso. Los golpes críticos dejan partes adicionales, y la Sierra causa un 50% más de daño a enemigos paralizados.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Las pociones de Gas Paralizante y Gas Tóxico están pre-identificadas.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Los enemigos matados por el Gas Tóxico explotan en forma de Niebla Tóxica, sanándote 1 punto de vida por cada enemigo afectado.</string>
@@ -1984,6 +1986,7 @@ otro lugar del nivel.</string>
     <string name="StartScene_No">No, volver al menú principal.</string>
     <string name="StartScene_Really">¿De verdad quieres empezar una nueva partida?</string>
     <string name="StartScene_Unlock">Para desbloquear esta clase de personaje, mata al jefe DM-300 con cualquier otra clase.</string>
+    <string name="StartScene_UnlockDoctor">Para desbloquear al Médico de la Peste - completa la misión del viejo Médico de la Peste</string>
     <string name="StartScene_UnlockElf">Para desbloquear esta clase de personaje, mata al jefe Rey con cualquier otra clase.</string>
     <string name="StartScene_UnlockGnoll">Para desbloquear esta clase debes obligar al sacerdote a curar al bruto gnoll.</string>
     <string name="StartScene_UnlockNecromancer">Para desbloquear esta clase,  derrota al Lich con cualquier otra clase.</string>

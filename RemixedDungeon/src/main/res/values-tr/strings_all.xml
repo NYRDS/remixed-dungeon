@@ -1990,6 +1990,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="StartScene_No">Hayır, ana menüye dön</string>
     <string name="StartScene_Really">Yeni oyun başlatmak istediğinizden emin misiniz?</string>
     <string name="StartScene_Unlock">\&quot;Bu karakter sınıfını kilidini açmak için, herhangi bir diğer sınıfla DM-300 patronunu öldürün</string>
+    <string name="StartScene_UnlockDoctor">Veba Doktorunu açmak için - eski Veba Doktorunun görevini tamamlayın</string>
     <string name="StartScene_UnlockElf">Bu karakter sınıfının kilidini açmak için, Kral patronunu başka bir sınıfla öldürün</string>
     <string name="StartScene_UnlockGnoll">Bu sınıfı açmak için kasaba rahibini Yüce Gnoll\'u iyileştirmesi için ikna etmelisin</string>
     <string name="StartScene_UnlockNecromancer">bu karakteri açmak için diğer türlerden biri ile lich i öldür</string>

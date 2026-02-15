@@ -3052,5 +3052,5 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Carcass_DissectMessage">You dissect the carcass and obtain a %s.</string>
   <string name="Carcass_DissectResult">From the %1$s you obtain %2$d harvest %3$s.</string>
   <string name="Carcass_DissectFailed">You dissect the %s but find nothing of value.</string>
-  <string name="StartScene_UnlockDoctor">To unlock Plague Doctor - complete old Plague Doctor quest</string>
+  <string name="StartScene_UnlockDoctor">To unlock Plague Doctor - complete quest of old Plague Doctor</string>
 </resources>

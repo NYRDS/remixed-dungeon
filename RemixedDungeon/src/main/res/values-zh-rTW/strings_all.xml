@@ -507,10 +507,15 @@
     <string name="DM300_Info3">檢測到未授權人員。</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="BoneSaw_Name">骨鋸</string>
+    <string name="BoneSaw_Info">一把精密工程設計的外科鋸，專為快速解剖而設計。隨著瘟疫醫生技能的提升，其傷害和攻擊速度變得更加致命。暴擊會從敵人身上雕刻出額外的可收穫部位，並且它對麻痹的敵人進行無情高效的攻擊。</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">一把木柄嚴重磨損的普通鐵匕首。</string>
     <string name="Dagger_Name">匕首</string>
     <string name="Damage_Reduction">傷害減免</string>
+    <string name="Accuracy_Decreased">為什麼我會認為我能使用%s？錯誤的工具，錯誤的手法！</string>
+    <string name="Accuracy_DecreasedDoctor">每次揮動這個%s都會散播不完美。我的骨鋸能治癒……這個卻會感染。</string>
+    <string name="Accuracy_DecreasedDoctorBareHands">赤手空拳會污染我的技術。沒有鋸子的乾淨切割，我的瞄準就會淪為混亂的混沌。</string>
     <string name="DarkGold_Info">這種金屬名中的暗並非源於其色澤(它看起來和普通金子一樣)，而是因為它會在陽光下熔化，令其在地表上毫無用處。</string>
     <string name="DarkGold_Name">暗金礦</string>
     <string name="DarkSacrifice_Hint">選擇你忠誠的仆人來獻祭！</string>
@@ -1856,7 +1861,9 @@
     <string name="StartScene_New">新遊戲</string>
     <string name="StartScene_No">不，返回主目錄</string>
     <string name="StartScene_Really">確定要重新開始？</string>
-    <string name="StartScene_UnlockDoctor">解鎖瘟疫醫生 - 完成舊的瘟疫醫生任務</string>
+    <string name="StartScene_Unlock">使用其他角色擊殺DM-300來解鎖此角色</string>
+    <string name="StartScene_UnlockDoctor">解鎖瘟疫醫生 - 完成老瘟疫醫生的任務</string>
+    <string name="StartScene_UnlockElf">使用其他角色擊殺矮人之王來解鎖此角色</string>
     <string name="StartScene_UnlockGnoll">控制一只豺狼暴徒，並且帶它回小鎮找牧師治療解鎖</string>
     <string name="StartScene_UnlockNecromancer">使用其他角色擊敗巫妖來解鎖這個角色。</string>
     <string name="StartScene_Warning">您當前的所有進度會被清除。</string>
