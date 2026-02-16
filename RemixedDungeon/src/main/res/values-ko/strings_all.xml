@@ -163,6 +163,7 @@
     <string name="Bandit_Desc">던전 깊숙한 곳에는 언제나 모든 종류의 범죄자가 숨어 지내는 곳이 있다. 빛을 보지 못하는 시간이 길어짐으로 인해 그중 대다수는 제정신이 아니다. 오래 전, 미친 도둑과 강도는 자신들이 누구이며 왜 무언가를 훔치고 있는지 잊었다. 이 강도는 그의 단도에 뭔가를 묻혀둔거 같다!</string>
     <string name="Bandit_Name">미친 강도</string>
     <string name="Bandit_Name_Objective">미친 강도</string>
+    <string name="BardNPC_Gender">masculine</string>
     <string name="BarkskinBuff_Name">나무스킨</string>
     <string name="Barrel_Desc">간단한 나무 통처럼 보입니다. 가까이 다가가면 희미한 기름의 냄새를 맡을 수 있습니다.통은 꽤 가벼워 보여서 당신은 아마도 이걸 밀 수 있을 것입니다.</string>
     <string name="Barrel_Name">통</string>
@@ -2498,6 +2499,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

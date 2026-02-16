@@ -191,6 +191,7 @@
     <string name="Barrel_Pumpkin_Name">Abóbora</string>
     <string name="Bat_Defense">evitou</string>
     <string name="Bat_Desc">Estes habitantes vivos e tenazes de cavernas podem derrotar adversários muito maiores, repondo a sua vida a cada ataque bem sucedido.</string>
+    <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">morcego</string>
     <string name="Bat_Name_Objective">morcego</string>
     <string name="BattleAxe_Gender">masculine</string>
@@ -2794,6 +2795,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
