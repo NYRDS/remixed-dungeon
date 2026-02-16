@@ -1790,6 +1790,7 @@
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">вівця</string>
     <string name="Sheep_Name_Objective">вівцю</string>
+    <string name="ShieldBuffReady_Name">Щит готовий</string>
     <string name="ShieldInfoTemplate">Цей щит блокує до %1$d заданої шкоди. Із %2$d %% шансом. Потребує %3$3.1fсекунд на відновлення після успішного блокування.</string>
     <string name="ShieldStrTemplate">Для правильного використання щита необхідно мати хоча б %1$dсили.</string>
     <string name="Shielded_Defense">прикрився</string>
@@ -2677,6 +2678,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
