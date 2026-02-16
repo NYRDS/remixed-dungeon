@@ -682,6 +682,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">그놀 마스터들이 만든 전통적인 토마호크로, 각 클랜마다 고유한 디자인을 가지고 있습니다. 이 토마호크는 동료 토마호크보다 약간 가볍습니다.</string>
     <string name="GnollTamahawk_Name">그놀 토마호크</string>
+    <string name="Gnoll_BecomeWitchdoctorDesc">주술사가 되세요</string>
     <string name="Gnoll_Desc">놀은 하이에나처럼 생긴 인간형 괴수이다. 녀석은 하수구나 던전에 살면서 때때로 지상을 습격한다. 놀 정찰병은 그들 무리의 일반 구성원이다. 녀석은 놀 정예병만큼 강하지도 않고 놀 주술사만큼 똑똑하지도 않다.</string>
     <string name="Gnoll_Name">놀 정찰병</string>
     <string name="Gnoll_Name_Objective">놀 정찰병</string>
@@ -1514,6 +1515,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="RottenFood_Message">역겹군!</string>
     <string name="RottenMeat_Info">썩은 고기 조각</string>
     <string name="RottenMeat_Name">썩은 고기</string>
+    <string name="RottenOrgan_Name">썩은 장기</string>
     <string name="RottenPasty_Info">원래는 파이였을지 모르지만, 역겨워 보입니다.</string>
     <string name="RottenPasty_Name">썩은 파스티</string>
     <string name="RottenPumpkinPie_Info">신선했을 때 얼마나 좋았을지 몰라도,이것을 아직도 먹을수 있다고 해도 절대 먹고싶지는 않을 것입니다.</string>
@@ -2500,6 +2502,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 

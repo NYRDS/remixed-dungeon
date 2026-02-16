@@ -327,6 +327,7 @@
     <string name="Caves_TileGrass">Мох, що світиться</string>
     <string name="Caves_TileHighGrass">Люмінесцентні гриби</string>
     <string name="Caves_TileWater">Крижана вода.</string>
+    <string name="Challenges_Descriptions_8">Ваша подорож почнеться в темній і небезпечній міській каналізації, єдиний шлях на поверхню заблоковано. Щоб погіршити ситуацію, ви зможете використовувати лише те спорядження, яке знайдете в підземеллі. З обмеженими ресурсами та спорядженням ваше виживання залежатиме від ваших навичок і стратегії.</string>
     <string name="Challenges_Descriptions_9">Останній \'засіб\' Чумного лікаря витер ваш просторовий зміст. Ви не можете згадати нічого за межами вашого безпосереднього огляду.</string>
     <string name="Challenges_Names_0">На дієті</string>
     <string name="Challenges_Names_1">Віра замінить мені обладунки</string>
@@ -2681,4 +2682,5 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 </resources>

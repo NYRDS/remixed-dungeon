@@ -1027,6 +1027,7 @@ Potrebbe bruciare?</string>
     <string name="LloidsBeacon_Preventing">Qualche tipo di potente aura magica presente qui ti impedisce di usare il faro di lloyd!</string>
     <string name="LloidsBeacon_Return">Il faro di lloyd è stato impostato con successo nella tua posizione attuale, ora puoi tornare qui in qualunque momento.</string>
     <string name="LloidsBeacon_Set">\n\nQuesto faro è stato posizionato da qualche parte nel livello %ddi Remixed Dungeon.</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Info">Questa </string>
     <string name="Longsword_Name">spada lunga</string>
     <string name="Luck_Name_0">della Fortuna %s</string>
@@ -2404,6 +2405,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

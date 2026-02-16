@@ -2174,6 +2174,7 @@ outro local do nível.</string>
     <string name="WarHammer_Info">Poucas criaturas podem suportar o golpe esmagador desta grande massa de chumbo e aço, mas só os mais fortes e aventureiros pode usá-lo de forma eficaz.</string>
     <string name="WarHammer_Name">Martelo de Guerra</string>
     <string name="Warlock_Desc">Quando os interesses dos anões passaram da engenharia para as artes arcanas, mágicos chegaram ao poder na cidade. Eles começaram com magia elementar, mas logo mudou para demonologia e necromancia.</string>
+    <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">Raio das sobras de %s matou você...</string>
     <string name="Warlock_Name">bruxo anão</string>
     <string name="Warlock_Name_Objective">bruxo anão</string>
@@ -2795,6 +2796,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
