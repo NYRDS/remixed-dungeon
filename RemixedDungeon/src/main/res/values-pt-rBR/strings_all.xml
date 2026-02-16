@@ -78,6 +78,7 @@
     <string name="ArmoredStatue_Name">estátua animada</string>
     <string name="ArmoredStatue_Name_Objective">estátua animada</string>
     <string name="Artifact_Limit">Você só pode usar 2 artefatos ao mesmo tempo.</string>
+    <string name="AttackDelay_Increased">Não consigo empunhar o %s assim. Golpes lentos, respiração pesada…</string>
     <string name="Attack_Range">Alcance de ataque</string>
     <string name="AwarenessBuff_Info">Os sentidos se aguçaram, dando mais consciência do ambiente.</string>
     <string name="AwarenessBuff_Name">Consciência</string>
@@ -2796,6 +2797,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

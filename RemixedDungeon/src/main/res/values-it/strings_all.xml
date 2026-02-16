@@ -571,6 +571,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Fadeleaf_Desc">Toccare una Svanifoglia farà teletrasportare qualsiasi creatura in un posto a caso sul livello attuale.</string>
     <string name="Fadeleaf_Name">Svanifoglia</string>
     <string name="FetidRat_Desc">Questo topo marsupiale è molto più grande rispetto ad uno normale. Ed è circondato da una nuvola di gas puzzolente.</string>
+    <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">ratto puzzolente</string>
     <string name="FetidRat_Name_Objective">ratto puzzolente</string>
     <string name="Fez_Info">È un copricapo a forma di cono di tronco in feltro rosso, con una nappa fissata sulla parte superiore. E no, non rende il mondo in 3 dimensioni.</string>
@@ -2406,6 +2407,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

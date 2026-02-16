@@ -2459,6 +2459,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_sofa_name">멋진 소파</string>
     <string name="town_deco_stakes_desc">이 뾰족해진 통나무들은 무시무시한 위용을 뽐내고 있지만 그 자체로는 별로 쓸모가 없습니다.</string>
     <string name="town_deco_statue_blood_desc">피가 담긴 그릇을 든 천사의 위대한 조각상입니다.</string>
+    <string name="town_deco_statue_water_desc">물을 담은 그릇을 든 천사의 위대한 조각상입니다.</string>
     <string name="town_deco_statue_water_name">천사상</string>
     <string name="town_deco_stock_desc">음식 공급품이 여기에 저장되어 있으며, 다양한 종류와 색상의 잡동사니도 함께 보관되어 있습니다.</string>
     <string name="town_deco_stock_name">재고</string>
@@ -2502,6 +2503,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
