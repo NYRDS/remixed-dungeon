@@ -1507,6 +1507,7 @@
     <string name="RatArmor_Name">пацюкова броня</string>
     <string name="RatHide_Info">Маленький брудний шматок плоті і хутра. Чи насправді є хтось кому це знадобиться?</string>
     <string name="RatHide_Name">шкіра пацюка</string>
+    <string name="RatKingCrownBuff_Info">Славте володаря щурів, кожен щур має коритися і вихваляти велику щурність!</string>
     <string name="RatKingCrownBuff_Name">Щурності</string>
     <string name="RatKingCrown_Info">Золота корона Його Щурності, символ його влади</string>
     <string name="RatKingCrown_Name">Корона щурячого короля</string>
@@ -1836,6 +1837,7 @@
     <string name="SmashSpell_NeedWeapon">Мені необхідна зброя для цього прийому.</string>
     <string name="Snail_Desc">Цей малий молюск значно виросла, харчуючись стічними водами, але вона все ще дуже повільна, що робить її легкою здобиччю.</string>
     <string name="Snail_Gender">masculine</string>
+    <string name="SnipersMarkBuff_Info">Цю мітку залишив снайпер.</string>
     <string name="SociologistNPC_AlreadyTaken">Ти вже брав участь у опитуванні, приходь пізніше</string>
     <string name="SociologistNPC_Desc">Цей соціолог має священну мету, збір суспільної думки</string>
     <string name="SociologistNPC_DownloadError">Перепрошую, але щось пішло не так, будь ласка, спробуй пізніше</string>
@@ -2679,113 +2681,4 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
