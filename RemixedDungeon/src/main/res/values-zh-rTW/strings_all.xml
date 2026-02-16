@@ -104,6 +104,7 @@
     <string name="Badges_AllScrolls">大學者:鑒定所有卷軸</string>
     <string name="Badges_AllWands">鑒定所有法杖</string>
     <string name="Badges_BossSlain1">史萊姆已被殺死</string>
+    <string name="Badges_BossSlain4">國王已被殺死</string>
     <string name="Badges_Champion">挑戰成功</string>
     <string name="Badges_DeathFalling">刺客教條玩上腦</string>
     <string name="Badges_DeathFire">燃燒生命 ,照亮別人</string>
@@ -1124,6 +1125,7 @@
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">巫妖</string>
     <string name="Lich_Name_Objective">巫妖</string>
+    <string name="LightBuff_Info">光從身體散發出來，照亮周圍的一切。</string>
     <string name="LightBuff_Name">照明</string>
     <string name="LightningTrap_Desc">你被閃電陷阱的電擊殺死了……</string>
     <string name="LightningTrap_Name">閃電陷阱</string>
@@ -2642,4 +2644,6 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 </resources>
