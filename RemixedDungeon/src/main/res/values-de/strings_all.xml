@@ -815,6 +815,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HealerNPC_Name_Objective">Stadtpriester</string>
     <string name="Healing_Info">Dieser Zauber ist für jeden Abenteurer entscheidend. Er wird 1/3 der maximalen Leben des Zaubernden wiederherstellen.</string>
     <string name="Healing_Name">Heilung</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Die Spitze dieses Pfeils ist mit einem Heilungstrank versehen.</string>
     <string name="HealthArrow_Name">Heilungs Pfeil</string>
     <string name="HealthDart_Info">Die Spitze dieses Dartes ist mit einem Heilungstrank versehen.</string>
@@ -2767,6 +2768,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

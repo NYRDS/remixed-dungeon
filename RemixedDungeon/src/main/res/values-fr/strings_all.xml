@@ -393,6 +393,7 @@
     <string name="ChaosCrystal_Use">UTILISER</string>
     <string name="ChaosHelmet_Info">Casque couleur rouge sang. Le symbole incontestable d\'un guerrier du Chaos.</string>
     <string name="ChaosHelmet_Name">Casque du Chaos</string>
+    <string name="ChaosShield_desc">Le bouclier du chaos est le résultat de la fusion d\'un cristal du chaos avec un bouclier ordinaire, ce qui lui permet de manifester des effets chaotiques aléatoires lors d\'un blocage réussi.</string>
     <string name="ChaosShield_name">Bouclier du chaos</string>
     <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Un baton regorgeant du pouvoir du chaos ! Les mages en rèvent-ils ou en ont peur ?</string>
@@ -2970,6 +2971,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 
