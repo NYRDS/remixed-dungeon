@@ -772,6 +772,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Hedgehog_Info3">Szereted a teát málnalekvárral?</string>
     <string name="Hedgehog_Info4">Fogadd el ezt a pitét</string>
     <string name="Hedgehog_Name">sündisznó</string>
+    <string name="HeroClass_Doctor">Leprás Orvos</string>
     <string name="HeroClass_Elf">tünde</string>
     <string name="HeroClass_ElfPerks_0">Az Elfek 15 Életerőponttal és 9 Erőponttal kezdenek.</string>
     <string name="HeroClass_ElfPerks_1">A Tündék immunisak a lekötözésre.</string>
@@ -2565,6 +2566,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
