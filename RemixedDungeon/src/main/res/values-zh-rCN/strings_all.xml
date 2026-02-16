@@ -1674,6 +1674,7 @@
     <string name="RottenFood_Message">好恶心！</string>
     <string name="RottenMeat_Info">一块腐烂的肉</string>
     <string name="RottenMeat_Name">腐烂肉</string>
+    <string name="RottenOrgan_Info">从被击败的敌人身上收获的腐烂器官。尽管它处于腐烂状态，但它含有用于炼金过程的宝贵化合物。</string>
     <string name="RottenOrgan_Name">腐烂的器官</string>
     <string name="RottenPasty_Info">这馅饼看起来十分恶心，但可以通过一些方法让它再次能够食用。</string>
     <string name="RottenPasty_Name">腐烂的馅饼</string>
@@ -2814,4 +2815,5 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 </resources>

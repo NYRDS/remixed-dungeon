@@ -1678,6 +1678,7 @@ Potrebbe bruciare?</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">uovo di ragno</string>
     <string name="SpiderEgg_Name_Objective">uovo di ragno</string>
+    <string name="SpiderElite_Name_Objective">guardia d\'élite del ragno</string>
     <string name="SpiderExploding_Desc">Duri lavoratori durante i periodi di pace, queste creature non esitano a caricare i propri nemici e prendere la prima pianta che gli capita, rendendoli delle bombe viventi. </string>
     <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">ragno lavoratore</string>
@@ -2405,6 +2406,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
