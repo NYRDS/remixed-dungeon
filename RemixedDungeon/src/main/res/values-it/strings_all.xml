@@ -262,6 +262,7 @@
     <string name="Capotain_Info">un cappello alto, a tesa stretta. Di solito è associato ai Puritani , ma non c\'è bisogno di essere religiosi per indossarlo. Per qualche ragione ha una targhetta, che dice \&quot; Solomon \&quot; .</string>
     <string name="Capotain_Name">Cappello a capote</string>
     <string name="Carcass_DissectMessage">Dissechi la carcassa e ottieni un %s.</string>
+    <string name="Carcass_Name">resti di %s</string>
     <string name="Caves_TileDescBookshelf">A chi servirebbe una libreria dentro una caverna?</string>
     <string name="Caves_TileDescDeco">una vena di materiale è visibile sulla parete. sarà oro?</string>
     <string name="Caves_TileDescEntrance">Questa scala porta al piano superiore.</string>
@@ -709,6 +710,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Hedgehog_Name">riccio</string>
     <string name="HeroClass_Doctor">Dottore della Peste</string>
     <string name="HeroClass_Elf">elfo</string>
+    <string name="HeroClass_ElfPerks_0">Gli elfi iniziano con 15 punti di salute e 9 punti di forza.</string>
     <string name="HeroClass_ElfPerks_1">Gli elfi sono immuni al radicamento.</string>
     <string name="HeroClass_ElfPerks_2">Gli elfi iniziano con un aggiornato arco di legno e delle frecce.</string>
     <string name="HeroClass_ElfPerks_3">Gli elfi sono estremamente bravi con gli archi e sono agili.</string>
@@ -2401,6 +2403,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

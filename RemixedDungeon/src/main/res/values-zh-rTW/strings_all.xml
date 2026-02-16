@@ -1311,6 +1311,7 @@
     <string name="Pickaxe_Info">這確是件大型且穩健的掘石工具，也可以當作武器使用。</string>
     <string name="Pickaxe_Name">鐵鎬</string>
     <string name="Pickaxe_NoVein">您周圍沒有暗金脈可挖</string>
+    <string name="Pickaxe_NothingToMine">這裡沒有可挖的東西！</string>
     <string name="Piercing_Name_0">穿刺%s</string>
     <string name="Piercing_Name_1">穿刺%s</string>
     <string name="Piercing_Name_2">穿刺%s</string>
@@ -2640,6 +2641,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
