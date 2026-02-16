@@ -716,6 +716,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Du fühlst eine eiskalte Aura, welche von der Pfeilspitze ausgeht.</string>
     <string name="FrostArrow_Name">Frostpfeil</string>
+    <string name="FrostAuraBuff_Info">Frost umgibt den Körper und verlangsamt alles, was sich in der Nähe befindet.</string>
     <string name="FrostAuraBuff_Name">Frostaura</string>
     <string name="FrostBuff_Info">Festgefroren, keinerlei Aktionen möglich.</string>
     <string name="FrostBuff_Name">Eingefroren</string>
@@ -2768,6 +2769,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

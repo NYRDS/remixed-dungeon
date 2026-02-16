@@ -1890,6 +1890,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="ShieldWeaponInfo">武器として使用した場合、この盾は平均して%1$dのダメージを与える。</string>
     <string name="Shielded_Defense">ブロックした</string>
     <string name="Shielded_Desc">ブルートはノールの中で最も大きく、強く、タフである。重傷を負うと凶暴化し、敵にさらなるダメージを与える。このブルートは巨大な盾を身に着けている！</string>
+    <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">盾持ちのノールブルート</string>
     <string name="Shielded_Name_Objective">盾持ちのノールブルート</string>
     <string name="ShootInEye_Info">あなたの卓越した射撃技術を駆使して、敵の目を撃ち抜くのだ。もちろん、敵に目があればの話だが。</string>
@@ -2900,6 +2901,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

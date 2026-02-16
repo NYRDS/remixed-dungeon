@@ -1595,6 +1595,7 @@ Potrebbe bruciare?</string>
     <string name="Shadow_Desc">Le Ombre vagano silenziosamente per le rovine dell\'antica prigione, mostrandosi solo occasionalmente agli avventurieri, solitamente nella loro ultima avventura.</string>
     <string name="Shadow_Name">Ombra</string>
     <string name="Shadow_Name_Objective">Ombra</string>
+    <string name="ShadowsBuff_Info">È più difficile individuare qualcosa tra le ombre.</string>
     <string name="ShadowsBuff_Name">Fuso con l\'ombra</string>
     <string name="Shaman_Desc">Gli gnoll più intelligenti posso imparare la magia sciamanica. Gli gnoll sciamani preferiscono magie d\'attacco per compensare la loro mancanza di forza, non esitando ad usarle su coloro che mettono in dubbio il loro prestigio nella tribù.</string>
     <string name="Shaman_Killed">%s\'s fulmine ti ha ucciso....</string>
@@ -2403,6 +2404,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

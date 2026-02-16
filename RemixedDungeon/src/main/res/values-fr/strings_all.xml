@@ -2516,6 +2516,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndLibrary_Items_Btn">Objets</string>
     <string name="WndLibrary_Levels_Btn">Donjon</string>
     <string name="WndLibrary_Mobs_Btn">Monstres</string>
+    <string name="WndLocalModInstall_pick">Choisir le répertoire du mod</string>
     <string name="WndLocalModInstall_title">Installer le mod depuis le répertoire local</string>
     <string name="WndModInstall_InstallingMod">Installation du mod</string>
     <string name="WndModInstall_PleaseUpdate">Veuillez mettre à jour Remixed Dungeon avant d\'installer ce mod</string>
@@ -2971,6 +2972,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
