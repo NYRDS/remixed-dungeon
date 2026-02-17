@@ -503,6 +503,7 @@
     <string name="CorpseDust_Info">Жменя трупної пилюки не відрізняється від звичайної. Хоча не покидає відчуття, що від неї треба скоріше позбутися.</string>
     <string name="CorpseDust_Info2">Можливо через те, що тримаючи її в руці виникають відчуття занепокоєності та гніву.</string>
     <string name="CorpseDust_Name">трупна пилюка</string>
+    <string name="CorpseExplosion_Name">Трупний вибух</string>
     <string name="Crab_Defense">відбився</string>
     <string name="Crab_Desc">Ці великі краби розташувалися на верхівці харчової ланки в каналізації. Вони надзвичайно швидкі, а їхній хітин здатний витримати велику кількість ударів.</string>
     <string name="Crab_Gender">masculine</string>
@@ -2683,6 +2684,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 </resources>

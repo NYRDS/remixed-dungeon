@@ -2239,6 +2239,7 @@
     <string name="TownsfolkSilentNPC_Name_Objective">κάτοικος</string>
     <string name="ToxicGas_Info">Ένα πρασινωπό νέφος τοξικού αερίου στροβιλίζεται εδώ.</string>
     <string name="ToxicGas_Info1">Πέθανες εισπνέοντας τοξικό αέριο...</string>
+    <string name="ToxicGland_Info">Μια τοξική αδένας που συλλέχθηκε από έναν ηττημένο εχθρό. Αυτοί οι αδένες είναι γεμάτοι με ισχυρές τοξίνες και μπορούν να χρησιμοποιηθούν σε αλχημικές διαδικασίες.</string>
     <string name="ToxicGland_Name">Τοξική Αδένας</string>
     <string name="TrapWnd_Step">Θέλεις σίγουρα να πατήσεις στην παγίδα; Μπορεί και να πεθάνεις.</string>
     <string name="TrapWnd_Title">Παγίδα</string>
@@ -3006,6 +3007,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

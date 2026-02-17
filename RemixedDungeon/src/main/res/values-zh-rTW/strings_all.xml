@@ -2345,6 +2345,7 @@
     <string name="WndStory_Prision">為了收納最具威脅的罪犯，此地下監獄於多年前建立。因為要逃出此地極之困難，起初大家都覺得此為上策，但不久之後從地底更深處散發出的黑暗瘴氣在獄中彌漫開去，令該處的罪犯和守衛喪失理智。監獄裏變成一片混亂。秩序、服從、法則、人性通通崩潰。於是城市封鎖了整個監獄，然而尚有些人仍然被鎖上，不能重見天日。</string>
     <string name="WndStory_Sewers">這個地牢位於城市的正下方，較靠近地面的樓層是城市的下水道系統，因此不太危險。儘管如此，沒人會認為這裏是安全之地，但至少您不用應付許多陰險狡黠的法術。</string>
     <string name="WndStory_Spiders">許多年前，這是一個充滿了魔法石的富裕礦山。但隨著礦脈的枯竭，礦工們紛紛離去，留下了大量的坑道網絡。最後這個地方被蜘蛛占領了。雖然這些危險的生物在黑暗中潛伏，但是這嚇不倒一些瘋狂而勇敢的尋寶者和冒險者們，因為傳言裏面的魔法神器的價值值得他們為之冒險。據說有一個為了逃避追捕的女巫進入了這個礦洞，追捕她的士兵由於畏懼黑暗而不敢靠近，只能派人在礦洞門口看守。結果到他們放棄後女巫也沒出現。沒準她找到另一個出口？亦或是趁看守不註意時跑了？或者...死在了礦洞深處，與蜘蛛們融為一體。</string>
+    <string name="WndTilesKind_text">你即將進入一個被扭曲魔法佔據的地下城，但現在你可以選擇如何看待它：\n你喜歡現代偽 3D 還是經典平面視角？\n你之後可以在遊戲選項選單中更改。</string>
     <string name="WndTradeItem_Bought">您購買了%1$s花費%2$d金幣</string>
     <string name="WndTradeItem_Buy">以%d金幣買入</string>
     <string name="WndTradeItem_BuyAll">購買全部需要%d金幣</string>
@@ -2645,6 +2646,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
