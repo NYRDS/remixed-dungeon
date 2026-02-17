@@ -30,6 +30,7 @@
     <string name="AirElemental_Name_Objective">Luftgeist</string>
     <string name="AlarmTrap_Desc">Die Falle gibt einen lauten, durchdringenden Ton ab, der durch die Gemäuer hallt.</string>
     <string name="Albino_Desc">Beutelratten sind aggressiv, aber ziemlich schwache Bewohner der Abwasserkanäle. Sie können nur bei großer Anzahl gefährlich werden. Diese bestimmte Ratte scheint ein Albino zu sein. Sie hat außerdem außergewöhnlich scharfe Zähne.</string>
+    <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name">Albino Ratte</string>
     <string name="Albino_Name_Objective">Albino Ratte</string>
     <string name="AlchemyPot_SelectSeed">Wähle einen Samen aus um ihn zu werfen.</string>
@@ -2771,6 +2772,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

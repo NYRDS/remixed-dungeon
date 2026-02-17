@@ -521,6 +521,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="CorpseDust_Info">Este montón de polvo de cadáver no es diferente de cualquier otro. Sin embargo, sabes de alguna manera que cuanto antes te deshagas de él, mejor.</string>
     <string name="CorpseDust_Info2">Quizás por tan sólo sujetarlo hace que te sientas ansioso y enfadado.</string>
     <string name="CorpseDust_Name">polvo de cadáver</string>
+    <string name="CorpseExplosion_Name">Explosión de Cadáveres</string>
     <string name="Crab_Defense">repelido</string>
     <string name="Crab_Desc">Estos grandes cangrejos están en lo alto de la cadena alimenticia de las alcantarillas. Son extremadamente rápidos y su duro exoesqueleto puede resistir flechas potentes.</string>
     <string name="Crab_Name">cangrejo de alcantarilla</string>
@@ -2834,6 +2835,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
