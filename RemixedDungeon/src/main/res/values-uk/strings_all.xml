@@ -2024,6 +2024,7 @@
     <string name="TownGuardNPC_Message3">Гадаєш тут забагато вартових? Це ж єдине місто, в якому знаходиться спуск в гігантське підземелля, яке наповнено монстрами, чи не так?</string>
     <string name="TownGuardNPC_Name">вартовий</string>
     <string name="TownGuardNPC_Name_Objective">вартового</string>
+    <string name="TownPortal_Info">Це заклинання дозволяє вам миттєво повернутися в безпечне місце. Однак потужні джерела магії поблизу можуть завадити йому працювати як задумано.</string>
     <string name="TownPortal_Name">Міський портал</string>
     <string name="TownScript_NeedWeapon">Я не піду до підземелля з голими рукам!\nМоже варто відвідати міський магазин, спершу?</string>
     <string name="TownShopkeeper_Desc">Цей чоловік - типовий крамар. Можеш не сумніватися, він вже знає тобі ціну.</string>
@@ -2686,6 +2687,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
