@@ -558,6 +558,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Drink_ACDrink">MINUM</string>
     <string name="Drink_Message">Minuman tersebut menyegarkan!</string>
     <string name="DrunkardNPC_Desc">Pelanggan tetap pondok dalam keadaan semula jadi.</string>
+    <string name="DrunkardNPC_Name">pemabuk</string>
     <string name="Drunkard_Phrase_1">LAGI MINUMAN, TOLONG!</string>
     <string name="Drunkard_Phrase_2">Siapa perlukan air bila ada bir</string>
     <string name="Drunkard_Phrase_3">Minum ini rasa cam tanah</string>
@@ -2295,6 +2296,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WrnExperimental_hint">Jika dunia yang pelik dan penuh onar ini terlalu hebat bagi anda, sila lumpuhkan tetapan tersebut menggunakan\nSkrin Permulaan-&gt;Pilihan-&gt;Permainan\nmenu dan mula permainan baharu atau muatkan simpanan lain.</string>
     <string name="WrnExperimental_moveTimeout">Masa gerak ditetapkan ke %d milisaat, fikir cepat!</string>
     <string name="Yog_Desc">Yog-Dzewa ialah Dewa Purba, satu entiti berkuasa dari dunia chaos. Berabad-abad dahulu, orang kerdil purba berjaya mengalahkan tentera setannya walaupun menang tipis, mereka gagal membunuh dewa ini. Sebaliknya, mereka mengurung dewa ini dalam suatu ruangan di bawah bandar mereka, dengan harapan dia terlalu lemah untuk bangkit semula.</string>
+    <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">Harapan adalah sebuah ilusi...</string>
     <string name="Yog_Name">Yog-Dzewa</string>
@@ -2339,6 +2341,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_barrel_name">Tong</string>
     <string name="town_deco_barrel_wine_desc">Digunakan untuk menyimpan minuman berharga seperti arak.</string>
     <string name="town_deco_barrel_wine_name">Tong arak</string>
+    <string name="town_deco_beige_carpet_desc">Sebuah karpet perang yang elegan yang ditenun daripada bulu gnoll yang lembut.</string>
     <string name="town_deco_beige_carpet_name">Permaidani</string>
     <string name="town_deco_bell_desc">Loceng gereja biasa yang tampaknya tiada siapa yang mengetuknya, tali pengikatnya telah hilang.</string>
     <string name="town_deco_bell_name">Loceng</string>
@@ -2541,6 +2544,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

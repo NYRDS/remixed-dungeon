@@ -2533,6 +2533,7 @@ remix.32.1\n
     <string name="WndInstallingMod_deleting_file">Usuwanie %s</string>
     <string name="WndInstallingMod_please_wait">Instalowanie modyfikacji, proszę czekać...</string>
     <string name="WndInstallingMod_skipping_file">Pomijam %s</string>
+    <string name="WndItemAlchemy_NoRecipes">Brak dostępnych przepisów z tym przedmiotem i twoim obecnym ekwipunkiem.</string>
     <string name="WndJournal_Levels">Poziomy</string>
     <string name="WndJournal_Logbook">Dziennik</string>
     <string name="WndJournal_Title">Dziennik</string>
@@ -3000,6 +3001,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
