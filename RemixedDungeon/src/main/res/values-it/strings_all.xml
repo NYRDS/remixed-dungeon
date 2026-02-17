@@ -1669,6 +1669,7 @@ Potrebbe bruciare?</string>
     <string name="Spells_NotInOwnBody">Non puoi eseguire %s mentre la tua anima è separata dal corpo.</string>
     <string name="Spells_NotTooFast">%s non è ancora pronto per essere usato</string>
     <string name="Spells_SummonLimitReached">%1$s: limite di evocazioni raggiunto (Limite attuale: %2$d)!</string>
+    <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">Quest\'armatura é composta di vecchie carcasse di ragno e uno strano tessuto. Incredibilmente, trovi ghiandole filatrici ancora funzionanti. Applicando la giusta pressione su una delle piastre, lancia ragnatele. Gli spuntoni sotto gli stivali ti permettono di camminare su di esse.</string>
     <string name="SpiderArmor_Name">armatura di ragno</string>
     <string name="SpiderCharm_Info">Questo gingillo esotico è avvolta da un\'aura di mistero. Chi lo sa, che cosa potrebbe accadere a chi lo indossa?</string>
@@ -2407,6 +2408,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
