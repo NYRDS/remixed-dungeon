@@ -2007,6 +2007,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WarriorArmor_NotWarrior">이 갑옷은 전사만 착용 가능하다.</string>
     <string name="WarriorArmor_Prompt">도약할 방향을 선택하라.</string>
     <string name="WaterElemental_Desc">물 정령은 큰 물 웅덩이 근처에서 볼 수 있다. 이 마법으로 뭉쳐진 물 덩어리는 대개 그냥 주변을 어슬렁 댄다.</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name">물 정령</string>
     <string name="WaterElemental_Name_Objective">물 정령</string>
     <string name="WaterOfAwareness_Info">지식의 힘이 우물에서 흘러나옵니다. 한모금 마시면 당신이 장착한 아이템의 모든 정보를 알게 됩니다.</string>
@@ -2503,6 +2504,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

@@ -1799,6 +1799,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Stench_Txt">%s berbau busuk</string>
     <string name="StoneBloodBuff_Name">Darah batu</string>
     <string name="Str_lose">-1 ktn</string>
+    <string name="StrongShield_desc">Perisai segi empat tepat ini disadur dengan lembaran gangsa dan dihiasi dengan kain berwarna. Ia jauh lebih berat, tetapi boleh menghalang lebih banyak kerosakan masuk.</string>
     <string name="Stylus_ACInscribe">TULIS</string>
     <string name="Stylus_Info">Kalam misteri ini diperbuat daripada batu hitam yang sangat keras. Dengan kalam ini anda boleh menulis glif atau rune, tetapi anda tidak berkuasa memilih apa yang akan dihasilkan, kalam tersebut yang menentukannya buat anda.</string>
     <string name="Stylus_Inscribed">anda menulis %1$s di atas %2$s anda</string>
@@ -2544,6 +2545,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -1670,6 +1670,7 @@
     <string name="ScrollOfTeleportation_Name">傳送卷軸</string>
     <string name="ScrollOfTeleportation_NoTeleport">強大的能量阻止了你的傳送！</string>
     <string name="ScrollOfTeleportation_Teleport">眼前一閃，傳送完成。</string>
+    <string name="ScrollOfTeleportation_Teleport2">眨眼之間 %s 就被傳送到該層的另一個位置。</string>
     <string name="ScrollOfTerror_Info">發出紅光，恐懼敵人。攻擊它們會使恐懼失效。</string>
     <string name="ScrollOfTerror_Info1">這卷軸造成了一道紅色的光芒</string>
     <string name="ScrollOfTerror_Info2">這卷軸造成了一道紅色的光芒，%s逃跑了！</string>
@@ -2644,6 +2645,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 </resources>
