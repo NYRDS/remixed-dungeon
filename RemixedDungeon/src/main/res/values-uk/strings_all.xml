@@ -2298,6 +2298,7 @@
     <string name="WndModsDisclaimer_install">Встановити локальний мод.</string>
     <string name="WndModsDisclaimer_title">Модифікації</string>
     <string name="WndMovieTheatre_Bye">Повертайся будь-коли, ми завжди раді вас бачити!</string>
+    <string name="WndMovieTheatre_Instruction">Вітаємо і ласкаво просимо до нашого кінотеатру! Ми надаємо особливу послугу, де ви можете безкоштовно переглянути спеціальний фільм під назвою реклама. І якщо ви переглянете його до кінця, ви отримаєте винагороду у розмірі %d золотих монет!</string>
     <string name="WndMovieTheatre_Instruction_2">Ви переглянули %1$d разів з %2$d. Ви отримаєте ще один квиток на сеанс за кожен рівень героя.</string>
     <string name="WndMovieTheatre_No">піти</string>
     <string name="WndMovieTheatre_Ok">Ви успішно переглянули фільм за \&quot;винагороду\&quot;!</string>
@@ -2685,6 +2686,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

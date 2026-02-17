@@ -714,6 +714,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="GoldenStatue_Desc">Sukar dipercayai, patung yang indah dan mengagumkan ini bukan hanya hiasan, tetapi seekor makhluk jahat yang memperdaya penggembara. Sekali pandang anda percaya ia adalah _%s_ yang merupakan sebahagian dari lengannya.</string>
     <string name="GoldenStatue_Name">patung emas</string>
     <string name="GoldenStatue_Name_Objective">patung emas</string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="GoldenSword_Info">Kebiasaannya senjata yang diperbuat dari logam lembut seperti emas tidak berguna selain dari hiasan. Sebaliknya pedang ini dapat memotong dengan baik.</string>
     <string name="GoldenSword_Name">pedang emas</string>
     <string name="Golem_Defense">disekat</string>
@@ -2546,6 +2547,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
