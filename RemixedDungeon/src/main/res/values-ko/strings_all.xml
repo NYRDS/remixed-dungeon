@@ -1768,6 +1768,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SpiritOfPain_Name">고통의 영혼</string>
     <string name="SpiritOfPain_Name_Objective">고통의 영혼</string>
     <string name="Sprout_Name">새싹</string>
+    <string name="StartScene_ChooseFromSlot">저장 슬롯에서 선택</string>
     <string name="StartScene_Depth">진행 깊이: %1$d\n층 수: %2$d</string>
     <string name="StartScene_DifficultyEasy">쉬움(광고)</string>
     <string name="StartScene_DifficultyEasyNoAds">쉬움</string>
@@ -2506,6 +2507,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

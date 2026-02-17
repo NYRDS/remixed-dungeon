@@ -1427,6 +1427,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Piercing_Name_1">貫通の %s</string>
     <string name="Piercing_Name_2">貫通の %s</string>
     <string name="Piranha_Desc">この肉食の魚は、地下プールに自然に生息しているわけではない。浸水した宝物庫を守るために特別に飼育されたのだ。</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">巨大ピラニア</string>
     <string name="Piranha_Name_Objective">巨大ピラニア</string>
     <string name="PirateSet_Info">おらぁ！きさまは我々の仲間に加わる勇気があるのか！？それとも、きさまもただの陸のネズミか？そうでなけりゃいいがな！なにせここは結局のところ海賊専用なんだからな。あー、つまり、なんだ……おらぁ！！</string>
@@ -2901,6 +2902,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

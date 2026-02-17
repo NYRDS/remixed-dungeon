@@ -1,5 +1,6 @@
 <resources>
     <string name="AC_Devour">Melahap</string>
+    <string name="AC_Kick">Menendang</string>
     <string name="AC_Necromancy">Penujuman</string>
     <string name="Abilities_Common">Sihir umum</string>
     <string name="Abilities_Default">Keahlian</string>
@@ -2777,6 +2778,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
