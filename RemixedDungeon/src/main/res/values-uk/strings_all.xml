@@ -1916,6 +1916,7 @@
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">дух болю</string>
     <string name="SpiritOfPain_Name_Objective">духу болі</string>
+    <string name="Sprout_Name">Паросток</string>
     <string name="StartScene_ComingSoon">Незабаром</string>
     <string name="StartScene_Depth">Глибина: %1$d\nРівень: %2$d</string>
     <string name="StartScene_DifficultyEasy">Простий (з рекламою)</string>
@@ -2684,6 +2685,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

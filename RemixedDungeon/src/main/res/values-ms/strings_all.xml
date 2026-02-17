@@ -295,6 +295,7 @@
     <string name="Candy_Warning_2">Oleh kerana anda makan terlalu banyak, perut anda mulai sakit.</string>
     <string name="Capotain_Info">Topi bertepi lebar dan tinggi. Ia dikaitkan dengan orang alim, tetapi tidak perlu tahu selok-belok agama untuk memakainya. Atas sebab tertentu ia mempunyai tanda nama, iaitu \&quot;Sulaiman\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
+    <string name="Carcass_Devoured">Anda telah memakan mayat %s!</string>
     <string name="Carcass_DissectFailed">Anda menyiasat %s tetapi tidak menemui apa-apa yang berharga.</string>
     <string name="Carcass_DissectMessage">Anda menyiasat bangkai dan mendapat %s.</string>
     <string name="Carcass_Info">Bangkai %s yang benar-benar mati</string>
@@ -2545,6 +2546,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

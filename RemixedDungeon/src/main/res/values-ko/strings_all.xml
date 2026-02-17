@@ -2494,6 +2494,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_weaponrack_desc">이 선밤판에는 당신에게 너무 비싼 무기들이 놓여 있습니다.</string>
     <string name="town_deco_window_desc">일반적인 유리창으로, 특별한 점은 없다.</string>
     <string name="town_deco_window_name">창문</string>
+    <string name="town_deco_wood_wall_desc">튼튼해 보이는 통나무 벽.</string>
     <string name="town_deco_wood_wall_name">통나무로 된 벽</string>
     <string name="town_deco_wooden_bench_desc">이 나무로 만들어진 의자는 앉기 편해보인다.</string>
     <string name="town_deco_wooden_bench_name">나무 의자</string>
@@ -2505,6 +2506,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
