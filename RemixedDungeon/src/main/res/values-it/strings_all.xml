@@ -37,6 +37,7 @@
     <string name="AmokArrow_Name">Freccia della follia</string>
     <string name="AmokBuff_Info">Prova la furia, togliendo la vita a coloro che sono sfortunati.</string>
     <string name="AmokBuff_Name">Furia omicida</string>
+    <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">La sostanza sulla punta di questo dardo farà diventare chiunque in un pazzo e spietato supermatto</string>
     <string name="AmokDart_Name">Dardo della follia</string>
     <string name="AmuletScene_Exit">E\' abbastanza per oggi</string>
@@ -2414,6 +2415,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

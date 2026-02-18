@@ -2432,6 +2432,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_pedestal_name">받침대</string>
     <string name="town_deco_pillar_desc">예전에는, 이 기둥은 지탱과 장식으로서의 역할 모두를 톡톡히 수행했었다.</string>
     <string name="town_deco_pillar_name">기둥</string>
+    <string name="town_deco_pole_name">기둥</string>
     <string name="town_deco_porch_desc">나무 마루</string>
     <string name="town_deco_porch_name">마루</string>
     <string name="town_deco_poster_desc">영화관에서 예정된 상영을 알리는 전단지들.</string>
@@ -2510,6 +2511,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

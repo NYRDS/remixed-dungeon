@@ -185,6 +185,10 @@
     <string name="Bandit_Name">божевільний злочинець</string>
     <string name="Bandit_Name_Objective">божевільного злочинця</string>
     <string name="BardNPC_Gender">masculine</string>
+    <string name="BardSong_1">Ми з дружиною живемо зовсім одні,
+В маленькій хатинці, що звали своєю,
+Вона любила джин, а я любив ром,
+І я скажу вам, мали ми потіху.</string>
     <string name="BarkskinBuff_Name">Шкіра-кора</string>
     <string name="Barrel_Desc">На перший погляд звичайна діжка. Але наблизившись до неї, ти відчуваєш дивний маслянистий запах. Схоже діжка досить легка, би ти міг її посунути.</string>
     <string name="Barrel_Name">діжка</string>
@@ -2689,6 +2693,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
