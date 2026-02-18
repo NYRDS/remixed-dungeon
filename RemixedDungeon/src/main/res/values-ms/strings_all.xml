@@ -1640,6 +1640,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Senior_Desc">Sami ini merupakan si fanatik, yang tegar melindungi rahsia bandar mereka dari semua makhluk lain. Mereka tidak memakai perisai atau menggunakan senjata, hanya bersandarkan seni pertempuran tanpa senjata. Sami ini telah menguasai seni melumpuhkan musuhnya.</string>
     <string name="Senior_Name">sami kanan</string>
     <string name="Senior_Name_Objective">sami kanan</string>
+    <string name="ServantNPC_Name">pelayan penginapan</string>
     <string name="ServiceManNPC_Desc">Pekerja biasa di pertubuhan tempatan.</string>
     <string name="ServiceManNPC_Limit">Mohon maaf, setiap pengembara hanya boleh menonton sejumlah %d cereka.</string>
     <string name="ServiceManNPC_Limit_Reached">Mohon maaf, tetapi anda sudah mencapai had yang dibenarkan. Awak boleh guna perkhidmatan kami lagi bagi setiap tahap adiwira yang telah dicapai.</string>
@@ -1913,6 +1914,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="VampireSkull_Name">Tengkorak pontianak</string>
     <string name="VertigoBuff_Name">Pening Gayat</string>
     <string name="View_Distance">Jarak penglihatan</string>
+    <string name="VileEssence_Info">Satu essensi korupsi pekat yang dituai daripada musuh yang dikalahkan. Bahan gelap ini berdenyut dengan tenaga jahat dan sangat dihargai dalam proses alkimia.</string>
     <string name="Viscosity_Status">ditangguh %d</string>
     <string name="Viscosity_Txt">%s kelikatan</string>
     <string name="WandHolster_Info">Sarung tongkat sakti nipis ini diperbuat daripada kulit haiwan eksotik. Ia dapat membawa sehingga %d batang tongkat sakti.</string>
@@ -2547,6 +2549,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

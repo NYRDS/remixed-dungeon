@@ -318,6 +318,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Challenges_Names_7">Békesség</string>
     <string name="Challenges_Names_9">Amnesia</string>
     <string name="ChampionOfAirBuff_Info">Ez a tulajdonság a szél lényegével ruházza fel a lényt, fokozva annak ügyességét és harci tudását. A Levegő Bajnoka félelmetes ellenféllé válik, képes gyors és pusztító támadásokat végrehajtani, amelyek gyorsan megfordíthatják a csata menetét.</string>
+    <string name="ChampionOfEarthBuff_Info">A Föld Bajnoka a megtörhetetlen erőt testesíti meg, mivel ez a tulajdonság növeli a lény sebzésállóságát és maximális életerejét. Ez az átalakulás félelmetes ellenféllé teszi a veszélyes mélységekben, képes könnyedén kivédeni a támadásokat és rendíthetetlen elszántsággal kiállni a hosszan tartó csatákat.</string>
     <string name="ChaosArmor_Info">Ez a páncél sötétvörös láncokkal összefűzött vérvörös lemezekből áll. Kaotikus energiát sugároz, ahogy megérinted.</string>
     <string name="ChaosArmor_Name">Káosz páncél</string>
     <string name="ChaosBow_Info">Egy halálos íj a Káosz hatalmával töltve. Minden nyílvessző amit kilő egy darabka káoszenergiát hordoz. De ha elvéted a célt...</string>
@@ -2571,6 +2572,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

@@ -2359,6 +2359,7 @@ remix.31.1\n
     <string name="WndModSelect_AreYouSure">Eliminando mod: %s, tem a certeza?</string>
     <string name="WndModSelect_ReallyDelete">Realmente eliminar?</string>
     <string name="WndModsDisclaimer_install">Instalar mod local</string>
+    <string name="WndModsDisclaimer_manage">Gerenciar lista de mods</string>
     <string name="WndModsDisclaimer_title">Mods</string>
     <string name="WndMovieTheatre_Bye">Volte a qualquer hora, nós estamos sempre felizes em vê-lo!</string>
     <string name="WndMovieTheatre_Instruction">Saudações e bem-vindo ao nosso cinema! Nós fornecemos um serviço especial, onde você pode assistir a um filme de graça. E se você assisti-lo todo, você será recompensado com %d moedas de ouro!</string>
@@ -2798,6 +2799,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
