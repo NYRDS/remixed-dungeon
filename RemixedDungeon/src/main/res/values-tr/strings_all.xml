@@ -2043,6 +2043,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="Swing_Name_2">Vahşi %s</string>
     <string name="Sword_Info">Keskin ağzı ile bu uzun çelik silah güven verici şekilde parlıyor.</string>
     <string name="Sword_Name">kılıç</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Bu fırlatma baltası o kadar ağır olmasa da, yine de etkili bir şekilde kullanılması için önemli bir güç gerektirir.</string>
     <string name="Tamahawk_Name">Kızılderili baltası</string>
     <string name="TenguLiver_Info">Bu karaciğer güçlü bir düşmana ait. Sadece ona bakarak, vahşi içgüdüleriniz devreye giriyor ve onu tüketme dürtüsü hissediyorsunuz.</string>
@@ -2858,84 +2859,5 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>

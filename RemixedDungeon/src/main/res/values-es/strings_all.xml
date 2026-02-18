@@ -1435,6 +1435,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PlagueDoctorQuest_3_1_Prologue">*Sus ojos brillan con una intensidad extraña y febril* ¡Ah, el _murciélago vampiro_! Una criatura de la noche, alimentándose de la fuerza vital de su presa. Fascinante… verdaderamente fascinante. Necesito uno vivo para estudiar su fisiología única. Se trata de… comprender… el… *Se interrumpe, murmurando para sí mismo en una serie de términos arcanos*. ¡Sí! La ecolocación del _murciélago_, su capacidad para navegar en completa oscuridad… es clave para desbloquear un secreto.</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">¡Esto no es una simple bestia! ¡Es un testimonio andante del poder nigromántico! ¡Capture uno, vivo e ileso! Este _Caballero de la Muerte_… ¡es la clave!</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">¡Un _Caballero de la Muerte_! *Su voz se quiebra de emoción, sus huesudos dedos tiemblan mientras aferra un frasco burbujeante lleno de un líquido turbio y fosforescente*. ¡Tal criatura… un faro de no-muerte! ¡Capturar uno, vivo… sería… monumental! ¡Imagina los secretos que podríamos descubrir! ¡El poder que fluye a través de sus venas esqueléticas! ¡Sí, un _Caballero de la Muerte_! Es crucial para mi investigación. ¡Pues me permitirá adentrarme más profundamente… en los misterios de la vida… y de la muerte misma!</string>
+    <string name="PlagueDoctorQuest_4_1_Epilogue">¡Espléndido! Los _Brujos Enanos_, ¡su esencia ahora es mía para explorar! Una magia tan retorcida y corrompida... verdaderamente fascinante. *Sostiene un frasco reluciente, lleno de un líquido viscoso y carmesí.* ¡Esto es para ti: una _Poción de Poder_! ¡Bebe su poder y sentirás la fuerza de las montañas corriendo por tus venas! Recuerda, el conocimiento obtenido de estos sacrificios servirá en última instancia a un propósito superior... quizás incluso nos salve a todos de un destino peor que la muerte.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">¡Cinco _Brujos Enanos_, sus cuerpos aún palpitan con el débil eco de magia oscura! Tráemelos, y te recompensaré con una poción de poder sin precedentes: una _Poción de Poder_ que te impregnará con la fuerza de diez hombres.</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Él mira fijamente a las dos _súcubos_, con una sonrisa beatífica extendiéndose bajo su máscara.* ¡Espléndido! ¡Magnífico! Esto desbloqueará tantas... posibilidades! *Se vuelve hacia ti, su voz gruesa de gratitud... y algo más.* Tus esfuerzos... no serán olvidados. Le debo las gracias más profundas. *Su mirada se demora en las _súcubos_ un momento demasiado largo, antes de retirarse a su laboratorio, murmurando sobre cómo desbloquear los secretos de la seducción.*</string>
     <string name="PlagueDoctor_Desc">Este hombre jorobado está vestido completamente con cuero. Huele fuertemente a medicamentos y ... ¿ajo?</string>
@@ -2380,6 +2381,7 @@ otro lugar del nivel.</string>
     <string name="WndInfoItem_Skeleton">Restos de huesos</string>
     <string name="WndInfoItem_Tomb">Tumba</string>
     <string name="WndInfoItem_WontKnow">¡No sabrás lo que hay dentro hasta que lo abras!</string>
+    <string name="WndInstallingMod_copying_file">Copiando %s al almacenamiento de Remixed Dungeon</string>
     <string name="WndInstallingMod_deleting_file">Eliminando %s</string>
     <string name="WndJournal_Levels">Niveles</string>
     <string name="WndJournal_Logbook">Diario de registros</string>
@@ -2836,117 +2838,5 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>
