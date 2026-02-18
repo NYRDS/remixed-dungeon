@@ -242,6 +242,7 @@
     <string name="BlessedBuff_Name">축복받은</string>
     <string name="BlindnessBuff_Name">실명</string>
     <string name="BodyArmorBuff_Info">이동 속도를 희생하여 방어력이 증가합니다.</string>
+    <string name="BodyArmorBuff_Name">바디 아머</string>
     <string name="BodyArmorSpell_Info">예비 근육의 힘을 활성화하여 일시적으로 더 강하게 만들고, 이동 속도를 희생하여 방어력을 크게 증가시킵니다.</string>
     <string name="BodyArmorSpell_Name">보디 아머</string>
     <string name="BoneShard_Info">패배한 적으로부터 얻은 날카로운 뼈 조각이다. 이 조각들은 놀랍도록 견고하며 제작에 유용하게 쓰인다.</string>
@@ -314,6 +315,7 @@
     <string name="Challenges_Names_8">도시 없음</string>
     <string name="Challenges_Names_9">기억 상실</string>
     <string name="ChampionOfAirBuff_Name">바람의 챔피언</string>
+    <string name="ChampionOfFireBuff_Info">화염의 격노가 주입된 이 특성은 생물의 잔혹성과 전투 능력을 증폭시킵니다. 불의 챔피언은 무시무시한 적으로 등장하여 적들을 타오르는 화염에 휩싸이게 하는 파괴적인 공격을 퍼부으며, 감히 맞서려는 자 모두에게 공포를 심어줍니다.</string>
     <string name="ChampionOfFireBuff_Name">불의 챔피언</string>
     <string name="ChampionOfWaterBuff_Info">물의 챔피언은 바다의 불굴의 힘을 구현하여 생물의 회복력과 인내력을 향상시킨다. 결과적으로 이는 끊임없는 공격을 견뎌내며 역경에 맞서는 불굴의 수호자가 될 수 있는 강인한 적이 된다.</string>
     <string name="ChaosArmor_Info">이 갑옷의 붉은 피의 금속판은 검고 붉은 사슬로 얽혀있습니다. 이것을 만질 때 마다 혼돈스러운 기운이 악화됩니다.</string>
@@ -746,6 +748,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HealthDart_Info">이 다트의 촉에는 회복 물약이 발려 있습니다.</string>
     <string name="HealthDart_Name">회복 다트</string>
     <string name="Heap_Mimic">이것은 미믹이다!</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">무서운 영혼의 검은 고동치는 심장</string>
     <string name="HeartOfDarkness_Name">어둠의 심장</string>
     <string name="Hedgehog_Desc">저 고슴도치는 불안해 보인다.</string>
@@ -2507,6 +2510,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 
