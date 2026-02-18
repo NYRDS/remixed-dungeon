@@ -768,6 +768,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Ghost_Rat2">Por favor... ayudame... Mata a la abominación...</string>
     <string name="Ghost_Rose1">Hola aventurero...Una vez fui como tu,fuerte y con confianza... Y ahora estoy muerto... Pero no puedo dejar este lugar... no hasta que tenga mi _rosa seca_ ... Es muy importante para mi... Unos monstruos la robaron de mi cuerpo...</string>
     <string name="Ghost_Rose2">Por favor... Ayúdame... Encuentra la rosa...</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Info">Esta arma consiste en un palo con la hoja de una espada en su extremo.</string>
     <string name="Glaive_Name">alabarda</string>
     <string name="GnollArmor_ACSpecial">DOMINAR</string>
@@ -2838,5 +2839,6 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 </resources>

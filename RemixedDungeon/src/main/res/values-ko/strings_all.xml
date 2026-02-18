@@ -2036,6 +2036,16 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Weightstone_WndChoice">%s 의 무게중심을 어떻게 조절하시겠습니까?</string>
     <string name="Weightstone_WndSpeed">공격 속도</string>
     <string name="Welcome_Ok">알겠습니다!</string>
+    <string name="Welcome_Text_30_1">
+    remix.30.1\n
+    - 게임플레이:\n
+    -- 놀리 서브클래스!\n
+    -- 달팽이!\n
+    - 카오스 아이템 진행 너프.\n
+    -- 마나 물약은 이제 일반 물약이 되었습니다.\n
+    -- 이제 DLC 에서 배지를 획득할 수 있습니다 (모드는 제외).\n
+    - 버그 수정\n
+    </string>
     <string name="Welcome_Text_32">
     remix.32\n
     - 게임플레이:\n
@@ -2144,6 +2154,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndInstallingMod_deleting_file">삭제 중 %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">레시피 실행</string>
     <string name="WndItemAlchemy_NoRecipes">이 아이템과 현재 인벤토리로 사용 가능한 레시피가 없습니다.</string>
+    <string name="WndItemAlchemy_Title">%s 의 연금술 레시피</string>
     <string name="WndJournal_Levels">레벨</string>
     <string name="WndJournal_Logbook">일지</string>
     <string name="WndJournal_Title">일지</string>
@@ -2512,6 +2523,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 
