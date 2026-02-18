@@ -1688,6 +1688,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="Rudolph_Info">Was könnte festlicher sein, als eine rote leuchtende Nase? Ein paar Geweihe natürlich.</string>
     <string name="Rudolph_Name">Rote Nase und Geweih</string>
     <string name="RunicSkull_Desc">Für etwas, das künstlich erstellt wurde, sieht dieser Schädel ein bisschen zu real aus. Du kannst ein schwaches glühen um den Schädel sehen.</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">Runen-Schädel</string>
     <string name="RunicSkull_Name_Objective">Runen-Schädel</string>
     <string name="SacrificialSword_Gender">masculine</string>
@@ -2773,6 +2774,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

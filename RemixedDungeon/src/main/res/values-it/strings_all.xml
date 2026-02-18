@@ -2311,6 +2311,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_exit_desc">Non si sa cosa ti aspetta se scendi questi scalini.</string>
     <string name="town_deco_fence_name">Recinzione</string>
     <string name="town_deco_filmtape_name">Film</string>
+    <string name="town_deco_firewood_name">Legna da ardere</string>
     <string name="town_deco_floor_name">Pavimento</string>
     <string name="town_deco_furnace_desc">Un forno affidabile, assemblato secondo schemi tradizionali.</string>
     <string name="town_deco_furnace_name">Forno</string>
@@ -2413,6 +2414,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
