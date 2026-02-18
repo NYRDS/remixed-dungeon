@@ -512,6 +512,7 @@ Hayır, ışığın içinde ona yer yoktu, artık yoktu. Yetersiz ışıktan dö
     <string name="Combo_Combo">%d Vuruş kombinasyonu!</string>
     <string name="CommonArrow_Info">Demir başlı sıradan bir tahta ok.</string>
     <string name="CommonArrow_Name">ok</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">Bu güçlendirilmiş arbalet, tahtadan yapılmış olana göre daha etkili bir alet gibi gözüküyor.</string>
     <string name="CompositeCrossbow_Name">Bileşik arbalet</string>
     <string name="CompoundBow_Info">Bu bileşik yaydan fırlatılan oklar büyük miktarda hasar verir ve biraz hız pahasına ahşap bir yaya göre gelişmiş isabet oranına sahiptir.</string>
@@ -2857,6 +2858,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

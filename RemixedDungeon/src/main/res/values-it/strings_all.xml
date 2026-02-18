@@ -350,6 +350,7 @@
     <string name="Char_YouMissed">%1$s %2$s il tuo attacco</string>
     <string name="ChargrilledMeat_Info">Sembra una bistecca decente.</string>
     <string name="ChargrilledMeat_Name">carne grigliata</string>
+    <string name="CharmBuff_Info">La mente e il corpo sono stati stregati!</string>
     <string name="CharmBuff_Name">Affascinato</string>
     <string name="CharmSpell_Info">Ognuno merita un po\' d\'amore, vero?</string>
     <string name="Chasm_Chasm">Baratro</string>
@@ -490,6 +491,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DewVial_Name">fiala di rugiada</string>
     <string name="Dewdrop_Info">Una goccia di rugiada pura come il cristallo.</string>
     <string name="Dewdrop_Name">goccia di rugiada</string>
+    <string name="DieHardBuff_Info">Tasso di rigenerazione aumentato.</string>
     <string name="DieHardBuff_Name">Duro a morire</string>
     <string name="DieHardSpell_Name">Duro a morire</string>
     <string name="Displacement_Txt">%s del dislocamento</string>
@@ -2411,6 +2413,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
