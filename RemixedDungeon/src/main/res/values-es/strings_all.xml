@@ -221,6 +221,7 @@
     <string name="Belongings_CantWearBoth">No puedes equiparte %1$s y %2$s al mismo tiempo!</string>
     <string name="Belongings_Name">Mochila</string>
     <string name="BishopNPC_Desc">Obispo de la Santa Iglesia de Santa el Profundo Señor</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">obispo</string>
     <string name="BishopNPC_Name_Objective">obispo</string>
     <string name="Bishop_bye">Rezaré por ti mi hijo.</string>
@@ -2835,6 +2836,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

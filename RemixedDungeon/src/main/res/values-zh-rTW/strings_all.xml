@@ -1187,6 +1187,7 @@
     <string name="MeleeWeapon_Info7a">您%2$s握著這把%1$s。</string>
     <string name="MeleeWeapon_Info7b">，並且因為它被詛咒了，你無法把它放下。</string>
     <string name="MeleeWeapon_Info7c">您能感受到%s中潛伏著一股惡意的魔力。</string>
+    <string name="MercenaryNPC_Name">僱傭兵</string>
     <string name="Metabolism_Txt">代謝 %s</string>
     <string name="MimicAmulet_Desc">你冒險旅程中最光榮的時刻原來是個陷阱。</string>
     <string name="MimicAmulet_Gender">masculine</string>
@@ -2647,6 +2648,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
