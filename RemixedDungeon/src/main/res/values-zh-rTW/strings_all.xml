@@ -902,6 +902,7 @@
     <string name="Hero_YouNowHave">你獲得了%s</string>
     <string name="HideInGrassSpell_Info">你完美掌握了躲藏的技巧。</string>
     <string name="HideInGrassSpell_Name">草叢隱身術</string>
+    <string name="HideInGrassSpell_NeedGrassToHide">就算我也無法在空曠處躲藏。</string>
     <string name="Horror_Name_0">恐懼%s</string>
     <string name="Horror_Name_1">恐懼%s</string>
     <string name="Horror_Name_2">恐懼%s</string>
@@ -2649,6 +2650,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

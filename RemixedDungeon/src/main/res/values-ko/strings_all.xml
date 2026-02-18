@@ -1800,6 +1800,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="StoneBloodBuff_Info">피가 돌로 변하여 주변 벽과 융합되어 지나가기 쉽게 만들지만, 과연 어떤 대가를 치러야 할까.</string>
     <string name="StoneBloodBuff_Name">혈석</string>
     <string name="Str_lose">-1 힘</string>
+    <string name="StrongShield_name">청동 도금 방패</string>
     <string name="Stylus_ACInscribe">룬을 새기다</string>
     <string name="Stylus_Info">이 신비한 바늘은 어두운 색의 단단한 돌로 만들어졌습니다. 이 바늘을 사용하여 방어구나 두루마리에 마법 상형문자를 새길 수 있습니다만, 어떠한 상형문자가 새겨지는지 알 수 없으며 오직 바늘이 새기는 대로 결정됩니다.</string>
     <string name="Stylus_Inscribed">%2$s 에 %1$s 상형문자가 새겨졌습니다.</string>
@@ -2511,6 +2512,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

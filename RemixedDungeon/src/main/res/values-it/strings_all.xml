@@ -15,6 +15,7 @@
     <string name="AboutScene_Sound">Suoni:</string>
     <string name="AboutScene_Thanks">Ringraziamenti speciali:</string>
     <string name="AboutScene_Translation">Tradotto da:</string>
+    <string name="Accuracy_DecreasedDoctor">Ogni oscillazione di questo %s diffonde imperfezione. Il mio Bisturi cura… questo infetta.</string>
     <string name="Acidic_Desc">Queste creature demoniche simili ad aracnidi evitano i combattimenti ravvicinati ad ogni costo, lanciando punte paralizzanti da lunghe distanze.</string>
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">scorpione acido</string>
@@ -2415,6 +2416,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

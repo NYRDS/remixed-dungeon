@@ -788,6 +788,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Gnoll_BecomeGuardianDesc">Koruyucu Olun</string>
     <string name="Gnoll_BecomeWitchdoctorDesc">Cadı Doktoru Ol</string>
     <string name="Gnoll_Desc">Gnoller sırtlan benzeri insansılardır.Lağımlar ve zindanlar yaşam alanlarıdır.Zaman zaman yüzeye saldırılar yapmayada cüret ederler. Gnoll izciler sürüleri içinde normal güçteki üyeleridir, vahşi gnoller kadar güçlü , şamanlar kadar zeki değillerdir.</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">izci gnoll</string>
     <string name="Gnoll_Name_Objective">gnoll izci</string>
     <string name="Gold_Collect">Daha sonra dükkanda harcamak için altınları topla.</string>
@@ -2859,5 +2860,6 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 </resources>
