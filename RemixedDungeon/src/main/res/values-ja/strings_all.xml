@@ -850,6 +850,7 @@
     <string name="Heal_Info">ダンジョンではかなり役に立つ呪文だろう？</string>
     <string name="Heal_Name">ヒール</string>
     <string name="HealerNPC_Desc">杖を作っていそうな老人だ。</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">冒険者なら誰でも無料で治療を受けられる！</string>
     <string name="HealerNPC_Message2">具合が悪くなったり、お腹が空いたりしたら、いつでも戻ってきてください！</string>
     <string name="HealerNPC_Message3">どうして教会では帽子の着用を禁止しているんだろう...ここは本当に寒いのに。</string>
@@ -2903,6 +2904,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

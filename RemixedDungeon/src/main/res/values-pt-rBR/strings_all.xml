@@ -1386,6 +1386,7 @@ Parede
     <string name="PlagueDoctorNPC_Quest_Reminder">Traga-me %d peles de rato.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Você acredita nisso?! Esses idiotas ainda não perceberam o quão perigoso esse maldito esgoto é! Guardas e aventureiros não podem proteger a cidade contra nada. Hah! Nenhuma arma pode parar a propagação da doença. Mas eu preciso de provas, você pode me ajudar? Traga-me %d peles de rato, para que eu possa fazer alguns testes adicionais.\n</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Você acredita nisso?! Esses idiotas ainda não perceberam o quão perigoso esse maldito esgoto é! Guardas e aventureiros não podem proteger a cidade contra nada. Hah! Nenhuma arma pode parar a propagação da doença. Mas eu preciso de provas, você pode me ajudar? Traga-me %d peles de rato, para que eu possa fazer alguns testes adicionais.\n</string>
+    <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, você voltou! _Cinco ratos mortos_, perfeito! Seus couros serão cruciais para minha pesquisa. E como prometido, pelo seu esforço valente, eu fiz esta armadura para você a partir de suas próprias peles. Está imbuída com um toque da praga, mas não se preocupe! É controlada, ela protege! Agora vá! Proteja a cidade!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Traga-me _cinco ratos mortos_! Cada rato que você me trouxer nos aproxima mais do entendimento dessa praga horrível.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">_Dez caracóis_, dez sussurros do abismo! Seu muco será analisado, sua essência será minuciosamente examinada. Os segredos que eles guardam estão ao alcance.</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">Ah, _grama-solar_! Uma flor delicada, cujas pétalas irradiam o calor do sol. Acredito que sua essência contém a chave para... ah, esqueça os detalhes por enquanto. Basta dizer que é crucial para minha pesquisa. _Duas sementes de grama-solar_. Traga-as para mim, e eu recompensarei você com algo que certamente será útil em suas aventuras - uma _Poção de Saúde_, transbordando com a própria vitalidade do sol.</string>
@@ -1927,6 +1928,7 @@ outro local do nível.</string>
     <string name="SpiritOfPain_Name_Objective">espírito da dor</string>
     <string name="Sprout_Info">Desperte as sementes adormecidas.\nNo entanto, deve haver alguma vegetação no chão para que este feitiço tenha sucesso.</string>
     <string name="Sprout_Name">Brotar</string>
+    <string name="StartScene_ChooseFromSlot">Escolha de um slot de salvamento</string>
     <string name="StartScene_ComingSoon">Em breve</string>
     <string name="StartScene_ContinueLatest">Continue seu último jogo ou escolha um slot de salvamento</string>
     <string name="StartScene_Depth">Profundidade: %1$d, level: %2$d</string>
@@ -2799,6 +2801,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
