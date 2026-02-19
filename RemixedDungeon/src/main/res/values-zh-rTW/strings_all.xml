@@ -104,6 +104,7 @@
     <string name="Badges_AllScrolls">大學者:鑒定所有卷軸</string>
     <string name="Badges_AllWands">鑒定所有法杖</string>
     <string name="Badges_BossSlain1">史萊姆已被殺死</string>
+    <string name="Badges_BossSlain2">天狗已被殺死</string>
     <string name="Badges_BossSlain4">國王已被殺死</string>
     <string name="Badges_Champion">挑戰成功</string>
     <string name="Badges_DeathFalling">刺客教條玩上腦</string>
@@ -2653,6 +2654,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

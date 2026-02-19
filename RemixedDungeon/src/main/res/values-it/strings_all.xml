@@ -575,6 +575,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Facilitations_Descriptions_0">I mutanti sono sempre stati trattati con disprezzo e paura, ma l\'assenza della fame ti darà di nuovo superiorità, questa volta nel conquistare le profondità del sotterraneo.</string>
     <string name="Facilitations_Descriptions_1">Non è ancora noto chi fossero i tuoi genitori, ma la rigenerazione naturale simile a quella del troll ti aiuterà a rimarginare tutte le ferite di battaglia.</string>
     <string name="Facilitations_Descriptions_3">Stringendo la cintura di pelle di orco, tramandata ad ogni nuova generazione, fai un passo verso l\'ignoto che ti attende.</string>
+    <string name="Facilitations_Names_0">Nessuna fame</string>
     <string name="Fadeleaf_Desc">Toccare una Svanifoglia farà teletrasportare qualsiasi creatura in un posto a caso sul livello attuale.</string>
     <string name="Fadeleaf_Name">Svanifoglia</string>
     <string name="FetidRat_Desc">Questo topo marsupiale è molto più grande rispetto ad uno normale. Ed è circondato da una nuvola di gas puzzolente.</string>
@@ -2419,5 +2420,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 </resources>

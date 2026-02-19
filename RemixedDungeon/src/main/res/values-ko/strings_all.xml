@@ -1733,6 +1733,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Spells_NotEnoughSP">\&quot;%1$s\&quot; 주문을 사용할 마나가 없습니다.</string>
     <string name="Spells_NotInOwnBody">영혼이 몸에서 빠져나온 상태에서는 %s를 할 수 없습니다.</string>
     <string name="Spells_SummonLimitReached">%1$s: 소환 최대량에 다다랐습니다(현재 최대량: %2$d)!</string>
+    <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">이 갑옷은 거미의 껍질과 이상한 옷감으로 만들어졌습니다. 놀랍게도 잘 작동하는 방적돌기가 있습니다. 갑옷에 충분한 압력을 주면 거미줄을 발사할 것이고, 신발에 난 돌기는 당신이 거미줄에서 자유롭게 이동할 수 있게 해 줄 것입니다.</string>
     <string name="SpiderArmor_Name">거미 갑옷</string>
     <string name="SpiderCharm_Info">이 이국적인 장신구는 신비로운 기운에 감싸여 있습니다. 이것을 착용하면 무슨일이 일어날지 아는 사람이 있을까요?</string>
@@ -2524,6 +2525,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
