@@ -691,6 +691,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="FireArrow_Info">Anak panah ini terlihat biasa, kecuali cahaya merah hangat di ujungnya.</string>
     <string name="FireArrow_Name">anak panah api</string>
     <string name="FireElemental_Desc">Elemental api pengembara adalah produk sampingan dari pemanggilan entitas yang lebih besar. Sifat mereka terlalu kacau untuk dikendalikan bahkan oleh ahli demonologi yang paling kuat sekalipun.</string>
+    <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">elemental api</string>
     <string name="FireElemental_Name_Objective">elemental api</string>
     <string name="Fire_Info">Api berkobar di sini.</string>
@@ -2780,4 +2781,5 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 </resources>
