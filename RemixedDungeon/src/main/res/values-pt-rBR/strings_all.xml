@@ -1020,6 +1020,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="IronKey_Info">Os entalhes nesta chave de ferro antiga estão bem gastos; seu cordão de couro está danificada pelo tempo. Pode abrir portas!?</string>
     <string name="IronKey_Name">chave de ferro</string>
     <string name="ItemSprite_Info1">caiu: %1$.1f %2$.1f</string>
+    <string name="Item_ACAlchemy">ALQUIMIA</string>
     <string name="Item_ACDrop">LARGAR</string>
     <string name="Item_ACThrow">JOGAR</string>
     <string name="Item_DirThrow">Escoha a direção para jogar</string>
@@ -2801,6 +2802,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

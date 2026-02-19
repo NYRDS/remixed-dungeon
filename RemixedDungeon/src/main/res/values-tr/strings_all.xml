@@ -525,6 +525,7 @@ Hayır, ışığın içinde ona yer yoktu, artık yoktu. Yetersiz ışıktan dö
     <string name="CorpseDust_Info">Ceset tozu , diğer toz topaklarından farklı görünmüyor. Belkide bir şekilde bundan kurtulman en iyisi</string>
     <string name="CorpseDust_Info2">Sadece tutmak bile seni endişeli ve sinirli yapıyor</string>
     <string name="CorpseDust_Name">ceset tozu</string>
+    <string name="CorpseExplosion_Info">Bir cesedi zehirli gaz bulutuna dönüştürerek yakındaki tüm düşmanlara hastalık ve zehir yayar.</string>
     <string name="Crab_Defense">savuşturdu</string>
     <string name="Crab_Desc">Bu devasa yengeçler lağımlarda besin zincirinin başındadır.
 Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabilir.</string>
@@ -2861,6 +2862,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

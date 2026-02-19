@@ -55,6 +55,7 @@
     <string name="Amulet_Info">El Amuleto de Yendor es el artefacto de origen desconocido más poderoso que existe. Se dice que el amuleto es capaz de cumplir cualquier deseo si la fuerza de voluntad del dueño es suficiente para \&quot;persuadirlo\&quot; de que lo haga.</string>
     <string name="Amulet_Name">Amuleto de Yendor </string>
     <string name="AnesthesiaBuff_Info">No siente dolor y no se despierta con los ataques, pero aún recibe daño.</string>
+    <string name="AnesthesiaBuff_Name">Anestesia</string>
     <string name="Ankh_Info">El antiguo símbolo de inmortalidad concede la habilidad de volver después de la muerte. Cuando resucitas pierdes todos los artículos que no tenías equipados.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">%s de anti-entropía</string>
@@ -1966,6 +1967,7 @@ otro lugar del nivel.</string>
     <string name="SpiderQueenCarapace_Name">Caparazón de la Reina Araña</string>
     <string name="SpiderQueen_Desc">El cuerpo de una hermosa mujer mezclado con el de una horrible araña. Todo ser viviente de esta guarida es su siervo. Conocer a esta extraordinaria dama puede ser una experiencia mortífera... ¡Porque eres un intruso!</string>
     <string name="SpiderQueen_DieInfo">¡La Reina Araña ha sido asesinada! Ahora debería volver al nivel 5 y continuar mi viaje a las Profundidades.</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">reina araña</string>
     <string name="SpiderQueen_Name_Objective">reina araña</string>
     <string name="SpiderServant_Desc">Los soldados son las unidades más numerosas de la guarida de la araña. Nacieron para proteger su territorio. Estos soldados desarrollaron unas glándulas venenosas para envenenar a sus enemigos.</string>
@@ -2840,5 +2842,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 </resources>
