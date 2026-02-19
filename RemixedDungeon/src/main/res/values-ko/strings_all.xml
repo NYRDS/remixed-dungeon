@@ -473,6 +473,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Crab_Name_Objective">하수구 게</string>
     <string name="CrippleBuff_Name">불구</string>
     <string name="Crystal_Desc">크고 빛나는 크리스탈이 공중에 떠있습니다. 아마도 이것은 강력한 마법으로 가득 차 있을 것입니다.</string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">공중에 떠있는 크리스탈</string>
     <string name="Crystal_Name_Objective">공중에 떠있는 크리스탈</string>
     <string name="CurareDart_Gender">masculine</string>
@@ -2525,6 +2526,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

@@ -1920,6 +1920,7 @@
     <string name="Swing_Name_2">野蠻%s</string>
     <string name="Sword_Info">此等鋒利的刀刃定不會讓您失望。</string>
     <string name="Sword_Name">單手劍</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">看上去這飛斧並不重，但它依然需要足夠的力量來能有效發揮作用。</string>
     <string name="Tamahawk_Name">飛斧</string>
     <string name="TenguLiver_Name">天狗肝臟</string>
@@ -1992,6 +1993,7 @@
     <string name="ToxicGas_Info">綠色毒氣在該處飄浮著。</string>
     <string name="ToxicGas_Info1">您被吸入的毒氣殺死了……</string>
     <string name="ToxicGland_Info">從被擊敗的敵人身上獲得的劇毒腺體。這些腺體充滿了強效毒素，可用於煉金術工藝。</string>
+    <string name="ToxicGland_Name">劇毒腺體</string>
     <string name="TrapWnd_Step">您當真要踏上此陷阱？您可能會因此失命。</string>
     <string name="TrapWnd_Title">陷阱</string>
     <string name="TreacherousSpirit_Desc">這個巨大的怪物看起來像是一片有生命的黑暗之雲。它無眼瞼的眼睛凝視這你，隨著你的每個動作而顫動。</string>
@@ -2656,6 +2658,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
