@@ -2108,6 +2108,7 @@
     <string name="WarriorArmor_NotWarrior">只有戰士能使用這件護甲！</string>
     <string name="WarriorArmor_Prompt">選擇您要躍到的位置</string>
     <string name="WaterElemental_Desc">水元素會在有大量水體存在的環境中出現。通常這些由魔法結合而成的水浪只會在水流附近徘徊。</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name">水元素</string>
     <string name="WaterElemental_Name_Objective">水元素</string>
     <string name="WaterOfAwareness_Info">智慧的力量正從這口井的水裏湧出。喝下井水能揭示所有已裝備物品的秘密。</string>
@@ -2655,6 +2656,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -298,6 +298,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Brute_Name">gnoll kabadayı</string>
     <string name="Brute_Name_Objective">gnoll kabadayı</string>
     <string name="Brute_StaEnraged">öfkeli</string>
+    <string name="BuffParam_Cooldown">Süre: %.2f</string>
     <string name="BurningBuff_Info">Ceset alevler içinde kaldı!</string>
     <string name="BurningBuff_Name">Yakıcı</string>
     <string name="BurningFist_Desc">Eski tanrının yanan yumruğu</string>
@@ -2862,6 +2863,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

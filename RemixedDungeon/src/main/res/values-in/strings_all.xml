@@ -55,6 +55,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Amulet_ACEnd">AKHIRI PERMAINAN</string>
     <string name="Amulet_Info">Jimat Yendor adalah harta terkenal terkuat dengan asal muasal yang tidak diketahui. Dikatakan bahwa jimat ini dapat memenuhi semua permintaan jika kekuatan keinginan pemiliknya cukup kuat untuk \&quot;menarik\&quot;nya melakukan hal itu.</string>
     <string name="Amulet_Name">Jimat Yendor</string>
+    <string name="AnesthesiaBuff_Name">Anestesi</string>
     <string name="Ankh_Info">Simbol kuno tentang hidup abadi memberikan kehebatan untuk hidup kembali setelah mati. Saat pembangkitan semua item yang tidak dipakai hilang.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">%santi-entropi</string>
@@ -1859,6 +1860,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SociologistNPC_AlreadyTaken">Anda sudah mengikuti survei ini, silakan kembali lagi nanti</string>
     <string name="SociologistNPC_Desc">Sosiolog ini sedang dalam pencarian suci untuk mengumpulkan opini publik</string>
     <string name="SociologistNPC_DownloadError">Maaf, ada yang salah, coba lagi nanti</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Hi">Hai!\nApakah Anda ingin mengambil bagian dalam survei kami?(Akses internet akan diperlukan)\ndalam Pendapat Anda penting!</string>
     <string name="SociologistNPC_InternetRequired">Maaf, tetapi tanpa akses ke Internet, Anda tidak dapat lulus survei kami</string>
     <string name="SociologistNPC_Name">Sosiolog</string>
@@ -2781,5 +2783,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 </resources>

@@ -2189,6 +2189,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndModInstall_PleaseUpdate">Kérlek frissítsd a Remixed Pixel Dungeon-t mielőtt telepítenéd a modot.</string>
     <string name="WndModInstall_Version">verzió</string>
     <string name="WndModSelect_ReallyDelete">Biztosan törölni szeretnéd?</string>
+    <string name="WndModsDisclaimer_install">Helyi mod telepítése</string>
     <string name="WndModsDisclaimer_title">Modok</string>
     <string name="WndMovieTheatre_Bye">Gyere máskor is! Szívesen látunk!</string>
     <string name="WndMovieTheatre_Instruction_2">Megnéztél ennyit: %1$d az ennyiből: %2$d . Lesz még lehetőséged videót nézni minden egyes szint után, amit a hősöd meglépett.</string>
@@ -2577,6 +2578,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 </resources>
