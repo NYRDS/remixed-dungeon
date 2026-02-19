@@ -480,6 +480,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Death_Name_1">Lugubre %s</string>
     <string name="Death_Name_2">Lugubre %s</string>
     <string name="Deathling_Desc">Il Gregario della Morte è l\'anima di un eroe caduto, abbastanza sfortunata da venir evocata tramite poteri Negromantici degli avventurieri.</string>
+    <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">Gregario della Morte</string>
     <string name="Deathling_Name_Objective">Gregario della Morte</string>
     <string name="DeferedDamage_Killed_Txt">%s ti ha ucciso...</string>
@@ -2418,4 +2419,5 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 </resources>

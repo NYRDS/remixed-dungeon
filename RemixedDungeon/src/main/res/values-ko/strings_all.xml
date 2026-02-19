@@ -1636,6 +1636,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Senior_Desc">외부 침략자로부터 자신의 도시에 있는 비밀을 지키는데 헌신하는 이 수도승은 광기에 빠져 있다. 녀석은 아무런 갑옷도 무기도 사용하지 않고, 오직 맨 주먹에 의지하여 싸운다. 이 특별한 수도승는 상대를 불구로 만들어 버리는 기술의 달인이다.</string>
     <string name="Senior_Name">고위 드워프 수도승</string>
     <string name="Senior_Name_Objective">고위 드워프 수도승</string>
+    <string name="ServantNPC_Name_Objective">하녀</string>
     <string name="ServiceManNPC_Desc">지역 설립의 정규 일꾼</string>
     <string name="ServiceManNPC_Limit">죄송합니다만 새 모험가들은 영상을 %d번 까지만 볼 수 있습니다.</string>
     <string name="ServiceManNPC_Limit_Reached">미안해요. 하지만 당신은 당신의 현재 한계에 다다랐어요. 하지만 당신은 우리의 서비스를 당신의 매 영웅 레벨마다 다시 받을 수 있을 거예요!</string>
@@ -2523,6 +2524,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

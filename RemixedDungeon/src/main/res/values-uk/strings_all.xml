@@ -341,6 +341,7 @@
     <string name="Challenges_Names_5">У темряві</string>
     <string name="Challenges_Names_6">Заборонені руни</string>
     <string name="Challenges_Names_7">Пацифізм</string>
+    <string name="Challenges_Names_8">Без міста</string>
     <string name="ChampionOfAirBuff_Name">Чемпіон Повітря</string>
     <string name="ChampionOfWaterBuff_Name">Чемпіон Води</string>
     <string name="ChaosArmor_Info">Криваво червоні пластини цієї броні з\'єднані темно-червоними ланцюгами. Вини випромінюють енергію Хаосу, щоразу, як тільки ти її торкаєшся.</string>
@@ -2693,6 +2694,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

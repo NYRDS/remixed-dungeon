@@ -1832,6 +1832,7 @@ seviyenin başka bir yeri.</string>
     <string name="ShadowsBuff_Info">Gölgeler arasında bir şeyler tespit etmek daha zordur.</string>
     <string name="ShadowsBuff_Name">Gölge Erimesi</string>
     <string name="ShamanElder_Desc">Bu özel Sırtlanadam, diğer şamanlardan çok daha yaşlı görünüyor ve kesinlikle kabilede daha yüksek bir statüye sahip. Etrafında yavaşça tuhaf bir aura oluşur ve bu, kendisine dokunan her şeyi yansıtır gibi görünür.</string>
+    <string name="ShamanElder_Gender">masculine</string>
     <string name="ShamanElder_Name">Yaşlı şaman</string>
     <string name="ShamanElder_Name_Objective">Yaşlı şaman</string>
     <string name="Shaman_Desc">En zeki gnoller şaman büyülerinde uzmanlaşabilir. Gnoll şamanlar kabilelerinde onları sorgulayanlar üzerinde bu büyülerini kullanmaktan çekinmezler.</string>
@@ -2860,6 +2861,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 </resources>
