@@ -2453,6 +2453,7 @@ remix.32.1\n
     <string name="WndChooseWay_Message">Którą ścieżkę obierzesz?</string>
     <string name="WndClass_Mastery">Mistrzostwo</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+    <string name="WndCryptoDonate_copyAddress">Kopiuj adres</string>
     <string name="WndCryptoDonate_warningText">OSTRZEŻENIE: Zawsze weryfikuj adres przed wysłaniem środków. Transakcje kryptowalutowe są nieodwracalne!</string>
     <string name="WndCustomizations_Title">Modyfikacje</string>
     <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - darmowa dla wszystkich teraz i na zawsze.\n\nJednakże, możesz pomóc nam usprawnić grę nawet bardziej.\n\nW wyniku naszej wdzięczności otrzymacie trochę kosmetycznych ulepszeń.</string>
@@ -3001,6 +3002,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
