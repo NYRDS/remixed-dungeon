@@ -278,6 +278,7 @@
     <string name="BodyArmorBuff_Name">重甲</string>
     <string name="BodyArmorSpell_Info">激活身体的肌肉力量，使你暂时变强，从而增加你的护甲，但会减少移动速度。</string>
     <string name="BodyArmorSpell_Name">格挡</string>
+    <string name="BoneSaw_Name">骨锯</string>
     <string name="BoneShard_Name">骨片</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">扔出，命中，回手，就是这么简单。</string>
@@ -2819,5 +2820,6 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 </resources>

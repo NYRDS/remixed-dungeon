@@ -1433,6 +1433,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PlagueDoctorNPC_Quest_Reminder">Tráeme %d pieles de ratas.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">¡Bah! ¡¿Puedes creerlo?! ¡Esos tontos no se han dado cuenta del peligro de las alcantarillas! Guardias y aventureros pueden proteger la ciudad de cualquier cosa. Pero ningún arma puede detener que las enfermedades se contagien. Pero necesito pruebas, ¿puedes ayudarme? Tráeme %d pieles de rata, así podre hacer algunas pruebas adicionales.\n</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">¡Bah! ¡¿Puedes creerlo?! ¡Esos tontos no se han dado cuenta del peligro de las alcantarillas! Guardias y aventureros pueden proteger la ciudad de cualquier cosa. Pero ningún arma puede detener que las enfermedades se contagien. Pero necesito pruebas, ¿puedes ayudarme? Tráeme %d pieles de rata, así podre hacer algunas pruebas adicionales.\n</string>
+    <string name="PlagueDoctorQuest_1_1_Epilogue">¡Ah, has vuelto! _Cinco ratas muertas_, ¡perfecto! Sus pieles serán cruciales para mi investigación. Y como prometí, por tu valiente esfuerzo, he fabricado esta armadura con sus propias pieles. ¡Está imbuida con un toque de la plaga, pero no te preocupes! ¡Está controlado, protege! ¡Ahora ve! ¡Protege la ciudad!</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">¡Achú!\n ¡Maldita sea esta plaga infernal! ¡Se está extendiendo por la ciudad como un reguero de pólvora, pudriéndose en los huesos de la población desprevenida! ¡BAH! ¿Crees que esos patéticos guardias tienen alguna oportunidad contra esta plaga insidiosa? ¡Tú, ahí! Ejemplar fuerte y saludable. Quizás puedas ayudarme. Esas sucias _ratas_ de las alcantarillas… ¡las llevan, te lo digo, las semillas de la pestilencia dentro de sus cuerpos putrefactos! ¡Tráeme _cinco_ de esas miserables criaturas, _muertas_, por supuesto! Sus pieles serán invalorables para mi investigación. ¡Te forjaré una armadura maravillosa, una barrera protectora contra la misma plaga que la origina!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh\u2026 \u00a1magn\u00edfico! Las _caracolas_, sus secretos se desvelan lentamente como p\u00e9talos bajo la luz de la luna. \u00a1Realmente una abundancia de informaci\u00f3n! Pero tienes raz\u00f3n, _cincuenta piezas de oro_ apenas es una recompensa adecuada. *Se r\u00ede man\u00edacamente*.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Tose violentamente* ¡Achú!\n _Las babosas_… se deslizan. Se filtran. Y susurran secretos de una era olvidada. Las necesito, _diez_ de ellas, con sus conchas aún intactas. ¿Crees que _cincuenta monedas de oro_ son suficientes para un conocimiento tan preciado?\n ¡Bah! No importa. La información que contienen podría ser la clave para detener esta plaga. O… podría conducirnos a algo aún más terrible. Tú decides.</string>
@@ -1553,6 +1554,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PseudoPasty_Info">Esto es una auténtica empanada con el tradicional relleno de carne y patata.</string>
     <string name="PseudoPasty_Name">empanada</string>
     <string name="PseudoRat_Desc">Una bestia horrible que salió del cadáver de la rata, no se parece a un roedor u otro animal que hayas visto. Boca enorme, llena de dientes afilados, que ocupan la mayor parte del cuerpo.</string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">Pseudo-rata</string>
     <string name="PseudoRat_Name_Objective">Pseudo-rata</string>
     <string name="PumpkinPie_Info">Una deliciosa tarta de calabaza, como las que tu mamá solía hornear.</string>
@@ -2843,6 +2845,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
