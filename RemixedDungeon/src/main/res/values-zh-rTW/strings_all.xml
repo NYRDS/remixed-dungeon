@@ -55,6 +55,7 @@
     <string name="Amulet_ACEnd">結束遊戲</string>
     <string name="Amulet_Info">尼德羅護身符是來自未知領域中最強大的且最著名的神器。據說它能夠實現持有者的一切願望，只要持有者具備足夠的力量來“說服”它去做。</string>
     <string name="Amulet_Name">尼德羅護符</string>
+    <string name="Anesthesia_Name">麻醉</string>
     <string name="Ankh_Info">此古老的不朽的象徵可以使您從死亡中復活。但會使您丟失所有未裝備的道具。</string>
     <string name="Ankh_Name">十字架</string>
     <string name="AntiEntropy_Txt">反熵 %s</string>
@@ -2662,6 +2663,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

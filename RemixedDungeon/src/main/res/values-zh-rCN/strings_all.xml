@@ -703,6 +703,7 @@
     <string name="Fadeleaf_Desc">触碰到消逝草的任何生物都会被传送至当前层的一个随机地点。</string>
     <string name="Fadeleaf_Name">消逝草</string>
     <string name="FetidRat_Desc">这只啮齿小鼠比通常的更大。它身边围绕着一圈恶臭云雾。</string>
+    <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">腐臭老鼠</string>
     <string name="FetidRat_Name_Objective">腐臭老鼠</string>
     <string name="Fez_Info">这是一种红色圆台状的毛毡头饰，上边点缀着流苏。当然，它不会让这个世界变成3维的。</string>
@@ -2820,6 +2821,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 </resources>

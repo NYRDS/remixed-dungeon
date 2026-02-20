@@ -207,6 +207,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Bat_Name_Objective">Vampirfledermaus</string>
     <string name="BattleAxe_Info">Der enorme stählerne Kopf dieser Axt bringt eine beachtliche Kraft in jeden deiner Schläge.</string>
     <string name="BattleAxe_Name">Streitaxt</string>
+    <string name="Bee_Desc">Trotz ihrer geringen Größe verteidigen Bienen ihren Stock erbittert. Sie leben jedoch nicht lange.</string>
     <string name="Bee_Gender">feminine</string>
     <string name="BellaNPC_Amulet_F">Was hast du Schöne dort drüben? Ah, solch ein schönes Amulett! Und du ... du strahlst so viel heller als jeder andere. Was wenn wir einen Spaziergang machen und unsere gemeinsame Zukunft besprechen?</string>
     <string name="BellaNPC_Amulet_M">Was hast du Gutaussehender dort drüben? Ah, solch ein schönes Amulett! Und du ... du stehst über diesen Pöbeln. Was wenn wir einen Spaziergang machen und unsere gemeinsame Zukunft besprechen?</string>
@@ -2780,6 +2781,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 </resources>
