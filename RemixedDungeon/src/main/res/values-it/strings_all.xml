@@ -2207,6 +2207,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndStory_Sewers">Il Dungeon giace proprio sotto la Città, i suoi livelli più superficiali di fatto sono il sistema fognario della Città. Essendo nominalmente una parte della Città, questi livelli non sono  tanto pericolosi. Nessuno li chiamerebbe un posto sicuro, ma almeno non devi preoccuparti di affrontare molta magia maligna qui.</string>
     <string name="WndStory_Spiders">Tanto, tanto tempo fa c\'era una ricca miniera, piena di pietra magica. Ma dopo che le vene minerarie si esaurirono i minatori si spostarono, lasciando indietro una vasta rete di gallerie. Alla fine questo posto venne popolato da ragni. Ma anche queste pericolose creature, che si annidano nell\'oscurità, non furono sufficienti a scoraggiare coloro abbastanza coraggiosi o pazzi da desiderare i tesori che si potevano trovare nelle miniere. Poiché la scala di pericolo è sempre proporzionale al numero di chiacchiere su artefatti magici presenti. Tanto tempo fa una strega malvagia vagò nelle gallerie cercando di sfuggire ai suoi persecutori. Ma le persone superstiziose non osarono mettere piede nell\'oscurità. Quindi decisero di aspettare. Ma lei non uscì mai più.  Forse la strega ha trovato un\'altra uscita, o forse è riuscita a scappare infilandosi tra le guardie...oppure è morta, circondata dal fruscio delle creature dell\'oscurità.</string>
     <string name="WndTilesKind_ClassicLook">Aspetto classico</string>
+    <string name="WndTilesKind_Title">Ancora una cosa:</string>
     <string name="WndTilesKind_text">Stai per entrare in un dungeon posseduto da una magia distorta, ora puoi scegliere come vederlo:\nPreferisci una vista pseudo 3D moderna o una vista classica piatta?\nPotrai cambiarla successivamente nel menu opzioni del gioco.</string>
     <string name="WndTradeItem_Bought">Hai comprato %1$s per %2$dg</string>
     <string name="WndTradeItem_Buy">Compra per %dg</string>
@@ -2425,5 +2426,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 </resources>
