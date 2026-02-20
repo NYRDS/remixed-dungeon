@@ -652,6 +652,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ElvenDagger_Name">pisau elf</string>
     <string name="EncumbranceBuff_CharAct_1">Saya tidak cukup kuat untuk menggunakkan %s dengan benar.</string>
     <string name="EncumbranceBuff_CharAct_2">Benda %s ini terlalu berat bagi saya untuk digunakan secara efektif.</string>
+    <string name="EncumbranceBuff_CharAct_4">Aku tidak punya kekuatan untuk menggunakan %s secara maksimal.</string>
     <string name="EncumbranceBuff_Info">Tidak cukup kekuatan untuk menggunakan %s secara efektif.</string>
     <string name="EncumbranceBuff_Name">Beban</string>
     <string name="EnslavedSoul_Desc">Anda hampir dapat melihat melalui penampakan hantu ini. Dan meskipun terlihat seperti tengkorak, terkadang untuk sepersekian detik sebuah wajah muncul, penuh dengan rasa sakit dan penderitaan.</string>
@@ -2784,8 +2785,5 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
-
-
-
 
 </resources>

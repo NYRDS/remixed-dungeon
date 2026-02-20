@@ -202,6 +202,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Barrel_Pumpkin_Name">Kürbis</string>
     <string name="Bat_Defense">ausgewichen</string>
     <string name="Bat_Desc">Diese flinken und zähen Fledermäuse können sogar deutlich größere Gegner besiegen, in dem sie mit jedem erfolgreichen Angriff ihre eigene Gesundheit wieder herstellen.</string>
+    <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">Vampirfledermaus</string>
     <string name="Bat_Name_Objective">Vampirfledermaus</string>
     <string name="BattleAxe_Info">Der enorme stählerne Kopf dieser Axt bringt eine beachtliche Kraft in jeden deiner Schläge.</string>

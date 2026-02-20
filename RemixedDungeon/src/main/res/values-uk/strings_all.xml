@@ -1725,6 +1725,7 @@
     <string name="ScrollOfTeleportation_Name">Сувій перенесення</string>
     <string name="ScrollOfTeleportation_NoTeleport">Могутня магічна аура даного місце не дозволяє тобі перенестися.</string>
     <string name="ScrollOfTeleportation_Teleport">Не моргнувши й оком, тебе перенесло в іншу точку рівня.</string>
+    <string name="ScrollOfTeleportation_Teleport2">Не моргнувши й оком, %s було перенесено в іншу точку рівня.</string>
     <string name="ScrollOfTerror_Info">Червоний спалах закляття викликає жах у ворогів, які починають тікати. Атакуючи ворога, що утікає, ти знімаєш закляття.</string>
     <string name="ScrollOfTerror_Info1">Сувій випускає спалах червоного світла.</string>
     <string name="ScrollOfTerror_Info2">Сувій випускає спалах червоного світла і %s тікає!</string>
@@ -2696,16 +2697,6 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
-
-
-
-
-
-
-
-
-
-
 
 
 </resources>
