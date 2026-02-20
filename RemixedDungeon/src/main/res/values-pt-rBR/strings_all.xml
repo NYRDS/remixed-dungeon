@@ -654,6 +654,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="EncumbranceBuff_Info">Não há força suficiente para usar %s de forma eficaz.</string>
     <string name="EncumbranceBuff_Name">Fardo</string>
     <string name="EnslavedSoul_Desc">Você quase pode ver através desta aparição fantasmagórica. Mesmo que pareça um crânio, às vezes, por uma fração de segundo, pode-se ver que um rosto aparece, um rosto cheio de sofrimento e dor.</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name">Alma escravizada</string>
     <string name="EnslavedSoul_Name_Objective">Alma escravizada</string>
     <string name="Entanglement_Txt">%s de emaranhamento</string>
@@ -2806,6 +2807,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

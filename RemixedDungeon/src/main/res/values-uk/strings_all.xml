@@ -1797,6 +1797,7 @@
     <string name="Shaman_Killed">%s вбиває тебе розрядом блискавки...</string>
     <string name="Shaman_Name">гнолл шаман</string>
     <string name="Shaman_Name_Objective">гнолла шамана</string>
+    <string name="Shaman_ZapMiss">*Лається гнолльською*</string>
     <string name="Sheep_Desc">Це магічна вівця. Що такого магічного? Ти не можеш її вбити. Вона стоятиме на місці та сумлінно щось жувати, аж доки магічним образом не зникне.</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">вівця</string>
@@ -2697,6 +2698,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 </resources>
