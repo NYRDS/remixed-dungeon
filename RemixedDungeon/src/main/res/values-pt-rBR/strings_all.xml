@@ -181,6 +181,7 @@
     <string name="Bandit_Name">bandido maluco</string>
     <string name="Bandit_Name_Objective">bandido louco</string>
     <string name="BardNPC_Desc">O bardo da cidade está tocando seu alaúde.</string>
+    <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">bardo</string>
     <string name="BardNPC_Name_Objective">bardo</string>
     <string name="BardSong_1">Minha esposa e eu moramos sozinhos,\nEm uma pequena cabana de madeira, nós chamávamos de nossa\nEla adorava gin, e eu adorava rum\nConto o que nos divertimos muito.</string>
@@ -2803,5 +2804,6 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 </resources>

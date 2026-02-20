@@ -565,6 +565,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="CorpseDust_Info">Горстка трупной пыли неотличима от пыли обыкновенной. Хотя тебя не покидает чувство, что лучше от неё избавится как можно скорее.</string>
     <string name="CorpseDust_Info2">Достаточно взять её в руку чтобы почувствовать беспокойство и гнев. </string>
     <string name="CorpseDust_Name">трупная пыль</string>
+    <string name="CorpseExplosion_Info">Превращает труп в облако ядовитого газа, распространяя болезнь и отравление на всех ближайших врагов.</string>
     <string name="Crab_Defense">отбился</string>
     <string name="Crab_Desc">Эти огромные крабы находятся на вершине пищевой цепочки канализации. Они поразительно быстры, а их прочный хитин способен выдерживать множество ударов.</string>
     <string name="Crab_Gender">masculine</string>
@@ -3048,6 +3049,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 
