@@ -1959,6 +1959,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="SpiderMind_Name">Ruhani Örümcek</string>
     <string name="SpiderMind_Name_Objective">Psi-örümcek</string>
     <string name="SpiderNest_Desc">Bu koza ince örümcek ağından yapılmış ve içinde canlı birşeyler var.</string>
+    <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderNest_Name">örümcek kozası</string>
     <string name="SpiderNest_Name_Objective">örümcek kozası</string>
     <string name="SpiderQueenCarapace_Info">Örümcek Kraliçe\'nin kabuğundan bir parça. Eğer dikkatli bakacak olursan içinde bir miktar örümcek bezesi görürsün, neredeyse canlı gibi duruyor.</string>
@@ -2863,6 +2864,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

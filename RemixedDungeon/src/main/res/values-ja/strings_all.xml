@@ -1960,6 +1960,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Spells_NotInOwnBody">魂が肉体から切り離された状態では、%sを実行することはできない。</string>
     <string name="Spells_NotTooFast">%s はまだ使うことが出来ない</string>
     <string name="Spells_SummonLimitReached">%1$s：召喚制限に達した（現在の最大値は %2$d）！</string>
+    <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">この鎧は古いクモのキチン質と衣服のようなものでできている。最も驚くべきことに、クモの腺がまだ機能しているようだ。プレートを強く押すと、蜘蛛の巣が飛び出すのだ。そして、ギザギザの靴底は、そのような網の上を自由に動くことを可能にする。</string>
     <string name="SpiderArmor_Name">スパイダーアーマー</string>
     <string name="SpiderCharm_Info">このエキゾチックな装身具は、神秘のオーラに包まれている。それを身につけた者に何が起こるか、誰にもわからない。</string>
@@ -2904,6 +2905,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
