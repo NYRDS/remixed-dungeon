@@ -766,6 +766,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Ghost_Defense">esquivado</string>
     <string name="Ghost_Desc">El fantasma apenas es visible. Parece una mancha de luz tenue, sin forma, con cara de pena.</string>
     <string name="Ghost_Name">fantasma triste</string>
+    <string name="Ghost_Name_Objective">fantasma</string>
     <string name="Ghost_Rat1">Hola aventurero... Una vez fui como tu, fuerte y seguro... Y ahora estoy muerto... Pero no puedo dejar este lugar... No hasta que tenga mi venganza... Mata a la _rata fétida_ que acabó conmigo...</string>
     <string name="Ghost_Rat2">Por favor... ayudame... Mata a la abominación...</string>
     <string name="Ghost_Rose1">Hola aventurero...Una vez fui como tu,fuerte y con confianza... Y ahora estoy muerto... Pero no puedo dejar este lugar... no hasta que tenga mi _rosa seca_ ... Es muy importante para mi... Unos monstruos la robaron de mi cuerpo...</string>
@@ -2842,6 +2843,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
