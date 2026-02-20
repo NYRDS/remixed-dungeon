@@ -1721,6 +1721,7 @@ egy másik helyre a szinten. </string>
     <string name="Shopkeeper_text">Üdvözlet a helyi Pixel-Mart üzletágban.\nMiben segíthetek?</string>
     <string name="Shopkeeper_title">Bolt</string>
     <string name="ShortSword_ACReforge">ÚJRAKOVÁCSOL</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Ez valóban egész rövid, csak néhány centivel hosszabb mint egy tőr.</string>
     <string name="ShortSword_Name">rövidkard</string>
     <string name="ShortSword_NotBoomerang">nem tudsz így fejleszteni boomerangot</string>
@@ -2578,6 +2579,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

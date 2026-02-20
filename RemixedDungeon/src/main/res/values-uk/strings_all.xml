@@ -802,6 +802,7 @@
     <string name="Halls_TileHighGrass">Вугле-гриб</string>
     <string name="Halls_TileStatue">Стовп</string>
     <string name="Halls_TileWater">Холодна лава</string>
+    <string name="Haste_Info">Поспіх дозволяє рухатися з надзвичайною швидкістю, через що все навколо здається нерухомим. Такий поспіх споживає багато енергії, тому використовувати його можна лише короткий проміжок часу.\n\nДосвідчені майстри здатні залишатися в стані поспіху довше.</string>
     <string name="Heal_Info">Досить корисне закляття у Підземеллі, правда?</string>
     <string name="Heal_Name">Зцілення</string>
     <string name="HealerNPC_Desc">Цей старий схожий на того, хто міг би займатись виробництвом чарівних паличок.</string>
@@ -2698,6 +2699,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
