@@ -1822,6 +1822,7 @@ outro local do nível.</string>
     <string name="ShieldWeaponInfo">Quando usado como arma, este escudo causará %1$d de dano em média.</string>
     <string name="Shielded_Defense">bloqueou</string>
     <string name="Shielded_Desc">Brutamontes são os maiores, mais fortes e mais resistentes de todos os gnolls. Quando gravemente feridos, eles ficam furiosos, causando ainda mais danos aos seus inimigos. Este Brutamontes está usando um gigantesco escudo!</string>
+    <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">brutamonte blindado</string>
     <string name="Shielded_Name_Objective">brutamonte blindado</string>
     <string name="ShootInEye_Info">Use suas habilidades de arquearia excepcionais para atirar bem no olho do inimigo, se ele tiver um, é claro</string>
@@ -2807,6 +2808,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

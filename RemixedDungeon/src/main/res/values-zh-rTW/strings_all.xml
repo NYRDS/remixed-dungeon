@@ -1857,6 +1857,7 @@
     <string name="SpiderServant_Name">蜘蛛士兵</string>
     <string name="SpiderServant_Name_Objective">蜘蛛士兵</string>
     <string name="Spinner_Desc">這些有著許多綠色絨毛的洞穴蜘蛛會試著去躲避直接的戰鬥，它們更喜歡在遠處等待其獵物卷入蜘網，在毒素中慢慢死去。</string>
+    <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name">洞穴紡織者</string>
     <string name="Spinner_Name_Objective">洞穴紡織者</string>
     <string name="SpiritOfPain_Desc">黑暗的一部分</string>
@@ -2209,6 +2210,7 @@
     <string name="WndHero_Exp">經驗值</string>
     <string name="WndHero_Gold">已收集金幣數</string>
     <string name="WndHero_Health">生命值</string>
+    <string name="WndHero_Info">資訊</string>
     <string name="WndHero_Satiety">飽食</string>
     <string name="WndHero_SkillLevel">技能等級</string>
     <string name="WndHero_StaCatalogus">圖鑒</string>
@@ -2660,5 +2662,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 </resources>
