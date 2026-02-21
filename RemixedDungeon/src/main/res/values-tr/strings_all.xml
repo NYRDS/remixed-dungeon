@@ -54,6 +54,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Amulet_ACEnd">OYUNUN SONU</string>
     <string name="Amulet_Info">Yendor Tılsımı, kaynağı bilinmeyen bilinen en güçlü eserdir. Tılsımın, sahibinin irade gücünün onu \&quot;ikna etmeye\&quot; yetecek kadar güçlü olması halinde herhangi bir dileği yerine getirebildiği söylenir.</string>
     <string name="Amulet_Name">Yendor Muskası</string>
+    <string name="Anesthesia_Info">Hedefinizde derin, doğal olmayan bir uyku oluşturur. En şiddetli saldırılar bile onları bu uykudan uyandıramaz.</string>
     <string name="Ankh_Info">Bu antik ölümsüzlük sembolü , taşıyana ölümden geri dönme gücü verir. Dirildiğinde kuşandığın ekipmanlar dışındaki tüm nesnelerin kaybolur.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">Anti-entropik %sı</string>
@@ -2865,6 +2866,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

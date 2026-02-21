@@ -1698,6 +1698,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Shopkeeper_text">Selamat datang ke cawangan Pixel-Mart tempatan.\nBoleh saya bantu anda?</string>
     <string name="Shopkeeper_title">Kedai</string>
     <string name="ShortSword_ACReforge">TEMPA SEMULA</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Walaupun ia sememangnya pendek, tetapi ia beberapa inci lebih panjang berbanding pisau.</string>
     <string name="ShortSword_Name">pedang pendek</string>
     <string name="ShortSword_NotBoomerang">anda tidak boleh menatar boomerang dengan kaedah ini</string>
@@ -2561,5 +2562,6 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 </resources>
