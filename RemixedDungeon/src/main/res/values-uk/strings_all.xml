@@ -960,6 +960,7 @@
     <string name="IceGuardianCoreModule_Info">Ця структура виготовлена з магічного льоду. В середині цієї дивної споруди розміщено камінь, що світиться.</string>
     <string name="IceGuardianCoreModule_Name">Ядро крижаного стража</string>
     <string name="IceGuardianCore_Desc">Крижані стражі були змайстровані стародавніми кобольдами, аби захистити свої печери. Їхня сила зберігається в ядрі, що дозволяє хранителям відновлюватись до тих пір, доки вона містить енергію.</string>
+    <string name="IceGuardianCore_DieInfo">Тут так холодно, що краще я повернуся на 14 рівень і спробую знайти шлях до теплішого місця.</string>
     <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name">крижаний хранитель</string>
     <string name="IceGuardianCore_Name_Objective">крижаного хранителя</string>
@@ -2705,5 +2706,4 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
-
 </resources>

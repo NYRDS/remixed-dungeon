@@ -1537,6 +1537,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="RogueArmor_Prompt">Válassz célpontot az ugráshoz!</string>
     <string name="RootSpell_Info">Földbe gyökerezi a kiválasztott karaktert, ezzel mozgásképtelenné téve azt rövid ideig.</string>
     <string name="RootSpell_Name">Gyökerezés</string>
+    <string name="RootsBuff_Info">A földből sarjadó gyökerek körbefonják a testet, nem engedve egyetlen lépést sem tenni.</string>
     <string name="RootsBuff_Name">Legyökerezve</string>
     <string name="RottenFish_Info">Romlott hal, borzalmas szagú</string>
     <string name="RottenFish_Name">romlott hal</string>
@@ -1758,6 +1759,7 @@ egy másik helyre a szinten. </string>
     <string name="SociologistNPC_Name_Objective">Szociológus</string>
     <string name="Sorrowmoss_Desc">A Szomorú moha egy virág (nem egy moha) borotva éles szirmokkal, halálos méreggel borítva.</string>
     <string name="Sorrowmoss_Name">Szomorú moha</string>
+    <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">Ez a Lélekpalack egy megmaradt szilánkja. Misztikus energiától szikrázik, talán valakinek érdekes lehet.</string>
     <string name="SoulShard_Name">Lélek szilánk</string>
     <string name="Spear_Info">Vékony farúd, a végén hegyes vassal.</string>
@@ -2581,10 +2583,4 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
-
-
-
-
-
-
 </resources>
