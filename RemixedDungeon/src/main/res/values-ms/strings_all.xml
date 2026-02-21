@@ -164,6 +164,7 @@
     <string name="Badges_StrengthAttained4">19 mata Kekuatan dicapai</string>
     <string name="Badges_StrengthAttained5">21 mata Kekuatan dicapai</string>
     <string name="Badges_Supporter">Terima kasih atas sokongan anda!</string>
+    <string name="Badges_ThisIsSparta">Inilah Sparta!!!</string>
     <string name="Badges_Victory">Azimat Yendor diperoleh</string>
     <string name="Badges_VictoryAll">Azimat Yendor diperoleh oleh semua kelas</string>
     <string name="Badges_Yasd">Maut disebabkan api, racun, gas beracun &amp;amp; kelaparan</string>
@@ -897,6 +898,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="IceGuardianCoreModule_Info">Ia merupakan struktur kompleks yang diperbuat dari ais magik. Terdapat permata yang bercahaya terletak ditengah-tengah peranti unik ini.</string>
     <string name="IceGuardianCoreModule_Name">Teras Pelindung Ais</string>
     <string name="IceGuardianCore_Desc">Pengawal asi dihasilkan oleh kobold purba bertujuan untuk melindungi gua mereka. Kuasa tersimpan di dalam terasnya membolehkan pengawal ais membina dirinya sendiri selagi tenaganya masih mencukupi.</string>
+    <string name="IceGuardianCore_DieInfo">Di sini terlalu sejuk, lebih baik saya kembali ke tingkat 14 dan cuba mencari jalan ke tempat yang lebih hangat.</string>
     <string name="IceGuardianCore_Name">pengawal ais</string>
     <string name="IceGuardianCore_Name_Objective">pengawal ais</string>
     <string name="IceGuardian_Desc">Pengawal asi dihasilkan oleh kobold purba bertujuan untuk melindungi gua mereka. Kuasa tersimpan di dalam terasnya membolehkan pengawal ais membina dirinya sendiri selagi tenaganya masih mencukupi.</string>
@@ -1112,6 +1114,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MailArmor_Name">perisai zirah</string>
     <string name="ManaPotion_Info">Posyen ini dapat memulihkan tenaga rohani anda.</string>
     <string name="ManaPotion_Name">Posyen Mana</string>
+    <string name="ManaRegenerationBuff_Info">Fungsi regenerasi mana berbentuk buff untuk memudahkan perkara.</string>
     <string name="ManaRegenerationBuff_Name">Regenerasi Mana</string>
     <string name="Mana_Cost">Kos Mana:</string>
     <string name="Mana_Title">Mana</string>
@@ -1549,6 +1552,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="RunicSkull_Desc">Tengkorak tiruan yang menyerupai yang asli. Anda dapat melihat ada cahaya yang mengelilinginya.</string>
     <string name="RunicSkull_Name">tengkorak runik</string>
     <string name="RunicSkull_Name_Objective">tengkorak runik</string>
+    <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">Sekali pandang pedang tembaga tua ini, dipenuhi dengan tompokan dan kelihatan tidak boleh digunakan. Sebaliknya ada kuasa kuno tidur di dalamnya. Kuasa ini boleh menukarkan apa jua makhluk menjadi hamba suruhan. Cuma perlu cari cara yang betul untuk aktifkannya.</string>
     <string name="SacrificialSword_Name">pedang korban</string>
     <string name="SantaHat_Info">Tiada apa boleh diceritakan berkenaan Dungeonmas seperti topi merah sutera Santa Penguasa Bawah Tanah.</string>
@@ -2557,6 +2561,5 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
-
 
 </resources>
