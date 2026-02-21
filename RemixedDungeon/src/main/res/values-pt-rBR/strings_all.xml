@@ -2276,6 +2276,7 @@ remix.31.1\n
     <string name="WndClass_Mastery">Mestre</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_monero">Monero</string>
+    <string name="WndCryptoDonate_warningText">ATENÇÃO: Sempre verifique o endereço antes de enviar fundos. Transações de criptomoedas são irreversíveis!</string>
     <string name="WndCustomizations_Title">Personalizações</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - gratuito para todos e sempre será.\n\nNo entanto, você pode nos ajudar a tornar o jogo ainda melhor.\n\nAlém de nossos sinceros agradecimentos, você obterá algumas melhorias estéticas.</string>
     <string name="WndDonate_donate">doar:</string>
@@ -2808,6 +2809,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

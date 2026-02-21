@@ -1225,6 +1225,7 @@
     <string name="Mob_Desc">真正的說明即將到來！</string>
     <string name="Mob_Died">你聽到有什麼東西在遠處死去了</string>
     <string name="Mob_GoingTo">已經在路上了！</string>
+    <string name="Mob_ReadyForOrder">%s準備好接受你的命令了。</string>
     <string name="Mob_StaAmokStatus">這個 %1$s 正在發狂</string>
     <string name="Mob_StaControlledStatus">這個%s被邪惡的力量所控制</string>
     <string name="Mob_StaFleeingStatus">這個%s正在逃跑</string>
@@ -2663,6 +2664,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

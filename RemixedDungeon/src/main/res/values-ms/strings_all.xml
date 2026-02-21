@@ -1525,6 +1525,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="RottenFood_Message">jijiknya!</string>
     <string name="RottenMeat_Info">sekeping daging busuk</string>
     <string name="RottenMeat_Name">daging busuk</string>
+    <string name="RottenOrgan_Name">Organ Busuk</string>
     <string name="RottenPasty_Info">pai busuk ini memualkan</string>
     <string name="RottenPasty_Name">pai busuk</string>
     <string name="RottenPumpkinPie_Info">Tak kira betapa sedapnya ketika masih segar, kini tidak lagi sesuai dimakan.</string>
@@ -1643,6 +1644,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Senior_Name">sami kanan</string>
     <string name="Senior_Name_Objective">sami kanan</string>
     <string name="ServantNPC_Name">pelayan penginapan</string>
+    <string name="ServantNPC_Name_Objective">pelayan penginapan</string>
     <string name="ServiceManNPC_Desc">Pekerja biasa di pertubuhan tempatan.</string>
     <string name="ServiceManNPC_Limit">Mohon maaf, setiap pengembara hanya boleh menonton sejumlah %d cereka.</string>
     <string name="ServiceManNPC_Limit_Reached">Mohon maaf, tetapi anda sudah mencapai had yang dibenarkan. Awak boleh guna perkhidmatan kami lagi bagi setiap tahap adiwira yang telah dicapai.</string>
@@ -2552,6 +2554,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
