@@ -377,6 +377,7 @@
     <string name="CharAction_Hit">вдарити</string>
     <string name="CharAction_Push">штовхнути</string>
     <string name="CharAction_Steal">викрасти</string>
+    <string name="CharInfo_Level">Це істота: %2$s рівня %1$d.</string>
     <string name="Char_Defeat_0">%1$s здолало %2$s</string>
     <string name="Char_Defeat_1">%1$s здолав %2$s</string>
     <string name="Char_Defeat_2">%1$s здолала %2$s</string>
@@ -2702,11 +2703,4 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
-
-
-
-
-
-
-
 </resources>

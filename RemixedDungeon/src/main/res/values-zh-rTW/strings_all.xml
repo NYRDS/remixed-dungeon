@@ -94,6 +94,7 @@
     <string name="AzuterronNPC_Quest_End">棒極了。把這瓶藥水拿去吧，當然，它是有益的。</string>
     <string name="AzuterronNPC_Quest_Reminder">如果你幫助我，那我將幫助你。</string>
     <string name="AzuterronNPC_Quest_Start">嗯……為什麼……噢，你能看到我，對嗎？這說明你並不是“它們”的一份子。看你也不喜歡這裏的怪物，告訴你，只要你能幫我解決一個小問題，我就會給你提供幫助。在這一樓層的某處有一只暗黑怪物，一只_背叛的精神_，幹掉它，把它的_心臟_拿給我，我會賣給你一些好的東西的。</string>
+    <string name="Backstab_Aware">為了成功的背刺，受害者不應該察覺到你的存在。</string>
     <string name="Backstab_Info">背後無聲的一擊，不正直，但非常有效，背刺的傷害會隨著施術者技能等級的提高而增加。\n\n成功的背刺將完全忽略受害者的護甲或特殊防禦能力。</string>
     <string name="Backstab_Name">背刺</string>
     <string name="Backstab_TooFar">距離太遠了，無法命中。</string>
@@ -2664,9 +2665,4 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
-
-
-
-
-
 </resources>
