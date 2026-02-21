@@ -716,6 +716,7 @@
     <string name="FrostArrow_Info">Ти відчуваєш ауру холоду, яка йде з наконечника цієї стріли.</string>
     <string name="FrostArrow_Name">морозна стріла</string>
     <string name="FrostAuraBuff_Name">Морозна аура</string>
+    <string name="FrostBuff_Info">Лід скував тіло, не дозволяючи робити жодних дій взагалі.</string>
     <string name="FrostBuff_Name">Заморожений</string>
     <string name="Frost_Shatter">%s тріскається від холоду!</string>
     <string name="FrozenCarpaccio_Info">Це шматок замороженого сирого м\'яса. Єдиний спосіб з\'їсти карпачо - нарізати тонких скибочок з нього. І це, як не дивно, доволі смакує.</string>
@@ -2703,4 +2704,5 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 </resources>

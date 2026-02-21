@@ -1944,6 +1944,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="SpiderElite_Name">Elit örümcek muhafız </string>
     <string name="SpiderElite_Name_Objective">Elit örümcek muhafız </string>
     <string name="SpiderExploding_Desc">Normal zamanda çok çalışkan olan bu örümcekler , düşmanlarına saldırmakta ve kendilerini canlı bomba gibi kullanmakta hiç tereddüt etmezler.</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">işçi örümcek</string>
     <string name="SpiderExploding_Name_Objective">işçi örümcek</string>
     <string name="SpiderGuard_Desc">Askerler gibi örümcek muhafızlarda krallıklarını korumak için yemin etmiştir.Muhafızın zehri düşmanlarını felç ederek hareket etmelerini engeller.</string>
@@ -2864,6 +2865,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

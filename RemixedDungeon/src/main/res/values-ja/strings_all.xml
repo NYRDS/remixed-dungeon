@@ -2631,6 +2631,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Yog_Name">ヨグ＝ゼーヴァ</string>
     <string name="Yog_Name_Objective">ヨグ＝ゼーヴァ</string>
     <string name="YogsBrain_Desc">ヨグ＝ゼーヴァの頭脳。ダンジョンから出てきたすべての悪の根源。</string>
+    <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name">ヨグの脳</string>
     <string name="YogsBrain_Name_Objective">ヨグの脳</string>
     <string name="YogsEye_Desc">旧神の眼。永遠の憎悪に満ちたすべてを見通すまなざし。あなたはそれを自身の魂を通して感じることができる。</string>
@@ -2905,6 +2906,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
