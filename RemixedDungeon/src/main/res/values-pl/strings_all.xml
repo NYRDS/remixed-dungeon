@@ -819,6 +819,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Ghost_Defense">unik</string>
     <string name="Ghost_Desc">Ten duch jest ledwo widoczny. Wygląda jak bezkształtna masa światła z twarzą wypełnioną cierpieniem.</string>
     <string name="Ghost_Name">smutny duch</string>
+    <string name="Ghost_Name_Objective">smutnego ducha</string>
     <string name="Ghost_Rat1">Witaj podróżniku... Kiedyś byłem taki jak ty - silny i pewny siebie... Ale teraz jestem martwy... Ale nie mogę opuścić tego miejsca... Nie dopóki nie dopełni się moja zemsta! Zabij _cuchnącego ściekoszczura_, który pozbawił mnie życia lata temu... Jedyne co pamiętam ze starcia z nim to smród... Otumaniający smród...</string>
     <string name="Ghost_Rat2">Proszę... Pomóż mi... Zabij tę abominację...</string>
     <string name="Ghost_Rose1">Witaj podróżniku... Kiedyś byłem taki jak ty - silny i pewny siebie... I teraz jestem martwy... Ale nie mogę opuścić tego miejsca... Nie bez mojej _wysuszonej róży_... Jest dla mnie bardzo ważna... Wręczyła mi ją moja ukochana lata temu, lecz jakiś potwór skradł ją z moich szczątków... Odzyskaj ją...</string>
@@ -3002,6 +3003,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

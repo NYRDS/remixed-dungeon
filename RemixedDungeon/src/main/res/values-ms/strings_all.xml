@@ -687,6 +687,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="GameScene_Water">Anda mendengar deburan air disekitar anda.</string>
     <string name="GameScene_Welcome">Selamat datang ke aras %d Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Selamat kembali ke aras %d Remixed Dungeon!</string>
+    <string name="GasImmuneBuff_Info">Kebal terhadap semua gas.</string>
     <string name="Ghost_Defense">dielak</string>
     <string name="Ghost_Desc">Hantu hanya separa kelihatan. Ia seakan-akan cahaya pudar tanpa bentuk dengan rupa sedih.</string>
     <string name="Ghost_Name">hantu sedu</string>
@@ -2555,4 +2556,5 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 </resources>
