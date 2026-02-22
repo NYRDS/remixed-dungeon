@@ -1890,6 +1890,7 @@
     <string name="SmashSpell_Name">猛劈</string>
     <string name="SmashSpell_NeedWeapon">我需要一把武器来完成这次行动。</string>
     <string name="Snail_Desc">这只小软体动物通过吸食污水已经长得相当大了，但他仍然非常缓慢，这使他成为一个容易面对的敌人。</string>
+    <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">大蜗牛</string>
     <string name="Snail_Name_Objective">大蜗牛</string>
     <string name="SnipersMarkBuff_Info">该标记是由嗅探器做出的。</string>
@@ -2824,4 +2825,5 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 </resources>
