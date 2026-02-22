@@ -2313,6 +2313,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WoodenBow_Name">나무 활</string>
     <string name="WoodenCrossbow_Info">간단한 나무 쇠뇌다. 특이하게도 볼트 대신 일반 화살을 발사할 수 있게 만들어져 있다.</string>
     <string name="WoodenCrossbow_Name">나무 쇠뇌</string>
+    <string name="WoodenShield_name">나무 방패</string>
     <string name="Worm_Desc">이 애벌레가 얼마나 큰지 알 수 없지만,바닥에서 부분적으로 나타나 있습니다. 이 생물체의 몸은 응어리진 썩은 살과 점액으로 뒤덮여 있습니다.당신은 이 생물체의 거대한 하악골로부터 이 괴물이 어떻게 바닥을 이동하는지 알 수 있게 해줍니다.</string>
     <string name="Worm_Name">애벌래</string>
     <string name="Worm_Name_Objective">애벌래</string>
@@ -2530,5 +2531,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 </resources>
