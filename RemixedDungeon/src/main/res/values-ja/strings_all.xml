@@ -1939,6 +1939,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SociologistNPC_AlreadyTaken">このアンケートにはすでにご参加いただいています。後ほど再度ご参加ください。</string>
     <string name="SociologistNPC_Desc">この社会学者は世論を収集する聖なる探求を続けている</string>
     <string name="SociologistNPC_DownloadError">申し訳ありませんが、何か問題が発生しました。</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Hi">こんにちは！アンケートにご協力いただけましたか？ (インターネットへのアクセスが必要です）あなたの貴重なご意見を聞かせて下さい！</string>
     <string name="SociologistNPC_InternetRequired">申し訳ございませんが、インターネットにアクセスできなければ、アンケートにお答えいただくことはできません。</string>
     <string name="SociologistNPC_Name">社会学者</string>
@@ -2906,61 +2907,4 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
