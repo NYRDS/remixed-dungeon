@@ -2089,6 +2089,7 @@
     <string name="VampireSkull_Name">Щелепа вампіра</string>
     <string name="VertigoBuff_Name">Запаморочений</string>
     <string name="View_Distance">Відстань огляду</string>
+    <string name="VileEssence_Name">Підла сутність</string>
     <string name="Viscosity_Status">відкладено %d</string>
     <string name="Viscosity_Txt">%s в\'язкості</string>
     <string name="WandHolster_Info">Це - тонкий пенал зі шкіри екзотичної тварини. Він дозволяє компактно тримати до %d паличок.</string>
@@ -2707,5 +2708,6 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 </resources>

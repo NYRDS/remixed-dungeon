@@ -78,6 +78,7 @@
     <string name="ArmoredStatue_Name">patung hidup</string>
     <string name="ArmoredStatue_Name_Objective">patung hidup</string>
     <string name="Artifact_Limit">Anda hanya boleh pakai 2 artifak dalam satu masa.</string>
+    <string name="AttackDelay_Increased">Tidak dapat mengendalikan %s seperti ini. Ayunan perlahan, nafas berat…</string>
     <string name="Attack_Cooldown">Tempoh menunggu serangan</string>
     <string name="AwarenessBuff_Name">Kesedaran</string>
     <string name="AzuterronNPC_Desc">FIgura misteri yang diselubungi dengan kabut hitam.</string>
@@ -2563,5 +2564,6 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 </resources>

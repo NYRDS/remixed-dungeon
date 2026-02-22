@@ -1063,6 +1063,7 @@ Potrebbe bruciare?</string>
     <string name="MailArmor_Name">armatura di maglia</string>
     <string name="ManaPotion_Info">Questa pozione ripristina la tua energia spirituale.</string>
     <string name="ManaPotion_Name">Pozione del Mana</string>
+    <string name="ManaShieldBuff_Name">Scudo Magico</string>
     <string name="Mana_Cost">Costo di Mana:</string>
     <string name="Mana_Title">Mana</string>
     <string name="MeleeWeapon_Info1a">%1$s è %2$s livello-%3$d arma da mischia.</string>
@@ -2436,6 +2437,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
