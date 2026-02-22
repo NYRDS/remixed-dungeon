@@ -347,6 +347,7 @@
     <string name="Challenges_Names_6">Runas Proibidas</string>
     <string name="Challenges_Names_7">Pacifismo</string>
     <string name="Challenges_Names_8">Sem cidade</string>
+    <string name="ChampionOfAirBuff_Info">Esta característica concede à criatura a essência dos ventos, aprimorando sua agilidade e destreza em combate. O Campeão do Ar se torna um adversário formidável, capaz de desferir ataques rápidos e devastadores que podem alterar rapidamente o curso da batalha.</string>
     <string name="ChampionOfEarthBuff_Info">O Campeão da Terra encarna uma força inabalável, pois esta característica aumenta a resistência a dano da criatura e aumenta sua vitalidade máxima. Esta transformação faz dele um adversário temível nas profundezas traiçoeiras, capaz de ignorar ataques com facilidade e resistir a batalhas prolongadas com determinação inabalável.</string>
     <string name="ChaosArmor_Info">As placas de sangue vermelho desta armadura é costurada junto com correntes vermelhas escuras. Ele irradia energia caótica enquanto você a toca.</string>
     <string name="ChaosArmor_Name">Armadura do Caos</string>
@@ -363,6 +364,7 @@
     <string name="ChaosCrystal_Prompt">Escolha lugar para setar a Marca do Caos.</string>
     <string name="ChaosCrystal_ScrollFused">O Cristal foi absorvido pela runa inscrita no pergaminho, transformando-se em %s</string>
     <string name="ChaosCrystal_SelectForFuse">Escolha um item para fundir com o Cristal do Caos.</string>
+    <string name="ChaosCrystal_ShieldFused">O cristal se fundiu com seu escudo, e ele tomou a forma do caos.</string>
     <string name="ChaosCrystal_StaffFused">O Cristal absorve sua varinha, e tomou a forma de um bastão.</string>
     <string name="ChaosCrystal_SwordFused">O Cristal absorve sua arma, e tomou a forma de uma Espada.</string>
     <string name="ChaosCrystal_Use">USAR</string>
@@ -2810,6 +2812,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
