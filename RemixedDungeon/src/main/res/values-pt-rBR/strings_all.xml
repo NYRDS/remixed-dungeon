@@ -2537,6 +2537,7 @@ remix.31.1\n
     <string name="YogsBrain_Name">Cérebro de Yog</string>
     <string name="YogsBrain_Name_Objective">Cérebro de Yog</string>
     <string name="YogsEye_Desc">O olho do Deus Antigo, com o olhar preenchido de ódio eterno. Você pode sentir isso ver através de sua alma.</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">Olho de Yog</string>
     <string name="YogsEye_Name_Objective">Olho de Yog</string>
     <string name="YogsHeart_Desc">Durante décadas as pessoas acreditavam que apenas as verdadeiras criaturas sem coração são capazes dos actos de pura maldade. E ainda aqui está, batendo o grande coração de um Deus Antigo em pessoa.</string>
@@ -2809,6 +2810,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
