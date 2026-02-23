@@ -543,6 +543,7 @@
     <string name="DM300_Info3">检测到未授权人员。</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">一把木柄严重磨损的普通铁匕首。</string>
     <string name="Dagger_Name">匕首</string>
     <string name="Damage_Reduction">伤害减免</string>
@@ -2024,6 +2025,7 @@
     <string name="SuspiciousRat_Name_Objective">可疑的老鼠</string>
     <string name="Swarm_Defense">回避</string>
     <string name="Swarm_Desc">这种食腐生物群的飞行声音真的很烦。每次对它们的非魔法攻击都会使它们分裂成两群。</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">蝇群</string>
     <string name="Swarm_Name_Objective">蝇群</string>
     <string name="Swing_Name_0">野蛮%s</string>
@@ -2825,5 +2827,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 </resources>
