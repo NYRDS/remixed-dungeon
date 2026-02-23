@@ -597,6 +597,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="DonateButton_pleaseDonate">Bitte erwägen Sie es, zu spenden</string>
     <string name="DonateButton_thanks">Danke für Ihre Unterstützung!</string>
     <string name="DreadKnight_Desc">Ein Schreckensritter ist ein alter Krieger, der in seinem ganzen Leben nie rechtschaffen und gut war. Und für seine Sünden war er verflucht, um in einem zerbrochen Körper zu verweilen. Und für jeden Moment seiner verdammten Existenz litt er unter den Schmerzen und dem Leid, welches er seinen Opfern bereitet hat.</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">Schreckensritter</string>
     <string name="DreadKnight_Name_Objective">Schreckensritter</string>
     <string name="Dreamweed_Desc">Wenn man ein Traumkraut berührt, sondert es eine glitzernde Wolke aus verwirrendem Gas ab.</string>
@@ -2782,6 +2783,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

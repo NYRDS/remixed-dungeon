@@ -51,6 +51,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Amulet_ACEnd">VÉGE A JÁTÉKNAK</string>
     <string name="Amulet_Info">Yendor Amulettje a leghatalmasabb ismert ereklye aminek eredete a mai napig ismeretlen. Azt beszélik hogy viselőjének minden kívánságát teljesítheti persze csak akkor ha annak akaratereje elég erős ahhoz hogy írányítani tudja az amulet rettentő hatalmát.</string>
     <string name="Amulet_Name">Yendor Amulettje</string>
+    <string name="Anesthesia_Info">Mély, természetes alvást idéz elő az áldozatodon. Még a legerőszakosabb támadások sem ébresztik fel ebből az álomból.</string>
     <string name="Ankh_Info">A halhatatlanság ősi szimbóluma képessé tesz rá hogy visszatérj a halálból. Feléledéskor minden a táskádban levő tárgyat elveszíted.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">Ellen-entrópia %s</string>
@@ -2587,6 +2588,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
