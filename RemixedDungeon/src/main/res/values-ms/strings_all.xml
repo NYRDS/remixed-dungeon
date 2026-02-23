@@ -214,6 +214,7 @@
     <string name="Bishop_title">Uskup</string>
     <string name="BlackCat_AiStatus">Kucing ini dengan tingkah laku kucing biasa</string>
     <string name="BlackCat_Desc">Ini ialah kucing hitam</string>
+    <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Name">Kucing hitam</string>
     <string name="BlackCat_Name_Objective">kucing</string>
     <string name="BlackCat_Phrases_0">Prrrrrrr</string>
@@ -801,6 +802,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HeroClass_MagPerks_4">Ahli sihir dapat guna mana untuk menyihir mantera keunsuran</string>
     <string name="HeroClass_MagPerks_5">Skrol pengecaman dapat dikenal pasti pada awal pengembaraan.</string>
     <string name="HeroClass_Necromancer">pembangkit mayat</string>
+    <string name="HeroClass_NecromancerPerks_0">Pembangkit mayat bermula dengan 15 mata Kesihatan.</string>
     <string name="HeroClass_NecromancerPerks_1">Pembangkit mayat guna mana untuk menyihir mantera Kematian.</string>
     <string name="HeroClass_NecromancerPerks_2">Pembangkit mayat bermula dengan jubah Pembangkit mayat yang unik, ia dapat menjana 1 mata mana bagi setiap makhluk yang dibunuh oleh pemakainya.</string>
     <string name="HeroClass_NecromancerPerks_3">Pembangkit mayat bermula dengan kunci rangka aras 7.</string>
@@ -2566,6 +2568,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

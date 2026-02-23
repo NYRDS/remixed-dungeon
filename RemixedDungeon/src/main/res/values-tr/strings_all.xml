@@ -697,6 +697,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="ExplodingSkull_Name">patlayan kurukafa</string>
     <string name="ExplodingSkull_Name_Objective">patlayan kurukafa</string>
     <string name="Eye_Desc">Bu iblisin diğer isimlerinden biri de \&quot;nefret küresi \&quot;dir, çünkü bir düşman gördüğünde ölüm bakışını pervasızca kullanır, genellikle müttefiklerini görmezden gelir ve onları yaralar.</string>
+    <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">%s ölümcül bakış ile seni öldürdü...</string>
     <string name="Eye_Name">şeytani göz</string>
     <string name="Eye_Name_Objective">şeytani göz</string>
@@ -718,6 +719,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="FilteredMask_Info">Nefes filtresi giyen kişiyi duman, buhar gibi tehlikeli gazlardan ve toz ile havada gezen mikroorganizmalar gibi partiküllerden korumak için tasarlanmış bir araçtır.
 \n\nAma nedense bu maske süs olmak dışında bir işe yaramıyor.</string>
     <string name="FilteredMask_Name">N95 maskesi</string>
+    <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">Bu ok normali gibi gözüküyor, tabikide başından yayılan sıcak kızıl ışık dışında.</string>
     <string name="FireArrow_Name">ateş oku</string>
     <string name="FireElemental_Desc">Gezgin ateş elementalleri daha büyük varlıkları çağırmanın bir yan ürünüdür. Doğaları gereği en güçlü iblisbilimciler tarafından bile kontrol edilemeyecek kadar kaotiktirler.</string>
@@ -2870,6 +2872,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 
