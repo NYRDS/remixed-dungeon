@@ -806,6 +806,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="GoldenStatue_Desc">Buna inanmak güç, bu muhteşem heykel sadece dekorasyon değil, aynı zamanda hiçbirşeyden habersiz maceracıları bekleyen zararlı bir yaratık. İlk bakışta _%s_ nesnesini kolunun bir parçası olduğuna yemin edebilirsin.</string>
     <string name="GoldenStatue_Name">altın heykel</string>
     <string name="GoldenStatue_Name_Objective">altın heykel</string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="GoldenSword_Info">Dekorasyon dışında altın gibi yumuşak bir metalden kılıç yapmak anlamsız. Ancak bu kılıç gayet güzel kesiyor.</string>
     <string name="GoldenSword_Name">altın kılıç</string>
     <string name="Golem_Defense">engellenmiş</string>
@@ -2872,6 +2873,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
