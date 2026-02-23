@@ -668,6 +668,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="GameScene_Water">물 소리가 당신 주위에서 들려옵니다.</string>
     <string name="GameScene_Welcome">리믹스드 던전 %d층에 오신 걸 환영합니다!</string>
     <string name="GameScene_WelcomeBack">리믹스드 던전 %d층에 돌아오신 걸 환영합니다!</string>
+    <string name="GasImmuneBuff_Name">가스 면역</string>
     <string name="Ghost_Defense">회피</string>
     <string name="Ghost_Desc">이 유령은 거의 보이지 않는다. 그것은 슬픈 얼굴을 한 희미한 빛으로 된 형상없는 얼룩 같이 보인다.</string>
     <string name="Ghost_Name">슬픈 유령</string>
@@ -2531,6 +2532,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 </resources>
