@@ -545,6 +545,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DarkVeilBuff_Info">Um véu de escuridão envolve o dono, invocando um espírito toda vez que o dano é sofrido.</string>
     <string name="DarkVeilBuff_Name">Véu negro</string>
     <string name="Darkness_Info">Parecem pedaços de escuridão eterna flutuando no ar</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Estas simples pontas de metal são pesados mas voam e picam suas presas com um golpe rápido.</string>
     <string name="Dart_Name">dardo</string>
     <string name="DashSpell_Info">Corre em uma direção específica e colidindo com os inimigos no caminho, causando danos e ferimentos.</string>
@@ -2814,6 +2815,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -1781,6 +1781,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpiderQueenCarapace_Info">Serpihan kulit katung Ratu Lelabah. Anda dapati ada kelenjar sawang di dalamnya, ia kelihatan bergerak dan masih hidup.</string>
     <string name="SpiderQueenCarapace_Name">Kulit Katung Ratu Lelabah</string>
     <string name="SpiderQueen_Desc">Sebahagian jasad perempuan cantik sebahagian lagi jasad lelabah. Setiap benda hidup dalam sarang ialah hambanya. Bertemu dengan wanita luar biasa ini merupakan pengalaman maut. Kerana anda merupakan penceroboh!</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">ratu lelabah</string>
     <string name="SpiderQueen_Name_Objective">ratu lelabah</string>
     <string name="SpiderServant_Desc">Askar merupakan unit paling banyak dalam sarang lelabah. Dilahirkan untuk melindungi wilayahnya. Kelisera askar mengandungi kelenjar berbisa yang dapat meracun musuhnya.</string>
@@ -2568,6 +2569,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
