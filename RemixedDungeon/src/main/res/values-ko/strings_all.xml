@@ -1092,6 +1092,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MageArmor_Name">마법사의 로브</string>
     <string name="MageArmor_NotMage">이 갑옷은 마법사만 착용 가능하다</string>
     <string name="MagicArrow_Info">오래된 마법 화살. 탄약이 떨어졌을 때의 좋은 선택이다.</string>
+    <string name="MagicArrow_Name">매직 애로</string>
     <string name="MagicTorch_Info">어두운 던전에서 빛을 밝힙니다.</string>
     <string name="MagicTorch_Name">마법 횃불</string>
     <string name="MailArmor_Desc">갑옷을 단단하면서도 유연하게 하기 위하여 쇠사슬을 엮어 만들었다.</string>
@@ -2464,6 +2465,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_roof_desc">단순한 타일 지붕이다.</string>
     <string name="town_deco_roof_name">지붕</string>
     <string name="town_deco_rope_desc">수작업으로 비벼 만든 밧줄입니다.</string>
+    <string name="town_deco_rope_name">밧줄</string>
     <string name="town_deco_screen_desc">이 불가사의한 캔버스는 스크린이라고 불리며, 움직이는 사진들을 보여줄 수 있다.</string>
     <string name="town_deco_screen_name">스크린</string>
     <string name="town_deco_scrolls_desc">이 먼지로 뒤덮인 책장은 여러 종류의 스크롤과 책들로 채워져있다.</string>
@@ -2532,6 +2534,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 

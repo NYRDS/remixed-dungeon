@@ -2602,6 +2602,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="YogsHeart_Name">yog\'un kalbi</string>
     <string name="YogsHeart_Name_Objective">Yog\'un kalbi</string>
     <string name="YogsTeeth_Desc">Eski Tanrının keskin dişler ile dolu muazzam çenesi. Onun yok etme ve yiyip bitirme arzusunun tam bir belirtisi olarak tam karşında.</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">yog\'un dişleri</string>
     <string name="YogsTeeth_Name_Objective">Yog\'un dişleri</string>
     <string name="ZombieGnoll_Desc">Bükülmü ve kırılmış vücudu artık insansı veya sırtlansı görünümünden uzaktır.Zombi gnoll öldürme ve tüketme dürtüsü ile varolan bir kemik ve et yığını gibidir</string>
@@ -2868,6 +2869,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
