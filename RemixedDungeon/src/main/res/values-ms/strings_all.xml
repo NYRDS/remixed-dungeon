@@ -2026,6 +2026,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WarriorArmor_NotWarrior">Hanya satria boleh guna perisai ini!</string>
     <string name="WarriorArmor_Prompt">Pilih arah untuk melompat</string>
     <string name="WaterElemental_Desc">Keunsuran air boleh ditemui berhampiran jisim air yang banyak. Biasanya gelombang ajaib ini hanya merayau-rayau disekitar sumber air.</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name">keunsuran air</string>
     <string name="WaterElemental_Name_Objective">keunsuran air</string>
     <string name="WaterOfAwareness_Info">Kuasa pengetahuan memancar keluar dari air perigi ini. Minum ia untuk dedahkan semua rahsia item yang anda pakai atau guna.</string>
@@ -2565,6 +2566,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

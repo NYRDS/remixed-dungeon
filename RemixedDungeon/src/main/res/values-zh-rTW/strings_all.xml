@@ -2107,6 +2107,7 @@
     <string name="WarHammer_Info">沒有多少生物可以承受這種武器的碾壓，但只有少數強者才可以精通它。</string>
     <string name="WarHammer_Name">戰錘</string>
     <string name="Warlock_Desc">當矮人們的興趣由工程轉向奧術時，城市中的權力開始被術士掌握。他們最開始研究元素魔法，但不久就轉為研究惡魔學和死靈術。</string>
+    <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">%s的暗影箭殺死了你……</string>
     <string name="Warlock_Name">矮人術士</string>
     <string name="Warlock_Name_Objective">矮人術士</string>
@@ -2665,4 +2666,5 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 </resources>
