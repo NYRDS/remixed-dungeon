@@ -2646,6 +2646,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="YogsTeeth_Name">ヨグの歯</string>
     <string name="YogsTeeth_Name_Objective">ヨグの歯</string>
     <string name="ZombieGnoll_Desc">ゾンビノールのねじれた壊れた体は、もはや人型種にもハイエナにも似ていない。残っているのは、殺戮と消費への悪意に満ちた、腐った肉と骨の山だけだ。</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">ノールゾンビが蘇った！</string>
     <string name="ZombieGnoll_Name">ノールゾンビ</string>
     <string name="ZombieGnoll_Name_Objective">ノールゾンビ</string>
@@ -2907,4 +2908,5 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 </resources>

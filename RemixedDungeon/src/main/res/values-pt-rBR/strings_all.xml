@@ -273,6 +273,7 @@
     <string name="BlessedBuff_Name">Abençoado</string>
     <string name="BlindnessBuff_Info">Completamente cego, apenas os sons ao redor podem ser ouvidos.</string>
     <string name="BlindnessBuff_Name">Cego</string>
+    <string name="BloodTransfusion_Info">Drena quase todo o sangue de um alvo para curar a si mesmo. Um ritual sombrio de sacrifício e sobrevivência.</string>
     <string name="BodyArmorBuff_Info">Armadura aumentada ao custo da velocidade de movimento</string>
     <string name="BodyArmorBuff_Name">Armadura Corporal</string>
     <string name="BodyArmorSpell_Info">Ativa o poder muscular reservado, os tornando mais fortes temporariamente, isso aumentará sua defesa, porem diminuirá sua velocidade de movimento.</string>
@@ -2813,6 +2814,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
