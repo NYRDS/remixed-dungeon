@@ -821,6 +821,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Guts_TileGrass">Arbusto seco</string>
     <string name="Guts_TileHighGrass">Arbusto seco</string>
     <string name="Guts_TileWater">Líquido extraño baboso</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">Un arma de asta con una hacha en el extremo del poste.</string>
     <string name="Halberd_Name">Alabarda</string>
     <string name="Halls_TileDescBookshelf">Libros en antiguos idiomas humean en la estantería.</string>
@@ -2848,6 +2849,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

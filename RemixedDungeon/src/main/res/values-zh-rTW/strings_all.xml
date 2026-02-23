@@ -366,6 +366,7 @@
     <string name="CharAction_Charm">魅惑</string>
     <string name="CharAction_Push">推</string>
     <string name="CharAction_Steal">偷</string>
+    <string name="CharAction_Take">拿取</string>
     <string name="CharAction_Taunt">嘲諷</string>
     <string name="CharInfo_Level">這是 %1$s 級的 %2$s。</string>
     <string name="Char_Defeat_0">%1$s擊殺了%2$s</string>
@@ -1349,6 +1350,7 @@
     <string name="PlagueDoctorQuest_2_2_Prologue">「啊，是 _陽光草_！這是一朵嬌嫩的花朵，其花瓣散發著太陽的溫暖。我相信它的精華中蘊含著關鍵……啊，暫時先別管細節了。總而言之，對我的研究至關重要。我需要 _兩顆陽光草種子_。為我取得它們，作為回報，我會贈予你在冒險中一定用得上的東西——一瓶 _生命藥水_，其中充滿了太陽的生命力。」</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">這不僅僅是野獸！它是死靈力量的活見證！活捉它，不能受傷！這個_死亡騎士_……它是關鍵！</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">拿回五具_DEAD KOBOLD ICEMANCER_！他們冰冷的屍體是解開寒冰魔法秘密的關鍵！</string>
+    <string name="PlagueDoctorQuest_4_2_Prologue">*他枯骨般的手指有節奏地敲擊著沸騰的大鍋，周圍的空氣中瀰漫著濃烈的硫磺和腐爛氣味*\n_狗頭人冰法師_！那些可悲的生物，蜷縮在他們冰封的洞穴中，絕望地抓著他們的冰霜魔法。我需要五個，他們凍僵的屍體將會... 啟發人心。他們對冰的掌握，這... 很奇特。我相信他們利用了一種原始能量，一種沉睡在這個世界表面之下的力量。</string>
     <string name="PlagueDoctor_Desc">散發奇怪味道的...皮革?下面應該是個人吧...</string>
 
     <string name="PlagueDoctor_Name">瘟疫巫醫</string>
@@ -2666,5 +2668,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 </resources>
