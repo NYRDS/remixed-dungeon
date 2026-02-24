@@ -345,6 +345,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="ChaosHelmet_Name">Káosz Sisak</string>
     <string name="ChaosStaff_Info">Varázspálca a Káosz Erejével beoltva! Mi másra vágyna vagy mitől félne leginkább egy mágus?</string>
     <string name="ChaosStaff_Name">káosz bot</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">Ennek a kardnak a pengéje tiszta káoszból készült és néha enyhén vibrál. A beléje szorult hatalom által szinte bármit képes kettészelni. Mindazonáltal jelentős gyakorlat szükséges a fegyver elképesztő erejének kihasználásához.</string>
     <string name="ChaosSword_Name">Káosz kard</string>
     <string name="CharAction_Charm">elbűvöl</string>
@@ -1083,6 +1084,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Level_TileWall">Fal</string>
     <string name="Level_TileWater">Víz</string>
     <string name="Level_TileWell">Kút</string>
+    <string name="LevitationBuff_Info">A test lebeg a föld felett, elkerülve a csapdákat és más földi veszélyeket.</string>
     <string name="LevitationBuff_Name">Lebegsz</string>
     <string name="LibrarianNPC_Desc">Nagyon szégyenlős. Furcsa szvettert és vastag szemüveget hord.</string>
     <string name="LibrarianNPC_Message_Instruction">Sz-szia. Üdvözlünk a Könyvtárban. Itt bármiről információt gyűjthetsz, ami a kazamatában található... valójában csak arról van ismeretünk, amit már más kalandorok felfedeztek. Ez... ez eléggé kínos. Szóval minden alkalommal, mikor meglátogatsz minket, lehet, hogy új olvasnivalóval találkozol.</string>
@@ -2596,6 +2598,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
