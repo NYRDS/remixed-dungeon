@@ -2503,6 +2503,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Worm_Name_Objective">Cacing</string>
     <string name="Wraith_Defense">menghindar</string>
     <string name="Wraith_Desc">Hantu adalah roh pendosa yang penuh balas dendam, dimana liang kuburnya atau kuburannya telah diganggu. Karena merupakan makhluk halus, makhluk ini sangat susah dipukul dengan senjata biasa.</string>
+    <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">hantu</string>
     <string name="Wraith_Name_Objective">hantu</string>
     <string name="WrnExperimental_hint">Jika dunia yang aneh dan bengkok ini terlalu keras untuk Anda, nonaktifkan opsi tersebut menggunakan\nLayar Mulai-&gt;Opsi-&gt;Gameplay\nmenu dan mulai permainan baru atau muat simpanan lain.</string>
@@ -2789,6 +2790,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

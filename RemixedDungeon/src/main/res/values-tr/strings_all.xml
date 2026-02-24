@@ -1194,6 +1194,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="LevitationBuff_Info">Vücudun, tuzaklardan ve diğer tehlikelerden kaçınarak havada asılı kalır.</string>
     <string name="LevitationBuff_Name">Uçuyor</string>
     <string name="LibrarianNPC_Desc">Dandik süveteri ve kavanoz dibi gözlüğüyle epey de utangaç bir tip.</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">M-merhaba. Kütüphaneye hoşgeldin. Burada zindanda bulunabilecek herşeyle ilgili bilgi bulabilirsin... aslında maceracılar tarafından keşfedilen bilgileri bulabilirsin sadece. Bu... birazcık utanç verici. Bu yüzden her ziyaretinizde, büyük ihtimalle okunacak yeni şeyler bulunabilir.</string>
     <string name="LibrarianNPC_Message_Not_Ready">ben... ben üzgünüm k-k- kütüphane daha açılmadı.</string>
     <string name="LibrarianNPC_Name">kütüphaneci</string>
@@ -2873,6 +2874,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
