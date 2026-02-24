@@ -107,6 +107,7 @@
     <string name="Badges_AllRings">Усі кільця ідентифіковано</string>
     <string name="Badges_AllScrolls">Усі сувої ідентифіковано</string>
     <string name="Badges_AllWands">Усі чарівні палички ідентифіковано</string>
+    <string name="Badges_BossSlain1All">Жижу вбито всіма класами</string>
     <string name="Badges_BossSlain2">Тенгу переможено</string>
     <string name="Badges_Champion">Випробування пройдено</string>
     <string name="Badges_DeathFalling">Смерть від падіння</string>
@@ -2716,6 +2717,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

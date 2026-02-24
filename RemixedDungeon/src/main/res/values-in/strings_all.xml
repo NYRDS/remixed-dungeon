@@ -833,6 +833,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Hedgehog_Info3">Apa Anda ingin teh dengan selai raspberry?</string>
     <string name="Hedgehog_Info4">Ampil kue pie ini</string>
     <string name="Hedgehog_Name">landak</string>
+    <string name="HeroClass_Doctor">Dokter Wabah</string>
     <string name="HeroClass_Elf">elf</string>
     <string name="HeroClass_ElfPerks_1">Elf kebal terhadap Belitan akar.</string>
     <string name="HeroClass_ElfPerks_2">Elf mulai dengan busur kayu yang ditingkatkan dan seikat anak panah.</string>
@@ -2792,6 +2793,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
