@@ -1,66 +1,31 @@
 {
   "common": {
-    "allies" : [
-      {
-        "kind" : "Rat",
-        "level": 1
-      }
-    ],
+    "armor": {
+      "kind": "ClothArmor",
+      "identified": true
+    },
     "items": [
       {
-        "kind": "Torch",
-        "level": 1,
-        "quantity": 100,
-        "identifyLevel": 2
-      },
-      {
-        "kind": "ScrollHolder",
-        "level": 1,
-        "identifyLevel": 2
-      },
-      {
-        "kind": "test/TestItem",
-        "level": 1,
-        "identifyLevel": 2
-      },
-      {
-        "kind": "WandOfIcebolt",
-        "identified": true,
-        "level": 3
-      },
-      {
         "kind": "Gold",
-        "quantity": 10
-      },
-      {
-        "kind": "SpellBook",
-        "identified": true,
-        "spell": "CurseItem"
+        "quantity": 100
       }
     ],
-    "str": 20,
-    "hp": 20000,
+    "str": 10,
+    "hp": 20,
     "magicAffinity": "Common",
-    "sp": 100,
-    "maxSp": 100,
-    "sl": 10,
-    "lvl": 5
+    "sp": 10,
+    "maxSp": 10
   },
   "non_expert": {
     "items": [
       {
         "kind": "Ration"
-      },
-      {
-        "kind": "SpellBook",
-        "identified": true
       }
     ]
   },
   "WARRIOR": {
     "weapon": {
       "kind": "ShortSword",
-      "level": 200,
       "identified": true
     },
     "str": 11,
@@ -71,7 +36,7 @@
     ],
     "quickslot": [
       {
-        "spell": "DieHard"
+        "spell": "BodyArmor"
       }
     ],
     "magicAffinity": "Combat"
@@ -96,8 +61,9 @@
         "kind": "ScrollOfIdentify"
       }
     ],
-    "maxSp": 15,
-    "sp": 15,
+    "maxSp":15,
+    "sp":15,
+    "isSpellUser": true,
     "magicAffinity": "Elemental"
   },
   "ROGUE": {
@@ -130,11 +96,11 @@
         "kind": "Boomerang"
       },
       {
-        "spell": "Calm"
+        "spell": "ShootInEye"
       }
     ],
-    "magicAffinity": "Huntress",
-    "hp": 15
+    "hp": 15,
+    "magicAffinity": "Huntress"
   },
   "ELF": {
     "weapon": {
@@ -161,6 +127,7 @@
         "spell": "MagicArrow"
       }
     ],
+
     "immunities": [
       "Roots"
     ],
@@ -176,8 +143,7 @@
     "items": [
       {
         "kind": "SkeletonKey",
-        "levelId": "7",
-        "depth": "7"
+        "levelId": "7"
       }
     ],
     "quickslot": [
@@ -185,6 +151,7 @@
         "spell": "SummonDeathling"
       }
     ],
+    "hp": 15,
     "knownItems": [
       {
         "kind": "PotionOfHealing"
@@ -258,11 +225,12 @@
       "kind": "BoneSaw",
       "identified": true
     },
-    "items": [
-      {
-        "kind": "PlagueDoctorMask"
-      }
-    ],
+    "ring1": {
+      "kind": "PlagueDoctorMask"
+    },
+    "armor": {
+      "kind": "NoItem"
+    },
     "knownItems": [
       {
         "kind": "PotionOfHealing"
@@ -272,6 +240,11 @@
       },
       {
         "kind": "PotionOfParalyticGas"
+      }
+    ],
+    "quickslot": [
+      {
+        "spell":"Anesthesia"
       }
     ],
     "magicAffinity": "PlagueDoctor"

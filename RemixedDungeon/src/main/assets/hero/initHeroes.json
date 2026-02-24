@@ -225,11 +225,12 @@
       "kind": "BoneSaw",
       "identified": true
     },
-    "items": [
-      {
-        "kind": "PlagueDoctorMask"
-      }
-    ],
+    "ring1": {
+      "kind": "PlagueDoctorMask"
+    },
+    "armor": {
+      "kind": "NoItem"
+    },
     "knownItems": [
       {
         "kind": "PotionOfHealing"
@@ -239,6 +240,11 @@
       },
       {
         "kind": "PotionOfParalyticGas"
+      }
+    ],
+    "quickslot": [
+      {
+        "spell":"Anesthesia"
       }
     ],
     "magicAffinity": "PlagueDoctor"
