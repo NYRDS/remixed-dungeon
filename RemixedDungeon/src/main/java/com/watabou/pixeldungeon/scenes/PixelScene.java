@@ -52,12 +52,6 @@ public class PixelScene extends Scene {
 	}
 
 	@Override
-	public void pause() {
-		super.pause();
-		font1x = null;
-	}
-
-	@Override
 	public void create() {
 
 		super.create();
@@ -91,6 +85,7 @@ public class PixelScene extends Scene {
 		float uiZoom = (float) Preferences.INSTANCE.getDouble(CommonPrefs.KEY_UI_ZOOM, defaultZoom);
 		uiCamera = Camera.createFullscreen(uiZoom);
 		Camera.add(uiCamera);
+		getFont1x().invalidate();
 	}
 
 

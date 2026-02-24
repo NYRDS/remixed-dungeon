@@ -41,6 +41,8 @@ public class Font extends TextureFilm {
 
 	final HashMap<Object, PointF> glyphShift = new HashMap<>();
 	String tex_src;
+	public SmartTexture texture;
+	private boolean invalidated;
 
 	protected Font( String tex_src ) {
 		super( TextureCache.get(ModdingMode.getBitmapData(tex_src)) );
@@ -212,6 +214,14 @@ public class Font extends TextureFilm {
 	}
 
 	public SmartTexture getTexture() {
-		return TextureCache.get(ModdingMode.getBitmapData(tex_src));
+		if(texture!=null && !invalidated) return texture;
+
+		invalidated = false;
+		texture = TextureCache.get(ModdingMode.getBitmapData(tex_src));
+		return texture;
+	}
+
+	public void invalidate() {
+		invalidated = true;
 	}
 }
