@@ -29,7 +29,6 @@ public class Font extends TextureFilm {
 
 	public static final String ALL_CHARS = LATIN_FULL+SPECIAL_CHAR+CYRILLIC_UPPER+CYRILLIC_LOWER;
 
-	public final SmartTexture texture;
 
 	public float tracking = 0;
 	public float baseLine;
@@ -41,13 +40,13 @@ public class Font extends TextureFilm {
 	private boolean endOfRow = false;
 
 	final HashMap<Object, PointF> glyphShift = new HashMap<>();
+	String tex_src;
 
-	protected Font( SmartTexture tx ) {
-		super( tx );
+	protected Font( String tex_src ) {
+		super( TextureCache.get(ModdingMode.getBitmapData(tex_src)) );
+		this.tex_src = tex_src;
 
-		texture = tx;
-		texture.filter(Texture.LINEAR,Texture.NEAREST);
-		//texture.reload();
+		getTexture().filter(Texture.LINEAR,Texture.NEAREST);
 	}
 
 	private int findNextEmptyLine(BitmapData bitmap, int startFrom){
@@ -170,8 +169,7 @@ public class Font extends TextureFilm {
 
 	public static Font colorMarked(String tex_src, String chars ) {
 		BitmapData bmp = ModdingMode.getBitmapData(tex_src);
-		SmartTexture tex = TextureCache.get( bmp );
-		Font font = new Font( tex );
+		Font font = new Font( tex_src );
 		font.splitByAlpha( bmp, chars );
 		//bmp.dispose();
 		return font;
@@ -211,5 +209,9 @@ public class Font extends TextureFilm {
 		}
 
 		return rec;
+	}
+
+	public SmartTexture getTexture() {
+		return TextureCache.get(ModdingMode.getBitmapData(tex_src));
 	}
 }

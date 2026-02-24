@@ -4,9 +4,9 @@ package com.watabou.noosa;
 
 import com.nyrds.platform.compatibility.RectF;
 import com.nyrds.platform.gl.NoosaScript;
-import com.nyrds.platform.util.PUtil;
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
+import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
 
@@ -55,8 +55,8 @@ public class BitmapText extends Text {
 	public void draw() {
 		super.draw();
 		NoosaScript script = NoosaScript.get();
-		
-		font.texture.bind();
+
+		font.getTexture().bind();
 
 		clean();
 

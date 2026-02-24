@@ -52,6 +52,12 @@ public class PixelScene extends Scene {
 	}
 
 	@Override
+	public void pause() {
+		super.pause();
+		font1x = null;
+	}
+
+	@Override
 	public void create() {
 
 		super.create();
