@@ -54,7 +54,7 @@ public class Tengu extends Boss implements IZapper {
 
 		final HeroClass heroClass = Dungeon.heroClass;
 
-		if ( heroClass != HeroClass.NECROMANCER && heroClass != HeroClass.GNOLL){
+		if ( heroClass != HeroClass.NECROMANCER && heroClass != HeroClass.GNOLL && heroClass != HeroClass.DOCTOR){
 			collect(new TomeOfMastery());
 		}
 
