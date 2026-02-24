@@ -1687,6 +1687,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Sheep_Desc">Ini adalah kambing biri-biri magik. Magik ke? Anda tidak boleh membunuhnya. Ia kekal berada di sana sehinggalah kuasa magiknya hilang, sementara itu hanya tengok sajalah.</string>
     <string name="Sheep_Name">kambing biri-biri</string>
     <string name="Sheep_Name_Objective">kambing biri-biri</string>
+    <string name="ShieldBuffReady_Info">Perisai anda bersedia untuk menghalang serangan seterusnya.</string>
     <string name="ShieldStrTemplate">Pemakai perisai ini mestilah mempunyai sekurang-kurangnya %1$d mata kekuatan untuk menggunakannya dengan betul.</string>
     <string name="ShieldWeaponInfo">Apabila digunakan sebagai senjata, perisai ini akan menyebabkan %1$d kerosakan secara purata.</string>
     <string name="Shielded_Defense">disekat</string>
@@ -2569,6 +2570,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

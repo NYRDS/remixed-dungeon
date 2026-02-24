@@ -357,6 +357,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Challenges_Names_7">Pasifisme</string>
     <string name="Challenges_Names_8">Tidak ada kota</string>
     <string name="Challenges_Names_9">Amnesia</string>
+    <string name="ChampionOfAirBuff_Name">Juara Udara</string>
     <string name="ChampionOfFireBuff_Name">Juara Api</string>
     <string name="ChaosArmor_Info">Sebuah lapisan merah darah dipasang bersama dengan rantai merah tua. Zirah ini mengeluarkan energi khaos saat Anda menyentuhnya.</string>
     <string name="ChaosArmor_Name">Zirah khaos</string>
@@ -2790,6 +2791,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
