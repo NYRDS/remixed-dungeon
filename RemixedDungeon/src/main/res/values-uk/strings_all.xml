@@ -1351,6 +1351,7 @@
     <string name="Pickaxe_ACMine">ДОБУТИ</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Це великий та міцний інструмент для розколювання каміння. Як зброю теж можна використовувати.</string>
+    <string name="Pickaxe_InsufficientStr">Недостатньо сили, щоб копати!</string>
     <string name="Pickaxe_Name">кірка</string>
     <string name="Pickaxe_NoVein">Ти не бачиш жодного родовища чорного золота поблизу.</string>
     <string name="Piercing_Name_0">Пробивне %s</string>
@@ -2715,6 +2716,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

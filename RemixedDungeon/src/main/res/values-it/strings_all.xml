@@ -290,6 +290,7 @@
     <string name="Challenges_Names_5">nel buio</string>
     <string name="Challenges_Names_6">Rune Proibite</string>
     <string name="Challenges_Names_7">Pacifismo</string>
+    <string name="Challenges_Names_8">Nessuna città</string>
     <string name="ChampionOfAirBuff_Info">Questa caratteristica dona alla creatura l\'essenza dei venti, migliorando la sua agilità e abilità in combattimento. Il Campione dell\'Aria diventa un avversario formidabile, capace di scatenare attacchi rapidi e devastanti che possono cambiare rapidamente il corso della battaglia.</string>
     <string name="ChampionOfEarthBuff_Info">Il Campione della Terra incarna una forza inflessibile, poiché questo attributo aumenta la resistenza ai danni della creatura e incrementa la sua vitalità massima. Questa trasformazione lo rende un avversario temibile nelle profondità insidiose, capace di ignorare facilmente gli attacchi e di resistere a lunghe battaglie con fermezza incrollabile.</string>
     <string name="ChampionOfEarthBuff_Name">Campione della Terra</string>
@@ -2441,6 +2442,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
