@@ -131,6 +131,7 @@
     <string name="Badges_ItemLvl2">Item di livello 6 acquisito</string>
     <string name="Badges_ItemLvl3">Item di livello 9 acquisito</string>
     <string name="Badges_ItemLvl4">Item di livello 12 acquisito</string>
+    <string name="Badges_ItemLvl5">Item di livello 15 acquisito</string>
     <string name="Badges_LevelReached1">Livello 6 raggiunto</string>
     <string name="Badges_LevelReached2">Livello 12 raggiunto</string>
     <string name="Badges_LevelReached3">Livello 18 raggiunto</string>
@@ -2319,6 +2320,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_chimney_name">Comignolo</string>
     <string name="town_deco_cinema_sign_desc">Pare che ci sia un cinema in quell\'edificio</string>
     <string name="town_deco_cinema_sign_name">Insegna del Cinema</string>
+    <string name="town_deco_clock_name">Orologio</string>
     <string name="town_deco_common_bed_desc">Un normalissimo letto.</string>
     <string name="town_deco_common_bed_name">Letto</string>
     <string name="town_deco_common_door_desc">Un avventuriero dalle buone maniere non dovrebbe invadere la proprietà privata, senza un invito ovviamente</string>
@@ -2442,6 +2444,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
