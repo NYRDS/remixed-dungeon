@@ -260,6 +260,7 @@
     <string name="Burning_Burns">%s prende fuoco! </string>
     <string name="Burning_Death">Sei arso a morte...</string>
     <string name="CagedKobold_Desc">Un coboldo, in una gabbia.</string>
+    <string name="CagedKobold_Intro">Ehi... EHI! Tu sei quell\'avventuriero, vero? Aiutami, amico, questi maledetti militaristi mi hanno rinchiuso qui! Intendono riattivare un\'arma antica per conquistare queste... cose umane in superficie! Ma considerando quanto è pericolosa, mi sono opposto, e loro mi hanno semplicemente cacciato e rinchiuso in una gabbia! Ti prego di trovare la chiave della cella, e in cambio, ti aiuterò al meglio delle mie capacità.</string>
     <string name="CagedKobold_Message1">Per favore...</string>
     <string name="CagedKobold_Message2">Devi aiutarmi ad uscire, amico</string>
     <string name="CagedKobold_Name">coboldo in gabbia</string>
@@ -2451,6 +2452,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
