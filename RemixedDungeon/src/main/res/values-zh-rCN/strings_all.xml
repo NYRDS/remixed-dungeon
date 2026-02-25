@@ -40,6 +40,7 @@
      —不时发布有趣的统计数据\n 
      你可以随时更改决定（单击标题屏幕上的图表图标）</string>
     <string name="AllowStatisticsCollectionScene_Title">使用数据收集</string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">这支箭头尖端的溶液将使任何生物变得无情、狂暴，凶残无比。</string>
     <string name="AmokArrow_Name">狂乱箭</string>
     <string name="AmokBuff_Info">混乱在思绪中起舞，夺去那些不幸者的生命。</string>
@@ -2830,6 +2831,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

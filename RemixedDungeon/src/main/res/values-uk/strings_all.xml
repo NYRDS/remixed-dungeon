@@ -1640,6 +1640,7 @@
     <string name="RottenFood_Message">бридота!</string>
     <string name="RottenMeat_Info">шматок гнилого м\'яса</string>
     <string name="RottenMeat_Name">гниле м\'ясо</string>
+    <string name="RottenOrgan_Info">Орган, що розкладається, зібраний з переможеного ворога. Попри його гнилий стан, він містить цінні сполуки для алхімічних процесів.</string>
     <string name="RottenOrgan_Name">Гнилий Орган</string>
     <string name="RottenPasty_Info">цей пиріг виглядає так огидно</string>
     <string name="RottenPasty_Name">зіпсований пиріг</string>
@@ -1969,6 +1970,7 @@
     <string name="Statue_Name">жива статуя</string>
     <string name="Statue_Name_Objective">живу статую</string>
     <string name="Stench_Txt">%s смороду</string>
+    <string name="StoneBloodBuff_Info">Кров перетворюється на камінь, який зливається зі стінами поблизу і значно полегшує пересування через них, але якою ціною.</string>
     <string name="StoneBloodBuff_Name">Кам\'яна кров</string>
     <string name="Str_lose">-1 сили</string>
     <string name="StrongShield_name">Бронзовий щит</string>
@@ -2719,6 +2721,8 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 
