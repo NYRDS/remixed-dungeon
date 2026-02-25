@@ -1314,6 +1314,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Elismerés! Öt _Kobold Jégvarázsló_, jégeszenciájukat most már én kutathatom! A kapcsolatuk a fagyos pusztákhoz, ez valóban lenyűgöző. Ahogyan magát a vizet is irányítják... valóban figyelemre méltó. *Átad neked egy csillogó üvegcsét, tele élénk vörös folyadékkal* Ez, a bátor erőfeszítéseidért való: Egy _Erőital_! Igyál belőle és érezd tíz harcos erejének áramlását az erekben! Ne feledd, az ismeret hatalom... és a hatalom az egyetlen fegyverünk a közelgő sötétség ellen. Most pedig... boncoljuk fel ezeket a jégszemélyiségeket és tárd fel dermesztő titkaikat!</string>
     <string name="PlagueDoctor_Desc">Ennek a púpos hátú alaknak az egész teste egy bőrből készült kezeslábasban van. Ráadásul keserű gyógyszer és ... hagymaszagot áraszt.</string>
 
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">pestis doktor</string>
     <string name="PlagueDoctor_Name_Objective">pestis doktor</string>
     <string name="Plant_ACPlant">ELÜLTETÉS</string>
@@ -2598,6 +2599,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
