@@ -1318,6 +1318,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="NecromancerArmor_Name">zirah tulang</string>
     <string name="NecromancerArmor_NotNecromancer">hanya necromancers yang bisa memakai zirah ini!</string>
     <string name="NecromancerNPC_Desc">Pria zaman pertengahan ini terlihat sedikit terganggu dan bahagia di waktu yang sama. Dia memakai sebuah zirah buatan dari pecahan tulang.</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">Ah! Sungguh pemandangan yang langka! Rekan petualang yang bukan hanya mayat tak bernyawa. Hampir tidak bisa dipercaya! Oh... Maaf, terkadang aku terlalu bersemangat. Anda lihat, saya sendiri, seorang ahli nujum. Dan meskipun, mempelajari orang mati dan kematian itu sendiri adalah apa yang saya lakukan untuk mencari nafkah, melihat hal yang sama berulang-ulang, akhirnya menjadi sangat melelahkan. Di sisi lain itulah mengapa saya di sini. Menurut perhitungan saya, hanya dalam beberapa minggu, di suatu tempat di penjara bawah tanah ini, sesuatu yang spektakuler akan terjadi. _Necropolis_, kota kuno orang mati akan membuka pintunya. Dan... Aku tidak bisa berkata banyak, aku sudah membuang cukup banyak waktu. Saya harus bersiap-siap, _kembali lagi nanti_.</string>
     <string name="NecromancerNPC_Intro2">Ah! Rekan petualang yang bukan hanya mayat tak bernyawa. Hampir tidak bisa dipercaya! Oh... Maaf, terkadang aku terlalu bersemangat. Anda lihat, saya sendiri, seorang necromancer. Dan meskipun, mempelajari mayat dan kematian itu sendiri sangat berharga bagi kita, semua monoton ini, cepat atau lambat bisa membuat siapa pun bosan. Di sisi lain itulah mengapa saya di sini. Suatu hari sesuatu yang besar terjadi! _Necropolis_, kota kuno orang mati membuka pintunya untuk kita lihat. Sejujurnya, kami berdiri tepat di sebelah pintu ini. Dan ... Anda tahu, ambil kuncinya dan pergi dulu, Anda menyukai semua jenis petualangan, bukan? Dan aku akan pergi berikutnya ... hanya perlu bersiap-siap dulu.</string>
     <string name="NecromancerNPC_Message1">Sedikit sekali waktu, sedikit sekali waktu...</string>
@@ -2796,6 +2797,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
