@@ -48,6 +48,7 @@
     <string name="Amulet_ACEnd">FINE DEL GIOCO</string>
     <string name="Amulet_Info">L\' Amuleto di Yendor è il più potente artefatto conosciuto di origini ignote. Si dice che l\'amuleto sia in grado di esaudire qualunque desiderio se la forza di volontà del suo proprietario è forte abbastanza da \&quot;persuaderlo\&quot; a farlo.</string>
     <string name="Amulet_Name">Amuleto di Yendor </string>
+    <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">Questo antico simbolo di immortalità garantisce una capacità di tornare in vita dopo la morte. Al momento della risurrezione tutti gli oggetti non equipaggiati andranno persi.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">%s dell\'anti-entropia</string>
@@ -2127,6 +2128,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndLocalModInstall_title">Installa mod dalla directory locale</string>
     <string name="WndModSelect_AreYouSure">Eliminare mod: %s, sei sicuro?</string>
     <string name="WndModSelect_ReallyDelete">Vuoi davvero eliminare?</string>
+    <string name="WndMovieTheatre_Sorry">Qualcosa è andato storto e non siamo riusciti a consegnare la tua ricompensa...</string>
     <string name="WndMovieTheatre_Title">Cinema</string>
     <string name="WndMovieTheatre_Watch">guarda un annuncio</string>
     <string name="WndPlayGames_BackupProgress">Salvare la progressione del gioco</string>

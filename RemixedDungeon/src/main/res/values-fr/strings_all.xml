@@ -939,6 +939,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="HeroClass_PlagueDoctorPerks_2">Commencez avec un [yellow:Masque de Peste] (immunité à tous les Gaz) et une [yellow:Scie en Os]. Les coups critiques font tomber des parties supplémentaires, et la Scie inflige x1.5 dégâts aux ennemis paralysés.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Les potions de [yellow:Gaz Paralysant] et de [yellow:Gaz Toxique] sont pré-identifiées.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Les médecins pestiférés subissent de grandes pénalités de précision sans leur bien-aimée Scie en Os en main et ne peuvent pas utiliser d\'armes à distance.</string>
+    <string name="HeroClass_Priest">Prêtre</string>
     <string name="HeroClass_Rog">voleur</string>
     <string name="HeroClass_RogPerks_0">Les voleurs commencent avec un anneau des ténèbres +1.</string>
     <string name="HeroClass_RogPerks_1">Les voleurs identifient le type d\'un anneau en l\'équipant.</string>
