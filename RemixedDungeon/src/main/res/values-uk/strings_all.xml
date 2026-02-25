@@ -2406,6 +2406,7 @@
     <string name="WndSaveSlotSelect_dontLike">Не подобається реклама? Зробіть будь-яке пожертвування і вона зникне. Назавжди.</string>
     <string name="WndSelectLanguage_ImproveTranslation">Будь ласка, допоможіть покращити переклади Remixed Dungeon</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Натисніть тут, щоб приєднатися до команди перекладачів Remixed Dungeon </string>
+    <string name="WndSettingsInGame_GameLog">Ігровий лог</string>
     <string name="WndSettings_ActionButtonSize">Розмір кнопок</string>
     <string name="WndSettings_Brightness">Яскравість</string>
     <string name="WndSettings_ClassicFont">Класичний шрифт</string>
@@ -2722,6 +2723,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

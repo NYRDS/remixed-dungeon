@@ -1778,6 +1778,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Senior_Name">biksu senior</string>
     <string name="Senior_Name_Objective">biksu senior</string>
     <string name="ServantNPC_Desc">Seorang pelayan penginapan yang sangat sibuk.</string>
+    <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">pelayan penginapan</string>
     <string name="ServantNPC_Name_Objective">pelayan penginapan</string>
     <string name="ServiceManNPC_Desc">Seorang pekerja tetap dari perusahaan lokal.</string>
@@ -2798,6 +2799,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
