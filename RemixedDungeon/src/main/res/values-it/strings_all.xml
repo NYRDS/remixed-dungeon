@@ -2161,6 +2161,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndPremiumSettings_status">Seleziona il materiale della barra di stato</string>
     <string name="WndPremiumSettings_std">standard</string>
     <string name="WndPremiumSettings_toolbar">Seleziona il materiale della barra degli strumenti</string>
+    <string name="WndPriest_Heal">guarigione - %d monete d\'oro</string>
     <string name="WndPriest_Instruction2">Se desideri aiuto, posso fornire servizi di guarigione per %d monete d\'oro! Se cerchi la santa Benedizione, o, Signore non voglia, sei stato maledetto, per favore dirigiti dal Vescovo nella nostra umile chiesa.</string>
     <string name="WndPriest_Instruction2_f">Benvenuta figlia mia, benvenuta nella santa chiesa del Grande Santa, il Signore delle Profondità!</string>
     <string name="WndPriest_Instruction2_m">Benvenuto figlio mio, benvenuto nella santa chiesa del Grande Santa, il Signore delle Profondità!</string>
@@ -2456,6 +2457,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
