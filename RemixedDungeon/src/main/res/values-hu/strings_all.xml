@@ -939,6 +939,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">fogadós</string>
     <string name="InnKeeperNPC_Name_Objective">fogadóst</string>
+    <string name="InnServant_Phrase_1">Jaj, még mindig annyi a tennivaló!</string>
     <string name="InnServant_Phrase_2">Ez a részeg az őrületbe kerget!</string>
     <string name="InnServant_Phrase_3">Nekem tisztának tűnik</string>
     <string name="Instability_Name_0">Instabil %s</string>

@@ -2339,6 +2339,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_covered_table_name">Tavolo</string>
     <string name="town_deco_crate_bottles_desc">L\'imbottigliamento della birra è diventato un passatempo molto popolare tra i locandieri.</string>
     <string name="town_deco_crate_bottles_name">Cassa di birra</string>
+    <string name="town_deco_crate_scrolls_desc">Questa cassa è piena fino all\'orlo di conoscenza segreta.</string>
     <string name="town_deco_cross_desc">Una croce di argento, il simbolo della religione locale - \&quot;I Testimoni di Santa il Signore delle Profondità\&quot;</string>
     <string name="town_deco_cross_name">Croce</string>
     <string name="town_deco_crossroad_name">Cartello stradale</string>

@@ -1313,6 +1313,7 @@
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">這支箭已被塗上麻痺毒藥。</string>
     <string name="ParalysisArrow_Name">麻痺箭</string>
+    <string name="ParalysisBuff_Name">癱瘓</string>
     <string name="Paralysis_Name_0">重擊%s</string>
     <string name="Paralysis_Name_1">重擊%s</string>
     <string name="Paralysis_Name_2">重擊%s</string>
