@@ -390,6 +390,7 @@
     <string name="Claymore_Info">Questa spada enorme dovrebbe essere in grado di aprirti un varco ovunque.</string>
     <string name="Claymore_Name">Claymore</string>
     <string name="CloakSpell_EnemiesNearby">Non puoi nasconderti nell\'ombra mentre i nemici sono vicini.</string>
+    <string name="CloakSpell_Info">Entra nelle ombre per diventare invisibile. Riduce notevolmente le possibilità di essere rilevati. Non può essere usato mentre ci sono nemici nelle vicinanze.</string>
     <string name="ClothArmor_Desc">Questa armatura leggera offre una protezione base.</string>
     <string name="ClothArmor_Name">armatura in stoffa</string>
     <string name="Codex_ACRead">LEGGI</string>
@@ -2452,6 +2453,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

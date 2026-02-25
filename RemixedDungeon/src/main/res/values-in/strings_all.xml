@@ -2499,6 +2499,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Busur kayu sederhana ini dapat dibuktikan berguna bila anda menemukan beberapa anak panah.</string>
     <string name="WoodenBow_Name">busur kayu</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Sebuah busur silang kayu sederhana, kelihatannya ini dibuat untuk menembakkan panah dari busur.</string>
     <string name="WoodenCrossbow_Name">Busur silang kayu</string>
     <string name="WoodenShield_desc">Perisai kayu yang dibuat secara kasar adalah perisai paling sederhana yang tersedia. Itu bulat dan dapat memblokir beberapa kerusakan dari waktu ke waktu.</string>
@@ -2795,6 +2796,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
