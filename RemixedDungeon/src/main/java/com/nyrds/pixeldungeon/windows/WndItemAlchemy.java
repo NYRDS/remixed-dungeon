@@ -177,17 +177,6 @@ public class WndItemAlchemy extends Window {
         executeX10Button.enable(selectedRecipe != null);
         buttonsContainer.add(executeX10Button);
 
-        // Close button
-        RedButton closeButton = new RedButton(R.string.Wnd_Button_Close) {
-            @Override
-            protected void onClick() {
-                hide();
-            }
-        };
-
-        closeButton.autoSize();
-        buttonsContainer.add(closeButton);
-
         // Add the buttons container to the main layout
         controlsBox.add(buttonsContainer);
         controlsBox.setMaxHeight(40);
