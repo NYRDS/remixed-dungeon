@@ -2541,6 +2541,10 @@ remix.32\n
     <string name="WndInstallingMod_deleting_file">Διαγράφεται: %s</string>
     <string name="WndInstallingMod_please_wait">Εγκατάσταση τροποποίησης, παρακαλώ περιμένετε...</string>
     <string name="WndInstallingMod_skipping_file">Παράλειψη %s...</string>
+    <string name="WndItemAlchemy_NoRecipes">Δεν υπάρχουν διαθέσιμες συνταγές με αυτό το αντικείμενο και το τρέχον απόθεμά σας.</string>
+    <string name="WndItemAlchemy_SelectRecipe">Επιλογή συνταγής</string>
+    <string name="WndItemAlchemy_Title">Συνταγές αλχημείας με %s</string>
+    <string name="WndItemAlchemy_Transmute">Μετατροπή</string>
     <string name="WndJournal_Levels">Όροφοι</string>
     <string name="WndJournal_Logbook">Καταγραφές</string>
     <string name="WndJournal_Title">Ημερολόγιο</string>

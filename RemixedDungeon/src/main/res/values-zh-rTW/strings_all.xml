@@ -2243,6 +2243,10 @@
     <string name="WndInfoItem_WontKnow">直至打開一刻，方曉裏面為何物！</string>
     <string name="WndInstallingMod_copying_file">正在複製 %s 到混合地牢存儲</string>
     <string name="WndInstallingMod_deleting_file">正在刪除 %s</string>
+    <string name="WndItemAlchemy_NoRecipes">沒有可用於此物品和你當前庫存可用的配方。</string>
+    <string name="WndItemAlchemy_SelectRecipe">選擇配方</string>
+    <string name="WndItemAlchemy_Title">含 %s 的煉金配方</string>
+    <string name="WndItemAlchemy_Transmute">轉化</string>
     <string name="WndJournal_Levels">特殊地點</string>
     <string name="WndJournal_Logbook">地牢樓層日誌</string>
     <string name="WndJournal_Title">探險日誌</string>

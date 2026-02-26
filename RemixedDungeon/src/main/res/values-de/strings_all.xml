@@ -2340,6 +2340,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndInstallingMod_skipping_file">Überspringe %s</string>
     <string name="WndItemAlchemy_SelectRecipe">Rezept auswählen</string>
     <string name="WndItemAlchemy_Title">Alchemierezepte mit %s</string>
+    <string name="WndItemAlchemy_Transmute">Transmutieren</string>
     <string name="WndJournal_Levels">Levels</string>
     <string name="WndJournal_Logbook">Logbuch</string>
     <string name="WndJournal_Title">Logbuch</string>

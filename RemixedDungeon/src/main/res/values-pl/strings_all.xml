@@ -2537,6 +2537,9 @@ remix.32.1\n
     <string name="WndInstallingMod_please_wait">Instalowanie modyfikacji, proszę czekać...</string>
     <string name="WndInstallingMod_skipping_file">Pomijam %s</string>
     <string name="WndItemAlchemy_NoRecipes">Brak dostępnych przepisów z tym przedmiotem i twoim obecnym ekwipunkiem.</string>
+    <string name="WndItemAlchemy_SelectRecipe">Wybierz przepis</string>
+    <string name="WndItemAlchemy_Title">Przepisy alchemiczne z %s</string>
+    <string name="WndItemAlchemy_Transmute">Transmutacja</string>
     <string name="WndJournal_Levels">Poziomy</string>
     <string name="WndJournal_Logbook">Dziennik</string>
     <string name="WndJournal_Title">Dziennik</string>

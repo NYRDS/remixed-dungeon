@@ -2181,6 +2181,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndItemAlchemy_ExecuteRecipe">레시피 실행</string>
     <string name="WndItemAlchemy_NoRecipes">이 아이템과 현재 인벤토리로 사용 가능한 레시피가 없습니다.</string>
     <string name="WndItemAlchemy_Title">%s 의 연금술 레시피</string>
+    <string name="WndItemAlchemy_Transmute">변환</string>
     <string name="WndJournal_Levels">레벨</string>
     <string name="WndJournal_Logbook">일지</string>
     <string name="WndJournal_Title">일지</string>

@@ -143,7 +143,7 @@ public class WndItemAlchemy extends Window {
         buttonsContainer.setGap(SMALL_GAP); // Reduced gap for tighter fit
 
         // Execute button
-        executeButton = new RedButton("Transmute") {
+        executeButton = new RedButton(R.string.WndItemAlchemy_Transmute) {
             @Override
             protected void onClick() {
                 executeSelectedRecipe(1);

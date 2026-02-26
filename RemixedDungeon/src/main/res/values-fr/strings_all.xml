@@ -2514,6 +2514,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndInstallingMod_copying_file">Copie de %s dans le stockage de Remixed Dungeon</string>
     <string name="WndInstallingMod_deleting_file">Suppression de %s</string>
     <string name="WndItemAlchemy_Title">Recettes d\'alchimie avec %s</string>
+    <string name="WndItemAlchemy_Transmute">Transmuter</string>
     <string name="WndJournal_Levels">Niveaux</string>
     <string name="WndJournal_Logbook">Journal</string>
     <string name="WndJournal_Title">Journal</string>

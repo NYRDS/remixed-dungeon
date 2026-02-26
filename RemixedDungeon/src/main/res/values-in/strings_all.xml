@@ -2347,6 +2347,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndInstallingMod_deleting_file">Menghapus %s</string>
     <string name="WndInstallingMod_please_wait">Memasang mod, harap tunggu...</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Jalankan Resep</string>
+    <string name="WndItemAlchemy_Transmute">Transmutasi</string>
     <string name="WndJournal_Levels">Level</string>
     <string name="WndJournal_Logbook">Buku catatan</string>
     <string name="WndJournal_Title">Jurnal</string>

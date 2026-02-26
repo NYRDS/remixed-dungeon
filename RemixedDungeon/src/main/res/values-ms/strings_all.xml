@@ -2168,6 +2168,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndInfoItem_WontKnow">Anda tidak tahu apa-apa di dalamnya sehinggalah anda membukanya!</string>
     <string name="WndInstallingMod_deleting_file">Memadam %s</string>
     <string name="WndInstallingMod_please_wait">Memasang mod, sila tunggu...</string>
+    <string name="WndItemAlchemy_NoRecipes">Tiada resipi tersedia dengan item ini dan inventori semasa anda.</string>
+    <string name="WndItemAlchemy_SelectRecipe">Pilih resipi</string>
+    <string name="WndItemAlchemy_Title">Resipi alkimia dengan %s</string>
+    <string name="WndItemAlchemy_Transmute">Transmutasi</string>
     <string name="WndJournal_Levels">Aras</string>
     <string name="WndJournal_Logbook">Buku Log</string>
     <string name="WndJournal_Title">Jurnal</string>

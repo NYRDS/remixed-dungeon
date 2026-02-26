@@ -2579,6 +2579,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndItemAlchemy_ExecuteRecipe">Выполнить рецепт</string>
     <string name="WndItemAlchemy_NoRecipes">Нет доступных рецептов с этим предметом и вашим текущим инвентарем.</string>
     <string name="WndItemAlchemy_Title">Рецепты алхимии с %s</string>
+    <string name="WndItemAlchemy_Transmute">Трансмутация</string>
     <string name="WndJournal_Levels">Уровни</string>
     <string name="WndJournal_Logbook">Журнал</string>
     <string name="WndJournal_Title">Журнал</string>

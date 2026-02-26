@@ -2362,6 +2362,10 @@ remix.31.1\n
     <string name="WndInfoItem_Tomb">Tumba</string>
     <string name="WndInfoItem_WontKnow">Você não vai saber o que há dentro até abri-lo!</string>
     <string name="WndInstallingMod_deleting_file">Apagando %s</string>
+    <string name="WndItemAlchemy_NoRecipes">Não há receitas disponíveis com este item e seu inventário atual.</string>
+    <string name="WndItemAlchemy_SelectRecipe">Selecionar receita</string>
+    <string name="WndItemAlchemy_Title">Receitas de alquimia com %s</string>
+    <string name="WndItemAlchemy_Transmute">Transmutar</string>
     <string name="WndJournal_Levels">Levels</string>
     <string name="WndJournal_Logbook">LogBook</string>
     <string name="WndJournal_Title">Diário</string>

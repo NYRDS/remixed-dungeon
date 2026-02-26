@@ -2204,7 +2204,10 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndInfoItem_WontKnow">Nem tudod, hogy mi van benne amíg ki nem nyitod!</string>
     <string name="WndInstallingMod_deleting_file">Törlés: %s</string>
     <string name="WndInstallingMod_skipping_file">Kihagyás: %s</string>
+    <string name="WndItemAlchemy_NoRecipes">Nincsenek elérhető receptek ezzel a tárggyal és a jelenlegi felszereléseddel.</string>
+    <string name="WndItemAlchemy_SelectRecipe">Recept kiválasztása</string>
     <string name="WndItemAlchemy_Title">Alkímia receptek vele: %s</string>
+    <string name="WndItemAlchemy_Transmute">Transzmutálás</string>
     <string name="WndJournal_Levels">Szintek</string>
     <string name="WndJournal_Logbook">Eseménynapló</string>
     <string name="WndJournal_Title">Napló</string>
