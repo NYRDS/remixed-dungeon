@@ -819,6 +819,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="HeroClass_NecromancerPerks_4">A Gyógyító italokat az elejétől kezdve felismered.</string>
     <string name="HeroClass_PlagueDoctorPerks_0">A pestis doktorok mérgező mirigyeket, rothadt szerveket, csontszilánkokat és gonosz esszenciát gyűjtenek a legyőzött ellenségektől. A vért idővel gyűjtik össze, és alkímiához használják fel.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Kezdjük egy pestismaszkkal (immunis minden gázhatás ellen) és egy csontfűrésszel. A kritikus találatok extrarészeket dobhatnak, és a fűrész +50% sebzést ejt a bénult ellenfeleken.</string>
+    <string name="HeroClass_Priest">Pap</string>
     <string name="HeroClass_Rog">tolvaj</string>
     <string name="HeroClass_RogPerks_0">A Zsiványok az Árnyék Gyűrűjével +1 kezdenek. </string>
     <string name="HeroClass_RogPerks_1">A Zsiványok felvétel után azonnal azonosítani tudják a gyűrűket.</string>
@@ -2346,6 +2347,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Wnd_Button_No">Nem</string>
     <string name="Wnd_Button_Ok">Rendben</string>
     <string name="Wnd_Button_Yes">Igen</string>
+    <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Ez a fa íj lehet, hogy használható lesz, amint találsz hozzá nyilat.</string>
     <string name="WoodenBow_Name">fa íj</string>
     <string name="WoodenCrossbow_Gender">masculine</string>
@@ -2604,6 +2606,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

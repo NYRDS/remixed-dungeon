@@ -563,6 +563,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Deathling_Name">deathling</string>
     <string name="Deathling_Name_Objective">deathling</string>
     <string name="DeepSnail_Desc">Moluska jenis ini sering terlihat di dekat sumber air dan jauh lebih cepat daripada siput biasa. Namun, waspadalah terhadap gigitannya, mereka dapat memiliki efek yang tidak menyenangkan pada kulit Anda.</string>
+    <string name="DeepSnail_Gender">feminine</string>
     <string name="DeepSnail_Name">siput dalam</string>
     <string name="DeepSnail_Name_Objective">siput dalam</string>
     <string name="DeferedDamageBuff_Info">Rasa sakit telah berubah menjadi rasa sakit yang melambat, mengurangi kerusakan yang diterima sekaligus.\nKerusakan tersisa untuk menerima %d</string>
@@ -2799,6 +2800,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
