@@ -40,6 +40,8 @@ public class WndItemAlchemy extends Window {
     private AlchemyRecipe selectedRecipe;
     private RecipeListItem selectedRow;
     private final RedButton executeButton;
+    private final RedButton executeX5Button;
+    private final RedButton executeX10Button;
 
     // Track recipe rows for selection
     private final ArrayList<RecipeListItem> recipeRows = new ArrayList<>();
@@ -143,13 +145,37 @@ public class WndItemAlchemy extends Window {
         executeButton = new RedButton(R.string.WndItemAlchemy_ExecuteRecipe) {
             @Override
             protected void onClick() {
-                executeSelectedRecipe();
+                executeSelectedRecipe(1);
             }
         };
         executeButton.autoSize();
 
+        // Execute x5 button
+        executeX5Button = new RedButton("x5") {
+            @Override
+            protected void onClick() {
+                executeSelectedRecipe(5);
+            }
+        };
+        executeX5Button.autoSize();
+
+        // Execute x10 button
+        executeX10Button = new RedButton("x10") {
+            @Override
+            protected void onClick() {
+                executeSelectedRecipe(10);
+            }
+        };
+        executeX10Button.autoSize();
+
         executeButton.enable(selectedRecipe != null);
         buttonsContainer.add(executeButton);
+
+        executeX5Button.enable(selectedRecipe != null);
+        buttonsContainer.add(executeX5Button);
+
+        executeX10Button.enable(selectedRecipe != null);
+        buttonsContainer.add(executeX10Button);
 
         // Close button
         RedButton closeButton = new RedButton(R.string.Wnd_Button_Close) {
@@ -240,7 +266,37 @@ public class WndItemAlchemy extends Window {
     }
 
     private void updateExecuteButton() {
-        executeButton.enable(selectedRecipe != null);
+        boolean hasRecipe = selectedRecipe != null;
+        executeButton.enable(hasRecipe);
+        executeX5Button.enable(hasRecipe && canExecuteRecipe(5));
+        executeX10Button.enable(hasRecipe && canExecuteRecipe(10));
+    }
+
+    private boolean canExecuteRecipe(int times) {
+        if (selectedRecipe == null) {
+            return false;
+        }
+
+        // Calculate player's current inventory
+        Map<String, Integer> playerInventory = new HashMap<>();
+        for (Item item : hero.getBelongings()) {
+            if (item.isIdentified()) {
+                String itemName = item.getEntityKind();
+                playerInventory.put(itemName, playerInventory.getOrDefault(itemName, 0) + item.quantity());
+            }
+        }
+
+        // Check if we have enough ingredients for 'times' executions
+        var inputs = selectedRecipe.getInput();
+        for (var inputItem : inputs) {
+            String ingredientName = inputItem.getName();
+            int requiredQty = inputItem.getCount() * times;
+            int availableQty = playerInventory.getOrDefault(ingredientName, 0);
+            if (availableQty < requiredQty) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private void updateRecipeDescription() {
@@ -327,7 +383,7 @@ public class WndItemAlchemy extends Window {
         mainLayout.layout();
     }
 
-    private void executeSelectedRecipe() {
+    private void executeSelectedRecipe(int times) {
         Level level = hero.level();
         int pos = hero.getPos();
 
@@ -335,10 +391,10 @@ public class WndItemAlchemy extends Window {
             // Remove the required ingredients from the player's inventory
             var inputs = selectedRecipe.getInput();
 
-            // Remove ingredients from inventory
+            // Remove ingredients from inventory (times the normal amount)
             for (var inputItem : inputs) {
                 String ingredientName = inputItem.getName();
-                int requiredQty = inputItem.getCount();
+                int requiredQty = inputItem.getCount() * times;
 
                 // Find and remove the required items
                 List<Item> itemsToRemove = new ArrayList<>();
@@ -361,12 +417,12 @@ public class WndItemAlchemy extends Window {
                 hero.detachItemList(itemsToRemove);
             }
 
-            // Process the output items and mobs
+            // Process the output items and mobs (times the normal amount)
             List<OutputItem> outputs = selectedRecipe.getOutput();
             for (OutputItem outputItem : outputs) {
                 String outputName = outputItem.getName();
-                int outputCount = outputItem.getCount();
-                
+                int outputCount = outputItem.getCount() * times;
+
                 // Determine the entity type to handle items, mobs, and carcasses differently
                 AlchemyRecipes.EntityType entityType = AlchemyRecipes.determineEntityType(outputName);
                 try {
