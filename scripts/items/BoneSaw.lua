@@ -36,16 +36,23 @@ return item.init{
     slot = item.slot_bothHands,
 
     accuracyFactor    = function(self, item, user)
-        return 1
+        local lvl = item:level()
+        local user_level = user:skillLevel()
+
+        return 1 + (lvl + user_level) * 0.15
     end,
 
     damageRoll        = function(self, item, user)
         local lvl = item:level()
-        return math.random(lvl, lvl*2)
+        local user_level = user:skillLevel()
+        return (user_level + lvl) * math.random(2 + lvl, 3 + lvl*2)
     end,
 
     attackDelayFactor = function(self, item, user)
-        return 1
+        local lvl = item:level()
+        local user_level = user:skillLevel()
+
+        return math.max(1 - (lvl + user_level) * 0.05, 0.25)
     end,
 
     attackProc        = function(self, item, attacker, defender, damage)
@@ -63,7 +70,7 @@ return item.init{
         local defRoll = math.random() * defenseSkill
 
         -- A critical hit occurs when the attack roll significantly exceeds the defense roll
-        local isCriticalHit = acuRoll > defRoll * 2
+        local isCriticalHit = acuRoll > defRoll * 3
 
         -- Apply critical hit bonus if applicable
         local finalDamage = damage
