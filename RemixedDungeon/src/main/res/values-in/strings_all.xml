@@ -1076,6 +1076,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="KoboldIcemancer_Name">kobold icemancer</string>
     <string name="KoboldIcemancer_Name_Objective">kobold icemancer</string>
     <string name="Kobold_Desc">Diyakini bahwa Kobold tidak lebih dari legenda. Nenek moyang gnoll biasa, kobold tinggal di gua terdalam dan terdingin. Dikatakan juga bahwa ras mereka menguasai teknik dan mesin jauh sebelum kurcaci melakukannya.</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="KrampusHead_Info">Pernahkah Anda membayangkan bagaimana rasanya mengambil peran yang lebih menyeramkan saat Dungeoneering? Nah, Anda pasti akan membawa kengerian bagi bayi tikus lokal dengan penampilan seperti setan ini.</string>
@@ -2801,6 +2802,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
