@@ -1862,6 +1862,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Statue_Name">eleven szobor</string>
     <string name="Statue_Name_Objective">Élő szobrot</string>
     <string name="Stench_Txt">Bűzös %s</string>
+    <string name="StoneBloodBuff_Info">A vér kővé válik, amely egyesül a közeli falakkal, és sokkal könnyebbé teszi az áthaladást rajtuk - de milyen áron.</string>
     <string name="StoneBloodBuff_Name">Kő vér</string>
     <string name="Str_lose">-1 erő</string>
     <string name="StrongShield_name">Bronzzal Bevont Pajzs</string>
@@ -2611,6 +2612,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

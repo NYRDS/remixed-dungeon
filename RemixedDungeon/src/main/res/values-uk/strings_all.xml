@@ -2263,6 +2263,7 @@
     <string name="WndDonate_silverDonateText2">Також вимикає рекламу та відкриває мисливицю з самого початку.</string>
     <string name="WndDontLikeAds_NotThisTime">Не цього разу</string>
     <string name="WndError_Title">ПОМИЛКА</string>
+    <string name="WndFortuneTeller_IdentifyAll">Усе</string>
     <string name="WndFortuneTeller_Instruction">Я в змозі відкрити таємниці, які приховують твої предмети.\nВартість розпізнавання одного предмету становить %d монет.</string>
     <string name="WndFortuneTeller_No_Item">Треба бути більш обачливим, ти ж не бажаєш кидати гроші на вітер? Твій інвентар не містить неопізнаних предметів.</string>
     <string name="WndFortuneTeller_Title">Ворожка.</string>
@@ -2724,6 +2725,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

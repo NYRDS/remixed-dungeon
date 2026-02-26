@@ -322,6 +322,7 @@
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_DissectResult">Do %1$s você obtém %2$d colheita %3$s.</string>
     <string name="Carcass_Info">restos de %s totalmente morto.</string>
+    <string name="Carcass_Necromancy_Failed">\"Sua tentativa de levantar o cadáver de %s falhou!\"</string>
     <string name="Caves_TileDescBookshelf">Quem precisa de uma estante de livros em uma caverna?</string>
     <string name="Caves_TileDescDeco">Um veio de algum minério está visível na parede. Será Ouro?</string>
     <string name="Caves_TileDescEntrance">A escada te levará ao piso superior.</string>
@@ -2818,6 +2819,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 
