@@ -278,6 +278,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Burning_Burns">%s elégett!</string>
     <string name="Burning_Death">Halálra égtél...</string>
     <string name="CagedKobold_Desc">Egy kobold, ketrecben.</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">Hé, hééé! Te egy amolyan kalandor vagy, ugye? Segíts ki haver, ezek a fene militaristák bezártak ide. Egy ősi fegyvert akarnak reaktiválni, hogy meghódítsák azokat az emberizéket a felszínen! De én ezt veszélyesnek tartottam, ezért elleneztem, mire ezek bezártak ebbe a ketrecbe! Könyörgöm találd meg a kulcsot és cserébe én is segítek neked amiben csak tudok!</string>
     <string name="CagedKobold_Message1">Kérlek...</string>
     <string name="CagedKobold_Message2">Segítened kell, haver</string>
@@ -1706,6 +1707,7 @@ egy másik helyre a szinten. </string>
     <string name="Shades_Name">Napszemcsi</string>
     <string name="ShadowLord_Death">Neeeee...</string>
     <string name="ShadowLord_Desc">Tökéletes gonoszságból és sötétségből teremtett lény, kit hatalma miatt sokan vélnek az Ősi Istennek. Mások azonban őrzőnek vallják csupán, ki az Ősi Isten kamráit óvja.</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Készülj fel!</string>
     <string name="ShadowLord_Name">Árnyak Ura</string>
     <string name="ShadowLord_Name_Objective">Árnyak Ura</string>
@@ -2607,6 +2609,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
