@@ -147,10 +147,10 @@ public class Carcass extends Item implements Doom {
             chr.heal(src.ht()/10, this);
 
         } else if (action.equals(AC_DISSECT)) {
-            if (Dungeon.level.adjacent(chr.getPos(), getPos())) {
-                dissect(chr);
+            if (getHeap()!= null && !chr.level().adjacent(chr.getPos(), getPos())) {
+                GLog.i(Utils.format(R.string.Carcass_TooFarToDissect));
             } else {
-                GLog.i("You need to be closer to dissect the carcass.");
+                dissect(chr);
             }
         } else {
             super._execute(chr, action);
@@ -158,16 +158,16 @@ public class Carcass extends Item implements Doom {
     }
 
     private void dissect(Char chr) {
+        int pos = chr.getPos();
         var heap = getHeap();
-        if (heap == null) {
-            GLog.i("The dissection fails.");
-            return;
+        if (heap != null) {
+            pos = heap.pos;
         }
 
-        Wound.hit(heap.pos);
+        Wound.hit(pos);
 
         // Create random harvestable items to drop
-        String[] harvestItems = {"ToxicGland", "RottenOrgan", "BoneShard", "VileEssence"};
+        String[] harvestItems = {"ToxicGland", "RottenOrgan", "BoneShard"};
 
         // Determine how many items to get based on the source mob's HP (higher HP = more items)
         int itemCount = Math.max(1, src.ht() / 20); // At least 1, scales with mob HP
@@ -175,11 +175,10 @@ public class Carcass extends Item implements Doom {
         int itemsObtained = 0;
         for (int i = 0; i < itemCount; i++) {
             String randomItem = harvestItems[(int)(Math.random() * harvestItems.length)];
-
             try {
                 Item item = ItemFactory.itemByName(randomItem);
                 if (item.valid()) {
-                    chr.level().animatedDrop(item, heap.pos);
+                    chr.level().animatedDrop(item, pos);
                     itemsObtained++;
                 }
             } catch (Exception e) {
@@ -194,6 +193,7 @@ public class Carcass extends Item implements Doom {
         } else {
             GLog.i(Utils.format(R.string.Carcass_DissectFailed, src.getName()));
         }
+        consumedOneBy(chr);
     }
 
     public static void selectItemByEntityNames(Char selector, String[] entityNames, WndBag.Listener callback) {

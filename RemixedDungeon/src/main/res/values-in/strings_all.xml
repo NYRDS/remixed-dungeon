@@ -329,6 +329,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Capotain_Name">Kapten</string>
     <string name="Carcass_Devoured">Anda telah melahap bangkai dari %s!</string>
     <string name="Carcass_DissectFailed">Anda membedah %s tetapi tidak menemukan apa pun yang berharga.</string>
+    <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk membedah bangkai.</string>
     <string name="Carcass_DissectResult">Dari %1$s kamu memperoleh %2$d %3$s.</string>
     <string name="Carcass_Name">bangkai %s</string>
     <string name="Caves_TileDescBookshelf">Siapa yang butuh rak buku di gua?</string>

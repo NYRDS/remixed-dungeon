@@ -349,6 +349,7 @@
     <string name="Carcass_DissectFailed">Вы рассекли %s, но не нашли ничего ценного.</string>
     <string name="Carcass_DissectMessage">Вы разобрали тушу и получили %s.</string>
     <string name="Carcass_DissectResult">Из %1$s вы получили %2$d урожай %3$s.</string>
+    <string name="Carcass_TooFarToDissect">Вам нужно подойти ближе, чтобы разобрать тушу.</string>
     <string name="Carcass_Info">Останки абсолютно мертвого монстра %s.</string>
     <string name="Carcass_Kick">Это существо, %s, совершенно мертво, нет смысла бить его дальше.</string>
     <string name="Carcass_Name">Останки %s</string>

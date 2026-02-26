@@ -304,6 +304,7 @@
     <string name="Carcass_Devoured">Anda telah memakan mayat %s!</string>
     <string name="Carcass_DissectFailed">Anda menyiasat %s tetapi tidak menemui apa-apa yang berharga.</string>
     <string name="Carcass_DissectMessage">Anda menyiasat bangkai dan mendapat %s.</string>
+    <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk menyiasat bangkai tersebut.</string>
     <string name="Carcass_Info">Bangkai %s yang benar-benar mati</string>
     <string name="Caves_TileDescBookshelf">Siapa yang perlukan rak buku di dalam gua?</string>
     <string name="Caves_TileDescDeco">Ada telerang bijih yang kelihatan menonjol di atas dinding. Adakah ia Emas?</string>

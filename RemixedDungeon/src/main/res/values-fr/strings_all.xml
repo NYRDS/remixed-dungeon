@@ -341,6 +341,7 @@
     <string name="Carcass_Devoured">Vous avez dévoré le cadavre de %s !</string>
     <string name="Carcass_DissectFailed">Vous disséquez le %s mais ne trouvez rien de valeur.</string>
     <string name="Carcass_DissectResult">Du %1$s, vous obtenez %2$d %3$s.</string>
+    <string name="Carcass_TooFarToDissect">Vous devez vous rapprocher pour disséquer la carcasse.</string>
     <string name="Carcass_Info">Restes de %s totalement mort.</string>
     <string name="Carcass_Kick">Ce %s est totalement mort, inutile de le frapper.</string>
     <string name="Carcass_Name">Restes de %s</string>
