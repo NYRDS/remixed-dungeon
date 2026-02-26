@@ -328,8 +328,8 @@
     <string name="Capotain_Name">Tricornio</string>
     <string name="Carcass_DissectMessage">Disecas la carroña y obtienes un %s.</string>
     <string name="Carcass_DissectResult">Del %1$s obtienes %2$d %3$s.</string>
-    <string name="Carcass_TooFarToDissect">Necesitas acercarte más para diseccionar la carroña.</string>
     <string name="Carcass_Kick">Este %s está completamente muerto, no hay necesidad de patearlo.</string>
+    <string name="Carcass_TooFarToDissect">Necesitas acercarte más para diseccionar la carroña.</string>
     <string name="Caves_TileDescBookshelf">¿Quién necesita una estantería en una caverna?</string>
     <string name="Caves_TileDescDeco">La veta de algún material puede verse en la pared. ¿Oro?</string>
     <string name="Caves_TileDescEntrance">La escalera lleva a la profundidad superior.</string>
@@ -1448,6 +1448,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PlagueDoctorQuest_3_2_Prologue">¡Un _Caballero de la Muerte_! *Su voz se quiebra de emoción, sus huesudos dedos tiemblan mientras aferra un frasco burbujeante lleno de un líquido turbio y fosforescente*. ¡Tal criatura… un faro de no-muerte! ¡Capturar uno, vivo… sería… monumental! ¡Imagina los secretos que podríamos descubrir! ¡El poder que fluye a través de sus venas esqueléticas! ¡Sí, un _Caballero de la Muerte_! Es crucial para mi investigación. ¡Pues me permitirá adentrarme más profundamente… en los misterios de la vida… y de la muerte misma!</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">¡Espléndido! Los _Brujos Enanos_, ¡su esencia ahora es mía para explorar! Una magia tan retorcida y corrompida... verdaderamente fascinante. *Sostiene un frasco reluciente, lleno de un líquido viscoso y carmesí.* ¡Esto es para ti: una _Poción de Poder_! ¡Bebe su poder y sentirás la fuerza de las montañas corriendo por tus venas! Recuerda, el conocimiento obtenido de estos sacrificios servirá en última instancia a un propósito superior... quizás incluso nos salve a todos de un destino peor que la muerte.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">¡Cinco _Brujos Enanos_, sus cuerpos aún palpitan con el débil eco de magia oscura! Tráemelos, y te recompensaré con una poción de poder sin precedentes: una _Poción de Poder_ que te impregnará con la fuerza de diez hombres.</string>
+    <string name="PlagueDoctorQuest_4_1_Prologue">¡Achú! ¡Dwarves! ¡Esos testarudos moradores subterráneos, obsesionados con las gemas y el oro! Pero son los _Brujos Enanos_ los que ansío... su magia retorcida, alimentada por las mismas profundidades que habitan. ¡Cinco, necesito cinco de esas almas marchitas! Sus cuerpos tienen la clave para entender un cierto... fenómeno. Algo sobre canalizar energías arcanas a través de la tierra misma. ¡Creo que estoy cerca de un gran descubrimiento, pero necesito su esencia, su magia corrompida! *Tose violentamente en su pañuelo, una mancha oscura se extiende por la delicada tela*</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Él mira fijamente a las dos _súcubos_, con una sonrisa beatífica extendiéndose bajo su máscara.* ¡Espléndido! ¡Magnífico! Esto desbloqueará tantas... posibilidades! *Se vuelve hacia ti, su voz gruesa de gratitud... y algo más.* Tus esfuerzos... no serán olvidados. Le debo las gracias más profundas. *Su mirada se demora en las _súcubos_ un momento demasiado largo, antes de retirarse a su laboratorio, murmurando sobre cómo desbloquear los secretos de la seducción.*</string>
     <string name="PlagueDoctor_Desc">Este hombre jorobado está vestido completamente con cuero. Huele fuertemente a medicamentos y ... ¿ajo?</string>
 
@@ -1981,6 +1982,7 @@ otro lugar del nivel.</string>
     <string name="SpiderQueen_Name">reina araña</string>
     <string name="SpiderQueen_Name_Objective">reina araña</string>
     <string name="SpiderServant_Desc">Los soldados son las unidades más numerosas de la guarida de la araña. Nacieron para proteger su territorio. Estos soldados desarrollaron unas glándulas venenosas para envenenar a sus enemigos.</string>
+    <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">araña soldado</string>
     <string name="SpiderServant_Name_Objective">araña soldado </string>
     <string name="Spinner_Desc">Estas arañas verdes y peludas intentan evitar el combate directo, prefiriendo esperar en la distancia mientras su victima, enredada en su telaraña, muere lentamente por el veneno de su mordisco. </string>
@@ -2858,6 +2860,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

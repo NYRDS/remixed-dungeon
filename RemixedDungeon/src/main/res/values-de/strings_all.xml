@@ -517,6 +517,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="CommonArrow_Name">Pfeil</string>
     <string name="CompositeCrossbow_Info">Diese verstärkte Armbrust verspricht eine effizientere Waffe zu sein, als sein hölzernes Pendant.</string>
     <string name="CompositeCrossbow_Name">Verstärkte Armbrust</string>
+    <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">Pfeile, die mit einem Compoundbogen abgeschossen werden, verursachen mehr Schaden und sind auf Kosten der Geschwindigkeit treffsicherer.</string>
     <string name="CompoundBow_Name">Compoundbogen</string>
     <string name="ConcreteBlock_Description">Sieht so aus, als ob dieser Block %d Stärkepunkte benötigt um ihn zu schieben.</string>
@@ -2793,5 +2794,6 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 </resources>
