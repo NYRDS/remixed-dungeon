@@ -30,25 +30,26 @@ public class WndInGameMenu extends WndMenuCommon {
 			return;
 		}
 
-		// Add alchemy button for regular gameplay
-		menuItems.add(new MenuButton("Alchemy") {
-			@Override
-			protected void onClick() {
-				super.onClick();
-				GameScene.show(new WndAlchemy());
-			}
-		});
-
-		// Add recipe checker button
-		menuItems.add(new MenuButton("Check Recipes") {
-			@Override
-			protected void onClick() {
-				super.onClick();
-				GameScene.show(new WndRecipeChecker());
-			}
-		});
-
 		if (BuildConfig.DEBUG) {
+		// Add alchemy button for regular gameplay
+			menuItems.add(new MenuButton("Alchemy") {
+				@Override
+				protected void onClick() {
+					super.onClick();
+					GameScene.show(new WndAlchemy());
+				}
+			});
+
+			// Add recipe checker button
+			menuItems.add(new MenuButton("Check Recipes") {
+				@Override
+				protected void onClick() {
+					super.onClick();
+					GameScene.show(new WndRecipeChecker());
+				}
+			});
+
+
 			menuItems.add(new MenuButton("AlchemyTest") {
 				@Override
 				protected void onClick() {

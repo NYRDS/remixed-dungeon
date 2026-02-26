@@ -51,18 +51,7 @@ public class WndSettingsInGame extends WndMenuCommon {
                 WndSettingsInGame.this.add(new WndInGameUiSettings());
             }
         });
-/*
-        if (Game.instance().playGamesAdapter.isConnected()) {
-            menuItems.add(new MenuButton(R.string.WndSettings_RecordVideo) {
-                @Override
-                protected void onClick() {
-                    super.onClick();
-                    Game.instance().playGamesAdapter.showVideoOverlay();
 
-                }
-            });
-        }
-*/
         menuItems.add(new MenuCheckBox(R.string.WndSettingsInGame_GameLog, GLog.enabled) {
             @Override
             protected void onClick() {
