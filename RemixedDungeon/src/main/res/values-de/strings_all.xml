@@ -332,6 +332,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Carcass_DissectMessage">Du sezierst die Leiche und erhältst %s.</string>
     <string name="Carcass_Kick">Dieses %s ist völlig tot, keinen Grund es zu treten.</string>
     <string name="Carcass_Name">Überreste von %s</string>
+    <string name="Carcass_TooFarToDissect">Du musst näher herangehen, um die Leiche zu sezieren.</string>
     <string name="Caves_TileDescBookshelf">Wer braucht denn ein Bücherregal in einer Höhle?</string>
     <string name="Caves_TileDescDeco">Eine Erzader ist in der Wand sichtbar. Gold?</string>
     <string name="Caves_TileDescEntrance">Die Leiter führt nach oben auf eine höhere Ebene.</string>

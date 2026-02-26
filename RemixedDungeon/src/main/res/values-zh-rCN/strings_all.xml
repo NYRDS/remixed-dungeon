@@ -325,6 +325,7 @@
     <string name="Capotain_Name">朝圣平顶帽</string>
     <string name="Carcass_DissectFailed">你解剖了%s，但没有发现任何有价值的东西。</string>
     <string name="Carcass_Info">完全死亡的 %s 的残骸。</string>
+    <string name="Carcass_TooFarToDissect">你需要离得更近才能解剖残骸。</string>
     <string name="Carcass_Necromancy">你复活了%s的尸体！</string>
     <string name="Caves_TileDescBookshelf">谁会需要在矿洞里放个书架？</string>
     <string name="Caves_TileDescDeco">一些矿脉在墙上清晰可见。是金子吗？</string>

@@ -327,6 +327,7 @@
     <string name="Capotain_Name">カポテイン</string>
     <string name="Carcass_Devoured">あなたは %sの死体を食い尽くした！</string>
     <string name="Carcass_DissectMessage">死骸を解剖して %s を得た。</string>
+    <string name="Carcass_TooFarToDissect">死体を解剖するには、もっと近づく必要がある。</string>
     <string name="Carcass_Info">完全に死んだ %sの死体</string>
     <string name="Carcass_Kick">この %sは完全に死んでいるので、蹴る必要はない。</string>
     <string name="Carcass_Name">%sの死体</string>

@@ -350,6 +350,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Carcass_Info">Szczątki totalnie martwego %s,</string>
     <string name="Carcass_Kick">%s jest totalnie martwy, nie ma powodu żeby to kopać.</string>
     <string name="Carcass_Name">Szczątki %s</string>
+    <string name="Carcass_TooFarToDissect">Musisz być bliżej, aby dokonać sekcji zwłok.</string>
     <string name="Carcass_Necromancy">Ożywiono zwłoki %s</string>
     <string name="Carcass_Necromancy_Failed">Twoja próba ożywienia zwłok %s zawiodła!</string>
     <string name="Caves_TileDescBookshelf">Kto u licha potrzebuje biblioteczki w jaskini?</string>

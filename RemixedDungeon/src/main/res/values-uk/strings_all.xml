@@ -328,6 +328,7 @@
     <string name="Capotain_Info">високий капелюх, що звужується по краях, Він зазвичай асоціюється з пуританами, але вам не обов\'язково бути досить релігійними, аби носити її. З якоїсь причини на ній є ярлик, з написом \&quot;Соломон\&quot;.</string>
     <string name="Capotain_Name">Ковпак</string>
     <string name="Carcass_DissectMessage">Ви розчленували труп і отримали %s.</string>
+    <string name="Carcass_TooFarToDissect">Вам потрібно підійти ближче, щоб розчленувати труп.</string>
     <string name="Caves_TileDescBookshelf">Кому в підземеллі знадобилася книжкова шафа?</string>
     <string name="Caves_TileDescDeco">На стіні видно відкриту жилу якоїсь руди. Чи то не золото?</string>
     <string name="Caves_TileDescEntrance">Драбина веде догори.</string>

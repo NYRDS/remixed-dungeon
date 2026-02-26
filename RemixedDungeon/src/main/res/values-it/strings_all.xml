@@ -277,6 +277,7 @@
     <string name="Capotain_Name">Cappello a capote</string>
     <string name="Carcass_DissectMessage">Dissechi la carcassa e ottieni un %s.</string>
     <string name="Carcass_Name">resti di %s</string>
+    <string name="Carcass_TooFarToDissect">Devi avvicinarti di più per dissezionare la carcassa.</string>
     <string name="Carcass_Necromancy_Failed">Il tuo tentativo di rianimare il cadavere di %s è fallito!</string>
     <string name="Caves_TileDescBookshelf">A chi servirebbe una libreria dentro una caverna?</string>
     <string name="Caves_TileDescDeco">una vena di materiale è visibile sulla parete. sarà oro?</string>

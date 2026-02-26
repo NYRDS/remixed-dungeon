@@ -344,6 +344,7 @@
     <string name="Carcass_Info">Λείψανα ενός παντελώς νεκρού πλάσματος (%s).</string>
     <string name="Carcass_Kick">Το πλάσμα (%s) τα έχει τινάξει ήδη. Δεν χρειάζεται να το κλωτσάς.</string>
     <string name="Carcass_Name">Λείψανα (%s)</string>
+    <string name="Carcass_TooFarToDissect">Πρέπει να πλησιάσεις περισσότερο για να ανατεμαχίσεις τη σορό.</string>
     <string name="Carcass_Necromancy">Ανέστησες τη σορό του πλάσματος: %s!</string>
     <string name="Carcass_Necromancy_Failed">Η απόπειρά σου να αναστήσεις τη σορό (%s) απέτυχε!</string>
     <string name="Caves_TileDescBookshelf">Ποιος χρειάζεται τη βιβλιοθήκη στη σπηλιά;</string>

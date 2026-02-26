@@ -328,6 +328,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Capotain_Info">Uzun taçlı, dar kenarlı bir şapka. Genelde Püritiler ile ilişkilidir, ancak onu giymek için dindar olmanız gerekmez. Bazı nedenlerden dolayı \&quot;Solomon\&quot; yazan bir isim levhası var.</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_Necromancy_Failed">%s cesedini diriltme girişiminiz başarısız oldu!</string>
+    <string name="Carcass_TooFarToDissect">Cesedi otopsi yapmak için daha yakın olmalısınız.</string>
     <string name="Caves_TileDescBookshelf">Kim bir mağarada kitaplığa ihtiyaç duyar ki?</string>
     <string name="Caves_TileDescDeco">Duvarda bir maden damarı gözüküyor, Altın olmasın?</string>
     <string name="Caves_TileDescEntrance">Merdiven, bir üst derinliğe inmenizi sağlar.</string>

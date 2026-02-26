@@ -328,6 +328,7 @@
     <string name="Capotain_Name">Tricornio</string>
     <string name="Carcass_DissectMessage">Disecas la carroña y obtienes un %s.</string>
     <string name="Carcass_DissectResult">Del %1$s obtienes %2$d %3$s.</string>
+    <string name="Carcass_TooFarToDissect">Necesitas acercarte más para diseccionar la carroña.</string>
     <string name="Carcass_Kick">Este %s está completamente muerto, no hay necesidad de patearlo.</string>
     <string name="Caves_TileDescBookshelf">¿Quién necesita una estantería en una caverna?</string>
     <string name="Caves_TileDescDeco">La veta de algún material puede verse en la pared. ¿Oro?</string>

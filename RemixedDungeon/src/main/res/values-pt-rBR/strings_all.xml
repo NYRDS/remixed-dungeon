@@ -321,6 +321,7 @@
     <string name="Capotain_Info">Um chapéu alto de aba pequena. Geralmente é usado por puritanos, mas você não precisa ser religioso para usa-lo. Por algum motivo, possui uma placa de identificação, que diz \&quot;Salomão\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_DissectResult">Do %1$s você obtém %2$d colheita %3$s.</string>
+    <string name="Carcass_TooFarToDissect">Você precisa estar mais perto para dissecar a carcaça.</string>
     <string name="Carcass_Info">restos de %s totalmente morto.</string>
     <string name="Carcass_Necromancy_Failed">\"Sua tentativa de levantar o cadáver de %s falhou!\"</string>
     <string name="Caves_TileDescBookshelf">Quem precisa de uma estante de livros em uma caverna?</string>
