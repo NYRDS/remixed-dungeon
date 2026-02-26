@@ -1111,6 +1111,7 @@
     <string name="IronKey_Info">Οι εγκοπές αυτού του αρχαίου σιδερένιου κλειδιού έχουν φθαρεί αρκετά· το δερμάτινο κορδόνι του είναι φαγωμένο από τον χρόνο. Τι πόρτα να ανοίγει, άραγε;</string>
     <string name="IronKey_Name">σιδερένιο κλειδί</string>
     <string name="ItemSprite_Info1">Άφησε κάτω: %1$.1f %2$.1f</string>
+    <string name="Item_ACAlchemy">ΑΛΧΗΜΕΙΑ</string>
     <string name="Item_ACDrop">ΑΦΗΣΕ ΚΑΤΩ</string>
     <string name="Item_ACPickup">Μάζεμα</string>
     <string name="Item_ACThrow">ΠΕΤΑΞΕ</string>
@@ -3007,6 +3008,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

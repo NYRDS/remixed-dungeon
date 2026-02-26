@@ -1947,6 +1947,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="TownsfolkMovieNPC_Name">városiak</string>
     <string name="TownsfolkMovieNPC_Name_Objective">városiak</string>
     <string name="TownsfolkNPC_Desc">Egyvalaki a helyiek közül. Bár köztük ő csak átlagos, az öltözéke elég drágának látszik.</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">Nahát! Még egy kalandor, remek! Vigyél el annyi értéket, amennyit csak tudsz!</string>
     <string name="TownsfolkNPC_Message2">A kazamatának köszönhetően úgy meggazdagodott a város, hogy bármelyik lakó megengedhet magának egy vakációt, amikor csak akar! Tulajdonképpen ezért vannak itt most ilyen kevesen.</string>
     <string name="TownsfolkNPC_Message3">Míly csodás nap.</string>
@@ -2610,6 +2611,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
