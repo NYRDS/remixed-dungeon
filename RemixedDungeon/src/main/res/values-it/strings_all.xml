@@ -172,6 +172,7 @@
     <string name="Bandit_Name">bandito pazzo</string>
     <string name="Bandit_Name_Objective">bandito pazzo</string>
     <string name="BarkskinBuff_Name">Pelle coriacea</string>
+    <string name="Barrel_Name">barile</string>
     <string name="Bat_Defense">eluso</string>
     <string name="Bat_Desc">Questi vivaci e tenaci abitanti delle grotte possono sconfiggere gli avversari molto più grandi di loro recuperando la loro salute con ogni attacco riuscito.</string>
     <string name="Bat_Name">pipistrello vampiro</string>
@@ -2458,6 +2459,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
