@@ -42,6 +42,7 @@ public class WndItemAlchemy extends Window {
     private final RedButton executeButton;
     private final RedButton executeX5Button;
     private final RedButton executeX10Button;
+    private final RedButton executeX50Button;
 
     // Track recipe rows for selection
     private final ArrayList<RecipeListItem> recipeRows = new ArrayList<>();
@@ -142,7 +143,7 @@ public class WndItemAlchemy extends Window {
         buttonsContainer.setGap(SMALL_GAP); // Reduced gap for tighter fit
 
         // Execute button
-        executeButton = new RedButton(R.string.WndItemAlchemy_ExecuteRecipe) {
+        executeButton = new RedButton("Transmute") {
             @Override
             protected void onClick() {
                 executeSelectedRecipe(1);
@@ -168,6 +169,15 @@ public class WndItemAlchemy extends Window {
         };
         executeX10Button.autoSize();
 
+        // Execute x50 button
+        executeX50Button = new RedButton("x50") {
+            @Override
+            protected void onClick() {
+                executeSelectedRecipe(50);
+            }
+        };
+        executeX50Button.autoSize();
+
         executeButton.enable(selectedRecipe != null);
         buttonsContainer.add(executeButton);
 
@@ -176,6 +186,9 @@ public class WndItemAlchemy extends Window {
 
         executeX10Button.enable(selectedRecipe != null);
         buttonsContainer.add(executeX10Button);
+
+        executeX50Button.enable(selectedRecipe != null);
+        buttonsContainer.add(executeX50Button);
 
         // Add the buttons container to the main layout
         controlsBox.add(buttonsContainer);
@@ -259,6 +272,7 @@ public class WndItemAlchemy extends Window {
         executeButton.enable(hasRecipe);
         executeX5Button.enable(hasRecipe && canExecuteRecipe(5));
         executeX10Button.enable(hasRecipe && canExecuteRecipe(10));
+        executeX50Button.enable(hasRecipe && canExecuteRecipe(50));
     }
 
     private boolean canExecuteRecipe(int times) {
