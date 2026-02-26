@@ -505,6 +505,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="CommonArrow_Name">flecha</string>
     <string name="CompositeCrossbow_Info">Esta besta reforçada revela-se uma ferramenta mais eficiente em comparação com a sua contrapartida de madeira.</string>
     <string name="CompositeCrossbow_Name">Besta de compósito</string>
+    <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">Flechas lançadas por este arco composto infligem mais dano e são mais precisos quando comparados ao arco de madeira, ao preço de velocidade.</string>
     <string name="CompoundBow_Name">arco composto</string>
     <string name="ConcreteBlock_Description">Para empurrar este bloco você precisa ter %d pontos de força </string>
@@ -2817,6 +2818,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

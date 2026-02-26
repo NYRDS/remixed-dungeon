@@ -604,6 +604,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Drink_ACDrink">MINUM</string>
     <string name="Drink_Message">Minuman itu sungguh menyegarkan!</string>
     <string name="DrunkardNPC_Desc">Pelanggan penginapan reguler dalam keadaan alami.</string>
+    <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">pemabuk</string>
     <string name="DrunkardNPC_Name_Objective">pemabuk</string>
     <string name="Drunkard_Phrase_1">LEBIH BANYAK BOS!</string>
@@ -2800,6 +2801,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -2318,6 +2318,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WoodenCrossbow_Name">Busur silang kayu</string>
     <string name="WoodenShield_name">Pengadang Kayu</string>
     <string name="Worm_Desc">Tak dapat gambarkan betapa besarnya cacing ini. Sebahagian badannya masih di bawah lantai, badan makhluk tersebut diselaputi dengan cebisan daging dan lendir. Mandibel gergasi merupakan cara ia bergerak terus ke permukaan.</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">cacing</string>
     <string name="Worm_Name_Objective">cacing</string>
     <string name="Wraith_Defense">dielak</string>
@@ -2576,6 +2577,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
