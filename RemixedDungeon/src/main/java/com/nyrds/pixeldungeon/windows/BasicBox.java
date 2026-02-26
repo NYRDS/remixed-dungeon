@@ -3,6 +3,9 @@ package com.nyrds.pixeldungeon.windows;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.ui.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by mike on 10.05.2018.
  * This file is part of Remixed Pixel Dungeon.
@@ -13,8 +16,8 @@ public abstract class BasicBox extends Component{
     @Override
     public void measure() {
         if (dirty) {
-
-            for (Gizmo gizmo: members) {
+            List<Gizmo> snapshot = new ArrayList<>(members);
+            for (Gizmo gizmo: snapshot) {
                 if (gizmo instanceof Component) {
                     ((Component) gizmo).measure();
                 }
@@ -65,7 +68,8 @@ public abstract class BasicBox extends Component{
     public void layout() {
         dirty = true;
 
-        for (Gizmo gizmo: members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for (Gizmo gizmo: snapshot) {
             if (gizmo instanceof Component) {
                 ((Component) gizmo).layout();
             }

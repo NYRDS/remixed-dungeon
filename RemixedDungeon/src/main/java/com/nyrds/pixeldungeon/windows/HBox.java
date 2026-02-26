@@ -2,6 +2,9 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.watabou.noosa.Gizmo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -58,7 +61,8 @@ public class HBox extends BasicBox {
     private void alignLeft() {
         float pos = x;
 
-        for(Gizmo g :members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for(Gizmo g : snapshot) {
             if (g instanceof IPlaceable) {
                 ((IPlaceable) g).setPos(pos, yAlign((IPlaceable) g));
                 pos += ((IPlaceable) g).width() + gap;
@@ -69,7 +73,8 @@ public class HBox extends BasicBox {
     private void alignRight() {
         float pos = x + maxWidth;
 
-        for(Gizmo g :members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for(Gizmo g : snapshot) {
             if (g instanceof IPlaceable) {
                 ((IPlaceable) g).setPos(pos - ((IPlaceable) g).width() - gap, yAlign((IPlaceable) g));
                 pos -= ((IPlaceable) g).width() + gap;
@@ -80,7 +85,8 @@ public class HBox extends BasicBox {
     private float childsWidth() {
         float childsWidth = 0;
 
-        for(Gizmo g :members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for(Gizmo g : snapshot) {
             if (g instanceof IPlaceable) {
                 childsWidth += ((IPlaceable) g).width() + gap;
             }
@@ -92,7 +98,8 @@ public class HBox extends BasicBox {
 
         float pos = x + (maxWidth - childsWidth()) / 2;
 
-        for(Gizmo g :members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for(Gizmo g : snapshot) {
             if (g instanceof IPlaceable) {
                 ((IPlaceable) g).setPos(pos, yAlign((IPlaceable) g));
                 pos += ((IPlaceable) g).width() + gap;
@@ -114,7 +121,8 @@ public class HBox extends BasicBox {
         width = 0;
         height = 0;
 
-        for(Gizmo g :members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for(Gizmo g : snapshot) {
             if (g instanceof IPlaceable) {
                 width += ((IPlaceable) g).width() + gap;
                 height = Math.max(height,((IPlaceable) g).height());

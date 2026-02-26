@@ -7,8 +7,10 @@ import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 import com.watabou.pixeldungeon.windows.elements.TabContent;
+import com.watabou.noosa.Gizmo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class WndTabbed extends Window {
 
@@ -76,7 +78,8 @@ public class WndTabbed extends Window {
             add(tab);
         }
 
-        for (var child: members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for (var child: snapshot) {
             if (child instanceof TabContent) {
                 ((TabContent) child).setMaxWidth(width);
             }

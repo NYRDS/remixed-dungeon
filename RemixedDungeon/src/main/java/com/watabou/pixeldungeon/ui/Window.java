@@ -17,6 +17,9 @@ import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.utils.Signal;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import lombok.Getter;
 
 
@@ -97,8 +100,8 @@ public class Window extends Group implements Signal.Listener<Key>, IWindow {
 	public void resize( int w, int h ) {
 		this.width = w;
 		this.height = h;
-		
-		chrome.size( 
+
+		chrome.size(
 			width + chrome.marginHor(),
 			height + chrome.marginVer() );
 
@@ -106,7 +109,8 @@ public class Window extends Group implements Signal.Listener<Key>, IWindow {
 		camera.x = (int)(GameLoop.width - camera.screenWidth()) / 2;
 		camera.y = (int)(GameLoop.height - camera.screenHeight()) / 2;
 
-		for(var member: members) {
+		List<Gizmo> snapshot = new ArrayList<>(members);
+		for(var member: snapshot) {
 			if(member instanceof Component) {
 				((Component) member).layout();
 			}
@@ -150,7 +154,8 @@ public class Window extends Group implements Signal.Listener<Key>, IWindow {
 	}
 
     public Window getActiveDialog() {
-        for(var maybeWindow: members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for(var maybeWindow: snapshot) {
             if(maybeWindow instanceof Window) {
                 return (Window) maybeWindow;
             }

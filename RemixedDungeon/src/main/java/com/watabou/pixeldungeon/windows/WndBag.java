@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.input.Keys;
 import com.nyrds.util.GuiProperties;
+import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -30,6 +31,7 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import lombok.Getter;
 
@@ -233,7 +235,8 @@ public class WndBag extends WndTabbed {
 	}
 
 	public void setItemsActive(boolean state) {
-		for (var child: members) {
+		List<Gizmo> snapshot = new ArrayList<>(members);
+		for (var child: snapshot) {
 			if(child instanceof ItemButton) {
 				child.setActive(state);
 			}

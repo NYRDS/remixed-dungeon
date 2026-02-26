@@ -6,6 +6,9 @@ import com.watabou.noosa.Gizmo;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,7 +33,8 @@ public class VBox extends BasicBox {
     private void alignTop() {
         float pos = top();
 
-        for(Gizmo g :members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for(Gizmo g : snapshot) {
             if (g instanceof IPlaceable) {
                 IPlaceable gip = (IPlaceable) g;
 
@@ -49,7 +53,8 @@ public class VBox extends BasicBox {
     private void alignBottom() {
         float pos = bottom();
 
-        for(Gizmo g :members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for(Gizmo g : snapshot) {
             if (g instanceof IPlaceable) {
                 IPlaceable gip = (IPlaceable) g;
 
@@ -68,7 +73,8 @@ public class VBox extends BasicBox {
     public float childsHeight() {
         float childsHeight = 0;
 
-        for(Gizmo g :members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for(Gizmo g : snapshot) {
             if (g instanceof IPlaceable) {
                 IPlaceable gip = (IPlaceable) g;
 
@@ -86,7 +92,8 @@ public class VBox extends BasicBox {
     private void alignCenter() {
         float pos = top() + (height() - childsHeight()) / 2;
 
-        for(Gizmo g :members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for(Gizmo g : snapshot) {
             if (g instanceof IPlaceable) {
                 IPlaceable gip = (IPlaceable) g;
 
@@ -124,7 +131,8 @@ public class VBox extends BasicBox {
         width = 0;
         height = 0;
 
-        for(Gizmo g :members) {
+        List<Gizmo> snapshot = new ArrayList<>(members);
+        for(Gizmo g : snapshot) {
             if (g instanceof IPlaceable) {
                 IPlaceable gip = (IPlaceable) g;
 
