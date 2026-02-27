@@ -86,6 +86,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="ArmoredStatue_Name">canlandırılmış heykel</string>
     <string name="ArmoredStatue_Name_Objective">canlandırılmış heykel</string>
     <string name="Artifact_Limit">Tek seferde sadece 2 eser giyebilirsiniz.</string>
+    <string name="AttackDelay_Increased">Böyle %s kullanamıyorum. Yavaş sallantılar, ağır nefesler...</string>
     <string name="Attack_Cooldown">Saldırı bekleme süresi</string>
     <string name="Attack_Range">Saldırı menzili</string>
     <string name="AwarenessBuff_Info">Duyular keskinleşti ve çevre hakkında daha fazla farkındalık sağladı.</string>
@@ -2879,6 +2880,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
