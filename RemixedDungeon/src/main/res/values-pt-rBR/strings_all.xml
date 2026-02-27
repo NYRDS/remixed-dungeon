@@ -321,9 +321,9 @@
     <string name="Capotain_Info">Um chapéu alto de aba pequena. Geralmente é usado por puritanos, mas você não precisa ser religioso para usa-lo. Por algum motivo, possui uma placa de identificação, que diz \&quot;Salomão\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_DissectResult">Do %1$s você obtém %2$d colheita %3$s.</string>
-    <string name="Carcass_TooFarToDissect">Você precisa estar mais perto para dissecar a carcaça.</string>
     <string name="Carcass_Info">restos de %s totalmente morto.</string>
-    <string name="Carcass_Necromancy_Failed">\"Sua tentativa de levantar o cadáver de %s falhou!\"</string>
+    <string name="Carcass_Necromancy_Failed">\&quot;Sua tentativa de levantar o cadáver de %s falhou!\&quot;</string>
+    <string name="Carcass_TooFarToDissect">Você precisa estar mais perto para dissecar a carcaça.</string>
     <string name="Caves_TileDescBookshelf">Quem precisa de uma estante de livros em uma caverna?</string>
     <string name="Caves_TileDescDeco">Um veio de algum minério está visível na parede. Será Ouro?</string>
     <string name="Caves_TileDescEntrance">A escada te levará ao piso superior.</string>
@@ -1301,6 +1301,7 @@ Parede
     <string name="Monk_Defense">defendeu</string>
     <string name="Monk_Desc">Estes monges são fanáticos, que se dedicaram a proteger segredos de suas cidades de todos os estrangeiros. Eles não usam nenhum tipo de armadura ou armas, contando apenas com a arte de combate corpo-a-corpo.</string>
     <string name="Monk_Disarm">%1$s derrubou %2$s de suas mãos!</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">monge anão</string>
     <string name="Monk_Name_Objective">monge anão</string>
     <string name="MoongraceBuff_Info">O ar ao redor fica mais saturado, o que permite uma melhor concentração e restauração das reservas mágicas.</string>
@@ -1986,6 +1987,7 @@ outro local do nível.</string>
     <string name="Stylus_Name">objeto arcano</string>
     <string name="Stylus_SelectArmor">Selecione um item para inscrever</string>
     <string name="Succubus_Desc">Os súcubos são demônios que parecem meninas sedutoras (de maneira um pouco gótica). Usando sua magia, o súcubo pode encantar um herói, que se tornará incapaz de atacar qualquer coisa até que o encanto desapareça.</string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">súcubo</string>
     <string name="Succubus_Name_Objective">súcubo</string>
     <string name="SummonBeast_AtYourCommand">Ao seu comando!</string>
@@ -2824,6 +2826,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

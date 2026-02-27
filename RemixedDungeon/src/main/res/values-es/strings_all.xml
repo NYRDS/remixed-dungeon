@@ -1859,6 +1859,7 @@ otro lugar del nivel.</string>
     <string name="ShamanElder_Name">chamán anciano</string>
     <string name="ShamanElder_Name_Objective">chamán anciano</string>
     <string name="Shaman_Desc">Los gnolls más inteligentes pueden dominar la magia chamánica. Los chamanes gnoll prefieren luchar con hechizos para compensar su falta de fuerza, y no dudan en usarlos contra aquellos que cuestionan su posición en la tribu.</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">El rayo del %s te ha matado...</string>
     <string name="Shaman_Name">chamán gnoll</string>
     <string name="Shaman_Name_Objective">chamán gnoll</string>
@@ -2861,6 +2862,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
