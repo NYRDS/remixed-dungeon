@@ -285,6 +285,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="BodyArmorBuff_Name">Pelindung Tubuh</string>
     <string name="BodyArmorSpell_Info">Mengaktifkan kekuatan otot yang dicadangkan, membuatnya lebih kuat untuk sementara, ini sangat meningkatkan armor Anda tetapi dengan mengorbankan kecepatan gerakan.</string>
     <string name="BodyArmorSpell_Name">Pelindung Tubuh</string>
+    <string name="BoneSaw_Info">Gergaji bedah presisi tinggi yang dirancang untuk pembedahan cepat. Kerusakan dan kecepatan serangannya meningkat seiring keahlian Plague Doctor. Serangan kritis memotong bagian tambahan yang bisa dipanen dari musuh, dan menyerang dengan efisiensi kejam terhadap musuh yang lumpuh.</string>
     <string name="BoneSaw_Name">Gergaji Tulang</string>
     <string name="BoneShard_Info">Sebuah pecahan tulang tajam yang diambil dari musuh yang dikalahkan. Pecahan ini sangat tahan lama dan berguna dalam pembuatan.</string>
     <string name="Boomerang_Info">Saat dilempar ke arah musuh senjata jarak jauh kayu gepeng, melengkung, ini akan kembali ke tangan pelemparnya.</string>
@@ -2807,6 +2808,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
