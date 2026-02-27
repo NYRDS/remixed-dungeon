@@ -756,6 +756,7 @@
     <string name="GoldenSword_Name">黃金劍</string>
     <string name="Golem_Defense">格擋</string>
     <string name="Golem_Desc">矮人們嘗試將他們關於機械的知識與新發現的元素力量相結合。土之靈作為公認的最容易掌控的元素之靈，被用來當作機械的\&quot;靈魂\&quot;。即使這樣，儀式中任何細微的失誤都會造成嚴重的爆炸。</string>
+    <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">魔像</string>
     <string name="Golem_Name_Objective">魔像</string>
     <string name="Goo_Info1">粘咕正在不斷地抽動！</string>
@@ -2680,6 +2681,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

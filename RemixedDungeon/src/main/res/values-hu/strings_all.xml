@@ -341,6 +341,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="ChaosCrystal_Prompt">Válassz helyet a Káosz Jelének</string>
     <string name="ChaosCrystal_ScrollFused">A kristályt elnyelte a rúna ami a tekercsen volt, és egy %s lett belőle.</string>
     <string name="ChaosCrystal_SelectForFuse">Válassz tárgyat a Káosz Kristály behelyezéséhez</string>
+    <string name="ChaosCrystal_ShieldFused">A kristály egyesült a pajzsoddal, és felvette a káosz formáját.</string>
     <string name="ChaosCrystal_StaffFused">A kristály elnyelte a pálcád és egy Varázsbot alakját vette át</string>
     <string name="ChaosCrystal_SwordFused">A kristály elnyelte a fegyveredet és egy Kard alakját vette át</string>
     <string name="ChaosCrystal_Use">HASZNÁL
@@ -2620,6 +2621,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
