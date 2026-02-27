@@ -1795,6 +1795,7 @@ Potrebbe bruciare?</string>
     <string name="Succubus_Name_Objective">succube</string>
     <string name="SummonDeathling_Info">Evoca un Gregario della Morte. I suoi HP e danni crescono con il livello dell\'eroe. \n\nLimite di evocazione: %1$d (+1 ogni Livello di Magia)</string>
     <string name="SummonDeathling_Name">Evoca Gregario della Morte</string>
+    <string name="SungrassBuff_Info">Delle radici sono spuntate dal terreno fornendo erbe curative.</string>
     <string name="SungrassBuff_Name">guarigione delle erbe</string>
     <string name="Sungrass_Desc">L\'erba solare è rinomato per le sue proprietà curative della sua linfa.</string>
     <string name="Sungrass_Name">erba solare</string>
@@ -2444,6 +2445,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_tree_desc">Una strana sensazione sorge guardando questo albero vivo e così pacifico albero. D\'altronde, non molto lontano da qui giace un dungeon stipato di ogni sorta di orrore e morte.</string>
     <string name="town_deco_tree_name">Albero</string>
     <string name="town_deco_urn_name">Urna</string>
+    <string name="town_deco_vat_desc">Questa vasca di pietra è colma fino all\'orlo di acqua santa.</string>
     <string name="town_deco_wall_brazier_desc">Il vapore che esce dalle braci ardenti riempie la stanza di piacevoli aromi.</string>
     <string name="town_deco_wall_brazier_name">Braciere</string>
     <string name="town_deco_wall_candles_name">Candele</string>
@@ -2468,6 +2470,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
