@@ -350,9 +350,9 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Carcass_Info">Szczątki totalnie martwego %s,</string>
     <string name="Carcass_Kick">%s jest totalnie martwy, nie ma powodu żeby to kopać.</string>
     <string name="Carcass_Name">Szczątki %s</string>
-    <string name="Carcass_TooFarToDissect">Musisz być bliżej, aby dokonać sekcji zwłok.</string>
     <string name="Carcass_Necromancy">Ożywiono zwłoki %s</string>
     <string name="Carcass_Necromancy_Failed">Twoja próba ożywienia zwłok %s zawiodła!</string>
+    <string name="Carcass_TooFarToDissect">Musisz być bliżej, aby dokonać sekcji zwłok.</string>
     <string name="Caves_TileDescBookshelf">Kto u licha potrzebuje biblioteczki w jaskini?</string>
     <string name="Caves_TileDescDeco">Żyła jakiejś rudy jest widoczna na ścianie. Złoto?</string>
     <string name="Caves_TileDescEntrance">Drabina wiodąca poziom wyżej.</string>
@@ -2263,6 +2263,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="VertigoBuff_Info">Zawroty głowy sprawiają trudności z objęciem prostej trajektorii chodu!</string>
     <string name="VertigoBuff_Name">Zawroty głowy</string>
     <string name="View_Distance">Pole widzenia</string>
+    <string name="VileEssence_Info">Skoncentrowana esencja zepsucia pozyskana z pokonanego wroga. Ta mroczna substancja pulsuje złowrogą energią i jest wysoko ceniona w procesach alchemicznych.</string>
     <string name="Viscosity_Status">rozłożone %d</string>
     <string name="Viscosity_Txt">%s cierpienia</string>
     <string name="WandHolster_Info">Ten smukły uchwyt jest wykonany ze skóry jakiegoś egzotycznego zwierzęcia. Pozwala na przechowywanie %d kosturów.</string>
@@ -3008,6 +3009,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

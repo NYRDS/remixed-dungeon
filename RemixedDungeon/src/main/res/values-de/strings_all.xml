@@ -2503,6 +2503,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
     <string name="WoodenShield_desc">Ein grob gefertigter Holzschild ist der einfachste verfügbare Schild. Er ist rund und kann von Zeit zu Zeit einige Schäden abwehren.</string>
     <string name="WoodenShield_name">Holzschild</string>
     <string name="Worm_Desc">Es ist unmöglich zu sagen wie groß dieser Wurm ist. Nach und nach in den Raum grabend, ist der Körper der Kreatur mit verrottetem Fleisch und Schleim bedeckt. Seine gigantischen Mundwerkzeuge geben dir eine klare Vorstellung, wie sich dieses Monster durch die Oberfläche bewegt.</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">Wurm</string>
     <string name="Worm_Name_Objective">Wurm</string>
     <string name="Wraith_Defense">ausgewichen</string>
@@ -2794,6 +2795,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 </resources>
