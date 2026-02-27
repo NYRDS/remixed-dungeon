@@ -200,6 +200,7 @@
     <string name="Bat_Desc">这些敏捷且坚韧的洞穴穹顶居民能够通过每次成功的攻击来恢复自己的生命，从而打败比它们强大的对手。</string>
     <string name="Bat_Name">吸血蝙蝠</string>
     <string name="Bat_Name_Objective">吸血蝙蝠</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">这把有着巨大钢制头部的战斧能将庞大的力量倾注在每次挥击之中。</string>
     <string name="BattleAxe_Name">战斧</string>
     <string name="Bee_Desc">尽管蜜蜂体型很小，但它们倾向于激烈地保护自己的蜂巢。不过它们活不长。</string>
@@ -325,8 +326,8 @@
     <string name="Capotain_Name">朝圣平顶帽</string>
     <string name="Carcass_DissectFailed">你解剖了%s，但没有发现任何有价值的东西。</string>
     <string name="Carcass_Info">完全死亡的 %s 的残骸。</string>
-    <string name="Carcass_TooFarToDissect">你需要离得更近才能解剖残骸。</string>
     <string name="Carcass_Necromancy">你复活了%s的尸体！</string>
+    <string name="Carcass_TooFarToDissect">你需要离得更近才能解剖残骸。</string>
     <string name="Caves_TileDescBookshelf">谁会需要在矿洞里放个书架？</string>
     <string name="Caves_TileDescDeco">一些矿脉在墙上清晰可见。是金子吗？</string>
     <string name="Caves_TileDescEntrance">通向上一层的梯子。</string>
@@ -1223,6 +1224,7 @@
     <string name="Luck_Name_0">幸运%s</string>
     <string name="Luck_Name_1">幸运%s</string>
     <string name="Luck_Name_2">幸运%s</string>
+    <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">铁头在上，脑袋开花。</string>
     <string name="Mace_Name">硬头锤</string>
     <string name="MageArmor_ACSpecial">融化之土</string>
@@ -2835,5 +2837,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 </resources>
