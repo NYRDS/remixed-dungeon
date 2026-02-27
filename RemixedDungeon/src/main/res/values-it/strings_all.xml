@@ -171,6 +171,7 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">bandito pazzo</string>
     <string name="Bandit_Name_Objective">bandito pazzo</string>
+    <string name="BardNPC_Name_Objective">bardo</string>
     <string name="BarkskinBuff_Name">Pelle coriacea</string>
     <string name="Barrel_Name">barile</string>
     <string name="Bat_Defense">eluso</string>
@@ -1007,6 +1008,7 @@ Potrebbe bruciare?</string>
     <string name="Level_TileDescInactiveTrap">La trappola è stata attivata prima e non è più pericolosa.</string>
     <string name="Level_TileDescLockedDoor">La porta è chiusa, hai bisogno di una chiave adatta per aprirla.</string>
     <string name="Level_TileDescLockedExit">Delle barre pesanti bloccano le scale che conducono sotto</string>
+    <string name="Level_TileDescPileOfStones">Una pila di pietre estremamente pesanti, sembra impossibile muoverle.</string>
     <string name="Level_TileDescSign">Non riesci a leggere il testo da qui</string>
     <string name="Level_TileDescStatue">Qualcuno voleva decorare questo luogo, ha fallito, ovviamente.</string>
     <string name="Level_TileDescTrap">se fai un passo (o cammini) sulla lastra a pressione attiverai la trappola.</string>
@@ -2463,6 +2465,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 </resources>

@@ -329,9 +329,9 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Capotain_Name">Kapten</string>
     <string name="Carcass_Devoured">Anda telah melahap bangkai dari %s!</string>
     <string name="Carcass_DissectFailed">Anda membedah %s tetapi tidak menemukan apa pun yang berharga.</string>
-    <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk membedah bangkai.</string>
     <string name="Carcass_DissectResult">Dari %1$s kamu memperoleh %2$d %3$s.</string>
     <string name="Carcass_Name">bangkai %s</string>
+    <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk membedah bangkai.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang butuh rak buku di gua?</string>
     <string name="Caves_TileDescDeco">Kilauan dari beberapa logam terlihat pada tembok. Emas?</string>
     <string name="Caves_TileDescEntrance">Tangga yang membawa ke tempat yang lebih tinggi.</string>
@@ -770,6 +770,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Gnoll_BecomeGuardianDesc">Menjadi penjaga</string>
     <string name="Gnoll_BecomeWitchdoctorDesc">Menjadi Penyihir-Dokter</string>
     <string name="Gnoll_Desc">Gnoll adalah manusia setengah hyena. Mereka tinggal di saluran dan dugeon, mencoba menyerang permukaan dari waktu ke waktu. Gnoll pengintai adalah anggota biasa dari kelompok mereka, mereka tak sekuat gnoll besar dan tak sepintar dukun.</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnoll pengintai</string>
     <string name="Gnoll_Name_Objective">gnoll pengintai</string>
     <string name="Gold_Collect">Kumpulkan koin emas untuk dipakai di toko nanti.</string>
@@ -2805,6 +2806,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
