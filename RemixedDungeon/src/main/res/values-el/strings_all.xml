@@ -290,6 +290,7 @@
     <string name="BlessedBuff_Name">Ευλογία</string>
     <string name="BlindnessBuff_Info">Παντελής τύφλωση. Μόνο οι ήχοι μπορούν να γίνουν αντιληπτοί.</string>
     <string name="BlindnessBuff_Name">Τύφλωση</string>
+    <string name="BloodTransfusion_Name">Μετάγγιση Αίματος</string>
     <string name="BodyArmorBuff_Info">Η άμυνα της πανοπλίας αυξάνεται, με ένα αντίτιμο στην ταχύτητα κίνησης.</string>
     <string name="BodyArmorBuff_Name">Σωματική πανοπλία</string>
     <string name="BodyArmorSpell_Info">Ενεργοποιεί το απόθεμα δύναμης των μυών σου και τους κάνει προσωρινά ισχυρότερους. Η αμυντική ισχύς αυξάνεται κατά πολύ, με ένα αντίτιμο στην ταχύτητα κίνησης.</string>
@@ -344,9 +345,9 @@
     <string name="Carcass_Info">Λείψανα ενός παντελώς νεκρού πλάσματος (%s).</string>
     <string name="Carcass_Kick">Το πλάσμα (%s) τα έχει τινάξει ήδη. Δεν χρειάζεται να το κλωτσάς.</string>
     <string name="Carcass_Name">Λείψανα (%s)</string>
-    <string name="Carcass_TooFarToDissect">Πρέπει να πλησιάσεις περισσότερο για να ανατεμαχίσεις τη σορό.</string>
     <string name="Carcass_Necromancy">Ανέστησες τη σορό του πλάσματος: %s!</string>
     <string name="Carcass_Necromancy_Failed">Η απόπειρά σου να αναστήσεις τη σορό (%s) απέτυχε!</string>
+    <string name="Carcass_TooFarToDissect">Πρέπει να πλησιάσεις περισσότερο για να ανατεμαχίσεις τη σορό.</string>
     <string name="Caves_TileDescBookshelf">Ποιος χρειάζεται τη βιβλιοθήκη στη σπηλιά;</string>
     <string name="Caves_TileDescDeco">Μια φλέβα από κάποιο ορυκτό διακρίνεται στον τοίχο. Χρυσός;</string>
     <string name="Caves_TileDescEntrance">Η σκάλα οδηγεί στο ανώτερο επίπεδο.</string>
@@ -3013,6 +3014,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

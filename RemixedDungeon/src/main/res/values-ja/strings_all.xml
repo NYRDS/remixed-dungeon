@@ -327,12 +327,12 @@
     <string name="Capotain_Name">カポテイン</string>
     <string name="Carcass_Devoured">あなたは %sの死体を食い尽くした！</string>
     <string name="Carcass_DissectMessage">死骸を解剖して %s を得た。</string>
-    <string name="Carcass_TooFarToDissect">死体を解剖するには、もっと近づく必要がある。</string>
     <string name="Carcass_Info">完全に死んだ %sの死体</string>
     <string name="Carcass_Kick">この %sは完全に死んでいるので、蹴る必要はない。</string>
     <string name="Carcass_Name">%sの死体</string>
     <string name="Carcass_Necromancy">あなたは%sの死体を蘇らせた！</string>
     <string name="Carcass_Necromancy_Failed">あなたは%sの死体を蘇らせようとしたが失敗した。</string>
+    <string name="Carcass_TooFarToDissect">死体を解剖するには、もっと近づく必要がある。</string>
     <string name="Caves_TileDescBookshelf">洞窟に本棚が必要だろうか？</string>
     <string name="Caves_TileDescDeco">壁に鉱脈が見える。金か？</string>
     <string name="Caves_TileDescEntrance">はしごは上層階まで続いている。</string>
@@ -1981,6 +1981,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SpiderExploding_Name">スパイダーワーカー</string>
     <string name="SpiderExploding_Name_Objective">スパイダーワーカー</string>
     <string name="SpiderGuard_Desc">兵士のように、クモの警備兵は王国を守ることを誓う。ガードマンの毒は標的を動けなくするために使われ、麻痺を引き起こし、簡単に獲物にしてしまう。</string>
+    <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">スパイダーガード</string>
     <string name="SpiderGuard_Name_Objective">スパイダーガード</string>
     <string name="SpiderMindAmber_Desc">アンバースパイダーは、通常のサイキックスパイダーに似た超能力を持つが、肉体的にははるかにタフな、神秘的で珍しい生き物である。「琥珀」という名前は、彼らの巨大な脳袋の色にちなんでおり、アンバースパイダーがその力を使って攻撃するとき、犠牲者の前に姿を現す。</string>
@@ -2914,6 +2915,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 </resources>

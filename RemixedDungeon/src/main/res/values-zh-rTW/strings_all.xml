@@ -2009,6 +2009,7 @@
     <string name="TrapWnd_Step">您當真要踏上此陷阱？您可能會因此失命。</string>
     <string name="TrapWnd_Title">陷阱</string>
     <string name="TreacherousSpirit_Desc">這個巨大的怪物看起來像是一片有生命的黑暗之雲。它無眼瞼的眼睛凝視這你，隨著你的每個動作而顫動。</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">背叛的精神</string>
     <string name="TreacherousSpirit_Name_Objective">背叛的精神</string>
     <string name="Typical_Damage">典型傷害</string>
@@ -2677,6 +2678,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

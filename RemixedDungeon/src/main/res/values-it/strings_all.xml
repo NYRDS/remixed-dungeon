@@ -1531,6 +1531,7 @@ Potrebbe bruciare?</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">spaventapasseri</string>
     <string name="ScarecrowNPC_Name_Objective">spaventapasseri</string>
+    <string name="ScarecrowNPC_Quest_End">Oh gioia, oh mio!\nPer questo, riceverai una dolce fetta di torta!</string>
     <string name="ScarecrowNPC_Quest_Start_Female">Allora ciao ragazzina, come stai?\nHo qualcosa di eccitante per te!\n\nOh quanto sarei grato,\nSe andassi a raccogliere qualche caramella per me!\n\n</string>
     <string name="ScarecrowNPC_Quest_Start_Male">Perché ciao ragazzone, come stai?\nHo qualcosa di emozionante per te!\n\nOh quanto sarei grato,\nSe andassi a raccogliere un po\' di caramelle per me!\n\n</string>
     <string name="Scorpio_Desc">Queste creature demoniche simili ad aracnidi evitano i combattimenti ravvicinati ad ogni costo, lanciando punte paralizzanti da lunghe distanze.</string>
@@ -2466,6 +2467,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
