@@ -118,6 +118,7 @@
     <string name="Badges_GamesPlayed2">100 partite giocate</string>
     <string name="Badges_GamesPlayed3">500 partite giocate</string>
     <string name="Badges_GamesPlayed4">2000 partite giocate</string>
+    <string name="Badges_GamesPlayed5">5000 partite giocate</string>
     <string name="Badges_GnollUnlocked">Gnoll sbloccato</string>
     <string name="Badges_GoldColleted1">100 monete raccolte</string>
     <string name="Badges_GoldColleted2">500 monete raccolte</string>
@@ -2476,6 +2477,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
