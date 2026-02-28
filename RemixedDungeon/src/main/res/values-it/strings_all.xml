@@ -1505,6 +1505,7 @@ Potrebbe bruciare?</string>
     <string name="RottenFood_Message">Disgustoso!</string>
     <string name="RottenMeat_Info">pezzo di carne marcia</string>
     <string name="RottenMeat_Name">carne marcia</string>
+    <string name="RottenOrgan_Name">Organo Marcio</string>
     <string name="RottenPasty_Info">ex-pasto sembra così disgustoso</string>
     <string name="RottenPasty_Name">pasticcio marcio</string>
     <string name="RottenPumpkinPie_Name">torta di zucca marcia</string>
@@ -2323,6 +2324,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_armorstand_scale_name">Armatura a scaglie</string>
     <string name="town_deco_banner_desc">Un elegante stendardo raffigurante i simboli di questa osteria.</string>
     <string name="town_deco_banner_name">Stendardo</string>
+    <string name="town_deco_barrel_desc">Un barile regolare, non nelle migliori condizioni.</string>
     <string name="town_deco_barrel_name">Barile</string>
     <string name="town_deco_barrel_wine_desc">Utilizzato per conservare una bevanda così preziosa come il vino.</string>
     <string name="town_deco_barrel_wine_name">Botte di vino</string>
@@ -2472,15 +2474,5 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
-
-
-
-
-
-
-
-
-
-
 
 </resources>

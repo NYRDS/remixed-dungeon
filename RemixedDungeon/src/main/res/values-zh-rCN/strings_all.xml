@@ -198,6 +198,7 @@
     <string name="Barrel_Pumpkin_Name">南瓜</string>
     <string name="Bat_Defense">回避</string>
     <string name="Bat_Desc">这些敏捷且坚韧的洞穴穹顶居民能够通过每次成功的攻击来恢复自己的生命，从而打败比它们强大的对手。</string>
+    <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">吸血蝙蝠</string>
     <string name="Bat_Name_Objective">吸血蝙蝠</string>
     <string name="BattleAxe_Gender">masculine</string>
@@ -2838,8 +2839,5 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
-
-
-
 
 </resources>
