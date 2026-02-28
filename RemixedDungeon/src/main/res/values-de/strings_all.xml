@@ -571,6 +571,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="DashSpell_OnSelf">Ich kann nicht zu dieser Stelle rennen.</string>
     <string name="DashSpell_TooFar">Ich kann nicht so weit rennen.</string>
     <string name="DeathKnight_Desc">Auf den ersten Blick ist es ein mächtiger Krieger in einer massiven Rüstung, aber das Skeletthafte Grinsen macht es ein wenig lächerlich. Ein Todesritter ist eine Manifestation eines Geistes eines Ritters, der dabei gescheitert ist, seine Gelübde zu erfüllen. Und in seinem Fluch wird er für immer das Land verwundern, er versucht seinen Namen in der Schlacht zu reinigen, Unschuldige zu töten, unfähig, sich zu erinnern, was er geschworen hat zu beschützen.</string>
+    <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name">Todesritter</string>
     <string name="DeathKnight_Name_Objective">Todesritter</string>
     <string name="Death_Name_0">Todes %s</string>
@@ -2795,6 +2796,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

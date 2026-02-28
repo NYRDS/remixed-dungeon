@@ -1087,6 +1087,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="KrampusHead_Name">Kepala Krampus</string>
     <string name="KunaiThrow_Info">Lemparan Kunai yang Mematikan ini akan dilakukan dengan sangat cepat, sangat cepat sehingga Anda bahkan tidak dapat memilih target.\n\nMaster Sejati dapat melempar lebih dari satu Kunai sekaligus.</string>
     <string name="KunaiThrow_Name">Lempar Kunai</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Senjata ini terdiri dari sabit pada rantai logam dengan beban besi berat di ujungnya.</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">TARIK</string>
@@ -2809,6 +2810,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
