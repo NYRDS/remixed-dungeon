@@ -2061,6 +2061,7 @@ Potrebbe bruciare?</string>
     <string name="WndCryptoDonate_openWallet">Apri Portafoglio</string>
     <string name="WndCryptoDonate_supportDev">Supporta lo sviluppatore</string>
     <string name="WndCustomizations_Title">Personalizzazioni</string>
+    <string name="WndDonate_commonDonateText">Remixed Dungeon - gratuito per tutti e lo sarà per sempre.\n\nTuttavia, puoi aiutarci a rendere il gioco ancora migliore.\n\nOltre ai nostri sentiti ringraziamenti, riceverai alcuni miglioramenti estetici.</string>
     <string name="WndDonate_donate">dona:</string>
     <string name="WndDonate_gold">oro</string>
     <string name="WndDonate_goldDonate">Donazione d\'Oro</string>
@@ -2477,6 +2478,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

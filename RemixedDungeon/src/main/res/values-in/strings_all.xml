@@ -784,6 +784,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="GoldenStatue_Desc">Sangat sulit dipercaya bahwa, patung hebat ini bukanlah hanya dekorasi, melainkan sebuah makhluk jahat yang menunggu petualang yang tidak menyadarinya. Di pandangan pertama Anda dapat meyakinkan diri bahwa _%s_ nya itu hanya bagian dari lengannya.</string>
     <string name="GoldenStatue_Name">patung emas</string>
     <string name="GoldenStatue_Name_Objective">patung emas</string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="GoldenSword_Info">Biasanya senjata yang terbuat dari logam empuk seperti emas tidak bisa dianggap sesuatu kecuali dekorasi. Walaupun begitu pedang ini kelihatannya dapat menembus sesuatu dengan baik.</string>
     <string name="GoldenSword_Name">pedang emas</string>
     <string name="Golem_Defense">tertahan</string>
@@ -2811,6 +2812,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -391,6 +391,7 @@
     <string name="ChaosSword_Info">混乱为刃，力量蕴内。刀身发颤，砍山分洪，力无不逮。唯有强者，方能使用。</string>
     <string name="ChaosSword_Name">混沌剑</string>
     <string name="CharAction_Charm">魅惑</string>
+    <string name="CharAction_Expel">驱逐</string>
     <string name="CharAction_Give">给</string>
     <string name="CharAction_Hit">击打</string>
     <string name="CharAction_Order">命令</string>
@@ -2839,5 +2840,6 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 </resources>
