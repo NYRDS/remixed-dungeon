@@ -1803,6 +1803,7 @@ outro local do nível.</string>
     <string name="Shades_Name">Óculos escuros</string>
     <string name="ShadowLord_Death">Nãããããoooo...</string>
     <string name="ShadowLord_Desc">Uma Criatura feita de pura maldade e escuridão, muitos acreditam que se trata do próprio Deus Ancião devido sua força. Enquanto outros que se trata apenas de um dos guardiões da câmara do Deus Ancião.</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Prepare-se!</string>
     <string name="ShadowLord_Name">senhor das sombras</string>
     <string name="ShadowLord_Name_Objective">Senhor das Sombras</string>
@@ -2826,6 +2827,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
