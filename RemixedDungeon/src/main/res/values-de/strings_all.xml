@@ -304,6 +304,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BurningBuff_Info">Der Körper ist in lodernde Flammen gehüllt!</string>
     <string name="BurningBuff_Name">Brennend</string>
     <string name="BurningFist_Desc">brennende Faust des Alten Gottes</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">brennende Faust</string>
     <string name="BurningFist_Name_Objective">brennende Faust</string>
     <string name="Burning_Burns">%s ist verbrannt!</string>
@@ -2796,6 +2797,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
