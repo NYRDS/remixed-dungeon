@@ -275,6 +275,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Brute_StaEnraged">feldühödött</string>
     <string name="BurningBuff_Name">Ég</string>
     <string name="BurningFist_Desc">Az Öreg Isten Lángoló Ökle</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">lángoló ököl</string>
     <string name="BurningFist_Name_Objective">lángoló ököl</string>
     <string name="Burning_Burns">%s elégett!</string>
@@ -2622,6 +2623,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
