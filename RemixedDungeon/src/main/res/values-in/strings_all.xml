@@ -910,6 +910,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="HeroSubClass_NameGlad">gladiator</string>
     <string name="HeroSubClass_NameGuardian">pelindung</string>
     <string name="HeroSubClass_NameLich">lich</string>
+    <string name="HeroSubClass_NameNone">none</string>
     <string name="HeroSubClass_NameScout">pengintai</string>
     <string name="HeroSubClass_NameShaman">dukun</string>
     <string name="HeroSubClass_NameSnip">penembak jitu</string>
@@ -2810,6 +2811,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

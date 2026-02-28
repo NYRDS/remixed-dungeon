@@ -1454,6 +1454,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="RatSkull_Info2">Akan tetapi, boleh dijadikan bukti empunya tengkorak ini berupaya membunuh tikus, walaupun bersaiz besar dan berbau busuk.</string>
     <string name="RatSkull_Name">tengkorak tikus gergasi</string>
     <string name="Rat_Desc">Tikus marsupial bersikap agresif, namun ia merupakan haiwan lemah yang menduduki pembetungan. Mereka boleh menjadi bahaya jika dalam kumpulan besar.</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">tikus marsupial</string>
     <string name="Rat_Name_Objective">tikus marsupial</string>
     <string name="Ration_Info">Tiada apa yang menarik di sini: daging kering, beberapa keping biskut - begitulah.</string>
@@ -2590,6 +2591,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 </resources>

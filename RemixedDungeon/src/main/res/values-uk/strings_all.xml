@@ -2663,6 +2663,7 @@
     <string name="town_deco_scrolls_desc">Запилена шафа із купою різноманітних сувоїв та книг.</string>
     <string name="town_deco_scrolls_name">Сувої</string>
     <string name="town_deco_shelf_desc">Порожні полиці.</string>
+    <string name="town_deco_shelf_full_desc">На цій полиці розміщено різні дрібнички.</string>
     <string name="town_deco_shelf_name">Полиці</string>
     <string name="town_deco_shieldboard_desc">Різноманітні щити висять на стенді. Поки що не для продажу.</string>
     <string name="town_deco_shieldboard_name">Щити</string>
@@ -2733,6 +2734,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
