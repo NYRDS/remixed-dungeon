@@ -563,6 +563,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="CorpseDust_Info">Ta kulka trupiego pyłu nie różni się nadzwyczajnie od zwykłej kuli pyłu. W każdym razie, wiesz, że najlepiej pozbyć się tego najszybciej jak to tylko możliwe.</string>
     <string name="CorpseDust_Info2">Może to dla tego, że samo trzymanie tego sprawia że jesteś niespokojny i rozgniewany.</string>
     <string name="CorpseDust_Name">trupi pył</string>
+    <string name="CorpseExplosion_Name">Wybuch Zwłok</string>
     <string name="Crab_Defense">sparowano</string>
     <string name="Crab_Desc">Te olbrzymie kraby są na górze łańcucha pokarmowego w kanałach. Są niezwykle szybkie, a ich gruby egzoszkielet potrafi wytrzymać nawet potężne ciosy.</string>
     <string name="Crab_Gender">masculine</string>
@@ -3009,6 +3010,8 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
 
 
 

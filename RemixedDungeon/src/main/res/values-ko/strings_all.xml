@@ -455,6 +455,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ColdSpirit_Desc">냉기 정령은 순수한 형태의 차가움의 화신입니다. 그들은 창조자들의 마법으로 만들어졌으며 창조자들의 의지에 따라 행동하거나 본능과 반사작용에 의해 행동하는 의지가 없는 껍데기입니다.</string>
     <string name="ColdSpirit_Name">냉기 정령</string>
     <string name="ColdSpirit_Name_Objective">냉기 정령</string>
+    <string name="ComboBuff_Info">다음 공격은 콤보 공격이 됩니다.</string>
     <string name="ComboBuff_Name">콤보</string>
     <string name="Combo_Combo">%d 연타 콤보</string>
     <string name="CommonArrow_Info">쇠촉을 가진 평범한 목재 화살이다.</string>
@@ -2565,6 +2566,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
