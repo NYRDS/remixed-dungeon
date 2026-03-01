@@ -2206,6 +2206,7 @@ outro local do nível.</string>
     <string name="WarriorArmor_NotWarrior">Apenas os guerreiros podem usar essa armadura!</string>
     <string name="WarriorArmor_Prompt">Escolha a direção para saltar</string>
     <string name="WaterElemental_Desc">Elementais de ar podem ser encontrados perto de grandes porções de água. Tipicamente esses seres só vagam.</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name">elemental de água</string>
     <string name="WaterElemental_Name_Objective">elemental de água</string>
     <string name="WaterOfAwareness_Info">A medida que você vai tomando, você sente o conhecimento fluindo para sua mente. Agora que você saberá tudo sobre os seus itens equipados. Além disso, você sentirá todos os itens no nível e saberá todos os seus segredos.</string>
@@ -2828,25 +2829,5 @@ remix.31.1\n
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
+
