@@ -1696,6 +1696,7 @@ egy másik helyre a szinten. </string>
     <string name="SeedPouch_Info">Ez a kis bársony szütyő lehetővé teszi, hogy bármennyi magot magadnál tudj tartani. Nagyon kényelmes megoldás.</string>
     <string name="SeedPouch_Name">mag szütyő</string>
     <string name="Senior_Desc">Ezek a szerzetesek fanatikusok, akik arra szentelték az életüket hogy a városuk titkait védjék minden idegentől. Nem használnak semmilyen fegyvert vagy páncélt, kizárolag a pusztakezes harcra támaszkodnak. Ez a szerzetes különösen arra specializálódott hogy az ellenfelét mozgásképtelenné tegye.</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">idősebb szerzetes</string>
     <string name="Senior_Name_Objective">idősebb szerzetes</string>
     <string name="ServantNPC_Name">fogadóslány</string>
@@ -2623,6 +2624,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

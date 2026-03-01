@@ -2220,6 +2220,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndSaveSlotSelect_Delete_Yes">Si, scarta! </string>
     <string name="WndSaveSlotSelect_SelectSlot">Seleziona cartuccia</string>
     <string name="WndSaveSlotSelect_dontLike">Non ti piacciono le ads? Fai una donazione e scompariranno. PER SEMPRE.</string>
+    <string name="WndSelectLanguage_ImproveTranslation">Aiuta a migliorare le traduzioni di Remixed Dungeon</string>
     <string name="WndSettings_ActionButtonSize">Dimensioni pulsanti d\'azione</string>
     <string name="WndSettings_Brightness">Luminosità</string>
     <string name="WndSettings_ClassicFont">Font Classica</string>
@@ -2485,6 +2486,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
