@@ -1710,6 +1710,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="RottenRation_Info">en algún momento podría haberse comido</string>
     <string name="RottenRation_Name">ración podrida</string>
     <string name="RottingFist_Desc">Puño Putrefacto del Antiguo Dios</string>
+    <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">puño putrefacto</string>
     <string name="RottingFist_Name_Objective">puño putrefacto</string>
     <string name="RoyalShield_desc">Un escudo de metal completo. Sí, es pesado, pero puede brindarle la mejor protección.</string>
@@ -2037,6 +2038,7 @@ otro lugar del nivel.</string>
     <string name="Stylus_Name">pluma arcana</string>
     <string name="Stylus_SelectArmor">Selecciona el objeto que quieres inscribir</string>
     <string name="Succubus_Desc">Los súcubos son demonios con el aspecto de una atractiva mujer (góticamente hablando). Usando su magia, el súcubo puede encantar al héroe, que se volverá incapaz de atacar mientras dure el encantamiento.</string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">súcubo</string>
     <string name="Succubus_Name_Objective">súcubo</string>
     <string name="SummonBeast_AtYourCommand">¡A sus órdenes!</string>
@@ -2863,6 +2865,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
