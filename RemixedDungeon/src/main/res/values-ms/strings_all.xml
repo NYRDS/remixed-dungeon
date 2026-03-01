@@ -1931,6 +1931,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="TownsfolkSilentNPC_Name_Objective">penduduk pekan</string>
     <string name="ToxicGas_Info">Awan hijau gas toksid berpusaran di sini.</string>
     <string name="ToxicGas_Info1">Anda mati kerana terhidu gas toksik.</string>
+    <string name="ToxicGland_Info">Kelenjar toksik yang diperoleh daripada musuh yang dikalahkan. Kelenjar ini dipenuhi dengan toksin kuat dan boleh digunakan dalam proses alkimia.</string>
     <string name="TrapWnd_Step">Anda pasti mahu memijak perangkap ini? Berkemungkinan anda boleh mati.</string>
     <string name="TrapWnd_Title">Perangkap</string>
     <string name="TreacherousSpirit_Desc">Makhluk seperti raksaksa ini menyerupai awan hidup kegelapan. Mata yang tidak berkelip memandang anda, berdenyut-denyut bila melihat anda bergerak.</string>
@@ -2562,6 +2563,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_trapdoor_name">Pintu Kolong</string>
     <string name="town_deco_tree_desc">Nampak pelik melihat ada sepohon pokok, betul-betul berada di sebelah kanan pintu masuk ke dalam kurungan bawah tanah, yang penuh dengan ketakutan dan kematian.</string>
     <string name="town_deco_tree_name">Pokok</string>
+    <string name="town_deco_vat_desc">Bekas batu ini dipenuhi dengan air suci.</string>
     <string name="town_deco_wall_beam_desc">Ia dipasang untuk menyokong bangunan ini.</string>
     <string name="town_deco_wall_beam_name">Alang</string>
     <string name="town_deco_wall_brazier_desc">Wap yang keluar dari bara membara telah memenuhi bilik dengan aroma yang harum baunya.</string>
@@ -2594,6 +2596,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

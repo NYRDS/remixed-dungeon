@@ -1001,6 +1001,7 @@
     <string name="IronKey_Info">這把鐵鑰匙的凹凸處精細不再；其繫索亦歷盡風霜，還能打開甚麼門嗎？</string>
     <string name="IronKey_Name">鐵鑰匙</string>
     <string name="ItemSprite_Info1">掉落至%1$.1f %2$.1f</string>
+    <string name="Item_ACAlchemy">煉金</string>
     <string name="Item_ACDrop">扔下</string>
     <string name="Item_ACThrow">投擲</string>
     <string name="Item_DirThrow">選擇投擲目的地</string>
@@ -2685,6 +2686,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
