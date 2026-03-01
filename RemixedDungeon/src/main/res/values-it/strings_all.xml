@@ -1850,6 +1850,7 @@ Potrebbe bruciare?</string>
     <string name="Torch_Info">E\' un oggetto indispensabile nelle Sale Demoniache, che sono note per il loro ambiente a scarsa illuminazione.</string>
     <string name="Torch_Info2">Un oggetto indispensabile nel dungeon, famoso per la sua scarsa illuminazione.</string>
     <string name="Torch_Name">torcia</string>
+    <string name="ToughShield_desc">Questo scudo rinforzato con cinghie di cuoio sembra più resistente di uno di legno. Può certamente bloccare più danni.</string>
     <string name="TownGuardNPC_Desc">Una normale guardia cittadina. </string>
     <string name="TownGuardNPC_Message1">Circolare.</string>
     <string name="TownGuardNPC_Message2">Grazie ad avventurieri come te, è diventato molto calmo quassù. </string>
@@ -2353,6 +2354,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_church_sign_desc">Sembra che ci sia una chiesa all\'interno di quell\'edificio.</string>
     <string name="town_deco_cinema_sign_desc">Pare che ci sia un cinema in quell\'edificio</string>
     <string name="town_deco_cinema_sign_name">Insegna del Cinema</string>
+    <string name="town_deco_clock_desc">Le frecce su di essi sono da tempo ferme in una posizione.</string>
     <string name="town_deco_clock_name">Orologio</string>
     <string name="town_deco_common_bed_desc">Un normalissimo letto.</string>
     <string name="town_deco_common_bed_name">Letto</string>
@@ -2429,6 +2431,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_skullboard_desc">Questo teschio cattura perfettamente il momento di orrore inaspettato.</string>
     <string name="town_deco_skullboard_name">Porta trofei</string>
     <string name="town_deco_slush_desc">Questa neve ha cominciato a sciogliersi, rendendo la zona circostante fangosa.</string>
+    <string name="town_deco_slush_name">Nevischio</string>
     <string name="town_deco_snow_desc">Nonostante la fama di questo posto tra gli avventurieri, sorprendentemente c\'è molta neve qui. Sembra che camminino per queste strade in molto pochi</string>
     <string name="town_deco_snow_name">Neve</string>
     <string name="town_deco_snowman_desc">Il pupazzo di neve è una decorazione tradizionale del paese durante il periodo delle feste, messo in questo posto per celebrare specialmente il giorno di \&quot;Dungeonale\&quot;, quando i mostri invasero il dungeon</string>
@@ -2482,6 +2485,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 
