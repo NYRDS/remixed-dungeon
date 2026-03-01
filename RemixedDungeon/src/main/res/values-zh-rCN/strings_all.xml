@@ -1098,6 +1098,7 @@
     <string name="KindOfWeapon_EquipCursed">你畏缩了，因为你的手不由自主地握紧了你的%s</string>
     <string name="King_Defense">招架</string>
     <string name="King_Desc">这位最后的矮人国王以对生死机制的透彻理解而闻名。他说服王国的皇室成员参加了一场本应让他们所有人获得永生的仪式。最终成功的仅他一人——还获得了一支死灵军队。</string>
+    <string name="King_Gender">masculine</string>
     <string name="King_Info1">你不可能杀掉我，%s…我是…不朽的…</string>
     <string name="King_Info2">复苏吧，奴隶们！</string>
     <string name="King_Info3">你好大的胆子！</string>
@@ -2843,6 +2844,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
