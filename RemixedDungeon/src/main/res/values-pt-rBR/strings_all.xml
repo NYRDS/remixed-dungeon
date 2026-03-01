@@ -1075,6 +1075,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Knuckles_Info">Também conhecido por Soqueira, é uma peça de ferro com formato específico para colocar em seus dedos.</string>
     <string name="Knuckles_Name">Soco Inglês</string>
     <string name="KoboldIcemancer_Desc">Kobold magos do gelo eram a elite da sua sociedade. Guerreiros, magos e cientistas importantes. Magos do gelo antigo, dominam a arte de moldar o gelo, criando mecanismos sofisticados de gelo e os reforçando com magia.</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">Dardos de gelo de %s matou você...</string>
     <string name="KoboldIcemancer_Name">mago-do-gelo Kobold </string>
     <string name="KoboldIcemancer_Name_Objective">mago-do-gelo Kobold </string>
@@ -2829,5 +2830,5 @@ remix.31.1\n
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
 
-</resources>
 
+</resources>

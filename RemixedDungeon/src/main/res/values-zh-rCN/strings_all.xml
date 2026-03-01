@@ -1918,6 +1918,7 @@
     <string name="SociologistNPC_Name_Objective">调研员</string>
     <string name="Sorrowmoss_Desc">断肠苔，是一种花瓣利如刀片的花（不是苔藓），上面覆盖着致命的毒液。</string>
     <string name="Sorrowmoss_Name">断肠苔</string>
+    <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">这是你从灵魂之罐的残余中拿取的一块碎片。它散发着神秘的能量，也许有人会对这东西感兴趣。</string>
     <string name="SoulShard_Name">灵魂碎片</string>
     <string name="Spear_Gender">neuter</string>
@@ -2842,6 +2843,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

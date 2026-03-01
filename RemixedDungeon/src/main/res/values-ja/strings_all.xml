@@ -2661,6 +2661,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="ZombieMask_Info">何度も冒険に失敗したアンデッドのヒーローのようになりたいと思ったことはないだろうか？さあ、チャンスだ。</string>
     <string name="ZombieMask_Name">ゾンビマスク</string>
     <string name="Zombie_Desc">ダンジョンは常に危険な場所であり、多くの冒険者がここで破滅を迎えた。しかし、最も不運な者の命はネクロポリスに辿り着き、今では腐った死体となってこの広間を彷徨う運命にある。</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">ゾンビ</string>
     <string name="Zombie_Name_Objective">ゾンビ</string>
     <string name="deco_candle_desc">大きなロウソク</string>
@@ -2916,6 +2917,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
