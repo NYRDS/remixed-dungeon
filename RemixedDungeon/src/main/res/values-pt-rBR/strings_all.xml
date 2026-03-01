@@ -1355,6 +1355,7 @@ Parede
     <string name="Nightcap_Info">Conquistar masmorras a noite deve ser um trabalho muito cansativo. Que tal colocar um chapéu quente, acolhedor e relaxar, para que todas as suas preocupações sumam?</string>
     <string name="Nightcap_Name">Touca de Dormir</string>
     <string name="Nightmare_Desc">Criatura grotesca feita de tentáculos de carne contorcidos. Os Pesadelos são a manifestação dos pensamentos sinistros do Deus Antigo.</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name">pesadelo</string>
     <string name="Nightmare_Name_Objective">pesadelo</string>
     <string name="No_Valid_Cell">Não há células próximas disponíveis.</string>
@@ -2829,6 +2830,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 </resources>
