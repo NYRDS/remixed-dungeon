@@ -1825,6 +1825,7 @@
     <string name="SoulShard_Name">靈魂碎片</string>
     <string name="Spear_Info">這是一根裝著鋒銳鐵戈的細幼木杖。</string>
     <string name="Spear_Name">長矛</string>
+    <string name="SpeedBuff_Name">速度</string>
     <string name="SpellBook_Info">它看起來更像是各種頁面縫在一起拼湊的，而不是一本實際的書。如果您付出足夠的時間的話，您也許可以從中獲益。</string>
     <string name="SpellBook_Info_Identified">閱覽完這些頁面你發現\&quot;%1$s\&quot;術式的全文.\n\&quot; %2$s \&quot;</string>
     <string name="SpellBook_Name">魔法書殘頁</string>
@@ -2686,6 +2687,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

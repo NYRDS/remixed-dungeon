@@ -94,6 +94,7 @@
     <string name="AwarenessBuff_Info">Los sentidos se han agudizado, dando más conciencia del entorno.</string>
     <string name="AwarenessBuff_Name">Conciencia</string>
     <string name="AzuterronNPC_Desc">Una misteriosa figura cubierta por niebla negra.</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">Desconocido</string>
     <string name="AzuterronNPC_Name_Objective">Desconocido</string>
     <string name="AzuterronNPC_Quest_End">Excelente. Toma esta poción, de seguro te sera útil.</string>
@@ -2865,6 +2866,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
