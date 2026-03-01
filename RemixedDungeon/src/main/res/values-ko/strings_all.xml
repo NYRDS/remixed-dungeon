@@ -1845,6 +1845,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Sungrass_Name">태양초</string>
     <string name="SurfaceScene_GameOver">게임 오버</string>
     <string name="SuspiciousRat_Desc">쥐를 던전에서 보는 것이 희귀한 광경은 아니지만 깊은 곳에서 살기 위해서는... 쥐가 움직일 때마다 어떻게 경련을 일으키는지 볼 수 있을 것입니다.</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">수상한 쥐가 맹렬하게 경련을 일으키고 있습니다.</string>
     <string name="SuspiciousRat_Name">수상한 쥐</string>
     <string name="SuspiciousRat_Name_Objective">수상한 쥐</string>
@@ -2571,6 +2572,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

@@ -2368,6 +2368,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_crate_scrolls_desc">Questa cassa è piena fino all\'orlo di conoscenza segreta.</string>
     <string name="town_deco_cross_desc">Una croce di argento, il simbolo della religione locale - \&quot;I Testimoni di Santa il Signore delle Profondità\&quot;</string>
     <string name="town_deco_cross_name">Croce</string>
+    <string name="town_deco_crossroad_desc">Colonna di legno grezzo con placche a forma di freccia il cui testo è sbiadito da tempo probabilmente a causa delle dure condizioni meteorologiche.</string>
     <string name="town_deco_crossroad_name">Cartello stradale</string>
     <string name="town_deco_curtains_name">Tende</string>
     <string name="town_deco_door_desc">Una semplice porta di legno</string>
@@ -2486,6 +2487,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
