@@ -836,6 +836,7 @@
     <string name="HeroClass_MagPerks_4">法師能使用魔法值釋放元素魔法。</string>
     <string name="HeroClass_MagPerks_5">鑒定卷軸在遊戲開始時就已經鑒定了</string>
     <string name="HeroClass_Necromancer">死靈法師</string>
+    <string name="HeroClass_NecromancerPerks_0">死靈法師開始時擁有 15 點生命值。</string>
     <string name="HeroClass_NecromancerPerks_1">死靈法師使用法力值施放死靈法術。</string>
     <string name="HeroClass_NecromancerPerks_2">死靈法師初始擁有一件獨特的靈魂長袍。裝備後，每殺死一個生物會給他提供1點法力值。</string>
     <string name="HeroClass_NecromancerPerks_3">死靈法師開局有一把7層的骷髏鑰匙。</string>
@@ -2694,6 +2695,7 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

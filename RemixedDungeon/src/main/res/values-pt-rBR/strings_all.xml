@@ -75,6 +75,7 @@
     <string name="Armor_Info8">\n\nVocê pode sentir a magia maléfica escondida dentro do %s.</string>
     <string name="Armor_ToString">%1$s :%2$d</string>
     <string name="ArmoredStatue_Desc">Você não poderia sequer pensar que isso é apenas mais uma estátua feia. Não são apenas os olhos vermelhos brilhantes, mas o fato é que ninguém iria colocaria um _%s_ nisso.</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">estátua animada</string>
     <string name="ArmoredStatue_Name_Objective">estátua animada</string>
     <string name="Artifact_Limit">Você só pode usar 2 artefatos ao mesmo tempo.</string>
@@ -2831,6 +2832,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
