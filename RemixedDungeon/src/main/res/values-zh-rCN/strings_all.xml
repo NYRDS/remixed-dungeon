@@ -2573,6 +2573,7 @@ remix.31.1\n
     <string name="Yog_Name">Yog-Dzewa</string>
     <string name="Yog_Name_Objective">Yog-Dzewa</string>
     <string name="YogsBrain_Desc">Yog-Dzewa的大脑，地牢所有邪恶的根源。</string>
+    <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name">Yog之脑</string>
     <string name="YogsBrain_Name_Objective">Yog之脑</string>
     <string name="YogsEye_Desc">古神之眼，无所不在的目光中充满了永恒的仇恨。 你能感觉到它正透过你的灵魂注视着你</string>
@@ -2847,6 +2848,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 </resources>
