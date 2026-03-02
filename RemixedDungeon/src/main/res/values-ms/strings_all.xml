@@ -1446,6 +1446,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="RatArmor_Name">perisai tikus</string>
     <string name="RatHide_Info">Cebisan kecil daging dengan bulu yang berbau. Peliklah masih ada orang nak benda macam ni?</string>
     <string name="RatHide_Name">kulit tikus</string>
+    <string name="RatKingCrownBuff_Info">Hormat kepada Tuan tikus, setiap tikus akan mematuhi dan memuji.</string>
     <string name="RatKingCrownBuff_Name">Ratness</string>
     <string name="RatKingCrown_Info">Mahkota emas Raja Tikus, simbol kekuasaan Raja Tikus</string>
     <string name="RatKingCrown_Name">Mahkota raja tikus</string>
@@ -2602,6 +2603,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

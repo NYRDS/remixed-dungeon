@@ -1944,6 +1944,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpiderServant_Name">laba-laba tentara</string>
     <string name="SpiderServant_Name_Objective">laba-laba tentara</string>
     <string name="Spinner_Desc">Laba-laba gua kehijauan berbulu ini mencoba untuk menghindari pertarungan langsung, memilih untuk menunggu agak jauh saat korban mereka, terlilit di dalam jaring laba-laba, perlahan akan mati karena gigitan beracunnya.</string>
+    <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name">laba-laba gua</string>
     <string name="Spinner_Name_Objective">laba-laba gua</string>
     <string name="SpiritOfPain_Desc">Sekeping dari kegelapan yang hidup.</string>
@@ -2814,6 +2815,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
