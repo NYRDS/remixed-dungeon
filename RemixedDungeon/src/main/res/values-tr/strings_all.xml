@@ -1822,6 +1822,7 @@ seviyenin başka bir yeri.</string>
     <string name="ServantNPC_Name">han hizmetçisi</string>
     <string name="ServantNPC_Name_Objective">han hizmetçisi</string>
     <string name="ServiceManNPC_Desc">Yerel işletmelerin düzenli bir çalışanı.</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Özür Dilerim Ama Her Maceracı Toplamda %d film izleyebilir.</string>
     <string name="ServiceManNPC_Limit_Reached">Af buyurun ancak bugünlük limitinize ulaşmış bulunmaktasınız. Eğer arzu ederseniz, her seviye atladığınızda hizmetimizden faydalanabilirsiniz.</string>
     <string name="ServiceManNPC_Name">çalışan </string>
@@ -2882,26 +2883,5 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>
