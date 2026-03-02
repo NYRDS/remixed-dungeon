@@ -786,6 +786,7 @@
     <string name="Halls_TileStatue">臺柱</string>
     <string name="Halls_TileWater">冷巖漿</string>
     <string name="Haste_Name">急速</string>
+    <string name="Heal_Name">治療</string>
     <string name="HealerNPC_Desc">虛無縹緲的直覺告訴我，眼前的老人懂得如何弄法杖。</string>
     <string name="HealerNPC_Message1">免費為冒險者治療！</string>
     <string name="HealerNPC_Message2">當您受傷或飢餓時歡迎回來！</string>
@@ -917,6 +918,7 @@
     <string name="Horror_Name_0">恐懼%s</string>
     <string name="Horror_Name_1">恐懼%s</string>
     <string name="Horror_Name_2">恐懼%s</string>
+    <string name="HungerBuff_Info2">你餓到受不了了！你需要吃東西！</string>
     <string name="HungerBuff_Name1">饑餓</string>
     <string name="HungerBuff_Name2">饑腸轆轆</string>
     <string name="Hunger_Death">您餓死了……</string>
@@ -2689,6 +2691,8 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 </resources>

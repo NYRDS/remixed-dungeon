@@ -1440,6 +1440,7 @@
     <string name="PlagueDoctorNPC_Quest_Start_Female">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿 %d 张老鼠皮，这样我就可以做一些额外的测试了。</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿 %d 张老鼠皮，这样我就可以做一些额外的测试了。</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">啊嚏！\n 诅咒这该死的可恶瘟疫！它像野火一样在城市中蔓延，在毫无戒心的百姓的骨头里溃烂！呸！你以为那些可悲的卫兵有机会对抗这种阴险的瘟疫吗？你，在那里！强壮、健康的样本。也许你能帮我。那些肮脏的下水道_老鼠_……它们携带着它，我告诉你，瘟疫的种子就在它们腐烂的小身体里！给我带_五_只那些可怜的生物来，当然是_死的_！它们的皮对我的研究将是非常宝贵的。我会为你制作一件奇妙的盔甲，一个抵御瘟疫本身的保护屏障！</string>
+    <string name="PlagueDoctorQuest_2_1_Epilogue">_月光草_……它是编织在这个世界中的魔法的见证。我从它们的本质中学到了很多，但你的奖励……嗯，它已经被极其精心地准备好了。*递给英雄一瓶闪烁的_法力药水_* 愿它的力量指引你度过前方的危险。</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">寻找 _月光草_，那里黑暗与微弱的月光交相辉映。_两颗种子_，其精华，将揭示隐藏的秘密。</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">给我带一只_吸血鬼蝙蝠_，活着且完好无损！它的血液、它的翅膀……它们藏着我必须揭开的秘密！</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">_死亡骑士_！*他的声音因兴奋而颤抖，骷髅般的手指紧握着一个冒着泡的小瓶，里面装满了浑浊的磷光液体*。这样的生物……亡灵的象征！活捉一个……那将是……意义非凡。想象一下我们能揭开什么秘密！流淌在它骨骼血管中的力量！是的，_死亡骑士_！这对我的研究至关重要！因为它将使我们能够更深入地探索……生命……乃至死亡本身的奥秘！</string>
@@ -2846,5 +2847,6 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 </resources>
