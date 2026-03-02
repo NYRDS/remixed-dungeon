@@ -563,6 +563,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Death_Name_1">Suram %s</string>
     <string name="Death_Name_2">Suram %s</string>
     <string name="Deathling_Desc">The Deathling adalah jiwa dari seorang pahlawan yang jatuh yang cukup sial untuk dipanggil oleh sesama petualang, yang berlatih necromancy.</string>
+    <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">deathling</string>
     <string name="Deathling_Name_Objective">deathling</string>
     <string name="DeepSnail_Desc">Moluska jenis ini sering terlihat di dekat sumber air dan jauh lebih cepat daripada siput biasa. Namun, waspadalah terhadap gigitannya, mereka dapat memiliki efek yang tidak menyenangkan pada kulit Anda.</string>
@@ -2813,6 +2814,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

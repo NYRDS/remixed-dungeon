@@ -2425,6 +2425,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_screen_name">Schermo</string>
     <string name="town_deco_scrolls_name">Pergamene</string>
     <string name="town_deco_shelf_desc">Scaffali vuoti.</string>
+    <string name="town_deco_shelf_full_desc">Su questo scaffale sono posizionati vari gingilli.</string>
     <string name="town_deco_shelf_name">Scaffali</string>
     <string name="town_deco_shelving_desc">Un rack di dimensioni imponenti, sui cui ripiani è possibile trovare varie bevande e snack.</string>
     <string name="town_deco_shelving_name">Scaffalature</string>
@@ -2488,6 +2489,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

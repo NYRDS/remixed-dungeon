@@ -1893,6 +1893,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Sungrass_Name">Napfű</string>
     <string name="SurfaceScene_GameOver">Vége a játéknak</string>
     <string name="SuspiciousRat_Desc">Egy patkány nem túl ritka látvány ilyen katakombákban, de ilyen mélyen... Látszik, hogy az egész teste görcsösen rángatódzik mozgás közben.</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">A gyanús patkány erősen rángatódzik.</string>
     <string name="SuspiciousRat_Name">Gyanús patkány</string>
     <string name="SuspiciousRat_Name_Objective">Gyanús patkány</string>
@@ -2628,6 +2629,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 </resources>
