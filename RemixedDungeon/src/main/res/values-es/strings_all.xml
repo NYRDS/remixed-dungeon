@@ -1462,6 +1462,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Plant_Seed">semilla de %s</string>
     <string name="PlateArmor_Desc">Esta armadura, compuesta de enormes placas de metal, ofrece una protección inigualable, pero sólo a aquellos con la fuerza suficiente para cargar con su asombroso peso.</string>
     <string name="PlateArmor_Name">armadura de placas</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">Una gota de veneno mortal brilla en la punta de esta flecha.</string>
     <string name="PoisonArrow_Name">flecha envenenada</string>
     <string name="PoisonBuff_Info">¡El cuerpo está siendo asesinado lentamente por el veneno!</string>
@@ -2866,7 +2867,6 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
-
 
 
 

@@ -1253,6 +1253,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="MimicAmulet_Name">mimik</string>
     <string name="MimicAmulet_Name_Objective">mimik</string>
     <string name="MimicPie_Desc">Mimik adalah makhluk ajaib yang dapat berubah jadi bentuk apapun sesuai keinginan mereka. Yang ini terlihat seperti sebuah pastel besar yang enak\&quot;;</string>
+    <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimik</string>
     <string name="MimicPie_Name_Objective">mimik</string>
     <string name="Mimic_Desc">Mimik adalah makhluk ajaib yang dapat merubah bentuk ke bentuk apapun yang mereka mau. Di dungeon mereka selalu memilih bentuk peti harta karun, karena mereka tahu cara menarik perhatian petualang.\&quot;;</string>
@@ -2812,7 +2813,6 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
-
 
 
 

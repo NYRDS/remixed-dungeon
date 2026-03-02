@@ -93,6 +93,7 @@
     <string name="ArmoredStatue_Name">жива статуя</string>
     <string name="ArmoredStatue_Name_Objective">живу статую</string>
     <string name="Artifact_Limit">Ти можеш носити тільки 2 артефакти водночас.</string>
+    <string name="AwarenessBuff_Info">Чуття загострилися, що дозволяє краще усвідомлювати оточення.</string>
     <string name="AwarenessBuff_Name">Обізнаність</string>
     <string name="AzuterronNPC_Desc">Загадкова фігура огорнута чорним туманом.</string>
     <string name="AzuterronNPC_Gender">masculine</string>
