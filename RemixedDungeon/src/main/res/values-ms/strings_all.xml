@@ -41,6 +41,7 @@
     Anda boleh mengubah pendirian anda pada bila-bila masa (klik ikon carta pada skrin tajuk )
     </string>
     <string name="AllowStatisticsCollectionScene_Title">Koleksi statistik penggunaan</string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">Hujung anak panah ini disaluti dengan cecair yang menyebabkan anda mengamuk tanpa sebab.</string>
     <string name="AmokArrow_Name">Anak Panah Mengamok</string>
     <string name="AmokBuff_Info">Rasakan amoknya, mengambil nyawa mereka yang malang.</string>
@@ -649,6 +650,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Eye_Kill">Renungan maut %s telah membunuh anda...</string>
     <string name="Eye_Name">mata jahat</string>
     <string name="Eye_Name_Objective">mata jahat</string>
+    <string name="Facilitations_Descriptions_0">Mutan sentiasa diperlakukan dengan hinaan dan ketakutan, tetapi ketiadaan kelaparan sekali lagi akan memberikan anda kelebihan, kali ini dalam menakluki kedalaman penjara bawah tanah.</string>
     <string name="Facilitations_Descriptions_1">Masih tidak diketahui siapa ibu bapa anda, tetapi regenerasi semula jadi seperti troll akan membantu memulihkan semua parut pertempuran yang bakal berlaku.</string>
     <string name="Facilitations_Names_1">Badan gergasi</string>
     <string name="Fadeleaf_Desc">Menyentuh Daun Lenyap akan pindahkan sesiapa sahaja ke lokasi secara rawak dalam aras yang sama</string>
@@ -2600,6 +2602,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

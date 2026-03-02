@@ -1731,6 +1731,7 @@
     <string name="Senior_Desc">這些武僧都是些狂信徒，他們會傾其所能從一切異族手中保護他們城市的秘密。他們不使用任何盔甲亦或武器，單純依靠徒手格鬥技巧來戰鬥。這個特別的武僧掌握了致殘對手的技巧。</string>
     <string name="Senior_Name">武僧大師</string>
     <string name="Senior_Name_Objective">武僧大師</string>
+    <string name="ServantNPC_Gender">feminine</string>
     <string name="ServiceManNPC_Desc">當地企業一名中規中矩的員工。</string>
     <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">本人真誠向閣下道歉，無奈每位新的冒險者只能看最多 %d 齣電影。</string>
@@ -2688,5 +2689,6 @@
     <string name="town_deco_wooden_table_name">木製桌子</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 </resources>
