@@ -333,6 +333,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Carcass_DissectFailed">Anda membedah %s tetapi tidak menemukan apa pun yang berharga.</string>
     <string name="Carcass_DissectResult">Dari %1$s kamu memperoleh %2$d %3$s.</string>
     <string name="Carcass_Name">bangkai %s</string>
+    <string name="Carcass_Necromancy">\"Kamu telah membangkitkan mayat %s!\"</string>
     <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk membedah bangkai.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang butuh rak buku di gua?</string>
     <string name="Caves_TileDescDeco">Kilauan dari beberapa logam terlihat pada tembok. Emas?</string>
@@ -2815,6 +2816,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

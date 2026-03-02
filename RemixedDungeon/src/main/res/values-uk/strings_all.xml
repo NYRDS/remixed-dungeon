@@ -1327,6 +1327,7 @@
     <string name="NecromancerRobe_PetLimitReached">Некромантія: досягнуто ліміт прислужників (Поточний максимум: %d)!</string>
     <string name="Necromancer_ACSpecial">НЕКРОМАНТІЯ</string>
     <string name="Necromancy_BecameALich">Ти став лічем! Твоя могутність зросла і тепер ти можеш вміщувати в два рази більше душ! Але ти втратив %1$d одиниць сили.</string>
+    <string name="Necromancy_Death">Ти вичерпав усі свої життєві сили, займаючись некромантією.</string>
     <string name="Necromancy_NotEnoughSouls">Не достатньо душ для виклику закляття \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_ReincarnationName">Реінкарнація</string>
     <string name="Necromancy_ReincarnationTriggered">Твоя могутність не признає смерть! Але ти втратив всі свої речі та душі.</string>
@@ -2738,6 +2739,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
