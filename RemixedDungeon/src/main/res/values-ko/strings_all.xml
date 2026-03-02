@@ -470,6 +470,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ConcreteBlock_Description">이 블록은 %d만큼의 힘을 요구하는 것 같습니다.</string>
     <string name="ConcreteBlock_Name">무거운 콘크리트 블록</string>
     <string name="ConfusionGas_Info">혼란을 주는 가스 구름이 소용돌이 칩니다.</string>
+    <string name="CorpseDustBuff_Info">피에 대한 갈망이 공격을 크게 증가시켜 특히 위험하게 만듭니다.</string>
     <string name="CorpseDustBuff_Name">피에 굶주린</string>
     <string name="CorpseDust_Info">이 시체 먼지 덩어리는 다른 먼지 덩어리랑 별 차이 없어 보입니다. 하지만 당신은 사악한 에너지가 이것을 감싸고 있는 것을 느낍니다.
 
@@ -2574,5 +2575,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 </resources>
