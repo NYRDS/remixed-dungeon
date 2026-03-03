@@ -520,6 +520,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="CorpseDust_Info">Por fora a bola de poeira cadáver não e diferente de uma bola de poeira normal. No entanto, você sabe de alguma forma que é melhor se livrar dela o mais rápido possível.</string>
     <string name="CorpseDust_Info2">Talvez porque apenas em segura-lo te deixa ansioso e com raiva.</string>
     <string name="CorpseDust_Name">poeira de cadáver</string>
+    <string name="CorpseExplosion_Info">Transforma um cadáver em uma nuvem mortal de gás tóxico, espalhando doença e veneno para todos os inimigos próximos.</string>
     <string name="Crab_Defense">defendeu</string>
     <string name="Crab_Desc">Estes enormes caranguejos estão no topo da cadeia alimentar nos esgotos. Eles são extremamente rápidos e seu exoesqueleto grosso pode resistir a golpes pesados.</string>
     <string name="Crab_Name">caranguejo do esgoto</string>
@@ -1409,6 +1410,7 @@ Parede
     <string name="PlagueDoctorQuest_1_2_InProgress">_Dez caracóis_, dez sussurros do abismo! Seu muco será analisado, sua essência será minuciosamente examinada. Os segredos que eles guardam estão ao alcance.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Procure pela _moongrace_, onde a escuridão encontra o mais fraco brilho da luz da lua. _Duas sementes_, sua essência, revelarão segredos ocultos.</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">Ah, _grama-solar_! Uma flor delicada, cujas pétalas irradiam o calor do sol. Acredito que sua essência contém a chave para... ah, esqueça os detalhes por enquanto. Basta dizer que é crucial para minha pesquisa. _Duas sementes de grama-solar_. Traga-as para mim, e eu recompensarei você com algo que certamente será útil em suas aventuras - uma _Poção de Saúde_, transbordando com a própria vitalidade do sol.</string>
+    <string name="PlagueDoctorQuest_3_1_Epilogue">*Ele segura o _morcego_ gentilmente em suas mãos enluvadas, examinando sua pequena forma com uma fascinação perturbadora* Magnífico! A ecolocalização do _morcego_... é diferente de tudo que já encontrei. Tal precisão... tal... controle. *Ele se vira para você, seu rosto obscurecido por sua máscara* Por seus esforços, um _Pergaminho de Melhoria_. Use-o sabiamente, pois ele tem o potencial de... refinar sua própria essência. *Ele lhe entrega o pergaminho, sua voz caindo para um sussurro suave* Este _morcego_, é... uma janela para um mundo oculto. Um mundo... onde as sombras dançam e os segredos sussurram.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Traga-me um _morcego vampiro_, vivo e ileso! Seu sangue, suas asas... eles contêm segredos que devo descobrir!</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*Seus olhos brilham com uma intensidade estranha e febril* Ah, o _morcego vampiro_! Uma criatura da noite, alimentando-se da força vital de sua presa. Fascinante... verdadeiramente fascinante. Preciso de um vivo para estudar sua fisiologia única. É tudo sobre... entender o... a... *Ele se cala, murmurando para si mesmo uma série de termos arcanos*. Sim! A ecolocalização do _morcego_, sua capacidade de navegar na escuridão completa... é a chave para desvendar um segredo.</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Atchim! Dwarves! Aqueles habitantes subterrâneos teimosos, obcecados por gemas e ouro. Mas são os _Feiticeiros Anões_ que eu desejo… sua magia distorcida, alimentada pelas próprias profundezas que habitam. Cinco, preciso de cinco daquelas almas murchas! Seus corpos guardam a chave para entender um certo… fenômeno. Algo sobre canalizar energias arcanas através da própria terra. Acredito que estou perto de um avanço, mas preciso de sua essência, sua magia corrompida! *Ele tosse violentamente em seu lenço, uma mancha escura se espalhando pelo tecido delicado*</string>
@@ -2833,6 +2835,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
