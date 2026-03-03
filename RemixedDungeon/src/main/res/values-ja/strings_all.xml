@@ -32,6 +32,7 @@
     <string name="AirElemental_Name_Objective">風のエレメンタル</string>
     <string name="AlarmTrap_Desc">罠はダンジョン全体に響き渡る鋭い音を発した！</string>
     <string name="Albino_Desc">有袋ネズミは攻撃的だが、どちらかというと弱い下水道の住人だ。しかし数が多くなると危険である。このネズミはアルビノのようだ。また、異常に鋭い歯を持っている。</string>
+    <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name">アルビノネズミ</string>
     <string name="Albino_Name_Objective">アルビノネズミ</string>
     <string name="AlchemyPot_SelectSeed">投げる種を選択</string>
@@ -2918,6 +2919,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

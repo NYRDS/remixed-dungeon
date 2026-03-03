@@ -1356,6 +1356,7 @@
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Ця стріла змочена в кураре.</string>
     <string name="ParalysisArrow_Name">паралізуюча стріла</string>
+    <string name="ParalysisBuff_Info">Повністю паралізовано!</string>
     <string name="ParalysisBuff_Name">Паралізований</string>
     <string name="Paralysis_Name_0">Приголомшливе %s</string>
     <string name="Paralysis_Name_1">Приголомшливий %s</string>
@@ -2741,6 +2742,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
