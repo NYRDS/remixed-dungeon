@@ -1861,6 +1861,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Swing_Name_2">사나운 %s</string>
     <string name="Sword_Info">그 금속칼날이 날카롭게 빛나는 동안은 안심이 된다.</string>
     <string name="Sword_Name">소드</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">이 던지는 도끼는 무겁진 않지만 사용하는데 꽤 많은 힘이 필요하다.</string>
     <string name="Tamahawk_Name">토마호크</string>
     <string name="Tengu_Desc">텐구는 고대 암살단의 일원이다. 이들 암살자는 수리검과 함정을 다루는 데 능하다.</string>
@@ -2576,6 +2577,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

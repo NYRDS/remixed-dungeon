@@ -2627,6 +2627,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Worm_Name_Objective">ワーム</string>
     <string name="Wraith_Defense">回避した</string>
     <string name="Wraith_Desc">レイスとは、墓を荒らされた罪人の復讐心に燃えた霊のことである。幽体であるため、通常の武器で攻撃するのは非常に難しい。</string>
+    <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">レイス</string>
     <string name="Wraith_Name_Objective">レイス</string>
     <string name="WrnExperimental_hint">この奇妙でねじれた世界があまりにも過酷な場合は、スタート画面-&gt;オプション-&gt;ゲームプレイメニューを使用してこれらのオプションを無効にし、新しいゲームを開始するか、別のセーブをロードしてください。</string>
@@ -2917,6 +2918,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

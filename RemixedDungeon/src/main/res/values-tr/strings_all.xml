@@ -792,6 +792,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="GnollArmor_NotGnoll">Gnoll Zırhını sadece gnollar kullanabilir!</string>
     <string name="GnollCostume_Info">Son derece sıcak ve pofuduk bir kostüm. Bu kostümü giyen her kimse tıpkı bir... Sırtlanadam kılığına girmeye çalışan biri gibi olacaktır işte. Sırtlanadamlar bu numarayı yutacak değiller, saldırmaya devam edecekler.</string>
     <string name="GnollCostume_Name">Gnoll Kostümü</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">Her klanın kendine has tasarımlarına sahip olduğu ve Sırtlanadam uzmanlar tarafından yapılmış bu geleneksel Savaş Baltası emsallerinden bir nebze daha hafif duruyor.</string>
     <string name="GnollTamahawk_Name">gnoll savaş baltası</string>
     <string name="Gnoll_BecomeGuardianDesc">Koruyucu Olun</string>
@@ -2883,5 +2884,6 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 </resources>
