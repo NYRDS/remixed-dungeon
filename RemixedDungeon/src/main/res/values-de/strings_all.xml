@@ -333,6 +333,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_Devoured">Du hast den Kadaver von %s verzehrt!</string>
     <string name="Carcass_DissectMessage">Du sezierst die Leiche und erhältst %s.</string>
+    <string name="Carcass_Info">Überreste eines völlig toten %s.</string>
     <string name="Carcass_Kick">Dieses %s ist völlig tot, keinen Grund es zu treten.</string>
     <string name="Carcass_Name">Überreste von %s</string>
     <string name="Carcass_TooFarToDissect">Du musst näher herangehen, um die Leiche zu sezieren.</string>
@@ -2801,6 +2802,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

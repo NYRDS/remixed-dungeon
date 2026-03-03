@@ -599,6 +599,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ElfArmor_Desc">이 망토의 도움으로 엘프는 자연의 힘 자체를 소환할 수 있다. 단단한 바위 표면을 뚫고 순식간에 기다란 풀숲이 자라나 시야 내의 모든 적들을 옴짝달싹 못하게 해 버릴 것이다.</string>
     <string name="ElfArmor_Name">엘프의 망토</string>
     <string name="ElfArmor_NotElf">이 갑옷은 엘프만 착용 가능하다.</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">엘프의 제조술을 보여주는 가장 좋은 예시입니다. 일반 나무 활보다 더 효과적이고 정확한 성능을 자랑합니다.</string>
     <string name="ElvenBow_Name">엘프 활</string>
     <string name="ElvenDagger_Info">이 무기는 특수한 합금으로 만들어졌기 때문에 통상의 단검보다 훨씬 가볍다.</string>
@@ -2577,6 +2578,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
