@@ -1539,6 +1539,7 @@ zasłaniając twarz i głowę cieniem. Kaptur niczym skrzydło kruka spływa po 
     <string name="PlagueDoctorQuest_AllDone">*Wypuszcza suchy, świszczący śmiech.* „Twoje czyny odsłoniły tajemnice ponad miarę! Zdobyta wiedza… pulsuje we mnie, symfonia odkryć. Ale wiedza” – dodaje, a jego głos zniża się do konspiracyjnego szeptu , „wiedza to potęga. A moc… ach… to najbardziej odurzający eliksir”. Przez chwilę patrzy na ciebie uważnie,
 Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” – mruczy – „nasze ścieżki znów się skrzyżują. Jest jeszcze wiele… tajemnic… do rozwiązania.</string>
     <string name="PlagueDoctor_Desc">Ten przygarbiony osobnik jest pokryty od stóp do głów skórzanym kombinezonem. Czuć od niego ostrą woń medykamentów i ... czosnku?</string>
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">lekarz plagi</string>
     <string name="PlagueDoctor_Name_Objective">lekarz plagi</string>
     <string name="Plant_ACPlant">ZASADŹ</string>
@@ -3011,22 +3012,4 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

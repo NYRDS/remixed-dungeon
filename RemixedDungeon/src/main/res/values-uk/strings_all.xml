@@ -1869,6 +1869,7 @@
     <string name="Skeleton_Name">скелет</string>
     <string name="Skeleton_Name_Objective">скелета</string>
     <string name="SleepBuff_Name">Сон</string>
+    <string name="SlowBuff_Info">Повільне відчуття робить тебе повільнішим, ніж зазвичай.</string>
     <string name="SlowBuff_Name">Сповільнений</string>
     <string name="Slow_Name_0">Морозне %s</string>
     <string name="Slow_Name_1">Морозний %s</string>
@@ -2742,11 +2743,4 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
-
-
-
-
-
-
-
 </resources>

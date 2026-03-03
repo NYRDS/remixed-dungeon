@@ -1812,6 +1812,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="Senior_Name">Älterer Mönch</string>
     <string name="Senior_Name_Objective">Älterer Mönch</string>
     <string name="ServantNPC_Desc">Ein sehr beschäftigter Kellner.</string>
+    <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">Kellner</string>
     <string name="ServantNPC_Name_Objective">Kellner</string>
     <string name="ServiceManNPC_Desc">Ein normaler Arbeiter in den lokalen Niederlassungen.</string>
@@ -2802,8 +2803,4 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
-
-
-
-
 </resources>
