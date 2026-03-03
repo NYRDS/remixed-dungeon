@@ -250,6 +250,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="BlackSkullOfMastery_Title">Anda bisa mematahkan mantranya. Atau Anda dapat memanipulasi formula ajaibnya dengan cara tertentu, yang memungkinkan Anda untuk menggunakan kekuatan mantra dan artefak itu sendiri, mengubah diri Anda menjadi seorang Lich.</string>
     <string name="BlackSkull_Activated">Tengkorak Hitam telah terbangun!</string>
     <string name="BlackSkull_Deactivated">Tengkorak Hitam tidak aktif, sekali lagi...</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Tengkorak obsidian kecil. Itu adalah sumber kekuatan Necropolis, tetapi setelah kekalahan Lich tampaknya telah kehilangan semua kekuatannya. Namun, ketika Anda memegangnya di tangan Anda, sebuah pikiran aneh terlintas di benak Anda: \&quot;Ini lapar\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">Tengkorak berdenyut dengan kekuatan, dan Anda dapat melihat bagaimana ia mengalir dari rongga matanya yang kosong. Dan sambil memegangnya di tangan Anda, Anda mendengar suara yang menakutkan: \&quot;Lihatlah barisan kematian\&quot;.</string>
     <string name="BlackSkull_Name">Tengkorak hitam</string>
@@ -333,7 +334,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Carcass_DissectFailed">Anda membedah %s tetapi tidak menemukan apa pun yang berharga.</string>
     <string name="Carcass_DissectResult">Dari %1$s kamu memperoleh %2$d %3$s.</string>
     <string name="Carcass_Name">bangkai %s</string>
-    <string name="Carcass_Necromancy">\"Kamu telah membangkitkan mayat %s!\"</string>
+    <string name="Carcass_Necromancy">\&quot;Kamu telah membangkitkan mayat %s!\&quot;</string>
     <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk membedah bangkai.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang butuh rak buku di gua?</string>
     <string name="Caves_TileDescDeco">Kilauan dari beberapa logam terlihat pada tembok. Emas?</string>
@@ -2816,6 +2817,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
