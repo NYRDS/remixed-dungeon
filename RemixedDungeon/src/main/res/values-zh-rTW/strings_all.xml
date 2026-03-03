@@ -693,6 +693,7 @@
     <string name="FriedFish_Info">烤魚，看起來很好吃。丘比認證:絕對美味</string>
     <string name="FriedFish_Name">熟魚</string>
     <string name="FriedFish_Taste">美味！</string>
+    <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">您能感受到從箭頭湧出的霜寒氣息。</string>
     <string name="FrostArrow_Name">寒霜箭</string>
     <string name="FrostAuraBuff_Name">寒冰護罩
@@ -1775,6 +1776,7 @@
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">魔法綿羊</string>
     <string name="Sheep_Name_Objective">魔法綿羊</string>
+    <string name="ShieldBuffNotReady_Info">你的盾牌還沒準備好抵擋下一次攻擊。</string>
     <string name="ShieldBuffReady_Info">你的盾牌已準備好抵擋下一次攻擊。</string>
     <string name="ShieldInfoTemplate">這個盾牌最多可以格擋%1$d傷害。  格擋幾率為%2$d %% 。 成功格擋後需要%3$3.1f個回合來恢復。</string>
     <string name="ShieldStrTemplate">盾牌的佩戴者應至少具有%1$d力量才能正常的使用它。</string>
@@ -2700,6 +2702,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

@@ -287,6 +287,7 @@
     <string name="BodyArmorBuff_Name">Armadura Corporal</string>
     <string name="BodyArmorSpell_Info">Activa la fuerza de tus músculos reservada, haciéndolos temporalmente más fuertes, así aumentando enormemente tu armadura pero a coste de tu velocidad de movimiento.</string>
     <string name="BodyArmorSpell_Name">Armadura Corporal</string>
+    <string name="BoneSaw_Name">Sierra de Huesos</string>
     <string name="BoneShard_Name">Fragmento de hueso</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Al ser lanzado contra un enemigo, esta arma curva de madera volverá a su lanzador.</string>
@@ -2868,6 +2869,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

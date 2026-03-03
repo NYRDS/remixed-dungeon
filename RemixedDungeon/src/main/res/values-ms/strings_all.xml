@@ -12,6 +12,7 @@
     <string name="AboutScene_OurSite">Laman sesawang kami:</string>
     <string name="AboutScene_Snd">Hantar E-Mel</string>
     <string name="AboutScene_Sound">Bunyi:</string>
+    <string name="AboutScene_SourceCode">Dapatkan kod sumber Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Terima Kasih kepada:</string>
     <string name="AboutScene_Translation">Diterjemah oleh:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
@@ -685,6 +686,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="FriedFish_Info">Ikan goreng, sedapnya</string>
     <string name="FriedFish_Name">ikan goreng</string>
     <string name="FriedFish_Taste">Sedapnya!</string>
+    <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Anda dapat merasai aura sejuk membeku yang dipancar dari kepala panah ini.</string>
     <string name="FrostArrow_Name">anak panah fros</string>
     <string name="FrostAuraBuff_Name">Aura Fros</string>
@@ -1192,6 +1194,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Mob_CantDoIt">I tak boleh buat. Aku ada kaki kecil.</string>
     <string name="Mob_Desc">Keterangan sebenar akan muncul sebentar lagi!</string>
     <string name="Mob_Died">Anda dengar ada benda yang mati dari jauh</string>
+    <string name="Mob_GoingTo">Sudah pergi!</string>
     <string name="Mob_ReadyForOrder">%s sedia menerima arahan anda.</string>
     <string name="Mob_StaAmokStatus">%1$s ini sedang mengamok</string>
     <string name="Mob_StaControlledStatus">%s ini di bawah pengaruhi kegelapan</string>
@@ -2604,6 +2607,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 
