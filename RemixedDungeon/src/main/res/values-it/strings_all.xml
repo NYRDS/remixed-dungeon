@@ -1580,6 +1580,7 @@ Potrebbe bruciare?</string>
     <string name="ScrollOfRemoveCurse_NoProced">Il tuo pacco si illumina, ma non succede nulla.</string>
     <string name="ScrollOfRemoveCurse_Proced">Il tuo pacco si illumina, e disperde un\'energia malevole</string>
     <string name="ScrollOfSummoning_Info">Quando letto ad alta voce, questo pergamena evoca uno dei mostri del livello attuale del dungeon. E se la volontà del mostro è abbastanza debole, diventerà il tuo servitore.</string>
+    <string name="ScrollOfSummoning_Info_2">Il mostro ha risposto al tuo richiamo!</string>
     <string name="ScrollOfTeleportation_Info">La magia su questa pergamena teletrasporterà istantaneamente chi la legge in un punto qualsiasi del dungeon. Può essere usata per scappare da una situazione pericolosa, ma un lettore sfortunato potrebbe ritrovarsi in una situazione ancora peggiore.</string>
     <string name="ScrollOfTeleportation_Name">Pergamena di Teletrasporto</string>
     <string name="ScrollOfTeleportation_NoTeleport">la forte aura magica di questo luogo impedisce il teletrasporto!</string>
@@ -2494,6 +2495,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
