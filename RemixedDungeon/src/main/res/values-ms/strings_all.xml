@@ -309,6 +309,7 @@
     <string name="Carcass_Devoured">Anda telah memakan mayat %s!</string>
     <string name="Carcass_DissectFailed">Anda menyiasat %s tetapi tidak menemui apa-apa yang berharga.</string>
     <string name="Carcass_DissectMessage">Anda menyiasat bangkai dan mendapat %s.</string>
+    <string name="Carcass_DissectResult">Daripada %1$s anda memperoleh %2$d hasil %3$s.</string>
     <string name="Carcass_Info">Bangkai %s yang benar-benar mati</string>
     <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk menyiasat bangkai tersebut.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang perlukan rak buku di dalam gua?</string>
@@ -1191,6 +1192,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MissileWeapon_No">Tidak, Saya ubah pendirian saya</string>
     <string name="MissileWeapon_Sure">Anda pasti mahu memakainya sebagai senjata tempur?</string>
     <string name="MissileWeapon_Yes">Ya, Saya tahu apa yang saya buat</string>
+    <string name="Mob_Attacking">Anggap %s ini sudah mati!</string>
     <string name="Mob_Cannot_Be_Pet">Semangat \&quot;%s\&quot; terlalu kuat untuk dikawal!</string>
     <string name="Mob_CantDoIt">I tak boleh buat. Aku ada kaki kecil.</string>
     <string name="Mob_Desc">Keterangan sebenar akan muncul sebentar lagi!</string>
@@ -2608,6 +2610,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
