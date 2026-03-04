@@ -87,6 +87,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="AzuterronNPC_Quest_End">Kitűnő. Nézd, fogd ezt a bájitalt, biztos, hogy előnyösnek találod majd.</string>
     <string name="AzuterronNPC_Quest_Reminder">Segíts nekem és én segítek neked.</string>
     <string name="AzuterronNPC_Quest_Start">Hah, miért... ó, látsz engem, ugye? Ez azt jelenti, hogy nem vagy \&quot;közülük\&quot;. Látom, ezeket a szörnyeket sem kedveled. Ha segítesz egy apró problémában, felajánlom neked a segítségem. Valahol ezen a szinten találhatsz a sötétség egy szörnyetegét, egy _Álnok Lelket_. Öld meg, vedd el a _szívét_ és térj vissza hozzám. És még egy dolog, ha érdeklődsz az ellátmányaimból való vásárlás iránt, kérdezz bátran</string>
+    <string name="Backstab_Aware">Az áldozat nem lehet tisztában a jelenléteddel egy jó hátbaszúráshoz.</string>
     <string name="Backstab_Info">Nesztelen hátbadöfés. Sunyi, de extrém hatásos, a hátbadöfés hatékonysága a végrehajtó szintjével nő.\n\nEgy sikeres döfés teljesen lényegtelenné teszi, hogy az áldozat milyen páncélt visel vagy milyen speciális védelme van.</string>
     <string name="Backstab_Name">Hátbaszúrás</string>
     <string name="Backstab_TooFar">Az áldozat túl messze van egy sikeres támadáshoz.</string>
@@ -2632,6 +2633,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

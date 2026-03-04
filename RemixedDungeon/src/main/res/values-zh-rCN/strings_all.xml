@@ -279,6 +279,7 @@
     <string name="BlindnessBuff_Info">你什么都看不见了，只能听见附近的声音</string>
     <string name="BlindnessBuff_Name">目盲</string>
     <string name="BloodTransfusion_Info">吸取目标几乎全部的血液来治疗自己。一个黑暗献祭与生存的仪式。</string>
+    <string name="BloodTransfusion_Name">输血</string>
     <string name="BloodTransfusion_WontAgreed">目标抵抗生命精华的抽取。</string>
     <string name="BodyArmorBuff_Info">牺牲移动速度增加护甲。</string>
     <string name="BodyArmorBuff_Name">重甲</string>
@@ -2849,6 +2850,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
