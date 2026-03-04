@@ -2299,6 +2299,7 @@ remix.31.1\n
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_monero">Monero</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_walletAddress">Endereço da Carteira</string>
     <string name="WndCryptoDonate_warningText">ATENÇÃO: Sempre verifique o endereço antes de enviar fundos. Transações de criptomoedas são irreversíveis!</string>
     <string name="WndCustomizations_Title">Personalizações</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - gratuito para todos e sempre será.\n\nNo entanto, você pode nos ajudar a tornar o jogo ainda melhor.\n\nAlém de nossos sinceros agradecimentos, você obterá algumas melhorias estéticas.</string>

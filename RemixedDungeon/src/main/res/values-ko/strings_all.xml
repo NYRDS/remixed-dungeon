@@ -777,6 +777,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Hedgehog_Name">고슴도치</string>
     <string name="HeroClass_Doctor">역학 의사</string>
     <string name="HeroClass_Elf">엘프</string>
+    <string name="HeroClass_ElfPerks_0">엘프는 15 점의 체력과 9 점의 힘으로 시작합니다.</string>
     <string name="HeroClass_ElfPerks_1">엘프는 속박에 면역입니다.</string>
     <string name="HeroClass_ElfPerks_2">엘프는 강화된 나무 활과 화살 한 다발을 가지고 시작합니다.</string>
     <string name="HeroClass_ElfPerks_3">엘프는 활을 매우 잘 다루고 민첩합니다.</string>
@@ -832,6 +833,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroSubClass_DescSnip">_저격수_는 적의 갑옷의 취약점을 파악할 수 있어, 원거리 무기를 사용할 시 적의 방어를 효과적으로 무시할 수 있습니다.</string>
     <string name="HeroSubClass_DescWarL">적을 죽이면, _흑마법사_는 적의 영혼을 흡수하여, 상처를 치료하고 허기를 채운다.</string>
     <string name="HeroSubClass_DescWard">자연의 힘과 밀접한 교감은 _숲지기_에게 식물로부터 이슬과 씨앗을 수확할 수 있는 능력을 줍니다. 또한, 높게 자란 풀 위에 올라서면 일시적인 방어력 버프를 부여받습니다.</string>
+    <string name="HeroSubClass_DescWitchdoctor">주문 시전은 _주술사_에게 완전한 보호막을 부여하여 들어오는 피해를 완전히 막아줍니다.</string>
     <string name="HeroSubClass_NameAssa">암살자</string>
     <string name="HeroSubClass_NameBatM">전투 마법사</string>
     <string name="HeroSubClass_NameBers">광전사</string>
@@ -2331,6 +2333,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndStory_Spiders">오래 전, 마법의 돌로 가득 찬 풍족한 광산이 있었씁니다. 그러나 광맥이 말라버리자 광부들은 넓은 터널 망을 남긴 채 사라졌습니다. 결국 이 장소는 거미들이 차지하게 되었습니다, 그러나저러한 위험한 생물체들이, 광산의 보물들을 찾으려는 용감하고 미친 사람들을 내쫓기에는 충분하지 않았습니다. 위험의 정도는 항상 마법 유물들에 관한 소문에 비례하였다. 옛날 옛적에 사악한 마녀가 검찰관으로부터 도망치기 위해 이 터널로 들어왔는데, 미신을 믿는 사람들이 어둠 속으로 들어가질 못했고 그들은 기다리기로 했다. 그러나 마녀는 절대 나타나지 않았다. 어쩌면 마녀는 다른 출구를 찾았을 수도 있고, 경비 몰래 지나갔을 수도 있겠지만, 어둠의 생명체들의 바스락거리는 소리에 둘러쌓인 채 죽었을 수도 있다.</string>
     <string name="WndTilesKind_NewLook">새로운 모양</string>
     <string name="WndTilesKind_Title">그건 그렇고:</string>
+    <string name="WndTilesKind_text">당신은 이제 뒤틀린 마법에 사로잡힌 던전에 들어가려 합니다. 그러나 당신은 그것을 어떻게 볼지 선택할 수 있습니다:\n현대적인 유사 3D 와 고전적인 평면 보기 중 무엇을 원하십니까?\n나중에 게임 옵션 메뉴에서 변경할 수 있습니다.</string>
     <string name="WndTradeItem_Bought">%1$s 을/를 %2$dg 에 구매했습니다.</string>
     <string name="WndTradeItem_Buy">구매 %dg</string>
     <string name="WndTradeItem_BuyAll">%dg를 주고 전부 구매한다</string>
@@ -2581,6 +2584,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 </resources>
