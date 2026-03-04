@@ -2345,6 +2345,7 @@ remix.30.1\n
     <string name="WndClass_Mastery">Uzmanlık</string>
     <string name="WndCryptoDonate_copyAddress">Adresi Kopyala</string>
     <string name="WndCryptoDonate_infoText">Remixed Dungeon\'ın geliştirilmesini, aşağıda belirtilen adreslere kripto para bağışları göndererek destekleyebilirsiniz. Câmilerinize teşekkür ederiz!</string>
+    <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_walletAddress">Cüzdan Adresi</string>
     <string name="WndCustomizations_Title">Özelleştirmeler</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - her zaman ve herkes için ücretsiz.\n\nEğer isterseniz oyunu daha iyi bir hale getirmek için bize yardımcı olabilirsiniz.\n\nİçten şükranlarımızın yanı sıra bir kozmetik seti alacaksınız.</string>
@@ -2886,6 +2887,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
