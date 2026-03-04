@@ -1736,6 +1736,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="ScaleArmor_Desc">Las escamas de metal cosidas a un chaleco de cuero conforman una armadura flexible, pero protectora armadura.</string>
     <string name="ScaleArmor_Name">armadura de escamas</string>
     <string name="ScarecrowNPC_Desc">No hay duda... ese espantapájaros observa todos tus movimientos. Sus ojos rojo brillante ven a través de ti, pero no te sientes en peligro.</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">espantapájaros</string>
     <string name="ScarecrowNPC_Name_Objective">espantapájaros</string>
     <string name="ScarecrowNPC_Quest_End">¡Oh, que alegría! ¡Oh, que bueno!\n ¡Tu recompensa será un alimento verdadero!</string>
@@ -2869,6 +2870,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
