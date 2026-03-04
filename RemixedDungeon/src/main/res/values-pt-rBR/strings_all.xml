@@ -676,6 +676,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Exhumation_NoGrave">Não há sepultura aqui para realizar uma Exumação.</string>
     <string name="Exhumation_Ok">Irei obedece-lo.</string>
     <string name="ExplodingSkull_Desc">Este crânio flutuante em chamas, aparenta ser extremamente frágil, parece que vai explodir a qualquer momento.</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">crânio explosivo</string>
     <string name="ExplodingSkull_Name_Objective">crânio explosivo</string>
     <string name="Eye_Desc">Um dos outros nomes deste demônio é \&quot;esfera de ódio\&quot;, porque quando vê um inimigo, ele usa seu Olhar da Morte de forma imprudente, muitas vezes ignorando seus aliados e ferindo-os.</string>
@@ -2836,6 +2837,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
