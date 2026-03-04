@@ -2336,6 +2336,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_armorstand_leather_name">Armatura di cuoio</string>
     <string name="town_deco_armorstand_plate_desc">Secondo il mercante, questa pesante armatura una volta apparteneva a un grande guerriero.</string>
     <string name="town_deco_armorstand_plate_name">Armatura di piastre</string>
+    <string name="town_deco_armorstand_scale_desc">Le piastre dorate di questa armatura a squame sembrano nuove di zecca.</string>
     <string name="town_deco_armorstand_scale_name">Armatura a scaglie</string>
     <string name="town_deco_banner_desc">Un elegante stendardo raffigurante i simboli di questa osteria.</string>
     <string name="town_deco_banner_name">Stendardo</string>
@@ -2495,6 +2496,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
