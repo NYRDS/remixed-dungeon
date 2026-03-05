@@ -2551,6 +2551,7 @@
     <string name="town_deco_INN_sign_name">Вивіска готелю</string>
     <string name="town_deco_armoronhanger_desc">Деяка броня розвішана на манекенах.</string>
     <string name="town_deco_armoronhanger_name">Броня</string>
+    <string name="town_deco_armorstand_leather_desc">Надійний шкіряний обладунок буде чудовим придбанням перед походом у підземелля.</string>
     <string name="town_deco_armorstand_leather_name">Шкіряна броня</string>
     <string name="town_deco_banner_name">Прапор</string>
     <string name="town_deco_barrel_desc">Звична діжка, яка вже бачила кращі часи.</string>
@@ -2751,6 +2752,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
