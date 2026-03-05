@@ -2647,6 +2647,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="YogsBrain_Name">ヨグの脳</string>
     <string name="YogsBrain_Name_Objective">ヨグの脳</string>
     <string name="YogsEye_Desc">旧神の眼。永遠の憎悪に満ちたすべてを見通すまなざし。あなたはそれを自身の魂を通して感じることができる。</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">ヨグの眼</string>
     <string name="YogsEye_Name_Objective">ヨグの眼</string>
     <string name="YogsHeart_Desc">何世紀もの間、純粋な悪を行うことができるのは、心のない生き物だけだと信じられてきた。しかし、あなたの目の前で鼓動している巨大な心臓は、旧神自身のものなのだ。</string>
@@ -2920,6 +2921,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
