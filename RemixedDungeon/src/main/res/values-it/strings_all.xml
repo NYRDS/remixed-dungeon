@@ -1629,6 +1629,7 @@ Potrebbe bruciare?</string>
     <string name="Senior_Name">Monaco anziano</string>
     <string name="Senior_Name_Objective">Monaco anziano</string>
     <string name="ServantNPC_Gender">masculine</string>
+    <string name="ServantNPC_Name">cameriera della locanda</string>
     <string name="ServantNPC_Name_Objective">cameriere della locanda</string>
     <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Mi scuso, ma ogni nuovo avventuriero può guardare solo %d film in totale.</string>
@@ -2462,6 +2463,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_stock_desc">Qui vengono conservate le scorte di cibo, così come un mucchio di cianfrusaglie di ogni sorta e colore.</string>
     <string name="town_deco_stock_name">Scorta</string>
     <string name="town_deco_stone_wall_broken_desc">Vecchio muro di pietra, in cattive condizioni</string>
+    <string name="town_deco_stone_wall_desc">In qualche modo questo muro emana calore e sembra un po\' umido.</string>
     <string name="town_deco_stone_wall_name">Muro di pietra</string>
     <string name="town_deco_stones_desc">Solo un mucchio di pietre.</string>
     <string name="town_deco_stool_broken_desc">Questo sgabello ha visto giorni migliori.</string>
@@ -2501,6 +2503,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 
