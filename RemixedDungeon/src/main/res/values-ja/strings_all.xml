@@ -1130,6 +1130,7 @@
     <string name="KrampusHead_Name">クランプスヘッド</string>
     <string name="KunaiThrow_Info">この致命的なクナイ投げは非常に速く行われ、ターゲットを選ぶことさえできないほど速い。真のマスターは一度に複数のクナイを投げることができる。</string>
     <string name="KunaiThrow_Name">クナイ投げ</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">この武器は金属製の鎖につながれた鎌で、もう一方の端には重い鉄の重りがついている。</string>
     <string name="Kusarigama_Name">鎖鎌</string>
     <string name="Kusarigama_Pull">引く</string>
@@ -2919,6 +2920,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

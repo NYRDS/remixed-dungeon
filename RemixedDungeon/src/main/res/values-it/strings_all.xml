@@ -174,6 +174,7 @@
     <string name="Bandit_Name">bandito pazzo</string>
     <string name="Bandit_Name_Objective">bandito pazzo</string>
     <string name="BardNPC_Name_Objective">bardo</string>
+    <string name="BardSong_1">Io e mia moglie viviam da soli,\nIn una capanna di legno, tutta per noi.\nLei amava il gin, io il rum,\nE vi dico che ci divertivamo un po\'!</string>
     <string name="BarkskinBuff_Name">Pelle coriacea</string>
     <string name="Barrel_Name">barile</string>
     <string name="Bat_Defense">eluso</string>
@@ -537,6 +538,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DriedRose_Name">rosa essiccata</string>
     <string name="Drink_ACDrink">BEVI</string>
     <string name="Drink_Message">Quella bevanda era rinfrescante!</string>
+    <string name="Drunkard_Phrase_2">Chi ha bisogno d\'acqua quando hai la birra!</string>
     <string name="Dungeon_DeadEnd">Cosa ci fai qui?!</string>
     <string name="Dungeon_NoTips">Il testo è indecifrabile...</string>
     <string name="Dungeon_Tips_0">Non sopravvalutare la tua forza, usa armi e armature che riesci a maneggiare.</string>
@@ -2499,6 +2501,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

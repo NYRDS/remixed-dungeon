@@ -1818,6 +1818,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpiderQueen_Name">ratu lelabah</string>
     <string name="SpiderQueen_Name_Objective">ratu lelabah</string>
     <string name="SpiderServant_Desc">Askar merupakan unit paling banyak dalam sarang lelabah. Dilahirkan untuk melindungi wilayahnya. Kelisera askar mengandungi kelenjar berbisa yang dapat meracun musuhnya.</string>
+    <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">askar lelabah</string>
     <string name="SpiderServant_Name_Objective">askar lelabah</string>
     <string name="Spinner_Desc">Lelabah gua berbulu hijau ini cuba menghindari pertempuran bersemuka, lebih suka tunggu dari jarak jauh dan membiarkan mangsanya terperangkap dengan jaringan mereka, mati perlahan-lahan kesan dari gigitan berbisa mereka.</string>
@@ -2613,6 +2614,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
