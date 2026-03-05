@@ -1902,6 +1902,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SociologistNPC_AlreadyTaken">Du hast diese Umfrage bereits gemacht, bitte komm später wieder</string>
     <string name="SociologistNPC_Desc">Dies ist ein Soziologe mit der heiligen Aufgabe, öffentliche Meinungen zu sammeln</string>
     <string name="SociologistNPC_DownloadError">Es tut mir leid, aber etwas ist schief gelaufen, bitte versuche es später erneut</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Hi">Hallo!\nWillst du an dieser Umfrage teilnehmen?(Internetverbindung ist erforderlich)\nDeine Meinung zählt!</string>
     <string name="SociologistNPC_InternetRequired">Es tut mir leid, aber ohne Internetverbindung kannst du nicht an der Umfrage teilnehmen</string>
     <string name="SociologistNPC_Name">Soziologe</string>
@@ -2805,6 +2806,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 </resources>

@@ -578,6 +578,7 @@
     <string name="DarkVeilBuff_Info">闇の帳が持ち主を包み込み、ダメージを受けるたびに精霊を召喚する。</string>
     <string name="DarkVeilBuff_Name">闇の帳</string>
     <string name="Darkness_Info">永遠の闇のかけらが宙に浮いているように見える</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">このシンプルな金属製のクギは、獲物を正確に貫くために理想的な重さになっている。</string>
     <string name="Dart_Name">ダーツ</string>
     <string name="DashSpell_Info">敵に衝突しながら指定した方向に向かってダッシュし、ダメージを与えて負傷させる。</string>
@@ -2921,6 +2922,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
