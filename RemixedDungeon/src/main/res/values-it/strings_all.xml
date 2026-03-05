@@ -1,6 +1,7 @@
 <resources>
     <string name="AC_Devour">Divorare</string>
 
+    <string name="AC_Kick">Calciare</string>
     <string name="AC_Necromancy">Negromanzia</string>
     <string name="Abilities_Common">Magie comuni</string>
     <string name="Abilities_Default">Padronanza</string>
@@ -1590,6 +1591,7 @@ Potrebbe bruciare?</string>
     <string name="ScrollOfTeleportation_Info">La magia su questa pergamena teletrasporterà istantaneamente chi la legge in un punto qualsiasi del dungeon. Può essere usata per scappare da una situazione pericolosa, ma un lettore sfortunato potrebbe ritrovarsi in una situazione ancora peggiore.</string>
     <string name="ScrollOfTeleportation_Name">Pergamena di Teletrasporto</string>
     <string name="ScrollOfTeleportation_NoTeleport">la forte aura magica di questo luogo impedisce il teletrasporto!</string>
+    <string name="ScrollOfTeleportation_NoTeleport2">La forte aura magica di questo luogo impedisce a %s di teletrasportarsi!</string>
     <string name="ScrollOfTeleportation_Teleport">In un batter d\'occhio si sono teletrasportati in un\'altra posizione del dungeon</string>
     <string name="ScrollOfTerror_Info">Un lampo di luce rossa sopraffane tutte le creature nel vostro campo visivo con il terrore, e si gireranno e fuggiranno. Attaccare un nemico in fuga farà dissipare l\'effetto.</string>
     <string name="ScrollOfTerror_Info1">La pergamena emette un brillante lampo di luce rossa</string>
@@ -2505,6 +2507,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

@@ -736,6 +736,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Food_ACEat">COMER</string>
     <string name="Food_Message">¡Esa comida estaba deliciosa!</string>
     <string name="FortuneTellerNPC_Desc">Esta mujer viste un traje largo y de colores brillantes. Parece demasiado joven para alguien que domina las artes arcanas de la adivinación. Al acercarte, puedes escucharla murmullar, mientras mira en la bola de cristal.</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">adivina</string>
     <string name="FortuneTellerNPC_Name_Objective">adivina</string>
     <string name="FreezeGlobe_Info">Congela al objetivo seleccionado, impidiendo su movimiento por un corto tiempo.</string>
@@ -2874,6 +2875,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
