@@ -1687,6 +1687,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="RottenFood_Message">widerlich!</string>
     <string name="RottenMeat_Info">ein Stück vergammeltes Fleisch</string>
     <string name="RottenMeat_Name">vergammeltes Fleisch</string>
+    <string name="RottenOrgan_Info">Ein zerfallendes Organ, das von einem besiegten Gegner geerntet wurde. Trotz seines verwesenden Zustands enthält es wertvolle Verbindungen für alchemistische Prozesse.</string>
     <string name="RottenOrgan_Name">Verrottetes Organ</string>
     <string name="RottenPasty_Info">es könnte einmal eine Pastete gewesen sein, jetzt ist es nur noch ekelhaft</string>
     <string name="RottenPasty_Name">Vergammelte Pastete</string>
@@ -2804,5 +2805,6 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 </resources>
