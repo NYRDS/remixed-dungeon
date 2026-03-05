@@ -283,6 +283,7 @@
     <string name="BlessedBuff_Name">Bendecido</string>
     <string name="BlindnessBuff_Info">Completamente cegado, sólo se oyen los sonidos de alrededor.</string>
     <string name="BlindnessBuff_Name">Cegado</string>
+    <string name="BloodTransfusion_Info">Drena casi toda la sangre de un objetivo para curarte. Un oscuro ritual de sacrificio y supervivencia.</string>
     <string name="BodyArmorBuff_Info">La Armadura es incrementada a coste de Velocidad de Movimiento.</string>
     <string name="BodyArmorBuff_Name">Armadura Corporal</string>
     <string name="BodyArmorSpell_Info">Activa la fuerza de tus músculos reservada, haciéndolos temporalmente más fuertes, así aumentando enormemente tu armadura pero a coste de tu velocidad de movimiento.</string>
@@ -814,6 +815,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">golem</string>
     <string name="Goo_Desc">Poco se sabe sobre el Goo. Es muy posible que ni siquiera sea una criatura, sino un conglomerado de sustancias de las cloacas que adquirieron rudimentos de libre albedrío. De cualquier manera, es obvio que la magia oscura está funcionando aquí.</string>
+    <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">¡La viscosidad se está bombeando a sí misma!</string>
     <string name="Goo_Info2">glurp... glurp...</string>
     <string name="Goo_Info3">¡GLURP-GLURP!</string>
@@ -2872,6 +2874,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

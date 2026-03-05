@@ -878,6 +878,7 @@
     <string name="HeroClass_NecromancerPerks_2">Некроманти починають з унікальною робою некроманта, яка дає 1 бал мани за кожну вбиту істоту.</string>
     <string name="HeroClass_NecromancerPerks_3">Некроманти мають на початку ключ-череп від рівня 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Зілля лікування ідентифіковані з самого початку.</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">Чумні доктори збирають [yellow:Токсичні залози], [yellow:Гнилі органи], [yellow:Уламки кісток] з переможених ворогів.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Починаєте з маскою чуми (імунітет до всіх газів) і кістковою пилою. Критичні удари викидають додаткові частини, а пила завдає +50% шкоди паралізованим ворогам.</string>
     <string name="HeroClass_Rog">крадій</string>
     <string name="HeroClass_RogPerks_0">Крадії починають з кільцем тіней +1.</string>
@@ -2747,6 +2748,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

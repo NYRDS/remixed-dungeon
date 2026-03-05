@@ -1212,6 +1212,7 @@ Potrebbe bruciare?</string>
     <string name="Nightmare_Desc">creatura grottesca fatta di spasmi tentacoli carne. Gli incubi è una manifestazione di pensieri sinistri del vecchio dio.</string>
     <string name="Nightmare_Name">incubo</string>
     <string name="Nightmare_Name_Objective">incubo</string>
+    <string name="OozeBuff_Name">Melma Caustica</string>
     <string name="Ooze_Death">%s ti ha ucciso...</string>
     <string name="Order_Info">Con la giusta concentrazione, i tuoi ordini sono quasi incontestabili.</string>
     <string name="Order_Name">Ordine</string>
@@ -2503,6 +2504,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
