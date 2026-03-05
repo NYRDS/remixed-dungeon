@@ -802,6 +802,7 @@
     <string name="Healing_Name">迴復</string>
     <string name="HealthArrow_Info">治療藥水做的箭</string>
     <string name="HealthArrow_Name">治療箭</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">治療藥水制作的飛鏢。</string>
     <string name="HealthDart_Name">治療飛鏢</string>
     <string name="Heap_Mimic">它是擬型怪！</string>
@@ -2712,6 +2713,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

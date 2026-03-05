@@ -1346,6 +1346,7 @@
     <string name="Nightcap_Info">Підкорення підземелля в нічну пору може бути досить нудною справою. От якби одягти теплий та затишний ковпак та розслабитись, то вас покинуть всі ваші турботи.</string>
     <string name="Nightcap_Name">Нічний ковпак</string>
     <string name="Nightmare_Desc">Гротескна істота, у вигляді вусиків з плоті, що безперестану смикаються. Сонна мара є втіленням зловісних думок Старого Бога.</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name">сонна мара</string>
     <string name="Nightmare_Name_Objective">сонна мара</string>
     <string name="No_Valid_Cell">Поблизу немає необхідної клітинки.</string>
@@ -2748,6 +2749,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
