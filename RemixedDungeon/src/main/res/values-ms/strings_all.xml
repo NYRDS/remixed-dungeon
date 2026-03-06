@@ -1554,6 +1554,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Ring_Info3b">, dan kerana ia telah disumpah, anda tidak berupaya menanggalkannya.</string>
     <string name="Ring_Info4">%1$s\n\nAnda dapat rasai kuasa ajaib berunsur kejahatan berlingkar-lingkar di dalam %2$s.</string>
     <string name="Ring_Name">Cincin %s</string>
+    <string name="Roar_Name">Auman</string>
     <string name="RogueArmor_ACSpecial">BOM ASAP</string>
     <string name="RogueArmor_Desc">Jika memakai pakaian gelap ini, gasar boleh melakukan trik, iaitu \&quot;bom asap\&quot; (tiada letupan sebenar digunakan): dia menjadikan pihak musuh buta dan melompat ditepinya.</string>
     <string name="RogueArmor_Fov">Anda hanya boleh lompat ke lokasi kosong dalam pandangan anda</string>
@@ -1864,6 +1865,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Stylus_Name">kalam misteri</string>
     <string name="Stylus_SelectArmor">Pilih satu item untuk dituliskan</string>
     <string name="Succubus_Desc">Succubi ialah seekor setan yang kelihatan seperti gadis penggoda. Dengan menggunakan sihirnya, succubus boleh memukau adiwira, yang mana dia tidak dapat menyerang sehinggalah pukau itu terpadam.</string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">succubus</string>
     <string name="Succubus_Name_Objective">succubus</string>
     <string name="SummonBeast_Info">Cuba memanggil sekawan binatang perkasa untuk mematuhi perintah anda.\nKeputusan sebenar mungkin berbeza.</string>
@@ -2619,6 +2621,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

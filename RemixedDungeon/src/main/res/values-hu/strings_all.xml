@@ -292,6 +292,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="CagedKobold_Name">ketrecbe zárt kobold</string>
     <string name="CagedKobold_Name_Objective">ketrecbe zárt kobold</string>
     <string name="CagedKobold_Quest_End">Ó, köszönöm szépen! Hogy találtad meg a kulcsot? Te... legyőzted a Fegyvert ?!? Hihetetlen! Tudod mit, azt mondtam, segítek neked és már tudom is hogy hogyan. Egy kicsit veled maradok. * A bezárt kobold egy gyertyává változott.</string>
+    <string name="Calm_Name">Nyugalom</string>
     <string name="CandleOfMindVision_Info">Átlagos gyertyának tűnik, nem olyasmi, amit egy veszélyes katakombában elképzelnél. Azért fura, hogy langyos a tapintása annak ellenére, hogy még nincs is meggyújtva.</string>
     <string name="CandleOfMindVision_Info_Exhausted">Kiégett gyertya, nem gyullad fel többé, amikor tartod. Űgy tűnik, használhatatlanná vált.</string>
     <string name="CandleOfMindVision_Info_Lighted">A gyertya felgyulladt, ahogy kivetted a táskádból. A lángja halvány, lila fényt ad, és ahogy keresztülnézel rajta, minden közeledben lévő szörny láthatóvá válik.</string>
@@ -1237,6 +1238,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">törp szerzetes</string>
     <string name="Monk_Name_Objective">törp szerzetes</string>
+    <string name="MoongraceBuff_Name">Mennyei manna</string>
     <string name="Moongrace_Name">Holdszépség</string>
     <string name="Multiplicity_Txt">Többszöröző %s</string>
     <string name="Mushroom_Eat_Message">Ez a gomba elég furcsa ízű...</string>
@@ -2644,6 +2646,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
