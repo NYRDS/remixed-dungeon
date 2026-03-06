@@ -1926,6 +1926,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpiderExploding_Name">laba-laba pekerja</string>
     <string name="SpiderExploding_Name_Objective">laba-laba pekerja</string>
     <string name="SpiderGuard_Desc">Mirip seperti tentara laba-laba penjaga telah bersumpah untuk melindungi kerajaan mereka. Racun dari penjaga dipakai untuk membekukan target mereka yang menyebabkan kelumpuhan.</string>
+    <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">laba-laba penjaga</string>
     <string name="SpiderGuard_Name_Objective">laba-laba penjaga</string>
     <string name="SpiderMindAmber_Desc">Laba-laba amber adalah makhluk langka dan misterius yang memiliki kekuatan pikiran sehingga mirip dengan laba-laba-psi, tapi lebih kuat dari peranakan mereka biasanya. Nama \&quot;amber\&quot; mengarah ke warna kantung otak raksasa mereka, yang diperlihatkan di depan korban mereka, saat Laba-laba Amber menyerang dengan kekuatan mereka.</string>
@@ -2820,6 +2821,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

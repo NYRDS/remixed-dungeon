@@ -597,6 +597,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="ExplodingSkull_Name">teschio esplosivo</string>
     <string name="ExplodingSkull_Name_Objective">teschio esplosivo</string>
     <string name="Eye_Desc">Uno degli altri nomi di questo demone è \&quot;sfera d\'odio\&quot; perché quando vede un nemico, usa il suo raggio mortale sconsideratamente, spesso ignorando i suoi alleati e ferendoli.</string>
+    <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">%s\'s raggio mortale ti ha ucciso...</string>
     <string name="Eye_Name">malocchio </string>
     <string name="Eye_Name_Objective">Malocchio</string>
@@ -868,6 +869,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="IceCaves_TileDescDeco">Questo gnoll è stato congelato vivo. Apparentemente, è rimasto lì per molto tempo.</string>
     <string name="IceCaves_TileDescHighGrass">La fitta vegetazione ghiacciata blocca la vista.</string>
     <string name="IceCaves_TileDescStatue">Un\'altra orribile statua... Oh, aspetta. È uno gnoll congelato.</string>
+    <string name="IceCaves_TileGrass">Erba ghiacciata.</string>
     <string name="IceCaves_TileStatue">Gnoll Congelato</string>
     <string name="IceElemental_Desc">Tra tutti gli elementali che esistono nel dungeon, gli elementali del ghiaccio difficilmente possono essere considerati potenti, ma possono davvero essere definiti tra i più pericolosi. L\'aura di gelo che emette dai loro corpi può rallentare qualsiasi nemico.</string>
     <string name="IceElemental_Gender">masculine</string>
@@ -1814,6 +1816,7 @@ Potrebbe bruciare?</string>
     <string name="Succubus_Name">succube</string>
     <string name="Succubus_Name_Objective">succube</string>
     <string name="SummonBeast_Info">Tentativo di evocare un\'orda di potenti bestie al tuo comando.\nI risultati effettivi possono variare.</string>
+    <string name="SummonBeast_Name">Chiamata della Bestia</string>
     <string name="SummonDeathling_Info">Evoca un Gregario della Morte. I suoi HP e danni crescono con il livello dell\'eroe. \n\nLimite di evocazione: %1$d (+1 ogni Livello di Magia)</string>
     <string name="SummonDeathling_Name">Evoca Gregario della Morte</string>
     <string name="SungrassBuff_Info">Delle radici sono spuntate dal terreno fornendo erbe curative.</string>
@@ -2510,6 +2513,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 
