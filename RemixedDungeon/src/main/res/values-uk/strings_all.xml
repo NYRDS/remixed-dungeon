@@ -2336,6 +2336,7 @@
     <string name="WndInfoItem_Skeleton">Рештки скелета</string>
     <string name="WndInfoItem_Tomb">Гробниця</string>
     <string name="WndInfoItem_WontKnow">Ти не дізнаєшся, що всередині, доки не відкриєш!</string>
+    <string name="WndInstallingMod_copying_file">Копіювання %s до сховища Remixed Dungeon</string>
     <string name="WndInstallingMod_deleting_file">Видаляємо %s</string>
     <string name="WndInstallingMod_please_wait">Встановлення моду, зачекайте...</string>
     <string name="WndInstallingMod_skipping_file">Пропускаємо %s</string>
@@ -2755,6 +2756,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

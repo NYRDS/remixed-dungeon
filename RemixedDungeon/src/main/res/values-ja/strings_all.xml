@@ -1912,6 +1912,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Shopkeeper_text">ピクセル商会のダンジョン支店へようこそ。どのようなご用件でしょうか?</string>
     <string name="Shopkeeper_title">商店</string>
     <string name="ShortSword_ACReforge">鍛え直す</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">ダガーより数センチ長いだけで、かなり短い剣。</string>
     <string name="ShortSword_Name">ショートソード</string>
     <string name="ShortSword_NotBoomerang">この方法ではブーメランを強化できない</string>
@@ -2923,6 +2924,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
