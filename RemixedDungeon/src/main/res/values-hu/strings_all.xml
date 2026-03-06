@@ -1988,6 +1988,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="TownsfolkSilentNPC_Name_Objective">városiak</string>
     <string name="ToxicGas_Info">Zöldes mérgező gázfelhő kavarog itt.</string>
     <string name="ToxicGas_Info1">Meghaltál amiért belélegezted a mérges gázt.</string>
+    <string name="ToxicGland_Info">Egy legyőzött ellenségtől származó mérgező mirigy. Ezek a mirigyek erős toxinokkal vannak tele, és alkímiai folyamatokhoz felhasználhatók.</string>
     <string name="TrapWnd_Step">Biztos hogy ráakarsz lépni erre a csapdára? Bele is halhatsz.</string>
     <string name="TrapWnd_Title">Csapda</string>
     <string name="TreacherousSpirit_Desc">Ez az irtózatos teremtmény úgy néz ki, mint egy felhőnyi élő sötétség. Héj nélküli szeme téged bámul, pulzálva minden mozdulatodra.</string>
@@ -2642,6 +2643,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

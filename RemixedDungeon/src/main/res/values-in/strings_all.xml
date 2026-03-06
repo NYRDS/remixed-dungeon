@@ -1038,6 +1038,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="IronKey_Name">kunci besi</string>
     <string name="ItemSprite_Info1">kesampingkan: %1$.1f %2$.1f</string>
     <string name="Item_ACDrop">LETAKKAN</string>
+    <string name="Item_ACPickup">AMBIL</string>
     <string name="Item_ACThrow">LEMPAR</string>
     <string name="Item_DirThrow">Pilih arah melempar</string>
     <string name="Item_Info">smth</string>
@@ -2818,6 +2819,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

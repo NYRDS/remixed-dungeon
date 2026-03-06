@@ -1864,6 +1864,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Succubus_Desc">Succubi ialah seekor setan yang kelihatan seperti gadis penggoda. Dengan menggunakan sihirnya, succubus boleh memukau adiwira, yang mana dia tidak dapat menyerang sehinggalah pukau itu terpadam.</string>
     <string name="Succubus_Name">succubus</string>
     <string name="Succubus_Name_Objective">succubus</string>
+    <string name="SummonBeast_Info">Cuba memanggil sekawan binatang perkasa untuk mematuhi perintah anda.\nKeputusan sebenar mungkin berbeza.</string>
     <string name="SummonBeast_Name">Panggilan Binatang</string>
     <string name="SummonDeathling_Info">Panggil pengikut hidup semula. Hayat dan kecederaan yang dihasilkan oleh makhluk hidup semula meningkat mengikut tahap adiwira. \n\nHad panggilan: %1$d (+1 setiap Tahap Kuasa Ajaib)</string>
     <string name="SummonDeathling_Name">Panggil Makhluk Mati</string>
@@ -2616,6 +2617,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
