@@ -647,6 +647,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="DwarfToken_Info">Banyak kurcaci dan ciptaannya yang lebih besar membawa metal kecil ini tanpa tujuan yang jelas. Mungkin ini perhiasan atau seperti tanda pengenal mereka. Kurcaci adalah kaum yang aneh.</string>
     <string name="DwarfToken_Name">koin kurcaci</string>
     <string name="EarthElemental_Desc">Elemental bumi adalah massa bumi yang dikendalikan oleh kekuatan alam yang terkonsentrasikan.</string>
+    <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">elemental bumi</string>
     <string name="EarthElemental_Name_Objective">elemental bumi</string>
     <string name="EarthrootBuff_Info">Akar telah tumbuh dari tanah menyediakan pelindung alami.</string>
@@ -2819,6 +2820,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

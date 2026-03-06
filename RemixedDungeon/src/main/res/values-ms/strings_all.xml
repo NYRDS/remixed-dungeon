@@ -1326,6 +1326,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PlagueDoctorQuest_AllDone">*Dia mengeluarkan ketawa kering yang berleguk-leguk.* \&quot;Perbuatan anda, ia telah membuka rahsia yang tidak terukur! Pengetahuan yang diperoleh... ia berdenyut dalam diri saya, satu simfoni penemuan. Tetapi pengetahuan,\&quot; tambahnya, suaranya merendah kepada bisikan konspirasi, \&quot;pengetahuan adalah kuasa. Dan kuasa... ah... itu adalah eliksir yang paling memabukkan.\&quot; Dia merenung anda dengan tekun untuk seketika, mata ametisnya terbakar dengan intensiti demam. \&quot;Mungkin,\&quot; dia berbisik, \&quot;jalan kita akan bersilang lagi. Kerana masih ada banyak... misteri... yang perlu dileraikan.\&quot;</string>
     <string name="PlagueDoctor_Desc">Sibongkok ini sepenuh diliputi dengan pakaian berkulit. Dia berbau ubat dan juga... bawang putih?</string>
 
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">doktor wabak</string>
     <string name="PlagueDoctor_Name_Objective">doktor wabak</string>
     <string name="Plant_ACPlant">TUMBUHAN</string>
@@ -1568,6 +1569,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="RottenFood_Message">jijiknya!</string>
     <string name="RottenMeat_Info">sekeping daging busuk</string>
     <string name="RottenMeat_Name">daging busuk</string>
+    <string name="RottenOrgan_Info">Organ yang mereput dipetik daripada musuh yang dikalahkan. Walaupun dalam keadaan busuk, ia mengandungi sebatian berharga untuk proses alkimia.</string>
     <string name="RottenOrgan_Name">Organ Busuk</string>
     <string name="RottenPasty_Info">pai busuk ini memualkan</string>
     <string name="RottenPasty_Name">pai busuk</string>
@@ -2617,6 +2619,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
