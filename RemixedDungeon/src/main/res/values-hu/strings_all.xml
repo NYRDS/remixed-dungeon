@@ -2398,6 +2398,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Wraith_Name">lidérc</string>
     <string name="Wraith_Name_Objective">lidérc</string>
     <string name="WrnExperimental_hint">Ha ez a furcsa és torz világ túl kemény Önhöz, kérem kapcsolja ki ezeket az opciókat:\nKezdőképernyő -&gt; Beállítások -&gt; Játékmenet\nmenü segítségével, majd indítson új játékot vagy töltsön be egy másik mentést.</string>
+    <string name="WrnExperimental_title">Kísérleti lehetőségek engedélyezve!</string>
     <string name="Yog_Desc">Yog-Dzewa egy Öreg Isten, egy hatalmas erejű entitás a káosz síkjáról. Egy évezreddel ezelőtt, az ősi törp birodalom hatalmas áldozatok árán épphogy meg tudta nyerni a háborút a démoni seregei ellen, azonban képtelenek voltak elpusztítani magát az Öreg Istent. Helyette bebörtönözték egy a városuk alatt fekvő tárnában, reménykedve hogy sosem lesz újra ereje ahhoz hogy támadjon.</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">A remény csupán illúzió...</string>
@@ -2643,6 +2644,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

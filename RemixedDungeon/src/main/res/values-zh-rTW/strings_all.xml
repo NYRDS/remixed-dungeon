@@ -2621,6 +2621,7 @@
     <string name="town_deco_potions_name">藥水</string>
     <string name="town_deco_projector_desc">用來放電影娛樂人們的老舊設備。</string>
     <string name="town_deco_projector_name">電影放映機</string>
+    <string name="town_deco_red_carpet_desc">據說類似紅地毯也裝飾著矮人大都市的廳堂。</string>
     <string name="town_deco_red_carpet_name">地毯</string>
     <string name="town_deco_roof_desc">平凡不過的瓦片屋頂。</string>
     <string name="town_deco_roof_name">屋頂</string>
@@ -2717,6 +2718,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
