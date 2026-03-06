@@ -1571,6 +1571,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="Quarterstaff_Name">çeyrek sopa</string>
     <string name="QuickSlot_SelectSlot">Hızlı seçim yuvası seçin</string>
     <string name="QuickSlot_SelectedItem">Hızlı kullanım için bir nesne seçin</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">İstediğiniz kadar ok taşıyabileceğiniz deri ok kılıfı</string>
     <string name="Quiver_Name">ok kılıfı</string>
     <string name="RabbitEars_Info">Tavşanların şanslı hayvanlar olduğu çok bilinen bir inançtır, ve şansları vücudunun bir parçasına sahip olanlara da geçtiği söylenmektedir. Bir bakıma kulaklarının dekorasyon olarak kullanılması için öldürülmek pekte şans işi değil.</string>
@@ -2887,6 +2888,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

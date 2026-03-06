@@ -1786,6 +1786,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SpiderExploding_Name">거미 일꾼</string>
     <string name="SpiderExploding_Name_Objective">거미 일꾼</string>
     <string name="SpiderGuard_Desc">병사들처럼 거미 경비병도 그들의 왕국을 지킨다고 맹세했습니다. 거미 경비병의 독은 목표물을 마비시켜 움직이지 못하게 하는데 사용됩니다.</string>
+    <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">거미 경비병</string>
     <string name="SpiderGuard_Name_Objective">거미 경비병</string>
     <string name="SpiderMindAmber_Desc">호박 거미는 사이코 파워를 가진 신비롭고 희귀한 동물입니다. 하지만 평범한 같은 종 보다는 훨씬 강합니다. \&quot;호박\&quot;이라는 이름은 공격당한 희생자들이 본 호박 거미의 커다란 뇌의 색을 말합니다.</string>
@@ -2591,6 +2592,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
