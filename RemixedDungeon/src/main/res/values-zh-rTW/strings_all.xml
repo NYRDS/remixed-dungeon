@@ -509,6 +509,7 @@
     <string name="CorpseDust_Name">屍塵</string>
     <string name="Crab_Defense">招架</string>
     <string name="Crab_Desc">這些巨型的螃蟹位居下水道食物鏈的頂端。它們行動極其迅速，並且厚重的甲殼能承受沈重的打擊。</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">下水道螃蟹</string>
     <string name="Crab_Name_Objective">下水道螃蟹</string>
     <string name="CrippleBuff_Name">殘疾</string>
@@ -2714,6 +2715,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

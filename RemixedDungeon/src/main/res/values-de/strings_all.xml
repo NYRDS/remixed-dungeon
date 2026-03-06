@@ -210,6 +210,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BattleAxe_Name">Streitaxt</string>
     <string name="Bee_Desc">Trotz ihrer geringen Größe verteidigen Bienen ihren Stock erbittert. Sie leben jedoch nicht lange.</string>
     <string name="Bee_Gender">feminine</string>
+    <string name="Bee_Name_Objective">Biene</string>
     <string name="BellaNPC_Amulet_F">Was hast du Schöne dort drüben? Ah, solch ein schönes Amulett! Und du ... du strahlst so viel heller als jeder andere. Was wenn wir einen Spaziergang machen und unsere gemeinsame Zukunft besprechen?</string>
     <string name="BellaNPC_Amulet_M">Was hast du Gutaussehender dort drüben? Ah, solch ein schönes Amulett! Und du ... du stehst über diesen Pöbeln. Was wenn wir einen Spaziergang machen und unsere gemeinsame Zukunft besprechen?</string>
     <string name="BellaNPC_Angry">Wie kannst du es wagen...du Tölpel!</string>
@@ -336,6 +337,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Carcass_Info">Überreste eines völlig toten %s.</string>
     <string name="Carcass_Kick">Dieses %s ist völlig tot, keinen Grund es zu treten.</string>
     <string name="Carcass_Name">Überreste von %s</string>
+    <string name="Carcass_Necromancy_Failed">Dein Versuch, die Leiche von %s zu erwecken, ist gescheitert!</string>
     <string name="Carcass_TooFarToDissect">Du musst näher herangehen, um die Leiche zu sezieren.</string>
     <string name="Caves_TileDescBookshelf">Wer braucht denn ein Bücherregal in einer Höhle?</string>
     <string name="Caves_TileDescDeco">Eine Erzader ist in der Wand sichtbar. Gold?</string>
@@ -2807,6 +2809,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 
