@@ -662,6 +662,7 @@ Ez a maszk azonban csak dekoratív célt szolgál.</string>
     <string name="FireArrow_Info">Ez a nyílvessző hasonlít az átlagos társához, de a feje meleg fényt bocsát ki.</string>
     <string name="FireArrow_Name">gyújtó nyíl</string>
     <string name="FireElemental_Desc">A kóborló tűz elemetálok valami sokkal nagyob teremtmény megidézésének a melléktermékei. Túlságosan kaotikus természetűek és ezáltal irányíthatatlanok még a leghatalmasabb démonológusok számára is.</string>
+    <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">tűz elementál</string>
     <string name="FireElemental_Name_Objective">tűz elementál</string>
     <string name="Fire_Info">Tűz tombol itt</string>
@@ -2640,6 +2641,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
