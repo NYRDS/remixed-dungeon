@@ -273,6 +273,7 @@
     <string name="Burning_Burns">%s 이/가 불탔습니다!</string>
     <string name="Burning_Death">불에 타죽었습니다...</string>
     <string name="CagedKobold_Desc">철장 안의 코볼트</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">거기..거기! 너 모험가지?  나를 이곳에서 나갈 수 있게 도와줘, 잔혹한 군국주의자들이 나를 여기 가뒀어. 그들은 고대의 병기를 다시 작동시켜서 저 위의 사람들을 정복하려고 해! 나는 그 계획이 위험하다고 생각해서 대립했고, 그들은 의회에서 나를 쫓아냈고 이 감옥에 가뒀어. 이 감옥의 열쇠를 찾아준다면, 나는 최대한 너를 도와줄게.</string>
     <string name="CagedKobold_Message1">제발...</string>
     <string name="CagedKobold_Message2">친구야, 날 도와서 여기서 나오게 해줘.</string>
@@ -2597,6 +2598,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

@@ -1200,6 +1200,7 @@ Potrebbe bruciare?</string>
     <string name="NecromancerRobe_PetLimitReached">Necromante: hai raggiunto il limite di invocazione (Massimo corrente: %d)!</string>
     <string name="Necromancer_ACSpecial">NEGROMANZIA</string>
     <string name="Necromancy_BecameALich">Sei divenuto un Lich! Il tuo potere cresce e la tua capienza di anime è raddoppiata! Ma hai perso %1$d punti di forza.</string>
+    <string name="Necromancy_Death">Hai esaurito tutte le tue forze vitali praticando la negromanzia.</string>
     <string name="Necromancy_NotEnoughSouls">Non possiedi abbastanza anime per lanciare un incantesimo \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_ReincarnationName">Reincarnazione</string>
     <string name="Necromancy_ReincarnationTriggered">I tuoi poteri trascendono la morte! Ma hai perso tutte le anime raccolte ed i tuoi possedimenti.</string>
@@ -2389,6 +2390,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_crate_bottles_desc">L\'imbottigliamento della birra è diventato un passatempo molto popolare tra i locandieri.</string>
     <string name="town_deco_crate_bottles_name">Cassa di birra</string>
     <string name="town_deco_crate_scrolls_desc">Questa cassa è piena fino all\'orlo di conoscenza segreta.</string>
+    <string name="town_deco_crate_scrolls_name">Cassa di pergamene</string>
     <string name="town_deco_cross_desc">Una croce di argento, il simbolo della religione locale - \&quot;I Testimoni di Santa il Signore delle Profondità\&quot;</string>
     <string name="town_deco_cross_name">Croce</string>
     <string name="town_deco_crossroad_desc">Colonna di legno grezzo con placche a forma di freccia il cui testo è sbiadito da tempo probabilmente a causa delle dure condizioni meteorologiche.</string>
@@ -2513,6 +2515,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

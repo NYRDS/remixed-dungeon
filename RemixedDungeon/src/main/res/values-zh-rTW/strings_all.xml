@@ -2293,6 +2293,7 @@
     <string name="WndLibrary_Mobs_Btn">怪物</string>
     <string name="WndLocalModInstall_text">選擇要從哪裡安裝模組的目錄。</string>
     <string name="WndLocalModInstall_title">從本地目錄安裝模組</string>
+    <string name="WndModInstall_Version">版本</string>
     <string name="WndModsDisclaimer_install">安裝本地模組</string>
     <string name="WndModsDisclaimer_title">模組</string>
     <string name="WndMovieTheatre_Bye">想回來的時候就回來，我們對您的到來而感到高興！</string>
@@ -2719,6 +2720,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
