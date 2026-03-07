@@ -1806,6 +1806,7 @@
     <string name="Shopkeeper_text">歡迎來到當地的商店分店。\n有什麼我能為您提供的幫助？</string>
     <string name="Shopkeeper_title">商店</string>
     <string name="ShortSword_ACReforge">重鑄</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">它確實十分短，只比匕首長幾英寸。</string>
     <string name="ShortSword_Name">短劍</string>
     <string name="ShortSword_NotBoomerang">您不能以這個方式為回力鏢升級</string>
@@ -2721,6 +2722,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
