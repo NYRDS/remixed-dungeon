@@ -1378,6 +1378,7 @@
     <string name="PlagueDoctorQuest_4_1_Prologue">啊嚏！矮人！那些頑固的地下居民，痴迷於寶石和黃金。但我渴望的是_矮人術士_……他們扭曲的魔法，由他們居住的深淵提供燃料。五個，我需要五個那些枯萎的靈魂！他們的身體是理解某種……現象的關鍵。關於通過大地本身引導奧術能量的事情。我相信我接近突破了，但我需要他們的本質，他們腐敗的魔法！*他劇烈地咳嗽在手帕上，深色的污漬蔓延到精緻的織物上*</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">拿回五具_DEAD KOBOLD ICEMANCER_！他們冰冷的屍體是解開寒冰魔法秘密的關鍵！</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*他枯骨般的手指有節奏地敲擊著沸騰的大鍋，周圍的空氣中瀰漫著濃烈的硫磺和腐爛氣味*\n_狗頭人冰法師_！那些可悲的生物，蜷縮在他們冰封的洞穴中，絕望地抓著他們的冰霜魔法。我需要五個，他們凍僵的屍體將會... 啟發人心。他們對冰的掌握，這... 很奇特。我相信他們利用了一種原始能量，一種沉睡在這個世界表面之下的力量。</string>
+    <string name="PlagueDoctorQuest_5_1_Prologue">*他結結巴巴，聲音像脆弱的樹枝般斷裂*。啊-啊，_魅魔_！兩個…是的，兩個，活的！這是…咳咳…為了我的研究！你看…她們的費洛蒙…對於理解…啊…的微妙平衡至關重要… *他漸弱下去，骨瘦如柴的手緊張地調整面具，眼睛帶著狂熱的強度望向你*。她們…的本質…是個謎…美麗、神秘的謎！ *他劇烈咳嗽，試圖恢復鎮定*。我保證，給我帶來兩個…這些生物…你將獲得我永恆的感激。把它當作對知識的…恩賜！是的！為了知識！</string>
     <string name="PlagueDoctorQuest_AllDone">*他發出一聲乾澀、嘶啞的笑聲。* \&quot;你的事蹟，解開了無法衡量的秘密！獲得的知識……在我體內脈動，如同發現的交響曲。但知識，\&quot;他補充道，聲音降到密謀般的低語，\&quot;知識就是力量。而力量……啊……那是最令人陶醉的靈藥。\&quot;他凝視著你片刻，他的紫水晶眼睛燃燒著發熱般的強度。\&quot;也許，\&quot;他低語，\&quot;我們的路徑將再次交會。因為還有許多……謎團……有待解開。\&quot;</string>
     <string name="PlagueDoctor_Desc">散發奇怪味道的...皮革?下面應該是個人吧...</string>
 
@@ -1822,6 +1823,7 @@
     <string name="Skeleton_Killed">你被骨頭的爆炸殺死了……</string>
     <string name="Skeleton_Name">骷髏</string>
     <string name="Skeleton_Name_Objective">骷髏</string>
+    <string name="SleepBuff_Info">完全沉睡中。</string>
     <string name="SlowBuff_Name">緩速</string>
     <string name="Slow_Name_0">寒冰%s</string>
     <string name="Slow_Name_1">寒冰%s</string>
@@ -2021,6 +2023,7 @@
     <string name="TownShopkeeper_Objective">商店店主</string>
     <string name="TownsfolkMovieNPC_Desc">城鎮居民之一。顯而易見，他只是泛泛布衣，但他的衣服看起來價值不菲。</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
+    <string name="TownsfolkMovieNPC_Message">你知道「電影院」提供的特殊服務嗎？可惜他們要求一些叫做「網際網路」的異國事物，我甚至從未聽說過這樣的事情。</string>
     <string name="TownsfolkMovieNPC_Name">城鎮居民</string>
     <string name="TownsfolkMovieNPC_Name_Objective">城鎮居民</string>
     <string name="TownsfolkNPC_Desc">城鎮居民之一。顯而易見，他只是泛泛布衣，但他的衣服看起來價值不菲。</string>
@@ -2722,6 +2725,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 
