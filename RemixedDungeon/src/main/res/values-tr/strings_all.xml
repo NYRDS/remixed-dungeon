@@ -2249,6 +2249,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="Wand_Wood_Types_7">maun</string>
     <string name="Wand_Wood_Types_8">bambu</string>
     <string name="Wand_Wood_Types_9">purpleheart</string>
+    <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">Bu devasa kurşun ve çelik kütlesinin ezici darbesine çok az yaratık dayanabilir, ancak yalnızca en güçlü maceracılar onu etkili bir şekilde kullanabilir.</string>
     <string name="WarHammer_Name">savaş çekici</string>
     <string name="Warlock_Desc"> Cücelerin ilgi alanları mühendislikten gizemli sanatlara kaydıktan sonra büyücüler şehirde güçlendi. Önce element büyüleri ile başlamışlardı ama sonra şeytani ve ruhani büyülerle ilgilendiler.</string>
@@ -2889,6 +2890,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

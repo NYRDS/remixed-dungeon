@@ -192,6 +192,7 @@
     <string name="BellaNPC_Angry">Come osi... tu plebeo!</string>
     <string name="Belongings_Name">zaino</string>
     <string name="BishopNPC_Desc">Vescovo della Santa Chiesa del Signore delle Profondità</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Vescovo</string>
     <string name="BishopNPC_Name_Objective">Vescovo</string>
     <string name="Bishop_bye">Pregherò per te, figlio mio.</string>
@@ -540,6 +541,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DriedRose_Name">rosa essiccata</string>
     <string name="Drink_ACDrink">BEVI</string>
     <string name="Drink_Message">Quella bevanda era rinfrescante!</string>
+    <string name="Drunkard_Phrase_1">ANCORA DA BERE, PER FAVORE!</string>
     <string name="Drunkard_Phrase_2">Chi ha bisogno d\'acqua quando hai la birra!</string>
     <string name="Dungeon_DeadEnd">Cosa ci fai qui?!</string>
     <string name="Dungeon_NoTips">Il testo è indecifrabile...</string>
@@ -2515,6 +2517,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
