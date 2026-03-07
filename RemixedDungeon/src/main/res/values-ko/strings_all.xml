@@ -294,6 +294,7 @@
     <string name="Carcass_Devoured">당신은 %s의 시신을 삼켰습니다!</string>
     <string name="Carcass_DissectFailed">%s을(를) 해부했지만 아무것도 얻지 못했다.</string>
     <string name="Carcass_DissectMessage">시신을 해부하여 %s 을(를) 얻었다.</string>
+    <string name="Carcass_Info">완전히 죽은 %s의 시신.</string>
     <string name="Caves_TileDescBookshelf">동굴에 책장이 대체 왜 필요한 거지?</string>
     <string name="Caves_TileDescDeco">어떤 광물의 광맥이 벽에 보인다. 금인가?</string>
     <string name="Caves_TileDescEntrance">사다리는 위를 향하고 있다.</string>
@@ -2599,6 +2600,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
