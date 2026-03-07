@@ -1431,6 +1431,7 @@ Parede
     <string name="Plant_Seed">Semente de %s</string>
     <string name="PlateArmor_Desc">Placas enormes de metal são unidas em uma armadura que oferece proteção inigualável para qualquer aventureiro forte o suficiente para suportar seu peso impressionante.</string>
     <string name="PlateArmor_Name">armadura de placa</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">Uma gota de um veneno mortal brilha na ponta da flecha.</string>
     <string name="PoisonArrow_Name">flecha envenenada</string>
     <string name="PoisonBuff_Info">O corpo está lentamente sendo morto pelo veneno!</string>
@@ -2843,18 +2844,4 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

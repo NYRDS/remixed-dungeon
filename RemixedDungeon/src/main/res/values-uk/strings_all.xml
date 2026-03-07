@@ -278,6 +278,7 @@
     <string name="BlankScroll_Info">Просто чистий сувій. Можливо щось можна написати на ньому?</string>
     <string name="BlankScroll_Name">Чистий сувій</string>
     <string name="BlankScroll_ReallyBlank">Цей сувій чистий</string>
+    <string name="BleedingBuff_Info">Рани швидко кровоточать.</string>
     <string name="BleedingBuff_Name">Кровотеча</string>
     <string name="Bleeding_Death">Твоя кровотеча призвела до смерті...</string>
     <string name="BlessedBuff_Name">Благословенний</string>
@@ -2760,22 +2761,4 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
