@@ -1811,6 +1811,7 @@
     <string name="ShortSword_NotBoomerang">您不能以這個方式為回力鏢升級</string>
     <string name="ShortSword_Reforged">您將您的短劍重鑄以升級你的%s</string>
     <string name="ShortSword_Select">選擇你要強化的武器</string>
+    <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">星形鐵片，配上尖銳刀鋒，輕巧得來傷害又高，據說只有加 ‧ 藤鷹忍士才能完美駕馭此物。</string>
     <string name="Shuriken_Name">手裏劍</string>
     <string name="SkeletonKey_Info">此鑰匙看上來一本正經，它的頭型呈骷髏頭狀。可能能用它打開某些一本正經的門。</string>
@@ -2720,6 +2721,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

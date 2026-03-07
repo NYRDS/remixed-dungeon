@@ -678,6 +678,7 @@
     <string name="ElfArmor_NotElf">只有精灵才能使用这件护甲！</string>
     <string name="ElvenBow_Info">精灵工艺的一个特例。它显然比普通的木弓更有效、更准确。</string>
     <string name="ElvenBow_Name">精灵长弓</string>
+    <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">此武器以特制合金制造，故它比一般匕首更轻。</string>
     <string name="ElvenDagger_Name">矮人匕首</string>
     <string name="EncumbranceBuff_CharAct_1">我不够强壮去正确的使用%s。</string>
@@ -2853,6 +2854,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
