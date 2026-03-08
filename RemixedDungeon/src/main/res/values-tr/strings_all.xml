@@ -2146,6 +2146,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="TrapWnd_Step">Gerçekten de bu tuzağın üstüne basmak istiyor musun? Ölme ihtimalin var. </string>
     <string name="TrapWnd_Title">Tuzak</string>
     <string name="TreacherousSpirit_Desc">Bu korkunç yaratık, yaşayan bir karanlık bulutuna benziyor. Devasa gözleri size bakarken, yaptığınız her hareketle birlikte nabız gibi atıyor.</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">Hain ruh</string>
     <string name="TreacherousSpirit_Name_Objective">Hain ruh</string>
     <string name="Typical_Damage">Tipik hasar</string>
@@ -2891,6 +2892,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

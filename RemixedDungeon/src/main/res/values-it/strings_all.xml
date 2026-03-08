@@ -245,6 +245,7 @@
     <string name="BlankScroll_ReallyBlank">Questa pergamena è vuota</string>
     <string name="BleedingBuff_Name">Sanguinamento</string>
     <string name="Bleeding_Death">Hai sanguinato a morte...</string>
+    <string name="BlessedBuff_Info">Che la precisione e l\'elusione arrivino per coloro che sono stati toccati dalla benedizione!</string>
     <string name="BlindnessBuff_Name">Accecato </string>
     <string name="BodyArmorBuff_Name">Armatura Corporea</string>
     <string name="BodyArmorSpell_Name">Armatura Corporea</string>
@@ -339,6 +340,7 @@
     <string name="ChaosSword_Info">La lama di questa spada è fatta di caos puro e vibra moderatamente a volte. Un grosso potere è celato dentro l\'arma, che può tagliare a metà praticamente ogni cosa. d\'altronde, ci vuole una grande abilità, per tener testa alla potente forza dell\'arma.</string>
     <string name="ChaosSword_Name">Spada del caos</string>
     <string name="CharAction_Charm">affascina</string>
+    <string name="CharAction_Give">dare</string>
     <string name="CharAction_Order">ordinare</string>
     <string name="CharAction_Push">spingere</string>
     <string name="CharAction_Scare">spaventare</string>
@@ -2523,5 +2525,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 </resources>
