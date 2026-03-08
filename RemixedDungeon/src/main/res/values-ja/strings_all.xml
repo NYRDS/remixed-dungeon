@@ -207,6 +207,7 @@
     <string name="BattleAxe_Info"> この巨大な鋼鉄のバトルアックスは、攻撃後のスキが大きくなるだろう。</string>
     <string name="BattleAxe_Name">バトルアックス</string>
     <string name="Bee_Desc">ミツバチは小さいにもかかわらず、巣を激しく守る傾向がある。しかし、長生きはしない。</string>
+    <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name">ハチ</string>
     <string name="Bee_Name_Objective">ハチ</string>
     <string name="BellaNPC_Amulet_F">こんにちは、かわいい人。ああ、この上なく美しいお守り！そしてあなたは...誰よりも輝いている。散歩がてら、お互いの将来について話し合ってみない？</string>
@@ -2928,6 +2929,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

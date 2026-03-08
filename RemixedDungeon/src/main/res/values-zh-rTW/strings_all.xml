@@ -1942,6 +1942,7 @@
     <string name="StoneBloodBuff_Name">石中血</string>
     <string name="Str_lose">-1力量</string>
     <string name="StrongShield_name">鍍金青銅盾</string>
+    <string name="StunBuff_Info">被擊暈了！</string>
     <string name="Stylus_ACInscribe">鐫刻</string>
     <string name="Stylus_Info">這支奧術刻筆是由某種漆黑堅硬的石頭製成的。您可以使用它來鐫刻一個刻印或符文，但由於您的能力不足，您無法自己選擇您所鐫刻下的符文或刻印，刻筆會自己幫你決定。</string>
     <string name="Stylus_Inscribed">您鐫刻了%1$s在您的%2$s上</string>
@@ -2731,6 +2732,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

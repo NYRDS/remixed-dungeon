@@ -1186,6 +1186,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">mimik</string>
     <string name="Mimic_Name_Objective">mimik</string>
+    <string name="MindVisionBuff_Info">Penglihatan batin membolehkan anda melihat dengan jelas pergerakan semua makhluk hidup di lantai.</string>
     <string name="MirrorImage_Desc">Beruang ilusi ini hampir menyerupai anda, tetapi lebih pucat dan sedikit bergetar.</string>
     <string name="MirrorImage_Name">imej cermin</string>
     <string name="MirrorImage_Name_Objective">imej cermin</string>
@@ -1976,6 +1977,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Using_Failed_Because_Magic">Satu kuasa sihir yang kuat menghalang anda menggunakan \&quot;%s\&quot;.</string>
     <string name="VampireSkull_Info">Topeng ini diperbuat daripada tengkorak pontianak asli. Sebenarnya ia adalah tengkorak pontianak... Menakutkan.</string>
     <string name="VampireSkull_Name">Tengkorak pontianak</string>
+    <string name="VertigoBuff_Info">Rasa pening membuatkan sukar untuk berjalan lurus!</string>
     <string name="VertigoBuff_Name">Pening Gayat</string>
     <string name="View_Distance">Jarak penglihatan</string>
     <string name="VileEssence_Info">Satu essensi korupsi pekat yang dituai daripada musuh yang dikalahkan. Bahan gelap ini berdenyut dengan tenaga jahat dan sangat dihargai dalam proses alkimia.</string>
@@ -2625,6 +2627,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
