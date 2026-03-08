@@ -14,6 +14,7 @@
     <string name="AboutScene_OurSite">Nuestra página web:</string>
     <string name="AboutScene_Snd">Enviar e-mail</string>
     <string name="AboutScene_Sound">Sonidos:</string>
+    <string name="AboutScene_SourceCode">Obtener el código fuente de Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Agradecimientos especiales a:</string>
     <string name="AboutScene_Translation">Localización por:</string>
     <string name="AboutScene_Translation_Names">Andrés Javaloy Asensio &amp;amp;  MLGMan &amp;amp;  Iván Cadilla</string>
@@ -2881,6 +2882,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
