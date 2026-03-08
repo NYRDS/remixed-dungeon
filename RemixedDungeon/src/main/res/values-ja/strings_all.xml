@@ -58,6 +58,7 @@
     <string name="Amulet_ACEnd">ゲーム終了</string>
     <string name="Amulet_Info">イェンダーの魔除けは起源不明の最も強力なアーティファクトとして知られている。この魔除けは、持ち主が十分に強い意志の力で\&quot;説得\&quot;することが出来れば、どんな願いでも叶えることができると言われている。</string>
     <string name="Amulet_Name">イェンダーの魔除け</string>
+    <string name="Anesthesia_Name">麻酔</string>
     <string name="Ankh_Info">この古代の不死のシンボルは、死後に蘇る能力を与える。復活すると、装備していないアイテムはすべて失われる。</string>
     <string name="Ankh_Name">アンク</string>
     <string name="AntiEntropy_Txt">反エントロピーの%s</string>
@@ -2926,6 +2927,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

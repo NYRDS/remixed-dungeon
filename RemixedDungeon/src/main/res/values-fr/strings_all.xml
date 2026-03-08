@@ -376,6 +376,7 @@
     <string name="ChampionOfAirBuff_Info">Ce trait confère à la créature l\'essence des vents, améliorant son agilité et ses prouesses au combat. Le Champion de l\'Air devient un adversaire redoutable, capable d\'un déchaîner des attaques rapides et dévastatrices qui peuvent rapidement changer le cours de la bataille.</string>
     <string name="ChampionOfEarthBuff_Name">Champion de la Terre</string>
     <string name="ChampionOfFireBuff_Info">Imprégné de la fureur des flammes, ce trait amplifie la férocité et les capacités de combat de la créature. Le Champion du Feu émerge comme un adversaire redoutable, déchaînant des attaques dévastatrices pouvant engloutir ses ennemis dans des flammes brûlantes, inspirant la terreur chez tous ceux qui osent s\'opposer à lui.</string>
+    <string name="ChampionOfFireBuff_Name">Champion du Feu</string>
     <string name="ChampionOfWaterBuff_Info">Le Champion de l\'Eau incarne la force indomptable des océans, améliorant la résistance et la ténacité de la créature. En conséquence, elle devient un adversaire infatigable, capable d\'endurer un déluge incessant d\'attaques et de se dresser comme un gardien inébranlable face à l\'adversité.</string>
     <string name="ChampionOfWaterBuff_Name">Champion de l\'Eau</string>
     <string name="ChaosArmor_Info">Les plaques rouge sang de cette armure sont fusionnées avec des chaînes rouge foncé. Elle rayonne d\'une énergie chaotique quand vous la touchez.</string>
@@ -2982,6 +2983,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

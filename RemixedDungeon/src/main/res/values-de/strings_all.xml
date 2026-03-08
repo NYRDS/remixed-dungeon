@@ -700,6 +700,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Eye_Name">Böses Auge</string>
     <string name="Eye_Name_Objective">Böses Auge</string>
     <string name="Facilitations_Descriptions_2">Ein tiefgreifendes und gründliches Studium der Natur als Energiequelle ermöglicht es Ihnen, Ihre magischen Reserven während der Reise wieder aufzufüllen.</string>
+    <string name="Facilitations_Names_3">Riesenstärke</string>
     <string name="Fadeleaf_Desc">Das berühren eines Verblassenden Blattes, teleportiert irgendeine Kreatur an einen zufälligen Platz der aktuellen Ebene.</string>
     <string name="Fadeleaf_Name">Verblassendes Blatt</string>
     <string name="FetidRat_Desc">Diese Beutelratte ist viel größer als normal. Sie wird von einer fauligen Aura umgeben.</string>
@@ -2135,6 +2136,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="VertigoBuff_Info">Die Benommenheit macht es schwieriger, geradeaus zu gehen!</string>
     <string name="VertigoBuff_Name">Schwindelig</string>
     <string name="View_Distance">Sichtweite</string>
+    <string name="VileEssence_Info">Eine konzentrierte Essenz der Korruption, die von einem besiegten Feind geerntet wurde. Diese dunkle Substanz pulsiert mit bösartiger Energie und wird in alchemistischen Prozessen sehr geschätzt.</string>
     <string name="Viscosity_Status">%d verzögert</string>
     <string name="Viscosity_Txt">%s der Zähigkeit</string>
     <string name="WandHolster_Info">Dieser schmale Behälter ist aus Leder von einem exotischen Tier. Er erlaubt es dir %d Zauberstäbe zu tragen.</string>
@@ -2813,6 +2815,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 
