@@ -1764,6 +1764,7 @@
     <string name="ScrollOfTeleportation_Info">Сувій перенесе заклинача у випадкову точку на рівні. Це може допомогти уникнути небезпечної ситуації, проте вдача може перенести тебе в місце де буде ще гірше.</string>
     <string name="ScrollOfTeleportation_Name">Сувій перенесення</string>
     <string name="ScrollOfTeleportation_NoTeleport">Могутня магічна аура даного місце не дозволяє тобі перенестися.</string>
+    <string name="ScrollOfTeleportation_NoTeleport2">Сильна магічна аура цього місця заважає %s телепортуватися!</string>
     <string name="ScrollOfTeleportation_Teleport">Не моргнувши й оком, тебе перенесло в іншу точку рівня.</string>
     <string name="ScrollOfTeleportation_Teleport2">Не моргнувши й оком, %s було перенесено в іншу точку рівня.</string>
     <string name="ScrollOfTerror_Info">Червоний спалах закляття викликає жах у ворогів, які починають тікати. Атакуючи ворога, що утікає, ти знімаєш закляття.</string>
@@ -1805,6 +1806,7 @@
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">старший монах</string>
     <string name="Senior_Name_Objective">старшого монаха</string>
+    <string name="ServantNPC_Desc">Дуже зайнята офіціантка.</string>
     <string name="ServantNPC_Gender">masculine</string>
     <string name="ServantNPC_Name">слуга готелю</string>
     <string name="ServantNPC_Name_Objective">слугу готелю</string>
@@ -2761,4 +2763,6 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 </resources>

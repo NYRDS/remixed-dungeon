@@ -2163,6 +2163,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="VertigoBuff_Info">Baş dönmesi hissi düz yürümeyi zorlaştırıyor!</string>
     <string name="VertigoBuff_Name">Baş dönmesi</string>
     <string name="View_Distance">Mesafeyi görüntüle</string>
+    <string name="VileEssence_Name">İğrenç Öz</string>
     <string name="Viscosity_Status">%d gecikmeli</string>
     <string name="Viscosity_Txt">Ayırıcılığın %sı</string>
     <string name="WandHolster_Info">Bu tuhaf hayvan derisinden yapılmış ince çanta ile %d asa taşıyabilirsiniz.</string>
@@ -2890,6 +2891,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
