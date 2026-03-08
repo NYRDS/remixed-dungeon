@@ -1293,6 +1293,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="Nightmare_Name_Objective">rémálom</string>
     <string name="No_Valid_Cell">Nincs megfelelő mező a közelben.</string>
     <string name="Ooze_Death">%s megölt téged...</string>
+    <string name="Order_Name">Parancs</string>
     <string name="Order_Resist">Méltóságtalan!</string>
     <string name="OverpricedRation_Info">Úgy néz ki mint a normális étel adag csak kisebb.</string>
     <string name="OverpricedRation_Message">Ez jó volt!</string>
@@ -2654,6 +2655,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

@@ -1217,6 +1217,7 @@
     <string name="MeleeWeapon_Info7b">，並且因為它被詛咒了，你無法把它放下。</string>
     <string name="MeleeWeapon_Info7c">您能感受到%s中潛伏著一股惡意的魔力。</string>
     <string name="MercenaryNPC_Name">僱傭兵</string>
+    <string name="MercenaryNPC_Name_Objective">僱傭兵</string>
     <string name="Metabolism_Txt">代謝 %s</string>
     <string name="MimicAmulet_Desc">你冒險旅程中最光榮的時刻原來是個陷阱。</string>
     <string name="MimicAmulet_Gender">masculine</string>
@@ -2501,6 +2502,7 @@
     <string name="town_deco_armoronhanger_desc">一些不同樣式的盔甲掛在盔甲架上。</string>
     <string name="town_deco_armoronhanger_name">盔甲</string>
     <string name="town_deco_armorstand_leather_name">皮革護甲</string>
+    <string name="town_deco_armorstand_plate_desc">據商人說，這套重型板甲曾經屬於一位偉大的戰士。</string>
     <string name="town_deco_armorstand_scale_desc">這套鱗甲的鍍金板看起來像新的一樣。</string>
     <string name="town_deco_armorstand_scale_name">鱗片護甲</string>
     <string name="town_deco_banner_desc">一面優雅的旗幟，上面的繡花描繪著這個小酒館的象徵標誌。</string>
@@ -2727,6 +2729,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
