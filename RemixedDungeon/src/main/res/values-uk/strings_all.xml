@@ -921,6 +921,7 @@
     <string name="HeroSubClass_NameSnip">снайпер</string>
     <string name="HeroSubClass_NameWarL">чорнокнижник</string>
     <string name="HeroSubClass_NameWard">травниця</string>
+    <string name="HeroSubClass_NameWitchdoctor">знахар</string>
     <string name="Hero_AnotherTry">Ви загинули.\n Бажаєте спробувати ще раз?</string>
     <string name="Hero_Leave">Не так просто залишити Remixed Dungeon.</string>
     <string name="Hero_LevelUp">новий рівень!</string>
@@ -2763,6 +2764,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 </resources>
