@@ -206,6 +206,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Bat_Desc">Makhluk cepat dan gigih ini adalah penghuni dari gua yang dapat mengalahkan musuh yang lebih besar dengan cara mengisi nyawa mereka dengan tiap serangan sukses mereka.</string>
     <string name="Bat_Name">kelelawar vampir</string>
     <string name="Bat_Name_Objective">kelelawar vampir</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">Ujung baja besar dari kapak perang ini memberikan berat yang banyak dari tiap serangan.</string>
     <string name="BattleAxe_Name">kapak perang</string>
     <string name="Bee_Desc">Meskipun ukurannya kecil, lebah cenderung melindungi sarangnya dengan keras. Mereka tidak hidup lama sekalipun.</string>
@@ -2822,6 +2823,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

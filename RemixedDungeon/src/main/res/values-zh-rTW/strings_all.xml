@@ -1883,6 +1883,7 @@
     <string name="SpiderMindAmber_Name">琥珀蜘蛛</string>
     <string name="SpiderMindAmber_Name_Objective">琥珀蜘蛛</string>
     <string name="SpiderMind_Desc">這些看似弱小的蜘蛛掌握著獨一無二的精神力量，使它們能夠掌控一個群體。靈能蜘蛛能夠掌控所有活著的生物，但是它們身體相當脆弱。</string>
+    <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">靈能蜘蛛</string>
     <string name="SpiderMind_Name_Objective">靈能蜘蛛</string>
     <string name="SpiderNest_Desc">這個繭是由最細的絲線織成的，其中藏著一些活著的東西。</string>
@@ -2725,6 +2726,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

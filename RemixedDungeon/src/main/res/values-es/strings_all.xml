@@ -1434,6 +1434,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Piercing_Name_1">%s perforador.</string>
     <string name="Piercing_Name_2">%s perforador.</string>
     <string name="Piranha_Desc">Estos peces carnívoros no son naturales de las piscinas subterráneas. Fueron criadas específicamente para proteger las cámaras del tesoro sumergidas.</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">piraña gigante</string>
     <string name="Piranha_Name_Objective">piraña gigante</string>
     <string name="PirateSet_Info">¡Arr! ¿¡Sientes que eres un pirata... o solo como cachorro de mar!? Espero que no sea así, después de todo es solo para piratas de verdad, quiero decir... ¡Arr!</string>
@@ -2880,6 +2881,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -47,6 +47,7 @@
     <string name="Amulet_ACEnd">END THE GAME</string>
     <string name="Amulet_Info">옌더의 부적은 정체불명의 가장 강력한 유물입니다. 이 부적은 소유자의 의지가 충분하다면 어떤 소원이든 성취할 수 있다고 합니다.</string>
     <string name="Amulet_Name">옌더의 부적</string>
+    <string name="Anesthesia_Name">마취</string>
     <string name="Ankh_Info">영생을 상징하는 고대의 물건으로 소유자의 생명을 되살릴 수 있는 능력이 있습니다. 부활할 시 장착하지 않은 모든 아이템은 손실됩니다.</string>
     <string name="Ankh_Name">앙크</string>
     <string name="AntiEntropy_Txt">반 엔트로피의 %s</string>
@@ -2602,6 +2603,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
