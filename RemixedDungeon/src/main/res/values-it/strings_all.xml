@@ -2303,6 +2303,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="Wnd_Button_Close">Chiudi</string>
     <string name="Wnd_Button_No">No</string>
     <string name="Wnd_Button_Yes">Si</string>
+    <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Questo semplice arco di legno potrebbe dimostrarsi utile, non appena troverai delle frecce.</string>
     <string name="WoodenBow_Name">arco di legno</string>
     <string name="WoodenCrossbow_Info">Una balestra base di legno, sembra progettata per sparare frecce d\'arco. </string>
@@ -2521,4 +2522,5 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 </resources>

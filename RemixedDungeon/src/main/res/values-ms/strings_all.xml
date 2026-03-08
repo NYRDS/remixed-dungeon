@@ -1718,6 +1718,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ShadowsBuff_Name">Shadowmelded</string>
     <string name="ShamanElder_Name">pawang tua</string>
     <string name="Shaman_Desc">Gnoll yang paling bijak dapat menguasai sihir pawang. Pawang gnoll lebih utamakan mantera pertempuran berbanding kekuatan fizikal, tidak teragak-agak menggunakannya jika ada sesiapa yang cuba mempertikaikan kedudukan mereka di dalam kumpulan.</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">Bebola kilat %s telah membunuh anda...</string>
     <string name="Shaman_Name">pawang gnoll</string>
     <string name="Shaman_Name_Objective">pawang gnoll</string>
@@ -2621,6 +2622,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

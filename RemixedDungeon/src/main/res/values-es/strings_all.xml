@@ -684,6 +684,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="EncumbranceBuff_Info">No hay suficiente fuerza para usar %s efectivamente.</string>
     <string name="EncumbranceBuff_Name">Carga</string>
     <string name="EnslavedSoul_Desc">Casi puedes ver a través de esta aparición fantasmal. Aunque parece un cráneo, por momentos vez un rostros en su lugar, un rostro lleno de sufrimiento y dolor.</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name">alma esclavizada</string>
     <string name="EnslavedSoul_Name_Objective">alma esclavizada</string>
     <string name="Entanglement_Txt">%s de enredo</string>
@@ -2879,6 +2880,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
