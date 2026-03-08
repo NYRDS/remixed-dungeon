@@ -219,6 +219,7 @@
     <string name="BlackSkullOfMastery_Title">Puoi spezzare l\'incantesimo. Oppure puoi manipolare la formula magica in modo che ti permetta di consumare sia i poteri dell\'incantesimo che dell\'artefatto, trasformandoti in un Lich.</string>
     <string name="BlackSkull_Activated">Il Teschio Nero è stato risvegliato!</string>
     <string name="BlackSkull_Deactivated">Il Teschio Nero giace dormiente, ancora una volta...</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">un piccolo teschio d\'ossidiana. Era una fonte di potere della Necropoli, ma dopo la sconfitta del Lich sembra aver perso tutti i suoi poteri. Ma se lo stringi nelle tue mani uno strano pensiero ti scorre in testa: \&quot;Ha fame\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">Il teschio pulsa con potere, puoi vederlo scrosciare dagl\'occhi vuoti. E nel momento in cui lo tieni nella tua mano puoi sentire una voce spaventosa: \&quot;La morte avanza\&quot;</string>
     <string name="BlackSkull_Name">teschio nero</string>
@@ -2525,6 +2526,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
