@@ -1716,6 +1716,7 @@ Potrebbe bruciare?</string>
     <string name="Slow_Name_0">del Freddo %s</string>
     <string name="Slow_Name_1">del Freddo %s</string>
     <string name="Slow_Name_2">del Freddo %s</string>
+    <string name="SmashSpell_Name">Sfascio</string>
     <string name="Snail_Desc">Questo piccolo mollusco è cresciuto abbastanza mangiando fogna, ma è ancora molto lento, il che lo rende un avversario facile da affrontare.</string>
     <string name="SnipersMarkBuff_Info">Il marchio è stato lasciato da un cecchino.</string>
     <string name="SnipersMarkBuff_Name">Marchio del Cecchino</string>
@@ -2527,6 +2528,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
