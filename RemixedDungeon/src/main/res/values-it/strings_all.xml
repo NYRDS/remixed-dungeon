@@ -2099,6 +2099,7 @@ Potrebbe bruciare?</string>
     <string name="WndDonate_notConnected">nessuna connessione :(</string>
     <string name="WndDonate_royal">reale</string>
     <string name="WndDonate_royalDonate">donazione reale</string>
+    <string name="WndDonate_royalDonateText">Non voglio sembrare strano, ma facendo così, stai letteralmente sfamando gli sviluppatori.</string>
     <string name="WndDonate_ruby">rubino</string>
     <string name="WndDonate_rubyDonate">Donazione rubino</string>
     <string name="WndDonate_rubyDonateText">La tua generosità ci aiuterà a continuare a migliorare Remixed Dungeon!</string>

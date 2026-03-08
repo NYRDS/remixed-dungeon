@@ -1100,6 +1100,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">TARIK</string>
     <string name="Larva_Desc">Larva Dewa Tua</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">larva dewa</string>
     <string name="Larva_Name_Objective">larva dewa</string>
     <string name="LastLevel_TileDescStatue">Tiang ini dibuat dari tengkorak manusia sungguhan. Menakjubkan.</string>
@@ -2823,39 +2824,5 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>
