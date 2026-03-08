@@ -772,6 +772,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="GnollArmor_NotGnoll">Apenas gnoll podem usar Armadura de Gnoll!</string>
     <string name="GnollCostume_Info">Fantasia incrivelmente quente e fofa. No entanto, vestir essa fantasia ira parecer com... alguém que está a tentar se disfarçar de gnoll. Mas os gnolls não irão cair nessa, eles irão continuar a atacar você.</string>
     <string name="GnollCostume_Name">Fantasia de Gnoll</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">Machadinha tradicional criada por um Gnoll artesão, cada clã possui um modelo único. Esta Machadinha é um pouco mais leve que as feitas pelos humanos.</string>
     <string name="GnollTamahawk_Name">machadinha de gnoll</string>
     <string name="Gnoll_BecomeGuardianDesc">Torne-se um Guardião</string>
@@ -2844,4 +2845,5 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 </resources>
