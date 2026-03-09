@@ -2577,6 +2577,7 @@ remix.31.1\n
     <string name="WrnExperimental_realtime">实时！模式启用：现在是实时的roguelike，快速点击或死亡。\n想要查看库存？\n祝你好运，当下水道蟹正在检查你的内脏时，你可以这样做。</string>
     <string name="WrnExperimental_title">实验选项已启用！</string>
     <string name="Yog_Desc">Yog-Dzewa是一位古神，来源于混沌中的强大存在。一个世纪前，古代矮人们虽然勉强赢得了与恶魔军团的战争，却无法将古神杀死。作为替代方案，矮人们将它封印在城市下的大堂中，并相信虚弱的它无法再度复苏。</string>
+    <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">……</string>
     <string name="Yog_Info2">希望的存在只是幻觉……</string>
     <string name="Yog_Name">Yog-Dzewa</string>
@@ -2857,6 +2858,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

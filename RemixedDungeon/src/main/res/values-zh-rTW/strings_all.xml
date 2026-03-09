@@ -2211,6 +2211,7 @@
     <string name="WndCryptoDonate_infoText">您可以通過將加密貨幣捐贈發送到以下地址來支持 Remixed Dungeon 的開發。感謝您的慷慨支持！</string>
     <string name="WndCryptoDonate_monero">門羅幣</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_walletAddress">錢包地址</string>
     <string name="WndDonate_commonDonateText">混合地牢——永遠對所有人免費。
 但是，你能幫我們讓這個遊戲變得更好。
 除了我們的衷心感謝以外，你還將獲得一些界面上的美化。</string>
@@ -2732,6 +2733,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

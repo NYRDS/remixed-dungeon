@@ -1013,6 +1013,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Kobold_Desc">코볼트는 전설로 치부되던 존재였습니다. 흔한 놀들의 조상인 코볼트는 깊고 차가운 동굴에 거주합니다. 그들은 기계공학을 드워프들보다 한참 전에 통달했다고 믿어집니다. 아직까지도 그들이 수년 전에 사라진 이유는 불명입니다.</string>
     <string name="Kobold_Name">코볼트</string>
     <string name="Kobold_Name_Objective">코볼트</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">이 무기는 낫이 달린 사슬의 끝에 무거운 강철로 된 추가 달려있습니다.</string>
     <string name="Kusarigama_Name">쿠사리가마</string>
     <string name="Kusarigama_Pull">당기다</string>
@@ -2318,6 +2319,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndSaveSlotSelect_LoadAutoSave">자동 세이브-로드</string>
     <string name="WndSaveSlotSelect_SelectSlot">슬롯을 정하세요.</string>
     <string name="WndSaveSlotSelect_dontLike">광고가 싫으신가요? 기부를 하신다면, 영구적으로 없어질 것입니다.</string>
+    <string name="WndSelectLanguage_ImproveTranslation">리믹스드 던전 번역 개선에 도움을 주세요</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">리믹스드 던전 번역 팀에 합류하려면 여기를 클릭하세요</string>
     <string name="WndSettingsInGame_GameLog">게임 로그</string>
     <string name="WndSettings_ActionButtonSize">액션 버튼 크기</string>
@@ -2609,6 +2611,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 
