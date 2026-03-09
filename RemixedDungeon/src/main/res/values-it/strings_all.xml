@@ -479,6 +479,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="CurareDart_Info">Questi piccoli e malefici dardi non provocano tanto danno, ma possono paralizzare il bersaglio lasciandolo immobile e indifeso per qualche tempo. </string>
     <string name="CurareDart_Name">dardo curatore</string>
     <string name="DM300_Desc">Questa macchina fu creata dai Nani parecchi secoli fa. Più tardi, i Nani hanno cominciato a rimpiazzare i macchinari con golem, elementali e persino demoni. Alla fine ciò ha portato il declino della loro civiltà. La DM-300 e altre simili macchine erano tipicamente usate per la costruzione e lo scavo e, in alcuni casi, per la difesa della città.</string>
+    <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300 si è riparato</string>
     <string name="DM300_Info2">Missione Fallita. Chiudi.</string>
     <string name="DM300_Info3">personale non autorizzato rilevato.</string>
@@ -1102,6 +1103,7 @@ Potrebbe bruciare?</string>
     <string name="Mana_Cost">Costo di Mana:</string>
     <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Info">Una maschera chirurgica è progettata per catturare i microrganismi rilasciati in goccioline liquide e aerosol dalla bocca e dal naso di chi la indossa.\n\nIndossare una maschera significa che ti prendi cura degli altri.</string>
+    <string name="MedicineMask_Name">Maschera chirurgica</string>
     <string name="MeleeWeapon_Info1a">%1$s è %2$s livello-%3$d arma da mischia.</string>
     <string name="MeleeWeapon_Info1b">un </string>
     <string name="MeleeWeapon_Info1c">un potenziato</string>
@@ -1474,6 +1476,7 @@ Potrebbe bruciare?</string>
     <string name="RingOfElements_Name">Anello degli Elementi</string>
     <string name="RingOfEvasion_Info">Questo anello aumenta la possibilità di schivare l\'attacco nemico.</string>
     <string name="RingOfEvasion_Name">Anello d\'Evasione</string>
+    <string name="RingOfFrost_Info">Questo anello è intagliato da ghiaccio magico. Chi lo indossa è protetto da un\'aura di gelo, che rallenta e danneggia i nemici attaccanti.</string>
     <string name="RingOfHaggler_Info">In realtà questo anello non fornisce alcun effetto magico, ma dimostra ai negozianti e fornitori, che il proprietario dell\'anello  Di solito sono felici di fare uno sconto in cambio d\'immunità temporanea. Aggiornamento di questo anello non darà alcun bonus aggiuntivi.</string>
     <string name="RingOfHaggler_Name">Anello di Haggler</string>
     <string name="RingOfHaste_Info">Questo anello accelera il flusso di chi la indossa di tempo, permettendo di eseguire tutte le azioni un po \'più veloce.</string>
@@ -2530,6 +2533,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 
