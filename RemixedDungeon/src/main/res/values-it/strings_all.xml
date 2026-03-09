@@ -1648,6 +1648,7 @@ Potrebbe bruciare?</string>
     <string name="ServantNPC_Gender">masculine</string>
     <string name="ServantNPC_Name">cameriera della locanda</string>
     <string name="ServantNPC_Name_Objective">cameriere della locanda</string>
+    <string name="ServiceManNPC_Desc">Un lavoratore regolare delle strutture locali.</string>
     <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Mi scuso, ma ogni nuovo avventuriero può guardare solo %d film in totale.</string>
     <string name="ServiceManNPC_Limit_Reached">Mi scuso, ma hai raggiunto il limite attuale. Potrai usare di nuovo il nostro servizio per ogni livello eroe che ricevi!</string>
@@ -2528,6 +2529,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

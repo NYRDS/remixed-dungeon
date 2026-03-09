@@ -2136,6 +2136,7 @@
     <string name="TrapWnd_Step">你当真要踏上此陷阱？你可能会因此失命。</string>
     <string name="TrapWnd_Title">陷阱</string>
     <string name="TreacherousSpirit_Desc">这个巨大的怪物看起来像是一片有生命的黑暗之云。它无眼睑的眼睛凝视这你，随着你的每个动作而颤动。</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">叛逆魂灵</string>
     <string name="TreacherousSpirit_Name_Objective">叛逆魂灵</string>
     <string name="Typical_Damage">典型损伤</string>
@@ -2856,6 +2857,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

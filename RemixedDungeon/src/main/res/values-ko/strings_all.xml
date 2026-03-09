@@ -325,6 +325,7 @@
     <string name="Challenges_Names_7">평화주의</string>
     <string name="Challenges_Names_8">도시 없음</string>
     <string name="Challenges_Names_9">기억 상실</string>
+    <string name="ChampionOfAirBuff_Info">이 특성은 생물에게 바람의 정수를 부여하여 민첩성과 전투 기량을 향상시킵니다. 공기의 챔피언은 빠르고 치명적인 공격을 쏟아내어 전투의 흐름을 순식간에 바꿀 수 있는 강력한 적수가 됩니다.</string>
     <string name="ChampionOfAirBuff_Name">바람의 챔피언</string>
     <string name="ChampionOfFireBuff_Info">화염의 격노가 주입된 이 특성은 생물의 잔혹성과 전투 능력을 증폭시킵니다. 불의 챔피언은 무시무시한 적으로 등장하여 적들을 타오르는 화염에 휩싸이게 하는 파괴적인 공격을 퍼부으며, 감히 맞서려는 자 모두에게 공포를 심어줍니다.</string>
     <string name="ChampionOfFireBuff_Name">불의 챔피언</string>
@@ -2608,6 +2609,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 

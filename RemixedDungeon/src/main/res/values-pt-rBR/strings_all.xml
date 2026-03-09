@@ -813,6 +813,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Guts_TileGrass">Arbusto seco</string>
     <string name="Guts_TileHighGrass">Arbusto seco</string>
     <string name="Guts_TileWater">Um estranho líquido viscoso</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">Um arma de haste que consiste num machado na extremidade de uma vara.</string>
     <string name="Halberd_Name">Halberd</string>
     <string name="Halls_TileDescBookshelf">Livros em línguas antigas fumegam na estante.</string>
@@ -2846,6 +2847,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 </resources>
