@@ -1316,6 +1316,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Monk_Name">Zwergenmönch</string>
     <string name="Monk_Name_Objective">Zwergenmönch</string>
     <string name="MoongraceBuff_Info">Die Luft in der Nähe wird gesättigter, was eine bessere Konzentration und Wiederherstellung der magischen Reserven ermöglicht.</string>
+    <string name="MoongraceBuff_Name">Himmlische Manna</string>
     <string name="Moongrace_Desc">Diese Pflanzen wachsen in geringer Zahl und sind als Quelle natürlicher Magie bekannt.</string>
     <string name="Movement_Speed">Bewegungsgeschwindigkeit</string>
     <string name="Multiplicity_Txt">%s der Vervielfältigung</string>
@@ -1906,6 +1907,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="Snail_Desc">Dieser kleine Weichtier ist durch die Ernährung mit Abwässern ziemlich groß geworden, aber er ist immer noch sehr langsam, was ihn zu einem leichten Gegner macht.</string>
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">Schnecke</string>
+    <string name="Snail_Name_Objective">Schnecke</string>
     <string name="SnipersMarkBuff_Info">Die Markierung wurde von einem Scharfschützen gemacht.</string>
     <string name="SnipersMarkBuff_Name">Scharfschützenzeichen</string>
     <string name="SociologistNPC_AlreadyTaken">Du hast diese Umfrage bereits gemacht, bitte komm später wieder</string>
@@ -1935,6 +1937,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="Spells_NotInOwnBody">Du kannst %s nicht ausführen, solange deine Seele von deinem Körper getrennt ist.</string>
     <string name="Spells_NotTooFast">%s ist noch nicht zum Benutzen bereit</string>
     <string name="Spells_SummonLimitReached">%1$s: Beschwörungslimit erreicht (derzeitiges Maximum: %2$d)!</string>
+    <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">Diese Rüstung besteht aus alten Spinnenkörpern und einem seltsamen Stoff. Überraschenderweise scheint es noch funktionsfähige Spinndrüsen zu enthalten. Wenn Du genügend Druck auf diese ausübst, verschießen sie Spinnweben. Die stachelige Oberfläche der Schuhsohlen erlaubt es dir, auf diesem Netz frei zu gehen.</string>
     <string name="SpiderArmor_Name">Spinnenrüstung</string>
     <string name="SpiderCharm_Info">Dieses exotische Schmuckstück ist von einer geheimnisvollen Aura umhüllt. Wer weiß, was mit demjenigen passieren könnte, der es trägt?</string>
@@ -2817,6 +2820,9 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
 
 
 

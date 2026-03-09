@@ -531,6 +531,7 @@
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">стоковий краб</string>
     <string name="Crab_Name_Objective">стокового краба</string>
+    <string name="CrippleBuff_Info">Тіло скалічене, але бій триває.</string>
     <string name="CrippleBuff_Name">Травмований</string>
     <string name="Crystal_Desc">Великий кристал пересувається в повітрі та сяє. Можливо він сповнений магічною енергією.</string>
     <string name="Crystal_Gender">masculine</string>
@@ -2767,6 +2768,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
