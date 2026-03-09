@@ -1453,6 +1453,7 @@ Potrebbe bruciare?</string>
     <string name="RawFish_Info">Pesce crudo, mangia a tuo rischio</string>
     <string name="RawFish_Name">pesce crudo</string>
     <string name="RawFish_Taste">Pescioso!</string>
+    <string name="RegenerationBuff_Name">Rigenerazione Naturale</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Il gioco è crashato...\nCi dispiace.\nPer favore inviaci la segnalazione dell\'errore per aiutarci a risolverlo.</string>
     <string name="ResultDescriptions_Bleeding">ucciso dissanguato nel livello %d</string>
     <string name="ResultDescriptions_Boss">Uccido da %1$s nel livello %2$d</string>
@@ -2538,6 +2539,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
