@@ -1775,6 +1775,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SmashSpell_Name">Hentaman</string>
     <string name="SmashSpell_NeedWeapon">Saya perlukan satu senjata untuk gerakan ini.</string>
     <string name="Snail_Gender">masculine</string>
+    <string name="Snail_Name">siput</string>
     <string name="SociologistNPC_AlreadyTaken">Anda sudah pun menjawab tinjauan ini, datang lagi kemudian</string>
     <string name="SociologistNPC_Desc">Ahli sosiologi ini sedang mengumpul pendapat orang awam</string>
     <string name="SociologistNPC_DownloadError">Maaf, ada masalah, cuba sekali lagi nanti</string>
@@ -2632,6 +2633,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
