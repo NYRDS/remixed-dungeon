@@ -321,9 +321,8 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         if (curCharges() > 0) {
             fx(cell, () -> {
                 onZap(cell, victim);
-                wandUsed();
             });
-
+            wandUsed();
             Invisibility.dispel(selector);
         } else {
 

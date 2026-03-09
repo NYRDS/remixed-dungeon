@@ -12,6 +12,7 @@ import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
 import com.nyrds.pixeldungeon.items.chaos.ChaosSword;
+import com.nyrds.pixeldungeon.items.common.armor.DoctorArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
@@ -445,6 +446,7 @@ public class ItemFactory {
         registerItemClass(GuardianArmor.class);
         registerItemClass(WitchdoctorArmor.class);
         registerItemClass(PotionOfMana.class);
+        registerItemClass(DoctorArmor.class);
 
     }
 
