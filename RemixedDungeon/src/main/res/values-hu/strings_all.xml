@@ -335,6 +335,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="ChampionOfEarthBuff_Name">A Föld Bajnoka</string>
     <string name="ChaosArmor_Info">Ez a páncél sötétvörös láncokkal összefűzött vérvörös lemezekből áll. Kaotikus energiát sugároz, ahogy megérinted.</string>
     <string name="ChaosArmor_Name">Káosz páncél</string>
+    <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Egy halálos íj a Káosz hatalmával töltve. Minden nyílvessző amit kilő egy darabka káoszenergiát hordoz. De ha elvéted a célt...</string>
     <string name="ChaosBow_Name">Káosz íj</string>
     <string name="ChaosCrystal_ArmorFused">A kristály összeolvadt a páncéloddal, és káosz formát öltött.</string>
@@ -2662,6 +2663,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

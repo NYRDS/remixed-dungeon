@@ -87,6 +87,7 @@
     <string name="AwarenessBuff_Info">Deria telah menajam, memberikan lebih kesedaran tentang persekitaran.</string>
     <string name="AwarenessBuff_Name">Kesedaran</string>
     <string name="AzuterronNPC_Desc">FIgura misteri yang diselubungi dengan kabut hitam.</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">Orang Asing</string>
     <string name="AzuterronNPC_Name_Objective">Orang Asing</string>
     <string name="AzuterronNPC_Quest_End">Bagus. Ambil posyen ini, sudah pasti anda mendapat manafaat darinya.</string>
@@ -2633,6 +2634,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
