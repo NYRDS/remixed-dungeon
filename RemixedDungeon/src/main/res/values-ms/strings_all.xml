@@ -477,6 +477,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Codex_Story_8">Glif Kelikatan - Adiwira akan mendapat diskaun kecederaan, yang menyebabkan Adiwira menerima 1 kecederaan per pusingan, selain dari menerima keseluruhan amaun kecederaan sekaligus.</string>
     <string name="Codex_Story_9">Glif Sesaran - Bilamana Adiwira dipukul, terdapat peluang Adiwira dialih ke jubin berhampiran secara rawak. Glif ini tidak berfungsi dalam aras bos.</string>
     <string name="ColdSpirit_Desc">Semangat sejuk merupakan manifestasi dari kesejukan, dalam bentuk paling asli. Mereka ialah jasad tidak berfikiran, dicipta dengan tenaga ajaib, bertindak mengikut kemahuan penciptanya atau melalui naluri dan refleks asasi.</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">semangat sejuk</string>
     <string name="ColdSpirit_Name_Objective">cold spirit</string>
     <string name="ComboBuff_Name">Kombo</string>
@@ -2631,6 +2632,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -447,6 +447,7 @@
     <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Цей масивний меч може розрубати що завгодно.</string>
     <string name="Claymore_Name">Клеймор</string>
+    <string name="CloakBuff_Info">Темний плащ ховає вас у тінях, роблячи вас менш помітним для ворогів.</string>
     <string name="CloakBuff_Name">Замасковано</string>
     <string name="CloakSpell_EnemiesNearby">Ви не можете відійти у тінь, коли поруч вороги.</string>
     <string name="CloakSpell_Info">Зробіть крок у тінь, аби лишитися непоміченим. Значно зменшить ваші шанси бути поміченим. Не може бути використано при наявності ворогів поблизу.</string>
@@ -1092,6 +1093,7 @@
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">кобольд</string>
     <string name="Kobold_Name_Objective">кобольда</string>
+    <string name="KrampusHead_Info">Ви коли-небудь замислювалися, каково це - прийняти більш зловісну роль у цьому Пригоді? Тоді швидше вдягайте цю маску і крысята по всій окрузі будуть тремтіти від жаху.</string>
     <string name="KrampusHead_Name">Голова Крампуса</string>
     <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Ця зброя складається із серпа та грузила, пов\'язані між собою цепом.</string>
@@ -2768,6 +2770,8 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 
