@@ -999,6 +999,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="IceGuardianCore_Name">Eiswächter</string>
     <string name="IceGuardianCore_Name_Objective">Eiswächter</string>
     <string name="IceGuardian_Desc">Eiswächter wurden einst von Kobolden erschaffen, um ihre Höhlen zu bewachen. Die Kraft in ihrem Kern erlaubt es den Eiswächtern, sich zu reproduzieren, solang sie über genug Energie verfügen.</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">Eiswächter</string>
     <string name="IceGuardian_Name_Objective">Eiswächter</string>
     <string name="IceKey_Info">Es scheint, als ob der Schlüssel aus Eis ist, aber dennoch ist er so hart wie Stahl.</string>
@@ -1185,6 +1186,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="LibraryBook_Description">Dieser Wälzer ist sehr groß. Er enthält alles Wissen, das Abenteurer im Dungeon entdeckt haben.</string>
     <string name="LibraryBook_Name">Buch aus der Bücherei</string>
     <string name="Lich_Desc">Der Nekromant hat sein Ende in den Tiefen der Nekropole gefunden und als die böse Energie dieses Ortes in seinen Körper gekrochen ist, hat er sich wahrscheinlich in den Lich verwandelt. Der Untote Hexer, eine willenlose Marionette, kontrolliert von boshaften Mächten.</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">Lich</string>
     <string name="Lich_Name_Objective">Lich</string>
     <string name="LightBuff_Info">Licht geht vom Körper aus und beleuchtet alles um ihn herum.</string>
@@ -2049,6 +2051,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">Diese rasiermesserscharfe Stahlklinge glänzt auf beruhigende Weise.</string>
     <string name="Sword_Name">Schwert</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Diese Wurfaxt ist nicht besonders schwer, aber benötigt dennoch relativ viel Kraft um effizient eingesetzt werden zu können.</string>
     <string name="Tamahawk_Name">Tomahawk</string>
     <string name="TenguLiver_Info">Diese Leber gehört einem mächtigen Feind. Allein beim Anblick übernehmen Ihre tierischen Instinkte die Kontrolle, und Sie spüren das Verlangen, sie zu verzehren.</string>
@@ -2820,6 +2823,9 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
 
 
 

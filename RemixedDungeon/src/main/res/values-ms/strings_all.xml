@@ -1753,6 +1753,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ShortSword_NotBoomerang">anda tidak boleh menatar boomerang dengan kaedah ini</string>
     <string name="ShortSword_Reforged">anda menempa semula pedang pendek untuk tatarkan %s anda</string>
     <string name="ShortSword_Select">Pilih satu senjata untuk ditatarkan</string>
+    <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Sekeping logam berbentuk bintang dengan bilah tajam dapat memberikan kecederaan teruk jika mengenai sasaran. Ia boleh dilempar dengan kelajuan sangat tinggi.</string>
     <string name="Shuriken_Name">shuriken</string>
     <string name="SkeletonKey_Info">Kunci ini rupanya unik: kepala kunci macam tengkorak. Ia mungkin dapat membuka pintu penting.</string>
@@ -2630,6 +2631,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

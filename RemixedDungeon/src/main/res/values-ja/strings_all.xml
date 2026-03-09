@@ -753,6 +753,7 @@
     <string name="Food_ACEat">食べる</string>
     <string name="Food_Message">とても美味しい！</string>
     <string name="FortuneTellerNPC_Desc">この女性は明るい色の長いローブを着ている。難解な占いの技術を習得した人物にしては、驚くほど若く見える。近づくと、水晶玉を見つめながらつぶやく声が聞こえる。</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">占い師</string>
     <string name="FortuneTellerNPC_Name_Objective">占い師</string>
     <string name="FreezeGlobe_Info">選択したキャラクターを凍結させ、短時間の間、一切の行動を不能にする。</string>
@@ -2929,6 +2930,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

@@ -1157,6 +1157,7 @@
     <string name="Lich_Name_Objective">巫妖</string>
     <string name="LightBuff_Info">光從身體散發出來，照亮周圍的一切。</string>
     <string name="LightBuff_Name">照明</string>
+    <string name="LightningBolt_Info">遠古薩滿之間流傳的咒語，能對敵人造成雙倍電擊傷害，尤其是當他們愚蠢地站在水面上時。</string>
     <string name="LightningTrap_Desc">你被閃電陷阱的電擊殺死了……</string>
     <string name="LightningTrap_Name">閃電陷阱</string>
     <string name="LloidsBeacon_ACReturn">返回傳送點</string>
@@ -2444,6 +2445,7 @@
     <string name="Wnd_Button_Close">關閉</string>
     <string name="Wnd_Button_No">拒絕</string>
     <string name="Wnd_Button_Yes">同意</string>
+    <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">如果您找到一些箭矢的話，這把簡單的木製弓也許會派上用場。</string>
     <string name="WoodenBow_Name">木弓</string>
     <string name="WoodenCrossbow_Gender">masculine</string>
@@ -2463,6 +2465,7 @@
     <string name="WrnExperimental_hint">如果這個奇怪而扭曲的世界對你來說太過嚴苛，請使用以下方式關閉這些選項：\n開始畫面-&gt;選項-&gt;遊戲玩法\n選單，然後開始新的遊戲或載入其他存檔。</string>
     <string name="WrnExperimental_moveTimeout">移動超時設定為 %d 毫秒，快點思考！</string>
     <string name="Yog_Desc">猶格-德澤瓦是一位上古之神，來源於混沌中的強大存在。一個世紀前，古代矮人們雖然勉強贏得了與惡魔軍團的戰爭，卻無法將古神殺死。作為替代方案，矮人們將它封印在城市下的大堂中，並相信虛弱的它無法再度復蘇。</string>
+    <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">……</string>
     <string name="Yog_Info2">希望的存在只是幻覺……</string>
     <string name="Yog_Name">猶格-德澤瓦</string>
@@ -2733,6 +2736,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 
