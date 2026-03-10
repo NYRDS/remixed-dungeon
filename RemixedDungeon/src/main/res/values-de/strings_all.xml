@@ -1101,6 +1101,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="KoboldIcemancer_Name">Kobold-Eiszauberer</string>
     <string name="KoboldIcemancer_Name_Objective">Kobold-Eiszauberer</string>
     <string name="Kobold_Desc">Kobolde sind bekannt aber eine Legende zugleich. Als Vorfahren von Gnolls leben Kobolde in tiefen und kalten Hölen. Es wird geglaubt, dass ihre Leute schon lange vor den Zwergen die Technik und den Maschinenbau beherrschten. Trotzdem weiß niemand, warum sie vor vielen Jahren verschwanden...</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">Kobold</string>
     <string name="Kobold_Name_Objective">Kobold</string>
     <string name="KunaiThrow_Info">Dieser tödliche Kunai-Wurf wird extrem schnell ausgeführt, so schnell, dass du nicht einmal ein Ziel auswählen kannst.\n\nWahre Meister können mehr als einen Kunai gleichzeitig werfen.</string>
@@ -2828,6 +2829,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

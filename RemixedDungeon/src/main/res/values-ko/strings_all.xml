@@ -2460,6 +2460,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_blue_carpet_name">카펫</string>
     <string name="town_deco_book_desc">이 책은 부주의한 누군가가 남기고 간 것 같다.</string>
     <string name="town_deco_book_name">책</string>
+    <string name="town_deco_broken_roof_desc">이 지붕의 기와는 금이 가 있어 교체가 필요합니다.</string>
     <string name="town_deco_broken_roof_name">부숴진 지붕</string>
     <string name="town_deco_broken_wall_desc">이 벽에 있는 나무는 썩은 지 오래되었고, 원래의 활력을 잃었다.</string>
     <string name="town_deco_broken_wall_name">부숴진 벽</string>
@@ -2618,6 +2619,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
