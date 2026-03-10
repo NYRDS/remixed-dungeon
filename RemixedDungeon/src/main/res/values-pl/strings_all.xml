@@ -2245,6 +2245,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="TownsfolkSilentNPC_Name_Objective">mieszczanin</string>
     <string name="ToxicGas_Info">Chmura toksycznego gazu unosi się w tym miejscu.</string>
     <string name="ToxicGas_Info1">Zmarłeś poprzez nawdychanie się trującego gazu...</string>
+    <string name="ToxicGland_Name">Toksyczny gruczoł</string>
     <string name="TrapWnd_Step">Czy naprawdę chcesz stanąć na tę pułapkę? Prawdopodobnie zginiesz.</string>
     <string name="TrapWnd_Title">Pułapka</string>
     <string name="TreacherousSpirit_Desc">Ta gigantyczna kreatura wygląda jak chmura żyjącej ciemności. Jej oko pozbawione powieki wpatruje się w ciebie, pulsując z każdym twoim ruchem.</string>
@@ -3013,5 +3014,6 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 </resources>

@@ -83,6 +83,7 @@
     <string name="AzuterronNPC_Quest_Reminder">날 도와주면 나중에 도와줄께.</string>
     <string name="AzuterronNPC_Quest_Start">후, 왜... 오, 당신이 나를 볼 수 있군요, 그렇죠? 그렇다면 당신은 \&quot;그들\&quot;이 아니라는 뜻이군요. 당신도 이 모든 괴물들이 마음에 들지 않는 모양이네요. 이렇게 합시다, 만약 당신이 나의 작은 문제를 해결해 준다면, 나도 당신을 도와주죠. 이 층 어딘가에 어둠의 야수, _배신자의 영혼_이 있을 거예요. 그것을 처치하고 _심장_을 가져와서 저에게 오세요. 그리고 한 가지 더, 만약 제 물품을 구매하고 싶으시다면, 언제든 물어보세요.</string>
     <string name="Backstab_Name">백스탭</string>
+    <string name="Backstab_TooFar">희생자가 너무 멀어 성공적인 공격을 할 수 없습니다.</string>
     <string name="BadgesScene_Title">당신의 뱃지들</string>
     <string name="Badges_AllBags">모든 가방 구매</string>
     <string name="Badges_AllItems">모든 물약,두루마리, 반지,완드를 식별했습니다</string>
@@ -2620,6 +2621,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

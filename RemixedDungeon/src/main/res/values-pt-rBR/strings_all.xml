@@ -510,6 +510,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="ComboBuff_Info">O próximo ataque será um ataque combinado.</string>
     <string name="ComboBuff_Name">Combo</string>
     <string name="Combo_Combo">%d hit combo!</string>
+    <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">Flecha comum de madeira com ponta de ferro.</string>
     <string name="CommonArrow_Name">flecha</string>
     <string name="CompositeCrossbow_Info">Esta besta reforçada revela-se uma ferramenta mais eficiente em comparação com a sua contrapartida de madeira.</string>
@@ -2856,6 +2857,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
