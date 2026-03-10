@@ -2179,6 +2179,7 @@ otro lugar del nivel.</string>
     <string name="VertigoBuff_Info">La sensación de mareo hace que sea más difícil caminar en línea recta.</string>
     <string name="VertigoBuff_Name">Vértigo</string>
     <string name="View_Distance">Distancia de visión</string>
+    <string name="VileEssence_Info">Una esencia concentrada de corrupción obtenida de un enemigo derrotado. Esta sustancia oscura pulsa con energía malévola y es muy valorada en los procesos alquímicos.</string>
     <string name="VileEssence_Name">Esencia Vil</string>
     <string name="Viscosity_Status">%d diferido</string>
     <string name="Viscosity_Txt">%s de viscosidad</string>
@@ -2884,6 +2885,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

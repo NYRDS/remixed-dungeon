@@ -1940,6 +1940,7 @@ outro local do nível.</string>
     <string name="SpiderMindAmber_Name">Aranha de âmbar</string>
     <string name="SpiderMindAmber_Name_Objective">Aranha de âmbar</string>
     <string name="SpiderMind_Desc">Estas aranhas aparentemente frágeis possuem poderes mentais únicos, que lhes permite controlar toda a colônia. Aranhas Psíquicas são capazes de controlar qualquer criatura viva, mas ela é muito covarde.</string>
+    <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Aranha Psíquica</string>
     <string name="SpiderMind_Name_Objective">Aranha Psíquica</string>
     <string name="SpiderNest_Desc">Este casulo é feito de seda finíssima e dentro está algo vivo.</string>
@@ -2849,6 +2850,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -1600,6 +1600,7 @@
     <string name="ResultDescriptions_Hunger">Заморився голодом на рівні %d</string>
     <string name="ResultDescriptions_Immured">Замуровано в камені на рівні %d</string>
     <string name="ResultDescriptions_Mob">Вбитий монстром \&quot;%1$s\&quot; на %2$d рівні</string>
+    <string name="ResultDescriptions_Necromancy">Виснажив життєву силу, намагаючись підняти нежить на рівні %d</string>
     <string name="ResultDescriptions_Necrotism">Помер від некротизму на рівні %d</string>
     <string name="ResultDescriptions_Ooze">Вбитий їдким слизом на рівні %d </string>
     <string name="ResultDescriptions_Poison">Отруївся на рівні %d</string>
@@ -2772,6 +2773,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

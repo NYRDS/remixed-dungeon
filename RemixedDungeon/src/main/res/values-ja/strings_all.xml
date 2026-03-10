@@ -92,6 +92,7 @@
     <string name="AwarenessBuff_Info">五感が研ぎ澄まされ、周囲をより意識するようになる。</string>
     <string name="AwarenessBuff_Name">意識</string>
     <string name="AzuterronNPC_Desc">黒い霧に包まれた謎の人物。</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">見知らぬ者</string>
     <string name="AzuterronNPC_Name_Objective">見知らぬ者</string>
     <string name="AzuterronNPC_Quest_End">素晴らしい。この薬をあげよう。きっと役に立つ。</string>
@@ -2930,6 +2931,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

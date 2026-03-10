@@ -748,6 +748,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="GoldenKey_Info">Aprók és bonyolultak a bevágások ezen az arany kulcson. Lehet hogy egy láda zárját nyitja?</string>
     <string name="GoldenKey_Name">arany kulcs</string>
     <string name="GoldenStatue_Desc">Igazán nehezen hihető, hogy ez a nagyszerű szobor nem csak egy újabb derkoráció, hanem egy veszélyes lény, aki egy gyanútlan áldozatra vár. Első látásra meg is esküdnél, hogy a(z) _%s_ csak a karjának egy része.</string>
+    <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">arany szobor</string>
     <string name="GoldenStatue_Name_Objective">arany szobrot</string>
     <string name="GoldenSword_Info">Általában az olyan fegyverek amik lágy fémből készültek, mint az arany, csupán dekorációk. Ennek ellenére ez a penge láthatóan képes kettévágni mindenfélét egész könnyen.</string>
@@ -2664,6 +2665,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

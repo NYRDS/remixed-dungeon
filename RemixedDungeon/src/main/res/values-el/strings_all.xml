@@ -559,6 +559,7 @@
     <string name="CorpseDust_Info">Η μπάλα της σκόνης σορού δεν διαφέρει εξωτερικά από μια απλή μπάλα σκόνης. Νιώθεις, όμως, ότι είναι καλή ιδέα να την ξεφορτωθείς το συντομότερο δυνατό.</string>
     <string name="CorpseDust_Info2">Ίσως επειδή σου προκαλεί ένα αίσθημα οργής και αγωνίας και μόνο που την κρατάς.</string>
     <string name="CorpseDust_Name">σκόνη σορού</string>
+    <string name="CorpseExplosion_Info">Μετατρέπει ένα πτώμα σε ένα θανατηφόρο σύννεφο τοξικού αερίου, διαδίδοντας ασθένεια και δηλητήριο σε όλους τους κοντινούς εχθρούς.</string>
     <string name="Crab_Defense">απέκρουσε</string>
     <string name="Crab_Desc">Αυτά τα τεράστια καβούρια ανήκουν στην κορυφή της τροφικής αλυσίδας των υπονόμων. Είναι εξαιρετικά γρήγορα και ο παχύς τους εξωσκελετός μπορεί να αντέξει βαριά χτυπήματα.</string>
     <string name="Crab_Gender">masculine</string>
@@ -3014,6 +3015,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 
