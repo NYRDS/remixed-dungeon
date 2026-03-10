@@ -1247,6 +1247,7 @@
     <string name="MissileWeapon_No">不，我改主意了</string>
     <string name="MissileWeapon_Sure">您確定要將其用作近戰武器？</string>
     <string name="MissileWeapon_Yes">是的，我知道我在做什麼</string>
+    <string name="Mob_Attacking">把這個%s當作死了！</string>
     <string name="Mob_Cannot_Be_Pet">你沒法控制住 \&quot;%s\&quot;</string>
     <string name="Mob_Desc">真正的說明即將到來！</string>
     <string name="Mob_Died">你聽到有什麼東西在遠處死去了</string>
@@ -2736,6 +2737,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

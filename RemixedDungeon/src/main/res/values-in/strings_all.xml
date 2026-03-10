@@ -1697,6 +1697,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Rudolph_Info">Apa yang bisa lebih meriah daripada hidung merah yang bersinar? Bersama dengan sepasang tanduk, tentu saja.</string>
     <string name="Rudolph_Name">Mawar merah dan tanduk rusa</string>
     <string name="RunicSkull_Desc">Untuk sesuatu yang dibuat secara artifisial, tengkorak ini terlalu mirip dengan yang asli. Anda juga dapat melihat cahaya redup di sekitarnya.</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">tengkorak rahasia</string>
     <string name="RunicSkull_Name_Objective">tengkorak rahasia</string>
     <string name="SacrificialSword_Info">Dari pandangan pertama atas pedang perunggu tua, yang tertutup oleh bercak patina ini pasti tidak berguna. Tapi semacam, kekuatan kuno tidur di dalamnya. Kekuatan ini dapat mengubah hampir semua makhluk menjadi budak tak berkeinginan. Hanya butuh cara benar untuk membangunkan mereka...</string>
@@ -2827,6 +2828,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
