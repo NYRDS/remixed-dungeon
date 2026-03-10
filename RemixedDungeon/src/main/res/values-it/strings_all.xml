@@ -588,6 +588,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="ElfArmor_Name">Mantello elfico</string>
     <string name="ElfArmor_NotElf">Solo gli elfi possono usare questa armatura!</string>
     <string name="ElvenBow_Name">arco elfico</string>
+    <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Questa arma è fatta di una speciale lega metallica, rendendola molto più leggera rispetto a un pugnale normale.</string>
     <string name="EnslavedSoul_Desc">Puoi quasi vedere attraverso questa apparizione spiritica. Nonostante sembri uno scheletro, a volte, per mezzo secondo, compare un volto invece... un volto colmo di sofferenza e tormento.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
@@ -2449,6 +2450,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_medicine_desc">Fiaschette e altri ingredienti medici vengono messi con cautela su questi scaffali.</string>
     <string name="town_deco_medicine_name">Medicina</string>
     <string name="town_deco_misc_name">Cianfrusaglie</string>
+    <string name="town_deco_movies_door_desc">Questa porta sembra eccezionalmente ben fatta. Probabilmente conduce a qualcosa di incredibile.</string>
     <string name="town_deco_movies_door_name">Porta</string>
     <string name="town_deco_mud_name">Fango</string>
     <string name="town_deco_painting_desc">Un bellissimo pezzo d\'arte.</string>
@@ -2543,6 +2545,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

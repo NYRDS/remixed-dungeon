@@ -281,6 +281,7 @@
     <string name="Bowknot_Name">Simpulan Tali Leher</string>
     <string name="Brute_Desc">Si ganas merupakan gnoll terbesar, terkuat dan paling sukar dikalahkan. Jika tercedera teruk, mereka menjadi gila dan dapat mencederakan teruk pihak musuh. </string>
     <string name="Brute_Enraged">%s menjadi berang!</string>
+    <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">gnoll ganas</string>
     <string name="Brute_Name_Objective">gnoll ganas</string>
     <string name="Brute_StaEnraged">berang</string>
@@ -1023,6 +1024,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="King_Info3">Berani kau!</string>
     <string name="King_Name">Raja Orang Kerdil</string>
     <string name="King_Name_Objective">Raja Orang Kerdil</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Info">Sekeping besi yang pakai erat ketika menggenggam tangan.</string>
     <string name="Knuckles_Name">buku lima</string>
     <string name="KoboldIcemancer_Desc">Pengguna ais kobold merupakan elit dalam masyarakat mereka. Seorang satria, ahli sihir dan paling penting saintis. Pengguna ais purba menguasai seni pembentukan ais dapat mencipta mekanisma canggih dari ais dengan diperkuatkan dengan kuasa ajaib...</string>
@@ -2636,6 +2638,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

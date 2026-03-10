@@ -26,6 +26,7 @@
     <string name="Actions_Speed">Tempo der Aktionen</string>
     <string name="Affection_Txt">%s der Zuneigung</string>
     <string name="AirElemental_Desc">Luftgeister sind fliegende, magische Wesen, die aus lebendiger Luft bestehen.</string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">Luftgeist</string>
     <string name="AirElemental_Name_Objective">Luftgeist</string>
     <string name="AlarmTrap_Desc">Die Falle gibt einen lauten, durchdringenden Ton ab, der durch die Gemäuer hallt.</string>
@@ -361,6 +362,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Challenges_Names_7">Pazifismus</string>
     <string name="ChampionOfAirBuff_Info">Diese Eigenschaft verleiht der Kreatur das Wesen der Winde, verbessert ihre Beweglichkeit und Kampfkraft. Der Champion der Luft wird zu einem gefährlichen Gegner, der in der Lage ist, schnelle und verheerende Angriffe auszuführen, die den Verlauf der Schlacht rasch verändern können.</string>
     <string name="ChampionOfAirBuff_Name">Champion der Luft</string>
+    <string name="ChampionOfEarthBuff_Info">Der Champion der Erde verkörpert unnachgiebige Stärke, da diese Eigenschaft den Schadenswiderstand der Kreatur erhöht und ihre maximale Vitalität steigert. Diese Verwandlung macht ihn zu einem furchterregenden Gegner in den tückischen Tiefen, der Angriffe mühelos abwehren und anhaltende Kämpfe mit unerschütterlicher Entschlossenheit überstehen kann.</string>
     <string name="ChampionOfEarthBuff_Name">Champion der Erde</string>
     <string name="ChampionOfFireBuff_Info">Mit dem Zorn der Flammen erfüllt, verstärkt dieses Merkmal die Wildheit und Kampfkraft der Kreatur. Der Feuerchampion tritt als furchteinflößender Gegner hervor, entfesselt verheerende Angriffe, die seine Feinde in lodernde Flammen hüllen und Schrecken in alle einflößen, die es wagen, ihm entgegenzutreten.</string>
     <string name="ChampionOfFireBuff_Name">Feuer-Champion</string>
@@ -2825,6 +2827,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 
