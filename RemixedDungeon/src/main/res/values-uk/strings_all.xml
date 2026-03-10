@@ -1186,6 +1186,7 @@
     <string name="Lich_Name_Objective">ліча</string>
     <string name="LightBuff_Name">Світишся</string>
     <string name="LightningBolt_Info">Закляття, яким користувалися давні шамани, вражає ваших ворогів удвічі ефективніше, особливо якщо вони достатньо дурні, щоб стояти на воді.</string>
+    <string name="LightningBolt_Name">Блискавка</string>
     <string name="LightningTrap_Desc">Тебе прибило розрядом електричної пастки...</string>
     <string name="LightningTrap_Name">електрична пастка</string>
     <string name="LloidsBeacon_ACReturn">ЗАБРАТИ</string>
@@ -2771,6 +2772,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

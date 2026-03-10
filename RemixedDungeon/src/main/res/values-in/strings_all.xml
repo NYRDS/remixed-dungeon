@@ -1437,6 +1437,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Plant_Seed">biji dari %s</string>
     <string name="PlateArmor_Desc">Lempeng-lempeng logam yang besar digabungkan menjadi sebuah terusan yang memberikan pertahanan tak tertandingi untuk semua petualang yang cukup kuat menanggung beratnya.</string>
     <string name="PlateArmor_Name">Lempeng zirah</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">Setetes racun mematikan terdapat di ujung anak panah.</string>
     <string name="PoisonArrow_Name">anak panah beracun</string>
     <string name="PoisonBuff_Info">Tubuh perlahan terbunuh oleh racun!</string>
@@ -2828,6 +2829,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

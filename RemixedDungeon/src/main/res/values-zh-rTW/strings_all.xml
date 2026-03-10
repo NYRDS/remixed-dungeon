@@ -188,6 +188,7 @@
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">吟遊詩人</string>
     <string name="BardNPC_Name_Objective">吟遊詩人</string>
+    <string name="BardSong_1">我和妻子獨自生活，\n在我們自己的小木屋裡\n她愛琴酒，我愛蘭姆酒\n我告訴你我們有很多樂趣。</string>
     <string name="BarkskinBuff_Name">樹膚</string>
     <string name="Barrel_Desc">一個簡單的木桶，你可以從中聞到油味。而且這玩意非常輕，你可以輕易推動它。</string>
     <string name="Barrel_Name">油筒</string>
@@ -2737,6 +2738,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

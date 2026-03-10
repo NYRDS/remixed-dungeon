@@ -339,6 +339,7 @@
     <string name="ChaosShield_name">Scudo del Caos</string>
     <string name="ChaosStaff_Info">Una bacchetta imbevuta con il Potere del Caos! Cos\'altro un mago può desiderare... O avere paura? </string>
     <string name="ChaosStaff_Name">Vega del caos</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">La lama di questa spada è fatta di caos puro e vibra moderatamente a volte. Un grosso potere è celato dentro l\'arma, che può tagliare a metà praticamente ogni cosa. d\'altronde, ci vuole una grande abilità, per tener testa alla potente forza dell\'arma.</string>
     <string name="ChaosSword_Name">Spada del caos</string>
     <string name="CharAction_Charm">affascina</string>
@@ -2540,6 +2541,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
