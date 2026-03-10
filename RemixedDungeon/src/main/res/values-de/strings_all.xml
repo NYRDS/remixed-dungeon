@@ -1461,6 +1461,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Plant_Seed">Ein Samen von %s</string>
     <string name="PlateArmor_Desc">Wuchtige Metallplatten wurden zu einem Anzug verbunden der unvergleichlichen Schutz für jeden Abenteurer bietet, der stark genug ist sein erdrückendes Gewicht zu ertragen.</string>
     <string name="PlateArmor_Name">Plattenrüstung</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">Tödliche Gifttropfen glänzen auf der Pfeilspitze. </string>
     <string name="PoisonArrow_Name">Giftpfeil</string>
     <string name="PoisonBuff_Info">Der Körper stirbt langsam durch das Gift!</string>
@@ -2827,6 +2828,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

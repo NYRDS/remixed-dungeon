@@ -704,6 +704,7 @@
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">您能感受到從箭頭湧出的霜寒氣息。</string>
     <string name="FrostArrow_Name">寒霜箭</string>
+    <string name="FrostAuraBuff_Info">冰霜環繞著身體，使所有靠近的事物減速。</string>
     <string name="FrostAuraBuff_Name">寒冰護罩
 </string>
     <string name="FrostBuff_Info">被冰凍住，完全無法進行任何行動。</string>
@@ -2741,6 +2742,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
