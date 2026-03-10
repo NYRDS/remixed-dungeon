@@ -2553,6 +2553,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="YogsBrain_Name">Yogs Gehirn</string>
     <string name="YogsBrain_Name_Objective">Yogs Gehirn</string>
     <string name="YogsEye_Desc">Das Auge des Alten Gottes, ein allsehender Blick gefüllt mit ewigem Hass. Du fühlst, wie es gezielt durch deine Seele blickt.</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">Yogs Auge</string>
     <string name="YogsEye_Name_Objective">Yogs Auge</string>
     <string name="YogsHeart_Desc">Jahrhundertelang wurde behauptet, dass wirklich nur herzlose Kreaturen in der Lage sind, das Pure Böse zu sein. Und hier ist der Gegenbeweis, das pochende Herz des Alten Gottes höchstpersönlich.</string>
@@ -2824,6 +2825,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

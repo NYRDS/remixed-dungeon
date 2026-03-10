@@ -2130,6 +2130,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="ToughShield_desc">革ひもで補強されたこの盾は、木製のものより丈夫そうだ。確かに多くのダメージを防ぐことができる。</string>
     <string name="ToughShield_name">革の盾</string>
     <string name="TownGuardNPC_Desc">ただの街の衛兵</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">進め</string>
     <string name="TownGuardNPC_Message2">君たちのような冒険家のおかげで、ここは本当に平和になったよ</string>
     <string name="TownGuardNPC_Message3">この街に警備員が多すぎるって？まぁ、モンスターが巣食う巨大なダンジョンがあるのは、この町だけだからな。そうだろう？</string>
@@ -2931,6 +2932,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

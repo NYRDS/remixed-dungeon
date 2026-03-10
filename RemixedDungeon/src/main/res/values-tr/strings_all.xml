@@ -1703,6 +1703,8 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="RottenFood_Message">ıyy iğrenç!</string>
     <string name="RottenMeat_Info">çürük et parçası</string>
     <string name="RottenMeat_Name">çürük et</string>
+    <string name="RottenOrgan_Info">Yenilmiş bir düşmandan elde edilen çürüyen bir organ. İğrenç durumuna rağmen, simyasal işlemler için değerli bileşikler içerir.</string>
+    <string name="RottenOrgan_Name">Çürümüş Organ</string>
     <string name="RottenPasty_Info">iğrenç görünen eski börek</string>
     <string name="RottenPasty_Name">küflenmiş börek</string>
     <string name="RottenPumpkinPie_Info">Tazeyken ne kadar iyi olursa olsun, hâlâ yenebilir olması mümkün değil.</string>
@@ -2895,6 +2897,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

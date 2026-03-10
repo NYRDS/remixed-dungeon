@@ -286,6 +286,7 @@
     <string name="Brute_StaEnraged">berang</string>
     <string name="BurningBuff_Name">Terbakar</string>
     <string name="BurningFist_Desc">Tumbukan Membakar Dewa Purba</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">tumbukan membakar</string>
     <string name="BurningFist_Name_Objective">tumbukan membakar</string>
     <string name="Burning_Burns">%s terbakar!</string>
@@ -502,6 +503,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="CorpseExplosion_NoCorpse">Tiada mayat di lokasi tersebut.</string>
     <string name="Crab_Defense">ditepis</string>
     <string name="Crab_Desc">Ketam besar ini berada bahagian teratas rantaian makanan pembentung. Mereka sangat pantas dan memiliki kulit luar yang keras dan dapat menahan pukulan kuat.</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">ketam pembentung</string>
     <string name="Crab_Name_Objective">sewer crab</string>
     <string name="CrippleBuff_Name">Dilumpuhkan</string>
@@ -2634,6 +2636,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
