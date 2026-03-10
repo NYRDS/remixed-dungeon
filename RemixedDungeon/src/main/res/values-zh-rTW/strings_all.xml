@@ -341,6 +341,7 @@
     <string name="Challenges_Names_5">沒入黑暗</string>
     <string name="Challenges_Names_6">禁忌符文</string>
     <string name="Challenges_Names_7">和平主義</string>
+    <string name="Challenges_Names_8">沒有城鎮</string>
     <string name="ChampionOfAirBuff_Name">風之勇士</string>
     <string name="ChampionOfFireBuff_Info">注入烈焰之怒，這個特性提升了生物的兇猛和戰鬥能力。火焰勇士化身為可怕的對手，釋放毀滅性的攻擊，將敵人陷入灼熱的火焰之中，使所有敢於反抗的存在感到恐懼。</string>
     <string name="ChaosArmor_Info">這件盔甲的血紅色金屬板被暗紅的鐵鏈縫接在一起，當你觸碰它時會迸發出混沌能量。</string>
@@ -2743,6 +2744,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

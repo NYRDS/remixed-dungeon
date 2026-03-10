@@ -22,6 +22,7 @@
     <string name="Acidic_Desc">Estas enormes criaturas demoníacas parecidas com aracnídeos evitam o combate de perto, disparando pontas serrilhadas de longas distâncias.</string>
     <string name="Acidic_Name">escorpião ácido</string>
     <string name="Acidic_Name_Objective">escorpião ácido</string>
+    <string name="Actions_Speed">Velocidade de ação</string>
     <string name="Affection_Txt">%s de afeição</string>
     <string name="AirElemental_Desc">Elementais de ar são seres mágicos feitos de ar vivo.</string>
     <string name="AirElemental_Name">elemental de ar</string>
@@ -767,6 +768,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Ghost_Rat2">Por favor... Ajude-me... Mate essa abominação...</string>
     <string name="Ghost_Rose1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha _Rosa Seca_... É muito importante para mim... Algum monstro roubou de meu corpo...</string>
     <string name="Ghost_Rose2">Por favor... Ajude-me... Encontre o rosa...</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Info">Uma arma de haste que consiste numa lâmina de espada na extremidade de uma vara.</string>
     <string name="Glaive_Name">Glaive</string>
     <string name="GnollArmor_ACSpecial">DOMINAR</string>
@@ -2854,6 +2856,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
