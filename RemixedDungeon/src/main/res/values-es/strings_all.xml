@@ -1466,6 +1466,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PlagueDoctorQuest_4_1_InProgress">¡Cinco _Brujos Enanos_, sus cuerpos aún palpitan con el débil eco de magia oscura! Tráemelos, y te recompensaré con una poción de poder sin precedentes: una _Poción de Poder_ que te impregnará con la fuerza de diez hombres.</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">¡Achú! ¡Dwarves! ¡Esos testarudos moradores subterráneos, obsesionados con las gemas y el oro! Pero son los _Brujos Enanos_ los que ansío... su magia retorcida, alimentada por las mismas profundidades que habitan. ¡Cinco, necesito cinco de esas almas marchitas! Sus cuerpos tienen la clave para entender un cierto... fenómeno. Algo sobre canalizar energías arcanas a través de la tierra misma. ¡Creo que estoy cerca de un gran descubrimiento, pero necesito su esencia, su magia corrompida! *Tose violentamente en su pañuelo, una mancha oscura se extiende por la delicada tela*</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Él mira fijamente a las dos _súcubos_, con una sonrisa beatífica extendiéndose bajo su máscara.* ¡Espléndido! ¡Magnífico! Esto desbloqueará tantas... posibilidades! *Se vuelve hacia ti, su voz gruesa de gratitud... y algo más.* Tus esfuerzos... no serán olvidados. Le debo las gracias más profundas. *Su mirada se demora en las _súcubos_ un momento demasiado largo, antes de retirarse a su laboratorio, murmurando sobre cómo desbloquear los secretos de la seducción.*</string>
+    <string name="PlagueDoctorQuest_5_1_Prologue">*Él tartamudea, su voz cruje como una rama quebradiza*.  A-ah, _¡súcubos_! ¡Dos… sí, dos, vivas! Es… ejem… para mi investigación. Verá… sus feromonas… son cruciales para comprender el delicado equilibrio de… ah… *Se interrumpe, su mano huesuda se eleva nerviosamente para ajustar su máscara, sus ojos se dirigen hacia usted con una intensidad febril.* Su… esencia… es un enigma… ¡un enigma hermoso y enigmático! *Tose violentamente, intentando recuperar la compostura.* Se lo prometo, por traerme dos de estas… criaturas… tendrá mi eterna gratitud. ¡Piénselo como un… un regalo al conocimiento! ¡Sí! ¡Al conocimiento!</string>
     <string name="PlagueDoctor_Desc">Este hombre jorobado está vestido completamente con cuero. Huele fuertemente a medicamentos y ... ¿ajo?</string>
 
     <string name="PlagueDoctor_Gender">masculine</string>
@@ -2883,6 +2884,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
