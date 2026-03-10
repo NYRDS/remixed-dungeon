@@ -1671,6 +1671,7 @@ Potrebbe bruciare?</string>
     <string name="Shades_Name">Occhiali da sole</string>
     <string name="ShadowLord_Death">Nooooo...</string>
     <string name="ShadowLord_Desc">Creatura oscura, formata da pura malvagità. Considerata la sua potenza molti sono portati a credere che sia un vecchio Dio. Altri lo considerano semplicemente come un guardiano delle camere del vecchio Dio.</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Preparati!</string>
     <string name="ShadowLord_Name">signore dell\'ombra</string>
     <string name="ShadowLord_Name_Objective">Signore dell\'Ombra</string>
@@ -2178,6 +2179,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndInfoItem_WontKnow">Non si sa cosa ci sia dentro fin quando non l\'aprirai!</string>
     <string name="WndInstallingMod_copying_file">Copia di %s nell\'archiviazione di Remixed Dungeon</string>
     <string name="WndInstallingMod_deleting_file">Eliminazione di %s</string>
+    <string name="WndInstallingMod_please_wait">Installazione del mod, attendere...</string>
     <string name="WndInstallingMod_skipping_file">Salto %s</string>
     <string name="WndItemAlchemy_NoRecipes">Nessuna ricetta disponibile con questo oggetto e il tuo inventario attuale.</string>
     <string name="WndItemAlchemy_SelectRecipe">Seleziona ricetta</string>
@@ -2541,6 +2543,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

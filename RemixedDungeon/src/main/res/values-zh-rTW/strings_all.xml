@@ -1382,6 +1382,7 @@
     <string name="PlagueDoctorQuest_2_1_Prologue">「月花種子」……那些空靈的花朵，帶著月亮本身的魔力低語。我已經研究了它們奇特的發光現象幾個星期。它們的精華中蘊含著某種潛能，一種隱藏的能量，這可能是打開……某些事物的關鍵。*他若有所思地用骨指敲擊下巴*\n但可惜，它們很稀有。只在最深的洞穴中才能找到，那裡幾乎沒有月光照入。我需要兩顆。兩顆種子來解鎖它們力量的秘密。作為回報，我可以給你一些……純淨而強大的魔法。一瓶「魔力藥水」，充滿著月花的精髓。它將滋養你疲憊的靈魂，讓你能以全新的力量運用神秘法術。</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">卓越！_陽光草_，其金色精華充滿活力地跳動著。我已從它細緻的結構學到了很多。*他遞給你一瓶_健康藥水_，液體散發出淡淡的金光。* 當世界壓在你身上時喝下它，感受陽光的溫暖喚醒你的精神。</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">「啊，是 _陽光草_！這是一朵嬌嫩的花朵，其花瓣散發著太陽的溫暖。我相信它的精華中蘊含著關鍵……啊，暫時先別管細節了。總而言之，對我的研究至關重要。我需要 _兩顆陽光草種子_。為我取得它們，作為回報，我會贈予你在冒險中一定用得上的東西——一瓶 _生命藥水_，其中充滿了太陽的生命力。」</string>
+    <string name="PlagueDoctorQuest_3_2_Epilogue">*他仰頭發出咯咯的笑聲，聲音在他潮濕的實驗室中回盪* 壯觀！一個_死亡騎士_，站在我們面前！從它身上散發的力量……令人陶醉！*他轉向你，眼睛閃爍著狂熱的光芒* 而對你，一個配得上你勇氣的獎勵：一瓶_力量藥水_！願它賜予你征服任何敵人的力量！現在……讓我們檢查我們的主題。它的本質蘊含著可能改寫生命法則的秘密！*他帶著瘋狂的獰笑接近_死亡騎士_，揮舞著一瓶冒泡的綠色液體*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">這不僅僅是野獸！它是死靈力量的活見證！活捉它，不能受傷！這個_死亡騎士_……它是關鍵！</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">啊嚏！矮人！那些頑固的地下居民，痴迷於寶石和黃金。但我渴望的是_矮人術士_……他們扭曲的魔法，由他們居住的深淵提供燃料。五個，我需要五個那些枯萎的靈魂！他們的身體是理解某種……現象的關鍵。關於通過大地本身引導奧術能量的事情。我相信我接近突破了，但我需要他們的本質，他們腐敗的魔法！*他劇烈地咳嗽在手帕上，深色的污漬蔓延到精緻的織物上*</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">拿回五具_DEAD KOBOLD ICEMANCER_！他們冰冷的屍體是解開寒冰魔法秘密的關鍵！</string>
@@ -2294,6 +2295,7 @@
     <string name="WndInfoItem_WontKnow">直至打開一刻，方曉裏面為何物！</string>
     <string name="WndInstallingMod_copying_file">正在複製 %s 到混合地牢存儲</string>
     <string name="WndInstallingMod_deleting_file">正在刪除 %s</string>
+    <string name="WndInstallingMod_skipping_file">正在跳過 %s</string>
     <string name="WndItemAlchemy_NoRecipes">沒有可用於此物品和你當前庫存可用的配方。</string>
     <string name="WndItemAlchemy_SelectRecipe">選擇配方</string>
     <string name="WndItemAlchemy_Title">含 %s 的煉金配方</string>
@@ -2739,6 +2741,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
