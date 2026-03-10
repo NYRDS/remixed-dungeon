@@ -312,6 +312,7 @@
     <string name="Burning_Burns">%s は燃え上がった！</string>
     <string name="Burning_Death">あなたは炎上死した...</string>
     <string name="CagedKobold_Desc">檻の中のコボルド</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">おい......おい！ お前、冒険家ってやつだろ？助けてくれよ、このクソ軍国主義者どもにここに監禁されたんだ！古代兵器を再稼働させて、地上の人間どもを征服するつもりらしい！でも、それがどんなに危険なことか考えて、俺は反対したんだが、彼らは俺を追放して檻に閉じ込めたんだ！頼むから檻の鍵を見つけてくれ。その代わり、できる限りのことをしてやるから。</string>
     <string name="CagedKobold_Message1">頼むよ…</string>
     <string name="CagedKobold_Message2">助けてくれよ、相棒</string>
@@ -2932,6 +2933,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

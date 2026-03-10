@@ -2323,6 +2323,7 @@
     <string name="WndMovieTheatre_Sorry">我們不能從影片中取得您的酬勞，恐怕某些地方出錯了。</string>
     <string name="WndMovieTheatre_Thank_You">感謝您的參與！</string>
     <string name="WndMovieTheatre_Title">戲院</string>
+    <string name="WndMovieTheatre_Watch">觀看廣告</string>
     <string name="WndPlayGames_BackupProgress">備份遊戲進程</string>
     <string name="WndPlayGames_Connecting">正在連線到 Google Play Games, 請閣下稍等...</string>
     <string name="WndPlayGames_RestoreProgress">恢復遊戲進程</string>
@@ -2742,6 +2743,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
