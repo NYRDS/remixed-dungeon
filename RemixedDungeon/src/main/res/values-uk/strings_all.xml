@@ -2283,6 +2283,7 @@
     <string name="WndCryptoDonate_bitcoin">Біткоїн</string>
     <string name="WndCryptoDonate_infoText">Ви можете підтримати розробку Remixed Dungeon, надіславши пожертви криптовалютою на наведені нижче адреси. Дякуємо за вашу щедру підтримку!</string>
     <string name="WndCryptoDonate_supportDev">Підтримати розробника</string>
+    <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_walletAddress">Адреса гаманця</string>
     <string name="WndCustomizations_Title">Кастомізації</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - безкоштовний для всіх та завжди таким буде.\n\nОднак, Ви можете допомогти нам зробити гру кращою.\n\nОкрім нашої щирої вдячності, ви отримаєте деякі косметичні вдосконалення.</string>
@@ -2778,5 +2779,6 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 </resources>

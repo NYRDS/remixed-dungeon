@@ -1882,6 +1882,7 @@ Potrebbe bruciare?</string>
     <string name="TitleScene_Badges">Medaglie</string>
     <string name="TitleScene_Highscores">Punteggi Migliori</string>
     <string name="TitleScene_InternalStorageLow">Non abbastanza spazio\n nella memoria interna\n Il tuo progresso potrebbe andare perso!</string>
+    <string name="TitleScene_Mods">Mod</string>
     <string name="TitleScene_Play">Gioca</string>
     <string name="TomeOfKnowledge_Info">Questo antico tomo è pieno di arcani enigmi e misteri! Potrebbe essere difficile da leggere, ma se ce la farai i tuoi poteri magici aumenteranno decisamente.</string>
     <string name="TomeOfKnowledge_Name">Tomo della conoscenza</string>
@@ -2550,4 +2551,5 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 </resources>

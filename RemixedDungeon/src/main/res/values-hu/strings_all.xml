@@ -758,6 +758,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">gólem</string>
     <string name="Golem_Name_Objective">gólem</string>
+    <string name="Goo_Desc">Kevés tudnivaló van A Zseléről. Lehetséges, hogy nem is élőlény, hanem csupán a csatornából származó anyagok conglomerátuma, amely szabad akarat csíráit nyerte el. Akárhogy is, nyilvánvaló, hogy sötét mágiáról van szó.</string>
     <string name="Goo_Info1">A Massza elkezdte felpumpálni magát!</string>
     <string name="Goo_Info2">bluggy... bluggy...</string>
     <string name="Goo_Info3">BLUGGY-BLUGGY!</string>
@@ -2669,6 +2670,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
