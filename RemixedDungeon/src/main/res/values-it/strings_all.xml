@@ -623,6 +623,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="FetidRat_Name_Objective">ratto puzzolente</string>
     <string name="Fez_Info">È un copricapo a forma di cono di tronco in feltro rosso, con una nappa fissata sulla parte superiore. E no, non rende il mondo in 3 dimensioni.</string>
     <string name="Fez_Name">Fez</string>
+    <string name="FilteredMask_Info">Un respiratore è un dispositivo progettato per proteggere chi lo indossa dall\'inalazione di atmosfere pericolose, inclusi fumi, vapori, gas e particolato come polveri e microrganismi aerodispersi.\n\nQuesta maschera tuttavia ha solo scopo decorativo.</string>
     <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">Questa freccia sembra normale, tranne per la calda luce rossa che irradia dalla sua testa.</string>
     <string name="FireArrow_Name">freccia di fuoco</string>
@@ -1383,6 +1384,7 @@ Potrebbe bruciare?</string>
     <string name="Potion_Colors_11">argento</string>
     <string name="Potion_Colors_13">quarzo</string>
     <string name="Potion_Colors_14">onice</string>
+    <string name="Potion_Colors_15">perla</string>
     <string name="Potion_Colors_2">azzurro</string>
     <string name="Potion_Colors_3">giada</string>
     <string name="Potion_Colors_4">oro</string>
@@ -2547,6 +2549,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

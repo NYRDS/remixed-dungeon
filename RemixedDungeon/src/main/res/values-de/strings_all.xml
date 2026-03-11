@@ -1091,6 +1091,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="KindOfWeapon_EquipCursed">Du zuckst zusammen, als du dein %s unfreiwillig festhälst.</string>
     <string name="King_Defense">pariert</string>
     <string name="King_Desc">Der letzte Zwergenkönig war bekannt für sein weit reichendes Verständnis der Prozesse des Lebens und des Todes. Er überzeugte Mitglieder seines Gerichts an einem Ritual teilzunehmen, welches ihnen ewige Jugend bewilligen sollte. Am Ende war er der Einzige, der sie bekam - und eine Armee der Untoten als Bonus.</string>
+    <string name="King_Gender">masculine</string>
     <string name="King_Info1">Ihr könnt mich nicht töten, %s... ich bin... unsterblich...</string>
     <string name="King_Info2">Erhebt euch, Sklaven!</string>
     <string name="King_Info3">Wie könnt Ihr es wagen!</string>
@@ -1967,6 +1968,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiderGuard_Name">Spinnenwächter</string>
     <string name="SpiderGuard_Name_Objective">Spinnenwächter</string>
     <string name="SpiderMindAmber_Desc">Bernsteinspinnen sind geheimnisvolle und seltene Kreaturen, die psychische Kraft aufweisen, ähnlich den Psychospinnen aber mehr aushalten als ihre normalen Artgenossen. Der Begriff \&quot;Bernstein\&quot; bezieht sich auf die Farbe ihrer riesigen Gehirn-Säcke die auftauchen, bevor ihre Opfer von der Kraft der Bernsteinspinnen getroffen werden</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">Bernsteinspinne</string>
     <string name="SpiderMindAmber_Name_Objective">Bernsteinspinne</string>
     <string name="SpiderMind_Desc">Diese zerbrechlich wirkenden Spinnen weisen einzigartige mentale Kräfte auf, welche es ihnen erlauben die gesamte Kolonie zu kontrollieren. Psi-Spinnen sind in der Lage, jedes lebendige Wesen zu kontrollieren, aber sie sind ziemliche Feiglinge.</string>
@@ -2831,6 +2833,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 
