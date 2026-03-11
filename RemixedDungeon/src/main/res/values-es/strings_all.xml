@@ -1287,6 +1287,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="MeleeWeapon_Info7b">, y como esta maldita, no puedes soltarla.</string>
     <string name="MeleeWeapon_Info7c">Puedes sentir una malevolente magia acechando dentro de %s.</string>
     <string name="MercenaryNPC_Desc">Un hombre de aspecto robusto.</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">mercenario</string>
     <string name="MercenaryNPC_Name_Objective">mercenario</string>
     <string name="Metabolism_Txt">%s de metabolismo</string>
@@ -2886,6 +2887,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

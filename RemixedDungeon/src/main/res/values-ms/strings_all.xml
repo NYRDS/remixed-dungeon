@@ -84,6 +84,7 @@
     <string name="Artifact_Limit">Anda hanya boleh pakai 2 artifak dalam satu masa.</string>
     <string name="AttackDelay_Increased">Tidak dapat mengendalikan %s seperti ini. Ayunan perlahan, nafas berat…</string>
     <string name="Attack_Cooldown">Tempoh menunggu serangan</string>
+    <string name="Attack_Range">Julat serangan</string>
     <string name="AwarenessBuff_Info">Deria telah menajam, memberikan lebih kesedaran tentang persekitaran.</string>
     <string name="AwarenessBuff_Name">Kesedaran</string>
     <string name="AzuterronNPC_Desc">FIgura misteri yang diselubungi dengan kabut hitam.</string>
@@ -2457,6 +2458,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_chest_name">Peti</string>
     <string name="town_deco_chimney_desc">Cerobong batu merupakan pasangan rumah yang dibina di wilayah ini yang mengalami cuaca sejuk.</string>
     <string name="town_deco_chimney_name">Cerobong</string>
+    <string name="town_deco_church_sign_desc">Nampaknya ada gereja di dalam bangunan itu.</string>
     <string name="town_deco_cinema_sign_desc">Rupanya ada wayang berada di dalam bangunan tersebut.</string>
     <string name="town_deco_cinema_sign_name">Tanda wayang</string>
     <string name="town_deco_clock_desc">Anak panah pada jam ini telah lama terbeku dalam satu kedudukan.</string>
@@ -2640,6 +2642,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

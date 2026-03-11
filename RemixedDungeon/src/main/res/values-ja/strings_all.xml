@@ -1640,6 +1640,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="RatSkull_Info2">その一方で、所有者がネズミ、それも大きくて臭いネズミを殺すことができることの証明になる。</string>
     <string name="RatSkull_Name">巨大なネズミの頭蓋骨</string>
     <string name="Rat_Desc">有袋ネズミは攻撃的だが、どちらかというと弱い下水道の住人だ。しかし数が多くなると危険である。</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">有袋ネズミ</string>
     <string name="Rat_Name_Objective">有袋ネズミ</string>
     <string name="Ration_Info">乾燥肉、ビスケット、そんなものだ。</string>
@@ -2935,6 +2936,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
