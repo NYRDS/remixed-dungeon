@@ -1895,6 +1895,7 @@ outro local do nível.</string>
     <string name="SmashSpell_Name">Pulo Esmagador</string>
     <string name="SmashSpell_NeedWeapon">Eu preciso de uma arma para fazer isso.</string>
     <string name="Snail_Desc">Este pequeno molusco cresceu bastante alimentando-se de esgoto, mas ele ainda é muito lento, o que o torna um inimigo fácil de enfrentar.</string>
+    <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">caracol</string>
     <string name="Snail_Name_Objective">caracol</string>
     <string name="SnipersMarkBuff_Info">A marca foi feita por um atirador.</string>
@@ -2857,17 +2858,4 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

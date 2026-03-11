@@ -308,6 +308,7 @@
     <string name="Burning_Burns">%s被烧掉了！</string>
     <string name="Burning_Death">你被烧成灰了……</string>
     <string name="CagedKobold_Desc">一个在笼子里的狗头人。</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">喂……喂！你在这里冒险吗？请帮帮我，我的族人想用那台古老的机器来征服人类！因为那样做从各个方面来说都太危险了，所以我提出了反对意见，但是它们却把我给囚禁在这里。请帮助我找到这个笼子的钥匙。作为回报我会尽我所能地帮助你。</string>
     <string name="CagedKobold_Message1">请……</string>
     <string name="CagedKobold_Message2">你要帮我出来，伙计</string>
@@ -2860,19 +2861,4 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

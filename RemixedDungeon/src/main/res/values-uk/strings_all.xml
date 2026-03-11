@@ -2050,6 +2050,7 @@
     <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Хоча ця сокира і не сильно і важка, проте все одно потребує значно сили для ефективного використання.</string>
     <string name="Tamahawk_Name">томагавк</string>
+    <string name="TenguLiver_Info">Ця печінка належить могутньому ворогові. Саме лише погляд на неї пробуджує в тобі тваринний інстинкт: пронизати, розірвати, поглинути.</string>
     <string name="Tengu_Desc">Тенґу - члени древнього клану вбивць. Вони відомі своїм уподобанням до пасток та сюрикенів.</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">Нарешті, свобода...</string>
@@ -2777,20 +2778,5 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>
