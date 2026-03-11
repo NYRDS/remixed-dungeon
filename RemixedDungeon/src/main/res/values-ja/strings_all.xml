@@ -1355,6 +1355,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Monk_Defense">受け流し</string>
     <string name="Monk_Desc">このモンクたちは狂信的で、あらゆる侵略者から自分たちの街の秘密を守ることに専念している。彼らは鎧や武器を一切使わず、手刀による戦闘術のみに頼っている。</string>
     <string name="Monk_Disarm">%1$s はあなたの手から %2$s を叩き落とした！</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">ドワーフモンク</string>
     <string name="Monk_Name_Objective">ドワーフモンク</string>
     <string name="MoongraceBuff_Info">周囲の空気が飽和状態になり、集中力が高まり、魔力の蓄えが回復する。</string>
@@ -2933,6 +2934,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

@@ -585,6 +585,7 @@
     <string name="DonateButton_pleaseDonate">請考慮捐獻</string>
     <string name="DonateButton_thanks">感謝您的支持！</string>
     <string name="DreadKnight_Desc">恐懼騎士是一名從不恪守公正，也從不為善的古代戰士。由於他所犯下的罪惡，他被詛咒永遠的囚禁在一副破損的亡靈屍體中。這個被詛咒的存在每時每刻都會受到痛苦折磨。</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">恐懼騎士</string>
     <string name="DreadKnight_Name_Objective">恐懼騎士</string>
     <string name="Dreamweed_Desc">一旦接觸到致幻草，它將隱秘地釋放出一片閃光的混亂氣體雲。</string>
@@ -2316,6 +2317,7 @@
     <string name="WndLibrary_Mobs_Btn">怪物</string>
     <string name="WndLocalModInstall_text">選擇要從哪裡安裝模組的目錄。</string>
     <string name="WndLocalModInstall_title">從本地目錄安裝模組</string>
+    <string name="WndModInstall_InstallingMod">正在安裝模組</string>
     <string name="WndModInstall_Version">版本</string>
     <string name="WndModsDisclaimer_install">安裝本地模組</string>
     <string name="WndModsDisclaimer_title">模組</string>
@@ -2747,6 +2749,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
