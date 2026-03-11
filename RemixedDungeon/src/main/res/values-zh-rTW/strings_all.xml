@@ -1294,6 +1294,7 @@
     <string name="MysteryMeat_Info4">你吃撐了。</string>
     <string name="MysteryMeat_Message">這玩意吃起來……有點奇怪。</string>
     <string name="MysteryMeat_Name">神秘肉</string>
+    <string name="NatureArmorSpell_Info">精靈也可以很堅韌，尤其是受到大自然母親保護時。</string>
     <string name="NatureArmorSpell_Name">自然護甲</string>
     <string name="NecromancerArmor_Info">這件護甲允許死靈法師消耗5個靈魂來召喚2只死靈來為它戰鬥。這些死靈會跟隨它們的主人，並隨著它們的主人的升級而變強。</string>
     <string name="NecromancerArmor_Info2">身穿這種盔甲，死靈法師可以使用“死靈”能力，這將傳播一個魔法瘟疫，這可能會感染附近的任何生命體，無論死活。</string>
@@ -2744,6 +2745,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
