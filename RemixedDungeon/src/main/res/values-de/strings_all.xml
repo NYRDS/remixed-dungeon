@@ -810,6 +810,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Golem_Desc">Die Zwerge versuchten, ihr technisches Wissen mit ihrer neu gewonnen Kraft der elementaren Beschwörung zu kombinieren. Sie nutzen Erdelementare, um ihre mechanischen Golemkörper zu \&quot;beseelen\&quot; welche als besonders einfach zu kontrollieren galten. Allerdings konnte schon der kleinste Fehler im Bindungsritual eine Katastrophe herbeiführen.</string>
     <string name="Golem_Name">Golem</string>
     <string name="Golem_Name_Objective">Golem</string>
+    <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">Goo lädt sich auf!</string>
     <string name="Goo_Info2">glurp...glurp...</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -2835,6 +2836,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

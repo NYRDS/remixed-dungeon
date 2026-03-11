@@ -1937,6 +1937,7 @@ Potrebbe bruciare?</string>
     <string name="Typical_Damage">Danno tipico</string>
     <string name="Undead_Defense">Bloccato</string>
     <string name="Undead_Desc">Questi nani non-morti, risorti dalla volontà del Re dei Nani, furono membri della sua corte. Appaiono ora come scheletri, dotati di una sorprendente barba.</string>
+    <string name="Undead_Gender">masculine</string>
     <string name="Undead_Name">nano zombie</string>
     <string name="Undead_Name_Objective">nano zombie</string>
     <string name="Ushanka_Info">Un caldo e comodo cappello ushanka decorato con una stella rossa. Il compagno perfetto per lottare in questo malvagio e freddo Dungeon.</string>
@@ -2551,5 +2552,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 </resources>
