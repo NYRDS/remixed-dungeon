@@ -329,6 +329,7 @@
     <string name="Caves_TileWater">冰冷刺骨的水。</string>
     <string name="Challenges_Descriptions_0">食物和水早已腐壞，使每位冒險者因恐懼和飢餓的死亡念頭而發狂。你的飲食習慣能幫助你堅持足夠久嗎？</string>
     <string name="Challenges_Descriptions_1">一攻就是最佳防守。遵循這些教導，你踏進地城冒險，信仰將成為你身體最強的護盾。</string>
+    <string name="Challenges_Descriptions_3">地城周圍的土地早已受到惡意感染，阻止各種草藥和植物的種子生長。誰知道還要多久，最後的植物才會在這片貧瘠的土地上消失。</string>
     <string name="Challenges_Descriptions_4">一種邪惡的存在潛伏在地城中所有生物的心智裡，使它們能察覺彼此之間發生的事件。</string>
     <string name="Challenges_Descriptions_6">閱讀符文的古老藝術被禁止並不惜一切代價避免，因為每個流入地下城或其周圍的卷軸都被施加了詛咒。</string>
     <string name="Challenges_Descriptions_7">你已習慣了擁有和使用武器在道德上是不正確的事實，但除此之外，你還能如何抵禦在下面遊蕩的怪物呢？</string>
@@ -370,6 +371,7 @@
     <string name="ChaosSword_Info">混亂為刃，力量蘊內。刀身發顫，砍山分洪，力無不逮。唯有強者，方能使用。</string>
     <string name="ChaosSword_Name">混沌劍</string>
     <string name="CharAction_Charm">魅惑</string>
+    <string name="CharAction_Give">給</string>
     <string name="CharAction_Push">推</string>
     <string name="CharAction_Steal">偷</string>
     <string name="CharAction_Take">拿取</string>
@@ -2745,6 +2747,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
