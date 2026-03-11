@@ -1033,6 +1033,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="InnKeeperNPC_Name_Objective">Tavernenwirt</string>
     <string name="InnServant_Phrase_2">Dieser Trunkenbold macht mich wahnsinnig!</string>
     <string name="InnServant_Phrase_3">Sieht sauber aus</string>
+    <string name="InnServant_Phrase_4">Oh je, heute so viele Gäste!</string>
     <string name="Instability_Name_0">Instabiler %s</string>
     <string name="Instability_Name_1">Instabiler %s</string>
     <string name="Instability_Name_2">Instabiler %s</string>
@@ -1290,6 +1291,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="MissileWeapon_No">Nein, ich habe meine Meinung geändert.</string>
     <string name="MissileWeapon_Sure">Willst du es wirklich als Nahkampfwaffe ausrüsten?</string>
     <string name="MissileWeapon_Yes">Ja, ich weiß was ich tue.</string>
+    <string name="MobAi_status">Dieser %1$s ist %2$s</string>
     <string name="Mob_Attacking">Zähle diesen %s als tot!</string>
     <string name="Mob_Cannot_Be_Pet">Der Wille eines \&quot;%s\&quot; ist schwach genug um es zu kontrolieren!</string>
     <string name="Mob_CantDoIt">Ich kann das nicht machen. Ich habe kleine Pfoten.</string>
@@ -2833,6 +2835,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

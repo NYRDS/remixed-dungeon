@@ -2304,6 +2304,7 @@ remix.31.1\n
 —灵能催眠蜘蛛将会给其它蜘蛛施加buff，而不是向玩家施加debuff。\n
 ——修复错误\n</string>
     <string name="Welcome_Text_32">    remix.32\n    - 游戏玩法:\n    -- 怪物和宠物现在可以获得经验和等级\n    -- 混沌之盾\n    -- 冠军系统\n    -- 约格战斗重新平衡\n    -- 平衡调整\n    - 用户体验:\n    -- 详细的英雄和怪物统计\n    -- 更好的自定义界面\n    -- 流畅的摄像机\n    - 模组支持:\n    -- 自定义动画\n    -- 内置怪物的自定义脚本\n    -- 怪物发光效果\n    - 错误修复\n    </string>
+    <string name="Welcome_Text_32_1">    remix.32.1\n    - 游戏玩法:\n    -- 瘟疫医生任务线\n    -- 怪物尸体现在是某种可用的物品\n    -- 更好的宠物控制\n    - 用户体验:\n    -- 改进的存档管理\n    - 模组支持:\n    -- 本地模组安装方法\n    -- 自定义物品现在可以在堆中执行动作\n    - 错误修复\n    </string>
     <string name="Welcome_Title">欢迎！</string>
     <string name="WindGust_Info">魔法刮起的狂风，吹走被选中的生物</string>
     <string name="WindGust_Name">狂风</string>
@@ -2861,4 +2862,5 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 </resources>
