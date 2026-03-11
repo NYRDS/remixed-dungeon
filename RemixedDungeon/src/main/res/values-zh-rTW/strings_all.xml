@@ -1397,6 +1397,7 @@
     <string name="PlagueDoctorQuest_AllDone">*他發出一聲乾澀、嘶啞的笑聲。* \&quot;你的事蹟，解開了無法衡量的秘密！獲得的知識……在我體內脈動，如同發現的交響曲。但知識，\&quot;他補充道，聲音降到密謀般的低語，\&quot;知識就是力量。而力量……啊……那是最令人陶醉的靈藥。\&quot;他凝視著你片刻，他的紫水晶眼睛燃燒著發熱般的強度。\&quot;也許，\&quot;他低語，\&quot;我們的路徑將再次交會。因為還有許多……謎團……有待解開。\&quot;</string>
     <string name="PlagueDoctor_Desc">散發奇怪味道的...皮革?下面應該是個人吧...</string>
 
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">瘟疫巫醫</string>
     <string name="PlagueDoctor_Name_Objective">瘟疫巫醫</string>
     <string name="Plant_ACPlant">種植</string>
@@ -2749,6 +2750,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

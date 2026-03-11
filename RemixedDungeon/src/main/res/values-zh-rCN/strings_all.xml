@@ -1436,6 +1436,7 @@
     <string name="PirateSet_Info">啊哈！你现在看起来像是个海盗……还是说你只是一只该死的旱鸭子？！我希望你不是，毕竟那东西是海盗的，我的意思是……啊哈！</string>
     <string name="PirateSet_Name">海盗帽</string>
     <string name="PlagueDoctorMaskHood_Info">雕刻的黑檀木头骨，其空洞的眼窝中闪烁着紫水晶宝石的超凡光芒。你的每一次呼吸都穿过迷宫般的管道和过滤器，带着强效草药和香料的气味，掩盖了粘在你身上的腐烂气息。但这不仅仅是面具。一顶午夜天鹅绒的厚重头巾，将你的脸和头笼罩在阴影中。兜帽如乌鸦的翅膀般流淌在你的背上，边缘饰有骨白色蕾丝流苏，形成令人寒颤的美丽对比。面具和兜帽共同创造了一个幽灵般的面容，是对抗腐烂力量的无尽战斗的严峻证明。</string>
+    <string name="PlagueDoctorMask_Name">瘟疫医生面具</string>
     <string name="PlagueDoctorNPC_After_Quest">我会证明的，我会证明给他们看！</string>
     <string name="PlagueDoctorNPC_After_Quest_2">你还在吗？来这里！拿着这个。 </string>
     <string name="PlagueDoctorNPC_Desc">散发奇怪味道的……皮革？下面应该是个人吧……</string>
@@ -2862,5 +2863,6 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 </resources>

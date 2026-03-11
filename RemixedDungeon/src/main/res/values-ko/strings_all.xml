@@ -1965,6 +1965,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ToxicGas_Info">녹색 독성 가스구름이 소용돌이 치고 있습니다.</string>
     <string name="ToxicGas_Info1">당신은 유독가스 흡입으로 사망하였습니다...</string>
     <string name="ToxicGland_Info">패배한 적으로부터 얻은 독성 샘. 이 샘은 강력한 독소로 가득 차 있으며 연금술적 과정에 사용할 수 있다.</string>
+    <string name="ToxicGland_Name">독성 샘</string>
     <string name="TrapWnd_Step">당신은 정말로 이 함정을 밟고 싶습니까? 당신을 죽을 수도 있습니다.</string>
     <string name="TrapWnd_Title">함정</string>
     <string name="TreacherousSpirit_Desc">이 흉측한 생물은 살아있는 어둠의 형상을 취하고 있다. 생기 없는 눈은 당신을 바라보고 있으며, 당신이 움직일 때 마다 박동하고 있다.</string>
@@ -2623,6 +2624,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
