@@ -356,6 +356,7 @@
     <string name="Challenges_Names_6">Заборонені руни</string>
     <string name="Challenges_Names_7">Пацифізм</string>
     <string name="Challenges_Names_8">Без міста</string>
+    <string name="Challenges_Names_9">Амнезія</string>
     <string name="ChampionOfAirBuff_Name">Чемпіон Повітря</string>
     <string name="ChampionOfEarthBuff_Name">Чемпіон Землі</string>
     <string name="ChampionOfWaterBuff_Name">Чемпіон Води</string>
@@ -2779,6 +2780,5 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
-
 
 </resources>
