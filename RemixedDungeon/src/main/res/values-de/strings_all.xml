@@ -350,6 +350,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Caves_TileHighGrass">Leuchtende Pilze</string>
     <string name="Caves_TileWater">Gefrierendes, kaltes Wasser</string>
     <string name="Challenges_Descriptions_0">Essen und Wasser sind längst verdorben und treiben jeden Abenteurer in den Wahnsinn mit Gedanken an den Tod durch Angst und Hunger. Kann deine Ernährung dir helfen, lange genug durchzuhalten?</string>
+    <string name="Challenges_Descriptions_1">Angriff ist die beste Verteidigung. Diesen Lehren folgend wagst du dich in den Dungeon, wobei der Glaube der stärkste Beschützer deines Körpers ist.</string>
     <string name="Challenges_Descriptions_2">Als Anhänger der natürlichen Regeneration des gewöhnlichen Körpers waren Sie immer vorsichtig mit Tränken, die heilende Eigenschaften haben. Vorsicht ist besser als Nachsicht!</string>
     <string name="Challenges_Descriptions_9">Die neueste \'Heilmethode\' des Pestarztes hat Ihr räumliches Gedächtnis gelöscht. Sie können sich an nichts erinnern, was außerhalb Ihrer direkten Sicht ist.</string>
     <string name="Challenges_Names_0">Auf Diät</string>
@@ -2836,6 +2837,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

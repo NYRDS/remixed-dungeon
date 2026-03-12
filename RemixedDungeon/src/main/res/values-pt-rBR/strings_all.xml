@@ -890,6 +890,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HeroClass_None">camponês</string>
     <string name="HeroClass_PlagueDoctorPerks_0">Médicos da Peste colhem [yellow:Glândulas Tóxicas], [yellow:Órgãos Podres], [yellow:Fragmentos de Osso] de inimigos abatidos.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Comece com uma Máscara da Peste (imune a todos os gases) e uma Serra de Osso. Acertos críticos soltam partes extras, e a Serra causa +50% de dano a inimigos paralisados.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Comece com uma [yellow:Plague Mask] (imune a todos os Gases) e uma [yellow:Bone Saw]. Acertos críticos dropam partes extras, e a Serra causa x1.5 de dano a inimigos paralisados.</string>
     <string name="HeroClass_Priest">Sacerdote</string>
     <string name="HeroClass_Rog">ladrão</string>
     <string name="HeroClass_RogPerks_0">Ladrões começam com um Anel de Sombras +1.</string>
@@ -2860,6 +2861,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 </resources>
