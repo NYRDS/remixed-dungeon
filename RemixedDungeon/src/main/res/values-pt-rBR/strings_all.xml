@@ -1904,6 +1904,7 @@ outro local do nível.</string>
     <string name="SociologistNPC_AlreadyTaken">Você já participou dessa pesquisa, por favor volte mais tarde</string>
     <string name="SociologistNPC_Desc">Esse é um sociólogo em uma busca sagrada de coleta de opinião pública</string>
     <string name="SociologistNPC_DownloadError">Desculpe, algo deu errado, por favor tente novamente mais tarde</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Hi">Olá!\nGostaria de participar da nossa pesquisa?(É necessário acesso à Internet)\nSua opinião é importante!</string>
     <string name="SociologistNPC_InternetRequired">Desculpe, mas sem acesso à Internet, você não pode participar da nossa pesquisa</string>
     <string name="SociologistNPC_Name">Sociólogo</string>
@@ -2859,5 +2860,6 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 </resources>

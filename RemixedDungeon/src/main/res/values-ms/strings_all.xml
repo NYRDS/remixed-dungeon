@@ -522,6 +522,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DM300_Info3">Individu tidak dikenali dikesan.</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Sejenis pisau logam biasa dan mempunyai hulu kayu yang telah lusuh.</string>
     <string name="Dagger_Name">pisau</string>
     <string name="Damage_Reduction">Pengurangan kerosakan</string>
@@ -1039,6 +1040,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="KrampusHead_Info">Pernahkah anda tertanya-tanya bagaimana rasanya mengambil peranan yang lebih jahat semasa menjelajahi dungeon? Nah, anda pastinya akan membawa ketakutan kepada tikus-tikus kecil di sekitar dengan penampilan seperti syaitan ini.</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Senjata ini terdiri dari sabit dengan pemberat besi yang mana kedua-duanya disambung dengan rantai.</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">TARIK</string>
@@ -2644,6 +2646,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
