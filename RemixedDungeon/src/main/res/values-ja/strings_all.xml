@@ -1738,6 +1738,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="RottenFood_Message">うんざりだ！</string>
     <string name="RottenMeat_Info">腐った肉。ひどい臭いがする</string>
     <string name="RottenMeat_Name">腐った肉</string>
+    <string name="RottenOrgan_Name">腐った臓器</string>
     <string name="RottenPasty_Info">このパスティはかなり不味そうだ。</string>
     <string name="RottenPasty_Name">腐ったパスティ</string>
     <string name="RottenPumpkinPie_Info">新鮮なうちにどれだけ美味しかったとしても、これがまだ食べられるとは思えない。</string>
@@ -2093,6 +2094,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Swing_Name_2">野蛮な %s</string>
     <string name="Sword_Info">カミソリのように鋭利な鋼鉄の刃が安心感を与える輝きを放っている</string>
     <string name="Sword_Name">ソード</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">この投げ斧はそれほど重くはないが、それでも効果的に使うにはかなりの力が必要だ。</string>
     <string name="Tamahawk_Name">トマホーク</string>
     <string name="TenguLiver_Info">この肝臓は強大な敵のものだ。見ているだけで、野生の本能に支配され、食べたいという衝動に駆られる。</string>
@@ -2936,6 +2938,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

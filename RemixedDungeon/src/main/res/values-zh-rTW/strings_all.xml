@@ -2747,9 +2747,11 @@
     <string name="town_deco_wooden_stairs_name">臺階</string>
     <string name="town_deco_wooden_table_desc">這是面作工精細的木桌</string>
     <string name="town_deco_wooden_table_name">木製桌子</string>
+    <string name="town_table_fortune_ball_desc">水晶球，內部有著神秘的霧氣。</string>
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
