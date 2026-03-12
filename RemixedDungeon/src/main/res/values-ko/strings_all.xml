@@ -1189,6 +1189,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MissileWeapon_No">아니, 생각을 바꿨어</string>
     <string name="MissileWeapon_Sure">정말로 이걸 근접 무기로 장착하시겠습니까?</string>
     <string name="MissileWeapon_Yes">그래, 뭘 하려는지 알고 있다</string>
+    <string name="MobAi_status">이 %1$s은/는 %2$s</string>
     <string name="Mob_Attacking">이 %s를 죽은 것으로 간주하라!</string>
     <string name="Mob_Cannot_Be_Pet">\&quot;%s\&quot;의 의지는 조종당하기엔 너무 강했습니다!</string>
     <string name="Mob_CantDoIt">이렇게 할 수 없어요. 저 작은 발이 있잖아요.</string>
@@ -2598,6 +2599,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_stove_desc">이 화로는 만족스러운 따뜻함을 제공해준다.</string>
     <string name="town_deco_stove_name">돌 화로</string>
     <string name="town_deco_tile_name">타일</string>
+    <string name="town_deco_trapdoor_desc">이것이 어디로 이어질까.</string>
     <string name="town_deco_trapdoor_name">함정 문</string>
     <string name="town_deco_tree_desc">공포와 죽음이 가득한 던전의 입구의 바로 오른쪽에서 살아있는 나무를 보는 것은 이상한 기분이 듭니다.</string>
     <string name="town_deco_tree_name">나무</string>
@@ -2628,5 +2630,4 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
-
 </resources>
