@@ -29,6 +29,7 @@
     <string name="AirElemental_Name_Objective">elemental de ar</string>
     <string name="AlarmTrap_Desc">A armadilha emite um som agudo que ecoa em todo o calabouço!</string>
     <string name="Albino_Desc">Ratos marsupiais são habitantes agressivos, mas fracos de esgotos. Eles só podem ser perigosos em grandes números. Este parece ser albino. Também parece ter dentes anormalmente afiados.</string>
+    <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name">rato albino</string>
     <string name="Albino_Name_Objective">rato albino</string>
     <string name="AlchemyPot_SelectSeed">Escolha uma semente para jogar</string>
@@ -2861,6 +2862,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

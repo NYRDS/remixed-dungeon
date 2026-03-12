@@ -2693,6 +2693,7 @@
     <string name="town_deco_pole_name">Жердина</string>
     <string name="town_deco_porch_desc">Дерев\'яна паперть.</string>
     <string name="town_deco_porch_name">Паперть</string>
+    <string name="town_deco_poster_desc">Листівки з оголошеннями про майбутні сеанси в кінотеатрі.</string>
     <string name="town_deco_potions_desc">Якісь зілля розставлені на полицях.</string>
     <string name="town_deco_potions_name">Зілля</string>
     <string name="town_deco_projector_desc">Старий пристрій, для відтворення фільмів та розваг людей.</string>
@@ -2781,4 +2782,5 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 </resources>
