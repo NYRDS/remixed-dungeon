@@ -22,6 +22,7 @@
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">savas skorpió</string>
     <string name="Acidic_Name_Objective">savas skorpiót</string>
+    <string name="Actions_Speed">Sietség szintje</string>
     <string name="Affection_Txt">Csábító %s</string>
     <string name="AirElemental_Desc">A Levegő-elementálok repülő mágikus lények, élő levegőből.</string>
     <string name="AirElemental_Name">lég elementál</string>
@@ -2674,6 +2675,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
