@@ -1625,6 +1625,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ScarecrowNPC_Quest_Start_Female">Hai budak kecil, apa khabar?\n Saya ada hadiah untuk anda!\n Baiklah,\n Jika awak carikan saya beberapa batang lilin!\n\n</string>
     <string name="ScarecrowNPC_Quest_Start_Male">Hai budak kecil, apa khabar?\n Saya ada hadiah untuk anda!\n Baiklah,\n Jika awak carikan saya beberapa batang lilin!\n\n</string>
     <string name="Scorpio_Desc">Makhluk seakan-labah-labah bersaiz besar dan menakutkan itu tidak suka bertempur dalam jarak dekat, ia menembak runcing bergerigi beracun yang dapat melumpuhkan mangsa dari jarak jauh.</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">jengking</string>
     <string name="Scorpio_Name_Objective">jengking</string>
     <string name="ScrollHolder_Info">Anda boleh simpan sejumlah skrol ke dalam bekas tiub ini. Ia dapat menjimatkan beg galas anda dan lindunginya dari bencana api.</string>
@@ -2646,6 +2647,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
