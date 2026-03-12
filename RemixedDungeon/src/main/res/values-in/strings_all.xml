@@ -1255,6 +1255,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="MeleeWeapon_Info7b">, dan karena telah dikutuk, Anda tidak dapat melepaskannya</string>
     <string name="MeleeWeapon_Info7c">Anda dapat merasakan sihir jahat meliputi %s ini.</string>
     <string name="MercenaryNPC_Desc">Pria berpenampilan kokoh.</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">mata duitan</string>
     <string name="MercenaryNPC_Name_Objective">mata duitan</string>
     <string name="Metabolism_Txt">%s metabolisme</string>
@@ -2830,6 +2831,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

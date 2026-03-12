@@ -911,6 +911,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Hero_StaWeakness">Legyengültél!</string>
     <string name="Hero_Wait">...</string>
     <string name="Hero_YouNowHave">Felvetted a %s-t!</string>
+    <string name="HideInGrassSpell_NeedGrassToHide">Még én sem tudok elrejtőzni a nyílt színen.</string>
     <string name="Horror_Name_0">Hátborzongató %s</string>
     <string name="Horror_Name_1">Hátborzongató %s</string>
     <string name="Horror_Name_2">Hátborzongató %s</string>
@@ -1162,6 +1163,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="MailArmor_Name">láncing</string>
     <string name="ManaPotion_Info">Ez a főzet újratölti a spirituális energiádat.</string>
     <string name="ManaPotion_Name">Mana Főzet</string>
+    <string name="ManaRegenerationBuff_Info">A mana regenerálódás buff formájában van a könnyebb kezelés érdekében.</string>
     <string name="ManaShieldBuff_Info">Egy varázspajzs jelent meg, amely teljesen blokkolja a következő bejövő támadást.</string>
     <string name="Mana_Cost">Mana Igény:</string>
     <string name="Mana_Title">Mana</string>
@@ -2672,6 +2674,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

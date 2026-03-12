@@ -1871,6 +1871,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="StartScene_WinGame">Untuk membuka \&quot;Cabaran\&quot;, menangi permainan dengan mana-mana kelas watak.</string>
     <string name="StartScene_Yes">Ya, mulakan permainan baharu</string>
     <string name="Statue_Desc">Anda dapat ia hanyalah sebuah patung hodoh di dalam kurungan bawah tanah, tetapi mata merah bersinar-sinar. Patung sebenar diperbuat daripada batu, manakala _%s_, adalah berpenampilan seperti patung.</string>
+    <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">patung hidup</string>
     <string name="Statue_Name_Objective">patung hidup</string>
     <string name="Stench_Txt">%s berbau busuk</string>
@@ -2642,6 +2643,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
