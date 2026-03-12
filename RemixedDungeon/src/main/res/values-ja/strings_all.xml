@@ -335,6 +335,7 @@
     <string name="Carcass_Devoured">あなたは %sの死体を食い尽くした！</string>
     <string name="Carcass_DissectFailed">%s を解剖しましたが、価値のあるものは何も見つかりませんでした。</string>
     <string name="Carcass_DissectMessage">死骸を解剖して %s を得た。</string>
+    <string name="Carcass_DissectResult">%1$s から %2$d 個の収穫 %3$s を手に入れた。</string>
     <string name="Carcass_Info">完全に死んだ %sの死体</string>
     <string name="Carcass_Kick">この %sは完全に死んでいるので、蹴る必要はない。</string>
     <string name="Carcass_Name">%sの死体</string>
@@ -2938,6 +2939,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

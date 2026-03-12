@@ -1797,6 +1797,7 @@ Potrebbe bruciare?</string>
     <string name="SpiderNest_Desc">Questo bozzolo è fatto di seta sottile e nasconde qualcosa di vivo all\'interno.</string>
     <string name="SpiderNest_Name">ragno bozzolo</string>
     <string name="SpiderNest_Name_Objective">ragno bozzolo</string>
+    <string name="SpiderQueenCarapace_Info">Un frammento del carapace della Regina Ragno. Puoi vedere un pezzo di una ghiandola di ragno al suo interno, che sembra quasi vivo.</string>
     <string name="SpiderQueenCarapace_Name">Carapace della Regina Ragno</string>
     <string name="SpiderQueen_Desc">Un corpo di una bella donna incrociato con un\'orribile ragno.Ogni essere vivente di questo covo è il suo servo. Rispondere a questa straordinaria donna può rivelarsi un\'esperienza mortale. Perché tu sei un trasgressore</string>
     <string name="SpiderQueen_DieInfo">La Regina Ragno è stata sconfitta! Ora dovrei tornare al livello 5 e continuare il mio viaggio verso gli Abissi.</string>
@@ -2562,5 +2563,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 </resources>
