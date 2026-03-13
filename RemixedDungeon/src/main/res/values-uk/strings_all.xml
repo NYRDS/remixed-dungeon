@@ -2016,6 +2016,7 @@
     <string name="Str_lose">-1 сили</string>
     <string name="StrongShield_name">Бронзовий щит</string>
     <string name="StunBuff_Info">Оглушено!</string>
+    <string name="StunBuff_Name">Оглушено</string>
     <string name="Stylus_ACInscribe">ВПИСАТИ</string>
     <string name="Stylus_Info">Це магічне перо виготовлено з чорного, твердого каменю. За допомогою нього ти можеш вписати гліф чи руну, але ти не знаєш, що саме, перо це обере за тебе.</string>
     <string name="Stylus_Inscribed">ти вписав %1$s на предмет %2$s</string>
@@ -2783,6 +2784,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 </resources>

@@ -211,6 +211,7 @@
     <string name="Bat_Gender">neuter</string>
     <string name="Bat_Name">murciélago vampiro</string>
     <string name="Bat_Name_Objective">murciélago vampiro</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">El peso de la enorme cabeza de metal de este hacha de batalla añade fuerza considerable en cada golpe.</string>
     <string name="BattleAxe_Name">hacha de batalla</string>
     <string name="Bee_Desc">A pesar de su pequeño tamaño, las abejas tienden a proteger su colmena ferozmente. Sin embargo, no viven mucho tiempo.</string>
@@ -2887,6 +2888,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
