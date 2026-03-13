@@ -464,6 +464,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">Comune freccia di legno con una punta di metallo.</string>
     <string name="CommonArrow_Name">freccia</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">Questa balestra rinforzata sembra essere uno strumento più efficace della sua controparte di legno. </string>
     <string name="CompositeCrossbow_Name">Balestra Composita</string>
     <string name="CompoundBow_Info">Le frecce lanciate da questo arco composto infliggono un grande ammontare di danno e hanno una precisione migliore rispetto ad un arco di legno al prezzo di un calo di velocità.</string>
@@ -688,6 +689,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Ghost_Rat2">Ti prego.... Aiutami... Uccidi l\'abominio...</string>
     <string name="Ghost_Rose1">Ciao avventuriero... Una volta ero come te - forte e fiducioso... E ora sono morto... Ma non posso lasciare questo posto... Non finché non riavrò  la mia _rosa appassita_... E\' molto importante per me... Un mostro l\'ha rubata dal mio corpo...</string>
     <string name="Ghost_Rose2">Ti prego.... Aiutami... Trova la rosa...</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Info">Una lancia consiste in una lama all\'estremità di un bastone. </string>
     <string name="Glaive_Name">falcione</string>
     <string name="GnollArmor_ACSpecial">DOMINA</string>
@@ -2567,6 +2569,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

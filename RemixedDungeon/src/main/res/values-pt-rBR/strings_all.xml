@@ -2036,6 +2036,7 @@ outro local do nível.</string>
     <string name="SuspiciousRat_Name_Objective">Rato suspeito</string>
     <string name="Swarm_Defense">evitou</string>
     <string name="Swarm_Desc">O enxame mortal de moscas zumbe com raiva. Cada ataque não mágico irá dividi-la em dois enxames menores, mas igualmente perigosas.</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">enxame de moscas</string>
     <string name="Swarm_Name_Objective">enxame de moscas</string>
     <string name="Swing_Name_0">%s Selvagem</string>
@@ -2862,6 +2863,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

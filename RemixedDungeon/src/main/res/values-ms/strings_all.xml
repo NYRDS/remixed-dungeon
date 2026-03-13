@@ -1726,6 +1726,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Shades_Name">Bayang</string>
     <string name="ShadowLord_Death">Tidaaaaak...</string>
     <string name="ShadowLord_Desc">Makhluk yang terbentuk dari kejahatan dan kegelapan asasi, ramai percaya dia merupakan Dewa Lama yang menggambarkan kekuatannya. Manakala ada yang mengganggap dia hanyalah penjaga kamar Dewa Lama.</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Bersedia!</string>
     <string name="ShadowLord_Name">penguasa bayang</string>
     <string name="ShadowLord_Name_Objective">Penguasa Bayang</string>
@@ -2647,6 +2648,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

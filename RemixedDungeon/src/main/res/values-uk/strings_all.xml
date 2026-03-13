@@ -2463,6 +2463,7 @@
     <string name="WndSettings_Brightness">Яскравість</string>
     <string name="WndSettings_ClassicFont">Класичний шрифт</string>
     <string name="WndSettings_ExperementalFont">Новий шрифт</string>
+    <string name="WndSettings_FpsLimit">Обмеження FPS</string>
     <string name="WndSettings_GameplaySettings">Ігровий процес</string>
     <string name="WndSettings_Handedness">Основна рука</string>
     <string name="WndSettings_Immersive">Режим занурення</string>
@@ -2782,5 +2783,6 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 </resources>
