@@ -1694,6 +1694,7 @@ Parede
     <string name="RottenRation_Info">Há muito tempo isso podia ser comido</string>
     <string name="RottenRation_Name">ração podre</string>
     <string name="RottingFist_Desc">Punho Apodrecendo do Deus Antigo</string>
+    <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">punho apodrecendo</string>
     <string name="RottingFist_Name_Objective">punho apodrecendo</string>
     <string name="RoyalShield_desc">Um escudo cheio de metal. Sim, é pesado, mas somente ele pode fornecer a melhor proteção.</string>
@@ -1807,6 +1808,7 @@ outro local do nível.</string>
     <string name="SeedPouch_Info">Esta pequena bolsa de veludo permite armazenar qualquer quantidade de sementes dentro. É muito conveniente.</string>
     <string name="SeedPouch_Name">bolsa de sementes</string>
     <string name="Senior_Desc">Estes monges são fanáticos, que se dedicaram a proteger segredos de suas cidades de todos os estrangeiros. Eles não usam nenhum tipo de armadura ou armas, contando apenas com a arte de combate corpo-a-corpo. Este monge em particular é mestre na arte de desarmar seus oponentes.</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">monge sênior</string>
     <string name="Senior_Name_Objective">monge sênior</string>
     <string name="ServantNPC_Desc">Uma serva da pousada bem ocupada</string>
@@ -2864,4 +2866,6 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 </resources>
