@@ -306,6 +306,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Brute_Name">Gnollschläger</string>
     <string name="Brute_Name_Objective">Gnollschläger</string>
     <string name="Brute_StaEnraged">tobend</string>
+    <string name="BuffParam_Cooldown">Abklingzeit: %.2f</string>
     <string name="BurningBuff_Info">Der Körper ist in lodernde Flammen gehüllt!</string>
     <string name="BurningBuff_Name">Brennend</string>
     <string name="BurningFist_Desc">brennende Faust des Alten Gottes</string>
@@ -2838,4 +2839,5 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 </resources>
