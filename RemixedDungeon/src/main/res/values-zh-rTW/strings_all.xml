@@ -2258,6 +2258,7 @@
     <string name="WndFortuneTeller_No_Item">看來您身上並沒有尚未鑒定的道具，您確定您真要送錢給我花嗎？</string>
     <string name="WndFortuneTeller_Title">算命家</string>
     <string name="WndGame_Challenges">挑戰</string>
+    <string name="WndGame_Customizations">自定義</string>
     <string name="WndGame_Exit">關閉混合地牢</string>
     <string name="WndGame_Load">讀取</string>
     <string name="WndGame_Ranking">排名</string>
@@ -2756,6 +2757,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
