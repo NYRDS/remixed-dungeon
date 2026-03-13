@@ -1988,6 +1988,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="TreacherousSpirit_Name_Objective">Hantu khianat</string>
     <string name="Undead_Defense">disekat</string>
     <string name="Undead_Desc">Orang kerdil hidup semula ini, dibangunkan atas kehendak Raja Orang Kerdil, merupakan bekas pengikutnya. Mereka wujud sebagai rangka berjambang.</string>
+    <string name="Undead_Gender">masculine</string>
     <string name="Undead_Name">orang kerdil hidup semula</string>
     <string name="Undead_Name_Objective">orang kerdil hidup semula</string>
     <string name="Ushanka_Info">Topi serkup ushanka yang hangat dihiasi dengan bintang merah klasik. Pendamping yang sesuai untuk rakan-rakan yang berjuang melawan kurungan bawah tanah yang sejuk dan jahat. </string>
@@ -2648,6 +2649,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

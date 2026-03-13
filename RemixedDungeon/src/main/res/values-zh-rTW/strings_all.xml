@@ -369,6 +369,7 @@
     <string name="ChaosShield_desc">混沌護盾是將混沌水晶與普通盾牌融合的結果，使其在成功格擋時隨機產生混亂效果。</string>
     <string name="ChaosStaff_Info">與混沌之力融合的法杖，不就是眾法師或敬或畏之物嗎？</string>
     <string name="ChaosStaff_Name">混沌法杖</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">混亂為刃，力量蘊內。刀身發顫，砍山分洪，力無不逮。唯有強者，方能使用。</string>
     <string name="ChaosSword_Name">混沌劍</string>
     <string name="CharAction_Charm">魅惑</string>
@@ -1808,6 +1809,7 @@
     <string name="Sheep_Name">魔法綿羊</string>
     <string name="Sheep_Name_Objective">魔法綿羊</string>
     <string name="ShieldBuffNotReady_Info">你的盾牌還沒準備好抵擋下一次攻擊。</string>
+    <string name="ShieldBuffNotReady_Name">盾牌還沒準備好</string>
     <string name="ShieldBuffReady_Info">你的盾牌已準備好抵擋下一次攻擊。</string>
     <string name="ShieldInfoTemplate">這個盾牌最多可以格擋%1$d傷害。  格擋幾率為%2$d %% 。 成功格擋後需要%3$3.1f個回合來恢復。</string>
     <string name="ShieldStrTemplate">盾牌的佩戴者應至少具有%1$d力量才能正常的使用它。</string>
@@ -2754,6 +2756,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
