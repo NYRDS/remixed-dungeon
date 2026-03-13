@@ -1106,6 +1106,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="LibraryBook_Description">이 책은 정말로 거대하다. 이 책은 모험가들이 던전에서 발견한 모든 정보를 담고 있다.</string>
     <string name="LibraryBook_Name">도서관 책</string>
     <string name="Lich_Desc">네크로맨서는 그의 죽음을 네크로폴리스에서 맞이하였고,  이 장소의 사악한 힘이 그의 몸속으로 흘러들어갔습니다. 그는 결국  사악한 힘에 의해 조종당하는 의지가 없는 언데드 마법사인 리치로 변했습니다.</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">리치</string>
     <string name="Lich_Name_Objective">리치</string>
     <string name="LightBuff_Name">섬광</string>
@@ -2636,6 +2637,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

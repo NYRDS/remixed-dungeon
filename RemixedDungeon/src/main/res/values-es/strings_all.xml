@@ -369,6 +369,7 @@
     <string name="ChampionOfAirBuff_Name">Campeón del Aire</string>
     <string name="ChampionOfFireBuff_Name">Campeón del Fuego</string>
     <string name="ChampionOfWaterBuff_Info">El Campeón del Agua encarna la fuerza indomable de los océanos, mejorando la resistencia y la fortaleza de la criatura. Como resultado, se convierte en un adversario inquebrantable, capaz de soportar una lluvia implacable de ataques y mantenerse como un guardián inmutable frente a la adversidad.</string>
+    <string name="ChampionOfWaterBuff_Name">Campeón del Agua</string>
     <string name="ChaosArmor_Info">Las placas color rojo sangre de esta armadura unidas con cadenas de color rojo oscuro. Irradia energía caótica al tocarla.</string>
     <string name="ChaosArmor_Name">Armadura de caos</string>
     <string name="ChaosBow_Gender">masculine</string>
@@ -2889,5 +2890,6 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 </resources>

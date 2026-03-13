@@ -349,12 +349,12 @@
     <string name="Carcass_DissectFailed">Вы рассекли %s, но не нашли ничего ценного.</string>
     <string name="Carcass_DissectMessage">Вы разобрали тушу и получили %s.</string>
     <string name="Carcass_DissectResult">Из %1$s вы получили %2$d урожай %3$s.</string>
-    <string name="Carcass_TooFarToDissect">Вам нужно подойти ближе, чтобы разобрать тушу.</string>
     <string name="Carcass_Info">Останки абсолютно мертвого монстра %s.</string>
     <string name="Carcass_Kick">Это существо, %s, совершенно мертво, нет смысла бить его дальше.</string>
     <string name="Carcass_Name">Останки %s</string>
     <string name="Carcass_Necromancy">Ты поднял нежить %s!</string>
     <string name="Carcass_Necromancy_Failed">Твоя попытка поднять нежить %s провалилась!</string>
+    <string name="Carcass_TooFarToDissect">Вам нужно подойти ближе, чтобы разобрать тушу.</string>
     <string name="Caves_TileDescBookshelf">Кому в подземелье мог понадобится книжный шкаф?</string>
     <string name="Caves_TileDescDeco">На стене виднеется открытая жила какой-то руды. Золото?</string>
     <string name="Caves_TileDescEntrance">Лестница ведёт наверх.</string>
@@ -567,6 +567,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="CorpseDust_Info2">Достаточно взять её в руку чтобы почувствовать беспокойство и гнев. </string>
     <string name="CorpseDust_Name">трупная пыль</string>
     <string name="CorpseExplosion_Info">Превращает труп в облако ядовитого газа, распространяя болезнь и отравление на всех ближайших врагов.</string>
+    <string name="CorpseExplosion_NoCorpse">Там нет трупа.</string>
     <string name="Crab_Defense">отбился</string>
     <string name="Crab_Desc">Эти огромные крабы находятся на вершине пищевой цепочки канализации. Они поразительно быстры, а их прочный хитин способен выдерживать множество ударов.</string>
     <string name="Crab_Gender">masculine</string>
@@ -3051,6 +3052,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 
