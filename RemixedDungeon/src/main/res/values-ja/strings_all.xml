@@ -1604,6 +1604,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="PumpkinPie_Name">パンプキンパイ</string>
     <string name="Pumpkin_Info">その昔、カボチャ族は誇り高く繁栄した国だった。しかし、人類が来てからすべてが変わり、廃墟だけが残された。パンプキンの部族の首の彫刻は、その恐ろしい出来事を思い起こさせる。</string>
     <string name="Pumpkin_Name">カボチャ頭</string>
+    <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">この硬い木の棒は、先端が鉄で覆われている。</string>
     <string name="Quarterstaff_Name">クォータースタッフ</string>
     <string name="QuickSlot_SelectSlot">クイックスロットを選択する</string>
@@ -2939,6 +2940,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
