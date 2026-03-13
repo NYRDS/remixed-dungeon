@@ -1735,6 +1735,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="ScaleArmor_Desc">Deri bir yelek üzerine dikilmiş metal pullar esnek ve koruyucu bir zırh oluşturmuş.</string>
     <string name="ScaleArmor_Name">pul zırh</string>
     <string name="ScarecrowNPC_Desc">Hiç şüphe yok ki... bu korkuluk her hareketinizi izliyor. Kırmızı parlayan gözleri içinizi delip geçiyor ama şaşırtıcı bir şekilde kendinizi tehdit altında hissetmiyorsunuz.</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">korkuluk</string>
     <string name="ScarecrowNPC_Name_Objective">korkuluk</string>
     <string name="ScarecrowNPC_Quest_End">Ah, ne tatlı, ne harika!\nLeziz bir dilim turta işte sana!</string>
@@ -2898,20 +2899,5 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>
