@@ -192,6 +192,7 @@
     <string name="Bee_Name">ape</string>
     <string name="Bee_Name_Objective">ape</string>
     <string name="BellaNPC_Angry">Come osi... tu plebeo!</string>
+    <string name="BellaNPC_Message">Non provo alcun interesse per plebei come te!</string>
     <string name="Belongings_Name">zaino</string>
     <string name="BishopNPC_Desc">Vescovo della Santa Chiesa del Signore delle Profondità</string>
     <string name="BishopNPC_Gender">masculine</string>
@@ -1319,6 +1320,7 @@ Potrebbe bruciare?</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*La sua mente vaga mentre parla, la sua voce si fa sempre più debole, appena un sussurro.* Portami due _succubi_… vive. Il loro… potere… è affascinante.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Balbetta, la sua voce si spezza come un rametto fragile*. A-ah, _succubi_! Due… sì, due, vive! È… ehm… per la mia ricerca! Vedi… i loro feromoni… è cruciale per capire l\'equilibrio delicato di… ah… *Si interrompe, la sua mano ossuta si alza nervosamente per aggiustare la maschera, i suoi occhi vagano verso di te con un\'intensità febbrile.* La loro… essenza… è un rompicapo… un rompicapo bellissimo e misterioso! *Tosse violentemente, cercando di riprendersi.* Lo prometto, per avermi portato due di queste… creature… avrai la mia eterna gratitudine. Consideralo come… un dono della conoscenza! Sì! Alla conoscenza!</string>
     <string name="PlagueDoctorQuest_AllDone">*Lui ride secco e con un sibilo.* Le tue azioni hanno sbloccato segreti oltre ogni misura! La conoscenza ottenuta... pulsa dentro di me, una sinfonia della scoperta. Ma la conoscenza,\&quot; aggiunge, abbassando la voce a un sussurro cospiratorio, \&quot;la conoscenza è potere. E il potere... ah... che è un elisirro più inebriante.\&quot; Ti fissa intensamente per un momento, i suoi occhi di ametista bruciano con un\'intensità febbrile. \&quot;Forse,\&quot; mormora, \&quot;le nostre strade si incroceranno ancora. Perché ci sono ancora molti... misteri... da svelare.</string>
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">Dottore della peste</string>
     <string name="PlagueDoctor_Name_Objective">Dottore della peste</string>
     <string name="Plant_ACPlant">PIANTA</string>
@@ -2570,5 +2572,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 </resources>
