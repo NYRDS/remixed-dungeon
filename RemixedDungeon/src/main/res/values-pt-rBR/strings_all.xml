@@ -531,6 +531,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="CorpseExplosion_Info">Transforma um cadáver em uma nuvem mortal de gás tóxico, espalhando doença e veneno para todos os inimigos próximos.</string>
     <string name="Crab_Defense">defendeu</string>
     <string name="Crab_Desc">Estes enormes caranguejos estão no topo da cadeia alimentar nos esgotos. Eles são extremamente rápidos e seu exoesqueleto grosso pode resistir a golpes pesados.</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">caranguejo do esgoto</string>
     <string name="Crab_Name_Objective">caranguejo do esgoto</string>
     <string name="CrippleBuff_Info">O corpo está aleijado, mas a luta ainda continua.</string>
@@ -2867,6 +2868,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

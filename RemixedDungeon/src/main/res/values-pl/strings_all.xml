@@ -64,6 +64,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Amulet_ACEnd">SKOŃCZ GRĘ</string>
     <string name="Amulet_Info">Amulet Yendora to najpotężniejszy znany artefakt niewiadomego pochodzenia. Mówi się, że amulet może spełnić każde życzenie jego właściciela, oczywiście jeśli jego siła woli jest na tyle potężna by \&quot;przekonać\&quot; artefakt do współpracy.</string>
     <string name="Amulet_Name">Amulet Yendora</string>
+    <string name="AnesthesiaBuff_Name">Anestezja</string>
     <string name="Ankh_Info">Starożytny symbol nieśmiertelności daje możliwość zmartwychwstania po zgonie. Po wskrzeszeniu, wszystkie przedmioty, które nie są wyposażone zostaną utracone.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">%s chaotycznej magii</string>
@@ -3017,6 +3018,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

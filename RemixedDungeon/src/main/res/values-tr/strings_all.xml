@@ -24,6 +24,7 @@
     <string name="Actions_Speed">Acele seviyesi</string>
     <string name="Affection_Txt">Çekiciliğin %sı</string>
     <string name="AirElemental_Desc">Hava elementi , canlı havadan yaratılmış sihirli oluşumlardır.</string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">hava elementi</string>
     <string name="AirElemental_Name_Objective">hava elementi</string>
     <string name="AlarmTrap_Desc">Tuzağın çıkardığı kulak kanatan ses zindan boyunca yankılanıyor!</string>
@@ -2904,6 +2905,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

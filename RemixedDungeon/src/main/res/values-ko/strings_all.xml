@@ -492,6 +492,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="CorpseDust_Info2">아무래도 이걸 들고 있는 것만으로도 당신은 불안과 분노를 느끼는 것 같습니다.</string>
     <string name="CorpseDust_Name">시체 먼지</string>
     <string name="CorpseExplosion_Name">시체 폭발</string>
+    <string name="CorpseExplosion_NoCorpse">그 위치에는 시체가 없습니다.</string>
     <string name="Crab_Defense">막음</string>
     <string name="Crab_Desc">이 거대한 게는 하수구 먹이 사슬의 최상위 포식자다. 녀석은 매우 빠르고 녀석의 딱딱한 껍질은 큰 충격을 견딜 수 있다.</string>
     <string name="Crab_Name">하수구 게</string>
@@ -2638,6 +2639,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
