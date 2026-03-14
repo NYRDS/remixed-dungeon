@@ -583,6 +583,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="Death_Name_1">Gaddar %s</string>
     <string name="Death_Name_2">Gaddar %s</string>
     <string name="Deathling_Desc">Ölüm Özlü, zindanda ölmüş ve maceracının biri tarafından çağırılacak kadar şanssız olan bir kahramandır.</string>
+    <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">Ölü Hizmetkar</string>
     <string name="Deathling_Name_Objective">Ölü Hizmetkar</string>
     <string name="DeepSnail_Desc">Bu tür yumuşakçalar genellikle su kaynaklarının yakınında görülebilir ve sıradan Sümüklüböceklerden çok daha hızlıdır. Ancak ısırıklardan sakının, cildiniz üzerinde hoş olmayan bir etkisi olabilir.</string>
@@ -2630,6 +2631,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="YogsEye_Name">yog\'un gözü</string>
     <string name="YogsEye_Name_Objective">Yog\'un gözü</string>
     <string name="YogsHeart_Desc">Yüzyıllar boyunca insanlar sadece gerçekten kalpsiz yaratıkların saf kötülük eylemlerinde bulunabileceğine inandılar. Oysa işte karşınızda, Eski Tanrı\'nın kendisine ait, kocaman atan bir kalp duruyor.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">yog\'un kalbi</string>
     <string name="YogsHeart_Name_Objective">Yog\'un kalbi</string>
     <string name="YogsTeeth_Desc">Eski Tanrının keskin dişler ile dolu muazzam çenesi. Onun yok etme ve yiyip bitirme arzusunun tam bir belirtisi olarak tam karşında.</string>
@@ -2900,6 +2902,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 </resources>
