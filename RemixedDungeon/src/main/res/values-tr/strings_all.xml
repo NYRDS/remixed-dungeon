@@ -1853,6 +1853,7 @@ seviyenin başka bir yeri.</string>
     <string name="Shades_Name">Gölgeler</string>
     <string name="ShadowLord_Death">Hayıııır...</string>
     <string name="ShadowLord_Desc">Saf kötülük ve karanlıktan yapılmış olan yaratık, ne kadar güçlü olduğundan dolayı birçok kişi onun Kadim Tanrı\'nın kendisi olduğuna inanır. Bazıları ise onun Kadim Tanrı\'nın odalarının bir koruyucusu olduğunu düşünür.</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Kendini hazırla!</string>
     <string name="ShadowLord_Name">gölge tanrısı</string>
     <string name="ShadowLord_Name_Objective">Gölge Tanrısı</string>
@@ -2905,6 +2906,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

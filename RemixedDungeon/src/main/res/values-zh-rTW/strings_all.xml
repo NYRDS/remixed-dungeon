@@ -638,6 +638,7 @@
     <string name="EarthElemental_Gender">neuter</string>
     <string name="EarthElemental_Name">土元素</string>
     <string name="EarthElemental_Name_Objective">土元素</string>
+    <string name="EarthrootBuff_Info">從地面長出的樹根提供了天然護甲。</string>
     <string name="EarthrootBuff_Name">植被護甲</string>
     <string name="Earthroot_Desc">當碰到地縛種後，它的根系會在你周邊形成某種無法移動的天然護甲。</string>
     <string name="Earthroot_Name"> 地縛根</string>
@@ -2759,6 +2760,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
