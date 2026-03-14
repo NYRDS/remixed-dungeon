@@ -2143,6 +2143,7 @@ outro local do nível.</string>
     <string name="VertigoBuff_Info">A sensação de tontura torna mais difícil andar em linha reta!</string>
     <string name="VertigoBuff_Name">Vertigem</string>
     <string name="View_Distance">Distância de visão</string>
+    <string name="VileEssence_Info">Uma essência concentrada de corrupção colhida de um inimigo derrotado. Esta substância escura pulsa com energia malévola e é altamente valorizada em processos alquímicos.</string>
     <string name="VileEssence_Name">Essência Vil</string>
     <string name="Viscosity_Status">deferido %d</string>
     <string name="Viscosity_Txt">%s de viscosidade</string>
@@ -2868,6 +2869,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

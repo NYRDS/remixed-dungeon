@@ -2021,6 +2021,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SpiderServant_Name">スパイダーソルジャー</string>
     <string name="SpiderServant_Name_Objective">スパイダーソルジャー</string>
     <string name="Spinner_Desc">この緑がかった毛むくじゃらのクモは直接の戦闘を避けようとし、被害者がクモの巣に絡まり、毒に噛まれてゆっくりと死んでいく間、遠くで待つことを好む。</string>
+    <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name">ケイヴスパイダー</string>
     <string name="Spinner_Name_Objective">ケイヴスパイダー</string>
     <string name="SpiritOfPain_Desc">生きた闇の破片。</string>
@@ -2940,6 +2941,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
