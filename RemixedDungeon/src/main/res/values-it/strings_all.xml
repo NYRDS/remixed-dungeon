@@ -266,6 +266,7 @@
     <string name="Brute_Name">gnoll bruto</string>
     <string name="Brute_Name_Objective">gnoll bruto</string>
     <string name="Brute_StaEnraged">Infuriato</string>
+    <string name="BuffParam_Cooldown">Recupero: %.2f</string>
     <string name="BurningBuff_Info">Il corpo è avvolto da fiamme furiose!</string>
     <string name="BurningBuff_Name">In fiamme</string>
     <string name="BurningFist_Desc">pugno infuocato del vecchio dio</string>
@@ -2575,6 +2576,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

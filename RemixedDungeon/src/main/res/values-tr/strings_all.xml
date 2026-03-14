@@ -1833,6 +1833,7 @@ seviyenin başka bir yeri.</string>
     <string name="Senior_Name">kıdemli keşiş</string>
     <string name="Senior_Name_Objective">kıdemli keşiş</string>
     <string name="ServantNPC_Desc">Han hizmetçisi çok meşgul.</string>
+    <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">han hizmetçisi</string>
     <string name="ServantNPC_Name_Objective">han hizmetçisi</string>
     <string name="ServiceManNPC_Desc">Yerel işletmelerin düzenli bir çalışanı.</string>
@@ -2903,6 +2904,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

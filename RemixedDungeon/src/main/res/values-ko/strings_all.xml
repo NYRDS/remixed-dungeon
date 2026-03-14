@@ -401,6 +401,7 @@
     <string name="ChargrilledMeat_Info">괜찮은 스테이크처럼 구워졌다.</string>
     <string name="ChargrilledMeat_Name">익힌 고기</string>
     <string name="CharmBuff_Name">매혹</string>
+    <string name="CharmSpell_Info">모두 사랑이 필요하죠, 그렇죠?</string>
     <string name="CharmSpell_Name">매혹</string>
     <string name="Chasm_Chasm">틈</string>
     <string name="Chasm_Info">추락하여 사망했습니다...</string>
@@ -2637,6 +2638,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
