@@ -1993,6 +1993,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="StartScene_WinGame">Untuk membuka \&quot;Tantangan\&quot;, menangkan permainan dengan karakter kelas apapun</string>
     <string name="StartScene_Yes">Iya, mulai permainan baru</string>
     <string name="Statue_Desc">Anda akan berpikir ini hanyalah patung jelek lainnya dari dungeon ini, tapi mata merah berkilaunya membuka kedoknya. Walaupun patungnya sendiri terbuat dari batu,  _%s_, yang dipegannya, terlihat nyata.</string>
+    <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">patung tersihir</string>
     <string name="Statue_Name_Objective">patung tersihir</string>
     <string name="Stench_Txt">%s kebusukan</string>
@@ -2576,6 +2577,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="YogsTeeth_Name">gigi yog</string>
     <string name="YogsTeeth_Name_Objective">gigi Yog</string>
     <string name="ZombieGnoll_Desc">Tubuh rusak, bengkok dari zombie gnoll tidak lagi seperti manusia atau hyena. Hanya setumpuk daging busuk dan tulang yang terisi niat jahat untuk membunuh dan memakan.</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">Zombie-gnoll telah bangkit dari kematian!</string>
     <string name="ZombieGnoll_Name">zombie-gnoll</string>
     <string name="ZombieGnoll_Name_Objective">zombie-gnoll</string>
@@ -2837,6 +2839,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
