@@ -1445,6 +1445,7 @@
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">Наконечник цієї стріли виблискує каплею смертельної отрути.</string>
     <string name="PoisonArrow_Name">отруйна стріла</string>
+    <string name="PoisonBuff_Info">Тіло повільно вбиває отрута!</string>
     <string name="PoisonBuff_Name">Отруєний</string>
     <string name="Poison_Death">Ти помер від отруєння...</string>
     <string name="Poison_Name_0">Отруйне %s</string>
@@ -2788,6 +2789,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

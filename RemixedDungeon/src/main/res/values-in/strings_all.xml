@@ -92,6 +92,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="AwarenessBuff_Info">Indra telah mempertajam, memberikan lebih banyak kesadaran tentang lingkungan.</string>
     <string name="AwarenessBuff_Name">kesadaran</string>
     <string name="AzuterronNPC_Desc">Figur yang misterius dikelilingi oleh kabut hitam.</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">Orang asing</string>
     <string name="AzuterronNPC_Name_Objective">Orang asing</string>
     <string name="AzuterronNPC_Quest_End">Bagus sekali. Silahkan ambil ramuan ini, pasti, Anda akan menemukannya berguna.</string>
@@ -2834,6 +2835,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

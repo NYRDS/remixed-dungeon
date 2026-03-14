@@ -1850,6 +1850,7 @@ outro local do nível.</string>
     <string name="Shaman_Name_Objective">gnoll xamã</string>
     <string name="Shaman_ZapMiss">*Xinga em gnollish*</string>
     <string name="Sheep_Desc">Esta é uma ovelha mágica. O que há de tão mágico sobre ela? Você não pode matá-las. Ela vai ficar lá até que magicamente desapareça, e ficará o tempo todo ruminando com um olhar vazio.</string>
+    <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">ovelha</string>
     <string name="Sheep_Name_Objective">ovelha</string>
     <string name="ShieldBuffNotReady_Info">Seu escudo não está pronto para bloquear o próximo ataque.</string>
@@ -2866,6 +2867,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 </resources>
