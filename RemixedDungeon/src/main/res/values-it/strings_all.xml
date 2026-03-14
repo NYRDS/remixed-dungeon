@@ -2416,6 +2416,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_beige_carpet_name">Tappeto</string>
     <string name="town_deco_bell_desc">Una tipica campana di chiesa. Sembra che nessuno l\'abbia suonata per molto tempo e persino la corda è sparita.</string>
     <string name="town_deco_bell_name">Campana</string>
+    <string name="town_deco_bell_tower_desc">Tradizionalmente le campane delle chiese sono installate in torri alte in modo che il rintocco possa essere udito da una distanza maggiore.</string>
     <string name="town_deco_bell_tower_name">Campanile</string>
     <string name="town_deco_blue_carpet_desc">Un lussuoso tappeto blu, decorato con ornamenti viola.</string>
     <string name="town_deco_blue_carpet_name">Tappeto</string>
@@ -2574,6 +2575,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

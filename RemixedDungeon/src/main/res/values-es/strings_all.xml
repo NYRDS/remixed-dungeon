@@ -28,6 +28,7 @@
     <string name="Actions_Speed">Nivel de prisa</string>
     <string name="Affection_Txt">%s de afecto</string>
     <string name="AirElemental_Desc">Los elementales de aire son seres mágicos voladores hechos de aire. </string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">elemental de aire</string>
     <string name="AirElemental_Name_Objective">elemental de aire</string>
     <string name="AlarmTrap_Desc">¡La trampa emite un desgarrador sonido que resuena por toda la mazmorra!</string>
@@ -2891,6 +2892,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
