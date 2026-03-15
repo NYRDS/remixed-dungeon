@@ -61,6 +61,7 @@
     <string name="Amulet_ACEnd">ΤΕΛΟΣ ΠΑΙΧΝΙΔΙΟΥ</string>
     <string name="Amulet_Info">Το Φυλακτό του Γέντορ είναι το πιο ξακουστό και ισχυρό τεχνούργημα με άγνωστη προέλευση. Λέγεται ότι το φυλακτό μπορεί να πραγματοποιήσει οποιαδήποτε επιθυμία - αρκεί η θέληση του κατόχου να είναι αρκετά ισχυρή ώστε να το «πείσει» να το κάνει.</string>
     <string name="Amulet_Name">Φυλακτό του Γέντορ</string>
+    <string name="Anesthesia_Name">Αναισθησία</string>
     <string name="Ankh_Info">Αυτό το αρχαίο σύμβολο αθανασίας σού επιτρέπει να επιστρέψεις στη ζωή μετά τον θάνατο. Με την ανάσταση, όλα τα μη εξοπλισμένα αντικείμενα χάνονται.</string>
     <string name="Ankh_Name">ανκχ</string>
     <string name="AntiEntropy_Txt">%s αντι-εντροπίας</string>
@@ -3016,6 +3017,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 
