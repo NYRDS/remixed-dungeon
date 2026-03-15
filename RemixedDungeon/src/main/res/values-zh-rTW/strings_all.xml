@@ -1978,6 +1978,7 @@
     <string name="SummonBeast_Name">野獸召喚</string>
     <string name="SummonDeathling_Info">召喚亡靈。亡靈的生命力及攻擊力將隨你的等級的提升而增長。\n\n召喚上限 %1$d （每提升一魔力等級上限+1）</string>
     <string name="SummonDeathling_Name">亡靈召喚</string>
+    <string name="SungrassBuff_Info">根從地面長出，提供治療藥草。</string>
     <string name="SungrassBuff_Name">草藥療養</string>
     <string name="Sungrass_Desc">陽春草因其汁液緩慢但顯著的療傷效果而家喻戶曉。</string>
     <string name="Sungrass_Name">陽春草</string>
@@ -2765,6 +2766,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

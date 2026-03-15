@@ -1904,6 +1904,7 @@ otro lugar del nivel.</string>
     <string name="ShieldWeaponInfo">Cuando se utiliza como arma, este escudo inflige una media de %1$d de daño.</string>
     <string name="Shielded_Defense">bloqueado</string>
     <string name="Shielded_Desc">Los brutos son los más grandes, fuertes y resistentes de los gnolls. Cuando están heridos de gravedad enloquecen, infligiendo más daño a sus enemigos.</string>
+    <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">bruto blindado</string>
     <string name="Shielded_Name_Objective">bruto blindado</string>
     <string name="ShootInEye_Info">Utiliza tu excepcional puntería para disparar al enemigo justo en el ojo, si es que tiene alguno, por supuesto.</string>
@@ -2894,6 +2895,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
