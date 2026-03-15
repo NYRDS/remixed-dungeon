@@ -1413,6 +1413,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Pasty_Info">Dies ist eine Fleischpastete gefüllt mit Rindfleisch und Kartoffeln.</string>
     <string name="Pasty_Name">Pastete</string>
     <string name="Pickaxe_ACMine">ABBAUEN</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Dies ist ein großes und stabiles Werkzeug, um Steine zu zerbrechen. Es kann auch als Waffe genutzt werden.</string>
     <string name="Pickaxe_Name">Spitzhacke</string>
     <string name="Pickaxe_NoVein">Es gibt keine Goldader in der Nähe.</string>
@@ -2851,6 +2852,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
