@@ -294,6 +294,7 @@
     <string name="Capotain_Name">Cappello a capote</string>
     <string name="Carcass_DissectMessage">Dissechi la carcassa e ottieni un %s.</string>
     <string name="Carcass_Info">resti di una creatura completamente morta %s.</string>
+    <string name="Carcass_Kick">Questo %s è completamente morto, non serve calciarlo.</string>
     <string name="Carcass_Name">resti di %s</string>
     <string name="Carcass_Necromancy">Hai rianimato il cadavere di %s!</string>
     <string name="Carcass_Necromancy_Failed">Il tuo tentativo di rianimare il cadavere di %s è fallito!</string>
@@ -2583,6 +2584,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
