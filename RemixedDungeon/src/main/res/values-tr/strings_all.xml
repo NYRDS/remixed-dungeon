@@ -1345,6 +1345,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="Monk_Defense">savuşturdu</string>
     <string name="Monk_Desc">Bu keşişler kendilerini şehirlerini korumaya adamış fanatiklerdir.Yakın dövüş yeteneklerine güvenir ve hiç bir zırh veya silah kullanmazlar.</string>
     <string name="Monk_Disarm">%1$s, %2$s eşyasını elinden aldı!</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">cüce keşiş</string>
     <string name="Monk_Name_Objective">cüce keşiş</string>
     <string name="MoongraceBuff_Info">Çevredeki hava daha doygun hale gelir, bu da büyülü rezervlerin daha iyi konsantre edilmesini ve yenilenmesini sağlar.</string>
@@ -2906,6 +2907,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

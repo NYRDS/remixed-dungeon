@@ -1024,6 +1024,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="IncendiaryDart_Info">A ponta de cada um desses dardos é projetada para fixar-se no alvo, enquanto os compostos instáveis amarrados em sua extensão explodem em chamas brilhantes.</string>
     <string name="IncendiaryDart_Name">dardo incendiário</string>
     <string name="InnKeeperNPC_Desc">O dono da pousada está orgulhoso de si mesmo</string>
+    <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">dono da pousada</string>
     <string name="InnKeeperNPC_Name_Objective">dono da pousada</string>
     <string name="InnServant_Phrase_1">Ui, ainda há muito o que fazer!</string>
@@ -2869,6 +2870,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
