@@ -996,6 +996,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="King_Info3">Come osi!</string>
     <string name="King_Name">re dei nani</string>
     <string name="King_Name_Objective">Re dei Nani</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Info">Un pezzo di ferro lavorato per calzare intorno alle nocche. </string>
     <string name="Knuckles_Name">tirapugni </string>
     <string name="KoboldIcemancer_Desc">I Coboldi lanciatori di ghiaccio erano l\'élite della società. Guerrieri notevoli, maghi e, soprattutto, scienziati. Antichi maestri del ghiaccio si impadronirono dell\'arte di comandare il ghiaccio, creando meccanismi complessi rafforzati con incantesimi speciali.</string>
@@ -2580,6 +2581,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

@@ -1,7 +1,9 @@
 <resources>
     <string name="BlackSkull_Gender">masculine</string>
     <string name="IceGuardian_Name_Objective">guardião de gelo</string>
+    <string name="WndCryptoDonate_supportDev">Apoiar o Desenvolvedor</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, aguarde...</string>
+
 
 
 </resources>

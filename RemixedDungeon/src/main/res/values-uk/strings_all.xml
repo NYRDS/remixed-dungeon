@@ -425,6 +425,7 @@
     <string name="Char_StaSlowed">сповільнений</string>
     <string name="Char_StaStunned">приголомшений</string>
     <string name="Char_StaVision">бачення</string>
+    <string name="Char_Stole_0">%1$s вкрало %2$s у %3$s!</string>
     <string name="Char_Stole_2">%1$s викрав(-ла) %2$s у %3$s!</string>
     <string name="Char_YouMissed">%1$s %2$s від твоєї атаки</string>
     <string name="ChargrilledMeat_Info">Виглядає як пристойний біфштекс.</string>
@@ -2790,6 +2791,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
