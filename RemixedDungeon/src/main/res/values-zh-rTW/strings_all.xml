@@ -305,6 +305,7 @@
     <string name="CagedKobold_Name">被囚禁的狗頭人</string>
     <string name="CagedKobold_Name_Objective">被囚禁的狗頭人</string>
     <string name="CagedKobold_Quest_End">哦，謝謝，太感謝了！你是怎麼找到這把鑰匙的？你...拆了那個武器？！令人吃驚！好吧，我說過我要幫助你，所以我打算跟隨你一整子。*被囚禁的狗頭人變成了一根蠟燭</string>
+    <string name="Calm_Info">周圍有很多憤怒的生物，讓我們幫助它們平靜下來。</string>
     <string name="Calm_Name">平靜</string>
     <string name="CandleOfMindVision_Info">看上去是一根普通的蠟燭，而不是你所期望的強大武器。奇怪的是雖然這根蠟燭沒有被點燃，但十分溫暖。</string>
     <string name="CandleOfMindVision_Info_Exhausted">這個蠟燭已經燃盡，沒法繼續發出亮光了。看上去你沒法繼續使用它了。</string>
@@ -2327,6 +2328,7 @@
     <string name="WndLocalModInstall_text">選擇要從哪裡安裝模組的目錄。</string>
     <string name="WndLocalModInstall_title">從本地目錄安裝模組</string>
     <string name="WndModInstall_InstallingMod">正在安裝模組</string>
+    <string name="WndModInstall_PleaseUpdate">請先更新 Remixed Dungeon 再安裝此模組</string>
     <string name="WndModInstall_Version">版本</string>
     <string name="WndModsDisclaimer_install">安裝本地模組</string>
     <string name="WndModsDisclaimer_title">模組</string>
@@ -2761,6 +2763,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
