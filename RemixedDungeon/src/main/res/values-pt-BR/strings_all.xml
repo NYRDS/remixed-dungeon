@@ -1,8 +1,11 @@
 <resources>
     <string name="BlackSkull_Gender">masculine</string>
+    <string name="HeroClass_WarPerks_3">Qualquer pedaço de comida restaura um pouco de saúde quando comido.</string>
     <string name="IceGuardian_Name_Objective">guardião de gelo</string>
     <string name="Journal_Alchemy">Caldeirão de alquimia</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
+    <string name="SpiderQueenCarapace_Name">Carapaça da Rainha Aranha</string>
+    <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Permite carregar compactamente até %d varinhas.</string>
     <string name="WndCryptoDonate_supportDev">Apoiar o Desenvolvedor</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, aguarde...</string>
 
@@ -10,6 +13,11 @@
 
 
     <string name="town_deco_INN_sign_desc">Parece que há uma estalagem dentro daquele edifício.</string>
+
+
+
+    <string name="town_deco_floor_name">Chão</string>
+
 
 
 </resources>
