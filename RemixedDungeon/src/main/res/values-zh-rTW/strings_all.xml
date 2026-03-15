@@ -1377,6 +1377,7 @@
     <string name="Piranha_Name_Objective">巨型食人魚</string>
     <string name="PirateSet_Info">啊哈！你現在看起來像是個海盜…或者說只是個該死的旱鴨子！？我希望你不是，畢竟那東西是海盜的，我的意思是……啊哈！</string>
     <string name="PirateSet_Name">海盜帽</string>
+    <string name="PlagueDoctorMaskHood_Name">帶兜帽的瘟疫醫生面具</string>
     <string name="PlagueDoctorNPC_After_Quest">我會證明的,我會證明給他們看!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">你還在嗎？來這裏！拿著這個。 </string>
     <string name="PlagueDoctorNPC_Desc">散發奇怪味道的...皮革?下面應該是個人吧...</string>
@@ -2764,6 +2765,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
