@@ -267,6 +267,7 @@
     <string name="Bleeding_Death">Anda mati kerana pendarahan...</string>
     <string name="BlessedBuff_Name">Diberkati</string>
     <string name="BlindnessBuff_Name">Menjadi Buta</string>
+    <string name="BloodTransfusion_Name">Pemindahan Darah</string>
     <string name="BodyArmorBuff_Info">Perisai meningkat tetapi menjejaskan kelajuan pergerakan.</string>
     <string name="BodyArmorBuff_Name">Perisai Badan</string>
     <string name="BodyArmorSpell_Info">Aktifkan kuasa otot simpanan, jadi lebih kuat buat sementara, seterusnya meningkatkan perisai anda tetapi menjejaskan kelajuan pergerakan anda.</string>
@@ -2652,6 +2653,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

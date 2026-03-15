@@ -1066,7 +1066,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Info">Este pesado metal comprido tem uma ponta em sua extremidade, cortando o ar em seu caminho.</string>
     <string name="Javelin_Name">lança</string>
-    <string name="Journal_Alchemy">Pote de Alquimia</string>
+    <string name="Journal_Alchemy">Caldeirão de alquimia</string>
     <string name="Journal_Azuterron">Estranho</string>
     <string name="Journal_Caged_Kobold">Kobold enjaulado</string>
     <string name="Journal_Garden">Jardin</string>
@@ -2623,7 +2623,7 @@ remix.31.1\n
     <string name="gdpr_disagree">Não, obrigado</string>
     <string name="gdpr_text">Remixed Dungeon personaliza sua experiência de publicidade usando Admob e Appodeal (outros provedores de anúncios). Os provedores de anúncios e seus parceiros podem coletar e processar dados pessoais, como identificadores de dispositivos, dados demográficos e de interesses, para fornecer uma experiência de publicidade personalizada para você. Ao concordar com essa experiência aprimorada de anúncios, você verá os anúncios que os provedores e seus parceiros consideram mais relevantes para você.\n\nAo concordar, você confirma ter mais de 16 anos e que gostaria de ter uma experiência personalizada de anúncios.\n\n</string>
     <string name="gdpr_title">Personalize sua experiência com anúncios</string>
-    <string name="town_deco_INN_sign_desc">Parece que há uma pousada dentro daquele prédio.</string>
+    <string name="town_deco_INN_sign_desc">Parece que há uma estalagem dentro daquele edifício.</string>
     <string name="town_deco_INN_sign_name">Placa da Pousada</string>
     <string name="town_deco_armoronhanger_desc">Uma armadura vestida em um manequim.</string>
     <string name="town_deco_armoronhanger_name">Armadura</string>
@@ -2869,6 +2869,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 

@@ -498,6 +498,7 @@
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">寒冰精靈</string>
     <string name="ColdSpirit_Name_Objective">寒冰精靈</string>
+    <string name="ComboBuff_Info">下次攻擊將是連擊攻擊。</string>
     <string name="ComboBuff_Name">連擊</string>
     <string name="Combo_Combo">%d連擊！</string>
     <string name="CommonArrow_Info">常見，帶有鐵箭頭的木製箭矢。</string>
@@ -2763,6 +2764,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

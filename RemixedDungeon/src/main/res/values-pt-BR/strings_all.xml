@@ -1,9 +1,15 @@
 <resources>
     <string name="BlackSkull_Gender">masculine</string>
     <string name="IceGuardian_Name_Objective">guardião de gelo</string>
+    <string name="Journal_Alchemy">Caldeirão de alquimia</string>
+    <string name="KunaiThrow_Name">Arremesso de Kunai</string>
     <string name="WndCryptoDonate_supportDev">Apoiar o Desenvolvedor</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, aguarde...</string>
 
+
+
+
+    <string name="town_deco_INN_sign_desc">Parece que há uma estalagem dentro daquele edifício.</string>
 
 
 </resources>
