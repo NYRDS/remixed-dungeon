@@ -93,6 +93,7 @@
     <string name="Badges_AllScrolls">모든 주문서 감정됨</string>
     <string name="Badges_AllWands">모든 마법봉을 식별함\&quot;</string>
     <string name="Badges_BossSlain1">구가 살해되었다</string>
+    <string name="Badges_BossSlain2">텐구가 살해되었다</string>
     <string name="Badges_BossSlain4">왕이 살해되었다</string>
     <string name="Badges_Champion">도전 성공</string>
     <string name="Badges_DeathFalling">추락 데미지로 인해 사망</string>
@@ -573,6 +574,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DriedRose_Name">매마른 장미</string>
     <string name="Drink_ACDrink">마신다</string>
     <string name="Drink_Message">상쾌한 기분이 든다!</string>
+    <string name="DrunkardNPC_Gender">masculine</string>
     <string name="Drunkard_Phrase_1">술 좀 주세요!</string>
     <string name="Drunkard_Phrase_2">맥주가 있는데 물이 왜 필요해?</string>
     <string name="Drunkard_Phrase_3">이 맥주는 마치 진흙 맛이야</string>
@@ -2642,6 +2644,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 
