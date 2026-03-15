@@ -1843,6 +1843,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Spinner_Name">동굴 거미</string>
     <string name="Spinner_Name_Objective">동굴 거미</string>
     <string name="SpiritOfPain_Desc">살아있는 어둠의 조각이다.</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">고통의 영혼</string>
     <string name="SpiritOfPain_Name_Objective">고통의 영혼</string>
     <string name="Sprout_Name">새싹</string>
@@ -2641,6 +2642,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

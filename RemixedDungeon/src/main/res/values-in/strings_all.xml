@@ -1081,6 +1081,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="KindOfWeapon_EquipCursed">Anda meringis sebagai pegangan Anda tanpa sadar mengencangkan sekitar %s Anda</string>
     <string name="King_Defense">tertangkis</string>
     <string name="King_Desc">Raja terakhir dari kurcaci terkenal akan pengertian mendalamnya tentang proses hidup dan mati. Dia telah membujuk makhamahnya untuk mengikuti sebuah ritual, yang akan memberikan mereka hidup muda abadi. Akhirnya dia hanya satu-satunya yang mendapatkannya - dan mendapat sebuah pasukan mayat hidup sebagai bonus.</string>
+    <string name="King_Gender">masculine</string>
     <string name="King_Info1">Kau tidak dapat membunuhku, %s... aku... abadi...</string>
     <string name="King_Info2">Bangkitlah, budakku!</string>
     <string name="King_Info3">Beraninya kau!</string>
@@ -2839,6 +2840,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

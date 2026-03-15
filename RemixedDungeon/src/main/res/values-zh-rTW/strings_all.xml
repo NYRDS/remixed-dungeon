@@ -2555,6 +2555,7 @@
     <string name="town_deco_broken_wall_desc">這堵墻裏的木塊早已腐朽，失去了正常的作用。</string>
     <string name="town_deco_broken_wall_name">破舊的墻</string>
     <string name="town_deco_brown_carpet_name">地毯</string>
+    <string name="town_deco_cabinet_desc">有許多門和架子的寬敞櫥櫃。</string>
     <string name="town_deco_cabinet_name">櫃子</string>
     <string name="town_deco_canvas_desc">墻上掛著一塊厚布。</string>
     <string name="town_deco_canvas_name">帆布</string>
@@ -2760,6 +2761,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

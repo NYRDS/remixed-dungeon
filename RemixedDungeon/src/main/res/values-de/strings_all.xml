@@ -1751,6 +1751,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="ScarecrowNPC_Quest_Start_Female">Warum hallo kleines Mädchen, wie machst du das?\n Ich habe etwas aufregendes für dich!\n\n Oh wie wundervoll ich doch wäre,\n wenn du jetzt gehst und einige Süßigkeiten für mich holst!\n\n</string>
     <string name="ScarecrowNPC_Quest_Start_Male">Warum hallo kleiner Junge, wie machst du das?\n Ich habe etwas aufregendes für dich!\n\n Oh wie wundervoll ich doch wäre,\n wenn du jetzt gehst und einige Süßigkeiten für mich holst!\n\n</string>
     <string name="Scorpio_Desc">Diese riesigen, spinnenartigen dämonischen Wesen vermeiden Nahkampf mit allen Mitteln. Sie verschießen aus großer Entfernung gezackte Dornen, die ihre Opfer lähmen.</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">Skorpion</string>
     <string name="Scorpio_Name_Objective">Skorpion</string>
     <string name="ScrollHolder_Info">Du kannst eine beliebige Anzahl an Schriftrollen in diesem röhrenförmigen Behälter aufbewahren. Es spart Platz und beschützt die Schriftrollen vor Feuer.</string>
@@ -2840,6 +2841,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 </resources>
