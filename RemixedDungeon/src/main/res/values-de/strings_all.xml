@@ -353,6 +353,11 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Challenges_Descriptions_0">Essen und Wasser sind längst verdorben und treiben jeden Abenteurer in den Wahnsinn mit Gedanken an den Tod durch Angst und Hunger. Kann deine Ernährung dir helfen, lange genug durchzuhalten?</string>
     <string name="Challenges_Descriptions_1">Angriff ist die beste Verteidigung. Diesen Lehren folgend wagst du dich in den Dungeon, wobei der Glaube der stärkste Beschützer deines Körpers ist.</string>
     <string name="Challenges_Descriptions_2">Als Anhänger der natürlichen Regeneration des gewöhnlichen Körpers waren Sie immer vorsichtig mit Tränken, die heilende Eigenschaften haben. Vorsicht ist besser als Nachsicht!</string>
+    <string name="Challenges_Descriptions_4">Eine böse Präsenz lauert in den Gedanken aller Kreaturen im Verlies und macht sie sich der Ereignisse bewusst, die miteinander geschehen.</string>
+    <string name="Challenges_Descriptions_5">Das Erste, was mit dem Bösen kam, war ein dichter und undurchdringlicher Nebel, der es fast unmöglich macht, sich in den endlosen Korridoren des Verlieses klar zu orientieren.</string>
+    <string name="Challenges_Descriptions_6">Die alte Kunst des Runenlesens ist verboten und wird um jeden Preis gemieden, wegen des Fluchs, der auf jeder Schriftrolle liegt, die das Verlies oder seine Umgebung betritt.</string>
+    <string name="Challenges_Descriptions_7">Sie haben sich daran gewöhnt, dass der Besitz und die Verwendung von Waffen moralisch nicht vertretbar sind, aber was anderes kann Sie vor den Kreaturen schützen, die dort unten herumstreifen?</string>
+    <string name="Challenges_Descriptions_8">Ihre Reise beginnt in der dunklen und gefährlichen Kanalisation der Stadt, wobei der einzige Weg an die Oberfläche blockiert ist. Um es noch schlimmer zu machen, können Sie nur die Ausrüstung verwenden, die Sie im Verlies finden. Mit begrenzten Ressourcen und Ausrüstung hängt Ihr Überleben von Ihren Fähigkeiten und Ihrer Strategie ab.</string>
     <string name="Challenges_Descriptions_9">Die neueste \'Heilmethode\' des Pestarztes hat Ihr räumliches Gedächtnis gelöscht. Sie können sich an nichts erinnern, was außerhalb Ihrer direkten Sicht ist.</string>
     <string name="Challenges_Names_0">Auf Diät</string>
     <string name="Challenges_Names_1">Der Glaube ist meine Rüstung</string>
@@ -362,6 +367,8 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Challenges_Names_5">In die Dunkelheit</string>
     <string name="Challenges_Names_6">Verbotene Runen</string>
     <string name="Challenges_Names_7">Pazifismus</string>
+    <string name="Challenges_Names_8">Keine Stadt</string>
+    <string name="Challenges_Names_9">Amnesie</string>
     <string name="ChampionOfAirBuff_Info">Diese Eigenschaft verleiht der Kreatur das Wesen der Winde, verbessert ihre Beweglichkeit und Kampfkraft. Der Champion der Luft wird zu einem gefährlichen Gegner, der in der Lage ist, schnelle und verheerende Angriffe auszuführen, die den Verlauf der Schlacht rasch verändern können.</string>
     <string name="ChampionOfAirBuff_Name">Champion der Luft</string>
     <string name="ChampionOfEarthBuff_Info">Der Champion der Erde verkörpert unnachgiebige Stärke, da diese Eigenschaft den Schadenswiderstand der Kreatur erhöht und ihre maximale Vitalität steigert. Diese Verwandlung macht ihn zu einem furchterregenden Gegner in den tückischen Tiefen, der Angriffe mühelos abwehren und anhaltende Kämpfe mit unerschütterlicher Entschlossenheit überstehen kann.</string>
@@ -904,6 +911,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HeroClass_PlagueDoctorPerks_2">Starte mit einer [yellow:Pestmaske] (immun gegen alle Gase) und einer [yellow:Knochensäge]. Kritische Treffer lassen zusätzliche Teile fallen, und die Säge verursacht x1.5 Schaden gegen paralysierte Gegner.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Tränke von [yellow:Paralysis Gas] und [yellow:Toxisches Gas] sind vorher identifiziert.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Pestärzte leiden unter starken Genauigkeitsstrafen, wenn sie nicht die geliebte Knochensäge in der Hand halten, und können keine Fernkampfwaffen benutzen.</string>
+    <string name="HeroClass_Priest">Priester</string>
     <string name="HeroClass_Rog">Schurke</string>
     <string name="HeroClass_RogPerks_0">Schurken beginnen mit einem Schattenring+1.</string>
     <string name="HeroClass_RogPerks_1">Schurken identifizieren den Typ eines Ringes, indem sie ihn ausrüsten. </string>
@@ -2842,6 +2850,14 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
+
+
 
 
 

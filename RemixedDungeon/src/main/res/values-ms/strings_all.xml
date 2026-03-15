@@ -843,6 +843,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HeroClass_NecromancerPerks_3">Pembangkit mayat bermula dengan kunci rangka aras 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Posyen Penyembuhan dapat dikenal pasti pada awal pengembaraan.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Bermula dengan Topeng Plague (kebal terhadap semua Gas) dan Gergaji Tulang. Serangan kritikal menjatuhkan bahagian tambahan, dan Gergaji memberikan +50% kerosakan pada musuh yang lumpuh.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Bermula dengan potions [yellow:Paralysis Gas] dan [yellow:Toxic Gas] yang telah dikenal pasti.</string>
     <string name="HeroClass_Rog">gasar</string>
     <string name="HeroClass_RogPerks_0">Gasar bermula dengan Cincin Bayang+1.</string>
     <string name="HeroClass_RogPerks_1">Gasar boleh mengenal pasti jenis cincin setelah disarung ke jari.</string>
@@ -2651,6 +2652,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
