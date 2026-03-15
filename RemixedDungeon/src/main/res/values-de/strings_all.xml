@@ -2161,6 +2161,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="VertigoBuff_Name">Schwindelig</string>
     <string name="View_Distance">Sichtweite</string>
     <string name="VileEssence_Info">Eine konzentrierte Essenz der Korruption, die von einem besiegten Feind geerntet wurde. Diese dunkle Substanz pulsiert mit bösartiger Energie und wird in alchemistischen Prozessen sehr geschätzt.</string>
+    <string name="VileEssence_Name">Abscheuliche Essenz</string>
     <string name="Viscosity_Status">%d verzögert</string>
     <string name="Viscosity_Txt">%s der Zähigkeit</string>
     <string name="WandHolster_Info">Dieser schmale Behälter ist aus Leder von einem exotischen Tier. Er erlaubt es dir %d Zauberstäbe zu tragen.</string>
@@ -2841,6 +2842,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

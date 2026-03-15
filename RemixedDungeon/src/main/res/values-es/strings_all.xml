@@ -19,6 +19,7 @@
     <string name="AboutScene_Translation">Localización por:</string>
     <string name="AboutScene_Translation_Names">Andrés Javaloy Asensio &amp;amp;  MLGMan &amp;amp;  Iván Cadilla</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon por NYRDS basado en la Fuente de Pixel Dungeon por Watabou.</string>
+    <string name="Accuracy_Decreased">¿Por qué pensé que podría usar un %s? ¡Herramienta equivocada, manos equivocadas!</string>
     <string name="Accuracy_DecreasedDoctor">Cada golpe de este %s propaga imperfección. Mi Sierra de Hueso cura... esto infecta.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Las manos desnudas infectan mi técnica. Sin el corte limpio de la Sierra, mi puntería se corrompe en caos.</string>
     <string name="Acidic_Desc">Estos demonios arácnidos evitan el combate cercano a toda costa, disparando proyectiles paralizantes desde lejos.</string>
@@ -2893,6 +2894,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
