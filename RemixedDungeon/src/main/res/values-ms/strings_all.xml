@@ -1951,6 +1951,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Torch_Info">Merupakan item yang sangat diperlukan dalam Balai Setan, yang mana sangat gelap kerana kurang pencahayaan.</string>
     <string name="Torch_Info2">Ia merupakan item yang sangat diperlukan di dalam kurungan bawah tanah, yang sememangnya kurang cahaya.</string>
     <string name="Torch_Name">obor</string>
+    <string name="ToughShield_desc">Perisai ini diperkukuh dengan tali kulit kelihatan lebih lasak daripada perisai kayu. Ia pasti boleh menghalang lebih banyak kerosakan.</string>
     <string name="TownGuardNPC_Desc">Seorang pengawal pekan biasa.</string>
     <string name="TownGuardNPC_Message1">Berambus.</string>
     <string name="TownGuardNPC_Message2">Terima kasih kepada para pengembara seperti awak, sekarang tempat ini sentiasa aman.</string>
@@ -2655,6 +2656,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

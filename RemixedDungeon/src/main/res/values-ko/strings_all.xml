@@ -1954,6 +1954,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="TownGuardNPC_Name">마을 경비병</string>
     <string name="TownGuardNPC_Name_Objective">마을 경비병</string>
     <string name="TownPortal_Info">이 주문을 사용하면 즉시 안전한 곳으로 돌아갈 수 있습니다. 하지만 강력한 마법 원천이 근처에 있으면 의도한 대로 작동하지 않을 수 있습니다.</string>
+    <string name="TownPortal_Name">타운 포털</string>
     <string name="TownScript_NeedWeapon">맨손으로 던전에 가고 싶진 않아! 마을에 있는 상점에 먼저 가는 게 좋지 않을까?</string>
     <string name="TownShopkeeper_Desc">이 사람은 일반적인 상인으로, 당신은 그가 당신의 가치를 안다고 말할 수 있습니다.</string>
     <string name="TownShopkeeper_Name">상인</string>
@@ -2647,6 +2648,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

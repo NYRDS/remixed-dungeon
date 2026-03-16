@@ -934,6 +934,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="HeroClass_MagPerks_4">Les Mages utilisent le mana pour lancer des sorts élémentaires.</string>
     <string name="HeroClass_MagPerks_5">Les Parchemins d\'Identification sont identifiés dès le début.</string>
     <string name="HeroClass_Necromancer">nécromancien</string>
+    <string name="HeroClass_NecromancerPerks_0">Les Nécromanciens commencent avec 15 points de Vie.</string>
     <string name="HeroClass_NecromancerPerks_1">Les Nécromanciens utilisent le mana pour lancer les sorts de la Mort.</string>
     <string name="HeroClass_NecromancerPerks_2">Les Nécromanciens commencent avec une robe de Nécromancien unique, qui fournit 1 point de mana pour chaque créature tuée.</string>
     <string name="HeroClass_NecromancerPerks_3">Les Nécromanciens commencent avec une Clé Squelette de l\'étage 7.</string>
@@ -2985,6 +2986,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

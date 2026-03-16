@@ -502,7 +502,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Codex_Story_4">Glifo Multiplicatório - O Herói fará surgir uma cópia sua e receber dano. Isso pode matar o herói.</string>
     <string name="Codex_Story_5">Glifo do Potencial - Este libera uma explosão como um raio que vai atacar o inimigo que atacou o Herói e dará metade deste dano ao Herói.</string>
     <string name="Codex_Story_6">Glifo do Metabolismo - O Herói será parcialmente curado, antes do ataque inimigo ser aplicado. Só é possível se o jogador não estiver morrendo de fome. A fome do Herói aumentará mais rápido.</string>
-    <string name="Codex_Story_7">Glifo Fétido - O herói irá liberar uma nuvem de gás tóxico quando atingido.</string>
+    <string name="Codex_Story_7">Glifo do Fedor - O Herói liberará uma nuvem de gás tóxico quando atingido.</string>
     <string name="Codex_Story_8">Glifo Viscoso - O Herói receberá o debuff de dano deferido, o que faz o Herói  receber 1 dano por turno, em vez de receber tudo de uma vez.</string>
     <string name="Codex_Story_9">Glifo do Deslocamento - Quando o Herói for atingido há uma chance do Herói ser teleportado para outro lugar visível. Não funciona em níveis de Chefe.</string>
     <string name="ColdSpirit_Desc">O espírito gelado é a manifestação do frio, na sua forma mais pura. Eles  são cascas sem consciência, criados por magia, agindo sobre a vontade dos seus criadores ou através dos seus instintos e reflexos.</string>
@@ -1543,7 +1543,7 @@ Parede
     <string name="Potion_SureDrink">Tem certeza de que quer beber? Na maioria dos casos você deve jogar tais poções em seus inimigos.</string>
     <string name="Potion_SureThrow">Tem certeza de que quer jogá-lo? Na maioria dos casos, faz sentido para beber.</string>
     <string name="Potion_Yes">Sim, eu sei o que estou fazendo</string>
-    <string name="Prison_TileDescBookshelf">Este é provavelmente um vestígio de uma biblioteca da prisão. Será que pode queimar?</string>
+    <string name="Prison_TileDescBookshelf">Isto é provavelmente um vestígio de uma biblioteca da prisão. Será que pega fogo?</string>
     <string name="Prison_TileDescDeco">Há manchas de sangue velho no chão.</string>
     <string name="Prison_TileWater">Água fria e escura.</string>
     <string name="PseudoPasty_Info">Este autêntico pastel de frango, com receio adicional de carne e batatas.</string>
@@ -2871,6 +2871,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
