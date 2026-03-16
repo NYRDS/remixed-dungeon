@@ -841,6 +841,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Guts_TileGrass">Kurutulmuş çalı</string>
     <string name="Guts_TileHighGrass">Kurutulmuş şurup</string>
     <string name="Guts_TileWater">Garip yapışkan sıvı</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">Uzun bir sopa ve ucunda keskin bir balta olan bir silah.</string>
     <string name="Halberd_Name">Baltalı kargı</string>
     <string name="Halls_TileDescBookshelf">Antik dillerdeki kitaplar kitaplıkta yanar.</string>
@@ -2908,6 +2909,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
