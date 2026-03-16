@@ -62,6 +62,7 @@
     <string name="Amulet_Info">Амулет Эндора, могущественнейший артефакт, неведомого происхождения. Считается, что он может исполнить любое желание, если воля его обладателя достаточно сильна, для того чтобы \&quot;убедить\&quot; амулет.</string>
     <string name="Amulet_Name">Амулет Эндора</string>
     <string name="AnesthesiaBuff_Info">Не чувствует боли и не просыпается от атак, но всё ещё получает урон.</string>
+    <string name="AnesthesiaBuff_Name">Анестезия</string>
     <string name="Anesthesia_Info">Вызывает глубокий, неестественный сон у вашей цели. Даже самые жестокие атаки не разбудят её от этого сна.</string>
     <string name="Anesthesia_Name">Анестезия</string>
     <string name="Ankh_Info">Древний символ бессмертия, дарующий возможность вернуться к жизни после смерти. При воскрешении все ненадетые вещи теряются.</string>
@@ -298,6 +299,7 @@
     <string name="BlindnessBuff_Name">Ослеплён</string>
     <string name="BloodTransfusion_Info">Переливает кровь от союзника к колдующему, чтобы исцелить его.</string>
     <string name="BloodTransfusion_Name">Переливание Крови</string>
+    <string name="BloodTransfusion_WontAgreed">Цель сопротивляется извлечению её жизненной сущности.</string>
     <string name="BodyArmorBuff_Info">Броня улучшена за счет скорости ходьбы.</string>
     <string name="BodyArmorBuff_Name">Тело-щит</string>
     <string name="BodyArmorSpell_Info">Активирует скрытые резервы мышц, делая их крепче и повышая защиту ценой скорости передвижения.</string>
@@ -830,6 +832,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Ghost_Defense">отклонился</string>
     <string name="Ghost_Desc">Ты едва можешь разглядеть призрака. Он похож на бесформенную дымку с грустным лицом.</string>
     <string name="Ghost_Name">печальный призрак</string>
+    <string name="Ghost_Name_Objective">печального призрака</string>
     <string name="Ghost_Rat1">Здравствуй, путник... Когда-то я был таким же, как и ты - сильным, уверенным... А теперь я мёртв... Но я не могу покинуть это место... Пока моя месть не осуществится... Одолей _мерзкую крысу_, которая лишила меня жизни...</string>
     <string name="Ghost_Rat2">Прошу... Помоги... Одолей эту тварь...</string>
     <string name="Ghost_Rose1">Здравствуй, путник... Когда-то я был таким же, как и ты - сильным, уверенным... А теперь я мёртв... Но я не могу покинуть это место... Пока ко мне не вернётся _сухая роза_... Это очень важная для меня вещь...  Чудище стащило её с моего бездыханного тела...</string>
@@ -1127,6 +1130,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="IronKey_Info">Засечки на этом древнем ключе износились; продетый в него кожаный ремень давно потрескался. Какую дверь им можно открыть?</string>
     <string name="IronKey_Name">железный ключ</string>
     <string name="ItemSprite_Info1">выбросить: %1$.1f %2$.1f</string>
+    <string name="Item_ACAlchemy">АЛХИМИЯ</string>
     <string name="Item_ACDrop">ВЫЛОЖИТЬ</string>
     <string name="Item_ACPickup">Подобрать</string>
     <string name="Item_ACThrow">МЕТНУТЬ</string>
@@ -2586,6 +2590,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndInstallingMod_skipping_file">Пропускаем %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Выполнить рецепт</string>
     <string name="WndItemAlchemy_NoRecipes">Нет доступных рецептов с этим предметом и вашим текущим инвентарем.</string>
+    <string name="WndItemAlchemy_SelectRecipe">Выберите рецепт</string>
     <string name="WndItemAlchemy_Title">Рецепты алхимии с %s</string>
     <string name="WndItemAlchemy_Transmute">Трансмутация</string>
     <string name="WndJournal_Levels">Уровни</string>
@@ -3058,6 +3063,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
+
+
+
+
 
 
 
