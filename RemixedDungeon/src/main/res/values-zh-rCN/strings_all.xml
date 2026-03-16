@@ -819,6 +819,7 @@
     <string name="GoldenStatue_Desc">虽然难以置信，但这尊瑰丽的雕像不仅仅是个装饰品，而是对掉以轻心的冒险者怀有深深恶意的生物。你发誓当你第一眼看到它时，那把_%s_只是它手臂的一部分。</string>
     <string name="GoldenStatue_Name">黄金雕像</string>
     <string name="GoldenStatue_Name_Objective">黄金雕像</string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="GoldenSword_Info">通常用这种柔软的金属制造而成的武器只会被视为装饰品，尽管它的剑刃看起来能轻易的切断物品。</string>
     <string name="GoldenSword_Name">黄金剑</string>
     <string name="Golem_Defense">格挡</string>
@@ -2872,6 +2873,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

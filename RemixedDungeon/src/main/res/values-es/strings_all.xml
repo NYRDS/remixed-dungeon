@@ -1740,6 +1740,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="RottingFist_Name_Objective">puño putrefacto</string>
     <string name="RoyalShield_desc">Un escudo de metal completo. Sí, es pesado, pero puede brindarle la mejor protección.</string>
     <string name="RoyalShield_name">Escudo real</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Solo los mejores arqueros pueden usar el arco de rubí. Casi todas las flechas atraviesan al enemigo, dejando un gran agujero en su cuerpo, pero se necesita mucha fuerza para tensar la cuerda.</string>
     <string name="RubyBow_Name">arco de rubí</string>
     <string name="RubyCrossbow_Info">Esta arma mortal realmente una obra maestra de la ingeniería enana.</string>
@@ -2895,6 +2896,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
