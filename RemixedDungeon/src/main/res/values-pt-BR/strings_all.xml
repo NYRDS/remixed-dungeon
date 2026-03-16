@@ -1,5 +1,6 @@
 <resources>
     <string name="BlackSkull_Gender">masculine</string>
+    <string name="Challenges_Names_5">Nas trevas</string>
     <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
     <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
     <string name="HeroClass_WarPerks_3">Qualquer pedaço de comida restaura um pouco de saúde quando comido.</string>
@@ -11,6 +12,7 @@
     <string name="SungrassBuff_Name">Cura Herbal</string>
     <string name="TownShopkeeper_Objective">comerciante</string>
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Permite carregar compactamente até %d varinhas.</string>
+    <string name="WndChallenges_Title">Desafios</string>
     <string name="WndCryptoDonate_supportDev">Apoiar o Desenvolvedor</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, aguarde...</string>
 
@@ -22,6 +24,8 @@
 
 
     <string name="town_deco_floor_name">Chão</string>
+
+
 
 
 
