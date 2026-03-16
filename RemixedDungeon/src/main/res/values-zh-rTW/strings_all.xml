@@ -2216,6 +2216,24 @@
     <string name="Weightstone_WndSpeed">速度</string>
     <string name="Welcome_Ok">棒極了！</string>
     <string name="Welcome_Text_31_1">remix.31.1\n- 遊戲玩法：\n-- 新的自定義功能！\n-- 新種類蜘蛛！\n-- 現在心靈蜘蛛會增強其他蜘蛛，而不是削弱英雄。\n- 錯誤修復\n</string>
+    <string name="Welcome_Text_32">
+    remix.32\n
+    - 遊戲玩法：\n
+    -- 怪物和寵物現在可以獲得經驗和升級\n
+    -- 混沌之盾\n
+    -- 冠軍\n
+    -- 約格戰鬥重新平衡\n
+    -- 平衡調整\n
+    - 使用者體驗：\n
+    -- 詳細的英雄和怪物統計\n
+    -- 更好的自訂介面\n
+    -- 流暢的鏡頭\n
+    - 模組製作：\n
+    -- 自訂動畫\n
+    -- 內建模組的自訂腳本\n
+    -- 怪物發光效果\n
+    - 錯誤修復\n
+    </string>
     <string name="Welcome_Title">歡迎！</string>
     <string name="WindGust_Info">召喚一陣狂風，將選定生物吹走。</string>
     <string name="WindGust_Name">狂風</string>
@@ -2767,6 +2785,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

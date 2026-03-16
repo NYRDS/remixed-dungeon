@@ -1,5 +1,6 @@
 <resources>
     <string name="AC_Devour">Verschlingen</string>
+    <string name="AC_Dissect">Sezieren</string>
     <string name="AC_Necromancy">Nekromantie</string>
     <string name="Abilities_Common">Normale Zaubersprüche</string>
     <string name="Abilities_Default">Meisterschaft</string>
@@ -21,6 +22,7 @@
     <string name="Accuracy_DecreasedDoctor">Jeder Schwung mit diesem %s verbreitet Unvollkommenheit. Meine Knochensäge heilt… dies infiziert.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Nackte Hände infizieren meine Technik. Ohne den sauberen Schnitt der Säge gerät mein Ziel ins Chaos.</string>
     <string name="Acidic_Desc">Dieses riesige, spinnenartige, dämonische Wesen vermeidet Nahkampf mit allen Mitteln. Es schießt gezackte Dornen mit lähmender Wirkung aus großer Entfernung ab.</string>
+    <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">Giftiger Skorpion</string>
     <string name="Acidic_Name_Objective">Giftiger Skorpion</string>
     <string name="Actions_Speed">Tempo der Aktionen</string>
@@ -401,6 +403,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
 Ein blutroter Helm ist ein wesentliches Symbol eines Chaos Kriegers.</string>
     <string name="ChaosHelmet_Name">Chaos Helm</string>
     <string name="ChaosShield_desc">Der Chaosschild ist das Ergebnis der Verschmelzung eines Chaosekristalls mit einem gewöhnlichen Schild und bewirkt bei erfolgreichem Block zufällige chaotische Effekte.</string>
+    <string name="ChaosShield_name">Chaosschild</string>
     <string name="ChaosStaff_Info">Ein mit der Kraft des Chaos getränkter Stab! Worüber sonst können Magier Träumen oder sich Fürchten?</string>
     <string name="ChaosStaff_Name">Chaosstab</string>
     <string name="ChaosSword_Gender">masculine</string>
@@ -601,6 +604,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="Deathling_Desc">Der Untote ist die Seele eines Toten Helden, die genug Pech gehabt hat, um von einem Nekromanten beschwört zu werden.</string>
     <string name="Deathling_Name">Untoter</string>
     <string name="Deathling_Name_Objective">Untoter</string>
+    <string name="DeepSnail_Desc">Diese Art von Weichtieren kann oft in der Nähe von Wasserquellen gesehen werden und ist viel schneller als eine gewöhnliche Schnecke. Hüte dich jedoch vor den Bissen, sie können eine unangenehme Wirkung auf deine Haut haben.</string>
     <string name="DeepSnail_Name_Objective">Tiefenschnecke</string>
     <string name="DeferedDamageBuff_Name">Verzögerter Schaden (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s hat dich getötet...</string>
@@ -802,6 +806,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="GnollTamahawk_Info">Traditionelles Tomahawk von Gnoll-Handwerkern gefertigt, jeder Klan hat sein eigenes einzigartiges Design. Dieses Tomahawk ist deutlich leichter als das Gegenstück, das von Menschen ist.</string>
     <string name="GnollTamahawk_Name">Gnoll Tomahawk</string>
     <string name="Gnoll_Desc">Gnolle sind menschliche Wesen, die Hyänen ähneln. Sie leben in Abwässerkanälen und Höhlen, von wo sie von Zeit zu Zeit zu Raubzügen an die Oberfläche ziehen. Gnollspäher sind anerkannte Mitglieder ihres Rudels, aber nicht so stark wie Schläger und nicht so intelligent wie Schamanen.</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">Gnollspäher</string>
     <string name="Gnoll_Name_Objective">Gnollspäher</string>
     <string name="Gold_Collect">Sammle Goldmünzen, um sie später bei einem Händler auszugeben.</string>
@@ -1626,6 +1631,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="RatSkull_Info2">Anders gesehen, demonstriert er, dass sein Besitzer in der Lage ist, Ratten zu töten, sogar große und stinkende.</string>
     <string name="RatSkull_Name">großer Rattenschädel</string>
     <string name="Rat_Desc">Beutelratten sind aggressive, aber eher schwache Bewohner der Abwasserkanäle. Sie werden nur in großer Zahl gefährlich.</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">Beutelratte</string>
     <string name="Rat_Name_Objective">Beutelratte</string>
     <string name="Ration_Info">Nichts ausgefallenes: getrocknetes Fleisch, einige Kekse - solche Dinge eben.</string>
@@ -2853,6 +2859,12 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
 
 
 
