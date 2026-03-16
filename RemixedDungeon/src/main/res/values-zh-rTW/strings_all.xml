@@ -2199,6 +2199,7 @@
     <string name="WaterOfHealth_Info">生命的力量正從這口井的水裏湧出。飲下井水能治療您的傷口並填滿您的肚子。</string>
     <string name="WaterOfHealth_Procced">就在您小酌一口時，您感覺身上的傷口完全癒合了。</string>
     <string name="WaterOfTransmutation_Info">變化的力量正在從這口井的水裏湧出。扔進一件物品以將其轉化為其他物品。</string>
+    <string name="WeaknessBuff_Info">虛弱籠罩著身體，使人更容易成為目標。</string>
     <string name="WeaknessBuff_Name">虛弱</string>
     <string name="Weapon_Identify">你現在對於你的%1$s足夠熟悉以鑒定它。它是%2$s。</string>
     <string name="Weapon_Incompatible">不同屬性魔法的沖突使得這把武器的附魔失去了效力！</string>
@@ -2766,6 +2767,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -2463,6 +2463,7 @@ remix.32\n
     <string name="WndChooseWay_Cancel">Θα αποφασίσω αργότερα</string>
     <string name="WndChooseWay_Message">Ποια πορεία θα ακολουθήσεις;</string>
     <string name="WndClass_Mastery">Εξειδίκευση</string>
+    <string name="WndCryptoDonate_bitcoin">Μπίτκοϊν</string>
     <string name="WndCryptoDonate_copyAddress">Αντιγραφή Διεύθυνσης</string>
     <string name="WndCryptoDonate_currency">Νόμισμα</string>
     <string name="WndCryptoDonate_monero">Μονέρο</string>
@@ -3017,6 +3018,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

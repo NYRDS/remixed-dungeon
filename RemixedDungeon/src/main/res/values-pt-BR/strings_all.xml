@@ -6,6 +6,7 @@
     <string name="Journal_Alchemy">Caldeirão de alquimia</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
     <string name="SpiderQueenCarapace_Name">Carapaça da Rainha Aranha</string>
+    <string name="StartScene_DifficultyNormalWithSaves">Normal com saves (e propagandas)</string>
     <string name="SungrassBuff_Name">Cura Herbal</string>
     <string name="TownShopkeeper_Objective">comerciante</string>
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Permite carregar compactamente até %d varinhas.</string>
@@ -20,6 +21,7 @@
 
 
     <string name="town_deco_floor_name">Chão</string>
+
 
 
 
