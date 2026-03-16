@@ -1,5 +1,6 @@
 <resources>
     <string name="BlackSkull_Gender">masculine</string>
+    <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
     <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
     <string name="HeroClass_WarPerks_3">Qualquer pedaço de comida restaura um pouco de saúde quando comido.</string>
     <string name="IceGuardian_Name_Objective">guardião de gelo</string>
@@ -21,6 +22,7 @@
 
 
     <string name="town_deco_floor_name">Chão</string>
+
 
 
 
