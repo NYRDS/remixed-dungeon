@@ -1656,6 +1656,7 @@
     <string name="RottenFood_Message">好惡心！</string>
     <string name="RottenMeat_Info">一份腐爛的肉</string>
     <string name="RottenMeat_Name">腐爛肉</string>
+    <string name="RottenOrgan_Name">腐爛的器官</string>
     <string name="RottenPasty_Info">這餡餅看起來十分惡心，但可以通過一些方法讓它再次能夠食用。</string>
     <string name="RottenPasty_Name">腐爛餡餅</string>
     <string name="RottenPumpkinPie_Info">就算有媽媽的味道，腐爛的還是沒法食用的。</string>
@@ -2789,6 +2790,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

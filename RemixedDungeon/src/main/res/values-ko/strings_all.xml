@@ -526,6 +526,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DarkSacrifice_Self">재앙을 위해!</string>
     <string name="DarkVeilBuff_Name">암흑의 덮개</string>
     <string name="Darkness_Info">영원한 어둠의 조각이 공중에 피어오른다.</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">이 간단한 금속 스파이크는 사실 날리기 부담스러운 무게지만 맞은 사람을 괴롭게 한다.</string>
     <string name="Dart_Name">다트</string>
     <string name="DashSpell_Name">대시</string>
@@ -2361,6 +2362,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndSettings_InGameUiSettings">UI 설정</string>
     <string name="WndSettings_Music">음악</string>
     <string name="WndSettings_Quickslots">단축창</string>
+    <string name="WndSettings_RecordVideo">비디오 녹화</string>
     <string name="WndSettings_ScaleUp">확대 UI</string>
     <string name="WndSettings_SecondQuickslot">두 번째 퀵 슬롯</string>
     <string name="WndSettings_SelectLanguage">언어 선택</string>
@@ -2650,6 +2652,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 

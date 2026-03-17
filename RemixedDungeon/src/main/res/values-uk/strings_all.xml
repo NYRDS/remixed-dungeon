@@ -1104,6 +1104,7 @@
     <string name="Kobold_Name_Objective">кобольда</string>
     <string name="KrampusHead_Info">Ви коли-небудь замислювалися, каково це - прийняти більш зловісну роль у цьому Пригоді? Тоді швидше вдягайте цю маску і крысята по всій окрузі будуть тремтіти від жаху.</string>
     <string name="KrampusHead_Name">Голова Крампуса</string>
+    <string name="KunaiThrow_Info">Цей смертельний кидок Кунаї виконується надзвичайно швидко, так швидко, що ви навіть не зможете обрати ціль.\n\nСправжні майстри можуть кидати більше одного Кунаї одночасно.</string>
     <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Ця зброя складається із серпа та грузила, пов\'язані між собою цепом.</string>
     <string name="Kusarigama_Name">касурігама</string>
@@ -2792,6 +2793,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
