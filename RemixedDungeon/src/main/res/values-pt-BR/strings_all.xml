@@ -10,6 +10,7 @@
     <string name="Journal_Alchemy">Caldeirão de alquimia</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
     <string name="PlagueDoctorMaskHood_Info">Um crânio de ébano esculpido, suas órbitas vazias brilhando com o brilho etéreo de gemas de ametista. Cada respiração que você toma sussurra através de um labirinto de tubos e filtros, carregando o aroma de ervas potentes e especiarias que mascaram a decadência que se apega a você. Mas não é apenas a máscara. Um capuz pesado de veludo meia-noite, envolvendo seu rosto e cabeça em sombras. O capuz, como a asa de um corvo, flui pelas suas costas, suas bordas aparadas com uma franja de renda branca como osso, um contraste assustadoramente bonito. Juntos, máscara e capuz criam um viso espectral, um testemunho sombrio da batalha interminável contra as forças da decadência.</string>
+    <string name="Potion_Colors_12">epidoto</string>
     <string name="Ration_Name">ração de comida</string>
     <string name="Shopkeeper_title">Loja</string>
     <string name="SpiderQueenCarapace_Name">Carapaça da Rainha Aranha</string>
@@ -17,6 +18,7 @@
     <string name="SungrassBuff_Name">Cura Herbal</string>
     <string name="TownShopkeeper_Objective">comerciante</string>
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Permite carregar compactamente até %d varinhas.</string>
+    <string name="WndCatalogus_Scrolls">Pergaminhos</string>
     <string name="WndChallenges_Title">Desafios</string>
     <string name="WndCryptoDonate_supportDev">Apoiar o Desenvolvedor</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, aguarde...</string>
@@ -24,11 +26,17 @@
 
 
 
+    <string name="WndPortal_Info">Este portal permitirá que você volte para a cidade. Parece bastante instável, provavelmente não estará ativo por muito tempo.\nVocê gostaria de usá-lo?</string>
+    <string name="ZombieGnoll_Desc">O corpo torcido e quebrado de um Gnoll-Zumbi já não se parece com humanoide ou hiena. É apenas um monte de carne podre e ossos cheios de desejo maligno de matar e comer.</string>
     <string name="town_deco_INN_sign_desc">Parece que há uma estalagem dentro daquele edifício.</string>
 
 
 
     <string name="town_deco_floor_name">Chão</string>
+
+
+
+
 
 
 
