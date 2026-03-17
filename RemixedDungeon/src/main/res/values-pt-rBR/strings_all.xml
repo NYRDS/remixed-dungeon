@@ -47,7 +47,7 @@
     <string name="AmokArrow_Name">Flecha de Fúria</string>
     <string name="AmokBuff_Info">Sinta a loucura, tirando a vida daqueles infelizes.</string>
     <string name="AmokBuff_Name">Loucura</string>
-    <string name="AmokDart_Info">A solução na ponta deste dardo transformará qualquer um em uma besta furiosa, implacável e sem piedade.</string>
+    <string name="AmokDart_Info">A solução na ponta deste dardo transformará qualquer um em um berserker sem mente e impiedoso.</string>
     <string name="AmokDart_Name">Dardo de Fúria</string>
     <string name="AmuletScene_Exit">Foi bom enquanto durou</string>
     <string name="AmuletScene_Stay">Eu não acabei ainda</string>
@@ -1398,7 +1398,7 @@ Parede
     <string name="Paralysis_Name_0">%s do Atordoamento</string>
     <string name="Paralysis_Name_1">%s do Atordoamento</string>
     <string name="Paralysis_Name_2">%s do Atordoamento</string>
-    <string name="ParalyticGas_Info">Uma nuvem de gás paralisante está pairando aqui.</string>
+    <string name="ParalyticGas_Info">Uma nuvem de gás paralisante paira aqui.</string>
     <string name="Pasty_Info">Este autêntico pastel de frango, com receio adicional de carne e batatas.</string>
     <string name="Pasty_Name">pastel de carne</string>
     <string name="Pickaxe_ACMine">MINERAR</string>
@@ -2871,6 +2871,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
