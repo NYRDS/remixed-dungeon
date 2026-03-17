@@ -1348,6 +1348,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="MoongraceBuff_Info">Die Luft in der Nähe wird gesättigter, was eine bessere Konzentration und Wiederherstellung der magischen Reserven ermöglicht.</string>
     <string name="MoongraceBuff_Name">Himmlische Manna</string>
     <string name="Moongrace_Desc">Diese Pflanzen wachsen in geringer Zahl und sind als Quelle natürlicher Magie bekannt.</string>
+    <string name="Moongrace_Name">Moongrace</string>
     <string name="Movement_Speed">Bewegungsgeschwindigkeit</string>
     <string name="Multiplicity_Txt">%s der Vervielfältigung</string>
     <string name="Mushroom_Eat_Message">Dieser Pilz hat komisch geschmeckt!</string>
@@ -2860,6 +2861,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

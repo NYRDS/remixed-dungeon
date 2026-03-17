@@ -1896,6 +1896,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SmashSpell_Name">Menghancurkan</string>
     <string name="SmashSpell_NeedWeapon">Aku butuh senjata untuk gerakan ini.</string>
     <string name="Snail_Desc">Moluska kecil ini telah tumbuh cukup besar dengan memakan kotoran, tetapi dia masih sangat lambat yang membuatnya menjadi musuh yang mudah untuk dihadapi.</string>
+    <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">siput</string>
     <string name="Snail_Name_Objective">siput</string>
     <string name="SnipersMarkBuff_Info">Tanda itu dibuat oleh penembak jitu.</string>
@@ -2840,6 +2841,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

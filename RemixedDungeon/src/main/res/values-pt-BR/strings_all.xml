@@ -1,5 +1,6 @@
 <resources>
     <string name="BellaNPC_Message">Eu não tenho interesse em plebeus como você!</string>
+    <string name="Bishop_great_bless">Bênção grande - %d g</string>
     <string name="BlackSkull_Gender">masculine</string>
     <string name="Challenges_Names_5">Nas trevas</string>
     <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
@@ -14,6 +15,7 @@
     <string name="Ration_Name">ração de comida</string>
     <string name="ShieldBuffNotReady_Name">Escudo não está pronto</string>
     <string name="Shopkeeper_title">Loja</string>
+    <string name="Slow_Name_2">%s Arrepiante</string>
     <string name="SpiderQueenCarapace_Name">Carapaça da Rainha Aranha</string>
     <string name="StartScene_DifficultyNormalWithSaves">Normal com saves (e propagandas)</string>
     <string name="SungrassBuff_Name">Cura Herbal</string>
@@ -35,6 +37,8 @@
 
 
     <string name="town_deco_floor_name">Chão</string>
+
+
 
 
 
