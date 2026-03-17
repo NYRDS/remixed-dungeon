@@ -76,6 +76,7 @@
     <string name="ArmoredStatue_Name">살아 움직이는 조각상</string>
     <string name="ArmoredStatue_Name_Objective">살아 움직이는 조각상</string>
     <string name="Artifact_Limit">유물은 동시에 2개까지 착용할 수 있습니다.</string>
+    <string name="Attack_Range">공격 거리</string>
     <string name="AwarenessBuff_Info">감각이 날카로워지며 주변 환경에 대한 인식이 더욱 좋아졌습니다.</string>
     <string name="AzuterronNPC_Desc">이상한 형체가 검은 안개에 둘러싸여 있다.</string>
     <string name="AzuterronNPC_Name">이방인</string>
@@ -256,6 +257,7 @@
     <string name="BlindnessBuff_Info">완전히 실명하여 주변의 소리만 들을 수 있습니다.</string>
     <string name="BlindnessBuff_Name">실명</string>
     <string name="BloodTransfusion_Info">대상으로부터 거의 모든 피를 흡수하여 자신을 치유합니다. 희생과 생존의 어두운 의식.</string>
+    <string name="BloodTransfusion_WontAgreed">대상이 생명 정수 추출에 저항합니다.</string>
     <string name="BodyArmorBuff_Info">이동 속도를 희생하여 방어력이 증가합니다.</string>
     <string name="BodyArmorBuff_Name">바디 아머</string>
     <string name="BodyArmorSpell_Info">예비 근육의 힘을 활성화하여 일시적으로 더 강하게 만들고, 이동 속도를 희생하여 방어력을 크게 증가시킵니다.</string>
@@ -2652,6 +2654,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 

@@ -203,6 +203,7 @@
     <string name="Barrel_Pumpkin_Name">カボチャ</string>
     <string name="Bat_Defense">回避した</string>
     <string name="Bat_Desc">この活発で粘り強い洞窟の住人は、吸血によって攻撃のたびに体力を補充することで、はるかに大きな敵を倒すことがある。</string>
+    <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">吸血コウモリ</string>
     <string name="Bat_Name_Objective">吸血コウモリ</string>
     <string name="BattleAxe_Info"> この巨大な鋼鉄のバトルアックスは、攻撃後のスキが大きくなるだろう。</string>
@@ -1027,6 +1028,7 @@
     <string name="IceGuardianCoreModule_Name">氷の守護者のコア</string>
     <string name="IceGuardianCore_Desc">氷の守護者は古代のコボルドによって洞窟を守るために作られた。コアに蓄えられたパワーにより、氷の守護者は十分なエネルギーがある限り自らを再構築することができる。</string>
     <string name="IceGuardianCore_DieInfo">ここはとても寒いから、14階に戻って暖かい場所に行く方法を探したほうが良さそうだ。</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name">氷の守護者</string>
     <string name="IceGuardianCore_Name_Objective">氷の守護者</string>
     <string name="IceGuardian_Desc">氷の守護者は古代のコボルドによって洞窟を守るために作られた。守護者のコアに十分なエネルギーがある限り、戦いのさなかに自身を再構築することができる。</string>
@@ -2941,6 +2943,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 
