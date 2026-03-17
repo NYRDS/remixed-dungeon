@@ -346,6 +346,7 @@
     <string name="ChampionOfEarthBuff_Info">Juara Bumi menggambarkan keteguhan yang tidak goyah, kerana ciri ini meningkatkan rintangan kerosakan makhluk tersebut dan meningkatkan vitaliti maksimumnya. Penjelmaan ini menjadikannya musuh yang menakutkan di kedalaman yang berbahaya, mampu meleraikan serangan dengan mudah dan bertahan dalam pertempuran panjang dengan ketabahan yang tidak berubah.</string>
     <string name="ChampionOfEarthBuff_Name">Juara Bumi</string>
     <string name="ChampionOfFireBuff_Name">Juara Api</string>
+    <string name="ChampionOfWaterBuff_Info">Juara Air mewujudkan kekuatan lautan yang tidak dapat dikalahkan, meningkatkan ketahanan dan kekuatan makhluk itu. Akibatnya, ia menjadi musuh yang teguh, mampu menahan serangan bertubi-tubi dan berdiri sebagai penjaga yang tidak kenal menyerah dalam menghadapi kesulitan.</string>
     <string name="ChampionOfWaterBuff_Name">Juara Air</string>
     <string name="ChaosArmor_Info">Plat berwarna merah darah perisai ini disulam bersama-sama dengan rantai merah. Ia diselimuti dengan tenaga kekacauan bilamana anda menyentuhnya.</string>
     <string name="ChaosArmor_Name">Perisai Chaos</string>
@@ -2657,6 +2658,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -359,6 +359,7 @@
     <string name="Challenges_Names_9">Amnésia</string>
     <string name="ChampionOfAirBuff_Info">Esta característica concede à criatura a essência dos ventos, aprimorando sua agilidade e destreza em combate. O Campeão do Ar se torna um adversário formidável, capaz de desferir ataques rápidos e devastadores que podem alterar rapidamente o curso da batalha.</string>
     <string name="ChampionOfEarthBuff_Info">O Campeão da Terra encarna uma força inabalável, pois esta característica aumenta a resistência a dano da criatura e aumenta sua vitalidade máxima. Esta transformação faz dele um adversário temível nas profundezas traiçoeiras, capaz de ignorar ataques com facilidade e resistir a batalhas prolongadas com determinação inabalável.</string>
+    <string name="ChampionOfEarthBuff_Name">Campeão da Terra</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Infundido com a fúria das chamas, esta característica amplifica a ferocidade e a proeza em combate da criatura. O Campeão do Fogo surge como um adversário temível, desferindo ataques devastadores que podem envolver seus inimigos em chamas abrasadoras, incutindo terror em todos que ousam se opor a ele.</string>
     <string name="ChampionOfFireBuff_Name">Campeão do Fogo</string>
     <string name="ChaosArmor_Info">As placas de sangue vermelho desta armadura é costurada junto com correntes vermelhas escuras. Ele irradia energia caótica enquanto você a toca.</string>
@@ -2871,6 +2872,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

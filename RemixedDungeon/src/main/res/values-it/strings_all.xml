@@ -209,6 +209,7 @@
     <string name="Bishop_title">Vescovo</string>
     <string name="BlackCat_AiStatus">Questo gatto fa classiche cose da gatto</string>
     <string name="BlackCat_Desc">E\' un gatto nero</string>
+    <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Name">Gatto nero</string>
     <string name="BlackCat_Name_Objective">gatto</string>
     <string name="BlackCat_Phrases_0">Prrrrrrr</string>
@@ -2587,6 +2588,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
