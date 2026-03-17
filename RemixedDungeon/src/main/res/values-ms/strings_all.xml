@@ -2178,6 +2178,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndDonate_silverDonateText2">Selain itu dapat lumpuhkan iklan dalam semua mod permainan dan membuka watak pemburu dari awal.</string>
     <string name="WndDontLikeAds_NotThisTime">Bukan sekarang</string>
     <string name="WndError_Title">RALAT</string>
+    <string name="WndFortuneTeller_IdentifyAll">Semua</string>
     <string name="WndFortuneTeller_Instruction">Saya boleh dedahkan rahsia disebalik item, yang awak miliki.\nSekali pengecaman dengan harga %d syiling.</string>
     <string name="WndFortuneTeller_No_Item">Hati-hati, anda tidak perlu belanja perkara yang sia-sia? Tiada item yang tidak dikenalpasti dalam inventori anda.</string>
     <string name="WndFortuneTeller_Title">Penilik-nasib</string>
@@ -2656,6 +2657,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

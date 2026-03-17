@@ -1,13 +1,16 @@
 <resources>
+    <string name="BellaNPC_Message">Eu não tenho interesse em plebeus como você!</string>
     <string name="BlackSkull_Gender">masculine</string>
     <string name="Challenges_Names_5">Nas trevas</string>
     <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
     <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
+    <string name="HeroClass_HunPerks_1">Caçadoras começam com um bumerangue único atualizável.</string>
     <string name="HeroClass_WarPerks_3">Qualquer pedaço de comida restaura um pouco de saúde quando comido.</string>
     <string name="IceGuardian_Name_Objective">guardião de gelo</string>
     <string name="Journal_Alchemy">Caldeirão de alquimia</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
     <string name="PlagueDoctorMaskHood_Info">Um crânio de ébano esculpido, suas órbitas vazias brilhando com o brilho etéreo de gemas de ametista. Cada respiração que você toma sussurra através de um labirinto de tubos e filtros, carregando o aroma de ervas potentes e especiarias que mascaram a decadência que se apega a você. Mas não é apenas a máscara. Um capuz pesado de veludo meia-noite, envolvendo seu rosto e cabeça em sombras. O capuz, como a asa de um corvo, flui pelas suas costas, suas bordas aparadas com uma franja de renda branca como osso, um contraste assustadoramente bonito. Juntos, máscara e capuz criam um viso espectral, um testemunho sombrio da batalha interminável contra as forças da decadência.</string>
+    <string name="Ration_Name">ração de comida</string>
     <string name="Shopkeeper_title">Loja</string>
     <string name="SpiderQueenCarapace_Name">Carapaça da Rainha Aranha</string>
     <string name="StartScene_DifficultyNormalWithSaves">Normal com saves (e propagandas)</string>
@@ -26,6 +29,9 @@
 
 
     <string name="town_deco_floor_name">Chão</string>
+
+
+
 
 
 
