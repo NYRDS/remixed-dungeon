@@ -1131,6 +1131,7 @@ Potrebbe bruciare?</string>
     <string name="ManaPotion_Info">Questa pozione ripristina la tua energia spirituale.</string>
     <string name="ManaPotion_Name">Pozione del Mana</string>
     <string name="ManaRegenerationBuff_Info">La funzione per la rigenerazione del mana è in forma di buff per semplificare le cose.</string>
+    <string name="ManaRegenerationBuff_Name">Rigenerazione Mana</string>
     <string name="ManaShieldBuff_Name">Scudo Magico</string>
     <string name="Mana_Cost">Costo di Mana:</string>
     <string name="Mana_Title">Mana</string>
@@ -2594,6 +2595,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
