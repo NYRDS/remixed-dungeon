@@ -627,6 +627,7 @@
     <string name="Drink_Message">Цей напій так освіжає!</string>
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="Drunkard_Phrase_1">НАЛИЙТЕ МЕНІ ЩЕ!</string>
+    <string name="Drunkard_Phrase_3">Це пиво чи бруд?</string>
     <string name="Dungeon_DeadEnd">Що ти тут робиш?!</string>
     <string name="Dungeon_NoTips">Текст нерозбірливий...</string>
     <string name="Dungeon_Tips_0">Не будь самовпевненим, використовуй доступні для тебе зброю та обладунки.</string>
@@ -2794,6 +2795,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
