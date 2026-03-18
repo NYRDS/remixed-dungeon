@@ -24,6 +24,7 @@
     <string name="Actions_Speed">行动速度等级</string>
     <string name="Affection_Txt">魅惑%s</string>
     <string name="AirElemental_Desc">风元素是由有生命的气体构成的飞行元素生物。</string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">风元素</string>
     <string name="AirElemental_Name_Objective">风元素</string>
     <string name="AlarmTrap_Desc">这个陷阱发出的刺耳声音回荡在地牢中！</string>
@@ -2875,6 +2876,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

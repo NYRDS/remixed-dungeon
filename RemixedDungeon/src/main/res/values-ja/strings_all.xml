@@ -2051,6 +2051,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="StartScene_No">いいえ、メインメニューに戻ります</string>
     <string name="StartScene_Really">本当に新しいゲームを始めたいですか？</string>
     <string name="StartScene_Unlock">このキャラクタークラスをアンロックするには、他のクラスでDM-300を倒す必要があります。</string>
+    <string name="StartScene_UnlockDoctor">プラグドクターをアンロックするには、古いプラグドクターのクエストを完了してください</string>
     <string name="StartScene_UnlockElf">このキャラクタークラスをアンロックするには、他のクラスでキングを倒してください。</string>
     <string name="StartScene_UnlockGnoll">このクラスをアンロックするには、街の司祭を説得してノールブルートを治療する必要があります。</string>
     <string name="StartScene_UnlockNecromancer">このキャラクタークラスをアンロックするには、他のクラスでリッチを倒す必要があります。</string>
@@ -2945,6 +2946,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

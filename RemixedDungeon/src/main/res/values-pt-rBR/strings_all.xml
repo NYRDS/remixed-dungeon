@@ -1845,6 +1845,7 @@ outro local do nível.</string>
     <string name="ShadowsBuff_Info">É mais difícil identificar algo entre as sombras.</string>
     <string name="ShadowsBuff_Name">Sob Sombras</string>
     <string name="ShamanElder_Desc">Este gnoll em particular parece muito mais velho que outros xamãs e certamente tem um status mais alto na tribo. Uma aura estranha se forma lentamente ao seu redor, que parece refletir tudo o que a toca.</string>
+    <string name="ShamanElder_Gender">masculine</string>
     <string name="ShamanElder_Name">xamã ancião</string>
     <string name="ShamanElder_Name_Objective">xamã ancião</string>
     <string name="Shaman_Desc">Os gnolls mais inteligentes podem dominar magia Xamã. Gnolls Xamãs preferem uma batalha de feitiços para compensar a falta de coragem, não hesitando em usá-los sobre aqueles que questionam o seu status na tribo.</string>
@@ -2873,6 +2874,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
