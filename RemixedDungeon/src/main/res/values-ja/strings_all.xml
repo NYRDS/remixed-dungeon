@@ -803,6 +803,7 @@
     <string name="Ghost_Rat2">お願い...助けて...私の代わりにあいつを殺して...</string>
     <string name="Ghost_Rose1">こんにちは、冒険家...かつての私はあなたのように強く、自信に満ちていた...そして死んでしまった...でもここを離れることができない...「乾燥したバラ」を手に入れるまでは...大切なバラなのに...あるモンスターに盗まれてしまった...</string>
     <string name="Ghost_Rose2">お願い...助けて...バラを見つけて...</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Info">棒の先に剣の刃をつけた柄の長い武器。</string>
     <string name="Glaive_Name">グレイブ</string>
     <string name="GnollArmor_ACSpecial">支配</string>
@@ -2946,6 +2947,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

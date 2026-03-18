@@ -3,14 +3,17 @@
     <string name="Bishop_great_bless">Bênção grande - %d g</string>
     <string name="BlackSkull_Gender">masculine</string>
     <string name="Blacksmith_Verify4">Eu não trabalho com itens amaldiçoados!</string>
+    <string name="Challenges_Descriptions_5">A primeira coisa que veio com o mal, foi uma névoa densa e impenetrável, o que torna quase impossível navegar claramente pelos intermináveis corredores da masmorra.</string>
     <string name="Challenges_Descriptions_9">A mais recente \'cura\' do Médico da Peste apagou sua memória espacial. Você não consegue lembrar de nada fora da sua visão direta.</string>
     <string name="Challenges_Names_5">Nas trevas</string>
+    <string name="Crystal_Name">cristal flutuante</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DarkVeilBuff_Info">Um véu de escuridão envolve o portador, invocando um espírito cada vez que dano é recebido.</string>
     <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
     <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
     <string name="GasImmuneBuff_Name">Imunidade a Gases</string>
     <string name="HeroClass_HunPerks_1">Caçadoras começam com um bumerangue único atualizável.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Poções de [yellow:Gás Paralisante] e [yellow:Gás Tóxico] são pré-identificadas.</string>
     <string name="HeroClass_WarPerks_3">Qualquer pedaço de comida restaura um pouco de saúde quando comido.</string>
     <string name="IceGuardian_Name_Objective">guardião de gelo</string>
     <string name="InnServant_Phrase_1">Ui, ainda há muito o que fazer!</string>
@@ -87,6 +90,9 @@
 
 
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
+
+
+
 
 
 

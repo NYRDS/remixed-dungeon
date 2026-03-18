@@ -688,6 +688,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="ElfArmor_Desc">Mit Hilfe dieses Umhangs kann ein Elf die Kräfte der Natur beschwören. Hohes Gras wird in einem Sekundenbruchteil wachsen, sogar massiven Stein durchdringen und Gegner im Sichtfeld bewegungsunfähig machen.</string>
     <string name="ElfArmor_Name">Umhang des Elfen</string>
     <string name="ElfArmor_NotElf">Nur Elfen können diese Rüstung nutzen!</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Ein außergewöhnliches Beispiel der elfischen Handwerkskunst. Es ist eindeutig effektiver und genauer als normale Holzbögen.</string>
     <string name="ElvenBow_Name">Elfenbogen</string>
     <string name="ElvenDagger_Info">Diese Waffe ist aus einer speziellen Metalllegierung, die es viel leichter als einen normalen Dolch macht.</string>
@@ -2864,6 +2865,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
