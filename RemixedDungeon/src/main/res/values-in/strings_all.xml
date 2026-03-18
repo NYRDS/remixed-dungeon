@@ -1962,6 +1962,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpiderQueen_Name">ratu laba-laba</string>
     <string name="SpiderQueen_Name_Objective">ratu laba-laba</string>
     <string name="SpiderServant_Desc">Tentara adalah unit terbanyak di sarang laba-laba. Lahir untuk menjaga wilayahnya. Chelicerae tentara membentuk kelenjar beracun untuk meracuni musuhnya.</string>
+    <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">laba-laba tentara</string>
     <string name="SpiderServant_Name_Objective">laba-laba tentara</string>
     <string name="Spinner_Desc">Laba-laba gua kehijauan berbulu ini mencoba untuk menghindari pertarungan langsung, memilih untuk menunggu agak jauh saat korban mereka, terlilit di dalam jaring laba-laba, perlahan akan mati karena gigitan beracunnya.</string>
@@ -2841,6 +2842,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

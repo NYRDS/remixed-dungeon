@@ -1990,6 +1990,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="TrapWnd_Step">Anda pasti mahu memijak perangkap ini? Berkemungkinan anda boleh mati.</string>
     <string name="TrapWnd_Title">Perangkap</string>
     <string name="TreacherousSpirit_Desc">Makhluk seperti raksaksa ini menyerupai awan hidup kegelapan. Mata yang tidak berkelip memandang anda, berdenyut-denyut bila melihat anda bergerak.</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">Hantu khianat</string>
     <string name="TreacherousSpirit_Name_Objective">Hantu khianat</string>
     <string name="Undead_Defense">disekat</string>
@@ -2658,6 +2659,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
