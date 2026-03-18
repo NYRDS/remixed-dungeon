@@ -679,6 +679,7 @@
     <string name="Facilitations_Descriptions_0">變異者向來遭受蔑視與恐懼，但飢餓感的消失將再次賦予你優勢，這次是在征服地下城深淵之時。</string>
     <string name="Facilitations_Descriptions_2">對大自然作為能量來源進行深入而徹底的研究，將使你在旅程中補充魔法儲備。</string>
     <string name="Facilitations_Descriptions_3">緊緊繫上由食人魔皮革製成、代代相傳的腰帶，你朝著前方的未知邁出一步。</string>
+    <string name="Facilitations_Names_0">無飢餓</string>
     <string name="Fadeleaf_Desc">觸碰到消逝草的任何生物都會被傳送至當前層的一個隨機地點。</string>
     <string name="Fadeleaf_Name">消逝草</string>
     <string name="FetidRat_Desc">這只有袋的老鼠比通常的更大。他身邊圍繞著一圈惡臭雲霧。</string>
@@ -2790,6 +2791,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -846,7 +846,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HealerNPC_Name_Objective">Padre da cidade</string>
     <string name="Healing_Info">O pergaminho é crucial para todos os aventureiros. Ele pode restaurar 1/3 do máximo do hp dos conjuradores.</string>
     <string name="Healing_Name">Cura</string>
-    <string name="HealthArrow_Info">A ponta dessa flecha está coberta com poção de cura.</string>
+    <string name="HealthArrow_Info">A ponta desta flecha está coberta com poção de cura.</string>
     <string name="HealthArrow_Name">Flecha de Cura</string>
     <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">A ponta desse dardo está coberta com poção de cura.</string>
@@ -1583,7 +1583,7 @@ Parede
     <string name="RatKingCrown_Info">Coroa dourada de Sua Ralteza, símbolo do poder peratente</string>
     <string name="RatKingCrown_Name">Coroa do Rei Rato</string>
     <string name="RatKing_Desc">Este rato é um pouco maior do que um rato marsupial normal e ele está usando uma pequena coroa em sua cabeça.</string>
-    <string name="RatKing_Died">O Rei morreu. Vida Longa ao Rei!</string>
+    <string name="RatKing_Died">O Rei está morto. Longa vida ao Rei!</string>
     <string name="RatKing_Info1">Eu não estou dormindo!</string>
     <string name="RatKing_Info2">O que é isso? Eu não tenho tempo para essa bobagem. O meu reino não vai se governar sozinho!</string>
     <string name="RatKing_Info3">Como ousa, criatura franzina, perturbar Nossa Ratoeza?</string>
@@ -1979,6 +1979,7 @@ outro local do nível.</string>
     <string name="Spinner_Name">aranha da caverna</string>
     <string name="Spinner_Name_Objective">aranha da caverna</string>
     <string name="SpiritOfPain_Desc">Um fragmento de pura escuridão.</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">espírito da dor</string>
     <string name="SpiritOfPain_Name_Objective">espírito da dor</string>
     <string name="Sprout_Info">Desperte as sementes adormecidas.\nNo entanto, deve haver alguma vegetação no chão para que este feitiço tenha sucesso.</string>
@@ -2872,6 +2873,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 
