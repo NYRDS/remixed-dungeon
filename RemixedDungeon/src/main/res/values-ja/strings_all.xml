@@ -1765,6 +1765,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Rudolph_Info">赤く輝く鼻ほどおめでたいものがあるだろうか？もちろん、角も一緒で。</string>
     <string name="Rudolph_Name">赤い鼻と角</string>
     <string name="RunicSkull_Desc">人工的に作られたものにしては、この頭蓋骨はあまりにも本物に似ている。周囲にかすかな輝きも見える。</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">ルーンが刻まれた頭蓋骨</string>
     <string name="RunicSkull_Name_Objective">ルーンが刻まれた頭蓋骨</string>
     <string name="SacrificialSword_Info">一見したところ、この年季の入った青銅の剣は、古サビの汚れに覆われ、まったく使い物にならないように見える。しかし、その内部にはある種の古めかしい力が眠っている。その力は、ほとんどの生き物を意志なき奴隷に変えることができる。ただ、それを目覚めさせる正しい方法を見つける必要があるだけなのだ...</string>
@@ -2944,6 +2945,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

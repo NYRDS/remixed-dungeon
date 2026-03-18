@@ -843,6 +843,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Guts_TileGrass">Verdorrter Strauch</string>
     <string name="Guts_TileHighGrass">Verdorrter Strauch</string>
     <string name="Guts_TileWater">Seltsame, schleimige Flüssigkeit</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">Ein Stab, der eine Axt an einem Ende besitzt</string>
     <string name="Halberd_Name">Hellebarde</string>
     <string name="Halls_TileDescBookshelf">Bücher in verschiedenen Sprachen vermodern im Bücherregal.</string>
@@ -2863,6 +2864,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
