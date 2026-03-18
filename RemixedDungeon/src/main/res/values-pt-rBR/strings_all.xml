@@ -887,6 +887,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HeroClass_MagPerks_4">Magos usam mana para lançar feitiços Elementais.</string>
     <string name="HeroClass_MagPerks_5">Pergaminhos de Identificação são identificados desde o início.</string>
     <string name="HeroClass_Necromancer">necromante</string>
+    <string name="HeroClass_NecromancerPerks_0">Necromantes começam com 15 pontos de vida.</string>
     <string name="HeroClass_NecromancerPerks_1">Necromantes possuem um recurso único \&quot;almas\&quot;, usadas para conjurar feitiços. Cada monstro morto concede uma alma.</string>
     <string name="HeroClass_NecromancerPerks_2">Necromantes começam com o manto do Necromante.</string>
     <string name="HeroClass_NecromancerPerks_3">Necromantes começam com a chave esqueleto do nível 7.</string>
@@ -2874,6 +2875,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

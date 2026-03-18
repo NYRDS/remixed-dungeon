@@ -1870,6 +1870,7 @@
     <string name="ShamanElder_Name">年长的萨满</string>
     <string name="ShamanElder_Name_Objective">年长的萨满</string>
     <string name="Shaman_Desc">只有那些最聪明的豺狼人才能掌握萨满魔法。豺狼萨满更喜欢用战斗咒语来弥补力量上的不足。任何敢于质疑它们在部落里地位的人都会被萨满用法术毫不留情地消灭。</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">%s的闪电杀死了你……</string>
     <string name="Shaman_Name">豺狼萨满</string>
     <string name="Shaman_Name_Objective">豺狼萨满</string>
@@ -2876,6 +2877,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
