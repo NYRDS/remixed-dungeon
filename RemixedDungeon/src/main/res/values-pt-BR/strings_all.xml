@@ -2,6 +2,7 @@
     <string name="BellaNPC_Message">Eu não tenho interesse em plebeus como você!</string>
     <string name="Bishop_great_bless">Bênção grande - %d g</string>
     <string name="BlackSkull_Gender">masculine</string>
+    <string name="Blacksmith_Verify4">Eu não trabalho com itens amaldiçoados!</string>
     <string name="Challenges_Names_5">Nas trevas</string>
     <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
     <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
@@ -11,7 +12,9 @@
     <string name="IceGuardian_Name_Objective">guardião de gelo</string>
     <string name="Journal_Alchemy">Caldeirão de alquimia</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
+    <string name="MobAi_status">Este %1$s é %2$s</string>
     <string name="PlagueDoctorMaskHood_Info">Um crânio de ébano esculpido, suas órbitas vazias brilhando com o brilho etéreo de gemas de ametista. Cada respiração que você toma sussurra através de um labirinto de tubos e filtros, carregando o aroma de ervas potentes e especiarias que mascaram a decadência que se apega a você. Mas não é apenas a máscara. Um capuz pesado de veludo meia-noite, envolvendo seu rosto e cabeça em sombras. O capuz, como a asa de um corvo, flui pelas suas costas, suas bordas aparadas com uma franja de renda branca como osso, um contraste assustadoramente bonito. Juntos, máscara e capuz criam um viso espectral, um testemunho sombrio da batalha interminável contra as forças da decadência.</string>
+    <string name="PotionOfPurity_Freshness">Você sente um frescor incomum no ar.</string>
     <string name="Potion_Colors_12">epidoto</string>
     <string name="Ration_Name">ração de comida</string>
     <string name="ShieldBuffNotReady_Name">Escudo não está pronto</string>
@@ -39,6 +42,9 @@
 
 
     <string name="town_deco_floor_name">Chão</string>
+
+
+
 
 
 

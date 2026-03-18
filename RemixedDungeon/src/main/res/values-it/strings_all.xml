@@ -2202,6 +2202,7 @@ Potrebbe bruciare?</string>
     <string name="WndHero_StaJournal">Diario</string>
     <string name="WndHero_StaTitle">Livello %1$d %2$s</string>
     <string name="WndHero_Stats">Statistiche</string>
+    <string name="WndHero_Stealth">Furtività</string>
     <string name="WndHero_Str">Forza</string>
     <string name="WndImp_Message">Oh, si! Sei il mio eroe! 
 Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di meglio per te. Questo è il cimelio della mia famiglia: mio nonno raccolse questo anello dal dito di un paladino morto. </string>
@@ -2590,6 +2591,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

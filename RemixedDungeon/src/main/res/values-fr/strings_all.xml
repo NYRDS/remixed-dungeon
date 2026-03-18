@@ -13,6 +13,7 @@
     <string name="AboutScene_OurSite">Notre site :</string>
     <string name="AboutScene_Snd">Envoyer un E-Mail</string>
     <string name="AboutScene_Sound">Sons :</string>
+    <string name="AboutScene_SourceCode">Obtenir le code source de Remixed Dungeon :</string>
     <string name="AboutScene_Thanks">Remerciements spéciaux à : </string>
     <string name="AboutScene_Translation">Localisé par :</string>
     <string name="AboutScene_Translation_Names">Rémi Schneider &amp;amp; Emmanuel Dempuré &amp;amp; Bastien PIXEL&amp;amp; Nikolay &amp;amp; Clément Tetu &amp;amp; Tib de Bar &amp;amp; Laurent Stehlin &amp;amp; Corvus06</string>
@@ -2986,6 +2987,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
