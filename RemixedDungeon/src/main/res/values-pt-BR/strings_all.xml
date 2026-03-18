@@ -3,6 +3,7 @@
     <string name="Bishop_great_bless">Bênção grande - %d g</string>
     <string name="BlackSkull_Gender">masculine</string>
     <string name="Blacksmith_Verify4">Eu não trabalho com itens amaldiçoados!</string>
+    <string name="Carcass_Kick">Este %s está totalmente morto, não precisa chutá-lo.</string>
     <string name="Challenges_Descriptions_5">A primeira coisa que veio com o mal, foi uma névoa densa e impenetrável, o que torna quase impossível navegar claramente pelos intermináveis corredores da masmorra.</string>
     <string name="Challenges_Descriptions_9">A mais recente \'cura\' do Médico da Peste apagou sua memória espacial. Você não consegue lembrar de nada fora da sua visão direta.</string>
     <string name="Challenges_Names_5">Nas trevas</string>
@@ -35,6 +36,7 @@
     <string name="SungrassBuff_Name">Cura Herbal</string>
     <string name="TownShopkeeper_Objective">comerciante</string>
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Permite carregar compactamente até %d varinhas.</string>
+    <string name="WandOfDisintegration_Info">Esta varinha emite um feixe de energia destrutiva, que penetra em todas as criaturas no seu caminho. Quanto mais alvos ela atinge, mais dano causará a cada um deles.</string>
     <string name="WndCatalogus_Scrolls">Pergaminhos</string>
     <string name="WndChallenges_Title">Desafios</string>
     <string name="WndCryptoDonate_supportDev">Apoiar o Desenvolvedor</string>
@@ -90,6 +92,8 @@
 
 
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
+
+
 
 
 
