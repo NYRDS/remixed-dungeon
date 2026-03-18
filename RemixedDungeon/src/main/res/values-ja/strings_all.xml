@@ -604,6 +604,7 @@
     <string name="Deathling_Name">デスリング</string>
     <string name="Deathling_Name_Objective">デスリング</string>
     <string name="DeepSnail_Desc">この種の軟体動物は水源付近でよく見かけるが、普通のカタツムリよりもはるかに足が速い。さらに、噛まれると皮膚に不快な影響を与えるので注意しよう。</string>
+    <string name="DeepSnail_Gender">masculine</string>
     <string name="DeepSnail_Name">深層カタツムリ</string>
     <string name="DeepSnail_Name_Objective">深層カタツムリ</string>
     <string name="DeferedDamageBuff_Info">痛みが鈍り、一度に受けるダメージが減った。残されたダメージ%d</string>
@@ -2943,6 +2944,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

@@ -35,6 +35,7 @@
 
     <string name="WndModsDisclaimer_manage">Gerenciar lista de mods</string>
     <string name="WndPortal_Info">Este portal permitirá que você volte para a cidade. Parece bastante instável, provavelmente não estará ativo por muito tempo.\nVocê gostaria de usá-lo?</string>
+    <string name="WndPremiumSettings_std">padrão</string>
     <string name="WndTradeItem_Sell">Vender por %dg</string>
     <string name="ZombieGnoll_Desc">O corpo torcido e quebrado de um Gnoll-Zumbi já não se parece com humanoide ou hiena. É apenas um monte de carne podre e ossos cheios de desejo maligno de matar e comer.</string>
     <string name="town_deco_INN_sign_desc">Parece que há uma estalagem dentro daquele edifício.</string>
@@ -42,6 +43,7 @@
 
 
     <string name="town_deco_floor_name">Chão</string>
+
 
 
 
