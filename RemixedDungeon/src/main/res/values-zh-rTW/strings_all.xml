@@ -1248,6 +1248,7 @@
     <string name="MimicPie_Name">擬形怪</string>
     <string name="MimicPie_Name_Objective">擬形怪</string>
     <string name="Mimic_Desc">擬形怪是一種能夠變成任何形態的魔法生物。在地牢裏它們幾乎一直以寶箱形態出現，因為它們明白怎樣才能引誘到到冒險者。</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">擬形怪</string>
     <string name="Mimic_Name_Objective">擬形怪</string>
     <string name="MindVisionBuff_Info">內心的異象讓你能清楚看見樓層上所有生物的移動。</string>
@@ -2792,6 +2793,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
