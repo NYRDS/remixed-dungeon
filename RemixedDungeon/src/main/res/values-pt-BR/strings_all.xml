@@ -1,4 +1,5 @@
 <resources>
+    <string name="AirElemental_Desc">Elementais de ar são seres mágicos voadores feitos de ar vivo.</string>
     <string name="BellaNPC_Message">Eu não tenho interesse em plebeus como você!</string>
     <string name="Bishop_great_bless">Bênção grande - %d g</string>
     <string name="BlackSkull_Gender">masculine</string>
@@ -12,6 +13,7 @@
     <string name="DarkVeilBuff_Info">Um véu de escuridão envolve o portador, invocando um espírito cada vez que dano é recebido.</string>
     <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
     <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
+    <string name="GasImmuneBuff_Info">Imune a todos os gases.</string>
     <string name="GasImmuneBuff_Name">Imunidade a Gases</string>
     <string name="HeroClass_HunPerks_1">Caçadoras começam com um bumerangue único atualizável.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Poções de [yellow:Gás Paralisante] e [yellow:Gás Tóxico] são pré-identificadas.</string>
@@ -27,6 +29,7 @@
     <string name="PotionOfPurity_Freshness">Você sente um frescor incomum no ar.</string>
     <string name="Potion_Colors_12">epidoto</string>
     <string name="Ration_Name">ração de comida</string>
+    <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="ShieldBuffNotReady_Name">Escudo não está pronto</string>
     <string name="Shopkeeper_title">Loja</string>
     <string name="Skeleton_Desc">Esqueletos são compostos de ossos de cadáveres de aventureiros azarados e moradores da masmorra, animados por emanações de magia negra das profundezas abaixo. Depois de terem sido danificados o suficiente, eles se desintegram em uma explosão de ossos.</string>
@@ -56,6 +59,7 @@
 
 
 
+    <string name="town_deco_book_name">Livro</string>
     <string name="town_deco_crate_name">Caixa</string>
     <string name="town_deco_floor_name">Chão</string>
 
@@ -93,6 +97,10 @@
 
 
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
+
+
+
+
 
 
 

@@ -725,6 +725,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="GameScene_Water">Vízcsobogást hallasz magad körül.</string>
     <string name="GameScene_Welcome">Üdvözöl a Pixel Dungeon %d. szintje!</string>
     <string name="GameScene_WelcomeBack">Újra üdvözöl a Pixel Dungeon %d. szintje!</string>
+    <string name="GasImmuneBuff_Info">Minden gázzal szemben immúnis.</string>
     <string name="GasImmuneBuff_Name">Gázimmunitás</string>
     <string name="Ghost_Defense">kikerülve</string>
     <string name="Ghost_Desc">A szellem épphogy látszik. Úgy néz ki mint egy alaktalan halvány folt egy bánatos arccal.</string>
@@ -2692,6 +2693,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
