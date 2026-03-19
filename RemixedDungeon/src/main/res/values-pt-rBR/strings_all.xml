@@ -601,7 +601,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DieHardSpell_Name">Duro de Matar</string>
     <string name="Displacement_Txt">%s de deslocamento</string>
     <string name="DogeMask_Info">Você já quis se disfarçar como o famoso Doge? Agora é sua chance!n\Esta máscara! Muitos disfarces! Uau!</string>
-    <string name="DogeMask_Name">Máscara de Doge</string>
+    <string name="DogeMask_Name">Máscara Doge</string>
     <string name="DonateButton_pleaseDonate">Por favor, considere doar</string>
     <string name="DonateButton_thanks">Obrigado pelo seu apoio!</string>
     <string name="DreadKnight_Desc">Um cavaleiro temido é um antigo guerreiro, que jamais foi justo ou bondoso em toda a sua vida.  Por causa dos seus pecados ele foi amaldiçoado à ser um morto-vivo pela eternidade. E, a todo momento de sua existência, ele é atormentado com a dor e o sofrimento daqueles que foram suas vítimas.</string>
@@ -2875,6 +2875,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
