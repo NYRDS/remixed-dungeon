@@ -8,6 +8,7 @@
     <string name="Challenges_Descriptions_5">A primeira coisa que veio com o mal, foi uma névoa densa e impenetrável, o que torna quase impossível navegar claramente pelos intermináveis corredores da masmorra.</string>
     <string name="Challenges_Descriptions_9">A mais recente \'cura\' do Médico da Peste apagou sua memória espacial. Você não consegue lembrar de nada fora da sua visão direta.</string>
     <string name="Challenges_Names_5">Nas trevas</string>
+    <string name="CorpseDustBuff_Name">Sangrento</string>
     <string name="Crystal_Name">cristal flutuante</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DarkVeilBuff_Info">Um véu de escuridão envolve o portador, invocando um espírito cada vez que dano é recebido.</string>
@@ -24,6 +25,7 @@
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
     <string name="LibraryBook_Name">Livro da biblioteca</string>
     <string name="MobAi_status">Este %1$s é %2$s</string>
+    <string name="Paralysis_Name_2">%s do Atordoamento</string>
     <string name="PlagueDoctorMaskHood_Info">Um crânio de ébano esculpido, suas órbitas vazias brilhando com o brilho etéreo de gemas de ametista. Cada respiração que você toma sussurra através de um labirinto de tubos e filtros, carregando o aroma de ervas potentes e especiarias que mascaram a decadência que se apega a você. Mas não é apenas a máscara. Um capuz pesado de veludo meia-noite, envolvendo seu rosto e cabeça em sombras. O capuz, como a asa de um corvo, flui pelas suas costas, suas bordas aparadas com uma franja de renda branca como osso, um contraste assustadoramente bonito. Juntos, máscara e capuz criam um viso espectral, um testemunho sombrio da batalha interminável contra as forças da decadência.</string>
     <string name="Poison_Name_0">%s Venenosa</string>
     <string name="PotionOfPurity_Freshness">Você sente um frescor incomum no ar.</string>
@@ -37,6 +39,7 @@
     <string name="SpiderQueenCarapace_Name">Carapaça da Rainha Aranha</string>
     <string name="StartScene_DifficultyNormalWithSaves">Normal com saves (e propagandas)</string>
     <string name="SungrassBuff_Name">Cura Herbal</string>
+    <string name="Thief_Desc">Níveis mais profundos da masmorra sempre foram um esconderijo para todos os tipos de criminosos. Nem todos eles poderiam manter uma mente clara durante os longos períodos longe de luz do dia. Há muito tempo, esses ladrões loucos e bandidos se esqueceram quem são e por que eles roubam.</string>
     <string name="TownShopkeeper_Objective">comerciante</string>
     <string name="TownsfolkMovieNPC_Desc">Um dos moradores. Embora seja claramente um plebeu, aquelas roupas parecem caras.</string>
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Permite carregar compactamente até %d varinhas.</string>
@@ -97,6 +100,9 @@
 
 
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
+
+
+
 
 
 
