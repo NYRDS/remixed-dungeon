@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AirElemental_Desc">Elementais de ar são seres mágicos voadores feitos de ar vivo.</string>
     <string name="BellaNPC_Message">Eu não tenho interesse em plebeus como você!</string>
@@ -26,6 +27,7 @@
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
     <string name="LibraryBook_Name">Livro da biblioteca</string>
     <string name="MobAi_status">Este %1$s é %2$s</string>
+    <string name="No_Valid_Cell">Não há uma célula adequada por perto.</string>
     <string name="Paralysis_Name_2">%s do Atordoamento</string>
     <string name="PlagueDoctorMaskHood_Info">Um crânio de ébano esculpido, suas órbitas vazias brilhando com o brilho etéreo de gemas de ametista. Cada respiração que você toma sussurra através de um labirinto de tubos e filtros, carregando o aroma de ervas potentes e especiarias que mascaram a decadência que se apega a você. Mas não é apenas a máscara. Um capuz pesado de veludo meia-noite, envolvendo seu rosto e cabeça em sombras. O capuz, como a asa de um corvo, flui pelas suas costas, suas bordas aparadas com uma franja de renda branca como osso, um contraste assustadoramente bonito. Juntos, máscara e capuz criam um viso espectral, um testemunho sombrio da batalha interminável contra as forças da decadência.</string>
     <string name="Poison_Name_0">%s Venenosa</string>
@@ -33,6 +35,7 @@
     <string name="Potion_Colors_12">epidoto</string>
     <string name="Ration_Name">ração de comida</string>
     <string name="RawFish_Taste">Gosto de peixe!</string>
+    <string name="Scroll_Name">pergaminho \"%s\"</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="ShieldBuffNotReady_Name">Escudo não está pronto</string>
     <string name="Shopkeeper_title">Loja</string>
@@ -103,5 +106,7 @@
 
 
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
+
+
 
 </resources>
