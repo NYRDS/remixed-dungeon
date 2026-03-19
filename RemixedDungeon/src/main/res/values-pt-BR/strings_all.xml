@@ -31,6 +31,7 @@
     <string name="PotionOfPurity_Freshness">Você sente um frescor incomum no ar.</string>
     <string name="Potion_Colors_12">epidoto</string>
     <string name="Ration_Name">ração de comida</string>
+    <string name="RawFish_Taste">Gosto de peixe!</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="ShieldBuffNotReady_Name">Escudo não está pronto</string>
     <string name="Shopkeeper_title">Loja</string>
@@ -44,6 +45,7 @@
     <string name="TownsfolkMovieNPC_Desc">Um dos moradores. Embora seja claramente um plebeu, aquelas roupas parecem caras.</string>
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Permite carregar compactamente até %d varinhas.</string>
     <string name="WandOfDisintegration_Info">Esta varinha emite um feixe de energia destrutiva, que penetra em todas as criaturas no seu caminho. Quanto mais alvos ela atinge, mais dano causará a cada um deles.</string>
+    <string name="Wand_SelfTarget">Você não pode mirar em si mesmo.</string>
     <string name="WndCatalogus_Scrolls">Pergaminhos</string>
     <string name="WndChallenges_Title">Desafios</string>
     <string name="WndCryptoDonate_supportDev">Apoiar o Desenvolvedor</string>
@@ -100,22 +102,4 @@
 
 
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

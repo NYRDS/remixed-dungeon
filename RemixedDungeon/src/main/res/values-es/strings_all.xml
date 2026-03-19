@@ -910,6 +910,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="HeroClass_MagPerks_4">Los magos usan mana para conjurar hechizos elementales.</string>
     <string name="HeroClass_MagPerks_5">Los pergaminos de identificación son reconocidos desde el principio.</string>
     <string name="HeroClass_Necromancer">nigromante</string>
+    <string name="HeroClass_NecromancerPerks_0">Los nigromantes comienzan con 15 puntos de vida.</string>
     <string name="HeroClass_NecromancerPerks_1">Los nigromantes usan maná para lanzar hechizos de muerte.</string>
     <string name="HeroClass_NecromancerPerks_2">Los nigromantes comienzan con una túnica de nigromante, que otorga 1 punto de maná por cada criatura muerta.</string>
     <string name="HeroClass_NecromancerPerks_3">Los nigromantes comienzan con una llave esqueleto para el nivel 7.</string>
@@ -2898,14 +2899,4 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
-
-
-
-
-
-
-
-
-
-
 </resources>
