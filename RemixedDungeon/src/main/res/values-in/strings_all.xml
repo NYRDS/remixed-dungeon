@@ -284,6 +284,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="BlessedBuff_Name">diberkati</string>
     <string name="BlindnessBuff_Info">Benar-benar buta, hanya suara di sekitar yang bisa didengar.</string>
     <string name="BlindnessBuff_Name">Buta</string>
+    <string name="BloodTransfusion_Name">Transfusi Darah</string>
     <string name="BodyArmorBuff_Info">Armor ditingkatkan dengan mengorbankan kecepatan gerakan.</string>
     <string name="BodyArmorBuff_Name">Pelindung Tubuh</string>
     <string name="BodyArmorSpell_Info">Mengaktifkan kekuatan otot yang dicadangkan, membuatnya lebih kuat untuk sementara, ini sangat meningkatkan armor Anda tetapi dengan mengorbankan kecepatan gerakan.</string>
@@ -2842,6 +2843,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
