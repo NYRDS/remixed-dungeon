@@ -554,6 +554,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="CorpseExplosion_Name">Leichenexplosion</string>
     <string name="Crab_Defense">parriert</string>
     <string name="Crab_Desc">Diese riesigen Krabben stehen in den Abwasserkanälen an der Spitze der Nahrungskette. Sie sind extrem schnell und ihr dicker Panzer kann selbst schwere Schläge aushalten.</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">Kanalkrabbe</string>
     <string name="Crab_Name_Objective">Kanalkrabbe</string>
     <string name="CrippleBuff_Info">Der Körper ist verkrüppelt, aber der Kampf geht weiter.</string>
@@ -2867,6 +2868,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

@@ -50,6 +50,7 @@
     <string name="Amulet_Info">L\' Amuleto di Yendor è il più potente artefatto conosciuto di origini ignote. Si dice che l\'amuleto sia in grado di esaudire qualunque desiderio se la forza di volontà del suo proprietario è forte abbastanza da \&quot;persuaderlo\&quot; a farlo.</string>
     <string name="Amulet_Name">Amuleto di Yendor </string>
     <string name="AnesthesiaBuff_Info">Non sente dolore e non si sveglia dagli attacchi, ma subisce comunque danni.</string>
+    <string name="AnesthesiaBuff_Name">Anestesia</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">Questo antico simbolo di immortalità garantisce una capacità di tornare in vita dopo la morte. Al momento della risurrezione tutti gli oggetti non equipaggiati andranno persi.</string>
     <string name="Ankh_Name">Ankh</string>
@@ -288,6 +289,7 @@
     <string name="Calm_Info">Ci sono molte creature aggravate in giro, aiutiamole.</string>
     <string name="CandleOfMindVision_Info">Sembra una candela normale, niente che ti aspetteresti di trovare in una pericolosa sottoterra. Stranamente è piuttosto calda al tatto, nonostante non sia ancora stata accesa.</string>
     <string name="CandleOfMindVision_Info_Lighted">La candela si è accesa nel momento in cui l\'hai tirata fuori dallo zaino. La fiamma emana una debole luce viola, e mentre la guardi attraverso di essa, tutti i mostri vicini diventano visibili.</string>
+    <string name="CandleOfMindVision_Name">Candela delle Visioni</string>
     <string name="Candy_Info">Questa caramella sembra davvero bella e il suo odore è altrettanto buono. Vuoi davvero lasciarla a qualcun\'altro?</string>
     <string name="Candy_Name">caramella</string>
     <string name="Candy_Warning_2">Ora hai davvero esagerato. La tua pancia fa male perché hai mangiato troppe caramelle.</string>
@@ -885,6 +887,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Horror_Name_1">Soprannaturale %s</string>
     <string name="Horror_Name_2">Soprannaturale %s</string>
     <string name="HungerBuff_Info1">Hai fame!</string>
+    <string name="HungerBuff_Info2">Stai morendo di fame! Devi mangiare!</string>
     <string name="HungerBuff_Name1">Affamato</string>
     <string name="HungerBuff_Name2">Morendo di fame</string>
     <string name="Hunger_Death">Sei morto di fame...</string>
@@ -1409,6 +1412,7 @@ Potrebbe bruciare?</string>
     <string name="Potion_Colors_1">crimson</string>
     <string name="Potion_Colors_10">indaco</string>
     <string name="Potion_Colors_11">argento</string>
+    <string name="Potion_Colors_12">epidoto</string>
     <string name="Potion_Colors_13">quarzo</string>
     <string name="Potion_Colors_14">onice</string>
     <string name="Potion_Colors_15">perla</string>
@@ -2599,6 +2603,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 
