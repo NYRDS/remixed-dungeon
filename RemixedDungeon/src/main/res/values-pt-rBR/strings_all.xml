@@ -184,6 +184,7 @@
     <string name="Badges_Yog_Slain">Matador do Yog-Dzewa</string>
     <string name="Bag_ACOpen">ABRIR</string>
     <string name="Bandit_Desc">Níveis mais profundos da masmorra sempre foram um esconderijo para todos os tipos de criminosos. Nem todos eles poderiam manter uma mente clara durante os longos períodos longe de luz do dia. Há muito tempo, esses ladrões loucos e bandidos se esqueceram quem são e por que eles roubam. Este bandido parece ter revestido o punhal com alguma coisa!</string>
+    <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">bandido maluco</string>
     <string name="Bandit_Name_Objective">bandido louco</string>
     <string name="BardNPC_Desc">O bardo da cidade está tocando seu alaúde.</string>
@@ -220,6 +221,7 @@
     <string name="Belongings_CantWearBoth">Você não pode equipar %1$s e %2$s ao mesmo tempo!</string>
     <string name="Belongings_Name">mochila</string>
     <string name="BishopNPC_Desc">Bispo da Santa Igreja do Papai Noel, o Senhor das Profundezas</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Bispo</string>
     <string name="BishopNPC_Name_Objective">Bispo</string>
     <string name="Bishop_bye">Eu rezarei por você, meu filho.</string>
@@ -672,6 +674,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="ElvenDagger_Info">Esta arma é feita de liga de metálica especial, tornando-a muito mais leve em comparação a uma adaga comum.</string>
     <string name="ElvenDagger_Name">adaga élfica </string>
     <string name="EncumbranceBuff_CharAct_3">Preciso trabalhar na minha força antes de poder usar %s.</string>
+    <string name="EncumbranceBuff_CharAct_5">%s é demais para eu lidar agora.</string>
     <string name="EncumbranceBuff_Info">Não há força suficiente para usar %s de forma eficaz.</string>
     <string name="EncumbranceBuff_Name">Fardo</string>
     <string name="EnslavedSoul_Desc">Você quase pode ver através desta aparição fantasmagórica. Mesmo que pareça um crânio, às vezes, por uma fração de segundo, pode-se ver que um rosto aparece, um rosto cheio de sofrimento e dor.</string>
@@ -1096,6 +1099,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="King_Info3">Como se atreve!</string>
     <string name="King_Name">Rei dos Anões</string>
     <string name="King_Name_Objective">Rei dos Anões</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Info">Também conhecido por Soqueira, é uma peça de ferro com formato específico para colocar em seus dedos.</string>
     <string name="Knuckles_Name">Soco Inglês</string>
     <string name="KoboldIcemancer_Desc">Kobold magos do gelo eram a elite da sua sociedade. Guerreiros, magos e cientistas importantes. Magos do gelo antigo, dominam a arte de moldar o gelo, criando mecanismos sofisticados de gelo e os reforçando com magia.</string>
@@ -1278,6 +1282,7 @@ Parede
     <string name="MimicPie_Name">imitação</string>
     <string name="MimicPie_Name_Objective">imitação</string>
     <string name="Mimic_Desc">Imitações são criaturas mágicas que pode assumir qualquer forma que desejarem. Em masmorras eles quase sempre escolher a forma de um baú do tesouro, porque eles sabem como atrair aventureiros.</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">imitação</string>
     <string name="Mimic_Name_Objective">imitação</string>
     <string name="MindVisionBuff_Info">A visão interior permite ver claramente o movimento de todos os seres vivos no chão.</string>
@@ -1412,6 +1417,7 @@ Parede
     <string name="Piercing_Name_1">%s Perfurante</string>
     <string name="Piercing_Name_2">%s Perfurante</string>
     <string name="Piranha_Desc">Estes peixes carnívoros não são habitantes naturais de poços subterrâneos. Eles foram criados especificamente para proteger cofres do tesouro alagadas.</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">piranha gigante</string>
     <string name="Piranha_Name_Objective">piranha gigante</string>
     <string name="PirateSet_Info">Arr! Você se sente como um amigo ... ou você é apenas um maldito latifundiário !? Espero que não, essas coisas são para piratas depois de tudo, quero dizer ... Arr!</string>
@@ -1429,6 +1435,7 @@ Parede
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, você voltou! _Cinco ratos mortos_, perfeito! Seus couros serão cruciais para minha pesquisa. E como prometido, pelo seu esforço valente, eu fiz esta armadura para você a partir de suas próprias peles. Está imbuída com um toque da praga, mas não se preocupe! É controlada, ela protege! Agora vá! Proteja a cidade!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Traga-me _cinco ratos mortos_! Cada rato que você me trouxer nos aproxima mais do entendimento dessa praga horrível.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">_Dez caracóis_, dez sussurros do abismo! Seu muco será analisado, sua essência será minuciosamente examinada. Os segredos que eles guardam estão ao alcance.</string>
+    <string name="PlagueDoctorQuest_1_2_Prologue"> *Tosse violentamente* Atchim!\n _Os caracóis_… eles deslizam. Eles exsudam. E sussurram segredos de uma era esquecida. Preciso deles, _dez_ deles, suas conchas ainda intactas. Você acha que meras _cinquenta moedas de ouro_ são suficientes para um conhecimento tão precioso?\n Bah! Não importa. A informação que eles guardam pode ser a chave para deter esta praga. Ou… pode nos levar a algo ainda mais terrível. Você decide.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Procure pela _moongrace_, onde a escuridão encontra o mais fraco brilho da luz da lua. _Duas sementes_, sua essência, revelarão segredos ocultos.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Duas sementes de grama-solar_. Suas pétalas douradas guardam um poder que busco compreender. Encontre-as, e que sua essência seja revelada!</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">Ah, _grama-solar_! Uma flor delicada, cujas pétalas irradiam o calor do sol. Acredito que sua essência contém a chave para... ah, esqueça os detalhes por enquanto. Basta dizer que é crucial para minha pesquisa. _Duas sementes de grama-solar_. Traga-as para mim, e eu recompensarei você com algo que certamente será útil em suas aventuras - uma _Poção de Saúde_, transbordando com a própria vitalidade do sol.</string>
@@ -2600,6 +2607,7 @@ remix.31.1\n
     <string name="Yog_Name">Yog-Dzewa</string>
     <string name="Yog_Name_Objective">Yog-Dzewa</string>
     <string name="YogsBrain_Desc">Cérebro de Yog-Dzewa. Fonte de todo mal que jamais saiu da masmorra.</string>
+    <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name">Cérebro de Yog</string>
     <string name="YogsBrain_Name_Objective">Cérebro de Yog</string>
     <string name="YogsEye_Desc">O olho do Deus Antigo, com o olhar preenchido de ódio eterno. Você pode sentir isso ver através de sua alma.</string>
@@ -2876,6 +2884,14 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
+
 
 
 
