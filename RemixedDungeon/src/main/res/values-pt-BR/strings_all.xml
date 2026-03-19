@@ -16,6 +16,7 @@
     <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
     <string name="GasImmuneBuff_Info">Imune a todos os gases.</string>
     <string name="GasImmuneBuff_Name">Imunidade a Gases</string>
+    <string name="Halberd_Info">Uma arma de haste consistindo em um machado na ponta de uma haste.</string>
     <string name="HeroClass_HunPerks_1">Caçadoras começam com um bumerangue único atualizável.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Poções de [yellow:Gás Paralisante] e [yellow:Gás Tóxico] são pré-identificadas.</string>
     <string name="HeroClass_WarPerks_3">Qualquer pedaço de comida restaura um pouco de saúde quando comido.</string>
@@ -102,4 +103,5 @@
 
 
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
+
 </resources>
