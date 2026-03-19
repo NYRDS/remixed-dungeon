@@ -427,7 +427,7 @@
     <string name="Char_StaRooted">enraizado</string>
     <string name="Char_StaSlowed">lento</string>
     <string name="Char_StaStunned">atordoado</string>
-    <string name="Char_StaVision">mental</string>
+    <string name="Char_StaVision">visão</string>
     <string name="Char_Stole_0">%1$s roubou %2$s de  %3$s!</string>
     <string name="Char_Stole_1">%1$s roubou %2$s de  %3$s!</string>
     <string name="Char_Stole_2">%1$s roubou %2$s de  %3$s!</string>
@@ -2265,7 +2265,7 @@ outro local do nível.</string>
     <string name="Weightstone_ACApply">APLICAR</string>
     <string name="Weightstone_Accurate">você balanceou %s para torná-la mais precisa</string>
     <string name="Weightstone_Fast">você balanceou %s para torná-la mais rápida</string>
-    <string name="Weightstone_Info">Usando uma pedra de amolar você pode balancear uma arma corpo a corpo para aumentar sua velocidade ou precisão.</string>
+    <string name="Weightstone_Info">Usando uma pedra de peso, você pode equilibrar sua arma corpo a corpo para aumentar sua velocidade ou precisão.</string>
     <string name="Weightstone_Name">pedra de amolar</string>
     <string name="Weightstone_Select">Escolha uma arma para balancear</string>
     <string name="Weightstone_WndAccuracy">Para precisão</string>
@@ -2875,6 +2875,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 
