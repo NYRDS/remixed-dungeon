@@ -542,6 +542,7 @@
     <string name="CorpseDust_Info">这团尸尘看起来和普通灰尘球差不多，但你能感觉到里面潜伏着一股恶意的魔力……最好尽快脱手。</string>
     <string name="CorpseDust_Info2">大概因为拿着它让你感到焦虑和愤怒。</string>
     <string name="CorpseDust_Name">尸尘</string>
+    <string name="CorpseExplosion_NoCorpse">那里没有尸体。</string>
     <string name="Crab_Defense">招架</string>
     <string name="Crab_Desc">这些巨型的螃蟹位居下水道食物链的顶端。它们行动极其迅速，并且厚重的甲壳能承受沉重的打击。</string>
     <string name="Crab_Gender">masculine</string>
@@ -2877,6 +2878,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

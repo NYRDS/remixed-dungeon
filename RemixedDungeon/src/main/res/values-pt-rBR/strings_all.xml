@@ -2274,14 +2274,15 @@ outro local do nível.</string>
     <string name="Weightstone_WndSpeed">Para velocidade</string>
     <string name="Welcome_Ok">Ok!</string>
     <string name="Welcome_Text_30_1">
-remix.30.1\n
-- Jogabilidade:\n
--- Subclasses de Gnoll!\n
--- Caracóis!\n
--- Progressão de itens do caos nerfada.\n
--- Poção de Mana é uma poção normal a partir de agora.\n
--- Emblemas agora podem ser obtidos ao jogar DLCs (mas não mods).\n
-- Erros corrigidos\n</string>
+    remix.30.1\n
+    - Jogabilidade:\n
+    -- Subclasses de Gnoll!\n
+    -- Caracóis!\n
+    -- Progressão dos Itens do Caos nerfada.\n
+    -- Poção de Mana é uma poção comum agora.\n
+    -- Distintivos agora podem ser obtidos jogando DLCs oficiais (mas não em mods).\n
+    - Bugs corrigidos\n
+    </string>
     <string name="Welcome_Text_31_0">
 remix.31.0\n
 - Jogabilidade:\n
@@ -2875,6 +2876,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -2090,6 +2090,7 @@
     <string name="Typical_Damage">典型傷害</string>
     <string name="Undead_Defense">格擋</string>
     <string name="Undead_Desc">由矮人國王的意誌喚醒的矮人亡靈，曾經的皇室成員，以長著厚實胡須的骷髏的姿態出現。</string>
+    <string name="Undead_Gender">masculine</string>
     <string name="Undead_Name">矮人亡靈</string>
     <string name="Undead_Name_Objective">矮人亡靈</string>
     <string name="Ushanka_Info">帶有閃耀紅星的溫暖舒適的蘇聯毛帽。讓共產主義的光輝照亮這個邪惡冷酷的地牢。</string>
@@ -2794,6 +2795,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
