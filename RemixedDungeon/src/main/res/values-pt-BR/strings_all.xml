@@ -31,6 +31,7 @@
     <string name="No_Valid_Cell">Não há uma célula adequada por perto.</string>
     <string name="Paralysis_Name_2">%s do Atordoamento</string>
     <string name="PlagueDoctorMaskHood_Info">Um crânio de ébano esculpido, suas órbitas vazias brilhando com o brilho etéreo de gemas de ametista. Cada respiração que você toma sussurra através de um labirinto de tubos e filtros, carregando o aroma de ervas potentes e especiarias que mascaram a decadência que se apega a você. Mas não é apenas a máscara. Um capuz pesado de veludo meia-noite, envolvendo seu rosto e cabeça em sombras. O capuz, como a asa de um corvo, flui pelas suas costas, suas bordas aparadas com uma franja de renda branca como osso, um contraste assustadoramente bonito. Juntos, máscara e capuz criam um viso espectral, um testemunho sombrio da batalha interminável contra as forças da decadência.</string>
+    <string name="PlagueDoctorQuest_3_1_Epilogue">*Ele segura o _morcego_ gentilmente em suas mãos enluvadas, examinando sua pequena forma com uma fascinação perturbadora* Magnífico! A ecolocalização do morcego... é diferente de tudo que já encontrei. Tal precisão... tal... controle. *Ele se vira para você, seu rosto obscurecido por sua máscara* Por seus esforços, um _Pergaminho de Atualização_. Use-o sabiamente, pois ele guarda o potencial para... refinar sua própria essência. *Ele lhe entrega o pergaminho, sua voz caindo para um sussurro suave* Este _morcego_, é... uma janela para um mundo oculto. Um mundo... onde sombras dançam e segredos sussurram.</string>
     <string name="Poison_Name_0">%s Venenosa</string>
     <string name="PotionOfPurity_Freshness">Você sente um frescor incomum no ar.</string>
     <string name="Potion_Colors_12">epidoto</string>
@@ -111,6 +112,7 @@
 
 
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
+
 
 
 
