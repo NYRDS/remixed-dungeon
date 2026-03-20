@@ -563,6 +563,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DriedRose_Name">rosa essiccata</string>
     <string name="Drink_ACDrink">BEVI</string>
     <string name="Drink_Message">Quella bevanda era rinfrescante!</string>
+    <string name="DrunkardNPC_Gender">masculine</string>
     <string name="Drunkard_Phrase_1">ANCORA DA BERE, PER FAVORE!</string>
     <string name="Drunkard_Phrase_2">Chi ha bisogno d\'acqua quando hai la birra!</string>
     <string name="Dungeon_DeadEnd">Cosa ci fai qui?!</string>
@@ -1732,6 +1733,7 @@ Potrebbe bruciare?</string>
     <string name="ShieldStrTemplate">Chi indossa lo scudo deve avere almeno %1$d punti di Forza per usarlo correttamente.</string>
     <string name="Shielded_Defense">Bloccato</string>
     <string name="Shielded_Desc">I bruti sono i più grandi, i più forti e i più duri di tutti gli gnoll. Quando gravemente feriti, si infuriano, infliggendo danni maggiori ai loro nemici. Questo bruto porta con se uno scudo gigante!</string>
+    <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">Bruto schermato</string>
     <string name="Shielded_Name_Objective">Bruto schermato</string>
     <string name="ShootInEye_Name">Colpo nell\'Occhio</string>
@@ -2604,6 +2606,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

@@ -1,6 +1,7 @@
 <resources>
     <string name="AC_Devour">Verschlingen</string>
     <string name="AC_Dissect">Sezieren</string>
+    <string name="AC_Kick">Tritt</string>
     <string name="AC_Necromancy">Nekromantie</string>
     <string name="Abilities_Common">Normale Zaubersprüche</string>
     <string name="Abilities_Default">Meisterschaft</string>
@@ -2868,6 +2869,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
