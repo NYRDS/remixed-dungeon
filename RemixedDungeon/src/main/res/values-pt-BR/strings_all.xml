@@ -1,6 +1,7 @@
 <resources>
     <string name="AirElemental_Desc">Elementais de ar são seres mágicos voadores feitos de ar vivo.</string>
     <string name="Badges_Champion">Desafio vencido</string>
+    <string name="Badges_NoMonsterSlain">Nível completado sem matar nenhum monstro</string>
     <string name="BellaNPC_Message">Eu não tenho interesse em plebeus como você!</string>
     <string name="Bishop_great_bless">Bênção grande - %d g</string>
     <string name="BlackSkull_Gender">masculine</string>
@@ -59,10 +60,6 @@
     <string name="WndCryptoDonate_supportDev">Apoiar o Desenvolvedor</string>
     <string name="WndGame_Save">Salvar</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, aguarde...</string>
-
-
-
-
     <string name="WndModsDisclaimer_manage">Gerenciar lista de mods</string>
     <string name="WndPortal_Info">Este portal permitirá que você volte para a cidade. Parece bastante instável, provavelmente não estará ativo por muito tempo.\nVocê gostaria de usá-lo?</string>
     <string name="WndPremiumSettings_std">padrão</string>
@@ -72,54 +69,9 @@
     <string name="ZombieGnoll_Name">gnoll-zumbi</string>
     <string name="town_deco_INN_sign_desc">Parece que há uma estalagem dentro daquele edifício.</string>
 
-
-
     <string name="town_deco_book_name">Livro</string>
     <string name="town_deco_crate_name">Caixa</string>
     <string name="town_deco_floor_name">Chão</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
-
-
-
-
-
-
-
-
-
 
 </resources>
