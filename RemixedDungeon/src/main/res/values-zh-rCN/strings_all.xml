@@ -532,6 +532,7 @@
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">与木制弓弩相比，这种加强型弓弩被证明是一种更有效的工具。</string>
     <string name="CompositeCrossbow_Name">复合弩</string>
+    <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">用复合弓射出的箭能造成大量伤害并且更加精准，只是速度比木弓差些。</string>
     <string name="CompoundBow_Name">复合弓</string>
     <string name="ConcreteBlock_Description">看来你需要 %d 点力量才能推得动这块混凝土</string>
@@ -2878,6 +2879,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

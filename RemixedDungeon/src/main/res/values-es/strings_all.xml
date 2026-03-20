@@ -371,7 +371,7 @@
     <string name="Challenges_Names_9">Amnesia</string>
     <string name="ChampionOfAirBuff_Info">Este rasgo otorga a la criatura la esencia de los vientos, mejorando su agilidad y destreza en combate. El Campeón del Aire se convierte en un adversario formidable, capaz de desatar ataques rápidos y devastadores que pueden cambiar rápidamente el curso de la batalla.</string>
     <string name="ChampionOfAirBuff_Name">Campeón del Aire</string>
-    <string name="ChampionOfFireBuff_Info">\"Infundida con la furia de las llamas, esta cualidad amplifica la ferocidad y la destreza en combate de la criatura. El Campeón de Fuego se convierte en un adversario temible, desatando ataques devastadores que pueden envolver a sus enemigos en llamas abrasadoras, infundiendo terror en todos los que se atreven a oponérsele.</string>
+    <string name="ChampionOfFireBuff_Info">\&quot;Infundida con la furia de las llamas, esta cualidad amplifica la ferocidad y la destreza en combate de la criatura. El Campeón de Fuego se convierte en un adversario temible, desatando ataques devastadores que pueden envolver a sus enemigos en llamas abrasadoras, infundiendo terror en todos los que se atreven a oponérsele.</string>
     <string name="ChampionOfFireBuff_Name">Campeón del Fuego</string>
     <string name="ChampionOfWaterBuff_Info">El Campeón del Agua encarna la fuerza indomable de los océanos, mejorando la resistencia y la fortaleza de la criatura. Como resultado, se convierte en un adversario inquebrantable, capaz de soportar una lluvia implacable de ataques y mantenerse como un guardián inmutable frente a la adversidad.</string>
     <string name="ChampionOfWaterBuff_Name">Campeón del Agua</string>
@@ -1454,6 +1454,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PirateSet_Name">Set Pirata</string>
     <string name="PlagueDoctorMaskHood_Info">Una calavera de ébano tallada, sus cuencas vacías brillando con el resplandor etéreo de gemas de amatista. Cada respiración que inhalas susurra a través de un laberinto de tubos y filtros, llevando el aroma de hierbas y especias potentes que enmascaran la descomposición que se aferra a ti. Pero no es simplemente la máscara. Una capucha pesada de terciopelo negro envuelve tu rostro y cabeza en sombras. La capucha, como ala de cuervo, fluye por tu espalda, sus bordes adornados con una franja de encaje blanco hueso, un contraste aterradoramente hermoso. Juntas, máscara y capucha crean una visión espectral, un sombrío testimonio de la batalla interminable contra las fuerzas de la descomposición.</string>
     <string name="PlagueDoctorMaskHood_Name">Máscara de Médico de la Peste con capucha</string>
+    <string name="PlagueDoctorMask_Info">Esto... esto no es una simple máscara. Es... una barrera. Un escudo contra las fuerzas de la decadencia contra las que el Médico de la Peste lucha incansablemente. Tallada en la mejor madera de ébano, intrincadamente esculpida con la efigie de un cráneo voraz. Sus cuencas oculares vacías están llenas de brillantes gemas de amatista que pulsan débilmente, como las brasas moribundas de un fuego. Cada respiración que tomas, cada palabra que pronuncias, se filtra a través de una red laberíntica de tubos y filtros. Una mezcla de hierbas potentes y especias exóticas infunde el aire en su interior, enmascarando el hedor de la muerte que se aferra a ti como un sudario.</string>
     <string name="PlagueDoctorMask_Name">Máscara de médico de la peste</string>
     <string name="PlagueDoctorNPC_After_Quest">¡Les demostrare a todos, a todos!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">¿Todavía estás aquí? Ten, toma esto.</string>
@@ -2901,6 +2902,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 </resources>
