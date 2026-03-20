@@ -365,6 +365,7 @@
     <string name="CharAction_Steal">rubare</string>
     <string name="CharAction_Take">prendi</string>
     <string name="CharAction_Taunt">provocazione</string>
+    <string name="CharInfo_Level">Questo è un %2$s di livello %1$d.</string>
     <string name="Char_Defeat_0">%1$s ha sconfitto %2$s</string>
     <string name="Char_Defeat_1">%1$s ha sconfitto %2$s</string>
     <string name="Char_Defeat_2">%1$s ha sconfitto %2$s</string>
@@ -1451,6 +1452,7 @@ Potrebbe bruciare?</string>
     <string name="PumpkinPie_Name">torta di zucca</string>
     <string name="Pumpkin_Info">Ai vecchi tempi, il popolo Zucca era una nazione orgogliosa e prosperosa. Ma dopo l\'arrivo degli umani finì tutto in rovina. E teste mozzate ed incise del Popolo Zucca da tempo scomparso servono da promemoria di quei terribili eventi.</string>
     <string name="Pumpkin_Name">Zucca</string>
+    <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">Una mazza di legno duro che termina con una sfera di ferro. </string>
     <string name="Quarterstaff_Name">Bastone</string>
     <string name="QuickSlot_SelectSlot">Seleziona Quickslot</string>
@@ -2608,6 +2610,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

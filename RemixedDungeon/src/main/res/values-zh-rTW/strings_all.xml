@@ -551,6 +551,7 @@
     <string name="DarkSacrifice_Self">為了天災！</string>
     <string name="DarkVeilBuff_Name">暗黑面紗</string>
     <string name="Darkness_Info">好像是永恒黑暗的碎片在空中漂浮</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">揮動手腕，翶擊長空，傷敵千裏。</string>
     <string name="Dart_Name">飛鏢</string>
     <string name="DashSpell_Info">沖向指定方向，與敵人相撞，造成傷害並殘廢敵人。</string>
@@ -2796,6 +2797,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
