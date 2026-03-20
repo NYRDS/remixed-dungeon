@@ -1584,6 +1584,7 @@ Potrebbe bruciare?</string>
     <string name="RottingFist_Desc">pugno in decomposizione del vecchio dio</string>
     <string name="RottingFist_Name">pugno in decomposizione</string>
     <string name="RottingFist_Name_Objective">pugno in decomposizione</string>
+    <string name="RoyalShield_desc">Uno scudo interamente metallico. Sì, è pesante, ma solo esso può fornirti la migliore protezione.</string>
     <string name="RubyBow_Info">Solo i migliori arcieri possono usare quest\'arco di rubino. Quasi tutte le frecce trapassano il nemico, lasciando un enorme buco nel suo petto, ma un\'enorme forza è necessaria per tenderlo.</string>
     <string name="RubyBow_Name">arco di rubino</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -2607,6 +2608,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
