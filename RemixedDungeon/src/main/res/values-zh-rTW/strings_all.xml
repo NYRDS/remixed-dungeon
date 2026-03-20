@@ -1354,6 +1354,7 @@
     <string name="OozeBuff_Name">腐蝕黏液</string>
     <string name="Ooze_Death">%s殺了您……</string>
     <string name="Order_Info">適當專注下，你的命令幾乎無可否認。</string>
+    <string name="Order_Resist">你好大的膽子！</string>
     <string name="OverpricedRation_Info">這看起來就是一份普通的口糧，雖然小了一些</string>
     <string name="OverpricedRation_Message">這份食物吃起來還不錯。</string>
     <string name="OverpricedRation_Name">小包口糧</string>
@@ -2795,6 +2796,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

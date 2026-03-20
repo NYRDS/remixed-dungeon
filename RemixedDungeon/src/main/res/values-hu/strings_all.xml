@@ -1927,6 +1927,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="StoneBloodBuff_Info">A vér kővé válik, amely egyesül a közeli falakkal, és sokkal könnyebbé teszi az áthaladást rajtuk - de milyen áron.</string>
     <string name="StoneBloodBuff_Name">Kő vér</string>
     <string name="Str_lose">-1 erő</string>
+    <string name="StrongShield_desc">Ez a téglalap alakú pajzs bronzlemezekkel van bevonva és színes anyaggal díszítve. Jelentősen nehezebb, de sokkal több bejövő sebzést képes blokkolni.</string>
     <string name="StrongShield_name">Bronzzal Bevont Pajzs</string>
     <string name="StunBuff_Name">Kábult</string>
     <string name="Stylus_ACInscribe">RÁÍR</string>
@@ -2694,6 +2695,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
