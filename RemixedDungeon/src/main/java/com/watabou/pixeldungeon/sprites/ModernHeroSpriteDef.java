@@ -155,9 +155,15 @@ public class ModernHeroSpriteDef extends HeroSpriteDef {
                 drawHair = false;
             }
 		} else {
-			accessoryDescriptor = accessory.getLayerFile();
-			if(accessory.isCoveringHair()) {
-				drawHair = false;
+			// If armor has a helmet, it covers the accessory (e.g., PlagueDoctorArmor covers PlagueDoctorMask)
+			if(armor.hasHelmet()) {
+				helmetDescriptor = helmetDescriptor(armor, hero);
+				// accessoryDescriptor stays as HERO_EMPTY_PNG
+			} else {
+				accessoryDescriptor = accessory.getLayerFile();
+				if(accessory.isCoveringHair()) {
+					drawHair = false;
+				}
 			}
 		}
 

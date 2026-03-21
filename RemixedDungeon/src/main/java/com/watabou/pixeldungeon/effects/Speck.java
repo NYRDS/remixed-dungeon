@@ -65,6 +65,7 @@ public class Speck extends Image {
     public static final int FORGE = 110;
     public static final int CONFUSION = 111;
     public static final int MAGIC = 112;
+    public static final int MIASMA = 113;
 
 
     private static final int SIZE = 7;
@@ -281,6 +282,13 @@ public class Speck extends Image {
                 lifespan = Random.Float(1f, 3f);
                 break;
 
+            case MIASMA:
+                hardlight(0xA0C050); // Sickly yellow-green
+                angularSpeed = 20;
+                angle = Random.Float(360);
+                lifespan = Random.Float(1f, 3f);
+                break;
+
             case DUST:
                 hardlight(0xFFFF66);
                 angle = Random.Float(360);
@@ -316,6 +324,7 @@ public class Speck extends Image {
             case TOXIC:
             case PARALYSIS:
             case CONFUSION:
+            case MIASMA:
             case DUST:
             case MIST:
                 frame(film.get(STEAM));
@@ -421,6 +430,7 @@ public class Speck extends Image {
             case TOXIC:
             case PARALYSIS:
             case CONFUSION:
+            case MIASMA:
             case DUST:
                 am = p < 0.5f ? p : 1 - p;
                 scale.set(1 + p * 2);

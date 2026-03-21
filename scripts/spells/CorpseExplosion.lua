@@ -56,8 +56,8 @@ return spell.init{
                     -- Create Confusion Gas
                     RPD.placeBlob(RPD.Blobs.ConfusionGas, adjCell, math.floor(gasStrength * 0.3))
                 else
-                    -- Create Flammable Gas
-                    RPD.placeBlob(RPD.Blobs.FlammableGas, adjCell, math.floor(gasStrength * 0.3))
+                    -- Create Miasma Gas
+                    RPD.placeBlob(RPD.Blobs.MiasmaGas, adjCell, math.floor(gasStrength * 0.3))
                 end
             end
 
