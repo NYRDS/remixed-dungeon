@@ -999,17 +999,18 @@ public abstract class BaseWebServer extends NanoHTTPD {
             return DebugEndpoints.handleDebugGetTileInfo(session);
         } else if (uri.startsWith("/debug/handle_cell")) {
             return DebugEndpoints.handleDebugHandleCell(session);
-        } else if (uri.startsWith("/debug/cast_spell")) {
-            return DebugEndpoints.handleDebugCastSpell(session);
-        } else if (uri.startsWith("/debug/cast_spell_on_target")) {
-            return DebugEndpoints.handleDebugCastSpellOnTarget(session);
-        } else if (uri.startsWith("/debug/get_available_spells")) {
-            return DebugEndpoints.handleDebugGetAvailableSpells(session);
-        } else if (uri.startsWith("/debug/get_recent_logs")) {
-            return DebugEndpoints.handleDebugGetRecentLogs(session);
+        } else if (uri.startsWith("/debug/get_mob_positions")) {
+            return DebugEndpoints.handleDebugGetMobPositions(session);
+        } else if (uri.startsWith("/debug/get_hero_position")) {
+            return DebugEndpoints.handleDebugGetHeroPosition(session);
+        } else if (uri.startsWith("/debug/move_hero")) {
+            return DebugEndpoints.handleDebugMoveHero(session);
+        } else if (uri.startsWith("/debug/hero_attack")) {
+            return DebugEndpoints.handleDebugHeroAttack(session);
+        } else if (uri.startsWith("/debug/wait_ticks")) {
+            return DebugEndpoints.handleDebugWaitTicks(session);
         }
 
-        // Original serve method logic continues here...
         if (session.getMethod() == Method.GET) {
             if (uri.equals("/")) {
                 return newFixedLengthResponse(Response.Status.OK, "text/html",

@@ -9,8 +9,7 @@ local RPD = require "scripts/lib/commonClasses"
 
 local item = require "scripts/lib/item"
 
-
-local PlagueDoctorMask = luajava.newInstance("com.nyrds.pixeldungeon.items.accessories.PlagueDoctorMask")
+local Accessory = luajava.bindClass("com.nyrds.pixeldungeon.items.accessories.Accessory")
 
 return item.init{
     desc  = function ()
@@ -20,17 +19,18 @@ return item.init{
             name      = "PlagueDoctorMask_Name",
             info      = "PlagueDoctorMask_Info",
             price     = 20,
-            equipable = RPD.Slots.artifact
+            equipable = RPD.Slots.ring
         }
     end,
 
     activate = function(self, item, hero)
-        PlagueDoctorMask:equip(true)
+        local mask = Accessory:getByName("PlagueDoctorMask")
+        mask:equip(true)
         RPD.permanentBuff(hero, "GasesImmunity")
     end,
 
     deactivate = function(self, item, hero)
-        PlagueDoctorMask:unequip(true)
+        Accessory:unequip()
         RPD.removeBuff(hero, "GasesImmunity")
     end
 }
