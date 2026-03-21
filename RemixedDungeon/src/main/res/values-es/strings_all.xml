@@ -1398,6 +1398,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="NecromancerRobe_PetLimitReached">Nigromancia: límite de invocaciones alcanzado (Limite: %d)!</string>
     <string name="Necromancer_ACSpecial">NIGROMANCIA</string>
     <string name="Necromancy_BecameALich">¡Te has convertido en un Lich! ¡Tu poder crece y tu capacidad de almas se ha duplicado! Pero has perdido %1$d puntos de fuerza.</string>
+    <string name="Necromancy_Death">Agotaste toda tu fuerza vital mientras practicabas nigromancia.</string>
     <string name="Necromancy_NotEnoughSouls">No tienes suficientes almas para lanzar el hechizo \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_ReincarnationName">Reencarnación</string>
     <string name="Necromancy_ReincarnationTriggered">¡Tus poderes burlaron a la muerte! Pero has perdido todas las almas recolectadas y tus objetos.</string>
@@ -2902,6 +2903,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -32,7 +32,9 @@
     <string name="Journal_Alchemy">Caldeirão de alquimia</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
     <string name="LibraryBook_Name">Livro da biblioteca</string>
+    <string name="ManaPotion_Info">Esta poção restaurará sua energia espiritual.</string>
     <string name="MobAi_status">Este %1$s é %2$s</string>
+    <string name="Mob_StaTerrorStatus">Este %1$s está aterrorizado</string>
     <string name="No_Valid_Cell">Não há uma célula adequada por perto.</string>
     <string name="Paralysis_Name_2">%s do Atordoamento</string>
     <string name="PlagueDoctorMaskHood_Info">Um crânio de ébano esculpido, suas órbitas vazias brilhando com o brilho etéreo de gemas de ametista. Cada respiração que você toma sussurra através de um labirinto de tubos e filtros, carregando o aroma de ervas potentes e especiarias que mascaram a decadência que se apega a você. Mas não é apenas a máscara. Um capuz pesado de veludo meia-noite, envolvendo seu rosto e cabeça em sombras. O capuz, como a asa de um corvo, flui pelas suas costas, suas bordas aparadas com uma franja de renda branca como osso, um contraste assustadoramente bonito. Juntos, máscara e capuz criam um viso espectral, um testemunho sombrio da batalha interminável contra as forças da decadência.</string>
@@ -83,6 +85,8 @@
     <string name="town_deco_floor_name">Chão</string>
     <string name="town_deco_red_carpet_name">Tapete</string>
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
+
+
 
 
 </resources>
