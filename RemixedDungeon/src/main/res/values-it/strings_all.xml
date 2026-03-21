@@ -2475,6 +2475,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_covered_table_name">Tavolo</string>
     <string name="town_deco_crate_bottles_desc">L\'imbottigliamento della birra è diventato un passatempo molto popolare tra i locandieri.</string>
     <string name="town_deco_crate_bottles_name">Cassa di birra</string>
+    <string name="town_deco_crate_desc">Una robusta cassa di legno che custodisce i suoi segreti all\'interno.</string>
     <string name="town_deco_crate_scrolls_desc">Questa cassa è piena fino all\'orlo di conoscenza segreta.</string>
     <string name="town_deco_crate_scrolls_name">Cassa di pergamene</string>
     <string name="town_deco_cross_desc">Una croce di argento, il simbolo della religione locale - \&quot;I Testimoni di Santa il Signore delle Profondità\&quot;</string>
@@ -2495,6 +2496,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_fireplace_name">Camino</string>
     <string name="town_deco_firewood_name">Legna da ardere</string>
     <string name="town_deco_floor_name">Pavimento</string>
+    <string name="town_deco_flowerinthepot_desc">Fiore decorativo con dolce fragranza</string>
     <string name="town_deco_furnace_desc">Un forno affidabile, assemblato secondo schemi tradizionali.</string>
     <string name="town_deco_furnace_name">Forno</string>
     <string name="town_deco_glass_stained_name">Vetro Colorato</string>
@@ -2610,6 +2612,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
