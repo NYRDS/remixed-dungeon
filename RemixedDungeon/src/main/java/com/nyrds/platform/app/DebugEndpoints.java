@@ -475,7 +475,7 @@ public class DebugEndpoints {
 
             if (selectedClass == null) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
-                    String.format("{\"error\":\"Unknown hero class: %s. Valid classes: WARRIOR, MAGE, ROGUE, HUNTRESS\"}", heroClass));
+                    String.format("{\"error\":\"Unknown hero class: %s. Valid classes: WARRIOR, MAGE, ROGUE, HUNTRESS, ELF, NECROMANCER, GNOLL, PRIEST, DOCTOR\"}", heroClass));
             }
 
             // Call the startNewGame method - using the correct method from GameControl
@@ -1396,6 +1396,250 @@ public class DebugEndpoints {
             GLog.w("Error in handleDebugGetRecentLogs: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse("Error getting recent logs: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugGetMobPositions(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Level not initialized - start a game first\"}");
+            }
+
+            StringBuilder mobsJson = new StringBuilder("[");
+            boolean first = true;
+
+            for (Mob mob : Dungeon.level.mobs) {
+                if (!first) {
+                    mobsJson.append(",");
+                }
+
+                int pos = mob.getPos();
+                int x = pos % Dungeon.level.getWidth();
+                int y = pos / Dungeon.level.getWidth();
+
+                mobsJson.append(String.format(
+                    "{\"id\":%d,\"type\":\"%s\",\"x\":%d,\"y\":%d,\"pos\":%d,\"hp\":%d,\"ht\":%d,\"state\":\"%s\"}",
+                    mob.getId(),
+                    mob.getEntityKind(),
+                    x, y, pos,
+                    mob.hp(),
+                    mob.ht(),
+                    mob.getState().getClass().getSimpleName()
+                ));
+                first = false;
+            }
+            mobsJson.append("]");
+
+            String jsonString = String.format("{\"count\":%d,\"mobs\":%s}", Dungeon.level.mobs.size(), mobsJson.toString());
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", jsonString);
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugGetMobPositions: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugGetHeroPosition(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.hero == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Hero not initialized - start a game first\"}");
+            }
+
+            int pos = Dungeon.hero.getPos();
+            int x = pos % Dungeon.level.getWidth();
+            int y = pos / Dungeon.level.getWidth();
+
+            String jsonString = String.format(
+                "{\"x\":%d,\"y\":%d,\"pos\":%d,\"class\":\"%s\"}",
+                x, y, pos, Dungeon.hero.getHeroClass().name()
+            );
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", jsonString);
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugGetHeroPosition: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugMoveHero(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            int x = -1, y = -1;
+            int cell = -1;
+
+            if (query != null && !query.isEmpty()) {
+                String[] params = query.split("&");
+                for (String param : params) {
+                    if (param.startsWith("x=")) {
+                        x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                    } else if (param.startsWith("y=")) {
+                        y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                    } else if (param.startsWith("cell=")) {
+                        cell = Integer.parseInt(java.net.URLDecoder.decode(param.substring(5), "UTF-8"));
+                    }
+                }
+            }
+
+            if (Dungeon.hero == null || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Game not initialized - start a game first\"}");
+            }
+
+            // If x,y provided, convert to cell
+            if (x >= 0 && y >= 0) {
+                cell = x + y * Dungeon.level.getWidth();
+            }
+
+            if (cell < 0) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing coordinates. Provide x&y or cell parameter\"}");
+            }
+
+            if (!Dungeon.level.cellValid(cell)) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"Invalid cell: %d\"}", cell));
+            }
+
+            final int targetCell = cell;
+            GameLoop.pushUiTask(() -> {
+                try {
+                    Dungeon.hero.nextAction(new com.nyrds.pixeldungeon.ml.actions.Move(targetCell));
+                    GLog.i("Moving hero to cell %d", targetCell);
+                } catch (Exception e) {
+                    GLog.n("Error moving hero: %s", e.getMessage());
+                }
+            });
+
+            int respX = cell % Dungeon.level.getWidth();
+            int respY = cell / Dungeon.level.getWidth();
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"message\":\"Moving to cell %d\",\"x\":%d,\"y\":%d,\"cell\":%d}",
+                    cell, respX, respY, cell));
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugMoveHero: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugHeroAttack(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            int x = -1, y = -1;
+            int cell = -1;
+
+            if (query != null && !query.isEmpty()) {
+                String[] params = query.split("&");
+                for (String param : params) {
+                    if (param.startsWith("x=")) {
+                        x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                    } else if (param.startsWith("y=")) {
+                        y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                    } else if (param.startsWith("cell=")) {
+                        cell = Integer.parseInt(java.net.URLDecoder.decode(param.substring(5), "UTF-8"));
+                    }
+                }
+            }
+
+            if (Dungeon.hero == null || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Game not initialized - start a game first\"}");
+            }
+
+            // If x,y provided, convert to cell
+            if (x >= 0 && y >= 0) {
+                cell = x + y * Dungeon.level.getWidth();
+            }
+
+            if (cell < 0) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing coordinates. Provide x&y or cell parameter\"}");
+            }
+
+            // Find mob at the target cell
+            Char target = Actor.findChar(cell);
+            if (target == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"No character found at cell %d\"}", cell));
+            }
+
+            if (!(target instanceof Mob)) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"Target at cell %d is not a mob\"}", cell));
+            }
+
+            final Mob targetMob = (Mob) target;
+            final int targetCell = cell;
+
+            GameLoop.pushUiTask(() -> {
+                try {
+                    Dungeon.hero.nextAction(new com.nyrds.pixeldungeon.ml.actions.Attack(targetMob));
+                    GLog.i("Hero attacking %s at cell %d", targetMob.getEntityKind(), targetCell);
+                } catch (Exception e) {
+                    GLog.n("Error attacking: %s", e.getMessage());
+                }
+            });
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"message\":\"Attacking %s\",\"target\":\"%s\",\"cell\":%d}",
+                    targetMob.getEntityKind(), targetMob.getEntityKind(), cell));
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugHeroAttack: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugWaitTicks(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            int ticks = 10;
+
+            if (query != null && !query.isEmpty()) {
+                String[] params = query.split("&");
+                for (String param : params) {
+                    if (param.startsWith("ticks=")) {
+                        try {
+                            ticks = Integer.parseInt(java.net.URLDecoder.decode(param.substring(6), "UTF-8"));
+                        } catch (Exception e) {
+                            // Use default value
+                        }
+                        break;
+                    }
+                }
+            }
+
+            if (Dungeon.hero == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("No hero in game").toString());
+            }
+
+            final int finalTicks = ticks;
+
+            // Schedule tick waiting
+            GameLoop.pushUiTask(() -> {
+                try {
+                    for (int i = 0; i < finalTicks; i++) {
+                        // Process one game tick
+                        Dungeon.hero.spendAndNext(1f);
+                    }
+                    GLog.i("Waited %d ticks", finalTicks);
+                } catch (Exception e) {
+                    GLog.n("Error waiting ticks: %s", e.getMessage());
+                }
+            });
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"message\":\"Waiting %d ticks\",\"ticks\":%d}", ticks, ticks));
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugWaitTicks: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
     }
 }
