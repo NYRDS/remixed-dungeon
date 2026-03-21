@@ -1469,6 +1469,7 @@ Potrebbe bruciare?</string>
     <string name="RankingsScene_NoInfo">Nessuna informazione aggiuntiva</string>
     <string name="RankingsScene_Title">Migliori Classificati</string>
     <string name="RankingsScene_Total">Partite totali giocate:</string>
+    <string name="RatKingCrownBuff_Info">Saluta il Signore dei topi, ogni topo deve obbedire e lodare la grande Rattosità!</string>
     <string name="RatKingCrownBuff_Name">Rattosità</string>
     <string name="RatKingCrown_Info">Corona d\'oro di Sua Rattosità, simbolo di potenza assoluta</string>
     <string name="RatKingCrown_Name">Corona di re Ratto</string>
@@ -1721,6 +1722,7 @@ Potrebbe bruciare?</string>
     <string name="Shadow_Name_Objective">Ombra</string>
     <string name="ShadowsBuff_Info">È più difficile individuare qualcosa tra le ombre.</string>
     <string name="ShadowsBuff_Name">Fuso con l\'ombra</string>
+    <string name="ShamanElder_Gender">masculine</string>
     <string name="ShamanElder_Name">sciamano anziano</string>
     <string name="Shaman_Desc">Gli gnoll più intelligenti posso imparare la magia sciamanica. Gli gnoll sciamani preferiscono magie d\'attacco per compensare la loro mancanza di forza, non esitando ad usarle su coloro che mettono in dubbio il loro prestigio nella tribù.</string>
     <string name="Shaman_Killed">%s\'s fulmine ti ha ucciso....</string>
@@ -2612,6 +2614,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

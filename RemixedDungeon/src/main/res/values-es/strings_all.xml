@@ -2025,6 +2025,7 @@ otro lugar del nivel.</string>
     <string name="SpiderServant_Name">araña soldado</string>
     <string name="SpiderServant_Name_Objective">araña soldado </string>
     <string name="Spinner_Desc">Estas arañas verdes y peludas intentan evitar el combate directo, prefiriendo esperar en la distancia mientras su victima, enredada en su telaraña, muere lentamente por el veneno de su mordisco. </string>
+    <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name">araña de cueva</string>
     <string name="Spinner_Name_Objective">araña de cueva</string>
     <string name="SpiritOfPain_Desc">Un fragmento de la oscuridad viviente.</string>
@@ -2903,6 +2904,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
