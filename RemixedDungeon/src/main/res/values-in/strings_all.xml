@@ -1710,6 +1710,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">tengkorak rahasia</string>
     <string name="RunicSkull_Name_Objective">tengkorak rahasia</string>
+    <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">Dari pandangan pertama atas pedang perunggu tua, yang tertutup oleh bercak patina ini pasti tidak berguna. Tapi semacam, kekuatan kuno tidur di dalamnya. Kekuatan ini dapat mengubah hampir semua makhluk menjadi budak tak berkeinginan. Hanya butuh cara benar untuk membangunkan mereka...</string>
     <string name="SacrificialSword_Name">pedang pengorbanan</string>
     <string name="SantaHat_Info">Tidak ada yang bikin semangan masuk dungeon seperti topi merah sutra Santa, Tuan dari Kedalaman</string>
@@ -2845,6 +2846,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 </resources>

@@ -2111,6 +2111,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="TenguLiver_Info">この肝臓は強大な敵のものだ。見ているだけで、野生の本能に支配され、食べたいという衝動に駆られる。</string>
     <string name="TenguLiver_Name">天狗の肝臓</string>
     <string name="Tengu_Desc">天狗は古代の暗殺者一族の一員である。この暗殺者たちは手裏剣と罠を多用することで知られている。</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">ついに自由に...</string>
     <string name="Tengu_Info2">かかったな、%s！</string>
     <string name="Tengu_Info3">かかったな、%s！</string>
@@ -2950,6 +2951,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

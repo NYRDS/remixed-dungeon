@@ -36,6 +36,7 @@
     <string name="MobAi_status">Este %1$s é %2$s</string>
     <string name="Mob_StaTerrorStatus">Este %1$s está aterrorizado</string>
     <string name="No_Valid_Cell">Não há uma célula adequada por perto.</string>
+    <string name="Paralysis_Name_0">%s do Atordoamento</string>
     <string name="Paralysis_Name_2">%s do Atordoamento</string>
     <string name="PlagueDoctorMaskHood_Info">Um crânio de ébano esculpido, suas órbitas vazias brilhando com o brilho etéreo de gemas de ametista. Cada respiração que você toma sussurra através de um labirinto de tubos e filtros, carregando o aroma de ervas potentes e especiarias que mascaram a decadência que se apega a você. Mas não é apenas a máscara. Um capuz pesado de veludo meia-noite, envolvendo seu rosto e cabeça em sombras. O capuz, como a asa de um corvo, flui pelas suas costas, suas bordas aparadas com uma franja de renda branca como osso, um contraste assustadoramente bonito. Juntos, máscara e capuz criam um viso espectral, um testemunho sombrio da batalha interminável contra as forças da decadência.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Ele segura o _morcego_ gentilmente em suas mãos enluvadas, examinando sua pequena forma com uma fascinação perturbadora* Magnífico! A ecolocalização do morcego... é diferente de tudo que já encontrei. Tal precisão... tal... controle. *Ele se vira para você, seu rosto obscurecido por sua máscara* Por seus esforços, um _Pergaminho de Atualização_. Use-o sabiamente, pois ele guarda o potencial para... refinar sua própria essência. *Ele lhe entrega o pergaminho, sua voz caindo para um sussurro suave* Este _morcego_, é... uma janela para um mundo oculto. Um mundo... onde sombras dançam e segredos sussurram.</string>
@@ -70,6 +71,7 @@
     <string name="WndGame_Save">Salvar</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, aguarde...</string>
     <string name="WndModsDisclaimer_manage">Gerenciar lista de mods</string>
+    <string name="WndPlayGames_RestoreProgress">Restaurar progresso do jogo</string>
     <string name="WndPortal_Info">Este portal permitirá que você volte para a cidade. Parece bastante instável, provavelmente não estará ativo por muito tempo.\nVocê gostaria de usá-lo?</string>
     <string name="WndPremiumSettings_std">padrão</string>
     <string name="WndPriest_Instruction2_f">Bem-vinda minha filha, bem-vinda à santa igreja do grande Papai Noel o Senhor das Profundezas!</string>
@@ -89,4 +91,8 @@
 
 
 
+
+
+
+    <string name="town_deco_trapdoor_desc">Para onde isso poderia levar?</string>
 </resources>
