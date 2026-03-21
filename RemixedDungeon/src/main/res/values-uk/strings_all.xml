@@ -2733,6 +2733,7 @@
     <string name="town_deco_shop_sign_desc">Скоріш за все тут знаходиться магазин.</string>
     <string name="town_deco_shop_sign_name">Вивіска</string>
     <string name="town_deco_skullboard_name">Стійка для трофеїв</string>
+    <string name="town_deco_skulls_desc">Відполіровані черепи, що належать істотам з підземелля.</string>
     <string name="town_deco_slush_desc">Цей сніг підтанув, і тепер це брудна мокра каша.</string>
     <string name="town_deco_slush_name">Шуга</string>
     <string name="town_deco_snow_desc">Не дивлячись на популярність даного місця серед шукачів пригод, тут на подив багато снігу. Складається враження, що цими вулицями мало хто гуляє.</string>
@@ -2798,6 +2799,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

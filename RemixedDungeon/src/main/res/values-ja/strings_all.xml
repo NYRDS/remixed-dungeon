@@ -683,6 +683,7 @@
     <string name="DwarfToken_Info">多くのドワーフたちと、彼らの大きな創造物の中には、このような用途不明の小さな金属片を持っている者もいる。宝石なのかもしれないし、身分証明書なのかもしれない。ドワーフは奇妙な民族だ。</string>
     <string name="DwarfToken_Name">ドワーフトークン</string>
     <string name="EarthElemental_Desc">土のエレメンタルは自然の力が凝縮された大地の塊である。</string>
+    <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">土のエレメンタル</string>
     <string name="EarthElemental_Name_Objective">土のエレメンタル</string>
     <string name="EarthrootBuff_Info">根は地面から芽を出し、天然の鎧となっている。</string>
@@ -2949,6 +2950,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
