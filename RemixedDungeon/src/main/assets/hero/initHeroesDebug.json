@@ -229,7 +229,7 @@
       "kind": "PlagueDoctorMask"
     },
     "armor": {
-      "kind": "DoctorArmor"
+      "kind": "NoItem"
     },
     "knownItems": [
       {
