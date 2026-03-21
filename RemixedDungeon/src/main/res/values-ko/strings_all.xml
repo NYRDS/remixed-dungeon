@@ -1312,6 +1312,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Piercing_Name_1">관통의 %s</string>
     <string name="Piercing_Name_2">관통의 %s</string>
     <string name="Piranha_Desc">이 식인 물고기는 지하 웅덩이의 자연적인 생물이 아니다. 녀석은 물에 잠긴 보물 창고를 지키기 위해 특별히 사육된 녀석이다.</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">거대 피라냐</string>
     <string name="Piranha_Name_Objective">거대 피라냐</string>
     <string name="PirateSet_Info">아르! 너는 동료처럼 느껴지나... 아니면 그냥 망할 풋내기 선원처럼 느껴지나!? 그렇지 않길 빌어, 이 물건들은 해적들을 위한 것이거든. 그러니까 내 말은... 아르!</string>
@@ -2441,6 +2442,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WrnExperimental_realtime">실시간 모드 활성화됨: 이제 이 게임은 실시간으로 진행됩니다. 빠르게 조작하지 않으면 죽습니다.\n인벤토리를 확인하시겠습니까?\n하수도 게으름이 당신의 속을 뒤지는 동안 그렇게 하려는 것은 운 좋게 여겨지지 않습니다.</string>
     <string name="WrnExperimental_title">실험 옵션이 활성화되었습니다!</string>
     <string name="Yog_Desc">요그-제바는 혼돈의 왕국의 강력한 고대의 신이다. 한 세기 전, 고대 드워프들은 악마의 군대와 싸워 간신히 이겼지만, 신을 죽이지 못했다. 그 대신, 그들은 자신들의 도시 아래에 있는 홀에 이 신을 가두고는, 그가 다시는 일어서지 못할 정도로 약해지기를 바랬다.</string>
+    <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">희망은 환상에 불과하리...</string>
     <string name="Yog_Name">요그-제바</string>
