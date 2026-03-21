@@ -579,6 +579,11 @@ Your opinion matters!</string>
   <string name="FuryBuff_Info">The eyes went bloody red from all that fury inside.</string>
   <string name="GasImmuneBuff_Name">Gas Immunity</string>
   <string name="GasImmuneBuff_Info">Immune to all gases.</string>
+  <string name="MiasmaGas_Info">A noxious miasma that poisons, weakens, and disorients those who breathe it.</string>
+  <string name="DoctorSpecial">Miasma Cloud</string>
+  <string name="DoctorArmor_Name">Doctor\'s Garb</string>
+  <string name="DoctorArmor_Info">This plague doctor\'s armor allows the use of the \"Miasma Cloud\" ability, which releases a noxious gas that poisons, weakens, and disorients enemies. The doctor, protected by their mask, is immune to these effects.</string>
+  <string name="DoctorArmor_NotDoctor">Only plague doctors can use this armor!</string>
   <string name="AnesthesiaBuff_Name">Anesthesia</string>
   <string name="AnesthesiaBuff_Info">Feels no pain and won\'t wake up from attacks, but still takes damage.</string>
   <string name="Hunger_Death">You starved to death...</string>
