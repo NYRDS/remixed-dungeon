@@ -1739,6 +1739,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ShadowsBuff_Info">그림자 사이에서는 무언가를 발견하기가 더 어렵습니다.</string>
     <string name="ShadowsBuff_Name">그림자숨기</string>
     <string name="ShamanElder_Desc">이 특별한 늑대인간은 다른 주술사들보다 훨씬 나이가 많아 보이며 부족 내에서 확실히 더 높은 지위를 가지고 있습니다. 그의 주변에는 이상한 오러가 천천히 형성되며, 닿는 모든 것을 반사하는 것 같습니다.</string>
+    <string name="ShamanElder_Gender">masculine</string>
     <string name="ShamanElder_Name_Objective">원로 주술사</string>
     <string name="Shaman_Desc">아주 지능이 뛰어난 놀만이 주술사의 주술을 익힐 수 있다. 놀 주술사는 힘이 약하기 때문에 전투 마법 사용을 좋아하며, 부족에서 자신의 지위를 의심하는 자에게는 이를 사용하길 꺼리지 않습니다.</string>
     <string name="Shaman_Gender">masculine</string>
@@ -2667,5 +2668,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 </resources>

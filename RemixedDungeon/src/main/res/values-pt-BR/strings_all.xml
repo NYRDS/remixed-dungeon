@@ -50,6 +50,7 @@
     <string name="Skeleton_Desc">Esqueletos são compostos de ossos de cadáveres de aventureiros azarados e moradores da masmorra, animados por emanações de magia negra das profundezas abaixo. Depois de terem sido danificados o suficiente, eles se desintegram em uma explosão de ossos.</string>
     <string name="Slow_Name_2">%s Arrepiante</string>
     <string name="SpiderQueenCarapace_Name">Carapaça da Rainha Aranha</string>
+    <string name="Spinner_Gender">masculine</string>
     <string name="StartScene_DifficultyNormalWithSaves">Normal com saves (e propagandas)</string>
     <string name="SungrassBuff_Name">Cura Herbal</string>
     <string name="Thief_Desc">Níveis mais profundos da masmorra sempre foram um esconderijo para todos os tipos de criminosos. Nem todos eles poderiam manter uma mente clara durante os longos períodos longe de luz do dia. Há muito tempo, esses ladrões loucos e bandidos se esqueceram quem são e por que eles roubam.</string>
@@ -82,5 +83,6 @@
     <string name="town_deco_floor_name">Chão</string>
     <string name="town_deco_red_carpet_name">Tapete</string>
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
+
 
 </resources>

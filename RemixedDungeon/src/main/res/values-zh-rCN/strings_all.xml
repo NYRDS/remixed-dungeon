@@ -1839,6 +1839,7 @@
     <string name="SeedPouch_Info">这只小天鹅绒袋允许你在里面储存任何数量的种子，非常方便。</string>
     <string name="SeedPouch_Name">种子包</string>
     <string name="Senior_Desc">这些武僧都是些狂信徒，他们会倾其所能从一切异族手中保护他们城市的秘密。他们不使用任何盔甲亦或武器，单纯依靠徒手格斗技巧来战斗。这名特别的武僧掌握了致残对手的技巧。</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">武僧大师</string>
     <string name="Senior_Name_Objective">武僧大师</string>
     <string name="ServantNPC_Desc">一位非常忙的旅店服务员</string>
@@ -2879,6 +2880,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
