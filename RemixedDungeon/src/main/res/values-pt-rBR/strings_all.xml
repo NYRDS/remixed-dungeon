@@ -2121,7 +2121,7 @@ outro local do nível.</string>
     <string name="TownsfolkMovieNPC_Message">Você conhece aquele serviço especial que o \&quot;cinema\&quot; oferece? Pena que pedem uma coisa exótica chamada \&quot;Internet\&quot;, nunca ouvi falar de tal coisa.</string>
     <string name="TownsfolkMovieNPC_Name">cidadão</string>
     <string name="TownsfolkMovieNPC_Name_Objective">cidadão</string>
-    <string name="TownsfolkNPC_Desc">Um dos locais. Apesar de claramente ser um cliente, essas roupas parecem ser caras</string>
+    <string name="TownsfolkNPC_Desc">Um dos locais. Embora seja claramente um plebeu, suas roupas parecem caras.</string>
     <string name="TownsfolkNPC_Message1">Ah! Outro aventureiro, adorável! Certifique se de saquear o máximo de objectos de valor que você consegue.</string>
     <string name="TownsfolkNPC_Message2">As pessoas da cidade tornaram-se muito ricos graças ao calabouço, tanto que todas as pessoas da cidade tiram férias sempre que querem! Na verdade, é por isso que há tão poucas pessoas no momento.</string>
     <string name="TownsfolkNPC_Message3">Que dia adorável.</string>
@@ -2887,6 +2887,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 
