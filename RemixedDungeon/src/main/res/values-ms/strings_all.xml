@@ -1207,6 +1207,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Mimic_Name">mimik</string>
     <string name="Mimic_Name_Objective">mimik</string>
     <string name="MindVisionBuff_Info">Penglihatan batin membolehkan anda melihat dengan jelas pergerakan semua makhluk hidup di lantai.</string>
+    <string name="MindVisionBuff_Name">Penglihatan Batin</string>
     <string name="MirrorImage_Desc">Beruang ilusi ini hampir menyerupai anda, tetapi lebih pucat dan sedikit bergetar.</string>
     <string name="MirrorImage_Name">imej cermin</string>
     <string name="MirrorImage_Name_Objective">imej cermin</string>
@@ -2669,6 +2670,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
