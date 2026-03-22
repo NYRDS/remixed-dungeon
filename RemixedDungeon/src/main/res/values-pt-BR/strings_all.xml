@@ -51,6 +51,7 @@
     <string name="Potion_Colors_12">epidoto</string>
     <string name="Ration_Name">ração de comida</string>
     <string name="RawFish_Taste">Gosto de peixe!</string>
+    <string name="ResultDescriptions_Necrotism">Morreu de Necrotismo no nível %d</string>
     <string name="ScrollOfTerror_Info2">O pergaminho emite um flash brilhante de luz vermelha e o %s foge!</string>
     <string name="Scroll_Name">pergaminho \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
@@ -58,6 +59,7 @@
     <string name="Shopkeeper_title">Loja</string>
     <string name="Skeleton_Desc">Esqueletos são compostos de ossos de cadáveres de aventureiros azarados e moradores da masmorra, animados por emanações de magia negra das profundezas abaixo. Depois de terem sido danificados o suficiente, eles se desintegram em uma explosão de ossos.</string>
     <string name="Slow_Name_2">%s Arrepiante</string>
+    <string name="Spells_NotInOwnBody">Você não pode realizar %s enquanto sua alma estiver separada do corpo.</string>
     <string name="SpiderQueenCarapace_Name">Carapaça da Rainha Aranha</string>
     <string name="Spinner_Gender">masculine</string>
     <string name="SpiritOfPain_Gender">masculine</string>
@@ -117,6 +119,10 @@
 
 
 
+
+
+
+    <string name="town_deco_wooden_drawer_name">Gaveta</string>
 
 
 </resources>

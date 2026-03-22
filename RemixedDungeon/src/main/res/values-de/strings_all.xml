@@ -965,6 +965,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HeroSubClass_NameSnip">Scharfschütze</string>
     <string name="HeroSubClass_NameWarL">Hexenmeister</string>
     <string name="HeroSubClass_NameWard">Bewahrer</string>
+    <string name="HeroSubClass_NameWitchdoctor">Hexendoktor</string>
     <string name="Hero_AnotherTry">Du bist gestorben.\n Willst du es erneut versuchen?</string>
     <string name="Hero_Leave">Man verlässt Remixed Dungeon nicht einfach so.</string>
     <string name="Hero_LevelUp">Level up!</string>
@@ -2872,6 +2873,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

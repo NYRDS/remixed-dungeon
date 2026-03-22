@@ -652,6 +652,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DieHardSpell_Info">Временно повышает регенерацию делая тебя настоящим Крепким Орешком.</string>
     <string name="DieHardSpell_Name">Крепкий Орешек</string>
     <string name="Displacement_Txt">%s смещения</string>
+    <string name="DoctorArmor_Info">Эта броня чумного доктора позволяет использовать способность «Облако миазмы», которая выпускает ядовитый газ, отравляющий, ослабляющий и дезориентирующий врагов. Доктор, защищённый своей маской, невосприимчив к этим эффектам.</string>
     <string name="DogeMask_Info">Мечтали ли вы когда-нибудь замаскироваться под знаменитого Doge? Лови момент!\nТакая Маска! Много Маскировки! Вау!</string>
     <string name="DogeMask_Name">Маска Doge</string>
     <string name="DonateButton_pleaseDonate">Поддержите проект</string>
@@ -3063,6 +3064,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 
