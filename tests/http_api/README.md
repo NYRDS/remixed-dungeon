@@ -4,31 +4,25 @@ This folder contains test scripts for testing the game through the WebServer deb
 
 ## Prerequisites
 
-Start the game with webserver in windowed mode:
+1. Start the game with webserver in windowed mode:
+   ```bash
+   # Using the helper script
+   ./tests/http_api/start_game_server.sh
 
+   # Or manually
+   ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer --args="--windowed"
+   ```
+
+2. The webserver will start on port 8080 by default.
+
+3. Run Tests
 ```bash
-# Using the helper script
-./tests/http_api/start_game_server.sh
-
-# Or manually
-./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer --args="--windowed"
-```
-
-## Files
-
-- `start_game_server.sh` - Helper script to start the game server in windowed mode
-- `game_client.py` - Base client class for the WebServer debug API
-- `test_doctor_spells.py` - Test suite for Doctor class spells
-
-## Running Tests
-
-```bash
-# Run Doctor spell tests
 python3 tests/http_api/test_doctor_spells.py
-
-# With custom host/port
-python3 tests/http_api/test_doctor_spells.py --host 192.168.1.100 --port 8080
 ```
+
+Options:
+- `--host HOST` - WebServer host (default: localhost)
+- `--port PORT` - WebServer port (default: 8080)
 
 ## Available Debug Endpoints
 
@@ -81,6 +75,16 @@ python3 tests/http_api/test_doctor_spells.py --host 192.168.1.100 --port 8080
 | `/debug/move_hero` | `x`, `y` | Move hero to coordinates |
 | `/debug/hero_attack` | `x`, `y` | Hero attacks mob at position |
 | `/debug/wait_ticks` | `ticks` | Wait N game ticks (default: 10) |
+
+### Level Navigation
+| Endpoint | Parameters | Description |
+|----------|------------|-------------|
+| `/debug/go_to_level` | `id`, `entrance` | Switch to any level by ID |
+| `/debug/list_levels` | - | List all available levels |
+| `/debug/get_exits` | - | Get exits from current level |
+| `/debug/get_entrances` | - | Get entrances to current level |
+| `/debug/descend_to` | `id` | Descend to connected level |
+| `/debug/ascend` | - | Ascend to previous level |
 
 ## Hero Classes
 

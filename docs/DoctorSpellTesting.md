@@ -63,7 +63,6 @@ Options:
 | `/debug/kill_mob` | `x`, `y` | Kill mob at position |
 
 ### Movement and Combat
-
 | Endpoint | Parameters | Description |
 |----------|------------|-------------|
 | `/debug/get_mob_positions` | - | Get mob positions (x, y, type, hp, ht) |
@@ -71,6 +70,16 @@ Options:
 | `/debug/move_hero` | `x`, `y` | Move hero to coordinates |
 | `/debug/hero_attack` | `x`, `y` | Hero attacks mob at position |
 | `/debug/wait_ticks` | `ticks` | Wait N game ticks (default: 10) |
+
+### Level Navigation
+| Endpoint | Parameters | Description |
+|----------|------------|-------------|
+| `/debug/go_to_level` | `id`, `entrance` (opt) | Switch to any level by ID |
+| `/debug/list_levels` | - | List all available levels |
+| `/debug/get_exits` | - | Get exits from current level |
+| `/debug/get_entrances` | - | Get entrances to current level |
+| `/debug/descend_to` | `id` | Descend to connected level |
+| `/debug/ascend` | - | Ascend to previous level |
 
 ### Debugging
 

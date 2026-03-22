@@ -30,6 +30,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class DebugEndpoints {
@@ -1638,6 +1639,304 @@ public class DebugEndpoints {
                 String.format("{\"success\":true,\"message\":\"Waiting %d ticks\",\"ticks\":%d}", ticks, ticks));
         } catch (Exception e) {
             GLog.w("Error in handleDebugWaitTicks: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugGoToLevel(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            String levelId = null;
+            int entranceCell = -1;
+
+            if (query != null && !query.isEmpty()) {
+                String[] params = query.split("&");
+                for (String param : params) {
+                    if (param.startsWith("id=")) {
+                        levelId = java.net.URLDecoder.decode(param.substring(3), "UTF-8");
+                    } else if (param.startsWith("entrance=")) {
+                        entranceCell = Integer.parseInt(java.net.URLDecoder.decode(param.substring(9), "UTF-8"));
+                    }
+                }
+            }
+
+            if (levelId == null || levelId.isEmpty()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing 'id' parameter\"}");
+            }
+
+            if (Dungeon.hero == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Game not initialized - start a game first\"}");
+            }
+
+            // Check if level exists
+            if (!DungeonGenerator.isLevelExist(levelId)) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"Level '%s' does not exist\"}", levelId));
+            }
+
+            // Create position and level
+            Position position = new Position();
+            position.levelId = levelId;
+
+            Level newLevel = DungeonGenerator.createLevel(position);
+            if (newLevel == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Failed to create level '%s'\"}", levelId));
+            }
+
+            // Determine entrance position
+            int startPos;
+            if (entranceCell >= 0 && entranceCell < newLevel.getLength()) {
+                startPos = entranceCell;
+            } else {
+                startPos = newLevel.entrance;
+            }
+
+            // Switch to the new level
+            Collection<Mob> mobs = new ArrayList<>();
+            Dungeon.switchLevel(newLevel, startPos, mobs);
+
+            String levelKind = DungeonGenerator.getLevelKind(levelId);
+            int depth = DungeonGenerator.getLevelDepth(levelId);
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"levelId\":\"%s\",\"kind\":\"%s\",\"depth\":%d,\"entrance\":%d}",
+                    levelId, levelKind, depth, startPos));
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugGoToLevel: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugListLevels(NanoHTTPD.IHTTPSession session) {
+        try {
+            List<String> levelIds = DungeonGenerator.getLevelsList();
+
+            StringBuilder json = new StringBuilder("{\"count\":").append(levelIds.size()).append(",\"levels\":[");
+
+            boolean first = true;
+            for (String levelId : levelIds) {
+                if (!first) {
+                    json.append(",");
+                }
+                String kind = DungeonGenerator.getLevelKind(levelId);
+                int depth = DungeonGenerator.getLevelDepth(levelId);
+
+                json.append(String.format("{\"id\":\"%s\",\"kind\":\"%s\",\"depth\":%d}",
+                    levelId, kind, depth));
+                first = false;
+            }
+
+            json.append("]}");
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugListLevels: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugGetExits(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Level not initialized - start a game first\"}");
+            }
+
+            String currentLevelId = DungeonGenerator.getCurrentLevelId();
+            org.json.JSONArray exits = DungeonGenerator.getLevelExits(currentLevelId);
+
+            StringBuilder json = new StringBuilder("{\"levelId\":\"").append(currentLevelId).append("\",\"exits\":[");
+
+            for (int i = 0; i < exits.length(); i++) {
+                if (i > 0) {
+                    json.append(",");
+                }
+                String exitId = exits.getString(i);
+                String kind = DungeonGenerator.getLevelKind(exitId);
+                int depth = DungeonGenerator.getLevelDepth(exitId);
+                json.append(String.format("{\"id\":\"%s\",\"kind\":\"%s\",\"depth\":%d}",
+                    exitId, kind, depth));
+            }
+
+            json.append("]}");
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugGetExits: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugGetEntrances(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Level not initialized - start a game first\"}");
+            }
+
+            String currentLevelId = DungeonGenerator.getCurrentLevelId();
+            org.json.JSONArray entrances = DungeonGenerator.getLevelEntrances(currentLevelId);
+
+            StringBuilder json = new StringBuilder("{\"levelId\":\"").append(currentLevelId).append("\",\"entrances\":[");
+
+            for (int i = 0; i < entrances.length(); i++) {
+                if (i > 0) {
+                    json.append(",");
+                }
+                String entranceId = entrances.getString(i);
+                String kind = DungeonGenerator.getLevelKind(entranceId);
+                int depth = DungeonGenerator.getLevelDepth(entranceId);
+                json.append(String.format("{\"id\":\"%s\",\"kind\":\"%s\",\"depth\":%d}",
+                    entranceId, kind, depth));
+            }
+
+            json.append("]}");
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugGetEntrances: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugDescendTo(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            String targetLevelId = null;
+
+            if (query != null && !query.isEmpty()) {
+                String[] params = query.split("&");
+                for (String param : params) {
+                    if (param.startsWith("id=")) {
+                        targetLevelId = java.net.URLDecoder.decode(param.substring(3), "UTF-8");
+                    }
+                }
+            }
+
+            if (targetLevelId == null || targetLevelId.isEmpty()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing 'id' parameter\"}");
+            }
+
+            if (Dungeon.hero == null || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Game not initialized - start a game first\"}");
+            }
+
+            // Verify the target is a valid exit from current level
+            String currentLevelId = DungeonGenerator.getCurrentLevelId();
+            org.json.JSONArray exits = DungeonGenerator.getLevelExits(currentLevelId);
+            boolean validExit = false;
+            for (int i = 0; i < exits.length(); i++) {
+                if (exits.getString(i).equals(targetLevelId)) {
+                    validExit = true;
+                    break;
+                }
+            }
+
+            if (!validExit) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"'%s' is not a valid exit from current level '%s'\",\"availableExits\":%s}",
+                        targetLevelId, currentLevelId, exits.toString()));
+            }
+
+            // Create and switch to the level
+            Position position = new Position();
+            position.levelId = targetLevelId;
+
+            Level newLevel = DungeonGenerator.createLevel(position);
+            if (newLevel == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Failed to create level '%s'\"}", targetLevelId));
+            }
+
+            // Find exit index for proper entrance positioning
+            int exitIndex = 0;
+            for (int i = 0; i < exits.length(); i++) {
+                if (exits.getString(i).equals(targetLevelId)) {
+                    exitIndex = i;
+                    break;
+                }
+            }
+
+            int startPos = -(exitIndex + 1); // Negative indicates entrance index
+            Collection<Mob> mobs = new ArrayList<>();
+            Dungeon.switchLevel(newLevel, startPos, mobs);
+
+            String levelKind = DungeonGenerator.getLevelKind(targetLevelId);
+            int depth = DungeonGenerator.getLevelDepth(targetLevelId);
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"from\":\"%s\",\"to\":\"%s\",\"kind\":\"%s\",\"depth\":%d}",
+                    currentLevelId, targetLevelId, levelKind, depth));
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugDescendTo: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugAscend(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.hero == null || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Game not initialized - start a game first\"}");
+            }
+
+            String currentLevelId = DungeonGenerator.getCurrentLevelId();
+            org.json.JSONArray entrances = DungeonGenerator.getLevelEntrances(currentLevelId);
+
+            if (entrances.length() == 0) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"No entrance from current level '%s'\"}", currentLevelId));
+            }
+
+            if (entrances.length() > 1) {
+                // Multiple entrances - return options
+                StringBuilder options = new StringBuilder("[");
+                for (int i = 0; i < entrances.length(); i++) {
+                    if (i > 0) options.append(",");
+                    String id = entrances.getString(i);
+                    options.append(String.format("{\"id\":\"%s\",\"kind\":\"%s\",\"depth\":%d}",
+                        id, DungeonGenerator.getLevelKind(id), DungeonGenerator.getLevelDepth(id)));
+                }
+                options.append("]");
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"Multiple entrances available\",\"entrances\":%s}", options.toString()));
+            }
+
+            String targetLevelId = entrances.getString(0);
+
+            // Create and switch to the level
+            Position position = new Position();
+            position.levelId = targetLevelId;
+
+            Level newLevel = DungeonGenerator.createLevel(position);
+            if (newLevel == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Failed to create level '%s'\"}", targetLevelId));
+            }
+
+            int startPos = newLevel.entrance;
+            Collection<Mob> mobs = new ArrayList<>();
+            Dungeon.switchLevel(newLevel, startPos, mobs);
+
+            String levelKind = DungeonGenerator.getLevelKind(targetLevelId);
+            int depth = DungeonGenerator.getLevelDepth(targetLevelId);
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"from\":\"%s\",\"to\":\"%s\",\"kind\":\"%s\",\"depth\":%d}",
+                    currentLevelId, targetLevelId, levelKind, depth));
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugAscend: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }

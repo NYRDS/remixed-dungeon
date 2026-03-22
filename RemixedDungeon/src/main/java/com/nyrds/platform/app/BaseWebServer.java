@@ -1009,6 +1009,18 @@ public abstract class BaseWebServer extends NanoHTTPD {
             return DebugEndpoints.handleDebugHeroAttack(session);
         } else if (uri.startsWith("/debug/wait_ticks")) {
             return DebugEndpoints.handleDebugWaitTicks(session);
+        } else if (uri.startsWith("/debug/go_to_level")) {
+            return DebugEndpoints.handleDebugGoToLevel(session);
+        } else if (uri.startsWith("/debug/list_levels")) {
+            return DebugEndpoints.handleDebugListLevels(session);
+        } else if (uri.startsWith("/debug/get_exits")) {
+            return DebugEndpoints.handleDebugGetExits(session);
+        } else if (uri.startsWith("/debug/get_entrances")) {
+            return DebugEndpoints.handleDebugGetEntrances(session);
+        } else if (uri.startsWith("/debug/descend_to")) {
+            return DebugEndpoints.handleDebugDescendTo(session);
+        } else if (uri.startsWith("/debug/ascend")) {
+            return DebugEndpoints.handleDebugAscend(session);
         }
 
         if (session.getMethod() == Method.GET) {

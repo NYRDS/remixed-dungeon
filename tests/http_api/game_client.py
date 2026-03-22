@@ -147,6 +147,52 @@ class GameClient:
         """Wait N game ticks."""
         return self._get(f"/debug/wait_ticks?ticks={ticks}")
 
+    # Level Navigation
+    def go_to_level(self, level_id: str, entrance: int = -1) -> Dict[str, Any]:
+        """Go to a specific level by ID."""
+        if entrance >= 0:
+            return self._get(f"/debug/go_to_level?id={level_id}&entrance={entrance}")
+        return self._get(f"/debug/go_to_level?id={level_id}")
+
+    def list_levels(self) -> Dict[str, Any]:
+        """List all available levels."""
+        return self._get("/debug/list_levels")
+
+    def get_exits(self) -> Dict[str, Any]:
+        """Get exits from current level."""
+        return self._get("/debug/get_exits")
+
+    def get_entrances(self) -> Dict[str, Any]:
+        """Get entrances to current level."""
+        return self._get("/debug/get_entrances")
+
+    def descend_to(self, level_id: str) -> Dict[str, Any]:
+        """Descend to a connected level."""
+        return self._get(f"/debug/descend_to?id={level_id}")
+
+    def ascend(self) -> Dict[str, Any]:
+        """Ascend to previous level."""
+        return self._get("/debug/ascend")
+
+    # Level Navigation
+    def go_to_level(self, level_id: str, entrance: int = -1) -> Dict[str, Any]:
+        """Go to a specific level by ID."""
+        if entrance >= 0:
+            return self._get(f"/debug/go_to_level?id={level_id}&entrance={entrance}")
+        return self._get(f"/debug/go_to_level?id={level_id}")
+
+    def list_levels(self) -> Dict[str, Any]:
+        """List all available levels."""
+        return self._get("/debug/list_levels")
+
+    def get_exits(self) -> Dict[str, Any]:
+        """Get exits from current level."""
+        return self._get("/debug/get_exits")
+
+    def get_entrances(self) -> Dict[str, Any]:
+        """Get entrances to current level."""
+        return self._get("/debug/get_entrances")
+
     # Hero Classes
     HERO_CLASSES = [
         "WARRIOR",

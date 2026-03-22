@@ -438,4 +438,20 @@ public class DungeonGenerator {
 
 		return ret;
 	}
+
+	@SneakyThrows
+	public static JSONArray getLevelExits(String levelId) {
+		if (mGraph.has(levelId)) {
+			return mGraph.getJSONArray(levelId).getJSONArray(0);
+		}
+		return new JSONArray();
+	}
+
+	@SneakyThrows
+	public static JSONArray getLevelEntrances(String levelId) {
+		if (mGraph.has(levelId)) {
+			return mGraph.getJSONArray(levelId).getJSONArray(1);
+		}
+		return new JSONArray();
+	}
 }
