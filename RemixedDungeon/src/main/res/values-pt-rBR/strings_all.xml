@@ -1435,6 +1435,7 @@ Parede
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Você acredita nisso?! Esses idiotas ainda não perceberam o quão perigoso esse maldito esgoto é! Guardas e aventureiros não podem proteger a cidade contra nada. Hah! Nenhuma arma pode parar a propagação da doença. Mas eu preciso de provas, você pode me ajudar? Traga-me %d peles de rato, para que eu possa fazer alguns testes adicionais.\n</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, você voltou! _Cinco ratos mortos_, perfeito! Seus couros serão cruciais para minha pesquisa. E como prometido, pelo seu esforço valente, eu fiz esta armadura para você a partir de suas próprias peles. Está imbuída com um toque da praga, mas não se preocupe! É controlada, ela protege! Agora vá! Proteja a cidade!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Traga-me _cinco ratos mortos_! Cada rato que você me trouxer nos aproxima mais do entendimento dessa praga horrível.</string>
+    <string name="PlagueDoctorQuest_1_1_Prologue">Atchim!\n Amaldiçoada seja esta praga infernal! Está se espalhando pela cidade como fogo em palha, apodrecendo nos ossos da população desavisada! BAH! Você acha que aqueles guardas patéticos têm chance contra esta praga insidiosa? Você, aí! Espécime forte e saudável. Talvez você possa me ajudar. Aqueles _ratos_ de esgoto imundos... eles carregam, digo a você, as sementes da pestilência em seus pequenos corpos putrefatos! Traga-me _cinco_ dessas criaturas miseráveis, _mortas_, é claro! Suas peles serão inestimáveis para minha pesquisa. Vou criar para você uma armadura maravilhosa, uma barreira protetora contra a própria praga que se origina dela!</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">_Dez caracóis_, dez sussurros do abismo! Seu muco será analisado, sua essência será minuciosamente examinada. Os segredos que eles guardam estão ao alcance.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Tosse violentamente* Atchim!\n _Os caracóis_… eles deslizam. Eles exsudam. E sussurram segredos de uma era esquecida. Preciso deles, _dez_ deles, suas conchas ainda intactas. Você acha que meras _cinquenta moedas de ouro_ são suficientes para um conhecimento tão precioso?\n Bah! Não importa. A informação que eles guardam pode ser a chave para deter esta praga. Ou… pode nos levar a algo ainda mais terrível. Você decide.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Procure pela _moongrace_, onde a escuridão encontra o mais fraco brilho da luz da lua. _Duas sementes_, sua essência, revelarão segredos ocultos.</string>
@@ -2885,6 +2886,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

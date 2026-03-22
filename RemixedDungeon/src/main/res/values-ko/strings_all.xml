@@ -14,6 +14,7 @@
     <string name="AboutScene_OurSite">제작사 홈페이지:</string>
     <string name="AboutScene_Snd">Send E-Mail</string>
     <string name="AboutScene_Sound">사운드:</string>
+    <string name="AboutScene_SourceCode">Remixed Dungeon 소스 코드 보기:</string>
     <string name="AboutScene_Thanks">특별 감사:</string>
     <string name="AboutScene_Translation">현지화한 사람:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901  &amp;amp;  </string>
@@ -869,6 +870,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroSubClass_NameGlad">검투사</string>
     <string name="HeroSubClass_NameGuardian">수호자</string>
     <string name="HeroSubClass_NameLich">리치</string>
+    <string name="HeroSubClass_NameNone">없음</string>
     <string name="HeroSubClass_NameScout">정찰병</string>
     <string name="HeroSubClass_NameShaman">주술사</string>
     <string name="HeroSubClass_NameSnip">저격수</string>
@@ -2668,6 +2670,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 </resources>
