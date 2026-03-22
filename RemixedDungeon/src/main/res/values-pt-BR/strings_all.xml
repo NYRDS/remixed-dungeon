@@ -18,6 +18,7 @@
     <string name="DM300_Name">DM-300</string>
     <string name="DarkSacrifice_Self">Pelo Flagelo!</string>
     <string name="DarkVeilBuff_Info">Um véu de escuridão envolve o portador, invocando um espírito cada vez que dano é recebido.</string>
+    <string name="DashSpell_Name">Investida</string>
     <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
     <string name="Drunkard_Phrase_3">Essa cerveja tem gosto de terra</string>
     <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
@@ -103,6 +104,7 @@
 
 
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
+
 
 
 </resources>

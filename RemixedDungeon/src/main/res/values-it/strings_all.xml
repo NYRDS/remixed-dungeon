@@ -324,6 +324,7 @@
     <string name="Challenges_Names_6">Rune Proibite</string>
     <string name="Challenges_Names_7">Pacifismo</string>
     <string name="Challenges_Names_8">Nessuna città</string>
+    <string name="Challenges_Names_9">Amnesia</string>
     <string name="ChampionOfAirBuff_Info">Questa caratteristica dona alla creatura l\'essenza dei venti, migliorando la sua agilità e abilità in combattimento. Il Campione dell\'Aria diventa un avversario formidabile, capace di scatenare attacchi rapidi e devastanti che possono cambiare rapidamente il corso della battaglia.</string>
     <string name="ChampionOfEarthBuff_Info">Il Campione della Terra incarna una forza inflessibile, poiché questo attributo aumenta la resistenza ai danni della creatura e incrementa la sua vitalità massima. Questa trasformazione lo rende un avversario temibile nelle profondità insidiose, capace di ignorare facilmente gli attacchi e di resistere a lunghe battaglie con fermezza incrollabile.</string>
     <string name="ChampionOfEarthBuff_Name">Campione della Terra</string>
@@ -1990,6 +1991,7 @@ Potrebbe bruciare?</string>
     <string name="Ushanka_Info">Un caldo e comodo cappello ushanka decorato con una stella rossa. Il compagno perfetto per lottare in questo malvagio e freddo Dungeon.</string>
     <string name="Ushanka_Name">Cappello Ushanka </string>
     <string name="Using_Failed_Because_Blind">Non puoi usare \&quot;%s\&quot; mentre sei accecato.</string>
+    <string name="Using_Failed_Because_Magic">Una potente magia ti impedisce di usare \&quot;%s\&quot;.</string>
     <string name="VampireSkull_Info">Questa maschera è fatta col teschio di un vampiro. Infatti è il teschio di un vampiro... il teschio di un grande vampiro. Spaventoso.</string>
     <string name="VampireSkull_Name">teschio di vampiro</string>
     <string name="VertigoBuff_Info">La sensazione di leggerezza rende più difficile camminare dritto!</string>
@@ -2615,6 +2617,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 

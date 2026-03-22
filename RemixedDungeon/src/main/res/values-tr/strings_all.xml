@@ -2370,6 +2370,7 @@ remix.30.1\n
     <string name="WndCryptoDonate_supportDev">Geliştiriciyi Destekle</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_walletAddress">Cüzdan Adresi</string>
+    <string name="WndCryptoDonate_warningText">UYARI: Fon göndermeden önce adresi her zaman doğrulayın. Kripto para işlemleri geri alınamaz!</string>
     <string name="WndCustomizations_Title">Özelleştirmeler</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - her zaman ve herkes için ücretsiz.\n\nEğer isterseniz oyunu daha iyi bir hale getirmek için bize yardımcı olabilirsiniz.\n\nİçten şükranlarımızın yanı sıra bir kozmetik seti alacaksınız.</string>
     <string name="WndDonate_donate">bağış:</string>
@@ -2911,6 +2912,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
