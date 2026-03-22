@@ -1082,6 +1082,7 @@
     <string name="KoboldIcemancer_Name">藍袍狗頭人</string>
     <string name="KoboldIcemancer_Name_Objective">藍袍狗頭人</string>
     <string name="Kobold_Desc">狗頭人被認為是一個傳說。雖然它們和豺狼人有著同樣的祖先，但是它們居住在冰霜洞穴中。同時它們也有很高的工程機械造詣。但沒人知道為什麼它們消失了這麼多年...</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">狗頭人</string>
     <string name="Kobold_Name_Objective">狗頭人</string>
     <string name="KrampusHead_Name">克朗普斯頭顱</string>
@@ -2798,6 +2799,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

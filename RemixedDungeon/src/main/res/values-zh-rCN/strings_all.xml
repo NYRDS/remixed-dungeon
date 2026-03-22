@@ -1480,6 +1480,7 @@
     <string name="Plant_Seed">%s种子</string>
     <string name="PlateArmor_Desc">巨大的金属板接合成的装甲，给予那些强壮到足够负担它惊人重量的冒险家以无可匹敌的防护。</string>
     <string name="PlateArmor_Name">板甲</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">箭头上涂的剧毒反射着光芒。</string>
     <string name="PoisonArrow_Name">毒箭</string>
     <string name="PoisonBuff_Info">毒随时间流逝而发作，你的身体逐渐迟缓，直至死亡！</string>
@@ -2881,6 +2882,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

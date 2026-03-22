@@ -67,6 +67,7 @@
     <string name="Spinner_Gender">masculine</string>
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="StartScene_DifficultyNormalWithSaves">Normal com saves (e propagandas)</string>
+    <string name="StartScene_DifficultyNormalWithSavesNoAds">Normal com saves</string>
     <string name="SungrassBuff_Name">Cura Herbal</string>
     <string name="Thief_Desc">Níveis mais profundos da masmorra sempre foram um esconderijo para todos os tipos de criminosos. Nem todos eles poderiam manter uma mente clara durante os longos períodos longe de luz do dia. Há muito tempo, esses ladrões loucos e bandidos se esqueceram quem são e por que eles roubam.</string>
     <string name="Torch_Info">É um item indispensável na masmorra, que é infame pela sua iluminação ambiente fraca.</string>
@@ -128,6 +129,7 @@
 
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 
