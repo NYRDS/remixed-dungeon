@@ -1687,6 +1687,9 @@ public class DebugEndpoints {
                     String.format("{\"error\":\"Failed to create level '%s'\"}", levelId));
             }
 
+            // Update level tracking
+            DungeonGenerator.loadingLevel(position);
+
             // Determine entrance position
             int startPos;
             if (entranceCell >= 0 && entranceCell < newLevel.getLength()) {
@@ -1869,6 +1872,10 @@ public class DebugEndpoints {
 
             int startPos = -(exitIndex + 1); // Negative indicates entrance index
             Collection<Mob> mobs = new ArrayList<>();
+
+            // Update level tracking
+            DungeonGenerator.loadingLevel(position);
+
             Dungeon.switchLevel(newLevel, startPos, mobs);
 
             String levelKind = DungeonGenerator.getLevelKind(targetLevelId);
@@ -1927,6 +1934,10 @@ public class DebugEndpoints {
 
             int startPos = newLevel.entrance;
             Collection<Mob> mobs = new ArrayList<>();
+
+            // Update level tracking
+            DungeonGenerator.loadingLevel(position);
+
             Dungeon.switchLevel(newLevel, startPos, mobs);
 
             String levelKind = DungeonGenerator.getLevelKind(targetLevelId);

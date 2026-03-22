@@ -53,14 +53,16 @@ class TestRunner:
         self.server_process = subprocess.Popen(
             cmd,
             cwd=project_root,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
             preexec_fn=os.setsid
         )
         # Wait for server to be ready
         print("Waiting for server to start...", end="", flush=True)
-        max_wait = 120
+        max_wait = 240  # 4 minutes (gradle build + game init takes time)
+        check_interval = 3
         start_time = time.time()
+        dots_printed = 0
         while time.time() - start_time < max_wait:
             if self.client.check_server():
                 print(" READY!")
@@ -218,3 +220,8 @@ def main():
     args = parser.parse_args()
     runner = TestRunner(args.host, args.port)
     exit_code = runner.run([args.hero], args.verbose)
+    sys.exit(exit_code)
+
+
+if __name__ == "__main__":
+    main()
