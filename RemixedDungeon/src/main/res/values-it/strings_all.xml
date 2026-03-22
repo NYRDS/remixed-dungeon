@@ -1019,6 +1019,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">coboldo</string>
     <string name="Kobold_Name_Objective">coboldo</string>
+    <string name="KrampusHead_Name">Testa di Krampus</string>
     <string name="KunaiThrow_Name">Lancio di Kunai</string>
     <string name="Kusarigama_Info">Quest\'arma consiste in una falce montata su una catena di metallo con un grosso peso di ferro nell\'estremità.</string>
     <string name="Kusarigama_Name">kusarigama</string>
@@ -2614,6 +2615,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

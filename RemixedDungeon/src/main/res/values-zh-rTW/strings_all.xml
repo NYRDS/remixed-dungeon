@@ -828,6 +828,7 @@
     <string name="HealthDart_Info">治療藥水制作的飛鏢。</string>
     <string name="HealthDart_Name">治療飛鏢</string>
     <string name="Heap_Mimic">它是擬型怪！</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">黑暗的，跳動著的“背叛的精神”之心臟。</string>
     <string name="HeartOfDarkness_Name">黑暗之心</string>
     <string name="Hedgehog_Desc">這只刺猬看起來十分緊張。</string>
@@ -2797,6 +2798,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

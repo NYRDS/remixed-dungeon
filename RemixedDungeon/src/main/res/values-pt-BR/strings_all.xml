@@ -16,6 +16,7 @@
     <string name="CorpseDustBuff_Name">Sangrento</string>
     <string name="Crystal_Name">cristal flutuante</string>
     <string name="DM300_Name">DM-300</string>
+    <string name="DarkSacrifice_Self">Pelo Flagelo!</string>
     <string name="DarkVeilBuff_Info">Um véu de escuridão envolve o portador, invocando um espírito cada vez que dano é recebido.</string>
     <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
     <string name="Drunkard_Phrase_3">Essa cerveja tem gosto de terra</string>
@@ -63,6 +64,7 @@
     <string name="TownsfolkMovieNPC_Desc">Um dos moradores. Embora seja claramente um plebeu, aquelas roupas parecem caras.</string>
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Permite carregar compactamente até %d varinhas.</string>
     <string name="WandOfDisintegration_Info">Esta varinha emite um feixe de energia destrutiva, que penetra em todas as criaturas no seu caminho. Quanto mais alvos ela atinge, mais dano causará a cada um deles.</string>
+    <string name="WandOfMagicMissile_SelectWand">Selecione uma varinha para melhorar</string>
     <string name="Wand_Fizzles">sua varinha chiou; deve estar sem cargas por enquanto</string>
     <string name="Wand_SelfTarget">Você não pode mirar em si mesmo.</string>
     <string name="WndCatalogus_Scrolls">Pergaminhos</string>
@@ -97,6 +99,10 @@
 
 
     <string name="town_deco_trapdoor_desc">Para onde isso poderia levar?</string>
+
+
+
+    <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
 
 </resources>
