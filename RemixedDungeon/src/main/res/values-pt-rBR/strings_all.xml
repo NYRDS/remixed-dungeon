@@ -2528,6 +2528,7 @@ remix.31.1\n
     <string name="WndSettings_Brightness">Brilho</string>
     <string name="WndSettings_ClassicFont">Fonte Clássica</string>
     <string name="WndSettings_ExperementalFont">Fonte Nova</string>
+    <string name="WndSettings_FpsLimit">Limite de FPS</string>
     <string name="WndSettings_GameplaySettings">Jogabilidade</string>
     <string name="WndSettings_Handedness">Lado dos botões </string>
     <string name="WndSettings_Immersive">Modo Imersivo</string>
@@ -2886,6 +2887,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
