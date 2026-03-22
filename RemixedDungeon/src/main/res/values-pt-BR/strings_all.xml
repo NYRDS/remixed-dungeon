@@ -31,6 +31,7 @@
     <string name="Hero_AnotherTry">Você morreu.\n Gostaria de tentar novamente?</string>
     <string name="IceGuardian_Name_Objective">guardião de gelo</string>
     <string name="InnServant_Phrase_1">Ui, ainda há muito o que fazer!</string>
+    <string name="Item_ACPickup">PEGAR</string>
     <string name="Journal_Alchemy">Caldeirão de alquimia</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
     <string name="LibraryBook_Name">Livro da biblioteca</string>
@@ -103,7 +104,10 @@
 
 
 
+    <string name="town_deco_urn_name">Urna</string>
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
+
+
 
 
 
