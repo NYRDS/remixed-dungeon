@@ -29,11 +29,13 @@
     <string name="HeroClass_PlagueDoctorPerks_2">Comece com uma [yellow:Máscara da Peste] (imune a todos os Gases) e uma [yellow:Serra de Osso]. Acertos críticos dropam partes extras, e a Serra causa x1.5 de dano a inimigos paralisados.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Poções de [yellow:Gás Paralisante] e [yellow:Gás Tóxico] são pré-identificadas.</string>
     <string name="HeroClass_WarPerks_3">Qualquer pedaço de comida restaura um pouco de saúde quando comido.</string>
+    <string name="HeroSubClass_DescFreR">O _Freerunner_ pode se mover quase duas vezes mais rápido que a maioria dos monstros. Quando está correndo, o Freerunner é muito mais difícil de acertar. Para isso, ele deve estar sem peso excessivo e não faminto.</string>
     <string name="Hero_AnotherTry">Você morreu.\n Gostaria de tentar novamente?</string>
     <string name="IceGuardian_Name_Objective">guardião de gelo</string>
     <string name="InnServant_Phrase_1">Ui, ainda há muito o que fazer!</string>
     <string name="Item_ACPickup">PEGAR</string>
     <string name="Journal_Alchemy">Caldeirão de alquimia</string>
+    <string name="Keyring_Info">Este é um chaveiro de cobre que permite manter todas as suas chaves separadas do resto dos seus pertences.</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
     <string name="LibraryBook_Name">Livro da biblioteca</string>
     <string name="ManaPotion_Info">Esta poção restaurará sua energia espiritual.</string>
@@ -108,6 +110,8 @@
 
     <string name="town_deco_urn_name">Urna</string>
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
+
+
 
 
 

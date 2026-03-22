@@ -62,6 +62,7 @@
     <string name="Amulet_Name">Amuleto de Yendor </string>
     <string name="AnesthesiaBuff_Info">No siente dolor y no se despierta con los ataques, pero aún recibe daño.</string>
     <string name="AnesthesiaBuff_Name">Anestesia</string>
+    <string name="Anesthesia_Info">Induce un sueño profundo y antinatural en tu objetivo. Ni siquiera los ataques más violentos lo despertarán de este letargo.</string>
     <string name="Ankh_Info">El antiguo símbolo de inmortalidad concede la habilidad de volver después de la muerte. Cuando resucitas pierdes todos los artículos que no tenías equipados.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">%s de anti-entropía</string>
@@ -2904,6 +2905,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

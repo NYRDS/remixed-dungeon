@@ -396,6 +396,7 @@
     <string name="Char_StaSlowed">rallentato</string>
     <string name="Char_StaStunned">stordito</string>
     <string name="Char_StaVision">visione</string>
+    <string name="Char_Stole_2">%1$s ha rubato %2$s a %3$s!</string>
     <string name="Char_YouMissed">%1$s %2$s il tuo attacco</string>
     <string name="ChargrilledMeat_Info">Sembra una bistecca decente.</string>
     <string name="ChargrilledMeat_Name">carne grigliata</string>
@@ -2618,6 +2619,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
