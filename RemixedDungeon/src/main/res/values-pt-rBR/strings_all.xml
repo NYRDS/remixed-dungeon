@@ -553,7 +553,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DM300_Info3">Pessoas não autorizadas detectadas.</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
-    <string name="Dagger_Info">Uma adaga de ferro simples, com um cabo de madeira bem desgastado.</string>
+    <string name="Dagger_Info">Uma adaga de ferro simples com um cabo de madeira bem gasto.</string>
     <string name="Dagger_Name">Adaga</string>
     <string name="DarkGold_Info">Este metal é chamado de escuro não por causa da sua cor(que é igual à cor normal do ouro), mas porque derrete sob a luz do dia, tornando-se inútil na superfície.</string>
     <string name="DarkGold_Name">minério de ouro escuro</string>
@@ -2053,7 +2053,7 @@ outro local do nível.</string>
     <string name="Sungrass_Desc">A planta da vida é conhecida por propriedades curativas da sua seiva.</string>
     <string name="Sungrass_Name">planta da vida</string>
     <string name="SurfaceScene_GameOver">Fim de Jogo</string>
-    <string name="SuspiciousRat_Desc">Um Rato não é uma visão incomum nas masmorras, mas para que ele possa morar tão profundamente... Você pode ver como todo o seu corpo se espasma quando se move.</string>
+    <string name="SuspiciousRat_Desc">Um rato não é uma visão incomum nas masmorras, mas para ele habitar tão profundamente... Você pode ver como o corpo inteiro do rato tem espasmos quando se move.</string>
     <string name="SuspiciousRat_Info1">Um rato suspeito está se contorcendo violentamente.</string>
     <string name="SuspiciousRat_Name">Rato suspeito</string>
     <string name="SuspiciousRat_Name_Objective">Rato suspeito</string>
@@ -2890,6 +2890,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

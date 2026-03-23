@@ -2518,6 +2518,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_carpet_name">카펫</string>
     <string name="town_deco_charcoal_carpet_desc">영화관 관리진은 손님들의 안락을 위해 최고 품질의 숯색 카펫을 선택했습니다.</string>
     <string name="town_deco_charcoal_carpet_name">카펫</string>
+    <string name="town_deco_chest_desc">다양한 물건과 보석류를 보관하기에 편리한 가구입니다.</string>
     <string name="town_deco_chest_name">보물 상자</string>
     <string name="town_deco_chimney_desc">석재 굴뚝은 보통 차가운 날씨의 영향을 자주 받는 지역들에 지어진 집들에 설치되어 있다.</string>
     <string name="town_deco_chimney_name">굴뚝</string>
@@ -2672,6 +2673,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
