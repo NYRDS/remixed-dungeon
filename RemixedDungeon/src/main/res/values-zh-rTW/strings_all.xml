@@ -322,6 +322,7 @@
     <string name="Capotain_Name">朝聖平頂帽</string>
     <string name="Carcass_Devoured">你已經吞食了%s的屍體！</string>
     <string name="Carcass_Name">%s 的遺骸</string>
+    <string name="Carcass_Necromancy_Failed">你嘗試復活%s 的屍體失敗了！</string>
     <string name="Carcass_TooFarToDissect">你需要離得更近才能解剖屍體。</string>
     <string name="Caves_TileDescBookshelf">誰會需要在礦洞裏放個書架？</string>
     <string name="Caves_TileDescDeco">一些礦脈在墻上清晰可見。是金子嗎？</string>
@@ -2800,6 +2801,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

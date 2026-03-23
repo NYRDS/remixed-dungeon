@@ -1,8 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AboutScene_SourceCode">Obter código fonte do Remixed Dungeon:</string>
     <string name="AirElemental_Desc">Elementais de ar são seres mágicos voadores feitos de ar vivo.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="Badges_Champion">Desafio vencido</string>
+    <string name="Badges_Info1">Medalha: %s</string>
     <string name="Badges_NoMonsterSlain">Nível completado sem matar nenhum monstro</string>
     <string name="Bat_Desc">Estes habitantes ágeis e tenazes das cavernas podem derrotar oponentes muito maiores, recuperando sua vida a cada ataque bem-sucedido.</string>
     <string name="BellaNPC_Message">Eu não tenho interesse em plebeus como você!</string>
@@ -43,6 +45,7 @@
     <string name="LibraryBook_Name">Livro da biblioteca</string>
     <string name="ManaPotion_Info">Esta poção restaurará sua energia espiritual.</string>
     <string name="MobAi_status">Este %1$s é %2$s</string>
+    <string name="Mob_Cannot_Be_Pet">A vontade de \"%s\" é muito forte para controlar!</string>
     <string name="Mob_StaTerrorStatus">Este %1$s está aterrorizado</string>
     <string name="No_Valid_Cell">Não há uma célula adequada por perto.</string>
     <string name="Paralysis_Name_0">%s do Atordoamento</string>
@@ -59,7 +62,7 @@
     <string name="ResultDescriptions_Necrotism">Morreu de Necrotismo no nível %d</string>
     <string name="ScrollHolder_Info">Você pode colocar qualquer número de pergaminhos neste recipiente tubular. Ele economiza espaço em sua mochila e protege pergaminhos do fogo.</string>
     <string name="ScrollOfTerror_Info2">O pergaminho emite um flash brilhante de luz vermelha e o %s foge!</string>
-    <string name="Scroll_Name">pergaminho \&quot;%s\&quot;</string>
+    <string name="Scroll_Name">pergaminho \"%s\"</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="ShieldBuffNotReady_Name">Escudo não está pronto</string>
     <string name="Shopkeeper_title">Loja</string>
@@ -77,6 +80,7 @@
     <string name="Torch_Info">É um item indispensável na masmorra, que é infame pela sua iluminação ambiente fraca.</string>
     <string name="TownShopkeeper_Objective">comerciante</string>
     <string name="TownsfolkMovieNPC_Desc">Um dos moradores. Embora seja claramente um plebeu, aquelas roupas parecem caras.</string>
+    <string name="ToxicGas_Info">Uma nuvem esverdeada de gás tóxico está pairando aqui</string>
     <string name="Viscosity_Status">adiado %d</string>
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Permite carregar compactamente até %d varinhas.</string>
     <string name="WandOfDisintegration_Info">Esta varinha emite um feixe de energia destrutiva, que penetra em todas as criaturas no seu caminho. Quanto mais alvos ela atinge, mais dano causará a cada um deles.</string>
@@ -96,6 +100,7 @@
     <string name="WndPremiumSettings_std">padrão</string>
     <string name="WndPriest_Instruction2_f">Bem-vinda minha filha, bem-vinda à santa igreja do grande Papai Noel o Senhor das Profundezas!</string>
     <string name="WndPriest_Instruction_f">Bem-vinda minha filha, bem-vinda à santa igreja do grande Papai Noel o Senhor das Profundezas! Infelizmente não posso deixá-la passar agora, porque o edifício está em reconstrução, mas se você busca ajuda, posso fornecer serviço de cura e comida por apenas %d moedas de ouro!</string>
+    <string name="WndSettings_ZoomOut">-</string>
     <string name="WndTradeItem_BuyN">Comprar %1$d por %2$dg</string>
     <string name="WndTradeItem_Sell">Vender por %dg</string>
     <string name="YogsTeeth_Name">dentes de Yog</string>
@@ -133,6 +138,10 @@
 
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
+
+
 
 
 
