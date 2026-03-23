@@ -670,6 +670,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="ElfArmor_Desc">Com a ajuda deste manto o elfo pode invocar forças da própria natureza. Grama alta irá crescer em um pisco até mesmo sobre pedra sólida imobilizando todos os inimigos à vista.</string>
     <string name="ElfArmor_Name">Manto élfico</string>
     <string name="ElfArmor_NotElf">Somente elfos podem usar essa armadura!</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Um exemplo excepcional do artesanato élfico. É claramente mais eficaz e preciso que um arco de madeira comum.</string>
     <string name="ElvenBow_Name"> arco élfico</string>
     <string name="ElvenDagger_Gender">masculine</string>
@@ -2888,6 +2889,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
