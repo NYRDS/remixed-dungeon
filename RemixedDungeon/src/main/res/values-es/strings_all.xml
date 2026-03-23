@@ -1227,6 +1227,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="LibraryBook_Name">Libro de la biblioteca</string>
     <string name="Lich_Desc">El nigromante ha encontrado la muerta en las profundidades de la Necrópolis, toda la energía malvada de este lugar se unió con su cuerpo, por lo que se termino convirtiendo en el Lich. Un mago no-muerto, sin voluntad y controlado por poderes malvados.</string>
     <string name="Lich_DieInfo">Nunca me gustó este Nigromante. Tendre que volver al nivel 7 y encontrar otro camino hacia la nueva aventura.</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">Lich</string>
     <string name="Lich_Name_Objective">Lich</string>
     <string name="LightBuff_Info">La luz emana del cuerpo, iluminando todo lo que le rodea.</string>
@@ -2906,6 +2907,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

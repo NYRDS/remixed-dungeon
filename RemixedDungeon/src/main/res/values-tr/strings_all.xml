@@ -1440,6 +1440,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="PirateSet_Info">Arr! Bizim çocuklara katılacak cesaretin var mı? Yoksa sadece başka bir kara sıçanı mısın? Umarım değilsindir, çünkü bu şey sadece korsanlar için. Arr!</string>
     <string name="PirateSet_Name">Korsan Seti</string>
     <string name="PlagueDoctorMaskHood_Info">Oyma abanoz kafatası, boş göz yuvaları ametist taşların dünyevi olmayan parıltısıyla parlıyor. Çektiğiniz her nefes, borular ve filtrelerden oluşan bir labirentten fısıldayarak geçer, üzerinize yapışan çürümeyi maskeleyen güçlü otlar ve baharatların kokusunu taşır. Ama bu sadece bir maske değil. Gece yarısı kadifesinden ağır bir başlık, yüzünüzü ve başınızı gölgelere bürür. Kapüşon, bir kuzgunun kanadı gibi sırtınızdan aşağı akar, kenarları kemik-beyazı dantelden bir saçakla süslenmiştir, ürpertici derecede güzel bir tezat. Birlikte, maske ve kapüşon, hayaletimsi bir çehre yaratır, çürüme güçlerine karşı bitmeyen savaşın kasvetli bir tanığı.</string>
+    <string name="PlagueDoctorMask_Name">Veba Doktoru maskesi</string>
     <string name="PlagueDoctorNPC_After_Quest">onlara göstereceğim !! onların hepsine göstereceğim !!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Sen hala burada mısın? İşte, al bunu.</string>
     <string name="PlagueDoctorNPC_Desc">Bu kambur kişinin tüm vücudu deri bir tulumun altında gizlidir. Ayrıca, ondan acı bir ilaç ve ... sarımsak kokusu geliyor?</string>
@@ -2912,6 +2913,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

@@ -56,6 +56,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="AmokArrow_Name">Strzała Szału</string>
     <string name="AmokBuff_Info">Poczuj amok wydzierając życie z nieszczęśników.</string>
     <string name="AmokBuff_Name">Amok</string>
+    <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">Roztwór na grocie tej rzutki zamieni każdego w  bezmyślnego i okrutnego berserka.</string>
     <string name="AmokDart_Name">Rzutka Szału</string>
     <string name="AmuletScene_Exit">Tyle na dzisiaj</string>
@@ -3019,6 +3020,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

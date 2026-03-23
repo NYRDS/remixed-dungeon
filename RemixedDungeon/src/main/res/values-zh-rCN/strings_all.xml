@@ -709,6 +709,7 @@
     <string name="Exhumation_NoGrave">这里没有坟墓可以进行施法。</string>
     <string name="Exhumation_Ok">我会服从于你。</string>
     <string name="ExplodingSkull_Desc">这块漂浮的燃烧头骨看起来相当脆弱，仿佛每一秒都有爆炸的危险。</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">爆炸头骨</string>
     <string name="ExplodingSkull_Name_Objective">爆炸头骨</string>
     <string name="Eye_Desc">这种恶魔的别名是“憎恶之球”，因为它一旦看到敌人就会毫无顾忌地使用它们的死亡凝视，即使这会伤害到它的友军。</string>
@@ -2882,6 +2883,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

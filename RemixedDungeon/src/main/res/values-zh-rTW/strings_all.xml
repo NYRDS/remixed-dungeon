@@ -89,6 +89,7 @@
     <string name="Attack_Cooldown">攻擊冷卻時間</string>
     <string name="AwarenessBuff_Name">察覺</string>
     <string name="AzuterronNPC_Desc">被黑霧包圍著的神秘人</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">陌生人</string>
     <string name="AzuterronNPC_Name_Objective">陌生人</string>
     <string name="AzuterronNPC_Quest_End">棒極了。把這瓶藥水拿去吧，當然，它是有益的。</string>
@@ -2799,6 +2800,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
