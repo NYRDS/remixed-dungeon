@@ -25,6 +25,7 @@
     <string name="Actions_Speed">Velocidade de ação</string>
     <string name="Affection_Txt">%s de afeição</string>
     <string name="AirElemental_Desc">Elementais de ar são seres mágicos feitos de ar vivo.</string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">elemental de ar</string>
     <string name="AirElemental_Name_Objective">elemental de ar</string>
     <string name="AlarmTrap_Desc">A armadilha emite um som agudo que ecoa em todo o calabouço!</string>
@@ -2887,6 +2888,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

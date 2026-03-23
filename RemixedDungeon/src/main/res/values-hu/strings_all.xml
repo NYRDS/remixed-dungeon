@@ -1830,6 +1830,7 @@ egy másik helyre a szinten. </string>
     <string name="SmashSpell_Info">Ugorj fel, hogy visszaérkezéskor nagy erővel sújts le a földre. Ez a mozdulat egyszerre bénítja meg ideiglenesen az ellenségeket és okoz sebzést körülötted.</string>
     <string name="SmashSpell_Name">Összezúzás</string>
     <string name="SmashSpell_NeedWeapon">Szükségem van egy fegyverre ehhez a lépéshez.</string>
+    <string name="Snail_Desc">Ez a kis puhatestű elég nagyra nőtt, miközben szennyvízen élt, de még mindig nagyon lassú, így könnyű ellenfél.</string>
     <string name="Snail_Gender">feminine</string>
     <string name="Snail_Name">csiga</string>
     <string name="Snail_Name_Objective">csigát</string>
@@ -2698,6 +2699,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

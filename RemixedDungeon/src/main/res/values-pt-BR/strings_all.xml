@@ -1,6 +1,7 @@
 <resources>
     <string name="AboutScene_SourceCode">Obter código fonte do Remixed Dungeon:</string>
     <string name="AirElemental_Desc">Elementais de ar são seres mágicos voadores feitos de ar vivo.</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="Badges_Champion">Desafio vencido</string>
     <string name="Badges_NoMonsterSlain">Nível completado sem matar nenhum monstro</string>
     <string name="Bat_Desc">Estes habitantes ágeis e tenazes das cavernas podem derrotar oponentes muito maiores, recuperando sua vida a cada ataque bem-sucedido.</string>
@@ -53,6 +54,7 @@
     <string name="Potion_Colors_12">epidoto</string>
     <string name="Ration_Name">ração de comida</string>
     <string name="RawFish_Taste">Gosto de peixe!</string>
+    <string name="ResultDescriptions_Necromancy">Esgotado da forca vital enquanto tentava animar um cadaver no nivel %d</string>
     <string name="ResultDescriptions_Necrotism">Morreu de Necrotismo no nível %d</string>
     <string name="ScrollOfTerror_Info2">O pergaminho emite um flash brilhante de luz vermelha e o %s foge!</string>
     <string name="Scroll_Name">pergaminho \&quot;%s\&quot;</string>
@@ -129,6 +131,8 @@
 
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
 
 
 
