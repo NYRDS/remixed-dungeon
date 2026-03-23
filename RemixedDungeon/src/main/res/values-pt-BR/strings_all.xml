@@ -40,6 +40,7 @@
     <string name="Item_ACPickup">PEGAR</string>
     <string name="Journal_Alchemy">Caldeirão de alquimia</string>
     <string name="Keyring_Info">Este é um chaveiro de cobre que permite manter todas as suas chaves separadas do resto dos seus pertences.</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
     <string name="LibraryBook_Name">Livro da biblioteca</string>
     <string name="ManaPotion_Info">Esta poção restaurará sua energia espiritual.</string>
@@ -139,6 +140,7 @@
 
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 

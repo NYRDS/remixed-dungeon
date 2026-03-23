@@ -1956,6 +1956,7 @@ outro local do nível.</string>
     <string name="SpiderCharm_Name">Encanto de Aranha</string>
     <string name="SpiderCharm_Use">USAR</string>
     <string name="SpiderEgg_Desc">Este ovo frágil está pulsando, dentro você consegue ver algo com muitas pernas.</string>
+    <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">ovo de aranha</string>
     <string name="SpiderEgg_Name_Objective">ovo de aranha</string>
     <string name="SpiderElite_Desc">Assim como os soldados, os guardas aranhas juram proteger seu reino. O veneno do guarda de elite é usado para desorientar seu alvo.</string>
@@ -2828,7 +2829,7 @@ remix.31.1\n
     <string name="town_deco_stakes_desc">Esses troncos afiados têm uma aparência assustadora, enquanto na verdade são inúteis por si mesmos.</string>
     <string name="town_deco_stakes_name">Estacas</string>
     <string name="town_deco_statue_blood_desc">Uma majestosa estátua de um anjo segurando uma tigela de sangue.</string>
-    <string name="town_deco_statue_blood_name">estatua de anjo</string>
+    <string name="town_deco_statue_blood_name">Estátua de anjo</string>
     <string name="town_deco_statue_water_desc">Uma majestosa estátua de um anjo segurando uma tigela de água.</string>
     <string name="town_deco_statue_water_name">Estatua de anjo</string>
     <string name="town_deco_stock_desc">Suprimentos de comida são mantidos aqui, assim como um monte de lixo de todos os tipos e cores.</string>
@@ -2889,6 +2890,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
