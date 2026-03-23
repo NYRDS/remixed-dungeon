@@ -653,6 +653,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Eye_Name_Objective">눈알 악마</string>
     <string name="Facilitations_Descriptions_0">변이체들은 항상 경멸과 두려움을 가지고 대우받았지만, 배고픔이 없는 것이 다시 한 번 당신에게 우월성을 줄 것입니다. 이번에는 던전의 심연을 정복하는 데 있어 말입니다.</string>
     <string name="Facilitations_Names_0">배고픔 없음</string>
+    <string name="Facilitations_Names_1">트롤 시체</string>
     <string name="Facilitations_Names_3">거인의 힘</string>
     <string name="Fadeleaf_Desc">미명초를 만지면 현재 층의 무작위 위치로 보낼 것이다. </string>
     <string name="Fadeleaf_Name">미명초</string>
@@ -1158,6 +1159,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ManaRegenerationBuff_Info">마나 재생 기능은 버프 형태로 되어 있어 사용이 편리합니다.</string>
     <string name="Mana_Cost">마나 소모:</string>
     <string name="Mana_Title">마나</string>
+    <string name="MedicineMask_Obtained">수술용 마스크 획득</string>
     <string name="MeleeWeapon_Info1a">이 %1$s 은/는 %2$s %3$d차 근접 무기입니다.-업그레이드시 +차수 데미지-</string>
     <string name="MeleeWeapon_Info1b">일반</string>
     <string name="MeleeWeapon_Info1c">향상된</string>
@@ -2670,6 +2672,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 

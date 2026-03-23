@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AboutScene_SourceCode">Obter código fonte do Remixed Dungeon:</string>
     <string name="AirElemental_Desc">Elementais de ar são seres mágicos voadores feitos de ar vivo.</string>
@@ -45,7 +44,7 @@
     <string name="LibraryBook_Name">Livro da biblioteca</string>
     <string name="ManaPotion_Info">Esta poção restaurará sua energia espiritual.</string>
     <string name="MobAi_status">Este %1$s é %2$s</string>
-    <string name="Mob_Cannot_Be_Pet">A vontade de \"%s\" é muito forte para controlar!</string>
+    <string name="Mob_Cannot_Be_Pet">A vontade de \&quot;%s\&quot; é muito forte para controlar!</string>
     <string name="Mob_StaTerrorStatus">Este %1$s está aterrorizado</string>
     <string name="No_Valid_Cell">Não há uma célula adequada por perto.</string>
     <string name="Paralysis_Name_0">%s do Atordoamento</string>
@@ -62,7 +61,7 @@
     <string name="ResultDescriptions_Necrotism">Morreu de Necrotismo no nível %d</string>
     <string name="ScrollHolder_Info">Você pode colocar qualquer número de pergaminhos neste recipiente tubular. Ele economiza espaço em sua mochila e protege pergaminhos do fogo.</string>
     <string name="ScrollOfTerror_Info2">O pergaminho emite um flash brilhante de luz vermelha e o %s foge!</string>
-    <string name="Scroll_Name">pergaminho \"%s\"</string>
+    <string name="Scroll_Name">pergaminho \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="ShieldBuffNotReady_Name">Escudo não está pronto</string>
     <string name="Shopkeeper_title">Loja</string>
@@ -87,6 +86,7 @@
     <string name="WandOfMagicMissile_SelectWand">Selecione uma varinha para melhorar</string>
     <string name="Wand_Fizzles">sua varinha chiou; deve estar sem cargas por enquanto</string>
     <string name="Wand_SelfTarget">Você não pode mirar em si mesmo.</string>
+    <string name="WarHammer_Name">martelo de guerra</string>
     <string name="WndCatalogus_Scrolls">Pergaminhos</string>
     <string name="WndChallenges_Title">Desafios</string>
     <string name="WndCryptoDonate_currency">Moeda</string>
@@ -106,6 +106,7 @@
     <string name="YogsTeeth_Name">dentes de Yog</string>
     <string name="ZombieGnoll_Desc">O corpo torcido e quebrado de um Gnoll-Zumbi já não se parece com humanoide ou hiena. É apenas um monte de carne podre e ossos cheios de desejo maligno de matar e comer.</string>
     <string name="ZombieGnoll_Name">gnoll-zumbi</string>
+    <string name="ZombieMask_Info">Você já desejou parecer um herói morto-vivo, que falhou em sua missão repetidamente? Bem, aqui está sua chance.</string>
     <string name="town_deco_INN_sign_desc">Parece que há uma estalagem dentro daquele edifício.</string>
 
     <string name="town_deco_armorstand_scale_name">Armadura de escamas</string>
@@ -138,6 +139,8 @@
 
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
 
 
 
