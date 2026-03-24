@@ -686,6 +686,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="FireArrow_Info">Anak panah ini kelihatan seperti yang biasa, tetapi ada cahaya merah bersinar dari kepala panahnya.</string>
     <string name="FireArrow_Name">anak panah api</string>
     <string name="FireElemental_Desc">Keunsuran api yang merayau adalah hasil dari penyeruan entiti yang lebih hebat. Mereka terlalu ganas untuk dikawal walaupun oleh ahli setan yang terhebat.</string>
+    <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">keunsuran api</string>
     <string name="FireElemental_Name_Objective">keunsuran api</string>
     <string name="Fire_Info">Api semakin marak di sini.</string>
@@ -2674,6 +2675,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

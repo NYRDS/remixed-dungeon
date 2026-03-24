@@ -667,6 +667,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="FireArrow_Info">이 화살은 평범해 보이지만 화살촉에서 붉고 따뜻한 빛이 새어나온다.</string>
     <string name="FireArrow_Name">불 화살</string>
     <string name="FireElemental_Desc">방황하는 불 정령은 고위 괴물 소환의 부산물입니다. 녀석은 너무나 혼돈스러운 본능을 가지고 있어서 최고의 악마학자마저 조종할 수 없습니다.</string>
+    <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">불 정령</string>
     <string name="FireElemental_Name_Objective">불 정령</string>
     <string name="Fire_Info">불꽃이 맹렬하게 타오릅니다.</string>
@@ -1353,6 +1354,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PlagueDoctorQuest_AllDone">*그는 건조하고 쌕쌕거리는 웃음을 터뜨린다.* \&quot;당신의 업적은 측량할 수 없는 비밀들을 해방시켰습니다! 얻은 지식은... 저 안에서 맥박처럼 뛰고 있습니다, 발견의 교향곡처럼. 하지만 지식,\&quot; 그는 속삭이는 듯한 목소리로 덧붙입니다, \&quot;지식은 힘입니다. 그리고 힘... 아... 그것은 가장 취하게 하는 엘릭서입니다.\&quot; 그는 잠시 당신을 응시하며, 자수정 같은 눈이 열병 같은 강도로 타오릅니다. \&quot;아마도,\&quot; 그는 중얼거립니다, \&quot;우리의 길은 다시 교차할 것입니다. 아직 풀어야 할 많은... 신비들이... 남아있으니까요.\&quot;</string>
     <string name="PlagueDoctor_Desc">이 곱추 남성은 가죽으로 둘러쌓여 있고, 강한 약냄새가..아니, 마늘 냄새도 나는 것 같다?</string>
 
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">역병 의사</string>
     <string name="PlagueDoctor_Name_Objective">역병 의사</string>
     <string name="Plant_ACPlant">심기</string>
@@ -2674,6 +2676,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 

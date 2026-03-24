@@ -698,6 +698,7 @@
     <string name="FireArrow_Info">這支箭除了有個洋溢著和暖紅光的箭頭外，看起來和普通的沒大差別。</string>
     <string name="FireArrow_Name">火箭</string>
     <string name="FireElemental_Desc">這些遊蕩的火元素是在召喚某種更強大存在時的副產品。由於其特性太過混亂，以至於最強大的惡魔學者都無法驅使。</string>
+    <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">火元素</string>
     <string name="FireElemental_Name_Objective">火元素</string>
     <string name="Fire_Info">這裏起火了。</string>
@@ -2802,6 +2803,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -472,7 +472,7 @@
     <string name="ClothArmor_Name">armadura de pano</string>
     <string name="Codex_ACRead">LER</string>
     <string name="Codex_Blinded">Você não pode ler enquanto estiver cego!</string>
-    <string name="Codex_Info">Um de vários livros que podem ser encontrados em qualquer biblioteca.</string>
+    <string name="Codex_Info">Um dos muitos livros que podem ser encontrados em qualquer biblioteca</string>
     <string name="Codex_Name">Codex</string>
     <string name="Codex_Story_0">E criou Watabou Pixel Dungeon. E ele viu seu trabalho. E viu que era bom!</string>
     <string name="Codex_Story_1">Glifo Elástico - Faz inimigos serem jogados para trás ao atingirem o Herói.</string>
@@ -680,7 +680,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="EncumbranceBuff_CharAct_5">%s é demais para eu lidar agora.</string>
     <string name="EncumbranceBuff_Info">Não há força suficiente para usar %s de forma eficaz.</string>
     <string name="EncumbranceBuff_Name">Fardo</string>
-    <string name="EnslavedSoul_Desc">Você quase pode ver através desta aparição fantasmagórica. Mesmo que pareça um crânio, às vezes, por uma fração de segundo, pode-se ver que um rosto aparece, um rosto cheio de sofrimento e dor.</string>
+    <string name="EnslavedSoul_Desc">Você quase consegue ver através desta aparição fantasmagórica. E embora pareça um crânio, às vezes por uma fração de segundo um rosto aparece, cheio de dor e sofrimento.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name">Alma escravizada</string>
     <string name="EnslavedSoul_Name_Objective">Alma escravizada</string>
@@ -722,6 +722,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="FireArrow_Info">Esta flecha parece normal, exceto pela luz vermelha quente emanando da ponta.</string>
     <string name="FireArrow_Name">flecha de fogo</string>
     <string name="FireElemental_Desc">Elementais do fogo errantes são conhecidas por convocar outras entidades. Eles são muito caóticos e são dificeis de serem controlados até pelo mais poderoso Demonologista.</string>
+    <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">elemental do fogo</string>
     <string name="FireElemental_Name_Objective">elemental do fogo</string>
     <string name="Fire_Info">Um incêndio está queimando aqui.</string>
@@ -2890,6 +2891,11 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
 
 
 

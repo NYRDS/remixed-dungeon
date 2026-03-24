@@ -293,6 +293,7 @@
     <string name="CandleOfMindVision_Name">Candela delle Visioni</string>
     <string name="Candy_Info">Questa caramella sembra davvero bella e il suo odore è altrettanto buono. Vuoi davvero lasciarla a qualcun\'altro?</string>
     <string name="Candy_Name">caramella</string>
+    <string name="Candy_Warning_1">Non avresti dovuto mangiare quella caramella. Avevi promesso di darla a qualcun altro. Non sembra averti influenzato in alcun modo, però la tua fame non passa, è solo una caramella dopo tutto.</string>
     <string name="Candy_Warning_2">Ora hai davvero esagerato. La tua pancia fa male perché hai mangiato troppe caramelle.</string>
     <string name="Capotain_Info">un cappello alto, a tesa stretta. Di solito è associato ai Puritani , ma non c\'è bisogno di essere religiosi per indossarlo. Per qualche ragione ha una targhetta, che dice \&quot; Solomon \&quot; .</string>
     <string name="Capotain_Name">Cappello a capote</string>
@@ -650,6 +651,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="FireArrow_Info">Questa freccia sembra normale, tranne per la calda luce rossa che irradia dalla sua testa.</string>
     <string name="FireArrow_Name">freccia di fuoco</string>
     <string name="FireElemental_Desc">Gli elementali del fuoco erranti sono un sottoprodotto dell\'evocazione di più grandi entità. Sono troppo caotici nella loro forma per essere controllati anche dal più potente demonologo.</string>
+    <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">elementale del fuoco</string>
     <string name="FireElemental_Name_Objective">elementale del fuoco</string>
     <string name="Fire_Info">Un incendio sta infuriando qua.</string>
@@ -1921,6 +1923,7 @@ Potrebbe bruciare?</string>
     <string name="Tengu_Info3">Gotcha, %s!</string>
     <string name="Tengu_Name">tengu</string>
     <string name="Tengu_Name_Objective">tengu</string>
+    <string name="TerrorBuff_Info">Sembra che qualcuno sia stato molto spaventato.</string>
     <string name="TerrorBuff_Name">Terrorizzato</string>
     <string name="Thief_Carries">\n\n%1$s sta portando un _%2$s_. rubalo ovviamente.</string>
     <string name="Thief_Desc">I livelli più profondi del dungeon sono sempre stati un nascondiglio per tutti i tipi di criminali. Non tutti potevano mantenere una mente lucida durante i loro lunghi periodi così lontano dalla luce del giorno. Molto tempo fa, questi banditi e ladri folli hanno dimenticato chi sono e perché rubano. Questo bandito sembra aver rivestito il pugnale con qualcosa!</string>
@@ -2619,6 +2622,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 
