@@ -2543,6 +2543,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndModInstall_Version">version</string>
     <string name="WndModSelect_AreYouSure">Effacer le mod: %s, en êtes-vous sûr?</string>
     <string name="WndModSelect_ReallyDelete">Voulez-vous vraiment l\'effacer ?</string>
+    <string name="WndModsDisclaimer_manage">Gérer la liste des mods</string>
     <string name="WndModsDisclaimer_title">Mods</string>
     <string name="WndMovieTheatre_Bye">Revenez quand vous le voulez, nous serons ravis de vous revoir ! </string>
     <string name="WndMovieTheatre_Instruction">Bonjour et bienvenue dans notre cinéma, nous offrons un service spécial qui consiste à regarder un film appelé \&quot;Pub\&quot; gratuitement. Si vous le regardez en entier, vous serez recompensés avec %d pièces d\'or!</string>
@@ -2992,6 +2993,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

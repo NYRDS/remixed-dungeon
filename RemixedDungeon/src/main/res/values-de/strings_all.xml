@@ -2443,6 +2443,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndMovieTheatre_Sorry">Irgendwas ist schiefgelaufen, deshalb können wir dir nicht die Belohnung vom Video geben...</string>
     <string name="WndMovieTheatre_Thank_You">Danke, dass du teilgenommen hast!</string>
     <string name="WndMovieTheatre_Title">Kino</string>
+    <string name="WndMovieTheatre_Watch">Werbung ansehen</string>
     <string name="WndPlayGames_BackupProgress">Sichere Spielfortschritt</string>
     <string name="WndPlayGames_Connecting">Verbinde zu Google Play Spiele...</string>
     <string name="WndPlayGames_RestoreProgress">Lade Spielfortschritt</string>
@@ -2873,6 +2874,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
