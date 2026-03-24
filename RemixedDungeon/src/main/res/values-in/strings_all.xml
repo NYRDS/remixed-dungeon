@@ -42,6 +42,7 @@
 - Mempublikasikan statistik fakta lucu dari waktu ke waktu\n
 Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</string>
     <string name="AllowStatisticsCollectionScene_Title">Koleksi penggunaan statistik</string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">Solusi, di ujung anak panah ini akan membuat siapa pun mengamuk tanpa ampun.</string>
     <string name="AmokArrow_Name">Anak Panah Amuk</string>
     <string name="AmokBuff_Info">Rasakan amuknya, merenggut nyawa mereka yang malang.</string>
@@ -2849,6 +2850,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

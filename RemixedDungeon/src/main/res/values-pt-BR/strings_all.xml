@@ -64,6 +64,7 @@
     <string name="ResultDescriptions_Necromancy">Esgotado da forca vital enquanto tentava animar um cadaver no nivel %d</string>
     <string name="ResultDescriptions_Necrotism">Morreu de Necrotismo no nível %d</string>
     <string name="ScrollHolder_Info">Você pode colocar qualquer número de pergaminhos neste recipiente tubular. Ele economiza espaço em sua mochila e protege pergaminhos do fogo.</string>
+    <string name="ScrollOfLullaby_Info1">O pergaminho emite uma melodia suave.</string>
     <string name="ScrollOfTerror_Info2">O pergaminho emite um flash brilhante de luz vermelha e o %s foge!</string>
     <string name="Scroll_Name">pergaminho \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
@@ -95,6 +96,7 @@
     <string name="WndChallenges_Title">Desafios</string>
     <string name="WndCryptoDonate_currency">Moeda</string>
     <string name="WndCryptoDonate_supportDev">Apoiar o Desenvolvedor</string>
+    <string name="WndDonate_royal">Real</string>
     <string name="WndGame_Save">Salvar</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, aguarde...</string>
     <string name="WndModsDisclaimer_manage">Gerenciar lista de mods</string>
@@ -128,6 +130,8 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
 
 
 </resources>
