@@ -1493,6 +1493,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="RatKingCrown_Name">Mahkota raja tikus</string>
     <string name="RatKing_Desc">Raja tikus ini lebih besar dari tikus marsupial biasa dan ia memakai mahkota kecil di atas kepalanya.</string>
     <string name="RatKing_Died">Raja telah mati. Daulat Raja baru!</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">Saya tidak tidur!</string>
     <string name="RatKing_Info2">Apakah ini? Saya tidak mahu terlibat dengan perkara pelik ini. Kerajaan saya tidak boleh hidup tanpa saya!</string>
     <string name="RatKing_Info3">Berani kau, makhluk kerdil, ganggu Ratness kami?!</string>
@@ -2672,6 +2673,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

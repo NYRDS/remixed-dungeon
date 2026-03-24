@@ -1837,6 +1837,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ShadowLord_Name">penguasa kegelapan</string>
     <string name="ShadowLord_Name_Objective">Penguasa Kegelapan</string>
     <string name="Shadow_Desc">Bayangan diam-diam berkelana melewati reruntuhan dari penjara kuno, hanya kadang-kadang memunculkan diri mereka pada petualang, biasanya di petualangan terakhir mereka.</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name">bayangan</string>
     <string name="Shadow_Name_Objective">bayangan</string>
     <string name="ShadowsBuff_Info">Lebih sulit untuk melihat sesuatu di antara bayang-bayang.</string>
@@ -2847,6 +2848,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
