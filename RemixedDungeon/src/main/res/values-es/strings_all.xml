@@ -1124,6 +1124,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="King_Info3">¡Cómo te atreves!</string>
     <string name="King_Name">Rey de los Enanos</string>
     <string name="King_Name_Objective">Rey de los Enanos</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Info">Un pedazo de hierro moldeado para ajustarse alrededor de los nudillos.</string>
     <string name="Knuckles_Name">nudillera</string>
     <string name="KoboldIcemancer_Desc">Los kobold - magos del hielo, eran la élite de su sociedad. Guerreros, magos e importantes científicos. Los magos del hielo antiguos, dominaron el arte del darle forma al hielo, creando mecanismos sofisticados con hielo y  reforzándolos con magia.</string>
@@ -2908,6 +2909,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

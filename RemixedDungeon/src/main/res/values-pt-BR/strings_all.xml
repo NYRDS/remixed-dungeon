@@ -36,6 +36,7 @@
     <string name="Hero_AnotherTry">Você morreu.\n Gostaria de tentar novamente?</string>
     <string name="Hero_LevelUp">subiu de nível!</string>
     <string name="Hero_NewLevel">Bem-vindo ao nível %d! Agora você está mais saudável e mais focado. Fica mais fácil acertar os inimigos e desviar dos ataques deles.</string>
+    <string name="Hero_StaCripple">Você está aleijado!</string>
     <string name="IceGuardian_Name_Objective">guardião de gelo</string>
     <string name="InnServant_Phrase_1">Ui, ainda há muito o que fazer!</string>
     <string name="Item_ACPickup">PEGAR</string>
@@ -118,6 +119,7 @@
 
     <string name="town_deco_armorstand_scale_name">Armadura de escamas</string>
     <string name="town_deco_book_name">Livro</string>
+    <string name="town_deco_counter_desc">Mantém uma boa distância entre você e a pessoa atrás dela.</string>
     <string name="town_deco_crate_name">Caixa</string>
     <string name="town_deco_dungeon_door_name">Entrada</string>
     <string name="town_deco_floor_name">Chão</string>
@@ -130,6 +132,8 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
 
 
 

@@ -1143,6 +1143,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="LibraryBook_Description">Ez a kötet igazán vaskos. Minden tudás benne van, amit a kaladorok összegyűjtöttek a a kazamatákból.</string>
     <string name="LibraryBook_Name">Könyvtári könyv</string>
     <string name="Lich_Desc">A nekromata, aki Necropolis mélységeiben lelte halálát, és fokozatosan, a gonosz erők a testét átjárva alakították Lich-é. Egy elpusztult varázsló, agyatlan bábu, ártalmas erők által irányítva...</string>
+    <string name="Lich_DieInfo">Soha nem kedveltem ezt a Nekromantát. Itt az ideje visszatérni a 7. szintre, és találni egy másik utat lefelé az új kalandhoz.</string>
     <string name="Lich_Name">holttest</string>
     <string name="Lich_Name_Objective">holttest</string>
     <string name="LightBuff_Info">Fény árad a testből, megvilágítva minden körülötte lévőt.</string>
@@ -2706,6 +2707,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
