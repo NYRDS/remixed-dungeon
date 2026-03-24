@@ -422,6 +422,7 @@
     <string name="ChargrilledMeat_Name">烤肉</string>
     <string name="CharmBuff_Info">身心都被魅惑了！</string>
     <string name="CharmBuff_Name">魅惑</string>
+    <string name="CharmSpell_Name">魅惑</string>
     <string name="Chasm_Chasm">裂縫</string>
     <string name="Chasm_Info">你摔死了……</string>
     <string name="Chasm_Jump">你真的要跳到裂縫當中嗎？這樣做可能會讓你死掉。</string>
@@ -2803,6 +2804,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

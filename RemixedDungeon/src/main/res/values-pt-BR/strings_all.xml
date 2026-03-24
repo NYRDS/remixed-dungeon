@@ -5,6 +5,7 @@
     <string name="Badges_Champion">Desafio vencido</string>
     <string name="Badges_Info1">Medalha: %s</string>
     <string name="Badges_NoMonsterSlain">Nível completado sem matar nenhum monstro</string>
+    <string name="Badges_ThisIsSparta">Isto é Esparta!!!</string>
     <string name="Bat_Desc">Estes habitantes ágeis e tenazes das cavernas podem derrotar oponentes muito maiores, recuperando sua vida a cada ataque bem-sucedido.</string>
     <string name="BellaNPC_Message">Eu não tenho interesse em plebeus como você!</string>
     <string name="Bishop_great_bless">Bênção grande - %d g</string>
@@ -41,6 +42,7 @@
     <string name="InnServant_Phrase_1">Ui, ainda há muito o que fazer!</string>
     <string name="Item_ACPickup">PEGAR</string>
     <string name="Journal_Alchemy">Caldeirão de alquimia</string>
+    <string name="Journal_WellTransmut">Poço de Transmutação</string>
     <string name="Keyring_Info">Este é um chaveiro de cobre que permite manter todas as suas chaves separadas do resto dos seus pertences.</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
@@ -69,6 +71,7 @@
     <string name="ScrollOfTerror_Info2">O pergaminho emite um flash brilhante de luz vermelha e o %s foge!</string>
     <string name="Scroll_Name">pergaminho \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
+    <string name="SeedPouch_Info">Esta pequena bolsa de veludo permite armazenar qualquer quantidade de sementes. Muito conveniente.</string>
     <string name="ShieldBuffNotReady_Name">Escudo não está pronto</string>
     <string name="Shopkeeper_title">Loja</string>
     <string name="Skeleton_Desc">Esqueletos são compostos de ossos de cadáveres de aventureiros azarados e moradores da masmorra, animados por emanações de magia negra das profundezas abaixo. Depois de terem sido danificados o suficiente, eles se desintegram em uma explosão de ossos.</string>
@@ -132,6 +135,9 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
+
 
 
 
