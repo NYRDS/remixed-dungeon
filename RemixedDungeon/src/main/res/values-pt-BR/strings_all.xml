@@ -34,6 +34,7 @@
     <string name="HeroClass_WarPerks_3">Qualquer pedaço de comida restaura um pouco de saúde quando comido.</string>
     <string name="HeroSubClass_DescFreR">O _Freerunner_ pode se mover quase duas vezes mais rápido que a maioria dos monstros. Quando está correndo, o Freerunner é muito mais difícil de acertar. Para isso, ele deve estar sem peso excessivo e não faminto.</string>
     <string name="Hero_AnotherTry">Você morreu.\n Gostaria de tentar novamente?</string>
+    <string name="Hero_LevelUp">subiu de nível!</string>
     <string name="Hero_NewLevel">Bem-vindo ao nível %d! Agora você está mais saudável e mais focado. Fica mais fácil acertar os inimigos e desviar dos ataques deles.</string>
     <string name="IceGuardian_Name_Objective">guardião de gelo</string>
     <string name="InnServant_Phrase_1">Ui, ainda há muito o que fazer!</string>
@@ -58,6 +59,7 @@
     <string name="Potion_Colors_12">epidoto</string>
     <string name="Ration_Name">ração de comida</string>
     <string name="RawFish_Taste">Gosto de peixe!</string>
+    <string name="ResultDescriptions_Glyph">Morto pelo %1$s no nível %2$d</string>
     <string name="ResultDescriptions_Necromancy">Esgotado da forca vital enquanto tentava animar um cadaver no nivel %d</string>
     <string name="ResultDescriptions_Necrotism">Morreu de Necrotismo no nível %d</string>
     <string name="ScrollHolder_Info">Você pode colocar qualquer número de pergaminhos neste recipiente tubular. Ele economiza espaço em sua mochila e protege pergaminhos do fogo.</string>
@@ -98,6 +100,7 @@
     <string name="WndPlayGames_RestoreProgress">Restaurar progresso do jogo</string>
     <string name="WndPortal_Info">Este portal permitirá que você volte para a cidade. Parece bastante instável, provavelmente não estará ativo por muito tempo.\nVocê gostaria de usá-lo?</string>
     <string name="WndPremiumSettings_notAvailbale">Esta opção ainda não está disponível</string>
+    <string name="WndPremiumSettings_silver">prata</string>
     <string name="WndPremiumSettings_std">padrão</string>
     <string name="WndPriest_Instruction2_f">Bem-vinda minha filha, bem-vinda à santa igreja do grande Papai Noel o Senhor das Profundezas!</string>
     <string name="WndPriest_Instruction_f">Bem-vinda minha filha, bem-vinda à santa igreja do grande Papai Noel o Senhor das Profundezas! Infelizmente não posso deixá-la passar agora, porque o edifício está em reconstrução, mas se você busca ajuda, posso fornecer serviço de cura e comida por apenas %d moedas de ouro!</string>
@@ -113,51 +116,16 @@
     <string name="town_deco_armorstand_scale_name">Armadura de escamas</string>
     <string name="town_deco_book_name">Livro</string>
     <string name="town_deco_crate_name">Caixa</string>
+    <string name="town_deco_dungeon_door_name">Entrada</string>
     <string name="town_deco_floor_name">Chão</string>
     <string name="town_deco_red_carpet_name">Tapete</string>
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
 
-
-
-
-
-
-
     <string name="town_deco_trapdoor_desc">Para onde isso poderia levar?</string>
-
-
 
     <string name="town_deco_urn_name">Urna</string>
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
-
-
-
-
-
-
-
-
-
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>
