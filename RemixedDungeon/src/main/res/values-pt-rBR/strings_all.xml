@@ -701,7 +701,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Eye_Name">olho do mal</string>
     <string name="Eye_Name_Objective">olho do mal</string>
     <string name="Facilitations_Descriptions_0">Os mutantes sempre foram tratados com desprezo e medo, mas a ausência de fome mais uma vez lhe dará superioridade, desta vez na conquista das profundezas da masmorra.</string>
-    <string name="Facilitations_Descriptions_1">Ainda não se sabe quem eram seus pais, mas a regeneração natural do tipo troll ajudará a consertar todas as cicatrizes de batalha que estão por vir.</string>
+    <string name="Facilitations_Descriptions_1">Ainda não se sabe quem foram seus pais, mas a regeneração natural semelhante à dos trolls ajudará a curar todas as cicatrizes de batalha futuras.</string>
     <string name="Facilitations_Descriptions_2">Um estudo profundo e aprofundado da natureza como fonte de energia permitirá que você reabasteça suas reservas mágicas durante a jornada.</string>
     <string name="Facilitations_Descriptions_3">Apertando o cinto feito de pele de ogro, que foi passado a cada nova geração, você dá um passo em direção ao desconhecido que está por vir.</string>
     <string name="Facilitations_Names_0">Sem fome</string>
@@ -1897,7 +1897,7 @@ outro local do nível.</string>
     <string name="ShortSword_Info">Na verdade, é bastante curta, apenas alguns centímetros mais longo do que um punhal.</string>
     <string name="ShortSword_Name">Espada Curta</string>
     <string name="ShortSword_NotBoomerang">você não pode atualizar um bumerangue dessa forma</string>
-    <string name="ShortSword_Reforged">Você reforjou sua espada curta para atualizar %s</string>
+    <string name="ShortSword_Reforged">você refez a espada curta para melhorar seu %s</string>
     <string name="ShortSword_Select">Selecione uma arma para aprimorar</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Peças de metal em forma de estrela com lâminas afiadas podem causar danos significativos quando atingem o alvo. Eles podem ser jogados em altas velocidades.</string>
@@ -2891,6 +2891,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
