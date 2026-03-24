@@ -844,6 +844,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Ujung anak panah ini tercakup dalam ramuan penyembuhan.</string>
     <string name="HealthArrow_Name">Anak panah penyembuhan</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">Ujung Dart ini tercakup dalam ramuan penyembuhan.</string>
     <string name="HealthDart_Name">Dart Penyembuhan</string>
     <string name="Heap_Mimic">Ini adalah mimik!</string>
@@ -2848,6 +2849,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -1059,6 +1059,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Kobold_Desc">Úgy hitték, hogy a Koboldok csak legendákban léteznek. Az átlagos gnollok ősei a koboldok, akik a legmélyebb, hideg barlangokban lakoztak. Azt is beszélték, hogy ez a faj mesteri mérnök és masinagyártó volt már jóval a törpök előtt.</string>
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
+    <string name="KrampusHead_Info">Valaha gondolkodtál már azon, milyen érzés lenne egy gonoszabb szerepet vállalni a Kazamatákban? Nos, ezzel az ördögi megjelenéssel egészen biztosan rémületet keltesz a helyi patkánykölykökben.</string>
     <string name="KunaiThrow_Name">Kunai Dobás</string>
     <string name="Kusarigama_Info">Ez a fegyver egy fémláncra kötött sarlóból és a túloldalára kötött vassúlyból áll.</string>
     <string name="Kusarigama_Name">kusarigama</string>
@@ -2705,6 +2706,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
