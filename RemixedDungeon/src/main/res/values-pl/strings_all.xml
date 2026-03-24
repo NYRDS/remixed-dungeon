@@ -1838,6 +1838,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
 </string>
     <string name="ScarecrowNPC_Quest_Start_Male">Och, witaj chłopcze mój mały! \nMam ja dziś pomysł nader wspaniały! \nTrochę cukierków mi nazbierasz, \nTo może w zamian coś otrzymasz!\n\n</string>
     <string name="Scorpio_Desc">Te ogromne pająkopodobne demoniczne kreatury za wszelką cenę unikają walki w zwarciu, zdecydowanie preferują ostrzeliwanie swej ofiary ząbkowanymi kolcami z pewnej odległości</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">skorpion</string>
     <string name="Scorpio_Name_Objective">skorpion</string>
     <string name="ScrollHolder_Info">Możesz przechowywać zwoje w tym tubalnym pojemniku. Zwolnisz w ten sposób miejsce w plecaku i ochronisz zwoje przed ogniem.</string>
@@ -3020,6 +3021,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
