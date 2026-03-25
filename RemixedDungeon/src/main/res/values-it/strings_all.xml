@@ -1172,6 +1172,7 @@ Potrebbe bruciare?</string>
     <string name="MeleeWeapon_Info7a">tu tieni le %1$s a portata di mano%2$s.</string>
     <string name="MeleeWeapon_Info7b">,e dato che questo è maledetto,tu sei impedito dal andartene</string>
     <string name="MeleeWeapon_Info7c">Puoi percepire un\'energia malevola aleggiare all interno del%s. </string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">mercenario</string>
     <string name="MercenaryNPC_Name_Objective">mercenario</string>
     <string name="Metabolism_Txt">%s del metabolismo</string>
@@ -2624,61 +2625,4 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

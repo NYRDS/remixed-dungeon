@@ -748,6 +748,7 @@
     <string name="GameScene_Water">你聽到附近流水潺潺。</string>
     <string name="GameScene_Welcome">歡迎來到混合地牢第%d層！</string>
     <string name="GameScene_WelcomeBack">歡迎回到混合地牢第%d層！</string>
+    <string name="GasImmuneBuff_Info">免疫所有氣體。</string>
     <string name="GasImmuneBuff_Name">氣體免疫</string>
     <string name="Ghost_Defense">回避</string>
     <string name="Ghost_Desc">這個幽靈已經幾乎不能被看見了。它看起來像是由一片無形的昏暗光斑和一張悲痛的面孔所組成的。</string>
@@ -2805,104 +2806,5 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>
