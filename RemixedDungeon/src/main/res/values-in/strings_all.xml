@@ -2560,6 +2560,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WoodenShield_desc">Perisai kayu yang dibuat secara kasar adalah perisai paling sederhana yang tersedia. Itu bulat dan dapat memblokir beberapa kerusakan dari waktu ke waktu.</string>
     <string name="WoodenShield_name">Perisai Kayu</string>
     <string name="Worm_Desc">Tidak ada cara untuk mengetahui seberapa besar cacing ini. Sebagian muncul dari lantai, tubuh makhluk itu ditutupi gumpalan daging busuk dan lendir. Mandibula raksasa memberi Anda gambaran yang jelas tentang bagaimana monster itu muncul di permukaan.</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">Cacing</string>
     <string name="Worm_Name_Objective">Cacing</string>
     <string name="Wraith_Defense">menghindar</string>
@@ -2852,6 +2853,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

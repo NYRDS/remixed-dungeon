@@ -1,6 +1,7 @@
 <resources>
     <string name="AboutScene_SourceCode">Obter código fonte do Remixed Dungeon:</string>
     <string name="AirElemental_Desc">Elementais de ar são seres mágicos voadores feitos de ar vivo.</string>
+    <string name="AnesthesiaBuff_Info">Não sente dor e não acorda com ataques, mas ainda recebe dano.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="Badges_Champion">Desafio vencido</string>
     <string name="Badges_Info1">Medalha: %s</string>
@@ -134,6 +135,7 @@
     <string name="town_deco_crate_name">Caixa</string>
     <string name="town_deco_dungeon_door_name">Entrada</string>
     <string name="town_deco_floor_name">Chão</string>
+    <string name="town_deco_locked_door_desc">O que no mundo pode estar atrás dessa porta?</string>
     <string name="town_deco_red_carpet_name">Tapete</string>
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
 
@@ -143,6 +145,8 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
 
 
 
