@@ -2416,6 +2416,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="Yog_Name">Yog-Dzewa</string>
     <string name="Yog_Name_Objective">Yog-Dzewa</string>
     <string name="YogsBrain_Desc">il cervello di Yog-Dzewa. fonte di ogni male non deve mai venire fuori dal dungeon</string>
+    <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name">Il cervello di Yog</string>
     <string name="YogsBrain_Name_Objective">Il cervello di Yog</string>
     <string name="YogsEye_Desc">L\'occhio del Vecchio Dio, allseeing sguardo pieno di odio eterno. Si può sentire a guardare a destra attraverso la tua anima</string>
@@ -2625,4 +2626,5 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 </resources>

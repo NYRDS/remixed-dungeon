@@ -698,6 +698,7 @@
     <string name="EncumbranceBuff_Info">力量不足以有效使用 %s 。</string>
     <string name="EncumbranceBuff_Name">负重</string>
     <string name="EnslavedSoul_Desc">这只幽灵几乎是透明的。即使它看起来就是一块头骨，但有那么几个瞬间，你能看到上边浮现出一副充满痛苦与折磨的面孔。</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name">被奴役的灵魂</string>
     <string name="EnslavedSoul_Name_Objective">被奴役的灵魂</string>
     <string name="Entanglement_Txt">缠绕之%s</string>
@@ -2883,6 +2884,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
