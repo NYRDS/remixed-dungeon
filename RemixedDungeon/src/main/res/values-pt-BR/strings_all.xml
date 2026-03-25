@@ -40,6 +40,7 @@
     <string name="Hero_StaCripple">Você está aleijado!</string>
     <string name="IceGuardian_Name_Objective">guardião de gelo</string>
     <string name="InnServant_Phrase_1">Ui, ainda há muito o que fazer!</string>
+    <string name="InnServant_Phrase_2">Este bêbado me deixa louco!</string>
     <string name="InventoryScroll_Warning">Você realmente deseja cancelar o uso deste pergaminho? Ele será consumido de qualquer forma.</string>
     <string name="Item_ACPickup">PEGAR</string>
     <string name="Journal_Alchemy">Caldeirão de alquimia</string>
@@ -142,6 +143,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 </resources>
