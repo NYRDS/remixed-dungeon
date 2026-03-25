@@ -1150,6 +1150,7 @@ Potrebbe bruciare?</string>
     <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Info">Una maschera chirurgica è progettata per catturare i microrganismi rilasciati in goccioline liquide e aerosol dalla bocca e dal naso di chi la indossa.\n\nIndossare una maschera significa che ti prendi cura degli altri.</string>
     <string name="MedicineMask_Name">Maschera chirurgica</string>
+    <string name="MedicineMask_Obtained">Maschera chirurgica ottenuta</string>
     <string name="MeleeWeapon_Info1a">%1$s è %2$s livello-%3$d arma da mischia.</string>
     <string name="MeleeWeapon_Info1b">un </string>
     <string name="MeleeWeapon_Info1c">un potenziato</string>
@@ -2626,5 +2627,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 </resources>
