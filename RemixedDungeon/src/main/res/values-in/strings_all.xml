@@ -317,6 +317,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Burning_Burns">%s hangus terbakar!</string>
     <string name="Burning_Death">Kamu terbakar hingga mati...</string>
     <string name="CagedKobold_Desc">Seekor kobold, di dalam sangkar.</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">Hei... Hei! Kamu adalah satu-satunya petualang, kan? Membantu saya keluar, selubung, militeris sialan ini mengunci saya di sini! Mereka berniat untuk mengaktifkan kembali senjata kuno untuk menaklukkan benda-benda manusia ini di permukaan! Tetapi mengingat betapa berbahayanya itu, saya menentangnya, tetapi mereka hanya mengusir saya dan mengunci saya di dalam sangkar! Saya mohon Anda untuk menemukan kunci sel, dan sebagai imbalannya, saya akan membantu Anda dengan kemampuan terbaik saya.</string>
     <string name="CagedKobold_Message1">Tolong...</string>
     <string name="CagedKobold_Message2">Kau harus menolongku, teman</string>
@@ -2850,6 +2851,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
