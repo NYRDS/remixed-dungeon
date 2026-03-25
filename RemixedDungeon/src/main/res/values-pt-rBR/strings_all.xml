@@ -2509,7 +2509,7 @@ remix.31.1\n
     <string name="WndRanking_Stats">\@string/WndHero_Stats</string>
     <string name="WndResurrect_Message">Você morreu, porém ainda há esperanças e você recebeu uma nova chance de continuar. Deseja Continuar?</string>
     <string name="WndResurrect_No">Não, eu desisto.</string>
-    <string name="WndResurrect_Yes">Sim, eu vou lutar!</string>
+    <string name="WndResurrect_Yes">Sim, vou lutar!</string>
     <string name="WndSadGhostNecro_No">Não, deixe-o falar.</string>
     <string name="WndSadGhostNecro_Persuaded">O fantasma triste foi dominado!</string>
     <string name="WndSadGhostNecro_Text">\&quot;Este espírito parece estar lutando em sua maldição. Ele parece querer algo de mim.Se eu usar meus poderes necromânticos, devo ser capaz de persuadi-lo de já ter feito o que ele pediu.Então não precisarei desperdiçar meu tempo aqui. Eu deveria fazer tal coisa? \&quot;</string>
@@ -2892,4 +2892,5 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 </resources>

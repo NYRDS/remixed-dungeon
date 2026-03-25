@@ -1303,6 +1303,7 @@
     <string name="Mob_CantDoIt">Не можу цього зробити. У мене маленькі лапки.</string>
     <string name="Mob_Desc">Справжній опис буде пізніше!</string>
     <string name="Mob_Died">Ти чуєш, що щось померло в далечі</string>
+    <string name="Mob_GoingTo">Вже біжу!</string>
     <string name="Mob_StaAmokStatus">%1$s поводиться несамовито</string>
     <string name="Mob_StaControlledStatus">Цей %s під нечестивим контролем</string>
     <string name="Mob_StaFleeingStatus">%s рятується</string>
@@ -2805,6 +2806,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
