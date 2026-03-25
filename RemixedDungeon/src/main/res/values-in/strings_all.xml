@@ -2046,6 +2046,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Swing_Name_0">Liar %s</string>
     <string name="Swing_Name_1">Liar %s</string>
     <string name="Swing_Name_2">Liar %s</string>
+    <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">Panjang mata pedang baja yang sangat tajam ini berkilau dengan meyakinkan.</string>
     <string name="Sword_Name">pedang</string>
     <string name="Tamahawk_Info">Kapak lempar ini tidak terlalu berat, tapi tetap membutuhkan kekuatan berarti untuk digunakan secara efektif.</string>
@@ -2851,6 +2852,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
