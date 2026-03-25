@@ -1570,6 +1570,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Potion_Colors_11">Silbern</string>
     <string name="Potion_Colors_13">Quarz</string>
     <string name="Potion_Colors_14">Onyx</string>
+    <string name="Potion_Colors_15">Perlen</string>
     <string name="Potion_Colors_2">Himmelblau</string>
     <string name="Potion_Colors_3">Grün</string>
     <string name="Potion_Colors_4">Golden</string>
@@ -2874,6 +2875,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
