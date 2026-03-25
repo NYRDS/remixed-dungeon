@@ -50,13 +50,16 @@
     <string name="Level_TileDescEntrance">Escadas levam para cima, para a profundidade superior.</string>
     <string name="LibraryBook_Name">Livro da biblioteca</string>
     <string name="ManaPotion_Info">Esta poção restaurará sua energia espiritual.</string>
+    <string name="MeleeWeapon_Info5">Está encantada.</string>
     <string name="MobAi_status">Este %1$s é %2$s</string>
     <string name="Mob_Cannot_Be_Pet">A vontade de \&quot;%s\&quot; é muito forte para controlar!</string>
     <string name="Mob_StaTerrorStatus">Este %1$s está aterrorizado</string>
+    <string name="NecromancerRobe_Info">Esta túnica permite que o Necromante invoque um Devorador de Mortos por 5 almas. O Devorador de Mortos é um morto-vivo que se torna mais forte junto com seu mestre.</string>
     <string name="No_Valid_Cell">Não há uma célula adequada por perto.</string>
     <string name="Paralysis_Name_0">%s do Atordoamento</string>
     <string name="Paralysis_Name_2">%s do Atordoamento</string>
     <string name="Pickaxe_InsufficientStr">Força insuficiente para minerar!</string>
+    <string name="Pickaxe_NothingToMine">Não há nada para minerar aqui!</string>
     <string name="PlagueDoctorMaskHood_Info">Um crânio de ébano esculpido, suas órbitas vazias brilhando com o brilho etéreo de gemas de ametista. Cada respiração que você toma sussurra através de um labirinto de tubos e filtros, carregando o aroma de ervas potentes e especiarias que mascaram a decadência que se apega a você. Mas não é apenas a máscara. Um capuz pesado de veludo meia-noite, envolvendo seu rosto e cabeça em sombras. O capuz, como a asa de um corvo, flui pelas suas costas, suas bordas aparadas com uma franja de renda branca como osso, um contraste assustadoramente bonito. Juntos, máscara e capuz criam um viso espectral, um testemunho sombrio da batalha interminável contra as forças da decadência.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Ele segura o _morcego_ gentilmente em suas mãos enluvadas, examinando sua pequena forma com uma fascinação perturbadora* Magnífico! A ecolocalização do morcego... é diferente de tudo que já encontrei. Tal precisão... tal... controle. *Ele se vira para você, seu rosto obscurecido por sua máscara* Por seus esforços, um _Pergaminho de Atualização_. Use-o sabiamente, pois ele guarda o potencial para... refinar sua própria essência. *Ele lhe entrega o pergaminho, sua voz caindo para um sussurro suave* Este _morcego_, é... uma janela para um mundo oculto. Um mundo... onde sombras dançam e segredos sussurram.</string>
     <string name="Poison_Name_0">%s Venenosa</string>
@@ -98,6 +101,7 @@
     <string name="Wand_SelfTarget">Você não pode mirar em si mesmo.</string>
     <string name="WarHammer_Name">martelo de guerra</string>
     <string name="WndCatalogus_Scrolls">Pergaminhos</string>
+    <string name="WndCatalogus_Title">Catálogos</string>
     <string name="WndChallenges_Title">Desafios</string>
     <string name="WndCryptoDonate_currency">Moeda</string>
     <string name="WndCryptoDonate_supportDev">Apoiar o Desenvolvedor</string>
@@ -136,14 +140,4 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
-
-
-
-
-
-
-
-
-
-
 </resources>

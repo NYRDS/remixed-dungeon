@@ -1355,6 +1355,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MercenaryNPC_Name">наёмник</string>
     <string name="MercenaryNPC_Name_Objective">наёмника</string>
     <string name="Metabolism_Txt">%s метаболизма</string>
+    <string name="MiasmaGas_Info">Ядовитая миазма, которая отравляет, ослабляет и дезориентирует тех, кто её вдыхает.</string>
     <string name="MimicAmulet_Desc">Самый знаменательный момент в твоей приключенческой карьере только что обернулся очередной ловушкой.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">мимик</string>
@@ -3064,44 +3065,4 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

@@ -1417,6 +1417,7 @@ Parede
     <string name="Pickaxe_InsufficientStr">Força insuficiente para minerar!</string>
     <string name="Pickaxe_Name">picareta</string>
     <string name="Pickaxe_NoVein">Não há nenhum veio de ouro escuro perto de você para minerar</string>
+    <string name="Pickaxe_NothingToMine">Não há nada para minerar aqui!</string>
     <string name="Piercing_Name_0">%s Perfurante</string>
     <string name="Piercing_Name_1">%s Perfurante</string>
     <string name="Piercing_Name_2">%s Perfurante</string>
@@ -2891,34 +2892,4 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
