@@ -704,6 +704,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="FrozenCarpaccio_Name">얼린 생고기</string>
     <string name="FrozenFish_Info">냉동 생선,살아있는 것 같지만, 얼었습니다.</string>
     <string name="FrozenFish_Name">냉동 생선</string>
+    <string name="FullFaceMask_Name">방독면</string>
     <string name="FuryBuff_Name">격노</string>
     <string name="GameScene_Chasm">당신의 발자국 소리가 던전에 울려 퍼집니다.</string>
     <string name="GameScene_Grass">풀 냄새가 공기 중에 가득합니다.</string>
@@ -1350,6 +1351,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PlagueDoctorQuest_3_2_InProgress">이것은 단순한 짐승이 아닙니다! 이것은 네크로맨서의 힘에 대한 살아있는 증거입니다! 살아서, 다치지 않고 포획하세요! 이 _죽음의 기사_... 그것이 열쇠입니다!</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">_드워프 흑마법사_ 5 구, 그들의 시체는 여전히 어둠의 마법의 희미한 울림으로 맥박치고 있습니다! 저를 위해 그것을 회수해 주시면, 비할 데 없는 힘의 물약으로 보상해 드리겠습니다. 열 사람의 힘을 당신에게 불어넣어 줄 _힘의 물약_ 말입니다!</string>
     <string name="PlagueDoctorQuest_4_2_InProgress"> \'_코볼드 아이스맨서_\' 5마리의 시신을 회수하라! 그들의 얼어붙은 몸에는 차가운 마법의 비밀을 풀 수 있는 열쇠가 숨겨져 있다! </string>
+    <string name="PlagueDoctorQuest_4_2_Prologue">*그의 뼈대 같은 손가락이 부글부글 끓는 가마에 리듬을 타고, 주변 공기는 유황과 부패의 자극적인 악취로 가득 차 있다*\n_코볼드 아이스맨서_! 그 비참한 생물들, 얼어붙은 동굴에 옹기종기 모여 얼음 마법에 필사적으로 매달리고 있지. 내가 필요한 건 다섯 마리, 그들의 얼어붙은 시체는… 밝혀줄 것이다. 그들의 얼음 마법 숙련은… 특이해. 나는 그들이 이 세계 표면 아래에 잠든 원초적 에너지, 힘을 활용한다고 믿어.</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*그의 마음은 말하면서 방황하고, 그의 목소리는 점점 작아져 거의 속삭임이 됩니다.* _서큐버스_ 두 마리를 데려오세요… 살아있는 채로. 그들의… 힘… 그것은 매혹적입니다.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*그는 더듬거리며 목소리는 부러진 나뭇가지처럼 갈라졌다*. 아-아, 서큐버스! 둘…… 네, 둘이 살아 있어요! 그것은…… 어흠…… 제 연구를 위한 것이에요! 보세요…… 그들의 페로몬은…… 이해하는 데 중요한…… 미묘한 균형 말이죠…… 어…… *그는 말을 흐리며, 마스크를 긴장하게 고치려 손을 뻗으며, 열띤 강광으로 당신을 바라보았다.* 그들의…… 정수는…… 수수께끼…… 아름답고 신비로운 수수께끼에요! *그는 격하게 기침하며 자세를 바로 하려고 애썼다.* 제가 약속할게요. 이…… 존재들 중 두 마리를 저에게 데려다 주신다면, 제가 영원히 감사를 드릴 것입니다. 이것을…… 지식에 대한 은혜로 생각하세요! 네! 지식을 위해 말이죠!</string>
     <string name="PlagueDoctorQuest_AllDone">*그는 건조하고 쌕쌕거리는 웃음을 터뜨린다.* \&quot;당신의 업적은 측량할 수 없는 비밀들을 해방시켰습니다! 얻은 지식은... 저 안에서 맥박처럼 뛰고 있습니다, 발견의 교향곡처럼. 하지만 지식,\&quot; 그는 속삭이는 듯한 목소리로 덧붙입니다, \&quot;지식은 힘입니다. 그리고 힘... 아... 그것은 가장 취하게 하는 엘릭서입니다.\&quot; 그는 잠시 당신을 응시하며, 자수정 같은 눈이 열병 같은 강도로 타오릅니다. \&quot;아마도,\&quot; 그는 중얼거립니다, \&quot;우리의 길은 다시 교차할 것입니다. 아직 풀어야 할 많은... 신비들이... 남아있으니까요.\&quot;</string>
@@ -2679,6 +2681,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 

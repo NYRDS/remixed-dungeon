@@ -1905,7 +1905,7 @@ outro local do nível.</string>
     <string name="Shuriken_Name">shuriken</string>
     <string name="SkeletonKey_Info">Esta chave parece importante: sua cabeça tem a forma de uma caveira. Provavelmente, ele pode abrir alguma porta importante.</string>
     <string name="SkeletonKey_Name">chave esqueleto</string>
-    <string name="Skeleton_Defense">bloqueou</string>
+    <string name="Skeleton_Defense">bloqueado</string>
     <string name="Skeleton_Desc">Esqueletos são compostos de ossos de cadáveres de aventureiros azarados e moradores da masmorra, animados por emanações de magia negra das profundezas abaixo. Depois de terem sido danificados o suficiente, eles se desintegram em uma explosão de ossos.</string>
     <string name="Skeleton_Killed">Você foi morto pela explosão de ossos ...</string>
     <string name="Skeleton_Name">esqueleto</string>
@@ -1965,6 +1965,7 @@ outro local do nível.</string>
     <string name="SpiderElite_Name">guarda de elite aranha</string>
     <string name="SpiderElite_Name_Objective">guarda de elite aranha</string>
     <string name="SpiderExploding_Desc">Trabalhadores duros durante tempos de paz, essa criatura não hesitará em cobrar  seus inimigos e pegará primeira planta que atravessar, transformando-se em uma bomba viva.</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">aranha operária</string>
     <string name="SpiderExploding_Name_Objective">aranha trabalhadora</string>
     <string name="SpiderGuard_Desc">Igual a soldados, as aranhas Guardião estão jurados em proteger o se reino. O veneno de Guardião é usado para imobilizar os seus alvos, causando paralisia.</string>
@@ -2892,5 +2893,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 </resources>

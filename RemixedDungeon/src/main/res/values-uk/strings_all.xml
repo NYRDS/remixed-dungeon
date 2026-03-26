@@ -49,6 +49,7 @@
     <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">Розчин на вістрі стріли здатний перетворити будь кого в розлюченого берсерка.</string>
     <string name="AmokArrow_Name">Шалена стріла</string>
+    <string name="AmokBuff_Info">Відчуйте амук, що забирає життя нещасних.</string>
     <string name="AmokBuff_Name">Шалений</string>
     <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">Розчин на вістрі дротика здатний перетворити будь кого в розлюченого берсерка.</string>
@@ -2806,6 +2807,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
