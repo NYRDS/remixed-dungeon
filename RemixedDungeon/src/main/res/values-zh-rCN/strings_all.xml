@@ -878,6 +878,7 @@
     <string name="HealthDart_Info">这个飞镖的镖尖上沾有治疗药水。</string>
     <string name="HealthDart_Name">治疗飞镖</string>
     <string name="Heap_Mimic">它是拟形怪！</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">黑暗的、跳动着的“叛逆魂灵”的心脏。</string>
     <string name="HeartOfDarkness_Name">黑暗之心</string>
     <string name="Hedgehog_Desc">这只刺猬看起来十分紧张。</string>
@@ -2884,6 +2885,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

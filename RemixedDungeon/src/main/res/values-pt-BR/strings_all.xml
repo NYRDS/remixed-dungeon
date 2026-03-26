@@ -50,6 +50,7 @@
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
     <string name="Level_TileDescEntrance">Escadas levam para cima, para a profundidade superior.</string>
+    <string name="Level_TilePedestal">Pedestal</string>
     <string name="Level_TileUnlockedExit">Saída desbloqueada</string>
     <string name="LibraryBook_Name">Livro da biblioteca</string>
     <string name="ManaPotion_Info">Esta poção restaurará sua energia espiritual.</string>
@@ -104,6 +105,7 @@
     <string name="Wand_Fizzles">sua varinha chiou; deve estar sem cargas por enquanto</string>
     <string name="Wand_SelfTarget">Você não pode mirar em si mesmo.</string>
     <string name="WarHammer_Name">martelo de guerra</string>
+    <string name="Weightstone_WndSpeed">Para velocidade</string>
     <string name="WndCatalogus_Scrolls">Pergaminhos</string>
     <string name="WndCatalogus_Title">Catálogos</string>
     <string name="WndChallenges_Title">Desafios</string>
@@ -145,6 +147,8 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
 
 
 
