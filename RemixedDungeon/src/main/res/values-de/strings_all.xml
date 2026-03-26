@@ -2057,6 +2057,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="StartScene_Yes">Ja, starte ein neues Spiel</string>
     <string name="Statue_Desc">Während du denkst, dass es wieder nur eine hässliche Statue ist, stellst du fest, dass die Augen rot leuchten.
 Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
+    <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">Lebende Statue</string>
     <string name="Statue_Name_Objective">Lebende Statue</string>
     <string name="Stench_Txt">%s des fauligen Gestankes</string>
@@ -2875,6 +2876,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

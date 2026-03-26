@@ -541,6 +541,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DarkSacrifice_Ok">Nyawa saya milik milik kau!</string>
     <string name="DarkSacrifice_Resist">Kau tak boleh menguasai aku!</string>
     <string name="DarkSacrifice_Self">Untuk Kesengsaraan!</string>
+    <string name="DarkVeilBuff_Info">Selubung kegelapan mengelilingi pemilik, memanggil roh setiap kali kerosakan diterima.</string>
     <string name="DarkVeilBuff_Name">Selubung gelap</string>
     <string name="Darkness_Info">Nampaknya ada jasad kegelapan abadi terapung-apung di udara</string>
     <string name="Dart_Info">Bilah logam yang tajam hujungnya dan berat pangkalnya untuk digunakan sebagai peluru dengan kekuatan balingan.</string>
@@ -2685,6 +2686,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

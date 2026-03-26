@@ -2382,6 +2382,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndSaveSlotSelect_dontLike">Nem tetszenek a hirdetések? Ha támogatsz, mindörökre eltűnnek.</string>
     <string name="WndSelectLanguage_ImproveTranslation">Kérlek segíts a Remixed Pixel Dungeon lefordításában.</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Kattints ide, hogy csatlakozz a Remixed Pixel Dungeon fordító csapatához</string>
+    <string name="WndSettingsInGame_GameLog">Játék napló</string>
     <string name="WndSettings_ActionButtonSize">Cselekvések gombok mérete</string>
     <string name="WndSettings_Brightness">Fényerő</string>
     <string name="WndSettings_ClassicFont">Eredeti betűtípus</string>
@@ -2710,6 +2711,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 </resources>

@@ -591,6 +591,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Death_Name_1">%s macabra</string>
     <string name="Death_Name_2">%s macabra</string>
     <string name="Deathling_Desc">El necrófago es el alma de un héroe caído, que desafortunadamente fue invocado con el poder de un nigromante para ser su compañero de aventura.</string>
+    <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">necrófago</string>
     <string name="Deathling_Name_Objective">necrófago</string>
     <string name="DeepSnail_Desc">Este tipo de molusco suele verse cerca de las fuentes de agua y es mucho más rápido que el caracol común. Sin embargo, hay que tener cuidado con las picaduras, ya que pueden tener un efecto desagradable en la piel.</string>
@@ -2912,6 +2913,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
