@@ -1846,6 +1846,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ShadowsBuff_Info">Lebih sulit untuk melihat sesuatu di antara bayang-bayang.</string>
     <string name="ShadowsBuff_Name"> Dilebur bayangan</string>
     <string name="ShamanElder_Desc">Gnoll khusus ini terlihat jauh lebih tua dari dukun lain dan tentunya memiliki status yang lebih tinggi dalam suku. Aura aneh perlahan terbentuk di sekelilingnya, yang sepertinya mencerminkan semua yang menyentuhnya.</string>
+    <string name="ShamanElder_Gender">masculine</string>
     <string name="ShamanElder_Name">dukun tua</string>
     <string name="ShamanElder_Name_Objective">dukun tua</string>
     <string name="Shaman_Desc">Gnoll paling pintar dapat menguasai sihir perdukunan. Dukun gnoll memilih untuk bertarung dengan mantra perang untuk mengimbangi kekuatannya yang lemah, tidak ragu untuk mereka yang mempertanyakan status mereka di suku mereka.</string>
@@ -2853,6 +2854,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

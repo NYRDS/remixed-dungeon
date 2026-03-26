@@ -45,6 +45,8 @@
     <string name="InventoryScroll_Warning">Você realmente deseja cancelar o uso deste pergaminho? Ele será consumido de qualquer forma.</string>
     <string name="Item_ACPickup">PEGAR</string>
     <string name="Journal_Alchemy">Caldeirão de alquimia</string>
+    <string name="Journal_Azuterron">Estranho</string>
+    <string name="Journal_Statue">Estátua Animada</string>
     <string name="Journal_WellTransmut">Poço de Transmutação</string>
     <string name="Keyring_Info">Este é um chaveiro de cobre que permite manter todas as suas chaves separadas do resto dos seus pertences.</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
@@ -116,6 +118,7 @@
     <string name="WndGame_Save">Salvar</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, aguarde...</string>
     <string name="WndModsDisclaimer_manage">Gerenciar lista de mods</string>
+    <string name="WndMovieTheatre_Sorry">Algo deu errado e não conseguimos entregar sua recompensa...</string>
     <string name="WndPlayGames_RestoreProgress">Restaurar progresso do jogo</string>
     <string name="WndPortal_Info">Este portal permitirá que você volte para a cidade. Parece bastante instável, provavelmente não estará ativo por muito tempo.\nVocê gostaria de usá-lo?</string>
     <string name="WndPremiumSettings_notAvailbale">Esta opção ainda não está disponível</string>
@@ -148,6 +151,9 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
+
 
 
 
