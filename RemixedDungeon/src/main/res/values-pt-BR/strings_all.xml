@@ -1,5 +1,6 @@
 <resources>
     <string name="AboutScene_SourceCode">Obter código fonte do Remixed Dungeon:</string>
+    <string name="Accuracy_Decreased">Por que eu pensei que poderia usar um %s? Ferramenta errada, mãos erradas!</string>
     <string name="AirElemental_Desc">Elementais de ar são seres mágicos voadores feitos de ar vivo.</string>
     <string name="AnesthesiaBuff_Info">Não sente dor e não acorda com ataques, mas ainda recebe dano.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
@@ -11,6 +12,7 @@
     <string name="BellaNPC_Message">Eu não tenho interesse em plebeus como você!</string>
     <string name="Bishop_great_bless">Bênção grande - %d g</string>
     <string name="BlackSkull_Gender">masculine</string>
+    <string name="Blacksmith_Txt2">Você está brincando comigo? Onde está a minha picareta?!</string>
     <string name="Blacksmith_Verify4">Eu não trabalho com itens amaldiçoados!</string>
     <string name="Carcass_Kick">Este %s está totalmente morto, não precisa chutá-lo.</string>
     <string name="Challenges_Descriptions_5">A primeira coisa que veio com o mal, foi uma névoa densa e impenetrável, o que torna quase impossível navegar claramente pelos intermináveis corredores da masmorra.</string>
@@ -116,7 +118,9 @@
     <string name="WndCryptoDonate_supportDev">Apoiar o Desenvolvedor</string>
     <string name="WndDonate_royal">Real</string>
     <string name="WndGame_Save">Salvar</string>
+    <string name="WndHero_Gold">Ouro Coletado</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, aguarde...</string>
+    <string name="WndInstallingMod_skipping_file">Pulando %s</string>
     <string name="WndModsDisclaimer_manage">Gerenciar lista de mods</string>
     <string name="WndMovieTheatre_Sorry">Algo deu errado e não conseguimos entregar sua recompensa...</string>
     <string name="WndPlayGames_RestoreProgress">Restaurar progresso do jogo</string>
@@ -151,6 +155,10 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
+
+
 
 
 

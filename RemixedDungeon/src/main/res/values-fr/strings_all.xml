@@ -18,6 +18,7 @@
     <string name="AboutScene_Translation">Localisé par :</string>
     <string name="AboutScene_Translation_Names">Rémi Schneider &amp;amp; Emmanuel Dempuré &amp;amp; Bastien PIXEL&amp;amp; Nikolay &amp;amp; Clément Tetu &amp;amp; Tib de Bar &amp;amp; Laurent Stehlin &amp;amp; Corvus06</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon par NYRDS est basé sur le code source de Pixel Dungeon de Watabou.</string>
+    <string name="Accuracy_Decreased">Pourquoi ai-je pensé que je pourrais utiliser un %s ? Mauvais outil, mauvaises mains !</string>
     <string name="Accuracy_DecreasedDoctor">Chaque coup de ce %s répand l\'imperfection. Ma Scie Osseuse guérit… cela infecte.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Mes mains nues infectent ma technique. Sans la coupe nette de la Scie, ma précision se perd dans le chaos.</string>
     <string name="Acidic_Desc">Ces énormes arachnides démoniaques évitent le combat rapproché à tout prix, en tirant des dards barbelés à longues portées et qui vous paralysent.</string>
@@ -2525,6 +2526,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndInstallingMod_copying_file">Copie de %s dans le stockage de Remixed Dungeon</string>
     <string name="WndInstallingMod_deleting_file">Suppression de %s</string>
     <string name="WndInstallingMod_please_wait">Installation du mod, veuillez patienter...</string>
+    <string name="WndInstallingMod_skipping_file">Ignorer %s</string>
     <string name="WndItemAlchemy_Title">Recettes d\'alchimie avec %s</string>
     <string name="WndItemAlchemy_Transmute">Transmuter</string>
     <string name="WndJournal_Levels">Niveaux</string>
@@ -2994,6 +2996,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 
