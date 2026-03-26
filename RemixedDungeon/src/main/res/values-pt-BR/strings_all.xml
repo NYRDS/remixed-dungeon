@@ -54,6 +54,7 @@
     <string name="Level_TileUnlockedExit">Saída desbloqueada</string>
     <string name="LibraryBook_Name">Livro da biblioteca</string>
     <string name="ManaPotion_Info">Esta poção restaurará sua energia espiritual.</string>
+    <string name="ManaShieldBuff_Info">Um escudo de magia apareceu, que nega completamente o próximo ataque recebido.</string>
     <string name="MeleeWeapon_Info5">Está encantada.</string>
     <string name="MobAi_status">Este %1$s é %2$s</string>
     <string name="Mob_Cannot_Be_Pet">A vontade de \&quot;%s\&quot; é muito forte para controlar!</string>
@@ -147,6 +148,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 
