@@ -624,6 +624,7 @@
     <string name="Dreamweed_Desc">Доторк до Дурману випускає хмару спантеличуючого газу</string>
     <string name="Dreamweed_Name">Дурман</string>
     <string name="DriedRoseBuff_Name">Зачарування</string>
+    <string name="DriedRoseCursedBuff_Info">Троянда виглядає красиво, але не дуже чарівно.</string>
     <string name="DriedRoseCursedBuff_Name">Влюбливий</string>
     <string name="DriedRose_Info">Ця троянда посохла багато років тому, але попри все, збереглася кожна пелюстка.</string>
     <string name="DriedRose_Info2">І вона не втратила свого шарму. Вона така прекрасна, що хочеться лишити її собі назавжди.</string>
@@ -2808,31 +2809,4 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

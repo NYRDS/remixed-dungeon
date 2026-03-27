@@ -196,6 +196,7 @@
     <string name="Bee_Name_Objective">ape</string>
     <string name="BellaNPC_Angry">Come osi... tu plebeo!</string>
     <string name="BellaNPC_Message">Non provo alcun interesse per plebei come te!</string>
+    <string name="Belongings_CantWearBoth">Non puoi equipaggiare %1$s e %2$s allo stesso tempo!</string>
     <string name="Belongings_Name">zaino</string>
     <string name="BishopNPC_Desc">Vescovo della Santa Chiesa del Signore delle Profondità</string>
     <string name="BishopNPC_Gender">masculine</string>
@@ -424,6 +425,7 @@
     <string name="ClassArmor_NotEquipped">Devi indossare questa armatura per usare il suo potere speciale!</string>
     <string name="Claymore_Info">Questa spada enorme dovrebbe essere in grado di aprirti un varco ovunque.</string>
     <string name="Claymore_Name">Claymore</string>
+    <string name="CloakBuff_Name">Nascosto</string>
     <string name="CloakSpell_EnemiesNearby">Non puoi nasconderti nell\'ombra mentre i nemici sono vicini.</string>
     <string name="CloakSpell_Info">Entra nelle ombre per diventare invisibile. Riduce notevolmente le possibilità di essere rilevati. Non può essere usato mentre ci sono nemici nelle vicinanze.</string>
     <string name="ClothArmor_Desc">Questa armatura leggera offre una protezione base.</string>
@@ -2628,7 +2630,5 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
-
-
 
 </resources>
