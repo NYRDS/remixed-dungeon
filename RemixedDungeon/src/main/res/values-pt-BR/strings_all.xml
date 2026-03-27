@@ -79,11 +79,13 @@
     <string name="Poison_Name_0">%s Venenosa</string>
     <string name="PotionOfPurity_Freshness">Você sente um frescor incomum no ar.</string>
     <string name="Potion_Colors_12">epidoto</string>
+    <string name="Potion_MoistenUseless">Parece que você desperdiçou esta poção.</string>
     <string name="Ration_Name">ração de comida</string>
     <string name="RawFish_Taste">Gosto de peixe!</string>
     <string name="ResultDescriptions_Glyph">Morto pelo %1$s no nível %2$d</string>
     <string name="ResultDescriptions_Necromancy">Esgotado da forca vital enquanto tentava animar um cadaver no nivel %d</string>
     <string name="ResultDescriptions_Necrotism">Morreu de Necrotismo no nível %d</string>
+    <string name="RingOfDetection_Info">Usar este anel permitirá ao usuário notar segredos escondidos - armadilhas e portas secretas - sem perder tempo procurando. Anéis de detecção degradados embotarão seus sentidos, dificultando notar segredos mesmo quando procurando ativamente por eles.</string>
     <string name="ScrollHolder_Info">Você pode colocar qualquer número de pergaminhos neste recipiente tubular. Ele economiza espaço em sua mochila e protege pergaminhos do fogo.</string>
     <string name="ScrollOfLullaby_Info1">O pergaminho emite uma melodia suave.</string>
     <string name="ScrollOfTerror_Info2">O pergaminho emite um flash brilhante de luz vermelha e o %s foge!</string>
@@ -94,6 +96,7 @@
     <string name="Shopkeeper_title">Loja</string>
     <string name="Skeleton_Desc">Esqueletos são compostos de ossos de cadáveres de aventureiros azarados e moradores da masmorra, animados por emanações de magia negra das profundezas abaixo. Depois de terem sido danificados o suficiente, eles se desintegram em uma explosão de ossos.</string>
     <string name="Skeleton_Name_Objective">esqueleto</string>
+    <string name="SleepBuff_Name">Adormecido</string>
     <string name="Slow_Name_2">%s Arrepiante</string>
     <string name="Spells_NotInOwnBody">Você não pode realizar %s enquanto sua alma estiver separada do corpo.</string>
     <string name="SpiderQueenCarapace_Name">Carapaça da Rainha Aranha</string>
@@ -161,6 +164,9 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
+
 
 
 
