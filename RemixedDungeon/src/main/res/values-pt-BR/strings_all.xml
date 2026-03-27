@@ -3,6 +3,7 @@
     <string name="Accuracy_Decreased">Por que eu pensei que poderia usar um %s? Ferramenta errada, mãos erradas!</string>
     <string name="AirElemental_Desc">Elementais de ar são seres mágicos voadores feitos de ar vivo.</string>
     <string name="AnesthesiaBuff_Info">Não sente dor e não acorda com ataques, mas ainda recebe dano.</string>
+    <string name="Armor_Info1">Esta %1$s concede até \&quot;%2$d\&quot; pontos de absorção de danos por ataque.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="Badges_Champion">Desafio vencido</string>
     <string name="Badges_Info1">Medalha: %s</string>
@@ -160,6 +161,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 

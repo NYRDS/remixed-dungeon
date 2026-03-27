@@ -2594,6 +2594,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_movies_door_name">문</string>
     <string name="town_deco_mud_name">진흙</string>
     <string name="town_deco_painting_desc">미려한 그림 한 폭이다.</string>
+    <string name="town_deco_painting_name">그림</string>
     <string name="town_deco_pathway_desc">눈으로 뭉개진 오솔길이다.</string>
     <string name="town_deco_pathway_name">오솔길</string>
     <string name="town_deco_pedestal_desc">성서가 놓여있는 제단이다.</string>
@@ -2684,6 +2685,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

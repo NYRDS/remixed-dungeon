@@ -1076,6 +1076,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="ItemSprite_Info1">kenara bırak: %1$.1f %2$.1f</string>
     <string name="Item_ACAlchemy">SİMYA</string>
     <string name="Item_ACDrop">BIRAK</string>
+    <string name="Item_ACPickup">AL</string>
     <string name="Item_ACThrow">FIRLAT</string>
     <string name="Item_DirThrow">Fırlatılacak yeri seçin</string>
     <string name="Item_Info">smth</string>
@@ -2915,6 +2916,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
