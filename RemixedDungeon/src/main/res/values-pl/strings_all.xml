@@ -908,6 +908,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Healing_Name">Leczenie</string>
     <string name="HealthArrow_Info">Grot tej strzały pokryty jest leczniczym eliksirem</string>
     <string name="HealthArrow_Name">Uzdrawiająca Strzała</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">Czubek tej rzutki pokryty jest leczniczym eliksirem</string>
     <string name="HealthDart_Name">Uzdrawiająca Rzutka </string>
     <string name="Heap_Mimic">To mimik!</string>
@@ -2025,6 +2026,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="SociologistNPC_AlreadyTaken">Już wypełniłeś ankietę, proszę przyjść później</string>
     <string name="SociologistNPC_Desc">To jest socjolog na świętej misji zbierania opinii publicznej</string>
     <string name="SociologistNPC_DownloadError">Przepraszam, coś poszło nie tak może lepiej spróbować później?</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Hi">Witaj!\nChciałbyś wsiąść udział w naszej ankiecie ?(Wymagany jest dostęp do internetu)\nTwoja opinia ma znaczenie!</string>
     <string name="SociologistNPC_InternetRequired">Przepraszam, ale bez dostępu do internetu nie możesz wypełnić naszej ankiety</string>
     <string name="SociologistNPC_Name">Socjolog</string>
@@ -3021,6 +3023,8 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
 
 
 

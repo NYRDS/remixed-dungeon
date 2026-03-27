@@ -2466,6 +2466,7 @@ remix.32\n
     <string name="WndCryptoDonate_bitcoin">Μπίτκοϊν</string>
     <string name="WndCryptoDonate_copyAddress">Αντιγραφή Διεύθυνσης</string>
     <string name="WndCryptoDonate_currency">Νόμισμα</string>
+    <string name="WndCryptoDonate_infoText">Μπορείτε να υποστηρίξετε την ανάπτυξη του Remixed Dungeon στέλνοντας δωρεές σε κρυπτονομίσματα στις παρακάτω διευθύνσεις. Σας ευχαριστούμε για την γενναιόδωρη υποστήριξη!</string>
     <string name="WndCryptoDonate_monero">Μονέρο</string>
     <string name="WndCryptoDonate_supportDev">Υποστήριξε τον Προγραμματιστή</string>
     <string name="WndCryptoDonate_warningText">ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Επαληθεύετε πάντα τη διεύθυνση πριν στείλετε χρήματα. Οι συναλλαγές κρυπτονομισμάτων είναι μη αναστρέψιμες!</string>
@@ -3019,6 +3020,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 
