@@ -2238,6 +2238,7 @@
     <string name="Weightstone_WndChoice">您希望怎樣強化這件%s?</string>
     <string name="Weightstone_WndSpeed">速度</string>
     <string name="Welcome_Ok">棒極了！</string>
+    <string name="Welcome_Text_31_0">remix.31.0\n- 遊戲玩法：\n-- 可選的等軸測模式！\n- 模組製作：\n-- 可模組化的關卡物件\n- 錯誤修復\n</string>
     <string name="Welcome_Text_31_1">remix.31.1\n- 遊戲玩法：\n-- 新的自定義功能！\n-- 新種類蜘蛛！\n-- 現在心靈蜘蛛會增強其他蜘蛛，而不是削弱英雄。\n- 錯誤修復\n</string>
     <string name="Welcome_Text_32">
     remix.32\n
@@ -2808,6 +2809,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

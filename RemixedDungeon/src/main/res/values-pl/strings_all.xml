@@ -2469,6 +2469,7 @@ remix.32.1\n
     <string name="WndClass_Mastery">Mistrzostwo</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Kopiuj adres</string>
+    <string name="WndCryptoDonate_currency">Waluta</string>
     <string name="WndCryptoDonate_monero">Monero</string>
     <string name="WndCryptoDonate_openWallet">Otwórz portfel</string>
     <string name="WndCryptoDonate_walletAddress">Adres portfela</string>
@@ -3023,6 +3024,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
