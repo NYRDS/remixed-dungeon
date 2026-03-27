@@ -32,6 +32,7 @@
     <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
     <string name="GasImmuneBuff_Info">Imune a todos os gases.</string>
     <string name="GasImmuneBuff_Name">Imunidade a Gases</string>
+    <string name="Guts_TileDescEntrance">O Buraco no teto leva até os níveis superiores</string>
     <string name="Halberd_Info">Uma arma de haste consistindo em um machado na ponta de uma haste.</string>
     <string name="HeroClass_HunPerks_1">Caçadoras começam com um bumerangue único atualizável.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Comece com uma [yellow:Máscara da Peste] (imune a todos os Gases) e uma [yellow:Serra de Osso]. Acertos críticos dropam partes extras, e a Serra causa x1.5 de dano a inimigos paralisados.</string>
@@ -55,6 +56,7 @@
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
     <string name="Level_TileDescEntrance">Escadas levam para cima, para a profundidade superior.</string>
+    <string name="Level_TileOpenDoor">Porta aberta</string>
     <string name="Level_TilePedestal">Pedestal</string>
     <string name="Level_TileUnlockedExit">Saída desbloqueada</string>
     <string name="LibraryBook_Name">Livro da biblioteca</string>
@@ -146,6 +148,7 @@
     <string name="town_deco_crate_name">Caixa</string>
     <string name="town_deco_dungeon_door_name">Entrada</string>
     <string name="town_deco_floor_name">Chão</string>
+    <string name="town_deco_flowerinthepot_name">Flor em vaso</string>
     <string name="town_deco_locked_door_desc">O que no mundo pode estar atrás dessa porta?</string>
     <string name="town_deco_red_carpet_name">Tapete</string>
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
@@ -156,6 +159,9 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
+
 
 
 
