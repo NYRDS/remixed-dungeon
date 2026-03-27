@@ -817,6 +817,7 @@
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">голем</string>
     <string name="Golem_Name_Objective">голема</string>
+    <string name="Goo_Desc">Про Жижу відомо небагато. Цілком можливо, що це навіть не істота, а конгломерат речовин з каналізації, який набув зачатків вільної волі. У будь-якому разі, очевидно, що тут діє темна магія.</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">Жижа нагнічує себе!</string>
     <string name="Goo_Info2">хлюп... хлюп...</string>
@@ -2810,5 +2811,6 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 </resources>

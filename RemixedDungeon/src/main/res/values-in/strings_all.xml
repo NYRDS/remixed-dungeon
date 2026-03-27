@@ -1428,6 +1428,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bisakah kamu percaya?! Para idiot itu masih belum menyadari betapa berbahayanya selokan sialan ini! Seperti penjaga dan petualang yang bisa melindungi kota dari apapun. Hah! Tidak ada senjata yang dapat menghentikan penyebaran penyakit. Tapi saya butuh bukti, mungkin Anda bisa membantu saya dengan itu? Bawakan saya %d kulit tikus, sehingga saya bisa melakukan beberapa tes tambahan.</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, Anda kembali! _Lima tikus mati_, sempurna! Kulit mereka akan sangat penting untuk penelitian saya. Dan seperti yang dijanjikan, atas usaha gigih Anda, saya telah membuatkan Anda baju ini dari kulit mereka. Ini diresapi dengan sedikit wabah, tapi jangan khawatir! Ini terkontrol, ini melindungi! Sekarang pergi! Lindungi kota!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Bawakan saya _lima ekor tikus mati_! Setiap satu yang engkau bawakan mendekatkan kita pada pemahaman tentang wabah mengerikan ini.</string>
+    <string name="PlagueDoctorQuest_1_2_InProgress">_Sepuluh siput_, sepuluh bisikan dari jurang! Lendir mereka akan dianalisis, esensi mereka diteliti. Rahasia yang mereka simpan sudah dalam jangkauan.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Batuk parah* Achoo!\n _Siput_... mereka merayap. Mereka mengeluarkan lendir. Dan mereka berbisik rahasia dari zaman yang terlupakan. Aku membutuhkan mereka, _sepuluh_ dari mereka, cangkangnya masih utuh. Apakah menurutmu hanya _lima puluh koin emas_ cukup untuk pengetahuan berharga seperti ini?\n Bah! Tidak masalah. Informasi yang mereka miliki bisa menjadi kunci untuk menghentikan wabah ini. Atau... itu bisa membawa kita ke sesuatu yang jauh lebih mengerikan. Terserah kamu.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Carilah _moongrace_, di mana kegelapan bertemu dengan cahaya rembulan yang paling samar. _Dua biji_, esensi mereka, akan mengungkapkan rahasia tersembunyi.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">Luar biasa! _Sungrass_, esensi emasnya berdenyut dengan vitalitas. Saya sudah belajar banyak dari strukturnya yang halus. *Dia memberikan Anda _Potion of Health_, cairannya berkilau dengan cahaya keemasan yang samar.* Minum ini ketika dunia terasa berat bagimu, dan rasakan kehangatan matahari menghidupkan kembali semangatmu.</string>
@@ -2854,6 +2855,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

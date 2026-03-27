@@ -110,6 +110,7 @@
     <string name="Torch_Info">É um item indispensável na masmorra, que é infame pela sua iluminação ambiente fraca.</string>
     <string name="TownShopkeeper_Objective">comerciante</string>
     <string name="TownsfolkMovieNPC_Desc">Um dos moradores. Embora seja claramente um plebeu, aquelas roupas parecem caras.</string>
+    <string name="TownsfolkSilentNPC_Name">cidadão</string>
     <string name="ToxicGas_Info">Uma nuvem esverdeada de gás tóxico está pairando aqui</string>
     <string name="Viscosity_Status">adiado %d</string>
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Permite carregar compactamente até %d varinhas.</string>
@@ -165,6 +166,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 
