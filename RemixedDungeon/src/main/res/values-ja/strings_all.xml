@@ -2398,6 +2398,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="WndChooseWay_Message">あなたはどちらの道を行く？</string>
     <string name="WndClass_Mastery">習熟</string>
     <string name="WndCryptoDonate_bitcoin">ビットコイン</string>
+    <string name="WndCryptoDonate_copyAddress">アドレスをコピー</string>
     <string name="WndCryptoDonate_monero">モネロ</string>
     <string name="WndCryptoDonate_openWallet">ウォレットを開く</string>
     <string name="WndCryptoDonate_ton">TON</string>
@@ -2951,6 +2952,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

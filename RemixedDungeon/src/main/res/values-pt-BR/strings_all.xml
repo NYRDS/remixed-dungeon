@@ -115,6 +115,7 @@
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Permite carregar compactamente até %d varinhas.</string>
     <string name="WandOfDisintegration_Info">Esta varinha emite um feixe de energia destrutiva, que penetra em todas as criaturas no seu caminho. Quanto mais alvos ela atinge, mais dano causará a cada um deles.</string>
     <string name="WandOfMagicMissile_SelectWand">Selecione uma varinha para melhorar</string>
+    <string name="WandOfShadowbolt_Info">Esta varinha emite uma negra, maliciosa energia.</string>
     <string name="Wand_Fizzles">sua varinha chiou; deve estar sem cargas por enquanto</string>
     <string name="Wand_SelfTarget">Você não pode mirar em si mesmo.</string>
     <string name="WarHammer_Name">martelo de guerra</string>
@@ -164,6 +165,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 

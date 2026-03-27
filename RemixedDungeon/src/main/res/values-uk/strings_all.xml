@@ -534,6 +534,7 @@
     <string name="ConcreteBlock_Description">На вигляд, аби посунути цей блок, необхідно %d балів сили</string>
     <string name="ConcreteBlock_Name">Тяжкий бетонний блок</string>
     <string name="ConfusionGas_Info">Тут крутиться хмара збентежуючого газу.</string>
+    <string name="CorpseDustBuff_Info">Жажда крови наполняет атаки, делая их особенно опасными.</string>
     <string name="CorpseDustBuff_Name">Жадоби крові</string>
     <string name="CorpseDust_Info">Жменя трупної пилюки не відрізняється від звичайної. Хоча не покидає відчуття, що від неї треба скоріше позбутися.</string>
     <string name="CorpseDust_Info2">Можливо через те, що тримаючи її в руці виникають відчуття занепокоєності та гніву.</string>
@@ -2809,4 +2810,5 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 </resources>
