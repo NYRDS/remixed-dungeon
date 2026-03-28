@@ -2483,6 +2483,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_chest_name">Cassa</string>
     <string name="town_deco_chimney_name">Comignolo</string>
     <string name="town_deco_church_sign_desc">Sembra che ci sia una chiesa all\'interno di quell\'edificio.</string>
+    <string name="town_deco_church_sign_name">Insegna della chiesa</string>
     <string name="town_deco_cinema_sign_desc">Pare che ci sia un cinema in quell\'edificio</string>
     <string name="town_deco_cinema_sign_name">Insegna del Cinema</string>
     <string name="town_deco_clock_desc">Le frecce su di essi sono da tempo ferme in una posizione.</string>
@@ -2632,6 +2633,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

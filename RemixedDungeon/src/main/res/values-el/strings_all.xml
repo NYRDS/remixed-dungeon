@@ -299,6 +299,7 @@
     <string name="BodyArmorSpell_Name">Σωματική πανοπλία</string>
     <string name="BoneSaw_Info">Ένα χειρουργικό πριόνι ακριβείας σχεδιασμένο για ταχύτατο τεμαχισμό. Η ζημιά και η ταχύτητα επίθεσής του μεγαλώνουν μαζί με την ικανότητα του Γιατρού Επιδημιών. Τα κρίσιμα χτυπήματα βγάζουν περισσότερα μέλη από τους εχθρούς, και είναι εξαιρετικά αποτελεσματικό εναντίον παραλυμένων εχθρών.</string>
     <string name="BoneSaw_Name">Πριόνι Οστών</string>
+    <string name="BoneShard_Name">Θραύσμα Οστού</string>
     <string name="Boomerang_Gender">neuter</string>
     <string name="Boomerang_Info">Αφού ριχθεί στον εχθρό, αυτό το κυρτό ξύλινο όπλο ρίψης θα επιστρέψει στα χέρια του χρήστη.</string>
     <string name="Boomerang_Name">μπούμερανγκ</string>
@@ -3020,6 +3021,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

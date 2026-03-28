@@ -635,6 +635,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="DieHardSpell_Info">Augmentera temporairement votre régénération, faisant de vous un véritable dur à cuire.</string>
     <string name="DieHardSpell_Name">Die Hard</string>
     <string name="Displacement_Txt">%s de déplacement</string>
+    <string name="DoctorArmor_NotDoctor">Seuls les médecins de la peste peuvent utiliser cette armure !</string>
     <string name="DogeMask_Info">Vous avez toujours eu envie de vous déguiser en un Doge célèbre ? C\'est votre chance ! \nQuelle classe ce masque ! So kool! Si Wow !</string>
     <string name="DogeMask_Name">Masque de Doge</string>
     <string name="DonateButton_pleaseDonate">s\'il vous plaît, pensez à faire un don</string>
@@ -2999,6 +3000,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

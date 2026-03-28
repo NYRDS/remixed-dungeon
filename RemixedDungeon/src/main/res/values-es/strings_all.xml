@@ -2376,6 +2376,7 @@ otro lugar del nivel.</string>
     <string name="WndChooseWay_Message">¿Qué camino seguirás?</string>
     <string name="WndClass_Mastery">Maestría</string>
     <string name="WndCryptoDonate_copyAddress">Copiar Dirección</string>
+    <string name="WndCryptoDonate_infoText">¡Puedes apoyar el desarrollo de Remixed Dungeon enviando donaciones de criptomonedas a las direcciones que aparecen a continuación. ¡Gracias por tu generoso apoyo!</string>
     <string name="WndCryptoDonate_monero">Monero</string>
     <string name="WndCryptoDonate_supportDev">Apoyar al Desarrollador</string>
     <string name="WndCryptoDonate_ton">TON</string>
@@ -2918,6 +2919,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -1131,6 +1131,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Knuckles_Info">Ein Stück Eisen mit Löchern für deine Finger.</string>
     <string name="Knuckles_Name">Schlagring</string>
     <string name="KoboldIcemancer_Desc">Kobold-Eiszauberer zählten zur Elite in ihrer Gesellschaft. Krieger, Magier und am wichtigstem Wissenschaftler. Antike Eiszauberer haben das Handwerk des Formens und Verzauberns von raffinierten Mechanismen aus Eis gemeistert.</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">%s\'s Eis-Strahl hat dich getötet..</string>
     <string name="KoboldIcemancer_Name">Kobold-Eiszauberer</string>
     <string name="KoboldIcemancer_Name_Objective">Kobold-Eiszauberer</string>
@@ -2879,6 +2880,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
