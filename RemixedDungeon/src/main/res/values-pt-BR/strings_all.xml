@@ -29,7 +29,9 @@
     <string name="DarkSacrifice_Self">Pelo Flagelo!</string>
     <string name="DarkVeilBuff_Info">Um véu de escuridão envolve o portador, invocando um espírito cada vez que dano é recebido.</string>
     <string name="DashSpell_Name">Investida</string>
+    <string name="Deathling_Desc">O Devorador de Mortos é a alma de um herói caído, que infelizmente foi invocado pelos poderes de um necromante para ser seu companheiro nesta aventura.</string>
     <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
+    <string name="DeferedDamageBuff_Name">Danos Diferidos (%d)</string>
     <string name="DonateButton_pleaseDonate">considere doar</string>
     <string name="Drunkard_Phrase_3">Essa cerveja tem gosto de terra</string>
     <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
@@ -152,6 +154,7 @@
 
     <string name="town_deco_armorstand_scale_name">Armadura de escamas</string>
     <string name="town_deco_book_name">Livro</string>
+    <string name="town_deco_chest_desc">Conveniente mobília para guardar diferentes coisas e joias.</string>
     <string name="town_deco_counter_desc">Mantém uma boa distância entre você e a pessoa atrás dela.</string>
     <string name="town_deco_crate_name">Caixa</string>
     <string name="town_deco_dungeon_door_name">Entrada</string>
@@ -167,6 +170,9 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
+
 
 
 
