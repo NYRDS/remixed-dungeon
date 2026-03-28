@@ -2242,6 +2242,8 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="TownsfolkSilentNPC_Name_Objective">villageois</string>
     <string name="ToxicGas_Info">Un nuage verdâtre de gaz toxique flotte par ici.</string>
     <string name="ToxicGas_Info1">Le gaz toxique vous a asphyxié...</string>
+    <string name="ToxicGland_Info">Une glande toxique récoltée sur un ennemi vaincu. Ces glandes sont remplies de toxines puissantes et peuvent être utilisées dans des processus alchimiques.</string>
+    <string name="ToxicGland_Name">Glande Toxique</string>
     <string name="TrapWnd_Step">Voulez-vous vraiment marcher sur ce piège ? Vous pouvez probablement mourir.</string>
     <string name="TrapWnd_Title">Piège</string>
     <string name="TreacherousSpirit_Desc">Cette monstrueuse créature ressemble à un nuage de ténèbres vivantes. Son oeil sans paupière vous regarde, palpitant à chacun de vos mouvements.</string>
@@ -2997,6 +2999,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 

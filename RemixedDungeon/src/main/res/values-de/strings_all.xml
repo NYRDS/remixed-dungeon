@@ -864,6 +864,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Heal_Info">Ein ziemlich nützlicher Zauberspruch im Dungeon, oder?</string>
     <string name="Heal_Name">Heilung</string>
     <string name="HealerNPC_Desc">Ein alter Mann. Er sieht aus, wie jemand der Zauberstäbe herstellt.</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Kostenlose Behandlung für jeden Abenteurer.</string>
     <string name="HealerNPC_Message2">Komm jederzeit wieder, wenn du krank oder hungrig bist.</string>
     <string name="HealerNPC_Message3">Ich frage mich, warum die Kirche es uns verbietet Hüte zu tragen... Es ist wirklich kalt hier draußen.</string>
@@ -2877,6 +2878,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
