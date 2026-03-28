@@ -21,6 +21,7 @@
     <string name="Challenges_Descriptions_9">A mais recente \'cura\' do Médico da Peste apagou sua memória espacial. Você não consegue lembrar de nada fora da sua visão direta.</string>
     <string name="Challenges_Names_5">Nas trevas</string>
     <string name="Claymore_Info">Esta espada maciça deve ser capaz de cortar qualquer coisa.</string>
+    <string name="Claymore_Name">Claymore</string>
     <string name="Codex_Name">Codex</string>
     <string name="CorpseDustBuff_Name">Sangrento</string>
     <string name="Crystal_Name">cristal flutuante</string>
@@ -166,6 +167,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 

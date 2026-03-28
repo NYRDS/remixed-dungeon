@@ -1084,6 +1084,7 @@
     <string name="IronKey_Name">铁钥匙</string>
     <string name="ItemSprite_Info1">一旁掉落：%1$.1f、%2$.1f</string>
     <string name="Item_ACDrop">扔下</string>
+    <string name="Item_ACPickup">捡起</string>
     <string name="Item_ACThrow">投掷</string>
     <string name="Item_DirThrow">选择一个方向扔出</string>
     <string name="Item_Info">某物</string>
@@ -2886,6 +2887,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

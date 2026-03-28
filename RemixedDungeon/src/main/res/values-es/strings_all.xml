@@ -2113,6 +2113,7 @@ otro lugar del nivel.</string>
     <string name="Swing_Name_2">%s salvaje</string>
     <string name="Sword_Info">La afilada hoja de esta espada brilla de forma tranquilizadora. </string>
     <string name="Sword_Name">espada</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Esta hacha arrojadiza no no es demasiado pesada, pero aun así requiere bastante fuerza para ser usada efectivamente.</string>
     <string name="Tamahawk_Name">hacha arrojadiza</string>
     <string name="TenguLiver_Info">Este hígado pertenece a un poderoso enemigo. Sólo con mirarlo, tus instintos salvajes se apoderan de ti y sientes el impulso de consumirlo.</string>
@@ -2917,6 +2918,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
