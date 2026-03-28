@@ -1127,6 +1127,7 @@
     <string name="KindOfWeapon_EquipCursed">思わず %sのグリップを握り締め、身震いした。</string>
     <string name="King_Defense">受け流し</string>
     <string name="King_Desc">ドワーフの最後の王は、生と死のプロセスを深く理解していることで知られていた。彼は宮廷の人々に永遠の若さを与える儀式に参加するよう説得したが、結局、彼だけがそれを手に入れた。アンデッドの軍勢とともに。</string>
+    <string name="King_Gender">masculine</string>
     <string name="King_Info1">%s、お前は私を殺せない...私は...不滅...</string>
     <string name="King_Info2">いでよ、奴隷たち！</string>
     <string name="King_Info3">さあ、どうする！</string>
@@ -2952,6 +2953,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

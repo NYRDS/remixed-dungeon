@@ -374,6 +374,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ChampionOfEarthBuff_Name">Juara Bumi</string>
     <string name="ChampionOfFireBuff_Name">Juara Api</string>
     <string name="ChampionOfWaterBuff_Info">Juara Air mewujudkan kekuatan samudra yang tak terkalahkan, meningkatkan ketahanan dan kekuatan makhluk tersebut. Akibatnya, ia menjadi musuh yang tangguh, mampu menahan serangan bertubi-tubi dan berdiri sebagai penjaga yang tak kenal menyerah dalam menghadapi kesulitan.</string>
+    <string name="ChampionOfWaterBuff_Name">Juara Air</string>
     <string name="ChaosArmor_Info">Sebuah lapisan merah darah dipasang bersama dengan rantai merah tua. Zirah ini mengeluarkan energi khaos saat Anda menyentuhnya.</string>
     <string name="ChaosArmor_Name">Zirah khaos</string>
     <string name="ChaosBow_Gender">masculine</string>
@@ -2855,6 +2856,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

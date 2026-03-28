@@ -2502,6 +2502,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndHero_Exp">Expérience</string>
     <string name="WndHero_Gold">Pièces d\'or collectées</string>
     <string name="WndHero_Health">Santé</string>
+    <string name="WndHero_Info">Info</string>
     <string name="WndHero_Satiety">Satiété</string>
     <string name="WndHero_SkillLevel">Niveau de compétence</string>
     <string name="WndHero_StaCatalogus">Catalogue</string>
@@ -2996,6 +2997,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
