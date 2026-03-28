@@ -722,6 +722,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="ExplodingSkull_Name">Explodierender Schädel</string>
     <string name="ExplodingSkull_Name_Objective">Explodierender Schädel</string>
     <string name="Eye_Desc">Ein anderer Name dieses Dämons ist \&quot;Kugel des Hasses\&quot;. Wenn er einen Feind erblickt, benutzt er seinen Todesblick ohne Rücksicht auf Verbündete in der Nähe und verwundet diese dabei oft.</string>
+    <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">Der Todesblick des %s hat dich getötet...</string>
     <string name="Eye_Name">Böses Auge</string>
     <string name="Eye_Name_Objective">Böses Auge</string>
@@ -2878,6 +2879,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

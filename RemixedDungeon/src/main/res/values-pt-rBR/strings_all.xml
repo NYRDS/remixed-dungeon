@@ -653,7 +653,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Dungeon_Tips_4">Cuidado com o Goo!</string>
     <string name="Dungeon_Tips_5">Pixel-Mart - tudo que você precisa para ter sucesso em sua aventura!</string>
     <string name="Dungeon_Tips_6">Identifique suas poções e pergaminhos o mais rápido possível. Não adie para o momento em que você realmente precisar deles.</string>
-    <string name="Dungeon_Tips_7">Não tem problema ficar com fome, mas morrer de fome pode ser doloroso.</string>
+    <string name="Dungeon_Tips_7">Passar fome não machuca, mas estar faminto machuca.</string>
     <string name="Dungeon_Tips_8">Ataques de surpresa têm mais chance de acertar. Por exemplo, você pode emboscar seu inimigo atrás de uma porta fechada quando perceber que ele está se aproximando.</string>
     <string name="Dungeon_Tips_9">Não deixe o Tengu fugir!</string>
     <string name="Dungeon_saveIoError">Ao tentar criar o arquivo de salvamento:</string>
@@ -2894,6 +2894,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
