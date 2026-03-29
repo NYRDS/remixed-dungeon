@@ -151,6 +151,7 @@
     <string name="WndPriest_Instruction2_f">Bem-vinda minha filha, bem-vinda à santa igreja do grande Papai Noel o Senhor das Profundezas!</string>
     <string name="WndPriest_Instruction_f">Bem-vinda minha filha, bem-vinda à santa igreja do grande Papai Noel o Senhor das Profundezas! Infelizmente não posso deixá-la passar agora, porque o edifício está em reconstrução, mas se você busca ajuda, posso fornecer serviço de cura e comida por apenas %d moedas de ouro!</string>
     <string name="WndSadGhost_Rose">Sim! Sim!!! É isso aí! Por favor, dê-me! E você pode levar um desses itens, talvez eles sejam úteis para você em sua jornada...</string>
+    <string name="WndSettings_SelectLanguage">Selecionar Língua</string>
     <string name="WndSettings_ZoomOut">-</string>
     <string name="WndTradeItem_BuyN">Comprar %1$d por %2$dg</string>
     <string name="WndTradeItem_Sell">Vender por %dg</string>
@@ -179,6 +180,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 

@@ -2627,6 +2627,7 @@
     <string name="town_deco_broken_roof_name">Ламаний дах</string>
     <string name="town_deco_broken_wall_desc">Колоди цієї стіни давно прогнили і втратили колишню міць.</string>
     <string name="town_deco_broken_wall_name">Зруйнована стіна</string>
+    <string name="town_deco_brown_carpet_desc">Цей коричневий килим був витоптаний ногами багатьох шукачів пригод, волоцюг і випадкових перехожих.</string>
     <string name="town_deco_brown_carpet_name">Килим</string>
     <string name="town_deco_cabinet_desc">Просторна шафа з багатьма дверима та полицями.</string>
     <string name="town_deco_canvas_desc">Товстий шмат тканини висить на стіні.</string>
@@ -2812,6 +2813,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
