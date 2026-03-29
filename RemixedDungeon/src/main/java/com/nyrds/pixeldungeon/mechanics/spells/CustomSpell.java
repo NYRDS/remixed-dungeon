@@ -41,7 +41,7 @@ public class CustomSpell extends Spell {
 
     @Override
     protected boolean cast(@NotNull Char chr, int cell) {
-        boolean ret = script.run("castOnCell", chr, cell).checkboolean();
+        boolean ret = script.run("castOnCell", chr, cell).optboolean(false);
         if(ret) {
             castCallback(chr);
         }
@@ -50,7 +50,7 @@ public class CustomSpell extends Spell {
 
     @Override
     protected boolean cast(@NotNull Char chr, @NotNull Char target) {
-        boolean ret = script.run("castOnChar", chr, target).checkboolean();
+        boolean ret = script.run("castOnChar", chr, target).optboolean(false);
         if(ret) {
             castCallback(chr);
         }
@@ -64,7 +64,7 @@ public class CustomSpell extends Spell {
             return false;
         }
 
-        boolean ret = script.run("cast", chr).checkboolean();
+        boolean ret = script.run("cast", chr).optboolean(false);
         if(ret) {
             castCallback(chr);
         }
