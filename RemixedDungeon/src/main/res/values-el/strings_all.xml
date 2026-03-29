@@ -291,6 +291,7 @@
     <string name="BlessedBuff_Name">Ευλογία</string>
     <string name="BlindnessBuff_Info">Παντελής τύφλωση. Μόνο οι ήχοι μπορούν να γίνουν αντιληπτοί.</string>
     <string name="BlindnessBuff_Name">Τύφλωση</string>
+    <string name="BloodTransfusion_Info">Αποστραγγίζει σχεδόν όλο το αίμα από έναν στόχο για να σε θεραπεύσει. Ένα σκοτεινό τελετουργικό θυσίας και επιβίωσης.</string>
     <string name="BloodTransfusion_Name">Μετάγγιση Αίματος</string>
     <string name="BloodTransfusion_WontAgreed">Ο στόχος αντιστέκεται στην εξαγωγή της ουσίας της ζωής του.</string>
     <string name="BodyArmorBuff_Info">Η άμυνα της πανοπλίας αυξάνεται, με ένα αντίτιμο στην ταχύτητα κίνησης.</string>
@@ -3021,6 +3022,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

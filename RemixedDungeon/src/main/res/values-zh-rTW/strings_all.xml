@@ -323,6 +323,7 @@
     <string name="Capotain_Name">朝聖平頂帽</string>
     <string name="Carcass_Devoured">你已經吞食了%s的屍體！</string>
     <string name="Carcass_Name">%s 的遺骸</string>
+    <string name="Carcass_Necromancy">你已復活了%s 的屍體！</string>
     <string name="Carcass_Necromancy_Failed">你嘗試復活%s 的屍體失敗了！</string>
     <string name="Carcass_TooFarToDissect">你需要離得更近才能解剖屍體。</string>
     <string name="Caves_TileDescBookshelf">誰會需要在礦洞裏放個書架？</string>
@@ -2021,6 +2022,7 @@
     <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">看上去這飛斧並不重，但它依然需要足夠的力量來能有效發揮作用。</string>
     <string name="Tamahawk_Name">飛斧</string>
+    <string name="TenguLiver_Info">這塊肝臟屬於一位強大的敵人。僅僅注視著它，你的野性本能便會甦醒，湧起一股吞噬它的衝動。</string>
     <string name="TenguLiver_Name">天狗肝臟</string>
     <string name="Tengu_Desc">天狗是一個叫“天狗”的古代刺客組織的成員，這些刺客以精通手裏劍和陷阱而著稱。</string>
     <string name="Tengu_Gender">masculine</string>
@@ -2809,6 +2811,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

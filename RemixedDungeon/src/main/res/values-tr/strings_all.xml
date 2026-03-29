@@ -1884,6 +1884,7 @@ seviyenin başka bir yeri.</string>
     <string name="Shaman_Name_Objective">gnoll şaman</string>
     <string name="Shaman_ZapMiss">*Gnolce küfürler*</string>
     <string name="Sheep_Desc">Bu sihirli bir koyun. Ne mi bu kadar büyülü? Onu öldüremezsin. Büyülü bir şekilde yok olana kadar orda duracak, boş bir bakışla geviş getirerek.</string>
+    <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">koyun</string>
     <string name="Sheep_Name_Objective">koyun</string>
     <string name="ShieldBuffNotReady_Info">Kalkanın bir sonraki saldırıyı engellemeye hazır değil.</string>
@@ -2918,6 +2919,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
