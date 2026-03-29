@@ -39,6 +39,7 @@
     <string name="GasImmuneBuff_Info">Imune a todos os gases.</string>
     <string name="GasImmuneBuff_Name">Imunidade a Gases</string>
     <string name="Guts_TileDescEntrance">O Buraco no teto leva até os níveis superiores</string>
+    <string name="Guts_TileGrass">Arbusto seco</string>
     <string name="Halberd_Info">Uma arma de haste consistindo em um machado na ponta de uma haste.</string>
     <string name="HeroClass_GnollPerks_4">Gnolls não atacam outros Gnolls, exceto quando provocados</string>
     <string name="HeroClass_HunPerks_1">Caçadoras começam com um bumerangue único atualizável.</string>
@@ -94,6 +95,7 @@
     <string name="ResultDescriptions_Necromancy">Esgotado da forca vital enquanto tentava animar um cadaver no nivel %d</string>
     <string name="ResultDescriptions_Necrotism">Morreu de Necrotismo no nível %d</string>
     <string name="RingOfDetection_Info">Usar este anel permitirá ao usuário notar segredos escondidos - armadilhas e portas secretas - sem perder tempo procurando. Anéis de detecção degradados embotarão seus sentidos, dificultando notar segredos mesmo quando procurando ativamente por eles.</string>
+    <string name="Ring_Name">%s anel</string>
     <string name="ScrollHolder_Info">Você pode colocar qualquer número de pergaminhos neste recipiente tubular. Ele economiza espaço em sua mochila e protege pergaminhos do fogo.</string>
     <string name="ScrollOfLullaby_Info1">O pergaminho emite uma melodia suave.</string>
     <string name="ScrollOfTerror_Info2">O pergaminho emite um flash brilhante de luz vermelha e o %s foge!</string>
@@ -113,6 +115,7 @@
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="StartScene_DifficultyNormalWithSaves">Normal com saves (e propagandas)</string>
     <string name="StartScene_DifficultyNormalWithSavesNoAds">Normal com saves</string>
+    <string name="StartScene_Really">Você realmente quer começar um novo jogo?</string>
     <string name="SungrassBuff_Name">Cura Herbal</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Thief_Desc">Níveis mais profundos da masmorra sempre foram um esconderijo para todos os tipos de criminosos. Nem todos eles poderiam manter uma mente clara durante os longos períodos longe de luz do dia. Há muito tempo, esses ladrões loucos e bandidos se esqueceram quem são e por que eles roubam.</string>
@@ -180,6 +183,9 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
+
 
 
 
