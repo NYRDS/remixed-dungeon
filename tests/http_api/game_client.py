@@ -42,11 +42,14 @@ class GameClient:
             return {"error": str(e)}
 
     def check_server(self) -> bool:
-        """Check if the webserver is running."""
+        """Check if the webserver is running and game is ready."""
         try:
-            url = f"{self.base_url}/"
+            url = f"{self.base_url}/ready"
             response = self.session.get(url, timeout=5)
-            return response.status_code == 200
+            if response.status_code == 200:
+                data = response.json()
+                return data.get("ready", False)
+            return False
         except:
             return False
 
@@ -85,9 +88,12 @@ class GameClient:
         """Get mobs on current level."""
         return self._get("/debug/get_mobs")
 
-    def create_mob(self, mob_type: str) -> Dict[str, Any]:
-        """Create a mob on the level."""
-        return self._get(f"/debug/create_mob?type={mob_type}")
+    def create_mob(self, mob_type: str, owned: bool = False) -> Dict[str, Any]:
+        """Create a mob on the level. If owned=True, mob becomes a pet of the hero."""
+        endpoint = f"/debug/create_mob?type={mob_type}"
+        if owned:
+            endpoint += "&owned=true"
+        return self._get(endpoint)
 
     def kill_mob(self, x: int, y: int) -> Dict[str, Any]:
         """Kill a mob at specified coordinates."""

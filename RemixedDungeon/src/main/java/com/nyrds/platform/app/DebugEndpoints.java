@@ -2,6 +2,8 @@ package com.nyrds.platform.app;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
+import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.GameControl;
@@ -10,28 +12,25 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
-import fi.iki.elonen.NanoHTTPD;
 
-import com.nyrds.pixeldungeon.mechanics.spells.Spell;
-import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
+import org.json.JSONObject;
 
 import java.lang.reflect.Field;
-import java.util.Collection;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import fi.iki.elonen.NanoHTTPD;
 
 public class DebugEndpoints {
     
@@ -134,6 +133,16 @@ public class DebugEndpoints {
                     "{\"error\":\"Missing mob type parameter\"}");
             }
 
+            boolean owned = false;
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.equals("owned=true")) {
+                        owned = true;
+                        break;
+                    }
+                }
+            }
+
             // Check if game state is initialized
             if (Dungeon.level == null) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
@@ -154,12 +163,16 @@ public class DebugEndpoints {
             // Set the mob's position
             mob.pos = x + y * Dungeon.level.getWidth();
 
+            if (owned && Dungeon.hero != null) {
+                mob.makePet(Dungeon.hero);
+            }
+
             // Add the mob to the game
             Actor.occupyCell(mob);
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                String.format("{\"success\":true,\"message\":\"Created mob '%s' at (%d,%d)\",\"mobType\":\"%s\",\"x\":%d,\"y\":%d}",
-                    mobType, x, y, mobType, x, y));
+                String.format("{\"success\":true,\"message\":\"Created mob '%s' at (%d,%d)\",\"mobType\":\"%s\",\"x\":%d,\"y\":%d,\"owned\":%b}",
+                    mobType, x, y, mobType, x, y, owned));
         } catch (Exception e) {
             GLog.w("Error in handleDebugCreateMob: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
@@ -1687,20 +1700,33 @@ public class DebugEndpoints {
                     String.format("{\"error\":\"Failed to create level '%s'\"}", levelId));
             }
 
-            // Update level tracking
-            DungeonGenerator.loadingLevel(position);
-
             // Determine entrance position
-            int startPos;
+            final int startPos;
             if (entranceCell >= 0 && entranceCell < newLevel.getLength()) {
                 startPos = entranceCell;
             } else {
                 startPos = newLevel.entrance;
             }
 
-            // Switch to the new level
-            Collection<Mob> mobs = new ArrayList<>();
-            Dungeon.switchLevel(newLevel, startPos, mobs);
+            // Set up the return position for InterlevelScene
+            position.cellId = startPos;
+
+            // Schedule the level switch on the game thread via InterlevelScene
+            String finalLevelId = levelId;
+            com.nyrds.pixeldungeon.game.GameLoop.pushUiTask(() -> {
+                try {
+                    InterlevelScene.returnTo = position;
+                    InterlevelScene.Do(InterlevelScene.Mode.RETURN);
+                    GLog.i("Switching to level: %s", finalLevelId);
+                } catch (Exception e) {
+                    GLog.w("Error switching level: %s", e.getMessage());
+                }
+            });
+
+            // Wait a moment for the scene switch to complete
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException ignored) {}
 
             String levelKind = DungeonGenerator.getLevelKind(levelId);
             int depth = DungeonGenerator.getLevelDepth(levelId);
@@ -1844,39 +1870,22 @@ public class DebugEndpoints {
                     break;
                 }
             }
-
             if (!validExit) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
                     String.format("{\"error\":\"'%s' is not a valid exit from current level '%s'\",\"availableExits\":%s}",
                         targetLevelId, currentLevelId, exits.toString()));
             }
 
-            // Create and switch to the level
-            Position position = new Position();
+            // Use InterlevelScene to descend
+            final Position position = new Position();
             position.levelId = targetLevelId;
+            InterlevelScene.returnTo = position;
+            InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
 
-            Level newLevel = DungeonGenerator.createLevel(position);
-            if (newLevel == null) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
-                    String.format("{\"error\":\"Failed to create level '%s'\"}", targetLevelId));
-            }
-
-            // Find exit index for proper entrance positioning
-            int exitIndex = 0;
-            for (int i = 0; i < exits.length(); i++) {
-                if (exits.getString(i).equals(targetLevelId)) {
-                    exitIndex = i;
-                    break;
-                }
-            }
-
-            int startPos = -(exitIndex + 1); // Negative indicates entrance index
-            Collection<Mob> mobs = new ArrayList<>();
-
-            // Update level tracking
-            DungeonGenerator.loadingLevel(position);
-
-            Dungeon.switchLevel(newLevel, startPos, mobs);
+            // Wait for scene switch
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException ignored) {}
 
             String levelKind = DungeonGenerator.getLevelKind(targetLevelId);
             int depth = DungeonGenerator.getLevelDepth(targetLevelId);
@@ -1893,7 +1902,7 @@ public class DebugEndpoints {
 
     public static NanoHTTPD.Response handleDebugAscend(NanoHTTPD.IHTTPSession session) {
         try {
-            if (Dungeon.hero == null || Dungeon.level == null) {
+            if (Dungeon.level == null) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
                     "{\"error\":\"Game not initialized - start a game first\"}");
             }
@@ -1901,7 +1910,7 @@ public class DebugEndpoints {
             String currentLevelId = DungeonGenerator.getCurrentLevelId();
             org.json.JSONArray entrances = DungeonGenerator.getLevelEntrances(currentLevelId);
 
-            if (entrances.length() == 0) {
+            if (entrances.isEmpty()) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
                     String.format("{\"error\":\"No entrance from current level '%s'\"}", currentLevelId));
             }
@@ -1922,23 +1931,11 @@ public class DebugEndpoints {
 
             String targetLevelId = entrances.getString(0);
 
-            // Create and switch to the level
-            Position position = new Position();
+            // Use InterlevelScene to ascend
+            final Position position = new Position();
             position.levelId = targetLevelId;
-
-            Level newLevel = DungeonGenerator.createLevel(position);
-            if (newLevel == null) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
-                    String.format("{\"error\":\"Failed to create level '%s'\"}", targetLevelId));
-            }
-
-            int startPos = newLevel.entrance;
-            Collection<Mob> mobs = new ArrayList<>();
-
-            // Update level tracking
-            DungeonGenerator.loadingLevel(position);
-
-            Dungeon.switchLevel(newLevel, startPos, mobs);
+            InterlevelScene.returnTo = position;
+            InterlevelScene.Do(InterlevelScene.Mode.ASCEND);
 
             String levelKind = DungeonGenerator.getLevelKind(targetLevelId);
             int depth = DungeonGenerator.getLevelDepth(targetLevelId);

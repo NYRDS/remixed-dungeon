@@ -42,6 +42,19 @@ public abstract class BaseWebServer extends NanoHTTPD {
         return "http://localhost:8080"; // Default address
     }
 
+    /**
+     * Check if the game is ready to handle requests.
+     * Returns false if libGDX is not initialized yet.
+     */
+    public static boolean isReady() {
+        // Check if libGDX files is available (indicates libGDX is initialized)
+        try {
+            return com.badlogic.gdx.Gdx.files != null && GameLoop.instance() != null;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     public BaseWebServer(int port) {
         super(port);
         instance = this;
@@ -954,6 +967,20 @@ public abstract class BaseWebServer extends NanoHTTPD {
     @Override
     public Response serve(IHTTPSession session) {
         String uri = session.getUri();
+
+        // Check if libGDX is ready before processing most requests
+        if (!isReady() && !uri.equals("/ready")) {
+            return newFixedLengthResponse(Response.Status.SERVICE_UNAVAILABLE, "application/json",
+                "{\"error\":\"Game not ready\",\"ready\":false}");
+        }
+
+        // Special endpoint to check readiness
+        if (uri.equals("/ready")) {
+            boolean ready = isReady();
+            return newFixedLengthResponse(Response.Status.OK, "application/json",
+                "{\"ready\":" + ready + "}");
+        }
+
         GLog.debug("WebServer: " + uri);
 
         // Handle debugging endpoints first
@@ -961,6 +988,14 @@ public abstract class BaseWebServer extends NanoHTTPD {
             return DebugEndpoints.handleDebugChangeLevel(session);
         } else if (uri.startsWith("/debug/create_mob")) {
             return DebugEndpoints.handleDebugCreateMob(session);
+        } else if (uri.startsWith("/debug/get_available_spells")) {
+            return DebugEndpoints.handleDebugGetAvailableSpells(session);
+        } else if (uri.startsWith("/debug/cast_spell_on_target")) {
+            return DebugEndpoints.handleDebugCastSpellOnTarget(session);
+        } else if (uri.startsWith("/debug/cast_spell")) {
+            return DebugEndpoints.handleDebugCastSpell(session);
+        } else if (uri.startsWith("/debug/get_recent_logs")) {
+            return DebugEndpoints.handleDebugGetRecentLogs(session);
         } else if (uri.startsWith("/debug/create_item")) {
             return DebugEndpoints.handleDebugCreateItem(session);
         } else if (uri.startsWith("/debug/change_map")) {

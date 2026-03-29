@@ -32,9 +32,6 @@ return spell.init{
             target:getSprite():emitter():start(RPD.Sfx.BloodParticle.FACTORY, 0.02, 30)
             caster:getSprite():emitter():start(RPD.Sfx.ElmoParticle.FACTORY, 0.05, 20)
 
-            -- Connect the two characters with blood particles
-            RPD.Sfx.MagicMissile:bleeding(caster:getSprite().parent, target:getPos(), caster:getPos(), nil)
-
             -- Sound effect
             RPD.playSound("snd_heal.mp3")
 
