@@ -728,7 +728,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Fire_Info">Um incêndio está queimando aqui.</string>
     <string name="Fire_Name_0">%s Ardente</string>
     <string name="Fire_Name_1">%s Ardente</string>
-    <string name="Fire_Name_2">%s Ardente</string>
+    <string name="Fire_Name_2">Flamejante %s</string>
     <string name="Firebloom_Desc">Quando algo toca uma planta de fogo, ele explode em chamas.</string>
     <string name="Firebloom_Name">planta de fogo</string>
     <string name="Foliage_Info">Raios de luz penetram na escuridão do jardim subterrâneo.</string>
@@ -1456,7 +1456,7 @@ Parede
     <string name="PlagueDoctor_Desc">Este homem corcunda está totalmente vestido com couro. Ele tem cheiro forte de medicamentos e... alho?</string>
 
     <string name="PlagueDoctor_Name">médico da praga</string>
-    <string name="PlagueDoctor_Name_Objective">médico da praga</string>
+    <string name="PlagueDoctor_Name_Objective">médico da peste</string>
     <string name="Plant_ACPlant">PLANTAR</string>
     <string name="Plant_Info">Jogue a semente de %1$s no lugar que você deseja planta-la.\n\n%2$s</string>
     <string name="Plant_Seed">Semente de %s</string>
@@ -2894,6 +2894,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 
