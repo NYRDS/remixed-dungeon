@@ -15,6 +15,7 @@
     <string name="BlackSkull_Gender">masculine</string>
     <string name="Blacksmith_Txt2">Você está brincando comigo? Onde está a minha picareta?!</string>
     <string name="Blacksmith_Verify4">Eu não trabalho com itens amaldiçoados!</string>
+    <string name="CandleOfMindVision_Info_Lighted">A vela acendeu no momento em que você a tirou da sua mochila. A chama emite uma luz roxa fraca e, ao olhar através dela, todos os monstros próximos se tornam visíveis para você.</string>
     <string name="Carcass_Kick">Este %s está totalmente morto, não precisa chutá-lo.</string>
     <string name="Challenges_Descriptions_2">Como adepto da regeneração natural do corpo humano, você sempre foi cauteloso com poções que possuem propriedades curativas. Melhor prevenir do que remediar!</string>
     <string name="Challenges_Descriptions_5">A primeira coisa que veio com o mal, foi uma névoa densa e impenetrável, o que torna quase impossível navegar claramente pelos intermináveis corredores da masmorra.</string>
@@ -170,6 +171,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 
