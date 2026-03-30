@@ -96,6 +96,7 @@
     <string name="ResultDescriptions_Necrotism">Morreu de Necrotismo no nível %d</string>
     <string name="RingOfDetection_Info">Usar este anel permitirá ao usuário notar segredos escondidos - armadilhas e portas secretas - sem perder tempo procurando. Anéis de detecção degradados embotarão seus sentidos, dificultando notar segredos mesmo quando procurando ativamente por eles.</string>
     <string name="Ring_Name">%s anel</string>
+    <string name="RottenPasty_Name">pastel de carne podre</string>
     <string name="ScrollHolder_Info">Você pode colocar qualquer número de pergaminhos neste recipiente tubular. Ele economiza espaço em sua mochila e protege pergaminhos do fogo.</string>
     <string name="ScrollOfLullaby_Info1">O pergaminho emite uma melodia suave.</string>
     <string name="ScrollOfTerror_Info2">O pergaminho emite um flash brilhante de luz vermelha e o %s foge!</string>
@@ -185,6 +186,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 

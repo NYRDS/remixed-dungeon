@@ -1273,6 +1273,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MysteryMeat_Info4">Anda berasa kenyang.</string>
     <string name="MysteryMeat_Message">Makanan ini berasa... pelik.</string>
     <string name="MysteryMeat_Name">daging misteri</string>
+    <string name="NatureArmorSpell_Name">Perisai Alam</string>
     <string name="NecromancerArmor_Info">Perisai ini membolehkan Pembangkit mayat memanggil sehingga 2 unit Makhluk Kematian pada kos 5 roh setiap satu. Pembantu hidup semula ini akan mengikut tuannya dan menyerang musuh tuan. Makhluk kematian ini menjadi semakin kuat jika tahap adiwira meningkat.</string>
     <string name="NecromancerArmor_Info2">Jika memakai perisai ini pembangkit mayat dapat guna keupayaan \&quot;Necrotisme\&quot;, berupaya menyebarkan  wabak magik, menjangkiti makhluk disekitar, sama ada yang telah mati atau masih hidup.</string>
     <string name="NecromancerArmor_Name">Perisai tulang</string>
@@ -2691,6 +2692,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
