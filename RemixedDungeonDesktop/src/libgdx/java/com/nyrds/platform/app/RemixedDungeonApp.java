@@ -68,7 +68,7 @@ public class RemixedDungeonApp {
             }
         }
 
-        if(!BuildConfig.DEBUG) {
+        if(!BuildConfig.DEBUG && webServerPort <= 0) {
             Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
 
                 StringWriter stringWriter = new StringWriter();

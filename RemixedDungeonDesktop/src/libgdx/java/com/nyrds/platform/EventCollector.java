@@ -79,7 +79,12 @@ public class EventCollector {
         PrintStream ps = new PrintStream(baos);
         e.printStackTrace(ps);
         ps.close();
-        GLog.toFile(baos.toString());
+        String trace = baos.toString();
+
+        // Always print to stderr for visibility
+        System.err.println("[Exception] " + trace);
+
+        GLog.toFile(trace);
 /*
         if (Util.isDebug()) {
             throw new RuntimeException(new Exception(e));
@@ -97,7 +102,12 @@ public class EventCollector {
         PrintStream ps = new PrintStream(baos);
         e.printStackTrace(ps);
         ps.close();
-        GLog.toFile(baos.toString());
+        String trace = baos.toString();
+
+        // Always print to stderr for visibility
+        System.err.println("[Exception] " + desc + "\n" + trace);
+
+        GLog.toFile(trace);
     }
 
     public static void setSessionData(String key, boolean value) {

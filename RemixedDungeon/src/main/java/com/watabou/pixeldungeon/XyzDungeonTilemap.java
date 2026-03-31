@@ -348,7 +348,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
             }
         }
 
-        if(isDoorCell(cellS)) {
+        // FIX: Prevent unmapped doors from projecting their roof upward
+        if(isDoorCell(cellS) && level.mapped[cellS]) {
             if (isWallCell(cellS +  1) && isWallCell(cellS - 1)) {
                 return 42;
             }
@@ -471,7 +472,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
         int cellS = cell + mWidth;
 
-        if(isDoorCell(cellS)) {
+        // FIX: Prevent unmapped doors from projecting their top upward
+        if(isDoorCell(cellS) && level.mapped[cellS]) {
             if (isWallCell(cellS +  1) && isWallCell(cellS - 1)) {
                 switch (level.map[cellS]) {
                     case Terrain.DOOR:

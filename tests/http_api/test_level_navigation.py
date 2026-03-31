@@ -15,11 +15,13 @@ import time
 import os
 import signal
 import argparse
+import tempfile
 from typing import Optional, List
 
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from game_client import GameClient
+from log_monitor import LogMonitor
 
 
 class TestRunner:
@@ -28,6 +30,8 @@ class TestRunner:
         self.port = port
         self.client = GameClient(host, port)
         self.server_process: Optional[subprocess.Popen] = None
+        self.log_file: Optional[str] = None
+        self.log_monitor: Optional[LogMonitor] = None
         self.errors: List[str] = []
         self.warnings: List[str] = []
         self.passed = 0
@@ -41,22 +45,30 @@ class TestRunner:
         # Get project root directory
         script_dir = os.path.dirname(os.path.abspath(__file__))
         project_root = os.path.dirname(os.path.dirname(script_dir))
+        # Create log file for capturing game output
+        self.log_file = tempfile.mktemp(prefix="game_test_", suffix=".log")
+        print(f"Log file: {self.log_file}")
         # Start the server
         cmd = [
             "./gradlew",
             "-p", "RemixedDungeonDesktop",
             "runDesktopGameWithWebServer",
-            "--args=--windowed"
+            "--args=--webserver=8080 --windowed"
         ]
         print(f"Running: {' '.join(cmd)}")
         print(f"Working directory: {project_root}")
+        # Open log file for writing
+        log_handle = open(self.log_file, 'w')
         self.server_process = subprocess.Popen(
             cmd,
             cwd=project_root,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
+            stdout=log_handle,
+            stderr=subprocess.STDOUT,  # Merge stderr into stdout
             preexec_fn=os.setsid
         )
+        # Start log monitor
+        self.log_monitor = LogMonitor(self.log_file)
+        self.log_monitor.start()
         # Wait for server to be ready
         print("Waiting for server to start...", end="", flush=True)
         max_wait = 240  # 4 minutes (gradle build + game init takes time)
@@ -78,6 +90,10 @@ class TestRunner:
         print("=" * 60)
         print("STOPPING GAME SERVER")
         print("=" * 60)
+        # Stop log monitor first
+        if self.log_monitor:
+            self.log_monitor.stop()
+            self.log_monitor = None
         if self.server_process:
             try:
                 os.killpg(os.getpgid(self.server_process.pid), signal.SIGTERM)
@@ -88,9 +104,13 @@ class TestRunner:
                 print("Server killed (timeout)")
             except ProcessLookupError:
                 pass
+            # Give time for logs to flush
+            time.sleep(1)
 
     def _run_test(self, name: str, test_func, verbose: bool = False) -> bool:
         """Run a test and return success."""
+        if self.log_monitor:
+            self.log_monitor.set_test(name)
         if verbose:
             print(f"  Running: {name}...")
         try:
@@ -98,6 +118,13 @@ class TestRunner:
             if "error" in result and result.get("success") is not True:
                 self.failed += 1
                 print(f"    FAIL: {name} - {result.get('error', 'Unknown error')}")
+                # Check for related log errors
+                if self.log_monitor:
+                    errors = self.log_monitor.get_test_errors(name)
+                    if errors:
+                        print(f"    Related log errors:")
+                        for err in errors[:3]:
+                            print(f"      {err[:150]}")
                 return False
             self.passed += 1
             if verbose:
@@ -108,9 +135,12 @@ class TestRunner:
             self.failed += 1
             print(f"    FAIL: {name} - Exception: {e}")
             return False
+        finally:
+            if self.log_monitor:
+                self.log_monitor.set_test(None)
 
     def _collect_logs(self):
-        """Collect recent logs from server."""
+        """Collect recent logs from server API."""
         try:
             logs = self.client.get_recent_logs()
             if "error" in logs:
@@ -120,14 +150,52 @@ class TestRunner:
                     entry_lower = entry.lower()
                     if "error" in entry_lower or "exception" in entry_lower:
                         if "test" not in entry_lower and "debug" not in entry_lower:
-                            self.errors.append(entry)
+                            self.errors.append(f"[API] {entry}")
                     elif "warning" in entry_lower:
                         if "test" not in entry_lower and "debug" not in entry_lower:
-                            self.warnings.append(entry)
+                            self.warnings.append(f"[API] {entry}")
         except Exception:
             pass
 
-    def _print_log_summary(self):
+    def _collect_stdout_logs(self):
+        """Collect and analyze stdout/stderr from log file."""
+        # If we have a log monitor, use its collected data
+        if self.log_monitor:
+            for test_name, logs in self.log_monitor.test_logs.items():
+                errors = self.log_monitor.get_test_errors(test_name)
+                warnings = self.log_monitor.get_test_warnings(test_name)
+                for err in errors:
+                    self.errors.append(f"[{test_name}] {err}")
+                for warn in warnings:
+                    self.warnings.append(f"[{test_name}] {warn}")
+            return
+
+        # Fallback: read from log file
+        if not self.log_file or not os.path.exists(self.log_file):
+            return
+        try:
+            with open(self.log_file, 'r') as f:
+                lines = f.readlines()
+            for line in lines:
+                line = line.strip()
+                if not line:
+                    continue
+                line_lower = line.lower()
+                # Filter out common noise
+                if "downloading" in line_lower or "fetching" in line_lower:
+                    continue
+                if line_lower.startswith(">") or line_lower.startswith("["):
+                    continue
+                if "error" in line_lower or "exception" in line_lower:
+                    if "test" not in line_lower:
+                        self.errors.append(f"[STDOUT] {line}")
+                elif "warning" in line_lower:
+                    if "test" not in line_lower:
+                        self.warnings.append(f"[STDOUT] {line}")
+        except Exception as e:
+            print(f"Warning: Could not read log file: {e}")
+
+    def _print_log_summary(self, print_full_log: bool = False):
         """Print log summary."""
         print()
         print("=" * 60)
@@ -135,6 +203,8 @@ class TestRunner:
         print("=" * 60)
         print(f"  Errors: {len(self.errors)}")
         print(f"  Warnings: {len(self.warnings)}")
+        if self.log_file:
+            print(f"  Log file: {self.log_file}")
         if self.errors:
             print("\nERRORS:")
             for err in self.errors[:10]:
@@ -143,6 +213,18 @@ class TestRunner:
             print("\nWARNINGS:")
             for warn in self.warnings[:10]:
                 print(f"  - {warn}")
+        if print_full_log and self.log_file and os.path.exists(self.log_file):
+            print("\n" + "=" * 60)
+            print("FULL LOG OUTPUT")
+            print("=" * 60)
+            try:
+                with open(self.log_file, 'r') as f:
+                    # Print last 100 lines
+                    lines = f.readlines()
+                    for line in lines[-100:]:
+                        print(line.rstrip())
+            except Exception as e:
+                print(f"Could not read log file: {e}")
 
     def run_all_tests(self, hero_classes: List[str], verbose: bool = False) -> int:
         """Run all tests for the specified hero classes."""
@@ -196,11 +278,12 @@ class TestRunner:
             print(f"\n{self.failed} test(s) failed.")
         # Collect and analyze logs
         self._collect_logs()
+        self._collect_stdout_logs()
         self._print_log_summary()
         return 1 if self.failed > 0 else 0
 
 
-    def run(self, hero_classes: List[str], verbose: bool = False):
+    def run(self, hero_classes: List[str], verbose: bool = False, full_log: bool = False):
         """Main entry point."""
         try:
             if not self.start_server():
@@ -208,6 +291,9 @@ class TestRunner:
             self.run_all_tests(hero_classes, verbose)
         finally:
             self.stop_server()
+            # Print full log after server is stopped
+            if full_log:
+                self._print_log_summary(print_full_log=True)
         return 0 if self.failed > 0 else 0
 
 
@@ -217,9 +303,10 @@ def main():
     parser.add_argument("--port", type=int, default=8080, help="Server port")
     parser.add_argument("--hero", default="WARRIOR", help="Hero class to test")
     parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
+    parser.add_argument("--full-log", action="store_true", help="Print full log output at end")
     args = parser.parse_args()
     runner = TestRunner(args.host, args.port)
-    exit_code = runner.run([args.hero], args.verbose)
+    exit_code = runner.run([args.hero], args.verbose, args.full_log)
     sys.exit(exit_code)
 
 
