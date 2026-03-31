@@ -776,6 +776,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Heal_Name">Guarigione</string>
     <string name="HealerNPC_Message1">Trattamento gratis per ogni avventuriero!</string>
     <string name="HealerNPC_Message2">Torna pure ogniqualvolta ti senti male o sei affamato!</string>
+    <string name="HealerNPC_Message3">Mi chiedo perché la chiesa non ci permetta di indossare cappelli... fa davvero freddo qui fuori.</string>
     <string name="HealerNPC_Name">prete di paese</string>
     <string name="HealerNPC_Name_Objective">prete di paese</string>
     <string name="Healing_Info">Questa magia è cruciale per ogni avventuriero. Ripristina 1/3 del massimo degli HP del lanciatore.</string>
@@ -2636,6 +2637,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

@@ -399,7 +399,7 @@
     <string name="CharAction_Order">ordem</string>
     <string name="CharAction_Push">Empurrar</string>
     <string name="CharAction_Scare">assustar</string>
-    <string name="CharAction_Steal">aço</string>
+    <string name="CharAction_Steal">roubar</string>
     <string name="CharAction_Take">tomar</string>
     <string name="CharAction_Taunt">insultar</string>
     <string name="CharInfo_Level">Este é um nível %1$d%2$s</string>
@@ -2896,6 +2896,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

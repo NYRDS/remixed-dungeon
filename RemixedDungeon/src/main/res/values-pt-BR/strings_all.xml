@@ -6,6 +6,7 @@
     <string name="Armor_Info1">Esta %1$s concede até \&quot;%2$d\&quot; pontos de absorção de danos por ataque.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="Badges_Champion">Desafio vencido</string>
+    <string name="Badges_GoldColleted2">500 ouro coletado</string>
     <string name="Badges_Info1">Medalha: %s</string>
     <string name="Badges_NoMonsterSlain">Nível completado sem matar nenhum monstro</string>
     <string name="Badges_ThisIsSparta">Isto é Esparta!!!</string>
@@ -21,6 +22,7 @@
     <string name="Challenges_Descriptions_5">A primeira coisa que veio com o mal, foi uma névoa densa e impenetrável, o que torna quase impossível navegar claramente pelos intermináveis corredores da masmorra.</string>
     <string name="Challenges_Descriptions_9">A mais recente \'cura\' do Médico da Peste apagou sua memória espacial. Você não consegue lembrar de nada fora da sua visão direta.</string>
     <string name="Challenges_Names_5">Nas trevas</string>
+    <string name="CharAction_Steal">roubar</string>
     <string name="Claymore_Info">Esta espada maciça deve ser capaz de cortar qualquer coisa.</string>
     <string name="Claymore_Name">Claymore</string>
     <string name="Codex_Name">Codex</string>
@@ -190,6 +192,8 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
 
 
 
