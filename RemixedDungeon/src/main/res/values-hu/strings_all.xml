@@ -1906,6 +1906,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="SpiderQueen_Name">pók királynő</string>
     <string name="SpiderQueen_Name_Objective">Pók királynő</string>
     <string name="SpiderServant_Desc">A katonák a pókbarlang leggyakoribb egységei. Arra születtek, hogy megvédjék saját területüket. A katonák a kifejlődött mérges mirigyeikkel mérgezik meg ellenségeiket.</string>
+    <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">pók katona</string>
     <string name="SpiderServant_Name_Objective">pók katona</string>
     <string name="Spinner_Desc">Ezek a zöldes szőrös barlangi pókok megpróbálják elkerülni a közvetlen harcot, általában a távolból kivárják ameddig az áldozatuk belegabalyodik a finoman szőtt hálójukba majd szépen lassan belehal mérgező harapásukba.</string>
@@ -2716,6 +2717,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
