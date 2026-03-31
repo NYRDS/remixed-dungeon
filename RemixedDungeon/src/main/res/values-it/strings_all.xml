@@ -490,6 +490,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="ConcreteBlock_Description">Sembra che questo blocco richieda %d punti di forza per spingerlo</string>
     <string name="ConcreteBlock_Name">Blocco di cemento pesante</string>
     <string name="ConfusionGas_Info">Una nube di gas confondente sta vorticando qua.</string>
+    <string name="CorpseDustBuff_Info">Gli attacchi sono notevolmente aumentati per coloro che sono pieni di brama di sangue, rendendoli particolarmente pericolosi.</string>
     <string name="CorpseDustBuff_Name">Sete di sangue</string>
     <string name="CorpseDust_Info">La palla di polvere cadaverica non differisce esternamente da una normale palla di polvere. Comunque, in qualche modo sai che è meglio liberarsene il prima possibile.</string>
     <string name="CorpseDust_Info2">Forse poiché il solo tenerla ti fa sentire ansioso e furente.</string>
@@ -2634,6 +2635,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

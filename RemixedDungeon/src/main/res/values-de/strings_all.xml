@@ -626,6 +626,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="DieHardSpell_Info">Wird temporär deine Regeration erhöhen um dich sehr widerstandsfähig zu machen.</string>
     <string name="DieHardSpell_Name">Hartnäckig</string>
     <string name="Displacement_Txt">%s des Verdrängens</string>
+    <string name="DoctorArmor_Name">Doktorgewand</string>
     <string name="DogeMask_Info">Wolltest du schon immer als ein berühmter Doge verkleiden? Das ist deine Chance!\nWas für eine Maske! Gute Tarnung! Wow!</string>
     <string name="DogeMask_Name">Mask des Dogen</string>
     <string name="DonateButton_pleaseDonate">Bitte erwägen Sie es, zu spenden</string>
@@ -2883,6 +2884,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

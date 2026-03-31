@@ -77,6 +77,7 @@
     <string name="Mob_Cannot_Be_Pet">A vontade de \&quot;%s\&quot; é muito forte para controlar!</string>
     <string name="Mob_StaTerrorStatus">Este %1$s está aterrorizado</string>
     <string name="NatureArmorSpell_Name">Armadura da Natureza</string>
+    <string name="NecromancerNPC_Message1">Tão pouco tempo, tão pouco tempo...</string>
     <string name="NecromancerRobe_Info">Esta túnica permite que o Necromante invoque um Devorador de Mortos por 5 almas. O Devorador de Mortos é um morto-vivo que se torna mais forte junto com seu mestre.</string>
     <string name="No_Valid_Cell">Não há uma célula adequada por perto.</string>
     <string name="Paralysis_Name_0">%s do Atordoamento</string>
@@ -129,6 +130,7 @@
     <string name="Viscosity_Status">adiado %d</string>
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Permite carregar compactamente até %d varinhas.</string>
     <string name="WandOfDisintegration_Info">Esta varinha emite um feixe de energia destrutiva, que penetra em todas as criaturas no seu caminho. Quanto mais alvos ela atinge, mais dano causará a cada um deles.</string>
+    <string name="WandOfDisintegration_Name">Varinha da Desintegração</string>
     <string name="WandOfMagicMissile_SelectWand">Selecione uma varinha para melhorar</string>
     <string name="WandOfShadowbolt_Info">Esta varinha emite uma negra, maliciosa energia.</string>
     <string name="Wand_Fizzles">sua varinha chiou; deve estar sem cargas por enquanto</string>
@@ -186,6 +188,8 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
 
 
 
