@@ -2277,6 +2277,7 @@
     <string name="WarriorArmor_NotWarrior">只有战士能使用这护甲！</string>
     <string name="WarriorArmor_Prompt">选择跳跃方向</string>
     <string name="WaterElemental_Desc">水元素会在有大量水体存在的环境中出现。通常这些由魔法结合而成的水浪只会在水流附近徘徊。</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name">水元素</string>
     <string name="WaterElemental_Name_Objective">水元素</string>
     <string name="WaterOfAwareness_Info">智慧的力量正从这口井的水里涌出。喝下井水能揭示所有已装备物品的秘密。</string>
@@ -2888,6 +2889,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
