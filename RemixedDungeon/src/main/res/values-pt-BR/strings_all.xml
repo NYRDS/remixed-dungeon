@@ -179,6 +179,7 @@
     <string name="town_deco_floor_name">Chão</string>
     <string name="town_deco_flowerinthepot_name">Flor em vaso</string>
     <string name="town_deco_locked_door_desc">O que no mundo pode estar atrás dessa porta?</string>
+    <string name="town_deco_projector_desc">Um dispositivo antigo para reproduzir filmes e entreter as pessoas.</string>
     <string name="town_deco_red_carpet_name">Tapete</string>
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>
 
@@ -188,6 +189,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 
