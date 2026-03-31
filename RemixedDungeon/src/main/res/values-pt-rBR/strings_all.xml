@@ -56,6 +56,7 @@
     <string name="Amulet_ACEnd">FIM DO JOGO</string>
     <string name="Amulet_Info">O Amuleto de Yendor é o mais poderoso artefato conhecido de origem desconhecida. Diz-se que o amuleto é capaz de cumprir qualquer desejo se a força de vontade do seu dono é forte o suficiente para \&quot;convencer\&quot; a fazê-lo.</string>
     <string name="Amulet_Name">Amuleto de Yendor</string>
+    <string name="AnesthesiaBuff_Info">Não sente dor e não acorda com ataques, mas ainda recebe dano.</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">O antigo símbolo da imortalidade concede uma capacidade de voltar à vida após a morte. Após a ressurreição todos os itens não equipados são perdidos.</string>
     <string name="Ankh_Name">Ankh</string>
@@ -2895,6 +2896,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
