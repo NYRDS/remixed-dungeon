@@ -695,6 +695,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Ein außergewöhnliches Beispiel der elfischen Handwerkskunst. Es ist eindeutig effektiver und genauer als normale Holzbögen.</string>
     <string name="ElvenBow_Name">Elfenbogen</string>
+    <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Diese Waffe ist aus einer speziellen Metalllegierung, die es viel leichter als einen normalen Dolch macht.</string>
     <string name="ElvenDagger_Name">Elfendolch</string>
     <string name="EncumbranceBuff_CharAct_1">Ich bin nicht stark genug, um %s richtig zu führen.</string>
@@ -1184,6 +1185,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Level_TileDescInactiveTrap">Die Falle wurde bereits früher ausgelöst und ist nicht mehr gefährlich.</string>
     <string name="Level_TileDescLockedDoor">Die Tür ist versperrt, du brauchst einen passenden Schlüssel um sie zu öffnen.</string>
     <string name="Level_TileDescLockedExit">Schwere Balken blockieren die Treppen nach unten.</string>
+    <string name="Level_TileDescPedestal">Ein kleiner Sockel.</string>
     <string name="Level_TileDescSign">Du kannst die Schrift von hier aus nicht lesen.</string>
     <string name="Level_TileDescStatue">Jemand wollte diesen Ort dekorieren, ist daran aber offensichtlich gescheitert.</string>
     <string name="Level_TileDescTrap">Wenn du auf eine verborgene Druckplatte trittst, löst dies die Falle aus.</string>
@@ -2881,6 +2883,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 
