@@ -81,6 +81,7 @@
     <string name="NatureArmorSpell_Name">Armadura da Natureza</string>
     <string name="NecromancerNPC_Message1">Tão pouco tempo, tão pouco tempo...</string>
     <string name="NecromancerRobe_Info">Esta túnica permite que o Necromante invoque um Devorador de Mortos por 5 almas. O Devorador de Mortos é um morto-vivo que se torna mais forte junto com seu mestre.</string>
+    <string name="NecrotismBuff_Info">A própria marca da morte, o fedor que afeta os próximos e faz com que eles compartilhem a mesma situação.</string>
     <string name="No_Valid_Cell">Não há uma célula adequada por perto.</string>
     <string name="Paralysis_Name_0">%s do Atordoamento</string>
     <string name="Paralysis_Name_2">%s do Atordoamento</string>
@@ -193,6 +194,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 
