@@ -1300,6 +1300,7 @@
     <string name="MercenaryNPC_Name">雇佣兵</string>
     <string name="MercenaryNPC_Name_Objective">雇佣兵</string>
     <string name="Metabolism_Txt">代谢%s</string>
+    <string name="MiasmaGas_Info">一种有毒的瘴气，会毒害、削弱并迷惑吸入它的生物。</string>
     <string name="MimicAmulet_Desc">你冒险旅程中最光荣的时刻原来是个陷阱。</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">拟形怪</string>
@@ -2890,6 +2891,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

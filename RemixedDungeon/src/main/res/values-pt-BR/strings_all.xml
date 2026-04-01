@@ -10,6 +10,7 @@
     <string name="Badges_GoldColleted2">500 ouro coletado</string>
     <string name="Badges_Info1">Medalha: %s</string>
     <string name="Badges_NoMonsterSlain">Nível completado sem matar nenhum monstro</string>
+    <string name="Badges_StrengthAttained4">19 pontos de Força adquiridos</string>
     <string name="Badges_ThisIsSparta">Isto é Esparta!!!</string>
     <string name="Bat_Desc">Estes habitantes ágeis e tenazes das cavernas podem derrotar oponentes muito maiores, recuperando sua vida a cada ataque bem-sucedido.</string>
     <string name="BellaNPC_Message">Eu não tenho interesse em plebeus como você!</string>
@@ -195,6 +196,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 

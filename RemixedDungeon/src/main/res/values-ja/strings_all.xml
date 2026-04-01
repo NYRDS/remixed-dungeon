@@ -1976,6 +1976,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SociologistNPC_Name_Objective">社会学者</string>
     <string name="Sorrowmoss_Desc">ソロウモスはカミソリのような鋭い花びらを持つ花（コケではない）で、猛毒でコーティングされている。</string>
     <string name="Sorrowmoss_Name">ソロウモス</string>
+    <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">魂の壺の残骸から取り出した破片だ。神秘的なパワーで輝いている。もしかしたら、このようなものに興味を持つ人がいるかもしれない。</string>
     <string name="SoulShard_Name">魂の欠片</string>
     <string name="Spear_Info">先端に研いだ鉄をつけた細長い木の棒。</string>
@@ -2955,6 +2956,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
