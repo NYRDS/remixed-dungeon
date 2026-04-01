@@ -2277,6 +2277,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndLocalModInstall_title">Installa mod dalla directory locale</string>
     <string name="WndModSelect_AreYouSure">Eliminare mod: %s, sei sicuro?</string>
     <string name="WndModSelect_ReallyDelete">Vuoi davvero eliminare?</string>
+    <string name="WndMovieTheatre_Instruction">Benvenuti al nostro cinema! Offriamo un servizio speciale: potete guardare gratuitamente un film speciale chiamato pubblicità. E se lo guardate fino alla fine, sarete ricompensati con %d monete d'oro!</string>
     <string name="WndMovieTheatre_Instruction_2">Hai guardato %1$d su %2$d volte. Otterrai un\'opportunità aggiuntiva per guardare un film per ogni nuovo livello dell\'eroe raggiunto.</string>
     <string name="WndMovieTheatre_No">lascia</string>
     <string name="WndMovieTheatre_Ok">Hai guardato con successo un video \&quot;ricompensa\&quot;!</string>
@@ -2640,6 +2641,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

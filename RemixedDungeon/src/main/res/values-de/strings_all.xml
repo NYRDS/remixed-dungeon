@@ -1298,6 +1298,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="MeleeWeapon_Info7b">und weil diese Waffe verflucht ist, kannst du sie leider nicht loslassen</string>
     <string name="MeleeWeapon_Info7c">Du kannst eine böse Magie in diesem %s spüren.</string>
     <string name="MercenaryNPC_Desc">Robust aussehender Mann</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">Söldner</string>
     <string name="MercenaryNPC_Name_Objective">Söldner</string>
     <string name="Metabolism_Txt">%s des Metabolismus</string>
@@ -2885,6 +2886,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
