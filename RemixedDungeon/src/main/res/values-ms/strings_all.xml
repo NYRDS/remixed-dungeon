@@ -2614,6 +2614,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_scrolls_desc">Rak berdebu yang penuh dengan skrol-skrol dan buku-buku.</string>
     <string name="town_deco_scrolls_name">Skrol</string>
     <string name="town_deco_shelf_desc">Para kosong.</string>
+    <string name="town_deco_shelf_full_desc">Pelbagai barang kemas diletakkan di atas rak ini.</string>
     <string name="town_deco_shelf_full_name">Rak</string>
     <string name="town_deco_shelf_name">Para</string>
     <string name="town_deco_shelving_desc">Rak yang mengagumkan, di atas para anda dapati terdapat pelbagai jenis minuman dan snek.</string>
@@ -2696,6 +2697,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

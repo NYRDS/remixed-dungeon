@@ -1212,6 +1212,7 @@
     <string name="MageArmor_Desc">法師穿著這件華麗的長袍，能夠施放一種融化大地的魔法：所有在他視野內的敵人將會烈火焚身並同時無法移動。</string>
     <string name="MageArmor_Name">法師長袍</string>
     <string name="MageArmor_NotMage">只有法師能使用這件護甲！</string>
+    <string name="MagicArrow_Name">魔法箭</string>
     <string name="MagicTorch_Info">一種產生炬光的法術，用來照亮地牢的黑暗。</string>
     <string name="MagicTorch_Name">魔法炬光</string>
     <string name="MailArmor_Desc">由相扣的金屬環製成，既牢固又靈活的一套護甲。</string>
@@ -2812,6 +2813,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

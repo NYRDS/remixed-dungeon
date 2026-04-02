@@ -1957,6 +1957,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="SociologistNPC_Name_Objective">Sosyolog</string>
     <string name="Sorrowmoss_Desc">Matem Yosunu bir aslında yosun değil keskin taç yaptakları ölümcül zehir içeren bir çişektir.</string>
     <string name="Sorrowmoss_Name">Keder Yosunu</string>
+    <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">Ruhlar Kavanozu\'nun kalıntılarından alınmış bir parça. Gizemli bir güçle parıldıyor, belki böyle bir şeyle ilgilenebilecek birileri vardır.</string>
     <string name="SoulShard_Name">ruh parçacığı</string>
     <string name="Spear_Gender">neuter</string>
@@ -2920,6 +2921,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

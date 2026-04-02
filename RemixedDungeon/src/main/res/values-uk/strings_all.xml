@@ -2293,6 +2293,14 @@
     <string name="Weightstone_WndChoice">Як ти бажаєш збалансувати предмет %s?</string>
     <string name="Weightstone_WndSpeed">На швидкість</string>
     <string name="Welcome_Ok">Добре!</string>
+    <string name="Welcome_Text_31_1">
+    remix.31.1\n
+    - Геймплей:\n
+    -- Нові Кастомізації!\n
+    -- Новий вид павуків!\n
+    -- Псі-павуки тепер посилюють союзників, замість того щоб проклинати ворогів.\n
+    - Виправлення помилок\n
+    </string>
     <string name="Welcome_Title">Ласкаво просимо!</string>
     <string name="WindGust_Info">Викликає порив вітру, що відштовхує обраного персонажа.</string>
     <string name="WindGust_Name">Порив вітру</string>
@@ -2815,6 +2823,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
