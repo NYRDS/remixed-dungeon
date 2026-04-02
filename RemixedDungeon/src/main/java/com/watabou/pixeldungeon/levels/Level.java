@@ -309,6 +309,7 @@ public abstract class Level implements Bundlable {
 
 		for (int i = 0; i < length; i++) {
 			int terr = map[i];
+			mapped[i] = true;
 			if (discoverable[i]) {
 				visited[i] = true;
 				if ((TerrainFlags.flags[terr] & TerrainFlags.SECRET) != 0) {

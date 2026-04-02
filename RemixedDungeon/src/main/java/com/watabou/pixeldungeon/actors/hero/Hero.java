@@ -615,7 +615,7 @@ public class Hero extends Char {
             return;
         }
 
-        Dungeon.level.discover();
+        hero.level().discover();
 
         Bones.leave(hero);
 

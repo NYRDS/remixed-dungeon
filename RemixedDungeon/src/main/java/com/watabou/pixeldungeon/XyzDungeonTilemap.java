@@ -338,7 +338,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
         }
 
 
-        if(isDoorCell(cell)) {
+        // FIX: Prevent unmapped doors from drawing their base roof
+        if(isDoorCell(cell) && level.mapped[cell]) {
             if (isWallCell(cell + 1) && isWallCell(cell - 1)) {
                     return 58;
             }
@@ -380,6 +381,11 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
 
     private int currentCornersCell(int cell) {
+        // FIX: Prevent unmapped walls from drawing inner/outer corners
+        if (!level.mapped[cell]) {
+            return TRANSPARENT;
+        }
+
         final boolean c_plus_w = isAnyWallCell(cell + mWidth);
         final boolean c_plus_1 = isAnyWallCell(cell + 1);
         final boolean c_plus_1_plus_w = isAnyWallCell(cell + 1 + mWidth);
@@ -446,7 +452,8 @@ public class XyzDungeonTilemap extends DungeonTilemap {
 
     private int currentDoorsCell(int cell) {
 
-        if(isDoorCell(cell)) {
+        // FIX: Prevent unmapped doors from drawing their base
+        if(isDoorCell(cell) && level.mapped[cell]) {
             if (isWallCell(cell + 1) && isWallCell(cell - 1)) {
                 switch (level.map[cell]) {
                     case Terrain.DOOR:
@@ -501,7 +508,10 @@ public class XyzDungeonTilemap extends DungeonTilemap {
     }
 
     private int currentDecoCell(int cell) {
-
+        // FIX: Prevent unmapped decorations from bleeding into the FOW
+        if (!level.mapped[cell]) {
+            return TRANSPARENT;
+        }
 
         switch (level.map[cell]) {
             case Terrain.ENTRANCE:
