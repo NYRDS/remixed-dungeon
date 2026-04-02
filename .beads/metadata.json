@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "remixed_dungeon",
+  "project_id": "4581360c-daf1-4658-a5a6-dcca9c67096d"
+}
