@@ -8,6 +8,7 @@
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="Badges_Champion">Desafio vencido</string>
     <string name="Badges_GoldColleted2">500 ouro coletado</string>
+    <string name="Badges_HappyEnd">Final feliz</string>
     <string name="Badges_Info1">Medalha: %s</string>
     <string name="Badges_NoMonsterSlain">Nível completado sem matar nenhum monstro</string>
     <string name="Badges_StrengthAttained4">19 pontos de Força adquiridos</string>
@@ -82,6 +83,7 @@
     <string name="MobAi_status">Este %1$s é %2$s</string>
     <string name="Mob_Cannot_Be_Pet">A vontade de \&quot;%s\&quot; é muito forte para controlar!</string>
     <string name="Mob_StaTerrorStatus">Este %1$s está aterrorizado</string>
+    <string name="Mods_AuthorSite">Site do Autor:</string>
     <string name="NatureArmorSpell_Name">Armadura da Natureza</string>
     <string name="NecromancerNPC_Message1">Tão pouco tempo, tão pouco tempo...</string>
     <string name="NecromancerRobe_Info">Esta túnica permite que o Necromante invoque um Devorador de Mortos por 5 almas. O Devorador de Mortos é um morto-vivo que se torna mais forte junto com seu mestre.</string>
@@ -128,6 +130,7 @@
     <string name="StartScene_DifficultyNormalWithSavesNoAds">Normal com saves</string>
     <string name="StartScene_Really">Você realmente quer começar um novo jogo?</string>
     <string name="SungrassBuff_Name">Cura Herbal</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Thief_Desc">Níveis mais profundos da masmorra sempre foram um esconderijo para todos os tipos de criminosos. Nem todos eles poderiam manter uma mente clara durante os longos períodos longe de luz do dia. Há muito tempo, esses ladrões loucos e bandidos se esqueceram quem são e por que eles roubam.</string>
     <string name="Thief_Gender">masculine</string>
@@ -202,6 +205,9 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
+
 
 
 
