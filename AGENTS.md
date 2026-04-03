@@ -2,6 +2,26 @@
 
 This project uses **bd** (beads) for issue tracking. Run `bd onboard` to get started.
 
+## RTK (Rust Token Killer) - Token-Optimized Commands
+
+RTK is installed and should be used for bash commands to reduce token usage. It wraps common commands with token-optimized output (60-90% reduction).
+
+**Use RTK commands instead of raw commands:**
+```bash
+rtk ls              # instead of ls
+rtk tree            # instead of tree
+rtk grep pattern    # instead of grep
+rtk find -name "*.java"  # instead of find
+rtk git status      # instead of git status
+rtk git log -n 5    # instead of git log
+rtk diff            # instead of git diff
+rtk read file.txt   # read file with smart filtering
+rtk test            # run tests, show only failures
+rtk err command     # run command, show only errors
+```
+
+**Built-in Qwen Code tools** (`Read`, `Grep`, `Glob`) bypass RTK and work normally. Use `rtk` for bash shell commands.
+
 ## Quick Reference
 
 ```bash
