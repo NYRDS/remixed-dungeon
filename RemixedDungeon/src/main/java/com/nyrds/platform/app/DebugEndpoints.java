@@ -21,6 +21,9 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Pixmap;
+
 import org.json.JSONObject;
 
 import java.lang.reflect.Field;
@@ -2338,6 +2341,90 @@ public class DebugEndpoints {
                     count, itemType, itemType, count));
         } catch (Exception e) {
             GLog.w("Error in handleAlchemyGiveItem: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugScreenshot(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Gdx.graphics == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Graphics not initialized - start a game first\"}");
+            }
+
+            // Use CountDownLatch to wait for screenshot to be captured on game thread
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            final String[] error = new String[1];
+            final String[] screenshotPath = new String[1];
+
+            // Schedule screenshot capture on game thread
+            GameLoop.pushUiTask(() -> {
+                try {
+                    int width = Gdx.graphics.getWidth();
+                    int height = Gdx.graphics.getHeight();
+
+                    Pixmap pixmap = Pixmap.createFromFrameBuffer(0, 0, width, height);
+
+                    if (pixmap == null) {
+                        error[0] = "Failed to capture screenshot";
+                        latch.countDown();
+                        return;
+                    }
+
+                    // Save to temporary file
+                    String path = "screenshot_" + System.currentTimeMillis() + ".png";
+                    com.badlogic.gdx.files.FileHandle tempFile = Gdx.files.local(path);
+                    com.badlogic.gdx.graphics.PixmapIO.writePNG(tempFile, pixmap);
+                    
+                    screenshotPath[0] = path;
+                    
+                    // Cleanup
+                    pixmap.dispose();
+                    
+                    GLog.i("Screenshot saved to: " + path);
+                } catch (Exception e) {
+                    error[0] = "Error capturing screenshot: " + e.getMessage();
+                    GLog.w("Error capturing screenshot: " + e.getMessage());
+                } finally {
+                    latch.countDown();
+                }
+            });
+
+            // Wait for screenshot to be captured (up to 5 seconds)
+            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+
+            if (!completed) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for screenshot\"}");
+            }
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse(error[0]).toString());
+            }
+
+            if (screenshotPath[0] == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse("Screenshot path not set").toString());
+            }
+
+            // Read the screenshot file
+            com.badlogic.gdx.files.FileHandle tempFile = Gdx.files.local(screenshotPath[0]);
+            byte[] screenshotBytes = tempFile.readBytes();
+
+            // Delete the temporary file
+            tempFile.delete();
+
+            // Return PNG as response
+            return NanoHTTPD.newFixedLengthResponse(
+                NanoHTTPD.Response.Status.OK,
+                "image/png",
+                new java.io.ByteArrayInputStream(screenshotBytes),
+                screenshotBytes.length
+            );
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugScreenshot: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
