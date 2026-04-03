@@ -38,6 +38,7 @@
     <string name="DarkVeilBuff_Info">Um véu de escuridão envolve o portador, invocando um espírito cada vez que dano é recebido.</string>
     <string name="DashSpell_Name">Investida</string>
     <string name="Deathling_Desc">O Devorador de Mortos é a alma de um herói caído, que infelizmente foi invocado pelos poderes de um necromante para ser seu companheiro nesta aventura.</string>
+    <string name="DeepSnail_Name">caracol profundo</string>
     <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
     <string name="DeferedDamageBuff_Name">Danos Diferidos (%d)</string>
     <string name="DonateButton_pleaseDonate">considere doar</string>
@@ -198,6 +199,7 @@
     <string name="town_deco_floor_name">Chão</string>
     <string name="town_deco_flowerinthepot_name">Flor em vaso</string>
     <string name="town_deco_locked_door_desc">O que no mundo pode estar atrás dessa porta?</string>
+    <string name="town_deco_misc_desc">Uma pilha de lixo e bugigangas.</string>
     <string name="town_deco_projector_desc">Um dispositivo antigo para reproduzir filmes e entreter as pessoas.</string>
     <string name="town_deco_red_carpet_name">Tapete</string>
     <string name="town_deco_snowy_plate_desc">Este piso antigo está coberto de neve</string>

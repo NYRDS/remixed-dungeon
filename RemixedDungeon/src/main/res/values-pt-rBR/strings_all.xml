@@ -1911,6 +1911,7 @@ outro local do nível.</string>
     <string name="SkeletonKey_Name">chave esqueleto</string>
     <string name="Skeleton_Defense">bloqueado</string>
     <string name="Skeleton_Desc">Esqueletos são compostos de ossos de cadáveres de aventureiros azarados e moradores da masmorra, animados por emanações de magia negra das profundezas abaixo. Depois de terem sido danificados o suficiente, eles se desintegram em uma explosão de ossos.</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">Você foi morto pela explosão de ossos ...</string>
     <string name="Skeleton_Name">esqueleto</string>
     <string name="Skeleton_Name_Objective">esqueleto</string>

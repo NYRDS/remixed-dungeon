@@ -799,6 +799,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="GoldenKey_Info">Takik pada kunci emas ini kecil dan rumit. Mungkin itu bisa membuka peti yang di kunci?</string>
     <string name="GoldenKey_Name">kunci emas</string>
     <string name="GoldenStatue_Desc">Sangat sulit dipercaya bahwa, patung hebat ini bukanlah hanya dekorasi, melainkan sebuah makhluk jahat yang menunggu petualang yang tidak menyadarinya. Di pandangan pertama Anda dapat meyakinkan diri bahwa _%s_ nya itu hanya bagian dari lengannya.</string>
+    <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">patung emas</string>
     <string name="GoldenStatue_Name_Objective">patung emas</string>
     <string name="GoldenSword_Gender">masculine</string>
