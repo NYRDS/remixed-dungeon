@@ -22,6 +22,12 @@ import java.util.Scanner;
 
 import fi.iki.elonen.NanoHTTPD;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+
 /**
  * Base WebServer implementation that provides common functionality for all platforms.
  * Platform-specific implementations should extend this class and implement platform-specific functionality.
@@ -30,6 +36,55 @@ public abstract class BaseWebServer extends NanoHTTPD {
     protected static BaseWebServer instance = null;
     protected String serverAddress = null;
     protected boolean started = false;
+
+    // Debug endpoint routing map
+    private static final Map<String, Function<NanoHTTPD.IHTTPSession, NanoHTTPD.Response>> debugEndpoints = new HashMap<>();
+
+    static {
+        // Initialize debug endpoint routing map
+        debugEndpoints.put("/debug/change_level", DebugEndpoints::handleDebugChangeLevel);
+        debugEndpoints.put("/debug/create_mob", DebugEndpoints::handleDebugCreateMob);
+        debugEndpoints.put("/debug/get_available_spells", DebugEndpoints::handleDebugGetAvailableSpells);
+        debugEndpoints.put("/debug/cast_spell_on_target", DebugEndpoints::handleDebugCastSpellOnTarget);
+        debugEndpoints.put("/debug/cast_spell", DebugEndpoints::handleDebugCastSpell);
+        debugEndpoints.put("/debug/get_recent_logs", DebugEndpoints::handleDebugGetRecentLogs);
+        debugEndpoints.put("/debug/create_item", DebugEndpoints::handleDebugCreateItem);
+        debugEndpoints.put("/debug/change_map", DebugEndpoints::handleDebugChangeMap);
+        debugEndpoints.put("/debug/give_item", DebugEndpoints::handleDebugGiveItem);
+        debugEndpoints.put("/debug/spawn_at", DebugEndpoints::handleDebugSpawnAt);
+        debugEndpoints.put("/debug/start_game", DebugEndpoints::handleDebugStartGame);
+        debugEndpoints.put("/debug/get_game_state", DebugEndpoints::handleDebugGetGameState);
+        debugEndpoints.put("/debug/get_hero_info", DebugEndpoints::handleDebugGetHeroInfo);
+        debugEndpoints.put("/debug/get_level_info", DebugEndpoints::handleDebugGetLevelInfo);
+        debugEndpoints.put("/debug/get_mobs", DebugEndpoints::handleDebugGetMobs);
+        debugEndpoints.put("/debug/get_items", DebugEndpoints::handleDebugGetItems);
+        debugEndpoints.put("/debug/get_inventory", DebugEndpoints::handleDebugGetInventory);
+        debugEndpoints.put("/debug/set_hero_stat", DebugEndpoints::handleDebugSetHeroStat);
+        debugEndpoints.put("/debug/kill_mob", DebugEndpoints::handleDebugKillMob);
+        debugEndpoints.put("/debug/remove_item", DebugEndpoints::handleDebugRemoveItem);
+        debugEndpoints.put("/debug/reset_level", DebugEndpoints::handleDebugResetLevel);
+        debugEndpoints.put("/debug/get_dungeon_seed", DebugEndpoints::handleDebugGetDungeonSeed);
+        debugEndpoints.put("/debug/set_dungeon_seed", DebugEndpoints::handleDebugSetDungeonSeed);
+        debugEndpoints.put("/debug/get_tile_info", DebugEndpoints::handleDebugGetTileInfo);
+        debugEndpoints.put("/debug/handle_cell", DebugEndpoints::handleDebugHandleCell);
+        debugEndpoints.put("/debug/get_mob_positions", DebugEndpoints::handleDebugGetMobPositions);
+        debugEndpoints.put("/debug/get_hero_position", DebugEndpoints::handleDebugGetHeroPosition);
+        debugEndpoints.put("/debug/move_hero", DebugEndpoints::handleDebugMoveHero);
+        debugEndpoints.put("/debug/hero_attack", DebugEndpoints::handleDebugHeroAttack);
+        debugEndpoints.put("/debug/wait_ticks", DebugEndpoints::handleDebugWaitTicks);
+        debugEndpoints.put("/debug/go_to_level", DebugEndpoints::handleDebugGoToLevel);
+        debugEndpoints.put("/debug/list_levels", DebugEndpoints::handleDebugListLevels);
+        debugEndpoints.put("/debug/get_exits", DebugEndpoints::handleDebugGetExits);
+        debugEndpoints.put("/debug/get_entrances", DebugEndpoints::handleDebugGetEntrances);
+        debugEndpoints.put("/debug/descend_to", DebugEndpoints::handleDebugDescendTo);
+        debugEndpoints.put("/debug/ascend", DebugEndpoints::handleDebugAscend);
+        debugEndpoints.put("/debug/alchemy/list_recipes", DebugEndpoints::handleAlchemyListRecipes);
+        debugEndpoints.put("/debug/alchemy/get_recipe", DebugEndpoints::handleAlchemyGetRecipe);
+        debugEndpoints.put("/debug/craft", DebugEndpoints::handleAlchemyCraft);
+        debugEndpoints.put("/debug/alchemy/get_inventory", DebugEndpoints::handleAlchemyGetInventory);
+        debugEndpoints.put("/debug/alchemy/give_item", DebugEndpoints::handleAlchemyGiveItem);
+        debugEndpoints.put("/debug/screenshot", DebugEndpoints::handleDebugScreenshot);
+    }
 
     public static boolean isRunning() {
         return instance != null && instance.started;
@@ -976,91 +1031,11 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
         GLog.debug("WebServer: " + uri);
 
-        // Handle debugging endpoints first
-        if (uri.startsWith("/debug/change_level")) {
-            return DebugEndpoints.handleDebugChangeLevel(session);
-        } else if (uri.startsWith("/debug/create_mob")) {
-            return DebugEndpoints.handleDebugCreateMob(session);
-        } else if (uri.startsWith("/debug/get_available_spells")) {
-            return DebugEndpoints.handleDebugGetAvailableSpells(session);
-        } else if (uri.startsWith("/debug/cast_spell_on_target")) {
-            return DebugEndpoints.handleDebugCastSpellOnTarget(session);
-        } else if (uri.startsWith("/debug/cast_spell")) {
-            return DebugEndpoints.handleDebugCastSpell(session);
-        } else if (uri.startsWith("/debug/get_recent_logs")) {
-            return DebugEndpoints.handleDebugGetRecentLogs(session);
-        } else if (uri.startsWith("/debug/create_item")) {
-            return DebugEndpoints.handleDebugCreateItem(session);
-        } else if (uri.startsWith("/debug/change_map")) {
-            return DebugEndpoints.handleDebugChangeMap(session);
-        } else if (uri.startsWith("/debug/give_item")) {
-            return DebugEndpoints.handleDebugGiveItem(session);
-        } else if (uri.startsWith("/debug/spawn_at")) {
-            return DebugEndpoints.handleDebugSpawnAt(session);
-        } else if (uri.startsWith("/debug/start_game")) {
-            return DebugEndpoints.handleDebugStartGame(session);
-        } else if (uri.startsWith("/debug/get_game_state")) {
-            return DebugEndpoints.handleDebugGetGameState(session);
-        } else if (uri.startsWith("/debug/get_hero_info")) {
-            return DebugEndpoints.handleDebugGetHeroInfo(session);
-        } else if (uri.startsWith("/debug/get_level_info")) {
-            return DebugEndpoints.handleDebugGetLevelInfo(session);
-        } else if (uri.startsWith("/debug/get_mobs")) {
-            return DebugEndpoints.handleDebugGetMobs(session);
-        } else if (uri.startsWith("/debug/get_items")) {
-            return DebugEndpoints.handleDebugGetItems(session);
-        } else if (uri.startsWith("/debug/get_inventory")) {
-            return DebugEndpoints.handleDebugGetInventory(session);
-        } else if (uri.startsWith("/debug/set_hero_stat")) {
-            return DebugEndpoints.handleDebugSetHeroStat(session);
-        } else if (uri.startsWith("/debug/kill_mob")) {
-            return DebugEndpoints.handleDebugKillMob(session);
-        } else if (uri.startsWith("/debug/remove_item")) {
-            return DebugEndpoints.handleDebugRemoveItem(session);
-        } else if (uri.startsWith("/debug/reset_level")) {
-            return DebugEndpoints.handleDebugResetLevel(session);
-        } else if (uri.startsWith("/debug/get_dungeon_seed")) {
-            return DebugEndpoints.handleDebugGetDungeonSeed(session);
-        } else if (uri.startsWith("/debug/set_dungeon_seed")) {
-            return DebugEndpoints.handleDebugSetDungeonSeed(session);
-        } else if (uri.startsWith("/debug/get_tile_info")) {
-            return DebugEndpoints.handleDebugGetTileInfo(session);
-        } else if (uri.startsWith("/debug/handle_cell")) {
-            return DebugEndpoints.handleDebugHandleCell(session);
-        } else if (uri.startsWith("/debug/get_mob_positions")) {
-            return DebugEndpoints.handleDebugGetMobPositions(session);
-        } else if (uri.startsWith("/debug/get_hero_position")) {
-            return DebugEndpoints.handleDebugGetHeroPosition(session);
-        } else if (uri.startsWith("/debug/move_hero")) {
-            return DebugEndpoints.handleDebugMoveHero(session);
-        } else if (uri.startsWith("/debug/hero_attack")) {
-            return DebugEndpoints.handleDebugHeroAttack(session);
-        } else if (uri.startsWith("/debug/wait_ticks")) {
-            return DebugEndpoints.handleDebugWaitTicks(session);
-        } else if (uri.startsWith("/debug/go_to_level")) {
-            return DebugEndpoints.handleDebugGoToLevel(session);
-        } else if (uri.startsWith("/debug/list_levels")) {
-            return DebugEndpoints.handleDebugListLevels(session);
-        } else if (uri.startsWith("/debug/get_exits")) {
-            return DebugEndpoints.handleDebugGetExits(session);
-        } else if (uri.startsWith("/debug/get_entrances")) {
-            return DebugEndpoints.handleDebugGetEntrances(session);
-        } else if (uri.startsWith("/debug/descend_to")) {
-            return DebugEndpoints.handleDebugDescendTo(session);
-        } else if (uri.startsWith("/debug/ascend")) {
-            return DebugEndpoints.handleDebugAscend(session);
-        } else if (uri.startsWith("/debug/alchemy/list_recipes")) {
-            return DebugEndpoints.handleAlchemyListRecipes(session);
-        } else if (uri.startsWith("/debug/alchemy/get_recipe")) {
-            return DebugEndpoints.handleAlchemyGetRecipe(session);
-        } else if (uri.startsWith("/debug/alchemy/craft")) {
-            return DebugEndpoints.handleAlchemyCraft(session);
-        } else if (uri.startsWith("/debug/alchemy/get_inventory")) {
-            return DebugEndpoints.handleAlchemyGetInventory(session);
-        } else if (uri.startsWith("/debug/alchemy/give_item")) {
-            return DebugEndpoints.handleAlchemyGiveItem(session);
-        } else if (uri.startsWith("/debug/screenshot")) {
-            return DebugEndpoints.handleDebugScreenshot(session);
+        // Handle debugging endpoints using routing map
+        for (Map.Entry<String, Function<NanoHTTPD.IHTTPSession, NanoHTTPD.Response>> entry : debugEndpoints.entrySet()) {
+            if (uri.startsWith(entry.getKey())) {
+                return entry.getValue().apply(session);
+            }
         }
 
         if (session.getMethod() == Method.GET) {

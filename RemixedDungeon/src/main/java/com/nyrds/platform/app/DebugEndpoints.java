@@ -1165,25 +1165,43 @@ public class DebugEndpoints {
             }
 
             // Calculate target cell position
-            int cellPos = x + y * Dungeon.level.getWidth();
-
-            // Schedule the action to run on the main game thread to ensure state consistency
-            com.nyrds.pixeldungeon.game.GameLoop.pushUiTask(() -> {
-                // Simulate clicking on the cell (this mimics the behavior of clicking in the game)
-                // This will trigger the appropriate action based on what's at that cell
-                // Use the hero's move method to move to the cell if it's passable
-                if (Dungeon.level.passable[cellPos]) {
-                    Dungeon.hero.move(cellPos - Dungeon.hero.pos);
-                } else {
-                    // If not passable, check if there's a character to attack
-                    Char ch = Actor.findChar(cellPos);
-                    if (ch != null && ch instanceof Mob) {
-                        Dungeon.hero.attack(ch);
+            final int finalCellPos = x + y * Dungeon.level.getWidth();
+            final int finalX = x;
+            final int finalY = y;
+            
+            // Use CountDownLatch to wait for action to complete on game thread
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            
+            // Schedule the action to run on the main game thread
+            GameLoop.pushUiTask(() -> {
+                try {
+                    // Simulate clicking on the cell (this mimics the behavior of clicking in the game)
+                    // This will trigger the appropriate action based on what's at that cell
+                    // Use the hero's move method to move to the cell if it's passable
+                    if (Dungeon.level.passable[finalCellPos]) {
+                        Dungeon.hero.move(finalCellPos - Dungeon.hero.pos);
+                    } else {
+                        // If not passable, check if there's a character to attack
+                        Char ch = Actor.findChar(finalCellPos);
+                        if (ch != null && ch instanceof Mob) {
+                            Dungeon.hero.attack(ch);
+                        }
                     }
+                    
+                    // The game will handle turn processing automatically
+                } catch (Exception e) {
+                    GLog.n("Error handling cell: " + e.getMessage());
+                } finally {
+                    latch.countDown();
                 }
-                
-                // The game will handle turn processing automatically
             });
+
+            // Wait for the action to complete (up to 5 seconds)
+            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            if (!completed) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for cell handling to complete\"}");
+            }
 
             // Use reflection to access the private heaps field
             Field heapsField = Level.class.getDeclaredField("heaps");
@@ -1196,20 +1214,20 @@ public class DebugEndpoints {
             response.append(String.format("\"success\":true,\"message\":\"Handled cell (%d,%d)\",\"x\":%d,\"y\":%d,", x, y, x, y));
 
             // Check if there's a character at the cell (mob or hero)
-            Char cellCh = Actor.findChar(cellPos);
+            Char cellCh = Actor.findChar(finalCellPos);
             if (cellCh != null) {
                 response.append(String.format("\"character\":\"%s\",", cellCh.getClass().getSimpleName()));
             }
 
             // Check if there's an item heap at the cell
-            if (heaps.containsKey(cellPos)) {
-                Heap heap = heaps.get(cellPos);
+            if (heaps.containsKey(finalCellPos)) {
+                Heap heap = heaps.get(finalCellPos);
                 response.append(String.format("\"item\":\"%s\",", heap.peek().getClass().getSimpleName()));
             }
 
             // Include terrain information
             response.append(String.format("\"terrain\":%d,\"passable\":%b}", 
-                Dungeon.level.map[cellPos], Dungeon.level.passable[cellPos]));
+                Dungeon.level.map[finalCellPos], Dungeon.level.passable[finalCellPos]));
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", response.toString());
         } catch (Exception e) {
@@ -1241,12 +1259,17 @@ public class DebugEndpoints {
 
             final String finalSpellName = spellName; // Make it final for lambda access
 
+            // Use CountDownLatch to wait for spell casting to complete
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            final String[] error = new String[1];
+            
             // Schedule the spell casting on the main game thread
-            com.nyrds.pixeldungeon.game.GameLoop.pushUiTask(() -> {
+            GameLoop.pushUiTask(() -> {
                 try {
                     // Check if the game state is initialized in the main thread
                     if (Dungeon.hero == null || Dungeon.level == null) {
-                        GLog.n("Game state not initialized - start a game first");
+                        error[0] = "Game state not initialized - start a game first";
+                        GLog.n(error[0]);
                     } else {
                         Spell spell = SpellFactory.getSpellByName(finalSpellName);
                         if (spell != null) {
@@ -1255,18 +1278,33 @@ public class DebugEndpoints {
                             spell.castOnRandomTarget(Dungeon.hero);
                             GLog.i("Casting spell '" + finalSpellName + "'");
                         } else {
-                            GLog.n("Spell not found: " + finalSpellName);
+                            error[0] = "Spell not found: " + finalSpellName;
+                            GLog.n(error[0]);
                         }
                     }
                 } catch (Exception e) {
-                    GLog.n("Error casting spell: " + e.getMessage());
+                    error[0] = "Error casting spell: " + e.getMessage();
+                    GLog.n(error[0]);
+                } finally {
+                    latch.countDown();
                 }
             });
 
-            // Return success immediately without waiting for the operation to complete
+            // Wait for the spell casting to complete (up to 5 seconds)
+            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            if (!completed) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for spell casting to complete\"}");
+            }
+
             Map<String, Object> response = new HashMap<>();
-            response.put("success", true);
-            response.put("message", "Scheduled casting of spell '" + spellName + "'");
+            if (error[0] != null) {
+                response.put("success", false);
+                response.put("message", error[0]);
+            } else {
+                response.put("success", true);
+                response.put("message", "Cast spell '" + spellName + "'");
+            }
             response.put("spellType", spellName);
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", 
                 new JSONObject(response).toString());
@@ -1309,21 +1347,27 @@ public class DebugEndpoints {
             int targetX = Integer.parseInt(targetXStr);
             int targetY = Integer.parseInt(targetYStr);
 
-            final String finalSpellName = spellName; // Make it final for lambda access
+            final String finalSpellName = spellName;
             final int finalTargetX = targetX;
             final int finalTargetY = targetY;
-
+            
+            // Use CountDownLatch to wait for spell casting to complete
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            final String[] error = new String[1];
+            
             // Schedule the spell casting on the main game thread
-            com.nyrds.pixeldungeon.game.GameLoop.pushUiTask(() -> {
+            GameLoop.pushUiTask(() -> {
                 try {
                     // Check if the game state is initialized in the main thread
                     if (Dungeon.hero == null || Dungeon.level == null) {
-                        GLog.n("Game state not initialized - start a game first");
+                        error[0] = "Game state not initialized - start a game first";
+                        GLog.n(error[0]);
                     } else {
                         // Validate coordinates in the main thread
                         if (finalTargetX < 0 || finalTargetX >= Dungeon.level.getWidth() || 
                             finalTargetY < 0 || finalTargetY >= Dungeon.level.getHeight()) {
-                            GLog.n("Invalid coordinates: (" + finalTargetX + "," + finalTargetY + ")");
+                            error[0] = "Invalid coordinates: (" + finalTargetX + "," + finalTargetY + ")";
+                            GLog.n(error[0]);
                         } else {
                             Spell spell = SpellFactory.getSpellByName(finalSpellName);
                             if (spell != null) {
@@ -1332,21 +1376,37 @@ public class DebugEndpoints {
                                 spell.castOnRandomTarget(Dungeon.hero);
                                 GLog.i("Casting spell '" + finalSpellName + "' on target (" + finalTargetX + "," + finalTargetY + ")");
                             } else {
-                                GLog.n("Spell not found: " + finalSpellName);
+                                error[0] = "Spell not found: " + finalSpellName;
+                                GLog.n(error[0]);
                             }
                         }
                     }
                 } catch (NumberFormatException e) {
-                    GLog.n("Invalid coordinate format: " + e.getMessage());
+                    error[0] = "Invalid coordinate format: " + e.getMessage();
+                    GLog.n(error[0]);
                 } catch (Exception e) {
-                    GLog.n("Error casting spell on target: " + e.getMessage());
+                    error[0] = "Error casting spell on target: " + e.getMessage();
+                    GLog.n(error[0]);
+                } finally {
+                    latch.countDown();
                 }
             });
 
-            // Return success immediately without waiting for the operation to complete
+            // Wait for the spell casting to complete (up to 5 seconds)
+            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            if (!completed) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for spell casting to complete\"}");
+            }
+
             Map<String, Object> response = new HashMap<>();
-            response.put("success", true);
-            response.put("message", "Scheduled casting of spell '" + spellName + "' on target (" + targetX + "," + targetY + ")");
+            if (error[0] != null) {
+                response.put("success", false);
+                response.put("message", error[0]);
+            } else {
+                response.put("success", true);
+                response.put("message", "Cast spell '" + spellName + "' on target (" + targetX + "," + targetY + ")");
+            }
             response.put("spellType", spellName);
             response.put("x", targetX);
             response.put("y", targetY);
@@ -1522,20 +1582,40 @@ public class DebugEndpoints {
             }
 
             final int targetCell = cell;
+            
+            // Use CountDownLatch to wait for move to complete
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            final String[] error = new String[1];
+            
             GameLoop.pushUiTask(() -> {
                 try {
                     Dungeon.hero.nextAction(new com.nyrds.pixeldungeon.ml.actions.Move(targetCell));
                     GLog.i("Moving hero to cell %d", targetCell);
                 } catch (Exception e) {
-                    GLog.n("Error moving hero: %s", e.getMessage());
+                    error[0] = "Error moving hero: " + e.getMessage();
+                    GLog.n(error[0]);
+                } finally {
+                    latch.countDown();
                 }
             });
+
+            // Wait for the move to complete (up to 5 seconds)
+            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            if (!completed) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for hero move to complete\"}");
+            }
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse(error[0]).toString());
+            }
 
             int respX = cell % Dungeon.level.getWidth();
             int respY = cell / Dungeon.level.getWidth();
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                String.format("{\"success\":true,\"message\":\"Moving to cell %d\",\"x\":%d,\"y\":%d,\"cell\":%d}",
+                String.format("{\"success\":true,\"message\":\"Moved to cell %d\",\"x\":%d,\"y\":%d,\"cell\":%d}",
                     cell, respX, respY, cell));
         } catch (Exception e) {
             GLog.w("Error in handleDebugMoveHero: " + e.getMessage());
@@ -1592,18 +1672,37 @@ public class DebugEndpoints {
 
             final Mob targetMob = (Mob) target;
             final int targetCell = cell;
-
+            
+            // Use CountDownLatch to wait for attack to complete
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            final String[] error = new String[1];
+            
             GameLoop.pushUiTask(() -> {
                 try {
                     Dungeon.hero.nextAction(new com.nyrds.pixeldungeon.ml.actions.Attack(targetMob));
                     GLog.i("Hero attacking %s at cell %d", targetMob.getEntityKind(), targetCell);
                 } catch (Exception e) {
-                    GLog.n("Error attacking: %s", e.getMessage());
+                    error[0] = "Error attacking: " + e.getMessage();
+                    GLog.n(error[0]);
+                } finally {
+                    latch.countDown();
                 }
             });
 
+            // Wait for the attack to complete (up to 5 seconds)
+            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            if (!completed) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for attack to complete\"}");
+            }
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse(error[0]).toString());
+            }
+
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                String.format("{\"success\":true,\"message\":\"Attacking %s\",\"target\":\"%s\",\"cell\":%d}",
+                String.format("{\"success\":true,\"message\":\"Attacked %s\",\"target\":\"%s\",\"cell\":%d}",
                     targetMob.getEntityKind(), targetMob.getEntityKind(), cell));
         } catch (Exception e) {
             GLog.w("Error in handleDebugHeroAttack: " + e.getMessage());
@@ -1637,7 +1736,11 @@ public class DebugEndpoints {
             }
 
             final int finalTicks = ticks;
-
+            
+            // Use CountDownLatch to wait for tick waiting to complete
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            final String[] error = new String[1];
+            
             // Schedule tick waiting
             GameLoop.pushUiTask(() -> {
                 try {
@@ -1647,12 +1750,27 @@ public class DebugEndpoints {
                     }
                     GLog.i("Waited %d ticks", finalTicks);
                 } catch (Exception e) {
-                    GLog.n("Error waiting ticks: %s", e.getMessage());
+                    error[0] = "Error waiting ticks: " + e.getMessage();
+                    GLog.n(error[0]);
+                } finally {
+                    latch.countDown();
                 }
             });
 
+            // Wait for tick waiting to complete (up to 5 seconds)
+            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            if (!completed) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for ticks to complete\"}");
+            }
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse(error[0]).toString());
+            }
+
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                String.format("{\"success\":true,\"message\":\"Waiting %d ticks\",\"ticks\":%d}", ticks, ticks));
+                String.format("{\"success\":true,\"message\":\"Waited %d ticks\",\"ticks\":%d}", ticks, ticks));
         } catch (Exception e) {
             GLog.w("Error in handleDebugWaitTicks: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
@@ -1716,20 +1834,36 @@ public class DebugEndpoints {
 
             // Schedule the level switch on the game thread via InterlevelScene
             String finalLevelId = levelId;
+            final Position finalPosition = position;
+            final String[] error = new String[1];
+            
+            // Use CountDownLatch to wait for level switch to complete
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            
             com.nyrds.pixeldungeon.game.GameLoop.pushUiTask(() -> {
                 try {
-                    InterlevelScene.returnTo = position;
+                    InterlevelScene.returnTo = finalPosition;
                     InterlevelScene.Do(InterlevelScene.Mode.RETURN);
-                    GLog.i("Switching to level: %s", finalLevelId);
+                    GLog.i("Switching to level: " + finalLevelId);
                 } catch (Exception e) {
-                    GLog.w("Error switching level: %s", e.getMessage());
+                    error[0] = "Error switching level: " + e.getMessage();
+                    GLog.w(error[0]);
+                } finally {
+                    latch.countDown();
                 }
             });
 
-            // Wait a moment for the scene switch to complete
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException ignored) {}
+            // Wait for the level switch to complete (up to 5 seconds)
+            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            if (!completed) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for level switch to complete\"}");
+            }
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse(error[0]).toString());
+            }
 
             String levelKind = DungeonGenerator.getLevelKind(levelId);
             int depth = DungeonGenerator.getLevelDepth(levelId);
