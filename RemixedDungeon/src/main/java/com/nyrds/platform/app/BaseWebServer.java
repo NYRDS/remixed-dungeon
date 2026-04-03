@@ -1049,6 +1049,16 @@ public abstract class BaseWebServer extends NanoHTTPD {
             return DebugEndpoints.handleDebugDescendTo(session);
         } else if (uri.startsWith("/debug/ascend")) {
             return DebugEndpoints.handleDebugAscend(session);
+        } else if (uri.startsWith("/debug/alchemy/list_recipes")) {
+            return DebugEndpoints.handleAlchemyListRecipes(session);
+        } else if (uri.startsWith("/debug/alchemy/get_recipe")) {
+            return DebugEndpoints.handleAlchemyGetRecipe(session);
+        } else if (uri.startsWith("/debug/alchemy/craft")) {
+            return DebugEndpoints.handleAlchemyCraft(session);
+        } else if (uri.startsWith("/debug/alchemy/get_inventory")) {
+            return DebugEndpoints.handleAlchemyGetInventory(session);
+        } else if (uri.startsWith("/debug/alchemy/give_item")) {
+            return DebugEndpoints.handleAlchemyGiveItem(session);
         }
 
         if (session.getMethod() == Method.GET) {

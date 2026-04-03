@@ -178,22 +178,23 @@ public class AlchemyRecipes {
         try {
             // Create a temporary instance to get mob stats
             com.watabou.pixeldungeon.actors.mobs.Mob mob = MobFactory.mobByName(mobName);
-            
+
             // Base calculation on expForKill (a measure of mob strength) and HP
             int expFactor = Math.max(1, mob.expForKill); // Higher exp reward = stronger mob
             int hpFactor = Math.max(1, mob.ht() / 10); // Factor in based on HP
-            
+
             // Calculate requirement (higher for stronger mobs)
             int requirement = Math.max(3, (expFactor + hpFactor) / 3);
-            
+
             return requirement;
-            
-        } catch (Exception e) {
+
+        } catch (Throwable e) {
+            // FIX: Catch Throwable to handle ExceptionInInitializerError
             // If we can't instantiate the mob, use a default value
             // Base level mobs get 3-5 essence, higher level mobs get more
             if (mobName.contains("King") || mobName.contains("Boss") || mobName.contains("Yog")) {
                 return 20; // High value for bosses
-            } else if (mobName.contains("Elemental") || mobName.contains("Golem") || 
+            } else if (mobName.contains("Elemental") || mobName.contains("Golem") ||
                        mobName.contains("Scorpio") || mobName.contains("Tengu")) {
                 return 10; // Medium-high value for strong mobs
             } else {
@@ -499,10 +500,9 @@ public class AlchemyRecipes {
     public static Map<String, Integer> buildAlchemyInventory(Char hero) {
         Map<String, Integer> inventory = new HashMap<>();
         for (Item item : hero.getBelongings()) {
-            if (item.isIdentified()) {
-                String itemName = item.getEntityKind();
-                inventory.put(itemName, inventory.getOrDefault(itemName, 0) + item.quantity());
-            }
+            // FIX: Count all items, not just identified ones
+            String itemName = item.getEntityKind();
+            inventory.put(itemName, inventory.getOrDefault(itemName, 0) + item.quantity());
         }
         return inventory;
     }

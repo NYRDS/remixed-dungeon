@@ -1949,4 +1949,410 @@ public class DebugEndpoints {
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
     }
+
+    // Alchemy System Debug Endpoints
+
+    public static NanoHTTPD.Response handleAlchemyListRecipes(NanoHTTPD.IHTTPSession session) {
+        try {
+            List<com.nyrds.pixeldungeon.alchemy.AlchemyRecipe> recipes = com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.getAllRecipes();
+
+            StringBuilder json = new StringBuilder("{\"count\":").append(recipes.size()).append(",\"recipes\":[");
+
+            boolean first = true;
+            for (com.nyrds.pixeldungeon.alchemy.AlchemyRecipe recipe : recipes) {
+                if (!first) {
+                    json.append(",");
+                }
+
+                // Build recipe JSON
+                json.append("{");
+
+                // Input items
+                json.append("\"inputs\":[");
+                List<com.nyrds.pixeldungeon.alchemy.InputItem> inputs = recipe.getInput();
+                for (int i = 0; i < inputs.size(); i++) {
+                    if (i > 0) json.append(",");
+                    json.append(String.format("{\"name\":\"%s\",\"count\":%d}", inputs.get(i).getName(), inputs.get(i).getCount()));
+                }
+                json.append("],");
+
+                // Output items
+                json.append("\"outputs\":[");
+                List<com.nyrds.pixeldungeon.alchemy.OutputItem> outputs = recipe.getOutput();
+                for (int i = 0; i < outputs.size(); i++) {
+                    if (i > 0) json.append(",");
+                    json.append(String.format("{\"name\":\"%s\",\"count\":%d}", outputs.get(i).getName(), outputs.get(i).getCount()));
+                }
+                json.append("]");
+
+                json.append("}");
+                first = false;
+            }
+
+            json.append("]}");
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleAlchemyListRecipes: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleAlchemyGetRecipe(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            List<String> ingredientNames = new ArrayList<>();
+
+            if (query != null && !query.isEmpty()) {
+                String[] params = query.split("&");
+                for (String param : params) {
+                    if (param.startsWith("ingredient=")) {
+                        String ingredientName = java.net.URLDecoder.decode(param.substring(11), "UTF-8");
+                        ingredientNames.add(ingredientName);
+                    }
+                }
+            }
+
+            if (ingredientNames.isEmpty()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing ingredient parameters. Use ingredient=NAME for each ingredient.\"}");
+            }
+
+            // Try to find matching recipe by ingredient names (ignoring counts)
+            com.nyrds.pixeldungeon.alchemy.AlchemyRecipe matchedRecipe = null;
+            for (com.nyrds.pixeldungeon.alchemy.AlchemyRecipe recipe : com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.getAllRecipes()) {
+                List<com.nyrds.pixeldungeon.alchemy.InputItem> recipeInputs = recipe.getInput();
+
+                // Check if the number of ingredients matches
+                if (recipeInputs.size() != ingredientNames.size()) {
+                    continue;
+                }
+
+                // Check if all ingredient names match (order-independent)
+                boolean namesMatch = true;
+                for (com.nyrds.pixeldungeon.alchemy.InputItem recipeInput : recipeInputs) {
+                    if (!ingredientNames.contains(recipeInput.getName())) {
+                        namesMatch = false;
+                        break;
+                    }
+                }
+
+                // Also check that all requested ingredient names are in the recipe
+                for (String requestedName : ingredientNames) {
+                    boolean found = false;
+                    for (com.nyrds.pixeldungeon.alchemy.InputItem recipeInput : recipeInputs) {
+                        if (recipeInput.getName().equals(requestedName)) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) {
+                        namesMatch = false;
+                        break;
+                    }
+                }
+
+                if (namesMatch) {
+                    matchedRecipe = recipe;
+                    break;
+                }
+            }
+
+            if (matchedRecipe == null) {
+                StringBuilder ingList = new StringBuilder("[");
+                for (int i = 0; i < ingredientNames.size(); i++) {
+                    if (i > 0) ingList.append(",");
+                    ingList.append("\"").append(ingredientNames.get(i)).append("\"");
+                }
+                ingList.append("]");
+
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.NOT_FOUND, "application/json",
+                    String.format("{\"error\":\"No recipe found for ingredients: %s\"}", ingList.toString()));
+            }
+
+            List<com.nyrds.pixeldungeon.alchemy.OutputItem> outputs = matchedRecipe.getOutput();
+            List<com.nyrds.pixeldungeon.alchemy.InputItem> inputs = matchedRecipe.getInput();
+
+            // Build response
+            StringBuilder json = new StringBuilder("{\"success\":true,\"inputs\":[");
+            for (int i = 0; i < inputs.size(); i++) {
+                if (i > 0) json.append(",");
+                json.append(String.format("{\"name\":\"%s\",\"count\":%d}", inputs.get(i).getName(), inputs.get(i).getCount()));
+            }
+            json.append("],\"outputs\":[");
+
+            for (int i = 0; i < outputs.size(); i++) {
+                if (i > 0) json.append(",");
+                json.append(String.format("{\"name\":\"%s\",\"count\":%d}", outputs.get(i).getName(), outputs.get(i).getCount()));
+            }
+            json.append("]}");
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleAlchemyGetRecipe: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleAlchemyCraft(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            List<String> ingredientNames = new ArrayList<>();
+            int times = 1;
+
+            if (query != null && !query.isEmpty()) {
+                String[] params = query.split("&");
+                for (String param : params) {
+                    if (param.startsWith("ingredient=")) {
+                        String ingredientName = java.net.URLDecoder.decode(param.substring(11), "UTF-8");
+                        ingredientNames.add(ingredientName);
+                    } else if (param.startsWith("times=")) {
+                        try {
+                            times = Integer.parseInt(java.net.URLDecoder.decode(param.substring(6), "UTF-8"));
+                        } catch (NumberFormatException e) {
+                            // Use default value
+                        }
+                    }
+                }
+            }
+
+            if (ingredientNames.isEmpty()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing ingredient parameters. Use ingredient=NAME for each ingredient.\"}");
+            }
+
+            if (Dungeon.hero == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Hero not initialized - start a game first\"}");
+            }
+
+            // Try to find matching recipe by ingredient names (ignoring counts)
+            com.nyrds.pixeldungeon.alchemy.AlchemyRecipe matchedRecipe = null;
+            for (com.nyrds.pixeldungeon.alchemy.AlchemyRecipe recipe : com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.getAllRecipes()) {
+                List<com.nyrds.pixeldungeon.alchemy.InputItem> recipeInputs = recipe.getInput();
+
+                // Check if the number of ingredients matches
+                if (recipeInputs.size() != ingredientNames.size()) {
+                    continue;
+                }
+
+                // Check if all ingredient names match (order-independent)
+                boolean namesMatch = true;
+                for (com.nyrds.pixeldungeon.alchemy.InputItem recipeInput : recipeInputs) {
+                    if (!ingredientNames.contains(recipeInput.getName())) {
+                        namesMatch = false;
+                        break;
+                    }
+                }
+
+                // Also check that all requested ingredient names are in the recipe
+                for (String requestedName : ingredientNames) {
+                    boolean found = false;
+                    for (com.nyrds.pixeldungeon.alchemy.InputItem recipeInput : recipeInputs) {
+                        if (recipeInput.getName().equals(requestedName)) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) {
+                        namesMatch = false;
+                        break;
+                    }
+                }
+
+                if (namesMatch) {
+                    matchedRecipe = recipe;
+                    break;
+                }
+            }
+
+            if (matchedRecipe == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.NOT_FOUND, "application/json",
+                    "{\"error\":\"No recipe found for the given ingredients\"}");
+            }
+
+            List<com.nyrds.pixeldungeon.alchemy.OutputItem> outputs = matchedRecipe.getOutput();
+            List<com.nyrds.pixeldungeon.alchemy.InputItem> recipeInputs = matchedRecipe.getInput();
+
+            // Check if hero has required ingredients
+            java.util.Map<String, Integer> heroInventory = com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.buildAlchemyInventory(Dungeon.hero);
+
+            for (com.nyrds.pixeldungeon.alchemy.InputItem ingredient : recipeInputs) {
+                String name = ingredient.getName();
+                int required = ingredient.getCount() * times;
+                int available = heroInventory.getOrDefault(name, 0);
+
+                if (available < required) {
+                    return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                        String.format("{\"error\":\"Insufficient ingredients: %s (have %d, need %d)\"}", name, available, required));
+                }
+            }
+
+            // Schedule crafting on game thread
+            final int craftTimes = times;
+            final List<com.nyrds.pixeldungeon.alchemy.InputItem> finalIngredients = recipeInputs;
+            final List<com.nyrds.pixeldungeon.alchemy.OutputItem> finalOutputs = outputs;
+
+            GameLoop.pushUiTask(() -> {
+                try {
+                    // Consume ingredients
+                    for (com.nyrds.pixeldungeon.alchemy.InputItem ingredient : finalIngredients) {
+                        String name = ingredient.getName();
+                        int toRemove = ingredient.getCount() * craftTimes;
+
+                        // Find and remove items from inventory
+                        for (Item item : Dungeon.hero.getBelongings()) {
+                            if (item.getEntityKind().equals(name)) {
+                                int removed = Math.min(item.quantity(), toRemove);
+                                item.quantity(item.quantity() - removed);
+                                toRemove -= removed;
+                                if (item.quantity() <= 0) {
+                                    item.detach(Dungeon.hero.getBelongings().backpack);
+                                }
+                                if (toRemove <= 0) break;
+                            }
+                        }
+                    }
+
+                    // Create outputs
+                    for (com.nyrds.pixeldungeon.alchemy.OutputItem output : finalOutputs) {
+                        com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.EntityType entityType =
+                            com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.determineEntityType(output.getName());
+
+                        if (entityType == com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.EntityType.ITEM) {
+                            // Create item and give to hero
+                            for (int i = 0; i < output.getCount() * craftTimes; i++) {
+                                Item item = ItemFactory.itemByName(output.getName());
+                                if (item != null) {
+                                    Dungeon.hero.getBelongings().collect(item);
+                                }
+                            }
+                        } else if (entityType == com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.EntityType.MOB) {
+                            // Create mob
+                            for (int i = 0; i < output.getCount() * craftTimes; i++) {
+                                Mob mob = MobFactory.mobByName(output.getName());
+                                if (mob != null && Dungeon.level != null) {
+                                    int cell = Dungeon.level.randomPassableCell();
+                                    mob.pos = cell;
+                                    mob.makePet(Dungeon.hero);
+                                    Actor.occupyCell(mob);
+                                }
+                            }
+                        }
+                    }
+
+                    GLog.i("Crafted %dx recipe", craftTimes);
+                } catch (Exception e) {
+                    GLog.n("Error crafting: %s", e.getMessage());
+                }
+            });
+
+            // Build response
+            StringBuilder json = new StringBuilder("{\"success\":true,\"message\":\"Crafting ");
+            json.append(times).append("x recipe\",\"times\":").append(times).append(",\"outputs\":[");
+
+            for (int i = 0; i < outputs.size(); i++) {
+                if (i > 0) json.append(",");
+                json.append(String.format("{\"name\":\"%s\",\"count\":%d}", outputs.get(i).getName(), outputs.get(i).getCount() * times));
+            }
+            json.append("]}");
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleAlchemyCraft: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleAlchemyGetInventory(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.hero == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Hero not initialized - start a game first\"}");
+            }
+
+            java.util.Map<String, Integer> inventory = com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.buildAlchemyInventory(Dungeon.hero);
+
+            StringBuilder json = new StringBuilder("{\"count\":").append(inventory.size()).append(",\"inventory\":[");
+
+            boolean first = true;
+            for (java.util.Map.Entry<String, Integer> entry : inventory.entrySet()) {
+                if (!first) {
+                    json.append(",");
+                }
+                json.append(String.format("{\"name\":\"%s\",\"quantity\":%d}", entry.getKey(), entry.getValue()));
+                first = false;
+            }
+
+            json.append("]}");
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleAlchemyGetInventory: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    public static NanoHTTPD.Response handleAlchemyGiveItem(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            String itemType = null;
+            int count = 1;
+
+            if (query != null && !query.isEmpty()) {
+                String[] params = query.split("&");
+                for (String param : params) {
+                    if (param.startsWith("type=")) {
+                        itemType = java.net.URLDecoder.decode(param.substring(5), "UTF-8");
+                    } else if (param.startsWith("count=")) {
+                        try {
+                            count = Integer.parseInt(java.net.URLDecoder.decode(param.substring(6), "UTF-8"));
+                        } catch (NumberFormatException e) {
+                            // Use default value
+                        }
+                    }
+                }
+            }
+
+            if (itemType == null || itemType.isEmpty()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing item type parameter\"}");
+            }
+
+            if (Dungeon.hero == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Hero not initialized - start a game first\"}");
+            }
+
+            // Give items to hero
+            final int finalCount = count;
+            final String finalItemType = itemType;
+
+            GameLoop.pushUiTask(() -> {
+                try {
+                    for (int i = 0; i < finalCount; i++) {
+                        Item item = ItemFactory.itemByName(finalItemType);
+                        if (item != null) {
+                            Dungeon.hero.getBelongings().collect(item);
+                        }
+                    }
+                    GLog.i("Gave %dx %s to hero", finalCount, finalItemType);
+                } catch (Exception e) {
+                    GLog.n("Error giving item: %s", e.getMessage());
+                }
+            });
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"message\":\"Gave %dx %s to hero\",\"type\":\"%s\",\"count\":%d}",
+                    count, itemType, itemType, count));
+        } catch (Exception e) {
+            GLog.w("Error in handleAlchemyGiveItem: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
 }

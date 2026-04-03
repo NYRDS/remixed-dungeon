@@ -54,9 +54,13 @@ class GameClient:
             return False
 
     # Game Control
-    def start_game(self, hero_class: str = "WARRIOR", difficulty: int = 0) -> Dict[str, Any]:
+    def start_game(
+        self, hero_class: str = "WARRIOR", difficulty: int = 0
+    ) -> Dict[str, Any]:
         """Start a new game with specified hero class."""
-        return self._get(f"/debug/start_game?class={hero_class}&difficulty={difficulty}")
+        return self._get(
+            f"/debug/start_game?class={hero_class}&difficulty={difficulty}"
+        )
 
     def get_game_state(self) -> Dict[str, Any]:
         """Get current game state."""
@@ -211,3 +215,38 @@ class GameClient:
         "PRIEST",
         "DOCTOR",
     ]
+
+    # Alchemy System
+    def alchemy_list_recipes(self) -> Dict[str, Any]:
+        """List all available alchemy recipes."""
+        return self._get("/debug/alchemy/list_recipes")
+
+    def alchemy_get_recipe(self, ingredients: List[str]) -> Dict[str, Any]:
+        """Get recipe matching specific ingredients."""
+        params = "&".join([f"ingredient={ing}" for ing in ingredients])
+        return self._get(f"/debug/alchemy/get_recipe?{params}")
+
+    def alchemy_craft(
+        self, ingredients: List[str], times: int = 1, wait: bool = True
+    ) -> Dict[str, Any]:
+        """Execute a recipe to craft items/mobs."""
+        params = "&".join([f"ingredient={ing}" for ing in ingredients])
+        response = self._get(f"/debug/alchemy/craft?{params}&times={times}")
+        # Wait for async crafting to complete
+        if wait and response.get("success", False):
+            time.sleep(0.5)
+        return response
+
+    def alchemy_get_inventory(self) -> Dict[str, Any]:
+        """Get hero's inventory for ingredient checking."""
+        return self._get("/debug/alchemy/get_inventory")
+
+    def alchemy_give_item(
+        self, item_type: str, count: int = 1, wait: bool = True
+    ) -> Dict[str, Any]:
+        """Give an item to the hero (for test setup)."""
+        response = self._get(f"/debug/alchemy/give_item?type={item_type}&count={count}")
+        # Wait for async item addition to complete
+        if wait and response.get("success", False):
+            time.sleep(0.5)
+        return response

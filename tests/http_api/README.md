@@ -86,6 +86,15 @@ Options:
 | `/debug/descend_to` | `id` | Descend to connected level |
 | `/debug/ascend` | - | Ascend to previous level |
 
+### Alchemy System
+| Endpoint | Parameters | Description |
+|----------|------------|-------------|
+| `/debug/alchemy/list_recipes` | - | List all available alchemy recipes |
+| `/debug/alchemy/get_recipe` | `ingredient` (multiple) | Get recipe matching ingredients |
+| `/debug/alchemy/craft` | `ingredient` (multiple), `times` | Execute recipe N times |
+| `/debug/alchemy/get_inventory` | - | Get hero's inventory (for alchemy) |
+| `/debug/alchemy/give_item` | `type`, `count` | Give item to hero (for test setup) |
+
 ## Hero Classes
 
 Valid values for `/debug/start_game?class=`:
