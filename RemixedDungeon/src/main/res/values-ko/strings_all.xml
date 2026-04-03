@@ -634,6 +634,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ElvenDagger_Name">엘프제 단검</string>
     <string name="EncumbranceBuff_CharAct_1">이 %s를 제대로 다루기에는 힘이 부족합니다.</string>
     <string name="EncumbranceBuff_CharAct_4">나는 %s의 잠재력을 최대한 발휘할 힘이 부족하다.</string>
+    <string name="EncumbranceBuff_Info">%s를 효과적으로 사용하기에 힘이 부족합니다.</string>
     <string name="EncumbranceBuff_Name">과부하</string>
     <string name="EnslavedSoul_Desc">당신은 이 유령의 속을 꿰뚫어 볼 수 있습니다. 해골같은 모습을 하고 있으나 가끔씩 순간적으로 해골 대신 고통과 괴로움으로 가득찬 얼굴이 나타납니다.</string>
     <string name="EnslavedSoul_Name">노예화된 영혼</string>
@@ -1289,6 +1290,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Necromancy_SoulsCountLabel">영혼들</string>
     <string name="Necromancy_SummonDeathlingName">데슬링 소환</string>
     <string name="Necromancy_Title">강령술</string>
+    <string name="NecrotismBuff_Info">죽음의 표식 그 자체로, 그 악취는 주변에 영향을 미쳐 같은 운명을 나누게 한다.</string>
     <string name="NecrotismBuff_Name">네크로티즘</string>
     <string name="Necrotism_ACSpecial">네크로티즘</string>
     <string name="Necrotism_Death">당신은 네크로티즘에 의해 사망하였습니다...</string>
@@ -2697,6 +2699,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 

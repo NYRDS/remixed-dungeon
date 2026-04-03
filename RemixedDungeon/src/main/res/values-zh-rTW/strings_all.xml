@@ -614,6 +614,7 @@
     <string name="Drink_Message">清爽的飲品！</string>
     <string name="DrunkardNPC_Desc">自然狀態下的旅店常客。</string>
     <string name="DrunkardNPC_Gender">masculine</string>
+    <string name="DrunkardNPC_Name">醉漢</string>
     <string name="Drunkard_Phrase_1">再多點酒！</string>
     <string name="Drunkard_Phrase_3">這啤酒嘗起來像泥土</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
@@ -2815,6 +2816,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
