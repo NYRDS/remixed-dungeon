@@ -135,6 +135,7 @@
     <string name="Thief_Desc">Níveis mais profundos da masmorra sempre foram um esconderijo para todos os tipos de criminosos. Nem todos eles poderiam manter uma mente clara durante os longos períodos longe de luz do dia. Há muito tempo, esses ladrões loucos e bandidos se esqueceram quem são e por que eles roubam.</string>
     <string name="Thief_Gender">masculine</string>
     <string name="Torch_Info">É um item indispensável na masmorra, que é infame pela sua iluminação ambiente fraca.</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownShopkeeper_Objective">comerciante</string>
     <string name="TownsfolkMovieNPC_Desc">Um dos moradores. Embora seja claramente um plebeu, aquelas roupas parecem caras.</string>
     <string name="TownsfolkSilentNPC_Name">cidadão</string>
@@ -205,6 +206,7 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
 
 
 

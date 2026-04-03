@@ -1632,6 +1632,7 @@
     <string name="RatSkull_Info2">另一方面，它可以让持有者炫耀宰老鼠的本事，哪怕这只老鼠多大多难闻……</string>
     <string name="RatSkull_Name">巨大的老鼠头骨</string>
     <string name="Rat_Desc">啮齿小鼠是极具侵略性却比较弱小的下水道居民，只有在拥有大量数量时才会造成威胁。</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">啮齿小鼠</string>
     <string name="Rat_Name_Objective">啮齿小鼠</string>
     <string name="Ration_Info">里面没什么特别的：干肉，一些饼干——诸如此类。</string>
@@ -2891,6 +2892,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
