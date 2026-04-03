@@ -2105,7 +2105,7 @@
 ["TownGuardNPC_Desc", "Eine gewöhnliche Stadtwache."]
 ["TownGuardNPC_Message1", "Geh weiter."]
 ["TownGuardNPC_Message2", "Dank euch Abenteurern ist es hier oben echt friedlich geworden."]
-["TownGuardNPC_Message3", "Du glaubst es gibt hier zu viele Wachen? Naja, das liegt daran, dass das hier die einzige Stadt mit eine#\@m mit Monstern infizierten Dungeon ist, oder?"]
+["TownGuardNPC_Message3", "Du glaubst es gibt hier zu viele Wachen? Naja, das liegt daran, dass das hier die einzige Stadt mit eine#@m mit Monstern infizierten Dungeon ist, oder?"]
 ["TownGuardNPC_Name", "Stadtwache"]
 ["TownGuardNPC_Name_Objective", "Stadtwache"]
 ["TownPortal_Info", "Mit diesem Zauber kannst du sofort in Sicherheit zurückkehren. Mächtige magische Quellen in der Nähe können jedoch verhindern, dass es wie beabsichtigt funktioniert."]
