@@ -24,7 +24,13 @@ public class WebServer extends BaseWebServer {
     public WebServer(int port) {
         super(port);
     }
-    
+
+    @Override
+    public boolean isReady() {
+        // Check if game loop is initialized (Android doesn't use libGDX)
+        return GameLoop.instance() != null;
+    }
+
     @Override
     protected void onServerStarted() {
         // Notify AboutScene to refresh the WebServer link

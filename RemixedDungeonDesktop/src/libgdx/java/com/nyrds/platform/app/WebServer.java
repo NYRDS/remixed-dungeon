@@ -22,6 +22,16 @@ public class WebServer extends BaseWebServer {
     }
 
     @Override
+    public boolean isReady() {
+        // Check if libGDX files is available (indicates libGDX is initialized)
+        try {
+            return com.badlogic.gdx.Gdx.files != null && GameLoop.instance() != null;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    @Override
     protected void onServerStarted() {
         // Desktop server started without special handling needed
     }

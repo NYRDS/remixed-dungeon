@@ -1910,7 +1910,7 @@ public class DebugEndpoints {
             String currentLevelId = DungeonGenerator.getCurrentLevelId();
             org.json.JSONArray entrances = DungeonGenerator.getLevelEntrances(currentLevelId);
 
-            if (entrances.isEmpty()) {
+            if (entrances.length() == 0) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
                     String.format("{\"error\":\"No entrance from current level '%s'\"}", currentLevelId));
             }

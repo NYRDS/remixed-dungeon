@@ -44,16 +44,9 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
     /**
      * Check if the game is ready to handle requests.
-     * Returns false if libGDX is not initialized yet.
+     * Platform-specific implementations should provide this.
      */
-    public static boolean isReady() {
-        // Check if libGDX files is available (indicates libGDX is initialized)
-        try {
-            return com.badlogic.gdx.Gdx.files != null && GameLoop.instance() != null;
-        } catch (Exception e) {
-            return false;
-        }
-    }
+    public abstract boolean isReady();
 
     public BaseWebServer(int port) {
         super(port);
