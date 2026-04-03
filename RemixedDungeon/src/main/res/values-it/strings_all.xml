@@ -2551,6 +2551,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_magenta_carpet_name">Tappeto</string>
     <string name="town_deco_medicine_desc">Fiaschette e altri ingredienti medici vengono messi con cautela su questi scaffali.</string>
     <string name="town_deco_medicine_name">Medicina</string>
+    <string name="town_deco_misc_desc">Un mucchio di cianfrusaglie e gingilli.</string>
     <string name="town_deco_misc_name">Cianfrusaglie</string>
     <string name="town_deco_movies_door_desc">Questa porta sembra eccezionalmente ben fatta. Probabilmente conduce a qualcosa di incredibile.</string>
     <string name="town_deco_movies_door_name">Porta</string>
@@ -2648,7 +2649,6 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
-
 
 
 

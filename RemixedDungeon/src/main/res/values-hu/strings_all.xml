@@ -225,6 +225,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Bishop_title">Püspök</string>
     <string name="BlackCat_AiStatus">Ez a macska normális macska dolgokat csinál</string>
     <string name="BlackCat_Desc">Ez egy fekete macska</string>
+    <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Name">Fekete macska</string>
     <string name="BlackCat_Name_Objective">Macska</string>
     <string name="BlackCat_Phrases_0">Prrrrrrr</string>
@@ -539,6 +540,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="DM300_Name_Objective">DM-300</string>
     <string name="Dagger_Info">Egy egyszerű vas tőr viseltes fa markolattal.</string>
     <string name="Dagger_Name">tőr</string>
+    <string name="Damage_Reduction">Sebzéscsökkentés</string>
     <string name="DarkGold_Info">Ezt a fémet nem a színe miatt hívják sötétnek (nem különbözik a normális aranytól), hanem mert a napfény tudja csak megolvasztani, emiatt a felszínen használhatatlan.</string>
     <string name="DarkGold_Name">Sötét arany érc</string>
     <string name="DarkSacrifice_Hint">Válaszd ki a lojális szolgád az áldozáshoz!</string>
