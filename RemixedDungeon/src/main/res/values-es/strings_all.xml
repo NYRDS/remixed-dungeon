@@ -2461,6 +2461,7 @@ otro lugar del nivel.</string>
     <string name="WndInfoItem_WontKnow">¡No sabrás lo que hay dentro hasta que lo abras!</string>
     <string name="WndInstallingMod_copying_file">Copiando %s al almacenamiento de Remixed Dungeon</string>
     <string name="WndInstallingMod_deleting_file">Eliminando %s</string>
+    <string name="WndInstallingMod_skipping_file">Omitiendo %s</string>
     <string name="WndItemAlchemy_NoRecipes">No hay recetas disponibles con este objeto y tu inventario actual.</string>
     <string name="WndItemAlchemy_SelectRecipe">Seleccionar receta</string>
     <string name="WndItemAlchemy_Title">Recetas de alquimia con %s</string>
@@ -2922,25 +2923,4 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

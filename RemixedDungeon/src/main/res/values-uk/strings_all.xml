@@ -105,6 +105,7 @@
     <string name="AzuterronNPC_Quest_End">Чудово. Візьми це зілля, я впевнений, воно стане тобі в нагоді.</string>
     <string name="AzuterronNPC_Quest_Reminder">Допоможи мені, і я допоможу тобі.</string>
     <string name="AzuterronNPC_Quest_Start">Хм, чому... ох, ти можеш мене бачити, чи не так? Стало бути ти не один з \&quot;них\&quot;. Я так бачу ти теж не в захваті від цього засилля монстрів. Знаєш що, якби ти мені допоміг в одні справі, то я стався б тобі в нагоді. Десь тут причаївся _Підступний дух_. Вбий його, та принеси мені його _серце_. І звичайно ж, якщо забажаєш придбати щось з моїх припасів, звертайся.</string>
+    <string name="Backstab_Aware">Жертва не повинна помічати вас для успішного удару в спину.</string>
     <string name="BadgesScene_Title">Твої значки</string>
     <string name="Badges_AllBags">Всі торби придбано</string>
     <string name="Badges_AllItems">Усі зілля, сувої, кільця та чарівні палички ідентифіковано</string>
@@ -2823,11 +2824,4 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
-
-
-
-
-
-
-
 </resources>

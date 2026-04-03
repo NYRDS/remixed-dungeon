@@ -676,6 +676,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="Facilitations_Descriptions_1">Még mindig nem tudni, hogy kik voltak a szüleid, de a természetes troll-szerű regeneráció segít majd begyógyítani az összes közelgő csata sebeit.</string>
     <string name="Facilitations_Descriptions_2">A természet mint energiaforrás mély és alapos tanulmányozása lehetővé teszi, hogy a varázslatos tartalékaidat feltöltsd az utazás során.</string>
     <string name="Facilitations_Descriptions_3">Meghúzva az ogre bőrből készült övet, amelyet minden új generációra továbbadtak, egy lépést teszel a előtted álló ismeretlen felé.</string>
+    <string name="Facilitations_Names_0">Nincs éhezés</string>
     <string name="Fadeleaf_Desc">Egy Fakultlevélhez érve elteleportál bármely lényt egy véletlen helyre az adott szinten.</string>
     <string name="Fadeleaf_Name">Fakultlevél</string>
     <string name="FetidRat_Desc">Ez az erszényes patkány sokkal nagyobb mint a normális példányok. Valami féle felhő veszi körül. </string>
@@ -2462,6 +2463,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Worm_Name_Objective">féreg</string>
     <string name="Wraith_Defense">kikerülve</string>
     <string name="Wraith_Desc">A lidérc egy bosszuálló szelleme a bűnősnek, akinek a sírját megbolygatták. Mivel egy más síkról jött entitás, ezért normál fegyverekkel nagyon nehéz megsebezni.</string>
+    <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">lidérc</string>
     <string name="Wraith_Name_Objective">lidérc</string>
     <string name="WrnExperimental_hint">Ha ez a furcsa és torz világ túl kemény Önhöz, kérem kapcsolja ki ezeket az opciókat:\nKezdőképernyő -&gt; Beállítások -&gt; Játékmenet\nmenü segítségével, majd indítson új játékot vagy töltsön be egy másik mentést.</string>
@@ -2722,16 +2724,4 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
