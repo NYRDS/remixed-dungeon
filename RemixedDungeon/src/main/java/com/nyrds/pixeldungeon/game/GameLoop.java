@@ -110,6 +110,37 @@ public class GameLoop {
         }
     }
 
+    /**
+     * Push a UI task and wait for it to complete (up to 5 seconds)
+     * This is useful for debug endpoints that need to wait for game state changes
+     */
+    static public void pushUiTaskAndWait(Runnable task) {
+        if(instance() == null) { // for headless mode
+            task.run();
+            return;
+        }
+
+        java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+
+        // Wrap the task to count down the latch when done
+        Runnable wrappedTask = () -> {
+            try {
+                task.run();
+            } finally {
+                latch.countDown();
+            }
+        };
+
+        instance().uiTasks.add(wrappedTask);
+
+        // Wait for the task to complete (up to 5 seconds)
+        try {
+            latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+
     static public Future<?> stepExecute(Runnable task) {
         return instance().stepExecutor.submit(task);
     }

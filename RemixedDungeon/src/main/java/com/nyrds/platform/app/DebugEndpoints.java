@@ -2190,64 +2190,59 @@ public class DebugEndpoints {
                 }
             }
 
-            // Schedule crafting on game thread
-            final int craftTimes = times;
-            final List<com.nyrds.pixeldungeon.alchemy.InputItem> finalIngredients = recipeInputs;
-            final List<com.nyrds.pixeldungeon.alchemy.OutputItem> finalOutputs = outputs;
+            // Execute crafting - do it directly (not via pushUiTask)
+            // because the game loop may not be running in headless mode
+            try {
+                // Consume ingredients
+                for (com.nyrds.pixeldungeon.alchemy.InputItem ingredient : recipeInputs) {
+                    String name = ingredient.getName();
+                    int toRemove = ingredient.getCount() * times;
 
-            GameLoop.pushUiTask(() -> {
-                try {
-                    // Consume ingredients
-                    for (com.nyrds.pixeldungeon.alchemy.InputItem ingredient : finalIngredients) {
-                        String name = ingredient.getName();
-                        int toRemove = ingredient.getCount() * craftTimes;
-
-                        // Find and remove items from inventory
-                        for (Item item : Dungeon.hero.getBelongings()) {
-                            if (item.getEntityKind().equals(name)) {
-                                int removed = Math.min(item.quantity(), toRemove);
-                                item.quantity(item.quantity() - removed);
-                                toRemove -= removed;
-                                if (item.quantity() <= 0) {
-                                    item.detach(Dungeon.hero.getBelongings().backpack);
-                                }
-                                if (toRemove <= 0) break;
+                    // Find and remove items from inventory
+                    for (Item item : Dungeon.hero.getBelongings()) {
+                        if (item.getEntityKind().equals(name)) {
+                            int removed = Math.min(item.quantity(), toRemove);
+                            item.quantity(item.quantity() - removed);
+                            toRemove -= removed;
+                            if (item.quantity() <= 0) {
+                                item.detach(Dungeon.hero.getBelongings().backpack);
                             }
+                            if (toRemove <= 0) break;
                         }
                     }
-
-                    // Create outputs
-                    for (com.nyrds.pixeldungeon.alchemy.OutputItem output : finalOutputs) {
-                        com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.EntityType entityType =
-                            com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.determineEntityType(output.getName());
-
-                        if (entityType == com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.EntityType.ITEM) {
-                            // Create item and give to hero
-                            for (int i = 0; i < output.getCount() * craftTimes; i++) {
-                                Item item = ItemFactory.itemByName(output.getName());
-                                if (item != null) {
-                                    Dungeon.hero.getBelongings().collect(item);
-                                }
-                            }
-                        } else if (entityType == com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.EntityType.MOB) {
-                            // Create mob
-                            for (int i = 0; i < output.getCount() * craftTimes; i++) {
-                                Mob mob = MobFactory.mobByName(output.getName());
-                                if (mob != null && Dungeon.level != null) {
-                                    int cell = Dungeon.level.randomPassableCell();
-                                    mob.pos = cell;
-                                    mob.makePet(Dungeon.hero);
-                                    Actor.occupyCell(mob);
-                                }
-                            }
-                        }
-                    }
-
-                    GLog.i("Crafted %dx recipe", craftTimes);
-                } catch (Exception e) {
-                    GLog.n("Error crafting: %s", e.getMessage());
                 }
-            });
+
+                // Create outputs
+                for (com.nyrds.pixeldungeon.alchemy.OutputItem output : outputs) {
+                    com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.EntityType entityType =
+                        com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.determineEntityType(output.getName());
+
+                    if (entityType == com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.EntityType.ITEM) {
+                        // Create item and give to hero
+                        for (int i = 0; i < output.getCount() * times; i++) {
+                            Item item = ItemFactory.itemByName(output.getName());
+                            if (item != null) {
+                                Dungeon.hero.getBelongings().collect(item);
+                            }
+                        }
+                    } else if (entityType == com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.EntityType.MOB) {
+                        // Create mob
+                        for (int i = 0; i < output.getCount() * times; i++) {
+                            Mob mob = MobFactory.mobByName(output.getName());
+                            if (mob != null && Dungeon.level != null) {
+                                int cell = Dungeon.level.randomPassableCell();
+                                mob.pos = cell;
+                                mob.makePet(Dungeon.hero);
+                                Actor.occupyCell(mob);
+                            }
+                        }
+                    }
+                }
+
+                GLog.i("Crafted %dx recipe", times);
+            } catch (Exception e) {
+                GLog.n("Error crafting: %s", e.getMessage());
+            }
 
             // Build response
             StringBuilder json = new StringBuilder("{\"success\":true,\"message\":\"Crafting ");
@@ -2328,23 +2323,15 @@ public class DebugEndpoints {
                     "{\"error\":\"Hero not initialized - start a game first\"}");
             }
 
-            // Give items to hero
-            final int finalCount = count;
-            final String finalItemType = itemType;
-
-            GameLoop.pushUiTask(() -> {
-                try {
-                    for (int i = 0; i < finalCount; i++) {
-                        Item item = ItemFactory.itemByName(finalItemType);
-                        if (item != null) {
-                            Dungeon.hero.getBelongings().collect(item);
-                        }
-                    }
-                    GLog.i("Gave %dx %s to hero", finalCount, finalItemType);
-                } catch (Exception e) {
-                    GLog.n("Error giving item: %s", e.getMessage());
+            // Give items to hero - do it directly (not via pushUiTask)
+            // because the game loop may not be running in headless mode
+            for (int i = 0; i < count; i++) {
+                Item item = ItemFactory.itemByName(itemType);
+                if (item != null) {
+                    Dungeon.hero.getBelongings().collect(item);
                 }
-            });
+            }
+            GLog.i("Gave %dx %s to hero", count, itemType);
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"message\":\"Gave %dx %s to hero\",\"type\":\"%s\",\"count\":%d}",

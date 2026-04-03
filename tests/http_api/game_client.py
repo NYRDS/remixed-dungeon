@@ -232,9 +232,7 @@ class GameClient:
         """Execute a recipe to craft items/mobs."""
         params = "&".join([f"ingredient={ing}" for ing in ingredients])
         response = self._get(f"/debug/alchemy/craft?{params}&times={times}")
-        # Wait for async crafting to complete
-        if wait and response.get("success", False):
-            time.sleep(0.5)
+        # Wait is now handled synchronously in the debug endpoint
         return response
 
     def alchemy_get_inventory(self) -> Dict[str, Any]:
@@ -246,7 +244,5 @@ class GameClient:
     ) -> Dict[str, Any]:
         """Give an item to the hero (for test setup)."""
         response = self._get(f"/debug/alchemy/give_item?type={item_type}&count={count}")
-        # Wait for async item addition to complete
-        if wait and response.get("success", False):
-            time.sleep(0.5)
+        # Wait is now handled synchronously in the debug endpoint
         return response
