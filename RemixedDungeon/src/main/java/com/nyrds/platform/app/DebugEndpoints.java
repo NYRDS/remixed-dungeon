@@ -1829,28 +1829,30 @@ public class DebugEndpoints {
                 startPos = newLevel.entrance;
             }
 
-            // Collect existing mobs to transfer
-            Collection<Mob> mobs = new ArrayList<>();
-            if (Dungeon.level != null) {
-                for (Mob mob : Dungeon.level.mobs) {
-                    mobs.add(mob);
-                }
-            }
-
-            // Directly switch levels without going through InterlevelScene
-            Actor.fixTime();
-            Dungeon.onHeroLeaveLevel();
-            Dungeon.save(false);
-            Dungeon.depth = DungeonGenerator.getLevelDepth(levelId);
-            Dungeon.switchLevel(newLevel, startPos, mobs);
-
-            GLog.i("Switched to level: " + levelId);
+            position.cellId = startPos;
 
             String levelKind = DungeonGenerator.getLevelKind(levelId);
+            int depth = DungeonGenerator.getLevelDepth(levelId);
 
-            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                String.format("{\"success\":true,\"levelId\":\"%s\",\"kind\":\"%s\",\"depth\":%d,\"entrance\":%d}",
-                    levelId, levelKind, Dungeon.depth, startPos));
+            // Build response BEFORE triggering scene change
+            String responseBody = String.format("{\"success\":true,\"levelId\":\"%s\",\"kind\":\"%s\",\"depth\":%d,\"entrance\":%d}",
+                levelId, levelKind, depth, startPos);
+
+            // Schedule the InterlevelScene transition to happen AFTER the HTTP response is sent.
+            // This avoids closing the connection mid-scene-change.
+            final Position finalPosition = position;
+            final String finalLevelId = levelId;
+            GameLoop.pushUiTask(() -> {
+                try {
+                    InterlevelScene.returnTo = finalPosition;
+                    InterlevelScene.Do(InterlevelScene.Mode.RETURN);
+                    GLog.i("Switching to level: " + finalLevelId);
+                } catch (Exception e) {
+                    GLog.w("Error switching level: " + e.getMessage());
+                }
+            });
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", responseBody);
         } catch (Exception e) {
             GLog.w("Error in handleDebugGoToLevel: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
