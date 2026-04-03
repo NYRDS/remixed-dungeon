@@ -372,6 +372,7 @@
     <string name="ChaosSword_Name">혼돈 검</string>
     <string name="CharAction_Expel">추방</string>
     <string name="CharAction_Give">주다</string>
+    <string name="CharAction_Hit">치다</string>
     <string name="CharAction_Scare">겁주기</string>
     <string name="CharAction_Steal">훔치다</string>
     <string name="CharAction_Taunt">도발</string>
@@ -2694,6 +2695,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
