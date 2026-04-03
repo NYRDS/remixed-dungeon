@@ -2280,6 +2280,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndLibrary_Mobs_Btn">Mostri</string>
     <string name="WndLocalModInstall_text">Seleziona la directory da cui installare la mod.</string>
     <string name="WndLocalModInstall_title">Installa mod dalla directory locale</string>
+    <string name="WndModInstall_PleaseUpdate">Aggiorna Remixed Dungeon prima di installare questa mod</string>
     <string name="WndModSelect_AreYouSure">Eliminare mod: %s, sei sicuro?</string>
     <string name="WndModSelect_ReallyDelete">Vuoi davvero eliminare?</string>
     <string name="WndMovieTheatre_Instruction">Benvenuti al nostro cinema! Offriamo un servizio speciale: potete guardare gratuitamente un film speciale chiamato pubblicità. E se lo guardate fino alla fine, sarete ricompensati con %d monete d\'oro!</string>

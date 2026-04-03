@@ -1336,6 +1336,7 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
     <string name="MercenaryNPC_Name">mercenaire</string>
     <string name="MercenaryNPC_Name_Objective">mercenaire</string>
     <string name="Metabolism_Txt">%s de métabolisme</string>
+    <string name="MiasmaGas_Info">Un miasme nocif qui empoisonne, affaiblit et désoriente ceux qui le respirent.</string>
     <string name="MimicAmulet_Desc">Le moment le plus glorieux de votre carrière d\'aventurier se révèle être un piège.</string>
     <string name="MimicAmulet_Gender">feminine</string>
     <string name="MimicAmulet_Name">ophrys</string>
