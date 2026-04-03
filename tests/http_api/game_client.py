@@ -246,3 +246,45 @@ class GameClient:
         response = self._get(f"/debug/alchemy/give_item?type={item_type}&count={count}")
         # Wait is now handled synchronously in the debug endpoint
         return response
+
+    def take_screenshot(self, output_path: str) -> bool:
+        """Take a screenshot and save it to the specified path."""
+        try:
+            # Fetch screenshot as binary data
+            url = f"{self.base_url}/debug/screenshot"
+            r = self.session.get(url, timeout=10)
+
+            if r.status_code != 200:
+                # Try to parse error from JSON response
+                try:
+                    error_data = r.json()
+                    print(
+                        f"  Error taking screenshot: {error_data.get('error', 'Unknown error')}"
+                    )
+                except:
+                    print(f"  Error taking screenshot: HTTP {r.status_code}")
+                return False
+
+            # Save screenshot
+            with open(output_path, "wb") as f:
+                f.write(r.content)
+
+            print(f"  Screenshot saved: {len(r.content)} bytes")
+            return True
+        except Exception as e:
+            print(f"  Error taking screenshot: {e}")
+            return False
+
+        # Save screenshot
+        try:
+            with open(output_path, "wb") as f:
+                # The response is the actual image data
+                # We need to fetch it as binary
+                url = f"{self.base_url}/debug/screenshot"
+                r = self.session.get(url, timeout=10)
+                r.raise_for_status()
+                f.write(r.content)
+            return True
+        except Exception as e:
+            print(f"  Error saving screenshot: {e}")
+            return False
