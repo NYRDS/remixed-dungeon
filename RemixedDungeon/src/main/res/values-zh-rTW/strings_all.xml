@@ -1398,6 +1398,8 @@
     <string name="PirateSet_Info">啊哈！你現在看起來像是個海盜…或者說只是個該死的旱鴨子！？我希望你不是，畢竟那東西是海盜的，我的意思是……啊哈！</string>
     <string name="PirateSet_Name">海盜帽</string>
     <string name="PlagueDoctorMaskHood_Name">帶兜帽的瘟疫醫生面具</string>
+    <string name="PlagueDoctorMask_Info">這……這不僅僅是一副面具。它是……一道屏障。抵禦腐敗之力的護盾，正是瘟疫醫生不懈抗爭的力量。由最優質的烏木精心雕琢而成，刻有飢餓骷髏的面容。空洞的眼窩中鑲嵌著閃閃發光的紫水晶寶石，微微脈動著，如同即將熄滅的餘燼。你的每一次呼吸，每一句話語，都經過錯綜複雜的管道和過濾器網絡的過濾。一種由強效草藥和異國香料調製而成的混合物滲透到內部空氣中，掩蓋了如裹屍布般纏繞著你的死亡惡臭。</string>
+    <string name="PlagueDoctorMask_Name">瘟疫醫生面具</string>
     <string name="PlagueDoctorNPC_After_Quest">我會證明的,我會證明給他們看!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">你還在嗎？來這裏！拿著這個。 </string>
     <string name="PlagueDoctorNPC_Desc">散發奇怪味道的...皮革?下面應該是個人吧...</string>
@@ -2813,6 +2815,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

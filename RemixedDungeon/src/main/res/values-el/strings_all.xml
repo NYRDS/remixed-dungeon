@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Καταβρόχθιση</string>
     <string name="AC_Dissect">Τεμαχισμός</string>
@@ -62,6 +61,7 @@
     <string name="Amulet_ACEnd">ΤΕΛΟΣ ΠΑΙΧΝΙΔΙΟΥ</string>
     <string name="Amulet_Info">Το Φυλακτό του Γέντορ είναι το πιο ξακουστό και ισχυρό τεχνούργημα με άγνωστη προέλευση. Λέγεται ότι το φυλακτό μπορεί να πραγματοποιήσει οποιαδήποτε επιθυμία - αρκεί η θέληση του κατόχου να είναι αρκετά ισχυρή ώστε να το «πείσει» να το κάνει.</string>
     <string name="Amulet_Name">Φυλακτό του Γέντορ</string>
+    <string name="AnesthesiaBuff_Info">Δεν νιώθει πόνο και δεν ξυπνάει από επιθέσεις, αλλά συνεχίζει να δέχεται ζημιά.</string>
     <string name="Anesthesia_Name">Αναισθησία</string>
     <string name="Ankh_Info">Αυτό το αρχαίο σύμβολο αθανασίας σού επιτρέπει να επιστρέψεις στη ζωή μετά τον θάνατο. Με την ανάσταση, όλα τα μη εξοπλισμένα αντικείμενα χάνονται.</string>
     <string name="Ankh_Name">ανκχ</string>
@@ -626,7 +626,7 @@
     <string name="DeferedDamageBuff_Info">Ο πόνος έχει γίνει σταδιακός και η ζημιά δεν λαμβάνεται όλη απευθείας.\nΖημιά που απομένει να ληφθεί: %d</string>
     <string name="DeferedDamageBuff_Name">Αναβεβλημένη ζημιά (%d)</string>
     <string name="DeferedDamage_Killed_Txt">Η %s σε εξόντωσε...</string>
-    <string name="DevourBuff_Info" />
+    <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">Καταβρόχθιση</string>
     <string name="DewVial_ACDRINK">ΠΙΕΣ</string>
     <string name="DewVial_AutoDrink">Το φιαλίδιο δρόσου άδειασε και θεράπευσε τις πληγές σου.</string>
@@ -642,7 +642,7 @@
     <string name="DieHardSpell_Info">Θα αυξήσει προσωρινά την αναζωογόνησή σου και θα σε κάνει πολύ σκληρό για να πεθάνεις.</string>
     <string name="DieHardSpell_Name">Σκληρός για να πεθάνει</string>
     <string name="Displacement_Txt">%s εκτοπισμού</string>
-    <string name="DoctorArmor_Info">Αυτή η πανοπλία του γιατρού της πανούκλας επιτρέπει τη χρήση της ικανότητας \"Σύννεφο Μιάσματος\", το οποίο απελευθερώνει ένα τοξικό αέριο που δηλητηριάζει, αποδυναμώνει και αποπροσανατολίζει τους εχθρούς. Ο γιατρός, προστατευμένος από τη μάσκα του, είναι άνοσος σε αυτές τις επιδράσεις.</string>
+    <string name="DoctorArmor_Info">Αυτή η πανοπλία του γιατρού της πανούκλας επιτρέπει τη χρήση της ικανότητας \&quot;Σύννεφο Μιάσματος\&quot;, το οποίο απελευθερώνει ένα τοξικό αέριο που δηλητηριάζει, αποδυναμώνει και αποπροσανατολίζει τους εχθρούς. Ο γιατρός, προστατευμένος από τη μάσκα του, είναι άνοσος σε αυτές τις επιδράσεις.</string>
     <string name="DoctorArmor_Name">Ενδυμασία Γιατρού</string>
     <string name="DogeMask_Info">Ήθελες ποτέ να μεταμφιεστείς όπως ο διάσημος Doge; Ιδού η ευκαιρία!\nΚοίτα μάσκα! Κοίτα μεταμφίεση! Ουάου!</string>
     <string name="DogeMask_Name">Μάσκα Doge</string>
@@ -980,7 +980,7 @@
     <string name="HeroSubClass_DescFreR">Ο _Δρομέας_ μπορεί να τρέχει με σχεδόν διπλάσια ταχύτητα από τα περισσότερα πλάσματα. Είναι, επίσης, πολύ ικανότερος στην αποφυγή χτυπημάτων ενώ τρέχει. Για να ισχύσει αυτό, θα πρέπει να μην είναι επιβαρυμένος και να μη λιμοκτονεί.</string>
     <string name="HeroSubClass_DescGlad">Μια επιτυχημένη επίθεση με όπλο κοντινής μάχης επιτρέπει στον _Μονομάχο_ να ξεκινήσει μια διαδοχή χτυπημάτων, κατά την οποία κάθε επακόλουθο χτύπημα προκαλεί επιπλέον ζημιά.</string>
     <string name="HeroSubClass_DescGuardian">Η αμυντική επιδεξιότητα του _Φύλακα_ του επιτρέπει να αντεπιτίθεται με την ασπίδα του. Αυτό τον κάνει έναν επικίνδυνο εχθρό για όσους τολμήσουν να επιτεθούν σε αυτό το κινούμενο οχυρό.</string>
-    <string name="HeroSubClass_DescNone" />
+    <string name="HeroSubClass_DescNone"/>
     <string name="HeroSubClass_DescScout">Οι _Ανιχνευτές_ των ξωτικών είναι αυθεντίες στην κάλυψη. Λαμβάνουν μια προσωρινή επίδραση αορατότητας όποτε ποδοπατούν το ψηλό γρασίδι. Είναι, επίσης, ταχύτεροι από τα κοινά ξωτικά.</string>
     <string name="HeroSubClass_DescShaman">Οι _Σαμάνοι_ των ξωτικών χρησιμοποιούν τα ραβδιά τους ως όπλα μάχης σώμα-με-σώμα. Ένα επιτυχημένο χτύπημα έχει την πιθανότητα να ενεργοποιήσει τη δύναμη του ραβδιού χωρίς να ξοδέψει φορτίο.</string>
     <string name="HeroSubClass_DescSnip">Η _Σκοπεύτρια_ μπορεί να εντοπίζει αδύναμα σημεία στην πανοπλία του εχθρού, και πρακτικά την παρακάμπτει όποτε χρησιμοποιεί όπλα απόστασης.</string>
@@ -1230,7 +1230,7 @@
     <string name="Level_TileDescStatue">Κάποιος θέλησε να διακοσμήσει τον χώρο, αλλά προφανώς απέτυχε.</string>
     <string name="Level_TileDescTrap">Η παγίδα ενεργοποιείται με το πάτημα του κρυφού ποδομοχλού.</string>
     <string name="Level_TileDescWater">Σε περίπτωση που καίγεσαι, πάτα στο νερό για να σβήσεις τη φωτιά.</string>
-    <string name="Level_TileDescWell" />
+    <string name="Level_TileDescWell"/>
     <string name="Level_TileEmbers">Κάρβουνα</string>
     <string name="Level_TileEmptyWell">Άδειο πηγάδι</string>
     <string name="Level_TileEntrance">Είσοδος ορόφου</string>
@@ -2070,7 +2070,7 @@
     <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">αραχνοφρουρός</string>
     <string name="SpiderGuard_Name_Objective">αραχνοφρουρός</string>
-    <string name="SpiderMindAmber_Desc">Οι κεχριμπαρένιες αράχνες είναι σπάνια και μυστηριώδη πλάσματα που κατέχουν ψυχικές δυνάμεις παρόμοιες με τις κανονικές ψυχο-αράχνες, αλλά είναι και σωματικά ανθεκτικότερες. Ο χαρακτηρισμός \"κεχριμπαρένια\" αναφέρεται στο χρώμα της γιγάντιας μεμβράνης του εγκεφάλου της, η οποία αποκαλύπτεται στα θύματα όταν η αράχνη επιτίθεται με τις δυνάμεις της.</string>
+    <string name="SpiderMindAmber_Desc">Οι κεχριμπαρένιες αράχνες είναι σπάνια και μυστηριώδη πλάσματα που κατέχουν ψυχικές δυνάμεις παρόμοιες με τις κανονικές ψυχο-αράχνες, αλλά είναι και σωματικά ανθεκτικότερες. Ο χαρακτηρισμός \&quot;κεχριμπαρένια\&quot; αναφέρεται στο χρώμα της γιγάντιας μεμβράνης του εγκεφάλου της, η οποία αποκαλύπτεται στα θύματα όταν η αράχνη επιτίθεται με τις δυνάμεις της.</string>
     <string name="SpiderMindAmber_Gender">feminine</string>
     <string name="SpiderMindAmber_Name">κεχριμπαρένια αράχνη</string>
     <string name="SpiderMindAmber_Name_Objective">κεχριμπαρένια αράχνη</string>
@@ -2490,7 +2490,7 @@ remix.32\n
     <string name="WndDonate_ruby">Ρουμπινένια</string>
     <string name="WndDonate_rubyDonate">Ρουμπινένια δωρεά</string>
     <string name="WndDonate_rubyDonateText">Η γενναιοδωρία σου μας βοηθά να συνεχίσουμε τη βελτίωση του Remixed Dungeon!</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
     <string name="WndDonate_silver">Ασημένια</string>
     <string name="WndDonate_silverDonate">Ασημένια δωρεά</string>
     <string name="WndDonate_silverDonateText">Κάθε δωρεά βοηθά στην ανάπτυξη του παιχνιδιού.</string>
@@ -3025,6 +3025,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 
