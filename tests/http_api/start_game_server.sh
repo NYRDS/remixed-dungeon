@@ -1,11 +1,11 @@
 #!/bin/bash
-# Start the Remixed Dungeon desktop game with webserver in windowed mode
+# Start the Remixed Dungeon desktop game with webserver in minimized mode
 # Usage: ./start_game_server.sh [--port PORT] [--clean]
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-PORT=8080
-CLEAN=false
+ PORT=8080
+ CLEAN=false
 
 # Parse arguments
 while [[ $# -gt 0 ]]; do
@@ -36,9 +36,9 @@ sleep 2
 # Build and run
 if [ "$CLEAN" = true ]; then
     echo "Running clean build..."
-    ./gradlew -p RemixedDungeonDesktop clean runDesktopGameWithWebServer --args="--webserver=$PORT --windowed" &
+    ./gradlew -p RemixedDungeonDesktop clean runDesktopGameWithWebServer --args="--webserver=$PORT --minimized" &
 else
-    ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer --args="--webserver=$PORT --windowed" &
+    ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer --args="--webserver=$PORT --minimized" &
 fi
 
 echo "Game starting on port $PORT..."

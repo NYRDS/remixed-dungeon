@@ -35,6 +35,7 @@ public class RemixedDungeonApp {
         // Check for web server parameter and start if requested
         int webServerPort = -1;
         boolean windowed = false;
+        boolean minimized = false;
         for (String arg : args) {
             if (arg != null) {
                 if (arg.startsWith("--webserver=") || arg.startsWith("-webserver=")) {
@@ -50,6 +51,10 @@ public class RemixedDungeonApp {
                 if (arg.startsWith("--windowed")) {
                     windowed = true;
                     System.out.println("Windowed mode enabled via command line flag: " + arg);
+                }
+                if (arg.startsWith("--minimized")) {
+                    minimized = true;
+                    System.out.println("Minimized mode enabled via command line flag: " + arg);
                 }
             }
         }
@@ -108,9 +113,16 @@ public class RemixedDungeonApp {
         cfg.setTitle("Remixed Pixel Dungeon");
         cfg.setBackBufferConfig(8, 8, 8, 8, 16, 0, 0);
         cfg.setForegroundFPS(60);
-
-        if(windowed) {
-            cfg.setWindowedMode(800,480);
+        
+        if (minimized) {
+            // Minimized window mode - 800x480 resolution but off-screen
+            cfg.setWindowedMode(800, 480);
+            cfg.setWindowPosition(-10000, -10000);
+            cfg.setTitle("Remixed Dungeon - Minimized");
+            cfg.setInitialVisible(false);
+            System.out.println("Game configured to run in minimized mode: 800x480, off-screen (for screenshots)");
+        } else if (windowed) {
+            cfg.setWindowedMode(800, 480);
             System.out.println("Game configured to run in windowed mode: 800x480");
         } else {
             cfg.setFullscreenMode(Lwjgl3ApplicationConfiguration.getDisplayMode());

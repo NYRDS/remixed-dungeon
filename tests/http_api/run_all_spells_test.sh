@@ -79,7 +79,7 @@ if ! curl -s "http://localhost:$PORT/ready" > /dev/null 2>&1; then
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         echo "Starting WebServer..."
         cd "$PROJECT_ROOT"
-        ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer --args="--webserver=$PORT" &
+        ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer --args="--webserver=$PORT --minimized" &
         SERVER_PID=$!
         
         echo "Waiting for server to start..."
