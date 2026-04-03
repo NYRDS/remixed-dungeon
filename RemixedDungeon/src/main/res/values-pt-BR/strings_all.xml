@@ -20,6 +20,7 @@
     <string name="BlackSkullOfMastery_BecomeLichDesc">O _Lich_ é um necromante que atingiu o auge de suas habilidades. Existindo entre a vida e a morte, o _Lich_ se destaca em necromancia, mas suas habilidades de combate são muito inferiores às de uma pessoa comum.</string>
     <string name="BlackSkull_Gender">masculine</string>
     <string name="Blacksmith_Txt2">Você está brincando comigo? Onde está a minha picareta?!</string>
+    <string name="Blacksmith_Verify2">Selecione 2 itens do mesmo tipo!</string>
     <string name="Blacksmith_Verify4">Eu não trabalho com itens amaldiçoados!</string>
     <string name="CandleOfMindVision_Info_Lighted">A vela acendeu no momento em que você a tirou da sua mochila. A chama emite uma luz roxa fraca e, ao olhar através dela, todos os monstros próximos se tornam visíveis para você.</string>
     <string name="Carcass_Kick">Este %s está totalmente morto, não precisa chutá-lo.</string>
@@ -78,6 +79,7 @@
     <string name="Level_TileOpenDoor">Porta aberta</string>
     <string name="Level_TilePedestal">Pedestal</string>
     <string name="Level_TileUnlockedExit">Saída desbloqueada</string>
+    <string name="LibrarianNPC_Message_Not_Ready">Me... me desculpe, a b-biblioteca não está aberta... ainda.</string>
     <string name="LibraryBook_Name">Livro da biblioteca</string>
     <string name="ManaPotion_Info">Esta poção restaurará sua energia espiritual.</string>
     <string name="ManaShieldBuff_Info">Um escudo de magia apareceu, que nega completamente o próximo ataque recebido.</string>
@@ -211,6 +213,8 @@
     <string name="town_deco_weaponrack_desc">Nesta prateleira há armas que são claramente muito caras para você.</string>
 
     <string name="town_deco_wooden_drawer_name">Gaveta</string>
+
+
 
 
 
