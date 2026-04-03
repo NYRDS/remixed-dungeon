@@ -261,6 +261,7 @@
     <string name="BlindnessBuff_Name">Accecato </string>
     <string name="BodyArmorBuff_Name">Armatura Corporea</string>
     <string name="BodyArmorSpell_Name">Armatura Corporea</string>
+    <string name="BoneSaw_Info">Una sega chirurgica di precisione progettata per dissezioni rapide. I suoi danni e la velocità d\'attacco diventano più letali con l\'abilità del Medico della Peste. I colpi critici estraggono parti aggiuntive raccoglibili dai nemici e colpisce con spietata efficienza i nemici paralizzati.</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Quando lanciato ai nemici questo sottile, curvo, missile di legno tornerà nelle mani del lanciatore. </string>
     <string name="Boomerang_Name">bumerang</string>
@@ -1973,6 +1974,7 @@ Potrebbe bruciare?</string>
     <string name="TownGuardNPC_Message3">Pensi che ci siano troppe guardie in questo paese? Beh, è perchè è l\'unico paese con un gigantesco dungeon infestato da mostri, giusto?</string>
     <string name="TownGuardNPC_Name">guardia cittadina</string>
     <string name="TownGuardNPC_Name_Objective">guardia cittadina</string>
+    <string name="TownPortal_Info">Questo incantesimo ti permette di tornare istantaneamente al sicuro. Tuttavia, potenti fonti di magia nelle vicinanze potrebbero impedirne il corretto funzionamento.</string>
     <string name="TownScript_NeedWeapon">Non andrò nel dungeon a mani nude!\n Forse è il caso di visitare il negozio del paese prima?</string>
     <string name="TownShopkeeper_Name">Negoziante</string>
     <string name="TownShopkeeper_Objective">Negoziante</string>
@@ -1999,6 +2001,7 @@ Potrebbe bruciare?</string>
     <string name="ToxicGas_Info1">Sei morto a causa delle esalazioni di gas tossico... </string>
     <string name="ToxicGland_Info">Una ghiandola tossica raccolta da un nemico sconfitto. Queste ghiandole sono piene di potenti tossine e possono essere utilizzate in processi alchemici.</string>
     <string name="ToxicGland_Name">Ghiandola Tossica</string>
+    <string name="TrapWnd_Step">Vuoi davvero calpestare questa trappola? Potresti morire.</string>
     <string name="TreacherousSpirit_Desc">Questa mostruosa creatura sembra una nuvola vivente di oscurità. I suoi occhi senza vita ti fissano, pulsando con ognuno dei tuoi movimenti. </string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">Spirito traditore</string>
@@ -2120,6 +2123,7 @@ Potrebbe bruciare?</string>
     <string name="WaterOfHealth_Info">Il potere della salute viene irradiato dall\'acqua di questo pozzo. Prendine un sorso per curare le tue ferite e saziare la tua fame.</string>
     <string name="WaterOfHealth_Procced">Appena ne prendi un sorso, senti che le tue ferite guariscono completamente. </string>
     <string name="WaterOfTransmutation_Info">Il potere del mutamento viene irradiato dall\'acqua di questo pozzo. Getta un oggetto nel pozzo per trasformarlo in qualcos\'altro.</string>
+    <string name="WeaknessBuff_Info">La debolezza avvolge il corpo, rendendolo un bersaglio più facile.</string>
     <string name="WeaknessBuff_Name">Indebolito</string>
     <string name="Weapon_Identify">Hai abbastanza confidenza con %1$s per procedere all\'identificazione. È %2$s..</string>
     <string name="Weapon_Incompatible">L\'interazione di diversi tipi di magia ha annullato l\'incantesimo su questa arma</string>
@@ -2642,6 +2646,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 
