@@ -51,20 +51,21 @@ class TestRunner:
         # Start the server
         cmd = [
             "./gradlew",
-            "-p", "RemixedDungeonDesktop",
+            "-p",
+            "RemixedDungeonDesktop",
             "runDesktopGameWithWebServer",
-            "--args=--webserver=8080 --windowed"
+            "--args=--webserver=8080 --windowed",
         ]
         print(f"Running: {' '.join(cmd)}")
         print(f"Working directory: {project_root}")
         # Open log file for writing
-        log_handle = open(self.log_file, 'w')
+        log_handle = open(self.log_file, "w")
         self.server_process = subprocess.Popen(
             cmd,
             cwd=project_root,
             stdout=log_handle,
             stderr=subprocess.STDOUT,  # Merge stderr into stdout
-            preexec_fn=os.setsid
+            preexec_fn=os.setsid,
         )
         # Start log monitor
         self.log_monitor = LogMonitor(self.log_file)
@@ -174,7 +175,7 @@ class TestRunner:
         if not self.log_file or not os.path.exists(self.log_file):
             return
         try:
-            with open(self.log_file, 'r') as f:
+            with open(self.log_file, "r") as f:
                 lines = f.readlines()
             for line in lines:
                 line = line.strip()
@@ -218,7 +219,7 @@ class TestRunner:
             print("FULL LOG OUTPUT")
             print("=" * 60)
             try:
-                with open(self.log_file, 'r') as f:
+                with open(self.log_file, "r") as f:
                     # Print last 100 lines
                     lines = f.readlines()
                     for line in lines[-100:]:
@@ -242,7 +243,9 @@ class TestRunner:
             # Test list levels
             self._run_test("list_levels", self.client.list_levels, verbose)
             # Test go to level
-            self._run_test("go_to_level '5'", lambda: self.client.go_to_level("5"), verbose)
+            self._run_test(
+                "go_to_level '5'", lambda: self.client.go_to_level("5"), verbose
+            )
             time.sleep(1)
             # Test get exits
             self._run_test("get_exits", self.client.get_exits, verbose)
@@ -250,7 +253,11 @@ class TestRunner:
             exits = self.client.get_exits()
             if "exits" in exits and exits["exits"]:
                 target = exits["exits"][0]["id"]
-                self._run_test(f"descend_to '{target}'", lambda: self.client.descend_to(target), verbose)
+                self._run_test(
+                    f"descend_to '{target}'",
+                    lambda: self.client.descend_to(target),
+                    verbose,
+                )
                 time.sleep(1)
             # Test get entrances
             self._run_test("get_entrances", self.client.get_entrances, verbose)
@@ -282,18 +289,31 @@ class TestRunner:
         self._print_log_summary()
         return 1 if self.failed > 0 else 0
 
-
-    def run(self, hero_classes: List[str], verbose: bool = False, full_log: bool = False):
+    def run(
+        self,
+        hero_classes: List[str],
+        verbose: bool = False,
+        full_log: bool = False,
+        no_server: bool = False,
+    ):
         """Main entry point."""
         try:
-            if not self.start_server():
-                return 1
-            self.run_all_tests(hero_classes, verbose)
+            if no_server:
+                print("Using existing server at {}:{}".format(self.host, self.port))
+                if not self.client.check_server():
+                    print("ERROR: Cannot connect to existing server!")
+                    return 1
+                self.run_all_tests(hero_classes, verbose)
+            else:
+                if not self.start_server():
+                    return 1
+                self.run_all_tests(hero_classes, verbose)
         finally:
-            self.stop_server()
-            # Print full log after server is stopped
-            if full_log:
-                self._print_log_summary(print_full_log=True)
+            if not no_server:
+                self.stop_server()
+                # Print full log after server is stopped
+                if full_log:
+                    self._print_log_summary(print_full_log=True)
         return 0 if self.failed > 0 else 0
 
 
@@ -303,10 +323,17 @@ def main():
     parser.add_argument("--port", type=int, default=8080, help="Server port")
     parser.add_argument("--hero", default="WARRIOR", help="Hero class to test")
     parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
-    parser.add_argument("--full-log", action="store_true", help="Print full log output at end")
+    parser.add_argument(
+        "--full-log", action="store_true", help="Print full log output at end"
+    )
+    parser.add_argument(
+        "--no-server",
+        action="store_true",
+        help="Use existing server instead of starting one",
+    )
     args = parser.parse_args()
     runner = TestRunner(args.host, args.port)
-    exit_code = runner.run([args.hero], args.verbose, args.full_log)
+    exit_code = runner.run([args.hero], args.verbose, args.full_log, args.no_server)
     sys.exit(exit_code)
 
 

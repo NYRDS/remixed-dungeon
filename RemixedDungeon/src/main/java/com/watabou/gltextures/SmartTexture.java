@@ -11,6 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class SmartTexture extends Texture {
 
 	public Atlas atlas;
+	private BitmapData bitmapData;
 
 	public SmartTexture() {
 		super();
@@ -30,6 +31,7 @@ public class SmartTexture extends Texture {
 
 	@Override
 	public void bitmap( BitmapData bitmap ) {
+		this.bitmapData = bitmap;
 		width = bitmap.getWidth();
 		height = bitmap.getHeight();
 		super.bitmap( bitmap );

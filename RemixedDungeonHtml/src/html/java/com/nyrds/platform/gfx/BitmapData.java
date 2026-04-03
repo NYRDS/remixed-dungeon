@@ -67,6 +67,23 @@ public class BitmapData {
         }
     }
     
+    public void clear(int color) {
+        if (pixmap != null) {
+            pixmap.setColor(color);
+            pixmap.fill();
+        }
+    }
+    
+    public void setPixel(int x, int y, int color) {
+        if (pixmap != null) {
+            pixmap.drawPixel(x, y, color);
+        }
+    }
+    
+    public Pixmap getPixmap() {
+        return pixmap;
+    }
+    
     public int getPixel(int x, int y) {
         // Simple implementation for HTML version
         if (pixmap != null) {

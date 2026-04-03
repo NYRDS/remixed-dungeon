@@ -1822,55 +1822,35 @@ public class DebugEndpoints {
             }
 
             // Determine entrance position
-            final int startPos;
+            int startPos;
             if (entranceCell >= 0 && entranceCell < newLevel.getLength()) {
                 startPos = entranceCell;
             } else {
                 startPos = newLevel.entrance;
             }
 
-            // Set up the return position for InterlevelScene
-            position.cellId = startPos;
-
-            // Schedule the level switch on the game thread via InterlevelScene
-            String finalLevelId = levelId;
-            final Position finalPosition = position;
-            final String[] error = new String[1];
-            
-            // Use CountDownLatch to wait for level switch to complete
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
-            
-            com.nyrds.pixeldungeon.game.GameLoop.pushUiTask(() -> {
-                try {
-                    InterlevelScene.returnTo = finalPosition;
-                    InterlevelScene.Do(InterlevelScene.Mode.RETURN);
-                    GLog.i("Switching to level: " + finalLevelId);
-                } catch (Exception e) {
-                    error[0] = "Error switching level: " + e.getMessage();
-                    GLog.w(error[0]);
-                } finally {
-                    latch.countDown();
+            // Collect existing mobs to transfer
+            Collection<Mob> mobs = new ArrayList<>();
+            if (Dungeon.level != null) {
+                for (Mob mob : Dungeon.level.mobs) {
+                    mobs.add(mob);
                 }
-            });
-
-            // Wait for the level switch to complete (up to 5 seconds)
-            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
-            if (!completed) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
-                    "{\"error\":\"Timeout waiting for level switch to complete\"}");
             }
 
-            if (error[0] != null) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
-                    createErrorResponse(error[0]).toString());
-            }
+            // Directly switch levels without going through InterlevelScene
+            Actor.fixTime();
+            Dungeon.onHeroLeaveLevel();
+            Dungeon.save(false);
+            Dungeon.depth = DungeonGenerator.getLevelDepth(levelId);
+            Dungeon.switchLevel(newLevel, startPos, mobs);
+
+            GLog.i("Switched to level: " + levelId);
 
             String levelKind = DungeonGenerator.getLevelKind(levelId);
-            int depth = DungeonGenerator.getLevelDepth(levelId);
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"levelId\":\"%s\",\"kind\":\"%s\",\"depth\":%d,\"entrance\":%d}",
-                    levelId, levelKind, depth, startPos));
+                    levelId, levelKind, Dungeon.depth, startPos));
         } catch (Exception e) {
             GLog.w("Error in handleDebugGoToLevel: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",

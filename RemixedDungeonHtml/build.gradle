@@ -100,6 +100,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
     compileOnly 'org.projectlombok:lombok:1.18.30'
     implementation 'com.google.guava:guava:32.0.1-jre'
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
 
     // LibGDX dependencies for HTML backend
     implementation "com.badlogicgames.gdx:gdx:$gdxVersion"

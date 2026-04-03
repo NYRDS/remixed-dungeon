@@ -89,6 +89,11 @@ public class Game implements ApplicationListener, InputProcessor {
         Gdx.net.openURI(address);
     }
 
+    static public void copyToClipboard(String label, String text) {
+        // Clipboard not directly available in HTML without JSNI
+        Gdx.app.log("Game", "copyToClipboard: " + label);
+    }
+
     public static void sendEmail(String emailUri, String subject) {
         Gdx.net.openURI("mailto:" + emailUri + "?subject=" + subject);
     }

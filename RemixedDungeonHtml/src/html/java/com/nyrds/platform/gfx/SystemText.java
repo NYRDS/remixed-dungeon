@@ -113,4 +113,13 @@ public class SystemText extends SystemTextBase {
         // Simple implementation for HTML version
         return 1;
     }
+    
+    @Override
+    protected float measureTextWidth(String text) {
+        if (font != null && text != null) {
+            GlyphLayout layout = new GlyphLayout(font, text);
+            return layout.width;
+        }
+        return 0;
+    }
 }
