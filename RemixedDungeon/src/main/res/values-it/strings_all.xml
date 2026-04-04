@@ -2188,6 +2188,7 @@ Potrebbe bruciare?</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_openWallet">Apri Portafoglio</string>
     <string name="WndCryptoDonate_supportDev">Supporta lo sviluppatore</string>
+    <string name="WndCryptoDonate_walletAddress">Indirizzo Portafoglio</string>
     <string name="WndCustomizations_Title">Personalizzazioni</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - gratuito per tutti e lo sarà per sempre.\n\nTuttavia, puoi aiutarci a rendere il gioco ancora migliore.\n\nOltre ai nostri sentiti ringraziamenti, riceverai alcuni miglioramenti estetici.</string>
     <string name="WndDonate_donate">dona:</string>
@@ -2625,6 +2626,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_urn_name">Urna</string>
     <string name="town_deco_vat_desc">Questa vasca di pietra è colma fino all\'orlo di acqua santa.</string>
     <string name="town_deco_wall_beam_desc">Serve come fidato supporto per questa costruzione.</string>
+    <string name="town_deco_wall_beam_name">Trave</string>
     <string name="town_deco_wall_brazier_desc">Il vapore che esce dalle braci ardenti riempie la stanza di piacevoli aromi.</string>
     <string name="town_deco_wall_brazier_name">Braciere</string>
     <string name="town_deco_wall_candles_name">Candele</string>
@@ -2650,6 +2652,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
