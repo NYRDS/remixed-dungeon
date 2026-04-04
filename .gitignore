@@ -40,8 +40,9 @@ prime
 stage
 snap-inspect
 
-# Localization files (user-generated)
+# Localization JSON files (generated from XML at build step)
 RemixedDungeonDesktop/src/desktop/l10ns/strings_*.json
+RemixedDungeonHtml/l10ns/strings_*.json
 
 # Runtime directory and user preferences
 RemixedDungeonDesktop/src/desktop/rundir/
