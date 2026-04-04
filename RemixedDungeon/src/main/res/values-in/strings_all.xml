@@ -2619,6 +2619,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ZombieMask_Info">Apakah Anda pernah ingin terlihat seperti pahlawan mayat hidup, yang gagal di misinya berkali-kali? Baiklah ini kesempatan Anda.</string>
     <string name="ZombieMask_Name">Topeng mayat hidup</string>
     <string name="Zombie_Desc">Dungeon selalu merupakan tempat yang berbahaya untuk memulai dan banyak petualang telah menemui ajal mereka di sini. Tapi kehidupan yang paling sial berakhir di Necropolis, dan sekarang mereka ditakdirkan untuk berkeliaran di aula ini dalam bentuk mayat yang membusuk.</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">zombie</string>
     <string name="Zombie_Name_Objective">zombie</string>
     <string name="deco_candle_desc">Lilin besar</string>
@@ -2874,22 +2875,4 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
