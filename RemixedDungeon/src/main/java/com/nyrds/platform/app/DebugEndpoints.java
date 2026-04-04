@@ -21,9 +21,6 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Pixmap;
-
 import org.json.JSONObject;
 
 import java.lang.reflect.Field;
@@ -2444,10 +2441,13 @@ public class DebugEndpoints {
 
     public static NanoHTTPD.Response handleDebugScreenshot(NanoHTTPD.IHTTPSession session) {
         try {
-            if (Gdx.graphics == null) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
-                    "{\"error\":\"Graphics not initialized - start a game first\"}");
-            }
+            // Use reflection to access libGDX classes (not available on Android)
+            Class<?> gdxClass = Class.forName("com.badlogic.gdx.Gdx");
+            Object graphics = gdxClass.getField("graphics").get(null);
+            Object files = gdxClass.getField("files").get(null);
+
+            int width = (Integer) graphics.getClass().getMethod("getWidth").invoke(graphics);
+            int height = (Integer) graphics.getClass().getMethod("getHeight").invoke(graphics);
 
             // Use CountDownLatch to wait for screenshot to be captured on game thread
             java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
@@ -2457,10 +2457,9 @@ public class DebugEndpoints {
             // Schedule screenshot capture on game thread
             GameLoop.pushUiTask(() -> {
                 try {
-                    int width = Gdx.graphics.getWidth();
-                    int height = Gdx.graphics.getHeight();
-
-                    Pixmap pixmap = Pixmap.createFromFrameBuffer(0, 0, width, height);
+                    Class<?> pixmapClass = Class.forName("com.badlogic.gdx.graphics.Pixmap");
+                    Object pixmap = pixmapClass.getMethod("createFromFrameBuffer", int.class, int.class, int.class, int.class)
+                        .invoke(null, 0, 0, width, height);
 
                     if (pixmap == null) {
                         error[0] = "Failed to capture screenshot";
@@ -2470,14 +2469,15 @@ public class DebugEndpoints {
 
                     // Save to temporary file
                     String path = "screenshot_" + System.currentTimeMillis() + ".png";
-                    com.badlogic.gdx.files.FileHandle tempFile = Gdx.files.local(path);
-                    com.badlogic.gdx.graphics.PixmapIO.writePNG(tempFile, pixmap);
-                    
+                    Object fileHandle = files.getClass().getMethod("local", String.class).invoke(files, path);
+                    Class<?> pixmapIOClass = Class.forName("com.badlogic.gdx.graphics.PixmapIO");
+                    pixmapIOClass.getMethod("writePNG", fileHandle.getClass(), pixmapClass).invoke(null, fileHandle, pixmap);
+
                     screenshotPath[0] = path;
-                    
+
                     // Cleanup
-                    pixmap.dispose();
-                    
+                    pixmap.getClass().getMethod("dispose").invoke(pixmap);
+
                     GLog.i("Screenshot saved to: " + path);
                 } catch (Exception e) {
                     error[0] = "Error capturing screenshot: " + e.getMessage();
@@ -2505,12 +2505,12 @@ public class DebugEndpoints {
                     createErrorResponse("Screenshot path not set").toString());
             }
 
-            // Read the screenshot file
-            com.badlogic.gdx.files.FileHandle tempFile = Gdx.files.local(screenshotPath[0]);
-            byte[] screenshotBytes = tempFile.readBytes();
+            // Read the screenshot file via reflection
+            Object fileHandle = files.getClass().getMethod("local", String.class).invoke(files, screenshotPath[0]);
+            byte[] screenshotBytes = (byte[]) fileHandle.getClass().getMethod("readBytes").invoke(fileHandle);
 
             // Delete the temporary file
-            tempFile.delete();
+            fileHandle.getClass().getMethod("delete").invoke(fileHandle);
 
             // Return PNG as response
             return NanoHTTPD.newFixedLengthResponse(
@@ -2519,6 +2519,9 @@ public class DebugEndpoints {
                 new java.io.ByteArrayInputStream(screenshotBytes),
                 screenshotBytes.length
             );
+        } catch (ClassNotFoundException e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                "{\"error\":\"Screenshot not supported on this platform\"}");
         } catch (Exception e) {
             GLog.w("Error in handleDebugScreenshot: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
