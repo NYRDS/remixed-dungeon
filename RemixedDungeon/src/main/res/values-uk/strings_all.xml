@@ -2414,6 +2414,7 @@
     <string name="WndLibrary_Items_Btn">Предмети</string>
     <string name="WndLibrary_Levels_Btn">Підземелля</string>
     <string name="WndLibrary_Mobs_Btn">Монстри</string>
+    <string name="WndLocalModInstall_text">Виберіть директорію, з якої встановити мод</string>
     <string name="WndModInstall_InstallingMod">Встановлення мода</string>
     <string name="WndModSelect_AreYouSure">Видалити мод: %s, впевнені?</string>
     <string name="WndModsDisclaimer_install">Встановити локальний мод.</string>
@@ -2824,4 +2825,5 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 </resources>
