@@ -23,6 +23,7 @@ from typing import Optional, Dict, Any, List, Tuple
 from dataclasses import dataclass
 
 from game_client import GameClient
+from test_server import ServerManager
 
 
 @dataclass
@@ -1901,46 +1902,58 @@ def main():
     )
     parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
     parser.add_argument("--json", action="store_true", help="Output results as JSON")
+    parser.add_argument(
+        "--start-server", action="store_true", help="Start game server automatically"
+    )
 
     args = parser.parse_args()
 
-    # Check if server is ready
-    print(f"Connecting to {args.host}:{args.port}...")
     tester = AlchemyTester(args.host, args.port, args.verbose)
+    server = None
 
-    if not tester.client.check_server():
-        print(f"✗ Cannot connect to server at {args.host}:{args.port}")
-        print("\nPlease start the game with webserver:")
-        print("  ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer")
-        print("\nOr use the helper script:")
-        print("  ./tests/http_api/start_game_server.sh")
-        sys.exit(1)
-
-    print("✓ Server connected")
-
-    # Start a game first
-    print("\nStarting game...")
-    start_response = tester.client.start_game("WARRIOR", 0)
-    if not start_response.get("success", False) and "error" not in start_response:
-        print(f"✗ Failed to start game: {start_response.get('error', 'Unknown error')}")
-        sys.exit(1)
-
-    print("✓ Game started")
-    print()
-
-    # Run tests
-    if args.category:
-        tester.run_category(args.category)
+    if args.start_server:
+        server = ServerManager(args.host, args.port, "alchemy")
+        if not server.start():
+            sys.exit(1)
     else:
-        tester.run_all_tests()
+        print(f"Connecting to {args.host}:{args.port}...")
+        if not tester.client.check_server():
+            print(f"✗ Cannot connect to server at {args.host}:{args.port}")
+            print("\nPlease start the game with webserver:")
+            print("  ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer")
+            print("\nOr use --start-server flag")
+            sys.exit(1)
+        print("✓ Server connected")
 
-    # Output JSON if requested
-    if args.json:
-        print("\n" + tester.get_results_json())
+    try:
+        # Start a game first
+        print("\nStarting game...")
+        start_response = tester.client.start_game("WARRIOR", 0)
+        if not start_response.get("success", False) and "error" not in start_response:
+            print(
+                f"✗ Failed to start game: {start_response.get('error', 'Unknown error')}"
+            )
+            sys.exit(1)
 
-    # Exit with error code if any tests failed
-    failed = sum(1 for r in tester.results if not r.success)
-    sys.exit(0 if failed == 0 else 1)
+        print("✓ Game started")
+        print()
+
+        # Run tests
+        if args.category:
+            tester.run_category(args.category)
+        else:
+            tester.run_all_tests()
+
+        # Output JSON if requested
+        if args.json:
+            print("\n" + tester.get_results_json())
+
+        # Exit with error code if any tests failed
+        failed = sum(1 for r in tester.results if not r.success)
+        sys.exit(0 if failed == 0 else 1)
+    finally:
+        if server:
+            server.stop()
 
 
 if __name__ == "__main__":

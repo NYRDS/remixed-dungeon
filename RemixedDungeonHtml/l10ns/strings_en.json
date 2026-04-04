@@ -2698,6 +2698,8 @@
 ["BloodTransfusion_Info", "Drains nearly all blood from a target to heal yourself. A dark ritual of sacrifice and survival."]
 ["CorpseExplosion_NoCorpse", "There is no corpse at that location."]
 ["BloodTransfusion_WontAgreed", "The target resists the extraction of its life essence."]
+["BloodTransfusion_FullHP", "Your blood is already at full capacity."]
+["BloodTransfusion_Drained", "The life essence flows from your pet into you."]
 ["Order_Name", "Order"]
 ["Order_Info", "With proper concentration, your orders are almost undeniable."]
 ["Order_Resist", "How dare you?!!"]

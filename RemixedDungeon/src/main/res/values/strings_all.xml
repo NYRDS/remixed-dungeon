@@ -2702,6 +2702,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="BloodTransfusion_Info">Drains nearly all blood from a target to heal yourself. A dark ritual of sacrifice and survival.</string>
   <string name="CorpseExplosion_NoCorpse">There is no corpse at that location.</string>
   <string name="BloodTransfusion_WontAgreed">The target resists the extraction of its life essence.</string>
+  <string name="BloodTransfusion_FullHP">Your blood is already at full capacity.</string>
+  <string name="BloodTransfusion_Drained">The life essence flows from your pet into you.</string>
   <string name="Order_Name">Order</string>
   <string name="Order_Info">With proper concentration, your orders are almost undeniable.</string>
   <string name="Order_Resist">How dare you?!!</string>
