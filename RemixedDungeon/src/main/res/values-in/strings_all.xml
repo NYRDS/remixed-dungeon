@@ -401,6 +401,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ChaosShield_name">Tameng Kekacauan</string>
     <string name="ChaosStaff_Info">Tongkat yang dijiwai Kekuatan Khaos! Apa lagi yang dapat seorang penyihir mimpikan atau takuti?</string>
     <string name="ChaosStaff_Name">tongkat khaos</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">Mata pedang dari pedang ini dibuat dari khaos murni dan kadang bergetar sedikit. Kekuatan besar disimpan di dalam senjata ini, yang dapat memotong hampir semuanya jadi dua. Tapi, keahlian besar dibutuhkan, untuk menggunakan kekuatan besar dari senjata ini.</string>
     <string name="ChaosSword_Name">pedang khaos</string>
     <string name="CharAction_Charm">pesona</string>
@@ -471,6 +472,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ClassArmor_LowHealt">Nyawa Anda terlalu rendah!</string>
     <string name="ClassArmor_LowMana">Mana tidak mencukupi!</string>
     <string name="ClassArmor_NotEquipped">Anda harus memakai zirah ini untuk mengunakan kekuatan spesialnya!</string>
+    <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Pedang besar ini harusnya dapat memotong apa saja.</string>
     <string name="Claymore_Name">Claymore</string>
     <string name="CloakBuff_Info">Jubah gelap menyembunyikan Anda dalam bayang-bayang, membuat Anda kurang terlihat oleh musuh.</string>
