@@ -558,6 +558,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">cristal flotante</string>
     <string name="Crystal_Name_Objective">cristal flotante</string>
+    <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">Estos pequeños dardos no hacen mucho daño, pero pueden paralizar al objetivo dejándolo indefenso y sin movimiento por algún tiempo.</string>
     <string name="CurareDart_Name">dardo paralizante</string>
     <string name="DM300_Desc">Estas máquinas fueron creadas por los enanos hace siglos. Más tarde, los enanos las reemplazaron por golems, elementales e incluso demonios. Finalmente esto llevo al declive de su civilización. El DM-300 y otras máquinas similares eran usadas para la construcción y minería, y en algunos casos, para defender la ciudad.</string>
@@ -2924,4 +2925,5 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 </resources>
