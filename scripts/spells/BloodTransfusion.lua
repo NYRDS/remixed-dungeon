@@ -19,6 +19,11 @@ return spell.init{
     end,
 
     castOnChar = function(self, spell, caster, target)
+        if caster:hp() >= caster:ht() then
+            RPD.glog('BloodTransfusion_FullHP')
+            return false
+        end
+
         if target and target:getOwnerId() == caster:getId() then
             -- Drain ALL blood from the target, killing them
             local drainAmount = target:hp() -- Drain all HP, killing the target
@@ -35,6 +40,7 @@ return spell.init{
             -- Sound effect
             RPD.playSound("snd_heal.mp3")
 
+            RPD.glog('BloodTransfusion_Drained')
             return true
 
         else

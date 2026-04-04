@@ -1359,6 +1359,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public abstract CharSprite newSprite();
 
+    @LuaInterface
     public int ht() {
         return Scrambler.descramble(HT);
     }
@@ -1368,6 +1369,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return hT;
     }
 
+    @LuaInterface
     public int hp() {
         return Scrambler.descramble(HP);
     }
