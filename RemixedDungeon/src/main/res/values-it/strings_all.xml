@@ -2488,6 +2488,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_book_desc">Questo libro sembra come se qualcuno lo avesse abbandonato distrattamente</string>
     <string name="town_deco_book_name">Libro</string>
     <string name="town_deco_broken_roof_name">Tetto rotto</string>
+    <string name="town_deco_broken_wall_name">Muro rotto</string>
     <string name="town_deco_brown_carpet_desc">Questo tappeto marrone è stato calpestato da molti avventurieri, vagabondi e passanti.</string>
     <string name="town_deco_brown_carpet_name">Tappeto</string>
     <string name="town_deco_cabinet_desc">Un ampio mobile con molte porte e scaffali.</string>
@@ -2649,6 +2650,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

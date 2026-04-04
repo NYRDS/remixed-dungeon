@@ -359,6 +359,7 @@
     <string name="ChaosArmor_Name">混沌護甲</string>
     <string name="ChaosBow_Info">一把充斥著混沌之力的駭人魔弓，每一發從它這裡射出的箭矢都會攜帶有一些混沌能量。但萬一失手……</string>
     <string name="ChaosBow_Name">混沌弓</string>
+    <string name="ChaosCrystal_ArmorFused">水晶與你的護甲融合，並變成了混沌形態。</string>
     <string name="ChaosCrystal_BowFused">水晶吸收你的弓弩，並重新以弓的形式呈現。</string>
     <string name="ChaosCrystal_Fuse">融合</string>
     <string name="ChaosCrystal_Info">當你握住它時，你明顯感受到有股能量竄入指縫間。</string>
@@ -2817,4 +2818,5 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 </resources>

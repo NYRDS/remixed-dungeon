@@ -648,6 +648,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="ElvenBow_Name">tünde íj</string>
     <string name="ElvenDagger_Info">Ez a fegyver valami nagyszerű ötvözetből készült, sokkal könnyebb mint a hasonló tőrök.</string>
     <string name="ElvenDagger_Name">elf tőr</string>
+    <string name="EncumbranceBuff_CharAct_2">Ez a(z) %s túl nehéz ahhoz, hogy hatékonyan használhassam.</string>
     <string name="EncumbranceBuff_CharAct_3">Erősödnöm kell, mielőtt használhatnám a %s-t.</string>
     <string name="EncumbranceBuff_CharAct_4">Nincs elég erőm, hogy %s teljes potenciálját kihasználjam.</string>
     <string name="EncumbranceBuff_CharAct_5">%s jelenleg túl sok, hogy kezelni tudjam.</string>
@@ -2694,6 +2695,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_trapdoor_name">Csapóajtó</string>
     <string name="town_deco_tree_desc">Egy furcsa érzés kerít hatalmába mikor ránézel erre a békés, élő fára. Elvégre nem olyan messze egy borzalmakkal és halállal teli kazamata helyezkedik el.</string>
     <string name="town_deco_tree_name">Fa</string>
+    <string name="town_deco_vat_name">Dézsa</string>
     <string name="town_deco_wall_beam_desc">Megbízható segítséget nyújt az itteni építkezéshez.</string>
     <string name="town_deco_wall_beam_name">Sugár</string>
     <string name="town_deco_wall_candles_desc">Leégett gyertyák, amik még mindig kellemes illatot árasztanak.</string>
@@ -2724,4 +2726,6 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 </resources>

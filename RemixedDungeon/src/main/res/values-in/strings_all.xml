@@ -213,6 +213,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="BattleAxe_Info">Ujung baja besar dari kapak perang ini memberikan berat yang banyak dari tiap serangan.</string>
     <string name="BattleAxe_Name">kapak perang</string>
     <string name="Bee_Desc">Meskipun ukurannya kecil, lebah cenderung melindungi sarangnya dengan keras. Mereka tidak hidup lama sekalipun.</string>
+    <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name">lebah</string>
     <string name="Bee_Name_Objective">lebah</string>
     <string name="BellaNPC_Amulet_F">Mengapa halo ada kue manis, mengapa Anda memiliki di sana. Ah, jimat yang sangat indah! Dan kamu... kamu bersinar jauh lebih terang dibandingkan dengan siapa pun. Bagaimana jika kita berjalan-jalan dan mendiskusikan masa depan kita bersama?</string>
@@ -2872,6 +2873,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
