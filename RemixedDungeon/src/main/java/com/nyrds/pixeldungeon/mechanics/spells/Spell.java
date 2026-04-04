@@ -147,6 +147,19 @@ public class Spell implements NamedEntityKind {
         }
     }
 
+    @TestOnly
+    public void castOnTarget(@NotNull Char caster, @NotNull Char target) {
+        if(targetingType.equals(SpellHelper.TARGET_CHAR)
+                || targetingType.equals(SpellHelper.TARGET_CHAR_NOT_SELF)
+        ) {
+            cast(caster, target);
+        } else if(targetingType.equals(SpellHelper.TARGET_CELL)) {
+            cast(caster, target.getPos());
+        } else if(targetingType.equals(SpellHelper.TARGET_SELF)) {
+            cast(caster);
+        }
+    }
+
     protected void castCallback(Char chr) {
         chr.spellCasted(this);
         chr.spendSkillPoints(spellCost());

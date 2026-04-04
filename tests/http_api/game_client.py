@@ -87,6 +87,15 @@ class GameClient:
         """Cast a spell on a specific target position."""
         return self._get(f"/debug/cast_spell_on_target?type={spell_type}&x={x}&y={y}")
 
+    def cast_spell_on_mob(
+        self, spell_type: str, mob_type: str, owned: bool = False
+    ) -> Dict[str, Any]:
+        """Cast a spell on a mob matching the given type."""
+        endpoint = f"/debug/cast_spell_at_mob?spell={spell_type}&mobType={mob_type}"
+        if owned:
+            endpoint += "&owned=true"
+        return self._get(endpoint)
+
     # Mob Management
     def get_mobs(self) -> Dict[str, Any]:
         """Get mobs on current level."""

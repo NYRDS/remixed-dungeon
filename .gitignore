@@ -66,3 +66,4 @@ test_multilevel_list.txt
 .dolt/
 *.db
 .beads-credential-key
+dist/

@@ -22,12 +22,16 @@ Prerequisites:
 
 import argparse
 import json
+import os
 import requests
 import time
 import sys
 from typing import Optional, Dict, Any, List, Tuple
 from dataclasses import dataclass
 from enum import Enum
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from test_server import ServerManager
 
 
 # Hero classes and their spell affinities (from CustomSpellsList.lua)
@@ -59,14 +63,22 @@ SPELLS_BY_AFFINITY = {
 
 # All hero classes
 ALL_HERO_CLASSES = [
-    "WARRIOR", "MAGE", "ROGUE", "HUNTRESS", "ELF",
-    "NECROMANCER", "GNOLL", "PRIEST", "DOCTOR"
+    "WARRIOR",
+    "MAGE",
+    "ROGUE",
+    "HUNTRESS",
+    "ELF",
+    "NECROMANCER",
+    "GNOLL",
+    "PRIEST",
+    "DOCTOR",
 ]
 
 
 @dataclass
 class TestResult:
     """Result of a single spell test."""
+
     hero_class: str
     spell: str
     success: bool
@@ -77,7 +89,9 @@ class TestResult:
 class AllSpellsTester:
     """Client for testing all spells across all hero classes."""
 
-    def __init__(self, host: str = "localhost", port: int = 8080, verbose: bool = False):
+    def __init__(
+        self, host: str = "localhost", port: int = 8080, verbose: bool = False
+    ):
         self.base_url = f"http://{host}:{port}"
         self.session = requests.Session()
         self.verbose = verbose
@@ -107,7 +121,9 @@ class AllSpellsTester:
 
     def start_game(self, hero_class: str, difficulty: int = 0) -> Dict[str, Any]:
         """Start a new game with specified hero class."""
-        return self._get(f"/debug/start_game?class={hero_class}&difficulty={difficulty}")
+        return self._get(
+            f"/debug/start_game?class={hero_class}&difficulty={difficulty}"
+        )
 
     def get_hero_info(self) -> Dict[str, Any]:
         """Get detailed hero information."""
@@ -194,7 +210,7 @@ class AllSpellsTester:
                     spell=spell,
                     success=True,
                     message="Spell cast successfully",
-                    duration=duration
+                    duration=duration,
                 )
             else:
                 # Spell succeeded but no log message (may be normal for some spells)
@@ -203,7 +219,7 @@ class AllSpellsTester:
                     spell=spell,
                     success=True,
                     message="Spell cast (no log confirmation)",
-                    duration=duration
+                    duration=duration,
                 )
         else:
             error = result.get("error", "Unknown error")
@@ -220,7 +236,9 @@ class AllSpellsTester:
                 "OutOfRange",  # Target out of range
             ]
 
-            is_expected = any(exp in error or exp in error_msg for exp in expected_failures)
+            is_expected = any(
+                exp in error or exp in error_msg for exp in expected_failures
+            )
 
             if is_expected:
                 return TestResult(
@@ -228,7 +246,7 @@ class AllSpellsTester:
                     spell=spell,
                     success=True,
                     message=f"Expected behavior: {error_msg or error}",
-                    duration=duration
+                    duration=duration,
                 )
             else:
                 return TestResult(
@@ -236,23 +254,27 @@ class AllSpellsTester:
                     spell=spell,
                     success=False,
                     message=f"Error: {error_msg or error}",
-                    duration=duration
+                    duration=duration,
                 )
 
-    def test_class_spells(self, hero_class: str, specific_spell: str = None) -> List[TestResult]:
+    def test_class_spells(
+        self, hero_class: str, specific_spell: str = None
+    ) -> List[TestResult]:
         """Test all spells for a specific hero class."""
         results = []
 
-        print(f"\n{'='*70}")
+        print(f"\n{'=' * 70}")
         print(f"Testing {hero_class} spells")
-        print(f"{'='*70}")
+        print(f"{'=' * 70}")
 
         # Start game with this hero class
         print(f"Starting game with {hero_class}...")
         start_result = self.start_game(hero_class)
 
         if not start_result.get("success"):
-            print(f"  ✗ Failed to start game: {start_result.get('error', 'Unknown error')}")
+            print(
+                f"  ✗ Failed to start game: {start_result.get('error', 'Unknown error')}"
+            )
             return results
 
         # Wait for game to initialize and verify hero class
@@ -262,14 +284,16 @@ class AllSpellsTester:
             time.sleep(0.5)
             hero_info = self.get_hero_info()
             if "error" not in hero_info:
-                current_class = hero_info.get('class', 'Unknown')
+                current_class = hero_info.get("class", "Unknown")
                 if current_class == hero_class:
                     hero_class_verified = True
                     print(f"  Hero class: {current_class} ✓")
                     print(f"  Magic affinity: {hero_info.get('affinity', 'None')}")
                     break
                 elif retry == max_retries - 1:
-                    print(f"  ⚠ Hero class mismatch: expected {hero_class}, got {current_class}")
+                    print(
+                        f"  ⚠ Hero class mismatch: expected {hero_class}, got {current_class}"
+                    )
                 # Continue waiting if class doesn't match yet
 
         # Get available spells
@@ -305,7 +329,9 @@ class AllSpellsTester:
 
         return results
 
-    def run_all_tests(self, specific_class: str = None, specific_spell: str = None) -> List[TestResult]:
+    def run_all_tests(
+        self, specific_class: str = None, specific_spell: str = None
+    ) -> List[TestResult]:
         """Run tests for all classes or a specific class/spell."""
         all_results = []
 
@@ -340,21 +366,21 @@ class AllSpellsTester:
             print("\nNo tests were run.")
             return
 
-        print("\n" + "="*70)
+        print("\n" + "=" * 70)
         print("TEST SUMMARY")
-        print("="*70)
+        print("=" * 70)
 
         # Overall stats
         total = len(self.results)
         passed = sum(1 for r in self.results if r.success)
         failed = total - passed
 
-        print(f"\nTotal: {passed}/{total} tests passed ({passed/total*100:.1f}%)")
+        print(f"\nTotal: {passed}/{total} tests passed ({passed / total * 100:.1f}%)")
         print(f"Failed: {failed}/{total}")
 
         # Group by class
         print("\nResults by Hero Class:")
-        print("-"*70)
+        print("-" * 70)
 
         by_class = {}
         for result in self.results:
@@ -364,13 +390,17 @@ class AllSpellsTester:
             if result.success:
                 by_class[result.hero_class]["passed"] += 1
             else:
-                by_class[result.hero_class]["spells"].append((result.spell, result.message))
+                by_class[result.hero_class]["spells"].append(
+                    (result.spell, result.message)
+                )
 
         for hero_class in ALL_HERO_CLASSES:
             if hero_class in by_class:
                 data = by_class[hero_class]
                 pct = data["passed"] / data["total"] * 100
-                print(f"  {hero_class:15} {data['passed']:2}/{data['total']:2} ({pct:5.1f}%)")
+                print(
+                    f"  {hero_class:15} {data['passed']:2}/{data['total']:2} ({pct:5.1f}%)"
+                )
 
                 # Show failed spells
                 for spell, msg in data["spells"]:
@@ -378,7 +408,7 @@ class AllSpellsTester:
 
         # Group by spell
         print("\nResults by Spell:")
-        print("-"*70)
+        print("-" * 70)
 
         by_spell = {}
         for result in self.results:
@@ -388,13 +418,17 @@ class AllSpellsTester:
             if result.success:
                 by_spell[result.spell]["passed"] += 1
             else:
-                by_spell[result.spell]["classes"].append((result.hero_class, result.message))
+                by_spell[result.spell]["classes"].append(
+                    (result.hero_class, result.message)
+                )
 
         for spell in sorted(by_spell.keys()):
             data = by_spell[spell]
             pct = data["passed"] / data["total"] * 100
             status = "✓" if data["passed"] == data["total"] else "⚠"
-            print(f"  {status} {spell:25} {data['passed']:2}/{data['total']:2} ({pct:5.1f}%)")
+            print(
+                f"  {status} {spell:25} {data['passed']:2}/{data['total']:2} ({pct:5.1f}%)"
+            )
 
         # Show completely failed spells
         failed_spells = [(s, d) for s, d in by_spell.items() if d["passed"] == 0]
@@ -416,25 +450,35 @@ Examples:
   %(prog)s --class DOCTOR           Test only Doctor spells
   %(prog)s --spell BloodTransfusion Test specific spell across classes
   %(prog)s --port 8082              Use different port
-        """
+        """,
     )
-    parser.add_argument("--host", default="localhost", help="WebServer host (default: localhost)")
-    parser.add_argument("--port", type=int, default=8080, help="WebServer port (default: 8080)")
-    parser.add_argument("--class", dest="hero_class", choices=ALL_HERO_CLASSES,
-                        help="Test specific hero class only")
-    parser.add_argument("--spell", dest="specific_spell",
-                        help="Test specific spell only")
-    parser.add_argument("--verbose", "-v", action="store_true",
-                        help="Verbose output")
-    parser.add_argument("--json", action="store_true",
-                        help="Output results as JSON")
+    parser.add_argument(
+        "--host", default="localhost", help="WebServer host (default: localhost)"
+    )
+    parser.add_argument(
+        "--port", type=int, default=8080, help="WebServer port (default: 8080)"
+    )
+    parser.add_argument(
+        "--class",
+        dest="hero_class",
+        choices=ALL_HERO_CLASSES,
+        help="Test specific hero class only",
+    )
+    parser.add_argument(
+        "--spell", dest="specific_spell", help="Test specific spell only"
+    )
+    parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
+    parser.add_argument("--json", action="store_true", help="Output results as JSON")
+    parser.add_argument(
+        "--start-server", action="store_true", help="Start game server automatically"
+    )
 
     args = parser.parse_args()
 
-    print("="*70)
+    print("=" * 70)
     print("ALL SPELLS TEST SUITE")
     print(f"Target: http://{args.host}:{args.port}")
-    print("="*70)
+    print("=" * 70)
 
     if args.hero_class:
         print(f"Testing class: {args.hero_class}")
@@ -442,21 +486,28 @@ Examples:
         print(f"Testing spell: {args.specific_spell}")
 
     tester = AllSpellsTester(args.host, args.port, args.verbose)
+    server = None
 
-    # Check server connection
-    print("\nChecking server connection...")
-    if not tester.check_server():
-        print("✗ Webserver is not accessible")
-        print("\nPlease start the game with webserver:")
-        print("  ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer")
-        print("\nOr use the helper script:")
-        print("  ./tests/http_api/start_game_server.sh")
-        return 1
+    if args.start_server:
+        server = ServerManager(args.host, args.port, "allspells")
+        try:
+            if not server.start():
+                return 1
+            print("✓ Webserver is running and ready")
+            tester.run_all_tests(args.hero_class, args.specific_spell)
+        finally:
+            server.stop()
+    else:
+        print("\nChecking server connection...")
+        if not tester.check_server():
+            print("✗ Webserver is not accessible")
+            print("\nPlease start the game with webserver:")
+            print("  ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer")
+            print("\nOr use --start-server flag")
+            return 1
 
-    print("✓ Webserver is running and ready")
-
-    # Run tests
-    tester.run_all_tests(args.hero_class, args.specific_spell)
+        print("✓ Webserver is running and ready")
+        tester.run_all_tests(args.hero_class, args.specific_spell)
 
     # Print summary
     if args.json:
@@ -466,7 +517,7 @@ Examples:
                 "spell": r.spell,
                 "success": r.success,
                 "message": r.message,
-                "duration": r.duration
+                "duration": r.duration,
             }
             for r in tester.results
         ]

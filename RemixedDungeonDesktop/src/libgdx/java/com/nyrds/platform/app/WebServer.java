@@ -462,8 +462,64 @@ public class WebServer extends BaseWebServer {
 
     @Override
     public Response serve(IHTTPSession session) {
-        // Call the parent implementation which includes our new debug endpoints
+        String uri = session.getUri();
+        if ("/debug/screenshot".equals(uri)) {
+            return handleDebugScreenshot(session);
+        }
         return super.serve(session);
+    }
+
+    private Response handleDebugScreenshot(IHTTPSession session) {
+        try {
+            int width = com.badlogic.gdx.Gdx.graphics.getWidth();
+            int height = com.badlogic.gdx.Gdx.graphics.getHeight();
+
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            final byte[][] pngData = new byte[1][];
+            final String[] error = new String[1];
+
+            com.nyrds.pixeldungeon.game.GameLoop.pushUiTask(() -> {
+                try {
+                    com.badlogic.gdx.graphics.Pixmap pixmap = com.badlogic.gdx.graphics.Pixmap.createFromFrameBuffer(0, 0, width, height);
+                    if (pixmap == null) {
+                        error[0] = "Failed to capture screenshot";
+                        latch.countDown();
+                        return;
+                    }
+
+                    com.badlogic.gdx.files.FileHandle fileHandle = com.badlogic.gdx.Gdx.files.local("screenshot_tmp.png");
+                    com.badlogic.gdx.graphics.PixmapIO.writePNG(fileHandle, pixmap);
+                    pngData[0] = fileHandle.readBytes();
+                    fileHandle.delete();
+                    pixmap.dispose();
+                } catch (Exception e) {
+                    error[0] = "Error capturing screenshot: " + e.getMessage();
+                } finally {
+                    latch.countDown();
+                }
+            });
+
+            if (!latch.await(5, java.util.concurrent.TimeUnit.SECONDS)) {
+                return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for screenshot\"}");
+            }
+
+            if (error[0] != null) {
+                return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"" + error[0] + "\"}");
+            }
+
+            if (pngData[0] == null) {
+                return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Screenshot data is null\"}");
+            }
+
+            return newFixedLengthResponse(Response.Status.OK, "image/png",
+                new java.io.ByteArrayInputStream(pngData[0]), pngData[0].length);
+        } catch (Exception e) {
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
+                "{\"error\":\"" + e.getMessage() + "\"}");
+        }
     }
 
 

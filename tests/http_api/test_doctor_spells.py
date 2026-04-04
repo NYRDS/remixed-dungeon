@@ -4,12 +4,12 @@ Test script for Doctor class spells using the WebServer debug endpoints.
 
 Usage:
     python3 test_doctor_spells.py [--port PORT] [--host HOST]
+    python3 test_doctor_spells.py --start-server
 
 Prerequisites:
     - Run the desktop game with webserver in windowed mode:
       ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer --args="--windowed"
-    - Or use the helper script:
-      ./tests/http_api/start_game_server.sh
+    - Or use --start-server flag to start automatically
 
 WebServer Endpoints used:
     - /debug/start_game?class=DOCTOR - Start a game with Doctor class
@@ -24,117 +24,89 @@ WebServer Endpoints used:
     - /debug/get_items - Get items on level
 """
 
-import argparse
-import json
-import requests
-import time
+import os
 import sys
+import time
+import argparse
 from typing import Optional, Dict, Any, List
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from game_client import GameClient
+from test_server import ServerManager
 
 
 class DoctorSpellTester:
     def __init__(self, host: str = "localhost", port: int = 8080):
         self.base_url = f"http://{host}:{port}"
-        self.session = requests.Session()
-
-    def _get(self, endpoint: str) -> Dict[str, Any]:
-        """Make a GET request to an endpoint."""
-        url = f"{self.base_url}{endpoint}"
-        try:
-            response = self.session.get(url, timeout=10)
-            return response.json()
-        except Exception as e:
-            return {"error": str(e)}
-
-    def _post(self, endpoint: str) -> Dict[str, Any]:
-        """Make a POST request to an endpoint."""
-        url = f"{self.base_url}{endpoint}"
-        try:
-            response = self.session.post(url, timeout=10)
-            return response.json()
-        except Exception as e:
-            return {"error": str(e)}
-
-    def check_server(self) -> bool:
-        """Check if the webserver is running."""
-        try:
-            url = f"{self.base_url}/"
-            response = self.session.get(url, timeout=5)
-            return response.status_code == 200
-        except:
-            return False
+        self.client = GameClient(host, port)
 
     def start_game(
         self, hero_class: str = "DOCTOR", difficulty: int = 0
     ) -> Dict[str, Any]:
-        """Start a new game with specified hero class."""
-        return self._get(
-            f"/debug/start_game?class={hero_class}&difficulty={difficulty}"
-        )
+        return self.client.start_game(hero_class, difficulty)
 
     def get_game_state(self) -> Dict[str, Any]:
-        """Get current game state."""
-        return self._get("/debug/get_game_state")
+        return self.client.get_game_state()
 
     def get_hero_info(self) -> Dict[str, Any]:
-        """Get detailed hero information."""
-        return self._get("/debug/get_hero_info")
+        return self.client.get_hero_info()
 
     def get_available_spells(self) -> Dict[str, Any]:
-        """Get list of available spells."""
-        return self._get("/debug/get_available_spells")
+        return self.client.get_available_spells()
 
     def get_mobs(self) -> Dict[str, Any]:
-        """Get mobs on current level."""
-        return self._get("/debug/get_mobs")
+        return self.client.get_mobs()
 
     def create_mob(self, mob_type: str) -> Dict[str, Any]:
-        """Create a mob on the level."""
-        return self._get(f"/debug/create_mob?type={mob_type}")
+        return self.client.create_mob(mob_type)
 
     def kill_mob(self, x: int, y: int) -> Dict[str, Any]:
-        """Kill a mob at specified coordinates."""
-        return self._get(f"/debug/kill_mob?x={x}&y={y}")
+        return self.client.kill_mob(x, y)
 
     def cast_spell(self, spell_type: str) -> Dict[str, Any]:
-        """Cast a spell."""
-        return self._get(f"/debug/cast_spell?type={spell_type}")
+        return self.client.cast_spell(spell_type)
 
     def cast_spell_on_target(self, spell_type: str, x: int, y: int) -> Dict[str, Any]:
-        """Cast a spell on a specific target."""
-        return self._get(f"/debug/cast_spell_on_target?type={spell_type}&x={x}&y={y}")
+        return self.client.cast_spell_on_target(spell_type, x, y)
 
     def get_recent_logs(self) -> Dict[str, Any]:
-        """Get recent log messages."""
-        return self._get("/debug/get_recent_logs")
+        return self.client.get_recent_logs()
 
     def get_items(self) -> Dict[str, Any]:
-        """Get items on current level."""
-        return self._get("/debug/get_items")
+        return self.client.get_items()
 
     def get_level_info(self) -> Dict[str, Any]:
-        """Get level information."""
-        return self._get("/debug/get_level_info")
+        return self.client.get_level_info()
+
+
+def _wait_for_game(tester: DoctorSpellTester, timeout: int = 15) -> bool:
+    start = time.time()
+    while time.time() - start < timeout:
+        state = tester.get_game_state()
+        if "hero" in state and "error" not in state:
+            time.sleep(2)
+            return True
+        time.sleep(1)
+    return False
 
 
 def test_server_connection(tester: DoctorSpellTester) -> bool:
-    """Test if webserver is accessible."""
     print("=" * 60)
     print("TEST: Server Connection")
     print("=" * 60)
 
-    if tester.check_server():
+    if tester.client.check_server():
         print("✓ Webserver is running and accessible")
         return True
     else:
         print("✗ Webserver is not accessible")
         print("  Please start the game with webserver:")
         print("  ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer")
+        print("  Or use --start-server flag")
         return False
 
 
 def test_start_doctor_game(tester: DoctorSpellTester) -> bool:
-    """Test starting a game with Doctor class."""
     print("\n" + "=" * 60)
     print("TEST: Start Doctor Game")
     print("=" * 60)
@@ -152,7 +124,6 @@ def test_start_doctor_game(tester: DoctorSpellTester) -> bool:
 
 
 def test_hero_setup(tester: DoctorSpellTester) -> bool:
-    """Test that Doctor hero is properly set up."""
     print("\n" + "=" * 60)
     print("TEST: Hero Setup")
     print("=" * 60)
@@ -165,14 +136,12 @@ def test_hero_setup(tester: DoctorSpellTester) -> bool:
 
     success = True
 
-    # Check class
     if hero.get("class") == "DOCTOR":
         print(f"✓ Hero class: DOCTOR")
     else:
         print(f"✗ Hero class: {hero.get('class')} (expected DOCTOR)")
         success = False
 
-    # Check armor (DoctorArmor may be equipped, in inventory, or not yet assigned)
     armor = hero.get("armor", {})
     has_doctor_armor = "DoctorArmor" in armor.get(
         "__className", ""
@@ -180,7 +149,6 @@ def test_hero_setup(tester: DoctorSpellTester) -> bool:
     if has_doctor_armor:
         print(f"✓ Armor: DoctorArmor equipped")
     else:
-        # Check inventory for DoctorArmor
         inventory = hero.get("inventory", [])
         for item in inventory:
             if "DoctorArmor" in item.get(
@@ -190,10 +158,8 @@ def test_hero_setup(tester: DoctorSpellTester) -> bool:
                 has_doctor_armor = True
                 break
         if not has_doctor_armor:
-            # Doctor may not start with armor - this is a known game behavior
             print(f"⚠ Armor: Not equipped (Doctor may not start with armor by design)")
 
-    # Check weapon (BoneSaw)
     weapon = hero.get("weapon", {})
     if weapon.get("scriptFile") == "BoneSaw":
         print(f"✓ Weapon: BoneSaw equipped")
@@ -201,7 +167,6 @@ def test_hero_setup(tester: DoctorSpellTester) -> bool:
         print(f"✗ Weapon: {weapon.get('scriptFile', 'None')} (expected BoneSaw)")
         success = False
 
-    # Check ring (PlagueDoctorMask)
     ring1 = hero.get("ring1", {})
     if ring1.get("scriptFile") == "PlagueDoctorMask":
         print(f"✓ Ring: PlagueDoctorMask equipped")
@@ -209,7 +174,6 @@ def test_hero_setup(tester: DoctorSpellTester) -> bool:
         print(f"✗ Ring: {ring1.get('scriptFile', 'None')} (expected PlagueDoctorMask)")
         success = False
 
-    # Check magic affinity
     if hero.get("affinity") == "PlagueDoctor":
         print(f"✓ Magic affinity: PlagueDoctor")
     else:
@@ -218,7 +182,6 @@ def test_hero_setup(tester: DoctorSpellTester) -> bool:
         )
         success = False
 
-    # Check GasesImmunity buff
     buffs = hero.get("buffs", [])
     has_gas_immunity = any("GasesImmunity" in b.get("scriptFile", "") for b in buffs)
     if has_gas_immunity:
@@ -231,7 +194,6 @@ def test_hero_setup(tester: DoctorSpellTester) -> bool:
 
 
 def test_available_spells(tester: DoctorSpellTester) -> bool:
-    """Test that Doctor spells are available."""
     print("\n" + "=" * 60)
     print("TEST: Available Spells")
     print("=" * 60)
@@ -245,7 +207,6 @@ def test_available_spells(tester: DoctorSpellTester) -> bool:
     spells = result.get("spells", [])
     print(f"Total spells available: {len(spells)}")
 
-    # Doctor-specific spells
     doctor_spells = ["BloodTransfusion", "CorpseExplosion", "Anesthesia"]
 
     success = True
@@ -260,12 +221,10 @@ def test_available_spells(tester: DoctorSpellTester) -> bool:
 
 
 def test_blood_transfusion(tester: DoctorSpellTester) -> bool:
-    """Test BloodTransfusion spell."""
     print("\n" + "=" * 60)
     print("TEST: BloodTransfusion Spell")
     print("=" * 60)
 
-    # Cast the spell
     result = tester.cast_spell("BloodTransfusion")
 
     if result.get("success"):
@@ -274,17 +233,11 @@ def test_blood_transfusion(tester: DoctorSpellTester) -> bool:
         print(f"✗ Failed to cast spell: {result.get('error', 'Unknown error')}")
         return False
 
-    # Wait for spell to execute
     time.sleep(1)
 
-    # Check logs
     logs = tester.get_recent_logs()
     log_messages = logs.get("logs", [])
 
-    print(f"Recent logs: {log_messages}")
-
-    # BloodTransfusion requires a target with life essence
-    # It may fail if no valid target is nearby
     if any("BloodTransfusion" in str(log) for log in log_messages):
         print("✓ BloodTransfusion was processed")
         return True
@@ -293,37 +246,31 @@ def test_blood_transfusion(tester: DoctorSpellTester) -> bool:
         return True
     else:
         print("⚠ Spell may have failed silently")
-        return True  # Don't fail the test, just note it
+        return True
 
 
 def test_corpse_explosion(tester: DoctorSpellTester) -> bool:
-    """Test CorpseExplosion spell."""
     print("\n" + "=" * 60)
     print("TEST: CorpseExplosion Spell")
     print("=" * 60)
 
-    # First, try to create a mob and kill it to create a corpse
     print("Creating a Rat to generate a corpse...")
     mob_result = tester.create_mob("Rat")
 
     if "error" in mob_result:
         print(f"✗ Failed to create mob: {mob_result['error']}")
-        # Try casting anyway, maybe there's already a corpse
     else:
         x, y = mob_result.get("x"), mob_result.get("y")
         print(f"  Created Rat at ({x}, {y})")
 
-        # Kill the mob
         time.sleep(0.5)
         kill_result = tester.kill_mob(x, y)
 
         if "error" in kill_result:
             print(f"  ⚠ Could not kill mob: {kill_result['error']}")
-            # Mob may have moved, try casting anyway
         else:
             print(f"  Killed mob at ({x}, {y})")
 
-    # Cast CorpseExplosion
     time.sleep(0.5)
     result = tester.cast_spell("CorpseExplosion")
 
@@ -333,16 +280,11 @@ def test_corpse_explosion(tester: DoctorSpellTester) -> bool:
         print(f"✗ Failed to cast spell: {result.get('error', 'Unknown error')}")
         return False
 
-    # Wait for spell to execute
     time.sleep(1)
 
-    # Check logs
     logs = tester.get_recent_logs()
     log_messages = logs.get("logs", [])
 
-    print(f"Recent logs: {log_messages}")
-
-    # CorpseExplosion requires a Carcass item nearby
     if any("CorpseExplosion" in str(log) for log in log_messages):
         print("✓ CorpseExplosion was processed")
         return True
@@ -355,12 +297,10 @@ def test_corpse_explosion(tester: DoctorSpellTester) -> bool:
 
 
 def test_anesthesia(tester: DoctorSpellTester) -> bool:
-    """Test Anesthesia spell."""
     print("\n" + "=" * 60)
     print("TEST: Anesthesia Spell")
     print("=" * 60)
 
-    # Cast the spell
     result = tester.cast_spell("Anesthesia")
 
     if result.get("success"):
@@ -369,14 +309,10 @@ def test_anesthesia(tester: DoctorSpellTester) -> bool:
         print(f"✗ Failed to cast spell: {result.get('error', 'Unknown error')}")
         return False
 
-    # Wait for spell to execute
     time.sleep(1)
 
-    # Check logs
     logs = tester.get_recent_logs()
     log_messages = logs.get("logs", [])
-
-    print(f"Recent logs: {log_messages}")
 
     if any("Anesthesia" in str(log) for log in log_messages):
         print("✓ Anesthesia was processed")
@@ -387,7 +323,6 @@ def test_anesthesia(tester: DoctorSpellTester) -> bool:
 
 
 def run_all_tests(tester: DoctorSpellTester) -> Dict[str, bool]:
-    """Run all Doctor spell tests."""
     results = {}
 
     results["server_connection"] = test_server_connection(tester)
@@ -400,7 +335,7 @@ def run_all_tests(tester: DoctorSpellTester) -> Dict[str, bool]:
         print("\nCannot proceed without starting game.")
         return results
 
-    time.sleep(1)  # Wait for game to initialize
+    time.sleep(1)
 
     results["hero_setup"] = test_hero_setup(tester)
     results["available_spells"] = test_available_spells(tester)
@@ -421,6 +356,9 @@ def main():
     parser.add_argument(
         "--port", type=int, default=8080, help="WebServer port (default: 8080)"
     )
+    parser.add_argument(
+        "--start-server", action="store_true", help="Start game server automatically"
+    )
     args = parser.parse_args()
 
     print("=" * 60)
@@ -429,9 +367,19 @@ def main():
     print("=" * 60)
 
     tester = DoctorSpellTester(args.host, args.port)
-    results = run_all_tests(tester)
+    server = None
 
-    # Print summary
+    if args.start_server:
+        server = ServerManager(args.host, args.port, "doctor")
+        try:
+            if not server.start():
+                return 1
+            results = run_all_tests(tester)
+        finally:
+            server.stop()
+    else:
+        results = run_all_tests(tester)
+
     print("\n" + "=" * 60)
     print("TEST SUMMARY")
     print("=" * 60)
@@ -442,6 +390,9 @@ def main():
     for test_name, success in results.items():
         status = "✓ PASS" if success else "✗ FAIL"
         print(f"  {test_name}: {status}")
+
+    if server:
+        server.print_log_summary()
 
     print(f"\nTotal: {passed}/{total} tests passed")
 

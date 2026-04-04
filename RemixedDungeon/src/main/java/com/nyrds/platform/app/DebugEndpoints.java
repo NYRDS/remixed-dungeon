@@ -169,6 +169,7 @@ public class DebugEndpoints {
 
             // Add the mob to the game
             Actor.occupyCell(mob);
+            Dungeon.level.mobs.add(mob);
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"message\":\"Created mob '%s' at (%d,%d)\",\"mobType\":\"%s\",\"x\":%d,\"y\":%d,\"owned\":%b}",
@@ -766,9 +767,10 @@ public class DebugEndpoints {
             // Set the specified stat
             switch (stat.toLowerCase()) {
                 case "hp":
-                    // Note: HP is a private field, so we can't set it directly
-                    return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
-                        String.format("{\"error\":\"Setting HP directly is not supported through this endpoint.\"}"));
+                    Dungeon.hero.hp(Math.min(value, Dungeon.hero.ht()));
+                    return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                        String.format("{\"success\":true,\"message\":\"Set HP to %d\",\"stat\":\"%s\",\"value\":%d}",
+                            value, stat, value));
                 case "max_hp":
                 case "ht":
                     // Note: HT is a private field, so we can't set it directly
@@ -1311,6 +1313,106 @@ public class DebugEndpoints {
         }
     }
 
+    public static NanoHTTPD.Response handleDebugCastSpellOnMob(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            String spellName = null;
+            String mobType = null;
+            boolean ownedOnly = false;
+
+            if (query != null && !query.isEmpty()) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("spell=")) {
+                        spellName = java.net.URLDecoder.decode(param.substring(6), "UTF-8");
+                    } else if (param.startsWith("mobType=")) {
+                        mobType = java.net.URLDecoder.decode(param.substring(8), "UTF-8");
+                    } else if (param.equals("owned=true")) {
+                        ownedOnly = true;
+                    }
+                }
+            }
+
+            if (spellName == null || spellName.isEmpty()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Missing spell parameter").toString());
+            }
+            if (mobType == null || mobType.isEmpty()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Missing mobType parameter").toString());
+            }
+
+            final String finalSpellName = spellName;
+            final String finalMobType = mobType;
+            final boolean finalOwnedOnly = ownedOnly;
+
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            final String[] error = new String[1];
+            final boolean[] success = new boolean[1];
+
+            GameLoop.pushUiTask(() -> {
+                try {
+                    if (Dungeon.hero == null || Dungeon.level == null) {
+                        error[0] = "Game state not initialized";
+                    } else {
+                        Spell spell = SpellFactory.getSpellByName(finalSpellName);
+                        if (spell == null) {
+                            error[0] = "Spell not found: " + finalSpellName;
+                        } else {
+                            Mob targetMob = null;
+                            for (Mob mob : Dungeon.level.mobs) {
+                                String entityKind = mob.getEntityKind();
+                                String mobClassName = mob.getClass().getSimpleName();
+                                boolean typeMatches = entityKind.equalsIgnoreCase(finalMobType)
+                                    || mobClassName.equalsIgnoreCase(finalMobType)
+                                    || entityKind.toLowerCase().contains(finalMobType.toLowerCase())
+                                    || finalMobType.toLowerCase().contains(entityKind.toLowerCase());
+                                if (typeMatches) {
+                                    if (!finalOwnedOnly || mob.getOwnerId() == Dungeon.hero.getId()) {
+                                        targetMob = mob;
+                                        break;
+                                    }
+                                }
+                            }
+                            if (targetMob != null) {
+                                spell.castOnTarget(Dungeon.hero, targetMob);
+                                success[0] = true;
+                                GLog.i("Casting spell '" + finalSpellName + "' on " + finalMobType);
+                            } else {
+                                error[0] = "No matching mob found (type=" + finalMobType + ", owned=" + finalOwnedOnly + ")";
+                            }
+                        }
+                    }
+                } catch (Exception e) {
+                    error[0] = "Error: " + e.getMessage();
+                } finally {
+                    latch.countDown();
+                }
+            });
+
+            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            if (!completed) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for spell casting\"}");
+            }
+
+            Map<String, Object> response = new HashMap<>();
+            if (error[0] != null) {
+                response.put("success", false);
+                response.put("message", error[0]);
+            } else {
+                response.put("success", success[0]);
+                response.put("message", "Cast spell '" + spellName + "' on " + mobType);
+            }
+            response.put("spellType", spellName);
+            response.put("mobType", mobType);
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                new JSONObject(response).toString());
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Error casting spell on mob: " + e.getMessage()).toString());
+        }
+    }
+
     public static NanoHTTPD.Response handleDebugCastSpellOnTarget(NanoHTTPD.IHTTPSession session) {
         try {
             String query = session.getQueryParameterString();
@@ -1368,10 +1470,24 @@ public class DebugEndpoints {
                         } else {
                             Spell spell = SpellFactory.getSpellByName(finalSpellName);
                             if (spell != null) {
-                                // For targeted spells, we'll use the castOnRandomTarget method which selects an appropriate target
-                                // This bypasses the UI targeting and directly casts on a random valid target
-                                spell.castOnRandomTarget(Dungeon.hero);
-                                GLog.i("Casting spell '" + finalSpellName + "' on target (" + finalTargetX + "," + finalTargetY + ")");
+                                int targetCell = finalTargetX + finalTargetY * Dungeon.level.getWidth();
+                                Char target = null;
+                                for (Mob mob : Dungeon.level.mobs) {
+                                    if (mob.pos == targetCell) {
+                                        target = mob;
+                                        break;
+                                    }
+                                }
+                                if (target == null && Dungeon.hero.pos == targetCell) {
+                                    target = Dungeon.hero;
+                                }
+                                if (target != null) {
+                                    spell.castOnTarget(Dungeon.hero, target);
+                                    GLog.i("Casting spell '" + finalSpellName + "' on target at (" + finalTargetX + "," + finalTargetY + ")");
+                                } else {
+                                    error[0] = "No character found at (" + finalTargetX + "," + finalTargetY + ")";
+                                    GLog.n(error[0]);
+                                }
                             } else {
                                 error[0] = "Spell not found: " + finalSpellName;
                                 GLog.n(error[0]);
@@ -2440,92 +2556,7 @@ public class DebugEndpoints {
     }
 
     public static NanoHTTPD.Response handleDebugScreenshot(NanoHTTPD.IHTTPSession session) {
-        try {
-            // Use reflection to access libGDX classes (not available on Android)
-            Class<?> gdxClass = Class.forName("com.badlogic.gdx.Gdx");
-            Object graphics = gdxClass.getField("graphics").get(null);
-            Object files = gdxClass.getField("files").get(null);
-
-            int width = (Integer) graphics.getClass().getMethod("getWidth").invoke(graphics);
-            int height = (Integer) graphics.getClass().getMethod("getHeight").invoke(graphics);
-
-            // Use CountDownLatch to wait for screenshot to be captured on game thread
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
-            final String[] error = new String[1];
-            final String[] screenshotPath = new String[1];
-
-            // Schedule screenshot capture on game thread
-            GameLoop.pushUiTask(() -> {
-                try {
-                    Class<?> pixmapClass = Class.forName("com.badlogic.gdx.graphics.Pixmap");
-                    Object pixmap = pixmapClass.getMethod("createFromFrameBuffer", int.class, int.class, int.class, int.class)
-                        .invoke(null, 0, 0, width, height);
-
-                    if (pixmap == null) {
-                        error[0] = "Failed to capture screenshot";
-                        latch.countDown();
-                        return;
-                    }
-
-                    // Save to temporary file
-                    String path = "screenshot_" + System.currentTimeMillis() + ".png";
-                    Object fileHandle = files.getClass().getMethod("local", String.class).invoke(files, path);
-                    Class<?> pixmapIOClass = Class.forName("com.badlogic.gdx.graphics.PixmapIO");
-                    pixmapIOClass.getMethod("writePNG", fileHandle.getClass(), pixmapClass).invoke(null, fileHandle, pixmap);
-
-                    screenshotPath[0] = path;
-
-                    // Cleanup
-                    pixmap.getClass().getMethod("dispose").invoke(pixmap);
-
-                    GLog.i("Screenshot saved to: " + path);
-                } catch (Exception e) {
-                    error[0] = "Error capturing screenshot: " + e.getMessage();
-                    GLog.w("Error capturing screenshot: " + e.getMessage());
-                } finally {
-                    latch.countDown();
-                }
-            });
-
-            // Wait for screenshot to be captured (up to 5 seconds)
-            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
-
-            if (!completed) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
-                    "{\"error\":\"Timeout waiting for screenshot\"}");
-            }
-
-            if (error[0] != null) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
-                    createErrorResponse(error[0]).toString());
-            }
-
-            if (screenshotPath[0] == null) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
-                    createErrorResponse("Screenshot path not set").toString());
-            }
-
-            // Read the screenshot file via reflection
-            Object fileHandle = files.getClass().getMethod("local", String.class).invoke(files, screenshotPath[0]);
-            byte[] screenshotBytes = (byte[]) fileHandle.getClass().getMethod("readBytes").invoke(fileHandle);
-
-            // Delete the temporary file
-            fileHandle.getClass().getMethod("delete").invoke(fileHandle);
-
-            // Return PNG as response
-            return NanoHTTPD.newFixedLengthResponse(
-                NanoHTTPD.Response.Status.OK,
-                "image/png",
-                new java.io.ByteArrayInputStream(screenshotBytes),
-                screenshotBytes.length
-            );
-        } catch (ClassNotFoundException e) {
-            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
-                "{\"error\":\"Screenshot not supported on this platform\"}");
-        } catch (Exception e) {
-            GLog.w("Error in handleDebugScreenshot: " + e.getMessage());
-            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
-                createErrorResponse("Internal error: " + e.getMessage()).toString());
-        }
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.NOT_IMPLEMENTED, "application/json",
+            "{\"error\":\"Screenshot not supported on this platform\"}");
     }
 }
