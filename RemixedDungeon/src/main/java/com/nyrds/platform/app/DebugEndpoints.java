@@ -1831,28 +1831,15 @@ public class DebugEndpoints {
 
             position.cellId = startPos;
 
+            // Schedule InterlevelScene transition on GL thread and wait for level load
+            InterlevelScene.scheduleAndWait(InterlevelScene.Mode.RETURN, position, "Switching to level: " + levelId);
+
             String levelKind = DungeonGenerator.getLevelKind(levelId);
             int depth = DungeonGenerator.getLevelDepth(levelId);
 
-            // Build response BEFORE triggering scene change
-            String responseBody = String.format("{\"success\":true,\"levelId\":\"%s\",\"kind\":\"%s\",\"depth\":%d,\"entrance\":%d}",
-                levelId, levelKind, depth, startPos);
-
-            // Schedule the InterlevelScene transition to happen AFTER the HTTP response is sent.
-            // This avoids closing the connection mid-scene-change.
-            final Position finalPosition = position;
-            final String finalLevelId = levelId;
-            GameLoop.pushUiTask(() -> {
-                try {
-                    InterlevelScene.returnTo = finalPosition;
-                    InterlevelScene.Do(InterlevelScene.Mode.RETURN);
-                    GLog.i("Switching to level: " + finalLevelId);
-                } catch (Exception e) {
-                    GLog.w("Error switching level: " + e.getMessage());
-                }
-            });
-
-            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", responseBody);
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"levelId\":\"%s\",\"kind\":\"%s\",\"depth\":%d,\"entrance\":%d}",
+                    levelId, levelKind, depth, startPos));
         } catch (Exception e) {
             GLog.w("Error in handleDebugGoToLevel: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
@@ -1995,16 +1982,10 @@ public class DebugEndpoints {
                         targetLevelId, currentLevelId, exits.toString()));
             }
 
-            // Use InterlevelScene to descend
+            // Schedule InterlevelScene transition on GL thread and wait for level load
             final Position position = new Position();
             position.levelId = targetLevelId;
-            InterlevelScene.returnTo = position;
-            InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
-
-            // Wait for scene switch
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException ignored) {}
+            InterlevelScene.scheduleAndWait(InterlevelScene.Mode.DESCEND, position, "Descending to: " + targetLevelId);
 
             String levelKind = DungeonGenerator.getLevelKind(targetLevelId);
             int depth = DungeonGenerator.getLevelDepth(targetLevelId);
@@ -2050,11 +2031,10 @@ public class DebugEndpoints {
 
             String targetLevelId = entrances.getString(0);
 
-            // Use InterlevelScene to ascend
+            // Schedule InterlevelScene transition on GL thread and wait for level load
             final Position position = new Position();
             position.levelId = targetLevelId;
-            InterlevelScene.returnTo = position;
-            InterlevelScene.Do(InterlevelScene.Mode.ASCEND);
+            InterlevelScene.scheduleAndWait(InterlevelScene.Mode.ASCEND, position, "Ascending to: " + targetLevelId);
 
             String levelKind = DungeonGenerator.getLevelKind(targetLevelId);
             int depth = DungeonGenerator.getLevelDepth(targetLevelId);

@@ -18,13 +18,16 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndError;
 
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Collection;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 import lombok.SneakyThrows;
 
@@ -56,30 +59,42 @@ public class InterlevelScene extends PixelScene {
 
     volatile private String error = null;
 
+    /** Latch that signals when the current InterlevelScene's LevelChanger has finished loading the level. */
+    private static volatile CountDownLatch levelLoadedLatch = null;
+
     class LevelChanger implements Runnable {
 
         @SneakyThrows
         @Override
         public void run() {
-            switch (mode) {
-                case DESCEND:
-                    descend();
-                    break;
-                case ASCEND:
-                    ascend();
-                    break;
-                case CONTINUE:
-                    restoreAtPosition(null);
-                    break;
-                case RESURRECT:
-                    resurrect();
-                    break;
-                case RETURN:
-                    returnTo();
-                    break;
-                case FALL:
-                    fall();
-                    break;
+            CountDownLatch latchRef = levelLoadedLatch;
+            try {
+                switch (mode) {
+                    case DESCEND:
+                        descend();
+                        break;
+                    case ASCEND:
+                        ascend();
+                        break;
+                    case CONTINUE:
+                        restoreAtPosition(null);
+                        break;
+                    case RESURRECT:
+                        resurrect();
+                        break;
+                    case RETURN:
+                        returnTo();
+                        break;
+                    case FALL:
+                        fall();
+                        break;
+                }
+            } catch (Throwable e) {
+                com.watabou.pixeldungeon.utils.GLog.w("LevelChanger error: " + e.getMessage());
+            } finally {
+                if (latchRef != null) {
+                    latchRef.countDown();
+                }
             }
        }
     }
@@ -97,7 +112,38 @@ public class InterlevelScene extends PixelScene {
         }
 
         InterlevelScene.mode = mode;
+        // Only create a new latch if one wasn't already armed by a caller
+        if (levelLoadedLatch == null) {
+            levelLoadedLatch = new CountDownLatch(1);
+        }
         GameLoop.switchScene(InterlevelScene.class);
+    }
+
+    /**
+     * Arms a latch that will be counted down once the LevelChanger finishes loading the new level.
+     * Call this BEFORE scheduling InterlevelScene.Do() via pushUiTask, then await() on the returned latch.
+     */
+    static public java.util.concurrent.CountDownLatch armLevelLoadedLatch() {
+        levelLoadedLatch = new java.util.concurrent.CountDownLatch(1);
+        return levelLoadedLatch;
+    }
+
+    /**
+     * Schedule InterlevelScene transition on the GL thread and wait for level load completion.
+     * This is the preferred method for debug endpoints to trigger level changes.
+     */
+    static public void scheduleAndWait(Mode mode, Position position, String logMessage) {
+        java.util.concurrent.CountDownLatch latch = armLevelLoadedLatch();
+        returnTo = position;
+        GameLoop.pushUiTask(() -> {
+            Do(mode);
+            GLog.i(logMessage);
+        });
+        try {
+            latch.await(10, java.util.concurrent.TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 
     @Override
