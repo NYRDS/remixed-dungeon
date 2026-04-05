@@ -3,8 +3,7 @@
 Test screenshot functionality in minimized window mode.
 
 Usage:
-    python3 test_screenshot.py [--port PORT] [--output PATH]
-    python3 test_screenshot.py --start-server
+    python3 test_screenshot.py [--port PORT] [--output PATH] [--no-server]
 """
 
 import argparse
@@ -25,14 +24,16 @@ def main():
         "--output", default="/tmp/test_screenshot.png", help="Output file path"
     )
     parser.add_argument(
-        "--start-server", action="store_true", help="Start game server automatically"
+        "--no-server",
+        action="store_true",
+        help="Use existing server instead of starting one",
     )
     args = parser.parse_args()
 
     client = GameClient(args.host, args.port)
     server = None
 
-    if args.start_server:
+    if not args.no_server:
         server = ServerManager(args.host, args.port, "screenshot")
         if not server.start():
             return False

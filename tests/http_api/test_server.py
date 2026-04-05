@@ -61,7 +61,7 @@ class ServerManager:
             "-p",
             "RemixedDungeonDesktop",
             "runDesktopGameWithWebServer",
-            f"--args=--webserver={self.port} --minimized",
+            f"--args=--webserver={self.port} --windowed --width=800 --height=480",
         ]
         log_handle = open(self.log_file, "w")
         self.server_process = subprocess.Popen(

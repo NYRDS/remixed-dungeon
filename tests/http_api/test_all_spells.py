@@ -470,7 +470,9 @@ Examples:
     parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
     parser.add_argument("--json", action="store_true", help="Output results as JSON")
     parser.add_argument(
-        "--start-server", action="store_true", help="Start game server automatically"
+        "--no-server",
+        action="store_true",
+        help="Use existing server instead of starting one",
     )
 
     args = parser.parse_args()
@@ -488,7 +490,7 @@ Examples:
     tester = AllSpellsTester(args.host, args.port, args.verbose)
     server = None
 
-    if args.start_server:
+    if not args.no_server:
         server = ServerManager(args.host, args.port, "allspells")
         try:
             if not server.start():
@@ -503,7 +505,6 @@ Examples:
             print("✗ Webserver is not accessible")
             print("\nPlease start the game with webserver:")
             print("  ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer")
-            print("\nOr use --start-server flag")
             return 1
 
         print("✓ Webserver is running and ready")

@@ -3,13 +3,12 @@
 Test script for Doctor class spells using the WebServer debug endpoints.
 
 Usage:
-    python3 test_doctor_spells.py [--port PORT] [--host HOST]
-    python3 test_doctor_spells.py --start-server
+    python3 test_doctor_spells.py [--port PORT] [--host HOST] [--no-server]
 
 Prerequisites:
     - Run the desktop game with webserver in windowed mode:
       ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer --args="--windowed"
-    - Or use --start-server flag to start automatically
+    - Or use --no-server to skip automatic server start
 
 WebServer Endpoints used:
     - /debug/start_game?class=DOCTOR - Start a game with Doctor class
@@ -357,7 +356,9 @@ def main():
         "--port", type=int, default=8080, help="WebServer port (default: 8080)"
     )
     parser.add_argument(
-        "--start-server", action="store_true", help="Start game server automatically"
+        "--no-server",
+        action="store_true",
+        help="Use existing server instead of starting one",
     )
     args = parser.parse_args()
 
@@ -369,7 +370,7 @@ def main():
     tester = DoctorSpellTester(args.host, args.port)
     server = None
 
-    if args.start_server:
+    if not args.no_server:
         server = ServerManager(args.host, args.port, "doctor")
         try:
             if not server.start():

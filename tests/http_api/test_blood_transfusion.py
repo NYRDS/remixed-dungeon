@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
 """
-Comprehensive test for BloodTransfusion spell - all code paths.
-
-BloodTransfusion.lua castOnChar has 3 paths:
-  Path 1: target exists AND owned -> drain all HP, heal 95%, effects, return true
-  Path 2: target is nil -> log WontAgreed, return false
-  Path 3: target exists but not owned -> log WontAgreed, return false
+Test BloodTransfusion spell - all code paths
 
 Usage:
-    python3 test_blood_transfusion.py [--port PORT] [--host HOST]
-    python3 test_blood_transfusion.py --start-server
+    python3 test_blood_transfusion.py [--no-server]
 """
 
 import os
@@ -676,13 +670,15 @@ def main():
     parser.add_argument("--host", default="localhost")
     parser.add_argument("--port", type=int, default=8080)
     parser.add_argument(
-        "--start-server", action="store_true", help="Start game server automatically"
+        "--no-server",
+        action="store_true",
+        help="Use existing server instead of starting one",
     )
     args = parser.parse_args()
 
     runner = TestRunner(args.host, args.port)
 
-    if args.start_server:
+    if not args.no_server:
         try:
             if not runner.start_server():
                 return 1
@@ -695,7 +691,6 @@ def main():
             print(
                 'Start with: ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer --args="--minimized"'
             )
-            print("Or use --start-server flag")
             return 1
         return run_all(runner)
 

@@ -11,7 +11,7 @@ Tests:
 - Edge cases (8 tests)
 
 Usage:
-    python3 test_alchemy.py [--port PORT] [--host HOST] [--category CATEGORY] [--verbose] [--json]
+    python3 test_alchemy.py [--port PORT] [--host HOST] [--category CATEGORY] [--verbose] [--json] [--no-server]
 """
 
 import argparse
@@ -1903,7 +1903,9 @@ def main():
     parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
     parser.add_argument("--json", action="store_true", help="Output results as JSON")
     parser.add_argument(
-        "--start-server", action="store_true", help="Start game server automatically"
+        "--no-server",
+        action="store_true",
+        help="Use existing server instead of starting one",
     )
 
     args = parser.parse_args()
@@ -1911,7 +1913,7 @@ def main():
     tester = AlchemyTester(args.host, args.port, args.verbose)
     server = None
 
-    if args.start_server:
+    if not args.no_server:
         server = ServerManager(args.host, args.port, "alchemy")
         if not server.start():
             sys.exit(1)
@@ -1921,7 +1923,6 @@ def main():
             print(f"✗ Cannot connect to server at {args.host}:{args.port}")
             print("\nPlease start the game with webserver:")
             print("  ./gradlew -p RemixedDungeonDesktop runDesktopGameWithWebServer")
-            print("\nOr use --start-server flag")
             sys.exit(1)
         print("✓ Server connected")
 
