@@ -2483,6 +2483,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="YogsBrain_Name">yog agya</string>
     <string name="YogsBrain_Name_Objective">Yog agya</string>
     <string name="YogsEye_Desc">Az Ősi Isten szeme, egy mindent látó, örök gyűlölettel teli tekintet. Érzed, ahogy keresztülnéz a lelkeden.</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">yog szeme</string>
     <string name="YogsEye_Name_Objective">Yog szeme</string>
     <string name="YogsHeart_Desc">Évszázadokon keresztül hitték az emberek, hogy csak az igazán szívtelem teremtmények képesek tisztán gonosz cselekedetekre. És most mégis itt van elötted az Ősi Isten hatalmas dobogó szíve.</string>
@@ -2731,6 +2732,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
