@@ -1195,4 +1195,11 @@ public class GameScene extends PixelScene {
         throw new IllegalStateException("Scene not ready");
     }
 
+    @LuaInterface
+    public static void updateFog() {
+        if (isSceneReady() && scene.fog != null && Dungeon.level != null) {
+            scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
+        }
+    }
+
 }

@@ -2596,4 +2596,36 @@ public class DebugEndpoints {
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
     }
+
+    public static NanoHTTPD.Response handleDebugRevealMap(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"No level loaded\"}");
+            }
+
+            if (Dungeon.visible == null) {
+                Dungeon.visible = new boolean[Dungeon.level.getLength()];
+            }
+
+            // Reveal entire map
+            java.util.Arrays.fill(Dungeon.visible, true);
+            if (Dungeon.level.visited != null) {
+                java.util.Arrays.fill(Dungeon.level.visited, true);
+            }
+            if (Dungeon.level.mapped != null) {
+                java.util.Arrays.fill(Dungeon.level.mapped, true);
+            }
+
+            // Update fog of war
+            com.watabou.pixeldungeon.scenes.GameScene.updateFog();
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                "{\"success\":true,\"message\":\"Map revealed\"}");
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugRevealMap: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
 }

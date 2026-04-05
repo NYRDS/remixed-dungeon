@@ -71,7 +71,7 @@ def main():
             print(f"  ⚠ Could not toggle UI: {response.get('error', 'Unknown')}")
 
         # Wait for UI to hide
-        time.sleep(2)
+        time.sleep(1)
 
         # Generate screenshots
         screenshot_count = 0
@@ -91,6 +91,16 @@ def main():
                     )
                     continue
                 print(f"  ✓ Arrived at {level_id}")
+
+                # Reveal map for this level
+                print(f"  Revealing map...")
+                response = client._get("/debug/reveal_map")
+                if response.get("success", False):
+                    print(f"  ✓ {response.get('message', 'Map revealed')}")
+                else:
+                    print(
+                        f"  ⚠ Could not reveal map: {response.get('error', 'Unknown')}"
+                    )
 
                 time.sleep(2)
 
