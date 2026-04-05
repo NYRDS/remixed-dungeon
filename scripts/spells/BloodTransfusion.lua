@@ -25,13 +25,17 @@ return spell.init{
         end
 
         if target and target:getOwnerId() == caster:getId() then
-            -- Drain ALL blood from the target, killing them
-            local drainAmount = target:hp() -- Drain all HP, killing the target
-            local healAmount = drainAmount * 0.95 -- Nearly perfect transfer rate
+            -- Calculate exact heal needed to fully restore the doctor
+            local missingHp = caster:ht() - caster:hp()
+            -- Cap drain at target's current HP (can't drain more than they have)
+            local drainAmount = math.min(missingHp, target:hp())
+            -- Transfer rate scales with doctor skill level (55% at lvl 1, 100% at lvl 10)
+            local transferRate = math.min(1.0, 0.5 + caster:skillLevel() * 0.05)
+            local healAmount = drainAmount * transferRate
 
             -- Apply the drain to target and heal to caster
-            target:damage(drainAmount, caster) -- Damage the target (draining blood)
-            caster:heal(healAmount, caster) -- Heal the caster (receiving blood)
+            target:damage(drainAmount, caster)
+            caster:heal(healAmount, caster)
 
             -- Visual effects - more dramatic blood effect
             target:getSprite():emitter():start(RPD.Sfx.BloodParticle.FACTORY, 0.02, 30)

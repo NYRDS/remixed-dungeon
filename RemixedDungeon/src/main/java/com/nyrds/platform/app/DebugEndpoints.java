@@ -612,7 +612,18 @@ public class DebugEndpoints {
                 
                 Bundle mobBundle = new Bundle();
                 mob.storeInBundle(mobBundle);
-                mobsJson.append(mobBundle.serialize());
+                String mobJson = mobBundle.serialize();
+                // Remove trailing } and add id, pos, x, y, owned fields
+                if (mobJson.endsWith("}")) {
+                    mobJson = mobJson.substring(0, mobJson.length() - 1);
+                    int width = Dungeon.level.getWidth();
+                    int mobX = mob.pos % width;
+                    int mobY = mob.pos / width;
+                    boolean owned = mob.getOwnerId() == (Dungeon.hero != null ? Dungeon.hero.getId() : -1);
+                    mobJson += String.format(",\"id\":%d,\"pos\":%d,\"x\":%d,\"y\":%d,\"owned\":%b}",
+                        mob.getId(), mob.pos, mobX, mobY, owned);
+                }
+                mobsJson.append(mobJson);
                 first = false;
             }
             mobsJson.append("]");
@@ -804,29 +815,31 @@ public class DebugEndpoints {
         try {
             String query = session.getQueryParameterString();
             int x = -1, y = -1;
+            int mobId = -1;
 
             if (query != null && !query.isEmpty()) {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("x=")) {
                         try {
-                            x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
+                            x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
                     } else if (param.startsWith("y=")) {
                         try {
-                            y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
+                            y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
+                    } else if (param.startsWith("id=")) {
+                        try {
+                            mobId = Integer.parseInt(java.net.URLDecoder.decode(param.substring(3), "UTF-8"));
+                        } catch (NumberFormatException e) {
+                            // Ignore invalid id
+                        }
                     }
                 }
-            }
-
-            if (x < 0 || y < 0) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
-                    "{\"error\":\"Missing or invalid coordinates\"}");
             }
 
             // Check if game state is initialized
@@ -835,28 +848,38 @@ public class DebugEndpoints {
                     "{\"error\":\"Level not initialized - start a game first\"}");
             }
 
-            // Find mob at the specified coordinates
-            int cellPos = x + y * Dungeon.level.getWidth();
             Mob targetMob = null;
             
-            for (Mob mob : Dungeon.level.mobs) {
-                if (mob.pos == cellPos) {
-                    targetMob = mob;
-                    break;
+            if (mobId > 0) {
+                // Find mob by ID
+                for (Mob mob : Dungeon.level.mobs) {
+                    if (mob.getId() == mobId) {
+                        targetMob = mob;
+                        break;
+                    }
+                }
+            } else if (x >= 0 && y >= 0) {
+                // Find mob at the specified coordinates
+                int cellPos = x + y * Dungeon.level.getWidth();
+                for (Mob mob : Dungeon.level.mobs) {
+                    if (mob.pos == cellPos) {
+                        targetMob = mob;
+                        break;
+                    }
                 }
             }
 
             if (targetMob == null) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
-                    String.format("{\"error\":\"No mob found at coordinates (%d,%d)\"}", x, y));
+                    String.format("{\"error\":\"No mob found (id=%d or coords=(%d,%d))\"}", mobId, x, y));
             }
 
             // Kill the mob
-            targetMob.die(targetMob); // Use the mob itself as the cause of death to avoid null pointer
+            targetMob.die(targetMob);
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                String.format("{\"success\":true,\"message\":\"Killed mob at (%d,%d)\",\"x\":%d,\"y\":%d}",
-                    x, y, x, y));
+                String.format("{\"success\":true,\"message\":\"Killed mob with id=%d\",\"id\":%d}",
+                    targetMob.getId(), targetMob.getId()));
         } catch (Exception e) {
             GLog.w("Error in handleDebugKillMob: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",

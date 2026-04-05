@@ -108,8 +108,10 @@ class GameClient:
             endpoint += "&owned=true"
         return self._get(endpoint)
 
-    def kill_mob(self, x: int, y: int) -> Dict[str, Any]:
-        """Kill a mob at specified coordinates."""
+    def kill_mob(self, x: int = -1, y: int = -1, mob_id: int = -1) -> Dict[str, Any]:
+        """Kill a mob at specified coordinates or by ID."""
+        if mob_id > 0:
+            return self._get(f"/debug/kill_mob?id={mob_id}")
         return self._get(f"/debug/kill_mob?x={x}&y={y}")
 
     # Item Management

@@ -136,30 +136,22 @@ def _kill_all_mobs(runner: TestRunner) -> int:
     for _ in range(30):
         mobs_resp = runner.client.get_mobs()
         mob_list = mobs_resp.get("mobs", [])
-        if not mob_list:
+        # Filter out owned mobs
+        hostile_mobs = [m for m in mob_list if not m.get("owned", False)]
+        if not hostile_mobs:
             break
-        for m in mob_list[:5]:
-            pos = m.get("POS", m.get("pos"))
-            if pos is None:
-                for k in m:
-                    if k.upper() == "POS":
-                        pos = m[k]
-                        break
-            if pos is not None and isinstance(pos, (int, float)) and pos > 0:
-                level_info = runner.client.get_level_info()
-                width = level_info.get("width", 32)
-                if width > 0:
-                    x = int(pos) % width
-                    y = int(pos) // width
-                    result = runner.client.kill_mob(x, y)
-                    if result.get("success"):
-                        killed += 1
+        for m in hostile_mobs[:5]:
+            mob_id = m.get("id", -1)
+            if mob_id > 0:
+                result = runner.client.kill_mob(mob_id=mob_id)
+                if result.get("success"):
+                    killed += 1
         time.sleep(0.5)
     return killed
 
 
 def test_path1_owned_mob_drain_and_heal(runner: TestRunner) -> bool:
-    """Path 1: target exists AND owned -> drain all HP, heal 95%, return true."""
+    """Path 1: target exists AND owned -> drain needed HP, heal with skill-scaled rate, return true."""
     print("\nTEST: Path 1 - Owned mob drain and heal")
     print("-" * 40)
 
@@ -179,17 +171,18 @@ def test_path1_owned_mob_drain_and_heal(runner: TestRunner) -> bool:
     time.sleep(1)
 
     hero = runner.client.get_hero_info()
-    initial_hp = hero.get("HP", hero.get("hp", 0))
     max_hp = hero.get("HT", hero.get("ht", hero.get("maxHp", 0)))
-    print(f"  Hero HP before: {initial_hp}/{max_hp}")
+    skill_level = hero.get("skillLevel", hero.get("skill_level", 1))
+    print(f"  Hero max HP: {max_hp}, skillLevel: {skill_level}")
 
-    # Reduce hero HP to verify healing
-    damaged_hp = max_hp // 2
+    # Reduce hero HP significantly so missing HP > typical rat HP
+    damaged_hp = max_hp // 3
     runner.client.set_hero_stat("hp", damaged_hp)
     time.sleep(0.5)
     hero = runner.client.get_hero_info()
     initial_hp = hero.get("HP", hero.get("hp", 0))
-    print(f"  Hero HP reduced to: {initial_hp}/{max_hp}")
+    missing_hp = max_hp - initial_hp
+    print(f"  Hero HP reduced to: {initial_hp}/{max_hp} (missing {missing_hp})")
 
     result = runner.client.create_mob("Rat", owned=True)
     if "error" in result:
@@ -208,22 +201,30 @@ def test_path1_owned_mob_drain_and_heal(runner: TestRunner) -> bool:
     if not runner._check_lua_errors("path1_owned"):
         return False
 
+    # Verify mob died (rat HP < missing HP, so full drain)
     mobs = runner.client.get_mobs()
     mob_list = mobs.get("mobs", [])
     owned_alive = [m for m in mob_list if m.get("owned", False)]
     if owned_alive:
         print("  FAIL: Owned mob is still alive after drain")
         return False
-    print("  Owned mob died (drained)")
+    print("  Owned mob died (fully drained)")
 
     hero = runner.client.get_hero_info()
     final_hp = hero.get("HP", hero.get("hp", 0))
-    print(f"  Hero HP after: {final_hp}/{max_hp}")
+    heal_amount = final_hp - initial_hp
+    expected_rate = min(1.0, 0.5 + skill_level * 0.05)
+    # Rat was fully drained, so drainAmount = rat_hp, healAmount = rat_hp * rate
+    # We can't know exact rat HP, but heal should be positive and reasonable
+    print(f"  Hero healed: {initial_hp} -> {final_hp} (+{heal_amount})")
+    print(f"  Expected transfer rate: {expected_rate:.0%}")
 
-    if final_hp <= initial_hp:
-        print(f"  FAIL: Hero HP did not increase ({initial_hp} -> {final_hp})")
+    if heal_amount <= 0:
+        print(f"  FAIL: Hero was not healed")
         return False
-    print(f"  Hero healed: {initial_hp} -> {final_hp}")
+    # Verify heal is within reasonable bounds (at least 40% of missing HP, at most missing HP)
+    if heal_amount < missing_hp * 0.4 or heal_amount > missing_hp:
+        print(f"  WARN: Heal amount seems off ({heal_amount} vs missing {missing_hp})")
 
     logs = runner.client.get_recent_logs()
     log_messages = logs.get("logs", [])
@@ -373,135 +374,20 @@ def test_edge_multiple_owned_mobs(runner: TestRunner) -> bool:
 
     time.sleep(2)
 
-    result1 = runner.client.create_mob("Rat", owned=True)
-    if "error" in result1:
-        print(f"  Could not create first owned mob: {result1.get('error')}")
-        return False
-    mob1_x, mob1_y = result1.get("x"), result1.get("y")
-    print(f"  Created owned Rat 1 at ({mob1_x}, {mob1_y})")
-    time.sleep(0.5)
-
-    result2 = runner.client.create_mob("Rat", owned=True)
-    if "error" in result2:
-        print(f"  Could not create second owned mob: {result2.get('error')}")
-        return False
-    mob2_x, mob2_y = result2.get("x"), result2.get("y")
-    print(f"  Created owned Rat 2 at ({mob2_x}, {mob2_y})")
-    time.sleep(0.5)
-
-    result = runner.client.cast_spell_on_mob("BloodTransfusion", "Rat", owned=True)
-    if not result.get("success"):
-        print(f"  Could not cast spell: {result}")
-        return False
-    print("  Cast BloodTransfusion on Rat 1")
+    # Clear hostile mobs first
+    killed = _kill_all_mobs(runner)
+    print(f"  Cleared {killed} hostile mobs from level")
     time.sleep(1)
 
-    if not runner._check_lua_errors("edge_multiple"):
-        return False
-
-    mobs = runner.client.get_mobs()
-    mob_list = mobs.get("mobs", [])
-    owned_mobs = [m for m in mob_list if m.get("owned", False)]
-    mob1_alive = any(m.get("x") == mob1_x and m.get("y") == mob1_y for m in owned_mobs)
-    mob2_alive = any(m.get("x") == mob2_x and m.get("y") == mob2_y for m in owned_mobs)
-
-    if mob1_alive:
-        print("  FAIL: Rat 1 is still alive after drain")
-        return False
-    if not mob2_alive:
-        print("  WARN: Rat 2 also died (may have been killed by hostile mobs)")
-        print("  Verifying Rat 1 was correctly targeted...")
-        logs = runner.client.get_recent_logs()
-        log_messages = logs.get("logs", [])
-        wont_agreed = any("WontAgreed" in str(log) for log in log_messages)
-        if not wont_agreed:
-            print("  No WontAgreed found - spell executed (Rat 1 was drained)")
-            print("  All checks passed")
-            return True
-        return False
-    print("  Rat 1 died, Rat 2 still alive (correct targeting)")
-
-    state = runner.client.get_game_state()
-    if "error" in state:
-        print(f"  Game unresponsive: {state['error']}")
-        return False
-
-    print("  All checks passed")
-    return True
-
-
-def test_edge_full_hp_caster(runner: TestRunner) -> bool:
-    """Edge case: Caster with full HP - spell should drain mob (FullHP check may not work in Lua)."""
-    print("\nTEST: Edge - Full HP caster")
-    print("-" * 40)
-
-    result = runner.client.start_game("DOCTOR")
-    if not result.get("success"):
-        print(f"  Could not start Doctor game: {result.get('error')}")
-        return False
-    if not _wait_for_game(runner):
-        print("  Game did not initialize")
-        return False
-    print("  Game ready")
-
-    time.sleep(2)
-
+    # Damage hero so spell can actually drain
     hero = runner.client.get_hero_info()
     max_hp = hero.get("HT", hero.get("ht", hero.get("maxHp", 0)))
-    current_hp = hero.get("HP", hero.get("hp", 0))
-    print(f"  Hero HP: {current_hp}/{max_hp}")
-
-    result = runner.client.create_mob("Rat", owned=True)
-    if "error" in result:
-        print(f"  Could not create owned mob: {result.get('error')}")
-        return False
-    print(f"  Created owned Rat at ({result.get('x')}, {result.get('y')})")
-    time.sleep(1)
-
-    result = runner.client.cast_spell_on_mob("BloodTransfusion", "Rat", owned=True)
-    if not result.get("success"):
-        print(f"  Could not cast spell: {result}")
-        return False
-    print("  Cast BloodTransfusion")
-    time.sleep(2)
-
-    if not runner._check_lua_errors("edge_full_hp"):
-        return False
-
-    mobs = runner.client.get_mobs()
-    mob_list = mobs.get("mobs", [])
-    owned_alive = [m for m in mob_list if m.get("owned", False)]
-    if owned_alive:
-        print("  FAIL: Owned mob is still alive")
-        return False
-    print("  Owned mob died")
-
+    damaged_hp = max_hp // 2
+    runner.client.set_hero_stat("hp", damaged_hp)
+    time.sleep(0.5)
     hero = runner.client.get_hero_info()
-    final_hp = hero.get("HP", hero.get("hp", 0))
-    print(f"  Hero HP: {final_hp}/{max_hp}")
-
-    print("  All checks passed")
-    return True
-
-
-def test_edge_multiple_owned_mobs(runner: TestRunner) -> bool:
-    """Edge case: Multiple owned mobs - spell should drain only the targeted one."""
-    print("\nTEST: Edge - Multiple owned mobs")
-    print("-" * 40)
-
-    result = runner.client.start_game("DOCTOR")
-    if not result.get("success"):
-        print(f"  Could not start Doctor game: {result.get('error')}")
-        return False
-    if not _wait_for_game(runner):
-        print("  Game did not initialize")
-        return False
-    print("  Game ready")
-
-    time.sleep(2)
-
-    _kill_all_mobs(runner)
-    time.sleep(1)
+    initial_hp = hero.get("HP", hero.get("hp", 0))
+    print(f"  Hero HP reduced to: {initial_hp}/{max_hp}")
 
     result1 = runner.client.create_mob("Rat", owned=True)
     if "error" in result1:
@@ -521,7 +407,7 @@ def test_edge_multiple_owned_mobs(runner: TestRunner) -> bool:
 
     result = runner.client.cast_spell_on_target("BloodTransfusion", mob1_x, mob1_y)
     if not result.get("success"):
-        print(f"  Could not cast spell: {result.get('error')}")
+        print(f"  Could not cast spell: {result}")
         return False
     print("  Cast BloodTransfusion on Rat 1")
     time.sleep(1)
@@ -539,7 +425,7 @@ def test_edge_multiple_owned_mobs(runner: TestRunner) -> bool:
         print("  FAIL: Rat 1 is still alive after drain")
         return False
     if not mob2_alive:
-        print("  WARN: Rat 2 also died (may have been killed by hostile mobs)")
+        print("  WARN: Rat 2 also died (may have moved)")
         print("  Verifying Rat 1 was correctly targeted...")
         logs = runner.client.get_recent_logs()
         log_messages = logs.get("logs", [])
@@ -560,8 +446,111 @@ def test_edge_multiple_owned_mobs(runner: TestRunner) -> bool:
     return True
 
 
+def test_edge_partial_drain_mob_survives(runner: TestRunner) -> bool:
+    """Edge case: Mob has more HP than hero needs -> partial drain, mob survives."""
+    print("\nTEST: Edge - Partial drain, mob survives")
+    print("-" * 40)
+
+    result = runner.client.start_game("DOCTOR")
+    if not result.get("success"):
+        print(f"  Could not start Doctor game: {result.get('error')}")
+        return False
+    if not _wait_for_game(runner):
+        print("  Game did not initialize")
+        return False
+    print("  Game ready")
+
+    time.sleep(2)
+
+    # Go to a deeper level that should be empty
+    runner.client.change_level(2)
+    time.sleep(3)
+
+    # Wait for level to fully load
+    runner.client.wait_ticks(10)
+    time.sleep(1)
+
+    # Kill any hostile mobs on this level
+    killed = _kill_all_mobs(runner)
+    print(f"  Cleared {killed} hostile mobs from level")
+    time.sleep(1)
+
+    hero = runner.client.get_hero_info()
+    max_hp = hero.get("HT", hero.get("ht", hero.get("maxHp", 0)))
+    skill_level = hero.get("skillLevel", hero.get("skill_level", 1))
+    print(f"  Hero max HP: {max_hp}, skillLevel: {skill_level}")
+
+    # Reduce hero HP by a small amount (missing 5, rat has 8, so rat should survive with 3)
+    damaged_hp = max_hp - 5
+    runner.client.set_hero_stat("hp", damaged_hp)
+    time.sleep(0.5)
+    hero = runner.client.get_hero_info()
+    initial_hp = hero.get("HP", hero.get("hp", 0))
+    missing_hp = max_hp - initial_hp
+    print(f"  Hero HP reduced to: {initial_hp}/{max_hp} (missing {missing_hp})")
+
+    result = runner.client.create_mob("Rat", owned=True)
+    if "error" in result:
+        print(f"  Could not create owned mob: {result.get('error')}")
+        return False
+    mob_x, mob_y = result.get("x"), result.get("y")
+    print(f"  Created owned Rat at ({mob_x}, {mob_y})")
+    time.sleep(0.5)
+
+    # Verify mob exists before casting
+    mobs = runner.client.get_mobs()
+    print(f"  Mobs on level before cast: {len(mobs.get('mobs', []))}")
+
+    result = runner.client.cast_spell_on_target("BloodTransfusion", mob_x, mob_y)
+    if not result.get("success"):
+        print(f"  Could not cast spell: {result.get('error')}")
+        return False
+    print("  Cast BloodTransfusion on owned Rat")
+    time.sleep(0.5)
+
+    if not runner._check_lua_errors("edge_partial_drain"):
+        return False
+
+    # Check mob immediately after cast
+    mobs = runner.client.get_mobs()
+    mob_list = mobs.get("mobs", [])
+    print(f"  Mobs on level after cast: {len(mob_list)}")
+
+    owned_mobs = [m for m in mob_list if m.get("owned", False)]
+    print(f"  Owned mobs after cast: {len(owned_mobs)}")
+
+    if not owned_mobs:
+        print("  FAIL: No owned mobs found (died from drain or hostile mobs)")
+        return False
+
+    # Check if any owned mob survived (may have moved)
+    survived_mob = owned_mobs[0]
+    print(
+        f"  Owned mob survived at ({survived_mob.get('x')}, {survived_mob.get('y')}) - partial drain"
+    )
+
+    hero = runner.client.get_hero_info()
+    final_hp = hero.get("HP", hero.get("hp", 0))
+    heal_amount = final_hp - initial_hp
+    expected_rate = min(1.0, 0.5 + skill_level * 0.05)
+    print(f"  Hero healed: {initial_hp} -> {final_hp} (+{heal_amount})")
+    print(f"  Expected transfer rate: {expected_rate:.0%}")
+
+    if heal_amount <= 0:
+        print(f"  FAIL: Hero was not healed")
+        return False
+
+    state = runner.client.get_game_state()
+    if "error" in state:
+        print(f"  Game unresponsive: {state['error']}")
+        return False
+
+    print("  All checks passed")
+    return True
+
+
 def test_edge_full_hp_caster(runner: TestRunner) -> bool:
-    """Edge case: Caster with full HP - spell should still drain mob (heal is no-op)."""
+    """Edge case: Caster with full HP - spell should reject (no drain, no heal)."""
     print("\nTEST: Edge - Full HP caster")
     print("-" * 40)
 
@@ -576,7 +565,17 @@ def test_edge_full_hp_caster(runner: TestRunner) -> bool:
 
     time.sleep(2)
 
-    _kill_all_mobs(runner)
+    # Go to a deeper level that should be empty
+    runner.client.change_level(2)
+    time.sleep(3)
+
+    # Wait for level to fully load
+    runner.client.wait_ticks(10)
+    time.sleep(1)
+
+    # Kill any hostile mobs on this level
+    killed = _kill_all_mobs(runner)
+    print(f"  Cleared {killed} hostile mobs from level")
     time.sleep(1)
 
     hero = runner.client.get_hero_info()
@@ -597,26 +596,34 @@ def test_edge_full_hp_caster(runner: TestRunner) -> bool:
         print(f"  Could not cast spell: {result.get('error')}")
         return False
     print("  Cast BloodTransfusion")
-    time.sleep(2)
+    time.sleep(1)
 
     if not runner._check_lua_errors("edge_full_hp"):
         return False
 
+    # Check mob immediately
     mobs = runner.client.get_mobs()
     mob_list = mobs.get("mobs", [])
-    owned_at_pos = [
-        m
-        for m in mob_list
-        if m.get("owned", False) and m.get("x") == mob_x and m.get("y") == mob_y
-    ]
-    if owned_at_pos:
-        print("  FAIL: Owned mob is still alive")
+    owned_mobs = [m for m in mob_list if m.get("owned", False)]
+
+    if not owned_mobs:
+        print("  FAIL: No owned mobs found (mob died)")
         return False
-    print("  Owned mob died")
+
+    print("  Owned mob survived (spell rejected at full HP)")
 
     hero = runner.client.get_hero_info()
     final_hp = hero.get("HP", hero.get("hp", 0))
-    print(f"  Hero HP: {final_hp}/{max_hp}")
+    if final_hp != current_hp:
+        print(f"  WARN: Hero HP changed ({current_hp} -> {final_hp})")
+        print("  Note: HP may change from regen, not necessarily from spell")
+    else:
+        print(f"  Hero HP unchanged: {final_hp}")
+
+    state = runner.client.get_game_state()
+    if "error" in state:
+        print(f"  Game unresponsive: {state['error']}")
+        return False
 
     print("  All checks passed")
     return True
@@ -632,6 +639,9 @@ def run_all(runner: TestRunner) -> int:
     )
     runner._run_test(
         "edge_multiple_owned", lambda: test_edge_multiple_owned_mobs(runner)
+    )
+    runner._run_test(
+        "edge_partial_drain", lambda: test_edge_partial_drain_mob_survives(runner)
     )
     runner._run_test("edge_full_hp_caster", lambda: test_edge_full_hp_caster(runner))
 
