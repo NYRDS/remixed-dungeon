@@ -776,6 +776,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="FrostBuff_Info">Festgefroren, keinerlei Aktionen möglich.</string>
     <string name="FrostBuff_Name">Eingefroren</string>
     <string name="Frost_Shatter">Die Kälte lässt %s zerspringen!</string>
+    <string name="Froth_ArrowInKnee">Ich war früher ein Abenteurer wie Ihr,\naber dann traf mich ein Pfeil ins Knie...</string>
     <string name="FrozenCarpaccio_Info">Ein Stück gefrorenes Fleisch. Man kann es nur essen, wenn man dünne Scheiben davon abschneidet. Und dadurch schmeckt es überraschend gut.</string>
     <string name="FrozenCarpaccio_Info1">Du siehst, wie deine Hände unsichtbar werden!</string>
     <string name="FrozenCarpaccio_Info2">Du spürst, wie deine Haut fester wird!</string>
@@ -2889,6 +2890,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

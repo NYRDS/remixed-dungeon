@@ -1888,6 +1888,7 @@
     <string name="Snail_Desc">這個小軟體動物透過進食污物長得相當大，但他仍然非常緩慢，這使他成為一個容易面對的敵人。</string>
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">蝸牛</string>
+    <string name="SnipersMarkBuff_Name">狙擊手標記</string>
     <string name="SociologistNPC_AlreadyTaken">你已經反饋過了。請稍後再來</string>
     <string name="SociologistNPC_Desc">這位調研員專門收集你對這款混合地牢的意見和建議</string>
     <string name="SociologistNPC_DownloadError">抱歉，崩潰了，請稍後再試</string>
@@ -2820,6 +2821,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

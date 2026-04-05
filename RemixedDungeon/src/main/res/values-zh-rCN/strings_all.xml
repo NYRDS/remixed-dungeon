@@ -1747,6 +1747,7 @@
     <string name="RoyalShield_name">皇家盾牌</string>
     <string name="RubyBow_Info">只有最优秀的射手才能灵活运用这张红宝石做的弓。几乎每一箭都能贯穿且重创敌人，但是拉弓需要很强的力量。</string>
     <string name="RubyBow_Name">红石弓</string>
+    <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Info">这把致命的武器确实是矮人工程师的杰作。</string>
     <string name="RubyCrossbow_Name">红宝石弩</string>
     <string name="Rudolph_Info">还有什么比红鼻子更喜庆的呢？当然还有一对鹿角。</string>
@@ -2898,6 +2899,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
