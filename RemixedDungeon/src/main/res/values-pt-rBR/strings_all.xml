@@ -1967,6 +1967,7 @@ outro local do nível.</string>
     <string name="SpiderEgg_Name">ovo de aranha</string>
     <string name="SpiderEgg_Name_Objective">ovo de aranha</string>
     <string name="SpiderElite_Desc">Assim como os soldados, os guardas aranhas juram proteger seu reino. O veneno do guarda de elite é usado para desorientar seu alvo.</string>
+    <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">guarda de elite aranha</string>
     <string name="SpiderElite_Name_Objective">guarda de elite aranha</string>
     <string name="SpiderExploding_Desc">Trabalhadores duros durante tempos de paz, essa criatura não hesitará em cobrar  seus inimigos e pegará primeira planta que atravessar, transformando-se em uma bomba viva.</string>
@@ -2901,5 +2902,6 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 </resources>

@@ -1127,6 +1127,7 @@ Potrebbe bruciare?</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
+    <string name="LightBuff_Info">La luce emana dal corpo, illuminando tutto ciò che lo circonda.</string>
     <string name="LightBuff_Name">Illuminato</string>
     <string name="LightningTrap_Desc">Sei stato ucciso dalla scarica di una trappola fulminante</string>
     <string name="LightningTrap_Name">Trappola fulminante</string>
@@ -1622,6 +1623,7 @@ Potrebbe bruciare?</string>
     <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">teschio runico</string>
     <string name="RunicSkull_Name_Objective">teschio runico</string>
+    <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">A prima vista questa vecchia spada di bronzo ricoperta di polvere sembra inutile. Ma una sorta di vecchio, arcaico potere, dorme al suo interno. Questi poteri possono rendere quasi tutte le creature in schiavi senza volontà. Serve solo trovare la maniera giusta per svegliarli... </string>
     <string name="SacrificialSword_Name">Spada del sacrificio</string>
     <string name="SantaHat_Info">Niente ti mette nello stato d\'animo \&quot;Dungeoning\&quot; quanto il cappello di seta rossa di Babbo Natale, il Signore degli Abissi.</string>
@@ -2657,6 +2659,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
