@@ -357,6 +357,7 @@
     <string name="ChampionOfWaterBuff_Info">水之冠軍體現了海洋的不可戰勝之力，增強了生物的韌性和耐力。因此，它成為了一個堅定的對手，能夠經受住無情的攻擊轟炸，在逆境中成為不屈的守護者。</string>
     <string name="ChaosArmor_Info">這件盔甲的血紅色金屬板被暗紅的鐵鏈縫接在一起，當你觸碰它時會迸發出混沌能量。</string>
     <string name="ChaosArmor_Name">混沌護甲</string>
+    <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">一把充斥著混沌之力的駭人魔弓，每一發從它這裡射出的箭矢都會攜帶有一些混沌能量。但萬一失手……</string>
     <string name="ChaosBow_Name">混沌弓</string>
     <string name="ChaosCrystal_ArmorFused">水晶與你的護甲融合，並變成了混沌形態。</string>
@@ -426,6 +427,7 @@
     <string name="ChargrilledMeat_Name">烤肉</string>
     <string name="CharmBuff_Info">身心都被魅惑了！</string>
     <string name="CharmBuff_Name">魅惑</string>
+    <string name="CharmSpell_Cast">%s被魅惑了。</string>
     <string name="CharmSpell_Name">魅惑</string>
     <string name="Chasm_Chasm">裂縫</string>
     <string name="Chasm_Info">你摔死了……</string>
@@ -2821,6 +2823,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
