@@ -25,9 +25,8 @@ return spell.init{
     end,
 
     castOnChar = function(self, spell, caster, chr)
-
         RPD.affectBuff(chr, RPD.Buffs.Sleep, caster:skillLevel()):setSource(caster)
-
+        RPD.glogp("Calm_Cast", chr:getName())
         return true
     end
 }

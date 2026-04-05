@@ -2694,8 +2694,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="LightningBolt_Info">A spell that is shared among ancient shamans, that will shock your enemies twice as effectively, especially if they are foolish enough to be on standing on water.</string>
   <string name="Heal_Name">Heal</string>
   <string name="Heal_Info">A pretty useful spell in Dungeon, right?</string>
+  <string name="Heal_Cast">%s is healed.</string>
   <string name="Anesthesia_Name">Anesthesia</string>
   <string name="Anesthesia_Info">Induces a deep, unnatural sleep in your target. Even the most violent attacks won\'t wake them from this slumber.</string>
+  <string name="Anesthesia_Cast">%s falls into a deep, dreamless sleep.</string>
   <string name="CorpseExplosion_Name">Corpse Explosion</string>
   <string name="CorpseExplosion_Info">Transforms a corpse into a deadly cloud of toxic gas, spreading disease and poison to all nearby enemies.</string>
   <string name="BloodTransfusion_Name">Blood Transfusion</string>
@@ -2710,8 +2712,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="Spell_SelectAChar">Select a target being.</string>
   <string name="Calm_Name">Calm</string>
   <string name="Calm_Info">There are a lot of aggravated creatures around, let us help them.</string>
+  <string name="Calm_Cast">%s calms down.</string>
   <string name="CharmSpell_Name">Charm</string>
   <string name="CharmSpell_Info">Everyone deserve some love, right?</string>
+  <string name="CharmSpell_Cast">%s is charmed.</string>
   <string name="HideInGrassSpell_Name">Hide-In-Grass</string>
   <string name="HideInGrassSpell_Info">You perfected your Hide-and-seek mastery.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Even I can\'t hide in plain sight.</string>

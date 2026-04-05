@@ -25,9 +25,8 @@ return spell.init{
     end,
 
     castOnChar = function(self, spell, caster, chr)
-
         RPD.affectBuff(chr, "Charm", math.sqrt(caster:skillLevel() * caster:lvl()) + 5 ):setSource(caster)
-
+        RPD.glogp("CharmSpell_Cast", chr:getName())
         return true
     end
 }

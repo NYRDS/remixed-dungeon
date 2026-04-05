@@ -30,7 +30,9 @@ return spell.init{
         if target then
             local heal = target:ht() / 5. * caster:skillLevel()
             target:heal(math.max(1, heal), caster)
+            RPD.glogp("Heal_Cast", target:getName())
+            return true
         end
-        return true
+        return false
     end
 }

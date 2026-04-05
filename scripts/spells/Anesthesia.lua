@@ -32,6 +32,7 @@ return spell.init{
             -- Sound effect
             RPD.playSound("snd_meld")
 
+            RPD.glogp("Anesthesia_Cast", target:getName())
             return true
         end
         return false
