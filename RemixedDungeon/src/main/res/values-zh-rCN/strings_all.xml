@@ -554,6 +554,7 @@
     <string name="CrippleBuff_Info">身虽残，但目标仍鉴定，战斗还在继续。</string>
     <string name="CrippleBuff_Name">残疾</string>
     <string name="Crystal_Desc">巨大闪亮的水晶悬浮在空中。也许它充满了强大的魔法。</string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">悬浮水晶</string>
     <string name="Crystal_Name_Objective">悬浮水晶</string>
     <string name="CurareDart_Info">这些邪恶的小飞镖伤害不大，但能把目标麻痺，剩它静立无助一会。</string>
@@ -1623,6 +1624,7 @@
     <string name="RatKingCrown_Name">鼠王之冠</string>
     <string name="RatKing_Desc">这只老鼠比普通的老鼠更大，并且头上戴着一顶小小的皇冠。</string>
     <string name="RatKing_Died">国王死了。国王万岁！</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">我可没在睡觉！</string>
     <string name="RatKing_Info2">什么？我可没时间管。我的王国可不会自己运作！</string>
     <string name="RatKing_Info3">好大的胆子，弱小的凡人，胆敢触怒本王？！</string>
@@ -2896,5 +2898,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 </resources>
