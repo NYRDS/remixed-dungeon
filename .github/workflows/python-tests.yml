@@ -1,0 +1,55 @@
+name: python-tests
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  run-tests:
+    name: Run Python HTTP API Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install requests
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Run Blood Transfusion Tests
+        run: python3 tests/http_api/test_blood_transfusion.py --start-server
+        timeout-minutes: 15
+
+      - name: Run Level Navigation Tests
+        run: python3 tests/http_api/test_level_navigation.py --start-server
+        timeout-minutes: 15
+
+      - name: Run Doctor Spells Tests
+        run: python3 tests/http_api/test_doctor_spells.py --start-server
+        timeout-minutes: 15
+
+      - name: Run All Spells Tests
+        run: python3 tests/http_api/test_all_spells.py --start-server
+        timeout-minutes: 15
+
+      - name: Run Alchemy Tests
+        run: python3 tests/http_api/test_alchemy.py --start-server
+        timeout-minutes: 15
