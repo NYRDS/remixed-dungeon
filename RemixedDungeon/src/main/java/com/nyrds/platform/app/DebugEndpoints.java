@@ -2628,4 +2628,54 @@ public class DebugEndpoints {
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
     }
+
+    public static NanoHTTPD.Response handleDebugGetWarehouseRooms(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"No level loaded\"}");
+            }
+
+            java.util.List<java.util.Map<String, Integer>> warehouseRooms = new java.util.ArrayList<>();
+
+            // Check all rooms for warehouse type
+            if (Dungeon.level instanceof com.watabou.pixeldungeon.levels.RegularLevel) {
+                com.watabou.pixeldungeon.levels.RegularLevel regularLevel =
+                    (com.watabou.pixeldungeon.levels.RegularLevel) Dungeon.level;
+
+                java.util.Set<com.watabou.pixeldungeon.levels.Room> levelRooms = regularLevel.getRooms();
+                for (com.watabou.pixeldungeon.levels.Room room : levelRooms) {
+                    if (room.type == com.watabou.pixeldungeon.levels.Room.Type.WAREHOUSE) {
+                        java.util.Map<String, Integer> roomInfo = new java.util.HashMap<>();
+                        roomInfo.put("left", room.left);
+                        roomInfo.put("right", room.right);
+                        roomInfo.put("top", room.top);
+                        roomInfo.put("bottom", room.bottom);
+                        roomInfo.put("centerX", (room.left + room.right) / 2);
+                        roomInfo.put("centerY", (room.top + room.bottom) / 2);
+
+                        // Find entrance position
+                        if (room.entrance() != null) {
+                            roomInfo.put("entranceX", room.entrance().x);
+                            roomInfo.put("entranceY", room.entrance().y);
+                        }
+
+                        warehouseRooms.add(roomInfo);
+                    }
+                }
+            }
+
+            java.util.Map<String, Object> response = new java.util.HashMap<>();
+            response.put("success", true);
+            response.put("warehouseRooms", warehouseRooms);
+            response.put("count", warehouseRooms.size());
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                new com.google.gson.Gson().toJson(response));
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugGetWarehouseRooms: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
 }

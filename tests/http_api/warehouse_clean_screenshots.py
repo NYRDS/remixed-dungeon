@@ -102,7 +102,59 @@ def main():
                         f"  ⚠ Could not reveal map: {response.get('error', 'Unknown')}"
                     )
 
-                time.sleep(2)
+                time.sleep(1)
+
+                # Find warehouse rooms
+                print(f"  Looking for warehouse rooms...")
+                warehouse_response = client._get("/debug/get_warehouse_rooms")
+                if warehouse_response.get("success", False):
+                    warehouse_rooms = warehouse_response.get("warehouseRooms", [])
+                    print(f"  Found {len(warehouse_rooms)} warehouse room(s)")
+
+                    if warehouse_rooms:
+                        # Take screenshots at each warehouse room
+                        for i, room in enumerate(warehouse_rooms):
+                            if screenshot_count >= args.count:
+                                break
+
+                            center_x = room.get("centerX", 0)
+                            center_y = room.get("centerY", 0)
+
+                            print(
+                                f"  Moving to warehouse room {i + 1} at ({center_x}, {center_y})..."
+                            )
+                            client.move_hero(center_x, center_y)
+                            time.sleep(0.5)
+
+                            # Take screenshot at warehouse
+                            screenshot_path = (
+                                output_dir / f"{level_id}_warehouse_{i + 1}.png"
+                            )
+                            print(f"  Taking screenshot of warehouse room...")
+                            success = client.take_screenshot(str(screenshot_path))
+
+                            if success:
+                                file_size = os.path.getsize(screenshot_path)
+                                screenshot_count += 1
+                                print(
+                                    f"  ✓ Saved: {level_id}_warehouse_{i + 1}.png ({file_size:,} bytes)"
+                                )
+                            else:
+                                print(f"  ✗ Failed to take screenshot")
+
+                            time.sleep(0.5)
+
+                        # If we got screenshots from warehouses, continue to next level
+                        if screenshot_count > 0:
+                            continue
+
+                    print(f"  No warehouse rooms found, using default positions...")
+
+                else:
+                    print(
+                        f"  ⚠ Could not get warehouse rooms: {warehouse_response.get('error', 'Unknown')}"
+                    )
+                    print(f"  Using default positions...")
 
             # Get level info
             level_info = client.get_level_info()
