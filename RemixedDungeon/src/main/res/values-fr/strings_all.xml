@@ -60,6 +60,7 @@
     <string name="Amulet_ACEnd">FIN DU JEU</string>
     <string name="Amulet_Info">L\'amulette de Yendor est le plus puissant des artefacts d\'origine inconnue. On dit que l\'amulette est capable de satisfaire tous les souhaits si la volonté de son porteur est suffisante pour la \&quot;persuader\&quot; de le faire.</string>
     <string name="Amulet_Name">Amulette de Yendor</string>
+    <string name="AnesthesiaBuff_Name">Anesthésie</string>
     <string name="Anesthesia_Info">Provoque un sommeil profond et surnaturel chez votre cible. Même les attaques les plus violentes ne la réveilleront pas de ce sommeil.</string>
     <string name="Ankh_Info">Cet ancien symbole d\'immortalité offre la vie après la mort. La résurrection implique cependant la perte de tous les objets non-équipés.</string>
     <string name="Ankh_Name">Ankh</string>
@@ -3005,6 +3006,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
