@@ -12,8 +12,6 @@ import com.nyrds.pixeldungeon.levels.RandomLevel;
 import com.nyrds.pixeldungeon.levels.ShadowLordLevel;
 import com.nyrds.pixeldungeon.levels.TestLevel;
 import com.nyrds.pixeldungeon.levels.TownShopLevel;
-import com.nyrds.pixeldungeon.levels.WarehouseDemoLevel;
-import com.nyrds.pixeldungeon.levels.WarehouseTestLevel;
 import com.nyrds.pixeldungeon.spiders.levels.SpiderLevel;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.util.JsonHelper;
@@ -140,8 +138,6 @@ public class DungeonGenerator {
 		registerLevelClass(TownShopLevel.class);
 
 		registerLevelClass(TestLevel.class);
-		registerLevelClass(WarehouseTestLevel.class);
-		registerLevelClass(WarehouseDemoLevel.class);
 
 	}
 
