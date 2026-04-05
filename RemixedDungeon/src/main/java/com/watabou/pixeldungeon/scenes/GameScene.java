@@ -106,6 +106,9 @@ public class GameScene extends PixelScene {
 
     private static volatile GameScene scene;
 
+    // Flag to hide UI for clean screenshots
+    public static boolean hideUI = false;
+
     private SkinnedBlock water;
 
     private DungeonTilemap logicTiles;
@@ -304,27 +307,27 @@ public class GameScene extends PixelScene {
         statusPane = new StatusPane(hero, level);
         statusPane.camera = uiCamera;
         statusPane.setSize(uiCamera.width, 0);
-        add(statusPane);
+        if (!hideUI) add(statusPane);
 
         toolbar = new Toolbar(hero);
         toolbar.camera = uiCamera;
         toolbar.setRect(0, uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height());
-        add(toolbar);
+        if (!hideUI) add(toolbar);
 
         attack = new AttackIndicator(hero);
         attack.camera = uiCamera;
         attack.setPos(uiCamera.width - attack.width(), toolbar.top() - attack.height());
-        add(attack);
+        if (!hideUI) add(attack);
 
         resume = new ResumeIndicator(hero);
         resume.camera = uiCamera;
         resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
-        add(resume);
+        if (!hideUI) add(resume);
 
         log = new GameLog();
         log.camera = uiCamera;
         log.setRect(0, toolbar.top(), attack.left(), 0);
-        add(log);
+        if (!hideUI) add(log);
 
         if (Dungeon.depth < Statistics.deepestFloor) {
             GLog.i(StringsManager.getVar(R.string.GameScene_WelcomeBack), Dungeon.depth);
@@ -357,7 +360,7 @@ public class GameScene extends PixelScene {
         busy.camera = uiCamera;
         busy.setX(1);
         busy.setY(statusPane.bottom() + 18);
-        add(busy);
+        if (!hideUI) add(busy);
 
         sceneCreated = true;
 
@@ -1190,6 +1193,13 @@ public class GameScene extends PixelScene {
             return scene.baseTiles;
         }
         throw new IllegalStateException("Scene not ready");
+    }
+
+    @LuaInterface
+    public static void updateFog() {
+        if (isSceneReady() && scene.fog != null && Dungeon.level != null) {
+            scene.fog.updateVisibility(Dungeon.visible, Dungeon.level.visited, Dungeon.level.mapped);
+        }
     }
 
 }

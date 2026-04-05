@@ -814,4 +814,8 @@ public abstract class RegularLevel extends CustomLevel {
 
 		return pos;
 	}
+
+	public Set<Room> getRooms() {
+		return new HashSet<>(rooms);
+	}
 }

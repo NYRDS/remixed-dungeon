@@ -58,8 +58,12 @@ def main():
                 )
                 continue
 
-            print(f"  ✓ Game started, taking screenshot...")
-            time.sleep(0.5)  # Wait for level to render
+            print(f"  ✓ Game started, waiting for level to render...")
+
+            # Wait for game to process and render
+            time.sleep(4)  # Wait for level to fully load and render
+
+            print(f"  ✓ Taking screenshot...")
 
             success = client.take_screenshot(str(screenshot_path))
             if success:

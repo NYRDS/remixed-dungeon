@@ -85,6 +85,9 @@ public abstract class BaseWebServer extends NanoHTTPD {
         debugEndpoints.put("/debug/alchemy/get_inventory", DebugEndpoints::handleAlchemyGetInventory);
         debugEndpoints.put("/debug/alchemy/give_item", DebugEndpoints::handleAlchemyGiveItem);
         debugEndpoints.put("/debug/screenshot", DebugEndpoints::handleDebugScreenshot);
+        debugEndpoints.put("/debug/toggle_ui", DebugEndpoints::handleDebugToggleUI);
+        debugEndpoints.put("/debug/reveal_map", DebugEndpoints::handleDebugRevealMap);
+        debugEndpoints.put("/debug/get_warehouse_rooms", DebugEndpoints::handleDebugGetWarehouseRooms);
     }
 
     public static boolean isRunning() {
