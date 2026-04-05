@@ -830,6 +830,7 @@
     <string name="GoldenStatue_Desc">この立派な像がただの飾りではなく、無防備な冒険者を待ち構えている悪意ある生き物だとは、本当に信じられない。一見したところ、この像の「%s」は腕の一部に過ぎない。</string>
     <string name="GoldenStatue_Name">金の像</string>
     <string name="GoldenStatue_Name_Objective">金の像</string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="GoldenSword_Info">通常、金のような柔らかい金属で作られた武器は飾り程度にしかならない。にもかかわらず、この剣の刃はかなり物を切ることができるようだ。</string>
     <string name="GoldenSword_Name">金の剣</string>
     <string name="Golem_Defense">ブロックした</string>
@@ -2957,6 +2958,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
