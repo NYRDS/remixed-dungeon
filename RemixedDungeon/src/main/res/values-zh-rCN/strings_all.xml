@@ -1880,6 +1880,7 @@
     <string name="ShadowsBuff_Info">暗影中，你的目光暂时被黑暗遮住。</string>
     <string name="ShadowsBuff_Name">暗影融合</string>
     <string name="ShamanElder_Desc">这个特殊的豺狼人看起来比其他萨满老得多，在部落里肯定有更高的地位。一道奇怪的光环在他周围慢慢形成，似乎能反映出所有触及它的东西。</string>
+    <string name="ShamanElder_Gender">masculine</string>
     <string name="ShamanElder_Name">年长的萨满</string>
     <string name="ShamanElder_Name_Objective">年长的萨满</string>
     <string name="Shaman_Desc">只有那些最聪明的豺狼人才能掌握萨满魔法。豺狼萨满更喜欢用战斗咒语来弥补力量上的不足。任何敢于质疑它们在部落里地位的人都会被萨满用法术毫不留情地消灭。</string>
@@ -2894,4 +2895,5 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 </resources>

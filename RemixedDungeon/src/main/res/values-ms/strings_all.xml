@@ -1623,6 +1623,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="RottenRation_Info">sebelum ini ia boleh dimakan</string>
     <string name="RottenRation_Name">bekalan basi</string>
     <string name="RottingFist_Desc">Tumbukan Mereput Dewa Purba</string>
+    <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">tumbukan mereput</string>
     <string name="RottingFist_Name_Objective">tumbukan mereput</string>
     <string name="RoyalShield_name">Perisai Diraja</string>
@@ -2700,4 +2701,5 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 </resources>
