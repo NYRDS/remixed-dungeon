@@ -326,6 +326,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="CagedKobold_Name">kobold yang dikurung</string>
     <string name="CagedKobold_Name_Objective">kobold yang dikurung</string>
     <string name="CagedKobold_Quest_End">Oh, terima kasih, terima kasih banyak! Bagaimana Anda berhasil menemukan kuncinya? Kamu... kamu menghancurkan senjatanya?! Itu luar biasa! Anda tahu, saya bilang saya akan membantu Anda, dan saya pikir saya tahu cara terbaik untuk melakukannya. Aku akan tetap bersamamu untuk sementara waktu. * Kobold yang dikurung telah berubah menjadi lilin</string>
+    <string name="Calm_Cast">%s menjadi tenang.</string>
     <string name="Calm_Info">Ada banyak makhluk yang diperparah di sekitar, mari kita bantu mereka.</string>
     <string name="Calm_Name">Tenang</string>
     <string name="CandleOfMindVision_Info">Terlihat seperti lilin biasa, bukanlah hal yang akan Anda harapkan untuk ditemukan di dungeon berbahaya. Anehnya ini hangat, walaupun tidak menyala.</string>
@@ -2879,5 +2880,6 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 </resources>
