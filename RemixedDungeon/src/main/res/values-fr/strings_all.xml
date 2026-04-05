@@ -1481,6 +1481,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Pickaxe_ACMine">MINER</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">C\'est un outil grand et robuste fait pour casser la pierre. Il pourrait peut-être servir d\'arme.</string>
+    <string name="Pickaxe_InsufficientStr">Pas assez de force pour miner !</string>
     <string name="Pickaxe_Name">pioche</string>
     <string name="Pickaxe_NoVein">Il n\'y a aucune veine de minerai d\'or noir à proximité</string>
     <string name="Pickaxe_NothingToMine">Rien à miner ici !</string>
@@ -3004,6 +3005,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

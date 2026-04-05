@@ -409,6 +409,7 @@
     <string name="CharmBuff_Info">La mente e il corpo sono stati stregati!</string>
     <string name="CharmBuff_Name">Affascinato</string>
     <string name="CharmSpell_Info">Ognuno merita un po\' d\'amore, vero?</string>
+    <string name="CharmSpell_Name">Fascino</string>
     <string name="Chasm_Chasm">Baratro</string>
     <string name="Chasm_Info">Sei caduto da un posto alto...</string>
     <string name="Chasm_Jump">Vuoi davvero fare un salto nel baratro? Probabilmente si può morire.</string>
@@ -1813,6 +1814,7 @@ Potrebbe bruciare?</string>
     <string name="Spear_Info">Un\'asta di legno sottile che termina con una lama affilata. </string>
     <string name="Spear_Name">lancia</string>
     <string name="SpeedBuff_Info">Vivacità ed energia emanano dal corpo, e i movimenti si percepiscono più veloci del solito.</string>
+    <string name="SpeedBuff_Name">Velocità</string>
     <string name="SpellBook_Info">Sembra più un insieme di pagine diverse cucite insieme che un vero e proprio libro. Potresti essere in grado di cavarci fuori qualcosa se gli presterai la giusta attenzione.</string>
     <string name="SpellBook_Info_Identified">In queste pagine hai scoperto il testo completo della magia \&quot;%1$s\&quot;.\n\&quot;%2$s\&quot;</string>
     <string name="SpellBook_Name">Libro di magia</string>
@@ -2653,6 +2655,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
