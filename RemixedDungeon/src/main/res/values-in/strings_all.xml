@@ -1026,6 +1026,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Imp_Monks1">Apakah Anda seorang petualang? Saya suka petualang! Anda selalu dapat mengandalkan mereka jika ada sesuatu yang perlu dibunuh. Apakah saya benar? Untuk hadiah, tentu saja ;)\nDalam kasus saya ini adalah _monks_ yang perlu dibunuh. Anda tahu, saya akan memulai bisnis kecil di sini, tetapi orang gila ini tidak membeli apa pun sendiri dan akan menakuti pelanggan lain. Jadi tolong, bunuh... katakanlah _8 dari mereka_ dan hadiah menjadi milikmu.</string>
     <string name="Imp_Monks2">Ah, kamu masih hidup! Saya tahu bahwa kung-fu Anda lebih kuat ;) Jangan lupa untuk mengambil token biksu ini.</string>
     <string name="Imp_Name">imp ambisius</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Info">Lonjakan pada masing-masing anak panah ini dirancang untuk menjepitnya ke targetnya sementara senyawa tidak stabil yang diikatkan pada panjangnya meledak menjadi nyala api yang cemerlang.</string>
     <string name="IncendiaryDart_Name">dart membakar</string>
     <string name="InnKeeperNPC_Desc">Penjaga penginapan bangga pada dirinya sendiri.</string>
@@ -2878,4 +2879,5 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 </resources>

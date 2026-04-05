@@ -1166,6 +1166,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ManaPotion_Info">이 물약은 당신의 정신력을 회복시켜 줄 것입니다.</string>
     <string name="ManaPotion_Name">마나 회복의 물약</string>
     <string name="ManaRegenerationBuff_Info">마나 재생 기능은 버프 형태로 되어 있어 사용이 편리합니다.</string>
+    <string name="ManaShieldBuff_Name">마법 방패</string>
     <string name="Mana_Cost">마나 소모:</string>
     <string name="Mana_Title">마나</string>
     <string name="MedicineMask_Obtained">수술용 마스크 획득</string>
@@ -2703,6 +2704,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

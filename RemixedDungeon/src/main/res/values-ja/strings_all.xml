@@ -457,6 +457,7 @@
     <string name="ChargrilledMeat_Name">炭火焼肉</string>
     <string name="CharmBuff_Info">心も体も魅了された！</string>
     <string name="CharmBuff_Name">魅了</string>
+    <string name="CharmSpell_Cast">%sは魅了された。</string>
     <string name="CharmSpell_Info">誰だって愛されて当然だろう？</string>
     <string name="CharmSpell_Name">チャーム</string>
     <string name="Chasm_Chasm">割れ目</string>
@@ -2958,6 +2959,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
