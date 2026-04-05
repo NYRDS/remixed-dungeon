@@ -2582,4 +2582,18 @@ public class DebugEndpoints {
         return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.NOT_IMPLEMENTED, "application/json",
             "{\"error\":\"Screenshot not supported on this platform\"}");
     }
+
+    public static NanoHTTPD.Response handleDebugToggleUI(NanoHTTPD.IHTTPSession session) {
+        try {
+            com.watabou.pixeldungeon.scenes.GameScene.hideUI = !com.watabou.pixeldungeon.scenes.GameScene.hideUI;
+            boolean uiHidden = com.watabou.pixeldungeon.scenes.GameScene.hideUI;
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"uiHidden\":%b,\"message\":\"UI is now %s\"}", 
+                    uiHidden, uiHidden ? "hidden" : "visible"));
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugToggleUI: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
 }
