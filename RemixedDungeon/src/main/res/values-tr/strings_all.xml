@@ -1292,6 +1292,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="MeleeWeapon_Info7b">, ve lanetli olduğu için, bırakmak için yeterli güce sahip değilsin</string>
     <string name="MeleeWeapon_Info7c">%s\'in içinde kötü niyetli bir büyünün gizlendiğini hissedebilirsiniz.</string>
     <string name="MercenaryNPC_Desc">Sağlam görünümlü adam.</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">paralı asker</string>
     <string name="MercenaryNPC_Name_Objective">paralı asker</string>
     <string name="Metabolism_Txt">Metabolizmanın %sı</string>
@@ -2926,6 +2927,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

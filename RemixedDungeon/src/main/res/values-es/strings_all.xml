@@ -763,6 +763,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="FriedFish_Info">Pescado frito, luce sabroso.</string>
     <string name="FriedFish_Name">pescado frito</string>
     <string name="FriedFish_Taste">¡Sabroso!</string>
+    <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Puedes sentir como un aura de congelación emana de esta flecha.</string>
     <string name="FrostArrow_Name">flecha helada</string>
     <string name="FrostAuraBuff_Info">La escarcha rodea el cuerpo, lo que frena todo lo que se acerca.</string>
@@ -2928,6 +2929,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
