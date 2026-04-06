@@ -289,6 +289,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BlessedBuff_Name">Kutsanmış</string>
     <string name="BlindnessBuff_Info">Tamamen kör, sadece etraftaki sesler duyulabilir.</string>
     <string name="BlindnessBuff_Name">Kör oldun</string>
+    <string name="BloodTransfusion_Drained">Yaşam özü evcil hayvanınızdan size akıyor.</string>
     <string name="BodyArmorBuff_Info">Zırh, hareket için harcanan enerjiyi arttırdı.</string>
     <string name="BodyArmorBuff_Name">Vücut zırhı</string>
     <string name="BodyArmorSpell_Info">Ayrılmış kas gücünü etkinleştirerek geçici olarak daha güçlü hale getirir, böylece zırhınızı büyük ölçüde artırır, ancak hareket hızı pahasına.</string>
@@ -2928,6 +2929,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

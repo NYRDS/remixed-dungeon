@@ -220,6 +220,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="BellaNPC_Amulet_M">Mengapa halo di sana tampan, apa yang Anda miliki di sana. Ah, jimat yang sangat indah! Dan Anda... Anda berdiri di atas orang-orang bodoh itu. Bagaimana jika kita berjalan-jalan dan mendiskusikan masa depan kita bersama?</string>
     <string name="BellaNPC_Angry">Beraninya kau... dasar brengsek!</string>
     <string name="BellaNPC_Desc">Seorang gadis yang terlihat sangat mewah. Seluruh penampilannya memberitahu Anda \&quot;Saya baik untuk semua orang.\&quot;</string>
+    <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Saya tidak tertarik pada plebs seperti Anda!</string>
     <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
@@ -1313,6 +1314,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Mob_CantDoIt">Saya tidak bisa melakukannya. Saya memiliki cakar kecil.</string>
     <string name="Mob_Desc">Deskripsi sebenarnya akan datang!</string>
     <string name="Mob_Died">Anda mendengar ada sesuatu mati di kejauhan</string>
+    <string name="Mob_GoingTo">Sudah dalam perjalanan!</string>
     <string name="Mob_ReadyForOrder">%s siap untuk pesanan Anda.</string>
     <string name="Mob_StaAmokStatus">%1$s ini mengamuk</string>
     <string name="Mob_StaControlledStatus">%s ini ada dibawah kendali jahat</string>
@@ -2605,6 +2607,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WrnExperimental_realtime">Waktu sebenarnya! mode diaktifkan: ini adalah roguelike realtime sekarang, ketuk cepat atau mati.\nIngin memeriksa inventaris?\nSemoga berhasil melakukannya saat kepiting selokan memeriksa nyali Anda.</string>
     <string name="WrnExperimental_title">Opsi eksperimental diaktifkan!</string>
     <string name="Yog_Desc">Yog-Dzewa adalah Dewa Tua, sebuah makhluk kuat dari dunia khaos. Satu abad yang lalu, para kurcaci kuno memenangkan peperangan melawan pasukan setannya, tapi mereka tidak dapat mengalahkan dewa itu sendiri. Sebaliknya, mereka kemudian memenjarakan dewa itu di sebuah ruangan di bawah kota mereka, mereka percaya dewa itu sudah terlalu lemah untuk bangkit lagi.</string>
+    <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">Harapan adalah ilusi...</string>
     <string name="Yog_Name">Yog-Dzewa</string>
@@ -2886,6 +2889,9 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 
