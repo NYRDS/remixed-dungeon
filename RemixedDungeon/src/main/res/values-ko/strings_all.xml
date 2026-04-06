@@ -1270,6 +1270,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MysteryMeat_Info4">당신은 배가 부르다.</string>
     <string name="MysteryMeat_Message">이 음식.... 맛이 이상하군.</string>
     <string name="MysteryMeat_Name">알 수 없는 고기</string>
+    <string name="NatureArmorSpell_Info">엘프들도 강인해질 수 있습니다. 특히 대자연 그 자체의 보호를 받을 때는 말이죠.</string>
     <string name="NatureArmorSpell_Name">자연의 갑옷</string>
     <string name="NecromancerArmor_Info2">이 갑옷을 입는다면 강령술사는 \&quot;네크로티즘\&quot; 기술을 사용해 마법의 독을 뿌려서 근처의 모든 생물체에게 죽던 살던 강력한  영향을 끼칠 것입니다.</string>
     <string name="NecromancerArmor_Name">뼈 갑옷</string>
@@ -2711,6 +2712,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
