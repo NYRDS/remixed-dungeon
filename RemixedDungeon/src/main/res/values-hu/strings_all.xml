@@ -558,6 +558,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="DarkSacrifice_Self">Az Élőhalottakért!</string>
     <string name="DarkVeilBuff_Name">Sötét fátyol</string>
     <string name="Darkness_Info">Mintha az örökkévaló sötétség darabkái úsznának a levegőben.</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Ezek az egyszerű fémtüskék ideálisan súlyozottak ahhoz, hogy precízen kilyuggassák prédájukat.</string>
     <string name="Dart_Name">dobónyíl</string>
     <string name="DashSpell_Info">Rohanj egy bizonyos irányba, hogy a szembejövő ellenséget megsebezd és megbénítsd.</string>
@@ -2742,6 +2743,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

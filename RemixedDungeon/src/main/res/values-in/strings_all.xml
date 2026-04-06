@@ -608,6 +608,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="DieHardSpell_Info">Akan meningkatkan regenerasi Anda untuk sementara membuat Anda menjadi Susah Mati yang nyata.</string>
     <string name="DieHardSpell_Name">mati dengan susah payah</string>
     <string name="Displacement_Txt">%s pemindahan</string>
+    <string name="DoctorArmor_NotDoctor">Hanya dokter wabah yang bisa menggunakan baju besi ini!</string>
     <string name="DogeMask_Info">Apakah Anda pernah ingin menyamar sebagai Doge yang terkenal? Sekarang adalah kesempatanmu!\nTopeng seperti itu! Banyak Penyamaran! Wow!</string>
     <string name="DogeMask_Name">Topeng doge</string>
     <string name="DonateButton_pleaseDonate">mohon mepertimbangkan untuk mendonasi</string>
@@ -2885,6 +2886,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
