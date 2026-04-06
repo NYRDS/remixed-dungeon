@@ -1689,6 +1689,7 @@
     <string name="Ring_Info3b"> проклято, ти не в змозі зняти його.</string>
     <string name="Ring_Info4">%1$s\n\nТи відчуваєш зловісну магію, що прокралась в %2$s.</string>
     <string name="Ring_Name">перстень з %s</string>
+    <string name="Roar_Info">Цей могутній рик без сумніву наведе жах на ваших ворогів та надихне союзників.</string>
     <string name="RogueArmor_ACSpecial">ДИМОВА БОМБА</string>
     <string name="RogueArmor_Desc">Одягнувши цей темний одяг, крадій може виконати трюк, який називається \&quot;димова бомба\&quot; (хоча ніякі реальні вибухові речовини не використовуються): він засліплює ворогів, які могли бачити його і відскакує.</string>
     <string name="RogueArmor_Fov">Ти можеш стрибнути тільки на порожнє місце в полі зору.</string>
@@ -2827,6 +2828,7 @@
     <string name="town_table_fortune_ball_desc">Кришталева куля, із загадковим туманом всередині.</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

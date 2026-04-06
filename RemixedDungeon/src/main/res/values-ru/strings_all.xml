@@ -909,6 +909,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Halls_TileWater">Холодная лава</string>
     <string name="Haste_Info">Спешка позволяет двигаться с настолько невообразимой скоростью что все вокруг выглядит замершим. Движение с такой скоростью требует огромного напряжения сил и возможно только на краткий период времени.\n\nВеликие мастера способны дольше выдерживать такую скорость.</string>
     <string name="Haste_Name">Неимоверная Спешка</string>
+    <string name="Heal_Cast">%s исцелён.</string>
     <string name="Heal_Info">Довольно полезное заклятье в Подземелье, верно?</string>
     <string name="Heal_Name">Исцеление</string>
     <string name="HealerNPC_Desc">Этот старик весьма походит на того, кто мог бы заниматься производством волшебных палочек.</string>
@@ -3071,6 +3072,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 
