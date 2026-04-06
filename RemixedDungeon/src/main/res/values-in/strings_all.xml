@@ -2035,6 +2035,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Stylus_Name">stylus misterius</string>
     <string name="Stylus_SelectArmor">Pilih item untuk digoreskan sesuatu</string>
     <string name="Succubus_Desc">Para succubus adalah setan perempuan yang terlihat menarik (dengan cara yang agak gotik). Menggunakan sihirnya, succubus dapat mempesona pahlawan, sehingga tidak menyerang apapun sampai efeknya hilang.</string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">succubus</string>
     <string name="Succubus_Name_Objective">succubus</string>
     <string name="SummonBeast_AtYourCommand">Atas perintah Anda!</string>
@@ -2882,6 +2883,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

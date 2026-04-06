@@ -1706,6 +1706,7 @@
     <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">符文頭骨</string>
     <string name="RunicSkull_Name_Objective">符文頭骨</string>
+    <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">這把銹漬斑斑的老舊青銅劍看起來相當無用，可是您感到其中沈睡著某種古老的力量。這種力量能夠將幾乎任何生物變成無意識的奴隸，僅當您能找到喚醒它的方法的話……</string>
     <string name="SacrificialSword_Name">獻祭之劍</string>
     <string name="SantaHat_Info">誰說牢誕盛行深淵霸主Santa的紅絲帽？</string>
@@ -1905,6 +1906,7 @@
     <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">這是你從靈魂之罐的殘余中拿取的一塊碎片。它散發著神秘的能量，也許有人會對這東西感興趣。</string>
     <string name="SoulShard_Name">靈魂碎片</string>
+    <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">這是一根裝著鋒銳鐵戈的細幼木杖。</string>
     <string name="Spear_Name">長矛</string>
     <string name="SpeedBuff_Info">身體散發出活力和能量，動作感覺比平常更快。</string>
@@ -2823,6 +2825,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
