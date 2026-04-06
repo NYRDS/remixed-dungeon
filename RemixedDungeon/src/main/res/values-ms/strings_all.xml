@@ -1479,6 +1479,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PseudoPasty_Info">Pai Cornwall asli ini mengandungi inti tradisi daging dan ubi kentang.</string>
     <string name="PseudoPasty_Name">pai</string>
     <string name="PseudoRat_Desc">Seekor makhluk yang menakutkan keluar dari bangkai tikus yang tidak menyerupai pun seekor tikus atau lain-lain haiwan yang anda pernah lihat. Mulut bersaiz besar, giginya tajam, yang lebih besar dari badannya.</string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">Tikus-palsu</string>
     <string name="PseudoRat_Name_Objective">Tikus-palsu</string>
     <string name="PumpkinPie_Info">Pai labu yang sedap, macam pai yang dibakar oleh ibu anda.</string>
@@ -2710,6 +2711,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

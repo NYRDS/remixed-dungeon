@@ -2568,6 +2568,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="WndSettings_Brightness">Parlaklık</string>
     <string name="WndSettings_ClassicFont">Klasik</string>
     <string name="WndSettings_ExperementalFont">Yeni Yazıtipi</string>
+    <string name="WndSettings_FpsLimit">FPS sınırı</string>
     <string name="WndSettings_GameplaySettings">Oynanış</string>
     <string name="WndSettings_Handedness">El kullanımı</string>
     <string name="WndSettings_Immersive">Sürükleyici mod</string>
@@ -2927,6 +2928,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
