@@ -523,6 +523,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Combo_Combo">%d combo pukulan</string>
     <string name="CommonArrow_Info">Anak panah biasa dengan besi sebagai ujungnya.</string>
     <string name="CommonArrow_Name">anak panah</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">Busur silang yang diperbagus ini terbukti lebih efisien dibandingkan versi kayunya.</string>
     <string name="CompositeCrossbow_Name">Busur silang buatan</string>
     <string name="CompoundBow_Info">Anak panah diluncurkan dari busur gabungan menyebabkan serangan yang kuat dan telah diperbaharui akurasinya dengan harga beberapa kecepatan.</string>
@@ -2883,8 +2884,6 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
-
-
 
 
 

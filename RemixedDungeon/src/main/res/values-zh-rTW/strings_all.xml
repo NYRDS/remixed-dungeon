@@ -667,6 +667,7 @@
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">此武器以特製合金製造，故它比一般匕首更輕。</string>
     <string name="ElvenDagger_Name">矮人匕首</string>
+    <string name="EncumbranceBuff_CharAct_3">在我使用%s之前，我需要鍛鍊我的力量。</string>
     <string name="EncumbranceBuff_CharAct_5">我現在無法承受%s的重量。</string>
     <string name="EncumbranceBuff_Name">負擔</string>
     <string name="EnslavedSoul_Desc">這個幽靈幾乎是透明的。即使它看起來就是一個頭骨，但有那麼幾個瞬間，你能看到上邊浮現出一幅充滿痛苦與折磨的面孔。</string>
@@ -1837,6 +1838,7 @@
     <string name="ShamanElder_Name">長老薩滿</string>
     <string name="ShamanElder_Name_Objective">長老薩滿</string>
     <string name="Shaman_Desc">只有那些最聰明的豺狼人才能掌握薩滿魔法。豺狼薩滿更喜歡用戰鬥魔法來彌補力量上的不足。任何敢於質疑它們在部落裏地位的人都會被薩滿用法術毫不留情地消滅。</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">%s的閃電殺死了你……</string>
     <string name="Shaman_Name">豺狼薩滿</string>
     <string name="Shaman_Name_Objective">豺狼薩滿</string>
@@ -2825,7 +2827,6 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
-
 
 
 
