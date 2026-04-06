@@ -1945,6 +1945,7 @@ outro local do nível.</string>
     <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">É um fragmento que você tirou dos restos do Jarro de Almas. Tem um brilho de energia misteriosa, talvez haja alguém interessado nisso.</string>
     <string name="SoulShard_Name">Fragmento de alma</string>
+    <string name="Spear_Gender">feminine</string>
     <string name="Spear_Info">A haste de madeira com ponta delgada com ferro afiada.</string>
     <string name="Spear_Name">Lança</string>
     <string name="SpeedBuff_Info">Vivacidade e energia emanam do corpo, e os movimentos parecem mais rápidos que o normal.</string>
@@ -2903,6 +2904,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -1838,6 +1838,7 @@
     <string name="Shadow_Name">陰影</string>
     <string name="Shadow_Name_Objective">陰影</string>
     <string name="ShadowsBuff_Name">暗影融合</string>
+    <string name="ShamanElder_Desc">這隻特定的熊人看起來比其他薩滿年長許多，在部落中肯定擁有更高的地位。一股奇怪的靈氣在他周圍緩緩形成，似乎能反彈所有接觸到它的事物。</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="ShamanElder_Name">長老薩滿</string>
     <string name="ShamanElder_Name_Objective">長老薩滿</string>
@@ -2831,6 +2832,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

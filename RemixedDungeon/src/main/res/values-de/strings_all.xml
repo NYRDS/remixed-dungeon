@@ -2093,6 +2093,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="SummonBeast_Name">Tierruf</string>
     <string name="SummonDeathling_Info">Beschwört einen Untoten, welcher dir folgt. Die Leben und der Schaden des Untoten erhöhen sich mit dem Level des Helden. \n\nBeschwörungslimit: %1$d (+1 je Magielevel)</string>
     <string name="SummonDeathling_Name">Beschwöre einen Untoten</string>
+    <string name="SungrassBuff_Info">Aus dem Boden sind Wurzeln gesprossen, die heilende Kräuter spenden.</string>
     <string name="SungrassBuff_Name">pflanzliche Heilung</string>
     <string name="Sungrass_Desc">Der Samen des Sonnengrases ist für seine heilende Eigenschaft bekannt.</string>
     <string name="Sungrass_Name">Sonnengras</string>
@@ -2891,6 +2892,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
