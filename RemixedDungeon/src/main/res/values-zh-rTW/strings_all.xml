@@ -597,6 +597,7 @@
     <string name="DieHardSpell_Info">會暫時增加你的回復速度，讓你成為真正的死神。</string>
     <string name="DieHardSpell_Name">再起</string>
     <string name="Displacement_Txt">位移 %s</string>
+    <string name="DoctorSpecial">瘴氣雲</string>
     <string name="DogeMask_Info">你想偽裝成著名的狗嗎？現在是你的機會！\n這樣的面具！偽裝性很強！真的！</string>
     <string name="DogeMask_Name">柴犬面具</string>
     <string name="DonateButton_pleaseDonate">請考慮捐獻</string>
@@ -799,6 +800,7 @@
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">魔像</string>
     <string name="Golem_Name_Objective">魔像</string>
+    <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">粘咕正在不斷地抽動！</string>
     <string name="Goo_Info2">咕……咕……</string>
     <string name="Goo_Info3">咕-咕！</string>
@@ -2828,6 +2830,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
