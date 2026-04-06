@@ -674,6 +674,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ElfArmor_Desc">Dengan bantuan mantel ini elf dapat memanggil kekuatan alam sendiri. Rumput tinggi akan tumbuh dalam kedipan mata bahkan sampai menembus batu kuat yang melumpuhkan semua musuh dalam sebuah pandangan.</string>
     <string name="ElfArmor_Name">Mantel elf</string>
     <string name="ElfArmor_NotElf">Hanya elf yang dapat menggunakan zirah ini!</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Contoh keahlian elf yang luar biasa. Ini jelas lebih efektif dan akurat daripada busur kayu biasa.</string>
     <string name="ElvenBow_Name">busur elf</string>
     <string name="ElvenDagger_Gender">masculine</string>
@@ -2881,6 +2882,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
