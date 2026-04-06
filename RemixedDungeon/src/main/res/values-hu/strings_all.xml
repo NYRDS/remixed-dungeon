@@ -1931,6 +1931,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Spinner_Name">barlangi pók</string>
     <string name="Spinner_Name_Objective">barlangi pók</string>
     <string name="SpiritOfPain_Desc">Az élő sötétség egy szilánkja.</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">fájdalom lelke</string>
     <string name="SpiritOfPain_Name_Objective">fájdalom lelke</string>
     <string name="Sprout_Name">Hajtás</string>
@@ -2309,6 +2310,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndInfoItem_Tomb">Sír</string>
     <string name="WndInfoItem_WontKnow">Nem tudod, hogy mi van benne amíg ki nem nyitod!</string>
     <string name="WndInstallingMod_deleting_file">Törlés: %s</string>
+    <string name="WndInstallingMod_please_wait">Mod telepítése, kis türelmet...</string>
     <string name="WndInstallingMod_skipping_file">Kihagyás: %s</string>
     <string name="WndItemAlchemy_NoRecipes">Nincsenek elérhető receptek ezzel a tárggyal és a jelenlegi felszereléseddel.</string>
     <string name="WndItemAlchemy_SelectRecipe">Recept kiválasztása</string>
@@ -2743,6 +2745,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

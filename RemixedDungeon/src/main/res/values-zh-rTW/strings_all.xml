@@ -282,6 +282,7 @@
     <string name="BoneSaw_Info">一把精密工程設計的外科鋸，專為快速解剖而設計。隨著瘟疫醫生技能的提升，其傷害和攻擊速度變得更加致命。暴擊會從敵人身上雕刻出額外的可收穫部位，並且它對麻痹的敵人進行無情高效的攻擊。</string>
     <string name="BoneSaw_Name">骨鋸</string>
     <string name="BoneShard_Name">骨片</string>
+    <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">扔出，命中，回手，就是這麼簡單。</string>
     <string name="Boomerang_Name"> 回力鏢</string>
     <string name="Bounce_Txt">反彈 %s</string>
@@ -2830,6 +2831,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
