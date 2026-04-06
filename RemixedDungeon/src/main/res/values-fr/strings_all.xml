@@ -559,6 +559,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="CorpseDust_Info">Ce tas de poussière cadavérique ne se démarque pas plus qu\'un tas de poussière lambda. Mais bon, vous sentez qu\'il vaudrait mieux vous en débarrasser au plus vite.</string>
     <string name="CorpseDust_Info2">Peut-être parce que le simple fait de la tenir vous rend anxieux et en colère.</string>
     <string name="CorpseDust_Name">Poussière des morts</string>
+    <string name="CorpseExplosion_Name">Explosion de Cadavre</string>
     <string name="CorpseExplosion_NoCorpse">Il n\'y a pas de cadavre à cet endroit.</string>
     <string name="Crab_Defense">paré</string>
     <string name="Crab_Desc">Ces énormes crabes sont au sommet de la chaîne alimentaire dans les égouts. Ils sont très rapides et leur exosquelette épais peut résister à des coups puissants.</string>
@@ -3006,6 +3007,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

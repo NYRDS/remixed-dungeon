@@ -63,6 +63,7 @@
     <string name="Amulet_Name">Амулет Эндора</string>
     <string name="AnesthesiaBuff_Info">Не чувствует боли и не просыпается от атак, но всё ещё получает урон.</string>
     <string name="AnesthesiaBuff_Name">Анестезия</string>
+    <string name="Anesthesia_Cast">%s погружается в глубокий сон без сновидений.</string>
     <string name="Anesthesia_Info">Вызывает глубокий, неестественный сон у вашей цели. Даже самые жестокие атаки не разбудят её от этого сна.</string>
     <string name="Anesthesia_Name">Анестезия</string>
     <string name="Ankh_Info">Древний символ бессмертия, дарующий возможность вернуться к жизни после смерти. При воскрешении все ненадетые вещи теряются.</string>
@@ -3069,6 +3070,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 
