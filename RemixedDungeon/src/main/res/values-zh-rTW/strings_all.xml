@@ -1582,6 +1582,7 @@
     <string name="RatKing_Info3">好大的膽子，弱小的凡人，膽敢觸怒本王？！</string>
     <string name="RatKing_Name">鼠王</string>
     <string name="RatKing_Name_Objective">鼠王</string>
+    <string name="RatSkullBuff_Info">刺鼻的惡臭嚇跑了周圍所有的囓齒動物，使它們從頭骨持有者身邊逃離。</string>
     <string name="RatSkullBuff_Name">菁英老鼠</string>
     <string name="RatSkull_Info">這看起來是個很好的戰利品，但掛在牆上也太難聞了。</string>
     <string name="RatSkull_Info2">另一方面，擁有此物者可藉此炫耀其宰鼠的威風，哪怕該老鼠有多大﹑多難聞。</string>
@@ -2827,6 +2828,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

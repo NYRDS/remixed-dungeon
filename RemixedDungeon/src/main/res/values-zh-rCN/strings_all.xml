@@ -2175,6 +2175,7 @@
     <string name="Typical_Damage">典型损伤</string>
     <string name="Undead_Defense">格挡</string>
     <string name="Undead_Desc">由矮人国王的意志唤醒的矮人亡灵，曾经的皇室成员，以长着厚实胡须的骷髅的姿态出现。</string>
+    <string name="Undead_Gender">masculine</string>
     <string name="Undead_Name">矮人亡灵</string>
     <string name="Undead_Name_Objective">矮人亡灵</string>
     <string name="Ushanka_Info">带有闪耀红星的温暖舒适的苏联毛帽。让共产主义的光辉照亮这个邪恶冷酷的地牢。</string>
@@ -2900,6 +2901,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
