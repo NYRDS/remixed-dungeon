@@ -577,6 +577,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="DashSpell_OnSelf">Saya tidak bisa lari di tempat.</string>
     <string name="DashSpell_TooFar">Aku tidak bisa lari sejauh itu.</string>
     <string name="DeathKnight_Desc">Pada pandangan pertama, ini adalah prajurit perkasa dengan baju besi berat, dan hanya seringai mati yang memberinya. Ksatria kematian adalah manifestasi dari jiwa seorang ksatria yang gagal mengejar sumpahnya. Dan dalam keadaan terkutuknya, dia akan selalu berkeliaran mencari untuk membersihkan dalam pertempuran, membunuh yang tidak bersalah, tidak dapat mengingat siapa yang dia bersumpah untuk melindungi.</string>
+    <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name">Ksatria Kematian</string>
     <string name="DeathKnight_Name_Objective">Ksatria Kematian</string>
     <string name="Death_Name_0">Suram %s</string>
@@ -1443,6 +1444,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bisakah kamu percaya?! Para idiot itu masih belum menyadari betapa berbahayanya selokan sialan ini! Seperti penjaga dan petualang yang bisa melindungi kota dari apapun. Hah! Tidak ada senjata yang dapat menghentikan penyebaran penyakit. Tapi saya butuh bukti, mungkin Anda bisa membantu saya dengan itu? Bawakan saya %d kulit tikus, sehingga saya bisa melakukan beberapa tes tambahan.</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, Anda kembali! _Lima tikus mati_, sempurna! Kulit mereka akan sangat penting untuk penelitian saya. Dan seperti yang dijanjikan, atas usaha gigih Anda, saya telah membuatkan Anda baju ini dari kulit mereka. Ini diresapi dengan sedikit wabah, tapi jangan khawatir! Ini terkontrol, ini melindungi! Sekarang pergi! Lindungi kota!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Bawakan saya _lima ekor tikus mati_! Setiap satu yang engkau bawakan mendekatkan kita pada pemahaman tentang wabah mengerikan ini.</string>
+    <string name="PlagueDoctorQuest_1_1_Prologue">Hatchoo!\n Kutukilah wabah neraka ini! Wabah ini menyebar ke seluruh kota seperti api liar, menggerogoti tulang penduduk yang tidak curiga! BAH! Apakah kamu pikir para penjaga yang menyedihkan itu punya kesempatan melawan wabah yang berbahaya ini? Kamu di sana! Spesimen yang kuat dan sehat. Mungkin kamu bisa membantuku. Tikus-tikus selokan yang kotor itu... mereka membawanya, kataku, benih penyakit di dalam tubuh kecil mereka yang busuk! Bawakan aku _lima_ dari makhluk menyedihkan itu, _mati_, tentu saja! Kulit mereka akan sangat berharga untuk penelitianku. Aku akan membuatkanmu baju besi yang luar biasa, pelindung dari wabah yang berasal dari mereka!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… luar biasa! _Siput-siput_ itu, rahasia mereka perlahan terungkap seperti kelopak bunga dalam cahaya bulan. Memang banyak informasi yang berharga! Tapi kamu benar, _lima puluh emas_ bukanlah hadiah yang pantas. *Tertawa kegirangan*.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">_Sepuluh siput_, sepuluh bisikan dari jurang! Lendir mereka akan dianalisis, esensi mereka diteliti. Rahasia yang mereka simpan sudah dalam jangkauan.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Batuk parah* Achoo!\n _Siput_... mereka merayap. Mereka mengeluarkan lendir. Dan mereka berbisik rahasia dari zaman yang terlupakan. Aku membutuhkan mereka, _sepuluh_ dari mereka, cangkangnya masih utuh. Apakah menurutmu hanya _lima puluh koin emas_ cukup untuk pengetahuan berharga seperti ini?\n Bah! Tidak masalah. Informasi yang mereka miliki bisa menjadi kunci untuk menghentikan wabah ini. Atau... itu bisa membawa kita ke sesuatu yang jauh lebih mengerikan. Terserah kamu.</string>
@@ -2891,6 +2893,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
