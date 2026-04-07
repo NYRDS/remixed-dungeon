@@ -1924,6 +1924,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Statue_Name">patung hidup</string>
     <string name="Statue_Name_Objective">patung hidup</string>
     <string name="Stench_Txt">%s berbau busuk</string>
+    <string name="StoneBloodBuff_Info">Darah berubah menjadi batu yang menyatu dengan dinding di sekitarnya dan memudahkan pergerakan melaluinya, tetapi dengan harga apa.</string>
     <string name="StoneBloodBuff_Name">Darah batu</string>
     <string name="Str_lose">-1 ktn</string>
     <string name="StrongShield_desc">Perisai segi empat tepat ini disadur dengan lembaran gangsa dan dihiasi dengan kain berwarna. Ia jauh lebih berat, tetapi boleh menghalang lebih banyak kerosakan masuk.</string>
@@ -2716,6 +2717,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
