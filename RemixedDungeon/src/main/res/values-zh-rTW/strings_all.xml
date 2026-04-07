@@ -271,6 +271,7 @@
     <string name="BlankScroll_Info">只是一張空白卷軸而已，也許您可以寫此東西上去吧？</string>
     <string name="BlankScroll_Name">空白卷軸</string>
     <string name="BlankScroll_ReallyBlank">這張卷軸是空白的。</string>
+    <string name="BleedingBuff_Info">傷口正在快速流血。</string>
     <string name="BleedingBuff_Name">流血</string>
     <string name="Bleeding_Death">你流血過多而死……</string>
     <string name="BlessedBuff_Info">祝願那些被祝福的人們精準度和閃避增加！</string>
@@ -2833,6 +2834,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

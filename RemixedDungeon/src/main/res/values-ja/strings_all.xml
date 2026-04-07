@@ -1646,6 +1646,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="RatKingCrown_Name">ネズミの王の王冠</string>
     <string name="RatKing_Desc">このネズミは普通の有袋ネズミより少し大きく、頭に小さな冠をかぶっている。</string>
     <string name="RatKing_Died">王は死んだ。王様バンザイ！</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">寝てないよ！</string>
     <string name="RatKing_Info2">もう、なんなんだい？くだらないことに付き合ってる暇なんかないんだけど。王様は忙しいんだ！もう辞めたいよ！</string>
     <string name="RatKing_Info3">このちっぽけな生き物が、よくもボクらを邪魔してくれたな？！</string>
@@ -2964,6 +2965,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
