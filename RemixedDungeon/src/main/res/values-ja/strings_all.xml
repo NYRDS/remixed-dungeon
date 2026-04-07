@@ -555,6 +555,7 @@
     <string name="CorpseDust_Info">コープスダストの玉は、外見上は普通のダストの玉と変わらない。しかし、一刻も早く手放した方がいいことは何となくわかる。</string>
     <string name="CorpseDust_Info2">持っているだけで不安や怒りを感じるからかもしれない。</string>
     <string name="CorpseDust_Name">コープスダスト</string>
+    <string name="CorpseExplosion_NoCorpse">その場所には死体がない。</string>
     <string name="Crab_Defense">受け流し</string>
     <string name="Crab_Desc">この巨大なカニは下水道の食物連鎖の頂点にいる。彼らは非常に速く、その分厚い外骨格は激しい打撃にも耐えることができる。</string>
     <string name="Crab_Name">下水カニ</string>
@@ -2960,6 +2961,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
