@@ -598,6 +598,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="DonateButton_pleaseDonate">kérlek gondold át, hogy támogatsz!</string>
     <string name="DonateButton_thanks">Köszönjük a támogatásodat!</string>
     <string name="DreadKnight_Desc">A rettegett lovag egy ősi harcos, aki még életében sem volt jó vagy erkölcsös. A bűneiért örökké tartó csatangolásra ítéltetett ebben a megtört, halott testben. A megkínzott léte minden pillanatában állandó fájdalom és szenvedés a jussa, hasonló ahhoz, amivel áldozatait súlytotta.</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">rettegett lovag</string>
     <string name="DreadKnight_Name_Objective">rettegett lovag</string>
     <string name="Dreamweed_Desc">Az Álomfűhöz érve eltűntet egy csillogó zavaró füstöt.</string>
@@ -2747,6 +2748,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

@@ -1274,6 +1274,7 @@
     <string name="MeleeWeapon_Info7a">Ти тримаєш %1$s готовим до бійки%2$s</string>
     <string name="MeleeWeapon_Info7b">, оскільки зброя проклята, ти не можеш кинути її з рук</string>
     <string name="MeleeWeapon_Info7c">Ти відчуваєш зловісну магію, що зачаїлася в зброї %s.</string>
+    <string name="MercenaryNPC_Desc">Міцний чолов\'яга.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">найманець</string>
     <string name="Metabolism_Txt">%s метаболізму</string>
@@ -2833,6 +2834,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
