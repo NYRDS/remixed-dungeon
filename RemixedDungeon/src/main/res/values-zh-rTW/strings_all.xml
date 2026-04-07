@@ -32,6 +32,7 @@
     <string name="AirElemental_Name_Objective">風元素</string>
     <string name="AlarmTrap_Desc">這個陷阱發出的刺耳聲音回蕩在地牢中！</string>
     <string name="Albino_Desc">嚙齒小鼠是極具侵略性卻比較弱小的下水道居民，只有在擁有大量數量時才會造成威脅。這只特殊的老鼠看起來得了白化病，並且擁有異常尖利的牙齒。</string>
+    <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name">白化老鼠</string>
     <string name="Albino_Name_Objective">白化老鼠</string>
     <string name="AlchemyPot_SelectSeed">選擇你要投擲的種子</string>
@@ -2832,6 +2833,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -1107,6 +1107,7 @@
     <string name="Item_Name">何か</string>
     <string name="Item_PackFull">あなたの荷物は一杯で%sは入らない。</string>
     <string name="JarOfSouls_Desc">この古い壺に描かれたドクロの光る目、そしてそれが発する奇妙なエネルギーは、あなたを不安にさせる。</string>
+    <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name">魂の壺</string>
     <string name="JarOfSouls_Name_Objective">魂の壺</string>
     <string name="Javelin_Gender">neuter</string>
@@ -2963,6 +2964,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
