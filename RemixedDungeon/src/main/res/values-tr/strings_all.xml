@@ -2487,6 +2487,7 @@ remix.30.1\n
     <string name="WndModInstall_Version">versiyon</string>
     <string name="WndModSelect_AreYouSure">Mod siliniyor: %s, emin misin?</string>
     <string name="WndModSelect_ReallyDelete">Gerçekten silecek misin?</string>
+    <string name="WndModsDisclaimer_install">Yerel mod yükle</string>
     <string name="WndModsDisclaimer_manage">Mod listesini yönet</string>
     <string name="WndModsDisclaimer_title">Modlar</string>
     <string name="WndMovieTheatre_Bye">Sizi gördüğümüze sevindik, yine bekleriz!</string>
@@ -2934,6 +2935,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

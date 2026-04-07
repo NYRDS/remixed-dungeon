@@ -537,6 +537,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="CorpseDust_Info">Bola debu mayat tidak berbeda secara lahiriah dari bola debu biasa. Namun, entah bagaimana Anda tahu bahwa lebih baik menyingkirkannya sesegera mungkin.</string>
     <string name="CorpseDust_Info2">Mungkin karena hanya memegangnya saja sudah membuat Anda merasa cemas dan marah.</string>
     <string name="CorpseDust_Name">debu mayat</string>
+    <string name="CorpseExplosion_Info">Mengubah mayat menjadi awan gas beracun yang mematikan, menyebarkan penyakit dan racun ke semua musuh di sekitarnya.</string>
     <string name="CorpseExplosion_NoCorpse">Tidak ada mayat di lokasi itu.</string>
     <string name="Crab_Defense">tertangkis</string>
     <string name="Crab_Desc">Kepiting besar ini adalah puncak rantai makanan di saluran bawah tanah. Mereka sangat cepat dan tulang tebal mereka dapat menahan serangan berat.</string>
@@ -2893,6 +2894,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
