@@ -342,6 +342,7 @@
     <string name="CagedKobold_Name">заточённый кобольд</string>
     <string name="CagedKobold_Name_Objective">заточённого кобольда</string>
     <string name="CagedKobold_Quest_End">О, спасибо тебе большое! Как ты смог отыскать ключ? Ты... ты уничтожил орудие?! Невероятно! Знаешь что, я обещал помочь, и я кое-что придумал. Пока всё не уляжется, я побуду у тебя. *Заточённый Кобольд превратился в свечу</string>
+    <string name="Calm_Cast">%s успокаивается.</string>
     <string name="Calm_Info">Вокруг так много злобы и агрессии, давайте поможем им.</string>
     <string name="Calm_Name">Успокоение</string>
     <string name="CandleOfMindVision_Info">Выглядит как обычная свеча, странно найти нечто подобное в опасном подземелье. Самое странное что она очень тёплая, хотя её не зажигали.</string>
