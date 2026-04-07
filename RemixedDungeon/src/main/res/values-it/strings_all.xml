@@ -1120,6 +1120,7 @@ Potrebbe bruciare?</string>
     <string name="Level_TileWater">Acqua</string>
     <string name="Level_TileWell">Pozzo</string>
     <string name="LevitationBuff_Name">Levitante</string>
+    <string name="LibrarianNPC_Desc">Una persona molto timida, indossa un maglione dall\'aspetto goffo e un paio di occhiali con lenti molto spesse.</string>
     <string name="LibrarianNPC_Message_Instruction">C-ciao. Benvenuto alla Biblioteca. Qua puoi trovare informazioni su ogni genere di cosa che può essere trovata nel dungeon... A dire il vero possiamo solo informare su cose scoperte dagli avventurieri. Ehm... è un po\' imbarazzante, sì. Ogni volta che ci visiterai, probabilmente, ci saranno nuove cose da leggere</string>
     <string name="LibrarianNPC_Name">bibliotecaria</string>
     <string name="LibrarianNPC_Name_Objective">bibliotecaria</string>
@@ -2665,6 +2666,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
