@@ -600,6 +600,7 @@
     <string name="Deathling_Name">死灵</string>
     <string name="Deathling_Name_Objective">死灵</string>
     <string name="DeepSnail_Desc">这种软体动物经常在水源附近出没，速度比普通蜗牛快得多。但是要小心被咬伤，它们会对你的皮肤产生令人不快的影响。</string>
+    <string name="DeepSnail_Gender">masculine</string>
     <string name="DeepSnail_Name">深色大蜗牛</string>
     <string name="DeepSnail_Name_Objective">深色大蜗牛</string>
     <string name="DeferedDamageBuff_Info">疼痛已经变成了一种缓慢的疼痛，减少即将受到的伤害。\n待承受的伤害 %d 点</string>
@@ -2903,6 +2904,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
