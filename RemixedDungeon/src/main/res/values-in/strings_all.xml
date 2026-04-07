@@ -1872,6 +1872,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Shaman_Name_Objective">dukun gnoll</string>
     <string name="Shaman_ZapMiss">* Menyebut dengan gnollish*</string>
     <string name="Sheep_Desc">Ini domba ajaib. Apa yang begitu ajaib tentang itu? Anda tidak dapat membunuhnya. Itu akan berdiri di tempatnya sampai secara ajaib menghilang, sambil mengunyah makanan dengan tatapan kosong.</string>
+    <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">domba</string>
     <string name="Sheep_Name_Objective">domba</string>
     <string name="ShieldBuffNotReady_Info">Perisai Anda belum siap untuk memblokir serangan berikutnya.</string>
@@ -2890,6 +2891,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

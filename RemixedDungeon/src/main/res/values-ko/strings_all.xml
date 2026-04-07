@@ -1172,6 +1172,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ManaShieldBuff_Name">마법 방패</string>
     <string name="Mana_Cost">마나 소모:</string>
     <string name="Mana_Title">마나</string>
+    <string name="MedicineMask_Info">수술용 마스크는 착용자의 입과 코에서 나오는 액체 방울 및 에어로졸의 미생물을 포착하도록 설계되었습니다.\n\n마스크 착용은 타인에 대한 배려입니다.</string>
     <string name="MedicineMask_Obtained">수술용 마스크 획득</string>
     <string name="MeleeWeapon_Info1a">이 %1$s 은/는 %2$s %3$d차 근접 무기입니다.-업그레이드시 +차수 데미지-</string>
     <string name="MeleeWeapon_Info1b">일반</string>
@@ -1781,6 +1782,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ShieldWeaponInfo">무기로 사용될 때 이 방패는 평균적으로 %1의 피해를 입힙니다.</string>
     <string name="Shielded_Defense">막음</string>
     <string name="Shielded_Desc">방패 놀 정예병은 놀 중에서도 가장 크고 강하며 터프한 녀석이다. 큰 상처를 입게 되면, 이 녀석은 격분하면서 적에게 보다 큰 데미지를 준다. 이 녀석은 거대한 방패를 들고 있다.</string>
+    <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">방패 놀 정예병</string>
     <string name="Shielded_Name_Objective">방패 놀 정예병</string>
     <string name="Shopkeeper_Buy">구매할 아이템을 선택하세요.</string>
@@ -2712,6 +2714,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 
