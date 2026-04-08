@@ -1167,6 +1167,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Luck_Name_0">%s Tuah</string>
     <string name="Luck_Name_1">%s Tuah</string>
     <string name="Luck_Name_2">%s Tuah</string>
+    <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">Kepala besi senjata ini memberikan kecederaan yang cukup besar.</string>
     <string name="Mace_Name">cokmar</string>
     <string name="MageArmor_ACSpecial">TANAH LEBUR</string>
@@ -2720,6 +2721,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

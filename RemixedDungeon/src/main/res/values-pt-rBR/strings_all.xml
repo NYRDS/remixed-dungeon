@@ -2360,6 +2360,7 @@ remix.31.1\n
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Copiar Endereço</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
+    <string name="WndCryptoDonate_infoText">Você pode apoiar o desenvolvimento do Remixed Dungeon enviando doações em criptomoedas para os endereços abaixo. Obrigado pelo seu generoso apoio!</string>
     <string name="WndCryptoDonate_monero">Monero</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_walletAddress">Endereço da Carteira</string>
@@ -2906,6 +2907,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
