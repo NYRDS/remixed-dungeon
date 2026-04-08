@@ -43,6 +43,7 @@
 Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge simgesine tıkla)
 </string>
     <string name="AllowStatisticsCollectionScene_Title">Kullanım istatistiği toplanması </string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">Bu okun ucundaki solüsyon, herhangi birini anında zıvanadan çıkarabilir.</string>
     <string name="AmokArrow_Name">Delidana Oku</string>
     <string name="AmokBuff_Info">Talihsizlerin hayatlarını alarak, çılgınlığı hissedin.</string>
@@ -2937,6 +2938,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

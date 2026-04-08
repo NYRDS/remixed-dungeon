@@ -1941,6 +1941,7 @@
     <string name="SpiderEgg_Name">蜘蛛蛋</string>
     <string name="SpiderEgg_Name_Objective">蜘蛛蛋</string>
     <string name="SpiderElite_Gender">masculine</string>
+    <string name="SpiderElite_Name">蜘蛛精英守衛</string>
     <string name="SpiderElite_Name_Objective">蜘蛛精英守衛</string>
     <string name="SpiderExploding_Desc">這些蜘蛛工人在和平時期一直努力工作，可是一旦遇到敵人，就會毫不猶豫的抓起自己路過的第一株植物，並把自己當成活體炸彈沖向他們。</string>
     <string name="SpiderExploding_Gender">masculine</string>
@@ -2837,6 +2838,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
