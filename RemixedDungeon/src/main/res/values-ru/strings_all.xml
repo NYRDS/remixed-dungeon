@@ -481,6 +481,7 @@
     <string name="ChargrilledMeat_Name">приготовленное на углях мясо</string>
     <string name="CharmBuff_Info">Очарование помутняет разум.</string>
     <string name="CharmBuff_Name">Зачарован</string>
+    <string name="CharmSpell_Cast">%s очарован.</string>
     <string name="CharmSpell_Info">Каждому нужно немного любви, ведь так?</string>
     <string name="CharmSpell_Name">Очарование</string>
     <string name="Chasm_Chasm">Пропасть</string>
@@ -3073,6 +3074,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 

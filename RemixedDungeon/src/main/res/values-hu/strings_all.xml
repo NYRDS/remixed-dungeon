@@ -918,6 +918,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="HeroSubClass_NameSnip">orvlövész</string>
     <string name="HeroSubClass_NameWarL">boszorkány mester</string>
     <string name="HeroSubClass_NameWard">kertész</string>
+    <string name="HeroSubClass_NameWitchdoctor">sámán</string>
     <string name="Hero_AnotherTry">Meghaltál.\n Megpróbálod újra?</string>
     <string name="Hero_Leave">Nem hagyhatod el csak úgy a Pixel Kazamatát.</string>
     <string name="Hero_LevelUp">szintlépés!</string>
@@ -2313,6 +2314,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndInfoItem_Skeleton">Csontváz maradványok</string>
     <string name="WndInfoItem_Tomb">Sír</string>
     <string name="WndInfoItem_WontKnow">Nem tudod, hogy mi van benne amíg ki nem nyitod!</string>
+    <string name="WndInstallingMod_copying_file">%s másolása a Remixed Dungeon tárolójába</string>
     <string name="WndInstallingMod_deleting_file">Törlés: %s</string>
     <string name="WndInstallingMod_please_wait">Mod telepítése, kis türelmet...</string>
     <string name="WndInstallingMod_skipping_file">Kihagyás: %s</string>
@@ -2749,6 +2751,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

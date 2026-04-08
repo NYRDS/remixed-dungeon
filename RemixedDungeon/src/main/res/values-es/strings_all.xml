@@ -2580,6 +2580,7 @@ otro lugar del nivel.</string>
     <string name="WndSettings_Brightness">Brillo</string>
     <string name="WndSettings_ClassicFont">Fuente clásica</string>
     <string name="WndSettings_ExperementalFont">Fuente nueva</string>
+    <string name="WndSettings_FpsLimit">Límite de FPS</string>
     <string name="WndSettings_GameplaySettings">Jugabilidad</string>
     <string name="WndSettings_Handedness">Lado preferido</string>
     <string name="WndSettings_Immersive">Modo inmersivo</string>
@@ -2937,6 +2938,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
