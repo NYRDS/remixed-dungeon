@@ -1859,6 +1859,7 @@
     <string name="ShieldBuffReady_Info">你的盾牌已準備好抵擋下一次攻擊。</string>
     <string name="ShieldInfoTemplate">這個盾牌最多可以格擋%1$d傷害。  格擋幾率為%2$d %% 。 成功格擋後需要%3$3.1f個回合來恢復。</string>
     <string name="ShieldStrTemplate">盾牌的佩戴者應至少具有%1$d力量才能正常的使用它。</string>
+    <string name="ShieldWeaponInfo">當此盾牌作為武器使用時，平均會造成 %1$d 點傷害。</string>
     <string name="Shielded_Defense">格擋</string>
     <string name="Shielded_Desc">暴徒是豺狼人中體型最為巨大，最為強壯，最為堅韌的。當受到嚴重的傷害時，他們會變得狂暴，對他們的敵人造成大量傷害。這個豺狼暴徒舉著一面巨型盾牌！</string>
     <string name="Shielded_Gender">masculine</string>
@@ -2835,6 +2836,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

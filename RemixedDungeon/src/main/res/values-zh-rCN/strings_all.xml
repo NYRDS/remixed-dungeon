@@ -288,6 +288,7 @@
     <string name="BodyArmorSpell_Info">激活身体的肌肉力量，使你暂时变强，从而增加你的护甲，但会减少移动速度。</string>
     <string name="BodyArmorSpell_Name">格挡</string>
     <string name="BoneSaw_Name">骨锯</string>
+    <string name="BoneShard_Info">从被击败敌人身上获取的锋利骨头碎片。这些碎片异常坚固，在制作中非常有用。</string>
     <string name="BoneShard_Name">骨片</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">扔出，命中，回手，就是这么简单。</string>
@@ -1475,6 +1476,7 @@
     <string name="PlagueDoctorQuest_3_1_InProgress">给我带一只_吸血鬼蝙蝠_，活着且完好无损！它的血液、它的翅膀……它们藏着我必须揭开的秘密！</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*他的眼睛闪烁着一种奇怪的、狂热的光芒* 啊，_吸血鬼蝙蝠_！夜之生物，以猎物的生命力为食。迷人……真迷人。我需要一个活的来研究它独特的生理结构。这一切都是为了……理解……理解……*他喃喃自语，说出一连串神秘的术语*。是的！_蝙蝠_的回声定位，它在完全黑暗中导航的能力……这是解开秘密的关键。</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">_死亡骑士_！*他的声音因兴奋而颤抖，骷髅般的手指紧握着一个冒着泡的小瓶，里面装满了浑浊的磷光液体*。这样的生物……亡灵的象征！活捉一个……那将是……意义非凡。想象一下我们能揭开什么秘密！流淌在它骨骼血管中的力量！是的，_死亡骑士_！这对我的研究至关重要！因为它将使我们能够更深入地探索……生命……乃至死亡本身的奥秘！</string>
+    <string name="PlagueDoctorQuest_4_1_InProgress">五个_矮人术士_，他们的身体仍在脉动着黑暗魔法的微弱回响！为我取回它们，我将奖励你一瓶无与伦比的力量——一瓶_力量药水_，它将赋予你十人之力！</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">阿嚏！矮人！那些固执的地下居民，痴迷于宝石和黄金。但我渴望的是_矮人术士_……他们被他们居住的深渊所滋养的扭曲魔法。五个，我需要五个那些枯萎的灵魂！他们的身体蕴含着理解某种……现象的关键。关于通过大地本身引导奥术能量的东西。我相信我接近突破了，但我需要他们的精华，他们腐败的魔法！*他剧烈地咳嗽到手帕里，深色污渍在精致的织物上蔓延*</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">太好了！五只_狗头人冰法师_，他们冰冷的精华现在由我来探索！他们与冰冻荒原的联系，真是令人着迷。他们操控水的方式…… truly remarkable。*他递给你一个闪烁着光芒的小瓶，里面装满了鲜艳的深红色液体* 这是给你的英勇努力的奖励：一瓶_根骨药水_！大口喝下，感受十个战士的力量在你的血管中涌动！记住，知识就是力量……而力量是我们对抗逐渐逼近的黑暗的唯一武器。现在……让我们解剖这些冰冷的灵魂，揭开他们令人毛骨悚然的秘密！</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">取回五具死去的_狗头人冰法师_！他们冰冻的身体蕴含着揭开他们冰冷魔法秘密的关键！</string>
@@ -2905,6 +2907,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
