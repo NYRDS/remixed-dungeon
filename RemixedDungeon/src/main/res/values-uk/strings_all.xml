@@ -339,6 +339,7 @@
     <string name="Capotain_Name">Ковпак</string>
     <string name="Carcass_DissectMessage">Ви розчленували труп і отримали %s.</string>
     <string name="Carcass_Kick">Ця істота, %s, совершенно мертва, немає сенсу бити її далі.</string>
+    <string name="Carcass_Name">решки %s</string>
     <string name="Carcass_TooFarToDissect">Вам потрібно підійти ближче, щоб розчленувати труп.</string>
     <string name="Caves_TileDescBookshelf">Кому в підземеллі знадобилася книжкова шафа?</string>
     <string name="Caves_TileDescDeco">На стіні видно відкриту жилу якоїсь руди. Чи то не золото?</string>
@@ -2837,6 +2838,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

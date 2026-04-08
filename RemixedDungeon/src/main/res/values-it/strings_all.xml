@@ -1959,6 +1959,7 @@ Potrebbe bruciare?</string>
     <string name="TerrorBuff_Name">Terrorizzato</string>
     <string name="Thief_Carries">\n\n%1$s sta portando un _%2$s_. rubalo ovviamente.</string>
     <string name="Thief_Desc">I livelli più profondi del dungeon sono sempre stati un nascondiglio per tutti i tipi di criminali. Non tutti potevano mantenere una mente lucida durante i loro lunghi periodi così lontano dalla luce del giorno. Molto tempo fa, questi banditi e ladri folli hanno dimenticato chi sono e perché rubano. Questo bandito sembra aver rivestito il pugnale con qualcosa!</string>
+    <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">Ladro pazzo</string>
     <string name="Thief_Name_Objective">Ladro pazzo</string>
     <string name="Thief_Stole">%1$s ha rubato %2$s da te!</string>
@@ -2673,6 +2674,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

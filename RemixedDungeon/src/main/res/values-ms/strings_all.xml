@@ -1150,6 +1150,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Lich_DieInfo">Saya tidak pernah menyukai Ahli Sihir Mayat ini. Jadi sekarang waktunya untuk kembali ke tingkat 7 dan mencari jalan lain ke pengembaraan baru.</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
+    <string name="LightBuff_Info">Cahaya terpancar dari badan, menerangi segala-galanya di sekeliling.</string>
     <string name="LightBuff_Name">Bercahaya</string>
     <string name="LightningBolt_Name">Sambaran kilat</string>
     <string name="LightningTrap_Desc">Anda terbunuh kerana ada nyahcas dari perangkap panahan kiliat...</string>
@@ -2040,6 +2041,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">Hantu khianat</string>
     <string name="TreacherousSpirit_Name_Objective">Hantu khianat</string>
+    <string name="Typical_Damage">Kerosakan biasa</string>
     <string name="Undead_Defense">disekat</string>
     <string name="Undead_Desc">Orang kerdil hidup semula ini, dibangunkan atas kehendak Raja Orang Kerdil, merupakan bekas pengikutnya. Mereka wujud sebagai rangka berjambang.</string>
     <string name="Undead_Gender">masculine</string>
@@ -2722,6 +2724,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
