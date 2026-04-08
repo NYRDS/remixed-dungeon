@@ -1762,6 +1762,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="RottenRation_Info">ab und zu kann man das essen</string>
     <string name="RottenRation_Name">vergammelte Essensration</string>
     <string name="RottingFist_Desc">faulige Faust des Alten Gottes</string>
+    <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">faulige Faust</string>
     <string name="RottingFist_Name_Objective">faulige Faust</string>
     <string name="RoyalShield_desc">Ein Schild vollständig aus Metall. Ja, er ist schwer, aber nur er bietet den besten Schutz.</string>
@@ -2894,6 +2895,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

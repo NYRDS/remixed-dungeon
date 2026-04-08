@@ -1744,6 +1744,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="RottingFist_Name_Objective">köklü yumruk</string>
     <string name="RoyalShield_desc">Tamamen metal bir kalkan. Evet, ağır, fakat en iyi korumayı yalnızca bu sağlayabilir.</string>
     <string name="RoyalShield_name">Kraliyet Kalkanı</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Bu yakut yayı sadece gelişmiş okçular kullanabilir. Neredeyse tüm oklar düşmanı deler geçer ve arkasında kocaman delik bırakır, ancak kirişini çekmek için aşırı güç gerekir.</string>
     <string name="RubyBow_Name">yakut yay</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -2936,6 +2937,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
