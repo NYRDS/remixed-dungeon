@@ -1017,6 +1017,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="IceCaves_TileHighGrass">Donmuş uzun çim</string>
     <string name="IceCaves_TileStatue">Donmuş Gnoll</string>
     <string name="IceElemental_Desc">Zindanda var olan tüm kullanıcılar arasında buz kullanıcıları, zorlarsak ancak güçlü sayılabilir. Ancak buz kullanıcıları kesinlikle aralarında en tehlikeli olanlarından biri. Onların bedenlerinden gelen donuk aura, herhangi bir düşmanını yavaşlatabilir.</string>
+    <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">buz elementi</string>
     <string name="IceElemental_Name_Objective">buz elementi</string>
     <string name="IceGuardianCoreModule_Info">Büyüsel buzdan yapılmış karışık bir yapı. Bu fevkalade buluşun içinde parlayan bir taş bulunuyor.</string>
@@ -2935,6 +2936,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

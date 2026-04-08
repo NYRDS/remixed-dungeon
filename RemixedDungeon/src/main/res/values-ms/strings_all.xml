@@ -421,6 +421,7 @@
     <string name="CharmBuff_Info">Fikiran dan badan telah dipukau!</string>
     <string name="CharmBuff_Name">Dipukau</string>
     <string name="CharmSpell_Info">Setiap orang berhak mendapat sedikit kasih sayang, bukan?</string>
+    <string name="CharmSpell_Name">Pesona</string>
     <string name="Chasm_Chasm">Jurang</string>
     <string name="Chasm_Info">Anda mati kerana terjatuh...</string>
     <string name="Chasm_Jump">Anda pasti mahu melompat masuk ke dalam jurang ini? Berkemungkinan anda boleh mati.</string>
@@ -2719,6 +2720,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
