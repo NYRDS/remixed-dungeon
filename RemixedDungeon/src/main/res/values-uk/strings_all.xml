@@ -326,6 +326,7 @@
     <string name="CagedKobold_Name">заточений кобольт</string>
     <string name="CagedKobold_Name_Objective">заточеного кобольта</string>
     <string name="CagedKobold_Quest_End">О, дякую тобі, щиро дякую! Як ти відшукав ключа? Ти... ти знищів зброю?! Неймовірно! Знаєш що, я обіцяв допомогти, і я дещо надумав. Доки все не вщухне, я побуду поряд з тобою. *Заточений кобольт перетворився в свічку</string>
+    <string name="Calm_Cast">%s заспокоюється.</string>
     <string name="CandleOfMindVision_Info">Виглядає як звичайна свічка, дивно знайти щось таке в підземеллі. Дивно те, що вона тепла, хоч її не запалювали.</string>
     <string name="CandleOfMindVision_Info_Exhausted">Свічка вигоріла і більше не загоряється у тебе в руках. Схоже ти вже не можеш нею користуватися.</string>
     <string name="CandleOfMindVision_Info_Lighted">Як тільки ти викинув свічку з рюкзаку вона засяяла. Полум\'я випромінює м\'яке світло, крізь яке ти бачиш монстрів поблизу.</string>
@@ -2836,6 +2837,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

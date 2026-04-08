@@ -497,6 +497,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="CorpseDust_Info">La palla di polvere cadaverica non differisce esternamente da una normale palla di polvere. Comunque, in qualche modo sai che è meglio liberarsene il prima possibile.</string>
     <string name="CorpseDust_Info2">Forse poiché il solo tenerla ti fa sentire ansioso e furente.</string>
     <string name="CorpseDust_Name">polvere di cadavere</string>
+    <string name="CorpseExplosion_Info">Trasforma un cadavere in una nube mortale di gas tossico, diffondendo malattia e veleno su tutti i nemici vicini.</string>
     <string name="Crab_Defense">parata</string>
     <string name="Crab_Desc">Questi enormi granchi sono in cima alla catena alimentare delle fogne. Sono estremamente veloci e i loro duri esoscheletri posso sopportare duri colpi.</string>
     <string name="Crab_Gender">masculine</string>
@@ -2672,6 +2673,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
