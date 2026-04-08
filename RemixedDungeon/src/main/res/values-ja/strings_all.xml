@@ -1505,6 +1505,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="PlagueDoctorQuest_5_1_Prologue">*彼はどもり、その声はもろい小枝のようにひび割れている*　あぁ、さ、「サキュバス」2体…そう、い、生きたまま2体！も、もちろん、け、研究のためだ！ほら…か、彼女たちの、ふ、フェロモン…微妙な、ば、バランスを理解するために…あぁ、ひ、必要なんだ。*骨ばった手が伸びて、緊張しながらマスクを調整する。彼の目は、熱を帯びた激しさであなたの方を向いている* か、彼女たちの、本質…そ、それはパズル…そう、美しく！謎めいた！パズルだ!！ *彼は激しく咳き込み、平静を取り戻そうとする*  ゴホ、ゴホン。や、約束しよう。「2体」...つ、連れてきてくれたら...え、永遠の感謝を捧げよう。そう! 知識への! お、恩恵だと思ってくれ！</string>
     <string name="PlagueDoctorQuest_AllDone">彼は乾いた、喘ぐような笑いを漏らした。「あなたの行いは、計り知れない秘密を解き明かした！得た知識は...私の中で脈打つ、発見のシンフォニーだ。しかし知識は…」彼は声を陰謀めいたささやき声に落とし、付け加えた。「そして力...ああ...それは最も酔わせる霊薬だ。」彼はしばらくの間、あなたをじっと見つめ、そのアメジストの目は熱を帯びた激しさで燃えている。「おそらく」と彼はつぶやく。「我々の道は再び交わるだろう。まだ多くの...謎が...解明されていないのだから」</string>
     <string name="PlagueDoctor_Desc">全身を革のジャンプスーツで隠している。また、彼からは薬と......ニンニクの苦い匂いがする。</string>
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">ペストドクター</string>
     <string name="PlagueDoctor_Name_Objective">ペストドクター</string>
     <string name="Plant_ACPlant">植える</string>
@@ -2965,6 +2966,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

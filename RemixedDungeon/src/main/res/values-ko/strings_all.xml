@@ -191,6 +191,7 @@
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">흡혈 박쥐</string>
     <string name="Bat_Name_Objective">흡혈 박쥐</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">이 전투 도끼의 엄청난 스틸 헤드는 각각의 스트로크 뒤에 상당한 영향력을 줍니다.</string>
     <string name="BattleAxe_Name">배틀 엑스</string>
     <string name="Bee_Desc">작은 크기에도 불구하고, 벌들은 자신의 둥지를 치열하게 지키려는 경향이 있다. 하지만 오래 살지는 못한다.</string>
@@ -254,6 +255,7 @@
     <string name="BlankScroll_Info">그냥 비어있는 두루마리입니다. 아마 무언가를 여기에 적을 수 있지 않을까요?</string>
     <string name="BlankScroll_Name">빈 두루마리</string>
     <string name="BlankScroll_ReallyBlank">이 두루마리는 비어있습니다.</string>
+    <string name="BleedingBuff_Info">상처가 빠르게 출혈하고 있다.</string>
     <string name="BleedingBuff_Name">출혈</string>
     <string name="Bleeding_Death">출혈로 인해 사망하였습니다.</string>
     <string name="BlessedBuff_Info">이 축복에 정확함과 회피가 깃들길 바랍니다!</string>
@@ -2327,6 +2329,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndLibrary_Levels_Btn">던전</string>
     <string name="WndLibrary_Mobs_Btn">몬스터</string>
     <string name="WndLocalModInstall_pick">모드 디렉토리 선택</string>
+    <string name="WndModInstall_InstallingMod">모드 설치 중</string>
     <string name="WndModSelect_AreYouSure">모드 삭제 중: %s, 정말 삭제하시겠습니까?</string>
     <string name="WndModSelect_ReallyDelete">정말로 삭제하시겠습니까?</string>
     <string name="WndModsDisclaimer_install">로컬 모드 설치</string>
@@ -2722,6 +2725,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 
