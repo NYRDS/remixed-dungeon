@@ -2566,6 +2566,7 @@
     <string name="Wnd_Button_Cancel">Скасувати</string>
     <string name="Wnd_Button_Close">Закрити</string>
     <string name="Wnd_Button_No">Ні</string>
+    <string name="Wnd_Button_Ok">Гаразд</string>
     <string name="Wnd_Button_Yes">Так</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Цей звичайний дерев\'яний лук зможе бути досить корисним, якщо в тебе будуть стріли.</string>
@@ -2839,6 +2840,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
