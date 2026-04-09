@@ -513,6 +513,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="CorpseDust_Info">Bebola mayat tidak berbeza dengan bebola debu biasa. Akan tetapi, anda tahu ia perlu dimusnahkan secepat mungkin.</string>
     <string name="CorpseDust_Info2">Mungkin kerana memegangnya menyebabkan anda rasa resah dan menjadi marah.</string>
     <string name="CorpseDust_Name">debu mayat</string>
+    <string name="CorpseExplosion_Name">Letupan Mayat</string>
     <string name="CorpseExplosion_NoCorpse">Tiada mayat di lokasi tersebut.</string>
     <string name="Crab_Defense">ditepis</string>
     <string name="Crab_Desc">Ketam besar ini berada bahagian teratas rantaian makanan pembentung. Mereka sangat pantas dan memiliki kulit luar yang keras dan dapat menahan pukulan kuat.</string>
@@ -2189,6 +2190,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     -- Labah-Psi kini akan memberi kesan baik kepada labah-labah lain berbanding memberi kesan buruk kepada Wira.\n
     - Pepijat telah dibaiki\n
     </string>
+    <string name="Welcome_Text_32_1">    remix.32.1\n- Permainan:\n-- Talian pencarian Doktor Wabak\n-- Bangkai mob kini boleh digunakan sebagai item\n-- Kawalan haiwan peliharaan yang lebih baik\n- UX:\n-- Pengurusan simpan-permainan yang dipertingkatkan\n- Pemodan:\n-- Kaedah pemasangan mod tempatan\n-- Item tersuai kini boleh melakukan tindakan semasa berada dalam timbunan\n- Pepijat dibaiki\n</string>
     <string name="Welcome_Title">Selamat Datang!</string>
     <string name="WindGust_Info">Hembuskan angin kencang yang dapat menolak keluar karakter terpilih.</string>
     <string name="WindGust_Name">Tiupan angin kencang</string>
@@ -2725,6 +2727,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

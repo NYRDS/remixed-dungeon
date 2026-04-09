@@ -674,6 +674,7 @@
     <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">земляний елементаль</string>
     <string name="EarthElemental_Name_Objective">земляного елементаля</string>
+    <string name="EarthrootBuff_Info">З землі проросло коріння, що забезпечує природний захист.</string>
     <string name="EarthrootBuff_Name">Природний захист</string>
     <string name="Earthroot_Desc">Кожного, хто торкнеться Дубокореня, оповиває природний захист.</string>
     <string name="Earthroot_Name">Дубокорінь</string>
@@ -2838,6 +2839,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
