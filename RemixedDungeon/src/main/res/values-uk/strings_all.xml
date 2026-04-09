@@ -2767,6 +2767,7 @@
     <string name="town_deco_shelf_full_desc">На цій полиці розміщено різні дрібнички.</string>
     <string name="town_deco_shelf_full_name">Полиця</string>
     <string name="town_deco_shelf_name">Полиці</string>
+    <string name="town_deco_shelving_desc">Вражаючих розмірів стелаж, на полицях якого можна знайти різноманітні напої та закуски.</string>
     <string name="town_deco_shieldboard_desc">Різноманітні щити висять на стенді. Поки що не для продажу.</string>
     <string name="town_deco_shieldboard_name">Щити</string>
     <string name="town_deco_shop_sign_desc">Скоріш за все тут знаходиться магазин.</string>
@@ -2840,6 +2841,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

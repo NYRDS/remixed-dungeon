@@ -1782,6 +1782,7 @@ egy másik helyre a szinten. </string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">fogadóslány</string>
     <string name="ServiceManNPC_Desc">Egy átlagos dolgozó az itteni intézményből.</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Sajnálom, de minden kalandor csak %d filmet nézhet meg összesen</string>
     <string name="ServiceManNPC_Limit_Reached">Elnézésedet kérem, de elérted a limitet. De később szolgálatodra leszünk újra, minden egyes hősi szintemelkedésedkor!</string>
     <string name="ServiceManNPC_Name">alkalmazott</string>
@@ -2038,6 +2039,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Torch_Info">Ez egy elengedhetetlen tárgy a Démonok Csarnokaiban, amik híresek a rossz fényviszonyokról.</string>
     <string name="Torch_Info2">Ez egy nélkülözhetetlen tárgy a csatornarendszerben, ami hírhedt az elégtelen fényviszonyairól.</string>
     <string name="Torch_Name">fáklya</string>
+    <string name="ToughShield_desc">Ez a bőrszíjakkal megerősített pajzs szívósnak tűnik egy fapajzsnál. Biztosan több sebzést képes kivédeni.</string>
     <string name="ToughShield_name">Bőrrel Megerősített Pajzs</string>
     <string name="TownGuardNPC_Desc">Egy átlagos város őr</string>
     <string name="TownGuardNPC_Gender">masculine</string>
@@ -2752,6 +2754,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

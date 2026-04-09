@@ -626,6 +626,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="DieHardSpell_Name">Duro de matar</string>
     <string name="Displacement_Txt">%s de desplazamiento</string>
     <string name="DoctorArmor_Info">Esta armadura de médico de la peste permite usar la habilidad «Nube de miasma», que libera un gas nocivo que envenena, debilita y desorienta a los enemigos. El médico, protegido por su máscara, es inmune a estos efectos.</string>
+    <string name="DoctorArmor_NotDoctor">¡Solo los médicos de la peste pueden usar esta armadura!</string>
     <string name="DogeMask_Info">¿Alguna vez te has querido disfrazar del famoso Doge? ¡Ahora es tu oportunidad! \n¡Con esta máscara! ¡Wow!</string>
     <string name="DogeMask_Name">Mascara Doge</string>
     <string name="DonateButton_pleaseDonate">por favor, considera donar</string>
@@ -2940,6 +2941,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

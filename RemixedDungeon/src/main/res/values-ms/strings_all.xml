@@ -1651,6 +1651,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Rudolph_Info">Apa yang lebih meriah selain dari hidung merah menyala? Dan sepasang tanduk rusa, kan..</string>
     <string name="Rudolph_Name">Hidung merah dengan tanduk</string>
     <string name="RunicSkull_Desc">Tengkorak tiruan yang menyerupai yang asli. Anda dapat melihat ada cahaya yang mengelilinginya.</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">tengkorak runik</string>
     <string name="RunicSkull_Name_Objective">tengkorak runik</string>
     <string name="SacrificialSword_Gender">masculine</string>
@@ -2728,6 +2729,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_table_name">Meja kayu</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
