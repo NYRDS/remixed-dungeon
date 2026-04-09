@@ -414,6 +414,7 @@
     <string name="Char_StaSlowed">menjadi lembab</string>
     <string name="Char_StaStunned">terpukul</string>
     <string name="Char_StaVision">penglihatan</string>
+    <string name="Char_Stole_0">%1$s mencuri %2$s dari %3$s!</string>
     <string name="Char_Stole_2">%1 mencuri %2 dari %3!</string>
     <string name="Char_YouMissed">%1$s %2$s serangan anda</string>
     <string name="ChargrilledMeat_Info">Kelihatan seperti stik biasa.</string>
