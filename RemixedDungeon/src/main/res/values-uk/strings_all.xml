@@ -2180,6 +2180,7 @@
     <string name="VampireSkull_Name">Щелепа вампіра</string>
     <string name="VertigoBuff_Name">Запаморочений</string>
     <string name="View_Distance">Відстань огляду</string>
+    <string name="VileEssence_Info">Концентрована сутність скверни, видобута з переможеного ворога. Ця темна субстанція пульсує ворожою енергією і високо цінується в алхімічних процесах.</string>
     <string name="VileEssence_Name">Підла сутність</string>
     <string name="Viscosity_Status">відкладено %d</string>
     <string name="Viscosity_Txt">%s в\'язкості</string>
@@ -2841,6 +2842,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

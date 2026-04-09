@@ -1146,6 +1146,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">Kobold</string>
     <string name="Kobold_Name_Objective">Kobold</string>
+    <string name="KrampusHead_Name">Krampuskopf</string>
     <string name="KunaiThrow_Info">Dieser tödliche Kunai-Wurf wird extrem schnell ausgeführt, so schnell, dass du nicht einmal ein Ziel auswählen kannst.\n\nWahre Meister können mehr als einen Kunai gleichzeitig werfen.</string>
     <string name="KunaiThrow_Name">Kunaiwurf</string>
     <string name="Kusarigama_Info">Diese Waffe besteht aus einer Sichel an einer Metallkette mit einem schweren Eisengewicht am Ende.</string>
@@ -2897,6 +2898,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
