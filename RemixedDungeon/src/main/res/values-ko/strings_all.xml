@@ -702,6 +702,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">화살 촉에서 차가운 기운이 나오는 것을 느낄 수 있다.</string>
     <string name="FrostArrow_Name">얼음 화살</string>
+    <string name="FrostAuraBuff_Info">몸을 서리가 감싸 주변에 있는 모든 것의 속도를 늦춥니다.</string>
     <string name="FrostAuraBuff_Name">냉기의 기운</string>
     <string name="FrostBuff_Info">완전히 얼어붙어 아무런 행동도 할 수 없습니다.</string>
     <string name="FrostBuff_Name">얼어붙은</string>
@@ -2730,6 +2731,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
