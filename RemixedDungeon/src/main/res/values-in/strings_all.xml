@@ -2318,6 +2318,24 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     -- Psi-Spider sekarang akan memberikan buff pada laba-laba lain alih-alih melakukan debuff pada Hero.\n
     - Bug diperbaiki\n
     </string>
+    <string name="Welcome_Text_32">
+    remix.32\n
+    - Gameplay:\n
+    -- Monster dan Hewan Peliharaan sekarang bisa mendapatkan pengalaman dan level\n
+    -- Perisai Chaos\n
+    -- Champion\n
+    -- Pertarungan Yog diseimbangkan ulang\n
+    -- Penyesuaian keseimbangan\n
+    - UX:\n
+    -- Statistik Hero dan Monster yang lebih detail\n
+    -- Antarmuka Kustomisasi yang lebih baik\n
+    -- Kamera yang halus\n
+    - Modding:\n
+    -- Animasi kustom\n
+    -- Skrip Kustom untuk Monster bawaan\n
+    -- Efek cahaya untuk Monster\n
+    - Bug diperbaiki\n
+    </string>
     <string name="Welcome_Text_32_1">
     remix.32.1\n
     - Gameplay:\n
@@ -2896,6 +2914,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

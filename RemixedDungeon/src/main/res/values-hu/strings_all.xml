@@ -1912,6 +1912,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="SpiderExploding_Name">pók dolgozó</string>
     <string name="SpiderExploding_Name_Objective">pók dolgozó</string>
     <string name="SpiderGuard_Desc">Akár a katonák, a pókőrök is a királyságuk védelméért élnek. Az őr mérge megbénítja az áldozatát, amitől könnyű prédává válik.</string>
+    <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">pók őr</string>
     <string name="SpiderGuard_Name_Objective">pók őr</string>
     <string name="SpiderMindAmber_Desc">A Borostyánpókok titokzatos és ritka lények, pszionikus képességekkel, csakúgy, mint a pszí-pókok, de fizikailag sokkal erősebbek. A \&quot;borostyán\&quot; elnevezés a hatalmas agyhólyagjaik színére utal, amit áldozatuk előtt fednek fel a Borostyánpókok, amikor hatalmukat használják.</string>
@@ -2756,6 +2757,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
