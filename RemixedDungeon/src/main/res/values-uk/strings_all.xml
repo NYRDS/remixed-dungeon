@@ -692,6 +692,7 @@
     <string name="ElvenDagger_Name">ельфійський кинджал</string>
     <string name="EncumbranceBuff_CharAct_1">Я недостатньо сильний, щоб належно володіти %s.</string>
     <string name="EncumbranceBuff_CharAct_2">Цей %s занадто важкий для мене, щоб ефективно його використовувати.</string>
+    <string name="EncumbranceBuff_CharAct_4">Мені бракує сили, щоб використовувати %s на повну.</string>
     <string name="EncumbranceBuff_Info">Недостатньо сили, щоб ефективно використовувати %s.</string>
     <string name="EncumbranceBuff_Name">Тягар</string>
     <string name="EnslavedSoul_Desc">Це примарне створіння практично прозоре. Хоча воно і виглядає як череп, лиш на мить з\'являється обличчя, обличчя сповнене болі та муки.</string>
@@ -2845,6 +2846,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 </resources>

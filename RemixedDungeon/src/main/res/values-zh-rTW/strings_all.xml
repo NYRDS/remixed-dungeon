@@ -579,6 +579,7 @@
     <string name="Death_Name_1">冷酷%s</string>
     <string name="Death_Name_2">冷酷%s</string>
     <string name="Deathling_Desc">死靈來源於英雄的靈魂，這是由死靈術召喚來的其他不幸的冒險家的靈魂。</string>
+    <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">死靈</string>
     <string name="Deathling_Name_Objective">死靈</string>
     <string name="DeepSnail_Desc">這種軟體動物經常出現在水源附近，而且比普通蝸牛速度快得多。不過要小心牠們的咬傷，可能會對你的皮膚造成不適。</string>
@@ -2840,6 +2841,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
