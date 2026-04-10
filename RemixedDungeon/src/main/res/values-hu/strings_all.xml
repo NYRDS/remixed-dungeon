@@ -1347,6 +1347,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="Nightmare_Name">rémálom</string>
     <string name="Nightmare_Name_Objective">rémálom</string>
     <string name="No_Valid_Cell">Nincs megfelelő mező a közelben.</string>
+    <string name="OozeBuff_Name">Maró iszap</string>
     <string name="Ooze_Death">%s megölt téged...</string>
     <string name="Order_Info">Megfelelő koncentrációval a parancsaid szinte megkérdőjelezhetetlenek.</string>
     <string name="Order_Name">Parancs</string>
@@ -1783,6 +1784,7 @@ egy másik helyre a szinten. </string>
     <string name="Senior_Name_Objective">idősebb szerzetes</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">fogadóslány</string>
+    <string name="ServantNPC_Name_Objective">fogadós szolgát</string>
     <string name="ServiceManNPC_Desc">Egy átlagos dolgozó az itteni intézményből.</string>
     <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Sajnálom, de minden kalandor csak %d filmet nézhet meg összesen</string>
@@ -2757,36 +2759,4 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

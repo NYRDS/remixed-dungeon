@@ -2035,6 +2035,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SpiderQueenCarapace_Name">スパイダークイーンの甲殻</string>
     <string name="SpiderQueen_Desc">美しい女性の身体と醜悪なクモが合わさった姿をしている。この隠れ家にいる生きとし生けるものはすべて、彼女の手下なのだ。この特別な女性との出会いは、命がけの体験となるかもしれない。なぜならあなたは不法侵入者なのだから！</string>
     <string name="SpiderQueen_DieInfo">スパイダークイーンを倒した！さて、5階に戻り、深層への旅を続けよう。</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">スパイダークイーン</string>
     <string name="SpiderQueen_Name_Objective">スパイダークイーン</string>
     <string name="SpiderServant_Desc">ソルジャーはクモの巣で最も数が多く、縄張りを守るために生まれた。彼らの鋏角は、敵を毒殺するための毒腺が発達している。</string>
@@ -2966,58 +2967,4 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

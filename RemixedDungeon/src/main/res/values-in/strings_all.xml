@@ -1579,6 +1579,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PumpkinPie_Name">pie labu</string>
     <string name="Pumpkin_Info">Kembali pada hari-hari orang Labu adalah bangsa yang bangga dan berkembang. Tapi semuanya berubah setelah manusia datang, hanya menyisakan reruntuhan. Dan ukiran kepala suku Labu yang telah lama hilang berfungsi sebagai pengingat akan peristiwa mengerikan itu.</string>
     <string name="Pumpkin_Name">Labu</string>
+    <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">Tongkat dari kayu yang kuat, ujungnya ditutupi besi.</string>
     <string name="Quarterstaff_Name">tongkat kuat</string>
     <string name="QuickSlot_SelectSlot">Pilih slot cepat untuk itu</string>
@@ -2914,19 +2915,4 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
