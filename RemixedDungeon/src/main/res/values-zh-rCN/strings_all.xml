@@ -1027,6 +1027,7 @@
     <string name="IceCaves_TileHighGrass">带霜的高草</string>
     <string name="IceCaves_TileStatue">被冻结的豺狼人</string>
     <string name="IceElemental_Desc">虽然在地牢里所有元素生物中冰元素不是最难遇到的，但是它往往被认为是最危险的。因为它的身体非常坚固，而且攻击还带有极寒。</string>
+    <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">冰元素</string>
     <string name="IceElemental_Name_Objective">冰元素</string>
     <string name="IceGuardianCoreModule_Info">这是一个由魔冰形成的复杂结构。一颗闪闪发光的宝石在这个奇特装置的正中。</string>
@@ -2908,6 +2909,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
