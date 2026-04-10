@@ -2330,6 +2330,7 @@
     <string name="WndChooseWay_Message">Яким шляхом підеш?</string>
     <string name="WndClass_Mastery">Майстерність</string>
     <string name="WndCryptoDonate_bitcoin">Біткоїн</string>
+    <string name="WndCryptoDonate_copyAddress">Копіювати адресу</string>
     <string name="WndCryptoDonate_infoText">Ви можете підтримати розробку Remixed Dungeon, надіславши пожертви криптовалютою на наведені нижче адреси. Дякуємо за вашу щедру підтримку!</string>
     <string name="WndCryptoDonate_openWallet">Відкрити гаманець</string>
     <string name="WndCryptoDonate_supportDev">Підтримати розробника</string>
@@ -2843,4 +2844,5 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 </resources>

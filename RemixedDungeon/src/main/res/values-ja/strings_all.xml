@@ -832,6 +832,7 @@
     <string name="GoldenKey_Info">この金の鍵の切り込みは小さく、複雑だ。もしかしたら、どこかのチェストの鍵を開けることができるかもしれない。</string>
     <string name="GoldenKey_Name">金の鍵</string>
     <string name="GoldenStatue_Desc">この立派な像がただの飾りではなく、無防備な冒険者を待ち構えている悪意ある生き物だとは、本当に信じられない。一見したところ、この像の「%s」は腕の一部に過ぎない。</string>
+    <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">金の像</string>
     <string name="GoldenStatue_Name_Objective">金の像</string>
     <string name="GoldenSword_Gender">masculine</string>
@@ -2967,4 +2968,5 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 </resources>

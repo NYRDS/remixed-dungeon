@@ -1927,6 +1927,7 @@ Potrebbe bruciare?</string>
     <string name="Stylus_Name">stilo arcano</string>
     <string name="Stylus_SelectArmor">Seleziona un oggetto su cui incidere</string>
     <string name="Succubus_Desc">Le succubi sono demoni che sembrano seducenti (in una lontana maniera gotic) ragazze. Usando la loro magia, le succubi possono affascinare l\'eroe, che sarà impossibilitato ad attaccare fin quando la fascinazione svanisce. </string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">succube</string>
     <string name="Succubus_Name_Objective">succube</string>
     <string name="SummonBeast_Info">Tentativo di evocare un\'orda di potenti bestie al tuo comando.\nI risultati effettivi possono variare.</string>
@@ -2679,6 +2680,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
