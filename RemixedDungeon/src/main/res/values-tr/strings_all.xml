@@ -888,6 +888,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Hedgehog_Info3">Ahududu reçeli ile çay sever misin?</string>
     <string name="Hedgehog_Info4">Bu turtayı al.</string>
     <string name="Hedgehog_Name">kirpi</string>
+    <string name="HeroClass_Doctor">Veba Doktoru</string>
     <string name="HeroClass_Elf">elf</string>
     <string name="HeroClass_ElfPerks_0">Elfler 15 Sağlık puanı ve 9 Güç puanı ile başlar.</string>
     <string name="HeroClass_ElfPerks_1">Elflerin kök salmaya karşı bağışıklığı vardır.</string>
@@ -2940,6 +2941,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

@@ -1664,6 +1664,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="RatSkull_Info2">Por otro lado, es muestra que su propietario es capaz de matar ratas, incluso las más grandes y malolientes.</string>
     <string name="RatSkull_Name">cráneo de rata gigante</string>
     <string name="Rat_Desc">Las ratas marsupiales son agresivas, pero son los habitantes más debiles de las alcantarillas. Solo son un problema cuando son muchas.</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">rata masupial</string>
     <string name="Rat_Name_Objective">rata marsupial</string>
     <string name="Ration_Info">Nada raro por aquí: carne seca, algunas galletas... Cosas así.</string>
@@ -2945,6 +2946,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
