@@ -1752,6 +1752,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">고위 드워프 수도승</string>
     <string name="Senior_Name_Objective">고위 드워프 수도승</string>
+    <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">여관 하녀</string>
     <string name="ServantNPC_Name_Objective">하녀</string>
     <string name="ServiceManNPC_Desc">지역 설립의 정규 일꾼</string>
