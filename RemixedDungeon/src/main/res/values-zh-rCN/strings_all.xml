@@ -1147,6 +1147,7 @@
     <string name="KrampusHead_Name">坎卜斯之首</string>
     <string name="KunaiThrow_Info">这个致命苦无的投掷将以极快的速度完成，快到你甚至无法选择目标。\n\n真正的大师能够同时投掷多个苦无。</string>
     <string name="KunaiThrow_Name">投掷苦无</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">这件武器由镰刀，铁球，锁链三部分所构成，铁球和镰刀分别在锁链的两端。</string>
     <string name="Kusarigama_Name">锤锁镰</string>
     <string name="Kusarigama_Pull">拉扯</string>
@@ -2910,6 +2911,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
