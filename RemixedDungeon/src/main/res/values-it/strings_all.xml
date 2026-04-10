@@ -1898,6 +1898,7 @@ Potrebbe bruciare?</string>
     <string name="StartScene_DifficultyExpert">Esperto</string>
     <string name="StartScene_DifficultyNormal">Normale</string>
     <string name="StartScene_DifficultyNormalWithSaves">Normale con salvataggi (e pubblicità)</string>
+    <string name="StartScene_DifficultyNormalWithSavesNoAds">Normale con salvataggi</string>
     <string name="StartScene_DifficultySelect">Scegli il tuo destino</string>
     <string name="StartScene_Erase">Cancella la partita corrente</string>
     <string name="StartScene_Load">Carica partita</string>
@@ -2680,6 +2681,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

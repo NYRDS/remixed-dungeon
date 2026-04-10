@@ -358,6 +358,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Challenges_Descriptions_0">Essen und Wasser sind längst verdorben und treiben jeden Abenteurer in den Wahnsinn mit Gedanken an den Tod durch Angst und Hunger. Kann deine Ernährung dir helfen, lange genug durchzuhalten?</string>
     <string name="Challenges_Descriptions_1">Angriff ist die beste Verteidigung. Diesen Lehren folgend wagst du dich in den Dungeon, wobei der Glaube der stärkste Beschützer deines Körpers ist.</string>
     <string name="Challenges_Descriptions_2">Als Anhänger der natürlichen Regeneration des gewöhnlichen Körpers waren Sie immer vorsichtig mit Tränken, die heilende Eigenschaften haben. Vorsicht ist besser als Nachsicht!</string>
+    <string name="Challenges_Descriptions_3">Die Ländereien um den Kerker sind längst von Bosheit infiziert und verhindern das Wachstum von Samen für verschiedene Kräuter und Pflanzen. Wer weiß, wie lange es dauern wird, bis die letzte Pflanze in diesen kargen Ländern aufhört zu existieren.</string>
     <string name="Challenges_Descriptions_4">Eine böse Präsenz lauert in den Gedanken aller Kreaturen im Verlies und macht sie sich der Ereignisse bewusst, die miteinander geschehen.</string>
     <string name="Challenges_Descriptions_5">Das Erste, was mit dem Bösen kam, war ein dichter und undurchdringlicher Nebel, der es fast unmöglich macht, sich in den endlosen Korridoren des Verlieses klar zu orientieren.</string>
     <string name="Challenges_Descriptions_6">Die alte Kunst des Runenlesens ist verboten und wird um jeden Preis gemieden, wegen des Fluchs, der auf jeder Schriftrolle liegt, die das Verlies oder seine Umgebung betritt.</string>
@@ -2899,6 +2900,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

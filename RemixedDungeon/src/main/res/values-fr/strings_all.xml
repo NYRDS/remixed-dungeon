@@ -2105,6 +2105,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="SpiritOfPain_Name_Objective">esprit de la douleur</string>
     <string name="Sprout_Info">Réveille les graines dormantes.\nCependant, il doit y avoir de la verdure sur le sol pour que ce sort réussisse.</string>
     <string name="Sprout_Name">Floraison</string>
+    <string name="StartScene_ComingSoon">Bientôt disponible</string>
     <string name="StartScene_Depth">Etage: %1$d\nNiveau: %2$d</string>
     <string name="StartScene_DifficultyEasy">Facile (Avec Pubs)</string>
     <string name="StartScene_DifficultyEasyNoAds">Facile</string>
@@ -3010,6 +3011,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
