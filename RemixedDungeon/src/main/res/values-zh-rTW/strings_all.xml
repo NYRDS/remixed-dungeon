@@ -2664,6 +2664,7 @@
     <string name="town_deco_crate_bottles_desc">裝瓶啤酒已成為旅館老闆們非常流行的消遣。</string>
     <string name="town_deco_crate_bottles_name">啤酒箱</string>
     <string name="town_deco_crate_desc">一個堅固的木製板條箱，將它的秘密藏在裡面。</string>
+    <string name="town_deco_crate_name">木箱</string>
     <string name="town_deco_crate_scrolls_desc">這個箱子裝滿了秘密知識。</string>
     <string name="town_deco_crate_scrolls_name">裝有卷軸的箱子</string>
     <string name="town_deco_cross_desc">一枚結實的銀十字架。它是這片地方的宗教象徵—「深淵領主聖誕老人的見證者」。</string>
@@ -2842,6 +2843,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

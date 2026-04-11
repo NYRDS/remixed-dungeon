@@ -246,6 +246,7 @@
     <string name="Bishop_title">obispo</string>
     <string name="BlackCat_AiStatus">Este gato está haciendo cosas ordinarias de gato.</string>
     <string name="BlackCat_Desc">Es una gata negra</string>
+    <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Name">Gata negra</string>
     <string name="BlackCat_Name_Objective">gata</string>
     <string name="BlackCat_Phrases_0">Prrrrrrr</string>
@@ -292,6 +293,7 @@
     <string name="BlindnessBuff_Info">Completamente cegado, sólo se oyen los sonidos de alrededor.</string>
     <string name="BlindnessBuff_Name">Cegado</string>
     <string name="BloodTransfusion_Info">Drena casi toda la sangre de un objetivo para curarte. Un oscuro ritual de sacrificio y supervivencia.</string>
+    <string name="BloodTransfusion_Name">Transfusión de sangre</string>
     <string name="BloodTransfusion_WontAgreed">El objetivo resiste la extracción de su esencia vital.</string>
     <string name="BodyArmorBuff_Info">La Armadura es incrementada a coste de Velocidad de Movimiento.</string>
     <string name="BodyArmorBuff_Name">Armadura Corporal</string>
@@ -2948,6 +2950,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

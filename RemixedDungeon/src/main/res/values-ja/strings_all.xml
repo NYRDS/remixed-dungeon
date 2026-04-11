@@ -2206,6 +2206,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Typical_Damage">典型的なダメージ</string>
     <string name="Undead_Defense">ブロックした</string>
     <string name="Undead_Desc">ドワーフの王の意志によって蘇ったアンデッドのドワーフで、王の宮廷の一員だった。驚くほどにヒゲが生えた骸骨として現れる。</string>
+    <string name="Undead_Gender">masculine</string>
     <string name="Undead_Name">アンデッドドワーフ</string>
     <string name="Undead_Name_Objective">アンデッドドワーフ</string>
     <string name="Ushanka_Info">上品な赤い星があしらわれた、暖かく肌触りの良いウシャンカ帽。邪悪で寒いダンジョンと戦うあなたにぴったりのお供。</string>
@@ -2968,5 +2969,6 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 </resources>
