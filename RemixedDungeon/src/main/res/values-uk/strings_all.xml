@@ -2367,6 +2367,7 @@
     <string name="WndFortuneTeller_No_Item">Треба бути більш обачливим, ти ж не бажаєш кидати гроші на вітер? Твій інвентар не містить неопізнаних предметів.</string>
     <string name="WndFortuneTeller_Title">Ворожка.</string>
     <string name="WndGame_Challenges">Випробування</string>
+    <string name="WndGame_Customizations">Кастомізації</string>
     <string name="WndGame_Exit">Вийти з Remixed Dungeon</string>
     <string name="WndGame_Load">Завантажити</string>
     <string name="WndGame_Ranking">Рекорди</string>
@@ -2848,5 +2849,6 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 </resources>

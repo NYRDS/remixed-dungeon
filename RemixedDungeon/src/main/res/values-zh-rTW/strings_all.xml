@@ -807,6 +807,7 @@
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">魔像</string>
     <string name="Golem_Name_Objective">魔像</string>
+    <string name="Goo_Desc">人們對黏液知之甚少。它很有可能甚至不是一個生物，而是獲得了自由意志的下水道物質聚合物。至少很明顯黑魔法在它身上起了作用。</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">粘咕正在不斷地抽動！</string>
     <string name="Goo_Info2">咕……咕……</string>
@@ -2843,6 +2844,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
