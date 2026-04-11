@@ -2447,6 +2447,7 @@ remix.31.1\n
     <string name="WndInfoItem_WontKnow">打开宝箱之前你不知道里面有什么</string>
     <string name="WndInstallingMod_copying_file">正在将 %s 复制到重混地牢存储空间</string>
     <string name="WndInstallingMod_deleting_file">正在删除 %s</string>
+    <string name="WndInstallingMod_please_wait">正在安装模组，请稍候...</string>
     <string name="WndInstallingMod_skipping_file">跳过 %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">执行配方</string>
     <string name="WndItemAlchemy_NoRecipes">当前物品和库存中没有可用的配方。</string>
@@ -2912,20 +2913,4 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

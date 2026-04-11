@@ -379,6 +379,7 @@
     <string name="ChaosHelmet_Name">Topi Keledar Chaos</string>
     <string name="ChaosStaff_Info">Tongkat didorong dengan Kuasa Chaos! Tiada ada lagi benda yang ahli sihir mahukan atau takutkan?</string>
     <string name="ChaosStaff_Name">tongkat chaos</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">Bilah pedang ini diperbuat dari chaos tulen dan kadangkala ia bergetar. Kuasa hebat tersimpan di dalamnya senjata ini, yang dapat memotong bersih hampir apa jua benda. Sebaliknya, kemahiran terbaik diperlukan, untuk setanding dengan kekuatan senjata ini.</string>
     <string name="ChaosSword_Name">pedang chaos</string>
     <string name="CharAction_Expel">usir</string>
@@ -1328,6 +1329,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Nightmare_Name">mimpi ngeri</string>
     <string name="Nightmare_Name_Objective">mimpi ngeri</string>
     <string name="No_Valid_Cell">Tiada bilik yang sesuai berhampiran.</string>
+    <string name="OozeBuff_Name">Lendir Kaustik</string>
     <string name="Ooze_Death">%s telah membunuh anda...</string>
     <string name="OverpricedRation_Info">Kelihatan bekalan makanan biasa tetapi lebih kecil</string>
     <string name="OverpricedRation_Message">Makanan ini rasanya sedap.</string>
@@ -2737,34 +2739,4 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
