@@ -18,6 +18,7 @@
     <string name="AboutScene_Translation">Diterjemah oleh:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
     <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon oleh NYRDS berdasarkan Sumber Pixel Dungeon oleh Watabou.</string>
+    <string name="Accuracy_DecreasedDoctor">Setiap ayunan %s ini menyebarkan ketidaksempurnaan. Gergaji Tulang saya menyembuhkan... ini menjangkitkan.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Tangan kosong mencemarkan teknik saya. Tanpa potongan bersih Gergaji, bidikanku menjadi kacau.</string>
     <string name="Acidic_Desc">Makhluk seakan-labah-labah bersaiz besar dan menakutkan itu tidak suka bertempur dalam jarak dekat, ia menembak runcing bergerigi beracun yang dapat melumpuhkan mangsa dari jarak jauh.</string>
     <string name="Acidic_Gender">masculine</string>
@@ -2734,6 +2735,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -1942,6 +1942,7 @@
     <string name="SkeletonKey_Name">骷髅钥匙</string>
     <string name="Skeleton_Defense">格挡</string>
     <string name="Skeleton_Desc">骷髅是从那些悲惨的冒险者及地牢原住民尸骨的聚合物产生的，来自下层地牢的邪恶力量将它们从死亡中唤起。吸收了足够的伤害之后，它们就会在骨头的爆炸中消解。</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">你被骨头的爆炸杀死了……</string>
     <string name="Skeleton_Name">骷髅</string>
     <string name="Skeleton_Name_Objective">骷髅</string>
@@ -2911,6 +2912,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

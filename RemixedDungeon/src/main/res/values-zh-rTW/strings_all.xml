@@ -837,6 +837,7 @@
     <string name="Haste_Name">急速</string>
     <string name="Heal_Name">治療</string>
     <string name="HealerNPC_Desc">虛無縹緲的直覺告訴我，眼前的老人懂得如何弄法杖。</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">免費為冒險者治療！</string>
     <string name="HealerNPC_Message2">當您受傷或飢餓時歡迎回來！</string>
     <string name="HealerNPC_Message3">奇怪，為甚麼教會不允許我們戴帽子…外面真的很冷。</string>
@@ -2841,6 +2842,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
