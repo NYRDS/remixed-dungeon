@@ -443,6 +443,7 @@
     <string name="ChargrilledMeat_Name">carne grelhada</string>
     <string name="CharmBuff_Info">A mente e o corpo ficaram encantados!</string>
     <string name="CharmBuff_Name">Encantado</string>
+    <string name="CharmSpell_Cast">%s está encantado.</string>
     <string name="CharmSpell_Info">Todo mundo merece um pouco de amor, certo?</string>
     <string name="CharmSpell_Name">Charme</string>
     <string name="Chasm_Chasm">Abismo</string>
@@ -2913,6 +2914,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
