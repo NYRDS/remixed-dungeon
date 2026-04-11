@@ -974,6 +974,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="IceCaves_TileHighGrass">Fagyott magas fű</string>
     <string name="IceCaves_TileStatue">Fagyott Gnoll</string>
     <string name="IceElemental_Desc">A katakomba összes elemi erői közt a fagyszellem nem mondható hatalmasnak, de azért igazán veszélyesnek tekinthetők. A jégaura amit testük kibocsát, bármilyen ellenségüket lelassítja.</string>
+    <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">jég elementál</string>
     <string name="IceElemental_Name_Objective">jég elementál</string>
     <string name="IceGuardianCoreModule_Info">Ez egy komplex struktúra, mágikus jégből. Egy fénylő kő van elhelyezve ebben a csodás találmányban.</string>
@@ -2763,4 +2764,5 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 </resources>

@@ -1996,6 +1996,7 @@ Potrebbe bruciare?</string>
     <string name="Torch_Name">torcia</string>
     <string name="ToughShield_desc">Questo scudo rinforzato con cinghie di cuoio sembra più resistente di uno di legno. Può certamente bloccare più danni.</string>
     <string name="TownGuardNPC_Desc">Una normale guardia cittadina. </string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">Circolare.</string>
     <string name="TownGuardNPC_Message2">Grazie ad avventurieri come te, è diventato molto calmo quassù. </string>
     <string name="TownGuardNPC_Message3">Pensi che ci siano troppe guardie in questo paese? Beh, è perchè è l\'unico paese con un gigantesco dungeon infestato da mostri, giusto?</string>
@@ -2678,6 +2679,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_bench_name">Panca di legno</string>
     <string name="town_deco_wooden_chair_desc">Questa sedia è fatta di legno</string>
     <string name="town_deco_wooden_chair_name">Sedia di legno</string>
+    <string name="town_deco_wooden_drawer_desc">Chissà cosa viene conservato lì dentro.</string>
     <string name="town_deco_wooden_drawer_name">Cassetto</string>
     <string name="town_deco_wooden_stairs_desc">Ti fanno un po\' più alto</string>
     <string name="town_deco_wooden_stairs_name">Scale</string>
@@ -2686,6 +2688,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
