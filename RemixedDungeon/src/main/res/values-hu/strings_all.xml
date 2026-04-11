@@ -533,6 +533,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="Crab_Desc">Ezek az óriási rákok a tápláléklánc tetején vannak a csatornákban. Hihetetlen gyorsak és vastag páncéljuk erős ütéseknek is ellenáll.</string>
     <string name="Crab_Name">csatornarák</string>
     <string name="Crab_Name_Objective">csatornarák</string>
+    <string name="CrippleBuff_Info">A test meg van bénulva, de a harc mégis folytatódik.</string>
     <string name="CrippleBuff_Name">Bénult</string>
     <string name="Crystal_Desc">Nagy, fénylő kristály, lebeg a levegőben. Valószínűleg erős mágiával töltött.</string>
     <string name="Crystal_Name">lebegő kristály</string>
