@@ -717,6 +717,7 @@
     <string name="Eye_Name">зле око</string>
     <string name="Eye_Name_Objective">зле око</string>
     <string name="Facilitations_Descriptions_1">Досі невідомо, ким були ваші батьки, але природна троліча регенерація допоможе загоїти всі майбутні бойові шрами.</string>
+    <string name="Facilitations_Descriptions_3">Затягнувши пояс зі шкіри огра, який передавався кожному новому поколінню, ви робите крок у невідомість, що попереду.</string>
     <string name="Facilitations_Names_0">Без голоду</string>
     <string name="Facilitations_Names_1">Тіло троля</string>
     <string name="Facilitations_Names_2">Дух джина</string>
@@ -2847,4 +2848,5 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 </resources>

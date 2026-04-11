@@ -2317,6 +2317,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndLocalModInstall_pick">Pilih direktori mod</string>
     <string name="WndLocalModInstall_text">Pilih direktori untuk memasang mod.</string>
     <string name="WndLocalModInstall_title">Pasang mod dari direktori setempat</string>
+    <string name="WndModInstall_InstallingMod">Memasang mod</string>
     <string name="WndModInstall_PleaseUpdate">Sila kemas kini Remixed Dungeon sebelum memasang mod ini</string>
     <string name="WndModsDisclaimer_install">Pasang mod tempatan</string>
     <string name="WndModsDisclaimer_manage">Urus senarai mod</string>
@@ -2739,4 +2740,5 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 </resources>
