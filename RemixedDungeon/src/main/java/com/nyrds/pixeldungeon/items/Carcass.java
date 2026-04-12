@@ -143,8 +143,9 @@ public class Carcass extends Item implements Doom {
             reanimate(chr, false);
         } else if (action.equals(AC_DEVOUR)) {
             Devour.hit(chr);
-            chr.eat(this, src.ht(), Utils.format(R.string.Carcass_Devoured, src.getName()));
-            chr.heal(src.ht()/10, this);
+            int mult = upgradeMultiplier();
+            chr.eat(this, src.ht() * mult, Utils.format(R.string.Carcass_Devoured, src.getName()));
+            chr.heal(src.ht() * mult / 10, this);
 
         } else if (action.equals(AC_DISSECT)) {
             if (getHeap()!= null && !chr.level().adjacent(chr.getPos(), getPos())) {
@@ -169,8 +170,8 @@ public class Carcass extends Item implements Doom {
         // Create random harvestable items to drop
         String[] harvestItems = {"ToxicGland", "RottenOrgan", "BoneShard"};
 
-        // Determine how many items to get based on the source mob's HP (higher HP = more items)
-        int itemCount = Math.max(1, src.ht() / 20); // At least 1, scales with mob HP
+        // Determine how many items to get based on the source mob's HP and carcass upgrade
+        int itemCount = Math.max(1, src.ht() * upgradeMultiplier() / 20);
 
         int itemsObtained = 0;
         for (int i = 0; i < itemCount; i++) {
@@ -225,9 +226,10 @@ public class Carcass extends Item implements Doom {
             pet.regenSprite();
             pet.assignNextId();
             pet.setUndead(true);
-            pet.lvl(caster.skillLevel());
+            int mult = upgradeMultiplier();
+            pet.lvl(caster.skillLevel() + level());
             pet.hp(1); //it's alive!
-            pet.heal(pet.ht() * caster.skillLevel() / 10);
+            pet.heal(pet.ht() * (caster.skillLevel() + level()) * mult / 10);
             pet.getBelongings().clear();
             if (byMagic) {
                 pet.heal(pet.ht());
@@ -259,7 +261,21 @@ public class Carcass extends Item implements Doom {
     }
 
     @Override
+    public boolean isIdentified() {
+        return true;
+    }
+
+    /**
+     * Super-linear upgrade multiplier: (1 + level)²
+     * +0 = 1x, +1 = 4x, +2 = 9x, +3 = 16x
+     */
+    public int upgradeMultiplier() {
+        int lvl = level();
+        return (lvl + 1) * (lvl + 1);
+    }
+
+    @Override
     public int price() {
-        return src.ht() / 6  * quantity();
+        return src.ht() / 6  * quantity() * upgradeMultiplier();
     }
 }

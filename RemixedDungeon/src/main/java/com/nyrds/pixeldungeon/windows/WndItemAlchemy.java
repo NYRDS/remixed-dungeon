@@ -23,7 +23,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -47,14 +46,19 @@ public class WndItemAlchemy extends Window {
     // Track recipe rows for selection
     private final ArrayList<RecipeListItem> recipeRows = new ArrayList<>();
 
+    // Recipes currently displayed (for post-execution checks)
+    private List<AlchemyRecipe> availableRecipes;
+
     // Recipe description text
     private final Text recipeDescription;
     final private Char hero;
+    final private Item baseItem;
 
     public WndItemAlchemy(Item baseItem, @NotNull Char chr) {
         super();
 
         hero = chr;
+        this.baseItem = baseItem;
 
         // Calculate almost fullscreen dimensions
         float screenWidth = RemixedDungeon.landscape() ? Window.STD_WIDTH_L : Window.STD_WIDTH_P;
@@ -77,21 +81,15 @@ public class WndItemAlchemy extends Window {
         title.setX(MARGIN);
         mainLayout.add(title);
 
-        // Calculate player's inventory
-        Map<String, Integer> playerInventory = new HashMap<>();
-        for (Item item : hero.getBelongings()) {
-            if(item.isIdentified()) {
-                String itemName = item.getEntityKind();
-                playerInventory.put(itemName, playerInventory.getOrDefault(itemName, 0) + item.quantity());
-            }
-        }
+        // Calculate player's inventory (use shared method to stay consistent with button visibility check)
+        Map<String, Integer> playerInventory = AlchemyRecipes.buildAlchemyInventory(hero);
 
         // Get recipes that contain this specific baseItem
         var recipesWithItem =
                 AlchemyRecipes.getRecipesContainingItem(baseItem.getEntityKind());
 
         // Filter to only show recipes for which the player has all required ingredients
-        List<AlchemyRecipe> availableRecipes = new ArrayList<>();
+        availableRecipes = new ArrayList<>();
         for (var recipe : recipesWithItem) {
             if (AlchemyRecipes.hasRequiredIngredients(recipe.getInput(), playerInventory)) {
                 availableRecipes.add(recipe);
@@ -281,13 +279,7 @@ public class WndItemAlchemy extends Window {
         }
 
         // Calculate player's current inventory
-        Map<String, Integer> playerInventory = new HashMap<>();
-        for (Item item : hero.getBelongings()) {
-            if (item.isIdentified()) {
-                String itemName = item.getEntityKind();
-                playerInventory.put(itemName, playerInventory.getOrDefault(itemName, 0) + item.quantity());
-            }
-        }
+        Map<String, Integer> playerInventory = AlchemyRecipes.buildAlchemyInventory(hero);
 
         // Check if we have enough ingredients for 'times' executions
         var inputs = selectedRecipe.getInput();
@@ -401,18 +393,23 @@ public class WndItemAlchemy extends Window {
 
                 // Find and remove the required items
                 List<Item> itemsToRemove = new ArrayList<>();
-                int removedCount = 0;
+                int removedUnits = 0;
 
                 for (Item inventoryItem : hero.getBelongings()) {
-                    if (inventoryItem.getEntityKind().equals(ingredientName) && removedCount < requiredQty) {
-                        int qtyToRemove = Math.min(inventoryItem.quantity(), requiredQty - removedCount);
+                    if (inventoryItem.getEntityKind().equals(ingredientName) && removedUnits < requiredQty) {
+                        int multiplier = (inventoryItem instanceof com.nyrds.pixeldungeon.items.Carcass)
+                                ? ((com.nyrds.pixeldungeon.items.Carcass) inventoryItem).upgradeMultiplier()
+                                : 1;
+                        int unitsNeeded = requiredQty - removedUnits;
+                        int itemsFromStack = (int) Math.ceil((double) unitsNeeded / multiplier);
+                        itemsFromStack = Math.min(itemsFromStack, inventoryItem.quantity());
 
-                        if (qtyToRemove >= inventoryItem.quantity()) {
+                        if (itemsFromStack >= inventoryItem.quantity()) {
                             itemsToRemove.add(inventoryItem);
-                            removedCount += inventoryItem.quantity();
+                            removedUnits += inventoryItem.quantity() * multiplier;
                         } else {
-                            inventoryItem.quantity(inventoryItem.quantity() - qtyToRemove);
-                            removedCount += qtyToRemove;
+                            inventoryItem.quantity(inventoryItem.quantity() - itemsFromStack);
+                            removedUnits += itemsFromStack * multiplier;
                         }
                     }
                 }
@@ -455,8 +452,21 @@ public class WndItemAlchemy extends Window {
                     EventCollector.logException(e);
                 }
             }
-            // Close the window after executing the recipe
-            hide();
+            // Check if any listed recipe can still be executed with remaining ingredients
+            Map<String, Integer> currentInventory = AlchemyRecipes.buildAlchemyInventory(hero);
+            boolean anyExecutable = false;
+            for (var recipe : availableRecipes) {
+                if (AlchemyRecipes.hasRequiredIngredients(recipe.getInput(), currentInventory)) {
+                    anyExecutable = true;
+                    break;
+                }
+            }
+
+            if (anyExecutable) {
+                updateExecuteButton();
+            } else {
+                hide();
+            }
         }
     }
 }

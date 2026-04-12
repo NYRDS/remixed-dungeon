@@ -251,11 +251,13 @@ class GameClient:
         return self._get("/debug/alchemy/get_inventory")
 
     def alchemy_give_item(
-        self, item_type: str, count: int = 1, wait: bool = True
+        self, item_type: str, count: int = 1, level: int = 0, wait: bool = True
     ) -> Dict[str, Any]:
-        """Give an item to the hero (for test setup)."""
-        response = self._get(f"/debug/alchemy/give_item?type={item_type}&count={count}")
-        # Wait is now handled synchronously in the debug endpoint
+        """Give an item to the hero (for test setup). Level param upgrades the item."""
+        url = f"/debug/alchemy/give_item?type={item_type}&count={count}"
+        if level > 0:
+            url += f"&level={level}"
+        response = self._get(url)
         return response
 
     def take_screenshot(self, output_path: str) -> bool:

@@ -500,9 +500,12 @@ public class AlchemyRecipes {
     public static Map<String, Integer> buildAlchemyInventory(Char hero) {
         Map<String, Integer> inventory = new HashMap<>();
         for (Item item : hero.getBelongings()) {
-            // FIX: Count all items, not just identified ones
             String itemName = item.getEntityKind();
-            inventory.put(itemName, inventory.getOrDefault(itemName, 0) + item.quantity());
+            int value = item.quantity();
+            if (item instanceof Carcass) {
+                value *= ((Carcass) item).upgradeMultiplier();
+            }
+            inventory.put(itemName, inventory.getOrDefault(itemName, 0) + value);
         }
         return inventory;
     }

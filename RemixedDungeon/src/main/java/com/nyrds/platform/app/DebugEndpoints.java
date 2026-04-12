@@ -2435,14 +2435,18 @@ public class DebugEndpoints {
 
                     // Find and remove items from inventory
                     for (Item item : Dungeon.hero.getBelongings()) {
-                        if (item.getEntityKind().equals(name)) {
-                            int removed = Math.min(item.quantity(), toRemove);
-                            item.quantity(item.quantity() - removed);
-                            toRemove -= removed;
+                        if (item.getEntityKind().equals(name) && toRemove > 0) {
+                            int multiplier = (item instanceof com.nyrds.pixeldungeon.items.Carcass)
+                                    ? ((com.nyrds.pixeldungeon.items.Carcass) item).upgradeMultiplier()
+                                    : 1;
+                            int itemsNeeded = (int) Math.ceil((double) toRemove / multiplier);
+                            int toConsume = Math.min(item.quantity(), itemsNeeded);
+
+                            item.quantity(item.quantity() - toConsume);
+                            toRemove -= toConsume * multiplier;
                             if (item.quantity() <= 0) {
                                 item.detach(Dungeon.hero.getBelongings().backpack);
                             }
-                            if (toRemove <= 0) break;
                         }
                     }
                 }
@@ -2532,6 +2536,7 @@ public class DebugEndpoints {
             String query = session.getQueryParameterString();
             String itemType = null;
             int count = 1;
+            int level = 0;
 
             if (query != null && !query.isEmpty()) {
                 String[] params = query.split("&");
@@ -2541,6 +2546,12 @@ public class DebugEndpoints {
                     } else if (param.startsWith("count=")) {
                         try {
                             count = Integer.parseInt(java.net.URLDecoder.decode(param.substring(6), "UTF-8"));
+                        } catch (NumberFormatException e) {
+                            // Use default value
+                        }
+                    } else if (param.startsWith("level=")) {
+                        try {
+                            level = Integer.parseInt(java.net.URLDecoder.decode(param.substring(6), "UTF-8"));
                         } catch (NumberFormatException e) {
                             // Use default value
                         }
@@ -2563,14 +2574,17 @@ public class DebugEndpoints {
             for (int i = 0; i < count; i++) {
                 Item item = ItemFactory.itemByName(itemType);
                 if (item != null) {
+                    if (level > 0) {
+                        item.upgrade(level);
+                    }
                     Dungeon.hero.getBelongings().collect(item);
                 }
             }
-            GLog.i("Gave %dx %s to hero", count, itemType);
+            GLog.i("Gave %dx %s +%d to hero", count, itemType, level);
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                String.format("{\"success\":true,\"message\":\"Gave %dx %s to hero\",\"type\":\"%s\",\"count\":%d}",
-                    count, itemType, itemType, count));
+                String.format("{\"success\":true,\"message\":\"Gave %dx %s +%d to hero\",\"type\":\"%s\",\"count\":%d,\"level\":%d}",
+                    count, itemType, level, itemType, count, level));
         } catch (Exception e) {
             GLog.w("Error in handleAlchemyGiveItem: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
