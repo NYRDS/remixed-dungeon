@@ -54,6 +54,7 @@
     <string name="Amulet_ACEnd">结束游戏</string>
     <string name="Amulet_Info">Yendor护符是来自未知领域中最强大的且最著名的神器。据说它能够实现持有者的一切愿望，只要持有者具备足够的力量来“说服”它去做。</string>
     <string name="Amulet_Name">Yendor护符</string>
+    <string name="AnesthesiaBuff_Name">麻醉</string>
     <string name="Anesthesia_Info">使目标陷入深度且不自然的睡眠。即使最猛烈的攻击也无法将其从沉睡中唤醒。</string>
     <string name="Ankh_Info">这个古老的不朽的象征可以让你从死亡中复活，只不过所有未装备的物品都会丢失。</string>
     <string name="Ankh_Name">十字架</string>
@@ -2918,6 +2919,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

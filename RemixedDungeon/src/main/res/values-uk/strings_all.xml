@@ -920,6 +920,7 @@
     <string name="HeroClass_NecromancerPerks_4">Зілля лікування ідентифіковані з самого початку.</string>
     <string name="HeroClass_PlagueDoctorPerks_0">Чумні доктори збирають [yellow:Токсичні залози], [yellow:Гнилі органи], [yellow:Уламки кісток] з переможених ворогів.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Починаєте з маскою чуми (імунітет до всіх газів) і кістковою пилою. Критичні удари викидають додаткові частини, а пила завдає +50% шкоди паралізованим ворогам.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Чумні доктори зазнають великих штрафів до влучності без улюбленої Кістяної пили в руках і не можуть використовувати дистанційну зброю.</string>
     <string name="HeroClass_Rog">крадій</string>
     <string name="HeroClass_RogPerks_0">Крадії починають з кільцем тіней +1.</string>
     <string name="HeroClass_RogPerks_1">Крадії ідентифікують кільця одразу, як тільки одягають їх.</string>
@@ -2852,6 +2853,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

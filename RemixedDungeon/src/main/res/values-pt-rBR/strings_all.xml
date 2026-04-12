@@ -1384,6 +1384,7 @@ Parede
     <string name="NecromancerRobe_PetLimitReached">Necromancia: limite de invocação atingido (Limite atual: %d)!</string>
     <string name="Necromancer_ACSpecial">NECROMANCIA</string>
     <string name="Necromancy_BecameALich">Você tornou-se o Lich! Seu poder cresceu e sua capacidade de almas dobrou! Mas você perdeu %1$d pontos de força.</string>
+    <string name="Necromancy_Death">Você esgotou toda a sua força vital enquanto praticava necromancia.</string>
     <string name="Necromancy_NotEnoughSouls">Você não possui almas suficientes para conjurar um feitiço de \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_ReincarnationName">Reencarnação</string>
     <string name="Necromancy_ReincarnationTriggered">Seus poderes desafiam a morte! Mas você perdeu todas as almas coletadas e posses.</string>
@@ -2916,6 +2917,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
