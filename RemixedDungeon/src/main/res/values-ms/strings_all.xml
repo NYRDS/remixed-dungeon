@@ -810,6 +810,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Halls_TileHighGrass">Kulat bara</string>
     <string name="Halls_TileStatue">Tiang</string>
     <string name="Halls_TileWater">Lahar sejuk</string>
+    <string name="Heal_Cast">%s telah disembuhkan.</string>
     <string name="Heal_Name">Sembuh</string>
     <string name="HealerNPC_Desc">Orang tua, kelihatan beliau seperti pembuat tongkat sakti.</string>
     <string name="HealerNPC_Message1">Rawatan percuma untuk setiap pengembara!</string>
@@ -2743,6 +2744,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

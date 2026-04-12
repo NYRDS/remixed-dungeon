@@ -2311,6 +2311,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndLocalModInstall_text">Seleziona la directory da cui installare la mod.</string>
     <string name="WndLocalModInstall_title">Installa mod dalla directory locale</string>
     <string name="WndModInstall_PleaseUpdate">Aggiorna Remixed Dungeon prima di installare questa mod</string>
+    <string name="WndModInstall_Version">versione</string>
     <string name="WndModSelect_AreYouSure">Eliminare mod: %s, sei sicuro?</string>
     <string name="WndModSelect_ReallyDelete">Vuoi davvero eliminare?</string>
     <string name="WndModsDisclaimer_install">Installa mod locale</string>
@@ -2689,6 +2690,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
