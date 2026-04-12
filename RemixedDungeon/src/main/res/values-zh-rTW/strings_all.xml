@@ -670,6 +670,7 @@
     <string name="ElfArmor_Desc">在這件披風的幫助下，精靈可以召喚自然的力量。高密的草叢能在眨眼間長出並困住視野內的敵人。然而實際上是一塊塊大石阻擋著，使他們不能彈動。</string>
     <string name="ElfArmor_Name">精靈披風</string>
     <string name="ElfArmor_NotElf">只有精靈能使用這件護甲！</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">精靈手工的一個代表,比普通木弓更強,更準。</string>
     <string name="ElvenBow_Name">精靈長弓</string>
     <string name="ElvenDagger_Gender">masculine</string>
@@ -2844,6 +2845,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

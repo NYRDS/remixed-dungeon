@@ -713,6 +713,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="GameScene_Water">Puoi udire l\'acqua intorno a te.</string>
     <string name="GameScene_Welcome">Benvenuto al livello %d di Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Bentornato al livello %d di Remixed Dungeon!</string>
+    <string name="GasImmuneBuff_Info">Immune a tutti i gas.</string>
     <string name="Ghost_Defense">eluso</string>
     <string name="Ghost_Desc">Il fantasma è appena visibile. Si presenta come una macchia informe di luce fioca con una espressione addolorata.</string>
     <string name="Ghost_Name">fantasma triste</string>
@@ -2688,6 +2689,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

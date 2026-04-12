@@ -1332,6 +1332,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="No_Valid_Cell">Tiada bilik yang sesuai berhampiran.</string>
     <string name="OozeBuff_Name">Lendir Kaustik</string>
     <string name="Ooze_Death">%s telah membunuh anda...</string>
+    <string name="Order_Info">Dengan tumpuan yang betul, arahan anda hampir tidak dapat dinafikan.</string>
     <string name="OverpricedRation_Info">Kelihatan bekalan makanan biasa tetapi lebih kecil</string>
     <string name="OverpricedRation_Message">Makanan ini rasanya sedap.</string>
     <string name="OverpricedRation_Name">bekalan makanan mahal</string>
@@ -2741,6 +2742,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 </resources>
