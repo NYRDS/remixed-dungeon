@@ -1157,6 +1157,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="LibraryBook_Name">Buku pustaka</string>
     <string name="Lich_Desc">Pembangkit mayat telah menemui ajalnya di dalam Necropolis, dan tenaga kejahatan tempat ini telah masuk ke dalam jasadnya, dia menjelma sebagai Lich. Iaitu ahli sihir hidup semula, patung hidup tanpa kemahuan, yang dikawal oleh kuasa jahat.</string>
     <string name="Lich_DieInfo">Saya tidak pernah menyukai Ahli Sihir Mayat ini. Jadi sekarang waktunya untuk kembali ke tingkat 7 dan mencari jalan lain ke pengembaraan baru.</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Info">Cahaya terpancar dari badan, menerangi segala-galanya di sekeliling.</string>
@@ -2742,6 +2743,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

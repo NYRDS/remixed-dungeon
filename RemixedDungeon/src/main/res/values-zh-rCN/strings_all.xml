@@ -2077,6 +2077,7 @@
     <string name="Stylus_Name">奥术刻笔</string>
     <string name="Stylus_SelectArmor">选择一件物品来附魔</string>
     <string name="Succubus_Desc">魅魔是外表诱人（带有些哥特风格）的女性恶魔。魅魔可以通过使用魔法魅惑英雄，使英雄在魅惑消退前无法攻击它。</string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">魅魔</string>
     <string name="Succubus_Name_Objective">魅魔</string>
     <string name="SummonBeast_AtYourCommand">听你指挥！</string>
@@ -2454,6 +2455,7 @@ remix.31.1\n
     <string name="WndInstallingMod_skipping_file">跳过 %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">执行配方</string>
     <string name="WndItemAlchemy_NoRecipes">当前物品和库存中没有可用的配方。</string>
+    <string name="WndItemAlchemy_SelectRecipe">选择配方</string>
     <string name="WndItemAlchemy_Title">含 %s 的炼金配方</string>
     <string name="WndItemAlchemy_Transmute">转化</string>
     <string name="WndJournal_Levels">特殊地点</string>
@@ -2916,6 +2918,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
