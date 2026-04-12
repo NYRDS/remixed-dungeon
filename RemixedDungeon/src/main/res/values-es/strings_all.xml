@@ -2001,6 +2001,7 @@ otro lugar del nivel.</string>
     <string name="SociologistNPC_Name_Objective">Sociólogo</string>
     <string name="Sorrowmoss_Desc">Un musgohiriente es una flor (no un musgo) con pétalos como cuchillas, cubiertas de veneno mortal.</string>
     <string name="Sorrowmoss_Name">Musgohiriente</string>
+    <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">Es un fragmento que has tomado de los restos del Tarro de Almas. Tiene un brillo de energía misteriosa, tal vez alguien este interesado en esto.</string>
     <string name="SoulShard_Name">fragmento de alma</string>
     <string name="Spear_Info">Una delgada vara de madera con una punta de hierro afilada.</string>
@@ -2952,6 +2953,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

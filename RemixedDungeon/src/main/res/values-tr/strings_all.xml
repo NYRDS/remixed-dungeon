@@ -1451,6 +1451,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="Piercing_Name_1">Delici %s</string>
     <string name="Piercing_Name_2">Delici %s</string>
     <string name="Piranha_Desc">Bu etobur balıklar yeraltı sularının doğal canlıları değildir, hazineleri korumak için özel olarak üretilmişlerdir.</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">dev pirana</string>
     <string name="Piranha_Name_Objective">dev pirana</string>
     <string name="PirateSet_Info">Arr! Bizim çocuklara katılacak cesaretin var mı? Yoksa sadece başka bir kara sıçanı mısın? Umarım değilsindir, çünkü bu şey sadece korsanlar için. Arr!</string>
@@ -2942,6 +2943,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
