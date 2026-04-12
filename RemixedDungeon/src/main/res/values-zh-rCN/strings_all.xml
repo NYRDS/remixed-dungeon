@@ -2651,6 +2651,7 @@ remix.31.1\n
     <string name="YogsEye_Name">Yog之眼</string>
     <string name="YogsEye_Name_Objective">Yog之眼</string>
     <string name="YogsHeart_Desc">从古至今人们都认同的有邪恶透顶的绝情的生物就在这儿，一颗跳动的巨大心脏，古神的心脏！</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">Yog之心</string>
     <string name="YogsHeart_Name_Objective">Yog之心</string>
     <string name="YogsTeeth_Desc">古神的大嘴和锋利牙齿，表现了出强烈的破坏欲望，他渴望毁灭和吞噬所有的生物。</string>
@@ -2919,6 +2920,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

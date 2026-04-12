@@ -2004,6 +2004,7 @@ Potrebbe bruciare?</string>
     <string name="TownGuardNPC_Name">guardia cittadina</string>
     <string name="TownGuardNPC_Name_Objective">guardia cittadina</string>
     <string name="TownPortal_Info">Questo incantesimo ti permette di tornare istantaneamente al sicuro. Tuttavia, potenti fonti di magia nelle vicinanze potrebbero impedirne il corretto funzionamento.</string>
+    <string name="TownPortal_Name">Portale Cittadino</string>
     <string name="TownScript_NeedWeapon">Non andrò nel dungeon a mani nude!\n Forse è il caso di visitare il negozio del paese prima?</string>
     <string name="TownShopkeeper_Name">Negoziante</string>
     <string name="TownShopkeeper_Objective">Negoziante</string>
@@ -2690,6 +2691,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

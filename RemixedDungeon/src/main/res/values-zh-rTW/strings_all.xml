@@ -1332,6 +1332,7 @@
     <string name="Monk_Disarm">%1$s將你手中的%2$s擊飛了！</string>
     <string name="Monk_Name">矮人武僧</string>
     <string name="Monk_Name_Objective">矮人武僧</string>
+    <string name="MoongraceBuff_Info">周圍的空氣變得更加飽和，使人能夠更好地集中精神並恢復魔力。</string>
     <string name="Movement_Speed">移動速度</string>
     <string name="Multiplicity_Txt">分身 %s</string>
     <string name="Mushroom_Eat_Message"> 那菇味道怪詭異的！</string>
@@ -2847,4 +2848,5 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 </resources>
