@@ -2596,6 +2596,7 @@
     <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">фантом</string>
     <string name="Wraith_Name_Objective">фантома</string>
+    <string name="WrnExperimental_hint">Якщо цей дивний і викривлений світ надто жорстокий для тебе, вимкни ці параметри через\nГоловний екран-&gt;Параметри-&gt;Геймплей\nменю та почни нову гру або завантаж інше збереження.</string>
     <string name="WrnExperimental_moveTimeout">Ліміт часу на хід встановлено на %d мілісекунд, думай швидко!</string>
     <string name="WrnExperimental_realtime">Увімкнено режим Realtime! : це тепер рогалик у реальному часі, клікай швидко або помри.\nХочеш перевірити інвентар?\nПощастить зробити це, поки краб у каналізації перевіряє твої кишки.</string>
     <string name="Yog_Desc">Йог-Джева - старий бог, могутня сутність зі світу Хаосу. В давні часи древні дворфи ледь подолали його армію демонів, але вбити самого бога їм не вдалося. Вони заточили його глибині свого міста, переконані, що він занадто слабий, аби вирватися на волю.</string>
@@ -2853,10 +2854,5 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
-
-
-
-
-
 
 </resources>

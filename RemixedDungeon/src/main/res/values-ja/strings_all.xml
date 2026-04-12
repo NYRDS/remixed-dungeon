@@ -539,6 +539,7 @@
     <string name="ComboBuff_Info">次の攻撃はコンボ攻撃だ。</string>
     <string name="ComboBuff_Name">コンボ</string>
     <string name="Combo_Combo">%d ヒットコンボ！</string>
+    <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">鉄の矢じりが付いた一般的な木製の矢。</string>
     <string name="CommonArrow_Name">矢</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
@@ -2970,7 +2971,4 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
-
-
-
 </resources>

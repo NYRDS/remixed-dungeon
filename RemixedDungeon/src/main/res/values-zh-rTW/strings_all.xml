@@ -1035,6 +1035,7 @@
     <string name="InnKeeperNPC_Desc">旅店老闆對自己感到相當自豪。</string>
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">旅店老闆</string>
+    <string name="InnKeeperNPC_Name_Objective">旅店老闆</string>
     <string name="InnServant_Phrase_2">這個醉漢讓我發瘋！</string>
     <string name="InnServant_Phrase_3">我看起來很乾淨</string>
     <string name="InnServant_Phrase_4">我的天，今天這麼多的客人</string>
@@ -2846,31 +2847,4 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
