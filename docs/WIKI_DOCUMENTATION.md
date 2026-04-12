@@ -608,7 +608,7 @@ When creating wiki content, reference these sources of truth for accurate inform
 
 #### Resource Strings
 - **Location**: `RemixedDungeon/src/main/res/values/`
-- **Files**: `strings-all.xml` - Main string resources with game text, descriptions, and labels that can be used for wiki content
+- **Files**: `strings_all.xml` - Main string resources with game text, descriptions, and labels that can be used for wiki content
 
 #### Asset Configuration Files
 - **Location**: `RemixedDungeon/src/main/assets/`
@@ -838,7 +838,7 @@ Some items and mobs use advanced sprite configurations defined in JSON files in 
   - `elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (GamePreferences.donated() >= 2)` - Elf unlocked by defeating 4th boss (The King) or by donating 2+
   - `gnollUnlocked = Badges.isUnlocked(Badges.Badge.GNOLL_UNLOCKED) || (GamePreferences.donated() >= 3)` - Gnoll unlocked by healing Gnoll Brute at town priest or by donating 3+
   - Boss unlock badges are validated in `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/Badges.java`
-  - Additional classes: Doctor and Priest have "Coming Soon" status and are not yet unlocked through gameplay
+  - Additional classes: Doctor and Priest are fully playable but do not yet have subclasses
 
 ### Hero Classes and Subclasses
 - **Available Classes** (9 total): Warrior, Mage, Rogue, Huntress, Elf, Necromancer, Gnoll, Priest, Doctor
@@ -1217,21 +1217,7 @@ The project includes additional scripts to help maintain and improve wiki qualit
   - **Entity suffix validation**: Verifies proper suffixes are used for different entity types
 - **Output**: Lists errors and warnings found in the wiki pages, with exit code 1 if errors are found
 
-### 11. mr: Link Validation (`check_mr_links.py`)
-- **Location**: `tools/py-tools/check_mr_links.py`
-- **Purpose**: Verifies that all file references in mr namespace pages point to actual existing files in the codebase
-- **Usage**: Run `python3 tools/py-tools/check_mr_links.py` from the project root
-- **Benefit**: Ensures that mr namespace pages contain accurate and up-to-date references to source code files
-- **Features**:
-  - **Local file checking**: Verifies that local file paths referenced in mr pages actually exist in the project
-  - **Remote URL checking**: Verifies that GitHub URLs referenced in mr pages are accessible
-  - **Comprehensive scanning**: Checks all links within all mr namespace pages (.txt files in wiki-data/pages/mr/)
-  - **Detailed reporting**: Reports both valid and broken links, with a summary of the validation results
-  - **Error status**: Returns error code 1 if broken links are found, 0 if all links are valid
-  - **Verbose output**: Shows detailed status for each link being checked
-- **Output**: Summary showing total valid/broken links, and detailed list of any broken links found
-
-### 12. Language Link Consistency Checker (`check_language_links.py`)
+### 11. Language Link Consistency Checker (`check_language_links.py`)
 - **Location**: `tools/py-tools/check_language_links.py`
 - **Purpose**: Verifies that all internal links on a wiki page are in the same language as the page itself, with the exception of language links to the same page in other languages which should be placed at the bottom of the page
 - **Usage**:
@@ -1308,7 +1294,7 @@ These tools help automate wiki maintenance by identifying linking patterns and p
 ### Hero Class and Subclass Information
 - **Documentation Coverage**: The documentation now accurately reflects 9 hero classes (Warrior, Mage, Rogue, Huntress, Elf, Necromancer, Gnoll, Priest, Doctor) and 13 subclasses
 - **Code Verification**: All starting equipment, stats, and special mechanics match the initHeroes.json configuration; subclass-specific armor (ClassArmor) is obtained by using the ArmorKit item (dropped by King boss) on any regular armor, not given as starting equipment
-- **Additional Note**: Some classes (Doctor, Priest) have "Coming Soon" status and are not yet unlocked through gameplay
+- **Additional Note**: Doctor and Priest are fully playable classes but do not yet have subclasses
 
 ### Hero Class to Subclass Mapping
 - **Mapping Location**: The official mapping between hero classes and their available subclasses is defined in `RemixedDungeon/src/main/java/com/watabou/pixeldungeon/windows/WndClass.java` in the MasteryTab class
