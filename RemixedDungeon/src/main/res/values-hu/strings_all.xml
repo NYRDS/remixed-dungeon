@@ -1836,6 +1836,7 @@ egy másik helyre a szinten. </string>
     <string name="ShieldBuffReady_Name">Pajzs kész</string>
     <string name="ShieldInfoTemplate">Ez a pajzs maximum %1$d -át fogja fel a kapott sebzésnek. %2$d%% eséllyel. %3$3.1f másodpercbe fog telni, hogy kiheverd a sikeres védekezést.</string>
     <string name="ShieldStrTemplate">A pajzs tulajdonosának legalább %1$d Erő ponttal kell rendelkeznie, ahhoz, hogy megfelelően tudja használni.</string>
+    <string name="ShieldWeaponInfo">Fegyverként használva ez a pajzs átlagosan %1 sebzést okoz.</string>
     <string name="Shielded_Defense">kivédett</string>
     <string name="Shielded_Desc">A nehézfiúk a legnagyobbak, legerősebbek és legkeményebbek a gnollok között. Amikor súlyosan sérülnek megvadulnak, és még több sebzést okoznak az ellenfeleiknek.</string>
     <string name="Shielded_Gender">masculine</string>
@@ -2767,6 +2768,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

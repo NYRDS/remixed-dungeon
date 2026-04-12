@@ -2107,6 +2107,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Sungrass_Name">サングラス</string>
     <string name="SurfaceScene_GameOver">Game Over</string>
     <string name="SuspiciousRat_Desc">地下牢でネズミを見るのは珍しくないが、これほど深いところに棲んでいるとは......。ネズミが動くと全身が痙攣するのがわかる。</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">怪しいネズミが激しく痙攣している。</string>
     <string name="SuspiciousRat_Name">怪しいネズミ</string>
     <string name="SuspiciousRat_Name_Objective">怪しいネズミ</string>
@@ -2969,6 +2970,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 </resources>
