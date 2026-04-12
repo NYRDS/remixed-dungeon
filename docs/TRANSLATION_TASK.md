@@ -118,32 +118,6 @@ This script will:
 - Highlight any missing translations with "[MISSING]" markers
 - Help verify consistency of translations across languages
 
-## Identifying Missing Strings
-
-### Method 1: Using the Missing Strings Script
-
-I've created a script to automatically identify missing strings in localizations:
-
-**Script location:** `tools/check_missing_strings.py`
-
-**Usage:**
-```bash
-python3 tools/check_missing_strings.py /path/to/remixed-dungeon
-```
-
-This script will:
-- Extract all string names from the English `strings_all.xml` file
-- Compare with each localized `strings_all.xml` file
-- Report which strings are missing in each localization
-- Provide a summary of missing strings per language
-
-### Method 2: Manual Comparison
-
-You can also manually compare the English and localized string files:
-- English: `RemixedDungeon/src/main/res/values/strings_all.xml`
-- Russian: `RemixedDungeon/src/main/res/values-ru/strings_all.xml`
-- Other languages: `RemixedDungeon/src/main/res/values-[lang-code]/strings_all.xml`
-
 ## Filling in Missing Strings
 
 ### Step 1: Find the Missing String ID
@@ -247,42 +221,6 @@ This will add the string to the appropriate localization file with proper format
    ```bash
    python3 tools/insert_translated_string.py de WndJournal_Levels "Ebenen"
    ```
-
-## Additional Tools
-
-### Random Missing String Selector
-
-I've created an additional script to randomly select a string ID that is present in English but missing in one of the other languages:
-
-**Script location:** `tools/select_random_missing_string.py`
-
-**Usage:**
-```bash
-python3 tools/select_random_missing_string.py /path/to/remixed-dungeon        # Random from any language
-python3 tools/select_random_missing_string.py /path/to/remixed-dungeon ru    # Random from Russian only
-```
-
-This script will:
-- Identify all strings present in English but missing in other languages
-- Randomly select one missing string
-- Show which language is missing the string and provide the English value as reference
-
-### Check Random String Translation Across Languages
-
-I've created an additional script to select a random string ID and check its translations across all languages:
-
-**Script location:** `tools/check_random_string_translation.py`
-
-**Usage:**
-```bash
-python3 tools/check_random_string_translation.py /path/to/remixed-dungeon
-```
-
-This script will:
-- Select a random string ID from the available strings
-- Show the translation of that string across all available languages
-- Highlight any missing translations with "[MISSING]" markers
-- Help verify consistency of translations across languages
 
 ### Translation Iteration Scripts
 
