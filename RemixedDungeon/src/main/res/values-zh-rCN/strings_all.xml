@@ -301,6 +301,7 @@
     <string name="Bowknot_Name">蝴蝶结</string>
     <string name="Brute_Desc">暴徒是豺狼人中体型最为巨大，最为强壮，最为坚韧的。当受到严重的伤害时，它们会变得狂暴，对它们的敌人造成大量伤害。</string>
     <string name="Brute_Enraged">%s被激怒了！</string>
+    <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">豺狼暴徒</string>
     <string name="Brute_Name_Objective">豺狼暴徒</string>
     <string name="Brute_StaEnraged">激怒</string>
@@ -2920,6 +2921,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
