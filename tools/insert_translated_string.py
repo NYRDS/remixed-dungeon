@@ -127,7 +127,11 @@ def main():
         sys.exit(1)
 
     # Path to the target localization file
-    target_dir = os.path.join(base_path, "RemixedDungeon", "src", "main", "res", f"values-{lang_code}")
+    # English uses the default values/ directory (not values-en/)
+    if lang_code == "en":
+        target_dir = os.path.join(base_path, "RemixedDungeon", "src", "main", "res", "values")
+    else:
+        target_dir = os.path.join(base_path, "RemixedDungeon", "src", "main", "res", f"values-{lang_code}")
     target_file = os.path.join(target_dir, "strings_all.xml")
 
     # Create directory if it doesn't exist
