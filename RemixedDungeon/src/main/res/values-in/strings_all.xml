@@ -396,6 +396,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ChaosCrystal_Prompt">Pilih tempat untuk memasang Tanda Kekacauan</string>
     <string name="ChaosCrystal_ScrollFused">Kristal diserap sajak pada gulungan, sekarang itu menjadi %s</string>
     <string name="ChaosCrystal_SelectForFuse">Pilih barang untuk digabungkan dengan Kristal Kekacauan</string>
+    <string name="ChaosCrystal_ShieldFused">Kristal menyatu dengan perisaimu, dan perisaimu berubah menjadi bentuk kekacauan.</string>
     <string name="ChaosCrystal_StaffFused">Kristal menyerap tongkat sihirmu, dan berubah wujud jadi tongkat</string>
     <string name="ChaosCrystal_SwordFused">Kristal menyerap senjatamu, dan berubah wujud jadi Pedang</string>
     <string name="ChaosCrystal_Use">GUNAKAN</string>
@@ -2918,5 +2919,6 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 </resources>

@@ -1365,6 +1365,7 @@
     <string name="NecromancerRobe_PetLimitReached">亡靈法師:召喚上限重置(最大召喚數:%d)!</string>
     <string name="Necromancer_ACSpecial">死靈術</string>
     <string name="Necromancy_BecameALich">你成為了巫妖！你的身體正在變化，同時你的靈魂容量提升了一倍！但是你失去了 %1$d 點力量。</string>
+    <string name="Necromancy_Death">你在練習死靈法術時耗盡了生命力。</string>
     <string name="Necromancy_NotEnoughSouls">你沒有足夠的靈魂來施放 \&quot;%1$s\&quot; 法術。</string>
     <string name="Necromancy_ReincarnationName">轉生</string>
     <string name="Necromancy_ReincarnationTriggered">你的力量使你從死亡中歸來！但你失去了所有已收集的靈魂和所有物。</string>
@@ -2151,6 +2152,7 @@
     <string name="VampireSkull_Name">吸血鬼頭骨</string>
     <string name="VertigoBuff_Name">眩暈</string>
     <string name="View_Distance">視野距離</string>
+    <string name="VileEssence_Info">從被擊敗的敵人身上的腐敗精華。這種黑暗物質散發著惡意能量，在煉金過程中具有極高的價值。</string>
     <string name="VileEssence_Name">邪惡精華</string>
     <string name="Viscosity_Status">延緩 %d 點傷害</string>
     <string name="Viscosity_Txt">粘稠 %s</string>
@@ -2848,5 +2850,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 </resources>

@@ -99,6 +99,7 @@
     <string name="Backstab_Aware">Mangsa sepatutnya tidak sedar akan kehadiran awak untuk serangan belakang yang baik.</string>
     <string name="Backstab_Info">Serangan senyap dari belakang. Tidak jujur, tetapi sangat berkesan, kerosakan tikaman belakang akan meningkat dengan tahap kemahiran pengguna.\n\nTikaman belakang yang berjaya akan sepenuhnya mengabaikan perisai atau kebolehan pertahanan khas mangsa.</string>
     <string name="Backstab_Name">Tikam Belakang</string>
+    <string name="Backstab_TooFar">Mangsa terlalu jauh untuk serangan berjaya.</string>
     <string name="BadgesScene_Title">Lencana Anda</string>
     <string name="Badges_AllBags">Semua beg dibeli</string>
     <string name="Badges_AllItems">Semua posyen, skrol, cincin &amp;amp; tongkat sakti dikenalpasti</string>
@@ -2747,6 +2748,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

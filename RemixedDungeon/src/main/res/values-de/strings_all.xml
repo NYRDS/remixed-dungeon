@@ -2639,6 +2639,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="YogsHeart_Name">Yogs Herz</string>
     <string name="YogsHeart_Name_Objective">Yogs Herz</string>
     <string name="YogsTeeth_Desc">Ein enormer Mund eines Alten Gottes, gefüllt mit rasiermesserscharfen Zähnen. Eine sehr passende Manifestation seines Dranges, alles zu zerstören und zu verschlingen.</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">Yogs Zähne</string>
     <string name="YogsTeeth_Name_Objective">Yogs Zähne</string>
     <string name="ZombieGnoll_Desc">Der verdrehte, gebrochene Körper eines Zombie-Gnolles ähnelt nicht mehr dem eines Menschen noch dem einer Hyäne, er ist nur noch ein Haufen fauliges Fleisch mit dem böswilligen Drang in den Knochen, zu töten und zu fressen.</string>
@@ -2904,6 +2905,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
