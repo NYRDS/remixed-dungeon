@@ -285,6 +285,7 @@
     <string name="BlessedBuff_Name">祝福</string>
     <string name="BlindnessBuff_Info">完全に目が見えなくなり、周囲の音だけが聞こえる。</string>
     <string name="BlindnessBuff_Name">盲目</string>
+    <string name="BloodTransfusion_FullHP">血液はすでに満杯です。</string>
     <string name="BloodTransfusion_Name">輸血</string>
     <string name="BodyArmorBuff_Info">アーマーは移動速度を犠牲にして増加する。</string>
     <string name="BodyArmorBuff_Name">ボディーアーマー</string>
@@ -2971,4 +2972,5 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 </resources>

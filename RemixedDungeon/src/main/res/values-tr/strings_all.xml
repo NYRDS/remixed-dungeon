@@ -337,6 +337,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Capotain_Info">Uzun taçlı, dar kenarlı bir şapka. Genelde Püritiler ile ilişkilidir, ancak onu giymek için dindar olmanız gerekmez. Bazı nedenlerden dolayı \&quot;Solomon\&quot; yazan bir isim levhası var.</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_Devoured">%s\'in cesedini yedin!</string>
+    <string name="Carcass_DissectMessage">Leşi parçalara ayırarak bir %s elde edersiniz.</string>
     <string name="Carcass_Name">%s\'in kalıntıları</string>
     <string name="Carcass_Necromancy">%s cesedini dirilttin!</string>
     <string name="Carcass_Necromancy_Failed">%s cesedini diriltme girişiminiz başarısız oldu!</string>
@@ -2943,6 +2944,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

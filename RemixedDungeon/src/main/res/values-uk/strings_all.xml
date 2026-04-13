@@ -61,6 +61,7 @@
     <string name="Amulet_Info">Амулет Ендора - могутній артефакт, невідомого походження. Вважається, що він може виконати будь-яке бажання, якщо воля власника буде достатньо сильною, аби \&quot;вмовити\&quot; амулет виконати його.</string>
     <string name="Amulet_Name">Амулет Ендора</string>
     <string name="AnesthesiaBuff_Info">Не відчуває болю і не прокидається від атак, але все одно отримує шкоду.</string>
+    <string name="AnesthesiaBuff_Name">Анестезія</string>
     <string name="Anesthesia_Cast">%s поринає в глибокий сон без сновидінь.</string>
     <string name="Ankh_Info">Древній символ безсмертя, який дарує можливість повернення після смерті. При воскресінні всі одягнуті речі губляться.</string>
     <string name="Ankh_Name">Анкх</string>
@@ -2854,5 +2855,6 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 </resources>
