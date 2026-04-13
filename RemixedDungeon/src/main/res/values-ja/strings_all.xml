@@ -383,6 +383,7 @@
     <string name="ChampionOfWaterBuff_Name">水の覇者</string>
     <string name="ChaosArmor_Info">この鎧は血のように赤い板を暗赤色の鎖で縫い合わせたものである。触れると混沌の力を照射する。</string>
     <string name="ChaosArmor_Name">混沌の鎧</string>
+    <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">混沌の力に満ちた恐ろしい弓。放たれる矢には、混沌の力の欠片が宿っている。もし狙いを外せば...</string>
     <string name="ChaosBow_Name">混沌の弓</string>
     <string name="ChaosCrystal_ArmorFused">クリスタルはあなたの鎧と融合し、混沌とした形に変化させた。</string>
@@ -2972,5 +2973,6 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 </resources>
