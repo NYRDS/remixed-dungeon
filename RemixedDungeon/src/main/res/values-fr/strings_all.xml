@@ -334,6 +334,7 @@
     <string name="CagedKobold_Name_Objective">kobold en cage</string>
     <string name="CagedKobold_Quest_End">Oh, merci, vraiment ! Comment as-tu pu trouver la clé ? Tu as... détruit cette arme ? C\'est incroyable ! Tu sais quoi, j\'ai dis que j\'allais t\'aider, et je crois savoir quel est le meilleur moyen. Je vais t\'accompagner un moment.\n
  * Le Kobold en cage s\'est transformé en une bougie</string>
+    <string name="Calm_Cast">%s se calme.</string>
     <string name="Calm_Info">Il y a beaucoup de créatures exaspérées dans le coin, aidons-les.</string>
     <string name="Calm_Name">Calme</string>
     <string name="CandleOfMindVision_Info">Ça ressembe à une bougie normale, pas à quelque chose qu\'on trouverait dans un dangereux donjon. Bizarrement, elle est plutôt chaude, même si elle n\'a pas été allumée.</string>
@@ -3014,5 +3015,6 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 </resources>

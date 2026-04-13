@@ -1800,6 +1800,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="ScarecrowNPC_Quest_Start_Female">やあ、お嬢さん、ごきげんよう！君にエキサイティングなプレゼントがあるんだ！僕のためにキャンディーを集めてきてくれたら、どんなにありがたいだろう！</string>
     <string name="ScarecrowNPC_Quest_Start_Male">やあ、坊や、ごきげんよう！君にエキサイティングなプレゼントがあるんだ！僕のためにキャンディーを集めてきてくれたら、どんなにありがたいだろう！</string>
     <string name="Scorpio_Desc">この巨大なクモのような悪魔のような生き物は、あらゆる手段を使って接近戦を避け、遠距離から致命的な鋸歯状のトゲを放つ。</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">サソリ</string>
     <string name="Scorpio_Name_Objective">サソリ</string>
     <string name="ScrollHolder_Info">この筒状の容器には、巻物を何枚でも入れることが出来る。バックパックの場所を取らず、入れた巻物を火から守ることも出来る。</string>
@@ -2973,6 +2974,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 </resources>
