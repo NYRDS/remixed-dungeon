@@ -894,6 +894,7 @@
     <string name="Halls_TileWater">Ψυχρή λάβα</string>
     <string name="Haste_Info">Η φούρια επιτρέπει στον χρήστη να κινείται με τόσο απίστευτη ταχύτητα, που όλα γύρω του φαίνονται στάσιμα. Η φούρια καταναλώνει υπερβολική ενέργεια, γι\' αυτό και η χρήση της διαρκεί μόνο για λίγο.\n\nΟι μύστες μπορούν να μείνουν υπό την επήρεια της φούριας για μεγαλύτερο χρονικό διάστημα.</string>
     <string name="Haste_Name">Άσβεστη φούρια</string>
+    <string name="Heal_Cast">%s θεραπεύτηκε.</string>
     <string name="Heal_Info">Ένα πολύ χρήσιμο ξόρκι για την κατακόμβη, ή όχι;</string>
     <string name="Heal_Name">Θεραπεία</string>
     <string name="HealerNPC_Desc">Ένας ηλικιωμένος άντρας. Φαίνεται σαν άτομο που θα κατασκεύαζε ραβδιά.</string>
@@ -3027,6 +3028,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

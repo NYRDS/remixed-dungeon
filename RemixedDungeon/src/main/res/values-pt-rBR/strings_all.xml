@@ -589,6 +589,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Death_Name_1">%s Cruel</string>
     <string name="Death_Name_2">%s Cruel</string>
     <string name="Deathling_Desc">O Devorador de Mortos é a alma de um herói caído, que infelizmente foi invocado pelos poderes de um necromante para ser seu companheiro nesta aventura.</string>
+    <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">devorador de mortos</string>
     <string name="Deathling_Name_Objective">devorador de mortos</string>
     <string name="DeepSnail_Desc">Este tipo de molusco pode ser visto frequentemente perto de fontes de água e é muito mais rápido do que o seu caracol comum. Cuidado com as mordidas, no entanto, elas podem ter um efeito desagradável em sua pele.</string>
@@ -2918,6 +2919,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
