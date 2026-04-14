@@ -291,6 +291,7 @@
     <string name="BlessedBuff_Name">Благословенний</string>
     <string name="BlindnessBuff_Info">Повністю осліплено, можна почути лише звуки навколо.</string>
     <string name="BlindnessBuff_Name">Засліплений</string>
+    <string name="BloodTransfusion_Drained">Життєва есенція перетікає від вашого улюбленця до вас.</string>
     <string name="BloodTransfusion_WontAgreed">Ціль чинить опір вилученню її життєвої сутності.</string>
     <string name="BodyArmorBuff_Info">Захист збільшено за рахунок швидкості пересування.</string>
     <string name="BodyArmorBuff_Name">Міць тіла</string>
@@ -2855,6 +2856,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 </resources>

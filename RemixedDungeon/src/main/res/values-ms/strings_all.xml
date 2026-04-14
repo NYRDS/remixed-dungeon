@@ -1800,6 +1800,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Shaman_Killed">Bebola kilat %s telah membunuh anda...</string>
     <string name="Shaman_Name">pawang gnoll</string>
     <string name="Shaman_Name_Objective">pawang gnoll</string>
+    <string name="Shaman_ZapMiss">*Maki dalam bahasa gnoll*</string>
     <string name="Sheep_Desc">Ini adalah kambing biri-biri magik. Magik ke? Anda tidak boleh membunuhnya. Ia kekal berada di sana sehinggalah kuasa magiknya hilang, sementara itu hanya tengok sajalah.</string>
     <string name="Sheep_Name">kambing biri-biri</string>
     <string name="Sheep_Name_Objective">kambing biri-biri</string>
@@ -2748,6 +2749,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
