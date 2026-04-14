@@ -1245,6 +1245,7 @@
     <string name="LibraryBook_Name">図書館の本</string>
     <string name="Lich_Desc">ネクロマンサーはネクロポリスの深淵で死を迎え、次第に彼の体に流れ込んだ邪悪な力が彼をリッチに変えていった。死の魔術師、意志を持たない操り人形、悪意ある力に支配された…</string>
     <string name="Lich_DieInfo">絶対にこのネクロマンサーのようにはなりたくないな。さて、7階に戻って別の道を探すとしよう。</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">リッチ</string>
     <string name="Lich_Name_Objective">リッチ</string>
     <string name="LightBuff_Info">身体から光が発せられ、周囲のすべてを照らす。</string>
@@ -2420,6 +2421,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="WndClass_Mastery">習熟</string>
     <string name="WndCryptoDonate_bitcoin">ビットコイン</string>
     <string name="WndCryptoDonate_copyAddress">アドレスをコピー</string>
+    <string name="WndCryptoDonate_currency">通貨</string>
     <string name="WndCryptoDonate_monero">モネロ</string>
     <string name="WndCryptoDonate_openWallet">ウォレットを開く</string>
     <string name="WndCryptoDonate_ton">TON</string>
@@ -2974,6 +2976,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

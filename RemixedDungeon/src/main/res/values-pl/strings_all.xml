@@ -911,6 +911,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="HealerNPC_Name_Objective">miastowy duchowny</string>
     <string name="Healing_Info">To zaklęcie jest kluczowe dla każdego podróżnika. Odnawia ono 1/3 życia rzucającego.</string>
     <string name="Healing_Name">Leczenie</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Grot tej strzały pokryty jest leczniczym eliksirem</string>
     <string name="HealthArrow_Name">Uzdrawiająca Strzała</string>
     <string name="HealthDart_Gender">masculine</string>
@@ -3031,6 +3032,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

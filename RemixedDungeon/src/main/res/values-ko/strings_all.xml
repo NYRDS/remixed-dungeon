@@ -2714,6 +2714,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_stool_sturdy_name">의자</string>
     <string name="town_deco_stove_desc">이 화로는 만족스러운 따뜻함을 제공해준다.</string>
     <string name="town_deco_stove_name">돌 화로</string>
+    <string name="town_deco_tile_desc">시간으로 인해 많이 낡아진 타일입니다.</string>
     <string name="town_deco_tile_name">타일</string>
     <string name="town_deco_trapdoor_desc">이것이 어디로 이어질까.</string>
     <string name="town_deco_trapdoor_name">함정 문</string>
@@ -2748,6 +2749,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
