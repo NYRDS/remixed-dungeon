@@ -2546,6 +2546,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndInstallingMod_please_wait">Installation du mod, veuillez patienter...</string>
     <string name="WndInstallingMod_skipping_file">Ignorer %s</string>
     <string name="WndItemAlchemy_NoRecipes">Aucune recette disponible avec cet objet et votre inventaire actuel.</string>
+    <string name="WndItemAlchemy_SelectRecipe">Sélectionnez une recette</string>
     <string name="WndItemAlchemy_Title">Recettes d\'alchimie avec %s</string>
     <string name="WndItemAlchemy_Transmute">Transmuter</string>
     <string name="WndJournal_Levels">Niveaux</string>
@@ -3015,6 +3016,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 </resources>

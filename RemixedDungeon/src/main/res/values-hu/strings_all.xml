@@ -2282,6 +2282,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndDonate_silverDonateText2">Kikapcsolja a hirdetéseket az összes játékmód alatt, és feloldja a vadásznőt.</string>
     <string name="WndDontLikeAds_NotThisTime">Majd máskor</string>
     <string name="WndError_Title">HIBA</string>
+    <string name="WndFortuneTeller_IdentifyAll">Összes</string>
     <string name="WndFortuneTeller_Instruction">Feltudom fedni neked a tárgyaidban rejlő titkokat.\nEgy azonosítás %d aranyba fog kerülni.</string>
     <string name="WndFortuneTeller_No_Item">Vigyázz, biztos nem akarsz a semmiért fizetni, ugye? Nincs is azonosítatlan tárgy a cuccaid közt!</string>
     <string name="WndFortuneTeller_Title">Jós</string>
@@ -2771,6 +2772,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

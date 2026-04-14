@@ -327,6 +327,7 @@
     <string name="Capotain_Info">一頂高高的,窄邊的冠冕。它通常和基督教徒有關，但你並不需要虔誠的戴上它。出於某些原因它上邊帶著銘牌，寫著“所羅門”。</string>
     <string name="Capotain_Name">朝聖平頂帽</string>
     <string name="Carcass_Devoured">你已經吞食了%s的屍體！</string>
+    <string name="Carcass_Kick">這隻%s已經完全死了,沒有必要再踢它。</string>
     <string name="Carcass_Name">%s 的遺骸</string>
     <string name="Carcass_Necromancy">你已復活了%s 的屍體！</string>
     <string name="Carcass_Necromancy_Failed">你嘗試復活%s 的屍體失敗了！</string>
@@ -2850,6 +2851,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
