@@ -1,6 +1,7 @@
 name: remixed-dungeon
 version: '32.3.beta.6'
-summary: Remixed Dungeon - A classic roguelike dungeon crawler game
+title: Remixed Dungeon
+summary: Classic roguelike dungeon crawler with pixel graphics
 description: |
   Remixed Dungeon is a classic roguelike dungeon crawler game with pixel graphics.
   It's a fork of the famous Pixel Dungeon featuring English, Russian and many more localizations.
@@ -8,6 +9,11 @@ description: |
 
 base: core22
 grade: stable
+license: GPL-3.0
+contact: https://discord.gg/AMXrhQZ
+issues: https://github.com/NYRDS/remixed-dungeon/issues
+source-code: https://github.com/NYRDS/remixed-dungeon
+website: https://wiki.nyrds.net/
 confinement: strict
 
 architectures:
@@ -67,6 +73,7 @@ parts:
       # Build the application using the project's gradlew
       # Java is provided by the build-packages
       # Patch build.gradle to mark this as a snap build
+      grep -q 'FLAVOR_market = "vkplay"' RemixedDungeonDesktop/build.gradle || { echo "ERROR: FLAVOR_market not found in build.gradle"; exit 1; }
       sed -i 's/FLAVOR_market = "vkplay"/FLAVOR_market = "snap"/' RemixedDungeonDesktop/build.gradle
       ./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:shadowJar --no-daemon
       
@@ -128,8 +135,6 @@ apps:
       - network
       - home
       - removable-media
-      - alsa  # New: Optional, but recommended for fallback direct ALSA access
-      - audio-record  # New: Optional, if recording is needed (unlikely for this game)
     environment:
       DISPLAY: $DISPLAY
       WAYLAND_DISPLAY: $WAYLAND_DISPLAY

@@ -7,7 +7,7 @@
 export ASSETS_DIR="$SNAP/data"
 
 # Find the JAR file
-JAR_FILE=$(find $SNAP/bin -name "remixed-dungeon.jar" -type f)
+JAR_FILE=$(find "$SNAP/bin" -name "remixed-dungeon.jar" -type f -print -quit)
 
 if [ -z "$JAR_FILE" ]; then
   echo "Error: Could not find Remixed Dungeon JAR file"
@@ -47,6 +47,12 @@ ln -sfn "$SNAP/bin" "$GAME_DIR/bin"
 
 cd "$GAME_DIR"
 
+# Default to windowed mode if no display mode arg provided
+GAME_ARGS=("$@")
+if ! echo "$*" | grep -q -- '--\(windowed\|fullscreen\|minimized\)'; then
+  GAME_ARGS=(--windowed "$@")
+fi
+
 java \
   --add-opens java.base/java.util=ALL-UNNAMED \
   -Dassets.dir="$SNAP/data" \
@@ -57,8 +63,7 @@ java \
   -Dsun.java2d.opengl=true \
   -Dsun.java2d.xrender=true \
   -jar "$JAR_FILE" \
-  --windowed \
-  "$@"
+  "${GAME_ARGS[@]}"
 
 EXIT_CODE=$?
 if [ $EXIT_CODE -ne 0 ]; then
