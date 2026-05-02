@@ -66,6 +66,8 @@ parts:
       
       # Build the application using the project's gradlew
       # Java is provided by the build-packages
+      # Patch build.gradle to mark this as a snap build
+      sed -i 's/FLAVOR_market = "vkplay"/FLAVOR_market = "snap"/' RemixedDungeonDesktop/build.gradle
       ./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:shadowJar --no-daemon
       
       # Copy the built JAR file - find the correct one based on actual build output

@@ -130,7 +130,14 @@ public class SaveUtils {
 	public static void copySaveToSlot(String slot, HeroClass cl) {
 		deleteSaveFromSlot(slot, cl);
 
-		String[] files = local("").file().list();
+		File savesDir = local("").file();
+		if (!savesDir.exists()) {
+			savesDir.mkdirs();
+		}
+		String[] files = savesDir.list();
+		if (files == null) {
+			return;
+		}
 
 		for (String file : files) {
 			if (isRelatedTo(file, cl)) {

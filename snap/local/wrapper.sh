@@ -34,10 +34,18 @@ export LWJGL_EXTRACT_DIR="$NATIVES_DIR"
 export TMPDIR="$SNAP_USER_DATA/tmp"
 mkdir -p "$TMPDIR"
 
-# The game resolves assets relative to CWD via Gdx.files.internal()
-# Search paths include: data/mods/Remixed/, mods/Remixed/, ./
-# CWD must be the snap root so data/mods/Remixed/ resolves correctly
-cd "$SNAP"
+# Set up a writable working directory with symlinks to read-only snap assets.
+# The game uses Gdx.files.local() which resolves relative to CWD, and also
+# writes saves/logs/preferences to CWD. So CWD must be writable.
+GAME_DIR="$SNAP_USER_DATA/game"
+mkdir -p "$GAME_DIR"
+
+# Symlink read-only asset directories from the snap
+ln -sfn "$SNAP/data" "$GAME_DIR/data"
+ln -sfn "$SNAP/data/mods" "$GAME_DIR/mods"
+ln -sfn "$SNAP/bin" "$GAME_DIR/bin"
+
+cd "$GAME_DIR"
 
 java \
   --add-opens java.base/java.util=ALL-UNNAMED \
