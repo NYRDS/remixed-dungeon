@@ -1,5 +1,5 @@
 name: remixed-dungeon
-version: '32.3.alpha.19'
+version: '32.3.beta.6'
 summary: Remixed Dungeon - A classic roguelike dungeon crawler game
 description: |
   Remixed Dungeon is a classic roguelike dungeon crawler game with pixel graphics.
@@ -19,6 +19,10 @@ layout:
     bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib
   /usr/share/alsa:
     bind: $SNAP/usr/share/alsa
+  /etc/java-17-openjdk:
+    bind: $SNAP/etc/java-17-openjdk
+  /usr/lib/x86_64-linux-gnu/dri:
+    bind: $SNAP/usr/lib/x86_64-linux-gnu/dri
 
 parts:
   # New: ALSA mixin part for audio routing and config handling
@@ -45,6 +49,8 @@ parts:
       - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libsamplerate*
       - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libspeex*
       - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libvorbis*
+      - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libsndfile*
+      - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/libasyncns*
       - usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio
 
   remixed-dungeon:
@@ -67,9 +73,13 @@ parts:
       
       # Copy assets and other necessary files
       mkdir -p $SNAPCRAFT_PART_INSTALL/data/mods/Remixed
-      cp -r RemixedDungeonDesktop/src/desktop/assets/* $SNAPCRAFT_PART_INSTALL/data/mods/Remixed/
+      # Copy desktop assets, skipping the dangling scripts symlink
+      tar cf - --exclude='scripts' -C RemixedDungeonDesktop/src/desktop/assets . | tar xf - -C $SNAPCRAFT_PART_INSTALL/data/mods/Remixed
       cp -r RemixedDungeonDesktop/src/desktop/d_assets/* $SNAPCRAFT_PART_INSTALL/data/mods/Remixed/
       cp -r RemixedDungeonDesktop/src/desktop/l10ns/* $SNAPCRAFT_PART_INSTALL/data/mods/Remixed/
+
+      # Copy Lua scripts (game looks for scripts/ in the asset search paths)
+      cp -r scripts $SNAPCRAFT_PART_INSTALL/data/mods/Remixed/
       
       # Copy the wrapper script
       cp snap/local/wrapper.sh $SNAPCRAFT_PART_INSTALL/bin/remixed-dungeon-wrapper.sh
@@ -84,9 +94,10 @@ parts:
       - curl
     stage-packages:
       - openjdk-17-jre-headless
-      - libasound2  # Already present, but ensure it's not removed
+      - libasound2
       - libgtk-3-0
       - libgl1
+      - libgl1-mesa-dri
       - libglu1-mesa
       - libopenal1
       - libflac8
@@ -94,9 +105,12 @@ parts:
       - libudev1
       - libfreetype6
       - libfontconfig1
+      - libsndfile1
+      - x11-xserver-utils
     prime:
       - bin/
       - data/
+      - etc/java-17-openjdk/
       - usr/
 
 apps:
@@ -117,3 +131,4 @@ apps:
     environment:
       DISPLAY: $DISPLAY
       WAYLAND_DISPLAY: $WAYLAND_DISPLAY
+      LD_LIBRARY_PATH: $SNAP/usr/lib/x86_64-linux-gnu:$SNAP/usr/lib/x86_64-linux-gnu/dri:$SNAP/usr/lib/jni
