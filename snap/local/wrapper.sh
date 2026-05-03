@@ -53,7 +53,7 @@ if ! echo "$*" | grep -q -- '--\(windowed\|fullscreen\|minimized\)'; then
   GAME_ARGS=(--windowed "$@")
 fi
 
-java \
+exec java \
   --add-opens java.base/java.util=ALL-UNNAMED \
   -Dassets.dir="$SNAP/data" \
   -Duser.home="$SNAP_USER_DATA" \
@@ -64,9 +64,3 @@ java \
   -Dsun.java2d.xrender=true \
   -jar "$JAR_FILE" \
   "${GAME_ARGS[@]}"
-
-EXIT_CODE=$?
-if [ $EXIT_CODE -ne 0 ]; then
-  echo "Remixed Dungeon exited with code $EXIT_CODE."
-fi
-exit $EXIT_CODE
