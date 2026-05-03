@@ -2316,6 +2316,8 @@
     <string name="WndClass_Mastery">專精</string>
     <string name="WndCryptoDonate_infoText">您可以通過將加密貨幣捐贈發送到以下地址來支持 Remixed Dungeon 的開發。感謝您的慷慨支持！</string>
     <string name="WndCryptoDonate_tron">TRON</string>
+    <string name="WndCryptoDonate_bitcoin">比特幣</string>
+    <string name="WndCryptoDonate_ethereum">以太坊</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_walletAddress">錢包地址</string>
     <string name="WndDonate_commonDonateText">混合地牢——永遠對所有人免費。

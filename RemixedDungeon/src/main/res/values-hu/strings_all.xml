@@ -2259,6 +2259,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndChooseWay_Message">Melyik utat fogod követni?</string>
     <string name="WndClass_Mastery">Kiválóság</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+    <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_openWallet">Nyissa meg a pénztárcát</string>
     <string name="WndCryptoDonate_supportDev">Támogasd a fejlesztőt</string>
     <string name="WndCryptoDonate_ton">TON</string>

@@ -2471,6 +2471,7 @@ remix.32\n
     <string name="WndChooseWay_Message">Ποια πορεία θα ακολουθήσεις;</string>
     <string name="WndClass_Mastery">Εξειδίκευση</string>
     <string name="WndCryptoDonate_bitcoin">Μπίτκοϊν</string>
+    <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_copyAddress">Αντιγραφή Διεύθυνσης</string>
     <string name="WndCryptoDonate_currency">Νόμισμα</string>
     <string name="WndCryptoDonate_infoText">Μπορείτε να υποστηρίξετε την ανάπτυξη του Remixed Dungeon στέλνοντας δωρεές σε κρυπτονομίσματα στις παρακάτω διευθύνσεις. Σας ευχαριστούμε για την γενναιόδωρη υποστήριξη!</string>

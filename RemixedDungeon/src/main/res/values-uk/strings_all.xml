@@ -2340,6 +2340,7 @@
     <string name="WndChooseWay_Message">Яким шляхом підеш?</string>
     <string name="WndClass_Mastery">Майстерність</string>
     <string name="WndCryptoDonate_bitcoin">Біткоїн</string>
+    <string name="WndCryptoDonate_ethereum">Ефіріум</string>
     <string name="WndCryptoDonate_copyAddress">Копіювати адресу</string>
     <string name="WndCryptoDonate_infoText">Ви можете підтримати розробку Remixed Dungeon, надіславши пожертви криптовалютою на наведені нижче адреси. Дякуємо за вашу щедру підтримку!</string>
     <string name="WndCryptoDonate_openWallet">Відкрити гаманець</string>

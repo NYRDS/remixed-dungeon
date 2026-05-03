@@ -2396,6 +2396,7 @@ remix.30.1\n
     <string name="WndClass_Mastery">Uzmanlık</string>
     <string name="WndCryptoDonate_copyAddress">Adresi Kopyala</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
+    <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_infoText">Remixed Dungeon\'ın geliştirilmesini, aşağıda belirtilen adreslere kripto para bağışları göndererek destekleyebilirsiniz. Câmilerinize teşekkür ederiz!</string>
     <string name="WndCryptoDonate_supportDev">Geliştiriciyi Destekle</string>
     <string name="WndCryptoDonate_ton">TON</string>
