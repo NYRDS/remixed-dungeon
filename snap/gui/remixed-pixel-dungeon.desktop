@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Remixed Dungeon
 Comment=Classic roguelike dungeon crawler game
-Exec=remixed-dungeon
-Icon=${SNAP}/meta/gui/remixed-dungeon.png
+Exec=remixed-pixel-dungeon
+Icon=${SNAP}/meta/gui/remixed-pixel-dungeon.png
 Terminal=false
 Type=Application
 Categories=Game;RolePlaying;

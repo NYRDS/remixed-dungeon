@@ -1,6 +1,6 @@
-name: remixed-dungeon
+name: remixed-pixel-dungeon
 version: '32.3.beta.6'
-icon: snap/gui/remixed-dungeon.png
+icon: snap/gui/remixed-pixel-dungeon.png
 title: Remixed Dungeon
 summary: Classic roguelike dungeon crawler with pixel graphics
 description: |
@@ -124,7 +124,7 @@ parts:
       - usr/
 
 apps:
-  remixed-dungeon:
+  remixed-pixel-dungeon:
     command-chain: ["snap/command-chain/alsa-launch"]  # New: Use ALSA launch chain for audio init
     command: bin/remixed-dungeon-wrapper.sh
     plugs:
