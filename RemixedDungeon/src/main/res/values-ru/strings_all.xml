@@ -2514,7 +2514,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndCryptoDonate_currency">Валюта</string>
     <string name="WndCryptoDonate_ethereum">Эфириум</string>
     <string name="WndCryptoDonate_infoText">Вы можете поддержать разработку Remixed Dungeon, отправив криптовалютные пожертвования на адреса, указанные ниже. Спасибо за вашу щедрую поддержку!</string>
-    <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_openWallet">Открыть кошелек</string>
     <string name="WndCryptoDonate_supportDev">Поддержать разработчика</string>
     <string name="WndCryptoDonate_ton">TON</string>

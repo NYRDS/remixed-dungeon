@@ -94,7 +94,10 @@ public class WndCryptoDonate extends WndTabbed {
             // Extract the actual address (without the scheme)
             String address = uriScheme.contains(":") ? uriScheme.substring(uriScheme.indexOf(":") + 1) : uriScheme;
 
-            Text addressText = PixelScene.createMultiline(address, GuiProperties.smallFontSize());
+            // Escape underscores to prevent markup parsing (_text_ = highlight)
+            String displayAddress = address.replace("_", "_\u200B");
+
+            Text addressText = PixelScene.createMultiline(displayAddress, GuiProperties.smallFontSize());
             addressText.maxWidth(width - 10);
             addressText.hardlight(0xFFFF00);
             addressText.setPos(0, pos);

@@ -2474,7 +2474,7 @@ remix.32\n
     <string name="WndCryptoDonate_copyAddress">Αντιγραφή Διεύθυνσης</string>
     <string name="WndCryptoDonate_currency">Νόμισμα</string>
     <string name="WndCryptoDonate_infoText">Μπορείτε να υποστηρίξετε την ανάπτυξη του Remixed Dungeon στέλνοντας δωρεές σε κρυπτονομίσματα στις παρακάτω διευθύνσεις. Σας ευχαριστούμε για την γενναιόδωρη υποστήριξη!</string>
-    <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_supportDev">Υποστήριξε τον Προγραμματιστή</string>
     <string name="WndCryptoDonate_walletAddress">Διεύθυνση Πορτοφολιού</string>
     <string name="WndCryptoDonate_warningText">ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Επαληθεύετε πάντα τη διεύθυνση πριν στείλετε χρήματα. Οι συναλλαγές κρυπτονομισμάτων είναι μη αναστρέψιμες!</string>

@@ -2229,7 +2229,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndCryptoDonate_currency">Mata Wang</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Anda boleh menyokong pembangunan Remixed Dungeon dengan menghantar derma mata wang kripto ke alamat di bawah. Terima kasih atas sokongan anda yang murah hati!</string>
-    <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_walletAddress">Alamat Dompet</string>
     <string name="WndCryptoDonate_warningText">AMARAN: Sentiasa sahkan alamat sebelum menghantar dana. Transaksi mata wang kripto adalah tidak boleh diubah!</string>

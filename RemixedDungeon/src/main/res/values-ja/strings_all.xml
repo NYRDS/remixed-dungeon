@@ -2422,7 +2422,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="WndCryptoDonate_bitcoin">ビットコイン</string>
     <string name="WndCryptoDonate_copyAddress">アドレスをコピー</string>
     <string name="WndCryptoDonate_currency">通貨</string>
-    <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_openWallet">ウォレットを開く</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_walletAddress">ウォレットアドレス</string>

@@ -819,7 +819,7 @@ Your opinion matters!</string>
   <string name="WndCryptoDonate_infoText">You can support the development of Remixed Dungeon by sending cryptocurrency donations to the addresses below. Thank you for your generous support!</string>
   <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
   <string name="WndCryptoDonate_ethereum">Ethereum</string>
-  <string name="WndCryptoDonate_tron">Tron</string>
+  <string name="WndCryptoDonate_tron">TRON</string>
   <string name="WndCryptoDonate_ton">TON</string>
   <string name="WndCryptoDonate_currency">Currency</string>
   <string name="WndCryptoDonate_walletAddress">Wallet Address</string>

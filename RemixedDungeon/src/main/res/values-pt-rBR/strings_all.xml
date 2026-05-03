@@ -2373,7 +2373,7 @@ remix.31.1\n
     <string name="WndCryptoDonate_currency">Moeda</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Você pode apoiar o desenvolvimento do Remixed Dungeon enviando doações em criptomoedas para os endereços abaixo. Obrigado pelo seu generoso apoio!</string>
-    <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_walletAddress">Endereço da Carteira</string>
     <string name="WndCryptoDonate_warningText">ATENÇÃO: Sempre verifique o endereço antes de enviar fundos. Transações de criptomoedas são irreversíveis!</string>

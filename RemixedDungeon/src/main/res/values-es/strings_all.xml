@@ -2408,7 +2408,7 @@ otro lugar del nivel.</string>
     <string name="WndClass_Mastery">Maestría</string>
     <string name="WndCryptoDonate_copyAddress">Copiar Dirección</string>
     <string name="WndCryptoDonate_infoText">¡Puedes apoyar el desarrollo de Remixed Dungeon enviando donaciones de criptomonedas a las direcciones que aparecen a continuación. ¡Gracias por tu generoso apoyo!</string>
-    <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_supportDev">Apoyar al Desarrollador</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_walletAddress">Dirección de la Cartera</string>
