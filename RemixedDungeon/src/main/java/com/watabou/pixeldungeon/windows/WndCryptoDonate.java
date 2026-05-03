@@ -104,17 +104,6 @@ public class WndCryptoDonate extends WndTabbed {
             add(addressText);
             pos += addressText.height() + GAP;
 
-            RedButton openWalletButton = new RedButton(StringsManager.getVar(R.string.WndCryptoDonate_openWallet)) {
-                @Override
-                protected void onClick() {
-                    Game.openUrl(StringsManager.getVar(R.string.WndCryptoDonate_openWallet), uriScheme);
-                    EventCollector.logEvent("CryptoDonationOpenWallet", currencyName);
-                }
-            };
-            openWalletButton.setRect(0, pos, width, BUTTON_HEIGHT);
-            add(openWalletButton);
-            pos += openWalletButton.height() + GAP;
-
             RedButton copyAddressButton = makeCopyAddressButton(currencyName, uriScheme, pos);
             add(copyAddressButton);
             pos += copyAddressButton.height() + GAP;
