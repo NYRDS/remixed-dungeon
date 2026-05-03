@@ -14,6 +14,7 @@ import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.RankingTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
@@ -103,6 +104,19 @@ public class WndCryptoDonate extends WndTabbed {
             addressText.setPos(0, pos);
             add(addressText);
             pos += addressText.height() + GAP;
+
+            if (Utils.isAndroid()) {
+                RedButton openWalletButton = new RedButton(StringsManager.getVar(R.string.WndCryptoDonate_openWallet)) {
+                    @Override
+                    protected void onClick() {
+                        Game.openUrl(StringsManager.getVar(R.string.WndCryptoDonate_openWallet), uriScheme);
+                        EventCollector.logEvent("CryptoDonationOpenWallet", currencyName);
+                    }
+                };
+                openWalletButton.setRect(0, pos, width, BUTTON_HEIGHT);
+                add(openWalletButton);
+                pos += openWalletButton.height() + GAP;
+            }
 
             RedButton copyAddressButton = makeCopyAddressButton(currencyName, uriScheme, pos);
             add(copyAddressButton);
