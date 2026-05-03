@@ -129,7 +129,11 @@ public class FileSystem {
 
 	@NotNull
 	static public File[] listExternalStorage() {
-		File storageDir = Gdx.files.internal(getUserDataPath("mods/") + File.separator).file();
+		File storageDir = new File(getUserDataPath("mods"));
+
+		if(!storageDir.exists()) {
+			storageDir.mkdirs();
+		}
 
 		File[] ret = storageDir.listFiles();
 		if(ret != null) {
@@ -158,7 +162,11 @@ public class FileSystem {
 	}
 
 	static public File getExternalStorageFile(String fileName) {
-		return Gdx.files.internal(getUserDataPath("mods/") + File.separator + fileName).file();
+		File modsDir = new File(getUserDataPath("mods"));
+		if(!modsDir.exists()) {
+			modsDir.mkdirs();
+		}
+		return new File(modsDir, fileName);
 	}
 
 	static public String getExternalStorageFileName(String fname) {
