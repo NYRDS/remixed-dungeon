@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
@@ -61,10 +62,10 @@ public class DonateButton extends ImageButton {
 
 	@Override
 	protected void onClick() {
-		//if (RemixedDungeon.canDonate()) {
+		if (RemixedDungeon.canDonate()) {
 			parentWnd.add(new WndDonate());
-		//} else {
-		//	parentWnd.add(new WndCryptoDonate());
-		//}
+		} else if (BuildConfig.FLAVOR_market.equals("snap")) {
+			parentWnd.add(new WndCryptoDonate());
+		}
 	}
 }

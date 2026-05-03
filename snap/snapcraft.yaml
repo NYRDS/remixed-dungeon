@@ -1,5 +1,6 @@
 name: remixed-dungeon
 version: '32.3.beta.6'
+icon: snap/gui/remixed-dungeon.png
 title: Remixed Dungeon
 summary: Classic roguelike dungeon crawler with pixel graphics
 description: |
