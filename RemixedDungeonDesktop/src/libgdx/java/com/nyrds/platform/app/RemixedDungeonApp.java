@@ -156,14 +156,23 @@ public class RemixedDungeonApp {
             // Create the command to restart the application
             List<String> command = new ArrayList<>();
 
-            if (os.contains("win")) {
+            if (BuildConfig.FLAVOR_market.equals("snap")) {
+                // On snap, re-execute the wrapper script to preserve all env vars and -D flags
+                String snap = System.getenv("SNAP");
+                if (snap != null) {
+                    command.add(snap + "/bin/remixed-dungeon-wrapper.sh");
+                    command.addAll(Arrays.asList(savedArgs));
+                }
+            }
+
+            if (command.isEmpty() && os.contains("win")) {
                 // On Windows, use the RemixedDungeon.exe executable
                 String exePath = System.getProperty("user.dir") + "/RemixedDungeon.exe";
                 command.add(exePath);
 
                 // Add saved arguments
                 command.addAll(Arrays.asList(savedArgs));
-            } else {
+            } else if (command.isEmpty()) {
                 // On other platforms, use the Java command
                 String java = System.getProperty("java.home") + "/bin/java";
                 command.add(java);
