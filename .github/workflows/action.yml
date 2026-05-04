@@ -35,6 +35,12 @@ jobs:
           name: apk
           path: '**/*.apk'
 
+      - name: Upload APK to release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: '**/*.apk'
+
   build_check:
     name: Flavors build check
     runs-on: ubuntu-latest
