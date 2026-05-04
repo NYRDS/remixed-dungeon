@@ -165,6 +165,15 @@ public class RemixedDungeonApp {
                 }
             }
 
+            if (command.isEmpty() && BuildConfig.FLAVOR_market.equals("appimage")) {
+                // On AppImage, re-execute via AppRun
+                String appdir = System.getenv("APPDIR");
+                if (appdir != null) {
+                    command.add(appdir + "/AppRun");
+                    command.addAll(Arrays.asList(savedArgs));
+                }
+            }
+
             if (command.isEmpty() && os.contains("win")) {
                 // On Windows, use the RemixedDungeon.exe executable
                 String exePath = System.getProperty("user.dir") + "/RemixedDungeon.exe";
@@ -203,13 +212,11 @@ public class RemixedDungeonApp {
     }
 
     private static String getUserDataPath() {
-        if (BuildConfig.FLAVOR_market.equals("snap")) {
-            // Check if SNAP_USER_DATA is available via user.home system property
-            String snapUserData = System.getProperty("user.home");
-            if (snapUserData != null && !snapUserData.isEmpty()) {
-                // Use a specific subdirectory for Remixed Dungeon data in user's home
+        if (BuildConfig.FLAVOR_market.equals("snap") || BuildConfig.FLAVOR_market.equals("appimage")) {
+            String home = System.getProperty("user.home");
+            if (home != null && !home.isEmpty()) {
                 String separator = FileSystems.getDefault().getSeparator();
-                return snapUserData + separator + ".local" +
+                return home + separator + ".local" +
                         separator + "share" +
                         separator + "remixed-dungeon" +
                         separator;

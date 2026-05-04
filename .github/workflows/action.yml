@@ -132,3 +132,48 @@ jobs:
         with:
           name: windows-bundle
           path: 'dist/*'  # Adjust this path to match the output of your Windows bundle
+
+  package-appimage:
+    name: Package AppImage
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: '${{ github.ref }}'
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install lxml
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Download appimagetool
+        run: |
+          wget -q https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage -O /tmp/appimagetool
+          chmod +x /tmp/appimagetool
+
+      - name: Package AppImage with Gradle
+        run: |
+          export PATH="/tmp:$PATH"
+          ./gradlew -c settings.desktop.gradle packageAppImage -Pflavor_market=appimage --no-configuration-cache
+
+      - name: Upload AppImage
+        uses: actions/upload-artifact@v4
+        with:
+          name: appimage
+          path: 'dist/*.AppImage'

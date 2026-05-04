@@ -205,6 +205,7 @@ tasks.register('generateBuildConfig') {
         } else {
             debug = gradle.startParameter.taskNames.any { it.toLowerCase().contains('debug') }
         }
+        def market = project.hasProperty('flavor_market') ? project.property('flavor_market').toString() : 'vkplay'
         def buildConfigFile = new File("${projectDir}/src/generated/java/com/nyrds/pixeldungeon/ml/BuildConfig.java")
         buildConfigFile.parentFile.mkdirs()
         buildConfigFile.text = """
@@ -214,15 +215,15 @@ tasks.register('generateBuildConfig') {
             public static boolean DEBUG = ${debug};
             public static final String SAVES_PATH = "./saves/";
             public static final String FLAVOR_platform = "desktop";
-            public static final String FLAVOR_market = "vkplay";
+            public static final String FLAVOR_market = "${market}";
             public static final String VERSION_NAME = "${version}";
             public static final int VERSION_CODE = ${version_code};
-            
+
             public static void init(String[] args) {
                 // Check command line arguments for debug flags
                 if (args != null) {
                     for (String arg : args) {
-                        if (arg != null && (arg.equalsIgnoreCase("--debug") || arg.equalsIgnoreCase("-debug") || 
+                        if (arg != null && (arg.equalsIgnoreCase("--debug") || arg.equalsIgnoreCase("-debug") ||
                                            arg.equalsIgnoreCase("--debug=true") || arg.equalsIgnoreCase("-Ddebug=true"))) {
                             DEBUG = true;
                             return;
@@ -233,7 +234,7 @@ tasks.register('generateBuildConfig') {
                         }
                     }
                 }
-                
+
                 // Check system properties as fallback
                 String debugProp = System.getProperty("debug");
                 if (debugProp != null) {
@@ -472,6 +473,95 @@ tasks.register('packageWinX64', Zip) {
 
     from("${projectDir}/build/launch4j/RemixedDungeon.exe") {
         into "RemixedDungeon-${project.ext.version}-winX64"
+    }
+}
+
+
+tasks.register('packageAppImage') {
+    dependsOn 'shadowJar', 'minimizeJdks'
+    group = 'distribution'
+    description = 'Creates an AppImage package for Linux. Use -Pflavor_market=appimage to set the market flavor.'
+
+    def appDir = file("${buildDir}/appImage/RemixedDungeon.AppDir")
+
+    doLast {
+        appDir.mkdirs()
+
+        // Copy the shadow JAR
+        copy {
+            from(shadowJar)
+            into appDir
+        }
+
+        // Copy desktop assets, skipping the dangling scripts symlink
+        copy {
+            from("src/desktop/assets") {
+                exclude 'scripts'
+            }
+            into "${appDir}/mods/Remixed"
+        }
+
+        copy {
+            from("src/desktop/d_assets")
+            into "${appDir}/mods/Remixed"
+        }
+
+        copy {
+            from("src/desktop/l10ns")
+            into "${appDir}/mods/Remixed"
+        }
+
+        // Copy Lua scripts explicitly (same as snap — scripts/ is a dangling symlink in assets)
+        copy {
+            from("../scripts")
+            into "${appDir}/mods/Remixed/scripts"
+        }
+
+        // Copy minimized JDK
+        copy {
+            from(new File(jdkMinimizedDir, 'linux'))
+            into "${appDir}/jdk"
+        }
+
+        // Copy AppRun launcher
+        copy {
+            from("src/desktop/appimage/AppRun")
+            into appDir
+            fileMode 0755
+        }
+
+        // Copy desktop entry
+        copy {
+            from("src/desktop/appimage/remixed-dungeon.desktop")
+            into appDir
+        }
+
+        // Copy icon
+        copy {
+            from("../GameServices/icon.png")
+            into appDir
+            rename 'icon.png', 'remixed-dungeon.png'
+        }
+
+        // Try to build AppImage with appimagetool if available
+        def appImageOutput = file("../dist/RemixedDungeon-${project.ext.version}-x86_64.AppImage")
+        appImageOutput.parentFile.mkdirs()
+
+        def hasAppImageTool = false
+        try {
+            exec { commandLine 'which', 'appimagetool' }
+            hasAppImageTool = true
+        } catch (Exception ignored) {}
+
+        if (hasAppImageTool) {
+            exec {
+                commandLine 'appimagetool', appDir.absolutePath, appImageOutput.absolutePath
+            }
+            println "AppImage created: ${appImageOutput}"
+        } else {
+            println "appimagetool not found. AppDir is available at: ${appDir}"
+            println "Install appimagetool and run: appimagetool ${appDir} ${appImageOutput}"
+        }
     }
 }
 

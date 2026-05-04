@@ -64,7 +64,7 @@ public class DonateButton extends ImageButton {
 	protected void onClick() {
 		if (RemixedDungeon.canDonate()) {
 			parentWnd.add(new WndDonate());
-		} else if (BuildConfig.FLAVOR_market.equals("snap")) {
+		} else if (BuildConfig.FLAVOR_market.equals("snap") || BuildConfig.FLAVOR_market.equals("appimage")) {
 			parentWnd.add(new WndCryptoDonate());
 		}
 	}

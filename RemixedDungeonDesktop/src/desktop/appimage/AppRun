@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# AppRun launcher for Remixed Dungeon AppImage
+# The AppImage mount point is read-only, so we route user data to XDG dirs.
+
+APPDIR="$(dirname "$(readlink -f "$0")")"
+export APPDIR
+
+# User data directory (saves, prefs, mods, logs)
+DATA_DIR="$HOME/.local/share/remixed-dungeon"
+mkdir -p "$DATA_DIR"
+
+# LWJGL natives need a writable extraction directory
+NATIVES_DIR="$DATA_DIR/.lwjgl-natives"
+mkdir -p "$NATIVES_DIR"
+export LWJGL_EXTRACT_DIR="$NATIVES_DIR"
+
+# Temp dir must be writable
+export TMPDIR="$DATA_DIR/tmp"
+mkdir -p "$TMPDIR"
+
+# Set up a writable working directory with symlinks to read-only AppImage assets.
+# The game uses Gdx.files.local() which resolves relative to CWD, and also
+# writes saves/logs/preferences to CWD. So CWD must be writable.
+GAME_DIR="$DATA_DIR/game"
+mkdir -p "$GAME_DIR"
+
+# Symlink read-only asset directories from the AppImage
+ln -sfn "$APPDIR/mods" "$GAME_DIR/mods"
+
+cd "$GAME_DIR"
+
+# Default to windowed mode if no display mode arg provided
+GAME_ARGS=("$@")
+if ! echo "$*" | grep -q -- '--\(windowed\|fullscreen\|minimized\)'; then
+  GAME_ARGS=(--windowed "$@")
+fi
+
+exec "$APPDIR/jdk/bin/java" \
+  --add-opens java.base/java.util=ALL-UNNAMED \
+  -Dassets.dir="$APPDIR/mods/Remixed" \
+  -Duser.home="$HOME" \
+  -Djava.io.tmpdir="$TMPDIR" \
+  -Dorg.lwjgl.librarypath="$NATIVES_DIR" \
+  -jar "$APPDIR/RemixedDungeon.jar" \
+  "${GAME_ARGS[@]}"

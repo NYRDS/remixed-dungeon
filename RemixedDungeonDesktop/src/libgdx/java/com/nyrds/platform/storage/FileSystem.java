@@ -10,6 +10,8 @@ import com.nyrds.util.ModdingBase;
 
 import org.jetbrains.annotations.NotNull;
 
+import com.nyrds.pixeldungeon.ml.BuildConfig;
+
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
@@ -288,15 +290,15 @@ public class FileSystem {
 	}
 
 	public static String getUserDataPath(String subPath) {
-		// Check if SNAP_USER_DATA is available via user.home system property
-		String snapUserData = System.getProperty("user.home");
-		if (snapUserData != null && !snapUserData.isEmpty()) {
-			// Ensure we're not using the actual home directory but a subdirectory for safety
-			// Use a specific subdirectory for Remixed Dungeon data
-			return snapUserData + File.separator + ".local" + File.separator + "share" + 
-				   File.separator + "remixed-dungeon" + File.separator + subPath;
+		// For snap and appimage, route user data to XDG-style directory
+		if (BuildConfig.FLAVOR_market.equals("snap") || BuildConfig.FLAVOR_market.equals("appimage")) {
+			String home = System.getProperty("user.home");
+			if (home != null && !home.isEmpty()) {
+				return home + File.separator + ".local" + File.separator + "share" +
+					   File.separator + "remixed-dungeon" + File.separator + subPath;
+			}
 		}
-		
+
 		// Fallback to the original relative path behavior
 		return subPath;
 	}

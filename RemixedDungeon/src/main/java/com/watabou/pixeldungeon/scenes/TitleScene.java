@@ -270,7 +270,7 @@ public class TitleScene extends PixelScene {
         float cl = (float) Math.sin(time) * 0.5f + 0.5f;
         if (!donationAdded) {
 
-            if (RemixedDungeon.canDonate() || BuildConfig.FLAVOR_market.equals("snap")) {
+            if (RemixedDungeon.canDonate() || BuildConfig.FLAVOR_market.equals("snap") || BuildConfig.FLAVOR_market.equals("appimage")) {
                 add(pleaseSupport);
                 add(btnDonate);
             } else {

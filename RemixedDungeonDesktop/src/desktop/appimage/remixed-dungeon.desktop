@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Remixed Dungeon
+GenericName=Roguelike Game
+Comment=Classic roguelike dungeon crawler with pixel graphics
+Exec=AppRun
+Icon=remixed-dungeon
+Categories=Game;RolePlaying;
+Terminal=false
+StartupNotify=true
