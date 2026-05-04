@@ -178,3 +178,5 @@ jobs:
         with:
           name: appimage
           path: 'dist/*.AppImage'
+          if-no-files-found: error
+          compression-level: 0
