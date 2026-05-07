@@ -3,6 +3,7 @@ name: build
 on:
   push:
     branches: [ "*" ]  # This will trigger the workflow on push to any branch
+    tags: [ "*" ]      # This will trigger the workflow on any tag push
   pull_request:
     branches: [ "*" ]  # This will trigger the workflow on pull requests to any branch
 
