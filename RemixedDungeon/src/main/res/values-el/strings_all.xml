@@ -62,6 +62,9 @@
     <string name="Amulet_Info">Το Φυλακτό του Γέντορ είναι το πιο ξακουστό και ισχυρό τεχνούργημα με άγνωστη προέλευση. Λέγεται ότι το φυλακτό μπορεί να πραγματοποιήσει οποιαδήποτε επιθυμία - αρκεί η θέληση του κατόχου να είναι αρκετά ισχυρή ώστε να το «πείσει» να το κάνει.</string>
     <string name="Amulet_Name">Φυλακτό του Γέντορ</string>
     <string name="AnesthesiaBuff_Info">Δεν νιώθει πόνο και δεν ξυπνάει από επιθέσεις, αλλά συνεχίζει να δέχεται ζημιά.</string>
+    <string name="AnesthesiaBuff_Name">Αναισθησία</string>
+    <string name="Anesthesia_Cast">%s βυθίζεται σε βαθύ, ατάραχο ύπνο.</string>
+    <string name="Anesthesia_Info">Προκαλεί έναν βαθύ, αφύσικο ύπνο στον στόχο σας. Ακόμη και οι πιο βίαιες επιθέσεις δεν θα τον ξυπνήσουν από αυτόν τον ύπνο.</string>
     <string name="Anesthesia_Name">Αναισθησία</string>
     <string name="Ankh_Info">Αυτό το αρχαίο σύμβολο αθανασίας σού επιτρέπει να επιστρέψεις στη ζωή μετά τον θάνατο. Με την ανάσταση, όλα τα μη εξοπλισμένα αντικείμενα χάνονται.</string>
     <string name="Ankh_Name">ανκχ</string>
@@ -292,6 +295,8 @@
     <string name="BlessedBuff_Name">Ευλογία</string>
     <string name="BlindnessBuff_Info">Παντελής τύφλωση. Μόνο οι ήχοι μπορούν να γίνουν αντιληπτοί.</string>
     <string name="BlindnessBuff_Name">Τύφλωση</string>
+    <string name="BloodTransfusion_Drained">Η ζωτική ουσία ρέει από το κατοικίδιό σας σε εσάς.</string>
+    <string name="BloodTransfusion_FullHP">Το αίμα σας είναι ήδη γεμάτο.</string>
     <string name="BloodTransfusion_Info">Αποστραγγίζει σχεδόν όλο το αίμα από έναν στόχο για να σε θεραπεύσει. Ένα σκοτεινό τελετουργικό θυσίας και επιβίωσης.</string>
     <string name="BloodTransfusion_Name">Μετάγγιση Αίματος</string>
     <string name="BloodTransfusion_WontAgreed">Ο στόχος αντιστέκεται στην εξαγωγή της ουσίας της ζωής του.</string>
@@ -301,6 +306,7 @@
     <string name="BodyArmorSpell_Name">Σωματική πανοπλία</string>
     <string name="BoneSaw_Info">Ένα χειρουργικό πριόνι ακριβείας σχεδιασμένο για ταχύτατο τεμαχισμό. Η ζημιά και η ταχύτητα επίθεσής του μεγαλώνουν μαζί με την ικανότητα του Γιατρού Επιδημιών. Τα κρίσιμα χτυπήματα βγάζουν περισσότερα μέλη από τους εχθρούς, και είναι εξαιρετικά αποτελεσματικό εναντίον παραλυμένων εχθρών.</string>
     <string name="BoneSaw_Name">Πριόνι Οστών</string>
+    <string name="BoneShard_Info">Ένα κοφτερό θραύσμα οστού από ηττημένο εχθρό. Αυτά τα θραύσματα είναι εκπληκτικά ανθεκτικά και χρήσιμα στην κατασκευή.</string>
     <string name="BoneShard_Name">Θραύσμα Οστού</string>
     <string name="Boomerang_Gender">neuter</string>
     <string name="Boomerang_Info">Αφού ριχθεί στον εχθρό, αυτό το κυρτό ξύλινο όπλο ρίψης θα επιστρέψει στα χέρια του χρήστη.</string>
@@ -333,6 +339,7 @@
     <string name="CagedKobold_Name">φυλακισμένος καλικάντζαρος</string>
     <string name="CagedKobold_Name_Objective">φυλακισμένος καλικάντζαρος</string>
     <string name="CagedKobold_Quest_End">Ω, σε ευχαριστώ, σε ευχαριστώ πολύ! Πώς κατάφερες να βρεις το κλειδί; Κα... κατέστρεψες το όπλο;! Αυτό είναι απίστευτο! Ξέρεις τι; Είπα ότι θα σε βοηθήσω και ξέρω και τον τρόπο. Θα σε συντροφεύσω στο ταξίδι σου για λίγο. *Ο φυλακισμένος καλικάντζαρος μετατράπηκε σε κερί.</string>
+    <string name="Calm_Cast">%s ηρεμεί.</string>
     <string name="Calm_Info">Είναι πολλά τα επιθετικά πλάσματα εδώ γύρω. Ας τα βοηθήσουμε.</string>
     <string name="Calm_Name">Γαλήνεμα</string>
     <string name="CandleOfMindVision_Info">Μοιάζει με ένα απλό κερί, κάτι που δεν περίμενες να βρεις στην κατακόμβη. Είναι, παραδόξως, αρκετά ζεστό στο άγγιγμα, αν και δεν είναι αναμμένο.</string>
@@ -346,6 +353,7 @@
     <string name="Capotain_Info">Ένα ψηλό και στενόμακρο καπέλο. Συνήθως συσχετίζεται με τους Πουριτανούς, αλλά δεν χρειάζεται να πιστεύεις για να το φορέσεις. Για κάποιον λόγο έχει μια ταμπέλα που αναγράφει «Σολομών».</string>
     <string name="Capotain_Name">Ημίψηλο</string>
     <string name="Carcass_Devoured">Καταβρόχθισες τη σορό του πλάσματος: %s!</string>
+    <string name="Carcass_DissectFailed">Τεμαχίζετε το/τη %s αλλά δεν βρίσκετε τίποτα πολύτιμο.</string>
     <string name="Carcass_DissectMessage">Ανατεμαχίζεις τη σορό και αποκτάς %s.</string>
     <string name="Carcass_DissectResult">Από το %1$s λαμβάνετε %2$d συγκομιδή %3$s.</string>
     <string name="Carcass_Info">Λείψανα ενός παντελώς νεκρού πλάσματος (%s).</string>
@@ -470,6 +478,7 @@
     <string name="ChargrilledMeat_Name">ψημένο κρέας</string>
     <string name="CharmBuff_Info">Το σώμα και το πνεύμα έχουν γοητευθεί!</string>
     <string name="CharmBuff_Name">Γοητεία</string>
+    <string name="CharmSpell_Cast">%s είναι γοητευμένος/η.</string>
     <string name="CharmSpell_Info">Όλοι αξίζουν λίγη αγάπη, έτσι δεν είναι;</string>
     <string name="CharmSpell_Name">Γοητεία</string>
     <string name="Chasm_Chasm">Χάσμα</string>
@@ -566,6 +575,8 @@
     <string name="CorpseDust_Info2">Ίσως επειδή σου προκαλεί ένα αίσθημα οργής και αγωνίας και μόνο που την κρατάς.</string>
     <string name="CorpseDust_Name">σκόνη σορού</string>
     <string name="CorpseExplosion_Info">Μετατρέπει ένα πτώμα σε ένα θανατηφόρο σύννεφο τοξικού αερίου, διαδίδοντας ασθένεια και δηλητήριο σε όλους τους κοντινούς εχθρούς.</string>
+    <string name="CorpseExplosion_Name">Έκρηξη Πτώματος</string>
+    <string name="CorpseExplosion_NoCorpse">Δεν υπάρχει πτώμα σε αυτή τη θέση.</string>
     <string name="Crab_Defense">απέκρουσε</string>
     <string name="Crab_Desc">Αυτά τα τεράστια καβούρια ανήκουν στην κορυφή της τροφικής αλυσίδας των υπονόμων. Είναι εξαιρετικά γρήγορα και ο παχύς τους εξωσκελετός μπορεί να αντέξει βαριά χτυπήματα.</string>
     <string name="Crab_Gender">masculine</string>
@@ -645,6 +656,8 @@
     <string name="Displacement_Txt">%s εκτοπισμού</string>
     <string name="DoctorArmor_Info">Αυτή η πανοπλία του γιατρού της πανούκλας επιτρέπει τη χρήση της ικανότητας \&quot;Σύννεφο Μιάσματος\&quot;, το οποίο απελευθερώνει ένα τοξικό αέριο που δηλητηριάζει, αποδυναμώνει και αποπροσανατολίζει τους εχθρούς. Ο γιατρός, προστατευμένος από τη μάσκα του, είναι άνοσος σε αυτές τις επιδράσεις.</string>
     <string name="DoctorArmor_Name">Ενδυμασία Γιατρού</string>
+    <string name="DoctorArmor_NotDoctor">Μόνο οι γιατροί της πανούκλας μπορούν να χρησιμοποιήσουν αυτή την πανοπλία!</string>
+    <string name="DoctorSpecial">Σύννεφο Μιάσματος</string>
     <string name="DogeMask_Info">Ήθελες ποτέ να μεταμφιεστείς όπως ο διάσημος Doge; Ιδού η ευκαιρία!\nΚοίτα μάσκα! Κοίτα μεταμφίεση! Ουάου!</string>
     <string name="DogeMask_Name">Μάσκα Doge</string>
     <string name="DonateButton_pleaseDonate">Σκέψου να κάνεις δωρεά</string>
@@ -2476,8 +2489,10 @@ remix.32\n
     <string name="WndCryptoDonate_currency">Νόμισμα</string>
     <string name="WndCryptoDonate_infoText">Μπορείτε να υποστηρίξετε την ανάπτυξη του Remixed Dungeon στέλνοντας δωρεές σε κρυπτονομίσματα στις παρακάτω διευθύνσεις. Σας ευχαριστούμε για την γενναιόδωρη υποστήριξη!</string>
     <string name="WndCryptoDonate_tron">TRON</string>
+    <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_supportDev">Υποστήριξε τον Προγραμματιστή</string>
     <string name="WndCryptoDonate_walletAddress">Διεύθυνση Πορτοφολιού</string>
+    <string name="WndCryptoDonate_openWallet">Άνοιγμα Πορτοφολιού</string>
     <string name="WndCryptoDonate_warningText">ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Επαληθεύετε πάντα τη διεύθυνση πριν στείλετε χρήματα. Οι συναλλαγές κρυπτονομισμάτων είναι μη αναστρέψιμες!</string>
     <string name="WndCustomizations_Title">Προσαρμογές</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - Δωρεάν σε όλους και έτσι θα είναι πάντα.\n\nΠαρόλα αυτά, μπορείς να μας βοηθήσεις να το κάνουμε ακόμα καλύτερο.\n\nΜαζί με τις εγκάρδιες ευχαριστίες μας, θα λάβεις και κάποια αισθητικά πρόσθετα.</string>
@@ -2562,6 +2577,7 @@ remix.32\n
     <string name="WndItemAlchemy_SelectRecipe">Επιλογή συνταγής</string>
     <string name="WndItemAlchemy_Title">Συνταγές αλχημείας με %s</string>
     <string name="WndItemAlchemy_Transmute">Μετατροπή</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Εκτέλεση Συνταγής</string>
     <string name="WndJournal_Levels">Όροφοι</string>
     <string name="WndJournal_Logbook">Καταγραφές</string>
     <string name="WndJournal_Title">Ημερολόγιο</string>
