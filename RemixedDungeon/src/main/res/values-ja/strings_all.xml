@@ -58,6 +58,7 @@
     <string name="Amulet_ACEnd">ゲーム終了</string>
     <string name="Amulet_Info">イェンダーの魔除けは起源不明の最も強力なアーティファクトとして知られている。この魔除けは、持ち主が十分に強い意志の力で\&quot;説得\&quot;することが出来れば、どんな願いでも叶えることができると言われている。</string>
     <string name="Amulet_Name">イェンダーの魔除け</string>
+    <string name="Anesthesia_Cast">%sは深く、夢も見ない眠りに落ちた。</string>
     <string name="Anesthesia_Name">麻酔</string>
     <string name="Ankh_Info">この古代の不死のシンボルは、死後に蘇る能力を与える。復活すると、装備していないアイテムはすべて失われる。</string>
     <string name="Ankh_Name">アンク</string>
@@ -2420,12 +2421,12 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="WndChooseWay_Message">あなたはどちらの道を行く？</string>
     <string name="WndClass_Mastery">習熟</string>
     <string name="WndCryptoDonate_bitcoin">ビットコイン</string>
-    <string name="WndCryptoDonate_ethereum">イーサリアム</string>
     <string name="WndCryptoDonate_copyAddress">アドレスをコピー</string>
     <string name="WndCryptoDonate_currency">通貨</string>
-    <string name="WndCryptoDonate_tron">TRON</string>
+    <string name="WndCryptoDonate_ethereum">イーサリアム</string>
     <string name="WndCryptoDonate_openWallet">ウォレットを開く</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">ウォレットアドレス</string>
     <string name="WndCustomizations_Title">カスタマイズ</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeonは誰でも無料で遊べますし、これからもずっと無料です。ただし、ゲームをより良いものにするために協力することができます。</string>
@@ -2977,6 +2978,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

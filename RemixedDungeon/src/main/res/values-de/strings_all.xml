@@ -805,6 +805,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Ghost_Defense">ausgewichen</string>
     <string name="Ghost_Desc">Der Geist ist kaum sichtbar. Er sieht wie ein formloses, schwaches Licht mit einem traurigen Gesicht aus.</string>
     <string name="Ghost_Name">trauriger Geist</string>
+    <string name="Ghost_Name_Objective">Geist</string>
     <string name="Ghost_Rat1">Hallo Abenteurer... Einst war ich wie du - stark und selbstbewusst... Und nun bin ich tot... Aber ich kann diesen Platz nicht verlassen... Nicht bevor ich mich gerächt habe... Erlege die _stinkende Ratte_, die mir das Leben genommen hat...</string>
     <string name="Ghost_Rat2">Bitte... Hilf mir... Erschlage die Abschäulichkeit...</string>
     <string name="Ghost_Rose1">Hallo Abenteurer... Einst war ich wie du - stark und selbstbewusst... Und nun bin ich tot... Aber ich kann diesen Platz nicht verlassen... nicht bevor ich meine _getrocknete Rose_ wieder habe... Es ist sehr wichtig für mich... Einige Monster haben sie von meinem Körper gestohlen...</string>
@@ -2361,14 +2362,14 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndChooseWay_Cancel">Ich entscheide mich später</string>
     <string name="WndChooseWay_Message">Welchen Weg schlägst du ein?</string>
     <string name="WndClass_Mastery">Meisterschaft</string>
+    <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Adresse kopieren</string>
     <string name="WndCryptoDonate_currency">Währung</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Sie können die Entwicklung von Remixed Dungeon unterstützen, indem Sie Kryptowährungsspenden an die unten aufgeführten Adressen senden. Vielen Dank für Ihre großzügige Unterstützung!</string>
-    <string name="WndCryptoDonate_tron">TRON</string>
-    <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_openWallet">Wallet öffnen</string>
     <string name="WndCryptoDonate_supportDev">Entwickler unterstützen</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - für jeden kostenlos und wird es auch immer bleiben.\n\nAllerdings können Sie uns dabei helfen, das Spiel noch besser zu machen.\n\nNeben unserem herzlichen Dank bekommst du auch einige kosmetische Verbesserungen.</string>
     <string name="WndDonate_donate">Spenden:</string>
     <string name="WndDonate_gold">Gold</string>
@@ -2907,6 +2908,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

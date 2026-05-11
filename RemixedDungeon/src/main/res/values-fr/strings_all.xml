@@ -1380,6 +1380,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Mob_CantDoIt">Je ne peux pas le faire. J\'ai des petites pattes.</string>
     <string name="Mob_Desc">La vraie description arrive bientôt !</string>
     <string name="Mob_Died">Vous entendez quelque chose mourir au loin</string>
+    <string name="Mob_GoingTo">Déjà en mouvement !</string>
     <string name="Mob_ReadyForOrder">%s attend votre ordre.</string>
     <string name="Mob_StaAmokStatus">Ce %1$s pète un plomb</string>
     <string name="Mob_StaControlledStatus">%s est sous votre possession sacrilège</string>
@@ -3017,6 +3018,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

@@ -1510,6 +1510,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PlagueDoctorQuest_4_1_Epilogue">¡Espléndido! Los _Brujos Enanos_, ¡su esencia ahora es mía para explorar! Una magia tan retorcida y corrompida... verdaderamente fascinante. *Sostiene un frasco reluciente, lleno de un líquido viscoso y carmesí.* ¡Esto es para ti: una _Poción de Poder_! ¡Bebe su poder y sentirás la fuerza de las montañas corriendo por tus venas! Recuerda, el conocimiento obtenido de estos sacrificios servirá en última instancia a un propósito superior... quizás incluso nos salve a todos de un destino peor que la muerte.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">¡Cinco _Brujos Enanos_, sus cuerpos aún palpitan con el débil eco de magia oscura! Tráemelos, y te recompensaré con una poción de poder sin precedentes: una _Poción de Poder_ que te impregnará con la fuerza de diez hombres.</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">¡Achú! ¡Dwarves! ¡Esos testarudos moradores subterráneos, obsesionados con las gemas y el oro! Pero son los _Brujos Enanos_ los que ansío... su magia retorcida, alimentada por las mismas profundidades que habitan. ¡Cinco, necesito cinco de esas almas marchitas! Sus cuerpos tienen la clave para entender un cierto... fenómeno. Algo sobre canalizar energías arcanas a través de la tierra misma. ¡Creo que estoy cerca de un gran descubrimiento, pero necesito su esencia, su magia corrompida! *Tose violentamente en su pañuelo, una mancha oscura se extiende por la delicada tela*</string>
+    <string name="PlagueDoctorQuest_4_2_InProgress">¡Recupera cinco _Kobolds Icedemancers_ muertos! Sus cuerpos congelados guardan la clave para desbloquear los secretos de su gélida magia.</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Él mira fijamente a las dos _súcubos_, con una sonrisa beatífica extendiéndose bajo su máscara.* ¡Espléndido! ¡Magnífico! Esto desbloqueará tantas... posibilidades! *Se vuelve hacia ti, su voz gruesa de gratitud... y algo más.* Tus esfuerzos... no serán olvidados. Le debo las gracias más profundas. *Su mirada se demora en las _súcubos_ un momento demasiado largo, antes de retirarse a su laboratorio, murmurando sobre cómo desbloquear los secretos de la seducción.*</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Él tartamudea, su voz cruje como una rama quebradiza*.  A-ah, _¡súcubos_! ¡Dos… sí, dos, vivas! Es… ejem… para mi investigación. Verá… sus feromonas… son cruciales para comprender el delicado equilibrio de… ah… *Se interrumpe, su mano huesuda se eleva nerviosamente para ajustar su máscara, sus ojos se dirigen hacia usted con una intensidad febril.* Su… esencia… es un enigma… ¡un enigma hermoso y enigmático! *Tose violentamente, intentando recuperar la compostura.* Se lo prometo, por traerme dos de estas… criaturas… tendrá mi eterna gratitud. ¡Piénselo como un… un regalo al conocimiento! ¡Sí! ¡Al conocimiento!</string>
     <string name="PlagueDoctorQuest_AllDone">*Él deja escapar una risa seca y jadeante.* \&quot;¡Tus hazañas han desbloqueado secretos más allá de toda medida! El conocimiento adquirido... late dentro de mí, una sinfonía de descubrimiento. Pero el conocimiento,\&quot; añade, bajando la voz a un susurro conspiratorio, \&quot;el conocimiento es poder. Y el poder... ah... ese es un elixir más embriagador.\&quot; Te mira fijamente por un momento, sus ojos amatista ardiendo con una intensidad febril. \&quot;Quizás,\&quot; murmura, \&quot;nuestros caminos se crucen de nuevo. Porque todavía hay muchos... misterios... por desvelar.\&quot;</string>
@@ -2406,13 +2407,13 @@ otro lugar del nivel.</string>
     <string name="WndChooseWay_Cancel">Decidiré más tarde</string>
     <string name="WndChooseWay_Message">¿Qué camino seguirás?</string>
     <string name="WndClass_Mastery">Maestría</string>
-    <string name="WndCryptoDonate_copyAddress">Copiar Dirección</string>
-    <string name="WndCryptoDonate_infoText">¡Puedes apoyar el desarrollo de Remixed Dungeon enviando donaciones de criptomonedas a las direcciones que aparecen a continuación. ¡Gracias por tu generoso apoyo!</string>
-    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+    <string name="WndCryptoDonate_copyAddress">Copiar Dirección</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
+    <string name="WndCryptoDonate_infoText">¡Puedes apoyar el desarrollo de Remixed Dungeon enviando donaciones de criptomonedas a las direcciones que aparecen a continuación. ¡Gracias por tu generoso apoyo!</string>
     <string name="WndCryptoDonate_supportDev">Apoyar al Desarrollador</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Dirección de la Cartera</string>
     <string name="WndCryptoDonate_warningText">¡ATENCIÓN: Verifica siempre la dirección antes de enviar fondos. Las transacciones de criptomonedas son irreversibles!</string>
     <string name="WndCustomizations_Title">Personalizaciones</string>
@@ -2958,6 +2959,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -1596,6 +1596,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="PseudoPasty_Info">Bu üzeri geleneksel et ve patatesle dolu otantik etli börek.</string>
     <string name="PseudoPasty_Name">börek</string>
     <string name="PseudoRat_Desc">Korkuç bir yaratık , bir sıçan cesedi ile daha önce görmediğin bir kemirgenin birleşiminden oluşuyor.Vücudunun büyük bölümünü oluşturan muazzam ağzı keskin dişlerle dolu.</string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">Sahte sıçan</string>
     <string name="PseudoRat_Name_Objective">Sahte sıçan</string>
     <string name="PumpkinPie_Info">Lezzetli Bir Balkabağı Pastası, tıpkı annenin önceden pişirdiği gibi</string>
@@ -2394,9 +2395,9 @@ remix.30.1\n
     <string name="WndChooseWay_Cancel">Sonra karar veririm.</string>
     <string name="WndChooseWay_Message">Hangi yolu takip edeceksiniz?</string>
     <string name="WndClass_Mastery">Uzmanlık</string>
+    <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Adresi Kopyala</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
-    <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_infoText">Remixed Dungeon\'ın geliştirilmesini, aşağıda belirtilen adreslere kripto para bağışları göndererek destekleyebilirsiniz. Câmilerinize teşekkür ederiz!</string>
     <string name="WndCryptoDonate_supportDev">Geliştiriciyi Destekle</string>
     <string name="WndCryptoDonate_ton">TON</string>
@@ -2945,6 +2946,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
