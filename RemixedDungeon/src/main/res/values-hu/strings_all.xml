@@ -519,6 +519,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">Ez a megerősített nyílpuska bizonyítja hogy sokkal hatékonyabb a fából készült társainál.</string>
     <string name="CompositeCrossbow_Name">Kompozit számszeríj</string>
+    <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">Az ebből az összetett íjból kilőtt nyílvesszők hatalmas sérüléseket okoznak, és jobb pontossággal rendelkeznek az átlagos fa íjnál, de némileg lassabbak.</string>
     <string name="CompoundBow_Name">kompozit íj</string>
     <string name="ConcreteBlock_Description">Hogy meglökd ezt a tömböt, %d pont erődnek kell lennie.</string>
@@ -609,6 +610,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="Dreamweed_Desc">Az Álomfűhöz érve eltűntet egy csillogó zavaró füstöt.</string>
     <string name="Dreamweed_Name">Álomfű</string>
     <string name="DriedRoseBuff_Name">Csalogató</string>
+    <string name="DriedRoseCursedBuff_Info">A rózsa gyönyörűnek tűnik, de nem olyan csábító.</string>
     <string name="DriedRoseCursedBuff_Name">Érzéki</string>
     <string name="DriedRose_Info">A rózsa sok sok évvel ezelőtt lett kiszárítva, de mégis megvan még az összes szirma.</string>
     <string name="DriedRose_Info2">És mégsem veszített semmit a szépségéből. Annyira tetszik hogy meg akarod tartani örökre.</string>
@@ -1137,6 +1139,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Level_TileDescStatue">Valaki felakarta díszíteni ezt a helyet, de nyilvánvalóan elbukott.</string>
     <string name="Level_TileDescTrap">A nyomólapra lépés működés be hozza a csapdát.</string>
     <string name="Level_TileDescWater">Ha égsz, elolthatod azzal, hogy vízbe lépsz.</string>
+    <string name="Level_TileDescWell">Titokzatos kút. Érezni, ahonnan mágiai erő fakad.</string>
     <string name="Level_TileEmbers">Parázs</string>
     <string name="Level_TileEmptyWell">Kiszáradt kút</string>
     <string name="Level_TileEntrance">Bejárat a mélységbe</string>
@@ -1681,6 +1684,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="Rudolph_Info">Mi lehet ünnepibb egy ragyogó piros orrnál? Egy pár aganccsal egybevéve, természetesen.</string>
     <string name="Rudolph_Name">Vörös orr és agancs</string>
     <string name="RunicSkull_Desc">Valahogyan mesterségesen alkották meg, de ez a koponya mégis olyan mintha valódi lenne. Valamint halvány ragyogást is látsz körülötte.</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">rúnás koponya</string>
     <string name="RunicSkull_Name_Objective">rúnás koponya</string>
     <string name="SacrificialSword_Gender">masculine</string>
@@ -2473,6 +2477,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndStory_Prision">Sok sok évvel ezelőtt egy földalatti börtön épült itt a legveszedelmesebb bűnözőknek. Akkor remek ötletnek tűnt mivel innen nagyon nehéz megszökni. Azonban egy sötét és gonosz erő kezdett az alsóbb szintekről átszivárogni. Az őrök és a foglyok szép lassan megőrültek. Aki tudta az végül elmenekült, de voltak foglyok akik rács mögött maradtak örökre.</string>
     <string name="WndStory_Sewers">A Kazamata pont a város alatt húzódik, A felsőbb szintjei tulajdonképp a város csatornarendszerének részei. Tulajdonképp pont emiatt ezek a szintek nem is olyan veszélyesek. Persze senki sem mondja hogy biztonságos, de legalább a legveszedelmesebb gonosz mágiával nem kell itt megkűzdened.</string>
     <string name="WndStory_Spiders">Sok sok évvel ezelőtt volt egy gazdag bánya, telis tele mágikus drágakövekkel és nyersanyagokkal. De amikor az érclelő helyek kimerültek a bányászok elhagyták ezt a sokszáz alagútból álló tárnarendszert. Végül a helyet ember nagyságú pókok népesítették be, melyet azóta otthonuknak tekintenek. Még ezek a veszedelmes fenevadak sem tudták elriasztani azokat a kalandorakat akik elég bátrak és őrültek voltak ahhoz hogy lemerészkedjenek kutatni némi használható kincs után.  A hatalmasabb erejű értékesebb ereklyéket övező pletykák, valamint az azt körülvevő veszélyek is mindig sokkal nagyobbak. Egy napon egy gonosz boszorkány tévedt az alagutakba miközben az üldözői elöl menekült. Soha többet nem hallotak róla. Lehet talált egy másik kivezető utat, lehet hogy valahogy sikerült kicsúsznia az őrök markából... vagy egyszerűen csak meghalt, körülvéve a sötétség teremtményeinek suttogásával.</string>
+    <string name="WndTilesKind_ClassicLook">Klasszikus kinézet</string>
     <string name="WndTilesKind_NewLook">Új kinézet</string>
     <string name="WndTradeItem_Bought">Vettél egy %1$s-t %2$daranyért</string>
     <string name="WndTradeItem_Buy">Vedd meg %daranyért</string>
@@ -2774,6 +2779,11 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
 
 
 

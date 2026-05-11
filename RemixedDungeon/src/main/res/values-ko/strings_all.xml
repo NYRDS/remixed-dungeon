@@ -546,6 +546,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">이 간단한 금속 스파이크는 사실 날리기 부담스러운 무게지만 맞은 사람을 괴롭게 한다.</string>
     <string name="Dart_Name">다트</string>
+    <string name="DashSpell_Info">지정된 방향으로 적과 충돌하며 돌진하여 피해를 주고 무력화시킨다.</string>
     <string name="DashSpell_Name">대시</string>
     <string name="DashSpell_OnSelf">제 자리로 돌진할 수 없습니다.</string>
     <string name="DashSpell_TooFar">그만큼 멀리 돌진할 수 없습니다.</string>
@@ -2750,6 +2751,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

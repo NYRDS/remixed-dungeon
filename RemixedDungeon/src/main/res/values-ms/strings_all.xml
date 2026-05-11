@@ -909,6 +909,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HeroSubClass_NameSnip">penembak hendap</string>
     <string name="HeroSubClass_NameWarL">dukun</string>
     <string name="HeroSubClass_NameWard">pelindung</string>
+    <string name="HeroSubClass_NameWitchdoctor">tukang guna</string>
     <string name="Hero_AnotherTry">Anda mati.\n Mahu cuba sekali lagi?</string>
     <string name="Hero_Leave">Anda tidak sepatutnya tinggalkan Dungeon Remixed begitu sahaja.</string>
     <string name="Hero_LevelUp">tahap meningkat!</string>
@@ -2229,8 +2230,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndCryptoDonate_currency">Mata Wang</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Anda boleh menyokong pembangunan Remixed Dungeon dengan menghantar derma mata wang kripto ke alamat di bawah. Terima kasih atas sokongan anda yang murah hati!</string>
-    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Alamat Dompet</string>
     <string name="WndCryptoDonate_warningText">AMARAN: Sentiasa sahkan alamat sebelum menghantar dana. Transaksi mata wang kripto adalah tidak boleh diubah!</string>
     <string name="WndCustomizations_Title">Penyesuaian</string>
@@ -2750,6 +2751,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

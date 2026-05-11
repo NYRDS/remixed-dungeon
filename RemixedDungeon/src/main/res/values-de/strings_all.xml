@@ -2046,6 +2046,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiderServant_Name">Spinnensoldat</string>
     <string name="SpiderServant_Name_Objective">Spinnensoldat</string>
     <string name="Spinner_Desc">Diese grünliche, ängstliche Höhlenspinne versucht es, direkten Kampf zu vermeiden, bevorzugt es in einiger Entfernung zu warten, während ihre Opfer, eingewickelt in ihr klebriges Spinnennetz, langsam an ihrem giftigen Biss sterben.</string>
+    <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name">Höhlenspinne</string>
     <string name="Spinner_Name_Objective">Höhlenspinne</string>
     <string name="SpiritOfPain_Desc">Ein Stück lebende Dunkelheit</string>
@@ -2112,6 +2113,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="SuspiciousRat_Name_Objective">Verdächtige Ratte</string>
     <string name="Swarm_Defense">ausgewichen</string>
     <string name="Swarm_Desc">Der tödliche Fliegenschwarm surrt gefährlich. Jeder nicht-magische Angriff teilt ihn in zwei kleinere, nicht minder gefährliche Schwärme.</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">Fliegenschwarm</string>
     <string name="Swarm_Name_Objective">Fliegenschwarm</string>
     <string name="Swing_Name_0">Wilder %s</string>
@@ -2908,6 +2910,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

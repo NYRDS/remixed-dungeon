@@ -1430,6 +1430,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Nightcap_Info">夜のダンジョンを攻略するのはとても疲れる作業に違いない。この暖かくて肌触りのいい帽子をかぶって、ただリラックスして、全世界を待たせてみてはどうだろう。</string>
     <string name="Nightcap_Name">ナイトキャップ</string>
     <string name="Nightmare_Desc">肉でできた触手の束のようなグロテスクな生き物。悪夢は旧神の不吉な考えの化身である。</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name">悪夢</string>
     <string name="Nightmare_Name_Objective">悪夢</string>
     <string name="No_Valid_Cell">近くに適当なセルがない。</string>
@@ -2978,6 +2979,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

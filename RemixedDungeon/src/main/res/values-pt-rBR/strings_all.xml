@@ -1989,6 +1989,7 @@ outro local do nível.</string>
     <string name="SpiderExploding_Name">aranha operária</string>
     <string name="SpiderExploding_Name_Objective">aranha trabalhadora</string>
     <string name="SpiderGuard_Desc">Igual a soldados, as aranhas Guardião estão jurados em proteger o se reino. O veneno de Guardião é usado para imobilizar os seus alvos, causando paralisia.</string>
+    <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">aranha Guardião </string>
     <string name="SpiderGuard_Name_Objective">aranha Guardião </string>
     <string name="SpiderMindAmber_Desc">As Aranhas de âmbar são criaturas misteriosas e raras que possuem poderes psíquicos similares às psi-aranhas, mas são mais fortes do que as suas irmãs regulares. O nome \&quot;âmbar\&quot; refere-se com a cor dos seus sacos cerebrais gigantes, que são revelado às suas vítimas,  enquanto as Aranhas de âmbar atacam com seus poderes.</string>
@@ -2373,8 +2374,8 @@ remix.31.1\n
     <string name="WndCryptoDonate_currency">Moeda</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Você pode apoiar o desenvolvimento do Remixed Dungeon enviando doações em criptomoedas para os endereços abaixo. Obrigado pelo seu generoso apoio!</string>
-    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Endereço da Carteira</string>
     <string name="WndCryptoDonate_warningText">ATENÇÃO: Sempre verifique o endereço antes de enviar fundos. Transações de criptomoedas são irreversíveis!</string>
     <string name="WndCustomizations_Title">Personalizações</string>
@@ -2919,6 +2920,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
