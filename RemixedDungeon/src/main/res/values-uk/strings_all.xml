@@ -118,6 +118,7 @@
     <string name="Badges_AllWands">Усі чарівні палички ідентифіковано</string>
     <string name="Badges_BossSlain1All">Жижу вбито всіма класами</string>
     <string name="Badges_BossSlain2">Тенгу переможено</string>
+    <string name="Badges_BossSlain3">ДМ-300 повалено</string>
     <string name="Badges_BossSlain3All">ДМ-300 убито всіма підкласами</string>
     <string name="Badges_Champion">Випробування пройдено</string>
     <string name="Badges_DeathFalling">Смерть від падіння</string>
@@ -2858,6 +2859,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

@@ -634,6 +634,7 @@
     <string name="DieHardSpell_Info">一時的に再生力が高まり、本物のダイハードになれる。</string>
     <string name="DieHardSpell_Name">ダイハード</string>
     <string name="Displacement_Txt">追放の %s</string>
+    <string name="DoctorSpecial">瘴気の雲</string>
     <string name="DogeMask_Info">有名なドージに変装したいと思ったことはありませんか? 今がチャンスです! こんなにたくさんのマスク! たくさんの変装! すごい!</string>
     <string name="DogeMask_Name">ドージマスク</string>
     <string name="DonateButton_pleaseDonate">寄付をご検討ください</string>
@@ -2980,6 +2981,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

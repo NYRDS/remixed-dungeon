@@ -216,6 +216,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BattleAxe_Info">Bu devasa çelik başlı balta her darbede arkasında büyük hasarlar bırakır.</string>
     <string name="BattleAxe_Name">savaş baltası</string>
     <string name="Bee_Desc">Arılar küçük boyutlarına rağmen kovanlarını şiddetle koruma eğilimindedir. Yine de uzun yaşamazlar.</string>
+    <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name">arı</string>
     <string name="Bee_Name_Objective">arı</string>
     <string name="BellaNPC_Amulet_F">Merhaba tatlı turtam, neden oradasın? Ah, ne kadar zarif bir tılsım! Ve sen... Herkesten çok daha fazla parlıyorsun. Biraz yürüyüp ortak geleceğimizi konuşmaya ne dersin?</string>
@@ -2948,6 +2949,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

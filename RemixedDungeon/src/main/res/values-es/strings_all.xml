@@ -463,6 +463,7 @@
     <string name="ChargrilledMeat_Name">carne a la brasa</string>
     <string name="CharmBuff_Info">¡La mente y el cuerpo estaban encantados!</string>
     <string name="CharmBuff_Name">Encantado</string>
+    <string name="CharmSpell_Cast">%s está encantado.</string>
     <string name="CharmSpell_Info">Todo el mundo se merece un poco de amor, ¿verdad?</string>
     <string name="CharmSpell_Name">Encanto</string>
     <string name="Chasm_Chasm">Abismo</string>
@@ -2961,6 +2962,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

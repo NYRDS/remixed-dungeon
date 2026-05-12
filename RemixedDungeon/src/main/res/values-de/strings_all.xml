@@ -1952,6 +1952,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="ShortSword_NotBoomerang">Du kannst auf diese Weise keinen Bumerang verbessern.</string>
     <string name="ShortSword_Reforged">Du hast dein Kurzschwert zerlegt um dein %s zu verbessern.</string>
     <string name="ShortSword_Select">Wähle eine Waffe die du verbessern möchtest</string>
+    <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Sternenförmige Metallstücke mit rasiermesserscharfen Klingen machen erheblichen Schaden, wenn sie einen Gegner treffen. Sie können sehr schnell geworfen werden.</string>
     <string name="Shuriken_Name">Wurfstern</string>
     <string name="SkeletonKey_Info">Dieser Schlüssel sieht seriös aus: Der Kopf ist wie ein Schädel geformt. Wahrscheinlich lässt sich damit eine seriöse Tür öffnen.</string>
@@ -2910,6 +2911,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
