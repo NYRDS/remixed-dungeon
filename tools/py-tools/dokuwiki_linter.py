@@ -224,58 +224,6 @@ class DokuWikiLinter:
                     # Single - without proper indentation (should be at least 2 spaces)
                     self.errors.append(f"List item not properly indented at line {i}: '{line.strip()}'. List items should start with at least 2 spaces before the '-'.")
 
-    def fix_paragraphs(self, content: str) -> str:
-        """Fix single paragraph breaks by adding an extra newline between paragraphs."""
-        import re
-
-        # Split content into lines
-        lines = content.split('\n')
-        new_lines = []
-        i = 0
-
-        while i < len(lines):
-            current_line = lines[i]
-            new_lines.append(current_line)
-
-            # Check if we have a next line and both current and next are content lines
-            # Also exclude preformatted text (lines starting with spaces) from this fix
-            if (i + 1 < len(lines) and
-                current_line.strip() and
-                lines[i+1].strip() and
-                not current_line.strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
-                not lines[i+1].strip().startswith(('=', '*', '-', '  *', '  -', '^', '|', '{{', '----')) and
-                not lines[i].startswith(' ') and    # Exclude preformatted text (starts with space)
-                not lines[i+1].startswith(' ')):    # Exclude preformatted text (starts with space)
-
-                # Add an extra newline to create a proper paragraph break
-                new_lines.append('')
-            i += 1
-
-        return '\n'.join(new_lines)
-
-    def fix_file_content(self, file_path: str) -> bool:
-        """Apply all possible fixes to a wiki file and save it back. Returns True if changes were made."""
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                original_content = f.read()
-        except UnicodeDecodeError:
-            print(f"Error: File {file_path} is not UTF-8 encoded", file=sys.stderr)
-            return False
-
-        # Apply fixes
-        fixed_content = self.fix_paragraphs(original_content)
-
-        # Additional fixes can be added here in the future
-        # For example: fixing list indentation, etc.
-
-        # Only write if content has changed
-        if original_content != fixed_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(fixed_content)
-            return True
-
-        return False
-
     def _check_entity_suffixes(self, content: str):
         """Check if content mentions entities that should have proper suffixes."""
         # This is a basic check - in practice, this would need more context
