@@ -146,6 +146,10 @@ class DokuWikiLinter:
             if img.startswith('{{tag>'):
                 continue
 
+            # Skip redirect patterns ({{redirect>page_name}})
+            if img.startswith('{{redirect>'):
+                continue
+
             if not self.image_pattern.match(img.strip()):
                 self.warnings.append(f"Image format may not follow wiki standards: {img}")
 
