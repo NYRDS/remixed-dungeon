@@ -2135,6 +2135,7 @@
     <string name="StartScene_No">Όχι, επιστροφή στο μενού</string>
     <string name="StartScene_Really">Θέλεις σίγουρα να ξεκινήσεις νέο παιχνίδι;</string>
     <string name="StartScene_Unlock">Για να ξεκλειδώσεις αυτήν την κλάση ήρωα, εξόντωσε το αφεντικό DM-300 με οποιαδήποτε άλλη κλάση.</string>
+    <string name="StartScene_UnlockDoctor">Για να ξεκλειδώσετε τον Ιατρό της Πανόπτου, ολοκληρώστε την αναζήτηση του γέροντα Ιατρού της Πανόπτου</string>
     <string name="StartScene_UnlockElf">Για να ξεκλειδώσεις αυτήν την κλάση ήρωα, εξόντωσε τον Βασιλιά Νάνο με οποιαδήποτε άλλη κλάση.</string>
     <string name="StartScene_UnlockGnoll">Για να ξεκλειδώσεις αυτήν την κλάση ήρωα, θα πρέπει να πείσεις τον ιερέα της πόλης να θεραπεύσει το κτηνώδες γκνολ.</string>
     <string name="StartScene_UnlockNecromancer">Για να ξεκλειδώσεις αυτήν την κλάση ήρωα, εξόντωσε τον Απέθαντο Επικαλεστή με οποιαδήποτε άλλη κλάση.</string>
@@ -2484,15 +2485,15 @@ remix.32\n
     <string name="WndChooseWay_Message">Ποια πορεία θα ακολουθήσεις;</string>
     <string name="WndClass_Mastery">Εξειδίκευση</string>
     <string name="WndCryptoDonate_bitcoin">Μπίτκοϊν</string>
-    <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_copyAddress">Αντιγραφή Διεύθυνσης</string>
     <string name="WndCryptoDonate_currency">Νόμισμα</string>
+    <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Μπορείτε να υποστηρίξετε την ανάπτυξη του Remixed Dungeon στέλνοντας δωρεές σε κρυπτονομίσματα στις παρακάτω διευθύνσεις. Σας ευχαριστούμε για την γενναιόδωρη υποστήριξη!</string>
-    <string name="WndCryptoDonate_tron">TRON</string>
-    <string name="WndCryptoDonate_ton">TON</string>
-    <string name="WndCryptoDonate_supportDev">Υποστήριξε τον Προγραμματιστή</string>
-    <string name="WndCryptoDonate_walletAddress">Διεύθυνση Πορτοφολιού</string>
     <string name="WndCryptoDonate_openWallet">Άνοιγμα Πορτοφολιού</string>
+    <string name="WndCryptoDonate_supportDev">Υποστήριξε τον Προγραμματιστή</string>
+    <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
+    <string name="WndCryptoDonate_walletAddress">Διεύθυνση Πορτοφολιού</string>
     <string name="WndCryptoDonate_warningText">ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Επαληθεύετε πάντα τη διεύθυνση πριν στείλετε χρήματα. Οι συναλλαγές κρυπτονομισμάτων είναι μη αναστρέψιμες!</string>
     <string name="WndCustomizations_Title">Προσαρμογές</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - Δωρεάν σε όλους και έτσι θα είναι πάντα.\n\nΠαρόλα αυτά, μπορείς να μας βοηθήσεις να το κάνουμε ακόμα καλύτερο.\n\nΜαζί με τις εγκάρδιες ευχαριστίες μας, θα λάβεις και κάποια αισθητικά πρόσθετα.</string>
@@ -2573,11 +2574,11 @@ remix.32\n
     <string name="WndInstallingMod_deleting_file">Διαγράφεται: %s</string>
     <string name="WndInstallingMod_please_wait">Εγκατάσταση τροποποίησης, παρακαλώ περιμένετε...</string>
     <string name="WndInstallingMod_skipping_file">Παράλειψη %s...</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Εκτέλεση Συνταγής</string>
     <string name="WndItemAlchemy_NoRecipes">Δεν υπάρχουν διαθέσιμες συνταγές με αυτό το αντικείμενο και το τρέχον απόθεμά σας.</string>
     <string name="WndItemAlchemy_SelectRecipe">Επιλογή συνταγής</string>
     <string name="WndItemAlchemy_Title">Συνταγές αλχημείας με %s</string>
     <string name="WndItemAlchemy_Transmute">Μετατροπή</string>
-    <string name="WndItemAlchemy_ExecuteRecipe">Εκτέλεση Συνταγής</string>
     <string name="WndJournal_Levels">Όροφοι</string>
     <string name="WndJournal_Logbook">Καταγραφές</string>
     <string name="WndJournal_Title">Ημερολόγιο</string>
@@ -3045,6 +3046,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

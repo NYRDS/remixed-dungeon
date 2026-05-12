@@ -205,6 +205,7 @@
     <string name="Bat_Name_Objective">吸血蝙蝠</string>
     <string name="BattleAxe_Info">這把有著巨大鋼製頭部的戰斧能將龐大的力量傾註在每次揮擊之中。</string>
     <string name="BattleAxe_Name">戰斧</string>
+    <string name="Bee_Name">蜜蜂</string>
     <string name="BellaNPC_Amulet_F">但是你的那個護符...我們百合吧!</string>
     <string name="BellaNPC_Amulet_M">但是你的那個護符...我們約會吧!</string>
     <string name="BellaNPC_Angry">流氓,滾!</string>
@@ -2314,11 +2315,11 @@
     <string name="WndChooseWay_Cancel">我待會再決定</string>
     <string name="WndChooseWay_Message">您選擇步上哪條路？</string>
     <string name="WndClass_Mastery">專精</string>
-    <string name="WndCryptoDonate_infoText">您可以通過將加密貨幣捐贈發送到以下地址來支持 Remixed Dungeon 的開發。感謝您的慷慨支持！</string>
-    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_bitcoin">比特幣</string>
     <string name="WndCryptoDonate_ethereum">以太坊</string>
+    <string name="WndCryptoDonate_infoText">您可以通過將加密貨幣捐贈發送到以下地址來支持 Remixed Dungeon 的開發。感謝您的慷慨支持！</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">錢包地址</string>
     <string name="WndDonate_commonDonateText">混合地牢——永遠對所有人免費。
 但是，你能幫我們讓這個遊戲變得更好。
@@ -2853,6 +2854,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -822,6 +822,7 @@
     <string name="GnollArmor_NotGnoll">ノールの鎧を装備できるのはノールだけである！</string>
     <string name="GnollCostume_Info">驚くほど暖かくてふわふわの着ぐるみ。この着ぐるみを着た人は、まるで...ノールに変装しようとしている人のように見えるだろう。そしてノールはそんなことには引っかからず、あなたを襲うだろう。</string>
     <string name="GnollCostume_Name">ノールの着ぐるみ</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">ノールの達人たちによって作られた伝統的なトマホーク。このトマホークは他のトマホークより若干軽い。</string>
     <string name="GnollTamahawk_Name">ノールトマホーク</string>
     <string name="Gnoll_BecomeGuardianDesc">ガーディアンになる</string>
@@ -2979,6 +2980,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
