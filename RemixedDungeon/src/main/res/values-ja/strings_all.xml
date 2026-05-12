@@ -1150,6 +1150,7 @@
     <string name="Knuckles_Info">拳を覆うように作られた鉄の武器。</string>
     <string name="Knuckles_Name">ナックルダスター</string>
     <string name="KoboldIcemancer_Desc">コボルドの氷術師は社会のエリートだった。著名な戦士、魔法使い、そして最も重要な科学者たちだ。古代の氷術師は氷を操る術を掌握し、特殊な呪文で強化された複雑な機構を作り上げた。</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">%sのアイスボルトがあなたを殺した...</string>
     <string name="KoboldIcemancer_Name">コボルドの氷術師</string>
     <string name="KoboldIcemancer_Name_Objective">コボルドの氷術師</string>
@@ -1277,7 +1278,7 @@
     <string name="MageArmor_Desc">このゴージャスなローブを身にまとったメイジは、大地の怒りの魔法を唱えることができる。この魔法は視界内のすべての敵を炎上させ、同時に身動きを取れなくする。</string>
     <string name="MageArmor_Name">魔術師のローブ</string>
     <string name="MageArmor_NotMage">この鎧を使えるのはメイジだけだ！</string>
-    <string name="MagicArrow_Info">古き良き魔法の矢、弾薬を使い果たしたときの正しい選択だ。</string>
+    <string name="MagicArrow_Info">魔法の矢は古くからあるが、弾薬がなくなったときの最適な選択だ。</string>
     <string name="MagicArrow_Name">マジックアロー</string>
     <string name="MagicTorch_Info">ダンジョンの暗い階層を照らす、光を生み出す呪文。</string>
     <string name="MagicTorch_Name">光よ</string>
@@ -1623,6 +1624,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="PseudoPasty_Info">伝統的なビーフとポテトのフィリングが入った本格的なコーニッシュパスティ。</string>
     <string name="PseudoPasty_Name">パスティ</string>
     <string name="PseudoRat_Desc">ネズミの死体から出てきた恐ろしい獣は、げっ歯類や他のどんな動物とも似ても似つかない。カミソリのような鋭い歯が生えた巨大な口が体の大部分を占めている。</string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">ネズミもどき</string>
     <string name="PseudoRat_Name_Objective">ネズミもどき</string>
     <string name="PumpkinPie_Info">昔お母さんが焼いてくれたような、おいしいパンプキンパイ。</string>
@@ -1894,6 +1896,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="ServantNPC_Name">宿の従業員</string>
     <string name="ServantNPC_Name_Objective">宿の従業員</string>
     <string name="ServiceManNPC_Desc">地元の店のよく見る店員</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">申し訳ないが、新米冒険者は全員、合計で%d本の映画しか見ることができない。</string>
     <string name="ServiceManNPC_Limit_Reached">申し訳ありませんが、あなたは現在の上限に達しています。しかし、あなたのレベルが上がるごとに、また私たちのサービスを利用できるようになります！</string>
     <string name="ServiceManNPC_Name">店員</string>
@@ -2981,6 +2984,10 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
+
+
 
 
 

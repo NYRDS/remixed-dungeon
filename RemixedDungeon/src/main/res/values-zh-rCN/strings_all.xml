@@ -379,6 +379,7 @@
     <string name="ChampionOfWaterBuff_Name">水之冠军</string>
     <string name="ChaosArmor_Info">这件盔甲的血红色金属板被暗红的铁链缝接在一起，当你触碰它时会迸发出混沌能量。</string>
     <string name="ChaosArmor_Name">混沌护甲</string>
+    <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">一把充斥着混沌之力的骇人魔弓，每一发从它这里射出的箭矢都会携带有一些混沌能量。但万一失手……</string>
     <string name="ChaosBow_Name">混沌弓</string>
     <string name="ChaosCrystal_ArmorFused">水晶吸收了你的护甲，并化成了复合盔甲的形态。</string>
@@ -1492,6 +1493,7 @@
     <string name="PlagueDoctorQuest_5_1_Epilogue">*他凝视着两个_女妖_，面罩下露出幸福的笑容。* 好极了！太棒了！这将开启如此多的……可能性！*他转向你，声音因感激……还有一些别的东西而变得浓重。*你的努力……不会被遗忘。我欠你最深的感谢。*他的目光在_女妖_身上停留得太久，然后他退回到实验室，喃喃自语着要解锁诱惑的秘密。*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*他的思绪飘忽，声音越来越小，几乎成了耳语。* 带两只活的魅魔给我……活着的。她们的……力量……令人着迷。</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*他结结巴巴地说，声音像干树枝一样沙哑*。啊，_女妖精_！两个……是的，两个，活着的！这是……嗯……为了我的研究！你看……她们的信息素……对理解微妙的平衡至关重要……啊……*他停顿了一下，骨瘦如柴的手伸起来紧张地调整面具，发烧般的眼神朝你投来*她们……的本质……是个谜……一个美丽而神秘的谜！*他剧烈地咳嗽，试图恢复镇定*我保证，如果你给我带来这两个……生物……你将得到我永恒的感激。把它看作是……对知识的馈赠！是的！为了知识！</string>
+    <string name="PlagueDoctorQuest_AllDone">他发出一阵干涩的喘息声。*你的事迹开启了不可思议的秘密！所获得的知识…它在我体内脉动，如同一首发现的交响曲。但是，知识，*他压低声音变成耳语，*知识就是力量。而力量…啊…那是一瓶最令人陶醉的灵药。*他专注地盯着你看了一会儿，他紫水晶般的眼睛闪烁着狂热的光芒。*也许，*他低声说，*我们的道路还会再次交叉。因为还有更多的…谜团…等待被解开。</string>
     <string name="PlagueDoctor_Desc">散发奇怪味道的……皮革？下面应该是个人吧……</string>
 
     <string name="PlagueDoctor_Gender">masculine</string>
@@ -2650,6 +2652,7 @@ remix.31.1\n
     <string name="YogsBrain_Name">Yog之脑</string>
     <string name="YogsBrain_Name_Objective">Yog之脑</string>
     <string name="YogsEye_Desc">古神之眼，无所不在的目光中充满了永恒的仇恨。 你能感觉到它正透过你的灵魂注视着你</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">Yog之眼</string>
     <string name="YogsEye_Name_Objective">Yog之眼</string>
     <string name="YogsHeart_Desc">从古至今人们都认同的有邪恶透顶的绝情的生物就在这儿，一颗跳动的巨大心脏，古神的心脏！</string>
@@ -2922,6 +2925,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

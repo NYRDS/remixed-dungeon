@@ -95,6 +95,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="ArmoredStatue_Name_Objective">Lebendige Statue</string>
     <string name="Artifact_Limit">Du kannst nur 2 Artifakte zur gleichen Zeit tragen.</string>
     <string name="Attack_Cooldown">Angriffsverzögerung</string>
+    <string name="Attack_Range">Angriffsreichweite</string>
     <string name="AwarenessBuff_Info">Die Sinne haben sich geschärft und vermitteln ein besseres Bewusstsein der Umgebung.</string>
     <string name="AwarenessBuff_Name">Aufmerksamkeit</string>
     <string name="AzuterronNPC_Desc">Eine mysteriöse Gestalt, umgeben von schwarzem Nebel.</string>
@@ -223,6 +224,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BellaNPC_Amulet_M">Was hast du Gutaussehender dort drüben? Ah, solch ein schönes Amulett! Und du ... du stehst über diesen Pöbeln. Was wenn wir einen Spaziergang machen und unsere gemeinsame Zukunft besprechen?</string>
     <string name="BellaNPC_Angry">Wie kannst du es wagen...du Tölpel!</string>
     <string name="BellaNPC_Desc">Ein sehr schick aussehendes Mädchen. Ihr ganzes Aussehen sagt dir: \&quot;Ich bin zu gut für jeden.\&quot;</string>
+    <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Ich habe kein Interesse an solchen Pöbeln wie dich!</string>
     <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
@@ -291,6 +293,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BlessedBuff_Name">Gesegnet</string>
     <string name="BlindnessBuff_Info">Vollständig blind, nur Geräusche können gehört werden.</string>
     <string name="BlindnessBuff_Name">Geblendet</string>
+    <string name="BloodTransfusion_FullHP">Ihre Blut ist bereits auf voller Kapazität.</string>
     <string name="BodyArmorBuff_Info">Rüstung wird auf Kosten von Bewegungs-Geschwindigkeit erhöht.</string>
     <string name="BodyArmorBuff_Name">Körperrüstung</string>
     <string name="BodyArmorSpell_Info">Aktiviert ungenutzte Kraftreserven, um die Muskeln temporär stärker zu machen, was die Rüstung deutlich verstärkt, aber die Bewegungsgeschwindigkeit drastisch reduziert.</string>
@@ -631,6 +634,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="DieHardSpell_Name">Hartnäckig</string>
     <string name="Displacement_Txt">%s des Verdrängens</string>
     <string name="DoctorArmor_Name">Doktorgewand</string>
+    <string name="DoctorSpecial">Immunisiere den Helden gegen Gase, Schwäche und Desorientierung.</string>
     <string name="DogeMask_Info">Wolltest du schon immer als ein berühmter Doge verkleiden? Das ist deine Chance!\nWas für eine Maske! Gute Tarnung! Wow!</string>
     <string name="DogeMask_Name">Mask des Dogen</string>
     <string name="DonateButton_pleaseDonate">Bitte erwägen Sie es, zu spenden</string>
@@ -1070,6 +1074,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="InnKeeperNPC_Desc">Der Tavernenwirt ist stolz aud sich selbst.</string>
     <string name="InnKeeperNPC_Name">Tavernenwirt</string>
     <string name="InnKeeperNPC_Name_Objective">Tavernenwirt</string>
+    <string name="InnServant_Phrase_1">Willkommen in der Taverne, Reisender! Was darf ich für Euch tun?</string>
     <string name="InnServant_Phrase_2">Dieser Trunkenbold macht mich wahnsinnig!</string>
     <string name="InnServant_Phrase_3">Sieht sauber aus</string>
     <string name="InnServant_Phrase_4">Oh je, heute so viele Gäste!</string>
@@ -1312,6 +1317,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="MercenaryNPC_Name">Söldner</string>
     <string name="MercenaryNPC_Name_Objective">Söldner</string>
     <string name="Metabolism_Txt">%s des Metabolismus</string>
+    <string name="MiasmaGas_Info">Giftiges Gas, das schwächt und desorientiert.</string>
     <string name="MimicAmulet_Desc">Der glorreichste Moment deiner Karriere als Abenteurer erwies sich gerade als eine Falle.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">Mimic</string>
@@ -2089,6 +2095,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="Str_lose">-1 Stä</string>
     <string name="StrongShield_desc">Dieser rechteckige Schild ist mit Bronzeplatten überzogen und mit farbigem Tuch verziert. Er ist deutlich schwerer, kann aber viel mehr Schaden abwehren.</string>
     <string name="StrongShield_name">Bronzebeschichtetes Schild</string>
+    <string name="StunBuff_Info">Betäubt - handlungsunfähig für eine Weile.</string>
     <string name="StunBuff_Name">Betäubt</string>
     <string name="Stylus_ACInscribe">GRAVIEREN</string>
     <string name="Stylus_Info">Dieser arkane Stift wurde aus schwarzem, sehr harten Stein gemacht. Du kannst mit ihm eine Glyphe oder eine Rune schreiben, aber nicht bestimmen, welche es sein soll, da sie sich der Stift aussucht.</string>
@@ -2128,6 +2135,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="Tamahawk_Name">Tomahawk</string>
     <string name="TenguLiver_Info">Diese Leber gehört einem mächtigen Feind. Allein beim Anblick übernehmen Ihre tierischen Instinkte die Kontrolle, und Sie spüren das Verlangen, sie zu verzehren.</string>
     <string name="Tengu_Desc">Tengu sind Mitglieder eines uralten Assassinen-Clans. Auch der Clan hört auf den Namen Tengu. Seine Assassinen sind berüchtigt für ihren exzessiven Einsatz von Shuriken sowie das Legen von Fallen.</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">Endlich frei...</string>
     <string name="Tengu_Info2">Hab dich, %s!</string>
     <string name="Tengu_Info3">Hab dich, %s!</string>
@@ -2911,6 +2919,14 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
+
+
 
 
 
