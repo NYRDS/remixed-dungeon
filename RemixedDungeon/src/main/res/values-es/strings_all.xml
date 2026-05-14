@@ -319,6 +319,7 @@
     <string name="BurningBuff_Info">¡El cuerpo está envuelto en llamas!</string>
     <string name="BurningBuff_Name">Ardiendo</string>
     <string name="BurningFist_Desc">Puño Ardiente del Antiguo Dios</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">puño ardiente</string>
     <string name="BurningFist_Name_Objective">puño ardiente</string>
     <string name="Burning_Burns">¡%s se quema!</string>
@@ -2966,6 +2967,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

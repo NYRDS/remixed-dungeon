@@ -332,6 +332,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="CagedKobold_Name">eingesperrter Kobold</string>
     <string name="CagedKobold_Name_Objective">eingesperrter Kobold</string>
     <string name="CagedKobold_Quest_End">Oh vielen, vielen Dank! Wie hast du bloß den Schlüssel gefunden? Du... du hast die Waffe zerstört?! Das ist unglaublich! Weißt du was, ich sagte, dass ich dir helfen werde und ich glaube, ich weiß auch wie ich das am besten mache. Ich werde eine Weile bei dir bleiben. * Eingesperrter Kobold hat sich in eine Kerze verwandelt</string>
+    <string name="Calm_Cast">%s beruhigt sich.</string>
     <string name="Calm_Info">Es gibt viele verärgerte Kreaturen in der Umgebung, lass uns ihnen helfen.</string>
     <string name="Calm_Name">Beruhigen</string>
     <string name="CandleOfMindVision_Info">Sieht aus wie eine normale Kerze, nicht etwas, das du in einem gefährlichen Verlies erwartest. Seltsamerweise ist es ziemlich warm, obwohl es nicht angezündet wurde.</string>
@@ -2919,6 +2920,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

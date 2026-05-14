@@ -386,6 +386,7 @@
     <string name="ChaosHelmet_Info">血紅色的頭盔是混沌戰士的基本象徵。</string>
     <string name="ChaosHelmet_Name">混沌頭盔</string>
     <string name="ChaosShield_desc">混沌護盾是將混沌水晶與普通盾牌融合的結果，使其在成功格擋時隨機產生混亂效果。</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">與混沌之力融合的法杖，不就是眾法師或敬或畏之物嗎？</string>
     <string name="ChaosStaff_Name">混沌法杖</string>
     <string name="ChaosSword_Gender">masculine</string>
@@ -2857,6 +2858,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -819,6 +819,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">Estátua Dourada</string>
     <string name="GoldenStatue_Name_Objective">Estátua Dourada</string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="GoldenSword_Info">Normalmente, uma arma feita de um metal macio como ouro, é considerada apenas uma decoração. Apesar disso, a lâmina dessa espada parece ser capaz de cortar muito bem.</string>
     <string name="GoldenSword_Name">Espada dourada</string>
     <string name="Golem_Defense">bloqueou</string>
@@ -2921,6 +2922,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

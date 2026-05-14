@@ -1374,6 +1374,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PlagueDoctorNPC_Quest_Start_Male">하! 믿을수 있겠어?! 저 멍청이들은 아직도 이 빌어먹을 하수구가 얼마나 위험한지 깨닫지 못하고 있어! 모험가들과 경비원들이 마을을 어떤 것이든 막아낼 수 있다고 믿나 봐. 하! 역병이 퍼지는 것을 막을 무기는 없어. 하지만 나는 증거가 필요해. 나를 도와줄수 있겠어? 내가 추가적인 실험을 할 수 있게 %d개의 쥐 가죽을 가져와 줘.
 </string>
     <string name="PlagueDoctorQuest_1_1_InProgress">_다섯 마리의 죽은 쥐_를 가져오세요! 당신이 가져오는 쥐 한 마리 한 마리가 이 끔찍한 전염병을 이해하는 데 한 걸음 더 가까워집니다.</string>
+    <string name="PlagueDoctorQuest_1_1_Prologue">아쥬! 이 지독한 역병! 도시 전체에 들불처럼 퍼지고, 눈에 띄지 않는 사람들의 뼈 속에 끓고 있어! 바하! 그 초라한 경비병들이 이 음침한 재앙에 맞설 수 있다고 생각해? 너! 강하고 건강한 녀석. 나를 도와줄 수 있겠어. 하수구의 더러운 쥐들… 걔들이 퍼뜨려! 나한테 말이야, 그 불쌍한 놈들의 몸속에 역병의 씨앗이 있어! 그 끔찍한 것들을 5마리, 물론 죽은 상태로 가져와! 그 가죽은 내 연구에 무척이나 소중할 거야. 내가 너에게 훌륭한 갑옷을 만들어 주지, 역병이 시작되는 곳을 막아주는 보호막 같은 거!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">아하… 훌륭하다! _달팽이_의 그 비밀이 달빛 아래에서 꽃잎처럼 서서히 펼쳐지는구나. 정말 방대한 정보로구나! 하지만 말이 맞네, _50 골드_라니 그다지 어울리는 보상은 아니지. *광적으로 웃음을 터뜨린다*.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*격렬하게 기침* 에취!\n _달팽이들_… 그들은 미끄러져요. 그들은 진액을 흘려요. 그리고 잊혀진 시대의 비밀을 속삭여요. 제가 필요한 건, _열 마리_, 그들의 껍질이 온전한 상태로요. _금화 오십 개_ 정도로 이런 귀한 지식을 살 수 있다고 생각하세요?\n 바! 상관없어요. 그들이 가진 정보는 이 전염병을 멈추게 할 열쇠가 될 수도 있어요. 아니면… 훨씬 더 끔찍한 무언가로 우리를 이끌 수도 있고요. 당신이 결정하세요.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_월광초_… 이 세상을 관통하는 마법의 증거입니다. 저는 그들의 정수로부터 많은 것을 배웠지만, 당신의 보상… 음, 그것은 최대한의 정성으로 준비되었습니다. *영웅에게 반짝이는 _마나 회복의 물약_을 건네줍니다* 그 힘이 앞으로의 위험을 헤쳐나가는 데 도움이 되길 바랍니다.</string>
@@ -2757,6 +2758,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

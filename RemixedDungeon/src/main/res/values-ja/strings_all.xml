@@ -1636,6 +1636,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Quarterstaff_Name">クォータースタッフ</string>
     <string name="QuickSlot_SelectSlot">クイックスロットを選択する</string>
     <string name="QuickSlot_SelectedItem">クイックスロットへ登録するアイテムを選択</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">矢を何本でも収納できる革製の矢筒</string>
     <string name="Quiver_Name">矢筒</string>
     <string name="RabbitEars_Info">ウサギは生まれながらにして幸運な動物であり、ウサギの一部を手に入れた者は、その動物に固有の幸運を伴うという信仰がある。考えてみれば、装飾品の材料となる耳のために殺されるのは、特に幸運なこととは思えない。</string>
@@ -2984,6 +2985,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
