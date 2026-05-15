@@ -1414,6 +1414,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Monk_Defense">sparowano</string>
     <string name="Monk_Desc">Ci mnisi to fanatycy którzy zobowiązali się chronić sekrety ich miasta przed wszystkimi obcymi z zewnątrz. Nie używają żadnego pancerza ani broni, polegając wyłącznie na sztuce tradycyjnej walki wręcz.</string>
     <string name="Monk_Disarm">%1$s wytrącił %2$s z twoich dłoni!</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">krasnolud mnich</string>
     <string name="Monk_Name_Objective">Krasnoludzki Mnich</string>
     <string name="MoongraceBuff_Info">Powietrze wokół gęstnieje od unoszącej się w nim magii, co ułatwia łatwiejszą koncetrację i odnowę zasobów magicznych. </string>
@@ -3038,6 +3039,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

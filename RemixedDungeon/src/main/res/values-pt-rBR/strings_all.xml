@@ -593,6 +593,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Deathling_Name">devorador de mortos</string>
     <string name="Deathling_Name_Objective">devorador de mortos</string>
     <string name="DeepSnail_Desc">Este tipo de molusco pode ser visto frequentemente perto de fontes de água e é muito mais rápido do que o seu caracol comum. Cuidado com as mordidas, no entanto, elas podem ter um efeito desagradável em sua pele.</string>
+    <string name="DeepSnail_Gender">masculine</string>
     <string name="DeepSnail_Name">caracol profundo</string>
     <string name="DeepSnail_Name_Objective">caracol profundo</string>
     <string name="DeferedDamageBuff_Info">A dor foi transformada em uma dor lenta, diminuindo o dano recebido imediatamente.\nDano restante a receber %d</string>
@@ -2109,6 +2110,7 @@ outro local do nível.</string>
     <string name="TerrorBuff_Name">Aterrorizado</string>
     <string name="Thief_Carries">\n\n%1$s é portador de _%2$s_. Roubado obviamente...</string>
     <string name="Thief_Desc">Níveis mais profundos da masmorra sempre foram um esconderijo para todos os tipos de criminosos. Nem todos eles poderiam manter uma mente clara durante os longos períodos longe de luz do dia. Há muito tempo, esses ladrões loucos e bandidos se esqueceram quem são e por que eles roubam.</string>
+    <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">ladrão maluco</string>
     <string name="Thief_Name_Objective">ladrão maluco</string>
     <string name="Thief_Stole">%1$s roubou %2$s de você!</string>
@@ -2923,6 +2925,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

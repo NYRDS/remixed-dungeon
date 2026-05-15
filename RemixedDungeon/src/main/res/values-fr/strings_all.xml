@@ -403,6 +403,7 @@
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Un arc effrayant rempli du pouvoir du Chaos. Chaque flèche décochée avec cet arc portera un morceau d\'énergie chaotique à la cible. Mais si vous ratez... </string>
     <string name="ChaosBow_Name">arc du chaos</string>
+    <string name="ChaosCrystal_ArmorFused">Le cristal s\'est fondu avec votre armure, et il a pris la forme du chaos.</string>
     <string name="ChaosCrystal_BowFused">Le cristal a absorbé votre arme, et a pris la forme d\'un arc.</string>
     <string name="ChaosCrystal_Fuse">FUSION</string>
     <string name="ChaosCrystal_Info">Vous sentez des courants d\'énergie parcourir vos mains tandis que vous le portez.</string>
@@ -3034,6 +3035,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

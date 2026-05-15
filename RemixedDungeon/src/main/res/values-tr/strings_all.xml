@@ -214,6 +214,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">vampir yarasa</string>
     <string name="Bat_Name_Objective">vampir yarasa</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">Bu devasa çelik başlı balta her darbede arkasında büyük hasarlar bırakır.</string>
     <string name="BattleAxe_Name">savaş baltası</string>
     <string name="Bee_Desc">Arılar küçük boyutlarına rağmen kovanlarını şiddetle koruma eğilimindedir. Yine de uzun yaşamazlar.</string>
@@ -2661,6 +2662,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="Worm_Name_Objective">solucan</string>
     <string name="Wraith_Defense">savuşturdu</string>
     <string name="Wraith_Desc">Bir hortlak, mezarı veya türbesi rahatsız edilen bir günahkârın intikamcı ruhudur. Ruhani bir varlık olduğundan, normal bir silahla vurulması çok zordur.</string>
+    <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">Hayalet</string>
     <string name="Wraith_Name_Objective">Hayalet</string>
     <string name="WrnExperimental_hint">Bu garip ve çarpık dünya sizin için çok zorsa, lütfen\nBaşlat Ekranı-&gt;Seçenekler-&gt;Oyun\nmenüsü\'nü kullanarak bu seçenekleri devre dışı bırakın ve yeni bir oyuna başlayın veya başka bir kayıt yükleyin.</string>
@@ -2953,6 +2955,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 
