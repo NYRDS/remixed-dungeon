@@ -62,6 +62,7 @@
     <string name="Amulet_Info">L\'amulette de Yendor est le plus puissant des artefacts d\'origine inconnue. On dit que l\'amulette est capable de satisfaire tous les souhaits si la volonté de son porteur est suffisante pour la \&quot;persuader\&quot; de le faire.</string>
     <string name="Amulet_Name">Amulette de Yendor</string>
     <string name="AnesthesiaBuff_Name">Anesthésie</string>
+    <string name="Anesthesia_Cast">%s plonge dans un profond sommeil sans rêves.</string>
     <string name="Anesthesia_Info">Provoque un sommeil profond et surnaturel chez votre cible. Même les attaques les plus violentes ne la réveilleront pas de ce sommeil.</string>
     <string name="Anesthesia_Name">Anesthésie</string>
     <string name="Ankh_Info">Cet ancien symbole d\'immortalité offre la vie après la mort. La résurrection implique cependant la perte de tous les objets non-équipés.</string>
@@ -292,6 +293,7 @@
     <string name="BlessedBuff_Name">Béni</string>
     <string name="BlindnessBuff_Info">Complètement aveuglé, seuls les bruits environnants peuvent êtres perçus.</string>
     <string name="BlindnessBuff_Name">Aveuglé</string>
+    <string name="BloodTransfusion_Drained">L\'essence de vie coule de votre familier vers vous.</string>
     <string name="BloodTransfusion_FullHP">Votre sang est déjà à pleine capacité.</string>
     <string name="BloodTransfusion_Info">Draine presque tout le sang d\'une cible pour vous soigner. Un rituel sombre de sacrifice et de survie.</string>
     <string name="BloodTransfusion_Name">Transfusion sanguine</string>
@@ -727,6 +729,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="EncumbranceBuff_CharAct_1">Je ne suis pas assez fort pour manier %s correctement.</string>
     <string name="EncumbranceBuff_CharAct_2">Cet objet %s est trop lourd pour que je l\'utilise efficacement.</string>
     <string name="EncumbranceBuff_CharAct_3">Je dois travailler ma force avant de pouvoir utiliser %s.</string>
+    <string name="EncumbranceBuff_CharAct_4">Je manque de force pour utiliser %s à plein potentiel.</string>
     <string name="EncumbranceBuff_CharAct_5">%s est trop lourd pour moi en ce moment.</string>
     <string name="EncumbranceBuff_Info">Pas assez de force pour utiliser efficacement : %s.</string>
     <string name="EncumbranceBuff_Name">Fardeau</string>
@@ -2472,6 +2475,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Vous pouvez soutenir le développement de Remixed Dungeon en envoyant des dons en cryptomonnaie aux adresses ci-dessous. Merci pour votre généreux soutien !</string>
     <string name="WndCryptoDonate_openWallet">Ouvrir le portefeuille</string>
+    <string name="WndCryptoDonate_supportDev">Soutenir le développeur</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_walletAddress">Adresse du portefeuille</string>
     <string name="WndCryptoDonate_warningText">AVERTISSEMENT : Vérifiez toujours l\'adresse avant d\'envoyer des fonds. Les transactions de cryptomonnaies sont irréversibles !</string>
@@ -3027,18 +3031,4 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

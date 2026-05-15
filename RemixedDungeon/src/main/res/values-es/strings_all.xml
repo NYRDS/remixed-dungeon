@@ -52,6 +52,7 @@
     <string name="AmokArrow_Name">Flecha de locura</string>
     <string name="AmokBuff_Info">Siente el descontrol, quitando la vida a los desafortunados.</string>
     <string name="AmokBuff_Name">Loco</string>
+    <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">La mezcla que tiene este dardo convertirá a cualquiera en un loco sin piedad.</string>
     <string name="AmokDart_Name">Dardo de locura</string>
     <string name="AmuletScene_Exit">Es hora de volver a casa</string>
@@ -333,6 +334,7 @@
     <string name="CagedKobold_Name">kobold enjaulado</string>
     <string name="CagedKobold_Name_Objective">kobold enjaulado</string>
     <string name="CagedKobold_Quest_End">¡Gracias, muchas gracias! ¿Cómo lograste encontrar la llave? Tú ... ¿destruiste el arma? ¡Eso es increíble! Te dije que te ayudaría, y creo que sé la mejor manera de hacerlo. Me quedaré contigo un rato. * Kobold enjaulado se ha convertido en una vela.</string>
+    <string name="Calm_Cast">%s se calma.</string>
     <string name="Calm_Info">Hay muchas criaturas enfadadas por ahí, ayudémoslas.</string>
     <string name="Calm_Name">Calma</string>
     <string name="CandleOfMindVision_Info">Parece una vela normal, no es algo que esperarías encontrar en una mazmorra peligrosa. Curiosamente es bastante cálida, a pesar de no estar encendida.</string>
@@ -2968,36 +2970,4 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

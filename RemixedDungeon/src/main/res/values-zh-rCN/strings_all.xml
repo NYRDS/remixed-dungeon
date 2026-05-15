@@ -55,7 +55,9 @@
     <string name="Amulet_Info">Yendor护符是来自未知领域中最强大的且最著名的神器。据说它能够实现持有者的一切愿望，只要持有者具备足够的力量来“说服”它去做。</string>
     <string name="Amulet_Name">Yendor护符</string>
     <string name="AnesthesiaBuff_Name">麻醉</string>
+    <string name="Anesthesia_Cast">%s陷入了深沉无梦的睡眠。</string>
     <string name="Anesthesia_Info">使目标陷入深度且不自然的睡眠。即使最猛烈的攻击也无法将其从沉睡中唤醒。</string>
+    <string name="Anesthesia_Name">麻醉</string>
     <string name="Ankh_Info">这个古老的不朽的象征可以让你从死亡中复活，只不过所有未装备的物品都会丢失。</string>
     <string name="Ankh_Name">十字架</string>
     <string name="AntiEntropy_Txt">反熵 %s</string>
@@ -216,6 +218,7 @@
     <string name="BellaNPC_Amulet_M">你好啊，帅哥，你怎么在那里。啊，好精致的护身符！而你…………与任何人相比，你的光芒都是那么耀眼。我们出去走走，讨论我们共同的未来如何？</string>
     <string name="BellaNPC_Angry">你怎么敢…………你这个平民！</string>
     <string name="BellaNPC_Desc">漂亮的大姐姐，对所有人都好的那种。</string>
+    <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">抱歉，你是个好人！</string>
     <string name="BellaNPC_Name">贝拉</string>
     <string name="BellaNPC_Name_Objective">贝拉</string>
@@ -282,6 +285,7 @@
     <string name="BlessedBuff_Name">祝福</string>
     <string name="BlindnessBuff_Info">你什么都看不见了，只能听见附近的声音</string>
     <string name="BlindnessBuff_Name">目盲</string>
+    <string name="BloodTransfusion_Drained">宠物的生命精华流向了你。</string>
     <string name="BloodTransfusion_Info">吸取目标几乎全部的血液来治疗自己。一个黑暗献祭与生存的仪式。</string>
     <string name="BloodTransfusion_Name">输血</string>
     <string name="BloodTransfusion_WontAgreed">目标抵抗生命精华的抽取。</string>
@@ -2628,6 +2632,7 @@ remix.31.1\n
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">如果你能找到一些箭，这把简单的木制弓也许很有用。</string>
     <string name="WoodenBow_Name">木弓</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">一种基础的木制弩，看起来是设计用来发射弓箭的。</string>
     <string name="WoodenCrossbow_Name">木制弩</string>
     <string name="WoodenShield_desc">一面粗糙的木制盾牌是最简单的盾牌。它是圆形的，有时可以抵挡一些伤害。</string>
@@ -2928,19 +2933,4 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

@@ -286,6 +286,7 @@
     <string name="BlessedBuff_Name">祝福</string>
     <string name="BlindnessBuff_Info">完全に目が見えなくなり、周囲の音だけが聞こえる。</string>
     <string name="BlindnessBuff_Name">盲目</string>
+    <string name="BloodTransfusion_Drained">ペットからあなたに生命力が流れ込む。</string>
     <string name="BloodTransfusion_FullHP">血液はすでに満杯です。</string>
     <string name="BloodTransfusion_Name">輸血</string>
     <string name="BodyArmorBuff_Info">アーマーは移動速度を犠牲にして増加する。</string>
@@ -613,7 +614,7 @@
     <string name="Deathling_Name_Objective">デスリング</string>
     <string name="DeepSnail_Desc">この種の軟体動物は水源付近でよく見かけるが、普通のカタツムリよりもはるかに足が速い。さらに、噛まれると皮膚に不快な影響を与えるので注意しよう。</string>
     <string name="DeepSnail_Gender">masculine</string>
-    <string name="DeepSnail_Name">深層カタツムリ</string>
+    <string name="DeepSnail_Name">ディープスネイル</string>
     <string name="DeepSnail_Name_Objective">深層カタツムリ</string>
     <string name="DeferedDamageBuff_Info">痛みが鈍り、一度に受けるダメージが減った。残されたダメージ%d</string>
     <string name="DeferedDamageBuff_Name">遅延ダメージ（%d）</string>
@@ -846,6 +847,7 @@
     <string name="GoldenSword_Name">金の剣</string>
     <string name="Golem_Defense">ブロックした</string>
     <string name="Golem_Desc">ドワーフたちは、彼らの機械に関する知識と、新たに発見した元素結合の力を組み合わせようとした。彼らはゴーレムの機械体の \&quot;魂 \&quot;として、最も制御しやすいと考えた大地の精霊を使ったが、儀式にほんのわずかなミスがあれば、大災害を引き起こす可能性もあった。</string>
+    <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">ゴーレム</string>
     <string name="Golem_Name_Objective">ゴーレム</string>
     <string name="Goo_Desc">グゥについてはほとんど知られていない。生き物ですらなく、なぜか自由意志を得た下水道内の物質の集合体である可能性が高い。いずれにせよ、闇の魔法が働いているのは明らかだ。</string>
@@ -1266,6 +1268,7 @@
     <string name="LloidsBeacon_Preventing">何らかの強力な魔法のオーラが、ロイドのビーコンを使うことを妨げた！</string>
     <string name="LloidsBeacon_Return">ロイドのビーコンに現在地がセットされ、いつでもここに戻れるようになった。</string>
     <string name="LloidsBeacon_Set">このビーコンはRemixed Dungeonの%d階層のどこかに設置されている。</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Info">この長い刃はすべての斬撃で高いダメージを与える。</string>
     <string name="Longsword_Name">ロングソード</string>
     <string name="Luck_Name_0">幸運の %s</string>
@@ -1403,6 +1406,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="NecromancerArmor_Name">ボーンアーマー</string>
     <string name="NecromancerArmor_NotNecromancer">この鎧を使えるのはネクロマンサーだけだ！</string>
     <string name="NecromancerNPC_Desc">この中年男性は、軽い苛立ちと興奮を同時に感じているようだ。骨の破片をつなぎ合わせて作った複合装甲を身に着けている。</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">ああ！珍しい光景だ！ただの死体じゃない冒険者仲間。信じられない！失礼、つい興奮しすぎて... 僕はネクロマンサーなんだ。死者や死そのものを研究することを生業としている。とはいえ、同じものを何度も見ていると、やがて非常に疲れてくる。しかし、それこそが私がここにいる理由なのだ。私の計算によれば、あと2週間もすれば、このダンジョンのどこかで、壮大な何かが起こる。死者の古代都市「ネクロポリス」の扉が開かれるのだ。そして... あまり多くを語ることはできない。私は準備をしなければならないんだ。</string>
     <string name="NecromancerNPC_Intro2">ああ！ただの生気のない死体ではない、冒険家仲間だ！信じられない！ああ…失礼、時々興奮しすぎてしまうんだ。私は死霊術師なんだ。 死体や死そのものを研究することは、私たちにとって非常に重要なことなのだが、この単調な作業は、遅かれ早かれ、誰でも飽きてしまうものなのだ。でも、だからこそ私はここにいる。先日、大きな出来事があった！死者の古代都市「ネクロポリス」が、私たちのために扉を開いてくれたのだ。正直に言うと、私たちはこの扉のすぐそばに立っている。そして......そうだ、鍵を持って先に行ってくれないか。君はいろんな冒険が好きだろう？そして次は私が行く......ただ、その前に準備が必要だ。</string>
     <string name="NecromancerNPC_Message1">時間がない、時間がない...</string>
@@ -2433,6 +2437,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="WndCryptoDonate_currency">通貨</string>
     <string name="WndCryptoDonate_ethereum">イーサリアム</string>
     <string name="WndCryptoDonate_openWallet">ウォレットを開く</string>
+    <string name="WndCryptoDonate_supportDev">開発者をサポート</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">ウォレットアドレス</string>
@@ -2986,19 +2991,5 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>
