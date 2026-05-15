@@ -338,6 +338,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="CagedKobold_Name">uwięziony kobold</string>
     <string name="CagedKobold_Name_Objective">uwięziony kobold</string>
     <string name="CagedKobold_Quest_End">Och dzięki, wielkie dzięki! Jak udało ci się znaleźć klucz? Tty... ty zniszczyłeś broń?! To nadzwyczajne! Wiesz ty co, obiecałem ci pomóc i chyba wiem jak najlepiej mogę ci się przysłużyć. Chwilę się z tobą pokręcę! * Uwięziony Kobold zamienił się w świecę</string>
+    <string name="Calm_Cast">%s uspokaja się.</string>
     <string name="Calm_Info">Sporo tu  rozwścieczonych istot, pomóżmy im.</string>
     <string name="Calm_Name">Spokój</string>
     <string name="CandleOfMindVision_Info">Wygląda jak zwykła świeczka, nie jest to coś co spodziewałbyś się znaleźć w tym niebezpiecznym lochu. O dziwo jest ona ciepła w dotyku, mimo tego że nie została nawet zapalona.</string>
@@ -3034,6 +3035,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

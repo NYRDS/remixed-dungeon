@@ -1042,6 +1042,7 @@
     <string name="IceGuardianCore_Name">冰霜巨人</string>
     <string name="IceGuardianCore_Name_Objective">冰霜巨人</string>
     <string name="IceGuardian_Desc">冰霜巨人是被狗头人所建造的为保护它们的洞穴的古老产物。它的核心允许它在接受足够的能量后重生。</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">冰霜巨人</string>
     <string name="IceGuardian_Name_Objective">冰霜巨人</string>
     <string name="IceKey_Info">看上去这把钥匙是由冰制成的，但是它和铁差不多重。</string>
@@ -2926,6 +2927,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
