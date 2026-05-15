@@ -574,6 +574,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="DashSpell_OnSelf">Erről a helyről nem tudok elrohanni.</string>
     <string name="DashSpell_TooFar">Nem tudok olyan messzire rohanni.</string>
     <string name="DeathKnight_Desc">Első látásra egy hatalmas harcosnak tűnik, súlyos páncélban, csak az a hullavigyor, az furcsa rajta. A halállovag egy lovag szellemének megtestesülése, aki elbukott fogadalma teljesítése során. Ebben az átkozott állapotban mindig egy csatát keres, amiben megtisztulhat - ártatlanokat gyilkol, nem emlékezve, kiknek a védelmére esküdött fel.</string>
+    <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name">Halállovag</string>
     <string name="DeathKnight_Name_Objective">Halállovag</string>
     <string name="Death_Name_0">Zord %s</string>
@@ -2782,6 +2783,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

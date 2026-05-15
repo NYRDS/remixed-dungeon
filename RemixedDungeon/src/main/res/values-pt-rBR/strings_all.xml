@@ -2455,6 +2455,7 @@ remix.31.1\n
     <string name="WndInfoItem_Tomb">Tumba</string>
     <string name="WndInfoItem_WontKnow">Você não vai saber o que há dentro até abri-lo!</string>
     <string name="WndInstallingMod_deleting_file">Apagando %s</string>
+    <string name="WndInstallingMod_please_wait">Instalando mod, por favor aguarde...</string>
     <string name="WndItemAlchemy_NoRecipes">Não há receitas disponíveis com este item e seu inventário atual.</string>
     <string name="WndItemAlchemy_SelectRecipe">Selecionar receita</string>
     <string name="WndItemAlchemy_Title">Receitas de alquimia com %s</string>
@@ -2922,6 +2923,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
