@@ -2445,6 +2445,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndHero_Exp">Erfahrung</string>
     <string name="WndHero_Gold">gesammeltes Gold</string>
     <string name="WndHero_Health">Gesundheit</string>
+    <string name="WndHero_Info">Info</string>
     <string name="WndHero_Satiety">Sättigung</string>
     <string name="WndHero_SkillLevel">Fähigkeiten Level</string>
     <string name="WndHero_StaCatalogus">Kataloge</string>
@@ -2664,6 +2665,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="YogsEye_Name">Yogs Auge</string>
     <string name="YogsEye_Name_Objective">Yogs Auge</string>
     <string name="YogsHeart_Desc">Jahrhundertelang wurde behauptet, dass wirklich nur herzlose Kreaturen in der Lage sind, das Pure Böse zu sein. Und hier ist der Gegenbeweis, das pochende Herz des Alten Gottes höchstpersönlich.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">Yogs Herz</string>
     <string name="YogsHeart_Name_Objective">Yogs Herz</string>
     <string name="YogsTeeth_Desc">Ein enormer Mund eines Alten Gottes, gefüllt mit rasiermesserscharfen Zähnen. Eine sehr passende Manifestation seines Dranges, alles zu zerstören und zu verschlingen.</string>
@@ -2933,5 +2935,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 </resources>

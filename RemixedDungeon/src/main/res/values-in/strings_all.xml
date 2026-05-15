@@ -1290,6 +1290,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="MercenaryNPC_Name">mata duitan</string>
     <string name="MercenaryNPC_Name_Objective">mata duitan</string>
     <string name="Metabolism_Txt">%s metabolisme</string>
+    <string name="MiasmaGas_Info">Miasma beracun yang meracuni, melemahkan, dan memusingkan mereka yang menghirupnya.</string>
     <string name="MimicAmulet_Desc">Saat yang paling hebat dalam petualangan Anda berubah menjadi sebuah jebakan.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">mimik</string>
@@ -1973,6 +1974,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpiderEgg_Name">telur laba-laba</string>
     <string name="SpiderEgg_Name_Objective">telur laba-laba</string>
     <string name="SpiderElite_Desc">Sama seperti tentara, penjaga laba-laba bersumpah untuk melindungi kerajaan mereka. Racun penjaga elit digunakan untuk membingungkan target mereka.</string>
+    <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">penjaga elit laba-laba</string>
     <string name="SpiderElite_Name_Objective">penjaga elit laba-laba</string>
     <string name="SpiderExploding_Desc">Pekerja keras saat damai, makhluk ini tidak akan ragu untuk menyerang musuh mereka dan mengambil tanaman pertama yang mereka lalui, mengubah mereka menjadi bom hidup.</string>
@@ -2471,6 +2473,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndLibrary_Levels_Btn">Dungeon</string>
     <string name="WndLibrary_Mobs_Btn">raksasa</string>
     <string name="WndLocalModInstall_text">Pilih direktori untuk menginstal mod dari sana.</string>
+    <string name="WndLocalModInstall_title">Pasang mod dari direktori lokal</string>
     <string name="WndModInstall_InstallingMod">Menginstal mod</string>
     <string name="WndModInstall_PleaseUpdate">Harap perbarui Remixed Dungeon sebelum menginstal mod ini</string>
     <string name="WndModInstall_Version">Versi</string>
@@ -2922,6 +2925,9 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

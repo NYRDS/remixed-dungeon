@@ -1823,6 +1823,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
 
 </string>
     <string name="Scorpio_Desc">Estos demonios arácnidos evitan el combate cercano a toda costa, disparando proyectiles paralizantes desde lejos.</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">escorpión</string>
     <string name="Scorpio_Name_Objective">escorpión</string>
     <string name="ScrollHolder_Info">Puedes poner cualquier cantidad de pergaminos en este estuche. Ahorra espacio en tu mochila y protege los pergaminos del fuego.</string>
@@ -2043,6 +2044,7 @@ otro lugar del nivel.</string>
     <string name="SpiderEgg_Name">huevo de araña</string>
     <string name="SpiderEgg_Name_Objective">huevo de araña</string>
     <string name="SpiderElite_Desc">Al igual que los soldados, las arañas guardian juran proteger su reino. El veneno de las arañas de élite se usa para desorientar a su objetivo.</string>
+    <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">Araña guardian de élite.</string>
     <string name="SpiderElite_Name_Objective">Araña guardian de élite.</string>
     <string name="SpiderExploding_Desc">Incansables obreros durante épocas de paz, estas criaturas no dudarán en abalanzarse contra sus enemigos, cogiendo lo primero que tengan a mano y convirtiéndose así en bombas andantes. </string>
@@ -2701,6 +2703,7 @@ otro lugar del nivel.</string>
     <string name="YogsEye_Name">ojo de Yog</string>
     <string name="YogsEye_Name_Objective">Ojo de Yog</string>
     <string name="YogsHeart_Desc">Por siglos las personas han creído que solo las criaturas sin corazón son capaces de actos de pura maldad. Pero aquí lo tienes, un gran corazón latiendo de un Antiguo Dios.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">corazón de Yog</string>
     <string name="YogsHeart_Name_Objective">Corazón de Yog</string>
     <string name="YogsTeeth_Desc">La enorme boca del Antiguo Dios llena de afilados dientes. Un apropiada manifestación de su gran deseo de destruir y devorar a todos.</string>
@@ -2970,4 +2973,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
 </resources>

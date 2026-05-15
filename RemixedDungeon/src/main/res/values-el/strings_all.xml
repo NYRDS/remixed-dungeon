@@ -838,6 +838,7 @@
     <string name="Ghost_Defense">απέφυγε</string>
     <string name="Ghost_Desc">Το φάντασμα είναι μετά βίας ορατό. Φαίνεται σαν ακαθόριστο σχήμα αχνού φωτός με θλιμμένη όψη.</string>
     <string name="Ghost_Name">θλιμμένο φάντασμα</string>
+    <string name="Ghost_Name_Objective">φάντασμα</string>
     <string name="Ghost_Rat1">Γεια σου... Κάποτε ήμουν σαν κι εσένα... είχα δύναμη και σθένος... μέχρι που σκοτώθηκα... Μα δεν μπορώ να φύγω από εδώ... όχι προτού πάρω την εκδίκησή μου... Εξόντωσε τον _βρομερό αρουραίο_ που μου στέρησε τη ζωή...</string>
     <string name="Ghost_Rat2">Σε παρακαλώ... Βοήθησέ με... Εξόντωσε το έκτρωμα...</string>
     <string name="Ghost_Rose1">Γεια σου... Κάποτε ήμουν σαν κι εσένα... είχα δύναμη και σθένος... μέχρι που σκοτώθηκα... Μα δεν μπορώ να φύγω από εδώ... όχι αν δεν βρω το _ξερό ρόδο_ μου... Είναι πολύτιμο για μένα... και κάποιο τέρας το απέσπασε από το σώμα μου...</string>
@@ -1359,6 +1360,7 @@
     <string name="MercenaryNPC_Name">μισθοφόρος</string>
     <string name="MercenaryNPC_Name_Objective">μισθοφόρος</string>
     <string name="Metabolism_Txt">%s μεταβολισμού</string>
+    <string name="MiasmaGas_Info">Ένα τοξικό σφάλμα που δηλητηριάζει, αποweakens και μπερδεύει αυτούς που το αναπνέουν.</string>
     <string name="MimicAmulet_Desc">Η πιο ένδοξη στιγμή της περιπέτειάς σου δεν ήταν παρά μια ύπουλη παγίδα.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">μίμος</string>
@@ -1810,6 +1812,7 @@
     <string name="RottenMeat_Info">Ένα κομμάτι σάπιου κρέατος.</string>
     <string name="RottenMeat_Name">σάπιο κρέας</string>
     <string name="RottenOrgan_Info">Ένα αποσυντιθέμενο όργανο που εξορύχθηκε από έναν νικημένο εχθρό. Παρά την αποσυντεταγμένη κατάστασή του, περιέχει πολύτιμες ενώσεις για αλχημικές διεργασίες.</string>
+    <string name="RottenOrgan_Name">Λε speróorganο</string>
     <string name="RottenPasty_Info">Αυτή η πίτα φαίνεται αηδιαστική.</string>
     <string name="RottenPasty_Name">σάπια πίτα</string>
     <string name="RottenPumpkinPie_Info">Άσχετα του πόσο καλή ήταν φρέσκια, δεν υπάρχει περίπτωση να τρώγεται πλέον.</string>
@@ -2290,6 +2293,7 @@
     <string name="VertigoBuff_Name">Ζαλάδα</string>
     <string name="View_Distance">Οπτικό πεδίο</string>
     <string name="VileEssence_Info">Ένα συγκεντρωμένο άκρο κακοήθειας που συλλέγεται από έναν νικημένο εχθρό. Η μαύρη αυτή ουσία δονείται με κακόβουλη ενέργεια και χρησιμοποιείται ευρέως σε αλχημικές διαδικασίες.</string>
+    <string name="VileEssence_Name">Ασθενές Ουσία</string>
     <string name="Viscosity_Status">Αναβεβλημένη %d</string>
     <string name="Viscosity_Txt">%s αναβλητικότητας</string>
     <string name="WandHolster_Info">Αυτή η λεπτή θήκη είναι φτιαγμένη από το δέρμα κάποιου εξωτικού ζώου. Σου επιτρέπει να κουβαλάς μέχρι και %d ραβδιά.</string>
@@ -3046,6 +3050,10 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
+
+
+
 
 
 

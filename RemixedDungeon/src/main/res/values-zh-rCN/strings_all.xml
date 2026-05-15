@@ -2010,6 +2010,7 @@
     <string name="SpiderEgg_Name">蜘蛛蛋</string>
     <string name="SpiderEgg_Name_Objective">蜘蛛蛋</string>
     <string name="SpiderElite_Desc">就像军人一样，蜘蛛首位宣誓保卫它们的王国。蜘蛛精英的毒液是用来使它们的目标迷失方向的。</string>
+    <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">蜘蛛精英卫队</string>
     <string name="SpiderElite_Name_Objective">蜘蛛精英卫队</string>
     <string name="SpiderExploding_Desc">这些蜘蛛工人在和平时期一直努力工作，可是一旦遇到敌人，就会毫不犹豫抓起自己路过的第一株植物，并把自己当成活体炸弹冲向他们。</string>
@@ -2383,6 +2384,7 @@ remix.31.1\n
     <string name="WndCryptoDonate_copyAddress">复制地址</string>
     <string name="WndCryptoDonate_currency">货币</string>
     <string name="WndCryptoDonate_ethereum">以太坊</string>
+    <string name="WndCryptoDonate_openWallet">打开钱包</string>
     <string name="WndCryptoDonate_supportDev">支持开发者</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
@@ -2933,4 +2935,6 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 </resources>

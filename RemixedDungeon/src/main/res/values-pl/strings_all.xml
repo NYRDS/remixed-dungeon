@@ -300,6 +300,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BlessedBuff_Name">Pobłogosławiony</string>
     <string name="BlindnessBuff_Info">Kompletnie oślepiony, jedyne co odczuwasz to dźwięki otoczenia.</string>
     <string name="BlindnessBuff_Name">Oślepiony</string>
+    <string name="BloodTransfusion_Drained">Сила жизни перетекает из твоего питомца в тебя.</string>
     <string name="BodyArmorBuff_Info">Pancerz wzmocniony kosztem szybkości ruchu </string>
     <string name="BodyArmorBuff_Name">Napierśnik</string>
     <string name="BodyArmorSpell_Info">Aktywuje ukryty potencjał mięśni, czyniąc je chwilowo silniejszymi, co znacznie zwiększa pancerz lecz niestety kosztem szybkości ruchu.</string>
@@ -2070,6 +2071,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="SpiderEgg_Name">jajo pająka</string>
     <string name="SpiderEgg_Name_Objective">jajo pająka</string>
     <string name="SpiderElite_Desc">Podobnie jak żołnierze, pajączy strażnicy przysięgają chronić swoje królestwo. Jad elitarnego strażnika jest używany do dezorientacji celu.</string>
+    <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">Pajęczy elitarny strażnik</string>
     <string name="SpiderElite_Name_Objective">Pajęczy elitarny strażnik</string>
     <string name="SpiderExploding_Desc">Ciężko pracując w czasach pokoju, te stworzenia nie zawahają się wszarżować w przeciwnika, chwytając w biegu pierwszą roślinę na jaką się natkną, samemu zmieniając się w żywą bombę.</string>
@@ -2482,6 +2484,7 @@ remix.32.1\n
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Możesz wesprzeć rozwój Remixed Dungeon, wysyłając darowizny w kryptowalutach na poniższe adresy. Dziękujemy za hojne wsparcie!</string>
     <string name="WndCryptoDonate_openWallet">Otwórz portfel</string>
+    <string name="WndCryptoDonate_supportDev">Wsparcie Dewelopera</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Adres portfela</string>
     <string name="WndCryptoDonate_warningText">OSTRZEŻENIE: Zawsze weryfikuj adres przed wysłaniem środków. Transakcje kryptowalutowe są nieodwracalne!</string>
@@ -3035,6 +3038,9 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
+
 
 
 

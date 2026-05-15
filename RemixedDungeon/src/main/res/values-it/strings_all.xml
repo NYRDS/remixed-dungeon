@@ -1864,6 +1864,7 @@ Potrebbe bruciare?</string>
     <string name="SpiderEgg_Name">uovo di ragno</string>
     <string name="SpiderEgg_Name_Objective">uovo di ragno</string>
     <string name="SpiderElite_Desc">Proprio come i soldati, le guardie ragno sono giurate di proteggere il loro regno. Il veleno della guardia d\'élite viene usato per disorientare il bersaglio.</string>
+    <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name_Objective">guardia d\'élite del ragno</string>
     <string name="SpiderExploding_Desc">Duri lavoratori durante i periodi di pace, queste creature non esitano a caricare i propri nemici e prendere la prima pianta che gli capita, rendendoli delle bombe viventi. </string>
     <string name="SpiderExploding_Gender">masculine</string>
@@ -2111,6 +2112,7 @@ Potrebbe bruciare?</string>
     <string name="WandOfRegrowth_Info">\&quot;Quando la vita cessa una nuova vita inizia sempre a crescere... Il ciclo eterno rimane sempre!\&quot;</string>
     <string name="WandOfRegrowth_Info1">non è successo nulla</string>
     <string name="WandOfRegrowth_Name">Bacchetta Di Ricrescita</string>
+    <string name="WandOfShadowbolt_Name">varchetto degli ombre</string>
     <string name="WandOfSlowness_Info">Questa bacchetta non farà muovere e attaccare alla metà della sua velocità normale una creatura alla metà della sua velocità normale fino al termine effetto</string>
     <string name="WandOfSlowness_Info1">non è successo nulla</string>
     <string name="WandOfSlowness_Name">Bacchetta di Lentezza</string>
@@ -2700,6 +2702,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

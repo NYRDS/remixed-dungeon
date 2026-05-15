@@ -449,6 +449,7 @@
     <string name="ChargrilledMeat_Info">Виглядає як пристойний біфштекс.</string>
     <string name="ChargrilledMeat_Name">смажене м\'ясо</string>
     <string name="CharmBuff_Name">Зачарований</string>
+    <string name="CharmSpell_Info">Кожен заслуговує на трішку кохання, чи не так?</string>
     <string name="Chasm_Chasm">Провалля</string>
     <string name="Chasm_Info">Ти розбився...</string>
     <string name="Chasm_Jump">Ти впевнений що бажаєш стрибнути донизу? Можеш розбитися.</string>
@@ -796,7 +797,7 @@
     <string name="Ghost_Defense">ухилився</string>
     <string name="Ghost_Desc">Ти ледь можеш розгледіти привида. Він більше схожий на димку з сумним обличчям.</string>
     <string name="Ghost_Name">Сумний привид</string>
-    <string name="Ghost_Name_Objective">сумного привида</string>
+    <string name="Ghost_Name_Objective">привидіння</string>
     <string name="Ghost_Rat1">Привіт, мандрівнику... Колись я був таким же як і ти - сильним та впевненим... Тепер я мертвий... Але не можу покинути це місце... Доки я не завершу свою помсту... Вбий за мене _огидного щура_, який позбавила мене життя...</string>
     <string name="Ghost_Rat2">Прошу... Допоможи мені... Здолай цю тварюку...</string>
     <string name="Ghost_Rose1">Привіт, мандрівнику... Колись я був таким же як і ти - сильним та впевненим... Тепер я мертвий... Але не можу покинути це місце... Доки я не знайду свою _посохлу троянду_... Ця річ для мене дуже цінна... Якесь чудовисько потягнуло її з мого бездиханного тіла...</string>
@@ -1945,6 +1946,7 @@
     <string name="Skeleton_Killed">Тебе пробило кістяним уламком...</string>
     <string name="Skeleton_Name">скелет</string>
     <string name="Skeleton_Name_Objective">скелета</string>
+    <string name="SleepBuff_Info">Повністю погружений у сон.</string>
     <string name="SleepBuff_Name">Сон</string>
     <string name="SlowBuff_Info">Повільне відчуття робить тебе повільнішим, ніж зазвичай.</string>
     <string name="SlowBuff_Name">Сповільнений</string>
@@ -2862,6 +2864,9 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
 
 
 
