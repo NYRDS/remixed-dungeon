@@ -692,6 +692,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="DwarfToken_Info">Viele Zwerge und ihre größeren Kreaturen tragen diese kleinen Metallstücke unbekanntem Zweck herum. Vielleicht sind sie Juwelen oder irgendeine Art Ausweis. Zwerge sind ein seltsames Volk.</string>
     <string name="DwarfToken_Name">Zwergenmünze</string>
     <string name="EarthElemental_Desc">Erdgeister sind Erdmassen, welche von konzentrierten Naturgewalten getrieben werden.</string>
+    <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">Erdgeist</string>
     <string name="EarthElemental_Name_Objective">Erdgeist</string>
     <string name="EarthrootBuff_Info">Wurzeln sind aus dem Boden gesprossen und bieten natürlichen Schutzrüstung.</string>
@@ -2921,6 +2922,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

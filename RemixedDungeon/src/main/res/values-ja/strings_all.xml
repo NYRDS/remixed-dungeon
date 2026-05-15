@@ -1801,6 +1801,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="ScaleArmor_Desc">革製のベストに縫い付けられた金属製の鱗が、柔軟でありながら防御力の高い鎧を作り出している。</string>
     <string name="ScaleArmor_Name">スケイルアーマー</string>
     <string name="ScarecrowNPC_Desc">間違いない...このカカシはあなたの一挙手一投足を見張っている。その赤く光る目は、あなたの心を射抜くが、驚くことに、あなたはそれに脅威を感じない。</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">カカシ</string>
     <string name="ScarecrowNPC_Name_Objective">カカシ</string>
     <string name="ScarecrowNPC_Quest_End">ああ、やった、なんてこった！これには、甘いパイのスライスがついてくるぞ！</string>
@@ -2985,6 +2986,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

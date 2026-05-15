@@ -1232,6 +1232,7 @@
     <string name="LevitationBuff_Info">身体悬浮，避开陷阱与深渊。</string>
     <string name="LevitationBuff_Name">漂浮</string>
     <string name="LibrarianNPC_Desc">很害羞的人，厚重的眼镜和难看的毛衣证明了这点。</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">你、你好。欢迎来到图书馆。阁下能在此找到形形色色，有关地牢中各种事物的信息。说老实，我们只能提供由冒险者，即是阁下所搜集的信息。这、这确实有点尴尬。因此，每次阁下莅临本馆，也许，这里有新的信息供阁下查阅。</string>
     <string name="LibrarianNPC_Message_Not_Ready">抱……抱歉，图…图书馆现在还没开放。</string>
     <string name="LibrarianNPC_Name">图书管理员</string>
@@ -2927,6 +2928,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -2663,6 +2663,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndSettings_Brightness">Luminosité</string>
     <string name="WndSettings_ClassicFont">Police classique</string>
     <string name="WndSettings_ExperementalFont">Nouvelle police</string>
+    <string name="WndSettings_FpsLimit">Limite FPS</string>
     <string name="WndSettings_GameplaySettings">Style de jeu</string>
     <string name="WndSettings_Handedness">Orientation</string>
     <string name="WndSettings_Immersive">Mode immersif</string>
@@ -3026,6 +3027,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
