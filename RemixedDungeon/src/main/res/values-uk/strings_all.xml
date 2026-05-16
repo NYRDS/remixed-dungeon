@@ -342,6 +342,7 @@
     <string name="Candy_Warning_2">От ця вже точно була зайва. Через переїдання цукерок у тебе прихопило живіт.</string>
     <string name="Capotain_Info">високий капелюх, що звужується по краях, Він зазвичай асоціюється з пуританами, але вам не обов\'язково бути досить релігійними, аби носити її. З якоїсь причини на ній є ярлик, з написом \&quot;Соломон\&quot;.</string>
     <string name="Capotain_Name">Ковпак</string>
+    <string name="Carcass_Devoured">Ти з\'їв труп %s!</string>
     <string name="Carcass_DissectFailed">Ти розсікаєш %s, але не знаходиш нічого цінного.</string>
     <string name="Carcass_DissectMessage">Ви розчленували труп і отримали %s.</string>
     <string name="Carcass_Kick">Ця істота, %s, совершенно мертва, немає сенсу бити її далі.</string>
@@ -450,6 +451,7 @@
     <string name="ChargrilledMeat_Name">смажене м\'ясо</string>
     <string name="CharmBuff_Name">Зачарований</string>
     <string name="CharmSpell_Info">Кожен заслуговує на трішку кохання, чи не так?</string>
+    <string name="CharmSpell_Name">Чар</string>
     <string name="Chasm_Chasm">Провалля</string>
     <string name="Chasm_Info">Ти розбився...</string>
     <string name="Chasm_Jump">Ти впевнений що бажаєш стрибнути донизу? Можеш розбитися.</string>
@@ -2867,6 +2869,8 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

@@ -1377,7 +1377,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="Monk_Name">cüce keşiş</string>
     <string name="Monk_Name_Objective">cüce keşiş</string>
     <string name="MoongraceBuff_Info">Çevredeki hava daha doygun hale gelir, bu da büyülü rezervlerin daha iyi konsantre edilmesini ve yenilenmesini sağlar.</string>
-    <string name="MoongraceBuff_Name">Göksel manna</string>
+    <string name="MoongraceBuff_Name">Gökyüzü manası</string>
     <string name="Moongrace_Desc">Bu bitkiler az sayıda büyür ve doğal büyü kaynağı olarak bilinir.</string>
     <string name="Moongrace_Name">Ay lütfu</string>
     <string name="Movement_Speed">Hareket hızı</string>
@@ -2494,6 +2494,7 @@ remix.30.1\n
     <string name="WndInstallingMod_skipping_file">%1 atlanıyor</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Tarifi Uygula</string>
     <string name="WndItemAlchemy_SelectRecipe">Tarifi seç</string>
+    <string name="WndItemAlchemy_Title">%s ile simya tarifleri</string>
     <string name="WndItemAlchemy_Transmute">Dönüştür</string>
     <string name="WndJournal_Levels">Seviyeler</string>
     <string name="WndJournal_Logbook">Kayıt defteri</string>
@@ -2960,6 +2961,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

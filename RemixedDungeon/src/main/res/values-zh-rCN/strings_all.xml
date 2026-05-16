@@ -550,7 +550,7 @@
     <string name="ConcreteBlock_Description">看来你需要 %d 点力量才能推得动这块混凝土</string>
     <string name="ConcreteBlock_Name">重型混凝土块</string>
     <string name="ConfusionGas_Info">这里盘踞着一片致眩气体。</string>
-    <string name="CorpseDustBuff_Info">你充满了嗜血欲望，攻击增加，并使你变得十分危险。</string>
+    <string name="CorpseDustBuff_Info">充满血腥的攻击力大大增强，使他们特别危险。</string>
     <string name="CorpseDustBuff_Name">嗜血</string>
     <string name="CorpseDust_Info">这团尸尘看起来和普通灰尘球差不多，但你能感觉到里面潜伏着一股恶意的魔力……最好尽快脱手。</string>
     <string name="CorpseDust_Info2">大概因为拿着它让你感到焦虑和愤怒。</string>
@@ -2004,6 +2004,7 @@
     <string name="Spells_NotInOwnBody">当你的灵魂与身体分离时，你不能%s。</string>
     <string name="Spells_NotTooFast">%s还没有准备好使用</string>
     <string name="Spells_SummonLimitReached">%1$s召唤上限提升（最大值： %2$d)！</string>
+    <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">这种盔甲是由一些老蜘蛛尸体和一些奇怪的布料组成的。令人惊讶的是，它里面依然包含着蜘蛛的吐丝功能。只要它受到足够的力量就能喷出网来。此外这蜘蛛脚一样的鞋子能让你在网上自由移动。</string>
     <string name="SpiderArmor_Name">蜘蛛护甲</string>
     <string name="SpiderCharm_Info">这个奇异的小饰品被神秘的灵光围绕着。戴着它的人会发生什么事？</string>
@@ -2939,6 +2940,11 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
 
 
 

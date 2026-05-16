@@ -941,6 +941,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Hero_YouNowHave">Anda kini mempunyai %s</string>
     <string name="HideInGrassSpell_Info">Anda telah menyempurnakan penguasaan sorok-sorok anda.</string>
     <string name="HideInGrassSpell_Name">Sembunyi-Dalam-Rumput</string>
+    <string name="HideInGrassSpell_NeedGrassToHide">Saya pun tidak dapat bersembunyi di tempat terbuka.</string>
     <string name="Horror_Name_0">Eldritch %s</string>
     <string name="Horror_Name_1">Eldritch %s</string>
     <string name="Horror_Name_2">Eldritch %s</string>
@@ -1291,6 +1292,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Monk_Disarm">%1$s telah mengetuk jatuh %2$s dari pegangan anda!</string>
     <string name="Monk_Name">sami orang kerdil</string>
     <string name="Monk_Name_Objective">sami orang kerdil</string>
+    <string name="MoongraceBuff_Name">Manan surgawi</string>
     <string name="Moongrace_Desc">Tumbuhan ini tumbuh dalam kumpulan kecil dan dikenali sebagai sumber sihir semula jadi.</string>
     <string name="Movement_Speed">Kelajuan pergerakan</string>
     <string name="Multiplicity_Txt">%s penggandaan</string>
@@ -1986,6 +1988,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Swing_Name_0">%s Liar</string>
     <string name="Swing_Name_1">%s Liar</string>
     <string name="Swing_Name_2">%s Liar</string>
+    <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">Bilah keluli tajam yang menakutkan.</string>
     <string name="Sword_Name">pedang</string>
     <string name="Tamahawk_Info">Kapak lontar ini tidaklah begitu berat, tetapi masih memerlukan kekuatan yang mencukupi untuk berkesan.</string>
@@ -2316,6 +2319,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndInfoItem_WontKnow">Anda tidak tahu apa-apa di dalamnya sehinggalah anda membukanya!</string>
     <string name="WndInstallingMod_deleting_file">Memadam %s</string>
     <string name="WndInstallingMod_please_wait">Memasang mod, sila tunggu...</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Jalankan Resep</string>
     <string name="WndItemAlchemy_NoRecipes">Tiada resipi tersedia dengan item ini dan inventori semasa anda.</string>
     <string name="WndItemAlchemy_SelectRecipe">Pilih resipi</string>
     <string name="WndItemAlchemy_Title">Resipi alkimia dengan %s</string>
@@ -2481,6 +2485,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Busur silang kayu asas, yang direka khas untuk menembak anak panah busur.</string>
     <string name="WoodenCrossbow_Name">Busur silang kayu</string>
+    <string name="WoodenShield_desc">Perisai kayu yang dibuat secara kasar ialah perisai termudah yang boleh didapati. Ia bulat dan boleh memblokkan sedikit kerosakan dari masa ke masa.</string>
     <string name="WoodenShield_name">Pengadang Kayu</string>
     <string name="Worm_Desc">Tak dapat gambarkan betapa besarnya cacing ini. Sebahagian badannya masih di bawah lantai, badan makhluk tersebut diselaputi dengan cebisan daging dan lendir. Mandibel gergasi merupakan cara ia bergerak terus ke permukaan.</string>
     <string name="Worm_Gender">masculine</string>
@@ -2759,6 +2764,12 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
 
 
 

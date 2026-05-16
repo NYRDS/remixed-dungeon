@@ -276,6 +276,7 @@
     <string name="BodyArmorSpell_Name">보디 아머</string>
     <string name="BoneShard_Info">패배한 적으로부터 얻은 날카로운 뼈 조각이다. 이 조각들은 놀랍도록 견고하며 제작에 유용하게 쓰인다.</string>
     <string name="BoneShard_Name">뼈 조각</string>
+    <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">곡선의 나무 미사일 - 부메랑 - 을 적에게 던지면, 던진사람에게 다시 돌아옵니다.</string>
     <string name="Boomerang_Name">부메랑</string>
     <string name="Bounce_Txt">탄력의 %s</string>
@@ -287,6 +288,7 @@
     <string name="Brute_Name">놀 정예병</string>
     <string name="Brute_Name_Objective">놀 정예병</string>
     <string name="Brute_StaEnraged">격분</string>
+    <string name="BuffParam_Cooldown">쿨다운: %.2f</string>
     <string name="BurningBuff_Name">불타는</string>
     <string name="BurningFist_Desc">고대 신의 불타는 주먹</string>
     <string name="BurningFist_Gender">masculine</string>
@@ -505,7 +507,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ConcreteBlock_Description">이 블록은 %d만큼의 힘을 요구하는 것 같습니다.</string>
     <string name="ConcreteBlock_Name">무거운 콘크리트 블록</string>
     <string name="ConfusionGas_Info">혼란을 주는 가스 구름이 소용돌이 칩니다.</string>
-    <string name="CorpseDustBuff_Info">피에 대한 갈망이 공격을 크게 증가시켜 특히 위험하게 만듭니다.</string>
+    <string name="CorpseDustBuff_Info">혈기에 차게 된 공격력이 대폭 증가하여 특히 위험합니다.</string>
     <string name="CorpseDustBuff_Name">피에 굶주린</string>
     <string name="CorpseDust_Info">이 시체 먼지 덩어리는 다른 먼지 덩어리랑 별 차이 없어 보입니다. 하지만 당신은 사악한 에너지가 이것을 감싸고 있는 것을 느낍니다.
 
@@ -674,6 +676,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Eye_Name">눈알 악마</string>
     <string name="Eye_Name_Objective">눈알 악마</string>
     <string name="Facilitations_Descriptions_0">변이체들은 항상 경멸과 두려움을 가지고 대우받았지만, 배고픔이 없는 것이 다시 한 번 당신에게 우월성을 줄 것입니다. 이번에는 던전의 심연을 정복하는 데 있어 말입니다.</string>
+    <string name="Facilitations_Descriptions_3">Ogrelskininden yapılmış kayışı sıktığınızda, her yeni nesile aktarılan bu kayışla bir adım attığınızda bilinmezliğe doğru ilerliyorsunuz.</string>
     <string name="Facilitations_Names_0">배고픔 없음</string>
     <string name="Facilitations_Names_1">트롤 시체</string>
     <string name="Facilitations_Names_3">거인의 힘</string>
@@ -1515,6 +1518,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PumpkinPie_Name">호박 파이</string>
     <string name="Pumpkin_Info">옛날에는 호박인간들이 자랑스럽고 번영된 국가를 가지고 있었습니다. 그러나 인간들이 오자 모든것이 파멸을 맞이하게 되었습니다. 그리고 잘게 갈라진 오래 전에 사라져버린 호박 부족들의 머리는 그러한 끔찍한 사건들을 기념하는 역할을 합니다.</string>
     <string name="Pumpkin_Name">호박</string>
+    <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">이 단단한 나무 스태프의 끝에는 철이 덧씌워져 있습니다.</string>
     <string name="Quarterstaff_Name">쿼터스태프</string>
     <string name="QuickSlot_SelectSlot">퀵 슬롯 설정</string>
@@ -1793,7 +1797,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name">그림자</string>
     <string name="Shadow_Name_Objective">그림자</string>
-    <string name="ShadowsBuff_Info">그림자 사이에서는 무언가를 발견하기가 더 어렵습니다.</string>
+    <string name="ShadowsBuff_Info">그림자 속에서는 덜 눈에 띕니다.</string>
     <string name="ShadowsBuff_Name">그림자숨기</string>
     <string name="ShamanElder_Desc">이 특별한 늑대인간은 다른 주술사들보다 훨씬 나이가 많아 보이며 부족 내에서 확실히 더 높은 지위를 가지고 있습니다. 그의 주변에는 이상한 오러가 천천히 형성되며, 닿는 모든 것을 반사하는 것 같습니다.</string>
     <string name="ShamanElder_Gender">masculine</string>
@@ -2634,6 +2638,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_fence_name">울타리</string>
     <string name="town_deco_filmtape_name">필름</string>
     <string name="town_deco_fireplace_desc">이렇게 추운 곳에서 몸을 데우기에 좋다.</string>
+    <string name="town_deco_firewood_desc">이렇게 심한 추위에서 필수적인 것.</string>
     <string name="town_deco_floor_desc">간단판 나무판으로 이루어진 바닥입니다. 무엇을 찾으시나요?</string>
     <string name="town_deco_floor_name">바닥</string>
     <string name="town_deco_flowerinthepot_desc">달콤한 향이 나는 장식용 꽃</string>
@@ -2765,6 +2770,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
+
+
+
 
 
 

@@ -93,6 +93,7 @@
 \n\nPuedes sentir una malevolente magia acechando dentro de la %s.</string>
     <string name="Armor_ToString">%1$s :%2$d</string>
     <string name="ArmoredStatue_Desc">Ni siquiera se podría pensar que sólo es otra fea estatua. No solo por los ojos color rojo brillante, si no por que nadie pondría un  _%s_  real en la estatua.</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">estatua animada</string>
     <string name="ArmoredStatue_Name_Objective">estatua animada</string>
     <string name="Artifact_Limit">Solo puedes usar 2 artefactos al mismo tiempo.</string>
@@ -2982,6 +2983,9 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 

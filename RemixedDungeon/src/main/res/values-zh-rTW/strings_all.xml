@@ -89,6 +89,7 @@
     <string name="ArmoredStatue_Name">活化石像</string>
     <string name="ArmoredStatue_Name_Objective">活化石像</string>
     <string name="Artifact_Limit">你最多只能同時佩戴2件飾品。</string>
+    <string name="AttackDelay_Increased">這樣無法使用%s。揮動緩慢，呼吸沉重…</string>
     <string name="Attack_Cooldown">攻擊冷卻時間</string>
     <string name="AwarenessBuff_Name">察覺</string>
     <string name="AzuterronNPC_Desc">被黑霧包圍著的神秘人</string>
@@ -394,6 +395,7 @@
     <string name="ChaosSword_Info">混亂為刃，力量蘊內。刀身發顫，砍山分洪，力無不逮。唯有強者，方能使用。</string>
     <string name="ChaosSword_Name">混沌劍</string>
     <string name="CharAction_Charm">魅惑</string>
+    <string name="CharAction_Expel">pem expulsion</string>
     <string name="CharAction_Give">給</string>
     <string name="CharAction_Push">推</string>
     <string name="CharAction_Steal">偷</string>
@@ -535,6 +537,7 @@
     <string name="ConcreteBlock_Description">看來您需要 %d 點力量才能推得動這塊混凝土</string>
     <string name="ConcreteBlock_Name">重型混凝土塊</string>
     <string name="ConfusionGas_Info">迷幻氣體在該處飄浮著。</string>
+    <string name="CorpseDustBuff_Info">充满血腥的攻击力大大增强，使他们特别危险。</string>
     <string name="CorpseDustBuff_Name">嗜血</string>
     <string name="CorpseDust_Info">在外觀上這團屍塵和普通灰塵球差不多。而您卻能夠感受到其中潛伏著一股充滿惡意的魔力。盡快脫手為上策。</string>
     <string name="CorpseDust_Info2">也許因為帶著它讓您感到了焦慮和憤怒。</string>
@@ -845,6 +848,7 @@
     <string name="Halls_TileWater">冷巖漿</string>
     <string name="Haste_Info">急速會讓實行者以極快的速度移動，他周圍的一切都會顯得靜止。如此急速會消耗大量的能量，所以只能在很短的時間內使用。\n\n熟練的大師能夠在較長的時間內保持急速。</string>
     <string name="Haste_Name">急速</string>
+    <string name="Heal_Cast">%s 被治愈了。</string>
     <string name="Heal_Name">治療</string>
     <string name="HealerNPC_Desc">虛無縹緲的直覺告訴我，眼前的老人懂得如何弄法杖。</string>
     <string name="HealerNPC_Gender">masculine</string>
@@ -1861,6 +1865,7 @@
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name">陰影</string>
     <string name="Shadow_Name_Objective">陰影</string>
+    <string name="ShadowsBuff_Info">在阴影中很难发现东西。</string>
     <string name="ShadowsBuff_Name">暗影融合</string>
     <string name="ShamanElder_Desc">這隻特定的熊人看起來比其他薩滿年長許多，在部落中肯定擁有更高的地位。一股奇怪的靈氣在他周圍緩緩形成，似乎能反彈所有接觸到它的事物。</string>
     <string name="ShamanElder_Gender">masculine</string>
@@ -1909,6 +1914,7 @@
     <string name="SkeletonKey_Name">骷髏鑰匙</string>
     <string name="Skeleton_Defense">格擋</string>
     <string name="Skeleton_Desc">骷髏是從那些悲慘的冒險者及地牢原住民屍骨的聚合物產生的，來自下層地牢的邪惡力量將它們從死亡中喚起。在吸收了足夠的傷害之後，它們就會在骨頭的爆炸中消解。</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">你被骨頭的爆炸殺死了……</string>
     <string name="Skeleton_Name">骷髏</string>
     <string name="Skeleton_Name_Objective">骷髏</string>
@@ -2033,6 +2039,7 @@
     <string name="StrongShield_desc">這個矩形盾牌鍍有青銅片並飾有彩色布料。它明顯更重，但能格擋更多傷害。</string>
     <string name="StrongShield_name">鍍金青銅盾</string>
     <string name="StunBuff_Info">被擊暈了！</string>
+    <string name="StunBuff_Name">眩晕</string>
     <string name="Stylus_ACInscribe">鐫刻</string>
     <string name="Stylus_Info">這支奧術刻筆是由某種漆黑堅硬的石頭製成的。您可以使用它來鐫刻一個刻印或符文，但由於您的能力不足，您無法自己選擇您所鐫刻下的符文或刻印，刻筆會自己幫你決定。</string>
     <string name="Stylus_Inscribed">您鐫刻了%1$s在您的%2$s上</string>
@@ -2324,6 +2331,7 @@
     <string name="WndChooseWay_Message">您選擇步上哪條路？</string>
     <string name="WndClass_Mastery">專精</string>
     <string name="WndCryptoDonate_bitcoin">比特幣</string>
+    <string name="WndCryptoDonate_copyAddress">複製地址</string>
     <string name="WndCryptoDonate_ethereum">以太坊</string>
     <string name="WndCryptoDonate_infoText">您可以通過將加密貨幣捐贈發送到以下地址來支持 Remixed Dungeon 的開發。感謝您的慷慨支持！</string>
     <string name="WndCryptoDonate_ton">TON</string>
@@ -2862,6 +2870,14 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
 
 
 

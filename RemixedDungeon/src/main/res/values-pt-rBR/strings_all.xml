@@ -51,6 +51,7 @@
     <string name="AmokArrow_Name">Flecha de Fúria</string>
     <string name="AmokBuff_Info">Sinta a loucura, tirando a vida daqueles infelizes.</string>
     <string name="AmokBuff_Name">Loucura</string>
+    <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">A solução na ponta deste dardo transformará qualquer um em um berserker sem mente e impiedoso.</string>
     <string name="AmokDart_Name">Dardo de Fúria</string>
     <string name="AmuletScene_Exit">Foi bom enquanto durou</string>
@@ -286,6 +287,7 @@
     <string name="BlindnessBuff_Info">Completamente cego, apenas os sons ao redor podem ser ouvidos.</string>
     <string name="BlindnessBuff_Name">Cego</string>
     <string name="BloodTransfusion_Info">Drena quase todo o sangue de um alvo para curar a si mesmo. Um ritual sombrio de sacrifício e sobrevivência.</string>
+    <string name="BloodTransfusion_Name">Transfusão de Sangue</string>
     <string name="BodyArmorBuff_Info">Armadura aumentada ao custo da velocidade de movimento</string>
     <string name="BodyArmorBuff_Name">Armadura Corporal</string>
     <string name="BodyArmorSpell_Info">Ativa o poder muscular reservado, os tornando mais fortes temporariamente, isso aumentará sua defesa, porem diminuirá sua velocidade de movimento.</string>
@@ -305,7 +307,7 @@
     <string name="Brute_Name">gnoll Brutamonte</string>
     <string name="Brute_Name_Objective">gnoll Brutamonte</string>
     <string name="Brute_StaEnraged">irritado</string>
-    <string name="BuffParam_Cooldown">Recarga: %.2f</string>
+    <string name="BuffParam_Cooldown">Tempo de espera: %.2f</string>
     <string name="BurningBuff_Info">O corpo está envolto em chamas furiosas!</string>
     <string name="BurningBuff_Name">Queimando</string>
     <string name="BurningFist_Desc">Punho Queimando do Deus Antigo</string>
@@ -859,6 +861,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Halls_TileWater">Lava fria</string>
     <string name="Haste_Info">A pressa permitirá que o executante se mova com uma velocidade tão extrema que tudo ao seu redor parecerá estático. Essa pressa consumirá muita energia, então usá-la é possível apenas por um curto período de tempo.\n\nMestres habilidosos são capazes de permanecer apressados por um longo período de tempo.</string>
     <string name="Haste_Name">Pressa Extrema</string>
+    <string name="Heal_Cast">%s foi curado.</string>
     <string name="Heal_Info">Um feitiço bem útil em Calabouços, certo?</string>
     <string name="Heal_Name">Cura</string>
     <string name="HealerNPC_Desc">Um homem velho, de alguma forma ele parece com alguém que estaria fazendo varinhas.</string>
@@ -1296,6 +1299,7 @@ Parede
     <string name="MercenaryNPC_Name">mercenário</string>
     <string name="MercenaryNPC_Name_Objective">mercenário</string>
     <string name="Metabolism_Txt">%s de metabolismo</string>
+    <string name="MiasmaGas_Info">Uma névoa nociva que envenena, enfraquece e desorienta aqueles que a respiram.</string>
     <string name="MimicAmulet_Desc">O momento mais glorioso da sua carreira de aventureiro acabou por se tornar uma armadilha.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">mímico</string>
@@ -1593,6 +1597,7 @@ Parede
     <string name="PumpkinPie_Name">torta de abóbora</string>
     <string name="Pumpkin_Info">No passado o povo Abóbora foram uma orgulhosa e próspera nação.  Mas depois que os humanos chegaram, tudo acabou em ruínas.  E as cabeças esculpidas e cortadas da antiga tribo de Abóboras servem como lembrança desse terríveis acontecimentos.</string>
     <string name="Pumpkin_Name">Abóbora</string>
+    <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">Um composto de madeira com entalhe de ferro nas extremidades.</string>
     <string name="Quarterstaff_Name">Cajado</string>
     <string name="QuickSlot_SelectSlot">Escolha um atalho rápido para isso</string>
@@ -2928,6 +2933,13 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
 
 
 
