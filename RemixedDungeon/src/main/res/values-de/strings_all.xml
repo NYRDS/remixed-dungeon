@@ -125,6 +125,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Badges_BossSlain1">Goo wurde besiegt</string>
     <string name="Badges_BossSlain1All">Goo wurde von allen Klassen besiegt</string>
     <string name="Badges_BossSlain2">Tengu wurde besiegt</string>
+    <string name="Badges_BossSlain3">Boss besiegt 3</string>
     <string name="Badges_BossSlain3All">DM-300 wurde von allen Subklassen getötet</string>
     <string name="Badges_BossSlain4">König wurde besiegt</string>
     <string name="Badges_Champion">Herausforderung gewonnen</string>
@@ -302,6 +303,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BlindnessBuff_Name">Geblendet</string>
     <string name="BloodTransfusion_Drained">Die Lebensessenz fließt von deinem Haustier in dich hinein.</string>
     <string name="BloodTransfusion_FullHP">Ihre Blut ist bereits auf voller Kapazität.</string>
+    <string name="BloodTransfusion_Info">Zieht fast gesamtes Blut von einem Ziel, um dich selbst zu heilen. Ein dunkler Ritual des Opfers und der Überleben.</string>
     <string name="BodyArmorBuff_Info">Rüstung wird auf Kosten von Bewegungs-Geschwindigkeit erhöht.</string>
     <string name="BodyArmorBuff_Name">Körperrüstung</string>
     <string name="BodyArmorSpell_Info">Aktiviert ungenutzte Kraftreserven, um die Muskeln temporär stärker zu machen, was die Rüstung deutlich verstärkt, aber die Bewegungsgeschwindigkeit drastisch reduziert.</string>
@@ -334,6 +336,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Burning_Burns">%s ist verbrannt!</string>
     <string name="Burning_Death">Du bist verbrannt</string>
     <string name="CagedKobold_Desc">Ein Kobold, in einem Käfig.</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">Hey... HEY! Bist du dieser Abenteurerdingsbums? Hilf mir hier raus, Kumpel. Diese verdammten Militaristen haben mich eingesperrt. Sie wollten eine antike Waffe reaktivieren um die Menschen da oben zu unterwerfen! Ich war dagegen, weil es zu gefährlich war, also warfen sie mich aus dem Rat und sperrten mich in diesen Käfig. Bitte finde den Schlüssel für mich, als Gegenleistung helfe ich dir, so gut ich kann.</string>
     <string name="CagedKobold_Message1">Bitte...</string>
     <string name="CagedKobold_Message2">Hey, du könntest mir hier heraushelfen.</string>
@@ -400,6 +403,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="ChampionOfWaterBuff_Name">Champion des Wassers</string>
     <string name="ChaosArmor_Info">Die blutroten Platten dieser Rüstung sind mit dunkelroten Ketten verbunden. Sie strahlt chaotische Energie aus, wenn du sie berührst.</string>
     <string name="ChaosArmor_Name">Chaosrüstung</string>
+    <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Ein fürchterlicher Bogen, gefüllt mit der Kraft des Chaos. Ein Teil des Chaos wird mit jedem abgefeuerten Pfeil zu seinem Opfer getragen. Wenn man jedoch verfehlt...</string>
     <string name="ChaosBow_Name">Chaosbogen</string>
     <string name="ChaosCrystal_ArmorFused">Der Kristall hat sich mit deiner Rüstung verschmolzen und die Form des Chaos angenommen.</string>
@@ -574,6 +578,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="CorpseDust_Name">Leichenstaub</string>
     <string name="CorpseExplosion_Info">Verwandelt eine Leiche in eine tödliche Wolke aus giftigem Gas und verbreitet Krankheit und Gift unter allen nahegelegenen Feinden.</string>
     <string name="CorpseExplosion_Name">Leichenexplosion</string>
+    <string name="CorpseExplosion_NoCorpse">Kein Leichnam zum Explodieren</string>
     <string name="Crab_Defense">parriert</string>
     <string name="Crab_Desc">Diese riesigen Krabben stehen in den Abwasserkanälen an der Spitze der Nahrungskette. Sie sind extrem schnell und ihr dicker Panzer kann selbst schwere Schläge aushalten.</string>
     <string name="Crab_Gender">masculine</string>
@@ -896,6 +901,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Halls_TileWater">Erkaltete Lava</string>
     <string name="Haste_Info">Die Eile ermöglicht es dem Nutzer, sich mit solch extremer Geschwindigkeit zu bewegen, dass alles um ihn herum statisch erscheint. Eine solche Eile wird viel Energie verbrauchen, so dass eine Nutzung nur für kurze Zeit möglich ist.\n\nErfahrene Meister können über einen längeren Zeitraum in Eile bleiben.</string>
     <string name="Haste_Name">Eilen</string>
+    <string name="Heal_Cast">%s wird geheilt.</string>
     <string name="Heal_Info">Ein ziemlich nützlicher Zauberspruch im Dungeon, oder?</string>
     <string name="Heal_Name">Heilung</string>
     <string name="HealerNPC_Desc">Ein alter Mann. Er sieht aus, wie jemand der Zauberstäbe herstellt.</string>
@@ -1291,6 +1297,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="Luck_Name_0">Glückbringender %s</string>
     <string name="Luck_Name_1">Glückbringender %s</string>
     <string name="Luck_Name_2">Glückbringender %s</string>
+    <string name="Mace_Gender">masculine</string>
     <string name="Mace_Info">Der eiserne Kopf dieser Waffe verursacht erheblichen Schaden.</string>
     <string name="Mace_Name">Morgenstern</string>
     <string name="MageArmor_ACSpecial">GESCHMOLZENE ERDE</string>
@@ -1305,6 +1312,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="MailArmor_Name">Kettenrüstung</string>
     <string name="ManaPotion_Info">Dieser Trank wird deine spirituelle Energie wiederherstellen.</string>
     <string name="ManaPotion_Name">Mana Trank</string>
+    <string name="ManaRegenerationBuff_Info">Regeneriert Mana über die Zeit.</string>
     <string name="ManaShieldBuff_Info">Ein magischer Schild ist erschienen, der den nächsten eingehenden Angriff vollständig abwehrt.</string>
     <string name="ManaShieldBuff_Name">Magischer Schild</string>
     <string name="Mana_Cost">Mana Kosten:</string>
@@ -1530,15 +1538,16 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">Hervorragend! Die _Zwerg Hexenmeister_, ihr Wesen ist nun mein zu erforschen! Solch verdrehte, korrupte Magie… wahrhaft faszinierend. *Er hebt eine schimmernde Phiole, gefüllt mit einer zähen, blutroten Flüssigkeit.* Das, ist für euch: ein _Trank der Macht_! Nehmt seine Kraft in euch auf, und ihr werdet spüren, wie die Stärke der Berge durch eure Adern fließt! Denkt daran, das Wissen, das aus diesen Opfern gewonnen wird, wird letztendlich einem höheren Zweck dienen… vielleicht sogar uns alle vor einem Schicksal schützen, das schlimmer ist als der Tod.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">Fünf _Zwerg Hexenmeister_, ihre Körper pulsieren immer noch mit dem schwachen Echo dunkler Magie! Bringt sie mir, und ich belohne euch mit einem Trank beispiellosen Vermögens – einem _Trank der Macht_, der euch mit der Stärke von zehn Männern erfüllt!</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Zwerge! Diese starrköpfigen, unterirdischen Bewohner, besessen von Edelsteinen und Gold. Aber es sind die _Zwerg Hexenmeister_, nach denen ich verlange... ihre verdrehte Magie, genährt aus den Tiefen, die sie bewohnen. Fünf, ich brauche fünf dieser welken Seelen! Ihre Körper bergen den Schlüssel zum Verständnis eines gewissen... Phänomens. Etwas mit der Kanalisierung arkaner Energien durch die Erde selbst. Ich glaube, ich stehe kurz vor einer Entdeckung, aber ich brauche ihr Wesen, ihre korrupte Magie! *Er hustet heftig in sein Taschentuch, ein dunkler Fleck breitet sich auf dem zarten Stoff aus*</string>
-    <string name="PlagueDoctorQuest_4_2_Epilogue">Hervorragend! Fünf _Kobold Eismagier_, ihre eisige Essenz ist nun mein zu erforschen! Ihre Verbindung zu den gefrorenen Weiten, sie ist wahrhaft faszinierend. Die Art und Weise, wie sie Wasser selbst manipulieren… wahrhaft bemerkenswert. *Er händigt Ihnen eine schimmernde Phiole, gefüllt mit einer lebhaften purpurroten Flüssigkeit* Das, ist für Ihre heldenhaften Bemühungen: ein _Trank der Macht_! Trinkt tief und spürt, wie die Kraft von zehn Kriegern durch eure Adern strömt! Denkt daran, Wissen ist Macht… und Macht ist die einzige Waffe, die wir gegen die herannahende Dunkelheit haben. Nun… zerlegen wir diese eisigen Seelen und decken ihre schauerlichen Geheimnisse auf!</string>
+    <string name="PlagueDoctorQuest_4_2_Epilogue">Epilog 4.2</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Besorgt fünf tote _Kobold Eismagier_! Ihre gefrorenen Körper halten den Schlüssel zum Entsperren der Geheimnisse ihrer eisigen Magie!</string>
-    <string name="PlagueDoctorQuest_4_2_Prologue">*Seine knochigen Finger trommeln rhythmisch gegen einen brodelnden Kessel, die Luft um ihn herum dick vom scharfen Gestank von Schwefel und Verfall*\n_Kobold Eismagier_! Diese erbärmlichen Kreaturen, gekauert in ihren vereisten Höhlen, verzweifelt an ihrer eisigen Magie klammernd. Ich brauche fünf von ihnen, ihre gefrorenen Leichen werden… erleuchtend sein. Ihre Beherrschung des Eises, sie ist… eigenartig. Ich glaube, sie greifen auf eine Urkraft zu, eine Macht, die unter der Oberfläche dieser Welt schlummert.</string>
+    <string name="PlagueDoctorQuest_4_2_Prologue">Prolog 4.2</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Er starrt auf die zwei _Sukkuben_, ein glückseliges Lächeln breitet sich unter seiner Maske aus.* Herrlich! Wunderbar! Dies wird so viele… Möglichkeiten öffnen! *Er wendet sich Ihnen zu, seine Stimme ist dick vor Dankbarkeit… und etwas anderem.* Eure Bemühungen… sie werden nicht vergessen. Ich stehe in eurer tiefsten Schuld. *Sein Blick verweilt einen Moment zu lange auf den _Sukkuben_, bevor er sich in sein Labor zurückzieht und über das Entriegeln der Geheimnisse der Verführung murmelt.*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Sein Geist schweift ab, während er spricht, seine Stimme wird leiser, kaum ein Flüstern.* Bringt mir zwei _Sukkuben_… lebendig. Ihre… Kraft… ist faszinierend.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Er stottert, seine Stimme bricht wie ein brüchiger Zweig*. A-ah, _Sukkuben_! Zwei… ja, zwei, lebendig! Es ist… ähm… für meine Forschung! Versteht ihr… ihre Pheromone… es ist entscheidend für das Verständnis des feinen Gleichgewichts von… ach… *Er bricht ab, seine knochige Hand greift nach oben, um nervös seine Maske zurechtzurücken, seine Augen huschen mit fiebrigem Eifer zu euch.* Ihre… Essenz… es ist ein Rätsel… ein wunderschönes, rätselhaftes Rätsel! *Er hustet heftig, versucht, seine Fassung wiederzuerlangen.* Ich verspreche, für das Beschaffen von zweien dieser… Kreaturen, werdet ihr meine ewige Dankbarkeit erhalten. Betrachtet es als… einen Segen des Wissens! Ja! Für das Wissen!</string>
     <string name="PlagueDoctorQuest_AllDone">Er stößt ein trockenes, keuchendes Lachen aus. \&quot;Eure Taten, sie haben Geheimnisse jenseits alles Maßen entschlüsselt! Das erworbene Wissen… es pulsiert in mir, eine Symphonie der Entdeckung. Aber Wissen,\&quot; fügt er hinzu, seine Stimme sinkt zu einem verschwörerischen Flüstern, \&quot;Wissen ist Macht. Und Macht… ach… das ist ein höchst berauschender Elixier.\&quot; Er starrt euch einen Moment eindringlich an, seine Amethystaugen brennen mit fiebrigem Eifer. \&quot;Vielleicht,\&quot; murmelt er, \&quot;kreuzen sich unsere Wege erneut. Denn es gibt immer noch viele… Mysterien… die noch entschlüsselt werden müssen.\&quot;</string>
     <string name="PlagueDoctor_Desc">Dieser bucklige Mann ist komplett mit Leder bezogen. Er riecht stark nach Medikamenten und ... Knoblauch?</string>
 
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">Virendoktor</string>
     <string name="PlagueDoctor_Name_Objective">Virendoktor</string>
     <string name="Plant_ACPlant">PFLANZEN</string>
@@ -1713,6 +1722,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="ResultDescriptions_Hunger">Ist auf Ebene %d verhungert</string>
     <string name="ResultDescriptions_Immured">Eingemauert in Stein auf Ebene %d</string>
     <string name="ResultDescriptions_Mob">Ist durch %1$s auf Ebene %2$d gestorben</string>
+    <string name="ResultDescriptions_Necromancy">Starb an Nekromantie auf Ebene %d</string>
     <string name="ResultDescriptions_Necrotism">Ist auf Ebene %d an Nekrose gestorben</string>
     <string name="ResultDescriptions_Ooze">Ist auf Ebene %d durch Säure gestorben</string>
     <string name="ResultDescriptions_Poison">Ist auf Ebene %d durch Gift gestorben</string>
@@ -1948,6 +1958,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="ShadowsBuff_Name">Eins mit dem Schatten</string>
     <string name="ShamanElder_Desc">Dieser besondere Gnoll sieht viel älter aus als andere Schamanen und hat sicherlich einen höheren Status im Stamm. Eine seltsame Aura bildet sich langsam um ihn herum, die anscheinend alles reflektiert, was sie berührt.</string>
     <string name="ShamanElder_Gender">masculine</string>
+    <string name="ShamanElder_Name">Schamanenältester</string>
     <string name="Shaman_Desc">Die intelligentesten Gnolle können schamanische Magie meistern. Gnollschamanen bevorzugen Kampfzauber um ihre fehlende Stärke auszugleichen. Sie zögern nicht, sie auf jeden anzuwenden der ihre Stellung im Stamm anzweifelt.</string>
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">Der Blitzschlag des %s hat dich getötet...</string>
@@ -1955,6 +1966,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="Shaman_Name_Objective">Gnollschamane</string>
     <string name="Shaman_ZapMiss">*Verflucht sich auf Gnollisch*</string>
     <string name="Sheep_Desc">Das ist ein magisches Schaf. Was daran so magisch ist? Du kannst es nicht töten. Es wird dort stehen, bis es auf magische Weise verschwindet, stets wiederkäuend mit leerem Blick.</string>
+    <string name="Sheep_Gender">masculine</string>
     <string name="Sheep_Name">Schaf</string>
     <string name="Sheep_Name_Objective">Schaf</string>
     <string name="ShieldBuffNotReady_Info">Dein Schild ist nicht bereit, den nächsten Angriff abzuwehren.</string>
@@ -2027,7 +2039,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">Es ist ein Bruchstück von den Resten vom Gefäß der Seelen. Es glüht mit magischer Energie, vielleicht gibt es ja jemanden der sich dafür interessiert.</string>
     <string name="SoulShard_Name">Seelenscherbe</string>
-    <string name="Spear_Gender">neuter</string>
+    <string name="Spear_Gender">masculine</string>
     <string name="Spear_Info">Ein schmaler Stab aus Holz mit einer geschliffenen Eisenspitze.</string>
     <string name="Spear_Name">Speer</string>
     <string name="SpeedBuff_Info">Der Körper strahlt Lebendigkeit und Energie aus und die Bewegungen fühlen sich schneller an als sonst.</string>
@@ -2506,7 +2518,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndLibrary_Levels_Btn">Dungeon</string>
     <string name="WndLibrary_Mobs_Btn">Monster</string>
     <string name="WndLocalModInstall_pick">Mod-Verzeichnis auswählen</string>
-    <string name="WndLocalModInstall_text">Wählen Sie das Verzeichnis aus, aus dem der Mod installiert werden soll.</string>
+    <string name="WndLocalModInstall_text">Wählen Sie ein Verzeichnis, aus dem das Mod installiert werden soll.</string>
     <string name="WndLocalModInstall_title">Mod aus lokalem Verzeichnis installieren</string>
     <string name="WndModInstall_InstallingMod">Mod wird installiert</string>
     <string name="WndModInstall_PleaseUpdate">Bitte aktualisiere Remixed Dungeon bevor du diesen Mod installierst</string>
@@ -2960,6 +2972,25 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

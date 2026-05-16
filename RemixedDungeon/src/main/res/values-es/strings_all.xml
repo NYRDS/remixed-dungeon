@@ -206,6 +206,7 @@
     <string name="Bandit_Name">bandido loco</string>
     <string name="Bandit_Name_Objective">bandido loco</string>
     <string name="BardNPC_Desc">El bardo del pueblo está tocando su laúd.</string>
+    <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">bardo</string>
     <string name="BardNPC_Name_Objective">bardo</string>
     <string name="BardSong_1">Mi esposa y yo vivimos solos,\nEn una pequeña cabaña de troncos, que es nuestra\nA ella le encantaba la ginebra y a mí me encantaba el ron\nTe diré lo que nos divertiría mucho.</string>
@@ -300,6 +301,7 @@
     <string name="BlessedBuff_Name">Bendecido</string>
     <string name="BlindnessBuff_Info">Completamente cegado, sólo se oyen los sonidos de alrededor.</string>
     <string name="BlindnessBuff_Name">Cegado</string>
+    <string name="BloodTransfusion_Drained">Agotado</string>
     <string name="BloodTransfusion_FullHP">Tu sangre ya está al máximo.</string>
     <string name="BloodTransfusion_Info">Drena casi toda la sangre de un objetivo para curarte. Un oscuro ritual de sacrificio y supervivencia.</string>
     <string name="BloodTransfusion_Name">Transfusión de sangre</string>
@@ -310,6 +312,7 @@
     <string name="BodyArmorSpell_Name">Armadura Corporal</string>
     <string name="BoneSaw_Info">Un serrucho quirúrgico de precisión diseñado para disecciones rápidas. Su daño y velocidad de ataque se vuelven más letales con la habilidad del Médico de la Peste. Los golpes críticos extraen partes adicionales aprovechables de los enemigos, y golpea con despiadada eficiencia contra enemigos paralizados.</string>
     <string name="BoneSaw_Name">Sierra de Huesos</string>
+    <string name="BoneShard_Info">Fragmento óseo</string>
     <string name="BoneShard_Name">Fragmento de hueso</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Al ser lanzado contra un enemigo, esta arma curva de madera volverá a su lanzador.</string>
@@ -358,6 +361,7 @@
     <string name="Carcass_DissectFailed">Diseccionas el %s pero no encuentras nada de valor.</string>
     <string name="Carcass_DissectMessage">Disecas la carroña y obtienes un %s.</string>
     <string name="Carcass_DissectResult">Del %1$s obtienes %2$d %3$s.</string>
+    <string name="Carcass_Info">Cadáver</string>
     <string name="Carcass_Kick">Este %s está completamente muerto, no hay necesidad de patearlo.</string>
     <string name="Carcass_Name">restos de %s</string>
     <string name="Carcass_Necromancy">¡Has levantado el cadáver de %s!</string>
@@ -597,6 +601,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="DM300_Info3">Personal no autorizado detectado.</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Una simple daga de hierro con un mango de madera desgastado.</string>
     <string name="Dagger_Name">daga</string>
     <string name="Damage_Reduction">Reducción de daño</string>
@@ -654,6 +659,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Displacement_Txt">%s de desplazamiento</string>
     <string name="DoctorArmor_Info">Esta armadura de médico de la peste permite usar la habilidad «Nube de miasma», que libera un gas nocivo que envenena, debilita y desorienta a los enemigos. El médico, protegido por su máscara, es inmune a estos efectos.</string>
     <string name="DoctorArmor_NotDoctor">¡Solo los médicos de la peste pueden usar esta armadura!</string>
+    <string name="DoctorSpecial">Especial</string>
     <string name="DogeMask_Info">¿Alguna vez te has querido disfrazar del famoso Doge? ¡Ahora es tu oportunidad! \n¡Con esta máscara! ¡Wow!</string>
     <string name="DogeMask_Name">Mascara Doge</string>
     <string name="DonateButton_pleaseDonate">por favor, considera donar</string>
@@ -1075,6 +1081,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="IceGuardianCore_Name">guardián de hielo</string>
     <string name="IceGuardianCore_Name_Objective">guardián de hielo</string>
     <string name="IceGuardian_Desc">Los Guardianes de hielo fueron fabricados por kobolds antiguos, para proteger sus cuevas. La energía almacenada en su núcleo permite al guardián del hielo reconstruirse mientras tenga suficiente energía.</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">guardián de hielo</string>
     <string name="IceGuardian_Name_Objective">guardián de hielo</string>
     <string name="IceKey_Info">Esta llave parece estar hecha de hielo, aún así es tan dura como el acero.</string>
@@ -1435,6 +1442,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="NecromancerArmor_Name">Armadura de huesos</string>
     <string name="NecromancerArmor_NotNecromancer">¡Solo los nigromantes pueden usar esta armadura!</string>
     <string name="NecromancerNPC_Desc">Este hombre de mediana edad parece estar algo molesto y emocionado al mismo tiempo. Lleva una armadura compuesta hecha de fragmentos de hueso.</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">¡Ah! ¡Es un suceso tan raro! Un compañero aventurero que no esta muerto. ¡Impresionante! Oh... Perdóneme, en algunos momentos me siento muy emocionado. Como puede ver, soy un nigromate. A pesar de que estudio a los muertos y esto mismo es lo que hago para vivir, ver lo mismo una y otra vez, con el tiempo se vuelve... muy aburrido. Pero por eso mismo es que estoy aquí. Según mis cálculos en un par de semanas, en algún lugar de la mazmorra, algo impresionante va a pasar. Un _Necrópolis_, una antigua ciudad de los muertos va a abrir sus puertas. Y... realmente no puedo decir mucho, he perdido bastante tiempo. Tengo que estar listo, vuelve más tarde.</string>
     <string name="NecromancerNPC_Intro2">¡Ah! un aventurero que no está muerto. ¡Increíble! Oh... le pido perdón. Como usted ve, soy un nigromante. Aunque estudio a los muertos y la muerte misma es lo que hago para ganarme la vida, ver siempre lo mismo se vuelve demasiado aburrido. Por otra parte, es exactamente por eso que estoy aquí. Una _Necrópolis_, una antigua ciudad de los muertos finalmente abrirá sus puertas. De hecho, estamos justo al lado de su entrada. Ten toma esta llave y ve primero, quiero decir, te gustan las aventuras, ¿no? Voy después de ti, solo necesito prepararme.</string>
     <string name="NecromancerNPC_Message1">Falta tan poco tiempo, tan poco tiempo...</string>
@@ -1512,6 +1520,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PlagueDoctorNPC_After_Quest">¡Les demostrare a todos, a todos!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">¿Todavía estás aquí? Ten, toma esto.</string>
     <string name="PlagueDoctorNPC_Desc">Este hombre jorobado está vestido completamente con cuero. Huele fuertemente a medicamentos y ... ¿ajo?</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">doctor de la plaga</string>
     <string name="PlagueDoctorNPC_Name_Objective">doctor de la plaga</string>
     <string name="PlagueDoctorNPC_Quest_End">Ah, gracias, espero que tengan rastro de una enfermedad. Las partes anteriores eran absolutamente inofensivos. Así que hice esto para usted, mientras esperaba nuevas muestras.</string>
@@ -1539,7 +1548,9 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PlagueDoctorQuest_4_1_Epilogue">¡Espléndido! Los _Brujos Enanos_, ¡su esencia ahora es mía para explorar! Una magia tan retorcida y corrompida... verdaderamente fascinante. *Sostiene un frasco reluciente, lleno de un líquido viscoso y carmesí.* ¡Esto es para ti: una _Poción de Poder_! ¡Bebe su poder y sentirás la fuerza de las montañas corriendo por tus venas! Recuerda, el conocimiento obtenido de estos sacrificios servirá en última instancia a un propósito superior... quizás incluso nos salve a todos de un destino peor que la muerte.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">¡Cinco _Brujos Enanos_, sus cuerpos aún palpitan con el débil eco de magia oscura! Tráemelos, y te recompensaré con una poción de poder sin precedentes: una _Poción de Poder_ que te impregnará con la fuerza de diez hombres.</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">¡Achú! ¡Dwarves! ¡Esos testarudos moradores subterráneos, obsesionados con las gemas y el oro! Pero son los _Brujos Enanos_ los que ansío... su magia retorcida, alimentada por las mismas profundidades que habitan. ¡Cinco, necesito cinco de esas almas marchitas! Sus cuerpos tienen la clave para entender un cierto... fenómeno. Algo sobre canalizar energías arcanas a través de la tierra misma. ¡Creo que estoy cerca de un gran descubrimiento, pero necesito su esencia, su magia corrompida! *Tose violentamente en su pañuelo, una mancha oscura se extiende por la delicada tela*</string>
+    <string name="PlagueDoctorQuest_4_2_Epilogue">Epílogo 4.2</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">¡Recupera cinco _Kobolds Icedemancers_ muertos! Sus cuerpos congelados guardan la clave para desbloquear los secretos de su gélida magia.</string>
+    <string name="PlagueDoctorQuest_4_2_Prologue">Prólogo 4.2</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Él mira fijamente a las dos _súcubos_, con una sonrisa beatífica extendiéndose bajo su máscara.* ¡Espléndido! ¡Magnífico! Esto desbloqueará tantas... posibilidades! *Se vuelve hacia ti, su voz gruesa de gratitud... y algo más.* Tus esfuerzos... no serán olvidados. Le debo las gracias más profundas. *Su mirada se demora en las _súcubos_ un momento demasiado largo, antes de retirarse a su laboratorio, murmurando sobre cómo desbloquear los secretos de la seducción.*</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Él tartamudea, su voz cruje como una rama quebradiza*.  A-ah, _¡súcubos_! ¡Dos… sí, dos, vivas! Es… ejem… para mi investigación. Verá… sus feromonas… son cruciales para comprender el delicado equilibrio de… ah… *Se interrumpe, su mano huesuda se eleva nerviosamente para ajustar su máscara, sus ojos se dirigen hacia usted con una intensidad febril.* Su… esencia… es un enigma… ¡un enigma hermoso y enigmático! *Tose violentamente, intentando recuperar la compostura.* Se lo prometo, por traerme dos de estas… criaturas… tendrá mi eterna gratitud. ¡Piénselo como un… un regalo al conocimiento! ¡Sí! ¡Al conocimiento!</string>
     <string name="PlagueDoctorQuest_AllDone">*Él deja escapar una risa seca y jadeante.* \&quot;¡Tus hazañas han desbloqueado secretos más allá de toda medida! El conocimiento adquirido... late dentro de mí, una sinfonía de descubrimiento. Pero el conocimiento,\&quot; añade, bajando la voz a un susurro conspiratorio, \&quot;el conocimiento es poder. Y el poder... ah... ese es un elixir más embriagador.\&quot; Te mira fijamente por un momento, sus ojos amatista ardiendo con una intensidad febril. \&quot;Quizás,\&quot; murmura, \&quot;nuestros caminos se crucen de nuevo. Porque todavía hay muchos... misterios... por desvelar.\&quot;</string>
@@ -1722,6 +1733,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="ResultDescriptions_Hunger">Muerto de hambre en el nivel %d</string>
     <string name="ResultDescriptions_Immured">Encerrado en piedra en el nivel %d</string>
     <string name="ResultDescriptions_Mob">Asesinado por %1$s en el nivel %2$d</string>
+    <string name="ResultDescriptions_Necromancy">Murió por nigromancia en el nivel %d</string>
     <string name="ResultDescriptions_Necrotism">Muerto por necrosis en el nivel %d</string>
     <string name="ResultDescriptions_Ooze">Asesinado por el cieno caústico en el nivel %d</string>
     <string name="ResultDescriptions_Poison">Muerto por envenenamiento en el nivel %d</string>
@@ -1960,7 +1972,7 @@ otro lugar del nivel.</string>
     <string name="ShadowsBuff_Name">En las sombras</string>
     <string name="ShamanElder_Desc">Este gnoll en particular parece mucho más viejo que otros chamanes y seguramente tiene un estatus más alto en la tribu. A su alrededor se forma lentamente una extraña aura que parece reflejar todo lo que la toca.</string>
     <string name="ShamanElder_Gender">masculine</string>
-    <string name="ShamanElder_Name">chamán anciano</string>
+    <string name="ShamanElder_Name">Anciano chamán</string>
     <string name="ShamanElder_Name_Objective">chamán anciano</string>
     <string name="Shaman_Desc">Los gnolls más inteligentes pueden dominar la magia chamánica. Los chamanes gnoll prefieren luchar con hechizos para compensar su falta de fuerza, y no dudan en usarlos contra aquellos que cuestionan su posición en la tribu.</string>
     <string name="Shaman_Gender">masculine</string>
@@ -1969,6 +1981,7 @@ otro lugar del nivel.</string>
     <string name="Shaman_Name_Objective">chamán gnoll</string>
     <string name="Shaman_ZapMiss">*Maldice en mounstroñol*</string>
     <string name="Sheep_Desc">Esta es una oveja mágica. ¿Qué tiene de mágica? No la puedes matar. Se quedará ahí  hasta que por arte de magia se desvanezca. Mientras tanto rumia con la mirada perdida.</string>
+    <string name="Sheep_Gender">masculine</string>
     <string name="Sheep_Name">oveja</string>
     <string name="Sheep_Name_Objective">oveja</string>
     <string name="ShieldBuffNotReady_Info">Tu escudo no está preparado para bloquear el siguiente ataque.</string>
@@ -2040,6 +2053,7 @@ otro lugar del nivel.</string>
     <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">Es un fragmento que has tomado de los restos del Tarro de Almas. Tiene un brillo de energía misteriosa, tal vez alguien este interesado en esto.</string>
     <string name="SoulShard_Name">fragmento de alma</string>
+    <string name="Spear_Gender">masculine</string>
     <string name="Spear_Info">Una delgada vara de madera con una punta de hierro afilada.</string>
     <string name="Spear_Name">lanza</string>
     <string name="SpeedBuff_Info">La vivacidad y la energía emanan del cuerpo, y los movimientos se sienten más rápidos de lo habitual.</string>
@@ -2170,6 +2184,7 @@ otro lugar del nivel.</string>
     <string name="SuspiciousRat_Name_Objective">Rata sospechosa</string>
     <string name="Swarm_Defense">esquivado</string>
     <string name="Swarm_Desc">El mortal enjambre de moscas zumba enojado. Cualquier ataque no mágico lo dividirá en 2 enjambres más pequeños, pero igualmente mortíferos.</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">enjambre de moscas</string>
     <string name="Swarm_Name_Objective">enjambre de moscas</string>
     <string name="Swing_Name_0">%s salvaje</string>
@@ -2543,6 +2558,7 @@ otro lugar del nivel.</string>
     <string name="WndLibrary_Items_Btn">Objetos</string>
     <string name="WndLibrary_Levels_Btn">Mazmorra</string>
     <string name="WndLibrary_Mobs_Btn">Monstruos</string>
+    <string name="WndLocalModInstall_text">Selecciona el directorio desde el que instalar el mod.</string>
     <string name="WndLocalModInstall_title">Instalar mod desde directorio local</string>
     <string name="WndModInstall_InstallingMod">Instalando mod</string>
     <string name="WndModInstall_PleaseUpdate">Por favor, actualice Remixed Dungeon antes de instalar este mod</string>
@@ -2996,6 +3012,23 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
