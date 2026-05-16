@@ -690,6 +690,7 @@
     <string name="ElvenDagger_Name">矮人匕首</string>
     <string name="EncumbranceBuff_CharAct_3">在我使用%s之前，我需要鍛鍊我的力量。</string>
     <string name="EncumbranceBuff_CharAct_5">我現在無法承受%s的重量。</string>
+    <string name="EncumbranceBuff_Info">沒有足夠的力量來有效地使用 %s。</string>
     <string name="EncumbranceBuff_Name">負擔</string>
     <string name="EnslavedSoul_Desc">這個幽靈幾乎是透明的。即使它看起來就是一個頭骨，但有那麼幾個瞬間，你能看到上邊浮現出一幅充滿痛苦與折磨的面孔。</string>
     <string name="EnslavedSoul_Name">被奴役的靈魂</string>
@@ -2653,6 +2654,7 @@
     <string name="town_deco_armoronhanger_name">盔甲</string>
     <string name="town_deco_armorstand_leather_name">皮革護甲</string>
     <string name="town_deco_armorstand_plate_desc">據商人說，這套重型板甲曾經屬於一位偉大的戰士。</string>
+    <string name="town_deco_armorstand_plate_name">板甲</string>
     <string name="town_deco_armorstand_scale_desc">這套鱗甲的鍍金板看起來像新的一樣。</string>
     <string name="town_deco_armorstand_scale_name">鱗片護甲</string>
     <string name="town_deco_banner_desc">一面優雅的旗幟，上面的繡花描繪著這個小酒館的象徵標誌。</string>
@@ -2884,6 +2886,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

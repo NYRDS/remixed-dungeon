@@ -420,6 +420,7 @@
     <string name="Char_StaStunned">기절</string>
     <string name="Char_StaVision">비전</string>
     <string name="Char_Stole_1">%1$s가 %3$s로부터 %2$s를 훔쳤다!</string>
+    <string name="Char_Stole_2">%1 ha rubato %2 da %3!</string>
     <string name="Char_YouMissed">%1$s %2$s 당신의 공격</string>
     <string name="ChargrilledMeat_Info">괜찮은 스테이크처럼 구워졌다.</string>
     <string name="ChargrilledMeat_Name">익힌 고기</string>
@@ -448,6 +449,7 @@
     <string name="ClassArmor_NotEquipped">갑옷의 특별한 힘을 이용하기 위해서는 입고 있어야 합니다.</string>
     <string name="Claymore_Info">이 거대한 칼은 어떤 것이든 베어버릴 수 있을 것만 같습니다.</string>
     <string name="Claymore_Name">클레이모어</string>
+    <string name="CloakBuff_Info">어둠의 망토가 그림자 속에서 당신을 감추어 적들이 당신을 덜 보게 합니다.</string>
     <string name="CloakBuff_Name">은신함</string>
     <string name="CloakSpell_Name">은신</string>
     <string name="ClothArmor_Desc">이 가벼운 갑옷은 기본적인 방어력을 제공한다.</string>
@@ -2799,6 +2801,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 

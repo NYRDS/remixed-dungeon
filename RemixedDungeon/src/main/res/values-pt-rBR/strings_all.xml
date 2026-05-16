@@ -343,6 +343,7 @@
     <string name="Carcass_Devoured">\&quot;Você devorou o cadáver de %s!\&quot;</string>
     <string name="Carcass_DissectResult">Do %1$s você obtém %2$d colheita %3$s.</string>
     <string name="Carcass_Info">restos de %s totalmente morto.</string>
+    <string name="Carcass_Necromancy">Você ergueu um cadáver de %s!</string>
     <string name="Carcass_Necromancy_Failed">\&quot;Sua tentativa de levantar o cadáver de %s falhou!\&quot;</string>
     <string name="Carcass_TooFarToDissect">Você precisa estar mais perto para dissecar a carcaça.</string>
     <string name="Caves_TileDescBookshelf">Quem precisa de uma estante de livros em uma caverna?</string>
@@ -1155,6 +1156,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">PUXAR</string>
     <string name="Larva_Desc">Larva do Deus Antigo</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">larva de deus</string>
     <string name="Larva_Name_Objective">larva de deus</string>
     <string name="LastLevel_TileDescStatue">\@string/Halls_TileDescStatue</string>
@@ -2954,6 +2956,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 

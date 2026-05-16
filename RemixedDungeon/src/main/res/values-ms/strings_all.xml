@@ -1922,6 +1922,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpiderGuard_Name">pengawal lelabah</string>
     <string name="SpiderGuard_Name_Objective">pengawal lelabah</string>
     <string name="SpiderMindAmber_Desc">Lelabah ambar merupakan makhluk misteri yang sukar ditemui. Mereka mempunyai kuasa psikik seakan psi-lelabah tetapi lebih kuat berbanding saudaranya yang lain. Nama \&quot;ambar\&quot; merujuk pada warna selaput otak gergasinya.</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">lelabah ambar</string>
     <string name="SpiderMindAmber_Name_Objective">lelabah ambar</string>
     <string name="SpiderMind_Desc">Lelabah yang nampak lemah ini memiliki kuasa minda yang unik, membolehkan mereka kawal keseluruhan koloni. Psi-Lelabah berupaya mengawal apa jua makhluk hidup, tetapi mereka penakut.</string>
@@ -2523,6 +2524,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Wraith_Name_Objective">hantu</string>
     <string name="WrnExperimental_hint">Jika dunia yang pelik dan penuh onar ini terlalu hebat bagi anda, sila lumpuhkan tetapan tersebut menggunakan\nSkrin Permulaan-&gt;Pilihan-&gt;Permainan\nmenu dan mula permainan baharu atau muatkan simpanan lain.</string>
     <string name="WrnExperimental_moveTimeout">Masa gerak ditetapkan ke %d milisaat, fikir cepat!</string>
+    <string name="WrnExperimental_realtime">Mod realtime! diaktifkan: ini sekarang roguelike realtime, ketuk cepat atau mati.\nMahu semak inventori?\nSelamat mencuba semasa ketam doulok sedang meneliti perut anda.</string>
     <string name="Yog_Desc">Yog-Dzewa ialah Dewa Purba, satu entiti berkuasa dari dunia chaos. Berabad-abad dahulu, orang kerdil purba berjaya mengalahkan tentera setannya walaupun menang tipis, mereka gagal membunuh dewa ini. Sebaliknya, mereka mengurung dewa ini dalam suatu ruangan di bawah bandar mereka, dengan harapan dia terlalu lemah untuk bangkit semula.</string>
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
@@ -2792,6 +2794,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

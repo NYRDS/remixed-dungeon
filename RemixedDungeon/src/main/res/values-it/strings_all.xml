@@ -85,6 +85,7 @@
     <string name="ArmoredStatue_Name">statua animata</string>
     <string name="ArmoredStatue_Name_Objective">statua animata</string>
     <string name="Artifact_Limit">Puoi indossare solo 2 anelli alla volta.</string>
+    <string name="AttackDelay_Increased">Non puoi brandire il %s in questo modo. Colpi lenti, respiro pesante…</string>
     <string name="Attack_Cooldown">Ricarica attacco</string>
     <string name="Attack_Range">Distanza di attacco</string>
     <string name="AwarenessBuff_Name">Consapevolezza</string>
@@ -363,6 +364,7 @@
     <string name="ChaosCrystal_Prompt">Scegli il posto per impostare il Segno del Caos</string>
     <string name="ChaosCrystal_ScrollFused">Il Cristallo ha assorbito la runa incisa sulla pergamena, ed ora è un %s</string>
     <string name="ChaosCrystal_SelectForFuse">Scegli item da fondere con Cristallo del Caos</string>
+    <string name="ChaosCrystal_ShieldFused">Il cristallo si è fuso con lo scudo, assumendo la forma del caos.</string>
     <string name="ChaosCrystal_StaffFused">Il Cristallo assorbe la tua bacchetta, e ha preso la forma di una bacchetta</string>
     <string name="ChaosCrystal_SwordFused">Il Cristallo assorbe la vostra arma, e ha preso la forma di una spada</string>
     <string name="ChaosCrystal_Use">USA</string>
@@ -2735,6 +2737,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 
