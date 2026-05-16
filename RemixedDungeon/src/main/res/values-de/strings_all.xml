@@ -304,6 +304,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BloodTransfusion_Drained">Die Lebensessenz fließt von deinem Haustier in dich hinein.</string>
     <string name="BloodTransfusion_FullHP">Ihre Blut ist bereits auf voller Kapazität.</string>
     <string name="BloodTransfusion_Info">Zieht fast gesamtes Blut von einem Ziel, um dich selbst zu heilen. Ein dunkler Ritual des Opfers und der Überleben.</string>
+    <string name="BloodTransfusion_Name">Bluttransfusion</string>
     <string name="BodyArmorBuff_Info">Rüstung wird auf Kosten von Bewegungs-Geschwindigkeit erhöht.</string>
     <string name="BodyArmorBuff_Name">Körperrüstung</string>
     <string name="BodyArmorSpell_Info">Aktiviert ungenutzte Kraftreserven, um die Muskeln temporär stärker zu machen, was die Rüstung deutlich verstärkt, aber die Bewegungsgeschwindigkeit drastisch reduziert.</string>
@@ -363,6 +364,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Carcass_Info">Überreste eines völlig toten %s.</string>
     <string name="Carcass_Kick">Dieses %s ist völlig tot, keinen Grund es zu treten.</string>
     <string name="Carcass_Name">Überreste von %s</string>
+    <string name="Carcass_Necromancy">Nekromantie des Leichnams</string>
     <string name="Carcass_Necromancy_Failed">Dein Versuch, die Leiche von %s zu erwecken, ist gescheitert!</string>
     <string name="Carcass_TooFarToDissect">Du musst näher herangehen, um die Leiche zu sezieren.</string>
     <string name="Caves_TileDescBookshelf">Wer braucht denn ein Bücherregal in einer Höhle?</string>
@@ -654,6 +656,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="DieHardSpell_Info">Wird temporär deine Regeration erhöhen um dich sehr widerstandsfähig zu machen.</string>
     <string name="DieHardSpell_Name">Hartnäckig</string>
     <string name="Displacement_Txt">%s des Verdrängens</string>
+    <string name="DoctorArmor_Info">Die Plague Doctor Rüstung. Sie schützt den Träger vor Krankheiten und Gift.</string>
     <string name="DoctorArmor_Name">Doktorgewand</string>
     <string name="DoctorArmor_NotDoctor">Nur Pestärzte können diese Rüstung verwenden!</string>
     <string name="DoctorSpecial">Immunisiere den Helden gegen Gase, Schwäche und Desorientierung.</string>
@@ -994,6 +997,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HeroSubClass_DescSnip">_Scharfschützen_ sind dazu in der Lage, Schwachpunkte in der gegnerischen Rüstung zu erkennen und diese effektiv zu umgehen wenn sie eine Fernkampfwaffe nutzen.</string>
     <string name="HeroSubClass_DescWarL">Wenn ein _Hexenmeister_ einen Gegner tötet nimmt er seine Seele in sich auf. Sie heilt seine Wunden und sättigt ihn.</string>
     <string name="HeroSubClass_DescWard">_Bewahrer_ haben eine starke Bindung zu den Kräften der Natur. Sie besitzen die Fähigkeit, Tautropfen und Samen von Pflanzen zu sammeln. Zusätzlich erhalten sie eine temporäre Rüstungsverbesserung, wenn sie hohes Gras niedertreten.</string>
+    <string name="HeroSubClass_DescWitchdoctor">Ein mystischer Heiler mit dunkler Macht.</string>
     <string name="HeroSubClass_NameAssa">Assassine</string>
     <string name="HeroSubClass_NameBatM">Kampfmagier</string>
     <string name="HeroSubClass_NameBers">Berserker</string>
@@ -1542,7 +1546,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Besorgt fünf tote _Kobold Eismagier_! Ihre gefrorenen Körper halten den Schlüssel zum Entsperren der Geheimnisse ihrer eisigen Magie!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">Prolog 4.2</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Er starrt auf die zwei _Sukkuben_, ein glückseliges Lächeln breitet sich unter seiner Maske aus.* Herrlich! Wunderbar! Dies wird so viele… Möglichkeiten öffnen! *Er wendet sich Ihnen zu, seine Stimme ist dick vor Dankbarkeit… und etwas anderem.* Eure Bemühungen… sie werden nicht vergessen. Ich stehe in eurer tiefsten Schuld. *Sein Blick verweilt einen Moment zu lange auf den _Sukkuben_, bevor er sich in sein Labor zurückzieht und über das Entriegeln der Geheimnisse der Verführung murmelt.*</string>
-    <string name="PlagueDoctorQuest_5_1_InProgress">*Sein Geist schweift ab, während er spricht, seine Stimme wird leiser, kaum ein Flüstern.* Bringt mir zwei _Sukkuben_… lebendig. Ihre… Kraft… ist faszinierend.</string>
+    <string name="PlagueDoctorQuest_5_1_InProgress">Quest 5.1 in Arbeit</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Er stottert, seine Stimme bricht wie ein brüchiger Zweig*. A-ah, _Sukkuben_! Zwei… ja, zwei, lebendig! Es ist… ähm… für meine Forschung! Versteht ihr… ihre Pheromone… es ist entscheidend für das Verständnis des feinen Gleichgewichts von… ach… *Er bricht ab, seine knochige Hand greift nach oben, um nervös seine Maske zurechtzurücken, seine Augen huschen mit fiebrigem Eifer zu euch.* Ihre… Essenz… es ist ein Rätsel… ein wunderschönes, rätselhaftes Rätsel! *Er hustet heftig, versucht, seine Fassung wiederzuerlangen.* Ich verspreche, für das Beschaffen von zweien dieser… Kreaturen, werdet ihr meine ewige Dankbarkeit erhalten. Betrachtet es als… einen Segen des Wissens! Ja! Für das Wissen!</string>
     <string name="PlagueDoctorQuest_AllDone">Er stößt ein trockenes, keuchendes Lachen aus. \&quot;Eure Taten, sie haben Geheimnisse jenseits alles Maßen entschlüsselt! Das erworbene Wissen… es pulsiert in mir, eine Symphonie der Entdeckung. Aber Wissen,\&quot; fügt er hinzu, seine Stimme sinkt zu einem verschwörerischen Flüstern, \&quot;Wissen ist Macht. Und Macht… ach… das ist ein höchst berauschender Elixier.\&quot; Er starrt euch einen Moment eindringlich an, seine Amethystaugen brennen mit fiebrigem Eifer. \&quot;Vielleicht,\&quot; murmelt er, \&quot;kreuzen sich unsere Wege erneut. Denn es gibt immer noch viele… Mysterien… die noch entschlüsselt werden müssen.\&quot;</string>
     <string name="PlagueDoctor_Desc">Dieser bucklige Mann ist komplett mit Leder bezogen. Er riecht stark nach Medikamenten und ... Knoblauch?</string>
@@ -1928,7 +1932,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="Senior_Name">Älterer Mönch</string>
     <string name="Senior_Name_Objective">Älterer Mönch</string>
     <string name="ServantNPC_Desc">Ein sehr beschäftigter Kellner.</string>
-    <string name="ServantNPC_Gender">feminine</string>
+    <string name="ServantNPC_Gender">masculine</string>
     <string name="ServantNPC_Name">Kellner</string>
     <string name="ServantNPC_Name_Objective">Kellner</string>
     <string name="ServiceManNPC_Desc">Ein normaler Arbeiter in den lokalen Niederlassungen.</string>
@@ -2250,6 +2254,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="ToxicGas_Info">Eine grünliche Wolke Giftgas wirbelt hier. </string>
     <string name="ToxicGas_Info1">Du bist gestorben weil du giftige Luft eingeatmet hast...</string>
     <string name="ToxicGland_Info">Eine giftige Drüse, die von einem besiegten Feind geerntet wurde. Diese Drüsen sind mit starken Toxinen gefüllt und können in alchemistischen Prozessen verwendet werden.</string>
+    <string name="ToxicGland_Name">Giftige Drüse</string>
     <string name="TrapWnd_Step">Willst du wirklich auf diese Falle treten? Du könntest womöglich sterben.</string>
     <string name="TrapWnd_Title">Falle</string>
     <string name="TreacherousSpirit_Desc">Diese monströse Kreatur sieht wie eine Wolke lebender Dunkelheit aus. Sein lidloses Auge auf dich gerichtet, pulsiert es bei jeder deiner Bewegungen.</string>
@@ -2449,6 +2454,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndDonate_silverDonateText2">Entfernt auch die Werbung in allen Spielmodi und macht die Jägerin von Anfang an verfügbar.</string>
     <string name="WndDontLikeAds_NotThisTime">Nicht dieses Mal.</string>
     <string name="WndError_Title">FEHLER</string>
+    <string name="WndFortuneTeller_IdentifyAll">Alle identifizieren</string>
     <string name="WndFortuneTeller_Instruction">Ich kann Geheimnisse hinter Gegenständen enthüllen, wenn du es willst.\nEine Identifikation wird dich %d Münzen kosten.</string>
     <string name="WndFortuneTeller_No_Item">Pass auf, du willst dein Geld doch nicht verschwenden, oder? Du hast keine unidentifizierten Gegenstände in deinem Inventar.</string>
     <string name="WndFortuneTeller_Title">Wahrsagerin.</string>
@@ -2972,6 +2978,17 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

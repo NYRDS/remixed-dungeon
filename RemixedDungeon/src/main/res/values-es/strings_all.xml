@@ -358,6 +358,7 @@
     <string name="Candy_Warning_2">Realmente tenias muchos. Su panza duele por comer tantos dulces.</string>
     <string name="Capotain_Info">Un sombrero alto de ala pequeña. Por lo general lo usan los puritanos, pero no se debe de ser religioso para usarlo. Por alguna razón, tiene una placa de identificación, dice \&quot;Salomón\&quot;.</string>
     <string name="Capotain_Name">Tricornio</string>
+    <string name="Carcass_Devoured">Devorado</string>
     <string name="Carcass_DissectFailed">Diseccionas el %s pero no encuentras nada de valor.</string>
     <string name="Carcass_DissectMessage">Disecas la carroña y obtienes un %s.</string>
     <string name="Carcass_DissectResult">Del %1$s obtienes %2$d %3$s.</string>
@@ -428,6 +429,7 @@
     <string name="ChaosHelmet_Name">Casco del caos</string>
     <string name="ChaosShield_desc">El Escudo del Caos es el resultado de fundir un Cristal del Caos con un escudo ordinario, causándolo a manifestar efectos caóticos aleatorios al bloquear exitosamente.</string>
     <string name="ChaosShield_name">Escudo del Caos</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">¡Una vara imbuida por el Poder del Caos! ¿Qué otra cosa puede soñar o temer un mago?</string>
     <string name="ChaosStaff_Name">vara de caos</string>
     <string name="ChaosSword_Gender">masculine</string>
@@ -658,6 +660,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="DieHardSpell_Name">Duro de matar</string>
     <string name="Displacement_Txt">%s de desplazamiento</string>
     <string name="DoctorArmor_Info">Esta armadura de médico de la peste permite usar la habilidad «Nube de miasma», que libera un gas nocivo que envenena, debilita y desorienta a los enemigos. El médico, protegido por su máscara, es inmune a estos efectos.</string>
+    <string name="DoctorArmor_Name">Armadura del Doctor</string>
     <string name="DoctorArmor_NotDoctor">¡Solo los médicos de la peste pueden usar esta armadura!</string>
     <string name="DoctorSpecial">Especial</string>
     <string name="DogeMask_Info">¿Alguna vez te has querido disfrazar del famoso Doge? ¡Ahora es tu oportunidad! \n¡Con esta máscara! ¡Wow!</string>
@@ -772,6 +775,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Fadeleaf_Desc">Tocar una Hojaesfuma transportará a cualquier critatura a un lugar al azar del nivel actual. </string>
     <string name="Fadeleaf_Name">Hojaesfuma</string>
     <string name="FetidRat_Desc">Esta rata marsupial es mucho mas grande que otras. Está rodeada por una nube fétida.</string>
+    <string name="FetidRat_Gender">masculine</string>
     <string name="FetidRat_Name">rata fétida</string>
     <string name="FetidRat_Name_Objective">rata fétida</string>
     <string name="Fez_Info">Es un tocado de fieltro en forma de cono truncado, esta hecho de fieltro rojo con una borla pegada en la tapa. Y no, no hace un mundo de 3 dimensiones.</string>
@@ -858,6 +862,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Gnoll_BecomeGuardianDesc">Conviértete en guardián</string>
     <string name="Gnoll_BecomeWitchdoctorDesc">Conviértete en médico brujo</string>
     <string name="Gnoll_Desc">Los gnolls son humanoides con forma de hiena. Viven en las alcantarillas y mazmorras, aventurándose a la superficie de vez en cuando. Los exploradores son bastante comunes, y no son tan fuertes como los brutos ni tan listos como los chamanes. </string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">explorador gnoll</string>
     <string name="Gnoll_Name_Objective">explorador gnoll</string>
     <string name="Gold_Collect">Recoge monedas de oro para gastarlas luego en una tienda.</string>
@@ -938,6 +943,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Hedgehog_Name">erizo</string>
     <string name="HeroClass_Doctor">Médico de la Peste</string>
     <string name="HeroClass_Elf">elfo</string>
+    <string name="HeroClass_ElfPerks_0">Perks del elfo</string>
     <string name="HeroClass_ElfPerks_1">Los elfos son inmunes al enraizado.</string>
     <string name="HeroClass_ElfPerks_2">Los elfos comienzan un arco de madera mejorado y flechas.</string>
     <string name="HeroClass_ElfPerks_3">Los elfos son buenos con los arcos y son ágiles.</string>
@@ -1102,6 +1108,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Imp_Monks1">¿Eres un aventurero? ¡Me encantan los aventureros! Siempre puedes confiar en ellos si quieres matar algo. ¿Tengo razón? Por una recompensa, claro ;)\nEn mi caso quiero acabar con estos _monjes_. Verás, voy a empezar un pequeño negocio aquí, pero esos lunáticos nunca compran nada y espantan a otros clientes. Así que por favor, mata a...digamos _8 de ellos_ y te daré una recompensa.</string>
     <string name="Imp_Monks2">¡Oh, sigues vivo! Ya sabía yo que tu kung-fu era fuerte!  ;) Pero no te olvides de coger esos simbolos de los monjes.</string>
     <string name="Imp_Name">diablillo ambicioso</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Info">La punta de cada uno de estos dardos está diseñada para pegarse a su objetivo mientras que los componentes inestables que lleva en la cola explotan en brillantes llamas.</string>
     <string name="IncendiaryDart_Name">dardo incendiario</string>
     <string name="InnKeeperNPC_Desc">El encargado de la posada está orgulloso de sí mismo.</string>
@@ -1181,6 +1188,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Knuckles_Info">Un pedazo de hierro moldeado para ajustarse alrededor de los nudillos.</string>
     <string name="Knuckles_Name">nudillera</string>
     <string name="KoboldIcemancer_Desc">Los kobold - magos del hielo, eran la élite de su sociedad. Guerreros, magos e importantes científicos. Los magos del hielo antiguos, dominaron el arte del darle forma al hielo, creando mecanismos sofisticados con hielo y  reforzándolos con magia.</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">%s\'s un proyectil helado te mató...</string>
     <string name="KoboldIcemancer_Name">kobold - mago del hielo.</string>
     <string name="KoboldIcemancer_Name_Objective">kobold - mago del hielo.</string>
@@ -1552,6 +1560,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PlagueDoctorQuest_4_2_InProgress">¡Recupera cinco _Kobolds Icedemancers_ muertos! Sus cuerpos congelados guardan la clave para desbloquear los secretos de su gélida magia.</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">Prólogo 4.2</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Él mira fijamente a las dos _súcubos_, con una sonrisa beatífica extendiéndose bajo su máscara.* ¡Espléndido! ¡Magnífico! Esto desbloqueará tantas... posibilidades! *Se vuelve hacia ti, su voz gruesa de gratitud... y algo más.* Tus esfuerzos... no serán olvidados. Le debo las gracias más profundas. *Su mirada se demora en las _súcubos_ un momento demasiado largo, antes de retirarse a su laboratorio, murmurando sobre cómo desbloquear los secretos de la seducción.*</string>
+    <string name="PlagueDoctorQuest_5_1_InProgress">Misión 5.1 en progreso</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Él tartamudea, su voz cruje como una rama quebradiza*.  A-ah, _¡súcubos_! ¡Dos… sí, dos, vivas! Es… ejem… para mi investigación. Verá… sus feromonas… son cruciales para comprender el delicado equilibrio de… ah… *Se interrumpe, su mano huesuda se eleva nerviosamente para ajustar su máscara, sus ojos se dirigen hacia usted con una intensidad febril.* Su… esencia… es un enigma… ¡un enigma hermoso y enigmático! *Tose violentamente, intentando recuperar la compostura.* Se lo prometo, por traerme dos de estas… criaturas… tendrá mi eterna gratitud. ¡Piénselo como un… un regalo al conocimiento! ¡Sí! ¡Al conocimiento!</string>
     <string name="PlagueDoctorQuest_AllDone">*Él deja escapar una risa seca y jadeante.* \&quot;¡Tus hazañas han desbloqueado secretos más allá de toda medida! El conocimiento adquirido... late dentro de mí, una sinfonía de descubrimiento. Pero el conocimiento,\&quot; añade, bajando la voz a un susurro conspiratorio, \&quot;el conocimiento es poder. Y el poder... ah... ese es un elixir más embriagador.\&quot; Te mira fijamente por un momento, sus ojos amatista ardiendo con una intensidad febril. \&quot;Quizás,\&quot; murmura, \&quot;nuestros caminos se crucen de nuevo. Porque todavía hay muchos... misterios... por desvelar.\&quot;</string>
     <string name="PlagueDoctor_Desc">Este hombre jorobado está vestido completamente con cuero. Huele fuertemente a medicamentos y ... ¿ajo?</string>
@@ -1942,6 +1951,7 @@ otro lugar del nivel.</string>
     <string name="Senior_Name">alto monje</string>
     <string name="Senior_Name_Objective">alto monje</string>
     <string name="ServantNPC_Desc">Un servidor de la posada muy ocupado.</string>
+    <string name="ServantNPC_Gender">masculine</string>
     <string name="ServantNPC_Name">servidor de la posada</string>
     <string name="ServantNPC_Name_Objective">servidor de la posada</string>
     <string name="ServiceManNPC_Desc">Un trabajador de los establecimientos locales.</string>
@@ -2270,6 +2280,7 @@ otro lugar del nivel.</string>
     <string name="TownsfolkSilentNPC_Name_Objective">ciudadano</string>
     <string name="ToxicGas_Info">Una nube verdosa de gas tóxico flota en el aire.</string>
     <string name="ToxicGas_Info1">Has muerto por el gas tóxico...</string>
+    <string name="ToxicGland_Info">Glándula tóxica</string>
     <string name="TrapWnd_Step">¿Realmente quieres pisar esta trampa? Probablemente mueras.</string>
     <string name="TrapWnd_Title">Trampa</string>
     <string name="TreacherousSpirit_Desc">Esta monstruosa criatura parecida a una nube oscura viviente. Su ojo sin párpado mirándote, palpitando con cada uno de tus movimientos.</string>
@@ -3012,6 +3023,17 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
