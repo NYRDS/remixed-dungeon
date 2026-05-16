@@ -45,9 +45,9 @@ public class FileSystem {
 	}
 
 	static public FileHandle getInternalStorageFileHandle(String fileName) {
-		FileHandle fileHandle = null;
+		FileHandle fileHandle;
 		for(String path : getAllResPaths()) {
-			fileHandle = Gdx.files.internal(path+fileName);
+			fileHandle = Gdx.files.absolute(path+fileName);
 			if(fileHandle.exists()) {
 				return fileHandle;
 			}
@@ -61,7 +61,7 @@ public class FileSystem {
 		return new String[]{
 				"data/mods/" + ModdingBase.activeMod() + "/",
 				"data/mods/Remixed/",
-				"mods/" + ModdingBase.activeMod() + "/",
+				FileSystem.getUserDataPath("mods/" + ModdingBase.activeMod() + "/"),
 				"mods/Remixed/",
 				"../assets/",
 				"../d_assets/",
@@ -72,7 +72,7 @@ public class FileSystem {
 
 	private static String[] getModResPaths() {
 		return new String[]{
-				"mods/" + ModdingBase.activeMod() + "/"
+				FileSystem.getUserDataPath("mods/" + ModdingBase.activeMod() + "/")
 		};
 	}
 
@@ -80,7 +80,7 @@ public class FileSystem {
 	static public String[] listResources(String resName) {
 		Set<String> resList = new HashSet<>();
 		for (String path : getAllResPaths()) {
-			FileHandle fileHandle = Gdx.files.internal(path + resName);
+			FileHandle fileHandle = Gdx.files.absolute(path + resName);
 			FileHandle[] fileHandles = fileHandle.list(file -> true);
 			for (FileHandle file : fileHandles) {
 				resList.add(file.name());
@@ -102,7 +102,7 @@ public class FileSystem {
 				"../l10ns/",
 				"./",
 		}) {
-			fileHandle = Gdx.files.internal(path+fileName);
+			fileHandle = Gdx.files.absolute(path+fileName);
 			if(fileHandle.exists()) {
 				return fileHandle;
 			}
@@ -150,17 +150,17 @@ public class FileSystem {
 	static public OutputStream getOutputStream(String filename) throws FileNotFoundException {
 		filename = getUserDataPath(SAVES_PATH) + filename;
 
-		FileHandle fileHandle = Gdx.files.local(filename);
+		FileHandle fileHandle = Gdx.files.absolute(filename);
 		if(!fileHandle.parent().exists()) {
 			fileHandle.parent().mkdirs();
 		}
 
-		return new FileOutputStream(Gdx.files.local(filename).file());
+		return new FileOutputStream(Gdx.files.absolute(filename).file());
 	}
 
 	static public InputStream getInputStream(String filename) throws FileNotFoundException {
 		filename = getUserDataPath(SAVES_PATH) + filename;
-		return new FileInputStream(Gdx.files.local(filename).file());
+		return new FileInputStream(Gdx.files.absolute(filename).file());
 	}
 
 	static public File getExternalStorageFile(String fileName) {

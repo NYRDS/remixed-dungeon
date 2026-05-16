@@ -204,7 +204,7 @@ public class BitmapData {
                 Pixmap pixmap = new Pixmap(bmp);
                 // Log the path where the file will be saved
                 // PUtil.slog("bitmap","Bitmap saving to: " + path); // Suppressing verbose logging
-                PixmapIO.writePNG(Gdx.files.local(path), pixmap);
+                PixmapIO.writePNG(Gdx.files.absolute(path), pixmap);
                 pixmap.dispose();
             }
         } catch (Exception e) {

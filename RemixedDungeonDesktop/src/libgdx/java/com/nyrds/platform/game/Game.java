@@ -270,7 +270,7 @@ public class Game implements ApplicationListener, InputProcessor {
     }
 
     public static boolean deleteFile(String path) {
-        FileHandle file = Gdx.files.local(path);
+        FileHandle file = Gdx.files.absolute(path);
         if (file.exists()) {
             file.delete();
             return true;
@@ -288,7 +288,7 @@ public class Game implements ApplicationListener, InputProcessor {
 
     public InputStream openFileInput(String bonesFile) {
         try {
-            return Gdx.files.local(bonesFile).read();
+            return Gdx.files.absolute(bonesFile).read();
         } catch (Exception e) {
             return null;
         }
@@ -302,7 +302,7 @@ public class Game implements ApplicationListener, InputProcessor {
 
         long timestamp = System.currentTimeMillis();
 
-        PixmapIO.writePNG(Gdx.files.local("screenshot" + timestamp + ".png"), pixmap, Deflater.DEFAULT_COMPRESSION, true);
+        PixmapIO.writePNG(Gdx.files.absolute("screenshot" + timestamp + ".png"), pixmap, Deflater.DEFAULT_COMPRESSION, true);
 
         pixmap.dispose();
     }

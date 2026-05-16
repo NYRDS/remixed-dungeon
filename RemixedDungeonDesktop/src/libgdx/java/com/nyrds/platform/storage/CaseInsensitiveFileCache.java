@@ -32,7 +32,7 @@ public class CaseInsensitiveFileCache {
 
     private void cacheFiles(String... rootPaths) {
         for (String rootPath : rootPaths) {
-            FileHandle rootDir = Gdx.files.internal(rootPath);
+            FileHandle rootDir = Gdx.files.absolute(rootPath);
             if (rootDir.exists() && rootDir.isDirectory()) {
                 cacheFilesRecursive(rootDir, rootDir.path());
             } else {

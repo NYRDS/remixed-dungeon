@@ -25,7 +25,7 @@ public class SaveUtils {
 	private static final String AUTO_SAVE = "autoSave";
 
 	static FileHandle local(String filename) {
-		return Gdx.files.local(FileSystem.getUserDataPath(BuildConfig.SAVES_PATH) + File.separator + filename);
+		return Gdx.files.absolute(FileSystem.getUserDataPath(BuildConfig.SAVES_PATH) + File.separator + filename);
 	}
 
 	static private boolean hasClassTag(HeroClass cl, String fname) {
