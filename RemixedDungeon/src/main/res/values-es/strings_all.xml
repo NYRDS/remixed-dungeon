@@ -668,6 +668,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="DonateButton_pleaseDonate">por favor, considera donar</string>
     <string name="DonateButton_thanks">¡Gracias por tu apoyo!</string>
     <string name="DreadKnight_Desc">Un caballero aterrador es un viejo guerrero, que nunca peleo de forma justa ni fue bueno en vida. Por sus pecados fue maldecido a ser un no-muerto por la eternidad. Siendo atormentado con el dolor y sufrimiento de quienes fueron sus victimas.</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">caballero aterrador</string>
     <string name="DreadKnight_Name_Objective">caballero aterrador</string>
     <string name="Dreamweed_Desc">Al tocar una Hierbasueño, esta segrega una brillante nube de gas desconcertante.</string>
@@ -2469,8 +2470,10 @@ otro lugar del nivel.</string>
     <string name="WndClass_Mastery">Maestría</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Copiar Dirección</string>
+    <string name="WndCryptoDonate_currency">Moneda</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">¡Puedes apoyar el desarrollo de Remixed Dungeon enviando donaciones de criptomonedas a las direcciones que aparecen a continuación. ¡Gracias por tu generoso apoyo!</string>
+    <string name="WndCryptoDonate_openWallet">Abrir billetera</string>
     <string name="WndCryptoDonate_supportDev">Apoyar al Desarrollador</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
@@ -2569,6 +2572,7 @@ otro lugar del nivel.</string>
     <string name="WndLibrary_Items_Btn">Objetos</string>
     <string name="WndLibrary_Levels_Btn">Mazmorra</string>
     <string name="WndLibrary_Mobs_Btn">Monstruos</string>
+    <string name="WndLocalModInstall_pick">Seleccionar</string>
     <string name="WndLocalModInstall_text">Selecciona el directorio desde el que instalar el mod.</string>
     <string name="WndLocalModInstall_title">Instalar mod desde directorio local</string>
     <string name="WndModInstall_InstallingMod">Instalando mod</string>
@@ -2577,6 +2581,7 @@ otro lugar del nivel.</string>
     <string name="WndModSelect_AreYouSure">Borrar mod: %s, estas seguro?</string>
     <string name="WndModSelect_ReallyDelete">borrar de verdad?</string>
     <string name="WndModsDisclaimer_install">Instalar mod local</string>
+    <string name="WndModsDisclaimer_manage">Gestionar</string>
     <string name="WndModsDisclaimer_title">Mods</string>
     <string name="WndMovieTheatre_Bye">¡Vuelve cuando quieras, siempre estaremos felices de verte!</string>
     <string name="WndMovieTheatre_Instruction">¡Saludos y bienvenidos a nuestra sala de cine! Brindamos un servicio especial, donde puede ver una película especial llamada anuncio de forma gratuita. ¡Y si lo miras todo, serás recompensado con %d monedas de oro.</string>
@@ -2718,6 +2723,7 @@ otro lugar del nivel.</string>
     <string name="Wnd_Button_No">No</string>
     <string name="Wnd_Button_Ok">Ok</string>
     <string name="Wnd_Button_Yes">Si</string>
+    <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Este simple arco de madera podría llegar a ser útil, una vez encuentres algunas flechas.</string>
     <string name="WoodenBow_Name">arco de madera</string>
     <string name="WoodenCrossbow_Gender">masculine</string>
@@ -2757,6 +2763,7 @@ otro lugar del nivel.</string>
     <string name="YogsHeart_Name">corazón de Yog</string>
     <string name="YogsHeart_Name_Objective">Corazón de Yog</string>
     <string name="YogsTeeth_Desc">La enorme boca del Antiguo Dios llena de afilados dientes. Un apropiada manifestación de su gran deseo de destruir y devorar a todos.</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">dientes de Yog</string>
     <string name="YogsTeeth_Name_Objective">Dientes de Yog</string>
     <string name="ZombieGnoll_Desc">El retorcido y quebrado cuerpo de un gnoll zombi, no tiene forma humanoide o de hiena. Solo es un montón de carne podrida y huesos llenos de deseo de matar y comer.</string>
@@ -3023,6 +3030,16 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
