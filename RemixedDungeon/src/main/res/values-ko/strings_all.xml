@@ -504,6 +504,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">이 개조된 쇠뇌는 나무 쇠뇌에 비해서 더 효율적인 도구임이 입증된 바 있다.</string>
     <string name="CompositeCrossbow_Name">합성 쇠뇌</string>
+    <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">이 합성궁에서 발사된 화살은 나무 활에서 발사하는 것 만큼 빠르진 않지만 대신 높은 데미지와 향상된 명중률을 가집니다.</string>
     <string name="CompoundBow_Name">합성궁</string>
     <string name="ConcreteBlock_Description">이 블록은 %d만큼의 힘을 요구하는 것 같습니다.</string>
@@ -662,6 +663,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="EncumbranceBuff_Info">%s를 효과적으로 사용하기에 힘이 부족합니다.</string>
     <string name="EncumbranceBuff_Name">과부하</string>
     <string name="EnslavedSoul_Desc">당신은 이 유령의 속을 꿰뚫어 볼 수 있습니다. 해골같은 모습을 하고 있으나 가끔씩 순간적으로 해골 대신 고통과 괴로움으로 가득찬 얼굴이 나타납니다.</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name">노예화된 영혼</string>
     <string name="EnslavedSoul_Name_Objective">노예화된 영혼</string>
     <string name="Entanglement_Txt">속박 %s</string>
@@ -1836,6 +1838,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">방패 놀 정예병</string>
     <string name="Shielded_Name_Objective">방패 놀 정예병</string>
+    <string name="ShootInEye_Name">눈에 쏘기</string>
     <string name="Shopkeeper_Buy">구매할 아이템을 선택하세요.</string>
     <string name="Shopkeeper_BuyPrompt">어디, 물건 한 번 봅시다</string>
     <string name="Shopkeeper_Desc">이 통통한 남자는 던전보다는 어딘가 큰 도시의 상가나 있을 법하지만, 그가 제시하는 가격을 들어보면 왜 여기서 장사하는 걸 더 좋아하는지 이해가 된다.</string>
@@ -2796,6 +2799,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 

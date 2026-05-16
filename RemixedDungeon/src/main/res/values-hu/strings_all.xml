@@ -1,5 +1,6 @@
 <resources>
     <string name="AC_Devour">Felfalás</string>
+    <string name="AC_Dissect">Boncolás</string>
     <string name="AC_Kick">Rúgás</string>
     <string name="AC_Necromancy">Nekromácia</string>
     <string name="Abilities_Common">Egyszerű Varázslatok</string>
@@ -297,6 +298,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Brute_Name">gnoll nehézfiú</string>
     <string name="Brute_Name_Objective">gnoll nehézfiú</string>
     <string name="Brute_StaEnraged">feldühödött</string>
+    <string name="BurningBuff_Info">A testet tüzes lángok borítják!</string>
     <string name="BurningBuff_Name">Ég</string>
     <string name="BurningFist_Desc">Az Öreg Isten Lángoló Ökle</string>
     <string name="BurningFist_Gender">masculine</string>
@@ -2281,6 +2283,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndChooseWay_Message">Melyik utat fogod követni?</string>
     <string name="WndClass_Mastery">Kiválóság</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+    <string name="WndCryptoDonate_currency">Valuta</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_openWallet">Nyissa meg a pénztárcát</string>
     <string name="WndCryptoDonate_supportDev">Támogasd a fejlesztőt</string>
@@ -2802,6 +2805,10 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
 
 
 

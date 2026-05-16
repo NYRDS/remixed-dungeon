@@ -543,6 +543,7 @@
     <string name="ComboBuff_Info">你的下一次攻击将是一次二连击</string>
     <string name="ComboBuff_Name">连击</string>
     <string name="Combo_Combo">%d连击！</string>
+    <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">带有铁箭头的木质箭，很常见。</string>
     <string name="CommonArrow_Name">箭矢</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
@@ -845,6 +846,7 @@
     <string name="GoldenKey_Info">这把金钥匙的凸凹纹路很精密，也许能解开些宝箱的锁？</string>
     <string name="GoldenKey_Name">金钥匙</string>
     <string name="GoldenStatue_Desc">虽然难以置信，但这尊瑰丽的雕像不仅仅是个装饰品，而是对掉以轻心的冒险者怀有深深恶意的生物。你发誓当你第一眼看到它时，那把_%s_只是它手臂的一部分。</string>
+    <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">黄金雕像</string>
     <string name="GoldenStatue_Name_Objective">黄金雕像</string>
     <string name="GoldenSword_Gender">masculine</string>
@@ -2958,6 +2960,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

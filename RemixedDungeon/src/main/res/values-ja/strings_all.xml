@@ -1046,6 +1046,7 @@
     <string name="IceCaves_TileHighGrass">凍りついた高い草</string>
     <string name="IceCaves_TileStatue">凍りついたノール</string>
     <string name="IceElemental_Desc">ダンジョンに存在するすべてのエレメンタルの中で、氷のエレメンタルは強力とは言い難いが、最も危険なエレメンタルの一つと言える。彼らの体から放たれる霜のオーラは、どんな敵でも動きを鈍らせることができる。</string>
+    <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">氷のエレメンタル</string>
     <string name="IceElemental_Name_Objective">氷のエレメンタル</string>
     <string name="IceGuardianCoreModule_Info">魔法の氷で作られた複雑な構造だ。この不思議な発明の中には、光る石が置かれている。</string>
@@ -3004,6 +3005,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

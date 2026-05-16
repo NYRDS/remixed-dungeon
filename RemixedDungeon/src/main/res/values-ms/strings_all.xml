@@ -58,6 +58,7 @@
     <string name="Amulet_ACEnd">PENGEMBARAAN BERAKHIR</string>
     <string name="Amulet_Info">Azimat Yendor merupakan artifak terkenal yang sangat berkuasa tetapi tidak diketahui asal usulnya. Dikatakan azimat ini berupaya memenuhi apa jua keinginan pemiliknya dengan syarat dia mampu \&quot;memujuk\&quot; azimat tersebut merealisasikan hasratnya.</string>
     <string name="Amulet_Name">Azimat Yendor</string>
+    <string name="Anesthesia_Cast">%s terlelap ke dalam tidur yang mendalam dan tanpa mimpi.</string>
     <string name="Anesthesia_Info">Menghasilkan tidur yang mendalam dan tidak wajar pada sasaran anda. Bahkan serangan yang paling keganasan tidak akan membangunkan mereka dari tidur ini.</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">Simbol purba keabadian yang dapat mengembalikan nyawa selepas kematian. Jika dibangkitkan semula semua item yang dimiliki akan hilang kecuali yang masih dipakai.</string>
@@ -651,6 +652,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Dungeon_Tips_7">Rasa lapar tidak menyakitkan, tetapi kebuluran amat menyakitkan.</string>
     <string name="Dungeon_Tips_8">Serangan hendap memberi peluang lebih baik untuk berjaya. Contohnya, anda boleh serang hendap musuh anda di balik pintu sekiranya anda tahu dia semakin hampir.</string>
     <string name="Dungeon_Tips_9">Jangan biarkan Tengu keluar!</string>
+    <string name="Dungeon_saveIoError">Apabila cuba untuk mencipta fail simpan:</string>
     <string name="DwarfToken_Info">Ramai orang kerdil dan beberapa penciptaan bersaiz besar mereka tersemat kepingan kecil logam ini tetapi tidak diketahui tujuannya. Mungkin sebagai hiasan ataupun sejenis ID atau pengenalan. Orang kerdil ini memang bangsa yang pelik.</string>
     <string name="DwarfToken_Name">token orang kerdil</string>
     <string name="EarthElemental_Desc">Keunsuran tanah adalah jasad tanah yang diperkasakan dengan tenaga alam.</string>
@@ -2065,6 +2067,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="TownShopkeeper_Objective">pekedai</string>
     <string name="TownsfolkMovieNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal.</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
+    <string name="TownsfolkMovieNPC_Message">Tahu tentang perkhidmatan istimewa yang disediakan oleh \&quot;bioskop\&quot; itu? Terlalu buruk mereka meminta sesuatu yang eksotik yang dipanggil \&quot;Internet\&quot;, saya tidak pernah mendengar tentang perkara sedemikian.</string>
     <string name="TownsfolkMovieNPC_Name">penduduk pekan</string>
     <string name="TownsfolkMovieNPC_Name_Objective">penduduk pekan</string>
     <string name="TownsfolkNPC_Desc">Orang tempatan. Walaupun nampak macam biasa, tetapi pakaiannya kelihatan mahal</string>
@@ -2789,6 +2792,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

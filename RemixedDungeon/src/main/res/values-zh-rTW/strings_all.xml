@@ -1079,6 +1079,7 @@
     <string name="ItemSprite_Info1">掉落至%1$.1f %2$.1f</string>
     <string name="Item_ACAlchemy">煉金</string>
     <string name="Item_ACDrop">扔下</string>
+    <string name="Item_ACPickup">拾起</string>
     <string name="Item_ACThrow">投擲</string>
     <string name="Item_DirThrow">選擇投擲目的地</string>
     <string name="Item_Info">鐵匠</string>
@@ -2043,6 +2044,7 @@
     <string name="Statue_Name">活化石像</string>
     <string name="Statue_Name_Objective">活化石像</string>
     <string name="Stench_Txt">惡臭 %s</string>
+    <string name="StoneBloodBuff_Info">血液变成石头，与附近的墙壁融为一体，使穿越它们变得容易得多，但代价是什么。</string>
     <string name="StoneBloodBuff_Name">石中血</string>
     <string name="Str_lose">-1力量</string>
     <string name="StrongShield_desc">這個矩形盾牌鍍有青銅片並飾有彩色布料。它明顯更重，但能格擋更多傷害。</string>
@@ -2882,6 +2884,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

@@ -172,6 +172,7 @@
     <string name="Badges_StrengthAttained4">19 punti di forza raggiunti</string>
     <string name="Badges_StrengthAttained5">21 punti di Forza raggiunti</string>
     <string name="Badges_Supporter">Grazie per il tuo sostegno!</string>
+    <string name="Badges_ThisIsSparta">Questo è Sparta!!!</string>
     <string name="Badges_Victory">Amuleto di Yendor ottenuto</string>
     <string name="Badges_Yasd">Morte a causa di fuoco, veleno, gas velenoso &amp;amp; fame</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa ucciso</string>
@@ -2488,6 +2489,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WoodenShield_desc">Uno scudo di legno fatto in modo grossolano è lo scudo più semplice disponibile. È rotondo e può bloccare occasionalmente alcuni danni.</string>
     <string name="WoodenShield_name">Scudo di Legno</string>
     <string name="Worm_Desc">Non vi è alcun modo di sapere quanto è grande questo verme. Parzialmente emerge dal pavimento, il corpo di quella creatura è coperto in grumi di carne marcia e melma. mandibole giganti ti dà una chiara idea di come quel mostro fa la sua strada attraverso la superficie.</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">Verme</string>
     <string name="Worm_Name_Objective">Verme</string>
     <string name="Wraith_Defense">eluso</string>
@@ -2496,6 +2498,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="Wraith_Name">Spettro</string>
     <string name="Wraith_Name_Objective">Spettro</string>
     <string name="WrnExperimental_hint">Se questo mondo strano e contorto è troppo duro per te, disabilita queste opzioni usando\nSchermata iniziale-&gt;Opzioni-&gt;Gameplay\nmenu e inizia una nuova partita o carica un altro salvataggio.</string>
+    <string name="WrnExperimental_moveTimeout">Timeout di movimento impostato a %d millisecondi, sii veloce!</string>
     <string name="WrnExperimental_realtime">Modalità Realtime! abilitata: ora questo è un roguelike in tempo reale, premi velocemente o muori.\nVuoi controllare l\'inventario?\nBuona fortuna nel farlo mentre il granchio delle fognature sta controllando le tue viscere.</string>
     <string name="WrnExperimental_title">Opzioni sperimentali attivate!</string>
     <string name="Yog_Desc">Yog-Dzewa è un vecchio dio,una potente entità dei regni del caos.Un secolo fa,gli antichi nani hanno vinto a malapena la guerra contro il suo esercito di demoni,ma non erano in grado di uccidere il Dio stesso. Invece,lo hanno imprigionato nelle sale sotto la loro città,credendo che fosse troppo debole per non risalire più.</string>
@@ -2732,6 +2735,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 
