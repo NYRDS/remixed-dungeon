@@ -773,6 +773,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="GoldenKey_Info">이 황금 열쇠는 작고 복잡한 홈이 있습니다. 아마 어떤 상자의 잠금 장치를 열 수 있지 않을까요?</string>
     <string name="GoldenKey_Name">황금 열쇠</string>
     <string name="GoldenStatue_Desc">믿기 어렵겠지만, 이 웅장한 조각상은 전시품이 아니지만 순진한 모험가들을 기다리는 사악한 생명체입니다. 언뜻 봐도 이 조각상의 팔에는  _%s_이 끼워져 있는 것을 볼 수 있습니다.</string>
+    <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">황금 조각상</string>
     <string name="GoldenStatue_Name_Objective">황금 조각상</string>
     <string name="GoldenSword_Info">보통 금과 같은 무른 금속으로 만들어진 무기는 장식으로만 쓰입니다. 하지만 이 칼은 여러가지를 꽤나 잘 베어버릴 수 있어 보입니다.</string>
@@ -1141,6 +1142,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Level_TileOpenDoor">열린 문</string>
     <string name="Level_TileParalyticTrap">마비가스 함정</string>
     <string name="Level_TilePedestal">받침대</string>
+    <string name="Level_TilePileOfStones">돌 더미</string>
     <string name="Level_TilePoisonTrap">맹독다트 함정</string>
     <string name="Level_TileSign">표지판</string>
     <string name="Level_TileStatue">조각상</string>
@@ -2463,6 +2465,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndSettings_Brightness">밝기</string>
     <string name="WndSettings_ClassicFont">클래식 폰트</string>
     <string name="WndSettings_ExperementalFont">새 폰트</string>
+    <string name="WndSettings_FpsLimit">FPS 제한</string>
     <string name="WndSettings_GameplaySettings">게임 플레이</string>
     <string name="WndSettings_Handedness">버튼 위치 변경</string>
     <string name="WndSettings_Immersive">실감 모드</string>
@@ -2778,6 +2781,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 

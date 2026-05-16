@@ -343,6 +343,7 @@
     <string name="Capotain_Name">朝圣平顶帽</string>
     <string name="Carcass_Devoured">你吞噬了%s的尸体！</string>
     <string name="Carcass_DissectFailed">你解剖了%s，但没有发现任何有价值的东西。</string>
+    <string name="Carcass_DissectMessage">你解剖了尸体，获得了%s。</string>
     <string name="Carcass_DissectResult">从 %1$s 你获得了 %2$d 个收获物%3$s。</string>
     <string name="Carcass_Info">完全死亡的 %s 的残骸。</string>
     <string name="Carcass_Kick">这个%s已经完全死了，没必要踢它。</string>
@@ -1497,6 +1498,7 @@
     <string name="PlagueDoctorQuest_2_2_InProgress">_两颗太阳草_种子。它们的金色花瓣蕴含着我要理解的力量。找到它们，让它们的精华显现！</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">给我带一只_吸血鬼蝙蝠_，活着且完好无损！它的血液、它的翅膀……它们藏着我必须揭开的秘密！</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*他的眼睛闪烁着一种奇怪的、狂热的光芒* 啊，_吸血鬼蝙蝠_！夜之生物，以猎物的生命力为食。迷人……真迷人。我需要一个活的来研究它独特的生理结构。这一切都是为了……理解……理解……*他喃喃自语，说出一连串神秘的术语*。是的！_蝙蝠_的回声定位，它在完全黑暗中导航的能力……这是解开秘密的关键。</string>
+    <string name="PlagueDoctorQuest_3_2_Epilogue">*他仰头发出阵阵狂笑，声音在阴暗的实验室中回荡* 太棒了！一名_死亡骑士_站在我们面前！它身上散发出的力量……令人陶醉！*他转向你，眼中闪烁着狂热的光芒* 这是你应得的奖赏：一瓶_力量药水_！愿它赐予你战胜一切敌人的力量！现在……让我们来研究我们的实验对象。它的本质中隐藏着能够改写生命法则的秘密！*他带着疯狂的笑容走向_死亡骑士_，手中晃动着一瓶冒泡的绿色液体</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">_死亡骑士_！*他的声音因兴奋而颤抖，骷髅般的手指紧握着一个冒着泡的小瓶，里面装满了浑浊的磷光液体*。这样的生物……亡灵的象征！活捉一个……那将是……意义非凡。想象一下我们能揭开什么秘密！流淌在它骨骼血管中的力量！是的，_死亡骑士_！这对我的研究至关重要！因为它将使我们能够更深入地探索……生命……乃至死亡本身的奥秘！</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">太棒了！_矮人术士_们的精华现在归我研究了！如此扭曲、堕落的魔法……真是令人着迷。*他举起一个闪烁的瓶子，里面装着粘稠的深红色液体。*这是给你的：_力量药剂_！饮下它的力量，你将感受到如山般的力量在血管中流淌！记住，从这些牺牲中获得的知识最终将服务于更高的目的……甚至可能将我们从比死亡更可怕的命运中拯救出来。</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">五个_矮人术士_，他们的身体仍在脉动着黑暗魔法的微弱回响！为我取回它们，我将奖励你一瓶无与伦比的力量——一瓶_力量药水_，它将赋予你十人之力！</string>
@@ -1775,6 +1777,7 @@
     <string name="RottingFist_Name_Objective">腐烂之拳</string>
     <string name="RoyalShield_desc">全金属制盾牌。因此，它很重，但只有它能给你最好的保护。</string>
     <string name="RoyalShield_name">皇家盾牌</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">只有最优秀的射手才能灵活运用这张红宝石做的弓。几乎每一箭都能贯穿且重创敌人，但是拉弓需要很强的力量。</string>
     <string name="RubyBow_Name">红石弓</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -2947,6 +2950,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

@@ -1480,6 +1480,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Pickaxe_ACMine">ABBAUEN</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Dies ist ein großes und stabiles Werkzeug, um Steine zu zerbrechen. Es kann auch als Waffe genutzt werden.</string>
+    <string name="Pickaxe_InsufficientStr">Nicht genug Kraft zum Abbauen!</string>
     <string name="Pickaxe_Name">Spitzhacke</string>
     <string name="Pickaxe_NoVein">Es gibt keine Goldader in der Nähe.</string>
     <string name="Pickaxe_NothingToMine">Hier gibt es nichts zu schürfen!</string>
@@ -1921,6 +1922,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="ServantNPC_Name">Kellner</string>
     <string name="ServantNPC_Name_Objective">Kellner</string>
     <string name="ServiceManNPC_Desc">Ein normaler Arbeiter in den lokalen Niederlassungen.</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Ich entschuldige mich, aber jeder neue Abenteuer kann insgesamt nur %d Filme schauen.</string>
     <string name="ServiceManNPC_Limit_Reached">Ich entschuldige mich, aber du hast das momentane Limit erreicht. Aber du solltest in der Lage sein unseren Service für jeden Level den du erreichst zu nutzen.</string>
     <string name="ServiceManNPC_Name">Angestellter</string>
@@ -2092,6 +2094,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="Sprout_Info">Erwecke die schlafenden Samen.\nAllerdings muss Grünzeug auf dem Boden vorhanden sein, damit der Zauber wirkt.</string>
     <string name="Sprout_Name">Sprießen</string>
     <string name="StartScene_ChooseFromSlot">Wähle einen Speicherplatz</string>
+    <string name="StartScene_ComingSoon">Demnächst</string>
     <string name="StartScene_ContinueLatest">Setze dein letztes Spiel fort oder wähle einen Speicherplatz</string>
     <string name="StartScene_Depth">Ebene: %1$d\nLevel: %2$d</string>
     <string name="StartScene_DifficultyEasy">Einfach (mit Werbung)</string>
@@ -2957,6 +2960,9 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
 
 
 

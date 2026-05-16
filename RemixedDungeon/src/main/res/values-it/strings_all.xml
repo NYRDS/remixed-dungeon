@@ -579,6 +579,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DonateButton_pleaseDonate">Per favore considera una donazione </string>
     <string name="DonateButton_thanks">Grazie per il tuo supporto!</string>
     <string name="DreadKnight_Desc">Il cavaliere timoroso è un guerriero ancestrale, il quale non fu mai solare né buono in tutta la sua vita. Per i suoi peccati fu maledetto a soffermarsi sui resti dei corpi morti per l\'eternità. E per ogni momento della sua dannata esistenza deve essere tormentato dalla paura che ha inflitto alle sue vittime.</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">cavaliere timoroso</string>
     <string name="DreadKnight_Name_Objective">cavaliere timoroso</string>
     <string name="Dreamweed_Desc">Dopo aver toccato l\'Erbasogno essa secerne una scintillante nuvola di gas confondente.</string>
@@ -2557,6 +2558,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_cabinet_desc">Un ampio mobile con molte porte e scaffali.</string>
     <string name="town_deco_canvas_desc">Un spesso pezzo di tessuto appeso al muro.</string>
     <string name="town_deco_carpet_name">Tappeto</string>
+    <string name="town_deco_charcoal_carpet_desc">In cerca di comfort per gli ospiti, l\'amministrazione del cinema ha scelto i tappeti di migliore qualità di colore carbone.</string>
     <string name="town_deco_charcoal_carpet_name">Tappeto</string>
     <string name="town_deco_chest_name">Cassa</string>
     <string name="town_deco_chimney_name">Comignolo</string>
@@ -2603,6 +2605,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_furnace_name">Forno</string>
     <string name="town_deco_glass_stained_name">Vetro Colorato</string>
     <string name="town_deco_grandclock_desc">Un meccanismo piuttosto antico ma ancora funzionante.</string>
+    <string name="town_deco_grandclock_name">Grandclock</string>
     <string name="town_deco_hay_name">Fieno</string>
     <string name="town_deco_identifier_sign_desc">Pare che ci sia un\'indovina in quell\'edificio</string>
     <string name="town_deco_identifier_sign_name">Insegna della Palla di Cristallo</string>
@@ -2720,6 +2723,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 

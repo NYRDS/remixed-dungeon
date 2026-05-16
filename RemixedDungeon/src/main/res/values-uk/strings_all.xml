@@ -449,6 +449,7 @@
     <string name="Char_YouMissed">%1$s %2$s від твоєї атаки</string>
     <string name="ChargrilledMeat_Info">Виглядає як пристойний біфштекс.</string>
     <string name="ChargrilledMeat_Name">смажене м\'ясо</string>
+    <string name="CharmBuff_Info">Розум і тіло зачаровані!</string>
     <string name="CharmBuff_Name">Зачарований</string>
     <string name="CharmSpell_Info">Кожен заслуговує на трішку кохання, чи не так?</string>
     <string name="CharmSpell_Name">Чар</string>
@@ -2659,6 +2660,7 @@
     <string name="town_deco_armoronhanger_name">Броня</string>
     <string name="town_deco_armorstand_leather_desc">Надійний шкіряний обладунок буде чудовим придбанням перед походом у підземелля.</string>
     <string name="town_deco_armorstand_leather_name">Шкіряна броня</string>
+    <string name="town_deco_armorstand_plate_desc">За словами крамоля, ця важка латунь раніше належала великому воїну.</string>
     <string name="town_deco_armorstand_plate_name">Латний обладунок</string>
     <string name="town_deco_banner_name">Прапор</string>
     <string name="town_deco_barrel_desc">Звична діжка, яка вже бачила кращі часи.</string>
@@ -2803,6 +2805,7 @@
     <string name="town_deco_shop_sign_name">Вивіска</string>
     <string name="town_deco_skullboard_name">Стійка для трофеїв</string>
     <string name="town_deco_skulls_desc">Відполіровані черепи, що належать істотам з підземелля.</string>
+    <string name="town_deco_skulls_name">Черепа</string>
     <string name="town_deco_slush_desc">Цей сніг підтанув, і тепер це брудна мокра каша.</string>
     <string name="town_deco_slush_name">Шуга</string>
     <string name="town_deco_snow_desc">Не дивлячись на популярність даного місця серед шукачів пригод, тут на подив багато снігу. Складається враження, що цими вулицями мало хто гуляє.</string>
@@ -2870,6 +2873,9 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
 
 
 

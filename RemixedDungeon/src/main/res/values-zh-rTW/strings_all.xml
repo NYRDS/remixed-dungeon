@@ -1205,6 +1205,7 @@
     <string name="Level_TileWall">墻</string>
     <string name="Level_TileWater">水</string>
     <string name="Level_TileWell">井</string>
+    <string name="LevitationBuff_Info">身體懸浮在地面上方，避免陷阱和其他地面的危險。</string>
     <string name="LevitationBuff_Name">漂浮</string>
     <string name="LibrarianNPC_Desc">很害羞的人,厚重的眼鏡和難看的毛衣證明了這點。</string>
     <string name="LibrarianNPC_Gender">masculine</string>
@@ -1955,6 +1956,7 @@
     <string name="SpellBook_Info_Identified">閱覽完這些頁面你發現\&quot;%1$s\&quot;術式的全文.\n\&quot; %2$s \&quot;</string>
     <string name="SpellBook_Name">魔法書殘頁</string>
     <string name="Spell_SelectACell">選擇一個位置</string>
+    <string name="Spell_SelectAChar">選擇一個目標生物</string>
     <string name="Spells_NotEnoughSP">你沒有足夠的瑪那來釋放 \&quot;%1$s\&quot; 這個技能</string>
     <string name="Spells_NotInOwnBody">當你的靈魂與身體分離時，你不能%s。</string>
     <string name="Spells_NotTooFast">%s 沒有準備好使用</string>
@@ -2419,6 +2421,7 @@
     <string name="WndInstallingMod_copying_file">正在複製 %s 到混合地牢存儲</string>
     <string name="WndInstallingMod_deleting_file">正在刪除 %s</string>
     <string name="WndInstallingMod_skipping_file">正在跳過 %s</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">執行配方</string>
     <string name="WndItemAlchemy_NoRecipes">沒有可用於此物品和你當前庫存可用的配方。</string>
     <string name="WndItemAlchemy_SelectRecipe">選擇配方</string>
     <string name="WndItemAlchemy_Title">含 %s 的煉金配方</string>
@@ -2872,6 +2875,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

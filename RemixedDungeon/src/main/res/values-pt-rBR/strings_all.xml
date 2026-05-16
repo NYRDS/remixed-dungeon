@@ -591,6 +591,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DashSpell_OnSelf">Eu não posso correr no mesmo lugar.</string>
     <string name="DashSpell_TooFar">Eu não posso correr tão longe.</string>
     <string name="DeathKnight_Desc">À primeira vista, um poderoso guerreiro com uma armadura pesada, mas seu sorriso esquelético o entrega, um Cavaleiro da Morte é uma manifestação de um espírito de cavaleiro que não foi capaz de cumprir seu juramento. Amaldiçoando toda a terra, tentando limpar seu nome no campo de batalha, matando os inocentes, incapaz de lembrar o que ele jurou proteger.</string>
+    <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name">Cavaleiro da morte</string>
     <string name="DeathKnight_Name_Objective">Cavaleiro da morte</string>
     <string name="Death_Name_0">%s Cruel</string>
@@ -1988,6 +1989,7 @@ outro local do nível.</string>
     <string name="Spells_NotInOwnBody">Você não pode %s enquanto sua alma se separa do corpo.</string>
     <string name="Spells_NotTooFast">%s ainda não está proto para uso</string>
     <string name="Spells_SummonLimitReached">%1$s: limite de invocação excedido (máximo atual: %2$d)!</string>
+    <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">Esta armadura é feita de carcaças antigas de aranhas e algum tecido estranho. Surpreendentemente, parece que ainda possui uma fiandeira funcional. Se você aplicar pressão suficiente em uma das placas, ela atira na teia de aranha. A superfície das solas das botas permitem que você ande livremente pelas teias de aranha.</string>
     <string name="SpiderArmor_Name">Armadura de Aranha</string>
     <string name="SpiderCharm_Info">Esta coisa exótica está envolta por uma aura de mistério. Quem sabe, o que pode acontecer para alguém que usa-lo?</string>
@@ -2942,6 +2944,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

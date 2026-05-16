@@ -1206,6 +1206,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Luck_Name_0">Szerencés %s</string>
     <string name="Luck_Name_1">Szerencés %s</string>
     <string name="Luck_Name_2">Szerencés %s</string>
+    <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">Vas fejével ez a fegyver lényeges sebzést képes okozni.</string>
     <string name="Mace_Name">buzogány</string>
     <string name="MageArmor_ACSpecial">OLVADT FÖLD</string>
@@ -2493,6 +2494,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndStory_Spiders">Sok sok évvel ezelőtt volt egy gazdag bánya, telis tele mágikus drágakövekkel és nyersanyagokkal. De amikor az érclelő helyek kimerültek a bányászok elhagyták ezt a sokszáz alagútból álló tárnarendszert. Végül a helyet ember nagyságú pókok népesítették be, melyet azóta otthonuknak tekintenek. Még ezek a veszedelmes fenevadak sem tudták elriasztani azokat a kalandorakat akik elég bátrak és őrültek voltak ahhoz hogy lemerészkedjenek kutatni némi használható kincs után.  A hatalmasabb erejű értékesebb ereklyéket övező pletykák, valamint az azt körülvevő veszélyek is mindig sokkal nagyobbak. Egy napon egy gonosz boszorkány tévedt az alagutakba miközben az üldözői elöl menekült. Soha többet nem hallotak róla. Lehet talált egy másik kivezető utat, lehet hogy valahogy sikerült kicsúsznia az őrök markából... vagy egyszerűen csak meghalt, körülvéve a sötétség teremtményeinek suttogásával.</string>
     <string name="WndTilesKind_ClassicLook">Klasszikus kinézet</string>
     <string name="WndTilesKind_NewLook">Új kinézet</string>
+    <string name="WndTilesKind_Title">Még csak egy dolog:</string>
     <string name="WndTradeItem_Bought">Vettél egy %1$s-t %2$daranyért</string>
     <string name="WndTradeItem_Buy">Vedd meg %daranyért</string>
     <string name="WndTradeItem_BuyAll">Összes megvétele %d g- ért</string>
@@ -2796,6 +2798,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

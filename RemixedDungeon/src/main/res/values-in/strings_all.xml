@@ -56,6 +56,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Amulet_ACEnd">AKHIRI PERMAINAN</string>
     <string name="Amulet_Info">Jimat Yendor adalah harta terkenal terkuat dengan asal muasal yang tidak diketahui. Dikatakan bahwa jimat ini dapat memenuhi semua permintaan jika kekuatan keinginan pemiliknya cukup kuat untuk \&quot;menarik\&quot;nya melakukan hal itu.</string>
     <string name="Amulet_Name">Jimat Yendor</string>
+    <string name="AnesthesiaBuff_Info">Tidak merasakan sakit dan tidak akan bangun dari serangan, tetapi tetap menerima kerusakan.</string>
     <string name="AnesthesiaBuff_Name">Anestesi</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">Simbol kuno tentang hidup abadi memberikan kehebatan untuk hidup kembali setelah mati. Saat pembangkitan semua item yang tidak dipakai hilang.</string>
@@ -289,6 +290,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="BlessedBuff_Name">diberkati</string>
     <string name="BlindnessBuff_Info">Benar-benar buta, hanya suara di sekitar yang bisa didengar.</string>
     <string name="BlindnessBuff_Name">Buta</string>
+    <string name="BloodTransfusion_FullHP">Darah Anda sudah penuh.</string>
     <string name="BloodTransfusion_Name">Transfusi Darah</string>
     <string name="BodyArmorBuff_Info">Armor ditingkatkan dengan mengorbankan kecepatan gerakan.</string>
     <string name="BodyArmorBuff_Name">Pelindung Tubuh</string>
@@ -2027,6 +2029,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Sprout_Name">Tumbuh</string>
     <string name="StartScene_ChooseFromSlot">Pilih dari slot simpan</string>
     <string name="StartScene_ComingSoon">Segera hadir</string>
+    <string name="StartScene_ContinueLatest">Lanjutkan permainan terakhir Anda atau pilih dari slot simpan</string>
     <string name="StartScene_Depth">Kedalaman: %1$d\nTingkat: %2$d</string>
     <string name="StartScene_DifficultyEasy">Mudah (dengan iklan)</string>
     <string name="StartScene_DifficultyEasyNoAds">Mudah</string>
@@ -2937,6 +2940,9 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

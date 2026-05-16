@@ -67,6 +67,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Amulet_Name">Amulet Yendora</string>
     <string name="AnesthesiaBuff_Info">Nie odczuwa bólu i nie obudzi się od ataków, ale nadal otrzymuje obrażenia.</string>
     <string name="AnesthesiaBuff_Name">Anestezja</string>
+    <string name="Anesthesia_Cast">%s zapada w głęboki, bezseny sen.</string>
     <string name="Anesthesia_Info">Wywołuje głęboki, nienaturalny sen u twojego celu. Nawet najgwałtowniejsze ataki nie zbudzą go z tej drzemki.</string>
     <string name="Anesthesia_Name">Anestezja</string>
     <string name="Ankh_Info">Starożytny symbol nieśmiertelności daje możliwość zmartwychwstania po zgonie. Po wskrzeszeniu, wszystkie przedmioty, które nie są wyposażone zostaną utracone.</string>
@@ -303,6 +304,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BlindnessBuff_Name">Oślepiony</string>
     <string name="BloodTransfusion_Drained">Сила жизни перетекает из твоего питомца в тебя.</string>
     <string name="BloodTransfusion_Info">Odsysa prawie całą krew z celu, aby zregenerować własne zdrowie. Ciemny rytuał poświęcenia i przetrwania.</string>
+    <string name="BloodTransfusion_Name">Transfuzja krwi</string>
     <string name="BloodTransfusion_WontAgreed">Cel docierza ekstrakcję jego esencji życiowej.</string>
     <string name="BodyArmorBuff_Info">Pancerz wzmocniony kosztem szybkości ruchu </string>
     <string name="BodyArmorBuff_Name">Napierśnik</string>
@@ -1370,6 +1372,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="MimicAmulet_Name">mimik</string>
     <string name="MimicAmulet_Name_Objective">mimik</string>
     <string name="MimicPie_Desc">Mimiki są magicznymi stworzeniami, które mogą przybrać dowolny kształt. Ten akurat przeobraził się w przepysznie wyglądający pasztecik.</string>
+    <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimik</string>
     <string name="MimicPie_Name_Objective">mimik</string>
     <string name="Mimic_Desc">Mimiki są magicznymi stworzeniami, które mogą przybrać dowolny kształt. W lochach prawie zawsze przybierają kształt skrzyni ze skarbami, ponieważ wiedzą że tak najłatwiej zwiodą każdego poszukiwacza przygód.</string>
@@ -3053,6 +3056,9 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
+
 
 
 
