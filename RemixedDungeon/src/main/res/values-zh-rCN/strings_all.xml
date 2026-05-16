@@ -17,6 +17,7 @@
     <string name="AboutScene_Translation">本地化的功臣：</string>
     <string name="AboutScene_Translation_Names">丘比</string>
     <string name="AboutScene_Txt_Intro">混合地牢是由NYRDS以Watabou的像素地牢源码为基础制作的。</string>
+    <string name="Accuracy_Decreased">為什麼我認為我能使用%s？錯誤的工具，錯誤的雙手！</string>
     <string name="Accuracy_DecreasedDoctor">这把%s的每次挥击都散播不完美。我的骨锯治愈……这个却感染。</string>
     <string name="Accuracy_DecreasedDoctorBareHands">赤手空拳会污染我的技术。没有锯子的干净切割，我的瞄准就会陷入混乱。</string>
     <string name="Acidic_Desc">这些巨大的节肢类恶魔生物会尽可能地避免近距离战斗，并且在远处射出能致残的锯齿尖刺。</string>
@@ -2376,7 +2377,7 @@ remix.31.1\n
 —新的蜘蛛类型！\n
 —灵能催眠蜘蛛将会给其它蜘蛛施加buff，而不是向玩家施加debuff。\n
 ——修复错误\n</string>
-    <string name="Welcome_Text_32">    remix.32\n    - 游戏玩法:\n    -- 怪物和宠物现在可以获得经验和等级\n    -- 混沌之盾\n    -- 冠军系统\n    -- 约格战斗重新平衡\n    -- 平衡调整\n    - 用户体验:\n    -- 详细的英雄和怪物统计\n    -- 更好的自定义界面\n    -- 流畅的摄像机\n    - 模组支持:\n    -- 自定义动画\n    -- 内置怪物的自定义脚本\n    -- 怪物发光效果\n    - 错误修复\n    </string>
+    <string name="Welcome_Text_32">更多英雄正在等待</string>
     <string name="Welcome_Text_32_1">    remix.32.1\n    - 游戏玩法:\n    -- 瘟疫医生任务线\n    -- 怪物尸体现在是某种可用的物品\n    -- 更好的宠物控制\n    - 用户体验:\n    -- 改进的存档管理\n    - 模组支持:\n    -- 本地模组安装方法\n    -- 自定义物品现在可以在堆中执行动作\n    - 错误修复\n    </string>
     <string name="Welcome_Title">欢迎！</string>
     <string name="WindGust_Info">魔法刮起的狂风，吹走被选中的生物</string>
@@ -2402,6 +2403,7 @@ remix.31.1\n
     <string name="WndCryptoDonate_supportDev">支持开发者</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
+    <string name="WndCryptoDonate_warningText">WARNING: Always verify the address before sending funds. Cryptocurrency transactions are irreversible!</string>
     <string name="WndCustomizations_Title">自定义设置</string>
     <string name="WndDonate_commonDonateText">混合地牢——永远对所有人免费。\n\n但是，你能帮我们让这款游戏变得更好。\n\n除了我们的衷心感谢以外，你还将获得一些界面上的美化。</string>
     <string name="WndDonate_donate">捐献：</string>
@@ -2950,6 +2952,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

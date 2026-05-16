@@ -377,7 +377,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Challenges_Names_5">Ke dalam kegelapan</string>
     <string name="Challenges_Names_6">Rune Terlarang</string>
     <string name="Challenges_Names_7">Pasifisme</string>
-    <string name="Challenges_Names_8">Tidak ada kota</string>
+    <string name="Challenges_Names_8">Tantangan</string>
     <string name="Challenges_Names_9">Amnesia</string>
     <string name="ChampionOfAirBuff_Name">Juara Udara</string>
     <string name="ChampionOfEarthBuff_Name">Juara Bumi</string>
@@ -1889,6 +1889,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ShamanElder_Name">dukun tua</string>
     <string name="ShamanElder_Name_Objective">dukun tua</string>
     <string name="Shaman_Desc">Gnoll paling pintar dapat menguasai sihir perdukunan. Dukun gnoll memilih untuk bertarung dengan mantra perang untuk mengimbangi kekuatannya yang lemah, tidak ragu untuk mereka yang mempertanyakan status mereka di suku mereka.</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">sambaran petir %s membunuh Anda...</string>
     <string name="Shaman_Name">dukun gnoll</string>
     <string name="Shaman_Name_Objective">dukun gnoll</string>
@@ -2940,6 +2941,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

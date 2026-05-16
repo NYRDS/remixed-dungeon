@@ -19,7 +19,7 @@
     <string name="AboutScene_Translation">Localização por: </string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon por NYRDS baseado em Pixel Dungeon Source por Watabou.</string>
-    <string name="Accuracy_Decreased">Por que eu achei que conseguiria usar %s? Ferramenta errada, mãos erradas!</string>
+    <string name="Accuracy_Decreased">Por que eu pensei que poderia usar %s? Ferramenta errada, mãos erradas!</string>
     <string name="Accuracy_DecreasedDoctor">Cada golpe deste %s espalha imperfeição. Meu Serra Óssea cura… isso infecta.</string>
     <string name="Acidic_Desc">Estas enormes criaturas demoníacas parecidas com aracnídeos evitam o combate de perto, disparando pontas serrilhadas de longas distâncias.</string>
     <string name="Acidic_Gender">masculine</string>
@@ -558,6 +558,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="CrippleBuff_Info">O corpo está aleijado, mas a luta ainda continua.</string>
     <string name="CrippleBuff_Name">Aleijado</string>
     <string name="Crystal_Desc">Um grande cristal brilhante flutuando no ar. Provavelmente ele está cheio de magia poderosa.</string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">cristal flutuante</string>
     <string name="Crystal_Name_Objective">cristal flutuante</string>
     <string name="CurareDart_Info">Estes pequenos dardos malignos não fazer muito dano, mas eles podem paralisar o alvo deixando-o indefeso e imóvel por algum tempo.</string>
@@ -893,6 +894,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Hedgehog_Info3">Você gosta de chá com geleia de framboesa?</string>
     <string name="Hedgehog_Info4">Pegue esta torta</string>
     <string name="Hedgehog_Name">ouriço</string>
+    <string name="HeroClass_Doctor">Médico da Peste</string>
     <string name="HeroClass_Elf">Elfo</string>
     <string name="HeroClass_ElfPerks_1">Elfos são imunes ao enraizamento</string>
     <string name="HeroClass_ElfPerks_2">Elfos começam com um arco de madeira melhorado e um monte de flechas</string>
@@ -2944,6 +2946,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 
