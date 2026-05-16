@@ -566,6 +566,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Sebilah pisau besi dengan gagang kayu yang baik.</string>
     <string name="Dagger_Name">pisau</string>
+    <string name="Damage_Reduction">Penyedot kerusakan</string>
     <string name="DarkGold_Info">Logam ini disebut gelap bukan karena warnanya (tidak berbeda dengan emas biasa), tetapi karena meleleh di bawah sinar matahari, sehingga tidak berguna di permukaan.</string>
     <string name="DarkGold_Name">biji emas gelap</string>
     <string name="DarkSacrifice_Hint">Pilih hambamu yang setia untuk dikorbankan</string>
@@ -1950,6 +1951,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SociologistNPC_Name_Objective">Sosiolog</string>
     <string name="Sorrowmoss_Desc">Sorrowmoss adalah sebuah bunga (bukan lumut) dengan daun bunga tajam sekali, yang ditutupi dengan racun mematikan.</string>
     <string name="Sorrowmoss_Name">Sorrowmoss</string>
+    <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">Itu adalah pecahan yang diambil dari sisa-sisa toples jiwa. Itu berkilauan dengan kekuatan misterius, mungkin ada seseorang yang tertarik dengan hal seperti ini.</string>
     <string name="SoulShard_Name">pecahan jiwa</string>
     <string name="Spear_Info">Tongkat kayu ramping berujung dengan besi yang tajam.</string>
@@ -2925,6 +2927,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

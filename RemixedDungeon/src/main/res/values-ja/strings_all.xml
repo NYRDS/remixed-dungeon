@@ -1149,6 +1149,7 @@
     <string name="King_Info3">さあ、どうする！</string>
     <string name="King_Name">ドワーフの王</string>
     <string name="King_Name_Objective">ドワーフの王</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Info">拳を覆うように作られた鉄の武器。</string>
     <string name="Knuckles_Name">ナックルダスター</string>
     <string name="KoboldIcemancer_Desc">コボルドの氷術師は社会のエリートだった。著名な戦士、魔法使い、そして最も重要な科学者たちだ。古代の氷術師は氷を操る術を掌握し、特殊な呪文で強化された複雑な機構を作り上げた。</string>
@@ -1899,6 +1900,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Senior_Name">上級モンク</string>
     <string name="Senior_Name_Objective">上級モンク</string>
     <string name="ServantNPC_Desc">とても忙しい宿の従業員。</string>
+    <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">宿の従業員</string>
     <string name="ServantNPC_Name_Objective">宿の従業員</string>
     <string name="ServiceManNPC_Desc">地元の店のよく見る店員</string>
@@ -2992,6 +2994,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 </resources>

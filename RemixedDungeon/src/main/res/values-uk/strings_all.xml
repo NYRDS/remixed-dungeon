@@ -1359,6 +1359,7 @@
     <string name="Monk_Name">дворф-монах</string>
     <string name="Monk_Name_Objective">дворфа-монаха</string>
     <string name="Moongrace_Desc">Ці рослини ростуть невеликими кількостями і є джерелом природної магії.</string>
+    <string name="Moongrace_Name">Мунгрейс</string>
     <string name="Multiplicity_Txt">%s помноження</string>
     <string name="Mushroom_Eat_Message">Цей гриб має дивний присмак!</string>
     <string name="MysteryMeat_Info">Скуштуй на свій острах!</string>
@@ -2675,6 +2676,7 @@
     <string name="town_deco_brown_carpet_desc">Цей коричневий килим був витоптаний ногами багатьох шукачів пригод, волоцюг і випадкових перехожих.</string>
     <string name="town_deco_brown_carpet_name">Килим</string>
     <string name="town_deco_cabinet_desc">Просторна шафа з багатьма дверима та полицями.</string>
+    <string name="town_deco_cabinet_name">Шafa</string>
     <string name="town_deco_canvas_desc">Товстий шмат тканини висить на стіні.</string>
     <string name="town_deco_canvas_name">Полотно</string>
     <string name="town_deco_carpet_desc">Шикарний червоний килим, виготовлений для особливих гостей.</string>
@@ -2864,6 +2866,8 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

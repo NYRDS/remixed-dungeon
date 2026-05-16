@@ -14,6 +14,7 @@
     <string name="AboutScene_OurSite">Nosso site:</string>
     <string name="AboutScene_Snd">Enviar E-Mail</string>
     <string name="AboutScene_Sound">Som:</string>
+    <string name="AboutScene_SourceCode">Obtenha o código-fonte do Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Agradecimentos especiais para:</string>
     <string name="AboutScene_Translation">Localização por: </string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
@@ -564,6 +565,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DM300_Name_Objective">DM-300</string>
     <string name="Dagger_Info">Uma adaga de ferro simples com um cabo de madeira bem gasto.</string>
     <string name="Dagger_Name">Adaga</string>
+    <string name="Damage_Reduction">Redução de dano</string>
     <string name="DarkGold_Info">Este metal é chamado de escuro não por causa da sua cor(que é igual à cor normal do ouro), mas porque derrete sob a luz do dia, tornando-se inútil na superfície.</string>
     <string name="DarkGold_Name">minério de ouro escuro</string>
     <string name="DarkSacrifice_Hint">Escolha seu servo leal para sacrificar!</string>
@@ -671,6 +673,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DwarfToken_Info">Muitos anões e algumas de suas criações maiores carregam esses pequenos pedaços de metal de propósito desconhecido. Talvez eles sejam jóias ou algum tipo de identificação. Anões são pessoas estranhas.</string>
     <string name="DwarfToken_Name">token de anão</string>
     <string name="EarthElemental_Desc">Elementais de Terra são massas de terra direcionados por forças concentradas da natureza.</string>
+    <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">elemental de terra</string>
     <string name="EarthElemental_Name_Objective">elemental de terra</string>
     <string name="EarthrootBuff_Info">Raízes brotaram do solo fornecendo armadura natural.</string>
@@ -2925,6 +2928,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 

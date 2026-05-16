@@ -426,6 +426,7 @@
     <string name="ChargrilledMeat_Name">daging dibakar dengan arang</string>
     <string name="CharmBuff_Info">Fikiran dan badan telah dipukau!</string>
     <string name="CharmBuff_Name">Dipukau</string>
+    <string name="CharmSpell_Cast">%1 is charmed.</string>
     <string name="CharmSpell_Info">Setiap orang berhak mendapat sedikit kasih sayang, bukan?</string>
     <string name="CharmSpell_Name">Pesona</string>
     <string name="Chasm_Chasm">Jurang</string>
@@ -657,6 +658,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ElfArmor_Desc">Dengan bantuan selimut ini bunian dapat memanggil kuasa alam. Lalang akan membesar sekelip mata walaupun di atas batu yang mana ia dapat memaku pergerakan pihak musuh dalam jangkauan penglihatan.</string>
     <string name="ElfArmor_Name">Selimut bunian</string>
     <string name="ElfArmor_NotElf">Hanya bunian boleh guna perisai ini!</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Contoh luar biasa kehalusan kerja tangan puak bunian. Sememangnya lebih efektif dan lebih tepat berbanding busur kayu biasa.</string>
     <string name="ElvenBow_Name">busur bunian</string>
     <string name="ElvenDagger_Gender">masculine</string>
@@ -2332,6 +2334,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndLocalModInstall_title">Pasang mod daripada direktori tempatan</string>
     <string name="WndModInstall_InstallingMod">Memasang mod</string>
     <string name="WndModInstall_PleaseUpdate">Sila kemas kini Remixed Dungeon sebelum memasang mod ini</string>
+    <string name="WndModSelect_AreYouSure">Padamod: %1, anda pasti?</string>
     <string name="WndModsDisclaimer_install">Pasang mod tempatan</string>
     <string name="WndModsDisclaimer_manage">Urus senarai mod</string>
     <string name="WndModsDisclaimer_title">Mod</string>
@@ -2752,9 +2755,14 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_wooden_stairs_name">Tangga</string>
     <string name="town_deco_wooden_table_desc">Meja kayu yang berkualiti</string>
     <string name="town_deco_wooden_table_name">Meja kayu</string>
+    <string name="town_table_fortune_ball_desc">Kristal topi, misteri sisanya di dalam.</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 

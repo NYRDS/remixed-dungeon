@@ -197,6 +197,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Badges_Yog_Slain">Yog-Dzewa getötet </string>
     <string name="Bag_ACOpen">ÖFFNEN</string>
     <string name="Bandit_Desc">Tiefere Ebenen des Verlieses waren schon immer ein Versteck für alle möglichen Kriminellen. Nicht alle von ihnen konnten einen klaren Verstand bewahren während ihrer langen Zeit, so weit weg vom Tageslicht. Diese Diebe und Banditen haben schon vor langer Zeit vergessen, wer sie waren und warum sie stehlen. Es scheint, als ob dieser Bandit, seinen Dolch mit etwas überzogen hat!  </string>
+    <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">Verrückter Bandit</string>
     <string name="Bandit_Name_Objective">Verrückter Bandit</string>
     <string name="BardNPC_Desc">Der Barde der Stadt spielt seine Laute.</string>
@@ -351,6 +352,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_Devoured">Du hast den Kadaver von %s verzehrt!</string>
     <string name="Carcass_DissectMessage">Du sezierst die Leiche und erhältst %s.</string>
+    <string name="Carcass_DissectResult">Aus dem %1 erhält man %2 Ernte %3.</string>
     <string name="Carcass_Info">Überreste eines völlig toten %s.</string>
     <string name="Carcass_Kick">Dieses %s ist völlig tot, keinen Grund es zu treten.</string>
     <string name="Carcass_Name">Überreste von %s</string>
@@ -2148,6 +2150,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="Tamahawk_Info">Diese Wurfaxt ist nicht besonders schwer, aber benötigt dennoch relativ viel Kraft um effizient eingesetzt werden zu können.</string>
     <string name="Tamahawk_Name">Tomahawk</string>
     <string name="TenguLiver_Info">Diese Leber gehört einem mächtigen Feind. Allein beim Anblick übernehmen Ihre tierischen Instinkte die Kontrolle, und Sie spüren das Verlangen, sie zu verzehren.</string>
+    <string name="TenguLiver_Name">Tengu Leber</string>
     <string name="Tengu_Desc">Tengu sind Mitglieder eines uralten Assassinen-Clans. Auch der Clan hört auf den Namen Tengu. Seine Assassinen sind berüchtigt für ihren exzessiven Einsatz von Shuriken sowie das Legen von Fallen.</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">Endlich frei...</string>
@@ -2937,6 +2940,9 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
 
 
 

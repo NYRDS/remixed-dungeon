@@ -413,6 +413,7 @@
     <string name="Char_StaPoisoned">중독</string>
     <string name="Char_StaRooted">구속</string>
     <string name="Char_StaSlowed">감속</string>
+    <string name="Char_StaStunned">기절</string>
     <string name="Char_StaVision">비전</string>
     <string name="Char_Stole_1">%1$s가 %3$s로부터 %2$s를 훔쳤다!</string>
     <string name="Char_YouMissed">%1$s %2$s 당신의 공격</string>
@@ -1066,6 +1067,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="KoboldIcemancer_Name">코볼트 빙술사</string>
     <string name="KoboldIcemancer_Name_Objective">코볼트 빙술사</string>
     <string name="Kobold_Desc">코볼트는 전설로 치부되던 존재였습니다. 흔한 놀들의 조상인 코볼트는 깊고 차가운 동굴에 거주합니다. 그들은 기계공학을 드워프들보다 한참 전에 통달했다고 믿어집니다. 아직까지도 그들이 수년 전에 사라진 이유는 불명입니다.</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">코볼트</string>
     <string name="Kobold_Name_Objective">코볼트</string>
     <string name="Kusarigama_Gender">feminine</string>
@@ -2732,6 +2734,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_trapdoor_name">함정 문</string>
     <string name="town_deco_tree_desc">공포와 죽음이 가득한 던전의 입구의 바로 오른쪽에서 살아있는 나무를 보는 것은 이상한 기분이 듭니다.</string>
     <string name="town_deco_tree_name">나무</string>
+    <string name="town_deco_urn_desc">흙항아리, 아마도 누군가의 재가 들어있을 것이다.</string>
     <string name="town_deco_urn_name">항아리</string>
     <string name="town_deco_vat_name">증류기</string>
     <string name="town_deco_wall_brazier_desc">그을린 불씨에서 나오는 연기가 실내를 기분 좋은 향기로 가득 채운다.</string>
@@ -2739,6 +2742,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wall_candles_name">양초들</string>
     <string name="town_deco_wall_desc">통나무로 만들어진 간단한 벽이다.</string>
     <string name="town_deco_wall_name">벽</string>
+    <string name="town_deco_wallpaper_desc">이런 곳에 아주 좋은 인테리어 솔루션이다.</string>
     <string name="town_deco_wallpaper_name">벽지</string>
     <string name="town_deco_wardrobe_desc">커다란 나무 옷장.</string>
     <string name="town_deco_wardrobe_name">나무 옷장</string>
@@ -2761,6 +2765,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
 
 
 

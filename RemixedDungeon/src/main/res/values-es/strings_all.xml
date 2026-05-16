@@ -263,6 +263,7 @@
     <string name="BlackSkullOfMastery_Title">Puedes romper el hechizo. O puedes manipular la magia que posee, lo que te permitirá consumir el poder del hechizo y el artefacto en sí, convirtiéndote en un Lich.</string>
     <string name="BlackSkull_Activated">¡El cráneo negro a sido despertado!</string>
     <string name="BlackSkull_Deactivated">El cráneo negro está dormido, una vez más...</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Un pequeño cráneo de obsidiana. Era una fuente de poder en la Necrópolis, pero después de la caída del Lich parece que perdió todo su poder. Al sostenerlo en la mano un pensamiento extraño viene a su mente: \&quot;Estoy hambriento\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">El cráneo esta emitiendo poder, puede verse a través de los cuencas vacías del cráneo. Mientras lo sostienes en la mano puede oír a una voz espantosa decir: \&quot;La muerte esta cerca\&quot;.</string>
     <string name="BlackSkull_Name">cráneo negro</string>
@@ -888,6 +889,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Halls_TileWater">Lava fría</string>
     <string name="Haste_Info">La prisa permitirá al ejecutante moverse con una velocidad tan extrema, que todo a su alrededor parecerá estático. Dicha prisa consumirá mucha energía, por lo que su uso solo es posible durante un breve periodo de tiempo.\n\nLos maestros expertos son capaces de mantenerse apurados durante más tiempo.</string>
     <string name="Haste_Name">Prisa extrema</string>
+    <string name="Heal_Cast">%1 ha sido curado.</string>
     <string name="Heal_Info">Un hechizo bastante útil en las mazmorras, ¿verdad?</string>
     <string name="Heal_Name">Curar</string>
     <string name="HealerNPC_Desc">Un hombre viejo, se ve como alguien que hace varitas.</string>
@@ -1476,6 +1478,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Pasty_Info">Esto es una autentica empanada con el tradicional relleno de carne y patata.</string>
     <string name="Pasty_Name">empanada</string>
     <string name="Pickaxe_ACMine">EXTRAER</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Esto es una herramienta grande y robusta para romper rocas. Probablemente pueda usarse como arma. </string>
     <string name="Pickaxe_InsufficientStr">¡No hay suficiente fuerza para minar!</string>
     <string name="Pickaxe_Name">pico</string>
@@ -2358,6 +2361,7 @@ otro lugar del nivel.</string>
     <string name="WarriorArmor_NotWarrior">¡Sólo los guerreros pueden usar esta armadura!</string>
     <string name="WarriorArmor_Prompt">Escoge una dirección para saltar</string>
     <string name="WaterElemental_Desc">Los elementales de agua pueden encontrarse cerca de grandes masa de agua. Normalmente, estos seres mágicos simplemente están dando un paseo.</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name">elemental de agua</string>
     <string name="WaterElemental_Name_Objective">elemental de agua</string>
     <string name="WaterOfAwareness_Info">El poder del conocimiento irradia de este pozo. Toma un trago para revelar todos los secretos de los objetos que lleves equipados.</string>
@@ -2975,6 +2979,10 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
 
 
 

@@ -653,6 +653,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Displacement_Txt">%s niestabilności</string>
     <string name="DoctorArmor_Info">Ta zbroja plagowego lekarza pozwala na uzycie umiejetnosci \&quot;Ziarna Me̊dzytorza\&quot;, ktora uwalnia toksyczny gaz. Zatruwa, oslabia i dezorientuje przeciwnikow. Lekarz, chroniony przez swoja maske, jest odporny na te efekty.</string>
     <string name="DoctorArmor_Name">Szata Doktora</string>
+    <string name="DoctorArmor_NotDoctor">Tylko lekarze chorób zakaźnych mogą użyć tej zbroi!</string>
     <string name="DoctorSpecial">Chmura Miazmatów</string>
     <string name="DogeMask_Info">Chciałeś się kiedyś przebrać za sławnego pieseła? Masz teraz szansę!\nTak bardzo maska! przebranie mocno! Wow!</string>
     <string name="DogeMask_Name">Maska pieseła</string>
@@ -1356,6 +1357,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="MercenaryNPC_Name">najemnik</string>
     <string name="MercenaryNPC_Name_Objective">najemnik</string>
     <string name="Metabolism_Txt">%s metabolizmu</string>
+    <string name="MiasmaGas_Info">Cuchnąca mgła, która zatruwa, osłabia i dezorientuje tych, którzy nią oddychają.</string>
     <string name="MimicAmulet_Desc">Najbardziej chwalebny moment twej kariery podróżnika właśnie okazał się być pułapką.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">mimik</string>
@@ -3039,6 +3041,8 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
 
 
 

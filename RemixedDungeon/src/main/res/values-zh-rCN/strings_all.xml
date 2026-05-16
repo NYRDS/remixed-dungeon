@@ -12,6 +12,7 @@
     <string name="AboutScene_OurSite">我们的网址：</string>
     <string name="AboutScene_Snd">发送邮件</string>
     <string name="AboutScene_Sound">音效：</string>
+    <string name="AboutScene_SourceCode">获取 Remixed Dungeon 源代码：</string>
     <string name="AboutScene_Thanks">特别感谢：</string>
     <string name="AboutScene_Translation">本地化的功臣：</string>
     <string name="AboutScene_Translation_Names">丘比</string>
@@ -1099,6 +1100,7 @@
     <string name="IronKey_Info">这把古老的铁钥匙上的凹口磨损得很厉害，它的皮制挂绳因为年岁太长快断掉了。它是打开哪扇门的？</string>
     <string name="IronKey_Name">铁钥匙</string>
     <string name="ItemSprite_Info1">一旁掉落：%1$.1f、%2$.1f</string>
+    <string name="Item_ACAlchemy">炼金术</string>
     <string name="Item_ACDrop">扔下</string>
     <string name="Item_ACPickup">捡起</string>
     <string name="Item_ACThrow">投掷</string>
@@ -2936,6 +2938,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
