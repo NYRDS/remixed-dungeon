@@ -384,6 +384,7 @@
     <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">Bilah pedang ini diperbuat dari chaos tulen dan kadangkala ia bergetar. Kuasa hebat tersimpan di dalamnya senjata ini, yang dapat memotong bersih hampir apa jua benda. Sebaliknya, kemahiran terbaik diperlukan, untuk setanding dengan kekuatan senjata ini.</string>
     <string name="ChaosSword_Name">pedang chaos</string>
+    <string name="Chaotic Crystal">Kristal Kacau</string>
     <string name="CharAction_Expel">usir</string>
     <string name="CharAction_Give">beri</string>
     <string name="CharAction_Order">perintah</string>
@@ -593,6 +594,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DieHardSpell_Info">Akan meningkatkan kadar penjanaan semula buat sementara yang menyebabkan anda Sukar Mati.</string>
     <string name="DieHardSpell_Name">Sukar Mati</string>
     <string name="Displacement_Txt">%s sesaran</string>
+    <string name="DoctorArmor_Name">Jubah Doktor</string>
     <string name="DogeMask_Info">Anda mahu menyamar sebagai Doge yang terkenal? Sekarang adalah peluang anda!\nTopeng Hebat! Boleh Menyamar! Menakjubkan!</string>
     <string name="DogeMask_Name">Topeng Doge</string>
     <string name="DonateButton_pleaseDonate">diharap dapat memberi sumbangan dalam bentuk derma</string>
@@ -1339,6 +1341,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Nightcap_Info">Menakluki kurungan bawah tanah pada waktu malam adalah pekerjaan yang sangat memenatkan. Oleh yang demikian apa kata pakai topi serkup yang panas dan menenangkan ini supaya semua kerisauan anda dapat dilupakan.</string>
     <string name="Nightcap_Name">Topi Malam</string>
     <string name="Nightmare_Desc">Makhluk lokoh yang mempunyai sesungut bersentakan. Mimpi Ngeri merupakan manifestasi dari tanggapan jahat Dewa Purba.</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name">mimpi ngeri</string>
     <string name="Nightmare_Name_Objective">mimpi ngeri</string>
     <string name="No_Valid_Cell">Tiada bilik yang sesuai berhampiran.</string>
@@ -1875,6 +1878,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">batang kayu panjang yang mana salah satu hujungnya dicemat dengan bilah besi tajam.</string>
     <string name="Spear_Name">lembing</string>
+    <string name="SpeedBuff_Info">Pergerakan meningkat</string>
+    <string name="SpeedBuff_Name">Kesatuan</string>
     <string name="SpellBook_Info">Buku ini merupakan kompilasi pelbagai halaman yang dijahit menjadi satu buku. Anda boleh mengambil manafaat di dalamnya jika anda lebih teliti.</string>
     <string name="SpellBook_Info_Identified">Di dalam halaman ini anda menemui teks lengkap  bagi mantera \&quot;%1$s\&quot;.\n\&quot; %2$s\&quot;</string>
     <string name="SpellBook_Name">Buku Mantera</string>
@@ -2764,6 +2769,12 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
 
 
 

@@ -378,6 +378,7 @@
     <string name="ChaosArmor_Name">Armadura do Caos</string>
     <string name="ChaosBow_Info">Um arco terrível cheio de poder do Caos. Cada flecha disparada por ele vai levar um pouco de energia do caos para seu destino. Mas se você errar...</string>
     <string name="ChaosBow_Name">Arco do Caos</string>
+    <string name="ChaosCrystal_ArmorFused">O cristal fundiu-se com sua armadura e assumiu a forma do caos.</string>
     <string name="ChaosCrystal_BowFused">O Cristal absorve seu arco, e tomou a forma de um Arco</string>
     <string name="ChaosCrystal_Fuse">FUNDIR</string>
     <string name="ChaosCrystal_Info">Você sente correntes de energia correndo através de suas mãos, enquanto você o segura.</string>
@@ -395,6 +396,7 @@
     <string name="ChaosCrystal_Use">USAR</string>
     <string name="ChaosHelmet_Info">Um capacete vermelho sangue é um símbolo essencial de um guerreiro do caos.</string>
     <string name="ChaosHelmet_Name">Capacete do Caos</string>
+    <string name="ChaosShield_desc">O Escudo do Caos é o resultado de fundir um Cristal do Caos com um escudo comum, fazendo com que ele manifeste efeitos caóticos aleatórios ao bloquear com sucesso.</string>
     <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Uma varinha possuída pelo Poder do Caos! O que mais um mago pode sonhar em ter?</string>
     <string name="ChaosStaff_Name">Vara do Caos</string>
@@ -2933,6 +2935,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

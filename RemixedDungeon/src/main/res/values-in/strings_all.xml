@@ -825,6 +825,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="GoldenSword_Name">pedang emas</string>
     <string name="Golem_Defense">tertahan</string>
     <string name="Golem_Desc">Para kurcaci mencoba menggabungkan pengetahuan mereka tentang mekanisme dengan kekuatan elemental baru mereka. Mereka menggunakan roh bumi sebagai jiwa yang memasuki tubuh monster batu itu. Meskipun, kesalahan terkecil dalam ritual dapat menyebabkan kekacauan.</string>
+    <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">monster batu</string>
     <string name="Golem_Name_Objective">monster batu</string>
     <string name="Goo_Desc">Tidak banyak yang diketahui tentang Goo. Sangat mungkin bahwa ia bukanlah makhluk, melainkan gabungan zat dari saluran pembuangan yang mendapatkan dasar-dasar kehendak bebas. Apa pun itu, jelas sekali bahwa sihir gelap bekerja di sini.</string>
@@ -2273,6 +2274,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WarHammer_Info">Hanya sedikit makhluk yang dapat bertahan dari serangan meremukan kumpulan timah dan baja tinggi ini, tapi hanya petualang terkuat yang dapat menggunakan ini dengan efektif.</string>
     <string name="WarHammer_Name">palu perang</string>
     <string name="Warlock_Desc">Saat minat para kurcaci berpindah dari teknik mesin ke seni batin, para penyihir muncul di kota. Mereka mulai dengan sihir elemental, tapi akan berubah ke demonologi dan nekromansi.</string>
+    <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">Sambaran kegelapan %s membunuh Anda...</string>
     <string name="Warlock_Name">penyihir kurcaci</string>
     <string name="Warlock_Name_Objective">penyihir kurcaci</string>
@@ -2928,6 +2930,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

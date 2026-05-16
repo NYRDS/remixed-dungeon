@@ -63,6 +63,9 @@ Du kannst deine Entscheidung jederzeit ändern (Klicke auf das Diagrammsymbol be
     <string name="Amulet_Name">Amulett von Yendor</string>
     <string name="AnesthesiaBuff_Info">Fühlt keinen Schmerz und wacht durch Angriffe nicht auf, erleidet aber trotzdem Schaden.</string>
     <string name="AnesthesiaBuff_Name">Anästhesie</string>
+    <string name="Anesthesia_Cast">%s versinkt in einen tiefen Traum ohne Träume.</string>
+    <string name="Anesthesia_Info">Beeinflusst das Ziel mit einem tiefen, unnatürlichen Schlaf. Selbst die heftigsten Angriffe werden es nicht aus diesem Schlaf wecken.</string>
+    <string name="Anesthesia_Name">Anästhesie</string>
     <string name="Ankh_Info">Dieses antike Symbol der Unsterblichkeit gewährt dir die Fähigkeit, dich nach deinem Tod wiederzubeleben. Beim Wiederauferstehen gehen jedoch alle nicht-ausgestatteten Gegenstände verloren.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">%s der negativen Entropie</string>
@@ -748,6 +751,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Eye_Kill">Der Todesblick des %s hat dich getötet...</string>
     <string name="Eye_Name">Böses Auge</string>
     <string name="Eye_Name_Objective">Böses Auge</string>
+    <string name="Facilitations_Descriptions_1">Es ist noch nicht bekannt, wer deine Eltern waren, aber die natürliche trollartige Regeneration wird dazu beitragen, alle kommenden Kampfnarben zu heilen.</string>
     <string name="Facilitations_Descriptions_2">Ein tiefgreifendes und gründliches Studium der Natur als Energiequelle ermöglicht es Ihnen, Ihre magischen Reserven während der Reise wieder aufzufüllen.</string>
     <string name="Facilitations_Names_1">Trollkörper</string>
     <string name="Facilitations_Names_3">Riesenstärke</string>
@@ -1157,6 +1161,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="King_Info3">Wie könnt Ihr es wagen!</string>
     <string name="King_Name">Zwergenkönig</string>
     <string name="King_Name_Objective">Zwergenkönig</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Info">Ein Stück Eisen mit Löchern für deine Finger.</string>
     <string name="Knuckles_Name">Schlagring</string>
     <string name="KoboldIcemancer_Desc">Kobold-Eiszauberer zählten zur Elite in ihrer Gesellschaft. Krieger, Magier und am wichtigstem Wissenschaftler. Antike Eiszauberer haben das Handwerk des Formens und Verzauberns von raffinierten Mechanismen aus Eis gemeistert.</string>
@@ -2478,6 +2483,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndInstallingMod_deleting_file">Lösche %s</string>
     <string name="WndInstallingMod_please_wait">Mod wird installiert, bitte warten...</string>
     <string name="WndInstallingMod_skipping_file">Überspringe %s</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Rezept ausführen</string>
     <string name="WndItemAlchemy_SelectRecipe">Rezept auswählen</string>
     <string name="WndItemAlchemy_Title">Alchemierezepte mit %s</string>
     <string name="WndItemAlchemy_Transmute">Transmutieren</string>
@@ -2944,6 +2950,13 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
+
 
 
 

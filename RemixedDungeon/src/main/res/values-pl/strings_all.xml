@@ -907,6 +907,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Halls_TileWater">Zimna lawa</string>
     <string name="Haste_Info">Pośpiech pozwoli poruszać się z ekstremalną prędkością, wszystko wokół niego będzie się wydawać statyczne. Taki pośpiech zużywa dużo energii, więc jest to możliwe tylko przez krótki okres czasu.\n\n Uzdolniony mistrz jest w stanie działać w pośpiechu przez dłuższy czas.</string>
     <string name="Haste_Name">Ekstremalny Pośpiech</string>
+    <string name="Heal_Cast">%s jest leczony.</string>
     <string name="Heal_Info">Bez niego do Podziemi ani rusz, prawda ?</string>
     <string name="Heal_Name">Leczenie</string>
     <string name="HealerNPC_Desc">Starzec, wygląda na kogoś kto mógłby trudnić się wytworem kosturów.</string>
@@ -1136,6 +1137,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="IronKey_Info">Wyszczerbienia na tym starożytnym kluczu są dobrze wykonane. Jego skórzany talrep jest zniszczony przez upływ czasu. Jakie drzwi mógłby on otworzyć?</string>
     <string name="IronKey_Name">żelazny klucz</string>
     <string name="ItemSprite_Info1">wyrzuć: %1$.1f %2$.1f</string>
+    <string name="Item_ACAlchemy">ALCHIMIA</string>
     <string name="Item_ACDrop">ZOSTAW</string>
     <string name="Item_ACPickup">Podnieś</string>
     <string name="Item_ACThrow">RZUĆ</string>
@@ -3044,6 +3046,8 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
 
 
 

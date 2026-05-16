@@ -259,6 +259,7 @@
     <string name="Bleeding_Death">Hai sanguinato a morte...</string>
     <string name="BlessedBuff_Info">Che la precisione e l\'elusione arrivino per coloro che sono stati toccati dalla benedizione!</string>
     <string name="BlindnessBuff_Name">Accecato </string>
+    <string name="BodyArmorBuff_Info">La corazza è aumentata a scapito della velocità di movimento.</string>
     <string name="BodyArmorBuff_Name">Armatura Corporea</string>
     <string name="BodyArmorSpell_Name">Armatura Corporea</string>
     <string name="BoneSaw_Info">Una sega chirurgica di precisione progettata per dissezioni rapide. I suoi danni e la velocità d\'attacco diventano più letali con l\'abilità del Medico della Peste. I colpi critici estraggono parti aggiuntive raccoglibili dai nemici e colpisce con spietata efficienza i nemici paralizzati.</string>
@@ -511,6 +512,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Crystal_Desc">Un grosso e brillante cristallo fluttua nell\'aria. Probabilmente è pieno di potente magia. </string>
     <string name="Crystal_Name">cristallo flutuante</string>
     <string name="Crystal_Name_Objective">cristallo flutuante</string>
+    <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">Questi piccoli e malefici dardi non provocano tanto danno, ma possono paralizzare il bersaglio lasciandolo immobile e indifeso per qualche tempo. </string>
     <string name="CurareDart_Name">dardo curatore</string>
     <string name="DM300_Desc">Questa macchina fu creata dai Nani parecchi secoli fa. Più tardi, i Nani hanno cominciato a rimpiazzare i macchinari con golem, elementali e persino demoni. Alla fine ciò ha portato il declino della loro civiltà. La DM-300 e altre simili macchine erano tipicamente usate per la costruzione e lo scavo e, in alcuni casi, per la difesa della città.</string>
@@ -565,6 +567,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Dewdrop_Name">goccia di rugiada</string>
     <string name="DieHardBuff_Info">Tasso di rigenerazione aumentato.</string>
     <string name="DieHardBuff_Name">Duro a morire</string>
+    <string name="DieHardSpell_Info">Aumenterà temporaneamente la tua rigenerazione rendendoti un vero Duracissimo.</string>
     <string name="DieHardSpell_Name">Duro a morire</string>
     <string name="Displacement_Txt">%s del dislocamento</string>
     <string name="DoctorArmor_Info">Quest\'armatura del dottore della peste permette di usare l\'abilità \&quot;Nuvola di Miasma\&quot;, che rilascia un gas nocivo che avvelena, indebolisce e disorienta i nemici. Il dottore, protetto dalla sua maschera, è immune a questi effetti.</string>
@@ -2709,6 +2712,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 

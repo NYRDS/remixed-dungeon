@@ -26,6 +26,7 @@
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">scorpion acide</string>
     <string name="Acidic_Name_Objective">scorpion acide</string>
+    <string name="Actions_Speed">Niveau de rapidité</string>
     <string name="Affection_Txt">%s d\'affection</string>
     <string name="AirElemental_Desc">Les élémentaires d\'air sont faits d\'air vivant.</string>
     <string name="AirElemental_Gender">masculine</string>
@@ -61,6 +62,7 @@
     <string name="Amulet_ACEnd">FIN DU JEU</string>
     <string name="Amulet_Info">L\'amulette de Yendor est le plus puissant des artefacts d\'origine inconnue. On dit que l\'amulette est capable de satisfaire tous les souhaits si la volonté de son porteur est suffisante pour la \&quot;persuader\&quot; de le faire.</string>
     <string name="Amulet_Name">Amulette de Yendor</string>
+    <string name="AnesthesiaBuff_Info">Ne sent pas la douleur et ne se réveille pas des attaques, mais subit quand même des dégâts.</string>
     <string name="AnesthesiaBuff_Name">Anesthésie</string>
     <string name="Anesthesia_Cast">%s plonge dans un profond sommeil sans rêves.</string>
     <string name="Anesthesia_Info">Provoque un sommeil profond et surnaturel chez votre cible. Même les attaques les plus violentes ne la réveilleront pas de ce sommeil.</string>
@@ -94,6 +96,7 @@
     <string name="Artifact_Limit">Vous ne pouvez équiper que 2 artefacts en même temps</string>
     <string name="AttackDelay_Increased">Impossible d\'utiliser %s comme ça. Mouvements lents, respirations lourdes...</string>
     <string name="Attack_Cooldown">Temps de recharge de l\'attaque</string>
+    <string name="Attack_Range">Portée d\'attaque</string>
     <string name="AwarenessBuff_Info">Les sens se sont aiguisés, donnant plus de conscience des environs.</string>
     <string name="AwarenessBuff_Name">Conscience</string>
     <string name="AzuterronNPC_Desc">Un personnage mystérieux entouré d\'une brume noire.</string>
@@ -571,6 +574,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="CorpseDust_Info">Ce tas de poussière cadavérique ne se démarque pas plus qu\'un tas de poussière lambda. Mais bon, vous sentez qu\'il vaudrait mieux vous en débarrasser au plus vite.</string>
     <string name="CorpseDust_Info2">Peut-être parce que le simple fait de la tenir vous rend anxieux et en colère.</string>
     <string name="CorpseDust_Name">Poussière des morts</string>
+    <string name="CorpseExplosion_Info">Transforma un cadáver en una nube mortal de gas tóxico, propagando enfermedad y envenenamiento a todos los enemigos cercanos.</string>
     <string name="CorpseExplosion_Name">Explosion de Cadavre</string>
     <string name="CorpseExplosion_NoCorpse">Il n\'y a pas de cadavre à cet endroit.</string>
     <string name="Crab_Defense">paré</string>
@@ -2478,12 +2482,14 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndChooseWay_Message">Quelle voie choisirez-vous ?</string>
     <string name="WndClass_Mastery">Spécialisation</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+    <string name="WndCryptoDonate_copyAddress">Salin alamat</string>
     <string name="WndCryptoDonate_currency">Devise</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Vous pouvez soutenir le développement de Remixed Dungeon en envoyant des dons en cryptomonnaie aux adresses ci-dessous. Merci pour votre généreux soutien !</string>
     <string name="WndCryptoDonate_openWallet">Ouvrir le portefeuille</string>
     <string name="WndCryptoDonate_supportDev">Soutenir le développeur</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_tron">Ton</string>
     <string name="WndCryptoDonate_walletAddress">Adresse du portefeuille</string>
     <string name="WndCryptoDonate_warningText">AVERTISSEMENT : Vérifiez toujours l\'adresse avant d\'envoyer des fonds. Les transactions de cryptomonnaies sont irréversibles !</string>
     <string name="WndCustomizations_Title">Customisations</string>
@@ -2587,6 +2593,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndModInstall_Version">version</string>
     <string name="WndModSelect_AreYouSure">Effacer le mod: %s, en êtes-vous sûr?</string>
     <string name="WndModSelect_ReallyDelete">Voulez-vous vraiment l\'effacer ?</string>
+    <string name="WndModsDisclaimer_install">Install</string>
     <string name="WndModsDisclaimer_manage">Gérer la liste des mods</string>
     <string name="WndModsDisclaimer_title">Mods</string>
     <string name="WndMovieTheatre_Bye">Revenez quand vous le voulez, nous serons ravis de vous revoir ! </string>
@@ -3038,6 +3045,13 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
+
+
+
+
+
 
 
 

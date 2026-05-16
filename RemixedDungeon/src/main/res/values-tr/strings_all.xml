@@ -384,6 +384,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="ChampionOfWaterBuff_Name">Su Şampiyonu</string>
     <string name="ChaosArmor_Info">Kan kırmızı metal parçalar , kırmızı zincirler ile birlikte dikilmiş. Dokunman ile birlikte kaotik bir enerji yayıyor</string>
     <string name="ChaosArmor_Name">Kaos zırhı</string>
+    <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Bu korkunç yay , kaos enerjisi ile dolu. Her fırlattığı ok , bir parça kaos enerjisi taşıyor</string>
     <string name="ChaosBow_Name">kaos yayı</string>
     <string name="ChaosCrystal_ArmorFused">Zırhınızla kristal birleşti ve kaos formunu aldı.</string>
@@ -1241,6 +1242,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="LibraryBook_Name">Kütüphane kitabı</string>
     <string name="Lich_Desc">Ölüm büyücüsü nekropolün derinliklerinde ölümle buluştu ve bedenine akan şeytani güçler onu yavaş yavaş bir Lich\'e dönüştürdü. Kötü niyetli güçler tarafından kontrol edilen bir ölüm büyücüsü, iradesiz bir kukla...</string>
     <string name="Lich_DieInfo">Bu Ölü Çağıran\'ı hiç sevmedim. Bu yüzden 7. seviyeye dönmenin ve yeni maceraya giden başka bir yol bulmanın zamanı geldi.</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Info">Işık vücuttan yayılır ve etrafındaki her şeyi aydınlatır.</string>
@@ -2961,6 +2963,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

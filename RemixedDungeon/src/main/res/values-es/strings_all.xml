@@ -34,6 +34,7 @@
     <string name="AirElemental_Name_Objective">elemental de aire</string>
     <string name="AlarmTrap_Desc">¡La trampa emite un desgarrador sonido que resuena por toda la mazmorra!</string>
     <string name="Albino_Desc">Las ratas marsupiales son agresivas, pero son los habitantes más debiles de las alcantarillas. Solo son un problema cuando son muchas.</string>
+    <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name">rata albina</string>
     <string name="Albino_Name_Objective">rata albina</string>
     <string name="AlchemyPot_SelectSeed">Selecciona la semilla que lanzar</string>
@@ -222,6 +223,7 @@
     <string name="BattleAxe_Info">El peso de la enorme cabeza de metal de este hacha de batalla añade fuerza considerable en cada golpe.</string>
     <string name="BattleAxe_Name">hacha de batalla</string>
     <string name="Bee_Desc">A pesar de su pequeño tamaño, las abejas tienden a proteger su colmena ferozmente. Sin embargo, no viven mucho tiempo.</string>
+    <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name">abeja</string>
     <string name="Bee_Name_Objective">abeja</string>
     <string name="BellaNPC_Amulet_F">Oh! Hola cariño, ¿Pero que tienes allí?. ¡Ah, un amuleto tan elegante! Y tú ... brillas mucho más que todos. ¿Te gustaría dar un paseo y discutir nuestro futuro juntos?</string>
@@ -417,6 +419,7 @@
     <string name="ChaosCrystal_Use">USAR</string>
     <string name="ChaosHelmet_Info">Un casco de color rojo sangre. Un gran símbolo de un guerrero del caos.</string>
     <string name="ChaosHelmet_Name">Casco del caos</string>
+    <string name="ChaosShield_desc">El Escudo del Caos es el resultado de fundir un Cristal del Caos con un escudo ordinario, causándolo a manifestar efectos caóticos aleatorios al bloquear exitosamente.</string>
     <string name="ChaosShield_name">Escudo del Caos</string>
     <string name="ChaosStaff_Info">¡Una vara imbuida por el Poder del Caos! ¿Qué otra cosa puede soñar o temer un mago?</string>
     <string name="ChaosStaff_Name">vara de caos</string>
@@ -892,7 +895,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Halls_TileWater">Lava fría</string>
     <string name="Haste_Info">La prisa permitirá al ejecutante moverse con una velocidad tan extrema, que todo a su alrededor parecerá estático. Dicha prisa consumirá mucha energía, por lo que su uso solo es posible durante un breve periodo de tiempo.\n\nLos maestros expertos son capaces de mantenerse apurados durante más tiempo.</string>
     <string name="Haste_Name">Prisa extrema</string>
-    <string name="Heal_Cast">%1 ha sido curado.</string>
+    <string name="Heal_Cast">%s es curado.</string>
     <string name="Heal_Info">Un hechizo bastante útil en las mazmorras, ¿verdad?</string>
     <string name="Heal_Name">Curar</string>
     <string name="HealerNPC_Desc">Un hombre viejo, se ve como alguien que hace varitas.</string>
@@ -2517,6 +2520,7 @@ otro lugar del nivel.</string>
     <string name="WndInstallingMod_deleting_file">Eliminando %s</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, por favor espera...</string>
     <string name="WndInstallingMod_skipping_file">Omitiendo %s</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Ejecutar receta</string>
     <string name="WndItemAlchemy_NoRecipes">No hay recetas disponibles con este objeto y tu inventario actual.</string>
     <string name="WndItemAlchemy_SelectRecipe">Seleccionar receta</string>
     <string name="WndItemAlchemy_Title">Recetas de alquimia con %s</string>
@@ -2983,6 +2987,11 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
 
 
 

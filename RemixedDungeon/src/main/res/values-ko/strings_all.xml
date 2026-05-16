@@ -648,6 +648,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">엘프의 제조술을 보여주는 가장 좋은 예시입니다. 일반 나무 활보다 더 효과적이고 정확한 성능을 자랑합니다.</string>
     <string name="ElvenBow_Name">엘프 활</string>
+    <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">이 무기는 특수한 합금으로 만들어졌기 때문에 통상의 단검보다 훨씬 가볍다.</string>
     <string name="ElvenDagger_Name">엘프제 단검</string>
     <string name="EncumbranceBuff_CharAct_1">이 %s를 제대로 다루기에는 힘이 부족합니다.</string>
@@ -1063,6 +1064,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="King_Info3">네가 감히!</string>
     <string name="King_Name">드워프 왕</string>
     <string name="King_Name_Objective">드워프 왕</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Info">이 너클은 쇠로된 조각이 주먹에 꼭 맞도록 만들어져 있습니다.</string>
     <string name="Knuckles_Name">너클더스터</string>
     <string name="KoboldIcemancer_Desc">코볼트 빙술사들은 그들의 사회의 엘리트층입니다. 전사와, 마법사, 그리고 가장 중요한 과학자들이지요.고대 빙술사들은 얼음의 형태를 만드는 정교한 기계장치로 얼음을 만들고 그것들을 마법으로 강화시키는 데에 통달하였습니다.</string>
@@ -1334,7 +1336,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Nightmare_Name">악몽</string>
     <string name="Nightmare_Name_Objective">악몽</string>
     <string name="No_Valid_Cell">근처에 맞는 방이 없습니다.</string>
-    <string name="OozeBuff_Info">부식성 점액이 살을 갉아먹고 있다!</string>
+    <string name="OozeBuff_Info">Panas diperbesar pada kos rendah.</string>
+    <string name="OozeBuff_Name">Kaustik Rüzgar</string>
     <string name="Ooze_Death">%s 이/가 당신을 죽였습니다...</string>
     <string name="Order_Resist">감히 날 어떻게 하려고?!!</string>
     <string name="OverpricedRation_Info">일반적인 비상 식량과 똑같이 생겼지만 크기가 좀 더 작습니다.</string>
@@ -2770,6 +2773,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
 
 
 

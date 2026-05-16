@@ -1411,6 +1411,7 @@
     <string name="Nightmare_Name">сонна мара</string>
     <string name="Nightmare_Name_Objective">сонна мара</string>
     <string name="No_Valid_Cell">Поблизу немає необхідної клітинки.</string>
+    <string name="OozeBuff_Name">Каустична Смола</string>
     <string name="Ooze_Death">%s вбив тебе...</string>
     <string name="Order_Info">З належною зосередженістю ваші накази майже невідворотні.</string>
     <string name="Order_Name">Наказ</string>
@@ -2869,6 +2870,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

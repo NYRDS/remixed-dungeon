@@ -875,6 +875,7 @@
     <string name="Hedgehog_Info3">你喜歡用樹莓果醬配茶嗎？</string>
     <string name="Hedgehog_Info4">拿上這個派吧</string>
     <string name="Hedgehog_Name">刺猬</string>
+    <string name="HeroClass_Doctor">瘟疫醫生</string>
     <string name="HeroClass_Elf">精靈</string>
     <string name="HeroClass_ElfPerks_0">精靈以15點生命值和9點力量開始遊戲。</string>
     <string name="HeroClass_ElfPerks_1">精靈免疫纏繞狀態。</string>
@@ -1919,6 +1920,7 @@
     <string name="Skeleton_Name">骷髏</string>
     <string name="Skeleton_Name_Objective">骷髏</string>
     <string name="SleepBuff_Info">完全沉睡中。</string>
+    <string name="SleepBuff_Name">睡眠</string>
     <string name="SlowBuff_Name">緩速</string>
     <string name="Slow_Name_0">寒冰%s</string>
     <string name="Slow_Name_1">寒冰%s</string>
@@ -2870,6 +2872,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 
