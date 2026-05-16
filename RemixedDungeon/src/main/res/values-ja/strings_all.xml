@@ -193,6 +193,7 @@
     <string name="Bandit_Name">狂った盗賊</string>
     <string name="Bandit_Name_Objective">狂った盗賊</string>
     <string name="BardNPC_Desc">街の吟遊詩人がリュートを演奏している。</string>
+    <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">吟遊詩人</string>
     <string name="BardNPC_Name_Objective">吟遊詩人</string>
     <string name="BardSong_1">妻と私は、小さな丸太小屋に二人きりで住んでいました。妻はジンが好きで、私はラム酒が好きでした。私たちはとても楽しい時間を過ごしていました。</string>
@@ -289,6 +290,7 @@
     <string name="BloodTransfusion_Drained">ペットからあなたに生命力が流れ込む。</string>
     <string name="BloodTransfusion_FullHP">血液はすでに満杯です。</string>
     <string name="BloodTransfusion_Name">輸血</string>
+    <string name="BloodTransfusion_WontAgreed">目標が生命の精髄を吸い取ることに抵抗する。</string>
     <string name="BodyArmorBuff_Info">アーマーは移動速度を犠牲にして増加する。</string>
     <string name="BodyArmorBuff_Name">ボディーアーマー</string>
     <string name="BodyArmorSpell_Info">蓄えられた筋力を活性化し、一時的に筋力を強化する。これにより装甲が大幅に強化されるが、移動速度は低下する。</string>
@@ -1331,6 +1333,7 @@
     <string name="MercenaryNPC_Name">傭兵</string>
     <string name="MercenaryNPC_Name_Objective">傭兵</string>
     <string name="Metabolism_Txt">代謝の %s</string>
+    <string name="MiasmaGas_Info">吸うと毒し、弱め、方向を狂わせる有害な瘴気。</string>
     <string name="MimicAmulet_Desc">冒険者人生で最も輝かしい瞬間が、罠だったことが判明したのだ。</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">ミミック</string>
@@ -1937,6 +1940,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="ShamanElder_Name">エルダーシャーマン</string>
     <string name="ShamanElder_Name_Objective">エルダーシャーマン</string>
     <string name="Shaman_Desc">最も知能の高いノールはシャーマンの魔法を使いこなすことができる。ノールシャーマンは力不足を補うために戦闘魔法を好み、部族内での地位に疑問を抱く者には躊躇なく使用する。</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">%s のライトニングボルトがあなたを殺した...</string>
     <string name="Shaman_Name">ノールシャーマン</string>
     <string name="Shaman_Name_Objective">ノールシャーマン</string>
@@ -2072,6 +2076,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Spinner_Name">ケイヴスパイダー</string>
     <string name="Spinner_Name_Objective">ケイヴスパイダー</string>
     <string name="SpiritOfPain_Desc">生きた闇の破片。</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">痛みの精霊</string>
     <string name="SpiritOfPain_Name_Objective">痛みの精霊</string>
     <string name="Sprout_Info">ただし、この呪文が成功するためには、地面に緑がなければなりません。</string>
@@ -2999,6 +3004,11 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
+
+
+
 
 
 

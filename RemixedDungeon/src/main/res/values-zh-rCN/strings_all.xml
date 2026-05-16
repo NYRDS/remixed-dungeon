@@ -637,6 +637,7 @@
     <string name="DieHardSpell_Info">会暂时增加你的回复速度，让你成为真正的死神。</string>
     <string name="DieHardSpell_Name">顽固</string>
     <string name="Displacement_Txt">位移%s</string>
+    <string name="DoctorSpecial">瘴氣雲</string>
     <string name="DogeMask_Info">你想伪装成著名的狗吗？现在是你的机会！\n这样的面具！伪装性很强！真的！</string>
     <string name="DogeMask_Name">柴犬面具</string>
     <string name="DonateButton_pleaseDonate">请考虑捐献</string>
@@ -703,6 +704,7 @@
     <string name="ElfArmor_Desc">借助这件斗篷，精灵可以召唤自然之力。眨眼之间高草就会覆盖大地，甚至能借助坚固的岩石使视线内的所有敌人都动弹不得。</string>
     <string name="ElfArmor_Name">精灵斗篷</string>
     <string name="ElfArmor_NotElf">只有精灵才能使用这件护甲！</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">精灵工艺的一个特例。它显然比普通的木弓更有效、更准确。</string>
     <string name="ElvenBow_Name">精灵长弓</string>
     <string name="ElvenDagger_Gender">masculine</string>
@@ -870,6 +872,7 @@
     <string name="Guts_TileGrass">干枯灌木</string>
     <string name="Guts_TileHighGrass">干枯灌木</string>
     <string name="Guts_TileWater">奇怪的粘稠液体</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">带尖头的单面斧。</string>
     <string name="Halberd_Name">斧枪</string>
     <string name="Halls_TileDescBookshelf">用远古语言写就的书籍堆积在书架里。</string>
@@ -1493,10 +1496,12 @@
     <string name="PlagueDoctorQuest_1_1_InProgress">给我带_五只死老鼠_来！你每给我带一只，我们就离理解这场可怕的瘟疫更近一步。</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">啊嚏！\n 诅咒这该死的可恶瘟疫！它像野火一样在城市中蔓延，在毫无戒心的百姓的骨头里溃烂！呸！你以为那些可悲的卫兵有机会对抗这种阴险的瘟疫吗？你，在那里！强壮、健康的样本。也许你能帮我。那些肮脏的下水道_老鼠_……它们携带着它，我告诉你，瘟疫的种子就在它们腐烂的小身体里！给我带_五_只那些可怜的生物来，当然是_死的_！它们的皮对我的研究将是非常宝贵的。我会为你制作一件奇妙的盔甲，一个抵御瘟疫本身的保护屏障！</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">啊……太棒了！那些_蜗牛_，它们的秘密如同月光下的花瓣般缓缓绽放。真是丰富的信息啊！但你说得对，_五十枚金币_确实算不上像样的报酬。*疯狂地轻笑*。</string>
+    <string name="PlagueDoctorQuest_1_2_Prologue">*Kuat batuk* Hapşoo!\n _Siput-siput_… mereka merayap. Mereka menetes. Dan mereka berbisik rahasia usia yang terlupakan. Aku butuh mereka, _sepuluh_ ekor, cangkangnya masih utuh. Apakah kamu pikir _lima puluh koin emas_ cukup untuk pengetahuan begitu berharga?\n Bah! Tidak apa-apa. Informasi yang mereka miliki bisa menjadi kunci untuk menghentikan wabah ini. Atau… bisa juga membawa kita pada sesuatu yang lebih mengerikan. Kamu yang tentukan.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_月光草_……它是编织在这个世界中的魔法的见证。我从它们的本质中学到了很多，但你的奖励……嗯，它已经被极其精心地准备好了。*递给英雄一瓶闪烁的_法力药水_* 愿它的力量指引你度过前方的危险。</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">寻找 _月光草_，那里黑暗与微弱的月光交相辉映。_两颗种子_，其精华，将揭示隐藏的秘密。</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">太好了！_太阳草_，它的金色精华脉动着生命力。我已经从它精致的结构中学到了很多。*他递给你一瓶_治疗药水_，液体闪烁着微弱的金光。*当世界让你感到沉重时喝下它，感受阳光的温暖唤醒你的精神。</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_两颗太阳草_种子。它们的金色花瓣蕴含着我要理解的力量。找到它们，让它们的精华显现！</string>
+    <string name="PlagueDoctorQuest_3_1_Epilogue">*Dengan lembut memeluk _kelelawar_ dengan tangan ber Sarung tangannya, memeriksa bentuk kecilnya dengan ketertarikan yang mengganggu* Luar biasa! Ekolokasi kelelawar... ini berbeda dari apa pun yang pernah saya temui. Akurasi seperti itu... begitu... kontrol. *Dia menoleh kepada Anda, wajahnya tertutup topeng* Untuk usaha Anda, sebuah _ gulungan Peningkatan_. Gunakan dengan bijak, karena itu memiliki potensi untuk... memurnikan esensi Anda. *Dia menyerahkan gulungan kepada Anda, suaranya turun menjadi bisikan* Kelelawar ini... itu adalah jendela ke dunia tersembunyi. Dunia... di mana bayangan menari dan rahasia berbisik.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">给我带一只_吸血鬼蝙蝠_，活着且完好无损！它的血液、它的翅膀……它们藏着我必须揭开的秘密！</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*他的眼睛闪烁着一种奇怪的、狂热的光芒* 啊，_吸血鬼蝙蝠_！夜之生物，以猎物的生命力为食。迷人……真迷人。我需要一个活的来研究它独特的生理结构。这一切都是为了……理解……理解……*他喃喃自语，说出一连串神秘的术语*。是的！_蝙蝠_的回声定位，它在完全黑暗中导航的能力……这是解开秘密的关键。</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*他仰头发出阵阵狂笑，声音在阴暗的实验室中回荡* 太棒了！一名_死亡骑士_站在我们面前！它身上散发出的力量……令人陶醉！*他转向你，眼中闪烁着狂热的光芒* 这是你应得的奖赏：一瓶_力量药水_！愿它赐予你战胜一切敌人的力量！现在……让我们来研究我们的实验对象。它的本质中隐藏着能够改写生命法则的秘密！*他带着疯狂的笑容走向_死亡骑士_，手中晃动着一瓶冒泡的绿色液体</string>
@@ -2662,6 +2667,7 @@ remix.31.1\n
     <string name="Worm_Name_Objective">古神巨虫</string>
     <string name="Wraith_Defense">回避</string>
     <string name="Wraith_Desc">幽魂来自于被惊扰的墓穴中渴望复仇的冒险者之魂。其飘渺的存在使它很难被寻常武器击中。</string>
+    <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">幽魂</string>
     <string name="Wraith_Name_Objective">幽魂</string>
     <string name="WrnExperimental_hint">如果这个奇怪而扭曲的世界对你来说太残酷了，请用以下方法禁用这些选项：\n开始屏幕—&gt;选项—&gt;游戏设置\n菜单，然后开始新的游戏或加载另一个存档。</string>
@@ -2952,6 +2958,12 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
 
 
 

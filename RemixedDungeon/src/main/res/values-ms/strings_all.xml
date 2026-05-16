@@ -312,6 +312,7 @@
     <string name="CagedKobold_Name">kobold terkurung</string>
     <string name="CagedKobold_Name_Objective">kobold terkurung</string>
     <string name="CagedKobold_Quest_End">Oh, terima kasih, terima kasih banyak-banyak! Macamana kamu jumpa kunci ini? Kamu...kamu berjaya musnahkan senjata tu?! Hebat! tahu tak, aku akan bantu kamu, dan aku tahu langkah terbaik ialah mengikut kamu buat masa ini. Kobold terkurung bertukar menjadi lilin</string>
+    <string name="Calm_Cast">%1 진정됩니다.</string>
     <string name="Calm_Info">Di sini ada banyak makhluk yang marah, mari kita bantu mereka.</string>
     <string name="CandleOfMindVision_Info">Rupanya seperti lilin biasa, anda tidak menjangka ia boleh ditemui dalam kurungan bawah tanah ini. Yang peliknya lilin ini berasa suam bila dipegang walaupun belum lagi dinyalakan.</string>
     <string name="CandleOfMindVision_Info_Exhausted">Lilin telah habis dibakar, ia tidak dapat lagi menerangi sekitar, Nampaknya anda tidak dapat guna ia lagi.</string>
@@ -821,6 +822,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Halls_TileHighGrass">Kulat bara</string>
     <string name="Halls_TileStatue">Tiang</string>
     <string name="Halls_TileWater">Lahar sejuk</string>
+    <string name="Haste_Info">Kerenginan akan membolehkan pelaku bergerak dengan kelajuan yang sangat ekstrem sehingga segalanya di sekelilingnya akan nampak statik. Kerenginan ini akan menggunakan banyak tenaga jadi hanya boleh digunakan untuk tempoh masa yang singkat.\n\nPenguasa yang mahir mampu kekal dalam keadaan kerenginan selama tempoh yang lebih lama.</string>
     <string name="Heal_Cast">%s telah disembuhkan.</string>
     <string name="Heal_Name">Sembuh</string>
     <string name="HealerNPC_Desc">Orang tua, kelihatan beliau seperti pembuat tongkat sakti.</string>
@@ -907,6 +909,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HeroSubClass_DescSnip">_Penembak Hendap_ dapat mengenalpasti titik lemah pada perisai pihak musuh, dan dapat menembusi perisai jika menggunakan senjata bermisil.</string>
     <string name="HeroSubClass_DescWarL">Selepas membunuh musuh _Dukun_ memakan rohnya. Ia dapat menyembuhkan kecederaan dan memuaskan nafsu laparnya.</string>
     <string name="HeroSubClass_DescWard">Oleh kerana ada hubungan istimewa dengan alam membolehkan _Pelindung_ ada keupayaan mengumpul titisan embun dan benih tumbuhan. Kebolehan mengayam lalang, dapat menghasilkan perisai berwarna kuning buat sementara.</string>
+    <string name="HeroSubClass_DescWitchdoctor">Mantera memberi _Witchdoctor_ perisai sihir yang melindungi sepenuhnya daripada kerosakan masuk.</string>
     <string name="HeroSubClass_NameAssa">pembunuh</string>
     <string name="HeroSubClass_NameBatM">ahli sihir perang</string>
     <string name="HeroSubClass_NameBers">berserker</string>
@@ -1396,6 +1399,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PlagueDoctorNPC_Quest_Start_Male">Hmph! Memang tak masuk akal?! Penduduk di sini masih tidak tahu betapa bahaya pembentung di bawah pekan ini! Pengawal dan pengembara bolehlah lindungi pekan dari apa-saja yang mendatang. Tapi! Tiada senjata dapat menghentikan sebaran penyakit. Oleh itu, saya perlukan bukti, bolehkah awak bantu saya? Bawa balik %d keping kulit tikus, untuk saya jalankan beberapa ujian tambahan.\n</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Bawakan saya _lima tikus mati_! Setiap tikus yang anda bawa semakin mendekatkan kami kepada pemahaman wabah yang mengerikan ini.</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">Hachiii!\n Terkutuklah wabah infernal ini! Ia merebak di seluruh bandar seperti api liar, merebak dalam tulang penduduk yang tidak curiga! BAH! Adakah kamu rasa pengawal yang tidak berdaya itu mempunyai peluang terhadap penyakit yang licik ini? Kamu di sana! Spesimen yang kuat dan sihat. Mungkin kamu boleh bantu saya. _Tikus_ longkang yang kotor itu... mereka membawanya, saya beritahu kamu, benih penyakit dalam badan kecil mereka yang busuk! Bawakan saya _lima_ daripada makhluk yang menyedihkan itu, _mati_, sudah tentu! Kulit mereka akan sangat berharga untuk penyelidikan saya. Saya akan buatkan kamu perisai yang menakjubkan, penghalang perlindungan terhadap wabah itu sendiri!</string>
+    <string name="PlagueDoctorQuest_1_2_InProgress">_Sepuluh siput_, sepuluh bisikan dari jurang! Lumut mereka akan dianalisis, esensi mereka diselidiki. Rahasia yang mereka simpan dalam jangkauan.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Batuk dengan kuat* Achoo!\n _Siput-siput_… mereka meluncur. Mereka meleleh. Dan mereka berbisik rahsia zaman yang terlupa. Saya perlukannya, _sepuluh_ daripadanya, cangkerang mereka masih utuh. Adakah anda fikir _lima puluh syiling emas_ sahaja cukup untuk pengetahuan yang begitu berharga?\n Bah! Tidak mengapa. Maklumat yang mereka pegang boleh menjadi kunci untuk menghentikan wabak ini. Atau… ia boleh membawa kita kepada sesuatu yang lebih dahsyat. Anda tentukan.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Cari _moongrace_, di mana kegelapan bertemu dengan kilauan cahaya bulan yang paling malap. _Dua benih_, esensinya, akan mendedahkan rahsia tersembunyi.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">Hebat sekali! _Rumput matahari_, esensinya yang keemasan berdenyut dengan vitaliti. Saya sudah banyak belajar dari struktur halusnya. *Dia memberimu _Posyen Kesihatan_, cecair di dalamnya berkilauan dengan cahaya keemasan yang samar.* Minumlah ini apabila dunia terasa berat menghimpitmu, dan rasakan kehangatan matahari mengembalikan semangatmu.</string>
@@ -1675,6 +1679,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="RottingFist_Name_Objective">tumbukan mereput</string>
     <string name="RoyalShield_desc">Perisai logam penuh. Ya, ia berat, tetapi hanya ia boleh memberikan perlindungan terbaik kepada anda.</string>
     <string name="RoyalShield_name">Perisai Diraja</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Hanya pemanah terhebat dapat guna busur delima ini. Hampir setiap anak panah yang dilepaskan mengenai pihak musuh, mewujudkan lubang kecederaan besar pada badannya, tetapi memerlukan tenaga sangat kuat untuk menarik tali busur tersebut.</string>
     <string name="RubyBow_Name">busur delima</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -1790,6 +1795,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ServantNPC_Name">pelayan penginapan</string>
     <string name="ServantNPC_Name_Objective">pelayan penginapan</string>
     <string name="ServiceManNPC_Desc">Pekerja biasa di pertubuhan tempatan.</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Mohon maaf, setiap pengembara hanya boleh menonton sejumlah %d cereka.</string>
     <string name="ServiceManNPC_Limit_Reached">Mohon maaf, tetapi anda sudah mencapai had yang dibenarkan. Awak boleh guna perkhidmatan kami lagi bagi setiap tahap adiwira yang telah dicapai.</string>
     <string name="ServiceManNPC_Name">pekerja</string>
@@ -1997,6 +2003,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SuspiciousRat_Name_Objective">Tikus meragukan</string>
     <string name="Swarm_Defense">dielak</string>
     <string name="Swarm_Desc">Kawanan lalat maut yang berdesir kemarahan. Setiap serangan bukan-sihir akan membahagikan lalat tersebut kepada dua ekor yang lebih kecil tetapi masih kawanan yang merbahaya.</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">kawanan lalat</string>
     <string name="Swarm_Name_Objective">kawanan lalat</string>
     <string name="Swing_Name_0">%s Liar</string>
@@ -2553,6 +2560,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_INN_sign_name">Tanda penginapan</string>
     <string name="town_deco_armoronhanger_desc">Ada perisai disangkut dengan penyangkut.</string>
     <string name="town_deco_armoronhanger_name">Perisai</string>
+    <string name="town_deco_armorstand_leather_desc">Zam Leitir yang boleh dipercayai akan menjadi pembelian yang bagus sebelum meneroka dalam penjara.</string>
     <string name="town_deco_armorstand_leather_name">Perisai kulit</string>
     <string name="town_deco_armorstand_scale_desc">Plat bersalut emas perisai sisik ini kelihatan baru.</string>
     <string name="town_deco_banner_desc">Satu sepanduk yang elegan menonjolkan simbol kedai makan ini.</string>
@@ -2723,6 +2731,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_stakes_desc">Batu kayu runcing ini nampak menakutkan, tetapi tidak memberi apa-apa manfaat.</string>
     <string name="town_deco_stakes_name">Kayu Pancang</string>
     <string name="town_deco_statue_blood_name">Patung malaikat</string>
+    <string name="town_deco_statue_water_desc">Air batu seorang malaikat yang memegang mangkuk air.</string>
     <string name="town_deco_statue_water_name">Patung malaikat</string>
     <string name="town_deco_stock_desc">Bekalan makanan di simpan di sini, dan juga ada pelbagai jenis dan warna barang-barang lama.</string>
     <string name="town_deco_stock_name">Stok</string>
@@ -2780,6 +2789,15 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
 
 
 

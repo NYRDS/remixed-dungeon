@@ -375,6 +375,7 @@
     <string name="ChaosSword_Name">Spada del caos</string>
     <string name="CharAction_Charm">affascina</string>
     <string name="CharAction_Give">dare</string>
+    <string name="CharAction_Hit">colpo</string>
     <string name="CharAction_Order">ordinare</string>
     <string name="CharAction_Push">spingere</string>
     <string name="CharAction_Scare">spaventare</string>
@@ -411,6 +412,7 @@
     <string name="Char_StaSlowed">rallentato</string>
     <string name="Char_StaStunned">stordito</string>
     <string name="Char_StaVision">visione</string>
+    <string name="Char_Stole_1">%1 ha rubato %2 a %3!</string>
     <string name="Char_Stole_2">%1$s ha rubato %2$s a %3$s!</string>
     <string name="Char_YouMissed">%1$s %2$s il tuo attacco</string>
     <string name="ChargrilledMeat_Info">Sembra una bistecca decente.</string>
@@ -1255,6 +1257,7 @@ Potrebbe bruciare?</string>
     <string name="Mob_Desc">La vera descrizione arriverà presto!</string>
     <string name="Mob_Died">Senti qualcosa morire a distanza.</string>
     <string name="Mob_GoingTo">Ci sto già andando!</string>
+    <string name="Mob_ReadyForOrder">%1 pronto per il tuo ordine.</string>
     <string name="Mob_StaAmokStatus">Questo %1$s è impazzito</string>
     <string name="Mob_StaControlledStatus">Questo %s è sotto una possessione maledetta</string>
     <string name="Mob_StaFleeingStatus">Questo %s sta fuggendo.</string>
@@ -1338,6 +1341,7 @@ Potrebbe bruciare?</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Questa freccia è imbevuta di curare.</string>
     <string name="ParalysisArrow_Name">freccia paralizzante</string>
+    <string name="ParalysisBuff_Info">Completamente paralizzato!</string>
     <string name="ParalysisBuff_Name">Paralizzato</string>
     <string name="Paralysis_Name_0">Stordente %s</string>
     <string name="Paralysis_Name_1">Stordente %s</string>
@@ -1405,6 +1409,7 @@ Potrebbe bruciare?</string>
     <string name="Plant_Seed">Seme di %s</string>
     <string name="PlateArmor_Desc">Enormi piastre di metallo sono unite insieme in un\'armatura che fornisce una protezione impareggiabile a qualsiasi avventuriero forte abbastanza da sostenere il suo peso schiacciante.</string>
     <string name="PlateArmor_Name">armatura a piastre</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">Una goccia di veleno mortale brilla sulla testa di questa freccia.</string>
     <string name="PoisonArrow_Name">freccia velenosa</string>
     <string name="PoisonBuff_Name">Avvelenato</string>
@@ -2562,6 +2567,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_carpet_name">Tappeto</string>
     <string name="town_deco_charcoal_carpet_desc">In cerca di comfort per gli ospiti, l\'amministrazione del cinema ha scelto i tappeti di migliore qualità di colore carbone.</string>
     <string name="town_deco_charcoal_carpet_name">Tappeto</string>
+    <string name="town_deco_chest_desc">Comodo mobile per conservare oggetti e gioielli.</string>
     <string name="town_deco_chest_name">Cassa</string>
     <string name="town_deco_chimney_name">Comignolo</string>
     <string name="town_deco_church_sign_desc">Sembra che ci sia una chiesa all\'interno di quell\'edificio.</string>
@@ -2608,6 +2614,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_glass_stained_name">Vetro Colorato</string>
     <string name="town_deco_grandclock_desc">Un meccanismo piuttosto antico ma ancora funzionante.</string>
     <string name="town_deco_grandclock_name">Grandclock</string>
+    <string name="town_deco_hay_desc">Una piccola catasta di fieno profumato.</string>
     <string name="town_deco_hay_name">Fieno</string>
     <string name="town_deco_identifier_sign_desc">Pare che ci sia un\'indovina in quell\'edificio</string>
     <string name="town_deco_identifier_sign_name">Insegna della Palla di Cristallo</string>
@@ -2725,6 +2732,13 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
 
 
 

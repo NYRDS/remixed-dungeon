@@ -639,6 +639,7 @@
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">醉漢</string>
     <string name="Drunkard_Phrase_1">再多點酒！</string>
+    <string name="Drunkard_Phrase_2">誰需要水當你有啤酒</string>
     <string name="Drunkard_Phrase_3">這啤酒嘗起來像泥土</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_DeadEnd">你來這做什麼？！</string>
@@ -713,6 +714,7 @@
     <string name="Facilitations_Descriptions_2">對大自然作為能量來源進行深入而徹底的研究，將使你在旅程中補充魔法儲備。</string>
     <string name="Facilitations_Descriptions_3">緊緊繫上由食人魔皮革製成、代代相傳的腰帶，你朝著前方的未知邁出一步。</string>
     <string name="Facilitations_Names_0">無飢餓</string>
+    <string name="Facilitations_Names_2">精靈</string>
     <string name="Fadeleaf_Desc">觸碰到消逝草的任何生物都會被傳送至當前層的一個隨機地點。</string>
     <string name="Fadeleaf_Name">消逝草</string>
     <string name="FetidRat_Desc">這只有袋的老鼠比通常的更大。他身邊圍繞著一圈惡臭雲霧。</string>
@@ -1441,6 +1443,7 @@
     <string name="PlagueDoctorNPC_After_Quest">我會證明的,我會證明給他們看!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">你還在嗎？來這裏！拿著這個。 </string>
     <string name="PlagueDoctorNPC_Desc">散發奇怪味道的...皮革?下面應該是個人吧...</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">瘟疫巫醫</string>
     <string name="PlagueDoctorNPC_Name_Objective">瘟疫巫醫</string>
     <string name="PlagueDoctorNPC_Quest_End">啊，謝謝，我希望我能找到病原體。過去我什麼都沒找到。所以我在等你的時候為你做了這個。</string>
@@ -2013,6 +2016,7 @@
     <string name="SpiritOfPain_Name_Objective">痛苦之魂</string>
     <string name="StartScene_ChooseFromSlot">從存檔欄位中選擇</string>
     <string name="StartScene_ComingSoon">即將推出</string>
+    <string name="StartScene_ContinueLatest">繼續最新的遊戲或從存檔槽位選擇</string>
     <string name="StartScene_Depth">層數：%1$d\n等級: %2$d</string>
     <string name="StartScene_DifficultyEasy">簡單模式(有廣告)</string>
     <string name="StartScene_DifficultyEasyNoAds">容易</string>
@@ -2746,6 +2750,7 @@
     <string name="town_deco_inn_bed_desc"> 看起來很舒適的床。</string>
     <string name="town_deco_inn_bed_name">床</string>
     <string name="town_deco_ladder_desc">一個古老的梯子，看起來不太可靠。</string>
+    <string name="town_deco_ladder_name">梯子</string>
     <string name="town_deco_library_books_desc">比地牢裏的書還要好。</string>
     <string name="town_deco_library_books_name">閱讀物</string>
     <string name="town_deco_library_sign_desc">裏面是圖書館</string>
@@ -2877,6 +2882,11 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
 
 
 

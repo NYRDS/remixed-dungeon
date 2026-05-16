@@ -361,6 +361,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Capotain_Name">Kapelusz Purytanina</string>
     <string name="Carcass_Devoured">Pożarto zwłoki %s!</string>
     <string name="Carcass_DissectFailed">Sekujesz %s, ale nie znajdujesz niczego wartościowego.</string>
+    <string name="Carcass_DissectMessage">Rozkładasz zwłoki i uzyskujesz %s.</string>
     <string name="Carcass_DissectResult">Z %1$s otrzymujesz %2$d plon %3$s.</string>
     <string name="Carcass_Info">Szczątki totalnie martwego %s,</string>
     <string name="Carcass_Kick">%s jest totalnie martwy, nie ma powodu żeby to kopać.</string>
@@ -3057,6 +3058,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

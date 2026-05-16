@@ -1222,6 +1222,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="ManaPotion_Info">Ez a főzet újratölti a spirituális energiádat.</string>
     <string name="ManaPotion_Name">Mana Főzet</string>
     <string name="ManaRegenerationBuff_Info">A mana regenerálódás buff formájában van a könnyebb kezelés érdekében.</string>
+    <string name="ManaRegenerationBuff_Name">Mana Regeneráció</string>
     <string name="ManaShieldBuff_Info">Egy varázspajzs jelent meg, amely teljesen blokkolja a következő bejövő támadást.</string>
     <string name="Mana_Cost">Mana Igény:</string>
     <string name="Mana_Title">Mana</string>
@@ -2021,6 +2022,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Succubus_Name_Objective">szukubbusz</string>
     <string name="SummonDeathling_Info">Megidéz egy élőhalottat, aki követ téged. Az életpontjai és sebzése a hősöd szintjével növekszik. \n\nMegidézési limit:%1$d (+1 minden varázsszint után)</string>
     <string name="SummonDeathling_Name">Halandó megidézése</string>
+    <string name="SungrassBuff_Info">A földből gyökök spródtak, amelyeken gyógyító növények virágoztak.</string>
     <string name="SungrassBuff_Name">Gyógynövény gyógyítás</string>
     <string name="Sungrass_Desc">A Napfű ismert a nedvének gyógyító tulajdonságáról.</string>
     <string name="Sungrass_Name">Napfű</string>
@@ -2800,6 +2802,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
