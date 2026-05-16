@@ -1692,6 +1692,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Quarterstaff_Name">Kampfstab</string>
     <string name="QuickSlot_SelectSlot">Wähle dafür einen Schnellzugriff</string>
     <string name="QuickSlot_SelectedItem">Wähle ein Item für den Schnellzugriff</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">Lederköcher, geeignet um beliebig viele Pfeile aufzubewahren</string>
     <string name="Quiver_Name">Köcher</string>
     <string name="RabbitEars_Info">Es ist ein allgemein gültiger Glaube, dass Hasen glückliche Wesen sind und ihr Glück auf diejenigen übergeht, die einen Teil ihres Körpers bei sich tragen. Bei genauerer Betrachtung ist das Töten für eine Dekoration aus deren Ohren nicht sehr glückbringend.</string>
@@ -1714,6 +1715,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="RatKingCrown_Name">Krone des Rattenkönigs</string>
     <string name="RatKing_Desc">Diese Ratte ist ein wenig größer als andere Beutelratten und sie trägt eine kleine Krone auf ihrem Kopf.</string>
     <string name="RatKing_Died">Der König ist tot. Lang lebe der König!</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">Ich schlafe nicht!</string>
     <string name="RatKing_Info2">Was ist das? Ich habe keine Zeit für so einen Unsinn. Mein Königreich regiert sich nicht von selbst.</string>
     <string name="RatKing_Info3">Wie kannst du kümmerliche Kreatur es wagen unseren Rattenkönig zu stören.</string>
@@ -1949,6 +1951,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="SeedPouch_Info">Dieser kleine Samtbeutel bewahrt alle deine Samen auf. Sehr praktisch.</string>
     <string name="SeedPouch_Name">Samenbeutel</string>
     <string name="Senior_Desc">Diese Mönche sind Fanatiker, die sich dem Schutz der Geheimnisse ihrer Stadt vor allen Fremden verschrieben haben. Sie benutzen keine Rüstung oder Waffen und verlassen sich ausschließlich auf die Kunst des unbewaffneten Kampfes.Dieser Mönch hat die Kunst, seinen Gegner auszuschalten, gemeistert.</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">Älterer Mönch</string>
     <string name="Senior_Name_Objective">Älterer Mönch</string>
     <string name="ServantNPC_Desc">Ein sehr beschäftigter Kellner.</string>
@@ -1976,6 +1979,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="ShadowLord_Name">schattenherr</string>
     <string name="ShadowLord_Name_Objective">Schattenherr</string>
     <string name="Shadow_Desc">Schatten wandern leise durch die Ruinen des alten Gefängnisses, zeigen sich nur vereinzelt einem Abenteurer, meist in ihrem letztem Abenteuer.</string>
+    <string name="Shadow_Gender">masculine</string>
     <string name="Shadow_Name">Schatten</string>
     <string name="Shadow_Name_Objective">Schatten</string>
     <string name="ShadowsBuff_Info">Es ist schwieriger, im Schatten etwas zu erkennen.</string>
@@ -1983,6 +1987,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="ShamanElder_Desc">Dieser besondere Gnoll sieht viel älter aus als andere Schamanen und hat sicherlich einen höheren Status im Stamm. Eine seltsame Aura bildet sich langsam um ihn herum, die anscheinend alles reflektiert, was sie berührt.</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="ShamanElder_Name">Schamanenältester</string>
+    <string name="ShamanElder_Name_Objective">Schamanenältester</string>
     <string name="Shaman_Desc">Die intelligentesten Gnolle können schamanische Magie meistern. Gnollschamanen bevorzugen Kampfzauber um ihre fehlende Stärke auszugleichen. Sie zögern nicht, sie auf jeden anzuwenden der ihre Stellung im Stamm anzweifelt.</string>
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">Der Blitzschlag des %s hat dich getötet...</string>
@@ -2090,6 +2095,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiderElite_Desc">Genau wie Soldaten haben Spinnenwächter geschworen, ihr Königreich zu beschützen. Das Gift der Elitewache dient dazu, ihre Ziele zu desorientieren.</string>
     <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">Spinnen-Elitewächter</string>
+    <string name="SpiderElite_Name_Objective">Spinnenaufpasser</string>
     <string name="SpiderExploding_Desc">Sie sind harte Arbeiter während friedlichen Zeiten, zögern aber keine Sekunde, um ihre Gegner aufzuspüren und sich die nächsten Pflanze zu greifen, um sich in lebende Bomben zu verwandeln.</string>
     <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">Arbeiterspinne</string>
@@ -2103,6 +2109,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiderMindAmber_Name">Bernsteinspinne</string>
     <string name="SpiderMindAmber_Name_Objective">Bernsteinspinne</string>
     <string name="SpiderMind_Desc">Diese zerbrechlich wirkenden Spinnen weisen einzigartige mentale Kräfte auf, welche es ihnen erlauben die gesamte Kolonie zu kontrollieren. Psi-Spinnen sind in der Lage, jedes lebendige Wesen zu kontrollieren, aber sie sind ziemliche Feiglinge.</string>
+    <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Psi-Spinne</string>
     <string name="SpiderMind_Name_Objective">Psi-Spinne</string>
     <string name="SpiderNest_Desc">Dieser Kokon besteht aus feinster Seide und enthält etwas lebendiges.</string>
@@ -2117,6 +2124,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="SpiderQueen_Name">Spinnenkönigin</string>
     <string name="SpiderQueen_Name_Objective">Spinnenkönigin</string>
     <string name="SpiderServant_Desc">Krieger sind die meist anzutreffenden Einheiten der Spinnenhöhle. Geboren, um ihr Territorium zu beschützen. Ihre gewaltigen Drüsen wurden entwickelt, um ihre Gegner zu vergiften.</string>
+    <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">Spinnensoldat</string>
     <string name="SpiderServant_Name_Objective">Spinnensoldat</string>
     <string name="Spinner_Desc">Diese grünliche, ängstliche Höhlenspinne versucht es, direkten Kampf zu vermeiden, bevorzugt es in einiger Entfernung zu warten, während ihre Opfer, eingewickelt in ihr klebriges Spinnennetz, langsam an ihrem giftigen Biss sterben.</string>
@@ -2145,6 +2153,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="StartScene_New">Neues Spiel</string>
     <string name="StartScene_No">Nein, kehr zum Hauptmenü zurück</string>
     <string name="StartScene_Really">Willst du wirklich ein neues Spiel starten?</string>
+    <string name="StartScene_Unlock">Entsperren</string>
     <string name="StartScene_UnlockDoctor">Um den Seuchenarzt freizuschalten - beende die Quest des alten Seuchenarztes</string>
     <string name="StartScene_UnlockElf">Um diesen Charakter freizuschalten, besiege den König-Boss mit einer anderen Klasse.</string>
     <string name="StartScene_UnlockGnoll">Um diese Klasses freizuschalten musst du den Stadt-Heiler davon überzeugen den Gnoll-Schläger zu heilen</string>
@@ -2171,6 +2180,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="Stylus_Name">Arkaner Stift</string>
     <string name="Stylus_SelectArmor">Wähle einen Gegenstand zum Gravieren</string>
     <string name="Succubus_Desc">Die verführerische Dämonin (auf eine gothische Art ) benutzt ihren Zauber um den Helden zu betören. Durch diesen Zauber kann der Held nicht angreifen, bis der Zauber aufhört.</string>
+    <string name="Succubus_Gender">feminine</string>
     <string name="Succubus_Name">Sukkubus</string>
     <string name="Succubus_Name_Objective">Sukkubus</string>
     <string name="SummonBeast_AtYourCommand">Zu Befehl!</string>
@@ -2184,6 +2194,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="Sungrass_Name">Sonnengras</string>
     <string name="SurfaceScene_GameOver">Spiel vorbei</string>
     <string name="SuspiciousRat_Desc">Eine Ratte ist nichts selten anzutreffendes in Dungeons, aber dass sie so tief wohnt... Du kannst sehen, wie ihr gesamter Körper krampft, wenn sie läuft.</string>
+    <string name="SuspiciousRat_Gender">masculine</string>
     <string name="SuspiciousRat_Info1">Verdächtige Ratte zuckt kräftig.</string>
     <string name="SuspiciousRat_Name">Verdächtige Ratte</string>
     <string name="SuspiciousRat_Name_Objective">Verdächtige Ratte</string>
@@ -2242,6 +2253,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="ToughShield_desc">Diesers mit Lederriemen verstärkte Schild sieht robuster aus als dar hölzerne. Er kann garantiert mehr Schaden abwehren.</string>
     <string name="ToughShield_name">Lederverstärkter Schild</string>
     <string name="TownGuardNPC_Desc">Eine gewöhnliche Stadtwache.</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">Geh weiter.</string>
     <string name="TownGuardNPC_Message2">Dank euch Abenteurern ist es hier oben echt friedlich geworden.</string>
     <string name="TownGuardNPC_Message3">Du glaubst es gibt hier zu viele Wachen? Naja, das liegt daran, dass das hier die einzige Stadt mit eine#\@m mit Monstern infizierten Dungeon ist, oder?</string>
@@ -2255,9 +2267,11 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="TownShopkeeper_Objective">Händler</string>
     <string name="TownsfolkMovieNPC_Desc">Einer der Einheimischen. Obwohl dies eindeutig einer aus der Mittelschicht ist, sehen diese Kleider teuer aus</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
+    <string name="TownsfolkMovieNPC_Message">Film starten</string>
     <string name="TownsfolkMovieNPC_Name">Dorfbewohner</string>
     <string name="TownsfolkMovieNPC_Name_Objective">Dorfbewohner</string>
     <string name="TownsfolkNPC_Desc">Einer der Einheimischen. Obwohl dies eindeutig einer aus der Mittelschicht ist, sehen diese Kleider teuer aus</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">Ah, ein weiterer Abenteuer, wie schön. Schau zu, dass du den Dungeon so stark ausbeutest wie du kannst.</string>
     <string name="TownsfolkNPC_Message2">Die Stadt wurde dank des Dungeons so reich, dass sich jeder in der Stadt leisten kann, Urlaub zu machen. Tatsächlich gibt es deshalb gerade so wenige Menschen hier.</string>
     <string name="TownsfolkNPC_Message3">Welch traumhafter Tag.</string>
@@ -2425,6 +2439,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="Welcome_Ok">Okay!</string>
     <string name="Welcome_Text_30_1">remix.30.1\n- Spielmechanik:\n-- Gnoll-Unterklassen!\n-- Schnecken!\n-- Chaos-Gegenstände Skalierung abgeschwächt.\n-- Mana-Trank ist ab jetzt ein normaler Trank.\n-- Abzeichen können jetzt auch in offiziellen DLCs erhalten werden (aber nicht in Mods).\n-- Fehler behoben\n</string>
     <string name="Welcome_Text_31_0">    remix.31.0\n    - Gameplay:\n    -- Optionaler Isometrischer Modus!\n    - Modding:\n    -- Modifizierbare Level-Objekte\n    - Fehler behoben\n    </string>
+    <string name="Welcome_Text_31_1">Willkommen!</string>
     <string name="Welcome_Text_32">    remix.32\n    - Gameplay:\n    -- Mobs und Haustiere können jetzt Erfahrung und Level erhalten\n    -- Chaosschild\n    -- Champions\n    -- Yog-Kampf ausbalanciert\n    -- Balance-Anpassungen\n    - UX:\n    -- Detaillierte Helden- und Mob-Stats\n    -- Besseres Anpassungsinterface\n    -- Weiche Kamera\n    - Modding:\n    -- Benutzerdefinierte Animationen\n    -- Benutzerdefinierte Skripte für eingebaute Mobs\n    -- Glühen für Mobs\n    - Fehler behoben\n    </string>
     <string name="Welcome_Text_32_1">    remix.32.1\n    - Gameplay:\n    -- Plague Doctor Questreihe\n    -- Mob-Kadaver sind nun teilweise nutzbare Gegenstände\n    -- Verbesserte Haustierkontrolle\n    - UX:\n    -- Verbessertes Spielstand-Management\n    - Modding:\n    -- Lokale Mod-Installationsmethoden\n    -- Benutzerdefinierte Gegenstände können jetzt Aktionen ausführen, während sie in Stapeln sind\n    - Fehler behoben\n    </string>
     <string name="Welcome_Title">Herzlich willkommen!</string>
@@ -2450,7 +2465,9 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndCryptoDonate_infoText">Sie können die Entwicklung von Remixed Dungeon unterstützen, indem Sie Kryptowährungsspenden an die unten aufgeführten Adressen senden. Vielen Dank für Ihre großzügige Unterstützung!</string>
     <string name="WndCryptoDonate_openWallet">Wallet öffnen</string>
     <string name="WndCryptoDonate_supportDev">Entwickler unterstützen</string>
+    <string name="WndCryptoDonate_ton">Ton</string>
     <string name="WndCryptoDonate_tron">TRON</string>
+    <string name="WndCryptoDonate_walletAddress">Wallet-Adresse</string>
     <string name="WndCryptoDonate_warningText">WARNUNG: Überprüfen Sie immer die Adresse, bevor Sie Mittel senden. Kryptowährungstransaktionen sind irreversibel!</string>
     <string name="WndCustomizations_Title">Anpassungen</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - für jeden kostenlos und wird es auch immer bleiben.\n\nAllerdings können Sie uns dabei helfen, das Spiel noch besser zu machen.\n\nNeben unserem herzlichen Dank bekommst du auch einige kosmetische Verbesserungen.</string>
@@ -2479,6 +2496,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndFortuneTeller_No_Item">Pass auf, du willst dein Geld doch nicht verschwenden, oder? Du hast keine unidentifizierten Gegenstände in deinem Inventar.</string>
     <string name="WndFortuneTeller_Title">Wahrsagerin.</string>
     <string name="WndGame_Challenges">Herausforderungen</string>
+    <string name="WndGame_Customizations">Anpassungen</string>
     <string name="WndGame_Exit">Verlasse Remixed Dungeon</string>
     <string name="WndGame_Load">Laden</string>
     <string name="WndGame_Ranking">Ranglisten</string>
@@ -2531,6 +2549,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndInstallingMod_please_wait">Mod wird installiert, bitte warten...</string>
     <string name="WndInstallingMod_skipping_file">Überspringe %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Rezept ausführen</string>
+    <string name="WndItemAlchemy_NoRecipes">Keine Rezepte vorhanden</string>
     <string name="WndItemAlchemy_SelectRecipe">Rezept auswählen</string>
     <string name="WndItemAlchemy_Title">Alchemierezepte mit %s</string>
     <string name="WndItemAlchemy_Transmute">Transmutieren</string>
@@ -2550,6 +2569,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndModInstall_PleaseUpdate">Bitte aktualisiere Remixed Dungeon bevor du diesen Mod installierst</string>
     <string name="WndModInstall_Version">Version</string>
     <string name="WndModSelect_AreYouSure">Mod löschen: %s, bist du sicher?</string>
+    <string name="WndModSelect_ReallyDelete">Wirklich löschen?</string>
     <string name="WndModsDisclaimer_install">Lokalen Mod installieren</string>
     <string name="WndModsDisclaimer_manage">Mods-Liste verwalten</string>
     <string name="WndModsDisclaimer_title">Mods</string>
@@ -2637,6 +2657,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndSettings_Brightness">Helligkeit</string>
     <string name="WndSettings_ClassicFont">Klassische Schrift</string>
     <string name="WndSettings_ExperementalFont">Neue Schrift</string>
+    <string name="WndSettings_FpsLimit">FPS-Limit</string>
     <string name="WndSettings_GameplaySettings">Spiel</string>
     <string name="WndSettings_Handedness">Händigkeit</string>
     <string name="WndSettings_Immersive">Immersionsmodus</string>
@@ -2669,6 +2690,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndStory_Spiders">Vor vielen, vielen Jahren gab es eine reichhaltige Mine, voll mit magischen Steinen. Aber als die Mineral-Minen erschöpft waren verliessen die Minenarbeiter die Mine und hinterließen ein weites Netzwerk an Tunneln.
 Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen, lauernd in der Dunkelheit, waren nicht genug um die Mutigen und Wahnsinnigen davon abzuhalten, sehensüchtig nach den Schätzen zu suchen, die hier vielleicht zu finden sind. Für die Größe der Gefahr gibt es immer eine große Menge an Gerüchten über magische Artefakte. Vor langer Zeit wanderte mal eine böse Hexe in die Tunnel, um vor Hexenjägern zu flüchten. Die Abergläubischen wagten es nicht in die Dunkelheit zu treten. Also warteten sie. Aber niemand hat sie je wieder gesehen. Vielleicht hat die Hexe einen Weg raus gefunden, vielleicht hat sie sich an den Wachen vorbeigeschliechen... Oder sie starb, umgeben vom Rascheln der Kreaturen in der Dunkelheit.</string>
     <string name="WndTilesKind_ClassicLook">Klassischer Look</string>
+    <string name="WndTilesKind_NewLook">Neues Aussehen</string>
     <string name="WndTilesKind_Title">Nur noch eine Kleinigkeit:</string>
     <string name="WndTilesKind_text">Du bist kurz davor, eine von verdrehter Magie besessene Dungeons zu betreten, aber jetzt kannst du wählen, wie du sie siehst:\n Möchtest du moderne Pseudo-3D oder klassische flache Ansicht?\nDu kannst es später im Spieloptionen-Menü ändern.</string>
     <string name="WndTradeItem_Bought">Du hast %1$s für %2$dg gekauft</string>
@@ -2715,6 +2737,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="WrnExperimental_realtime">Echtzeit!-Modus aktiviert: Dies ist jetzt ein Echtzeit-Roguelike, tippe schnell oder stirb.\nWillst du dein Inventar überprüfen?\nViel Glück dabei, während die Abwasserkrabbe deine Eingeweide überprüft.</string>
     <string name="WrnExperimental_title">Experimentelle Optionen aktiviert!</string>
     <string name="Yog_Desc">Yog-Dzewa ist eine alte Gottheit, ein mächtiges Wesen aus dem Reich des Chaos. Ein Jahrhundert zuvor konnten die alten Zwerge den Krieg gegen seine Armeen von Dämonen endlich gewinnen, waren aber nicht in der Lage, die Gottheit selbst zu töten. Stattdessen haben sie ihn in den Hallen unter ihrer Stadt eingesperrt, daran glaubend, dass er zu schwach sei, sich jemals wieder zu erheben</string>
+    <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">Hoffnung ist eine Illusion...</string>
     <string name="Yog_Name">Yog-Dzewa</string>
@@ -2736,6 +2759,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="YogsTeeth_Name">Yogs Zähne</string>
     <string name="YogsTeeth_Name_Objective">Yogs Zähne</string>
     <string name="ZombieGnoll_Desc">Der verdrehte, gebrochene Körper eines Zombie-Gnolles ähnelt nicht mehr dem eines Menschen noch dem einer Hyäne, er ist nur noch ein Haufen fauliges Fleisch mit dem böswilligen Drang in den Knochen, zu töten und zu fressen.</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">Zombie-Gnoll ist vom Tod auferstanden!</string>
     <string name="ZombieGnoll_Name">Gnoll-Zombie</string>
     <string name="ZombieGnoll_Name_Objective">Gnoll-Zombie</string>
@@ -2998,6 +3022,30 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
