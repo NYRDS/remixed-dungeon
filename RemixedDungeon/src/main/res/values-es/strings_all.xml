@@ -295,6 +295,7 @@
     <string name="BlessedBuff_Name">Bendecido</string>
     <string name="BlindnessBuff_Info">Completamente cegado, sólo se oyen los sonidos de alrededor.</string>
     <string name="BlindnessBuff_Name">Cegado</string>
+    <string name="BloodTransfusion_FullHP">Tu sangre ya está al máximo.</string>
     <string name="BloodTransfusion_Info">Drena casi toda la sangre de un objetivo para curarte. Un oscuro ritual de sacrificio y supervivencia.</string>
     <string name="BloodTransfusion_Name">Transfusión de sangre</string>
     <string name="BloodTransfusion_WontAgreed">El objetivo resiste la extracción de su esencia vital.</string>
@@ -566,6 +567,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="CorpseDust_Name">polvo de cadáver</string>
     <string name="CorpseExplosion_Info">Transforma un cadáver en una nube mortal de gas tóxico, extendiendo enfermedad y veneno a todos los enemigos cercanos.</string>
     <string name="CorpseExplosion_Name">Explosión de Cadáveres</string>
+    <string name="CorpseExplosion_NoCorpse">No hay cadáver en esa ubicación.</string>
     <string name="Crab_Defense">repelido</string>
     <string name="Crab_Desc">Estos grandes cangrejos están en lo alto de la cadena alimenticia de las alcantarillas. Son extremadamente rápidos y su duro exoesqueleto puede resistir flechas potentes.</string>
     <string name="Crab_Gender">masculine</string>
@@ -2706,6 +2708,7 @@ otro lugar del nivel.</string>
     <string name="YogsBrain_Name">cerebro de Yog</string>
     <string name="YogsBrain_Name_Objective">Cerebreo de Yog</string>
     <string name="YogsEye_Desc">El ojo del Antiguo Dios, con una mirada llena de eterno odio. Puedes sentir como ve a través de tu alma.</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">ojo de Yog</string>
     <string name="YogsEye_Name_Objective">Ojo de Yog</string>
     <string name="YogsHeart_Desc">Por siglos las personas han creído que solo las criaturas sin corazón son capaces de actos de pura maldad. Pero aquí lo tienes, un gran corazón latiendo de un Antiguo Dios.</string>
@@ -2979,6 +2982,9 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 

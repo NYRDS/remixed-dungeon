@@ -1057,6 +1057,7 @@
     <string name="IncendiaryDart_Name">вогняний дротик</string>
     <string name="InnKeeperNPC_Desc">Господар гуртожитку пишається собою.</string>
     <string name="InnKeeperNPC_Gender">masculine</string>
+    <string name="InnKeeperNPC_Name_Objective">inn keeper</string>
     <string name="InnServant_Phrase_1">Фух, ще так багато треба зробити!</string>
     <string name="InnServant_Phrase_2">Цей п\'яниця зводить мене з ума!</string>
     <string name="InnServant_Phrase_4">Ой, сьогодні так багато гостей</string>
@@ -2866,6 +2867,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

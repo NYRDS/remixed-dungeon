@@ -539,6 +539,7 @@
     <string name="CorpseDust_Info">在外觀上這團屍塵和普通灰塵球差不多。而您卻能夠感受到其中潛伏著一股充滿惡意的魔力。盡快脫手為上策。</string>
     <string name="CorpseDust_Info2">也許因為帶著它讓您感到了焦慮和憤怒。</string>
     <string name="CorpseDust_Name">屍塵</string>
+    <string name="CorpseExplosion_Name">Corpse Explosion</string>
     <string name="Crab_Defense">招架</string>
     <string name="Crab_Desc">這些巨型的螃蟹位居下水道食物鏈的頂端。它們行動極其迅速，並且厚重的甲殼能承受沈重的打擊。</string>
     <string name="Crab_Gender">masculine</string>
@@ -2861,6 +2862,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

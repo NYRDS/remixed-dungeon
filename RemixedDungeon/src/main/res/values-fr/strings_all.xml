@@ -476,6 +476,7 @@
     <string name="ChargrilledMeat_Name">viande grillée</string>
     <string name="CharmBuff_Info">Le corps et l\'esprit ont été charmés !</string>
     <string name="CharmBuff_Name">Charmé</string>
+    <string name="CharmSpell_Cast">%s is charmed.</string>
     <string name="CharmSpell_Info">Tout le monde mérite un peu d\'amour, non ?</string>
     <string name="CharmSpell_Name">Charmer</string>
     <string name="Chasm_Chasm">Gouffre</string>
@@ -1135,6 +1136,7 @@ Vous vous considérez prêt à relever le défi, mais plus important encore, vou
     <string name="ItemSprite_Info1">posé à côté : %1$.1f %2$.1f</string>
     <string name="Item_ACAlchemy">ALCHIMIE</string>
     <string name="Item_ACDrop">POSER</string>
+    <string name="Item_ACPickup">Prendre</string>
     <string name="Item_ACThrow">LANCER</string>
     <string name="Item_DirThrow">Choisissez la direction du lancer</string>
     <string name="Item_Info">smth</string>
@@ -2124,6 +2126,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Sprout_Name">Floraison</string>
     <string name="StartScene_ChooseFromSlot">Choisir un emplacement de sauvegarde</string>
     <string name="StartScene_ComingSoon">Bientôt disponible</string>
+    <string name="StartScene_ContinueLatest">Continuer votre dernière partie ou choisir une sauvegarde</string>
     <string name="StartScene_Depth">Etage: %1$d\nNiveau: %2$d</string>
     <string name="StartScene_DifficultyEasy">Facile (Avec Pubs)</string>
     <string name="StartScene_DifficultyEasyNoAds">Facile</string>
@@ -3035,6 +3038,9 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
+
 
 
 

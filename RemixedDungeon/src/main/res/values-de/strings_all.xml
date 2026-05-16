@@ -92,6 +92,7 @@ Du kannst deine Entscheidung jederzeit ändern (Klicke auf das Diagrammsymbol be
     <string name="Armor_ToString">%1$s :%2$d</string>
     <string name="ArmoredStatue_Desc">Denke bloß nicht, dass es nur noch so eine häßliche Statue ist.
 Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niemand eine neue _%s_ diesem Ding geben würde.</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">Lebendige Statue</string>
     <string name="ArmoredStatue_Name_Objective">Lebendige Statue</string>
     <string name="Artifact_Limit">Du kannst nur 2 Artifakte zur gleichen Zeit tragen.</string>
@@ -825,6 +826,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Ghost_Rat2">Bitte... Hilf mir... Erschlage die Abschäulichkeit...</string>
     <string name="Ghost_Rose1">Hallo Abenteurer... Einst war ich wie du - stark und selbstbewusst... Und nun bin ich tot... Aber ich kann diesen Platz nicht verlassen... nicht bevor ich meine _getrocknete Rose_ wieder habe... Es ist sehr wichtig für mich... Einige Monster haben sie von meinem Körper gestohlen...</string>
     <string name="Ghost_Rose2">Bitte... Hilf mir... Finde die Rose...</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Info">Eine Waffe aus einer Schwertklinge, die am Ende einer Stange befestigt ist.</string>
     <string name="Glaive_Name">Gleve</string>
     <string name="GnollArmor_ACSpecial">BEHERSCHEN</string>
@@ -2638,6 +2640,7 @@ Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen,
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Dieser einfache Holzbogen könnte sich als hilfreich erweisen, wenn du erst mal Pfeile gefunden hast.</string>
     <string name="WoodenBow_Name">Holzbogen</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Eine klassische, hölzerne Armbrust. Es sieht so aus, als ob sie dafür entworfen wurde, Pfeile zu verschiessen</string>
     <string name="WoodenCrossbow_Name">Hölzene Armbrust </string>
     <string name="WoodenShield_desc">Ein grob gefertigter Holzschild ist der einfachste verfügbare Schild. Er ist rund und kann von Zeit zu Zeit einige Schäden abwehren.</string>
@@ -2940,6 +2943,9 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
 
 
 

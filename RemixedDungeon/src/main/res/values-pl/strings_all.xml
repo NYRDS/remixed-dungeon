@@ -68,6 +68,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="AnesthesiaBuff_Info">Nie odczuwa bólu i nie obudzi się od ataków, ale nadal otrzymuje obrażenia.</string>
     <string name="AnesthesiaBuff_Name">Anestezja</string>
     <string name="Anesthesia_Info">Wywołuje głęboki, nienaturalny sen u twojego celu. Nawet najgwałtowniejsze ataki nie zbudzą go z tej drzemki.</string>
+    <string name="Anesthesia_Name">Anestezja</string>
     <string name="Ankh_Info">Starożytny symbol nieśmiertelności daje możliwość zmartwychwstania po zgonie. Po wskrzeszeniu, wszystkie przedmioty, które nie są wyposażone zostaną utracone.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">%s chaotycznej magii</string>
@@ -307,6 +308,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BodyArmorSpell_Name">Napierśnik</string>
     <string name="BoneSaw_Info">Precyzyjnie zaprojektowana chirurgiczna piła z przeznaczona do sekcji zwłok. Jej obrażenia i prędkość ataku stają się bardziej śmiercionośne dzięki umiejętnościom lekarza plagi. Krytyczne trafienia odrzynają dodatkowe części ciała  wrogów ,bezwzględnie wydajna wobec sparaliżowanych przeciwników.</string>
     <string name="BoneSaw_Name">Piła chirurgiczna</string>
+    <string name="BoneShard_Info">Ostry fragment kości pozyskany z pokonanego wroga. Te odłamki są zaskakująco trwałe i przydatne w rzemiośle.</string>
     <string name="BoneShard_Name">Odłamek kości</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Po rzuceniu we wroga, ten płaski, zakrzywiony kawałek drewna powróci do swego właściciela.</string>
@@ -2488,6 +2490,7 @@ remix.32.1\n
     <string name="WndCryptoDonate_infoText">Możesz wesprzeć rozwój Remixed Dungeon, wysyłając darowizny w kryptowalutach na poniższe adresy. Dziękujemy za hojne wsparcie!</string>
     <string name="WndCryptoDonate_openWallet">Otwórz portfel</string>
     <string name="WndCryptoDonate_supportDev">Wsparcie Dewelopera</string>
+    <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Adres portfela</string>
     <string name="WndCryptoDonate_warningText">OSTRZEŻENIE: Zawsze weryfikuj adres przed wysłaniem środków. Transakcje kryptowalutowe są nieodwracalne!</string>
@@ -3041,6 +3044,9 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
+
 
 
 
