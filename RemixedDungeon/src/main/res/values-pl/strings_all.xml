@@ -302,6 +302,8 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BlindnessBuff_Info">Kompletnie oślepiony, jedyne co odczuwasz to dźwięki otoczenia.</string>
     <string name="BlindnessBuff_Name">Oślepiony</string>
     <string name="BloodTransfusion_Drained">Сила жизни перетекает из твоего питомца в тебя.</string>
+    <string name="BloodTransfusion_Info">Odsysa prawie całą krew z celu, aby zregenerować własne zdrowie. Ciemny rytuał poświęcenia i przetrwania.</string>
+    <string name="BloodTransfusion_WontAgreed">Cel docierza ekstrakcję jego esencji życiowej.</string>
     <string name="BodyArmorBuff_Info">Pancerz wzmocniony kosztem szybkości ruchu </string>
     <string name="BodyArmorBuff_Name">Napierśnik</string>
     <string name="BodyArmorSpell_Info">Aktywuje ukryty potencjał mięśni, czyniąc je chwilowo silniejszymi, co znacznie zwiększa pancerz lecz niestety kosztem szybkości ruchu.</string>
@@ -480,6 +482,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="ChargrilledMeat_Name">grillowane mięso</string>
     <string name="CharmBuff_Info">Twój umysł i ciało zostały zauroczone!</string>
     <string name="CharmBuff_Name">Zauroczony</string>
+    <string name="CharmSpell_Cast">%s zostało urokliwe.</string>
     <string name="CharmSpell_Info">Każdy zasługuje na odrobinę miłości, co nie?</string>
     <string name="CharmSpell_Name">Urok</string>
     <string name="Chasm_Chasm">Otchłań</string>
@@ -1815,6 +1818,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="RottenMeat_Info">kawałek starego, zgniłego mięsa</string>
     <string name="RottenMeat_Name">zgniłe mięso</string>
     <string name="RottenOrgan_Info">Rozkładający się organ zdobyty z pokonanego wroga. Pomimo swojego zgniłego stanu zawiera cenne związki do procesów alchemicznych.</string>
+    <string name="RottenOrgan_Name">Zgnil Organ</string>
     <string name="RottenPasty_Info">Ten pasztecik niestety spaszteciał.</string>
     <string name="RottenPasty_Name">zgniły pasztecik</string>
     <string name="RottenPumpkinPie_Info">Nieważne jakie to było smaczne jeszcze zanim się zepsuło, nie ma mowy żeby wciąż było jadalne.</string>
@@ -1966,6 +1970,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="ShadowLord_Name">książę ciemności</string>
     <string name="ShadowLord_Name_Objective">Książę Ciemności</string>
     <string name="Shadow_Desc">Cienie cicho przemykają poprzez ruiny starożytnego więzienia, ujawniając się awanturnikom jedynie od czasu do czasu, przeważnie w ich ostatniej przygodzie.</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name">cień</string>
     <string name="Shadow_Name_Objective">cień</string>
     <string name="ShadowsBuff_Info">Trudniej jest cokolwiek dostrzec pośród cieni.</string>
@@ -2270,6 +2275,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="TownsfolkSilentNPC_Name_Objective">mieszczanin</string>
     <string name="ToxicGas_Info">Chmura toksycznego gazu unosi się w tym miejscu.</string>
     <string name="ToxicGas_Info1">Zmarłeś poprzez nawdychanie się trującego gazu...</string>
+    <string name="ToxicGland_Info">Toksyczna gruczoł zebrana z pokonanego wroga. Te gruczoły są wypełnione silnymi toksynami i mogą być użyte w procesach alchemicznych.</string>
     <string name="ToxicGland_Name">Toksyczny gruczoł</string>
     <string name="TrapWnd_Step">Czy naprawdę chcesz stanąć na tę pułapkę? Prawdopodobnie zginiesz.</string>
     <string name="TrapWnd_Title">Pułapka</string>
@@ -2575,6 +2581,7 @@ remix.32.1\n
     <string name="WndInstallingMod_deleting_file">Usuwanie %s</string>
     <string name="WndInstallingMod_please_wait">Instalowanie modyfikacji, proszę czekać...</string>
     <string name="WndInstallingMod_skipping_file">Pomijam %s</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Wykonaj przepis</string>
     <string name="WndItemAlchemy_NoRecipes">Brak dostępnych przepisów z tym przedmiotem i twoim obecnym ekwipunkiem.</string>
     <string name="WndItemAlchemy_SelectRecipe">Wybierz przepis</string>
     <string name="WndItemAlchemy_Title">Przepisy alchemiczne z %s</string>
@@ -3046,6 +3053,13 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
+
+
+
+
+
 
 
 

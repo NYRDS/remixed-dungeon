@@ -328,6 +328,7 @@
     <string name="CagedKobold_Name">被囚禁的狗头人</string>
     <string name="CagedKobold_Name_Objective">被囚禁的狗头人</string>
     <string name="CagedKobold_Quest_End">哦，谢谢，太感谢了！你是怎么找到这把钥匙的？你……拆了那件武器？！令人吃惊！好吧，我说过我要帮助你，所以我打算跟随你一整子。*被囚禁的狗头人变成了一根蜡烛</string>
+    <string name="Calm_Cast">%s się uspokaja.</string>
     <string name="Calm_Info">周围有很多令人讨厌的生物，让我们帮助他们吧。</string>
     <string name="Calm_Name">平静</string>
     <string name="CandleOfMindVision_Info">看上去是一根普通的蜡烛，而不是你期望的强大武器。奇怪的是虽然这根蜡烛没有被点燃，但十分温暖。</string>
@@ -460,6 +461,7 @@
     <string name="ChargrilledMeat_Name">烤肉</string>
     <string name="CharmBuff_Info">身心沉醉！</string>
     <string name="CharmBuff_Name">魅惑</string>
+    <string name="CharmSpell_Cast">%s zostało urokliwe.</string>
     <string name="CharmSpell_Info">每个人都值得爱，不是吗?</string>
     <string name="CharmSpell_Name">魅惑</string>
     <string name="Chasm_Chasm">裂缝</string>
@@ -877,6 +879,7 @@
     <string name="Halls_TileWater">冷岩浆</string>
     <string name="Haste_Info">急速会让实行者以极快的速度移动，他周围的一切都会显得静止。如此急速会消耗大量的能量，所以只能在很短的时间内使用。\n\n熟练的大师能够在较长的时间内保持急速。</string>
     <string name="Haste_Name">急速</string>
+    <string name="Heal_Cast">%s zostało wyleczone.</string>
     <string name="Heal_Info">在地牢这是个很有用的咒语，对吧？</string>
     <string name="Heal_Name">治愈</string>
     <string name="HealerNPC_Desc">虚无缥缈的直觉告诉我，眼前的老人懂得如何制作法杖。</string>
@@ -940,6 +943,7 @@
     <string name="HeroClass_PlagueDoctorPerks_1">开始时拥有瘟疫面具（对所有气体免疫）和骨锯。暴击会掉落额外部件，锯子对麻痹敌人造成+50%伤害。</string>
     <string name="HeroClass_PlagueDoctorPerks_2">开始时拥有瘟疫面具（对所有气体免疫）和骨锯。暴击会掉落额外部件，锯子对麻痹敌人造成x1.5伤害。</string>
     <string name="HeroClass_PlagueDoctorPerks_3">被毒气杀死的敌人会爆炸成毒雾，每影响一个敌人为你恢复 1 点生命值。</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Lekarze zarazy nie mogą używać broni dystansowej i mają ogromne kary za celność bez Szczęki Złamaniny.</string>
     <string name="HeroClass_Priest">牧师</string>
     <string name="HeroClass_Rog">盗贼</string>
     <string name="HeroClass_RogPerks_0">盗贼起始拥有一枚+1的暗影戒指。</string>
@@ -1472,6 +1476,7 @@
     <string name="PirateSet_Name">海盗帽</string>
     <string name="PlagueDoctorMaskHood_Info">雕刻的黑檀木头骨，其空洞的眼窝中闪烁着紫水晶宝石的超凡光芒。你的每一次呼吸都穿过迷宫般的管道和过滤器，带着强效草药和香料的气味，掩盖了粘在你身上的腐烂气息。但这不仅仅是面具。一顶午夜天鹅绒的厚重头巾，将你的脸和头笼罩在阴影中。兜帽如乌鸦的翅膀般流淌在你的背上，边缘饰有骨白色蕾丝流苏，形成令人寒颤的美丽对比。面具和兜帽共同创造了一个幽灵般的面容，是对抗腐烂力量的无尽战斗的严峻证明。</string>
     <string name="PlagueDoctorMaskHood_Name">瘟疫医生面具与兜帽</string>
+    <string name="PlagueDoctorMask_Info">这……这不是普通的面具。这……是一道屏障。是抵御瘟疫医生不懈抗争的腐化力量的盾牌。由最上等的乌木雕刻而成，上面刻有饥饿骷髅的面容。空洞的眼眶中镶嵌着闪烁的紫水晶，微微脉动，如同将熄的余烬。每次呼吸，每句话语，都经过迷宫般的管道和过滤器。强效草药和珍稀香料的混合物充斥其中，掩盖着萦绕在你身上的死亡气息，如同裹尸布。</string>
     <string name="PlagueDoctorMask_Name">瘟疫医生面具</string>
     <string name="PlagueDoctorNPC_After_Quest">我会证明的，我会证明给他们看！</string>
     <string name="PlagueDoctorNPC_After_Quest_2">你还在吗？来这里！拿着这个。 </string>
@@ -2126,6 +2131,7 @@
     <string name="TenguLiver_Info">这个肝脏属于一位强大的敌人。仅仅是看着它，你的野性本能就占据了上风，你感到有一种想要吃掉它的冲动。</string>
     <string name="TenguLiver_Name">天狗肝脏</string>
     <string name="Tengu_Desc">天狗是一个叫“天狗”的古代刺客组织的成员，这些刺客以精通手里剑和陷阱而著称。</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">终于自由了……</string>
     <string name="Tengu_Info2">明白了，%s！</string>
     <string name="Tengu_Info3">明白了，%s！</string>
@@ -2486,6 +2492,7 @@ remix.31.1\n
     <string name="WndLibrary_Items_Btn">道具</string>
     <string name="WndLibrary_Levels_Btn">地牢</string>
     <string name="WndLibrary_Mobs_Btn">怪物</string>
+    <string name="WndLocalModInstall_pick">选择模目录</string>
     <string name="WndLocalModInstall_text">选择安装 mod 的目录。</string>
     <string name="WndLocalModInstall_title">从本地目录安装模组</string>
     <string name="WndModInstall_InstallingMod">安装MOD</string>
@@ -2940,6 +2947,13 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
 
 
 

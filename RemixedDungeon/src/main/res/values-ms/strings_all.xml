@@ -57,6 +57,7 @@
     <string name="Amulet_ACEnd">PENGEMBARAAN BERAKHIR</string>
     <string name="Amulet_Info">Azimat Yendor merupakan artifak terkenal yang sangat berkuasa tetapi tidak diketahui asal usulnya. Dikatakan azimat ini berupaya memenuhi apa jua keinginan pemiliknya dengan syarat dia mampu \&quot;memujuk\&quot; azimat tersebut merealisasikan hasratnya.</string>
     <string name="Amulet_Name">Azimat Yendor</string>
+    <string name="Anesthesia_Info">Menghasilkan tidur yang mendalam dan tidak wajar pada sasaran anda. Bahkan serangan yang paling keganasan tidak akan membangunkan mereka dari tidur ini.</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">Simbol purba keabadian yang dapat mengembalikan nyawa selepas kematian. Jika dibangkitkan semula semua item yang dimiliki akan hilang kecuali yang masih dipakai.</string>
     <string name="Ankh_Name">Ankh</string>
@@ -691,6 +692,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Eye_Name_Objective">mata jahat</string>
     <string name="Facilitations_Descriptions_0">Mutan sentiasa diperlakukan dengan hinaan dan ketakutan, tetapi ketiadaan kelaparan sekali lagi akan memberikan anda kelebihan, kali ini dalam menakluki kedalaman penjara bawah tanah.</string>
     <string name="Facilitations_Descriptions_1">Masih tidak diketahui siapa ibu bapa anda, tetapi regenerasi semula jadi seperti troll akan membantu memulihkan semua parut pertempuran yang bakal berlaku.</string>
+    <string name="Facilitations_Names_0">Tanpa lapar</string>
     <string name="Facilitations_Names_1">Badan gergasi</string>
     <string name="Fadeleaf_Desc">Menyentuh Daun Lenyap akan pindahkan sesiapa sahaja ke lokasi secara rawak dalam aras yang sama</string>
     <string name="Fadeleaf_Name">Daun Lenyap</string>
@@ -843,6 +845,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Hedgehog_Name">landak kecil</string>
     <string name="HeroClass_Doctor">Doktor Wabak</string>
     <string name="HeroClass_Elf">bunian</string>
+    <string name="HeroClass_ElfPerks_0">Elf mulai dengan 15 poin Kesehatan dan 9 poin Kekuatan.</string>
     <string name="HeroClass_ElfPerks_1">Bunian kebal dengan pengakaran.</string>
     <string name="HeroClass_ElfPerks_2">Bunian bermula dengan busur kayu boleh ditatar berserta sejumlah anak panah.</string>
     <string name="HeroClass_ElfPerks_3">Bunian sangat cekap dengan busur dan lincah.</string>
@@ -1401,6 +1404,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PlagueDoctorQuest_4_1_InProgress">Lima _Ahli Sihir Kurcaci_, tubuh mereka masih berdenyut dengan sisa sihir gelap! Bawakan mereka kepadaku, dan aku akan memberimu ramuan yang sangat hebat – _Ramuan Kekuatan_ yang akan mengisi dirimu dengan kekuatan sepuluh lelaki!</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Orang Kerdil! Penduduk bawah tanah yang degil ini, obsesif dengan permata dan emas. Tetapi yang saya idamkan ialah _Bomoh Kerdil_... sihir terpelintir mereka, yang dikuasakan oleh kedalaman yang mereka diami. Lima, saya perlukan lima jiwa yang layu ini! Tubuh mereka memegang kunci untuk memahami sesuatu... fenomena. Sesuatu tentang penyaluran tenaga arkan melalui bumi itu sendiri. Saya percaya saya hampir menemui terobosan, tetapi saya perlukan esensi mereka, sihir mereka yang tercemar! *Dia batuk dengan ganas ke dalam sapu tangannya, kotoran gelap merebak di atas kain yang halus*</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Dapatkan lima _Kobold Icemancer_ yang mati! Badan beku mereka menyimpan kunci untuk membuka rahsia sihir menyejukan mereka!</string>
+    <string name="PlagueDoctorQuest_4_2_Prologue">*Jari-jarinya yang tulang mengetuk secara ritmis di atas periuk mendidih, udara di sekelilingnya tebal dengan bau tajam belerang dan pembusukan* _Pencipta Es Kobold_! Makhluk-makhluk malang itu, meringkuk di gua-gua membeku mereka, berpegang erat pada sihir es mereka. Saya butuh lima dari mereka, mayat membeku mereka akan... menyilaukan. Penguasaan mereka atas es, itu... aneh. Saya percaya mereka mengakses energi primitif, kekuatan tertidur di bawah permukaan dunia ini.</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Dia memandang dua _succubi_ itu, senyuman bahagia merebak di bawah topengnya.* Hebat! Menakjubkan! Ini akan membuka banyak… kemungkinan! *Dia berpaling kepadamu, suaranya penuh dengan rasa syukur… dan sesuatu yang lain.* Usaha anda… tidak akan dilupakan. Saya berterima kasih kepadamu atas terima kasih yang terdalam. *Pandangannya menatap terlalu lama pada _succubi_ sejenak, sebelum kembali ke makmalnya, mengomel tentang membuka rahsia rayuan.*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Fikirannya melayang-layang semasa bercakap, suaranya semakin perlahan, hampir berbisik.* Bawa saya dua _succubi_… hidup-hidup. Kuasa mereka… mempesona.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Dia teragak-agak, suaranya retak seperti ranting rapuh*. A-ah, _succubi_! Dua… ya, dua, masih hidup! Ini… ahem… untuk penyelidikan saya! Anda nampak… feromon mereka… ia penting untuk memahami keseimbangan halus… ah… *Dia terhenti, tangan kurusnya mencapai untuk membetulkan topengnya dengan gugup, matanya melirik ke arah anda dengan intensiti demam.*Essensi mereka… ia satu teka-teki… teka-teki yang indah dan penuh misteri! *Dia batuk dengan kuat, cuba mendapatkan semula komposisinya.* Saya janji, untuk membawa saya dua… makhluk ini… anda akan mendapat penghargaan abadi saya. Anggaplah ini sebagai… hadiah untuk pengetahuan! Ya! Untuk pengetahuan!</string>
@@ -1884,6 +1888,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpellBook_Info_Identified">Di dalam halaman ini anda menemui teks lengkap  bagi mantera \&quot;%1$s\&quot;.\n\&quot; %2$s\&quot;</string>
     <string name="SpellBook_Name">Buku Mantera</string>
     <string name="Spell_SelectACell">Pilih satu sel sasaran.</string>
+    <string name="Spell_SelectAChar">Pilih sasaran</string>
     <string name="Spells_NotEnoughSP">Anda tidak mempunyai mana yang mencukupi untuk menyihir mantera \&quot;%1$s\&quot;.</string>
     <string name="Spells_NotInOwnBody">Anda tidak boleh buat %s ketika roh anda  tidak berada di dalam jasad anda.</string>
     <string name="Spells_NotTooFast">%s belum boleh digunakan lagi</string>
@@ -1935,6 +1940,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpiritOfPain_Name_Objective">hantu sengsara</string>
     <string name="Sprout_Name">Tunas</string>
     <string name="StartScene_ChooseFromSlot">Pilih dari slot simpanan</string>
+    <string name="StartScene_ComingSoon">Sebentar lagi</string>
     <string name="StartScene_ContinueLatest">Sambung permainan terkini anda atau pilih dari slot simpanan</string>
     <string name="StartScene_Depth">Kedalaman: %1$d\nAras: %2$d</string>
     <string name="StartScene_DifficultyEasy">Mudah (dengan iklan)</string>
@@ -2769,6 +2775,12 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
 
 
 

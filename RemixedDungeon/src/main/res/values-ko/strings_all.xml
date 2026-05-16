@@ -375,6 +375,7 @@
     <string name="ChaosCrystal_Use">사용</string>
     <string name="ChaosHelmet_Info"> 혼돈의 전사의 상징인 혈적색 투구입니다.</string>
     <string name="ChaosHelmet_Name">혼돈의 투구</string>
+    <string name="ChaosShield_desc">Chaos Shield adalah hasil dari menyatukan Chaos Crystal dengan perisai biasa, menyebabkan perisai tersebut menampilkan efek chaotik acak yang berbeda-beda saat berhasil memblokir serangan.</string>
     <string name="ChaosShield_name">카오스 방패</string>
     <string name="ChaosStaff_Info">지팡이에 혼돈의 힘이 스며들었습니다! 어떤 마법사가 꿈꾸거나 두려워할 수나있을까요?</string>
     <string name="ChaosStaff_Name">혼돈 지팡이</string>
@@ -1285,6 +1286,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">드워프 수도승</string>
     <string name="Monk_Name_Objective">드워프 수도승</string>
+    <string name="MoongraceBuff_Name">Surga madu</string>
     <string name="Moongrace_Desc">희귀하게 자라는 이 식물은 자연 마법의 원천으로 알려져 있습니다.</string>
     <string name="Moongrace_Name">월광초</string>
     <string name="Movement_Speed">이동 속도</string>
@@ -1393,6 +1395,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PlagueDoctorQuest_2_2_InProgress">_태양풀_ 씨앗 두 개. 그 황금빛 꽃잎에는 내가 이해하고자 하는 힘이 담겨 있다. 그것들을 찾아내고, 그 본질을 밝혀라!</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">아, _선인초_! 섬세한 꽃잎이 태양의 따뜻함을 발산하고 있어. 그 정수가 내 연구의 열쇠가 될 거라고 믿어… 음, 당장은 세부적인 건 생략하자. 요약하면 필수적인 거란다. _선인초 씨앗 두 개_. 가져다주면, 모험에 도움이 확실히 될 보상을 해주지 - 햇살의 생명력으로 가득한 _치유 물약_이야.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*장갑 낀 손으로 _박쥐_ 를 조심스럽게 안고 불안할 정도의 매혹으로 작은 모습을 살펴본다* 훌륭해! 박쥐의 반향정위… 내가 만난 그 어떤 것과도 달라. 이런 정밀함이… 이런… 통제력이. *가면에 가려진 얼굴로 당신을 돌아본다* 당신의 노력에 대한 보상으로 _강화의 두루마리_ 를 주지. 현명하게 사용하게, 이것이 당신의 본질을… 정제할 잠재력을 가지고 있으니까. *두루마리를 건네주며 목소리를 낮은 속삭임으로 떨어뜨린다* 이 _박쥐_ 는… 숨겨진 세계를 보는 창이야. 그림자가 춤추고 비밀이 속삭이는 세계 말이지.</string>
+    <string name="PlagueDoctorQuest_3_1_InProgress">데려와라 _흡혈 박쥐_, 살아있고 부상 없이! 그들의 피, 그들의 날개... 이 비밀을 알아내야 할 것들을 담고 있어!</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*그의 눈동자에는 이상하고 열광적인 강도가 빛나고 있었다.* 아아, _뱀파이어 박쥐_! 밤의 존재로, 자기 사냥감의 생명력을 먹으며 살아가는 생물이지. 흥미롭군... 정말 흥미롭군. 내가 그걸 한 마리라도 잡아 그 독특한 생리학적 구조를 연구해야 해. 다 이해하는 것에 달려 있어... 그... 그에 대해 말이다... *그는 중얼거리며 알 수 없는 용어들로 혼잣말을 한다.* 그래! _박쥐_의 음향 위치 탐지 기능, 그것이 완전한 어둠 속에서 길을 찾는 능력... 비밀을 풀 수 있는 열쇠가 되지.*</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*그는 고개를 뒤로 젖히고 비명 같은 웃음을 터뜨리며, 그 소리는 칙칙한 실험실 안에 울려 퍼졌다* 훌륭하군! 우리 앞에 서 있는 _사신 기사_! 그 존재에서 뿜어져 나오는 힘은... 취하게 만드는구나! *그는 당신을 향해 돌아서며, 열광적인 강렬함으로 빛나는 눈빛을 보내며* 그리고 당신을 위한 보상, 당신의 용맹함에 걸맞는 선물이 있으니: _힘의 물약_! 이 물약이 어떤 적도 물리칠 수 있는 힘을 당신에게 부여하기를 바라노라! 자... 이제 우리의 표본을 살펴보자. 바로 그 본성은 삶의 법칙 자체를 다시 쓸 수 있을 만한 비밀을 간직하고 있다네! *그는 미친 듯한 미소를 지으며 _사신 기사_ 에게 다가서면서, 거품이 나는 초록색 액체가 든 병을 들고 있다*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">이것은 단순한 짐승이 아닙니다! 이것은 네크로맨서의 힘에 대한 살아있는 증거입니다! 살아서, 다치지 않고 포획하세요! 이 _죽음의 기사_... 그것이 열쇠입니다!</string>
@@ -1561,6 +1564,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="RatSkull_Info2">어떻게 보면, 주인은 쥐를 잡을 수 있던 것으로 보입니다. 심지어 크고 냄새나는 것들도요.</string>
     <string name="RatSkull_Name">거대 쥐의 두개골</string>
     <string name="Rat_Desc">거대 주머니 쥐는 포악하지만 비교적 약한 하수구 거주자다. 많은 수가 모이지 않으면 그다지 위험하지 않다.</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">주머니 쥐</string>
     <string name="Rat_Name_Objective">주머니 쥐</string>
     <string name="Ration_Info">말린 고기, 비스킷 몇 개 등의 특별할 것 없는 식량입니다.</string>
@@ -1989,6 +1993,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SuspiciousRat_Name_Objective">수상한 쥐</string>
     <string name="Swarm_Defense">회피</string>
     <string name="Swarm_Desc">죽음의 파리 떼가 매섭게 윙윙 거린다. 물리 공격을 받을 때마다 더 작은 두 무리로 나뉘지만 똑같이 위험하다.</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">파리 떼</string>
     <string name="Swarm_Name_Objective">파리 떼</string>
     <string name="Swing_Name_0">사나운 %s</string>
@@ -2773,6 +2778,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
 
 
 

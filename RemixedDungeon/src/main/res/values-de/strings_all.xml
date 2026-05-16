@@ -498,6 +498,7 @@ Ein blutroter Helm ist ein wesentliches Symbol eines Chaos Kriegers.</string>
     <string name="ClassArmor_LowHealt">Deine Lebensenergie ist zu niedrig.</string>
     <string name="ClassArmor_LowMana">Nicht genügend Mana!</string>
     <string name="ClassArmor_NotEquipped">Du musst diese Rüstung tragen um ihre besondere Kraft nutzen zu können.</string>
+    <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Dieses massive Schwert dürfte in der Lage sein, durch alles zu schneiden.</string>
     <string name="Claymore_Name">Claymore</string>
     <string name="CloakBuff_Info">Ein dunkler Umhang verbirgt dich in den Schatten und macht dich für Feinde weniger sichtbar.</string>
@@ -643,11 +644,13 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="DewVial_Name">Tauflasche</string>
     <string name="Dewdrop_Info">Ein kristallklarer Tautropfen.</string>
     <string name="Dewdrop_Name">Tautropfen</string>
+    <string name="DieHardBuff_Info">Regenerationsrate erhöht.</string>
     <string name="DieHardBuff_Name">Stirb Hart</string>
     <string name="DieHardSpell_Info">Wird temporär deine Regeration erhöhen um dich sehr widerstandsfähig zu machen.</string>
     <string name="DieHardSpell_Name">Hartnäckig</string>
     <string name="Displacement_Txt">%s des Verdrängens</string>
     <string name="DoctorArmor_Name">Doktorgewand</string>
+    <string name="DoctorArmor_NotDoctor">Nur Pestärzte können diese Rüstung verwenden!</string>
     <string name="DoctorSpecial">Immunisiere den Helden gegen Gase, Schwäche und Desorientierung.</string>
     <string name="DogeMask_Info">Wolltest du schon immer als ein berühmter Doge verkleiden? Das ist deine Chance!\nWas für eine Maske! Gute Tarnung! Wow!</string>
     <string name="DogeMask_Name">Mask des Dogen</string>
@@ -1181,6 +1184,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Kusarigama_Name">Kusarigama</string>
     <string name="Kusarigama_Pull">ZIEHEN</string>
     <string name="Larva_Desc">alte Götterlarve</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">göttliche Larve</string>
     <string name="Larva_Name_Objective">göttliche Larve</string>
     <string name="LastLevel_TileDescStatue">Diese Säule ist aus echten Menschenschädeln gemacht. Beeindruckend.</string>
@@ -1943,6 +1947,7 @@ Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich si
     <string name="ShamanElder_Desc">Dieser besondere Gnoll sieht viel älter aus als andere Schamanen und hat sicherlich einen höheren Status im Stamm. Eine seltsame Aura bildet sich langsam um ihn herum, die anscheinend alles reflektiert, was sie berührt.</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="Shaman_Desc">Die intelligentesten Gnolle können schamanische Magie meistern. Gnollschamanen bevorzugen Kampfzauber um ihre fehlende Stärke auszugleichen. Sie zögern nicht, sie auf jeden anzuwenden der ihre Stellung im Stamm anzweifelt.</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">Der Blitzschlag des %s hat dich getötet...</string>
     <string name="Shaman_Name">Gnollschamane</string>
     <string name="Shaman_Name_Objective">Gnollschamane</string>
@@ -2480,6 +2485,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndInfoItem_Skeleton">Skelettierte Überreste</string>
     <string name="WndInfoItem_Tomb">Grab</string>
     <string name="WndInfoItem_WontKnow">Du wirst erst wissen was darin ist, wenn du es geöffnet hast!</string>
+    <string name="WndInstallingMod_copying_file">%s wird in Remixed Dungeon Speicher kopiert</string>
     <string name="WndInstallingMod_deleting_file">Lösche %s</string>
     <string name="WndInstallingMod_please_wait">Mod wird installiert, bitte warten...</string>
     <string name="WndInstallingMod_skipping_file">Überspringe %s</string>
@@ -2623,6 +2629,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
 Irgendwann nisteten sich Spinnen ein. Aber selbst diese gefährlichen Kreaturen, lauernd in der Dunkelheit, waren nicht genug um die Mutigen und Wahnsinnigen davon abzuhalten, sehensüchtig nach den Schätzen zu suchen, die hier vielleicht zu finden sind. Für die Größe der Gefahr gibt es immer eine große Menge an Gerüchten über magische Artefakte. Vor langer Zeit wanderte mal eine böse Hexe in die Tunnel, um vor Hexenjägern zu flüchten. Die Abergläubischen wagten es nicht in die Dunkelheit zu treten. Also warteten sie. Aber niemand hat sie je wieder gesehen. Vielleicht hat die Hexe einen Weg raus gefunden, vielleicht hat sie sich an den Wachen vorbeigeschliechen... Oder sie starb, umgeben vom Rascheln der Kreaturen in der Dunkelheit.</string>
     <string name="WndTilesKind_ClassicLook">Klassischer Look</string>
     <string name="WndTilesKind_Title">Nur noch eine Kleinigkeit:</string>
+    <string name="WndTilesKind_text">Du bist kurz davor, eine von verdrehter Magie besessene Dungeons zu betreten, aber jetzt kannst du wählen, wie du sie siehst:\n Möchtest du moderne Pseudo-3D oder klassische flache Ansicht?\nDu kannst es später im Spieloptionen-Menü ändern.</string>
     <string name="WndTradeItem_Bought">Du hast %1$s für %2$dg gekauft</string>
     <string name="WndTradeItem_Buy">Kaufen für %dg</string>
     <string name="WndTradeItem_BuyAll">Kaufe alles für %d g</string>
@@ -2950,6 +2957,13 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
+
 
 
 

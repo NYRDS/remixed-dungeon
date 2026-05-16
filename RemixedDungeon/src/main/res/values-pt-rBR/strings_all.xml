@@ -61,6 +61,7 @@
     <string name="Amulet_Info">O Amuleto de Yendor é o mais poderoso artefato conhecido de origem desconhecida. Diz-se que o amuleto é capaz de cumprir qualquer desejo se a força de vontade do seu dono é forte o suficiente para \&quot;convencer\&quot; a fazê-lo.</string>
     <string name="Amulet_Name">Amuleto de Yendor</string>
     <string name="AnesthesiaBuff_Info">Não sente dor e não acorda com ataques, mas ainda recebe dano.</string>
+    <string name="Anesthesia_Info">Induz uma sono profundo e antinatural no seu alvo. Mesmo os ataques mais violentos não irão acordá-los desse sono.</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">O antigo símbolo da imortalidade concede uma capacidade de voltar à vida após a morte. Após a ressurreição todos os itens não equipados são perdidos.</string>
     <string name="Ankh_Name">Ankh</string>
@@ -376,6 +377,7 @@
     <string name="ChampionOfFireBuff_Name">Campeão do Fogo</string>
     <string name="ChaosArmor_Info">As placas de sangue vermelho desta armadura é costurada junto com correntes vermelhas escuras. Ele irradia energia caótica enquanto você a toca.</string>
     <string name="ChaosArmor_Name">Armadura do Caos</string>
+    <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Um arco terrível cheio de poder do Caos. Cada flecha disparada por ele vai levar um pouco de energia do caos para seu destino. Mas se você errar...</string>
     <string name="ChaosBow_Name">Arco do Caos</string>
     <string name="ChaosCrystal_ArmorFused">O cristal fundiu-se com sua armadura e assumiu a forma do caos.</string>
@@ -1456,6 +1458,7 @@ Parede
     <string name="PlagueDoctorNPC_After_Quest">Eu vou mostrar a eles, a todos eles!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Você ainda está aqui? Tome! Pegue isso.</string>
     <string name="PlagueDoctorNPC_Desc">Este homem corcunda está totalmente vestido com couro. Ele tem cheiro forte de medicamentos e... alho?</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">médico da praga</string>
     <string name="PlagueDoctorNPC_Name_Objective">médico da praga</string>
     <string name="PlagueDoctorNPC_Quest_End">Ah, obrigado, espero que tenham algum vestígio da doença. Os exemplares anteriores eram absolutamente inofensivos. Eu fiz isso para você enquanto esperava pelas novas amostras.</string>
@@ -1473,6 +1476,7 @@ Parede
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Ele segura o _morcego_ gentilmente em suas mãos enluvadas, examinando sua pequena forma com uma fascinação perturbadora* Magnífico! A ecolocalização do _morcego_... é diferente de tudo que já encontrei. Tal precisão... tal... controle. *Ele se vira para você, seu rosto obscurecido por sua máscara* Por seus esforços, um _Pergaminho de Melhoria_. Use-o sabiamente, pois ele tem o potencial de... refinar sua própria essência. *Ele lhe entrega o pergaminho, sua voz caindo para um sussurro suave* Este _morcego_, é... uma janela para um mundo oculto. Um mundo... onde as sombras dançam e os segredos sussurram.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Traga-me um _morcego vampiro_, vivo e ileso! Seu sangue, suas asas... eles contêm segredos que devo descobrir!</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*Seus olhos brilham com uma intensidade estranha e febril* Ah, o _morcego vampiro_! Uma criatura da noite, alimentando-se da força vital de sua presa. Fascinante... verdadeiramente fascinante. Preciso de um vivo para estudar sua fisiologia única. É tudo sobre... entender o... a... *Ele se cala, murmurando para si mesmo uma série de termos arcanos*. Sim! A ecolocalização do _morcego_, sua capacidade de navegar na escuridão completa... é a chave para desvendar um segredo.</string>
+    <string name="PlagueDoctorQuest_3_2_Epilogue">*Arremessa a cabeça e solta uma gargalhada histérica, o som ecoando por sua laboratório úmido* Magnífico! Um _Cavaleiro da Morte_, diante de nós! O poder emanando de sua existência... embriagante! *Vira-se para você, olhos brilhando com uma intensidade febril* E para você, uma recompensa digna de seu valor: uma _Poção de Força_! Que ela lhe conceda o poder de conquistar qualquer inimigo! Agora... vamos examinar nosso sujeito. Sua própria essência contém segredos que poderiam reescrever as próprias leis da vida! *Aborda o _Cavaleiro da Morte_ com um sorriso maníaco, exibindo um frasco de líquido verde borbulhante</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Esta não é apenas uma besta! É um testemunho ambulante do poder necromântico! Capture-o, vivo e ileso! Este _Cavaleiro da Morte_... ele é a chave!</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">Esplêndido! Os _Bruxos Anões_, suas essências agora são minhas para explorar! Magia tão distorcida e corrompida... verdadeiramente fascinante. *Ele segura um frasco cintilante, cheio de um líquido viscoso e carmesim.* Isto é para você: uma _Poção de Poder_! Absorva seu poder, e você sentirá a força das montanhas correndo por suas veias! Lembre-se, o conhecimento obtido através destes sacrifícios servirá a um propósito maior... talvez até nos salve de um destino pior que a morte.</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Atchim! Dwarves! Aqueles habitantes subterrâneos teimosos, obcecados por gemas e ouro. Mas são os _Feiticeiros Anões_ que eu desejo… sua magia distorcida, alimentada pelas próprias profundezas que habitam. Cinco, preciso de cinco daquelas almas murchas! Seus corpos guardam a chave para entender um certo… fenômeno. Algo sobre canalizar energias arcanas através da própria terra. Acredito que estou perto de um avanço, mas preciso de sua essência, sua magia corrompida! *Ele tosse violentamente em seu lenço, uma mancha escura se espalhando pelo tecido delicado*</string>
@@ -1772,6 +1776,7 @@ Parede
     <string name="ScarecrowNPC_Quest_Start_Female">Olá garotinha, como vai?\n Eu tenho algo emocionante para você!\n\n Oh, não sei o quão grato eu seria,\n Se você fosse pegar alguns doces para mim!\n\n</string>
     <string name="ScarecrowNPC_Quest_Start_Male">Olá garotinho, como vai?\n Eu tenho algo emocionante para você!\n\n Oh, não sei o quão grato eu seria,\n Se você fosse pegar alguns doces para mim!\n\n</string>
     <string name="Scorpio_Desc">Estas enormes criaturas demoníacas parecidas com aracnídeos evitam o combate de perto, disparando pontas serrilhadas de longas distâncias.</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">escorpião</string>
     <string name="Scorpio_Name_Objective">escorpião</string>
     <string name="ScrollHolder_Info">Você pode colocar qualquer número de pergaminhos neste recipiente tubular. Ele economiza espaço em sua mochila e protege pergaminhos do fogo.</string>
@@ -2147,6 +2152,7 @@ outro local do nível.</string>
     <string name="ToughShield_desc">Este escudo reforçado com tiras de couro parece mais resistente do que um de madeira. Certamente pode bloquear mais danos.</string>
     <string name="ToughShield_name">Escudo Reforçado em Couro</string>
     <string name="TownGuardNPC_Desc">Um Guarda da cidade regular.</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">Avançar.</string>
     <string name="TownGuardNPC_Message2">Graças a aventureiros como você, aqui se tornou um lugar bastante pacífico.</string>
     <string name="TownGuardNPC_Message3">Você acha que existem muitos guardas nesta cidade? Bem, esta é a única cidade com uma masmorra gigantesca que está infestada de monstros, não é mesmo?</string>
@@ -2468,6 +2474,7 @@ remix.31.1\n
     <string name="WndInfoItem_WontKnow">Você não vai saber o que há dentro até abri-lo!</string>
     <string name="WndInstallingMod_deleting_file">Apagando %s</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, por favor aguarde...</string>
+    <string name="WndInstallingMod_skipping_file">Pulando %s</string>
     <string name="WndItemAlchemy_NoRecipes">Não há receitas disponíveis com este item e seu inventário atual.</string>
     <string name="WndItemAlchemy_SelectRecipe">Selecionar receita</string>
     <string name="WndItemAlchemy_Title">Receitas de alquimia com %s</string>
@@ -2935,6 +2942,13 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
 
 
 
