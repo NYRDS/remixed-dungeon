@@ -305,6 +305,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BloodTransfusion_FullHP">Ihre Blut ist bereits auf voller Kapazität.</string>
     <string name="BloodTransfusion_Info">Zieht fast gesamtes Blut von einem Ziel, um dich selbst zu heilen. Ein dunkler Ritual des Opfers und der Überleben.</string>
     <string name="BloodTransfusion_Name">Bluttransfusion</string>
+    <string name="BloodTransfusion_WontAgreed">Nicht einverstanden</string>
     <string name="BodyArmorBuff_Info">Rüstung wird auf Kosten von Bewegungs-Geschwindigkeit erhöht.</string>
     <string name="BodyArmorBuff_Name">Körperrüstung</string>
     <string name="BodyArmorSpell_Info">Aktiviert ungenutzte Kraftreserven, um die Muskeln temporär stärker zu machen, was die Rüstung deutlich verstärkt, aber die Bewegungsgeschwindigkeit drastisch reduziert.</string>
@@ -359,6 +360,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Capotain_Info">Ein hochgekrönter, schmalkrempiger Hut. Er wird normalerweise mit Puritanern in Verbindung gebracht, aber du musst nicht religiös sein, um ihn tragen zu können. Aus irgendeinem Grund hat er eine Plakette mit dem Namen \&quot;Solomon\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_Devoured">Du hast den Kadaver von %s verzehrt!</string>
+    <string name="Carcass_DissectFailed">Aufschlüsselung fehlgeschlagen</string>
     <string name="Carcass_DissectMessage">Du sezierst die Leiche und erhältst %s.</string>
     <string name="Carcass_DissectResult">Aus dem %1 erhält man %2 Ernte %3.</string>
     <string name="Carcass_Info">Überreste eines völlig toten %s.</string>
@@ -483,6 +485,7 @@ Ein blutroter Helm ist ein wesentliches Symbol eines Chaos Kriegers.</string>
     <string name="ChargrilledMeat_Name">Gebratenes Fleisch</string>
     <string name="CharmBuff_Info">Geist und Körper waren verzaubert!</string>
     <string name="CharmBuff_Name">Verzaubert</string>
+    <string name="CharmSpell_Cast">%s ist betört</string>
     <string name="CharmSpell_Info">Jeder verdient etwas Liebe, oder nicht?</string>
     <string name="CharmSpell_Name">Bezaubern</string>
     <string name="Chasm_Chasm">Abgrund</string>
@@ -636,8 +639,10 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="Deathling_Name">Untoter</string>
     <string name="Deathling_Name_Objective">Untoter</string>
     <string name="DeepSnail_Desc">Diese Art von Weichtieren kann oft in der Nähe von Wasserquellen gesehen werden und ist viel schneller als eine gewöhnliche Schnecke. Hüte dich jedoch vor den Bissen, sie können eine unangenehme Wirkung auf deine Haut haben.</string>
+    <string name="DeepSnail_Gender">masculine</string>
     <string name="DeepSnail_Name">Tiefenschnecke</string>
     <string name="DeepSnail_Name_Objective">Tiefenschnecke</string>
+    <string name="DeferedDamageBuff_Info">Schadensverzögerung</string>
     <string name="DeferedDamageBuff_Name">Verzögerter Schaden (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s hat dich getötet...</string>
     <string name="DevourBuff_Info"/>
@@ -684,6 +689,7 @@ Nein, dort ist kein Platz für sie im Licht, nicht mehr. Sie drehte sich von ihr
     <string name="DrunkardNPC_Name">Betrunkener</string>
     <string name="DrunkardNPC_Name_Objective">Betrunkener</string>
     <string name="Drunkard_Phrase_1">MEHR BIER BITTE!</string>
+    <string name="Drunkard_Phrase_2">Was für ein Wahnsinn...</string>
     <string name="Drunkard_Phrase_3">Dieses Bier schmeckt wie Dreck</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_DeadEnd">Was machst du hier?!</string>
@@ -762,9 +768,13 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Eye_Kill">Der Todesblick des %s hat dich getötet...</string>
     <string name="Eye_Name">Böses Auge</string>
     <string name="Eye_Name_Objective">Böses Auge</string>
+    <string name="Facilitations_Descriptions_0">Verbesserungen</string>
     <string name="Facilitations_Descriptions_1">Es ist noch nicht bekannt, wer deine Eltern waren, aber die natürliche trollartige Regeneration wird dazu beitragen, alle kommenden Kampfnarben zu heilen.</string>
     <string name="Facilitations_Descriptions_2">Ein tiefgreifendes und gründliches Studium der Natur als Energiequelle ermöglicht es Ihnen, Ihre magischen Reserven während der Reise wieder aufzufüllen.</string>
+    <string name="Facilitations_Descriptions_3">Anpassungen</string>
+    <string name="Facilitations_Names_0">Optionen</string>
     <string name="Facilitations_Names_1">Trollkörper</string>
+    <string name="Facilitations_Names_2">Angebot</string>
     <string name="Facilitations_Names_3">Riesenstärke</string>
     <string name="Fadeleaf_Desc">Das berühren eines Verblassenden Blattes, teleportiert irgendeine Kreatur an einen zufälligen Platz der aktuellen Ebene.</string>
     <string name="Fadeleaf_Name">Verblassendes Blatt</string>
@@ -866,6 +876,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="GoldenKey_Info">Die Einkerbungen dieses goldenen Schlüssels sind klein und verworren. Vielleicht kann er ein Truhenschloss öffnen?</string>
     <string name="GoldenKey_Name">Goldener Schlüssel </string>
     <string name="GoldenStatue_Desc">Es ist wirklich schwer zu glauben, dass diese prächtige Statue nicht einfach nur Dekoration, sondern eine tückische Kreatur ist, die auf unwissende Abenteurer wartet. Auf den ersten Blick hättest du schwören können, dass dessen _%s_ ein Teil seines Armes ist.</string>
+    <string name="GoldenStatue_Gender">masculine</string>
     <string name="GoldenStatue_Name">goldene Statue</string>
     <string name="GoldenStatue_Name_Objective">goldene Statue</string>
     <string name="GoldenSword_Gender">masculine</string>
@@ -876,6 +887,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">Golem</string>
     <string name="Golem_Name_Objective">Golem</string>
+    <string name="Goo_Desc">Klebrige Masse</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">Goo lädt sich auf!</string>
     <string name="Goo_Info2">glurp...glurp...</string>
@@ -919,6 +931,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Die Spitze dieses Pfeils ist mit einem Heilungstrank versehen.</string>
     <string name="HealthArrow_Name">Heilungs Pfeil</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">Die Spitze dieses Dartes ist mit einem Heilungstrank versehen.</string>
     <string name="HealthDart_Name">Heilungs Dart</string>
     <string name="Heap_Mimic">Das ist ein Mimic!</string>
@@ -1103,6 +1116,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="IncendiaryDart_Info">Jede dieser Pfeilspitzen ist dafür gemacht, solange in einem Gegner zu verweilen, bis dieser in hellen Flammen aufgeht.</string>
     <string name="IncendiaryDart_Name">Feuerpfeil</string>
     <string name="InnKeeperNPC_Desc">Der Tavernenwirt ist stolz aud sich selbst.</string>
+    <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">Tavernenwirt</string>
     <string name="InnKeeperNPC_Name_Objective">Tavernenwirt</string>
     <string name="InnServant_Phrase_1">Willkommen in der Taverne, Reisender! Was darf ich für Euch tun?</string>
@@ -1186,6 +1200,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">Kobold</string>
     <string name="Kobold_Name_Objective">Kobold</string>
+    <string name="KrampusHead_Info">Kopftrophäe des Krampus</string>
     <string name="KrampusHead_Name">Krampuskopf</string>
     <string name="KunaiThrow_Info">Dieser tödliche Kunai-Wurf wird extrem schnell ausgeführt, so schnell, dass du nicht einmal ein Ziel auswählen kannst.\n\nWahre Meister können mehr als einen Kunai gleichzeitig werfen.</string>
     <string name="KunaiThrow_Name">Kunaiwurf</string>
@@ -1234,6 +1249,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Level_TileDescLockedDoor">Die Tür ist versperrt, du brauchst einen passenden Schlüssel um sie zu öffnen.</string>
     <string name="Level_TileDescLockedExit">Schwere Balken blockieren die Treppen nach unten.</string>
     <string name="Level_TileDescPedestal">Ein kleiner Sockel.</string>
+    <string name="Level_TileDescPileOfStones">Haufen Steine</string>
     <string name="Level_TileDescSign">Du kannst die Schrift von hier aus nicht lesen.</string>
     <string name="Level_TileDescStatue">Jemand wollte diesen Ort dekorieren, ist daran aber offensichtlich gescheitert.</string>
     <string name="Level_TileDescTrap">Wenn du auf eine verborgene Druckplatte trittst, löst dies die Falle aus.</string>
@@ -1276,6 +1292,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="LibraryBook_Description">Dieser Wälzer ist sehr groß. Er enthält alles Wissen, das Abenteurer im Dungeon entdeckt haben.</string>
     <string name="LibraryBook_Name">Buch aus der Bücherei</string>
     <string name="Lich_Desc">Der Nekromant hat sein Ende in den Tiefen der Nekropole gefunden und als die böse Energie dieses Ortes in seinen Körper gekrochen ist, hat er sich wahrscheinlich in den Lich verwandelt. Der Untote Hexer, eine willenlose Marionette, kontrolliert von boshaften Mächten.</string>
+    <string name="Lich_DieInfo">Von Nekromantie besiegt</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">Lich</string>
     <string name="Lich_Name_Objective">Lich</string>
@@ -1317,6 +1334,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="ManaPotion_Info">Dieser Trank wird deine spirituelle Energie wiederherstellen.</string>
     <string name="ManaPotion_Name">Mana Trank</string>
     <string name="ManaRegenerationBuff_Info">Regeneriert Mana über die Zeit.</string>
+    <string name="ManaRegenerationBuff_Name">Mana-Regeneration</string>
     <string name="ManaShieldBuff_Info">Ein magischer Schild ist erschienen, der den nächsten eingehenden Angriff vollständig abwehrt.</string>
     <string name="ManaShieldBuff_Name">Magischer Schild</string>
     <string name="Mana_Cost">Mana Kosten:</string>
@@ -1466,6 +1484,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Nightcap_Info">Dungeons in der Nacht zu erkunden muss eine sehr ermüdende Tätigkeit sein. Warum nicht einen warmen, kuscheligen Hut aufsetzen und entspannen, sodass all deine Sorgen verschwinden?</string>
     <string name="Nightcap_Name">Schlafmütze</string>
     <string name="Nightmare_Desc">Groteske Kreatur, von zuckenden fleischigen Tentakeln. Der Nachtmahr ist eine schreckliche Manifestiation der finsteren Gedanken des Alten Gottes.</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name">Nachtmahr</string>
     <string name="Nightmare_Name_Objective">Nachtmahr</string>
     <string name="No_Valid_Cell">Hier ist kein passendes Feld in der nähe.</string>
@@ -1630,6 +1649,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Potion_Colors_1">Purpurn</string>
     <string name="Potion_Colors_10">Indigoblau</string>
     <string name="Potion_Colors_11">Silbern</string>
+    <string name="Potion_Colors_12">Braun</string>
     <string name="Potion_Colors_13">Quarz</string>
     <string name="Potion_Colors_14">Onyx</string>
     <string name="Potion_Colors_15">Perlen</string>
@@ -2978,6 +2998,26 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
