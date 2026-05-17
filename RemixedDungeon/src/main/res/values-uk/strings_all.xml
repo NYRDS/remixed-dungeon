@@ -1092,6 +1092,7 @@
     <string name="InventoryScroll_Title">Обери предмет</string>
     <string name="InventoryScroll_Warning">Сувій буде втрачено в будь-якому випадку. Ти справді бажаєш перервати його використання?</string>
     <string name="InventoryScroll_Yes">Так, я підтверджую</string>
+    <string name="InvisibilityBuff_Info">Completely invisible, which can either help avoid dangers or become one.</string>
     <string name="InvisibilityBuff_Name">Невидимий</string>
     <string name="IronKey_FromDepth">залізний ключ від рівня %d</string>
     <string name="IronKey_Info">Насічки на древньому ключі майже стерлися; шкіряний мотузок розсипався від часу. Які двері він може відкрити?</string>
@@ -2477,11 +2478,13 @@
     <string name="WndLibrary_Items_Btn">Предмети</string>
     <string name="WndLibrary_Levels_Btn">Підземелля</string>
     <string name="WndLibrary_Mobs_Btn">Монстри</string>
+    <string name="WndLocalModInstall_pick">Pick mod directory</string>
     <string name="WndLocalModInstall_text">Виберіть директорію, з якої встановити мод</string>
     <string name="WndModInstall_InstallingMod">Встановлення мода</string>
     <string name="WndModSelect_AreYouSure">Видалити мод: %s, впевнені?</string>
     <string name="WndModSelect_ReallyDelete">Точно видалити?</string>
     <string name="WndModsDisclaimer_install">Встановити локальний мод.</string>
+    <string name="WndModsDisclaimer_manage">Manage mods list</string>
     <string name="WndModsDisclaimer_title">Модифікації</string>
     <string name="WndMovieTheatre_Bye">Повертайся будь-коли, ми завжди раді вас бачити!</string>
     <string name="WndMovieTheatre_Instruction">Вітаємо і ласкаво просимо до нашого кінотеатру! Ми надаємо особливу послугу, де ви можете безкоштовно переглянути спеціальний фільм під назвою реклама. І якщо ви переглянете його до кінця, ви отримаєте винагороду у розмірі %d золотих монет!</string>
@@ -2907,6 +2910,9 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
 
 
 

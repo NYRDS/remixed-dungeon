@@ -61,6 +61,7 @@
     <string name="Amulet_Info">O Amuleto de Yendor é o mais poderoso artefato conhecido de origem desconhecida. Diz-se que o amuleto é capaz de cumprir qualquer desejo se a força de vontade do seu dono é forte o suficiente para \&quot;convencer\&quot; a fazê-lo.</string>
     <string name="Amulet_Name">Amuleto de Yendor</string>
     <string name="AnesthesiaBuff_Info">Não sente dor e não acorda com ataques, mas ainda recebe dano.</string>
+    <string name="AnesthesiaBuff_Name">Anesthesia</string>
     <string name="Anesthesia_Info">Induz uma sono profundo e antinatural no seu alvo. Mesmo os ataques mais violentos não irão acordá-los desse sono.</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">O antigo símbolo da imortalidade concede uma capacidade de voltar à vida após a morte. Após a ressurreição todos os itens não equipados são perdidos.</string>
@@ -344,6 +345,7 @@
     <string name="Carcass_DissectMessage">Você diseca o cadáver e obtém um %s.</string>
     <string name="Carcass_DissectResult">Do %1$s você obtém %2$d colheita %3$s.</string>
     <string name="Carcass_Info">restos de %s totalmente morto.</string>
+    <string name="Carcass_Kick">This %s is totally dead, no need to kick it.</string>
     <string name="Carcass_Necromancy">Você ergueu um cadáver de %s!</string>
     <string name="Carcass_Necromancy_Failed">\&quot;Sua tentativa de levantar o cadáver de %s falhou!\&quot;</string>
     <string name="Carcass_TooFarToDissect">Você precisa estar mais perto para dissecar a carcaça.</string>
@@ -1947,6 +1949,7 @@ outro local do nível.</string>
     <string name="Shopkeeper_text">Bem-vindo à filial local da Pixel-Mart.\nComo posso ajudá-lo?</string>
     <string name="Shopkeeper_title">Loja</string>
     <string name="ShortSword_ACReforge">REFORJAR</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Na verdade, é bastante curta, apenas alguns centímetros mais longo do que um punhal.</string>
     <string name="ShortSword_Name">Espada Curta</string>
     <string name="ShortSword_NotBoomerang">você não pode atualizar um bumerangue dessa forma</string>
@@ -2966,6 +2969,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 

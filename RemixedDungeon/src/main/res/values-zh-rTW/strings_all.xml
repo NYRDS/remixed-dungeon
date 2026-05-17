@@ -303,6 +303,7 @@
     <string name="Brute_Name">豺狼暴徒</string>
     <string name="Brute_Name_Objective">豺狼暴徒</string>
     <string name="Brute_StaEnraged">激怒</string>
+    <string name="BuffParam_Cooldown">Cooldown: %.2f</string>
     <string name="BurningBuff_Info">身體被洶湧的火焰吞噬！</string>
     <string name="BurningBuff_Name">燃燒</string>
     <string name="BurningFist_Desc">上古之神的燃燒之拳</string>
@@ -2462,6 +2463,7 @@
     <string name="WndLibrary_Items_Btn">道具</string>
     <string name="WndLibrary_Levels_Btn">地牢</string>
     <string name="WndLibrary_Mobs_Btn">怪物</string>
+    <string name="WndLocalModInstall_pick">Pick mod directory</string>
     <string name="WndLocalModInstall_text">選擇要從哪裡安裝模組的目錄。</string>
     <string name="WndLocalModInstall_title">從本地目錄安裝模組</string>
     <string name="WndModInstall_InstallingMod">正在安裝模組</string>
@@ -2850,6 +2852,7 @@
     <string name="town_deco_sofa_name">超爽的沙發</string>
     <string name="town_deco_stakes_desc">這些削尖的圓木看起來十分可怕，但事實上，它們本身是沒什麼作用的。</string>
     <string name="town_deco_stakes_name">木樁</string>
+    <string name="town_deco_statue_blood_desc">A majestic statue of an angel holding a bowl of blood.</string>
     <string name="town_deco_statue_water_desc">一座莊嚴的天使雕像，手捧一碗水。</string>
     <string name="town_deco_statue_water_name">天使雕像</string>
     <string name="town_deco_stock_desc">這裏儲存著食物，還有一堆帶有各種各樣顏色的物品。</string>
@@ -2909,6 +2912,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

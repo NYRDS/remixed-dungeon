@@ -640,6 +640,7 @@
     <string name="DieHardSpell_Info">会暂时增加你的回复速度，让你成为真正的死神。</string>
     <string name="DieHardSpell_Name">顽固</string>
     <string name="Displacement_Txt">位移%s</string>
+    <string name="DoctorArmor_NotDoctor">Only plague doctors can use this armor!</string>
     <string name="DoctorSpecial">瘴氣雲</string>
     <string name="DogeMask_Info">你想伪装成著名的狗吗？现在是你的机会！\n这样的面具！伪装性很强！真的！</string>
     <string name="DogeMask_Name">柴犬面具</string>
@@ -1821,6 +1822,7 @@
     <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\n我有一个令你惊喜的消息！\n如果你为我收集一些糖果的话，\n我会十分感激你的！\n\n</string>
     <string name="ScarecrowNPC_Quest_Start_Male">你好啊小鬼，最近怎样？\n我有一个令你惊喜的消息！\n\n如果你为我收集一些糖果的话，\n我会十分感激你的！\n\n</string>
     <string name="Scorpio_Desc">这些巨大的节肢类恶魔生物会尽可能地避免近距离战斗，并且在远处射出能致残的锯齿尖刺。</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">恶魔蝎子</string>
     <string name="Scorpio_Name_Objective">恶魔蝎子</string>
     <string name="ScrollHolder_Info">你可以把很多卷轴放在里面，既节省了空间，又保证了它们不会被火烧毁。</string>
@@ -2043,6 +2045,7 @@
     <string name="SpiderElite_Name">蜘蛛精英卫队</string>
     <string name="SpiderElite_Name_Objective">蜘蛛精英卫队</string>
     <string name="SpiderExploding_Desc">这些蜘蛛工人在和平时期一直努力工作，可是一旦遇到敌人，就会毫不犹豫抓起自己路过的第一株植物，并把自己当成活体炸弹冲向他们。</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">蜘蛛工人</string>
     <string name="SpiderExploding_Name_Objective">蜘蛛工人</string>
     <string name="SpiderGuard_Desc">就像士兵一样，蜘蛛守卫誓死保卫自己的王国。守卫的毒液用来麻痹它们的目标，使他们成为容易的猎物。</string>
@@ -2971,6 +2974,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

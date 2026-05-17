@@ -947,6 +947,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Hero_Wait">...</string>
     <string name="Hero_YouNowHave">Tu ora hai %s</string>
     <string name="HideInGrassSpell_Info">Hai perfezionato la tua maestria nel nascondino.</string>
+    <string name="HideInGrassSpell_Name">Hide-In-Grass</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Nemmeno io posso nascondermi così allo scoperto.</string>
     <string name="Horror_Name_0">Soprannaturale %s</string>
     <string name="Horror_Name_1">Soprannaturale %s</string>
@@ -2111,6 +2112,7 @@ Potrebbe bruciare?</string>
     <string name="VertigoBuff_Name">Vertigini</string>
     <string name="View_Distance">Distanza visiva</string>
     <string name="VileEssence_Info">Un\'essenza concentrata di corruzione raccolta da un nemico sconfitto. Questa sostanza oscura pulsa di energia malevola ed è molto apprezzata nei processi alchemici.</string>
+    <string name="VileEssence_Name">Vile Essence</string>
     <string name="Viscosity_Status">differito %d</string>
     <string name="Viscosity_Txt">%s della viscosità</string>
     <string name="WandHolster_Info">Questa sottile custodia è fatta di pelle di qualche animale esotico. Ti permette di trasportare compattamente fino a %d bacchette.</string>
@@ -2754,6 +2756,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wardrobe_name">Guardaroba di legno</string>
     <string name="town_deco_weaponboard_desc">Qualche sorta di arma appesa all\'insegna.</string>
     <string name="town_deco_weaponboard_name">Arma</string>
+    <string name="town_deco_weaponrack_desc">On this rack there are weapons that are clearly too expensive for you.</string>
     <string name="town_deco_weaponrack_name">Rastrelliera per armi</string>
     <string name="town_deco_window_desc">Finestra di vetro generica, niente di speciale.</string>
     <string name="town_deco_window_name">Finestra</string>
@@ -2772,6 +2775,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 
