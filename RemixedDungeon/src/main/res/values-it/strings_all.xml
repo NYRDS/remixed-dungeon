@@ -1810,6 +1810,7 @@ Potrebbe bruciare?</string>
     <string name="ShadowLord_Name">signore dell\'ombra</string>
     <string name="ShadowLord_Name_Objective">Signore dell\'Ombra</string>
     <string name="Shadow_Desc">Le Ombre vagano silenziosamente per le rovine dell\'antica prigione, mostrandosi solo occasionalmente agli avventurieri, solitamente nella loro ultima avventura.</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name">Ombra</string>
     <string name="Shadow_Name_Objective">Ombra</string>
     <string name="ShadowsBuff_Info">È più difficile individuare qualcosa tra le ombre.</string>
@@ -1979,6 +1980,7 @@ Potrebbe bruciare?</string>
     <string name="Statue_Name">Statua Animata</string>
     <string name="Statue_Name_Objective">Statua Animata</string>
     <string name="Stench_Txt">%s del fetore</string>
+    <string name="StoneBloodBuff_Info">Kan batu menjadi yang melebur dengan dinding terdekat dan membuat melintasinya jauh lebih mudah, tetapi dengan apa harga?</string>
     <string name="StoneBloodBuff_Name">Sangue di pietra</string>
     <string name="Str_lose">-1 str</string>
     <string name="StunBuff_Info">Stordito!</string>
@@ -2365,6 +2367,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndItemAlchemy_ExecuteRecipe">Esegui Ricetta</string>
     <string name="WndItemAlchemy_NoRecipes">Nessuna ricetta disponibile con questo oggetto e il tuo inventario attuale.</string>
     <string name="WndItemAlchemy_SelectRecipe">Seleziona ricetta</string>
+    <string name="WndItemAlchemy_Title">Ricette di alchimia con %s</string>
     <string name="WndItemAlchemy_Transmute">Trasmuta</string>
     <string name="WndJournal_Levels">Livelli</string>
     <string name="WndJournal_Logbook">Registro attività</string>
@@ -2775,6 +2778,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 

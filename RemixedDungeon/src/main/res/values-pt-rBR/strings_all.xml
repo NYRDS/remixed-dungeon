@@ -62,6 +62,7 @@
     <string name="Amulet_Name">Amuleto de Yendor</string>
     <string name="AnesthesiaBuff_Info">Não sente dor e não acorda com ataques, mas ainda recebe dano.</string>
     <string name="AnesthesiaBuff_Name">Anesthesia</string>
+    <string name="Anesthesia_Cast">%s cai em um sono profundo e sem sonhos.</string>
     <string name="Anesthesia_Info">Induz uma sono profundo e antinatural no seu alvo. Mesmo os ataques mais violentos não irão acordá-los desse sono.</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">O antigo símbolo da imortalidade concede uma capacidade de voltar à vida após a morte. Após a ressurreição todos os itens não equipados são perdidos.</string>
@@ -1491,6 +1492,7 @@ Parede
     <string name="PlagueDoctorQuest_1_2_InProgress">_Dez caracóis_, dez sussurros do abismo! Seu muco será analisado, sua essência será minuciosamente examinada. Os segredos que eles guardam estão ao alcance.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Tosse violentamente* Atchim!\n _Os caracóis_… eles deslizam. Eles exsudam. E sussurram segredos de uma era esquecida. Preciso deles, _dez_ deles, suas conchas ainda intactas. Você acha que meras _cinquenta moedas de ouro_ são suficientes para um conhecimento tão precioso?\n Bah! Não importa. A informação que eles guardam pode ser a chave para deter esta praga. Ou… pode nos levar a algo ainda mais terrível. Você decide.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Procure pela _moongrace_, onde a escuridão encontra o mais fraco brilho da luz da lua. _Duas sementes_, sua essência, revelarão segredos ocultos.</string>
+    <string name="PlagueDoctorQuest_2_2_Epilogue">Magnífico! O _Herbosal_, sua essência dourada lateja com vitalidade. Já aprendi muito com sua estrutura delicada. *Ele lhe entrega uma _Poção de Saúde_, cujo líquido brilha com uma leve luz dourada.* Beba isto quando o mundo pesar muito sobre você, e sinta o calor do sol reviver seu espírito.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Duas sementes de grama-solar_. Suas pétalas douradas guardam um poder que busco compreender. Encontre-as, e que sua essência seja revelada!</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">Ah, _grama-solar_! Uma flor delicada, cujas pétalas irradiam o calor do sol. Acredito que sua essência contém a chave para... ah, esqueça os detalhes por enquanto. Basta dizer que é crucial para minha pesquisa. _Duas sementes de grama-solar_. Traga-as para mim, e eu recompensarei você com algo que certamente será útil em suas aventuras - uma _Poção de Saúde_, transbordando com a própria vitalidade do sol.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Ele segura o _morcego_ gentilmente em suas mãos enluvadas, examinando sua pequena forma com uma fascinação perturbadora* Magnífico! A ecolocalização do _morcego_... é diferente de tudo que já encontrei. Tal precisão... tal... controle. *Ele se vira para você, seu rosto obscurecido por sua máscara* Por seus esforços, um _Pergaminho de Melhoria_. Use-o sabiamente, pois ele tem o potencial de... refinar sua própria essência. *Ele lhe entrega o pergaminho, sua voz caindo para um sussurro suave* Este _morcego_, é... uma janela para um mundo oculto. Um mundo... onde as sombras dançam e os segredos sussurram.</string>
@@ -2969,6 +2971,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

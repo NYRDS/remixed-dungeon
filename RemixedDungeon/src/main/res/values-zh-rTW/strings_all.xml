@@ -1238,6 +1238,7 @@
     <string name="LightBuff_Info">光從身體散發出來，照亮周圍的一切。</string>
     <string name="LightBuff_Name">照明</string>
     <string name="LightningBolt_Info">遠古薩滿之間流傳的咒語，能對敵人造成雙倍電擊傷害，尤其是當他們愚蠢地站在水面上時。</string>
+    <string name="LightningBolt_Name">閃電</string>
     <string name="LightningTrap_Desc">你被閃電陷阱的電擊殺死了……</string>
     <string name="LightningTrap_Name">閃電陷阱</string>
     <string name="LloidsBeacon_ACReturn">返回傳送點</string>
@@ -2095,6 +2096,7 @@
     <string name="SuspiciousRat_Name_Objective">可疑的老鼠</string>
     <string name="Swarm_Defense">回避</string>
     <string name="Swarm_Desc">這種食腐生物群的飛行聲音真的很煩。每次對它們的非魔法攻擊都會使它們分裂成兩群。</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">蠅群</string>
     <string name="Swarm_Name_Objective">蠅群</string>
     <string name="Swing_Name_0">野蠻%s</string>
@@ -2912,6 +2914,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

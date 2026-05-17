@@ -619,6 +619,7 @@
     <string name="DeepSnail_Name">глибокий равлик</string>
     <string name="DeepSnail_Name_Objective">глибокий равлик</string>
     <string name="DeferedDamageBuff_Info">Біль був перетворений на вповільнювальний біль, зменшуючи шкоду, що отримується одразу.\nШкоди залишилося отримати %d</string>
+    <string name="DeferedDamageBuff_Name">Відкладений урон (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s вбив тебе...</string>
     <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">Поглинання</string>
@@ -2026,6 +2027,7 @@
     <string name="SpiderEgg_Name_Objective">павуче яйце</string>
     <string name="SpiderElite_Desc">Як і солдати, павукоподібні вартові поклялися захищати свою країну. Отрута елітного вартового використовується для дезорієнтації мети.</string>
     <string name="SpiderElite_Gender">masculine</string>
+    <string name="SpiderElite_Name">елітний павучий вартовий</string>
     <string name="SpiderElite_Name_Objective">павука</string>
     <string name="SpiderExploding_Desc">В спокійний для колонії час ці трудяги безпечні, але при появі загрози, хапають першу рослину, що росте поряд, і кидаються на ворога, наче камікадзе.</string>
     <string name="SpiderExploding_Gender">masculine</string>
@@ -2910,6 +2912,8 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 
