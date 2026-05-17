@@ -1437,6 +1437,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Plant_Seed">%s 의 씨앗</string>
     <string name="PlateArmor_Desc">많은 철판들을 서로 연결해 한 벌로 만들어, 이 엄청난 무게를 견딜 수 있는 모험자들에게 어마어마한 방어력을 제공한다.</string>
     <string name="PlateArmor_Name">판금 갑옷</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">치명적인 독이 화살촉 표면에 번들거린다.</string>
     <string name="PoisonArrow_Name">독 화살</string>
     <string name="PoisonBuff_Name">중독</string>
@@ -1839,6 +1840,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Sheep_Name">양</string>
     <string name="Sheep_Name_Objective">양</string>
     <string name="ShieldBuffNotReady_Info">방패가 다음 공격을 막을 준비가 되지 않았습니다.</string>
+    <string name="ShieldBuffNotReady_Name">Shield isn\'t ready</string>
     <string name="ShieldBuffReady_Name">방패 준비 완료</string>
     <string name="ShieldStrTemplate">이 방패를 제대로 사용하기 위해서는 착용자에게 최소한 %1$d의 힘 수치가 필요합니다.</string>
     <string name="ShieldWeaponInfo">무기로 사용될 때 이 방패는 평균적으로 %1의 피해를 입힙니다.</string>
@@ -1869,6 +1871,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SkeletonKey_Name">해골 열쇠</string>
     <string name="Skeleton_Defense">막음</string>
     <string name="Skeleton_Desc">해골은 운 없는 모험가들이나 던전에 사는 생물의 시체에서 나온 뼈로 이루어져 있고, 저 깊은 곳으로부터 뿜어나오는 악마의 주문에 의해 살아 움직인다. 어느 이상 손상되면 뼈가 폭발하며 산산조각 난다.</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">당신은 폭발한 뼈에 맞아 죽었다...</string>
     <string name="Skeleton_Name">해골</string>
     <string name="Skeleton_Name_Objective">해골</string>
@@ -2004,6 +2007,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Succubus_Name">서큐버스</string>
     <string name="Succubus_Name_Objective">서큐버스</string>
     <string name="SummonBeast_AtYourCommand">명령대로!</string>
+    <string name="SummonBeast_Info">Attempt to summon a horde of mighty beasts to your command.\nActual results may vary.</string>
     <string name="SummonBeast_Name">야수 소환</string>
     <string name="SummonDeathling_Info">언데드 동료를 소환합니다. 데슬링의 체력과 피해량은 영웅 레벨에 따라 성장합니다. \n\n 소환 최대량: %1$d ( 매 마법 레벨마다 +1)</string>
     <string name="SummonDeathling_Name">데슬링 소환</string>
@@ -2352,6 +2356,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndHats_SlotTitle">착용됨</string>
     <string name="WndHats_UnequipButton">벗기</string>
     <string name="WndHero_AttackSkill">공격 기술</string>
+    <string name="WndHero_Awareness">Awareness</string>
     <string name="WndHero_Buffs">버프</string>
     <string name="WndHero_DefenceSkill">방어 스킬</string>
     <string name="WndHero_Depth">최대 깊이</string>
@@ -2756,6 +2761,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_sofa_desc">이 영화관은 고객에게 최고의 자리를 제공하려고 시도한것 같습니다</string>
     <string name="town_deco_sofa_name">멋진 소파</string>
     <string name="town_deco_stakes_desc">이 뾰족해진 통나무들은 무시무시한 위용을 뽐내고 있지만 그 자체로는 별로 쓸모가 없습니다.</string>
+    <string name="town_deco_stakes_name">Stakes</string>
     <string name="town_deco_statue_blood_desc">피가 담긴 그릇을 든 천사의 위대한 조각상입니다.</string>
     <string name="town_deco_statue_blood_name">천사 상</string>
     <string name="town_deco_statue_water_desc">물을 담은 그릇을 든 천사의 위대한 조각상입니다.</string>
@@ -2782,6 +2788,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_urn_desc">흙항아리, 아마도 누군가의 재가 들어있을 것이다.</string>
     <string name="town_deco_urn_name">항아리</string>
     <string name="town_deco_vat_name">증류기</string>
+    <string name="town_deco_wall_beam_desc">Serves as a trusty support for this construction.</string>
     <string name="town_deco_wall_brazier_desc">그을린 불씨에서 나오는 연기가 실내를 기분 좋은 향기로 가득 채운다.</string>
     <string name="town_deco_wall_candles_desc">아직도 기분 좋은 아로마 향을 내고 있는 꺼진 양초이다.</string>
     <string name="town_deco_wall_candles_name">양초들</string>
@@ -2810,6 +2817,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
+
 
 
 

@@ -184,6 +184,7 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">bandito pazzo</string>
     <string name="Bandit_Name_Objective">bandito pazzo</string>
+    <string name="BardNPC_Desc">The town bard is playing his lute.</string>
     <string name="BardNPC_Name_Objective">bardo</string>
     <string name="BardSong_1">Io e mia moglie viviam da soli,\nIn una capanna di legno, tutta per noi.\nLei amava il gin, io il rum,\nE vi dico che ci divertivamo un po\'!</string>
     <string name="BarkskinBuff_Info">Il corpo è ricoperto da corteccia che blocca parte del danno subito.</string>
@@ -304,6 +305,7 @@
     <string name="Calm_Info">Ci sono molte creature aggravate in giro, aiutiamole.</string>
     <string name="Calm_Name">Calma</string>
     <string name="CandleOfMindVision_Info">Sembra una candela normale, niente che ti aspetteresti di trovare in una pericolosa sottoterra. Stranamente è piuttosto calda al tatto, nonostante non sia ancora stata accesa.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">The candle has burned out, it no longer lights up when you hold it. Looks like you can\'t use it anymore.</string>
     <string name="CandleOfMindVision_Info_Lighted">La candela si è accesa nel momento in cui l\'hai tirata fuori dallo zaino. La fiamma emana una debole luce viola, e mentre la guardi attraverso di essa, tutti i mostri vicini diventano visibili.</string>
     <string name="CandleOfMindVision_Name">Candela delle Visioni</string>
     <string name="Candy_Info">Questa caramella sembra davvero bella e il suo odore è altrettanto buono. Vuoi davvero lasciarla a qualcun\'altro?</string>
@@ -644,6 +646,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="ElfArmor_Desc">Con l\'aiuto di questo mantello, l\'elfo può evocare le forze della natura stessa. L\'erba alta crescerà in un lampo, anche attraverso la roccia solida, immobilizzando tutti i nemici in vista.</string>
     <string name="ElfArmor_Name">Mantello elfico</string>
     <string name="ElfArmor_NotElf">Solo gli elfi possono usare questa armatura!</string>
+    <string name="ElvenBow_Info">An exceptional example of elven craftsmanship. It\'s clearly more effective and accurate than a regular wooden bow.</string>
     <string name="ElvenBow_Name">arco elfico</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Questa arma è fatta di una speciale lega metallica, rendendola molto più leggera rispetto a un pugnale normale.</string>
@@ -739,6 +742,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="GameScene_Welcome">Benvenuto al livello %d di Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Bentornato al livello %d di Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Info">Immune a tutti i gas.</string>
+    <string name="GasImmuneBuff_Name">Gas Immunity</string>
     <string name="Ghost_Defense">eluso</string>
     <string name="Ghost_Desc">Il fantasma è appena visibile. Si presenta come una macchia informe di luce fioca con una espressione addolorata.</string>
     <string name="Ghost_Name">fantasma triste</string>
@@ -1660,6 +1664,7 @@ Potrebbe bruciare?</string>
     <string name="RottenRation_Info">Taaanto tempo fa poteva essere mangiato</string>
     <string name="RottenRation_Name">razione marcia</string>
     <string name="RottingFist_Desc">pugno in decomposizione del vecchio dio</string>
+    <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">pugno in decomposizione</string>
     <string name="RottingFist_Name_Objective">pugno in decomposizione</string>
     <string name="RoyalShield_desc">Uno scudo interamente metallico. Sì, è pesante, ma solo esso può fornirti la migliore protezione.</string>
@@ -1844,6 +1849,7 @@ Potrebbe bruciare?</string>
     <string name="SkeletonKey_Name">Chiave scheletro</string>
     <string name="Skeleton_Defense">Bloccato</string>
     <string name="Skeleton_Desc">Gli scheletri sono composti dalle ossa di avventurieri sfortunati e degli abitanti del dungeon, animati dalle emanazioni di magia maligna provenienti dai pieni inferiori. Dopo essere stati danneggiati abbastanza, si disintegrano in un esplosioni di ossa.</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">sei stato ucciso dall\'esplosione di ossa...</string>
     <string name="Skeleton_Name">Scheletro</string>
     <string name="Skeleton_Name_Objective">Scheletro</string>
@@ -2263,6 +2269,7 @@ Potrebbe bruciare?</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_openWallet">Apri Portafoglio</string>
     <string name="WndCryptoDonate_supportDev">Supporta lo sviluppatore</string>
+    <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Indirizzo Portafoglio</string>
     <string name="WndCustomizations_Title">Personalizzazioni</string>
@@ -2676,6 +2683,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_rug_name">Tappeto</string>
     <string name="town_deco_screen_desc">Questa tela misteriosa è chiamata \"schermo\" e può mostrare immagini in movimento</string>
     <string name="town_deco_screen_name">Schermo</string>
+    <string name="town_deco_scrolls_desc">This dusty shelf is full of various kinds of scrolls and books.</string>
     <string name="town_deco_scrolls_name">Pergamene</string>
     <string name="town_deco_shelf_desc">Scaffali vuoti.</string>
     <string name="town_deco_shelf_full_desc">Su questo scaffale sono posizionati vari gingilli.</string>
@@ -2748,6 +2756,14 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
+
 
 
 

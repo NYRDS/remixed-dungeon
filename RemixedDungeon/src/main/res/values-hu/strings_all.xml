@@ -803,6 +803,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">arany szobor</string>
     <string name="GoldenStatue_Name_Objective">arany szobrot</string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="GoldenSword_Info">Általában az olyan fegyverek amik lágy fémből készültek, mint az arany, csupán dekorációk. Ennek ellenére ez a penge láthatóan képes kettévágni mindenfélét egész könnyen.</string>
     <string name="GoldenSword_Name">arany kard</string>
     <string name="Golem_Defense">elzárodott</string>
@@ -965,6 +966,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Hero_StaWeakness">Legyengültél!</string>
     <string name="Hero_Wait">...</string>
     <string name="Hero_YouNowHave">Felvetted a %s-t!</string>
+    <string name="HideInGrassSpell_Info">You perfected your Hide-and-seek mastery.</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Még én sem tudok elrejtőzni a nyílt színen.</string>
     <string name="Horror_Name_0">Hátborzongató %s</string>
     <string name="Horror_Name_1">Hátborzongató %s</string>
@@ -1103,6 +1105,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="KrampusHead_Info">Valaha gondolkodtál már azon, milyen érzés lenne egy gonoszabb szerepet vállalni a Kazamatákban? Nos, ezzel az ördögi megjelenéssel egészen biztosan rémületet keltesz a helyi patkánykölykökben.</string>
+    <string name="KrampusHead_Name">Krampus Head</string>
     <string name="KunaiThrow_Name">Kunai Dobás</string>
     <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Ez a fegyver egy fémláncra kötött sarlóból és a túloldalára kötött vassúlyból áll.</string>
@@ -1443,6 +1446,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="Plant_Seed">%s magja</string>
     <string name="PlateArmor_Desc">Hatalmas fémlemezek kapcsolódnak egymáshoz a kivételes védelemért, feltéve ha a kalandor elbírja a hatalmas súlyát.</string>
     <string name="PlateArmor_Name">lemez páncél</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">Egyetlen méregcsepp csillog a nyílvessző hegyén.</string>
     <string name="PoisonArrow_Name">mérgezett nyíl</string>
     <string name="PoisonBuff_Info">A testet lassan megöli a méreg!</string>
@@ -2812,6 +2816,10 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
 
 
 

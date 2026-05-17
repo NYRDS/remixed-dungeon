@@ -1332,6 +1332,7 @@
     <string name="MeleeWeapon_Info7b">，并且因为它被诅咒了，你无法将其放下。</string>
     <string name="MeleeWeapon_Info7c">你能感受到%s中潜伏着一股恶毒的魔力。</string>
     <string name="MercenaryNPC_Desc">看起来很健壮的男人</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">雇佣兵</string>
     <string name="MercenaryNPC_Name_Objective">雇佣兵</string>
     <string name="Metabolism_Txt">代谢%s</string>
@@ -2965,6 +2966,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

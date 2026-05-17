@@ -203,6 +203,7 @@
     <string name="Barrel_Pumpkin_Name">labu</string>
     <string name="Bat_Defense">dielak</string>
     <string name="Bat_Desc">Penghuni gua yang cergas dan kuat ini dapat mengalahkan musuh yang lebih besar darinya dengan pendekatan menyembuhkan diri bagi setiap serangan yang berjaya.</string>
+    <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">kelawar pontianak</string>
     <string name="Bat_Name_Objective">kelawar pontianak</string>
     <string name="BattleAxe_Gender">masculine</string>
@@ -357,6 +358,7 @@
     <string name="Challenges_Names_6">Rune Terlarang</string>
     <string name="Challenges_Names_7">Pasifisme</string>
     <string name="Challenges_Names_8">Tiada bandar</string>
+    <string name="ChampionOfAirBuff_Info">This trait bestows the creature with the essence of the winds, enhancing its agility and prowess in combat. The Champion of Air becomes a formidable adversary, capable of unleashing swift and devastating attacks that can swiftly alter the course of battle.</string>
     <string name="ChampionOfAirBuff_Name">Juara Udara</string>
     <string name="ChampionOfEarthBuff_Info">Juara Bumi menggambarkan keteguhan yang tidak goyah, kerana ciri ini meningkatkan rintangan kerosakan makhluk tersebut dan meningkatkan vitaliti maksimumnya. Penjelmaan ini menjadikannya musuh yang menakutkan di kedalaman yang berbahaya, mampu meleraikan serangan dengan mudah dan bertahan dalam pertempuran panjang dengan ketabahan yang tidak berubah.</string>
     <string name="ChampionOfEarthBuff_Name">Juara Bumi</string>
@@ -2801,6 +2803,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

@@ -419,6 +419,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ChaosSword_Info">Mata pedang dari pedang ini dibuat dari khaos murni dan kadang bergetar sedikit. Kekuatan besar disimpan di dalam senjata ini, yang dapat memotong hampir semuanya jadi dua. Tapi, keahlian besar dibutuhkan, untuk menggunakan kekuatan besar dari senjata ini.</string>
     <string name="ChaosSword_Name">pedang khaos</string>
     <string name="CharAction_Charm">pesona</string>
+    <string name="CharAction_Expel">expel</string>
     <string name="CharAction_Give">memberi</string>
     <string name="CharAction_Hit">memukul</string>
     <string name="CharAction_Order">memerintahkan</string>
@@ -759,6 +760,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Food_ACEat">MAKAN</string>
     <string name="Food_Message">Makanan itu terasa lezat!</string>
     <string name="FortuneTellerNPC_Desc">Wanita ini mengenakan jubah panjang berwarna cerah. Dia terlihat sangat muda untuk seseorang, yang menguasai seni misterius meramal. Semakin dekat, Anda bisa mendengarnya bergumam, saat dia menatap bola kristal.</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">peramal</string>
     <string name="FortuneTellerNPC_Name_Objective">peramal</string>
     <string name="FreezeGlobe_Info">Membekukan karakter yang dipilih, membuatnya tidak dapat melakukan aksi apapun untuk sementara waktu.</string>
@@ -1457,6 +1459,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PirateSet_Info">Arr! Apakah kamu merasa seperti awak... ataukah hanya merasa seperti orang darat!? Aku harap tidak, benda itu lagipula hanya untuk bajak-laut, aku maksud... Arr!</string>
     <string name="PirateSet_Name">Pakaian Bajak Laut</string>
     <string name="PlagueDoctorMaskHood_Name">Topeng Plague Doctor dengan tudung</string>
+    <string name="PlagueDoctorMask_Info">This… this is no mere mask. It\'s… a barrier. A shield against the forces of decay that Plague Doctor tirelessly battle against. Crafted from the finest ebony wood, intricately carved with the visage of a ravenous skull. Its hollow eye sockets are filled with glittering, amethyst gemstones that pulse faintly, like the dying embers of a fire. Each breath you take, each utterance you make, is filtered through a labyrinthine network of tubes and filters. A concoction of potent herbs and exotic spices infuses the air within, masking the stench of death that clings to you like a shroud.</string>
     <string name="PlagueDoctorMask_Name">topeng Dokter Wabah</string>
     <string name="PlagueDoctorNPC_After_Quest">Saya akan menunjukkan kepada mereka, saya akan menunjukkan kepada mereka semua!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Kamu masih di sini? Di Sini! Ambil ini.</string>
@@ -1940,6 +1943,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SkeletonKey_Name">kunci tengkorak</string>
     <string name="Skeleton_Defense">tertahan</string>
     <string name="Skeleton_Desc">Tulang belulang terbuat dari tulang mayat petualang dan penghuni dugeon yang tidak beruntung, dirasuki oleh sihir jahat dari bawah. Setelah mereka cukup terluka, mereka akan hancur dalam ledakan tulang.</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">Anda terbunuh karena ledakan tulang...</string>
     <string name="Skeleton_Name">tulang belulang</string>
     <string name="Skeleton_Name_Objective">tulang belulang</string>
@@ -2949,6 +2953,10 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 

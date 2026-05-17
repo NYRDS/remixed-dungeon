@@ -863,6 +863,7 @@
     <string name="HealerNPC_Name_Objective">城鎮牧師</string>
     <string name="Healing_Info">這個法術對任何冒險家都是至關重要的。它將恢復施法者最大生命值的1/3。</string>
     <string name="Healing_Name">迴復</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">治療藥水做的箭</string>
     <string name="HealthArrow_Name">治療箭</string>
     <string name="HealthDart_Gender">masculine</string>
@@ -2016,6 +2017,7 @@
     <string name="Spinner_Name">洞穴紡織者</string>
     <string name="Spinner_Name_Objective">洞穴紡織者</string>
     <string name="SpiritOfPain_Desc">黑暗的一部分</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">痛苦之魂</string>
     <string name="SpiritOfPain_Name_Objective">痛苦之魂</string>
     <string name="StartScene_ChooseFromSlot">從存檔欄位中選擇</string>
@@ -2146,6 +2148,7 @@
     <string name="TownsfolkMovieNPC_Name">城鎮居民</string>
     <string name="TownsfolkMovieNPC_Name_Objective">城鎮居民</string>
     <string name="TownsfolkNPC_Desc">城鎮居民之一。顯而易見，他只是泛泛布衣，但他的衣服看起來價值不菲。</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">啊！又有一位冒險者，好極了！有價值的東西隨便拿去吧！</string>
     <string name="TownsfolkNPC_Message2">托地牢的福，小鎮才變得如此富有，每個居民都可以隨心去度假！這也解釋了為何現在鎮上如此少人。</string>
     <string name="TownsfolkNPC_Message3">多棒的一天啊。</string>
@@ -2889,6 +2892,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 
