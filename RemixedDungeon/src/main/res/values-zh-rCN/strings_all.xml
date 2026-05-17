@@ -2062,6 +2062,7 @@
     <string name="SpiderQueenCarapace_Name">蜘蛛女王盔甲</string>
     <string name="SpiderQueen_Desc">由美丽的女性和可怖的蜘蛛交织而成的身体。在巢穴中所有活着的存在都是她的仆人，与这位特别的女士的邂逅也许会让你丧命，因为你是这里的入侵者！</string>
     <string name="SpiderQueen_DieInfo">蜘蛛女王已经被杀死了！现在我应该回到第5层继续我的地牢探险</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">蜘蛛女王</string>
     <string name="SpiderQueen_Name_Objective">蜘蛛女王</string>
     <string name="SpiderServant_Desc">蜘蛛士兵是蜘蛛巢穴中最为常见的单位，保护它们的领土是它们天生的使命。士兵的前肢进化出了毒腺来使它们的敌人中毒。</string>
@@ -2968,6 +2969,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

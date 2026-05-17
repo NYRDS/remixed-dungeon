@@ -114,6 +114,7 @@
     <string name="Badges_BossSlain1">史萊姆已被殺死</string>
     <string name="Badges_BossSlain1All">Goo已經被所有職業擊敗</string>
     <string name="Badges_BossSlain2">天狗已被殺死</string>
+    <string name="Badges_BossSlain3">DM-300已經被擊敗</string>
     <string name="Badges_BossSlain3All">DM-300 已被所有子職業擊敗</string>
     <string name="Badges_BossSlain4">國王已被殺死</string>
     <string name="Badges_Champion">挑戰成功</string>
@@ -690,6 +691,7 @@
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">此武器以特製合金製造，故它比一般匕首更輕。</string>
     <string name="ElvenDagger_Name">矮人匕首</string>
+    <string name="EncumbranceBuff_CharAct_2">這個%s太重了，我無法有效地使用它。</string>
     <string name="EncumbranceBuff_CharAct_3">在我使用%s之前，我需要鍛鍊我的力量。</string>
     <string name="EncumbranceBuff_CharAct_5">我現在無法承受%s的重量。</string>
     <string name="EncumbranceBuff_Info">沒有足夠的力量來有效地使用 %s。</string>
@@ -1462,6 +1464,7 @@
     <string name="PlagueDoctorQuest_1_2_Epilogue">啊哈……太壯觀了！_蝸牛_，它們的祕密像月光下的花瓣般緩緩綻放。真是豐富的資訊寶庫！但你是對的，_五十枚金幣_ 實在算不上相稱的報酬。*狂熱地輕笑*</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">「十隻蝸牛」，十聲來自深淵的低語！它們的黏液將被分析，它們的本質將被審視。它們所擁有的祕密已觸手可及。</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*劇烈咳嗽* 阿嚏！\n _蝸牛_……它們滑行。它們分泌黏液。它們低語著被遺忘時代的祕密。我需要它們，_十隻_，它們的殼還完好無損。你認為區區_五十枚金幣_就足夠換取如此珍貴的知識嗎？\n 哈！沒關係。它們所擁有的資訊可能是阻止這場瘟疫的關鍵。或者……它可能引導我們發現更可怕的事物。你決定吧。</string>
+    <string name="PlagueDoctorQuest_2_1_Epilogue">《月光花》……這世界魔法的見證。我從它們的精髓中學到了很多，但你的獎勵……嗯，是用心準備的。*遞給英雄一瓶閃耀的靈力藥水* 願它的力量引導你通過前方的危險。</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">在黑暗與微弱月光交會之處尋找 _moongrace_。_兩顆種子_ 的精華，將揭開隱藏的秘密。</string>
     <string name="PlagueDoctorQuest_2_1_Prologue">「月花種子」……那些空靈的花朵，帶著月亮本身的魔力低語。我已經研究了它們奇特的發光現象幾個星期。它們的精華中蘊含著某種潛能，一種隱藏的能量，這可能是打開……某些事物的關鍵。*他若有所思地用骨指敲擊下巴*\n但可惜，它們很稀有。只在最深的洞穴中才能找到，那裡幾乎沒有月光照入。我需要兩顆。兩顆種子來解鎖它們力量的秘密。作為回報，我可以給你一些……純淨而強大的魔法。一瓶「魔力藥水」，充滿著月花的精髓。它將滋養你疲憊的靈魂，讓你能以全新的力量運用神秘法術。</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">卓越！_陽光草_，其金色精華充滿活力地跳動著。我已從它細緻的結構學到了很多。*他遞給你一瓶_健康藥水_，液體散發出淡淡的金光。* 當世界壓在你身上時喝下它，感受陽光的溫暖喚醒你的精神。</string>
@@ -2895,6 +2898,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

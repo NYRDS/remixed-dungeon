@@ -450,6 +450,7 @@
     <string name="CloakBuff_Name">Nascosto</string>
     <string name="CloakSpell_EnemiesNearby">Non puoi nasconderti nell\'ombra mentre i nemici sono vicini.</string>
     <string name="CloakSpell_Info">Entra nelle ombre per diventare invisibile. Riduce notevolmente le possibilità di essere rilevati. Non può essere usato mentre ci sono nemici nelle vicinanze.</string>
+    <string name="CloakSpell_Name">Mantello</string>
     <string name="ClothArmor_Desc">Questa armatura leggera offre una protezione base.</string>
     <string name="ClothArmor_Name">armatura in stoffa</string>
     <string name="Codex_ACRead">LEGGI</string>
@@ -1001,6 +1002,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="IncendiaryDart_Name">Dardo incendiario</string>
     <string name="InnKeeperNPC_Desc">Il locandiere è molto orgoglioso di sé.</string>
     <string name="InnKeeperNPC_Gender">masculine</string>
+    <string name="InnKeeperNPC_Name">oste</string>
     <string name="InnKeeperNPC_Name_Objective">locandiere</string>
     <string name="InnServant_Phrase_3">Mi sembra pulito</string>
     <string name="Instability_Name_0">Instabile %s</string>
@@ -2006,6 +2008,7 @@ Potrebbe bruciare?</string>
     <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">L\' affilatura di questa lama d\'acciaio brilla sicuramente. </string>
     <string name="Sword_Name">spada</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Questa ascia da lancio non è così pesante, ma comunque richiede una forza significativa per essere usata in modo efficace.</string>
     <string name="Tamahawk_Name">tomahawk</string>
     <string name="TenguLiver_Name">Fegato di Tengu</string>
@@ -2370,6 +2373,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndModSelect_AreYouSure">Eliminare mod: %s, sei sicuro?</string>
     <string name="WndModSelect_ReallyDelete">Vuoi davvero eliminare?</string>
     <string name="WndModsDisclaimer_install">Installa mod locale</string>
+    <string name="WndModsDisclaimer_title">Mod</string>
     <string name="WndMovieTheatre_Instruction">Benvenuti al nostro cinema! Offriamo un servizio speciale: potete guardare gratuitamente un film speciale chiamato pubblicità. E se lo guardate fino alla fine, sarete ricompensati con %d monete d\'oro!</string>
     <string name="WndMovieTheatre_Instruction_2">Hai guardato %1$d su %2$d volte. Otterrai un\'opportunità aggiuntiva per guardare un film per ogni nuovo livello dell\'eroe raggiunto.</string>
     <string name="WndMovieTheatre_No">lascia</string>
@@ -2756,6 +2760,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 

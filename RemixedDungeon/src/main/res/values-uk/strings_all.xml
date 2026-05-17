@@ -2182,6 +2182,7 @@
     <string name="TownsfolkMovieNPC_Name">городянин</string>
     <string name="TownsfolkMovieNPC_Name_Objective">городянина</string>
     <string name="TownsfolkNPC_Desc">Один з місцевих городян. Не дивлячись не те, що це звичайний простолюдин, одежа на ньому не з дешевих.</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">О! Ще один шукач пригод, чудово! Намагайся винести з підземелля якомога більше цінностей!</string>
     <string name="TownsfolkNPC_Message2">Місто настільки збагатилося за рахунок підземелля, що майже все населення знаходиться у відпустці! Саме тому тут настільки не людно.</string>
     <string name="TownsfolkNPC_Message3">Який чудовий день.</string>
@@ -2897,6 +2898,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
