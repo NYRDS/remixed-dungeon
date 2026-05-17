@@ -383,6 +383,7 @@
     <string name="ChaosHelmet_Name">혼돈의 투구</string>
     <string name="ChaosShield_desc">Chaos Shield adalah hasil dari menyatukan Chaos Crystal dengan perisai biasa, menyebabkan perisai tersebut menampilkan efek chaotik acak yang berbeda-beda saat berhasil memblokir serangan.</string>
     <string name="ChaosShield_name">카오스 방패</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">지팡이에 혼돈의 힘이 스며들었습니다! 어떤 마법사가 꿈꾸거나 두려워할 수나있을까요?</string>
     <string name="ChaosStaff_Name">혼돈 지팡이</string>
     <string name="ChaosSword_Info">이 검의 칼날은 순수한 혼돈으로 만들어졌으며 때때로 가끔 진동합니다. 큰 힘은 무기 안에 저장되어 거의 모든 것을 반으로 줄입니다. 무기의 강력한 힘에 대처하기 위해서는 훌륭한 기술이 필요합니다.</string>
@@ -665,6 +666,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ElvenDagger_Info">이 무기는 특수한 합금으로 만들어졌기 때문에 통상의 단검보다 훨씬 가볍다.</string>
     <string name="ElvenDagger_Name">엘프제 단검</string>
     <string name="EncumbranceBuff_CharAct_1">이 %s를 제대로 다루기에는 힘이 부족합니다.</string>
+    <string name="EncumbranceBuff_CharAct_2">이 %s이 너무 무거워서 제대로 사용할 수 없습니다.</string>
     <string name="EncumbranceBuff_CharAct_3">이것을 사용하려면 먼저 힘을 길러야 해.</string>
     <string name="EncumbranceBuff_CharAct_4">나는 %s의 잠재력을 최대한 발휘할 힘이 부족하다.</string>
     <string name="EncumbranceBuff_CharAct_5">%s은(는) 지금 내가 감당하기엔 너무 벅차요.</string>
@@ -1019,6 +1021,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="InnKeeperNPC_Desc">여관 주인은 스스로를 자랑스러워합니다.</string>
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">여관 주인</string>
+    <string name="InnKeeperNPC_Name_Objective">여관 주인</string>
     <string name="InnServant_Phrase_1">으휴, 할 일이 아직도 이렇게 많아!</string>
     <string name="InnServant_Phrase_2">이 취한 놈 때문에 미치겠어!</string>
     <string name="Instability_Name_0">불안정한 %s</string>
@@ -1244,6 +1247,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MeleeWeapon_Info7b">, 그리고 이 저주때문에 당신은 전혀 움직일 수 없습니다.</string>
     <string name="MeleeWeapon_Info7c">당신은 %s 안에 숨어있는 악의적인 마법을 느낄 수 있습니다.</string>
     <string name="MercenaryNPC_Desc">튼튼해 보이는 남자.</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">용병</string>
     <string name="Metabolism_Txt">신진대사의 %s</string>
     <string name="MimicAmulet_Desc">당신이 한 모험의 가장 영광스러운 순간은 그저 함정이었을 뿐이었다.</string>
@@ -1395,6 +1399,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PirateSet_Name">해적 세트</string>
     <string name="PlagueDoctorMaskHood_Info">조각된 검은 호박나무로 된 해골, 그 빈 눈구멍에는 자수정 보석의 윤기 있는 빛이 어른거린다. 당신이 들이마신 숨결은 복도처럼 얽힌 튜브와 필터를 지나며, 당신에게 달라붙은 부패를 가리는 강한 허브와 향신료의 향기를 전해준다. 하지만 그것이 단지 가면일 뿐은 아니다. 한밤중 같은 벨벳으로 만들어진 두꺼운 수도복 후드가 얼굴과 머리를 어둠 속에 가린다. 까마귀 날개처럼 생긴 이 후드는 등줄기를 따라 늘어뜨려져 있으며, 가장자리는 뼈처럼 하얀 레이스 장식으로 마감되어 충격적이지만 아름다운 대비를 이룬다. 마스크와 후드가 함께 어우러져 유령 같은 초상, 즉 부패의 힘에 맞서는 끝없는 싸움을 보여주는 음산한 증표를 만들었다.</string>
     <string name="PlagueDoctorMaskHood_Name">후드가 있는 페스트 닥터 마스크</string>
+    <string name="PlagueDoctorMask_Name">역병의원 가면</string>
     <string name="PlagueDoctorNPC_After_Quest">그들에게 보여주겠어, 그들에게 모두 보여주겠어!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">아직까지 여기 있었던거야? 자! 받아.</string>
     <string name="PlagueDoctorNPC_Desc">이 곱추 남성은 가죽으로 둘러쌓여 있고, 강한 약냄새가..아니, 마늘 냄새도 나는 것 같다?</string>
@@ -1802,6 +1807,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">고위 드워프 수도승</string>
     <string name="Senior_Name_Objective">고위 드워프 수도승</string>
+    <string name="ServantNPC_Desc">매우 바쁜 여관 직원입니다.</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">여관 하녀</string>
     <string name="ServantNPC_Name_Objective">하녀</string>
@@ -1968,6 +1974,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">고통의 영혼</string>
     <string name="SpiritOfPain_Name_Objective">고통의 영혼</string>
+    <string name="Sprout_Info">잠자고 있는 씨앗을 깨웁니다.\n그러나 주변에 풀잎이 있어야 마법이 성공합니다。</string>
     <string name="Sprout_Name">새싹</string>
     <string name="StartScene_ChooseFromSlot">저장 슬롯에서 선택</string>
     <string name="StartScene_ContinueLatest">최신 게임을 계속하거나 저장 슬롯에서 선택하세요</string>
@@ -2823,6 +2830,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
+
 
 
 

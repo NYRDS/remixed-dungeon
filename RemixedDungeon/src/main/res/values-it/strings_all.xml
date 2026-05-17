@@ -334,6 +334,8 @@
     <string name="Challenges_Descriptions_2">Da seguace della rigenerazione naturale del corpo, sei sempre stato diffidente nei confronti delle pozioni con proprietà curative. Meglio essere cauti che dispiaciuti!</string>
     <string name="Challenges_Descriptions_5">La prima cosa che arrivò con il male fu una nebbia fitta e impenetrabile, che rende quasi impossibile orientarsi chiaramente nei corridoi infiniti del dungeon.</string>
     <string name="Challenges_Descriptions_6">L\'antica arte della lettura delle rune è proibita ed evitata a tutti i costi, a causa della maledizione inflitta a ogni pergamena che trova la sua strada nel dungeon o nei suoi dintorni.</string>
+    <string name="Challenges_Descriptions_7">Ти звик до того, що володіння і використання зброї морально неправильно, але що ж інше може захистити тебе від істот, що бродять підземеллям?</string>
+    <string name="Challenges_Descriptions_8">Il tuo viaggio inizierà nelle fognature buie e pericolose della città, con l\'unico accesso alla superficie bloccato. Per complicare le cose, potrai utilizzare solo l\'attrezzatura trovata nel dungeon. Con risorse e attrezzatura limitate, la tua sopravvivenza dipenderà dalle tue abilità e dalla tua strategia.</string>
     <string name="Challenges_Names_0">Sulla dieta</string>
     <string name="Challenges_Names_1">La fede è la mia armatura</string>
     <string name="Challenges_Names_2">Pharmacophobia</string>
@@ -1251,6 +1253,7 @@ Potrebbe bruciare?</string>
     <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">replicante</string>
     <string name="Mimic_Name_Objective">replicante</string>
+    <string name="MindVisionBuff_Info">La visione interiore permette di vedere chiaramente il movimento di tutti gli esseri viventi sul piano.</string>
     <string name="MindVisionBuff_Name">Visione Mentale</string>
     <string name="MirrorImage_Desc">Questa illusione ha una stretta somiglianza con te, ma è più pallida e si deforma un po\'.</string>
     <string name="MirrorImage_Gender">masculine</string>
@@ -2637,6 +2640,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_flowerinthepot_name">Fiore in un vaso</string>
     <string name="town_deco_furnace_desc">Un forno affidabile, assemblato secondo schemi tradizionali.</string>
     <string name="town_deco_furnace_name">Forno</string>
+    <string name="town_deco_glass_name">Finestra Larga</string>
     <string name="town_deco_glass_stained_desc">L\'autore di questo vetro ha probabilmente messo molta fatica in esso.</string>
     <string name="town_deco_glass_stained_name">Vetro Colorato</string>
     <string name="town_deco_grandclock_desc">Un meccanismo piuttosto antico ma ancora funzionante.</string>
@@ -2699,6 +2703,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_shop_sign_name">Insegna del negozio</string>
     <string name="town_deco_skullboard_desc">Questo teschio cattura perfettamente il momento di orrore inaspettato.</string>
     <string name="town_deco_skullboard_name">Porta trofei</string>
+    <string name="town_deco_skulls_desc">Teschi lucidati appartenenti a creature del dungeon.</string>
     <string name="town_deco_slush_desc">Questa neve ha cominciato a sciogliersi, rendendo la zona circostante fangosa.</string>
     <string name="town_deco_slush_name">Nevischio</string>
     <string name="town_deco_snow_desc">Nonostante la fama di questo posto tra gli avventurieri, sorprendentemente c\'è molta neve qui. Sembra che camminino per queste strade in molto pochi</string>
@@ -2735,6 +2740,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wall_beam_name">Trave</string>
     <string name="town_deco_wall_brazier_desc">Il vapore che esce dalle braci ardenti riempie la stanza di piacevoli aromi.</string>
     <string name="town_deco_wall_brazier_name">Braciere</string>
+    <string name="town_deco_wall_candles_desc">Spruzzi di candele spente, dalle quali emana ancora un piacevole aroma.</string>
     <string name="town_deco_wall_candles_name">Candele</string>
     <string name="town_deco_wall_desc">Un semplice muro fatto in tronchi di legno.</string>
     <string name="town_deco_wall_name">Muro</string>
@@ -2760,6 +2766,12 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
 
 
 

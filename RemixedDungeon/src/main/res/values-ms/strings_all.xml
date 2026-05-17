@@ -764,6 +764,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="GameScene_Welcome">Selamat datang ke aras %d Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Selamat kembali ke aras %d Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Info">Kebal terhadap semua gas.</string>
+    <string name="GasImmuneBuff_Name">Imuniti Gas</string>
     <string name="Ghost_Defense">dielak</string>
     <string name="Ghost_Desc">Hantu hanya separa kelihatan. Ia seakan-akan cahaya pudar tanpa bentuk dengan rupa sedih.</string>
     <string name="Ghost_Name">hantu sedu</string>
@@ -1202,6 +1203,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="LloidsBeacon_Preventing">Aura tenaga ajaib yang kuat dalam tempat ini menghalang anda menggunakan suar lloyd!</string>
     <string name="LloidsBeacon_Return">Suar lloyd berjaya menetapkan lokasi semasa anda, kini anda boleh kembali ke sini bila-bila masa.</string>
     <string name="LloidsBeacon_Set">\n\nSuar ini telah ditetapkan di lokasi tertentu pada aras ke %d Remixed Dungeon.</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Info">Bilah panjang ini memberikan kecederaan teruk setiap kali diangkat untuk setiap potongan.</string>
     <string name="Longsword_Name">pedang panjang</string>
     <string name="Luck_Name_0">%s Tuah</string>
@@ -2807,6 +2809,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

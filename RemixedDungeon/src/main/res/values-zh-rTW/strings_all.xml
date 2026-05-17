@@ -1058,7 +1058,7 @@
     <string name="InnKeeperNPC_Desc">旅店老闆對自己感到相當自豪。</string>
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">旅店老闆</string>
-    <string name="InnKeeperNPC_Name_Objective">旅店老闆</string>
+    <string name="InnKeeperNPC_Name_Objective">旅館主人</string>
     <string name="InnServant_Phrase_2">這個醉漢讓我發瘋！</string>
     <string name="InnServant_Phrase_3">我看起來很乾淨</string>
     <string name="InnServant_Phrase_4">我的天，今天這麼多的客人</string>
@@ -1137,6 +1137,7 @@
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">狗頭人</string>
     <string name="Kobold_Name_Objective">狗頭人</string>
+    <string name="KrampusHead_Info">曾經想過在地牢冒險時扮演更邪惡的角色嗎？戴上這個魔鬼般的模樣，必定會嚇壞當地的小老鼠。</string>
     <string name="KrampusHead_Name">克朗普斯頭顱</string>
     <string name="KunaiThrow_Info">這種致命的苦無投擲會極其迅速地完成，快到你甚至無法選擇目標。\n\n真正的大師能夠一次投擲多把苦無。</string>
     <string name="KunaiThrow_Name">投擲苦無</string>
@@ -1294,6 +1295,7 @@
     <string name="MeleeWeapon_Info7a">您%2$s握著這把%1$s。</string>
     <string name="MeleeWeapon_Info7b">，並且因為它被詛咒了，你無法把它放下。</string>
     <string name="MeleeWeapon_Info7c">您能感受到%s中潛伏著一股惡意的魔力。</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">僱傭兵</string>
     <string name="MercenaryNPC_Name_Objective">僱傭兵</string>
     <string name="Metabolism_Txt">代謝 %s</string>
@@ -1471,6 +1473,7 @@
     <string name="PlagueDoctorQuest_2_2_InProgress">_兩株陽光草_種子。它們金色的花瓣蘊含著我渴望理解的力量。找到它們，讓它們的精華顯現！</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">啊，_日曆草_！一朵 delicate 的花，花瓣散發著太陽的溫暖。我相信它的精華是……啊，算了，細節先不談了。總之非常關鍵。_兩顆日曆草種子_。幫我把牠們帶回來，我就獎勵你一件對冒險絕對有用的東西——充滿陽光生命力的_治癒藥水_。</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*他戴著手套的雙手輕輕捧著_蝙蝠_，以一種令人不安的迷戀審視著它微小的身軀* 太棒了！蝙蝠的迴聲定位……這是我從未見過的。如此精確……如此……控制。*他轉向妳，臉龐隱藏在面具之下* 為了妳的努力，這是_捲軸升級_。明智地使用它，因為它擁有……提煉妳本質的潛力。*他將捲軸遞給妳，聲音壓低成輕聲耳語* 這隻_蝙蝠_，它是……通往隱藏世界的窗口。一個……影子舞動、秘密低語的世界。</string>
+    <string name="PlagueDoctorQuest_3_1_Prologue">*牠的眼中閃爍著一種奇異而狂熱的光芒* 啊，_吸血蝙蝠_！夜間的生物，以獵物的生命力為食。有趣……真是有趣。我需要一隻活的來研究其獨特的生理構造。這一切都是關於……理解……理解……*牠的聲音逐漸低沉，喃喃自語著一堆神秘術語*。對！蝙蝠的回聲定位，牠在完全黑暗中導航的能力……這是解開秘密的關鍵。</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*他仰頭發出咯咯的笑聲，聲音在他潮濕的實驗室中回盪* 壯觀！一個_死亡騎士_，站在我們面前！從它身上散發的力量……令人陶醉！*他轉向你，眼睛閃爍著狂熱的光芒* 而對你，一個配得上你勇氣的獎勵：一瓶_力量藥水_！願它賜予你征服任何敵人的力量！現在……讓我們檢查我們的主題。它的本質蘊含著可能改寫生命法則的秘密！*他帶著瘋狂的獰笑接近_死亡騎士_，揮舞著一瓶冒泡的綠色液體*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">這不僅僅是野獸！它是死靈力量的活見證！活捉它，不能受傷！這個_死亡騎士_……它是關鍵！</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">啊嚏！矮人！那些頑固的地下居民，痴迷於寶石和黃金。但我渴望的是_矮人術士_……他們扭曲的魔法，由他們居住的深淵提供燃料。五個，我需要五個那些枯萎的靈魂！他們的身體是理解某種……現象的關鍵。關於通過大地本身引導奧術能量的事情。我相信我接近突破了，但我需要他們的本質，他們腐敗的魔法！*他劇烈地咳嗽在手帕上，深色的污漬蔓延到精緻的織物上*</string>
@@ -1855,6 +1858,7 @@
     <string name="Senior_Desc">這些武僧都是些狂信徒，他們會傾其所能從一切異族手中保護他們城市的秘密。他們不使用任何盔甲亦或武器，單純依靠徒手格鬥技巧來戰鬥。這個特別的武僧掌握了致殘對手的技巧。</string>
     <string name="Senior_Name">武僧大師</string>
     <string name="Senior_Name_Objective">武僧大師</string>
+    <string name="ServantNPC_Desc">非常忙碌的旅馆服务生。</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServiceManNPC_Desc">當地企業一名中規中矩的員工。</string>
     <string name="ServiceManNPC_Gender">masculine</string>
@@ -2458,6 +2462,7 @@
     <string name="WndModInstall_InstallingMod">正在安裝模組</string>
     <string name="WndModInstall_PleaseUpdate">請先更新 Remixed Dungeon 再安裝此模組</string>
     <string name="WndModInstall_Version">版本</string>
+    <string name="WndModSelect_AreYouSure">刪除模組：%s，你確定嗎？</string>
     <string name="WndModsDisclaimer_install">安裝本地模組</string>
     <string name="WndModsDisclaimer_title">模組</string>
     <string name="WndMovieTheatre_Bye">想回來的時候就回來，我們對您的到來而感到高興！</string>
@@ -2898,6 +2903,12 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
 
 
 

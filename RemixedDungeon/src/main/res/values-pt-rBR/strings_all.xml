@@ -826,6 +826,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Gnoll_BecomeGuardianDesc">Torne-se um Guardião</string>
     <string name="Gnoll_BecomeWitchdoctorDesc">Torne-se um feiticeiro</string>
     <string name="Gnoll_Desc">Gnolls são pequenos humanóides. Eles moram nos esgotos e masmorras, aventurando-se para invadir a superfície de tempos em tempos. Gnolls Batedores normalmente são membros matilhas, eles não são tão fortes como os Gnolls Brutamontes e não tão inteligentes como os Xamãs.</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnoll batedor</string>
     <string name="Gnoll_Name_Objective">gnoll batedor</string>
     <string name="Gold_Collect">Colete moedas de ouro para gastá-las mais tarde em uma loja.</string>
@@ -2034,6 +2035,7 @@ outro local do nível.</string>
     <string name="SpiderMind_Name">Aranha Psíquica</string>
     <string name="SpiderMind_Name_Objective">Aranha Psíquica</string>
     <string name="SpiderNest_Desc">Este casulo é feito de seda finíssima e dentro está algo vivo.</string>
+    <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderNest_Name">casulo de aranha</string>
     <string name="SpiderNest_Name_Objective">casulo de aranha</string>
     <string name="SpiderQueenCarapace_Info">Um pedaço de carapaça da aranha rainha. Você pode ver um pedaço de glândula de teia dentro dela, quase parece estar vivo.</string>
@@ -2962,6 +2964,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

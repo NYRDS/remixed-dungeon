@@ -23,6 +23,7 @@
     <string name="Accuracy_DecreasedDoctor">%sの一振りごとに不完全さが広がる。私の解剖のこぎりは治療し…感染させる。</string>
     <string name="Accuracy_DecreasedDoctorBareHands">素手は私の技術を蝕む。ノコギリの切れ味がなければ、狙いは狂い、混沌としてしまうだろう。</string>
     <string name="Acidic_Desc">この巨大なクモのような悪魔のような生き物は、あらゆる手段を使って接近戦を避け、遠距離から致命的な鋸歯状のトゲを放つ。</string>
+    <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">酸サソリ</string>
     <string name="Acidic_Name_Objective">酸サソリ</string>
     <string name="Actions_Speed">加速倍率</string>
@@ -45,6 +46,7 @@
 - 時折、面白い統計情報を公開します。
   あなたはいつでも決定を変更することができます (タイトル画面のチャートアイコンをクリック)</string>
     <string name="AllowStatisticsCollectionScene_Title">利用統計の収集</string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">この矢の先端についた溶液は、誰をも心なき無慈悲な凶暴者に変えてしまう。</string>
     <string name="AmokArrow_Name">逆上の矢</string>
     <string name="AmokBuff_Info">不運な人々の命を奪う暴挙を感じろ。</string>
@@ -1942,6 +1944,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="ShadowsBuff_Info">影の中から何かを見つけるのは難しい。</string>
     <string name="ShadowsBuff_Name">影歩き</string>
     <string name="ShamanElder_Desc">このノールは他のシャーマンよりもずっと年上に見え、部族内での地位も高いに違いない。彼の周りには奇妙なオーラがゆっくりと形成され、そのオーラは触れるものすべてを映し出すようだ。</string>
+    <string name="ShamanElder_Gender">masculine</string>
     <string name="ShamanElder_Name">エルダーシャーマン</string>
     <string name="ShamanElder_Name_Objective">エルダーシャーマン</string>
     <string name="Shaman_Desc">最も知能の高いノールはシャーマンの魔法を使いこなすことができる。ノールシャーマンは力不足を補うために戦闘魔法を好み、部族内での地位に疑問を抱く者には躊躇なく使用する。</string>
@@ -2065,6 +2068,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SpiderMind_Name">サイキックスパイダー</string>
     <string name="SpiderMind_Name_Objective">サイキックスパイダー</string>
     <string name="SpiderNest_Desc">この繭は薄い絹で出来ていて、なにか生きているものを隠している。</string>
+    <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderNest_Name">クモの繭</string>
     <string name="SpiderNest_Name_Objective">クモの繭</string>
     <string name="SpiderQueenCarapace_Info">クモの女王の甲殻の破片。中にクモの腺があり、まるで生きているかのように見える。</string>
@@ -3010,6 +3014,10 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
+
+
 
 
 
