@@ -334,6 +334,7 @@
     <string name="CagedKobold_Name_Objective">заточеного кобольта</string>
     <string name="CagedKobold_Quest_End">О, дякую тобі, щиро дякую! Як ти відшукав ключа? Ти... ти знищів зброю?! Неймовірно! Знаєш що, я обіцяв допомогти, і я дещо надумав. Доки все не вщухне, я побуду поряд з тобою. *Заточений кобольт перетворився в свічку</string>
     <string name="Calm_Cast">%s заспокоюється.</string>
+    <string name="Calm_Name">Спокій</string>
     <string name="CandleOfMindVision_Info">Виглядає як звичайна свічка, дивно знайти щось таке в підземеллі. Дивно те, що вона тепла, хоч її не запалювали.</string>
     <string name="CandleOfMindVision_Info_Exhausted">Свічка вигоріла і більше не загоряється у тебе в руках. Схоже ти вже не можеш нею користуватися.</string>
     <string name="CandleOfMindVision_Info_Lighted">Як тільки ти викинув свічку з рюкзаку вона засяяла. Полум\'я випромінює м\'яке світло, крізь яке ти бачиш монстрів поблизу.</string>
@@ -734,6 +735,7 @@
     <string name="Eye_Kill">%s вбиває тебе поглядом смерті...</string>
     <string name="Eye_Name">зле око</string>
     <string name="Eye_Name_Objective">зле око</string>
+    <string name="Facilitations_Descriptions_0">Мутанти завжди ставились з презрінням і страхом, але відсутність голоду знову дасть вам перевагу, цього разу в завоюванні глибин підземелля.</string>
     <string name="Facilitations_Descriptions_1">Досі невідомо, ким були ваші батьки, але природна троліча регенерація допоможе загоїти всі майбутні бойові шрами.</string>
     <string name="Facilitations_Descriptions_3">Затягнувши пояс зі шкіри огра, який передавався кожному новому поколінню, ви робите крок у невідомість, що попереду.</string>
     <string name="Facilitations_Names_0">Без голоду</string>
@@ -1324,6 +1326,7 @@
     <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">мімік</string>
     <string name="Mimic_Name_Objective">міміка</string>
+    <string name="MindVisionBuff_Info">Внутрішній зір дозволяє чітко бачити рух усіх живих істот на підлозі.</string>
     <string name="MindVisionBuff_Name">Думковий зір</string>
     <string name="MirrorImage_Desc">Ця ілюзія дуже схожа на тебе, трохи бліда та поблискує.</string>
     <string name="MirrorImage_Gender">masculine</string>
@@ -1920,6 +1923,7 @@
     <string name="Shadow_Name_Objective">тінь</string>
     <string name="ShadowsBuff_Name">Злився з тінню</string>
     <string name="ShamanElder_Gender">masculine</string>
+    <string name="ShamanElder_Name">старший шаман</string>
     <string name="ShamanElder_Name_Objective">старшого шамана</string>
     <string name="Shaman_Desc">Найрозумніші з гноллів здатні пізнати магію шаманів. Гнолли шамани залюбки користується будь-якими закляттями, компенсуючи брак фізичної сили, а також аби убезпечити свій статус в суспільстві.</string>
     <string name="Shaman_Gender">masculine</string>
@@ -2021,6 +2025,7 @@
     <string name="SpiderEgg_Name_Objective">павуче яйце</string>
     <string name="SpiderElite_Desc">Як і солдати, павукоподібні вартові поклялися захищати свою країну. Отрута елітного вартового використовується для дезорієнтації мети.</string>
     <string name="SpiderElite_Gender">masculine</string>
+    <string name="SpiderElite_Name_Objective">павука</string>
     <string name="SpiderExploding_Desc">В спокійний для колонії час ці трудяги безпечні, але при появі загрози, хапають першу рослину, що росте поряд, і кидаються на ворога, наче камікадзе.</string>
     <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">павук-робочий</string>
@@ -2597,6 +2602,7 @@
     <string name="WndStory_Spiders">За давніх-давен тут були копальні, багаті на магічні активні камені. Коли ж дорогоцінні поклади скінчились і остання шахтарська компанія покинула це місце, тут залишилась нескінченний лабіринт сирих тунелів. Згодом, через роки, це місце уподобати глибинні павуки. Небезпечні та непередбачувані тварюки привернули до цих місцин дурну славу, але попри це знаходились сміливці та безумці охочі до наживи. Адже чим більша була небезпека, ти швидше розлітались чутки про магічні артефакти, які лишилися в копальнях. Одного часу підступна чаклунка, переховуючись від переслідування, зачаїлась в глибині печер. Забобонні люди не наважились йти в темні тунелі й почали чекати біля входу.
 Але вона так і не вийшла. Казали, що чаклунка знайшла інший вихід з печер, а може зуміла прошмигнути повз переслідувачів... а може загинула в темному лабіринті, оточеною шурхотом глибинних тварюк.</string>
     <string name="WndTilesKind_ClassicLook">Класичний вигляд</string>
+    <string name="WndTilesKind_NewLook">Новий вигляд</string>
     <string name="WndTilesKind_text">Ви збираєтеся увійти в Підземелля, охоплене викривленою магією, але ви можете обрати, як ви бачитимете його:\nВи віддаєте перевагу сучасному псевдо 3d чи класичному плоскому вигляду?\nВи завжди зможете змінити це пізніше в ігрових налаштуваннях.</string>
     <string name="WndTradeItem_Bought">Ти придбав %1$s за %2$dз</string>
     <string name="WndTradeItem_Buy">Придбати за %dз</string>
@@ -2901,6 +2907,12 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
+
 
 
 

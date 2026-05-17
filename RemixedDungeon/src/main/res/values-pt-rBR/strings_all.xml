@@ -1045,6 +1045,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="IceGuardianCore_Name">Guardião de gelo</string>
     <string name="IceGuardianCore_Name_Objective">Guardião de gelo</string>
     <string name="IceGuardian_Desc">Os Guardiões de Gelo são produzidos por Kbolds anciãos para proteger as suas cavernas. O poder armazenado no seu núcleo permite o Guardião de gelo reconstruir-se, desde que tenha energia suficiente.</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">Guardião de gelo</string>
     <string name="IceGuardian_Name_Objective">Guardião de gelo</string>
     <string name="IceKey_Info">Essa chave parece ter sido feita de gelo. mas é dura como aço.</string>
@@ -1261,6 +1262,7 @@ Parede
     <string name="LloidsBeacon_Preventing">Uma forte aura de magia impede voce de usar o Farol Lloyd.</string>
     <string name="LloidsBeacon_Return">O Farol Lloyd definiu com sucesso sua posição atual, agora você poderá retornar aqui a qualquer momento.</string>
     <string name="LloidsBeacon_Set">\n\nEste Farol foi definido em algum lugar do nível %d de Remixed Dungeon.</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Info">Esta lâmina imponente causa danos graves ao investir seu peso em cada corte.</string>
     <string name="Longsword_Name">Espada Grande</string>
     <string name="Luck_Name_0">%s da Sorte</string>
@@ -2964,6 +2966,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

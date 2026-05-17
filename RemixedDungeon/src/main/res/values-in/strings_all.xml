@@ -94,6 +94,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ArmoredStatue_Name_Objective">patung tersihir</string>
     <string name="Artifact_Limit">Anda hanya bisa memakai 2 artefak sekaligus.</string>
     <string name="AttackDelay_Increased">Tidak bisa memakai %s seperti ini. Ayunan lambat, napas berat...</string>
+    <string name="Attack_Cooldown">Attack cooldown</string>
     <string name="AwarenessBuff_Info">Indra telah mempertajam, memberikan lebih banyak kesadaran tentang lingkungan.</string>
     <string name="AwarenessBuff_Name">kesadaran</string>
     <string name="AzuterronNPC_Desc">Figur yang misterius dikelilingi oleh kabut hitam.</string>
@@ -857,6 +858,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Guts_TileGrass">Semak kering</string>
     <string name="Guts_TileHighGrass">Semak kering</string>
     <string name="Guts_TileWater">Cairan berlendir aneh</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">Sebuah tiang yang memiliki kapak di ujung tiangnya.</string>
     <string name="Halberd_Name">Halberd</string>
     <string name="Halls_TileDescBookshelf">Buku dengan bahasa kuno membara di dalam rak buku.</string>
@@ -1371,6 +1373,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Monk_Defense">tertangkis</string>
     <string name="Monk_Desc">Biksu ini adalah fanatik, yang membaktikan diri mereka untuk menjaga rahasia kota mereka dari semua makhluk asing. Mereka tidak menggunakan pengaman atau senjata, hanya mengandalkan seni dari pertempuran tangan.</string>
     <string name="Monk_Disarm">%1$s telah menjatuhkan %2$s dari tangan Anda!</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">biksu kurcaci</string>
     <string name="Monk_Name_Objective">biksu kurcaci</string>
     <string name="MoongraceBuff_Info">Udara di sekitar menjadi lebih jenuh, yang memungkinkan konsentrasi yang lebih baik dan pemulihan cadangan magis.</string>
@@ -1491,6 +1494,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Ambil lima _Kobold Icemancer_ mati! Tubuh beku mereka menyimpan kunci untuk membuka rahasia sihir dingin mereka!</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Pikirannya mengembara saat dia berbicara, suaranya semakin pelan, hampir berbisik.* Bawakan aku dua _succubus_... hidup-hidup. Kekuatan mereka... itu... menakjubkan.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Dia gagap, suaranya serak seperti ranting rapuh*. A-ah, _succubi_! Dua... ya, dua, hidup! Ini... hem... untuk penelitian saya! Anda lihat... feromon mereka... ini penting untuk memahami keseimbangan halus dari... ah... *Ia terdiam, tangannya yang berotot mencoba menyesuaikan topengnya dengan gugup, matanya menatap Anda dengan intensitas demam.* Mereka... esensi... ini sebuah teka-teki... teka-teki indah, misterius! *Ia batuk keras, mencoba mengumpulkan kembali ketenangannya.* Saya berjanji, untuk membawa saya dua dari makhluk... ini... Anda akan mendapatkan rasa terima kasih saya selamanya. Anggap saja ini sebagai... ganjaran ilmu pengetahuan! Ya! Untuk ilmu pengetahuan!</string>
+    <string name="PlagueDoctorQuest_AllDone">*Dia mengeluarkan tawa kering yang serak.* \&quot;Pencapaianmu, itu membuka rahasia di luar ukuran! Pengetahuan yang diperoleh... itu berdenyut di dalamku, sebuah simfoni penemuan. Tapi pengetahuan,\&quot; katanya, suaranya turun menjadi bisikan konspiratif, \&quot;pengetahuan adalah kekuatan. Dan kekuatan... ah... itu adalah eliksir yang paling memabukkan.\&quot; Dia menatapmu intens selama sesaat, matanya yang zambrud membakar dengan intensitas demam. \&quot;Mungkin,\&quot; bisiknya, \&quot;jalanku akan bersilangan denganmu lagi. Karena masih banyak... misteri... yang belum terungkap.\&quot;</string>
     <string name="PlagueDoctor_Desc">Seluruh tubuh orang bungkuk ini disembunyikan di bawah jumpsuit kulit. Juga, dari dia datang bau obat yang pahit dan ... bawang putih?</string>
 
     <string name="PlagueDoctor_Name">dokter wabah</string>
@@ -2185,6 +2189,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="TownsfolkSilentNPC_Name_Objective">penduduk lokal</string>
     <string name="ToxicGas_Info">Awan beracun kehijauan berputar-putar di sini.</string>
     <string name="ToxicGas_Info1">Kamu mati karena menghirup gas beracun...</string>
+    <string name="ToxicGland_Info">Kelenjar beracun yang dipanen dari musuh yang dikalahkan. Kelenjar ini dipenuhi racun kuat dan dapat digunakan dalam proses alkimia.</string>
     <string name="TrapWnd_Step">Apakah Anda benar-benar ingin menginjak jebakan ini? Anda mungkin bisa mati.</string>
     <string name="TrapWnd_Title">Jebakan</string>
     <string name="TreacherousSpirit_Desc">Makhluk mengerikan ini terlihat seperti awan kegelapan yang hidup. Mata raksasa itu menatap Anda, sambil berdenyut dengan setiap gerakan yang Anda lakukan.</string>
@@ -2686,6 +2691,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="YogsEye_Name">mata yog</string>
     <string name="YogsEye_Name_Objective">mata Yog</string>
     <string name="YogsHeart_Desc">Selama berabad-abad orang-orang percaya bahwa hanya makhluk yang tidak berhati yang dapat melakukan perlakuan kejahatan murni. Dan di sini dia, hati besar yang berdetak dari Dewa Tua itu sendiri.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">hati yog</string>
     <string name="YogsHeart_Name_Objective">hati Yog</string>
     <string name="YogsTeeth_Desc">Mulut besar dari Dewa Tua terisi oleh gigi-gigi yang sangat tajam. Sebuah manifestasi yang cocok mengenai keinginannya untuk menghancurkan dan memakan semua makhluk.</string>
@@ -2956,6 +2962,13 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
 
 
 

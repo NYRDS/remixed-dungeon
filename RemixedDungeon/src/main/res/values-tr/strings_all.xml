@@ -305,6 +305,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BodyArmorSpell_Name">Vücut zırhı</string>
     <string name="BoneSaw_Info">Ameliyatlı cerrahi testisi, hızlı sezgi için tasarlanmış hassas bir cerrahi testisi. Hasar ve saldırı hızı, Veba Doktorunun becerisiyle daha ölümcül hale gelir. Kritik isabetler düşmanlardan ek çıkarılabilir ürünler kazandırır ve felçli düşmanlara acımasız verimlilikle vuruş yapar.</string>
     <string name="BoneSaw_Name">Kemikli testere</string>
+    <string name="BoneShard_Info">Yenen düşmanın üzerinden toplanan keskin kemik parçası. Bu kırıntılar şaşırtıcı derecede dayanıklı ve işleme kullanılabilir.</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Bu ağaçtan yapılmış bumerang düşmana attıktan sonra ellerine geri dönecek</string>
     <string name="Boomerang_Name">bumerang</string>
@@ -1415,6 +1416,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="NecromancerArmor_Name">Kemik zırh</string>
     <string name="NecromancerArmor_NotNecromancer">Sadece Nekromensırlar bu zırhı kullanabilir !</string>
     <string name="NecromancerNPC_Desc">Bu orta yaşlı adam sinirlenmiş ve aynı zamanda heyecanlı görünüyor. Kemik parçalarından yapılmış bir zırh giyiyor.</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">Ah! Yaşayan bir maceracı. Olağanüstü. Özürlerimi sunarım. Gördüğün gibi bendeniz bir necromancer\'im. Ölüm üzerinde çalışmak benim yaşamk için yaptığım şey, aynı şeyleri sürekli görmek olağanüstü sıkıcı. Diğer taraftan benim burada bulunma sebebim bu.Hesaplamalarıma göre sadece birkaç hafta içince , bu zindanın bir yerlerinde çok muhteşem bir şey olacak. Bir Necropolis_, ölüler şehri burada kapılarını açacak. Daha fazla bir şey söyleyemiyorum, zaten yeterince vakit harcadım, hazır olmam lazım, _sonra tekrar gel_.</string>
     <string name="NecromancerNPC_Intro2">Ah! Yaşayan bir maceracı. Olağanüstü. Özürlerimi sunarım. Gördüğün gibi bendeniz bir necromancer\'im. Ölüm üzerinde çalışmak benim yaşamk için yaptığım şey, aynı şeyleri sürekli görmek olağanüstü sıkıcı. Diğer taraftan benim burada bulunma sebebim bu. Kısa zaman önce muhteşem bir şey oldu. Bir Necropolis (ölülerin antik şehri) ortaya çıktı. Gerçeği istersen oranın girişinin hemen yanında duruyoruz. Vee.. şunu söyleyeyim, bu anahtarı al ve önce sen gir, kastettiğim sen şu macera şeylerini seversin di mi? Ve ben hemen arkanda olacağım. Sadece hazır olmaya ihtiyacım var.</string>
     <string name="NecromancerNPC_Message1">Zamanımız kısıtlı zamanımız...</string>
@@ -2995,6 +2997,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

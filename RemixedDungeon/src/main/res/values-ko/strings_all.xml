@@ -18,6 +18,7 @@
     <string name="AboutScene_Thanks">특별 감사:</string>
     <string name="AboutScene_Translation">현지화한 사람:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901  &amp;amp;  </string>
+    <string name="Accuracy_Decreased">왜 %s을 사용할 수 있다고 생각했지? 잘못된 도구, 잘못된 손!</string>
     <string name="Accuracy_DecreasedDoctor">이 %s의 모든 일격은 불완전함을 퍼뜨립니다. 제 뼈톱은 치료하지만… 이건 감염시킵니다.</string>
     <string name="Acidic_Desc">이 거대한 거미류의 악마같은 생물은 근접전을 최대한 피하고, 멀리서 불구로 만들어 버릴 수 있는 톱니 가시를 발사한다.</string>
     <string name="Acidic_Gender">masculine</string>
@@ -1024,6 +1025,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="InnKeeperNPC_Name_Objective">여관 주인</string>
     <string name="InnServant_Phrase_1">으휴, 할 일이 아직도 이렇게 많아!</string>
     <string name="InnServant_Phrase_2">이 취한 놈 때문에 미치겠어!</string>
+    <string name="InnServant_Phrase_4">Oh my, so many guests today</string>
     <string name="Instability_Name_0">불안정한 %s</string>
     <string name="Instability_Name_1">불안정한 %s</string>
     <string name="Instability_Name_2">불안정한 %s</string>
@@ -1374,6 +1376,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">이 화살은 쿠라레 독이 칠해져 있다.</string>
     <string name="ParalysisArrow_Name">마비 화살</string>
+    <string name="ParalysisBuff_Info">완전히 마비됨!</string>
     <string name="ParalysisBuff_Name">마비됨</string>
     <string name="Paralysis_Name_0">기절시키는 %s</string>
     <string name="Paralysis_Name_1">기절시키는 %s</string>
@@ -1827,6 +1830,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Shades_Name">그림자</string>
     <string name="ShadowLord_Death">안돼애애애애...</string>
     <string name="ShadowLord_Desc">순수한 악과 어둠의 결정체로 만들어진 생물체입니다. 그것의 강력함으로 미루어 고대신 그 자체라는 의견과, 단지 고대신의 문지기들 중 하나라는 의견과의 논쟁이 끊이지 않고 있습니다.</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">전투를 준비해라!</string>
     <string name="ShadowLord_Name">그림자 군주</string>
     <string name="ShadowLord_Name_Objective">그림자 군주</string>
@@ -1977,6 +1981,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Sprout_Info">잠자고 있는 씨앗을 깨웁니다.\n그러나 주변에 풀잎이 있어야 마법이 성공합니다。</string>
     <string name="Sprout_Name">새싹</string>
     <string name="StartScene_ChooseFromSlot">저장 슬롯에서 선택</string>
+    <string name="StartScene_ComingSoon">Coming soon</string>
     <string name="StartScene_ContinueLatest">최신 게임을 계속하거나 저장 슬롯에서 선택하세요</string>
     <string name="StartScene_Depth">진행 깊이: %1$d\n층 수: %2$d</string>
     <string name="StartScene_DifficultyEasy">쉬움(광고)</string>
@@ -2828,8 +2833,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_table_desc">잘 만들어진 나무 탁자다.</string>
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
+    <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
 
 
 

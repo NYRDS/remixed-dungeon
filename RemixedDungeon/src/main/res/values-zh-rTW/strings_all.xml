@@ -289,6 +289,7 @@
     <string name="BodyArmorSpell_Name">格擋</string>
     <string name="BoneSaw_Info">一把精密工程設計的外科鋸，專為快速解剖而設計。隨著瘟疫醫生技能的提升，其傷害和攻擊速度變得更加致命。暴擊會從敵人身上雕刻出額外的可收穫部位，並且它對麻痹的敵人進行無情高效的攻擊。</string>
     <string name="BoneSaw_Name">骨鋸</string>
+    <string name="BoneShard_Info">從被打敗的敵人身上獲得的銳利骨片。這些碎片 surprisingly 耐用，可用於 crafting。</string>
     <string name="BoneShard_Name">骨片</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">扔出，命中，回手，就是這麼簡單。</string>
@@ -367,6 +368,7 @@
     <string name="ChampionOfAirBuff_Name">風之勇士</string>
     <string name="ChampionOfEarthBuff_Info">大地勇士體現了不屈的力量，這個特性增強了生物的傷害抗性並增加了其最大生命力。這種轉變使其在危險的深淵中成為一個可怕的對手，能夠輕鬆地抵擋攻擊並以堅定的決心經受持久的戰鬥。</string>
     <string name="ChampionOfFireBuff_Info">注入烈焰之怒，這個特性提升了生物的兇猛和戰鬥能力。火焰勇士化身為可怕的對手，釋放毀滅性的攻擊，將敵人陷入灼熱的火焰之中，使所有敢於反抗的存在感到恐懼。</string>
+    <string name="ChampionOfFireBuff_Name">火之冠軍</string>
     <string name="ChampionOfWaterBuff_Info">水之冠軍體現了海洋的不可戰勝之力，增強了生物的韌性和耐力。因此，它成為了一個堅定的對手，能夠經受住無情的攻擊轟炸，在逆境中成為不屈的守護者。</string>
     <string name="ChaosArmor_Info">這件盔甲的血紅色金屬板被暗紅的鐵鏈縫接在一起，當你觸碰它時會迸發出混沌能量。</string>
     <string name="ChaosArmor_Name">混沌護甲</string>
@@ -720,6 +722,7 @@
     <string name="Facilitations_Descriptions_3">緊緊繫上由食人魔皮革製成、代代相傳的腰帶，你朝著前方的未知邁出一步。</string>
     <string name="Facilitations_Names_0">無飢餓</string>
     <string name="Facilitations_Names_2">精靈</string>
+    <string name="Facilitations_Names_3">巨人力量</string>
     <string name="Fadeleaf_Desc">觸碰到消逝草的任何生物都會被傳送至當前層的一個隨機地點。</string>
     <string name="Fadeleaf_Name">消逝草</string>
     <string name="FetidRat_Desc">這只有袋的老鼠比通常的更大。他身邊圍繞著一圈惡臭雲霧。</string>
@@ -1245,6 +1248,7 @@
     <string name="LloidsBeacon_Return">萊德傳送信標設置成功，現在您已經隨時可以回來了。</string>
     <string name="LloidsBeacon_Set">
 這個傳送信標被設置在混合地牢的%d層的某個地方。</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Info">擎天巨刃，擊擊鏗鏘，削鐵如泥。</string>
     <string name="Longsword_Name">長劍</string>
     <string name="Luck_Name_0">幸運%s</string>
@@ -1987,6 +1991,7 @@
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">蜘蛛蛋</string>
     <string name="SpiderEgg_Name_Objective">蜘蛛蛋</string>
+    <string name="SpiderElite_Desc">與士兵一樣，蜘蛛守衛發誓保護他們的國度。精銳守衛的毒液用於使目標迷失方向。</string>
     <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">蜘蛛精英守衛</string>
     <string name="SpiderElite_Name_Objective">蜘蛛精英守衛</string>
@@ -2464,6 +2469,7 @@
     <string name="WndModInstall_Version">版本</string>
     <string name="WndModSelect_AreYouSure">刪除模組：%s，你確定嗎？</string>
     <string name="WndModsDisclaimer_install">安裝本地模組</string>
+    <string name="WndModsDisclaimer_manage">管理模組列表</string>
     <string name="WndModsDisclaimer_title">模組</string>
     <string name="WndMovieTheatre_Bye">想回來的時候就回來，我們對您的到來而感到高興！</string>
     <string name="WndMovieTheatre_Instruction">歡迎光臨我們的電影院！我們提供一項特別服務，您可以免費觀看名為廣告的特別影片。如果您完整看完，將會獲得 %d 枚金幣作為獎勵！</string>
@@ -2903,6 +2909,12 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
 
 
 

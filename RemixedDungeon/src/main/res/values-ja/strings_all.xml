@@ -840,6 +840,7 @@
     <string name="Gnoll_BecomeGuardianDesc">ガーディアンになる</string>
     <string name="Gnoll_BecomeWitchdoctorDesc">ウィッチドクターになる</string>
     <string name="Gnoll_Desc">ノールはハイエナに似た人型種である。下水道や地下牢に住み、時折地上に出て襲撃を行う。ノールスカウトは彼らの群れの一般的なメンバーであり、ブルートほど強くはなく、シャーマンほど知的でもない。</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">ノールスカウト</string>
     <string name="Gnoll_Name_Objective">ノールスカウト</string>
     <string name="Gold_Collect">金貨を集めて後で商店で使おう。</string>
@@ -2177,6 +2178,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="TerrorBuff_Name">恐怖</string>
     <string name="Thief_Carries">%1$s は「%2$s」 を持っている。明らかに盗まれたものだ。</string>
     <string name="Thief_Desc">ダンジョンの深い階層は、常にあらゆる犯罪者の隠れ場所だった。日の光から遠く離れている間、平静を保てる者ばかりではない。とっくの昔に、この狂った泥棒や盗賊たちは、自分たちが何者で、なぜ盗むのかを忘れてしまっている。</string>
+    <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">狂った泥棒</string>
     <string name="Thief_Name_Objective">狂った泥棒</string>
     <string name="Thief_Stole">%1$s はあなたから %2$s を盗んだ！</string>
@@ -3014,6 +3016,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 
