@@ -1647,6 +1647,7 @@
     <string name="Quarterstaff_Name">铁头棍</string>
     <string name="QuickSlot_SelectSlot">更改快捷使用</string>
     <string name="QuickSlot_SelectedItem">选择一项物品放入快捷栏</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">这只皮制箭袋可以容纳任何数量的箭</string>
     <string name="Quiver_Name">箭袋</string>
     <string name="RabbitEars_Info">兔子通常以幸运著称，而它的运气也许会转移到获得它身体一个部位的人。可转念一想，兔子被杀掉并用来做你耳朵的装饰也谈不上特别地·幸运。</string>
@@ -2412,6 +2413,7 @@ remix.31.1\n
     <string name="WndCryptoDonate_copyAddress">复制地址</string>
     <string name="WndCryptoDonate_currency">货币</string>
     <string name="WndCryptoDonate_ethereum">以太坊</string>
+    <string name="WndCryptoDonate_infoText">您可以通过向以下地址发送加密货币捐赠来支持Remixed Dungeon的开发。感谢您的慷慨支持！</string>
     <string name="WndCryptoDonate_openWallet">打开钱包</string>
     <string name="WndCryptoDonate_supportDev">支持开发者</string>
     <string name="WndCryptoDonate_ton">TON</string>
@@ -2966,6 +2968,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

@@ -577,6 +577,7 @@
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">浮遊クリスタル</string>
     <string name="Crystal_Name_Objective">浮遊クリスタル</string>
+    <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">この邪悪な小さなダーツは大したダメージは与えないが、標的を麻痺させ、しばらくの間無力化することができる。</string>
     <string name="CurareDart_Name">クラーレダーツ</string>
     <string name="DM300_Desc">この機械は数世紀前にドワーフによって作られた。その後、ドワーフは機械をゴーレムやエレメンタル、さらには悪魔に置き換え始め、やがてそれが彼らの文明を衰退へと導いた。DM-300と同様の機械は通常、建設や採掘に使われ、場合によっては都市の防衛にも使われた。</string>
@@ -1167,6 +1168,7 @@
     <string name="KoboldIcemancer_Name">コボルドの氷術師</string>
     <string name="KoboldIcemancer_Name_Objective">コボルドの氷術師</string>
     <string name="Kobold_Desc">コボルドは伝説上の存在に過ぎないと信じられてきた。一般的なノールの祖先であるコボルドは、最も深く寒い洞窟に住んでいた。また、彼らの種族はドワーフよりもずっと以前に工学と機械を習得していたとも言われている。</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">コボルド</string>
     <string name="Kobold_Name_Objective">コボルド</string>
     <string name="KrampusHead_Info">ダンジョン探索中にもっと不吉な役を演じたらどうだろうと思ったことはないだろうか？この悪魔のような外見で、地元の子ネズミたちに恐怖を与えることは間違いない。</string>
@@ -3008,6 +3010,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

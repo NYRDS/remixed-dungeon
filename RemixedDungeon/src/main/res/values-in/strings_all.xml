@@ -633,6 +633,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="DonateButton_pleaseDonate">mohon mepertimbangkan untuk mendonasi</string>
     <string name="DonateButton_thanks">Terima kasih atas bantuan Anda!</string>
     <string name="DreadKnight_Desc">Ksatria ketakutan adalah seorang prajurit kuno yang, dalam hidup, tidak tahu baik atau benar. Karena dosa-dosanya, dia ditakdirkan untuk mengembara abadi di tubuh maut yang hancur ini. Dan setiap saat keberadaannya yang tersiksa penuh dengan rasa sakit dan penderitaan, mirip dengan apa yang dia berikan pada korbannya.</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">ksatria ketakutan</string>
     <string name="DreadKnight_Name_Objective">ksatria ketakutan</string>
     <string name="Dreamweed_Desc">Saat menyentuh Dreamweed akan muncul awan gas membingungkan yang berkilau.</string>
@@ -2953,6 +2954,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

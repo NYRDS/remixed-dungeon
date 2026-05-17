@@ -281,6 +281,7 @@
     <string name="BlessedBuff_Info">祝願那些被祝福的人們精準度和閃避增加！</string>
     <string name="BlessedBuff_Name">祝福</string>
     <string name="BlindnessBuff_Name">目盲</string>
+    <string name="BloodTransfusion_Name">輸血</string>
     <string name="BodyArmorBuff_Info">犧牲移動速度增加護甲。</string>
     <string name="BodyArmorBuff_Name">重甲</string>
     <string name="BodyArmorSpell_Info">激活身體的肌肉力量，使你暫時變強，從而增加你的護甲，但會減少移動速度。</string>
@@ -2086,6 +2087,7 @@
     <string name="Swing_Name_0">野蠻%s</string>
     <string name="Swing_Name_1">野蠻%s</string>
     <string name="Swing_Name_2">野蠻%s</string>
+    <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">此等鋒利的刀刃定不會讓您失望。</string>
     <string name="Sword_Name">單手劍</string>
     <string name="Tamahawk_Gender">masculine</string>
@@ -2682,6 +2684,7 @@
     <string name="town_deco_broken_roof_name">損壞的屋頂</string>
     <string name="town_deco_broken_wall_desc">這堵墻裏的木塊早已腐朽，失去了正常的作用。</string>
     <string name="town_deco_broken_wall_name">破舊的墻</string>
+    <string name="town_deco_brown_carpet_desc">Цей коричневий килим був наступаний на численними шляхатими, бродягами та перехожами.</string>
     <string name="town_deco_brown_carpet_name">地毯</string>
     <string name="town_deco_cabinet_desc">有許多門和架子的寬敞櫥櫃。</string>
     <string name="town_deco_cabinet_name">櫃子</string>
@@ -2892,6 +2895,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

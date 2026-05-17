@@ -341,6 +341,7 @@
     <string name="Capotain_Info">Um chapéu alto de aba pequena. Geralmente é usado por puritanos, mas você não precisa ser religioso para usa-lo. Por algum motivo, possui uma placa de identificação, que diz \&quot;Salomão\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_Devoured">\&quot;Você devorou o cadáver de %s!\&quot;</string>
+    <string name="Carcass_DissectMessage">Você diseca o cadáver e obtém um %s.</string>
     <string name="Carcass_DissectResult">Do %1$s você obtém %2$d colheita %3$s.</string>
     <string name="Carcass_Info">restos de %s totalmente morto.</string>
     <string name="Carcass_Necromancy">Você ergueu um cadáver de %s!</string>
@@ -1153,6 +1154,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="KrampusHead_Name">Cabeça de Krampus</string>
     <string name="KunaiThrow_Info">Este arremesso de Kunai Mortal será feito extremamente rápido, tão rápido que você nem conseguirá selecionar um alvo.\n\nMestres verdadeiros foram capazes de arremessar mais de uma Kunai de uma vez.</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Esta arma é constituída por uma foice em uma corrente de metal com um bloco de ferro na extremidade.</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">PUXAR</string>
@@ -1451,6 +1453,7 @@ Parede
     <string name="Pasty_Info">Este autêntico pastel de frango, com receio adicional de carne e batatas.</string>
     <string name="Pasty_Name">pastel de carne</string>
     <string name="Pickaxe_ACMine">MINERAR</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Esta é uma ferramenta grande e resistente para quebrar rochas. Provavelmente isto pode ser usado como uma arma.</string>
     <string name="Pickaxe_InsufficientStr">Força insuficiente para minerar!</string>
     <string name="Pickaxe_Name">picareta</string>
@@ -2959,6 +2962,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 

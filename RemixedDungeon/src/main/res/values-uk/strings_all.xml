@@ -936,6 +936,7 @@
     <string name="HeroClass_PlagueDoctorPerks_0">Чумні доктори збирають [yellow:Токсичні залози], [yellow:Гнилі органи], [yellow:Уламки кісток] з переможених ворогів.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Починаєте з маскою чуми (імунітет до всіх газів) і кістковою пилою. Критичні удари викидають додаткові частини, а пила завдає +50% шкоди паралізованим ворогам.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Чумні доктори зазнають великих штрафів до влучності без улюбленої Кістяної пили в руках і не можуть використовувати дистанційну зброю.</string>
+    <string name="HeroClass_Priest">Жрець</string>
     <string name="HeroClass_Rog">крадій</string>
     <string name="HeroClass_RogPerks_0">Крадії починають з кільцем тіней +1.</string>
     <string name="HeroClass_RogPerks_1">Крадії ідентифікують кільця одразу, як тільки одягають їх.</string>
@@ -1410,6 +1411,7 @@
     <string name="Necromancy_SoulsCountLabel">Душі</string>
     <string name="Necromancy_SummonDeathlingName">Прикликати смертлика</string>
     <string name="Necromancy_Title">Некромантія</string>
+    <string name="NecrotismBuff_Info">Знак самої смерті, сморід від якого впливає на всіх поруч і змушує їх поділити ту саму долю.</string>
     <string name="NecrotismBuff_Name">Некротизм</string>
     <string name="Necrotism_ACSpecial">НЕКРОТИЗМ</string>
     <string name="Necrotism_Death">Ви померли від некротизму...</string>
@@ -2651,6 +2653,7 @@
     <string name="YogsHeart_Name">серце Йога</string>
     <string name="YogsHeart_Name_Objective">серце Йога</string>
     <string name="YogsTeeth_Desc">Велетенська щелепа Старого Бога, сповнена гострими як бритва зубами. Досить вдале втілення його прагнення до руйнування та поглинання всього живого.</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">щелепа Йога</string>
     <string name="YogsTeeth_Name_Objective">щелепа Йога</string>
     <string name="ZombieGnoll_Desc">Спотворене, зламане тіло зомбі-гнолла більше не нагадує а ні гієну, а ні гуманоїда. Все, що залишилося, це купа гнилої плоті та кісток, сповнена жагою вбивати та пожирати.</string>
@@ -2850,6 +2853,7 @@
     <string name="town_deco_stone_wall_name">Кам\'яна стіна</string>
     <string name="town_deco_stones_desc">Просто купа каміння.</string>
     <string name="town_deco_stones_name">Каміння</string>
+    <string name="town_deco_stool_broken_desc">Цей стілець був у кращому стані.</string>
     <string name="town_deco_stool_sturdy_desc">Звичайний табурет, виготовлений з міцного дерева.</string>
     <string name="town_deco_stool_sturdy_name">Стілець</string>
     <string name="town_deco_stove_desc">Ця піч, що палає, розповсюджує приємне тепло</string>
@@ -2893,6 +2897,10 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
 
 
 

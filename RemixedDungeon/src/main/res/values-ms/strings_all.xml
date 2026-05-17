@@ -362,6 +362,7 @@
     <string name="ChampionOfAirBuff_Name">Juara Udara</string>
     <string name="ChampionOfEarthBuff_Info">Juara Bumi menggambarkan keteguhan yang tidak goyah, kerana ciri ini meningkatkan rintangan kerosakan makhluk tersebut dan meningkatkan vitaliti maksimumnya. Penjelmaan ini menjadikannya musuh yang menakutkan di kedalaman yang berbahaya, mampu meleraikan serangan dengan mudah dan bertahan dalam pertempuran panjang dengan ketabahan yang tidak berubah.</string>
     <string name="ChampionOfEarthBuff_Name">Juara Bumi</string>
+    <string name="ChampionOfFireBuff_Info">Diserap dengan kemarahan api, ciri ini mempertingkatkan keganasan dan kebolehan berperang makhluk itu. Juara Api muncul sebagai musuh yang menakutkan, melancarkan serangan memusnahkan yang boleh membarakan musuh-musuhnya dengan lidah api membakar, menanamkan ketakutan di kalangan semua yang berani menentangnya.</string>
     <string name="ChampionOfFireBuff_Name">Juara Api</string>
     <string name="ChampionOfWaterBuff_Info">Juara Air mewujudkan kekuatan lautan yang tidak dapat dikalahkan, meningkatkan ketahanan dan kekuatan makhluk itu. Akibatnya, ia menjadi musuh yang teguh, mampu menahan serangan bertubi-tubi dan berdiri sebagai penjaga yang tidak kenal menyerah dalam menghadapi kesulitan.</string>
     <string name="ChampionOfWaterBuff_Name">Juara Air</string>
@@ -603,6 +604,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DieHardSpell_Name">Sukar Mati</string>
     <string name="Displacement_Txt">%s sesaran</string>
     <string name="DoctorArmor_Name">Jubah Doktor</string>
+    <string name="DoctorArmor_NotDoctor">Hanya doktor wabah yang boleh menggunakan zirah ini!</string>
     <string name="DogeMask_Info">Anda mahu menyamar sebagai Doge yang terkenal? Sekarang adalah peluang anda!\nTopeng Hebat! Boleh Menyamar! Menakjubkan!</string>
     <string name="DogeMask_Name">Topeng Doge</string>
     <string name="DonateButton_pleaseDonate">diharap dapat memberi sumbangan dalam bentuk derma</string>
@@ -1846,6 +1848,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Shielded_Desc">Si ganas merupakan gnoll terbesar, terkuat dan paling sukar dikalahkan. Jika tercedera teruk, mereka menjadi gila dan dapat mencederakan teruk pihak musuh. Si ganas ini memakai pengadang gergasi!</string>
     <string name="Shielded_Name">si ganas berpengadang</string>
     <string name="Shielded_Name_Objective">si ganas berpengadang</string>
+    <string name="ShootInEye_Name">Tembak Kedalam Mata</string>
     <string name="Shopkeeper_Buy">Pilih item untuk membeli</string>
     <string name="Shopkeeper_BuyPrompt">Mari lihat inventori anda</string>
     <string name="Shopkeeper_Desc">Lelaki gempal ini lebih sesuai berniaga di kawasan perniagaan di bandar besar berbanding kurungan bawah tanah ini. Hmm patutlah harga yang ditawarkan memang....</string>
@@ -2767,6 +2770,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_trapdoor_name">Pintu Kolong</string>
     <string name="town_deco_tree_desc">Nampak pelik melihat ada sepohon pokok, betul-betul berada di sebelah kanan pintu masuk ke dalam kurungan bawah tanah, yang penuh dengan ketakutan dan kematian.</string>
     <string name="town_deco_tree_name">Pokok</string>
+    <string name="town_deco_urn_desc">Tanah liat, mungkin dengan abu seseorang.</string>
     <string name="town_deco_urn_name">Kendi</string>
     <string name="town_deco_vat_desc">Bekas batu ini dipenuhi dengan air suci.</string>
     <string name="town_deco_wall_beam_desc">Ia dipasang untuk menyokong bangunan ini.</string>
@@ -2803,6 +2807,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 
