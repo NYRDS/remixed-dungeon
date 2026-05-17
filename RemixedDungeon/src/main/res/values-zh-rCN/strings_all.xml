@@ -256,6 +256,7 @@
     <string name="BlackSkullOfMastery_Title">你可以解开咒语。 或者你可以某种方式操纵它的魔法公式，这将使你能够同时消耗法术和神器本身的力量，将自己变成巫妖。 </string>
     <string name="BlackSkull_Activated">黑色骷髅被唤醒了！</string>
     <string name="BlackSkull_Deactivated">黑色骷髅又一次沉睡了…</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">一块小巧的黑曜石头骨，它是整座亡灵之城的力量之源。虽然在巫妖被打败后它失去了所有力量，但当你将它握在手中时，你脑中浮现出了一个奇怪的念头：“它饿了”。</string>
     <string name="BlackSkull_Info_Awakened">这块头骨散发着魔法脉冲，你能看到魔力在它空洞的眼眶中流淌。当你将其握于手中，一个可怕的声音回荡在你脑中：“看哪，死亡的步伐在前进。”</string>
     <string name="BlackSkull_Name">漆黑头骨</string>
@@ -369,6 +370,7 @@
     <string name="Challenges_Descriptions_6">古代的符文阅读艺术是被禁止的，并不惜一切代价避免，因为进入地牢或周围环境的每一卷卷轴都会受到诅咒。</string>
     <string name="Challenges_Descriptions_7">你已经习惯了这样一个事实，即拥有和使用武器在道德上是不对的，但还有什么能保护你免受下面漫游的生物的伤害呢？</string>
     <string name="Challenges_Descriptions_8">你的旅程将从黑暗和危险的城镇下水道开始，通往地面的唯一途径将被封锁。 更糟糕的是，你只能使用你在地牢里找到的装备。 由于有限的资源和装备，你的生存将取决于你的技能和策略。</string>
+    <string name="Challenges_Descriptions_9">瘟疫医生的最新“疗法” scrubbed 你的空间记忆。你看不到的直接视线外的任何东西都记不住。</string>
     <string name="Challenges_Names_0">缩餐节食</string>
     <string name="Challenges_Names_1">信念护体</string>
     <string name="Challenges_Names_2">恐药病癖</string>
@@ -776,6 +778,7 @@
     <string name="Food_ACEat">食用</string>
     <string name="Food_Message">这份食物吃起来异常地美味！</string>
     <string name="FortuneTellerNPC_Desc">此女身穿一袭色彩鲜艳的长袍。对于一位已精通算命奥术的算命家来说，她算是年少有为。你一步一步地靠近，隐约能听到她微声低语。然而，她只是目不转晴地盯着水晶球。</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">占卜师</string>
     <string name="FortuneTellerNPC_Name_Objective">占卜师</string>
     <string name="FreezeGlobe_Info">法力冻结所选生物，使其在短时间内无法执行任何操作。</string>
@@ -2039,6 +2042,7 @@
     <string name="SpiderExploding_Name">蜘蛛工人</string>
     <string name="SpiderExploding_Name_Objective">蜘蛛工人</string>
     <string name="SpiderGuard_Desc">就像士兵一样，蜘蛛守卫誓死保卫自己的王国。守卫的毒液用来麻痹它们的目标，使他们成为容易的猎物。</string>
+    <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">蜘蛛守卫</string>
     <string name="SpiderGuard_Name_Objective">蜘蛛守卫</string>
     <string name="SpiderMindAmber_Desc">琥珀蜘蛛是一种神秘而罕见的物种，拥有和灵能蜘蛛一样的精神力量，但比它要强壮得多。“琥珀”来源于它巨大脑袋的颜色，伴随着琥珀蜘蛛的精神和物理攻击，一个又一个受害者成为了它们的食物。</string>
@@ -2961,6 +2965,10 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
 
 
 

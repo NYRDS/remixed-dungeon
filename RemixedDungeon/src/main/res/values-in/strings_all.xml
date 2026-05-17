@@ -718,6 +718,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Exhumation_NoGrave">Tidak ada kuburan di sini untuk melakukan penggalian.</string>
     <string name="Exhumation_Ok">Aku akan menurutimu.</string>
     <string name="ExplodingSkull_Desc">Tengkorak yang mengambang dan terbakar ini tampak sangat rapuh, dan sepertinya akan pecah berkeping-keping setiap saat.</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">tengkorak meledak</string>
     <string name="ExplodingSkull_Name_Objective">tengkorak meledak</string>
     <string name="Eye_Desc">Nama lain dari setan ini adalah \&quot;bola kebencian\&quot;, karena saat dia melihat musuh, dia menggunakan tatapan mematikannya dengan sembrono, kadang tidak mempedulikan sekutunya dan melukai mereka.</string>
@@ -2948,6 +2949,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

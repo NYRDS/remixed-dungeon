@@ -539,6 +539,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">Flecha comum de madeira com ponta de ferro.</string>
     <string name="CommonArrow_Name">flecha</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">Esta besta reforçada revela-se uma ferramenta mais eficiente em comparação com a sua contrapartida de madeira.</string>
     <string name="CompositeCrossbow_Name">Besta de compósito</string>
     <string name="CompoundBow_Gender">masculine</string>
@@ -2385,6 +2386,7 @@ remix.31.1\n
     -- Brilho para Mobs\n
     - Correções de bugs\n
 </string>
+    <string name="Welcome_Text_32_1">    remix.32.1\n    - Gameplay:\n    -- Plague Doctor quest line\n    -- Mob carcasses now somewhat usable items\n    -- Better pets control\n    - UX:\n    -- Improved save-game management\n    - Modding:\n    -- Local mod installation methods\n    -- Custom items now can perform actions while being in heaps\n    - Bugs fixed\n    </string>
     <string name="Welcome_Title">Bem-vindo!</string>
     <string name="WindGust_Info">Uma rajada de vento que afasta o alvo selecionado.</string>
     <string name="WindGust_Name">Rajada de vento</string>
@@ -2485,6 +2487,7 @@ remix.31.1\n
     <string name="WndInfoItem_Skeleton">Restos de Esqueletos</string>
     <string name="WndInfoItem_Tomb">Tumba</string>
     <string name="WndInfoItem_WontKnow">Você não vai saber o que há dentro até abri-lo!</string>
+    <string name="WndInstallingMod_copying_file">Copiando %s para o armazenamento do Remixed Dungeon</string>
     <string name="WndInstallingMod_deleting_file">Apagando %s</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, por favor aguarde...</string>
     <string name="WndInstallingMod_skipping_file">Pulando %s</string>
@@ -2956,6 +2959,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 

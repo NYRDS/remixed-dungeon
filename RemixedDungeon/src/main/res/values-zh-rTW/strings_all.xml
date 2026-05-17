@@ -57,6 +57,7 @@
     <string name="Amulet_ACEnd">結束遊戲</string>
     <string name="Amulet_Info">尼德羅護身符是來自未知領域中最強大的且最著名的神器。據說它能夠實現持有者的一切願望，只要持有者具備足夠的力量來“說服”它去做。</string>
     <string name="Amulet_Name">尼德羅護符</string>
+    <string name="AnesthesiaBuff_Info">不感覺疼痛也不會從攻擊中醒來，但仍受到傷害。</string>
     <string name="AnesthesiaBuff_Name">麻醉</string>
     <string name="Anesthesia_Name">麻醉</string>
     <string name="Ankh_Info">此古老的不朽的象徵可以使您從死亡中復活。但會使您丟失所有未裝備的道具。</string>
@@ -911,6 +912,7 @@
     <string name="HeroClass_NecromancerPerks_2">死靈法師初始擁有一件獨特的靈魂長袍。裝備後，每殺死一個生物會給他提供1點法力值。</string>
     <string name="HeroClass_NecromancerPerks_3">死靈法師開局有一把7層的骷髏鑰匙。</string>
     <string name="HeroClass_NecromancerPerks_4">治療藥水開局時就已經鑒定好了。</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">瘟疫医生从被杀的敌人身上收集[黄色:毒性腺体]、[黄色:腐烂器官]、[黄色:骨片]。</string>
     <string name="HeroClass_PlagueDoctorPerks_1">開始時擁有瘟疫面具（對所有氣體免疫）和骨鋸。暴擊會掉落額外部件，鋸子對麻痹敵人造成+50%傷害。</string>
     <string name="HeroClass_PlagueDoctorPerks_2">麻痹氣體和毒性氣體的藥水已預先辨識。</string>
     <string name="HeroClass_PlagueDoctorPerks_3">被毒氣殺死的敵人會爆炸成毒性迷霧，每影響一個敵人就能為你恢復 1 點生命值。</string>
@@ -2606,8 +2608,9 @@
     <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">幽魂</string>
     <string name="Wraith_Name_Objective">幽魂</string>
-    <string name="WrnExperimental_hint">如果這個奇怪而扭曲的世界對你來說太過嚴苛，請使用以下方式關閉這些選項：\n開始畫面-&gt;選項-&gt;遊戲玩法\n選單，然後開始新的遊戲或載入其他存檔。</string>
+    <string name="WrnExperimental_hint">注意：啟用實驗性選項可能導致遊戲不穩定或產生未預期的行為。</string>
     <string name="WrnExperimental_moveTimeout">移動超時設定為 %d 毫秒，快點思考！</string>
+    <string name="WrnExperimental_title">啟用了實驗性選項！</string>
     <string name="Yog_Desc">猶格-德澤瓦是一位上古之神，來源於混沌中的強大存在。一個世紀前，古代矮人們雖然勉強贏得了與惡魔軍團的戰爭，卻無法將古神殺死。作為替代方案，矮人們將它封印在城市下的大堂中，並相信虛弱的它無法再度復蘇。</string>
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">……</string>
@@ -2886,6 +2889,10 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
 
 
 

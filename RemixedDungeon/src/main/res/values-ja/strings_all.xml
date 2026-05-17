@@ -487,6 +487,7 @@
     <string name="ClassArmor_LowHealt">あなたは不健康だ！</string>
     <string name="ClassArmor_LowMana">マナが足りない！</string>
     <string name="ClassArmor_NotEquipped">この鎧をつけるとあなたはパワーアップするだろう。</string>
+    <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">この巨大な剣は、どんなものでも切り裂くことができるはずだ。</string>
     <string name="Claymore_Name">クレイモア</string>
     <string name="CloakBuff_Info">暗いマントはあなたを影の中に隠し、敵から見えにくくする。</string>
@@ -585,6 +586,7 @@
     <string name="DM300_Info3">侵入者発見。</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">使い古された木の柄がついたシンプルな鉄の短剣だ。</string>
     <string name="Dagger_Name">ダガー</string>
     <string name="Damage_Reduction">ダメージ軽減</string>
@@ -3006,6 +3008,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

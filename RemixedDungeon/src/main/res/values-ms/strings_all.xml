@@ -283,6 +283,7 @@
     <string name="BodyArmorSpell_Info">Aktifkan kuasa otot simpanan, jadi lebih kuat buat sementara, seterusnya meningkatkan perisai anda tetapi menjejaskan kelajuan pergerakan anda.</string>
     <string name="BodyArmorSpell_Name">Perisai Badan</string>
     <string name="BoneSaw_Info">Gergaji pembedahan yang direka secara tepat untuk pembahagian pantas. Kerosakan dan kelajuan serangannya menjadi lebih mati-mati dengan kemahiran Doktor Pesakit. Serangan kritikal mengorek bahagian tambahan yang boleh dituai dari musuh, dan ia menyerang dengan kecekapan tanpa belas terhadap musuh yang lumpuh.</string>
+    <string name="BoneSaw_Name">Tulang Palu</string>
     <string name="BoneShard_Info">Serpihan tulang yang tajam diperoleh daripada musuh yang dikalahkan. Serpihan ini agak tahan lasak dan berguna untuk pembuatan.</string>
     <string name="BoneShard_Name">Serpihan Tulang</string>
     <string name="Boomerang_Info">Setelah dilontar kepada pihak musuh, misil kayu rata yang berlekuk ini akan kembali semula kepada pelontarnya.</string>
@@ -672,6 +673,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Senjata ini diperbuat dari aloi logam istimewa, menjadikannya lebih ringan berbanding pisau biasa.</string>
     <string name="ElvenDagger_Name">pisau bunian</string>
+    <string name="EncumbranceBuff_CharAct_2">Ini %s terlalu berat untuk saya gunakan dengan efektif.</string>
     <string name="EncumbranceBuff_CharAct_3">Saya perlu meningkatkan kekuatan saya sebelum boleh menggunakan %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Saya kekurangan kekuatan untuk menggunakan %s secara sepenuhnya.</string>
     <string name="EncumbranceBuff_Info">Tiada kekuatan yang cukup untuk menggunakan %s secara efektif.</string>
@@ -1916,6 +1918,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">telur lelabah</string>
     <string name="SpiderEgg_Name_Objective">spider egg</string>
+    <string name="SpiderElite_Desc">Seperti i soldati, le guardie ragnate sono giurate a proteggere il loro regno. Il veleno dell\'elite della guardia è usato per disorientare il loro bersaglio.</string>
     <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">penjaga elit labah-labah</string>
     <string name="SpiderExploding_Desc">Pekerja semasa aman, makhluk ini tidak teragak-agak meluru ke pihak musuh dan mengambil tumbuhan yang dihadapannya, kemudian menjadikan dirinya sebagai bom hidup.</string>
@@ -1971,6 +1974,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="StartScene_No">Tidak, kembali ke menu utama</string>
     <string name="StartScene_Really">Anda pasti mahu mulakan permainan baharu?</string>
     <string name="StartScene_Unlock">Untuk membuka kelas watak ini, bunuh bos DM-300 dengan kelas lain</string>
+    <string name="StartScene_UnlockDoctor">Untuk membuka Plague Doctor - selesaikan misi Plague Doctor lama</string>
     <string name="StartScene_UnlockElf">Untuk membuka kelas watak ini, bunuh bos Raja dengan mana-mana kelas lain</string>
     <string name="StartScene_UnlockGnoll">Untuk membuka kelas ini anda mesti pujuk paderi pekan supaya sembuhkan Gnoll Ganas.</string>
     <string name="StartScene_UnlockNecromancer">Untuk membuka kelas karakter ini, bunuh Lich dengan lain-lain kelas.</string>
@@ -2797,6 +2801,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 
