@@ -2001,6 +2001,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SmashSpell_Name">スマッシュ</string>
     <string name="SmashSpell_NeedWeapon">この動きには武器が必要だ。</string>
     <string name="Snail_Desc">この小さな軟体動物は、汚水を食べてかなり大きくなったが、まだ動きが鈍いため、簡単に立ち向かえる敵だ。</string>
+    <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">カタツムリ</string>
     <string name="Snail_Name_Objective">カタツムリ</string>
     <string name="SnipersMarkBuff_Info">狙撃手に狙われている。</string>
@@ -3005,6 +3006,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

@@ -706,6 +706,7 @@
     <string name="ElvenDagger_Name">ельфійський кинджал</string>
     <string name="EncumbranceBuff_CharAct_1">Я недостатньо сильний, щоб належно володіти %s.</string>
     <string name="EncumbranceBuff_CharAct_2">Цей %s занадто важкий для мене, щоб ефективно його використовувати.</string>
+    <string name="EncumbranceBuff_CharAct_3">Я маю працювати над силою, перш ніж зможу використовувати %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Мені бракує сили, щоб використовувати %s на повну.</string>
     <string name="EncumbranceBuff_Info">Недостатньо сили, щоб ефективно використовувати %s.</string>
     <string name="EncumbranceBuff_Name">Тягар</string>
@@ -1234,6 +1235,7 @@
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">ліч</string>
     <string name="Lich_Name_Objective">ліча</string>
+    <string name="LightBuff_Info">몸에서 빛이 발하고, 주변을 비춘다.</string>
     <string name="LightBuff_Name">Світишся</string>
     <string name="LightningBolt_Info">Закляття, яким користувалися давні шамани, вражає ваших ворогів удвічі ефективніше, особливо якщо вони достатньо дурні, щоб стояти на воді.</string>
     <string name="LightningBolt_Name">Блискавка</string>
@@ -2886,6 +2888,8 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

@@ -175,6 +175,7 @@
     <string name="Badges_Supporter">Grazie per il tuo sostegno!</string>
     <string name="Badges_ThisIsSparta">Questo è Sparta!!!</string>
     <string name="Badges_Victory">Amuleto di Yendor ottenuto</string>
+    <string name="Badges_VictoryAll">Amuleto di Yendor ottenuto da tutte le classi</string>
     <string name="Badges_Yasd">Morte a causa di fuoco, veleno, gas velenoso &amp;amp; fame</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa ucciso</string>
     <string name="Bag_ACOpen">APRI</string>
@@ -616,6 +617,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Dungeon_Tips_17">Un pozzo di Trasmutazione può darti oggetti che non potrebbero essere ottenuti in altri modi.</string>
     <string name="Dungeon_Tips_18">L\'unico modo di incantare un\'arma è migliorarla con una Pergamena del Miglioramento della Armi.</string>
     <string name="Dungeon_Tips_19">Armi non concesse in presenza di Sua Maestà!</string>
+    <string name="Dungeon_Tips_20">Pixel-Mart. Offerte speciali per cacciatori di demoni!</string>
     <string name="Dungeon_Tips_21">Il testo è scritto in linguaggio demoniaco.</string>
     <string name="Dungeon_Tips_22">Il testo è scritto in linguaggio demoniaco.</string>
     <string name="Dungeon_Tips_23">Il testo è scritto in linguaggio demoniaco.</string>
@@ -1156,6 +1158,7 @@ Potrebbe bruciare?</string>
     <string name="LevitationBuff_Name">Levitante</string>
     <string name="LibrarianNPC_Desc">Una persona molto timida, indossa un maglione dall\'aspetto goffo e un paio di occhiali con lenti molto spesse.</string>
     <string name="LibrarianNPC_Message_Instruction">C-ciao. Benvenuto alla Biblioteca. Qua puoi trovare informazioni su ogni genere di cosa che può essere trovata nel dungeon... A dire il vero possiamo solo informare su cose scoperte dagli avventurieri. Ehm... è un po\' imbarazzante, sì. Ogni volta che ci visiterai, probabilmente, ci saranno nuove cose da leggere</string>
+    <string name="LibrarianNPC_Message_Not_Ready">I... I sono spiacente, l-libreria non è aperta... ancora.</string>
     <string name="LibrarianNPC_Name">bibliotecaria</string>
     <string name="LibrarianNPC_Name_Objective">bibliotecaria</string>
     <string name="LibraryBook_Description">Questo tomo è davvero enorme. Racchiude tutta la conoscenza che gli avventurieri hanno scoperto e portato dal dungeon.</string>
@@ -2205,6 +2208,7 @@ Potrebbe bruciare?</string>
     <string name="Weightstone_WndChoice">Come vorresti bilanciare il/la tuo/tua %s?</string>
     <string name="Weightstone_WndSpeed">Per la velocità</string>
     <string name="Welcome_Ok">Vabbene!</string>
+    <string name="Welcome_Text_30_1">remix.30.1\n- Gameplay:\n-- Gnoll Alt Sınıfları!\n-- Salyangozlar!\n-- Kaos Eşyaları ilerlemesi azaltıldı.\n-- Mana İksiri artık sıradan bir iksirdir.\n-- Rozetler artık DLC\'leri oynarken elde edilebilir (ancak modlar değil).\n- Düzeltilen hatalar\n</string>
     <string name="Welcome_Text_31_0">\n    remix.31.0\n\n    - Gioco:\n\n    -- Modalità isometrica opzionale!\n\n    - Modding:\n\n    -- Oggetti livello modificabili\n\n    - Bug risolti\n\n    </string>
     <string name="Welcome_Text_31_1">
     remix.31.1\n
@@ -2737,6 +2741,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 

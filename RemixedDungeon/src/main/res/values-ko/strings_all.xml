@@ -230,6 +230,7 @@
     <string name="BlackCat_Phrases_0">그르르르르릉</string>
     <string name="BlackCat_Phrases_1">야옹...</string>
     <string name="BlackCat_Phrases_2">야옹!</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">_Lich_는 능력의 정점에 도달한 nekromanta이다. 생과 사 사이에서 존재하는 _Lich_는 nekromancy에 뛰어나지만 전투 기술은 평범한 사람보다 훨씬 낮다.</string>
     <string name="BlackSkullOfMastery_Info">고대의 유물로써, 죽은 자의 영혼을 모으기 위해 첫 세대의 강령술사들이 만들어냈습니다. 당신의 강령술 능력을 감지하여, 강력한 주문으로 봉인되어 있습니다. 하지만 이 주문은 아주 오래된 것이라, 쉽게 파괴할 수 있을 것입니다.</string>
     <string name="BlackSkullOfMastery_Lich">리치가 되세요</string>
     <string name="BlackSkullOfMastery_Name">영혼을 부르는 자</string>
@@ -320,6 +321,7 @@
     <string name="Carcass_DissectFailed">%s을(를) 해부했지만 아무것도 얻지 못했다.</string>
     <string name="Carcass_DissectMessage">시신을 해부하여 %s 을(를) 얻었다.</string>
     <string name="Carcass_Info">완전히 죽은 %s의 시신.</string>
+    <string name="Carcass_Name">%s의 잔해</string>
     <string name="Carcass_TooFarToDissect">시신을 해부하려면 더 가까이 다가가야 합니다.</string>
     <string name="Caves_TileDescBookshelf">동굴에 책장이 대체 왜 필요한 거지?</string>
     <string name="Caves_TileDescDeco">어떤 광물의 광맥이 벽에 보인다. 금인가?</string>
@@ -817,6 +819,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Halls_TileStatue">기둥</string>
     <string name="Halls_TileWater">차가운 용암</string>
     <string name="Haste_Info">신속은 사용자가 극도로 빠른 속도로 이동할 수 있게 해주어 마치 주변의 모든 것이 정지해 있는 것처럼 보이게 합니다. 이러한 신속은 많은 에너지를 소비하므로 오직 짧은 시간 동안만 사용할 수 있습니다.\n\n숙련된 마스터들은 더 오랜 시간 동안 신속 상태를 유지할 수 있습니다.</string>
+    <string name="Haste_Name">극한의 신속</string>
     <string name="Heal_Cast">%s이(가) 치유되었습니다.</string>
     <string name="Heal_Name">치유</string>
     <string name="HealerNPC_Desc">어째서인지 마법봉을 만드는 누군가와 닮은 노인이다.</string>
@@ -1135,6 +1138,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Level_TileDescStatue">누군가 이곳을 꾸미고 싶어했지만, 당연히 던전의 분위기를 바꾸진 못했다.</string>
     <string name="Level_TileDescTrap">숨겨진 발판을 디디면 함정이 발동한다.</string>
     <string name="Level_TileDescWater">불이 붙었다면, 물 속에 들어가 불을 끄세요.</string>
+    <string name="Level_TileDescWell">신비로운 우물. 마법의 힘이 이곳에서 느껴진다.</string>
     <string name="Level_TileEmbers">잿더미</string>
     <string name="Level_TileEmptyWell">빈 우물</string>
     <string name="Level_TileEntrance">층 입구</string>
@@ -1939,6 +1943,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SpiderQueenCarapace_Info">거미 여왕의 등껍질의 파편입니다. 당신은 이것에 거미줄 분비선의 조각이 들어있는 것을 볼 수 있고, 이것은 마치 살아있는 것 같습니다. </string>
     <string name="SpiderQueenCarapace_Name">거미 여왕의 등껍질</string>
     <string name="SpiderQueen_Desc">아름다운 여성과 추악한 거미가 섞인 몸을 가졌다. 이 거미 굴에서 살아 있는 모든 것은 그녀의 시종들이다. 이 기괴한 여인과 마주 친다는 것은 매우 목숨이 위태로운 일이다. 왜냐하면 당신은 침입자이기 때문이다!</string>
+    <string name="SpiderQueen_DieInfo">거미 여왕이 쓰러졌다! 이제 5층으로 돌아가 심연으로의 여행을 계속해야겠다.</string>
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">거미 여왕</string>
     <string name="SpiderQueen_Name_Objective">거미 여왕</string>
@@ -2801,6 +2806,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
 
 
 
