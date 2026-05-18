@@ -1363,6 +1363,7 @@
     <string name="MindVisionBuff_Info">心灵的静笃，可观生物之行动。</string>
     <string name="MindVisionBuff_Name">灵视</string>
     <string name="MirrorImage_Desc">这个镜像与你十分相似，但是它更苍白，还有点抽搐。</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">镜像</string>
     <string name="MirrorImage_Name_Objective">镜像</string>
     <string name="MissileWeapon_Info1">\n这件武器平均每次攻击能造成 %d 点伤害。</string>
@@ -2989,6 +2990,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

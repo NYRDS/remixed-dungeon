@@ -210,6 +210,8 @@
     <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">Kepala kapak perang keluli bersaiz besar ini memberikan angkatan yang agak sukar bagi setiap pukulan.</string>
     <string name="BattleAxe_Name">kapak perang</string>
+    <string name="Bee_Desc">Malah pada saiz kecilnya, lebah cenderung mempertahankan sarangnya dengan gigih. Mereka tidak kekal lama walau bagaimanapun.</string>
+    <string name="Bee_Name">lebah</string>
     <string name="BellaNPC_Amulet_F">Hai si kacak, apa benda yang berkilauan tu. Azimat yang luar biasa! Hmmm, awak... lebih menonjol dan lebih hebat dari yang lain. Marilah kita berbual-bual dan berbincang tentang masa hadapan kita bersama?</string>
     <string name="BellaNPC_Amulet_M">Hai si kacak, apa benda tu yang berkilauan. Azimat yang luar biasa! Dan awak... lebih hebat dari golongan kelas bawahan yang lain. Marilah kita berbual-bual dan berbincang tentang masa hadapan kita bersama?</string>
     <string name="BellaNPC_Angry">Kurang ajar... memang dasar golongan kelas bawahan!</string>
@@ -310,6 +312,7 @@
     <string name="Burning_Burns">%s terbakar!</string>
     <string name="Burning_Death">Anda mati kerana terbakar...</string>
     <string name="CagedKobold_Desc">Seekor kobold, di dalam sangkar.</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">Hoi... HOI! Kamu sipengembara? Tolonglah aku kawan, penganut fahaman ketenteraan telah mengurung aku di sini. Mereka cuba menghidupkan senjata purba untuk menawan dunia manusia di atas sana! Aku membangkang kerana ia terlalu bahaya, dan mereka berjaya menjatuhkan ketua pemerintah dan kurung aku dalam sangkar ini. Tolong cari kunci sangkar ini, aku janji akan bantu kamu.</string>
     <string name="CagedKobold_Message1">Tolong...</string>
     <string name="CagedKobold_Message2">Awak mesti keluarkan saya dari sini, sahabat</string>
@@ -319,6 +322,7 @@
     <string name="CagedKobold_Quest_End">Oh, terima kasih, terima kasih banyak-banyak! Macamana kamu jumpa kunci ini? Kamu...kamu berjaya musnahkan senjata tu?! Hebat! tahu tak, aku akan bantu kamu, dan aku tahu langkah terbaik ialah mengikut kamu buat masa ini. Kobold terkurung bertukar menjadi lilin</string>
     <string name="Calm_Cast">%1 진정됩니다.</string>
     <string name="Calm_Info">Di sini ada banyak makhluk yang marah, mari kita bantu mereka.</string>
+    <string name="Calm_Name">Tenang</string>
     <string name="CandleOfMindVision_Info">Rupanya seperti lilin biasa, anda tidak menjangka ia boleh ditemui dalam kurungan bawah tanah ini. Yang peliknya lilin ini berasa suam bila dipegang walaupun belum lagi dinyalakan.</string>
     <string name="CandleOfMindVision_Info_Exhausted">Lilin telah habis dibakar, ia tidak dapat lagi menerangi sekitar, Nampaknya anda tidak dapat guna ia lagi.</string>
     <string name="CandleOfMindVision_Info_Lighted">Lilin bercahaya sebaik sahaja anda keluarkan dari beg galas anda. Nyalaan berwarna ungu, dan ketika anda melihat nyalaan lilin tersebut ada raksaksa berhampiran dapat dilihat.</string>
@@ -346,6 +350,7 @@
     <string name="Challenges_Descriptions_0">Makanan dan air sudah lama busuk, membuatkan setiap pengembara menjadi gila kerana terfikir tentang kematian akibat ketakutan dan kelaparan. Bolehkah diet anda membantu anda bertahan cukup lama?</string>
     <string name="Challenges_Descriptions_1">Serangan adalah pertahanan terbaik. Mengikuti ajaran ini, anda meneroka ke dalam penjara bawah tanah, dengan kepercayaan sebagai penjaga terkuat badan anda.</string>
     <string name="Challenges_Descriptions_2">Sebagai seorang pengikut regenerasi alami tubuh biasa, kamu selalu curiga terhadap ramuan yang memiliki sifat penyembuhan. Lebih baik aman daripada menyesal!</string>
+    <string name="Challenges_Descriptions_3">Tanah di sekeliling labirint telah lama tercemar oleh kejahatan, menghalang pertumbuhan biji untuk pelbagai herba dan tumbuhan. Siapa tahu berapa lama lagi sebelum tumbuhan terakhir akan berhenti wujud di tanah tandus ini.</string>
     <string name="Challenges_Descriptions_4">Kehadiran jahat sedang berlegar dalam fikiran semua makhluk di dalam dungeon, menjadikan mereka sedar tentang peristiwa yang berlaku antara satu sama lain.</string>
     <string name="Challenges_Descriptions_5">Perkara pertama yang datang bersama kejahatan ialah kabut tebal dan tidak dapat ditembusi, yang menjadikan hampir mustahil untuk menavigasi dengan jelas lorong-lorong tanpa akhir di penjara bawah tanah.</string>
     <string name="Challenges_Descriptions_6">Seni kuno membaca rune dilarang dan dielakkan sama sekali, disebabkan oleh kutukan yang dikenakan pada setiap gulungan yang menemui jalan masuk ke dalam penjara bawah tanah atau kawasan sekitarnya.</string>
@@ -710,8 +715,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Eye_Name_Objective">mata jahat</string>
     <string name="Facilitations_Descriptions_0">Mutan sentiasa diperlakukan dengan hinaan dan ketakutan, tetapi ketiadaan kelaparan sekali lagi akan memberikan anda kelebihan, kali ini dalam menakluki kedalaman penjara bawah tanah.</string>
     <string name="Facilitations_Descriptions_1">Masih tidak diketahui siapa ibu bapa anda, tetapi regenerasi semula jadi seperti troll akan membantu memulihkan semua parut pertempuran yang bakal berlaku.</string>
+    <string name="Facilitations_Descriptions_3">Melilitkan tali pinggang kulit ogre, yang diwariskan kepada setiap generasi baru, anda membuat langkah ke arah yang tidak diketahui yang terletak di hadapan.</string>
     <string name="Facilitations_Names_0">Tanpa lapar</string>
     <string name="Facilitations_Names_1">Badan gergasi</string>
+    <string name="Facilitations_Names_2">Roh jin</string>
     <string name="Fadeleaf_Desc">Menyentuh Daun Lenyap akan pindahkan sesiapa sahaja ke lokasi secara rawak dalam aras yang sama</string>
     <string name="Fadeleaf_Name">Daun Lenyap</string>
     <string name="FetidRat_Desc">Tikus marsupial ini lebih besar berbanding tikus biasa. Bau pun busuk.</string>
@@ -720,6 +727,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="FetidRat_Name_Objective">tikus kohong</string>
     <string name="Fez_Info">Hiasan kepala yang dibentuk seperti kon yang diperbuat dari bulu biri-biri merah, dengan rumbai di atasnya. Tidak sesekali, menjadikan dunia ini 3-dimensi.</string>
     <string name="Fez_Name">Fez</string>
+    <string name="FilteredMask_Info">Respirator ialah peranti yang direka untuk melindungi pengguna daripada menghidu atmosfera bahaya, termasuk asap, wap, gas dan bahan partikel seperti habuk dan mikroorganisma udara.\n\nTopeng ini bagaimanapun hanya berfungsi untuk tujuan hiasan.</string>
     <string name="FilteredMask_Name">Topeng muka N95</string>
     <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">Anak panah ini kelihatan seperti yang biasa, tetapi ada cahaya merah bersinar dari kepala panahnya.</string>
@@ -749,6 +757,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Anda dapat merasai aura sejuk membeku yang dipancar dari kepala panah ini.</string>
     <string name="FrostArrow_Name">anak panah fros</string>
+    <string name="FrostAuraBuff_Info">Tembusu membekalkan badan, menyahut semua yang berada berhampiran.</string>
     <string name="FrostAuraBuff_Name">Aura Fros</string>
     <string name="FrostBuff_Name">Membeku</string>
     <string name="Frost_Shatter">Kesejukan ini menyebabkan %s mula pecah berkecai!</string>
@@ -789,6 +798,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="GnollCostume_Name">Busana Gnoll</string>
     <string name="GnollTamahawk_Info">Tomahawk tradisional dicipta oleh artisan Gnoll, setiap puak mempunyai rekabentuk unik yang tersendiri. Tomahawk ini lebih ringan berbanding yang dihasilkan oleh manusia.</string>
     <string name="GnollTamahawk_Name">tomahawk gnoll</string>
+    <string name="Gnoll_BecomeGuardianDesc">Menjadi Penjaga</string>
     <string name="Gnoll_BecomeWitchdoctorDesc">Menjadi Tabib</string>
     <string name="Gnoll_Desc">Gnoll adalah seakan-akan makhluk berpenampilan dubuk. Mereka menetap di dalam pembentung dan kurungan bawah tanah, naik ke permukaan hanya untuk merompak dari masa ke semasa. Peninjau gnoll merupakah ahli biasa dalam kumpulan mereka, tidaklah begitu kuat seperti si ganas dan tidak begitu bijak berbanding pawang.</string>
     <string name="Gnoll_Gender">masculine</string>
@@ -1224,6 +1234,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MageArmor_Desc">Jika memakai jubah hebat ini, ahli sihir dapat menyihir mantera tanah lebur: semua musuh dalam pandangan si pemakai akan terbakar dan tidak dapat bergerak pada masa yang sama.</string>
     <string name="MageArmor_Name">jubah ahli sihir</string>
     <string name="MageArmor_NotMage">Hanya ahli sihir boleh guna perisai ini!</string>
+    <string name="MagicArrow_Info">Anak panah sihir lama yang baik, pilihan yang tepat apabila anda kehabisan peluru.</string>
+    <string name="MagicArrow_Name">Anak Panah Sihir</string>
     <string name="MagicTorch_Info">Mantera yang menghasilkan cahaya yang dapat menyinari kegelapan kurungan bawah tanah.</string>
     <string name="MagicTorch_Name">Obor ajaib</string>
     <string name="MailArmor_Desc">Rantaian logam yang bersambungan menjadikan perisai zirah ini kuat dan mudah dilentur.</string>
@@ -1355,6 +1367,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="NecromancerRobe_PetLimitReached">Necromancy: had panggilan dicapai (Maks semasa: %d)!</string>
     <string name="Necromancer_ACSpecial">NECROMANCY</string>
     <string name="Necromancy_BecameALich">Anda bertukar menjadi Lich! Kuasa anda semakin kuat dan muatan roh anda bertambah sekali ganda! Tetapi anda telah kehilangan %1$d mata kekuatan.</string>
+    <string name="Necromancy_Death">Anda telah memamalkan semua tenaga hidup semasa mengamalkan nekromansi.</string>
     <string name="Necromancy_NotEnoughSouls">Anda tidak mempunyai roh yang mencukupi untuk menyihir mantera \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_ReincarnationName">Penjelmaan Semula</string>
     <string name="Necromancy_ReincarnationTriggered">Kuasa anda melangkaui kematian! Tetapi anda kehilangan semua roh dan barangan yang telah dikumpul</string>
@@ -1424,6 +1437,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… magnificent! The _snails_, their secrets slowly unfurling like petals in the moonlight. A bounty of information indeed! But you are right, _fifty gold_ is hardly a fitting reward. *Chuckles maniacally*.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">_Sepuluh siput_, sepuluh bisikan dari jurang! Lumut mereka akan dianalisis, esensi mereka diselidiki. Rahasia yang mereka simpan dalam jangkauan.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Batuk dengan kuat* Achoo!\n _Siput-siput_… mereka meluncur. Mereka meleleh. Dan mereka berbisik rahsia zaman yang terlupa. Saya perlukannya, _sepuluh_ daripadanya, cangkerang mereka masih utuh. Adakah anda fikir _lima puluh syiling emas_ sahaja cukup untuk pengetahuan yang begitu berharga?\n Bah! Tidak mengapa. Maklumat yang mereka pegang boleh menjadi kunci untuk menghentikan wabak ini. Atau… ia boleh membawa kita kepada sesuatu yang lebih dahsyat. Anda tentukan.</string>
+    <string name="PlagueDoctorQuest_2_1_Epilogue">_Bunga bulan_…  satu kesaksian tentang sihir yang mewujud dalam dunia ini. Saya telah belajar banyak daripada esensinya, tetapi hadiah anda… dengan segala kemurahanku, ia telah disediakan dengan penuh perhatian. *Memberikan pahlawan Sebuah Ubat Mana yang berkilau*_ Semoga kuasanya membimbing anda melalui bahaya yang menanti.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Cari _moongrace_, di mana kegelapan bertemu dengan kilauan cahaya bulan yang paling malap. _Dua benih_, esensinya, akan mendedahkan rahsia tersembunyi.</string>
     <string name="PlagueDoctorQuest_2_1_Prologue">_Nenek-bunga Moongrace_... bunga-bunga gaib itu, berbisik dengan sihir bulan itu sendiri. Saya sudah mempelajari cahaya bercahaya aneh mereka selama beberapa minggu. Ada kekuatan pada esensinya, energi tersembunyi yang bisa menjadi kunci untuk... sesuatu. *Mengetuk jari tulangnya di dagu dengan berpikir* Tapi sayangnya, mereka langka. Hanya ditemukan di gua-gua terdalam di mana cahaya bulan jarang menembus. Saya butuh dua dari mereka. Dua biji untuk membuka rahasia kekuatan mereka. Dan sebagai gantinya, saya bisa menawarkan sesuatu... sekejap murni, sihir yang kuat. _Potion Of Mana_, berisi esensi moongrace itu sendiri. Ini akan memulihkan jiwa lelah Anda dan memungkinkan Anda menguasai sihir dengan kekuatan yang baru.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">Hebat sekali! _Rumput matahari_, esensinya yang keemasan berdenyut dengan vitaliti. Saya sudah banyak belajar dari struktur halusnya. *Dia memberimu _Posyen Kesihatan_, cecair di dalamnya berkilauan dengan cahaya keemasan yang samar.* Minumlah ini apabila dunia terasa berat menghimpitmu, dan rasakan kehangatan matahari mengembalikan semangatmu.</string>
@@ -1452,6 +1466,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Plant_Seed">benih %s</string>
     <string name="PlateArmor_Desc">Plat logam bersaiz besar digabungkan bersama-sama menjadi satu suit perlindungan terbaik tetapi pemakainya perlu kuat dan dapat tahan beratnya.</string>
     <string name="PlateArmor_Name">perisai plat</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">Terdapat titisan racun berbisa menyeliputi kepala panah ini</string>
     <string name="PoisonArrow_Name">anak panah beracun</string>
     <string name="PoisonBuff_Name">Terkena Racun</string>
@@ -1983,6 +1998,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">hantu sengsara</string>
     <string name="SpiritOfPain_Name_Objective">hantu sengsara</string>
+    <string name="Sprout_Info">Bangunkan biji-biji yang tertidur.\nWalau bagaimanapun, terdapatlah beberapa hijauan di atas tanah untuk mantra ini berjaya.</string>
     <string name="Sprout_Name">Tunas</string>
     <string name="StartScene_ChooseFromSlot">Pilih dari slot simpanan</string>
     <string name="StartScene_ComingSoon">Sebentar lagi</string>
@@ -2833,6 +2849,22 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

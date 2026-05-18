@@ -18,6 +18,7 @@
     <string name="AboutScene_Thanks">Ringraziamenti speciali:</string>
     <string name="AboutScene_Translation">Tradotto da:</string>
     <string name="Accuracy_DecreasedDoctor">Ogni oscillazione di questo %s diffonde imperfezione. Il mio Bisturi cura… questo infetta.</string>
+    <string name="Accuracy_DecreasedDoctorBareHands">Mani nude infettano la mia tecnica. Senza il taglio pulito della Sega, la mia precisione si deteriora nel caos.</string>
     <string name="Acidic_Desc">Queste creature demoniche simili ad aracnidi evitano i combattimenti ravvicinati ad ogni costo, lanciando punte paralizzanti da lunghe distanze.</string>
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">scorpione acido</string>
@@ -984,6 +985,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">elementale del ghiaccio</string>
     <string name="IceElemental_Name_Objective">elementale del ghiaccio</string>
+    <string name="IceGuardianCoreModule_Info">È una costruzione complessa fatta di ghiaccio magico. Una pietra luminosa è posta all\'interno di questa meravigliosa invenzione.</string>
     <string name="IceGuardianCoreModule_Name">Nucleo del Guardiano di Ghiaccio</string>
     <string name="IceGuardianCore_Desc">I Guardiani del Ghiaccio venivano fabbricati dagli antichi coboldi per proteggere le loro grotte. Il potere immagazzinato nel suo nucleo consente al Guardiano del Ghaccio di ricostruirsi fintanto che ha abbastanza energia.</string>
     <string name="IceGuardianCore_DieInfo">Fa così freddo qui, è meglio tornare al livello 14 e cercare una via verso un posto più caldo.</string>
@@ -1881,6 +1883,7 @@ Potrebbe bruciare?</string>
     <string name="SmashSpell_Name">Sfascio</string>
     <string name="SmashSpell_NeedWeapon">Ho bisogno di un\'arma per questa mossa.</string>
     <string name="Snail_Desc">Questo piccolo mollusco è cresciuto abbastanza mangiando fogna, ma è ancora molto lento, il che lo rende un avversario facile da affrontare.</string>
+    <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">chiocciola</string>
     <string name="Snail_Name_Objective">lumaca</string>
     <string name="SnipersMarkBuff_Info">Il marchio è stato lasciato da un cecchino.</string>
@@ -2210,6 +2213,7 @@ Potrebbe bruciare?</string>
     <string name="Wand_Wood_Types_7">Mogano</string>
     <string name="Wand_Wood_Types_8">Bambù</string>
     <string name="Wand_Wood_Types_9">Amarante</string>
+    <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">Poche creature possono contrastare la furia di questo grosso ammasso di piombo e ferro, ma solo gli avventurieri più forti lo possono usare efficacemente. </string>
     <string name="WarHammer_Name">martello da guerra</string>
     <string name="Warlock_Desc">Quando gli interessi dei nani deviarono dall\'ingegneria alle arti arcane, gli sciamani andarono al potere nella città. Iniziarono con la magia elementale, ma presto verterono in demonologia e necromanzia. </string>
@@ -2600,6 +2604,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_barrel_name">Barile</string>
     <string name="town_deco_barrel_wine_desc">Utilizzato per conservare una bevanda così preziosa come il vino.</string>
     <string name="town_deco_barrel_wine_name">Botte di vino</string>
+    <string name="town_deco_beige_carpet_desc">Un tappeto beige elegante intessuto con lana morbida di gnoll.</string>
     <string name="town_deco_beige_carpet_name">Tappeto</string>
     <string name="town_deco_bell_desc">Una tipica campana di chiesa. Sembra che nessuno l\'abbia suonata per molto tempo e persino la corda è sparita.</string>
     <string name="town_deco_bell_name">Campana</string>
@@ -2653,6 +2658,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_emptyboard_desc">Il più comune scaffale per esporre oggetti.</string>
     <string name="town_deco_entrance_desc">Questo ingresso conduce ai livelli superiori del dungeon.</string>
     <string name="town_deco_exit_desc">Non si sa cosa ti aspetta se scendi questi scalini.</string>
+    <string name="town_deco_exit_name">Uscita</string>
     <string name="town_deco_fence_desc">Una staccionata di legno macchiata di neve.</string>
     <string name="town_deco_fence_name">Recinzione</string>
     <string name="town_deco_filmtape_desc">Chissà cosa contiene questo pezzo.</string>
@@ -2677,6 +2683,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_inn_bed_desc">Sembra un letto molto comodo.</string>
     <string name="town_deco_inn_bed_name">Letto</string>
     <string name="town_deco_ladder_desc">Una vecchia scala, dall\'aspetto inaffidabile.</string>
+    <string name="town_deco_ladder_name">Scala</string>
     <string name="town_deco_library_books_name">Materiale di lettura</string>
     <string name="town_deco_library_sign_desc">Pare che ci sia una biblioteca in quell\'edificio</string>
     <string name="town_deco_library_sign_name">Insegna della Biblioteca</string>
@@ -2734,6 +2741,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_slush_name">Nevischio</string>
     <string name="town_deco_snow_desc">Nonostante la fama di questo posto tra gli avventurieri, sorprendentemente c\'è molta neve qui. Sembra che camminino per queste strade in molto pochi</string>
     <string name="town_deco_snow_name">Neve</string>
+    <string name="town_deco_snowdrift_name">Banchina</string>
     <string name="town_deco_snowman_desc">Il pupazzo di neve è una decorazione tradizionale del paese durante il periodo delle feste, messo in questo posto per celebrare specialmente il giorno di \&quot;Dungeonale\&quot;, quando i mostri invasero il dungeon</string>
     <string name="town_deco_snowman_name">Pupazzo di neve</string>
     <string name="town_deco_snowy_plate_desc">Questa antica targa è ricoperta dalla neve</string>
@@ -2795,6 +2803,14 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
+
 
 
 

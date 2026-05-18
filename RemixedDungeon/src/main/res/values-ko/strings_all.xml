@@ -54,6 +54,7 @@
     <string name="Amulet_Name">옌더의 부적</string>
     <string name="AnesthesiaBuff_Info">통증을 느끼지 않으며 공격으로 깨어나지 않지만 여전히 피해를 입습니다.</string>
     <string name="AnesthesiaBuff_Name">Anesthesia</string>
+    <string name="Anesthesia_Cast">%s 깊은 꿈 없는 잠에 빠진다.</string>
     <string name="Anesthesia_Info">대상에 깊고 부자연스러운 잠을 유도합니다. 가장 격렬한 공격으로도 이 잠에서 깨어나지 않습니다.</string>
     <string name="Anesthesia_Name">마취</string>
     <string name="Ankh_Info">영생을 상징하는 고대의 물건으로 소유자의 생명을 되살릴 수 있는 능력이 있습니다. 부활할 시 장착하지 않은 모든 아이템은 손실됩니다.</string>
@@ -242,6 +243,7 @@
     <string name="BlackSkullOfMastery_Lich">리치가 되세요</string>
     <string name="BlackSkullOfMastery_Name">영혼을 부르는 자</string>
     <string name="BlackSkullOfMastery_Necromancer">마법을 파괴하기</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">또는 주문을 _파괴하면_ 이 아티팩트를 의도대로 사용할 수 있습니다.</string>
     <string name="BlackSkull_Activated">검은 해골이 깨어났습니다!</string>
     <string name="BlackSkull_Deactivated">검은 해골은 다시 휴식기에 들어갔습니다..</string>
     <string name="BlackSkull_Info">작은 흑요석 해골입니다. 네크로폴리스의 힘의 원천이었지만, 리치가 쓰러진 후 모든 힘을 잃은것으로 보입니다. 하지만 손에 쥐고 있으면 이것이 굶주리고 있다는 이상한 생각이 스칩니다.</string>
@@ -277,6 +279,7 @@
     <string name="BlindnessBuff_Name">실명</string>
     <string name="BloodTransfusion_Drained">생명력이 당신의 펫에게서 당신에게로 흘러들어옵니다.</string>
     <string name="BloodTransfusion_Info">대상으로부터 거의 모든 피를 흡수하여 자신을 치유합니다. 희생과 생존의 어두운 의식.</string>
+    <string name="BloodTransfusion_Name">혈액 수혈</string>
     <string name="BloodTransfusion_WontAgreed">대상이 생명 정수 추출에 저항합니다.</string>
     <string name="BodyArmorBuff_Info">이동 속도를 희생하여 방어력이 증가합니다.</string>
     <string name="BodyArmorBuff_Name">바디 아머</string>
@@ -437,6 +440,7 @@
     <string name="Char_YouMissed">%1$s %2$s 당신의 공격</string>
     <string name="ChargrilledMeat_Info">괜찮은 스테이크처럼 구워졌다.</string>
     <string name="ChargrilledMeat_Name">익힌 고기</string>
+    <string name="CharmBuff_Info">정신과 육체가 매혹되었다!</string>
     <string name="CharmBuff_Name">매혹</string>
     <string name="CharmSpell_Cast">%s 매혹되었다.</string>
     <string name="CharmSpell_Info">모두 사랑이 필요하죠, 그렇죠?</string>
@@ -539,6 +543,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Crab_Desc">이 거대한 게는 하수구 먹이 사슬의 최상위 포식자다. 녀석은 매우 빠르고 녀석의 딱딱한 껍질은 큰 충격을 견딜 수 있다.</string>
     <string name="Crab_Name">하수구 게</string>
     <string name="Crab_Name_Objective">하수구 게</string>
+    <string name="CrippleBuff_Info">몸은 장애를 겪지만 싸움은 계속된다.</string>
     <string name="CrippleBuff_Name">불구</string>
     <string name="Crystal_Desc">크고 빛나는 크리스탈이 공중에 떠있습니다. 아마도 이것은 강력한 마법으로 가득 차 있을 것입니다.</string>
     <string name="Crystal_Gender">masculine</string>
@@ -702,6 +707,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Eye_Name">눈알 악마</string>
     <string name="Eye_Name_Objective">눈알 악마</string>
     <string name="Facilitations_Descriptions_0">변이체들은 항상 경멸과 두려움을 가지고 대우받았지만, 배고픔이 없는 것이 다시 한 번 당신에게 우월성을 줄 것입니다. 이번에는 던전의 심연을 정복하는 데 있어 말입니다.</string>
+    <string name="Facilitations_Descriptions_1">당신의 부모가 누구였는지는 아직 알려지지 않았지만, 자연적인 트롤 같은 재생능력이 곧 올 전투 흉터를 치유하는 데 도움이 될 것입니다.</string>
     <string name="Facilitations_Descriptions_3">Ogrelskininden yapılmış kayışı sıktığınızda, her yeni nesile aktarılan bu kayışla bir adım attığınızda bilinmezliğe doğru ilerliyorsunuz.</string>
     <string name="Facilitations_Names_0">배고픔 없음</string>
     <string name="Facilitations_Names_1">트롤 시체</string>
@@ -1059,6 +1065,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="IronKey_Info">열쇠에 있는 홈이 많이 닳아있고 가죽끈은 오래 써서 낡아 보입니다. 이걸로 어떤 문을 열 수 있을까요?</string>
     <string name="IronKey_Name">열쇠</string>
     <string name="ItemSprite_Info1">drop aside: %1$.1f %2$.1f</string>
+    <string name="Item_ACAlchemy">연금술</string>
     <string name="Item_ACDrop">버리기</string>
     <string name="Item_ACThrow">던지기</string>
     <string name="Item_DirThrow">던질 방향을 선택하세요</string>
@@ -1444,6 +1451,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PlagueDoctorQuest_3_2_Epilogue">*그는 고개를 뒤로 젖히고 비명 같은 웃음을 터뜨리며, 그 소리는 칙칙한 실험실 안에 울려 퍼졌다* 훌륭하군! 우리 앞에 서 있는 _사신 기사_! 그 존재에서 뿜어져 나오는 힘은... 취하게 만드는구나! *그는 당신을 향해 돌아서며, 열광적인 강렬함으로 빛나는 눈빛을 보내며* 그리고 당신을 위한 보상, 당신의 용맹함에 걸맞는 선물이 있으니: _힘의 물약_! 이 물약이 어떤 적도 물리칠 수 있는 힘을 당신에게 부여하기를 바라노라! 자... 이제 우리의 표본을 살펴보자. 바로 그 본성은 삶의 법칙 자체를 다시 쓸 수 있을 만한 비밀을 간직하고 있다네! *그는 미친 듯한 미소를 지으며 _사신 기사_ 에게 다가서면서, 거품이 나는 초록색 액체가 든 병을 들고 있다*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">이것은 단순한 짐승이 아닙니다! 이것은 네크로맨서의 힘에 대한 살아있는 증거입니다! 살아서, 다치지 않고 포획하세요! 이 _죽음의 기사_... 그것이 열쇠입니다!</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">_Death Knight_! *Its voice cracks with excitement, its bony fingers trembling as it clutches a bubbling vial filled with a murky, phosphorescent liquid*. Such a creature… a beacon of undeath! To capture one, alive… it would be… monumental. Imagine the secrets we could unlock! The power that flows through its skeletal veins! Yes, a _Death Knight_! It\'s crucial to my research! For it will allow us to delve deeper… into the mysteries of life… and death itself!</string>
+    <string name="PlagueDoctorQuest_4_1_Epilogue">훌륭하다! 드워프 사령술사들, 그들의 정신은 이제 나의 탐구 대상이다! 그런 일그러진 타락된 마법… 정말 매혹적이다. *그는 반짝이는 병을 들어 올린다, 끈적한 붉은 액체로 가득 차 있다.* 이것은 당신을 위한 것이다: 강력의 오차! 그 힘을 마시고, 산들의 힘이 당신의 혈관을 타고 흐르는 것을 느낄 것이다! 이 희생으로 얻은 지식이 궁극적으로 더 높은 목적을 위해 사용될 것이라는 것을 기억하라… 죽음보다 더 나쁜 운명으로부터 우리 모두를 구원할 수도 있다.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">_드워프 흑마법사_ 5 구, 그들의 시체는 여전히 어둠의 마법의 희미한 울림으로 맥박치고 있습니다! 저를 위해 그것을 회수해 주시면, 비할 데 없는 힘의 물약으로 보상해 드리겠습니다. 열 사람의 힘을 당신에게 불어넣어 줄 _힘의 물약_ 말입니다!</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">훌륭하군! 다섯 마리의 _코볼트 빙술사_, 이제 그들의 얼음 같은 정수를 탐구할 수 있게 되었어! 얼어붙은 황야와의 그들의 연결이라니… 정말 매혹적이군. 그들이 물을 다루는 방식… 정말 놀라워.  *그가 빛나는 진홍빛 액체로 가득 찬 작은 병을 당신에게 건넨다* 이것은 당신의 용감한 노력에 대한 보상일세: _힘의 물약_! 깊이 마시고 열 명의 전사 같은 힘이 당신의 혈관을 타고 흐르는 것을 느끼게! 기억하게, 지식은 힘이야… 그리고 힘은 다가오는 어둠에 대항할 수 있는 유일한 무기라네. 이제… 이 얼음 같은 영혼들을 해부하여 그들의 오싹한 비밀을 밝혀내세!</string>
     <string name="PlagueDoctorQuest_4_2_InProgress"> \'_코볼드 아이스맨서_\' 5마리의 시신을 회수하라! 그들의 얼어붙은 몸에는 차가운 마법의 비밀을 풀 수 있는 열쇠가 숨겨져 있다! </string>
@@ -1734,6 +1742,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ScaleArmor_Desc">가죽 조끼 표면에 철판을 꿰메어 유연하면서도 방어력이 강한 갑옷을 만들었다.</string>
     <string name="ScaleArmor_Name">미늘 갑옷</string>
     <string name="ScarecrowNPC_Desc">빼도 박도 못하게 이 허수아비는 당신의 모든 움직임을 보고 있습니다. 이것의 붉게 반짝이는 눈은 당신을 꿰뚫어보고 있습니다. 그러나 놀랍게도, 당신은 위협을 느끼지 않습니다.</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">허수아비</string>
     <string name="ScarecrowNPC_Name_Objective">허수아비</string>
     <string name="ScarecrowNPC_Quest_End">와 신난다, 좋아!\n 이제 넌 진짜 음식을 얻을 거야!</string>
@@ -2599,6 +2608,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Worm_Name_Objective">애벌래</string>
     <string name="Wraith_Defense">회피</string>
     <string name="Wraith_Desc">그들의 묘지의 유령들은 복수심에 불타는 죄인의 영혼이다. 영체로 이루어져 있기 때문에 일반 무기로 맞추기가 매우 어렵다.</string>
+    <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">유령</string>
     <string name="Wraith_Name_Objective">유령</string>
     <string name="WrnExperimental_hint">이 이상하고 뒤틀린 세계가 너무 가혹하다면 시작 화면-&gt; 설정-&gt; 게임플레이 메뉴에서 해당 옵션을 비활성화하고 새 게임을 시작하거나 다른 저장 파일을 불러오세요.</string>
@@ -2623,6 +2633,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="YogsHeart_Name">요그의 심장</string>
     <string name="YogsHeart_Name_Objective">요그의 심장</string>
     <string name="YogsTeeth_Desc">날카로운 이빨로 가득 찬  고대신의 거대한 입입니다. 그의 모든 것을 파괴하고 포식하고자 하는 욕구의 상징입니다.</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">요그의 이빨</string>
     <string name="YogsTeeth_Name_Objective">요그의 이빨</string>
     <string name="ZombieGnoll_Desc">좀비 놀의 뒤틀리고 부숴진 몸은 더 이상 사람으로도, 하이에나로도 보이지 않는다. 죽이고 먹고 싶어하는 잔혹한 충동으로 가득 찬 썩은 살과 뼈의 더미일 뿐이다.</string>
@@ -2674,6 +2685,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_brown_carpet_name">카펫</string>
     <string name="town_deco_cabinet_desc">여러 개의 문과 선반이 달린 넓은 수납장입니다.</string>
     <string name="town_deco_cabinet_name">캐비닛</string>
+    <string name="town_deco_canvas_desc">벽에 걸린 두꺼운 천 조각.</string>
     <string name="town_deco_canvas_name">캔버스</string>
     <string name="town_deco_carpet_desc">특별한 손님들을 위한 호화스러운 레드 카펫이 깔려 있다.</string>
     <string name="town_deco_carpet_name">카펫</string>
@@ -2774,11 +2786,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_roof_name">지붕</string>
     <string name="town_deco_rope_desc">수작업으로 비벼 만든 밧줄입니다.</string>
     <string name="town_deco_rope_name">밧줄</string>
+    <string name="town_deco_rug_name">카arpet</string>
     <string name="town_deco_screen_desc">이 불가사의한 캔버스는 스크린이라고 불리며, 움직이는 사진들을 보여줄 수 있다.</string>
     <string name="town_deco_screen_name">스크린</string>
     <string name="town_deco_scrolls_desc">이 먼지로 뒤덮인 책장은 여러 종류의 스크롤과 책들로 채워져있다.</string>
     <string name="town_deco_scrolls_name">두루마리</string>
     <string name="town_deco_shelf_desc">빈 선반</string>
+    <string name="town_deco_shelf_full_desc">다양한 소품들이 이 선반에 놓여 있다.</string>
     <string name="town_deco_shelf_name">선반</string>
     <string name="town_deco_shelving_desc">다양한 음료와 스낵을 찾을 수 있는 선반이 있는 인상적인 크기의 선반입니다.</string>
     <string name="town_deco_shieldboard_desc">여러 방패가 벽에 걸려 있다. 아직 판매하지는 않는 듯하다.</string>
@@ -2787,7 +2801,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_shop_sign_name">상점 표지판</string>
     <string name="town_deco_skullboard_desc">이 두개골은 예상치 못한 공포의 순간을 완벽하게 담아냈다.</string>
     <string name="town_deco_skullboard_name">트로피 진열대</string>
+    <string name="town_deco_skulls_desc">광물에서 온 생물들의 연마된 두개골.</string>
     <string name="town_deco_slush_desc">Salju ini mula meleleh, mengubah tempat di sekelilingnya menjadi bubur.</string>
+    <string name="town_deco_slush_name">흐물</string>
     <string name="town_deco_snow_desc">모험가들에 대한 이곳의 저명함에도 불구하고, 마치 어떤 외부인도 발을 들이지 않은 것처럼 많은 눈이 쌓여 있다.</string>
     <string name="town_deco_snow_name">눈</string>
     <string name="town_deco_snowdrift_desc">상당히 큰 snow pile이고 아무도 청소하려는 것 같지 않습니다.</string>
@@ -2858,6 +2874,22 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

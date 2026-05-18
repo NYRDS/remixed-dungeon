@@ -1,6 +1,7 @@
 <resources>
     <string name="AC_Devour">吞噬</string>
     <string name="AC_Dissect">解剖</string>
+    <string name="AC_Kick">踢</string>
     <string name="AC_Necromancy">死靈法術</string>
     <string name="Abilities_Common">普通法術</string>
     <string name="Abilities_Default">精通</string>
@@ -281,6 +282,7 @@
     <string name="Bleeding_Death">你流血過多而死……</string>
     <string name="BlessedBuff_Info">祝願那些被祝福的人們精準度和閃避增加！</string>
     <string name="BlessedBuff_Name">祝福</string>
+    <string name="BlindnessBuff_Info">완전히 눈이 감겨, 주변의 소리만 들릴 뿐이다.</string>
     <string name="BlindnessBuff_Name">目盲</string>
     <string name="BloodTransfusion_Name">輸血</string>
     <string name="BodyArmorBuff_Info">犧牲移動速度增加護甲。</string>
@@ -697,6 +699,7 @@
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">此武器以特製合金製造，故它比一般匕首更輕。</string>
     <string name="ElvenDagger_Name">矮人匕首</string>
+    <string name="EncumbranceBuff_CharAct_1">我沒有足夠的力量來正確使用%s。</string>
     <string name="EncumbranceBuff_CharAct_2">這個%s太重了，我無法有效地使用它。</string>
     <string name="EncumbranceBuff_CharAct_3">在我使用%s之前，我需要鍛鍊我的力量。</string>
     <string name="EncumbranceBuff_CharAct_5">我現在無法承受%s的重量。</string>
@@ -924,6 +927,7 @@
     <string name="HeroClass_NecromancerPerks_2">死靈法師初始擁有一件獨特的靈魂長袍。裝備後，每殺死一個生物會給他提供1點法力值。</string>
     <string name="HeroClass_NecromancerPerks_3">死靈法師開局有一把7層的骷髏鑰匙。</string>
     <string name="HeroClass_NecromancerPerks_4">治療藥水開局時就已經鑒定好了。</string>
+    <string name="HeroClass_None">平民</string>
     <string name="HeroClass_PlagueDoctorPerks_0">瘟疫医生从被杀的敌人身上收集[黄色:毒性腺体]、[黄色:腐烂器官]、[黄色:骨片]。</string>
     <string name="HeroClass_PlagueDoctorPerks_1">開始時擁有瘟疫面具（對所有氣體免疫）和骨鋸。暴擊會掉落額外部件，鋸子對麻痹敵人造成+50%傷害。</string>
     <string name="HeroClass_PlagueDoctorPerks_2">麻痹氣體和毒性氣體的藥水已預先辨識。</string>
@@ -2926,6 +2930,10 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
 
 
 

@@ -351,6 +351,7 @@
     <string name="Carcass_Devoured">Ти з\'їв труп %s!</string>
     <string name="Carcass_DissectFailed">Ти розсікаєш %s, але не знаходиш нічого цінного.</string>
     <string name="Carcass_DissectMessage">Ви розчленували труп і отримали %s.</string>
+    <string name="Carcass_Info">рештки повністю мертвого %s.</string>
     <string name="Carcass_Kick">Ця істота, %s, совершенно мертва, немає сенсу бити її далі.</string>
     <string name="Carcass_Name">решки %s</string>
     <string name="Carcass_TooFarToDissect">Вам потрібно підійти ближче, щоб розчленувати труп.</string>
@@ -750,6 +751,7 @@
     <string name="Facilitations_Names_0">Без голоду</string>
     <string name="Facilitations_Names_1">Тіло троля</string>
     <string name="Facilitations_Names_2">Дух джина</string>
+    <string name="Facilitations_Names_3">Гігантська сила</string>
     <string name="Fadeleaf_Desc">Доторк до Портальця перенесе тебе у випадкове місце цього рівня</string>
     <string name="Fadeleaf_Name">Порталець</string>
     <string name="FetidRat_Desc">Цей сумчастий щур більший ніж звичайний, і він оточений смердючою хмарою.</string>
@@ -975,6 +977,7 @@
     <string name="HeroSubClass_DescSnip">_Снайпери_ здатні помітити вади у ворожій броні, практично ігноруючи її при використанні зброї дальнього бою.</string>
     <string name="HeroSubClass_DescWarL">Після вбивства ворога, _Чорнокнижник_ поглинає його душу, лікуючи себе та вгамовуючи голод.</string>
     <string name="HeroSubClass_DescWard">В наслідок своєї близькості до природи, _Травниця_ може ліпше збирати краплі роси та насіння з рослин. Також контакт з високою травою дає тимчасовий бонус до броні.</string>
+    <string name="HeroSubClass_DescWitchdoctor">Заклинання надають _Шамана_ магічний щит, який повністю захищає його від вхідного шкоди.</string>
     <string name="HeroSubClass_NameAssa">душогуб</string>
     <string name="HeroSubClass_NameBatM">бойовий маг</string>
     <string name="HeroSubClass_NameBers">берсеркер</string>
@@ -2647,6 +2650,7 @@
     <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Типовий дерев\'яний арбалет, схоже він призначений для стрільби стрілами для лука.</string>
     <string name="WoodenCrossbow_Name">Дерев\'яний арбалет</string>
+    <string name="WoodenShield_desc">Грубо виготовлений дерев\'яний щит - найпростіший щит, доступний у гри. Він круглий і може блокувати деякі пошкодження.</string>
     <string name="WoodenShield_name">Деревʼяний щит</string>
     <string name="Worm_Desc">Навіть частково схованим під підлогою, черв видається гігантським. Його тіло покрито залишками згнилої плоті, обмащеною слизом. Здоровенні щелепи чудовиська недвозначно натякають на те, яким чином він пересувається під поверхнею.</string>
     <string name="Worm_Gender">masculine</string>
@@ -2745,6 +2749,7 @@
     <string name="town_deco_church_sign_desc">Схоже, що в цій будівлі знаходиться церква.</string>
     <string name="town_deco_cinema_sign_desc">Схоже тут знаходиться будівля кінотеатру.</string>
     <string name="town_deco_cinema_sign_name">Вивіска кінотеатру</string>
+    <string name="town_deco_clock_name">Годинник</string>
     <string name="town_deco_common_bed_desc">Звичайне ліжко</string>
     <string name="town_deco_common_bed_name">Ліжко</string>
     <string name="town_deco_common_door_desc">Добре вихований авантюрист не повинен вторгатися у приватну власність, без запрошення.</string>
@@ -2893,6 +2898,7 @@
     <string name="town_deco_trapdoor_name">Люк</string>
     <string name="town_deco_tree_desc">Виникає дивне відчуття, дивлячись на живе дерево в безпосередній близькості від входу до підземелля, наповнені жахом та смертю.</string>
     <string name="town_deco_tree_name">Дерево</string>
+    <string name="town_deco_urn_desc">Глиняний урна, можливо, з кимось попелом.</string>
     <string name="town_deco_vat_desc">Цей кам\'яний чан заповнений святій водою до самого верху.</string>
     <string name="town_deco_wall_beam_desc">Досить надійна опора для даної споруди.</string>
     <string name="town_deco_wall_beam_name">Балка</string>
@@ -2926,6 +2932,12 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
+
 
 
 

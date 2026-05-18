@@ -1163,6 +1163,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="King_Info3">Ne cüretle!</string>
     <string name="King_Name">Cücelerin Kralı</string>
     <string name="King_Name_Objective">Cücelerin Kralı</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Info">Parmak eklemlerin uyacak şekilde şekillendirilmiş demirden bir parça.</string>
     <string name="Knuckles_Name">muşta</string>
     <string name="KoboldIcemancer_Desc">Kobold Buzbükücüleri toplumun elitleriydi. Kayda değer savaşçılar, büyücüler ve en önemlisi, biliminsanlarıydı. Antik buz efendileri buz kontrolü sanatını ele geçirmişlerdi ve kompleks makineler özel büyülerle güçlendirilmişti.</string>
@@ -3014,6 +3015,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

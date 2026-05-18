@@ -773,6 +773,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="FriedFish_Info">Ikan Goreng, keliatan nya lezat</string>
     <string name="FriedFish_Name">ikan goreng</string>
     <string name="FriedFish_Taste">lezat</string>
+    <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Anda dapat merasakan aura membeku berasal dari ujung anak panah.</string>
     <string name="FrostArrow_Name">anak panah beku</string>
     <string name="FrostAuraBuff_Info">Embun beku mengelilingi tubuh, yang memperlambat semua yang ada di dekatnya.</string>
@@ -1655,6 +1656,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="RatSkull_Info2">Di sisi lain, ini menunjukkan bahwa pemiliknya mampu membunuh tikus, bahkan tikus besar dan bau.</string>
     <string name="RatSkull_Name">tengkorak tikus raksasa</string>
     <string name="Rat_Desc">Tikus marsupialia bersifat agresif, tapi penghuni lemah di saluran bawah tanah. Mereka dapat menjadi berbahaya dalam jumlah banyak.</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">tikus marsupialia</string>
     <string name="Rat_Name_Objective">tikus marsupialia</string>
     <string name="Ration_Info">Tidak ada yang berkualitas tinggi disini: daging kering, beberapa biskuit - sesuatu seperti itu.</string>
@@ -2011,6 +2013,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpiderElite_Name">penjaga elit laba-laba</string>
     <string name="SpiderElite_Name_Objective">penjaga elit laba-laba</string>
     <string name="SpiderExploding_Desc">Pekerja keras saat damai, makhluk ini tidak akan ragu untuk menyerang musuh mereka dan mengambil tanaman pertama yang mereka lalui, mengubah mereka menjadi bom hidup.</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">laba-laba pekerja</string>
     <string name="SpiderExploding_Name_Objective">laba-laba pekerja</string>
     <string name="SpiderGuard_Desc">Mirip seperti tentara laba-laba penjaga telah bersumpah untuk melindungi kerajaan mereka. Racun dari penjaga dipakai untuk membekukan target mereka yang menyebabkan kelumpuhan.</string>
@@ -2032,6 +2035,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpiderQueenCarapace_Name">Karapas Ratu Laba-laba</string>
     <string name="SpiderQueen_Desc">Tubuh dari perempuan cantik campur laba-laba mengerikan. Semua makhluk di sarang ini adalah pembantunya. Menemui perempuan hebat ini dapat menjadi pengalaman yang mematikan. Karena Anda adalah penyusup!</string>
     <string name="SpiderQueen_DieInfo">Ratu Laba-laba terbunuh! Sekarang saya harus kembali ke level 5 dan melanjutkan perjalanan ke Kedalaman.</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">ratu laba-laba</string>
     <string name="SpiderQueen_Name_Objective">ratu laba-laba</string>
     <string name="SpiderServant_Desc">Tentara adalah unit terbanyak di sarang laba-laba. Lahir untuk menjaga wilayahnya. Chelicerae tentara membentuk kelenjar beracun untuk meracuni musuhnya.</string>
@@ -2315,6 +2319,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WarriorArmor_NotWarrior">Hanya pejuang yang dapat menggunakan zirah ini!</string>
     <string name="WarriorArmor_Prompt">Pilih arah untuk melompat</string>
     <string name="WaterElemental_Desc">Elemental air dapat ditemukan di dekat jumlah air yang banyak. Biasanya gelombang yang terikat dengan ajaib ini hanya berkelana.</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name">elemental air</string>
     <string name="WaterElemental_Name_Objective">elemental air</string>
     <string name="WaterOfAwareness_Info"> The power of knowledge radiates from the water of this well. Take a sip from it to reveal all secrets of your equipped items.</string>
@@ -2500,6 +2505,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndInstallingMod_skipping_file">Melewati %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Jalankan Resep</string>
     <string name="WndItemAlchemy_SelectRecipe">Pilih resep</string>
+    <string name="WndItemAlchemy_Title">Resep alkimia dengan %s</string>
     <string name="WndItemAlchemy_Transmute">Transmutasi</string>
     <string name="WndJournal_Levels">Level</string>
     <string name="WndJournal_Logbook">Buku catatan</string>
@@ -2966,6 +2972,12 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
 
 
 
