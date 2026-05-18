@@ -205,6 +205,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Bat_Name_Objective">vámpír denevér</string>
     <string name="BattleAxe_Info">A hatalmas acél fej jelentős lendülettel látje el ennek a csatabárdnak minden csapását.</string>
     <string name="BattleAxe_Name">csatabárd</string>
+    <string name="Bee_Desc">B malgré leur petite taille, les abeilles protègent farouchement leur ruche. Elles ne vivent pas longtemps cependant.</string>
     <string name="Bee_Name">méh</string>
     <string name="Bee_Name_Objective">méh</string>
     <string name="BellaNPC_Amulet_F">Üdvözöllek cukipofa, mi van a kezedben? Azta, micsoda rendkívüli amulett! Mintha te... te sokkal fényesebben ragyognál másokhoz képest. Mit szólnál ahhoz, ha elmennénk sétálni és közben megbeszélnénk a közös jövőnket?</string>
@@ -904,6 +905,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="HeroClass_None">közember</string>
     <string name="HeroClass_PlagueDoctorPerks_0">A pestis doktorok mérgező mirigyeket, rothadt szerveket, csontszilánkokat és gonosz esszenciát gyűjtenek a legyőzött ellenségektől. A vért idővel gyűjtik össze, és alkímiához használják fel.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Kezdjük egy pestismaszkkal (immunis minden gázhatás ellen) és egy csontfűrésszel. A kritikus találatok extrarészeket dobhatnak, és a fűrész +50% sebzést ejt a bénult ellenfeleken.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Kezdődjön egy [sárga:Plague Mask]-sal (immun a gázokra) és egy [sárga:Bone Saw]-val. Kritikus találatokkal extra részek esnek le, és a Fűrész paralizált ellenségre 1.5x sebzést ad.</string>
     <string name="HeroClass_Priest">Pap</string>
     <string name="HeroClass_Rog">tolvaj</string>
     <string name="HeroClass_RogPerks_0">A Zsiványok az Árnyék Gyűrűjével +1 kezdenek. </string>
@@ -2831,6 +2833,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

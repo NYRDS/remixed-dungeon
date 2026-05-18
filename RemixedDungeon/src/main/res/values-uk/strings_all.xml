@@ -461,6 +461,7 @@
     <string name="ChargrilledMeat_Name">смажене м\'ясо</string>
     <string name="CharmBuff_Info">Розум і тіло зачаровані!</string>
     <string name="CharmBuff_Name">Зачарований</string>
+    <string name="CharmSpell_Cast">%s закохнений.</string>
     <string name="CharmSpell_Info">Кожен заслуговує на трішку кохання, чи не так?</string>
     <string name="CharmSpell_Name">Чар</string>
     <string name="Chasm_Chasm">Провалля</string>
@@ -2791,6 +2792,7 @@
     <string name="town_deco_hay_name">Сіно</string>
     <string name="town_deco_identifier_sign_desc">Схоже ворожка знаходиться в цій будівлі.</string>
     <string name="town_deco_identifier_sign_name">Вивіска магічної кулі</string>
+    <string name="town_deco_inn_bed_desc">Схоже на дуже зручне ліжко.</string>
     <string name="town_deco_inn_bed_name">Ліжко</string>
     <string name="town_deco_ladder_desc">Стара драбина, не надійна на вигляд.</string>
     <string name="town_deco_ladder_name">Драбина</string>
@@ -2920,6 +2922,8 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

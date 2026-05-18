@@ -432,13 +432,13 @@
     <string name="Char_StaSlowed">감속</string>
     <string name="Char_StaStunned">기절</string>
     <string name="Char_StaVision">비전</string>
-    <string name="Char_Stole_1">%1$s가 %3$s로부터 %2$s를 훔쳤다!</string>
+    <string name="Char_Stole_1">%1가 %2을(를) %3에게서 훔쳤다!</string>
     <string name="Char_Stole_2">%1 ha rubato %2 da %3!</string>
     <string name="Char_YouMissed">%1$s %2$s 당신의 공격</string>
     <string name="ChargrilledMeat_Info">괜찮은 스테이크처럼 구워졌다.</string>
     <string name="ChargrilledMeat_Name">익힌 고기</string>
     <string name="CharmBuff_Name">매혹</string>
-    <string name="CharmSpell_Cast">%s은(는) 매혹되었다.</string>
+    <string name="CharmSpell_Cast">%s 매혹되었다.</string>
     <string name="CharmSpell_Info">모두 사랑이 필요하죠, 그렇죠?</string>
     <string name="CharmSpell_Name">매혹</string>
     <string name="Chasm_Chasm">틈</string>
@@ -789,6 +789,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Gnoll_BecomeGuardianDesc">지킴이가 되다</string>
     <string name="Gnoll_BecomeWitchdoctorDesc">주술사가 되세요</string>
     <string name="Gnoll_Desc">놀은 하이에나처럼 생긴 인간형 괴수이다. 녀석은 하수구나 던전에 살면서 때때로 지상을 습격한다. 놀 정찰병은 그들 무리의 일반 구성원이다. 녀석은 놀 정예병만큼 강하지도 않고 놀 주술사만큼 똑똑하지도 않다.</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">놀 정찰병</string>
     <string name="Gnoll_Name_Objective">놀 정찰병</string>
     <string name="Gold_Collect">나중에 상점에서 사용할 수 있는 금화를 수집하세요.</string>
@@ -1033,6 +1034,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="InnKeeperNPC_Name_Objective">여관 주인</string>
     <string name="InnServant_Phrase_1">으휴, 할 일이 아직도 이렇게 많아!</string>
     <string name="InnServant_Phrase_2">이 취한 놈 때문에 미치겠어!</string>
+    <string name="InnServant_Phrase_3">깨끗해 보인다</string>
     <string name="InnServant_Phrase_4">Oh my, so many guests today</string>
     <string name="Instability_Name_0">불안정한 %s</string>
     <string name="Instability_Name_1">불안정한 %s</string>
@@ -1955,6 +1957,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name_Objective">거미 정예 호위병</string>
     <string name="SpiderExploding_Desc">평화로울 때는 성실한 일꾼이지만, 이 짐승들은 적에게 돌진하고 마주치는 식물을 움켜 잡는것을 마다하지 않음으로써 자신을 살아있는 폭탄으로 변모시킨다.</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">거미 일꾼</string>
     <string name="SpiderExploding_Name_Objective">거미 일꾼</string>
     <string name="SpiderGuard_Desc">병사들처럼 거미 경비병도 그들의 왕국을 지킨다고 맹세했습니다. 거미 경비병의 독은 목표물을 마비시켜 움직이지 못하게 하는데 사용됩니다.</string>
@@ -2850,6 +2853,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
 
 
 

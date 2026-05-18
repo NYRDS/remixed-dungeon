@@ -430,6 +430,7 @@
     <string name="ChargrilledMeat_Name">carne grigliata</string>
     <string name="CharmBuff_Info">La mente e il corpo sono stati stregati!</string>
     <string name="CharmBuff_Name">Affascinato</string>
+    <string name="CharmSpell_Cast">%s è incantato.</string>
     <string name="CharmSpell_Info">Ognuno merita un po\' d\'amore, vero?</string>
     <string name="CharmSpell_Name">Fascino</string>
     <string name="Chasm_Chasm">Baratro</string>
@@ -1285,6 +1286,7 @@ Potrebbe bruciare?</string>
     <string name="Mob_StaAmokStatus">Questo %1$s è impazzito</string>
     <string name="Mob_StaControlledStatus">Questo %s è sotto una possessione maledetta</string>
     <string name="Mob_StaFleeingStatus">Questo %s sta fuggendo.</string>
+    <string name="Mob_StaFleeingStatus2">Questo %1 fugge da %2</string>
     <string name="Mob_StaHuntingStatus">Questo %s sta cacciando.</string>
     <string name="Mob_StaPassiveStatus">Questo %s è passivo.</string>
     <string name="Mob_StaSleepingStatus">Questo %s sta dormendo.</string>
@@ -1392,6 +1394,7 @@ Potrebbe bruciare?</string>
     <string name="PlagueDoctorMaskHood_Name">Maschera del Dottore della Peste con cappuccio</string>
     <string name="PlagueDoctorMask_Info">Questo… non è solo una maschera. È… una barriera. Uno scudo contro le forze della decadenza contro cui il Dottore della Peste combatte instancabilmente. Realizzata nel miglior legno di ebano, accuratamente scolpita con il volto di un teschio famelico. Le sue orbite vuote sono piene di gemme di ametista scintillanti che pulsano debolmente, come carboni morenti di un fuoco. Ogni respiro che fai, ogni parola che pronunci, è filtrata attraverso una rete labirintica di tubi e filtri. Una mistura di erbe potenti e spezie esotiche impregna l\'aria all\'interno, mascherando la puzza di morte che ti si attacca addosso come un sudario.</string>
     <string name="PlagueDoctorMask_Name">Maschera del Dottore della Peste</string>
+    <string name="PlagueDoctorNPC_After_Quest_2">Tu sei ancora qui? Ecco, prendi questo.</string>
     <string name="PlagueDoctorNPC_Desc">L\'intero corpo di questa persona ingobbita è nascosto sotto una tuta di pelle. Inoltre, da lui proviene un amaro odore di medicinali e... aglio?</string>
     <string name="PlagueDoctorNPC_Name">dottore della peste</string>
     <string name="PlagueDoctorNPC_Name_Objective">medico della peste</string>
@@ -2788,6 +2791,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 

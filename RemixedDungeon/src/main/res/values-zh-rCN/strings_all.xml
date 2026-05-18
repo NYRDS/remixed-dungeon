@@ -1,5 +1,6 @@
 <resources>
     <string name="AC_Devour">吞噬</string>
+    <string name="AC_Dissect">解剖</string>
     <string name="AC_Kick">踹</string>
     <string name="AC_Necromancy">死灵术</string>
     <string name="Abilities_Common">普通咒语</string>
@@ -418,6 +419,7 @@
     <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">与混沌之力融合的法杖，不就是众法师或敬或畏之物吗？</string>
     <string name="ChaosStaff_Name">混沌法杖</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">混乱为刃，力量蕴内。刀身发颤，砍山分洪，力无不逮。唯有强者，方能使用。</string>
     <string name="ChaosSword_Name">混沌剑</string>
     <string name="CharAction_Charm">魅惑</string>
@@ -2984,6 +2986,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

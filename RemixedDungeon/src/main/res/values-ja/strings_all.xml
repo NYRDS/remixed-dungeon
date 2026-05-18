@@ -210,6 +210,7 @@
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">吸血コウモリ</string>
     <string name="Bat_Name_Objective">吸血コウモリ</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info"> この巨大な鋼鉄のバトルアックスは、攻撃後のスキが大きくなるだろう。</string>
     <string name="BattleAxe_Name">バトルアックス</string>
     <string name="Bee_Desc">ミツバチは小さいにもかかわらず、巣を激しく守る傾向がある。しかし、長生きはしない。</string>
@@ -2266,6 +2267,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="VertigoBuff_Info">クラクラして、まっすぐ歩くのが難しくなる！</string>
     <string name="VertigoBuff_Name">目眩</string>
     <string name="View_Distance">視認距離</string>
+    <string name="VileEssence_Info">敗れた敵から収穫された腐敗の濃縮エッセンス。この闇の物質は凶悪なエネルギーを脈動させ、錬金術の過程で高く評価される。</string>
     <string name="VileEssence_Name">邪悪なエッセンス</string>
     <string name="Viscosity_Status">遅延%d</string>
     <string name="Viscosity_Txt">遅延の %s</string>
@@ -3022,6 +3024,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

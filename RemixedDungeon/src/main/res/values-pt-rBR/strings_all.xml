@@ -583,6 +583,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DM300_Info3">Pessoas não autorizadas detectadas.</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Uma adaga de ferro simples com um cabo de madeira bem gasto.</string>
     <string name="Dagger_Name">Adaga</string>
     <string name="Damage_Reduction">Redução de dano</string>
@@ -1916,6 +1917,7 @@ outro local do nível.</string>
     <string name="ShadowLord_Name">senhor das sombras</string>
     <string name="ShadowLord_Name_Objective">Senhor das Sombras</string>
     <string name="Shadow_Desc">Sombras vagam silenciosamente as ruínas dessa prisão, apenas ocasionalmente aparecendo para aventureiros, geralmente em sua última aventura.</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name">sombra</string>
     <string name="Shadow_Name_Objective">sombra</string>
     <string name="ShadowsBuff_Info">É mais difícil identificar algo entre as sombras.</string>
@@ -2979,6 +2981,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

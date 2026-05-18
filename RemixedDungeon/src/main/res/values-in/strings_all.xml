@@ -386,6 +386,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Challenges_Names_8">Tantangan</string>
     <string name="Challenges_Names_9">Amnesia</string>
     <string name="ChampionOfAirBuff_Name">Juara Udara</string>
+    <string name="ChampionOfEarthBuff_Info">Champion of Earth meng embody kekuatan yang tak tertunduk, karena ciri ini meningkatkan resistansi kerusakan makhluk dan meningkatkan vitalitas maksimumnya. Transformasi ini menjadikannya musuh yang menakutkan di kedalaman berbahaya, mampu mengabaikan serangan dengan mudah dan bertahan dalam pertempuran yang panjang dengan tekad yang tak goyah.</string>
     <string name="ChampionOfEarthBuff_Name">Juara Bumi</string>
     <string name="ChampionOfFireBuff_Info">Ditempeli oleh kemarahan api, sifat ini memperkuat keganasan dan kemampuan tempur makhluk. Juara Api muncul sebagai lawan yang mengerikan, melancarkan serangan devastating yang dapat membanjiri musuhnya dengan api menyengat, menanamkan teror pada semua yang berani melawannya.</string>
     <string name="ChampionOfFireBuff_Name">Juara Api</string>
@@ -2690,6 +2691,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="YogsBrain_Name">otak yog</string>
     <string name="YogsBrain_Name_Objective">otak Yog</string>
     <string name="YogsEye_Desc">Mata dari Dewa Tua, pandangan yang melihat semuanya dipenuhi dengan kebencian abadi. Anda dapat merasakannya melihat langsung ke jiwa Anda.</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">mata yog</string>
     <string name="YogsEye_Name_Objective">mata Yog</string>
     <string name="YogsHeart_Desc">Selama berabad-abad orang-orang percaya bahwa hanya makhluk yang tidak berhati yang dapat melakukan perlakuan kejahatan murni. Dan di sini dia, hati besar yang berdetak dari Dewa Tua itu sendiri.</string>
@@ -2964,6 +2966,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
