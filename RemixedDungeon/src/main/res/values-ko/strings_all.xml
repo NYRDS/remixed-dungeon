@@ -53,6 +53,7 @@
     <string name="Amulet_Info">옌더의 부적은 정체불명의 가장 강력한 유물입니다. 이 부적은 소유자의 의지가 충분하다면 어떤 소원이든 성취할 수 있다고 합니다.</string>
     <string name="Amulet_Name">옌더의 부적</string>
     <string name="AnesthesiaBuff_Info">통증을 느끼지 않으며 공격으로 깨어나지 않지만 여전히 피해를 입습니다.</string>
+    <string name="AnesthesiaBuff_Name">Anesthesia</string>
     <string name="Anesthesia_Info">대상에 깊고 부자연스러운 잠을 유도합니다. 가장 격렬한 공격으로도 이 잠에서 깨어나지 않습니다.</string>
     <string name="Anesthesia_Name">마취</string>
     <string name="Ankh_Info">영생을 상징하는 고대의 물건으로 소유자의 생명을 되살릴 수 있는 능력이 있습니다. 부활할 시 장착하지 않은 모든 아이템은 손실됩니다.</string>
@@ -360,6 +361,7 @@
     <string name="Challenges_Names_9">기억 상실</string>
     <string name="ChampionOfAirBuff_Info">이 특성은 생물에게 바람의 정수를 부여하여 민첩성과 전투 기량을 향상시킵니다. 공기의 챔피언은 빠르고 치명적인 공격을 쏟아내어 전투의 흐름을 순식간에 바꿀 수 있는 강력한 적수가 됩니다.</string>
     <string name="ChampionOfAirBuff_Name">바람의 챔피언</string>
+    <string name="ChampionOfEarthBuff_Name">Champion of Earth</string>
     <string name="ChampionOfFireBuff_Info">화염의 격노가 주입된 이 특성은 생물의 잔혹성과 전투 능력을 증폭시킵니다. 불의 챔피언은 무시무시한 적으로 등장하여 적들을 타오르는 화염에 휩싸이게 하는 파괴적인 공격을 퍼부으며, 감히 맞서려는 자 모두에게 공포를 심어줍니다.</string>
     <string name="ChampionOfFireBuff_Name">불의 챔피언</string>
     <string name="ChampionOfWaterBuff_Info">물의 챔피언은 바다의 불굴의 힘을 구현하여 생물의 회복력과 인내력을 향상시킨다. 결과적으로 이는 끊임없는 공격을 견뎌내며 역경에 맞서는 불굴의 수호자가 될 수 있는 강인한 적이 된다.</string>
@@ -458,6 +460,7 @@
     <string name="ClassArmor_LowHealt">쓰러지기 일보 직전입니다!</string>
     <string name="ClassArmor_LowMana">마나가 부족합니다!</string>
     <string name="ClassArmor_NotEquipped">갑옷의 특별한 힘을 이용하기 위해서는 입고 있어야 합니다.</string>
+    <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">이 거대한 칼은 어떤 것이든 베어버릴 수 있을 것만 같습니다.</string>
     <string name="Claymore_Name">클레이모어</string>
     <string name="CloakBuff_Info">어둠의 망토가 그림자 속에서 당신을 감추어 적들이 당신을 덜 보게 합니다.</string>
@@ -598,6 +601,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DieHardBuff_Name">죽을 때까지</string>
     <string name="DieHardSpell_Name">다이 하드</string>
     <string name="Displacement_Txt">이동의 %s</string>
+    <string name="DoctorArmor_Name">Doctor\'s Garb</string>
     <string name="DogeMask_Info">유명한 DOGE로 변장하고 싶습니까? 당신의  기회가 바로 지금 여기 있습니다!\n 정말 마스크! 많은 변장! 와!</string>
     <string name="DogeMask_Name">DOGE 가면</string>
     <string name="DonateButton_pleaseDonate">기부 부탁드립니다</string>
@@ -1375,6 +1379,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="OozeBuff_Name">Kaustik Rüzgar</string>
     <string name="Ooze_Death">%s 이/가 당신을 죽였습니다...</string>
     <string name="Order_Info">적절한 집중으로 주문은 거의 부정할 수 없습니다.</string>
+    <string name="Order_Name">Order</string>
     <string name="Order_Resist">감히 날 어떻게 하려고?!!</string>
     <string name="OverpricedRation_Info">일반적인 비상 식량과 똑같이 생겼지만 크기가 좀 더 작습니다.</string>
     <string name="OverpricedRation_Message">맛이 좋습니다.</string>
@@ -2845,6 +2850,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
 
 
 

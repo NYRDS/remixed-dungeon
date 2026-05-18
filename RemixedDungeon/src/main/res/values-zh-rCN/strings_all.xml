@@ -1519,6 +1519,7 @@
     <string name="PlagueDoctorQuest_3_1_InProgress">给我带一只_吸血鬼蝙蝠_，活着且完好无损！它的血液、它的翅膀……它们藏着我必须揭开的秘密！</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*他的眼睛闪烁着一种奇怪的、狂热的光芒* 啊，_吸血鬼蝙蝠_！夜之生物，以猎物的生命力为食。迷人……真迷人。我需要一个活的来研究它独特的生理结构。这一切都是为了……理解……理解……*他喃喃自语，说出一连串神秘的术语*。是的！_蝙蝠_的回声定位，它在完全黑暗中导航的能力……这是解开秘密的关键。</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*他仰头发出阵阵狂笑，声音在阴暗的实验室中回荡* 太棒了！一名_死亡骑士_站在我们面前！它身上散发出的力量……令人陶醉！*他转向你，眼中闪烁着狂热的光芒* 这是你应得的奖赏：一瓶_力量药水_！愿它赐予你战胜一切敌人的力量！现在……让我们来研究我们的实验对象。它的本质中隐藏着能够改写生命法则的秘密！*他带着疯狂的笑容走向_死亡骑士_，手中晃动着一瓶冒泡的绿色液体</string>
+    <string name="PlagueDoctorQuest_3_2_InProgress">这不仅仅是一只野兽！这是一座行走的死灵魔法力量的丰碑！活捉一只，毫发无伤！这个_死亡骑士_……它是关键！</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">_死亡骑士_！*他的声音因兴奋而颤抖，骷髅般的手指紧握着一个冒着泡的小瓶，里面装满了浑浊的磷光液体*。这样的生物……亡灵的象征！活捉一个……那将是……意义非凡。想象一下我们能揭开什么秘密！流淌在它骨骼血管中的力量！是的，_死亡骑士_！这对我的研究至关重要！因为它将使我们能够更深入地探索……生命……乃至死亡本身的奥秘！</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">太棒了！_矮人术士_们的精华现在归我研究了！如此扭曲、堕落的魔法……真是令人着迷。*他举起一个闪烁的瓶子，里面装着粘稠的深红色液体。*这是给你的：_力量药剂_！饮下它的力量，你将感受到如山般的力量在血管中流淌！记住，从这些牺牲中获得的知识最终将服务于更高的目的……甚至可能将我们从比死亡更可怕的命运中拯救出来。</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">五个_矮人术士_，他们的身体仍在脉动着黑暗魔法的微弱回响！为我取回它们，我将奖励你一瓶无与伦比的力量——一瓶_力量药水_，它将赋予你十人之力！</string>
@@ -2113,6 +2114,7 @@
     <string name="StartScene_WinGame">使用任意角色完成游戏来解锁“挑战”。</string>
     <string name="StartScene_Yes">是的，重新开始</string>
     <string name="Statue_Desc">你以为这只是地牢里另一座丑陋的雕像，但它发出红光的眼睛让你放弃了刚才的想法。 尽管雕像本身是用石头做的，但它手上握着_%s_，看起来像是真的。</string>
+    <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">活化石像</string>
     <string name="Statue_Name_Objective">活化石像</string>
     <string name="Stench_Txt">恶臭%s</string>
@@ -2154,6 +2156,7 @@
     <string name="Swing_Name_0">野蛮%s</string>
     <string name="Swing_Name_1">野蛮%s</string>
     <string name="Swing_Name_2">野蛮%s</string>
+    <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">此等锋利的刀刃定不会让你失望。</string>
     <string name="Sword_Name">单手剑</string>
     <string name="Tamahawk_Info">看上去这柄飞斧并不重，但它依然需要足够的力量来能有效发挥作用。</string>
@@ -2430,6 +2433,7 @@ remix.31.1\n
     <string name="WndCryptoDonate_supportDev">支持开发者</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
+    <string name="WndCryptoDonate_walletAddress">Wallet Address</string>
     <string name="WndCryptoDonate_warningText">WARNING: Always verify the address before sending funds. Cryptocurrency transactions are irreversible!</string>
     <string name="WndCustomizations_Title">自定义设置</string>
     <string name="WndDonate_commonDonateText">混合地牢——永远对所有人免费。\n\n但是，你能帮我们让这款游戏变得更好。\n\n除了我们的衷心感谢以外，你还将获得一些界面上的美化。</string>
@@ -2980,6 +2984,10 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
 
 
 

@@ -229,6 +229,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BellaNPC_Amulet_M">Merhaba yakışıklı, orada ne var? Ah, ne kadar zarif bir tılsım! Ve sen... sen bu avamdan üstünsün. Biraz yürüyüp ortak geleceğimizi konuşmaya ne dersin?</string>
     <string name="BellaNPC_Angry">Bu ne cüret... seni avanak!</string>
     <string name="BellaNPC_Desc">Çok şık görünümlü bir kız. Tüm görünüşü size \&quot;Ben herkes için iyiyim.\&quot; diyor.</string>
+    <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Senin gibi zavallılarla ilgilenmiyorum!</string>
     <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
@@ -1513,6 +1514,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="PlagueDoctorQuest_1_2_InProgress">_On salyangoz_, uçurumdan on fısıltı! Salyangozları analiz edilecek, özleri dikkatle incelenecek. Sakladıkları sırlar ulaşılabilir durumda.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Şiddetli öksürür* Achoo!\n _Salyangozlar_… süzülüyorlar. Akıyorlar. Ve unutulmuş çağların sırlarını fısıldıyorlar. Onlara ihtiyacım var, _on tanesine_, hâlâ kabukları tamamen sağlam. Böyle değerli bilgi için sadece _elli altın coin_ yeterli olur mu dersin?\n Bah! Önemli değil. İçerdikleri bilgi bu vebayı durdurmanın anahtarı olabilir. Veya… bizi daha korkunç bir şeye götürebilir. Sen karar ver.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">_Ayışığı_ çiçeğini arayın, karanlığın soluk ay ışığıyla buluştuğu yerde. _İki tohum_, özleri gizli sırları ortaya çıkaracak.</string>
+    <string name="PlagueDoctorQuest_2_1_Prologue">_Moongrace tohumları_... o ruhani çiçekler, ayın kendi sihrini fısıldayanlar. Haçır haftalardır garip parlaklıklarını inceledim. İksirlerinde bir tokluk var, gizli bir enerji... bir şeyin anahtarı olabilir. *Kemikten yapılmış parmağını düşünceli şekilde çenesine vurur*\nAma maalesef, nadirler. Sadece ay ışığının zor ulaştığı en derin mağaralarda bulunurlar. İkisine ihtiyacım var. İki tohum, güçlerinin sırlarını açmak için. Karşılığında size bir şey sunabilirim... saf ve etkili bir büyünün tadını veren bir _Mana İksiri_. Moongrace\'in kendinden gelen özüyle dolu. Yorgun ruhunuzu yenileyecek ve arcanı yeniden güçle kullanmanıza izin verecek.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">Muhteşem! _Güneş otu_, altın özü canlılıkla atıyor. Onun hassas yapısından çok şey öğrendim. *Size bir _Sağlık İksiri_ uzatır, sıvısı solgun, altın bir ışıkla parlıyor.* Dünya omuzlarınızda ağır bastığında bunu içininize koyun ve güneşin sıcaklığı ruhunuzu canlandırılsın.</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">Ah, _güneşotu_! Narin bir çiçek, taç yaprakları güneşin sıcaklığını yayıyor. Esansının anahtarı olduğunu düşünüyorum... ah, şimdilik detayları unutun. Yeter ki araştırmam için kritik öneme sahip olduğunu söyleyeyim. _İki güneşotu tohumu_. Bunları bana getirin, ve maceralarınızda mutlaka işinize yarayacak bir şey veririm - güneşi içeren bir _İksir Sağlığı_, tamamen canlandırıcı güçle dolu.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Eldivenli elleriyle _yarasa_yı nazikçe kucaklayarak minik formunu rahatsız edici bir merakla inceliyor* Muhteşem! Bu yarasanın yer tespiti... şimdiye kadar deneyimlediğim hiçbir şeye benzemiyor. Ne kadar hassas... ne kadar... kontrol. *Yüzünü maskeyle kaplı halde size döner* Emekleriniz için, bir _Geliştirme Parşömeni_. Potansiyelin... varlığını sırf rafine etme potansiyeline sahip olduğundan dolayı dikkatli kullanın. *Parşömeni size uzatır, sesi fısıltıya dönüşür* Bu _yarasa_... gizli bir dünyaya bir pencere. Bir dünya... gölgelerin dans ettiği ve sırların fısıldadığı bir yer.</string>
@@ -2097,6 +2099,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="SpiritOfPain_Name_Objective">acının ruhu</string>
     <string name="Sprout_Info">Uyuyan tohumları uyandırın.\nAncak, bu büyünün başarılı olması için yerde biraz yeşillik olması gerekir.</string>
     <string name="Sprout_Name">Filiz</string>
+    <string name="StartScene_ChooseFromSlot">Kaydetme alanından seç</string>
     <string name="StartScene_ComingSoon">Yakında</string>
     <string name="StartScene_ContinueLatest">Devam et veya bir kayıt yuvasından seçim yap</string>
     <string name="StartScene_Depth">Derinlik: %1$d\nSeviye: %2$d</string>
@@ -3006,6 +3009,10 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
+
 
 
 

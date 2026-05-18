@@ -369,6 +369,7 @@
     <string name="Challenges_Names_8">沒有城鎮</string>
     <string name="ChampionOfAirBuff_Name">風之勇士</string>
     <string name="ChampionOfEarthBuff_Info">大地勇士體現了不屈的力量，這個特性增強了生物的傷害抗性並增加了其最大生命力。這種轉變使其在危險的深淵中成為一個可怕的對手，能夠輕鬆地抵擋攻擊並以堅定的決心經受持久的戰鬥。</string>
+    <string name="ChampionOfEarthBuff_Name">大地勇士</string>
     <string name="ChampionOfFireBuff_Info">注入烈焰之怒，這個特性提升了生物的兇猛和戰鬥能力。火焰勇士化身為可怕的對手，釋放毀滅性的攻擊，將敵人陷入灼熱的火焰之中，使所有敢於反抗的存在感到恐懼。</string>
     <string name="ChampionOfFireBuff_Name">火之冠軍</string>
     <string name="ChampionOfWaterBuff_Info">水之冠軍體現了海洋的不可戰勝之力，增強了生物的韌性和耐力。因此，它成為了一個堅定的對手，能夠經受住無情的攻擊轟炸，在逆境中成為不屈的守護者。</string>
@@ -1868,6 +1869,7 @@
     <string name="Senior_Name_Objective">武僧大師</string>
     <string name="ServantNPC_Desc">非常忙碌的旅馆服务生。</string>
     <string name="ServantNPC_Gender">feminine</string>
+    <string name="ServantNPC_Name_Objective">innkeeper</string>
     <string name="ServiceManNPC_Desc">當地企業一名中規中矩的員工。</string>
     <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">本人真誠向閣下道歉，無奈每位新的冒險者只能看最多 %d 齣電影。</string>
@@ -1957,6 +1959,7 @@
     <string name="Snail_Desc">這個小軟體動物透過進食污物長得相當大，但他仍然非常緩慢，這使他成為一個容易面對的敵人。</string>
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">蝸牛</string>
+    <string name="Snail_Name_Objective">snail</string>
     <string name="SnipersMarkBuff_Name">狙擊手標記</string>
     <string name="SociologistNPC_AlreadyTaken">你已經反饋過了。請稍後再來</string>
     <string name="SociologistNPC_Desc">這位調研員專門收集你對這款混合地牢的意見和建議</string>
@@ -2561,6 +2564,7 @@
     <string name="WndSettings_Brightness">光暗度</string>
     <string name="WndSettings_ClassicFont">經典字體</string>
     <string name="WndSettings_ExperementalFont">新字體</string>
+    <string name="WndSettings_FpsLimit">FPS限制</string>
     <string name="WndSettings_GameplaySettings">特殊設置</string>
     <string name="WndSettings_Handedness">慣用方向</string>
     <string name="WndSettings_Immersive">沈浸模式</string>
@@ -2916,6 +2920,10 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
 
 
 

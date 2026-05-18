@@ -117,6 +117,7 @@
     <string name="Badges_AllRings">Усі кільця ідентифіковано</string>
     <string name="Badges_AllScrolls">Усі сувої ідентифіковано</string>
     <string name="Badges_AllWands">Усі чарівні палички ідентифіковано</string>
+    <string name="Badges_BossSlain1">Слизь побеждена</string>
     <string name="Badges_BossSlain1All">Жижу вбито всіма класами</string>
     <string name="Badges_BossSlain2">Тенгу переможено</string>
     <string name="Badges_BossSlain3">ДМ-300 повалено</string>
@@ -418,6 +419,7 @@
     <string name="CharAction_Expel">Вигнати</string>
     <string name="CharAction_Hit">вдарити</string>
     <string name="CharAction_Push">штовхнути</string>
+    <string name="CharAction_Scare">налякати</string>
     <string name="CharAction_Steal">викрасти</string>
     <string name="CharAction_Take">взяти</string>
     <string name="CharAction_Taunt">дратувати</string>
@@ -1440,6 +1442,7 @@
     <string name="Ooze_Death">%s вбив тебе...</string>
     <string name="Order_Info">З належною зосередженістю ваші накази майже невідворотні.</string>
     <string name="Order_Name">Наказ</string>
+    <string name="Order_Resist">Як ти наважився?!</string>
     <string name="OverpricedRation_Info">Він виглядає так само, як і стандартний сухий пайок, але менший.</string>
     <string name="OverpricedRation_Message">Ця їжа добра на смак.</string>
     <string name="OverpricedRation_Name">дорогий сухий пайок</string>
@@ -2584,6 +2587,7 @@
     <string name="WndSettings_InGameUiSettings">Налаштування інтерфейсу</string>
     <string name="WndSettings_Music">Музика</string>
     <string name="WndSettings_Quickslots">Слоти швидкого доступу</string>
+    <string name="WndSettings_RecordVideo">Запис відео</string>
     <string name="WndSettings_ScaleUp">Масштабувати GUI</string>
     <string name="WndSettings_SecondQuickslot">Другий слот</string>
     <string name="WndSettings_SelectLanguage">Обрати мову</string>
@@ -2916,6 +2920,10 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
 
 
 

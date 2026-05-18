@@ -299,6 +299,7 @@
     <string name="BodyArmorSpell_Info">Ativa o poder muscular reservado, os tornando mais fortes temporariamente, isso aumentará sua defesa, porem diminuirá sua velocidade de movimento.</string>
     <string name="BodyArmorSpell_Name">Armadura Corporal</string>
     <string name="BoneSaw_Name">Serra de Ossos</string>
+    <string name="BoneShard_Info">Um fragmento de osso afiado colhido de um inimigo derrotado. Estes fragmentos são surpreendentemente duráveis e úteis na fabricação.</string>
     <string name="BoneShard_Name">Fragmento de osso</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Lançada para o inimigo esse míssil liso de madeira curvada voltará para as mãos de seu lançador.</string>
@@ -347,6 +348,7 @@
     <string name="Carcass_DissectResult">Do %1$s você obtém %2$d colheita %3$s.</string>
     <string name="Carcass_Info">restos de %s totalmente morto.</string>
     <string name="Carcass_Kick">This %s is totally dead, no need to kick it.</string>
+    <string name="Carcass_Name">remains of %s</string>
     <string name="Carcass_Necromancy">Você ergueu um cadáver de %s!</string>
     <string name="Carcass_Necromancy_Failed">\&quot;Sua tentativa de levantar o cadáver de %s falhou!\&quot;</string>
     <string name="Carcass_TooFarToDissect">Você precisa estar mais perto para dissecar a carcaça.</string>
@@ -1477,6 +1479,7 @@ Parede
     <string name="PirateSet_Info">Arr! Você se sente como um amigo ... ou você é apenas um maldito latifundiário !? Espero que não, essas coisas são para piratas depois de tudo, quero dizer ... Arr!</string>
     <string name="PirateSet_Name">Conjunto de Pirata</string>
     <string name="PlagueDoctorMaskHood_Info">Rzeźbiony czarny czaszka z pustymi oczodołami, które świecą eterycznym blaskiem ametystowych klejnotów. Każdy oddech, który wdychasz, szepce przez labirynt rur i filtrów, niosąc zapach silnych ziół i przypraw, które maskują rozkład, który przylega do ciebie. Ale to nie tylko maska. Ciężki kaptur z północnego aksamitu, zakrywający twoją twarz i głowę w cieniu. Kaptur, jak skrzydło wrony, opływa twoje plecy, jego krawędzie ozdobione frędzlami z kościście białej koronki, lodowato piękny kontrast. Razem maska i kaptur tworzą widmo, mroczny testament w walce z siłami rozkładu.</string>
+    <string name="PlagueDoctorMask_Info">Isso... isso não é uma simples máscara. É... uma barreira. Um escudo contra as forças da podridão que o Médico da Peste combate incansavelmente. Esculpido na madeira de ébano mais fina, detalhadamente esculpido com o rosto de um crânio voraz. Seus olhos ocos estão preenchidos com pedras de ametista brilhantes que pulsam fracamente, como brasas morrendas de um fogo. Cada respiração que você dá, cada fala que você faz, é filtrada através de uma rede labiríntica de tubos e filtros. Uma mistura de ervas potentes e especiarias exóticas infunde o ar dentro, mascarando o fedor da morte que se agarra a você como um sudário.</string>
     <string name="PlagueDoctorMask_Name">máscara de Médico da Peste</string>
     <string name="PlagueDoctorNPC_After_Quest">Eu vou mostrar a eles, a todos eles!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Você ainda está aqui? Tome! Pegue isso.</string>
@@ -1793,6 +1796,7 @@ Parede
     <string name="ScaleArmor_Desc">Escamas de metal costuradas em um colete de couro fazem uma armadura flexível, mas ainda mais protetora.</string>
     <string name="ScaleArmor_Name">armadura de escamas</string>
     <string name="ScarecrowNPC_Desc">Não há dúvidas... este espantalho observa cada movimento seu. Seus olhos vermelhos brilhantes veem através de você, mas você não se sente em perigo.</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">Espantalho</string>
     <string name="ScarecrowNPC_Name_Objective">Espantalho</string>
     <string name="ScarecrowNPC_Quest_End">Que alegria! Que bom!\n Sua recompensa será comida de verdade!</string>
@@ -2975,6 +2979,10 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
 
 
 

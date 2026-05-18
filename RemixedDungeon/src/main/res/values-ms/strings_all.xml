@@ -1851,9 +1851,11 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Shaman_Name_Objective">pawang gnoll</string>
     <string name="Shaman_ZapMiss">*Maki dalam bahasa gnoll*</string>
     <string name="Sheep_Desc">Ini adalah kambing biri-biri magik. Magik ke? Anda tidak boleh membunuhnya. Ia kekal berada di sana sehinggalah kuasa magiknya hilang, sementara itu hanya tengok sajalah.</string>
+    <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">kambing biri-biri</string>
     <string name="Sheep_Name_Objective">kambing biri-biri</string>
     <string name="ShieldBuffReady_Info">Perisai anda bersedia untuk menghalang serangan seterusnya.</string>
+    <string name="ShieldBuffReady_Name">Shield is ready</string>
     <string name="ShieldInfoTemplate">Perisai ini akan menghalang sehingga %1$d kerosakan masuk. Dengan peluang %2$d %%. Ia akan mengambil masa %3$3.1f saat untuk pulih selepas berjaya menghalang.</string>
     <string name="ShieldStrTemplate">Pemakai perisai ini mestilah mempunyai sekurang-kurangnya %1$d mata kekuatan untuk menggunakannya dengan betul.</string>
     <string name="ShieldWeaponInfo">Apabila digunakan sebagai senjata, perisai ini akan menyebabkan %1$d kerosakan secara purata.</string>
@@ -2081,6 +2083,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ToughShield_desc">Perisai ini diperkukuh dengan tali kulit kelihatan lebih lasak daripada perisai kayu. Ia pasti boleh menghalang lebih banyak kerosakan.</string>
     <string name="ToughShield_name">Perisai Diperkukuh Kulit</string>
     <string name="TownGuardNPC_Desc">Seorang pengawal pekan biasa.</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">Berambus.</string>
     <string name="TownGuardNPC_Message2">Terima kasih kepada para pengembara seperti awak, sekarang tempat ini sentiasa aman.</string>
     <string name="TownGuardNPC_Message3">Anda fikir terlalu ramai pengawal dalam pekan ini? Sebenarnya hanyalah pekan kecil dengan kurungan bawah tanah gergasi yang dikuasai oleh raksaksa, kan begitu?</string>
@@ -2595,6 +2598,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_armoronhanger_name">Perisai</string>
     <string name="town_deco_armorstand_leather_desc">Zam Leitir yang boleh dipercayai akan menjadi pembelian yang bagus sebelum meneroka dalam penjara.</string>
     <string name="town_deco_armorstand_leather_name">Perisai kulit</string>
+    <string name="town_deco_armorstand_plate_desc">Menurut pedagang, zirah plate berat ini pernah dimiliki oleh seorang ksatria hebat.</string>
     <string name="town_deco_armorstand_scale_desc">Plat bersalut emas perisai sisik ini kelihatan baru.</string>
     <string name="town_deco_banner_desc">Satu sepanduk yang elegan menonjolkan simbol kedai makan ini.</string>
     <string name="town_deco_banner_name">Sepanduk</string>
@@ -2823,6 +2827,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 
