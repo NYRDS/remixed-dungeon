@@ -384,6 +384,7 @@
     <string name="ChampionOfEarthBuff_Name">Campeão da Terra</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Infundido com a fúria das chamas, esta característica amplifica a ferocidade e a proeza em combate da criatura. O Campeão do Fogo surge como um adversário temível, desferindo ataques devastadores que podem envolver seus inimigos em chamas abrasadoras, incutindo terror em todos que ousam se opor a ele.</string>
     <string name="ChampionOfFireBuff_Name">Campeão do Fogo</string>
+    <string name="ChampionOfWaterBuff_Name">Campeão da Água</string>
     <string name="ChaosArmor_Info">As placas de sangue vermelho desta armadura é costurada junto com correntes vermelhas escuras. Ele irradia energia caótica enquanto você a toca.</string>
     <string name="ChaosArmor_Name">Armadura do Caos</string>
     <string name="ChaosBow_Gender">masculine</string>
@@ -810,6 +811,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Ghost_Defense">evitou</string>
     <string name="Ghost_Desc">O fantasma é pouco visível. Parece uma mancha disforme de luz fraca com uma cara triste.</string>
     <string name="Ghost_Name">fantasma triste</string>
+    <string name="Ghost_Name_Objective">fantasma</string>
     <string name="Ghost_Rat1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha vingança... Mate o _Rato Fétido_, que tomou a minha vida...</string>
     <string name="Ghost_Rat2">Por favor... Ajude-me... Mate essa abominação...</string>
     <string name="Ghost_Rose1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha _Rosa Seca_... É muito importante para mim... Algum monstro roubou de meu corpo...</string>
@@ -2319,6 +2321,7 @@ outro local do nível.</string>
     <string name="Wand_Wood_Types_7">mogno</string>
     <string name="Wand_Wood_Types_8">bambu</string>
     <string name="Wand_Wood_Types_9">roxinho</string>
+    <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">Poucas criaturas podem suportar o golpe esmagador desta grande massa de chumbo e aço, mas só os mais fortes e aventureiros pode usá-lo de forma eficaz.</string>
     <string name="WarHammer_Name">Martelo de Guerra</string>
     <string name="Warlock_Desc">Quando os interesses dos anões passaram da engenharia para as artes arcanas, mágicos chegaram ao poder na cidade. Eles começaram com magia elementar, mas logo mudou para demonologia e necromancia.</string>
@@ -2681,6 +2684,7 @@ remix.31.1\n
     <string name="Worm_Name_Objective">minhoca</string>
     <string name="Wraith_Defense">evitou</string>
     <string name="Wraith_Desc">Um espectro é um espírito vingativo de um pecador, cuja sepultura ou túmulo foi perturbado. Sendo uma entidade etérea, é muito difícil de bater com uma arma normal.</string>
+    <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">espectro</string>
     <string name="Wraith_Name_Objective">espectro</string>
     <string name="WrnExperimental_hint">Se este mundo estranho e retorcido for muito difícil para você, desative essas opções usando\nTela inicial-&gt;Opções-&gt;Jogabilidade\nmenu e inicie um novo jogo ou carregue outro salvamento.</string>
@@ -2971,6 +2975,10 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
 
 
 

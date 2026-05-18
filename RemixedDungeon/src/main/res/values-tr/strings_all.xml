@@ -33,6 +33,7 @@
     <string name="AirElemental_Name_Objective">hava elementi</string>
     <string name="AlarmTrap_Desc">Tuzağın çıkardığı kulak kanatan ses zindan boyunca yankılanıyor!</string>
     <string name="Albino_Desc">Keseli sıçanlar argesif, ama zayıf lağım sakinleridir. Sadece büyük sayılarda tehlikeli olabilirler. Bu sıçan albinoya benziyor. Bu arada anormal derecede keskin dişleri var. </string>
+    <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name">albino sıçan</string>
     <string name="Albino_Name_Objective">albino sıçan</string>
     <string name="AlchemyPot_SelectSeed">Fırlatmak için bir tohum seç</string>
@@ -306,6 +307,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BoneSaw_Info">Ameliyatlı cerrahi testisi, hızlı sezgi için tasarlanmış hassas bir cerrahi testisi. Hasar ve saldırı hızı, Veba Doktorunun becerisiyle daha ölümcül hale gelir. Kritik isabetler düşmanlardan ek çıkarılabilir ürünler kazandırır ve felçli düşmanlara acımasız verimlilikle vuruş yapar.</string>
     <string name="BoneSaw_Name">Kemikli testere</string>
     <string name="BoneShard_Info">Yenen düşmanın üzerinden toplanan keskin kemik parçası. Bu kırıntılar şaşırtıcı derecede dayanıklı ve işleme kullanılabilir.</string>
+    <string name="BoneShard_Name">Kemik Parçası</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Bu ağaçtan yapılmış bumerang düşmana attıktan sonra ellerine geri dönecek</string>
     <string name="Boomerang_Name">bumerang</string>
@@ -1907,6 +1909,7 @@ seviyenin başka bir yeri.</string>
     <string name="SeedPouch_Info">Bu küçük kadife kesede tohumlarını saklayabilirsin.</string>
     <string name="SeedPouch_Name">tohum kesesi</string>
     <string name="Senior_Desc">Bu keşişler kendilerini şehirlerini korumaya adamış fanatiklerdir.Yakın dövüş yeteneklerine güvenir ve hiç bir zırh veya silah kullanmazlar. Bu keşiş düşmanının güçlerini kullanmasını engeleyen bir dövüş sanatında uzmanlaşmış.</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">kıdemli keşiş</string>
     <string name="Senior_Name_Objective">kıdemli keşiş</string>
     <string name="ServantNPC_Desc">Han hizmetçisi çok meşgul.</string>
@@ -2448,6 +2451,7 @@ remix.30.1\n
     <string name="WndClass_Mastery">Uzmanlık</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Adresi Kopyala</string>
+    <string name="WndCryptoDonate_currency">Para birimi</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Remixed Dungeon\'ın geliştirilmesini, aşağıda belirtilen adreslere kripto para bağışları göndererek destekleyebilirsiniz. Câmilerinize teşekkür ederiz!</string>
     <string name="WndCryptoDonate_supportDev">Geliştiriciyi Destekle</string>
@@ -3002,6 +3006,10 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
+
 
 
 

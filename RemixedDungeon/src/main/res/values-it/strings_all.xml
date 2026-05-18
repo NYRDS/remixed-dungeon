@@ -271,6 +271,7 @@
     <string name="BodyArmorBuff_Name">Armatura Corporea</string>
     <string name="BodyArmorSpell_Name">Armatura Corporea</string>
     <string name="BoneSaw_Info">Una sega chirurgica di precisione progettata per dissezioni rapide. I suoi danni e la velocità d\'attacco diventano più letali con l\'abilità del Medico della Peste. I colpi critici estraggono parti aggiuntive raccoglibili dai nemici e colpisce con spietata efficienza i nemici paralizzati.</string>
+    <string name="BoneShard_Name">Frammento d\'osso</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Quando lanciato ai nemici questo sottile, curvo, missile di legno tornerà nelle mani del lanciatore. </string>
     <string name="Boomerang_Name">bumerang</string>
@@ -1872,6 +1873,7 @@ Potrebbe bruciare?</string>
     <string name="SmashSpell_Name">Sfascio</string>
     <string name="SmashSpell_NeedWeapon">Ho bisogno di un\'arma per questa mossa.</string>
     <string name="Snail_Desc">Questo piccolo mollusco è cresciuto abbastanza mangiando fogna, ma è ancora molto lento, il che lo rende un avversario facile da affrontare.</string>
+    <string name="Snail_Name">chiocciola</string>
     <string name="Snail_Name_Objective">lumaca</string>
     <string name="SnipersMarkBuff_Info">Il marchio è stato lasciato da un cecchino.</string>
     <string name="SnipersMarkBuff_Name">Marchio del Cecchino</string>
@@ -1994,6 +1996,7 @@ Potrebbe bruciare?</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">succube</string>
     <string name="Succubus_Name_Objective">succube</string>
+    <string name="SummonBeast_AtYourCommand">A tuo comando!</string>
     <string name="SummonBeast_Info">Tentativo di evocare un\'orda di potenti bestie al tuo comando.\nI risultati effettivi possono variare.</string>
     <string name="SummonBeast_Name">Chiamata della Bestia</string>
     <string name="SummonDeathling_Info">Evoca un Gregario della Morte. I suoi HP e danni crescono con il livello dell\'eroe. \n\nLimite di evocazione: %1$d (+1 ogni Livello di Magia)</string>
@@ -2068,6 +2071,7 @@ Potrebbe bruciare?</string>
     <string name="TownPortal_Info">Questo incantesimo ti permette di tornare istantaneamente al sicuro. Tuttavia, potenti fonti di magia nelle vicinanze potrebbero impedirne il corretto funzionamento.</string>
     <string name="TownPortal_Name">Portale Cittadino</string>
     <string name="TownScript_NeedWeapon">Non andrò nel dungeon a mani nude!\n Forse è il caso di visitare il negozio del paese prima?</string>
+    <string name="TownShopkeeper_Desc">Questo è un tipico mercante. Si può dire che già conosce la tua prezzo.</string>
     <string name="TownShopkeeper_Name">Negoziante</string>
     <string name="TownShopkeeper_Objective">Negoziante</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
@@ -2726,6 +2730,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_sofa_desc">Sembra che questo cinema provi davvero a fornire i migliori posti per i propri clienti</string>
     <string name="town_deco_sofa_name">Divano comodo</string>
     <string name="town_deco_stakes_desc">Questi tronchi appuntiti hanno un aspetto minaccioso, ma di fatto sono piuttosto inutili di per sé.</string>
+    <string name="town_deco_statue_blood_name">Statua dell\'angelo</string>
     <string name="town_deco_statue_water_desc">Una maestosa statua di un angelo che tiene una ciotola d\'acqua.</string>
     <string name="town_deco_statue_water_name">Statua di angelo</string>
     <string name="town_deco_stock_desc">Qui vengono conservate le scorte di cibo, così come un mucchio di cianfrusaglie di ogni sorta e colore.</string>
@@ -2778,6 +2783,13 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
 
 
 

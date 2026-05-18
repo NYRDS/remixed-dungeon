@@ -1225,6 +1225,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="MageArmor_Desc">Ezt az elbűvölő köpenyt viselve a mágus olvadt föld varázslatot idézhet: a látótávolságban tartózkodó összes ellenfél meggyullad, és mozgásképtelenné válik.</string>
     <string name="MageArmor_Name">mágus köpeny</string>
     <string name="MageArmor_NotMage">Csak mágusok viselhetik ezt a páncélt.</string>
+    <string name="MagicArrow_Info">A jó öreg varázsgyök, a helyes választás amikor kifogy a lőszöd.</string>
     <string name="MagicArrow_Name">Varázslövés</string>
     <string name="MagicTorch_Info">Egy varázslat mely fényt varázsol, ezzel megvilágítva a sötét zugait a kazamatának</string>
     <string name="MagicTorch_Name">Mágikus Fáklya</string>
@@ -1433,6 +1434,8 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_A holdragyogás_… Egy tanúbizonyság a varázserőnek, ami áthatja ezt a világot. Sokat tanultam az esszenciájukból, de a jutalmad… nos, azt legnagyobb gondossággal készítettem elő. *Átnyújt egy csillogó _Manabálvát* Az ereje vezéreljen végig a veszélyekkel teli úton.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Suche nach dem _Moongrace_, wo die Dunkelheit auf das schwächste Glühen des Mondlichts trifft. _Zwei Samen_, ihre Essenz, werden verborgene Geheimnisse enthüllen.</string>
     <string name="PlagueDoctorQuest_2_1_Prologue">_Holdszépség magvak_… azok az éteri virágok, amelyek maga a hold mágiáját suttogják. Hetek óta tanulmányozom furcsa ragyogásukat. Van valami erő az esszenciájukban, egy rejtett energia, ami a kulcs lehet… valamihez. *Gondolkodva kopogtat csontos ujjával az állán*\nDe sajnos ritkák. Csak a legmélyebb barlangokban találhatók, ahová a holdfény alig hatol be. Kettőre van szükségem belőlük. Két magra, hogy feltárjam erejük titkait. És cserébe kínálhatok neked valamit… egy tiszta, erős mágia ízelítőt. Egy _Mana főzetet_, ami tele van a holdszépség esszenciájával. Ez feltölti fáradt lelkedet, és lehetővé teszi, hogy megújult erővel bánj az arkanával.</string>
+    <string name="PlagueDoctorQuest_2_2_Epilogue">Lenyeges! _Napfű_, arany esszenciája vitalitással pulzál. Sokat tanultam már annak finom szerkezetéből. *Kézbesít egy _Életgyógyítót_, folyadéka halvány aranyl_uc colorful secara bercahaya.* Idd ezt, amikor a világ súlyát nehezen érezed, és érezd, hogyan a nap melegéd megújítja a lelkedet.</string>
+    <string name="PlagueDoctorQuest_3_1_Prologue">*A szemében furcsa, lázadt intenzitás türel* Ah, a _vámpír denevér_! Az éjszaka lénye, amely a prédájának életenergiáját élvezi. Meglehetősen... *Kisimítja magát, titkos kifejezésekkel murvogva*. Igen! A _denevér_ pengése, a teljes sötétségben való tájékozódás képessége... ez a titok megnyitásának kulcsa.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*Hátraveti a fejét, és felkacag, a nevetése visszhangzik a nyirkos laboratóriumában* Nagyszerű! Egy _Halál Lovag_ áll előttünk! Az erő, amely árad belőle... mámorító! *Hozzád fordul, szeme lázas csillogással* És neked, a bátorságod méltó jutalma: egy _Erő Főzet_! Adja meg neked az erőt, hogy legyőzd bármely ellenséget! Most... vizsgáljuk meg a tárgyunkat. A lényege olyan titkokat rejt, amelyek átírhatják az élet törvényeit! *Mániákus vigyorral lép a _Halál Lovag_ felé, és egy bugyborékoló zöld folyadékkal teli lombikot lóbál*</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">Öt _Törpe Boszorkánymester_, testük még mindig pulzál a sötét mágia gyenge visszhangjától! Hozd őket nekem, és jutalmul olyan italt adok, amely páratlan erővel felruház – egy _Erőesszenciát_, amely tíz férfi erejével telít meg!</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Hatchim! Elfler! O stubborn, yeraltı sakinleri, taş ve altına takıntılı. Ama _Elf Cadıcıları\'nı arıyorum... yerin derinliklerindeki bunalımlı sihirle beslenen çarpık büyüleri. Beş, beş tane bu kurumuş ruh lazım! Bedenleri belirli bir... olguayı anlamama anahtarı. Yer yüzeyinden arcan enerjilerini kanalize etme konusunda bir şeyler. Bir kırılma noktasına çok yakın olduğumu düşünüyorum, ama onların özünü, bozulmuş büyülerini gerekiyor! *He violently coughs into his handkerchief, a dark stain spreading across the delicate fabric*</string>
@@ -2300,6 +2303,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndChooseWay_Message">Melyik utat fogod követni?</string>
     <string name="WndClass_Mastery">Kiválóság</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+    <string name="WndCryptoDonate_copyAddress">Másolás</string>
     <string name="WndCryptoDonate_currency">Valuta</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_openWallet">Nyissa meg a pénztárcát</string>
@@ -2827,6 +2831,10 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
 
 
 

@@ -1,5 +1,6 @@
 <resources>
     <string name="AC_Devour">吞噬</string>
+    <string name="AC_Kick">踹</string>
     <string name="AC_Necromancy">死灵术</string>
     <string name="Abilities_Common">普通咒语</string>
     <string name="Abilities_Default">精通</string>
@@ -289,6 +290,7 @@
     <string name="BlindnessBuff_Info">你什么都看不见了，只能听见附近的声音</string>
     <string name="BlindnessBuff_Name">目盲</string>
     <string name="BloodTransfusion_Drained">宠物的生命精华流向了你。</string>
+    <string name="BloodTransfusion_FullHP">你的血液已经达到满容量了。</string>
     <string name="BloodTransfusion_Info">吸取目标几乎全部的血液来治疗自己。一个黑暗献祭与生存的仪式。</string>
     <string name="BloodTransfusion_Name">输血</string>
     <string name="BloodTransfusion_WontAgreed">目标抵抗生命精华的抽取。</string>
@@ -380,6 +382,7 @@
     <string name="Challenges_Names_6">禁忌符文</string>
     <string name="Challenges_Names_7">和平主义</string>
     <string name="Challenges_Names_8">没有城镇</string>
+    <string name="Challenges_Names_9">健忘症</string>
     <string name="ChampionOfAirBuff_Info">这种特质赋予生物风的本质，提高其敏捷性和战斗能力。风之冠军成为了一个强大的对手，有能力发动迅速而毁灭性的攻击，可以快速改变战斗的进程。</string>
     <string name="ChampionOfAirBuff_Name">风之冠军</string>
     <string name="ChampionOfEarthBuff_Name">大地勇士</string>
@@ -1909,6 +1912,7 @@
     <string name="Senior_Name">武僧大师</string>
     <string name="Senior_Name_Objective">武僧大师</string>
     <string name="ServantNPC_Desc">一位非常忙的旅店服务员</string>
+    <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">旅店服务员</string>
     <string name="ServantNPC_Name_Objective">旅店服务员</string>
     <string name="ServiceManNPC_Desc">当地企业一名中规中矩的员工。</string>
@@ -2976,6 +2980,10 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
 
 
 
