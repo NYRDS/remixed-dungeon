@@ -621,6 +621,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DriedRose_Name">매마른 장미</string>
     <string name="Drink_ACDrink">마신다</string>
     <string name="Drink_Message">상쾌한 기분이 든다!</string>
+    <string name="DrunkardNPC_Desc">평범한 술집 손님의 자연스러운 상태.</string>
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">술꾼</string>
     <string name="Drunkard_Phrase_1">술 좀 주세요!</string>
@@ -2102,6 +2103,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Torch_Info">이건 어두침침한 악마의 회랑 에서는 필수적인 아이템입니다.</string>
     <string name="Torch_Info2">던전의 조명이 열악하다면  반드시 필요할 물건입니다.</string>
     <string name="Torch_Name">횃불</string>
+    <string name="ToughShield_desc">가죽 끈으로 보강된 이 방패는 나무 방패보다 단단해 보입니다. 확실히 더 많은 피해를 막을 수 있습니다.</string>
     <string name="ToughShield_name">가죽 강화 방패</string>
     <string name="TownGuardNPC_Desc">평범한 마을 경비병입니다.</string>
     <string name="TownGuardNPC_Gender">masculine</string>
@@ -2319,6 +2321,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- 몹들을 위한 발광 효과\n
     - 버그 수정\n
     </string>
+    <string name="Welcome_Text_32_1">\nremix.32.1\n- Gameplay:\n-- Plague Doctor quest line\n-- Mob carcasses now somewhat usable items\n-- Better pets control\n- UX:\n-- Improved save-game management\n- Modding:\n-- Local mod installation methods\n-- Custom items now can perform actions while being in heaps\n- Bugs fixed\n</string>
     <string name="Welcome_Title">환영합니다!</string>
     <string name="WindGust_Info">돌풍을 일으켜 선택한 캐릭터를 밀쳐냅니다.</string>
     <string name="WindGust_Name">돌풍</string>
@@ -2787,6 +2790,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_slush_desc">Salju ini mula meleleh, mengubah tempat di sekelilingnya menjadi bubur.</string>
     <string name="town_deco_snow_desc">모험가들에 대한 이곳의 저명함에도 불구하고, 마치 어떤 외부인도 발을 들이지 않은 것처럼 많은 눈이 쌓여 있다.</string>
     <string name="town_deco_snow_name">눈</string>
+    <string name="town_deco_snowdrift_desc">상당히 큰 snow pile이고 아무도 청소하려는 것 같지 않습니다.</string>
     <string name="town_deco_snowdrift_name">눈더미</string>
     <string name="town_deco_snowman_desc">눈사람은 몬스터들이 던전을 침략한 날인 \&quot;던전마스\&quot;를 기념하기 위한 마을의 전통적인 장식물이다.</string>
     <string name="town_deco_snowman_name">눈사람</string>
@@ -2845,6 +2849,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_bench_name">나무 의자</string>
     <string name="town_deco_wooden_chair_desc">이 의자는 나무로 만들어져 있다</string>
     <string name="town_deco_wooden_chair_name">나무 의자</string>
+    <string name="town_deco_wooden_drawer_desc">안에 무엇이 보관되어 있는지 흥미롭습니다.</string>
     <string name="town_deco_wooden_drawer_name">서랍</string>
     <string name="town_deco_wooden_stairs_name">계단</string>
     <string name="town_deco_wooden_table_desc">잘 만들어진 나무 탁자다.</string>
@@ -2853,6 +2858,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
 
 
 

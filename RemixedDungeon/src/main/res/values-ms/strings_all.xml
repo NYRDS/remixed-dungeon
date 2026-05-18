@@ -585,6 +585,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Death_Name_1">%s Menggerunkan</string>
     <string name="Death_Name_2">%s Menggerunkan</string>
     <string name="Deathling_Desc">Makhluk Kematian ialah roh adiwira yang telah mati, tetapi malangnya telah dipanggil dengan kuasa Necromatik oleh rakan pengembara mereka.</string>
+    <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">makhluk kematian</string>
     <string name="Deathling_Name_Objective">makhluk kematian</string>
     <string name="DeepSnail_Desc">Jenis moluska ini sering dapat dilihat berdekatan dengan sumber air dan lebih cepat berbanding siput biasa. Berhati-hatilah dengan gigitannya pula, ia boleh memberikan kesan yang tidak menyenangkan pada kulit anda.</string>
@@ -1277,6 +1278,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MindVisionBuff_Info">Penglihatan batin membolehkan anda melihat dengan jelas pergerakan semua makhluk hidup di lantai.</string>
     <string name="MindVisionBuff_Name">Penglihatan Batin</string>
     <string name="MirrorImage_Desc">Beruang ilusi ini hampir menyerupai anda, tetapi lebih pucat dan sedikit bergetar.</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">imej cermin</string>
     <string name="MirrorImage_Name_Objective">imej cermin</string>
     <string name="MissileWeapon_Info1">\n\nPurata kecederaan dihasilkan oleh senjata ini menyamai %d mata per pukulan.</string>
@@ -1416,6 +1418,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PlagueDoctorNPC_Quest_Reminder">Bawa balik %d keping kulit tikus.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Hmph! Memang tak masuk akal?! Penduduk di sini masih tidak tahu betapa bahaya pembentung di bawah pekan ini! Pengawal dan pengembara bolehlah lindungi pekan dari apa-saja yang mendatang. Tapi! Tiada senjata dapat menghentikan sebaran penyakit. Oleh itu, saya perlukan bukti, bolehkah awak bantu saya? Bawa balik %d keping kulit tikus, untuk saya jalankan beberapa ujian tambahan.\n</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Hmph! Memang tak masuk akal?! Penduduk di sini masih tidak tahu betapa bahaya pembentung di bawah pekan ini! Pengawal dan pengembara bolehlah lindungi pekan dari apa-saja yang mendatang. Tapi! Tiada senjata dapat menghentikan sebaran penyakit. Oleh itu, saya perlukan bukti, bolehkah awak bantu saya? Bawa balik %d keping kulit tikus, untuk saya jalankan beberapa ujian tambahan.\n</string>
+    <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, kamu telah kembali! _Lima tikus mati_, sempurna! Kulit mereka akan penting untuk penyelidikan saya. Dan seperti yang dijanjikan, untuk usaha keberanianmu, saya telah membuatkan armor ini dari kulit mereka. Di dalamnya terkandung sentuhan wabah, tapi jangan khawatir! Ini terkendali, ini melindungi! Sekarang pergilah! Lindungi kota!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Bawakan saya _lima tikus mati_! Setiap tikus yang anda bawa semakin mendekatkan kami kepada pemahaman wabah yang mengerikan ini.</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">Hachiii!\n Terkutuklah wabah infernal ini! Ia merebak di seluruh bandar seperti api liar, merebak dalam tulang penduduk yang tidak curiga! BAH! Adakah kamu rasa pengawal yang tidak berdaya itu mempunyai peluang terhadap penyakit yang licik ini? Kamu di sana! Spesimen yang kuat dan sihat. Mungkin kamu boleh bantu saya. _Tikus_ longkang yang kotor itu... mereka membawanya, saya beritahu kamu, benih penyakit dalam badan kecil mereka yang busuk! Bawakan saya _lima_ daripada makhluk yang menyedihkan itu, _mati_, sudah tentu! Kulit mereka akan sangat berharga untuk penyelidikan saya. Saya akan buatkan kamu perisai yang menakjubkan, penghalang perlindungan terhadap wabah itu sendiri!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… magnificent! The _snails_, their secrets slowly unfurling like petals in the moonlight. A bounty of information indeed! But you are right, _fifty gold_ is hardly a fitting reward. *Chuckles maniacally*.</string>
@@ -1944,6 +1947,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">penjaga elit labah-labah</string>
     <string name="SpiderExploding_Desc">Pekerja semasa aman, makhluk ini tidak teragak-agak meluru ke pihak musuh dan mengambil tumbuhan yang dihadapannya, kemudian menjadikan dirinya sebagai bom hidup.</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">pekerja lelabah</string>
     <string name="SpiderExploding_Name_Objective">pekerja lelabah</string>
     <string name="SpiderGuard_Desc">Seperti juga askar, pengawal lelabah telah bersumpah untuk melindungi Kerajaan mereka. Racun dari pengawal ini digunakan untuk melumpuhkan sasaran mereka.</string>
@@ -2829,6 +2833,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 

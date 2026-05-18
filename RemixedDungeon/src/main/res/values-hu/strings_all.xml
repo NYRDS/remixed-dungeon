@@ -1119,6 +1119,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">HÚZÁS</string>
     <string name="Larva_Desc">Öreg Isten Lárva</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">isteni lárva</string>
     <string name="Larva_Name_Objective">isteni lárva</string>
     <string name="LastLevel_TileDescStatue">Ez az oszlop igazi humanoid koponyákból készült. Remek.</string>
@@ -1394,6 +1395,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Ezt a nyílvesszőt méreg borítja.</string>
     <string name="ParalysisArrow_Name">bénító nyíl</string>
+    <string name="ParalysisBuff_Info">Teljesen megvanálva!</string>
     <string name="Paralysis_Name_0">Kábító %s</string>
     <string name="Paralysis_Name_1">Kábító %s</string>
     <string name="Paralysis_Name_2">Kábító %s</string>
@@ -2078,6 +2080,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="TerrorBuff_Name">Rémült</string>
     <string name="Thief_Carries">\n\n A %1$s egy _%2$s_t hordoz. Egyértelműen lopott.</string>
     <string name="Thief_Desc">A kazamata mélyebb szintjei mindig remek bűvóhelyül szolgáltak minden féle bűnözőnek. Nem mind tudta megőrizni a józan eszét hosszú ideig távol a napfénytől. Ezek az őrült banditák már réges régen elfelejtették, hogy kik ők és hogy miért lopnak. Úgy tűnik ennek a banditának tőre valamivel be van vonva.</string>
+    <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">bolond tolvaj</string>
     <string name="Thief_Name_Objective">bolond tolvaj</string>
     <string name="Thief_Stole">A %1$s ellopta tőled a %2$st!</string>
@@ -2833,6 +2836,9 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
 
 
 

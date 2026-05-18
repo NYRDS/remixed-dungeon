@@ -33,6 +33,7 @@
     <string name="AirElemental_Name_Objective">风元素</string>
     <string name="AlarmTrap_Desc">这个陷阱发出的刺耳声音回荡在地牢中！</string>
     <string name="Albino_Desc">啮齿小鼠是极具侵略性却比较弱小的下水道居民，只有在拥有大量数量时才会造成威胁。这只特殊的老鼠看起来得了白化病，并且拥有异常尖利的牙齿。</string>
+    <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name">白化老鼠</string>
     <string name="Albino_Name_Objective">白化老鼠</string>
     <string name="AlchemyPot_SelectSeed">选择你要投掷的种子</string>
@@ -910,6 +911,7 @@
     <string name="Healing_Name">治疗术</string>
     <string name="HealthArrow_Info">这支箭的箭尖上沾有治疗药水。</string>
     <string name="HealthArrow_Name">治疗箭</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">这个飞镖的镖尖上沾有治疗药水。</string>
     <string name="HealthDart_Name">治疗飞镖</string>
     <string name="Heap_Mimic">它是拟形怪！</string>
@@ -1174,6 +1176,7 @@
     <string name="KoboldIcemancer_Name">蓝袍狗头人</string>
     <string name="KoboldIcemancer_Name_Objective">蓝袍狗头人</string>
     <string name="Kobold_Desc">狗头人被认为是一个传说。虽然它们和豺狼人有着同样的祖先，但是它们居住在冰霜洞穴中。同时它们也有很高的工程机械造诣。但没人知道为什么它们消失了这么多年……</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">狗头人</string>
     <string name="Kobold_Name_Objective">狗头人</string>
     <string name="KrampusHead_Info">你有想过扮演一个更邪恶的角色进行地牢探险会是什么感受吗？嗯，你这魔鬼般的外表肯定会给当地的幼鼠带来恐惧。</string>
@@ -2986,6 +2989,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

@@ -660,6 +660,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="EncumbranceBuff_CharAct_2">Questo %s è troppo pesante per me per usarlo efficacemente.</string>
     <string name="EncumbranceBuff_CharAct_5">%s è troppo per me da gestire in questo momento.</string>
     <string name="EncumbranceBuff_Info">Non ho abbastanza forza per usare %s efficacemente.</string>
+    <string name="EncumbranceBuff_Name">Pesantezza</string>
     <string name="EnslavedSoul_Desc">Puoi quasi vedere attraverso questa apparizione spiritica. Nonostante sembri uno scheletro, a volte, per mezzo secondo, compare un volto invece... un volto colmo di sofferenza e tormento.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name">anima incatenata</string>
@@ -789,6 +790,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="GoldenSword_Name">spada d\'oro</string>
     <string name="Golem_Defense">Bloccato</string>
     <string name="Golem_Desc">I nani provarono a combinare la loro conoscenza nei meccanismi con il loro nuovo potere di fusione degli elementi, Hanno usato spiriti della terra come \&quot;anima\&quot; per i corpi meccanici dei golem, che furono creduti come i più controllabili. Nonostante questo, il più piccolo errore nel rituale potrebbe causare un esplosione.</string>
+    <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">Golem</string>
     <string name="Goo_Desc">Poco si sa sul Goo. È molto probabile che non sia nemmeno una creatura, ma piuttosto un conglomerato di sostanze delle fognature che hanno acquisito i rudimenti della libera volontà. In ogni caso, è evidente che qui c\'è al lavoro una magia oscura.</string>
@@ -2013,6 +2015,7 @@ Potrebbe bruciare?</string>
     <string name="Sungrass_Name">erba solare</string>
     <string name="SurfaceScene_GameOver">Partita Finita</string>
     <string name="SuspiciousRat_Desc">Il ratto non è una vista insolita nei dungeon, ma per abitare così in profondità... Puoi vedere come tutto il corpo del ratto spasmo quando si muove. </string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">Un ratto sospetto si sta contraendo violentemente. </string>
     <string name="SuspiciousRat_Name">Ratto sospettoso</string>
     <string name="SuspiciousRat_Name_Objective">Ratto sospettoso</string>
@@ -2630,6 +2633,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_common_bed_name">Letto</string>
     <string name="town_deco_common_door_desc">Un avventuriero dalle buone maniere non dovrebbe invadere la proprietà privata, senza un invito ovviamente</string>
     <string name="town_deco_common_door_name">Porta</string>
+    <string name="town_deco_counter_name">Bancone</string>
     <string name="town_deco_covered_table_desc">Tavolo di legno con tovaglia bianca</string>
     <string name="town_deco_covered_table_name">Tavolo</string>
     <string name="town_deco_crate_bottles_desc">L\'imbottigliamento della birra è diventato un passatempo molto popolare tra i locandieri.</string>
@@ -2791,6 +2795,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 

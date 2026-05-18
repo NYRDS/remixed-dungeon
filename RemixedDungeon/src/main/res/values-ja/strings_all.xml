@@ -60,6 +60,7 @@
     <string name="Amulet_ACEnd">ゲーム終了</string>
     <string name="Amulet_Info">イェンダーの魔除けは起源不明の最も強力なアーティファクトとして知られている。この魔除けは、持ち主が十分に強い意志の力で\&quot;説得\&quot;することが出来れば、どんな願いでも叶えることができると言われている。</string>
     <string name="Amulet_Name">イェンダーの魔除け</string>
+    <string name="AnesthesiaBuff_Info">痛みを感じず攻撃からも目覚めないが、ダメージは受け続ける。</string>
     <string name="Anesthesia_Cast">%sは深く、夢も見ない眠りに落ちた。</string>
     <string name="Anesthesia_Name">麻酔</string>
     <string name="Ankh_Info">この古代の不死のシンボルは、死後に蘇る能力を与える。復活すると、装備していないアイテムはすべて失われる。</string>
@@ -569,6 +570,7 @@
     <string name="CorpseDust_Info2">持っているだけで不安や怒りを感じるからかもしれない。</string>
     <string name="CorpseDust_Name">コープスダスト</string>
     <string name="CorpseExplosion_Info">死体を有毒なガスの雲に変え、付近の敵すべてに病気と毒を広げます。</string>
+    <string name="CorpseExplosion_Name">死体爆発</string>
     <string name="CorpseExplosion_NoCorpse">その場所には死体がない。</string>
     <string name="Crab_Defense">受け流し</string>
     <string name="Crab_Desc">この巨大なカニは下水道の食物連鎖の頂点にいる。彼らは非常に速く、その分厚い外骨格は激しい打撃にも耐えることができる。</string>
@@ -1261,6 +1263,7 @@
     <string name="LevitationBuff_Info">トラップや地上の危険を避けるため、体は地上に浮かんでいる。</string>
     <string name="LevitationBuff_Name">浮上</string>
     <string name="LibrarianNPC_Desc">とても内気な人で、不格好なセーターを着て、分厚い眼鏡をかけている。</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">こんにちは。図書館へようこそ。ここでは、ダンジョン内で発見されたあらゆる物事に関する情報を得ることができる......と言いたい所だが、実は、冒険者が発見した知識しか提供できないんだ。恥ずかしながらね…というわけで、訪れるたびに、おそらく新しい発見があることだろう。</string>
     <string name="LibrarianNPC_Message_Not_Ready">す...すみません、図書館はまだ...開いてないんです…</string>
     <string name="LibrarianNPC_Name">図書館司書</string>
@@ -3024,6 +3027,9 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
+
 
 
 

@@ -21,6 +21,7 @@
     <string name="AboutScene_Txt_Intro">Remixed Dungeon por NYRDS baseado em Pixel Dungeon Source por Watabou.</string>
     <string name="Accuracy_Decreased">Por que eu pensei que poderia usar %s? Ferramenta errada, mãos erradas!</string>
     <string name="Accuracy_DecreasedDoctor">Cada golpe deste %s espalha imperfeição. Meu Serra Óssea cura… isso infecta.</string>
+    <string name="Accuracy_DecreasedDoctorBareHands">Mãos nuas contaminam minha técnica. Sem o corte limpo da Serra, minha mira apodrece em caos.</string>
     <string name="Acidic_Desc">Estas enormes criaturas demoníacas parecidas com aracnídeos evitam o combate de perto, disparando pontas serrilhadas de longas distâncias.</string>
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">escorpião ácido</string>
@@ -259,6 +260,7 @@
     <string name="BlackSkullOfMastery_Title">Você pode quebrar o feitiço. Ou você pode manipular a magia de uma forma que lhe permita consumir o poder do feitiço e próprio artefato em si, tornando-se um Lich.</string>
     <string name="BlackSkull_Activated">O Crânio Negro despertou!</string>
     <string name="BlackSkull_Deactivated">O Crânio Negro adormeceu, mais uma vez...</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Um pequeno crânio de obsidiana. Era uma das fontes dos poderes de Necropolis, mas após a derrota do Lich, parece que perdeu todos os seus poderes. Mas, enquanto você a segura em suas mãos, um pensamento estranho vem à sua mente: \&quot;Estou com fome\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">O crânio está emitindo poder, você pode vê-lo escorrendo dos olhos vazios do crânio. E, enquanto você a segura em suas mãos, você pode ouvir a voz tenebrosa dizendo: \&quot;A morte se aproxima\&quot;</string>
     <string name="BlackSkull_Name">crânio negro</string>
@@ -331,6 +333,7 @@
     <string name="CagedKobold_Name">Kobold enjaulado</string>
     <string name="CagedKobold_Name_Objective">Kobold enjaulado</string>
     <string name="CagedKobold_Quest_End">Oh, obrigado, muito obrigado! como você conseguiu encontrar a chave? você...você destruiu a arma?! isso é incrível! quer saber de uma coisa, eu disse que iria te ajudar, e eu acho que sei a melhor maneiro de fazê-lo. Eu vou me colar com você por um tempo. * Kobold enjaulado se transformou em uma vela.</string>
+    <string name="Calm_Cast">%1 calma-se.</string>
     <string name="Calm_Info">Há muitas criaturas agravadas por aí, vamos ajudá-las.</string>
     <string name="Calm_Name">Calmo</string>
     <string name="CandleOfMindVision_Info">Parece uma vela normal, não é algo que você esperaria encontrar em um calabouço perigoso. Curiosamente é muito quente, apesar de não estar acesa.</string>
@@ -1158,6 +1161,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="KoboldIcemancer_Name">mago-do-gelo Kobold </string>
     <string name="KoboldIcemancer_Name_Objective">mago-do-gelo Kobold </string>
     <string name="Kobold_Desc">Kobold são considerados lendas. Um ancestral comum dos gnolls, kobolds vivem em cavernas profundas e frias. Acredita-se que o seu povo dominou a engenharia e maquinaria  muito antes dos anões. No entanto, não se sabe por que eles desapareceram há anos atrás...</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="KrampusHead_Info">Você já se perguntou como seria assumir um papel mais sinistro em Dungeon? Bem, você certamente trará horror aos ratos bebês locais com essa aparência diabólica.</string>
@@ -2981,6 +2985,10 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
 
 
 
