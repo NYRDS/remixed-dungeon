@@ -272,6 +272,7 @@
     <string name="Bleeding_Death">Hai sanguinato a morte...</string>
     <string name="BlessedBuff_Info">Che precisione e scatto vengano per coloro che sono toccati dalla benedizione!</string>
     <string name="BlessedBuff_Name">Benedetto</string>
+    <string name="BlindnessBuff_Info">Completamente accecato, si possono solo sentire i suoni intorno.</string>
     <string name="BlindnessBuff_Name">Accecato </string>
     <string name="BodyArmorBuff_Info">La corazza è aumentata a scapito della velocità di movimento.</string>
     <string name="BodyArmorBuff_Name">Armatura Corporea</string>
@@ -1000,6 +1001,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="IceGuardianCore_Name">guardiano del ghiaccio</string>
     <string name="IceGuardianCore_Name_Objective">guardiano del ghiaccio</string>
     <string name="IceGuardian_Desc">I Guardiani del Ghiaccio sono stati creati dagli antichi coboldi per proteggere le loro caverne. Finché il nucleo del Guardiano contiene abbastanza energia, è in grado di ricostruire se stesso proprio nel pieno della battaglia.</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">guardiano del ghiaccio</string>
     <string name="IceGuardian_Name_Objective">guardiano del ghiaccio</string>
     <string name="IceKey_Name">chiave di ghiaccio</string>
@@ -1027,6 +1029,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="InnKeeperNPC_Name_Objective">locandiere</string>
     <string name="InnServant_Phrase_2">Questa ubriaca mi fa impazzire!</string>
     <string name="InnServant_Phrase_3">Mi sembra pulito</string>
+    <string name="InnServant_Phrase_4">Oh my, oggi così tanti ospiti</string>
     <string name="Instability_Name_0">Instabile %s</string>
     <string name="Instability_Name_1">Instabile %s</string>
     <string name="Instability_Name_2">Instabile %s</string>
@@ -2818,6 +2821,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 

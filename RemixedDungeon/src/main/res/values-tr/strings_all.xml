@@ -1384,6 +1384,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Mob_CantDoIt">Yapamam. Küçük pençelerim var.</string>
     <string name="Mob_Desc">Gerçek açıklama yakında gelecek!</string>
     <string name="Mob_Died">Uzakta birşeyin öldüğünü duydun</string>
+    <string name="Mob_GoingTo">Zaten gidiyor!</string>
     <string name="Mob_ReadyForOrder">%s siparişiniz için hazır.</string>
     <string name="Mob_StaAmokStatus">Bu %1$s, delidana gibi koşuyor.</string>
     <string name="Mob_StaControlledStatus">Bu %s kutsal olmayan bir şekilde ele geçirilmiş.</string>
@@ -3027,6 +3028,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

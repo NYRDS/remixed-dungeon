@@ -471,6 +471,7 @@
     <string name="Claymore_Name">클레이모어</string>
     <string name="CloakBuff_Info">어둠의 망토가 그림자 속에서 당신을 감추어 적들이 당신을 덜 보게 합니다.</string>
     <string name="CloakBuff_Name">은신함</string>
+    <string name="CloakSpell_Info">그림자 속으로 들어가 보이지 않게 됩니다. 탐지될 가능성을 크게 줄입니다. 적들이 근처에 있으면 사용할 수 없습니다.</string>
     <string name="CloakSpell_Name">은신</string>
     <string name="ClothArmor_Desc">이 가벼운 갑옷은 기본적인 방어력을 제공한다.</string>
     <string name="ClothArmor_Name">천 갑옷</string>
@@ -2386,6 +2387,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndDonate_silverDonateText2">또한 모든 게임 모드에서 광고를 없애주며, 처음부터 사냥꾼을 해금합니다.</string>
     <string name="WndDontLikeAds_NotThisTime">지금은 아니다</string>
     <string name="WndError_Title">오류</string>
+    <string name="WndFortuneTeller_IdentifyAll">모두</string>
     <string name="WndFortuneTeller_Instruction">나는 당신이 고른 아이템에 얽힌 비밀을 밝혀낼 수 있어요. 한번의 식별은 %d만큼의 당신의 금화가 필요해요.</string>
     <string name="WndFortuneTeller_No_Item">신중하게, 당신은 아무것도 아닌 것에 돈을 낭비하고 싶지는 않을 거예요. 그렇죠? 당신의 가방에는 식별되지 않은 아이템이 없어요.</string>
     <string name="WndFortuneTeller_Title">예언가</string>
@@ -2459,6 +2461,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndLocalModInstall_pick">모드 디렉토리 선택</string>
     <string name="WndLocalModInstall_text">모드를 설치할 디렉토리를 선택하세요.</string>
     <string name="WndModInstall_InstallingMod">모드 설치 중</string>
+    <string name="WndModInstall_PleaseUpdate">이 모드를 설치하기 전에 Remixed Dungeon을 업데이트해 주세요</string>
     <string name="WndModSelect_AreYouSure">모드 삭제 중: %s, 정말 삭제하시겠습니까?</string>
     <string name="WndModSelect_ReallyDelete">정말로 삭제하시겠습니까?</string>
     <string name="WndModsDisclaimer_install">로컬 모드 설치</string>
@@ -2888,6 +2891,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 

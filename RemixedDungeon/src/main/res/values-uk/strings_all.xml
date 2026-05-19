@@ -659,6 +659,7 @@
     <string name="DreadKnight_Name_Objective">лицаря жаху</string>
     <string name="Dreamweed_Desc">Доторк до Дурману випускає хмару спантеличуючого газу</string>
     <string name="Dreamweed_Name">Дурман</string>
+    <string name="DriedRoseBuff_Info">Роза дуже чарівна.</string>
     <string name="DriedRoseBuff_Name">Зачарування</string>
     <string name="DriedRoseCursedBuff_Info">Троянда виглядає красиво, але не дуже чарівно.</string>
     <string name="DriedRoseCursedBuff_Name">Влюбливий</string>
@@ -2389,6 +2390,7 @@
     -- Псі-павуки тепер посилюють союзників, замість того щоб проклинати ворогів.\n
     - Виправлення помилок\n
     </string>
+    <string name="Welcome_Text_32">\n    remix.32\n    - Gameplay:\n    -- Mobs and Pets cloud get experience and levels now\n    -- Chaos Shield\n    -- Champions\n    -- Yog battle rebalanced\n    -- Balance tunes\n    - UX:\n    -- Detailed Hero and Mobs stats\n    -- Better Customizations interface\n    -- Smooth camera\n    - Modding:\n    -- Custom animations\n    -- Custom Scripts for built-in Mobs\n    -- Glowing for Mobs\n    - Bugs fixed\n    </string>
     <string name="Welcome_Title">Ласкаво просимо!</string>
     <string name="WindGust_Info">Викликає порив вітру, що відштовхує обраного персонажа.</string>
     <string name="WindGust_Name">Порив вітру</string>
@@ -2945,6 +2947,8 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

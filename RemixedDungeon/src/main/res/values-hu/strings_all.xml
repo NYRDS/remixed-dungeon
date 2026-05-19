@@ -93,6 +93,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="AwarenessBuff_Info">Az érzékek hegyeződtek, így nagyobb tudatosságot adva a környezetről.</string>
     <string name="AwarenessBuff_Name">Éberség</string>
     <string name="AzuterronNPC_Desc">Egy rejtélyes figura, akit fekete homály takar.</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">Idegen</string>
     <string name="AzuterronNPC_Name_Objective">Idegent</string>
     <string name="AzuterronNPC_Quest_End">Kitűnő. Nézd, fogd ezt a bájitalt, biztos, hogy előnyösnek találod majd.</string>
@@ -719,6 +720,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="Facilitations_Descriptions_2">A természet mint energiaforrás mély és alapos tanulmányozása lehetővé teszi, hogy a varázslatos tartalékaidat feltöltsd az utazás során.</string>
     <string name="Facilitations_Descriptions_3">Meghúzva az ogre bőrből készült övet, amelyet minden új generációra továbbadtak, egy lépést teszel a előtted álló ismeretlen felé.</string>
     <string name="Facilitations_Names_0">Nincs éhezés</string>
+    <string name="Facilitations_Names_2">Genio szellem</string>
     <string name="Fadeleaf_Desc">Egy Fakultlevélhez érve elteleportál bármely lényt egy véletlen helyre az adott szinten.</string>
     <string name="Fadeleaf_Name">Fakultlevél</string>
     <string name="FetidRat_Desc">Ez az erszényes patkány sokkal nagyobb mint a normális példányok. Valami féle felhő veszi körül. </string>
@@ -1171,6 +1173,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Level_TileDescInactiveTrap">Ez a csapda aktiválódott és nem veszélyes többé.</string>
     <string name="Level_TileDescLockedDoor">Ez az ajtó zárva van, kulcsra van szükséged, hogy kinyisd.</string>
     <string name="Level_TileDescLockedExit">Nehéz rácsok zárják el a lejáratot.</string>
+    <string name="Level_TileDescPedestal">Egy kis posztó.</string>
     <string name="Level_TileDescPileOfStones">Egy rendkívül nehéz kőhalom, mozgatni tűnik.</string>
     <string name="Level_TileDescSign">Nem tudod elolvasni a táblát innen.</string>
     <string name="Level_TileDescStatue">Valaki felakarta díszíteni ezt a helyet, de nyilvánvalóan elbukott.</string>
@@ -2008,6 +2011,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="SpiderQueenCarapace_Name">Pók Királynő Nyaklánc</string>
     <string name="SpiderQueen_Desc">Egy gyönyörű testű nő kereszteze egy undorító pókkal. Ebben a barlangban minden lény a szolgája. A találkozás ezzel a különleges hölggyel halálos lehet... mert te egy betolakodó vagy!</string>
     <string name="SpiderQueen_DieInfo">A Pókkirálynő elesett! Most vissza kell térnem az 5. szintre, és folytatnom kell az utamat a Mélységek felé.</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">pók királynő</string>
     <string name="SpiderQueen_Name_Objective">Pók királynő</string>
     <string name="SpiderServant_Desc">A katonák a pókbarlang leggyakoribb egységei. Arra születtek, hogy megvédjék saját területüket. A katonák a kifejlődött mérges mirigyeikkel mérgezik meg ellenségeiket.</string>
@@ -2859,6 +2863,10 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
 
 
 
