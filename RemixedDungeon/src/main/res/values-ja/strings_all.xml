@@ -61,6 +61,7 @@
     <string name="Amulet_Info">イェンダーの魔除けは起源不明の最も強力なアーティファクトとして知られている。この魔除けは、持ち主が十分に強い意志の力で\&quot;説得\&quot;することが出来れば、どんな願いでも叶えることができると言われている。</string>
     <string name="Amulet_Name">イェンダーの魔除け</string>
     <string name="AnesthesiaBuff_Info">痛みを感じず攻撃からも目覚めないが、ダメージは受け続ける。</string>
+    <string name="AnesthesiaBuff_Name">麻酔</string>
     <string name="Anesthesia_Cast">%sは深く、夢も見ない眠りに落ちた。</string>
     <string name="Anesthesia_Name">麻酔</string>
     <string name="Ankh_Info">この古代の不死のシンボルは、死後に蘇る能力を与える。復活すると、装備していないアイテムはすべて失われる。</string>
@@ -293,6 +294,7 @@
     <string name="BlindnessBuff_Name">盲目</string>
     <string name="BloodTransfusion_Drained">ペットからあなたに生命力が流れ込む。</string>
     <string name="BloodTransfusion_FullHP">血液はすでに満杯です。</string>
+    <string name="BloodTransfusion_Info">目標からほぼ 모든 혈액을 빨아들여 자신을 치유한다. 희생과 생존의 어두운 의식이다.</string>
     <string name="BloodTransfusion_Name">輸血</string>
     <string name="BloodTransfusion_WontAgreed">目標が生命の精髄を吸い取ることに抵抗する。</string>
     <string name="BodyArmorBuff_Info">アーマーは移動速度を犠牲にして増加する。</string>
@@ -1823,6 +1825,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">ルーンが刻まれた頭蓋骨</string>
     <string name="RunicSkull_Name_Objective">ルーンが刻まれた頭蓋骨</string>
+    <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">一見したところ、この年季の入った青銅の剣は、古サビの汚れに覆われ、まったく使い物にならないように見える。しかし、その内部にはある種の古めかしい力が眠っている。その力は、ほとんどの生き物を意志なき奴隷に変えることができる。ただ、それを目覚めさせる正しい方法を見つける必要があるだけなのだ...</string>
     <string name="SacrificialSword_Name">支配の剣</string>
     <string name="SantaHat_Info">深淵の主、サンタの赤いシルクハットほど”ダンジョン”気分を盛り上げてくれるものはない。</string>
@@ -2092,6 +2095,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SpiderQueen_Name">スパイダークイーン</string>
     <string name="SpiderQueen_Name_Objective">スパイダークイーン</string>
     <string name="SpiderServant_Desc">ソルジャーはクモの巣で最も数が多く、縄張りを守るために生まれた。彼らの鋏角は、敵を毒殺するための毒腺が発達している。</string>
+    <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">スパイダーソルジャー</string>
     <string name="SpiderServant_Name_Objective">スパイダーソルジャー</string>
     <string name="Spinner_Desc">この緑がかった毛むくじゃらのクモは直接の戦闘を避けようとし、被害者がクモの巣に絡まり、毒に噛まれてゆっくりと死んでいく間、遠くで待つことを好む。</string>
@@ -3030,6 +3034,10 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
+
+
 
 
 

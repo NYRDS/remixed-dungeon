@@ -578,6 +578,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DarkVeilBuff_Info">Selubung kegelapan mengelilingi pemilik, memanggil roh setiap kali kerosakan diterima.</string>
     <string name="DarkVeilBuff_Name">Selubung gelap</string>
     <string name="Darkness_Info">Nampaknya ada jasad kegelapan abadi terapung-apung di udara</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Bilah logam yang tajam hujungnya dan berat pangkalnya untuk digunakan sebagai peluru dengan kekuatan balingan.</string>
     <string name="Dart_Name">damak</string>
     <string name="DashSpell_Info">Pecut pada arah dikehendaki ketika merempuh pihak musuh, menyebabkan kecederaan dan kecacatan.</string>
@@ -1167,6 +1168,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Level_TileDescInactiveTrap">Perangkap telah dirungkai sebelum ini dan tidak lagi merbahaya.</string>
     <string name="Level_TileDescLockedDoor">Pintu ini dikunci, anda perlukan anak kunci yang sesuai untuk membukanya.</string>
     <string name="Level_TileDescLockedExit">Palang berat menutup lalui tangga ke arah bawah.</string>
+    <string name="Level_TileDescPedestal">Sebuah pedestal kecil.</string>
     <string name="Level_TileDescPileOfStones">Satu timbunan batu yang sangat berat, kelihatannya tidak boleh digerakkan.</string>
     <string name="Level_TileDescSign">Anda tidak dapat membaca teks dari sini.</string>
     <string name="Level_TileDescStatue">Ada orang mahu hias tempat ini, tetapi gagal melakukannya.</string>
@@ -2544,6 +2546,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndStory_Spiders">Pada zaman dahulu ada sebuah lombong berharga, yang dipenuhi dengan batu ajaib. Tetapi setelah ia habis digali pelombong telah beralih ke tempat lain, meninggalkan satu rangkaian terowong yang luas. Lama-kelamaan tempat ini didiami oleh sejenis lelabah. Walaupun ia merupakan makhluk yang merbahaya, ia tidak dapat menghindari kedatangan pengembara yang berani atau gila masuk mencari harta karun yang boleh ditemui dalam terowong ini. Walaupun semakin tinggi risiko semakin berharga harta ajaib di dalamnya. Sebelum ini, pernah seorang dukun jahat masuk ke dalam terowong untuk lari daripada pendakwa. Mereka mempercayai khabar angin hanya menunggu pintu masuk terowong tersebut. Malangnya sidukun jahat tidak lagi muncul keluar, mungkin dia berjaya lari keluar dari pengawal... atau mati, dimakan makhluk kegelapan terowong itu.</string>
     <string name="WndTilesKind_ClassicLook">Penampilan Klasik</string>
     <string name="WndTilesKind_NewLook">Penampilan Baru</string>
+    <string name="WndTilesKind_Title">Jeszcze jedna rzecz:</string>
     <string name="WndTilesKind_text">Anda akan memasuki Penjara Bawah Tanah yang dimiliki oleh sihir yang songsang, namun anda kini boleh memilih bagaimana anda ingin melihatnya:\nAdakah anda mahu ia dalam pandangan pseudo 3D moden atau pandangan rata klasik?\nAnda boleh menukarnya kemudian dalam menu pilihan permainan.</string>
     <string name="WndTradeItem_Bought">Anda membeli %1$s dengan harga %2$dg</string>
     <string name="WndTradeItem_Buy">Beli dengan harga %dg</string>
@@ -2596,6 +2599,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="YogsBrain_Name">otak yog</string>
     <string name="YogsBrain_Name_Objective">Otak yog</string>
     <string name="YogsEye_Desc">Mata dewa purba, melihat dengan kebencian abadi. Anda dapat rasai ia melihat menembusi roh anda.</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">mata yog</string>
     <string name="YogsEye_Name_Objective">Mata yog</string>
     <string name="YogsHeart_Desc">Berabad lamanya ramai orang percaya makhluk tanpa hati sahaja yang dapat bertindak sangat kejam. Dan buktinya di sini, jantung besar Dewa Purba yang berdenyut-denyut.</string>
@@ -2612,6 +2616,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ZombieMask_Info">Pernahkah sebelum ini anda bercita-cita mahu kelihatan seperti adiwira hidup semula, yang gagal dalam pencariannya berulang-ulang kali? Sekarang inilah peluang anda.</string>
     <string name="ZombieMask_Name">Topeng Zombie</string>
     <string name="Zombie_Desc">Kurungan bawah tanah adalah tempat merbahaya dan ramai pengembara telah menemui maut di dalamnya. Yang paling malang menemui ajal di Nekropolis, kini mereka kekal di dalam kurungan bawah tanah dalam bentuk mayat hidup yang mereput.</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">zombi</string>
     <string name="Zombie_Name_Objective">zombi</string>
     <string name="deco_candle_desc">Lilin besar</string>
@@ -2856,6 +2861,12 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
 
 
 

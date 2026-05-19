@@ -1254,6 +1254,7 @@ Parede
     <string name="LevitationBuff_Info">O corpo paira acima do solo, evitando armadilhas e outros perigos terrenos.</string>
     <string name="LevitationBuff_Name">Levitando</string>
     <string name="LibrarianNPC_Desc">Uma pessoa muito tímida, vestindo um suéter estranho e usando um óculos muito grosso.</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">O-Olá. Bem-vindo à Biblioteca. Aqui você pode encontrar informações sobre todo tipo de coisas, coisas que podem ser encontradas no calabouço... na verdade, nós só podemos fornecer conhecimento do que foi descoberto pelos aventureiros. É... é um pouco embaraçoso. Então, cada vez que você nos visitar, provavelmente, haverá coisas novas para ler.</string>
     <string name="LibrarianNPC_Message_Not_Ready">Me... me desculpe. a biblioteca não está aberta... ainda.</string>
     <string name="LibrarianNPC_Name">bibliotecário</string>
@@ -2991,6 +2992,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -562,6 +562,7 @@
     <string name="Crab_Name_Objective">下水道螃蟹</string>
     <string name="CrippleBuff_Name">殘疾</string>
     <string name="Crystal_Desc">巨大閃亮的水晶懸浮在空中。也許它充滿了強大的魔法。</string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">懸浮水晶</string>
     <string name="Crystal_Name_Objective">懸浮水晶</string>
     <string name="CurareDart_Info">這些提摩般邪惡的飛鏢傷害不大，但能把目標麻痺，剩它靜立無助一會。</string>
@@ -680,6 +681,7 @@
     <string name="Dungeon_Tips_7">人在饑餓的時候不會痛，但人在饑餓難耐的時候會很痛。</string>
     <string name="Dungeon_Tips_8">襲擊必中。比如說，你可以躲在門後來給下一個開門的敵人一個驚喜。</string>
     <string name="Dungeon_Tips_9">別讓天狗跑了!</string>
+    <string name="Dungeon_saveIoError">儲存檔案時出現錯誤:</string>
     <string name="DwarfToken_Info">很多矮人和他們的造物都攜帶著這種小塊金屬，理由不詳。也許它是裝飾品或甚麼身份識別牌。矮人都挺奇怪的。</string>
     <string name="DwarfToken_Name">矮人徽記</string>
     <string name="EarthElemental_Desc">土元素是由凝縮的自然之力所操縱著的的土塊。</string>
@@ -1135,6 +1137,7 @@
     <string name="KindOfWeapon_EquipCursed">您不由自主地握緊了您的%s</string>
     <string name="King_Defense">招架</string>
     <string name="King_Desc">這位最後的矮人國王以對生死機制的透徹理解而聞名。他說服王國的皇室成員參加了一場本應讓他們所有人獲得永生的儀式。最終成功的僅他一人——還獲得了一支死靈軍隊。</string>
+    <string name="King_Gender">masculine</string>
     <string name="King_Info1">你不可能殺掉我，%s…我是…不朽的…</string>
     <string name="King_Info2">復蘇吧，奴隸們！</string>
     <string name="King_Info3">你好大的膽子！</string>
@@ -1492,6 +1495,7 @@
     <string name="PlagueDoctorQuest_2_2_InProgress">_兩株陽光草_種子。它們金色的花瓣蘊含著我渴望理解的力量。找到它們，讓它們的精華顯現！</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">啊，_日曆草_！一朵 delicate 的花，花瓣散發著太陽的溫暖。我相信它的精華是……啊，算了，細節先不談了。總之非常關鍵。_兩顆日曆草種子_。幫我把牠們帶回來，我就獎勵你一件對冒險絕對有用的東西——充滿陽光生命力的_治癒藥水_。</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*他戴著手套的雙手輕輕捧著_蝙蝠_，以一種令人不安的迷戀審視著它微小的身軀* 太棒了！蝙蝠的迴聲定位……這是我從未見過的。如此精確……如此……控制。*他轉向妳，臉龐隱藏在面具之下* 為了妳的努力，這是_捲軸升級_。明智地使用它，因為它擁有……提煉妳本質的潛力。*他將捲軸遞給妳，聲音壓低成輕聲耳語* 這隻_蝙蝠_，它是……通往隱藏世界的窗口。一個……影子舞動、秘密低語的世界。</string>
+    <string name="PlagueDoctorQuest_3_1_InProgress">给我一只活着的、毫发无损的_吸血蝙蝠_！它的血液，它的翅膀……蕴含着我必须揭开秘密！</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*牠的眼中閃爍著一種奇異而狂熱的光芒* 啊，_吸血蝙蝠_！夜間的生物，以獵物的生命力為食。有趣……真是有趣。我需要一隻活的來研究其獨特的生理構造。這一切都是關於……理解……理解……*牠的聲音逐漸低沉，喃喃自語著一堆神秘術語*。對！蝙蝠的回聲定位，牠在完全黑暗中導航的能力……這是解開秘密的關鍵。</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*他仰頭發出咯咯的笑聲，聲音在他潮濕的實驗室中回盪* 壯觀！一個_死亡騎士_，站在我們面前！從它身上散發的力量……令人陶醉！*他轉向你，眼睛閃爍著狂熱的光芒* 而對你，一個配得上你勇氣的獎勵：一瓶_力量藥水_！願它賜予你征服任何敵人的力量！現在……讓我們檢查我們的主題。它的本質蘊含著可能改寫生命法則的秘密！*他帶著瘋狂的獰笑接近_死亡騎士_，揮舞著一瓶冒泡的綠色液體*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">這不僅僅是野獸！它是死靈力量的活見證！活捉它，不能受傷！這個_死亡騎士_……它是關鍵！</string>
@@ -2218,6 +2222,7 @@
     <string name="Using_Failed_Because_Magic">強大魔力阻止使用 \&quot;%s\&quot;。</string>
     <string name="VampireSkull_Info">這個面具是由一個完全野生的吸血鬼頭骨制成的。一個吸血鬼的頭骨...一個大頭吸血鬼的頭骨...嚇。</string>
     <string name="VampireSkull_Name">吸血鬼頭骨</string>
+    <string name="VertigoBuff_Info">머리가 어지러워서 직선으로 걷기가 더 어려워진다!</string>
     <string name="VertigoBuff_Name">眩暈</string>
     <string name="View_Distance">視野距離</string>
     <string name="VileEssence_Info">從被擊敗的敵人身上的腐敗精華。這種黑暗物質散發著惡意能量，在煉金過程中具有極高的價值。</string>
@@ -2467,6 +2472,7 @@
     <string name="WndInfoItem_WontKnow">直至打開一刻，方曉裏面為何物！</string>
     <string name="WndInstallingMod_copying_file">正在複製 %s 到混合地牢存儲</string>
     <string name="WndInstallingMod_deleting_file">正在刪除 %s</string>
+    <string name="WndInstallingMod_please_wait">模組安裝中，請稍候...</string>
     <string name="WndInstallingMod_skipping_file">正在跳過 %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">執行配方</string>
     <string name="WndItemAlchemy_NoRecipes">沒有可用於此物品和你當前庫存可用的配方。</string>
@@ -2934,6 +2940,13 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
 
 
 

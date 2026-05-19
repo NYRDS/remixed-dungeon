@@ -539,6 +539,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ComboBuff_Info">Serangan selanjutnya adalah serangan kombo.</string>
     <string name="ComboBuff_Name">Kombo</string>
     <string name="Combo_Combo">%d combo pukulan</string>
+    <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">Anak panah biasa dengan besi sebagai ujungnya.</string>
     <string name="CommonArrow_Name">anak panah</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
@@ -1464,6 +1465,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Piercing_Name_1">Tajam %s</string>
     <string name="Piercing_Name_2">Tajam %s</string>
     <string name="Piranha_Desc">Ikan karnivora ini tidak alami penghuni dari kolam bawah tanah. Mereka dibesarkan secara khusus untuk menjaga ruang harta karun tergenang.</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">piranha raksasa</string>
     <string name="Piranha_Name_Objective">piranha raksasa</string>
     <string name="PirateSet_Info">Arr! Apakah kamu merasa seperti awak... ataukah hanya merasa seperti orang darat!? Aku harap tidak, benda itu lagipula hanya untuk bajak-laut, aku maksud... Arr!</string>
@@ -2072,6 +2074,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="StartScene_No">tidak, kembali ke menu utama</string>
     <string name="StartScene_Really">Apa anda yakin memulai permainan baru?</string>
     <string name="StartScene_Unlock">Untuk membuka kelas karakter ini, bunuh bos DM-300 dengan kelas lainnya</string>
+    <string name="StartScene_UnlockDoctor">解鎖瘟疫醫生 - 完成舊瘟疫醫生的任務</string>
     <string name="StartScene_UnlockElf">Untuk membuka kelas karakter ini, bunuh bos Raja dengan kelas lainnya</string>
     <string name="StartScene_UnlockGnoll">Untuk membuka kelas ini, Anda harus membujuk pendeta kota untuk menyembuhkan Gnoll Kasar</string>
     <string name="StartScene_UnlockNecromancer">Untuk membuka kelas karakter ini, bunuh Lich dengan kelas lain.</string>
@@ -2110,6 +2113,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Sungrass_Name">Sungrass</string>
     <string name="SurfaceScene_GameOver">Permainan Berakhir</string>
     <string name="SuspiciousRat_Desc">Tikus bukanlah penampakan yang tidak biasa di dungeon ini, tapi untuk tikus ini tinggal sangat dalam... Anda dapat melihat tikus ini kejang-kejang di seluruh tubuhnya saat bergerak.</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">Tikus mencurigakan ini menyentak dengan kuat.</string>
     <string name="SuspiciousRat_Name">Tikus mencurigakan</string>
     <string name="SuspiciousRat_Name_Objective">Tikus mencurigakan</string>
@@ -2975,6 +2979,10 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 

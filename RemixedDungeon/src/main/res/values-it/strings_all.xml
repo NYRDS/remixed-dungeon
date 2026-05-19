@@ -208,6 +208,7 @@
     <string name="BellaNPC_Desc">Una ragazza dall\'aspetto molto elegante. Tutto il suo aspetto ti dice: \&quot;Sono troppo buona per tutti.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Non provo alcun interesse per plebei come te!</string>
+    <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
     <string name="BellaNPC_Yes_End_Game">Sì (Fine gioco)</string>
     <string name="Belongings_CantWearBoth">Non puoi equipaggiare %1$s e %2$s allo stesso tempo!</string>
@@ -555,6 +556,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DarkSacrifice_Ok">La mia vita è tua!</string>
     <string name="DarkSacrifice_Resist">Non hai potere su di me!</string>
     <string name="DarkSacrifice_Self">Per il Flagello!</string>
+    <string name="DarkVeilBuff_Info">Un velo di oscurità circonda il proprietario, evocando uno spirito ogni volta che subisce danni.</string>
     <string name="DarkVeilBuff_Name">Velo scuro</string>
     <string name="Darkness_Info">Sembrerebbero dei frammenti di oscurità eterna fluttuanti nell\'aria</string>
     <string name="Dart_Gender">masculine</string>
@@ -678,6 +680,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Exhumation_NoGrave">Qui non ci sono tombe per eseguire un\'Esumazione.</string>
     <string name="Exhumation_Ok">Ti obbedirò.</string>
     <string name="ExplodingSkull_Desc">Questo ardente e fiammeggiante scheletro appare estremamente fragile, sembra che sta per scoppiare tra qualche secondo...</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">teschio esplosivo</string>
     <string name="ExplodingSkull_Name_Objective">teschio esplosivo</string>
     <string name="Eye_Desc">Uno degli altri nomi di questo demone è \&quot;sfera d\'odio\&quot; perché quando vede un nemico, usa il suo raggio mortale sconsideratamente, spesso ignorando i suoi alleati e ferendoli.</string>
@@ -826,6 +829,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Halls_TileWater">Lava fredda</string>
     <string name="Haste_Info">La corsa permetterà al personaggio di muoversi con una velocità tale che tutto intorno a lui apparirà statico. Una tale fretta consumerà molta energia, quindi è possibile usarla solo per un breve periodo di tempo.\n\nI maestri esperti sono in grado di rimanere veloci per un periodo di tempo più lungo.</string>
     <string name="Haste_Name">Corsa Estrema</string>
+    <string name="Heal_Cast">%s è guarito.</string>
     <string name="Heal_Info">Un incantesimo piuttosto utile nel Dungeon, vero?</string>
     <string name="Heal_Name">Guarigione</string>
     <string name="HealerNPC_Desc">Un vecchio, sembra quasi qualcuno che potrebbe fabbricare bacchette magiche.</string>
@@ -2717,6 +2721,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_porch_desc">Veranda fatta di legno.</string>
     <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_poster_desc">Volantini per annunciare le prossime sessioni nel cinema.</string>
+    <string name="town_deco_poster_name">Poster</string>
     <string name="town_deco_potions_desc">Qualche pozione sullo scaffale.</string>
     <string name="town_deco_potions_name">Pozioni</string>
     <string name="town_deco_projector_desc">Un vecchio dispositivo per proiettare film e intrattenere le persone.</string>
@@ -2761,6 +2766,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_stock_desc">Qui vengono conservate le scorte di cibo, così come un mucchio di cianfrusaglie di ogni sorta e colore.</string>
     <string name="town_deco_stock_name">Scorta</string>
     <string name="town_deco_stone_wall_broken_desc">Vecchio muro di pietra, in cattive condizioni</string>
+    <string name="town_deco_stone_wall_broken_name">Rotta parete</string>
     <string name="town_deco_stone_wall_desc">In qualche modo questo muro emana calore e sembra un po\' umido.</string>
     <string name="town_deco_stone_wall_name">Muro di pietra</string>
     <string name="town_deco_stones_desc">Solo un mucchio di pietre.</string>
@@ -2809,6 +2815,13 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
 
 
 

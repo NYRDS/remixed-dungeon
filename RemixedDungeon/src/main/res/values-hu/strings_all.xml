@@ -47,6 +47,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="AllowStatisticsCollectionScene_Title">Használati statisztikagyűjtés</string>
     <string name="AmokArrow_Info">A vegyület a nyíl végén bárkit eszméletlen, kegyetlen örjöngővé vált.</string>
     <string name="AmokArrow_Name">Amok Nyíl</string>
+    <string name="AmokBuff_Info">Érezd az amokot, elveszve azokat, akik szerencsétlenek!</string>
     <string name="AmokBuff_Name">Örjöngés</string>
     <string name="AmokDart_Info">A vegyület a dobónyíl végén bárkit eszméletlen, kegyetlen örjöngővé vált.</string>
     <string name="AmokDart_Name">Amok dobónyíl</string>
@@ -685,6 +686,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Ez a fegyver valami nagyszerű ötvözetből készült, sokkal könnyebb mint a hasonló tőrök.</string>
     <string name="ElvenDagger_Name">elf tőr</string>
+    <string name="EncumbranceBuff_CharAct_1">Nincs elég erőm ahhoz, hogy helyesen használjam %s-t.</string>
     <string name="EncumbranceBuff_CharAct_2">Ez a(z) %s túl nehéz ahhoz, hogy hatékonyan használhassam.</string>
     <string name="EncumbranceBuff_CharAct_3">Erősödnöm kell, mielőtt használhatnám a %s-t.</string>
     <string name="EncumbranceBuff_CharAct_4">Nincs elég erőm, hogy %s teljes potenciálját kihasználjam.</string>
@@ -1168,6 +1170,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Level_TileDescInactiveTrap">Ez a csapda aktiválódott és nem veszélyes többé.</string>
     <string name="Level_TileDescLockedDoor">Ez az ajtó zárva van, kulcsra van szükséged, hogy kinyisd.</string>
     <string name="Level_TileDescLockedExit">Nehéz rácsok zárják el a lejáratot.</string>
+    <string name="Level_TileDescPileOfStones">Egy rendkívül nehéz kőhalom, mozgatni tűnik.</string>
     <string name="Level_TileDescSign">Nem tudod elolvasni a táblát innen.</string>
     <string name="Level_TileDescStatue">Valaki felakarta díszíteni ezt a helyet, de nyilvánvalóan elbukott.</string>
     <string name="Level_TileDescTrap">A nyomólapra lépés működés be hozza a csapdát.</string>
@@ -1291,6 +1294,7 @@ Ennek a viselése azt jelenti, hogy odafigyelsz másokra.</string>
     <string name="MimicPie_Name">utánzó</string>
     <string name="MimicPie_Name_Objective">utánzó</string>
     <string name="Mimic_Desc">Az Utánzók mágikus teremtmények amelyek képesek bármilyen alak felvételére akaratuk szerint. A kazamatában legtöbbször egy kincsesláda képében jelennek meg, mivel pontosan tudják, hogy mivel lehet egy kalandor figyelmét felhívni.</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">utánzó</string>
     <string name="Mimic_Name_Objective">utánzó</string>
     <string name="MindVisionBuff_Info">A belső látás lehetővé teszi, hogy tisztán lásd az összes élőlény mozgását a szinten.</string>
@@ -2800,6 +2804,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_stakes_name">Karók</string>
     <string name="town_deco_statue_blood_name">Angyalszobor</string>
     <string name="town_deco_statue_water_desc">Egy méltóságos angyalszobor, amely egy tál vízzel van ellátva.</string>
+    <string name="town_deco_statue_water_name">Angyal szobor</string>
     <string name="town_deco_stock_desc">A kaja utánpótlást itt tárolják, ahogy mindenféle színű és formájú szemetet.</string>
     <string name="town_deco_stock_name">Készlet</string>
     <string name="town_deco_stone_wall_broken_desc">Egy régi kőfal, rossz állapotban</string>
@@ -2852,6 +2857,12 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
+
 
 
 

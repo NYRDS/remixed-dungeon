@@ -570,6 +570,8 @@
     <string name="CorpseDust_Info">这团尸尘看起来和普通灰尘球差不多，但你能感觉到里面潜伏着一股恶意的魔力……最好尽快脱手。</string>
     <string name="CorpseDust_Info2">大概因为拿着它让你感到焦虑和愤怒。</string>
     <string name="CorpseDust_Name">尸尘</string>
+    <string name="CorpseExplosion_Info">将尸体转化为致命的毒气云，向所有附近的敌人传播疾病和毒素。</string>
+    <string name="CorpseExplosion_Name">爆炸尸体</string>
     <string name="CorpseExplosion_NoCorpse">那里没有尸体。</string>
     <string name="Crab_Defense">招架</string>
     <string name="Crab_Desc">这些巨型的螃蟹位居下水道食物链的顶端。它们行动极其迅速，并且厚重的甲壳能承受沉重的打击。</string>
@@ -1463,6 +1465,7 @@
     <string name="Nightcap_Info">在夜晚征服地牢想必是十分疲累的事。那为何不带上一顶温暖舒适的帽子好好休息一下，抛开自己的烦恼呢？</string>
     <string name="Nightcap_Name">睡帽</string>
     <string name="Nightmare_Desc">以肉质触手构成的怪诞造物。梦魇是古神危险思想的具象。</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name">梦魇</string>
     <string name="Nightmare_Name_Objective">梦魇</string>
     <string name="No_Valid_Cell">没有召唤的空间</string>
@@ -1489,6 +1492,7 @@
     <string name="Pickaxe_ACMine">挖矿</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">这确实是件巨大又可靠的掘石工具。应该也能当武器用。</string>
+    <string name="Pickaxe_InsufficientStr">力量不够挖掘！</string>
     <string name="Pickaxe_Name">铁镐</string>
     <string name="Pickaxe_NoVein">你周围没有暗金脉可挖</string>
     <string name="Pickaxe_NothingToMine">这里没什么可挖的！</string>
@@ -1522,6 +1526,7 @@
     <string name="PlagueDoctorQuest_1_2_Prologue">*Kuat batuk* Hapşoo!\n _Siput-siput_… mereka merayap. Mereka menetes. Dan mereka berbisik rahasia usia yang terlupakan. Aku butuh mereka, _sepuluh_ ekor, cangkangnya masih utuh. Apakah kamu pikir _lima puluh koin emas_ cukup untuk pengetahuan begitu berharga?\n Bah! Tidak apa-apa. Informasi yang mereka miliki bisa menjadi kunci untuk menghentikan wabah ini. Atau… bisa juga membawa kita pada sesuatu yang lebih mengerikan. Kamu yang tentukan.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_月光草_……它是编织在这个世界中的魔法的见证。我从它们的本质中学到了很多，但你的奖励……嗯，它已经被极其精心地准备好了。*递给英雄一瓶闪烁的_法力药水_* 愿它的力量指引你度过前方的危险。</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">寻找 _月光草_，那里黑暗与微弱的月光交相辉映。_两颗种子_，其精华，将揭示隐藏的秘密。</string>
+    <string name="PlagueDoctorQuest_2_1_Prologue">_月光草种子_……那些空灵的花朵，低语着月亮本身的魔法。我已经研究它们奇异的荧光几周了。它们精髓中蕴含着 potency，一种隐藏的能量，可能是……什么的钥匙。*用骨节分明的手指沉思地敲着下巴*\n但可惜，它们很稀有。只能在月光几乎无法穿透的最深处洞穴中找到。我需要两颗。两颗种子来解锁它们力量的秘密。作为回报，我可以给你一些东西……一种纯净、强效魔法的味道。一瓶_法力药水_，充满月光草的精髓。它将恢复你疲惫的灵魂，让你以更新的力量使用魔法。</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">太好了！_太阳草_，它的金色精华脉动着生命力。我已经从它精致的结构中学到了很多。*他递给你一瓶_治疗药水_，液体闪烁着微弱的金光。*当世界让你感到沉重时喝下它，感受阳光的温暖唤醒你的精神。</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_两颗太阳草_种子。它们的金色花瓣蕴含着我要理解的力量。找到它们，让它们的精华显现！</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Dengan lembut memeluk _kelelawar_ dengan tangan ber Sarung tangannya, memeriksa bentuk kecilnya dengan ketertarikan yang mengganggu* Luar biasa! Ekolokasi kelelawar... ini berbeda dari apa pun yang pernah saya temui. Akurasi seperti itu... begitu... kontrol. *Dia menoleh kepada Anda, wajahnya tertutup topeng* Untuk usaha Anda, sebuah _ gulungan Peningkatan_. Gunakan dengan bijak, karena itu memiliki potensi untuk... memurnikan esensi Anda. *Dia menyerahkan gulungan kepada Anda, suaranya turun menjadi bisikan* Kelelawar ini... itu adalah jendela ke dunia tersembunyi. Dunia... di mana bayangan menari dan rahasia berbisik.</string>
@@ -2547,6 +2552,7 @@ remix.31.1\n
     <string name="WndModSelect_AreYouSure">删除mod：%s，你确定吗？</string>
     <string name="WndModSelect_ReallyDelete">真的要删除吗？</string>
     <string name="WndModsDisclaimer_install">安装本地模组</string>
+    <string name="WndModsDisclaimer_manage">管理模组列表</string>
     <string name="WndModsDisclaimer_title">MOD</string>
     <string name="WndMovieTheatre_Bye">想回来的时候就回来，我们对你的到来而感到高兴！</string>
     <string name="WndMovieTheatre_Instruction">欢迎来到我们的电影院！我们正在提供一项特别服务，你可以免费观看一部叫“广告”的特殊电影。如果全部看完，你将得到 %d 枚金币的奖励！</string>
@@ -2994,6 +3000,14 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
 
 
 
