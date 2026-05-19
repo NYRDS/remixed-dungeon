@@ -681,6 +681,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="ElfArmor_NotElf">Csak tündék tudják használni ezt a páncélt.</string>
     <string name="ElvenBow_Info">Kivételes példája az tündék mestermunkájának. Egyértelműen hatékonyabb és pontosabb, mint egy átlagos faíj.</string>
     <string name="ElvenBow_Name">tünde íj</string>
+    <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Ez a fegyver valami nagyszerű ötvözetből készült, sokkal könnyebb mint a hasonló tőrök.</string>
     <string name="ElvenDagger_Name">elf tőr</string>
     <string name="EncumbranceBuff_CharAct_2">Ez a(z) %s túl nehéz ahhoz, hogy hatékonyan használhassam.</string>
@@ -2848,6 +2849,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

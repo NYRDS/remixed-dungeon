@@ -1415,6 +1415,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: batas pemanggilan tercapai (Maksimum saat ini: %d )!</string>
     <string name="Necromancer_ACSpecial">NECROMANCY</string>
     <string name="Necromancy_BecameALich">Anda menjadi seorang Lich! Kekuatan Anda tumbuh dan kapasitas jiwa Anda telah berlipat ganda! Tapi Anda kehilangan %1$d poin kekuatan.</string>
+    <string name="Necromancy_Death">Kau menguras semua tenaga hidupmu saat berlatih nekromansi.</string>
     <string name="Necromancy_NotEnoughSouls">Anda tidak memiliki cukup jiwa untuk mengucapkan mantra \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_ReincarnationName">Reinkarnasi</string>
     <string name="Necromancy_ReincarnationTriggered">Kekuatanmu menolak kematian itu sendiri! Tetapi Anda kehilangan semua jiwa dan harta milik Anda yang terkumpul.</string>
@@ -2972,6 +2973,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
