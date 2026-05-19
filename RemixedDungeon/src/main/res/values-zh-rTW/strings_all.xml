@@ -287,6 +287,7 @@
     <string name="BlindnessBuff_Info">완전히 눈이 감겨, 주변의 소리만 들릴 뿐이다.</string>
     <string name="BlindnessBuff_Name">目盲</string>
     <string name="BloodTransfusion_Drained">生命精華從您的寵物流向您。</string>
+    <string name="BloodTransfusion_Info">Drains nearly all blood from a target to heal yourself. A dark ritual of sacrifice and survival.</string>
     <string name="BloodTransfusion_Name">輸血</string>
     <string name="BodyArmorBuff_Info">犧牲移動速度增加護甲。</string>
     <string name="BodyArmorBuff_Name">重甲</string>
@@ -2392,6 +2393,7 @@
     <string name="WndCryptoDonate_copyAddress">複製地址</string>
     <string name="WndCryptoDonate_ethereum">以太坊</string>
     <string name="WndCryptoDonate_infoText">您可以通過將加密貨幣捐贈發送到以下地址來支持 Remixed Dungeon 的開發。感謝您的慷慨支持！</string>
+    <string name="WndCryptoDonate_openWallet">Open Wallet</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">錢包地址</string>
@@ -2942,6 +2944,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

@@ -29,6 +29,7 @@
     <string name="Actions_Speed">加速倍率</string>
     <string name="Affection_Txt">愛情の%s</string>
     <string name="AirElemental_Desc">風のエレメンタルは生きた空気でできた空飛ぶ魔法の存在だ。</string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">風のエレメンタル</string>
     <string name="AirElemental_Name_Objective">風のエレメンタル</string>
     <string name="AlarmTrap_Desc">罠はダンジョン全体に響き渡る鋭い音を発した！</string>
@@ -888,6 +889,7 @@
     <string name="Guts_TileGrass">枯れ草</string>
     <string name="Guts_TileHighGrass">枯れ草</string>
     <string name="Guts_TileWater">奇妙なぬるぬるした液体</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">棒の先に斧をつけた柄の長い武器。</string>
     <string name="Halberd_Name">ハルバード</string>
     <string name="Halls_TileDescBookshelf">本棚には古代の言語で書かれた本がある。</string>
@@ -3038,6 +3040,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

@@ -939,6 +939,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Mulai dengan sebuah Topeng Plague (kebal terhadap semua Gas) dan sebuah Gergaji Tulang. Serangan kritis menjatuhkan bagian ekstra, dan Gergaji memberikan +50% kerusakan pada musuh yang lumpuh.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Ramuan Gas Paralisis dan Gas Toksik telah dikenali sebelumnya.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Ramuan [yellow:Gas Paralisis] dan [yellow:Gas Toksik] sudah dikenali sebelumnya.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Plague Doctors suffer great accuracy penalties without beloved Bone Saw in hand and cannot use ranged weapons.</string>
     <string name="HeroClass_Priest">Imam</string>
     <string name="HeroClass_Rog">penjahat</string>
     <string name="HeroClass_RogPerks_0">Penjahat mulai dengan cincin kegelapan+1.</string>
@@ -2618,6 +2619,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndSettings_Brightness">Kecerahan</string>
     <string name="WndSettings_ClassicFont">Font Klasik</string>
     <string name="WndSettings_ExperementalFont">Font Baru</string>
+    <string name="WndSettings_FpsLimit">FPS limit</string>
     <string name="WndSettings_GameplaySettings">Aturan main</string>
     <string name="WndSettings_Handedness">Penggunaan tangan</string>
     <string name="WndSettings_Immersive">Mode yang lebih mendalam</string>
@@ -2980,6 +2982,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

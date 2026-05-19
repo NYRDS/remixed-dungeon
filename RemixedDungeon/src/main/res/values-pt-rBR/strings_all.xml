@@ -189,6 +189,7 @@
     <string name="Badges_StrengthAttained4">19 pontos de Força adquiridos</string>
     <string name="Badges_StrengthAttained5">21 pontos de Força adquiridos</string>
     <string name="Badges_Supporter">Obrigado pelo seu apoio!</string>
+    <string name="Badges_ThisIsSparta">This is Sparta!!!</string>
     <string name="Badges_Victory">Amuleto de Yendor adquirido</string>
     <string name="Badges_VictoryAll">Amuleto de Yendor adquirido por todas as classes</string>
     <string name="Badges_Yasd">Morto por Fogo, Envenenamento, Gás Tóxico &amp;amp; Fome</string>
@@ -2692,6 +2693,7 @@ remix.31.1\n
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Este simples arco de madeira pode se provar útil, se você achar algumas flechas.</string>
     <string name="WoodenBow_Name">arco de madeira</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Uma besta de madeira básica, parece que foi desenhada para atirar flechas.</string>
     <string name="WoodenCrossbow_Name">Besta de madeira</string>
     <string name="WoodenShield_desc">Um escudo de madeira grosseiramente feito é o escudo mais simples disponível. É redondo e pode bloquear algum dano de vez em quando.</string>
@@ -2994,6 +2996,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

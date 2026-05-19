@@ -300,6 +300,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BlindnessBuff_Name">Kör oldun</string>
     <string name="BloodTransfusion_Drained">Yaşam özü evcil hayvanınızdan size akıyor.</string>
     <string name="BloodTransfusion_Info">Hedeften neredeyse tüm kanı emer ve kendini iyileştirirsin. Hayatta kalma ve fedakârlık için karanlık bir ritüel.</string>
+    <string name="BloodTransfusion_Name">Blood Transfusion</string>
     <string name="BloodTransfusion_WontAgreed">Hedef, yaşam özünün çıkarılmasına direniyor.</string>
     <string name="BodyArmorBuff_Info">Zırh, hareket için harcanan enerjiyi arttırdı.</string>
     <string name="BodyArmorBuff_Name">Vücut zırhı</string>
@@ -832,6 +833,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Ghost_Defense">savuşturdu</string>
     <string name="Ghost_Desc">Hayalet zar zor görülebiliyor. Kederli bir yüzü olan şekilsiz, soluk bir ışık lekesine benziyor.</string>
     <string name="Ghost_Name">üzgün hayalet</string>
+    <string name="Ghost_Name_Objective">ghost</string>
     <string name="Ghost_Rat1">Merhaba maceracı. Bir zamanlar ben de senin gibiydim - güçlü ve kendinden emin... Ve şimdi öldüm. Ama burayı terk edemem. İntikamımı almadan olmaz. Hayatımı alan o _pis fareyi_ öldürmeden.</string>
     <string name="Ghost_Rat2">Lütfen... Yardım et... Nefret ettiğim sıçanı öldür...</string>
     <string name="Ghost_Rose1">Merhaba maceracı. Bir zamanlar ben de senin gibiydim - güçlü ve kendinden emin... Ve şimdi öldüm. Ama burayı terk edemem. _Kurutulmuş gülümü_ almadan olmaz. O benim için çok önemli. Bir canavar onu bedenimden çaldı.</string>
@@ -3028,6 +3030,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

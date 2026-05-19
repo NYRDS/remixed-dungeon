@@ -920,6 +920,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="HeroClass_PlagueDoctorPerks_0">A pestis doktorok mérgező mirigyeket, rothadt szerveket, csontszilánkokat és gonosz esszenciát gyűjtenek a legyőzött ellenségektől. A vért idővel gyűjtik össze, és alkímiához használják fel.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Kezdjük egy pestismaszkkal (immunis minden gázhatás ellen) és egy csontfűrésszel. A kritikus találatok extrarészeket dobhatnak, és a fűrész +50% sebzést ejt a bénult ellenfeleken.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Kezdődjön egy [sárga:Plague Mask]-sal (immun a gázokra) és egy [sárga:Bone Saw]-val. Kritikus találatokkal extra részek esnek le, és a Fűrész paralizált ellenségre 1.5x sebzést ad.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Potions of [yellow:Paralysis Gas] and [yellow:Toxic Gas] are pre-identified.</string>
     <string name="HeroClass_Priest">Pap</string>
     <string name="HeroClass_Rog">tolvaj</string>
     <string name="HeroClass_RogPerks_0">A Zsiványok az Árnyék Gyűrűjével +1 kezdenek. </string>
@@ -2831,6 +2832,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_trapdoor_name">Csapóajtó</string>
     <string name="town_deco_tree_desc">Egy furcsa érzés kerít hatalmába mikor ránézel erre a békés, élő fára. Elvégre nem olyan messze egy borzalmakkal és halállal teli kazamata helyezkedik el.</string>
     <string name="town_deco_tree_name">Fa</string>
+    <string name="town_deco_urn_desc">Clay urn, perhaps with someones ashes.</string>
     <string name="town_deco_vat_desc">Ez a kő-edény tele van szentvízzel</string>
     <string name="town_deco_vat_name">Dézsa</string>
     <string name="town_deco_wall_beam_desc">Megbízható segítséget nyújt az itteni építkezéshez.</string>
@@ -2863,6 +2865,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
