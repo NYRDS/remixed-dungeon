@@ -217,6 +217,7 @@
     <string name="BattleAxe_Info">A enorme cabeça de ferro deste Machado de Batalha causa danos a cada golpe por causa do grande peso.</string>
     <string name="BattleAxe_Name">Machado de Batalha</string>
     <string name="Bee_Desc">Apesar de seu pequeno tamanho, as abelhas tendem a proteger sua colmeia ferozmente. Embora elas não vivam muito.</string>
+    <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name">abelha</string>
     <string name="Bee_Name_Objective">abelha</string>
     <string name="BellaNPC_Amulet_F">Oi querida, o que você tem aí? Ah, que amuleto elegante! E você ... você não parece ser uma plebeia. Gostaria de dar um passeio e discutir o nosso futuro juntos?</string>
@@ -1259,6 +1260,7 @@ Parede
     <string name="LibraryBook_Name">Livro da biblioteca</string>
     <string name="Lich_Desc">O necromante encontrou sua morte nas profundezas da Necropolis, toda a energia maligna deste lugar se uniu ao seu corpo, então ele acaba se tornando o Lich. O bruxo morto-vivo, sem vontade própria e controlado como uma marionete pelos poderes malignos.</string>
     <string name="Lich_DieInfo">Eu nunca gostei deste Necromante. Portanto é hora de retornar para o nível 7 e encontrar outro caminho para a nova aventura.</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Info">A luz emana do corpo, iluminando tudo ao redor.</string>
@@ -2987,6 +2989,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

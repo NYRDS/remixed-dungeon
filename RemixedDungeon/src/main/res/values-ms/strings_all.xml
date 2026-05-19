@@ -796,6 +796,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="GnollArmor_NotGnoll">Hanya gnoll boleh memakai Perisai Gnoll!</string>
     <string name="GnollCostume_Info">Busana yang selesa dan gebu. Sesiapa yang memakai busana ini akan kelihatan... seperti seseorang yang menyamar sebagai gnoll. Tetapi si gnoll tidak tertipu dengannya, mereka akan menyerang anda jua.</string>
     <string name="GnollCostume_Name">Busana Gnoll</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">Tomahawk tradisional dicipta oleh artisan Gnoll, setiap puak mempunyai rekabentuk unik yang tersendiri. Tomahawk ini lebih ringan berbanding yang dihasilkan oleh manusia.</string>
     <string name="GnollTamahawk_Name">tomahawk gnoll</string>
     <string name="Gnoll_BecomeGuardianDesc">Menjadi Penjaga</string>
@@ -1335,6 +1336,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Monk_Disarm">%1$s telah mengetuk jatuh %2$s dari pegangan anda!</string>
     <string name="Monk_Name">sami orang kerdil</string>
     <string name="Monk_Name_Objective">sami orang kerdil</string>
+    <string name="MoongraceBuff_Info">Udara di sekeliling menjadi lebih jenuh, membolehkan tumpuan yang lebih baik dan pemulihan rahsia magik.</string>
     <string name="MoongraceBuff_Name">Manan surgawi</string>
     <string name="Moongrace_Desc">Tumbuhan ini tumbuh dalam kumpulan kecil dan dikenali sebagai sumber sihir semula jadi.</string>
     <string name="Movement_Speed">Kelajuan pergerakan</string>
@@ -1836,6 +1838,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">sami kanan</string>
     <string name="Senior_Name_Objective">sami kanan</string>
+    <string name="ServantNPC_Desc">Pelayan kedai yang sangat sibuk.</string>
     <string name="ServantNPC_Name">pelayan penginapan</string>
     <string name="ServantNPC_Name_Objective">pelayan penginapan</string>
     <string name="ServiceManNPC_Desc">Pekerja biasa di pertubuhan tempatan.</string>
@@ -2851,6 +2854,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

@@ -284,6 +284,7 @@
     <string name="BlessedBuff_Name">祝福</string>
     <string name="BlindnessBuff_Info">완전히 눈이 감겨, 주변의 소리만 들릴 뿐이다.</string>
     <string name="BlindnessBuff_Name">目盲</string>
+    <string name="BloodTransfusion_Drained">生命精華從您的寵物流向您。</string>
     <string name="BloodTransfusion_Name">輸血</string>
     <string name="BodyArmorBuff_Info">犧牲移動速度增加護甲。</string>
     <string name="BodyArmorBuff_Name">重甲</string>
@@ -758,6 +759,7 @@
     <string name="Food_ACEat">食用</string>
     <string name="Food_Message">這份食物吃起來異常地美味！</string>
     <string name="FortuneTellerNPC_Desc">此女身穿一襲色彩鮮艷的長袍。對於一位已精通算命奧術的算命家來說，她算是年少有為。您一步一步地靠近，隱約能聽到她微聲低語。然而，她只是目不轉晴地盯著水晶球。</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">占蔔師</string>
     <string name="FortuneTellerNPC_Name_Objective">占蔔師</string>
     <string name="FreezeGlobe_Info">凍結所選生物，使其在短時間內無法執行任何操作。</string>
@@ -2930,6 +2932,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

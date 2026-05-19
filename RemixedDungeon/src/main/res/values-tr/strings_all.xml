@@ -356,6 +356,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Carcass_DissectMessage">Leşi parçalara ayırarak bir %s elde edersiniz.</string>
     <string name="Carcass_DissectResult">Dari %1, kamu mendapatkan %2 panen %3.</string>
     <string name="Carcass_Info">tamamen ölmüş %s kalıntıları.</string>
+    <string name="Carcass_Kick">Bu %s tamamen ölü, tekme atmanın bir anlamı yok.</string>
     <string name="Carcass_Name">%s\'in kalıntıları</string>
     <string name="Carcass_Necromancy">%s cesedini dirilttin!</string>
     <string name="Carcass_Necromancy_Failed">%s cesedini diriltme girişiminiz başarısız oldu!</string>
@@ -1290,6 +1291,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Luck_Name_0">Şanslı %s</string>
     <string name="Luck_Name_1">Şanslı %s</string>
     <string name="Luck_Name_2">Şanslı %s</string>
+    <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">Bu silahın demir kafası büyük hasar verir.</string>
     <string name="Mace_Name">topuz</string>
     <string name="MageArmor_ACSpecial">ERİMİŞ TOPRAK</string>
@@ -2546,6 +2548,7 @@ remix.30.1\n
     <string name="WndInstallingMod_deleting_file">Siliniyor %s</string>
     <string name="WndInstallingMod_skipping_file">%1 atlanıyor</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Tarifi Uygula</string>
+    <string name="WndItemAlchemy_NoRecipes">Bu eşya ve mevcut envanterinizle kullanılabilecek tarif yok.</string>
     <string name="WndItemAlchemy_SelectRecipe">Tarifi seç</string>
     <string name="WndItemAlchemy_Title">%s ile simya tarifleri</string>
     <string name="WndItemAlchemy_Transmute">Dönüştür</string>
@@ -3015,6 +3018,9 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
 
 
 

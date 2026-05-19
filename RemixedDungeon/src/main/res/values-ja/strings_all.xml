@@ -301,7 +301,9 @@
     <string name="BodyArmorSpell_Name">ボディーアーマー</string>
     <string name="BoneSaw_Info">迅速な解剖のために設計された精密機械の外科用のこぎり。そのダメージと攻撃速度はペストドクターのスキルによってより致命的になる。クリティカルヒットは敵から収穫可能な部位を追加で切り出し、麻痺した敵には無慈悲な効率で攻撃を加える。</string>
     <string name="BoneSaw_Name">解剖のこぎり</string>
+    <string name="BoneShard_Info">敵を倒した後に手に入る鋭い骨の破片。この破片は驚くほど頑丈で、 crafting に利用できます。</string>
     <string name="BoneShard_Name">骨の欠片</string>
+    <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">この平たく曲がった木製の投擲武器を敵に投げると、投げた人の手に戻る。</string>
     <string name="Boomerang_Name">ブーメラン</string>
     <string name="Bounce_Txt">弾性の %s</string>
@@ -3027,6 +3029,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

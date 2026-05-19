@@ -1117,11 +1117,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">코볼트</string>
     <string name="Kobold_Name_Objective">코볼트</string>
+    <string name="KunaiThrow_Info">この致死性のクナイ投擲は非常に高速で行われ、目標を選択することすらできません。\n\n真の達人だけが一度に複数のクナイを投げることができます。</string>
     <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">이 무기는 낫이 달린 사슬의 끝에 무거운 강철로 된 추가 달려있습니다.</string>
     <string name="Kusarigama_Name">쿠사리가마</string>
     <string name="Kusarigama_Pull">당기다</string>
     <string name="Larva_Desc">고대 신의 애벌레</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">신의 애벌레</string>
     <string name="Larva_Name_Objective">신의 애벌레</string>
     <string name="LastLevel_TileDescStatue">이 기둥은 진짜 사람 해골로 만들어져 있다. 대박.</string>
@@ -1887,6 +1889,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">방패 놀 정예병</string>
     <string name="Shielded_Name_Objective">방패 놀 정예병</string>
+    <string name="ShootInEye_Info">당신의 뛰어난 사격 기술을 사용하여 적의 눈을 정확히 쏩니다. 물론 눈이 있는 경우에만요.</string>
     <string name="ShootInEye_Name">눈에 쏘기</string>
     <string name="Shopkeeper_Buy">구매할 아이템을 선택하세요.</string>
     <string name="Shopkeeper_BuyPrompt">어디, 물건 한 번 봅시다</string>
@@ -2875,6 +2878,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 

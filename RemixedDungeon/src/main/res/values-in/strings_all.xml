@@ -558,6 +558,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="CorpseExplosion_NoCorpse">Tidak ada mayat di lokasi itu.</string>
     <string name="Crab_Defense">tertangkis</string>
     <string name="Crab_Desc">Kepiting besar ini adalah puncak rantai makanan di saluran bawah tanah. Mereka sangat cepat dan tulang tebal mereka dapat menahan serangan berat.</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">kepiting saluran</string>
     <string name="Crab_Name_Objective">kepiting saluran</string>
     <string name="CrippleBuff_Info">Tubuhnya lumpuh tapi perjuangan masih berlanjut.</string>
@@ -1753,6 +1754,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="RottenMeat_Info">sepotong daging busuk</string>
     <string name="RottenMeat_Name">daging busuk</string>
     <string name="RottenOrgan_Info">A organ tubuh yang membusuk dipanen dari musuh yang dikalahkan. Meskipun dalam keadaan busuk, organ ini mengandung senyawa berharga untuk proses alkimia.</string>
+    <string name="RottenOrgan_Name">Organ Busuk</string>
     <string name="RottenPasty_Info">pastel yang terlihat sangat menjijikan</string>
     <string name="RottenPasty_Name">pastel busuk</string>
     <string name="RottenPumpkinPie_Info">Tidak peduli seberapa enak dulunya saat masih segar, tidak ada cara benda ini untuk dimakan.</string>
@@ -2973,6 +2975,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
