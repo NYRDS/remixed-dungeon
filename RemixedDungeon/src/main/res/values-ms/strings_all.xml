@@ -1205,6 +1205,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Level_TileWall">Dinding</string>
     <string name="Level_TileWater">Air</string>
     <string name="Level_TileWell">Perigi</string>
+    <string name="LevitationBuff_Info">Badan melayang di atas tanah, mengelak perangkap dan bahaya lain.</string>
     <string name="LevitationBuff_Name">Terapung</string>
     <string name="LibrarianNPC_Desc">Orang yang sangat pemalu, memakai baju panas yang pelik dan memakai cermin mata yang tebal.</string>
     <string name="LibrarianNPC_Gender">masculine</string>
@@ -1553,6 +1554,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Potion_Colors_12">epidot</string>
     <string name="Potion_Colors_13">kuarza</string>
     <string name="Potion_Colors_14">oniks</string>
+    <string name="Potion_Colors_15">muti</string>
     <string name="Potion_Colors_2">lazuardi</string>
     <string name="Potion_Colors_3">jed</string>
     <string name="Potion_Colors_4">emas</string>
@@ -1942,6 +1944,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SociologistNPC_AlreadyTaken">Anda sudah pun menjawab tinjauan ini, datang lagi kemudian</string>
     <string name="SociologistNPC_Desc">Ahli sosiologi ini sedang mengumpul pendapat orang awam</string>
     <string name="SociologistNPC_DownloadError">Maaf, ada masalah, cuba sekali lagi nanti</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Hi">Hai!\nSudahkah anda menjawab tinjauan kami?(Capaian Internet diperlukan)\nPendapat anda diutamakan!</string>
     <string name="SociologistNPC_InternetRequired">Maaf, tanpa capaian Internet anda tidak boleh menjawab tinjauan kami</string>
     <string name="SociologistNPC_Name">Ahli sosiologi</string>
@@ -2061,6 +2064,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SummonBeast_Name">Panggilan Binatang</string>
     <string name="SummonDeathling_Info">Panggil pengikut hidup semula. Hayat dan kecederaan yang dihasilkan oleh makhluk hidup semula meningkat mengikut tahap adiwira. \n\nHad panggilan: %1$d (+1 setiap Tahap Kuasa Ajaib)</string>
     <string name="SummonDeathling_Name">Panggil Makhluk Mati</string>
+    <string name="SungrassBuff_Info">Akar akar telah tumbuh dari tanah menyediakan herba penyembuhan.</string>
     <string name="SungrassBuff_Name">Penyembuhan herba</string>
     <string name="Sungrass_Desc">Rumput Suria dikenali dengan lelehan getahnya yang berkhasiat dalam penyembuhan.</string>
     <string name="Sungrass_Name">Rumput Suria</string>
@@ -2610,6 +2614,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="YogsEye_Name">mata yog</string>
     <string name="YogsEye_Name_Objective">Mata yog</string>
     <string name="YogsHeart_Desc">Berabad lamanya ramai orang percaya makhluk tanpa hati sahaja yang dapat bertindak sangat kejam. Dan buktinya di sini, jantung besar Dewa Purba yang berdenyut-denyut.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">jantung yog</string>
     <string name="YogsHeart_Name_Objective">Jantung yog</string>
     <string name="YogsTeeth_Desc">Gigi Dewa Purba yang sangat besar terdiri dari gigi-gigi tajam. Sesuai dengan sikapnya yang mahu musnah dan baham semua benda hidup.</string>
@@ -2869,6 +2874,11 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
 
 
 

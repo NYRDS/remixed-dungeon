@@ -421,6 +421,7 @@
     <string name="CharAction_Charm">очарувати</string>
     <string name="CharAction_Expel">Вигнати</string>
     <string name="CharAction_Hit">вдарити</string>
+    <string name="CharAction_Order">наказ</string>
     <string name="CharAction_Push">штовхнути</string>
     <string name="CharAction_Scare">налякати</string>
     <string name="CharAction_Steal">викрасти</string>
@@ -1413,6 +1414,7 @@
     <string name="MysteryMeat_Info4">Ти об\'ївся.</string>
     <string name="MysteryMeat_Message">Ця їжа на смак... дивна.</string>
     <string name="MysteryMeat_Name">таємниче м\'ясо</string>
+    <string name="NatureArmorSpell_Name">Природний обладунок</string>
     <string name="NecromancerArmor_Info">Ця броня дозволяє некроманту викликати до 2х смертликів, ціною в 5 душ за кожного. Ця нежить-прислужники будуть йти за своїм володарем і атакувати його ворогів. Смертлики стають сильнішими з кожним рівнем героя.</string>
     <string name="NecromancerArmor_Info2">В цій броні некромант може викликати \&quot;Некротизм\&quot;, жахливу хворобу, яка вражає будь-яку істоту в полі зору, неважливо мертве вони чи живе.</string>
     <string name="NecromancerArmor_Name">Броня з кісток</string>
@@ -1609,6 +1611,7 @@
     <string name="Potion_Colors_1">малинове</string>
     <string name="Potion_Colors_10">індигове</string>
     <string name="Potion_Colors_11">срібне</string>
+    <string name="Potion_Colors_12">епідот</string>
     <string name="Potion_Colors_13">кварцом</string>
     <string name="Potion_Colors_14">оніксом</string>
     <string name="Potion_Colors_2">лазурне</string>
@@ -2080,6 +2083,7 @@
     <string name="SpiderQueenCarapace_Info">Уламок панциру Королеви павуків. В середині шматок павучої залози, виглядає ще живою.</string>
     <string name="SpiderQueenCarapace_Name">Панцир Королеви Павуків</string>
     <string name="SpiderQueen_Desc">Тіло чарівної жінки поєднане з огидним павуком. Під її командуванням знаходяться всі мешканці цього кубла. Зустріч з даною особою має смертельні наслідки, тому не очікуйте милості. Ти в її володіннях.</string>
+    <string name="SpiderQueen_DieInfo">Павуча королева вбита! Тепер мені потрібно повернутися на рівень 5 і продовжити подорож до Глибин.</string>
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">королева павуків</string>
     <string name="SpiderQueen_Name_Objective">королеву павуків</string>
@@ -2393,6 +2397,7 @@
     - Виправлення помилок\n
     </string>
     <string name="Welcome_Text_32">\n    remix.32\n    - Gameplay:\n    -- Mobs and Pets cloud get experience and levels now\n    -- Chaos Shield\n    -- Champions\n    -- Yog battle rebalanced\n    -- Balance tunes\n    - UX:\n    -- Detailed Hero and Mobs stats\n    -- Better Customizations interface\n    -- Smooth camera\n    - Modding:\n    -- Custom animations\n    -- Custom Scripts for built-in Mobs\n    -- Glowing for Mobs\n    - Bugs fixed\n    </string>
+    <string name="Welcome_Text_32_1">remix.32.1\n- Gameplay:\n-- Plague Doctor quest line\n-- Mob carcasses now somewhat usable items\n-- Better pets control\n- UX:\n-- Improved save-game management\n- Modding:\n-- Local mod installation methods\n-- Custom items now can perform actions while being in heaps\n- Bugs fixed</string>
     <string name="Welcome_Title">Ласкаво просимо!</string>
     <string name="WindGust_Info">Викликає порив вітру, що відштовхує обраного персонажа.</string>
     <string name="WindGust_Name">Порив вітру</string>
@@ -2949,6 +2954,11 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
 
 
 

@@ -64,6 +64,7 @@
     <string name="AnesthesiaBuff_Info">痛みを感じず攻撃からも目覚めないが、ダメージは受け続ける。</string>
     <string name="AnesthesiaBuff_Name">麻酔</string>
     <string name="Anesthesia_Cast">%sは深く、夢も見ない眠りに落ちた。</string>
+    <string name="Anesthesia_Info">대상을 깊고 비자연스러운 잠들게 합니다. 가장 폭력적인 공격도 이 잠에서 깨우지 못합니다.</string>
     <string name="Anesthesia_Name">麻酔</string>
     <string name="Ankh_Info">この古代の不死のシンボルは、死後に蘇る能力を与える。復活すると、装備していないアイテムはすべて失われる。</string>
     <string name="Ankh_Name">アンク</string>
@@ -653,6 +654,7 @@
     <string name="DieHardSpell_Info">一時的に再生力が高まり、本物のダイハードになれる。</string>
     <string name="DieHardSpell_Name">ダイハード</string>
     <string name="Displacement_Txt">追放の %s</string>
+    <string name="DoctorArmor_Name">医者の衣装</string>
     <string name="DoctorArmor_NotDoctor">この鎧は瘟医生だけが使えます！</string>
     <string name="DoctorSpecial">瘴気の雲</string>
     <string name="DogeMask_Info">有名なドージに変装したいと思ったことはありませんか? 今がチャンスです! こんなにたくさんのマスク! たくさんの変装! すごい!</string>
@@ -748,9 +750,11 @@
     <string name="Exhumation_NoGrave">ここに墓はない。</string>
     <string name="Exhumation_Ok">あなたに従います。</string>
     <string name="ExplodingSkull_Desc">この浮遊し、燃えている頭蓋骨は非常にもろく、今にも粉々になりそうだ。</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">爆発する頭蓋骨</string>
     <string name="ExplodingSkull_Name_Objective">爆発する頭蓋骨</string>
     <string name="Eye_Desc">この悪魔の別名に \&quot;憎悪のオーブ \&quot;があるが、これは敵を見つけるとデスゲイズを無謀に使い、しばしば味方を無視して負傷させるからである。</string>
+    <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">%s のデスゲイズがあなたを殺した...</string>
     <string name="Eye_Name">イビルアイ</string>
     <string name="Eye_Name_Objective">イビルアイ</string>
@@ -1370,6 +1374,7 @@
     <string name="MindVisionBuff_Info">内なる視覚は、床の上のすべての生き物の動きをはっきりと見ることを可能にする。</string>
     <string name="MindVisionBuff_Name">千里眼</string>
     <string name="MirrorImage_Desc">この幻影はあなたにとても良く似ているが、青白く少し震えている。</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">鏡像</string>
     <string name="MirrorImage_Name_Objective">鏡像</string>
     <string name="MissileWeapon_Info1">この武器の平均ダメージは、1ヒットにつき%dポイントに等しい。</string>
@@ -3040,6 +3045,11 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
+
+
+
 
 
 

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">吞噬</string>
     <string name="AC_Dissect">解剖</string>
@@ -530,7 +529,7 @@
     <string name="Codex_Story_23">这本书是用矮人语写的</string>
     <string name="Codex_Story_24">这本书是用精灵语写的</string>
     <string name="Codex_Story_25">她在厚重的橡木门前停下，如被冻住一般。门框边闪烁的微光吸引了她的眼球，令她逐渐回想起了一些被遗忘的往事。\n
-\"光……\"她喃呢着。过去了多久？在永远黑暗的地牢中，她早就忘记去记录时间了。这微光使她回想起了过去。她想起了她过去的练习，长时间的挥舞和穿刺，以及对地图和事件的记录训练。她想起她曾经用祈祷和知识来使她能在未知的地方保留一点点的理智。但是她想不起，也记不起，那些她遇见过的人。\n
+\&quot;光……\&quot;她喃呢着。过去了多久？在永远黑暗的地牢中，她早就忘记去记录时间了。这微光使她回想起了过去。她想起了她过去的练习，长时间的挥舞和穿刺，以及对地图和事件的记录训练。她想起她曾经用祈祷和知识来使她能在未知的地方保留一点点的理智。但是她想不起，也记不起，那些她遇见过的人。\n
 她回想起了他们声音、他们的指令、他们的警告，但记不起他们的脸、他们的触感。\n
 疼痛使她成长，记住危机，面对危险。险恶之地，险象丛生。发狂的动物、不灭的亡灵、疯颠的盗贼、狡诈的忍者在她面前一一倒下。烧、砍、刺、毒，她想尽一切办法击败一切阻挡她的物体。恶魔倒下了，魔像倒下了，术士倒下了，最后连神也在她面前倒下了。
 
@@ -636,7 +635,7 @@
     <string name="DeferedDamageBuff_Info">疼痛已经变成了一种缓慢的疼痛，减少即将受到的伤害。\n待承受的伤害 %d 点</string>
     <string name="DeferedDamageBuff_Name">延时伤害 (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s杀死了你</string>
-    <string name="DevourBuff_Info" />
+    <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">吞噬</string>
     <string name="DewVial_ACDRINK">饮用</string>
     <string name="DewVial_AutoDrink">空露珠瓶没法用来治疗伤口。</string>
@@ -652,6 +651,7 @@
     <string name="DieHardSpell_Info">会暂时增加你的回复速度，让你成为真正的死神。</string>
     <string name="DieHardSpell_Name">顽固</string>
     <string name="Displacement_Txt">位移%s</string>
+    <string name="DoctorArmor_Name">医生的服装</string>
     <string name="DoctorArmor_NotDoctor">Only plague doctors can use this armor!</string>
     <string name="DoctorSpecial">瘴氣雲</string>
     <string name="DogeMask_Info">你想伪装成著名的狗吗？现在是你的机会！\n这样的面具！伪装性很强！真的！</string>
@@ -990,7 +990,7 @@
     <string name="HeroSubClass_DescFreR">当_疾行者_处于不负重和不饥肠辘辘的状态下，能以绝大多数怪物两倍的速度移动，奔跑期间，敌人攻击更难命中。</string>
     <string name="HeroSubClass_DescGlad">一次成功的近战攻击可以让_角斗士_找回节奏，开始连击。接下来每次近战攻击命中都会造成更多伤害。</string>
     <string name="HeroSubClass_DescGuardian">熟练的防御知识使守卫能够用盾牌进行反击，使他成为那些敢于攻击这座行走堡垒的人的可怕敌人。</string>
-    <string name="HeroSubClass_DescNone" />
+    <string name="HeroSubClass_DescNone"/>
     <string name="HeroSubClass_DescScout">精灵_斥候_是隐匿大师，踩踏高草会让他们获得短暂的隐身状态。此外，他们比通常的精灵更快更灵敏。</string>
     <string name="HeroSubClass_DescShaman">精灵_萨满_能够将法杖作为近战武器使用。近战攻击命中将有机会对敌人释放法杖的能量，且不消耗充能。</string>
     <string name="HeroSubClass_DescSnip">_狙击手_见微知着，能够找出敌人护甲的脆弱点，使用远程武器攻击时，能有效地无视敌人护甲打出伤害。</string>
@@ -1531,6 +1531,7 @@
     <string name="PlagueDoctorQuest_2_1_Prologue">_月光草种子_……那些空灵的花朵，低语着月亮本身的魔法。我已经研究它们奇异的荧光几周了。它们精髓中蕴含着 potency，一种隐藏的能量，可能是……什么的钥匙。*用骨节分明的手指沉思地敲着下巴*\n但可惜，它们很稀有。只能在月光几乎无法穿透的最深处洞穴中找到。我需要两颗。两颗种子来解锁它们力量的秘密。作为回报，我可以给你一些东西……一种纯净、强效魔法的味道。一瓶_法力药水_，充满月光草的精髓。它将恢复你疲惫的灵魂，让你以更新的力量使用魔法。</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">太好了！_太阳草_，它的金色精华脉动着生命力。我已经从它精致的结构中学到了很多。*他递给你一瓶_治疗药水_，液体闪烁着微弱的金光。*当世界让你感到沉重时喝下它，感受阳光的温暖唤醒你的精神。</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_两颗太阳草_种子。它们的金色花瓣蕴含着我要理解的力量。找到它们，让它们的精华显现！</string>
+    <string name="PlagueDoctorQuest_2_2_Prologue">Ах, _sungrass_! Нежный цветок, его лепестки излучают тепло солнца. Я верю, что его суть содержит ключ к... ах, забудь конкретики на данный момент. Скажем так, он крайне важен для моих исследований. _Два семени sungrass_. Найди их для меня, и я награжу тебя чем-то, что определённо пригодится в твоих приключениях - _Зельем здоровья_, полным самой жизненной силы солнца.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Dengan lembut memeluk _kelelawar_ dengan tangan ber Sarung tangannya, memeriksa bentuk kecilnya dengan ketertarikan yang mengganggu* Luar biasa! Ekolokasi kelelawar... ini berbeda dari apa pun yang pernah saya temui. Akurasi seperti itu... begitu... kontrol. *Dia menoleh kepada Anda, wajahnya tertutup topeng* Untuk usaha Anda, sebuah _ gulungan Peningkatan_. Gunakan dengan bijak, karena itu memiliki potensi untuk... memurnikan esensi Anda. *Dia menyerahkan gulungan kepada Anda, suaranya turun menjadi bisikan* Kelelawar ini... itu adalah jendela ke dunia tersembunyi. Dunia... di mana bayangan menari dan rahasia berbisik.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">给我带一只_吸血鬼蝙蝠_，活着且完好无损！它的血液、它的翅膀……它们藏着我必须揭开的秘密！</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*他的眼睛闪烁着一种奇怪的、狂热的光芒* 啊，_吸血鬼蝙蝠_！夜之生物，以猎物的生命力为食。迷人……真迷人。我需要一个活的来研究它独特的生理结构。这一切都是为了……理解……理解……*他喃喃自语，说出一连串神秘的术语*。是的！_蝙蝠_的回声定位，它在完全黑暗中导航的能力……这是解开秘密的关键。</string>
@@ -1949,6 +1950,7 @@
     <string name="Shades_Name">墨镜</string>
     <string name="ShadowLord_Death">不……</string>
     <string name="ShadowLord_Desc">他是黑暗和恶灵的终极化身，他的强大让人们深信他就是古神本尊。当然还有那么一小撮人认为，他也就是给古神当个保安。</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">照顾好你自己吧！</string>
     <string name="ShadowLord_Name">暗影领主</string>
     <string name="ShadowLord_Name_Objective">暗影领主</string>
@@ -2046,7 +2048,7 @@
     <string name="SpeedBuff_Info">身躯散发着活力和能量，移动也快于寻常。</string>
     <string name="SpeedBuff_Name">速度</string>
     <string name="SpellBook_Info">它看起来更像是一个拼凑在一起的各种页面的汇编，而不是一本真正的书。如果你足够注意的话，也许能从中得到一些东西。</string>
-    <string name="SpellBook_Info_Identified">阅读完这些页面你发现\"%1$s\"咒语的全文。\n\"%2$s\"</string>
+    <string name="SpellBook_Info_Identified">阅读完这些页面你发现\&quot;%1$s\&quot;咒语的全文。\n\&quot;%2$s\&quot;</string>
     <string name="SpellBook_Name">咒语书</string>
     <string name="Spell_SelectACell">选择一个位置</string>
     <string name="Spell_SelectAChar">选择一个目标对象。</string>
@@ -2108,6 +2110,7 @@
     <string name="SpiritOfPain_Name_Objective">痛苦之魂</string>
     <string name="Sprout_Info">唤醒休眠的种子。\n然而，地面上应该有一些绿色植物，才能让这个咒语成功。</string>
     <string name="Sprout_Name">发芽</string>
+    <string name="StartScene_ChooseFromSlot">从存档位选择</string>
     <string name="StartScene_ComingSoon">即将推出</string>
     <string name="StartScene_ContinueLatest">继续你的最新游戏或从存档槽中选择</string>
     <string name="StartScene_Depth">层数：%1$d\n等级： %2$d</string>
@@ -2351,18 +2354,18 @@
     <string name="Wand_SelfTarget">你不能以自己为施法目标。</string>
     <string name="Wand_Weapon">你可以将这根法杖当近战武器使用。</string>
     <string name="Wand_Wood">这根%s法杖摸上去很暖和。谁能知道使用它会发生什么事？</string>
-    <string name="Wand_Wood_Types_0">\"冬青\"</string>
-    <string name="Wand_Wood_Types_1">\"红豆杉\"</string>
-    <string name="Wand_Wood_Types_10">\"橡木\"</string>
-    <string name="Wand_Wood_Types_11">\"桦木\"</string>
-    <string name="Wand_Wood_Types_2">\"乌木\"</string>
-    <string name="Wand_Wood_Types_3">\"樱桃\"</string>
-    <string name="Wand_Wood_Types_4">\"柚木\"</string>
-    <string name="Wand_Wood_Types_5">\"花楸\"</string>
-    <string name="Wand_Wood_Types_6">\"柳\"</string>
-    <string name="Wand_Wood_Types_7">\"桃花心木\"</string>
-    <string name="Wand_Wood_Types_8">\"竹\"</string>
-    <string name="Wand_Wood_Types_9">\"紫心\"</string>
+    <string name="Wand_Wood_Types_0">\&quot;冬青\&quot;</string>
+    <string name="Wand_Wood_Types_1">\&quot;红豆杉\&quot;</string>
+    <string name="Wand_Wood_Types_10">\&quot;橡木\&quot;</string>
+    <string name="Wand_Wood_Types_11">\&quot;桦木\&quot;</string>
+    <string name="Wand_Wood_Types_2">\&quot;乌木\&quot;</string>
+    <string name="Wand_Wood_Types_3">\&quot;樱桃\&quot;</string>
+    <string name="Wand_Wood_Types_4">\&quot;柚木\&quot;</string>
+    <string name="Wand_Wood_Types_5">\&quot;花楸\&quot;</string>
+    <string name="Wand_Wood_Types_6">\&quot;柳\&quot;</string>
+    <string name="Wand_Wood_Types_7">\&quot;桃花心木\&quot;</string>
+    <string name="Wand_Wood_Types_8">\&quot;竹\&quot;</string>
+    <string name="Wand_Wood_Types_9">\&quot;紫心\&quot;</string>
     <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">没有多少生物可以承受这种武器的碾压，但只有少数强者才可以精通它。</string>
     <string name="WarHammer_Name">战锤</string>
@@ -2469,7 +2472,7 @@ remix.31.1\n
     <string name="WndDonate_ruby">红宝石</string>
     <string name="WndDonate_rubyDonate">红宝石级捐献</string>
     <string name="WndDonate_rubyDonateText">你的慷慨将会帮助我们改善混合地牢！</string>
-    <string name="WndDonate_rubyDonateText2" />
+    <string name="WndDonate_rubyDonateText2"/>
     <string name="WndDonate_silver">白银</string>
     <string name="WndDonate_silverDonate">白银级捐献</string>
     <string name="WndDonate_silverDonateText">任何捐献皆作此游戏之开发用途。</string>
@@ -2739,6 +2742,7 @@ remix.31.1\n
     <string name="YogsHeart_Name">Yog之心</string>
     <string name="YogsHeart_Name_Objective">Yog之心</string>
     <string name="YogsTeeth_Desc">古神的大嘴和锋利牙齿，表现了出强烈的破坏欲望，他渴望毁灭和吞噬所有的生物。</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">Yog之牙</string>
     <string name="YogsTeeth_Name_Objective">Yog之牙</string>
     <string name="ZombieGnoll_Desc">扭曲、破损、不再具有人形的豺狼人僵尸。由一堆腐烂的肉、骨头以及毁灭、杀戮的意识组成。</string>
@@ -3004,6 +3008,11 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
 
 
 

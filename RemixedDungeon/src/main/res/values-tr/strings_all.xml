@@ -1,6 +1,7 @@
 <resources>
     <string name="AC_Devour">Obur</string>
     <string name="AC_Dissect">Parçala</string>
+    <string name="AC_Kick">Şut</string>
     <string name="AC_Necromancy">Ölüçağırma</string>
     <string name="Abilities_Common">Yaygın Büyüler</string>
     <string name="Abilities_Default">Uzmanlık</string>
@@ -65,6 +66,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="AnesthesiaBuff_Name">Anestezi</string>
     <string name="Anesthesia_Cast">%s falls into a deep, dreamless sleep.</string>
     <string name="Anesthesia_Info">Hedefinizde derin, doğal olmayan bir uyku oluşturur. En şiddetli saldırılar bile onları bu uykudan uyandıramaz.</string>
+    <string name="Anesthesia_Name">Anestezi</string>
     <string name="Ankh_Info">Bu antik ölümsüzlük sembolü , taşıyana ölümden geri dönme gücü verir. Dirildiğinde kuşandığın ekipmanlar dışındaki tüm nesnelerin kaybolur.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">Anti-entropik %sı</string>
@@ -381,6 +383,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Challenges_Descriptions_6">Kadim rün okuma sanatı, zindana ya da çevresine giren her parşömene bahşedilen lanet nedeniyle yasaklanmış ve her ne pahasına olursa olsun kaçınılmıştır.</string>
     <string name="Challenges_Descriptions_7">Silah bulundurmanın ve kullanmanın ahlaki olarak doğru olmadığı gerçeğine alıştınız, ancak sizi aşağıda dolaşan yaratıklardan başka ne koruyabilir?</string>
     <string name="Challenges_Descriptions_8">Yolculuğunuz karanlık ve tehlikeli şehir kanalizasyonlarında başlayacak ve yüzeye giden tek yol kapalı olacak. Daha da kötüsü, sadece zindanda bulduğunuz ekipmanları kullanabileceksiniz. Sınırlı kaynaklar ve ekipmanla, hayatta kalmanız becerilerinize ve stratejinize bağlı olacaktır.</string>
+    <string name="Challenges_Descriptions_9">Veba Doktor\'un son tedavisi uzay belleğinizi silmiş. Doğrudan görüş alanınızın dışında bir şey hatırlayamıyorsunuz.</string>
     <string name="Challenges_Names_0">Diyette</string>
     <string name="Challenges_Names_1">İnanç benim zırhımdır</string>
     <string name="Challenges_Names_2">İlaç korkusu</string>
@@ -476,6 +479,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="ChargrilledMeat_Name">kebap</string>
     <string name="CharmBuff_Info">Zihin ve beden büyülendi!</string>
     <string name="CharmBuff_Name">Büyülenmiş</string>
+    <string name="CharmSpell_Cast">%s çarpıtıldı.</string>
     <string name="CharmSpell_Info">Herkes biraz sevgiyi hak eder, değil mi?</string>
     <string name="CharmSpell_Name">Etrafta bir sürü ağırlaştırılmış yaratık var, onlara yardım edelim.</string>
     <string name="Chasm_Chasm">Uçurum</string>
@@ -2186,6 +2190,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="Swing_Name_0">Vahşi %s</string>
     <string name="Swing_Name_1">Vahşi %s</string>
     <string name="Swing_Name_2">Vahşi %s</string>
+    <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">Keskin ağzı ile bu uzun çelik silah güven verici şekilde parlıyor.</string>
     <string name="Sword_Name">kılıç</string>
     <string name="Tamahawk_Gender">masculine</string>
@@ -3030,6 +3035,13 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
+
+
+
+
 
 
 

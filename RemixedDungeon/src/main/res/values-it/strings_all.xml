@@ -536,6 +536,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Crab_Name_Objective">granchio delle fogne</string>
     <string name="CrippleBuff_Name">Azzoppato</string>
     <string name="Crystal_Desc">Un grosso e brillante cristallo fluttua nell\'aria. Probabilmente è pieno di potente magia. </string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">cristallo flutuante</string>
     <string name="Crystal_Name_Objective">cristallo flutuante</string>
     <string name="CurareDart_Gender">masculine</string>
@@ -764,6 +765,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Ghost_Defense">eluso</string>
     <string name="Ghost_Desc">Il fantasma è appena visibile. Si presenta come una macchia informe di luce fioca con una espressione addolorata.</string>
     <string name="Ghost_Name">fantasma triste</string>
+    <string name="Ghost_Name_Objective">fantasma</string>
     <string name="Ghost_Rat1">Ciao avventuriero... Una volta ero come te - forte e fiducioso... E ora sono morto... Ma non posso lasciare questo posto... Non finché non avrò la mia vendetta... Uccidi il _ratto puzzolente_ che ha preso la mia vita...</string>
     <string name="Ghost_Rat2">Ti prego.... Aiutami... Uccidi l\'abominio...</string>
     <string name="Ghost_Rose1">Ciao avventuriero... Una volta ero come te - forte e fiducioso... E ora sono morto... Ma non posso lasciare questo posto... Non finché non riavrò  la mia _rosa appassita_... E\' molto importante per me... Un mostro l\'ha rubata dal mio corpo...</string>
@@ -1850,6 +1852,7 @@ Potrebbe bruciare?</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">pecora</string>
     <string name="Sheep_Name_Objective">pecora</string>
+    <string name="ShieldBuffNotReady_Info">Il tuo scudo non è pronto a bloccare il prossimo attacco.</string>
     <string name="ShieldBuffNotReady_Name">Scudo non pronto</string>
     <string name="ShieldBuffReady_Info">Il tuo scudo è pronto a bloccare il prossimo attacco.</string>
     <string name="ShieldBuffReady_Name">Scudo pronto</string>
@@ -2553,6 +2556,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Questo semplice arco di legno potrebbe dimostrarsi utile, non appena troverai delle frecce.</string>
     <string name="WoodenBow_Name">arco di legno</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Una balestra base di legno, sembra progettata per sparare frecce d\'arco. </string>
     <string name="WoodenCrossbow_Name">balestra in legno</string>
     <string name="WoodenShield_desc">Uno scudo di legno fatto in modo grossolano è lo scudo più semplice disponibile. È rotondo e può bloccare occasionalmente alcuni danni.</string>
@@ -2674,6 +2678,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_dungeon_door_name">Entrata</string>
     <string name="town_deco_emptyboard_desc">Il più comune scaffale per esporre oggetti.</string>
     <string name="town_deco_entrance_desc">Questo ingresso conduce ai livelli superiori del dungeon.</string>
+    <string name="town_deco_entrance_name">Ingresso</string>
     <string name="town_deco_exit_desc">Non si sa cosa ti aspetta se scendi questi scalini.</string>
     <string name="town_deco_exit_name">Uscita</string>
     <string name="town_deco_fence_desc">Una staccionata di legno macchiata di neve.</string>
@@ -2823,6 +2828,11 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
 
 
 

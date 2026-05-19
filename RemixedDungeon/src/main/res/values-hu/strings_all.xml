@@ -58,6 +58,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Amulet_Info">Yendor Amulettje a leghatalmasabb ismert ereklye aminek eredete a mai napig ismeretlen. Azt beszélik hogy viselőjének minden kívánságát teljesítheti persze csak akkor ha annak akaratereje elég erős ahhoz hogy írányítani tudja az amulet rettentő hatalmát.</string>
     <string name="Amulet_Name">Yendor Amulettje</string>
     <string name="AnesthesiaBuff_Info">Fájdalmat nem érez, és a támadásokból sem ébred fel, de továbbra is sérülést szenved.\n</string>
+    <string name="Anesthesia_Cast">%s mély, álom nélküli álomba esik.</string>
     <string name="Anesthesia_Info">Mély, természetes alvást idéz elő az áldozatodon. Még a legerőszakosabb támadások sem ébresztik fel ebből az álomból.</string>
     <string name="Anesthesia_Name">Érzéstelenítés</string>
     <string name="Ankh_Info">A halhatatlanság ősi szimbóluma képessé tesz rá hogy visszatérj a halálból. Feléledéskor minden a táskádban levő tárgyat elveszíted.</string>
@@ -631,6 +632,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="DreadKnight_Name_Objective">rettegett lovag</string>
     <string name="Dreamweed_Desc">Az Álomfűhöz érve eltűntet egy csillogó zavaró füstöt.</string>
     <string name="Dreamweed_Name">Álomfű</string>
+    <string name="DriedRoseBuff_Info">A rózsa nagyon csábítóan néz ki.</string>
     <string name="DriedRoseBuff_Name">Csalogató</string>
     <string name="DriedRoseCursedBuff_Info">A rózsa gyönyörűnek tűnik, de nem olyan csábító.</string>
     <string name="DriedRoseCursedBuff_Name">Érzéki</string>
@@ -1352,6 +1354,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="Monk_Name">törp szerzetes</string>
     <string name="Monk_Name_Objective">törp szerzetes</string>
     <string name="MoongraceBuff_Name">Mennyei manna</string>
+    <string name="Moongrace_Desc">Ezeket a növényeket kis számokban lehet látni, természetes varázslatként ismertek.</string>
     <string name="Moongrace_Name">Holdszépség</string>
     <string name="Movement_Speed">Mozgási sebesség</string>
     <string name="Multiplicity_Txt">Többszöröző %s</string>
@@ -1964,6 +1967,7 @@ egy másik helyre a szinten. </string>
     <string name="SoulShard_Name">Lélek szilánk</string>
     <string name="Spear_Info">Vékony farúd, a végén hegyes vassal.</string>
     <string name="Spear_Name">Lándzsa</string>
+    <string name="SpeedBuff_Info">Élénység és energia sugárzik a testből, és a mozgások szokásosnál gyorsabbnak tűnnek.</string>
     <string name="SpeedBuff_Name">Sebesség</string>
     <string name="SpellBook_Info">Úgy néz ki inkább mint néhány összegyűjtött lap amit összevartak, minthogy egy tényleges könyv. Talán kihozhatsz belőle még valamit, ha elég figyelmet fordítasz rá.</string>
     <string name="SpellBook_Info_Identified">
@@ -2165,6 +2169,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="ToxicGas_Info">Zöldes mérgező gázfelhő kavarog itt.</string>
     <string name="ToxicGas_Info1">Meghaltál amiért belélegezted a mérges gázt.</string>
     <string name="ToxicGland_Info">Egy legyőzött ellenségtől származó mérgező mirigy. Ezek a mirigyek erős toxinokkal vannak tele, és alkímiai folyamatokhoz felhasználhatók.</string>
+    <string name="ToxicGland_Name">Toksikus mirigy</string>
     <string name="TrapWnd_Step">Biztos hogy ráakarsz lépni erre a csapdára? Bele is halhatsz.</string>
     <string name="TrapWnd_Title">Csapda</string>
     <string name="TreacherousSpirit_Desc">Ez az irtózatos teremtmény úgy néz ki, mint egy felhőnyi élő sötétség. Héj nélküli szeme téged bámul, pulzálva minden mozdulatodra.</string>
@@ -2865,6 +2870,11 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
 
 
 

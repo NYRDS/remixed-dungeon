@@ -903,6 +903,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HealerNPC_Name_Objective">Padre da cidade</string>
     <string name="Healing_Info">O pergaminho é crucial para todos os aventureiros. Ele pode restaurar 1/3 do máximo do hp dos conjuradores.</string>
     <string name="Healing_Name">Cura</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">A ponta desta flecha está coberta com poção de cura.</string>
     <string name="HealthArrow_Name">Flecha de Cura</string>
     <string name="HealthDart_Gender">masculine</string>
@@ -1404,6 +1405,7 @@ Parede
     <string name="MoongraceBuff_Name">Maná celestial</string>
     <string name="Moongrace_Desc">Essas plantas crescem em pequeno número e são conhecidas como uma fonte de magia natural.</string>
     <string name="Moongrace_Name">Graça da Lua</string>
+    <string name="Movement_Speed">Velocidade de movimento</string>
     <string name="Multiplicity_Txt">%s de multiplicidade</string>
     <string name="Mushroom_Eat_Message">Esse cogumelo tem um gosto estranho! </string>
     <string name="MysteryMeat_Info">Coma sob seu próprio risco!</string>
@@ -1492,6 +1494,7 @@ Parede
     <string name="PirateSet_Info">Arr! Você se sente como um amigo ... ou você é apenas um maldito latifundiário !? Espero que não, essas coisas são para piratas depois de tudo, quero dizer ... Arr!</string>
     <string name="PirateSet_Name">Conjunto de Pirata</string>
     <string name="PlagueDoctorMaskHood_Info">Rzeźbiony czarny czaszka z pustymi oczodołami, które świecą eterycznym blaskiem ametystowych klejnotów. Każdy oddech, który wdychasz, szepce przez labirynt rur i filtrów, niosąc zapach silnych ziół i przypraw, które maskują rozkład, który przylega do ciebie. Ale to nie tylko maska. Ciężki kaptur z północnego aksamitu, zakrywający twoją twarz i głowę w cieniu. Kaptur, jak skrzydło wrony, opływa twoje plecy, jego krawędzie ozdobione frędzlami z kościście białej koronki, lodowato piękny kontrast. Razem maska i kaptur tworzą widmo, mroczny testament w walce z siłami rozkładu.</string>
+    <string name="PlagueDoctorMaskHood_Name">Máscara do Médico da Peste com capuz</string>
     <string name="PlagueDoctorMask_Info">Isso... isso não é uma simples máscara. É... uma barreira. Um escudo contra as forças da podridão que o Médico da Peste combate incansavelmente. Esculpido na madeira de ébano mais fina, detalhadamente esculpido com o rosto de um crânio voraz. Seus olhos ocos estão preenchidos com pedras de ametista brilhantes que pulsam fracamente, como brasas morrendas de um fogo. Cada respiração que você dá, cada fala que você faz, é filtrada através de uma rede labiríntica de tubos e filtros. Uma mistura de ervas potentes e especiarias exóticas infunde o ar dentro, mascarando o fedor da morte que se agarra a você como um sudário.</string>
     <string name="PlagueDoctorMask_Name">máscara de Médico da Peste</string>
     <string name="PlagueDoctorNPC_After_Quest">Eu vou mostrar a eles, a todos eles!</string>
@@ -1509,6 +1512,7 @@ Parede
     <string name="PlagueDoctorQuest_1_1_Prologue">Atchim!\n Amaldiçoada seja esta praga infernal! Está se espalhando pela cidade como fogo em palha, apodrecendo nos ossos da população desavisada! BAH! Você acha que aqueles guardas patéticos têm chance contra esta praga insidiosa? Você, aí! Espécime forte e saudável. Talvez você possa me ajudar. Aqueles _ratos_ de esgoto imundos... eles carregam, digo a você, as sementes da pestilência em seus pequenos corpos putrefatos! Traga-me _cinco_ dessas criaturas miseráveis, _mortas_, é claro! Suas peles serão inestimáveis para minha pesquisa. Vou criar para você uma armadura maravilhosa, uma barreira protetora contra a própria praga que se origina dela!</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">_Dez caracóis_, dez sussurros do abismo! Seu muco será analisado, sua essência será minuciosamente examinada. Os segredos que eles guardam estão ao alcance.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Tosse violentamente* Atchim!\n _Os caracóis_… eles deslizam. Eles exsudam. E sussurram segredos de uma era esquecida. Preciso deles, _dez_ deles, suas conchas ainda intactas. Você acha que meras _cinquenta moedas de ouro_ são suficientes para um conhecimento tão precioso?\n Bah! Não importa. A informação que eles guardam pode ser a chave para deter esta praga. Ou… pode nos levar a algo ainda mais terrível. Você decide.</string>
+    <string name="PlagueDoctorQuest_2_1_Epilogue">_Moongrace_... 증거는 이 세계를 관통하는 마법에 대한 것입니다. 그들의 본질에서 많이 배웠지만 보상은... 그것이 최대한 주의를 기울여 준비되었습니다. *영웅에게 빛나는 _마나 포션_ 을 건네며* 그 힘이 앞으로의 위험을 극복하는 데 도움이 되기를 바랍니다.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Procure pela _moongrace_, onde a escuridão encontra o mais fraco brilho da luz da lua. _Duas sementes_, sua essência, revelarão segredos ocultos.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">Magnífico! O _Herbosal_, sua essência dourada lateja com vitalidade. Já aprendi muito com sua estrutura delicada. *Ele lhe entrega uma _Poção de Saúde_, cujo líquido brilha com uma leve luz dourada.* Beba isto quando o mundo pesar muito sobre você, e sinta o calor do sol reviver seu espírito.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Duas sementes de grama-solar_. Suas pétalas douradas guardam um poder que busco compreender. Encontre-as, e que sua essência seja revelada!</string>
@@ -2162,6 +2166,7 @@ outro local do nível.</string>
     <string name="TenguLiver_Info">Este fígado pertence a um inimigo poderoso. Só de olhar para ele, seus instintos selvagens assumem o controle e você sente o desejo de consumi-lo.</string>
     <string name="TenguLiver_Name">Fígado de Tengu</string>
     <string name="Tengu_Desc">Tengu são membros de um clã antigo de assassinos, que também é chamado de Tengu. Esses assassinos são conhecidos por uso extensivo de shuriken e armadilhas.</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">Finalmente livre...</string>
     <string name="Tengu_Info2">Te peguei, %s!</string>
     <string name="Tengu_Info3">Pegou, %s!</string>
@@ -2996,6 +3001,11 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
 
 
 

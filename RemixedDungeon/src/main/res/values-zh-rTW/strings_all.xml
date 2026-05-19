@@ -60,6 +60,7 @@
     <string name="Amulet_Name">尼德羅護符</string>
     <string name="AnesthesiaBuff_Info">不感覺疼痛也不會從攻擊中醒來，但仍受到傷害。</string>
     <string name="AnesthesiaBuff_Name">麻醉</string>
+    <string name="Anesthesia_Cast">%s 깊은 잠에 빠진다.</string>
     <string name="Anesthesia_Name">麻醉</string>
     <string name="Ankh_Info">此古老的不朽的象徵可以使您從死亡中復活。但會使您丟失所有未裝備的道具。</string>
     <string name="Ankh_Name">十字架</string>
@@ -630,7 +631,9 @@
     <string name="DieHardSpell_Info">會暫時增加你的回復速度，讓你成為真正的死神。</string>
     <string name="DieHardSpell_Name">再起</string>
     <string name="Displacement_Txt">位移 %s</string>
+    <string name="DoctorArmor_Info">這套瘟疫醫生的盔甲允許使用「毒霧雲」能力，釋放有毒氣體使敵人中毒、虛弱和迷失方向。醫生受到面具保護，對這些效果免疫。</string>
     <string name="DoctorArmor_Name">醫生袍</string>
+    <string name="DoctorArmor_NotDoctor">只有瘟疫医生才能使用這套盔甲！</string>
     <string name="DoctorSpecial">瘴氣雲</string>
     <string name="DogeMask_Info">你想偽裝成著名的狗嗎？現在是你的機會！\n這樣的面具！偽裝性很強！真的！</string>
     <string name="DogeMask_Name">柴犬面具</string>
@@ -708,6 +711,7 @@
     <string name="EncumbranceBuff_CharAct_1">我沒有足夠的力量來正確使用%s。</string>
     <string name="EncumbranceBuff_CharAct_2">這個%s太重了，我無法有效地使用它。</string>
     <string name="EncumbranceBuff_CharAct_3">在我使用%s之前，我需要鍛鍊我的力量。</string>
+    <string name="EncumbranceBuff_CharAct_4">我缺乏力量，無法充分發揮 %s 的潛力。</string>
     <string name="EncumbranceBuff_CharAct_5">我現在無法承受%s的重量。</string>
     <string name="EncumbranceBuff_Info">沒有足夠的力量來有效地使用 %s。</string>
     <string name="EncumbranceBuff_Name">負擔</string>
@@ -1385,6 +1389,7 @@
     <string name="Monk_Name_Objective">矮人武僧</string>
     <string name="MoongraceBuff_Info">周圍的空氣變得更加飽和，使人能夠更好地集中精神並恢復魔力。</string>
     <string name="MoongraceBuff_Name">月光恩賜</string>
+    <string name="Moongrace_Name">月光草</string>
     <string name="Movement_Speed">移動速度</string>
     <string name="Multiplicity_Txt">分身 %s</string>
     <string name="Mushroom_Eat_Message"> 那菇味道怪詭異的！</string>
@@ -2944,6 +2949,11 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
 
 
 
