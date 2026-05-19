@@ -57,6 +57,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Amulet_ACEnd">VÉGE A JÁTÉKNAK</string>
     <string name="Amulet_Info">Yendor Amulettje a leghatalmasabb ismert ereklye aminek eredete a mai napig ismeretlen. Azt beszélik hogy viselőjének minden kívánságát teljesítheti persze csak akkor ha annak akaratereje elég erős ahhoz hogy írányítani tudja az amulet rettentő hatalmát.</string>
     <string name="Amulet_Name">Yendor Amulettje</string>
+    <string name="AnesthesiaBuff_Info">Fájdalmat nem érez, és a támadásokból sem ébred fel, de továbbra is sérülést szenved.\n</string>
     <string name="Anesthesia_Info">Mély, természetes alvást idéz elő az áldozatodon. Még a legerőszakosabb támadások sem ébresztik fel ebből az álomból.</string>
     <string name="Anesthesia_Name">Érzéstelenítés</string>
     <string name="Ankh_Info">A halhatatlanság ősi szimbóluma képessé tesz rá hogy visszatérj a halálból. Feléledéskor minden a táskádban levő tárgyat elveszíted.</string>
@@ -2605,6 +2606,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="YogsHeart_Name">yog szíve</string>
     <string name="YogsHeart_Name_Objective">Yog szíve</string>
     <string name="YogsTeeth_Desc">Az Ősi Isten hatalmas, borotvaéles fogakkal teli szája. Egy hozzáillő megnyilvánulása annak a vágynak, hogy minden élőlényt elpusztítson és felfaljon.</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">yog foga</string>
     <string name="YogsTeeth_Name_Objective">Yog foga</string>
     <string name="ZombieGnoll_Desc">A zombi Gnoll kitekert, törött teste többé nem hasonlít semmilyen emberszabásúra vagy hiénára. Mindössze egy rothadó hús és csontrakás maradt hátra, aminek gonosz vágya, hogy megöljön és felfaljon.</string>
@@ -2857,6 +2859,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

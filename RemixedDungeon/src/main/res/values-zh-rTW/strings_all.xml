@@ -93,6 +93,7 @@
     <string name="Artifact_Limit">你最多只能同時佩戴2件飾品。</string>
     <string name="AttackDelay_Increased">這樣無法使用%s。揮動緩慢，呼吸沉重…</string>
     <string name="Attack_Cooldown">攻擊冷卻時間</string>
+    <string name="Attack_Range">攻擊距離</string>
     <string name="AwarenessBuff_Name">察覺</string>
     <string name="AzuterronNPC_Desc">被黑霧包圍著的神秘人</string>
     <string name="AzuterronNPC_Gender">masculine</string>
@@ -210,6 +211,7 @@
     <string name="Bat_Name_Objective">吸血蝙蝠</string>
     <string name="BattleAxe_Info">這把有著巨大鋼製頭部的戰斧能將龐大的力量傾註在每次揮擊之中。</string>
     <string name="BattleAxe_Name">戰斧</string>
+    <string name="Bee_Desc">雖然體型小，但蜜蜂會拼死保衛建巢。不過牠們活不久。</string>
     <string name="Bee_Name">蜜蜂</string>
     <string name="BellaNPC_Amulet_F">但是你的那個護符...我們百合吧!</string>
     <string name="BellaNPC_Amulet_M">但是你的那個護符...我們約會吧!</string>
@@ -2940,6 +2942,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

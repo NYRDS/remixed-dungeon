@@ -899,6 +899,7 @@
     <string name="Halls_TileWater">冷たい溶岩</string>
     <string name="Haste_Info">ヘイストは、使用者が非常に速いスピードで動くことを可能にし、彼の周りのすべてが静止して見えるようになる。このようなヘイストは多くのエネルギーを消費するため、使用できるのは短時間だけである。</string>
     <string name="Haste_Name">エクストリームヘイスト</string>
+    <string name="Heal_Cast">%sが治癒された。</string>
     <string name="Heal_Info">ダンジョンではかなり役に立つ呪文だろう？</string>
     <string name="Heal_Name">ヒール</string>
     <string name="HealerNPC_Desc">杖を作っていそうな老人だ。</string>
@@ -2150,6 +2151,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Stylus_Name">不可解な鉄筆</string>
     <string name="Stylus_SelectArmor">刻み込むアイテムを選択</string>
     <string name="Succubus_Desc">サキュバスは魅惑的な（少しゴシック風の）少女のような姿をした悪魔である。サキュバスは魔法を使ってヒーローを魅了することができ、魅了が切れるまでヒーローは相手を攻撃できなくなる。</string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">サキュバス</string>
     <string name="Succubus_Name_Objective">サキュバス</string>
     <string name="SummonBeast_AtYourCommand">あなたの命令で</string>
@@ -3034,6 +3036,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

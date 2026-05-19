@@ -326,6 +326,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BurningBuff_Info">Ceset alevler içinde kaldı!</string>
     <string name="BurningBuff_Name">Yakıcı</string>
     <string name="BurningFist_Desc">Eski tanrının yanan yumruğu</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">yanan yumruk</string>
     <string name="BurningFist_Name_Objective">yanan yumruk</string>
     <string name="Burning_Burns">%s yanıyor</string>
@@ -1095,6 +1096,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Imp_Monks1">Sen bir maceracı mısın ? Maceracıları severim ! Eğer birşeyler öldürülmesi gerekiyorsa onlara güvenebilirsin. Haksız mıyım? Bir ödül karşılığında ;)\n Benim durumumda bu öldürülecek olanlar keşişler. Gördün mü , ufak bir iş başlatıyorum burada , ama bu deliler kendilerine bir şey almadıkları gibi müşterileri de korkutuyorlar. lanet olsun onlara ! Lütfen öldür onları... şöyle diyelim 8 tanesini öldür.</string>
     <string name="Imp_Monks2">Ooo, hala hayattasın. Senin Kung-fu\'nun kuvvetli olduğunu biliyordum ;) Keşiş simgelerini toplamayı unutma.</string>
     <string name="Imp_Name">hırslı küçük şeytan</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Info">Bu dartların her birinin üzerindeki sivri uç, uzunluğuna bağlı dengesiz bileşikler parlak alevlere dönüşürken onu hedefine sabitlemek için tasarlanmıştır.</string>
     <string name="IncendiaryDart_Name">yakıcı ok</string>
     <string name="InnKeeperNPC_Desc">Hancı kendisiyle gurur duyuyor.</string>
@@ -3025,6 +3027,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

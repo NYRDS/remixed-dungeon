@@ -762,6 +762,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="FrostArrow_Name">anak panah fros</string>
     <string name="FrostAuraBuff_Info">Tembusu membekalkan badan, menyahut semua yang berada berhampiran.</string>
     <string name="FrostAuraBuff_Name">Aura Fros</string>
+    <string name="FrostBuff_Info">Beku padam, mencegah daripada melakukan sebarang tindakan.</string>
     <string name="FrostBuff_Name">Membeku</string>
     <string name="Frost_Shatter">Kesejukan ini menyebabkan %s mula pecah berkecai!</string>
     <string name="FrozenCarpaccio_Info">Sekeping daging mentah beku. Cara memakannya hanya makan potongan nipis daging tersebut.</string>
@@ -864,6 +865,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HealerNPC_Name_Objective">paderi pekan</string>
     <string name="Healing_Info">Mantera ini sangat penting bagi setiap pengembara. Ia dapat memulihkan 1/3 dari amaun maksimum hayat penyihir.</string>
     <string name="Healing_Name">Penyembuhan</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Hujung anak panah ini disaluti dengan posyen penyembuhan.</string>
     <string name="HealthArrow_Name">Anak Panah Penyembuhan</string>
     <string name="HealthDart_Info">Hujung damak ini disaluti dengan posyen penyembuhan.</string>
@@ -1124,6 +1126,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="KrampusHead_Info">Pernahkah anda tertanya-tanya bagaimana rasanya mengambil peranan yang lebih jahat semasa menjelajahi dungeon? Nah, anda pastinya akan membawa ketakutan kepada tikus-tikus kecil di sekitar dengan penampilan seperti syaitan ini.</string>
     <string name="KrampusHead_Name">Kepala Krampus</string>
+    <string name="KunaiThrow_Info">Mautkan Kunai ini dilontar dengan sangat pantas, begitu pantas sehingga anda tidak akan mampu memilih sasaran.\n\nPengguru sebenar mampu melontar lebih dari satu Kunai pada satu masa.</string>
     <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Senjata ini terdiri dari sabit dengan pemberat besi yang mana kedua-duanya disambung dengan rantai.</string>
     <string name="Kusarigama_Name">kusarigama</string>
@@ -2861,6 +2864,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

@@ -94,6 +94,7 @@
     <string name="ArmoredStatue_Name_Objective">estátua animada</string>
     <string name="Artifact_Limit">Você só pode usar 2 artefatos ao mesmo tempo.</string>
     <string name="AttackDelay_Increased">Não consigo empunhar o %s assim. Golpes lentos, respiração pesada…</string>
+    <string name="Attack_Cooldown">Tempo de espera entre ataques</string>
     <string name="Attack_Range">Alcance de ataque</string>
     <string name="AwarenessBuff_Info">Os sentidos se aguçaram, dando mais consciência do ambiente.</string>
     <string name="AwarenessBuff_Name">Consciência</string>
@@ -2730,6 +2731,7 @@ remix.31.1\n
     <string name="YogsTeeth_Name">dentes de Yog</string>
     <string name="YogsTeeth_Name_Objective">Dente de Yog</string>
     <string name="ZombieGnoll_Desc">O corpo torcido e quebrado de um Gnoll-Zumbi já não se parece com humanoide ou hiena. É apenas um monte de carne podre e ossos cheios de desejo maligno de matar e comer.</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">Gnoll-zumbi ressuscitou dos mortos!</string>
     <string name="ZombieGnoll_Name">Gnoll-zumbi</string>
     <string name="ZombieGnoll_Name_Objective">Gnoll-Zumbi</string>
@@ -2992,6 +2994,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

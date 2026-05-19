@@ -878,6 +878,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Heal_Info">Mantra yang cukup berguna di Dungeon, kan?</string>
     <string name="Heal_Name">Sembuh</string>
     <string name="HealerNPC_Desc">Seorang lelaki tua, entah bagaimana dia terlihat seperti seseorang yang akan membuat tongkat sihir.</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Perawatan gratis untuk setiap petualang!</string>
     <string name="HealerNPC_Message2">Kembalilah kapan saja jika kau merasa sakit atau lapar!</string>
     <string name="HealerNPC_Message3">Saya berfikir mengapa gereja tidak memperbolehkan kita memakai topi... sangat dingin disana.</string>
@@ -2979,6 +2980,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

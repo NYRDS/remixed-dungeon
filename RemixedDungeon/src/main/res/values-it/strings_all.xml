@@ -204,6 +204,7 @@
     <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name">ape</string>
     <string name="Bee_Name_Objective">ape</string>
+    <string name="BellaNPC_Amulet_F">Ciao, caro tesoro, cosa hai là? Ah, un amuleto così bellissimo! E tu... splendi molto più di chiunque altro. Cosa ne dici se facciamo una passeggiata e ne parliamo del nostro futuro?</string>
     <string name="BellaNPC_Angry">Come osi... tu plebeo!</string>
     <string name="BellaNPC_Desc">Una ragazza dall\'aspetto molto elegante. Tutto il suo aspetto ti dice: \&quot;Sono troppo buona per tutti.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
@@ -1884,6 +1885,7 @@ Potrebbe bruciare?</string>
     <string name="Skeleton_Killed">sei stato ucciso dall\'esplosione di ossa...</string>
     <string name="Skeleton_Name">Scheletro</string>
     <string name="Skeleton_Name_Objective">Scheletro</string>
+    <string name="SleepBuff_Info">Completamente addormentato.</string>
     <string name="SlowBuff_Info">Il senso di lentezza rende qualcuno più lento del solito.</string>
     <string name="SlowBuff_Name">Rallentato</string>
     <string name="Slow_Name_0">del Freddo %s</string>
@@ -2575,6 +2577,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="YogsBrain_Name">Il cervello di Yog</string>
     <string name="YogsBrain_Name_Objective">Il cervello di Yog</string>
     <string name="YogsEye_Desc">L\'occhio del Vecchio Dio, allseeing sguardo pieno di odio eterno. Si può sentire a guardare a destra attraverso la tua anima</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">l\'occhio di yog</string>
     <string name="YogsEye_Name_Objective">l\'occhio di yog</string>
     <string name="YogsHeart_Desc">Per secoli la gente ha creduto che solo una creatura davvero senza cuore sono cappable di atti di pura malvagità. Eppure eccolo qui, enorme cuore pulsante di un vecchio Dio stesso.</string>
@@ -2815,6 +2818,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 
