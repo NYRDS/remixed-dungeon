@@ -211,6 +211,7 @@
     <string name="BattleAxe_Info">Kepala kapak perang keluli bersaiz besar ini memberikan angkatan yang agak sukar bagi setiap pukulan.</string>
     <string name="BattleAxe_Name">kapak perang</string>
     <string name="Bee_Desc">Malah pada saiz kecilnya, lebah cenderung mempertahankan sarangnya dengan gigih. Mereka tidak kekal lama walau bagaimanapun.</string>
+    <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name">lebah</string>
     <string name="BellaNPC_Amulet_F">Hai si kacak, apa benda yang berkilauan tu. Azimat yang luar biasa! Hmmm, awak... lebih menonjol dan lebih hebat dari yang lain. Marilah kita berbual-bual dan berbincang tentang masa hadapan kita bersama?</string>
     <string name="BellaNPC_Amulet_M">Hai si kacak, apa benda tu yang berkilauan. Azimat yang luar biasa! Dan awak... lebih hebat dari golongan kelas bawahan yang lain. Marilah kita berbual-bual dan berbincang tentang masa hadapan kita bersama?</string>
@@ -715,6 +716,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Eye_Name_Objective">mata jahat</string>
     <string name="Facilitations_Descriptions_0">Mutan sentiasa diperlakukan dengan hinaan dan ketakutan, tetapi ketiadaan kelaparan sekali lagi akan memberikan anda kelebihan, kali ini dalam menakluki kedalaman penjara bawah tanah.</string>
     <string name="Facilitations_Descriptions_1">Masih tidak diketahui siapa ibu bapa anda, tetapi regenerasi semula jadi seperti troll akan membantu memulihkan semua parut pertempuran yang bakal berlaku.</string>
+    <string name="Facilitations_Descriptions_2">Alam semula jadi sebagai sumber tenaga yang mendalam dan menyeluruh akan membolehkan anda memulihkan cadangan magik semasa dalam perjalanan.</string>
     <string name="Facilitations_Descriptions_3">Melilitkan tali pinggang kulit ogre, yang diwariskan kepada setiap generasi baru, anda membuat langkah ke arah yang tidak diketahui yang terletak di hadapan.</string>
     <string name="Facilitations_Names_0">Tanpa lapar</string>
     <string name="Facilitations_Names_1">Badan gergasi</string>
@@ -2854,6 +2856,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

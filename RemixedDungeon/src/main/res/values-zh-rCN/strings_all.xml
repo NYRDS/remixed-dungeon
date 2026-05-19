@@ -1496,6 +1496,7 @@
     <string name="Piercing_Name_1">穿刺%s</string>
     <string name="Piercing_Name_2">穿刺%s</string>
     <string name="Piranha_Desc">这些肉食性鱼类不是地下水池中的天然生物。它们被专门培育用来保护被水淹没的储藏室。</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">巨型食人鱼</string>
     <string name="Piranha_Name_Objective">巨型食人鱼</string>
     <string name="PirateSet_Info">啊哈！你现在看起来像是个海盗……还是说你只是一只该死的旱鸭子？！我希望你不是，毕竟那东西是海盗的，我的意思是……啊哈！</string>
@@ -2094,6 +2095,7 @@
     <string name="Spinner_Name">洞穴蜘蛛</string>
     <string name="Spinner_Name_Objective">洞穴蜘蛛</string>
     <string name="SpiritOfPain_Desc">黑暗的一部分</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">痛苦之魂</string>
     <string name="SpiritOfPain_Name_Objective">痛苦之魂</string>
     <string name="Sprout_Info">唤醒休眠的种子。\n然而，地面上应该有一些绿色植物，才能让这个咒语成功。</string>
@@ -2992,6 +2994,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

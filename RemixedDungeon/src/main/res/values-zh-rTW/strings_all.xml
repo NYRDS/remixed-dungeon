@@ -1108,6 +1108,7 @@
     <string name="Item_Name">鐵匠</string>
     <string name="Item_PackFull">您的背包滿了，沒法裝下%s</string>
     <string name="JarOfSouls_Desc">這個舊罐子上描繪的頭骨裏的眼睛正在閃閃發亮，以及它散發出的奇怪能量，讓你感到不安。</string>
+    <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name">魂之靈龕</string>
     <string name="JarOfSouls_Name_Objective">魂之靈龕</string>
     <string name="Javelin_Gender">neuter</string>
@@ -1479,6 +1480,7 @@
 </string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">呸！你信嗎？那些白癡還沒意識到這該死的下水道有多危險！像警衛和冒險家可以保護城市免除疾病嗎！沒有武器可以阻止疾病蔓延。但我需要證據，你能幫助我嗎？給我拿%d只老鼠皮，這樣我就可以做一些額外的測試了。
 </string>
+    <string name="PlagueDoctorQuest_1_1_Epilogue">啊，你回來了！_五隻死老鼠_，完美！牠們的皮毛對我的研究至關重要。如約，為了你的英勇努力，我用牠們的皮毛為你製作了這件盔甲。它浸透了瘟疫的痕跡，但別擔心！它是受控制的，它能保護你！現在去吧！保護城市！</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">啊——嚏！！！\n可惡的可憎瘟疫！它像野火一樣在城市中蔓延，在毫無戒備的民眾骨頭裡潰爛！呸！你認為那些可悲的守衛有機會對抗這種陰險的災禍嗎？你，那邊那個！強壯、健康的樣本。也許你能幫我。那些骯髒的下水道_老鼠_……我告訴你，它們攜帶瘟疫，它們腐爛的小身體裡有瘟疫的種子！給我帶_五_隻那些可惡的生物來，當然是_死的_！它們的皮對我的研究將是無價之寶。我會為你製作一件奇妙的盔甲，一個抵禦瘟疫本身的保護屏障！</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">啊哈……太壯觀了！_蝸牛_，它們的祕密像月光下的花瓣般緩緩綻放。真是豐富的資訊寶庫！但你是對的，_五十枚金幣_ 實在算不上相稱的報酬。*狂熱地輕笑*</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">「十隻蝸牛」，十聲來自深淵的低語！它們的黏液將被分析，它們的本質將被審視。它們所擁有的祕密已觸手可及。</string>
@@ -2932,6 +2934,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

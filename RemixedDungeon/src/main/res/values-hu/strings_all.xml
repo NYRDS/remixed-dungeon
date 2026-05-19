@@ -616,6 +616,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="DieHardSpell_Name">Kemény halál</string>
     <string name="Displacement_Txt">Áthelyező %s</string>
     <string name="DoctorArmor_Name">Doktor Ruházat</string>
+    <string name="DoctorSpecial">Miasma felhő</string>
     <string name="DogeMask_Info">Akartál már valaha a híres Doge-ként öltözni? Most itt van rá a lehetőséged!
 Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="DogeMask_Name">Dózse álarc</string>
@@ -1116,6 +1117,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="KoboldIcemancer_Name">kobold fagybűvölő</string>
     <string name="KoboldIcemancer_Name_Objective">kobold fagybűvölő</string>
     <string name="Kobold_Desc">Úgy hitték, hogy a Koboldok csak legendákban léteznek. Az átlagos gnollok ősei a koboldok, akik a legmélyebb, hideg barlangokban lakoztak. Azt is beszélték, hogy ez a faj mesteri mérnök és masinagyártó volt már jóval a törpök előtt.</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="KrampusHead_Info">Valaha gondolkodtál már azon, milyen érzés lenne egy gonoszabb szerepet vállalni a Kazamatákban? Nos, ezzel az ördögi megjelenéssel egészen biztosan rémületet keltesz a helyi patkánykölykökben.</string>
@@ -2850,6 +2852,9 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
 
 
 
