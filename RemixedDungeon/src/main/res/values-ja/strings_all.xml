@@ -2093,6 +2093,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="SpiderMindAmber_Name">アンバースパイダー</string>
     <string name="SpiderMindAmber_Name_Objective">アンバースパイダー</string>
     <string name="SpiderMind_Desc">この一見か弱そうなクモは、コロニー全体をコントロールできるユニークな精神力を持っている。サイキックスパイダーはあらゆる生き物を操ることができるが、かなりの臆病者である。</string>
+    <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">サイキックスパイダー</string>
     <string name="SpiderMind_Name_Objective">サイキックスパイダー</string>
     <string name="SpiderNest_Desc">この繭は薄い絹で出来ていて、なにか生きているものを隠している。</string>
@@ -3050,6 +3051,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

@@ -14,6 +14,7 @@
     <string name="AboutScene_OurSite">我們的網址：</string>
     <string name="AboutScene_Snd">發送郵件</string>
     <string name="AboutScene_Sound">音效：</string>
+    <string name="AboutScene_SourceCode">取得 Remixed Dungeon 原始碼：</string>
     <string name="AboutScene_Thanks">特別感謝：</string>
     <string name="AboutScene_Translation">本地化的功臣：</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901;丘比</string>
@@ -2953,6 +2954,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

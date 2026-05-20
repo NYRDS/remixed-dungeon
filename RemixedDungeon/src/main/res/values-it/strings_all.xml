@@ -15,6 +15,7 @@
     <string name="AboutScene_OurSite">Nostro sito web:</string>
     <string name="AboutScene_Snd">Spedisci e-mail</string>
     <string name="AboutScene_Sound">Suoni:</string>
+    <string name="AboutScene_SourceCode">Ottieni il codice sorgente di Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Ringraziamenti speciali:</string>
     <string name="AboutScene_Translation">Tradotto da:</string>
     <string name="Accuracy_DecreasedDoctor">Ogni oscillazione di questo %s diffonde imperfezione. Il mio Bisturi cura… questo infetta.</string>
@@ -110,6 +111,7 @@
     <string name="Badges_BossSlain1">La melma è stata sconfitta</string>
     <string name="Badges_BossSlain2">Tengu è stato ucciso</string>
     <string name="Badges_BossSlain3">DM-300 è stato ucciso</string>
+    <string name="Badges_BossSlain3All">DM-300 è stato sconfitto da tutti i sottoclassi</string>
     <string name="Badges_BossSlain4">Il Re è stato ucciso</string>
     <string name="Badges_Champion">Sfida vinta</string>
     <string name="Badges_DeathFalling">Morte a causa di una caduta</string>
@@ -1431,7 +1433,7 @@ Potrebbe bruciare?</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Portami _cinque ratti morti_! Ogni ratto che mi porti ci avvicina alla comprensione di questa orribile peste.</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">Achooo!\n Che maledizione questa dannata peste! Si sta diffondendo per la città come un incendio, infettando le ossa della popolazione ignara! BAH! Pensate che quelle patetiche guardie abbiano una sola possibilità contro questo micidiale morbo? Tu, là! Esemplare forte e sano. Forse puoi aiutarmi. Quegli sporchi _ratti_ delle fogne… li portano con sé, ve lo dico io, i semi della pestilenza nei loro corpi putridi! Portatemi _cinque_ di quelle creature miserabili, _morti_, ovviamente! Le loro pelli saranno preziosissime per la mia ricerca. Farò per voi una meravigliosa armatura, una barriera protettiva contro la stessa peste da cui proviene!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh... magnifico! Le _lumache_, i loro segreti si svelano lentamente come petali nella luce lunare. Davvero un tesoro di informazioni! Ma hai ragione, _cinquanta monete d\'oro_ a malapena bastano come ricompensa. *Ride maniacalmente*.</string>
-    <string name="PlagueDoctorQuest_1_2_InProgress">_Dieci lumache_, dieci sussurri dall\'abisso! La loro bava sarà analizzata, la loro essenza scrutinata. I segreti che custodiscono sono a portata di mano.</string>
+    <string name="PlagueDoctorQuest_1_2_InProgress">Dieci lumache, dieci sussurri dall\'abisso! La loro melma sarà analizzata, la loro essenza esaminata. I segreti che custodiscono sono alla portata di mano.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Tosse violentemente* Achoo!\n _Le lumache_… strisciano. Secernono. E sussurrano segreti di un\'epoca dimenticata. Ne ho bisogno, _dieci_ di loro, i loro gusci ancora intatti. Pensate che _cinquanta monete d\'oro_ bastino per conoscenze così preziose?\n Bah! Non importa. Le informazioni che custodiscono potrebbero essere la chiave per fermare questa peste. O… potrebbero condurci a qualcosa di ancora peggiore. Decidi tu.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_La Grazia Lunare_… una testimonianza della magia che permea questo mondo. Ho imparato molto dalla sua essenza, ma la tua ricompensa… beh, è stata preparata con la massima cura. *Consegna all\'eroe una scintillante _Pozione di Mana_* Che il suo potere ti guidi attraverso i pericoli futuri.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Cerca la _Grazia Lunare_, dove l\'oscurità incontra il più fioco bagliore della luce lunare. _Due semi_, la loro essenza, rivelerà segreti nascosti.</string>
@@ -2279,7 +2281,7 @@ Potrebbe bruciare?</string>
     <string name="Weightstone_WndSpeed">Per la velocità</string>
     <string name="Welcome_Ok">Vabbene!</string>
     <string name="Welcome_Text_30_1">remix.30.1\n- Gameplay:\n-- Gnoll Alt Sınıfları!\n-- Salyangozlar!\n-- Kaos Eşyaları ilerlemesi azaltıldı.\n-- Mana İksiri artık sıradan bir iksirdir.\n-- Rozetler artık DLC\'leri oynarken elde edilebilir (ancak modlar değil).\n- Düzeltilen hatalar\n</string>
-    <string name="Welcome_Text_31_0">\n    remix.31.0\n\n    - Gioco:\n\n    -- Modalità isometrica opzionale!\n\n    - Modding:\n\n    -- Oggetti livello modificabili\n\n    - Bug risolti\n\n    </string>
+    <string name="Welcome_Text_31_0">remix.31.0\n- Gameplay:\n-- Modalità Isometrica Opzionale!\n- Modding:\n-- Oggetti modificabili nei livelli\n- Bug fixati</string>
     <string name="Welcome_Text_31_1">
     remix.31.1\n
     - Gioco:\n
@@ -2326,11 +2328,12 @@ Potrebbe bruciare?</string>
     <string name="WndCryptoDonate_copyAddress">Copia Indirizzo</string>
     <string name="WndCryptoDonate_currency">Valuta</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
-    <string name="WndCryptoDonate_openWallet">Apri Portafoglio</string>
+    <string name="WndCryptoDonate_openWallet">Apri il portafoglio</string>
     <string name="WndCryptoDonate_supportDev">Supporta lo sviluppatore</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Indirizzo Portafoglio</string>
+    <string name="WndCryptoDonate_warningText">ATTENZIONE: Verifica sempre l\'indirizzo prima di inviare fondi. Le transazioni in criptovaluta sono irreversibili!</string>
     <string name="WndCustomizations_Title">Personalizzazioni</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - gratuito per tutti e lo sarà per sempre.\n\nTuttavia, puoi aiutarci a rendere il gioco ancora migliore.\n\nOltre ai nostri sentiti ringraziamenti, riceverai alcuni miglioramenti estetici.</string>
     <string name="WndDonate_donate">dona:</string>
@@ -2423,6 +2426,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndLibrary_Items_Btn">Items</string>
     <string name="WndLibrary_Levels_Btn">Dungeon</string>
     <string name="WndLibrary_Mobs_Btn">Mostri</string>
+    <string name="WndLocalModInstall_pick">Scegli</string>
     <string name="WndLocalModInstall_text">Seleziona la directory da cui installare la mod.</string>
     <string name="WndLocalModInstall_title">Installa mod dalla directory locale</string>
     <string name="WndModInstall_PleaseUpdate">Aggiorna Remixed Dungeon prima di installare questa mod</string>
@@ -2746,6 +2750,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_potions_desc">Qualche pozione sullo scaffale.</string>
     <string name="town_deco_potions_name">Pozioni</string>
     <string name="town_deco_projector_desc">Un vecchio dispositivo per proiettare film e intrattenere le persone.</string>
+    <string name="town_deco_red_carpet_desc">Si dice che tappeti rossi simili adornino i corridoi della metropoli dei nani.</string>
     <string name="town_deco_red_carpet_name">Tappeto</string>
     <string name="town_deco_roof_desc">Una semplice tegola del tetto</string>
     <string name="town_deco_roof_name">Tetto</string>
@@ -2835,8 +2840,23 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_desc">Un bel tavolo di legno</string>
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
+    <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

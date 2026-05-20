@@ -1249,6 +1249,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="LibraryBook_Name">Buku perpustakaan</string>
     <string name="Lich_Desc">Necromancer telah menemui ajalnya di kedalaman necropolis, dan secara bertahap, kekuatan jahat yang mengalir ke tubuhnya mengubahnya menjadi Lich. Seorang penyihir kematian, boneka tanpa kehendak, dikendalikan oleh kekuatan jahat ...</string>
     <string name="Lich_DieInfo">Saya tidak pernah menyukai Necromancer ini. Jadi, sekarang saatnya untuk kembali ke level 7 dan menemukan jalan lain menuju petualangan baru.</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Info">Cahaya memancar dari tubuh, menerangi segala sesuatu di sekitar.</string>
@@ -2435,10 +2436,11 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndCryptoDonate_currency">Mata Uang</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Anda dapat mendukung pengembangan Remixed Dungeon dengan mengirimkan donasi cryptocurrency ke alamat di bawah ini. Terima kasih atas dukungan Anda yang murah hati!</string>
-    <string name="WndCryptoDonate_openWallet">Buka Dompet</string>
+    <string name="WndCryptoDonate_openWallet">Dompet Aç</string>
     <string name="WndCryptoDonate_supportDev">Dukung Pengembang</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
+    <string name="WndCryptoDonate_warningText">PERINGATAN: Mengirim dana, pastikan alamatnya. Transaksi kripto tidak bisa dibatalkan!</string>
     <string name="WndCustomizations_Title">Penyesuaian </string>
     <string name="WndDonate_commonDonateText">Remix Dungeon - bebas untuk semua orang dan akan selalu di Namun, Anda dapat membantu kami melakukan permainan lebih baik \nSelain \nDari terima kasih yang tulus kami Anda akan mendapatkan beberapa perbaikan kosmetik...</string>
     <string name="WndDonate_donate">donasi:</string>
@@ -2531,6 +2533,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndLibrary_Items_Btn">Item</string>
     <string name="WndLibrary_Levels_Btn">Dungeon</string>
     <string name="WndLibrary_Mobs_Btn">raksasa</string>
+    <string name="WndLocalModInstall_pick">Pilih</string>
     <string name="WndLocalModInstall_text">Pilih direktori untuk menginstal mod dari sana.</string>
     <string name="WndLocalModInstall_title">Pasang mod dari direktori lokal</string>
     <string name="WndModInstall_InstallingMod">Menginstal mod</string>
@@ -2988,6 +2991,10 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 

@@ -113,6 +113,7 @@
     <string name="Badges_BossSlain1All">Goo telah dibunuh oleh semua kelas</string>
     <string name="Badges_BossSlain2">Tengu telah dibunuh</string>
     <string name="Badges_BossSlain3">DM-300 telah dibunuh</string>
+    <string name="Badges_BossSlain3All">DM-300 telah dibunuh oleh semua subkelas</string>
     <string name="Badges_BossSlain4">Raja telah dibunuh</string>
     <string name="Badges_Champion">Cabaran dimenangi</string>
     <string name="Badges_DeathFalling">Maut disebabkan terjatuh</string>
@@ -2343,7 +2344,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Alamat Dompet</string>
-    <string name="WndCryptoDonate_warningText">AMARAN: Sentiasa sahkan alamat sebelum menghantar dana. Transaksi mata wang kripto adalah tidak boleh diubah!</string>
+    <string name="WndCryptoDonate_warningText">PERINGATAN: Pastikan alamat sebelum menghantar dana. Transaksi kriptocurrency tidak boleh dikembalikan!</string>
     <string name="WndCustomizations_Title">Penyesuaian</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - percuma untuk semua orang dan berkekalan.\n\nWalaubagaimanapun, Anda boleh membantu kami menjadikan permainan ini lebih baik.\n\nSelain itu, atas kemurahan hati anda, anda akan dihadiahkan dengan beberapa penambahbaikan kosmetik.</string>
     <string name="WndDonate_donate">derma:</string>
@@ -2436,7 +2437,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndLibrary_Items_Btn">Item</string>
     <string name="WndLibrary_Levels_Btn">Kurungan Bawah Tanah</string>
     <string name="WndLibrary_Mobs_Btn">Raksaksa</string>
-    <string name="WndLocalModInstall_pick">Pilih direktori mod</string>
+    <string name="WndLocalModInstall_pick">Pilih</string>
     <string name="WndLocalModInstall_text">Pilih direktori untuk memasang mod.</string>
     <string name="WndLocalModInstall_title">Pasang mod daripada direktori tempatan</string>
     <string name="WndModInstall_InstallingMod">Memasang mod</string>
@@ -2879,6 +2880,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

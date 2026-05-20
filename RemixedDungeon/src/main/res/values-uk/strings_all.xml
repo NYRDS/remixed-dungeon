@@ -2395,6 +2395,7 @@
     <string name="Weightstone_WndChoice">Як ти бажаєш збалансувати предмет %s?</string>
     <string name="Weightstone_WndSpeed">На швидкість</string>
     <string name="Welcome_Ok">Добре!</string>
+    <string name="Welcome_Text_31_0">remix.31.0\n- Геймплей:\n-- Опціональний ізометричний режим!\n- Моддинг:\n-- Моддабельні об\'єкти рівнів\n- Виправлення помилок</string>
     <string name="Welcome_Text_31_1">
     remix.31.1\n
     - Геймплей:\n
@@ -2962,6 +2963,11 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
 
 
 

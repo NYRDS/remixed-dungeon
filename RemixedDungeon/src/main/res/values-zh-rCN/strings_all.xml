@@ -23,6 +23,7 @@
     <string name="Accuracy_DecreasedDoctor">这把%s的每次挥击都散播不完美。我的骨锯治愈……这个却感染。</string>
     <string name="Accuracy_DecreasedDoctorBareHands">赤手空拳会污染我的技术。没有锯子的干净切割，我的瞄准就会陷入混乱。</string>
     <string name="Acidic_Desc">这些巨大的节肢类恶魔生物会尽可能地避免近距离战斗，并且在远处射出能致残的锯齿尖刺。</string>
+    <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">酸蚀蝎子</string>
     <string name="Acidic_Name_Objective">酸蚀蝎子</string>
     <string name="Actions_Speed">行动速度等级</string>
@@ -653,6 +654,7 @@
     <string name="DieHardSpell_Info">会暂时增加你的回复速度，让你成为真正的死神。</string>
     <string name="DieHardSpell_Name">顽固</string>
     <string name="Displacement_Txt">位移%s</string>
+    <string name="DoctorArmor_Info">A testres hordozója segíthet a bántámás kisimításában, hogy az anyag gyógyuljon</string>
     <string name="DoctorArmor_Name">医生的服装</string>
     <string name="DoctorArmor_NotDoctor">Only plague doctors can use this armor!</string>
     <string name="DoctorSpecial">瘴氣雲</string>
@@ -918,6 +920,7 @@
     <string name="HealerNPC_Name_Objective">城镇牧师</string>
     <string name="Healing_Info">这道咒语对任何冒险家都是至关重要的。它将恢复施法者最大生命值的1/3。</string>
     <string name="Healing_Name">治疗术</string>
+    <string name="HealthArrow_Gender">masculine</string>
     <string name="HealthArrow_Info">这支箭的箭尖上沾有治疗药水。</string>
     <string name="HealthArrow_Name">治疗箭</string>
     <string name="HealthDart_Gender">masculine</string>
@@ -1105,6 +1108,7 @@
     <string name="IncendiaryDart_Info">每个飞镖上的尖刺是用来将飞镖固定在目标上的，而不稳定的化合物则被固定在飞镖的长刃尖上，燃烧成明亮的火焰。</string>
     <string name="IncendiaryDart_Name">引燃飞镖</string>
     <string name="InnKeeperNPC_Desc">旅店老板为自己感到骄傲。</string>
+    <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">旅店老板</string>
     <string name="InnKeeperNPC_Name_Objective">旅店老板</string>
     <string name="InnServant_Phrase_1">还有好多事要做呢！</string>
@@ -1440,6 +1444,7 @@
     <string name="NecromancerArmor_Name">骨甲</string>
     <string name="NecromancerArmor_NotNecromancer">只有死灵法师能使用这件护甲！</string>
     <string name="NecromancerNPC_Desc">这位中年男人看起来有点恼怒和激动。他穿着用骨片制成的混合甲。</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">啊！令人惊奇！一位活着的冒险者。太美妙了！哦……抱歉，有时候我太兴奋了。你看，我是一位死灵法师。研究死亡和死亡本身是我生活的一部分，但我已经对看到同样的事情一遍又一遍地发生而无聊了，这是我在这里的原因之一。而更重要的是，根据我的计算，这里会发生一件大事。一座古老城市_亡灵之城_的路口将在这里打开。而且……我说的这些实在是太浪费我的时间了。我必须为此准备，_ 晚点再来_。</string>
     <string name="NecromancerNPC_Intro2">啊哈！一个还没死的冒险者，棒极了！呃，请原谅，你看，本人是位死灵法师。研究死亡和死亡本身是我生活的一部分，但看到同样的事情一遍又一遍地发生实在是十分乏味，这是我在这里出现的原因之一。之前出现了一件惊人的事情，一座_亡灵之城_，死者们的古代城市，终于敞开了它的大门。事实上，我们正站在它的入口旁，还有……我告诉你这些干嘛，拿上这把钥匙先走。我是说，你喜欢冒险和金钱对吧？我会在你之后进去的，我还需要一点准备。</string>
     <string name="NecromancerNPC_Message1">就快了，就快了……</string>
@@ -1528,6 +1533,7 @@
     <string name="PlagueDoctorQuest_1_1_InProgress">给我带_五只死老鼠_来！你每给我带一只，我们就离理解这场可怕的瘟疫更近一步。</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">啊嚏！\n 诅咒这该死的可恶瘟疫！它像野火一样在城市中蔓延，在毫无戒心的百姓的骨头里溃烂！呸！你以为那些可悲的卫兵有机会对抗这种阴险的瘟疫吗？你，在那里！强壮、健康的样本。也许你能帮我。那些肮脏的下水道_老鼠_……它们携带着它，我告诉你，瘟疫的种子就在它们腐烂的小身体里！给我带_五_只那些可怜的生物来，当然是_死的_！它们的皮对我的研究将是非常宝贵的。我会为你制作一件奇妙的盔甲，一个抵御瘟疫本身的保护屏障！</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">啊……太棒了！那些_蜗牛_，它们的秘密如同月光下的花瓣般缓缓绽放。真是丰富的信息啊！但你说得对，_五十枚金币_确实算不上像样的报酬。*疯狂地轻笑*。</string>
+    <string name="PlagueDoctorQuest_1_2_InProgress">十只蜗牛，来自深渊的十声低语！它们的粘液将被分析，它们的本质将被仔细审视。它们所持有的秘密触手可及。</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Kuat batuk* Hapşoo!\n _Siput-siput_… mereka merayap. Mereka menetes. Dan mereka berbisik rahasia usia yang terlupakan. Aku butuh mereka, _sepuluh_ ekor, cangkangnya masih utuh. Apakah kamu pikir _lima puluh koin emas_ cukup untuk pengetahuan begitu berharga?\n Bah! Tidak apa-apa. Informasi yang mereka miliki bisa menjadi kunci untuk menghentikan wabah ini. Atau… bisa juga membawa kita pada sesuatu yang lebih mengerikan. Kamu yang tentukan.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_月光草_……它是编织在这个世界中的魔法的见证。我从它们的本质中学到了很多，但你的奖励……嗯，它已经被极其精心地准备好了。*递给英雄一瓶闪烁的_法力药水_* 愿它的力量指引你度过前方的危险。</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">寻找 _月光草_，那里黑暗与微弱的月光交相辉映。_两颗种子_，其精华，将揭示隐藏的秘密。</string>
@@ -1958,6 +1964,7 @@
     <string name="ShadowLord_Name">暗影领主</string>
     <string name="ShadowLord_Name_Objective">暗影领主</string>
     <string name="Shadow_Desc">阴影通常默默徘徊在古代监狱的遗迹中，只是偶尔会出现在冒险者眼前，而通常这将会是这位冒险者的最后一次冒险。</string>
+    <string name="Shadow_Gender">masculine</string>
     <string name="Shadow_Name">阴影</string>
     <string name="Shadow_Name_Objective">阴影</string>
     <string name="ShadowsBuff_Info">暗影中，你的目光暂时被黑暗遮住。</string>
@@ -2170,6 +2177,7 @@
     <string name="Sungrass_Name">阳春草</string>
     <string name="SurfaceScene_GameOver">游戏结束，人生苦短，及时行乐</string>
     <string name="SuspiciousRat_Desc">老鼠在地牢中并不少见，可是居住在如此深的地方……当它移动时，你能清楚看到它整个身体是如何颤动的。</string>
+    <string name="SuspiciousRat_Gender">masculine</string>
     <string name="SuspiciousRat_Info1">可疑老鼠的正在猛烈地抽搐。</string>
     <string name="SuspiciousRat_Name">可疑的老鼠</string>
     <string name="SuspiciousRat_Name_Objective">可疑的老鼠</string>
@@ -2758,6 +2766,7 @@ remix.31.1\n
     <string name="ZombieMask_Info">你有没有想过让自己看上去像一名在试练中失败了的不死英雄？好吧，这是你的机会。</string>
     <string name="ZombieMask_Name">僵尸面具</string>
     <string name="Zombie_Desc">地牢是一个危险的地方，许多冒险者在这里遭遇了厄运。但他们当中，在亡灵之城结束生命是最不幸的，现在他们只能在由腐烂尸体构成的厅堂中游荡。</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">僵尸</string>
     <string name="Zombie_Name_Objective">僵尸</string>
     <string name="deco_candle_desc">大蜡烛</string>
@@ -3013,6 +3022,16 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

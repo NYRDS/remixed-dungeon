@@ -2486,6 +2486,7 @@ remix.30.1\n
     <string name="WndCryptoDonate_currency">Para birimi</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Remixed Dungeon\'ın geliştirilmesini, aşağıda belirtilen adreslere kripto para bağışları göndererek destekleyebilirsiniz. Câmilerinize teşekkür ederiz!</string>
+    <string name="WndCryptoDonate_openWallet">Cüzdanı Aç</string>
     <string name="WndCryptoDonate_supportDev">Geliştiriciyi Destekle</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
@@ -2584,6 +2585,7 @@ remix.30.1\n
     <string name="WndLibrary_Items_Btn">Eşyalar</string>
     <string name="WndLibrary_Levels_Btn">Zindan</string>
     <string name="WndLibrary_Mobs_Btn">Canavarlar</string>
+    <string name="WndLocalModInstall_pick">Seç</string>
     <string name="WndLocalModInstall_text">Modu yüklemek için dizin seçin.</string>
     <string name="WndLocalModInstall_title">Yerel dizinden mod yükle</string>
     <string name="WndModInstall_InstallingMod">Mod yükleniyor</string>
@@ -3041,6 +3043,10 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
+
 
 
 

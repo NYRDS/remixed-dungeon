@@ -2318,6 +2318,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Weightstone_WndSpeed">Gyorsaságra</string>
     <string name="Welcome_Ok">Oké!</string>
     <string name="Welcome_Text_30_1">    remix.30.1\n    - Gameplay:\n    -- Gnoll Subclasses!\n    -- Snails!\n    -- Chaos Items progression nerfed.\n    -- Mana Potion is regular potion from now.\n    -- Badges now obtainable when playing DLC\'s (but not mods).\n    - Bugs fixed\n    </string>
+    <string name="Welcome_Text_31_0">remix.31.0\n- Játékmenet:\n-- Opcionális izometrikus mód!\n- Modding:\n-- Módosítható szint objektumok\n- Hiba javítások</string>
     <string name="Welcome_Text_31_1">    remix.31.1\n
     - Játékmenet:\n
     -- Új testreszabások!\n
@@ -2876,6 +2877,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
