@@ -1945,6 +1945,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Snail_Desc">Moluska kecil ini telah membesar dengan memakan air kumbahan, tetapi ia masih sangat perlahan menjadikannya musuh yang mudah ditewaskan.</string>
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">siput</string>
+    <string name="SnipersMarkBuff_Info">Garis ini telah digunakan oleh penembak jitu.</string>
     <string name="SnipersMarkBuff_Name">Jejak Penembak</string>
     <string name="SociologistNPC_AlreadyTaken">Anda sudah pun menjawab tinjauan ini, datang lagi kemudian</string>
     <string name="SociologistNPC_Desc">Ahli sosiologi ini sedang mengumpul pendapat orang awam</string>
@@ -2653,7 +2654,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_armorstand_leather_desc">Zam Leitir yang boleh dipercayai akan menjadi pembelian yang bagus sebelum meneroka dalam penjara.</string>
     <string name="town_deco_armorstand_leather_name">Perisai kulit</string>
     <string name="town_deco_armorstand_plate_desc">Menurut pedagang, zirah plate berat ini pernah dimiliki oleh seorang ksatria hebat.</string>
+    <string name="town_deco_armorstand_plate_name">Darah armor berdiri</string>
     <string name="town_deco_armorstand_scale_desc">Plat bersalut emas perisai sisik ini kelihatan baru.</string>
+    <string name="town_deco_armorstand_scale_name">Darah mata</string>
     <string name="town_deco_banner_desc">Satu sepanduk yang elegan menonjolkan simbol kedai makan ini.</string>
     <string name="town_deco_banner_name">Sepanduk</string>
     <string name="town_deco_barrel_desc">Tong biasa, dan sudah lusuh.</string>
@@ -2674,6 +2677,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_broken_roof_name">Bumbung bocor</string>
     <string name="town_deco_broken_wall_desc">Kayu balak pada bahagian dinding ini telah reput dan tidak memberi manfaat lagi.</string>
     <string name="town_deco_broken_wall_name">Dinding rosak</string>
+    <string name="town_deco_brown_carpet_desc">Permaidana coklat kasar</string>
     <string name="town_deco_brown_carpet_name">Permaidani</string>
     <string name="town_deco_cabinet_desc">Sebuah almari besar dengan banyak pintu dan rak.</string>
     <string name="town_deco_cabinet_name">Almari</string>
@@ -2705,6 +2709,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_crate_bottles_name">Pak bir</string>
     <string name="town_deco_crate_desc">Sebuah peti kayu yang kukuh yang menyimpan rahsianya di dalam.</string>
     <string name="town_deco_crate_name">Kotak</string>
+    <string name="town_deco_crate_scrolls_desc">Peti dengan gulungan</string>
     <string name="town_deco_crate_scrolls_name">Peti dengan skrol</string>
     <string name="town_deco_cross_desc">Palang logam perak, simbol bagai agama tempatan - \&quot;Saksi Santa Penguasa Bawah Tanah\&quot;.</string>
     <string name="town_deco_cross_name">Palang</string>
@@ -2758,6 +2763,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_library_sign_name">Tanda pustaka</string>
     <string name="town_deco_locked_door_desc">Apa ada disebalik pintu tersebut?</string>
     <string name="town_deco_locked_door_name">Pintu berkunci</string>
+    <string name="town_deco_magenta_carpet_desc">Permaidana magenta yang mempesona</string>
     <string name="town_deco_magenta_carpet_name">Permaidani</string>
     <string name="town_deco_medicine_desc">Kelalang dan lain-lain bahan ubat yang disusun cermat di atas rak.</string>
     <string name="town_deco_medicine_name">Ubat</string>
@@ -2779,10 +2785,13 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_pole_name">Tiang</string>
     <string name="town_deco_porch_desc">Anjung yang diperbuat daripada kayu.</string>
     <string name="town_deco_porch_name">Anjung</string>
+    <string name="town_deco_poster_desc">Papan iklan yang sudah pudar</string>
+    <string name="town_deco_poster_name">Papan iklan</string>
     <string name="town_deco_potions_desc">Ada banyak posyen di atas para.</string>
     <string name="town_deco_potions_name">Posyen</string>
     <string name="town_deco_projector_desc">Sebuah peranti lama yang dapat memainkan filem dan menjadi hiburan orang ramai.</string>
     <string name="town_deco_projector_name">Projektor Filem</string>
+    <string name="town_deco_red_carpet_desc">Permaidana merah mewah</string>
     <string name="town_deco_red_carpet_name">Permaidani</string>
     <string name="town_deco_roof_desc">Bumbung jubin biasa.</string>
     <string name="town_deco_roof_name">Bumbung</string>
@@ -2822,6 +2831,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_sofa_name">Sofa empuk</string>
     <string name="town_deco_stakes_desc">Batu kayu runcing ini nampak menakutkan, tetapi tidak memberi apa-apa manfaat.</string>
     <string name="town_deco_stakes_name">Kayu Pancang</string>
+    <string name="town_deco_statue_blood_desc">Patung dengan genangan darah</string>
     <string name="town_deco_statue_blood_name">Patung malaikat</string>
     <string name="town_deco_statue_water_desc">Air batu seorang malaikat yang memegang mangkuk air.</string>
     <string name="town_deco_statue_water_name">Patung malaikat</string>
@@ -2848,6 +2858,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_urn_desc">Tanah liat, mungkin dengan abu seseorang.</string>
     <string name="town_deco_urn_name">Kendi</string>
     <string name="town_deco_vat_desc">Bekas batu ini dipenuhi dengan air suci.</string>
+    <string name="town_deco_vat_name">Tong</string>
     <string name="town_deco_wall_beam_desc">Ia dipasang untuk menyokong bangunan ini.</string>
     <string name="town_deco_wall_beam_name">Alang</string>
     <string name="town_deco_wall_brazier_desc">Wap yang keluar dari bara membara telah memenuhi bilik dengan aroma yang harum baunya.</string>
@@ -2882,6 +2893,17 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1479,6 +1479,7 @@
     <string name="Piranha_Name_Objective">巨型食人魚</string>
     <string name="PirateSet_Info">啊哈！你現在看起來像是個海盜…或者說只是個該死的旱鴨子！？我希望你不是，畢竟那東西是海盜的，我的意思是……啊哈！</string>
     <string name="PirateSet_Name">海盜帽</string>
+    <string name="PlagueDoctorMaskHood_Info">一個雕塑的黑木頭骨，空蕩蕩的眼窩散發著紫水晶寶石的幽光。每一次呼吸都經過了一個由管子和過濾器組成的迷宮，帶著強效草藥和香料的氣味，掩蓋了附著在你身上的腐敗。但這不僅僅是面具。一頂沉重的午夜絲絨兜帽，將你的臉和頭部籠罩在陰影中。帽子像烏鴉的翅膀一樣，沿著你的背脊流動，邊緣飾有骨白色的蕾絲花邊，形成了一種令人不寒而慄的美麗對比。面具和帽子共同創造了一個幽靈般的外貌，是對抗腐敗力量的不懈鬥爭的黑暗見證。</string>
     <string name="PlagueDoctorMaskHood_Name">帶兜帽的瘟疫醫生面具</string>
     <string name="PlagueDoctorMask_Info">這……這不僅僅是一副面具。它是……一道屏障。抵禦腐敗之力的護盾，正是瘟疫醫生不懈抗爭的力量。由最優質的烏木精心雕琢而成，刻有飢餓骷髏的面容。空洞的眼窩中鑲嵌著閃閃發光的紫水晶寶石，微微脈動著，如同即將熄滅的餘燼。你的每一次呼吸，每一句話語，都經過錯綜複雜的管道和過濾器網絡的過濾。一種由強效草藥和異國香料調製而成的混合物滲透到內部空氣中，掩蓋了如裹屍布般纏繞著你的死亡惡臭。</string>
     <string name="PlagueDoctorMask_Name">瘟疫醫生面具</string>
@@ -2956,6 +2957,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

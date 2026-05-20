@@ -2723,6 +2723,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_inn_bed_name">Letto</string>
     <string name="town_deco_ladder_desc">Una vecchia scala, dall\'aspetto inaffidabile.</string>
     <string name="town_deco_ladder_name">Scala</string>
+    <string name="town_deco_library_books_desc">Ancora meglio dei libri dal dungeon.</string>
     <string name="town_deco_library_books_name">Materiale di lettura</string>
     <string name="town_deco_library_sign_desc">Pare che ci sia una biblioteca in quell\'edificio</string>
     <string name="town_deco_library_sign_name">Insegna della Biblioteca</string>
@@ -2847,6 +2848,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

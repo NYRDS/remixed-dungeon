@@ -1562,6 +1562,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="PlagueDoctorQuest_AllDone">*Kuru, hırıltılı bir kahkaha atar.* \&quot;Senin başarıların, ölçülemez sırları açığa çıkardı! Kazanılan bilgi... içimde bir keşif senfonisi gibi atıyor. Ama bilgi,\&quot; diye ekler, sesi komplocu bir fısıltıya düşerek, \&quot;bilgi güçtür. Ve güç... ah... bu en sarhoş edici iksirdir.\&quot; Bir an boyunca sana dikkatle bakar, ametist gözleri ateşli bir yoğunlukla yanar. \&quot;Belki,\&quot; diye mırıldanır, \&quot;yollarımız tekrar kesişir. Çünkü hala çözülmesi gereken birçok... gizem... var.\&quot; </string>
     <string name="PlagueDoctor_Desc">Bu kambur kişinin tüm vücudu deri bir tulumun altında gizlidir. Ayrıca, ondan acı bir ilaç ve ... sarımsak kokusu geliyor?</string>
 
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">veba doktoru</string>
     <string name="PlagueDoctor_Name_Objective">veba doktoru</string>
     <string name="Plant_ACPlant">DİK</string>
@@ -3045,6 +3046,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

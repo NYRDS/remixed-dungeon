@@ -2891,6 +2891,7 @@
     <string name="town_deco_shieldboard_name">Щити</string>
     <string name="town_deco_shop_sign_desc">Скоріш за все тут знаходиться магазин.</string>
     <string name="town_deco_shop_sign_name">Вивіска</string>
+    <string name="town_deco_skullboard_desc">Цей череп ідеально передає момент несподіваного жаху.</string>
     <string name="town_deco_skullboard_name">Стійка для трофеїв</string>
     <string name="town_deco_skulls_desc">Відполіровані черепи, що належать істотам з підземелля.</string>
     <string name="town_deco_skulls_name">Черепа</string>
@@ -2965,6 +2966,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
