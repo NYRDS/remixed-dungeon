@@ -2200,6 +2200,7 @@
     <string name="TerrorBuff_Name">惊恐</string>
     <string name="Thief_Carries">\n\n%1$s携带着_%2$s_，明显是偷来的。</string>
     <string name="Thief_Desc">地牢的深处总是各式罪犯的藏身之地。不是所有人都能在漫长的岁月中保持清醒的神智，在很久以前，这些疯狂的小偷和强盗就已经忘记了自己是谁，为什么要偷东西。</string>
+    <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">疯狂小偷</string>
     <string name="Thief_Name_Objective">疯狂小偷</string>
     <string name="Thief_Stole">%1$s把%2$s从你身上偷走了！</string>
@@ -3012,6 +3013,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

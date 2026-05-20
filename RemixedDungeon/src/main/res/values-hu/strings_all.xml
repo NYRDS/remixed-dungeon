@@ -196,6 +196,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Bandit_Name">őrült bandita</string>
     <string name="Bandit_Name_Objective">őrült banditát</string>
     <string name="BardNPC_Gender">masculine</string>
+    <string name="BardNPC_Name">Bard</string>
     <string name="BardSong_1">Feleségemmel együtt teljesen egyedül élünk,\nEgy kis faházban, melyet sajátunknak hívtunk,\nŐ szerette a gint, én meg a rumot,\nMondom én nektek, volt rengeteg mulatnivalónk.</string>
     <string name="BarkskinBuff_Info">A testet kéreg borítja, amely blokkol bizonyos sebzést.</string>
     <string name="BarkskinBuff_Name">Kérges bőr</string>
@@ -1942,6 +1943,7 @@ egy másik helyre a szinten. </string>
     <string name="Skeleton_Killed">Belehaltál a szétrobbanó csontszilánkok okozta sérülésekbe...</string>
     <string name="Skeleton_Name">csontváz</string>
     <string name="Skeleton_Name_Objective">csontváz</string>
+    <string name="SleepBuff_Name">Alvás</string>
     <string name="SlowBuff_Info">A lassú érzet lassabbá teszi az embert a megszokottnál.</string>
     <string name="SlowBuff_Name">Lassítva</string>
     <string name="Slow_Name_0">Dermesztő %s</string>
@@ -2874,6 +2876,9 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
 
 
 

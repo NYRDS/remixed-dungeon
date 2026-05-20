@@ -2015,6 +2015,7 @@
     <string name="Spells_NotInOwnBody">當你的靈魂與身體分離時，你不能%s。</string>
     <string name="Spells_NotTooFast">%s 沒有準備好使用</string>
     <string name="Spells_SummonLimitReached">%1$s: 召喚上限提升 (最大值: %2$d)!</string>
+    <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">這種鎧甲是由一些老蜘蛛屍體和一些奇怪的布料組成的。令人驚訝的是，它裏面依然包含著蜘蛛的吐絲功能。只要它受到足夠的力量就能噴出網來。此外這蜘蛛腳一樣的鞋子能讓你在網上自由移動。</string>
     <string name="SpiderArmor_Name">蜘蛛護甲</string>
     <string name="SpiderCharm_Info">這個充滿異國情調的小飾品籠罩著神秘的光芒。誰知道，佩戴它的人會怎樣？</string>
@@ -2952,6 +2953,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

@@ -193,7 +193,7 @@
     <string name="Bandit_Name_Objective">perompak gila</string>
     <string name="BardNPC_Desc">Pujangga bandar sedang memainkan gambusnya.</string>
     <string name="BardNPC_Gender">masculine</string>
-    <string name="BardNPC_Name">biduan</string>
+    <string name="BardNPC_Name">Bard</string>
     <string name="BardNPC_Name_Objective">biduan</string>
     <string name="BardSong_1">My wife and I live all alone,\nIn a little log hut, we called our own\nShe loved gin, and I loved rum\nI tell you what we\'d lots of fun.</string>
     <string name="BarkskinBuff_Info">Badan dilindungi oleh kulit kayu yang menghalang sebahagian daripada kerosakan yang diterima.</string>
@@ -818,6 +818,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="GoldenKey_Info">Gigi kunci tampak kecil dan rumit. Mungkin ia boleh membuka peti berkunci?</string>
     <string name="GoldenKey_Name">kunci emas</string>
     <string name="GoldenStatue_Desc">Sukar dipercayai, patung yang indah dan mengagumkan ini bukan hanya hiasan, tetapi seekor makhluk jahat yang memperdaya penggembara. Sekali pandang anda percaya ia adalah _%s_ yang merupakan sebahagian dari lengannya.</string>
+    <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">patung emas</string>
     <string name="GoldenStatue_Name_Objective">patung emas</string>
     <string name="GoldenSword_Gender">masculine</string>
@@ -2878,6 +2879,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

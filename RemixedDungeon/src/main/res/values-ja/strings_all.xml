@@ -2190,6 +2190,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Swing_Name_0">野蛮な %s</string>
     <string name="Swing_Name_1">野蛮な %s</string>
     <string name="Swing_Name_2">野蛮な %s</string>
+    <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">カミソリのように鋭利な鋼鉄の刃が安心感を与える輝きを放っている</string>
     <string name="Sword_Name">ソード</string>
     <string name="Tamahawk_Gender">masculine</string>
@@ -3049,6 +3050,9 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
+
 
 
 

@@ -201,7 +201,7 @@
     <string name="Bandit_Name_Objective">bandido louco</string>
     <string name="BardNPC_Desc">O bardo da cidade está tocando seu alaúde.</string>
     <string name="BardNPC_Gender">masculine</string>
-    <string name="BardNPC_Name">bardo</string>
+    <string name="BardNPC_Name">Bardo</string>
     <string name="BardNPC_Name_Objective">bardo</string>
     <string name="BardSong_1">Minha esposa e eu moramos sozinhos,\nEm uma pequena cabana de madeira, nós chamávamos de nossa\nEla adorava gin, e eu adorava rum\nConto o que nos divertimos muito.</string>
     <string name="BarkskinBuff_Info">O corpo é coberto por casca que bloqueia alguns danos sofridos.</string>
@@ -766,6 +766,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="FilteredMask_Info">Uma máscara respiratória é um dispositivo feito para proteger o usuário de inalar atmosferas perigosas, incluindo fumaças, vapores, gases e outras coisas como poeira e microrganismos transportados pelo ar.
   \n\nEssa máscara no entanto só serve como decoração.</string>
     <string name="FilteredMask_Name">Máscara respiratória</string>
+    <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">Esta flecha parece normal, exceto pela luz vermelha quente emanando da ponta.</string>
     <string name="FireArrow_Name">flecha de fogo</string>
     <string name="FireElemental_Desc">Elementais do fogo errantes são conhecidas por convocar outras entidades. Eles são muito caóticos e são dificeis de serem controlados até pelo mais poderoso Demonologista.</string>
@@ -3006,6 +3007,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 

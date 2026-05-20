@@ -204,6 +204,7 @@
     <string name="Bandit_Name">божевільний злочинець</string>
     <string name="Bandit_Name_Objective">божевільного злочинця</string>
     <string name="BardNPC_Gender">masculine</string>
+    <string name="BardNPC_Name">Бард</string>
     <string name="BardSong_1">Ми з дружиною живемо зовсім одні,
 В маленькій хатинці, що звали своєю,
 Вона любила джин, а я любив ром,
@@ -1410,6 +1411,7 @@
     <string name="Monk_Name_Objective">дворфа-монаха</string>
     <string name="Moongrace_Desc">Ці рослини ростуть невеликими кількостями і є джерелом природної магії.</string>
     <string name="Moongrace_Name">Мунгрейс</string>
+    <string name="Movement_Speed">Швидкість руху</string>
     <string name="Multiplicity_Txt">%s помноження</string>
     <string name="Mushroom_Eat_Message">Цей гриб має дивний присмак!</string>
     <string name="MysteryMeat_Info">Скуштуй на свій острах!</string>
@@ -2960,6 +2962,9 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
 
 
 

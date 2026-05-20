@@ -188,7 +188,7 @@
     <string name="Bandit_Name">미친 강도</string>
     <string name="Bandit_Name_Objective">미친 강도</string>
     <string name="BardNPC_Gender">masculine</string>
-    <string name="BardNPC_Name">음유시인</string>
+    <string name="BardNPC_Name">바드</string>
     <string name="BardNPC_Name_Objective">bard</string>
     <string name="BardSong_1">아내와 나는 단둘이 살아요,\n우리가 가진 작은 오두막에서\n아내는 진을, 나는 럼을 좋아했지\n정말 재미있게 살았답니다</string>
     <string name="BarkskinBuff_Info">몸이 나무 껍질로 덮여 있어 일부 피해를 막아줍니다.</string>
@@ -405,6 +405,7 @@
     <string name="CharAction_Expel">추방</string>
     <string name="CharAction_Give">주다</string>
     <string name="CharAction_Hit">치다</string>
+    <string name="CharAction_Order">명령</string>
     <string name="CharAction_Push">push</string>
     <string name="CharAction_Scare">겁주기</string>
     <string name="CharAction_Steal">훔치다</string>
@@ -2903,6 +2904,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 
