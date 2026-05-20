@@ -696,6 +696,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="EncumbranceBuff_CharAct_3">Saya perlu meningkatkan kekuatan saya sebelum boleh menggunakan %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Saya kekurangan kekuatan untuk menggunakan %s secara sepenuhnya.</string>
     <string name="EncumbranceBuff_Info">Tiada kekuatan yang cukup untuk menggunakan %s secara efektif.</string>
+    <string name="EncumbranceBuff_Name">Bebanan</string>
     <string name="EnslavedSoul_Desc">Anda dapat melihat penjelmaan hantu ini. Kadangkala seakan-akan tengkorak, kemudian muncul wajah tetapi rupa sengsara dan terseksa.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name">roh hamba</string>
@@ -2052,6 +2053,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="StoneBloodBuff_Name">Darah batu</string>
     <string name="Str_lose">-1 ktn</string>
     <string name="StrongShield_desc">Perisai segi empat tepat ini disadur dengan lembaran gangsa dan dihiasi dengan kain berwarna. Ia jauh lebih berat, tetapi boleh menghalang lebih banyak kerosakan masuk.</string>
+    <string name="StrongShield_name">Perisai bertuah</string>
     <string name="Stylus_ACInscribe">TULIS</string>
     <string name="Stylus_Info">Kalam misteri ini diperbuat daripada batu hitam yang sangat keras. Dengan kalam ini anda boleh menulis glif atau rune, tetapi anda tidak berkuasa memilih apa yang akan dihasilkan, kalam tersebut yang menentukannya buat anda.</string>
     <string name="Stylus_Inscribed">anda menulis %1$s di atas %2$s anda</string>
@@ -2623,6 +2625,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="YogsTeeth_Name">gigi yog</string>
     <string name="YogsTeeth_Name_Objective">Gigi yog</string>
     <string name="ZombieGnoll_Desc">Jasad gnoll zombi yang terpiuh dan cacat tidak lagi menampakkan ciri-ciri manusia atau dubuk. Seolah-olah selonggok daging dan tulang membusuk yang hidup untuk membunuh dan makan.</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">Zombie-Gnoll telah hidup kembali!</string>
     <string name="ZombieGnoll_Name">gnoll-zombi</string>
     <string name="ZombieGnoll_Name_Objective">gnoll-zombi</string>
@@ -2875,6 +2878,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

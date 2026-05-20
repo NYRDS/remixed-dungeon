@@ -234,6 +234,7 @@
     <string name="Belongings_CantWearBoth">你不能同时装备%1$s和%2$s！</string>
     <string name="Belongings_Name">背包</string>
     <string name="BishopNPC_Desc">神圣大教堂主教、深渊领主——圣诞老人</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">主教</string>
     <string name="BishopNPC_Name_Objective">主教</string>
     <string name="Bishop_bye">我的孩子，我会为你祈祷。</string>
@@ -675,6 +676,7 @@
     <string name="Drink_ACDrink">饮用</string>
     <string name="Drink_Message">清爽的饮品！</string>
     <string name="DrunkardNPC_Desc">自然状态下的旅店常客。</string>
+    <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">醉汉</string>
     <string name="DrunkardNPC_Name_Objective">醉汉</string>
     <string name="Drunkard_Phrase_1">再上酒！</string>
@@ -2088,6 +2090,7 @@
     <string name="SpiderMind_Name">灵能催眠蜘蛛</string>
     <string name="SpiderMind_Name_Objective">灵能催眠蜘蛛</string>
     <string name="SpiderNest_Desc">这个茧是由最细的丝线织成的，其中藏着一些活着的东西。</string>
+    <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderNest_Name">蜘蛛茧</string>
     <string name="SpiderNest_Name_Objective">蜘蛛茧</string>
     <string name="SpiderQueenCarapace_Info">蜘蛛皇后的甲壳上一块碎片。内窥可见一条网腺，看上去尚有生命迹象。</string>
@@ -3009,6 +3012,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

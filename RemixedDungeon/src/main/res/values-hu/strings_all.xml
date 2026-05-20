@@ -20,6 +20,7 @@
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
     <string name="AboutScene_Txt_Intro">A NYRDS által készített Remixed Dungeon a Watabou eredeti, Pixel Dungeon nevű játéka alapján készült.</string>
     <string name="Accuracy_Decreased">Miért gondoltam, hogy használhatok egy %s? Rossz eszköz, rossz kezek!</string>
+    <string name="Accuracy_DecreasedDoctor">Minden mozgás ezzel a(z) %s-sel az imperfekció elterjedését hozza létre. A Csonth saw-csal gyógyítom… ez fertőz.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">A csupasz kezek megfertőzik a technikámat. A Fűrész tiszta vágása nélkül a célzásom káoszba fullad.</string>
     <string name="Acidic_Desc">Ez a hatalmas pókszerű démoni teremtmény mindenképpen kerüli a közelharcot, messziről bénító fogazott tüskéket lő.</string>
     <string name="Acidic_Gender">masculine</string>
@@ -371,6 +372,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="ChampionOfAirBuff_Name">Leghulló</string>
     <string name="ChampionOfEarthBuff_Info">A Föld Bajnoka a megtörhetetlen erőt testesíti meg, mivel ez a tulajdonság növeli a lény sebzésállóságát és maximális életerejét. Ez az átalakulás félelmetes ellenféllé teszi a veszélyes mélységekben, képes könnyedén kivédeni a támadásokat és rendíthetetlen elszántsággal kiállni a hosszan tartó csatákat.</string>
     <string name="ChampionOfEarthBuff_Name">A Föld Bajnoka</string>
+    <string name="ChampionOfFireBuff_Info">Infusa dalla furia delle fiamme, questa caratteristica amplifica la ferocia e il coraggio della creatura. Il Campione del Fuoco emerge come un terrifico avversario, scagliando attacchi devastanti che possono avvolgere i suoi nemici in fiamme ardenti, insufflando terrore in tutti coloro che osano opporsi ad esso.</string>
     <string name="ChampionOfFireBuff_Name">Tűz bajnoka</string>
     <string name="ChampionOfWaterBuff_Info">A Víz Bajnoka az óceánok megtörhetetlen erejét testesíti meg, növelve a lény ellenállóképességét és szívósságát. Ennek eredményeként rendíthetetlen ellenféllé válik, képes elviselni a támadások könyörtelen sorozatát, és rendíthetetlen őrzőként megállni a nehézségekkel szemben.</string>
     <string name="ChampionOfWaterBuff_Name">Víz bajnok</string>
@@ -2752,6 +2754,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_library_sign_name">Könyvtári tábla</string>
     <string name="town_deco_locked_door_desc">Mi a fene lehet az ajtó mögött?</string>
     <string name="town_deco_locked_door_name">Zárt ajtó</string>
+    <string name="town_deco_magenta_carpet_desc">A mágenta színű szőnyeg gondolatba szállítja az helyi bort.</string>
     <string name="town_deco_magenta_carpet_name">Szőnyeg</string>
     <string name="town_deco_medicine_desc">Ezeken a polcokon üvegek és más orvosi kellékek vannak óvatosan elrendezve.</string>
     <string name="town_deco_medicine_name">Gyógyszer</string>
@@ -2871,6 +2874,9 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
 
 
 

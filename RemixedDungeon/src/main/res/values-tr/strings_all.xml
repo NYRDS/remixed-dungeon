@@ -301,6 +301,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BlindnessBuff_Info">Tamamen kör, sadece etraftaki sesler duyulabilir.</string>
     <string name="BlindnessBuff_Name">Kör oldun</string>
     <string name="BloodTransfusion_Drained">Yaşam özü evcil hayvanınızdan size akıyor.</string>
+    <string name="BloodTransfusion_FullHP">Kanın zaten tam kapasitede.</string>
     <string name="BloodTransfusion_Info">Hedeften neredeyse tüm kanı emer ve kendini iyileştirirsin. Hayatta kalma ve fedakârlık için karanlık bir ritüel.</string>
     <string name="BloodTransfusion_Name">Blood Transfusion</string>
     <string name="BloodTransfusion_WontAgreed">Hedef, yaşam özünün çıkarılmasına direniyor.</string>
@@ -726,6 +727,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="ElfArmor_Desc">Bu elf örtüsü ile doğanın güçlerini ortaya çıkarabilirsin. Otlar küçük bir parıltıda katı bir taşın içinden büyüyebilir ve görüş açısındaki tüm düşmanları sabitler.</string>
     <string name="ElfArmor_Name">Elf örtüsü</string>
     <string name="ElfArmor_NotElf">Sadece elfler bu zırhı kullanabilir!</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Elf zanaatkarlığının muazzam bir örneği... Bariz bir şekilde, sıradan bir yaydan daha etkili ve isabetli. </string>
     <string name="ElvenBow_Name">elf yayı</string>
     <string name="ElvenDagger_Gender">masculine</string>
@@ -1551,6 +1553,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="PlagueDoctorQuest_4_1_Prologue">Hapşoo! Cüceler! Bu ısrarcı, yeraltı yaşayanları, elmas ve altına takıntılı. Ama aradığım _Cüce Kara Büyücüler_… onların çarpık büyüsü, yaşadıkları derinliklerden beslenen. Beş, beş taneye ihtiyacım var! Onların bedenleri, bir şeyi anlamak için anahtar tutuyor… yerin kendisi aracılığıyla mistik enerjilerin kanalize edilmesi hakkında. İnanıyorum ki bir sonraki adıma çok yakınım, ama onların сenslerini, çarpık büyülerini! *Güçlükle öksürüğe boğuyor, elbebeğinde karanlık bir leke yayılıyor*</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Muhteşem! Beş _Kobold Buzbüyücü_, onların buzlu özünü şimdi keşfetmek bana kaldı! Donmuş çöllerle olan bağları gerçekten büyüleyici. Suyu manipüle etme biçimleri... gerçekten dikkate değer. *Size parlak, canlı kızıl bir sıvıyla dolu küçük bir şişe uzatır* Bu, sizin cesur çabalarınız için: bir _Güç İksiri_! İçin ve on savaşçının gücünün damarlarınızda aktığını hissedin! Unutmayın, bilgi güçtür... ve güç, yaklaşan karanlığa karşı sahip olduğumuz tek silahtır. Şimdi... hadi bu buzlu ruhları parçalayalım ve ürpertici sırlarını ortaya çıkaralım!</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Beş ölmüş _Kobold Icemancer_ getirin! Donmuş bedenleri soğuk büyülerinin sırlarını açığa çıkarmanın anahtarıdır!</string>
+    <string name="PlagueDoctorQuest_4_2_Prologue">*A haláltól maradt ujjai ritmikusan a csapodárva buborékos tálban, a levegő sűrű szaga a ként és a bomlástól*\n_Zöld Lézsmányok_! Azok iszétsek, a barlangjaikban összezárkózva, az anyagukat megmentő jégmágia utolsó bányászaik. Egyedi energiát. Eszékenyítik a világ alját.*</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*İki _succubus_\'a bakar, mutlu bir gülümseme maskenin altında yayılır.* Mükemmel! Harika! Bu birçok… olanakları açacak! *Sana döner, sesi minnettarlıkla… ve bir şey daha ile yoğunlaşır.*  Çaban… unutulmaz. En derin minnettarlığımı borçluyum. *Gözleri _succubus_\'lar üzerinde bir an fazla kalır, sonra laboratuvarına çekilir, seduction\'un sırlarını açmak üzerine mırıldanır.</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Zihni konuşurken dağılıyor, sesi alçalarak neredeyse bir fısıltıya dönüşüyor.* Bana iki _sukkubu_... canlı getir. Onların... gücü... büyüleyici.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Balbuzie, la sua voce si spezza come un ramo fragile*.  A-ah, _succubi_! Due... sì, due, vive! È... ahem... per la mia ricerca! Vedi... i loro feromoni... è cruciale per comprendere il delicato equilibrio di... ah... *Si interrompe, la sua mano ossea che si allunga per correggere nervosamente la maschera, i suoi occhi che si posano su di te con un\'intensità febbrile.*La loro... essenza... è un rompicapo... un bellissimo, enigmatico rompicapo! *Tosse violentamente, cercando di riprendere compostezza.* Prometto, per avermi portato due di queste... creature... avrai la mia eterna gratitudine. Pensa a questo come a un... un beneficio per la conoscenza! Sì! Per la conoscenza!</string>
@@ -3036,6 +3039,9 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
 
 
 

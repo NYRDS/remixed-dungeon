@@ -108,6 +108,9 @@
     <string name="AzuterronNPC_Quest_Reminder">Допоможи мені, і я допоможу тобі.</string>
     <string name="AzuterronNPC_Quest_Start">Хм, чому... ох, ти можеш мене бачити, чи не так? Стало бути ти не один з \&quot;них\&quot;. Я так бачу ти теж не в захваті від цього засилля монстрів. Знаєш що, якби ти мені допоміг в одні справі, то я стався б тобі в нагоді. Десь тут причаївся _Підступний дух_. Вбий його, та принеси мені його _серце_. І звичайно ж, якщо забажаєш придбати щось з моїх припасів, звертайся.</string>
     <string name="Backstab_Aware">Жертва не повинна помічати вас для успішного удару в спину.</string>
+    <string name="Backstab_Info">Mutanė zbliznu. Bezčestný, ale extrémne účinný, poškodenie zblíznu vzrastá so úrovňou vedomia vykonávateľa.
+
+Úspešný úder zblíznu úplne ignoruje brnenie alebo špeciálne obranné schopnosti obete.</string>
     <string name="Backstab_Name">Удар у спину</string>
     <string name="Backstab_TooFar">Жертва заб_far too забFar для успішного удару.</string>
     <string name="BadgesScene_Title">Твої значки</string>
@@ -353,6 +356,7 @@
     <string name="Carcass_Devoured">Ти з\'їв труп %s!</string>
     <string name="Carcass_DissectFailed">Ти розсікаєш %s, але не знаходиш нічого цінного.</string>
     <string name="Carcass_DissectMessage">Ви розчленували труп і отримали %s.</string>
+    <string name="Carcass_DissectResult">A %1-ből %2 aratót kapsz: %3.</string>
     <string name="Carcass_Info">рештки повністю мертвого %s.</string>
     <string name="Carcass_Kick">Ця істота, %s, совершенно мертва, немає сенсу бити її далі.</string>
     <string name="Carcass_Name">решки %s</string>
@@ -2735,6 +2739,7 @@
     <string name="town_deco_armorstand_leather_name">Шкіряна броня</string>
     <string name="town_deco_armorstand_plate_desc">За словами крамоля, ця важка латунь раніше належала великому воїну.</string>
     <string name="town_deco_armorstand_plate_name">Латний обладунок</string>
+    <string name="town_deco_armorstand_scale_desc">Gioielli dorati di questa corazza a squame sembrano appena nuove.</string>
     <string name="town_deco_armorstand_scale_name">Луската обладунок</string>
     <string name="town_deco_banner_desc">Елегантний банер, що зображує символи цієї таверни.</string>
     <string name="town_deco_banner_name">Прапор</string>
@@ -2955,6 +2960,9 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
 
 
 

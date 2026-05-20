@@ -1922,6 +1922,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ShortSword_NotBoomerang">이 방법으로 부메랑을 업그레이드 할 수 없습니다.</string>
     <string name="ShortSword_Reforged">다시 제련해서 당신의 %s 를 숏소드로 업그레이드 합니다.</string>
     <string name="ShortSword_Select">업그레이드할 무기를 고르세요</string>
+    <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">목표에 명중 할 때 높은 확률로 별모양 금속과 날카로운 칼날이 상당한피해를 입힌다.</string>
     <string name="Shuriken_Name">수리검</string>
     <string name="SkeletonKey_Info">이 열쇠는 중요해 보입니다. 열쇠 머리 부분이 해골 모양입니다. 아마도 중요한 문을 열 수 있을 것 같습니다.</string>
@@ -2754,6 +2755,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_fireplace_desc">이렇게 추운 곳에서 몸을 데우기에 좋다.</string>
     <string name="town_deco_fireplace_name">벽난로</string>
     <string name="town_deco_firewood_desc">이렇게 심한 추위에서 필수적인 것.</string>
+    <string name="town_deco_firewood_name">Tűzifa</string>
     <string name="town_deco_floor_desc">간단판 나무판으로 이루어진 바닥입니다. 무엇을 찾으시나요?</string>
     <string name="town_deco_floor_name">바닥</string>
     <string name="town_deco_flowerinthepot_desc">달콤한 향이 나는 장식용 꽃</string>
@@ -2785,6 +2787,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_misc_name">쓰레기</string>
     <string name="town_deco_movies_door_desc">이 문은 특히 잘 만들어져 있습니다. 아마도 무언가 대단한 것과 이어져 있을 것 같습니다.</string>
     <string name="town_deco_movies_door_name">문</string>
+    <string name="town_deco_mud_desc">Terreno scongelandosi in questa zona di permafrost.</string>
     <string name="town_deco_mud_name">진흙</string>
     <string name="town_deco_painting_desc">미려한 그림 한 폭이다.</string>
     <string name="town_deco_painting_name">그림</string>
@@ -2900,6 +2903,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
 
 
 

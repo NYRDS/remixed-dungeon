@@ -739,6 +739,7 @@
     <string name="Facilitations_Descriptions_2">對大自然作為能量來源進行深入而徹底的研究，將使你在旅程中補充魔法儲備。</string>
     <string name="Facilitations_Descriptions_3">緊緊繫上由食人魔皮革製成、代代相傳的腰帶，你朝著前方的未知邁出一步。</string>
     <string name="Facilitations_Names_0">無飢餓</string>
+    <string name="Facilitations_Names_1">Corpo di troll</string>
     <string name="Facilitations_Names_2">精靈</string>
     <string name="Facilitations_Names_3">巨人力量</string>
     <string name="Fadeleaf_Desc">觸碰到消逝草的任何生物都會被傳送至當前層的一個隨機地點。</string>
@@ -1082,6 +1083,7 @@
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">旅店老闆</string>
     <string name="InnKeeperNPC_Name_Objective">旅館主人</string>
+    <string name="InnServant_Phrase_1">Ugh, masih banyak yang harus dilakukan!</string>
     <string name="InnServant_Phrase_2">這個醉漢讓我發瘋！</string>
     <string name="InnServant_Phrase_3">我看起來很乾淨</string>
     <string name="InnServant_Phrase_4">我的天，今天這麼多的客人</string>
@@ -1524,6 +1526,7 @@
     <string name="Plant_Seed">%s種子</string>
     <string name="PlateArmor_Desc">這件裝備是由巨大厚重的金屬板焊接而成，讓能夠承受板甲驚人重量的冒險者提供無與倫比的防護。</string>
     <string name="PlateArmor_Name">板甲</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">箭頭上的致命毒藥反射出光芒。</string>
     <string name="PoisonArrow_Name">毒箭</string>
     <string name="PoisonBuff_Name">劇毒</string>
@@ -2949,6 +2952,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

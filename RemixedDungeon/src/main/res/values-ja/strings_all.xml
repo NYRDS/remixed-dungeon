@@ -196,6 +196,7 @@
     <string name="Badges_Yog_Slain">ヨグ＝ゼーヴァを倒した</string>
     <string name="Bag_ACOpen">開ける</string>
     <string name="Bandit_Desc">ダンジョンの深い階層は、常にあらゆる犯罪者の隠れ場所だった。日の光から遠く離れている間、平静を保てる者ばかりではない。とっくの昔に、この狂った泥棒や盗賊たちは、自分たちが何者で、なぜ盗むのかを忘れてしまっている。この盗賊は短剣に何かを塗っているようだ！</string>
+    <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">狂った盗賊</string>
     <string name="Bandit_Name_Objective">狂った盗賊</string>
     <string name="BardNPC_Desc">街の吟遊詩人がリュートを演奏している。</string>
@@ -1370,6 +1371,7 @@
     <string name="MimicPie_Name">ミミック</string>
     <string name="MimicPie_Name_Objective">ミミック</string>
     <string name="Mimic_Desc">ミミックはどんな姿にもなれる魔法生物である。しかし冒険者が訪れるダンジョンでは、ほとんどの場合、宝箱の形を選ぶ。</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">ミミック</string>
     <string name="Mimic_Name_Objective">ミミック</string>
     <string name="MindVisionBuff_Info">内なる視覚は、床の上のすべての生き物の動きをはっきりと見ることを可能にする。</string>
@@ -1563,6 +1565,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Plant_Seed">%s の種</string>
     <string name="PlateArmor_Desc">巨大な金属板をつなぎ合わせた鎧は、その驚異的な重量に耐えられるだけの強さを持つ冒険者に、比類なき防御力を提供する。</string>
     <string name="PlateArmor_Name">プレートアーマー</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">この矢じりには猛毒の雫が光っている。</string>
     <string name="PoisonArrow_Name">毒の矢</string>
     <string name="PoisonBuff_Info">身体は徐々に毒に侵されていく！</string>
@@ -3046,6 +3049,9 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
+
 
 
 

@@ -912,6 +912,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HealthDart_Info">A ponta desse dardo está coberta com poção de cura.</string>
     <string name="HealthDart_Name">Dardo de Cura</string>
     <string name="Heap_Mimic">Isto é uma imitação!</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Coração negro pulsante do Espírito Traçoeiro</string>
     <string name="HeartOfDarkness_Name">Coração da escuridão</string>
     <string name="Hedgehog_Desc">Aquele ouriço parece nervoso.</string>
@@ -1339,6 +1340,7 @@ Parede
     <string name="MeleeWeapon_Info7b">, mas por estar amaldiçoado, você não conseguirá soltar</string>
     <string name="MeleeWeapon_Info7c">Você pode sentir uma magia maléfica oculta na(o) %s.</string>
     <string name="MercenaryNPC_Desc">Homem de aparência robusta</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">mercenário</string>
     <string name="MercenaryNPC_Name_Objective">mercenário</string>
     <string name="Metabolism_Txt">%s de metabolismo</string>
@@ -1708,6 +1710,7 @@ Parede
     <string name="ResultDescriptions_Hunger">Passou fome até a morte no nível %d</string>
     <string name="ResultDescriptions_Immured">Emparedado em pedra no nível %d</string>
     <string name="ResultDescriptions_Mob">Morto por %1$s no nível %2$d</string>
+    <string name="ResultDescriptions_Necromancy">Esgotou a força vital tentando animar um cadáver no nível %d</string>
     <string name="ResultDescriptions_Necrotism">Morto Pelo Necrotismo No Level %d</string>
     <string name="ResultDescriptions_Ooze">Morreu com lodo tóxico no nível %d</string>
     <string name="ResultDescriptions_Poison">Morreu por envenenamento no nível %d</string>
@@ -3003,6 +3006,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 
