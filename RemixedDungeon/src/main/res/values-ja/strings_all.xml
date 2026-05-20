@@ -426,6 +426,7 @@
     <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">混沌の力を宿した杖！魔導士が夢見るもの、恐れるものが他にあるだろうか？</string>
     <string name="ChaosStaff_Name">混沌の杖</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">この剣の刃は純粋な混沌でできており、時折微かに振動する。この武器に秘められた偉大な力は、ほとんどのものを真っ二つにすることができるが、それを扱うには熟練の技が必要とされている。</string>
     <string name="ChaosSword_Name">混沌の剣</string>
     <string name="CharAction_Charm">魅了</string>
@@ -581,6 +582,7 @@
     <string name="CorpseExplosion_NoCorpse">その場所には死体がない。</string>
     <string name="Crab_Defense">受け流し</string>
     <string name="Crab_Desc">この巨大なカニは下水道の食物連鎖の頂点にいる。彼らは非常に速く、その分厚い外骨格は激しい打撃にも耐えることができる。</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">下水カニ</string>
     <string name="Crab_Name_Objective">下水カニ</string>
     <string name="CrippleBuff_Info">体は不自由になっても、戦いは続く。</string>
@@ -664,6 +666,7 @@
     <string name="DonateButton_pleaseDonate">寄付をご検討ください</string>
     <string name="DonateButton_thanks">ご協力ありがとうございました！</string>
     <string name="DreadKnight_Desc">恐怖の騎士は、生前は善も正義も知らなかった古代の戦士である。その罪のために、彼はこの壊れた死体の中で永遠にさまよう運命にある。苦悩に満ちた存在の一瞬一瞬は、彼が犠牲者に与えたのと同じような痛みと苦しみに満ちている。</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">ドレッドナイト</string>
     <string name="DreadKnight_Name_Objective">ドレッドナイト</string>
     <string name="Dreamweed_Desc">ドリームウィードに触れると、混乱させるガスのきらめく雲を分泌する。</string>
@@ -1501,6 +1504,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Pasty_Info">伝統的なビーフとポテトのフィリングが入った本格的なコーニッシュパスティ。</string>
     <string name="Pasty_Name">パスティ</string>
     <string name="Pickaxe_ACMine">掘る</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">岩を砕くための大きくて頑丈な道具。武器としても使えないことはないだろう。</string>
     <string name="Pickaxe_InsufficientStr">力が足りない！</string>
     <string name="Pickaxe_Name">つるはし</string>
@@ -2584,6 +2588,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="WndInstallingMod_deleting_file">削除中 %s</string>
     <string name="WndInstallingMod_please_wait">Installing mod, please wait...</string>
     <string name="WndInstallingMod_skipping_file">Skipping %s</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">レシピを実行</string>
     <string name="WndItemAlchemy_NoRecipes">このアイテムと現在のインベントリでは利用可能なレシピはありません。</string>
     <string name="WndItemAlchemy_SelectRecipe">レシピを選択</string>
     <string name="WndItemAlchemy_Title">%s の錬金術レシピ</string>
@@ -3055,6 +3060,11 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
+
+
+
 
 
 

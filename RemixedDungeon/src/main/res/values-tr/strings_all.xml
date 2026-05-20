@@ -667,6 +667,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="DonateButton_pleaseDonate">lütfen bağış yapmayı düşünün</string>
     <string name="DonateButton_thanks">Desteğiniz için teşekkürler!</string>
     <string name="DreadKnight_Desc">Dehşet şovalyesi , hayatına güzel ve doğru bir şey girmemiş antik bir savaşçıdır.Günahlarından dolayı bu şekilsiz vücutta sonsuza kadar yaşamak ile lanetlenmiş.Yaşadığı her an kurbanlarına verdiği acı ve çileyi hissediyor.</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">dehşet şovalyesi</string>
     <string name="DreadKnight_Name_Objective">dehşet şovalyesi</string>
     <string name="Dreamweed_Desc">Bir Rüya otuna dokunulduğunda, ışıltılı ve kafa karıştırıcı bir gaz bulutu salgılar.</string>
@@ -2280,6 +2281,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="TownsfolkSilentNPC_Name_Objective">köylü</string>
     <string name="ToxicGas_Info">Burada yeşilimsi bir zehirli gaz bulutu dönüyor.</string>
     <string name="ToxicGas_Info1">Zehirli gazı soluyarak öldün.</string>
+    <string name="ToxicGland_Info">Yenilmiş bir düşmanın toplanmış zehirli bezesi. Bu bezeler güçlü zehirlerle doludur ve ciltim kurallarında kullanılabilir.</string>
     <string name="ToxicGland_Name">Zehirli Bez</string>
     <string name="TrapWnd_Step">Gerçekten de bu tuzağın üstüne basmak istiyor musun? Ölme ihtimalin var. </string>
     <string name="TrapWnd_Title">Tuzak</string>
@@ -3050,6 +3052,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

@@ -303,6 +303,7 @@
     <string name="BlindnessBuff_Name">Засліплений</string>
     <string name="BloodTransfusion_Drained">Життєва есенція перетікає від вашого улюбленця до вас.</string>
     <string name="BloodTransfusion_FullHP">Ваша кров вже повністю заповнена.</string>
+    <string name="BloodTransfusion_Name">Переливання Крові</string>
     <string name="BloodTransfusion_WontAgreed">Ціль чинить опір вилученню її життєвої сутності.</string>
     <string name="BodyArmorBuff_Info">Захист збільшено за рахунок швидкості пересування.</string>
     <string name="BodyArmorBuff_Name">Міць тіла</string>
@@ -1040,6 +1041,7 @@
     <string name="Horror_Name_0">Жахливе %s</string>
     <string name="Horror_Name_1">Жахливий %s</string>
     <string name="Horror_Name_2">Жахлива %s</string>
+    <string name="HungerBuff_Info2">Ви голодуєте! Вам потрібно їсти!</string>
     <string name="HungerBuff_Name1">Голодний</string>
     <string name="HungerBuff_Name2">Виснажений</string>
     <string name="Hunger_Death">Ти помер від виснаження...</string>
@@ -1502,6 +1504,7 @@
     <string name="PirateSet_Name">Піратський набір</string>
     <string name="PlagueDoctorMaskHood_Info">Скована з ебонового дерева маска у формі черепа, порожнечі якої сяють неземним мерехтінням аметистових самоцвітів. Кожен вдих пронизує лабіринт трубок і фільтрів, несе аромат могутніх трав та спецій, що приховують гниль, яка до вас прилипла. Але це не просто маска. Густий капюшон з північного оксамиту ховає обличчя і голову в тіні. Капюшон, наче крило ворона, спливає до спини, його краї прикрашені бахромою з кістяного мережива, жахливо-красивий контраст. Разом маска і капюшон створюють примарний вигляд, сумний твір безкінечної боротьби з силами руйнування.</string>
     <string name="PlagueDoctorMaskHood_Name">Маска Чумного Доктора з капюшоном</string>
+    <string name="PlagueDoctorMask_Info">Це… це не просто маска. Це… бар\'єр. Щит проти сил розпаду, з якими Лікар Чуми невтомно бореться. Виготовлена з найкращого ебенового дерева, інtricately вирізана з обличчям голодного черепа. Порожні очні	socketи заповнені блискучими аметистовими каменями, що пульсують, як загаслі вугли вогню. Кожен вдох, кожне слово, що ви вимовляєте, проходить через лабіринт труб і фільтрів. Конкоція потужних трав і екзотичних спецій наповнює повітря, маскуючи смердюче сморід, що липне до вас, як саван.</string>
     <string name="PlagueDoctorNPC_After_Quest">Я їм покажу, я покажу усім їм!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Ви все ще тут? Ось! Візьміть це</string>
     <string name="PlagueDoctorNPC_Desc">Цей горбатий чоловік повністю вкритий шкірою. Від нього тхне гострий запах ліків і... часнику?</string>
@@ -2437,6 +2440,7 @@
     <string name="WndCryptoDonate_openWallet">Відкрити гаманець</string>
     <string name="WndCryptoDonate_supportDev">Підтримати розробника</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Адреса гаманця</string>
     <string name="WndCryptoDonate_warningText">УВАГА: Завжди перевіряйте адресу перед відправленням коштів. Криптовалюта_transactions є необоротними!</string>
     <string name="WndCustomizations_Title">Кастомізації</string>
@@ -2534,6 +2538,7 @@
     <string name="WndLocalModInstall_pick">Pick mod directory</string>
     <string name="WndLocalModInstall_text">Виберіть директорію, з якої встановити мод</string>
     <string name="WndModInstall_InstallingMod">Встановлення мода</string>
+    <string name="WndModInstall_Version">версія</string>
     <string name="WndModSelect_AreYouSure">Видалити мод: %s, впевнені?</string>
     <string name="WndModSelect_ReallyDelete">Точно видалити?</string>
     <string name="WndModsDisclaimer_install">Встановити локальний мод.</string>
@@ -2976,6 +2981,11 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
 
 
 

@@ -382,6 +382,7 @@
     <string name="ChampionOfFireBuff_Info">注入烈焰之怒，這個特性提升了生物的兇猛和戰鬥能力。火焰勇士化身為可怕的對手，釋放毀滅性的攻擊，將敵人陷入灼熱的火焰之中，使所有敢於反抗的存在感到恐懼。</string>
     <string name="ChampionOfFireBuff_Name">火之冠軍</string>
     <string name="ChampionOfWaterBuff_Info">水之冠軍體現了海洋的不可戰勝之力，增強了生物的韌性和耐力。因此，它成為了一個堅定的對手，能夠經受住無情的攻擊轟炸，在逆境中成為不屈的守護者。</string>
+    <string name="ChampionOfWaterBuff_Name">水之冠軍</string>
     <string name="ChaosArmor_Info">這件盔甲的血紅色金屬板被暗紅的鐵鏈縫接在一起，當你觸碰它時會迸發出混沌能量。</string>
     <string name="ChaosArmor_Name">混沌護甲</string>
     <string name="ChaosBow_Gender">masculine</string>
@@ -1172,6 +1173,7 @@
     <string name="KrampusHead_Name">克朗普斯頭顱</string>
     <string name="KunaiThrow_Info">這種致命的苦無投擲會極其迅速地完成，快到你甚至無法選擇目標。\n\n真正的大師能夠一次投擲多把苦無。</string>
     <string name="KunaiThrow_Name">投擲苦無</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">這件武器由鐮刀，鐵球，鎖鏈三部分所構成，鐵球和鐮刀分別在鎖鏈的兩端。</string>
     <string name="Kusarigama_Name">錘鎖鎌</string>
     <string name="Kusarigama_Pull">拉扯</string>
@@ -1941,6 +1943,7 @@
     <string name="Shaman_Killed">%s的閃電殺死了你……</string>
     <string name="Shaman_Name">豺狼薩滿</string>
     <string name="Shaman_Name_Objective">豺狼薩滿</string>
+    <string name="Shaman_ZapMiss">*用哥布林語罵髒話*</string>
     <string name="Sheep_Desc">這是一隻魔法綿羊。為什麼叫魔法綿羊？因為你沒法殺死它。它只會站在那裡直到魔法失效，在它消失前，它只會站在這咀嚼反芻物，神情空洞。</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">魔法綿羊</string>
@@ -2064,6 +2067,7 @@
     <string name="SpiderQueenCarapace_Info">蜘蛛皇後的甲殼上一塊碎片。內窺可見一條網腺，看上去尚有生命跡象。</string>
     <string name="SpiderQueenCarapace_Name">蜘蛛皇後的甲殼</string>
     <string name="SpiderQueen_Desc">由美麗的女性和可怖的蜘蛛交織而成的身體。在巢穴中所有活著的存在都是她的侍從，與這位特別的女士的邂逅也許會讓你喪命，因為你是這裏的入侵者！</string>
+    <string name="SpiderQueen_DieInfo">蜘蛛女王被擊敗了！現在我應該回到第5層並繼續我的深淵之旅。</string>
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">蜘蛛女王</string>
     <string name="SpiderQueen_Name_Objective">蜘蛛女王</string>
@@ -2666,6 +2670,7 @@
     <string name="Wnd_Button_Cancel">取消</string>
     <string name="Wnd_Button_Close">關閉</string>
     <string name="Wnd_Button_No">拒絕</string>
+    <string name="Wnd_Button_Ok">確定</string>
     <string name="Wnd_Button_Yes">同意</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">如果您找到一些箭矢的話，這把簡單的木製弓也許會派上用場。</string>
@@ -2968,6 +2973,11 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
 
 
 

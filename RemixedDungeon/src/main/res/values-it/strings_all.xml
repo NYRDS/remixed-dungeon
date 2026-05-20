@@ -54,6 +54,7 @@
     <string name="Amulet_Name">Amuleto di Yendor </string>
     <string name="AnesthesiaBuff_Info">Non sente dolore e non si sveglia dagli attacchi, ma subisce comunque danni.</string>
     <string name="AnesthesiaBuff_Name">Anestesia</string>
+    <string name="Anesthesia_Info">Mély, természetes alvást idéz elő az áldozatodon. Még a legerősebb támadások sem ébresztik fel ebből az álomból.</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">Questo antico simbolo di immortalità garantisce una capacità di tornare in vita dopo la morte. Al momento della risurrezione tutti gli oggetti non equipaggiati andranno persi.</string>
     <string name="Ankh_Name">Ankh</string>
@@ -277,6 +278,8 @@
     <string name="BlessedBuff_Name">Benedetto</string>
     <string name="BlindnessBuff_Info">Completamente accecato, si possono solo sentire i suoni intorno.</string>
     <string name="BlindnessBuff_Name">Accecato </string>
+    <string name="BloodTransfusion_Info">Szívja a céljának szinte az összes vért maga számára, hogy gyógyuljon. Egy sötét szertartás, az áldozat és a megmaradás rituáléja.</string>
+    <string name="BloodTransfusion_Name">Trasfusione del Sangue</string>
     <string name="BloodTransfusion_WontAgreed">L\'obiettivo resiste all\'estrazione della sua essenza vitale.</string>
     <string name="BodyArmorBuff_Info">La corazza è aumentata a scapito della velocità di movimento.</string>
     <string name="BodyArmorBuff_Name">Armatura Corporea</string>
@@ -558,6 +561,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DM300_Info3">personale non autorizzato rilevato.</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">un semplice pugnale di ferro con un manico di legno ben messo</string>
     <string name="Dagger_Name">pugnale</string>
     <string name="DarkGold_Info">Questo metallo è chiamato oscuro non per il suo colore (non differisce dal normale oro), ma poichè si scioglie alla luce del sole, rendendolo inutile in superficie.</string>
@@ -1599,6 +1603,7 @@ Potrebbe bruciare?</string>
     <string name="RankingsScene_NoInfo">Nessuna informazione aggiuntiva</string>
     <string name="RankingsScene_Title">Migliori Classificati</string>
     <string name="RankingsScene_Total">Partite totali giocate:</string>
+    <string name="RatArmor_Name">armatura da topo</string>
     <string name="RatHide_Info">Un piccolo e sporco pezzo di carne e pelo. Questi possono essere davvero utili a qualcuno?</string>
     <string name="RatKingCrownBuff_Info">Saluta il Signore dei topi, ogni topo deve obbedire e lodare la grande Rattosità!</string>
     <string name="RatKingCrownBuff_Name">Rattosità</string>
@@ -2529,6 +2534,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndSettings_Immersive">Modalità coinvolgente</string>
     <string name="WndSettings_InGameUiSettings">Impostazioni Interfaccia</string>
     <string name="WndSettings_Music">Musica</string>
+    <string name="WndSettings_RecordVideo">Registrazione video</string>
     <string name="WndSettings_ScaleUp">Aumentare UI</string>
     <string name="WndSettings_SecondQuickslot">Seconda posizione veloce</string>
     <string name="WndSettings_SelectLanguage">Seleziona Lingua</string>
@@ -2859,6 +2865,12 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
 
 
 

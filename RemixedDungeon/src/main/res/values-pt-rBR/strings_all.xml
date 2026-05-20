@@ -325,6 +325,7 @@
     <string name="BurningBuff_Info">O corpo está envolto em chamas furiosas!</string>
     <string name="BurningBuff_Name">Queimando</string>
     <string name="BurningFist_Desc">Punho Queimando do Deus Antigo</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">punho queimando</string>
     <string name="BurningFist_Name_Objective">punho queimando</string>
     <string name="Burning_Burns">%s está queimando!</string>
@@ -429,6 +430,7 @@
     <string name="ChaosSword_Info">A lâmina da espada é feita de puro caos e às vezes ela vibra intensamente. Um grande poder está guardado dentro da arma, que pode cortar pela metade qualquer coisa. Porém é necessário uma grande habilidade para usar a poderosa força desta arma.</string>
     <string name="ChaosSword_Name">Espada do Caos</string>
     <string name="CharAction_Charm">charme</string>
+    <string name="CharAction_Expel">mengusir</string>
     <string name="CharAction_Give">dar</string>
     <string name="CharAction_Hit">acertar</string>
     <string name="CharAction_Order">ordem</string>
@@ -1546,6 +1548,7 @@ Parede
     <string name="PlagueDoctorQuest_AllDone">*Ele solta uma risada seca e ofegante.* \&quot;Suas ações desbloquearam segredos sem medida! O conhecimento adquirido... ele pulsa dentro de mim, uma sinfonia de descobertas. Mas o conhecimento,\&quot; ele acrescenta, sua voz caindo para um sussurro conspiratório, \&quot;conhecimento é poder. E poder... ah... esse é um elixir mais embriagante.\&quot; Ele encara você intensamente por um momento, seus olhos de ametista queimando com uma intensidade febril. \&quot;Talvez,\&quot; murmura ele, \&quot;nossos caminhos se cruzem novamente. Pois ainda há muitos... mistérios... a serem desvendados.\&quot;</string>
     <string name="PlagueDoctor_Desc">Este homem corcunda está totalmente vestido com couro. Ele tem cheiro forte de medicamentos e... alho?</string>
 
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">médico da praga</string>
     <string name="PlagueDoctor_Name_Objective">médico da peste</string>
     <string name="Plant_ACPlant">PLANTAR</string>
@@ -1797,6 +1800,7 @@ Parede
     <string name="RottenFood_Message">nojento!</string>
     <string name="RottenMeat_Info">pedaço de carne podre</string>
     <string name="RottenMeat_Name">carne podre</string>
+    <string name="RottenOrgan_Info">Um órgão em decomposição colhido de um inimigo derrotado. Apesar de seu estado fétido, contém compostos valiosos para processos alquímicos.</string>
     <string name="RottenOrgan_Name">Órgão Podre</string>
     <string name="RottenPasty_Info">Este pastel parece muito nojento.</string>
     <string name="RottenPasty_Name">pastel de carne podre</string>
@@ -2751,6 +2755,7 @@ remix.31.1\n
     <string name="YogsEye_Name">Olho de Yog</string>
     <string name="YogsEye_Name_Objective">Olho de Yog</string>
     <string name="YogsHeart_Desc">Durante décadas as pessoas acreditavam que apenas as verdadeiras criaturas sem coração são capazes dos actos de pura maldade. E ainda aqui está, batendo o grande coração de um Deus Antigo em pessoa.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">Coração de Yog</string>
     <string name="YogsHeart_Name_Objective">Coração de Yog</string>
     <string name="YogsTeeth_Desc">A enorme boca do Deus Antigo cheia de dentes afiados. Uma manifestação muito adequada do seu desejo de destruir e devorar todo.</string>
@@ -3021,6 +3026,11 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
 
 
 

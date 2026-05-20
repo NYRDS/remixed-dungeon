@@ -94,6 +94,7 @@
     <string name="AwarenessBuff_Info">감각이 날카로워지며 주변 환경에 대한 인식이 더욱 좋아졌습니다.</string>
     <string name="AwarenessBuff_Name">인지</string>
     <string name="AzuterronNPC_Desc">이상한 형체가 검은 안개에 둘러싸여 있다.</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">이방인</string>
     <string name="AzuterronNPC_Name_Objective">이방인</string>
     <string name="AzuterronNPC_Quest_End">완벽하군. 여기 이 물약을 가져가게, 분명 도움이 될 거야.</string>
@@ -409,6 +410,7 @@
     <string name="ChaosCrystal_Prompt">혼돈의 표식을 설치할 위치를 고르세요.</string>
     <string name="ChaosCrystal_ScrollFused">수정이 마법으로 인해 주문서에 쓰여졌고, 이제 이건 %s입니다.</string>
     <string name="ChaosCrystal_SelectForFuse">혼돈의 수정을 융합시킬 아이템을 고르세요.</string>
+    <string name="ChaosCrystal_ShieldFused">수정이 당신의 방패와 융합되어 혼돈의 형태를 취했습니다.</string>
     <string name="ChaosCrystal_StaffFused">수정이 당신의 마법봉을 흡수했고, 지팡이의 형태가 되었습니다.</string>
     <string name="ChaosCrystal_SwordFused">수정이 당신의 무기를 흡수했고, 검의 형태가 되었습니다.</string>
     <string name="ChaosCrystal_Use">사용</string>
@@ -3032,6 +3034,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
 
 
 
