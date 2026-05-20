@@ -13,6 +13,7 @@
     <string name="AboutScene_OurSite">Situs web kita:</string>
     <string name="AboutScene_Snd">Kirim E-Mail</string>
     <string name="AboutScene_Sound">Suara:</string>
+    <string name="AboutScene_SourceCode">Dapatkan kode sumber Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Terimakasih Khusus kepada:</string>
     <string name="AboutScene_Translation">Penempatan oleh:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
@@ -2402,19 +2403,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     -- Efek cahaya untuk Monster\n
     - Bug diperbaiki\n
     </string>
-    <string name="Welcome_Text_32_1">
-    remix.32.1\n
-    - Gameplay:\n
-    -- Jalur quest Plague Doctor\n
-    -- Bangkai mob sekarang menjadi item yang agak berguna\n
-    -- Kontrol peliharaan yang lebih baik\n
-    - UX:\n
-    -- Peningkatan manajemen save-game\n
-    - Modding:\n
-    -- Metode instalasi mod lokal\n
-    -- Item kustom sekarang dapat melakukan aksi saat berada di tumpukan\n
-    - Bug diperbaiki\n
-    </string>
+    <string name="Welcome_Text_32_1">remix.32.1\n- Gameplay:\n-- Plague Doctor quest line\n-- Mob carcasses now somewhat usable items\n-- Better pets control\n- UX:\n-- Improved save-game management\n- Modding:\n-- Local mod installation methods\n-- Custom items now can perform actions while being in heaps\n- Bugs fixed</string>
     <string name="Welcome_Title">Selamat Datang!</string>
     <string name="WindGust_Info">Memanggil hembusan angin yang kuat, yang mendorong pergi karakter yang dipilih.</string>
     <string name="WindGust_Name">Hembusan angin yang keras</string>
@@ -2991,6 +2980,9 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

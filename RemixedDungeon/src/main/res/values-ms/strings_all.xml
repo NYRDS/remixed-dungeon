@@ -776,6 +776,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="FrozenCarpaccio_Name">carpaccio beku</string>
     <string name="FrozenFish_Info">Ikan beku, macam hidup, tetap beku.</string>
     <string name="FrozenFish_Name">ikan beku</string>
+    <string name="FullFaceMask_Info">Topeng gas adalah topeng yang digunakan untuk melindungi pemakai dari menghirup pencemar udara dan gas beracun. Topeng membentuk tutup kedap di atas hidung, mulut dan mata.\n\nFilter hilang dari topeng ini tapi tetap terlihat keren.</string>
     <string name="FullFaceMask_Name">Topeng gas</string>
     <string name="FuryBuff_Info">Mata menjadi merah darah kerana penuh dengan kemarahan di dalam.</string>
     <string name="FuryBuff_Name">Keberangan</string>
@@ -1856,6 +1857,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Senior_Name">sami kanan</string>
     <string name="Senior_Name_Objective">sami kanan</string>
     <string name="ServantNPC_Desc">Pelayan kedai yang sangat sibuk.</string>
+    <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">pelayan penginapan</string>
     <string name="ServantNPC_Name_Objective">pelayan penginapan</string>
     <string name="ServiceManNPC_Desc">Pekerja biasa di pertubuhan tempatan.</string>
@@ -1945,6 +1947,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Snail_Desc">Moluska kecil ini telah membesar dengan memakan air kumbahan, tetapi ia masih sangat perlahan menjadikannya musuh yang mudah ditewaskan.</string>
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">siput</string>
+    <string name="Snail_Name_Objective">siput</string>
     <string name="SnipersMarkBuff_Info">Garis ini telah digunakan oleh penembak jitu.</string>
     <string name="SnipersMarkBuff_Name">Jejak Penembak</string>
     <string name="SociologistNPC_AlreadyTaken">Anda sudah pun menjawab tinjauan ini, datang lagi kemudian</string>
@@ -2893,6 +2896,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

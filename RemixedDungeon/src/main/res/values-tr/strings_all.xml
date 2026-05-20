@@ -431,6 +431,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Asa kaos güçü ile aşılandı, bir büyücü ne ister ki ya da neden korkar ? </string>
     <string name="ChaosStaff_Name">kaos asası</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">Bu kılıcın çeliği saf kaostan dökülmüştür ve bazen, yalnızca bazen, nezaketle titreşir. Kılıç, içinde öylesine devasa bir güç barındırır ki neredeyse her şeyi ortadan ikiye yarabilir. Ancak kılıcın muazzam gücüyle baş edebilmek için üstün kabiliyetler barındırmak gerekir.</string>
     <string name="ChaosSword_Name">kaos kılıcı</string>
     <string name="CharAction_Charm">Büyüle</string>
@@ -658,6 +659,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="DieHardSpell_Name">Ölümü Zor</string>
     <string name="Displacement_Txt">yer değiştirme %s</string>
     <string name="DoctorArmor_Info">Bu veba doktorunun zırhı, düşmanları zehirleyen, zayıflatan ve kandırarak etkisiz hale getiren zararlı bir gaz salan \&quot;Miasma Bulutu\&quot; yeteneğinin kullanılmasını sağlar. Doktor, maskesi sayesinde bu etkilerden bağışıklıktadır.</string>
+    <string name="DoctorArmor_Name">Doktor\'un Giysisi</string>
     <string name="DoctorArmor_NotDoctor">Yalnızca salgın doktorları bu zırhı kullanabilir!</string>
     <string name="DoctorSpecial">Bulut Miasma</string>
     <string name="DogeMask_Info">Hiç ünlü Doge kılığına girmek istediniz mi? İşte size fırsat!\nBöyle Maske! Birçok Kılık! Vay canına!</string>
@@ -1198,6 +1200,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="KrampusHead_Name">Kranpus\'un kafası</string>
     <string name="KunaiThrow_Info">Bu Ölümcül Kunai atışı son derece hızlı olacak, o kadar hızlı olacak ki bir hedef bile seçemeyeceksiniz.\n\nGerçek Ustalar aynı anda birden fazla Kunai fırlatabilir.</string>
     <string name="KunaiThrow_Name">Kunai Fırlatma</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Bu silah, diğer ucunda ağır bir demir ağırlık bulunan metal bir zincire bağlı bir oraktan oluşur.</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">ÇEK</string>
@@ -3046,6 +3049,10 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
+
 
 
 

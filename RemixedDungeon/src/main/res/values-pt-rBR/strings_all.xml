@@ -867,6 +867,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">golem</string>
     <string name="Goo_Desc">Há pouco conhecimento sobre o Goo. É bem possível que ele não seja nem mesmo uma criatura, mas sim um conglomerado de substâncias provenientes dos esgotos que ganharam rudimentos de livre-arbítrio. De qualquer das formas, é óbvio que a magia negra está trabalhando aqui.</string>
+    <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">Goo está se bombeando para cima!</string>
     <string name="Goo_Info2">glurp... glurp...</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -1535,6 +1536,7 @@ Parede
     <string name="PlagueDoctorQuest_4_2_InProgress">Recupere cinco _Kobolds Encantadores de Gelo_ mortos! Seus corpos congelados guardam a chave para desvendar os segredos de sua magia arrepiante!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Seus dedos esqueléticos batem ritmicamente contra um caldeirão borbulhante, o ar ao redor denso com o cheiro acre de enxofre e decomposição*\n_Kobold Mestres do Gelo_! Aquelas criaturas patéticas, amontoadas em suas cavernas geladas, agarrando-se desesperadamente à sua magia de gelo. Preciso de cinco deles, seus cadáveres congelados serão… esclarecedores. Seu domínio do gelo é… peculiar. Acredito que eles canalizam uma energia primordial, um poder adormecido sob a superfície deste próprio mundo.</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Ele encara os dois _succubi_, um sorriso feliz se espalhando sob sua máscara.* Esplêndido! Magnífico! Isso desbloqueará tantas… possibilidades! *Ele se vira para você, sua voz grossa de gratidão… e algo mais.* Seus esforços… não serão esquecidos. Eu lhe devo minhas mais profundas gratidões. *Seu olhar permanece nos _succubi_ por um momento demasiadamente longo, antes de ele se retirar em seu laboratório, murmurando sobre desvendar os segredos da sedução.*</string>
+    <string name="PlagueDoctorQuest_5_1_Prologue">*Ele treme, sua voz rachando como um graveto frágil*. A-ah, _succubus_! Duas… sim, duas, vivas! É… ahem… para minha pesquisa! Você vê… seus feromônios… é crucial para entender o delicado equilíbrio de… ah… *Ele se interrompe, sua mão ossuda se estendendo para ajustar nervosamente sua máscara, seus olhos lançando para você com uma intensidade febril.*Suas… essência… é um quebra-cabeça… um belo e enigmático quebra-cabeça! *Ele tossi violentamente, tentando se recompor.* Eu prometo, por me trazer duas dessas… criaturas… você terá minha gratidão eterna. Pense nisso como um… um benefício para o conhecimento! Sim! Para o conhecimento!</string>
     <string name="PlagueDoctorQuest_AllDone">*Ele solta uma risada seca e ofegante.* \&quot;Suas ações desbloquearam segredos sem medida! O conhecimento adquirido... ele pulsa dentro de mim, uma sinfonia de descobertas. Mas o conhecimento,\&quot; ele acrescenta, sua voz caindo para um sussurro conspiratório, \&quot;conhecimento é poder. E poder... ah... esse é um elixir mais embriagante.\&quot; Ele encara você intensamente por um momento, seus olhos de ametista queimando com uma intensidade febril. \&quot;Talvez,\&quot; murmura ele, \&quot;nossos caminhos se cruzem novamente. Pois ainda há muitos... mistérios... a serem desvendados.\&quot;</string>
     <string name="PlagueDoctor_Desc">Este homem corcunda está totalmente vestido com couro. Ele tem cheiro forte de medicamentos e... alho?</string>
 
@@ -3012,6 +3014,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 

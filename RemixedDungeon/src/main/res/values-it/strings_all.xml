@@ -361,6 +361,7 @@
     <string name="Challenges_Names_8">Nessuna città</string>
     <string name="Challenges_Names_9">Amnesia</string>
     <string name="ChampionOfAirBuff_Info">Questa caratteristica dona alla creatura l\'essenza dei venti, migliorando la sua agilità e abilità in combattimento. Il Campione dell\'Aria diventa un avversario formidabile, capace di scatenare attacchi rapidi e devastanti che possono cambiare rapidamente il corso della battaglia.</string>
+    <string name="ChampionOfAirBuff_Name">Campione dell\'Aria</string>
     <string name="ChampionOfEarthBuff_Info">Il Campione della Terra incarna una forza inflessibile, poiché questo attributo aumenta la resistenza ai danni della creatura e incrementa la sua vitalità massima. Questa trasformazione lo rende un avversario temibile nelle profondità insidiose, capace di ignorare facilmente gli attacchi e di resistere a lunghe battaglie con fermezza incrollabile.</string>
     <string name="ChampionOfEarthBuff_Name">Campione della Terra</string>
     <string name="ChampionOfFireBuff_Info">Infuso con la furia delle fiamme, questo attributo potenzia la ferocia e le capacità di combattimento della creatura. Il Campione del Fuoco emerge come un avversario temibile, scatenando attacchi devastanti che possono avvolgere i nemici in fiamme roventi, instillando terrore in tutti coloro che osano opporsi ad esso.</string>
@@ -1567,6 +1568,7 @@ Potrebbe bruciare?</string>
     <string name="PseudoPasty_Info">Questo è un\'autentico pasticcio della Cornovaglia col ripieno tradizionale di carne e patate.</string>
     <string name="PseudoPasty_Name">pasticcio</string>
     <string name="PseudoRat_Desc">Un orribile bestia che è emersa dal corpo del ratto non sembra somigliare ad un roditore o qualsiasi altro animale tu abbia mai visto. La bocca enorme, pieno di denti taglienti come rasoi, occupa la maggior parte del suo corpo. </string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">Ratto falso</string>
     <string name="PseudoRat_Name_Objective">Ratto falso</string>
     <string name="PumpkinPie_Info">Una deliziosa torta di zucche, proprio come la infornava tua madre.</string>
@@ -2674,6 +2676,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_common_bed_name">Letto</string>
     <string name="town_deco_common_door_desc">Un avventuriero dalle buone maniere non dovrebbe invadere la proprietà privata, senza un invito ovviamente</string>
     <string name="town_deco_common_door_name">Porta</string>
+    <string name="town_deco_counter_desc">Mantiene una buona distanza tra te e la persona che sta dietro di esso.</string>
     <string name="town_deco_counter_name">Bancone</string>
     <string name="town_deco_covered_table_desc">Tavolo di legno con tovaglia bianca</string>
     <string name="town_deco_covered_table_name">Tavolo</string>
@@ -2848,6 +2851,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 

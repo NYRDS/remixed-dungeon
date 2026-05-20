@@ -623,6 +623,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="DieHardSpell_Name">Kemény halál</string>
     <string name="Displacement_Txt">Áthelyező %s</string>
     <string name="DoctorArmor_Name">Doktor Ruházat</string>
+    <string name="DoctorArmor_NotDoctor">Csak a pestisdoktorok használhatják ezt az páncélt!</string>
     <string name="DoctorSpecial">Miasma felhő</string>
     <string name="DogeMask_Info">Akartál már valaha a híres Doge-ként öltözni? Most itt van rá a lehetőséged!
 Micsoda Maszk! Mennyi Álca! Wow!</string>
@@ -1562,6 +1563,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="Potion_Colors_1">bíbor</string>
     <string name="Potion_Colors_10">indigo</string>
     <string name="Potion_Colors_11">ezüst</string>
+    <string name="Potion_Colors_12">epidot</string>
     <string name="Potion_Colors_13">kvarc</string>
     <string name="Potion_Colors_14">ónix</string>
     <string name="Potion_Colors_15">gyöngy</string>
@@ -2330,6 +2332,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     - Hibajavítások\n
 </string>
     <string name="Welcome_Text_32">    remix.32\n    - Gameplay:\n    -- Mobs és Pets felkelnek a szintet és az élményt most\n    -- Kaotikus Pajzs\n    -- Bajnokok\n    -- Yog csata átbalanszolva\n    -- Ezenegyensúly javítások\n    - UX:\n    -- Részletes Hős és Mob statisztikák\n    -- Jobb Egyedi beállítások felület\n    -- Sima kamera\n    - Modding:\n    -- Egyedi animációk\n    -- Beépített Mobokhoz készült Lua szkriptek\n    -- Moboknak Ragyogása\n    - Hibák javítva\n</string>
+    <string name="Welcome_Text_32_1">remix.32.1\n- Геймплей:\n-- Линия квестов Чумного Доктора.\n--Туши мобов теперь в каком-то смысле полезные предметы\n-- Улучшенное управление питомцами\n- UX:\n-- Улучшено управление сейвами\n- Моддинг:\n--Методы локальной установки модов\n-- Пользовательские предметы теперь могут выполнять действия, находясь в кучах\n- Багофиксы</string>
     <string name="Welcome_Title">Üdv!</string>
     <string name="WindGust_Info">Megidéz egy széllöketet, ami arrébblöki a kiválasztott karaktert</string>
     <string name="WindGust_Name">Széllöket</string>
@@ -2880,6 +2883,10 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
 
 
 

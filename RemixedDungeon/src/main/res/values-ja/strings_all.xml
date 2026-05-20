@@ -1812,6 +1812,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="RottenFood_Message">うんざりだ！</string>
     <string name="RottenMeat_Info">腐った肉。ひどい臭いがする</string>
     <string name="RottenMeat_Name">腐った肉</string>
+    <string name="RottenOrgan_Info">敗れた敵から収穫された分解中の臓器。腐敗した状態にもかかわらず、錬金術的プロセスに有用な化合物を含んでいる。</string>
     <string name="RottenOrgan_Name">腐った臓器</string>
     <string name="RottenPasty_Info">このパスティはかなり不味そうだ。</string>
     <string name="RottenPasty_Name">腐ったパスティ</string>
@@ -2271,6 +2272,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="TownsfolkSilentNPC_Name_Objective">都市の住人</string>
     <string name="ToxicGas_Info">緑がかった有毒のガスが渦巻いている。</string>
     <string name="ToxicGas_Info1">あなたは有毒のガスを吸って死んだ。</string>
+    <string name="ToxicGland_Info">敗れた敵から採取された毒性腺。これらの腺には強力な毒素が含まれており、錬金術的プロセスで使用できます。</string>
     <string name="ToxicGland_Name">毒腺</string>
     <string name="TrapWnd_Step">本当にこの罠を踏みたいのか？死ぬかもしれないぞ。</string>
     <string name="TrapWnd_Title">罠</string>
@@ -2380,6 +2382,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Wand_Wood_Types_7">マホガニー</string>
     <string name="Wand_Wood_Types_8">竹</string>
     <string name="Wand_Wood_Types_9">紫御殿</string>
+    <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">鉛と鋼鉄の塊がそびえ立つこの一撃に耐えられる生き物は少ないが、これを効果的に使えるのは屈強な冒険者だけだ。</string>
     <string name="WarHammer_Name">ウォーハンマー</string>
     <string name="Warlock_Desc">ドワーフの関心が工学から魔術に移ると、ウォーロックが都市で権力を握るようになった。彼らは元素魔法から始めたが、やがて悪魔学と死霊術に転向した。</string>
@@ -3051,6 +3054,9 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
+
 
 
 

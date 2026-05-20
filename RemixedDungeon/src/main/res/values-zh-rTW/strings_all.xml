@@ -560,6 +560,7 @@
     <string name="CorpseDust_Info2">也許因為帶著它讓您感到了焦慮和憤怒。</string>
     <string name="CorpseDust_Name">屍塵</string>
     <string name="CorpseExplosion_Name">Corpse Explosion</string>
+    <string name="CorpseExplosion_NoCorpse">那個位置沒有屍體。</string>
     <string name="Crab_Defense">招架</string>
     <string name="Crab_Desc">這些巨型的螃蟹位居下水道食物鏈的頂端。它們行動極其迅速，並且厚重的甲殼能承受沈重的打擊。</string>
     <string name="Crab_Gender">masculine</string>
@@ -1448,6 +1449,7 @@
     <string name="OozeBuff_Name">腐蝕黏液</string>
     <string name="Ooze_Death">%s殺了您……</string>
     <string name="Order_Info">適當專注下，你的命令幾乎無可否認。</string>
+    <string name="Order_Name">Order</string>
     <string name="Order_Resist">你好大的膽子！</string>
     <string name="OverpricedRation_Info">這看起來就是一份普通的口糧，雖然小了一些</string>
     <string name="OverpricedRation_Message">這份食物吃起來還不錯。</string>
@@ -1629,6 +1631,7 @@
     <string name="PseudoPasty_Info">這是個正宗康沃爾餡餅，裏面填滿了傳統的牛肉和土豆餡料。</string>
     <string name="PseudoPasty_Name">餡餅</string>
     <string name="PseudoRat_Desc">這只從老鼠屍體中出現的可怕野獸不像你見過的任何動物，排滿了尖利牙齒的巨嘴占據了它的大部分身體。</string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">偽鼠</string>
     <string name="PseudoRat_Name_Objective">偽鼠</string>
     <string name="PumpkinPie_Info">好吃的南瓜派，嗯，媽媽的味道。</string>
@@ -2957,6 +2960,10 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
 
 
 

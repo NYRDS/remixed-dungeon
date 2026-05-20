@@ -654,6 +654,7 @@
     <string name="DieHardSpell_Info">Тимчасово прискорює регенерацію і робить з тебе справжнього Міцного Горішка.</string>
     <string name="DieHardSpell_Name">Міцний горішок</string>
     <string name="Displacement_Txt">%s переміщення</string>
+    <string name="DoctorArmor_Info">Ця броня чумного доктора дозволяє використовувати здібність «Хмара миазми», яка випускає отруйний газ, що отруює, послаблює та дезорієнтує ворогів. Доктор, захищений своєю маскою, несприйнятливий до цих ефектів.</string>
     <string name="DoctorArmor_Name">Одяг лікаря</string>
     <string name="DoctorArmor_NotDoctor">Тільки лікарі чуми можуть використовувати цю обладунку!</string>
     <string name="DogeMask_Info">Ви коли-небудь хотіли замаскуватися під знаменитого Doge? Тепер це ваш шанс!\nТака маска! Багато маскування! Оце Так!</string>
@@ -2782,6 +2783,7 @@
     <string name="town_deco_church_sign_desc">Схоже, що в цій будівлі знаходиться церква.</string>
     <string name="town_deco_cinema_sign_desc">Схоже тут знаходиться будівля кінотеатру.</string>
     <string name="town_deco_cinema_sign_name">Вивіска кінотеатру</string>
+    <string name="town_deco_clock_desc">Стрілки на них уже давно замерли в одному положенні.</string>
     <string name="town_deco_clock_name">Годинник</string>
     <string name="town_deco_common_bed_desc">Звичайне ліжко</string>
     <string name="town_deco_common_bed_name">Ліжко</string>
@@ -2867,6 +2869,7 @@
     <string name="town_deco_porch_desc">Дерев\'яна паперть.</string>
     <string name="town_deco_porch_name">Паперть</string>
     <string name="town_deco_poster_desc">Листівки з оголошеннями про майбутні сеанси в кінотеатрі.</string>
+    <string name="town_deco_poster_name">Плакат</string>
     <string name="town_deco_potions_desc">Якісь зілля розставлені на полицях.</string>
     <string name="town_deco_potions_name">Зілля</string>
     <string name="town_deco_projector_desc">Старий пристрій, для відтворення фільмів та розваг людей.</string>
@@ -2966,6 +2969,9 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
 
 
 

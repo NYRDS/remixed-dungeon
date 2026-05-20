@@ -824,6 +824,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="GameScene_Water">물 소리가 당신 주위에서 들려옵니다.</string>
     <string name="GameScene_Welcome">리믹스드 던전 %d층에 오신 걸 환영합니다!</string>
     <string name="GameScene_WelcomeBack">리믹스드 던전 %d층에 돌아오신 걸 환영합니다!</string>
+    <string name="GasImmuneBuff_Info">모든 가스에 대한 면역.</string>
     <string name="GasImmuneBuff_Name">가스 면역</string>
     <string name="Ghost_Defense">회피</string>
     <string name="Ghost_Desc">이 유령은 거의 보이지 않는다. 그것은 슬픈 얼굴을 한 희미한 빛으로 된 형상없는 얼룩 같이 보인다.</string>
@@ -2814,6 +2815,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_broken_roof_name">부숴진 지붕</string>
     <string name="town_deco_broken_wall_desc">이 벽에 있는 나무는 썩은 지 오래되었고, 원래의 활력을 잃었다.</string>
     <string name="town_deco_broken_wall_name">부숴진 벽</string>
+    <string name="town_deco_brown_carpet_desc">이 갈색 카펫은 많은 모험가, 방랑자, 그리고 지나가는 행인들의 발아래에 밟혀 왔다.</string>
     <string name="town_deco_brown_carpet_name">카펫</string>
     <string name="town_deco_cabinet_desc">여러 개의 문과 선반이 달린 넓은 수납장입니다.</string>
     <string name="town_deco_cabinet_name">캐비닛</string>
@@ -2861,6 +2863,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_emptyboard_name">Papan kosong</string>
     <string name="town_deco_entrance_desc">이 입구는 던전의 다음 층으로 이어집니다.</string>
     <string name="town_deco_entrance_name">입구</string>
+    <string name="town_deco_exit_desc">이 계단을 내려가면 무엇이 기다리고 있는지 알 수 없습니다.</string>
     <string name="town_deco_exit_name">출구</string>
     <string name="town_deco_fence_desc">눈이 쌓인 나무 울타리입니다.</string>
     <string name="town_deco_fence_name">울타리</string>
@@ -3028,6 +3031,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
 
 
 
