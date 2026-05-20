@@ -1054,6 +1054,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="IncendiaryDart_Name">damak pembakar</string>
     <string name="InnKeeperNPC_Desc">Pengusaha pondokan berasa bangga terhadap dirinya sendiri.</string>
     <string name="InnKeeperNPC_Name_Objective">pengusaha pondokan</string>
+    <string name="InnServant_Phrase_1">Ugh, masih banyak kerjaan!</string>
     <string name="InnServant_Phrase_2">Orang mabuk ini membuatkan saya marah!</string>
     <string name="InnServant_Phrase_3">Kelihatan bersih bagi saya</string>
     <string name="InnServant_Phrase_4">Astaga, ramai tetamu hari ini</string>
@@ -2294,6 +2295,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WaterOfHealth_Info">Kuasa hayat memancar keluar dari air perigi ini. Minum ia untuk menyembuhkan luka dan hilangkan lapar anda.</string>
     <string name="WaterOfHealth_Procced">Bilamana anda menghirupnya, luka anda telah sembuh sepenuhnya.</string>
     <string name="WaterOfTransmutation_Info">Kuasa pertukaran memancar keluar dari air perigi ini. Lempar atau item ke dalam perigi untuk jelmakannya menjadi benda lain.</string>
+    <string name="WeaknessBuff_Info">Kerapuhan mengelilingi badan, menjadikan sasaran lebih mudah dijaguh.</string>
     <string name="WeaknessBuff_Name">Lemah</string>
     <string name="Weapon_Identify">anda kini sudah biasa dengan %1$s anda untuk mengecamnya. Ia adalah %2$s.</string>
     <string name="Weapon_Incompatible">Interaksi pelbagai jenis sihir telah menolak keluar kuasa sihir pada senjata ini!</string>
@@ -2880,6 +2882,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

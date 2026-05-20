@@ -616,6 +616,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DreadKnight_Name_Objective">cavaliere timoroso</string>
     <string name="Dreamweed_Desc">Dopo aver toccato l\'Erbasogno essa secerne una scintillante nuvola di gas confondente.</string>
     <string name="Dreamweed_Name">Erbasogno</string>
+    <string name="DriedRoseBuff_Info">La rosa sembra molto affascinante.</string>
     <string name="DriedRoseBuff_Name">Affascinante</string>
     <string name="DriedRoseCursedBuff_Info">La rosa sembra bellissima ma non molto affascinante.</string>
     <string name="DriedRoseCursedBuff_Name">Amorous</string>
@@ -1058,7 +1059,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="InventoryScroll_Warning">Vuoi davvero cancellare questa pergamena? Sarà comunque consumata.</string>
     <string name="InventoryScroll_Yes">Si,sono positivo
 </string>
-    <string name="InvisibilityBuff_Info">Completamente invisibile, che può essere utile per evitare i pericoli o diventare uno di essi.</string>
+    <string name="InvisibilityBuff_Info">Completamente invisibile, che può aiutare a evitare i pericoli o diventare uno.</string>
     <string name="InvisibilityBuff_Name">Invisibile</string>
     <string name="IronKey_FromDepth">Chiave di ferro dalla profondità %d</string>
     <string name="IronKey_Info">Le tacche in questa antica chiave di ferro sono logore; il suo cordoncino di pelle è martoriato dalla vecchiaia. Che porta potrebbe aprire?</string>
@@ -1577,6 +1578,7 @@ Potrebbe bruciare?</string>
     <string name="Quarterstaff_Name">Bastone</string>
     <string name="QuickSlot_SelectSlot">Seleziona Quickslot</string>
     <string name="QuickSlot_SelectedItem">Scegli un oggetto per il lancio rapido</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">Faretra di pelle adatta a contenere un qualsiasi ammontare di frecce</string>
     <string name="Quiver_Name">faretra</string>
     <string name="RabbitEars_Info">E\' una credenza risaputa che i conigli siano bestie fortunate, e la loro fortuna si trasferirebbe su coloro che ottengano una parte del corpo del coniglio. A pensarci bene venire uccisi per delle decorazioni ottenute con le tue orecchie non ti rende molto fortunato. </string>
@@ -1914,7 +1916,7 @@ Potrebbe bruciare?</string>
     <string name="Snail_Name">chiocciola</string>
     <string name="Snail_Name_Objective">lumaca</string>
     <string name="SnipersMarkBuff_Info">Il marchio è stato lasciato da un cecchino.</string>
-    <string name="SnipersMarkBuff_Name">Marchio del Cecchino</string>
+    <string name="SnipersMarkBuff_Name">Marca del cecchino</string>
     <string name="SociologistNPC_AlreadyTaken">Hai già partecipato al sondaggio, per favore torna più tardi</string>
     <string name="SociologistNPC_Desc">Questo sociologo è nella sua sacra impresa di raccogliere le opinioni del pubblico</string>
     <string name="SociologistNPC_DownloadError">Scusa, qualcosa è andato storto, riprova di nuovo</string>
@@ -2264,7 +2266,7 @@ Potrebbe bruciare?</string>
     <string name="WaterOfHealth_Info">Il potere della salute viene irradiato dall\'acqua di questo pozzo. Prendine un sorso per curare le tue ferite e saziare la tua fame.</string>
     <string name="WaterOfHealth_Procced">Appena ne prendi un sorso, senti che le tue ferite guariscono completamente. </string>
     <string name="WaterOfTransmutation_Info">Il potere del mutamento viene irradiato dall\'acqua di questo pozzo. Getta un oggetto nel pozzo per trasformarlo in qualcos\'altro.</string>
-    <string name="WeaknessBuff_Info">La debolezza avvolge il corpo, rendendolo un bersaglio più facile.</string>
+    <string name="WeaknessBuff_Info">La debolezza avvolge il corpo, rendendo più facile essere presi di mira.</string>
     <string name="WeaknessBuff_Name">Indebolito</string>
     <string name="Weapon_Identify">Hai abbastanza confidenza con %1$s per procedere all\'identificazione. È %2$s..</string>
     <string name="Weapon_Incompatible">L\'interazione di diversi tipi di magia ha annullato l\'incantesimo su questa arma</string>
@@ -2700,6 +2702,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_filmtape_name">Film</string>
     <string name="town_deco_fireplace_desc">Ottimo per riscaldarsi in un posto freddo come questo.</string>
     <string name="town_deco_fireplace_name">Camino</string>
+    <string name="town_deco_firewood_desc">Una cosa essenziale in simili gelate.</string>
     <string name="town_deco_firewood_name">Legna da ardere</string>
     <string name="town_deco_floor_name">Pavimento</string>
     <string name="town_deco_flowerinthepot_desc">Fiore decorativo con dolce fragranza</string>
@@ -2711,6 +2714,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_glass_stained_name">Vetro Colorato</string>
     <string name="town_deco_grandclock_desc">Un meccanismo piuttosto antico ma ancora funzionante.</string>
     <string name="town_deco_grandclock_name">Grandclock</string>
+    <string name="town_deco_grave_name">Sepolcro</string>
     <string name="town_deco_hay_desc">Una piccola catasta di fieno profumato.</string>
     <string name="town_deco_hay_name">Fieno</string>
     <string name="town_deco_identifier_sign_desc">Pare che ci sia un\'indovina in quell\'edificio</string>
@@ -2843,6 +2847,17 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

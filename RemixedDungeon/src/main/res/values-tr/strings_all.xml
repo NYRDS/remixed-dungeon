@@ -428,6 +428,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="ChaosHelmet_Name">Kaos Miğferi</string>
     <string name="ChaosShield_desc">Kaos Kalkanı, sıradan bir kalkan ile bir Kaos Kristali\'nin birleştirilmesi sonucunda ortaya çıkar ve başarılı bir blok sonrasında rastgele kaotik etkiler sergiler.</string>
     <string name="ChaosShield_name">Kaos Kalkanı</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Asa kaos güçü ile aşılandı, bir büyücü ne ister ki ya da neden korkar ? </string>
     <string name="ChaosStaff_Name">kaos asası</string>
     <string name="ChaosSword_Info">Bu kılıcın çeliği saf kaostan dökülmüştür ve bazen, yalnızca bazen, nezaketle titreşir. Kılıç, içinde öylesine devasa bir güç barındırır ki neredeyse her şeyi ortadan ikiye yarabilir. Ancak kılıcın muazzam gücüyle baş edebilmek için üstün kabiliyetler barındırmak gerekir.</string>
@@ -909,6 +910,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Halls_TileWater">Soğuk lav</string>
     <string name="Haste_Info">Acele, oyuncunun o kadar aşırı bir hızla hareket etmesine izin verecek ki, etrafındaki her şey durağan görünecek. Böyle bir acele çok fazla enerji tüketecektir, bu yüzden onu kullanmak sadece kısa bir süre için mümkündür.\n\nYetenekli ustalar daha uzun süre aceleci kalabilirler.</string>
     <string name="Haste_Name">Aşırı acele</string>
+    <string name="Heal_Cast">%s iyileştirildi.</string>
     <string name="Heal_Info">Zindan\'da oldukça faydalı bir büyü, değil mi?</string>
     <string name="Heal_Name">Can</string>
     <string name="HealerNPC_Desc">yaşlı bir adam,asa yapabilecek biri gibi duruyor </string>
@@ -3043,6 +3045,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

@@ -1976,6 +1976,7 @@
     <string name="Skeleton_Name_Objective">骷髏</string>
     <string name="SleepBuff_Info">完全沉睡中。</string>
     <string name="SleepBuff_Name">睡眠</string>
+    <string name="SlowBuff_Info">遲鈍感讓人變得比平常更慢。</string>
     <string name="SlowBuff_Name">緩速</string>
     <string name="Slow_Name_0">寒冰%s</string>
     <string name="Slow_Name_1">寒冰%s</string>
@@ -2401,6 +2402,7 @@
     <string name="WndClass_Mastery">專精</string>
     <string name="WndCryptoDonate_bitcoin">比特幣</string>
     <string name="WndCryptoDonate_copyAddress">複製地址</string>
+    <string name="WndCryptoDonate_currency">貨幣</string>
     <string name="WndCryptoDonate_ethereum">以太坊</string>
     <string name="WndCryptoDonate_infoText">您可以通過將加密貨幣捐贈發送到以下地址來支持 Remixed Dungeon 的開發。感謝您的慷慨支持！</string>
     <string name="WndCryptoDonate_openWallet">Open Wallet</string>
@@ -2954,6 +2956,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

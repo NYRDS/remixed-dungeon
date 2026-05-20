@@ -2026,6 +2026,7 @@
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">слимак</string>
     <string name="SnipersMarkBuff_Info">Цю мітку залишив снайпер.</string>
+    <string name="SnipersMarkBuff_Name">Марка снайпера</string>
     <string name="SociologistNPC_AlreadyTaken">Ти вже брав участь у опитуванні, приходь пізніше</string>
     <string name="SociologistNPC_Desc">Цей соціолог має священну мету, збір суспільної думки</string>
     <string name="SociologistNPC_DownloadError">Перепрошую, але щось пішло не так, будь ласка, спробуй пізніше</string>
@@ -2151,6 +2152,7 @@
     <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">сукуб</string>
     <string name="Succubus_Name_Objective">сукуба</string>
+    <string name="SummonBeast_AtYourCommand">За вашим наказом!</string>
     <string name="SummonBeast_Info">Спроба викликати орду могутніх істот під вашу команду.\nРеальні результати можуть відрізнятися.</string>
     <string name="SummonBeast_Name">Виклик звіра</string>
     <string name="SummonDeathling_Info">Прикликає прислужника із нежиті. Сила та здоров\'я смертлика росте із рівнем героя. \n\nЛіміт прикликання: %1$d(+1 за кожен магічний рівень)</string>
@@ -2963,6 +2965,8 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

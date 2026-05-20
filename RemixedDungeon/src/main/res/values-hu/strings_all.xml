@@ -1074,6 +1074,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="InventoryScroll_Title">Válaszd ki a tárgyat</string>
     <string name="InventoryScroll_Warning">Komolyan nem akarod befejezni ennek a tekercsnek a használatát? Mindenképp fel fog használódni.</string>
     <string name="InventoryScroll_Yes">Igen, mindenképp</string>
+    <string name="InvisibilityBuff_Info">Teljesen láthatatlan, ami segíthet a veszélyek elkerülésében, vagy annáváválik.</string>
     <string name="InvisibilityBuff_Name">Láthatatlan vagy</string>
     <string name="IronKey_FromDepth">vas kulcs a%d szintről</string>
     <string name="IronKey_Info">Kopottak a bevágások ezen az öreg vas kulcson. Megviselte az eltelt idő a vékony bőrszíjat is melyen függ. Vajon milyen ajtót nyithat?</string>
@@ -1290,6 +1291,7 @@ Ennek a viselése azt jelenti, hogy odafigyelsz másokra.</string>
     <string name="MeleeWeapon_Info7a">A %1$s-t tartod a kezedben ami kész a(z) %2$s.</string>
     <string name="MeleeWeapon_Info7b">, és mivel meg van átkozva, képtelen vagy elengedni</string>
     <string name="MeleeWeapon_Info7c">Ártalmas varázslatot érzel bújkálni ebben a(z) %s-ban.</string>
+    <string name="MercenaryNPC_Desc">Helyettes kinézetű férfi.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">zsoldos</string>
     <string name="MercenaryNPC_Name_Objective">zsolddost</string>
@@ -2301,7 +2303,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WaterOfHealth_Info">A kút vizéből sugárzik az életerő. Igyál egy kortyot és minden sebed meggyógyul, valamint az éhséged is elmúlik.</string>
     <string name="WaterOfHealth_Procced">Ahogy iszod a vizet érzed, hogy az összes sebed begyógyul.</string>
     <string name="WaterOfTransmutation_Info">A kút vizéből sugárzik a változás ereje. Dobj bele egy tárgyat és a kút átváltoztatja azt valami mássá.</string>
-    <string name="WeaknessBuff_Info">A gyengeség ellepi a testet, amely könnyebb célponttá teszi birtokosát.</string>
+    <string name="WeaknessBuff_Info">Gyengeség vonja meg a testet, így könnyebb célponttá válik.</string>
     <string name="WeaknessBuff_Name">Legyengült</string>
     <string name="Weapon_Identify">Eléggé megismerted a %1$s-ed. Ez egy %2$s.</string>
     <string name="Weapon_Incompatible">A különféle mágiák ellenhatása törölte a varázst erről a fegyverről!</string>
@@ -2877,6 +2879,9 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
 
 
 

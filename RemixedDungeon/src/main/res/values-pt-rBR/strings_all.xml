@@ -1527,6 +1527,7 @@ Parede
     <string name="PlagueDoctorQuest_3_1_Prologue">*Seus olhos brilham com uma intensidade estranha e febril* Ah, o _morcego vampiro_! Uma criatura da noite, alimentando-se da força vital de sua presa. Fascinante... verdadeiramente fascinante. Preciso de um vivo para estudar sua fisiologia única. É tudo sobre... entender o... a... *Ele se cala, murmurando para si mesmo uma série de termos arcanos*. Sim! A ecolocalização do _morcego_, sua capacidade de navegar na escuridão completa... é a chave para desvendar um segredo.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*Arremessa a cabeça e solta uma gargalhada histérica, o som ecoando por sua laboratório úmido* Magnífico! Um _Cavaleiro da Morte_, diante de nós! O poder emanando de sua existência... embriagante! *Vira-se para você, olhos brilhando com uma intensidade febril* E para você, uma recompensa digna de seu valor: uma _Poção de Força_! Que ela lhe conceda o poder de conquistar qualquer inimigo! Agora... vamos examinar nosso sujeito. Sua própria essência contém segredos que poderiam reescrever as próprias leis da vida! *Aborda o _Cavaleiro da Morte_ com um sorriso maníaco, exibindo um frasco de líquido verde borbulhante</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Esta não é apenas uma besta! É um testemunho ambulante do poder necromântico! Capture-o, vivo e ileso! Este _Cavaleiro da Morte_... ele é a chave!</string>
+    <string name="PlagueDoctorQuest_3_2_Prologue">Um Cavaleiro da Morte! *Sua voz treme de emoção, seus dedos ósseos tremendo enquanto ele aperta um frasco borbulhante cheio de um líquido turvo e fosforescente*. Uma criatura assim… um farol de não-morte! Capturar um, vivo… seria… monumental. Imagine os segredos que poderíamos desvendar! O poder que flui pelas veias esqueléticas dele! Sim, um Cavaleiro da Morte! É crucial para minha pesquisa! Pois nos permitirá mergulhar mais fundo… nos mistérios da vida… e da morte em si!</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">Esplêndido! Os _Bruxos Anões_, suas essências agora são minhas para explorar! Magia tão distorcida e corrompida... verdadeiramente fascinante. *Ele segura um frasco cintilante, cheio de um líquido viscoso e carmesim.* Isto é para você: uma _Poção de Poder_! Absorva seu poder, e você sentirá a força das montanhas correndo por suas veias! Lembre-se, o conhecimento obtido através destes sacrifícios servirá a um propósito maior... talvez até nos salve de um destino pior que a morte.</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Atchim! Dwarves! Aqueles habitantes subterrâneos teimosos, obcecados por gemas e ouro. Mas são os _Feiticeiros Anões_ que eu desejo… sua magia distorcida, alimentada pelas próprias profundezas que habitam. Cinco, preciso de cinco daquelas almas murchas! Seus corpos guardam a chave para entender um certo… fenômeno. Algo sobre canalizar energias arcanas através da própria terra. Acredito que estou perto de um avanço, mas preciso de sua essência, sua magia corrompida! *Ele tosse violentamente em seu lenço, uma mancha escura se espalhando pelo tecido delicado*</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Esplêndido! Cinco _Kobolds Encantadores de Gelo_, sua essência gelada agora é minha para explorar! Sua conexão com os ermos congelados é verdadeiramente fascinante. A maneira como eles manipulam a própria água... verdadeiramente notável. *Ele entrega a você um frasco brilhante cheio de um líquido escarlate vibrante* Isso, é por seus esforços valentes: uma _Poção de Poder_! Beba profundamente e sinta o poder de dez guerreiros fluir pelas suas veias! Lembre-se, conhecimento é poder… e o poder é a única arma que temos contra as trevas crescentes. Agora… vamos dissecar essas almas geladas e descobrir seus segredos arrepiantes!</string>
@@ -2152,6 +2153,7 @@ outro local do nível.</string>
     <string name="Sungrass_Name">planta da vida</string>
     <string name="SurfaceScene_GameOver">Fim de Jogo</string>
     <string name="SuspiciousRat_Desc">Um rato não é uma visão incomum nas masmorras, mas para ele habitar tão profundamente... Você pode ver como o corpo inteiro do rato tem espasmos quando se move.</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">Um rato suspeito está se contorcendo violentamente.</string>
     <string name="SuspiciousRat_Name">Rato suspeito</string>
     <string name="SuspiciousRat_Name_Objective">Rato suspeito</string>
@@ -3009,6 +3011,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 
