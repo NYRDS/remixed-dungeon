@@ -392,6 +392,7 @@
     <string name="Challenges_Names_9">Амнезія</string>
     <string name="ChampionOfAirBuff_Info">Ця риса наділяє істоту сутністю вітрів, посилюючи її спритність та майстерність у бою. Чемпіон Повітря стає грізним супротивником, здатним завдавати швидких і руйнівних атак, які можуть швидко змінити хід битви.</string>
     <string name="ChampionOfAirBuff_Name">Чемпіон Повітря</string>
+    <string name="ChampionOfEarthBuff_Info">Champion of Earth олицетворює непохитну силу, оскільки ця риса підвищує стійкість істоти до шкоди та збільшує її максимальну життєву силу. Це перетворення робить її вражаючим суперником у небезпечних глубинах, здатним легко відбивати атаки та витримувати тривалі бої з непохитною рішучістю.</string>
     <string name="ChampionOfEarthBuff_Name">Чемпіон Землі</string>
     <string name="ChampionOfFireBuff_Name">Чемпіон вогню</string>
     <string name="ChampionOfWaterBuff_Info">A víz bajnoka a tengerek elháríthatatlan erejét képviseli, megerősítve a lény ellenálló képességét. Ennek eredményeként a lény kitartó ellenfelet válik, amely képes megtartani a rohamló támadások relentless sort és az ellenáldozatokkal szemben kitartó őrzővárbörtönt alkotni.</string>
@@ -418,6 +419,7 @@
     <string name="ChaosCrystal_Use">ВИКОРИСТАТИ</string>
     <string name="ChaosHelmet_Info">Криваво червоний шолом. Дуже символічно для воїна хаосу.</string>
     <string name="ChaosHelmet_Name">Шолом Хаосу</string>
+    <string name="ChaosShield_desc">Щит Хаосу — це результат з\'єднання Хаотичного кристала з обычним щитом, що призводить до прояву випадкових хаотичних ефектів при успішному блокуванні.</string>
     <string name="ChaosShield_name">Щит Хаосу</string>
     <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Посох, просякнутий Силою Хаосу! Про що ще може мріяти маг, і що йому ще боятися?</string>
@@ -2537,6 +2539,7 @@
     <string name="WndLibrary_Mobs_Btn">Монстри</string>
     <string name="WndLocalModInstall_pick">Pick mod directory</string>
     <string name="WndLocalModInstall_text">Виберіть директорію, з якої встановити мод</string>
+    <string name="WndLocalModInstall_title">Встановити мод з локальної директорії</string>
     <string name="WndModInstall_InstallingMod">Встановлення мода</string>
     <string name="WndModInstall_Version">версія</string>
     <string name="WndModSelect_AreYouSure">Видалити мод: %s, впевнені?</string>
@@ -2981,6 +2984,9 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
 
 
 

@@ -400,6 +400,7 @@
     <string name="ChaosCrystal_Prompt">選擇一個地點釋放混沌標記</string>
     <string name="ChaosCrystal_ScrollFused">鐫刻在卷軸上的符文吸收了這枚晶石，現在它變成了%s</string>
     <string name="ChaosCrystal_SelectForFuse">選擇您要與晶石融合的物品。</string>
+    <string name="ChaosCrystal_ShieldFused">水晶與你的盾牌融合，並且采取了混亂的形式。</string>
     <string name="ChaosCrystal_StaffFused">水晶吸收你的魔杖，並以新魔杖的形式呈現。</string>
     <string name="ChaosCrystal_SwordFused">水晶吸收了你的武器，並重新以劍的形式呈現。</string>
     <string name="ChaosCrystal_Use">使用</string>
@@ -1331,6 +1332,7 @@
     <string name="MeleeWeapon_Info7a">您%2$s握著這把%1$s。</string>
     <string name="MeleeWeapon_Info7b">，並且因為它被詛咒了，你無法把它放下。</string>
     <string name="MeleeWeapon_Info7c">您能感受到%s中潛伏著一股惡意的魔力。</string>
+    <string name="MercenaryNPC_Desc">看起來很結實的男人。</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">僱傭兵</string>
     <string name="MercenaryNPC_Name_Objective">僱傭兵</string>
@@ -1349,6 +1351,7 @@
     <string name="Mimic_Name">擬形怪</string>
     <string name="Mimic_Name_Objective">擬形怪</string>
     <string name="MindVisionBuff_Info">內心的異象讓你能清楚看見樓層上所有生物的移動。</string>
+    <string name="MindVisionBuff_Name">心靈視野</string>
     <string name="MirrorImage_Desc">這個鏡像與你十分相似，但是它更黯淡且在微微震顫。</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">鏡像</string>
@@ -1520,6 +1523,7 @@
     <string name="PlagueDoctorQuest_3_2_Epilogue">*他仰頭發出咯咯的笑聲，聲音在他潮濕的實驗室中回盪* 壯觀！一個_死亡騎士_，站在我們面前！從它身上散發的力量……令人陶醉！*他轉向你，眼睛閃爍著狂熱的光芒* 而對你，一個配得上你勇氣的獎勵：一瓶_力量藥水_！願它賜予你征服任何敵人的力量！現在……讓我們檢查我們的主題。它的本質蘊含著可能改寫生命法則的秘密！*他帶著瘋狂的獰笑接近_死亡騎士_，揮舞著一瓶冒泡的綠色液體*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">這不僅僅是野獸！它是死靈力量的活見證！活捉它，不能受傷！這個_死亡騎士_……它是關鍵！</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">啊嚏！矮人！那些頑固的地下居民，痴迷於寶石和黃金。但我渴望的是_矮人術士_……他們扭曲的魔法，由他們居住的深淵提供燃料。五個，我需要五個那些枯萎的靈魂！他們的身體是理解某種……現象的關鍵。關於通過大地本身引導奧術能量的事情。我相信我接近突破了，但我需要他們的本質，他們腐敗的魔法！*他劇烈地咳嗽在手帕上，深色的污漬蔓延到精緻的織物上*</string>
+    <string name="PlagueDoctorQuest_4_2_Epilogue">Splendid! Öt _Kobold Jegyző_, jégesszenciájuk most az enyém, hogy felfedezzem! Kapcsolatuk a jeges sivatagokkal, igazán lenyűgöző. Ahogy ők magukkal vízet manipulationálják... igazán figyelemre méltó. *Átad neked egy csillogó ampullát, tele élénk bordó folyadékkal* Ez a bátor fellépésedért: egy _Erő potion_! Szívj mélyet, és érezd a tíz harcos erejének áramlását az ereidben! Emlékezz, tudás az erelem... és az erő az egyetlen fegyverünk a sötétség ellen. Most... boncoljuk szét ezeket a jégmegelmeleket, és fedjük fel jégbelepi titkait!</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">拿回五具_DEAD KOBOLD ICEMANCER_！他們冰冷的屍體是解開寒冰魔法秘密的關鍵！</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*他枯骨般的手指有節奏地敲擊著沸騰的大鍋，周圍的空氣中瀰漫著濃烈的硫磺和腐爛氣味*\n_狗頭人冰法師_！那些可悲的生物，蜷縮在他們冰封的洞穴中，絕望地抓著他們的冰霜魔法。我需要五個，他們凍僵的屍體將會... 啟發人心。他們對冰的掌握，這... 很奇特。我相信他們利用了一種原始能量，一種沉睡在這個世界表面之下的力量。</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*他凝視著兩隻_魅魔_，面具下滿是幸福的微笑。* 太棒了！太壯觀了！這將解鎖如此多的……可能性！*他轉向你，聲音飽含感激……還有別的什麼。* 你的努力……不會被遺忘的。我深深感謝你。*他的目光在_魅魔_身上停留過久，然後退入實驗室，嘟囔著解鎖誘惑的秘密。</string>
@@ -2973,6 +2977,10 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
 
 
 

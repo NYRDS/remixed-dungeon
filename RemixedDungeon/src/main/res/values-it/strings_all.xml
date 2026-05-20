@@ -18,6 +18,7 @@
     <string name="AboutScene_SourceCode">Ottieni il codice sorgente di Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Ringraziamenti speciali:</string>
     <string name="AboutScene_Translation">Tradotto da:</string>
+    <string name="AboutScene_Txt_Intro">Remixed Dungeon di NYRDS basato su Pixel Dungeon Source di Watabou.</string>
     <string name="Accuracy_DecreasedDoctor">Ogni oscillazione di questo %s diffonde imperfezione. Il mio Bisturi cura… questo infetta.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Mani nude infettano la mia tecnica. Senza il taglio pulito della Sega, la mia precisione si deteriora nel caos.</string>
     <string name="Acidic_Desc">Queste creature demoniche simili ad aracnidi evitano i combattimenti ravvicinati ad ogni costo, lanciando punte paralizzanti da lunghe distanze.</string>
@@ -278,6 +279,7 @@
     <string name="BlessedBuff_Name">Benedetto</string>
     <string name="BlindnessBuff_Info">Completamente accecato, si possono solo sentire i suoni intorno.</string>
     <string name="BlindnessBuff_Name">Accecato </string>
+    <string name="BloodTransfusion_Drained">L\'essenza vitale fluisce dal tuo animale domestico in te.</string>
     <string name="BloodTransfusion_Info">Szívja a céljának szinte az összes vért maga számára, hogy gyógyuljon. Egy sötét szertartás, az áldozat és a megmaradás rituáléja.</string>
     <string name="BloodTransfusion_Name">Trasfusione del Sangue</string>
     <string name="BloodTransfusion_WontAgreed">L\'obiettivo resiste all\'estrazione della sua essenza vitale.</string>
@@ -286,6 +288,7 @@
     <string name="BodyArmorSpell_Name">Armatura Corporea</string>
     <string name="BoneSaw_Info">Una sega chirurgica di precisione progettata per dissezioni rapide. I suoi danni e la velocità d\'attacco diventano più letali con l\'abilità del Medico della Peste. I colpi critici estraggono parti aggiuntive raccoglibili dai nemici e colpisce con spietata efficienza i nemici paralizzati.</string>
     <string name="BoneSaw_Name">Sega d\'Osso</string>
+    <string name="BoneShard_Info">Un frammento osseo affilato raccolto da un nemico sconfitto. Questi frammenti sono sorprendentemente duraturi e utili per la creazione.</string>
     <string name="BoneShard_Name">Frammento d\'osso</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Quando lanciato ai nemici questo sottile, curvo, missile di legno tornerà nelle mani del lanciatore. </string>
@@ -1603,6 +1606,7 @@ Potrebbe bruciare?</string>
     <string name="RankingsScene_NoInfo">Nessuna informazione aggiuntiva</string>
     <string name="RankingsScene_Title">Migliori Classificati</string>
     <string name="RankingsScene_Total">Partite totali giocate:</string>
+    <string name="RatArmor_Info">Un\'armatura in pelle fatta di pelle di ratto. Probabilmente non è contagiosa...</string>
     <string name="RatArmor_Name">armatura da topo</string>
     <string name="RatHide_Info">Un piccolo e sporco pezzo di carne e pelo. Questi possono essere davvero utili a qualcuno?</string>
     <string name="RatKingCrownBuff_Info">Saluta il Signore dei topi, ogni topo deve obbedire e lodare la grande Rattosità!</string>
@@ -1718,6 +1722,7 @@ Potrebbe bruciare?</string>
     <string name="RottenOrgan_Name">Organo Marcio</string>
     <string name="RottenPasty_Info">ex-pasto sembra così disgustoso</string>
     <string name="RottenPasty_Name">pasticcio marcio</string>
+    <string name="RottenPumpkinPie_Info">Non importa quanto fosse buono quando fresco, non c\'è modo che sia ancora commestibile.</string>
     <string name="RottenPumpkinPie_Name">torta di zucca marcia</string>
     <string name="RottenRation_Info">Taaanto tempo fa poteva essere mangiato</string>
     <string name="RottenRation_Name">razione marcia</string>
@@ -2865,6 +2870,11 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
 
 
 

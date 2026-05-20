@@ -344,6 +344,7 @@
     <string name="Carcass_DissectMessage">Anda menyiasat bangkai dan mendapat %s.</string>
     <string name="Carcass_DissectResult">Daripada %1$s anda memperoleh %2$d hasil %3$s.</string>
     <string name="Carcass_Info">Bangkai %s yang benar-benar mati</string>
+    <string name="Carcass_Necromancy_Failed">\&quot;Percubaan anda untuk menghidupkan mayat %s gagal!\&quot;</string>
     <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk menyiasat bangkai tersebut.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang perlukan rak buku di dalam gua?</string>
     <string name="Caves_TileDescDeco">Ada telerang bijih yang kelihatan menonjol di atas dinding. Adakah ia Emas?</string>
@@ -868,6 +869,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Heal_Cast">%s telah disembuhkan.</string>
     <string name="Heal_Name">Sembuh</string>
     <string name="HealerNPC_Desc">Orang tua, kelihatan beliau seperti pembuat tongkat sakti.</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Rawatan percuma untuk setiap pengembara!</string>
     <string name="HealerNPC_Message2">Sila datang lagi, jiika anda rasa lapar atau sakit!</string>
     <string name="HealerNPC_Message3">Kenapa pihak gereja melarang kita memakai topi... suasana sejuk di sini.</string>
@@ -1268,6 +1270,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ManaRegenerationBuff_Info">Fungsi regenerasi mana berbentuk buff untuk memudahkan perkara.</string>
     <string name="ManaRegenerationBuff_Name">Regenerasi Mana</string>
     <string name="ManaShieldBuff_Info">Sebuah perisai sihir telah muncul, yang sepenuhnya menafikan serangan masuk berikutnya.</string>
+    <string name="ManaShieldBuff_Name">Perisai Ajaib</string>
     <string name="Mana_Cost">Kos Mana:</string>
     <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Info">Sebuah mums peralatan bedah direka untuk menangkap mikroorganisma yang dilepaskan dalam titisan cecair dan aerosol dari mulut dan hidung pemakai.\n\nPemakaian topeng bermaksud bahawa anda peduli tentang orang lain.</string>
@@ -2909,6 +2912,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

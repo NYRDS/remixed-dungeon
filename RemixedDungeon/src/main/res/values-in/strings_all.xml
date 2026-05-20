@@ -359,6 +359,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Carcass_Kick">%s ini sudah benar-benar mati, tidak perlu menendangnya lagi.</string>
     <string name="Carcass_Name">bangkai %s</string>
     <string name="Carcass_Necromancy">\&quot;Kamu telah membangkitkan mayat %s!\&quot;</string>
+    <string name="Carcass_Necromancy_Failed">\&quot;Upaya Anda untuk menghidupkan mayat %s gagal!\&quot;</string>
     <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk membedah bangkai.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang butuh rak buku di gua?</string>
     <string name="Caves_TileDescDeco">Kilauan dari beberapa logam terlihat pada tembok. Emas?</string>
@@ -1507,6 +1508,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Dua biji sungrass_. Kelopak emasnya menyimpan kekuatan yang ingin kupahami. Temukan mereka, dan biarkan esensi mereka terungkap!</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Dia memeluk _kelelawar_ dengan lembut di tangan berkantungnya, mengamati wujud kecil itu dengan kagum yang menakutkan* Hebat! Ekolokasi kelelawar... tidak seperti apa pun yang pernah saya temui. Begitu presisi... begitu... kendali. *Dia menoleh kepadamu, wajahnya tersembunyi oleh topengnya* Atas usahamu, sebuah _Gulungan Peningkatan_. Gunakanlah dengan bijak, karena ia menyimpan potensi untuk... menyempurnakan esensimu. *Dia memberimu gulungan itu, suaranya berbisik pelan* _Kelelawar_ ini, adalah... jendela ke dunia tersembunyi. Dunia... tempat bayangan menari dan rahasia berbisik.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Bawa aku seekor _kelelawar vampir_, hidup dan tidak terluka! Darahnya, sayapnya… mereka menyimpan rahasia yang harus kubongkar!</string>
+    <string name="PlagueDoctorQuest_3_1_Prologue">*Matanya berkilat dengan intensitas aneh yang gila* Ah, _kelelawar vampir_! Makhluk malam, yang memakan tenaga hidup mangsanya. Menarik... benar-benar menarik. Saya butuh satu yang hidup untuk mempelajari fisiologinya yang unik. Ini semua tentang... memahami... memahami... *Dia terbata-bata, bergumam pada dirinya sendiri dengan serangkaian istilah arcan*. Ya! Ekolokasi _kelelawar_, kemampuannya untuk navigasi dalam kegelapan total... itu kunci untuk membuka rahasia.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*Ia menengadahkan kepala dan tertawa keras, suara tawa menggema di laboratorium lembabnya* Luar biasa! Seorang _Ksatria Kematian_, berdiri di hadapan kita! Kekuatan yang memancar dari wujudnya... memabukkan! *Ia menoleh kepadamu, mata bersinar penuh intensitas demam* Dan untukmu, hadiah yang pantas atas keberanianmu: sebuah _Potion of Strength_! Semoga memberimu kekuatan untuk mengalahkan musuh apa pun! Sekarang... mari kita teliti subjek kita. Inti dari wujudnya menyimpan rahasia yang bisa mengubah hukum kehidupan itu sendiri! *Ia mendekati _Ksatria Kematian_ dengan senyum maniak, mengacungkan sebuah botol cairan hijau yang mendidih*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Ini bukan sekadar binatang! Ini adalah bukti berjalan dari kekuatan nekromantik! Tangkap satu, hidup dan tidak terluka! Ini _Ksatria Kematian_... itu adalah kuncinya!</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">Sempurna! Para _Dwarf Warlocks_, esensi mereka kini bisa kuteliti! Begitu menyimpang dan terkorupsi sihirnya... sungguh menakjubkan. *Ia mengangkat sebuah botol berisi cairan merah kental yang berpendar.* Ini, untukmu: sebuah _Potion of Might_! Minumlah kekuatannya, dan kau akan merasakan kekuatan gunung-gunung mengalir dalam darahmu! Ingatlah, pengetahuan yang diperoleh dari pengorbanan ini pada akhirnya akan melayani tujuan yang lebih tinggi... mungkin bahkan menyelamatkan kita semua dari nasib yang lebih buruk dari kematian. </string>
@@ -2985,6 +2987,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
