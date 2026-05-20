@@ -51,6 +51,7 @@
     <string name="AmokArrow_Info">這個箭頭尖端的瘋狂詛咒的力量將使任何生物變得無情、狂暴，兇殘無比。</string>
     <string name="AmokArrow_Name">狂亂箭</string>
     <string name="AmokBuff_Name">狂亂</string>
+    <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">這個飛鏢尖端的詛咒將使任何生物變得無情、狂暴。</string>
     <string name="AmokDart_Name">瘋狂飛鏢</string>
     <string name="AmuletScene_Exit">讓這一切結束吧</string>
@@ -734,6 +735,7 @@
     <string name="ExplodingSkull_Name">爆炸頭骨</string>
     <string name="ExplodingSkull_Name_Objective">爆炸頭骨</string>
     <string name="Eye_Desc">這種惡魔的另一個別名為\&quot;憎惡之球\&quot;，因為它一旦看到敵人就會毫無顧忌地使用它們的死亡凝視，即使這會傷害到它的友軍。</string>
+    <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">%s的死亡凝視殺死了你……</string>
     <string name="Eye_Name">邪眼</string>
     <string name="Eye_Name_Objective">邪眼</string>
@@ -1331,6 +1333,7 @@
     <string name="MercenaryNPC_Name">僱傭兵</string>
     <string name="MercenaryNPC_Name_Objective">僱傭兵</string>
     <string name="Metabolism_Txt">代謝 %s</string>
+    <string name="MiasmaGas_Info">Una nefa tossica che avvelena, indebolisce e disorienta chi la respira.</string>
     <string name="MimicAmulet_Desc">你冒險旅程中最光榮的時刻原來是個陷阱。</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">擬形怪</string>
@@ -1433,6 +1436,7 @@
     <string name="Necromancy_SoulsCountLabel">靈魂</string>
     <string name="Necromancy_SummonDeathlingName">召喚死靈</string>
     <string name="Necromancy_Title">死靈術</string>
+    <string name="NecrotismBuff_Info">Il marchio della morte stessa, il fetore che colpisce chi è vicino e causa loro di condividere la stessa sorte.</string>
     <string name="NecrotismBuff_Name">壞死</string>
     <string name="Necrotism_ACSpecial">天災</string>
     <string name="Necrotism_Death">你被壞死所殺…</string>
@@ -1660,6 +1664,7 @@
     <string name="RatArmor_Name">鼠甲</string>
     <string name="RatHide_Info">又臟又臭的帶毛肉皮,這真的有用嗎?</string>
     <string name="RatHide_Name">老鼠腿</string>
+    <string name="RatKingCrownBuff_Info">Omaggia il Signore dei topi, ogni topo obbedirà e loderà.</string>
     <string name="RatKingCrownBuff_Name">鼠王殿下</string>
     <string name="RatKingCrown_Info">純金的鼠王王冠，鼠國的 \&quot; 永恆 \&quot; 與 \&quot; 力量 \&quot; 的象徵！</string>
     <string name="RatKingCrown_Name">鼠王之冠</string>
@@ -1996,6 +2001,7 @@
     <string name="SociologistNPC_AlreadyTaken">你已經反饋過了。請稍後再來</string>
     <string name="SociologistNPC_Desc">這位調研員專門收集你對這款混合地牢的意見和建議</string>
     <string name="SociologistNPC_DownloadError">抱歉，崩潰了，請稍後再試</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Hi">你好
 你有什麼意見和建議想對混合地牢作者說嗎(請確保網絡順暢)
 你的意見十分重要</string>
@@ -2413,6 +2419,7 @@
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">錢包地址</string>
+    <string name="WndCryptoDonate_warningText">ATTENZIONE: Verifica sempre l\'indirizzo prima di inviare fondi. Le transazioni in criptovaluta sono irreversibili!</string>
     <string name="WndDonate_commonDonateText">混合地牢——永遠對所有人免費。
 但是，你能幫我們讓這個遊戲變得更好。
 除了我們的衷心感謝以外，你還將獲得一些界面上的美化。</string>
@@ -2636,6 +2643,7 @@
     <string name="WndStory_Prision">為了收納最具威脅的罪犯，此地下監獄於多年前建立。因為要逃出此地極之困難，起初大家都覺得此為上策，但不久之後從地底更深處散發出的黑暗瘴氣在獄中彌漫開去，令該處的罪犯和守衛喪失理智。監獄裏變成一片混亂。秩序、服從、法則、人性通通崩潰。於是城市封鎖了整個監獄，然而尚有些人仍然被鎖上，不能重見天日。</string>
     <string name="WndStory_Sewers">這個地牢位於城市的正下方，較靠近地面的樓層是城市的下水道系統，因此不太危險。儘管如此，沒人會認為這裏是安全之地，但至少您不用應付許多陰險狡黠的法術。</string>
     <string name="WndStory_Spiders">許多年前，這是一個充滿了魔法石的富裕礦山。但隨著礦脈的枯竭，礦工們紛紛離去，留下了大量的坑道網絡。最後這個地方被蜘蛛占領了。雖然這些危險的生物在黑暗中潛伏，但是這嚇不倒一些瘋狂而勇敢的尋寶者和冒險者們，因為傳言裏面的魔法神器的價值值得他們為之冒險。據說有一個為了逃避追捕的女巫進入了這個礦洞，追捕她的士兵由於畏懼黑暗而不敢靠近，只能派人在礦洞門口看守。結果到他們放棄後女巫也沒出現。沒準她找到另一個出口？亦或是趁看守不註意時跑了？或者...死在了礦洞深處，與蜘蛛們融為一體。</string>
+    <string name="WndTilesKind_ClassicLook">經典外觀</string>
     <string name="WndTilesKind_NewLook">新外觀</string>
     <string name="WndTilesKind_Title">Just one more thing:</string>
     <string name="WndTilesKind_text">你即將進入一個被扭曲魔法佔據的地下城，但現在你可以選擇如何看待它：\n你喜歡現代偽 3D 還是經典平面視角？\n你之後可以在遊戲選項選單中更改。</string>
@@ -2960,6 +2968,14 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
 
 
 

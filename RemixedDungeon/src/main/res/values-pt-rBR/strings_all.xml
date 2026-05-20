@@ -48,6 +48,7 @@
     Você pode desativar essa função qualquer momento (clique no ícone de gráficos na tela de título)
     </string>
     <string name="AllowStatisticsCollectionScene_Title">Coleção das estatísticas do usuário</string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">A solução na ponta desta flecha transformará qualquer um em uma besta furiosa, implacável e sem piedade.</string>
     <string name="AmokArrow_Name">Flecha de Fúria</string>
     <string name="AmokBuff_Info">Sinta a loucura, tirando a vida daqueles infelizes.</string>
@@ -303,6 +304,7 @@
     <string name="BodyArmorBuff_Name">Armadura Corporal</string>
     <string name="BodyArmorSpell_Info">Ativa o poder muscular reservado, os tornando mais fortes temporariamente, isso aumentará sua defesa, porem diminuirá sua velocidade de movimento.</string>
     <string name="BodyArmorSpell_Name">Armadura Corporal</string>
+    <string name="BoneSaw_Info">Uma serra cirúrgica de precisão projetada para dissecação rápida. Seu dano e velocidade de ataque ficam mais letais com a habilidade do Doutor da Peste. Golpes críticos extraem partes colhíveis adicionais dos inimigos, e ela ataca com eficiência impiedosa contra inimigos paralisados.</string>
     <string name="BoneSaw_Name">Serra de Ossos</string>
     <string name="BoneShard_Info">Um fragmento de osso afiado colhido de um inimigo derrotado. Estes fragmentos são surpreendentemente duráveis e úteis na fabricação.</string>
     <string name="BoneShard_Name">Fragmento de osso</string>
@@ -583,6 +585,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">cristal flutuante</string>
     <string name="Crystal_Name_Objective">cristal flutuante</string>
+    <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">Estes pequenos dardos malignos não fazer muito dano, mas eles podem paralisar o alvo deixando-o indefeso e imóvel por algum tempo.</string>
     <string name="CurareDart_Name">dardo envenenado</string>
     <string name="DM300_Desc">Esta máquina foi criada pelos anões há vários séculos. Mais tarde, os anões começaram a substituir as máquinas por golems, elementais e até mesmo demônios. Eventualmente, isso levou sua civilização ao declínio. O DM-300 e máquinas semelhantes foram normalmente utilizados para a construção e mineração e, em alguns casos, para a defesa da cidade.</string>
@@ -648,6 +651,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DieHardSpell_Info">Aumentará temporariamente a regeneração fazendo você realmente seja Duro de Matar</string>
     <string name="DieHardSpell_Name">Duro de Matar</string>
     <string name="Displacement_Txt">%s de deslocamento</string>
+    <string name="DoctorArmor_Name">Vestuário do Médico</string>
     <string name="DogeMask_Info">Você já quis se disfarçar como o famoso Doge? Agora é sua chance!n\Esta máscara! Muitos disfarces! Uau!</string>
     <string name="DogeMask_Name">Máscara Doge</string>
     <string name="DonateButton_pleaseDonate">Por favor, considere doar</string>
@@ -1362,6 +1366,7 @@ Parede
     <string name="MindVisionBuff_Info">A visão interior permite ver claramente o movimento de todos os seres vivos no chão.</string>
     <string name="MindVisionBuff_Name">Visão Mental</string>
     <string name="MirrorImage_Desc">Esta ilusão é muito semelhante a você, mas é mais pálida e se contorce um pouco.</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">imagem espelhada</string>
     <string name="MirrorImage_Name_Objective">imagem espelhada</string>
     <string name="MissileWeapon_Info1">\n\nA média de dano desta arma é igual a %d pontos por acerto.</string>
@@ -1536,6 +1541,7 @@ Parede
     <string name="PlagueDoctorQuest_4_2_InProgress">Recupere cinco _Kobolds Encantadores de Gelo_ mortos! Seus corpos congelados guardam a chave para desvendar os segredos de sua magia arrepiante!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Seus dedos esqueléticos batem ritmicamente contra um caldeirão borbulhante, o ar ao redor denso com o cheiro acre de enxofre e decomposição*\n_Kobold Mestres do Gelo_! Aquelas criaturas patéticas, amontoadas em suas cavernas geladas, agarrando-se desesperadamente à sua magia de gelo. Preciso de cinco deles, seus cadáveres congelados serão… esclarecedores. Seu domínio do gelo é… peculiar. Acredito que eles canalizam uma energia primordial, um poder adormecido sob a superfície deste próprio mundo.</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Ele encara os dois _succubi_, um sorriso feliz se espalhando sob sua máscara.* Esplêndido! Magnífico! Isso desbloqueará tantas… possibilidades! *Ele se vira para você, sua voz grossa de gratidão… e algo mais.* Seus esforços… não serão esquecidos. Eu lhe devo minhas mais profundas gratidões. *Seu olhar permanece nos _succubi_ por um momento demasiadamente longo, antes de ele se retirar em seu laboratório, murmurando sobre desvendar os segredos da sedução.*</string>
+    <string name="PlagueDoctorQuest_5_1_InProgress">*O seu pensamento vagueia enquanto fala, sua voz fica mais baixa, quase um sussurro.* Traga-me duas _succubi_... vivas. Seu... poder... é envolvente.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Ele treme, sua voz rachando como um graveto frágil*. A-ah, _succubus_! Duas… sim, duas, vivas! É… ahem… para minha pesquisa! Você vê… seus feromônios… é crucial para entender o delicado equilíbrio de… ah… *Ele se interrompe, sua mão ossuda se estendendo para ajustar nervosamente sua máscara, seus olhos lançando para você com uma intensidade febril.*Suas… essência… é um quebra-cabeça… um belo e enigmático quebra-cabeça! *Ele tossi violentamente, tentando se recompor.* Eu prometo, por me trazer duas dessas… criaturas… você terá minha gratidão eterna. Pense nisso como um… um benefício para o conhecimento! Sim! Para o conhecimento!</string>
     <string name="PlagueDoctorQuest_AllDone">*Ele solta uma risada seca e ofegante.* \&quot;Suas ações desbloquearam segredos sem medida! O conhecimento adquirido... ele pulsa dentro de mim, uma sinfonia de descobertas. Mas o conhecimento,\&quot; ele acrescenta, sua voz caindo para um sussurro conspiratório, \&quot;conhecimento é poder. E poder... ah... esse é um elixir mais embriagante.\&quot; Ele encara você intensamente por um momento, seus olhos de ametista queimando com uma intensidade febril. \&quot;Talvez,\&quot; murmura ele, \&quot;nossos caminhos se cruzem novamente. Pois ainda há muitos... mistérios... a serem desvendados.\&quot;</string>
     <string name="PlagueDoctor_Desc">Este homem corcunda está totalmente vestido com couro. Ele tem cheiro forte de medicamentos e... alho?</string>
@@ -1813,6 +1819,7 @@ Parede
     <string name="Rudolph_Info">O que poderia ser mais festivo do que um nariz brilhante vermelho? e um par de chifres, naturalmente.</string>
     <string name="Rudolph_Name">Nariz vermelho e chifres</string>
     <string name="RunicSkull_Desc">Para algo feito artificialmente, este crânio se parece muito com um verdadeiro. Você pode ver um brilho fraco em torno dele.</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">Crânio runico</string>
     <string name="RunicSkull_Name_Objective">Crânio runico</string>
     <string name="SacrificialSword_Gender">masculine</string>
@@ -3014,6 +3021,13 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
 
 
 

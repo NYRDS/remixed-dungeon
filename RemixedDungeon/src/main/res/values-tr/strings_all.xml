@@ -2752,6 +2752,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="WoodenShield_desc">Kabaca yapılmış bir ahşap kalkan, mevcut en basit kalkandır. Yuvarlaktır ve zaman zaman bazı hasarları engelleyebilir.</string>
     <string name="WoodenShield_name">Tahta kalkan</string>
     <string name="Worm_Desc">Bu solucanın ne kadar büyük olduğunu söylemenin imkanı yok. Zeminden  çıkan bir parçası çürümüş et ve balçıkile kaplanmış. Dev çeneleri yüzeye doğru nasıl yol açtığına dair çok net fikir verebilir.</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">solucan</string>
     <string name="Worm_Name_Objective">solucan</string>
     <string name="Wraith_Defense">savuşturdu</string>
@@ -3049,6 +3050,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

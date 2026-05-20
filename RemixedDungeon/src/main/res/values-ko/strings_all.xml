@@ -254,6 +254,7 @@
     <string name="BlackSkullOfMastery_Name">영혼을 부르는 자</string>
     <string name="BlackSkullOfMastery_Necromancer">마법을 파괴하기</string>
     <string name="BlackSkullOfMastery_RemainHumanDesc">또는 주문을 _파괴하면_ 이 아티팩트를 의도대로 사용할 수 있습니다.</string>
+    <string name="BlackSkullOfMastery_Title">Você pode quebrar o feitiço. Ou pode manipular sua fórmula mágica de uma forma que permitirá que você consuma os poderes tanto do feitiço quanto do artefato em si, transformando-se em um Lich.</string>
     <string name="BlackSkull_Activated">검은 해골이 깨어났습니다!</string>
     <string name="BlackSkull_Deactivated">검은 해골은 다시 휴식기에 들어갔습니다..</string>
     <string name="BlackSkull_Gender">masculine</string>
@@ -3031,6 +3032,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

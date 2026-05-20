@@ -734,6 +734,7 @@
     <string name="EncumbranceBuff_CharAct_2">Цей %s занадто важкий для мене, щоб ефективно його використовувати.</string>
     <string name="EncumbranceBuff_CharAct_3">Я маю працювати над силою, перш ніж зможу використовувати %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Мені бракує сили, щоб використовувати %s на повну.</string>
+    <string name="EncumbranceBuff_CharAct_5">%1 is too much for me to handle right now.</string>
     <string name="EncumbranceBuff_Info">Недостатньо сили, щоб ефективно використовувати %s.</string>
     <string name="EncumbranceBuff_Name">Тягар</string>
     <string name="EnslavedSoul_Desc">Це примарне створіння практично прозоре. Хоча воно і виглядає як череп, лиш на мить з\'являється обличчя, обличчя сповнене болі та муки.</string>
@@ -1422,6 +1423,7 @@
     <string name="MysteryMeat_Info4">Ти об\'ївся.</string>
     <string name="MysteryMeat_Message">Ця їжа на смак... дивна.</string>
     <string name="MysteryMeat_Name">таємниче м\'ясо</string>
+    <string name="NatureArmorSpell_Info">Elfij тежкі, особливо коли захищені самою Матірюю Природою.</string>
     <string name="NatureArmorSpell_Name">Природний обладунок</string>
     <string name="NecromancerArmor_Info">Ця броня дозволяє некроманту викликати до 2х смертликів, ціною в 5 душ за кожного. Ця нежить-прислужники будуть йти за своїм володарем і атакувати його ворогів. Смертлики стають сильнішими з кожним рівнем героя.</string>
     <string name="NecromancerArmor_Info2">В цій броні некромант може викликати \&quot;Некротизм\&quot;, жахливу хворобу, яка вражає будь-яку істоту в полі зору, неважливо мертве вони чи живе.</string>
@@ -1529,6 +1531,7 @@
     <string name="PlagueDoctorQuest_3_1_Prologue">*Його очі палають дивною, гарячковою інтенсивністю* Ах, _летюча миша_! Істота ночі, що живиться життєвою силою своєї здобичі. Захопливо... справді захопливо. Мені потрібна одна жива, щоб вивчити її унікальну фізіологію. Все про... розуміння... розуміння... *Він замовкає, бурмочучи собі під ніс якісь арканні терміни*. Так! Ехолокація _летючої миші_, її здатність орієнтуватися в повній темряві... це ключ до розгадки таємниці.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*Він закидає голову і вибухає реготом, що лунає по його сирій лабораторії* Чудово! _Лицар Смерті_, що стоїть перед нами! Сила, що випромінюється від нього... п\'янить! *Він повертається до вас, очі палають гарячковим блиском* А для вас - нагорода, гідна вашої доблесті: _Зілля Сили_! Нехай воно дасть вам силу подолати будь-якого ворога! А тепер... давайте вивчимо нашого підопічного. Сама його суть таїть у собі секрети, здатні переписати самі закони життя! *Він підходить до _Лицаря Смерті_ з маніакальною усмішкою, тримаючи в руках пляшечку з булькаючою зеленою рідиною*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Це не просто звір! Це ходяче свідчення некромантської сили! Спіймайте одного, живим і неушкодженим! Цей _Лицар Смерті_... він є ключем!</string>
+    <string name="PlagueDoctorQuest_3_2_Prologue">A _Death Knight_! *Jego głos pęka ze wzruszenia, kościste palce drżą, gdy ściska szeleszczącą fiolkę z mętnym, fosforyzującym płynem.* Taki stwór... latarnia nieumarłości! Aby go schwytać, żywego... byłoby to... monumentalne. Wyobraź sobie tajemnice, które moglibyśmy odkryć! Moc, która płynie przez jego szkieletowe żyły! Tak, _Death Knight_! To kluczowe dla moich badań! Pozwoli nam to zagłębić się... w tajemnice życia... i śmierci samej w sobie!</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">Блискотливо! _Гноми-чаклуни_, тепер їхню сутність можна досліджувати! Така перекручена, підла магія... справді захоплює. *Він піднімає переливчастий флакон, заповнений густою, багряною рідиною.* Ось, для тебе: _Еліксир могуті_! Випий його силу, і ти відчуєш, як через твої вени тече сила гір! Пам\'ятай, знання, отримані внаслідок цих жертв, зрештою слугуватимуть вищій меті... можливо, навіть врятують нас усіх від долі, гіршої за смерть.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">П\'ять _Дварфів-Чаклунів_, їхні тіла все ще пульсують слабким відлунням темної магії! Принесіть їх мені, і я винагороджу вас зіллям незрівнянної могутності – _Зіллям Могутності_, яке наділить вас силою десяти чоловік!</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Апчі! Дварфи! Ці вперті підземні мешканці, одержимі дорогоцінним камінням та золотом. Але саме _Ґноми-Чорнокнижники_ мені потрібні... їхня спотворена магія, підживлювана самими надрами, в яких вони мешкають. П’ятеро, мені треба п’ятьох з цих висушенних душ! У їхніх тілах міститься ключ до розуміння певного... феномену. Щось про те, як керувати таємничою енергією через саму землю. Вважаю, я близький до прориву, але мені потрібна їхня сутність, їхня зіпсована магія! *Він насильно кашляє у носовичок, і темна пляма розповзається по тонкій тканині*</string>
@@ -1622,6 +1625,7 @@
     <string name="Potion_Colors_12">епідот</string>
     <string name="Potion_Colors_13">кварцом</string>
     <string name="Potion_Colors_14">оніксом</string>
+    <string name="Potion_Colors_15">perlica</string>
     <string name="Potion_Colors_2">лазурне</string>
     <string name="Potion_Colors_3">нефритове</string>
     <string name="Potion_Colors_4">золоте</string>
@@ -1937,6 +1941,7 @@
     <string name="ServantNPC_Name">слуга готелю</string>
     <string name="ServantNPC_Name_Objective">слугу готелю</string>
     <string name="ServiceManNPC_Desc">Рядовий робочий місцевих закладів.</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Мені шкода, але кожен новий шукач пригод може переглянути лише %d фільмів.</string>
     <string name="ServiceManNPC_Limit_Reached">Прошу пробачення, але ви вичерпали свій поточний ліміт. Але після отримання нового рівня, ви ще зможете скористатися нашим сервісом!</string>
     <string name="ServiceManNPC_Name">співробітник</string>
@@ -2751,6 +2756,7 @@
     <string name="town_deco_banner_name">Прапор</string>
     <string name="town_deco_barrel_desc">Звична діжка, яка вже бачила кращі часи.</string>
     <string name="town_deco_barrel_name">Діжка</string>
+    <string name="town_deco_barrel_wine_desc">Використовувався для зберігання такого цінного напою, як вино.</string>
     <string name="town_deco_barrel_wine_name">Винна діжка</string>
     <string name="town_deco_beige_carpet_desc">Елегантний біжурий килим, витканий з м\'якої вовни гнолів.</string>
     <string name="town_deco_beige_carpet_name">Килим</string>
@@ -2874,6 +2880,7 @@
     <string name="town_deco_potions_name">Зілля</string>
     <string name="town_deco_projector_desc">Старий пристрій, для відтворення фільмів та розваг людей.</string>
     <string name="town_deco_projector_name">Кінопроектор</string>
+    <string name="town_deco_red_carpet_desc">За чутками, подібні червоні килими прикрашають залі гном\'яї метрополії.</string>
     <string name="town_deco_red_carpet_name">Килим</string>
     <string name="town_deco_roof_desc">Простий дах з черепиці.</string>
     <string name="town_deco_roof_name">Дах</string>
@@ -2969,6 +2976,13 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
+
+
 
 
 

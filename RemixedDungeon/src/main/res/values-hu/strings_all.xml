@@ -359,6 +359,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Challenges_Descriptions_5">Az első dolog, ami a gonoszhoz járult, egy sűrű és áthatolhatatlan köd volt, amely szinte lehetetlenné teszi az alvilág végtelen folyosóinak világos tájékozódását.</string>
     <string name="Challenges_Descriptions_6">A rúnaolvasás ősi művészetét tiltják és minden áron kerülik, mivel minden egyes tekercsre átok száll, amely a kazamata vagy annak környékére téved.</string>
     <string name="Challenges_Descriptions_7">Megszoktad azt a tényt, hogy a fegyverzet birtoklása és használata erkölcsileg nem helyes, de mi más védelmezhet a lent barangoló lényektől?</string>
+    <string name="Challenges_Descriptions_8">A journey begins dark and dangerous city sewers, where the only way to the surface is blocked. Matters worse, only able to use equipment find within the dungeon. Limited resources and equipment, survival depend on skills and strategy.</string>
     <string name="Challenges_Descriptions_9">A Pest Orvos legújabb \'gyógyírja\' kitörölte a térbeli emlékezeted. Nem emlékszel meg semmire azon kívül, ami közvetlen látótégeden kívül van.</string>
     <string name="Challenges_Names_0">Diétázom</string>
     <string name="Challenges_Names_1">A Hit az én páncélom</string>
@@ -1622,6 +1623,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="RatArmor_Name">patkány páncél</string>
     <string name="RatHide_Info">Egy kis, mocskos darab hús és szőr. Ez valóban hasznos lehet valaki számára?</string>
     <string name="RatHide_Name">patkánybőr</string>
+    <string name="RatKingCrownBuff_Info">Üdvözöljük a patkányok urát, minden patkány engedelmeskedjen és dicsérje.</string>
     <string name="RatKingCrownBuff_Name">Patkányság</string>
     <string name="RatKingCrown_Info">Őpatkánysága aranykoronája, az örökpatkányhatalom jele.</string>
     <string name="RatKingCrown_Name">A patkány király koronája</string>
@@ -1658,6 +1660,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="ResultDescriptions_Hunger">A(z) %d. szinten éhen haltál.</string>
     <string name="ResultDescriptions_Immured">Maguk alá temettek a kövek a %d. szinten</string>
     <string name="ResultDescriptions_Mob">%1$s végzett veled a(z) %2$d szinten.</string>
+    <string name="ResultDescriptions_Necromancy">Kiégett az életenergia a %d szinten próbálva összetettekkel élni</string>
     <string name="ResultDescriptions_Necrotism">
 %d. szinten elhunyt Nekrotizmus által</string>
     <string name="ResultDescriptions_Ooze">Egy maró massza ölt meg a %d. szinten</string>
@@ -1867,6 +1870,7 @@ egy másik helyre a szinten. </string>
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">idősebb szerzetes</string>
     <string name="Senior_Name_Objective">idősebb szerzetes</string>
+    <string name="ServantNPC_Desc">Egy nagyon elfoglalt vendéglő servant.</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">fogadóslány</string>
     <string name="ServantNPC_Name_Objective">fogadós szolgát</string>
@@ -2299,6 +2303,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WarriorArmor_NotWarrior">Csak harcosok viselhetik ezt a páncélt.</string>
     <string name="WarriorArmor_Prompt">Válaszd ki az ugrás irányát!</string>
     <string name="WaterElemental_Desc">Víz-elementálok nagyobb víztömegek közelében élnek. Ezek a varázslattal összetartott hullámlények sokszor kószálnak errefelé.</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name">víz elementál</string>
     <string name="WaterElemental_Name_Objective">víz elementál</string>
     <string name="WaterOfAwareness_Info">A kút vizéből sugárzik a tudás ereje. Igyál egy kortyot hogy felfedd az összes titkát a használt tárgyaidnak.</string>
@@ -2408,6 +2413,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndHero_Exp">Tapasztalat</string>
     <string name="WndHero_Gold">Gyűjtött Arany</string>
     <string name="WndHero_Health">Életerő</string>
+    <string name="WndHero_Info">Info</string>
     <string name="WndHero_Satiety">Jóllakottság</string>
     <string name="WndHero_SkillLevel">Képesség szint</string>
     <string name="WndHero_StaCatalogus">Katalógus</string>
@@ -2433,6 +2439,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndInstallingMod_deleting_file">Törlés: %s</string>
     <string name="WndInstallingMod_please_wait">Mod telepítése, kis türelmet...</string>
     <string name="WndInstallingMod_skipping_file">Kihagyás: %s</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Végezd el a receptet</string>
     <string name="WndItemAlchemy_NoRecipes">Nincsenek elérhető receptek ezzel a tárggyal és a jelenlegi felszereléseddel.</string>
     <string name="WndItemAlchemy_SelectRecipe">Recept kiválasztása</string>
     <string name="WndItemAlchemy_Title">Alkímia receptek vele: %s</string>
@@ -2610,6 +2617,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Wraith_Name">lidérc</string>
     <string name="Wraith_Name_Objective">lidérc</string>
     <string name="WrnExperimental_hint">Ha ez a furcsa és torz világ túl kemény Önhöz, kérem kapcsolja ki ezeket az opciókat:\nKezdőképernyő -&gt; Beállítások -&gt; Játékmenet\nmenü segítségével, majd indítson új játékot vagy töltsön be egy másik mentést.</string>
+    <string name="WrnExperimental_realtime">Valódi idő! mód engedélyezve: ez most valós idejű roguelike, gyorsan kattints vagy megszunadsz.\nSzeretnéd megnézni a csatak?\nJó szerencsével, miközben a csatornai rák ellenőrizte a bélzeteidet.</string>
     <string name="WrnExperimental_title">Kísérleti lehetőségek engedélyezve!</string>
     <string name="Yog_Desc">Yog-Dzewa egy Öreg Isten, egy hatalmas erejű entitás a káosz síkjáról. Egy évezreddel ezelőtt, az ősi törp birodalom hatalmas áldozatok árán épphogy meg tudta nyerni a háborút a démoni seregei ellen, azonban képtelenek voltak elpusztítani magát az Öreg Istent. Helyette bebörtönözték egy a városuk alatt fekvő tárnában, reménykedve hogy sosem lesz újra ereje ahhoz hogy támadjon.</string>
     <string name="Yog_Info1">...</string>
@@ -2883,6 +2891,14 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
+
+
+
 
 
 

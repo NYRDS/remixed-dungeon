@@ -18,6 +18,7 @@
     <string name="AboutScene_Translation">Diterjemah oleh:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
     <string name="AboutScene_Txt_Intro">Remixed Pixel Dungeon oleh NYRDS berdasarkan Sumber Pixel Dungeon oleh Watabou.</string>
+    <string name="Accuracy_Decreased">Kenapa aku fikir boleh gunakan %s? Alat salah, tangan salah!</string>
     <string name="Accuracy_DecreasedDoctor">Setiap ayunan %s ini menyebarkan ketidaksempurnaan. Gergaji Tulang saya menyembuhkan... ini menjangkitkan.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Tangan kosong mencemarkan teknik saya. Tanpa potongan bersih Gergaji, bidikanku menjadi kacau.</string>
     <string name="Acidic_Desc">Makhluk seakan-labah-labah bersaiz besar dan menakutkan itu tidak suka bertempur dalam jarak dekat, ia menembak runcing bergerigi beracun yang dapat melumpuhkan mangsa dari jarak jauh.</string>
@@ -58,6 +59,7 @@
     <string name="Amulet_ACEnd">PENGEMBARAAN BERAKHIR</string>
     <string name="Amulet_Info">Azimat Yendor merupakan artifak terkenal yang sangat berkuasa tetapi tidak diketahui asal usulnya. Dikatakan azimat ini berupaya memenuhi apa jua keinginan pemiliknya dengan syarat dia mampu \&quot;memujuk\&quot; azimat tersebut merealisasikan hasratnya.</string>
     <string name="Amulet_Name">Azimat Yendor</string>
+    <string name="AnesthesiaBuff_Name">Anestesia</string>
     <string name="Anesthesia_Cast">%s terlelap ke dalam tidur yang mendalam dan tanpa mimpi.</string>
     <string name="Anesthesia_Info">Menghasilkan tidur yang mendalam dan tidak wajar pada sasaran anda. Bahkan serangan yang paling keganasan tidak akan membangunkan mereka dari tidur ini.</string>
     <string name="Anesthesia_Name">Anestesia</string>
@@ -254,6 +256,7 @@
     <string name="BlackSkullOfMastery_Title">Anda boleh tawarkan mantera. Atau anda boleh manipulasi formula ajaib supaya anda boleh telan kedua-dua mantera dan artifak tersebut, membolehkan diri anda menjadi Lich.</string>
     <string name="BlackSkull_Activated">Tengkorak Hitam telah dibangunkan!</string>
     <string name="BlackSkull_Deactivated">Tengkorak Hitam tidur kembali...</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Sebuah tengkorak obsidian kecil. Ia merupakan sumber kuasa Necropolis, tetapi selepas Lich dikalahkan ia kehilangan semua kuasanya. Tetapi jika anda memegangnya satu tanggapan pelik melintasi minda anda: \&quot;Aku lapar\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">Tengkorak berdenyut-denyut dengan kuasa, anda dapat lihat ia keluar dari soket mata tengkorak. Jika anda memegangnya dapat mendengar suara menakutkan: \&quot;Kawat maut:</string>
     <string name="BlackSkull_Name">tengkorak hitam</string>
@@ -792,6 +795,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Ghost_Defense">dielak</string>
     <string name="Ghost_Desc">Hantu hanya separa kelihatan. Ia seakan-akan cahaya pudar tanpa bentuk dengan rupa sedih.</string>
     <string name="Ghost_Name">hantu sedu</string>
+    <string name="Ghost_Name_Objective">hantu</string>
     <string name="Ghost_Rat1">Hai pengembara.... Dulu saya pun seperti awak - kuat dan yakin... Kini saya telah mati... Malangnya saya tidak boleh tinggalkan tempat ini... Sehinggalah saya dapat membalas dendam... Bunuh _tikus kohong_, yang telah membunuh saya...</string>
     <string name="Ghost_Rat2">Tolong... Bantulah saya... Bunuh mahkluk terkutuk itu...</string>
     <string name="Ghost_Rose1">Hai pengembara.... Dulu saya pun seperti awak - kuat dan yakin... Kini saya telah mati... Malangnya saya tidak boleh tinggalkan tempat ini... Sehinggalah saya dapat kembali _mawar kering_... Ia sangat penting buat saya... Ada beberapa ekor raksaksa mencurinya dari jasad saya...</string>
@@ -1266,6 +1270,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Mana_Cost">Kos Mana:</string>
     <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Name">Topeng muka juru bedah</string>
+    <string name="MedicineMask_Obtained">Topeng pembedahan diperoleh</string>
     <string name="MeleeWeapon_Info1a">%1$s ini merupakan %2$s iaitu senjata tempur peringkat-%3$d.</string>
     <string name="MeleeWeapon_Info1b">a</string>
     <string name="MeleeWeapon_Info1c">yang telah ditatar</string>
@@ -1372,6 +1377,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="NecromancerArmor_Name">Perisai tulang</string>
     <string name="NecromancerArmor_NotNecromancer">Hanya pembangkit mayat boleh guna perisai ini!</string>
     <string name="NecromancerNPC_Desc">Lelaki pertengahan usia ini kelihatan menjengkelkan dan teruja pada masa yang sama. Dia memakai perisai komposit yang diperbuat dari cebisan tulang.</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">Hmm! sungguh jarang berlaku! Ada rakan pengembara yang masih hidup. Hebat! Alamak... Maafkan saya, kadang kala saya selalu teruja. Baiklah, saya ialah pembangkit mayat. Mengkaji perihal kematian dan makhluk tersebut dan juga sebagai mata pencarian saya, hari-hari lihat benda yang sama, sangat membosankan. Sebab itulah saya kemari. Berdasarkan pengiraan saya berada di sini selama beberapa minggu, disuatu tempat dalam kurungan bawah tanah ini, ada perkara yang hebat akan berlau. Sebuah _Nekropolis_, iaitu bandar kematian purba akan membuka pintu masuknya. Setakat ini... yang saya tahu, alamak rugi masa saya mencerita perkara ini. Saya perlu bersiap siaga, _akan kembali lagi_.</string>
     <string name="NecromancerNPC_Intro2">Hmm! Ada rakan pengembara yang masih hidup. Hebat! Alamak... Maafkan saya, saya ialah seorang pembangkit mayat. Mengkaji perihal kematian dan makhluk tersebut dan juga sebagai mata pencarian saya, hari-hari lihat benda yang sama, sangat membosankan. Sebab itulah saya ke mari. Berdasarkan pengiraan saya berada di sini selama beberapa minggu, disuatu tempat dalam kurungan bawah tanah ini, ada perkara yang hebat akan berlaku. Sebuah _Nekropolis_, iaitu bandar kematian purba akan membuka pintu masuknya. Setakat ini... yang saya tahu, kita berada betul-betul di hadapan pintu masuk. Baiklah, ambil kunci ini dan pergi dulu, maksud saya awak suka cabaran dan khazanah di dalamnya? Saya ikut di belakang awak, cuma saya perlu bersiap siaga.</string>
     <string name="NecromancerNPC_Message1">Hmm singkatnya masa, singkatnya masa...</string>
@@ -2346,6 +2352,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndCryptoDonate_currency">Mata Wang</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Anda boleh menyokong pembangunan Remixed Dungeon dengan menghantar derma mata wang kripto ke alamat di bawah. Terima kasih atas sokongan anda yang murah hati!</string>
+    <string name="WndCryptoDonate_openWallet">Buka Dompet</string>
     <string name="WndCryptoDonate_supportDev">Sokong Pembangun</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
@@ -2536,6 +2543,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndSettings_Brightness">Kecerahan</string>
     <string name="WndSettings_ClassicFont">Fon Klasik</string>
     <string name="WndSettings_ExperementalFont">Fon Baharu</string>
+    <string name="WndSettings_FpsLimit">Had FPS</string>
     <string name="WndSettings_GameplaySettings">Permainan</string>
     <string name="WndSettings_Handedness">Cakat Tangan</string>
     <string name="WndSettings_Immersive">Mod Immersive</string>
@@ -2896,6 +2904,14 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
 
 
 
