@@ -393,6 +393,7 @@
     <string name="ChampionOfEarthBuff_Name">Campeão da Terra</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Infundido com a fúria das chamas, esta característica amplifica a ferocidade e a proeza em combate da criatura. O Campeão do Fogo surge como um adversário temível, desferindo ataques devastadores que podem envolver seus inimigos em chamas abrasadoras, incutindo terror em todos que ousam se opor a ele.</string>
     <string name="ChampionOfFireBuff_Name">Campeão do Fogo</string>
+    <string name="ChampionOfWaterBuff_Info">O Campeão da Água encarna a força indomável dos oceanos, aumentando a resiliência e a fortaleza da criatura. Como resultado, torna-se um adversário firme, capaz de resistir a um bombardeio incessante de ataques e se manter como um guardião inflexível diante da adversidade.</string>
     <string name="ChampionOfWaterBuff_Name">Campeão da Água</string>
     <string name="ChaosArmor_Info">As placas de sangue vermelho desta armadura é costurada junto com correntes vermelhas escuras. Ele irradia energia caótica enquanto você a toca.</string>
     <string name="ChaosArmor_Name">Armadura do Caos</string>
@@ -722,6 +723,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="ElvenDagger_Name">adaga élfica </string>
     <string name="EncumbranceBuff_CharAct_2">Este %s é muito pesado para eu usar com eficácia.</string>
     <string name="EncumbranceBuff_CharAct_3">Preciso trabalhar na minha força antes de poder usar %s.</string>
+    <string name="EncumbranceBuff_CharAct_4">Eu não tenho força suficiente para usar %s ao seu pleno potencial.</string>
     <string name="EncumbranceBuff_CharAct_5">%s é demais para eu lidar agora.</string>
     <string name="EncumbranceBuff_Info">Não há força suficiente para usar %s de forma eficaz.</string>
     <string name="EncumbranceBuff_Name">Fardo</string>
@@ -3001,6 +3003,9 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
 
 
 

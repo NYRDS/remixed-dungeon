@@ -302,6 +302,7 @@
     <string name="BodyArmorBuff_Name">重甲</string>
     <string name="BodyArmorSpell_Info">激活身体的肌肉力量，使你暂时变强，从而增加你的护甲，但会减少移动速度。</string>
     <string name="BodyArmorSpell_Name">格挡</string>
+    <string name="BoneSaw_Info">一把精密的手术锯,专为快速解剖设计。随着瘟疫医生的技能提升,其伤害和攻击速度变得更加致命。暴击可以从敌人身上切下额外的可收获部分,并且对瘫痪的敌人效率极高。</string>
     <string name="BoneSaw_Name">骨锯</string>
     <string name="BoneShard_Info">从被击败敌人身上获取的锋利骨头碎片。这些碎片异常坚固，在制作中非常有用。</string>
     <string name="BoneShard_Name">骨片</string>
@@ -3008,6 +3009,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

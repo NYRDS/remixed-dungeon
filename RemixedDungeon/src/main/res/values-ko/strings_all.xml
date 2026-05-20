@@ -1297,6 +1297,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">미믹</string>
     <string name="Mimic_Name_Objective">미믹</string>
+    <string name="MindVisionBuff_Info">내시경은 모든 생물의 움직임을 바닥에서 명확하게 볼 수 있게 해준다.</string>
     <string name="MindVisionBuff_Name">심안</string>
     <string name="MirrorImage_Desc">이 환영은 당신과 빼닮은 형상을 하고 있지만, 좀 더 창백하고 조금씩 아른거린다.</string>
     <string name="MirrorImage_Name">거울상</string>
@@ -2899,6 +2900,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
