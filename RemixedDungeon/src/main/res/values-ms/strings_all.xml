@@ -25,6 +25,7 @@
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">jengking berasid</string>
     <string name="Acidic_Name_Objective">jengking berasid</string>
+    <string name="Actions_Speed">Tahap laju tindakan</string>
     <string name="Affection_Txt">%s penyisihan</string>
     <string name="AirElemental_Desc">Keunsuran udara merupakan makhluk sihir terbang yang diperbuat dari udara hidup.</string>
     <string name="AirElemental_Gender">masculine</string>
@@ -230,6 +231,7 @@
     <string name="Belongings_CantWearBoth">Anda tidak boleh melengkapkan %1$s dan %2$s pada masa yang sama!</string>
     <string name="Belongings_Name">beg galas</string>
     <string name="BishopNPC_Desc">Uskup Gereja Suci Santa Penguasa Bawah Tanah</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Uskup</string>
     <string name="BishopNPC_Name_Objective">Uskup</string>
     <string name="Bishop_bye">Saya akan mendoakan kesejahteraan kamu.</string>
@@ -1067,6 +1069,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="IncendiaryDart_Info">Hujung tajam damak ini direka untuk lekat pada sasaran dan sebatian tak stabil yang diikat akan meletup dan menyebabkan kebakaran berlaku.</string>
     <string name="IncendiaryDart_Name">damak pembakar</string>
     <string name="InnKeeperNPC_Desc">Pengusaha pondokan berasa bangga terhadap dirinya sendiri.</string>
+    <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name_Objective">pengusaha pondokan</string>
     <string name="InnServant_Phrase_1">Ugh, masih banyak kerjaan!</string>
     <string name="InnServant_Phrase_2">Orang mabuk ini membuatkan saya marah!</string>
@@ -1734,6 +1737,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Ring_Info3b">, dan kerana ia telah disumpah, anda tidak berupaya menanggalkannya.</string>
     <string name="Ring_Info4">%1$s\n\nAnda dapat rasai kuasa ajaib berunsur kejahatan berlingkar-lingkar di dalam %2$s.</string>
     <string name="Ring_Name">Cincin %s</string>
+    <string name="Roar_Info">Jeritan yang dahsyat pasti menakut-nakuti musuh anda dan memberi inspirasi kepada sekutu-sekutu.</string>
     <string name="Roar_Name">Auman</string>
     <string name="RogueArmor_ACSpecial">BOM ASAP</string>
     <string name="RogueArmor_Desc">Jika memakai pakaian gelap ini, gasar boleh melakukan trik, iaitu \&quot;bom asap\&quot; (tiada letupan sebenar digunakan): dia menjadikan pihak musuh buta dan melompat ditepinya.</string>
@@ -2350,7 +2354,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     -- Labah-Psi kini akan memberi kesan baik kepada labah-labah lain berbanding memberi kesan buruk kepada Wira.\n
     - Pepijat telah dibaiki\n
     </string>
-    <string name="Welcome_Text_32_1">    remix.32.1\n- Permainan:\n-- Talian pencarian Doktor Wabak\n-- Bangkai mob kini boleh digunakan sebagai item\n-- Kawalan haiwan peliharaan yang lebih baik\n- UX:\n-- Pengurusan simpan-permainan yang dipertingkatkan\n- Pemodan:\n-- Kaedah pemasangan mod tempatan\n-- Item tersuai kini boleh melakukan tindakan semasa berada dalam timbunan\n- Pepijat dibaiki\n</string>
+    <string name="Welcome_Text_32_1">remix.32.1\n- Gameplay:\n-- Plague Doctor quest line\n-- Mob carcasses now somewhat usable items\n-- Better pets control\n- UX:\n-- Improved save-game management\n- Modding:\n-- Local mod installation methods\n-- Custom items now can perform actions while being in heaps\n- Bugs fixed</string>
     <string name="Welcome_Title">Selamat Datang!</string>
     <string name="WindGust_Info">Hembuskan angin kencang yang dapat menolak keluar karakter terpilih.</string>
     <string name="WindGust_Name">Tiupan angin kencang</string>
@@ -2737,7 +2741,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_deco_covered_table_desc">Meja kayu yang dilapik dengan kain putih</string>
     <string name="town_deco_covered_table_name">Meja</string>
     <string name="town_deco_crate_bottles_desc">Bir dalam botol telah menjadi satu fenomena pada masa dahulu dalam kalangan tuan punya rumah penginapan.</string>
-    <string name="town_deco_crate_bottles_name">Pak bir</string>
+    <string name="town_deco_crate_bottles_name">Petak bir</string>
     <string name="town_deco_crate_desc">Sebuah peti kayu yang kukuh yang menyimpan rahsianya di dalam.</string>
     <string name="town_deco_crate_name">Kotak</string>
     <string name="town_deco_crate_scrolls_desc">Peti dengan gulungan</string>
@@ -2924,6 +2928,12 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
 
 
 

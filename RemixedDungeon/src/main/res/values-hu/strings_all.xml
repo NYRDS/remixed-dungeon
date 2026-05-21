@@ -26,7 +26,7 @@
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">savas skorpió</string>
     <string name="Acidic_Name_Objective">savas skorpiót</string>
-    <string name="Actions_Speed">Sietség szintje</string>
+    <string name="Actions_Speed">A cselekvések sebessége</string>
     <string name="Affection_Txt">Csábító %s</string>
     <string name="AirElemental_Desc">A Levegő-elementálok repülő mágikus lények, élő levegőből.</string>
     <string name="AirElemental_Gender">masculine</string>
@@ -34,6 +34,7 @@
     <string name="AirElemental_Name_Objective">lég elementál</string>
     <string name="AlarmTrap_Desc">A csapda átható hangot ad ki ami visszhangzik a börtönben!</string>
     <string name="Albino_Desc">Az erszényes patkányok aggereszív de gyenge lakói a csatornának. Csak nagy számba veszélyesek. Ez a patkány úgy látszik hogy albínó. Továbbá rendellenesen hegyes foga van.</string>
+    <string name="Albino_Gender">feminine</string>
     <string name="Albino_Name">albínó patkány</string>
     <string name="Albino_Name_Objective">albínó patkányt</string>
     <string name="AlchemyPot_SelectSeed">Válaszd ki a magot a dobáshoz</string>
@@ -213,6 +214,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="BattleAxe_Info">A hatalmas acél fej jelentős lendülettel látje el ennek a csatabárdnak minden csapását.</string>
     <string name="BattleAxe_Name">csatabárd</string>
     <string name="Bee_Desc">B malgré leur petite taille, les abeilles protègent farouchement leur ruche. Elles ne vivent pas longtemps cependant.</string>
+    <string name="Bee_Gender">feminine</string>
     <string name="Bee_Name">méh</string>
     <string name="Bee_Name_Objective">méh</string>
     <string name="BellaNPC_Amulet_F">Üdvözöllek cukipofa, mi van a kezedben? Azta, micsoda rendkívüli amulett! Mintha te... te sokkal fényesebben ragyognál másokhoz képest. Mit szólnál ahhoz, ha elmennénk sétálni és közben megbeszélnénk a közös jövőnket?</string>
@@ -405,6 +407,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="ChaosHelmet_Info">A vérvörös sisak a káoszharcos eszenciális szimbóluma.</string>
     <string name="ChaosHelmet_Name">Káosz Sisak</string>
     <string name="ChaosShield_desc">A Káosz Pajzs egy Káosz Kristály és egy közönséges pajzs egyesítésének eredménye, amely sikeres blokkoláskor véletlenszerű káotikus hatásokat idéz elő.</string>
+    <string name="ChaosShield_name">Káoszs pajzs</string>
     <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Varázspálca a Káosz Erejével beoltva! Mi másra vágyna vagy mitől félne leginkább egy mágus?</string>
     <string name="ChaosStaff_Name">káosz bot</string>
@@ -607,6 +610,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="Death_Name_1">Zord %s</string>
     <string name="Death_Name_2">Zord %s</string>
     <string name="Deathling_Desc">Az Árnylény egy olyan elesett hős lelke aki elég szerencsétlen volt ahhoz hogy egy kalandor társa által legyen megidézve, aki épp a halottidézéssel próbálkozik.</string>
+    <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">halandó</string>
     <string name="Deathling_Name_Objective">halandó</string>
     <string name="DeepSnail_Gender">masculine</string>
@@ -1481,6 +1485,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Suche nach dem _Moongrace_, wo die Dunkelheit auf das schwächste Glühen des Mondlichts trifft. _Zwei Samen_, ihre Essenz, werden verborgene Geheimnisse enthüllen.</string>
     <string name="PlagueDoctorQuest_2_1_Prologue">_Holdszépség magvak_… azok az éteri virágok, amelyek maga a hold mágiáját suttogják. Hetek óta tanulmányozom furcsa ragyogásukat. Van valami erő az esszenciájukban, egy rejtett energia, ami a kulcs lehet… valamihez. *Gondolkodva kopogtat csontos ujjával az állán*\nDe sajnos ritkák. Csak a legmélyebb barlangokban találhatók, ahová a holdfény alig hatol be. Kettőre van szükségem belőlük. Két magra, hogy feltárjam erejük titkait. És cserébe kínálhatok neked valamit… egy tiszta, erős mágia ízelítőt. Egy _Mana főzetet_, ami tele van a holdszépség esszenciájával. Ez feltölti fáradt lelkedet, és lehetővé teszi, hogy megújult erővel bánj az arkanával.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">Lenyeges! _Napfű_, arany esszenciája vitalitással pulzál. Sokat tanultam már annak finom szerkezetéből. *Kézbesít egy _Életgyógyítót_, folyadéka halvány aranyl_uc colorful secara bercahaya.* Idd ezt, amikor a világ súlyát nehezen érezed, és érezd, hogyan a nap melegéd megújítja a lelkedet.</string>
+    <string name="PlagueDoctorQuest_2_2_InProgress">_Due semi di erba del sole_. Le loro petali dorati contengono un potere che cerco di comprendere. Trovali, e lascia che la loro essenza venga rivelata!</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">*A szemében furcsa, lázadó intenzitás villan* Á, a _napfű_! Egy ínyadt virág, szirmai közben a nap melegét sugározzák. Úgy gondolom, az esszenciája tartalmazza a megoldást... ám hagyjuk, kihagyjuk a részleteket most. Elegendő tudni, hogy kutatásomhoz elengedhetetlen. _Két napfű mag_. Szerezd meg nekem, és jutalmazni foglak valamivel, ami biztosan hasznos lesz a kalandjaidon - egy _Egészség potion_-nal, amely tele van a nap erejével.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Hozzál nekem egy _vámpírmurat_, élve és sértetlenül! A vérét, a szárnyait... titkokat rejt, amelyeket feltájni kell!</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*A szemében furcsa, lázadt intenzitás türel* Ah, a _vámpír denevér_! Az éjszaka lénye, amely a prédájának életenergiáját élvezi. Meglehetősen... *Kisimítja magát, titkos kifejezésekkel murvogva*. Igen! A _denevér_ pengése, a teljes sötétségben való tájékozódás képessége... ez a titok megnyitásának kulcsa.</string>
@@ -2557,6 +2562,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndSelectLanguage_ImproveTranslation">Kérlek segíts a Remixed Pixel Dungeon lefordításában.</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Kattints ide, hogy csatlakozz a Remixed Pixel Dungeon fordító csapatához</string>
     <string name="WndSettingsInGame_GameLog">Játék napló</string>
+    <string name="WndSettingsInGame_IsometricTiles">Izometrikus csempék</string>
     <string name="WndSettings_ActionButtonSize">Cselekvések gombok mérete</string>
     <string name="WndSettings_Brightness">Fényerő</string>
     <string name="WndSettings_ClassicFont">Eredeti betűtípus</string>
@@ -2913,6 +2919,13 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
+
+
 
 
 

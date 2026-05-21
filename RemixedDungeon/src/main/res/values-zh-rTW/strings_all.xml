@@ -34,7 +34,7 @@
     <string name="AirElemental_Name_Objective">風元素</string>
     <string name="AlarmTrap_Desc">這個陷阱發出的刺耳聲音回蕩在地牢中！</string>
     <string name="Albino_Desc">嚙齒小鼠是極具侵略性卻比較弱小的下水道居民，只有在擁有大量數量時才會造成威脅。這只特殊的老鼠看起來得了白化病，並且擁有異常尖利的牙齒。</string>
-    <string name="Albino_Gender">masculine</string>
+    <string name="Albino_Gender">feminine</string>
     <string name="Albino_Name">白化老鼠</string>
     <string name="Albino_Name_Objective">白化老鼠</string>
     <string name="AlchemyPot_SelectSeed">選擇你要投擲的種子</string>
@@ -216,6 +216,7 @@
     <string name="BattleAxe_Info">這把有著巨大鋼製頭部的戰斧能將龐大的力量傾註在每次揮擊之中。</string>
     <string name="BattleAxe_Name">戰斧</string>
     <string name="Bee_Desc">雖然體型小，但蜜蜂會拼死保衛建巢。不過牠們活不久。</string>
+    <string name="Bee_Gender">feminine</string>
     <string name="Bee_Name">蜜蜂</string>
     <string name="BellaNPC_Amulet_F">但是你的那個護符...我們百合吧!</string>
     <string name="BellaNPC_Amulet_M">但是你的那個護符...我們約會吧!</string>
@@ -574,6 +575,7 @@
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">下水道螃蟹</string>
     <string name="Crab_Name_Objective">下水道螃蟹</string>
+    <string name="CrippleBuff_Info">身體殘障，但戰鬥仍繼續。</string>
     <string name="CrippleBuff_Name">殘疾</string>
     <string name="Crystal_Desc">巨大閃亮的水晶懸浮在空中。也許它充滿了強大的魔法。</string>
     <string name="Crystal_Gender">masculine</string>
@@ -600,6 +602,7 @@
     <string name="DarkSacrifice_Ok">我的此生歸你了！</string>
     <string name="DarkSacrifice_Resist">你沒有能力控制我！</string>
     <string name="DarkSacrifice_Self">為了天災！</string>
+    <string name="DarkVeilBuff_Info">黑暗面紗籠罩主人四周，每次受到傷害時召喚一個靈魂。</string>
     <string name="DarkVeilBuff_Name">暗黑面紗</string>
     <string name="Darkness_Info">好像是永恒黑暗的碎片在空中漂浮</string>
     <string name="Dart_Gender">masculine</string>
@@ -1276,7 +1279,7 @@
     <string name="Lich_Name_Objective">巫妖</string>
     <string name="LightBuff_Info">光從身體散發出來，照亮周圍的一切。</string>
     <string name="LightBuff_Name">照明</string>
-    <string name="LightningBolt_Info">遠古薩滿之間流傳的咒語，能對敵人造成雙倍電擊傷害，尤其是當他們愚蠢地站在水面上時。</string>
+    <string name="LightningBolt_Info">這是古代薩滿共享的一個法術，會使你的敵人受到兩倍的有效打擊，尤其是當他們愚蠢地站在水面上時。</string>
     <string name="LightningBolt_Name">閃電</string>
     <string name="LightningTrap_Desc">你被閃電陷阱的電擊殺死了……</string>
     <string name="LightningTrap_Name">閃電陷阱</string>
@@ -1793,6 +1796,7 @@
     <string name="RottenFood_Message">好惡心！</string>
     <string name="RottenMeat_Info">一份腐爛的肉</string>
     <string name="RottenMeat_Name">腐爛肉</string>
+    <string name="RottenOrgan_Info">從被打敗的敵人身上採集的腐爛器官。儘管狀態惡劣，但含有錬金過程所需的寶貴化合物。</string>
     <string name="RottenOrgan_Name">腐爛的器官</string>
     <string name="RottenPasty_Info">這餡餅看起來十分惡心，但可以通過一些方法讓它再次能夠食用。</string>
     <string name="RottenPasty_Name">腐爛餡餅</string>
@@ -1917,6 +1921,7 @@
     <string name="SeedPouch_Info">這個小天鵝絨袋允許你在裏面儲存任何數量的種子，非常的方便。</string>
     <string name="SeedPouch_Name">種子袋</string>
     <string name="Senior_Desc">這些武僧都是些狂信徒，他們會傾其所能從一切異族手中保護他們城市的秘密。他們不使用任何盔甲亦或武器，單純依靠徒手格鬥技巧來戰鬥。這個特別的武僧掌握了致殘對手的技巧。</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">武僧大師</string>
     <string name="Senior_Name_Objective">武僧大師</string>
     <string name="ServantNPC_Desc">非常忙碌的旅馆服务生。</string>
@@ -2414,6 +2419,7 @@
     -- 怪物發光效果\n
     - 錯誤修復\n
     </string>
+    <string name="Welcome_Text_32_1">remix.32.1\n- Gameplay:\n-- Plague Doctor quest line\n-- Mob carcasses now somewhat usable items\n-- Better pets control\n- UX:\n-- Improved save-game management\n- Modding:\n-- Local mod installation methods\n-- Custom items now can perform actions while being in heaps\n- Bugs fixed</string>
     <string name="Welcome_Title">歡迎！</string>
     <string name="WindGust_Info">召喚一陣狂風，將選定生物吹走。</string>
     <string name="WindGust_Name">狂風</string>
@@ -2990,6 +2996,14 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
 
 
 

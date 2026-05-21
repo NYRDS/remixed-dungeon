@@ -477,6 +477,7 @@
     <string name="ClassArmor_NotEquipped">Devi indossare questa armatura per usare il suo potere speciale!</string>
     <string name="Claymore_Info">Questa spada enorme dovrebbe essere in grado di aprirti un varco ovunque.</string>
     <string name="Claymore_Name">Claymore</string>
+    <string name="CloakBuff_Info">Un mantello scuro ti cela nell\'ombra, rendendoti meno visibile agli nemici</string>
     <string name="CloakBuff_Name">Nascosto</string>
     <string name="CloakSpell_EnemiesNearby">Non puoi nasconderti nell\'ombra mentre i nemici sono vicini.</string>
     <string name="CloakSpell_Info">Entra nelle ombre per diventare invisibile. Riduce notevolmente le possibilità di essere rilevati. Non può essere usato mentre ci sono nemici nelle vicinanze.</string>
@@ -552,7 +553,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">granchio delle fogne</string>
     <string name="Crab_Name_Objective">granchio delle fogne</string>
-    <string name="CrippleBuff_Info">Il corpo è infermo, ma la lotta continua.</string>
+    <string name="CrippleBuff_Info">Il corpo è mutilato ma la lotta continua.</string>
     <string name="CrippleBuff_Name">Azzoppato</string>
     <string name="Crystal_Desc">Un grosso e brillante cristallo fluttua nell\'aria. Probabilmente è pieno di potente magia. </string>
     <string name="Crystal_Gender">masculine</string>
@@ -909,6 +910,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="HeroClass_Mag">mago</string>
     <string name="HeroClass_MagPerks_0">I maghi iniziano con un\'unica Bacchetta del Missile Magico. Questa bacchetta potrà successivamente essere \&quot;disincantata\&quot; per un\'altra.</string>
     <string name="HeroClass_MagPerks_1">I maghi ricaricano più velocemente le proprie bacchette.</string>
+    <string name="HeroClass_MagPerks_2">Quando mangiato, qualsiasi pezzo di cibo ripristina 1 carica per tutti gli scettri nell\'inventario.</string>
     <string name="HeroClass_MagPerks_3">I maghi possono usare le bacchette come armi da mischia.</string>
     <string name="HeroClass_MagPerks_4">I maghi usano il mana per lanciare magie Elementali.</string>
     <string name="HeroClass_MagPerks_5">Le pergamene di identificazione sono già identificate dall\'inizio.</string>
@@ -1231,6 +1233,7 @@ Potrebbe bruciare?</string>
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Info">La luce emana dal corpo, illuminando tutto ciò che lo circonda.</string>
     <string name="LightBuff_Name">Illuminato</string>
+    <string name="LightningBolt_Info">Questo è un incantesimo condiviso tra gli antichi sciamani, che traumatizzerà i tuoi nemici il doppio, soprattutto se sono abbastanza sciocchi da stare in piedi sull\'acqua.</string>
     <string name="LightningTrap_Desc">Sei stato ucciso dalla scarica di una trappola fulminante</string>
     <string name="LightningTrap_Name">Trappola fulminante</string>
     <string name="LloidsBeacon_ACReturn">RITORNA</string>
@@ -1710,7 +1713,7 @@ Potrebbe bruciare?</string>
     <string name="Ring_Info3b">, e siccome è maledetto, non hai la capacità di rimuoverlo.</string>
     <string name="Ring_Info4">%1$s\n\ni può sentire una magia maligna agguato all\'interno del %2$s.</string>
     <string name="Ring_Name">%s anello</string>
-    <string name="Roar_Info">Il potente ruggito metterà sicuramente paura ai tuoi nemici e ispirerà gli alleati.</string>
+    <string name="Roar_Info">Il ruggito potente spaventerà di sicuro i tuoi nemici e darà coraggio agli alleati.</string>
     <string name="RogueArmor_ACSpecial">BOMBA FUMOGENA</string>
     <string name="RogueArmor_Desc">Indossando questa veste scura, un furfante può eseguire una mossa chiamata \&quot;bomba fumogena\&quot; (anche se non sono usati veri esplosivi): acceca i nemici che possono vederlo e salta da un\'altra parte.</string>
     <string name="RogueArmor_Fov">Puoi saltare soltanto in una posizione vuota nel tuo campo visivo</string>
@@ -1946,6 +1949,7 @@ Potrebbe bruciare?</string>
     <string name="SociologistNPC_AlreadyTaken">Hai già partecipato al sondaggio, per favore torna più tardi</string>
     <string name="SociologistNPC_Desc">Questo sociologo è nella sua sacra impresa di raccogliere le opinioni del pubblico</string>
     <string name="SociologistNPC_DownloadError">Scusa, qualcosa è andato storto, riprova di nuovo</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Hi">Ciao! Vorresti fare un sondaggio? (Serve connessione ad Internet)\n La tua opinione conta! </string>
     <string name="SociologistNPC_InternetRequired">Scusa, ma senza accesso ad Internet non puoi prendere parte al nostro sondaggio</string>
     <string name="SociologistNPC_Name">Sociologo</string>
@@ -2339,6 +2343,7 @@ Potrebbe bruciare?</string>
     -- Effetto luminoso per i Mobs\n
     - Bug corretti\n
     </string>
+    <string name="Welcome_Text_32_1">remix.32.1\n- Gameplay:\n-- Plague Doctor quest line\n-- Mob carcasses now somewhat usable items\n-- Better pets control\n- UX:\n-- Improved save-game management\n- Modding:\n-- Local mod installation methods\n-- Custom items now can perform actions while being in heaps\n- Bugs fixed</string>
     <string name="Welcome_Title">Benvenuto!</string>
     <string name="WindGust_Info">Evoca una raffica di vento che soffia via il personaggio selezionato.</string>
     <string name="WindGust_Name">Raffica di vento</string>
@@ -2711,7 +2716,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_covered_table_desc">Tavolo di legno con tovaglia bianca</string>
     <string name="town_deco_covered_table_name">Tavolo</string>
     <string name="town_deco_crate_bottles_desc">L\'imbottigliamento della birra è diventato un passatempo molto popolare tra i locandieri.</string>
-    <string name="town_deco_crate_bottles_name">Cassa di birra</string>
+    <string name="town_deco_crate_bottles_name">Crate di birra</string>
     <string name="town_deco_crate_desc">Una robusta cassa di legno che custodisce i suoi segreti all\'interno.</string>
     <string name="town_deco_crate_name">Cassetto</string>
     <string name="town_deco_crate_scrolls_desc">Questa cassa è piena fino all\'orlo di conoscenza segreta.</string>
@@ -2850,6 +2855,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_trapdoor_name">Botola</string>
     <string name="town_deco_tree_desc">Una strana sensazione sorge guardando questo albero vivo e così pacifico albero. D\'altronde, non molto lontano da qui giace un dungeon stipato di ogni sorta di orrore e morte.</string>
     <string name="town_deco_tree_name">Albero</string>
+    <string name="town_deco_urn_desc">Urna di argilla, forse con le ceneri di qualcuno.</string>
     <string name="town_deco_urn_name">Urna</string>
     <string name="town_deco_vat_desc">Questa vasca di pietra è colma fino all\'orlo di acqua santa.</string>
     <string name="town_deco_wall_beam_desc">Serve come fidato supporto per questa costruzione.</string>
@@ -2885,6 +2891,16 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -33,7 +33,7 @@
     <string name="AirElemental_Name_Objective">повітряного елементаля</string>
     <string name="AlarmTrap_Desc">Пастка генерує пронизливий звук, який лунає підземеллям!</string>
     <string name="Albino_Desc">Сумчасті щури агресивні, але на надто сильні мешканці каналізації. Проте у великій кількості становлять значну загрозу. Конкретно цей щур - альбінос. Він також має незвичайно великі ікла.</string>
-    <string name="Albino_Gender">masculine</string>
+    <string name="Albino_Gender">feminine</string>
     <string name="Albino_Name">щур-альбінос</string>
     <string name="Albino_Name_Objective">щура-альбіноса</string>
     <string name="AlchemyPot_SelectSeed">Обери насіння</string>
@@ -98,6 +98,7 @@
     <string name="ArmoredStatue_Name_Objective">живу статую</string>
     <string name="Artifact_Limit">Ти можеш носити тільки 2 артефакти водночас.</string>
     <string name="AttackDelay_Increased">Не вдається використовувати %s як слід. Повільні замахи, важке дихання…</string>
+    <string name="Attack_Range">Дальність атаки</string>
     <string name="AwarenessBuff_Info">Чуття загострилися, що дозволяє краще усвідомлювати оточення.</string>
     <string name="AwarenessBuff_Name">Обізнаність</string>
     <string name="AzuterronNPC_Desc">Загадкова фігура огорнута чорним туманом.</string>
@@ -767,6 +768,7 @@
     <string name="Eye_Name_Objective">зле око</string>
     <string name="Facilitations_Descriptions_0">Мутанти завжди ставились з презрінням і страхом, але відсутність голоду знову дасть вам перевагу, цього разу в завоюванні глибин підземелля.</string>
     <string name="Facilitations_Descriptions_1">Досі невідомо, ким були ваші батьки, але природна троліча регенерація допоможе загоїти всі майбутні бойові шрами.</string>
+    <string name="Facilitations_Descriptions_2">Глибоке та ретельне вивчення природи як джерела енергії дозволить вам поповнювати магічні резерви під час подорожі.</string>
     <string name="Facilitations_Descriptions_3">Затягнувши пояс зі шкіри огра, який передавався кожному новому поколінню, ви робите крок у невідомість, що попереду.</string>
     <string name="Facilitations_Names_0">Без голоду</string>
     <string name="Facilitations_Names_1">Тіло троля</string>
@@ -2203,6 +2205,7 @@
     <string name="Tamahawk_Info">Хоча ця сокира і не сильно і важка, проте все одно потребує значно сили для ефективного використання.</string>
     <string name="Tamahawk_Name">томагавк</string>
     <string name="TenguLiver_Info">Ця печінка належить могутньому ворогові. Саме лише погляд на неї пробуджує в тобі тваринний інстинкт: пронизати, розірвати, поглинути.</string>
+    <string name="TenguLiver_Name">Печінка тенгу</string>
     <string name="Tengu_Desc">Тенґу - члени древнього клану вбивць. Вони відомі своїм уподобанням до пасток та сюрикенів.</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">Нарешті, свобода...</string>
@@ -2640,7 +2643,7 @@
     <string name="WndSelectLanguage_ImproveTranslation">Будь ласка, допоможіть покращити переклади Remixed Dungeon</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Натисніть тут, щоб приєднатися до команди перекладачів Remixed Dungeon </string>
     <string name="WndSettingsInGame_GameLog">Ігровий лог</string>
-    <string name="WndSettingsInGame_IsometricTiles">Ізометричні плитки</string>
+    <string name="WndSettingsInGame_IsometricTiles">Ізометричні тайли</string>
     <string name="WndSettings_ActionButtonSize">Розмір кнопок</string>
     <string name="WndSettings_Brightness">Яскравість</string>
     <string name="WndSettings_ClassicFont">Класичний шрифт</string>
@@ -2820,6 +2823,7 @@
     <string name="town_deco_counter_name">Прилавок</string>
     <string name="town_deco_covered_table_desc">Дерев\'яний стіл накритий білою скатертиною.</string>
     <string name="town_deco_covered_table_name">Стіл</string>
+    <string name="town_deco_crate_bottles_name">Ящик для пива</string>
     <string name="town_deco_crate_desc">Міцний дерев\'яний ящик, у якому зберігаються його таємниці.</string>
     <string name="town_deco_crate_scrolls_name">Скриня зі сувоїв</string>
     <string name="town_deco_cross_desc">Литий срібний хрест, символ місцевої релігії - \&quot;Свідки Санти - Володаря Глибин\&quot;.</string>
@@ -2997,6 +3001,12 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
+
 
 
 
