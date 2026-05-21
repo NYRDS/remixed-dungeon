@@ -634,7 +634,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="Displacement_Txt">Áthelyező %s</string>
     <string name="DoctorArmor_Name">Doktor Ruházat</string>
     <string name="DoctorArmor_NotDoctor">Csak a pestisdoktorok használhatják ezt az páncélt!</string>
-    <string name="DoctorSpecial">Miasma felhő</string>
+    <string name="DoctorSpecial">Miasma Felhő</string>
     <string name="DogeMask_Info">Akartál már valaha a híres Doge-ként öltözni? Most itt van rá a lehetőséged!
 Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="DogeMask_Name">Dózse álarc</string>
@@ -656,7 +656,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="Drink_ACDrink">IDD MEG</string>
     <string name="Drink_Message">Ez az ital felrissítő volt!</string>
     <string name="DrunkardNPC_Desc">Rendszeres vendég természetes állapotban.</string>
-    <string name="DrunkardNPC_Name">részeges</string>
+    <string name="DrunkardNPC_Name">ivás</string>
     <string name="Drunkard_Phrase_1">MÉG TÖBB PIAÁT KÉÉK!</string>
     <string name="Drunkard_Phrase_3">Ez a sör így néz ki, mint a por</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
@@ -690,6 +690,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="DwarfToken_Info">Sok törp és néhány nagyobb teremtményük hordoz ilyen kis fémdarabokat, de nem tudni hogy miért. Talán ékszerek vagy valamiféle azonosításra szolgálnak. A törpök különös népek.</string>
     <string name="DwarfToken_Name">törpe zseton</string>
     <string name="EarthElemental_Desc">A Föld-elementálok a természet ereje által irányított földdarabok.</string>
+    <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">föld elementál</string>
     <string name="EarthElemental_Name_Objective">föld elementál</string>
     <string name="EarthrootBuff_Name">Gyógynövény páncél</string>
@@ -1099,7 +1100,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="ItemSprite_Info1">dobd félre: %1$.1f%2$.1f</string>
     <string name="Item_ACAlchemy">ALKÍMIA</string>
     <string name="Item_ACDrop">LETESZ</string>
-    <string name="Item_ACPickup">Felvesz</string>
+    <string name="Item_ACPickup">Összegyűjt</string>
     <string name="Item_ACThrow">ELDOBNI</string>
     <string name="Item_DirThrow">Válassz irányt a dobáshoz</string>
     <string name="Item_Info">kovácsolt</string>
@@ -1107,6 +1108,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Item_Name">kovácsolt</string>
     <string name="Item_PackFull">A táskád tele van %s-t nem tudod eltenni</string>
     <string name="JarOfSouls_Desc">A ragyogó szemei a koponyának amelyet az öreg palackra festettek, valamint a furcsa energia amit magából áraszt, teljesen kikészít.</string>
+    <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name">Lelkekkel teli üveg</string>
     <string name="JarOfSouls_Name_Objective">Lelkekkel teli üveg</string>
     <string name="Javelin_Gender">neuter</string>
@@ -1233,6 +1235,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="LevitationBuff_Info">A test lebeg a föld felett, elkerülve a csapdákat és más földi veszélyeket.</string>
     <string name="LevitationBuff_Name">Lebegsz</string>
     <string name="LibrarianNPC_Desc">Nagyon szégyenlős. Furcsa szvettert és vastag szemüveget hord.</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">Sz-szia. Üdvözlünk a Könyvtárban. Itt bármiről információt gyűjthetsz, ami a kazamatában található... valójában csak arról van ismeretünk, amit már más kalandorok felfedeztek. Ez... ez eléggé kínos. Szóval minden alkalommal, mikor meglátogatsz minket, lehet, hogy új olvasnivalóval találkozol.</string>
     <string name="LibrarianNPC_Message_Not_Ready">S...Sajnálom, A k-könyvtár még... nincs nyitva.</string>
     <string name="LibrarianNPC_Name">könyvtáros</string>
@@ -2024,6 +2027,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">póktojás</string>
     <string name="SpiderEgg_Name_Objective">póktojás</string>
+    <string name="SpiderElite_Desc">Mint a a katonák, a pókkoracsőrösök elkötelezettek a birodalomuk védelmére. Az elit őrség mérge célját összezavarja.</string>
     <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">pók elit őr</string>
     <string name="SpiderExploding_Desc">Kemény munkások békeidőben, ezek a lények élő bombákként rohannak neki ellenségeiknek, bármiféle habozás nélkül; így kapják el azt, aki először szembejön.</string>
@@ -2643,6 +2647,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WrnExperimental_realtime">Valódi idő! mód engedélyezve: ez most valós idejű roguelike, gyorsan kattints vagy megszunadsz.\nSzeretnéd megnézni a csatak?\nJó szerencsével, miközben a csatornai rák ellenőrizte a bélzeteidet.</string>
     <string name="WrnExperimental_title">Kísérleti lehetőségek engedélyezve!</string>
     <string name="Yog_Desc">Yog-Dzewa egy Öreg Isten, egy hatalmas erejű entitás a káosz síkjáról. Egy évezreddel ezelőtt, az ősi törp birodalom hatalmas áldozatok árán épphogy meg tudta nyerni a háborút a démoni seregei ellen, azonban képtelenek voltak elpusztítani magát az Öreg Istent. Helyette bebörtönözték egy a városuk alatt fekvő tárnában, reménykedve hogy sosem lesz újra ereje ahhoz hogy támadjon.</string>
+    <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">A remény csupán illúzió...</string>
     <string name="Yog_Name">Yog-Dzewa</string>
@@ -2919,6 +2924,17 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

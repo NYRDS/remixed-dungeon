@@ -752,6 +752,7 @@
     <string name="Eye_Name">邪眼</string>
     <string name="Eye_Name_Objective">邪眼</string>
     <string name="Facilitations_Descriptions_0">變異者向來遭受蔑視與恐懼，但飢餓感的消失將再次賦予你優勢，這次是在征服地下城深淵之時。</string>
+    <string name="Facilitations_Descriptions_1">Хто були ваші батьки, досі невідомо, але природне тролоподібне регенерування допоможе загоїти всі майбутні бойові шрами.</string>
     <string name="Facilitations_Descriptions_2">對大自然作為能量來源進行深入而徹底的研究，將使你在旅程中補充魔法儲備。</string>
     <string name="Facilitations_Descriptions_3">緊緊繫上由食人魔皮革製成、代代相傳的腰帶，你朝著前方的未知邁出一步。</string>
     <string name="Facilitations_Names_0">無飢餓</string>
@@ -1409,6 +1410,7 @@
     <string name="Monk_Defense">招架</string>
     <string name="Monk_Desc">這些武僧都是些狂信徒，他們會傾其所能從一切異族手中保護他們城市的秘密。他們不使用任何盔甲亦或武器，單純依靠徒手格鬥技巧來戰鬥。</string>
     <string name="Monk_Disarm">%1$s將你手中的%2$s擊飛了！</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">矮人武僧</string>
     <string name="Monk_Name_Objective">矮人武僧</string>
     <string name="MoongraceBuff_Info">周圍的空氣變得更加飽和，使人能夠更好地集中精神並恢復魔力。</string>
@@ -1534,6 +1536,7 @@
     <string name="PlagueDoctorQuest_3_1_Prologue">*牠的眼中閃爍著一種奇異而狂熱的光芒* 啊，_吸血蝙蝠_！夜間的生物，以獵物的生命力為食。有趣……真是有趣。我需要一隻活的來研究其獨特的生理構造。這一切都是關於……理解……理解……*牠的聲音逐漸低沉，喃喃自語著一堆神秘術語*。對！蝙蝠的回聲定位，牠在完全黑暗中導航的能力……這是解開秘密的關鍵。</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*他仰頭發出咯咯的笑聲，聲音在他潮濕的實驗室中回盪* 壯觀！一個_死亡騎士_，站在我們面前！從它身上散發的力量……令人陶醉！*他轉向你，眼睛閃爍著狂熱的光芒* 而對你，一個配得上你勇氣的獎勵：一瓶_力量藥水_！願它賜予你征服任何敵人的力量！現在……讓我們檢查我們的主題。它的本質蘊含著可能改寫生命法則的秘密！*他帶著瘋狂的獰笑接近_死亡騎士_，揮舞著一瓶冒泡的綠色液體*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">這不僅僅是野獸！它是死靈力量的活見證！活捉它，不能受傷！這個_死亡騎士_……它是關鍵！</string>
+    <string name="PlagueDoctorQuest_3_2_Prologue">一個_死亡騎士_！*他的聲音因興奮而破碎，骨瘦如柴的手指顫抖著緊握著一個充滿渾濁熒光液體的試管*。這樣的生物……是不死之光！要活捉一個……這將是……里程碑式的。想像一下我們可以解鎖多少秘密！它骷髏血管中流淌的力量！是的，一個_死亡騎士_！這對我的研究至關重要！因為它將使我們能夠更深入……探索生命的謎團……以及死亡本身的奧秘！</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">五個＿矮人巫師＿，他們的身體仍脈動著黑暗魔法微弱的迴響！為我找回他們，我會獎勵你一瓶無與倫比的強力藥水——＿力量藥水＿，它將賦予你十人之力！</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">啊嚏！矮人！那些頑固的地下居民，痴迷於寶石和黃金。但我渴望的是_矮人術士_……他們扭曲的魔法，由他們居住的深淵提供燃料。五個，我需要五個那些枯萎的靈魂！他們的身體是理解某種……現象的關鍵。關於通過大地本身引導奧術能量的事情。我相信我接近突破了，但我需要他們的本質，他們腐敗的魔法！*他劇烈地咳嗽在手帕上，深色的污漬蔓延到精緻的織物上*</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Splendid! Öt _Kobold Jegyző_, jégesszenciájuk most az enyém, hogy felfedezzem! Kapcsolatuk a jeges sivatagokkal, igazán lenyűgöző. Ahogy ők magukkal vízet manipulationálják... igazán figyelemre méltó. *Átad neked egy csillogó ampullát, tele élénk bordó folyadékkal* Ez a bátor fellépésedért: egy _Erő potion_! Szívj mélyet, és érezd a tíz harcos erejének áramlását az ereidben! Emlékezz, tudás az erelem... és az erő az egyetlen fegyverünk a sötétség ellen. Most... boncoljuk szét ezeket a jégmegelmeleket, és fedjük fel jégbelepi titkait!</string>
@@ -2446,6 +2449,7 @@
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">錢包地址</string>
     <string name="WndCryptoDonate_warningText">ATTENZIONE: Verifica sempre l\'indirizzo prima di inviare fondi. Le transazioni in criptovaluta sono irreversibili!</string>
+    <string name="WndCustomizations_Title">自訂設定</string>
     <string name="WndDonate_commonDonateText">混合地牢——永遠對所有人免費。
 但是，你能幫我們讓這個遊戲變得更好。
 除了我們的衷心感謝以外，你還將獲得一些界面上的美化。</string>
@@ -2996,6 +3000,11 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
 
 
 

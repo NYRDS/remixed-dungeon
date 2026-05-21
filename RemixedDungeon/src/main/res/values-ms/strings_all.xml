@@ -481,6 +481,7 @@
     <string name="ClassArmor_LowHealt">Tenaga hayat anda terlalu rendah!</string>
     <string name="ClassArmor_LowMana">Mana tidak mencukupi!</string>
     <string name="ClassArmor_NotEquipped">Anda perlu memakai perisai ini supaya dapat guna kuasa istimewanya!</string>
+    <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Pedang besar ini dapat memotong apa sahaja.</string>
     <string name="Claymore_Name">Claymore</string>
     <string name="CloakBuff_Info">Sebuah jubah gelap menyembunyikan anda dalam bayangan, menjadikan anda kurang ketara oleh musuh.</string>
@@ -688,6 +689,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DwarfToken_Info">Ramai orang kerdil dan beberapa penciptaan bersaiz besar mereka tersemat kepingan kecil logam ini tetapi tidak diketahui tujuannya. Mungkin sebagai hiasan ataupun sejenis ID atau pengenalan. Orang kerdil ini memang bangsa yang pelik.</string>
     <string name="DwarfToken_Name">token orang kerdil</string>
     <string name="EarthElemental_Desc">Keunsuran tanah adalah jasad tanah yang diperkasakan dengan tenaga alam.</string>
+    <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">keunsuran tanah</string>
     <string name="EarthElemental_Name_Objective">keunsuran tanah</string>
     <string name="EarthrootBuff_Info">Akar-akar telah tumbuh dari tanah memberikan perisai semula jadi.</string>
@@ -1098,6 +1100,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="IronKey_Name">kunci besi</string>
     <string name="ItemSprite_Info1">buang: %1$.1f %2$.1f</string>
     <string name="Item_ACDrop">LEPAS</string>
+    <string name="Item_ACPickup">Ambil</string>
     <string name="Item_ACThrow">BUANG</string>
     <string name="Item_DirThrow">Pilih arah untuk dibuang</string>
     <string name="Item_Info">smth</string>
@@ -1468,6 +1471,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PlagueDoctorNPC_After_Quest">Saya buktikan, Saya buktikan kepada mereka semua!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Kenapa awak masih di sini? Ambil ini!</string>
     <string name="PlagueDoctorNPC_Desc">Sibongkok ini sepenuh diliputi dengan pakaian berkulit. Dia berbau ubat dan juga... bawang putih?</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">doktor wabak</string>
     <string name="PlagueDoctorNPC_Name_Objective">doktor wabak</string>
     <string name="PlagueDoctorNPC_Quest_End">Bagus bagus, terima kasih, saya harap kulit ini dapat memberi petunjuk ada penyakit di dalamnya. Sampel sebelum ini tidak memberi apa-apa bukti. Jadi saya buat ini untuk awak semasa menunggu sampel baharu tiba.</string>
@@ -2928,6 +2932,13 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
 
 
 

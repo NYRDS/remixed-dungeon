@@ -753,6 +753,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Fadeleaf_Desc">Menyentuh tanaman Fadeleaf akan menteleportasikan makhluk apapun ke tempat acak di level itu.</string>
     <string name="Fadeleaf_Name">Fadeleaf</string>
     <string name="FetidRat_Desc">Tikus berkantung ini jauh lebih besar dari tikus biasa. Itu dikelilingi oleh awan busuk.</string>
+    <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">Tikus busuk</string>
     <string name="FetidRat_Name_Objective">Tikus busuk</string>
     <string name="Fez_Info">Ini adalah hiasan kepala berbentuk kerucut terpotong yang terbuat dari kain merah, dengan rumbai yang menempel di atasnya. Dan tidak, itu tidak membuat dunia menjadi 3 dimensi.</string>
@@ -1250,6 +1251,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="LevitationBuff_Info">Tubuh melayang di atas tanah, menghindari jebakan dan bahaya duniawi lainnya.</string>
     <string name="LevitationBuff_Name">Melayang</string>
     <string name="LibrarianNPC_Desc">Orang yang sangat pemalu, mengenakan sweter yang tampak canggung dan kacamata tebal.</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">H-halo. Selamat datang di Perpustakaan. Di sini Anda dapat menemukan informasi tentang segala macam hal, yang dapat ditemukan di dungeons ... sebenarnya kami hanya dapat memberikan pengetahuan yang ditemukan oleh para petualang. Itu... agak memalukan. Jadi setiap kali Anda mengunjungi kami, mungkin akan ada hal-hal baru untuk dibaca.</string>
     <string name="LibrarianNPC_Message_Not_Ready">Aku... Maaf, perpustakaanku belum buka... belum.</string>
     <string name="LibrarianNPC_Name">pustakawan</string>
@@ -2156,6 +2158,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="TenguLiver_Info">Hati ini milik musuh yang perkasa. Hanya dengan melihatnya, naluri liar Anda mengambil alih, dan Anda merasakan dorongan untuk mengkonsumsinya.</string>
     <string name="TenguLiver_Name">hati tengu</string>
     <string name="Tengu_Desc">Tengu adalah anggota dari klan pembunuh kuno, yang juga bernama Tengu. Pembunuh ini dikenal atas penggunaan jebakan dan shuriken yang banyak.</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">Bebas akhirnya...</string>
     <string name="Tengu_Info2">Tertangkap, %s!</string>
     <string name="Tengu_Info3">Kena kau, %s!</string>
@@ -2193,6 +2196,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ToughShield_desc">Perisai yang diperkuat dengan tali kulit ini terlihat lebih tangguh daripada yang terbuat dari kayu. Itu pasti bisa memblokir lebih banyak kerusakan.</string>
     <string name="ToughShield_name">Perisai yang diperkuat kulit</string>
     <string name="TownGuardNPC_Desc">Penjaga kota biasa</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">Terus berjalan</string>
     <string name="TownGuardNPC_Message2">Terima kasih pada petualang sepertimu, disini menjadi sangat damai.</string>
     <string name="TownGuardNPC_Message3">Anda pikir ada terlalu banyak penjaga di kota ini? Yah, itu karena ini adalah satu-satunya kota dengan Dungeon raksasa yang dipenuhi monster, bukan?</string>
@@ -2993,6 +2997,10 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 
