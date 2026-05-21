@@ -212,6 +212,7 @@
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">吸血蝙蝠</string>
     <string name="Bat_Name_Objective">吸血蝙蝠</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">這把有著巨大鋼製頭部的戰斧能將龐大的力量傾註在每次揮擊之中。</string>
     <string name="BattleAxe_Name">戰斧</string>
     <string name="Bee_Desc">雖然體型小，但蜜蜂會拼死保衛建巢。不過牠們活不久。</string>
@@ -346,6 +347,7 @@
     <string name="Carcass_Devoured">你已經吞食了%s的屍體！</string>
     <string name="Carcass_DissectFailed">你解剖了 %s，但沒發現任何有價值的东西。</string>
     <string name="Carcass_DissectMessage">你解剖了屍體並獲得了一個 %s。</string>
+    <string name="Carcass_Info">已死亡%s的殘骸。</string>
     <string name="Carcass_Kick">這隻%s已經完全死了,沒有必要再踢它。</string>
     <string name="Carcass_Name">%s 的遺骸</string>
     <string name="Carcass_Necromancy">你已復活了%s 的屍體！</string>
@@ -617,6 +619,7 @@
     <string name="Deathling_Name_Objective">死靈</string>
     <string name="DeepSnail_Desc">這種軟體動物經常出現在水源附近，而且比普通蝸牛速度快得多。不過要小心牠們的咬傷，可能會對你的皮膚造成不適。</string>
     <string name="DeepSnail_Gender">masculine</string>
+    <string name="DeepSnail_Name">深螺</string>
     <string name="DeepSnail_Name_Objective">深淵蝸牛</string>
     <string name="DeferedDamageBuff_Info">疼痛已被轉化為緩慢的痛楚，減少了同時受到的傷害。\n剩餘待承受傷害 %d</string>
     <string name="DeferedDamage_Killed_Txt">%s 殺了您……</string>
@@ -2977,6 +2980,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

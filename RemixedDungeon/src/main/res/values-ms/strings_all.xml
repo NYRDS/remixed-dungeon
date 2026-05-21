@@ -283,6 +283,7 @@
     <string name="BlankScroll_ReallyBlank">Skrol ini kosong isinya</string>
     <string name="BleedingBuff_Name">Berdarah</string>
     <string name="Bleeding_Death">Anda mati kerana pendarahan...</string>
+    <string name="BlessedBuff_Info">Semoga ketepatan dan pengelakan datang kepada mereka yang disentuh berkat!</string>
     <string name="BlessedBuff_Name">Diberkati</string>
     <string name="BlindnessBuff_Name">Menjadi Buta</string>
     <string name="BloodTransfusion_Name">Pengisaran Darah</string>
@@ -416,6 +417,7 @@
     <string name="CharAction_Scare">menakut-nakuti</string>
     <string name="CharAction_Steal">curi</string>
     <string name="CharAction_Take">ambil</string>
+    <string name="CharInfo_Level">Ini adalah level %1 %2.</string>
     <string name="Char_Defeat_0">%1$s menewaskan %2$s</string>
     <string name="Char_Defeat_1">%1$s menewaskan %2$s</string>
     <string name="Char_Defeat_2">%1$s menewaskan %2$s</string>
@@ -2912,6 +2914,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

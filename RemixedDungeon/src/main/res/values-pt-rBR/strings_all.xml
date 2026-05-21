@@ -675,6 +675,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Drink_ACDrink">BEBER</string>
     <string name="Drink_Message">Aquela bebida estava refrescante!</string>
     <string name="DrunkardNPC_Desc">cliente regular da pousada em estado natural</string>
+    <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">bêbado</string>
     <string name="DrunkardNPC_Name_Objective">bêbado</string>
     <string name="Drunkard_Phrase_1">MAI\' CEVEJA PO\' FAVÔ\'!</string>
@@ -751,6 +752,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="ExplodingSkull_Name">crânio explosivo</string>
     <string name="ExplodingSkull_Name_Objective">crânio explosivo</string>
     <string name="Eye_Desc">Um dos outros nomes deste demônio é \&quot;esfera de ódio\&quot;, porque quando vê um inimigo, ele usa seu Olhar da Morte de forma imprudente, muitas vezes ignorando seus aliados e ferindo-os.</string>
+    <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">Olhar da Morte de %s matou você...</string>
     <string name="Eye_Name">olho do mal</string>
     <string name="Eye_Name_Objective">olho do mal</string>
@@ -1360,6 +1362,7 @@ Parede
     <string name="MimicAmulet_Name">mímico</string>
     <string name="MimicAmulet_Name_Objective">mímico</string>
     <string name="MimicPie_Desc">Imitações são criaturas mágicas que pode assumir qualquer forma que desejarem. Esse aqui parece um grande e delicioso pastel\&quot;;</string>
+    <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">imitação</string>
     <string name="MimicPie_Name_Objective">imitação</string>
     <string name="Mimic_Desc">Imitações são criaturas mágicas que pode assumir qualquer forma que desejarem. Em masmorras eles quase sempre escolher a forma de um baú do tesouro, porque eles sabem como atrair aventureiros.</string>
@@ -2473,6 +2476,7 @@ remix.31.1\n
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Você pode apoiar o desenvolvimento do Remixed Dungeon enviando doações em criptomoedas para os endereços abaixo. Obrigado pelo seu generoso apoio!</string>
     <string name="WndCryptoDonate_openWallet">Abrir Carteira</string>
+    <string name="WndCryptoDonate_supportDev">Apoie o Desenvolvedor</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Endereço da Carteira</string>
@@ -3028,6 +3032,10 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
 
 
 
