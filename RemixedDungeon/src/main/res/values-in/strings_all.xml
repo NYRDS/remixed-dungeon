@@ -422,6 +422,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ChaosHelmet_Name">Helm kekacauan</string>
     <string name="ChaosShield_desc">Perisai Chaos adalah hasil dari peleburan Kristal Chaos dengan perisai biasa, menyebabkannya memunculkan efek kacau acak saat berhasil menahan serangan.</string>
     <string name="ChaosShield_name">Tameng Kekacauan</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Tongkat yang dijiwai Kekuatan Khaos! Apa lagi yang dapat seorang penyihir mimpikan atau takuti?</string>
     <string name="ChaosStaff_Name">tongkat khaos</string>
     <string name="ChaosSword_Gender">masculine</string>
@@ -2990,6 +2991,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

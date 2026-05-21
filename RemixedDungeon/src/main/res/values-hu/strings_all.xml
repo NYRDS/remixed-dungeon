@@ -817,6 +817,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="GnollTamahawk_Info">Egy hagyományos Tomahawk a Gnoll mesterek által készítve, ahol minden klánnak egyedileg tervezett példánya van. Ez a Tomahawk alig könnyebb a párjainál.</string>
     <string name="GnollTamahawk_Name">gnoll tomahawk</string>
     <string name="Gnoll_BecomeGuardianDesc">Őrzővé válás</string>
+    <string name="Gnoll_BecomeWitchdoctorDesc">Legyen魔兽医生</string>
     <string name="Gnoll_Desc">A gnollok hiéna szerű humanoid teremtmények. Csatornákban és kazamatákban laknak, hordába verődve időnként a felszínre merészkednek, hogy fosztogassanak. A gnoll felderítők a falka átlagos tagjai. Nem olyan erősek mint a nehézfiúk és nem olyan intelligensek mint a sámánok.</string>
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnoll felderítő</string>
@@ -2807,6 +2808,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_porch_desc">Fa előcsarnok.</string>
     <string name="town_deco_porch_name">Előcsarnok</string>
     <string name="town_deco_poster_desc">Poszterek a mozi előjövő előadásairól.</string>
+    <string name="town_deco_poster_name">Plakát</string>
     <string name="town_deco_potions_desc">Valamiféle bájitalok a polcon.</string>
     <string name="town_deco_potions_name">Varázsfőzet</string>
     <string name="town_deco_projector_desc">Egy régi készülék, amit filmnézésre és az emberek szórakoztatására használnak.</string>
@@ -2907,6 +2909,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

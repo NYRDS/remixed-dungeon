@@ -225,6 +225,7 @@
     <string name="BattleAxe_Name">бойова сокира</string>
     <string name="Bee_Desc">Попри свій малий розмір, бджоли мають звичай люто захищати свій вулик. Хоча живуть вони недовго.</string>
     <string name="Bee_Gender">masculine</string>
+    <string name="Bee_Name">бджола</string>
     <string name="Bee_Name_Objective">бджолу</string>
     <string name="BellaNPC_Amulet_F">Чому б апетитний пиріг не був таким гарним, це те що у вас є. Ах, такий вишуканий амулет! А ти ... ти так яскраво сяєш в порівнянні з будь-ким. Що якщо ми прогуляємося і обговорити наше взаємне майбутнє?</string>
     <string name="BellaNPC_Amulet_M">Чому б привітання не було таке гарне, це те що у вас є. Ах, такий вишуканий амулет! А ти ... ти стоїш над цими плебеями. Що якщо ми прогуляємося і обговорити наше взаємне майбутнє?</string>
@@ -1353,6 +1354,7 @@
     <string name="MercenaryNPC_Desc">Міцний чолов\'яга.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">найманець</string>
+    <string name="MercenaryNPC_Name_Objective">наймача</string>
     <string name="Metabolism_Txt">%s метаболізму</string>
     <string name="MiasmaGas_Info">Дихати цим отруйним туманом отруйно, слабить і збиває з орієнтиру тих, хто ним дихає.</string>
     <string name="MimicAmulet_Desc">Найславетніший момент твоєї пригоди щойно обернувся пасткою.</string>
@@ -2443,6 +2445,7 @@
     <string name="WndClass_Mastery">Майстерність</string>
     <string name="WndCryptoDonate_bitcoin">Біткоїн</string>
     <string name="WndCryptoDonate_copyAddress">Копіювати адресу</string>
+    <string name="WndCryptoDonate_currency">Валюта</string>
     <string name="WndCryptoDonate_ethereum">Ефіріум</string>
     <string name="WndCryptoDonate_infoText">Ви можете підтримати розробку Remixed Dungeon, надіславши пожертви криптовалютою на наведені нижче адреси. Дякуємо за вашу щедру підтримку!</string>
     <string name="WndCryptoDonate_openWallet">Відкрити гаманець</string>
@@ -2990,6 +2993,9 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
 
 
 

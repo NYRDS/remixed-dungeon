@@ -1136,6 +1136,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Knuckles_Info">Sekeping besi yang pakai erat ketika menggenggam tangan.</string>
     <string name="Knuckles_Name">buku lima</string>
     <string name="KoboldIcemancer_Desc">Pengguna ais kobold merupakan elit dalam masyarakat mereka. Seorang satria, ahli sihir dan paling penting saintis. Pengguna ais purba menguasai seni pembentukan ais dapat mencipta mekanisma canggih dari ais dengan diperkuatkan dengan kuasa ajaib...</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">Bebola ais %s telah membunuh anda..</string>
     <string name="KoboldIcemancer_Name">pengguna ais kobold</string>
     <string name="KoboldIcemancer_Name_Objective">pengguna ais kobold</string>
@@ -2010,6 +2011,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpiderExploding_Name">pekerja lelabah</string>
     <string name="SpiderExploding_Name_Objective">pekerja lelabah</string>
     <string name="SpiderGuard_Desc">Seperti juga askar, pengawal lelabah telah bersumpah untuk melindungi Kerajaan mereka. Racun dari pengawal ini digunakan untuk melumpuhkan sasaran mereka.</string>
+    <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">pengawal lelabah</string>
     <string name="SpiderGuard_Name_Objective">pengawal lelabah</string>
     <string name="SpiderMindAmber_Desc">Lelabah ambar merupakan makhluk misteri yang sukar ditemui. Mereka mempunyai kuasa psikik seakan psi-lelabah tetapi lebih kuat berbanding saudaranya yang lain. Nama \&quot;ambar\&quot; merujuk pada warna selaput otak gergasinya.</string>
@@ -2918,6 +2920,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

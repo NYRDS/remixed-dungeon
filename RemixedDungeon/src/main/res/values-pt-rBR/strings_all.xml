@@ -732,6 +732,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Esta arma é feita de liga de metálica especial, tornando-a muito mais leve em comparação a uma adaga comum.</string>
     <string name="ElvenDagger_Name">adaga élfica </string>
+    <string name="EncumbranceBuff_CharAct_1">Não tenho força suficiente para manejar %s corretamente.</string>
     <string name="EncumbranceBuff_CharAct_2">Este %s é muito pesado para eu usar com eficácia.</string>
     <string name="EncumbranceBuff_CharAct_3">Preciso trabalhar na minha força antes de poder usar %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Eu não tenho força suficiente para usar %s ao seu pleno potencial.</string>
@@ -938,6 +939,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Hedgehog_Name">ouriço</string>
     <string name="HeroClass_Doctor">Médico da Peste</string>
     <string name="HeroClass_Elf">Elfo</string>
+    <string name="HeroClass_ElfPerks_0">Elfos começam com 15 pontos de Vida e 9 pontos de Força.</string>
     <string name="HeroClass_ElfPerks_1">Elfos são imunes ao enraizamento</string>
     <string name="HeroClass_ElfPerks_2">Elfos começam com um arco de madeira melhorado e um monte de flechas</string>
     <string name="HeroClass_ElfPerks_3">Elfos são peritos com arcos e ágeis</string>
@@ -3036,6 +3038,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

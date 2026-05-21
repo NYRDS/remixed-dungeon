@@ -19,6 +19,7 @@
     <string name="AboutScene_Thanks">Ringraziamenti speciali:</string>
     <string name="AboutScene_Translation">Tradotto da:</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon di NYRDS basato su Pixel Dungeon Source di Watabou.</string>
+    <string name="Accuracy_Decreased">Perché ho pensato di poter usare un %s? Strumento sbagliato, mani sbagliate!</string>
     <string name="Accuracy_DecreasedDoctor">Ogni oscillazione di questo %s diffonde imperfezione. Il mio Bisturi cura… questo infetta.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Mani nude infettano la mia tecnica. Senza il taglio pulito della Sega, la mia precisione si deteriora nel caos.</string>
     <string name="Acidic_Desc">Queste creature demoniche simili ad aracnidi evitano i combattimenti ravvicinati ad ogni costo, lanciando punte paralizzanti da lunghe distanze.</string>
@@ -1215,6 +1216,7 @@ Potrebbe bruciare?</string>
     <string name="Level_TileWall">Muro</string>
     <string name="Level_TileWater">Acqua</string>
     <string name="Level_TileWell">Pozzo</string>
+    <string name="LevitationBuff_Info">Il corpo fluttua sopra il suolo, evitando trappole e altri pericoli terrestri.</string>
     <string name="LevitationBuff_Name">Levitante</string>
     <string name="LibrarianNPC_Desc">Una persona molto timida, indossa un maglione dall\'aspetto goffo e un paio di occhiali con lenti molto spesse.</string>
     <string name="LibrarianNPC_Message_Instruction">C-ciao. Benvenuto alla Biblioteca. Qua puoi trovare informazioni su ogni genere di cosa che può essere trovata nel dungeon... A dire il vero possiamo solo informare su cose scoperte dagli avventurieri. Ehm... è un po\' imbarazzante, sì. Ogni volta che ci visiterai, probabilmente, ci saranno nuove cose da leggere</string>
@@ -2877,6 +2879,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 
