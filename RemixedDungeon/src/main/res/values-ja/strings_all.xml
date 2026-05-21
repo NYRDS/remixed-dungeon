@@ -339,6 +339,7 @@
     <string name="CagedKobold_Name">檻の中のコボルド</string>
     <string name="CagedKobold_Name_Objective">檻の中のコボルド</string>
     <string name="CagedKobold_Quest_End">ああ、ありがとう、本当にありがとう！どうやって鍵を見つけたんだ？武器を破壊したのか？信じられない！あのな、俺はお前を助けると言ったろ。そして、そのための最善の方法を知っていると思う。しばらくの間、付き合うよ。\&quot;檻の中のコボルト\&quot;はロウソクになった。</string>
+    <string name="Calm_Cast">%s calms down.</string>
     <string name="Calm_Info">この辺りには攻撃的な生き物がたくさんいる。彼らを落ち着かせてあげよう。</string>
     <string name="Calm_Name">カーム</string>
     <string name="CandleOfMindVision_Info">見た目は普通のロウソクで、危険なダンジョンにあるとは思えない。奇妙なことに、まだ火が点いていないにもかかわらず、触るとかなり温かい。</string>
@@ -841,6 +842,7 @@
     <string name="Ghost_Defense">回避した</string>
     <string name="Ghost_Desc">ゴーストはかろうじて見える。それは悲しい顔をしてぼんやりと光っている。</string>
     <string name="Ghost_Name">悲しいゴースト</string>
+    <string name="Ghost_Name_Objective">幽霊</string>
     <string name="Ghost_Rat1">こんにちは、冒険家...かつての私はあなたのように強く、自信に満ちていた...そして死んでしまった...でもここを離れることができない...復讐を果たすまでは...私の命を奪ったあの腐ったネズミに...</string>
     <string name="Ghost_Rat2">お願い...助けて...私の代わりにあいつを殺して...</string>
     <string name="Ghost_Rose1">こんにちは、冒険家...かつての私はあなたのように強く、自信に満ちていた...そして死んでしまった...でもここを離れることができない...「乾燥したバラ」を手に入れるまでは...大切なバラなのに...あるモンスターに盗まれてしまった...</string>
@@ -3060,6 +3062,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

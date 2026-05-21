@@ -923,6 +923,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="HeroClass_MagPerks_4">A Mágusok manát használnak az elemi varázslatok megidézéséhez.</string>
     <string name="HeroClass_MagPerks_5">Az Azonosítás Tekercse már a kezdetekkor ismert.</string>
     <string name="HeroClass_Necromancer">holtidéző</string>
+    <string name="HeroClass_NecromancerPerks_0">Nekromanták 15 Health ponttal kezdődik.</string>
     <string name="HeroClass_NecromancerPerks_1">A Halottidézők manát használnak a halál varázslatok megidézéséhez.</string>
     <string name="HeroClass_NecromancerPerks_2">A Halottidézők egy egyedi Halottidéző köpennyel kezdenek, ami 1 manát ad minden legyőzött lény után.</string>
     <string name="HeroClass_NecromancerPerks_3">A Halottidézők egy 7-es szintű csont kulccsal kezdenek.</string>
@@ -1031,6 +1032,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="IceGuardianCoreModule_Info">Ez egy komplex struktúra, mágikus jégből. Egy fénylő kő van elhelyezve ebben a csodás találmányban.</string>
     <string name="IceGuardianCoreModule_Name">Jégőr Mag</string>
     <string name="IceGuardianCore_Desc">A Jégőröket ősi koboldok gyártották, hogy a barlangjaikat védje. A belsejükben tárolt energiával a Jégőr képes újraépíteni magát, amíg ereje tart.</string>
+    <string name="IceGuardianCore_DieInfo">It is so cold here, I better go back to level 14 and try to find a way to a warmer place.</string>
     <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name">Jég védelmező</string>
     <string name="IceGuardianCore_Name_Objective">Jég őr</string>
@@ -2056,6 +2058,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Sprout_Info">Ébreszd fel a szunnyadó magokat.\nA varázslat sikeréhez azonban szükséges némi növényzet a talajon.</string>
     <string name="Sprout_Name">Hajtás</string>
     <string name="StartScene_ChooseFromSlot">Válassz egy mentési helyet</string>
+    <string name="StartScene_ComingSoon">Coming soon</string>
     <string name="StartScene_ContinueLatest">Folytassa legutóbbi játékát, vagy válasszon egy mentési helyet</string>
     <string name="StartScene_Depth">Mélység: %1$d\nSzint: %2$d</string>
     <string name="StartScene_DifficultyEasy">Könnyű (hirdetésekkel)</string>
@@ -2679,6 +2682,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_armorstand_scale_desc">A páncél aranyozott lemezei vadonatújnak tűnnek.</string>
     <string name="town_deco_armorstand_scale_name">Pikkelyes páncél</string>
     <string name="town_deco_banner_desc">Egy elegáns zászló, amely e tivornyázóhely szimbólumait ábrázolja.</string>
+    <string name="town_deco_banner_name">Banner</string>
     <string name="town_deco_barrel_desc">Egy normális hordó, de nem a legjobb állapotban.</string>
     <string name="town_deco_barrel_name">Hordó</string>
     <string name="town_deco_barrel_wine_desc">Érdek volt, hogy ilyen értékes ital, mint a bor tárolására szolgált.</string>
@@ -2903,6 +2907,10 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
 
 
 

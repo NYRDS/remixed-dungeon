@@ -365,6 +365,7 @@
     <string name="Challenges_Descriptions_1">一攻就是最佳防守。遵循這些教導，你踏進地城冒險，信仰將成為你身體最強的護盾。</string>
     <string name="Challenges_Descriptions_3">地城周圍的土地早已受到惡意感染，阻止各種草藥和植物的種子生長。誰知道還要多久，最後的植物才會在這片貧瘠的土地上消失。</string>
     <string name="Challenges_Descriptions_4">一種邪惡的存在潛伏在地城中所有生物的心智裡，使它們能察覺彼此之間發生的事件。</string>
+    <string name="Challenges_Descriptions_5">Зло первым принесло плотный и непроницаемый туман, из-за которого почти невозможно ясно ориентироваться в бесконечных коридорах подземелья.</string>
     <string name="Challenges_Descriptions_6">閱讀符文的古老藝術被禁止並不惜一切代價避免，因為每個流入地下城或其周圍的卷軸都被施加了詛咒。</string>
     <string name="Challenges_Descriptions_7">你已習慣了擁有和使用武器在道德上是不正確的事實，但除此之外，你還能如何抵禦在下面遊蕩的怪物呢？</string>
     <string name="Challenges_Descriptions_8">您的旅程将从黑暗危险的城镇下水道开始，唯一的出路被阻断。更糟糕的是，您只能使用在地下城中找到的装备。资源有限的情况下，您的生存将取决于您的技能和策略。</string>
@@ -409,6 +410,7 @@
     <string name="ChaosHelmet_Info">血紅色的頭盔是混沌戰士的基本象徵。</string>
     <string name="ChaosHelmet_Name">混沌頭盔</string>
     <string name="ChaosShield_desc">混沌護盾是將混沌水晶與普通盾牌融合的結果，使其在成功格擋時隨機產生混亂效果。</string>
+    <string name="ChaosShield_name">Chaos Shield</string>
     <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">與混沌之力融合的法杖，不就是眾法師或敬或畏之物嗎？</string>
     <string name="ChaosStaff_Name">混沌法杖</string>
@@ -622,6 +624,7 @@
     <string name="DeepSnail_Name">深螺</string>
     <string name="DeepSnail_Name_Objective">深淵蝸牛</string>
     <string name="DeferedDamageBuff_Info">疼痛已被轉化為緩慢的痛楚，減少了同時受到的傷害。\n剩餘待承受傷害 %d</string>
+    <string name="DeferedDamageBuff_Name">Deferred Damage (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s 殺了您……</string>
     <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">吞噬</string>
@@ -824,6 +827,7 @@
     <string name="Ghost_Rat2">求求你……幫幫我……殺死那個令人憎恨的東西……</string>
     <string name="Ghost_Rose1">你好冒險者……曾經我也像你一樣——強壯而自信……雖然現在我已經死了……但是我無法離開這個地方……除非我拿到我的_枯幹玫瑰_……那是對我非常重要的東西……一些怪物從我的身體偷走了它……</string>
     <string name="Ghost_Rose2">求求你……幫幫我……找到那朵玫瑰……</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Info">一把在末端嵌有劍刃的長柄武器。</string>
     <string name="Glaive_Name">關刀</string>
     <string name="GnollArmor_ACSpecial">號召</string>
@@ -2980,6 +2984,10 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
 
 
 

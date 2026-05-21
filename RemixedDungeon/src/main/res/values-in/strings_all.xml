@@ -1152,6 +1152,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="King_Info3">Beraninya kau!</string>
     <string name="King_Name">Raja Kurcaci</string>
     <string name="King_Name_Objective">Raja Kurcaci</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Info">Sepotong besi berbentuk untuk muat di lipatan jari.</string>
     <string name="Knuckles_Name">knuckle</string>
     <string name="KoboldIcemancer_Desc">Kobold Icemancers adalah elit masyarakat. Prajurit terkenal, penyihir dan yang paling penting, ilmuwan. Ahli es kuno memanfaatkan seni memerintah es, menciptakan mekanisme kompleks yang diperkuat dengan mantra khusus.</string>
@@ -1511,6 +1512,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*Matanya berkilat dengan intensitas aneh yang gila* Ah, _kelelawar vampir_! Makhluk malam, yang memakan tenaga hidup mangsanya. Menarik... benar-benar menarik. Saya butuh satu yang hidup untuk mempelajari fisiologinya yang unik. Ini semua tentang... memahami... memahami... *Dia terbata-bata, bergumam pada dirinya sendiri dengan serangkaian istilah arcan*. Ya! Ekolokasi _kelelawar_, kemampuannya untuk navigasi dalam kegelapan total... itu kunci untuk membuka rahasia.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*Ia menengadahkan kepala dan tertawa keras, suara tawa menggema di laboratorium lembabnya* Luar biasa! Seorang _Ksatria Kematian_, berdiri di hadapan kita! Kekuatan yang memancar dari wujudnya... memabukkan! *Ia menoleh kepadamu, mata bersinar penuh intensitas demam* Dan untukmu, hadiah yang pantas atas keberanianmu: sebuah _Potion of Strength_! Semoga memberimu kekuatan untuk mengalahkan musuh apa pun! Sekarang... mari kita teliti subjek kita. Inti dari wujudnya menyimpan rahasia yang bisa mengubah hukum kehidupan itu sendiri! *Ia mendekati _Ksatria Kematian_ dengan senyum maniak, mengacungkan sebuah botol cairan hijau yang mendidih*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Ini bukan sekadar binatang! Ini adalah bukti berjalan dari kekuatan nekromantik! Tangkap satu, hidup dan tidak terluka! Ini _Ksatria Kematian_... itu adalah kuncinya!</string>
+    <string name="PlagueDoctorQuest_3_2_Prologue">_Ridwan Kematian_! *Suaranya pecah karena antusias, jari-jarinya yang kurus gemetar saat ia menggenggam sebuah botol berisi cairan keruh yang berpendar*. Makhluk seperti itu... sebuah mercu yang memancarkan kematian! Menangkap satu, hidup... itu akan... monumental. Bayangkan rahasia apa saja yang bisa kita buka! Kekuatan yang mengalir melalui pembuluh darahnya yang tengkorak! Ya, _Ridwan Kematian_! Ini sangat penting untuk penelitian saya! Karena itu akan memungkinkan kita untuk mengeksplorasi lebih dalam... ke dalam misteri kehidupan... dan kematian itu sendiri!</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">Sempurna! Para _Dwarf Warlocks_, esensi mereka kini bisa kuteliti! Begitu menyimpang dan terkorupsi sihirnya... sungguh menakjubkan. *Ia mengangkat sebuah botol berisi cairan merah kental yang berpendar.* Ini, untukmu: sebuah _Potion of Might_! Minumlah kekuatannya, dan kau akan merasakan kekuatan gunung-gunung mengalir dalam darahmu! Ingatlah, pengetahuan yang diperoleh dari pengorbanan ini pada akhirnya akan melayani tujuan yang lebih tinggi... mungkin bahkan menyelamatkan kita semua dari nasib yang lebih buruk dari kematian. </string>
     <string name="PlagueDoctorQuest_4_1_InProgress">Lima _Dwarf Warlock_, tubuh mereka masih berdenyut dengan gema lemah sihir gelap! Bawakan mereka untukku, dan aku akan memberimu hadiah berupa ramuan kekuatan yang tak tertandingi – sebuah _Potion of Might_ yang akan memberimu kekuatan sepuluh orang!</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Dwarf! Para penghuni bawah tanah yang keras kepala, terobsesi dengan permata dan emas. Tapi _Dwarf Warlock_-lah yang aku inginkan… sihir terpelintir mereka, didorong oleh kedalaman tempat mereka tinggal. Lima, aku butuh lima dari jiwa-jiwa layu itu! Tubuh mereka memegang kunci untuk memahami suatu… fenomena. Sesuatu tentang menyalurkan energi arkan melalui bumi itu sendiri. Aku percaya aku dekat dengan terobosan, tapi aku butuh esensi mereka, sihir terkutuk mereka! *Dia batuk dengan keras ke sapu tangannya, noda gelap menyebar di kain halus itu*</string>
@@ -1785,6 +1787,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="RottingFist_Name_Objective">tinjuan pembusukan</string>
     <string name="RoyalShield_desc">Sebuah perisai logam penuh. Ya, itu berat, tetapi hanya itu yang bisa memberi Anda perlindungan terbaik.</string>
     <string name="RoyalShield_name">Perisai Kerajaan</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Hanya pemanah terhebat dapat menggunakan busur rubi ini. Hampir semua panah akan menembus musuh, meninggalkan lubang besar di tubuhnya, tapi kekuatan ekstrim dibutuhkan untuk menarik tali busur ini.</string>
     <string name="RubyBow_Name">busur rubi</string>
     <string name="RubyCrossbow_Info">Senjata mematikan ini adalah hasil karya terbaik dari teknisi mesin para kurcaci.</string>
@@ -2987,6 +2990,9 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

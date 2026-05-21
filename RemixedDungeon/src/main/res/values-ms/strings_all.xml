@@ -417,6 +417,7 @@
     <string name="CharAction_Scare">menakut-nakuti</string>
     <string name="CharAction_Steal">curi</string>
     <string name="CharAction_Take">ambil</string>
+    <string name="CharAction_Taunt">provokasi</string>
     <string name="CharInfo_Level">Ini adalah level %1 %2.</string>
     <string name="Char_Defeat_0">%1$s menewaskan %2$s</string>
     <string name="Char_Defeat_1">%1$s menewaskan %2$s</string>
@@ -1125,6 +1126,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="KindOfWeapon_EquipCursed">anda mengerenyet bilamana genggaman tak disangka anda menjerut %s anda</string>
     <string name="King_Defense">ditepis</string>
     <string name="King_Desc">Raja terakhir orang kerdil terkenal atas pengetahuan mendalam berkenaan kehidupan dan kematian. Dia telah memujuk pengikutnya menyertai satu upacara yang dapat memberi mereka keremajaan abadi. Malangnya, hanya dia sahaja yang berjaya - manakala yang lain telah mati dan menjadi makhluk hidup semula.</string>
+    <string name="King_Gender">masculine</string>
     <string name="King_Info1">Awak tak boleh bunuh saya, %s... Saya...dewa...</string>
     <string name="King_Info2">Bangun, hamba!</string>
     <string name="King_Info3">Berani kau!</string>
@@ -1237,6 +1239,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Info">Cahaya terpancar dari badan, menerangi segala-galanya di sekeliling.</string>
     <string name="LightBuff_Name">Bercahaya</string>
+    <string name="LightningBolt_Info">A spell that is shared among ancient shamans, that will shock your enemies twice as effectively, especially if they are foolish enough to be on standing on water.</string>
     <string name="LightningBolt_Name">Sambaran kilat</string>
     <string name="LightningTrap_Desc">Anda terbunuh kerana ada nyahcas dari perangkap panahan kiliat...</string>
     <string name="LightningTrap_Name">perangkap panahan kilat</string>
@@ -2186,6 +2189,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ToxicGas_Info">Awan hijau gas toksid berpusaran di sini.</string>
     <string name="ToxicGas_Info1">Anda mati kerana terhidu gas toksik.</string>
     <string name="ToxicGland_Info">Kelenjar toksik yang diperoleh daripada musuh yang dikalahkan. Kelenjar ini dipenuhi dengan toksin kuat dan boleh digunakan dalam proses alkimia.</string>
+    <string name="ToxicGland_Name">Kelenjar Beracun</string>
     <string name="TrapWnd_Step">Anda pasti mahu memijak perangkap ini? Berkemungkinan anda boleh mati.</string>
     <string name="TrapWnd_Title">Perangkap</string>
     <string name="TreacherousSpirit_Desc">Makhluk seperti raksaksa ini menyerupai awan hidup kegelapan. Mata yang tidak berkelip memandang anda, berdenyut-denyut bila melihat anda bergerak.</string>
@@ -2914,6 +2918,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 
