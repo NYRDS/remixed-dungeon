@@ -695,6 +695,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">föld elementál</string>
     <string name="EarthElemental_Name_Objective">föld elementál</string>
+    <string name="EarthrootBuff_Info">A földből gyökerek csíráztak, amelyek természetes páncélt nyújtanak.</string>
     <string name="EarthrootBuff_Name">Gyógynövény páncél</string>
     <string name="Earthroot_Desc">Amikor egy lény a Földgyökérhez ér, a gyökerei egyfajta természetes páncélt csinál körülötte.</string>
     <string name="Earthroot_Name">Földgyökér</string>
@@ -2217,6 +2218,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="TrapWnd_Step">Biztos hogy ráakarsz lépni erre a csapdára? Bele is halhatsz.</string>
     <string name="TrapWnd_Title">Csapda</string>
     <string name="TreacherousSpirit_Desc">Ez az irtózatos teremtmény úgy néz ki, mint egy felhőnyi élő sötétség. Héj nélküli szeme téged bámul, pulzálva minden mozdulatodra.</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">Álnok lélek</string>
     <string name="TreacherousSpirit_Name_Objective">Álnok lélek</string>
     <string name="Typical_Damage">Tipikus sebzés</string>
@@ -2388,6 +2390,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndCryptoDonate_copyAddress">Másolás</string>
     <string name="WndCryptoDonate_currency">Valuta</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
+    <string name="WndCryptoDonate_infoText">A Remixed Dungeon fejlesztését kriptovaluta adományokkal támogathatod az alábbi címekre küldve. Köszönjük a nagylelkű támogatást!</string>
     <string name="WndCryptoDonate_openWallet">Nyissa meg a pénztárcát</string>
     <string name="WndCryptoDonate_supportDev">Támogasd a fejlesztőt</string>
     <string name="WndCryptoDonate_ton">TON</string>
@@ -2483,6 +2486,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndLibrary_Items_Btn">Tárgyak</string>
     <string name="WndLibrary_Levels_Btn">Kazamata</string>
     <string name="WndLibrary_Mobs_Btn">Szörnyek</string>
+    <string name="WndLocalModInstall_pick">Mod könyvtár kiválasztása</string>
     <string name="WndLocalModInstall_text">Válassza ki a könyvtárat, amelyből a modot telepíteni szeretné.</string>
     <string name="WndLocalModInstall_title">Telepíts mod a helyi könyvtárból</string>
     <string name="WndModInstall_InstallingMod">Mod telepítése</string>
@@ -2928,6 +2932,10 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
 
 
 

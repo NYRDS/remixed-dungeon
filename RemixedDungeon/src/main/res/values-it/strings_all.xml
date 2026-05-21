@@ -2553,6 +2553,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndSaveSlotSelect_dontLike">Non ti piacciono le ads? Fai una donazione e scompariranno. PER SEMPRE.</string>
     <string name="WndSelectLanguage_ImproveTranslation">Aiuta a migliorare le traduzioni di Remixed Dungeon</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Clicca qui per unirti al team di traduzione di Remixed Dungeon</string>
+    <string name="WndSettingsInGame_GameLog">Registro di gioco</string>
     <string name="WndSettingsInGame_IsometricTiles">Tile Isometriche</string>
     <string name="WndSettings_ActionButtonSize">Dimensioni pulsanti d\'azione</string>
     <string name="WndSettings_Brightness">Luminosità</string>
@@ -2829,10 +2830,12 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_skullboard_desc">Questo teschio cattura perfettamente il momento di orrore inaspettato.</string>
     <string name="town_deco_skullboard_name">Porta trofei</string>
     <string name="town_deco_skulls_desc">Teschi lucidati appartenenti a creature del dungeon.</string>
+    <string name="town_deco_skulls_name">Crania</string>
     <string name="town_deco_slush_desc">Questa neve ha cominciato a sciogliersi, rendendo la zona circostante fangosa.</string>
     <string name="town_deco_slush_name">Nevischio</string>
     <string name="town_deco_snow_desc">Nonostante la fama di questo posto tra gli avventurieri, sorprendentemente c\'è molta neve qui. Sembra che camminino per queste strade in molto pochi</string>
     <string name="town_deco_snow_name">Neve</string>
+    <string name="town_deco_snowdrift_desc">È un cumulo di neve piuttosto grande e evidentemente nessuno ha intenzione di pulirlo.</string>
     <string name="town_deco_snowdrift_name">Banchina</string>
     <string name="town_deco_snowman_desc">Il pupazzo di neve è una decorazione tradizionale del paese durante il periodo delle feste, messo in questo posto per celebrare specialmente il giorno di \&quot;Dungeonale\&quot;, quando i mostri invasero il dungeon</string>
     <string name="town_deco_snowman_name">Pupazzo di neve</string>
@@ -2901,6 +2904,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 

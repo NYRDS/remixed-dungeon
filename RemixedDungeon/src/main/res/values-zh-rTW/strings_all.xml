@@ -1382,6 +1382,7 @@
     <string name="MissileWeapon_No">不，我改主意了</string>
     <string name="MissileWeapon_Sure">您確定要將其用作近戰武器？</string>
     <string name="MissileWeapon_Yes">是的，我知道我在做什麼</string>
+    <string name="MobAi_status">這個 %1 是 %2</string>
     <string name="Mob_Attacking">把這個%s當作死了！</string>
     <string name="Mob_Cannot_Be_Pet">你沒法控制住 \&quot;%s\&quot;</string>
     <string name="Mob_Desc">真正的說明即將到來！</string>
@@ -2230,6 +2231,7 @@
     <string name="TownGuardNPC_Message3">你覺得這個鎮上守衛太多了嗎？嗯，那是因為這是唯一一個有著邪神出沒的地牢的城鎮，不是嗎？</string>
     <string name="TownGuardNPC_Name">城鎮守衛</string>
     <string name="TownGuardNPC_Name_Objective">城鎮守衛</string>
+    <string name="TownPortal_Info">這個法術允許你瞬間回到安全地帶。然而，附近強大的魔法源可能會阻止它按預期工作。</string>
     <string name="TownPortal_Name">回城卷軸</string>
     <string name="TownScript_NeedWeapon">我不會赤手空拳去地牢！\n也許值得先去鎮上的商店看看？</string>
     <string name="TownShopkeeper_Desc">平凡的商人，卻知道您的斤兩。</string>
@@ -2405,6 +2407,7 @@
     <string name="Weightstone_WndChoice">您希望怎樣強化這件%s?</string>
     <string name="Weightstone_WndSpeed">速度</string>
     <string name="Welcome_Ok">棒極了！</string>
+    <string name="Welcome_Text_30_1">remix.30.1\n- 遊戲玩法:\n-- 狼人 subclass!\n-- 蝸牛!\n-- Chaos 物品進度削弱。\n-- 魔法藥水現在是普通藥水。\n-- 徽章現在可以在玩 DLC 時獲得(但不是 mods)。\n- 修復錯誤\n</string>
     <string name="Welcome_Text_31_0">remix.31.0\n- 遊戲玩法：\n-- 可選的等軸測模式！\n- 模組製作：\n-- 可模組化的關卡物件\n- 錯誤修復\n</string>
     <string name="Welcome_Text_31_1">remix.31.1\n- 遊戲玩法：\n-- 新的自定義功能！\n-- 新種類蜘蛛！\n-- 現在心靈蜘蛛會增強其他蜘蛛，而不是削弱英雄。\n- 錯誤修復\n</string>
     <string name="Welcome_Text_32">
@@ -3004,6 +3007,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

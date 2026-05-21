@@ -905,6 +905,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="HealthDart_Info">Ujung Dart ini tercakup dalam ramuan penyembuhan.</string>
     <string name="HealthDart_Name">Dart Penyembuhan</string>
     <string name="Heap_Mimic">Ini adalah mimik!</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Jantung hitam yang berdenyut dari Roh Pengkhianat.</string>
     <string name="HeartOfDarkness_Name">Hati dari kegelapan</string>
     <string name="Hedgehog_Desc">Landak itu kelihatan malu.</string>
@@ -1477,6 +1478,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Pickaxe_ACMine">TAMBANG</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Ini adalah alat yang besar dan kokoh untuk memecahkan batu. Itu mungkin bisa digunakan sebagai senjata.</string>
+    <string name="Pickaxe_InsufficientStr">Kekuatan tidak cukup untuk menggali!</string>
     <string name="Pickaxe_Name">beliung</string>
     <string name="Pickaxe_NoVein">Tidak ada emas gelap disekitarmu yang bisa digali</string>
     <string name="Piercing_Name_0">Tajam %s</string>
@@ -1912,6 +1914,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ServantNPC_Name">pelayan penginapan</string>
     <string name="ServantNPC_Name_Objective">pelayan penginapan</string>
     <string name="ServiceManNPC_Desc">Seorang pekerja tetap dari perusahaan lokal.</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Saya benar-benar minta maaf, tetapi setiap petualang baru hanya dapat menonton %d film secara total.</string>
     <string name="ServiceManNPC_Limit_Reached">Saya minta maaf, tetapi Anda telah mencapai batas Anda saat ini. Tetapi Anda akan dapat menggunakan layanan kami lagi untuk setiap level pahlawan yang Anda terima!</string>
     <string name="ServiceManNPC_Name">pekerja</string>
@@ -3000,6 +3003,9 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

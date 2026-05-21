@@ -416,6 +416,7 @@
     <string name="Chaotic Crystal">Kristal Kacau</string>
     <string name="CharAction_Expel">usir</string>
     <string name="CharAction_Give">beri</string>
+    <string name="CharAction_Hit">memukul</string>
     <string name="CharAction_Order">perintah</string>
     <string name="CharAction_Push">tolak</string>
     <string name="CharAction_Scare">menakut-nakuti</string>
@@ -1158,6 +1159,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="KrampusHead_Info">Pernahkah anda tertanya-tanya bagaimana rasanya mengambil peranan yang lebih jahat semasa menjelajahi dungeon? Nah, anda pastinya akan membawa ketakutan kepada tikus-tikus kecil di sekitar dengan penampilan seperti syaitan ini.</string>
     <string name="KrampusHead_Name">Kepala Krampus</string>
     <string name="KunaiThrow_Info">Mautkan Kunai ini dilontar dengan sangat pantas, begitu pantas sehingga anda tidak akan mampu memilih sasaran.\n\nPengguru sebenar mampu melontar lebih dari satu Kunai pada satu masa.</string>
+    <string name="KunaiThrow_Name">Kunai Throw</string>
     <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Senjata ini terdiri dari sabit dengan pemberat besi yang mana kedua-duanya disambung dengan rantai.</string>
     <string name="Kusarigama_Name">kusarigama</string>
@@ -1455,6 +1457,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Pasty_Name">pai</string>
     <string name="Pickaxe_ACMine">MELOMBONG</string>
     <string name="Pickaxe_Info">Alat bersaiz besar dan tegap ini digunakan untuk memecahkan batu. Ia juga boleh digunakan sebagai senjata.</string>
+    <string name="Pickaxe_InsufficientStr">Kuat daya tidak cukup untuk menggali!</string>
     <string name="Pickaxe_Name">beliung</string>
     <string name="Pickaxe_NoVein">Tiada telerang emas gelap berhampiran yang boleh digali</string>
     <string name="Pickaxe_NothingToMine">Tiada yang boleh dicuba di sini!</string>
@@ -2115,6 +2118,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Sungrass_Name">Rumput Suria</string>
     <string name="SurfaceScene_GameOver">Permainan Tamat</string>
     <string name="SuspiciousRat_Desc">Tikus berada dimana-dalam dalam kurungan bawah tanah ini, tetapi yang ini pelik... Anda dapati keseluruhan badannya bergetar bila ia bergerak.</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">Tikus yang meragukan itu melibas-libaskan ekornya dengan kuat.</string>
     <string name="SuspiciousRat_Name">Tikus meragukan</string>
     <string name="SuspiciousRat_Name_Objective">Tikus meragukan</string>
@@ -2936,6 +2940,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 
