@@ -342,6 +342,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Capotain_Info">Egy magas, szűk karimájú kalap. Általában a Puritánokhoz társítják, de nem kell vallásosnak lenned a viseléséhez. Valamilyen oknál fogva egy címke van rajta, ami azt mondja: \&quot;Solomon\&quot;.</string>
     <string name="Capotain_Name">Kapitány</string>
     <string name="Carcass_Devoured">Megfaladtad %s tetemét!</string>
+    <string name="Carcass_DissectFailed">Megvizsgálod a(z) %s-t, de semmi értékeset nem találsz.</string>
     <string name="Carcass_DissectMessage">Széttéped a tetemet és %s tárgyat szerzel.</string>
     <string name="Carcass_DissectResult">A(z) %1$s %2$d termés %3$s-t ad.</string>
     <string name="Carcass_Kick">Ez a(z) %s teljesen halott, nincs értelme rugdosni.</string>
@@ -615,6 +616,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="Deathling_Name_Objective">halandó</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeepSnail_Name_Objective">mély csigát</string>
+    <string name="DeferedDamageBuff_Name">Elhárített kámasz(%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s megölt téged...</string>
     <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">Felfalás</string>
@@ -1398,6 +1400,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="NecromancerArmor_Name">Csont páncél</string>
     <string name="NecromancerArmor_NotNecromancer"> Csak Nekromaták használhatják ezt a páncélt!</string>
     <string name="NecromancerNPC_Desc">Ez a középkorú fickó egyszerre tűnik idegesnek és izgatottnak. Kompozit páncélja egybedolgozott csontdarabokból készült.</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">Ó micsoda ritka alkalom! Egy kalandortárs, aki nemcsak egy élettelen hulla! Alig hiszem el! Ó bocsánat, néha túlságosan izgulok. Hát tudod, egy nekromata vagyok, halottidéző. Ebből élek, a halált és a halottakat tanulmányozom, és ezeket a dolgokat látom újra, meg újra... és ez elég fárasztó. Másrészt persze pont ezért vagyok itt. A számításaim szerint pár héten belül, valahol pont ebben a katakombában valami naggggyon figyelemreméltó fog történni. a _Nekropolis_, a holtak ősi városa megnyitja ajtaját... és... már túl sokat beszéltem, sok időt elpocsékoltam. Készen kell állnom... _gyere vissza később_.</string>
     <string name="NecromancerNPC_Intro2">Nahát, egy kalandortárs, aki nemcsak egy élettelen hulla! Alig hiszem el! Ó bocsánat, néha túlságosan izgulok. Hát tudod, egy nekromata vagyok. Emiatt ugye a halott testek tanulmányozása és a halál maga, értékes számunkra, minden monotómiájával együtt - előbb utóbb bárki elunná. Másrészt persze pont ezért vagyok itt. A minap valami naggggyon figyelemreméltó történt! A _Nekropolis_, a holtak ősi városa megnyitotta ajtaját, hogy megpillanthassuk. Bizony, itt állunk az ajtaja előtt. És izé... tudod mit, fogd ezt a kulcsot és menj csak be Te először, te imádod az ilyen kalandokat, ugye? Aztán persze megyek én is ... csak egy kicsit még felkészülök.</string>
     <string name="NecromancerNPC_Message1">Oly kevés idő, oly kevés idő...</string>
@@ -1988,6 +1991,7 @@ egy másik helyre a szinten. </string>
     <string name="Snail_Gender">feminine</string>
     <string name="Snail_Name">csiga</string>
     <string name="Snail_Name_Objective">csigát</string>
+    <string name="SnipersMarkBuff_Info">A jelzést sniper hagyta.</string>
     <string name="SnipersMarkBuff_Name">Mesterlövész jele</string>
     <string name="SociologistNPC_AlreadyTaken">Már résztvettél a kérdőív kitöltésében. Látogass vissza később.</string>
     <string name="SociologistNPC_Desc">Ez a szociológus szent küldetésén dolgozik, közvéleménykutatáson.</string>
@@ -2924,6 +2928,10 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
 
 
 

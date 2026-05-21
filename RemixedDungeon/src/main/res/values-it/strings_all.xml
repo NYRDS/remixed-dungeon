@@ -622,6 +622,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DieHardSpell_Name">Duro a morire</string>
     <string name="Displacement_Txt">%s del dislocamento</string>
     <string name="DoctorArmor_Info">Quest\'armatura del dottore della peste permette di usare l\'abilità \&quot;Nuvola di Miasma\&quot;, che rilascia un gas nocivo che avvelena, indebolisce e disorienta i nemici. Il dottore, protetto dalla sua maschera, è immune a questi effetti.</string>
+    <string name="DoctorArmor_Name">Abbigliamento del Dottore</string>
     <string name="DoctorSpecial">Nuvola di Miasma</string>
     <string name="DogeMask_Info">Hai mai voluto travestirti da famoso Doge? Ora è la tua occasione!\nQuesta maschera! Molti travestimenti! Wow!</string>
     <string name="DogeMask_Name">Maschera Doge</string>
@@ -1625,6 +1626,7 @@ Potrebbe bruciare?</string>
     <string name="RatArmor_Info">Un\'armatura in pelle fatta di pelle di ratto. Probabilmente non è contagiosa...</string>
     <string name="RatArmor_Name">armatura da topo</string>
     <string name="RatHide_Info">Un piccolo e sporco pezzo di carne e pelo. Questi possono essere davvero utili a qualcuno?</string>
+    <string name="RatHide_Name">pelle di ratto</string>
     <string name="RatKingCrownBuff_Info">Saluta il Signore dei topi, ogni topo deve obbedire e lodare la grande Rattosità!</string>
     <string name="RatKingCrownBuff_Name">Rattosità</string>
     <string name="RatKingCrown_Info">Corona d\'oro di Sua Rattosità, simbolo di potenza assoluta</string>
@@ -2550,6 +2552,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndSaveSlotSelect_SelectSlot">Seleziona cartuccia</string>
     <string name="WndSaveSlotSelect_dontLike">Non ti piacciono le ads? Fai una donazione e scompariranno. PER SEMPRE.</string>
     <string name="WndSelectLanguage_ImproveTranslation">Aiuta a migliorare le traduzioni di Remixed Dungeon</string>
+    <string name="WndSelectLanguage_LinkToTranslationSite">Clicca qui per unirti al team di traduzione di Remixed Dungeon</string>
     <string name="WndSettingsInGame_IsometricTiles">Tile Isometriche</string>
     <string name="WndSettings_ActionButtonSize">Dimensioni pulsanti d\'azione</string>
     <string name="WndSettings_Brightness">Luminosità</string>
@@ -2838,6 +2841,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_sofa_desc">Sembra che questo cinema provi davvero a fornire i migliori posti per i propri clienti</string>
     <string name="town_deco_sofa_name">Divano comodo</string>
     <string name="town_deco_stakes_desc">Questi tronchi appuntiti hanno un aspetto minaccioso, ma di fatto sono piuttosto inutili di per sé.</string>
+    <string name="town_deco_stakes_name">Pali</string>
     <string name="town_deco_statue_blood_desc">Una statua maestosa di un angelo che regge un calice di sangue.</string>
     <string name="town_deco_statue_blood_name">Statua dell\'angelo</string>
     <string name="town_deco_statue_water_desc">Una maestosa statua di un angelo che tiene una ciotola d\'acqua.</string>
@@ -2897,6 +2901,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 

@@ -1511,6 +1511,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PlagueDoctorQuest_2_1_Prologue">_Biji-biji Bulan_... bunga-bunga gaib yang berbisik dengan sihir bulan itu sendiri. Saya telah mempelajari cahaya keindahan aneh mereka selama beberapa minggu. Ada kekuatan pada esensi mereka, energi tersembunyi yang bisa menjadi kunci untuk... sesuatu. *Mengetuk jari tulang di dagu dengan berpikir* Namun, sayangnya, mereka langka. Hanya ditemukan di gua-gua terdalam di mana cahaya bulan jarang menembus. Saya butuh dua biji. Dua biji untuk membuka rahasia kekuatan mereka. Dan sebagai gantinya, saya bisa menawarkan sesuatu... sebuah rasa murni dari sihir yang kuat. _Potion of Mana_, penuh dengan esensi langsung dari bunga bulan. Ia akan memulihkan jiwa lelah Anda dan memungkinkan Anda menggunakan sihir dengan kekuatan yang baru.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">Luar biasa! _Sungrass_, esensi emasnya berdenyut dengan vitalitas. Saya sudah belajar banyak dari strukturnya yang halus. *Dia memberikan Anda _Potion of Health_, cairannya berkilau dengan cahaya keemasan yang samar.* Minum ini ketika dunia terasa berat bagimu, dan rasakan kehangatan matahari menghidupkan kembali semangatmu.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Dua biji sungrass_. Kelopak emasnya menyimpan kekuatan yang ingin kupahami. Temukan mereka, dan biarkan esensi mereka terungkap!</string>
+    <string name="PlagueDoctorQuest_2_2_Prologue">Ah, _sungrass_! Sebuah bunga lembut, kelopaknya memancarkan kehangatan matahari. Aku percaya esensinya menyimpan kunci untuk… ah, lupakan detailnya dulu. Cukup dikatakan, itu penting untuk penelitian saya. _Dua biji sungrass_. Ambilkan untukku, dan aku akan memberimu sesuatu yang pasti berguna dalam petualanganmu - sebuah _Potion of Health_, dipenuhi vitalitas matahari.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Dia memeluk _kelelawar_ dengan lembut di tangan berkantungnya, mengamati wujud kecil itu dengan kagum yang menakutkan* Hebat! Ekolokasi kelelawar... tidak seperti apa pun yang pernah saya temui. Begitu presisi... begitu... kendali. *Dia menoleh kepadamu, wajahnya tersembunyi oleh topengnya* Atas usahamu, sebuah _Gulungan Peningkatan_. Gunakanlah dengan bijak, karena ia menyimpan potensi untuk... menyempurnakan esensimu. *Dia memberimu gulungan itu, suaranya berbisik pelan* _Kelelawar_ ini, adalah... jendela ke dunia tersembunyi. Dunia... tempat bayangan menari dan rahasia berbisik.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Bawa aku seekor _kelelawar vampir_, hidup dan tidak terluka! Darahnya, sayapnya… mereka menyimpan rahasia yang harus kubongkar!</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*Matanya berkilat dengan intensitas aneh yang gila* Ah, _kelelawar vampir_! Makhluk malam, yang memakan tenaga hidup mangsanya. Menarik... benar-benar menarik. Saya butuh satu yang hidup untuk mempelajari fisiologinya yang unik. Ini semua tentang... memahami... memahami... *Dia terbata-bata, bergumam pada dirinya sendiri dengan serangkaian istilah arcan*. Ya! Ekolokasi _kelelawar_, kemampuannya untuk navigasi dalam kegelapan total... itu kunci untuk membuka rahasia.</string>
@@ -1925,6 +1926,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Shades_Name">Kaca mata</string>
     <string name="ShadowLord_Death">Tidaaaaak....</string>
     <string name="ShadowLord_Desc">Makhluk yang terbuat dari kejahatan dan kegelapan murni, banyak yang percaya bahwa ia sendiri adalah Dewa Tua mengingat betapa kuat dia. Dimana yang lainnya menganggap dia adalah penjaga dari ruang Dewa Tua.</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Persiapkan dirimu!</string>
     <string name="ShadowLord_Name">penguasa kegelapan</string>
     <string name="ShadowLord_Name_Objective">Penguasa Kegelapan</string>
@@ -2016,6 +2018,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">Itu adalah pecahan yang diambil dari sisa-sisa toples jiwa. Itu berkilauan dengan kekuatan misterius, mungkin ada seseorang yang tertarik dengan hal seperti ini.</string>
     <string name="SoulShard_Name">pecahan jiwa</string>
+    <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">Tongkat kayu ramping berujung dengan besi yang tajam.</string>
     <string name="Spear_Name">tombak</string>
     <string name="SpeedBuff_Info">Kelincahan dan energi memancar dari tubuh, dan gerakan terasa lebih cepat dari biasanya.</string>
@@ -2997,6 +3000,9 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

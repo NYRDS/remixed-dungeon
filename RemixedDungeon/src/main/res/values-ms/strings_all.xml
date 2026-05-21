@@ -218,6 +218,7 @@
     <string name="Bee_Desc">Malah pada saiz kecilnya, lebah cenderung mempertahankan sarangnya dengan gigih. Mereka tidak kekal lama walau bagaimanapun.</string>
     <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name">lebah</string>
+    <string name="Bee_Name_Objective">lebah</string>
     <string name="BellaNPC_Amulet_F">Hai si kacak, apa benda yang berkilauan tu. Azimat yang luar biasa! Hmmm, awak... lebih menonjol dan lebih hebat dari yang lain. Marilah kita berbual-bual dan berbincang tentang masa hadapan kita bersama?</string>
     <string name="BellaNPC_Amulet_M">Hai si kacak, apa benda tu yang berkilauan. Azimat yang luar biasa! Dan awak... lebih hebat dari golongan kelas bawahan yang lain. Marilah kita berbual-bual dan berbincang tentang masa hadapan kita bersama?</string>
     <string name="BellaNPC_Angry">Kurang ajar... memang dasar golongan kelas bawahan!</string>
@@ -613,6 +614,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DeepSnail_Name">siput gua</string>
     <string name="DeepSnail_Name_Objective">siput gua</string>
     <string name="DeferedDamageBuff_Info">Rasa sakit telah bertukar menjadi sakit yang perlahan, mengurangkan kerosakan yang diterima sekaligus.\nKerosakan yang tinggal untuk diterima %d</string>
+    <string name="DeferedDamageBuff_Name">Kerosakan yang ditangguhkan (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s telah membunuh anda...</string>
     <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">Baham</string>
@@ -1432,6 +1434,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Nightmare_Name">mimpi ngeri</string>
     <string name="Nightmare_Name_Objective">mimpi ngeri</string>
     <string name="No_Valid_Cell">Tiada bilik yang sesuai berhampiran.</string>
+    <string name="OozeBuff_Info">Ombak kaustik sedang mengikis daging!</string>
     <string name="OozeBuff_Name">Lendir Kaustik</string>
     <string name="Ooze_Death">%s telah membunuh anda...</string>
     <string name="Order_Info">Dengan tumpuan yang betul, arahan anda hampir tidak dapat dinafikan.</string>
@@ -2350,6 +2353,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Weightstone_WndSpeed">Untuk kelajuan</string>
     <string name="Welcome_Ok">Baiklah!</string>
     <string name="Welcome_Text_30_1">remix.30.1\n- Permainan:\n-- Subkelas Gnohl!\n-- Siput!\n-- Kemajuan Item Chaos telah diperlemah.\n-- Ramuan Mantera kini merupakan ramuan biasa mulai sekarang.\n-- Lencana sekarang dapat diperoleh ketika bermain DLC (tetapi bukan modifikasi).\n- Bug telah diperbaiki\n</string>
+    <string name="Welcome_Text_31_0">remix.31.0\n- Gameplay:\n-- Optional Isometric Mode!\n- Modding:\n-- Moddable Level Objects\n- Bugs fixed</string>
     <string name="Welcome_Text_31_1">
     remix.31.1\n
     - Permainan:\n
@@ -2932,6 +2936,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 
