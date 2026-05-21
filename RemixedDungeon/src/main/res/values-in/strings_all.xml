@@ -738,6 +738,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ExplodingSkull_Name">tengkorak meledak</string>
     <string name="ExplodingSkull_Name_Objective">tengkorak meledak</string>
     <string name="Eye_Desc">Nama lain dari setan ini adalah \&quot;bola kebencian\&quot;, karena saat dia melihat musuh, dia menggunakan tatapan mematikannya dengan sembrono, kadang tidak mempedulikan sekutunya dan melukai mereka.</string>
+    <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">Tatapan kematian %s membunuh Anda...</string>
     <string name="Eye_Name">mata jahat</string>
     <string name="Eye_Name_Objective">mata jahat</string>
@@ -1791,6 +1792,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Hanya pemanah terhebat dapat menggunakan busur rubi ini. Hampir semua panah akan menembus musuh, meninggalkan lubang besar di tubuhnya, tapi kekuatan ekstrim dibutuhkan untuk menarik tali busur ini.</string>
     <string name="RubyBow_Name">busur rubi</string>
+    <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Info">Senjata mematikan ini adalah hasil karya terbaik dari teknisi mesin para kurcaci.</string>
     <string name="RubyCrossbow_Name">Busur silang rubi</string>
     <string name="Rudolph_Info">Apa yang bisa lebih meriah daripada hidung merah yang bersinar? Bersama dengan sepasang tanduk, tentu saja.</string>
@@ -2991,6 +2993,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

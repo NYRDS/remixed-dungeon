@@ -86,6 +86,7 @@
     <string name="Armor_Info8">\n\nAnda dapat rasai kuasa ajaib berunsur kejahatan berlingkar-lingkar di dalam %s.</string>
     <string name="Armor_ToString">%1$s :%2$d</string>
     <string name="ArmoredStatue_Desc">Anda tidak sangka ianya adalah sebuah patung yang hodoh. Bukan sahaja matanya merah berkilauan, tetapi sebenarnya tiada siapa yang dapat gambarkan _%s_.</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">patung hidup</string>
     <string name="ArmoredStatue_Name_Objective">patung hidup</string>
     <string name="Artifact_Limit">Anda hanya boleh pakai 2 artifak dalam satu masa.</string>
@@ -701,6 +702,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Senjata ini diperbuat dari aloi logam istimewa, menjadikannya lebih ringan berbanding pisau biasa.</string>
     <string name="ElvenDagger_Name">pisau bunian</string>
+    <string name="EncumbranceBuff_CharAct_1">Saya tidak cukup kuat untuk menggunakan %s dengan betul.</string>
     <string name="EncumbranceBuff_CharAct_2">Ini %s terlalu berat untuk saya gunakan dengan efektif.</string>
     <string name="EncumbranceBuff_CharAct_3">Saya perlu meningkatkan kekuatan saya sebelum boleh menggunakan %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Saya kekurangan kekuatan untuk menggunakan %s secara sepenuhnya.</string>
@@ -805,6 +807,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Ghost_Rat2">Tolong... Bantulah saya... Bunuh mahkluk terkutuk itu...</string>
     <string name="Ghost_Rose1">Hai pengembara.... Dulu saya pun seperti awak - kuat dan yakin... Kini saya telah mati... Malangnya saya tidak boleh tinggalkan tempat ini... Sehinggalah saya dapat kembali _mawar kering_... Ia sangat penting buat saya... Ada beberapa ekor raksaksa mencurinya dari jasad saya...</string>
     <string name="Ghost_Rose2">Tolong... Bantulah saya... Cari bunga mawar...</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Info">Galah yang dihujungnya disepadukan dengan pedang.</string>
     <string name="Glaive_Name">glaive</string>
     <string name="GnollArmor_ACSpecial">DOMINASI</string>
@@ -1458,6 +1461,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PlagueDoctorMaskHood_Info">Sebuah tengkorak hitam yang diukir, lubang matanya yang kosong memancarkan kerlipan zamrud yang anggun. Setiap nafas yang anda sedut berbisik melalui satu jalinan terowong dan penapis, membawa bau herba dan rempah yang kuat yang menutupi pembusukan yang melekat pada diri anda. Tetapi itu bukan sahaja topengnya. Sebuah tudung tebal dari sutera gelap, menutupi muka dan kepala anda dengan bayangan. Tudung itu, seperti sayap gagak, mengalir ke belakang badan anda, tepinya dihiasi dengan jumbai lace warna putih tulang, suatu kontras yang menakutkan tetapi indah. Bersama-sama, topeng dan tudung mencipta wajah hantu, suatu bukti suram tentang pertempuran yang tidak berkesudahan menentang kuasa pembusukan.</string>
     <string name="PlagueDoctorMaskHood_Name">Topeng Plague Doctor dengan tudung</string>
     <string name="PlagueDoctorMask_Info">Ini... ini bukan sekadar topeng. Ia... sebuah penghalang. Perisai terhadap kuasa pembusukan yang ditentang oleh Doktor Wabak tanpa henti. Dibuat daripada kayu eboni terbaik, diukir dengan rumit dengan wajah tengkorak yang ganas. Rongga matanya yang kosong diisi dengan batu permata ametis yang berkilauan yang berdenyut lemah, seperti bara api yang sedang malap. Setiap nafas yang anda ambil, setiap kata-kata yang anda ucapkan, ditapis melalui rangkaian labirin tiub dan penapis. Ramuan herba kuat dan rempah ratus eksotik meresap ke dalam udara di dalamnya, menutupi bau busuk kematian yang melekat pada anda seperti kain kafan.</string>
+    <string name="PlagueDoctorMask_Name">Topeng Doktor Wabah</string>
     <string name="PlagueDoctorNPC_After_Quest">Saya buktikan, Saya buktikan kepada mereka semua!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Kenapa awak masih di sini? Ambil ini!</string>
     <string name="PlagueDoctorNPC_Desc">Sibongkok ini sepenuh diliputi dengan pakaian berkulit. Dia berbau ubat dan juga... bawang putih?</string>
@@ -2920,6 +2924,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 

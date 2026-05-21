@@ -578,6 +578,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="DM300_Info3">Jogosulatlan személy észlelve.</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Egy egyszerű vas tőr viseltes fa markolattal.</string>
     <string name="Dagger_Name">tőr</string>
     <string name="Damage_Reduction">Sebzéscsökkentés</string>
@@ -694,6 +695,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="ElfArmor_Desc">A tünde köpeny segítségével a tünde megidézheti a természet erőit. Egy pillanat alatt magas fű nő, még a szilárd sziklákon is, megbénítva az összes látott ellenfelet.</string>
     <string name="ElfArmor_Name">Tünde köpeny</string>
     <string name="ElfArmor_NotElf">Csak tündék tudják használni ezt a páncélt.</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Kivételes példája az tündék mestermunkájának. Egyértelműen hatékonyabb és pontosabb, mint egy átlagos faíj.</string>
     <string name="ElvenBow_Name">tünde íj</string>
     <string name="ElvenDagger_Gender">masculine</string>
@@ -1472,6 +1474,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, visszatértél! _Öt patkánytetem_, tökéletes! A bőrük nélkülözhetetlen lesz a kutatásomhoz. És ahogy ígértem, hősies erőfeszítésedért ezt a páncélt készítettem neked a bőrükből. Áthatja a pestis egy lehelete, de ne aggódj! Szabályozott, és megvéd! Most menj! Véd meg a várost!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Hozzálj öt halott patkányt! Minden egyikenél közelebb kerülünk ehhez a borzalmas járványhoz.</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">Ápszi!\n Átkozott ez az ördögi járvány! Olyan gyorsan terjed a városban, mint a tűzvész, és megfertőzi az ártatlan nép csontjait! UH! Véleményed szerint van esélye ezeknek a nyomorult őröknek e szörnyű betegség ellen? Te ott! Erős, egészséges egyén. Talán segíthetsz nekem. Ezek a mocskos csatorna_katatúk_... bennük hordozzák, mondom én neked, a ragály magvait a gusztustalan kis testükben! Hozz nekem _öt_ darabot ezekből a nyomorult lényekből, _halott_, persze! A bőrük aranyat érne a kutatásaimhoz. Páncélt készítek neked, mely megvédi a testet attól a ragálytól, amelyből származnak!</string>
+    <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhhh… hihető! Az _csigák_, titkai lassan kibukkanva, mint a virágok a holdfényben. Valóban gazdag információ! De jogosan van, a _ötven arany_ alighogy méltó jutalom. *Rendesen kacag.*</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">_Tíz csiga_, tíz suttogás a mélységből! A nyáluk elemzésre kerül, lényegük alaposan megvizsgálásra. A titkok, amelyeket őriznek, már a közelben vannak.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Erősen köhög* Hapci!\n _A csigák_… másznak. Nyálkásak. És egy elfeledett korszak titkait suttogják. Szükségem van rájuk, _tíz darabra_, a házaik épen. Gondolod, hogy _ötven aranyérme_ elég ilyen értékes tudásért?\n Bah! Nem számít. Az információ, amit tartanak, lehet a kulcs a pestis megállításához. Vagy… valami még szörnyűségesehez vezethet. Te döntesz.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_A holdragyogás_… Egy tanúbizonyság a varázserőnek, ami áthatja ezt a világot. Sokat tanultam az esszenciájukból, de a jutalmad… nos, azt legnagyobb gondossággal készítettem elő. *Átnyújt egy csillogó _Manabálvát* Az ereje vezéreljen végig a veszélyekkel teli úton.</string>
@@ -2119,6 +2122,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Swing_Name_0">Vad %s</string>
     <string name="Swing_Name_1">Vad %s</string>
     <string name="Swing_Name_2">Vad %s</string>
+    <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">A pengeéles acél bíztatóan fénylik.</string>
     <string name="Sword_Name">kard</string>
     <string name="Tamahawk_Gender">masculine</string>
@@ -2909,6 +2913,10 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
 
 
 

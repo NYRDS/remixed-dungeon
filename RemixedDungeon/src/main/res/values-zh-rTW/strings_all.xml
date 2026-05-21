@@ -824,6 +824,7 @@
     <string name="Ghost_Defense">回避</string>
     <string name="Ghost_Desc">這個幽靈已經幾乎不能被看見了。它看起來像是由一片無形的昏暗光斑和一張悲痛的面孔所組成的。</string>
     <string name="Ghost_Name">悲傷幽靈</string>
+    <string name="Ghost_Name_Objective">鬼</string>
     <string name="Ghost_Rat1">你好冒險者……曾經我也像你一樣——強壯而自信……雖然現在我已經死了……但是我無法離開這個地方……除非我完成我的復仇……殺死_腐臭老鼠_，那個帶走我生命的東西……</string>
     <string name="Ghost_Rat2">求求你……幫幫我……殺死那個令人憎恨的東西……</string>
     <string name="Ghost_Rose1">你好冒險者……曾經我也像你一樣——強壯而自信……雖然現在我已經死了……但是我無法離開這個地方……除非我拿到我的_枯幹玫瑰_……那是對我非常重要的東西……一些怪物從我的身體偷走了它……</string>
@@ -1964,6 +1965,7 @@
     <string name="ShieldBuffNotReady_Info">你的盾牌還沒準備好抵擋下一次攻擊。</string>
     <string name="ShieldBuffNotReady_Name">盾牌還沒準備好</string>
     <string name="ShieldBuffReady_Info">你的盾牌已準備好抵擋下一次攻擊。</string>
+    <string name="ShieldBuffReady_Name">Щит готовий</string>
     <string name="ShieldInfoTemplate">這個盾牌最多可以格擋%1$d傷害。  格擋幾率為%2$d %% 。 成功格擋後需要%3$3.1f個回合來恢復。</string>
     <string name="ShieldStrTemplate">盾牌的佩戴者應至少具有%1$d力量才能正常的使用它。</string>
     <string name="ShieldWeaponInfo">當此盾牌作為武器使用時，平均會造成 %1$d 點傷害。</string>
@@ -2096,6 +2098,7 @@
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">痛苦之魂</string>
     <string name="SpiritOfPain_Name_Objective">痛苦之魂</string>
+    <string name="Sprout_Info">Пробудите спящие семена.\nОднако, на земле должно быть какое-то зелёное покрытие, чтобы это заклинание сработало.</string>
     <string name="StartScene_ChooseFromSlot">從存檔欄位中選擇</string>
     <string name="StartScene_ComingSoon">即將推出</string>
     <string name="StartScene_ContinueLatest">繼續最新的遊戲或從存檔槽位選擇</string>
@@ -2761,6 +2764,7 @@
     <string name="town_deco_barrel_name">桶</string>
     <string name="town_deco_barrel_wine_desc">用來儲存像葡萄酒這樣的貴重飲料。</string>
     <string name="town_deco_barrel_wine_name">酒桶</string>
+    <string name="town_deco_beige_carpet_desc">Елегантный бежевый ковёр, сплетённый из мягкой шкуры гнолла.</string>
     <string name="town_deco_beige_carpet_name">地毯</string>
     <string name="town_deco_bell_desc">典型的教堂鐘，似乎已有一段時間沒人打理，鐘繩也不見蹤影。</string>
     <string name="town_deco_bell_name">鐘</string>
@@ -2986,6 +2990,10 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
 
 
 

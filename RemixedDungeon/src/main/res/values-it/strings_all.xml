@@ -217,6 +217,7 @@
     <string name="BellaNPC_Message">Non provo alcun interesse per plebei come te!</string>
     <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
+    <string name="BellaNPC_No">No, non con te</string>
     <string name="BellaNPC_Yes_End_Game">Sì (Fine gioco)</string>
     <string name="Belongings_CantWearBoth">Non puoi equipaggiare %1$s e %2$s allo stesso tempo!</string>
     <string name="Belongings_Name">zaino</string>
@@ -1290,6 +1291,7 @@ Potrebbe bruciare?</string>
     <string name="MeleeWeapon_Info7a">tu tieni le %1$s a portata di mano%2$s.</string>
     <string name="MeleeWeapon_Info7b">,e dato che questo è maledetto,tu sei impedito dal andartene</string>
     <string name="MeleeWeapon_Info7c">Puoi percepire un\'energia malevola aleggiare all interno del%s. </string>
+    <string name="MercenaryNPC_Desc">Uomo robusto.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">mercenario</string>
     <string name="MercenaryNPC_Name_Objective">mercenario</string>
@@ -1488,6 +1490,7 @@ Potrebbe bruciare?</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">Una goccia di veleno mortale brilla sulla testa di questa freccia.</string>
     <string name="PoisonArrow_Name">freccia velenosa</string>
+    <string name="PoisonBuff_Info">Il corpo viene lentamente ucciso dal veleno!</string>
     <string name="PoisonBuff_Name">Avvelenato</string>
     <string name="Poison_Death">Sei morto avvelenato...</string>
     <string name="Poison_Name_0">Velenoso %s</string>
@@ -2238,6 +2241,7 @@ Potrebbe bruciare?</string>
     <string name="WandOfRegrowth_Info">\&quot;Quando la vita cessa una nuova vita inizia sempre a crescere... Il ciclo eterno rimane sempre!\&quot;</string>
     <string name="WandOfRegrowth_Info1">non è successo nulla</string>
     <string name="WandOfRegrowth_Name">Bacchetta Di Ricrescita</string>
+    <string name="WandOfShadowbolt_Info">Questa bacchetta emette un\'energia oscura e malvagia.</string>
     <string name="WandOfShadowbolt_Name">varchetto degli ombre</string>
     <string name="WandOfSlowness_Info">Questa bacchetta non farà muovere e attaccare alla metà della sua velocità normale una creatura alla metà della sua velocità normale fino al termine effetto</string>
     <string name="WandOfSlowness_Info1">non è successo nulla</string>
@@ -2690,6 +2694,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_charcoal_carpet_name">Tappeto</string>
     <string name="town_deco_chest_desc">Comodo mobile per conservare oggetti e gioielli.</string>
     <string name="town_deco_chest_name">Cassa</string>
+    <string name="town_deco_chimney_desc">Caminino di pietra - compagno fedele di ogni abitazione, che è costruito dove il freddo è un ospite frequente.</string>
     <string name="town_deco_chimney_name">Comignolo</string>
     <string name="town_deco_church_sign_desc">Sembra che ci sia una chiesa all\'interno di quell\'edificio.</string>
     <string name="town_deco_church_sign_name">Insegna della chiesa</string>
@@ -2708,6 +2713,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_crate_bottles_desc">L\'imbottigliamento della birra è diventato un passatempo molto popolare tra i locandieri.</string>
     <string name="town_deco_crate_bottles_name">Cassa di birra</string>
     <string name="town_deco_crate_desc">Una robusta cassa di legno che custodisce i suoi segreti all\'interno.</string>
+    <string name="town_deco_crate_name">Cassetto</string>
     <string name="town_deco_crate_scrolls_desc">Questa cassa è piena fino all\'orlo di conoscenza segreta.</string>
     <string name="town_deco_crate_scrolls_name">Cassa di pergamene</string>
     <string name="town_deco_cross_desc">Una croce di argento, il simbolo della religione locale - \&quot;I Testimoni di Santa il Signore delle Profondità\&quot;</string>
@@ -2879,6 +2885,12 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
 
 
 

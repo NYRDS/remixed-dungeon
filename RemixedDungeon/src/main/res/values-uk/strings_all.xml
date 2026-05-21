@@ -345,6 +345,7 @@
     <string name="CagedKobold_Name_Objective">заточеного кобольта</string>
     <string name="CagedKobold_Quest_End">О, дякую тобі, щиро дякую! Як ти відшукав ключа? Ти... ти знищів зброю?! Неймовірно! Знаєш що, я обіцяв допомогти, і я дещо надумав. Доки все не вщухне, я побуду поряд з тобою. *Заточений кобольт перетворився в свічку</string>
     <string name="Calm_Cast">%s заспокоюється.</string>
+    <string name="Calm_Info">Навколо дуже багато розджарених істот, допоможемо їм.</string>
     <string name="Calm_Name">Спокій</string>
     <string name="CandleOfMindVision_Info">Виглядає як звичайна свічка, дивно знайти щось таке в підземеллі. Дивно те, що вона тепла, хоч її не запалювали.</string>
     <string name="CandleOfMindVision_Info_Exhausted">Свічка вигоріла і більше не загоряється у тебе в руках. Схоже ти вже не можеш нею користуватися.</string>
@@ -363,6 +364,7 @@
     <string name="Carcass_Info">рештки повністю мертвого %s.</string>
     <string name="Carcass_Kick">Ця істота, %s, совершенно мертва, немає сенсу бити її далі.</string>
     <string name="Carcass_Name">решки %s</string>
+    <string name="Carcass_Necromancy_Failed">Спроба підняти тіло %s не вдалася!</string>
     <string name="Carcass_TooFarToDissect">Вам потрібно підійти ближче, щоб розчленувати труп.</string>
     <string name="Caves_TileDescBookshelf">Кому в підземеллі знадобилася книжкова шафа?</string>
     <string name="Caves_TileDescDeco">На стіні видно відкриту жилу якоїсь руди. Чи то не золото?</string>
@@ -2290,6 +2292,7 @@
     <string name="Using_Failed_Because_Magic">Могутня магія не дозволяє використовувати \&quot;%s\&quot;.</string>
     <string name="VampireSkull_Info">Цю маску виготовлено з повністю натурального черепа вампіра. Фактично це і є череп вампіра... череп вампіра з великою головою. Який жах.</string>
     <string name="VampireSkull_Name">Щелепа вампіра</string>
+    <string name="VertigoBuff_Info">Легке головокружіння ускладнює ходьбу прямим ходом!</string>
     <string name="VertigoBuff_Name">Запаморочений</string>
     <string name="View_Distance">Відстань огляду</string>
     <string name="VileEssence_Info">Концентрована сутність скверни, видобута з переможеного ворога. Ця темна субстанція пульсує ворожою енергією і високо цінується в алхімічних процесах.</string>
@@ -2416,6 +2419,7 @@
     <string name="Weightstone_WndChoice">Як ти бажаєш збалансувати предмет %s?</string>
     <string name="Weightstone_WndSpeed">На швидкість</string>
     <string name="Welcome_Ok">Добре!</string>
+    <string name="Welcome_Text_30_1">remix.30.1\n- Gameplay:\n-- Gnoll Subclasses!\n-- Snails!\n-- Chaos Items progression nerfed.\n-- Mana Potion is regular potion from now.\n-- Badges now obtainable when playing DLC\'s (but not mods).\n- Bugs fixed</string>
     <string name="Welcome_Text_31_0">remix.31.0\n- Геймплей:\n-- Опціональний ізометричний режим!\n- Моддинг:\n-- Моддабельні об\'єкти рівнів\n- Виправлення помилок</string>
     <string name="Welcome_Text_31_1">
     remix.31.1\n
@@ -2993,6 +2997,11 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
 
 
 
