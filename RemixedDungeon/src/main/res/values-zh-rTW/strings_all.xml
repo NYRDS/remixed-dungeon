@@ -191,6 +191,7 @@
     <string name="Badges_StrengthAttained4">達到19點力量</string>
     <string name="Badges_StrengthAttained5">達到21點力量</string>
     <string name="Badges_Supporter">感謝您的支持！</string>
+    <string name="Badges_ThisIsSparta">这是斯巴达!!!</string>
     <string name="Badges_Victory">獲得尼德羅護符</string>
     <string name="Badges_VictoryAll">使用所有人物獲得尼德羅護符</string>
     <string name="Badges_Yasd">天將降大任於屍人也</string>
@@ -432,6 +433,7 @@
     <string name="CharAction_Expel">pem expulsion</string>
     <string name="CharAction_Give">給</string>
     <string name="CharAction_Hit">memukul</string>
+    <string name="CharAction_Order">命令</string>
     <string name="CharAction_Push">推</string>
     <string name="CharAction_Scare">嚇唬</string>
     <string name="CharAction_Steal">偷</string>
@@ -500,6 +502,7 @@
     <string name="Claymore_Gender">feminine</string>
     <string name="Claymore_Info">這把結實的劍也許能切斷任何東西。</string>
     <string name="Claymore_Name">闊劍</string>
+    <string name="CloakBuff_Info">一件深色的斗篷將你隱藏在陰影中，使你對敵人不太明顯。</string>
     <string name="CloakBuff_Name">潛伏</string>
     <string name="CloakSpell_EnemiesNearby">敵人在附近，你不能進入陰影中。</string>
     <string name="CloakSpell_Info">進入陰影中使敵人看不見，減少被發現的機會。附近有敵人不能使用。</string>
@@ -1322,6 +1325,7 @@
     <string name="MageArmor_Desc">法師穿著這件華麗的長袍，能夠施放一種融化大地的魔法：所有在他視野內的敵人將會烈火焚身並同時無法移動。</string>
     <string name="MageArmor_Name">法師長袍</string>
     <string name="MageArmor_NotMage">只有法師能使用這件護甲！</string>
+    <string name="MagicArrow_Info">Стара добра магічна стріла, правильний вибір, коли закінчиться боєприпас.</string>
     <string name="MagicArrow_Name">魔法箭</string>
     <string name="MagicTorch_Info">一種產生炬光的法術，用來照亮地牢的黑暗。</string>
     <string name="MagicTorch_Name">魔法炬光</string>
@@ -2663,6 +2667,7 @@
     <string name="WndSelectLanguage_ImproveTranslation">請幫助混合地牢的多種語言翻譯。</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">點擊此處幫助我們翻譯混合地牢</string>
     <string name="WndSettingsInGame_GameLog">遊戲記錄</string>
+    <string name="WndSettingsInGame_IsometricTiles">等距瓦片</string>
     <string name="WndSettings_ActionButtonSize">按鈕大小</string>
     <string name="WndSettings_Brightness">光暗度</string>
     <string name="WndSettings_ClassicFont">經典字體</string>
@@ -2942,6 +2947,7 @@
     <string name="town_deco_scrolls_desc">這個滿是灰塵的架子上擺滿了各種各樣的卷軸和書。</string>
     <string name="town_deco_scrolls_name">卷軸架</string>
     <string name="town_deco_shelf_desc">空的貨架</string>
+    <string name="town_deco_shelf_full_desc">架子上放著各種小飾品。</string>
     <string name="town_deco_shelf_full_name">架子</string>
     <string name="town_deco_shelf_name">貨架</string>
     <string name="town_deco_shelving_desc">一個令人印象深刻的架子，在架子上可以找到各種飲料和小吃。</string>
@@ -3029,6 +3035,12 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
 
 
 

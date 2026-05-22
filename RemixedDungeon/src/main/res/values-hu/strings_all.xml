@@ -313,6 +313,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Brute_Name">gnoll nehézfiú</string>
     <string name="Brute_Name_Objective">gnoll nehézfiú</string>
     <string name="Brute_StaEnraged">feldühödött</string>
+    <string name="BuffParam_Cooldown">Le cooldown: %.2f</string>
     <string name="BurningBuff_Info">A testet tüzes lángok borítják!</string>
     <string name="BurningBuff_Name">Ég</string>
     <string name="BurningFist_Desc">Az Öreg Isten Lángoló Ökle</string>
@@ -347,6 +348,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Carcass_DissectFailed">Megvizsgálod a(z) %s-t, de semmi értékeset nem találsz.</string>
     <string name="Carcass_DissectMessage">Széttéped a tetemet és %s tárgyat szerzel.</string>
     <string name="Carcass_DissectResult">A(z) %1$s %2$d termés %3$s-t ad.</string>
+    <string name="Carcass_Info">maradványai teljesen elpusztultak: %s</string>
     <string name="Carcass_Kick">Ez a(z) %s teljesen halott, nincs értelme rugdosni.</string>
     <string name="Carcass_Name">%s maradványai</string>
     <string name="Carcass_Necromancy_Failed">A(z) %s holttestének feltámasztási kísérleted sikertelen!</string>
@@ -1429,6 +1431,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: idézési limit elérve (Aktuális max: %d)!</string>
     <string name="Necromancer_ACSpecial">NEKROMÁCIA</string>
     <string name="Necromancy_BecameALich">Linch lett belőled! A hatalmad megnőtt és a lélektároló kapacitásod duplázódott! De viszont elvesztettél %1$d pont erőt.</string>
+    <string name="Necromancy_Death">Kievallad elvesztette a necromancia gyakorlása során.</string>
     <string name="Necromancy_NotEnoughSouls">Nincs elég lelked hogy varázsolj \&quot;%1$s\&quot; mágiát.</string>
     <string name="Necromancy_ReincarnationName">Reinkarnáció</string>
     <string name="Necromancy_ReincarnationTriggered">A hatalmad megtagadja a halált! De viszont elvesztetted a gyűjtött lelkeidet és tulajdonod.</string>
@@ -2689,6 +2692,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="YogsEye_Name">yog szeme</string>
     <string name="YogsEye_Name_Objective">Yog szeme</string>
     <string name="YogsHeart_Desc">Évszázadokon keresztül hitték az emberek, hogy csak az igazán szívtelem teremtmények képesek tisztán gonosz cselekedetekre. És most mégis itt van elötted az Ősi Isten hatalmas dobogó szíve.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">yog szíve</string>
     <string name="YogsHeart_Name_Objective">Yog szíve</string>
     <string name="YogsTeeth_Desc">Az Ősi Isten hatalmas, borotvaéles fogakkal teli szája. Egy hozzáillő megnyilvánulása annak a vágynak, hogy minden élőlényt elpusztítson és felfaljon.</string>
@@ -2762,6 +2766,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_church_sign_name">Egyházi tábla</string>
     <string name="town_deco_cinema_sign_desc">Űgy tűnik van egy mozi az épület belsejében.</string>
     <string name="town_deco_cinema_sign_name">Mozi tábla</string>
+    <string name="town_deco_clock_desc">A THESE nyílásai régóta egyetlen helyzetben fagytak meg.</string>
     <string name="town_deco_common_bed_desc">Közönséges ágy.</string>
     <string name="town_deco_common_bed_name">Ágy</string>
     <string name="town_deco_common_door_desc">Egy udvarias kalandornak sosem szabadna más személyes tulajdonát háborgatnia, persze csak meghívás nélkül.</string>
@@ -2872,6 +2877,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_shelf_full_name">Polc</string>
     <string name="town_deco_shelf_name">Polcok</string>
     <string name="town_deco_shelving_desc">Egy lenyűgöző méretű állvány, amelynek polcain különféle italokat és harapnivalókat találsz.</string>
+    <string name="town_deco_shelving_name">Polc</string>
     <string name="town_deco_shieldboard_desc">Különböző pajzsok vannak kint a deszkán. Még nem eladók.</string>
     <string name="town_deco_shieldboard_name">Pajzsok</string>
     <string name="town_deco_shop_sign_desc">Űgy tűnik van egy bolt az épület belsejében.</string>
@@ -2954,6 +2960,12 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
+
 
 
 

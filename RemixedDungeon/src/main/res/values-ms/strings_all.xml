@@ -407,6 +407,7 @@
     <string name="ChaosCrystal_Prompt">Pilih tempat untuk tetapkan Tanda Chaos</string>
     <string name="ChaosCrystal_ScrollFused">Kristal menyerap masuk ke dalam huruf tertulis di atas Skrol, dan kini ia menjadi %s</string>
     <string name="ChaosCrystal_SelectForFuse">Pilih item untuk disepadukan dengan Kristal Chaos</string>
+    <string name="ChaosCrystal_ShieldFused">Kristal itu melebur dengan perisaimu dan mengambil bentuk kekacauan.</string>
     <string name="ChaosCrystal_StaffFused">Kristal menyerap masuk ke dalam tongkat sakti anda, dan membentuk Tongkat</string>
     <string name="ChaosCrystal_SwordFused">Kristal menyerap masuk ke dalam senjata anda, dan membentuk Pedang</string>
     <string name="ChaosCrystal_Use">GUNA</string>
@@ -792,6 +793,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="FrostBuff_Info">Beku padam, mencegah daripada melakukan sebarang tindakan.</string>
     <string name="FrostBuff_Name">Membeku</string>
     <string name="Frost_Shatter">Kesejukan ini menyebabkan %s mula pecah berkecai!</string>
+    <string name="Froth_ArrowInKnee">Saya pernah menjadi petualang seperti kamu,\nTapi kemudian aku di Sagit di lutut...</string>
     <string name="FrozenCarpaccio_Info">Sekeping daging mentah beku. Cara memakannya hanya makan potongan nipis daging tersebut.</string>
     <string name="FrozenCarpaccio_Info1">Anda dapati tangan anda menjadi halimunan!</string>
     <string name="FrozenCarpaccio_Info2">Anda rasa kulit anda menjadi semakin keras!</string>
@@ -1394,6 +1396,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MoongraceBuff_Info">Udara di sekeliling menjadi lebih jenuh, membolehkan tumpuan yang lebih baik dan pemulihan rahsia magik.</string>
     <string name="MoongraceBuff_Name">Manan surgawi</string>
     <string name="Moongrace_Desc">Tumbuhan ini tumbuh dalam kumpulan kecil dan dikenali sebagai sumber sihir semula jadi.</string>
+    <string name="Moongrace_Name">Moongrace</string>
     <string name="Movement_Speed">Kelajuan pergerakan</string>
     <string name="Multiplicity_Txt">%s penggandaan</string>
     <string name="Mushroom_Eat_Message">Cendawan ini rasanya pelik!</string>
@@ -1536,6 +1539,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">Terdapat titisan racun berbisa menyeliputi kepala panah ini</string>
     <string name="PoisonArrow_Name">anak panah beracun</string>
+    <string name="PoisonBuff_Info">Badan perlahan-lahan dimatikan oleh racun!</string>
     <string name="PoisonBuff_Name">Terkena Racun</string>
     <string name="Poison_Death">Anda mati disebabkan keracunan...</string>
     <string name="Poison_Name_0">%s Berbisa</string>
@@ -1958,6 +1962,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">si ganas berpengadang</string>
     <string name="Shielded_Name_Objective">si ganas berpengadang</string>
+    <string name="ShootInEye_Info">Gunakan kemahiran menembak pembedahan anda untuk menembak musuh tepat di mata, jika ada tentu saja.</string>
     <string name="ShootInEye_Name">Tembak Kedalam Mata</string>
     <string name="Shopkeeper_Buy">Pilih item untuk membeli</string>
     <string name="Shopkeeper_BuyPrompt">Mari lihat inventori anda</string>
@@ -2493,6 +2498,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndInstallingMod_copying_file">Copying %s to Remixed Dungeon storage</string>
     <string name="WndInstallingMod_deleting_file">Memadam %s</string>
     <string name="WndInstallingMod_please_wait">Memasang mod, sila tunggu...</string>
+    <string name="WndInstallingMod_skipping_file">Melepas %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Jalankan Resep</string>
     <string name="WndItemAlchemy_NoRecipes">Tiada resipi tersedia dengan item ini dan inventori semasa anda.</string>
     <string name="WndItemAlchemy_SelectRecipe">Pilih resipi</string>
@@ -2961,6 +2967,12 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
 
 
 

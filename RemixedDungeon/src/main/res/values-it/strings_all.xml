@@ -195,6 +195,7 @@
     <string name="Bandit_Name">bandito pazzo</string>
     <string name="Bandit_Name_Objective">bandito pazzo</string>
     <string name="BardNPC_Desc">The town bard is playing his lute.</string>
+    <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">Bardo</string>
     <string name="BardNPC_Name_Objective">bardo</string>
     <string name="BardSong_1">Io e mia moglie viviam da soli,\nIn una capanna di legno, tutta per noi.\nLei amava il gin, io il rum,\nE vi dico che ci divertivamo un po\'!</string>
@@ -209,6 +210,7 @@
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">pipistrello vampiro</string>
     <string name="Bat_Name_Objective">pipistrello vampiro</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">un enorme elmo d\'acciaio di questa battaglia mette un notevole peso alle spalle ad ogni colpo</string>
     <string name="BattleAxe_Name">ascia da battaglia</string>
     <string name="Bee_Desc">Nonostante le loro piccole dimensioni, le api tendono a proteggere ferocemente il loro alveare. Tuttavia, non vivono a lungo.</string>
@@ -1736,6 +1738,7 @@ Potrebbe bruciare?</string>
     <string name="Ring_Info4">%1$s\n\ni può sentire una magia maligna agguato all\'interno del %2$s.</string>
     <string name="Ring_Name">%s anello</string>
     <string name="Roar_Info">Il ruggito potente spaventerà di sicuro i tuoi nemici e darà coraggio agli alleati.</string>
+    <string name="Roar_Name">Ruggito</string>
     <string name="RogueArmor_ACSpecial">BOMBA FUMOGENA</string>
     <string name="RogueArmor_Desc">Indossando questa veste scura, un furfante può eseguire una mossa chiamata \&quot;bomba fumogena\&quot; (anche se non sono usati veri esplosivi): acceca i nemici che possono vederlo e salta da un\'altra parte.</string>
     <string name="RogueArmor_Fov">Puoi saltare soltanto in una posizione vuota nel tuo campo visivo</string>
@@ -1752,6 +1755,7 @@ Potrebbe bruciare?</string>
     <string name="RottenFood_Message">Disgustoso!</string>
     <string name="RottenMeat_Info">pezzo di carne marcia</string>
     <string name="RottenMeat_Name">carne marcia</string>
+    <string name="RottenOrgan_Info">Un organo in decomposizione raccolto da un nemico sconfitto. Nonostante il suo stato putrido, contiene composti preziosi per processi alchemici.</string>
     <string name="RottenOrgan_Name">Organo Marcio</string>
     <string name="RottenPasty_Info">ex-pasto sembra così disgustoso</string>
     <string name="RottenPasty_Name">pasticcio marcio</string>
@@ -1764,6 +1768,7 @@ Potrebbe bruciare?</string>
     <string name="RottingFist_Name">pugno in decomposizione</string>
     <string name="RottingFist_Name_Objective">pugno in decomposizione</string>
     <string name="RoyalShield_desc">Uno scudo interamente metallico. Sì, è pesante, ma solo esso può fornirti la migliore protezione.</string>
+    <string name="RoyalShield_name">Scudo Reale</string>
     <string name="RubyBow_Info">Solo i migliori arcieri possono usare quest\'arco di rubino. Quasi tutte le frecce trapassano il nemico, lasciando un enorme buco nel suo petto, ma un\'enorme forza è necessaria per tenderlo.</string>
     <string name="RubyBow_Name">arco di rubino</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -1905,6 +1910,7 @@ Potrebbe bruciare?</string>
     <string name="ShamanElder_Desc">Questo gnoll in particolare sembra molto più anziano degli altri sciamani e ha sicuramente uno status più elevato nella tribù. Un\'aura strana si forma lentamente attorno a lui, che sembra riflettere tutto ciò che lo tocca.</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="ShamanElder_Name">sciamano anziano</string>
+    <string name="ShamanElder_Name_Objective">shamana anziana</string>
     <string name="Shaman_Desc">Gli gnoll più intelligenti posso imparare la magia sciamanica. Gli gnoll sciamani preferiscono magie d\'attacco per compensare la loro mancanza di forza, non esitando ad usarle su coloro che mettono in dubbio il loro prestigio nella tribù.</string>
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">%s\'s fulmine ti ha ucciso....</string>
@@ -2893,6 +2899,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_urn_desc">Urna di argilla, forse con le ceneri di qualcuno.</string>
     <string name="town_deco_urn_name">Urna</string>
     <string name="town_deco_vat_desc">Questa vasca di pietra è colma fino all\'orlo di acqua santa.</string>
+    <string name="town_deco_vat_name">Tina</string>
     <string name="town_deco_wall_beam_desc">Serve come fidato supporto per questa costruzione.</string>
     <string name="town_deco_wall_beam_name">Trave</string>
     <string name="town_deco_wall_brazier_desc">Il vapore che esce dalle braci ardenti riempie la stanza di piacevoli aromi.</string>
@@ -2926,6 +2933,13 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
 
 
 

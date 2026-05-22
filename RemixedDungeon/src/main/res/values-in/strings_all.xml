@@ -606,6 +606,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="DarkVeilBuff_Info">Selubung kegelapan mengelilingi pemiliknya, memanggil roh setiap kali terjadi kerusakan.</string>
     <string name="DarkVeilBuff_Name">kerudung gelap</string>
     <string name="Darkness_Info">Terlihat seperti potongan-potongan kegelapan abadi melayang di udara</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Duri logam sederhana ini telah dibuat untuk terbang lurus dan menusuk mangsa mereka dengan kibasan dari pergelangan tangan.</string>
     <string name="Dart_Name">dart</string>
     <string name="DashSpell_Info">Lari ke arah yang ditentukan saat bertabrakan dengan musuh, memberikan kerusakan dan menyebabkan cacat.</string>
@@ -727,6 +728,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="EncumbranceBuff_CharAct_2">Benda %s ini terlalu berat bagi saya untuk digunakan secara efektif.</string>
     <string name="EncumbranceBuff_CharAct_3">Saya perlu bekerja pada kekuatan saya sebelum saya bisa menggunakan %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Aku tidak punya kekuatan untuk menggunakan %s secara maksimal.</string>
+    <string name="EncumbranceBuff_CharAct_5">%s saat ini terlalu banyak untuk saya tangani.</string>
     <string name="EncumbranceBuff_Info">Tidak cukup kekuatan untuk menggunakan %s secara efektif.</string>
     <string name="EncumbranceBuff_Name">Beban</string>
     <string name="EnslavedSoul_Desc">Anda hampir dapat melihat melalui penampakan hantu ini. Dan meskipun terlihat seperti tengkorak, terkadang untuk sepersekian detik sebuah wajah muncul, penuh dengan rasa sakit dan penderitaan.</string>
@@ -1508,6 +1510,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PlagueDoctorNPC_After_Quest">Saya akan menunjukkan kepada mereka, saya akan menunjukkan kepada mereka semua!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Kamu masih di sini? Di Sini! Ambil ini.</string>
     <string name="PlagueDoctorNPC_Desc">Seluruh tubuh orang bungkuk ini disembunyikan di bawah jumpsuit kulit. Juga, dari dia datang bau obat yang pahit dan ... bawang putih?</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">dokter wabah</string>
     <string name="PlagueDoctorNPC_Name_Objective">dokter wabah</string>
     <string name="PlagueDoctorNPC_Quest_End">Ah, terima kasih, saya berharap ini akan memiliki beberapa jejak penyakit. Contoh sebelumnya sama sekali tidak berbahaya. Jadi saya membuat ini untuk Anda sambil menunggu sampel baru.</string>
@@ -2053,6 +2056,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="Spells_NotInOwnBody">Anda tidak dapat melakukan %s saat jiwa Anda terpisah dari tubuh.</string>
     <string name="Spells_NotTooFast">%s belum siap digunakan</string>
     <string name="Spells_SummonLimitReached">%1$s: batas pemanggilan tercapai (Batas saat ini: %2$d)!</string>
+    <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">zirah ini terbuat dari kitin laba-laba tua dan beberapa jenis pakaian. yang paling mengejutkan, ternyata masih mengandung fungsi kelenjar laba-laba. jika Anda menekan lempengan cukup keras, kemudian mereka menembak jaring. Dan sol bergerigi memungkinkan Anda untuk bergerak bebas di jenis jaring seperti itu.</string>
     <string name="SpiderArmor_Name">zirah laba-laba</string>
     <string name="SpiderCharm_Info">Perhiasan eksotis ini diselimuti aura misterius. Siapa tau, apa yang terjadi bila ada yang memakainya?</string>
@@ -2472,6 +2476,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="WndCryptoDonate_supportDev">Dukung Pengembang</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
+    <string name="WndCryptoDonate_walletAddress">Alamat Dompet</string>
     <string name="WndCryptoDonate_warningText">PERINGATAN: Mengirim dana, pastikan alamatnya. Transaksi kripto tidak bisa dibatalkan!</string>
     <string name="WndCustomizations_Title">Penyesuaian </string>
     <string name="WndDonate_commonDonateText">Remix Dungeon - bebas untuk semua orang dan akan selalu di Namun, Anda dapat membantu kami melakukan permainan lebih baik \nSelain \nDari terima kasih yang tulus kami Anda akan mendapatkan beberapa perbaikan kosmetik...</string>
@@ -3023,6 +3028,11 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
 
 
 

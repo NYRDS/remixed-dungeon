@@ -1,5 +1,6 @@
 <resources>
     <string name="AC_Devour">Поглинання</string>
+    <string name="AC_Dissect">Розтинення</string>
     <string name="AC_Kick">Копнути</string>
     <string name="AC_Necromancy">Некромантія</string>
     <string name="Abilities_Common">Звичайні закляття</string>
@@ -64,6 +65,7 @@
     <string name="AnesthesiaBuff_Name">Анестезія</string>
     <string name="Anesthesia_Cast">%s поринає в глибокий сон без сновидінь.</string>
     <string name="Anesthesia_Info">Викликає глибокий, не природний сон у цільової істоти. Навіть найжорсткіші атаки не розбудять її з цього сну.</string>
+    <string name="Anesthesia_Name">Анестезія</string>
     <string name="Ankh_Info">Древній символ безсмертя, який дарує можливість повернення після смерті. При воскресінні всі одягнуті речі губляться.</string>
     <string name="Ankh_Name">Анкх</string>
     <string name="AntiEntropy_Txt">%s анти-ентропії</string>
@@ -1534,6 +1536,7 @@
     <string name="PlagueDoctorMaskHood_Info">Скована з ебонового дерева маска у формі черепа, порожнечі якої сяють неземним мерехтінням аметистових самоцвітів. Кожен вдих пронизує лабіринт трубок і фільтрів, несе аромат могутніх трав та спецій, що приховують гниль, яка до вас прилипла. Але це не просто маска. Густий капюшон з північного оксамиту ховає обличчя і голову в тіні. Капюшон, наче крило ворона, спливає до спини, його краї прикрашені бахромою з кістяного мережива, жахливо-красивий контраст. Разом маска і капюшон створюють примарний вигляд, сумний твір безкінечної боротьби з силами руйнування.</string>
     <string name="PlagueDoctorMaskHood_Name">Маска Чумного Доктора з капюшоном</string>
     <string name="PlagueDoctorMask_Info">Це… це не просто маска. Це… бар\'єр. Щит проти сил розпаду, з якими Лікар Чуми невтомно бореться. Виготовлена з найкращого ебенового дерева, інtricately вирізана з обличчям голодного черепа. Порожні очні	socketи заповнені блискучими аметистовими каменями, що пульсують, як загаслі вугли вогню. Кожен вдох, кожне слово, що ви вимовляєте, проходить через лабіринт труб і фільтрів. Конкоція потужних трав і екзотичних спецій наповнює повітря, маскуючи смердюче сморід, що липне до вас, як саван.</string>
+    <string name="PlagueDoctorMask_Name">Маска чумного лікаря</string>
     <string name="PlagueDoctorNPC_After_Quest">Я їм покажу, я покажу усім їм!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Ви все ще тут? Ось! Візьміть це</string>
     <string name="PlagueDoctorNPC_Desc">Цей горбатий чоловік повністю вкритий шкірою. Від нього тхне гострий запах ліків і... часнику?</string>
@@ -2839,6 +2842,7 @@
     <string name="town_deco_chimney_desc">Кам\'яний комин - вірний супутник будь-якого житла, зведеного в місці, де часто навідується холодна погода.</string>
     <string name="town_deco_chimney_name">Комин</string>
     <string name="town_deco_church_sign_desc">Схоже, що в цій будівлі знаходиться церква.</string>
+    <string name="town_deco_church_sign_name">Позначка церкви</string>
     <string name="town_deco_cinema_sign_desc">Схоже тут знаходиться будівля кінотеатру.</string>
     <string name="town_deco_cinema_sign_name">Вивіска кінотеатру</string>
     <string name="town_deco_clock_desc">Стрілки на них уже давно замерли в одному положенні.</string>
@@ -2854,6 +2858,7 @@
     <string name="town_deco_crate_bottles_desc">Розлив пива по бутілкам став популярним хобі серед трактирників</string>
     <string name="town_deco_crate_bottles_name">Ящик для пива</string>
     <string name="town_deco_crate_desc">Міцний дерев\'яний ящик, у якому зберігаються його таємниці.</string>
+    <string name="town_deco_crate_name">Ящик</string>
     <string name="town_deco_crate_scrolls_name">Скриня зі сувоїв</string>
     <string name="town_deco_cross_desc">Литий срібний хрест, символ місцевої релігії - \&quot;Свідки Санти - Володаря Глибин\&quot;.</string>
     <string name="town_deco_cross_name">Хрест</string>
@@ -2987,6 +2992,7 @@
     <string name="town_deco_stones_desc">Просто купа каміння.</string>
     <string name="town_deco_stones_name">Каміння</string>
     <string name="town_deco_stool_broken_desc">Цей стілець був у кращому стані.</string>
+    <string name="town_deco_stool_broken_name">Зламаний стілець</string>
     <string name="town_deco_stool_sturdy_desc">Звичайний табурет, виготовлений з міцного дерева.</string>
     <string name="town_deco_stool_sturdy_name">Стілець</string>
     <string name="town_deco_stove_desc">Ця піч, що палає, розповсюджує приємне тепло</string>
@@ -3034,6 +3040,12 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
+
 
 
 
