@@ -607,6 +607,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">Gregario della Morte</string>
     <string name="Deathling_Name_Objective">Gregario della Morte</string>
+    <string name="DeepSnail_Desc">Questo tipo di mollusco si può spesso vedere vicino alle fonti d\'acqua ed è molto più veloce dello zigolo ordinario. Attenzione però alle bocche, possono avere un effetto sgradevole sulla tua pelle.</string>
     <string name="DeepSnail_Name">lumaca profonda</string>
     <string name="DeepSnail_Name_Objective">lumaca delle profondità</string>
     <string name="DeferedDamageBuff_Info">Il dolore è stato trasformato in un dolore rallentato, riducendo il danno subito in una volta.\nDanno rimanente: %d</string>
@@ -1242,6 +1243,7 @@ Potrebbe bruciare?</string>
     <string name="LibrarianNPC_Name_Objective">bibliotecaria</string>
     <string name="LibraryBook_Description">Questo tomo è davvero enorme. Racchiude tutta la conoscenza che gli avventurieri hanno scoperto e portato dal dungeon.</string>
     <string name="Lich_Desc">Il negromante incontrò la morte nelle profondità della Necropoli, e come l\'energia maligna di questo posto fluì nel suo corpo, eventualmente, si trasformò in un lich. Il mago non morto, una marionetta senza coscienza, controllata da potrei malevoli.</string>
+    <string name="Lich_DieInfo">Non ho mai gradito questo Negromante. È ora di tornare al livello 7 e trovare un altro modo per scendere nella nuova avventura.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
@@ -1313,6 +1315,7 @@ Potrebbe bruciare?</string>
     <string name="MercenaryNPC_Name">mercenario</string>
     <string name="MercenaryNPC_Name_Objective">mercenario</string>
     <string name="Metabolism_Txt">%s del metabolismo</string>
+    <string name="MiasmaGas_Info">Una nube miasmatica nociva che avvelena, indebolisce e disorienta chi la respira.</string>
     <string name="MimicAmulet_Desc">il momento più glorioso della sua carriera  d\'avventure è stato appena si è rivelato ad essere una trappola.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">imitatore</string>
@@ -1644,6 +1647,7 @@ Potrebbe bruciare?</string>
     <string name="RatKingCrown_Name">Corona di re Ratto</string>
     <string name="RatKing_Desc">Questo topo è un po \'più grande di un normale topo marsupiale e si indossa una piccola corona sulla sua testa.</string>
     <string name="RatKing_Died">il re è morto. lunga vita al re!</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">non sto dormendo!</string>
     <string name="RatKing_Info2">Che cos\'è? Non ho tempo per queste sciocchezze. Il mio regno non governerà per sé!</string>
     <string name="RatKing_Info3">How dare you, puny creature, distrub Our Ratness?!</string>
@@ -2401,6 +2405,7 @@ Potrebbe bruciare?</string>
     <string name="WndDonate_royal">reale</string>
     <string name="WndDonate_royalDonate">donazione reale</string>
     <string name="WndDonate_royalDonateText">Non voglio sembrare strano, ma facendo così, stai letteralmente sfamando gli sviluppatori.</string>
+    <string name="WndDonate_royalDonateText2">Inoltre riceverai tutti i cappelli dello store! Così come tutti i cappelli che verranno mai rilasciati.</string>
     <string name="WndDonate_ruby">rubino</string>
     <string name="WndDonate_rubyDonate">Donazione rubino</string>
     <string name="WndDonate_rubyDonateText">La tua generosità ci aiuterà a continuare a migliorare Remixed Dungeon!</string>
@@ -2756,6 +2761,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_door_name">Porta</string>
     <string name="town_deco_dungeon_door_name">Entrata</string>
     <string name="town_deco_emptyboard_desc">Il più comune scaffale per esporre oggetti.</string>
+    <string name="town_deco_emptyboard_name">Rack</string>
     <string name="town_deco_entrance_desc">Questo ingresso conduce ai livelli superiori del dungeon.</string>
     <string name="town_deco_entrance_name">Ingresso</string>
     <string name="town_deco_exit_desc">Non si sa cosa ti aspetta se scendi questi scalini.</string>
@@ -2920,6 +2926,12 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
 
 
 

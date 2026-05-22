@@ -1024,6 +1024,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Horror_Name_0">Hátborzongató %s</string>
     <string name="Horror_Name_1">Hátborzongató %s</string>
     <string name="Horror_Name_2">Hátborzongató %s</string>
+    <string name="HungerBuff_Info1">Éhes vagy!</string>
     <string name="HungerBuff_Name1">Éhes vagy!</string>
     <string name="HungerBuff_Name2">Éhezel!</string>
     <string name="Hunger_Death">Éhen haltál....</string>
@@ -1156,6 +1157,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Knuckles_Info">Egy fémdarab ami úgy lett kialakítva, hogy tökéletesen passzoljon egy ökölhöz.</string>
     <string name="Knuckles_Name">boxer</string>
     <string name="KoboldIcemancer_Desc">A Kobold Jégmesterek a közösségük elitjei. Kiváló harcosok, varázslók, de még inkább tudósok. Az ősi jégmesterek elsajátították a jég irányításának művészetét, bonyolult szerkezeteket építve speciális varázsokkal megerősítve.</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">A %s fagygömbje megölt téged...</string>
     <string name="KoboldIcemancer_Name">kobold fagybűvölő</string>
     <string name="KoboldIcemancer_Name_Objective">kobold fagybűvölő</string>
@@ -1296,6 +1298,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="ManaRegenerationBuff_Info">A mana regenerálódás buff formájában van a könnyebb kezelés érdekében.</string>
     <string name="ManaRegenerationBuff_Name">Mana Regeneráció</string>
     <string name="ManaShieldBuff_Info">Egy varázspajzs jelent meg, amely teljesen blokkolja a következő bejövő támadást.</string>
+    <string name="ManaShieldBuff_Name">Varázssθυρί</string>
     <string name="Mana_Cost">Mana Igény:</string>
     <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Info">A Sebészi maszk arra lett kitalálva, hogy megállítsa a viselő szájából kijövő, cseppfolyós mikroorganizmusokat és aeroszolokat.
@@ -1773,6 +1776,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="RottenMeat_Info">egy darab rothad hús</string>
     <string name="RottenMeat_Name">rothad hús</string>
     <string name="RottenOrgan_Info">Egy legyőzött ellenségtől származó bomló szerv. Bár rothadt állapotban van, értéges vegyületeket tartalmaz az alkímiai folyamatokhoz.</string>
+    <string name="RottenOrgan_Name">Rotten szervek</string>
     <string name="RottenPasty_Info">volt-pástétom annyira undorítóan néz ki</string>
     <string name="RottenPasty_Name">romlott pástétom</string>
     <string name="RottenPumpkinPie_Info">Tökmindegy, milyen finom volt frissen, ez már nem lesz ehető.</string>
@@ -1788,6 +1792,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Csak a legjobb íjászok képesek használni ezt a rubin íjat. Szinte minden nyílvessző áthetol az ellenfeleket, hatalmas lyukat hagyva maga mögött a testükön, de hatalmas erő szükséges a felajzásukhoz.</string>
     <string name="RubyBow_Name">rubin íj</string>
+    <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Info">Ez a halálos fegyver egy igazi mesterműve a törpök mérnökeinek.</string>
     <string name="RubyCrossbow_Name">Rubin számszeríj</string>
     <string name="Rudolph_Info">Mi lehet ünnepibb egy ragyogó piros orrnál? Egy pár aganccsal egybevéve, természetesen.</string>
@@ -2129,6 +2134,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Succubus_Desc">A szukkubuszok démonok amik csábító női alakban jelennek meg (enyhén gót beütéső cicababaként). A varázserejét használva, a szukkubusz bármilyen hőst el tud csábítani, aki ezáltal képtelen lesz támadni ameddig a hatás aktív.</string>
     <string name="Succubus_Name">Szukkubusz</string>
     <string name="Succubus_Name_Objective">szukubbusz</string>
+    <string name="SummonBeast_AtYourCommand">Parancsodra!</string>
     <string name="SummonBeast_Name">Állat hívó</string>
     <string name="SummonDeathling_Info">Megidéz egy élőhalottat, aki követ téged. Az életpontjai és sebzése a hősöd szintjével növekszik. \n\nMegidézési limit:%1$d (+1 minden varázsszint után)</string>
     <string name="SummonDeathling_Name">Halandó megidézése</string>
@@ -2948,6 +2954,12 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
+
 
 
 

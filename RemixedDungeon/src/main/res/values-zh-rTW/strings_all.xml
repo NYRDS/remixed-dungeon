@@ -220,6 +220,7 @@
     <string name="Bee_Desc">雖然體型小，但蜜蜂會拼死保衛建巢。不過牠們活不久。</string>
     <string name="Bee_Gender">feminine</string>
     <string name="Bee_Name">蜜蜂</string>
+    <string name="Bee_Name_Objective">蜜蜂</string>
     <string name="BellaNPC_Amulet_F">但是你的那個護符...我們百合吧!</string>
     <string name="BellaNPC_Amulet_M">但是你的那個護符...我們約會吧!</string>
     <string name="BellaNPC_Angry">流氓,滾!</string>
@@ -387,6 +388,7 @@
     <string name="Challenges_Names_6">禁忌符文</string>
     <string name="Challenges_Names_7">和平主義</string>
     <string name="Challenges_Names_8">沒有城鎮</string>
+    <string name="Challenges_Names_9">失憶</string>
     <string name="ChampionOfAirBuff_Info">此特性賦予生物風之精髓，增強其敏捷性和戰鬥能力。風之冠軍成為一個強大的對手，能夠發動迅速而致命的攻擊，能迅速改變戰鬥的進程。</string>
     <string name="ChampionOfAirBuff_Name">風之勇士</string>
     <string name="ChampionOfEarthBuff_Info">大地勇士體現了不屈的力量，這個特性增強了生物的傷害抗性並增加了其最大生命力。這種轉變使其在危險的深淵中成為一個可怕的對手，能夠輕鬆地抵擋攻擊並以堅定的決心經受持久的戰鬥。</string>
@@ -429,6 +431,7 @@
     <string name="CharAction_Charm">魅惑</string>
     <string name="CharAction_Expel">pem expulsion</string>
     <string name="CharAction_Give">給</string>
+    <string name="CharAction_Hit">memukul</string>
     <string name="CharAction_Push">推</string>
     <string name="CharAction_Scare">嚇唬</string>
     <string name="CharAction_Steal">偷</string>
@@ -780,6 +783,7 @@
     <string name="FilteredMask_Info">面罩上的呼吸器是一種保護佩戴者免受吸入有害氣體（包括煙霧、蒸汽、氣體和微粒物質，如粉塵和空氣中的微生物）的裝置。
   \n\n不過這個面罩只起裝飾作用。</string>
     <string name="FilteredMask_Name">N95面罩</string>
+    <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">這支箭除了有個洋溢著和暖紅光的箭頭外，看起來和普通的沒大差別。</string>
     <string name="FireArrow_Name">火箭</string>
     <string name="FireElemental_Desc">這些遊蕩的火元素是在召喚某種更強大存在時的副產品。由於其特性太過混亂，以至於最強大的惡魔學者都無法驅使。</string>
@@ -1574,6 +1578,7 @@
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">箭頭上的致命毒藥反射出光芒。</string>
     <string name="PoisonArrow_Name">毒箭</string>
+    <string name="PoisonBuff_Info">Тіло поступово вбивається отрутою!</string>
     <string name="PoisonBuff_Name">劇毒</string>
     <string name="Poison_Death">您被劇毒殺死了……</string>
     <string name="Poison_Name_0">淬毒%s</string>
@@ -1807,6 +1812,7 @@
     <string name="RogueArmor_Prompt">選擇您要躍到的位置</string>
     <string name="RootSpell_Info">纏繞所選生物，使其無法在短時間內移動。</string>
     <string name="RootSpell_Name">纏繞</string>
+    <string name="RootsBuff_Info">Земля проросла корінням, що обвиває тіло, не дозволяючи зробити хоча б один крок.</string>
     <string name="RootsBuff_Name">纏繞</string>
     <string name="RottenFish_Info">腐爛的魚，聞起來很難聞。</string>
     <string name="RottenFish_Name">爛魚</string>
@@ -1998,6 +2004,7 @@
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">持盾暴徒</string>
     <string name="Shielded_Name_Objective">持盾暴徒</string>
+    <string name="ShootInEye_Info">利用你非凡的射擊技巧，射中敵人的眼睛，如果它有眼睛的話。</string>
     <string name="ShootInEye_Name">百步穿楊</string>
     <string name="Shopkeeper_Buy">選擇要購買的物品</string>
     <string name="Shopkeeper_BuyPrompt">讓我們看看您的庫存</string>
@@ -3022,6 +3029,13 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
 
 
 

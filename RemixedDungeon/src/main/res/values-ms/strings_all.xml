@@ -640,6 +640,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DoctorArmor_Info">Zack Armour Plague Doctor ini membenarkan penggunaan kebolehan \&quot;Miasma Cloud\&quot;, yang mengeluarkan gas beracun yang meracuni, melemahkan, dan memusingkan musuh. Doktor, yang dilindungi oleh topengnya, imun terhadap kesan-kesan ini.</string>
     <string name="DoctorArmor_Name">Jubah Doktor</string>
     <string name="DoctorArmor_NotDoctor">Hanya doktor wabah yang boleh menggunakan zirah ini!</string>
+    <string name="DoctorSpecial">Awan Miasma</string>
     <string name="DogeMask_Info">Anda mahu menyamar sebagai Doge yang terkenal? Sekarang adalah peluang anda!\nTopeng Hebat! Boleh Menyamar! Menakjubkan!</string>
     <string name="DogeMask_Name">Topeng Doge</string>
     <string name="DonateButton_pleaseDonate">diharap dapat memberi sumbangan dalam bentuk derma</string>
@@ -1109,6 +1110,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="IronKey_Info">gigi kunci purba ini kelihatan sudah lusuh digunakan; tali kulit kunci ini tampak lusuh dimamah usia. Hmm pintu manakah yang boleh dibuka dengan kunci ini?</string>
     <string name="IronKey_Name">kunci besi</string>
     <string name="ItemSprite_Info1">buang: %1$.1f %2$.1f</string>
+    <string name="Item_ACAlchemy">ALKEMI</string>
     <string name="Item_ACDrop">LEPAS</string>
     <string name="Item_ACPickup">Ambil</string>
     <string name="Item_ACThrow">BUANG</string>
@@ -1945,6 +1947,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">kambing biri-biri</string>
     <string name="Sheep_Name_Objective">kambing biri-biri</string>
+    <string name="ShieldBuffNotReady_Info">Perisai anda tidak siap untuk menghalang serangan seterusnya.</string>
     <string name="ShieldBuffReady_Info">Perisai anda bersedia untuk menghalang serangan seterusnya.</string>
     <string name="ShieldBuffReady_Name">Shield is ready</string>
     <string name="ShieldInfoTemplate">Perisai ini akan menghalang sehingga %1$d kerosakan masuk. Dengan peluang %2$d %%. Ia akan mengambil masa %3$3.1f saat untuk pulih selepas berjaya menghalang.</string>
@@ -1952,6 +1955,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ShieldWeaponInfo">Apabila digunakan sebagai senjata, perisai ini akan menyebabkan %1$d kerosakan secara purata.</string>
     <string name="Shielded_Defense">disekat</string>
     <string name="Shielded_Desc">Si ganas merupakan gnoll terbesar, terkuat dan paling sukar dikalahkan. Jika tercedera teruk, mereka menjadi gila dan dapat mencederakan teruk pihak musuh. Si ganas ini memakai pengadang gergasi!</string>
+    <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">si ganas berpengadang</string>
     <string name="Shielded_Name_Objective">si ganas berpengadang</string>
     <string name="ShootInEye_Name">Tembak Kedalam Mata</string>
@@ -2007,6 +2011,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SociologistNPC_Name_Objective">Ahli sosiologi</string>
     <string name="Sorrowmoss_Desc">Lumut Duka ialah sejenis bunga (bukan lumut) dengan kelopak berduri, mengandungi racun berbisa  yang boleh membawa maut.</string>
     <string name="Sorrowmoss_Name">Lumut Duka</string>
+    <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">Merupakan serpihan yang anda ambil dari saki-baki Pasu Roh. Ia bercahaya dengan tenaga mistik, mungkin ada orang meminati benda ini.</string>
     <string name="SoulShard_Name">serpihan roh</string>
     <string name="Spear_Gender">neuter</string>
@@ -2060,6 +2065,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="SpiderQueenCarapace_Info">Serpihan kulit katung Ratu Lelabah. Anda dapati ada kelenjar sawang di dalamnya, ia kelihatan bergerak dan masih hidup.</string>
     <string name="SpiderQueenCarapace_Name">Kulit Katung Ratu Lelabah</string>
     <string name="SpiderQueen_Desc">Sebahagian jasad perempuan cantik sebahagian lagi jasad lelabah. Setiap benda hidup dalam sarang ialah hambanya. Bertemu dengan wanita luar biasa ini merupakan pengalaman maut. Kerana anda merupakan penceroboh!</string>
+    <string name="SpiderQueen_DieInfo">Ratu labah-labah telah dibunuh! Sekarang saya sepatutnya kembali ke level 5 dan meneruskan perjalanan saya ke kedalaman.</string>
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">ratu lelabah</string>
     <string name="SpiderQueen_Name_Objective">ratu lelabah</string>
@@ -2955,6 +2961,12 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
 
 
 

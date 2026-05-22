@@ -26,6 +26,7 @@
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">skorpio beracun</string>
     <string name="Acidic_Name_Objective">skorpio beracun</string>
+    <string name="Actions_Speed">Level kemasukan</string>
     <string name="Affection_Txt">%s ketertarikan</string>
     <string name="AirElemental_Desc">Elemental angin adalah sihir terbang yang terbuat dari angin hidup.</string>
     <string name="AirElemental_Gender">masculine</string>
@@ -302,6 +303,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="BloodTransfusion_FullHP">Darah Anda sudah penuh.</string>
     <string name="BloodTransfusion_Info">Menyerap hampir semua darah dari target untuk menyembuhkan diri sendiri. Ritual gelap pengorbanan dan kelangsungan hidup.</string>
     <string name="BloodTransfusion_Name">Transfusi Darah</string>
+    <string name="BloodTransfusion_WontAgreed">Sasaran menolak diekstraksi esensinya.</string>
     <string name="BodyArmorBuff_Info">Armor ditingkatkan dengan mengorbankan kecepatan gerakan.</string>
     <string name="BodyArmorBuff_Name">Pelindung Tubuh</string>
     <string name="BodyArmorSpell_Info">Mengaktifkan kekuatan otot yang dicadangkan, membuatnya lebih kuat untuk sementara, ini sangat meningkatkan armor Anda tetapi dengan mengorbankan kecepatan gerakan.</string>
@@ -566,6 +568,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="CorpseDust_Info2">Mungkin karena hanya memegangnya saja sudah membuat Anda merasa cemas dan marah.</string>
     <string name="CorpseDust_Name">debu mayat</string>
     <string name="CorpseExplosion_Info">Mengubah mayat menjadi awan gas beracun yang mematikan, menyebarkan penyakit dan racun ke semua musuh di sekitarnya.</string>
+    <string name="CorpseExplosion_Name">Letupan Bangkai</string>
     <string name="CorpseExplosion_NoCorpse">Tidak ada mayat di lokasi itu.</string>
     <string name="Crab_Defense">tertangkis</string>
     <string name="Crab_Desc">Kepiting besar ini adalah puncak rantai makanan di saluran bawah tanah. Mereka sangat cepat dan tulang tebal mereka dapat menahan serangan berat.</string>
@@ -1353,6 +1356,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="MimicPie_Name">mimik</string>
     <string name="MimicPie_Name_Objective">mimik</string>
     <string name="Mimic_Desc">Mimik adalah makhluk ajaib yang dapat merubah bentuk ke bentuk apapun yang mereka mau. Di dungeon mereka selalu memilih bentuk peti harta karun, karena mereka tahu cara menarik perhatian petualang.\&quot;;</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">mimik</string>
     <string name="Mimic_Name_Objective">mimik</string>
     <string name="MindVisionBuff_Info">Penglihatan batin memungkinkan untuk melihat dengan jelas pergerakan semua makhluk hidup di lantai.</string>
@@ -1535,6 +1539,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Ambil lima _Kobold Icemancer_ mati! Tubuh beku mereka menyimpan kunci untuk membuka rahasia sihir dingin mereka!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Jari-jari kerangkanya mengetuk ritmis di atas sebuah periuk mendidih, udara di sekelilingnya dipenuhi bau menyengat belerang dan pembusukan*
 _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-gua beku mereka, memegang erat sihir es mereka. Aku butuh lima dari mereka, mayat beku mereka akan menjadi... menerangi. Penguasaan es mereka, itu... aneh. Aku percaya mereka mengakses energi purba, kekuatan tidur di bawah permukaan dunia ini.</string>
+    <string name="PlagueDoctorQuest_5_1_Epilogue">*Dia menatap dua _succubi_, senyum kebahagiaan merekah di balik topengnya.* Luar biasa! Gemilang! Ini akan membuka begitu banyak… kemungkinan! *Dia menoleh kepada anda, suaranya tebal dengan terima kasih… dan sesuatu yang lain.* Usaha anda… tidak akan dilupakan. Saya berhutang terima kasih yang paling mendalam kepada anda. *Pandangannya bertahan pada _succubi_ selama beberapa saat terlalu lama, sebelum dia mundur ke laboratoriumnya, bergumam tentang membuka rahasia pesona.</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Pikirannya mengembara saat dia berbicara, suaranya semakin pelan, hampir berbisik.* Bawakan aku dua _succubus_... hidup-hidup. Kekuatan mereka... itu... menakjubkan.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Dia gagap, suaranya serak seperti ranting rapuh*. A-ah, _succubi_! Dua... ya, dua, hidup! Ini... hem... untuk penelitian saya! Anda lihat... feromon mereka... ini penting untuk memahami keseimbangan halus dari... ah... *Ia terdiam, tangannya yang berotot mencoba menyesuaikan topengnya dengan gugup, matanya menatap Anda dengan intensitas demam.* Mereka... esensi... ini sebuah teka-teki... teka-teki indah, misterius! *Ia batuk keras, mencoba mengumpulkan kembali ketenangannya.* Saya berjanji, untuk membawa saya dua dari makhluk... ini... Anda akan mendapatkan rasa terima kasih saya selamanya. Anggap saja ini sebagai... ganjaran ilmu pengetahuan! Ya! Untuk ilmu pengetahuan!</string>
     <string name="PlagueDoctorQuest_AllDone">*Dia mengeluarkan tawa kering yang serak.* \&quot;Pencapaianmu, itu membuka rahasia di luar ukuran! Pengetahuan yang diperoleh... itu berdenyut di dalamku, sebuah simfoni penemuan. Tapi pengetahuan,\&quot; katanya, suaranya turun menjadi bisikan konspiratif, \&quot;pengetahuan adalah kekuatan. Dan kekuatan... ah... itu adalah eliksir yang paling memabukkan.\&quot; Dia menatapmu intens selama sesaat, matanya yang zambrud membakar dengan intensitas demam. \&quot;Mungkin,\&quot; bisiknya, \&quot;jalanku akan bersilangan denganmu lagi. Karena masih banyak... misteri... yang belum terungkap.\&quot;</string>
@@ -1685,6 +1690,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="RatKingCrown_Name">mahkota raja tikus</string>
     <string name="RatKing_Desc">Tikus ini lebih besar dari tikus marsupial dan memakai mahkota kecil di kepalanya.</string>
     <string name="RatKing_Died">Raja sudah mati. Panjang umur raja!</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">Saya tidak tidur!</string>
     <string name="RatKing_Info2">Apa ini? Saya tidak punya waktu untuk ini. Kerajaanku tidak berjalan dengan sendirinya.</string>
     <string name="RatKing_Info3">Beraninya kau, makhluk lemah, mengganggu Ratness Kami?!</string>
@@ -3017,6 +3023,12 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
 
 
 
