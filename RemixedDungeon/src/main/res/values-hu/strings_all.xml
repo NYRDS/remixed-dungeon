@@ -1986,6 +1986,7 @@ egy másik helyre a szinten. </string>
     <string name="Skeleton_Killed">Belehaltál a szétrobbanó csontszilánkok okozta sérülésekbe...</string>
     <string name="Skeleton_Name">csontváz</string>
     <string name="Skeleton_Name_Objective">csontváz</string>
+    <string name="SleepBuff_Info">Teljesen aludt.</string>
     <string name="SleepBuff_Name">Alvás</string>
     <string name="SlowBuff_Info">A lassú érzet lassabbá teszi az embert a megszokottnál.</string>
     <string name="SlowBuff_Name">Lassítva</string>
@@ -2244,6 +2245,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="VertigoBuff_Name">Szédülés</string>
     <string name="View_Distance">Látótávolság</string>
     <string name="VileEssence_Info">Egy összetömörített romlottság esszenciája, amit egy legyőzött ellenségből nyertek. Ez a sötét anyag rosszindulatú energiával pulzál, és nagy áron becsülik az alkímiai folyamatokban.</string>
+    <string name="VileEssence_Name">Elkártevő esszencia</string>
     <string name="Viscosity_Status">%d sebzést késleltetett</string>
     <string name="Viscosity_Txt">Nyúlós %s</string>
     <string name="WandHolster_Info">Ez a vékony kis tartó valami egzotikus állat bőréből készült. Lehetővé teszi hogy kompakt módon tárolj maximum %d pálcát.</string>
@@ -2910,6 +2912,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_vat_name">Dézsa</string>
     <string name="town_deco_wall_beam_desc">Megbízható segítséget nyújt az itteni építkezéshez.</string>
     <string name="town_deco_wall_beam_name">Sugár</string>
+    <string name="town_deco_wall_brazier_desc">A tölőredoők párából származó pára kellemes aromákkal tölti be a szobát.</string>
     <string name="town_deco_wall_brazier_name">Kohleofen</string>
     <string name="town_deco_wall_candles_desc">Leégett gyertyák, amik még mindig kellemes illatot árasztanak.</string>
     <string name="town_deco_wall_candles_name">Gyertyák</string>
@@ -2940,6 +2943,10 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
 
 
 

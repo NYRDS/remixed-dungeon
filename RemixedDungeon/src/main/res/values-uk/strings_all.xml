@@ -422,6 +422,7 @@
     <string name="ChaosCrystal_Prompt">Обери місце для мітки Хаосу</string>
     <string name="ChaosCrystal_ScrollFused">Накарбована на сувої руна поглинула кристал, і тепер це %s</string>
     <string name="ChaosCrystal_SelectForFuse">Обери предмет, аби об\'єднати його з кристалом</string>
+    <string name="ChaosCrystal_ShieldFused">Кристал луснувся з вашим щитом, і він прийняв форму хаосу.</string>
     <string name="ChaosCrystal_StaffFused">Кристал об\'єднався з твоєю паличкою і прийняв форму посоха</string>
     <string name="ChaosCrystal_SwordFused">Кристал об\'єднався з твоєю зброєю і прийняв форму меча</string>
     <string name="ChaosCrystal_Use">ВИКОРИСТАТИ</string>
@@ -817,6 +818,7 @@
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Ти відчуваєш ауру холоду, яка йде з наконечника цієї стріли.</string>
     <string name="FrostArrow_Name">морозна стріла</string>
+    <string name="FrostAuraBuff_Info">Мороз оточив тіло, уповільнюючи все, що наближається.</string>
     <string name="FrostAuraBuff_Name">Морозна аура</string>
     <string name="FrostBuff_Info">Лід скував тіло, не дозволяючи робити жодних дій взагалі.</string>
     <string name="FrostBuff_Name">Заморожений</string>
@@ -2741,6 +2743,7 @@
     <string name="WrnExperimental_hint">Якщо цей дивний і викривлений світ надто жорстокий для тебе, вимкни ці параметри через\nГоловний екран-&gt;Параметри-&gt;Геймплей\nменю та почни нову гру або завантаж інше збереження.</string>
     <string name="WrnExperimental_moveTimeout">Ліміт часу на хід встановлено на %d мілісекунд, думай швидко!</string>
     <string name="WrnExperimental_realtime">Увімкнено режим Realtime! : це тепер рогалик у реальному часі, клікай швидко або помри.\nХочеш перевірити інвентар?\nПощастить зробити це, поки краб у каналізації перевіряє твої кишки.</string>
+    <string name="WrnExperimental_title">Експериментальні опції увімкнено!</string>
     <string name="Yog_Desc">Йог-Джева - старий бог, могутня сутність зі світу Хаосу. В давні часи древні дворфи ледь подолали його армію демонів, але вбити самого бога їм не вдалося. Вони заточили його глибині свого міста, переконані, що він занадто слабий, аби вирватися на волю.</string>
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
@@ -3020,6 +3023,10 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
 
 
 

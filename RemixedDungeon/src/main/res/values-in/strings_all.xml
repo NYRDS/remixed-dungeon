@@ -642,6 +642,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="DieHardSpell_Info">Akan meningkatkan regenerasi Anda untuk sementara membuat Anda menjadi Susah Mati yang nyata.</string>
     <string name="DieHardSpell_Name">mati dengan susah payah</string>
     <string name="Displacement_Txt">%s pemindahan</string>
+    <string name="DoctorArmor_Name">Jas Dokter</string>
     <string name="DoctorArmor_NotDoctor">Hanya dokter wabah yang bisa menggunakan baju besi ini!</string>
     <string name="DogeMask_Info">Apakah Anda pernah ingin menyamar sebagai Doge yang terkenal? Sekarang adalah kesempatanmu!\nTopeng seperti itu! Banyak Penyamaran! Wow!</string>
     <string name="DogeMask_Name">Topeng doge</string>
@@ -1527,6 +1528,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">Sempurna! Para _Dwarf Warlocks_, esensi mereka kini bisa kuteliti! Begitu menyimpang dan terkorupsi sihirnya... sungguh menakjubkan. *Ia mengangkat sebuah botol berisi cairan merah kental yang berpendar.* Ini, untukmu: sebuah _Potion of Might_! Minumlah kekuatannya, dan kau akan merasakan kekuatan gunung-gunung mengalir dalam darahmu! Ingatlah, pengetahuan yang diperoleh dari pengorbanan ini pada akhirnya akan melayani tujuan yang lebih tinggi... mungkin bahkan menyelamatkan kita semua dari nasib yang lebih buruk dari kematian. </string>
     <string name="PlagueDoctorQuest_4_1_InProgress">Lima _Dwarf Warlock_, tubuh mereka masih berdenyut dengan gema lemah sihir gelap! Bawakan mereka untukku, dan aku akan memberimu hadiah berupa ramuan kekuatan yang tak tertandingi – sebuah _Potion of Might_ yang akan memberimu kekuatan sepuluh orang!</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Dwarf! Para penghuni bawah tanah yang keras kepala, terobsesi dengan permata dan emas. Tapi _Dwarf Warlock_-lah yang aku inginkan… sihir terpelintir mereka, didorong oleh kedalaman tempat mereka tinggal. Lima, aku butuh lima dari jiwa-jiwa layu itu! Tubuh mereka memegang kunci untuk memahami suatu… fenomena. Sesuatu tentang menyalurkan energi arkan melalui bumi itu sendiri. Aku percaya aku dekat dengan terobosan, tapi aku butuh esensi mereka, sihir terkutuk mereka! *Dia batuk dengan keras ke sapu tangannya, noda gelap menyebar di kain halus itu*</string>
+    <string name="PlagueDoctorQuest_4_2_Epilogue">Hebat! Lima _Kobold Pembekal Es_, esensi es mereka sekarang milik saya untuk menjelajahi! Koneksi mereka dengan padang es yang membeku, sungguh menakjubkan. Cara mereka memanipulasi air itu sendiri… benar-benar luar biasa.  *Dia menyerahkan Anda sebotol berkilau yang terisi cairan merah menyala* Ini, untuk usaha berani Anda: _Ramuan Kekuatan_! Minumlah dan rasakan kekuatan sepuluh prajurit mengalir melalui pembuluh darah Anda! Ingat, pengetahuan adalah kekuatan… dan kekuatan adalah senjata satu-satunya yang kita miliki melawan kegelapan yang mendekat. Sekarang… mari kita bedah jiwa-jiwa es ini dan temukan rahasia mengerikannya!</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Ambil lima _Kobold Icemancer_ mati! Tubuh beku mereka menyimpan kunci untuk membuka rahasia sihir dingin mereka!</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Pikirannya mengembara saat dia berbicara, suaranya semakin pelan, hampir berbisik.* Bawakan aku dua _succubus_... hidup-hidup. Kekuatan mereka... itu... menakjubkan.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Dia gagap, suaranya serak seperti ranting rapuh*. A-ah, _succubi_! Dua... ya, dua, hidup! Ini... hem... untuk penelitian saya! Anda lihat... feromon mereka... ini penting untuk memahami keseimbangan halus dari... ah... *Ia terdiam, tangannya yang berotot mencoba menyesuaikan topengnya dengan gugup, matanya menatap Anda dengan intensitas demam.* Mereka... esensi... ini sebuah teka-teki... teka-teki indah, misterius! *Ia batuk keras, mencoba mengumpulkan kembali ketenangannya.* Saya berjanji, untuk membawa saya dua dari makhluk... ini... Anda akan mendapatkan rasa terima kasih saya selamanya. Anggap saja ini sebagai... ganjaran ilmu pengetahuan! Ya! Untuk ilmu pengetahuan!</string>
@@ -1709,6 +1711,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ResultDescriptions_Hunger">Mati kelaparan pada level %d</string>
     <string name="ResultDescriptions_Immured">Terkubur dalam batu di level %d</string>
     <string name="ResultDescriptions_Mob">Dibunuh oleh %1$s pada level %2$d</string>
+    <string name="ResultDescriptions_Necromancy">Kehabisan tenaga hidup sambil mencoba menghidupkan mayat di level %d</string>
     <string name="ResultDescriptions_Necrotism">Mati karena Nekrotisme pada level %d</string>
     <string name="ResultDescriptions_Ooze">Dibunuh oleh lumpur membakar pada level %d</string>
     <string name="ResultDescriptions_Poison">Mati keracunan pada level %d</string>
@@ -2242,6 +2245,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ToxicGas_Info">Awan beracun kehijauan berputar-putar di sini.</string>
     <string name="ToxicGas_Info1">Kamu mati karena menghirup gas beracun...</string>
     <string name="ToxicGland_Info">Kelenjar beracun yang dipanen dari musuh yang dikalahkan. Kelenjar ini dipenuhi racun kuat dan dapat digunakan dalam proses alkimia.</string>
+    <string name="ToxicGland_Name">Kelenjar Toksik</string>
     <string name="TrapWnd_Step">Apakah Anda benar-benar ingin menginjak jebakan ini? Anda mungkin bisa mati.</string>
     <string name="TrapWnd_Title">Jebakan</string>
     <string name="TreacherousSpirit_Desc">Makhluk mengerikan ini terlihat seperti awan kegelapan yang hidup. Mata raksasa itu menatap Anda, sambil berdenyut dengan setiap gerakan yang Anda lakukan.</string>
@@ -3008,6 +3012,11 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
 
 
 

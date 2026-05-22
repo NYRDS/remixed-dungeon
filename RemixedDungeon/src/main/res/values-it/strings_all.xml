@@ -742,6 +742,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Fez_Info">È un copricapo a forma di cono di tronco in feltro rosso, con una nappa fissata sulla parte superiore. E no, non rende il mondo in 3 dimensioni.</string>
     <string name="Fez_Name">Fez</string>
     <string name="FilteredMask_Info">Un respiratore è un dispositivo progettato per proteggere chi lo indossa dall\'inalazione di atmosfere pericolose, inclusi fumi, vapori, gas e particolato come polveri e microrganismi aerodispersi.\n\nQuesta maschera tuttavia ha solo scopo decorativo.</string>
+    <string name="FilteredMask_Name">Maschera N95</string>
     <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">Questa freccia sembra normale, tranne per la calda luce rossa che irradia dalla sua testa.</string>
     <string name="FireArrow_Name">freccia di fuoco</string>
@@ -1384,6 +1385,7 @@ Potrebbe bruciare?</string>
     <string name="NecromancerArmor_Name">Armatura d\'ossa</string>
     <string name="NecromancerArmor_NotNecromancer">Solo i negromanti possono usare questa armatura!</string>
     <string name="NecromancerNPC_Desc">Quest\'uomo di mezza età sembra essere leggermente annoiato ed eccitato allo stesso tempo. Veste un\'armatura composita fatta  da frammenti di scheletri. </string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">Ah! Non è una cosa rara da vedere! Un compagno avventuriero che non è morto. Incredibile! Oh... Chiedo venia, a volte sono troppo esaltato. Vedi, io stesso sono un negromante. E nonostante studiare il morto e la morte in sé sia ciò che faccio per vivere, vedendo le stesse cose ancora e ancora, spesso diventa estremamente noioso. D\'altro canto è proprio il motivo per cui sono qui. Secondo i miei calcolo in sole poche settimane, da qualche parte in questo dungeon, accadrà qualcosa di spettacolare. Una _Necropoli_, un\'antica città dei morti sta per aprire le sue porte. E... Non posso dire tanto, ho sprecato abbastanza tempo così com\'è. Devo preparami, _torna dopo_. </string>
     <string name="NecromancerNPC_Intro2">Ah! Un avventuriero che non sia morto. Eccezionale! Oh... Ti chiedo scusa. Vedi, io stesso sono un negromante. Ed anche se studiare i morti e la Morte stessa sia ciò che faccio per vivere, vedere sempre le stesse cose volta dopo volta, alla fine diventa estremamente noioso. D\'altra parte è esattamente per questo che sono qui. Qualcosa di spettacolare è accaduto di recente. Una _Necropoli_, un\'antica città dei morti ha finalmente mostrato le sue porte. Ed infatti siamo proprio di fianco all\'entrata. Ed...ecco cosa ti dico, prendi questa chiave e vai per primo, cioè ti piace l\'avventura e roba così no? Ed io sarò proprio dietro di te, devo solo prepararmi.</string>
     <string name="NecromancerNPC_Message1">Così poco tempo, così poco tempo... </string>
@@ -2070,6 +2072,7 @@ Potrebbe bruciare?</string>
     <string name="StoneBloodBuff_Info">Kan batu menjadi yang melebur dengan dinding terdekat dan membuat melintasinya jauh lebih mudah, tetapi dengan apa harga?</string>
     <string name="StoneBloodBuff_Name">Sangue di pietra</string>
     <string name="Str_lose">-1 str</string>
+    <string name="StrongShield_name">Scudo ricoperto di bronzo</string>
     <string name="StunBuff_Info">Stordito!</string>
     <string name="StunBuff_Name">Stordito</string>
     <string name="Stylus_ACInscribe">INCIDI</string>
@@ -2485,6 +2488,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndModSelect_ReallyDelete">Vuoi davvero eliminare?</string>
     <string name="WndModsDisclaimer_install">Installa mod locale</string>
     <string name="WndModsDisclaimer_title">Mod</string>
+    <string name="WndMovieTheatre_Bye">Torna quando vuoi, siamo sempre felici di vederti!</string>
     <string name="WndMovieTheatre_Instruction">Benvenuti al nostro cinema! Offriamo un servizio speciale: potete guardare gratuitamente un film speciale chiamato pubblicità. E se lo guardate fino alla fine, sarete ricompensati con %d monete d\'oro!</string>
     <string name="WndMovieTheatre_Instruction_2">Hai guardato %1$d su %2$d volte. Otterrai un\'opportunità aggiuntiva per guardare un film per ogni nuovo livello dell\'eroe raggiunto.</string>
     <string name="WndMovieTheatre_No">lascia</string>
@@ -2911,6 +2915,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 

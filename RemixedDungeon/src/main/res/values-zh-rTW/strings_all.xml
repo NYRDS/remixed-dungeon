@@ -50,6 +50,7 @@
     <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">這個箭頭尖端的瘋狂詛咒的力量將使任何生物變得無情、狂暴，兇殘無比。</string>
     <string name="AmokArrow_Name">狂亂箭</string>
+    <string name="AmokBuff_Info">Відчуйте безумство, забираючи життя нещасних.</string>
     <string name="AmokBuff_Name">狂亂</string>
     <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">這個飛鏢尖端的詛咒將使任何生物變得無情、狂暴。</string>
@@ -350,6 +351,7 @@
     <string name="Carcass_Devoured">你已經吞食了%s的屍體！</string>
     <string name="Carcass_DissectFailed">你解剖了 %s，但沒發現任何有價值的东西。</string>
     <string name="Carcass_DissectMessage">你解剖了屍體並獲得了一個 %s。</string>
+    <string name="Carcass_DissectResult">З %1 ви отримали %2 врожай %3.</string>
     <string name="Carcass_Info">已死亡%s的殘骸。</string>
     <string name="Carcass_Kick">這隻%s已經完全死了,沒有必要再踢它。</string>
     <string name="Carcass_Name">%s 的遺骸</string>
@@ -2031,6 +2033,7 @@
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">蝸牛</string>
     <string name="Snail_Name_Objective">snail</string>
+    <string name="SnipersMarkBuff_Info">Tanda dibuat oleh penembak jitu.</string>
     <string name="SnipersMarkBuff_Name">狙擊手標記</string>
     <string name="SociologistNPC_AlreadyTaken">你已經反饋過了。請稍後再來</string>
     <string name="SociologistNPC_Desc">這位調研員專門收集你對這款混合地牢的意見和建議</string>
@@ -3013,6 +3016,9 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
 
 
 

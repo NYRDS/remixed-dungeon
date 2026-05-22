@@ -1446,6 +1446,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Ooze_Death">%s telah membunuh anda...</string>
     <string name="Order_Info">Dengan tumpuan yang betul, arahan anda hampir tidak dapat dinafikan.</string>
     <string name="Order_Name">Pesanan</string>
+    <string name="Order_Resist">Bagaimana berani kamu?!</string>
     <string name="OverpricedRation_Info">Kelihatan bekalan makanan biasa tetapi lebih kecil</string>
     <string name="OverpricedRation_Message">Makanan ini rasanya sedap.</string>
     <string name="OverpricedRation_Name">bekalan makanan mahal</string>
@@ -2104,6 +2105,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Str_lose">-1 ktn</string>
     <string name="StrongShield_desc">Perisai segi empat tepat ini disadur dengan lembaran gangsa dan dihiasi dengan kain berwarna. Ia jauh lebih berat, tetapi boleh menghalang lebih banyak kerosakan masuk.</string>
     <string name="StrongShield_name">Perisai bertuah</string>
+    <string name="StunBuff_Name">Tertunduk</string>
     <string name="Stylus_ACInscribe">TULIS</string>
     <string name="Stylus_Info">Kalam misteri ini diperbuat daripada batu hitam yang sangat keras. Dengan kalam ini anda boleh menulis glif atau rune, tetapi anda tidak berkuasa memilih apa yang akan dihasilkan, kalam tersebut yang menentukannya buat anda.</string>
     <string name="Stylus_Inscribed">anda menulis %1$s di atas %2$s anda</string>
@@ -2139,6 +2141,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">Bilah keluli tajam yang menakutkan.</string>
     <string name="Sword_Name">pedang</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Kapak lontar ini tidaklah begitu berat, tetapi masih memerlukan kekuatan yang mencukupi untuk berkesan.</string>
     <string name="Tamahawk_Name">tomahawk</string>
     <string name="TenguLiver_Info">Hati ini milik musuh yang hebat. Cukup dengan melihatnya, naluri liar anda mengambil alih, dan anda merasakan keinginan untuk memakannya.</string>
@@ -2946,6 +2949,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 
