@@ -333,7 +333,7 @@
     <string name="CagedKobold_Name">kobold terkurung</string>
     <string name="CagedKobold_Name_Objective">kobold terkurung</string>
     <string name="CagedKobold_Quest_End">Oh, terima kasih, terima kasih banyak-banyak! Macamana kamu jumpa kunci ini? Kamu...kamu berjaya musnahkan senjata tu?! Hebat! tahu tak, aku akan bantu kamu, dan aku tahu langkah terbaik ialah mengikut kamu buat masa ini. Kobold terkurung bertukar menjadi lilin</string>
-    <string name="Calm_Cast">%1 진정됩니다.</string>
+
     <string name="Calm_Info">Di sini ada banyak makhluk yang marah, mari kita bantu mereka.</string>
     <string name="Calm_Name">Tenang</string>
     <string name="CandleOfMindVision_Info">Rupanya seperti lilin biasa, anda tidak menjangka ia boleh ditemui dalam kurungan bawah tanah ini. Yang peliknya lilin ini berasa suam bila dipegang walaupun belum lagi dinyalakan.</string>
@@ -428,7 +428,7 @@
     <string name="CharAction_Steal">curi</string>
     <string name="CharAction_Take">ambil</string>
     <string name="CharAction_Taunt">provokasi</string>
-    <string name="CharInfo_Level">Ini adalah level %1 %2.</string>
+    <string name="CharInfo_Level">Ini adalah level %1$d %2$s.</string>
     <string name="Char_Defeat_0">%1$s menewaskan %2$s</string>
     <string name="Char_Defeat_1">%1$s menewaskan %2$s</string>
     <string name="Char_Defeat_2">%1$s menewaskan %2$s</string>
@@ -459,14 +459,13 @@
     <string name="Char_StaStunned">terpukul</string>
     <string name="Char_StaVision">penglihatan</string>
     <string name="Char_Stole_0">%1$s mencuri %2$s dari %3$s!</string>
-    <string name="Char_Stole_1">%1 mencuri %2 daripada %3!</string>
-    <string name="Char_Stole_2">%1 mencuri %2 dari %3!</string>
+    <string name="Char_Stole_1">%1$s mencuri %2$s daripada %3$s!</string>
+    <string name="Char_Stole_2">%1$s mencuri %2$s dari %3$s!</string>
     <string name="Char_YouMissed">%1$s %2$s serangan anda</string>
     <string name="ChargrilledMeat_Info">Kelihatan seperti stik biasa.</string>
     <string name="ChargrilledMeat_Name">daging dibakar dengan arang</string>
     <string name="CharmBuff_Info">Fikiran dan badan telah dipukau!</string>
     <string name="CharmBuff_Name">Dipukau</string>
-    <string name="CharmSpell_Cast">%1 is charmed.</string>
     <string name="CharmSpell_Info">Setiap orang berhak mendapat sedikit kasih sayang, bukan?</string>
     <string name="CharmSpell_Name">Pesona</string>
     <string name="Chasm_Chasm">Jurang</string>
@@ -1369,7 +1368,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Mob_StaAmokStatus">%1$s ini sedang mengamok</string>
     <string name="Mob_StaControlledStatus">%s ini di bawah pengaruhi kegelapan</string>
     <string name="Mob_StaFleeingStatus">%s ini lari ketakutan</string>
-    <string name="Mob_StaFleeingStatus2">Ini %1 sedang melarikan diri dari %2</string>
+    <string name="Mob_StaFleeingStatus2">Ini %1$s sedang melarikan diri dari %2$s</string>
     <string name="Mob_StaHuntingStatus">%s ini sedang memburu</string>
     <string name="Mob_StaHuntingStatus2">%1$s ini sedang memburu %2$s</string>
     <string name="Mob_StaPassiveStatus">%s ini kelihatan lembab dan tidak bermaya</string>
@@ -2519,7 +2518,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndModInstall_InstallingMod">Memasang mod</string>
     <string name="WndModInstall_PleaseUpdate">Sila kemas kini Remixed Dungeon sebelum memasang mod ini</string>
     <string name="WndModInstall_Version">versi</string>
-    <string name="WndModSelect_AreYouSure">Padamod: %1, anda pasti?</string>
+    <string name="WndModSelect_AreYouSure">Padamod: %1$s, anda pasti?</string>
     <string name="WndModsDisclaimer_install">Pasang mod tempatan</string>
     <string name="WndModsDisclaimer_manage">Urus senarai mod</string>
     <string name="WndModsDisclaimer_title">Mod</string>

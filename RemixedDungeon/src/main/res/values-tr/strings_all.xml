@@ -19,7 +19,7 @@
     <string name="AboutScene_Translation">Yerelleştirme:</string>
     <string name="AboutScene_Translation_Names">Topluluk</string>
     <string name="AboutScene_Txt_Intro">NYRDS yapımı olan Remixed Dungeon, Watabou\'nun Pixel Dungeon adlı yapımını esas almıştır.</string>
-    <string name="Accuracy_Decreased">Neden %1 kullanabileceğimi düşünmüştüm? Yanlış araç, yanlış el!</string>
+    <string name="Accuracy_Decreased">Neden %1$s kullanabileceğimi düşünmüştüm? Yanlış araç, yanlış el!</string>
     <string name="Accuracy_DecreasedDoctor">Bu %s\'ın her sallanışında kusur yayılıyor. Kemik Testeresim tedavi eder… bunu bulaştırıyor.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Çıplak eller tekniğimi mahvediyor. Testere\'nin temiz kesimi olmadan, nişanım kaosa doğru çürüyor.</string>
     <string name="Acidic_Desc">Bu devasa eklembacaklı-gibi şeytani yaratıklar ne olusa olsun yakın dövüşten sakınıp uzun menzilden sakatlayan tırtıklı dikenler fırlatırlar.</string>
@@ -344,7 +344,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="CagedKobold_Name">kafeslenmiş cüce</string>
     <string name="CagedKobold_Name_Objective">kafeslenmiş cüce</string>
     <string name="CagedKobold_Quest_End">Oh, teşekkür ederim, çok teşekkür ederim! Anahtarı bulmayı nasıl başardın? Sen... sen silahı yok mu ettin?! Bu inanılmaz! Biliyor musun, sana yardım edeceğimi söyledim ve sanırım bunu yapmanın en iyi yolunu biliyorum. Bir süre seninle kalacağım. * Kafesteki Kobold bir muma dönüştü</string>
-    <string name="Calm_Cast">%1 sakinleşir.</string>
+    <string name="Calm_Cast">%1$s sakinleşir.</string>
     <string name="Calm_Info">Etrafta bir sürü ağırlaştırılmış yaratık var, onlara yardım edelim.</string>
     <string name="Calm_Name">Sakin</string>
     <string name="CandleOfMindVision_Info">Sıradan bir mum gibi görünüyorsa da böylesi tehlikeli bir zindanda bulmayı bekleyeceğin bir şey değil. Gariptir ki yanmamış olmasına rağmen eline hafif bir sıcaklık veriyor.</string>
@@ -360,7 +360,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Carcass_Devoured">%s\'in cesedini yedin!</string>
     <string name="Carcass_DissectFailed">%s\'yi dissektör edip hiçbir değer bulamadınız.</string>
     <string name="Carcass_DissectMessage">Leşi parçalara ayırarak bir %s elde edersiniz.</string>
-    <string name="Carcass_DissectResult">Dari %1, kamu mendapatkan %2 panen %3.</string>
+    <string name="Carcass_DissectResult">Dari %1$s, kamu mendapatkan %2$d panen %3$s.</string>
     <string name="Carcass_Info">tamamen ölmüş %s kalıntıları.</string>
     <string name="Carcass_Kick">Bu %s tamamen ölü, tekme atmanın bir anlamı yok.</string>
     <string name="Carcass_Name">%s\'in kalıntıları</string>
@@ -977,7 +977,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="HeroClass_NecromancerPerks_4">İyileştirme İksiri en başından itibaren tanımlanmıştır.</string>
     <string name="HeroClass_None">halktan biri</string>
     <string name="HeroClass_PlagueDoctorPerks_0">Veba doktorları, öldürülmüş düşmanlardan [yellow:Toksin Bezleri], [yellow:Çürümüş Organlar], [yellow:Kemik Parçaları] toplar.</string>
-    <string name="HeroClass_PlagueDoctorPerks_1">Veba Maskesi (tüm Gazlara karşı bağışık) ve Kemik Testeresi ile başlar. Kritik vuruşlar fazladan parça düşürür ve Testere felçli dusmanlara +%50 daha fazla hasar verir.</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">Veba Maskesi (tüm Gazlara karşı bağışık) ve Kemik Testeresi ile başlar. Kritik vuruşlar fazladan parça düşürür ve Testere felçli dusmanlara +%50$s daha fazla hasar verir.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">[yellow:Veba Maskesi] (tüm Gazlara karşı bağışık) ve bir [yellow:Kemik Testeresi] ile başla. Kritik vuruşlarda ekstra parçalar düşer ve Testere felç olmuş düşmanlara x1.5 hasar verir.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">[yellow:Felç Edici Gaz] ve [yellow:Zehirli Gaz] iksirleri baştan tanımlıdır.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Veba testere kullanmadığı sürece veba doktorları büyük bir nişan cezası çeker ve menzilli silahlar kullanamazlar.</string>
@@ -2299,7 +2299,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="Ushanka_Name">Rus kalpağı</string>
     <string name="Using_Failed_Because_Blind">Körken \&quot;%s\&quot; kullanamazsın.</string>
     <string name="Using_Failed_Because_Magic">Güçlü bir büyü, seni \&quot;%s\&quot; kullanmaktan alıkoyuyor.</string>
-    <string name="VampireSkull_Info">Bu maske %100 doğal vampir kafatasından yapılmış. Her ne kadar vampir de olsa... Pek koca kafalıymış. Acayip.</string>
+    <string name="VampireSkull_Info">Bu maske %100$s doğal vampir kafatasından yapılmış. Her ne kadar vampir de olsa... Pek koca kafalıymış. Acayip.</string>
     <string name="VampireSkull_Name">vampir kurukafa</string>
     <string name="VertigoBuff_Info">Baş dönmesi hissi düz yürümeyi zorlaştırıyor!</string>
     <string name="VertigoBuff_Name">Baş dönmesi</string>
@@ -2578,7 +2578,7 @@ remix.30.1\n
     <string name="WndInstallingMod_copying_file">%s Remixed Dungeon depolama alanına kopyalanıyor</string>
     <string name="WndInstallingMod_deleting_file">Siliniyor %s</string>
     <string name="WndInstallingMod_please_wait">Mod yükleniyor, lütfen bekleyin...</string>
-    <string name="WndInstallingMod_skipping_file">%1 atlanıyor</string>
+    <string name="WndInstallingMod_skipping_file">%1$s atlanıyor</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Tarifi Uygula</string>
     <string name="WndItemAlchemy_NoRecipes">Bu eşya ve mevcut envanterinizle kullanılabilecek tarif yok.</string>
     <string name="WndItemAlchemy_SelectRecipe">Tarifi seç</string>

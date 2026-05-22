@@ -429,7 +429,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="CharAction_Steal">ellop</string>
     <string name="CharAction_Take">elvesz</string>
     <string name="CharAction_Taunt">kigúnyol</string>
-    <string name="CharInfo_Level">Ez egy %1 szintű %2.</string>
+    <string name="CharInfo_Level">Ez egy %1$d szintű %2$s.</string>
     <string name="Char_Defeat_0">%1$s legyőzte %2$s-t.</string>
     <string name="Char_Defeat_1">%1$s legyőzte %2$s-t.</string>
     <string name="Char_Defeat_2">%1$s legyőzte %2$s-t.</string>
@@ -467,7 +467,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="ChargrilledMeat_Name">Rostonsült hús</string>
     <string name="CharmBuff_Info">Elbájolta az elmét és a testet!</string>
     <string name="CharmBuff_Name">Megbűvölt</string>
-    <string name="CharmSpell_Cast">%1 meghhypnotizálva</string>
+    <string name="CharmSpell_Cast">%1$s meghhypnotizálva</string>
     <string name="CharmSpell_Info">Mindenkinek jár egy kis szeretet, nem igaz?</string>
     <string name="CharmSpell_Name">Bájolás</string>
     <string name="Chasm_Chasm">Szakadék</string>
@@ -887,7 +887,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Halls_TileWater">Hideg láva</string>
     <string name="Haste_Info">Gyorsaság lehetővé teszi a karakter számára, hogy olyan extrém sebességgel mozogjon, amelyben minden körülötte lévő megálltnak tűnik. Az ilyen gyorsaság sok energiát fogyaszt, ezért csak rövid ideig tartható fenn. A jártas mesterek képesek hosszabb ideig is ilyen sebességben maradni.</string>
     <string name="Haste_Name">Extrém Gyorsaság</string>
-    <string name="Heal_Cast">%1 meggyógyult.</string>
+    <string name="Heal_Cast">%1$s meggyógyult.</string>
     <string name="Heal_Info">Elég hasznos varázslat a Kazamatában, igaz?</string>
     <string name="Heal_Name">Gyógyítás</string>
     <string name="HealerNPC_Desc">Egy idős ember, úgy néz ki mint aki varázsbotokat készít</string>
@@ -1963,7 +1963,7 @@ egy másik helyre a szinten. </string>
     <string name="ShieldBuffReady_Name">Pajzs kész</string>
     <string name="ShieldInfoTemplate">Ez a pajzs maximum %1$d -át fogja fel a kapott sebzésnek. %2$d%% eséllyel. %3$3.1f másodpercbe fog telni, hogy kiheverd a sikeres védekezést.</string>
     <string name="ShieldStrTemplate">A pajzs tulajdonosának legalább %1$d Erő ponttal kell rendelkeznie, ahhoz, hogy megfelelően tudja használni.</string>
-    <string name="ShieldWeaponInfo">Fegyverként használva ez a pajzs átlagosan %1 sebzést okoz.</string>
+    <string name="ShieldWeaponInfo">Fegyverként használva ez a pajzs átlagosan %1$d sebzést okoz.</string>
     <string name="Shielded_Defense">kivédett</string>
     <string name="Shielded_Desc">A nehézfiúk a legnagyobbak, legerősebbek és legkeményebbek a gnollok között. Amikor súlyosan sérülnek megvadulnak, és még több sebzést okoznak az ellenfeleiknek.</string>
     <string name="Shielded_Gender">masculine</string>

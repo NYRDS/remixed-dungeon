@@ -362,7 +362,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Carcass_Devoured">Du hast den Kadaver von %s verzehrt!</string>
     <string name="Carcass_DissectFailed">Aufschlüsselung fehlgeschlagen</string>
     <string name="Carcass_DissectMessage">Du sezierst die Leiche und erhältst %s.</string>
-    <string name="Carcass_DissectResult">Aus dem %1 erhält man %2 Ernte %3.</string>
+    <string name="Carcass_DissectResult">Aus dem %1$s erhält man %2$d Ernte %3$s.</string>
     <string name="Carcass_Info">Überreste eines völlig toten %s.</string>
     <string name="Carcass_Kick">Dieses %s ist völlig tot, keinen Grund es zu treten.</string>
     <string name="Carcass_Name">Überreste von %s</string>

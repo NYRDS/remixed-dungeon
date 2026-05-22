@@ -340,7 +340,7 @@
     <string name="CagedKobold_Name">Kobold enjaulado</string>
     <string name="CagedKobold_Name_Objective">Kobold enjaulado</string>
     <string name="CagedKobold_Quest_End">Oh, obrigado, muito obrigado! como você conseguiu encontrar a chave? você...você destruiu a arma?! isso é incrível! quer saber de uma coisa, eu disse que iria te ajudar, e eu acho que sei a melhor maneiro de fazê-lo. Eu vou me colar com você por um tempo. * Kobold enjaulado se transformou em uma vela.</string>
-    <string name="Calm_Cast">%1 calma-se.</string>
+    <string name="Calm_Cast">%1$s calma-se.</string>
     <string name="Calm_Info">Há muitas criaturas agravadas por aí, vamos ajudá-las.</string>
     <string name="Calm_Name">Calmo</string>
     <string name="CandleOfMindVision_Info">Parece uma vela normal, não é algo que você esperaria encontrar em um calabouço perigoso. Curiosamente é muito quente, apesar de não estar acesa.</string>
