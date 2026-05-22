@@ -98,6 +98,7 @@
     <string name="AttackDelay_Increased">這樣無法使用%s。揮動緩慢，呼吸沉重…</string>
     <string name="Attack_Cooldown">攻擊冷卻時間</string>
     <string name="Attack_Range">攻擊距離</string>
+    <string name="AwarenessBuff_Info">Perasaan menjadi lebih tajam, memberikan kesedaran yang lebih besar tentang persekitaran.</string>
     <string name="AwarenessBuff_Name">察覺</string>
     <string name="AzuterronNPC_Desc">被黑霧包圍著的神秘人</string>
     <string name="AzuterronNPC_Gender">masculine</string>
@@ -296,6 +297,7 @@
     <string name="BloodTransfusion_FullHP">你的血液已经达到最大容量。</string>
     <string name="BloodTransfusion_Info">Drains nearly all blood from a target to heal yourself. A dark ritual of sacrifice and survival.</string>
     <string name="BloodTransfusion_Name">輸血</string>
+    <string name="BloodTransfusion_WontAgreed">目標抵抗生命力抽取。</string>
     <string name="BodyArmorBuff_Info">犧牲移動速度增加護甲。</string>
     <string name="BodyArmorBuff_Name">重甲</string>
     <string name="BodyArmorSpell_Info">激活身體的肌肉力量，使你暫時變強，從而增加你的護甲，但會減少移動速度。</string>
@@ -368,6 +370,7 @@
     <string name="Caves_TileWater">冰冷刺骨的水。</string>
     <string name="Challenges_Descriptions_0">食物和水早已腐壞，使每位冒險者因恐懼和飢餓的死亡念頭而發狂。你的飲食習慣能幫助你堅持足夠久嗎？</string>
     <string name="Challenges_Descriptions_1">一攻就是最佳防守。遵循這些教導，你踏進地城冒險，信仰將成為你身體最強的護盾。</string>
+    <string name="Challenges_Descriptions_2">身為普通身體自然再生的信徒，你總是對具有療效的藥水保持警惕。安全總比後悔好！</string>
     <string name="Challenges_Descriptions_3">地城周圍的土地早已受到惡意感染，阻止各種草藥和植物的種子生長。誰知道還要多久，最後的植物才會在這片貧瘠的土地上消失。</string>
     <string name="Challenges_Descriptions_4">一種邪惡的存在潛伏在地城中所有生物的心智裡，使它們能察覺彼此之間發生的事件。</string>
     <string name="Challenges_Descriptions_5">Зло первым принесло плотный и непроницаемый туман, из-за которого почти невозможно ясно ориентироваться в бесконечных коридорах подземелья.</string>
@@ -427,6 +430,7 @@
     <string name="CharAction_Expel">pem expulsion</string>
     <string name="CharAction_Give">給</string>
     <string name="CharAction_Push">推</string>
+    <string name="CharAction_Scare">嚇唬</string>
     <string name="CharAction_Steal">偷</string>
     <string name="CharAction_Take">拿取</string>
     <string name="CharAction_Taunt">嘲諷</string>
@@ -1531,6 +1535,7 @@
     <string name="PlagueDoctorNPC_Quest_Start_Male">呸！你信嗎？那些白癡還沒意識到這該死的下水道有多危險！像警衛和冒險家可以保護城市免除疾病嗎！沒有武器可以阻止疾病蔓延。但我需要證據，你能幫助我嗎？給我拿%d只老鼠皮，這樣我就可以做一些額外的測試了。
 </string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">啊，你回來了！_五隻死老鼠_，完美！牠們的皮毛對我的研究至關重要。如約，為了你的英勇努力，我用牠們的皮毛為你製作了這件盔甲。它浸透了瘟疫的痕跡，但別擔心！它是受控制的，它能保護你！現在去吧！保護城市！</string>
+    <string name="PlagueDoctorQuest_1_1_InProgress">帶五隻死老鼠給我！你帶的每一隻老鼠都讓我們更接近理解這種可怕的瘟疫。</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">啊——嚏！！！\n可惡的可憎瘟疫！它像野火一樣在城市中蔓延，在毫無戒備的民眾骨頭裡潰爛！呸！你認為那些可悲的守衛有機會對抗這種陰險的災禍嗎？你，那邊那個！強壯、健康的樣本。也許你能幫我。那些骯髒的下水道_老鼠_……我告訴你，它們攜帶瘟疫，它們腐爛的小身體裡有瘟疫的種子！給我帶_五_隻那些可惡的生物來，當然是_死的_！它們的皮對我的研究將是無價之寶。我會為你製作一件奇妙的盔甲，一個抵禦瘟疫本身的保護屏障！</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">啊哈……太壯觀了！_蝸牛_，它們的祕密像月光下的花瓣般緩緩綻放。真是豐富的資訊寶庫！但你是對的，_五十枚金幣_ 實在算不上相稱的報酬。*狂熱地輕笑*</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">「十隻蝸牛」，十聲來自深淵的低語！它們的黏液將被分析，它們的本質將被審視。它們所擁有的祕密已觸手可及。</string>
@@ -1539,7 +1544,7 @@
     <string name="PlagueDoctorQuest_2_1_InProgress">在黑暗與微弱月光交會之處尋找 _moongrace_。_兩顆種子_ 的精華，將揭開隱藏的秘密。</string>
     <string name="PlagueDoctorQuest_2_1_Prologue">「月花種子」……那些空靈的花朵，帶著月亮本身的魔力低語。我已經研究了它們奇特的發光現象幾個星期。它們的精華中蘊含著某種潛能，一種隱藏的能量，這可能是打開……某些事物的關鍵。*他若有所思地用骨指敲擊下巴*\n但可惜，它們很稀有。只在最深的洞穴中才能找到，那裡幾乎沒有月光照入。我需要兩顆。兩顆種子來解鎖它們力量的秘密。作為回報，我可以給你一些……純淨而強大的魔法。一瓶「魔力藥水」，充滿著月花的精髓。它將滋養你疲憊的靈魂，讓你能以全新的力量運用神秘法術。</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">卓越！_陽光草_，其金色精華充滿活力地跳動著。我已從它細緻的結構學到了很多。*他遞給你一瓶_健康藥水_，液體散發出淡淡的金光。* 當世界壓在你身上時喝下它，感受陽光的溫暖喚醒你的精神。</string>
-    <string name="PlagueDoctorQuest_2_2_InProgress">_兩株陽光草_種子。它們金色的花瓣蘊含著我渴望理解的力量。找到它們，讓它們的精華顯現！</string>
+    <string name="PlagueDoctorQuest_2_2_InProgress">帶兩顆太陽草種子給我。它們金色的花瓣蘊含著我想要理解的能量。找到它們，讓它們的本質得以揭示！</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">啊，_日曆草_！一朵 delicate 的花，花瓣散發著太陽的溫暖。我相信它的精華是……啊，算了，細節先不談了。總之非常關鍵。_兩顆日曆草種子_。幫我把牠們帶回來，我就獎勵你一件對冒險絕對有用的東西——充滿陽光生命力的_治癒藥水_。</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*他戴著手套的雙手輕輕捧著_蝙蝠_，以一種令人不安的迷戀審視著它微小的身軀* 太棒了！蝙蝠的迴聲定位……這是我從未見過的。如此精確……如此……控制。*他轉向妳，臉龐隱藏在面具之下* 為了妳的努力，這是_捲軸升級_。明智地使用它，因為它擁有……提煉妳本質的潛力。*他將捲軸遞給妳，聲音壓低成輕聲耳語* 這隻_蝙蝠_，它是……通往隱藏世界的窗口。一個……影子舞動、秘密低語的世界。</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">给我一只活着的、毫发无损的_吸血蝙蝠_！它的血液，它的翅膀……蕴含着我必须揭开秘密！</string>
@@ -1896,6 +1901,7 @@
     <string name="ScrollOfTeleportation_Info">這張羊皮紙上的咒語會立即將閱讀者傳送到當前層的隨機位置。它可以在危險的情況用來逃避，但不幸的讀者可能會發現自己處在一個更危險的地方。</string>
     <string name="ScrollOfTeleportation_Name">傳送卷軸</string>
     <string name="ScrollOfTeleportation_NoTeleport">強大的能量阻止了你的傳送！</string>
+    <string name="ScrollOfTeleportation_NoTeleport2">這個地方的強大魔法氣場阻止 %s 傳送！</string>
     <string name="ScrollOfTeleportation_Teleport">眼前一閃，傳送完成。</string>
     <string name="ScrollOfTeleportation_Teleport2">眨眼之間 %s 就被傳送到該層的另一個位置。</string>
     <string name="ScrollOfTerror_Info">發出紅光，恐懼敵人。攻擊它們會使恐懼失效。</string>
@@ -3016,6 +3022,13 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
 
 
 

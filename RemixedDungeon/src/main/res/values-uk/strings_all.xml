@@ -99,6 +99,7 @@
     <string name="ArmoredStatue_Name_Objective">живу статую</string>
     <string name="Artifact_Limit">Ти можеш носити тільки 2 артефакти водночас.</string>
     <string name="AttackDelay_Increased">Не вдається використовувати %s як слід. Повільні замахи, важке дихання…</string>
+    <string name="Attack_Cooldown">Перезарядка атаки</string>
     <string name="Attack_Range">Дальність атаки</string>
     <string name="AwarenessBuff_Info">Чуття загострилися, що дозволяє краще усвідомлювати оточення.</string>
     <string name="AwarenessBuff_Name">Обізнаність</string>
@@ -207,6 +208,7 @@
     <string name="Bandit_Name_Objective">божевільного злочинця</string>
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">Бард</string>
+    <string name="BardNPC_Name_Objective">бард</string>
     <string name="BardSong_1">Ми з дружиною живемо зовсім одні,
 В маленькій хатинці, що звали своєю,
 Вона любила джин, а я любив ром,
@@ -2145,6 +2147,7 @@
     <string name="SpiritOfPain_Name_Objective">духу болі</string>
     <string name="Sprout_Info">Пробудіть сплящі насіння.\nАле повинна бути деяка зелень на землі, щоб це закляття спрацювало.</string>
     <string name="Sprout_Name">Паросток</string>
+    <string name="StartScene_ChooseFromSlot">Оберіть збереження</string>
     <string name="StartScene_ComingSoon">Незабаром</string>
     <string name="StartScene_ContinueLatest">Продовжити останню гру або вибрати слот збереження</string>
     <string name="StartScene_Depth">Глибина: %1$d\nРівень: %2$d</string>
@@ -2701,6 +2704,7 @@
 Але вона так і не вийшла. Казали, що чаклунка знайшла інший вихід з печер, а може зуміла прошмигнути повз переслідувачів... а може загинула в темному лабіринті, оточеною шурхотом глибинних тварюк.</string>
     <string name="WndTilesKind_ClassicLook">Класичний вигляд</string>
     <string name="WndTilesKind_NewLook">Новий вигляд</string>
+    <string name="WndTilesKind_Title">Ще одна річ:</string>
     <string name="WndTilesKind_text">Ви збираєтеся увійти в Підземелля, охоплене викривленою магією, але ви можете обрати, як ви бачитимете його:\nВи віддаєте перевагу сучасному псевдо 3d чи класичному плоскому вигляду?\nВи завжди зможете змінити це пізніше в ігрових налаштуваннях.</string>
     <string name="WndTradeItem_Bought">Ти придбав %1$s за %2$dз</string>
     <string name="WndTradeItem_Buy">Придбати за %dз</string>
@@ -3004,6 +3008,7 @@
     <string name="town_deco_wardrobe_name">Дерев\'яна шафа</string>
     <string name="town_deco_weaponboard_desc">Деяка зброя висить на стенді.</string>
     <string name="town_deco_weaponboard_name">Зброя</string>
+    <string name="town_deco_weaponrack_desc">На цій шезлонці є зброя, яка занадто дорога для тебе.</string>
     <string name="town_deco_weaponrack_name">Стійка для зброї</string>
     <string name="town_deco_window_desc">Звичайне скляне вікно, нічого незвичайного.</string>
     <string name="town_deco_window_name">Вікно</string>
@@ -3023,6 +3028,11 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
 
 
 

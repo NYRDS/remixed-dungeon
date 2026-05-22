@@ -26,6 +26,7 @@
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">scorpione acido</string>
     <string name="Acidic_Name_Objective">scorpione acido</string>
+    <string name="Actions_Speed">Livello di velocità</string>
     <string name="Affection_Txt">%s dell\'affetto</string>
     <string name="AirElemental_Desc">Gli elementali dell\'acqua sono esseri magici volanti fatti di aria viva. </string>
     <string name="AirElemental_Gender">masculine</string>
@@ -201,6 +202,7 @@
     <string name="BarkskinBuff_Name">Pelle coriacea</string>
     <string name="Barrel_Desc">Sembra un semplice barile di legno. Ma avvicinandoti, percepisci un debole odore di olio. Il barile sembra abbastanza leggero, potresti anche spingerlo.</string>
     <string name="Barrel_Name">barile</string>
+    <string name="Barrel_Pumpkin_Desc">È molto strano e piuttosto inquietante vedere una zucca scavata giacente sul pavimento del dungeon. Si percepisce chiaramente un pericolo in arrivo da essa. Ma puoi sempre spingerla via, giusto?</string>
     <string name="Barrel_Pumpkin_Name">zucca</string>
     <string name="Bat_Defense">eluso</string>
     <string name="Bat_Desc">Questi vivaci e tenaci abitanti delle grotte possono sconfiggere gli avversari molto più grandi di loro recuperando la loro salute con ogni attacco riuscito.</string>
@@ -467,6 +469,7 @@
     <string name="Chasm_No">No, ho cambiato idea</string>
     <string name="Chasm_Yes">Sì, so quello che faccio</string>
     <string name="ChristmasTurkey_Info">Il modo migliore per celebrare il Dungeonmas è mangiare una fetta di tacchino al forno. Per celebrare il giorno in cui i mostri hanno invaso il dungeon. Il quale, alla fine, ha attirato un numero incredibile di turisti e viaggiatori da tutto il mondo, migliorando la situazione economica della regione.</string>
+    <string name="ChristmasTurkey_Name">tacchino festivo</string>
     <string name="City_TileDescBookshelf">una fila di libri su diverse discipline riempiono la libreria.</string>
     <string name="City_TileDescDeco">Diverse piastrelle mancanti qui.</string>
     <string name="City_TileDescEmptySP">una moquette spessa copre il pavimento.</string>
@@ -884,6 +887,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">La punta della freccia è coperta da pozione guaritrice.</string>
     <string name="HealthArrow_Name">Freccia curante</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">La punta del dardo è coperta da pozione guaritrice.</string>
     <string name="HealthDart_Name">Dardo curante</string>
     <string name="Heap_Mimic">Questo è un imitatore!</string>
@@ -2714,6 +2718,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_cabinet_desc">Un ampio mobile con molte porte e scaffali.</string>
     <string name="town_deco_cabinet_name">Armadio</string>
     <string name="town_deco_canvas_desc">Un spesso pezzo di tessuto appeso al muro.</string>
+    <string name="town_deco_carpet_desc">Tappeto rosso lussuoso riservato agli ospiti speciali.</string>
     <string name="town_deco_carpet_name">Tappeto</string>
     <string name="town_deco_charcoal_carpet_desc">In cerca di comfort per gli ospiti, l\'amministrazione del cinema ha scelto i tappeti di migliore qualità di colore carbone.</string>
     <string name="town_deco_charcoal_carpet_name">Tappeto</string>
@@ -2915,6 +2920,11 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
 
 
 
