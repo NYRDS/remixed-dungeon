@@ -312,6 +312,7 @@
     <string name="Bowknot_Name">蝴蝶結</string>
     <string name="Brute_Desc">暴徒是豺狼人中體型最為巨大，最為強壯，最為堅韌的。當受到嚴重的傷害時，他們會變得狂暴，對他們的敵人造成大量傷害。</string>
     <string name="Brute_Enraged">%s被激怒了！</string>
+    <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">豺狼暴徒</string>
     <string name="Brute_Name_Objective">豺狼暴徒</string>
     <string name="Brute_StaEnraged">激怒</string>
@@ -381,6 +382,7 @@
     <string name="Challenges_Names_6">禁忌符文</string>
     <string name="Challenges_Names_7">和平主義</string>
     <string name="Challenges_Names_8">沒有城鎮</string>
+    <string name="ChampionOfAirBuff_Info">此特性賦予生物風之精髓，增強其敏捷性和戰鬥能力。風之冠軍成為一個強大的對手，能夠發動迅速而致命的攻擊，能迅速改變戰鬥的進程。</string>
     <string name="ChampionOfAirBuff_Name">風之勇士</string>
     <string name="ChampionOfEarthBuff_Info">大地勇士體現了不屈的力量，這個特性增強了生物的傷害抗性並增加了其最大生命力。這種轉變使其在危險的深淵中成為一個可怕的對手，能夠輕鬆地抵擋攻擊並以堅定的決心經受持久的戰鬥。</string>
     <string name="ChampionOfEarthBuff_Name">大地勇士</string>
@@ -805,6 +807,7 @@
     <string name="FrostBuff_Info">被冰凍住，完全無法進行任何行動。</string>
     <string name="FrostBuff_Name">冰凍</string>
     <string name="Frost_Shatter">寒鋒令%s瓶碎裂了！</string>
+    <string name="Froth_ArrowInKnee">我以前也是像你一樣的冒險者，\n但後來我的膝蓋中了一箭...</string>
     <string name="FrozenCarpaccio_Info">這是份冰凍生肉片。它只能切成薄片取食，但是令人意外的美味。</string>
     <string name="FrozenCarpaccio_Info1">你看到你的手隱形了！</string>
     <string name="FrozenCarpaccio_Info2">你感到你的皮膚變硬了！</string>
@@ -2950,6 +2953,7 @@
     <string name="town_deco_stakes_desc">這些削尖的圓木看起來十分可怕，但事實上，它們本身是沒什麼作用的。</string>
     <string name="town_deco_stakes_name">木樁</string>
     <string name="town_deco_statue_blood_desc">A majestic statue of an angel holding a bowl of blood.</string>
+    <string name="town_deco_statue_blood_name">天使雕像</string>
     <string name="town_deco_statue_water_desc">一座莊嚴的天使雕像，手捧一碗水。</string>
     <string name="town_deco_statue_water_name">天使雕像</string>
     <string name="town_deco_stock_desc">這裏儲存著食物，還有一堆帶有各種各樣顏色的物品。</string>
@@ -3009,6 +3013,10 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
 
 
 

@@ -47,6 +47,7 @@
 - Publikálni vicces statisztikai tényeket időről időre
 Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra a főmenüben )</string>
     <string name="AllowStatisticsCollectionScene_Title">Használati statisztikagyűjtés</string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">A vegyület a nyíl végén bárkit eszméletlen, kegyetlen örjöngővé vált.</string>
     <string name="AmokArrow_Name">Amok Nyíl</string>
     <string name="AmokBuff_Info">Érezd az amokot, elveszve azokat, akik szerencsétlenek!</string>
@@ -258,6 +259,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="BlackSkullOfMastery_Title">Megtörheted a varázst. Vagy akár manipulálhatod a formáját, hogy lehetővé tegye neked, hogy befogadd a varázst és a tárgyat is együtt, hogy Lich váljék belőled.</string>
     <string name="BlackSkull_Activated">A Fekete Koponya felébredt!</string>
     <string name="BlackSkull_Deactivated">A Fekete Koponya szunnyad, még egyszer...</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Egy kicsi, obszidián koponya. Ez volt Necropolis hatalmának forrása, de miután a Lich legyőzte, elhagyta az ereje. De azért, ahogy a kezedben tartod, az különös érzésed támad, mintha \&quot;éhezne\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">A koponya energiától lüktet, ami látod, ahogy áramlik ki az üres szemgödreiből. Amíg a kezedben tartod, hallod is félelmetes hangját: \&quot;Vigyázd a halál lépteit!\&quot;</string>
     <string name="BlackSkull_Name">fekete koponya</string>
@@ -779,10 +781,12 @@ Ez a maszk azonban csak dekoratív célt szolgál.</string>
     <string name="FriedFish_Info">Sült hal, ízletesnek tűnik</string>
     <string name="FriedFish_Name">sült hal</string>
     <string name="FriedFish_Taste">Ízletes!</string>
+    <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Szinte érzed, ahogy fagy árad a nyílvessző fejéből.</string>
     <string name="FrostArrow_Name">fagyasztó nyíl</string>
     <string name="FrostAuraBuff_Info">Fagy veszi körül a testet, amely lelassítja az összes közeli élőlényt.</string>
     <string name="FrostAuraBuff_Name">Fagyos Aura</string>
+    <string name="FrostBuff_Info">Lemeszett állapotban, nem tud semmilyen cselekvést tenni.</string>
     <string name="FrostBuff_Name">Fagyott</string>
     <string name="Frost_Shatter">A hideg miatt a(z) %s összetörött!</string>
     <string name="Froth_ArrowInKnee">Én is kalandor voltam, mint te,\nDe aztán eltalált egy nyíl a térdem...</string>
@@ -852,6 +856,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Golem_Name">gólem</string>
     <string name="Golem_Name_Objective">gólem</string>
     <string name="Goo_Desc">Kevés tudnivaló van A Zseléről. Lehetséges, hogy nem is élőlény, hanem csupán a csatornából származó anyagok conglomerátuma, amely szabad akarat csíráit nyerte el. Akárhogy is, nyilvánvaló, hogy sötét mágiáról van szó.</string>
+    <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">A Massza elkezdte felpumpálni magát!</string>
     <string name="Goo_Info2">bluggy... bluggy...</string>
     <string name="Goo_Info3">BLUGGY-BLUGGY!</string>
@@ -2905,6 +2910,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_vat_name">Dézsa</string>
     <string name="town_deco_wall_beam_desc">Megbízható segítséget nyújt az itteni építkezéshez.</string>
     <string name="town_deco_wall_beam_name">Sugár</string>
+    <string name="town_deco_wall_brazier_name">Kohleofen</string>
     <string name="town_deco_wall_candles_desc">Leégett gyertyák, amik még mindig kellemes illatot árasztanak.</string>
     <string name="town_deco_wall_candles_name">Gyertyák</string>
     <string name="town_deco_wall_desc">Egyszerű fából készült fal.</string>
@@ -2934,6 +2940,12 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
+
 
 
 

@@ -349,6 +349,7 @@
     <string name="Carcass_DissectMessage">Anda menyiasat bangkai dan mendapat %s.</string>
     <string name="Carcass_DissectResult">Daripada %1$s anda memperoleh %2$d hasil %3$s.</string>
     <string name="Carcass_Info">Bangkai %s yang benar-benar mati</string>
+    <string name="Carcass_Kick">Ini %s sudah mati sepenuhnya, tiada perlu sepak.</string>
     <string name="Carcass_Necromancy_Failed">\&quot;Percubaan anda untuk menghidupkan mayat %s gagal!\&quot;</string>
     <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk menyiasat bangkai tersebut.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang perlukan rak buku di dalam gua?</string>
@@ -378,6 +379,7 @@
     <string name="Challenges_Names_6">Rune Terlarang</string>
     <string name="Challenges_Names_7">Pasifisme</string>
     <string name="Challenges_Names_8">Tiada bandar</string>
+    <string name="Challenges_Names_9">Amnesia</string>
     <string name="ChampionOfAirBuff_Info">This trait bestows the creature with the essence of the winds, enhancing its agility and prowess in combat. The Champion of Air becomes a formidable adversary, capable of unleashing swift and devastating attacks that can swiftly alter the course of battle.</string>
     <string name="ChampionOfAirBuff_Name">Juara Udara</string>
     <string name="ChampionOfEarthBuff_Info">Juara Bumi menggambarkan keteguhan yang tidak goyah, kerana ciri ini meningkatkan rintangan kerosakan makhluk tersebut dan meningkatkan vitaliti maksimumnya. Penjelmaan ini menjadikannya musuh yang menakutkan di kedalaman yang berbahaya, mampu meleraikan serangan dengan mudah dan bertahan dalam pertempuran panjang dengan ketabahan yang tidak berubah.</string>
@@ -641,6 +643,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DonateButton_pleaseDonate">diharap dapat memberi sumbangan dalam bentuk derma</string>
     <string name="DonateButton_thanks">Terima Kasih atas Sokongan Anda!</string>
     <string name="DreadKnight_Desc">Kesatria digeruni ialah seorang satria purba, yang tidak pernah bersikap baik atau berakhlak mulia sepanjang hidupnya. Oleh kerana dosa-dosa lampaunya dia disumpah berada dalam jasad hidup semula buat selama-lamanya. Setiap kali kemunculannya yang terkutuk, dia akan diseksa dengan kesakitan dan kesengsaraan yang pernah dilakukan pada mangsa-mangsanya.</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">kesatria digeruni</string>
     <string name="DreadKnight_Name_Objective">kesatria digeruni</string>
     <string name="Dreamweed_Desc">Sebaik sahaja menyentuh Rumpai Mimpi ia akan semburkan gas bergemerlapan yang mengelirukan</string>
@@ -1925,6 +1928,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ShadowsBuff_Name">Shadowmelded</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="ShamanElder_Name">pawang tua</string>
+    <string name="ShamanElder_Name_Objective">juru shardul</string>
     <string name="Shaman_Desc">Gnoll yang paling bijak dapat menguasai sihir pawang. Pawang gnoll lebih utamakan mantera pertempuran berbanding kekuatan fizikal, tidak teragak-agak menggunakannya jika ada sesiapa yang cuba mempertikaikan kedudukan mereka di dalam kumpulan.</string>
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">Bebola kilat %s telah membunuh anda...</string>
@@ -2942,6 +2946,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 
