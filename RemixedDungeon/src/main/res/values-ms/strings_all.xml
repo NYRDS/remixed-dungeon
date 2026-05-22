@@ -728,6 +728,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Exhumation_NoGrave">Tiada kubur berdekatan untuk melakukan Penggalian mayat.</string>
     <string name="Exhumation_Ok">Aku menurut perintah kau.</string>
     <string name="ExplodingSkull_Desc">Tengkorak terbakar yang terapung ini kelihatan sangat rapuh, seakan-akan ia akan meledak pada bila-bila masa.</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">tengkorak meledak</string>
     <string name="ExplodingSkull_Name_Objective">tengkorak meledak</string>
     <string name="Eye_Desc">Salah nama setan ini ialah \&quot;bebola kebencian\&quot;, kerana bila ia melihat musuhnya, ia menggunakan renungan maut secara mendadak, tidak kira lawan atau kawan.</string>
@@ -1395,6 +1396,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MysteryMeat_Info4">Anda berasa kenyang.</string>
     <string name="MysteryMeat_Message">Makanan ini berasa... pelik.</string>
     <string name="MysteryMeat_Name">daging misteri</string>
+    <string name="NatureArmorSpell_Info">Orang-orang kerdil juga boleh tabah, terutamanya apabila dilindungi oleh Alam Ibu Sendiri.</string>
     <string name="NatureArmorSpell_Name">Perisai Alam</string>
     <string name="NecromancerArmor_Info">Perisai ini membolehkan Pembangkit mayat memanggil sehingga 2 unit Makhluk Kematian pada kos 5 roh setiap satu. Pembantu hidup semula ini akan mengikut tuannya dan menyerang musuh tuan. Makhluk kematian ini menjadi semakin kuat jika tahap adiwira meningkat.</string>
     <string name="NecromancerArmor_Info2">Jika memakai perisai ini pembangkit mayat dapat guna keupayaan \&quot;Necrotisme\&quot;, berupaya menyebarkan  wabak magik, menjangkiti makhluk disekitar, sama ada yang telah mati atau masih hidup.</string>
@@ -2940,6 +2942,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

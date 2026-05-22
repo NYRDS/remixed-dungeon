@@ -819,6 +819,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Ghost_Defense">menghindar</string>
     <string name="Ghost_Desc">Hantu itu hampir tidak terlihat. Itu terlihat seperti titik cahaya redup tak berbentuk dengan wajah sedih.</string>
     <string name="Ghost_Name">hantu sedih</string>
+    <string name="Ghost_Name_Objective">hantu</string>
     <string name="Ghost_Rat1">Halo petualang... Saat saya sepertimu - kuat dan percaya diri... dan sekarang aku mati... Tapi aku tidak bisa meninggalkan tempat ini... Tidak sampai saya balas dendam.... Bunuh...Tikus Busuk_, yang telah mengambil nyawaku...</string>
     <string name="Ghost_Rat2">Tolong... Tolong aku... Bunuh mahluk itu...</string>
     <string name="Ghost_Rose1">Halo petualang... Dulu aku sama seperti Anda - kuat dan percaya diri... tapi sekarang saya sudah mati... Tapi saya tidak bisa meninggalkan tempat ini... Tidak sampai aku menemukan _bunga rose keringku_... Itu sangat berguna untukku... Beberapa monster mencurinya dari tubuhku...</string>
@@ -887,6 +888,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Halls_TileWater">Lava dingin</string>
     <string name="Haste_Info">Tergesa-gesa akan memungkinkan pemain untuk bergerak dengan kecepatan ekstrem, sehingga segala sesuatu di sekitarnya akan tampak statis. Tergesa-gesa seperti itu akan menghabiskan banyak energi sehingga menggunakannya hanya mungkin untuk waktu yang singkat.\n\nMaster yang terampil dapat tetap tergesa-gesa untuk jangka waktu yang lebih lama.</string>
     <string name="Haste_Name">Tergesa-gesa Ekstrim</string>
+    <string name="Heal_Cast">%s disembuhkan.</string>
     <string name="Heal_Info">Mantra yang cukup berguna di Dungeon, kan?</string>
     <string name="Heal_Name">Sembuh</string>
     <string name="HealerNPC_Desc">Seorang lelaki tua, entah bagaimana dia terlihat seperti seseorang yang akan membuat tongkat sihir.</string>
@@ -3003,6 +3005,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

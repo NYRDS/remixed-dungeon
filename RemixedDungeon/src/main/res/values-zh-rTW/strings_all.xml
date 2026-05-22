@@ -1419,6 +1419,7 @@
     <string name="Monk_Name_Objective">矮人武僧</string>
     <string name="MoongraceBuff_Info">周圍的空氣變得更加飽和，使人能夠更好地集中精神並恢復魔力。</string>
     <string name="MoongraceBuff_Name">月光恩賜</string>
+    <string name="Moongrace_Desc">這些植物少量生長，被視為天然魔法的來源。</string>
     <string name="Moongrace_Name">月光草</string>
     <string name="Movement_Speed">移動速度</string>
     <string name="Multiplicity_Txt">分身 %s</string>
@@ -2111,6 +2112,7 @@
     <string name="SpiritOfPain_Name">痛苦之魂</string>
     <string name="SpiritOfPain_Name_Objective">痛苦之魂</string>
     <string name="Sprout_Info">Пробудите спящие семена.\nОднако, на земле должно быть какое-то зелёное покрытие, чтобы это заклинание сработало.</string>
+    <string name="Sprout_Name">新芽</string>
     <string name="StartScene_ChooseFromSlot">從存檔欄位中選擇</string>
     <string name="StartScene_ComingSoon">即將推出</string>
     <string name="StartScene_ContinueLatest">繼續最新的遊戲或從存檔槽位選擇</string>
@@ -3007,6 +3009,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

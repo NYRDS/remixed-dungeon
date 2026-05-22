@@ -614,6 +614,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">halandó</string>
     <string name="Deathling_Name_Objective">halandó</string>
+    <string name="DeepSnail_Desc">Ez a csigafajta gyakran látható vízforrások közelében, és sokkal gyorsabb, mint az átlagos csiga. Azonban vigyázz a harapásukkal, mert kellemetlen hatással lehetnek a bőrödön.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeepSnail_Name_Objective">mély csigát</string>
     <string name="DeferedDamageBuff_Name">Elhárített kámasz(%d)</string>
@@ -1144,6 +1145,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="King_Info3">Hogy merészelsz!</string>
     <string name="King_Name">A törpök királya</string>
     <string name="King_Name_Objective">A törpök királyát</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Info">Egy fémdarab ami úgy lett kialakítva, hogy tökéletesen passzoljon egy ökölhöz.</string>
     <string name="Knuckles_Name">boxer</string>
     <string name="KoboldIcemancer_Desc">A Kobold Jégmesterek a közösségük elitjei. Kiváló harcosok, varázslók, de még inkább tudósok. Az ősi jégmesterek elsajátították a jég irányításának művészetét, bonyolult szerkezeteket építve speciális varázsokkal megerősítve.</string>
@@ -2932,6 +2934,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
