@@ -389,7 +389,7 @@
     <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">Bilah pedang ini diperbuat dari chaos tulen dan kadangkala ia bergetar. Kuasa hebat tersimpan di dalamnya senjata ini, yang dapat memotong bersih hampir apa jua benda. Sebaliknya, kemahiran terbaik diperlukan, untuk setanding dengan kekuatan senjata ini.</string>
     <string name="ChaosSword_Name">pedang chaos</string>
-    <string name="Chaotic Crystal">Kristal Kacau</string>
+    <string name="Chaotic_Crystal">Kristal Kacau</string>
     <string name="CharAction_Expel">usir</string>
     <string name="CharAction_Give">beri</string>
     <string name="CharAction_Order">perintah</string>
@@ -1419,7 +1419,6 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PlagueDoctorQuest_5_1_Prologue">*Dia teragak-agak, suaranya retak seperti ranting rapuh*. A-ah, _succubi_! Dua… ya, dua, masih hidup! Ini… ahem… untuk penyelidikan saya! Anda nampak… feromon mereka… ia penting untuk memahami keseimbangan halus… ah… *Dia terhenti, tangan kurusnya mencapai untuk membetulkan topengnya dengan gugup, matanya melirik ke arah anda dengan intensiti demam.*Essensi mereka… ia satu teka-teki… teka-teki yang indah dan penuh misteri! *Dia batuk dengan kuat, cuba mendapatkan semula komposisinya.* Saya janji, untuk membawa saya dua… makhluk ini… anda akan mendapat penghargaan abadi saya. Anggaplah ini sebagai… hadiah untuk pengetahuan! Ya! Untuk pengetahuan!</string>
     <string name="PlagueDoctorQuest_AllDone">*Dia mengeluarkan ketawa kering yang berleguk-leguk.* \&quot;Perbuatan anda, ia telah membuka rahsia yang tidak terukur! Pengetahuan yang diperoleh... ia berdenyut dalam diri saya, satu simfoni penemuan. Tetapi pengetahuan,\&quot; tambahnya, suaranya merendah kepada bisikan konspirasi, \&quot;pengetahuan adalah kuasa. Dan kuasa... ah... itu adalah eliksir yang paling memabukkan.\&quot; Dia merenung anda dengan tekun untuk seketika, mata ametisnya terbakar dengan intensiti demam. \&quot;Mungkin,\&quot; dia berbisik, \&quot;jalan kita akan bersilang lagi. Kerana masih ada banyak... misteri... yang perlu dileraikan.\&quot;</string>
     <string name="PlagueDoctor_Desc">Sibongkok ini sepenuh diliputi dengan pakaian berkulit. Dia berbau ubat dan juga... bawang putih?</string>
-
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">doktor wabak</string>
     <string name="PlagueDoctor_Name_Objective">doktor wabak</string>
@@ -2792,61 +2791,4 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
