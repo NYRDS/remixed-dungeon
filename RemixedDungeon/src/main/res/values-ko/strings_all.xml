@@ -18,11 +18,15 @@
     <string name="AboutScene_Thanks">특별 감사:</string>
     <string name="AboutScene_Translation">현지화한 사람:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901  &amp;amp;  </string>
+    <string name="AboutScene_Txt_Intro">Selamat datang di Remixed Dungeon!</string>
+    <string name="Accuracy_Decreased">왜 %s을 사용할 수 있다고 생각했지? 잘못된 도구, 잘못된 손!</string>
     <string name="Accuracy_DecreasedDoctor">이 %s의 모든 일격은 불완전함을 퍼뜨립니다. 제 뼈톱은 치료하지만… 이건 감염시킵니다.</string>
+    <string name="Accuracy_DecreasedDoctorBareHands">Tangan kosong merusak teknik. Tanpa potongan bersih gergaji, bidikan menjadi kacau.</string>
     <string name="Acidic_Desc">이 거대한 거미류의 악마같은 생물은 근접전을 최대한 피하고, 멀리서 불구로 만들어 버릴 수 있는 톱니 가시를 발사한다.</string>
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">산성 전갈</string>
     <string name="Acidic_Name_Objective">산성 전갈</string>
+    <string name="Actions_Speed">Kelajuan tindakan</string>
     <string name="Affection_Txt">매혹의 %s </string>
     <string name="AirElemental_Desc">바람 정령은 살아있는 공기로 만들어진 나는 마법 생물이다.</string>
     <string name="AirElemental_Gender">masculine</string>
@@ -36,6 +40,7 @@
     <string name="AlchemyPot_SelectSeed">던져넣을 씨앗을 고르세요</string>
     <string name="AllowStatisticsCollectionScene_Allow">허용</string>
     <string name="AllowStatisticsCollectionScene_Deny">거부</string>
+    <string name="AllowStatisticsCollectionScene_Request">동의하신다면, Remixed Dungeon이 사용 통계를 수집할 것입니다. 이 데이터는 다음에 사용됩니다:\n- 다양한 사소한 버그를 발견하고 수정하기 (치명적인 오류의 경우 게임이 보고서를 보내도록 명시적으로 요청할 것입니다)\n- 게임 밸런스 개선\n- 기기별 성능 문제 수정\n- 가끔 재미있는 통계 사실 공개\n\n언제든지 결정을 변경할 수 있습니다 (타이틀 화면의 차트 아이콘을 클릭)</string>
     <string name="AllowStatisticsCollectionScene_Title">사용 통계 수집</string>
     <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">이 화살의 촉은 누구든지 무자비한 광란 상태로 만들 것입니다.</string>
@@ -52,7 +57,9 @@
     <string name="Amulet_Info">옌더의 부적은 정체불명의 가장 강력한 유물입니다. 이 부적은 소유자의 의지가 충분하다면 어떤 소원이든 성취할 수 있다고 합니다.</string>
     <string name="Amulet_Name">옌더의 부적</string>
     <string name="AnesthesiaBuff_Info">통증을 느끼지 않으며 공격으로 깨어나지 않지만 여전히 피해를 입습니다.</string>
-    <string name="Anesthesia_Info">대상에 깊고 부자연스러운 잠을 유도합니다. 가장 격렬한 공격으로도 이 잠에서 깨어나지 않습니다.</string>
+    <string name="AnesthesiaBuff_Name">Anesthesia</string>
+    <string name="Anesthesia_Cast">Menyebarkan bius</string>
+    <string name="Anesthesia_Info">Pemulihan lengkap dalam beberapa saat.</string>
     <string name="Anesthesia_Name">마취</string>
     <string name="Ankh_Info">영생을 상징하는 고대의 물건으로 소유자의 생명을 되살릴 수 있는 능력이 있습니다. 부활할 시 장착하지 않은 모든 아이템은 손실됩니다.</string>
     <string name="Ankh_Name">앙크</string>
@@ -82,15 +89,19 @@
     <string name="ArmoredStatue_Name_Objective">살아 움직이는 조각상</string>
     <string name="Artifact_Limit">유물은 동시에 2개까지 착용할 수 있습니다.</string>
     <string name="AttackDelay_Increased">이렇게 %s를 휘두를 수 없습니다. 느린 휘두름, 무거운 숨소리…</string>
+    <string name="Attack_Cooldown">공격 대기시간</string>
     <string name="Attack_Range">공격 거리</string>
     <string name="AwarenessBuff_Info">감각이 날카로워지며 주변 환경에 대한 인식이 더욱 좋아졌습니다.</string>
     <string name="AwarenessBuff_Name">인지</string>
     <string name="AzuterronNPC_Desc">이상한 형체가 검은 안개에 둘러싸여 있다.</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">이방인</string>
     <string name="AzuterronNPC_Name_Objective">이방인</string>
     <string name="AzuterronNPC_Quest_End">완벽하군. 여기 이 물약을 가져가게, 분명 도움이 될 거야.</string>
     <string name="AzuterronNPC_Quest_Reminder">날 도와주면 나중에 도와줄께.</string>
     <string name="AzuterronNPC_Quest_Start">후, 왜... 오, 당신이 나를 볼 수 있군요, 그렇죠? 그렇다면 당신은 \&quot;그들\&quot;이 아니라는 뜻이군요. 당신도 이 모든 괴물들이 마음에 들지 않는 모양이네요. 이렇게 합시다, 만약 당신이 나의 작은 문제를 해결해 준다면, 나도 당신을 도와주죠. 이 층 어딘가에 어둠의 야수, _배신자의 영혼_이 있을 거예요. 그것을 처치하고 _심장_을 가져와서 저에게 오세요. 그리고 한 가지 더, 만약 제 물품을 구매하고 싶으시다면, 언제든 물어보세요.</string>
+    <string name="Backstab_Aware">Serangan jarak dekat memberikan peringatan</string>
+    <string name="Backstab_Info">Serangan membabi buta dari belakang.</string>
     <string name="Backstab_Name">백스탭</string>
     <string name="Backstab_TooFar">희생자가 너무 멀어 성공적인 공격을 할 수 없습니다.</string>
     <string name="BadgesScene_Title">당신의 뱃지들</string>
@@ -101,8 +112,10 @@
     <string name="Badges_AllScrolls">모든 주문서 감정됨</string>
     <string name="Badges_AllWands">모든 마법봉을 식별함\&quot;</string>
     <string name="Badges_BossSlain1">구가 살해되었다</string>
+    <string name="Badges_BossSlain1All">Goo has been slain by all classes</string>
     <string name="Badges_BossSlain2">텐구가 살해되었다</string>
     <string name="Badges_BossSlain3">DM-300이 살해되었다</string>
+    <string name="Badges_BossSlain3All">Boss dikalahkan</string>
     <string name="Badges_BossSlain4">왕이 살해되었다</string>
     <string name="Badges_Champion">도전 성공</string>
     <string name="Badges_DeathFalling">추락 데미지로 인해 사망</string>
@@ -181,8 +194,10 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">미친 강도</string>
     <string name="Bandit_Name_Objective">미친 강도</string>
+    <string name="BardNPC_Desc">Pemain musik yang menceritakan legenda tentang monster.</string>
     <string name="BardNPC_Gender">masculine</string>
-    <string name="BardNPC_Name">음유시인</string>
+    <string name="BardNPC_Name">바드</string>
+    <string name="BardNPC_Name_Objective">bard</string>
     <string name="BardSong_1">아내와 나는 단둘이 살아요,\n우리가 가진 작은 오두막에서\n아내는 진을, 나는 럼을 좋아했지\n정말 재미있게 살았답니다</string>
     <string name="BarkskinBuff_Info">몸이 나무 껍질로 덮여 있어 일부 피해를 막아줍니다.</string>
     <string name="BarkskinBuff_Name">나무스킨</string>
@@ -199,6 +214,8 @@
     <string name="BattleAxe_Info">이 전투 도끼의 엄청난 스틸 헤드는 각각의 스트로크 뒤에 상당한 영향력을 줍니다.</string>
     <string name="BattleAxe_Name">배틀 엑스</string>
     <string name="Bee_Desc">작은 크기에도 불구하고, 벌들은 자신의 둥지를 치열하게 지키려는 경향이 있다. 하지만 오래 살지는 못한다.</string>
+    <string name="Bee_Gender">masculine</string>
+    <string name="Bee_Name">벌</string>
     <string name="Bee_Name_Objective">벌</string>
     <string name="BellaNPC_Amulet_F">안녕 거기 귀염둥이! 거기서 뭐해? 정말 멋진 목걸이네! 그리고 너는.. 너는 다른 사람들보다 더 빛나는것 같아. 잠깐 산책하면서 우리의 미래에 대해 함께 이야기해보는게 어떨까?</string>
     <string name="BellaNPC_Amulet_M">안녕 거기 잘생긴 분! 거기서 뭐해? 정말 멋진 목걸이네! 그리고 넌... 넌 저 서민들을 능가하는것 같아. 잠깐 산책하면서 우리의 미래에 대해 함께 이야기해보는게 어떨까?</string>
@@ -213,6 +230,7 @@
     <string name="Belongings_CantWearBoth">%1$s와 %2$s는 동시에 착용할 수 없습니다!</string>
     <string name="Belongings_Name">가방</string>
     <string name="BishopNPC_Desc">심연의 군주 산타를 모시는 성스러운 교회의 성직자</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">성직자</string>
     <string name="BishopNPC_Name_Objective">성직자</string>
     <string name="Bishop_bye">산타께서 당신의 앞길을 비추시기를.</string>
@@ -225,17 +243,22 @@
     <string name="Bishop_title">성직자</string>
     <string name="BlackCat_AiStatus">이 고양이는 고양이가 할 법한 행동을 하고 있습니다.</string>
     <string name="BlackCat_Desc">검은 고양이입니다.</string>
+    <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Name">검은 고양이</string>
     <string name="BlackCat_Name_Objective">고양이</string>
     <string name="BlackCat_Phrases_0">그르르르르릉</string>
     <string name="BlackCat_Phrases_1">야옹...</string>
     <string name="BlackCat_Phrases_2">야옹!</string>
+    <string name="BlackSkullOfMastery_BecomeLichDesc">_Lich_는 능력의 정점에 도달한 nekromanta이다. 생과 사 사이에서 존재하는 _Lich_는 nekromancy에 뛰어나지만 전투 기술은 평범한 사람보다 훨씬 낮다.</string>
     <string name="BlackSkullOfMastery_Info">고대의 유물로써, 죽은 자의 영혼을 모으기 위해 첫 세대의 강령술사들이 만들어냈습니다. 당신의 강령술 능력을 감지하여, 강력한 주문으로 봉인되어 있습니다. 하지만 이 주문은 아주 오래된 것이라, 쉽게 파괴할 수 있을 것입니다.</string>
     <string name="BlackSkullOfMastery_Lich">리치가 되세요</string>
     <string name="BlackSkullOfMastery_Name">영혼을 부르는 자</string>
     <string name="BlackSkullOfMastery_Necromancer">마법을 파괴하기</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">또는 주문을 _파괴하면_ 이 아티팩트를 의도대로 사용할 수 있습니다.</string>
+    <string name="BlackSkullOfMastery_Title">Você pode quebrar o feitiço. Ou pode manipular sua fórmula mágica de uma forma que permitirá que você consuma os poderes tanto do feitiço quanto do artefato em si, transformando-se em um Lich.</string>
     <string name="BlackSkull_Activated">검은 해골이 깨어났습니다!</string>
     <string name="BlackSkull_Deactivated">검은 해골은 다시 휴식기에 들어갔습니다..</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">작은 흑요석 해골입니다. 네크로폴리스의 힘의 원천이었지만, 리치가 쓰러진 후 모든 힘을 잃은것으로 보입니다. 하지만 손에 쥐고 있으면 이것이 굶주리고 있다는 이상한 생각이 스칩니다.</string>
     <string name="BlackSkull_Info_Awakened">당신은 해골의 빈 눈으로부터 강한 힘이 진동하는 것을 볼 수 있습니다. 그리고 당신이 해골을 들 때마다 당신은 \&quot;죽음이 행진한다\&quot;라는 공포스러운 목소리를 들을 수 있습니다.</string>
     <string name="BlackSkull_Name">검은 해골</string>
@@ -268,12 +291,15 @@
     <string name="BlindnessBuff_Info">완전히 실명하여 주변의 소리만 들을 수 있습니다.</string>
     <string name="BlindnessBuff_Name">실명</string>
     <string name="BloodTransfusion_Drained">생명력이 당신의 펫에게서 당신에게로 흘러들어옵니다.</string>
+    <string name="BloodTransfusion_FullHP">Darah penuh.</string>
     <string name="BloodTransfusion_Info">대상으로부터 거의 모든 피를 흡수하여 자신을 치유합니다. 희생과 생존의 어두운 의식.</string>
+    <string name="BloodTransfusion_Name">혈액 수혈</string>
     <string name="BloodTransfusion_WontAgreed">대상이 생명 정수 추출에 저항합니다.</string>
     <string name="BodyArmorBuff_Info">이동 속도를 희생하여 방어력이 증가합니다.</string>
     <string name="BodyArmorBuff_Name">바디 아머</string>
     <string name="BodyArmorSpell_Info">예비 근육의 힘을 활성화하여 일시적으로 더 강하게 만들고, 이동 속도를 희생하여 방어력을 크게 증가시킵니다.</string>
     <string name="BodyArmorSpell_Name">보디 아머</string>
+    <string name="BoneSaw_Info">Pisau bedah yang meningkatkan akurasi.</string>
     <string name="BoneSaw_Name">뼈톱</string>
     <string name="BoneShard_Info">패배한 적으로부터 얻은 날카로운 뼈 조각이다. 이 조각들은 놀랍도록 견고하며 제작에 유용하게 쓰인다.</string>
     <string name="BoneShard_Name">뼈 조각</string>
@@ -286,10 +312,12 @@
     <string name="Bowknot_Name">리본 머리핀</string>
     <string name="Brute_Desc">놀 정예병은 놀 중에서도 가장 크고 강하며 터프한 녀석이다. 큰 상처를 입게 되면, 녀석은 격분하면서 적에게 보다 큰 피해를 준다.</string>
     <string name="Brute_Enraged">%s 은/는 격분에 빠졌다!</string>
+    <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">놀 정예병</string>
     <string name="Brute_Name_Objective">놀 정예병</string>
     <string name="Brute_StaEnraged">격분</string>
     <string name="BuffParam_Cooldown">쿨다운: %.2f</string>
+    <string name="BurningBuff_Info">Api yang membakar target.</string>
     <string name="BurningBuff_Name">불타는</string>
     <string name="BurningFist_Desc">고대 신의 불타는 주먹</string>
     <string name="BurningFist_Gender">masculine</string>
@@ -306,6 +334,9 @@
     <string name="CagedKobold_Name">감금된 코볼트</string>
     <string name="CagedKobold_Name_Objective">감금된 코볼트</string>
     <string name="CagedKobold_Quest_End">아, 고마워, 정말 고마워! 어떻게 열쇠를 찾았어? 무..무기를 부셨다고? 굉장해! 너도 알다시피 나는 너를 도와준다고 했기 때문에 나는 너를 도울 최고의 방법을 알아. 너와 잠시 동행할게.*감금된 코볼트가 양초로 변했다.</string>
+    <string name="Calm_Cast">Menenangkan jiwa.</string>
+    <string name="Calm_Info">둘러싸인 창백한 존재들로 인해 분노가 넘치는 것 같다. 우리가 도와주자.</string>
+    <string name="Calm_Name">Ketenangan</string>
     <string name="CandleOfMindVision_Info">일반적인 촛불과 같아 보이지만, 위험한 던전에서 당신이 찾을 것으로 예상한 것이 아닙니다. 이상하게도 불이 붙지 않았는데도 따뜻합니다.</string>
     <string name="CandleOfMindVision_Info_Exhausted">촛불이 다 꺼졌습니다. 당신이 들 때 더이상 불이 붙지 않습니다. 당신이 더이상  이걸  쓸 수 없을 것 같아 보입니다.</string>
     <string name="CandleOfMindVision_Info_Lighted">당신이 촛불을 가방에서 꺼낸 순간 촛불에 불이 붙었습니다. 불꽃이 은은하게 빛나는 보라색 빛을 내뿜었고, 당신이 이를 꿰뚫어보자 주변의 몬스터들이 보이게 되었습니다.</string>
@@ -319,7 +350,12 @@
     <string name="Carcass_Devoured">당신은 %s의 시신을 삼켰습니다!</string>
     <string name="Carcass_DissectFailed">%s을(를) 해부했지만 아무것도 얻지 못했다.</string>
     <string name="Carcass_DissectMessage">시신을 해부하여 %s 을(를) 얻었다.</string>
+    <string name="Carcass_DissectResult">Pembedahan berhasil!</string>
     <string name="Carcass_Info">완전히 죽은 %s의 시신.</string>
+    <string name="Carcass_Kick">Menendang bangkai.</string>
+    <string name="Carcass_Name">%s의 잔해</string>
+    <string name="Carcass_Necromancy">Menarik roh dari bangkai.</string>
+    <string name="Carcass_Necromancy_Failed">Nekromansi gagal.</string>
     <string name="Carcass_TooFarToDissect">시신을 해부하려면 더 가까이 다가가야 합니다.</string>
     <string name="Caves_TileDescBookshelf">동굴에 책장이 대체 왜 필요한 거지?</string>
     <string name="Caves_TileDescDeco">어떤 광물의 광맥이 벽에 보인다. 금인가?</string>
@@ -351,9 +387,12 @@
     <string name="Challenges_Names_9">기억 상실</string>
     <string name="ChampionOfAirBuff_Info">이 특성은 생물에게 바람의 정수를 부여하여 민첩성과 전투 기량을 향상시킵니다. 공기의 챔피언은 빠르고 치명적인 공격을 쏟아내어 전투의 흐름을 순식간에 바꿀 수 있는 강력한 적수가 됩니다.</string>
     <string name="ChampionOfAirBuff_Name">바람의 챔피언</string>
+    <string name="ChampionOfEarthBuff_Info">The Champion of Earth embodies unyielding strength, as this trait enhances the creature\'s damage resistance and increases its maximum vitality. This transformation makes it a daunting adversary in the treacherous depths, capable of shrugging off attacks with ease and enduring prolonged battles with unwavering resolve.</string>
+    <string name="ChampionOfEarthBuff_Name">Champion of Earth</string>
     <string name="ChampionOfFireBuff_Info">화염의 격노가 주입된 이 특성은 생물의 잔혹성과 전투 능력을 증폭시킵니다. 불의 챔피언은 무시무시한 적으로 등장하여 적들을 타오르는 화염에 휩싸이게 하는 파괴적인 공격을 퍼부으며, 감히 맞서려는 자 모두에게 공포를 심어줍니다.</string>
     <string name="ChampionOfFireBuff_Name">불의 챔피언</string>
     <string name="ChampionOfWaterBuff_Info">물의 챔피언은 바다의 불굴의 힘을 구현하여 생물의 회복력과 인내력을 향상시킨다. 결과적으로 이는 끊임없는 공격을 견뎌내며 역경에 맞서는 불굴의 수호자가 될 수 있는 강인한 적이 된다.</string>
+    <string name="ChampionOfWaterBuff_Name">Kehebatan Air</string>
     <string name="ChaosArmor_Info">이 갑옷의 붉은 피의 금속판은 검고 붉은 사슬로 얽혀있습니다. 이것을 만질 때 마다 혼돈스러운 기운이 악화됩니다.</string>
     <string name="ChaosArmor_Name">혼돈 갑옷</string>
     <string name="ChaosBow_Gender">masculine</string>
@@ -371,6 +410,7 @@
     <string name="ChaosCrystal_Prompt">혼돈의 표식을 설치할 위치를 고르세요.</string>
     <string name="ChaosCrystal_ScrollFused">수정이 마법으로 인해 주문서에 쓰여졌고, 이제 이건 %s입니다.</string>
     <string name="ChaosCrystal_SelectForFuse">혼돈의 수정을 융합시킬 아이템을 고르세요.</string>
+    <string name="ChaosCrystal_ShieldFused">수정이 당신의 방패와 융합되어 혼돈의 형태를 취했습니다.</string>
     <string name="ChaosCrystal_StaffFused">수정이 당신의 마법봉을 흡수했고, 지팡이의 형태가 되었습니다.</string>
     <string name="ChaosCrystal_SwordFused">수정이 당신의 무기를 흡수했고, 검의 형태가 되었습니다.</string>
     <string name="ChaosCrystal_Use">사용</string>
@@ -378,16 +418,21 @@
     <string name="ChaosHelmet_Name">혼돈의 투구</string>
     <string name="ChaosShield_desc">Chaos Shield adalah hasil dari menyatukan Chaos Crystal dengan perisai biasa, menyebabkan perisai tersebut menampilkan efek chaotik acak yang berbeda-beda saat berhasil memblokir serangan.</string>
     <string name="ChaosShield_name">카오스 방패</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">지팡이에 혼돈의 힘이 스며들었습니다! 어떤 마법사가 꿈꾸거나 두려워할 수나있을까요?</string>
     <string name="ChaosStaff_Name">혼돈 지팡이</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">이 검의 칼날은 순수한 혼돈으로 만들어졌으며 때때로 가끔 진동합니다. 큰 힘은 무기 안에 저장되어 거의 모든 것을 반으로 줄입니다. 무기의 강력한 힘에 대처하기 위해서는 훌륭한 기술이 필요합니다.</string>
     <string name="ChaosSword_Name">혼돈 검</string>
     <string name="CharAction_Charm">매혹</string>
     <string name="CharAction_Expel">추방</string>
     <string name="CharAction_Give">주다</string>
     <string name="CharAction_Hit">치다</string>
+    <string name="CharAction_Order">명령</string>
+    <string name="CharAction_Push">push</string>
     <string name="CharAction_Scare">겁주기</string>
     <string name="CharAction_Steal">훔치다</string>
+    <string name="CharAction_Take">가지다</string>
     <string name="CharAction_Taunt">도발</string>
     <string name="CharInfo_Level">%1$d 레벨 %2$s입니다.</string>
     <string name="Char_Defeat_0">%1$s이(가) %2$s를 죽였다.</string>
@@ -419,12 +464,14 @@
     <string name="Char_StaSlowed">감속</string>
     <string name="Char_StaStunned">기절</string>
     <string name="Char_StaVision">비전</string>
-    <string name="Char_Stole_1">%1$s가 %3$s로부터 %2$s를 훔쳤다!</string>
+    <string name="Char_Stole_0">%1$s가 %2$s을 %3$s에게서 훔쳤다!</string>
+    <string name="Char_Stole_1">%1$s가 %2$s을(를) %3$s에게서 훔쳤다!</string>
     <string name="Char_YouMissed">%1$s %2$s 당신의 공격</string>
     <string name="ChargrilledMeat_Info">괜찮은 스테이크처럼 구워졌다.</string>
     <string name="ChargrilledMeat_Name">익힌 고기</string>
+    <string name="CharmBuff_Info">정신과 육체가 매혹되었다!</string>
     <string name="CharmBuff_Name">매혹</string>
-    <string name="CharmSpell_Cast">%s은(는) 매혹되었다.</string>
+    <string name="CharmSpell_Cast">%s 매혹되었다.</string>
     <string name="CharmSpell_Info">모두 사랑이 필요하죠, 그렇죠?</string>
     <string name="CharmSpell_Name">매혹</string>
     <string name="Chasm_Chasm">틈</string>
@@ -446,9 +493,13 @@
     <string name="ClassArmor_LowHealt">쓰러지기 일보 직전입니다!</string>
     <string name="ClassArmor_LowMana">마나가 부족합니다!</string>
     <string name="ClassArmor_NotEquipped">갑옷의 특별한 힘을 이용하기 위해서는 입고 있어야 합니다.</string>
+    <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">이 거대한 칼은 어떤 것이든 베어버릴 수 있을 것만 같습니다.</string>
     <string name="Claymore_Name">클레이모어</string>
+    <string name="CloakBuff_Info">어둠의 망토가 그림자 속에서 당신을 감추어 적들이 당신을 덜 보게 합니다.</string>
     <string name="CloakBuff_Name">은신함</string>
+    <string name="CloakSpell_EnemiesNearby">Musuh berada di dekat.</string>
+    <string name="CloakSpell_Info">그림자 속으로 들어가 보이지 않게 됩니다. 탐지될 가능성을 크게 줄입니다. 적들이 근처에 있으면 사용할 수 없습니다.</string>
     <string name="CloakSpell_Name">은신</string>
     <string name="ClothArmor_Desc">이 가벼운 갑옷은 기본적인 방어력을 제공한다.</string>
     <string name="ClothArmor_Name">천 갑옷</string>
@@ -493,6 +544,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Codex_Story_8">점성의 문양은 피해를 한번에 받는 대신 1씩 나누어 받게 됩니다.</string>
     <string name="Codex_Story_9">변위의 문양은 자신을 시야 내의 무작위 위치로 순간이동 시킵니다. 보스 층에서는 발동하지 않습니다.</string>
     <string name="ColdSpirit_Desc">냉기 정령은 순수한 형태의 차가움의 화신입니다. 그들은 창조자들의 마법으로 만들어졌으며 창조자들의 의지에 따라 행동하거나 본능과 반사작용에 의해 행동하는 의지가 없는 껍데기입니다.</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">냉기 정령</string>
     <string name="ColdSpirit_Name_Objective">냉기 정령</string>
     <string name="ComboBuff_Info">다음 공격은 콤보 공격이 됩니다.</string>
@@ -517,12 +569,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
 가능한 한 빨리 없애 버리는 게 좋을 것입니다.</string>
     <string name="CorpseDust_Info2">아무래도 이걸 들고 있는 것만으로도 당신은 불안과 분노를 느끼는 것 같습니다.</string>
     <string name="CorpseDust_Name">시체 먼지</string>
+    <string name="CorpseExplosion_Info">Ledakan bangkai.</string>
     <string name="CorpseExplosion_Name">시체 폭발</string>
     <string name="CorpseExplosion_NoCorpse">그 위치에는 시체가 없습니다.</string>
     <string name="Crab_Defense">막음</string>
     <string name="Crab_Desc">이 거대한 게는 하수구 먹이 사슬의 최상위 포식자다. 녀석은 매우 빠르고 녀석의 딱딱한 껍질은 큰 충격을 견딜 수 있다.</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">하수구 게</string>
     <string name="Crab_Name_Objective">하수구 게</string>
+    <string name="CrippleBuff_Info">몸은 장애를 겪지만 싸움은 계속된다.</string>
     <string name="CrippleBuff_Name">불구</string>
     <string name="Crystal_Desc">크고 빛나는 크리스탈이 공중에 떠있습니다. 아마도 이것은 강력한 마법으로 가득 차 있을 것입니다.</string>
     <string name="Crystal_Gender">masculine</string>
@@ -538,6 +593,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DM300_Info3">무단 침입 감지.</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">낡은 나무 손잡이가 달린 단순한 단검입니다.</string>
     <string name="Dagger_Name">대거</string>
     <string name="Damage_Reduction">데미지 감소</string>
@@ -560,6 +616,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DashSpell_OnSelf">제 자리로 돌진할 수 없습니다.</string>
     <string name="DashSpell_TooFar">그만큼 멀리 돌진할 수 없습니다.</string>
     <string name="DeathKnight_Desc">겉보기에는 육중한 방어구를 두른 막강한 전사 같지만, 해골의 모습이 그러한 느낌을 없애 버립니다. 죽음의 기사는 맹세를 지키지 못한 기사의 영혼으로, 그의 저주로 인해 그는 영원히 땅을 떠돌며,어떤 것을 지키려고 하였는지 기억을 못한 채로 전투를 하여 무고한 사람을 죽여 자신의 명예를 회복하는 것을 추구할 것입니다.  </string>
+    <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name">죽음의 기사</string>
     <string name="DeathKnight_Name_Objective">죽음의 기사</string>
     <string name="Death_Name_0">음침한 %s</string>
@@ -569,7 +626,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">사령</string>
     <string name="Deathling_Name_Objective">사령</string>
+    <string name="DeepSnail_Desc">이 조개는 수원 근처에서 자주 볼 수 있으며 일반 달팽이보다 훨씬 빠릅니다. 그러나 물려야 주의하세요. 피부에 불쾌한 영향을 미칠 수 있습니다.</string>
+    <string name="DeepSnail_Gender">masculine</string>
     <string name="DeepSnail_Name">깊은 달팽이</string>
+    <string name="DeepSnail_Name_Objective">Keong dalam</string>
+    <string name="DeferedDamageBuff_Info">Darah mengering.</string>
+    <string name="DeferedDamageBuff_Name">Penderitaan tertunda</string>
     <string name="DeferedDamage_Killed_Txt">%s 이/가 당신을 죽였습니다...</string>
     <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">포식</string>
@@ -582,9 +644,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DewVial_Name">이슬병</string>
     <string name="Dewdrop_Info">수정처럼 맑은 이슬입니다.</string>
     <string name="Dewdrop_Name">이슬</string>
+    <string name="DieHardBuff_Info">Tidak mati mudah.</string>
     <string name="DieHardBuff_Name">죽을 때까지</string>
+    <string name="DieHardSpell_Info">Kebangkitan dari kematian.</string>
     <string name="DieHardSpell_Name">다이 하드</string>
     <string name="Displacement_Txt">이동의 %s</string>
+    <string name="DoctorArmor_Info">Perlindungan dokter.</string>
+    <string name="DoctorArmor_Name">Armor Dokter</string>
+    <string name="DoctorArmor_NotDoctor">Bukan dokter.</string>
+    <string name="DoctorSpecial">Kemampuan Dokter</string>
     <string name="DogeMask_Info">유명한 DOGE로 변장하고 싶습니까? 당신의  기회가 바로 지금 여기 있습니다!\n 정말 마스크! 많은 변장! 와!</string>
     <string name="DogeMask_Name">DOGE 가면</string>
     <string name="DonateButton_pleaseDonate">기부 부탁드립니다</string>
@@ -604,8 +672,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="DriedRose_Name">매마른 장미</string>
     <string name="Drink_ACDrink">마신다</string>
     <string name="Drink_Message">상쾌한 기분이 든다!</string>
+    <string name="DrunkardNPC_Desc">평범한 술집 손님의 자연스러운 상태.</string>
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">술꾼</string>
+    <string name="DrunkardNPC_Name_Objective">Pengelana mabuk</string>
     <string name="Drunkard_Phrase_1">술 좀 주세요!</string>
     <string name="Drunkard_Phrase_2">맥주가 있는데 물이 왜 필요해?</string>
     <string name="Drunkard_Phrase_3">이 맥주는 마치 진흙 맛이야</string>
@@ -643,6 +713,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">대지 정령</string>
     <string name="EarthElemental_Name_Objective">대지 정령</string>
+    <string name="EarthrootBuff_Info">Pertahanan meningkat.</string>
     <string name="EarthrootBuff_Name">자연의 갑옷</string>
     <string name="Earthroot_Desc">생명체가 뱀뿌리를 만든다면, 뱀뿌리의 뿌리가 그 생명체의 주위에 자연의 갑옷을 만들어 줄 것이다.</string>
     <string name="Earthroot_Name">뱀뿌리</string>
@@ -657,6 +728,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ElvenDagger_Info">이 무기는 특수한 합금으로 만들어졌기 때문에 통상의 단검보다 훨씬 가볍다.</string>
     <string name="ElvenDagger_Name">엘프제 단검</string>
     <string name="EncumbranceBuff_CharAct_1">이 %s를 제대로 다루기에는 힘이 부족합니다.</string>
+    <string name="EncumbranceBuff_CharAct_2">이 %s이 너무 무거워서 제대로 사용할 수 없습니다.</string>
     <string name="EncumbranceBuff_CharAct_3">이것을 사용하려면 먼저 힘을 길러야 해.</string>
     <string name="EncumbranceBuff_CharAct_4">나는 %s의 잠재력을 최대한 발휘할 힘이 부족하다.</string>
     <string name="EncumbranceBuff_CharAct_5">%s은(는) 지금 내가 감당하기엔 너무 벅차요.</string>
@@ -675,6 +747,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Exhumation_NoGrave">도굴할 무덤이 없습니다.</string>
     <string name="Exhumation_Ok">당신을 따르겠습니다.</string>
     <string name="ExplodingSkull_Desc">이 떠다니는, 불타는 해골은 매우 불안정해 보이고 언제든지 폭발할 것 같습니다.</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">폭발하는 해골</string>
     <string name="ExplodingSkull_Name_Objective">폭발하는 해골</string>
     <string name="Eye_Desc">이 악마의 또다른 이름은 \&quot;증오의 구슬\&quot;이다. 왜냐하면 한 번 적을 본 녀석은 주변에 아군이 있든 말든 무시하고 죽음의 광선을 사용하여 아군도 상처 입히기 때문이다.</string>
@@ -683,13 +756,17 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Eye_Name">눈알 악마</string>
     <string name="Eye_Name_Objective">눈알 악마</string>
     <string name="Facilitations_Descriptions_0">변이체들은 항상 경멸과 두려움을 가지고 대우받았지만, 배고픔이 없는 것이 다시 한 번 당신에게 우월성을 줄 것입니다. 이번에는 던전의 심연을 정복하는 데 있어 말입니다.</string>
+    <string name="Facilitations_Descriptions_1">당신의 부모가 누구였는지는 아직 알려지지 않았지만, 자연적인 트롤 같은 재생능력이 곧 올 전투 흉터를 치유하는 데 도움이 될 것입니다.</string>
+    <string name="Facilitations_Descriptions_2">자연을 에너지원으로서 깊고 철저하게 연구하면 여정 중 마법 보 reserves를 충전할 수 있습니다.</string>
     <string name="Facilitations_Descriptions_3">Ogrelskininden yapılmış kayışı sıktığınızda, her yeni nesile aktarılan bu kayışla bir adım attığınızda bilinmezliğe doğru ilerliyorsunuz.</string>
     <string name="Facilitations_Names_0">배고픔 없음</string>
     <string name="Facilitations_Names_1">트롤 시체</string>
+    <string name="Facilitations_Names_2">Pusat Perkantinan</string>
     <string name="Facilitations_Names_3">거인의 힘</string>
     <string name="Fadeleaf_Desc">미명초를 만지면 현재 층의 무작위 위치로 보낼 것이다. </string>
     <string name="Fadeleaf_Name">미명초</string>
     <string name="FetidRat_Desc">이 주머니 쥐는 보통 녀석들 보다 훨씬 몸집이 크다.  악취나는 구름에 뒤덮혀 있다.</string>
+    <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">악취나는 쥐</string>
     <string name="FetidRat_Name_Objective">악취 쥐</string>
     <string name="Fez_Info">윗부분이 잘린 원뿔 모양의 붉은 펠트 머리덮개로, 꼭대기에 장식이 달려 있다. 당연히 세상이 3차원이 되는 마법 같은건 걸려있지 않다.</string>
@@ -738,7 +815,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="FrozenCarpaccio_Name">얼린 생고기</string>
     <string name="FrozenFish_Info">냉동 생선,살아있는 것 같지만, 얼었습니다.</string>
     <string name="FrozenFish_Name">냉동 생선</string>
+    <string name="FullFaceMask_Info">Pelindung wajah penuh.</string>
     <string name="FullFaceMask_Name">방독면</string>
+    <string name="FuryBuff_Info">Kekerasan meningkat.</string>
     <string name="FuryBuff_Name">격노</string>
     <string name="GameScene_Chasm">당신의 발자국 소리가 던전에 울려 퍼집니다.</string>
     <string name="GameScene_Grass">풀 냄새가 공기 중에 가득합니다.</string>
@@ -747,10 +826,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="GameScene_Water">물 소리가 당신 주위에서 들려옵니다.</string>
     <string name="GameScene_Welcome">리믹스드 던전 %d층에 오신 걸 환영합니다!</string>
     <string name="GameScene_WelcomeBack">리믹스드 던전 %d층에 돌아오신 걸 환영합니다!</string>
+    <string name="GasImmuneBuff_Info">모든 가스에 대한 면역.</string>
     <string name="GasImmuneBuff_Name">가스 면역</string>
     <string name="Ghost_Defense">회피</string>
     <string name="Ghost_Desc">이 유령은 거의 보이지 않는다. 그것은 슬픈 얼굴을 한 희미한 빛으로 된 형상없는 얼룩 같이 보인다.</string>
     <string name="Ghost_Name">슬픈 유령</string>
+    <string name="Ghost_Name_Objective">Hantu</string>
     <string name="Ghost_Rat1">반갑게 모험가여... 한때는 나도 당신과 같았다네 - 강하고 자신감이 넘쳤지... 하지만 지금은 죽었어... 하지만 난 이곳을 떠날수 없네... 복수하기 전까지는 말야... 내 목숨을 앗아간, _악취나는 쥐_를 없애 주게...</string>
     <string name="Ghost_Rat2">제발... 도와주게...그 끔찍한 놈을 없애 주게...</string>
     <string name="Ghost_Rose1">반갑네 모험가여... 한때는 나도 당신과 같았다네 - 강하고 자신감이 넘쳤지... 하지만 지금은 죽었어... 하지만 난 이곳을 떠날수 없네... 내 _마른 장미_를 찾기 전까지는 말야... 나한텐 매우 중요한 것이네... 어떤 몬스터가 내게서 훔쳐갔어...</string>
@@ -767,8 +848,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">그놀 마스터들이 만든 전통적인 토마호크로, 각 클랜마다 고유한 디자인을 가지고 있습니다. 이 토마호크는 동료 토마호크보다 약간 가볍습니다.</string>
     <string name="GnollTamahawk_Name">그놀 토마호크</string>
+    <string name="Gnoll_BecomeGuardianDesc">지킴이가 되다</string>
     <string name="Gnoll_BecomeWitchdoctorDesc">주술사가 되세요</string>
     <string name="Gnoll_Desc">놀은 하이에나처럼 생긴 인간형 괴수이다. 녀석은 하수구나 던전에 살면서 때때로 지상을 습격한다. 놀 정찰병은 그들 무리의 일반 구성원이다. 녀석은 놀 정예병만큼 강하지도 않고 놀 주술사만큼 똑똑하지도 않다.</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">놀 정찰병</string>
     <string name="Gnoll_Name_Objective">놀 정찰병</string>
     <string name="Gold_Collect">나중에 상점에서 사용할 수 있는 금화를 수집하세요.</string>
@@ -781,10 +864,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">황금 조각상</string>
     <string name="GoldenStatue_Name_Objective">황금 조각상</string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="GoldenSword_Info">보통 금과 같은 무른 금속으로 만들어진 무기는 장식으로만 쓰입니다. 하지만 이 칼은 여러가지를 꽤나 잘 베어버릴 수 있어 보입니다.</string>
     <string name="GoldenSword_Name">금 칼</string>
     <string name="Golem_Defense">막음</string>
     <string name="Golem_Desc">드워프는 그들의 기계에 대한 지식과 새로 발견한 정령의 힘을 서로 융합하려고 하였다. 그들은 토양의 정기를 \&quot;영혼\&quot;으로 이용하여 골렘의 기계로 된 몸체에 넣었고, 이를 조종할 수 있을 거라고 믿어 의심치 않았다. 그럼에도 불구하고, 의식 도중에 아주 사소한 실수라도 재앙을 초래할 수 있다.</string>
+    <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">골렘</string>
     <string name="Golem_Name_Objective">골렘</string>
     <string name="Goo_Desc">구에 대해서 알려진 것은 많지 않습니다. 아마도 구는 원래 생물체가 아니며, 하수구에 있던 유독한 물질들이 모여서 아주 기초적인 지성을 얻게 된 것 같습니다. 방법이야 어찌 되었든, 어두운 마법의 힘이 구를 존재하게 하는 것은 틀림없어 보입니다.</string>
@@ -815,7 +900,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Halls_TileStatue">기둥</string>
     <string name="Halls_TileWater">차가운 용암</string>
     <string name="Haste_Info">신속은 사용자가 극도로 빠른 속도로 이동할 수 있게 해주어 마치 주변의 모든 것이 정지해 있는 것처럼 보이게 합니다. 이러한 신속은 많은 에너지를 소비하므로 오직 짧은 시간 동안만 사용할 수 있습니다.\n\n숙련된 마스터들은 더 오랜 시간 동안 신속 상태를 유지할 수 있습니다.</string>
+    <string name="Haste_Name">극한의 신속</string>
     <string name="Heal_Cast">%s이(가) 치유되었습니다.</string>
+    <string name="Heal_Info">Menyembuhkan luka.</string>
     <string name="Heal_Name">치유</string>
     <string name="HealerNPC_Desc">어째서인지 마법봉을 만드는 누군가와 닮은 노인이다.</string>
     <string name="HealerNPC_Gender">masculine</string>
@@ -876,10 +963,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_NecromancerPerks_2">강령술사는 7레벨 스켈레톤 키를 지니고 시작합니다.</string>
     <string name="HeroClass_NecromancerPerks_3">회복의 물약이 처음부터 식별되어 있습니다.</string>
     <string name="HeroClass_NecromancerPerks_4">회복의 물약이 처음부터 식별되어 있습니다.</string>
+    <string name="HeroClass_None">Tanpa kelas</string>
     <string name="HeroClass_PlagueDoctorPerks_0">역병의 의사들은 처치한 적들로부터 독성 선, 부패한 장기, 뼈 조각 및 악랄한 정수를 수확합니다. 피는 시간이 지남에 따라 수집되어 연금술을 수행하는 데 사용됩니다.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">시작 시 전염병 마스크(모든 가스에 면역)와 뼈 톱을 가지고 시작합니다. 치명타는 추가 부품을 떨어뜨리며, 톱은 마비된 적에게 +50%의 피해를 입힙니다.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Keahlian Penyakit</string>
     <string name="HeroClass_PlagueDoctorPerks_3">[노란색:마비 가스]와 [노란색:독 가스] 포션은 사전에 식별됩니다.</string>
-    <string name="HeroClass_PlagueDoctorPerks_4">역병 의사는 손에 사랑스러운 뼈톱이 없으면 큰 정확도 페널티를 받으며 원거리 무기를 사용할 수 없습니다.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Kemampuan Kapten</string>
+    <string name="HeroClass_Priest">사제</string>
     <string name="HeroClass_Rog">도적</string>
     <string name="HeroClass_RogPerks_0">도적은 그림자의 반지+1을 가지고 시작한다.</string>
     <string name="HeroClass_RogPerks_1">도적은 반지를 착용하자마자 그 반지의 종류를 알아낼 수 있다.</string>
@@ -898,6 +988,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroSubClass_DescBers">부상이 심하면, _광전사_는 광분 상태가 되며 공격력이 크게 상승한다.</string>
     <string name="HeroSubClass_DescFreR">_프리러너_는 대부분의 몬스터보다 거의 두 배 가까이 빠르게 달릴 수 있습니다. 프리러너가 달리는 중에는 회피율이 크게 증가하지만, 그 조건으로 힘에 맞는 장비를 착용 중이며 굶주린 상태가 아니어야 합니다.</string>
     <string name="HeroSubClass_DescGlad">근접 무기를 이용한 공격에 성공하면 _검투사_는 연타를 시작하고, 다음 공격이 성공할 때마다 추가로 데미지를 입힌다.</string>
+    <string name="HeroSubClass_DescGuardian">Pengetahuan pertahanan yang terampil memungkinkan _Penjaga_ untuk menyerang balik dengan perisai, menjadikannya musuh yang menakutkan bagi mereka yang berani menyerang benteng berjalan ini.</string>
     <string name="HeroSubClass_DescNone"/>
     <string name="HeroSubClass_DescScout">엘프 _정찰병_은 은신의 달인립니다. 높게 자란 풀 위에 올라서면 잠시 동안 은신 상태가 됩니다. 또한 평범한 엘프보다 날랩니다.</string>
     <string name="HeroSubClass_DescShaman">엘프 _주술사_는 마법 막대를 근접 무기로 사용할 수 있습니다. 공격에 성공하면 마법 막대의 능력을 충전량을 사용하지 않고 대상에게 가할 확률이 있습니다.</string>
@@ -980,9 +1071,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="IceGuardianCoreModule_Info">마법의 얼음으로 만들어진 복잡한  구조물입니다. 빛나는 보석이 이 특이한 장치의 가장자리에 놓여져 있습니다.</string>
     <string name="IceGuardianCoreModule_Name">얼음 수호자의 핵</string>
     <string name="IceGuardianCore_Desc">얼음 수호자는 고대 코볼트가 그들의 동굴을 지키기 위해 만들었습니다. 이것의 핵에 힘이 있는 한 얼음 수호자는 자신을 다시 만들 것입니다.</string>
+    <string name="IceGuardianCore_DieInfo">Inti membeku dan meledak.</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name">얼음 수호자</string>
     <string name="IceGuardianCore_Name_Objective">얼음 수호자</string>
     <string name="IceGuardian_Desc">얼음 수호자는 고대 코볼트가 그들의 동굴을 지키기 위해 만들었습니다. 이것의 핵에 힘이 있는 한 얼음 수호자는 자신을 다시 만들 것입니다.</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">얼음  수호자</string>
     <string name="IceGuardian_Name_Objective">얼음 수호자 </string>
     <string name="IceKey_Info">이 열쇠는 얼음으로 만들어진 것 같다. 하지만 강철처럼 단단하다.</string>
@@ -1009,8 +1103,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="InnKeeperNPC_Desc">여관 주인은 스스로를 자랑스러워합니다.</string>
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">여관 주인</string>
+    <string name="InnKeeperNPC_Name_Objective">여관 주인</string>
     <string name="InnServant_Phrase_1">으휴, 할 일이 아직도 이렇게 많아!</string>
     <string name="InnServant_Phrase_2">이 취한 놈 때문에 미치겠어!</string>
+    <string name="InnServant_Phrase_3">깨끗해 보인다</string>
+    <string name="InnServant_Phrase_4">Oh my, so many guests today</string>
     <string name="Instability_Name_0">불안정한 %s</string>
     <string name="Instability_Name_1">불안정한 %s</string>
     <string name="Instability_Name_2">불안정한 %s</string>
@@ -1033,7 +1130,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="IronKey_Info">열쇠에 있는 홈이 많이 닳아있고 가죽끈은 오래 써서 낡아 보입니다. 이걸로 어떤 문을 열 수 있을까요?</string>
     <string name="IronKey_Name">열쇠</string>
     <string name="ItemSprite_Info1">drop aside: %1$.1f %2$.1f</string>
+    <string name="Item_ACAlchemy">연금술</string>
     <string name="Item_ACDrop">버리기</string>
+    <string name="Item_ACPickup">Ambil</string>
     <string name="Item_ACThrow">던지기</string>
     <string name="Item_DirThrow">던질 방향을 선택하세요</string>
     <string name="Item_Info">어떤것</string>
@@ -1063,6 +1162,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Journal_WellTransmut">변환의 우물</string>
     <string name="Keyring_Info">이것은 열쇠들이 가방에서 자리를 차지하지 않도록, 따로 보관할 수 있는 구리로 된 열쇠고리 입니다.</string>
     <string name="Keyring_Name">열쇠고리</string>
+    <string name="KindOfBow_ChooseArrows">Pilih jenis panah.</string>
     <string name="KindOfBow_SelectArrowKind">어떤 화살을 사용해야 할까?</string>
     <string name="KindOfWeapon_EquipCursed">%s 주위로 몰려드는 강한 느낌에 당신은 잠시 주춤했습니다.</string>
     <string name="King_Defense">막음</string>
@@ -1077,6 +1177,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Knuckles_Info">이 너클은 쇠로된 조각이 주먹에 꼭 맞도록 만들어져 있습니다.</string>
     <string name="Knuckles_Name">너클더스터</string>
     <string name="KoboldIcemancer_Desc">코볼트 빙술사들은 그들의 사회의 엘리트층입니다. 전사와, 마법사, 그리고 가장 중요한 과학자들이지요.고대 빙술사들은 얼음의 형태를 만드는 정교한 기계장치로 얼음을 만들고 그것들을 마법으로 강화시키는 데에 통달하였습니다.</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">1%s가 아이스 볼트로 당신을 죽였습니다.</string>
     <string name="KoboldIcemancer_Name">코볼트 빙술사</string>
     <string name="KoboldIcemancer_Name_Objective">코볼트 빙술사</string>
@@ -1084,11 +1185,16 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">코볼트</string>
     <string name="Kobold_Name_Objective">코볼트</string>
+    <string name="KrampusHead_Info">Kepala Krampus.</string>
+    <string name="KrampusHead_Name">Kepala Krampus</string>
+    <string name="KunaiThrow_Info">この致死性のクナイ投擲は非常に高速で行われ、目標を選択することすらできません。\n\n真の達人だけが一度に複数のクナイを投げることができます。</string>
+    <string name="KunaiThrow_Name">Melempar kunai</string>
     <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">이 무기는 낫이 달린 사슬의 끝에 무거운 강철로 된 추가 달려있습니다.</string>
     <string name="Kusarigama_Name">쿠사리가마</string>
     <string name="Kusarigama_Pull">당기다</string>
     <string name="Larva_Desc">고대 신의 애벌레</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">신의 애벌레</string>
     <string name="Larva_Name_Objective">신의 애벌레</string>
     <string name="LastLevel_TileDescStatue">이 기둥은 진짜 사람 해골로 만들어져 있다. 대박.</string>
@@ -1133,6 +1239,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Level_TileDescStatue">누군가 이곳을 꾸미고 싶어했지만, 당연히 던전의 분위기를 바꾸진 못했다.</string>
     <string name="Level_TileDescTrap">숨겨진 발판을 디디면 함정이 발동한다.</string>
     <string name="Level_TileDescWater">불이 붙었다면, 물 속에 들어가 불을 끄세요.</string>
+    <string name="Level_TileDescWell">신비로운 우물. 마법의 힘이 이곳에서 느껴진다.</string>
     <string name="Level_TileEmbers">잿더미</string>
     <string name="Level_TileEmptyWell">빈 우물</string>
     <string name="Level_TileEntrance">층 입구</string>
@@ -1170,11 +1277,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="LibraryBook_Description">이 책은 정말로 거대하다. 이 책은 모험가들이 던전에서 발견한 모든 정보를 담고 있다.</string>
     <string name="LibraryBook_Name">도서관 책</string>
     <string name="Lich_Desc">네크로맨서는 그의 죽음을 네크로폴리스에서 맞이하였고,  이 장소의 사악한 힘이 그의 몸속으로 흘러들어갔습니다. 그는 결국  사악한 힘에 의해 조종당하는 의지가 없는 언데드 마법사인 리치로 변했습니다.</string>
+    <string name="Lich_DieInfo">이 네크로맨서가 마음에 들지 않았어. 7 레벨로 돌아가서 새 모험을 위한 다른 길을 찾을 때가야.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">리치</string>
     <string name="Lich_Name_Objective">리치</string>
+    <string name="LightBuff_Info">Cahaya memenuhi.</string>
     <string name="LightBuff_Name">섬광</string>
     <string name="LightningBolt_Info">고대의 무당들이 공유하는 마법으로, 특히 물 위에 서 있는 어리석은 적들에게 두 배로 더 효과적으로 전격을 가할 수 있습니다.</string>
+    <string name="LightningBolt_Name">번개</string>
     <string name="LightningTrap_Desc">당신은 번개 함정의 방전으로 사망했습니다...</string>
     <string name="LightningTrap_Name">번개 함정</string>
     <string name="LloidsBeacon_ACReturn">돌아가기</string>
@@ -1185,11 +1295,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="LloidsBeacon_Preventing">이곳의 강력한 마력이 로이드의 신호기를 사용하지 못하게 막고 있습니다!</string>
     <string name="LloidsBeacon_Return">로이드의 신호기가 귀환 위치를 설정하는데 성공했습니다. 이제 언제든지 당신은 여기로 귀환할 수 있습니다.</string>
     <string name="LloidsBeacon_Set">\n\n이 신호기는 리믹스드 던전 %d층 어딘가에 귀환 위치를 설정하였습니다.</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Info">이 우뚝 솟은 칼날은 모든 동작에 그 무게를 실어 큰 피해를 입힙니다.</string>
     <string name="Longsword_Name">롱소드</string>
     <string name="Luck_Name_0">행운의 %s</string>
     <string name="Luck_Name_1">행운의 %s</string>
     <string name="Luck_Name_2">행운의 %s</string>
+    <string name="Mace_Gender">masculine</string>
     <string name="Mace_Info">이 무기의 아이언 헤드는 상당한 피해를 입힙니다.</string>
     <string name="Mace_Name">메이스</string>
     <string name="MageArmor_ACSpecial">용암 분출</string>
@@ -1205,10 +1317,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ManaPotion_Info">이 물약은 당신의 정신력을 회복시켜 줄 것입니다.</string>
     <string name="ManaPotion_Name">마나 회복의 물약</string>
     <string name="ManaRegenerationBuff_Info">마나 재생 기능은 버프 형태로 되어 있어 사용이 편리합니다.</string>
+    <string name="ManaRegenerationBuff_Name">Regenerasi Mana</string>
+    <string name="ManaShieldBuff_Info">마법의 방패가 나타나 다음 공격을 완전히 무효화합니다.</string>
     <string name="ManaShieldBuff_Name">마법 방패</string>
     <string name="Mana_Cost">마나 소모:</string>
     <string name="Mana_Title">마나</string>
     <string name="MedicineMask_Info">수술용 마스크는 착용자의 입과 코에서 나오는 액체 방울 및 에어로졸의 미생물을 포착하도록 설계되었습니다.\n\n마스크 착용은 타인에 대한 배려입니다.</string>
+    <string name="MedicineMask_Name">외과 마스크</string>
     <string name="MedicineMask_Obtained">수술용 마스크 획득</string>
     <string name="MeleeWeapon_Info1a">이 %1$s 은/는 %2$s %3$d차 근접 무기입니다.-업그레이드시 +차수 데미지-</string>
     <string name="MeleeWeapon_Info1b">일반</string>
@@ -1233,21 +1348,27 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MeleeWeapon_Info7b">, 그리고 이 저주때문에 당신은 전혀 움직일 수 없습니다.</string>
     <string name="MeleeWeapon_Info7c">당신은 %s 안에 숨어있는 악의적인 마법을 느낄 수 있습니다.</string>
     <string name="MercenaryNPC_Desc">튼튼해 보이는 남자.</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">용병</string>
+    <string name="MercenaryNPC_Name_Objective">Pemercenary</string>
     <string name="Metabolism_Txt">신진대사의 %s</string>
+    <string name="MiasmaGas_Info">Asap beracun.</string>
     <string name="MimicAmulet_Desc">당신이 한 모험의 가장 영광스러운 순간은 그저 함정이었을 뿐이었다.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">미믹</string>
     <string name="MimicAmulet_Name_Objective">미믹</string>
     <string name="MimicPie_Desc">미믹은 자기가 원하는 어떤 형상으로도 변할 수 있는 마법 생물이다. 이 놈은 크고 맛있는 파스티처럼 생겼다.</string>
+    <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">미믹 파이</string>
     <string name="MimicPie_Name_Objective">미믹 파이</string>
     <string name="Mimic_Desc">미믹은 자기가 원하는 어떤 형상으로도 변할 수 있는 마법 생물이다. 던전에서 어떻게 해야 모험가를 유인할 수 있는지 잘 알기 때문에 녀석은 거의 보물상자 형상을 하고 있다.</string>
     <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">미믹</string>
     <string name="Mimic_Name_Objective">미믹</string>
+    <string name="MindVisionBuff_Info">내시경은 모든 생물의 움직임을 바닥에서 명확하게 볼 수 있게 해준다.</string>
     <string name="MindVisionBuff_Name">심안</string>
     <string name="MirrorImage_Desc">이 환영은 당신과 빼닮은 형상을 하고 있지만, 좀 더 창백하고 조금씩 아른거린다.</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">거울상</string>
     <string name="MirrorImage_Name_Objective">거울상</string>
     <string name="MissileWeapon_Info1">
@@ -1266,6 +1387,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Mob_CantDoIt">이렇게 할 수 없어요. 저 작은 발이 있잖아요.</string>
     <string name="Mob_Desc">진짜 설명은 곧 나올 예정입니다!</string>
     <string name="Mob_Died">당신은 저 멀리서 무언가가 죽는 소리를 들었습니다.</string>
+    <string name="Mob_GoingTo">Menuju</string>
     <string name="Mob_ReadyForOrder">%s이(가) 명령을 받기를 기다리고 있습니다.</string>
     <string name="Mob_StaAmokStatus">이 %1$s은/는 광란에 빠졌습니다</string>
     <string name="Mob_StaControlledStatus">이 %s는 사악한 존재에게 정신을 지배당하고 있습니다.</string>
@@ -1311,10 +1433,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="MysteryMeat_Name">알 수 없는 고기</string>
     <string name="NatureArmorSpell_Info">엘프들도 강인해질 수 있습니다. 특히 대자연 그 자체의 보호를 받을 때는 말이죠.</string>
     <string name="NatureArmorSpell_Name">자연의 갑옷</string>
+    <string name="NecromancerArmor_Info">Armor necromancer.</string>
     <string name="NecromancerArmor_Info2">이 갑옷을 입는다면 강령술사는 \&quot;네크로티즘\&quot; 기술을 사용해 마법의 독을 뿌려서 근처의 모든 생물체에게 죽던 살던 강력한  영향을 끼칠 것입니다.</string>
     <string name="NecromancerArmor_Name">뼈 갑옷</string>
     <string name="NecromancerArmor_NotNecromancer">강령술사만이 이 갑옷을 입을 수 있습니다!</string>
     <string name="NecromancerNPC_Desc">이 중년 남자는 약간 짜증을 내면서 흥분하는 것 같습니다. 그는 뼈 조각으로 만든 합성 갑옷을 입고 있습니다.</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">아! 보기 드문 광경이군! 죽지 않은 동료 모험가라니. 대단하군! 아... 미안하네. 가끔 너무 흥분할 때가 있어서. 보시다시피 나는 강령술사라네. 시체와 죽음을 연구하는 것은 내가 살면서 해야하는 것이지만, 같은 것을 계속 보다보니 결국 질려버리고 말았지. 하지만 내가 여기에 있는 이유도 그것 때문이야. 몇 주간의 내 계산에 따르면, 이 던전의 어딘가에서 굉장한 일이 벌어질 거야. 네크로폴리스, 고대 도시의 시체가 문을 열거야. 그리고... 더 많은 말은 못하겠군. 이미 충분히 시간을 낭비했거든. 나는 준비를 해야 하니, 나중에 돌아오게.</string>
     <string name="NecromancerNPC_Intro2">아! 보기 드문 광경이군! 죽지 않은 동료 모험가라니. 대단하군! 아... 실례하게 되었네.  보시다시피 나는 강령술사라네. 시체와 죽음을 연구하는 것은 내가 살면서 하는 것이지만, 같은 것을 계속 보다보니 결국 질려버리고 말았지. 그래서 내가 여기에 있네.최근에 광장한 일이 일어났네.  죽음의 고대 도시인 _네크로폴리스_의 문이 마침내 열렸다는 사건이지. 사실, 바로 옆에 있는 것이 입구라네. 그리고.. 이 열쇠를 가지고 먼저 가게, 모험과 물건들을 좋아하지 않은가? 나는 준비할 필요가 있으므로 자네를 뒤따라 가겠네.</string>
     <string name="NecromancerNPC_Message1">시간이 없어, 시간이 없어...</string>
@@ -1323,6 +1447,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="NecromancerNPC_Message4">네크로폴리스 안에는 매우 특별한 게 있을 거야.</string>
     <string name="NecromancerNPC_Name">강령술사</string>
     <string name="NecromancerNPC_Name_Objective">강령술사</string>
+    <string name="NecromancerRobe_Info">Jubah necromancer.</string>
     <string name="NecromancerRobe_Info2">이 로브는 흑마법으로 가득 차 있어서 강령술사에게 쓰러진 몬스터들의 영혼을 흡수할 수 있게 해 줄 것입니다.</string>
     <string name="NecromancerRobe_Name">강령술사 로브</string>
     <string name="NecromancerRobe_PetLimitReached">강령술: 최대 소환 수에 도달했습니다(현재 최대 소환 수: 1%d)!</string>
@@ -1352,6 +1477,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="OozeBuff_Name">Kaustik Rüzgar</string>
     <string name="Ooze_Death">%s 이/가 당신을 죽였습니다...</string>
     <string name="Order_Info">적절한 집중으로 주문은 거의 부정할 수 없습니다.</string>
+    <string name="Order_Name">Order</string>
     <string name="Order_Resist">감히 날 어떻게 하려고?!!</string>
     <string name="OverpricedRation_Info">일반적인 비상 식량과 똑같이 생겼지만 크기가 좀 더 작습니다.</string>
     <string name="OverpricedRation_Message">맛이 좋습니다.</string>
@@ -1359,6 +1485,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">이 화살은 쿠라레 독이 칠해져 있다.</string>
     <string name="ParalysisArrow_Name">마비 화살</string>
+    <string name="ParalysisBuff_Info">완전히 마비됨!</string>
     <string name="ParalysisBuff_Name">마비됨</string>
     <string name="Paralysis_Name_0">기절시키는 %s</string>
     <string name="Paralysis_Name_1">기절시키는 %s</string>
@@ -1384,9 +1511,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PirateSet_Name">해적 세트</string>
     <string name="PlagueDoctorMaskHood_Info">조각된 검은 호박나무로 된 해골, 그 빈 눈구멍에는 자수정 보석의 윤기 있는 빛이 어른거린다. 당신이 들이마신 숨결은 복도처럼 얽힌 튜브와 필터를 지나며, 당신에게 달라붙은 부패를 가리는 강한 허브와 향신료의 향기를 전해준다. 하지만 그것이 단지 가면일 뿐은 아니다. 한밤중 같은 벨벳으로 만들어진 두꺼운 수도복 후드가 얼굴과 머리를 어둠 속에 가린다. 까마귀 날개처럼 생긴 이 후드는 등줄기를 따라 늘어뜨려져 있으며, 가장자리는 뼈처럼 하얀 레이스 장식으로 마감되어 충격적이지만 아름다운 대비를 이룬다. 마스크와 후드가 함께 어우러져 유령 같은 초상, 즉 부패의 힘에 맞서는 끝없는 싸움을 보여주는 음산한 증표를 만들었다.</string>
     <string name="PlagueDoctorMaskHood_Name">후드가 있는 페스트 닥터 마스크</string>
+    <string name="PlagueDoctorMask_Info">Masker dokter wabah.</string>
+    <string name="PlagueDoctorMask_Name">역병의원 가면</string>
     <string name="PlagueDoctorNPC_After_Quest">그들에게 보여주겠어, 그들에게 모두 보여주겠어!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">아직까지 여기 있었던거야? 자! 받아.</string>
     <string name="PlagueDoctorNPC_Desc">이 곱추 남성은 가죽으로 둘러쌓여 있고, 강한 약냄새가..아니, 마늘 냄새도 나는 것 같다?</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">역병 의사</string>
     <string name="PlagueDoctorNPC_Name_Objective">역병 의사</string>
     <string name="PlagueDoctorNPC_Quest_End">아, 고마워. 나는 저것들이 역병의 증거를 가졌다면 좋겠어. 예전 표본들은 완벽히 무해하다고 밝혀졌기 때문에 나는 새 표본들을 기다릴 동안 너를 위해 이걸 만들었어.</string>
@@ -1395,9 +1525,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
 </string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">하! 믿을수 있겠어?! 저 멍청이들은 아직도 이 빌어먹을 하수구가 얼마나 위험한지 깨닫지 못하고 있어! 모험가들과 경비원들이 마을을 어떤 것이든 막아낼 수 있다고 믿나 봐. 하! 역병이 퍼지는 것을 막을 무기는 없어. 하지만 나는 증거가 필요해. 나를 도와줄수 있겠어? 내가 추가적인 실험을 할 수 있게 %d개의 쥐 가죽을 가져와 줘.
 </string>
+    <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, 돌아오셨군요! _다섯 마리 죽은 쥐_, 완벽해요! 그 피부는 제 연구에 핵심이 될 거예요. 약속대로, 당신의 용감한 노력에 감사드리며, 저는 그 피부로 이 갑옷을 만들었습니다. 독에 씌워져 있지만 걱정 마세요! 통제되고, 보호합니다! 이제 가세요! 도시를 지키세요!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">_다섯 마리의 죽은 쥐_를 가져오세요! 당신이 가져오는 쥐 한 마리 한 마리가 이 끔찍한 전염병을 이해하는 데 한 걸음 더 가까워집니다.</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">아쥬! 이 지독한 역병! 도시 전체에 들불처럼 퍼지고, 눈에 띄지 않는 사람들의 뼈 속에 끓고 있어! 바하! 그 초라한 경비병들이 이 음침한 재앙에 맞설 수 있다고 생각해? 너! 강하고 건강한 녀석. 나를 도와줄 수 있겠어. 하수구의 더러운 쥐들… 걔들이 퍼뜨려! 나한테 말이야, 그 불쌍한 놈들의 몸속에 역병의 씨앗이 있어! 그 끔찍한 것들을 5마리, 물론 죽은 상태로 가져와! 그 가죽은 내 연구에 무척이나 소중할 거야. 내가 너에게 훌륭한 갑옷을 만들어 주지, 역병이 시작되는 곳을 막아주는 보호막 같은 거!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">아하… 훌륭하다! _달팽이_의 그 비밀이 달빛 아래에서 꽃잎처럼 서서히 펼쳐지는구나. 정말 방대한 정보로구나! 하지만 말이 맞네, _50 골드_라니 그다지 어울리는 보상은 아니지. *광적으로 웃음을 터뜨린다*.</string>
+    <string name="PlagueDoctorQuest_1_2_InProgress">Mencari kura-kura.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*격렬하게 기침* 에취!\n _달팽이들_… 그들은 미끄러져요. 그들은 진액을 흘려요. 그리고 잊혀진 시대의 비밀을 속삭여요. 제가 필요한 건, _열 마리_, 그들의 껍질이 온전한 상태로요. _금화 오십 개_ 정도로 이런 귀한 지식을 살 수 있다고 생각하세요?\n 바! 상관없어요. 그들이 가진 정보는 이 전염병을 멈추게 할 열쇠가 될 수도 있어요. 아니면… 훨씬 더 끔찍한 무언가로 우리를 이끌 수도 있고요. 당신이 결정하세요.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_월광초_… 이 세상을 관통하는 마법의 증거입니다. 저는 그들의 정수로부터 많은 것을 배웠지만, 당신의 보상… 음, 그것은 최대한의 정성으로 준비되었습니다. *영웅에게 반짝이는 _마나 회복의 물약_을 건네줍니다* 그 힘이 앞으로의 위험을 헤쳐나가는 데 도움이 되길 바랍니다.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">_문그레이스_를 찾으세요. 그곳은 어둠이 희미한 달빛의 섬광과 만나는 곳입니다. _두 개의 씨앗_, 그 정수가 숨겨진 비밀을 밝힐 것입니다.</string>
@@ -1410,7 +1542,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PlagueDoctorQuest_3_1_Prologue">*그의 눈동자에는 이상하고 열광적인 강도가 빛나고 있었다.* 아아, _뱀파이어 박쥐_! 밤의 존재로, 자기 사냥감의 생명력을 먹으며 살아가는 생물이지. 흥미롭군... 정말 흥미롭군. 내가 그걸 한 마리라도 잡아 그 독특한 생리학적 구조를 연구해야 해. 다 이해하는 것에 달려 있어... 그... 그에 대해 말이다... *그는 중얼거리며 알 수 없는 용어들로 혼잣말을 한다.* 그래! _박쥐_의 음향 위치 탐지 기능, 그것이 완전한 어둠 속에서 길을 찾는 능력... 비밀을 풀 수 있는 열쇠가 되지.*</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*그는 고개를 뒤로 젖히고 비명 같은 웃음을 터뜨리며, 그 소리는 칙칙한 실험실 안에 울려 퍼졌다* 훌륭하군! 우리 앞에 서 있는 _사신 기사_! 그 존재에서 뿜어져 나오는 힘은... 취하게 만드는구나! *그는 당신을 향해 돌아서며, 열광적인 강렬함으로 빛나는 눈빛을 보내며* 그리고 당신을 위한 보상, 당신의 용맹함에 걸맞는 선물이 있으니: _힘의 물약_! 이 물약이 어떤 적도 물리칠 수 있는 힘을 당신에게 부여하기를 바라노라! 자... 이제 우리의 표본을 살펴보자. 바로 그 본성은 삶의 법칙 자체를 다시 쓸 수 있을 만한 비밀을 간직하고 있다네! *그는 미친 듯한 미소를 지으며 _사신 기사_ 에게 다가서면서, 거품이 나는 초록색 액체가 든 병을 들고 있다*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">이것은 단순한 짐승이 아닙니다! 이것은 네크로맨서의 힘에 대한 살아있는 증거입니다! 살아서, 다치지 않고 포획하세요! 이 _죽음의 기사_... 그것이 열쇠입니다!</string>
+    <string name="PlagueDoctorQuest_3_2_Prologue">_Death Knight_! *Its voice cracks with excitement, its bony fingers trembling as it clutches a bubbling vial filled with a murky, phosphorescent liquid*. Such a creature… a beacon of undeath! To capture one, alive… it would be… monumental. Imagine the secrets we could unlock! The power that flows through its skeletal veins! Yes, a _Death Knight_! It\'s crucial to my research! For it will allow us to delve deeper… into the mysteries of life… and death itself!</string>
+    <string name="PlagueDoctorQuest_4_1_Epilogue">훌륭하다! 드워프 사령술사들, 그들의 정신은 이제 나의 탐구 대상이다! 그런 일그러진 타락된 마법… 정말 매혹적이다. *그는 반짝이는 병을 들어 올린다, 끈적한 붉은 액체로 가득 차 있다.* 이것은 당신을 위한 것이다: 강력의 오차! 그 힘을 마시고, 산들의 힘이 당신의 혈관을 타고 흐르는 것을 느낄 것이다! 이 희생으로 얻은 지식이 궁극적으로 더 높은 목적을 위해 사용될 것이라는 것을 기억하라… 죽음보다 더 나쁜 운명으로부터 우리 모두를 구원할 수도 있다.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">_드워프 흑마법사_ 5 구, 그들의 시체는 여전히 어둠의 마법의 희미한 울림으로 맥박치고 있습니다! 저를 위해 그것을 회수해 주시면, 비할 데 없는 힘의 물약으로 보상해 드리겠습니다. 열 사람의 힘을 당신에게 불어넣어 줄 _힘의 물약_ 말입니다!</string>
+    <string name="PlagueDoctorQuest_4_1_Prologue">Awal pencarian.</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">훌륭하군! 다섯 마리의 _코볼트 빙술사_, 이제 그들의 얼음 같은 정수를 탐구할 수 있게 되었어! 얼어붙은 황야와의 그들의 연결이라니… 정말 매혹적이군. 그들이 물을 다루는 방식… 정말 놀라워.  *그가 빛나는 진홍빛 액체로 가득 찬 작은 병을 당신에게 건넨다* 이것은 당신의 용감한 노력에 대한 보상일세: _힘의 물약_! 깊이 마시고 열 명의 전사 같은 힘이 당신의 혈관을 타고 흐르는 것을 느끼게! 기억하게, 지식은 힘이야… 그리고 힘은 다가오는 어둠에 대항할 수 있는 유일한 무기라네. 이제… 이 얼음 같은 영혼들을 해부하여 그들의 오싹한 비밀을 밝혀내세!</string>
     <string name="PlagueDoctorQuest_4_2_InProgress"> \'_코볼드 아이스맨서_\' 5마리의 시신을 회수하라! 그들의 얼어붙은 몸에는 차가운 마법의 비밀을 풀 수 있는 열쇠가 숨겨져 있다! </string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*그의 뼈대 같은 손가락이 부글부글 끓는 가마에 리듬을 타고, 주변 공기는 유황과 부패의 자극적인 악취로 가득 차 있다*\n_코볼드 아이스맨서_! 그 비참한 생물들, 얼어붙은 동굴에 옹기종기 모여 얼음 마법에 필사적으로 매달리고 있지. 내가 필요한 건 다섯 마리, 그들의 얼어붙은 시체는… 밝혀줄 것이다. 그들의 얼음 마법 숙련은… 특이해. 나는 그들이 이 세계 표면 아래에 잠든 원초적 에너지, 힘을 활용한다고 믿어.</string>
@@ -1428,8 +1563,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Plant_Seed">%s 의 씨앗</string>
     <string name="PlateArmor_Desc">많은 철판들을 서로 연결해 한 벌로 만들어, 이 엄청난 무게를 견딜 수 있는 모험자들에게 어마어마한 방어력을 제공한다.</string>
     <string name="PlateArmor_Name">판금 갑옷</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">치명적인 독이 화살촉 표면에 번들거린다.</string>
     <string name="PoisonArrow_Name">독 화살</string>
+    <string name="PoisonBuff_Info">Racun menggerogoti.</string>
     <string name="PoisonBuff_Name">중독</string>
     <string name="Poison_Death">독으로 죽었습니다...</string>
     <string name="Poison_Name_0">독성 %s</string>
@@ -1540,6 +1677,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Quarterstaff_Name">쿼터스태프</string>
     <string name="QuickSlot_SelectSlot">퀵 슬롯 설정</string>
     <string name="QuickSlot_SelectedItem">퀵슬롯에 등록할 아이템을 선택하세요.</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">아무 화살이나 보관할 수 있는 가죽 화살집</string>
     <string name="Quiver_Name">화살통</string>
     <string name="RabbitEars_Info">전설에 따르면 토끼들은 운이 좋은 짐승으로 알려져 있다. 아니면 토끼의 몸 일부를 가지는 게 행운을 가져다 준다는 믿음이 있다. 생각해 보니 잡혀서 장식으로 만들어진 토끼한테는 그다지 운이 좋다곤 할  수 없을 듯 하다.</string>
@@ -1595,6 +1733,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ResultDescriptions_Hunger">%d 층에서 굶어 죽었습니다.</string>
     <string name="ResultDescriptions_Immured">%d 층에서 돌에 갖혀 죽었습니다.</string>
     <string name="ResultDescriptions_Mob">%2$d층에서 %1$s에게 죽었습니다.</string>
+    <string name="ResultDescriptions_Necromancy">Menghidupkan kembali.</string>
     <string name="ResultDescriptions_Necrotism">%d층에서 네크로티즘에 의해 죽었습니다.</string>
     <string name="ResultDescriptions_Ooze">%d 층에서 부식성 점액에 의해 죽었습니다.</string>
     <string name="ResultDescriptions_Poison">%d 층에서 독에 의해 죽었습니다.</string>
@@ -1652,6 +1791,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Ring_Info3b">그리고 저주로 인해, 당신은 그것을 벗을 수가 없습니다</string>
     <string name="Ring_Info4">%1$s\n\n당신의 %2$s안에 숨어있는 마법의 기운을 느낄 수 있습니다.</string>
     <string name="Ring_Name">%s 반지</string>
+    <string name="Roar_Info">위대한 으아아아는 적들을 당황하게 하고 아군을 격려할 것입니다.</string>
     <string name="Roar_Name">포효</string>
     <string name="RogueArmor_ACSpecial">연막탄</string>
     <string name="RogueArmor_Desc">이 어둠의 의복을 입는다면, 로그는 \&quot;연막탄\&quot; 이라는 기술를 부릴 수 있게 된다 (폭발물을 사용하진 않지만): 적들의 눈을 멀게 하고 옆으로 회피한다.</string>
@@ -1669,6 +1809,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="RottenFood_Message">역겹군!</string>
     <string name="RottenMeat_Info">썩은 고기 조각</string>
     <string name="RottenMeat_Name">썩은 고기</string>
+    <string name="RottenOrgan_Info">Organ busuk.</string>
     <string name="RottenOrgan_Name">썩은 장기</string>
     <string name="RottenPasty_Info">원래는 파이였을지 모르지만, 역겨워 보입니다.</string>
     <string name="RottenPasty_Name">썩은 파스티</string>
@@ -1680,6 +1821,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">썩어가는 주먹</string>
     <string name="RottingFist_Name_Objective">썩어가는 주먹</string>
+    <string name="RoyalShield_desc">Perisai kerajaan.</string>
+    <string name="RoyalShield_name">Perisai Kerajaan</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">오직 최고의 궁수만이 루비 활을 이용할 수 있습니다. 활시위를 당기기 위해선 엄청난 힘이 필요하지만, 그렇게 발사된 화살 대부분은 적의 몸통에 바람구멍을 내어 버린다고 합니다.</string>
     <string name="RubyBow_Name">루비 활</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -1691,6 +1835,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">신비한 해골</string>
     <string name="RunicSkull_Name_Objective">신비한 해골</string>
+    <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">얼핏 보기엔 푸른 녹이 슨 이 낡은 동 검은 전혀 쓸모없어 보입니다. 하지만 오래된 고대의 힘이 잠들어 있습니다. 이 검의 힘은 거의 모든 생명체들을 무기력한 노예로 만들 수 있습니다. 그들을 깨울 올바른 방법을 찾아야겠군요...</string>
     <string name="SacrificialSword_Name">희생의 검</string>
     <string name="SantaHat_Info">아무도 감히 던전마스가 심연의 군주 산타의 붉은 모자같다고 하지 않을 것입니다.</string>
@@ -1698,6 +1843,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ScaleArmor_Desc">가죽 조끼 표면에 철판을 꿰메어 유연하면서도 방어력이 강한 갑옷을 만들었다.</string>
     <string name="ScaleArmor_Name">미늘 갑옷</string>
     <string name="ScarecrowNPC_Desc">빼도 박도 못하게 이 허수아비는 당신의 모든 움직임을 보고 있습니다. 이것의 붉게 반짝이는 눈은 당신을 꿰뚫어보고 있습니다. 그러나 놀랍게도, 당신은 위협을 느끼지 않습니다.</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">허수아비</string>
     <string name="ScarecrowNPC_Name_Objective">허수아비</string>
     <string name="ScarecrowNPC_Quest_End">와 신난다, 좋아!\n 이제 넌 진짜 음식을 얻을 거야!</string>
@@ -1705,6 +1851,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ScarecrowNPC_Quest_Start_Female">안녕 소녀, 요즘 어때? \n 나는 너를 위해 대단한걸 준비했어!\n\n 내가 얼마나 고마울까!\nㅡ, 가서 나를 위해 촛불을 조금 모아와!\n\n</string>
     <string name="ScarecrowNPC_Quest_Start_Male">안녕 소년, 요즘 어때? \n 나는 너를 위해 대단한걸 준비했어!\n\n 내가 얼마나 고마울까!\nㅡ, 가서 나를 위해 촛불을 조금 모아와!\n\n</string>
     <string name="Scorpio_Desc">이 거대한 거미류의 악마같은 생물은 근접전을 최대한 피하고, 멀리서 불구로 만들어 버릴 수 있는 톱니 가시를 발사한다.</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">거대 전갈</string>
     <string name="Scorpio_Name_Objective">거대 전갈</string>
     <string name="ScrollHolder_Info">이 관 형태의 보관함에 두루마리를 보관할 수 있습니다. 이 보관함은 공간을 절약하고 화재로부터 두루마리를 보호합니다.</string>
@@ -1789,6 +1936,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">고위 드워프 수도승</string>
     <string name="Senior_Name_Objective">고위 드워프 수도승</string>
+    <string name="ServantNPC_Desc">매우 바쁜 여관 직원입니다.</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">여관 하녀</string>
     <string name="ServantNPC_Name_Objective">하녀</string>
@@ -1808,6 +1956,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Shades_Name">그림자</string>
     <string name="ShadowLord_Death">안돼애애애애...</string>
     <string name="ShadowLord_Desc">순수한 악과 어둠의 결정체로 만들어진 생물체입니다. 그것의 강력함으로 미루어 고대신 그 자체라는 의견과, 단지 고대신의 문지기들 중 하나라는 의견과의 논쟁이 끊이지 않고 있습니다.</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">전투를 준비해라!</string>
     <string name="ShadowLord_Name">그림자 군주</string>
     <string name="ShadowLord_Name_Objective">그림자 군주</string>
@@ -1819,25 +1968,31 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ShadowsBuff_Name">그림자숨기</string>
     <string name="ShamanElder_Desc">이 특별한 늑대인간은 다른 주술사들보다 훨씬 나이가 많아 보이며 부족 내에서 확실히 더 높은 지위를 가지고 있습니다. 그의 주변에는 이상한 오러가 천천히 형성되며, 닿는 모든 것을 반사하는 것 같습니다.</string>
     <string name="ShamanElder_Gender">masculine</string>
+    <string name="ShamanElder_Name">어르신 주술사</string>
     <string name="ShamanElder_Name_Objective">원로 주술사</string>
     <string name="Shaman_Desc">아주 지능이 뛰어난 놀만이 주술사의 주술을 익힐 수 있다. 놀 주술사는 힘이 약하기 때문에 전투 마법 사용을 좋아하며, 부족에서 자신의 지위를 의심하는 자에게는 이를 사용하길 꺼리지 않습니다.</string>
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">%s의 번개 화살이 당신을 죽였다...</string>
     <string name="Shaman_Name">놀 주술사</string>
     <string name="Shaman_Name_Objective">놀 주술사</string>
+    <string name="Shaman_ZapMiss">Meleset!</string>
     <string name="Sheep_Desc">이 양은 마법 양입니다. 어떤 마법이 있냐고요? 당신은 그 양을 죽일 수 없습니다. 그 양은 멍한 눈으로 되새김질이나 하면서, 마법이 없어질 때까지 계속 있을 겁니다.</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">양</string>
     <string name="Sheep_Name_Objective">양</string>
     <string name="ShieldBuffNotReady_Info">방패가 다음 공격을 막을 준비가 되지 않았습니다.</string>
+    <string name="ShieldBuffNotReady_Name">Shield isn\'t ready</string>
+    <string name="ShieldBuffReady_Info">Perisai siap.</string>
     <string name="ShieldBuffReady_Name">방패 준비 완료</string>
+    <string name="ShieldInfoTemplate">Perisai: %1$c/%2$d</string>
     <string name="ShieldStrTemplate">이 방패를 제대로 사용하기 위해서는 착용자에게 최소한 %1$d의 힘 수치가 필요합니다.</string>
-    <string name="ShieldWeaponInfo">무기로 사용될 때 이 방패는 평균적으로 %1의 피해를 입힙니다.</string>
+    <string name="ShieldWeaponInfo">무기로 사용될 때 이 방패는 평균적으로 %1$d의 피해를 입힙니다.</string>
     <string name="Shielded_Defense">막음</string>
     <string name="Shielded_Desc">방패 놀 정예병은 놀 중에서도 가장 크고 강하며 터프한 녀석이다. 큰 상처를 입게 되면, 이 녀석은 격분하면서 적에게 보다 큰 데미지를 준다. 이 녀석은 거대한 방패를 들고 있다.</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">방패 놀 정예병</string>
     <string name="Shielded_Name_Objective">방패 놀 정예병</string>
+    <string name="ShootInEye_Info">당신의 뛰어난 사격 기술을 사용하여 적의 눈을 정확히 쏩니다. 물론 눈이 있는 경우에만요.</string>
     <string name="ShootInEye_Name">눈에 쏘기</string>
     <string name="Shopkeeper_Buy">구매할 아이템을 선택하세요.</string>
     <string name="Shopkeeper_BuyPrompt">어디, 물건 한 번 봅시다</string>
@@ -1854,12 +2009,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ShortSword_NotBoomerang">이 방법으로 부메랑을 업그레이드 할 수 없습니다.</string>
     <string name="ShortSword_Reforged">다시 제련해서 당신의 %s 를 숏소드로 업그레이드 합니다.</string>
     <string name="ShortSword_Select">업그레이드할 무기를 고르세요</string>
+    <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">목표에 명중 할 때 높은 확률로 별모양 금속과 날카로운 칼날이 상당한피해를 입힌다.</string>
     <string name="Shuriken_Name">수리검</string>
     <string name="SkeletonKey_Info">이 열쇠는 중요해 보입니다. 열쇠 머리 부분이 해골 모양입니다. 아마도 중요한 문을 열 수 있을 것 같습니다.</string>
     <string name="SkeletonKey_Name">해골 열쇠</string>
     <string name="Skeleton_Defense">막음</string>
     <string name="Skeleton_Desc">해골은 운 없는 모험가들이나 던전에 사는 생물의 시체에서 나온 뼈로 이루어져 있고, 저 깊은 곳으로부터 뿜어나오는 악마의 주문에 의해 살아 움직인다. 어느 이상 손상되면 뼈가 폭발하며 산산조각 난다.</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">당신은 폭발한 뼈에 맞아 죽었다...</string>
     <string name="Skeleton_Name">해골</string>
     <string name="Skeleton_Name_Objective">해골</string>
@@ -1876,6 +2033,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Snail_Desc">이 작은 달팽이는 하수를 먹고 꽤 커졌지만, 여전히 매우 느려서 쉽게 상대할 수 있는 적입니다.</string>
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">달팽이</string>
+    <string name="Snail_Name_Objective">Keong</string>
     <string name="SnipersMarkBuff_Info">이 표식은 저격수가 남긴 것입니다.</string>
     <string name="SnipersMarkBuff_Name">저격수의 표식</string>
     <string name="SociologistNPC_AlreadyTaken">당신은 이미 설문조사를 완료했습니다. 나중에 다시 와주세요.</string>
@@ -1903,6 +2061,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Spell_SelectAChar">대상 생물을 선택하세요.</string>
     <string name="Spells_NotEnoughSP">\&quot;%1$s\&quot; 주문을 사용할 마나가 없습니다.</string>
     <string name="Spells_NotInOwnBody">영혼이 몸에서 빠져나온 상태에서는 %s를 할 수 없습니다.</string>
+    <string name="Spells_NotTooFast">%s 아직 사용할 준비가 되지 않았습니다</string>
     <string name="Spells_SummonLimitReached">%1$s: 소환 최대량에 다다랐습니다(현재 최대량: %2$d)!</string>
     <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">이 갑옷은 거미의 껍질과 이상한 옷감으로 만들어졌습니다. 놀랍게도 잘 작동하는 방적돌기가 있습니다. 갑옷에 충분한 압력을 주면 거미줄을 발사할 것이고, 신발에 난 돌기는 당신이 거미줄에서 자유롭게 이동할 수 있게 해 줄 것입니다.</string>
@@ -1914,9 +2073,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">거미 알</string>
     <string name="SpiderEgg_Name_Objective">거미 알</string>
+    <string name="SpiderElite_Desc">Penjaga sarang.</string>
     <string name="SpiderElite_Gender">masculine</string>
+    <string name="SpiderElite_Name">Penjaga Sarang</string>
     <string name="SpiderElite_Name_Objective">거미 정예 호위병</string>
     <string name="SpiderExploding_Desc">평화로울 때는 성실한 일꾼이지만, 이 짐승들은 적에게 돌진하고 마주치는 식물을 움켜 잡는것을 마다하지 않음으로써 자신을 살아있는 폭탄으로 변모시킨다.</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">거미 일꾼</string>
     <string name="SpiderExploding_Name_Objective">거미 일꾼</string>
     <string name="SpiderGuard_Desc">병사들처럼 거미 경비병도 그들의 왕국을 지킨다고 맹세했습니다. 거미 경비병의 독은 목표물을 마비시켜 움직이지 못하게 하는데 사용됩니다.</string>
@@ -1928,6 +2090,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SpiderMindAmber_Name">호박 거미</string>
     <string name="SpiderMindAmber_Name_Objective">호박 거미</string>
     <string name="SpiderMind_Desc">보기에 연약해 보이는 이 거미들은 특별한 정신적 힘을 가지고 있어서, 콜로니 전체를 컨트롤 할 수 있다. 정신 거미는 어떤 살아있는 생물도 조종할 수 있지만, 다소 겁이 많다.</string>
+    <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">정신 거미</string>
     <string name="SpiderMind_Name_Objective">정신 거미</string>
     <string name="SpiderNest_Desc">이 고치는 아주 가느다란 거미줄로 만들어져 있는데 살아 있는 뭔가를 감싸고 있다.</string>
@@ -1937,6 +2100,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SpiderQueenCarapace_Info">거미 여왕의 등껍질의 파편입니다. 당신은 이것에 거미줄 분비선의 조각이 들어있는 것을 볼 수 있고, 이것은 마치 살아있는 것 같습니다. </string>
     <string name="SpiderQueenCarapace_Name">거미 여왕의 등껍질</string>
     <string name="SpiderQueen_Desc">아름다운 여성과 추악한 거미가 섞인 몸을 가졌다. 이 거미 굴에서 살아 있는 모든 것은 그녀의 시종들이다. 이 기괴한 여인과 마주 친다는 것은 매우 목숨이 위태로운 일이다. 왜냐하면 당신은 침입자이기 때문이다!</string>
+    <string name="SpiderQueen_DieInfo">거미 여왕이 쓰러졌다! 이제 5층으로 돌아가 심연으로의 여행을 계속해야겠다.</string>
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">거미 여왕</string>
     <string name="SpiderQueen_Name_Objective">거미 여왕</string>
@@ -1945,14 +2109,17 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="SpiderServant_Name">거미 병사</string>
     <string name="SpiderServant_Name_Objective">거미 병사</string>
     <string name="Spinner_Desc">이 초록색 털복숭이 동굴 거미는 직접 전투를 꺼려 하는 대신, 녀석의 희생자가 독에 물린채 녀석이 뿜어 놓은 거미줄에 걸려 서서히 죽어가는 것을 멀리서 지켜보는 걸 좋아한다.</string>
+    <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name">동굴 거미</string>
     <string name="Spinner_Name_Objective">동굴 거미</string>
     <string name="SpiritOfPain_Desc">살아있는 어둠의 조각이다.</string>
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">고통의 영혼</string>
     <string name="SpiritOfPain_Name_Objective">고통의 영혼</string>
+    <string name="Sprout_Info">잠자고 있는 씨앗을 깨웁니다.\n그러나 주변에 풀잎이 있어야 마법이 성공합니다。</string>
     <string name="Sprout_Name">새싹</string>
     <string name="StartScene_ChooseFromSlot">저장 슬롯에서 선택</string>
+    <string name="StartScene_ComingSoon">Coming soon</string>
     <string name="StartScene_ContinueLatest">최신 게임을 계속하거나 저장 슬롯에서 선택하세요</string>
     <string name="StartScene_Depth">진행 깊이: %1$d\n층 수: %2$d</string>
     <string name="StartScene_DifficultyEasy">쉬움(광고)</string>
@@ -1976,13 +2143,17 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="StartScene_WinGame">\&quot;도전\&quot;을 해제하려면, 아무 직업으로 게임을 클리어 하세요.</string>
     <string name="StartScene_Yes">네, 새로운 게임 시작</string>
     <string name="Statue_Desc">당신은 이 조각상을 던전에 있는 못생긴 여느 조각상과 다를바 없다고 생각 할 수도 있겠지만, 붉게 빛나는 눈이 그런 생각을 사라지게 합니다. 조각상 자체는 돌로 만들어져 있지만, 착용한  _%s_는 진짜 같습니다.</string>
+    <string name="Statue_Gender">masculine</string>
     <string name="Statue_Name">살아있는 조각상</string>
     <string name="Statue_Name_Objective">살아있는 조각상</string>
     <string name="Stench_Txt">악취의 %s</string>
     <string name="StoneBloodBuff_Info">피가 돌로 변하여 주변 벽과 융합되어 지나가기 쉽게 만들지만, 과연 어떤 대가를 치러야 할까.</string>
     <string name="StoneBloodBuff_Name">혈석</string>
     <string name="Str_lose">-1 힘</string>
+    <string name="StrongShield_desc">Perisai kuat.</string>
     <string name="StrongShield_name">청동 도금 방패</string>
+    <string name="StunBuff_Info">スタン！</string>
+    <string name="StunBuff_Name">Pengertian</string>
     <string name="Stylus_ACInscribe">룬을 새기다</string>
     <string name="Stylus_Info">이 신비한 바늘은 어두운 색의 단단한 돌로 만들어졌습니다. 이 바늘을 사용하여 방어구나 두루마리에 마법 상형문자를 새길 수 있습니다만, 어떠한 상형문자가 새겨지는지 알 수 없으며 오직 바늘이 새기는 대로 결정됩니다.</string>
     <string name="Stylus_Inscribed">%2$s 에 %1$s 상형문자가 새겨졌습니다.</string>
@@ -1993,6 +2164,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Succubus_Name">서큐버스</string>
     <string name="Succubus_Name_Objective">서큐버스</string>
     <string name="SummonBeast_AtYourCommand">명령대로!</string>
+    <string name="SummonBeast_Info">Attempt to summon a horde of mighty beasts to your command.\nActual results may vary.</string>
     <string name="SummonBeast_Name">야수 소환</string>
     <string name="SummonDeathling_Info">언데드 동료를 소환합니다. 데슬링의 체력과 피해량은 영웅 레벨에 따라 성장합니다. \n\n 소환 최대량: %1$d ( 매 마법 레벨마다 +1)</string>
     <string name="SummonDeathling_Name">데슬링 소환</string>
@@ -2020,6 +2192,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">이 던지는 도끼는 무겁진 않지만 사용하는데 꽤 많은 힘이 필요하다.</string>
     <string name="Tamahawk_Name">토마호크</string>
+    <string name="TenguLiver_Info">Hati Tengu.</string>
     <string name="TenguLiver_Name">텐구 간</string>
     <string name="Tengu_Desc">텐구는 고대 암살단의 일원이다. 이들 암살자는 수리검과 함정을 다루는 데 능하다.</string>
     <string name="Tengu_Gender">masculine</string>
@@ -2056,11 +2229,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Torch_Info">이건 어두침침한 악마의 회랑 에서는 필수적인 아이템입니다.</string>
     <string name="Torch_Info2">던전의 조명이 열악하다면  반드시 필요할 물건입니다.</string>
     <string name="Torch_Name">횃불</string>
+    <string name="ToughShield_desc">가죽 끈으로 보강된 이 방패는 나무 방패보다 단단해 보입니다. 확실히 더 많은 피해를 막을 수 있습니다.</string>
     <string name="ToughShield_name">가죽 강화 방패</string>
     <string name="TownGuardNPC_Desc">평범한 마을 경비병입니다.</string>
     <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">비켜주세요.</string>
     <string name="TownGuardNPC_Message2">당신같은 모험가들에게 감사합니다. 여기는 정말 평화로워 졌어요.</string>
+    <string name="TownGuardNPC_Message3">Tidak ada yang masuk.</string>
     <string name="TownGuardNPC_Name">마을 경비병</string>
     <string name="TownGuardNPC_Name_Objective">마을 경비병</string>
     <string name="TownPortal_Info">이 주문을 사용하면 즉시 안전한 곳으로 돌아갈 수 있습니다. 하지만 강력한 마법 원천이 근처에 있으면 의도한 대로 작동하지 않을 수 있습니다.</string>
@@ -2075,6 +2250,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="TownsfolkMovieNPC_Name">주민</string>
     <string name="TownsfolkMovieNPC_Name_Objective">주민</string>
     <string name="TownsfolkNPC_Desc">현지인들 중 한명입니다. 확실히 일반인이라고는 해도, 옷들은 비싸 보입니다.</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">아! 또다른 모험가네요, 멋지시네요! 최대한 많은 가치있는 물건들을 가지세요!</string>
     <string name="TownsfolkNPC_Message2">마을이 던전 덕분에 부유해졌고, 마을의 모든 사람들이 만족할만한 곳이면 어디든지 갈 수 있게 되었기 때문에 이곳의 사람들은 지금 조금밖에 없어요.</string>
     <string name="TownsfolkNPC_Message3">정말 좋은 날이네요.</string>
@@ -2200,6 +2376,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Wand_Wood_Types_7">마호가니</string>
     <string name="Wand_Wood_Types_8">대나무</string>
     <string name="Wand_Wood_Types_9">베니어재</string>
+    <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">몇몇 생물들은 이 납과 철로 우뚝솓아있는 무게감있는 타격을 버틸 수 있겠지만, 강인한 모험가는 이걸 효과적으로 사용할 수 있다.</string>
     <string name="WarHammer_Name">워 해머</string>
     <string name="Warlock_Desc">드워프들의 관심이 기술에서 비밀스런 마법으로 옮겨갔을 때, 흑마법사들이 도시에서 힘을 얻기 시작했습니다. 그들은 원소 마법으로 시작했지만, 얼마 지나지 않아 악마술과 사령술에 손을 뻗었습니다.</string>
@@ -2221,6 +2398,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WaterOfHealth_Info">좋은 물에서 힘의 원천이 나옵니다. 상처를 치유하고 굶주림을 채우기 위해 거기서 한모금 가져가세요.</string>
     <string name="WaterOfHealth_Procced">한 모금 마시자, 당신의 모든 상처가 완전히 회복되는 것을 느낍니다.</string>
     <string name="WaterOfTransmutation_Info">변화의 힘이 우물에서 흘러나옵니다. 뭔가를 그 안으로 던져넣어 보세요.</string>
+    <string name="WeaknessBuff_Info">Kekuatan berkurang.</string>
     <string name="WeaknessBuff_Name">쇠약해짐</string>
     <string name="Weapon_Identify">당신은 이제 %1$s 에 충분히 익숙해졌기 때문에 그 정체를 알게 되었습니다. 이것은 %2$s 입니다. </string>
     <string name="Weapon_Incompatible">서로 다른 종류의 마법들이 작용하여 무기에 부여된 마법이 지워져 버렸다!</string>
@@ -2273,6 +2451,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     -- 몹들을 위한 발광 효과\n
     - 버그 수정\n
     </string>
+    <string name="Welcome_Text_32_1">\nremix.32.1\n- Gameplay:\n-- Plague Doctor quest line\n-- Mob carcasses now somewhat usable items\n-- Better pets control\n- UX:\n-- Improved save-game management\n- Modding:\n-- Local mod installation methods\n-- Custom items now can perform actions while being in heaps\n- Bugs fixed\n</string>
     <string name="Welcome_Title">환영합니다!</string>
     <string name="WindGust_Info">돌풍을 일으켜 선택한 캐릭터를 밀쳐냅니다.</string>
     <string name="WindGust_Name">돌풍</string>
@@ -2295,9 +2474,13 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndCryptoDonate_ethereum">이더리움</string>
     <string name="WndCryptoDonate_infoText">아래 주소로 암호화폐를 보내 Remixed Dungeon 개발을 후원할 수 있습니다. 성의 있는 후원에 감사드립니다!</string>
     <string name="WndCryptoDonate_openWallet">지갑 열기</string>
+    <string name="WndCryptoDonate_supportDev">Dukung pengembang</string>
+    <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">지갑 주소</string>
-    <string name="WndCryptoDonate_warningText">경고: 자금을 보내기 전에 항상 주소를 확인하십시오. 암호화폐 거래는 되돌릴 수 없습니다!</string>
+    <string name="WndCryptoDonate_warningText">경고: 자금을 보내기 전에 주소를 항상 확인하세요. 암호화폐 거래는 되돌릴 수 없습니다!</string>
     <string name="WndCustomizations_Title">커스터마이징</string>
+    <string name="WndDonate_commonDonateText">Dukung pengembangan game ini!</string>
     <string name="WndDonate_donate">기부하세요:</string>
     <string name="WndDonate_gold">금화</string>
     <string name="WndDonate_goldDonate">금 기부</string>
@@ -2318,6 +2501,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndDonate_silverDonateText2">또한 모든 게임 모드에서 광고를 없애주며, 처음부터 사냥꾼을 해금합니다.</string>
     <string name="WndDontLikeAds_NotThisTime">지금은 아니다</string>
     <string name="WndError_Title">오류</string>
+    <string name="WndFortuneTeller_IdentifyAll">모두</string>
     <string name="WndFortuneTeller_Instruction">나는 당신이 고른 아이템에 얽힌 비밀을 밝혀낼 수 있어요. 한번의 식별은 %d만큼의 당신의 금화가 필요해요.</string>
     <string name="WndFortuneTeller_No_Item">신중하게, 당신은 아무것도 아닌 것에 돈을 낭비하고 싶지는 않을 거예요. 그렇죠? 당신의 가방에는 식별되지 않은 아이템이 없어요.</string>
     <string name="WndFortuneTeller_Title">예언가</string>
@@ -2341,6 +2525,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndHats_SlotTitle">착용됨</string>
     <string name="WndHats_UnequipButton">벗기</string>
     <string name="WndHero_AttackSkill">공격 기술</string>
+    <string name="WndHero_Awareness">Awareness</string>
     <string name="WndHero_Buffs">버프</string>
     <string name="WndHero_DefenceSkill">방어 스킬</string>
     <string name="WndHero_Depth">최대 깊이</string>
@@ -2373,6 +2558,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndInstallingMod_copying_file">%s을(를) Remixed Dungeon 저장소로 복사 중</string>
     <string name="WndInstallingMod_deleting_file">삭제 중 %s</string>
     <string name="WndInstallingMod_please_wait">모드 설치 중, 기다려 주세요...</string>
+    <string name="WndInstallingMod_skipping_file">Melewatkan file.</string>
     <string name="WndItemAlchemy_ExecuteRecipe">레시피 실행</string>
     <string name="WndItemAlchemy_NoRecipes">이 아이템과 현재 인벤토리로 사용 가능한 레시피가 없습니다.</string>
     <string name="WndItemAlchemy_SelectRecipe">레시피 선택</string>
@@ -2387,9 +2573,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndLibrary_Items_Btn">아이템</string>
     <string name="WndLibrary_Levels_Btn">던전</string>
     <string name="WndLibrary_Mobs_Btn">몬스터</string>
-    <string name="WndLocalModInstall_pick">모드 디렉토리 선택</string>
+    <string name="WndLocalModInstall_pick">선택</string>
     <string name="WndLocalModInstall_text">모드를 설치할 디렉토리를 선택하세요.</string>
+    <string name="WndLocalModInstall_title">Instal Mod Lokal</string>
     <string name="WndModInstall_InstallingMod">모드 설치 중</string>
+    <string name="WndModInstall_PleaseUpdate">이 모드를 설치하기 전에 Remixed Dungeon을 업데이트해 주세요</string>
+    <string name="WndModInstall_Version">Versi</string>
     <string name="WndModSelect_AreYouSure">모드 삭제 중: %s, 정말 삭제하시겠습니까?</string>
     <string name="WndModSelect_ReallyDelete">정말로 삭제하시겠습니까?</string>
     <string name="WndModsDisclaimer_install">로컬 모드 설치</string>
@@ -2512,6 +2701,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndStory_Prision">몇 년 전 위험한 범죄자들을 가두기 위해 지하감옥이 여기에 세워졌습니다. 이곳은 매우 탈출하기 어려웠기때문에 당시에는 좋은 생각처럼 보였습니다. 그러나 곧 어두운 독기가 간수와 죄수들에게 침투해 그들이 미치기 시작했습니다. 결국 일부 죄수가 남아있었지만 지하감옥은 버려졌습니다.</string>
     <string name="WndStory_Sewers">던전은 도시 아래 위치하고 있습니다. 실제로 상위 레벨은 도시의 하수 시스템이 구성되어 있습니다. 명목상 도시의 일부이기 때문에 이 수준은 위험하지 않습니다. 아무도 이곳을 안전하게 요청하지 않았기 때문에 당신은 여기에 모든 사악한 마법을 전부 처리 할 필요는 없습니다.</string>
     <string name="WndStory_Spiders">오래 전, 마법의 돌로 가득 찬 풍족한 광산이 있었씁니다. 그러나 광맥이 말라버리자 광부들은 넓은 터널 망을 남긴 채 사라졌습니다. 결국 이 장소는 거미들이 차지하게 되었습니다, 그러나저러한 위험한 생물체들이, 광산의 보물들을 찾으려는 용감하고 미친 사람들을 내쫓기에는 충분하지 않았습니다. 위험의 정도는 항상 마법 유물들에 관한 소문에 비례하였다. 옛날 옛적에 사악한 마녀가 검찰관으로부터 도망치기 위해 이 터널로 들어왔는데, 미신을 믿는 사람들이 어둠 속으로 들어가질 못했고 그들은 기다리기로 했다. 그러나 마녀는 절대 나타나지 않았다. 어쩌면 마녀는 다른 출구를 찾았을 수도 있고, 경비 몰래 지나갔을 수도 있겠지만, 어둠의 생명체들의 바스락거리는 소리에 둘러쌓인 채 죽었을 수도 있다.</string>
+    <string name="WndTilesKind_ClassicLook">Tampilan klasik</string>
     <string name="WndTilesKind_NewLook">새로운 모양</string>
     <string name="WndTilesKind_Title">그건 그렇고:</string>
     <string name="WndTilesKind_text">당신은 이제 뒤틀린 마법에 사로잡힌 던전에 들어가려 합니다. 그러나 당신은 그것을 어떻게 볼지 선택할 수 있습니다:\n현대적인 유사 3D 와 고전적인 평면 보기 중 무엇을 원하십니까?\n나중에 게임 옵션 메뉴에서 변경할 수 있습니다.</string>
@@ -2534,6 +2724,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Wnd_Button_Cancel">취소하기</string>
     <string name="Wnd_Button_Close">닫기</string>
     <string name="Wnd_Button_No">아니요</string>
+    <string name="Wnd_Button_Ok">OK</string>
     <string name="Wnd_Button_Yes">네</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">이 간단한 나무활은 화살을 가지고 있다면 어느정도 쓸만할 것입니다.</string>
@@ -2549,9 +2740,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Worm_Name_Objective">애벌래</string>
     <string name="Wraith_Defense">회피</string>
     <string name="Wraith_Desc">그들의 묘지의 유령들은 복수심에 불타는 죄인의 영혼이다. 영체로 이루어져 있기 때문에 일반 무기로 맞추기가 매우 어렵다.</string>
+    <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">유령</string>
     <string name="Wraith_Name_Objective">유령</string>
     <string name="WrnExperimental_hint">이 이상하고 뒤틀린 세계가 너무 가혹하다면 시작 화면-&gt; 설정-&gt; 게임플레이 메뉴에서 해당 옵션을 비활성화하고 새 게임을 시작하거나 다른 저장 파일을 불러오세요.</string>
+    <string name="WrnExperimental_moveTimeout">Pengatur waktu gerakan habis.</string>
     <string name="WrnExperimental_realtime">실시간 모드 활성화됨: 이제 이 게임은 실시간으로 진행됩니다. 빠르게 조작하지 않으면 죽습니다.\n인벤토리를 확인하시겠습니까?\n하수도 게으름이 당신의 속을 뒤지는 동안 그렇게 하려는 것은 운 좋게 여겨지지 않습니다.</string>
     <string name="WrnExperimental_title">실험 옵션이 활성화되었습니다!</string>
     <string name="Yog_Desc">요그-제바는 혼돈의 왕국의 강력한 고대의 신이다. 한 세기 전, 고대 드워프들은 악마의 군대와 싸워 간신히 이겼지만, 신을 죽이지 못했다. 그 대신, 그들은 자신들의 도시 아래에 있는 홀에 이 신을 가두고는, 그가 다시는 일어서지 못할 정도로 약해지기를 바랬다.</string>
@@ -2573,6 +2766,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="YogsHeart_Name">요그의 심장</string>
     <string name="YogsHeart_Name_Objective">요그의 심장</string>
     <string name="YogsTeeth_Desc">날카로운 이빨로 가득 찬  고대신의 거대한 입입니다. 그의 모든 것을 파괴하고 포식하고자 하는 욕구의 상징입니다.</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">요그의 이빨</string>
     <string name="YogsTeeth_Name_Objective">요그의 이빨</string>
     <string name="ZombieGnoll_Desc">좀비 놀의 뒤틀리고 부숴진 몸은 더 이상 사람으로도, 하이에나로도 보이지 않는다. 죽이고 먹고 싶어하는 잔혹한 충동으로 가득 찬 썩은 살과 뼈의 더미일 뿐이다.</string>
@@ -2598,6 +2792,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_armoronhanger_desc">여러 방어구가 벽에 걸려 있다.</string>
     <string name="town_deco_armoronhanger_name">방어구</string>
     <string name="town_deco_armorstand_leather_desc">던전에 들어가기 전에 신뢰할 수 있는 가죽 갑옷을 구입하는 것은 훌륭한 선택이 될 것이다.</string>
+    <string name="town_deco_armorstand_leather_name">Tempat senjata kulit</string>
     <string name="town_deco_armorstand_plate_desc">상인에 따르면, 이 무거운 판금 갑옷은 한때 위대한 전사의 것이었다고 합니다.</string>
     <string name="town_deco_armorstand_plate_name">판금 갑옷</string>
     <string name="town_deco_armorstand_scale_desc">이 비늘 갑옷의 도금된 판금은 완전히 새것처럼 보입니다.</string>
@@ -2608,6 +2803,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_barrel_name">배럴 통</string>
     <string name="town_deco_barrel_wine_desc">와인 같은 귀중한 음료를 보관하는 데 사용된다.</string>
     <string name="town_deco_barrel_wine_name">와인통</string>
+    <string name="town_deco_beige_carpet_desc">Permaidana coklat muda kasar</string>
     <string name="town_deco_beige_carpet_name">카펫</string>
     <string name="town_deco_bell_desc">오랫동안 아무도 치지 않아 보이는 전형적인 교회의  종으로, 줄이 어디에도 봉이지 않습니다.</string>
     <string name="town_deco_bell_name">종</string>
@@ -2621,9 +2817,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_broken_roof_name">부숴진 지붕</string>
     <string name="town_deco_broken_wall_desc">이 벽에 있는 나무는 썩은 지 오래되었고, 원래의 활력을 잃었다.</string>
     <string name="town_deco_broken_wall_name">부숴진 벽</string>
+    <string name="town_deco_brown_carpet_desc">이 갈색 카펫은 많은 모험가, 방랑자, 그리고 지나가는 행인들의 발아래에 밟혀 왔다.</string>
     <string name="town_deco_brown_carpet_name">카펫</string>
     <string name="town_deco_cabinet_desc">여러 개의 문과 선반이 달린 넓은 수납장입니다.</string>
     <string name="town_deco_cabinet_name">캐비닛</string>
+    <string name="town_deco_canvas_desc">벽에 걸린 두꺼운 천 조각.</string>
     <string name="town_deco_canvas_name">캔버스</string>
     <string name="town_deco_carpet_desc">특별한 손님들을 위한 호화스러운 레드 카펫이 깔려 있다.</string>
     <string name="town_deco_carpet_name">카펫</string>
@@ -2637,6 +2835,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_church_sign_name">교회 표지판</string>
     <string name="town_deco_cinema_sign_desc">이 안에 영화관이 있는 것 같다.</string>
     <string name="town_deco_cinema_sign_name">영화관 표지판</string>
+    <string name="town_deco_clock_desc">Jam tua yang berkarat.</string>
     <string name="town_deco_clock_name">시계</string>
     <string name="town_deco_common_bed_desc">평범한 침대</string>
     <string name="town_deco_common_bed_name">침대</string>
@@ -2650,9 +2849,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_crate_bottles_name">맥주 상자</string>
     <string name="town_deco_crate_desc">비밀을 품은 단단한 나무 상자.</string>
     <string name="town_deco_crate_name">상자</string>
+    <string name="town_deco_crate_scrolls_desc">Peti dengan gulungan</string>
     <string name="town_deco_crate_scrolls_name">스크롤이 든 상자</string>
     <string name="town_deco_cross_desc">토착 종교 \&quot;심연의 군주 산타의 증인들\&quot;의 상징인 은 십자가입니다. </string>
     <string name="town_deco_cross_name">십자가</string>
+    <string name="town_deco_crossroad_desc">Persimpangan jalan.</string>
+    <string name="town_deco_crossroad_name">Persimpangan</string>
     <string name="town_deco_curtains_desc">필요 없는 빛을 모두 차단하고 훌륭한 장식의 역할도 한다.</string>
     <string name="town_deco_curtains_name">커튼</string>
     <string name="town_deco_door_desc">평범힌 나무 문이다.</string>
@@ -2660,14 +2862,19 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_dungeon_door_desc">던전의 입구</string>
     <string name="town_deco_dungeon_door_name">입구</string>
     <string name="town_deco_emptyboard_desc">물건을 진열하기 위한 가장 표준적인 선반입니다.</string>
+    <string name="town_deco_emptyboard_name">Papan kosong</string>
     <string name="town_deco_entrance_desc">이 입구는 던전의 다음 층으로 이어집니다.</string>
     <string name="town_deco_entrance_name">입구</string>
+    <string name="town_deco_exit_desc">이 계단을 내려가면 무엇이 기다리고 있는지 알 수 없습니다.</string>
     <string name="town_deco_exit_name">출구</string>
     <string name="town_deco_fence_desc">눈이 쌓인 나무 울타리입니다.</string>
     <string name="town_deco_fence_name">울타리</string>
+    <string name="town_deco_filmtape_desc">Interesting what does this piece contain.</string>
     <string name="town_deco_filmtape_name">필름</string>
     <string name="town_deco_fireplace_desc">이렇게 추운 곳에서 몸을 데우기에 좋다.</string>
+    <string name="town_deco_fireplace_name">벽난로</string>
     <string name="town_deco_firewood_desc">이렇게 심한 추위에서 필수적인 것.</string>
+    <string name="town_deco_firewood_name">Tűzifa</string>
     <string name="town_deco_floor_desc">간단판 나무판으로 이루어진 바닥입니다. 무엇을 찾으시나요?</string>
     <string name="town_deco_floor_name">바닥</string>
     <string name="town_deco_flowerinthepot_desc">달콤한 향이 나는 장식용 꽃</string>
@@ -2681,13 +2888,17 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_grandclock_desc">꽤 낡았지만 아직 잘 작동하고 있다.</string>
     <string name="town_deco_grandclock_name">큰 시계</string>
     <string name="town_deco_grave_desc">풍화되어 깎여나간 평범한 묘비석이다.</string>
+    <string name="town_deco_grave_name">Nisan</string>
     <string name="town_deco_hay_desc">향긋한 건초 더미입니다.</string>
     <string name="town_deco_hay_name">건초</string>
     <string name="town_deco_identifier_sign_desc">이 안에 예언가가 있는 것 같다.</string>
     <string name="town_deco_identifier_sign_name">마법의 종 표지판</string>
     <string name="town_deco_inn_bed_desc">매우 편안해 보이는 침대다.</string>
     <string name="town_deco_inn_bed_name">침대</string>
+    <string name="town_deco_ladder_desc">Tangga kayu.</string>
+    <string name="town_deco_ladder_name">Tangga</string>
     <string name="town_deco_library_books_desc">던전의 책들보다 여전히 낫다.</string>
+    <string name="town_deco_library_books_name">Rak buku</string>
     <string name="town_deco_library_sign_desc">이 안에 도서관이 있는 것 같다.</string>
     <string name="town_deco_library_sign_name">도서관 표지판</string>
     <string name="town_deco_locked_door_desc">저 문 뒤에는 어떤 세계가 있을까요?</string>
@@ -2696,9 +2907,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_magenta_carpet_name">카펫</string>
     <string name="town_deco_medicine_desc">플라스크와 의약재들은 이 선반에 조심스럽게 놓여야 합니다.</string>
     <string name="town_deco_medicine_name">약</string>
+    <string name="town_deco_misc_desc">Perkakas berantakan.</string>
     <string name="town_deco_misc_name">쓰레기</string>
     <string name="town_deco_movies_door_desc">이 문은 특히 잘 만들어져 있습니다. 아마도 무언가 대단한 것과 이어져 있을 것 같습니다.</string>
     <string name="town_deco_movies_door_name">문</string>
+    <string name="town_deco_mud_desc">Terreno scongelandosi in questa zona di permafrost.</string>
     <string name="town_deco_mud_name">진흙</string>
     <string name="town_deco_painting_desc">미려한 그림 한 폭이다.</string>
     <string name="town_deco_painting_name">그림</string>
@@ -2708,6 +2921,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_pedestal_name">받침대</string>
     <string name="town_deco_pillar_desc">예전에는, 이 기둥은 지탱과 장식으로서의 역할 모두를 톡톡히 수행했었다.</string>
     <string name="town_deco_pillar_name">기둥</string>
+    <string name="town_deco_pole_desc">밧줄을 감을 높은 기둥입니다.</string>
     <string name="town_deco_pole_name">기둥</string>
     <string name="town_deco_porch_desc">나무 마루</string>
     <string name="town_deco_porch_name">마루</string>
@@ -2716,27 +2930,38 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_potions_desc">여러 물약이 찬장에 진열되어 있다.</string>
     <string name="town_deco_potions_name">물약</string>
     <string name="town_deco_projector_desc">영화를 상영하여 사람들을 즐겁게 해주는 낡은 장치이다.</string>
+    <string name="town_deco_projector_name">영화 프로젝터</string>
     <string name="town_deco_red_carpet_desc">소문에 따르면 비슷한 붉은 카펫이 드워프 대도시의 전당을 장식하고 있다고 합니다.</string>
     <string name="town_deco_red_carpet_name">카펫</string>
     <string name="town_deco_roof_desc">단순한 타일 지붕이다.</string>
     <string name="town_deco_roof_name">지붕</string>
     <string name="town_deco_rope_desc">수작업으로 비벼 만든 밧줄입니다.</string>
     <string name="town_deco_rope_name">밧줄</string>
+    <string name="town_deco_rug_desc">Karpet lusuh.</string>
+    <string name="town_deco_rug_name">카arpet</string>
     <string name="town_deco_screen_desc">이 불가사의한 캔버스는 스크린이라고 불리며, 움직이는 사진들을 보여줄 수 있다.</string>
     <string name="town_deco_screen_name">스크린</string>
     <string name="town_deco_scrolls_desc">이 먼지로 뒤덮인 책장은 여러 종류의 스크롤과 책들로 채워져있다.</string>
     <string name="town_deco_scrolls_name">두루마리</string>
     <string name="town_deco_shelf_desc">빈 선반</string>
+    <string name="town_deco_shelf_full_desc">다양한 소품들이 이 선반에 놓여 있다.</string>
+    <string name="town_deco_shelf_full_name">Rak penuh</string>
     <string name="town_deco_shelf_name">선반</string>
     <string name="town_deco_shelving_desc">다양한 음료와 스낵을 찾을 수 있는 선반이 있는 인상적인 크기의 선반입니다.</string>
+    <string name="town_deco_shelving_name">Rak</string>
     <string name="town_deco_shieldboard_desc">여러 방패가 벽에 걸려 있다. 아직 판매하지는 않는 듯하다.</string>
     <string name="town_deco_shieldboard_name">방패</string>
     <string name="town_deco_shop_sign_desc">이 건물 안에는 상점이 있는 것 같다.</string>
     <string name="town_deco_shop_sign_name">상점 표지판</string>
     <string name="town_deco_skullboard_desc">이 두개골은 예상치 못한 공포의 순간을 완벽하게 담아냈다.</string>
     <string name="town_deco_skullboard_name">트로피 진열대</string>
+    <string name="town_deco_skulls_desc">광물에서 온 생물들의 연마된 두개골.</string>
+    <string name="town_deco_skulls_name">Tengkorak</string>
+    <string name="town_deco_slush_desc">Salju ini mula meleleh, mengubah tempat di sekelilingnya menjadi bubur.</string>
+    <string name="town_deco_slush_name">흐물</string>
     <string name="town_deco_snow_desc">모험가들에 대한 이곳의 저명함에도 불구하고, 마치 어떤 외부인도 발을 들이지 않은 것처럼 많은 눈이 쌓여 있다.</string>
     <string name="town_deco_snow_name">눈</string>
+    <string name="town_deco_snowdrift_desc">상당히 큰 snow pile이고 아무도 청소하려는 것 같지 않습니다.</string>
     <string name="town_deco_snowdrift_name">눈더미</string>
     <string name="town_deco_snowman_desc">눈사람은 몬스터들이 던전을 침략한 날인 \&quot;던전마스\&quot;를 기념하기 위한 마을의 전통적인 장식물이다.</string>
     <string name="town_deco_snowman_name">눈사람</string>
@@ -2745,6 +2970,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_sofa_desc">이 영화관은 고객에게 최고의 자리를 제공하려고 시도한것 같습니다</string>
     <string name="town_deco_sofa_name">멋진 소파</string>
     <string name="town_deco_stakes_desc">이 뾰족해진 통나무들은 무시무시한 위용을 뽐내고 있지만 그 자체로는 별로 쓸모가 없습니다.</string>
+    <string name="town_deco_stakes_name">Stakes</string>
     <string name="town_deco_statue_blood_desc">피가 담긴 그릇을 든 천사의 위대한 조각상입니다.</string>
     <string name="town_deco_statue_blood_name">천사 상</string>
     <string name="town_deco_statue_water_desc">물을 담은 그릇을 든 천사의 위대한 조각상입니다.</string>
@@ -2755,6 +2981,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_stone_wall_broken_name">부숴진 벽</string>
     <string name="town_deco_stone_wall_desc">어떻게든 이 벽은 열을 방출하고 살짝 젖어 있다.</string>
     <string name="town_deco_stone_wall_name">석재 벽</string>
+    <string name="town_deco_stones_desc">Batu-batu berserakan.</string>
     <string name="town_deco_stones_name">돌</string>
     <string name="town_deco_stool_broken_desc">이 의자는 더 좋은 날을 겪었었다.</string>
     <string name="town_deco_stool_broken_name">부서진 의자</string>
@@ -2770,8 +2997,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_tree_name">나무</string>
     <string name="town_deco_urn_desc">흙항아리, 아마도 누군가의 재가 들어있을 것이다.</string>
     <string name="town_deco_urn_name">항아리</string>
+    <string name="town_deco_vat_desc">이 돌 대야기는 성수로 가득 차 있습니다.</string>
     <string name="town_deco_vat_name">증류기</string>
+    <string name="town_deco_wall_beam_desc">Serves as a trusty support for this construction.</string>
+    <string name="town_deco_wall_beam_name">보트</string>
     <string name="town_deco_wall_brazier_desc">그을린 불씨에서 나오는 연기가 실내를 기분 좋은 향기로 가득 채운다.</string>
+    <string name="town_deco_wall_brazier_name">벽 브레이저</string>
     <string name="town_deco_wall_candles_desc">아직도 기분 좋은 아로마 향을 내고 있는 꺼진 양초이다.</string>
     <string name="town_deco_wall_candles_name">양초들</string>
     <string name="town_deco_wall_desc">통나무로 만들어진 간단한 벽이다.</string>
@@ -2792,13 +3023,271 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_wooden_bench_name">나무 의자</string>
     <string name="town_deco_wooden_chair_desc">이 의자는 나무로 만들어져 있다</string>
     <string name="town_deco_wooden_chair_name">나무 의자</string>
+    <string name="town_deco_wooden_drawer_desc">안에 무엇이 보관되어 있는지 흥미롭습니다.</string>
     <string name="town_deco_wooden_drawer_name">서랍</string>
+    <string name="town_deco_wooden_stairs_desc">Tangga kayu.</string>
     <string name="town_deco_wooden_stairs_name">계단</string>
     <string name="town_deco_wooden_table_desc">잘 만들어진 나무 탁자다.</string>
     <string name="town_deco_wooden_table_name">나무 탁자</string>
     <string name="town_table_fortune_ball_desc">신비로운 안개가 내부에 있는 수정 구슬입니다.</string>
+    <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,7 @@
 <resources>
     <string name="AC_Devour">吞噬</string>
+    <string name="AC_Dissect">解剖</string>
+    <string name="AC_Kick">踹</string>
     <string name="AC_Necromancy">死灵术</string>
     <string name="Abilities_Common">普通咒语</string>
     <string name="Abilities_Default">精通</string>
@@ -21,6 +23,7 @@
     <string name="Accuracy_DecreasedDoctor">这把%s的每次挥击都散播不完美。我的骨锯治愈……这个却感染。</string>
     <string name="Accuracy_DecreasedDoctorBareHands">赤手空拳会污染我的技术。没有锯子的干净切割，我的瞄准就会陷入混乱。</string>
     <string name="Acidic_Desc">这些巨大的节肢类恶魔生物会尽可能地避免近距离战斗，并且在远处射出能致残的锯齿尖刺。</string>
+    <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">酸蚀蝎子</string>
     <string name="Acidic_Name_Objective">酸蚀蝎子</string>
     <string name="Actions_Speed">行动速度等级</string>
@@ -31,6 +34,7 @@
     <string name="AirElemental_Name_Objective">风元素</string>
     <string name="AlarmTrap_Desc">这个陷阱发出的刺耳声音回荡在地牢中！</string>
     <string name="Albino_Desc">啮齿小鼠是极具侵略性却比较弱小的下水道居民，只有在拥有大量数量时才会造成威胁。这只特殊的老鼠看起来得了白化病，并且拥有异常尖利的牙齿。</string>
+    <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name">白化老鼠</string>
     <string name="Albino_Name_Objective">白化老鼠</string>
     <string name="AlchemyPot_SelectSeed">选择你要投掷的种子</string>
@@ -48,6 +52,7 @@
     <string name="AmokArrow_Name">狂乱箭</string>
     <string name="AmokBuff_Info">混乱在思绪中起舞，夺去那些不幸者的生命。</string>
     <string name="AmokBuff_Name">狂乱</string>
+    <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">这个飞镖尖端的诅咒将使任何生物变得无情、狂暴。</string>
     <string name="AmokDart_Name">疯狂飞镖</string>
     <string name="AmuletScene_Exit">让这一切结束吧</string>
@@ -56,6 +61,7 @@
     <string name="Amulet_ACEnd">结束游戏</string>
     <string name="Amulet_Info">Yendor护符是来自未知领域中最强大的且最著名的神器。据说它能够实现持有者的一切愿望，只要持有者具备足够的力量来“说服”它去做。</string>
     <string name="Amulet_Name">Yendor护符</string>
+    <string name="AnesthesiaBuff_Info"> Pain tidak dirasakan dan tidak akan terbangun daripada serangan, tetapi masih menerima kerosakan.</string>
     <string name="AnesthesiaBuff_Name">麻醉</string>
     <string name="Anesthesia_Cast">%s陷入了深沉无梦的睡眠。</string>
     <string name="Anesthesia_Info">使目标陷入深度且不自然的睡眠。即使最猛烈的攻击也无法将其从沉睡中唤醒。</string>
@@ -229,6 +235,7 @@
     <string name="Belongings_CantWearBoth">你不能同时装备%1$s和%2$s！</string>
     <string name="Belongings_Name">背包</string>
     <string name="BishopNPC_Desc">神圣大教堂主教、深渊领主——圣诞老人</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">主教</string>
     <string name="BishopNPC_Name_Objective">主教</string>
     <string name="Bishop_bye">我的孩子，我会为你祈祷。</string>
@@ -256,6 +263,7 @@
     <string name="BlackSkullOfMastery_Title">你可以解开咒语。 或者你可以某种方式操纵它的魔法公式，这将使你能够同时消耗法术和神器本身的力量，将自己变成巫妖。 </string>
     <string name="BlackSkull_Activated">黑色骷髅被唤醒了！</string>
     <string name="BlackSkull_Deactivated">黑色骷髅又一次沉睡了…</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">一块小巧的黑曜石头骨，它是整座亡灵之城的力量之源。虽然在巫妖被打败后它失去了所有力量，但当你将它握在手中时，你脑中浮现出了一个奇怪的念头：“它饿了”。</string>
     <string name="BlackSkull_Info_Awakened">这块头骨散发着魔法脉冲，你能看到魔力在它空洞的眼眶中流淌。当你将其握于手中，一个可怕的声音回荡在你脑中：“看哪，死亡的步伐在前进。”</string>
     <string name="BlackSkull_Name">漆黑头骨</string>
@@ -288,6 +296,7 @@
     <string name="BlindnessBuff_Info">你什么都看不见了，只能听见附近的声音</string>
     <string name="BlindnessBuff_Name">目盲</string>
     <string name="BloodTransfusion_Drained">宠物的生命精华流向了你。</string>
+    <string name="BloodTransfusion_FullHP">你的血液已经达到满容量了。</string>
     <string name="BloodTransfusion_Info">吸取目标几乎全部的血液来治疗自己。一个黑暗献祭与生存的仪式。</string>
     <string name="BloodTransfusion_Name">输血</string>
     <string name="BloodTransfusion_WontAgreed">目标抵抗生命精华的抽取。</string>
@@ -295,6 +304,7 @@
     <string name="BodyArmorBuff_Name">重甲</string>
     <string name="BodyArmorSpell_Info">激活身体的肌肉力量，使你暂时变强，从而增加你的护甲，但会减少移动速度。</string>
     <string name="BodyArmorSpell_Name">格挡</string>
+    <string name="BoneSaw_Info">一把精密的手术锯,专为快速解剖设计。随着瘟疫医生的技能提升,其伤害和攻击速度变得更加致命。暴击可以从敌人身上切下额外的可收获部分,并且对瘫痪的敌人效率极高。</string>
     <string name="BoneSaw_Name">骨锯</string>
     <string name="BoneShard_Info">从被击败敌人身上获取的锋利骨头碎片。这些碎片异常坚固，在制作中非常有用。</string>
     <string name="BoneShard_Name">骨片</string>
@@ -369,6 +379,7 @@
     <string name="Challenges_Descriptions_6">古代的符文阅读艺术是被禁止的，并不惜一切代价避免，因为进入地牢或周围环境的每一卷卷轴都会受到诅咒。</string>
     <string name="Challenges_Descriptions_7">你已经习惯了这样一个事实，即拥有和使用武器在道德上是不对的，但还有什么能保护你免受下面漫游的生物的伤害呢？</string>
     <string name="Challenges_Descriptions_8">你的旅程将从黑暗和危险的城镇下水道开始，通往地面的唯一途径将被封锁。 更糟糕的是，你只能使用你在地牢里找到的装备。 由于有限的资源和装备，你的生存将取决于你的技能和策略。</string>
+    <string name="Challenges_Descriptions_9">瘟疫医生的最新“疗法” scrubbed 你的空间记忆。你看不到的直接视线外的任何东西都记不住。</string>
     <string name="Challenges_Names_0">缩餐节食</string>
     <string name="Challenges_Names_1">信念护体</string>
     <string name="Challenges_Names_2">恐药病癖</string>
@@ -378,8 +389,10 @@
     <string name="Challenges_Names_6">禁忌符文</string>
     <string name="Challenges_Names_7">和平主义</string>
     <string name="Challenges_Names_8">没有城镇</string>
+    <string name="Challenges_Names_9">健忘症</string>
     <string name="ChampionOfAirBuff_Info">这种特质赋予生物风的本质，提高其敏捷性和战斗能力。风之冠军成为了一个强大的对手，有能力发动迅速而毁灭性的攻击，可以快速改变战斗的进程。</string>
     <string name="ChampionOfAirBuff_Name">风之冠军</string>
+    <string name="ChampionOfEarthBuff_Info">The Champion of Earth embodies unyielding strength, as this trait enhances the creature\'s damage resistance and increases its maximum vitality. This transformation makes it a daunting adversary in the treacherous depths, capable of shrugging off attacks with ease and enduring prolonged battles with unwavering resolve.</string>
     <string name="ChampionOfEarthBuff_Name">大地勇士</string>
     <string name="ChampionOfFireBuff_Info">“注入了火焰的狂暴，这一特质增强了生物的凶猛和战斗力。火焰冠军是一个可怕的对手，它能发动毁灭性的攻击，将敌人吞没在灼热的火焰中，让所有敢于对抗它的人感到恐惧。</string>
     <string name="ChampionOfFireBuff_Name">火焰君王</string>
@@ -413,6 +426,7 @@
     <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">与混沌之力融合的法杖，不就是众法师或敬或畏之物吗？</string>
     <string name="ChaosStaff_Name">混沌法杖</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">混乱为刃，力量蕴内。刀身发颤，砍山分洪，力无不逮。唯有强者，方能使用。</string>
     <string name="ChaosSword_Name">混沌剑</string>
     <string name="CharAction_Charm">魅惑</string>
@@ -560,6 +574,8 @@
     <string name="CorpseDust_Info">这团尸尘看起来和普通灰尘球差不多，但你能感觉到里面潜伏着一股恶意的魔力……最好尽快脱手。</string>
     <string name="CorpseDust_Info2">大概因为拿着它让你感到焦虑和愤怒。</string>
     <string name="CorpseDust_Name">尸尘</string>
+    <string name="CorpseExplosion_Info">将尸体转化为致命的毒气云，向所有附近的敌人传播疾病和毒素。</string>
+    <string name="CorpseExplosion_Name">爆炸尸体</string>
     <string name="CorpseExplosion_NoCorpse">那里没有尸体。</string>
     <string name="Crab_Defense">招架</string>
     <string name="Crab_Desc">这些巨型的螃蟹位居下水道食物链的顶端。它们行动极其迅速，并且厚重的甲壳能承受沉重的打击。</string>
@@ -638,12 +654,16 @@
     <string name="DieHardSpell_Info">会暂时增加你的回复速度，让你成为真正的死神。</string>
     <string name="DieHardSpell_Name">顽固</string>
     <string name="Displacement_Txt">位移%s</string>
+    <string name="DoctorArmor_Info">A testres hordozója segíthet a bántámás kisimításában, hogy az anyag gyógyuljon</string>
+    <string name="DoctorArmor_Name">医生的服装</string>
+    <string name="DoctorArmor_NotDoctor">Only plague doctors can use this armor!</string>
     <string name="DoctorSpecial">瘴氣雲</string>
     <string name="DogeMask_Info">你想伪装成著名的狗吗？现在是你的机会！\n这样的面具！伪装性很强！真的！</string>
     <string name="DogeMask_Name">柴犬面具</string>
     <string name="DonateButton_pleaseDonate">请考虑捐献</string>
     <string name="DonateButton_thanks">感谢你的支持</string>
     <string name="DreadKnight_Desc">恐惧骑士是一名从不恪守公正，也从不为善的古代战士。由于他所犯下的罪恶，他被诅咒永远囚禁在一副破损的亡灵尸体中。他受折磨的每一刻都充满了痛苦和折磨，就像他给受害者造成的一样。</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">恐惧骑士</string>
     <string name="DreadKnight_Name_Objective">恐惧骑士</string>
     <string name="Dreamweed_Desc">一旦接触到致幻草，它将隐秘地释放出一片闪光的混乱气体云。</string>
@@ -658,6 +678,7 @@
     <string name="Drink_ACDrink">饮用</string>
     <string name="Drink_Message">清爽的饮品！</string>
     <string name="DrunkardNPC_Desc">自然状态下的旅店常客。</string>
+    <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">醉汉</string>
     <string name="DrunkardNPC_Name_Objective">醉汉</string>
     <string name="Drunkard_Phrase_1">再上酒！</string>
@@ -775,6 +796,7 @@
     <string name="Food_ACEat">食用</string>
     <string name="Food_Message">这份食物吃起来异常地美味！</string>
     <string name="FortuneTellerNPC_Desc">此女身穿一袭色彩鲜艳的长袍。对于一位已精通算命奥术的算命家来说，她算是年少有为。你一步一步地靠近，隐约能听到她微声低语。然而，她只是目不转晴地盯着水晶球。</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">占卜师</string>
     <string name="FortuneTellerNPC_Name_Objective">占卜师</string>
     <string name="FreezeGlobe_Info">法力冻结所选生物，使其在短时间内无法执行任何操作。</string>
@@ -898,8 +920,10 @@
     <string name="HealerNPC_Name_Objective">城镇牧师</string>
     <string name="Healing_Info">这道咒语对任何冒险家都是至关重要的。它将恢复施法者最大生命值的1/3。</string>
     <string name="Healing_Name">治疗术</string>
+    <string name="HealthArrow_Gender">masculine</string>
     <string name="HealthArrow_Info">这支箭的箭尖上沾有治疗药水。</string>
     <string name="HealthArrow_Name">治疗箭</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">这个飞镖的镖尖上沾有治疗药水。</string>
     <string name="HealthDart_Name">治疗飞镖</string>
     <string name="Heap_Mimic">它是拟形怪！</string>
@@ -913,6 +937,7 @@
     <string name="Hedgehog_Info3">你喜欢用树莓果酱配茶吗？</string>
     <string name="Hedgehog_Info4">拿上这块派吧</string>
     <string name="Hedgehog_Name">刺猬</string>
+    <string name="HeroClass_Doctor">瘟疫医生</string>
     <string name="HeroClass_Elf">精灵</string>
     <string name="HeroClass_ElfPerks_0">精灵初始时只拥有15点生命值和9点力量。</string>
     <string name="HeroClass_ElfPerks_1">精灵免疫缠绕状态。</string>
@@ -1083,6 +1108,7 @@
     <string name="IncendiaryDart_Info">每个飞镖上的尖刺是用来将飞镖固定在目标上的，而不稳定的化合物则被固定在飞镖的长刃尖上，燃烧成明亮的火焰。</string>
     <string name="IncendiaryDart_Name">引燃飞镖</string>
     <string name="InnKeeperNPC_Desc">旅店老板为自己感到骄傲。</string>
+    <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">旅店老板</string>
     <string name="InnKeeperNPC_Name_Objective">旅店老板</string>
     <string name="InnServant_Phrase_1">还有好多事要做呢！</string>
@@ -1163,6 +1189,7 @@
     <string name="KoboldIcemancer_Name">蓝袍狗头人</string>
     <string name="KoboldIcemancer_Name_Objective">蓝袍狗头人</string>
     <string name="Kobold_Desc">狗头人被认为是一个传说。虽然它们和豺狼人有着同样的祖先，但是它们居住在冰霜洞穴中。同时它们也有很高的工程机械造诣。但没人知道为什么它们消失了这么多年……</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">狗头人</string>
     <string name="Kobold_Name_Objective">狗头人</string>
     <string name="KrampusHead_Info">你有想过扮演一个更邪恶的角色进行地牢探险会是什么感受吗？嗯，你这魔鬼般的外表肯定会给当地的幼鼠带来恐惧。</string>
@@ -1275,6 +1302,7 @@
     <string name="LloidsBeacon_Preventing">某种强大的魔力阻止了时空信标生效！</string>
     <string name="LloidsBeacon_Return">设置成功，现在你可以随时返回这儿了</string>
     <string name="LloidsBeacon_Set">\n\n这个传送信标被设置在混合地牢第 %d 层的某个地方。</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Info">擎天巨刃，击击铿锵，削铁如泥。</string>
     <string name="Longsword_Name">长剑</string>
     <string name="Luck_Name_0">幸运%s</string>
@@ -1328,6 +1356,7 @@
     <string name="MeleeWeapon_Info7b">，并且因为它被诅咒了，你无法将其放下。</string>
     <string name="MeleeWeapon_Info7c">你能感受到%s中潜伏着一股恶毒的魔力。</string>
     <string name="MercenaryNPC_Desc">看起来很健壮的男人</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">雇佣兵</string>
     <string name="MercenaryNPC_Name_Objective">雇佣兵</string>
     <string name="Metabolism_Txt">代谢%s</string>
@@ -1347,6 +1376,7 @@
     <string name="MindVisionBuff_Info">心灵的静笃，可观生物之行动。</string>
     <string name="MindVisionBuff_Name">灵视</string>
     <string name="MirrorImage_Desc">这个镜像与你十分相似，但是它更苍白，还有点抽搐。</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">镜像</string>
     <string name="MirrorImage_Name_Objective">镜像</string>
     <string name="MissileWeapon_Info1">\n这件武器平均每次攻击能造成 %d 点伤害。</string>
@@ -1414,6 +1444,7 @@
     <string name="NecromancerArmor_Name">骨甲</string>
     <string name="NecromancerArmor_NotNecromancer">只有死灵法师能使用这件护甲！</string>
     <string name="NecromancerNPC_Desc">这位中年男人看起来有点恼怒和激动。他穿着用骨片制成的混合甲。</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">啊！令人惊奇！一位活着的冒险者。太美妙了！哦……抱歉，有时候我太兴奋了。你看，我是一位死灵法师。研究死亡和死亡本身是我生活的一部分，但我已经对看到同样的事情一遍又一遍地发生而无聊了，这是我在这里的原因之一。而更重要的是，根据我的计算，这里会发生一件大事。一座古老城市_亡灵之城_的路口将在这里打开。而且……我说的这些实在是太浪费我的时间了。我必须为此准备，_ 晚点再来_。</string>
     <string name="NecromancerNPC_Intro2">啊哈！一个还没死的冒险者，棒极了！呃，请原谅，你看，本人是位死灵法师。研究死亡和死亡本身是我生活的一部分，但看到同样的事情一遍又一遍地发生实在是十分乏味，这是我在这里出现的原因之一。之前出现了一件惊人的事情，一座_亡灵之城_，死者们的古代城市，终于敞开了它的大门。事实上，我们正站在它的入口旁，还有……我告诉你这些干嘛，拿上这把钥匙先走。我是说，你喜欢冒险和金钱对吧？我会在你之后进去的，我还需要一点准备。</string>
     <string name="NecromancerNPC_Message1">就快了，就快了……</string>
@@ -1444,6 +1475,7 @@
     <string name="Nightcap_Info">在夜晚征服地牢想必是十分疲累的事。那为何不带上一顶温暖舒适的帽子好好休息一下，抛开自己的烦恼呢？</string>
     <string name="Nightcap_Name">睡帽</string>
     <string name="Nightmare_Desc">以肉质触手构成的怪诞造物。梦魇是古神危险思想的具象。</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name">梦魇</string>
     <string name="Nightmare_Name_Objective">梦魇</string>
     <string name="No_Valid_Cell">没有召唤的空间</string>
@@ -1470,6 +1502,7 @@
     <string name="Pickaxe_ACMine">挖矿</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">这确实是件巨大又可靠的掘石工具。应该也能当武器用。</string>
+    <string name="Pickaxe_InsufficientStr">力量不够挖掘！</string>
     <string name="Pickaxe_Name">铁镐</string>
     <string name="Pickaxe_NoVein">你周围没有暗金脉可挖</string>
     <string name="Pickaxe_NothingToMine">这里没什么可挖的！</string>
@@ -1477,6 +1510,7 @@
     <string name="Piercing_Name_1">穿刺%s</string>
     <string name="Piercing_Name_2">穿刺%s</string>
     <string name="Piranha_Desc">这些肉食性鱼类不是地下水池中的天然生物。它们被专门培育用来保护被水淹没的储藏室。</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">巨型食人鱼</string>
     <string name="Piranha_Name_Objective">巨型食人鱼</string>
     <string name="PirateSet_Info">啊哈！你现在看起来像是个海盗……还是说你只是一只该死的旱鸭子？！我希望你不是，毕竟那东西是海盗的，我的意思是……啊哈！</string>
@@ -1495,18 +1529,23 @@
     <string name="PlagueDoctorNPC_Quest_Reminder">给我 %d 张老鼠皮。</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿 %d 张老鼠皮，这样我就可以做一些额外的测试了。</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">呸！你信吗？那些白痴还没意识到这该死的下水道有多危险！像警卫和冒险家可以保护城市免除疾病吗！没有武器可以阻止疾病蔓延。但我需要证据，你能帮助我吗？给我拿 %d 张老鼠皮，这样我就可以做一些额外的测试了。</string>
+    <string name="PlagueDoctorQuest_1_1_Epilogue">啊，你回来了！_五只死老鼠_，太好了！它们的皮毛对我的研究至关重要。说到做到，为了你的英勇努力，我用它们的皮毛为你打造了这套盔甲。它带有瘟疫的气息，但别担心！这是受控的，它能保护你！现在去吧！保护城市！</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">给我带_五只死老鼠_来！你每给我带一只，我们就离理解这场可怕的瘟疫更近一步。</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">啊嚏！\n 诅咒这该死的可恶瘟疫！它像野火一样在城市中蔓延，在毫无戒心的百姓的骨头里溃烂！呸！你以为那些可悲的卫兵有机会对抗这种阴险的瘟疫吗？你，在那里！强壮、健康的样本。也许你能帮我。那些肮脏的下水道_老鼠_……它们携带着它，我告诉你，瘟疫的种子就在它们腐烂的小身体里！给我带_五_只那些可怜的生物来，当然是_死的_！它们的皮对我的研究将是非常宝贵的。我会为你制作一件奇妙的盔甲，一个抵御瘟疫本身的保护屏障！</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">啊……太棒了！那些_蜗牛_，它们的秘密如同月光下的花瓣般缓缓绽放。真是丰富的信息啊！但你说得对，_五十枚金币_确实算不上像样的报酬。*疯狂地轻笑*。</string>
+    <string name="PlagueDoctorQuest_1_2_InProgress">十只蜗牛，来自深渊的十声低语！它们的粘液将被分析，它们的本质将被仔细审视。它们所持有的秘密触手可及。</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Kuat batuk* Hapşoo!\n _Siput-siput_… mereka merayap. Mereka menetes. Dan mereka berbisik rahasia usia yang terlupakan. Aku butuh mereka, _sepuluh_ ekor, cangkangnya masih utuh. Apakah kamu pikir _lima puluh koin emas_ cukup untuk pengetahuan begitu berharga?\n Bah! Tidak apa-apa. Informasi yang mereka miliki bisa menjadi kunci untuk menghentikan wabah ini. Atau… bisa juga membawa kita pada sesuatu yang lebih mengerikan. Kamu yang tentukan.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_月光草_……它是编织在这个世界中的魔法的见证。我从它们的本质中学到了很多，但你的奖励……嗯，它已经被极其精心地准备好了。*递给英雄一瓶闪烁的_法力药水_* 愿它的力量指引你度过前方的危险。</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">寻找 _月光草_，那里黑暗与微弱的月光交相辉映。_两颗种子_，其精华，将揭示隐藏的秘密。</string>
+    <string name="PlagueDoctorQuest_2_1_Prologue">_月光草种子_……那些空灵的花朵，低语着月亮本身的魔法。我已经研究它们奇异的荧光几周了。它们精髓中蕴含着 potency，一种隐藏的能量，可能是……什么的钥匙。*用骨节分明的手指沉思地敲着下巴*\n但可惜，它们很稀有。只能在月光几乎无法穿透的最深处洞穴中找到。我需要两颗。两颗种子来解锁它们力量的秘密。作为回报，我可以给你一些东西……一种纯净、强效魔法的味道。一瓶_法力药水_，充满月光草的精髓。它将恢复你疲惫的灵魂，让你以更新的力量使用魔法。</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">太好了！_太阳草_，它的金色精华脉动着生命力。我已经从它精致的结构中学到了很多。*他递给你一瓶_治疗药水_，液体闪烁着微弱的金光。*当世界让你感到沉重时喝下它，感受阳光的温暖唤醒你的精神。</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_两颗太阳草_种子。它们的金色花瓣蕴含着我要理解的力量。找到它们，让它们的精华显现！</string>
+    <string name="PlagueDoctorQuest_2_2_Prologue">Ах, _sungrass_! Нежный цветок, его лепестки излучают тепло солнца. Я верю, что его суть содержит ключ к... ах, забудь конкретики на данный момент. Скажем так, он крайне важен для моих исследований. _Два семени sungrass_. Найди их для меня, и я награжу тебя чем-то, что определённо пригодится в твоих приключениях - _Зельем здоровья_, полным самой жизненной силы солнца.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Dengan lembut memeluk _kelelawar_ dengan tangan ber Sarung tangannya, memeriksa bentuk kecilnya dengan ketertarikan yang mengganggu* Luar biasa! Ekolokasi kelelawar... ini berbeda dari apa pun yang pernah saya temui. Akurasi seperti itu... begitu... kontrol. *Dia menoleh kepada Anda, wajahnya tertutup topeng* Untuk usaha Anda, sebuah _ gulungan Peningkatan_. Gunakan dengan bijak, karena itu memiliki potensi untuk... memurnikan esensi Anda. *Dia menyerahkan gulungan kepada Anda, suaranya turun menjadi bisikan* Kelelawar ini... itu adalah jendela ke dunia tersembunyi. Dunia... di mana bayangan menari dan rahasia berbisik.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">给我带一只_吸血鬼蝙蝠_，活着且完好无损！它的血液、它的翅膀……它们藏着我必须揭开的秘密！</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*他的眼睛闪烁着一种奇怪的、狂热的光芒* 啊，_吸血鬼蝙蝠_！夜之生物，以猎物的生命力为食。迷人……真迷人。我需要一个活的来研究它独特的生理结构。这一切都是为了……理解……理解……*他喃喃自语，说出一连串神秘的术语*。是的！_蝙蝠_的回声定位，它在完全黑暗中导航的能力……这是解开秘密的关键。</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*他仰头发出阵阵狂笑，声音在阴暗的实验室中回荡* 太棒了！一名_死亡骑士_站在我们面前！它身上散发出的力量……令人陶醉！*他转向你，眼中闪烁着狂热的光芒* 这是你应得的奖赏：一瓶_力量药水_！愿它赐予你战胜一切敌人的力量！现在……让我们来研究我们的实验对象。它的本质中隐藏着能够改写生命法则的秘密！*他带着疯狂的笑容走向_死亡骑士_，手中晃动着一瓶冒泡的绿色液体</string>
+    <string name="PlagueDoctorQuest_3_2_InProgress">这不仅仅是一只野兽！这是一座行走的死灵魔法力量的丰碑！活捉一只，毫发无伤！这个_死亡骑士_……它是关键！</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">_死亡骑士_！*他的声音因兴奋而颤抖，骷髅般的手指紧握着一个冒着泡的小瓶，里面装满了浑浊的磷光液体*。这样的生物……亡灵的象征！活捉一个……那将是……意义非凡。想象一下我们能揭开什么秘密！流淌在它骨骼血管中的力量！是的，_死亡骑士_！这对我的研究至关重要！因为它将使我们能够更深入地探索……生命……乃至死亡本身的奥秘！</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">太棒了！_矮人术士_们的精华现在归我研究了！如此扭曲、堕落的魔法……真是令人着迷。*他举起一个闪烁的瓶子，里面装着粘稠的深红色液体。*这是给你的：_力量药剂_！饮下它的力量，你将感受到如山般的力量在血管中流淌！记住，从这些牺牲中获得的知识最终将服务于更高的目的……甚至可能将我们从比死亡更可怕的命运中拯救出来。</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">五个_矮人术士_，他们的身体仍在脉动着黑暗魔法的微弱回响！为我取回它们，我将奖励你一瓶无与伦比的力量——一瓶_力量药水_，它将赋予你十人之力！</string>
@@ -1642,6 +1681,7 @@
     <string name="Quarterstaff_Name">铁头棍</string>
     <string name="QuickSlot_SelectSlot">更改快捷使用</string>
     <string name="QuickSlot_SelectedItem">选择一项物品放入快捷栏</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">这只皮制箭袋可以容纳任何数量的箭</string>
     <string name="Quiver_Name">箭袋</string>
     <string name="RabbitEars_Info">兔子通常以幸运著称，而它的运气也许会转移到获得它身体一个部位的人。可转念一想，兔子被杀掉并用来做你耳朵的装饰也谈不上特别地·幸运。</string>
@@ -1696,6 +1736,7 @@
     <string name="ResultDescriptions_Hunger">在第 %d 层饥饿致死</string>
     <string name="ResultDescriptions_Immured">在第 %d 层被囚禁于墙中</string>
     <string name="ResultDescriptions_Mob">在第 %2$d 层被%1$s杀死了</string>
+    <string name="ResultDescriptions_Necromancy">Depleted of life force while trying to animate corpse on level %d</string>
     <string name="ResultDescriptions_Necrotism">在第 %d 层死于坏死</string>
     <string name="ResultDescriptions_Ooze">在第 %d 层被腐蚀淤泥杀死</string>
     <string name="ResultDescriptions_Poison">在第 %d 层被毒气杀死</string>
@@ -1813,6 +1854,7 @@
     <string name="ScarecrowNPC_Quest_Start_Female">你好啊小鬼，最近怎样？\n我有一个令你惊喜的消息！\n如果你为我收集一些糖果的话，\n我会十分感激你的！\n\n</string>
     <string name="ScarecrowNPC_Quest_Start_Male">你好啊小鬼，最近怎样？\n我有一个令你惊喜的消息！\n\n如果你为我收集一些糖果的话，\n我会十分感激你的！\n\n</string>
     <string name="Scorpio_Desc">这些巨大的节肢类恶魔生物会尽可能地避免近距离战斗，并且在远处射出能致残的锯齿尖刺。</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">恶魔蝎子</string>
     <string name="Scorpio_Name_Objective">恶魔蝎子</string>
     <string name="ScrollHolder_Info">你可以把很多卷轴放在里面，既节省了空间，又保证了它们不会被火烧毁。</string>
@@ -1898,6 +1940,7 @@
     <string name="Senior_Name">武僧大师</string>
     <string name="Senior_Name_Objective">武僧大师</string>
     <string name="ServantNPC_Desc">一位非常忙的旅店服务员</string>
+    <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">旅店服务员</string>
     <string name="ServantNPC_Name_Objective">旅店服务员</string>
     <string name="ServiceManNPC_Desc">当地企业一名中规中矩的员工。</string>
@@ -1916,10 +1959,12 @@
     <string name="Shades_Name">墨镜</string>
     <string name="ShadowLord_Death">不……</string>
     <string name="ShadowLord_Desc">他是黑暗和恶灵的终极化身，他的强大让人们深信他就是古神本尊。当然还有那么一小撮人认为，他也就是给古神当个保安。</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">照顾好你自己吧！</string>
     <string name="ShadowLord_Name">暗影领主</string>
     <string name="ShadowLord_Name_Objective">暗影领主</string>
     <string name="Shadow_Desc">阴影通常默默徘徊在古代监狱的遗迹中，只是偶尔会出现在冒险者眼前，而通常这将会是这位冒险者的最后一次冒险。</string>
+    <string name="Shadow_Gender">masculine</string>
     <string name="Shadow_Name">阴影</string>
     <string name="Shadow_Name_Objective">阴影</string>
     <string name="ShadowsBuff_Info">暗影中，你的目光暂时被黑暗遮住。</string>
@@ -1997,6 +2042,7 @@
     <string name="SociologistNPC_AlreadyTaken">你已经反馈过了。请稍后再来</string>
     <string name="SociologistNPC_Desc">这位调研员专门收集你对这款像素地牢的意见和建议</string>
     <string name="SociologistNPC_DownloadError">抱歉，崩溃了，请稍后再试</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Hi">你好！\n你有什么意见和建议想对像素地牢作者说吗？（请确保网络顺畅）\n你的意见十分重要！</string>
     <string name="SociologistNPC_InternetRequired">抱歉，没有网络你没法发送意见和建议</string>
     <string name="SociologistNPC_Name">调研员</string>
@@ -2035,9 +2081,11 @@
     <string name="SpiderElite_Name">蜘蛛精英卫队</string>
     <string name="SpiderElite_Name_Objective">蜘蛛精英卫队</string>
     <string name="SpiderExploding_Desc">这些蜘蛛工人在和平时期一直努力工作，可是一旦遇到敌人，就会毫不犹豫抓起自己路过的第一株植物，并把自己当成活体炸弹冲向他们。</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">蜘蛛工人</string>
     <string name="SpiderExploding_Name_Objective">蜘蛛工人</string>
     <string name="SpiderGuard_Desc">就像士兵一样，蜘蛛守卫誓死保卫自己的王国。守卫的毒液用来麻痹它们的目标，使他们成为容易的猎物。</string>
+    <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">蜘蛛守卫</string>
     <string name="SpiderGuard_Name_Objective">蜘蛛守卫</string>
     <string name="SpiderMindAmber_Desc">琥珀蜘蛛是一种神秘而罕见的物种，拥有和灵能蜘蛛一样的精神力量，但比它要强壮得多。“琥珀”来源于它巨大脑袋的颜色，伴随着琥珀蜘蛛的精神和物理攻击，一个又一个受害者成为了它们的食物。</string>
@@ -2049,12 +2097,14 @@
     <string name="SpiderMind_Name">灵能催眠蜘蛛</string>
     <string name="SpiderMind_Name_Objective">灵能催眠蜘蛛</string>
     <string name="SpiderNest_Desc">这个茧是由最细的丝线织成的，其中藏着一些活着的东西。</string>
+    <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderNest_Name">蜘蛛茧</string>
     <string name="SpiderNest_Name_Objective">蜘蛛茧</string>
     <string name="SpiderQueenCarapace_Info">蜘蛛皇后的甲壳上一块碎片。内窥可见一条网腺，看上去尚有生命迹象。</string>
     <string name="SpiderQueenCarapace_Name">蜘蛛女王盔甲</string>
     <string name="SpiderQueen_Desc">由美丽的女性和可怖的蜘蛛交织而成的身体。在巢穴中所有活着的存在都是她的仆人，与这位特别的女士的邂逅也许会让你丧命，因为你是这里的入侵者！</string>
     <string name="SpiderQueen_DieInfo">蜘蛛女王已经被杀死了！现在我应该回到第5层继续我的地牢探险</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">蜘蛛女王</string>
     <string name="SpiderQueen_Name_Objective">蜘蛛女王</string>
     <string name="SpiderServant_Desc">蜘蛛士兵是蜘蛛巢穴中最为常见的单位，保护它们的领土是它们天生的使命。士兵的前肢进化出了毒腺来使它们的敌人中毒。</string>
@@ -2066,10 +2116,12 @@
     <string name="Spinner_Name">洞穴蜘蛛</string>
     <string name="Spinner_Name_Objective">洞穴蜘蛛</string>
     <string name="SpiritOfPain_Desc">黑暗的一部分</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">痛苦之魂</string>
     <string name="SpiritOfPain_Name_Objective">痛苦之魂</string>
     <string name="Sprout_Info">唤醒休眠的种子。\n然而，地面上应该有一些绿色植物，才能让这个咒语成功。</string>
     <string name="Sprout_Name">发芽</string>
+    <string name="StartScene_ChooseFromSlot">从存档位选择</string>
     <string name="StartScene_ComingSoon">即将推出</string>
     <string name="StartScene_ContinueLatest">继续你的最新游戏或从存档槽中选择</string>
     <string name="StartScene_Depth">层数：%1$d\n等级： %2$d</string>
@@ -2094,6 +2146,7 @@
     <string name="StartScene_WinGame">使用任意角色完成游戏来解锁“挑战”。</string>
     <string name="StartScene_Yes">是的，重新开始</string>
     <string name="Statue_Desc">你以为这只是地牢里另一座丑陋的雕像，但它发出红光的眼睛让你放弃了刚才的想法。 尽管雕像本身是用石头做的，但它手上握着_%s_，看起来像是真的。</string>
+    <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">活化石像</string>
     <string name="Statue_Name_Objective">活化石像</string>
     <string name="Stench_Txt">恶臭%s</string>
@@ -2124,6 +2177,7 @@
     <string name="Sungrass_Name">阳春草</string>
     <string name="SurfaceScene_GameOver">游戏结束，人生苦短，及时行乐</string>
     <string name="SuspiciousRat_Desc">老鼠在地牢中并不少见，可是居住在如此深的地方……当它移动时，你能清楚看到它整个身体是如何颤动的。</string>
+    <string name="SuspiciousRat_Gender">masculine</string>
     <string name="SuspiciousRat_Info1">可疑老鼠的正在猛烈地抽搐。</string>
     <string name="SuspiciousRat_Name">可疑的老鼠</string>
     <string name="SuspiciousRat_Name_Objective">可疑的老鼠</string>
@@ -2135,8 +2189,10 @@
     <string name="Swing_Name_0">野蛮%s</string>
     <string name="Swing_Name_1">野蛮%s</string>
     <string name="Swing_Name_2">野蛮%s</string>
+    <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">此等锋利的刀刃定不会让你失望。</string>
     <string name="Sword_Name">单手剑</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">看上去这柄飞斧并不重，但它依然需要足够的力量来能有效发挥作用。</string>
     <string name="Tamahawk_Name">飞斧</string>
     <string name="TenguLiver_Info">这个肝脏属于一位强大的敌人。仅仅是看着它，你的野性本能就占据了上风，你感到有一种想要吃掉它的冲动。</string>
@@ -2152,6 +2208,7 @@
     <string name="TerrorBuff_Name">惊恐</string>
     <string name="Thief_Carries">\n\n%1$s携带着_%2$s_，明显是偷来的。</string>
     <string name="Thief_Desc">地牢的深处总是各式罪犯的藏身之地。不是所有人都能在漫长的岁月中保持清醒的神智，在很久以前，这些疯狂的小偷和强盗就已经忘记了自己是谁，为什么要偷东西。</string>
+    <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">疯狂小偷</string>
     <string name="Thief_Name_Objective">疯狂小偷</string>
     <string name="Thief_Stole">%1$s把%2$s从你身上偷走了！</string>
@@ -2406,10 +2463,12 @@ remix.31.1\n
     <string name="WndCryptoDonate_copyAddress">复制地址</string>
     <string name="WndCryptoDonate_currency">货币</string>
     <string name="WndCryptoDonate_ethereum">以太坊</string>
+    <string name="WndCryptoDonate_infoText">您可以通过向以下地址发送加密货币捐赠来支持Remixed Dungeon的开发。感谢您的慷慨支持！</string>
     <string name="WndCryptoDonate_openWallet">打开钱包</string>
     <string name="WndCryptoDonate_supportDev">支持开发者</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
+    <string name="WndCryptoDonate_walletAddress">Wallet Address</string>
     <string name="WndCryptoDonate_warningText">WARNING: Always verify the address before sending funds. Cryptocurrency transactions are irreversible!</string>
     <string name="WndCustomizations_Title">自定义设置</string>
     <string name="WndDonate_commonDonateText">混合地牢——永远对所有人免费。\n\n但是，你能帮我们让这款游戏变得更好。\n\n除了我们的衷心感谢以外，你还将获得一些界面上的美化。</string>
@@ -2513,6 +2572,7 @@ remix.31.1\n
     <string name="WndModSelect_AreYouSure">删除mod：%s，你确定吗？</string>
     <string name="WndModSelect_ReallyDelete">真的要删除吗？</string>
     <string name="WndModsDisclaimer_install">安装本地模组</string>
+    <string name="WndModsDisclaimer_manage">管理模组列表</string>
     <string name="WndModsDisclaimer_title">MOD</string>
     <string name="WndMovieTheatre_Bye">想回来的时候就回来，我们对你的到来而感到高兴！</string>
     <string name="WndMovieTheatre_Instruction">欢迎来到我们的电影院！我们正在提供一项特别服务，你可以免费观看一部叫“广告”的特殊电影。如果全部看完，你将得到 %d 枚金币的奖励！</string>
@@ -2695,6 +2755,7 @@ remix.31.1\n
     <string name="YogsHeart_Name">Yog之心</string>
     <string name="YogsHeart_Name_Objective">Yog之心</string>
     <string name="YogsTeeth_Desc">古神的大嘴和锋利牙齿，表现了出强烈的破坏欲望，他渴望毁灭和吞噬所有的生物。</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">Yog之牙</string>
     <string name="YogsTeeth_Name_Objective">Yog之牙</string>
     <string name="ZombieGnoll_Desc">扭曲、破损、不再具有人形的豺狼人僵尸。由一堆腐烂的肉、骨头以及毁灭、杀戮的意识组成。</string>
@@ -2705,6 +2766,7 @@ remix.31.1\n
     <string name="ZombieMask_Info">你有没有想过让自己看上去像一名在试练中失败了的不死英雄？好吧，这是你的机会。</string>
     <string name="ZombieMask_Name">僵尸面具</string>
     <string name="Zombie_Desc">地牢是一个危险的地方，许多冒险者在这里遭遇了厄运。但他们当中，在亡灵之城结束生命是最不幸的，现在他们只能在由腐烂尸体构成的厅堂中游荡。</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">僵尸</string>
     <string name="Zombie_Name_Objective">僵尸</string>
     <string name="deco_candle_desc">大蜡烛</string>
@@ -2960,6 +3022,75 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

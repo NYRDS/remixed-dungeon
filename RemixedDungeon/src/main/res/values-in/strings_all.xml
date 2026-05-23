@@ -1,5 +1,6 @@
 <resources>
     <string name="AC_Devour">Melahap</string>
+    <string name="AC_Dissect">Membedah</string>
     <string name="AC_Kick">Menendang</string>
     <string name="AC_Necromancy">Penujuman</string>
     <string name="Abilities_Common">Sihir umum</string>
@@ -13,16 +14,19 @@
     <string name="AboutScene_OurSite">Situs web kita:</string>
     <string name="AboutScene_Snd">Kirim E-Mail</string>
     <string name="AboutScene_Sound">Suara:</string>
+    <string name="AboutScene_SourceCode">Dapatkan kode sumber Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Terimakasih Khusus kepada:</string>
     <string name="AboutScene_Translation">Penempatan oleh:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon oleh NYRDS berdasarkan pixel Dungeon sumber oleh Watabou. sumber</string>
     <string name="Accuracy_Decreased">Kenapa aku berpikir bisa menggunakan %s? Alat salah, tangan pun salah!</string>
     <string name="Accuracy_DecreasedDoctor">Setiap ayunan %s ini menyebarkan ketidaksempurnaan. Gergaji Tulang saya menyembuhkan... ini justru menginfeksi.</string>
+    <string name="Accuracy_DecreasedDoctorBareHands">Tangan telanjang mencemari teknik saya. Tanpa potongan bersih Gergaji, ambisi saya membusuk menjadi kekacauan.</string>
     <string name="Acidic_Desc">Arachnida raksasa ini adalah makhluk yang menghindari serangan jarak dekat dengan segala cara, menembak duri bergerigi yang melumpuhkan dari jarak jauh.</string>
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">skorpio beracun</string>
     <string name="Acidic_Name_Objective">skorpio beracun</string>
+    <string name="Actions_Speed">Level kemasukan</string>
     <string name="Affection_Txt">%s ketertarikan</string>
     <string name="AirElemental_Desc">Elemental angin adalah sihir terbang yang terbuat dari angin hidup.</string>
     <string name="AirElemental_Gender">masculine</string>
@@ -94,6 +98,8 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ArmoredStatue_Name_Objective">patung tersihir</string>
     <string name="Artifact_Limit">Anda hanya bisa memakai 2 artefak sekaligus.</string>
     <string name="AttackDelay_Increased">Tidak bisa memakai %s seperti ini. Ayunan lambat, napas berat...</string>
+    <string name="Attack_Cooldown">Attack cooldown</string>
+    <string name="Attack_Range">Jangkauan serangan</string>
     <string name="AwarenessBuff_Info">Indra telah mempertajam, memberikan lebih banyak kesadaran tentang lingkungan.</string>
     <string name="AwarenessBuff_Name">kesadaran</string>
     <string name="AzuterronNPC_Desc">Figur yang misterius dikelilingi oleh kabut hitam.</string>
@@ -233,6 +239,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Belongings_CantWearBoth">Anda tidak dapat melengkapi %1$s dan %2$s secara bersamaan!</string>
     <string name="Belongings_Name">Tas punggung</string>
     <string name="BishopNPC_Desc">Menteri Gereja Suci Santa the Depth Lord</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Uskup</string>
     <string name="BishopNPC_Name_Objective">Uskup</string>
     <string name="Bishop_bye">Akan kudoakan kau anakku</string>
@@ -292,9 +299,11 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="BlessedBuff_Name">diberkati</string>
     <string name="BlindnessBuff_Info">Benar-benar buta, hanya suara di sekitar yang bisa didengar.</string>
     <string name="BlindnessBuff_Name">Buta</string>
+    <string name="BloodTransfusion_Drained">Esensi kehidupan mengalir dari hewan peliharaan Anda ke Anda.</string>
     <string name="BloodTransfusion_FullHP">Darah Anda sudah penuh.</string>
     <string name="BloodTransfusion_Info">Menyerap hampir semua darah dari target untuk menyembuhkan diri sendiri. Ritual gelap pengorbanan dan kelangsungan hidup.</string>
     <string name="BloodTransfusion_Name">Transfusi Darah</string>
+    <string name="BloodTransfusion_WontAgreed">Sasaran menolak diekstraksi esensinya.</string>
     <string name="BodyArmorBuff_Info">Armor ditingkatkan dengan mengorbankan kecepatan gerakan.</string>
     <string name="BodyArmorBuff_Name">Pelindung Tubuh</string>
     <string name="BodyArmorSpell_Info">Mengaktifkan kekuatan otot yang dicadangkan, membuatnya lebih kuat untuk sementara, ini sangat meningkatkan armor Anda tetapi dengan mengorbankan kecepatan gerakan.</string>
@@ -354,6 +363,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Carcass_Kick">%s ini sudah benar-benar mati, tidak perlu menendangnya lagi.</string>
     <string name="Carcass_Name">bangkai %s</string>
     <string name="Carcass_Necromancy">\&quot;Kamu telah membangkitkan mayat %s!\&quot;</string>
+    <string name="Carcass_Necromancy_Failed">\&quot;Upaya Anda untuk menghidupkan mayat %s gagal!\&quot;</string>
     <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk membedah bangkai.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang butuh rak buku di gua?</string>
     <string name="Caves_TileDescDeco">Kilauan dari beberapa logam terlihat pada tembok. Emas?</string>
@@ -383,7 +393,9 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Challenges_Names_7">Pasifisme</string>
     <string name="Challenges_Names_8">Tantangan</string>
     <string name="Challenges_Names_9">Amnesia</string>
+    <string name="ChampionOfAirBuff_Info">Sifat ini memberikan makhluk dengan esensi angin, meningkatkan kegesitannya dan kemampuannya dalam pertempuran. Juara Udara menjadi lawan yang menakutkan, mampu melepaskan serangan cepat dan menghancurkan yang dapat dengan cepat mengubah arah pertempuran.</string>
     <string name="ChampionOfAirBuff_Name">Juara Udara</string>
+    <string name="ChampionOfEarthBuff_Info">Champion of Earth meng embody kekuatan yang tak tertunduk, karena ciri ini meningkatkan resistansi kerusakan makhluk dan meningkatkan vitalitas maksimumnya. Transformasi ini menjadikannya musuh yang menakutkan di kedalaman berbahaya, mampu mengabaikan serangan dengan mudah dan bertahan dalam pertempuran yang panjang dengan tekad yang tak goyah.</string>
     <string name="ChampionOfEarthBuff_Name">Juara Bumi</string>
     <string name="ChampionOfFireBuff_Info">Ditempeli oleh kemarahan api, sifat ini memperkuat keganasan dan kemampuan tempur makhluk. Juara Api muncul sebagai lawan yang mengerikan, melancarkan serangan devastating yang dapat membanjiri musuhnya dengan api menyengat, menanamkan teror pada semua yang berani melawannya.</string>
     <string name="ChampionOfFireBuff_Name">Juara Api</string>
@@ -394,6 +406,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Sebuah busur mengerikan dengan kekuatan dari Khaos. Tiap anak panah yang ditembakan dari ini akan membawa sedikit dari kekuatan khaos pada target. Jika Anda meleset...</string>
     <string name="ChaosBow_Name">busur khaos</string>
+    <string name="ChaosCrystal_ArmorFused">Kristal melebur dengan baju zirahmu dan mengambil bentuk kekacauan.</string>
     <string name="ChaosCrystal_BowFused">Kristal menyerap busurmu, dan berubah wujud jadi Busur</string>
     <string name="ChaosCrystal_Fuse">Gabungkan</string>
     <string name="ChaosCrystal_Info">Kamu rasakan energi mengalir di tanganmu saat menggenggamnya.</string>
@@ -413,12 +426,14 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ChaosHelmet_Name">Helm kekacauan</string>
     <string name="ChaosShield_desc">Perisai Chaos adalah hasil dari peleburan Kristal Chaos dengan perisai biasa, menyebabkannya memunculkan efek kacau acak saat berhasil menahan serangan.</string>
     <string name="ChaosShield_name">Tameng Kekacauan</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Tongkat yang dijiwai Kekuatan Khaos! Apa lagi yang dapat seorang penyihir mimpikan atau takuti?</string>
     <string name="ChaosStaff_Name">tongkat khaos</string>
     <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">Mata pedang dari pedang ini dibuat dari khaos murni dan kadang bergetar sedikit. Kekuatan besar disimpan di dalam senjata ini, yang dapat memotong hampir semuanya jadi dua. Tapi, keahlian besar dibutuhkan, untuk menggunakan kekuatan besar dari senjata ini.</string>
     <string name="ChaosSword_Name">pedang khaos</string>
     <string name="CharAction_Charm">pesona</string>
+    <string name="CharAction_Expel">expel</string>
     <string name="CharAction_Give">memberi</string>
     <string name="CharAction_Hit">memukul</string>
     <string name="CharAction_Order">memerintahkan</string>
@@ -465,6 +480,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ChargrilledMeat_Name">daging bakar</string>
     <string name="CharmBuff_Info">Pikiran dan tubuh terpesona!</string>
     <string name="CharmBuff_Name">terpesona</string>
+    <string name="CharmSpell_Cast">%s terpesona.</string>
     <string name="CharmSpell_Info">Setiap orang berhak mendapatkan cinta, bukan?</string>
     <string name="CharmSpell_Name">Pesona</string>
     <string name="Chasm_Chasm">Jurang</string>
@@ -534,11 +550,13 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ComboBuff_Info">Serangan selanjutnya adalah serangan kombo.</string>
     <string name="ComboBuff_Name">Kombo</string>
     <string name="Combo_Combo">%d combo pukulan</string>
+    <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">Anak panah biasa dengan besi sebagai ujungnya.</string>
     <string name="CommonArrow_Name">anak panah</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">Busur silang yang diperbagus ini terbukti lebih efisien dibandingkan versi kayunya.</string>
     <string name="CompositeCrossbow_Name">Busur silang buatan</string>
+    <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">Anak panah diluncurkan dari busur gabungan menyebabkan serangan yang kuat dan telah diperbaharui akurasinya dengan harga beberapa kecepatan.</string>
     <string name="CompoundBow_Name">busur gabungan</string>
     <string name="ConcreteBlock_Description">Sepertinya blok ini membutuhkan %d poin kekuatan untuk mendorong</string>
@@ -550,9 +568,11 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="CorpseDust_Info2">Mungkin karena hanya memegangnya saja sudah membuat Anda merasa cemas dan marah.</string>
     <string name="CorpseDust_Name">debu mayat</string>
     <string name="CorpseExplosion_Info">Mengubah mayat menjadi awan gas beracun yang mematikan, menyebarkan penyakit dan racun ke semua musuh di sekitarnya.</string>
+    <string name="CorpseExplosion_Name">Letupan Bangkai</string>
     <string name="CorpseExplosion_NoCorpse">Tidak ada mayat di lokasi itu.</string>
     <string name="Crab_Defense">tertangkis</string>
     <string name="Crab_Desc">Kepiting besar ini adalah puncak rantai makanan di saluran bawah tanah. Mereka sangat cepat dan tulang tebal mereka dapat menahan serangan berat.</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">kepiting saluran</string>
     <string name="Crab_Name_Objective">kepiting saluran</string>
     <string name="CrippleBuff_Info">Tubuhnya lumpuh tapi perjuangan masih berlanjut.</string>
@@ -586,6 +606,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="DarkVeilBuff_Info">Selubung kegelapan mengelilingi pemiliknya, memanggil roh setiap kali terjadi kerusakan.</string>
     <string name="DarkVeilBuff_Name">kerudung gelap</string>
     <string name="Darkness_Info">Terlihat seperti potongan-potongan kegelapan abadi melayang di udara</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Duri logam sederhana ini telah dibuat untuk terbang lurus dan menusuk mangsa mereka dengan kibasan dari pergelangan tangan.</string>
     <string name="Dart_Name">dart</string>
     <string name="DashSpell_Info">Lari ke arah yang ditentukan saat bertabrakan dengan musuh, memberikan kerusakan dan menyebabkan cacat.</string>
@@ -626,12 +647,15 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="DieHardSpell_Info">Akan meningkatkan regenerasi Anda untuk sementara membuat Anda menjadi Susah Mati yang nyata.</string>
     <string name="DieHardSpell_Name">mati dengan susah payah</string>
     <string name="Displacement_Txt">%s pemindahan</string>
+    <string name="DoctorArmor_Name">Jas Dokter</string>
     <string name="DoctorArmor_NotDoctor">Hanya dokter wabah yang bisa menggunakan baju besi ini!</string>
+    <string name="DoctorSpecial">Awan Miasma</string>
     <string name="DogeMask_Info">Apakah Anda pernah ingin menyamar sebagai Doge yang terkenal? Sekarang adalah kesempatanmu!\nTopeng seperti itu! Banyak Penyamaran! Wow!</string>
     <string name="DogeMask_Name">Topeng doge</string>
     <string name="DonateButton_pleaseDonate">mohon mepertimbangkan untuk mendonasi</string>
     <string name="DonateButton_thanks">Terima kasih atas bantuan Anda!</string>
     <string name="DreadKnight_Desc">Ksatria ketakutan adalah seorang prajurit kuno yang, dalam hidup, tidak tahu baik atau benar. Karena dosa-dosanya, dia ditakdirkan untuk mengembara abadi di tubuh maut yang hancur ini. Dan setiap saat keberadaannya yang tersiksa penuh dengan rasa sakit dan penderitaan, mirip dengan apa yang dia berikan pada korbannya.</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">ksatria ketakutan</string>
     <string name="DreadKnight_Name_Objective">ksatria ketakutan</string>
     <string name="Dreamweed_Desc">Saat menyentuh Dreamweed akan muncul awan gas membingungkan yang berkilau.</string>
@@ -702,7 +726,9 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ElvenDagger_Name">pisau elf</string>
     <string name="EncumbranceBuff_CharAct_1">Saya tidak cukup kuat untuk menggunakkan %s dengan benar.</string>
     <string name="EncumbranceBuff_CharAct_2">Benda %s ini terlalu berat bagi saya untuk digunakan secara efektif.</string>
+    <string name="EncumbranceBuff_CharAct_3">Saya perlu bekerja pada kekuatan saya sebelum saya bisa menggunakan %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Aku tidak punya kekuatan untuk menggunakan %s secara maksimal.</string>
+    <string name="EncumbranceBuff_CharAct_5">%s saat ini terlalu banyak untuk saya tangani.</string>
     <string name="EncumbranceBuff_Info">Tidak cukup kekuatan untuk menggunakan %s secara efektif.</string>
     <string name="EncumbranceBuff_Name">Beban</string>
     <string name="EnslavedSoul_Desc">Anda hampir dapat melihat melalui penampakan hantu ini. Dan meskipun terlihat seperti tengkorak, terkadang untuk sepersekian detik sebuah wajah muncul, penuh dengan rasa sakit dan penderitaan.</string>
@@ -718,9 +744,11 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Exhumation_NoGrave">Tidak ada kuburan di sini untuk melakukan penggalian.</string>
     <string name="Exhumation_Ok">Aku akan menurutimu.</string>
     <string name="ExplodingSkull_Desc">Tengkorak yang mengambang dan terbakar ini tampak sangat rapuh, dan sepertinya akan pecah berkeping-keping setiap saat.</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">tengkorak meledak</string>
     <string name="ExplodingSkull_Name_Objective">tengkorak meledak</string>
     <string name="Eye_Desc">Nama lain dari setan ini adalah \&quot;bola kebencian\&quot;, karena saat dia melihat musuh, dia menggunakan tatapan mematikannya dengan sembrono, kadang tidak mempedulikan sekutunya dan melukai mereka.</string>
+    <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">Tatapan kematian %s membunuh Anda...</string>
     <string name="Eye_Name">mata jahat</string>
     <string name="Eye_Name_Objective">mata jahat</string>
@@ -735,6 +763,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Fadeleaf_Desc">Menyentuh tanaman Fadeleaf akan menteleportasikan makhluk apapun ke tempat acak di level itu.</string>
     <string name="Fadeleaf_Name">Fadeleaf</string>
     <string name="FetidRat_Desc">Tikus berkantung ini jauh lebih besar dari tikus biasa. Itu dikelilingi oleh awan busuk.</string>
+    <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">Tikus busuk</string>
     <string name="FetidRat_Name_Objective">Tikus busuk</string>
     <string name="Fez_Info">Ini adalah hiasan kepala berbentuk kerucut terpotong yang terbuat dari kain merah, dengan rumbai yang menempel di atasnya. Dan tidak, itu tidak membuat dunia menjadi 3 dimensi.</string>
@@ -758,6 +787,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Food_ACEat">MAKAN</string>
     <string name="Food_Message">Makanan itu terasa lezat!</string>
     <string name="FortuneTellerNPC_Desc">Wanita ini mengenakan jubah panjang berwarna cerah. Dia terlihat sangat muda untuk seseorang, yang menguasai seni misterius meramal. Semakin dekat, Anda bisa mendengarnya bergumam, saat dia menatap bola kristal.</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">peramal</string>
     <string name="FortuneTellerNPC_Name_Objective">peramal</string>
     <string name="FreezeGlobe_Info">Membekukan karakter yang dipilih, membuatnya tidak dapat melakukan aksi apapun untuk sementara waktu.</string>
@@ -765,6 +795,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="FriedFish_Info">Ikan Goreng, keliatan nya lezat</string>
     <string name="FriedFish_Name">ikan goreng</string>
     <string name="FriedFish_Taste">lezat</string>
+    <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Anda dapat merasakan aura membeku berasal dari ujung anak panah.</string>
     <string name="FrostArrow_Name">anak panah beku</string>
     <string name="FrostAuraBuff_Info">Embun beku mengelilingi tubuh, yang memperlambat semua yang ada di dekatnya.</string>
@@ -798,10 +829,12 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Ghost_Defense">menghindar</string>
     <string name="Ghost_Desc">Hantu itu hampir tidak terlihat. Itu terlihat seperti titik cahaya redup tak berbentuk dengan wajah sedih.</string>
     <string name="Ghost_Name">hantu sedih</string>
+    <string name="Ghost_Name_Objective">hantu</string>
     <string name="Ghost_Rat1">Halo petualang... Saat saya sepertimu - kuat dan percaya diri... dan sekarang aku mati... Tapi aku tidak bisa meninggalkan tempat ini... Tidak sampai saya balas dendam.... Bunuh...Tikus Busuk_, yang telah mengambil nyawaku...</string>
     <string name="Ghost_Rat2">Tolong... Tolong aku... Bunuh mahluk itu...</string>
     <string name="Ghost_Rose1">Halo petualang... Dulu aku sama seperti Anda - kuat dan percaya diri... tapi sekarang saya sudah mati... Tapi saya tidak bisa meninggalkan tempat ini... Tidak sampai aku menemukan _bunga rose keringku_... Itu sangat berguna untukku... Beberapa monster mencurinya dari tubuhku...</string>
     <string name="Ghost_Rose2">Tolong... Bantu saya... Carikan bunga itu...</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Info">Sebatang tongkat dengan mata pedang di ujungnya.</string>
     <string name="Glaive_Name">glaive</string>
     <string name="GnollArmor_ACSpecial">MENDOMINASI</string>
@@ -837,6 +870,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Golem_Name">monster batu</string>
     <string name="Golem_Name_Objective">monster batu</string>
     <string name="Goo_Desc">Tidak banyak yang diketahui tentang Goo. Sangat mungkin bahwa ia bukanlah makhluk, melainkan gabungan zat dari saluran pembuangan yang mendapatkan dasar-dasar kehendak bebas. Apa pun itu, jelas sekali bahwa sihir gelap bekerja di sini.</string>
+    <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">Lendir sedang memompa diri!</string>
     <string name="Goo_Info2">glurp... glurp...</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -852,6 +886,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Guts_TileGrass">Semak kering</string>
     <string name="Guts_TileHighGrass">Semak kering</string>
     <string name="Guts_TileWater">Cairan berlendir aneh</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">Sebuah tiang yang memiliki kapak di ujung tiangnya.</string>
     <string name="Halberd_Name">Halberd</string>
     <string name="Halls_TileDescBookshelf">Buku dengan bahasa kuno membara di dalam rak buku.</string>
@@ -863,9 +898,11 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Halls_TileWater">Lava dingin</string>
     <string name="Haste_Info">Tergesa-gesa akan memungkinkan pemain untuk bergerak dengan kecepatan ekstrem, sehingga segala sesuatu di sekitarnya akan tampak statis. Tergesa-gesa seperti itu akan menghabiskan banyak energi sehingga menggunakannya hanya mungkin untuk waktu yang singkat.\n\nMaster yang terampil dapat tetap tergesa-gesa untuk jangka waktu yang lebih lama.</string>
     <string name="Haste_Name">Tergesa-gesa Ekstrim</string>
+    <string name="Heal_Cast">%s disembuhkan.</string>
     <string name="Heal_Info">Mantra yang cukup berguna di Dungeon, kan?</string>
     <string name="Heal_Name">Sembuh</string>
     <string name="HealerNPC_Desc">Seorang lelaki tua, entah bagaimana dia terlihat seperti seseorang yang akan membuat tongkat sihir.</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Perawatan gratis untuk setiap petualang!</string>
     <string name="HealerNPC_Message2">Kembalilah kapan saja jika kau merasa sakit atau lapar!</string>
     <string name="HealerNPC_Message3">Saya berfikir mengapa gereja tidak memperbolehkan kita memakai topi... sangat dingin disana.</string>
@@ -880,6 +917,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="HealthDart_Info">Ujung Dart ini tercakup dalam ramuan penyembuhan.</string>
     <string name="HealthDart_Name">Dart Penyembuhan</string>
     <string name="Heap_Mimic">Ini adalah mimik!</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Jantung hitam yang berdenyut dari Roh Pengkhianat.</string>
     <string name="HeartOfDarkness_Name">Hati dari kegelapan</string>
     <string name="Hedgehog_Desc">Landak itu kelihatan malu.</string>
@@ -891,6 +929,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Hedgehog_Name">landak</string>
     <string name="HeroClass_Doctor">Dokter Wabah</string>
     <string name="HeroClass_Elf">elf</string>
+    <string name="HeroClass_ElfPerks_0">Elf memulai dengan 15 titik Kesehatan dan 9 titik Kekuatan.</string>
     <string name="HeroClass_ElfPerks_1">Elf kebal terhadap Belitan akar.</string>
     <string name="HeroClass_ElfPerks_2">Elf mulai dengan busur kayu yang ditingkatkan dan seikat anak panah.</string>
     <string name="HeroClass_ElfPerks_3">Elf sangat mahir dengan busur dan lincah.</string>
@@ -926,6 +965,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Mulai dengan sebuah Topeng Plague (kebal terhadap semua Gas) dan sebuah Gergaji Tulang. Serangan kritis menjatuhkan bagian ekstra, dan Gergaji memberikan +50% kerusakan pada musuh yang lumpuh.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Ramuan Gas Paralisis dan Gas Toksik telah dikenali sebelumnya.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Ramuan [yellow:Gas Paralisis] dan [yellow:Gas Toksik] sudah dikenali sebelumnya.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Plague Doctors suffer great accuracy penalties without beloved Bone Saw in hand and cannot use ranged weapons.</string>
     <string name="HeroClass_Priest">Imam</string>
     <string name="HeroClass_Rog">penjahat</string>
     <string name="HeroClass_RogPerks_0">Penjahat mulai dengan cincin kegelapan+1.</string>
@@ -1128,6 +1168,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="King_Info3">Beraninya kau!</string>
     <string name="King_Name">Raja Kurcaci</string>
     <string name="King_Name_Objective">Raja Kurcaci</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Info">Sepotong besi berbentuk untuk muat di lipatan jari.</string>
     <string name="Knuckles_Name">knuckle</string>
     <string name="KoboldIcemancer_Desc">Kobold Icemancers adalah elit masyarakat. Prajurit terkenal, penyihir dan yang paling penting, ilmuwan. Ahli es kuno memanfaatkan seni memerintah es, menciptakan mekanisme kompleks yang diperkuat dengan mantra khusus.</string>
@@ -1223,6 +1264,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="LevitationBuff_Info">Tubuh melayang di atas tanah, menghindari jebakan dan bahaya duniawi lainnya.</string>
     <string name="LevitationBuff_Name">Melayang</string>
     <string name="LibrarianNPC_Desc">Orang yang sangat pemalu, mengenakan sweter yang tampak canggung dan kacamata tebal.</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">H-halo. Selamat datang di Perpustakaan. Di sini Anda dapat menemukan informasi tentang segala macam hal, yang dapat ditemukan di dungeons ... sebenarnya kami hanya dapat memberikan pengetahuan yang ditemukan oleh para petualang. Itu... agak memalukan. Jadi setiap kali Anda mengunjungi kami, mungkin akan ada hal-hal baru untuk dibaca.</string>
     <string name="LibrarianNPC_Message_Not_Ready">Aku... Maaf, perpustakaanku belum buka... belum.</string>
     <string name="LibrarianNPC_Name">pustakawan</string>
@@ -1231,6 +1273,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="LibraryBook_Name">Buku perpustakaan</string>
     <string name="Lich_Desc">Necromancer telah menemui ajalnya di kedalaman necropolis, dan secara bertahap, kekuatan jahat yang mengalir ke tubuhnya mengubahnya menjadi Lich. Seorang penyihir kematian, boneka tanpa kehendak, dikendalikan oleh kekuatan jahat ...</string>
     <string name="Lich_DieInfo">Saya tidak pernah menyukai Necromancer ini. Jadi, sekarang saatnya untuk kembali ke level 7 dan menemukan jalan lain menuju petualangan baru.</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Info">Cahaya memancar dari tubuh, menerangi segala sesuatu di sekitar.</string>
@@ -1315,6 +1358,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="MimicPie_Name">mimik</string>
     <string name="MimicPie_Name_Objective">mimik</string>
     <string name="Mimic_Desc">Mimik adalah makhluk ajaib yang dapat merubah bentuk ke bentuk apapun yang mereka mau. Di dungeon mereka selalu memilih bentuk peti harta karun, karena mereka tahu cara menarik perhatian petualang.\&quot;;</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">mimik</string>
     <string name="Mimic_Name_Objective">mimik</string>
     <string name="MindVisionBuff_Info">Penglihatan batin memungkinkan untuk melihat dengan jelas pergerakan semua makhluk hidup di lantai.</string>
@@ -1366,6 +1410,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Monk_Defense">tertangkis</string>
     <string name="Monk_Desc">Biksu ini adalah fanatik, yang membaktikan diri mereka untuk menjaga rahasia kota mereka dari semua makhluk asing. Mereka tidak menggunakan pengaman atau senjata, hanya mengandalkan seni dari pertempuran tangan.</string>
     <string name="Monk_Disarm">%1$s telah menjatuhkan %2$s dari tangan Anda!</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">biksu kurcaci</string>
     <string name="Monk_Name_Objective">biksu kurcaci</string>
     <string name="MoongraceBuff_Info">Udara di sekitar menjadi lebih jenuh, yang memungkinkan konsentrasi yang lebih baik dan pemulihan cadangan magis.</string>
@@ -1404,6 +1449,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: batas pemanggilan tercapai (Maksimum saat ini: %d )!</string>
     <string name="Necromancer_ACSpecial">NECROMANCY</string>
     <string name="Necromancy_BecameALich">Anda menjadi seorang Lich! Kekuatan Anda tumbuh dan kapasitas jiwa Anda telah berlipat ganda! Tapi Anda kehilangan %1$d poin kekuatan.</string>
+    <string name="Necromancy_Death">Kau menguras semua tenaga hidupmu saat berlatih nekromansi.</string>
     <string name="Necromancy_NotEnoughSouls">Anda tidak memiliki cukup jiwa untuk mengucapkan mantra \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_ReincarnationName">Reinkarnasi</string>
     <string name="Necromancy_ReincarnationTriggered">Kekuatanmu menolak kematian itu sendiri! Tetapi Anda kehilangan semua jiwa dan harta milik Anda yang terkumpul.</string>
@@ -1445,21 +1491,26 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Pickaxe_ACMine">TAMBANG</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Ini adalah alat yang besar dan kokoh untuk memecahkan batu. Itu mungkin bisa digunakan sebagai senjata.</string>
+    <string name="Pickaxe_InsufficientStr">Kekuatan tidak cukup untuk menggali!</string>
     <string name="Pickaxe_Name">beliung</string>
     <string name="Pickaxe_NoVein">Tidak ada emas gelap disekitarmu yang bisa digali</string>
     <string name="Piercing_Name_0">Tajam %s</string>
     <string name="Piercing_Name_1">Tajam %s</string>
     <string name="Piercing_Name_2">Tajam %s</string>
     <string name="Piranha_Desc">Ikan karnivora ini tidak alami penghuni dari kolam bawah tanah. Mereka dibesarkan secara khusus untuk menjaga ruang harta karun tergenang.</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">piranha raksasa</string>
     <string name="Piranha_Name_Objective">piranha raksasa</string>
     <string name="PirateSet_Info">Arr! Apakah kamu merasa seperti awak... ataukah hanya merasa seperti orang darat!? Aku harap tidak, benda itu lagipula hanya untuk bajak-laut, aku maksud... Arr!</string>
     <string name="PirateSet_Name">Pakaian Bajak Laut</string>
+    <string name="PlagueDoctorMaskHood_Info">Sebuah tengkorak ebony yang dipahat, lubang matanya bersinar dengan kilau gaib permata ametis. Setiap napas yang Anda hirup berbisik melalui labirin tabung dan filter, membawa wangi herbal dan rempah yang menyamarkan pembusukan yang melekat pada Anda. Tapi bukan hanya topeng. Sebuah tudung beludru tengah malam yang berat, menyelimuti wajah dan kepala Anda dalam bayangan. Hood, seperti sayap gagak, mengalir di punggung Anda, tepinya dihiasi renda tulang putih, kontras mengerikan yang indah. Bersama masker dan tudung menciptakan wajah spektral, kesaksian mengerikan terhadap pertempuran tanpa henti melawan kekuatan pembusukan.</string>
     <string name="PlagueDoctorMaskHood_Name">Topeng Plague Doctor dengan tudung</string>
+    <string name="PlagueDoctorMask_Info">This… this is no mere mask. It\'s… a barrier. A shield against the forces of decay that Plague Doctor tirelessly battle against. Crafted from the finest ebony wood, intricately carved with the visage of a ravenous skull. Its hollow eye sockets are filled with glittering, amethyst gemstones that pulse faintly, like the dying embers of a fire. Each breath you take, each utterance you make, is filtered through a labyrinthine network of tubes and filters. A concoction of potent herbs and exotic spices infuses the air within, masking the stench of death that clings to you like a shroud.</string>
     <string name="PlagueDoctorMask_Name">topeng Dokter Wabah</string>
     <string name="PlagueDoctorNPC_After_Quest">Saya akan menunjukkan kepada mereka, saya akan menunjukkan kepada mereka semua!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Kamu masih di sini? Di Sini! Ambil ini.</string>
     <string name="PlagueDoctorNPC_Desc">Seluruh tubuh orang bungkuk ini disembunyikan di bawah jumpsuit kulit. Juga, dari dia datang bau obat yang pahit dan ... bawang putih?</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">dokter wabah</string>
     <string name="PlagueDoctorNPC_Name_Objective">dokter wabah</string>
     <string name="PlagueDoctorNPC_Quest_End">Ah, terima kasih, saya berharap ini akan memiliki beberapa jejak penyakit. Contoh sebelumnya sama sekali tidak berbahaya. Jadi saya membuat ini untuk Anda sambil menunggu sampel baru.</string>
@@ -1472,21 +1523,32 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… luar biasa! _Siput-siput_ itu, rahasia mereka perlahan terungkap seperti kelopak bunga dalam cahaya bulan. Memang banyak informasi yang berharga! Tapi kamu benar, _lima puluh emas_ bukanlah hadiah yang pantas. *Tertawa kegirangan*.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">_Sepuluh siput_, sepuluh bisikan dari jurang! Lendir mereka akan dianalisis, esensi mereka diteliti. Rahasia yang mereka simpan sudah dalam jangkauan.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Batuk parah* Achoo!\n _Siput_... mereka merayap. Mereka mengeluarkan lendir. Dan mereka berbisik rahasia dari zaman yang terlupakan. Aku membutuhkan mereka, _sepuluh_ dari mereka, cangkangnya masih utuh. Apakah menurutmu hanya _lima puluh koin emas_ cukup untuk pengetahuan berharga seperti ini?\n Bah! Tidak masalah. Informasi yang mereka miliki bisa menjadi kunci untuk menghentikan wabah ini. Atau... itu bisa membawa kita ke sesuatu yang jauh lebih mengerikan. Terserah kamu.</string>
+    <string name="PlagueDoctorQuest_2_1_Epilogue">_Moongrace_…  bukti sihir yang merajut dunia ini. Aku banyak belajar dari esensi mereka, tapi hadiahmu… yah, telah disiapkan dengan penuh perhatian. *Menyerahkan sebuah Mana Potion yang berkilau* Semoga kekuatannya menuntunmu melewati bahaya yang menanti.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Carilah _moongrace_, di mana kegelapan bertemu dengan cahaya rembulan yang paling samar. _Dua biji_, esensi mereka, akan mengungkapkan rahasia tersembunyi.</string>
     <string name="PlagueDoctorQuest_2_1_Prologue">_Biji-biji Bulan_... bunga-bunga gaib yang berbisik dengan sihir bulan itu sendiri. Saya telah mempelajari cahaya keindahan aneh mereka selama beberapa minggu. Ada kekuatan pada esensi mereka, energi tersembunyi yang bisa menjadi kunci untuk... sesuatu. *Mengetuk jari tulang di dagu dengan berpikir* Namun, sayangnya, mereka langka. Hanya ditemukan di gua-gua terdalam di mana cahaya bulan jarang menembus. Saya butuh dua biji. Dua biji untuk membuka rahasia kekuatan mereka. Dan sebagai gantinya, saya bisa menawarkan sesuatu... sebuah rasa murni dari sihir yang kuat. _Potion of Mana_, penuh dengan esensi langsung dari bunga bulan. Ia akan memulihkan jiwa lelah Anda dan memungkinkan Anda menggunakan sihir dengan kekuatan yang baru.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">Luar biasa! _Sungrass_, esensi emasnya berdenyut dengan vitalitas. Saya sudah belajar banyak dari strukturnya yang halus. *Dia memberikan Anda _Potion of Health_, cairannya berkilau dengan cahaya keemasan yang samar.* Minum ini ketika dunia terasa berat bagimu, dan rasakan kehangatan matahari menghidupkan kembali semangatmu.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Dua biji sungrass_. Kelopak emasnya menyimpan kekuatan yang ingin kupahami. Temukan mereka, dan biarkan esensi mereka terungkap!</string>
+    <string name="PlagueDoctorQuest_2_2_Prologue">Ah, _sungrass_! Sebuah bunga lembut, kelopaknya memancarkan kehangatan matahari. Aku percaya esensinya menyimpan kunci untuk… ah, lupakan detailnya dulu. Cukup dikatakan, itu penting untuk penelitian saya. _Dua biji sungrass_. Ambilkan untukku, dan aku akan memberimu sesuatu yang pasti berguna dalam petualanganmu - sebuah _Potion of Health_, dipenuhi vitalitas matahari.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Dia memeluk _kelelawar_ dengan lembut di tangan berkantungnya, mengamati wujud kecil itu dengan kagum yang menakutkan* Hebat! Ekolokasi kelelawar... tidak seperti apa pun yang pernah saya temui. Begitu presisi... begitu... kendali. *Dia menoleh kepadamu, wajahnya tersembunyi oleh topengnya* Atas usahamu, sebuah _Gulungan Peningkatan_. Gunakanlah dengan bijak, karena ia menyimpan potensi untuk... menyempurnakan esensimu. *Dia memberimu gulungan itu, suaranya berbisik pelan* _Kelelawar_ ini, adalah... jendela ke dunia tersembunyi. Dunia... tempat bayangan menari dan rahasia berbisik.</string>
+    <string name="PlagueDoctorQuest_3_1_InProgress">Bawa aku seekor _kelelawar vampir_, hidup dan tidak terluka! Darahnya, sayapnya… mereka menyimpan rahasia yang harus kubongkar!</string>
+    <string name="PlagueDoctorQuest_3_1_Prologue">*Matanya berkilat dengan intensitas aneh yang gila* Ah, _kelelawar vampir_! Makhluk malam, yang memakan tenaga hidup mangsanya. Menarik... benar-benar menarik. Saya butuh satu yang hidup untuk mempelajari fisiologinya yang unik. Ini semua tentang... memahami... memahami... *Dia terbata-bata, bergumam pada dirinya sendiri dengan serangkaian istilah arcan*. Ya! Ekolokasi _kelelawar_, kemampuannya untuk navigasi dalam kegelapan total... itu kunci untuk membuka rahasia.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*Ia menengadahkan kepala dan tertawa keras, suara tawa menggema di laboratorium lembabnya* Luar biasa! Seorang _Ksatria Kematian_, berdiri di hadapan kita! Kekuatan yang memancar dari wujudnya... memabukkan! *Ia menoleh kepadamu, mata bersinar penuh intensitas demam* Dan untukmu, hadiah yang pantas atas keberanianmu: sebuah _Potion of Strength_! Semoga memberimu kekuatan untuk mengalahkan musuh apa pun! Sekarang... mari kita teliti subjek kita. Inti dari wujudnya menyimpan rahasia yang bisa mengubah hukum kehidupan itu sendiri! *Ia mendekati _Ksatria Kematian_ dengan senyum maniak, mengacungkan sebuah botol cairan hijau yang mendidih*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Ini bukan sekadar binatang! Ini adalah bukti berjalan dari kekuatan nekromantik! Tangkap satu, hidup dan tidak terluka! Ini _Ksatria Kematian_... itu adalah kuncinya!</string>
+    <string name="PlagueDoctorQuest_3_2_Prologue">_Ridwan Kematian_! *Suaranya pecah karena antusias, jari-jarinya yang kurus gemetar saat ia menggenggam sebuah botol berisi cairan keruh yang berpendar*. Makhluk seperti itu... sebuah mercu yang memancarkan kematian! Menangkap satu, hidup... itu akan... monumental. Bayangkan rahasia apa saja yang bisa kita buka! Kekuatan yang mengalir melalui pembuluh darahnya yang tengkorak! Ya, _Ridwan Kematian_! Ini sangat penting untuk penelitian saya! Karena itu akan memungkinkan kita untuk mengeksplorasi lebih dalam... ke dalam misteri kehidupan... dan kematian itu sendiri!</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">Sempurna! Para _Dwarf Warlocks_, esensi mereka kini bisa kuteliti! Begitu menyimpang dan terkorupsi sihirnya... sungguh menakjubkan. *Ia mengangkat sebuah botol berisi cairan merah kental yang berpendar.* Ini, untukmu: sebuah _Potion of Might_! Minumlah kekuatannya, dan kau akan merasakan kekuatan gunung-gunung mengalir dalam darahmu! Ingatlah, pengetahuan yang diperoleh dari pengorbanan ini pada akhirnya akan melayani tujuan yang lebih tinggi... mungkin bahkan menyelamatkan kita semua dari nasib yang lebih buruk dari kematian. </string>
     <string name="PlagueDoctorQuest_4_1_InProgress">Lima _Dwarf Warlock_, tubuh mereka masih berdenyut dengan gema lemah sihir gelap! Bawakan mereka untukku, dan aku akan memberimu hadiah berupa ramuan kekuatan yang tak tertandingi – sebuah _Potion of Might_ yang akan memberimu kekuatan sepuluh orang!</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Dwarf! Para penghuni bawah tanah yang keras kepala, terobsesi dengan permata dan emas. Tapi _Dwarf Warlock_-lah yang aku inginkan… sihir terpelintir mereka, didorong oleh kedalaman tempat mereka tinggal. Lima, aku butuh lima dari jiwa-jiwa layu itu! Tubuh mereka memegang kunci untuk memahami suatu… fenomena. Sesuatu tentang menyalurkan energi arkan melalui bumi itu sendiri. Aku percaya aku dekat dengan terobosan, tapi aku butuh esensi mereka, sihir terkutuk mereka! *Dia batuk dengan keras ke sapu tangannya, noda gelap menyebar di kain halus itu*</string>
+    <string name="PlagueDoctorQuest_4_2_Epilogue">Hebat! Lima _Kobold Pembekal Es_, esensi es mereka sekarang milik saya untuk menjelajahi! Koneksi mereka dengan padang es yang membeku, sungguh menakjubkan. Cara mereka memanipulasi air itu sendiri… benar-benar luar biasa.  *Dia menyerahkan Anda sebotol berkilau yang terisi cairan merah menyala* Ini, untuk usaha berani Anda: _Ramuan Kekuatan_! Minumlah dan rasakan kekuatan sepuluh prajurit mengalir melalui pembuluh darah Anda! Ingat, pengetahuan adalah kekuatan… dan kekuatan adalah senjata satu-satunya yang kita miliki melawan kegelapan yang mendekat. Sekarang… mari kita bedah jiwa-jiwa es ini dan temukan rahasia mengerikannya!</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Ambil lima _Kobold Icemancer_ mati! Tubuh beku mereka menyimpan kunci untuk membuka rahasia sihir dingin mereka!</string>
+    <string name="PlagueDoctorQuest_4_2_Prologue">*Jari-jari kerangkanya mengetuk ritmis di atas sebuah periuk mendidih, udara di sekelilingnya dipenuhi bau menyengat belerang dan pembusukan*
+_Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-gua beku mereka, memegang erat sihir es mereka. Aku butuh lima dari mereka, mayat beku mereka akan menjadi... menerangi. Penguasaan es mereka, itu... aneh. Aku percaya mereka mengakses energi purba, kekuatan tidur di bawah permukaan dunia ini.</string>
+    <string name="PlagueDoctorQuest_5_1_Epilogue">*Dia menatap dua _succubi_, senyum kebahagiaan merekah di balik topengnya.* Luar biasa! Gemilang! Ini akan membuka begitu banyak… kemungkinan! *Dia menoleh kepada anda, suaranya tebal dengan terima kasih… dan sesuatu yang lain.* Usaha anda… tidak akan dilupakan. Saya berhutang terima kasih yang paling mendalam kepada anda. *Pandangannya bertahan pada _succubi_ selama beberapa saat terlalu lama, sebelum dia mundur ke laboratoriumnya, bergumam tentang membuka rahasia pesona.</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Pikirannya mengembara saat dia berbicara, suaranya semakin pelan, hampir berbisik.* Bawakan aku dua _succubus_... hidup-hidup. Kekuatan mereka... itu... menakjubkan.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Dia gagap, suaranya serak seperti ranting rapuh*. A-ah, _succubi_! Dua... ya, dua, hidup! Ini... hem... untuk penelitian saya! Anda lihat... feromon mereka... ini penting untuk memahami keseimbangan halus dari... ah... *Ia terdiam, tangannya yang berotot mencoba menyesuaikan topengnya dengan gugup, matanya menatap Anda dengan intensitas demam.* Mereka... esensi... ini sebuah teka-teki... teka-teki indah, misterius! *Ia batuk keras, mencoba mengumpulkan kembali ketenangannya.* Saya berjanji, untuk membawa saya dua dari makhluk... ini... Anda akan mendapatkan rasa terima kasih saya selamanya. Anggap saja ini sebagai... ganjaran ilmu pengetahuan! Ya! Untuk ilmu pengetahuan!</string>
+    <string name="PlagueDoctorQuest_AllDone">*Dia mengeluarkan tawa kering yang serak.* \&quot;Pencapaianmu, itu membuka rahasia di luar ukuran! Pengetahuan yang diperoleh... itu berdenyut di dalamku, sebuah simfoni penemuan. Tapi pengetahuan,\&quot; katanya, suaranya turun menjadi bisikan konspiratif, \&quot;pengetahuan adalah kekuatan. Dan kekuatan... ah... itu adalah eliksir yang paling memabukkan.\&quot; Dia menatapmu intens selama sesaat, matanya yang zambrud membakar dengan intensitas demam. \&quot;Mungkin,\&quot; bisiknya, \&quot;jalanku akan bersilangan denganmu lagi. Karena masih banyak... misteri... yang belum terungkap.\&quot;</string>
     <string name="PlagueDoctor_Desc">Seluruh tubuh orang bungkuk ini disembunyikan di bawah jumpsuit kulit. Juga, dari dia datang bau obat yang pahit dan ... bawang putih?</string>
 
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">dokter wabah</string>
     <string name="PlagueDoctor_Name_Objective">dokter wabah</string>
     <string name="Plant_ACPlant">TANAM</string>
@@ -1631,6 +1693,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="RatKingCrown_Name">mahkota raja tikus</string>
     <string name="RatKing_Desc">Tikus ini lebih besar dari tikus marsupial dan memakai mahkota kecil di kepalanya.</string>
     <string name="RatKing_Died">Raja sudah mati. Panjang umur raja!</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">Saya tidak tidur!</string>
     <string name="RatKing_Info2">Apa ini? Saya tidak punya waktu untuk ini. Kerajaanku tidak berjalan dengan sendirinya.</string>
     <string name="RatKing_Info3">Beraninya kau, makhluk lemah, mengganggu Ratness Kami?!</string>
@@ -1642,6 +1705,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="RatSkull_Info2">Di sisi lain, ini menunjukkan bahwa pemiliknya mampu membunuh tikus, bahkan tikus besar dan bau.</string>
     <string name="RatSkull_Name">tengkorak tikus raksasa</string>
     <string name="Rat_Desc">Tikus marsupialia bersifat agresif, tapi penghuni lemah di saluran bawah tanah. Mereka dapat menjadi berbahaya dalam jumlah banyak.</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">tikus marsupialia</string>
     <string name="Rat_Name_Objective">tikus marsupialia</string>
     <string name="Ration_Info">Tidak ada yang berkualitas tinggi disini: daging kering, beberapa biskuit - sesuatu seperti itu.</string>
@@ -1661,6 +1725,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ResultDescriptions_Hunger">Mati kelaparan pada level %d</string>
     <string name="ResultDescriptions_Immured">Terkubur dalam batu di level %d</string>
     <string name="ResultDescriptions_Mob">Dibunuh oleh %1$s pada level %2$d</string>
+    <string name="ResultDescriptions_Necromancy">Kehabisan tenaga hidup sambil mencoba menghidupkan mayat di level %d</string>
     <string name="ResultDescriptions_Necrotism">Mati karena Nekrotisme pada level %d</string>
     <string name="ResultDescriptions_Ooze">Dibunuh oleh lumpur membakar pada level %d</string>
     <string name="ResultDescriptions_Poison">Mati keracunan pada level %d</string>
@@ -1737,6 +1802,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="RottenMeat_Info">sepotong daging busuk</string>
     <string name="RottenMeat_Name">daging busuk</string>
     <string name="RottenOrgan_Info">A organ tubuh yang membusuk dipanen dari musuh yang dikalahkan. Meskipun dalam keadaan busuk, organ ini mengandung senyawa berharga untuk proses alkimia.</string>
+    <string name="RottenOrgan_Name">Organ Busuk</string>
     <string name="RottenPasty_Info">pastel yang terlihat sangat menjijikan</string>
     <string name="RottenPasty_Name">pastel busuk</string>
     <string name="RottenPumpkinPie_Info">Tidak peduli seberapa enak dulunya saat masih segar, tidak ada cara benda ini untuk dimakan.</string>
@@ -1749,8 +1815,10 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="RottingFist_Name_Objective">tinjuan pembusukan</string>
     <string name="RoyalShield_desc">Sebuah perisai logam penuh. Ya, itu berat, tetapi hanya itu yang bisa memberi Anda perlindungan terbaik.</string>
     <string name="RoyalShield_name">Perisai Kerajaan</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Hanya pemanah terhebat dapat menggunakan busur rubi ini. Hampir semua panah akan menembus musuh, meninggalkan lubang besar di tubuhnya, tapi kekuatan ekstrim dibutuhkan untuk menarik tali busur ini.</string>
     <string name="RubyBow_Name">busur rubi</string>
+    <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Info">Senjata mematikan ini adalah hasil karya terbaik dari teknisi mesin para kurcaci.</string>
     <string name="RubyCrossbow_Name">Busur silang rubi</string>
     <string name="Rudolph_Info">Apa yang bisa lebih meriah daripada hidung merah yang bersinar? Bersama dengan sepasang tanduk, tentu saja.</string>
@@ -1867,6 +1935,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ServantNPC_Name">pelayan penginapan</string>
     <string name="ServantNPC_Name_Objective">pelayan penginapan</string>
     <string name="ServiceManNPC_Desc">Seorang pekerja tetap dari perusahaan lokal.</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Saya benar-benar minta maaf, tetapi setiap petualang baru hanya dapat menonton %d film secara total.</string>
     <string name="ServiceManNPC_Limit_Reached">Saya minta maaf, tetapi Anda telah mencapai batas Anda saat ini. Tetapi Anda akan dapat menggunakan layanan kami lagi untuk setiap level pahlawan yang Anda terima!</string>
     <string name="ServiceManNPC_Name">pekerja</string>
@@ -1881,6 +1950,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Shades_Name">Kaca mata</string>
     <string name="ShadowLord_Death">Tidaaaaak....</string>
     <string name="ShadowLord_Desc">Makhluk yang terbuat dari kejahatan dan kegelapan murni, banyak yang percaya bahwa ia sendiri adalah Dewa Tua mengingat betapa kuat dia. Dimana yang lainnya menganggap dia adalah penjaga dari ruang Dewa Tua.</string>
+    <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Persiapkan dirimu!</string>
     <string name="ShadowLord_Name">penguasa kegelapan</string>
     <string name="ShadowLord_Name_Objective">Penguasa Kegelapan</string>
@@ -1939,6 +2009,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SkeletonKey_Name">kunci tengkorak</string>
     <string name="Skeleton_Defense">tertahan</string>
     <string name="Skeleton_Desc">Tulang belulang terbuat dari tulang mayat petualang dan penghuni dugeon yang tidak beruntung, dirasuki oleh sihir jahat dari bawah. Setelah mereka cukup terluka, mereka akan hancur dalam ledakan tulang.</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">Anda terbunuh karena ledakan tulang...</string>
     <string name="Skeleton_Name">tulang belulang</string>
     <string name="Skeleton_Name_Objective">tulang belulang</string>
@@ -1971,6 +2042,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">Itu adalah pecahan yang diambil dari sisa-sisa toples jiwa. Itu berkilauan dengan kekuatan misterius, mungkin ada seseorang yang tertarik dengan hal seperti ini.</string>
     <string name="SoulShard_Name">pecahan jiwa</string>
+    <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">Tongkat kayu ramping berujung dengan besi yang tajam.</string>
     <string name="Spear_Name">tombak</string>
     <string name="SpeedBuff_Info">Kelincahan dan energi memancar dari tubuh, dan gerakan terasa lebih cepat dari biasanya.</string>
@@ -1984,12 +2056,14 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Spells_NotInOwnBody">Anda tidak dapat melakukan %s saat jiwa Anda terpisah dari tubuh.</string>
     <string name="Spells_NotTooFast">%s belum siap digunakan</string>
     <string name="Spells_SummonLimitReached">%1$s: batas pemanggilan tercapai (Batas saat ini: %2$d)!</string>
+    <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">zirah ini terbuat dari kitin laba-laba tua dan beberapa jenis pakaian. yang paling mengejutkan, ternyata masih mengandung fungsi kelenjar laba-laba. jika Anda menekan lempengan cukup keras, kemudian mereka menembak jaring. Dan sol bergerigi memungkinkan Anda untuk bergerak bebas di jenis jaring seperti itu.</string>
     <string name="SpiderArmor_Name">zirah laba-laba</string>
     <string name="SpiderCharm_Info">Perhiasan eksotis ini diselimuti aura misterius. Siapa tau, apa yang terjadi bila ada yang memakainya?</string>
     <string name="SpiderCharm_Name">Jimat Laba-Laba</string>
     <string name="SpiderCharm_Use">GUNAKAN</string>
     <string name="SpiderEgg_Desc">Telur rapuh ini berdenyut dengan cepat, di dalamnya Anda dapat melihat sesuatu dengan banyak kaki.</string>
+    <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">telur laba-laba</string>
     <string name="SpiderEgg_Name_Objective">telur laba-laba</string>
     <string name="SpiderElite_Desc">Sama seperti tentara, penjaga laba-laba bersumpah untuk melindungi kerajaan mereka. Racun penjaga elit digunakan untuk membingungkan target mereka.</string>
@@ -1997,6 +2071,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpiderElite_Name">penjaga elit laba-laba</string>
     <string name="SpiderElite_Name_Objective">penjaga elit laba-laba</string>
     <string name="SpiderExploding_Desc">Pekerja keras saat damai, makhluk ini tidak akan ragu untuk menyerang musuh mereka dan mengambil tanaman pertama yang mereka lalui, mengubah mereka menjadi bom hidup.</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">laba-laba pekerja</string>
     <string name="SpiderExploding_Name_Objective">laba-laba pekerja</string>
     <string name="SpiderGuard_Desc">Mirip seperti tentara laba-laba penjaga telah bersumpah untuk melindungi kerajaan mereka. Racun dari penjaga dipakai untuk membekukan target mereka yang menyebabkan kelumpuhan.</string>
@@ -2018,6 +2093,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="SpiderQueenCarapace_Name">Karapas Ratu Laba-laba</string>
     <string name="SpiderQueen_Desc">Tubuh dari perempuan cantik campur laba-laba mengerikan. Semua makhluk di sarang ini adalah pembantunya. Menemui perempuan hebat ini dapat menjadi pengalaman yang mematikan. Karena Anda adalah penyusup!</string>
     <string name="SpiderQueen_DieInfo">Ratu Laba-laba terbunuh! Sekarang saya harus kembali ke level 5 dan melanjutkan perjalanan ke Kedalaman.</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">ratu laba-laba</string>
     <string name="SpiderQueen_Name_Objective">ratu laba-laba</string>
     <string name="SpiderServant_Desc">Tentara adalah unit terbanyak di sarang laba-laba. Lahir untuk menjaga wilayahnya. Chelicerae tentara membentuk kelenjar beracun untuk meracuni musuhnya.</string>
@@ -2051,6 +2127,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="StartScene_No">tidak, kembali ke menu utama</string>
     <string name="StartScene_Really">Apa anda yakin memulai permainan baru?</string>
     <string name="StartScene_Unlock">Untuk membuka kelas karakter ini, bunuh bos DM-300 dengan kelas lainnya</string>
+    <string name="StartScene_UnlockDoctor">解鎖瘟疫醫生 - 完成舊瘟疫醫生的任務</string>
     <string name="StartScene_UnlockElf">Untuk membuka kelas karakter ini, bunuh bos Raja dengan kelas lainnya</string>
     <string name="StartScene_UnlockGnoll">Untuk membuka kelas ini, Anda harus membujuk pendeta kota untuk menyembuhkan Gnoll Kasar</string>
     <string name="StartScene_UnlockNecromancer">Untuk membuka kelas karakter ini, bunuh Lich dengan kelas lain.</string>
@@ -2089,6 +2166,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Sungrass_Name">Sungrass</string>
     <string name="SurfaceScene_GameOver">Permainan Berakhir</string>
     <string name="SuspiciousRat_Desc">Tikus bukanlah penampakan yang tidak biasa di dungeon ini, tapi untuk tikus ini tinggal sangat dalam... Anda dapat melihat tikus ini kejang-kejang di seluruh tubuhnya saat bergerak.</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">Tikus mencurigakan ini menyentak dengan kuat.</string>
     <string name="SuspiciousRat_Name">Tikus mencurigakan</string>
     <string name="SuspiciousRat_Name_Objective">Tikus mencurigakan</string>
@@ -2103,11 +2181,13 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">Panjang mata pedang baja yang sangat tajam ini berkilau dengan meyakinkan.</string>
     <string name="Sword_Name">pedang</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Kapak lempar ini tidak terlalu berat, tapi tetap membutuhkan kekuatan berarti untuk digunakan secara efektif.</string>
     <string name="Tamahawk_Name">kapak</string>
     <string name="TenguLiver_Info">Hati ini milik musuh yang perkasa. Hanya dengan melihatnya, naluri liar Anda mengambil alih, dan Anda merasakan dorongan untuk mengkonsumsinya.</string>
     <string name="TenguLiver_Name">hati tengu</string>
     <string name="Tengu_Desc">Tengu adalah anggota dari klan pembunuh kuno, yang juga bernama Tengu. Pembunuh ini dikenal atas penggunaan jebakan dan shuriken yang banyak.</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">Bebas akhirnya...</string>
     <string name="Tengu_Info2">Tertangkap, %s!</string>
     <string name="Tengu_Info3">Kena kau, %s!</string>
@@ -2145,6 +2225,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="ToughShield_desc">Perisai yang diperkuat dengan tali kulit ini terlihat lebih tangguh daripada yang terbuat dari kayu. Itu pasti bisa memblokir lebih banyak kerusakan.</string>
     <string name="ToughShield_name">Perisai yang diperkuat kulit</string>
     <string name="TownGuardNPC_Desc">Penjaga kota biasa</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">Terus berjalan</string>
     <string name="TownGuardNPC_Message2">Terima kasih pada petualang sepertimu, disini menjadi sangat damai.</string>
     <string name="TownGuardNPC_Message3">Anda pikir ada terlalu banyak penjaga di kota ini? Yah, itu karena ini adalah satu-satunya kota dengan Dungeon raksasa yang dipenuhi monster, bukan?</string>
@@ -2178,6 +2259,8 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="TownsfolkSilentNPC_Name_Objective">penduduk lokal</string>
     <string name="ToxicGas_Info">Awan beracun kehijauan berputar-putar di sini.</string>
     <string name="ToxicGas_Info1">Kamu mati karena menghirup gas beracun...</string>
+    <string name="ToxicGland_Info">Kelenjar beracun yang dipanen dari musuh yang dikalahkan. Kelenjar ini dipenuhi racun kuat dan dapat digunakan dalam proses alkimia.</string>
+    <string name="ToxicGland_Name">Kelenjar Toksik</string>
     <string name="TrapWnd_Step">Apakah Anda benar-benar ingin menginjak jebakan ini? Anda mungkin bisa mati.</string>
     <string name="TrapWnd_Title">Jebakan</string>
     <string name="TreacherousSpirit_Desc">Makhluk mengerikan ini terlihat seperti awan kegelapan yang hidup. Mata raksasa itu menatap Anda, sambil berdenyut dengan setiap gerakan yang Anda lakukan.</string>
@@ -2300,6 +2383,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WarriorArmor_NotWarrior">Hanya pejuang yang dapat menggunakan zirah ini!</string>
     <string name="WarriorArmor_Prompt">Pilih arah untuk melompat</string>
     <string name="WaterElemental_Desc">Elemental air dapat ditemukan di dekat jumlah air yang banyak. Biasanya gelombang yang terikat dengan ajaib ini hanya berkelana.</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name">elemental air</string>
     <string name="WaterElemental_Name_Objective">elemental air</string>
     <string name="WaterOfAwareness_Info"> The power of knowledge radiates from the water of this well. Take a sip from it to reveal all secrets of your equipped items.</string>
@@ -2366,19 +2450,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     -- Efek cahaya untuk Monster\n
     - Bug diperbaiki\n
     </string>
-    <string name="Welcome_Text_32_1">
-    remix.32.1\n
-    - Gameplay:\n
-    -- Jalur quest Plague Doctor\n
-    -- Bangkai mob sekarang menjadi item yang agak berguna\n
-    -- Kontrol peliharaan yang lebih baik\n
-    - UX:\n
-    -- Peningkatan manajemen save-game\n
-    - Modding:\n
-    -- Metode instalasi mod lokal\n
-    -- Item kustom sekarang dapat melakukan aksi saat berada di tumpukan\n
-    - Bug diperbaiki\n
-    </string>
+    <string name="Welcome_Text_32_1">remix.32.1\n- Gameplay:\n-- Plague Doctor quest line\n-- Mob carcasses now somewhat usable items\n-- Better pets control\n- UX:\n-- Improved save-game management\n- Modding:\n-- Local mod installation methods\n-- Custom items now can perform actions while being in heaps\n- Bugs fixed</string>
     <string name="Welcome_Title">Selamat Datang!</string>
     <string name="WindGust_Info">Memanggil hembusan angin yang kuat, yang mendorong pergi karakter yang dipilih.</string>
     <string name="WindGust_Name">Hembusan angin yang keras</string>
@@ -2400,9 +2472,12 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndCryptoDonate_currency">Mata Uang</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Anda dapat mendukung pengembangan Remixed Dungeon dengan mengirimkan donasi cryptocurrency ke alamat di bawah ini. Terima kasih atas dukungan Anda yang murah hati!</string>
-    <string name="WndCryptoDonate_openWallet">Buka Dompet</string>
+    <string name="WndCryptoDonate_openWallet">Dompet Aç</string>
     <string name="WndCryptoDonate_supportDev">Dukung Pengembang</string>
+    <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
+    <string name="WndCryptoDonate_walletAddress">Alamat Dompet</string>
+    <string name="WndCryptoDonate_warningText">PERINGATAN: Mengirim dana, pastikan alamatnya. Transaksi kripto tidak bisa dibatalkan!</string>
     <string name="WndCustomizations_Title">Penyesuaian </string>
     <string name="WndDonate_commonDonateText">Remix Dungeon - bebas untuk semua orang dan akan selalu di Namun, Anda dapat membantu kami melakukan permainan lebih baik \nSelain \nDari terima kasih yang tulus kami Anda akan mendapatkan beberapa perbaikan kosmetik...</string>
     <string name="WndDonate_donate">donasi:</string>
@@ -2484,6 +2559,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndInstallingMod_skipping_file">Melewati %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Jalankan Resep</string>
     <string name="WndItemAlchemy_SelectRecipe">Pilih resep</string>
+    <string name="WndItemAlchemy_Title">Resep alkimia dengan %s</string>
     <string name="WndItemAlchemy_Transmute">Transmutasi</string>
     <string name="WndJournal_Levels">Level</string>
     <string name="WndJournal_Logbook">Buku catatan</string>
@@ -2494,6 +2570,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndLibrary_Items_Btn">Item</string>
     <string name="WndLibrary_Levels_Btn">Dungeon</string>
     <string name="WndLibrary_Mobs_Btn">raksasa</string>
+    <string name="WndLocalModInstall_pick">Pilih</string>
     <string name="WndLocalModInstall_text">Pilih direktori untuk menginstal mod dari sana.</string>
     <string name="WndLocalModInstall_title">Pasang mod dari direktori lokal</string>
     <string name="WndModInstall_InstallingMod">Menginstal mod</string>
@@ -2588,6 +2665,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="WndSettings_Brightness">Kecerahan</string>
     <string name="WndSettings_ClassicFont">Font Klasik</string>
     <string name="WndSettings_ExperementalFont">Font Baru</string>
+    <string name="WndSettings_FpsLimit">FPS limit</string>
     <string name="WndSettings_GameplaySettings">Aturan main</string>
     <string name="WndSettings_Handedness">Penggunaan tangan</string>
     <string name="WndSettings_Immersive">Mode yang lebih mendalam</string>
@@ -2675,9 +2753,11 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="YogsBrain_Name">otak yog</string>
     <string name="YogsBrain_Name_Objective">otak Yog</string>
     <string name="YogsEye_Desc">Mata dari Dewa Tua, pandangan yang melihat semuanya dipenuhi dengan kebencian abadi. Anda dapat merasakannya melihat langsung ke jiwa Anda.</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">mata yog</string>
     <string name="YogsEye_Name_Objective">mata Yog</string>
     <string name="YogsHeart_Desc">Selama berabad-abad orang-orang percaya bahwa hanya makhluk yang tidak berhati yang dapat melakukan perlakuan kejahatan murni. Dan di sini dia, hati besar yang berdetak dari Dewa Tua itu sendiri.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">hati yog</string>
     <string name="YogsHeart_Name_Objective">hati Yog</string>
     <string name="YogsTeeth_Desc">Mulut besar dari Dewa Tua terisi oleh gigi-gigi yang sangat tajam. Sebuah manifestasi yang cocok mengenai keinginannya untuk menghancurkan dan memakan semua makhluk.</string>
@@ -2948,6 +3028,102 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

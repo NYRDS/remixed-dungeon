@@ -21,6 +21,7 @@
     <string name="AboutScene_Txt_Intro">Remixed Dungeon por NYRDS baseado em Pixel Dungeon Source por Watabou.</string>
     <string name="Accuracy_Decreased">Por que eu pensei que poderia usar %s? Ferramenta errada, mãos erradas!</string>
     <string name="Accuracy_DecreasedDoctor">Cada golpe deste %s espalha imperfeição. Meu Serra Óssea cura… isso infecta.</string>
+    <string name="Accuracy_DecreasedDoctorBareHands">Mãos nuas contaminam minha técnica. Sem o corte limpo da Serra, minha mira apodrece em caos.</string>
     <string name="Acidic_Desc">Estas enormes criaturas demoníacas parecidas com aracnídeos evitam o combate de perto, disparando pontas serrilhadas de longas distâncias.</string>
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">escorpião ácido</string>
@@ -47,6 +48,7 @@
     Você pode desativar essa função qualquer momento (clique no ícone de gráficos na tela de título)
     </string>
     <string name="AllowStatisticsCollectionScene_Title">Coleção das estatísticas do usuário</string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">A solução na ponta desta flecha transformará qualquer um em uma besta furiosa, implacável e sem piedade.</string>
     <string name="AmokArrow_Name">Flecha de Fúria</string>
     <string name="AmokBuff_Info">Sinta a loucura, tirando a vida daqueles infelizes.</string>
@@ -61,6 +63,8 @@
     <string name="Amulet_Info">O Amuleto de Yendor é o mais poderoso artefato conhecido de origem desconhecida. Diz-se que o amuleto é capaz de cumprir qualquer desejo se a força de vontade do seu dono é forte o suficiente para \&quot;convencer\&quot; a fazê-lo.</string>
     <string name="Amulet_Name">Amuleto de Yendor</string>
     <string name="AnesthesiaBuff_Info">Não sente dor e não acorda com ataques, mas ainda recebe dano.</string>
+    <string name="AnesthesiaBuff_Name">Anesthesia</string>
+    <string name="Anesthesia_Cast">%s cai em um sono profundo e sem sonhos.</string>
     <string name="Anesthesia_Info">Induz uma sono profundo e antinatural no seu alvo. Mesmo os ataques mais violentos não irão acordá-los desse sono.</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">O antigo símbolo da imortalidade concede uma capacidade de voltar à vida após a morte. Após a ressurreição todos os itens não equipados são perdidos.</string>
@@ -91,6 +95,7 @@
     <string name="ArmoredStatue_Name_Objective">estátua animada</string>
     <string name="Artifact_Limit">Você só pode usar 2 artefatos ao mesmo tempo.</string>
     <string name="AttackDelay_Increased">Não consigo empunhar o %s assim. Golpes lentos, respiração pesada…</string>
+    <string name="Attack_Cooldown">Tempo de espera entre ataques</string>
     <string name="Attack_Range">Alcance de ataque</string>
     <string name="AwarenessBuff_Info">Os sentidos se aguçaram, dando mais consciência do ambiente.</string>
     <string name="AwarenessBuff_Name">Consciência</string>
@@ -185,6 +190,7 @@
     <string name="Badges_StrengthAttained4">19 pontos de Força adquiridos</string>
     <string name="Badges_StrengthAttained5">21 pontos de Força adquiridos</string>
     <string name="Badges_Supporter">Obrigado pelo seu apoio!</string>
+    <string name="Badges_ThisIsSparta">This is Sparta!!!</string>
     <string name="Badges_Victory">Amuleto de Yendor adquirido</string>
     <string name="Badges_VictoryAll">Amuleto de Yendor adquirido por todas as classes</string>
     <string name="Badges_Yasd">Morto por Fogo, Envenenamento, Gás Tóxico &amp;amp; Fome</string>
@@ -196,7 +202,7 @@
     <string name="Bandit_Name_Objective">bandido louco</string>
     <string name="BardNPC_Desc">O bardo da cidade está tocando seu alaúde.</string>
     <string name="BardNPC_Gender">masculine</string>
-    <string name="BardNPC_Name">bardo</string>
+    <string name="BardNPC_Name">Bardo</string>
     <string name="BardNPC_Name_Objective">bardo</string>
     <string name="BardSong_1">Minha esposa e eu moramos sozinhos,\nEm uma pequena cabana de madeira, nós chamávamos de nossa\nEla adorava gin, e eu adorava rum\nConto o que nos divertimos muito.</string>
     <string name="BarkskinBuff_Info">O corpo é coberto por casca que bloqueia alguns danos sofridos.</string>
@@ -214,6 +220,7 @@
     <string name="BattleAxe_Info">A enorme cabeça de ferro deste Machado de Batalha causa danos a cada golpe por causa do grande peso.</string>
     <string name="BattleAxe_Name">Machado de Batalha</string>
     <string name="Bee_Desc">Apesar de seu pequeno tamanho, as abelhas tendem a proteger sua colmeia ferozmente. Embora elas não vivam muito.</string>
+    <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name">abelha</string>
     <string name="Bee_Name_Objective">abelha</string>
     <string name="BellaNPC_Amulet_F">Oi querida, o que você tem aí? Ah, que amuleto elegante! E você ... você não parece ser uma plebeia. Gostaria de dar um passeio e discutir o nosso futuro juntos?</string>
@@ -257,6 +264,7 @@
     <string name="BlackSkullOfMastery_Title">Você pode quebrar o feitiço. Ou você pode manipular a magia de uma forma que lhe permita consumir o poder do feitiço e próprio artefato em si, tornando-se um Lich.</string>
     <string name="BlackSkull_Activated">O Crânio Negro despertou!</string>
     <string name="BlackSkull_Deactivated">O Crânio Negro adormeceu, mais uma vez...</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Um pequeno crânio de obsidiana. Era uma das fontes dos poderes de Necropolis, mas após a derrota do Lich, parece que perdeu todos os seus poderes. Mas, enquanto você a segura em suas mãos, um pensamento estranho vem à sua mente: \&quot;Estou com fome\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">O crânio está emitindo poder, você pode vê-lo escorrendo dos olhos vazios do crânio. E, enquanto você a segura em suas mãos, você pode ouvir a voz tenebrosa dizendo: \&quot;A morte se aproxima\&quot;</string>
     <string name="BlackSkull_Name">crânio negro</string>
@@ -289,6 +297,7 @@
     <string name="BlindnessBuff_Info">Completamente cego, apenas os sons ao redor podem ser ouvidos.</string>
     <string name="BlindnessBuff_Name">Cego</string>
     <string name="BloodTransfusion_Drained">O essência da vida flui do seu animal de estimação para você.</string>
+    <string name="BloodTransfusion_FullHP">Seu sangue já está em capacidade total.</string>
     <string name="BloodTransfusion_Info">Drena quase todo o sangue de um alvo para curar a si mesmo. Um ritual sombrio de sacrifício e sobrevivência.</string>
     <string name="BloodTransfusion_Name">Transfusão de Sangue</string>
     <string name="BloodTransfusion_WontAgreed">Cel targetski opor jest ekstrakcja jego esencji życiowej.</string>
@@ -296,7 +305,9 @@
     <string name="BodyArmorBuff_Name">Armadura Corporal</string>
     <string name="BodyArmorSpell_Info">Ativa o poder muscular reservado, os tornando mais fortes temporariamente, isso aumentará sua defesa, porem diminuirá sua velocidade de movimento.</string>
     <string name="BodyArmorSpell_Name">Armadura Corporal</string>
+    <string name="BoneSaw_Info">Uma serra cirúrgica de precisão projetada para dissecação rápida. Seu dano e velocidade de ataque ficam mais letais com a habilidade do Doutor da Peste. Golpes críticos extraem partes colhíveis adicionais dos inimigos, e ela ataca com eficiência impiedosa contra inimigos paralisados.</string>
     <string name="BoneSaw_Name">Serra de Ossos</string>
+    <string name="BoneShard_Info">Um fragmento de osso afiado colhido de um inimigo derrotado. Estes fragmentos são surpreendentemente duráveis e úteis na fabricação.</string>
     <string name="BoneShard_Name">Fragmento de osso</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Lançada para o inimigo esse míssil liso de madeira curvada voltará para as mãos de seu lançador.</string>
@@ -315,6 +326,7 @@
     <string name="BurningBuff_Info">O corpo está envolto em chamas furiosas!</string>
     <string name="BurningBuff_Name">Queimando</string>
     <string name="BurningFist_Desc">Punho Queimando do Deus Antigo</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">punho queimando</string>
     <string name="BurningFist_Name_Objective">punho queimando</string>
     <string name="Burning_Burns">%s está queimando!</string>
@@ -328,6 +340,7 @@
     <string name="CagedKobold_Name">Kobold enjaulado</string>
     <string name="CagedKobold_Name_Objective">Kobold enjaulado</string>
     <string name="CagedKobold_Quest_End">Oh, obrigado, muito obrigado! como você conseguiu encontrar a chave? você...você destruiu a arma?! isso é incrível! quer saber de uma coisa, eu disse que iria te ajudar, e eu acho que sei a melhor maneiro de fazê-lo. Eu vou me colar com você por um tempo. * Kobold enjaulado se transformou em uma vela.</string>
+    <string name="Calm_Cast">%1$s calma-se.</string>
     <string name="Calm_Info">Há muitas criaturas agravadas por aí, vamos ajudá-las.</string>
     <string name="Calm_Name">Calmo</string>
     <string name="CandleOfMindVision_Info">Parece uma vela normal, não é algo que você esperaria encontrar em um calabouço perigoso. Curiosamente é muito quente, apesar de não estar acesa.</string>
@@ -341,8 +354,13 @@
     <string name="Capotain_Info">Um chapéu alto de aba pequena. Geralmente é usado por puritanos, mas você não precisa ser religioso para usa-lo. Por algum motivo, possui uma placa de identificação, que diz \&quot;Salomão\&quot;.</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_Devoured">\&quot;Você devorou o cadáver de %s!\&quot;</string>
+    <string name="Carcass_DissectFailed">Você disseca o %s mas não encontra nada de valor.</string>
+    <string name="Carcass_DissectMessage">Você diseca o cadáver e obtém um %s.</string>
     <string name="Carcass_DissectResult">Do %1$s você obtém %2$d colheita %3$s.</string>
     <string name="Carcass_Info">restos de %s totalmente morto.</string>
+    <string name="Carcass_Kick">This %s is totally dead, no need to kick it.</string>
+    <string name="Carcass_Name">remains of %s</string>
+    <string name="Carcass_Necromancy">Você ergueu um cadáver de %s!</string>
     <string name="Carcass_Necromancy_Failed">\&quot;Sua tentativa de levantar o cadáver de %s falhou!\&quot;</string>
     <string name="Carcass_TooFarToDissect">Você precisa estar mais perto para dissecar a carcaça.</string>
     <string name="Caves_TileDescBookshelf">Quem precisa de uma estante de livros em uma caverna?</string>
@@ -379,6 +397,8 @@
     <string name="ChampionOfEarthBuff_Name">Campeão da Terra</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Infundido com a fúria das chamas, esta característica amplifica a ferocidade e a proeza em combate da criatura. O Campeão do Fogo surge como um adversário temível, desferindo ataques devastadores que podem envolver seus inimigos em chamas abrasadoras, incutindo terror em todos que ousam se opor a ele.</string>
     <string name="ChampionOfFireBuff_Name">Campeão do Fogo</string>
+    <string name="ChampionOfWaterBuff_Info">O Campeão da Água encarna a força indomável dos oceanos, aumentando a resiliência e a fortaleza da criatura. Como resultado, torna-se um adversário firme, capaz de resistir a um bombardeio incessante de ataques e se manter como um guardião inflexível diante da adversidade.</string>
+    <string name="ChampionOfWaterBuff_Name">Campeão da Água</string>
     <string name="ChaosArmor_Info">As placas de sangue vermelho desta armadura é costurada junto com correntes vermelhas escuras. Ele irradia energia caótica enquanto você a toca.</string>
     <string name="ChaosArmor_Name">Armadura do Caos</string>
     <string name="ChaosBow_Gender">masculine</string>
@@ -403,6 +423,7 @@
     <string name="ChaosHelmet_Info">Um capacete vermelho sangue é um símbolo essencial de um guerreiro do caos.</string>
     <string name="ChaosHelmet_Name">Capacete do Caos</string>
     <string name="ChaosShield_desc">O Escudo do Caos é o resultado de fundir um Cristal do Caos com um escudo comum, fazendo com que ele manifeste efeitos caóticos aleatórios ao bloquear com sucesso.</string>
+    <string name="ChaosShield_name">Escudo do Caos</string>
     <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Uma varinha possuída pelo Poder do Caos! O que mais um mago pode sonhar em ter?</string>
     <string name="ChaosStaff_Name">Vara do Caos</string>
@@ -410,6 +431,7 @@
     <string name="ChaosSword_Info">A lâmina da espada é feita de puro caos e às vezes ela vibra intensamente. Um grande poder está guardado dentro da arma, que pode cortar pela metade qualquer coisa. Porém é necessário uma grande habilidade para usar a poderosa força desta arma.</string>
     <string name="ChaosSword_Name">Espada do Caos</string>
     <string name="CharAction_Charm">charme</string>
+    <string name="CharAction_Expel">mengusir</string>
     <string name="CharAction_Give">dar</string>
     <string name="CharAction_Hit">acertar</string>
     <string name="CharAction_Order">ordem</string>
@@ -538,6 +560,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">Flecha comum de madeira com ponta de ferro.</string>
     <string name="CommonArrow_Name">flecha</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">Esta besta reforçada revela-se uma ferramenta mais eficiente em comparação com a sua contrapartida de madeira.</string>
     <string name="CompositeCrossbow_Name">Besta de compósito</string>
     <string name="CompoundBow_Gender">masculine</string>
@@ -565,6 +588,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">cristal flutuante</string>
     <string name="Crystal_Name_Objective">cristal flutuante</string>
+    <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">Estes pequenos dardos malignos não fazer muito dano, mas eles podem paralisar o alvo deixando-o indefeso e imóvel por algum tempo.</string>
     <string name="CurareDart_Name">dardo envenenado</string>
     <string name="DM300_Desc">Esta máquina foi criada pelos anões há vários séculos. Mais tarde, os anões começaram a substituir as máquinas por golems, elementais e até mesmo demônios. Eventualmente, isso levou sua civilização ao declínio. O DM-300 e máquinas semelhantes foram normalmente utilizados para a construção e mineração e, em alguns casos, para a defesa da cidade.</string>
@@ -574,6 +598,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DM300_Info3">Pessoas não autorizadas detectadas.</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Uma adaga de ferro simples com um cabo de madeira bem gasto.</string>
     <string name="Dagger_Name">Adaga</string>
     <string name="Damage_Reduction">Redução de dano</string>
@@ -629,6 +654,10 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DieHardSpell_Info">Aumentará temporariamente a regeneração fazendo você realmente seja Duro de Matar</string>
     <string name="DieHardSpell_Name">Duro de Matar</string>
     <string name="Displacement_Txt">%s de deslocamento</string>
+    <string name="DoctorArmor_Info">Esta armadura do médico de peste permite o uso da habilidade \\&quot;Nuvem de Miasma\\&quot;, que libera um gás nocivo que envenena, enfraquece e desorienta os inimigos. O médico, protegido por sua máscara, é imune a esses efeitos.</string>
+    <string name="DoctorArmor_Name">Vestuário do Médico</string>
+    <string name="DoctorArmor_NotDoctor">Apenas médicos das pragas podem usar esta armadura!</string>
+    <string name="DoctorSpecial">Nuvem de Miasma</string>
     <string name="DogeMask_Info">Você já quis se disfarçar como o famoso Doge? Agora é sua chance!n\Esta máscara! Muitos disfarces! Uau!</string>
     <string name="DogeMask_Name">Máscara Doge</string>
     <string name="DonateButton_pleaseDonate">Por favor, considere doar</string>
@@ -649,6 +678,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Drink_ACDrink">BEBER</string>
     <string name="Drink_Message">Aquela bebida estava refrescante!</string>
     <string name="DrunkardNPC_Desc">cliente regular da pousada em estado natural</string>
+    <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">bêbado</string>
     <string name="DrunkardNPC_Name_Objective">bêbado</string>
     <string name="Drunkard_Phrase_1">MAI\' CEVEJA PO\' FAVÔ\'!</string>
@@ -702,8 +732,10 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Esta arma é feita de liga de metálica especial, tornando-a muito mais leve em comparação a uma adaga comum.</string>
     <string name="ElvenDagger_Name">adaga élfica </string>
+    <string name="EncumbranceBuff_CharAct_1">Não tenho força suficiente para manejar %s corretamente.</string>
     <string name="EncumbranceBuff_CharAct_2">Este %s é muito pesado para eu usar com eficácia.</string>
     <string name="EncumbranceBuff_CharAct_3">Preciso trabalhar na minha força antes de poder usar %s.</string>
+    <string name="EncumbranceBuff_CharAct_4">Eu não tenho força suficiente para usar %s ao seu pleno potencial.</string>
     <string name="EncumbranceBuff_CharAct_5">%s é demais para eu lidar agora.</string>
     <string name="EncumbranceBuff_Info">Não há força suficiente para usar %s de forma eficaz.</string>
     <string name="EncumbranceBuff_Name">Fardo</string>
@@ -724,6 +756,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="ExplodingSkull_Name">crânio explosivo</string>
     <string name="ExplodingSkull_Name_Objective">crânio explosivo</string>
     <string name="Eye_Desc">Um dos outros nomes deste demônio é \&quot;esfera de ódio\&quot;, porque quando vê um inimigo, ele usa seu Olhar da Morte de forma imprudente, muitas vezes ignorando seus aliados e ferindo-os.</string>
+    <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">Olhar da Morte de %s matou você...</string>
     <string name="Eye_Name">olho do mal</string>
     <string name="Eye_Name_Objective">olho do mal</string>
@@ -746,6 +779,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="FilteredMask_Info">Uma máscara respiratória é um dispositivo feito para proteger o usuário de inalar atmosferas perigosas, incluindo fumaças, vapores, gases e outras coisas como poeira e microrganismos transportados pelo ar.
   \n\nEssa máscara no entanto só serve como decoração.</string>
     <string name="FilteredMask_Name">Máscara respiratória</string>
+    <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">Esta flecha parece normal, exceto pela luz vermelha quente emanando da ponta.</string>
     <string name="FireArrow_Name">flecha de fogo</string>
     <string name="FireElemental_Desc">Elementais do fogo errantes são conhecidas por convocar outras entidades. Eles são muito caóticos e são dificeis de serem controlados até pelo mais poderoso Demonologista.</string>
@@ -804,6 +838,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Ghost_Defense">evitou</string>
     <string name="Ghost_Desc">O fantasma é pouco visível. Parece uma mancha disforme de luz fraca com uma cara triste.</string>
     <string name="Ghost_Name">fantasma triste</string>
+    <string name="Ghost_Name_Objective">fantasma</string>
     <string name="Ghost_Rat1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha vingança... Mate o _Rato Fétido_, que tomou a minha vida...</string>
     <string name="Ghost_Rat2">Por favor... Ajude-me... Mate essa abominação...</string>
     <string name="Ghost_Rose1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha _Rosa Seca_... É muito importante para mim... Algum monstro roubou de meu corpo...</string>
@@ -823,6 +858,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Gnoll_BecomeGuardianDesc">Torne-se um Guardião</string>
     <string name="Gnoll_BecomeWitchdoctorDesc">Torne-se um feiticeiro</string>
     <string name="Gnoll_Desc">Gnolls são pequenos humanóides. Eles moram nos esgotos e masmorras, aventurando-se para invadir a superfície de tempos em tempos. Gnolls Batedores normalmente são membros matilhas, eles não são tão fortes como os Gnolls Brutamontes e não tão inteligentes como os Xamãs.</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnoll batedor</string>
     <string name="Gnoll_Name_Objective">gnoll batedor</string>
     <string name="Gold_Collect">Colete moedas de ouro para gastá-las mais tarde em uma loja.</string>
@@ -844,6 +880,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">golem</string>
     <string name="Goo_Desc">Há pouco conhecimento sobre o Goo. É bem possível que ele não seja nem mesmo uma criatura, mas sim um conglomerado de substâncias provenientes dos esgotos que ganharam rudimentos de livre-arbítrio. De qualquer das formas, é óbvio que a magia negra está trabalhando aqui.</string>
+    <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">Goo está se bombeando para cima!</string>
     <string name="Goo_Info2">glurp... glurp...</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -883,12 +920,14 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HealerNPC_Name_Objective">Padre da cidade</string>
     <string name="Healing_Info">O pergaminho é crucial para todos os aventureiros. Ele pode restaurar 1/3 do máximo do hp dos conjuradores.</string>
     <string name="Healing_Name">Cura</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">A ponta desta flecha está coberta com poção de cura.</string>
     <string name="HealthArrow_Name">Flecha de Cura</string>
     <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">A ponta desse dardo está coberta com poção de cura.</string>
     <string name="HealthDart_Name">Dardo de Cura</string>
     <string name="Heap_Mimic">Isto é uma imitação!</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Coração negro pulsante do Espírito Traçoeiro</string>
     <string name="HeartOfDarkness_Name">Coração da escuridão</string>
     <string name="Hedgehog_Desc">Aquele ouriço parece nervoso.</string>
@@ -900,6 +939,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Hedgehog_Name">ouriço</string>
     <string name="HeroClass_Doctor">Médico da Peste</string>
     <string name="HeroClass_Elf">Elfo</string>
+    <string name="HeroClass_ElfPerks_0">Elfos começam com 15 pontos de Vida e 9 pontos de Força.</string>
     <string name="HeroClass_ElfPerks_1">Elfos são imunes ao enraizamento</string>
     <string name="HeroClass_ElfPerks_2">Elfos começam com um arco de madeira melhorado e um monte de flechas</string>
     <string name="HeroClass_ElfPerks_3">Elfos são peritos com arcos e ágeis</string>
@@ -934,6 +974,8 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HeroClass_PlagueDoctorPerks_0">Médicos da Peste colhem [yellow:Glândulas Tóxicas], [yellow:Órgãos Podres], [yellow:Fragmentos de Osso] de inimigos abatidos.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Comece com uma Máscara da Peste (imune a todos os gases) e uma Serra de Osso. Acertos críticos soltam partes extras, e a Serra causa +50% de dano a inimigos paralisados.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Comece com uma [yellow:Plague Mask] (imune a todos os Gases) e uma [yellow:Bone Saw]. Acertos críticos dropam partes extras, e a Serra causa x1.5 de dano a inimigos paralisados.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Poções de [yellow:Gás Paralisante] e [yellow:Gás Tóxico] são pré-identificadas.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Plague Doctors suffer great accuracy penalties without beloved Bone Saw in hand and cannot use ranged weapons.</string>
     <string name="HeroClass_Priest">Sacerdote</string>
     <string name="HeroClass_Rog">ladrão</string>
     <string name="HeroClass_RogPerks_0">Ladrões começam com um Anel de Sombras +1.</string>
@@ -1041,6 +1083,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="IceGuardianCore_Name">Guardião de gelo</string>
     <string name="IceGuardianCore_Name_Objective">Guardião de gelo</string>
     <string name="IceGuardian_Desc">Os Guardiões de Gelo são produzidos por Kbolds anciãos para proteger as suas cavernas. O poder armazenado no seu núcleo permite o Guardião de gelo reconstruir-se, desde que tenha energia suficiente.</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">Guardião de gelo</string>
     <string name="IceGuardian_Name_Objective">Guardião de gelo</string>
     <string name="IceKey_Info">Essa chave parece ter sido feita de gelo. mas é dura como aço.</string>
@@ -1096,6 +1139,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="ItemSprite_Info1">caiu: %1$.1f %2$.1f</string>
     <string name="Item_ACAlchemy">ALQUIMIA</string>
     <string name="Item_ACDrop">LARGAR</string>
+    <string name="Item_ACPickup">Pegar</string>
     <string name="Item_ACThrow">JOGAR</string>
     <string name="Item_DirThrow">Escoha a direção para jogar</string>
     <string name="Item_Info">smth</string>
@@ -1145,16 +1189,19 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="KoboldIcemancer_Name">mago-do-gelo Kobold </string>
     <string name="KoboldIcemancer_Name_Objective">mago-do-gelo Kobold </string>
     <string name="Kobold_Desc">Kobold são considerados lendas. Um ancestral comum dos gnolls, kobolds vivem em cavernas profundas e frias. Acredita-se que o seu povo dominou a engenharia e maquinaria  muito antes dos anões. No entanto, não se sabe por que eles desapareceram há anos atrás...</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="KrampusHead_Info">Você já se perguntou como seria assumir um papel mais sinistro em Dungeon? Bem, você certamente trará horror aos ratos bebês locais com essa aparência diabólica.</string>
     <string name="KrampusHead_Name">Cabeça de Krampus</string>
     <string name="KunaiThrow_Info">Este arremesso de Kunai Mortal será feito extremamente rápido, tão rápido que você nem conseguirá selecionar um alvo.\n\nMestres verdadeiros foram capazes de arremessar mais de uma Kunai de uma vez.</string>
     <string name="KunaiThrow_Name">Arremesso de Kunai</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Esta arma é constituída por uma foice em uma corrente de metal com um bloco de ferro na extremidade.</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">PUXAR</string>
     <string name="Larva_Desc">Larva do Deus Antigo</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">larva de deus</string>
     <string name="Larva_Name_Objective">larva de deus</string>
     <string name="LastLevel_TileDescStatue">\@string/Halls_TileDescStatue</string>
@@ -1231,6 +1278,7 @@ Parede
     <string name="LevitationBuff_Info">O corpo paira acima do solo, evitando armadilhas e outros perigos terrenos.</string>
     <string name="LevitationBuff_Name">Levitando</string>
     <string name="LibrarianNPC_Desc">Uma pessoa muito tímida, vestindo um suéter estranho e usando um óculos muito grosso.</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">O-Olá. Bem-vindo à Biblioteca. Aqui você pode encontrar informações sobre todo tipo de coisas, coisas que podem ser encontradas no calabouço... na verdade, nós só podemos fornecer conhecimento do que foi descoberto pelos aventureiros. É... é um pouco embaraçoso. Então, cada vez que você nos visitar, provavelmente, haverá coisas novas para ler.</string>
     <string name="LibrarianNPC_Message_Not_Ready">Me... me desculpe. a biblioteca não está aberta... ainda.</string>
     <string name="LibrarianNPC_Name">bibliotecário</string>
@@ -1239,6 +1287,7 @@ Parede
     <string name="LibraryBook_Name">Livro da biblioteca</string>
     <string name="Lich_Desc">O necromante encontrou sua morte nas profundezas da Necropolis, toda a energia maligna deste lugar se uniu ao seu corpo, então ele acaba se tornando o Lich. O bruxo morto-vivo, sem vontade própria e controlado como uma marionete pelos poderes malignos.</string>
     <string name="Lich_DieInfo">Eu nunca gostei deste Necromante. Portanto é hora de retornar para o nível 7 e encontrar outro caminho para a nova aventura.</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Info">A luz emana do corpo, iluminando tudo ao redor.</string>
@@ -1255,6 +1304,7 @@ Parede
     <string name="LloidsBeacon_Preventing">Uma forte aura de magia impede voce de usar o Farol Lloyd.</string>
     <string name="LloidsBeacon_Return">O Farol Lloyd definiu com sucesso sua posição atual, agora você poderá retornar aqui a qualquer momento.</string>
     <string name="LloidsBeacon_Set">\n\nEste Farol foi definido em algum lugar do nível %d de Remixed Dungeon.</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Info">Esta lâmina imponente causa danos graves ao investir seu peso em cada corte.</string>
     <string name="Longsword_Name">Espada Grande</string>
     <string name="Luck_Name_0">%s da Sorte</string>
@@ -1308,6 +1358,7 @@ Parede
     <string name="MeleeWeapon_Info7b">, mas por estar amaldiçoado, você não conseguirá soltar</string>
     <string name="MeleeWeapon_Info7c">Você pode sentir uma magia maléfica oculta na(o) %s.</string>
     <string name="MercenaryNPC_Desc">Homem de aparência robusta</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">mercenário</string>
     <string name="MercenaryNPC_Name_Objective">mercenário</string>
     <string name="Metabolism_Txt">%s de metabolismo</string>
@@ -1317,6 +1368,7 @@ Parede
     <string name="MimicAmulet_Name">mímico</string>
     <string name="MimicAmulet_Name_Objective">mímico</string>
     <string name="MimicPie_Desc">Imitações são criaturas mágicas que pode assumir qualquer forma que desejarem. Esse aqui parece um grande e delicioso pastel\&quot;;</string>
+    <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">imitação</string>
     <string name="MimicPie_Name_Objective">imitação</string>
     <string name="Mimic_Desc">Imitações são criaturas mágicas que pode assumir qualquer forma que desejarem. Em masmorras eles quase sempre escolher a forma de um baú do tesouro, porque eles sabem como atrair aventureiros.</string>
@@ -1326,6 +1378,7 @@ Parede
     <string name="MindVisionBuff_Info">A visão interior permite ver claramente o movimento de todos os seres vivos no chão.</string>
     <string name="MindVisionBuff_Name">Visão Mental</string>
     <string name="MirrorImage_Desc">Esta ilusão é muito semelhante a você, mas é mais pálida e se contorce um pouco.</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">imagem espelhada</string>
     <string name="MirrorImage_Name_Objective">imagem espelhada</string>
     <string name="MissileWeapon_Info1">\n\nA média de dano desta arma é igual a %d pontos por acerto.</string>
@@ -1376,6 +1429,7 @@ Parede
     <string name="MoongraceBuff_Name">Maná celestial</string>
     <string name="Moongrace_Desc">Essas plantas crescem em pequeno número e são conhecidas como uma fonte de magia natural.</string>
     <string name="Moongrace_Name">Graça da Lua</string>
+    <string name="Movement_Speed">Velocidade de movimento</string>
     <string name="Multiplicity_Txt">%s de multiplicidade</string>
     <string name="Mushroom_Eat_Message">Esse cogumelo tem um gosto estranho! </string>
     <string name="MysteryMeat_Info">Coma sob seu próprio risco!</string>
@@ -1448,6 +1502,7 @@ Parede
     <string name="Pasty_Info">Este autêntico pastel de frango, com receio adicional de carne e batatas.</string>
     <string name="Pasty_Name">pastel de carne</string>
     <string name="Pickaxe_ACMine">MINERAR</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Esta é uma ferramenta grande e resistente para quebrar rochas. Provavelmente isto pode ser usado como uma arma.</string>
     <string name="Pickaxe_InsufficientStr">Força insuficiente para minerar!</string>
     <string name="Pickaxe_Name">picareta</string>
@@ -1463,6 +1518,8 @@ Parede
     <string name="PirateSet_Info">Arr! Você se sente como um amigo ... ou você é apenas um maldito latifundiário !? Espero que não, essas coisas são para piratas depois de tudo, quero dizer ... Arr!</string>
     <string name="PirateSet_Name">Conjunto de Pirata</string>
     <string name="PlagueDoctorMaskHood_Info">Rzeźbiony czarny czaszka z pustymi oczodołami, które świecą eterycznym blaskiem ametystowych klejnotów. Każdy oddech, który wdychasz, szepce przez labirynt rur i filtrów, niosąc zapach silnych ziół i przypraw, które maskują rozkład, który przylega do ciebie. Ale to nie tylko maska. Ciężki kaptur z północnego aksamitu, zakrywający twoją twarz i głowę w cieniu. Kaptur, jak skrzydło wrony, opływa twoje plecy, jego krawędzie ozdobione frędzlami z kościście białej koronki, lodowato piękny kontrast. Razem maska i kaptur tworzą widmo, mroczny testament w walce z siłami rozkładu.</string>
+    <string name="PlagueDoctorMaskHood_Name">Máscara do Médico da Peste com capuz</string>
+    <string name="PlagueDoctorMask_Info">Isso... isso não é uma simples máscara. É... uma barreira. Um escudo contra as forças da podridão que o Médico da Peste combate incansavelmente. Esculpido na madeira de ébano mais fina, detalhadamente esculpido com o rosto de um crânio voraz. Seus olhos ocos estão preenchidos com pedras de ametista brilhantes que pulsam fracamente, como brasas morrendas de um fogo. Cada respiração que você dá, cada fala que você faz, é filtrada através de uma rede labiríntica de tubos e filtros. Uma mistura de ervas potentes e especiarias exóticas infunde o ar dentro, mascarando o fedor da morte que se agarra a você como um sudário.</string>
     <string name="PlagueDoctorMask_Name">máscara de Médico da Peste</string>
     <string name="PlagueDoctorNPC_After_Quest">Eu vou mostrar a eles, a todos eles!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Você ainda está aqui? Tome! Pegue isso.</string>
@@ -1477,9 +1534,13 @@ Parede
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, você voltou! _Cinco ratos mortos_, perfeito! Seus couros serão cruciais para minha pesquisa. E como prometido, pelo seu esforço valente, eu fiz esta armadura para você a partir de suas próprias peles. Está imbuída com um toque da praga, mas não se preocupe! É controlada, ela protege! Agora vá! Proteja a cidade!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Traga-me _cinco ratos mortos_! Cada rato que você me trouxer nos aproxima mais do entendimento dessa praga horrível.</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">Atchim!\n Amaldiçoada seja esta praga infernal! Está se espalhando pela cidade como fogo em palha, apodrecendo nos ossos da população desavisada! BAH! Você acha que aqueles guardas patéticos têm chance contra esta praga insidiosa? Você, aí! Espécime forte e saudável. Talvez você possa me ajudar. Aqueles _ratos_ de esgoto imundos... eles carregam, digo a você, as sementes da pestilência em seus pequenos corpos putrefatos! Traga-me _cinco_ dessas criaturas miseráveis, _mortas_, é claro! Suas peles serão inestimáveis para minha pesquisa. Vou criar para você uma armadura maravilhosa, uma barreira protetora contra a própria praga que se origina dela!</string>
+    <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhhh… magnífico! Os _caracóis_, seus segredos se revelando lentamente como pétalas sob a luz da lua. Uma verdadeira mina de informações! Mas você está certo, _cinquenta ouro_ é um prêmio indigno. *Riça maniacamente*.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">_Dez caracóis_, dez sussurros do abismo! Seu muco será analisado, sua essência será minuciosamente examinada. Os segredos que eles guardam estão ao alcance.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Tosse violentamente* Atchim!\n _Os caracóis_… eles deslizam. Eles exsudam. E sussurram segredos de uma era esquecida. Preciso deles, _dez_ deles, suas conchas ainda intactas. Você acha que meras _cinquenta moedas de ouro_ são suficientes para um conhecimento tão precioso?\n Bah! Não importa. A informação que eles guardam pode ser a chave para deter esta praga. Ou… pode nos levar a algo ainda mais terrível. Você decide.</string>
+    <string name="PlagueDoctorQuest_2_1_Epilogue">_Moongrace_... 증거는 이 세계를 관통하는 마법에 대한 것입니다. 그들의 본질에서 많이 배웠지만 보상은... 그것이 최대한 주의를 기울여 준비되었습니다. *영웅에게 빛나는 _마나 포션_ 을 건네며* 그 힘이 앞으로의 위험을 극복하는 데 도움이 되기를 바랍니다.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Procure pela _moongrace_, onde a escuridão encontra o mais fraco brilho da luz da lua. _Duas sementes_, sua essência, revelarão segredos ocultos.</string>
+    <string name="PlagueDoctorQuest_2_1_Prologue">_Sementes de Moongrace_… aquelas flores etéreas, sussurrando com a magia da lua em si. Estudei sua estranha luminescência por semanas. Há uma potência em sua essência, uma energia oculta que pode ser a chave para… algo. *Bate o dedo ósseo contra o queixo pensativamente*\nMas, infelizmente, são raras. Encontradas apenas nas cavernas mais profundas onde a luz da lua mal penetra. Preciso de duas. Duas sementes para desvendar os segredos de seu poder. E em troca, posso oferecer algo… um gole de magia pura e potente. Uma _Poção de Mana_, transbordando com a própria essência da Moongrace. Ela renovará sua alma cansada e permitirá que você use o arcano com força renovada.</string>
+    <string name="PlagueDoctorQuest_2_2_Epilogue">Magnífico! O _Herbosal_, sua essência dourada lateja com vitalidade. Já aprendi muito com sua estrutura delicada. *Ele lhe entrega uma _Poção de Saúde_, cujo líquido brilha com uma leve luz dourada.* Beba isto quando o mundo pesar muito sobre você, e sinta o calor do sol reviver seu espírito.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Duas sementes de grama-solar_. Suas pétalas douradas guardam um poder que busco compreender. Encontre-as, e que sua essência seja revelada!</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">Ah, _grama-solar_! Uma flor delicada, cujas pétalas irradiam o calor do sol. Acredito que sua essência contém a chave para... ah, esqueça os detalhes por enquanto. Basta dizer que é crucial para minha pesquisa. _Duas sementes de grama-solar_. Traga-as para mim, e eu recompensarei você com algo que certamente será útil em suas aventuras - uma _Poção de Saúde_, transbordando com a própria vitalidade do sol.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Ele segura o _morcego_ gentilmente em suas mãos enluvadas, examinando sua pequena forma com uma fascinação perturbadora* Magnífico! A ecolocalização do _morcego_... é diferente de tudo que já encontrei. Tal precisão... tal... controle. *Ele se vira para você, seu rosto obscurecido por sua máscara* Por seus esforços, um _Pergaminho de Melhoria_. Use-o sabiamente, pois ele tem o potencial de... refinar sua própria essência. *Ele lhe entrega o pergaminho, sua voz caindo para um sussurro suave* Este _morcego_, é... uma janela para um mundo oculto. Um mundo... onde as sombras dançam e os segredos sussurram.</string>
@@ -1487,15 +1548,20 @@ Parede
     <string name="PlagueDoctorQuest_3_1_Prologue">*Seus olhos brilham com uma intensidade estranha e febril* Ah, o _morcego vampiro_! Uma criatura da noite, alimentando-se da força vital de sua presa. Fascinante... verdadeiramente fascinante. Preciso de um vivo para estudar sua fisiologia única. É tudo sobre... entender o... a... *Ele se cala, murmurando para si mesmo uma série de termos arcanos*. Sim! A ecolocalização do _morcego_, sua capacidade de navegar na escuridão completa... é a chave para desvendar um segredo.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*Arremessa a cabeça e solta uma gargalhada histérica, o som ecoando por sua laboratório úmido* Magnífico! Um _Cavaleiro da Morte_, diante de nós! O poder emanando de sua existência... embriagante! *Vira-se para você, olhos brilhando com uma intensidade febril* E para você, uma recompensa digna de seu valor: uma _Poção de Força_! Que ela lhe conceda o poder de conquistar qualquer inimigo! Agora... vamos examinar nosso sujeito. Sua própria essência contém segredos que poderiam reescrever as próprias leis da vida! *Aborda o _Cavaleiro da Morte_ com um sorriso maníaco, exibindo um frasco de líquido verde borbulhante</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Esta não é apenas uma besta! É um testemunho ambulante do poder necromântico! Capture-o, vivo e ileso! Este _Cavaleiro da Morte_... ele é a chave!</string>
+    <string name="PlagueDoctorQuest_3_2_Prologue">Um Cavaleiro da Morte! *Sua voz treme de emoção, seus dedos ósseos tremendo enquanto ele aperta um frasco borbulhante cheio de um líquido turvo e fosforescente*. Uma criatura assim… um farol de não-morte! Capturar um, vivo… seria… monumental. Imagine os segredos que poderíamos desvendar! O poder que flui pelas veias esqueléticas dele! Sim, um Cavaleiro da Morte! É crucial para minha pesquisa! Pois nos permitirá mergulhar mais fundo… nos mistérios da vida… e da morte em si!</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">Esplêndido! Os _Bruxos Anões_, suas essências agora são minhas para explorar! Magia tão distorcida e corrompida... verdadeiramente fascinante. *Ele segura um frasco cintilante, cheio de um líquido viscoso e carmesim.* Isto é para você: uma _Poção de Poder_! Absorva seu poder, e você sentirá a força das montanhas correndo por suas veias! Lembre-se, o conhecimento obtido através destes sacrifícios servirá a um propósito maior... talvez até nos salve de um destino pior que a morte.</string>
+    <string name="PlagueDoctorQuest_4_1_InProgress">Cinco _magos anões_, seus corpos ainda pulsando com o eco fraco de magia negra! Recupere-os para mim, e recompensarei você com uma poção de poder incomparável – uma _Poção de Força_ que lhe concederá a força de dez homens!</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Atchim! Dwarves! Aqueles habitantes subterrâneos teimosos, obcecados por gemas e ouro. Mas são os _Feiticeiros Anões_ que eu desejo… sua magia distorcida, alimentada pelas próprias profundezas que habitam. Cinco, preciso de cinco daquelas almas murchas! Seus corpos guardam a chave para entender um certo… fenômeno. Algo sobre canalizar energias arcanas através da própria terra. Acredito que estou perto de um avanço, mas preciso de sua essência, sua magia corrompida! *Ele tosse violentamente em seu lenço, uma mancha escura se espalhando pelo tecido delicado*</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Esplêndido! Cinco _Kobolds Encantadores de Gelo_, sua essência gelada agora é minha para explorar! Sua conexão com os ermos congelados é verdadeiramente fascinante. A maneira como eles manipulam a própria água... verdadeiramente notável. *Ele entrega a você um frasco brilhante cheio de um líquido escarlate vibrante* Isso, é por seus esforços valentes: uma _Poção de Poder_! Beba profundamente e sinta o poder de dez guerreiros fluir pelas suas veias! Lembre-se, conhecimento é poder… e o poder é a única arma que temos contra as trevas crescentes. Agora… vamos dissecar essas almas geladas e descobrir seus segredos arrepiantes!</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Recupere cinco _Kobolds Encantadores de Gelo_ mortos! Seus corpos congelados guardam a chave para desvendar os segredos de sua magia arrepiante!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Seus dedos esqueléticos batem ritmicamente contra um caldeirão borbulhante, o ar ao redor denso com o cheiro acre de enxofre e decomposição*\n_Kobold Mestres do Gelo_! Aquelas criaturas patéticas, amontoadas em suas cavernas geladas, agarrando-se desesperadamente à sua magia de gelo. Preciso de cinco deles, seus cadáveres congelados serão… esclarecedores. Seu domínio do gelo é… peculiar. Acredito que eles canalizam uma energia primordial, um poder adormecido sob a superfície deste próprio mundo.</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*Ele encara os dois _succubi_, um sorriso feliz se espalhando sob sua máscara.* Esplêndido! Magnífico! Isso desbloqueará tantas… possibilidades! *Ele se vira para você, sua voz grossa de gratidão… e algo mais.* Seus esforços… não serão esquecidos. Eu lhe devo minhas mais profundas gratidões. *Seu olhar permanece nos _succubi_ por um momento demasiadamente longo, antes de ele se retirar em seu laboratório, murmurando sobre desvendar os segredos da sedução.*</string>
+    <string name="PlagueDoctorQuest_5_1_InProgress">*O seu pensamento vagueia enquanto fala, sua voz fica mais baixa, quase um sussurro.* Traga-me duas _succubi_... vivas. Seu... poder... é envolvente.</string>
+    <string name="PlagueDoctorQuest_5_1_Prologue">*Ele treme, sua voz rachando como um graveto frágil*. A-ah, _succubus_! Duas… sim, duas, vivas! É… ahem… para minha pesquisa! Você vê… seus feromônios… é crucial para entender o delicado equilíbrio de… ah… *Ele se interrompe, sua mão ossuda se estendendo para ajustar nervosamente sua máscara, seus olhos lançando para você com uma intensidade febril.*Suas… essência… é um quebra-cabeça… um belo e enigmático quebra-cabeça! *Ele tossi violentamente, tentando se recompor.* Eu prometo, por me trazer duas dessas… criaturas… você terá minha gratidão eterna. Pense nisso como um… um benefício para o conhecimento! Sim! Para o conhecimento!</string>
     <string name="PlagueDoctorQuest_AllDone">*Ele solta uma risada seca e ofegante.* \&quot;Suas ações desbloquearam segredos sem medida! O conhecimento adquirido... ele pulsa dentro de mim, uma sinfonia de descobertas. Mas o conhecimento,\&quot; ele acrescenta, sua voz caindo para um sussurro conspiratório, \&quot;conhecimento é poder. E poder... ah... esse é um elixir mais embriagante.\&quot; Ele encara você intensamente por um momento, seus olhos de ametista queimando com uma intensidade febril. \&quot;Talvez,\&quot; murmura ele, \&quot;nossos caminhos se cruzem novamente. Pois ainda há muitos... mistérios... a serem desvendados.\&quot;</string>
     <string name="PlagueDoctor_Desc">Este homem corcunda está totalmente vestido com couro. Ele tem cheiro forte de medicamentos e... alho?</string>
 
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">médico da praga</string>
     <string name="PlagueDoctor_Name_Objective">médico da peste</string>
     <string name="Plant_ACPlant">PLANTAR</string>
@@ -1640,6 +1706,7 @@ Parede
     <string name="RatKingCrown_Name">Coroa do Rei Rato</string>
     <string name="RatKing_Desc">Este rato é um pouco maior do que um rato marsupial normal e ele está usando uma pequena coroa em sua cabeça.</string>
     <string name="RatKing_Died">O Rei está morto. Longa vida ao Rei!</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">Eu não estou dormindo!</string>
     <string name="RatKing_Info2">O que é isso? Eu não tenho tempo para essa bobagem. O meu reino não vai se governar sozinho!</string>
     <string name="RatKing_Info3">Como ousa, criatura franzina, perturbar Nossa Ratoeza?</string>
@@ -1671,6 +1738,7 @@ Parede
     <string name="ResultDescriptions_Hunger">Passou fome até a morte no nível %d</string>
     <string name="ResultDescriptions_Immured">Emparedado em pedra no nível %d</string>
     <string name="ResultDescriptions_Mob">Morto por %1$s no nível %2$d</string>
+    <string name="ResultDescriptions_Necromancy">Esgotou a força vital tentando animar um cadáver no nível %d</string>
     <string name="ResultDescriptions_Necrotism">Morto Pelo Necrotismo No Level %d</string>
     <string name="ResultDescriptions_Ooze">Morreu com lodo tóxico no nível %d</string>
     <string name="ResultDescriptions_Poison">Morreu por envenenamento no nível %d</string>
@@ -1746,6 +1814,7 @@ Parede
     <string name="RottenFood_Message">nojento!</string>
     <string name="RottenMeat_Info">pedaço de carne podre</string>
     <string name="RottenMeat_Name">carne podre</string>
+    <string name="RottenOrgan_Info">Um órgão em decomposição colhido de um inimigo derrotado. Apesar de seu estado fétido, contém compostos valiosos para processos alquímicos.</string>
     <string name="RottenOrgan_Name">Órgão Podre</string>
     <string name="RottenPasty_Info">Este pastel parece muito nojento.</string>
     <string name="RottenPasty_Name">pastel de carne podre</string>
@@ -1768,6 +1837,7 @@ Parede
     <string name="Rudolph_Info">O que poderia ser mais festivo do que um nariz brilhante vermelho? e um par de chifres, naturalmente.</string>
     <string name="Rudolph_Name">Nariz vermelho e chifres</string>
     <string name="RunicSkull_Desc">Para algo feito artificialmente, este crânio se parece muito com um verdadeiro. Você pode ver um brilho fraco em torno dele.</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">Crânio runico</string>
     <string name="RunicSkull_Name_Objective">Crânio runico</string>
     <string name="SacrificialSword_Gender">masculine</string>
@@ -1778,6 +1848,7 @@ Parede
     <string name="ScaleArmor_Desc">Escamas de metal costuradas em um colete de couro fazem uma armadura flexível, mas ainda mais protetora.</string>
     <string name="ScaleArmor_Name">armadura de escamas</string>
     <string name="ScarecrowNPC_Desc">Não há dúvidas... este espantalho observa cada movimento seu. Seus olhos vermelhos brilhantes veem através de você, mas você não se sente em perigo.</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">Espantalho</string>
     <string name="ScarecrowNPC_Name_Objective">Espantalho</string>
     <string name="ScarecrowNPC_Quest_End">Que alegria! Que bom!\n Sua recompensa será comida de verdade!</string>
@@ -1897,6 +1968,7 @@ outro local do nível.</string>
     <string name="ShadowLord_Name">senhor das sombras</string>
     <string name="ShadowLord_Name_Objective">Senhor das Sombras</string>
     <string name="Shadow_Desc">Sombras vagam silenciosamente as ruínas dessa prisão, apenas ocasionalmente aparecendo para aventureiros, geralmente em sua última aventura.</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name">sombra</string>
     <string name="Shadow_Name_Objective">sombra</string>
     <string name="ShadowsBuff_Info">É mais difícil identificar algo entre as sombras.</string>
@@ -1938,6 +2010,7 @@ outro local do nível.</string>
     <string name="Shopkeeper_text">Bem-vindo à filial local da Pixel-Mart.\nComo posso ajudá-lo?</string>
     <string name="Shopkeeper_title">Loja</string>
     <string name="ShortSword_ACReforge">REFORJAR</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Na verdade, é bastante curta, apenas alguns centímetros mais longo do que um punhal.</string>
     <string name="ShortSword_Name">Espada Curta</string>
     <string name="ShortSword_NotBoomerang">você não pode atualizar um bumerangue dessa forma</string>
@@ -2028,6 +2101,7 @@ outro local do nível.</string>
     <string name="SpiderMind_Name">Aranha Psíquica</string>
     <string name="SpiderMind_Name_Objective">Aranha Psíquica</string>
     <string name="SpiderNest_Desc">Este casulo é feito de seda finíssima e dentro está algo vivo.</string>
+    <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderNest_Name">casulo de aranha</string>
     <string name="SpiderNest_Name_Objective">casulo de aranha</string>
     <string name="SpiderQueenCarapace_Info">Um pedaço de carapaça da aranha rainha. Você pode ver um pedaço de glândula de teia dentro dela, quase parece estar vivo.</string>
@@ -2107,6 +2181,7 @@ outro local do nível.</string>
     <string name="Sungrass_Name">planta da vida</string>
     <string name="SurfaceScene_GameOver">Fim de Jogo</string>
     <string name="SuspiciousRat_Desc">Um rato não é uma visão incomum nas masmorras, mas para ele habitar tão profundamente... Você pode ver como o corpo inteiro do rato tem espasmos quando se move.</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">Um rato suspeito está se contorcendo violentamente.</string>
     <string name="SuspiciousRat_Name">Rato suspeito</string>
     <string name="SuspiciousRat_Name_Objective">Rato suspeito</string>
@@ -2127,6 +2202,7 @@ outro local do nível.</string>
     <string name="TenguLiver_Info">Este fígado pertence a um inimigo poderoso. Só de olhar para ele, seus instintos selvagens assumem o controle e você sente o desejo de consumi-lo.</string>
     <string name="TenguLiver_Name">Fígado de Tengu</string>
     <string name="Tengu_Desc">Tengu são membros de um clã antigo de assassinos, que também é chamado de Tengu. Esses assassinos são conhecidos por uso extensivo de shuriken e armadilhas.</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">Finalmente livre...</string>
     <string name="Tengu_Info2">Te peguei, %s!</string>
     <string name="Tengu_Info3">Pegou, %s!</string>
@@ -2181,6 +2257,7 @@ outro local do nível.</string>
     <string name="TownsfolkMovieNPC_Name">cidadão</string>
     <string name="TownsfolkMovieNPC_Name_Objective">cidadão</string>
     <string name="TownsfolkNPC_Desc">Um dos locais. Embora seja claramente um plebeu, suas roupas parecem caras.</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">Ah! Outro aventureiro, adorável! Certifique se de saquear o máximo de objectos de valor que você consegue.</string>
     <string name="TownsfolkNPC_Message2">As pessoas da cidade tornaram-se muito ricos graças ao calabouço, tanto que todas as pessoas da cidade tiram férias sempre que querem! Na verdade, é por isso que há tão poucas pessoas no momento.</string>
     <string name="TownsfolkNPC_Message3">Que dia adorável.</string>
@@ -2201,11 +2278,13 @@ outro local do nível.</string>
     <string name="TrapWnd_Step">Você realmente quer pisar nesta armadilha? Provavelmente, você vai morrer.</string>
     <string name="TrapWnd_Title">Armadilha</string>
     <string name="TreacherousSpirit_Desc">Esta criatura monstruosa parece uma nuvem de pura escuridão. Seus olhos arregalados lhe encaram, pulsando à cada movimento seu.</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">Espírito traçoeiro</string>
     <string name="TreacherousSpirit_Name_Objective">Espírito traçoeiro</string>
     <string name="Typical_Damage">Dano típico</string>
     <string name="Undead_Defense">bloqueado</string>
     <string name="Undead_Desc">Estes anões zumbi, aumentados pela vontade do rei dos anões, eram membros de sua corte. Eles aparecem como esqueletos com uma quantidade impressionante de cabelo em sua face.</string>
+    <string name="Undead_Gender">masculine</string>
     <string name="Undead_Name">anão morto-vivo</string>
     <string name="Undead_Name_Objective">anão morto-vivo</string>
     <string name="Ushanka_Info">Um chapéu Ushanka, quente e acolhedor, decorado com uma elegante estrela vermelha. A companhia perfeita para alguém nesse calabouço frio e tenebroso.</string>
@@ -2304,6 +2383,7 @@ outro local do nível.</string>
     <string name="Wand_Wood_Types_7">mogno</string>
     <string name="Wand_Wood_Types_8">bambu</string>
     <string name="Wand_Wood_Types_9">roxinho</string>
+    <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">Poucas criaturas podem suportar o golpe esmagador desta grande massa de chumbo e aço, mas só os mais fortes e aventureiros pode usá-lo de forma eficaz.</string>
     <string name="WarHammer_Name">Martelo de Guerra</string>
     <string name="Warlock_Desc">Quando os interesses dos anões passaram da engenharia para as artes arcanas, mágicos chegaram ao poder na cidade. Eles começaram com magia elementar, mas logo mudou para demonologia e necromancia.</string>
@@ -2383,6 +2463,7 @@ remix.31.1\n
     -- Brilho para Mobs\n
     - Correções de bugs\n
 </string>
+    <string name="Welcome_Text_32_1">    remix.32.1\n    - Gameplay:\n    -- Plague Doctor quest line\n    -- Mob carcasses now somewhat usable items\n    -- Better pets control\n    - UX:\n    -- Improved save-game management\n    - Modding:\n    -- Local mod installation methods\n    -- Custom items now can perform actions while being in heaps\n    - Bugs fixed\n    </string>
     <string name="Welcome_Title">Bem-vindo!</string>
     <string name="WindGust_Info">Uma rajada de vento que afasta o alvo selecionado.</string>
     <string name="WindGust_Name">Rajada de vento</string>
@@ -2404,10 +2485,12 @@ remix.31.1\n
     <string name="WndCryptoDonate_currency">Moeda</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Você pode apoiar o desenvolvimento do Remixed Dungeon enviando doações em criptomoedas para os endereços abaixo. Obrigado pelo seu generoso apoio!</string>
+    <string name="WndCryptoDonate_openWallet">Abrir Carteira</string>
+    <string name="WndCryptoDonate_supportDev">Apoie o Desenvolvedor</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Endereço da Carteira</string>
-    <string name="WndCryptoDonate_warningText">ATENÇÃO: Sempre verifique o endereço antes de enviar fundos. Transações de criptomoedas são irreversíveis!</string>
+    <string name="WndCryptoDonate_warningText">AVISO: Sempre verifique o endereço antes de enviar fundos. Transações de criptomoeda são irreversíveis!</string>
     <string name="WndCustomizations_Title">Personalizações</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - gratuito para todos e sempre será.\n\nNo entanto, você pode nos ajudar a tornar o jogo ainda melhor.\n\nAlém de nossos sinceros agradecimentos, você obterá algumas melhorias estéticas.</string>
     <string name="WndDonate_donate">doar:</string>
@@ -2483,6 +2566,7 @@ remix.31.1\n
     <string name="WndInfoItem_Skeleton">Restos de Esqueletos</string>
     <string name="WndInfoItem_Tomb">Tumba</string>
     <string name="WndInfoItem_WontKnow">Você não vai saber o que há dentro até abri-lo!</string>
+    <string name="WndInstallingMod_copying_file">Copiando %s para o armazenamento do Remixed Dungeon</string>
     <string name="WndInstallingMod_deleting_file">Apagando %s</string>
     <string name="WndInstallingMod_please_wait">Instalando mod, por favor aguarde...</string>
     <string name="WndInstallingMod_skipping_file">Pulando %s</string>
@@ -2654,6 +2738,7 @@ remix.31.1\n
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Este simples arco de madeira pode se provar útil, se você achar algumas flechas.</string>
     <string name="WoodenBow_Name">arco de madeira</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Uma besta de madeira básica, parece que foi desenhada para atirar flechas.</string>
     <string name="WoodenCrossbow_Name">Besta de madeira</string>
     <string name="WoodenShield_desc">Um escudo de madeira grosseiramente feito é o escudo mais simples disponível. É redondo e pode bloquear algum dano de vez em quando.</string>
@@ -2664,6 +2749,7 @@ remix.31.1\n
     <string name="Worm_Name_Objective">minhoca</string>
     <string name="Wraith_Defense">evitou</string>
     <string name="Wraith_Desc">Um espectro é um espírito vingativo de um pecador, cuja sepultura ou túmulo foi perturbado. Sendo uma entidade etérea, é muito difícil de bater com uma arma normal.</string>
+    <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">espectro</string>
     <string name="Wraith_Name_Objective">espectro</string>
     <string name="WrnExperimental_hint">Se este mundo estranho e retorcido for muito difícil para você, desative essas opções usando\nTela inicial-&gt;Opções-&gt;Jogabilidade\nmenu e inicie um novo jogo ou carregue outro salvamento.</string>
@@ -2685,6 +2771,7 @@ remix.31.1\n
     <string name="YogsEye_Name">Olho de Yog</string>
     <string name="YogsEye_Name_Objective">Olho de Yog</string>
     <string name="YogsHeart_Desc">Durante décadas as pessoas acreditavam que apenas as verdadeiras criaturas sem coração são capazes dos actos de pura maldade. E ainda aqui está, batendo o grande coração de um Deus Antigo em pessoa.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">Coração de Yog</string>
     <string name="YogsHeart_Name_Objective">Coração de Yog</string>
     <string name="YogsTeeth_Desc">A enorme boca do Deus Antigo cheia de dentes afiados. Uma manifestação muito adequada do seu desejo de destruir e devorar todo.</string>
@@ -2692,6 +2779,7 @@ remix.31.1\n
     <string name="YogsTeeth_Name">dentes de Yog</string>
     <string name="YogsTeeth_Name_Objective">Dente de Yog</string>
     <string name="ZombieGnoll_Desc">O corpo torcido e quebrado de um Gnoll-Zumbi já não se parece com humanoide ou hiena. É apenas um monte de carne podre e ossos cheios de desejo maligno de matar e comer.</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">Gnoll-zumbi ressuscitou dos mortos!</string>
     <string name="ZombieGnoll_Name">Gnoll-zumbi</string>
     <string name="ZombieGnoll_Name_Objective">Gnoll-Zumbi</string>
@@ -2954,6 +3042,103 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

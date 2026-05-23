@@ -1,6 +1,7 @@
 <resources>
     <string name="AC_Devour">吞噬</string>
     <string name="AC_Dissect">解剖</string>
+    <string name="AC_Kick">踢</string>
     <string name="AC_Necromancy">死靈法術</string>
     <string name="Abilities_Common">普通法術</string>
     <string name="Abilities_Default">精通</string>
@@ -13,6 +14,7 @@
     <string name="AboutScene_OurSite">我們的網址：</string>
     <string name="AboutScene_Snd">發送郵件</string>
     <string name="AboutScene_Sound">音效：</string>
+    <string name="AboutScene_SourceCode">取得 Remixed Dungeon 原始碼：</string>
     <string name="AboutScene_Thanks">特別感謝：</string>
     <string name="AboutScene_Translation">本地化的功臣：</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901;丘比</string>
@@ -32,7 +34,7 @@
     <string name="AirElemental_Name_Objective">風元素</string>
     <string name="AlarmTrap_Desc">這個陷阱發出的刺耳聲音回蕩在地牢中！</string>
     <string name="Albino_Desc">嚙齒小鼠是極具侵略性卻比較弱小的下水道居民，只有在擁有大量數量時才會造成威脅。這只特殊的老鼠看起來得了白化病，並且擁有異常尖利的牙齒。</string>
-    <string name="Albino_Gender">masculine</string>
+    <string name="Albino_Gender">feminine</string>
     <string name="Albino_Name">白化老鼠</string>
     <string name="Albino_Name_Objective">白化老鼠</string>
     <string name="AlchemyPot_SelectSeed">選擇你要投擲的種子</string>
@@ -48,7 +50,9 @@
     <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">這個箭頭尖端的瘋狂詛咒的力量將使任何生物變得無情、狂暴，兇殘無比。</string>
     <string name="AmokArrow_Name">狂亂箭</string>
+    <string name="AmokBuff_Info">Відчуйте безумство, забираючи життя нещасних.</string>
     <string name="AmokBuff_Name">狂亂</string>
+    <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">這個飛鏢尖端的詛咒將使任何生物變得無情、狂暴。</string>
     <string name="AmokDart_Name">瘋狂飛鏢</string>
     <string name="AmuletScene_Exit">讓這一切結束吧</string>
@@ -57,7 +61,9 @@
     <string name="Amulet_ACEnd">結束遊戲</string>
     <string name="Amulet_Info">尼德羅護身符是來自未知領域中最強大的且最著名的神器。據說它能夠實現持有者的一切願望，只要持有者具備足夠的力量來“說服”它去做。</string>
     <string name="Amulet_Name">尼德羅護符</string>
+    <string name="AnesthesiaBuff_Info">不感覺疼痛也不會從攻擊中醒來，但仍受到傷害。</string>
     <string name="AnesthesiaBuff_Name">麻醉</string>
+    <string name="Anesthesia_Cast">%s 깊은 잠에 빠진다.</string>
     <string name="Anesthesia_Name">麻醉</string>
     <string name="Ankh_Info">此古老的不朽的象徵可以使您從死亡中復活。但會使您丟失所有未裝備的道具。</string>
     <string name="Ankh_Name">十字架</string>
@@ -91,6 +97,8 @@
     <string name="Artifact_Limit">你最多只能同時佩戴2件飾品。</string>
     <string name="AttackDelay_Increased">這樣無法使用%s。揮動緩慢，呼吸沉重…</string>
     <string name="Attack_Cooldown">攻擊冷卻時間</string>
+    <string name="Attack_Range">攻擊距離</string>
+    <string name="AwarenessBuff_Info">Perasaan menjadi lebih tajam, memberikan kesedaran yang lebih besar tentang persekitaran.</string>
     <string name="AwarenessBuff_Name">察覺</string>
     <string name="AzuterronNPC_Desc">被黑霧包圍著的神秘人</string>
     <string name="AzuterronNPC_Gender">masculine</string>
@@ -113,6 +121,7 @@
     <string name="Badges_BossSlain1">史萊姆已被殺死</string>
     <string name="Badges_BossSlain1All">Goo已經被所有職業擊敗</string>
     <string name="Badges_BossSlain2">天狗已被殺死</string>
+    <string name="Badges_BossSlain3">DM-300已經被擊敗</string>
     <string name="Badges_BossSlain3All">DM-300 已被所有子職業擊敗</string>
     <string name="Badges_BossSlain4">國王已被殺死</string>
     <string name="Badges_Champion">挑戰成功</string>
@@ -182,6 +191,7 @@
     <string name="Badges_StrengthAttained4">達到19點力量</string>
     <string name="Badges_StrengthAttained5">達到21點力量</string>
     <string name="Badges_Supporter">感謝您的支持！</string>
+    <string name="Badges_ThisIsSparta">这是斯巴达!!!</string>
     <string name="Badges_Victory">獲得尼德羅護符</string>
     <string name="Badges_VictoryAll">使用所有人物獲得尼德羅護符</string>
     <string name="Badges_Yasd">天將降大任於屍人也</string>
@@ -205,9 +215,13 @@
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">吸血蝙蝠</string>
     <string name="Bat_Name_Objective">吸血蝙蝠</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">這把有著巨大鋼製頭部的戰斧能將龐大的力量傾註在每次揮擊之中。</string>
     <string name="BattleAxe_Name">戰斧</string>
+    <string name="Bee_Desc">雖然體型小，但蜜蜂會拼死保衛建巢。不過牠們活不久。</string>
+    <string name="Bee_Gender">feminine</string>
     <string name="Bee_Name">蜜蜂</string>
+    <string name="Bee_Name_Objective">蜜蜂</string>
     <string name="BellaNPC_Amulet_F">但是你的那個護符...我們百合吧!</string>
     <string name="BellaNPC_Amulet_M">但是你的那個護符...我們約會吧!</string>
     <string name="BellaNPC_Angry">流氓,滾!</string>
@@ -279,13 +293,20 @@
     <string name="Bleeding_Death">你流血過多而死……</string>
     <string name="BlessedBuff_Info">祝願那些被祝福的人們精準度和閃避增加！</string>
     <string name="BlessedBuff_Name">祝福</string>
+    <string name="BlindnessBuff_Info">완전히 눈이 감겨, 주변의 소리만 들릴 뿐이다.</string>
     <string name="BlindnessBuff_Name">目盲</string>
+    <string name="BloodTransfusion_Drained">生命精華從您的寵物流向您。</string>
+    <string name="BloodTransfusion_FullHP">你的血液已经达到最大容量。</string>
+    <string name="BloodTransfusion_Info">Drains nearly all blood from a target to heal yourself. A dark ritual of sacrifice and survival.</string>
+    <string name="BloodTransfusion_Name">輸血</string>
+    <string name="BloodTransfusion_WontAgreed">目標抵抗生命力抽取。</string>
     <string name="BodyArmorBuff_Info">犧牲移動速度增加護甲。</string>
     <string name="BodyArmorBuff_Name">重甲</string>
     <string name="BodyArmorSpell_Info">激活身體的肌肉力量，使你暫時變強，從而增加你的護甲，但會減少移動速度。</string>
     <string name="BodyArmorSpell_Name">格擋</string>
     <string name="BoneSaw_Info">一把精密工程設計的外科鋸，專為快速解剖而設計。隨著瘟疫醫生技能的提升，其傷害和攻擊速度變得更加致命。暴擊會從敵人身上雕刻出額外的可收穫部位，並且它對麻痹的敵人進行無情高效的攻擊。</string>
     <string name="BoneSaw_Name">骨鋸</string>
+    <string name="BoneShard_Info">從被打敗的敵人身上獲得的銳利骨片。這些碎片 surprisingly 耐用，可用於 crafting。</string>
     <string name="BoneShard_Name">骨片</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">扔出，命中，回手，就是這麼簡單。</string>
@@ -296,9 +317,11 @@
     <string name="Bowknot_Name">蝴蝶結</string>
     <string name="Brute_Desc">暴徒是豺狼人中體型最為巨大，最為強壯，最為堅韌的。當受到嚴重的傷害時，他們會變得狂暴，對他們的敵人造成大量傷害。</string>
     <string name="Brute_Enraged">%s被激怒了！</string>
+    <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">豺狼暴徒</string>
     <string name="Brute_Name_Objective">豺狼暴徒</string>
     <string name="Brute_StaEnraged">激怒</string>
+    <string name="BuffParam_Cooldown">Cooldown: %.2f</string>
     <string name="BurningBuff_Info">身體被洶湧的火焰吞噬！</string>
     <string name="BurningBuff_Name">燃燒</string>
     <string name="BurningFist_Desc">上古之神的燃燒之拳</string>
@@ -332,6 +355,8 @@
     <string name="Carcass_Devoured">你已經吞食了%s的屍體！</string>
     <string name="Carcass_DissectFailed">你解剖了 %s，但沒發現任何有價值的东西。</string>
     <string name="Carcass_DissectMessage">你解剖了屍體並獲得了一個 %s。</string>
+    <string name="Carcass_DissectResult">З %1 ви отримали %2 врожай %3.</string>
+    <string name="Carcass_Info">已死亡%s的殘骸。</string>
     <string name="Carcass_Kick">這隻%s已經完全死了,沒有必要再踢它。</string>
     <string name="Carcass_Name">%s 的遺骸</string>
     <string name="Carcass_Necromancy">你已復活了%s 的屍體！</string>
@@ -347,10 +372,13 @@
     <string name="Caves_TileWater">冰冷刺骨的水。</string>
     <string name="Challenges_Descriptions_0">食物和水早已腐壞，使每位冒險者因恐懼和飢餓的死亡念頭而發狂。你的飲食習慣能幫助你堅持足夠久嗎？</string>
     <string name="Challenges_Descriptions_1">一攻就是最佳防守。遵循這些教導，你踏進地城冒險，信仰將成為你身體最強的護盾。</string>
+    <string name="Challenges_Descriptions_2">身為普通身體自然再生的信徒，你總是對具有療效的藥水保持警惕。安全總比後悔好！</string>
     <string name="Challenges_Descriptions_3">地城周圍的土地早已受到惡意感染，阻止各種草藥和植物的種子生長。誰知道還要多久，最後的植物才會在這片貧瘠的土地上消失。</string>
     <string name="Challenges_Descriptions_4">一種邪惡的存在潛伏在地城中所有生物的心智裡，使它們能察覺彼此之間發生的事件。</string>
+    <string name="Challenges_Descriptions_5">Зло первым принесло плотный и непроницаемый туман, из-за которого почти невозможно ясно ориентироваться в бесконечных коридорах подземелья.</string>
     <string name="Challenges_Descriptions_6">閱讀符文的古老藝術被禁止並不惜一切代價避免，因為每個流入地下城或其周圍的卷軸都被施加了詛咒。</string>
     <string name="Challenges_Descriptions_7">你已習慣了擁有和使用武器在道德上是不正確的事實，但除此之外，你還能如何抵禦在下面遊蕩的怪物呢？</string>
+    <string name="Challenges_Descriptions_8">您的旅程将从黑暗危险的城镇下水道开始，唯一的出路被阻断。更糟糕的是，您只能使用在地下城中找到的装备。资源有限的情况下，您的生存将取决于您的技能和策略。</string>
     <string name="Challenges_Descriptions_9">瘟疫醫生最新的「靈藥」抹去了你的空間記憶。你看不到的地方會立刻被遺忘。</string>
     <string name="Challenges_Names_0">縮餐節食</string>
     <string name="Challenges_Names_1">信念護體</string>
@@ -361,10 +389,15 @@
     <string name="Challenges_Names_6">禁忌符文</string>
     <string name="Challenges_Names_7">和平主義</string>
     <string name="Challenges_Names_8">沒有城鎮</string>
+    <string name="Challenges_Names_9">失憶</string>
+    <string name="ChampionOfAirBuff_Info">此特性賦予生物風之精髓，增強其敏捷性和戰鬥能力。風之冠軍成為一個強大的對手，能夠發動迅速而致命的攻擊，能迅速改變戰鬥的進程。</string>
     <string name="ChampionOfAirBuff_Name">風之勇士</string>
     <string name="ChampionOfEarthBuff_Info">大地勇士體現了不屈的力量，這個特性增強了生物的傷害抗性並增加了其最大生命力。這種轉變使其在危險的深淵中成為一個可怕的對手，能夠輕鬆地抵擋攻擊並以堅定的決心經受持久的戰鬥。</string>
+    <string name="ChampionOfEarthBuff_Name">大地勇士</string>
     <string name="ChampionOfFireBuff_Info">注入烈焰之怒，這個特性提升了生物的兇猛和戰鬥能力。火焰勇士化身為可怕的對手，釋放毀滅性的攻擊，將敵人陷入灼熱的火焰之中，使所有敢於反抗的存在感到恐懼。</string>
+    <string name="ChampionOfFireBuff_Name">火之冠軍</string>
     <string name="ChampionOfWaterBuff_Info">水之冠軍體現了海洋的不可戰勝之力，增強了生物的韌性和耐力。因此，它成為了一個堅定的對手，能夠經受住無情的攻擊轟炸，在逆境中成為不屈的守護者。</string>
+    <string name="ChampionOfWaterBuff_Name">水之冠軍</string>
     <string name="ChaosArmor_Info">這件盔甲的血紅色金屬板被暗紅的鐵鏈縫接在一起，當你觸碰它時會迸發出混沌能量。</string>
     <string name="ChaosArmor_Name">混沌護甲</string>
     <string name="ChaosBow_Gender">masculine</string>
@@ -382,12 +415,14 @@
     <string name="ChaosCrystal_Prompt">選擇一個地點釋放混沌標記</string>
     <string name="ChaosCrystal_ScrollFused">鐫刻在卷軸上的符文吸收了這枚晶石，現在它變成了%s</string>
     <string name="ChaosCrystal_SelectForFuse">選擇您要與晶石融合的物品。</string>
+    <string name="ChaosCrystal_ShieldFused">水晶與你的盾牌融合，並且采取了混亂的形式。</string>
     <string name="ChaosCrystal_StaffFused">水晶吸收你的魔杖，並以新魔杖的形式呈現。</string>
     <string name="ChaosCrystal_SwordFused">水晶吸收了你的武器，並重新以劍的形式呈現。</string>
     <string name="ChaosCrystal_Use">使用</string>
     <string name="ChaosHelmet_Info">血紅色的頭盔是混沌戰士的基本象徵。</string>
     <string name="ChaosHelmet_Name">混沌頭盔</string>
     <string name="ChaosShield_desc">混沌護盾是將混沌水晶與普通盾牌融合的結果，使其在成功格擋時隨機產生混亂效果。</string>
+    <string name="ChaosShield_name">Chaos Shield</string>
     <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">與混沌之力融合的法杖，不就是眾法師或敬或畏之物嗎？</string>
     <string name="ChaosStaff_Name">混沌法杖</string>
@@ -397,7 +432,10 @@
     <string name="CharAction_Charm">魅惑</string>
     <string name="CharAction_Expel">pem expulsion</string>
     <string name="CharAction_Give">給</string>
+    <string name="CharAction_Hit">memukul</string>
+    <string name="CharAction_Order">命令</string>
     <string name="CharAction_Push">推</string>
+    <string name="CharAction_Scare">嚇唬</string>
     <string name="CharAction_Steal">偷</string>
     <string name="CharAction_Take">拿取</string>
     <string name="CharAction_Taunt">嘲諷</string>
@@ -464,6 +502,7 @@
     <string name="Claymore_Gender">feminine</string>
     <string name="Claymore_Info">這把結實的劍也許能切斷任何東西。</string>
     <string name="Claymore_Name">闊劍</string>
+    <string name="CloakBuff_Info">一件深色的斗篷將你隱藏在陰影中，使你對敵人不太明顯。</string>
     <string name="CloakBuff_Name">潛伏</string>
     <string name="CloakSpell_EnemiesNearby">敵人在附近，你不能進入陰影中。</string>
     <string name="CloakSpell_Info">進入陰影中使敵人看不見，減少被發現的機會。附近有敵人不能使用。</string>
@@ -526,6 +565,7 @@
     <string name="ComboBuff_Info">下次攻擊將是連擊攻擊。</string>
     <string name="ComboBuff_Name">連擊</string>
     <string name="Combo_Combo">%d連擊！</string>
+    <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">常見，帶有鐵箭頭的木製箭矢。</string>
     <string name="CommonArrow_Name">箭矢</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
@@ -542,16 +582,21 @@
     <string name="CorpseDust_Info">在外觀上這團屍塵和普通灰塵球差不多。而您卻能夠感受到其中潛伏著一股充滿惡意的魔力。盡快脫手為上策。</string>
     <string name="CorpseDust_Info2">也許因為帶著它讓您感到了焦慮和憤怒。</string>
     <string name="CorpseDust_Name">屍塵</string>
+    <string name="CorpseExplosion_Info">將屍體轉化為致命的毒氣雲，將疾病和毒藥傳播給所有附近的敵人。</string>
     <string name="CorpseExplosion_Name">Corpse Explosion</string>
+    <string name="CorpseExplosion_NoCorpse">那個位置沒有屍體。</string>
     <string name="Crab_Defense">招架</string>
     <string name="Crab_Desc">這些巨型的螃蟹位居下水道食物鏈的頂端。它們行動極其迅速，並且厚重的甲殼能承受沈重的打擊。</string>
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">下水道螃蟹</string>
     <string name="Crab_Name_Objective">下水道螃蟹</string>
+    <string name="CrippleBuff_Info">身體殘障，但戰鬥仍繼續。</string>
     <string name="CrippleBuff_Name">殘疾</string>
     <string name="Crystal_Desc">巨大閃亮的水晶懸浮在空中。也許它充滿了強大的魔法。</string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">懸浮水晶</string>
     <string name="Crystal_Name_Objective">懸浮水晶</string>
+    <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">這些提摩般邪惡的飛鏢傷害不大，但能把目標麻痺，剩它靜立無助一會。</string>
     <string name="CurareDart_Name">麻痹飛鏢</string>
     <string name="DM300_Desc">數個世紀前矮人們制造了這個機器。但此後，矮人們開始使用魔像、元素生物甚至是惡魔來替換機器，最終導致其文明的衰敗。DM-300及類似的機器通常用於建設和挖掘，在某些情況下，也會用於城防。</string>
@@ -573,6 +618,7 @@
     <string name="DarkSacrifice_Ok">我的此生歸你了！</string>
     <string name="DarkSacrifice_Resist">你沒有能力控制我！</string>
     <string name="DarkSacrifice_Self">為了天災！</string>
+    <string name="DarkVeilBuff_Info">黑暗面紗籠罩主人四周，每次受到傷害時召喚一個靈魂。</string>
     <string name="DarkVeilBuff_Name">暗黑面紗</string>
     <string name="Darkness_Info">好像是永恒黑暗的碎片在空中漂浮</string>
     <string name="Dart_Gender">masculine</string>
@@ -595,8 +641,10 @@
     <string name="Deathling_Name_Objective">死靈</string>
     <string name="DeepSnail_Desc">這種軟體動物經常出現在水源附近，而且比普通蝸牛速度快得多。不過要小心牠們的咬傷，可能會對你的皮膚造成不適。</string>
     <string name="DeepSnail_Gender">masculine</string>
+    <string name="DeepSnail_Name">深螺</string>
     <string name="DeepSnail_Name_Objective">深淵蝸牛</string>
     <string name="DeferedDamageBuff_Info">疼痛已被轉化為緩慢的痛楚，減少了同時受到的傷害。\n剩餘待承受傷害 %d</string>
+    <string name="DeferedDamageBuff_Name">Deferred Damage (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s 殺了您……</string>
     <string name="DevourBuff_Info"/>
     <string name="DevourBuff_Name">吞噬</string>
@@ -614,7 +662,9 @@
     <string name="DieHardSpell_Info">會暫時增加你的回復速度，讓你成為真正的死神。</string>
     <string name="DieHardSpell_Name">再起</string>
     <string name="Displacement_Txt">位移 %s</string>
+    <string name="DoctorArmor_Info">這套瘟疫醫生的盔甲允許使用「毒霧雲」能力，釋放有毒氣體使敵人中毒、虛弱和迷失方向。醫生受到面具保護，對這些效果免疫。</string>
     <string name="DoctorArmor_Name">醫生袍</string>
+    <string name="DoctorArmor_NotDoctor">只有瘟疫医生才能使用這套盔甲！</string>
     <string name="DoctorSpecial">瘴氣雲</string>
     <string name="DogeMask_Info">你想偽裝成著名的狗嗎？現在是你的機會！\n這樣的面具！偽裝性很強！真的！</string>
     <string name="DogeMask_Name">柴犬面具</string>
@@ -668,6 +718,7 @@
     <string name="Dungeon_Tips_7">人在饑餓的時候不會痛，但人在饑餓難耐的時候會很痛。</string>
     <string name="Dungeon_Tips_8">襲擊必中。比如說，你可以躲在門後來給下一個開門的敵人一個驚喜。</string>
     <string name="Dungeon_Tips_9">別讓天狗跑了!</string>
+    <string name="Dungeon_saveIoError">儲存檔案時出現錯誤:</string>
     <string name="DwarfToken_Info">很多矮人和他們的造物都攜帶著這種小塊金屬，理由不詳。也許它是裝飾品或甚麼身份識別牌。矮人都挺奇怪的。</string>
     <string name="DwarfToken_Name">矮人徽記</string>
     <string name="EarthElemental_Desc">土元素是由凝縮的自然之力所操縱著的的土塊。</string>
@@ -688,10 +739,15 @@
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">此武器以特製合金製造，故它比一般匕首更輕。</string>
     <string name="ElvenDagger_Name">矮人匕首</string>
+    <string name="EncumbranceBuff_CharAct_1">我沒有足夠的力量來正確使用%s。</string>
+    <string name="EncumbranceBuff_CharAct_2">這個%s太重了，我無法有效地使用它。</string>
     <string name="EncumbranceBuff_CharAct_3">在我使用%s之前，我需要鍛鍊我的力量。</string>
+    <string name="EncumbranceBuff_CharAct_4">我缺乏力量，無法充分發揮 %s 的潛力。</string>
     <string name="EncumbranceBuff_CharAct_5">我現在無法承受%s的重量。</string>
+    <string name="EncumbranceBuff_Info">沒有足夠的力量來有效地使用 %s。</string>
     <string name="EncumbranceBuff_Name">負擔</string>
     <string name="EnslavedSoul_Desc">這個幽靈幾乎是透明的。即使它看起來就是一個頭骨，但有那麼幾個瞬間，你能看到上邊浮現出一幅充滿痛苦與折磨的面孔。</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name">被奴役的靈魂</string>
     <string name="EnslavedSoul_Name_Objective">被奴役的靈魂</string>
     <string name="Entanglement_Txt">纏繞 %s</string>
@@ -707,14 +763,18 @@
     <string name="ExplodingSkull_Name">爆炸頭骨</string>
     <string name="ExplodingSkull_Name_Objective">爆炸頭骨</string>
     <string name="Eye_Desc">這種惡魔的另一個別名為\&quot;憎惡之球\&quot;，因為它一旦看到敵人就會毫無顧忌地使用它們的死亡凝視，即使這會傷害到它的友軍。</string>
+    <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">%s的死亡凝視殺死了你……</string>
     <string name="Eye_Name">邪眼</string>
     <string name="Eye_Name_Objective">邪眼</string>
     <string name="Facilitations_Descriptions_0">變異者向來遭受蔑視與恐懼，但飢餓感的消失將再次賦予你優勢，這次是在征服地下城深淵之時。</string>
+    <string name="Facilitations_Descriptions_1">Хто були ваші батьки, досі невідомо, але природне тролоподібне регенерування допоможе загоїти всі майбутні бойові шрами.</string>
     <string name="Facilitations_Descriptions_2">對大自然作為能量來源進行深入而徹底的研究，將使你在旅程中補充魔法儲備。</string>
     <string name="Facilitations_Descriptions_3">緊緊繫上由食人魔皮革製成、代代相傳的腰帶，你朝著前方的未知邁出一步。</string>
     <string name="Facilitations_Names_0">無飢餓</string>
+    <string name="Facilitations_Names_1">Corpo di troll</string>
     <string name="Facilitations_Names_2">精靈</string>
+    <string name="Facilitations_Names_3">巨人力量</string>
     <string name="Fadeleaf_Desc">觸碰到消逝草的任何生物都會被傳送至當前層的一個隨機地點。</string>
     <string name="Fadeleaf_Name">消逝草</string>
     <string name="FetidRat_Desc">這只有袋的老鼠比通常的更大。他身邊圍繞著一圈惡臭雲霧。</string>
@@ -726,6 +786,7 @@
     <string name="FilteredMask_Info">面罩上的呼吸器是一種保護佩戴者免受吸入有害氣體（包括煙霧、蒸汽、氣體和微粒物質，如粉塵和空氣中的微生物）的裝置。
   \n\n不過這個面罩只起裝飾作用。</string>
     <string name="FilteredMask_Name">N95面罩</string>
+    <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">這支箭除了有個洋溢著和暖紅光的箭頭外，看起來和普通的沒大差別。</string>
     <string name="FireArrow_Name">火箭</string>
     <string name="FireElemental_Desc">這些遊蕩的火元素是在召喚某種更強大存在時的副產品。由於其特性太過混亂，以至於最強大的惡魔學者都無法驅使。</string>
@@ -742,6 +803,7 @@
     <string name="Food_ACEat">食用</string>
     <string name="Food_Message">這份食物吃起來異常地美味！</string>
     <string name="FortuneTellerNPC_Desc">此女身穿一襲色彩鮮艷的長袍。對於一位已精通算命奧術的算命家來說，她算是年少有為。您一步一步地靠近，隱約能聽到她微聲低語。然而，她只是目不轉晴地盯著水晶球。</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">占蔔師</string>
     <string name="FortuneTellerNPC_Name_Objective">占蔔師</string>
     <string name="FreezeGlobe_Info">凍結所選生物，使其在短時間內無法執行任何操作。</string>
@@ -758,6 +820,7 @@
     <string name="FrostBuff_Info">被冰凍住，完全無法進行任何行動。</string>
     <string name="FrostBuff_Name">冰凍</string>
     <string name="Frost_Shatter">寒鋒令%s瓶碎裂了！</string>
+    <string name="Froth_ArrowInKnee">我以前也是像你一樣的冒險者，\n但後來我的膝蓋中了一箭...</string>
     <string name="FrozenCarpaccio_Info">這是份冰凍生肉片。它只能切成薄片取食，但是令人意外的美味。</string>
     <string name="FrozenCarpaccio_Info1">你看到你的手隱形了！</string>
     <string name="FrozenCarpaccio_Info2">你感到你的皮膚變硬了！</string>
@@ -783,10 +846,12 @@
     <string name="Ghost_Defense">回避</string>
     <string name="Ghost_Desc">這個幽靈已經幾乎不能被看見了。它看起來像是由一片無形的昏暗光斑和一張悲痛的面孔所組成的。</string>
     <string name="Ghost_Name">悲傷幽靈</string>
+    <string name="Ghost_Name_Objective">鬼</string>
     <string name="Ghost_Rat1">你好冒險者……曾經我也像你一樣——強壯而自信……雖然現在我已經死了……但是我無法離開這個地方……除非我完成我的復仇……殺死_腐臭老鼠_，那個帶走我生命的東西……</string>
     <string name="Ghost_Rat2">求求你……幫幫我……殺死那個令人憎恨的東西……</string>
     <string name="Ghost_Rose1">你好冒險者……曾經我也像你一樣——強壯而自信……雖然現在我已經死了……但是我無法離開這個地方……除非我拿到我的_枯幹玫瑰_……那是對我非常重要的東西……一些怪物從我的身體偷走了它……</string>
     <string name="Ghost_Rose2">求求你……幫幫我……找到那朵玫瑰……</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Info">一把在末端嵌有劍刃的長柄武器。</string>
     <string name="Glaive_Name">關刀</string>
     <string name="GnollArmor_ACSpecial">號召</string>
@@ -798,6 +863,7 @@
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">一種傳統的戰斧，由豺狼工匠創造，每個部落都有自己獨特的設計。這種戰斧比同類戰斧輕一些，更適合於投擲。</string>
     <string name="GnollTamahawk_Name">豺狼戰斧</string>
+    <string name="Gnoll_BecomeGuardianDesc">成為守護者</string>
     <string name="Gnoll_BecomeWitchdoctorDesc">成為巫醫</string>
     <string name="Gnoll_Desc">豺狼人是像鬣狗一樣的人型生物。他們居住在下水道和地牢中，不時向上突襲試圖向地表發起進攻。豺狼斥候是它們種群裏最普通的一員，它們不像暴徒們那樣強壯，也沒有薩滿們那麼聰明。</string>
     <string name="Gnoll_Gender">masculine</string>
@@ -861,6 +927,7 @@
     <string name="HealerNPC_Name_Objective">城鎮牧師</string>
     <string name="Healing_Info">這個法術對任何冒險家都是至關重要的。它將恢復施法者最大生命值的1/3。</string>
     <string name="Healing_Name">迴復</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">治療藥水做的箭</string>
     <string name="HealthArrow_Name">治療箭</string>
     <string name="HealthDart_Gender">masculine</string>
@@ -910,6 +977,8 @@
     <string name="HeroClass_NecromancerPerks_2">死靈法師初始擁有一件獨特的靈魂長袍。裝備後，每殺死一個生物會給他提供1點法力值。</string>
     <string name="HeroClass_NecromancerPerks_3">死靈法師開局有一把7層的骷髏鑰匙。</string>
     <string name="HeroClass_NecromancerPerks_4">治療藥水開局時就已經鑒定好了。</string>
+    <string name="HeroClass_None">平民</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">瘟疫医生从被杀的敌人身上收集[黄色:毒性腺体]、[黄色:腐烂器官]、[黄色:骨片]。</string>
     <string name="HeroClass_PlagueDoctorPerks_1">開始時擁有瘟疫面具（對所有氣體免疫）和骨鋸。暴擊會掉落額外部件，鋸子對麻痹敵人造成+50%傷害。</string>
     <string name="HeroClass_PlagueDoctorPerks_2">麻痹氣體和毒性氣體的藥水已預先辨識。</string>
     <string name="HeroClass_PlagueDoctorPerks_3">被毒氣殺死的敵人會爆炸成毒性迷霧，每影響一個敵人就能為你恢復 1 點生命值。</string>
@@ -1051,7 +1120,8 @@
     <string name="InnKeeperNPC_Desc">旅店老闆對自己感到相當自豪。</string>
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">旅店老闆</string>
-    <string name="InnKeeperNPC_Name_Objective">旅店老闆</string>
+    <string name="InnKeeperNPC_Name_Objective">旅館主人</string>
+    <string name="InnServant_Phrase_1">Ugh, masih banyak yang harus dilakukan!</string>
     <string name="InnServant_Phrase_2">這個醉漢讓我發瘋！</string>
     <string name="InnServant_Phrase_3">我看起來很乾淨</string>
     <string name="InnServant_Phrase_4">我的天，今天這麼多的客人</string>
@@ -1087,6 +1157,7 @@
     <string name="Item_Name">鐵匠</string>
     <string name="Item_PackFull">您的背包滿了，沒法裝下%s</string>
     <string name="JarOfSouls_Desc">這個舊罐子上描繪的頭骨裏的眼睛正在閃閃發亮，以及它散發出的奇怪能量，讓你感到不安。</string>
+    <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name">魂之靈龕</string>
     <string name="JarOfSouls_Name_Objective">魂之靈龕</string>
     <string name="Javelin_Gender">neuter</string>
@@ -1113,6 +1184,7 @@
     <string name="KindOfWeapon_EquipCursed">您不由自主地握緊了您的%s</string>
     <string name="King_Defense">招架</string>
     <string name="King_Desc">這位最後的矮人國王以對生死機制的透徹理解而聞名。他說服王國的皇室成員參加了一場本應讓他們所有人獲得永生的儀式。最終成功的僅他一人——還獲得了一支死靈軍隊。</string>
+    <string name="King_Gender">masculine</string>
     <string name="King_Info1">你不可能殺掉我，%s…我是…不朽的…</string>
     <string name="King_Info2">復蘇吧，奴隸們！</string>
     <string name="King_Info3">你好大的膽子！</string>
@@ -1130,9 +1202,11 @@
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">狗頭人</string>
     <string name="Kobold_Name_Objective">狗頭人</string>
+    <string name="KrampusHead_Info">曾經想過在地牢冒險時扮演更邪惡的角色嗎？戴上這個魔鬼般的模樣，必定會嚇壞當地的小老鼠。</string>
     <string name="KrampusHead_Name">克朗普斯頭顱</string>
     <string name="KunaiThrow_Info">這種致命的苦無投擲會極其迅速地完成，快到你甚至無法選擇目標。\n\n真正的大師能夠一次投擲多把苦無。</string>
     <string name="KunaiThrow_Name">投擲苦無</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">這件武器由鐮刀，鐵球，鎖鏈三部分所構成，鐵球和鐮刀分別在鎖鏈的兩端。</string>
     <string name="Kusarigama_Name">錘鎖鎌</string>
     <string name="Kusarigama_Pull">拉扯</string>
@@ -1225,7 +1299,8 @@
     <string name="Lich_Name_Objective">巫妖</string>
     <string name="LightBuff_Info">光從身體散發出來，照亮周圍的一切。</string>
     <string name="LightBuff_Name">照明</string>
-    <string name="LightningBolt_Info">遠古薩滿之間流傳的咒語，能對敵人造成雙倍電擊傷害，尤其是當他們愚蠢地站在水面上時。</string>
+    <string name="LightningBolt_Info">這是古代薩滿共享的一個法術，會使你的敵人受到兩倍的有效打擊，尤其是當他們愚蠢地站在水面上時。</string>
+    <string name="LightningBolt_Name">閃電</string>
     <string name="LightningTrap_Desc">你被閃電陷阱的電擊殺死了……</string>
     <string name="LightningTrap_Name">閃電陷阱</string>
     <string name="LloidsBeacon_ACReturn">返回傳送點</string>
@@ -1237,6 +1312,7 @@
     <string name="LloidsBeacon_Return">萊德傳送信標設置成功，現在您已經隨時可以回來了。</string>
     <string name="LloidsBeacon_Set">
 這個傳送信標被設置在混合地牢的%d層的某個地方。</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Info">擎天巨刃，擊擊鏗鏘，削鐵如泥。</string>
     <string name="Longsword_Name">長劍</string>
     <string name="Luck_Name_0">幸運%s</string>
@@ -1249,6 +1325,7 @@
     <string name="MageArmor_Desc">法師穿著這件華麗的長袍，能夠施放一種融化大地的魔法：所有在他視野內的敵人將會烈火焚身並同時無法移動。</string>
     <string name="MageArmor_Name">法師長袍</string>
     <string name="MageArmor_NotMage">只有法師能使用這件護甲！</string>
+    <string name="MagicArrow_Info">Стара добра магічна стріла, правильний вибір, коли закінчиться боєприпас.</string>
     <string name="MagicArrow_Name">魔法箭</string>
     <string name="MagicTorch_Info">一種產生炬光的法術，用來照亮地牢的黑暗。</string>
     <string name="MagicTorch_Name">魔法炬光</string>
@@ -1258,6 +1335,7 @@
     <string name="ManaPotion_Name">瑪那藥水</string>
     <string name="ManaRegenerationBuff_Info">魔力恢復的功能以增益效果的形式呈現，讓事情變得更簡單。</string>
     <string name="ManaRegenerationBuff_Name">魔力回復</string>
+    <string name="ManaShieldBuff_Info">一個魔法盾牌出現了，它完全消除下一次進來的攻擊。</string>
     <string name="ManaShieldBuff_Name">魔法屏障</string>
     <string name="Mana_Cost">瑪那消耗：</string>
     <string name="Mana_Title">瑪那</string>
@@ -1287,9 +1365,12 @@
     <string name="MeleeWeapon_Info7a">您%2$s握著這把%1$s。</string>
     <string name="MeleeWeapon_Info7b">，並且因為它被詛咒了，你無法把它放下。</string>
     <string name="MeleeWeapon_Info7c">您能感受到%s中潛伏著一股惡意的魔力。</string>
+    <string name="MercenaryNPC_Desc">看起來很結實的男人。</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">僱傭兵</string>
     <string name="MercenaryNPC_Name_Objective">僱傭兵</string>
     <string name="Metabolism_Txt">代謝 %s</string>
+    <string name="MiasmaGas_Info">Una nefa tossica che avvelena, indebolisce e disorienta chi la respira.</string>
     <string name="MimicAmulet_Desc">你冒險旅程中最光榮的時刻原來是個陷阱。</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">擬形怪</string>
@@ -1303,6 +1384,7 @@
     <string name="Mimic_Name">擬形怪</string>
     <string name="Mimic_Name_Objective">擬形怪</string>
     <string name="MindVisionBuff_Info">內心的異象讓你能清楚看見樓層上所有生物的移動。</string>
+    <string name="MindVisionBuff_Name">心靈視野</string>
     <string name="MirrorImage_Desc">這個鏡像與你十分相似，但是它更黯淡且在微微震顫。</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">鏡像</string>
@@ -1317,6 +1399,7 @@
     <string name="MissileWeapon_No">不，我改主意了</string>
     <string name="MissileWeapon_Sure">您確定要將其用作近戰武器？</string>
     <string name="MissileWeapon_Yes">是的，我知道我在做什麼</string>
+    <string name="MobAi_status">這個 %1 是 %2</string>
     <string name="Mob_Attacking">把這個%s當作死了！</string>
     <string name="Mob_Cannot_Be_Pet">你沒法控制住 \&quot;%s\&quot;</string>
     <string name="Mob_Desc">真正的說明即將到來！</string>
@@ -1348,10 +1431,13 @@
     <string name="Monk_Defense">招架</string>
     <string name="Monk_Desc">這些武僧都是些狂信徒，他們會傾其所能從一切異族手中保護他們城市的秘密。他們不使用任何盔甲亦或武器，單純依靠徒手格鬥技巧來戰鬥。</string>
     <string name="Monk_Disarm">%1$s將你手中的%2$s擊飛了！</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">矮人武僧</string>
     <string name="Monk_Name_Objective">矮人武僧</string>
     <string name="MoongraceBuff_Info">周圍的空氣變得更加飽和，使人能夠更好地集中精神並恢復魔力。</string>
     <string name="MoongraceBuff_Name">月光恩賜</string>
+    <string name="Moongrace_Desc">這些植物少量生長，被視為天然魔法的來源。</string>
+    <string name="Moongrace_Name">月光草</string>
     <string name="Movement_Speed">移動速度</string>
     <string name="Multiplicity_Txt">分身 %s</string>
     <string name="Mushroom_Eat_Message"> 那菇味道怪詭異的！</string>
@@ -1391,6 +1477,7 @@
     <string name="Necromancy_SoulsCountLabel">靈魂</string>
     <string name="Necromancy_SummonDeathlingName">召喚死靈</string>
     <string name="Necromancy_Title">死靈術</string>
+    <string name="NecrotismBuff_Info">Il marchio della morte stessa, il fetore che colpisce chi è vicino e causa loro di condividere la stessa sorte.</string>
     <string name="NecrotismBuff_Name">壞死</string>
     <string name="Necrotism_ACSpecial">天災</string>
     <string name="Necrotism_Death">你被壞死所殺…</string>
@@ -1407,6 +1494,7 @@
     <string name="OozeBuff_Name">腐蝕黏液</string>
     <string name="Ooze_Death">%s殺了您……</string>
     <string name="Order_Info">適當專注下，你的命令幾乎無可否認。</string>
+    <string name="Order_Name">Order</string>
     <string name="Order_Resist">你好大的膽子！</string>
     <string name="OverpricedRation_Info">這看起來就是一份普通的口糧，雖然小了一些</string>
     <string name="OverpricedRation_Message">這份食物吃起來還不錯。</string>
@@ -1438,6 +1526,7 @@
     <string name="Piranha_Name_Objective">巨型食人魚</string>
     <string name="PirateSet_Info">啊哈！你現在看起來像是個海盜…或者說只是個該死的旱鴨子！？我希望你不是，畢竟那東西是海盜的，我的意思是……啊哈！</string>
     <string name="PirateSet_Name">海盜帽</string>
+    <string name="PlagueDoctorMaskHood_Info">一個雕塑的黑木頭骨，空蕩蕩的眼窩散發著紫水晶寶石的幽光。每一次呼吸都經過了一個由管子和過濾器組成的迷宮，帶著強效草藥和香料的氣味，掩蓋了附著在你身上的腐敗。但這不僅僅是面具。一頂沉重的午夜絲絨兜帽，將你的臉和頭部籠罩在陰影中。帽子像烏鴉的翅膀一樣，沿著你的背脊流動，邊緣飾有骨白色的蕾絲花邊，形成了一種令人不寒而慄的美麗對比。面具和帽子共同創造了一個幽靈般的外貌，是對抗腐敗力量的不懈鬥爭的黑暗見證。</string>
     <string name="PlagueDoctorMaskHood_Name">帶兜帽的瘟疫醫生面具</string>
     <string name="PlagueDoctorMask_Info">這……這不僅僅是一副面具。它是……一道屏障。抵禦腐敗之力的護盾，正是瘟疫醫生不懈抗爭的力量。由最優質的烏木精心雕琢而成，刻有飢餓骷髏的面容。空洞的眼窩中鑲嵌著閃閃發光的紫水晶寶石，微微脈動著，如同即將熄滅的餘燼。你的每一次呼吸，每一句話語，都經過錯綜複雜的管道和過濾器網絡的過濾。一種由強效草藥和異國香料調製而成的混合物滲透到內部空氣中，掩蓋了如裹屍布般纏繞著你的死亡惡臭。</string>
     <string name="PlagueDoctorMask_Name">瘟疫醫生面具</string>
@@ -1453,21 +1542,30 @@
 </string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">呸！你信嗎？那些白癡還沒意識到這該死的下水道有多危險！像警衛和冒險家可以保護城市免除疾病嗎！沒有武器可以阻止疾病蔓延。但我需要證據，你能幫助我嗎？給我拿%d只老鼠皮，這樣我就可以做一些額外的測試了。
 </string>
+    <string name="PlagueDoctorQuest_1_1_Epilogue">啊，你回來了！_五隻死老鼠_，完美！牠們的皮毛對我的研究至關重要。如約，為了你的英勇努力，我用牠們的皮毛為你製作了這件盔甲。它浸透了瘟疫的痕跡，但別擔心！它是受控制的，它能保護你！現在去吧！保護城市！</string>
+    <string name="PlagueDoctorQuest_1_1_InProgress">帶五隻死老鼠給我！你帶的每一隻老鼠都讓我們更接近理解這種可怕的瘟疫。</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">啊——嚏！！！\n可惡的可憎瘟疫！它像野火一樣在城市中蔓延，在毫無戒備的民眾骨頭裡潰爛！呸！你認為那些可悲的守衛有機會對抗這種陰險的災禍嗎？你，那邊那個！強壯、健康的樣本。也許你能幫我。那些骯髒的下水道_老鼠_……我告訴你，它們攜帶瘟疫，它們腐爛的小身體裡有瘟疫的種子！給我帶_五_隻那些可惡的生物來，當然是_死的_！它們的皮對我的研究將是無價之寶。我會為你製作一件奇妙的盔甲，一個抵禦瘟疫本身的保護屏障！</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">啊哈……太壯觀了！_蝸牛_，它們的祕密像月光下的花瓣般緩緩綻放。真是豐富的資訊寶庫！但你是對的，_五十枚金幣_ 實在算不上相稱的報酬。*狂熱地輕笑*</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">「十隻蝸牛」，十聲來自深淵的低語！它們的黏液將被分析，它們的本質將被審視。它們所擁有的祕密已觸手可及。</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*劇烈咳嗽* 阿嚏！\n _蝸牛_……它們滑行。它們分泌黏液。它們低語著被遺忘時代的祕密。我需要它們，_十隻_，它們的殼還完好無損。你認為區區_五十枚金幣_就足夠換取如此珍貴的知識嗎？\n 哈！沒關係。它們所擁有的資訊可能是阻止這場瘟疫的關鍵。或者……它可能引導我們發現更可怕的事物。你決定吧。</string>
+    <string name="PlagueDoctorQuest_2_1_Epilogue">《月光花》……這世界魔法的見證。我從它們的精髓中學到了很多，但你的獎勵……嗯，是用心準備的。*遞給英雄一瓶閃耀的靈力藥水* 願它的力量引導你通過前方的危險。</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">在黑暗與微弱月光交會之處尋找 _moongrace_。_兩顆種子_ 的精華，將揭開隱藏的秘密。</string>
     <string name="PlagueDoctorQuest_2_1_Prologue">「月花種子」……那些空靈的花朵，帶著月亮本身的魔力低語。我已經研究了它們奇特的發光現象幾個星期。它們的精華中蘊含著某種潛能，一種隱藏的能量，這可能是打開……某些事物的關鍵。*他若有所思地用骨指敲擊下巴*\n但可惜，它們很稀有。只在最深的洞穴中才能找到，那裡幾乎沒有月光照入。我需要兩顆。兩顆種子來解鎖它們力量的秘密。作為回報，我可以給你一些……純淨而強大的魔法。一瓶「魔力藥水」，充滿著月花的精髓。它將滋養你疲憊的靈魂，讓你能以全新的力量運用神秘法術。</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">卓越！_陽光草_，其金色精華充滿活力地跳動著。我已從它細緻的結構學到了很多。*他遞給你一瓶_健康藥水_，液體散發出淡淡的金光。* 當世界壓在你身上時喝下它，感受陽光的溫暖喚醒你的精神。</string>
-    <string name="PlagueDoctorQuest_2_2_InProgress">_兩株陽光草_種子。它們金色的花瓣蘊含著我渴望理解的力量。找到它們，讓它們的精華顯現！</string>
+    <string name="PlagueDoctorQuest_2_2_InProgress">帶兩顆太陽草種子給我。它們金色的花瓣蘊含著我想要理解的能量。找到它們，讓它們的本質得以揭示！</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">啊，_日曆草_！一朵 delicate 的花，花瓣散發著太陽的溫暖。我相信它的精華是……啊，算了，細節先不談了。總之非常關鍵。_兩顆日曆草種子_。幫我把牠們帶回來，我就獎勵你一件對冒險絕對有用的東西——充滿陽光生命力的_治癒藥水_。</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*他戴著手套的雙手輕輕捧著_蝙蝠_，以一種令人不安的迷戀審視著它微小的身軀* 太棒了！蝙蝠的迴聲定位……這是我從未見過的。如此精確……如此……控制。*他轉向妳，臉龐隱藏在面具之下* 為了妳的努力，這是_捲軸升級_。明智地使用它，因為它擁有……提煉妳本質的潛力。*他將捲軸遞給妳，聲音壓低成輕聲耳語* 這隻_蝙蝠_，它是……通往隱藏世界的窗口。一個……影子舞動、秘密低語的世界。</string>
+    <string name="PlagueDoctorQuest_3_1_InProgress">给我一只活着的、毫发无损的_吸血蝙蝠_！它的血液，它的翅膀……蕴含着我必须揭开秘密！</string>
+    <string name="PlagueDoctorQuest_3_1_Prologue">*牠的眼中閃爍著一種奇異而狂熱的光芒* 啊，_吸血蝙蝠_！夜間的生物，以獵物的生命力為食。有趣……真是有趣。我需要一隻活的來研究其獨特的生理構造。這一切都是關於……理解……理解……*牠的聲音逐漸低沉，喃喃自語著一堆神秘術語*。對！蝙蝠的回聲定位，牠在完全黑暗中導航的能力……這是解開秘密的關鍵。</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*他仰頭發出咯咯的笑聲，聲音在他潮濕的實驗室中回盪* 壯觀！一個_死亡騎士_，站在我們面前！從它身上散發的力量……令人陶醉！*他轉向你，眼睛閃爍著狂熱的光芒* 而對你，一個配得上你勇氣的獎勵：一瓶_力量藥水_！願它賜予你征服任何敵人的力量！現在……讓我們檢查我們的主題。它的本質蘊含著可能改寫生命法則的秘密！*他帶著瘋狂的獰笑接近_死亡騎士_，揮舞著一瓶冒泡的綠色液體*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">這不僅僅是野獸！它是死靈力量的活見證！活捉它，不能受傷！這個_死亡騎士_……它是關鍵！</string>
+    <string name="PlagueDoctorQuest_3_2_Prologue">一個_死亡騎士_！*他的聲音因興奮而破碎，骨瘦如柴的手指顫抖著緊握著一個充滿渾濁熒光液體的試管*。這樣的生物……是不死之光！要活捉一個……這將是……里程碑式的。想像一下我們可以解鎖多少秘密！它骷髏血管中流淌的力量！是的，一個_死亡騎士_！這對我的研究至關重要！因為它將使我們能夠更深入……探索生命的謎團……以及死亡本身的奧秘！</string>
+    <string name="PlagueDoctorQuest_4_1_InProgress">五個＿矮人巫師＿，他們的身體仍脈動著黑暗魔法微弱的迴響！為我找回他們，我會獎勵你一瓶無與倫比的強力藥水——＿力量藥水＿，它將賦予你十人之力！</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">啊嚏！矮人！那些頑固的地下居民，痴迷於寶石和黃金。但我渴望的是_矮人術士_……他們扭曲的魔法，由他們居住的深淵提供燃料。五個，我需要五個那些枯萎的靈魂！他們的身體是理解某種……現象的關鍵。關於通過大地本身引導奧術能量的事情。我相信我接近突破了，但我需要他們的本質，他們腐敗的魔法！*他劇烈地咳嗽在手帕上，深色的污漬蔓延到精緻的織物上*</string>
+    <string name="PlagueDoctorQuest_4_2_Epilogue">Splendid! Öt _Kobold Jegyző_, jégesszenciájuk most az enyém, hogy felfedezzem! Kapcsolatuk a jeges sivatagokkal, igazán lenyűgöző. Ahogy ők magukkal vízet manipulationálják... igazán figyelemre méltó. *Átad neked egy csillogó ampullát, tele élénk bordó folyadékkal* Ez a bátor fellépésedért: egy _Erő potion_! Szívj mélyet, és érezd a tíz harcos erejének áramlását az ereidben! Emlékezz, tudás az erelem... és az erő az egyetlen fegyverünk a sötétség ellen. Most... boncoljuk szét ezeket a jégmegelmeleket, és fedjük fel jégbelepi titkait!</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">拿回五具_DEAD KOBOLD ICEMANCER_！他們冰冷的屍體是解開寒冰魔法秘密的關鍵！</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*他枯骨般的手指有節奏地敲擊著沸騰的大鍋，周圍的空氣中瀰漫著濃烈的硫磺和腐爛氣味*\n_狗頭人冰法師_！那些可悲的生物，蜷縮在他們冰封的洞穴中，絕望地抓著他們的冰霜魔法。我需要五個，他們凍僵的屍體將會... 啟發人心。他們對冰的掌握，這... 很奇特。我相信他們利用了一種原始能量，一種沉睡在這個世界表面之下的力量。</string>
+    <string name="PlagueDoctorQuest_5_1_Epilogue">*他凝視著兩隻_魅魔_，面具下滿是幸福的微笑。* 太棒了！太壯觀了！這將解鎖如此多的……可能性！*他轉向你，聲音飽含感激……還有別的什麼。* 你的努力……不會被遺忘的。我深深感謝你。*他的目光在_魅魔_身上停留過久，然後退入實驗室，嘟囔著解鎖誘惑的秘密。</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*他的思緒在說話時飄散，聲音越來越小，幾乎是耳語。* 給我帶兩隻_魅魔_來……活的。她們的……力量……令人著迷。</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*他結結巴巴，聲音像脆弱的樹枝般斷裂*。啊-啊，_魅魔_！兩個…是的，兩個，活的！這是…咳咳…為了我的研究！你看…她們的費洛蒙…對於理解…啊…的微妙平衡至關重要… *他漸弱下去，骨瘦如柴的手緊張地調整面具，眼睛帶著狂熱的強度望向你*。她們…的本質…是個謎…美麗、神秘的謎！ *他劇烈咳嗽，試圖恢復鎮定*。我保證，給我帶來兩個…這些生物…你將獲得我永恆的感激。把它當作對知識的…恩賜！是的！為了知識！</string>
     <string name="PlagueDoctorQuest_AllDone">*他發出一聲乾澀、嘶啞的笑聲。* \&quot;你的事蹟，解開了無法衡量的秘密！獲得的知識……在我體內脈動，如同發現的交響曲。但知識，\&quot;他補充道，聲音降到密謀般的低語，\&quot;知識就是力量。而力量……啊……那是最令人陶醉的靈藥。\&quot;他凝視著你片刻，他的紫水晶眼睛燃燒著發熱般的強度。\&quot;也許，\&quot;他低語，\&quot;我們的路徑將再次交會。因為還有許多……謎團……有待解開。\&quot;</string>
@@ -1481,8 +1579,10 @@
     <string name="Plant_Seed">%s種子</string>
     <string name="PlateArmor_Desc">這件裝備是由巨大厚重的金屬板焊接而成，讓能夠承受板甲驚人重量的冒險者提供無與倫比的防護。</string>
     <string name="PlateArmor_Name">板甲</string>
+    <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">箭頭上的致命毒藥反射出光芒。</string>
     <string name="PoisonArrow_Name">毒箭</string>
+    <string name="PoisonBuff_Info">Тіло поступово вбивається отрутою!</string>
     <string name="PoisonBuff_Name">劇毒</string>
     <string name="Poison_Death">您被劇毒殺死了……</string>
     <string name="Poison_Name_0">淬毒%s</string>
@@ -1581,6 +1681,7 @@
     <string name="PseudoPasty_Info">這是個正宗康沃爾餡餅，裏面填滿了傳統的牛肉和土豆餡料。</string>
     <string name="PseudoPasty_Name">餡餅</string>
     <string name="PseudoRat_Desc">這只從老鼠屍體中出現的可怕野獸不像你見過的任何動物，排滿了尖利牙齒的巨嘴占據了它的大部分身體。</string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">偽鼠</string>
     <string name="PseudoRat_Name_Objective">偽鼠</string>
     <string name="PumpkinPie_Info">好吃的南瓜派，嗯，媽媽的味道。</string>
@@ -1609,6 +1710,7 @@
     <string name="RatArmor_Name">鼠甲</string>
     <string name="RatHide_Info">又臟又臭的帶毛肉皮,這真的有用嗎?</string>
     <string name="RatHide_Name">老鼠腿</string>
+    <string name="RatKingCrownBuff_Info">Omaggia il Signore dei topi, ogni topo obbedirà e loderà.</string>
     <string name="RatKingCrownBuff_Name">鼠王殿下</string>
     <string name="RatKingCrown_Info">純金的鼠王王冠，鼠國的 \&quot; 永恆 \&quot; 與 \&quot; 力量 \&quot; 的象徵！</string>
     <string name="RatKingCrown_Name">鼠王之冠</string>
@@ -1714,6 +1816,7 @@
     <string name="RogueArmor_Prompt">選擇您要躍到的位置</string>
     <string name="RootSpell_Info">纏繞所選生物，使其無法在短時間內移動。</string>
     <string name="RootSpell_Name">纏繞</string>
+    <string name="RootsBuff_Info">Земля проросла корінням, що обвиває тіло, не дозволяючи зробити хоча б один крок.</string>
     <string name="RootsBuff_Name">纏繞</string>
     <string name="RottenFish_Info">腐爛的魚，聞起來很難聞。</string>
     <string name="RottenFish_Name">爛魚</string>
@@ -1721,6 +1824,7 @@
     <string name="RottenFood_Message">好惡心！</string>
     <string name="RottenMeat_Info">一份腐爛的肉</string>
     <string name="RottenMeat_Name">腐爛肉</string>
+    <string name="RottenOrgan_Info">從被打敗的敵人身上採集的腐爛器官。儘管狀態惡劣，但含有錬金過程所需的寶貴化合物。</string>
     <string name="RottenOrgan_Name">腐爛的器官</string>
     <string name="RottenPasty_Info">這餡餅看起來十分惡心，但可以通過一些方法讓它再次能夠食用。</string>
     <string name="RottenPasty_Name">腐爛餡餅</string>
@@ -1807,6 +1911,7 @@
     <string name="ScrollOfTeleportation_Info">這張羊皮紙上的咒語會立即將閱讀者傳送到當前層的隨機位置。它可以在危險的情況用來逃避，但不幸的讀者可能會發現自己處在一個更危險的地方。</string>
     <string name="ScrollOfTeleportation_Name">傳送卷軸</string>
     <string name="ScrollOfTeleportation_NoTeleport">強大的能量阻止了你的傳送！</string>
+    <string name="ScrollOfTeleportation_NoTeleport2">這個地方的強大魔法氣場阻止 %s 傳送！</string>
     <string name="ScrollOfTeleportation_Teleport">眼前一閃，傳送完成。</string>
     <string name="ScrollOfTeleportation_Teleport2">眨眼之間 %s 就被傳送到該層的另一個位置。</string>
     <string name="ScrollOfTerror_Info">發出紅光，恐懼敵人。攻擊它們會使恐懼失效。</string>
@@ -1845,9 +1950,12 @@
     <string name="SeedPouch_Info">這個小天鵝絨袋允許你在裏面儲存任何數量的種子，非常的方便。</string>
     <string name="SeedPouch_Name">種子袋</string>
     <string name="Senior_Desc">這些武僧都是些狂信徒，他們會傾其所能從一切異族手中保護他們城市的秘密。他們不使用任何盔甲亦或武器，單純依靠徒手格鬥技巧來戰鬥。這個特別的武僧掌握了致殘對手的技巧。</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">武僧大師</string>
     <string name="Senior_Name_Objective">武僧大師</string>
+    <string name="ServantNPC_Desc">非常忙碌的旅馆服务生。</string>
     <string name="ServantNPC_Gender">feminine</string>
+    <string name="ServantNPC_Name_Objective">innkeeper</string>
     <string name="ServiceManNPC_Desc">當地企業一名中規中矩的員工。</string>
     <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">本人真誠向閣下道歉，無奈每位新的冒險者只能看最多 %d 齣電影。</string>
@@ -1883,6 +1991,7 @@
     <string name="Shaman_Killed">%s的閃電殺死了你……</string>
     <string name="Shaman_Name">豺狼薩滿</string>
     <string name="Shaman_Name_Objective">豺狼薩滿</string>
+    <string name="Shaman_ZapMiss">*用哥布林語罵髒話*</string>
     <string name="Sheep_Desc">這是一隻魔法綿羊。為什麼叫魔法綿羊？因為你沒法殺死它。它只會站在那裡直到魔法失效，在它消失前，它只會站在這咀嚼反芻物，神情空洞。</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">魔法綿羊</string>
@@ -1890,6 +1999,7 @@
     <string name="ShieldBuffNotReady_Info">你的盾牌還沒準備好抵擋下一次攻擊。</string>
     <string name="ShieldBuffNotReady_Name">盾牌還沒準備好</string>
     <string name="ShieldBuffReady_Info">你的盾牌已準備好抵擋下一次攻擊。</string>
+    <string name="ShieldBuffReady_Name">Щит готовий</string>
     <string name="ShieldInfoTemplate">這個盾牌最多可以格擋%1$d傷害。  格擋幾率為%2$d %% 。 成功格擋後需要%3$3.1f個回合來恢復。</string>
     <string name="ShieldStrTemplate">盾牌的佩戴者應至少具有%1$d力量才能正常的使用它。</string>
     <string name="ShieldWeaponInfo">當此盾牌作為武器使用時，平均會造成 %1$d 點傷害。</string>
@@ -1898,6 +2008,7 @@
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">持盾暴徒</string>
     <string name="Shielded_Name_Objective">持盾暴徒</string>
+    <string name="ShootInEye_Info">利用你非凡的射擊技巧，射中敵人的眼睛，如果它有眼睛的話。</string>
     <string name="ShootInEye_Name">百步穿楊</string>
     <string name="Shopkeeper_Buy">選擇要購買的物品</string>
     <string name="Shopkeeper_BuyPrompt">讓我們看看您的庫存</string>
@@ -1927,6 +2038,7 @@
     <string name="Skeleton_Name_Objective">骷髏</string>
     <string name="SleepBuff_Info">完全沉睡中。</string>
     <string name="SleepBuff_Name">睡眠</string>
+    <string name="SlowBuff_Info">遲鈍感讓人變得比平常更慢。</string>
     <string name="SlowBuff_Name">緩速</string>
     <string name="Slow_Name_0">寒冰%s</string>
     <string name="Slow_Name_1">寒冰%s</string>
@@ -1937,10 +2049,13 @@
     <string name="Snail_Desc">這個小軟體動物透過進食污物長得相當大，但他仍然非常緩慢，這使他成為一個容易面對的敵人。</string>
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">蝸牛</string>
+    <string name="Snail_Name_Objective">snail</string>
+    <string name="SnipersMarkBuff_Info">Tanda dibuat oleh penembak jitu.</string>
     <string name="SnipersMarkBuff_Name">狙擊手標記</string>
     <string name="SociologistNPC_AlreadyTaken">你已經反饋過了。請稍後再來</string>
     <string name="SociologistNPC_Desc">這位調研員專門收集你對這款混合地牢的意見和建議</string>
     <string name="SociologistNPC_DownloadError">抱歉，崩潰了，請稍後再試</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Hi">你好
 你有什麼意見和建議想對混合地牢作者說嗎(請確保網絡順暢)
 你的意見十分重要</string>
@@ -1966,6 +2081,7 @@
     <string name="Spells_NotInOwnBody">當你的靈魂與身體分離時，你不能%s。</string>
     <string name="Spells_NotTooFast">%s 沒有準備好使用</string>
     <string name="Spells_SummonLimitReached">%1$s: 召喚上限提升 (最大值: %2$d)!</string>
+    <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">這種鎧甲是由一些老蜘蛛屍體和一些奇怪的布料組成的。令人驚訝的是，它裏面依然包含著蜘蛛的吐絲功能。只要它受到足夠的力量就能噴出網來。此外這蜘蛛腳一樣的鞋子能讓你在網上自由移動。</string>
     <string name="SpiderArmor_Name">蜘蛛護甲</string>
     <string name="SpiderCharm_Info">這個充滿異國情調的小飾品籠罩著神秘的光芒。誰知道，佩戴它的人會怎樣？</string>
@@ -1975,6 +2091,7 @@
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">蜘蛛蛋</string>
     <string name="SpiderEgg_Name_Objective">蜘蛛蛋</string>
+    <string name="SpiderElite_Desc">與士兵一樣，蜘蛛守衛發誓保護他們的國度。精銳守衛的毒液用於使目標迷失方向。</string>
     <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">蜘蛛精英守衛</string>
     <string name="SpiderElite_Name_Objective">蜘蛛精英守衛</string>
@@ -2001,6 +2118,7 @@
     <string name="SpiderQueenCarapace_Info">蜘蛛皇後的甲殼上一塊碎片。內窺可見一條網腺，看上去尚有生命跡象。</string>
     <string name="SpiderQueenCarapace_Name">蜘蛛皇後的甲殼</string>
     <string name="SpiderQueen_Desc">由美麗的女性和可怖的蜘蛛交織而成的身體。在巢穴中所有活著的存在都是她的侍從，與這位特別的女士的邂逅也許會讓你喪命，因為你是這裏的入侵者！</string>
+    <string name="SpiderQueen_DieInfo">蜘蛛女王被擊敗了！現在我應該回到第5層並繼續我的深淵之旅。</string>
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name">蜘蛛女王</string>
     <string name="SpiderQueen_Name_Objective">蜘蛛女王</string>
@@ -2013,8 +2131,11 @@
     <string name="Spinner_Name">洞穴紡織者</string>
     <string name="Spinner_Name_Objective">洞穴紡織者</string>
     <string name="SpiritOfPain_Desc">黑暗的一部分</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">痛苦之魂</string>
     <string name="SpiritOfPain_Name_Objective">痛苦之魂</string>
+    <string name="Sprout_Info">Пробудите спящие семена.\nОднако, на земле должно быть какое-то зелёное покрытие, чтобы это заклинание сработало.</string>
+    <string name="Sprout_Name">新芽</string>
     <string name="StartScene_ChooseFromSlot">從存檔欄位中選擇</string>
     <string name="StartScene_ComingSoon">即將推出</string>
     <string name="StartScene_ContinueLatest">繼續最新的遊戲或從存檔槽位選擇</string>
@@ -2076,11 +2197,13 @@
     <string name="SuspiciousRat_Name_Objective">可疑的老鼠</string>
     <string name="Swarm_Defense">回避</string>
     <string name="Swarm_Desc">這種食腐生物群的飛行聲音真的很煩。每次對它們的非魔法攻擊都會使它們分裂成兩群。</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">蠅群</string>
     <string name="Swarm_Name_Objective">蠅群</string>
     <string name="Swing_Name_0">野蠻%s</string>
     <string name="Swing_Name_1">野蠻%s</string>
     <string name="Swing_Name_2">野蠻%s</string>
+    <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">此等鋒利的刀刃定不會讓您失望。</string>
     <string name="Sword_Name">單手劍</string>
     <string name="Tamahawk_Gender">masculine</string>
@@ -2124,6 +2247,7 @@
     <string name="Torch_Info">這在沒什麼光線照明的惡魔大廳裏是一件不可缺少的物品。</string>
     <string name="Torch_Info2">某個因周圍光線不足而臭名昭著的地牢層中，必不可少的物品。</string>
     <string name="Torch_Name">火把</string>
+    <string name="ToughShield_desc">这个用皮索加固的盾牌看起来比木制的更坚固。它当然可以抵挡更多的伤害。</string>
     <string name="ToughShield_name">皮制圓盾</string>
     <string name="TownGuardNPC_Desc">一個正常的城鎮守衛。</string>
     <string name="TownGuardNPC_Gender">masculine</string>
@@ -2132,6 +2256,7 @@
     <string name="TownGuardNPC_Message3">你覺得這個鎮上守衛太多了嗎？嗯，那是因為這是唯一一個有著邪神出沒的地牢的城鎮，不是嗎？</string>
     <string name="TownGuardNPC_Name">城鎮守衛</string>
     <string name="TownGuardNPC_Name_Objective">城鎮守衛</string>
+    <string name="TownPortal_Info">這個法術允許你瞬間回到安全地帶。然而，附近強大的魔法源可能會阻止它按預期工作。</string>
     <string name="TownPortal_Name">回城卷軸</string>
     <string name="TownScript_NeedWeapon">我不會赤手空拳去地牢！\n也許值得先去鎮上的商店看看？</string>
     <string name="TownShopkeeper_Desc">平凡的商人，卻知道您的斤兩。</string>
@@ -2143,6 +2268,7 @@
     <string name="TownsfolkMovieNPC_Name">城鎮居民</string>
     <string name="TownsfolkMovieNPC_Name_Objective">城鎮居民</string>
     <string name="TownsfolkNPC_Desc">城鎮居民之一。顯而易見，他只是泛泛布衣，但他的衣服看起來價值不菲。</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">啊！又有一位冒險者，好極了！有價值的東西隨便拿去吧！</string>
     <string name="TownsfolkNPC_Message2">托地牢的福，小鎮才變得如此富有，每個居民都可以隨心去度假！這也解釋了為何現在鎮上如此少人。</string>
     <string name="TownsfolkNPC_Message3">多棒的一天啊。</string>
@@ -2178,6 +2304,7 @@
     <string name="Using_Failed_Because_Magic">強大魔力阻止使用 \&quot;%s\&quot;。</string>
     <string name="VampireSkull_Info">這個面具是由一個完全野生的吸血鬼頭骨制成的。一個吸血鬼的頭骨...一個大頭吸血鬼的頭骨...嚇。</string>
     <string name="VampireSkull_Name">吸血鬼頭骨</string>
+    <string name="VertigoBuff_Info">머리가 어지러워서 직선으로 걷기가 더 어려워진다!</string>
     <string name="VertigoBuff_Name">眩暈</string>
     <string name="View_Distance">視野距離</string>
     <string name="VileEssence_Info">從被擊敗的敵人身上的腐敗精華。這種黑暗物質散發著惡意能量，在煉金過程中具有極高的價值。</string>
@@ -2305,6 +2432,7 @@
     <string name="Weightstone_WndChoice">您希望怎樣強化這件%s?</string>
     <string name="Weightstone_WndSpeed">速度</string>
     <string name="Welcome_Ok">棒極了！</string>
+    <string name="Welcome_Text_30_1">remix.30.1\n- 遊戲玩法:\n-- 狼人 subclass!\n-- 蝸牛!\n-- Chaos 物品進度削弱。\n-- 魔法藥水現在是普通藥水。\n-- 徽章現在可以在玩 DLC 時獲得(但不是 mods)。\n- 修復錯誤\n</string>
     <string name="Welcome_Text_31_0">remix.31.0\n- 遊戲玩法：\n-- 可選的等軸測模式！\n- 模組製作：\n-- 可模組化的關卡物件\n- 錯誤修復\n</string>
     <string name="Welcome_Text_31_1">remix.31.1\n- 遊戲玩法：\n-- 新的自定義功能！\n-- 新種類蜘蛛！\n-- 現在心靈蜘蛛會增強其他蜘蛛，而不是削弱英雄。\n- 錯誤修復\n</string>
     <string name="Welcome_Text_32">
@@ -2325,6 +2453,7 @@
     -- 怪物發光效果\n
     - 錯誤修復\n
     </string>
+    <string name="Welcome_Text_32_1">remix.32.1\n- Gameplay:\n-- Plague Doctor quest line\n-- Mob carcasses now somewhat usable items\n-- Better pets control\n- UX:\n-- Improved save-game management\n- Modding:\n-- Local mod installation methods\n-- Custom items now can perform actions while being in heaps\n- Bugs fixed</string>
     <string name="Welcome_Title">歡迎！</string>
     <string name="WindGust_Info">召喚一陣狂風，將選定生物吹走。</string>
     <string name="WindGust_Name">狂風</string>
@@ -2343,11 +2472,15 @@
     <string name="WndClass_Mastery">專精</string>
     <string name="WndCryptoDonate_bitcoin">比特幣</string>
     <string name="WndCryptoDonate_copyAddress">複製地址</string>
+    <string name="WndCryptoDonate_currency">貨幣</string>
     <string name="WndCryptoDonate_ethereum">以太坊</string>
     <string name="WndCryptoDonate_infoText">您可以通過將加密貨幣捐贈發送到以下地址來支持 Remixed Dungeon 的開發。感謝您的慷慨支持！</string>
+    <string name="WndCryptoDonate_openWallet">Open Wallet</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">錢包地址</string>
+    <string name="WndCryptoDonate_warningText">ATTENZIONE: Verifica sempre l\'indirizzo prima di inviare fondi. Le transazioni in criptovaluta sono irreversibili!</string>
+    <string name="WndCustomizations_Title">自訂設定</string>
     <string name="WndDonate_commonDonateText">混合地牢——永遠對所有人免費。
 但是，你能幫我們讓這個遊戲變得更好。
 除了我們的衷心感謝以外，你還將獲得一些界面上的美化。</string>
@@ -2427,6 +2560,7 @@
     <string name="WndInfoItem_WontKnow">直至打開一刻，方曉裏面為何物！</string>
     <string name="WndInstallingMod_copying_file">正在複製 %s 到混合地牢存儲</string>
     <string name="WndInstallingMod_deleting_file">正在刪除 %s</string>
+    <string name="WndInstallingMod_please_wait">模組安裝中，請稍候...</string>
     <string name="WndInstallingMod_skipping_file">正在跳過 %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">執行配方</string>
     <string name="WndItemAlchemy_NoRecipes">沒有可用於此物品和你當前庫存可用的配方。</string>
@@ -2442,12 +2576,16 @@
     <string name="WndLibrary_Items_Btn">道具</string>
     <string name="WndLibrary_Levels_Btn">地牢</string>
     <string name="WndLibrary_Mobs_Btn">怪物</string>
+    <string name="WndLocalModInstall_pick">Pick mod directory</string>
     <string name="WndLocalModInstall_text">選擇要從哪裡安裝模組的目錄。</string>
     <string name="WndLocalModInstall_title">從本地目錄安裝模組</string>
     <string name="WndModInstall_InstallingMod">正在安裝模組</string>
     <string name="WndModInstall_PleaseUpdate">請先更新 Remixed Dungeon 再安裝此模組</string>
     <string name="WndModInstall_Version">版本</string>
+    <string name="WndModSelect_AreYouSure">刪除模組：%s，你確定嗎？</string>
+    <string name="WndModSelect_ReallyDelete">真的要刪除嗎？</string>
     <string name="WndModsDisclaimer_install">安裝本地模組</string>
+    <string name="WndModsDisclaimer_manage">管理模組列表</string>
     <string name="WndModsDisclaimer_title">模組</string>
     <string name="WndMovieTheatre_Bye">想回來的時候就回來，我們對您的到來而感到高興！</string>
     <string name="WndMovieTheatre_Instruction">歡迎光臨我們的電影院！我們提供一項特別服務，您可以免費觀看名為廣告的特別影片。如果您完整看完，將會獲得 %d 枚金幣作為獎勵！</string>
@@ -2529,10 +2667,12 @@
     <string name="WndSelectLanguage_ImproveTranslation">請幫助混合地牢的多種語言翻譯。</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">點擊此處幫助我們翻譯混合地牢</string>
     <string name="WndSettingsInGame_GameLog">遊戲記錄</string>
+    <string name="WndSettingsInGame_IsometricTiles">等距瓦片</string>
     <string name="WndSettings_ActionButtonSize">按鈕大小</string>
     <string name="WndSettings_Brightness">光暗度</string>
     <string name="WndSettings_ClassicFont">經典字體</string>
     <string name="WndSettings_ExperementalFont">新字體</string>
+    <string name="WndSettings_FpsLimit">FPS限制</string>
     <string name="WndSettings_GameplaySettings">特殊設置</string>
     <string name="WndSettings_Handedness">慣用方向</string>
     <string name="WndSettings_Immersive">沈浸模式</string>
@@ -2565,6 +2705,7 @@
     <string name="WndStory_Prision">為了收納最具威脅的罪犯，此地下監獄於多年前建立。因為要逃出此地極之困難，起初大家都覺得此為上策，但不久之後從地底更深處散發出的黑暗瘴氣在獄中彌漫開去，令該處的罪犯和守衛喪失理智。監獄裏變成一片混亂。秩序、服從、法則、人性通通崩潰。於是城市封鎖了整個監獄，然而尚有些人仍然被鎖上，不能重見天日。</string>
     <string name="WndStory_Sewers">這個地牢位於城市的正下方，較靠近地面的樓層是城市的下水道系統，因此不太危險。儘管如此，沒人會認為這裏是安全之地，但至少您不用應付許多陰險狡黠的法術。</string>
     <string name="WndStory_Spiders">許多年前，這是一個充滿了魔法石的富裕礦山。但隨著礦脈的枯竭，礦工們紛紛離去，留下了大量的坑道網絡。最後這個地方被蜘蛛占領了。雖然這些危險的生物在黑暗中潛伏，但是這嚇不倒一些瘋狂而勇敢的尋寶者和冒險者們，因為傳言裏面的魔法神器的價值值得他們為之冒險。據說有一個為了逃避追捕的女巫進入了這個礦洞，追捕她的士兵由於畏懼黑暗而不敢靠近，只能派人在礦洞門口看守。結果到他們放棄後女巫也沒出現。沒準她找到另一個出口？亦或是趁看守不註意時跑了？或者...死在了礦洞深處，與蜘蛛們融為一體。</string>
+    <string name="WndTilesKind_ClassicLook">經典外觀</string>
     <string name="WndTilesKind_NewLook">新外觀</string>
     <string name="WndTilesKind_Title">Just one more thing:</string>
     <string name="WndTilesKind_text">你即將進入一個被扭曲魔法佔據的地下城，但現在你可以選擇如何看待它：\n你喜歡現代偽 3D 還是經典平面視角？\n你之後可以在遊戲選項選單中更改。</string>
@@ -2587,6 +2728,7 @@
     <string name="Wnd_Button_Cancel">取消</string>
     <string name="Wnd_Button_Close">關閉</string>
     <string name="Wnd_Button_No">拒絕</string>
+    <string name="Wnd_Button_Ok">確定</string>
     <string name="Wnd_Button_Yes">同意</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">如果您找到一些箭矢的話，這把簡單的木製弓也許會派上用場。</string>
@@ -2605,8 +2747,10 @@
     <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">幽魂</string>
     <string name="Wraith_Name_Objective">幽魂</string>
-    <string name="WrnExperimental_hint">如果這個奇怪而扭曲的世界對你來說太過嚴苛，請使用以下方式關閉這些選項：\n開始畫面-&gt;選項-&gt;遊戲玩法\n選單，然後開始新的遊戲或載入其他存檔。</string>
+    <string name="WrnExperimental_hint">注意：啟用實驗性選項可能導致遊戲不穩定或產生未預期的行為。</string>
     <string name="WrnExperimental_moveTimeout">移動超時設定為 %d 毫秒，快點思考！</string>
+    <string name="WrnExperimental_realtime">实时！模式已启用：现在这是实时roguelike，点击慢点就会死。\n想查看物品栏？\n祝你好运，下水道螃蟹正在检查你的内脏。</string>
+    <string name="WrnExperimental_title">啟用了實驗性選項！</string>
     <string name="Yog_Desc">猶格-德澤瓦是一位上古之神，來源於混沌中的強大存在。一個世紀前，古代矮人們雖然勉強贏得了與惡魔軍團的戰爭，卻無法將古神殺死。作為替代方案，矮人們將它封印在城市下的大堂中，並相信虛弱的它無法再度復蘇。</string>
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">……</string>
@@ -2653,6 +2797,7 @@
     <string name="town_deco_armoronhanger_name">盔甲</string>
     <string name="town_deco_armorstand_leather_name">皮革護甲</string>
     <string name="town_deco_armorstand_plate_desc">據商人說，這套重型板甲曾經屬於一位偉大的戰士。</string>
+    <string name="town_deco_armorstand_plate_name">板甲</string>
     <string name="town_deco_armorstand_scale_desc">這套鱗甲的鍍金板看起來像新的一樣。</string>
     <string name="town_deco_armorstand_scale_name">鱗片護甲</string>
     <string name="town_deco_banner_desc">一面優雅的旗幟，上面的繡花描繪著這個小酒館的象徵標誌。</string>
@@ -2661,6 +2806,7 @@
     <string name="town_deco_barrel_name">桶</string>
     <string name="town_deco_barrel_wine_desc">用來儲存像葡萄酒這樣的貴重飲料。</string>
     <string name="town_deco_barrel_wine_name">酒桶</string>
+    <string name="town_deco_beige_carpet_desc">Елегантный бежевый ковёр, сплетённый из мягкой шкуры гнолла.</string>
     <string name="town_deco_beige_carpet_name">地毯</string>
     <string name="town_deco_bell_desc">典型的教堂鐘，似乎已有一段時間沒人打理，鐘繩也不見蹤影。</string>
     <string name="town_deco_bell_name">鐘</string>
@@ -2674,6 +2820,7 @@
     <string name="town_deco_broken_roof_name">損壞的屋頂</string>
     <string name="town_deco_broken_wall_desc">這堵墻裏的木塊早已腐朽，失去了正常的作用。</string>
     <string name="town_deco_broken_wall_name">破舊的墻</string>
+    <string name="town_deco_brown_carpet_desc">Цей коричневий килим був наступаний на численними шляхатими, бродягами та перехожами.</string>
     <string name="town_deco_brown_carpet_name">地毯</string>
     <string name="town_deco_cabinet_desc">有許多門和架子的寬敞櫥櫃。</string>
     <string name="town_deco_cabinet_name">櫃子</string>
@@ -2781,6 +2928,7 @@
     <string name="town_deco_pole_name">桿子</string>
     <string name="town_deco_porch_desc">木製的門廊</string>
     <string name="town_deco_porch_name">門廊</string>
+    <string name="town_deco_poster_desc">電影院即將上映的預告海報。</string>
     <string name="town_deco_poster_name">海報</string>
     <string name="town_deco_potions_desc">各種藥水放在藥水架上</string>
     <string name="town_deco_potions_name">藥水</string>
@@ -2799,6 +2947,7 @@
     <string name="town_deco_scrolls_desc">這個滿是灰塵的架子上擺滿了各種各樣的卷軸和書。</string>
     <string name="town_deco_scrolls_name">卷軸架</string>
     <string name="town_deco_shelf_desc">空的貨架</string>
+    <string name="town_deco_shelf_full_desc">架子上放著各種小飾品。</string>
     <string name="town_deco_shelf_full_name">架子</string>
     <string name="town_deco_shelf_name">貨架</string>
     <string name="town_deco_shelving_desc">一個令人印象深刻的架子，在架子上可以找到各種飲料和小吃。</string>
@@ -2825,6 +2974,8 @@
     <string name="town_deco_sofa_name">超爽的沙發</string>
     <string name="town_deco_stakes_desc">這些削尖的圓木看起來十分可怕，但事實上，它們本身是沒什麼作用的。</string>
     <string name="town_deco_stakes_name">木樁</string>
+    <string name="town_deco_statue_blood_desc">A majestic statue of an angel holding a bowl of blood.</string>
+    <string name="town_deco_statue_blood_name">天使雕像</string>
     <string name="town_deco_statue_water_desc">一座莊嚴的天使雕像，手捧一碗水。</string>
     <string name="town_deco_statue_water_name">天使雕像</string>
     <string name="town_deco_stock_desc">這裏儲存著食物，還有一堆帶有各種各樣顏色的物品。</string>
@@ -2884,6 +3035,169 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

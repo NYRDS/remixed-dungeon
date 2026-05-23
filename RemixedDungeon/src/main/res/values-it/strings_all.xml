@@ -15,13 +15,18 @@
     <string name="AboutScene_OurSite">Nostro sito web:</string>
     <string name="AboutScene_Snd">Spedisci e-mail</string>
     <string name="AboutScene_Sound">Suoni:</string>
+    <string name="AboutScene_SourceCode">Ottieni il codice sorgente di Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Ringraziamenti speciali:</string>
     <string name="AboutScene_Translation">Tradotto da:</string>
+    <string name="AboutScene_Txt_Intro">Remixed Dungeon di NYRDS basato su Pixel Dungeon Source di Watabou.</string>
+    <string name="Accuracy_Decreased">Perché ho pensato di poter usare un %s? Strumento sbagliato, mani sbagliate!</string>
     <string name="Accuracy_DecreasedDoctor">Ogni oscillazione di questo %s diffonde imperfezione. Il mio Bisturi cura… questo infetta.</string>
+    <string name="Accuracy_DecreasedDoctorBareHands">Mani nude infettano la mia tecnica. Senza il taglio pulito della Sega, la mia precisione si deteriora nel caos.</string>
     <string name="Acidic_Desc">Queste creature demoniche simili ad aracnidi evitano i combattimenti ravvicinati ad ogni costo, lanciando punte paralizzanti da lunghe distanze.</string>
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">scorpione acido</string>
     <string name="Acidic_Name_Objective">scorpione acido</string>
+    <string name="Actions_Speed">Livello di velocità</string>
     <string name="Affection_Txt">%s dell\'affetto</string>
     <string name="AirElemental_Desc">Gli elementali dell\'acqua sono esseri magici volanti fatti di aria viva. </string>
     <string name="AirElemental_Gender">masculine</string>
@@ -52,6 +57,8 @@
     <string name="Amulet_Name">Amuleto di Yendor </string>
     <string name="AnesthesiaBuff_Info">Non sente dolore e non si sveglia dagli attacchi, ma subisce comunque danni.</string>
     <string name="AnesthesiaBuff_Name">Anestesia</string>
+    <string name="Anesthesia_Cast">%s cade in un sonno profondo e senza sogni.</string>
+    <string name="Anesthesia_Info">Mély, természetes alvást idéz elő az áldozatodon. Még a legerősebb támadások sem ébresztik fel ebből az álomból.</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">Questo antico simbolo di immortalità garantisce una capacità di tornare in vita dopo la morte. Al momento della risurrezione tutti gli oggetti non equipaggiati andranno persi.</string>
     <string name="Ankh_Name">Ankh</string>
@@ -85,6 +92,7 @@
     <string name="ArmoredStatue_Name">statua animata</string>
     <string name="ArmoredStatue_Name_Objective">statua animata</string>
     <string name="Artifact_Limit">Puoi indossare solo 2 anelli alla volta.</string>
+    <string name="AttackDelay_Increased">Non puoi brandire il %s in questo modo. Colpi lenti, respiro pesante…</string>
     <string name="Attack_Cooldown">Ricarica attacco</string>
     <string name="Attack_Range">Distanza di attacco</string>
     <string name="AwarenessBuff_Name">Consapevolezza</string>
@@ -97,6 +105,7 @@
     <string name="Backstab_Aware">La vittima non deve accorgersi di te per un buon colpo alle spalle.</string>
     <string name="Backstab_Info">Colpo silenzioso alle spalle. Sfacciato, ma estremamente efficace, il danno causato dal colpo alle spalle crescerà con il livello dell\'abilità dell\'esecutore.\n\nUn colpo alle spalle riuscito ignorerà completamente l\'armatura della vittima o le sue speciali capacità difensive.</string>
     <string name="Backstab_Name">Pugnalata alle Spalle</string>
+    <string name="Backstab_TooFar">Vittima troppo lontana per un colpo riuscito.</string>
     <string name="BadgesScene_Title">Le tue medaglie</string>
     <string name="Badges_AllBags">Tutte le borse comprate</string>
     <string name="Badges_AllItems">Tutte le pozioni, gli incantesimi, gli anelli &amp;amp; le bacchette identificate</string>
@@ -107,6 +116,8 @@
     <string name="Badges_BossSlain1">La melma è stata sconfitta</string>
     <string name="Badges_BossSlain2">Tengu è stato ucciso</string>
     <string name="Badges_BossSlain3">DM-300 è stato ucciso</string>
+    <string name="Badges_BossSlain3All">DM-300 è stato sconfitto da tutti i sottoclassi</string>
+    <string name="Badges_BossSlain4">Il Re è stato ucciso</string>
     <string name="Badges_Champion">Sfida vinta</string>
     <string name="Badges_DeathFalling">Morte a causa di una caduta</string>
     <string name="Badges_DeathFire">Morto bruciato</string>
@@ -126,6 +137,7 @@
     <string name="Badges_GamesPlayed4">2000 partite giocate</string>
     <string name="Badges_GamesPlayed5">5000 partite giocate</string>
     <string name="Badges_GnollUnlocked">Gnoll sbloccato</string>
+    <string name="Badges_GoldCollected5">35.000 pezzi d\'oro raccolte</string>
     <string name="Badges_GoldColleted1">100 monete raccolte</string>
     <string name="Badges_GoldColleted2">500 monete raccolte</string>
     <string name="Badges_GoldColleted3">2500 monete raccolte</string>
@@ -174,6 +186,7 @@
     <string name="Badges_Supporter">Grazie per il tuo sostegno!</string>
     <string name="Badges_ThisIsSparta">Questo è Sparta!!!</string>
     <string name="Badges_Victory">Amuleto di Yendor ottenuto</string>
+    <string name="Badges_VictoryAll">Amuleto di Yendor ottenuto da tutte le classi</string>
     <string name="Badges_Yasd">Morte a causa di fuoco, veleno, gas velenoso &amp;amp; fame</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa ucciso</string>
     <string name="Bag_ACOpen">APRI</string>
@@ -181,27 +194,37 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">bandito pazzo</string>
     <string name="Bandit_Name_Objective">bandito pazzo</string>
+    <string name="BardNPC_Desc">The town bard is playing his lute.</string>
+    <string name="BardNPC_Gender">masculine</string>
+    <string name="BardNPC_Name">Bardo</string>
     <string name="BardNPC_Name_Objective">bardo</string>
     <string name="BardSong_1">Io e mia moglie viviam da soli,\nIn una capanna di legno, tutta per noi.\nLei amava il gin, io il rum,\nE vi dico che ci divertivamo un po\'!</string>
     <string name="BarkskinBuff_Info">Il corpo è ricoperto da corteccia che blocca parte del danno subito.</string>
     <string name="BarkskinBuff_Name">Pelle coriacea</string>
+    <string name="Barrel_Desc">Sembra un semplice barile di legno. Ma avvicinandoti, percepisci un debole odore di olio. Il barile sembra abbastanza leggero, potresti anche spingerlo.</string>
     <string name="Barrel_Name">barile</string>
+    <string name="Barrel_Pumpkin_Desc">È molto strano e piuttosto inquietante vedere una zucca scavata giacente sul pavimento del dungeon. Si percepisce chiaramente un pericolo in arrivo da essa. Ma puoi sempre spingerla via, giusto?</string>
     <string name="Barrel_Pumpkin_Name">zucca</string>
     <string name="Bat_Defense">eluso</string>
     <string name="Bat_Desc">Questi vivaci e tenaci abitanti delle grotte possono sconfiggere gli avversari molto più grandi di loro recuperando la loro salute con ogni attacco riuscito.</string>
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">pipistrello vampiro</string>
     <string name="Bat_Name_Objective">pipistrello vampiro</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">un enorme elmo d\'acciaio di questa battaglia mette un notevole peso alle spalle ad ogni colpo</string>
     <string name="BattleAxe_Name">ascia da battaglia</string>
     <string name="Bee_Desc">Nonostante le loro piccole dimensioni, le api tendono a proteggere ferocemente il loro alveare. Tuttavia, non vivono a lungo.</string>
     <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name">ape</string>
     <string name="Bee_Name_Objective">ape</string>
+    <string name="BellaNPC_Amulet_F">Ciao, caro tesoro, cosa hai là? Ah, un amuleto così bellissimo! E tu... splendi molto più di chiunque altro. Cosa ne dici se facciamo una passeggiata e ne parliamo del nostro futuro?</string>
     <string name="BellaNPC_Angry">Come osi... tu plebeo!</string>
     <string name="BellaNPC_Desc">Una ragazza dall\'aspetto molto elegante. Tutto il suo aspetto ti dice: \&quot;Sono troppo buona per tutti.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Non provo alcun interesse per plebei come te!</string>
+    <string name="BellaNPC_Name">Bella</string>
+    <string name="BellaNPC_Name_Objective">Bella</string>
+    <string name="BellaNPC_No">No, non con te</string>
     <string name="BellaNPC_Yes_End_Game">Sì (Fine gioco)</string>
     <string name="Belongings_CantWearBoth">Non puoi equipaggiare %1$s e %2$s allo stesso tempo!</string>
     <string name="Belongings_Name">zaino</string>
@@ -261,13 +284,21 @@
     <string name="BlankScroll_ReallyBlank">Questa pergamena è vuota</string>
     <string name="BleedingBuff_Name">Sanguinamento</string>
     <string name="Bleeding_Death">Hai sanguinato a morte...</string>
-    <string name="BlessedBuff_Info">Che la precisione e l\'elusione arrivino per coloro che sono stati toccati dalla benedizione!</string>
+    <string name="BlessedBuff_Info">Che precisione e scatto vengano per coloro che sono toccati dalla benedizione!</string>
     <string name="BlessedBuff_Name">Benedetto</string>
+    <string name="BlindnessBuff_Info">Completamente accecato, si possono solo sentire i suoni intorno.</string>
     <string name="BlindnessBuff_Name">Accecato </string>
+    <string name="BloodTransfusion_Drained">L\'essenza vitale fluisce dal tuo animale domestico in te.</string>
+    <string name="BloodTransfusion_Info">Szívja a céljának szinte az összes vért maga számára, hogy gyógyuljon. Egy sötét szertartás, az áldozat és a megmaradás rituáléja.</string>
+    <string name="BloodTransfusion_Name">Trasfusione del Sangue</string>
+    <string name="BloodTransfusion_WontAgreed">L\'obiettivo resiste all\'estrazione della sua essenza vitale.</string>
     <string name="BodyArmorBuff_Info">La corazza è aumentata a scapito della velocità di movimento.</string>
     <string name="BodyArmorBuff_Name">Armatura Corporea</string>
     <string name="BodyArmorSpell_Name">Armatura Corporea</string>
     <string name="BoneSaw_Info">Una sega chirurgica di precisione progettata per dissezioni rapide. I suoi danni e la velocità d\'attacco diventano più letali con l\'abilità del Medico della Peste. I colpi critici estraggono parti aggiuntive raccoglibili dai nemici e colpisce con spietata efficienza i nemici paralizzati.</string>
+    <string name="BoneSaw_Name">Sega d\'Osso</string>
+    <string name="BoneShard_Info">Un frammento osseo affilato raccolto da un nemico sconfitto. Questi frammenti sono sorprendentemente duraturi e utili per la creazione.</string>
+    <string name="BoneShard_Name">Frammento d\'osso</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Quando lanciato ai nemici questo sottile, curvo, missile di legno tornerà nelle mani del lanciatore. </string>
     <string name="Boomerang_Name">bumerang</string>
@@ -291,6 +322,7 @@
     <string name="Burning_Burns">%s prende fuoco! </string>
     <string name="Burning_Death">Sei arso a morte...</string>
     <string name="CagedKobold_Desc">Un coboldo, in una gabbia.</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">Ehi... EHI! Tu sei quell\'avventuriero, vero? Aiutami, amico, questi maledetti militaristi mi hanno rinchiuso qui! Intendono riattivare un\'arma antica per conquistare queste... cose umane in superficie! Ma considerando quanto è pericolosa, mi sono opposto, e loro mi hanno semplicemente cacciato e rinchiuso in una gabbia! Ti prego di trovare la chiave della cella, e in cambio, ti aiuterò al meglio delle mie capacità.</string>
     <string name="CagedKobold_Message1">Per favore...</string>
     <string name="CagedKobold_Message2">Devi aiutarmi ad uscire, amico</string>
@@ -298,9 +330,11 @@
     <string name="CagedKobold_Name">coboldo in gabbia</string>
     <string name="CagedKobold_Name_Objective">coboldo in gabbia</string>
     <string name="CagedKobold_Quest_End">Oh, grazie, grazie mille! Come hai fatto a trovare la chiave? Tu... hai distrutto l\'arma?! È incredibile! Sai una cosa, ho detto che ti avrei aiutato, e penso di sapere il modo migliore per farlo. Starò con te per un po\'. * Il Kobold imprigionato si è trasformato in una candela</string>
+    <string name="Calm_Cast">%s si calma.</string>
     <string name="Calm_Info">Ci sono molte creature aggravate in giro, aiutiamole.</string>
     <string name="Calm_Name">Calma</string>
     <string name="CandleOfMindVision_Info">Sembra una candela normale, niente che ti aspetteresti di trovare in una pericolosa sottoterra. Stranamente è piuttosto calda al tatto, nonostante non sia ancora stata accesa.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">The candle has burned out, it no longer lights up when you hold it. Looks like you can\'t use it anymore.</string>
     <string name="CandleOfMindVision_Info_Lighted">La candela si è accesa nel momento in cui l\'hai tirata fuori dallo zaino. La fiamma emana una debole luce viola, e mentre la guardi attraverso di essa, tutti i mostri vicini diventano visibili.</string>
     <string name="CandleOfMindVision_Name">Candela delle Visioni</string>
     <string name="Candy_Info">Questa caramella sembra davvero bella e il suo odore è altrettanto buono. Vuoi davvero lasciarla a qualcun\'altro?</string>
@@ -328,8 +362,12 @@
     <string name="Challenges_Descriptions_0">Il cibo e l\'acqua sono da tempo andati a male, facendo impazzire ogni avventuriero al pensiero della morte per paura e fame. Può la tua dieta aiutarti a resistere abbastanza a lungo?</string>
     <string name="Challenges_Descriptions_1">L\'offesa è la migliore difesa. Seguendo questi insegnamenti, ti avventuri nel dungeon, con la fede come più forte guardiano del tuo corpo.</string>
     <string name="Challenges_Descriptions_2">Da seguace della rigenerazione naturale del corpo, sei sempre stato diffidente nei confronti delle pozioni con proprietà curative. Meglio essere cauti che dispiaciuti!</string>
+    <string name="Challenges_Descriptions_4">Una presenza malvagia sta osservando fra le menti di tutte le creature nel dungeon, rendendole consapevoli degli eventi che si verificano l\'una con l\'altra.</string>
     <string name="Challenges_Descriptions_5">La prima cosa che arrivò con il male fu una nebbia fitta e impenetrabile, che rende quasi impossibile orientarsi chiaramente nei corridoi infiniti del dungeon.</string>
     <string name="Challenges_Descriptions_6">L\'antica arte della lettura delle rune è proibita ed evitata a tutti i costi, a causa della maledizione inflitta a ogni pergamena che trova la sua strada nel dungeon o nei suoi dintorni.</string>
+    <string name="Challenges_Descriptions_7">Ти звик до того, що володіння і використання зброї морально неправильно, але що ж інше може захистити тебе від істот, що бродять підземеллям?</string>
+    <string name="Challenges_Descriptions_8">Il tuo viaggio inizierà nelle fognature buie e pericolose della città, con l\'unico accesso alla superficie bloccato. Per complicare le cose, potrai utilizzare solo l\'attrezzatura trovata nel dungeon. Con risorse e attrezzatura limitate, la tua sopravvivenza dipenderà dalle tue abilità e dalla tua strategia.</string>
+    <string name="Challenges_Descriptions_9">L\'ultimo \'rimedio\' del Dottore della Peste ha cancellato la tua memoria spaziale. Non riesci a ricordare nulla al di fuori del tuo campo visivo diretto.</string>
     <string name="Challenges_Names_0">Sulla dieta</string>
     <string name="Challenges_Names_1">La fede è la mia armatura</string>
     <string name="Challenges_Names_2">Pharmacophobia</string>
@@ -341,6 +379,7 @@
     <string name="Challenges_Names_8">Nessuna città</string>
     <string name="Challenges_Names_9">Amnesia</string>
     <string name="ChampionOfAirBuff_Info">Questa caratteristica dona alla creatura l\'essenza dei venti, migliorando la sua agilità e abilità in combattimento. Il Campione dell\'Aria diventa un avversario formidabile, capace di scatenare attacchi rapidi e devastanti che possono cambiare rapidamente il corso della battaglia.</string>
+    <string name="ChampionOfAirBuff_Name">Campione dell\'Aria</string>
     <string name="ChampionOfEarthBuff_Info">Il Campione della Terra incarna una forza inflessibile, poiché questo attributo aumenta la resistenza ai danni della creatura e incrementa la sua vitalità massima. Questa trasformazione lo rende un avversario temibile nelle profondità insidiose, capace di ignorare facilmente gli attacchi e di resistere a lunghe battaglie con fermezza incrollabile.</string>
     <string name="ChampionOfEarthBuff_Name">Campione della Terra</string>
     <string name="ChampionOfFireBuff_Info">Infuso con la furia delle fiamme, questo attributo potenzia la ferocia e le capacità di combattimento della creatura. Il Campione del Fuoco emerge come un avversario temibile, scatenando attacchi devastanti che possono avvolgere i nemici in fiamme roventi, instillando terrore in tutti coloro che osano opporsi ad esso.</string>
@@ -363,11 +402,13 @@
     <string name="ChaosCrystal_Prompt">Scegli il posto per impostare il Segno del Caos</string>
     <string name="ChaosCrystal_ScrollFused">Il Cristallo ha assorbito la runa incisa sulla pergamena, ed ora è un %s</string>
     <string name="ChaosCrystal_SelectForFuse">Scegli item da fondere con Cristallo del Caos</string>
+    <string name="ChaosCrystal_ShieldFused">Il cristallo si è fuso con lo scudo, assumendo la forma del caos.</string>
     <string name="ChaosCrystal_StaffFused">Il Cristallo assorbe la tua bacchetta, e ha preso la forma di una bacchetta</string>
     <string name="ChaosCrystal_SwordFused">Il Cristallo assorbe la vostra arma, e ha preso la forma di una spada</string>
     <string name="ChaosCrystal_Use">USA</string>
     <string name="ChaosHelmet_Info">Un elmetto rosso sangue è un simbolo essenziale di un guerriero del caos.</string>
     <string name="ChaosHelmet_Name">Elmo del Caos</string>
+    <string name="ChaosShield_desc">Lo Scudo del Caos è il risultato della fusione di un Cristallo del Caos con uno scudo ordinario, causandone l\'manifestazione di effetti caotici casuali in caso di blocco riuscito.</string>
     <string name="ChaosShield_name">Scudo del Caos</string>
     <string name="ChaosStaff_Info">Una bacchetta imbevuta con il Potere del Caos! Cos\'altro un mago può desiderare... O avere paura? </string>
     <string name="ChaosStaff_Name">Vega del caos</string>
@@ -375,6 +416,7 @@
     <string name="ChaosSword_Info">La lama di questa spada è fatta di caos puro e vibra moderatamente a volte. Un grosso potere è celato dentro l\'arma, che può tagliare a metà praticamente ogni cosa. d\'altronde, ci vuole una grande abilità, per tener testa alla potente forza dell\'arma.</string>
     <string name="ChaosSword_Name">Spada del caos</string>
     <string name="CharAction_Charm">affascina</string>
+    <string name="CharAction_Expel">espellere</string>
     <string name="CharAction_Give">dare</string>
     <string name="CharAction_Hit">colpo</string>
     <string name="CharAction_Order">ordinare</string>
@@ -413,13 +455,14 @@
     <string name="Char_StaSlowed">rallentato</string>
     <string name="Char_StaStunned">stordito</string>
     <string name="Char_StaVision">visione</string>
-    <string name="Char_Stole_1">%1 ha rubato %2 a %3!</string>
+    <string name="Char_Stole_1">%1$s ha rubato %2$s a %3$s!</string>
     <string name="Char_Stole_2">%1$s ha rubato %2$s a %3$s!</string>
     <string name="Char_YouMissed">%1$s %2$s il tuo attacco</string>
     <string name="ChargrilledMeat_Info">Sembra una bistecca decente.</string>
     <string name="ChargrilledMeat_Name">carne grigliata</string>
     <string name="CharmBuff_Info">La mente e il corpo sono stati stregati!</string>
     <string name="CharmBuff_Name">Affascinato</string>
+    <string name="CharmSpell_Cast">%s è incantato.</string>
     <string name="CharmSpell_Info">Ognuno merita un po\' d\'amore, vero?</string>
     <string name="CharmSpell_Name">Fascino</string>
     <string name="Chasm_Chasm">Baratro</string>
@@ -428,6 +471,7 @@
     <string name="Chasm_No">No, ho cambiato idea</string>
     <string name="Chasm_Yes">Sì, so quello che faccio</string>
     <string name="ChristmasTurkey_Info">Il modo migliore per celebrare il Dungeonmas è mangiare una fetta di tacchino al forno. Per celebrare il giorno in cui i mostri hanno invaso il dungeon. Il quale, alla fine, ha attirato un numero incredibile di turisti e viaggiatori da tutto il mondo, migliorando la situazione economica della regione.</string>
+    <string name="ChristmasTurkey_Name">tacchino festivo</string>
     <string name="City_TileDescBookshelf">una fila di libri su diverse discipline riempiono la libreria.</string>
     <string name="City_TileDescDeco">Diverse piastrelle mancanti qui.</string>
     <string name="City_TileDescEmptySP">una moquette spessa copre il pavimento.</string>
@@ -442,9 +486,11 @@
     <string name="ClassArmor_NotEquipped">Devi indossare questa armatura per usare il suo potere speciale!</string>
     <string name="Claymore_Info">Questa spada enorme dovrebbe essere in grado di aprirti un varco ovunque.</string>
     <string name="Claymore_Name">Claymore</string>
+    <string name="CloakBuff_Info">Un mantello scuro ti cela nell\'ombra, rendendoti meno visibile agli nemici</string>
     <string name="CloakBuff_Name">Nascosto</string>
     <string name="CloakSpell_EnemiesNearby">Non puoi nasconderti nell\'ombra mentre i nemici sono vicini.</string>
     <string name="CloakSpell_Info">Entra nelle ombre per diventare invisibile. Riduce notevolmente le possibilità di essere rilevati. Non può essere usato mentre ci sono nemici nelle vicinanze.</string>
+    <string name="CloakSpell_Name">Mantello</string>
     <string name="ClothArmor_Desc">Questa armatura leggera offre una protezione base.</string>
     <string name="ClothArmor_Name">armatura in stoffa</string>
     <string name="Codex_ACRead">LEGGI</string>
@@ -466,7 +512,7 @@
     <string name="Codex_Story_2">Glifo del fascino  - Il nemico sarà affascinato per pochi turni, mentre l\'eroe sarà affascinato per pochi turni pure, ma mai più che il nemico.</string>
     <string name="Codex_Story_20">Arma agghiacciante - Se il colpo è andato a segno, può rallentare il bersaglio e gli impedirà di bruciare.</string>
     <string name="Codex_Story_21">Arma selvaggia - Se il colpo è andato a segno, può danneggiare tutti i nemici adiacenti al bersaglio.</string>
-    <string name="Codex_Story_22">Questo libro, è scritto in un linguaggio demoniaco</string>
+    <string name="Codex_Story_22">Questo libro è scritto in un linguaggio demoniaco</string>
     <string name="Codex_Story_23">Questo libro, è scritto in un linguaggio nano</string>
     <string name="Codex_Story_24">Questo libro, è scritto in un linguaggio elfico</string>
     <string name="Codex_Story_25">Lei si fermò, come congelata, davanti alla pesante porta di quercia, e i suoi occhi emersero dal margine della porta. Da qualche angolo dimenticato della sua mente, il riconoscimento.\n
@@ -510,13 +556,16 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="CorpseDust_Info2">Forse poiché il solo tenerla ti fa sentire ansioso e furente.</string>
     <string name="CorpseDust_Name">polvere di cadavere</string>
     <string name="CorpseExplosion_Info">Trasforma un cadavere in una nube mortale di gas tossico, diffondendo malattia e veleno su tutti i nemici vicini.</string>
+    <string name="CorpseExplosion_NoCorpse">Non c\'è un cadavere in quella posizione.</string>
     <string name="Crab_Defense">parata</string>
     <string name="Crab_Desc">Questi enormi granchi sono in cima alla catena alimentare delle fogne. Sono estremamente veloci e i loro duri esoscheletri posso sopportare duri colpi.</string>
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">granchio delle fogne</string>
     <string name="Crab_Name_Objective">granchio delle fogne</string>
+    <string name="CrippleBuff_Info">Il corpo è mutilato ma la lotta continua.</string>
     <string name="CrippleBuff_Name">Azzoppato</string>
     <string name="Crystal_Desc">Un grosso e brillante cristallo fluttua nell\'aria. Probabilmente è pieno di potente magia. </string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">cristallo flutuante</string>
     <string name="Crystal_Name_Objective">cristallo flutuante</string>
     <string name="CurareDart_Gender">masculine</string>
@@ -529,6 +578,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DM300_Info3">personale non autorizzato rilevato.</string>
     <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">un semplice pugnale di ferro con un manico di legno ben messo</string>
     <string name="Dagger_Name">pugnale</string>
     <string name="DarkGold_Info">Questo metallo è chiamato oscuro non per il suo colore (non differisce dal normale oro), ma poichè si scioglie alla luce del sole, rendendolo inutile in superficie.</string>
@@ -539,6 +589,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DarkSacrifice_Ok">La mia vita è tua!</string>
     <string name="DarkSacrifice_Resist">Non hai potere su di me!</string>
     <string name="DarkSacrifice_Self">Per il Flagello!</string>
+    <string name="DarkVeilBuff_Info">Un velo di oscurità circonda il proprietario, evocando uno spirito ogni volta che subisce danni.</string>
     <string name="DarkVeilBuff_Name">Velo scuro</string>
     <string name="Darkness_Info">Sembrerebbero dei frammenti di oscurità eterna fluttuanti nell\'aria</string>
     <string name="Dart_Gender">masculine</string>
@@ -546,6 +597,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Dart_Name">Dardo</string>
     <string name="DashSpell_Info">Lancia una corsa in una direzione specificata mentre collide con i nemici, infliggendo danni e causando menomazioni.</string>
     <string name="DashSpell_Name">Corsa</string>
+    <string name="DashSpell_OnSelf">Non posso fare una carica sul posto.</string>
     <string name="DashSpell_TooFar">Non posso correre così lontano</string>
     <string name="DeathKnight_Desc">A prima vista un guerriero forzuto in armatura massiccia, ma il suo sorriso scheletrico lo palesa, un Cavaliere Della  Morte è la manifestazione dello spirito di un cavaliere che ha fallito nei suoi giuramenti e nei suoi voti. Nella sua maledizione egli si chiederà sempre della terra, cercando di ripulire il suo nome in battaglia, uccidendo gli innocenti, incapace di ricordare cosa giurò di proteggere.</string>
     <string name="DeathKnight_Name">cavaliere della morte</string>
@@ -557,6 +609,8 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">Gregario della Morte</string>
     <string name="Deathling_Name_Objective">Gregario della Morte</string>
+    <string name="DeepSnail_Desc">Questo tipo di mollusco si può spesso vedere vicino alle fonti d\'acqua ed è molto più veloce dello zigolo ordinario. Attenzione però alle bocche, possono avere un effetto sgradevole sulla tua pelle.</string>
+    <string name="DeepSnail_Name">lumaca profonda</string>
     <string name="DeepSnail_Name_Objective">lumaca delle profondità</string>
     <string name="DeferedDamageBuff_Info">Il dolore è stato trasformato in un dolore rallentato, riducendo il danno subito in una volta.\nDanno rimanente: %d</string>
     <string name="DeferedDamageBuff_Name">Danno Differito (%d)</string>
@@ -578,6 +632,8 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DieHardSpell_Name">Duro a morire</string>
     <string name="Displacement_Txt">%s del dislocamento</string>
     <string name="DoctorArmor_Info">Quest\'armatura del dottore della peste permette di usare l\'abilità \&quot;Nuvola di Miasma\&quot;, che rilascia un gas nocivo che avvelena, indebolisce e disorienta i nemici. Il dottore, protetto dalla sua maschera, è immune a questi effetti.</string>
+    <string name="DoctorArmor_Name">Abbigliamento del Dottore</string>
+    <string name="DoctorSpecial">Nuvola di Miasma</string>
     <string name="DogeMask_Info">Hai mai voluto travestirti da famoso Doge? Ora è la tua occasione!\nQuesta maschera! Molti travestimenti! Wow!</string>
     <string name="DogeMask_Name">Maschera Doge</string>
     <string name="DonateButton_pleaseDonate">Per favore considera una donazione </string>
@@ -588,6 +644,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DreadKnight_Name_Objective">cavaliere timoroso</string>
     <string name="Dreamweed_Desc">Dopo aver toccato l\'Erbasogno essa secerne una scintillante nuvola di gas confondente.</string>
     <string name="Dreamweed_Name">Erbasogno</string>
+    <string name="DriedRoseBuff_Info">La rosa sembra molto affascinante.</string>
     <string name="DriedRoseBuff_Name">Affascinante</string>
     <string name="DriedRoseCursedBuff_Info">La rosa sembra bellissima ma non molto affascinante.</string>
     <string name="DriedRoseCursedBuff_Name">Amorous</string>
@@ -598,6 +655,8 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Drink_Message">Quella bevanda era rinfrescante!</string>
     <string name="DrunkardNPC_Desc">Cliente abituale dell\'ostello nel suo stato naturale.</string>
     <string name="DrunkardNPC_Gender">masculine</string>
+    <string name="DrunkardNPC_Name">ubriaco</string>
+    <string name="DrunkardNPC_Name_Objective">ubriaco</string>
     <string name="Drunkard_Phrase_1">ANCORA DA BERE, PER FAVORE!</string>
     <string name="Drunkard_Phrase_2">Chi ha bisogno d\'acqua quando hai la birra!</string>
     <string name="Dungeon_DeadEnd">Cosa ci fai qui?!</string>
@@ -614,6 +673,8 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Dungeon_Tips_17">Un pozzo di Trasmutazione può darti oggetti che non potrebbero essere ottenuti in altri modi.</string>
     <string name="Dungeon_Tips_18">L\'unico modo di incantare un\'arma è migliorarla con una Pergamena del Miglioramento della Armi.</string>
     <string name="Dungeon_Tips_19">Armi non concesse in presenza di Sua Maestà!</string>
+    <string name="Dungeon_Tips_2">Ricorda che aumentare la tua forza non è l\'unico modo per accedere a meglio attrezzature, puoi anche andare al contrario diminuendo i suoi requisiti di forza con le pergamene di Miglioramento.</string>
+    <string name="Dungeon_Tips_20">Pixel-Mart. Offerte speciali per cacciatori di demoni!</string>
     <string name="Dungeon_Tips_21">Il testo è scritto in linguaggio demoniaco.</string>
     <string name="Dungeon_Tips_22">Il testo è scritto in linguaggio demoniaco.</string>
     <string name="Dungeon_Tips_23">Il testo è scritto in linguaggio demoniaco.</string>
@@ -639,12 +700,16 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="ElfArmor_Desc">Con l\'aiuto di questo mantello, l\'elfo può evocare le forze della natura stessa. L\'erba alta crescerà in un lampo, anche attraverso la roccia solida, immobilizzando tutti i nemici in vista.</string>
     <string name="ElfArmor_Name">Mantello elfico</string>
     <string name="ElfArmor_NotElf">Solo gli elfi possono usare questa armatura!</string>
+    <string name="ElvenBow_Info">An exceptional example of elven craftsmanship. It\'s clearly more effective and accurate than a regular wooden bow.</string>
     <string name="ElvenBow_Name">arco elfico</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Questa arma è fatta di una speciale lega metallica, rendendola molto più leggera rispetto a un pugnale normale.</string>
     <string name="EncumbranceBuff_CharAct_2">Questo %s è troppo pesante per me per usarlo efficacemente.</string>
+    <string name="EncumbranceBuff_CharAct_3">Devo lavorare sulla mia forza prima di poter usare %s.</string>
+    <string name="EncumbranceBuff_CharAct_4">Non ho la forza per utilizzare %s al massimo del suo potenziale.</string>
     <string name="EncumbranceBuff_CharAct_5">%s è troppo per me da gestire in questo momento.</string>
     <string name="EncumbranceBuff_Info">Non ho abbastanza forza per usare %s efficacemente.</string>
+    <string name="EncumbranceBuff_Name">Pesantezza</string>
     <string name="EnslavedSoul_Desc">Puoi quasi vedere attraverso questa apparizione spiritica. Nonostante sembri uno scheletro, a volte, per mezzo secondo, compare un volto invece... un volto colmo di sofferenza e tormento.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name">anima incatenata</string>
@@ -658,6 +723,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Exhumation_NoGrave">Qui non ci sono tombe per eseguire un\'Esumazione.</string>
     <string name="Exhumation_Ok">Ti obbedirò.</string>
     <string name="ExplodingSkull_Desc">Questo ardente e fiammeggiante scheletro appare estremamente fragile, sembra che sta per scoppiare tra qualche secondo...</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">teschio esplosivo</string>
     <string name="ExplodingSkull_Name_Objective">teschio esplosivo</string>
     <string name="Eye_Desc">Uno degli altri nomi di questo demone è \&quot;sfera d\'odio\&quot; perché quando vede un nemico, usa il suo raggio mortale sconsideratamente, spesso ignorando i suoi alleati e ferendoli.</string>
@@ -671,6 +737,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Facilitations_Descriptions_3">Stringendo la cintura di pelle di orco, tramandata ad ogni nuova generazione, fai un passo verso l\'ignoto che ti attende.</string>
     <string name="Facilitations_Names_0">Nessuna fame</string>
     <string name="Facilitations_Names_1">Corpo di troll</string>
+    <string name="Facilitations_Names_2">Genio spirito</string>
     <string name="Facilitations_Names_3">Forza del gigante</string>
     <string name="Fadeleaf_Desc">Toccare una Svanifoglia farà teletrasportare qualsiasi creatura in un posto a caso sul livello attuale.</string>
     <string name="Fadeleaf_Name">Svanifoglia</string>
@@ -681,6 +748,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Fez_Info">È un copricapo a forma di cono di tronco in feltro rosso, con una nappa fissata sulla parte superiore. E no, non rende il mondo in 3 dimensioni.</string>
     <string name="Fez_Name">Fez</string>
     <string name="FilteredMask_Info">Un respiratore è un dispositivo progettato per proteggere chi lo indossa dall\'inalazione di atmosfere pericolose, inclusi fumi, vapori, gas e particolato come polveri e microrganismi aerodispersi.\n\nQuesta maschera tuttavia ha solo scopo decorativo.</string>
+    <string name="FilteredMask_Name">Maschera N95</string>
     <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">Questa freccia sembra normale, tranne per la calda luce rossa che irradia dalla sua testa.</string>
     <string name="FireArrow_Name">freccia di fuoco</string>
@@ -725,6 +793,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="FrozenFish_Name">pesce ghiacciato</string>
     <string name="FullFaceMask_Info">Una maschera antigas è una maschera usata per proteggere chi la indossa dall\'inalazione di inquinanti atmosferici e gas tossici. La maschera forma una copertura sigillata su naso, bocca e occhi.\n\nI filtri mancano da questa maschera ma sembra comunque figa.</string>
     <string name="FullFaceMask_Name">Maschera antigas</string>
+    <string name="FuryBuff_Info">Gli occhi si sono riempiti di rosso sangue da tutta quella furia interiore.</string>
     <string name="FuryBuff_Name">Furia</string>
     <string name="GameScene_Chasm">I tuoi passi riecheggiano nel dungeon.</string>
     <string name="GameScene_Grass">L\'odore di vegetazione è acuto nell\'aria.</string>
@@ -734,9 +803,11 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="GameScene_Welcome">Benvenuto al livello %d di Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Bentornato al livello %d di Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Info">Immune a tutti i gas.</string>
+    <string name="GasImmuneBuff_Name">Gas Immunity</string>
     <string name="Ghost_Defense">eluso</string>
     <string name="Ghost_Desc">Il fantasma è appena visibile. Si presenta come una macchia informe di luce fioca con una espressione addolorata.</string>
     <string name="Ghost_Name">fantasma triste</string>
+    <string name="Ghost_Name_Objective">fantasma</string>
     <string name="Ghost_Rat1">Ciao avventuriero... Una volta ero come te - forte e fiducioso... E ora sono morto... Ma non posso lasciare questo posto... Non finché non avrò la mia vendetta... Uccidi il _ratto puzzolente_ che ha preso la mia vita...</string>
     <string name="Ghost_Rat2">Ti prego.... Aiutami... Uccidi l\'abominio...</string>
     <string name="Ghost_Rose1">Ciao avventuriero... Una volta ero come te - forte e fiducioso... E ora sono morto... Ma non posso lasciare questo posto... Non finché non riavrò  la mia _rosa appassita_... E\' molto importante per me... Un mostro l\'ha rubata dal mio corpo...</string>
@@ -772,6 +843,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="GoldenSword_Name">spada d\'oro</string>
     <string name="Golem_Defense">Bloccato</string>
     <string name="Golem_Desc">I nani provarono a combinare la loro conoscenza nei meccanismi con il loro nuovo potere di fusione degli elementi, Hanno usato spiriti della terra come \&quot;anima\&quot; per i corpi meccanici dei golem, che furono creduti come i più controllabili. Nonostante questo, il più piccolo errore nel rituale potrebbe causare un esplosione.</string>
+    <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">Golem</string>
     <string name="Goo_Desc">Poco si sa sul Goo. È molto probabile che non sia nemmeno una creatura, ma piuttosto un conglomerato di sostanze delle fognature che hanno acquisito i rudimenti della libera volontà. In ogni caso, è evidente che qui c\'è al lavoro una magia oscura.</string>
@@ -803,9 +875,11 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Halls_TileWater">Lava fredda</string>
     <string name="Haste_Info">La corsa permetterà al personaggio di muoversi con una velocità tale che tutto intorno a lui apparirà statico. Una tale fretta consumerà molta energia, quindi è possibile usarla solo per un breve periodo di tempo.\n\nI maestri esperti sono in grado di rimanere veloci per un periodo di tempo più lungo.</string>
     <string name="Haste_Name">Corsa Estrema</string>
+    <string name="Heal_Cast">%s è guarito.</string>
     <string name="Heal_Info">Un incantesimo piuttosto utile nel Dungeon, vero?</string>
     <string name="Heal_Name">Guarigione</string>
     <string name="HealerNPC_Desc">Un vecchio, sembra quasi qualcuno che potrebbe fabbricare bacchette magiche.</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Trattamento gratis per ogni avventuriero!</string>
     <string name="HealerNPC_Message2">Torna pure ogniqualvolta ti senti male o sei affamato!</string>
     <string name="HealerNPC_Message3">Mi chiedo perché la chiesa non ci permetta di indossare cappelli... fa davvero freddo qui fuori.</string>
@@ -816,6 +890,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">La punta della freccia è coperta da pozione guaritrice.</string>
     <string name="HealthArrow_Name">Freccia curante</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">La punta del dardo è coperta da pozione guaritrice.</string>
     <string name="HealthDart_Name">Dardo curante</string>
     <string name="Heap_Mimic">Questo è un imitatore!</string>
@@ -852,10 +927,12 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="HeroClass_Mag">mago</string>
     <string name="HeroClass_MagPerks_0">I maghi iniziano con un\'unica Bacchetta del Missile Magico. Questa bacchetta potrà successivamente essere \&quot;disincantata\&quot; per un\'altra.</string>
     <string name="HeroClass_MagPerks_1">I maghi ricaricano più velocemente le proprie bacchette.</string>
+    <string name="HeroClass_MagPerks_2">Quando mangiato, qualsiasi pezzo di cibo ripristina 1 carica per tutti gli scettri nell\'inventario.</string>
     <string name="HeroClass_MagPerks_3">I maghi possono usare le bacchette come armi da mischia.</string>
     <string name="HeroClass_MagPerks_4">I maghi usano il mana per lanciare magie Elementali.</string>
     <string name="HeroClass_MagPerks_5">Le pergamene di identificazione sono già identificate dall\'inizio.</string>
     <string name="HeroClass_Necromancer">Negromante</string>
+    <string name="HeroClass_NecromancerPerks_0">I negromanti iniziano con 15 punti di Vita.</string>
     <string name="HeroClass_NecromancerPerks_1">I Negromanti partono con una chiave scheletrica da livello 7.</string>
     <string name="HeroClass_NecromancerPerks_2">Le Pozioni di Cura vengono identificate subito.</string>
     <string name="HeroClass_NecromancerPerks_3">I Negromanti partono con una chiave scheletrica da livello 7.</string>
@@ -933,6 +1010,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Hero_Wait">...</string>
     <string name="Hero_YouNowHave">Tu ora hai %s</string>
     <string name="HideInGrassSpell_Info">Hai perfezionato la tua maestria nel nascondino.</string>
+    <string name="HideInGrassSpell_Name">Hide-In-Grass</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Nemmeno io posso nascondermi così allo scoperto.</string>
     <string name="Horror_Name_0">Soprannaturale %s</string>
     <string name="Horror_Name_1">Soprannaturale %s</string>
@@ -963,12 +1041,14 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">elementale del ghiaccio</string>
     <string name="IceElemental_Name_Objective">elementale del ghiaccio</string>
+    <string name="IceGuardianCoreModule_Info">È una costruzione complessa fatta di ghiaccio magico. Una pietra luminosa è posta all\'interno di questa meravigliosa invenzione.</string>
     <string name="IceGuardianCoreModule_Name">Nucleo del Guardiano di Ghiaccio</string>
     <string name="IceGuardianCore_Desc">I Guardiani del Ghiaccio venivano fabbricati dagli antichi coboldi per proteggere le loro grotte. Il potere immagazzinato nel suo nucleo consente al Guardiano del Ghaccio di ricostruirsi fintanto che ha abbastanza energia.</string>
     <string name="IceGuardianCore_DieInfo">Fa così freddo qui, è meglio tornare al livello 14 e cercare una via verso un posto più caldo.</string>
     <string name="IceGuardianCore_Name">guardiano del ghiaccio</string>
     <string name="IceGuardianCore_Name_Objective">guardiano del ghiaccio</string>
     <string name="IceGuardian_Desc">I Guardiani del Ghiaccio sono stati creati dagli antichi coboldi per proteggere le loro caverne. Finché il nucleo del Guardiano contiene abbastanza energia, è in grado di ricostruire se stesso proprio nel pieno della battaglia.</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">guardiano del ghiaccio</string>
     <string name="IceGuardian_Name_Objective">guardiano del ghiaccio</string>
     <string name="IceKey_Name">chiave di ghiaccio</string>
@@ -992,8 +1072,12 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="IncendiaryDart_Name">Dardo incendiario</string>
     <string name="InnKeeperNPC_Desc">Il locandiere è molto orgoglioso di sé.</string>
     <string name="InnKeeperNPC_Gender">masculine</string>
+    <string name="InnKeeperNPC_Name">oste</string>
     <string name="InnKeeperNPC_Name_Objective">locandiere</string>
+    <string name="InnServant_Phrase_1">Bleah, ancora tanto da fare!</string>
+    <string name="InnServant_Phrase_2">Questa ubriaca mi fa impazzire!</string>
     <string name="InnServant_Phrase_3">Mi sembra pulito</string>
+    <string name="InnServant_Phrase_4">Oh my, oggi così tanti ospiti</string>
     <string name="Instability_Name_0">Instabile %s</string>
     <string name="Instability_Name_1">Instabile %s</string>
     <string name="Instability_Name_2">Instabile %s</string>
@@ -1011,6 +1095,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="InventoryScroll_Warning">Vuoi davvero cancellare questa pergamena? Sarà comunque consumata.</string>
     <string name="InventoryScroll_Yes">Si,sono positivo
 </string>
+    <string name="InvisibilityBuff_Info">Completamente invisibile, che può aiutare a evitare i pericoli o diventare uno.</string>
     <string name="InvisibilityBuff_Name">Invisibile</string>
     <string name="IronKey_FromDepth">Chiave di ferro dalla profondità %d</string>
     <string name="IronKey_Info">Le tacche in questa antica chiave di ferro sono logore; il suo cordoncino di pelle è martoriato dalla vecchiaia. Che porta potrebbe aprire?</string>
@@ -1151,18 +1236,22 @@ Potrebbe bruciare?</string>
     <string name="Level_TileWall">Muro</string>
     <string name="Level_TileWater">Acqua</string>
     <string name="Level_TileWell">Pozzo</string>
+    <string name="LevitationBuff_Info">Il corpo fluttua sopra il suolo, evitando trappole e altri pericoli terrestri.</string>
     <string name="LevitationBuff_Name">Levitante</string>
     <string name="LibrarianNPC_Desc">Una persona molto timida, indossa un maglione dall\'aspetto goffo e un paio di occhiali con lenti molto spesse.</string>
     <string name="LibrarianNPC_Message_Instruction">C-ciao. Benvenuto alla Biblioteca. Qua puoi trovare informazioni su ogni genere di cosa che può essere trovata nel dungeon... A dire il vero possiamo solo informare su cose scoperte dagli avventurieri. Ehm... è un po\' imbarazzante, sì. Ogni volta che ci visiterai, probabilmente, ci saranno nuove cose da leggere</string>
+    <string name="LibrarianNPC_Message_Not_Ready">I... I sono spiacente, l-libreria non è aperta... ancora.</string>
     <string name="LibrarianNPC_Name">bibliotecaria</string>
     <string name="LibrarianNPC_Name_Objective">bibliotecaria</string>
     <string name="LibraryBook_Description">Questo tomo è davvero enorme. Racchiude tutta la conoscenza che gli avventurieri hanno scoperto e portato dal dungeon.</string>
     <string name="Lich_Desc">Il negromante incontrò la morte nelle profondità della Necropoli, e come l\'energia maligna di questo posto fluì nel suo corpo, eventualmente, si trasformò in un lich. Il mago non morto, una marionetta senza coscienza, controllata da potrei malevoli.</string>
+    <string name="Lich_DieInfo">Non ho mai gradito questo Negromante. È ora di tornare al livello 7 e trovare un altro modo per scendere nella nuova avventura.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Info">La luce emana dal corpo, illuminando tutto ciò che lo circonda.</string>
     <string name="LightBuff_Name">Illuminato</string>
+    <string name="LightningBolt_Info">Questo è un incantesimo condiviso tra gli antichi sciamani, che traumatizzerà i tuoi nemici il doppio, soprattutto se sono abbastanza sciocchi da stare in piedi sull\'acqua.</string>
     <string name="LightningTrap_Desc">Sei stato ucciso dalla scarica di una trappola fulminante</string>
     <string name="LightningTrap_Name">Trappola fulminante</string>
     <string name="LloidsBeacon_ACReturn">RITORNA</string>
@@ -1223,10 +1312,12 @@ Potrebbe bruciare?</string>
     <string name="MeleeWeapon_Info7a">tu tieni le %1$s a portata di mano%2$s.</string>
     <string name="MeleeWeapon_Info7b">,e dato che questo è maledetto,tu sei impedito dal andartene</string>
     <string name="MeleeWeapon_Info7c">Puoi percepire un\'energia malevola aleggiare all interno del%s. </string>
+    <string name="MercenaryNPC_Desc">Uomo robusto.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">mercenario</string>
     <string name="MercenaryNPC_Name_Objective">mercenario</string>
     <string name="Metabolism_Txt">%s del metabolismo</string>
+    <string name="MiasmaGas_Info">Una nube miasmatica nociva che avvelena, indebolisce e disorienta chi la respira.</string>
     <string name="MimicAmulet_Desc">il momento più glorioso della sua carriera  d\'avventure è stato appena si è rivelato ad essere una trappola.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">imitatore</string>
@@ -1239,6 +1330,7 @@ Potrebbe bruciare?</string>
     <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">replicante</string>
     <string name="Mimic_Name_Objective">replicante</string>
+    <string name="MindVisionBuff_Info">La visione interiore permette di vedere chiaramente il movimento di tutti gli esseri viventi sul piano.</string>
     <string name="MindVisionBuff_Name">Visione Mentale</string>
     <string name="MirrorImage_Desc">Questa illusione ha una stretta somiglianza con te, ma è più pallida e si deforma un po\'.</string>
     <string name="MirrorImage_Gender">masculine</string>
@@ -1254,24 +1346,28 @@ Potrebbe bruciare?</string>
     <string name="MissileWeapon_Sure">Vuoi davvero equipaggiarla come arma da mischia?</string>
     <string name="MissileWeapon_Yes">Sì, so quello che faccio</string>
     <string name="Mob_Attacking">Conta questo %s come morto!</string>
+    <string name="Mob_Cannot_Be_Pet">La volontà di un %1$s è troppo forte per essere controllata!</string>
     <string name="Mob_CantDoIt">Non posso farlo. Ho delle zampette piccole.</string>
     <string name="Mob_Desc">La vera descrizione arriverà presto!</string>
     <string name="Mob_Died">Senti qualcosa morire a distanza.</string>
     <string name="Mob_GoingTo">Ci sto già andando!</string>
-    <string name="Mob_ReadyForOrder">%1 pronto per il tuo ordine.</string>
+    <string name="Mob_ReadyForOrder">%1$s pronto per il tuo ordine.</string>
     <string name="Mob_StaAmokStatus">Questo %1$s è impazzito</string>
     <string name="Mob_StaControlledStatus">Questo %s è sotto una possessione maledetta</string>
     <string name="Mob_StaFleeingStatus">Questo %s sta fuggendo.</string>
+    <string name="Mob_StaFleeingStatus2">Questo %1$s fugge da %2$s</string>
     <string name="Mob_StaHuntingStatus">Questo %s sta cacciando.</string>
+    <string name="Mob_StaHuntingStatus2">Questo %1$s sta cacciando %2$s</string>
     <string name="Mob_StaPassiveStatus">Questo %s è passivo.</string>
     <string name="Mob_StaSleepingStatus">Questo %s sta dormendo.</string>
-    <string name="Mob_StaTerrorStatus">Questo %1 è inorridito</string>
+    <string name="Mob_StaTerrorStatus">Questo %1$s è inorridito</string>
     <string name="Mob_StaTerrorStatus2">Questo %1$s è inorridito da %2$s</string>
     <string name="Mob_StaWanderingStatus">Questo %s sta girovagando.</string>
     <string name="ModsButton_SelectMod">Seleziona modifica</string>
     <string name="Mods_AuthorEmail">Email autore:</string>
     <string name="Mods_AuthorSite">Sito autore:</string>
     <string name="Mods_CreatedBy">Creato da:</string>
+    <string name="Mods_Disclaimer">        I mod sono creati dai giocatori per i giocatori.\n        A volte i mod cambiano il gameplay in modo imprevedibile o strano, sei stato avvisato!\n        Il team NYRDS non è in alcun modo responsabile per il contenuto, la qualità o la stabilità dei mod.\n        Scaricali a tuo rischio e goditi il gioco!\n    </string>
     <string name="Mods_RestartRequired">Riavvio necessario</string>
     <string name="Monk_Defense">Parata</string>
     <string name="Monk_Desc">Questi monaci sono dei fanatici, che hanno dedicato loro stessi nel proteggere i segreti della loro città da tutti gli stranieri. Non usano alcuna armatura o arma, affidandosi solamente all\'arte del combattimento corpo a corpo.</string>
@@ -1298,6 +1394,7 @@ Potrebbe bruciare?</string>
     <string name="NecromancerArmor_Name">Armatura d\'ossa</string>
     <string name="NecromancerArmor_NotNecromancer">Solo i negromanti possono usare questa armatura!</string>
     <string name="NecromancerNPC_Desc">Quest\'uomo di mezza età sembra essere leggermente annoiato ed eccitato allo stesso tempo. Veste un\'armatura composita fatta  da frammenti di scheletri. </string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">Ah! Non è una cosa rara da vedere! Un compagno avventuriero che non è morto. Incredibile! Oh... Chiedo venia, a volte sono troppo esaltato. Vedi, io stesso sono un negromante. E nonostante studiare il morto e la morte in sé sia ciò che faccio per vivere, vedendo le stesse cose ancora e ancora, spesso diventa estremamente noioso. D\'altro canto è proprio il motivo per cui sono qui. Secondo i miei calcolo in sole poche settimane, da qualche parte in questo dungeon, accadrà qualcosa di spettacolare. Una _Necropoli_, un\'antica città dei morti sta per aprire le sue porte. E... Non posso dire tanto, ho sprecato abbastanza tempo così com\'è. Devo preparami, _torna dopo_. </string>
     <string name="NecromancerNPC_Intro2">Ah! Un avventuriero che non sia morto. Eccezionale! Oh... Ti chiedo scusa. Vedi, io stesso sono un negromante. Ed anche se studiare i morti e la Morte stessa sia ciò che faccio per vivere, vedere sempre le stesse cose volta dopo volta, alla fine diventa estremamente noioso. D\'altra parte è esattamente per questo che sono qui. Qualcosa di spettacolare è accaduto di recente. Una _Necropoli_, un\'antica città dei morti ha finalmente mostrato le sue porte. Ed infatti siamo proprio di fianco all\'entrata. Ed...ecco cosa ti dico, prendi questa chiave e vai per primo, cioè ti piace l\'avventura e roba così no? Ed io sarò proprio dietro di te, devo solo prepararmi.</string>
     <string name="NecromancerNPC_Message1">Così poco tempo, così poco tempo... </string>
@@ -1355,6 +1452,7 @@ Potrebbe bruciare?</string>
     <string name="Pickaxe_InsufficientStr">Non hai abbastanza forza per scavare!</string>
     <string name="Pickaxe_Name">piccone</string>
     <string name="Pickaxe_NoVein">Non c\'è alcuna vena aurifera oscura vicino a te da estratte</string>
+    <string name="Pickaxe_NothingToMine">Non c\'è nulla da scavare qui!</string>
     <string name="Piercing_Name_0">Perforante %s</string>
     <string name="Piercing_Name_1">Perforante %s</string>
     <string name="Piercing_Name_2">Perforante %s</string>
@@ -1368,8 +1466,11 @@ Potrebbe bruciare?</string>
     <string name="PlagueDoctorMaskHood_Name">Maschera del Dottore della Peste con cappuccio</string>
     <string name="PlagueDoctorMask_Info">Questo… non è solo una maschera. È… una barriera. Uno scudo contro le forze della decadenza contro cui il Dottore della Peste combatte instancabilmente. Realizzata nel miglior legno di ebano, accuratamente scolpita con il volto di un teschio famelico. Le sue orbite vuote sono piene di gemme di ametista scintillanti che pulsano debolmente, come carboni morenti di un fuoco. Ogni respiro che fai, ogni parola che pronunci, è filtrata attraverso una rete labirintica di tubi e filtri. Una mistura di erbe potenti e spezie esotiche impregna l\'aria all\'interno, mascherando la puzza di morte che ti si attacca addosso come un sudario.</string>
     <string name="PlagueDoctorMask_Name">Maschera del Dottore della Peste</string>
+    <string name="PlagueDoctorNPC_After_Quest_2">Tu sei ancora qui? Ecco, prendi questo.</string>
     <string name="PlagueDoctorNPC_Desc">L\'intero corpo di questa persona ingobbita è nascosto sotto una tuta di pelle. Inoltre, da lui proviene un amaro odore di medicinali e... aglio?</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">dottore della peste</string>
+    <string name="PlagueDoctorNPC_Name_Objective">medico della peste</string>
     <string name="PlagueDoctorNPC_Quest_End">Ah, grazie, spero che questi abbiano qualche traccia di malattia. I campioni precedenti erano assolutamente innocui. Così ho fatto questo per te mentre aspettavo nuovi campioni.</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Portami %d pelli di ratto.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Riesci a crederci? Quegli idioti non hanno ancora capito quanto pericolose siano queste dannate fogne! Come se guardie e avventurieri potessero proteggere il paese da qualunque cosa. Hah! Non esiste arma che possa fermare la diffusione di una malattia. Ma mi servono prove, potresti aiutarmi?  Portami %d pelli di ratto, in modo che possa fare altri test.</string>
@@ -1378,7 +1479,7 @@ Potrebbe bruciare?</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Portami _cinque ratti morti_! Ogni ratto che mi porti ci avvicina alla comprensione di questa orribile peste.</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">Achooo!\n Che maledizione questa dannata peste! Si sta diffondendo per la città come un incendio, infettando le ossa della popolazione ignara! BAH! Pensate che quelle patetiche guardie abbiano una sola possibilità contro questo micidiale morbo? Tu, là! Esemplare forte e sano. Forse puoi aiutarmi. Quegli sporchi _ratti_ delle fogne… li portano con sé, ve lo dico io, i semi della pestilenza nei loro corpi putridi! Portatemi _cinque_ di quelle creature miserabili, _morti_, ovviamente! Le loro pelli saranno preziosissime per la mia ricerca. Farò per voi una meravigliosa armatura, una barriera protettiva contro la stessa peste da cui proviene!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh... magnifico! Le _lumache_, i loro segreti si svelano lentamente come petali nella luce lunare. Davvero un tesoro di informazioni! Ma hai ragione, _cinquanta monete d\'oro_ a malapena bastano come ricompensa. *Ride maniacalmente*.</string>
-    <string name="PlagueDoctorQuest_1_2_InProgress">_Dieci lumache_, dieci sussurri dall\'abisso! La loro bava sarà analizzata, la loro essenza scrutinata. I segreti che custodiscono sono a portata di mano.</string>
+    <string name="PlagueDoctorQuest_1_2_InProgress">Dieci lumache, dieci sussurri dall\'abisso! La loro melma sarà analizzata, la loro essenza esaminata. I segreti che custodiscono sono alla portata di mano.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Tosse violentemente* Achoo!\n _Le lumache_… strisciano. Secernono. E sussurrano segreti di un\'epoca dimenticata. Ne ho bisogno, _dieci_ di loro, i loro gusci ancora intatti. Pensate che _cinquanta monete d\'oro_ bastino per conoscenze così preziose?\n Bah! Non importa. Le informazioni che custodiscono potrebbero essere la chiave per fermare questa peste. O… potrebbero condurci a qualcosa di ancora peggiore. Decidi tu.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_La Grazia Lunare_… una testimonianza della magia che permea questo mondo. Ho imparato molto dalla sua essenza, ma la tua ricompensa… beh, è stata preparata con la massima cura. *Consegna all\'eroe una scintillante _Pozione di Mana_* Che il suo potere ti guidi attraverso i pericoli futuri.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Cerca la _Grazia Lunare_, dove l\'oscurità incontra il più fioco bagliore della luce lunare. _Due semi_, la loro essenza, rivelerà segreti nascosti.</string>
@@ -1402,6 +1503,7 @@ Potrebbe bruciare?</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*La sua mente vaga mentre parla, la sua voce si fa sempre più debole, appena un sussurro.* Portami due _succubi_… vive. Il loro… potere… è affascinante.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Balbetta, la sua voce si spezza come un rametto fragile*. A-ah, _succubi_! Due… sì, due, vive! È… ehm… per la mia ricerca! Vedi… i loro feromoni… è cruciale per capire l\'equilibrio delicato di… ah… *Si interrompe, la sua mano ossuta si alza nervosamente per aggiustare la maschera, i suoi occhi vagano verso di te con un\'intensità febbrile.* La loro… essenza… è un rompicapo… un rompicapo bellissimo e misterioso! *Tosse violentemente, cercando di riprendersi.* Lo prometto, per avermi portato due di queste… creature… avrai la mia eterna gratitudine. Consideralo come… un dono della conoscenza! Sì! Alla conoscenza!</string>
     <string name="PlagueDoctorQuest_AllDone">*Lui ride secco e con un sibilo.* Le tue azioni hanno sbloccato segreti oltre ogni misura! La conoscenza ottenuta... pulsa dentro di me, una sinfonia della scoperta. Ma la conoscenza,\&quot; aggiunge, abbassando la voce a un sussurro cospiratorio, \&quot;la conoscenza è potere. E il potere... ah... che è un elisirro più inebriante.\&quot; Ti fissa intensamente per un momento, i suoi occhi di ametista bruciano con un\'intensità febbrile. \&quot;Forse,\&quot; mormora, \&quot;le nostre strade si incroceranno ancora. Perché ci sono ancora molti... misteri... da svelare.</string>
+    <string name="PlagueDoctor_Desc">Tutta la parte del corpo di questa persona gobba è nascosta sotto una tuta di pelle. Inoltre, da lui emana un odore amaro di medicina e... aglio?</string>
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">Dottore della peste</string>
     <string name="PlagueDoctor_Name_Objective">Dottore della peste</string>
@@ -1413,6 +1515,7 @@ Potrebbe bruciare?</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">Una goccia di veleno mortale brilla sulla testa di questa freccia.</string>
     <string name="PoisonArrow_Name">freccia velenosa</string>
+    <string name="PoisonBuff_Info">Il corpo viene lentamente ucciso dal veleno!</string>
     <string name="PoisonBuff_Name">Avvelenato</string>
     <string name="Poison_Death">Sei morto avvelenato...</string>
     <string name="Poison_Name_0">Velenoso %s</string>
@@ -1511,6 +1614,7 @@ Potrebbe bruciare?</string>
     <string name="PseudoPasty_Info">Questo è un\'autentico pasticcio della Cornovaglia col ripieno tradizionale di carne e patate.</string>
     <string name="PseudoPasty_Name">pasticcio</string>
     <string name="PseudoRat_Desc">Un orribile bestia che è emersa dal corpo del ratto non sembra somigliare ad un roditore o qualsiasi altro animale tu abbia mai visto. La bocca enorme, pieno di denti taglienti come rasoi, occupa la maggior parte del suo corpo. </string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">Ratto falso</string>
     <string name="PseudoRat_Name_Objective">Ratto falso</string>
     <string name="PumpkinPie_Info">Una deliziosa torta di zucche, proprio come la infornava tua madre.</string>
@@ -1522,6 +1626,7 @@ Potrebbe bruciare?</string>
     <string name="Quarterstaff_Name">Bastone</string>
     <string name="QuickSlot_SelectSlot">Seleziona Quickslot</string>
     <string name="QuickSlot_SelectedItem">Scegli un oggetto per il lancio rapido</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">Faretra di pelle adatta a contenere un qualsiasi ammontare di frecce</string>
     <string name="Quiver_Name">faretra</string>
     <string name="RabbitEars_Info">E\' una credenza risaputa che i conigli siano bestie fortunate, e la loro fortuna si trasferirebbe su coloro che ottengano una parte del corpo del coniglio. A pensarci bene venire uccisi per delle decorazioni ottenute con le tue orecchie non ti rende molto fortunato. </string>
@@ -1534,12 +1639,17 @@ Potrebbe bruciare?</string>
     <string name="RankingsScene_NoInfo">Nessuna informazione aggiuntiva</string>
     <string name="RankingsScene_Title">Migliori Classificati</string>
     <string name="RankingsScene_Total">Partite totali giocate:</string>
+    <string name="RatArmor_Info">Un\'armatura in pelle fatta di pelle di ratto. Probabilmente non è contagiosa...</string>
+    <string name="RatArmor_Name">armatura da topo</string>
+    <string name="RatHide_Info">Un piccolo e sporco pezzo di carne e pelo. Questi possono essere davvero utili a qualcuno?</string>
+    <string name="RatHide_Name">pelle di ratto</string>
     <string name="RatKingCrownBuff_Info">Saluta il Signore dei topi, ogni topo deve obbedire e lodare la grande Rattosità!</string>
     <string name="RatKingCrownBuff_Name">Rattosità</string>
     <string name="RatKingCrown_Info">Corona d\'oro di Sua Rattosità, simbolo di potenza assoluta</string>
     <string name="RatKingCrown_Name">Corona di re Ratto</string>
     <string name="RatKing_Desc">Questo topo è un po \'più grande di un normale topo marsupiale e si indossa una piccola corona sulla sua testa.</string>
     <string name="RatKing_Died">il re è morto. lunga vita al re!</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">non sto dormendo!</string>
     <string name="RatKing_Info2">Che cos\'è? Non ho tempo per queste sciocchezze. Il mio regno non governerà per sé!</string>
     <string name="RatKing_Info3">How dare you, puny creature, distrub Our Ratness?!</string>
@@ -1627,7 +1737,8 @@ Potrebbe bruciare?</string>
     <string name="Ring_Info3b">, e siccome è maledetto, non hai la capacità di rimuoverlo.</string>
     <string name="Ring_Info4">%1$s\n\ni può sentire una magia maligna agguato all\'interno del %2$s.</string>
     <string name="Ring_Name">%s anello</string>
-    <string name="Roar_Info">Il potente ruggito metterà sicuramente paura ai tuoi nemici e ispirerà gli alleati.</string>
+    <string name="Roar_Info">Il ruggito potente spaventerà di sicuro i tuoi nemici e darà coraggio agli alleati.</string>
+    <string name="Roar_Name">Ruggito</string>
     <string name="RogueArmor_ACSpecial">BOMBA FUMOGENA</string>
     <string name="RogueArmor_Desc">Indossando questa veste scura, un furfante può eseguire una mossa chiamata \&quot;bomba fumogena\&quot; (anche se non sono usati veri esplosivi): acceca i nemici che possono vederlo e salta da un\'altra parte.</string>
     <string name="RogueArmor_Fov">Puoi saltare soltanto in una posizione vuota nel tuo campo visivo</string>
@@ -1644,16 +1755,20 @@ Potrebbe bruciare?</string>
     <string name="RottenFood_Message">Disgustoso!</string>
     <string name="RottenMeat_Info">pezzo di carne marcia</string>
     <string name="RottenMeat_Name">carne marcia</string>
+    <string name="RottenOrgan_Info">Un organo in decomposizione raccolto da un nemico sconfitto. Nonostante il suo stato putrido, contiene composti preziosi per processi alchemici.</string>
     <string name="RottenOrgan_Name">Organo Marcio</string>
     <string name="RottenPasty_Info">ex-pasto sembra così disgustoso</string>
     <string name="RottenPasty_Name">pasticcio marcio</string>
+    <string name="RottenPumpkinPie_Info">Non importa quanto fosse buono quando fresco, non c\'è modo che sia ancora commestibile.</string>
     <string name="RottenPumpkinPie_Name">torta di zucca marcia</string>
     <string name="RottenRation_Info">Taaanto tempo fa poteva essere mangiato</string>
     <string name="RottenRation_Name">razione marcia</string>
     <string name="RottingFist_Desc">pugno in decomposizione del vecchio dio</string>
+    <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">pugno in decomposizione</string>
     <string name="RottingFist_Name_Objective">pugno in decomposizione</string>
     <string name="RoyalShield_desc">Uno scudo interamente metallico. Sì, è pesante, ma solo esso può fornirti la migliore protezione.</string>
+    <string name="RoyalShield_name">Scudo Reale</string>
     <string name="RubyBow_Info">Solo i migliori arcieri possono usare quest\'arco di rubino. Quasi tutte le frecce trapassano il nemico, lasciando un enorme buco nel suo petto, ma un\'enorme forza è necessaria per tenderlo.</string>
     <string name="RubyBow_Name">arco di rubino</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -1787,6 +1902,7 @@ Potrebbe bruciare?</string>
     <string name="ShadowLord_Name">signore dell\'ombra</string>
     <string name="ShadowLord_Name_Objective">Signore dell\'Ombra</string>
     <string name="Shadow_Desc">Le Ombre vagano silenziosamente per le rovine dell\'antica prigione, mostrandosi solo occasionalmente agli avventurieri, solitamente nella loro ultima avventura.</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name">Ombra</string>
     <string name="Shadow_Name_Objective">Ombra</string>
     <string name="ShadowsBuff_Info">È più difficile individuare qualcosa tra le ombre.</string>
@@ -1794,13 +1910,17 @@ Potrebbe bruciare?</string>
     <string name="ShamanElder_Desc">Questo gnoll in particolare sembra molto più anziano degli altri sciamani e ha sicuramente uno status più elevato nella tribù. Un\'aura strana si forma lentamente attorno a lui, che sembra riflettere tutto ciò che lo tocca.</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="ShamanElder_Name">sciamano anziano</string>
+    <string name="ShamanElder_Name_Objective">shamana anziana</string>
     <string name="Shaman_Desc">Gli gnoll più intelligenti posso imparare la magia sciamanica. Gli gnoll sciamani preferiscono magie d\'attacco per compensare la loro mancanza di forza, non esitando ad usarle su coloro che mettono in dubbio il loro prestigio nella tribù.</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">%s\'s fulmine ti ha ucciso....</string>
     <string name="Shaman_Name">gnoll sciamano</string>
     <string name="Shaman_Name_Objective">gnoll sciamano</string>
     <string name="Sheep_Desc">Questa è una pecora magica. Cos\'ha di così magico? Non la puoi uccidere. Starà lì per un po, fino a che non svanirà per magia. Impiegherà tutto il suo tempo a masticare l\'erba che trova.</string>
+    <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">pecora</string>
     <string name="Sheep_Name_Objective">pecora</string>
+    <string name="ShieldBuffNotReady_Info">Il tuo scudo non è pronto a bloccare il prossimo attacco.</string>
     <string name="ShieldBuffNotReady_Name">Scudo non pronto</string>
     <string name="ShieldBuffReady_Info">Il tuo scudo è pronto a bloccare il prossimo attacco.</string>
     <string name="ShieldBuffReady_Name">Scudo pronto</string>
@@ -1835,23 +1955,29 @@ Potrebbe bruciare?</string>
     <string name="SkeletonKey_Name">Chiave scheletro</string>
     <string name="Skeleton_Defense">Bloccato</string>
     <string name="Skeleton_Desc">Gli scheletri sono composti dalle ossa di avventurieri sfortunati e degli abitanti del dungeon, animati dalle emanazioni di magia maligna provenienti dai pieni inferiori. Dopo essere stati danneggiati abbastanza, si disintegrano in un esplosioni di ossa.</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">sei stato ucciso dall\'esplosione di ossa...</string>
     <string name="Skeleton_Name">Scheletro</string>
     <string name="Skeleton_Name_Objective">Scheletro</string>
+    <string name="SleepBuff_Info">Completamente addormentato.</string>
     <string name="SlowBuff_Info">Il senso di lentezza rende qualcuno più lento del solito.</string>
     <string name="SlowBuff_Name">Rallentato</string>
     <string name="Slow_Name_0">del Freddo %s</string>
     <string name="Slow_Name_1">del Freddo %s</string>
     <string name="Slow_Name_2">del Freddo %s</string>
+    <string name="SmashSpell_Info">Salta verso l\'alto e crea un potente colpo quando colpisci il suolo, stordendo temporaneamente i nemici circostanti e infliggendo danni fisici allo stesso tempo.</string>
     <string name="SmashSpell_Name">Sfascio</string>
     <string name="SmashSpell_NeedWeapon">Ho bisogno di un\'arma per questa mossa.</string>
     <string name="Snail_Desc">Questo piccolo mollusco è cresciuto abbastanza mangiando fogna, ma è ancora molto lento, il che lo rende un avversario facile da affrontare.</string>
+    <string name="Snail_Gender">masculine</string>
+    <string name="Snail_Name">chiocciola</string>
     <string name="Snail_Name_Objective">lumaca</string>
     <string name="SnipersMarkBuff_Info">Il marchio è stato lasciato da un cecchino.</string>
-    <string name="SnipersMarkBuff_Name">Marchio del Cecchino</string>
+    <string name="SnipersMarkBuff_Name">Marca del cecchino</string>
     <string name="SociologistNPC_AlreadyTaken">Hai già partecipato al sondaggio, per favore torna più tardi</string>
     <string name="SociologistNPC_Desc">Questo sociologo è nella sua sacra impresa di raccogliere le opinioni del pubblico</string>
     <string name="SociologistNPC_DownloadError">Scusa, qualcosa è andato storto, riprova di nuovo</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Hi">Ciao! Vorresti fare un sondaggio? (Serve connessione ad Internet)\n La tua opinione conta! </string>
     <string name="SociologistNPC_InternetRequired">Scusa, ma senza accesso ad Internet non puoi prendere parte al nostro sondaggio</string>
     <string name="SociologistNPC_Name">Sociologo</string>
@@ -1861,6 +1987,7 @@ Potrebbe bruciare?</string>
     <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">E\' un frammento che hai preso dai resti di Jar delle Anime. Arde di un\' energia mistica, probabilmente c\'è qualcuno che potrebbe essere interessato a questa cosa.</string>
     <string name="SoulShard_Name">frammento d\' anima</string>
+    <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">Un\'asta di legno sottile che termina con una lama affilata. </string>
     <string name="Spear_Name">lancia</string>
     <string name="SpeedBuff_Info">Vivacità ed energia emanano dal corpo, e i movimenti si percepiscono più veloci del solito.</string>
@@ -1887,6 +2014,7 @@ Potrebbe bruciare?</string>
     <string name="SpiderEgg_Name_Objective">uovo di ragno</string>
     <string name="SpiderElite_Desc">Proprio come i soldati, le guardie ragno sono giurate di proteggere il loro regno. Il veleno della guardia d\'élite viene usato per disorientare il bersaglio.</string>
     <string name="SpiderElite_Gender">masculine</string>
+    <string name="SpiderElite_Name">spider elite guard</string>
     <string name="SpiderElite_Name_Objective">guardia d\'élite del ragno</string>
     <string name="SpiderExploding_Desc">Duri lavoratori durante i periodi di pace, queste creature non esitano a caricare i propri nemici e prendere la prima pianta che gli capita, rendendoli delle bombe viventi. </string>
     <string name="SpiderExploding_Gender">masculine</string>
@@ -1905,6 +2033,7 @@ Potrebbe bruciare?</string>
     <string name="SpiderMind_Name">ragno psico</string>
     <string name="SpiderMind_Name_Objective">ragno psico</string>
     <string name="SpiderNest_Desc">Questo bozzolo è fatto di seta sottile e nasconde qualcosa di vivo all\'interno.</string>
+    <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderNest_Name">ragno bozzolo</string>
     <string name="SpiderNest_Name_Objective">ragno bozzolo</string>
     <string name="SpiderQueenCarapace_Info">Un frammento del carapace della Regina Ragno. Puoi vedere un pezzo di una ghiandola di ragno al suo interno, che sembra quasi vivo.</string>
@@ -1942,7 +2071,7 @@ Potrebbe bruciare?</string>
     <string name="StartScene_No">No, ritorna al menù principale</string>
     <string name="StartScene_Really">Vuoi veramente iniziare una nuova partita?</string>
     <string name="StartScene_Unlock">Per sbloccare questa classe di personaggio, sconfiggi il boss DM-300 con qualsiasi altra classe.</string>
-    <string name="StartScene_UnlockDoctor">Per sbloccare il Medico della Peste - completa la missione del vecchio Medico della Peste</string>
+    <string name="StartScene_UnlockDoctor">Per sbloccare il Medico della Peste - completa la quest del vecchio Medico della Peste</string>
     <string name="StartScene_UnlockElf">Per sbloccare questa classe di personaggi, sconfiggi il boss Re con qualsiasi altra classe</string>
     <string name="StartScene_UnlockGnoll">Per sbloccare questa classe devi persuadere il prete di paese a guarire uno Gnoll Bruto</string>
     <string name="StartScene_UnlockNecromancer">Per sbloccare questo personaggio, sconfiggi il Lich con una qualunque altra classe.</string>
@@ -1954,8 +2083,10 @@ Potrebbe bruciare?</string>
     <string name="Statue_Name">Statua Animata</string>
     <string name="Statue_Name_Objective">Statua Animata</string>
     <string name="Stench_Txt">%s del fetore</string>
+    <string name="StoneBloodBuff_Info">Kan batu menjadi yang melebur dengan dinding terdekat dan membuat melintasinya jauh lebih mudah, tetapi dengan apa harga?</string>
     <string name="StoneBloodBuff_Name">Sangue di pietra</string>
     <string name="Str_lose">-1 str</string>
+    <string name="StrongShield_name">Scudo ricoperto di bronzo</string>
     <string name="StunBuff_Info">Stordito!</string>
     <string name="StunBuff_Name">Stordito</string>
     <string name="Stylus_ACInscribe">INCIDI</string>
@@ -1967,6 +2098,7 @@ Potrebbe bruciare?</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">succube</string>
     <string name="Succubus_Name_Objective">succube</string>
+    <string name="SummonBeast_AtYourCommand">A tuo comando!</string>
     <string name="SummonBeast_Info">Tentativo di evocare un\'orda di potenti bestie al tuo comando.\nI risultati effettivi possono variare.</string>
     <string name="SummonBeast_Name">Chiamata della Bestia</string>
     <string name="SummonDeathling_Info">Evoca un Gregario della Morte. I suoi HP e danni crescono con il livello dell\'eroe. \n\nLimite di evocazione: %1$d (+1 ogni Livello di Magia)</string>
@@ -1977,11 +2109,13 @@ Potrebbe bruciare?</string>
     <string name="Sungrass_Name">erba solare</string>
     <string name="SurfaceScene_GameOver">Partita Finita</string>
     <string name="SuspiciousRat_Desc">Il ratto non è una vista insolita nei dungeon, ma per abitare così in profondità... Puoi vedere come tutto il corpo del ratto spasmo quando si muove. </string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">Un ratto sospetto si sta contraendo violentemente. </string>
     <string name="SuspiciousRat_Name">Ratto sospettoso</string>
     <string name="SuspiciousRat_Name_Objective">Ratto sospettoso</string>
     <string name="Swarm_Defense">eluso</string>
     <string name="Swarm_Desc">Lo sciame di mosche mortale ronza con rabbia. Ogni attacco non magico si dividerà in due sciami più piccole ma ugualmente pericolosi.</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">sciame di mosche</string>
     <string name="Swarm_Name_Objective">sciame di mosche</string>
     <string name="Swing_Name_0">della Natura %s</string>
@@ -1990,8 +2124,10 @@ Potrebbe bruciare?</string>
     <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">L\' affilatura di questa lama d\'acciaio brilla sicuramente. </string>
     <string name="Sword_Name">spada</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Questa ascia da lancio non è così pesante, ma comunque richiede una forza significativa per essere usata in modo efficace.</string>
     <string name="Tamahawk_Name">tomahawk</string>
+    <string name="TenguLiver_Info">Questo fegato appartiene a un temibile nemico. Basta guardarlo e i tuoi istinti animali prendono il sopravvento, sentendo l\'impulso di consumarlo.</string>
     <string name="TenguLiver_Name">Fegato di Tengu</string>
     <string name="Tengu_Desc">Tengu sono membri degli antichi assassini del clan , che è anche chiamato Tengu. Questi assassini sono noti per l\'uso estensivo di shuriken e trappole.</string>
     <string name="Tengu_Gender">masculine</string>
@@ -2039,6 +2175,7 @@ Potrebbe bruciare?</string>
     <string name="TownPortal_Info">Questo incantesimo ti permette di tornare istantaneamente al sicuro. Tuttavia, potenti fonti di magia nelle vicinanze potrebbero impedirne il corretto funzionamento.</string>
     <string name="TownPortal_Name">Portale Cittadino</string>
     <string name="TownScript_NeedWeapon">Non andrò nel dungeon a mani nude!\n Forse è il caso di visitare il negozio del paese prima?</string>
+    <string name="TownShopkeeper_Desc">Questo è un tipico mercante. Si può dire che già conosce la tua prezzo.</string>
     <string name="TownShopkeeper_Name">Negoziante</string>
     <string name="TownShopkeeper_Objective">Negoziante</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
@@ -2085,6 +2222,7 @@ Potrebbe bruciare?</string>
     <string name="VertigoBuff_Name">Vertigini</string>
     <string name="View_Distance">Distanza visiva</string>
     <string name="VileEssence_Info">Un\'essenza concentrata di corruzione raccolta da un nemico sconfitto. Questa sostanza oscura pulsa di energia malevola ed è molto apprezzata nei processi alchemici.</string>
+    <string name="VileEssence_Name">Vile Essence</string>
     <string name="Viscosity_Status">differito %d</string>
     <string name="Viscosity_Txt">%s della viscosità</string>
     <string name="WandHolster_Info">Questa sottile custodia è fatta di pelle di qualche animale esotico. Ti permette di trasportare compattamente fino a %d bacchette.</string>
@@ -2120,6 +2258,7 @@ Potrebbe bruciare?</string>
     <string name="WandOfFlock_SheepBaa_3">Baa...</string>
     <string name="WandOfFlock_SheepBaa_4">Bee...</string>
     <string name="WandOfFlock_SheepBaa_5">Ble...</string>
+    <string name="WandOfIcebolt_Info">Questa bacchetta lancia un raggio di ghiaccio, infliggendo danno leggero al bersaglio. C\'è anche la possibilità di rallentare o addirittura congelare il nemico.</string>
     <string name="WandOfIcebolt_Name">Bacchetta del Fulmine di Ghiaccio</string>
     <string name="WandOfLightning_Info">Questa bacchetta genera fasci mortali di elettricità, provocando danni a diverse creature vicine tra loro.</string>
     <string name="WandOfLightning_Info1">Ti sei ucciso da solo con la bacchetta del Fulmine...</string>
@@ -2136,6 +2275,7 @@ Potrebbe bruciare?</string>
     <string name="WandOfRegrowth_Info">\&quot;Quando la vita cessa una nuova vita inizia sempre a crescere... Il ciclo eterno rimane sempre!\&quot;</string>
     <string name="WandOfRegrowth_Info1">non è successo nulla</string>
     <string name="WandOfRegrowth_Name">Bacchetta Di Ricrescita</string>
+    <string name="WandOfShadowbolt_Info">Questa bacchetta emette un\'energia oscura e malvagia.</string>
     <string name="WandOfShadowbolt_Name">varchetto degli ombre</string>
     <string name="WandOfSlowness_Info">Questa bacchetta non farà muovere e attaccare alla metà della sua velocità normale una creatura alla metà della sua velocità normale fino al termine effetto</string>
     <string name="WandOfSlowness_Info1">non è successo nulla</string>
@@ -2167,9 +2307,11 @@ Potrebbe bruciare?</string>
     <string name="Wand_Wood_Types_7">Mogano</string>
     <string name="Wand_Wood_Types_8">Bambù</string>
     <string name="Wand_Wood_Types_9">Amarante</string>
+    <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">Poche creature possono contrastare la furia di questo grosso ammasso di piombo e ferro, ma solo gli avventurieri più forti lo possono usare efficacemente. </string>
     <string name="WarHammer_Name">martello da guerra</string>
     <string name="Warlock_Desc">Quando gli interessi dei nani deviarono dall\'ingegneria alle arti arcane, gli sciamani andarono al potere nella città. Iniziarono con la magia elementale, ma presto verterono in demonologia e necromanzia. </string>
+    <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">%s\'s raggio oscuro ti ha ucciso...</string>
     <string name="Warlock_Name">Stregone Nano</string>
     <string name="Warlock_Name_Objective">Stregone Nano</string>
@@ -2187,7 +2329,7 @@ Potrebbe bruciare?</string>
     <string name="WaterOfHealth_Info">Il potere della salute viene irradiato dall\'acqua di questo pozzo. Prendine un sorso per curare le tue ferite e saziare la tua fame.</string>
     <string name="WaterOfHealth_Procced">Appena ne prendi un sorso, senti che le tue ferite guariscono completamente. </string>
     <string name="WaterOfTransmutation_Info">Il potere del mutamento viene irradiato dall\'acqua di questo pozzo. Getta un oggetto nel pozzo per trasformarlo in qualcos\'altro.</string>
-    <string name="WeaknessBuff_Info">La debolezza avvolge il corpo, rendendolo un bersaglio più facile.</string>
+    <string name="WeaknessBuff_Info">La debolezza avvolge il corpo, rendendo più facile essere presi di mira.</string>
     <string name="WeaknessBuff_Name">Indebolito</string>
     <string name="Weapon_Identify">Hai abbastanza confidenza con %1$s per procedere all\'identificazione. È %2$s..</string>
     <string name="Weapon_Incompatible">L\'interazione di diversi tipi di magia ha annullato l\'incantesimo su questa arma</string>
@@ -2203,7 +2345,8 @@ Potrebbe bruciare?</string>
     <string name="Weightstone_WndChoice">Come vorresti bilanciare il/la tuo/tua %s?</string>
     <string name="Weightstone_WndSpeed">Per la velocità</string>
     <string name="Welcome_Ok">Vabbene!</string>
-    <string name="Welcome_Text_31_0">\n    remix.31.0\n\n    - Gioco:\n\n    -- Modalità isometrica opzionale!\n\n    - Modding:\n\n    -- Oggetti livello modificabili\n\n    - Bug risolti\n\n    </string>
+    <string name="Welcome_Text_30_1">remix.30.1\n- Gameplay:\n-- Gnoll Alt Sınıfları!\n-- Salyangozlar!\n-- Kaos Eşyaları ilerlemesi azaltıldı.\n-- Mana İksiri artık sıradan bir iksirdir.\n-- Rozetler artık DLC\'leri oynarken elde edilebilir (ancak modlar değil).\n- Düzeltilen hatalar\n</string>
+    <string name="Welcome_Text_31_0">remix.31.0\n- Gameplay:\n-- Modalità Isometrica Opzionale!\n- Modding:\n-- Oggetti modificabili nei livelli\n- Bug fixati</string>
     <string name="Welcome_Text_31_1">
     remix.31.1\n
     - Gioco:\n
@@ -2230,6 +2373,7 @@ Potrebbe bruciare?</string>
     -- Effetto luminoso per i Mobs\n
     - Bug corretti\n
     </string>
+    <string name="Welcome_Text_32_1">remix.32.1\n- Gameplay:\n-- Plague Doctor quest line\n-- Mob carcasses now somewhat usable items\n-- Better pets control\n- UX:\n-- Improved save-game management\n- Modding:\n-- Local mod installation methods\n-- Custom items now can perform actions while being in heaps\n- Bugs fixed</string>
     <string name="Welcome_Title">Benvenuto!</string>
     <string name="WindGust_Info">Evoca una raffica di vento che soffia via il personaggio selezionato.</string>
     <string name="WindGust_Name">Raffica di vento</string>
@@ -2250,10 +2394,12 @@ Potrebbe bruciare?</string>
     <string name="WndCryptoDonate_copyAddress">Copia Indirizzo</string>
     <string name="WndCryptoDonate_currency">Valuta</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
-    <string name="WndCryptoDonate_openWallet">Apri Portafoglio</string>
+    <string name="WndCryptoDonate_openWallet">Apri il portafoglio</string>
     <string name="WndCryptoDonate_supportDev">Supporta lo sviluppatore</string>
+    <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Indirizzo Portafoglio</string>
+    <string name="WndCryptoDonate_warningText">ATTENZIONE: Verifica sempre l\'indirizzo prima di inviare fondi. Le transazioni in criptovaluta sono irreversibili!</string>
     <string name="WndCustomizations_Title">Personalizzazioni</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - gratuito per tutti e lo sarà per sempre.\n\nTuttavia, puoi aiutarci a rendere il gioco ancora migliore.\n\nOltre ai nostri sentiti ringraziamenti, riceverai alcuni miglioramenti estetici.</string>
     <string name="WndDonate_donate">dona:</string>
@@ -2265,6 +2411,7 @@ Potrebbe bruciare?</string>
     <string name="WndDonate_royal">reale</string>
     <string name="WndDonate_royalDonate">donazione reale</string>
     <string name="WndDonate_royalDonateText">Non voglio sembrare strano, ma facendo così, stai letteralmente sfamando gli sviluppatori.</string>
+    <string name="WndDonate_royalDonateText2">Inoltre riceverai tutti i cappelli dello store! Così come tutti i cappelli che verranno mai rilasciati.</string>
     <string name="WndDonate_ruby">rubino</string>
     <string name="WndDonate_rubyDonate">Donazione rubino</string>
     <string name="WndDonate_rubyDonateText">La tua generosità ci aiuterà a continuare a migliorare Remixed Dungeon!</string>
@@ -2299,6 +2446,7 @@ Potrebbe bruciare?</string>
     <string name="WndHats_SlotTitle">Equipaggiato/a</string>
     <string name="WndHats_UnequipButton">Rimuovi</string>
     <string name="WndHero_AttackSkill">Abilità d\'Attacco</string>
+    <string name="WndHero_Awareness">Awareness</string>
     <string name="WndHero_Buffs">Buffs</string>
     <string name="WndHero_DefenceSkill">Abilità di difesa</string>
     <string name="WndHero_Depth">Profondità massima</string>
@@ -2332,8 +2480,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndInstallingMod_deleting_file">Eliminazione di %s</string>
     <string name="WndInstallingMod_please_wait">Installazione del mod, attendere...</string>
     <string name="WndInstallingMod_skipping_file">Salto %s</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Esegui Ricetta</string>
     <string name="WndItemAlchemy_NoRecipes">Nessuna ricetta disponibile con questo oggetto e il tuo inventario attuale.</string>
     <string name="WndItemAlchemy_SelectRecipe">Seleziona ricetta</string>
+    <string name="WndItemAlchemy_Title">Ricette di alchimia con %s</string>
     <string name="WndItemAlchemy_Transmute">Trasmuta</string>
     <string name="WndJournal_Levels">Livelli</string>
     <string name="WndJournal_Logbook">Registro attività</string>
@@ -2344,6 +2494,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndLibrary_Items_Btn">Items</string>
     <string name="WndLibrary_Levels_Btn">Dungeon</string>
     <string name="WndLibrary_Mobs_Btn">Mostri</string>
+    <string name="WndLocalModInstall_pick">Scegli</string>
     <string name="WndLocalModInstall_text">Seleziona la directory da cui installare la mod.</string>
     <string name="WndLocalModInstall_title">Installa mod dalla directory locale</string>
     <string name="WndModInstall_PleaseUpdate">Aggiorna Remixed Dungeon prima di installare questa mod</string>
@@ -2351,6 +2502,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndModSelect_AreYouSure">Eliminare mod: %s, sei sicuro?</string>
     <string name="WndModSelect_ReallyDelete">Vuoi davvero eliminare?</string>
     <string name="WndModsDisclaimer_install">Installa mod locale</string>
+    <string name="WndModsDisclaimer_title">Mod</string>
+    <string name="WndMovieTheatre_Bye">Torna quando vuoi, siamo sempre felici di vederti!</string>
     <string name="WndMovieTheatre_Instruction">Benvenuti al nostro cinema! Offriamo un servizio speciale: potete guardare gratuitamente un film speciale chiamato pubblicità. E se lo guardate fino alla fine, sarete ricompensati con %d monete d\'oro!</string>
     <string name="WndMovieTheatre_Instruction_2">Hai guardato %1$d su %2$d volte. Otterrai un\'opportunità aggiuntiva per guardare un film per ogni nuovo livello dell\'eroe raggiunto.</string>
     <string name="WndMovieTheatre_No">lascia</string>
@@ -2385,6 +2538,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndPremiumSettings_std">standard</string>
     <string name="WndPremiumSettings_toolbar">Seleziona il materiale della barra degli strumenti</string>
     <string name="WndPriest_Heal">guarigione - %d monete d\'oro</string>
+    <string name="WndPriest_Heal_Minions">Guarisci tutti i tuoi seguaci - solo %d oro!</string>
     <string name="WndPriest_Instruction2">Se desideri aiuto, posso fornire servizi di guarigione per %d monete d\'oro! Se cerchi la santa Benedizione, o, Signore non voglia, sei stato maledetto, per favore dirigiti dal Vescovo nella nostra umile chiesa.</string>
     <string name="WndPriest_Instruction2_f">Benvenuta figlia mia, benvenuta nella santa chiesa del Grande Santa, il Signore delle Profondità!</string>
     <string name="WndPriest_Instruction2_m">Benvenuto figlio mio, benvenuto nella santa chiesa del Grande Santa, il Signore delle Profondità!</string>
@@ -2424,6 +2578,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndSaveSlotSelect_SelectSlot">Seleziona cartuccia</string>
     <string name="WndSaveSlotSelect_dontLike">Non ti piacciono le ads? Fai una donazione e scompariranno. PER SEMPRE.</string>
     <string name="WndSelectLanguage_ImproveTranslation">Aiuta a migliorare le traduzioni di Remixed Dungeon</string>
+    <string name="WndSelectLanguage_LinkToTranslationSite">Clicca qui per unirti al team di traduzione di Remixed Dungeon</string>
+    <string name="WndSettingsInGame_GameLog">Registro di gioco</string>
     <string name="WndSettingsInGame_IsometricTiles">Tile Isometriche</string>
     <string name="WndSettings_ActionButtonSize">Dimensioni pulsanti d\'azione</string>
     <string name="WndSettings_Brightness">Luminosità</string>
@@ -2434,6 +2590,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndSettings_Immersive">Modalità coinvolgente</string>
     <string name="WndSettings_InGameUiSettings">Impostazioni Interfaccia</string>
     <string name="WndSettings_Music">Musica</string>
+    <string name="WndSettings_RecordVideo">Registrazione video</string>
     <string name="WndSettings_ScaleUp">Aumentare UI</string>
     <string name="WndSettings_SecondQuickslot">Seconda posizione veloce</string>
     <string name="WndSettings_SelectLanguage">Seleziona Lingua</string>
@@ -2458,6 +2615,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndStory_Sewers">Il Dungeon giace proprio sotto la Città, i suoi livelli più superficiali di fatto sono il sistema fognario della Città. Essendo nominalmente una parte della Città, questi livelli non sono  tanto pericolosi. Nessuno li chiamerebbe un posto sicuro, ma almeno non devi preoccuparti di affrontare molta magia maligna qui.</string>
     <string name="WndStory_Spiders">Tanto, tanto tempo fa c\'era una ricca miniera, piena di pietra magica. Ma dopo che le vene minerarie si esaurirono i minatori si spostarono, lasciando indietro una vasta rete di gallerie. Alla fine questo posto venne popolato da ragni. Ma anche queste pericolose creature, che si annidano nell\'oscurità, non furono sufficienti a scoraggiare coloro abbastanza coraggiosi o pazzi da desiderare i tesori che si potevano trovare nelle miniere. Poiché la scala di pericolo è sempre proporzionale al numero di chiacchiere su artefatti magici presenti. Tanto tempo fa una strega malvagia vagò nelle gallerie cercando di sfuggire ai suoi persecutori. Ma le persone superstiziose non osarono mettere piede nell\'oscurità. Quindi decisero di aspettare. Ma lei non uscì mai più.  Forse la strega ha trovato un\'altra uscita, o forse è riuscita a scappare infilandosi tra le guardie...oppure è morta, circondata dal fruscio delle creature dell\'oscurità.</string>
     <string name="WndTilesKind_ClassicLook">Aspetto classico</string>
+    <string name="WndTilesKind_NewLook">New Look</string>
     <string name="WndTilesKind_Title">Ancora una cosa:</string>
     <string name="WndTilesKind_text">Stai per entrare in un dungeon posseduto da una magia distorta, ora puoi scegliere come vederlo:\nPreferisci una vista pseudo 3D moderna o una vista classica piatta?\nPotrai cambiarla successivamente nel menu opzioni del gioco.</string>
     <string name="WndTradeItem_Bought">Hai comprato %1$s per %2$dg</string>
@@ -2484,6 +2642,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Questo semplice arco di legno potrebbe dimostrarsi utile, non appena troverai delle frecce.</string>
     <string name="WoodenBow_Name">arco di legno</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Una balestra base di legno, sembra progettata per sparare frecce d\'arco. </string>
     <string name="WoodenCrossbow_Name">balestra in legno</string>
     <string name="WoodenShield_desc">Uno scudo di legno fatto in modo grossolano è lo scudo più semplice disponibile. È rotondo e può bloccare occasionalmente alcuni danni.</string>
@@ -2512,6 +2671,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="YogsBrain_Name">Il cervello di Yog</string>
     <string name="YogsBrain_Name_Objective">Il cervello di Yog</string>
     <string name="YogsEye_Desc">L\'occhio del Vecchio Dio, allseeing sguardo pieno di odio eterno. Si può sentire a guardare a destra attraverso la tua anima</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">l\'occhio di yog</string>
     <string name="YogsEye_Name_Objective">l\'occhio di yog</string>
     <string name="YogsHeart_Desc">Per secoli la gente ha creduto che solo una creatura davvero senza cuore sono cappable di atti di pura malvagità. Eppure eccolo qui, enorme cuore pulsante di un vecchio Dio stesso.</string>
@@ -2551,6 +2711,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_barrel_name">Barile</string>
     <string name="town_deco_barrel_wine_desc">Utilizzato per conservare una bevanda così preziosa come il vino.</string>
     <string name="town_deco_barrel_wine_name">Botte di vino</string>
+    <string name="town_deco_beige_carpet_desc">Un tappeto beige elegante intessuto con lana morbida di gnoll.</string>
     <string name="town_deco_beige_carpet_name">Tappeto</string>
     <string name="town_deco_bell_desc">Una tipica campana di chiesa. Sembra che nessuno l\'abbia suonata per molto tempo e persino la corda è sparita.</string>
     <string name="town_deco_bell_name">Campana</string>
@@ -2566,12 +2727,15 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_brown_carpet_desc">Questo tappeto marrone è stato calpestato da molti avventurieri, vagabondi e passanti.</string>
     <string name="town_deco_brown_carpet_name">Tappeto</string>
     <string name="town_deco_cabinet_desc">Un ampio mobile con molte porte e scaffali.</string>
+    <string name="town_deco_cabinet_name">Armadio</string>
     <string name="town_deco_canvas_desc">Un spesso pezzo di tessuto appeso al muro.</string>
+    <string name="town_deco_carpet_desc">Tappeto rosso lussuoso riservato agli ospiti speciali.</string>
     <string name="town_deco_carpet_name">Tappeto</string>
     <string name="town_deco_charcoal_carpet_desc">In cerca di comfort per gli ospiti, l\'amministrazione del cinema ha scelto i tappeti di migliore qualità di colore carbone.</string>
     <string name="town_deco_charcoal_carpet_name">Tappeto</string>
     <string name="town_deco_chest_desc">Comodo mobile per conservare oggetti e gioielli.</string>
     <string name="town_deco_chest_name">Cassa</string>
+    <string name="town_deco_chimney_desc">Caminino di pietra - compagno fedele di ogni abitazione, che è costruito dove il freddo è un ospite frequente.</string>
     <string name="town_deco_chimney_name">Comignolo</string>
     <string name="town_deco_church_sign_desc">Sembra che ci sia una chiesa all\'interno di quell\'edificio.</string>
     <string name="town_deco_church_sign_name">Insegna della chiesa</string>
@@ -2583,11 +2747,14 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_common_bed_name">Letto</string>
     <string name="town_deco_common_door_desc">Un avventuriero dalle buone maniere non dovrebbe invadere la proprietà privata, senza un invito ovviamente</string>
     <string name="town_deco_common_door_name">Porta</string>
+    <string name="town_deco_counter_desc">Mantiene una buona distanza tra te e la persona che sta dietro di esso.</string>
+    <string name="town_deco_counter_name">Bancone</string>
     <string name="town_deco_covered_table_desc">Tavolo di legno con tovaglia bianca</string>
     <string name="town_deco_covered_table_name">Tavolo</string>
     <string name="town_deco_crate_bottles_desc">L\'imbottigliamento della birra è diventato un passatempo molto popolare tra i locandieri.</string>
-    <string name="town_deco_crate_bottles_name">Cassa di birra</string>
+    <string name="town_deco_crate_bottles_name">Crate di birra</string>
     <string name="town_deco_crate_desc">Una robusta cassa di legno che custodisce i suoi segreti all\'interno.</string>
+    <string name="town_deco_crate_name">Cassetto</string>
     <string name="town_deco_crate_scrolls_desc">Questa cassa è piena fino all\'orlo di conoscenza segreta.</string>
     <string name="town_deco_crate_scrolls_name">Cassa di pergamene</string>
     <string name="town_deco_cross_desc">Una croce di argento, il simbolo della religione locale - \&quot;I Testimoni di Santa il Signore delle Profondità\&quot;</string>
@@ -2600,23 +2767,32 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_door_name">Porta</string>
     <string name="town_deco_dungeon_door_name">Entrata</string>
     <string name="town_deco_emptyboard_desc">Il più comune scaffale per esporre oggetti.</string>
+    <string name="town_deco_emptyboard_name">Rack</string>
     <string name="town_deco_entrance_desc">Questo ingresso conduce ai livelli superiori del dungeon.</string>
+    <string name="town_deco_entrance_name">Ingresso</string>
     <string name="town_deco_exit_desc">Non si sa cosa ti aspetta se scendi questi scalini.</string>
+    <string name="town_deco_exit_name">Uscita</string>
     <string name="town_deco_fence_desc">Una staccionata di legno macchiata di neve.</string>
     <string name="town_deco_fence_name">Recinzione</string>
     <string name="town_deco_filmtape_desc">Chissà cosa contiene questo pezzo.</string>
     <string name="town_deco_filmtape_name">Film</string>
     <string name="town_deco_fireplace_desc">Ottimo per riscaldarsi in un posto freddo come questo.</string>
     <string name="town_deco_fireplace_name">Camino</string>
+    <string name="town_deco_firewood_desc">Una cosa essenziale in simili gelate.</string>
     <string name="town_deco_firewood_name">Legna da ardere</string>
+    <string name="town_deco_floor_desc">Questo pavimento è fatto di semplici tavole di legno. Cosa stai cercando esattamente?</string>
     <string name="town_deco_floor_name">Pavimento</string>
     <string name="town_deco_flowerinthepot_desc">Fiore decorativo con dolce fragranza</string>
     <string name="town_deco_flowerinthepot_name">Fiore in un vaso</string>
     <string name="town_deco_furnace_desc">Un forno affidabile, assemblato secondo schemi tradizionali.</string>
     <string name="town_deco_furnace_name">Forno</string>
+    <string name="town_deco_glass_name">Finestra Larga</string>
+    <string name="town_deco_glass_stained_desc">L\'autore di questo vetro ha probabilmente messo molta fatica in esso.</string>
     <string name="town_deco_glass_stained_name">Vetro Colorato</string>
     <string name="town_deco_grandclock_desc">Un meccanismo piuttosto antico ma ancora funzionante.</string>
     <string name="town_deco_grandclock_name">Grandclock</string>
+    <string name="town_deco_grave_desc">Una lapide standard, con un\'iscrizione consumata.</string>
+    <string name="town_deco_grave_name">Sepolcro</string>
     <string name="town_deco_hay_desc">Una piccola catasta di fieno profumato.</string>
     <string name="town_deco_hay_name">Fieno</string>
     <string name="town_deco_identifier_sign_desc">Pare che ci sia un\'indovina in quell\'edificio</string>
@@ -2624,6 +2800,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_inn_bed_desc">Sembra un letto molto comodo.</string>
     <string name="town_deco_inn_bed_name">Letto</string>
     <string name="town_deco_ladder_desc">Una vecchia scala, dall\'aspetto inaffidabile.</string>
+    <string name="town_deco_ladder_name">Scala</string>
+    <string name="town_deco_library_books_desc">Ancora meglio dei libri dal dungeon.</string>
     <string name="town_deco_library_books_name">Materiale di lettura</string>
     <string name="town_deco_library_sign_desc">Pare che ci sia una biblioteca in quell\'edificio</string>
     <string name="town_deco_library_sign_name">Insegna della Biblioteca</string>
@@ -2651,9 +2829,11 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_porch_desc">Veranda fatta di legno.</string>
     <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_poster_desc">Volantini per annunciare le prossime sessioni nel cinema.</string>
+    <string name="town_deco_poster_name">Poster</string>
     <string name="town_deco_potions_desc">Qualche pozione sullo scaffale.</string>
     <string name="town_deco_potions_name">Pozioni</string>
     <string name="town_deco_projector_desc">Un vecchio dispositivo per proiettare film e intrattenere le persone.</string>
+    <string name="town_deco_red_carpet_desc">Si dice che tappeti rossi simili adornino i corridoi della metropoli dei nani.</string>
     <string name="town_deco_red_carpet_name">Tappeto</string>
     <string name="town_deco_roof_desc">Una semplice tegola del tetto</string>
     <string name="town_deco_roof_name">Tetto</string>
@@ -2663,21 +2843,28 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_rug_name">Tappeto</string>
     <string name="town_deco_screen_desc">Questa tela misteriosa è chiamata \&quot;schermo\&quot; e può mostrare immagini in movimento</string>
     <string name="town_deco_screen_name">Schermo</string>
+    <string name="town_deco_scrolls_desc">This dusty shelf is full of various kinds of scrolls and books.</string>
     <string name="town_deco_scrolls_name">Pergamene</string>
     <string name="town_deco_shelf_desc">Scaffali vuoti.</string>
     <string name="town_deco_shelf_full_desc">Su questo scaffale sono posizionati vari gingilli.</string>
+    <string name="town_deco_shelf_full_name">Scaffale</string>
     <string name="town_deco_shelf_name">Scaffali</string>
     <string name="town_deco_shelving_desc">Un rack di dimensioni imponenti, sui cui ripiani è possibile trovare varie bevande e snack.</string>
     <string name="town_deco_shelving_name">Scaffalature</string>
     <string name="town_deco_shieldboard_desc">Vari scudi appesi all\'insegna. Non ancora in vendita.</string>
     <string name="town_deco_shieldboard_name">Scudi</string>
+    <string name="town_deco_shop_sign_desc">Pare che ci sia un negozio in quell\'edificio.</string>
     <string name="town_deco_shop_sign_name">Insegna del negozio</string>
     <string name="town_deco_skullboard_desc">Questo teschio cattura perfettamente il momento di orrore inaspettato.</string>
     <string name="town_deco_skullboard_name">Porta trofei</string>
+    <string name="town_deco_skulls_desc">Teschi lucidati appartenenti a creature del dungeon.</string>
+    <string name="town_deco_skulls_name">Crania</string>
     <string name="town_deco_slush_desc">Questa neve ha cominciato a sciogliersi, rendendo la zona circostante fangosa.</string>
     <string name="town_deco_slush_name">Nevischio</string>
     <string name="town_deco_snow_desc">Nonostante la fama di questo posto tra gli avventurieri, sorprendentemente c\'è molta neve qui. Sembra che camminino per queste strade in molto pochi</string>
     <string name="town_deco_snow_name">Neve</string>
+    <string name="town_deco_snowdrift_desc">È un cumulo di neve piuttosto grande e evidentemente nessuno ha intenzione di pulirlo.</string>
+    <string name="town_deco_snowdrift_name">Banchina</string>
     <string name="town_deco_snowman_desc">Il pupazzo di neve è una decorazione tradizionale del paese durante il periodo delle feste, messo in questo posto per celebrare specialmente il giorno di \&quot;Dungeonale\&quot;, quando i mostri invasero il dungeon</string>
     <string name="town_deco_snowman_name">Pupazzo di neve</string>
     <string name="town_deco_snowy_plate_desc">Questa antica targa è ricoperta dalla neve</string>
@@ -2685,14 +2872,19 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_sofa_desc">Sembra che questo cinema provi davvero a fornire i migliori posti per i propri clienti</string>
     <string name="town_deco_sofa_name">Divano comodo</string>
     <string name="town_deco_stakes_desc">Questi tronchi appuntiti hanno un aspetto minaccioso, ma di fatto sono piuttosto inutili di per sé.</string>
+    <string name="town_deco_stakes_name">Pali</string>
+    <string name="town_deco_statue_blood_desc">Una statua maestosa di un angelo che regge un calice di sangue.</string>
+    <string name="town_deco_statue_blood_name">Statua dell\'angelo</string>
     <string name="town_deco_statue_water_desc">Una maestosa statua di un angelo che tiene una ciotola d\'acqua.</string>
     <string name="town_deco_statue_water_name">Statua di angelo</string>
     <string name="town_deco_stock_desc">Qui vengono conservate le scorte di cibo, così come un mucchio di cianfrusaglie di ogni sorta e colore.</string>
     <string name="town_deco_stock_name">Scorta</string>
     <string name="town_deco_stone_wall_broken_desc">Vecchio muro di pietra, in cattive condizioni</string>
+    <string name="town_deco_stone_wall_broken_name">Rotta parete</string>
     <string name="town_deco_stone_wall_desc">In qualche modo questo muro emana calore e sembra un po\' umido.</string>
     <string name="town_deco_stone_wall_name">Muro di pietra</string>
     <string name="town_deco_stones_desc">Solo un mucchio di pietre.</string>
+    <string name="town_deco_stones_name">Pietre</string>
     <string name="town_deco_stool_broken_desc">Questo sgabello ha visto giorni migliori.</string>
     <string name="town_deco_stool_broken_name">Sgabello rotto</string>
     <string name="town_deco_stool_sturdy_desc">Uno sgabello regolare realizzato in legno resistente.</string>
@@ -2704,19 +2896,24 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_trapdoor_name">Botola</string>
     <string name="town_deco_tree_desc">Una strana sensazione sorge guardando questo albero vivo e così pacifico albero. D\'altronde, non molto lontano da qui giace un dungeon stipato di ogni sorta di orrore e morte.</string>
     <string name="town_deco_tree_name">Albero</string>
+    <string name="town_deco_urn_desc">Urna di argilla, forse con le ceneri di qualcuno.</string>
     <string name="town_deco_urn_name">Urna</string>
     <string name="town_deco_vat_desc">Questa vasca di pietra è colma fino all\'orlo di acqua santa.</string>
+    <string name="town_deco_vat_name">Tina</string>
     <string name="town_deco_wall_beam_desc">Serve come fidato supporto per questa costruzione.</string>
     <string name="town_deco_wall_beam_name">Trave</string>
     <string name="town_deco_wall_brazier_desc">Il vapore che esce dalle braci ardenti riempie la stanza di piacevoli aromi.</string>
     <string name="town_deco_wall_brazier_name">Braciere</string>
+    <string name="town_deco_wall_candles_desc">Spruzzi di candele spente, dalle quali emana ancora un piacevole aroma.</string>
     <string name="town_deco_wall_candles_name">Candele</string>
     <string name="town_deco_wall_desc">Un semplice muro fatto in tronchi di legno.</string>
     <string name="town_deco_wall_name">Muro</string>
+    <string name="town_deco_wallpaper_name">Wallpaper</string>
     <string name="town_deco_wardrobe_desc">Grande guardaroba di legno.</string>
     <string name="town_deco_wardrobe_name">Guardaroba di legno</string>
     <string name="town_deco_weaponboard_desc">Qualche sorta di arma appesa all\'insegna.</string>
     <string name="town_deco_weaponboard_name">Arma</string>
+    <string name="town_deco_weaponrack_desc">On this rack there are weapons that are clearly too expensive for you.</string>
     <string name="town_deco_weaponrack_name">Rastrelliera per armi</string>
     <string name="town_deco_window_desc">Finestra di vetro generica, niente di speciale.</string>
     <string name="town_deco_window_name">Finestra</string>
@@ -2733,8 +2930,241 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wooden_table_desc">Un bel tavolo di legno</string>
     <string name="town_deco_wooden_table_name">Tavolo di legno</string>
     <string name="town_table_fortune_ball_desc">Sfera di cristallo, con una nebbia misteriosa all\'interno.</string>
+    <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,7 @@
 <resources>
     <string name="AC_Devour">Obur</string>
     <string name="AC_Dissect">Parçala</string>
+    <string name="AC_Kick">Şut</string>
     <string name="AC_Necromancy">Ölüçağırma</string>
     <string name="Abilities_Common">Yaygın Büyüler</string>
     <string name="Abilities_Default">Uzmanlık</string>
@@ -18,7 +19,7 @@
     <string name="AboutScene_Translation">Yerelleştirme:</string>
     <string name="AboutScene_Translation_Names">Topluluk</string>
     <string name="AboutScene_Txt_Intro">NYRDS yapımı olan Remixed Dungeon, Watabou\'nun Pixel Dungeon adlı yapımını esas almıştır.</string>
-    <string name="Accuracy_Decreased">Neden %1 kullanabileceğimi düşünmüştüm? Yanlış araç, yanlış el!</string>
+    <string name="Accuracy_Decreased">Neden %1$s kullanabileceğimi düşünmüştüm? Yanlış araç, yanlış el!</string>
     <string name="Accuracy_DecreasedDoctor">Bu %s\'ın her sallanışında kusur yayılıyor. Kemik Testeresim tedavi eder… bunu bulaştırıyor.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Çıplak eller tekniğimi mahvediyor. Testere\'nin temiz kesimi olmadan, nişanım kaosa doğru çürüyor.</string>
     <string name="Acidic_Desc">Bu devasa eklembacaklı-gibi şeytani yaratıklar ne olusa olsun yakın dövüşten sakınıp uzun menzilden sakatlayan tırtıklı dikenler fırlatırlar.</string>
@@ -33,6 +34,7 @@
     <string name="AirElemental_Name_Objective">hava elementi</string>
     <string name="AlarmTrap_Desc">Tuzağın çıkardığı kulak kanatan ses zindan boyunca yankılanıyor!</string>
     <string name="Albino_Desc">Keseli sıçanlar argesif, ama zayıf lağım sakinleridir. Sadece büyük sayılarda tehlikeli olabilirler. Bu sıçan albinoya benziyor. Bu arada anormal derecede keskin dişleri var. </string>
+    <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name">albino sıçan</string>
     <string name="Albino_Name_Objective">albino sıçan</string>
     <string name="AlchemyPot_SelectSeed">Fırlatmak için bir tohum seç</string>
@@ -64,6 +66,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="AnesthesiaBuff_Name">Anestezi</string>
     <string name="Anesthesia_Cast">%s falls into a deep, dreamless sleep.</string>
     <string name="Anesthesia_Info">Hedefinizde derin, doğal olmayan bir uyku oluşturur. En şiddetli saldırılar bile onları bu uykudan uyandıramaz.</string>
+    <string name="Anesthesia_Name">Anestezi</string>
     <string name="Ankh_Info">Bu antik ölümsüzlük sembolü , taşıyana ölümden geri dönme gücü verir. Dirildiğinde kuşandığın ekipmanlar dışındaki tüm nesnelerin kaybolur.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="AntiEntropy_Txt">Anti-entropik %sı</string>
@@ -228,6 +231,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BellaNPC_Amulet_M">Merhaba yakışıklı, orada ne var? Ah, ne kadar zarif bir tılsım! Ve sen... sen bu avamdan üstünsün. Biraz yürüyüp ortak geleceğimizi konuşmaya ne dersin?</string>
     <string name="BellaNPC_Angry">Bu ne cüret... seni avanak!</string>
     <string name="BellaNPC_Desc">Çok şık görünümlü bir kız. Tüm görünüşü size \&quot;Ben herkes için iyiyim.\&quot; diyor.</string>
+    <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Senin gibi zavallılarla ilgilenmiyorum!</string>
     <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Name_Objective">Bella</string>
@@ -297,13 +301,18 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BlindnessBuff_Info">Tamamen kör, sadece etraftaki sesler duyulabilir.</string>
     <string name="BlindnessBuff_Name">Kör oldun</string>
     <string name="BloodTransfusion_Drained">Yaşam özü evcil hayvanınızdan size akıyor.</string>
+    <string name="BloodTransfusion_FullHP">Kanın zaten tam kapasitede.</string>
     <string name="BloodTransfusion_Info">Hedeften neredeyse tüm kanı emer ve kendini iyileştirirsin. Hayatta kalma ve fedakârlık için karanlık bir ritüel.</string>
+    <string name="BloodTransfusion_Name">Blood Transfusion</string>
     <string name="BloodTransfusion_WontAgreed">Hedef, yaşam özünün çıkarılmasına direniyor.</string>
     <string name="BodyArmorBuff_Info">Zırh, hareket için harcanan enerjiyi arttırdı.</string>
     <string name="BodyArmorBuff_Name">Vücut zırhı</string>
     <string name="BodyArmorSpell_Info">Ayrılmış kas gücünü etkinleştirerek geçici olarak daha güçlü hale getirir, böylece zırhınızı büyük ölçüde artırır, ancak hareket hızı pahasına.</string>
     <string name="BodyArmorSpell_Name">Vücut zırhı</string>
     <string name="BoneSaw_Info">Ameliyatlı cerrahi testisi, hızlı sezgi için tasarlanmış hassas bir cerrahi testisi. Hasar ve saldırı hızı, Veba Doktorunun becerisiyle daha ölümcül hale gelir. Kritik isabetler düşmanlardan ek çıkarılabilir ürünler kazandırır ve felçli düşmanlara acımasız verimlilikle vuruş yapar.</string>
+    <string name="BoneSaw_Name">Kemikli testere</string>
+    <string name="BoneShard_Info">Yenen düşmanın üzerinden toplanan keskin kemik parçası. Bu kırıntılar şaşırtıcı derecede dayanıklı ve işleme kullanılabilir.</string>
+    <string name="BoneShard_Name">Kemik Parçası</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Bu ağaçtan yapılmış bumerang düşmana attıktan sonra ellerine geri dönecek</string>
     <string name="Boomerang_Name">bumerang</string>
@@ -321,6 +330,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BurningBuff_Info">Ceset alevler içinde kaldı!</string>
     <string name="BurningBuff_Name">Yakıcı</string>
     <string name="BurningFist_Desc">Eski tanrının yanan yumruğu</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">yanan yumruk</string>
     <string name="BurningFist_Name_Objective">yanan yumruk</string>
     <string name="Burning_Burns">%s yanıyor</string>
@@ -334,7 +344,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="CagedKobold_Name">kafeslenmiş cüce</string>
     <string name="CagedKobold_Name_Objective">kafeslenmiş cüce</string>
     <string name="CagedKobold_Quest_End">Oh, teşekkür ederim, çok teşekkür ederim! Anahtarı bulmayı nasıl başardın? Sen... sen silahı yok mu ettin?! Bu inanılmaz! Biliyor musun, sana yardım edeceğimi söyledim ve sanırım bunu yapmanın en iyi yolunu biliyorum. Bir süre seninle kalacağım. * Kafesteki Kobold bir muma dönüştü</string>
-    <string name="Calm_Cast">%1 sakinleşir.</string>
+    <string name="Calm_Cast">%1$s sakinleşir.</string>
     <string name="Calm_Info">Etrafta bir sürü ağırlaştırılmış yaratık var, onlara yardım edelim.</string>
     <string name="Calm_Name">Sakin</string>
     <string name="CandleOfMindVision_Info">Sıradan bir mum gibi görünüyorsa da böylesi tehlikeli bir zindanda bulmayı bekleyeceğin bir şey değil. Gariptir ki yanmamış olmasına rağmen eline hafif bir sıcaklık veriyor.</string>
@@ -348,9 +358,11 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Capotain_Info">Uzun taçlı, dar kenarlı bir şapka. Genelde Püritiler ile ilişkilidir, ancak onu giymek için dindar olmanız gerekmez. Bazı nedenlerden dolayı \&quot;Solomon\&quot; yazan bir isim levhası var.</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_Devoured">%s\'in cesedini yedin!</string>
+    <string name="Carcass_DissectFailed">%s\'yi dissektör edip hiçbir değer bulamadınız.</string>
     <string name="Carcass_DissectMessage">Leşi parçalara ayırarak bir %s elde edersiniz.</string>
-    <string name="Carcass_DissectResult">Dari %1, kamu mendapatkan %2 panen %3.</string>
+    <string name="Carcass_DissectResult">Dari %1$s, kamu mendapatkan %2$d panen %3$s.</string>
     <string name="Carcass_Info">tamamen ölmüş %s kalıntıları.</string>
+    <string name="Carcass_Kick">Bu %s tamamen ölü, tekme atmanın bir anlamı yok.</string>
     <string name="Carcass_Name">%s\'in kalıntıları</string>
     <string name="Carcass_Necromancy">%s cesedini dirilttin!</string>
     <string name="Carcass_Necromancy_Failed">%s cesedini diriltme girişiminiz başarısız oldu!</string>
@@ -372,6 +384,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Challenges_Descriptions_6">Kadim rün okuma sanatı, zindana ya da çevresine giren her parşömene bahşedilen lanet nedeniyle yasaklanmış ve her ne pahasına olursa olsun kaçınılmıştır.</string>
     <string name="Challenges_Descriptions_7">Silah bulundurmanın ve kullanmanın ahlaki olarak doğru olmadığı gerçeğine alıştınız, ancak sizi aşağıda dolaşan yaratıklardan başka ne koruyabilir?</string>
     <string name="Challenges_Descriptions_8">Yolculuğunuz karanlık ve tehlikeli şehir kanalizasyonlarında başlayacak ve yüzeye giden tek yol kapalı olacak. Daha da kötüsü, sadece zindanda bulduğunuz ekipmanları kullanabileceksiniz. Sınırlı kaynaklar ve ekipmanla, hayatta kalmanız becerilerinize ve stratejinize bağlı olacaktır.</string>
+    <string name="Challenges_Descriptions_9">Veba Doktor\'un son tedavisi uzay belleğinizi silmiş. Doğrudan görüş alanınızın dışında bir şey hatırlayamıyorsunuz.</string>
     <string name="Challenges_Names_0">Diyette</string>
     <string name="Challenges_Names_1">İnanç benim zırhımdır</string>
     <string name="Challenges_Names_2">İlaç korkusu</string>
@@ -415,11 +428,14 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="ChaosHelmet_Name">Kaos Miğferi</string>
     <string name="ChaosShield_desc">Kaos Kalkanı, sıradan bir kalkan ile bir Kaos Kristali\'nin birleştirilmesi sonucunda ortaya çıkar ve başarılı bir blok sonrasında rastgele kaotik etkiler sergiler.</string>
     <string name="ChaosShield_name">Kaos Kalkanı</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Asa kaos güçü ile aşılandı, bir büyücü ne ister ki ya da neden korkar ? </string>
     <string name="ChaosStaff_Name">kaos asası</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">Bu kılıcın çeliği saf kaostan dökülmüştür ve bazen, yalnızca bazen, nezaketle titreşir. Kılıç, içinde öylesine devasa bir güç barındırır ki neredeyse her şeyi ortadan ikiye yarabilir. Ancak kılıcın muazzam gücüyle baş edebilmek için üstün kabiliyetler barındırmak gerekir.</string>
     <string name="ChaosSword_Name">kaos kılıcı</string>
     <string name="CharAction_Charm">Büyüle</string>
+    <string name="CharAction_Expel">dışarı at</string>
     <string name="CharAction_Give">ver</string>
     <string name="CharAction_Hit">vur</string>
     <string name="CharAction_Order">yönerge</string>
@@ -466,6 +482,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="ChargrilledMeat_Name">kebap</string>
     <string name="CharmBuff_Info">Zihin ve beden büyülendi!</string>
     <string name="CharmBuff_Name">Büyülenmiş</string>
+    <string name="CharmSpell_Cast">%s çarpıtıldı.</string>
     <string name="CharmSpell_Info">Herkes biraz sevgiyi hak eder, değil mi?</string>
     <string name="CharmSpell_Name">Etrafta bir sürü ağırlaştırılmış yaratık var, onlara yardım edelim.</string>
     <string name="Chasm_Chasm">Uçurum</string>
@@ -487,6 +504,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="ClassArmor_LowHealt">Canın çok az!</string>
     <string name="ClassArmor_LowMana">Yetersiz mana!</string>
     <string name="ClassArmor_NotEquipped">Bu zırhın özel gücünü kullanabilmek için onu giymen gerekiyor!</string>
+    <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Bu devasa kılıç herşeyi kesebilecek gibi duruyor.</string>
     <string name="Claymore_Name">Kılıç</string>
     <string name="CloakBuff_Info">Karanlık bir pelerin sizi gölgelerde gizleyerek düşmanlara daha az görünür olmanızı sağlar.</string>
@@ -548,6 +566,7 @@ Hayır, ışığın içinde ona yer yoktu, artık yoktu. Yetersiz ışıktan dö
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">Bu güçlendirilmiş arbalet, tahtadan yapılmış olana göre daha etkili bir alet gibi gözüküyor.</string>
     <string name="CompositeCrossbow_Name">Bileşik arbalet</string>
+    <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">Bu bileşik yaydan fırlatılan oklar büyük miktarda hasar verir ve biraz hız pahasına ahşap bir yaya göre gelişmiş isabet oranına sahiptir.</string>
     <string name="CompoundBow_Name">bileşik yay</string>
     <string name="ConcreteBlock_Description">Görünüşe Göre bu bloğu ittirmek için %d güç puanı gerekiyor.</string>
@@ -606,6 +625,7 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="DashSpell_OnSelf">Hedefe atılamıyorum</string>
     <string name="DashSpell_TooFar">O kadar uzağa atılamam</string>
     <string name="DeathKnight_Desc">Şöyle bir bakınca, ağır zırhlı ve haşmetli bir savaşçı gibi dursa da suratındaki pis ve ölüm kokan sırıtışı onu ele veriyor. Ölüm Şövalyesi, yeminini gerçekleştirememiş bir şövalyenin ruhunun tezahürüdür. Ve bu lanetli durumdayken, mütemadiyen savaşlarda kendini arındırmaya çalışacak, masumları öldürecek ve asla kimi korumak uğruna ant içtiğini hatırlayamayacak.</string>
+    <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name">ölü şövalye</string>
     <string name="DeathKnight_Name_Objective">ölü şövalye</string>
     <string name="Death_Name_0">Gaddar %s</string>
@@ -638,12 +658,16 @@ Aşırı hızlılardır ve kalın dış iskeletleri ağır vuruşlara dayanabili
     <string name="DieHardSpell_Info">Geçici olarak yenilenme hızını arttıracak ve seni zor ölen birisi yapacak.</string>
     <string name="DieHardSpell_Name">Ölümü Zor</string>
     <string name="Displacement_Txt">yer değiştirme %s</string>
+    <string name="DoctorArmor_Info">Bu veba doktorunun zırhı, düşmanları zehirleyen, zayıflatan ve kandırarak etkisiz hale getiren zararlı bir gaz salan \&quot;Miasma Bulutu\&quot; yeteneğinin kullanılmasını sağlar. Doktor, maskesi sayesinde bu etkilerden bağışıklıktadır.</string>
+    <string name="DoctorArmor_Name">Doktor\'un Giysisi</string>
     <string name="DoctorArmor_NotDoctor">Yalnızca salgın doktorları bu zırhı kullanabilir!</string>
+    <string name="DoctorSpecial">Bulut Miasma</string>
     <string name="DogeMask_Info">Hiç ünlü Doge kılığına girmek istediniz mi? İşte size fırsat!\nBöyle Maske! Birçok Kılık! Vay canına!</string>
     <string name="DogeMask_Name">Köpek maskesi</string>
     <string name="DonateButton_pleaseDonate">lütfen bağış yapmayı düşünün</string>
     <string name="DonateButton_thanks">Desteğiniz için teşekkürler!</string>
     <string name="DreadKnight_Desc">Dehşet şovalyesi , hayatına güzel ve doğru bir şey girmemiş antik bir savaşçıdır.Günahlarından dolayı bu şekilsiz vücutta sonsuza kadar yaşamak ile lanetlenmiş.Yaşadığı her an kurbanlarına verdiği acı ve çileyi hissediyor.</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">dehşet şovalyesi</string>
     <string name="DreadKnight_Name_Objective">dehşet şovalyesi</string>
     <string name="Dreamweed_Desc">Bir Rüya otuna dokunulduğunda, ışıltılı ve kafa karıştırıcı bir gaz bulutu salgılar.</string>
@@ -707,6 +731,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="ElfArmor_Desc">Bu elf örtüsü ile doğanın güçlerini ortaya çıkarabilirsin. Otlar küçük bir parıltıda katı bir taşın içinden büyüyebilir ve görüş açısındaki tüm düşmanları sabitler.</string>
     <string name="ElfArmor_Name">Elf örtüsü</string>
     <string name="ElfArmor_NotElf">Sadece elfler bu zırhı kullanabilir!</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Elf zanaatkarlığının muazzam bir örneği... Bariz bir şekilde, sıradan bir yaydan daha etkili ve isabetli. </string>
     <string name="ElvenBow_Name">elf yayı</string>
     <string name="ElvenDagger_Gender">masculine</string>
@@ -732,6 +757,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Exhumation_NoGrave">Mezar Yağmacılığı gerçekleştirebileceğin bir mezar yok.</string>
     <string name="Exhumation_Ok">Sana itaat edeceğim.</string>
     <string name="ExplodingSkull_Desc">Bu kurukafa her an patlayacakmış gibi gözüküyor</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">patlayan kurukafa</string>
     <string name="ExplodingSkull_Name_Objective">patlayan kurukafa</string>
     <string name="Eye_Desc">Bu iblisin diğer isimlerinden biri de \&quot;nefret küresi \&quot;dir, çünkü bir düşman gördüğünde ölüm bakışını pervasızca kullanır, genellikle müttefiklerini görmezden gelir ve onları yaralar.</string>
@@ -750,6 +776,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Fadeleaf_Desc">Bir Solma yaprağına dokunmak, herhangi bir yaratığı o anki seviyede rastgele bir yere ışınlar.</string>
     <string name="Fadeleaf_Name">Soluk yaprak</string>
     <string name="FetidRat_Desc">Bu keseli sıçan diğerlerinden daha büyük. Kokuşmuş bir bulut ile çevrili.</string>
+    <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">kokuşmuş fare</string>
     <string name="FetidRat_Name_Objective">kokuşmuş fare</string>
     <string name="Fez_Info">Kırmızı kumaştan yapılmış kesik koni şeklinde bir başlıktır ve tepesine bir püskül iliştirilmiştir. Ve hayır, dünyayı 3 boyutlu yapmıyor.</string>
@@ -774,6 +801,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Food_ACEat">YE</string>
     <string name="Food_Message">Bu yemek lezzetliydi!</string>
     <string name="FortuneTellerNPC_Desc">Uzunca ve rengarenk giyinmiş bu hanımefendi, falcılık sanatında ustalaşmış olmak için çok genç görünüyor. Biraz yakınlaşınca mırıldanmalarını duyuyor ve kristal küresine fal taşı gibi açılmış gözlerle baktığını görüyorsun.</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">falcı</string>
     <string name="FortuneTellerNPC_Name_Objective">falcı</string>
     <string name="FreezeGlobe_Info">Seçili karakteri dondurarak kısa bir süre için herhangi bir eylem gerçekleştirememesini sağlar.</string>
@@ -781,6 +809,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="FriedFish_Info">Pişirilmiş balık, enfes gözüküyor</string>
     <string name="FriedFish_Name">pişirilmiş balık</string>
     <string name="FriedFish_Taste">Enfes!</string>
+    <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Bu okun başından yayılan dondurucu buharı hissediyorsun.</string>
     <string name="FrostArrow_Name">buzul ok</string>
     <string name="FrostAuraBuff_Info">Soğuk vücudu çevreler, bu da yaklaşan her şeyi yavaşlatır.</string>
@@ -814,6 +843,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Ghost_Defense">savuşturdu</string>
     <string name="Ghost_Desc">Hayalet zar zor görülebiliyor. Kederli bir yüzü olan şekilsiz, soluk bir ışık lekesine benziyor.</string>
     <string name="Ghost_Name">üzgün hayalet</string>
+    <string name="Ghost_Name_Objective">ghost</string>
     <string name="Ghost_Rat1">Merhaba maceracı. Bir zamanlar ben de senin gibiydim - güçlü ve kendinden emin... Ve şimdi öldüm. Ama burayı terk edemem. İntikamımı almadan olmaz. Hayatımı alan o _pis fareyi_ öldürmeden.</string>
     <string name="Ghost_Rat2">Lütfen... Yardım et... Nefret ettiğim sıçanı öldür...</string>
     <string name="Ghost_Rose1">Merhaba maceracı. Bir zamanlar ben de senin gibiydim - güçlü ve kendinden emin... Ve şimdi öldüm. Ama burayı terk edemem. _Kurutulmuş gülümü_ almadan olmaz. O benim için çok önemli. Bir canavar onu bedenimden çaldı.</string>
@@ -843,6 +873,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="GoldenKey_Info">Bu altın anahtar ile kilitli bir sandığı açabilirsin</string>
     <string name="GoldenKey_Name">altın anahtar</string>
     <string name="GoldenStatue_Desc">Buna inanmak güç, bu muhteşem heykel sadece dekorasyon değil, aynı zamanda hiçbirşeyden habersiz maceracıları bekleyen zararlı bir yaratık. İlk bakışta _%s_ nesnesini kolunun bir parçası olduğuna yemin edebilirsin.</string>
+    <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">altın heykel</string>
     <string name="GoldenStatue_Name_Objective">altın heykel</string>
     <string name="GoldenSword_Gender">masculine</string>
@@ -882,6 +913,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Halls_TileWater">Soğuk lav</string>
     <string name="Haste_Info">Acele, oyuncunun o kadar aşırı bir hızla hareket etmesine izin verecek ki, etrafındaki her şey durağan görünecek. Böyle bir acele çok fazla enerji tüketecektir, bu yüzden onu kullanmak sadece kısa bir süre için mümkündür.\n\nYetenekli ustalar daha uzun süre aceleci kalabilirler.</string>
     <string name="Haste_Name">Aşırı acele</string>
+    <string name="Heal_Cast">%s iyileştirildi.</string>
     <string name="Heal_Info">Zindan\'da oldukça faydalı bir büyü, değil mi?</string>
     <string name="Heal_Name">Can</string>
     <string name="HealerNPC_Desc">yaşlı bir adam,asa yapabilecek biri gibi duruyor </string>
@@ -893,12 +925,14 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="HealerNPC_Name_Objective">köy papazı</string>
     <string name="Healing_Info">Bu büyü her maceracı için mühimdir. Yapan kişinin toplam canının 1/3\'ünü doldurur.</string>
     <string name="Healing_Name">İyileştirme</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Bu okun ucu iyileştirme iksirine bandırılmış.</string>
     <string name="HealthArrow_Name">İyileştirme Oku</string>
     <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">Bu dartın ucu iyileştirme iksirine bandırılmış.</string>
     <string name="HealthDart_Name">İyileştirme Dartı</string>
     <string name="Heap_Mimic">Bu bir Mimik!</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Hain ruhun hala atan siyah kalbi.</string>
     <string name="HeartOfDarkness_Name">Karanlığın kalbi</string>
     <string name="Hedgehog_Desc">Bu kirpi gergin görünüyor.</string>
@@ -943,7 +977,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="HeroClass_NecromancerPerks_4">İyileştirme İksiri en başından itibaren tanımlanmıştır.</string>
     <string name="HeroClass_None">halktan biri</string>
     <string name="HeroClass_PlagueDoctorPerks_0">Veba doktorları, öldürülmüş düşmanlardan [yellow:Toksin Bezleri], [yellow:Çürümüş Organlar], [yellow:Kemik Parçaları] toplar.</string>
-    <string name="HeroClass_PlagueDoctorPerks_1">Veba Maskesi (tüm Gazlara karşı bağışık) ve Kemik Testeresi ile başlar. Kritik vuruşlar fazladan parça düşürür ve Testere felçli dusmanlara +%50 daha fazla hasar verir.</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">Veba Maskesi (tüm Gazlara karşı bağışık) ve Kemik Testeresi ile başlar. Kritik vuruşlar fazladan parça düşürür ve Testere felçli dusmanlara +%50$s daha fazla hasar verir.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">[yellow:Veba Maskesi] (tüm Gazlara karşı bağışık) ve bir [yellow:Kemik Testeresi] ile başla. Kritik vuruşlarda ekstra parçalar düşer ve Testere felç olmuş düşmanlara x1.5 hasar verir.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">[yellow:Felç Edici Gaz] ve [yellow:Zehirli Gaz] iksirleri baştan tanımlıdır.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Veba testere kullanmadığı sürece veba doktorları büyük bir nişan cezası çeker ve menzilli silahlar kullanamazlar.</string>
@@ -1075,6 +1109,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Imp_Monks1">Sen bir maceracı mısın ? Maceracıları severim ! Eğer birşeyler öldürülmesi gerekiyorsa onlara güvenebilirsin. Haksız mıyım? Bir ödül karşılığında ;)\n Benim durumumda bu öldürülecek olanlar keşişler. Gördün mü , ufak bir iş başlatıyorum burada , ama bu deliler kendilerine bir şey almadıkları gibi müşterileri de korkutuyorlar. lanet olsun onlara ! Lütfen öldür onları... şöyle diyelim 8 tanesini öldür.</string>
     <string name="Imp_Monks2">Ooo, hala hayattasın. Senin Kung-fu\'nun kuvvetli olduğunu biliyordum ;) Keşiş simgelerini toplamayı unutma.</string>
     <string name="Imp_Name">hırslı küçük şeytan</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Info">Bu dartların her birinin üzerindeki sivri uç, uzunluğuna bağlı dengesiz bileşikler parlak alevlere dönüşürken onu hedefine sabitlemek için tasarlanmıştır.</string>
     <string name="IncendiaryDart_Name">yakıcı ok</string>
     <string name="InnKeeperNPC_Desc">Hancı kendisiyle gurur duyuyor.</string>
@@ -1150,6 +1185,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="King_Info3">Ne cüretle!</string>
     <string name="King_Name">Cücelerin Kralı</string>
     <string name="King_Name_Objective">Cücelerin Kralı</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Info">Parmak eklemlerin uyacak şekilde şekillendirilmiş demirden bir parça.</string>
     <string name="Knuckles_Name">muşta</string>
     <string name="KoboldIcemancer_Desc">Kobold Buzbükücüleri toplumun elitleriydi. Kayda değer savaşçılar, büyücüler ve en önemlisi, biliminsanlarıydı. Antik buz efendileri buz kontrolü sanatını ele geçirmişlerdi ve kompleks makineler özel büyülerle güçlendirilmişti.</string>
@@ -1165,6 +1201,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="KrampusHead_Name">Kranpus\'un kafası</string>
     <string name="KunaiThrow_Info">Bu Ölümcül Kunai atışı son derece hızlı olacak, o kadar hızlı olacak ki bir hedef bile seçemeyeceksiniz.\n\nGerçek Ustalar aynı anda birden fazla Kunai fırlatabilir.</string>
     <string name="KunaiThrow_Name">Kunai Fırlatma</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Bu silah, diğer ucunda ağır bir demir ağırlık bulunan metal bir zincire bağlı bir oraktan oluşur.</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">ÇEK</string>
@@ -1276,6 +1313,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Luck_Name_0">Şanslı %s</string>
     <string name="Luck_Name_1">Şanslı %s</string>
     <string name="Luck_Name_2">Şanslı %s</string>
+    <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">Bu silahın demir kafası büyük hasar verir.</string>
     <string name="Mace_Name">topuz</string>
     <string name="MageArmor_ACSpecial">ERİMİŞ TOPRAK</string>
@@ -1360,6 +1398,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Mob_CantDoIt">Yapamam. Küçük pençelerim var.</string>
     <string name="Mob_Desc">Gerçek açıklama yakında gelecek!</string>
     <string name="Mob_Died">Uzakta birşeyin öldüğünü duydun</string>
+    <string name="Mob_GoingTo">Zaten gidiyor!</string>
     <string name="Mob_ReadyForOrder">%s siparişiniz için hazır.</string>
     <string name="Mob_StaAmokStatus">Bu %1$s, delidana gibi koşuyor.</string>
     <string name="Mob_StaControlledStatus">Bu %s kutsal olmayan bir şekilde ele geçirilmiş.</string>
@@ -1410,6 +1449,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="NecromancerArmor_Name">Kemik zırh</string>
     <string name="NecromancerArmor_NotNecromancer">Sadece Nekromensırlar bu zırhı kullanabilir !</string>
     <string name="NecromancerNPC_Desc">Bu orta yaşlı adam sinirlenmiş ve aynı zamanda heyecanlı görünüyor. Kemik parçalarından yapılmış bir zırh giyiyor.</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">Ah! Yaşayan bir maceracı. Olağanüstü. Özürlerimi sunarım. Gördüğün gibi bendeniz bir necromancer\'im. Ölüm üzerinde çalışmak benim yaşamk için yaptığım şey, aynı şeyleri sürekli görmek olağanüstü sıkıcı. Diğer taraftan benim burada bulunma sebebim bu.Hesaplamalarıma göre sadece birkaç hafta içince , bu zindanın bir yerlerinde çok muhteşem bir şey olacak. Bir Necropolis_, ölüler şehri burada kapılarını açacak. Daha fazla bir şey söyleyemiyorum, zaten yeterince vakit harcadım, hazır olmam lazım, _sonra tekrar gel_.</string>
     <string name="NecromancerNPC_Intro2">Ah! Yaşayan bir maceracı. Olağanüstü. Özürlerimi sunarım. Gördüğün gibi bendeniz bir necromancer\'im. Ölüm üzerinde çalışmak benim yaşamk için yaptığım şey, aynı şeyleri sürekli görmek olağanüstü sıkıcı. Diğer taraftan benim burada bulunma sebebim bu. Kısa zaman önce muhteşem bir şey oldu. Bir Necropolis (ölülerin antik şehri) ortaya çıktı. Gerçeği istersen oranın girişinin hemen yanında duruyoruz. Vee.. şunu söyleyeyim, bu anahtarı al ve önce sen gir, kastettiğim sen şu macera şeylerini seversin di mi? Ve ben hemen arkanda olacağım. Sadece hazır olmaya ihtiyacım var.</string>
     <string name="NecromancerNPC_Message1">Zamanımız kısıtlı zamanımız...</string>
@@ -1481,6 +1521,8 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="PirateSet_Info">Arr! Bizim çocuklara katılacak cesaretin var mı? Yoksa sadece başka bir kara sıçanı mısın? Umarım değilsindir, çünkü bu şey sadece korsanlar için. Arr!</string>
     <string name="PirateSet_Name">Korsan Seti</string>
     <string name="PlagueDoctorMaskHood_Info">Oyma abanoz kafatası, boş göz yuvaları ametist taşların dünyevi olmayan parıltısıyla parlıyor. Çektiğiniz her nefes, borular ve filtrelerden oluşan bir labirentten fısıldayarak geçer, üzerinize yapışan çürümeyi maskeleyen güçlü otlar ve baharatların kokusunu taşır. Ama bu sadece bir maske değil. Gece yarısı kadifesinden ağır bir başlık, yüzünüzü ve başınızı gölgelere bürür. Kapüşon, bir kuzgunun kanadı gibi sırtınızdan aşağı akar, kenarları kemik-beyazı dantelden bir saçakla süslenmiştir, ürpertici derecede güzel bir tezat. Birlikte, maske ve kapüşon, hayaletimsi bir çehre yaratır, çürüme güçlerine karşı bitmeyen savaşın kasvetli bir tanığı.</string>
+    <string name="PlagueDoctorMaskHood_Name">Maske ve hood ile veba doktoru</string>
+    <string name="PlagueDoctorMask_Info">This… this is no mere mask. It\'s… a barrier. A shield against the forces of decay that Plague Doctor tirelessly battle against. Crafted from the finest ebony wood, intricately carved with the visage of a ravenous skull. Its hollow eye sockets are filled with glittering, amethyst gemstones that pulse faintly, like the dying embers of a fire. Each breath you take, each utterance you make, is filtered through a labyrinthine network of tubes and filters. A concoction of potent herbs and exotic spices infuses the air within, masking the stench of death that clings to you like a shroud.</string>
     <string name="PlagueDoctorMask_Name">Veba Doktoru maskesi</string>
     <string name="PlagueDoctorNPC_After_Quest">onlara göstereceğim !! onların hepsine göstereceğim !!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Sen hala burada mısın? İşte, al bunu.</string>
@@ -1497,12 +1539,17 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, geri döndünüz! _Beş ölü sıçan_, harika! Derileri araştırmalarım için çok önemli olacak. Söylediğim gibi, cesur çabanız karşılığında bu zırhı onların derisinden yaptım. Üzerinde biraz veba var, ama endişelenmeyin! Kontrollü, sizi koruyor! Şimdi gidin! Şehri koruyun!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Beş ölü fare getirin! Her biri getirdiğinizde bu korkunç salgını anlayışımıza katkı sağlıyor.</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">Açuuu!\n Lanet olsun bu cehennemlik vebaya! Şehirde yangın gibi yayılıyor, şüphesiz halkın kemiklerinde irinleniyor! BAH! Sizce o zavallı muhafızlar bu sinsi belayla baş etme şansına sahip mi? Sen, oradaki! Güçlü, sağlıklı bir specimensin. Belki bana yardım edebilirsin. O pis kanalizasyon _fareleri_... söylüyorum sana, vebanın tohumlarını taşıyorlar o iğrenç küçük bedenlerinde! Bana o sefil yaratıklardan _beş_ tane getir, _ölü_, tabii ki! Derileri araştırmalarım için paha biçilmez olacak. Sana harika bir zırh yapacağım, kendisinden kaynaklanan vebaya karşı koruyucu bir kalkan!</string>
+    <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… muhteşem! _Salyangozlar_, sırlarının ay ışığında yaprak gibi açılarak ortaya çıkması. Gerçekten bilgi açısından zengin bir av! Ama haklısınız, _elli altın_ pek uygun bir ödül değil. *Manik olarak gülümser*.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">_On salyangoz_, uçurumdan on fısıltı! Salyangozları analiz edilecek, özleri dikkatle incelenecek. Sakladıkları sırlar ulaşılabilir durumda.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue">*Şiddetli öksürür* Achoo!\n _Salyangozlar_… süzülüyorlar. Akıyorlar. Ve unutulmuş çağların sırlarını fısıldıyorlar. Onlara ihtiyacım var, _on tanesine_, hâlâ kabukları tamamen sağlam. Böyle değerli bilgi için sadece _elli altın coin_ yeterli olur mu dersin?\n Bah! Önemli değil. İçerdikleri bilgi bu vebayı durdurmanın anahtarı olabilir. Veya… bizi daha korkunç bir şeye götürebilir. Sen karar ver.</string>
+    <string name="PlagueDoctorQuest_2_1_Epilogue">_Ayçiçeği_... Bu dünyada akan büyünün şahidi. Onlardan çok şey öğrendim, ancak ödülünüz... eh, en titiz bir şekilde hazırlandı. *Hero\'ya parlayan bir _Mana İksiri_ veriyor* Şimdiden aşacağınız tehlikelerde onun gücüne güvenmenizi dilerim.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">_Ayışığı_ çiçeğini arayın, karanlığın soluk ay ışığıyla buluştuğu yerde. _İki tohum_, özleri gizli sırları ortaya çıkaracak.</string>
+    <string name="PlagueDoctorQuest_2_1_Prologue">_Moongrace tohumları_... o ruhani çiçekler, ayın kendi sihrini fısıldayanlar. Haçır haftalardır garip parlaklıklarını inceledim. İksirlerinde bir tokluk var, gizli bir enerji... bir şeyin anahtarı olabilir. *Kemikten yapılmış parmağını düşünceli şekilde çenesine vurur*\nAma maalesef, nadirler. Sadece ay ışığının zor ulaştığı en derin mağaralarda bulunurlar. İkisine ihtiyacım var. İki tohum, güçlerinin sırlarını açmak için. Karşılığında size bir şey sunabilirim... saf ve etkili bir büyünün tadını veren bir _Mana İksiri_. Moongrace\'in kendinden gelen özüyle dolu. Yorgun ruhunuzu yenileyecek ve arcanı yeniden güçle kullanmanıza izin verecek.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">Muhteşem! _Güneş otu_, altın özü canlılıkla atıyor. Onun hassas yapısından çok şey öğrendim. *Size bir _Sağlık İksiri_ uzatır, sıvısı solgun, altın bir ışıkla parlıyor.* Dünya omuzlarınızda ağır bastığında bunu içininize koyun ve güneşin sıcaklığı ruhunuzu canlandırılsın.</string>
+    <string name="PlagueDoctorQuest_2_2_InProgress">_İki güneş otu_ tohumu. Altın yapraklarındaki güçleri anlamak istiyorum. Onları bulun ve özlerini ortaya çıkarın!</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">Ah, _güneşotu_! Narin bir çiçek, taç yaprakları güneşin sıcaklığını yayıyor. Esansının anahtarı olduğunu düşünüyorum... ah, şimdilik detayları unutun. Yeter ki araştırmam için kritik öneme sahip olduğunu söyleyeyim. _İki güneşotu tohumu_. Bunları bana getirin, ve maceralarınızda mutlaka işinize yarayacak bir şey veririm - güneşi içeren bir _İksir Sağlığı_, tamamen canlandırıcı güçle dolu.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Eldivenli elleriyle _yarasa_yı nazikçe kucaklayarak minik formunu rahatsız edici bir merakla inceliyor* Muhteşem! Bu yarasanın yer tespiti... şimdiye kadar deneyimlediğim hiçbir şeye benzemiyor. Ne kadar hassas... ne kadar... kontrol. *Yüzünü maskeyle kaplı halde size döner* Emekleriniz için, bir _Geliştirme Parşömeni_. Potansiyelin... varlığını sırf rafine etme potansiyeline sahip olduğundan dolayı dikkatli kullanın. *Parşömeni size uzatır, sesi fısıltıya dönüşür* Bu _yarasa_... gizli bir dünyaya bir pencere. Bir dünya... gölgelerin dans ettiği ve sırların fısıldadığı bir yer.</string>
+    <string name="PlagueDoctorQuest_3_1_InProgress">Bana bir _vampir yarasası_ getir, canlı ve sağlam! Kanı, kanatları... bunlar keşfetmem gereken sırları saklıyor!</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*Gözleri garip, ateşli bir yoğunlukla parlıyor* Ah, _vampir yarasa_! Gecenin bir yaratığı, avının yaşam gücüyle beslenen. Büyüleyici… gerçekten büyüleyici. Benzersiz fizyolojisini incelemek için bir tane canlıya ihtiyacım var. İş… anlamaya… anlamaya… *Kendi kendine bir dizi gizemli terimler mırıldanarak sözünü yarım bırakır*. Evet! _Yarasa_\'nın yankı konumu, tam karanlıkta yolunu bulma yeteneği… bir sırrı çözmenin anahtarı.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*Başını geriye atar ve kuru bir kahkaha atar, sesi nemli laboratuvarında yankılanır* Muhteşem! Önümüzde duran bir _Ölüm Şövalyesi_! Varlığından yayılan güç... baştan çıkarıcı! *Sizi döner, ateşli bir yoğunlukla parlayan gözlerle* Ve sizin için, cesaretinize layık bir ödül: bir _Güç İksiri_! Herhangi bir düşmanı yenmeniz için size güç versin! Şimdi... konumuzu inceleyelim. Özü, yaşamın yasalarını yeniden yazabilecek sırlar içeriyor! *Maniak bir gülümsemeyle köpüren yeşil bir sıvı içeren bir şişe sallayarak _Ölüm Şövalyesi_ ne yaklaşır*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Bu sıradan bir canavar değil! Nekromantik gücün yürüyen bir kanıtı! Onu canlı ve zarar görmeden yakala! Bu _Ölüm Şövalyesi_... anahtar o!</string>
@@ -1511,12 +1558,15 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="PlagueDoctorQuest_4_1_InProgress">Beş _Cüce Savaş Büyücüsü_, bedenleri hâlâ karanlık büyünün soluk yankısıyla titreşiyor! Onları bana getirin, ve sizi eşsiz bir güç iksiri ile ödüllendireceğim – on adamın gücünü size bahşedecek bir _Güç İksiri_!</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Hapşoo! Cüceler! Bu ısrarcı, yeraltı yaşayanları, elmas ve altına takıntılı. Ama aradığım _Cüce Kara Büyücüler_… onların çarpık büyüsü, yaşadıkları derinliklerden beslenen. Beş, beş taneye ihtiyacım var! Onların bedenleri, bir şeyi anlamak için anahtar tutuyor… yerin kendisi aracılığıyla mistik enerjilerin kanalize edilmesi hakkında. İnanıyorum ki bir sonraki adıma çok yakınım, ama onların сenslerini, çarpık büyülerini! *Güçlükle öksürüğe boğuyor, elbebeğinde karanlık bir leke yayılıyor*</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Muhteşem! Beş _Kobold Buzbüyücü_, onların buzlu özünü şimdi keşfetmek bana kaldı! Donmuş çöllerle olan bağları gerçekten büyüleyici. Suyu manipüle etme biçimleri... gerçekten dikkate değer. *Size parlak, canlı kızıl bir sıvıyla dolu küçük bir şişe uzatır* Bu, sizin cesur çabalarınız için: bir _Güç İksiri_! İçin ve on savaşçının gücünün damarlarınızda aktığını hissedin! Unutmayın, bilgi güçtür... ve güç, yaklaşan karanlığa karşı sahip olduğumuz tek silahtır. Şimdi... hadi bu buzlu ruhları parçalayalım ve ürpertici sırlarını ortaya çıkaralım!</string>
+    <string name="PlagueDoctorQuest_4_2_InProgress">Beş ölmüş _Kobold Icemancer_ getirin! Donmuş bedenleri soğuk büyülerinin sırlarını açığa çıkarmanın anahtarıdır!</string>
+    <string name="PlagueDoctorQuest_4_2_Prologue">*A haláltól maradt ujjai ritmikusan a csapodárva buborékos tálban, a levegő sűrű szaga a ként és a bomlástól*\n_Zöld Lézsmányok_! Azok iszétsek, a barlangjaikban összezárkózva, az anyagukat megmentő jégmágia utolsó bányászaik. Egyedi energiát. Eszékenyítik a világ alját.*</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*İki _succubus_\'a bakar, mutlu bir gülümseme maskenin altında yayılır.* Mükemmel! Harika! Bu birçok… olanakları açacak! *Sana döner, sesi minnettarlıkla… ve bir şey daha ile yoğunlaşır.*  Çaban… unutulmaz. En derin minnettarlığımı borçluyum. *Gözleri _succubus_\'lar üzerinde bir an fazla kalır, sonra laboratuvarına çekilir, seduction\'un sırlarını açmak üzerine mırıldanır.</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Zihni konuşurken dağılıyor, sesi alçalarak neredeyse bir fısıltıya dönüşüyor.* Bana iki _sukkubu_... canlı getir. Onların... gücü... büyüleyici.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Balbuzie, la sua voce si spezza come un ramo fragile*.  A-ah, _succubi_! Due... sì, due, vive! È... ahem... per la mia ricerca! Vedi... i loro feromoni... è cruciale per comprendere il delicato equilibrio di... ah... *Si interrompe, la sua mano ossea che si allunga per correggere nervosamente la maschera, i suoi occhi che si posano su di te con un\'intensità febbrile.*La loro... essenza... è un rompicapo... un bellissimo, enigmatico rompicapo! *Tosse violentamente, cercando di riprendere compostezza.* Prometto, per avermi portato due di queste... creature... avrai la mia eterna gratitudine. Pensa a questo come a un... un beneficio per la conoscenza! Sì! Per la conoscenza!</string>
     <string name="PlagueDoctorQuest_AllDone">*Kuru, hırıltılı bir kahkaha atar.* \&quot;Senin başarıların, ölçülemez sırları açığa çıkardı! Kazanılan bilgi... içimde bir keşif senfonisi gibi atıyor. Ama bilgi,\&quot; diye ekler, sesi komplocu bir fısıltıya düşerek, \&quot;bilgi güçtür. Ve güç... ah... bu en sarhoş edici iksirdir.\&quot; Bir an boyunca sana dikkatle bakar, ametist gözleri ateşli bir yoğunlukla yanar. \&quot;Belki,\&quot; diye mırıldanır, \&quot;yollarımız tekrar kesişir. Çünkü hala çözülmesi gereken birçok... gizem... var.\&quot; </string>
     <string name="PlagueDoctor_Desc">Bu kambur kişinin tüm vücudu deri bir tulumun altında gizlidir. Ayrıca, ondan acı bir ilaç ve ... sarımsak kokusu geliyor?</string>
 
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">veba doktoru</string>
     <string name="PlagueDoctor_Name_Objective">veba doktoru</string>
     <string name="Plant_ACPlant">DİK</string>
@@ -1792,8 +1842,10 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="Rudolph_Info">Kırmızı parlayan bir burundan başka ne daha eğlencelidir? Kırmızı parlayan burunların boynuzlarla birlikte olması tabii ki.</string>
     <string name="Rudolph_Name">Kırmızı burun ve boynuzlar</string>
     <string name="RunicSkull_Desc">Yapay olarak yapılmış bu kafatası gerçeğe çok benziyor.Onu saran soluk ışığı görebilirsin</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">rünik kafatası</string>
     <string name="RunicSkull_Name_Objective">rünik kafatası</string>
+    <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">Patina lekeleriyle kaplı bu eskimiş bronz kılıç ilk bakışta kesinlikle işe yaramaz görünüyor. Ama içinde bir tür eski, arkaik güçler uyuyor. Bu güçler neredeyse her yaratığı iradesiz bir köleye dönüştürebilir. Sadece onları uyandırmak için doğru bir yol bulmak gerekiyor...</string>
     <string name="SacrificialSword_Name">kurban kılıcı</string>
     <string name="SantaHat_Info">Hiçbirşey Derinliklerin Efendisi Noel Baba\'nın ipeksi kırmızı şapkası gibi Dungeonmas(Zindan Yılbaşı) diyemez.</string>
@@ -1893,6 +1945,7 @@ seviyenin başka bir yeri.</string>
     <string name="SeedPouch_Info">Bu küçük kadife kesede tohumlarını saklayabilirsin.</string>
     <string name="SeedPouch_Name">tohum kesesi</string>
     <string name="Senior_Desc">Bu keşişler kendilerini şehirlerini korumaya adamış fanatiklerdir.Yakın dövüş yeteneklerine güvenir ve hiç bir zırh veya silah kullanmazlar. Bu keşiş düşmanının güçlerini kullanmasını engeleyen bir dövüş sanatında uzmanlaşmış.</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">kıdemli keşiş</string>
     <string name="Senior_Name_Objective">kıdemli keşiş</string>
     <string name="ServantNPC_Desc">Han hizmetçisi çok meşgul.</string>
@@ -2032,6 +2085,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="SpiderCharm_Name">Örümcek tılsımı</string>
     <string name="SpiderCharm_Use">KULLAN</string>
     <string name="SpiderEgg_Desc">Bu kırılgan yumurta kabaca titreşiyor. İçinde çok fazla bacağı olan birşeyler olduğunu görebiliyorsun</string>
+    <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">örümcek yumurtası</string>
     <string name="SpiderEgg_Name_Objective">örümcek yumurtası</string>
     <string name="SpiderElite_Desc">Tıpkı askerler gibi örümcek muhafızlar da krallıklarını korumaya yeminlidir. Seçkin muhafızların zehri hedeflerini şaşırtmak için kullanılır.</string>
@@ -2079,6 +2133,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="SpiritOfPain_Name_Objective">acının ruhu</string>
     <string name="Sprout_Info">Uyuyan tohumları uyandırın.\nAncak, bu büyünün başarılı olması için yerde biraz yeşillik olması gerekir.</string>
     <string name="Sprout_Name">Filiz</string>
+    <string name="StartScene_ChooseFromSlot">Kaydetme alanından seç</string>
     <string name="StartScene_ComingSoon">Yakında</string>
     <string name="StartScene_ContinueLatest">Devam et veya bir kayıt yuvasından seçim yap</string>
     <string name="StartScene_Depth">Derinlik: %1$d\nSeviye: %2$d</string>
@@ -2146,6 +2201,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="Swing_Name_0">Vahşi %s</string>
     <string name="Swing_Name_1">Vahşi %s</string>
     <string name="Swing_Name_2">Vahşi %s</string>
+    <string name="Sword_Gender">masculine</string>
     <string name="Sword_Info">Keskin ağzı ile bu uzun çelik silah güven verici şekilde parlıyor.</string>
     <string name="Sword_Name">kılıç</string>
     <string name="Tamahawk_Gender">masculine</string>
@@ -2209,6 +2265,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="TownsfolkMovieNPC_Name">köylü</string>
     <string name="TownsfolkMovieNPC_Name_Objective">kasaba halkı</string>
     <string name="TownsfolkNPC_Desc">Sakinlerden biri. Avamlığı bariz de olsa elbiseleri epey pahalı duruyor.</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">Ah! Bir maceracı daha, ne güzel! Mümkün olduğunca çok değerli eşya yağmaladığınızdan emin olun!</string>
     <string name="TownsfolkNPC_Message2">Zindan bu kasabaya o kadar refah sağladı ki, kasabadaki herkes istediği zaman ara verip tatile çıkabiliyor! Şu anda bu kadar az kişinin bulunması da aslında bu yüzden.</string>
     <string name="TownsfolkNPC_Message3">ne güzel bir gün </string>
@@ -2224,6 +2281,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="TownsfolkSilentNPC_Name_Objective">köylü</string>
     <string name="ToxicGas_Info">Burada yeşilimsi bir zehirli gaz bulutu dönüyor.</string>
     <string name="ToxicGas_Info1">Zehirli gazı soluyarak öldün.</string>
+    <string name="ToxicGland_Info">Yenilmiş bir düşmanın toplanmış zehirli bezesi. Bu bezeler güçlü zehirlerle doludur ve ciltim kurallarında kullanılabilir.</string>
     <string name="ToxicGland_Name">Zehirli Bez</string>
     <string name="TrapWnd_Step">Gerçekten de bu tuzağın üstüne basmak istiyor musun? Ölme ihtimalin var. </string>
     <string name="TrapWnd_Title">Tuzak</string>
@@ -2241,11 +2299,12 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="Ushanka_Name">Rus kalpağı</string>
     <string name="Using_Failed_Because_Blind">Körken \&quot;%s\&quot; kullanamazsın.</string>
     <string name="Using_Failed_Because_Magic">Güçlü bir büyü, seni \&quot;%s\&quot; kullanmaktan alıkoyuyor.</string>
-    <string name="VampireSkull_Info">Bu maske %100 doğal vampir kafatasından yapılmış. Her ne kadar vampir de olsa... Pek koca kafalıymış. Acayip.</string>
+    <string name="VampireSkull_Info">Bu maske %100$s doğal vampir kafatasından yapılmış. Her ne kadar vampir de olsa... Pek koca kafalıymış. Acayip.</string>
     <string name="VampireSkull_Name">vampir kurukafa</string>
     <string name="VertigoBuff_Info">Baş dönmesi hissi düz yürümeyi zorlaştırıyor!</string>
     <string name="VertigoBuff_Name">Baş dönmesi</string>
     <string name="View_Distance">Mesafeyi görüntüle</string>
+    <string name="VileEssence_Info">Düşman yenilgisinden hasat edilmiş yozlaşmanın yoğun bir özü. Bu karanlık madde kötü niyetli enerji ile atar ve simyasal işlemlerde yüksek değerdedir.</string>
     <string name="VileEssence_Name">İğrenç Öz</string>
     <string name="Viscosity_Status">%d gecikmeli</string>
     <string name="Viscosity_Txt">Ayırıcılığın %sı</string>
@@ -2432,8 +2491,10 @@ remix.30.1\n
     <string name="WndClass_Mastery">Uzmanlık</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Adresi Kopyala</string>
+    <string name="WndCryptoDonate_currency">Para birimi</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Remixed Dungeon\'ın geliştirilmesini, aşağıda belirtilen adreslere kripto para bağışları göndererek destekleyebilirsiniz. Câmilerinize teşekkür ederiz!</string>
+    <string name="WndCryptoDonate_openWallet">Cüzdanı Aç</string>
     <string name="WndCryptoDonate_supportDev">Geliştiriciyi Destekle</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
@@ -2514,9 +2575,12 @@ remix.30.1\n
     <string name="WndInfoItem_Skeleton">İskelet Kalıntısı</string>
     <string name="WndInfoItem_Tomb">Mezar</string>
     <string name="WndInfoItem_WontKnow">Açmadan içinde ne olduğunu bilemezsin!</string>
+    <string name="WndInstallingMod_copying_file">%s Remixed Dungeon depolama alanına kopyalanıyor</string>
     <string name="WndInstallingMod_deleting_file">Siliniyor %s</string>
-    <string name="WndInstallingMod_skipping_file">%1 atlanıyor</string>
+    <string name="WndInstallingMod_please_wait">Mod yükleniyor, lütfen bekleyin...</string>
+    <string name="WndInstallingMod_skipping_file">%1$s atlanıyor</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Tarifi Uygula</string>
+    <string name="WndItemAlchemy_NoRecipes">Bu eşya ve mevcut envanterinizle kullanılabilecek tarif yok.</string>
     <string name="WndItemAlchemy_SelectRecipe">Tarifi seç</string>
     <string name="WndItemAlchemy_Title">%s ile simya tarifleri</string>
     <string name="WndItemAlchemy_Transmute">Dönüştür</string>
@@ -2529,6 +2593,7 @@ remix.30.1\n
     <string name="WndLibrary_Items_Btn">Eşyalar</string>
     <string name="WndLibrary_Levels_Btn">Zindan</string>
     <string name="WndLibrary_Mobs_Btn">Canavarlar</string>
+    <string name="WndLocalModInstall_pick">Seç</string>
     <string name="WndLocalModInstall_text">Modu yüklemek için dizin seçin.</string>
     <string name="WndLocalModInstall_title">Yerel dizinden mod yükle</string>
     <string name="WndModInstall_InstallingMod">Mod yükleniyor</string>
@@ -2689,6 +2754,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="WoodenShield_desc">Kabaca yapılmış bir ahşap kalkan, mevcut en basit kalkandır. Yuvarlaktır ve zaman zaman bazı hasarları engelleyebilir.</string>
     <string name="WoodenShield_name">Tahta kalkan</string>
     <string name="Worm_Desc">Bu solucanın ne kadar büyük olduğunu söylemenin imkanı yok. Zeminden  çıkan bir parçası çürümüş et ve balçıkile kaplanmış. Dev çeneleri yüzeye doğru nasıl yol açtığına dair çok net fikir verebilir.</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">solucan</string>
     <string name="Worm_Name_Objective">solucan</string>
     <string name="Wraith_Defense">savuşturdu</string>
@@ -2986,6 +3052,82 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
