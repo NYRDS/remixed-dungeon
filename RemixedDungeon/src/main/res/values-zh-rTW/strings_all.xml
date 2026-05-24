@@ -355,7 +355,7 @@
     <string name="Carcass_Devoured">你已經吞食了%s的屍體！</string>
     <string name="Carcass_DissectFailed">你解剖了 %s，但沒發現任何有價值的东西。</string>
     <string name="Carcass_DissectMessage">你解剖了屍體並獲得了一個 %s。</string>
-    <string name="Carcass_DissectResult">З %1 ви отримали %2 врожай %3.</string>
+    <string name="Carcass_DissectResult">З %1$s ви отримали %2$d врожай %3$s.</string>
     <string name="Carcass_Info">已死亡%s的殘骸。</string>
     <string name="Carcass_Kick">這隻%s已經完全死了,沒有必要再踢它。</string>
     <string name="Carcass_Name">%s 的遺骸</string>
@@ -1399,7 +1399,7 @@
     <string name="MissileWeapon_No">不，我改主意了</string>
     <string name="MissileWeapon_Sure">您確定要將其用作近戰武器？</string>
     <string name="MissileWeapon_Yes">是的，我知道我在做什麼</string>
-    <string name="MobAi_status">這個 %1 是 %2</string>
+    <string name="MobAi_status">這個 %1$s 是 %2$s</string>
     <string name="Mob_Attacking">把這個%s當作死了！</string>
     <string name="Mob_Cannot_Be_Pet">你沒法控制住 \&quot;%s\&quot;</string>
     <string name="Mob_Desc">真正的說明即將到來！</string>

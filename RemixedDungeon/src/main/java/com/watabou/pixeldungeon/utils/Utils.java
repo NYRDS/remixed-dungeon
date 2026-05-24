@@ -46,13 +46,46 @@ public class Utils {
     }
 
     public static String format(int StringFormatId, Object... args) {
-        return String.format(Locale.ROOT, StringsManager.getVar(StringFormatId), args);
+        String formatString = null;
+        try {
+            formatString = StringsManager.getVar(StringFormatId);
+            return String.format(Locale.ROOT, formatString, args);
+        } catch (Exception e) {
+            EventCollector.logException(new RuntimeException(
+                    "Format error for ID " + StringFormatId + " (\"" + formatString + "\")", e));
+            return fallbackFormat(formatString != null ? formatString : "ID:" + StringFormatId, args);
+        }
     }
 
     public static String format(String format, Object... args) {
-        return String.format(Locale.ROOT, format, args);
+        try {
+            return String.format(Locale.ROOT, format, args);
+        } catch (Exception e) {
+            EventCollector.logException(new RuntimeException(
+                    "Format error: \"" + format + "\"", e));
+            return fallbackFormat(format, args);
+        }
     }
 
+    private static String fallbackFormat(String format, Object[] args) {
+        if (format == null) {
+            return EMPTY_STRING;
+        }
+
+        if (args != null && args.length > 0) {
+            StringBuilder sb = new StringBuilder(format);
+            sb.append(" [");
+            for (int i = 0; i < args.length; i++) {
+                sb.append(args[i]);
+                if (i < args.length - 1) {
+                    sb.append(", ");
+                }
+            }
+            sb.append("]");
+            return sb.toString();
+        }
+        return format;
+    }
     public static String indefinite(String noun) {
         //In a pt_BR language(and another), there is no specific rule.
         if (StringsManager.getVar(R.string.Utils_IsIndefinte).equals("0")) {
