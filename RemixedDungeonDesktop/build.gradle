@@ -373,7 +373,10 @@ launch4j {
     productName = 'RemixedDungeon'
     jreMinVersion = '10'
     bundledJrePath = 'jdk'
-    stayAlive = false
+
+    stayAlive = true
+    requires64Bit = true
+
     dontWrapJar = false
     jarTask = project.tasks.shadowJar
     copyConfigurable = []
