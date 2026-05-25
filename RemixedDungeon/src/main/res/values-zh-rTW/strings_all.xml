@@ -978,11 +978,11 @@
     <string name="HeroClass_NecromancerPerks_3">死靈法師開局有一把7層的骷髏鑰匙。</string>
     <string name="HeroClass_NecromancerPerks_4">治療藥水開局時就已經鑒定好了。</string>
     <string name="HeroClass_None">平民</string>
-    <string name="HeroClass_PlagueDoctorPerks_0">瘟疫医生从被杀的敌人身上收集[黄色:毒性腺体]、[黄色:腐烂器官]、[黄色:骨片]。</string>
-    <string name="HeroClass_PlagueDoctorPerks_1">開始時擁有瘟疫面具（對所有氣體免疫）和骨鋸。暴擊會掉落額外部件，鋸子對麻痹敵人造成+50%傷害。</string>
-    <string name="HeroClass_PlagueDoctorPerks_2">麻痹氣體和毒性氣體的藥水已預先辨識。</string>
-    <string name="HeroClass_PlagueDoctorPerks_3">被毒氣殺死的敵人會爆炸成毒性迷霧，每影響一個敵人就能為你恢復 1 點生命值。</string>
-    <string name="HeroClass_PlagueDoctorPerks_4">瘟疫醫生在沒有心愛的骨鋸在手的情況下會遭受嚴重的命中懲罰，並且無法使用遠程武器。</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">Plague Doctors harvest [yellow:Toxic Glands], [yellow:Rotten Organs], [yellow:Bone Shards] from slain enemies.</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">Plague Doctors are alchemy masters and able to use unique recipes.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Start with a [yellow:Plague Mask] (immune to all Gases) and a [yellow:Bone Saw]. Critical hits drop extra parts, and the Saw deals x1.5 damage to paralyzed foes.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Potions of [yellow:Paralysis Gas] and [yellow:Toxic Gas] are pre-identified.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Plague Doctors suffer great accuracy penalties without beloved Bone Saw in hand and cannot use ranged weapons.</string>
     <string name="HeroClass_Priest">神父</string>
     <string name="HeroClass_Rog">盜賊</string>
     <string name="HeroClass_RogPerks_0">盜賊起始擁有一枚+1的暗影指環。</string>
@@ -1528,7 +1528,7 @@
     <string name="PirateSet_Name">海盜帽</string>
     <string name="PlagueDoctorMaskHood_Info">一個雕塑的黑木頭骨，空蕩蕩的眼窩散發著紫水晶寶石的幽光。每一次呼吸都經過了一個由管子和過濾器組成的迷宮，帶著強效草藥和香料的氣味，掩蓋了附著在你身上的腐敗。但這不僅僅是面具。一頂沉重的午夜絲絨兜帽，將你的臉和頭部籠罩在陰影中。帽子像烏鴉的翅膀一樣，沿著你的背脊流動，邊緣飾有骨白色的蕾絲花邊，形成了一種令人不寒而慄的美麗對比。面具和帽子共同創造了一個幽靈般的外貌，是對抗腐敗力量的不懈鬥爭的黑暗見證。</string>
     <string name="PlagueDoctorMaskHood_Name">帶兜帽的瘟疫醫生面具</string>
-    <string name="PlagueDoctorMask_Info">這……這不僅僅是一副面具。它是……一道屏障。抵禦腐敗之力的護盾，正是瘟疫醫生不懈抗爭的力量。由最優質的烏木精心雕琢而成，刻有飢餓骷髏的面容。空洞的眼窩中鑲嵌著閃閃發光的紫水晶寶石，微微脈動著，如同即將熄滅的餘燼。你的每一次呼吸，每一句話語，都經過錯綜複雜的管道和過濾器網絡的過濾。一種由強效草藥和異國香料調製而成的混合物滲透到內部空氣中，掩蓋了如裹屍布般纏繞著你的死亡惡臭。</string>
+    <string name="PlagueDoctorMask_Info">This… this is no mere mask. It\'s… a barrier. A shield against the forces of decay that Plague Doctor tirelessly battle against. Crafted from the finest ebony wood, intricately carved with the visage of a ravenous skull. Its hollow eye sockets are filled with glittering, amethyst gemstones that pulse faintly, like the dying embers of a fire. Each breath you take, each utterance you make, is filtered through a labyrinthine network of tubes and filters. A concoction of potent herbs and exotic spices infuses the air within, masking the stench of death that clings to you like a shroud.</string>
     <string name="PlagueDoctorMask_Name">瘟疫醫生面具</string>
     <string name="PlagueDoctorNPC_After_Quest">我會證明的,我會證明給他們看!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">你還在嗎？來這裏！拿著這個。 </string>
@@ -1554,7 +1554,7 @@
     <string name="PlagueDoctorQuest_2_2_Epilogue">卓越！_陽光草_，其金色精華充滿活力地跳動著。我已從它細緻的結構學到了很多。*他遞給你一瓶_健康藥水_，液體散發出淡淡的金光。* 當世界壓在你身上時喝下它，感受陽光的溫暖喚醒你的精神。</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">帶兩顆太陽草種子給我。它們金色的花瓣蘊含著我想要理解的能量。找到它們，讓它們的本質得以揭示！</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">啊，_日曆草_！一朵 delicate 的花，花瓣散發著太陽的溫暖。我相信它的精華是……啊，算了，細節先不談了。總之非常關鍵。_兩顆日曆草種子_。幫我把牠們帶回來，我就獎勵你一件對冒險絕對有用的東西——充滿陽光生命力的_治癒藥水_。</string>
-    <string name="PlagueDoctorQuest_3_1_Epilogue">*他戴著手套的雙手輕輕捧著_蝙蝠_，以一種令人不安的迷戀審視著它微小的身軀* 太棒了！蝙蝠的迴聲定位……這是我從未見過的。如此精確……如此……控制。*他轉向妳，臉龐隱藏在面具之下* 為了妳的努力，這是_捲軸升級_。明智地使用它，因為它擁有……提煉妳本質的潛力。*他將捲軸遞給妳，聲音壓低成輕聲耳語* 這隻_蝙蝠_，它是……通往隱藏世界的窗口。一個……影子舞動、秘密低語的世界。</string>
+    <string name="PlagueDoctorQuest_3_1_Epilogue">*He cradles the _bat_ gently in his gloved hands, examining its tiny form with a disturbing fascination*  Magnificent! The bat’s echolocation… it’s unlike anything I\'ve encountered. Such precision… such… control. *He turns to you, his face obscured by his mask* For your efforts, a _Scroll of Upgrade_. Use it wisely, for it holds the potential to… refine your very essence. *He hands you the scroll, his voice dropping to a hushed whisper* This _bat_, it’s… a window into a hidden world.  A world… where shadows dance and secrets whisper.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">给我一只活着的、毫发无损的_吸血蝙蝠_！它的血液，它的翅膀……蕴含着我必须揭开秘密！</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*牠的眼中閃爍著一種奇異而狂熱的光芒* 啊，_吸血蝙蝠_！夜間的生物，以獵物的生命力為食。有趣……真是有趣。我需要一隻活的來研究其獨特的生理構造。這一切都是關於……理解……理解……*牠的聲音逐漸低沉，喃喃自語著一堆神秘術語*。對！蝙蝠的回聲定位，牠在完全黑暗中導航的能力……這是解開秘密的關鍵。</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*他仰頭發出咯咯的笑聲，聲音在他潮濕的實驗室中回盪* 壯觀！一個_死亡騎士_，站在我們面前！從它身上散發的力量……令人陶醉！*他轉向你，眼睛閃爍著狂熱的光芒* 而對你，一個配得上你勇氣的獎勵：一瓶_力量藥水_！願它賜予你征服任何敵人的力量！現在……讓我們檢查我們的主題。它的本質蘊含著可能改寫生命法則的秘密！*他帶著瘋狂的獰笑接近_死亡騎士_，揮舞著一瓶冒泡的綠色液體*</string>

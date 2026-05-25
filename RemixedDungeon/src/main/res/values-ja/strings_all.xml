@@ -975,11 +975,11 @@
     <string name="HeroClass_NecromancerPerks_3">ネクロマンサーはダンジョンの階層7で使える骸骨の鍵を持ってスタートする。</string>
     <string name="HeroClass_NecromancerPerks_4">治癒のポーションは最初から特定されている。</string>
     <string name="HeroClass_None">平民</string>
-    <string name="HeroClass_PlagueDoctorPerks_0">ペストドクターは倒した敵から毒腺、腐った臓器、骨片、下劣なエッセンスを採取する。血液は時間をかけて集められ、錬金術を行うために使用される。</string>
-    <string name="HeroClass_PlagueDoctorPerks_1">ペストマスク（すべてのガスに免疫）と解剖のこぎりを持ってスタートする。クリティカル・ヒットは追加パーツを落とし、解剖のこぎりは麻痺状態の敵に+50%のダメージを与える。</string>
-    <string name="HeroClass_PlagueDoctorPerks_2">麻痺ガスポーションと毒ガスのポーションは最初から特定されている。</string>
-    <string name="HeroClass_PlagueDoctorPerks_3">毒ガスで倒された敵は毒霧となって爆発し、倒された敵1体につき1HP回復する。</string>
-    <string name="HeroClass_PlagueDoctorPerks_4">ペストドクターは、愛用の解剖のこぎりを手にしていないと命中精度に大きなペナルティを受ける。また、射撃武器を使うことができない。</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">Plague Doctors harvest [yellow:Toxic Glands], [yellow:Rotten Organs], [yellow:Bone Shards] from slain enemies.</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">Plague Doctors are alchemy masters and able to use unique recipes.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Start with a [yellow:Plague Mask] (immune to all Gases) and a [yellow:Bone Saw]. Critical hits drop extra parts, and the Saw deals x1.5 damage to paralyzed foes.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Potions of [yellow:Paralysis Gas] and [yellow:Toxic Gas] are pre-identified.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Plague Doctors suffer great accuracy penalties without beloved Bone Saw in hand and cannot use ranged weapons.</string>
     <string name="HeroClass_Priest">聖職者</string>
     <string name="HeroClass_Rog">ローグ</string>
     <string name="HeroClass_RogPerks_0">ローグはスタート時に影のリング+1を持っている。</string>
@@ -1523,7 +1523,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="PirateSet_Name">海賊セット</string>
     <string name="PlagueDoctorMaskHood_Info">彫刻された黒檀の頭蓋骨、その空洞のソケットはアメジストの宝石の幽玄な輝きを放つ。呼吸をするたびに、チューブやフィルターの迷宮を通り抜け、強力なハーブやスパイスの香りが囁き、あなたにまとわりつく腐敗を覆い隠す。しかし、単にマスクをしているだけではない。真夜中のベルベットの重い頭巾が、あなたの顔と頭を影で覆い隠している。烏の翼のようなフードがあなたの背中を流れ、その縁は骨白レースのフリンジで縁取られ、ゾッとするほど美しいコントラストをなしている。マスクとフードを合わせると、妖怪のような姿となり、腐敗の力との果てしない戦いへの厳しい証となる。</string>
     <string name="PlagueDoctorMaskHood_Name">フード付きペストマスク</string>
-    <string name="PlagueDoctorMask_Info">これは...単なるマスクではない。これは...障壁だ。ペストドクターがたゆまず戦う腐敗の力に対する盾だ。最高級の黒檀の木から作られ、貪欲な髑髏の顔が精巧に彫られている。その空洞の眼窩は、アメジストの宝石で満たされている。呼吸のひとつひとつが、発話のひとつひとつが、迷宮のようなチューブやフィルターのネットワークを通してろ過される。強力なハーブとエキゾチックなスパイスを調合したものが中の空気に溶け込み、あなたにまとわりつく死臭を覆い隠している。</string>
+    <string name="PlagueDoctorMask_Info">This… this is no mere mask. It\'s… a barrier. A shield against the forces of decay that Plague Doctor tirelessly battle against. Crafted from the finest ebony wood, intricately carved with the visage of a ravenous skull. Its hollow eye sockets are filled with glittering, amethyst gemstones that pulse faintly, like the dying embers of a fire. Each breath you take, each utterance you make, is filtered through a labyrinthine network of tubes and filters. A concoction of potent herbs and exotic spices infuses the air within, masking the stench of death that clings to you like a shroud.</string>
     <string name="PlagueDoctorMask_Name">ペストマスク</string>
     <string name="PlagueDoctorNPC_After_Quest">みんなに見せるよ、みんなに！</string>
     <string name="PlagueDoctorNPC_After_Quest_2">まだいたの？これだ！これを持っていけ。</string>
@@ -1547,7 +1547,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="PlagueDoctorQuest_2_2_Epilogue">素晴らしい！その黄金色のエッセンスは生命力に満ちている。その繊細な構造から、私はすでに多くを学んだ。*あなたは 「治癒のポーション」受け取った* 世界があなたの上に重くのしかかるとき、これを飲むといい。そして太陽の暖かさがあなたの精神をよみがえらせるのを感じるのだ。</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">「サングラス」の種を２つだ。あの黄金の花びらには、私が求める力が宿っているはずだ。それを見つけ、その本質を明らかにしたいのだ！</string>
     <string name="PlagueDoctorQuest_2_2_Prologue"> ああ、「サングラス」！その花びらは太陽の暖かさを放っている。私はこの花のエッセンスに鍵があると信じている。私の研究には欠かせないものなのだ。もしサングラスの種を2つ取ってきてくれたら、冒険で必ず役に立つものをあげよう。</string>
-    <string name="PlagueDoctorQuest_3_1_Epilogue">*彼は手袋をはめた手で優しくコウモリを抱きかかえ、その小さな姿を舐め回すように調べ始めた* コウモリのエコーロケーションは...私が出会ったどんなものとも違う。その精密さ...その...コントロール... *不意に、彼はマスクで隠れた顔をあなたに向けた*  そうだ、君の努力に対して「強化のスクロール」をあげよう。賢く使うんだ。可能性を秘めてるから......君の本質を洗練させるんだ。*彼はあなたにスクロールを手渡すと、またぶつぶつと呟き始めた* 影が踊り…秘密がささやく世界…</string>
+    <string name="PlagueDoctorQuest_3_1_Epilogue">*He cradles the _bat_ gently in his gloved hands, examining its tiny form with a disturbing fascination*  Magnificent! The bat’s echolocation… it’s unlike anything I\'ve encountered. Such precision… such… control. *He turns to you, his face obscured by his mask* For your efforts, a _Scroll of Upgrade_. Use it wisely, for it holds the potential to… refine your very essence. *He hands you the scroll, his voice dropping to a hushed whisper* This _bat_, it’s… a window into a hidden world.  A world… where shadows dance and secrets whisper.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">吸血コウモリを生け捕りにしろ！その血、その翼...私が暴かねばならない秘密が隠されているのだ！</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*彼の目は奇妙な熱を帯びて輝いている* ああ、吸血コウモリ！獲物の生命力を糧とする夜の生き物。魅力的だ...本当に魅力的だ。その独特な生態を研究するには、生きているのが必要なんだ。すべてを...すべてを理解するためだ...そう... *彼は言葉を止め、難解な用語で独り言をつぶやいた* そうだ！コウモリのエコーロケーション、完全な暗闇の中を移動する能力...それが秘密を解く鍵だ！</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*彼は頭を後ろに倒してケタケタと笑い、その声がじめじめした研究室に響き渡る* 素晴らしい！ 「死の騎士」が私たちの前に立っている！ その存在から発せられる力は…酔いしれてしまう！ *彼はあなたに向き直り、熱を帯びた強さで目を輝かせる* そして、君の勇気にふさわしい報酬として、「力のポーション」を差し上げよう！どんな敵にも打ち勝つ力を与えてくれるだろう！ さあ......調査開始だ。その本質には、生命の法則を塗り替える秘密が隠されている！*彼は狂気じみた笑みを浮かべ、泡立つ緑色の液体の入った小瓶を振りかざしながら、「死の騎士」に近づく。</string>
