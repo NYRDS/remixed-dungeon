@@ -979,11 +979,11 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HeroClass_NecromancerPerks_3">Heiltränke sind von Anfang an identifiziert.</string>
     <string name="HeroClass_NecromancerPerks_4">Heiltränke sind von Anfang an identifiziert.</string>
     <string name="HeroClass_None">Bürgerlicher</string>
-    <string name="HeroClass_PlagueDoctorPerks_0">Plague Doctors ernten Giftige Drüsen, Verrottete Organe, Knochensplitter und Üble Essenz von besiegten Gegnern. Blut wird im Laufe der Zeit gesammelt und zur Alchemie verwendet.</string>
-    <string name="HeroClass_PlagueDoctorPerks_1">Beginne mit einer Pestmaske (immun gegen alle Gase) und einer Knochensäge. Kritische Treffer lassen zusätzliche Teile fallen, und die Säge verursacht +50% Schaden gegen paralysierte Gegner.</string>
-    <string name="HeroClass_PlagueDoctorPerks_2">Starte mit einer [yellow:Pestmaske] (immun gegen alle Gase) und einer [yellow:Knochensäge]. Kritische Treffer lassen zusätzliche Teile fallen, und die Säge verursacht x1.5 Schaden gegen paralysierte Gegner.</string>
-    <string name="HeroClass_PlagueDoctorPerks_3">Tränke von [yellow:Paralysis Gas] und [yellow:Toxisches Gas] sind vorher identifiziert.</string>
-    <string name="HeroClass_PlagueDoctorPerks_4">Pestärzte leiden unter starken Genauigkeitsstrafen, wenn sie nicht die geliebte Knochensäge in der Hand halten, und können keine Fernkampfwaffen benutzen.</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">Pestärzte ernten [yellow:Giftige Drüsen], [yellow:Verrottete Organe] und [yellow:Knochensplitter] von besiegten Gegnern.</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">Pestärzte sind Meister der Alchemie und können einzigartige Rezepte verwenden.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Starten mit einer [yellow:Pestmaske] (immun gegen alle Gase) und einer [yellow:Knochensäge]. Kritische Treffer lassen zusätzliche Teile fallen, und die Säge verursacht x1.5 Schaden gegen gelähmte Gegner.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Tränke von [yellow:Lähmungsgas] und [yellow:Giftgas] sind vorher identifiziert.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Pestärzte leiden unter starken Genauigkeitsstrafen, wenn sie nicht ihre geliebte Knochensäge in der Hand halten, und können keine Fernkampfwaffen benutzen.</string>
     <string name="HeroClass_Priest">Priester</string>
     <string name="HeroClass_Rog">Schurke</string>
     <string name="HeroClass_RogPerks_0">Schurken beginnen mit einem Schattenring+1.</string>

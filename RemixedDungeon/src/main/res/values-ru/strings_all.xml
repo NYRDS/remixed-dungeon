@@ -974,11 +974,11 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_NecromancerPerks_3">Некроманты начинают с ключом-скелетом от 7 уровня.</string>
     <string name="HeroClass_NecromancerPerks_4">Зелья Исцеления распознаны с самого начала.</string>
     <string name="HeroClass_None">commoner</string>
-    <string name="HeroClass_PlagueDoctorPerks_0">Чумные доктора собирают Токсические железы, Гнилые органы, Осколки костей и Гнусную эссенцию с поверженных врагов. Кровь собирается со временем и используется для алхимии.</string>
-    <string name="HeroClass_PlagueDoctorPerks_1">Начинают с Маской Чумного Доктора (иммунитет ко всем газам) и Костяной пилой. Критические удары выбивают дополнительные части, а Пила наносит +50% урона парализованным врагам.</string>
-    <string name="HeroClass_PlagueDoctorPerks_2">Зелья Парализующего газа и Токсичного газа опознаны изначально.</string>
-    <string name="HeroClass_PlagueDoctorPerks_3">Враги, убитые Токсичным газом, взрываются в Ядовитым Туманом, восстанавливая вам 1 HP за каждого поверженного врага.</string>
-    <string name="HeroClass_PlagueDoctorPerks_4">Чумные доктора получают большой штраф к меткости без своей Костяной пилы и не могут использовать дальнобойное оружие.</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">Чумные доктора собирают [yellow:Токсические железы], [yellow:Гнилые органы], [yellow:Осколки костей] с поверженных врагов.</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">Чумные доктора — мастера алхимии и могут использовать уникальные рецепты.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Начинают с [yellow:Маски чумного доктора] (иммунитет ко всем газам) и [yellow:Костяной пилы]. Критические удары выбивают дополнительные части, а Пила наносит x1.5 урона парализованным врагам.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Зелья [yellow:Парализующего газа] и [yellow:Токсичного газа] опознаны изначально.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Чумные доктора получают большой штраф к меткости без своей любимой Костяной пилы в руке и не могут использовать дальнобойное оружие.</string>
     <string name="HeroClass_Priest">Священник</string>
     <string name="HeroClass_Rog">вор</string>
     <string name="HeroClass_RogPerks_0">Воры начинают с Кольцом Теней+1.</string>
