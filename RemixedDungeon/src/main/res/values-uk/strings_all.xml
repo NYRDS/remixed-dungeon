@@ -985,10 +985,12 @@
     <string name="HeroClass_NecromancerPerks_3">Некроманти мають на початку ключ-череп від рівня 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Зілля лікування ідентифіковані з самого початку.</string>
     <string name="HeroClass_None">землянин</string>
+    <string name="HeroClass_Doctor">Чумний Доктор</string>
     <string name="HeroClass_PlagueDoctorPerks_0">Чумні доктори збирають [yellow:Токсичні залози], [yellow:Гнилі органи], [yellow:Уламки кісток] з переможених ворогів.</string>
-    <string name="HeroClass_PlagueDoctorPerks_1">Починаєте з маскою чуми (імунітет до всіх газів) і кістковою пилою. Критичні удари викидають додаткові частини, а пила завдає +50% шкоди паралізованим ворогам.</string>
-    <string name="HeroClass_PlagueDoctorPerks_3">Зілля [yellow:Паралізуючий газ] та [yellow:Токсичний газ] передпог Riot- identificati.</string>
-    <string name="HeroClass_PlagueDoctorPerks_4">Чумні доктори зазнають великих штрафів до влучності без улюбленої Кістяної пили в руках і не можуть використовувати дистанційну зброю.</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">Чумні доктори — майстри алхімії та можуть використовувати унікальні рецепти.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Починають з [yellow:Маски чумного доктора] (імунітет до всіх газів) та [yellow:Кісткової пили]. Критичні удари вибивають додаткові частини, а Пила завдає x1.5 шкоди паралізованим ворогам.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Зілля [yellow:Паралізуючого газу] та [yellow:Токсичного газу] ідентифіковані з самого початку.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Чумні доктори зазнають великих штрафів до влучності без улюбленої Кісткової пили в руках і не можуть використовувати дистанційну зброю.</string>
     <string name="HeroClass_Priest">Жрець</string>
     <string name="HeroClass_Rog">крадій</string>
     <string name="HeroClass_RogPerks_0">Крадії починають з кільцем тіней +1.</string>
