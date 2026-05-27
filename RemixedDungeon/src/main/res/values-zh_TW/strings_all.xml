@@ -3084,7 +3084,7 @@ remix.31.1\n
   <string name="VileEssence_Info">從戰敗的敵人身上提取的濃縮腐敗精華。這種黑暗物質蘊含著邪惡的能量，在煉金術中備受推崇。</string>
   <string name="Carcass_DissectMessage">你解剖屍體並得到一個%s。</string>
   <string name="Carcass_DissectResult">從%1$s中你可以獲得%2$d收成%3$s。</string>
-  <string name="Carcass_DissectFailed">你仔細解剖%s，卻沒發現任何有價值的東西。[╯•̀ὤ•́]╯</string>
+  <string name="Carcass_DissectFailed">你仔細解剖%s，卻沒發現任何有價值的東西。•̀ὤ•́</string>
   <string name="Carcass_TooFarToDissect">你需要靠近才能解剖屍體。</string>
   <string name="StartScene_UnlockDoctor">解鎖瘟疫醫生－完成老瘟疫醫師的任務</string>
 </resources>
