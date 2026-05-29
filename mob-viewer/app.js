@@ -31,7 +31,7 @@ class SpriteViewer {
     async loadMobList() {
         try {
             // Fetch the list of sprite JSON files
-            const response = await fetch('../RemixedDungeon/src/main/assets/spritesDesc/');
+            const response = await fetch('assets/spritesDesc/');
             
             // This won't work directly in browser, so we'll use a predefined list
             // In production, you'd need a server endpoint or build step
@@ -78,12 +78,12 @@ class SpriteViewer {
         
         try {
             // Load sprite JSON
-            const jsonPath = `RemixedDungeon/src/main/assets/spritesDesc/${mobName}.json`;
+            const jsonPath = `assets/spritesDesc/${mobName}.json`;
             const response = await fetch(jsonPath);
             const spriteData = await response.json();
             
             // Load texture
-            const texturePath = `RemixedDungeon/src/main/assets/${spriteData.texture}`;
+            const texturePath = `assets/${spriteData.texture}`;
             await this.loadTexture(texturePath);
             
             this.currentMob = {
