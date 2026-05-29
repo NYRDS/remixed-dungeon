@@ -196,18 +196,82 @@
     </div>
     
     <header>
-        <h1>🎮 Mob Animation Viewer</h1>
-        <p>Load and play mob animations from Remixed Dungeon</p>
+        <h1>🎮 Mob & Hero Animation Viewer</h1>
+        <p>Load and play mob and hero animations from Remixed Dungeon</p>
     </header>
     
     <div class="container">
         <aside class="sidebar">
-            <h2 style="margin-bottom: 15px; color: #4ecca3;">Mob Selection</h2>
-            <input type="text" id="searchBox" placeholder="Search mobs..." 
-                   style="width: 100%; padding: 10px; margin-bottom: 15px; 
-                          background: #0f3460; border: 1px solid #e94560; 
-                          color: white; border-radius: 4px;">
-            <ul class="mob-list" id="mobList"></ul>
+            <div style="margin-bottom: 20px;">
+                <button id="modeMobBtn" class="active" style="width: 48%;">👾 Mobs</button>
+                <button id="modeHeroBtn" style="width: 48%;">🦸 Heroes</button>
+            </div>
+            
+            <div id="mobSection">
+                <h2 style="margin-bottom: 15px; color: #4ecca3;">Mob Selection</h2>
+                <input type="text" id="searchBox" placeholder="Search mobs..." 
+                       style="width: 100%; padding: 10px; margin-bottom: 15px; 
+                              background: #0f3460; border: 1px solid #e94560; 
+                              color: white; border-radius: 4px;">
+                <ul class="mob-list" id="mobList"></ul>
+            </div>
+            
+            <div id="heroSection" style="display: none;">
+                <h2 style="margin-bottom: 15px; color: #4ecca3;">Hero Configuration</h2>
+                
+                <label style="margin-bottom: 10px;">
+                    Sprite Style:
+                    <select id="heroStyleSelect" style="width: 100%; margin-top: 5px;">
+                        <option value="modern">Modern</option>
+                        <option value="retro">Retro</option>
+                    </select>
+                </label>
+                
+                <label style="margin-bottom: 10px;">
+                    Class:
+                    <select id="heroClassSelect" style="width: 100%; margin-top: 5px;">
+                        <option value="WARRIOR">Warrior</option>
+                        <option value="MAGE">Mage</option>
+                        <option value="ROGUE">Rogue</option>
+                        <option value="HUNTRESS">Huntress</option>
+                        <option value="ELF">Elf</option>
+                        <option value="NECROMANCER">Necromancer</option>
+                        <option value="GNOLL">Gnoll</option>
+                        <option value="PRIEST">Priest</option>
+                        <option value="DOCTOR">Doctor</option>
+                    </select>
+                </label>
+                
+                <label style="margin-bottom: 10px;">
+                    Subclass:
+                    <select id="heroSubclassSelect" style="width: 100%; margin-top: 5px;">
+                        <option value="NONE">None</option>
+                    </select>
+                </label>
+                
+                <label style="margin-bottom: 10px;">
+                    Armor:
+                    <select id="heroArmorSelect" style="width: 100%; margin-top: 5px;">
+                        <option value="none">No Armor</option>
+                    </select>
+                </label>
+                
+                <label style="margin-bottom: 10px;">
+                    Weapon:
+                    <select id="heroWeaponSelect" style="width: 100%; margin-top: 5px;">
+                        <option value="none">No Weapon</option>
+                    </select>
+                </label>
+                
+                <label style="margin-bottom: 10px;">
+                    Accessory:
+                    <select id="heroAccessorySelect" style="width: 100%; margin-top: 5px;">
+                        <option value="none">No Accessory</option>
+                    </select>
+                </label>
+                
+                <button id="applyHeroBtn" style="width: 100%; margin-top: 10px;">Apply Hero</button>
+            </div>
             
             <div class="animation-info" id="animInfo" style="display: none;">
                 <h3>Sprite Info</h3>
@@ -226,6 +290,10 @@
                 <div class="info-row">
                     <span>Animations:</span>
                     <span id="infoAnims">-</span>
+                </div>
+                <div class="info-row" id="infoLayersRow" style="display: none;">
+                    <span>Layers:</span>
+                    <span id="infoLayers">-</span>
                 </div>
             </div>
         </aside>
@@ -265,6 +333,6 @@
         </main>
     </div>
     
-    <script src="app.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

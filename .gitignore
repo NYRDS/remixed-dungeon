@@ -7,71 +7,34 @@ dist/
 build/
 target/
 
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
 # Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.Python
-env/
-venv/
-.venv/
-.ENV
-pip-log.txt
-pip-delete-this-directory.txt
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.log
-.DS_Store
-Thumbs.db
 
-# Compiled and binary files
-*.class
+# Compiled files
 *.o
+*.obj
 *.so
-*.dylib
 *.dll
 *.exe
-*.out
-*.a
-*.lib
 
-# Editor/IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*.tmp
-
-# Environment variables
-.env
-.env.local
-*.env.*
-
-# MyPy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pytest
-.pytest_cache/
-
-# Coverage
-coverage/
-htmlcov/
-
-# Gradle
-.gradle/
-
-# Logs
-*.log
-
-# Compressed files
+# Compression
 *.zip
 *.gz
 *.tar
@@ -94,4 +57,15 @@ htmlcov/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+coverage/
+htmlcov/
+.mypy_cache/
+.pytest_cache/
 ```
