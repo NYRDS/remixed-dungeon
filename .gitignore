@@ -5,67 +5,44 @@ node_modules/
 # Build artifacts
 dist/
 build/
-target/
+*.js.map
 
 # Environment
 .env
 .env.local
 *.env.*
 
-# Editors
-.vscode/
-.idea/
-
-# Logs and temp files
+# Logs and temporary files
 *.log
 *.tmp
+
+# Editor/IDE
+.vscode/
+.idea/
 *.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
 
 # Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# Compiled files
-*.o
-*.obj
+.Python
 *.so
-*.dll
-*.exe
-
-# Compression
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Testing
-.coverage
-coverage/
-htmlcov/
+*.egg-info/
+.eggs/
 .mypy_cache/
 .pytest_cache/
+.tox/
+.coverage
+nosetests.xml
 ```
