@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mob Animation Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background: #16213e;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #0f3460;
+        }
+        
+        header h1 {
+            color: #e94560;
+            margin-bottom: 10px;
+        }
+        
+        .container {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+            gap: 20px;
+        }
+        
+        .sidebar {
+            width: 300px;
+            background: #16213e;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-y: auto;
+            max-height: calc(100vh - 140px);
+        }
+        
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .canvas-container {
+            background: #16213e;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+        
+        canvas {
+            background: #0f0f23;
+            border: 2px solid #0f3460;
+            border-radius: 4px;
+            image-rendering: pixelated;
+        }
+        
+        .controls {
+            background: #16213e;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        button {
+            background: #e94560;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #ff6b6b;
+        }
+        
+        button.active {
+            background: #4ecca3;
+        }
+        
+        select {
+            background: #0f3460;
+            color: white;
+            border: 1px solid #e94560;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        
+        input[type="range"] {
+            width: 100px;
+        }
+        
+        .mob-list {
+            list-style: none;
+        }
+        
+        .mob-list li {
+            padding: 10px;
+            margin: 5px 0;
+            background: #0f3460;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .mob-list li:hover {
+            background: #e94560;
+        }
+        
+        .mob-list li.selected {
+            background: #4ecca3;
+            color: #1a1a2e;
+        }
+        
+        .animation-info {
+            background: #0f3460;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        
+        .animation-info h3 {
+            color: #4ecca3;
+            margin-bottom: 10px;
+        }
+        
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #16213e;
+        }
+        
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 26, 46, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .loading-spinner {
+            border: 4px solid #0f3460;
+            border-top: 4px solid #e94560;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading" class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    <header>
+        <h1>🎮 Mob Animation Viewer</h1>
+        <p>Load and play mob animations from Remixed Dungeon</p>
+    </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <h2 style="margin-bottom: 15px; color: #4ecca3;">Mob Selection</h2>
+            <input type="text" id="searchBox" placeholder="Search mobs..." 
+                   style="width: 100%; padding: 10px; margin-bottom: 15px; 
+                          background: #0f3460; border: 1px solid #e94560; 
+                          color: white; border-radius: 4px;">
+            <ul class="mob-list" id="mobList"></ul>
+            
+            <div class="animation-info" id="animInfo" style="display: none;">
+                <h3>Sprite Info</h3>
+                <div class="info-row">
+                    <span>Name:</span>
+                    <span id="infoName">-</span>
+                </div>
+                <div class="info-row">
+                    <span>Size:</span>
+                    <span id="infoSize">-</span>
+                </div>
+                <div class="info-row">
+                    <span>Texture:</span>
+                    <span id="infoTexture">-</span>
+                </div>
+                <div class="info-row">
+                    <span>Animations:</span>
+                    <span id="infoAnims">-</span>
+                </div>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <div class="canvas-container">
+                <canvas id="spriteCanvas" width="256" height="256"></canvas>
+            </div>
+            
+            <div class="controls">
+                <label>
+                    Animation:
+                    <select id="animationSelect">
+                        <option value="idle">Idle</option>
+                        <option value="run">Run</option>
+                        <option value="attack">Attack</option>
+                        <option value="die">Die</option>
+                    </select>
+                </label>
+                
+                <button id="playBtn">▶ Play</button>
+                <button id="pauseBtn">⏸ Pause</button>
+                <button id="loopBtn" class="active">🔁 Loop: ON</button>
+                
+                <label>
+                    Scale:
+                    <input type="range" id="scaleSlider" min="1" max="8" value="4" step="1">
+                    <span id="scaleValue">4x</span>
+                </label>
+                
+                <label>
+                    Speed:
+                    <input type="range" id="speedSlider" min="0.25" max="4" value="1" step="0.25">
+                    <span id="speedValue">1x</span>
+                </label>
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
