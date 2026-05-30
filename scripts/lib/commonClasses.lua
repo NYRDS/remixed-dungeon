@@ -124,7 +124,7 @@ local MobAi = luajava.bindClass("com.nyrds.pixeldungeon.ai.MobAi")
 
 local Position = "com.nyrds.pixeldungeon.utils.Position"
 
-local CharsList = luajava.newInstance("com.nyrds.pixeldungeon.utils.CharsList")
+local CharsList = luajava.bindClass("com.nyrds.pixeldungeon.utils.CharsList")
 
 
 local wandOfBlink = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfBlink")
