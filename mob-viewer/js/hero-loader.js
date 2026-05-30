@@ -98,7 +98,10 @@ export class HeroLoader {
                     'chaosshield': 'ChaosShield',
                     'chaossword': 'ChaosSword',
                     'chaosbow': 'ChaosBow',
-                    'chaosstaff': 'ChaosStaff'
+                    'chaosstaff': 'ChaosStaff',
+                    'woodenshield': 'WoodenShield',
+                    'toughshield': 'ToughShield',
+                    'strongshield': 'StrongShield'
                 };
                 return weaponMap[weaponName.toLowerCase()] || this.capitalizeFirst(weaponName);
             };
@@ -184,14 +187,27 @@ export class HeroLoader {
             // Weapon item (using PascalCase visual names as per Java getVisualName())
             if (weapon !== 'none') {
                 const weaponVisualName = getWeaponVisualName(weapon);
-                const weaponRightFile = `${basePath}items/${weaponVisualName}_right.png`;
-                const weaponLeftFile = `${basePath}items/${weaponVisualName}_left.png`;
                 
-                if (await this.checkResourceExists(weaponRightFile)) {
-                    await this.loadHeroLayer('right_hand_item', weaponRightFile);
-                }
-                if (await this.checkResourceExists(weaponLeftFile)) {
-                    await this.loadHeroLayer('left_hand_item', weaponLeftFile);
+                // Check if this is a shield (left-hand only item)
+                const isShield = weapon.toLowerCase().includes('shield');
+                
+                if (isShield) {
+                    // Shields only render in left hand
+                    const weaponLeftFile = `${basePath}items/${weaponVisualName}_left.png`;
+                    if (await this.checkResourceExists(weaponLeftFile)) {
+                        await this.loadHeroLayer('left_hand_item', weaponLeftFile);
+                    }
+                } else {
+                    // Regular weapons - try both hands
+                    const weaponRightFile = `${basePath}items/${weaponVisualName}_right.png`;
+                    const weaponLeftFile = `${basePath}items/${weaponVisualName}_left.png`;
+                    
+                    if (await this.checkResourceExists(weaponRightFile)) {
+                        await this.loadHeroLayer('right_hand_item', weaponRightFile);
+                    }
+                    if (await this.checkResourceExists(weaponLeftFile)) {
+                        await this.loadHeroLayer('left_hand_item', weaponLeftFile);
+                    }
                 }
             }
 
