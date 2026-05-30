@@ -9,195 +9,223 @@ import org.teavm.classlib.ReflectionContext;
 import org.teavm.classlib.ReflectionSupplier;
 import org.teavm.model.MethodDescriptor;
 
+import com.nyrds.generated.LuaClassMap;
+
 /**
  * Tells TeaVM which classes need reflective access because they are accessed
  * dynamically from Lua scripts via luajava.bindClass() / newInstance().
  *
- * - isClassFoundByName: makes Class.forName() work for these classes
- * - getAccessibleMethods: exposes constructors so newInstance() can call them
- *
- * We only expose constructors (<init>), not all methods, to avoid pulling in
- * transitive dependencies that TeaVM's classlib doesn't support (e.g. java.text.Collator).
+ * Uses the generated LuaClassMap (built by the annotation processor from
+ * @LuaInterface annotations) for surgical method/field/constructor exposure.
+ * Also maintains supplementary sets for classes not yet annotated.
  */
 public class LuaReflectionSupplier implements ReflectionSupplier {
 
-    /** Classes that need Class.forName() to work (bindClass) */
-    private static final Set<String> KNOWN_CLASSES = new HashSet<>();
+    /**
+     * Classes that need constructors exposed (newInstance) but aren't yet
+     * annotated with @LuaInterface. Keep in sync with scripts/lib/commonClasses.lua.
+     */
+    private static final Set<String> SUPPLEMENTARY_INSTANTIABLE = new HashSet<>();
 
-    /** Classes that need constructors exposed (newInstance) */
-    private static final Set<String> INSTANTIABLE_CLASSES = new HashSet<>();
+    /**
+     * Classes that only need Class.forName() support (bindClass static calls)
+     * but aren't yet annotated with @LuaInterface.
+     */
+    private static final Set<String> SUPPLEMENTARY_CLASSES = new HashSet<>();
 
     static {
-        // Classes accessed via luajava.newInstance() — need constructors
-        INSTANTIABLE_CLASSES.add("com.nyrds.pixeldungeon.utils.CharsList");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.items.wands.WandOfBlink");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.items.wands.WandOfTelekinesis");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.items.wands.WandOfFirebolt");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.windows.WndMessage");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.windows.WndStory");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.windows.WndQuest");
-        INSTANTIABLE_CLASSES.add("com.nyrds.pixeldungeon.windows.WndOptionsLua");
-        INSTANTIABLE_CLASSES.add("com.nyrds.pixeldungeon.windows.WndShopOptions");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.windows.WndChooseWay");
-        INSTANTIABLE_CLASSES.add("com.watabou.noosa.Image");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.ui.Banner");
-        INSTANTIABLE_CLASSES.add("com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor");
-        INSTANTIABLE_CLASSES.add("com.watabou.noosa.tweeners.PosTweener");
-        INSTANTIABLE_CLASSES.add("com.watabou.noosa.tweeners.JumpTweener");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.effects.CellEmitter");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.effects.BlobEmitter");
-        INSTANTIABLE_CLASSES.add("com.watabou.noosa.particles.Emitter");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.effects.Speck");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.effects.SpellSprite");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.effects.MagicMissile");
-        INSTANTIABLE_CLASSES.add("com.nyrds.pixeldungeon.effects.DeathStroke");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.effects.Wound");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.effects.Flare");
-        INSTANTIABLE_CLASSES.add("com.watabou.pixeldungeon.effects.HighlightCell");
-        INSTANTIABLE_CLASSES.add("com.nyrds.pixeldungeon.utils.Position");
+        // Objects.Ui — instantiated from Lua via RPD.new()
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.windows.WndMessage");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.windows.WndStory");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.windows.WndQuest");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.nyrds.pixeldungeon.windows.WndShopOptions");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.windows.WndChooseWay");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.noosa.Image");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.ui.Banner");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor");
 
-        // All known classes — Class.forName() + bindClass support
-        KNOWN_CLASSES.addAll(INSTANTIABLE_CLASSES);
+        // Tweeners — instantiated from Lua
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.noosa.tweeners.PosTweener");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.noosa.tweeners.JumpTweener");
+
+        // Effects/SFX — instantiated from Lua
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.CellEmitter");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.BlobEmitter");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.noosa.particles.Emitter");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.MagicMissile");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.nyrds.pixeldungeon.effects.DeathStroke");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.HighlightCell");
+
+        // Particle classes — instantiated from Lua
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.FlameParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.SnowParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.ShaftParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.ShadowParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.DarknessParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.EarthParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.EnergyParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.FlowParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.LeafParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.PoisonParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.PurpleParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.SparkParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.WebParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.WindParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.WoolParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.BloodParticle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.effects.particles.ElmoParticle");
+
+        // Misc — instantiated from Lua
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.items.wands.WandOfBlink");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.items.wands.WandOfTelekinesis");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.items.wands.WandOfFirebolt");
 
         // Classes only accessed via bindClass (static methods) — no constructor needed
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.utils.GLog");
-        KNOWN_CLASSES.add("com.nyrds.platform.game.RemixedDungeon");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.game.GameLoop");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.utils.DungeonGenerator");
-        KNOWN_CLASSES.add("com.watabou.utils.PathFinder");
-        KNOWN_CLASSES.add("com.nyrds.platform.audio.Sample");
-        KNOWN_CLASSES.add("com.nyrds.platform.audio.MusicManager");
-        KNOWN_CLASSES.add("com.nyrds.platform.util.StringsManager");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.CharUtils");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.game.ModQuirks");
-        KNOWN_CLASSES.add("com.nyrds.util.Util");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.windows.WndBag");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.items.Treasury");
-
-        // Buffs
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Buff");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Roots");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Paralysis");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Vertigo");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Invisibility");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Levitation");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Hunger");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Poison");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Frost");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Light");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Cripple");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Charm");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Blessed");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.MindVision");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.mechanics.buffs.Necrotism");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.mechanics.buffs.RageBuff");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Terror");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Amok");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Awareness");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Barkskin");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Sleep");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Slow");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Blindness");
-
-        // Blobs
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Blob");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Fire");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Foliage");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.ConfusionGas");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.LiquidFlame");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.ParalyticGas");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Darkness");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Web");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.ToxicGas");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.MiasmaGas");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Regrowth");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.WaterOfHealth");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.WaterOfTransmutation");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.WaterOfAwareness");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Alchemy");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Freezing");
-
-        // Mechanics
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.mechanics.Ballistica");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.Challenges");
-
-        // Scenes & UI
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.scenes.GameScene");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.Dungeon");
-        KNOWN_CLASSES.add("com.watabou.noosa.Camera");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.ai.MobAi");
-
-        // Factories
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.items.common.ItemFactory");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.mobs.common.MobFactory");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.effects.EffectsFactory");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.mechanics.spells.SpellFactory");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.Effects");
-
-        // Particle classes
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.FlameParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.SnowParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.ShaftParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.ShadowParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.DarknessParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.EarthParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.EnergyParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.FlowParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.LeafParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.PoisonParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.PurpleParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.SparkParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.WebParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.WindParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.WoolParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.BloodParticle");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.effects.particles.ElmoParticle");
-
-        // Misc
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.Badges");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.items.ItemUtils");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.DungeonTilemap");
-        KNOWN_CLASSES.add("com.nyrds.util.ModdingMode");
-        KNOWN_CLASSES.add("com.nyrds.lua.LuaUtils");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.ui.QuickSlot");
-        KNOWN_CLASSES.add("com.nyrds.platform.app.Input");
-        KNOWN_CLASSES.add("com.watabou.utils.SystemTime");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.levels.Terrain");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.Actor");
-        KNOWN_CLASSES.add("com.nyrds.pixeldungeon.alchemy.AlchemyRecipes");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.Journal");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.levels.features.Chasm");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.actors.mobs.Mob");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.items.Heap");
-        KNOWN_CLASSES.add("com.watabou.pixeldungeon.ui.BuffIndicator");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.utils.GLog");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.platform.game.RemixedDungeon");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.game.GameLoop");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.utils.PathFinder");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.platform.audio.Sample");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.platform.audio.MusicManager");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.platform.util.StringsManager");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.CharUtils");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.game.ModQuirks");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.util.Util");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.windows.WndBag");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.items.Treasury");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Buff");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Roots");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Paralysis");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Vertigo");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Invisibility");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Levitation");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Hunger");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Poison");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Frost");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Light");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Cripple");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Charm");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Blessed");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.MindVision");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.mechanics.buffs.Necrotism");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.mechanics.buffs.RageBuff");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Terror");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Amok");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Awareness");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Barkskin");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Sleep");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Slow");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.buffs.Blindness");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Blob");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Fire");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Foliage");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.ConfusionGas");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.LiquidFlame");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.ParalyticGas");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Darkness");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Web");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.ToxicGas");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.MiasmaGas");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Regrowth");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.WaterOfHealth");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.WaterOfTransmutation");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.WaterOfAwareness");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.blobs.Freezing");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.mechanics.Ballistica");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.Challenges");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.scenes.GameScene");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.Dungeon");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.noosa.Camera");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.ai.MobAi");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.items.common.ItemFactory");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.mobs.common.MobFactory");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.effects.EffectsFactory");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.mechanics.spells.SpellFactory");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.Effects");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.Speck");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.SpellSprite");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.FlameParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.SnowParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.ShaftParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.ShadowParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.DarknessParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.EarthParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.EnergyParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.FlowParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.LeafParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.PoisonParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.PurpleParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.SparkParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.WebParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.WindParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.WoolParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.BloodParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.effects.particles.ElmoParticle");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.Badges");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.items.ItemUtils");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.DungeonTilemap");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.util.ModdingMode");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.lua.LuaUtils");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.ui.QuickSlot");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.platform.app.Input");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.utils.SystemTime");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.levels.Terrain");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.Actor");
+        SUPPLEMENTARY_CLASSES.add("com.nyrds.pixeldungeon.alchemy.AlchemyRecipes");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.Journal");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.levels.features.Chasm");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.actors.mobs.Mob");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.items.Heap");
+        SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.ui.BuffIndicator");
     }
 
     @Override
     public boolean isClassFoundByName(ReflectionContext context, String name) {
-        return KNOWN_CLASSES.contains(name);
+        return LuaClassMap.ALL_CLASSES.contains(name)
+                || SUPPLEMENTARY_INSTANTIABLE.contains(name)
+                || SUPPLEMENTARY_CLASSES.contains(name);
     }
 
     @Override
     public Collection<String> getAccessibleFields(ReflectionContext context, String className) {
-        // Don't expose fields — too many transitive deps
+        Set<String> fields = LuaClassMap.FIELDS.get(className);
+        if (fields != null) {
+            return fields;
+        }
         return Collections.emptyList();
     }
 
     @Override
     public Collection<MethodDescriptor> getAccessibleMethods(ReflectionContext context, String className) {
-        if (!INSTANTIABLE_CLASSES.contains(className)) {
-            return Collections.emptyList();
-        }
-        // Only expose constructors (<init>) to avoid pulling in the full method graph
         var cls = context.getClassSource().get(className);
         if (cls == null) return Collections.emptyList();
+
         Set<MethodDescriptor> methods = new HashSet<>();
-        for (var method : cls.getMethods()) {
-            if (method.getName().equals("<init>")) {
-                methods.add(method.getDescriptor());
+
+        // Expose @LuaInterface-annotated methods from generated map
+        Set<String> methodNames = LuaClassMap.METHODS.get(className);
+        if (methodNames != null) {
+            for (var method : cls.getMethods()) {
+                if (methodNames.contains(method.getName())) {
+                    methods.add(method.getDescriptor());
+                }
             }
         }
+
+        // Expose constructors for classes in generated HAS_CONSTRUCTORS
+        // and for supplementary instantiable classes
+        boolean needsConstructor = LuaClassMap.HAS_CONSTRUCTORS.contains(className)
+                || SUPPLEMENTARY_INSTANTIABLE.contains(className);
+
+        if (needsConstructor) {
+            for (var method : cls.getMethods()) {
+                if (method.getName().equals("<init>")) {
+                    methods.add(method.getDescriptor());
+                }
+            }
+        }
+
         return methods;
     }
 }

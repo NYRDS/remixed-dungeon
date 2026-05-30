@@ -4,8 +4,10 @@ import com.google.auto.service.AutoService;
 import com.google.common.collect.ImmutableSet;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.CodeBlock;
+import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
+import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 
@@ -68,11 +70,14 @@ public class PdAnnotationProcessor extends AbstractProcessor {
 
 	@Override
 	public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
+		messager = processingEnv.getMessager();
+
+		// Process @LuaInterface annotations
+		processLuaInterface(roundEnvironment);
+
 		if (generated) {
 			return true;
 		}
-
-		messager = processingEnv.getMessager();
 
 		Map<Element, Set<Element>> fieldsByClass = new HashMap<>();
 		Map<Element, String> defaultValues = new HashMap<>();
@@ -303,9 +308,215 @@ public class PdAnnotationProcessor extends AbstractProcessor {
 		code.addStatement(template + "($T) bundle.getMap($S)", fieldName, TypeName.get(mapType), fieldName);
 	}
 
+	/**
+	 * Process @LuaInterface annotations and generate LuaClassMap.java
+	 * with all classes, methods, fields, and constructors needed for
+	 * TeaVM reflective access from Lua scripts.
+	 */
+	private boolean luaClassMapGenerated = false;
+
+	private void processLuaInterface(RoundEnvironment roundEnvironment) {
+		if (luaClassMapGenerated) {
+			return;
+		}
+
+		// className -> set of method names
+		Map<String, Set<String>> methodsByClass = new HashMap<>();
+		// className -> set of field names
+		Map<String, Set<String>> fieldsByClass = new HashMap<>();
+		// className -> has constructor
+		Set<String> hasConstructor = new HashSet<>();
+		// All class names seen
+		Set<String> allClasses = new HashSet<>();
+
+		for (Element element : roundEnvironment.getElementsAnnotatedWith(LuaInterface.class)) {
+			ElementKind kind = element.getKind();
+			String className;
+
+			if (kind == ElementKind.CLASS || kind == ElementKind.INTERFACE) {
+				// Type-level @LuaInterface: include all public methods
+				className = ((TypeElement) element).getQualifiedName().toString();
+				allClasses.add(className);
+				for (Element enclosed : element.getEnclosedElements()) {
+					if (enclosed.getKind() == ElementKind.METHOD
+							&& enclosed.getModifiers().contains(Modifier.PUBLIC)) {
+						methodsByClass.computeIfAbsent(className, k -> new HashSet<>())
+								.add(enclosed.getSimpleName().toString());
+					}
+				}
+			} else if (kind == ElementKind.METHOD || kind == ElementKind.CONSTRUCTOR) {
+				Element parent = element.getEnclosingElement();
+				if (parent.getKind() != ElementKind.CLASS && parent.getKind() != ElementKind.INTERFACE) {
+					continue;
+				}
+				className = ((TypeElement) parent).getQualifiedName().toString();
+				allClasses.add(className);
+
+				if (kind == ElementKind.CONSTRUCTOR) {
+					hasConstructor.add(className);
+				} else {
+					methodsByClass.computeIfAbsent(className, k -> new HashSet<>())
+							.add(element.getSimpleName().toString());
+				}
+			} else if (kind == ElementKind.FIELD) {
+				Element parent = element.getEnclosingElement();
+				if (parent.getKind() != ElementKind.CLASS && parent.getKind() != ElementKind.INTERFACE) {
+					continue;
+				}
+				className = ((TypeElement) parent).getQualifiedName().toString();
+				allClasses.add(className);
+				fieldsByClass.computeIfAbsent(className, k -> new HashSet<>())
+						.add(element.getSimpleName().toString());
+			}
+		}
+
+		if (allClasses.isEmpty() && methodsByClass.isEmpty()) {
+			return;
+		}
+
+		// Add hardcoded JDK types needed as return types from Lua-accessible methods
+		allClasses.add("java.util.List");
+		allClasses.add("java.util.ArrayList");
+		allClasses.add("java.util.Map");
+		allClasses.add("java.util.HashMap");
+		allClasses.add("java.util.Set");
+		allClasses.add("java.util.HashSet");
+		allClasses.add("java.util.Collection");
+
+		// List methods — registered on both the interface AND concrete ArrayList,
+		// because TeaVM reflection is per-class and the hierarchy walk follows
+		// extends (not implements), so interface methods won't be found at runtime.
+		java.util.List<String> listMethods = java.util.Arrays.asList("size", "get", "add", "remove",
+				"isEmpty", "contains", "indexOf", "iterator", "toArray", "containsAll", "addAll",
+				"removeAll", "clear", "listIterator", "subList", "set", "lastIndexOf");
+		methodsByClass.computeIfAbsent("java.util.List", k -> new HashSet<>()).addAll(listMethods);
+		methodsByClass.computeIfAbsent("java.util.ArrayList", k -> new HashSet<>()).addAll(listMethods);
+		methodsByClass.get("java.util.ArrayList").add("<init>");
+
+		java.util.List<String> mapMethods = java.util.Arrays.asList("get", "put", "containsKey", "size",
+				"keySet", "values", "entrySet", "isEmpty", "remove", "containsValue", "getOrDefault",
+				"putIfAbsent");
+		methodsByClass.computeIfAbsent("java.util.Map", k -> new HashSet<>()).addAll(mapMethods);
+		methodsByClass.computeIfAbsent("java.util.HashMap", k -> new HashSet<>()).addAll(mapMethods);
+		methodsByClass.get("java.util.HashMap").add("<init>");
+
+		java.util.List<String> setMethods = java.util.Arrays.asList("size", "isEmpty", "contains",
+				"iterator", "toArray", "add", "remove", "containsAll", "addAll", "retainAll",
+				"removeAll", "clear");
+		methodsByClass.computeIfAbsent("java.util.Set", k -> new HashSet<>()).addAll(setMethods);
+		methodsByClass.computeIfAbsent("java.util.HashSet", k -> new HashSet<>()).addAll(setMethods);
+		methodsByClass.get("java.util.HashSet").add("<init>");
+
+		java.util.List<String> collectionMethods = java.util.Arrays.asList("size", "isEmpty", "contains",
+				"iterator", "toArray", "add", "remove", "containsAll", "addAll", "removeAll", "clear");
+		methodsByClass.computeIfAbsent("java.util.Collection", k -> new HashSet<>()).addAll(collectionMethods);
+
+		hasConstructor.add("java.util.ArrayList");
+		hasConstructor.add("java.util.HashMap");
+		hasConstructor.add("java.util.HashSet");
+
+		generateLuaClassMap(allClasses, methodsByClass, fieldsByClass, hasConstructor);
+		luaClassMapGenerated = true;
+	}
+
+	private void generateLuaClassMap(
+			Set<String> allClasses,
+			Map<String, Set<String>> methodsByClass,
+			Map<String, Set<String>> fieldsByClass,
+			Set<String> hasConstructor) {
+		try {
+			TypeSpec.Builder builder = TypeSpec.classBuilder("LuaClassMap")
+					.addModifiers(Modifier.PUBLIC, Modifier.FINAL);
+
+			// ALL_CLASSES set
+			builder.addField(FieldSpec.builder(
+					ClassName.get(Set.class),
+					"ALL_CLASSES",
+					Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+					.initializer(buildStringSetInitializer(allClasses))
+					.build());
+
+			// METHODS map
+			builder.addField(FieldSpec.builder(
+					ParameterizedTypeName.get(
+							ClassName.get(Map.class),
+							ClassName.get(String.class),
+							ParameterizedTypeName.get(ClassName.get(Set.class), ClassName.get(String.class))),
+					"METHODS",
+					Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+					.initializer(buildStringMapOfSetsInitializer(methodsByClass))
+					.build());
+
+			// FIELDS map
+			builder.addField(FieldSpec.builder(
+					ParameterizedTypeName.get(
+							ClassName.get(Map.class),
+							ClassName.get(String.class),
+							ParameterizedTypeName.get(ClassName.get(Set.class), ClassName.get(String.class))),
+					"FIELDS",
+					Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+					.initializer(buildStringMapOfSetsInitializer(fieldsByClass))
+					.build());
+
+			// HAS_CONSTRUCTORS set
+			builder.addField(FieldSpec.builder(
+					ClassName.get(Set.class),
+					"HAS_CONSTRUCTORS",
+					Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
+					.initializer(buildStringSetInitializer(hasConstructor))
+					.build());
+
+			JavaFile javaFile = JavaFile.builder("com.nyrds.generated", builder.build()).build();
+			JavaFileObject source = processingEnv.getFiler().createSourceFile("com.nyrds.generated.LuaClassMap");
+			Writer writer = source.openWriter();
+			javaFile.writeTo(writer);
+			writer.close();
+		} catch (IOException e) {
+			messager.printMessage(Diagnostic.Kind.ERROR, "Failed to write LuaClassMap: " + e.getMessage());
+		}
+	}
+
+	private CodeBlock buildStringSetInitializer(Set<String> values) {
+		List<String> sorted = new java.util.ArrayList<>(values);
+		java.util.Collections.sort(sorted);
+
+		CodeBlock.Builder builder = CodeBlock.builder();
+		builder.add("new $T<$T>() {{\n", HashSet.class, String.class);
+		for (String value : sorted) {
+			builder.add("  add($S);\n", value);
+		}
+		builder.add("}}");
+		return builder.build();
+	}
+
+	private CodeBlock buildStringMapOfSetsInitializer(Map<String, Set<String>> map) {
+		List<String> sortedKeys = new java.util.ArrayList<>(map.keySet());
+		java.util.Collections.sort(sortedKeys);
+
+		ParameterizedTypeName setOfString = ParameterizedTypeName.get(ClassName.get(Set.class), ClassName.get(String.class));
+
+		CodeBlock.Builder builder = CodeBlock.builder();
+		builder.add("new $T<$T, $T>() {{\n", HashMap.class, String.class, setOfString);
+		for (String key : sortedKeys) {
+			Set<String> values = map.get(key);
+			List<String> sortedValues = new java.util.ArrayList<>(values);
+			java.util.Collections.sort(sortedValues);
+			builder.add("  put($S, new $T<$T>() {{\n", key, HashSet.class, String.class);
+			for (String value : sortedValues) {
+				builder.add("    add($S);\n", value);
+			}
+			builder.add("  }});\n");
+		}
+		builder.add("}}");
+		return builder.build();
+	}
+
 	@Override
 	public Set<String> getSupportedAnnotationTypes() {
-		return ImmutableSet.of(Packable.class.getCanonicalName());
+		return ImmutableSet.of(
+			Packable.class.getCanonicalName(),
+			LuaInterface.class.getCanonicalName()
+		);
 	}
 
 	@Override
