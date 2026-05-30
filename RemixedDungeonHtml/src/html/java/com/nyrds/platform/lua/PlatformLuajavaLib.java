@@ -3,6 +3,10 @@ package com.nyrds.platform.lua;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingBase;
 
+import org.luaj.vm2.LuaError;
+import org.luaj.vm2.Varargs;
+import org.luaj.vm2.lib.jse.CoerceJavaToLua;
+import org.luaj.vm2.lib.jse.JavaClassHelper;
 import org.luaj.vm2.lib.jse.LuajavaLib;
 
 import java.util.HashMap;
@@ -26,6 +30,38 @@ public class PlatformLuajavaLib extends LuajavaLib {
 
     public PlatformLuajavaLib() {
         super();
+    }
+
+    @Override
+    public Varargs invoke(Varargs args) {
+        try {
+            return super.invoke(args);
+        } catch (LuaError e) {
+            // TeaVM reflection may fail on newInstance for some classes
+            // (static init chains, missing constructors, etc.)
+            if (opcode == 2) { // NEWINSTANCE = 2 in LuajavaLib
+                String className = args.checkjstring(1);
+                System.err.println("PlatformLuajavaLib: newInstance failed for '" + className
+                    + "': " + e.getMessage() + ". Attempting direct construction.");
+                try {
+                    Class<?> clazz = classForName(className);
+                    // Try to create an actual instance via default constructor
+                    Object instance = clazz.getDeclaredConstructor().newInstance();
+                    return CoerceJavaToLua.coerce(instance);
+                } catch (Exception ex1) {
+                    System.err.println("PlatformLuajavaLib: direct construction also failed for '"
+                        + className + "': " + ex1.getMessage() + ". Falling back to class proxy.");
+                    // Last resort: return class proxy for static method calls
+                    try {
+                        Class<?> clazz2 = classForName(className);
+                        return JavaClassHelper.forClass(clazz2);
+                    } catch (Exception fallbackEx) {
+                        throw e;
+                    }
+                }
+            }
+            throw e;
+        }
     }
 
     @Override
