@@ -1,5 +1,5 @@
 name: remixed-pixel-dungeon
-version: '32.3.beta.6'
+version: '32.3.fix.3'
 icon: snap/gui/remixed-pixel-dungeon.png
 title: Remixed Dungeon
 summary: Classic roguelike dungeon crawler with pixel graphics
@@ -75,8 +75,8 @@ parts:
       # Build the application using the project's gradlew
       # Java is provided by the build-packages
       # Patch build.gradle to mark this as a snap build (idempotent)
-      sed -i 's/FLAVOR_market = "vkplay"/FLAVOR_market = "snap"/' RemixedDungeonDesktop/build.gradle
-      grep -q 'FLAVOR_market = "snap"' RemixedDungeonDesktop/build.gradle || { echo "ERROR: FLAVOR_market not set to snap in build.gradle"; exit 1; }
+      sed -i "s/def market = .*$/def market = 'snap'/" RemixedDungeonDesktop/build.gradle
+      grep -q "def market = 'snap'" RemixedDungeonDesktop/build.gradle || { echo "ERROR: market not set to snap in build.gradle"; exit 1; }
       ./gradlew -c settings.desktop.gradle :RemixedDungeonDesktop:shadowJar --no-daemon
       
       # Copy the built JAR file - find the correct one based on actual build output
