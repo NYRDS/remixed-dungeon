@@ -940,8 +940,8 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="HeroClass_None">contadino</string>
     <string name="HeroClass_PlagueDoctorPerks_0">I Dottori della Peste raccolgono [yellow:Ghiandole Tossiche], [yellow:Organi Marci] e [yellow:Frammenti d\'Osso] dai nemici sconfitti.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">I Dottori della Peste sono maestri dell\'alchimia e possono usare ricette uniche.</string>
-    <string name="HeroClass_PlagueDoctorPerks_2\">Iniziano con una [yellow:Maschera della Peste] (immune a tutti i Gas) e un [yellow:Seghetto d\'Ossa]. I colpi critici fanno cadere parti extra, e il Seghetto infligge x1.5 danni ai nemici paralizzati.</string>
-    <string name="HeroClass_PlagueDoctorPerks_3\">Le pozioni di [yellow:Gas Paralizzante] e [yellow:Gas Tossico] sono pre-identificate.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Iniziano con una [yellow:Maschera della Peste] (immune a tutti i Gas) e un [yellow:Seghetto d\'Ossa]. I colpi critici fanno cadere parti extra, e il Seghetto infligge x1.5 danni ai nemici paralizzati.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Le pozioni di [yellow:Gas Paralizzante] e [yellow:Gas Tossico] sono pre-identificate.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">I Dottori della Peste subiscono grandi penalità di precisione senza il loro amato Seghetto d\'Ossa in mano e non possono usare armi a distanza.</string>
     <string name="HeroClass_Rog">furfante</string>
     <string name="HeroClass_RogPerks_0">I furfanti iniziano con un anello di Ombre +1.</string>
