@@ -23,7 +23,8 @@ export const ARMOR_LIST = ['none', 'cloth', 'leather', 'mail', 'scale', 'plate',
 export const WEAPON_LIST = ['none', 'shortsword', 'longsword', 'dagger', 'mace', 'hammer', 
                            'sword', 'wand', 'boomerang', 'bow', 'crossbow', 'spear', 
                            'glaive', 'battleaxe', 'claymore', 'quarterstaff', 'knuckles',
-                           'bonesaw', 'tomahawk', 'halberd', 'kusarigama', 'pickaxe'];
+                           'bonesaw', 'tomahawk', 'halberd', 'kusarigama', 'pickaxe',
+                           'royalshield', 'chaosshield'];
 
 export const ACCESSORY_LIST = ['none', 'plaguedoctormask', 'wizardhat', 'nightcap', 'ushanka',
                               'santahat', 'pumpkin', 'fez', 'shades', 'fullfacemask',
