@@ -900,6 +900,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Hujung anak panah ini disaluti dengan posyen penyembuhan.</string>
     <string name="HealthArrow_Name">Anak Panah Penyembuhan</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Info">Hujung damak ini disaluti dengan posyen penyembuhan.</string>
     <string name="HealthDart_Name">Damak Penyembuhan</string>
     <string name="Heap_Mimic">Ini ialah mimik!</string>
@@ -2964,6 +2965,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
