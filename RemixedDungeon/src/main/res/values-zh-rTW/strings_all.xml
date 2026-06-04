@@ -2476,6 +2476,7 @@
     <string name="WndCryptoDonate_ethereum">以太坊</string>
     <string name="WndCryptoDonate_infoText">您可以通過將加密貨幣捐贈發送到以下地址來支持 Remixed Dungeon 的開發。感謝您的慷慨支持！</string>
     <string name="WndCryptoDonate_openWallet">Open Wallet</string>
+    <string name="WndCryptoDonate_supportDev">支援開發者</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">錢包地址</string>
@@ -3000,6 +3001,7 @@
     <string name="town_deco_tree_name">樹</string>
     <string name="town_deco_urn_desc">陶製骨灰罈，也許裝著某人的骨灰。</string>
     <string name="town_deco_urn_name">陶罐</string>
+    <string name="town_deco_vat_desc">這個石缸裝滿了聖水。</string>
     <string name="town_deco_vat_name">大桶</string>
     <string name="town_deco_wall_beam_desc">為建築物提供可靠的支持力。</string>
     <string name="town_deco_wall_beam_name">梁</string>
@@ -3035,6 +3037,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

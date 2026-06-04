@@ -352,6 +352,7 @@
     <string name="Carcass_DissectResult">Daripada %1$s anda memperoleh %2$d hasil %3$s.</string>
     <string name="Carcass_Info">Bangkai %s yang benar-benar mati</string>
     <string name="Carcass_Kick">Ini %s sudah mati sepenuhnya, tiada perlu sepak.</string>
+    <string name="Carcass_Name">baki-baki %s</string>
     <string name="Carcass_Necromancy_Failed">\&quot;Percubaan anda untuk menghidupkan mayat %s gagal!\&quot;</string>
     <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk menyiasat bangkai tersebut.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang perlukan rak buku di dalam gua?</string>
@@ -413,6 +414,7 @@
     <string name="ChaosCrystal_Use">GUNA</string>
     <string name="ChaosHelmet_Info">Topi keledar warna merah darah. Merupakan simbol seorang satria chaos.</string>
     <string name="ChaosHelmet_Name">Topi Keledar Chaos</string>
+    <string name="ChaosShield_name">Perisai Kaos</string>
     <string name="ChaosStaff_Info">Tongkat didorong dengan Kuasa Chaos! Tiada ada lagi benda yang ahli sihir mahukan atau takutkan?</string>
     <string name="ChaosStaff_Name">tongkat chaos</string>
     <string name="ChaosSword_Gender">masculine</string>
@@ -2347,6 +2349,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WarHammer_Info">Sedikit sahaja makhluk yang dapat bertahan dengan kuasa pukulan dari jisim kepala keluli ini, namun hanya pengembara yang terkuat dapat gunakannya secara efektif.</string>
     <string name="WarHammer_Name">tukul perang</string>
     <string name="Warlock_Desc">Bila orang kerdil cuba meminati seni misteri, dukun mengambil alih pemerintahan bandar. Mereka bermula dengan sihir unsur, tetapi telah bertukar ke seni setan dan necromancy.</string>
+    <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">Bebola bayang %s telah membunuh anda...</string>
     <string name="Warlock_Name">dukun orang kerdil</string>
     <string name="Warlock_Name_Objective">dukun orang kerdil</string>
@@ -2965,6 +2968,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

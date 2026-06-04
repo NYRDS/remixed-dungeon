@@ -95,7 +95,7 @@
     <string name="AttackDelay_Increased">Non puoi brandire il %s in questo modo. Colpi lenti, respiro pesante…</string>
     <string name="Attack_Cooldown">Ricarica attacco</string>
     <string name="Attack_Range">Distanza di attacco</string>
-    <string name="AwarenessBuff_Info">I sensi si sono affinati, dando una maggiore consapevolezza dell'ambiente circostante.</string>
+    <string name="AwarenessBuff_Info">I sensi si sono affinati, dando una maggiore consapevolezza dell\'ambiente circostante.</string>
     <string name="AwarenessBuff_Name">Consapevolezza</string>
     <string name="AzuterronNPC_Desc">Una misteriosa figura avvolta da una nebbia nera.</string>
     <string name="AzuterronNPC_Name">Sconosciuto</string>
@@ -456,6 +456,7 @@
     <string name="Char_StaSlowed">rallentato</string>
     <string name="Char_StaStunned">stordito</string>
     <string name="Char_StaVision">visione</string>
+    <string name="Char_Stole_0">%1$s ha rubato %2$s a %3$s!</string>
     <string name="Char_Stole_1">%1$s ha rubato %2$s a %3$s!</string>
     <string name="Char_Stole_2">%1$s ha rubato %2$s a %3$s!</string>
     <string name="Char_YouMissed">%1$s %2$s il tuo attacco</string>
@@ -840,6 +841,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenStatue_Name">statua d\'oro</string>
     <string name="GoldenStatue_Name_Objective">statua d\'oro </string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="GoldenSword_Info">Le armi forgiate con un metallo cosí morbido come l\'oro vengono considerate solitamente nient\'altro che decorazioni. Nonostante ció, questa lama sembra essere in grado di tagliare bene.</string>
     <string name="GoldenSword_Name">spada d\'oro</string>
     <string name="Golem_Defense">Bloccato</string>
@@ -1450,6 +1452,7 @@ Potrebbe bruciare?</string>
     <string name="Pasty_Info">Questo è un\'autentico pasticcio della Cornovaglia col ripieno tradizionale di carne e patate.</string>
     <string name="Pasty_Name">pasticcio</string>
     <string name="Pickaxe_ACMine">ESTRAI</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Questo è un grosso e resistente attrezzo per spaccare pietre. Probabilmente può venir usato come arma.</string>
     <string name="Pickaxe_InsufficientStr">Non hai abbastanza forza per scavare!</string>
     <string name="Pickaxe_Name">piccone</string>
@@ -1962,6 +1965,7 @@ Potrebbe bruciare?</string>
     <string name="Skeleton_Name">Scheletro</string>
     <string name="Skeleton_Name_Objective">Scheletro</string>
     <string name="SleepBuff_Info">Completamente addormentato.</string>
+    <string name="SleepBuff_Name">Sonno</string>
     <string name="SlowBuff_Info">Il senso di lentezza rende qualcuno più lento del solito.</string>
     <string name="SlowBuff_Name">Rallentato</string>
     <string name="Slow_Name_0">del Freddo %s</string>
@@ -2935,6 +2939,11 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
 
 
 
