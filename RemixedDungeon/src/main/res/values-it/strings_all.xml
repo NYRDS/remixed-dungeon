@@ -413,6 +413,7 @@
     <string name="ChaosHelmet_Name">Elmo del Caos</string>
     <string name="ChaosShield_desc">Lo Scudo del Caos è il risultato della fusione di un Cristallo del Caos con uno scudo ordinario, causandone l\'manifestazione di effetti caotici casuali in caso di blocco riuscito.</string>
     <string name="ChaosShield_name">Scudo del Caos</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Una bacchetta imbevuta con il Potere del Caos! Cos\'altro un mago può desiderare... O avere paura? </string>
     <string name="ChaosStaff_Name">Vega del caos</string>
     <string name="ChaosSword_Gender">masculine</string>
@@ -541,6 +542,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name">spirito freddo</string>
     <string name="ColdSpirit_Name_Objective">spirito freddo</string>
+    <string name="ComboBuff_Info">Il prossimo attacco sarà un attacco combo.</string>
     <string name="ComboBuff_Name">Combinazione</string>
     <string name="Combo_Combo">Combinazione di %d colpi!</string>
     <string name="CommonArrow_Gender">feminine</string>
@@ -1165,6 +1167,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="KrampusHead_Name">Testa di Krampus</string>
     <string name="KunaiThrow_Info">Questo lancio letale di Kunai sarà eseguito estremamente veloce, così veloce che non sarai nemmeno in grado di selezionare un obiettivo.\n\nI veri Maestri sono in grado di lanciare più di un Kunai alla volta.</string>
     <string name="KunaiThrow_Name">Lancio di Kunai</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Quest\'arma consiste in una falce montata su una catena di metallo con un grosso peso di ferro nell\'estremità.</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">Tira</string>
@@ -2587,6 +2590,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndSaveSlotSelect_Delete_No">No</string>
     <string name="WndSaveSlotSelect_Delete_Title">Sei proprio sicuro? Vuoi cancellare questo salvataggio?</string>
     <string name="WndSaveSlotSelect_Delete_Yes">Si, scarta! </string>
+    <string name="WndSaveSlotSelect_LoadAutoSave">Carica salvataggio automatico</string>
     <string name="WndSaveSlotSelect_SelectSlot">Seleziona cartuccia</string>
     <string name="WndSaveSlotSelect_dontLike">Non ti piacciono le ads? Fai una donazione e scompariranno. PER SEMPRE.</string>
     <string name="WndSelectLanguage_ImproveTranslation">Aiuta a migliorare le traduzioni di Remixed Dungeon</string>
@@ -2691,6 +2695,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="YogsHeart_Name">il cuore di yog</string>
     <string name="YogsHeart_Name_Objective">il cuore di yog</string>
     <string name="YogsTeeth_Desc">enorme bocca di un vecchio Dio pieno di denti affilati come rasoi. Una manifestazione molto montaggio della sua voglia di distruggere e divorare tutti gli esseri.</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">denti di yog</string>
     <string name="YogsTeeth_Name_Objective">denti di yog</string>
     <string name="ZombieGnoll_Desc">Contorto, corpo spezzato di un gnoll zombi non assomiglia più umanoide o iene. Solo un mucchio di carne marcia e ossa piene di voglia dannoso per uccidere e consumare.</string>
@@ -2947,6 +2952,11 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
 
 
 

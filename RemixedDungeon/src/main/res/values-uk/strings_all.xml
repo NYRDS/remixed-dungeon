@@ -2440,6 +2440,7 @@
     <string name="WaterOfHealth_Info">Вода цього колодязя випромінює силу здоров\'я. Зроби ковток, аби залікувати свої рани та вгамувати голод.</string>
     <string name="WaterOfHealth_Procced">Зробивши ковток твої відчуваєш як твої рани повністю загоїлися.</string>
     <string name="WaterOfTransmutation_Info">Вода цього колодязя випромінює силу змін. Кинь в нього предмет, аби змінити його на дещо інше.</string>
+    <string name="WeaknessBuff_Info">Слабкість охоплює тіло, роблячи ціль легкою здобичею.</string>
     <string name="WeaknessBuff_Name">Послаблений</string>
     <string name="Weapon_Identify">Ти достатньо ознайомився з предметом: %1$s, аби ідентифікувати. Це %2$s.</string>
     <string name="Weapon_Incompatible">Взаємодія несумісних типів магії зняло зачарування з зброї!</string>
@@ -3046,6 +3047,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

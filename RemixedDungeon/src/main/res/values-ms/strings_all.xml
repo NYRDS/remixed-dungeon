@@ -61,6 +61,7 @@
     <string name="Amulet_ACEnd">PENGEMBARAAN BERAKHIR</string>
     <string name="Amulet_Info">Azimat Yendor merupakan artifak terkenal yang sangat berkuasa tetapi tidak diketahui asal usulnya. Dikatakan azimat ini berupaya memenuhi apa jua keinginan pemiliknya dengan syarat dia mampu \&quot;memujuk\&quot; azimat tersebut merealisasikan hasratnya.</string>
     <string name="Amulet_Name">Azimat Yendor</string>
+    <string name="AnesthesiaBuff_Info">Tidak merasai kesakitan dan tidak akan bangun dari serangan, tetapi masih menerima kerosakan.</string>
     <string name="AnesthesiaBuff_Name">Anestesia</string>
     <string name="Anesthesia_Cast">%s terlelap ke dalam tidur yang mendalam dan tanpa mimpi.</string>
     <string name="Anesthesia_Info">Menghasilkan tidur yang mendalam dan tidak wajar pada sasaran anda. Bahkan serangan yang paling keganasan tidak akan membangunkan mereka dari tidur ini.</string>
@@ -335,6 +336,7 @@
     <string name="CagedKobold_Name_Objective">kobold terkurung</string>
     <string name="CagedKobold_Quest_End">Oh, terima kasih, terima kasih banyak-banyak! Macamana kamu jumpa kunci ini? Kamu...kamu berjaya musnahkan senjata tu?! Hebat! tahu tak, aku akan bantu kamu, dan aku tahu langkah terbaik ialah mengikut kamu buat masa ini. Kobold terkurung bertukar menjadi lilin</string>
 
+    <string name="Calm_Cast">%s menjadi tenang.</string>
     <string name="Calm_Info">Di sini ada banyak makhluk yang marah, mari kita bantu mereka.</string>
     <string name="Calm_Name">Tenang</string>
     <string name="CandleOfMindVision_Info">Rupanya seperti lilin biasa, anda tidak menjangka ia boleh ditemui dalam kurungan bawah tanah ini. Yang peliknya lilin ini berasa suam bila dipegang walaupun belum lagi dinyalakan.</string>
@@ -952,6 +954,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HeroClass_NecromancerPerks_2">Pembangkit mayat bermula dengan jubah Pembangkit mayat yang unik, ia dapat menjana 1 mata mana bagi setiap makhluk yang dibunuh oleh pemakainya.</string>
     <string name="HeroClass_NecromancerPerks_3">Pembangkit mayat bermula dengan kunci rangka aras 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Posyen Penyembuhan dapat dikenal pasti pada awal pengembaraan.</string>
+    <string name="HeroClass_None">rakyat biasa</string>
     <string name="HeroClass_PlagueDoctorPerks_0">Doktor pesakit memanen [yellow:Kelenjar Beracun], [yellow:Organ Busuk], [yellow:Pecahan Tulang] dari musuh yang telah dikalahkan.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Bermula dengan Topeng Plague (kebal terhadap semua Gas) dan Gergaji Tulang. Serangan kritikal menjatuhkan bahagian tambahan, dan Gergaji memberikan +50% kerosakan pada musuh yang lumpuh.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Mulakan dengan sebuah [yellow:Plague Mask] (kebal terhadap semua Gas) dan sebuah [yellow:Bone Saw]. Serangan kritikal menjatuhkan bahagian tambahan, dan Saw memberikan x1.5 kerosakan kepada musuh yang lumpuh.</string>
@@ -2971,6 +2974,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 
