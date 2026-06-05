@@ -221,6 +221,7 @@
     <string name="Bee_Name">ape</string>
     <string name="Bee_Name_Objective">ape</string>
     <string name="BellaNPC_Amulet_F">Ciao, caro tesoro, cosa hai là? Ah, un amuleto così bellissimo! E tu... splendi molto più di chiunque altro. Cosa ne dici se facciamo una passeggiata e ne parliamo del nostro futuro?</string>
+    <string name="BellaNPC_Amulet_M">Ehi ciao bello, cosa hai lì. Ah, che amuleto squisito! E tu... sei ben al di sopra di quelle plebi. Che ne dici di fare una passeggiata e discutere del nostro futuro comune?</string>
     <string name="BellaNPC_Angry">Come osi... tu plebeo!</string>
     <string name="BellaNPC_Desc">Una ragazza dall\'aspetto molto elegante. Tutto il suo aspetto ti dice: \&quot;Sono troppo buona per tutti.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
@@ -285,6 +286,7 @@
     <string name="BlankScroll_Info">una pergamena vuota. Forse ci sarà qualcosa in grado di scrivere su di essa?</string>
     <string name="BlankScroll_Name">Pergamena vuota</string>
     <string name="BlankScroll_ReallyBlank">Questa pergamena è vuota</string>
+    <string name="BleedingBuff_Info">Le ferite sanguinano rapidamente.</string>
     <string name="BleedingBuff_Name">Sanguinamento</string>
     <string name="Bleeding_Death">Hai sanguinato a morte...</string>
     <string name="BlessedBuff_Info">Che precisione e scatto vengano per coloro che sono toccati dalla benedizione!</string>
@@ -668,6 +670,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="DrunkardNPC_Name_Objective">ubriaco</string>
     <string name="Drunkard_Phrase_1">ANCORA DA BERE, PER FAVORE!</string>
     <string name="Drunkard_Phrase_2">Chi ha bisogno d\'acqua quando hai la birra!</string>
+    <string name="Drunkard_Phrase_3">Questa birra sa di terra</string>
     <string name="Dungeon_DeadEnd">Cosa ci fai qui?!</string>
     <string name="Dungeon_NoTips">Il testo è indecifrabile...</string>
     <string name="Dungeon_Tips_0">Non sopravvalutare la tua forza, usa armi e armature che riesci a maneggiare.</string>
@@ -1079,6 +1082,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Imp_Monks1">Sei un avventuriero? Amo gli avventurieri! Si può sempre contare su di loro, se qualcosa deve essere ucciso. Ho ragione? Per una taglia, ovviamente ;)\nNel mio caso ho bisogno di te per uccidere i _monaci_. Come vedi ho intenzione di avviare una piccola impresa proprio qui, ma quei pazzi non comprano nulla e spaventano gli altri clienti. Quindi, per favore, uccidili... Facciamo così, _8 di loro_ ed il premio è tuo.</string>
     <string name="Imp_Monks2">Oh, sei ancora vivo! Sapevo che il tuo kung-fu era più forte;)  Non ti dimenticare di prendere i gettoni dai monaci.</string>
     <string name="Imp_Name">folletto ambizioso</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Info">La punta di ognuno di questi dardi è progettata per bloccare il bersaglio mentre il composto instabile imbevuto nell\'estremità zampilla di fiamme brillanti.  </string>
     <string name="IncendiaryDart_Name">Dardo incendiario</string>
     <string name="InnKeeperNPC_Desc">Il locandiere è molto orgoglioso di sé.</string>
@@ -1713,6 +1717,7 @@ Potrebbe bruciare?</string>
     <string name="RingOfEvasion_Info">Questo anello aumenta la possibilità di schivare l\'attacco nemico.</string>
     <string name="RingOfEvasion_Name">Anello d\'Evasione</string>
     <string name="RingOfFrost_Info">Questo anello è intagliato da ghiaccio magico. Chi lo indossa è protetto da un\'aura di gelo, che rallenta e danneggia i nemici attaccanti.</string>
+    <string name="RingOfFrost_Name">Anello del Gelo</string>
     <string name="RingOfHaggler_Info">In realtà questo anello non fornisce alcun effetto magico, ma dimostra ai negozianti e fornitori, che il proprietario dell\'anello  Di solito sono felici di fare uno sconto in cambio d\'immunità temporanea. Aggiornamento di questo anello non darà alcun bonus aggiuntivi.</string>
     <string name="RingOfHaggler_Name">Anello di Haggler</string>
     <string name="RingOfHaste_Info">Questo anello accelera il flusso di chi la indossa di tempo, permettendo di eseguire tutte le azioni un po \'più veloce.</string>
@@ -2525,6 +2530,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndModSelect_AreYouSure">Eliminare mod: %s, sei sicuro?</string>
     <string name="WndModSelect_ReallyDelete">Vuoi davvero eliminare?</string>
     <string name="WndModsDisclaimer_install">Installa mod locale</string>
+    <string name="WndModsDisclaimer_manage">Gestisci lista mod</string>
     <string name="WndModsDisclaimer_title">Mod</string>
     <string name="WndMovieTheatre_Bye">Torna quando vuoi, siamo sempre felici di vederti!</string>
     <string name="WndMovieTheatre_Instruction">Benvenuti al nostro cinema! Offriamo un servizio speciale: potete guardare gratuitamente un film speciale chiamato pubblicità. E se lo guardate fino alla fine, sarete ricompensati con %d monete d\'oro!</string>
@@ -2963,6 +2969,12 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
 
 
 

@@ -419,7 +419,9 @@
     <string name="ChaosCrystal_Use">GUNA</string>
     <string name="ChaosHelmet_Info">Topi keledar warna merah darah. Merupakan simbol seorang satria chaos.</string>
     <string name="ChaosHelmet_Name">Topi Keledar Chaos</string>
+    <string name="ChaosShield_desc">Perisai Kacau adalah hasil penyatuan Kristal Kacau dengan perisai biasa, menyebabkan ia memanifestasikan efek kacau acak saat berhasil memblokir.</string>
     <string name="ChaosShield_name">Perisai Kaos</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Tongkat didorong dengan Kuasa Chaos! Tiada ada lagi benda yang ahli sihir mahukan atau takutkan?</string>
     <string name="ChaosStaff_Name">tongkat chaos</string>
     <string name="ChaosSword_Gender">masculine</string>
@@ -578,6 +580,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="CrippleBuff_Info">Tubuhnya cacat tetapi pertarungan tetap berlanjut.</string>
     <string name="CrippleBuff_Name">Dilumpuhkan</string>
     <string name="Crystal_Desc">Ada kristal bersinaran terapung di udara. Berkemungkinan ia terisi dengan kuasa ajaib yang kuat.</string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">Kristal terapung</string>
     <string name="Crystal_Name_Objective">Kristal terapung</string>
     <string name="CurareDart_Gender">masculine</string>
@@ -2980,6 +2983,9 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
 
 
 

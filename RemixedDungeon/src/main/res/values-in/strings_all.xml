@@ -360,6 +360,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Carcass_DissectFailed">Anda membedah %s tetapi tidak menemukan apa pun yang berharga.</string>
     <string name="Carcass_DissectMessage">Anda membedah bangkai dan mendapatkan %s.</string>
     <string name="Carcass_DissectResult">Dari %1$s kamu memperoleh %2$d %3$s.</string>
+    <string name="Carcass_Info">sisa-sisa %s yang benar-benar mati.</string>
     <string name="Carcass_Kick">%s ini sudah benar-benar mati, tidak perlu menendangnya lagi.</string>
     <string name="Carcass_Name">bangkai %s</string>
     <string name="Carcass_Necromancy">\&quot;Kamu telah membangkitkan mayat %s!\&quot;</string>
@@ -3035,6 +3036,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

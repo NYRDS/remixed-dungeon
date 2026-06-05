@@ -919,6 +919,7 @@
     <string name="Haste_Info">急速會讓實行者以極快的速度移動，他周圍的一切都會顯得靜止。如此急速會消耗大量的能量，所以只能在很短的時間內使用。\n\n熟練的大師能夠在較長的時間內保持急速。</string>
     <string name="Haste_Name">急速</string>
     <string name="Heal_Cast">%s 被治愈了。</string>
+    <string name="Heal_Info">在地牢中相當實用的法術，不是嗎？</string>
     <string name="Heal_Name">治療</string>
     <string name="HealerNPC_Desc">虛無縹緲的直覺告訴我，眼前的老人懂得如何弄法杖。</string>
     <string name="HealerNPC_Gender">masculine</string>
@@ -3044,6 +3045,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
