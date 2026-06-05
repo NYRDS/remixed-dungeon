@@ -127,7 +127,7 @@
     <string name="Badges_Champion">挑戰成功</string>
     <string name="Badges_DeathFalling">刺客教條玩上腦</string>
     <string name="Badges_DeathFire">燃燒生命 ,照亮別人</string>
-    <string name="Badges_DeathGas">集中營初體驗</string>
+    <string name="Badges_DeathGas">死於毒氣</string>
     <string name="Badges_DeathGlyph">死於護甲刻印</string>
     <string name="Badges_DeathHunger">饑饉三十</string>
     <string name="Badges_DeathNecrotism">死於瘟疫</string>
@@ -3043,6 +3043,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

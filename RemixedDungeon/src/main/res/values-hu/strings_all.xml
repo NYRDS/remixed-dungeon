@@ -289,6 +289,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Bleeding_Death">Elvéreztél...</string>
     <string name="BlessedBuff_Info">A pontosság és a kitérés szálljon azokra, akiket megérintett az áldás!</string>
     <string name="BlessedBuff_Name">Megáldott</string>
+    <string name="BlindnessBuff_Info">Teljes vakság, csak a körülötte lévő hangok hallhatók.</string>
     <string name="BlindnessBuff_Name">Megvakult</string>
     <string name="BloodTransfusion_FullHP">A véred már teljesen tele van.</string>
     <string name="BloodTransfusion_Info">A céltól szinte minden vérmennyiséget elvesz magának, hogy gyógyuljon. Egy sötét szertartás, az áldozat és a megmaradás rituáléja.</string>
@@ -624,6 +625,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="DeepSnail_Desc">Ez a csigafajta gyakran látható vízforrások közelében, és sokkal gyorsabb, mint az átlagos csiga. Azonban vigyázz a harapásukkal, mert kellemetlen hatással lehetnek a bőrödön.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeepSnail_Name_Objective">mély csigát</string>
+    <string name="DeferedDamageBuff_Info">A fájdalom lassító fájdalommá változott, csökkentve az egyszerre vett sebzést.\nHátralévő sebzés: %d</string>
     <string name="DeferedDamageBuff_Name">Elhárített kámasz(%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s megölt téged...</string>
     <string name="DevourBuff_Info"/>
@@ -2978,6 +2980,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_name">kristálygolyó</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 

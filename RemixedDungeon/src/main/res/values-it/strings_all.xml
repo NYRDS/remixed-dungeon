@@ -1061,6 +1061,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">guardiano del ghiaccio</string>
     <string name="IceGuardian_Name_Objective">guardiano del ghiaccio</string>
+    <string name="IceKey_Info">Questa chiave sembra fatta di ghiaccio, ma è dura come l\'acciaio.</string>
     <string name="IceKey_Name">chiave di ghiaccio</string>
     <string name="Icecap_Desc">Al momento di toccare una Calotta glaciale espella un polline, che congela tutto nelle sue vicinanze</string>
     <string name="Icecap_Name">Calotta ghiacciata</string>
@@ -2918,6 +2919,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_stool_sturdy_name">Sgabello</string>
     <string name="town_deco_stove_desc">Questa stufa da un po\' di accogliente calore</string>
     <string name="town_deco_stove_name">Stufa di pietra</string>
+    <string name="town_deco_tile_desc">Queste piastrelle sono piuttosto logorate dal tempo.</string>
     <string name="town_deco_tile_name">Piastrella</string>
     <string name="town_deco_trapdoor_desc">Dove potrà mai portare.</string>
     <string name="town_deco_trapdoor_name">Botola</string>
@@ -2960,6 +2962,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 

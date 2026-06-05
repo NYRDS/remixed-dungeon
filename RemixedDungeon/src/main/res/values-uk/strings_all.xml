@@ -1068,6 +1068,7 @@
     <string name="Horror_Name_0">Жахливе %s</string>
     <string name="Horror_Name_1">Жахливий %s</string>
     <string name="Horror_Name_2">Жахлива %s</string>
+    <string name="HungerBuff_Info1">Ти голодний!</string>
     <string name="HungerBuff_Info2">Ви голодуєте! Вам потрібно їсти!</string>
     <string name="HungerBuff_Name1">Голодний</string>
     <string name="HungerBuff_Name2">Виснажений</string>
@@ -3051,6 +3052,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

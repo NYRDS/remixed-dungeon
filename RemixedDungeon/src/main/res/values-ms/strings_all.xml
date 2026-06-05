@@ -1961,6 +1961,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Sheep_Name">kambing biri-biri</string>
     <string name="Sheep_Name_Objective">kambing biri-biri</string>
     <string name="ShieldBuffNotReady_Info">Perisai anda tidak siap untuk menghalang serangan seterusnya.</string>
+    <string name="ShieldBuffNotReady_Name">Perisai belum sedia</string>
     <string name="ShieldBuffReady_Info">Perisai anda bersedia untuk menghalang serangan seterusnya.</string>
     <string name="ShieldBuffReady_Name">Shield is ready</string>
     <string name="ShieldInfoTemplate">Perisai ini akan menghalang sehingga %1$d kerosakan masuk. Dengan peluang %2$d %%. Ia akan mengambil masa %3$3.1f saat untuk pulih selepas berjaya menghalang.</string>
@@ -2978,6 +2979,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
