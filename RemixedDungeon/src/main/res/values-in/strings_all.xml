@@ -2000,6 +2000,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="Shopkeeper_text">Selamat datang di cabang lokal Pixel-Mart.\nAda yang bisa dibantu?</string>
     <string name="Shopkeeper_title">toko</string>
     <string name="ShortSword_ACReforge">TEMPA ULANG</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Ini memang lumayan pendek, hanya beberapa inci lebih panjang, dari sebilah pisau.</string>
     <string name="ShortSword_Name">pedang pendek</string>
     <string name="ShortSword_NotBoomerang">Anda tidak dapat meningkatkan sebuah bumerang dengan cara ini</string>
@@ -3031,6 +3032,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

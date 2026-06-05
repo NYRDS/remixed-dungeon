@@ -677,6 +677,7 @@
     <string name="DoctorArmor_Info">Ця броня чумного доктора дозволяє використовувати здібність «Хмара миазми», яка випускає отруйний газ, що отруює, послаблює та дезорієнтує ворогів. Доктор, захищений своєю маскою, несприйнятливий до цих ефектів.</string>
     <string name="DoctorArmor_Name">Одяг лікаря</string>
     <string name="DoctorArmor_NotDoctor">Тільки лікарі чуми можуть використовувати цю обладунку!</string>
+    <string name="DoctorSpecial">Хмара міазми</string>
     <string name="DogeMask_Info">Ви коли-небудь хотіли замаскуватися під знаменитого Doge? Тепер це ваш шанс!\nТака маска! Багато маскування! Оце Так!</string>
     <string name="DogeMask_Name">Маска Doge</string>
     <string name="DonateButton_pleaseDonate">будь ласка, підтримайте проект</string>
@@ -3048,6 +3049,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
