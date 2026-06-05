@@ -354,6 +354,7 @@
     <string name="Carcass_Info">Bangkai %s yang benar-benar mati</string>
     <string name="Carcass_Kick">Ini %s sudah mati sepenuhnya, tiada perlu sepak.</string>
     <string name="Carcass_Name">baki-baki %s</string>
+    <string name="Carcass_Necromancy">Anda telah membangkitkan mayat %s!</string>
     <string name="Carcass_Necromancy_Failed">\&quot;Percubaan anda untuk menghidupkan mayat %s gagal!\&quot;</string>
     <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk menyiasat bangkai tersebut.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang perlukan rak buku di dalam gua?</string>
@@ -2970,6 +2971,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

@@ -2846,6 +2846,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_potions_desc">Qualche pozione sullo scaffale.</string>
     <string name="town_deco_potions_name">Pozioni</string>
     <string name="town_deco_projector_desc">Un vecchio dispositivo per proiettare film e intrattenere le persone.</string>
+    <string name="town_deco_projector_name">Proiettore cinematografico</string>
     <string name="town_deco_red_carpet_desc">Si dice che tappeti rossi simili adornino i corridoi della metropoli dei nani.</string>
     <string name="town_deco_red_carpet_name">Tappeto</string>
     <string name="town_deco_roof_desc">Una semplice tegola del tetto</string>
@@ -2946,6 +2947,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
