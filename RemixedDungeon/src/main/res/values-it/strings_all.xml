@@ -1439,6 +1439,7 @@ Potrebbe bruciare?</string>
     <string name="Nightmare_Name">incubo</string>
     <string name="Nightmare_Name_Objective">incubo</string>
     <string name="No_Valid_Cell">Non c\'è nessuna cella adatta qui vicino.</string>
+    <string name="OozeBuff_Info">La melma caustica sta divorando la carne!</string>
     <string name="OozeBuff_Name">Melma Caustica</string>
     <string name="Ooze_Death">%s ti ha ucciso...</string>
     <string name="Order_Info">Con la giusta concentrazione, i tuoi ordini sono quasi incontestabili.</string>
@@ -1929,6 +1930,7 @@ Potrebbe bruciare?</string>
     <string name="Shaman_Killed">%s\'s fulmine ti ha ucciso....</string>
     <string name="Shaman_Name">gnoll sciamano</string>
     <string name="Shaman_Name_Objective">gnoll sciamano</string>
+    <string name="Shaman_ZapMiss">*Impreca in gnollese*</string>
     <string name="Sheep_Desc">Questa è una pecora magica. Cos\'ha di così magico? Non la puoi uccidere. Starà lì per un po, fino a che non svanirà per magia. Impiegherà tutto il suo tempo a masticare l\'erba che trova.</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">pecora</string>
@@ -2952,6 +2954,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

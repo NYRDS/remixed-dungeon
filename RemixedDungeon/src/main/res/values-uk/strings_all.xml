@@ -14,6 +14,7 @@
     <string name="AboutScene_OurSite">Наша веб-сторінка:</string>
     <string name="AboutScene_Snd">Відправити E-Mail</string>
     <string name="AboutScene_Sound">Звуки:</string>
+    <string name="AboutScene_SourceCode">Отримати вихідний код Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Спеціальна подяка:</string>
     <string name="AboutScene_Translation">Переклад:</string>
     <string name="AboutScene_Translation_Names">Ukrainian transifex team\n
@@ -3047,6 +3048,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

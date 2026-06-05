@@ -2185,6 +2185,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Tengu_Info3">Megvagy, %s!</string>
     <string name="Tengu_Name">Tengu</string>
     <string name="Tengu_Name_Objective">Tengu</string>
+    <string name="TerrorBuff_Info">Úgy tűnik, valaki nagyon megrettent.</string>
     <string name="TerrorBuff_Name">Rémült</string>
     <string name="Thief_Carries">\n\n A %1$s egy _%2$s_t hordoz. Egyértelműen lopott.</string>
     <string name="Thief_Desc">A kazamata mélyebb szintjei mindig remek bűvóhelyül szolgáltak minden féle bűnözőnek. Nem mind tudta megőrizni a józan eszét hosszú ideig távol a napfénytől. Ezek az őrült banditák már réges régen elfelejtették, hogy kik ők és hogy miért lopnak. Úgy tűnik ennek a banditának tőre valamivel be van vonva.</string>
@@ -2973,6 +2974,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 

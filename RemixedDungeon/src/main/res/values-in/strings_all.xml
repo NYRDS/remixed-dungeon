@@ -844,6 +844,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="GnollArmor_NotGnoll">Hanya gnoll yang bisa melengkapi Zirah Gnoll!</string>
     <string name="GnollCostume_Info">Kostum yang sangat hangat dan lembut. Siapapun yang memakai kostum ini akan terlihat seperti... seseorang yang mencoba menyamar sebagai gnoll. Tapi gnolls tidak akan jatuh untuk itu, mereka masih akan menyerang Anda</string>
     <string name="GnollCostume_Name">Kostum Gnoll</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">Tomahawk tradisional yang dibuat oleh master Gnoll, di mana setiap klan memiliki desain uniknya sendiri. Tomahawk ini sedikit lebih ringan dari rekan-rekannya.</string>
     <string name="GnollTamahawk_Name">Gnoll tomahawk</string>
     <string name="Gnoll_BecomeGuardianDesc">Menjadi penjaga</string>
@@ -3030,6 +3031,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
