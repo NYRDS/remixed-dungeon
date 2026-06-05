@@ -1338,6 +1338,7 @@
     <string name="MageArmor_Name">роба мага</string>
     <string name="MageArmor_NotMage">Тільки маги можуть використовувати цю броню!</string>
     <string name="MagicArrow_Info">Добра стара магічна стріла, правильний вибір, коли закінчиться боєкомплект.</string>
+    <string name="MagicArrow_Name">Магічна стріла</string>
     <string name="MagicTorch_Info">Закляття генерує світло, яке розганяє темряву підземелля.</string>
     <string name="MagicTorch_Name">Магічний факел</string>
     <string name="MailArmor_Desc">Переплетені металеві ланки роблять міцний, але гнучкий обладунок.</string>
@@ -2868,6 +2869,7 @@
     <string name="town_deco_crate_bottles_name">Ящик для пива</string>
     <string name="town_deco_crate_desc">Міцний дерев\'яний ящик, у якому зберігаються його таємниці.</string>
     <string name="town_deco_crate_name">Ящик</string>
+    <string name="town_deco_crate_scrolls_desc">Ця скринька повна до країв таємними знаннями.</string>
     <string name="town_deco_crate_scrolls_name">Скриня зі сувоїв</string>
     <string name="town_deco_cross_desc">Литий срібний хрест, символ місцевої релігії - \&quot;Свідки Санти - Володаря Глибин\&quot;.</string>
     <string name="town_deco_cross_name">Хрест</string>
@@ -3049,6 +3051,8 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

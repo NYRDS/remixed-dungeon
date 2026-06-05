@@ -1075,6 +1075,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="IceGuardianCore_Name">penjaga es</string>
     <string name="IceGuardianCore_Name_Objective">penjaga es</string>
     <string name="IceGuardian_Desc">Penjaga Es diciptakan oleh kobold kuno untuk melindungi gua mereka. Selama inti Guardian mengandung energi yang cukup, dia mampu merekonstruksi dirinya sendiri tepat di panasnya pertempuran.</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">penjaga es</string>
     <string name="IceGuardian_Name_Objective">penjaga es</string>
     <string name="IceKey_Info">Kunci ini sepertinya terbuat dari es, tapi kerasnya seperti besi</string>
@@ -2083,6 +2084,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="SpiderGuard_Name">laba-laba penjaga</string>
     <string name="SpiderGuard_Name_Objective">laba-laba penjaga</string>
     <string name="SpiderMindAmber_Desc">Laba-laba amber adalah makhluk langka dan misterius yang memiliki kekuatan pikiran sehingga mirip dengan laba-laba-psi, tapi lebih kuat dari peranakan mereka biasanya. Nama \&quot;amber\&quot; mengarah ke warna kantung otak raksasa mereka, yang diperlihatkan di depan korban mereka, saat Laba-laba Amber menyerang dengan kekuatan mereka.</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">laba-laba amber</string>
     <string name="SpiderMindAmber_Name_Objective">laba-laba amber</string>
     <string name="SpiderMind_Desc">Laba-laba yang kelihatan lemah ini memiliki kekuatan mental yang unik, yang memperbolehkan mereka untuk mengontrol seluruh koloni. Laba-laba-Psi dapat mengontrol semua makhluk hidup, tapi laba-laba ini agak penakut.</string>
@@ -3032,6 +3034,8 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

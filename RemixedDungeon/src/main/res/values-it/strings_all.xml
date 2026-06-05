@@ -292,6 +292,7 @@
     <string name="BlindnessBuff_Info">Completamente accecato, si possono solo sentire i suoni intorno.</string>
     <string name="BlindnessBuff_Name">Accecato </string>
     <string name="BloodTransfusion_Drained">L\'essenza vitale fluisce dal tuo animale domestico in te.</string>
+    <string name="BloodTransfusion_FullHP">Il tuo sangue è già al massimo della capacità.</string>
     <string name="BloodTransfusion_Info">Szívja a céljának szinte az összes vért maga számára, hogy gyógyuljon. Egy sötét szertartás, az áldozat és a megmaradás rituáléja.</string>
     <string name="BloodTransfusion_Name">Trasfusione del Sangue</string>
     <string name="BloodTransfusion_WontAgreed">L\'obiettivo resiste all\'estrazione della sua essenza vitale.</string>
@@ -348,6 +349,7 @@
     <string name="Capotain_Name">Cappello a capote</string>
     <string name="Carcass_Devoured">Hai divorato il cadavere di %s!</string>
     <string name="Carcass_DissectMessage">Dissechi la carcassa e ottieni un %s.</string>
+    <string name="Carcass_DissectResult">Dal %1 ottieni %2 %3.</string>
     <string name="Carcass_Info">resti di una creatura completamente morta %s.</string>
     <string name="Carcass_Kick">Questo %s è completamente morto, non serve calciarlo.</string>
     <string name="Carcass_Name">resti di %s</string>
@@ -2413,6 +2415,7 @@ Potrebbe bruciare?</string>
     <string name="WndCryptoDonate_copyAddress">Copia Indirizzo</string>
     <string name="WndCryptoDonate_currency">Valuta</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
+    <string name="WndCryptoDonate_infoText">Puoi sostenere lo sviluppo di Remixed Dungeon inviando donazioni in criptovaluta agli indirizzi sottostanti. Grazie per il tuo generoso supporto!</string>
     <string name="WndCryptoDonate_openWallet">Apri il portafoglio</string>
     <string name="WndCryptoDonate_supportDev">Supporta lo sviluppatore</string>
     <string name="WndCryptoDonate_ton">TON</string>
@@ -2957,6 +2960,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 

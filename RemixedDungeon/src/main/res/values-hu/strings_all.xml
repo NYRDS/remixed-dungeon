@@ -666,6 +666,7 @@ Micsoda Maszk! Mennyi Álca! Wow!</string>
     <string name="Drink_ACDrink">IDD MEG</string>
     <string name="Drink_Message">Ez az ital felrissítő volt!</string>
     <string name="DrunkardNPC_Desc">Rendszeres vendég természetes állapotban.</string>
+    <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">ivás</string>
     <string name="DrunkardNPC_Name_Objective">betörőt</string>
     <string name="Drunkard_Phrase_1">MÉG TÖBB PIAÁT KÉÉK!</string>
@@ -2782,6 +2783,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_cinema_sign_desc">Űgy tűnik van egy mozi az épület belsejében.</string>
     <string name="town_deco_cinema_sign_name">Mozi tábla</string>
     <string name="town_deco_clock_desc">A THESE nyílásai régóta egyetlen helyzetben fagytak meg.</string>
+    <string name="town_deco_clock_name">falióra</string>
     <string name="town_deco_common_bed_desc">Közönséges ágy.</string>
     <string name="town_deco_common_bed_name">Ágy</string>
     <string name="town_deco_common_door_desc">Egy udvarias kalandornak sosem szabadna más személyes tulajdonát háborgatnia, persze csak meghívás nélkül.</string>
@@ -2973,8 +2975,12 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_deco_wooden_table_desc">Ez egy szépen kidolgozott fa asztal.</string>
     <string name="town_deco_wooden_table_name">Fa asztal</string>
     <string name="town_table_fortune_ball_desc">Kristálygömb, misteriális gőz takarja el belülről.</string>
+    <string name="town_table_fortune_ball_name">kristálygolyó</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
 
 
 

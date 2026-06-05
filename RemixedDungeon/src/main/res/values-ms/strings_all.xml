@@ -895,6 +895,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Haste_Info">Kerenginan akan membolehkan pelaku bergerak dengan kelajuan yang sangat ekstrem sehingga segalanya di sekelilingnya akan nampak statik. Kerenginan ini akan menggunakan banyak tenaga jadi hanya boleh digunakan untuk tempoh masa yang singkat.\n\nPenguasa yang mahir mampu kekal dalam keadaan kerenginan selama tempoh yang lebih lama.</string>
     <string name="Haste_Name">Extreme Haste</string>
     <string name="Heal_Cast">%s telah disembuhkan.</string>
+    <string name="Heal_Info">Jurus ini agak berguna di Dungeon, bukan?</string>
     <string name="Heal_Name">Sembuh</string>
     <string name="HealerNPC_Desc">Orang tua, kelihatan beliau seperti pembuat tongkat sakti.</string>
     <string name="HealerNPC_Gender">masculine</string>
@@ -1399,6 +1400,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Monk_Defense">ditepis</string>
     <string name="Monk_Desc">Sami ini merupakan si fanatik, yang tegar melindungi rahsia bandar mereka dari semua makhluk lain. Mereka tidak memakai perisai atau menggunakan senjata, hanya bersandarkan seni pertempuran tanpa senjata.</string>
     <string name="Monk_Disarm">%1$s telah mengetuk jatuh %2$s dari pegangan anda!</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">sami orang kerdil</string>
     <string name="Monk_Name_Objective">sami orang kerdil</string>
     <string name="MoongraceBuff_Info">Udara di sekeliling menjadi lebih jenuh, membolehkan tumpuan yang lebih baik dan pemulihan rahsia magik.</string>
@@ -2976,6 +2978,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 
