@@ -292,6 +292,7 @@
     <string name="BlessedBuff_Info">Semoga ketepatan dan pengelakan datang kepada mereka yang disentuh berkat!</string>
     <string name="BlessedBuff_Name">Diberkati</string>
     <string name="BlindnessBuff_Name">Menjadi Buta</string>
+    <string name="BloodTransfusion_Info">Menghisap hampir semua darah dari sasaran untuk menyembuhkan diri sendiri. Ritual gelap pengorbanan dan kehidupan.</string>
     <string name="BloodTransfusion_Name">Pengisaran Darah</string>
     <string name="BloodTransfusion_WontAgreed">Sasaran menahan pengekstrakan intipati kehidupannya.</string>
     <string name="BodyArmorBuff_Info">Perisai meningkat tetapi menjejaskan kelajuan pergerakan.</string>
@@ -2969,6 +2970,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

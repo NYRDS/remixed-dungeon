@@ -201,6 +201,7 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">瘋狂強盜</string>
     <string name="Bandit_Name_Objective">瘋狂強盜</string>
+    <string name="BardNPC_Desc">城鎮吟遊詩人正在彈奏魯特琴。</string>
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">吟遊詩人</string>
     <string name="BardNPC_Name_Objective">吟遊詩人</string>
@@ -2182,6 +2183,7 @@
     <string name="Succubus_Name">魅魔</string>
     <string name="Succubus_Name_Objective">魅魔</string>
     <string name="SummonBeast_AtYourCommand">遵命！</string>
+    <string name="SummonBeast_Info">嘗試召喚一群強大的野獸服從你的命令。\n結果可能有所不同。</string>
     <string name="SummonBeast_Name">野獸召喚</string>
     <string name="SummonDeathling_Info">召喚亡靈。亡靈的生命力及攻擊力將隨你的等級的提升而增長。\n\n召喚上限 %1$d （每提升一魔力等級上限+1）</string>
     <string name="SummonDeathling_Name">亡靈召喚</string>
@@ -3037,6 +3039,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

@@ -560,6 +560,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="CorpseDust_Info2">Forse poiché il solo tenerla ti fa sentire ansioso e furente.</string>
     <string name="CorpseDust_Name">polvere di cadavere</string>
     <string name="CorpseExplosion_Info">Trasforma un cadavere in una nube mortale di gas tossico, diffondendo malattia e veleno su tutti i nemici vicini.</string>
+    <string name="CorpseExplosion_Name">Esplosione di cadaveri</string>
     <string name="CorpseExplosion_NoCorpse">Non c\'è un cadavere in quella posizione.</string>
     <string name="Crab_Defense">parata</string>
     <string name="Crab_Desc">Questi enormi granchi sono in cima alla catena alimentare delle fogne. Sono estremamente veloci e i loro duri esoscheletri posso sopportare duri colpi.</string>
@@ -1800,6 +1801,7 @@ Potrebbe bruciare?</string>
     <string name="ScarecrowNPC_Name">spaventapasseri</string>
     <string name="ScarecrowNPC_Name_Objective">spaventapasseri</string>
     <string name="ScarecrowNPC_Quest_End">Oh gioia, oh mio!\nPer questo, riceverai una dolce fetta di torta!</string>
+    <string name="ScarecrowNPC_Quest_Reminder">Cinque caramelle è tutto ciò di cui ho bisogno.\nOh, la ricompensa sarà così dolce!</string>
     <string name="ScarecrowNPC_Quest_Start_Female">Allora ciao ragazzina, come stai?\nHo qualcosa di eccitante per te!\n\nOh quanto sarei grato,\nSe andassi a raccogliere qualche caramella per me!\n\n</string>
     <string name="ScarecrowNPC_Quest_Start_Male">Perché ciao ragazzone, come stai?\nHo qualcosa di emozionante per te!\n\nOh quanto sarei grato,\nSe andassi a raccogliere un po\' di caramelle per me!\n\n</string>
     <string name="Scorpio_Desc">Queste creature demoniche simili ad aracnidi evitano i combattimenti ravvicinati ad ogni costo, lanciando punte paralizzanti da lunghe distanze.</string>
@@ -2053,6 +2055,7 @@ Potrebbe bruciare?</string>
     <string name="SpiderQueen_Name">Ragno regina</string>
     <string name="SpiderQueen_Name_Objective">Ragno regina</string>
     <string name="SpiderServant_Desc">I ragni soldato sembrano essere le unità più numerose del meandro dei ragni. Nati per proteggere il territorio, i soldati chelicera hanno sviluppato ghiandole velenifere per avvelenare i loro nemici. </string>
+    <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">ragno soldato </string>
     <string name="SpiderServant_Name_Objective">ragno soldato </string>
     <string name="Spinner_Desc">Questi ragni furiosi verdastri provano ad evitare il combattimento diretto, preferendo aspettare a distanza mentre le loro vittime, impigliate nella ragnatela, muoiono lentamente a cause del loro morso velenoso. </string>
@@ -2774,6 +2777,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_curtains_name">Tende</string>
     <string name="town_deco_door_desc">Una semplice porta di legno</string>
     <string name="town_deco_door_name">Porta</string>
+    <string name="town_deco_dungeon_door_desc">Ingresso nel dungeon.</string>
     <string name="town_deco_dungeon_door_name">Entrata</string>
     <string name="town_deco_emptyboard_desc">Il più comune scaffale per esporre oggetti.</string>
     <string name="town_deco_emptyboard_name">Rack</string>
@@ -2942,6 +2946,10 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
 
 
 
