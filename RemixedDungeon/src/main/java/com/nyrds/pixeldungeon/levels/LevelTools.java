@@ -55,7 +55,8 @@ public class LevelTools {
 
                 if ((i - 1) % roomStep == 0) {
 
-                    if (TerrainFlags.is(level.get(i - 1, j), TerrainFlags.SOLID) || TerrainFlags.is(level.get(i + 1, j), TerrainFlags.SOLID)) {
+                    if (level.isCellAreFlags(i - 1, j, TerrainFlags.SOLID) ||
+                            level.isCellAreFlags(i + 1, j, TerrainFlags.SOLID)) {
                         setCellIfEmpty(level, i, j, Terrain.WALL_DECO);
                         continue;
                     }
@@ -65,8 +66,8 @@ public class LevelTools {
                 }
 
                 if ((j - 1) % roomStep == 0) {
-                    if (TerrainFlags.is(level.get(i, j - 1), TerrainFlags.SOLID) ||
-                            TerrainFlags.is(level.get(i, j + 1), TerrainFlags.SOLID)) {
+                    if (level.isCellAreFlags(i, j - 1, TerrainFlags.SOLID) ||
+                            level.isCellAreFlags(i, j + 1, TerrainFlags.SOLID)) {
                         setCellIfEmpty(level, i, j, Terrain.WALL_DECO);
                         continue;
                     }
