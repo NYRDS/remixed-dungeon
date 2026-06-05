@@ -420,6 +420,7 @@
     <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">Bilah pedang ini diperbuat dari chaos tulen dan kadangkala ia bergetar. Kuasa hebat tersimpan di dalamnya senjata ini, yang dapat memotong bersih hampir apa jua benda. Sebaliknya, kemahiran terbaik diperlukan, untuk setanding dengan kekuatan senjata ini.</string>
     <string name="ChaosSword_Name">pedang chaos</string>
+    <string name="CharAction_Charm">memikat</string>
     <string name="CharAction_Expel">usir</string>
     <string name="CharAction_Give">beri</string>
     <string name="CharAction_Hit">memukul</string>
@@ -2968,6 +2969,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
