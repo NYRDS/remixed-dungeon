@@ -318,6 +318,7 @@
     <string name="BodyArmorBuff_Name">Міць тіла</string>
     <string name="BodyArmorSpell_Info">Активує резерви м\'язів, тимчасово збільшуючи їх силу значно підвищуючи захист, але ціною швидкості пересування.</string>
     <string name="BodyArmorSpell_Name">Міць тіла</string>
+    <string name="BoneSaw_Info">Точно-проєктована хірургічна пила для швидкого вскривання. Її урон та швидкість атаки стають смердєнішими з навичками Чумного лікаря. Критичні влучення висікають додаткові частини для збирання з ворогів, і вона вдаряє безжально ефективно проти паралізованих противників.</string>
     <string name="BoneSaw_Name">Костяна пила</string>
     <string name="BoneShard_Info">Гострий шматочок кістки, добутого з переможеного ворога. Ці шматочки дивовижно міцні та корисні для створення.</string>
     <string name="BoneShard_Name">Уламок кістки</string>
@@ -3052,6 +3053,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

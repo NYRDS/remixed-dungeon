@@ -2813,6 +2813,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_flowerinthepot_name">Fiore in un vaso</string>
     <string name="town_deco_furnace_desc">Un forno affidabile, assemblato secondo schemi tradizionali.</string>
     <string name="town_deco_furnace_name">Forno</string>
+    <string name="town_deco_glass_desc">Questa è più larga delle altre e lascia sicuramente entrare più luce.</string>
     <string name="town_deco_glass_name">Finestra Larga</string>
     <string name="town_deco_glass_stained_desc">L\'autore di questo vetro ha probabilmente messo molta fatica in esso.</string>
     <string name="town_deco_glass_stained_name">Vetro Colorato</string>
@@ -2962,6 +2963,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

@@ -1100,6 +1100,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="IncendiaryDart_Info">Lonjakan pada masing-masing anak panah ini dirancang untuk menjepitnya ke targetnya sementara senyawa tidak stabil yang diikatkan pada panjangnya meledak menjadi nyala api yang cemerlang.</string>
     <string name="IncendiaryDart_Name">dart membakar</string>
     <string name="InnKeeperNPC_Desc">Penjaga penginapan bangga pada dirinya sendiri.</string>
+    <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">penjaga penginapan</string>
     <string name="InnKeeperNPC_Name_Objective">penjaga penginapan</string>
     <string name="InnServant_Phrase_1">Ugh, masih banyak yang harus dilakukan!</string>
@@ -3034,6 +3035,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

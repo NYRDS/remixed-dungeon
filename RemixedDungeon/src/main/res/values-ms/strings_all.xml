@@ -551,6 +551,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ComboBuff_Info">Serangan seterusnya akan menjadi serangan kombo.</string>
     <string name="ComboBuff_Name">Kombo</string>
     <string name="Combo_Combo">Kombo %d-pukulan!</string>
+    <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">Anak panah kayu biasa dengan kepala panah besi.</string>
     <string name="CommonArrow_Name">anak panah</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
@@ -2979,6 +2980,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
