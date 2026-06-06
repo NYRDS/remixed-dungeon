@@ -351,7 +351,7 @@
     <string name="Capotain_Name">Cappello a capote</string>
     <string name="Carcass_Devoured">Hai divorato il cadavere di %s!</string>
     <string name="Carcass_DissectMessage">Dissechi la carcassa e ottieni un %s.</string>
-    <string name="Carcass_DissectResult">Dal %1 ottieni %2 %3.</string>
+    <string name="Carcass_DissectResult">Dal %1$s ottieni %2$d %3$s.</string>
     <string name="Carcass_Info">resti di una creatura completamente morta %s.</string>
     <string name="Carcass_Kick">Questo %s è completamente morto, non serve calciarlo.</string>
     <string name="Carcass_Name">resti di %s</string>
