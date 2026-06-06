@@ -64,6 +64,7 @@
     <string name="AnesthesiaBuff_Info">不感覺疼痛也不會從攻擊中醒來，但仍受到傷害。</string>
     <string name="AnesthesiaBuff_Name">麻醉</string>
     <string name="Anesthesia_Cast">%s 깊은 잠에 빠진다.</string>
+    <string name="Anesthesia_Info">讓目標陷入深度、非自然的睡眠。即使是最猛烈的攻擊也無法將其從這沉睡中喚醒。</string>
     <string name="Anesthesia_Name">麻醉</string>
     <string name="Ankh_Info">此古老的不朽的象徵可以使您從死亡中復活。但會使您丟失所有未裝備的道具。</string>
     <string name="Ankh_Name">十字架</string>
@@ -3047,6 +3048,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -3020,6 +3020,7 @@
     <string name="town_deco_tree_desc">Виникає дивне відчуття, дивлячись на живе дерево в безпосередній близькості від входу до підземелля, наповнені жахом та смертю.</string>
     <string name="town_deco_tree_name">Дерево</string>
     <string name="town_deco_urn_desc">Глиняний урна, можливо, з кимось попелом.</string>
+    <string name="town_deco_urn_name">Урна</string>
     <string name="town_deco_vat_desc">Цей кам\'яний чан заповнений святій водою до самого верху.</string>
     <string name="town_deco_vat_name">Вanna</string>
     <string name="town_deco_wall_beam_desc">Досить надійна опора для даної споруди.</string>
@@ -3056,6 +3057,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

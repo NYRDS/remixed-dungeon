@@ -1471,6 +1471,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Nightcap_Info">Menaklukkan dungeon di malam hari pasti menjadi tugas yang sangat melelahkan. Bagaimana kalau memakai topi yang hangat dan nyaman ini dan santai saja, dan biarkan seluruh dunia menunggu.</string>
     <string name="Nightcap_Name">minum</string>
     <string name="Nightmare_Desc">Makhluk menjijikan yang terbuat dari tentakel daging yang menyentak. Mimpi seram adalah sebuah manifestasi dari pikiran jahat Dewa Tua.</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name">mimpi seram</string>
     <string name="Nightmare_Name_Objective">mimpi seram</string>
     <string name="No_Valid_Cell">Tidak ada sel yang cocok di dekatnya.</string>
@@ -3038,6 +3039,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
