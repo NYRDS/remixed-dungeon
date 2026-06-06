@@ -213,6 +213,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">vámpír denevér</string>
     <string name="Bat_Name_Objective">vámpír denevér</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">A hatalmas acél fej jelentős lendülettel látje el ennek a csatabárdnak minden csapását.</string>
     <string name="BattleAxe_Name">csatabárd</string>
     <string name="Bee_Desc">B malgré leur petite taille, les abeilles protègent farouchement leur ruche. Elles ne vivent pas longtemps cependant.</string>
@@ -1478,6 +1479,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="ParalysisArrow_Info">Ezt a nyílvesszőt méreg borítja.</string>
     <string name="ParalysisArrow_Name">bénító nyíl</string>
     <string name="ParalysisBuff_Info">Teljesen megvanálva!</string>
+    <string name="ParalysisBuff_Name">Megparalizálva</string>
     <string name="Paralysis_Name_0">Kábító %s</string>
     <string name="Paralysis_Name_1">Kábító %s</string>
     <string name="Paralysis_Name_2">Kábító %s</string>
@@ -2442,6 +2444,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndCryptoDonate_openWallet">Nyissa meg a pénztárcát</string>
     <string name="WndCryptoDonate_supportDev">Támogasd a fejlesztőt</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_warningText">FIGYELEM: Mindig ellenőrizze a címet pénzküldés előtt. A kriptovaluta-tranzakciók nem visszavonhatók!</string>
     <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - Mindenki számára ingyenes, és az is marad.\n\nAzonban segíthetsz jobbá tenni a játékot.\n\nHálás köszönetünk mellett némi kozmetikai extrára is számíthatsz.</string>
     <string name="WndDonate_donate">támogatás:</string>
     <string name="WndDonate_gold">arany</string>
@@ -2989,6 +2992,9 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_name">kristálygolyó</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
 
 
 

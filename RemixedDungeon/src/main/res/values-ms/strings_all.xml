@@ -1,5 +1,6 @@
 <resources>
     <string name="AC_Devour">Baham</string>
+    <string name="AC_Dissect">Bedah</string>
     <string name="AC_Kick">Tendang</string>
     <string name="AC_Necromancy">Necromancy</string>
     <string name="Abilities_Common">Mantera Umum</string>
@@ -292,6 +293,7 @@
     <string name="Bleeding_Death">Anda mati kerana pendarahan...</string>
     <string name="BlessedBuff_Info">Semoga ketepatan dan pengelakan datang kepada mereka yang disentuh berkat!</string>
     <string name="BlessedBuff_Name">Diberkati</string>
+    <string name="BlindnessBuff_Info">Sepenuhnya dibutakan, hanya bunyi di sekeliling yang boleh didengar.</string>
     <string name="BlindnessBuff_Name">Menjadi Buta</string>
     <string name="BloodTransfusion_Drained">Esensi kehidupan mengalir dari peliharaan anda ke dalam diri anda.</string>
     <string name="BloodTransfusion_Info">Menghisap hampir semua darah dari sasaran untuk menyembuhkan diri sendiri. Ritual gelap pengorbanan dan kehidupan.</string>
@@ -965,6 +967,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HeroClass_PlagueDoctorPerks_1">Bermula dengan Topeng Plague (kebal terhadap semua Gas) dan Gergaji Tulang. Serangan kritikal menjatuhkan bahagian tambahan, dan Gergaji memberikan +50% kerosakan pada musuh yang lumpuh.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Mulakan dengan sebuah [yellow:Plague Mask] (kebal terhadap semua Gas) dan sebuah [yellow:Bone Saw]. Serangan kritikal menjatuhkan bahagian tambahan, dan Saw memberikan x1.5 kerosakan kepada musuh yang lumpuh.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Bermula dengan potions [yellow:Paralysis Gas] dan [yellow:Toxic Gas] yang telah dikenal pasti.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Doktor pesakit mendapat penalti ketepatan yang besar tanpa Gergaji Tulang kesayangan di tangan dan tidak boleh menggunakan senjata jarak jauh.</string>
     <string name="HeroClass_Priest">Paderi</string>
     <string name="HeroClass_Rog">gasar</string>
     <string name="HeroClass_RogPerks_0">Gasar bermula dengan Cincin Bayang+1.</string>
@@ -1787,6 +1790,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="RogueArmor_Prompt">Pilih satu lokasi untuk melompat</string>
     <string name="RootSpell_Info">Akarkan atau pegang karakter supaya ia tidak dapat bergerak dalam tempoh singkat.</string>
     <string name="RootSpell_Name">Akar</string>
+    <string name="RootsBuff_Info">Akar yang tumbuh dari tanah melilit badan, menghalang sebarang pergerakan.</string>
     <string name="RootsBuff_Name">Diakarkan</string>
     <string name="RottenFish_Info">Ikan busuk, baunya...</string>
     <string name="RottenFish_Name">ikan busuk</string>
@@ -2985,6 +2989,10 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
 
 
 

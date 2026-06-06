@@ -2804,6 +2804,7 @@
     <string name="town_deco_INN_sign_name">酒館招牌</string>
     <string name="town_deco_armoronhanger_desc">一些不同樣式的盔甲掛在盔甲架上。</string>
     <string name="town_deco_armoronhanger_name">盔甲</string>
+    <string name="town_deco_armorstand_leather_desc">可靠的皮革護甲將是進入地牢前的絕佳購買。</string>
     <string name="town_deco_armorstand_leather_name">皮革護甲</string>
     <string name="town_deco_armorstand_plate_desc">據商人說，這套重型板甲曾經屬於一位偉大的戰士。</string>
     <string name="town_deco_armorstand_plate_name">板甲</string>
@@ -3045,6 +3046,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
