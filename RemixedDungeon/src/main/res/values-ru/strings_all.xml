@@ -2238,6 +2238,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="TitleScene_InternalStorageLow">Недостаточно места во\n внутреннем хранилище\n Игра может не сохранится!</string>
     <string name="TitleScene_Mods">Моды</string>
     <string name="TitleScene_Play">Играть</string>
+    <string name="TitleScene_PlayOnPC">Играть на ПК</string>
     <string name="TomeOfKnowledge_Info">Этот древний том наполнен тайными знаниями и загадками! Может это и не самое простое чтиво, но если ты его осилишь, оно обязательно повысит твои магические способности.</string>
     <string name="TomeOfKnowledge_Name">Том Знаний</string>
     <string name="TomeOfMastery_ACRead">ЧИТАТЬ</string>

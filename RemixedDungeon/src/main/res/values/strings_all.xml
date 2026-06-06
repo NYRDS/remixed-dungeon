@@ -638,6 +638,7 @@ Your opinion matters!</string>
   <string name="Toolbar_Info1">You don\'t know what is there.</string>
   <string name="Toolbar_Info2">Select a cell to examine</string>
   <string name="TitleScene_Play">Play</string>
+  <string name="TitleScene_PlayOnPC">Play on PC</string>
   <string name="TitleScene_Highscores">Highscores</string>
   <string name="TitleScene_Badges">Badges</string>
   <string name="TitleScene_About">About</string>
