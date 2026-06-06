@@ -209,6 +209,7 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">божевільний злочинець</string>
     <string name="Bandit_Name_Objective">божевільного злочинця</string>
+    <string name="BardNPC_Desc">Міський бард грає на лютні.</string>
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">Бард</string>
     <string name="BardNPC_Name_Objective">бард</string>
@@ -3057,6 +3058,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

@@ -2414,6 +2414,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     -- Labah-Psi kini akan memberi kesan baik kepada labah-labah lain berbanding memberi kesan buruk kepada Wira.\n
     - Pepijat telah dibaiki\n
     </string>
+    <string name="Welcome_Text_32">remix.32\n- Permainan:\n-- Mobs dan Pets kini boleh mendapat pengalaman dan tahap\n-- Perisai Kegoncangan\n-- Juara\n-- Pertarungan Yog diseimbangkan semula\n-- Penalaan keseimbangan\n- UX:\n-- Statistik Hero dan Mobs yang terperinci\n-- Antaramuka Penyesuaian yang lebih baik\n-- Kamera yang licin\n- Modding:\n-- Animasi tersuai\n-- Skrip Tersuai untuk Mobs bawaan\n-- Bersinar untuk Mobs\n-- Ralat diperbaiki</string>
     <string name="Welcome_Text_32_1">remix.32.1\n- Gameplay:\n-- Plague Doctor quest line\n-- Mob carcasses now somewhat usable items\n-- Better pets control\n- UX:\n-- Improved save-game management\n- Modding:\n-- Local mod installation methods\n-- Custom items now can perform actions while being in heaps\n- Bugs fixed</string>
     <string name="Welcome_Title">Selamat Datang!</string>
     <string name="WindGust_Info">Hembuskan angin kencang yang dapat menolak keluar karakter terpilih.</string>
@@ -2991,6 +2992,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
