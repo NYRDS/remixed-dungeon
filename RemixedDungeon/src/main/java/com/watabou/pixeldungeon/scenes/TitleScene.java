@@ -167,8 +167,8 @@ public class TitleScene extends PixelScene {
         String lang = GamePreferences.uiLanguage();
         final boolean ruUser = lang.equals("ru");
 
-        // Add "Play on PC" button for Russian users
-        if (ruUser) {
+        // Add "Play on PC" button for Russian users on Android
+        if (Utils.shouldShowVkPlayButton()) {
             ImageButton btnPlayOnPC = new ImageButton(Icons.VK_PLAY.get()) {
                 @Override
                 protected void onClick() {
