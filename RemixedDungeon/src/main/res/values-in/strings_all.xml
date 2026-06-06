@@ -2567,6 +2567,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="WndInstallingMod_please_wait">Memasang mod, harap tunggu...</string>
     <string name="WndInstallingMod_skipping_file">Melewati %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Jalankan Resep</string>
+    <string name="WndItemAlchemy_NoRecipes">Tidak ada resep tersedia dengan item ini dan inventaris Anda saat ini.</string>
     <string name="WndItemAlchemy_SelectRecipe">Pilih resep</string>
     <string name="WndItemAlchemy_Title">Resep alkimia dengan %s</string>
     <string name="WndItemAlchemy_Transmute">Transmutasi</string>
@@ -3037,6 +3038,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

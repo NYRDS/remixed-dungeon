@@ -1451,6 +1451,7 @@
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">дворф-монах</string>
     <string name="Monk_Name_Objective">дворфа-монаха</string>
+    <string name="MoongraceBuff_Info">Повітря навколо стає більш насиченим, що дозволяє краще концентруватися та відновлювати магічні запаси.</string>
     <string name="MoongraceBuff_Name">Небесна манна</string>
     <string name="Moongrace_Desc">Ці рослини ростуть невеликими кількостями і є джерелом природної магії.</string>
     <string name="Moongrace_Name">Мунгрейс</string>
@@ -3055,6 +3056,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

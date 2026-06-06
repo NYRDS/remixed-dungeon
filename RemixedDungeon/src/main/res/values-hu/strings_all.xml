@@ -2664,6 +2664,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndTilesKind_ClassicLook">Klasszikus kinézet</string>
     <string name="WndTilesKind_NewLook">Új kinézet</string>
     <string name="WndTilesKind_Title">Még csak egy dolog:</string>
+    <string name="WndTilesKind_text">Készen állsz belépni egy elvarázsolt Barlangba, de most te döntesz, hogyan nézed meg:\n Szeretnéd modern pseudo 3d-ben vagy klasszikus lapos nézetben?\nKésőbb a játék beállításai menüjében megváltoztathatod.</string>
     <string name="WndTradeItem_Bought">Vettél egy %1$s-t %2$daranyért</string>
     <string name="WndTradeItem_Buy">Vedd meg %daranyért</string>
     <string name="WndTradeItem_BuyAll">Összes megvétele %d g- ért</string>
@@ -2992,6 +2993,7 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_name">kristálygolyó</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
 
 
 
