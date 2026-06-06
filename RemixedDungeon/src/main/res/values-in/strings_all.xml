@@ -63,6 +63,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Amulet_Name">Jimat Yendor</string>
     <string name="AnesthesiaBuff_Info">Tidak merasakan sakit dan tidak akan bangun dari serangan, tetapi tetap menerima kerusakan.</string>
     <string name="AnesthesiaBuff_Name">Anestesi</string>
+    <string name="Anesthesia_Cast">%s jatuh ke dalam tidur yang dalam dan tanpa mimpi.</string>
     <string name="Anesthesia_Info">Menyebabkan tidur yang dalam dan tidak wajar pada target Anda. Bahkan serangan yang paling kejam tidak akan membangunkan mereka dari tidur ini.</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">Simbol kuno tentang hidup abadi memberikan kehebatan untuk hidup kembali setelah mati. Saat pembangkitan semua item yang tidak dipakai hilang.</string>
@@ -3036,6 +3037,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
