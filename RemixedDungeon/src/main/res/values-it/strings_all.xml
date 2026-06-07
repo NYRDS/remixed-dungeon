@@ -689,6 +689,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Drunkard_Phrase_1">ANCORA DA BERE, PER FAVORE!</string>
     <string name="Drunkard_Phrase_2">Chi ha bisogno d\'acqua quando hai la birra!</string>
     <string name="Drunkard_Phrase_3">Questa birra sa di terra</string>
+    <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_DeadEnd">Cosa ci fai qui?!</string>
     <string name="Dungeon_NoTips">Il testo è indecifrabile...</string>
     <string name="Dungeon_Tips_0">Non sopravvalutare la tua forza, usa armi e armature che riesci a maneggiare.</string>
@@ -1887,6 +1888,7 @@ Potrebbe bruciare?</string>
     <string name="ScrollOfRemoveCurse_Proced">Il tuo pacco si illumina, e disperde un\'energia malevole</string>
     <string name="ScrollOfSummoning_Info">Quando letto ad alta voce, questo pergamena evoca uno dei mostri del livello attuale del dungeon. E se la volontà del mostro è abbastanza debole, diventerà il tuo servitore.</string>
     <string name="ScrollOfSummoning_Info_2">Il mostro ha risposto al tuo richiamo!</string>
+    <string name="ScrollOfSummoning_Name">Pergamena dell\'Evocazione</string>
     <string name="ScrollOfTeleportation_Info">La magia su questa pergamena teletrasporterà istantaneamente chi la legge in un punto qualsiasi del dungeon. Può essere usata per scappare da una situazione pericolosa, ma un lettore sfortunato potrebbe ritrovarsi in una situazione ancora peggiore.</string>
     <string name="ScrollOfTeleportation_Name">Pergamena di Teletrasporto</string>
     <string name="ScrollOfTeleportation_NoTeleport">la forte aura magica di questo luogo impedisce il teletrasporto!</string>
@@ -2761,6 +2763,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="Zombie_Name_Objective">zombie</string>
     <string name="deco_candle_desc">Grande candela</string>
     <string name="deco_candle_name">Candela</string>
+    <string name="gdpr_agree">Sì, accetto</string>
     <string name="gdpr_choose">Fai la tua scelta</string>
     <string name="gdpr_disagree">No, grazie</string>
     <string name="gdpr_text">Remixed Dungeon personalizza la tua esperienza pubblicitaria utilizzando Admob e Appodeal (ulteriori fornitori di annunci). I fornitori di annunci e i loro partner possono raccogliere ed elaborare dati personali come identificatori del dispositivo, dati demografici e di interesse per fornire un\'esperienza pubblicitaria personalizzata per te. Acconsentendo a questa esperienza pubblicitaria migliorata, vedrai annunci che i fornitori di annunci e i loro partner ritengono più pertinenti per te.\n\nAccettando, confermi di avere più di 16 anni e di volere un\'esperienza pubblicitaria personalizzata.\n\n</string>
@@ -3009,6 +3012,9 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
 
 
 
