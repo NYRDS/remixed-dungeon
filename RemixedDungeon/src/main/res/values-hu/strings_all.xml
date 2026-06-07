@@ -1546,6 +1546,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*Hátraveti a fejét, és felkacag, a nevetése visszhangzik a nyirkos laboratóriumában* Nagyszerű! Egy _Halál Lovag_ áll előttünk! Az erő, amely árad belőle... mámorító! *Hozzád fordul, szeme lázas csillogással* És neked, a bátorságod méltó jutalma: egy _Erő Főzet_! Adja meg neked az erőt, hogy legyőzd bármely ellenséget! Most... vizsgáljuk meg a tárgyunkat. A lényege olyan titkokat rejt, amelyek átírhatják az élet törvényeit! *Mániákus vigyorral lép a _Halál Lovag_ felé, és egy bugyborékoló zöld folyadékkal teli lombikot lóbál*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Ez nem egyszer állat! Ez egy sétaútoni tanútanú a nekromancia erejéről! Fogj meg egyet élve és megsérzetlenül! Ez a Halál Lovagja... ez a kulcs!</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">Egy _Halál Lovag_! *Hangja az izgatottságtól repedezik, csontos ujjai remegen, miközben egy borbogó, foszforeszkens folyadékkal tölt üveget zár a kezében*. Ilyen lény... a halhatatlanság fénye! Megfogni az egyiket, élve... ez lenne... monumentális. Képzeld el, milyen titkok felelhetnek meg! Az ereje, ami a csontos ereiben folyik! Igen, egy _Halál Lovag_! Ez döntő fontosságú a kutatásomhoz! Mert lehetővé teszi, hogy mélyebben ásjunk... az élet... és a halál titokzatos világaiba!</string>
+    <string name="PlagueDoctorQuest_4_1_Epilogue">Fényes! A _Dwarf Warlockok_, az ő esszenciájuk most már az enyém, hogy kutatgassak! Ilyen kanyargott, korrupt mágia... igazán lenyűgöző. *Felállít egy csillogó fiókot, ami egy ragaszkodó, vörös folyadékkal van megtöltve.* Ez neked van: egy _Might Potion_! Igyd meg az erejét, és érezd, ahogy a hegyek ereje pulzál az éredben! Ne feledd, a tudás az áldozatokból nyert tudás végső soron egy magasabb célt fog szolgálni... talán még minket is megment egy sorsa elől, ami a haláltól is rosszabb.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">Öt _Törpe Boszorkánymester_, testük még mindig pulzál a sötét mágia gyenge visszhangjától! Hozd őket nekem, és jutalmul olyan italt adok, amely páratlan erővel felruház – egy _Erőesszenciát_, amely tíz férfi erejével telít meg!</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Hatchim! Elfler! O stubborn, yeraltı sakinleri, taş ve altına takıntılı. Ama _Elf Cadıcıları\'nı arıyorum... yerin derinliklerindeki bunalımlı sihirle beslenen çarpık büyüleri. Beş, beş tane bu kurumuş ruh lazım! Bedenleri belirli bir... olguayı anlamama anahtarı. Yer yüzeyinden arcan enerjilerini kanalize etme konusunda bir şeyler. Bir kırılma noktasına çok yakın olduğumu düşünüyorum, ama onların özünü, bozulmuş büyülerini gerekiyor! *He violently coughs into his handkerchief, a dark stain spreading across the delicate fabric*</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Elismerés! Öt _Kobold Jégvarázsló_, jégeszenciájukat most már én kutathatom! A kapcsolatuk a fagyos pusztákhoz, ez valóban lenyűgöző. Ahogyan magát a vizet is irányítják... valóban figyelemre méltó. *Átad neked egy csillogó üvegcsét, tele élénk vörös folyadékkal* Ez, a bátor erőfeszítéseidért való: Egy _Erőital_! Igyál belőle és érezd tíz harcos erejének áramlását az erekben! Ne feledd, az ismeret hatalom... és a hatalom az egyetlen fegyverünk a közelgő sötétség ellen. Most pedig... boncoljuk fel ezeket a jégszemélyiségeket és tárd fel dermesztő titkaikat!</string>
@@ -2260,6 +2261,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="TownShopkeeper_Objective">eladó</string>
     <string name="TownsfolkMovieNPC_Desc">Egyvalaki a helyiek közül. Bár köztük ő csak átlagos, az öltözéke elég drágának látszik</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
+    <string name="TownsfolkMovieNPC_Message">Tudod, hogy milyen speciális szolgáltatást nyújt a \&quot;mozi\&quot;? Sajnálom, hogy egy egzotikus dologért kérnek, amit \&quot;Internetnek\&quot; hívnak, soha nem is hallottam ilyesmiről.</string>
     <string name="TownsfolkMovieNPC_Name">városiak</string>
     <string name="TownsfolkMovieNPC_Name_Objective">városiak</string>
     <string name="TownsfolkNPC_Desc">Egyvalaki a helyiek közül. Bár köztük ő csak átlagos, az öltözéke elég drágának látszik.</string>
@@ -3017,6 +3019,9 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_name">kristálygolyó</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
 
 
 
