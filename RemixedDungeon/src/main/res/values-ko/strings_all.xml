@@ -1133,7 +1133,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ItemSprite_Info1">drop aside: %1$.1f %2$.1f</string>
     <string name="Item_ACAlchemy">연금술</string>
     <string name="Item_ACDrop">버리기</string>
-    <string name="Item_ACPickup">Ambil</string>
+    <string name="Item_ACPickup">집어들기</string>
     <string name="Item_ACThrow">던지기</string>
     <string name="Item_DirThrow">던질 방향을 선택하세요</string>
     <string name="Item_Info">어떤것</string>
@@ -3035,6 +3035,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

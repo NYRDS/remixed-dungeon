@@ -2163,7 +2163,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="Statue_Name_Objective">canlı heykel</string>
     <string name="Stench_Txt">Kokuşmuş %s</string>
     <string name="StoneBloodBuff_Info">Kan, yakındaki duvarlarla birleşen ve onları geçmeyi çok daha kolay hale getiren taşa dönüşür, ama ne pahasına olursa olsun.</string>
-    <string name="StoneBloodBuff_Name">Delikanlı</string>
+    <string name="StoneBloodBuff_Name">Taş Kemiği</string>
     <string name="Str_lose">-1 güç</string>
     <string name="StrongShield_desc">Bu dikdörtgen kalkan bronz levhalarla kaplanmıştır ve renkli kumaşlarla süslenmiştir. Önemli ölçüde daha ağırdır, ancak gelen hasarı çok daha fazla engelleyebilir.</string>
     <string name="StrongShield_name">Tunç Kaplamalı Kalkan</string>
@@ -3053,6 +3053,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
