@@ -359,6 +359,7 @@
     <string name="Capotain_Info">un cappello alto, a tesa stretta. Di solito è associato ai Puritani , ma non c\'è bisogno di essere religiosi per indossarlo. Per qualche ragione ha una targhetta, che dice \&quot; Solomon \&quot; .</string>
     <string name="Capotain_Name">Cappello a capote</string>
     <string name="Carcass_Devoured">Hai divorato il cadavere di %s!</string>
+    <string name="Carcass_DissectFailed">Dissezioni il %s ma non trovi nulla di valore.</string>
     <string name="Carcass_DissectMessage">Dissechi la carcassa e ottieni un %s.</string>
     <string name="Carcass_DissectResult">Dal %1$s ottieni %2$d %3$s.</string>
     <string name="Carcass_Info">resti di una creatura completamente morta %s.</string>
@@ -1286,6 +1287,7 @@ Potrebbe bruciare?</string>
     <string name="LibrarianNPC_Name">bibliotecaria</string>
     <string name="LibrarianNPC_Name_Objective">bibliotecaria</string>
     <string name="LibraryBook_Description">Questo tomo è davvero enorme. Racchiude tutta la conoscenza che gli avventurieri hanno scoperto e portato dal dungeon.</string>
+    <string name="LibraryBook_Name">Libro della biblioteca</string>
     <string name="Lich_Desc">Il negromante incontrò la morte nelle profondità della Necropoli, e come l\'energia maligna di questo posto fluì nel suo corpo, eventualmente, si trasformò in un lich. Il mago non morto, una marionetta senza coscienza, controllata da potrei malevoli.</string>
     <string name="Lich_DieInfo">Non ho mai gradito questo Negromante. È ora di tornare al livello 7 e trovare un altro modo per scendere nella nuova avventura.</string>
     <string name="Lich_Gender">masculine</string>
@@ -1319,6 +1321,7 @@ Potrebbe bruciare?</string>
     <string name="MageArmor_Name">tunica del mago</string>
     <string name="MageArmor_NotMage">Solo i maghi possono usare quest\'armatura!</string>
     <string name="MagicArrow_Info">La vecchia e buona freccia magica, la scelta giusta quando finiscono le munizioni.</string>
+    <string name="MagicArrow_Name">Freccia magica</string>
     <string name="MagicTorch_Info">Una magia che produce luce per illuminare i livelli oscuri del dungeon.</string>
     <string name="MagicTorch_Name">Torcia magica</string>
     <string name="MailArmor_Desc">Maglie metalliche intrecciate per fare un\'armatura robusta ma flessibile.</string>
@@ -1946,6 +1949,7 @@ Potrebbe bruciare?</string>
     <string name="ServiceManNPC_Name">lavoratore</string>
     <string name="ServiceManNPC_Name_Objective">lavoratore</string>
     <string name="ServiceManNPC_NoConnection">Mi dispiace, non puoi usare il nostro servizio in questo momento. (Richiede connessione Internet)</string>
+    <string name="ServiceManNPC_NotReady">Mi dispiace, il film non è ancora pronto, puoi riprovare tra qualche minuto.</string>
     <string name="ServiceManNotReadyNPC_Message">Mi dispiace, ma questo edificio non è ancora pronto!</string>
     <string name="Sewer_TileDescBookshelf">La libreria è piena di libri inutili a basso costo. Potrebbe bruciare?</string>
     <string name="Sewer_TileDescDeco">Un muschio giallastro copre il pavimento.</string>
@@ -1990,6 +1994,7 @@ Potrebbe bruciare?</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">Bruto schermato</string>
     <string name="Shielded_Name_Objective">Bruto schermato</string>
+    <string name="ShootInEye_Info">Usa le tue eccezionali abilità di mira per colpire il nemico dritto nell\'occhio, se ne ha uno ovviamente.</string>
     <string name="ShootInEye_Name">Colpo nell\'Occhio</string>
     <string name="Shopkeeper_Buy">Seleziona l\'oggetto da acquistare</string>
     <string name="Shopkeeper_BuyPrompt">Vediamo cos\'hai</string>
@@ -2114,6 +2119,7 @@ Potrebbe bruciare?</string>
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">Spirito del dolore</string>
     <string name="SpiritOfPain_Name_Objective">Spirito del dolore</string>
+    <string name="Sprout_Info">Risveglia i semi dormienti.\nTuttavia, ci dev\'essere della vegetazione sul terreno perché l\'incantesimo abbia successo.</string>
     <string name="Sprout_Name">Germoglio</string>
     <string name="StartScene_ChooseFromSlot">Scegli uno slot di salvataggio</string>
     <string name="StartScene_ComingSoon">Prossimamente</string>
@@ -2267,6 +2273,7 @@ Potrebbe bruciare?</string>
     <string name="ToxicGland_Info">Una ghiandola tossica raccolta da un nemico sconfitto. Queste ghiandole sono piene di potenti tossine e possono essere utilizzate in processi alchemici.</string>
     <string name="ToxicGland_Name">Ghiandola Tossica</string>
     <string name="TrapWnd_Step">Vuoi davvero calpestare questa trappola? Potresti morire.</string>
+    <string name="TrapWnd_Title">Trappola</string>
     <string name="TreacherousSpirit_Desc">Questa mostruosa creatura sembra una nuvola vivente di oscurità. I suoi occhi senza vita ti fissano, pulsando con ognuno dei tuoi movimenti. </string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name">Spirito traditore</string>
@@ -2324,6 +2331,7 @@ Potrebbe bruciare?</string>
     <string name="WandOfFlock_SheepBaa_4">Bee...</string>
     <string name="WandOfFlock_SheepBaa_5">Ble...</string>
     <string name="WandOfIcebolt_Info">Questa bacchetta lancia un raggio di ghiaccio, infliggendo danno leggero al bersaglio. C\'è anche la possibilità di rallentare o addirittura congelare il nemico.</string>
+    <string name="WandOfIcebolt_Info1">Ti sei ucciso con la tua stessa Bacchetta di Gelo...</string>
     <string name="WandOfIcebolt_Name">Bacchetta del Fulmine di Ghiaccio</string>
     <string name="WandOfLightning_Info">Questa bacchetta genera fasci mortali di elettricità, provocando danni a diverse creature vicine tra loro.</string>
     <string name="WandOfLightning_Info1">Ti sei ucciso da solo con la bacchetta del Fulmine...</string>
@@ -2661,6 +2669,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndSettings_Immersive">Modalità coinvolgente</string>
     <string name="WndSettings_InGameUiSettings">Impostazioni Interfaccia</string>
     <string name="WndSettings_Music">Musica</string>
+    <string name="WndSettings_Quickslots">Slot rapidi</string>
     <string name="WndSettings_RecordVideo">Registrazione video</string>
     <string name="WndSettings_ScaleUp">Aumentare UI</string>
     <string name="WndSettings_SecondQuickslot">Seconda posizione veloce</string>
@@ -2770,6 +2779,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="gdpr_choose">Fai la tua scelta</string>
     <string name="gdpr_disagree">No, grazie</string>
     <string name="gdpr_text">Remixed Dungeon personalizza la tua esperienza pubblicitaria utilizzando Admob e Appodeal (ulteriori fornitori di annunci). I fornitori di annunci e i loro partner possono raccogliere ed elaborare dati personali come identificatori del dispositivo, dati demografici e di interesse per fornire un\'esperienza pubblicitaria personalizzata per te. Acconsentendo a questa esperienza pubblicitaria migliorata, vedrai annunci che i fornitori di annunci e i loro partner ritengono più pertinenti per te.\n\nAccettando, confermi di avere più di 16 anni e di volere un\'esperienza pubblicitaria personalizzata.\n\n</string>
+    <string name="gdpr_title">Personalizza la tua esperienza pubblicitaria</string>
     <string name="town_deco_INN_sign_desc">Pare che ci sia una locanda in quell\'edificio</string>
     <string name="town_deco_INN_sign_name">Insegna della Locanda</string>
     <string name="town_deco_armoronhanger_desc">Qualche tipo di armatura sull\'appendiabiti.</string>
@@ -2990,6 +3000,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_wall_candles_name">Candele</string>
     <string name="town_deco_wall_desc">Un semplice muro fatto in tronchi di legno.</string>
     <string name="town_deco_wall_name">Muro</string>
+    <string name="town_deco_wallpaper_desc">Un\'ottima soluzione decorativa per un posto del genere.</string>
     <string name="town_deco_wallpaper_name">Wallpaper</string>
     <string name="town_deco_wardrobe_desc">Grande guardaroba di legno.</string>
     <string name="town_deco_wardrobe_name">Guardaroba di legno</string>
@@ -3015,6 +3026,20 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
