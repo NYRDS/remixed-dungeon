@@ -199,6 +199,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">őrült bandita</string>
     <string name="Bandit_Name_Objective">őrült banditát</string>
+    <string name="BardNPC_Desc">A város bardzsa legeli a lútnán.</string>
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">Bard</string>
     <string name="BardSong_1">Feleségemmel együtt teljesen egyedül élünk,\nEgy kis faházban, melyet sajátunknak hívtunk,\nŐ szerette a gint, én meg a rumot,\nMondom én nektek, volt rengeteg mulatnivalónk.</string>
@@ -293,6 +294,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="BlessedBuff_Name">Megáldott</string>
     <string name="BlindnessBuff_Info">Teljes vakság, csak a körülötte lévő hangok hallhatók.</string>
     <string name="BlindnessBuff_Name">Megvakult</string>
+    <string name="BloodTransfusion_Drained">Az élet esszenciája áramlik a kisállatodtól hozzád.</string>
     <string name="BloodTransfusion_FullHP">A véred már teljesen tele van.</string>
     <string name="BloodTransfusion_Info">A céltól szinte minden vérmennyiséget elvesz magának, hogy gyógyuljon. Egy sötét szertartás, az áldozat és a megmaradás rituáléja.</string>
     <string name="BloodTransfusion_Name">Vérezés</string>
@@ -314,6 +316,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Bowknot_Name">Íjcsomó</string>
     <string name="Brute_Desc">A nehézfiúk a legnagyobbak, legerősebbek és legkeményebbek a gnollok között. Amikor súlyosan sérülnek megvadulnak, és még több sebzést okoznak az ellenfeleiknek.</string>
     <string name="Brute_Enraged">%s feldühödik!</string>
+    <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">gnoll nehézfiú</string>
     <string name="Brute_Name_Objective">gnoll nehézfiú</string>
     <string name="Brute_StaEnraged">feldühödött</string>
@@ -366,6 +369,7 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Caves_TileGrass">Fluoreszkáló moha.</string>
     <string name="Caves_TileHighGrass">Fluoreszkáló gomba.</string>
     <string name="Caves_TileWater">Fagyasztóan hideg víz.</string>
+    <string name="Challenges_Descriptions_0">Az étel és az ivóvíz már régen elromlott, megőrjítő minden kalandort a halál és az éhség félelmével. Segíthet-e az étraded, hogy elég długo tartson?</string>
     <string name="Challenges_Descriptions_1">Az állás az a legjobb védelem. E tanítások követésével bemész a kazettába, a hit pedig a tested leghatékonyabb őrzője lesz.</string>
     <string name="Challenges_Descriptions_2">Mivel az természetes testregeneráció híve vagy, mindig is óvatos voltál a gyógyító hatású italokkal. Jobb előrelátni, mint utólag sajnálni!</string>
     <string name="Challenges_Descriptions_3">A föld a börtön körül már régóta fertőzött a gonoszságtól, megakadályozva a különböző gyógynövények és növények magvainak növekedését. Ki tudja, mennyi időbe telik, mire az utolsó növény is megszűnik létezni ezeken a terméketlen földeken.</string>
@@ -628,6 +632,7 @@ Nem... nincs számára hely a fényben... nincs többé. Elfordult a gyenge fén
     <string name="Deathling_Name_Objective">halandó</string>
     <string name="DeepSnail_Desc">Ez a csigafajta gyakran látható vízforrások közelében, és sokkal gyorsabb, mint az átlagos csiga. Azonban vigyázz a harapásukkal, mert kellemetlen hatással lehetnek a bőrödön.</string>
     <string name="DeepSnail_Gender">masculine</string>
+    <string name="DeepSnail_Name">barlangi csiga</string>
     <string name="DeepSnail_Name_Objective">mély csigát</string>
     <string name="DeferedDamageBuff_Info">A fájdalom lassító fájdalommá változott, csökkentve az egyszerre vett sebzést.\nHátralévő sebzés: %d</string>
     <string name="DeferedDamageBuff_Name">Elhárített kámasz(%d)</string>
@@ -907,6 +912,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Heal_Info">Elég hasznos varázslat a Kazamatában, igaz?</string>
     <string name="Heal_Name">Gyógyítás</string>
     <string name="HealerNPC_Desc">Egy idős ember, úgy néz ki mint aki varázsbotokat készít</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Ingyen kezelés minden kalandornak!</string>
     <string name="HealerNPC_Message2">Gyere vissza bármikor, amikor rosszul vagy vagy éhes!</string>
     <string name="HealerNPC_Message3">Vajon miért nem viselhetünk a templomban kalapot... Nagyon hideg van odakint.</string>
@@ -1038,11 +1044,13 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="Hero_Wait">...</string>
     <string name="Hero_YouNowHave">Felvetted a %s-t!</string>
     <string name="HideInGrassSpell_Info">You perfected your Hide-and-seek mastery.</string>
+    <string name="HideInGrassSpell_Name">Bújócska a fűben</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Még én sem tudok elrejtőzni a nyílt színen.</string>
     <string name="Horror_Name_0">Hátborzongató %s</string>
     <string name="Horror_Name_1">Hátborzongató %s</string>
     <string name="Horror_Name_2">Hátborzongató %s</string>
     <string name="HungerBuff_Info1">Éhes vagy!</string>
+    <string name="HungerBuff_Info2">Éhinsen vagy! Ennél kell!</string>
     <string name="HungerBuff_Name1">Éhes vagy!</string>
     <string name="HungerBuff_Name2">Éhezel!</string>
     <string name="Hunger_Death">Éhen haltál....</string>
@@ -1277,6 +1285,7 @@ A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetl
     <string name="LibraryBook_Name">Könyvtári könyv</string>
     <string name="Lich_Desc">A nekromata, aki Necropolis mélységeiben lelte halálát, és fokozatosan, a gonosz erők a testét átjárva alakították Lich-é. Egy elpusztult varázsló, agyatlan bábu, ártalmas erők által irányítva...</string>
     <string name="Lich_DieInfo">Soha nem kedveltem ezt a Nekromantát. Itt az ideje visszatérni a 7. szintre, és találni egy másik utat lefelé az új kalandhoz.</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">holttest</string>
     <string name="Lich_Name_Objective">holttest</string>
     <string name="LightBuff_Info">Fény árad a testből, megvilágítva minden körülötte lévőt.</string>
@@ -1465,6 +1474,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="Nightcap_Info">Meghóditani a kazamatát éjszaka elég fárasztó dolog. Mit szólnál helyette, ha felvennéd ezt a meleg, kényelmes kis sapkát, hogy pihenj egy kicsit, és hagyd hogy az egész világ várjon.</string>
     <string name="Nightcap_Name">Hálósapka</string>
     <string name="Nightmare_Desc">Egy furcsa lény, ami egy csokor húsos csápra hasonlít. A Rémálmok az Ősi Isten sötét gondolatainak a megtestesült alakjai.</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name">rémálom</string>
     <string name="Nightmare_Name_Objective">rémálom</string>
     <string name="No_Valid_Cell">Nincs megfelelő mező a közelben.</string>
@@ -2050,6 +2060,7 @@ egy másik helyre a szinten. </string>
     <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">Ez a Lélekpalack egy megmaradt szilánkja. Misztikus energiától szikrázik, talán valakinek érdekes lehet.</string>
     <string name="SoulShard_Name">Lélek szilánk</string>
+    <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">Vékony farúd, a végén hegyes vassal.</string>
     <string name="Spear_Name">Lándzsa</string>
     <string name="SpeedBuff_Info">Élénység és energia sugárzik a testből, és a mozgások szokásosnál gyorsabbnak tűnnek.</string>
@@ -2111,6 +2122,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="SpiderServant_Name">pók katona</string>
     <string name="SpiderServant_Name_Objective">pók katona</string>
     <string name="Spinner_Desc">Ezek a zöldes szőrös barlangi pókok megpróbálják elkerülni a közvetlen harcot, általában a távolból kivárják ameddig az áldozatuk belegabalyodik a finoman szőtt hálójukba majd szépen lassan belehal mérgező harapásukba.</string>
+    <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name">barlangi pók</string>
     <string name="Spinner_Name_Objective">barlangi pók</string>
     <string name="SpiritOfPain_Desc">Az élő sötétség egy szilánkja.</string>
@@ -2161,6 +2173,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="Stylus_Name">misztikus toll</string>
     <string name="Stylus_SelectArmor">Válassz ki egy tárgyat amire írni fogsz</string>
     <string name="Succubus_Desc">A szukkubuszok démonok amik csábító női alakban jelennek meg (enyhén gót beütéső cicababaként). A varázserejét használva, a szukkubusz bármilyen hőst el tud csábítani, aki ezáltal képtelen lesz támadni ameddig a hatás aktív.</string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">Szukkubusz</string>
     <string name="Succubus_Name_Objective">szukubbusz</string>
     <string name="SummonBeast_AtYourCommand">Parancsodra!</string>
@@ -2380,6 +2393,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WarHammer_Info">Csak néhány lény képes kibírni zúzóerejét ennek a pokoli tömegű ólomnak és acélnak, de csak a legerősebb kalandorok képesek hatékonyan használni.</string>
     <string name="WarHammer_Name">Csatakalapács</string>
     <string name="Warlock_Desc">A törpök érdeklődése szépen lassan a mérnöki tudományokról a misztikus művészetek felé tolódott el, emiatt a városban a boszorkánymesterek egyre nagyob hatalmat tudtak gyakorolni. Kezdetben elementális varázslatokat használtak, de hamar áttértek a démonológiára és a szellemidézésre.</string>
+    <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">A %s árnyék gömbje megölt téged...</string>
     <string name="Warlock_Name">törp boszorkánymester</string>
     <string name="Warlock_Name_Objective">törp boszorkánymester</string>
@@ -2448,7 +2462,9 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndCryptoDonate_openWallet">Nyissa meg a pénztárcát</string>
     <string name="WndCryptoDonate_supportDev">Támogasd a fejlesztőt</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_walletAddress">Pénztárca cím</string>
     <string name="WndCryptoDonate_warningText">FIGYELEM: Mindig ellenőrizze a címet pénzküldés előtt. A kriptovaluta-tranzakciók nem visszavonhatók!</string>
+    <string name="WndCustomizations_Title">Testreszabások</string>
     <string name="WndDonate_commonDonateText">Remixed Pixel Dungeon - Mindenki számára ingyenes, és az is marad.\n\nAzonban segíthetsz jobbá tenni a játékot.\n\nHálás köszönetünk mellett némi kozmetikai extrára is számíthatsz.</string>
     <string name="WndDonate_donate">támogatás:</string>
     <string name="WndDonate_gold">arany</string>
@@ -2559,6 +2575,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="WndMovieTheatre_Sorry">Valami közbejött és nem tudtuk eljuttatni hozzád a jutalmad...</string>
     <string name="WndMovieTheatre_Thank_You">Köszönjük a részvételt!</string>
     <string name="WndMovieTheatre_Title">Film Színház</string>
+    <string name="WndMovieTheatre_Watch">reklám megtekintése</string>
     <string name="WndPlayGames_BackupProgress">Játék előrehaladásának mentése</string>
     <string name="WndPlayGames_Connecting">Csatlakozás a Google Play Gameshez, kérlek várj.</string>
     <string name="WndPlayGames_RestoreProgress">Játék előrehaladásának betöltése</string>
@@ -2999,6 +3016,25 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_name">kristálygolyó</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

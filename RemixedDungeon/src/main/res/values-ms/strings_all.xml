@@ -297,6 +297,7 @@
     <string name="BlindnessBuff_Info">Sepenuhnya dibutakan, hanya bunyi di sekeliling yang boleh didengar.</string>
     <string name="BlindnessBuff_Name">Menjadi Buta</string>
     <string name="BloodTransfusion_Drained">Esensi kehidupan mengalir dari peliharaan anda ke dalam diri anda.</string>
+    <string name="BloodTransfusion_FullHP">Darah anda sudah mencapai kapasiti penuh.</string>
     <string name="BloodTransfusion_Info">Menghisap hampir semua darah dari sasaran untuk menyembuhkan diri sendiri. Ritual gelap pengorbanan dan kehidupan.</string>
     <string name="BloodTransfusion_Name">Pengisaran Darah</string>
     <string name="BloodTransfusion_WontAgreed">Sasaran menahan pengekstrakan intipati kehidupannya.</string>
@@ -621,6 +622,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="DashSpell_OnSelf">Saya tidak boleh memecut serta-merta.</string>
     <string name="DashSpell_TooFar">Saya tidak boleh memecut sejauh ini.</string>
     <string name="DeathKnight_Desc">Sekali pandang seperti seorang pahlawan dengan perisai lengkap, tetapi dengan ngilaian rangka manusia, Kesatria Kematian adalah manifestasi semangat kesatria yang mungkir janjinya. Oleh itu sumpahan yang dikenakan padanya menyebabkan dia merayau buat selama-lamanya, mencari jalan untuk membersihkan nama ketika bertempur, membunuh orang yang tidak bersalah, dan lupa akan tugasnya adalah untuk melindungi orang lain.</string>
+    <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name">kesatria kematian</string>
     <string name="DeathKnight_Name_Objective">kesatria kematian</string>
     <string name="Death_Name_0">%s Menggerunkan</string>
@@ -1106,6 +1108,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="IncendiaryDart_Name">damak pembakar</string>
     <string name="InnKeeperNPC_Desc">Pengusaha pondokan berasa bangga terhadap dirinya sendiri.</string>
     <string name="InnKeeperNPC_Gender">masculine</string>
+    <string name="InnKeeperNPC_Name">penjaga inapan</string>
     <string name="InnKeeperNPC_Name_Objective">pengusaha pondokan</string>
     <string name="InnServant_Phrase_1">Ugh, masih banyak kerjaan!</string>
     <string name="InnServant_Phrase_2">Orang mabuk ini membuatkan saya marah!</string>
@@ -1242,6 +1245,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Level_TileDescStatue">Ada orang mahu hias tempat ini, tetapi gagal melakukannya.</string>
     <string name="Level_TileDescTrap">Memijak pada salah satu plat tekanan tersembunyi akan aktifkan jerangkap.</string>
     <string name="Level_TileDescWater">Jika terbakar lompat ke dalam air untuk padamkan api.</string>
+    <string name="Level_TileDescWell">Sebuah sumur misteri. Anda boleh merasai kuasa magik yang memancar daripadanya.</string>
     <string name="Level_TileEmbers">Bara api</string>
     <string name="Level_TileEmptyWell">Perigi kering</string>
     <string name="Level_TileEntrance">Jalan masuk kedalaman</string>
@@ -1360,6 +1364,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MimicAmulet_Name">mimik</string>
     <string name="MimicAmulet_Name_Objective">mimik</string>
     <string name="MimicPie_Desc">Mimik merupakan sejenis makhluk ajaib yang dapat meniru rupa yang dikehendaki. Yang ini rupa sebijik macam pasty besar yang sedap\&quot;.;</string>
+    <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimik</string>
     <string name="MimicPie_Name_Objective">mimik</string>
     <string name="Mimic_Desc">Mimik merupakan sejenis makhluk ajaib yang dapat meniru rupa yang dikehendaki. Dalam kurungan bawah tanah meraka suka memilih rupa peti harta-karun, kerana mereka tahu mengumpan pengembara.\&quot;;</string>
@@ -2147,6 +2152,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Str_lose">-1 ktn</string>
     <string name="StrongShield_desc">Perisai segi empat tepat ini disadur dengan lembaran gangsa dan dihiasi dengan kain berwarna. Ia jauh lebih berat, tetapi boleh menghalang lebih banyak kerosakan masuk.</string>
     <string name="StrongShield_name">Perisai bertuah</string>
+    <string name="StunBuff_Info">Pusing!</string>
     <string name="StunBuff_Name">Tertunduk</string>
     <string name="Stylus_ACInscribe">TULIS</string>
     <string name="Stylus_Info">Kalam misteri ini diperbuat daripada batu hitam yang sangat keras. Dengan kalam ini anda boleh menulis glif atau rune, tetapi anda tidak berkuasa memilih apa yang akan dihasilkan, kalam tersebut yang menentukannya buat anda.</string>
@@ -2209,6 +2215,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="TitleScene_InternalStorageLow">Ruang tidak mencukupi\n dalam storan dalaman\n Kemajuan anda boleh hilang!</string>
     <string name="TitleScene_Mods">Mod</string>
     <string name="TitleScene_Play">Main</string>
+    <string name="TitleScene_PlayOnPC">Main di PC</string>
     <string name="TomeOfKnowledge_Info">Buku besar purba ini mengandungi teka-teki dan misteri penuh rahsia! Ia mungkin sukar dibaca, tetapi jika anda boleh membacanya, anda dapat tingkatkan kuasa sihir anda.</string>
     <string name="TomeOfKnowledge_Name">Buku Besar Pengetahuan</string>
     <string name="TomeOfMastery_ACRead">BACA</string>
@@ -2705,11 +2712,13 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Worm_Name_Objective">cacing</string>
     <string name="Wraith_Defense">dielak</string>
     <string name="Wraith_Desc">Hantu merupakan roh berdendam sesorang yang berdosa, yang mana kuburnya telah diganggu. Merupakan entiti alam ghaib, ia sangat sukar diserang dengan senjata biasa.</string>
+    <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">hantu</string>
     <string name="Wraith_Name_Objective">hantu</string>
     <string name="WrnExperimental_hint">Jika dunia yang pelik dan penuh onar ini terlalu hebat bagi anda, sila lumpuhkan tetapan tersebut menggunakan\nSkrin Permulaan-&gt;Pilihan-&gt;Permainan\nmenu dan mula permainan baharu atau muatkan simpanan lain.</string>
     <string name="WrnExperimental_moveTimeout">Masa gerak ditetapkan ke %d milisaat, fikir cepat!</string>
     <string name="WrnExperimental_realtime">Mod realtime! diaktifkan: ini sekarang roguelike realtime, ketuk cepat atau mati.\nMahu semak inventori?\nSelamat mencuba semasa ketam doulok sedang meneliti perut anda.</string>
+    <string name="WrnExperimental_title">Opsi eksperimen diaktifkan!</string>
     <string name="Yog_Desc">Yog-Dzewa ialah Dewa Purba, satu entiti berkuasa dari dunia chaos. Berabad-abad dahulu, orang kerdil purba berjaya mengalahkan tentera setannya walaupun menang tipis, mereka gagal membunuh dewa ini. Sebaliknya, mereka mengurung dewa ini dalam suatu ruangan di bawah bandar mereka, dengan harapan dia terlalu lemah untuk bangkit semula.</string>
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
@@ -2996,6 +3005,15 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
 
 
 

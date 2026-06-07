@@ -106,6 +106,7 @@
     <string name="AwarenessBuff_Info">I sensi si sono affinati, dando una maggiore consapevolezza dell\'ambiente circostante.</string>
     <string name="AwarenessBuff_Name">Consapevolezza</string>
     <string name="AzuterronNPC_Desc">Una misteriosa figura avvolta da una nebbia nera.</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">Sconosciuto</string>
     <string name="AzuterronNPC_Name_Objective">Sconosciuto</string>
     <string name="AzuterronNPC_Quest_End">Eccellente. Prendi questa pozione, sicuramente, la troverete utile.</string>
@@ -168,6 +169,7 @@
     <string name="Badges_LevelReached2">Livello 12 raggiunto</string>
     <string name="Badges_LevelReached3">Livello 18 raggiunto</string>
     <string name="Badges_LevelReached4">Livello 24 raggiunto</string>
+    <string name="Badges_LevelReached5">Livello 30 raggiunto</string>
     <string name="Badges_Lich_Slain">Lich sconfitto</string>
     <string name="Badges_MasteryCombo">7-hit combo</string>
     <string name="Badges_MonsterSlain1">10 nemici sconfitti</string>
@@ -307,6 +309,7 @@
     <string name="BloodTransfusion_WontAgreed">L\'obiettivo resiste all\'estrazione della sua essenza vitale.</string>
     <string name="BodyArmorBuff_Info">La corazza è aumentata a scapito della velocità di movimento.</string>
     <string name="BodyArmorBuff_Name">Armatura Corporea</string>
+    <string name="BodyArmorSpell_Info">Attiva la forza muscolare di riserva, rendendoli temporaneamente più forti, aumentando notevolmente l\'armatura ma a costo della velocità di movimento.</string>
     <string name="BodyArmorSpell_Name">Armatura Corporea</string>
     <string name="BoneSaw_Info">Una sega chirurgica di precisione progettata per dissezioni rapide. I suoi danni e la velocità d\'attacco diventano più letali con l\'abilità del Medico della Peste. I colpi critici estraggono parti aggiuntive raccoglibili dai nemici e colpisce con spietata efficienza i nemici paralizzati.</string>
     <string name="BoneSaw_Name">Sega d\'Osso</string>
@@ -403,6 +406,7 @@
     <string name="ChampionOfWaterBuff_Name">Campione dell\'Acqua</string>
     <string name="ChaosArmor_Info">Le placche rosso sangue di questa armatura sono tenute insieme con catene rosse oscure. Irradia energia del Caos quando la tocchi. </string>
     <string name="ChaosArmor_Name">Armatura del caos. </string>
+    <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Un terribile arco colmo con il potere del Caos. Ogni freccia scoccata porterà un pezzo di energia del Caos al bersaglio. Ma se manchi il bersaglio...puoi vedere come  </string>
     <string name="ChaosBow_Name">Arco del caos</string>
     <string name="ChaosCrystal_ArmorFused">Il cristallo si è fuso con la tua armatura e ha assunto la forma caotica.</string>
@@ -564,6 +568,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">Questa balestra rinforzata sembra essere uno strumento più efficace della sua controparte di legno. </string>
     <string name="CompositeCrossbow_Name">Balestra Composita</string>
+    <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">Le frecce lanciate da questo arco composto infliggono un grande ammontare di danno e hanno una precisione migliore rispetto ad un arco di legno al prezzo di un calo di velocità.</string>
     <string name="CompoundBow_Name">arco composto</string>
     <string name="ConcreteBlock_Description">Sembra che questo blocco richieda %d punti di forza per spingerlo</string>
@@ -601,6 +606,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">un semplice pugnale di ferro con un manico di legno ben messo</string>
     <string name="Dagger_Name">pugnale</string>
+    <string name="Damage_Reduction">Riduzione danni</string>
     <string name="DarkGold_Info">Questo metallo è chiamato oscuro non per il suo colore (non differisce dal normale oro), ma poichè si scioglie alla luce del sole, rendendolo inutile in superficie.</string>
     <string name="DarkGold_Name">minerale aurifero oscuro</string>
     <string name="DarkSacrifice_Hint">Scegli il tuo fedele servitore da sacrificare!</string>
@@ -724,6 +730,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="ElfArmor_Desc">Con l\'aiuto di questo mantello, l\'elfo può evocare le forze della natura stessa. L\'erba alta crescerà in un lampo, anche attraverso la roccia solida, immobilizzando tutti i nemici in vista.</string>
     <string name="ElfArmor_Name">Mantello elfico</string>
     <string name="ElfArmor_NotElf">Solo gli elfi possono usare questa armatura!</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">An exceptional example of elven craftsmanship. It\'s clearly more effective and accurate than a regular wooden bow.</string>
     <string name="ElvenBow_Name">arco elfico</string>
     <string name="ElvenDagger_Gender">masculine</string>
@@ -971,6 +978,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="HeroClass_PlagueDoctorPerks_2">Iniziano con una [yellow:Maschera della Peste] (immune a tutti i Gas) e un [yellow:Seghetto d\'Ossa]. I colpi critici fanno cadere parti extra, e il Seghetto infligge x1.5 danni ai nemici paralizzati.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Le pozioni di [yellow:Gas Paralizzante] e [yellow:Gas Tossico] sono pre-identificate.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">I Dottori della Peste subiscono grandi penalità di precisione senza il loro amato Seghetto d\'Ossa in mano e non possono usare armi a distanza.</string>
+    <string name="HeroClass_Priest">Sacerdote</string>
     <string name="HeroClass_Rog">furfante</string>
     <string name="HeroClass_RogPerks_0">I furfanti iniziano con un anello di Ombre +1.</string>
     <string name="HeroClass_RogPerks_1">I furfanti identificano il tipo di un anello equipaggiandolo.</string>
@@ -1073,6 +1081,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="IceGuardianCoreModule_Name">Nucleo del Guardiano di Ghiaccio</string>
     <string name="IceGuardianCore_Desc">I Guardiani del Ghiaccio venivano fabbricati dagli antichi coboldi per proteggere le loro grotte. Il potere immagazzinato nel suo nucleo consente al Guardiano del Ghaccio di ricostruirsi fintanto che ha abbastanza energia.</string>
     <string name="IceGuardianCore_DieInfo">Fa così freddo qui, è meglio tornare al livello 14 e cercare una via verso un posto più caldo.</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name">guardiano del ghiaccio</string>
     <string name="IceGuardianCore_Name_Objective">guardiano del ghiaccio</string>
     <string name="IceGuardian_Desc">I Guardiani del Ghiaccio sono stati creati dagli antichi coboldi per proteggere le loro caverne. Finché il nucleo del Guardiano contiene abbastanza energia, è in grado di ricostruire se stesso proprio nel pieno della battaglia.</string>
@@ -1141,6 +1150,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Item_Name">smth</string>
     <string name="Item_PackFull">Il tuo zaino è troppo pieno per il/la/i %s</string>
     <string name="JarOfSouls_Desc">Gli occhi luminosi di un teschio raffigurato su questa vecchia giara, così come la strana energia che emette, ti fanno sentire a disagio.</string>
+    <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name">vaso delle anime</string>
     <string name="JarOfSouls_Name_Objective">vaso delle anime</string>
     <string name="Javelin_Gender">neuter</string>
@@ -1270,6 +1280,7 @@ Potrebbe bruciare?</string>
     <string name="LevitationBuff_Info">Il corpo fluttua sopra il suolo, evitando trappole e altri pericoli terrestri.</string>
     <string name="LevitationBuff_Name">Levitante</string>
     <string name="LibrarianNPC_Desc">Una persona molto timida, indossa un maglione dall\'aspetto goffo e un paio di occhiali con lenti molto spesse.</string>
+    <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">C-ciao. Benvenuto alla Biblioteca. Qua puoi trovare informazioni su ogni genere di cosa che può essere trovata nel dungeon... A dire il vero possiamo solo informare su cose scoperte dagli avventurieri. Ehm... è un po\' imbarazzante, sì. Ogni volta che ci visiterai, probabilmente, ci saranno nuove cose da leggere</string>
     <string name="LibrarianNPC_Message_Not_Ready">I... I sono spiacente, l-libreria non è aperta... ancora.</string>
     <string name="LibrarianNPC_Name">bibliotecaria</string>
@@ -1459,6 +1470,7 @@ Potrebbe bruciare?</string>
     <string name="Nightcap_Info">Conquistare i dungeon di notte dev\'essere un lavoro molto stancante. Che ne dite di mettere un berretto caldo, accogliente e rilassarvi, in modo che tutte le vostre preoccupazioni vadano via .</string>
     <string name="Nightcap_Name">Berretto da notte</string>
     <string name="Nightmare_Desc">creatura grottesca fatta di spasmi tentacoli carne. Gli incubi è una manifestazione di pensieri sinistri del vecchio dio.</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name">incubo</string>
     <string name="Nightmare_Name_Objective">incubo</string>
     <string name="No_Valid_Cell">Non c\'è nessuna cella adatta qui vicino.</string>
@@ -2100,6 +2112,7 @@ Potrebbe bruciare?</string>
     <string name="SpiritOfPain_Name">Spirito del dolore</string>
     <string name="SpiritOfPain_Name_Objective">Spirito del dolore</string>
     <string name="Sprout_Name">Germoglio</string>
+    <string name="StartScene_ChooseFromSlot">Scegli uno slot di salvataggio</string>
     <string name="StartScene_ComingSoon">Prossimamente</string>
     <string name="StartScene_ContinueLatest">Continua la tua ultima partita o scegli da uno slot di salvataggio</string>
     <string name="StartScene_Depth">Profondità: %1$d\nLivello: %2$d</string>
@@ -2639,6 +2652,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndSettings_ExperementalFont">Nuovo Font</string>
     <string name="WndSettings_FpsLimit">Limite FPS</string>
     <string name="WndSettings_GameplaySettings">Gameplay</string>
+    <string name="WndSettings_Handedness">Mano dominante</string>
     <string name="WndSettings_Immersive">Modalità coinvolgente</string>
     <string name="WndSettings_InGameUiSettings">Impostazioni Interfaccia</string>
     <string name="WndSettings_Music">Musica</string>
@@ -2735,6 +2749,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="YogsTeeth_Name">denti di yog</string>
     <string name="YogsTeeth_Name_Objective">denti di yog</string>
     <string name="ZombieGnoll_Desc">Contorto, corpo spezzato di un gnoll zombi non assomiglia più umanoide o iene. Solo un mucchio di carne marcia e ossa piene di voglia dannoso per uccidere e consumare.</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">Uno gnoll zombie si è risvegliato dalla morte! </string>
     <string name="ZombieGnoll_Name">gnoll zombie</string>
     <string name="ZombieGnoll_Name_Objective">gnoll zombie</string>
@@ -2994,6 +3009,21 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
