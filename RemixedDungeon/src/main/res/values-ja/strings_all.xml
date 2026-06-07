@@ -2228,6 +2228,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="TitleScene_InternalStorageLow">内部ストレージにスペースが足りません。進行状況が失われる可能性があります！</string>
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Play</string>
+    <string name="TitleScene_PlayOnPC">PCでプレイ</string>
     <string name="TomeOfKnowledge_Info">この古代の書物には難解な謎とミステリーが詰まっている！読むのは難しいかもしれないが、読みこなせば魔法の力がアップすること間違いなし。</string>
     <string name="TomeOfKnowledge_Name">知識の書</string>
     <string name="TomeOfMastery_ACRead">読む</string>
@@ -3062,6 +3063,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

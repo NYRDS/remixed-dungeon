@@ -2218,6 +2218,7 @@
     <string name="TitleScene_InternalStorageLow"> Ανεπαρκής χώρος\n στην εσωτερική μνήμη\n Η πρόοδος μπορεί να χαθεί!</string>
     <string name="TitleScene_Mods">Τροποποιήσεις</string>
     <string name="TitleScene_Play">Παίξε</string>
+    <string name="TitleScene_PlayOnPC">Παίξε σε PC</string>
     <string name="TomeOfKnowledge_Info">Αυτός ο αρχαίος τόμος είναι γεμάτος με μαγικούς γρίφους και μυστήρια! Είναι δύσκολος στην ανάγνωση, αλλά, αν τον καταφέρεις, θα αυξήσει σίγουρα τις μαγικές σου δυνάμεις.</string>
     <string name="TomeOfKnowledge_Name">τόμος της γνώσης</string>
     <string name="TomeOfMastery_ACRead">ΔΙΑΒΑΣΕ</string>
@@ -3050,6 +3051,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

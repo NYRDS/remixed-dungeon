@@ -2218,6 +2218,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="TitleScene_InternalStorageLow">Ruang tidak cukup\n di penyimpanan internal\n Kemajuan kamu bisa hilang!</string>
     <string name="TitleScene_Mods">Mod</string>
     <string name="TitleScene_Play">Main</string>
+    <string name="TitleScene_PlayOnPC">Mainkan di PC</string>
     <string name="TomeOfKnowledge_Info">Buku tua ini berisi tentang teka teki yang misterius! ini mungkin sulit untuk dibaca, tetapi bila kamu dapat membacanya, maka dapat dipastikan kekuatan magis mu akan meningkat.</string>
     <string name="TomeOfKnowledge_Name">buku pengetahuan</string>
     <string name="TomeOfMastery_ACRead">BACA</string>
@@ -3039,6 +3040,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

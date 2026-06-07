@@ -2230,6 +2230,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="TitleScene_InternalStorageLow">Dahili depolamada\n yeterli yer yok\n İlerlemen kaybolabilir!</string>
     <string name="TitleScene_Mods">Modlar</string>
     <string name="TitleScene_Play">Oyna</string>
+    <string name="TitleScene_PlayOnPC">PC\'de Oyna</string>
     <string name="TomeOfKnowledge_Info">Bu kadim kitap gizemli bilmeceler ve sırlarla dolu! Okuması zor olabilir, ama eğer üstesinden gelirseniz, kesinlikle büyülü güçlerinizi artıracaksınız.</string>
     <string name="TomeOfKnowledge_Name">Bilgi Külliyatı</string>
     <string name="TomeOfMastery_ACRead">OKU</string>
@@ -3052,6 +3053,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

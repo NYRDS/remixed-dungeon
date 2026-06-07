@@ -623,6 +623,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Deathling_Name">Gregario della Morte</string>
     <string name="Deathling_Name_Objective">Gregario della Morte</string>
     <string name="DeepSnail_Desc">Questo tipo di mollusco si può spesso vedere vicino alle fonti d\'acqua ed è molto più veloce dello zigolo ordinario. Attenzione però alle bocche, possono avere un effetto sgradevole sulla tua pelle.</string>
+    <string name="DeepSnail_Gender">masculine</string>
     <string name="DeepSnail_Name">lumaca profonda</string>
     <string name="DeepSnail_Name_Objective">lumaca delle profondità</string>
     <string name="DeferedDamageBuff_Info">Il dolore è stato trasformato in un dolore rallentato, riducendo il danno subito in una volta.\nDanno rimanente: %d</string>
@@ -719,6 +720,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="ElvenBow_Name">arco elfico</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Questa arma è fatta di una speciale lega metallica, rendendola molto più leggera rispetto a un pugnale normale.</string>
+    <string name="ElvenDagger_Name">pugnale elfico</string>
     <string name="EncumbranceBuff_CharAct_1">Non sono abbastanza forte per impugnare %s correttamente.</string>
     <string name="EncumbranceBuff_CharAct_2">Questo %s è troppo pesante per me per usarlo efficacemente.</string>
     <string name="EncumbranceBuff_CharAct_3">Devo lavorare sulla mia forza prima di poter usare %s.</string>
@@ -2185,6 +2187,7 @@ Potrebbe bruciare?</string>
     <string name="TitleScene_InternalStorageLow">Non abbastanza spazio\n nella memoria interna\n Il tuo progresso potrebbe andare perso!</string>
     <string name="TitleScene_Mods">Mod</string>
     <string name="TitleScene_Play">Gioca</string>
+    <string name="TitleScene_PlayOnPC">Gioca su PC</string>
     <string name="TomeOfKnowledge_Info">Questo antico tomo è pieno di arcani enigmi e misteri! Potrebbe essere difficile da leggere, ma se ce la farai i tuoi poteri magici aumenteranno decisamente.</string>
     <string name="TomeOfKnowledge_Name">Tomo della conoscenza</string>
     <string name="TomeOfMastery_ACRead">LEGGI</string>
@@ -2728,6 +2731,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="ZombieMask_Info">Hai mai desiderato di essere come un eroe non-morto, che ha fallito la sua ricerca più volte? Bene, questa è la tua shance.</string>
     <string name="ZombieMask_Name">maschera zombie</string>
     <string name="Zombie_Desc">Il Dungeon è un posto pericoloso e molti avventurieri hanno incontrato la loro morte qui. Ma i più sfortunati di loro hanno incontrato la fine nella Necropoli, e ora sono destinati a vagare tra queste mura in forma di corpi marci.</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">zombie</string>
     <string name="Zombie_Name_Objective">zombie</string>
     <string name="deco_candle_desc">Grande candela</string>
@@ -2770,6 +2774,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_deco_cabinet_desc">Un ampio mobile con molte porte e scaffali.</string>
     <string name="town_deco_cabinet_name">Armadio</string>
     <string name="town_deco_canvas_desc">Un spesso pezzo di tessuto appeso al muro.</string>
+    <string name="town_deco_canvas_name">Tela</string>
     <string name="town_deco_carpet_desc">Tappeto rosso lussuoso riservato agli ospiti speciali.</string>
     <string name="town_deco_carpet_name">Tappeto</string>
     <string name="town_deco_charcoal_carpet_desc">In cerca di comfort per gli ospiti, l\'amministrazione del cinema ha scelto i tappeti di migliore qualità di colore carbone.</string>
@@ -2979,6 +2984,11 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
 
 
 

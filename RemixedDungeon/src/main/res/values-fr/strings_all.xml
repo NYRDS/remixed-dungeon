@@ -2226,6 +2226,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="TitleScene_InternalStorageLow">Pas assez de place\n dans l\'espace de stockage interne\n Votre progression peut être perdue !</string>
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Jouer</string>
+    <string name="TitleScene_PlayOnPC">Jouer sur PC</string>
     <string name="TomeOfKnowledge_Info">Ce livre ancien est rempli d\'obscures énigmes et d\'histoire mystérieuses ! Il est peut-être difficile à lire, mais si vous arrivez à l\'achever, vous allez sans aucun doute augmenter vos pouvoirs magiques.</string>
     <string name="TomeOfKnowledge_Name">Livre de la Connaissance</string>
     <string name="TomeOfMastery_ACRead">LIRE</string>
@@ -3045,6 +3046,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

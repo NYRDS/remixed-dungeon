@@ -599,6 +599,7 @@
     <string name="CorpseDust_Name">трупна пилюка</string>
     <string name="CorpseExplosion_Info">Перетворює труп на хмару отруйного газу, поширюючи хворобу та отруту на всіх найближчих ворогів.</string>
     <string name="CorpseExplosion_Name">Трупний вибух</string>
+    <string name="CorpseExplosion_NoCorpse">Там немає трупа.</string>
     <string name="Crab_Defense">відбився</string>
     <string name="Crab_Desc">Ці великі краби розташувалися на верхівці харчової ланки в каналізації. Вони надзвичайно швидкі, а їхній хітин здатний витримати велику кількість ударів.</string>
     <string name="Crab_Gender">masculine</string>
@@ -2265,6 +2266,7 @@
     <string name="TitleScene_InternalStorageLow">Недостатньо місця\n у внутрішній пам\'яті пристрою\n Твоя гра може не зберегтись!</string>
     <string name="TitleScene_Mods">Модифікації</string>
     <string name="TitleScene_Play">Грати</string>
+    <string name="TitleScene_PlayOnPC">Грати на ПК</string>
     <string name="TomeOfKnowledge_Info">Цей древній том сповнений потаємним знанням та загадками! Може це й не найпростіше чтиво, але здолавши його, воно обов\'язково підвищить твій магічний рівень.</string>
     <string name="TomeOfKnowledge_Name">Том Знання</string>
     <string name="TomeOfMastery_ACRead">ЧИТАТИ</string>
@@ -3058,6 +3060,8 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

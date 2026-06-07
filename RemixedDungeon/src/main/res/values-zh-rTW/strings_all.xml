@@ -2243,6 +2243,7 @@
     <string name="TitleScene_InternalStorageLow">手機內部存儲空間不足，您的進度可能會丟失！</string>
     <string name="TitleScene_Mods">模組</string>
     <string name="TitleScene_Play">開始遊戲</string>
+    <string name="TitleScene_PlayOnPC">在PC上遊玩</string>
     <string name="TomeOfKnowledge_Info">這古老的書卷充滿了神秘的謎語和謎團！它可能很難讀通，但如果您破譯了他得含意，它將引領你提升魔力等級。</string>
     <string name="TomeOfKnowledge_Name">知識巨著</string>
     <string name="TomeOfMastery_ACRead">閱讀</string>
@@ -3048,6 +3049,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

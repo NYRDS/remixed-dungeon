@@ -2231,6 +2231,7 @@ otro lugar del nivel.</string>
     <string name="TitleScene_InternalStorageLow">No hay espacio suficiente\n en la memoria interna\n ¡Podrías perder tu progreso!</string>
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Jugar</string>
+    <string name="TitleScene_PlayOnPC">Jugar en PC</string>
     <string name="TomeOfKnowledge_Info">¡Este antiguo tomo esta lleno de acertijos y arcanos misterios! Puede ser una lectura difícil, pero si consigues descifrarlo, tus poderes mágicos aumentaran.</string>
     <string name="TomeOfKnowledge_Name">Tomo del Conocimiento</string>
     <string name="TomeOfMastery_ACRead">LEER</string>
@@ -3033,6 +3034,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

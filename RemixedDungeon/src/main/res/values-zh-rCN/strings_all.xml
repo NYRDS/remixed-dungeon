@@ -2218,6 +2218,7 @@
     <string name="TitleScene_InternalStorageLow">手机内部存储\n空间不足，\n你的进度可能会丢失！</string>
     <string name="TitleScene_Mods">MOD</string>
     <string name="TitleScene_Play">开始游戏</string>
+    <string name="TitleScene_PlayOnPC">在PC上游玩</string>
     <string name="TomeOfKnowledge_Info">这本古书充满了神秘的谜语和咒文！这可能很难读懂，但如果你能够读懂它，肯定能增加一些魔法力量。</string>
     <string name="TomeOfKnowledge_Name">知识之书</string>
     <string name="TomeOfMastery_ACRead">阅读</string>
@@ -3022,6 +3023,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
