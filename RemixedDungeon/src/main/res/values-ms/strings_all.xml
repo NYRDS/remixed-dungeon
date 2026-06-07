@@ -735,6 +735,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="EncumbranceBuff_CharAct_2">Ini %s terlalu berat untuk saya gunakan dengan efektif.</string>
     <string name="EncumbranceBuff_CharAct_3">Saya perlu meningkatkan kekuatan saya sebelum boleh menggunakan %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Saya kekurangan kekuatan untuk menggunakan %s secara sepenuhnya.</string>
+    <string name="EncumbranceBuff_CharAct_5">%s terlalu berat untuk saya tangani sekarang.</string>
     <string name="EncumbranceBuff_Info">Tiada kekuatan yang cukup untuk menggunakan %s secara efektif.</string>
     <string name="EncumbranceBuff_Name">Bebanan</string>
     <string name="EnslavedSoul_Desc">Anda dapat melihat penjelmaan hantu ini. Kadangkala seakan-akan tengkorak, kemudian muncul wajah tetapi rupa sengsara dan terseksa.</string>
@@ -2995,6 +2996,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

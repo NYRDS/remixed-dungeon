@@ -819,6 +819,7 @@ Ez a maszk azonban csak dekoratív célt szolgál.</string>
     <string name="FullFaceMask_Info">A Gázmaszk megvédi viselőjét a szennyező levegőtől és más mérgező gázoktól. A maszk egyszerre zárja le az orrot, a szájat és a szemeket.
 A szűrők hiányoznak ebből a példányból, de menőn néz ki ettől függetlenül.</string>
     <string name="FullFaceMask_Name">Gázmaszk</string>
+    <string name="FuryBuff_Info">A szemek véresvörössek lettek a belsejében heverő düh miatt.</string>
     <string name="FuryBuff_Name">Harag</string>
     <string name="GameScene_Chasm">A lépéseid visszahangoznak a kriptákban.</string>
     <string name="GameScene_Grass">A növényzet illata sűrűn betölti a levegőt.</string>
@@ -2135,6 +2136,7 @@ Ezen lapok közt egy teljes varázsszövegre bukkantál: \&quot;%1$s\&quot; \n\&
     <string name="StartScene_No">Nem, visszatérek a főmenübe.</string>
     <string name="StartScene_Really">Biztos, hogy új játékot akarsz kezdeni?</string>
     <string name="StartScene_Unlock">Ahhoz, hogy feloldd ezt a karakterosztályt, öld meg a DM-300 főellenséget bármely másik osztállyal.</string>
+    <string name="StartScene_UnlockDoctor">A Chumos Orvos feloldásához — teljesítsd az öreg Chumos Orvos küldetését</string>
     <string name="StartScene_UnlockElf">Az Elf karakterosztály feloldásához gyilkold meg a Király főellenséget bármely más osztállyal</string>
     <string name="StartScene_UnlockGnoll">Ahhoz, hogy feloldd ezt az osztályt, meg kell győznöd a helyi papot, hogy gyógyítsa meg a Gnoll Brute-ot.</string>
     <string name="StartScene_UnlockNecromancer">Ez a karakterosztály akkor választható, ha legyőzöl egy Linch-et.</string>
@@ -2997,6 +2999,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_name">kristálygolyó</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
