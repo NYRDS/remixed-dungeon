@@ -451,8 +451,8 @@
     <string name="Char_Kill_0">%s bunuh anda...</string>
     <string name="Char_Kill_1">%s bunuh anda...</string>
     <string name="Char_Kill_2">%s bunuh anda...</string>
-    <string name="Char_Name">kelompok rusuh</string>
-    <string name="Char_Name_Objective">kelompok rusuh</string>
+    <string name="Char_Name">monster</string>
+    <string name="Char_Name_Objective">monster</string>
     <string name="Char_OutParalysis">Kesakitan %s terputus dari kelumpuhan</string>
     <string name="Char_SmbMissed">serangan %3$s %2$s %1$s</string>
     <string name="Char_StaAmok">mengamok</string>
@@ -3005,6 +3005,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
 
 
 

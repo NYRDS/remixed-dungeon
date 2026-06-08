@@ -1237,7 +1237,7 @@ No, non c\'era nessun posto alla luce per lei, non più. Si girò dalla leggera 
     <string name="Level_TileDescBarricade">La barricata di legno  è impostata con forza ma è secca dagli anni.  
 Potrebbe bruciare?</string>
     <string name="Level_TileDescChasm">Non riesci a vederne il fondo.</string>
-    <string name="Level_TileDescEmbers">le ceneri coprono la porta</string>
+    <string name="Level_TileDescEmbers">le ceneri coprono il pavimento</string>
     <string name="Level_TileDescEmptyWell">Il pozzo può funzionare a secco.</string>
     <string name="Level_TileDescEntrance">Le scale che portano su conducono in una profondità maggiore</string>
     <string name="Level_TileDescExit">Le scale che portano giù conducono in una profondità minore</string>
@@ -3026,6 +3026,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

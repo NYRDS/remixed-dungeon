@@ -270,7 +270,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BlackSkullOfMastery_Title">Możesz przełamać zaklęcie. Albo możesz przekierować magiczną formułę w sposób, który umożliwi ci pochłonięcie mocy zarówno czaru, jak i artefaktu, zamieniając ciebie w Licza.</string>
     <string name="BlackSkull_Activated">Czarna Czaszka została przebudzona!</string>
     <string name="BlackSkull_Deactivated">Moc Czarnej Czaszki zostaje uśpiona, raz jeszcze...</string>
-    <string name="BlackSkull_Gender">feminine</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Niewielka, obsydianowa czaszka. Niegdyś była źródłem mocy Nekropolii, lecz po porażce Licza odnosisz wrażenie że utraciła całą swą moc magiczną. Jednakże, gdy trzymasz ją w swych dłoniach, dziwna myśl przechodzi przez twój umysł: \&quot;Głoduje\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">Czaszka pulsuje mocą, która wylewa się z jej pustych oczodołów. Gdy ją trzymasz w ręce, możesz okazjonalnie dosłyszeć mroczny głos mówiący: \&quot;Strzeż się orszaku śmierci\&quot;.</string>
     <string name="BlackSkull_Name">czarna czaszka</string>
@@ -458,8 +458,8 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Char_Kill_0">%s zabił Cię...</string>
     <string name="Char_Kill_1">%s zabił Cię...</string>
     <string name="Char_Kill_2">%s zabił Cię...</string>
-    <string name="Char_Name">tłum</string>
-    <string name="Char_Name_Objective">tłum</string>
+    <string name="Char_Name">potwór</string>
+    <string name="Char_Name_Objective">potwór</string>
     <string name="Char_OutParalysis">Ból sprawił, że %s został wyrwany z paraliżu</string>
     <string name="Char_SmbMissed">%1$s %2$s atak %3$s</string>
     <string name="Char_StaAmok">amok</string>
@@ -3059,6 +3059,9 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
+
 
 
 

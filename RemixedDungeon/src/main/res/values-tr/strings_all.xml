@@ -1237,7 +1237,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Level_TileDescAlchemy">İksir yapmak için buraya birkaç tohum bırak.</string>
     <string name="Level_TileDescBarricade">Ahşap barikat sıkı bir şekilde yerleştirilmiş ancak yıllar boyunca kurumuş. Yanabilir mi?</string>
     <string name="Level_TileDescChasm">Aşağıyı göremezsin.</string>
-    <string name="Level_TileDescEmbers">Kapıyı közler kaplamış.</string>
+    <string name="Level_TileDescEmbers">Közler zemini kaplamış.</string>
     <string name="Level_TileDescEmptyWell">Bu kuyu kurumaya yüz tutmuş.</string>
     <string name="Level_TileDescEntrance">Merdivenler bir üst derinliğe inmenizi sağlar.</string>
     <string name="Level_TileDescExit">Merdivenler bir alt derinliğe geçmenizi sağlar.</string>
@@ -3053,6 +3053,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

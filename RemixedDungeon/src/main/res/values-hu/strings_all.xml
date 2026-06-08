@@ -450,8 +450,8 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Char_Kill_0">%s megölt téged...</string>
     <string name="Char_Kill_1">%s megölt téged...</string>
     <string name="Char_Kill_2">%s megölt téged...</string>
-    <string name="Char_Name">kegyenc</string>
-    <string name="Char_Name_Objective">kegyenc</string>
+    <string name="Char_Name">szörny</string>
+    <string name="Char_Name_Objective">szörny</string>
     <string name="Char_OutParalysis">A fájdalom kizökkentette %s-t a bénulásból</string>
     <string name="Char_SmbMissed">%1$s %2$s %3$s támadását.</string>
     <string name="Char_StaAmok">tombol</string>
@@ -3021,6 +3021,8 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_name">kristálygolyó</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
 
 
 
