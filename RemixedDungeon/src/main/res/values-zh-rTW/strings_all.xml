@@ -2400,7 +2400,7 @@
     <string name="Wand_Wood_Types_2">\&quot;烏木\&quot;</string>
     <string name="Wand_Wood_Types_3">\&quot;櫻桃\&quot;</string>
     <string name="Wand_Wood_Types_4">\&quot;柚木\&quot;</string>
-    <string name="Wand_Wood_Types_5">\&quot;花楸\&quot;</string>
+    <string name="Wand_Wood_Types_5">花楸</string>
     <string name="Wand_Wood_Types_6">\&quot;柳\&quot;</string>
     <string name="Wand_Wood_Types_7">\&quot;桃花心木\&quot;</string>
     <string name="Wand_Wood_Types_8">\&quot;竹\&quot;</string>
@@ -3049,4 +3049,5 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 </resources>
