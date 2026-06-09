@@ -980,7 +980,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="HeroClass_PlagueDoctorPerks_0">Lekarz Plagi zbierają toksyczne gruczoły, rozkładające się organy, odłamki kości i nikczemną esencję zabitych wrogów. Krew jest zbierana z czasem i wykorzystywana do wykonywania alchemii.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Zaczyna z maską plagi (nie wrażliwość na gazy) i piłą chirurgiczną. Krytyczne trafienia odrzynają części ciała, Piła zadaje +50% obrażeń sparaliżowanym przeciwnikom.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Mikstura Gazu paraliżującego i toksycznego gazu są odkryte od początku.</string>
-    <string name="HeroClass_PlagueDoctorPerks_3">Przeciwnicy zabici przez toksyczny gaz zamieniają się w toksyczną mgłę, lecząc cię 1 PŻ za każdego przeciwnika.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Mikstury [yellow:Gaz Paraliżujący] i [yellow:Gaz Toksyczny] są wstępnie zidentyfikowane.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Lekarz plagi traci na  celności podczas używania każdej broni oprócz piły chirurgicznej i nie może używać broni dystansowej.</string>
     <string name="HeroClass_Priest">Kapłan</string>
     <string name="HeroClass_Rog">łotrzyk</string>
@@ -3059,6 +3059,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

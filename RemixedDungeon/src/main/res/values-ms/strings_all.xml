@@ -973,7 +973,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HeroClass_PlagueDoctorPerks_0">Doktor pesakit memanen [yellow:Kelenjar Beracun], [yellow:Organ Busuk], [yellow:Pecahan Tulang] dari musuh yang telah dikalahkan.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Bermula dengan Topeng Plague (kebal terhadap semua Gas) dan Gergaji Tulang. Serangan kritikal menjatuhkan bahagian tambahan, dan Gergaji memberikan +50% kerosakan pada musuh yang lumpuh.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Mulakan dengan sebuah [yellow:Plague Mask] (kebal terhadap semua Gas) dan sebuah [yellow:Bone Saw]. Serangan kritikal menjatuhkan bahagian tambahan, dan Saw memberikan x1.5 kerosakan kepada musuh yang lumpuh.</string>
-    <string name="HeroClass_PlagueDoctorPerks_3">Bermula dengan potions [yellow:Paralysis Gas] dan [yellow:Toxic Gas] yang telah dikenal pasti.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Ramuan [yellow:Gas Kelumpuhan] dan [yellow:Gas Toksik] sudah dikenal pasti sebelumnya.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Doktor pesakit mendapat penalti ketepatan yang besar tanpa Gergaji Tulang kesayangan di tangan dan tidak boleh menggunakan senjata jarak jauh.</string>
     <string name="HeroClass_Priest">Paderi</string>
     <string name="HeroClass_Rog">gasar</string>
@@ -3005,6 +3005,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 
