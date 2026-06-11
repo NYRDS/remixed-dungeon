@@ -186,6 +186,32 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
             if (hasRecipesWithItem) {
                 actions.add(AC_ALCHEMY);
             }
+
+            // Pet inventory actions
+            if (hero instanceof com.watabou.pixeldungeon.actors.hero.Hero) {
+                com.watabou.pixeldungeon.actors.hero.Hero h = (com.watabou.pixeldungeon.actors.hero.Hero) hero;
+                if (com.nyrds.pixeldungeon.mechanics.PetInventoryManager.hasPets(h)) {
+                    if (!isEquipped(h)) {
+                        actions.add(com.nyrds.pixeldungeon.mechanics.CommonActions.AC_GIVE_TO_PET);
+                    }
+                }
+            } else if (hero instanceof com.watabou.pixeldungeon.actors.mobs.Mob) {
+                com.watabou.pixeldungeon.actors.mobs.Mob pet = (com.watabou.pixeldungeon.actors.mobs.Mob) hero;
+                if (pet.isPet() && pet.getOwner() != null && pet.getOwner() instanceof com.watabou.pixeldungeon.actors.hero.Hero) {
+                    actions.add(com.nyrds.pixeldungeon.mechanics.CommonActions.AC_TAKE_FROM_PET);
+                    if (this instanceof EquipableItem) {
+                        EquipableItem equipable = (EquipableItem) this;
+                        if (pet.getBelongings().isEquipped(this)) {
+                            actions.add(com.nyrds.pixeldungeon.mechanics.CommonActions.AC_UNEQUIP_FROM_PET);
+                        } else {
+                            com.watabou.pixeldungeon.actors.hero.Belongings.Slot slot = equipable.slot(pet.getBelongings());
+                            if (slot != com.watabou.pixeldungeon.actors.hero.Belongings.Slot.NONE && !pet.getBelongings().slotBlocked(slot)) {
+                                actions.add(com.nyrds.pixeldungeon.mechanics.CommonActions.AC_EQUIP_ON_PET);
+                            }
+                        }
+                    }
+                }
+            }
         } else {
             actions.add(AC_PICK_UP);
         }
@@ -237,6 +263,34 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
                 break;
             case AC_ALCHEMY:
                 GameScene.show(new WndItemAlchemy(this, chr));
+                break;
+            case com.nyrds.pixeldungeon.mechanics.CommonActions.AC_GIVE_TO_PET:
+                if (chr instanceof com.watabou.pixeldungeon.actors.hero.Hero) {
+                    com.nyrds.pixeldungeon.mechanics.PetInventoryManager.openPetSelect((com.watabou.pixeldungeon.actors.hero.Hero) chr);
+                }
+                break;
+            case com.nyrds.pixeldungeon.mechanics.CommonActions.AC_TAKE_FROM_PET:
+                if (chr instanceof com.watabou.pixeldungeon.actors.mobs.Mob) {
+                    com.watabou.pixeldungeon.actors.mobs.Mob pet = (com.watabou.pixeldungeon.actors.mobs.Mob) chr;
+                    if (pet.getOwner() instanceof com.watabou.pixeldungeon.actors.hero.Hero) {
+                        com.nyrds.pixeldungeon.mechanics.PetInventoryManager.takeItemFromPet(
+                            (com.watabou.pixeldungeon.actors.hero.Hero) pet.getOwner(), pet, this);
+                    }
+                }
+                break;
+            case com.nyrds.pixeldungeon.mechanics.CommonActions.AC_EQUIP_ON_PET:
+                if (chr instanceof com.watabou.pixeldungeon.actors.mobs.Mob && this instanceof EquipableItem) {
+                    com.watabou.pixeldungeon.actors.mobs.Mob pet = (com.watabou.pixeldungeon.actors.mobs.Mob) chr;
+                    EquipableItem equipable = (EquipableItem) this;
+                    com.watabou.pixeldungeon.actors.hero.Belongings.Slot slot = equipable.slot(pet.getBelongings());
+                    com.nyrds.pixeldungeon.mechanics.PetInventoryManager.equipItemOnPet(pet, equipable, slot);
+                }
+                break;
+            case com.nyrds.pixeldungeon.mechanics.CommonActions.AC_UNEQUIP_FROM_PET:
+                if (chr instanceof com.watabou.pixeldungeon.actors.mobs.Mob && this instanceof EquipableItem) {
+                    com.watabou.pixeldungeon.actors.mobs.Mob pet = (com.watabou.pixeldungeon.actors.mobs.Mob) chr;
+                    com.nyrds.pixeldungeon.mechanics.PetInventoryManager.unequipItemFromPet(pet, (EquipableItem) this);
+                }
                 break;
         }
     }

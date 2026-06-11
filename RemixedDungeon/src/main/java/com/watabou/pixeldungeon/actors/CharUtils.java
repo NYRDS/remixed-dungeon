@@ -334,6 +334,11 @@ public class CharUtils {
             case CommonActions.MAC_EXPEL:
                 hero.nextAction(new Expel(target));
                 return;
+            case CommonActions.MAC_PET_INVENTORY:
+                if (target instanceof com.watabou.pixeldungeon.actors.mobs.Mob) {
+                    com.nyrds.pixeldungeon.mechanics.PetInventoryManager.openPetSelect((com.watabou.pixeldungeon.actors.hero.Hero) hero);
+                }
+                return;
         }
 
         target.getScript().run("executeAction", target, action);
@@ -365,6 +370,7 @@ public class CharUtils {
         if (target.getOwnerId() == hero.getId()) {
             actions.add(CommonActions.MAC_ORDER);
             actions.add(CommonActions.MAC_EXPEL);
+            actions.add(CommonActions.MAC_PET_INVENTORY);
         }
 
         actions.removeAll(hero.getHeroClass().getForbiddenActions());
