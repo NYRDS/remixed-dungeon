@@ -14,6 +14,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
@@ -245,16 +246,9 @@ public class WndBag extends WndTabbed {
 		placeItem(new ItemPlaceholder(image));
 	}
 
-	/** Places equipped items for any character owner (not just Hero) */
+	/** Places equipped items for characters that can equip items (Hero and pets) */
 	public void placeEquippedForOwner() {
-		if(stuff.getOwner() instanceof Hero) {
-			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.WEAPON),   Belongings.Slot.WEAPON,    ItemPlaceholder.RIGHT_HAND);
-			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.ARMOR),    Belongings.Slot.ARMOR,     ItemPlaceholder.BODY);
-			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.LEFT_HAND), Belongings.Slot.LEFT_HAND, ItemPlaceholder.LEFT_HAND);
-			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.ARTIFACT),    Belongings.Slot.ARTIFACT,  ItemPlaceholder.ARTIFACT);
-			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT),    Belongings.Slot.LEFT_ARTIFACT,  ItemPlaceholder.ARTIFACT);
-		} else {
-			// For pets and other characters
+		if (stuff.getOwner() instanceof Hero || stuff.getOwner() instanceof Mob) {
 			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.WEAPON),   Belongings.Slot.WEAPON,    ItemPlaceholder.RIGHT_HAND);
 			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.ARMOR),    Belongings.Slot.ARMOR,     ItemPlaceholder.BODY);
 			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.LEFT_HAND), Belongings.Slot.LEFT_HAND, ItemPlaceholder.LEFT_HAND);
