@@ -22,6 +22,7 @@ import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class WndPetBag extends WndBag {
 
@@ -35,7 +36,8 @@ public class WndPetBag extends WndBag {
         this.hero = hero;
         this.pet = pet;
 
-        // Add equipped items for pet (parent only does this for Hero)
+        // Parent's placeItems() placed backpack items but NOT equipped items (only for Hero)
+        // We need to add equipped items for pet using reflection (parent fields are private)
         addPetEquippedItems();
 
         // Add equippability indicators to existing item slots
@@ -43,29 +45,31 @@ public class WndPetBag extends WndBag {
     }
 
     private void addPetEquippedItems() {
-        // Place equipped items in the header area (same as Hero's bag)
-        // ItemPlaceholder constants: RIGHT_HAND=0, BODY=1, LEFT_HAND=2, ARTIFACT=3
-        placeEquippedForPet(Belongings.Slot.WEAPON, 0);
-        placeEquippedForPet(Belongings.Slot.ARMOR, 1);
-        placeEquippedForPet(Belongings.Slot.LEFT_HAND, 2);
-        placeEquippedForPet(Belongings.Slot.ARTIFACT, 3);
-        placeEquippedForPet(Belongings.Slot.LEFT_ARTIFACT, 3);
+        // The parent's placeItems() didn't place equipped items for pet (only for Hero)
+        // We use reflection to call private placeItem() for each equipped item
+        Belongings belongings = pet.getBelongings();
+        
+        // Place equipped items: weapon, armor, left hand, artifact, left artifact
+        placeEquippedItemViaReflection(belongings.getItemFromSlot(Belongings.Slot.WEAPON));
+        placeEquippedItemViaReflection(belongings.getItemFromSlot(Belongings.Slot.ARMOR));
+        placeEquippedItemViaReflection(belongings.getItemFromSlot(Belongings.Slot.LEFT_HAND));
+        placeEquippedItemViaReflection(belongings.getItemFromSlot(Belongings.Slot.ARTIFACT));
+        placeEquippedItemViaReflection(belongings.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT));
     }
 
-    private void placeEquippedForPet(@NotNull Belongings.Slot slot, int image) {
-        Item item = pet.getBelongings().getItemFromSlot(slot);
-        if (item != null && item != ItemsList.DUMMY) {
-            // Item is equipped - place it with our listener using reflection
-            try {
-                java.lang.reflect.Method placeItemMethod = WndBag.class.getDeclaredMethod("placeItem", Item.class);
-                placeItemMethod.setAccessible(true);
-                placeItemMethod.invoke(this, item);
-            } catch (Exception e) {
-                // Reflection failed, silently continue
-            }
+    private void placeEquippedItemViaReflection(@Nullable Item item) {
+        if (item == null || item == ItemsList.DUMMY) {
+            return; // Skip empty slots
         }
-        // Skip empty/blocked slots for now (ItemPlaceholder is package-private)
-        // Could be enhanced later with a public placeholder
+        
+        // Use reflection to call private WndBag.placeItem(Item)
+        try {
+            java.lang.reflect.Method placeItemMethod = WndBag.class.getDeclaredMethod("placeItem", Item.class);
+            placeItemMethod.setAccessible(true);
+            placeItemMethod.invoke(this, item);
+        } catch (Exception e) {
+            // Reflection failed, silently continue
+        }
     }
 
     private void addEquippabilityIndicators() {
