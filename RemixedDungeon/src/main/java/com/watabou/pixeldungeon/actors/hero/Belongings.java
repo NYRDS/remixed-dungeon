@@ -254,6 +254,9 @@ public class Belongings implements Iterable<Item>, Bundlable {
         backpack.restoreFromBundle(bundle);
         BundleHelper.UnPack(this, bundle);
 
+        // Re-configure available slots after loading (owner type may determine slots)
+        configureAvailableSlots();
+
         for (Slot slot : Slot.values()) { //activate equipped items
             setItemForSlot(getItemFromSlot(slot), slot);
         }
