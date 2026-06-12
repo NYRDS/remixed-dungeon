@@ -110,6 +110,7 @@ Handle all pet inventory action constants with proper type casting.
 | **Inventory from pet menu** | Always shows WndPetSelect (even for single pet) | **Fixed**: Uses `target` pet directly, skips WndPetSelect |
 | **Equippability indicators** | Not planned | **Added**: Slot icons (⚔️/🛡️/💍) with green/red coloring |
 | **Equipped items display** | Not planned | **Added**: Shows equipped items in header area (weapon, armor, rings) with unequip action |
+| **Equipment slots architecture** | `instanceof` checks in Belongings | **Polymorphic**: `Char.getAvailableEquipmentSlots()` overridden by Hero/Mob |
 
 ## Integration Points
 
@@ -164,7 +165,40 @@ Hero's bag → Tap item → "Give to Pet" → WndPetSelect (pick which pet)
             [Give to Pet, Take from Pet, Equip on Pet, Unequip from Pet]
 ```
 
-## UX Improvements Implemented
+## Equipment Slots Architecture (Final Design)
+
+The equipment slot system uses clean polymorphism - each character type declares its own available slots:
+
+```java
+// Char.java (base - NPCs get no slots by default)
+public Set<Belongings.Slot> getAvailableEquipmentSlots() {
+    return Collections.emptySet();
+}
+
+// Hero.java (player gets all 5 slots)
+@Override
+public Set<Belongings.Slot> getAvailableEquipmentSlots() {
+    return EnumSet.of(WEAPON, ARMOR, LEFT_HAND, ARTIFACT, LEFT_ARTIFACT);
+}
+
+// Mob.java (all pets - Deathling, etc. - inherit all slots)
+@Override
+public Set<Belongings.Slot> getAvailableEquipmentSlots() {
+    return EnumSet.of(WEAPON, ARMOR, LEFT_HAND, ARTIFACT, LEFT_ARTIFACT);
+}
+
+// Belongings.java - delegates to owner, zero instanceof checks
+private void configureAvailableSlots() {
+    availableSlots.addAll(owner.getAvailableEquipmentSlots());
+}
+```
+
+**Benefits:**
+- Zero `instanceof` checks in Belongings
+- New pet types automatically work (just extend Mob)
+- New character types = override one method
+- Deathling works automatically (extends Mob)
+- Save/load handled via `restoreFromBundle()` calling `configureAvailableSlots()`
 
 ### 1. Quantity Selector for Stackable Items (`WndPetQuantity.java`)
 - New window for stackable items (potions, scrolls, ammo, food)
@@ -210,6 +244,8 @@ Hero's bag → Tap item → "Give to Pet" → WndPetSelect (pick which pet)
 6. **Cursed Items**: Cannot unequip from pet (same as hero)
 7. **Distance Check**: Hero and pet must be adjacent or on same cell
 
+8. **Save/Load Equipment Slots**: `Belongings.restoreFromBundle()` calls `configureAvailableSlots()` to re-configure slots after loading (since `availableSlots` is not serialized)
+
 ## Files Created/Modified
 
 | File | Type | Purpose |
@@ -223,6 +259,11 @@ Hero's bag → Tap item → "Give to Pet" → WndPetSelect (pick which pet)
 | `CommonActions.java` | Modify | Add action constants |
 | `CharUtils.java` | Modify | Add pet inventory action + execution |
 | `Item.java` | Modify | Pet-specific actions in actions() and _execute() |
+| `Char.java` | Modify | Added `getAvailableEquipmentSlots()` base method |
+| `Hero.java` | Modify | Override `getAvailableEquipmentSlots()` for Hero |
+| `Mob.java` | Modify | Override `getAvailableEquipmentSlots()` for pets |
+| `Belongings.java` | Modify | Delegates slot config to `owner.getAvailableEquipmentSlots()` |
+| `WndBag.java` | Modify | Added `placeEquippedForOwner()` using `hasSlot()` |
 
 ## Implementation Order
 
