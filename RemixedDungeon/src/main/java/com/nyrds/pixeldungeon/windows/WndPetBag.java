@@ -30,6 +30,9 @@ public class WndPetBag extends WndBag {
 
     private final Hero hero;
     private final Mob pet;
+    
+    // Track current instance for refresh after item operations
+    private static WndPetBag currentInstance;
 
     public WndPetBag(@NotNull Hero hero, @NotNull Mob pet) {
         super(pet.getBelongings(), pet.getBelongings().backpack, new PetBagListener(hero, pet), Mode.ALL,
@@ -37,6 +40,7 @@ public class WndPetBag extends WndBag {
 
         this.hero = hero;
         this.pet = pet;
+        currentInstance = this;
 
         // Parent's placeItems() placed backpack items but NOT equipped items for pets
         // We need to clear and re-place everything in correct order: equipped first, then backpack
@@ -45,6 +49,21 @@ public class WndPetBag extends WndBag {
         // Add equippability indicators to existing item slots
         addEquippabilityIndicators();
     }
+    
+    public static void refreshCurrent() {
+        if (currentInstance != null) {
+            currentInstance.clearAndReplaceItems();
+            currentInstance.addEquippabilityIndicators();
+        }
+    }
+    
+    @Override
+    public void hide() {
+        if (currentInstance == this) {
+            currentInstance = null;
+        }
+        super.hide();
+    }
 
     private void clearAndReplaceItems() {
         // Use protected clearItems() from parent
@@ -52,11 +71,11 @@ public class WndPetBag extends WndBag {
 
         // Place equipped items for pet (weapon, armor, left hand, artifact, left artifact)
         Belongings belongings = pet.getBelongings();
-        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.WEAPON));
-        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.ARMOR));
-        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.LEFT_HAND));
-        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.ARTIFACT));
-        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT));
+        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.WEAPON), Belongings.Slot.WEAPON, ItemPlaceholder.RIGHT_HAND);
+        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.ARMOR), Belongings.Slot.ARMOR, ItemPlaceholder.BODY);
+        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.LEFT_HAND), Belongings.Slot.LEFT_HAND, ItemPlaceholder.LEFT_HAND);
+        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.ARTIFACT), Belongings.Slot.ARTIFACT, ItemPlaceholder.ARTIFACT);
+        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT), Belongings.Slot.LEFT_ARTIFACT, ItemPlaceholder.ARTIFACT);
 
         // Place backpack items
         for (Item item : belongings.backpack.items) {
@@ -80,22 +99,19 @@ public class WndPetBag extends WndBag {
         }
     }
 
-    private void placeEquippedItem(@Nullable Item item) {
+    private void placeEquippedItem(@Nullable Item item, Belongings.Slot slot, int placeholderImage) {
         if (item == null || item == com.nyrds.pixeldungeon.utils.ItemsList.DUMMY) {
+            // Empty slot - show placeholder (locked or empty)
+            Belongings belongings = pet.getBelongings();
+            if (belongings.slotBlocked(slot)) {
+                placeItem(new ItemPlaceholder(ItemPlaceholder.LOCKED));
+            } else {
+                placeItem(new ItemPlaceholder(placeholderImage));
+            }
             return;
         }
         // Use protected placeEquipped with named constants from ItemPlaceholder
-        if (item == stuff.getItemFromSlot(Belongings.Slot.WEAPON)) {
-            placeEquipped(item, Belongings.Slot.WEAPON, ItemPlaceholder.RIGHT_HAND);
-        } else if (item == stuff.getItemFromSlot(Belongings.Slot.ARMOR)) {
-            placeEquipped(item, Belongings.Slot.ARMOR, ItemPlaceholder.BODY);
-        } else if (item == stuff.getItemFromSlot(Belongings.Slot.LEFT_HAND)) {
-            placeEquipped(item, Belongings.Slot.LEFT_HAND, ItemPlaceholder.LEFT_HAND);
-        } else if (item == stuff.getItemFromSlot(Belongings.Slot.ARTIFACT)) {
-            placeEquipped(item, Belongings.Slot.ARTIFACT, ItemPlaceholder.ARTIFACT);
-        } else if (item == stuff.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT)) {
-            placeEquipped(item, Belongings.Slot.LEFT_ARTIFACT, ItemPlaceholder.ARTIFACT);
-        }
+        placeEquipped(item, slot, placeholderImage);
     }
 
     private void placeBackpackItem(@NotNull Item item) {

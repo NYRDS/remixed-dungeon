@@ -89,6 +89,8 @@ public class PetInventoryManager {
         if (WndBag.getHeroBagInstance() != null) {
             WndBag.getHeroBagInstance().updateItems();
         }
+        // Refresh pet inventory UI if open
+        WndPetBag.refreshCurrent();
         return true;
     }
 
@@ -134,6 +136,8 @@ public class PetInventoryManager {
         if (WndBag.getHeroBagInstance() != null) {
             WndBag.getHeroBagInstance().updateItems();
         }
+        // Refresh pet inventory UI if open
+        WndPetBag.refreshCurrent();
         return true;
     }
 
@@ -161,6 +165,8 @@ public class PetInventoryManager {
         if (pet.getBelongings().equip(item, slot)) {
             GLog.i(StringsManager.getVar(R.string.PetInventory_EquippedOnPet), item.name(), pet.getName());
             pet.updateSprite();
+            // Refresh pet inventory UI if open
+            WndPetBag.refreshCurrent();
             return true;
         }
 
@@ -188,6 +194,8 @@ public class PetInventoryManager {
         if (pet.getBelongings().unequip(item)) {
             GLog.i(StringsManager.getVar(R.string.PetInventory_UnequippedFromPet), item.name(), pet.getName());
             pet.updateSprite();
+            // Refresh pet inventory UI if open
+            WndPetBag.refreshCurrent();
             return true;
         }
 
