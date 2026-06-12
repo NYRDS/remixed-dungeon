@@ -105,9 +105,11 @@ Handle all pet inventory action constants with proper type casting.
 | Action Constant Name | `AC_PET_INVENTORY` | `MAC_PET_INVENTORY` (consistent with MAC_ORDER, MAC_EXPEL) |
 | equipItemOnPet() | No distance/ownership check | Added `Hero` parameter + `canAccessPetInventory()` validation |
 | Lua/Modding | `@LuaInterface` on PetInventoryManager methods | ✅ All public methods annotated |
-| Stackable partial transfer | Quantity selector UI | Not implemented (full stack transfer only) |
+| Stackable partial transfer | Quantity selector UI | **Implemented**: WndPetQuantity with 1/5/10/50/100/500/1000/All |
 | WndPetBag | "Read-only for non-owner" | Not implemented (single-player only) |
 | **Inventory from pet menu** | Always shows WndPetSelect (even for single pet) | **Fixed**: Uses `target` pet directly, skips WndPetSelect |
+| **Equippability indicators** | Not planned | **Added**: Slot icons (⚔️/🛡️/💍) with green/red coloring |
+| **HP title update** | Not planned | **Added**: Updates on tab switch via reflection |
 
 ## Integration Points
 
@@ -162,7 +164,37 @@ Hero's bag → Tap item → "Give to Pet" → WndPetSelect (pick which pet)
             [Give to Pet, Take from Pet, Equip on Pet, Unequip from Pet]
 ```
 
-## Technical Considerations
+## UX Improvements Implemented
+
+### 1. Quantity Selector for Stackable Items (`WndPetQuantity.java`)
+- New window for stackable items (potions, scrolls, ammo, food)
+- Quantity buttons: 1, 5, 10, 50, 100, 500, 1000 + "All"
+- Works for both **Give to Pet** (hero → pet) and **Take from Pet** (pet → hero)
+- Reuses pattern from `WndTradeItem` (shop buy/sell)
+- Auto-refreshes parent `WndBag` on completion
+
+### 2. Equippability Indicators in `WndPetBag`
+- Shows slot icons in item slots' top-right corner:
+  - ⚔️ Weapon
+  - 🛡️ Armor
+  - 💍 Rings/Artifacts (left hand, artifact slots)
+- Color-coded:
+  - **Green** = Pet can equip (meets STR requirements, slot available)
+  - **Red ⚠** = Pet cannot equip (insufficient STR, slot blocked)
+- Uses reflection to access private `topRight` BitmapText in `ItemSlot`
+- Re-applies on tab switch via `onClick(Tab)` override
+
+### 3. HP Title Update on Tab Switch
+- Window title shows: "PetName HP: current/max"
+- Updates when switching between bag tabs (backpack, potion belt, etc.)
+- Uses reflection to access private `txtTitle` and `panelWidth` fields in `WndBag`
+- Re-centers title after update
+
+### 4. Direct Pet Inventory Access (Fixed)
+- Clicking "Inventory" on a specific pet opens THAT pet's bag directly
+- No more unnecessary `WndPetSelect` for single-pet owners
+- `WndPetSelect` only shown for "Give to Pet" from hero's inventory
+
 
 1. **Serialization**: Pets already save/load belongings via `Char.storeInBundle()`/`restoreFromBundle()`
 2. **Item Ownership**: `item.setOwner(pet)` / `item.setOwner(hero)` during transfers
@@ -180,6 +212,8 @@ Hero's bag → Tap item → "Give to Pet" → WndPetSelect (pick which pet)
 | `WndPetBag.java` | New | Pet inventory UI (extends WndBag) |
 | `WndPetSelect.java` | New | Pet selection (if multiple) |
 | `WndPetItem.java` | New | Pet-specific item actions |
+| `WndPetQuantity.java` | New | Quantity selector for stackables |
+| `PetItemSlot.java` | New | Placeholder for equippability indicators |
 | `CommonActions.java` | Modify | Add action constants |
 | `CharUtils.java` | Modify | Add pet inventory action + execution |
 | `Item.java` | Modify | Pet-specific actions in actions() and _execute() |
