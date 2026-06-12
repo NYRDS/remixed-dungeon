@@ -1,17 +1,20 @@
 package com.nyrds.pixeldungeon.mechanics;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.items.EquipableItem;
-import com.nyrds.pixeldungeon.items.Item;
-import com.nyrds.pixeldungeon.actors.Char;
-import com.nyrds.pixeldungeon.actors.hero.Belongings;
-import com.nyrds.pixeldungeon.actors.hero.Hero;
-import com.nyrds.pixeldungeon.actors.mobs.Mob;
-import com.nyrds.pixeldungeon.scenes.GameScene;
-import com.nyrds.pixeldungeon.utils.GLog;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.nyrds.pixeldungeon.utils.Utils;
 import com.nyrds.platform.util.StringsManager;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.EquipableItem;
+import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
+import com.nyrds.pixeldungeon.windows.WndPetBag;
+import com.nyrds.pixeldungeon.windows.WndPetSelect;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -26,6 +29,7 @@ public class PetInventoryManager {
      * Checks if the hero can interact with the pet's inventory.
      * Requires: pet is alive, pet is owned by hero, pet is adjacent or same cell.
      */
+    @LuaInterface
     public static boolean canAccessPetInventory(@NotNull Hero hero, @NotNull Mob pet) {
         if (!pet.isAlive()) {
             return false;
@@ -40,6 +44,7 @@ public class PetInventoryManager {
     /**
      * Gives an item from hero's backpack to pet's backpack.
      */
+    @LuaInterface
     public static boolean giveItemToPet(@NotNull Hero hero, @NotNull Mob pet, @NotNull Item item) {
         if (!canAccessPetInventory(hero, pet)) {
             GLog.w(StringsManager.getVar(R.string.PetInventory_TooFar));
@@ -85,6 +90,7 @@ public class PetInventoryManager {
     /**
      * Takes an item from pet's backpack to hero's backpack.
      */
+    @LuaInterface
     public static boolean takeItemFromPet(@NotNull Hero hero, @NotNull Mob pet, @NotNull Item item) {
         if (!canAccessPetInventory(hero, pet)) {
             GLog.w(StringsManager.getVar(R.string.PetInventory_TooFar));
@@ -125,8 +131,10 @@ public class PetInventoryManager {
     /**
      * Equips an item on the pet.
      */
-    public static boolean equipItemOnPet(@NotNull Mob pet, @NotNull EquipableItem item, @NotNull Belongings.Slot slot) {
-        if (!pet.isAlive()) {
+    @LuaInterface
+    public static boolean equipItemOnPet(@NotNull Hero hero, @NotNull Mob pet, @NotNull EquipableItem item, @NotNull Belongings.Slot slot) {
+        if (!canAccessPetInventory(hero, pet)) {
+            GLog.w(StringsManager.getVar(R.string.PetInventory_TooFar));
             return false;
         }
 
@@ -153,6 +161,7 @@ public class PetInventoryManager {
     /**
      * Unequips an item from the pet.
      */
+    @LuaInterface
     public static boolean unequipItemFromPet(@NotNull Mob pet, @NotNull EquipableItem item) {
         if (!pet.isAlive()) {
             return false;
@@ -179,6 +188,7 @@ public class PetInventoryManager {
     /**
      * Opens the pet inventory window for the given pet.
      */
+    @LuaInterface
     public static void openPetInventory(@NotNull Hero hero, @NotNull Mob pet) {
         if (!canAccessPetInventory(hero, pet)) {
             GLog.w(StringsManager.getVar(R.string.PetInventory_TooFar));
@@ -190,14 +200,25 @@ public class PetInventoryManager {
 
     /**
      * Opens the pet selection window if hero has multiple pets.
+     * If item is provided, it will be given to the selected pet.
      */
+    @LuaInterface
+    public static void openPetSelect(@NotNull Hero hero, @Nullable Item itemToGive) {
+        GameScene.show(new WndPetSelect(hero, itemToGive));
+    }
+
+    /**
+     * Opens the pet selection window if hero has multiple pets.
+     */
+    @LuaInterface
     public static void openPetSelect(@NotNull Hero hero) {
-        GameScene.show(new WndPetSelect(hero));
+        openPetSelect(hero, null);
     }
 
     /**
      * Gets all pets owned by the hero.
      */
+    @LuaInterface
     @NotNull
     public static java.util.List<Mob> getHeroPets(@NotNull Hero hero) {
         java.util.List<Mob> pets = new java.util.ArrayList<>();
@@ -212,6 +233,7 @@ public class PetInventoryManager {
     /**
      * Checks if the hero has any pets.
      */
+    @LuaInterface
     public static boolean hasPets(@NotNull Hero hero) {
         return !getHeroPets(hero).isEmpty();
     }
@@ -219,6 +241,7 @@ public class PetInventoryManager {
     /**
      * Checks if the hero has multiple pets.
      */
+    @LuaInterface
     public static boolean hasMultiplePets(@NotNull Hero hero) {
         return getHeroPets(hero).size() > 1;
     }

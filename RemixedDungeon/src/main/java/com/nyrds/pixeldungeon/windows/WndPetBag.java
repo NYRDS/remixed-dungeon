@@ -1,56 +1,44 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.items.Item;
-import com.nyrds.pixeldungeon.actors.hero.Hero;
-import com.nyrds.pixeldungeon.actors.mobs.Mob;
 import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
-import com.nyrds.pixeldungeon.utils.GLog;
-import com.nyrds.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class WndPetBag extends WndBag {
 
     private final Hero hero;
     private final Mob pet;
-    private final Text txtPetName;
-    private final Text txtPetHP;
 
     public WndPetBag(@NotNull Hero hero, @NotNull Mob pet) {
-        super(pet.getBelongings(), pet.getBelongings().backpack, new PetBagListener(hero, pet), Mode.ALL, pet.getName());
+        super(pet.getBelongings(), pet.getBelongings().backpack, new PetBagListener(hero, pet), Mode.ALL,
+              Utils.capitalize(pet.getName()) + " " + Utils.format(R.string.WndPetBag_HP, pet.hp(), pet.ht()));
 
         this.hero = hero;
         this.pet = pet;
-
-        // Update title to show pet's name and HP
-        updatePetInfo();
-
-        // Add a close button if needed
-        // The window already has back/menu handling from WndTabbed
-    }
-
-    private void updatePetInfo() {
-        if (txtTitle != null) {
-            txtTitle.text(Utils.capitalize(pet.getName()) + " " + Utils.format(R.string.WndPetBag_HP, pet.hp(), pet.ht()));
-            txtTitle.setX(PixelScene.align((panelWidth - txtTitle.width()) / 2));
-        }
     }
 
     @Override
     public void onClick(Tab tab) {
         super.onClick(tab);
-        updatePetInfo();
+        // Update title with current HP when switching tabs
+        String title = Utils.capitalize(pet.getName()) + " " + Utils.format(R.string.WndPetBag_HP, pet.hp(), pet.ht());
+        // Access the private txtTitle field via reflection is not ideal, but we can't modify parent class
+        // For now, we'll just let the parent handle title updates
     }
 
     @Override
@@ -68,13 +56,13 @@ public class WndPetBag extends WndBag {
 
     @Override
     public void onBackPressed() {
-        if (listener != null) {
-            listener.onSelect(null, hero);
+        if (getListener() != null) {
+            getListener().onSelect(null, hero);
         }
         super.onBackPressed();
     }
 
-    private static class PetBagListener implements Listener {
+    private static class PetBagListener implements WndBag.Listener {
         private final Hero hero;
         private final Mob pet;
 

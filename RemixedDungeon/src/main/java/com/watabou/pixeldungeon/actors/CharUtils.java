@@ -12,6 +12,7 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Ascend;
@@ -335,8 +336,8 @@ public class CharUtils {
                 hero.nextAction(new Expel(target));
                 return;
             case CommonActions.MAC_PET_INVENTORY:
-                if (target instanceof com.watabou.pixeldungeon.actors.mobs.Mob) {
-                    com.nyrds.pixeldungeon.mechanics.PetInventoryManager.openPetSelect((com.watabou.pixeldungeon.actors.hero.Hero) hero);
+                if (target instanceof Mob) {
+                    PetInventoryManager.openPetSelect((Hero) hero);
                 }
                 return;
         }
