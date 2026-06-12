@@ -243,7 +243,24 @@ public class WndBag extends WndTabbed {
 		}
 
 		placeItem(new ItemPlaceholder(image));
+	}
 
+	/** Places equipped items for any character owner (not just Hero) */
+	public void placeEquippedForOwner() {
+		if(stuff.getOwner() instanceof Hero) {
+			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.WEAPON),   Belongings.Slot.WEAPON,    ItemPlaceholder.RIGHT_HAND);
+			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.ARMOR),    Belongings.Slot.ARMOR,     ItemPlaceholder.BODY);
+			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.LEFT_HAND), Belongings.Slot.LEFT_HAND, ItemPlaceholder.LEFT_HAND);
+			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.ARTIFACT),    Belongings.Slot.ARTIFACT,  ItemPlaceholder.ARTIFACT);
+			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT),    Belongings.Slot.LEFT_ARTIFACT,  ItemPlaceholder.ARTIFACT);
+		} else {
+			// For pets and other characters
+			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.WEAPON),   Belongings.Slot.WEAPON,    ItemPlaceholder.RIGHT_HAND);
+			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.ARMOR),    Belongings.Slot.ARMOR,     ItemPlaceholder.BODY);
+			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.LEFT_HAND), Belongings.Slot.LEFT_HAND, ItemPlaceholder.LEFT_HAND);
+			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.ARTIFACT),    Belongings.Slot.ARTIFACT,  ItemPlaceholder.ARTIFACT);
+			placeEquipped(stuff.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT),    Belongings.Slot.LEFT_ARTIFACT,  ItemPlaceholder.ARTIFACT);
+		}
 	}
 
 	public void setItemsActive(boolean state) {

@@ -17,12 +17,10 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ItemSlot;
-import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 public class WndPetBag extends WndBag {
 
@@ -36,40 +34,12 @@ public class WndPetBag extends WndBag {
         this.hero = hero;
         this.pet = pet;
 
-        // Parent's placeItems() placed backpack items but NOT equipped items (only for Hero)
-        // We need to add equipped items for pet using reflection (parent fields are private)
-        addPetEquippedItems();
+        // Parent's placeItems() placed backpack items but NOT equipped items for pets
+        // Call the new public method to place equipped items for any owner
+        placeEquippedForOwner();
 
         // Add equippability indicators to existing item slots
         addEquippabilityIndicators();
-    }
-
-    private void addPetEquippedItems() {
-        // The parent's placeItems() didn't place equipped items for pet (only for Hero)
-        // We use reflection to call private placeItem() for each equipped item
-        Belongings belongings = pet.getBelongings();
-        
-        // Place equipped items: weapon, armor, left hand, artifact, left artifact
-        placeEquippedItemViaReflection(belongings.getItemFromSlot(Belongings.Slot.WEAPON));
-        placeEquippedItemViaReflection(belongings.getItemFromSlot(Belongings.Slot.ARMOR));
-        placeEquippedItemViaReflection(belongings.getItemFromSlot(Belongings.Slot.LEFT_HAND));
-        placeEquippedItemViaReflection(belongings.getItemFromSlot(Belongings.Slot.ARTIFACT));
-        placeEquippedItemViaReflection(belongings.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT));
-    }
-
-    private void placeEquippedItemViaReflection(@Nullable Item item) {
-        if (item == null || item == ItemsList.DUMMY) {
-            return; // Skip empty slots
-        }
-        
-        // Use reflection to call private WndBag.placeItem(Item)
-        try {
-            java.lang.reflect.Method placeItemMethod = WndBag.class.getDeclaredMethod("placeItem", Item.class);
-            placeItemMethod.setAccessible(true);
-            placeItemMethod.invoke(this, item);
-        } catch (Exception e) {
-            // Reflection failed, silently continue
-        }
     }
 
     private void addEquippabilityIndicators() {
