@@ -17,6 +17,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ItemSlot;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
@@ -34,8 +35,37 @@ public class WndPetBag extends WndBag {
         this.hero = hero;
         this.pet = pet;
 
+        // Add equipped items for pet (parent only does this for Hero)
+        addPetEquippedItems();
+
         // Add equippability indicators to existing item slots
         addEquippabilityIndicators();
+    }
+
+    private void addPetEquippedItems() {
+        // Place equipped items in the header area (same as Hero's bag)
+        // ItemPlaceholder constants: RIGHT_HAND=0, BODY=1, LEFT_HAND=2, ARTIFACT=3
+        placeEquippedForPet(Belongings.Slot.WEAPON, 0);
+        placeEquippedForPet(Belongings.Slot.ARMOR, 1);
+        placeEquippedForPet(Belongings.Slot.LEFT_HAND, 2);
+        placeEquippedForPet(Belongings.Slot.ARTIFACT, 3);
+        placeEquippedForPet(Belongings.Slot.LEFT_ARTIFACT, 3);
+    }
+
+    private void placeEquippedForPet(@NotNull Belongings.Slot slot, int image) {
+        Item item = pet.getBelongings().getItemFromSlot(slot);
+        if (item != null && item != ItemsList.DUMMY) {
+            // Item is equipped - place it with our listener using reflection
+            try {
+                java.lang.reflect.Method placeItemMethod = WndBag.class.getDeclaredMethod("placeItem", Item.class);
+                placeItemMethod.setAccessible(true);
+                placeItemMethod.invoke(this, item);
+            } catch (Exception e) {
+                // Reflection failed, silently continue
+            }
+        }
+        // Skip empty/blocked slots for now (ItemPlaceholder is package-private)
+        // Could be enhanced later with a public placeholder
     }
 
     private void addEquippabilityIndicators() {
