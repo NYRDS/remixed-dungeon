@@ -109,7 +109,7 @@ Handle all pet inventory action constants with proper type casting.
 | WndPetBag | "Read-only for non-owner" | Not implemented (single-player only) |
 | **Inventory from pet menu** | Always shows WndPetSelect (even for single pet) | **Fixed**: Uses `target` pet directly, skips WndPetSelect |
 | **Equippability indicators** | Not planned | **Added**: Slot icons (⚔️/🛡️/💍) with green/red coloring |
-| **HP title update** | Not planned | **Added**: Updates on tab switch via reflection |
+| **Equipped items display** | Not planned | **Added**: Shows equipped items in header area (weapon, armor, rings) with unequip action |
 
 ## Integration Points
 
@@ -195,9 +195,15 @@ Hero's bag → Tap item → "Give to Pet" → WndPetSelect (pick which pet)
 - No more unnecessary `WndPetSelect` for single-pet owners
 - `WndPetSelect` only shown for "Give to Pet" from hero's inventory
 
+### 5. Equipped Items Display in Pet Inventory
+- Equipped items now shown in header area (weapon, armor, left hand, 2 artifact slots)
+- Uses reflection to call private `WndBag.placeItem()` for pet equipped items
+- Equipped items are clickable and show "Unequip from Pet" action in `WndPetItem`
+- Fixes issue where equipped items became inaccessible after equipping
+
+---
 
 1. **Serialization**: Pets already save/load belongings via `Char.storeInBundle()`/`restoreFromBundle()`
-2. **Item Ownership**: `item.setOwner(pet)` / `item.setOwner(hero)` during transfers
 3. **Equipment Validation**: Check STR requirements, slot compatibility for pets
 4. **Pet AI**: Equipped items affect pet stats (damage, DR, etc.) - handled by `Belongings` system
 5. **Lua/Modding**: All PetInventoryManager methods exposed via `@LuaInterface`
