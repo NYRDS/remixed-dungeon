@@ -152,9 +152,13 @@ public class WndPetQuantity extends Window {
         if (success) {
             pet.updateSprite();
             hide();
-            // Refresh parent bag window
+            // Refresh parent bag window (current instance, usually pet's bag)
             if (WndBag.getInstance() != null) {
                 WndBag.getInstance().updateItems();
+            }
+            // Also refresh hero's bag window if it exists (for give/take from hero's inventory)
+            if (WndBag.getHeroBagInstance() != null) {
+                WndBag.getHeroBagInstance().updateItems();
             }
         } else {
             // Restore on failure

@@ -15,6 +15,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.nyrds.pixeldungeon.windows.WndPetBag;
 import com.nyrds.pixeldungeon.windows.WndPetSelect;
+import com.watabou.pixeldungeon.windows.WndBag;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -84,6 +85,10 @@ public class PetInventoryManager {
 
         GLog.i(StringsManager.getVar(R.string.PetInventory_GaveItem), item.name(), pet.getName());
         pet.updateSprite();
+        // Refresh hero's bag UI if open
+        if (WndBag.getHeroBagInstance() != null) {
+            WndBag.getHeroBagInstance().updateItems();
+        }
         return true;
     }
 
@@ -125,6 +130,10 @@ public class PetInventoryManager {
 
         GLog.i(StringsManager.getVar(R.string.PetInventory_TookItem), item.name(), pet.getName());
         pet.updateSprite();
+        // Refresh hero's bag UI if open
+        if (WndBag.getHeroBagInstance() != null) {
+            WndBag.getHeroBagInstance().updateItems();
+        }
         return true;
     }
 

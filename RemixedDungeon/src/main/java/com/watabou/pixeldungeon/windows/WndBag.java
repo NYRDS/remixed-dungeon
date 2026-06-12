@@ -98,6 +98,13 @@ public class WndBag extends WndTabbed {
 	@Getter
     private static WndBag instance;
 
+    // Track hero's bag window separately for UI refresh when pet inventory changes
+    private static WndBag heroBagInstance;
+
+    public static WndBag getHeroBagInstance() {
+        return heroBagInstance;
+    }
+
 	private final Belongings stuff;
 
 	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title) {
@@ -177,6 +184,11 @@ public class WndBag extends WndTabbed {
 		}
 
 		instance = this;
+
+		// Track hero's bag window for UI refresh from pet inventory
+		if (stuff.getOwner() instanceof Hero) {
+			heroBagInstance = this;
+		}
 	}
 
 	public static WndBag lastBag(@NotNull Char owner, Listener listener, Mode mode, String title ) {
