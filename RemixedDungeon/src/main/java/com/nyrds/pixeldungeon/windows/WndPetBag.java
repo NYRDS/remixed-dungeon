@@ -14,6 +14,7 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.windows.ItemPlaceholder;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -83,18 +84,17 @@ public class WndPetBag extends WndBag {
         if (item == null || item == com.nyrds.pixeldungeon.utils.ItemsList.DUMMY) {
             return;
         }
-        // Use protected placeEquipped with image constants
-        // ItemPlaceholder constants: RIGHT_HAND=0, BODY=1, LEFT_HAND=2, ARTIFACT=3
+        // Use protected placeEquipped with named constants from ItemPlaceholder
         if (item == stuff.getItemFromSlot(Belongings.Slot.WEAPON)) {
-            placeEquipped(item, Belongings.Slot.WEAPON, 0);
+            placeEquipped(item, Belongings.Slot.WEAPON, ItemPlaceholder.RIGHT_HAND);
         } else if (item == stuff.getItemFromSlot(Belongings.Slot.ARMOR)) {
-            placeEquipped(item, Belongings.Slot.ARMOR, 1);
+            placeEquipped(item, Belongings.Slot.ARMOR, ItemPlaceholder.BODY);
         } else if (item == stuff.getItemFromSlot(Belongings.Slot.LEFT_HAND)) {
-            placeEquipped(item, Belongings.Slot.LEFT_HAND, 2);
+            placeEquipped(item, Belongings.Slot.LEFT_HAND, ItemPlaceholder.LEFT_HAND);
         } else if (item == stuff.getItemFromSlot(Belongings.Slot.ARTIFACT)) {
-            placeEquipped(item, Belongings.Slot.ARTIFACT, 3);
+            placeEquipped(item, Belongings.Slot.ARTIFACT, ItemPlaceholder.ARTIFACT);
         } else if (item == stuff.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT)) {
-            placeEquipped(item, Belongings.Slot.LEFT_ARTIFACT, 3);
+            placeEquipped(item, Belongings.Slot.LEFT_ARTIFACT, ItemPlaceholder.ARTIFACT);
         }
     }
 
