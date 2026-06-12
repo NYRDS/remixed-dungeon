@@ -224,12 +224,21 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
     /** Returns the set of equipment slots available for this character */
     public Set<Slot> getAvailableSlots() {
+        ensureSlotsConfigured();
         return Collections.unmodifiableSet(availableSlots);
     }
 
     /** Checks if a specific equipment slot is available for this character */
     public boolean hasSlot(Slot slot) {
+        ensureSlotsConfigured();
         return availableSlots.contains(slot);
+    }
+
+    /** Ensures equipment slots are configured (handles lazy initialization) */
+    private void ensureSlotsConfigured() {
+        if (availableSlots.isEmpty()) {
+            configureAvailableSlots();
+        }
     }
 
     public void storeInBundle(Bundle bundle) {
