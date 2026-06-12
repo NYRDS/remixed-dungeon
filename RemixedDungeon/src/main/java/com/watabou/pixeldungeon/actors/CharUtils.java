@@ -336,8 +336,11 @@ public class CharUtils {
                 hero.nextAction(new Expel(target));
                 return;
             case CommonActions.MAC_PET_INVENTORY:
-                if (target instanceof Mob) {
-                    PetInventoryManager.openPetSelect((Hero) hero);
+                if (target instanceof Mob && hero instanceof Hero) {
+                    Mob pet = (Mob) target;
+                    if (pet.getOwnerId() == hero.getId()) {
+                        PetInventoryManager.openPetInventory((Hero) hero, pet);
+                    }
                 }
                 return;
         }

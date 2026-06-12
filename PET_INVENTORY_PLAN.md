@@ -107,6 +107,7 @@ Handle all pet inventory action constants with proper type casting.
 | Lua/Modding | `@LuaInterface` on PetInventoryManager methods | ✅ All public methods annotated |
 | Stackable partial transfer | Quantity selector UI | Not implemented (full stack transfer only) |
 | WndPetBag | "Read-only for non-owner" | Not implemented (single-player only) |
+| **Inventory from pet menu** | Always shows WndPetSelect (even for single pet) | **Fixed**: Uses `target` pet directly, skips WndPetSelect |
 
 ## Integration Points
 
@@ -122,11 +123,16 @@ if (target.getOwnerId() == hero.getId()) {
 ### In CharUtils.execute():
 ```java
 case CommonActions.MAC_PET_INVENTORY:
-    if (target instanceof Mob) {
-        PetInventoryManager.openPetSelect((Hero) hero);
+    if (target instanceof Mob && hero instanceof Hero) {
+        Mob pet = (Mob) target;
+        if (pet.getOwnerId() == hero.getId()) {
+            PetInventoryManager.openPetInventory((Hero) hero, pet); // Direct to THAT pet
+        }
     }
     return;
 ```
+
+**Note**: Uses `target` (the pet user clicked) directly instead of showing WndPetSelect. WndPetSelect is only shown for "Give to Pet" from hero's inventory where no target pet is pre-selected.
 
 ### In Item.actions():
 Context-aware pet actions based on item location and actor type.
@@ -138,8 +144,17 @@ Full handling of all pet action constants with proper type checks.
 
 ```
 Hero taps pet → WndOptions [Move, Attack, Inventory, Expel]
-                    ↓ (Inventory)
-            WndPetSelect (if >1 pet) 
+                    ↓ (Inventory on THIS pet)
+            MAC_PET_INVENTORY executes with `target` = that specific pet
+                    ↓
+            CharUtils.execute() uses `target` directly:
+            PetInventoryManager.openPetInventory(hero, pet)  // Opens THAT pet's bag
+                    ↓
+            WndPetBag for that pet  // No WndPetSelect!
+
+---
+
+Hero's bag → Tap item → "Give to Pet" → WndPetSelect (pick which pet)
                     ↓
             WndPetBag (pet's inventory with tabs)
                     ↓
