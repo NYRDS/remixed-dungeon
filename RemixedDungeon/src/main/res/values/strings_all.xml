@@ -3087,4 +3087,6 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PetInventory_ACTakeFromPet">Take from Pet</string>
     <string name="PetInventory_ACEquipOnPet">Equip on Pet</string>
     <string name="PetInventory_ACUnequipFromPet">Unequip from Pet</string>
+    <string name="PetInventory_TakeN">Take %d</string>
+    <string name="PetInventory_GiveN">Give %d</string>
 </resources>
