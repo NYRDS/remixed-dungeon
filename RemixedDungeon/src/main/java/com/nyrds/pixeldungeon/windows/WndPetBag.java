@@ -11,16 +11,19 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.EquipableItem;
+import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ItemSlot;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class WndPetBag extends WndBag {
 
@@ -35,11 +38,69 @@ public class WndPetBag extends WndBag {
         this.pet = pet;
 
         // Parent's placeItems() placed backpack items but NOT equipped items for pets
-        // Call the new public method to place equipped items for any owner
-        placeEquippedForOwner();
+        // We need to clear and re-place everything in correct order: equipped first, then backpack
+        clearAndReplaceItems();
 
         // Add equippability indicators to existing item slots
         addEquippabilityIndicators();
+    }
+
+    private void clearAndReplaceItems() {
+        // Use protected clearItems() from parent
+        clearItems();
+
+        // Place equipped items for pet (weapon, armor, left hand, artifact, left artifact)
+        Belongings belongings = pet.getBelongings();
+        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.WEAPON));
+        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.ARMOR));
+        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.LEFT_HAND));
+        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.ARTIFACT));
+        placeEquippedItem(belongings.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT));
+
+        // Place backpack items
+        for (Item item : belongings.backpack.items) {
+            if (!(item instanceof Gold)) {
+                placeBackpackItem(item);
+            }
+        }
+
+        // Place empty slots
+        int margin = 5;
+        while (count - margin < belongings.backpack.getSize()) {
+            placeBackpackItem(ItemsList.DUMMY);
+        }
+
+        // Place gold
+        Gold gold = belongings.getItem(Gold.class);
+        if (gold != null) {
+            row = nRows - 1;
+            col = nCols - 1;
+            placeBackpackItem(gold);
+        }
+    }
+
+    private void placeEquippedItem(@Nullable Item item) {
+        if (item == null || item == com.nyrds.pixeldungeon.utils.ItemsList.DUMMY) {
+            return;
+        }
+        // Use protected placeEquipped with image constants
+        // ItemPlaceholder constants: RIGHT_HAND=0, BODY=1, LEFT_HAND=2, ARTIFACT=3
+        if (item == stuff.getItemFromSlot(Belongings.Slot.WEAPON)) {
+            placeEquipped(item, Belongings.Slot.WEAPON, 0);
+        } else if (item == stuff.getItemFromSlot(Belongings.Slot.ARMOR)) {
+            placeEquipped(item, Belongings.Slot.ARMOR, 1);
+        } else if (item == stuff.getItemFromSlot(Belongings.Slot.LEFT_HAND)) {
+            placeEquipped(item, Belongings.Slot.LEFT_HAND, 2);
+        } else if (item == stuff.getItemFromSlot(Belongings.Slot.ARTIFACT)) {
+            placeEquipped(item, Belongings.Slot.ARTIFACT, 3);
+        } else if (item == stuff.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT)) {
+            placeEquipped(item, Belongings.Slot.LEFT_ARTIFACT, 3);
+        }
+    }
+
+    private void placeBackpackItem(@NotNull Item item) {
+        if (row >= nRows) return;
+        placeItem(item);
     }
 
     private void addEquippabilityIndicators() {

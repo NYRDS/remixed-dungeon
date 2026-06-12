@@ -87,10 +87,10 @@ public class WndBag extends WndTabbed {
 	protected int col;
 	protected int row;
 	
-	private final int nCols;
-	private final int nRows;
-
-	private float titleBottom;
+	protected final int nCols;
+	protected final int nRows;
+	
+	protected float titleBottom;
 
 	private static Mode lastMode;
 	private static Bag lastBag;
@@ -105,7 +105,7 @@ public class WndBag extends WndTabbed {
         return heroBagInstance;
     }
 
-	private final Belongings stuff;
+	protected final Belongings stuff;
 
 	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title) {
 		this(stuff, bag, listener, mode, title, null);
@@ -231,7 +231,7 @@ public class WndBag extends WndTabbed {
 		}
 	}
 
-	private void placeEquipped(Item item, Belongings.Slot slot, int image) {
+	protected void placeEquipped(Item item, Belongings.Slot slot, int image) {
 		if(item != ItemsList.DUMMY) {
 			placeItem(item);
 			return;
@@ -268,7 +268,7 @@ public class WndBag extends WndTabbed {
 		}
 	}
 
-	private void clearItems() {
+	protected void clearItems() {
 		row = col = count = 0;
 		var childsToRemove = new ArrayList<ItemButton>();
 		for (var child: members) {
@@ -336,7 +336,7 @@ public class WndBag extends WndTabbed {
 		}
 	}
 	
-	private void placeItem(final Item item) {
+	protected void placeItem(final Item item) {
 
 		if(row >=nRows) {
 			return;
