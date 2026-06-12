@@ -14,6 +14,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
@@ -38,6 +39,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -56,6 +60,9 @@ public class Belongings implements Iterable<Item>, Bundlable {
     private Item selectedItem = ItemsList.DUMMY;
 
     private final Char owner;
+    
+    /** Equipment slots available for this character (configured by owner type) */
+    private final Set<Slot> availableSlots = EnumSet.noneOf(Slot.class);
 
     public final Bag backpack;
 
@@ -205,6 +212,31 @@ public class Belongings implements Iterable<Item>, Bundlable {
         backpack.setOwner(owner);
 
         collect(new Gold(0));
+
+        // Configure available equipment slots based on owner type
+        configureAvailableSlots();
+    }
+
+    /** Configures which equipment slots are available for this character type */
+    private void configureAvailableSlots() {
+        if (owner instanceof Hero) {
+            // Hero has all slots
+            availableSlots.addAll(Arrays.asList(Slot.WEAPON, Slot.ARMOR, Slot.LEFT_HAND, Slot.ARTIFACT, Slot.LEFT_ARTIFACT));
+        } else if (owner instanceof Mob) {
+            // Pets (Mob) have all slots like Hero
+            availableSlots.addAll(Arrays.asList(Slot.WEAPON, Slot.ARMOR, Slot.LEFT_HAND, Slot.ARTIFACT, Slot.LEFT_ARTIFACT));
+        }
+        // NPCs and other characters have no equipment slots by default
+    }
+
+    /** Returns the set of equipment slots available for this character */
+    public Set<Slot> getAvailableSlots() {
+        return Collections.unmodifiableSet(availableSlots);
+    }
+
+    /** Checks if a specific equipment slot is available for this character */
+    public boolean hasSlot(Slot slot) {
+        return availableSlots.contains(slot);
     }
 
     public void storeInBundle(Bundle bundle) {
