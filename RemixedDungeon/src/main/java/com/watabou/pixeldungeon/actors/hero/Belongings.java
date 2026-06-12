@@ -39,7 +39,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.EnumSet;
 import java.util.HashMap;
@@ -219,14 +218,8 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
     /** Configures which equipment slots are available for this character type */
     private void configureAvailableSlots() {
-        if (owner instanceof Hero) {
-            // Hero has all slots
-            availableSlots.addAll(Arrays.asList(Slot.WEAPON, Slot.ARMOR, Slot.LEFT_HAND, Slot.ARTIFACT, Slot.LEFT_ARTIFACT));
-        } else if (owner instanceof Mob) {
-            // Pets (Mob) have all slots like Hero
-            availableSlots.addAll(Arrays.asList(Slot.WEAPON, Slot.ARMOR, Slot.LEFT_HAND, Slot.ARTIFACT, Slot.LEFT_ARTIFACT));
-        }
-        // NPCs and other characters have no equipment slots by default
+        // Delegate to the character class itself
+        availableSlots.addAll(owner.getAvailableEquipmentSlots());
     }
 
     /** Returns the set of equipment slots available for this character */
