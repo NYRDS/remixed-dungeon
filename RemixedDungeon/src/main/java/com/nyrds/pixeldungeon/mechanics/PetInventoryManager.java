@@ -175,32 +175,47 @@ public class PetInventoryManager {
 
     /**
      * Unequips an item from the pet.
-     */
-    @LuaInterface
-    public static boolean unequipItemFromPet(@NotNull Mob pet, @NotNull EquipableItem item) {
-        if (!pet.isAlive()) {
-            return false;
-        }
+     /** Unequips an item from the pet and puts it in pet's backpack. */
+     @LuaInterface
+     public static boolean unequipItemFromPet(@NotNull Mob pet, @NotNull EquipableItem item) {
+         if (!pet.isAlive()) {
+             return false;
+         }
 
-        if (!pet.getBelongings().isEquipped(item)) {
-            return false;
-        }
+         if (!pet.getBelongings().isEquipped(item)) {
+             return false;
+         }
 
-        if (item.isCursed()) {
-            GLog.w(StringsManager.getVar(R.string.PetInventory_CursedItem), item.name());
-            return false;
-        }
+         if (item.isCursed()) {
+             GLog.w(StringsManager.getVar(R.string.PetInventory_CursedItem), item.name());
+             return false;
+         }
 
-        if (pet.getBelongings().unequip(item)) {
-            GLog.i(StringsManager.getVar(R.string.PetInventory_UnequippedFromPet), item.name(), pet.getName());
-            pet.updateSprite();
-            // Refresh pet inventory UI if open
-            WndPetBag.refreshCurrent();
-            return true;
-        }
+         // Check if pet's backpack has space
+         if (pet.getBelongings().isBackpackFull()) {
+             GLog.w(StringsManager.getVar(R.string.PetInventory_PetBackpackFull));
+             return false;
+         }
 
-        return false;
-    }
+         // Unequip the item
+         if (pet.getBelongings().unequip(item)) {
+             // Collect into pet's backpack
+             if (!item.collect(pet.getBelongings().backpack)) {
+                 // If failed, re-equip (shouldn't happen since we checked space)
+                 pet.getBelongings().equip(item, item.slot(pet.getBelongings()));
+                 GLog.w(StringsManager.getVar(R.string.PetInventory_PetBackpackFull));
+                 return false;
+             }
+
+             GLog.i(StringsManager.getVar(R.string.PetInventory_UnequippedFromPet), item.name(), pet.getName());
+             pet.updateSprite();
+             // Refresh pet inventory UI if open
+             WndPetBag.refreshCurrent();
+             return true;
+         }
+
+         return false;
+     }
 
     /**
      * Opens the pet inventory window for the given pet.
