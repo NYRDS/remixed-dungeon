@@ -136,6 +136,26 @@ public class Toolbar extends Component {
         };
 
         btnInventory = new InventoryTool();
+        
+        // Initially hide pet button (hero starts with no pets)
+        btnPetInventory.setVisible(false);
+        btnPetInventory.enable(false);
+        lastHadPets = false;
+    }
+
+    private boolean lastHadPets = false;
+
+    @Override
+    public void update() {
+        super.update();
+        
+        // Check pet count in rendering phase and toggle button visibility
+        boolean hasPets = PetInventoryManager.hasPets(hero);
+        if (hasPets != lastHadPets) {
+            lastHadPets = hasPets;
+            btnPetInventory.setVisible(hasPets);
+            btnPetInventory.enable(hasPets);
+        }
     }
 
     @Override
@@ -189,9 +209,8 @@ public class Toolbar extends Component {
 
         VHBox inventoryBox = new VHBox(width());
         // Add pet inventory button first (closest to quickslots/center in both handedness modes)
-        if (PetInventoryManager.hasPets(hero)) {
-            inventoryBox.add(btnPetInventory);
-        }
+        // Always added, visibility toggled in update()
+        inventoryBox.add(btnPetInventory);
         if (hero.isSpellUser()) {
             inventoryBox.add(btnSpells);
         }
