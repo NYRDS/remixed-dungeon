@@ -21,7 +21,6 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.watabou.pixeldungeon.scenes.GameScene;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -125,13 +124,6 @@ public abstract class Mob extends Char {
 
             pet.setFraction(owner.fraction());
             pet.setOwnerId(ownerId);
-        }
-        // Refresh toolbar pet button if owner is hero
-        if (owner instanceof Hero && Dungeon.hero != null) {
-            var scene = GameScene.getScene();
-            if (scene != null) {
-                scene.refreshPetButton();
-            }
         }
         return pet;
     }
@@ -349,14 +341,6 @@ public abstract class Mob extends Char {
         }
 
         super.die(cause);
-
-        // Refresh toolbar pet button if this was a pet
-        if (getOwner() instanceof Hero) {
-            var scene = GameScene.getScene();
-            if (scene != null) {
-                scene.refreshPetButton();
-            }
-        }
 
         Library.identify(Library.MOB, getEntityKind());
 

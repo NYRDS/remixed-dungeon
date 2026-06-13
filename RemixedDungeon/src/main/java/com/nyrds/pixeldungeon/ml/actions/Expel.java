@@ -5,7 +5,6 @@ import static com.watabou.pixeldungeon.actors.Actor.TICK;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
-import com.watabou.pixeldungeon.scenes.GameScene;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -24,11 +23,6 @@ public class Expel extends CharAction {
         target.setOwnerId(target.getId());
         target.setFraction(Fraction.DUNGEON);
         CharUtils.clearMarkers();
-        // Refresh toolbar pet button
-        var scene = GameScene.getScene();
-        if (scene != null) {
-            scene.refreshPetButton();
-        }
         return false;
     }
 }

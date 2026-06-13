@@ -270,9 +270,4 @@ public class Toolbar extends Component {
     public float top() {
         return toolbar.top();
     }
-
-    /** Call when pet count changes to refresh button visibility */
-    public void refreshPetButton() {
-        layout();
-    }
 }
