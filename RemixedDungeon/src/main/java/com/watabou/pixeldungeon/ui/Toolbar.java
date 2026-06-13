@@ -188,13 +188,12 @@ public class Toolbar extends Component {
         actionBox.setAlign(VBox.Align.Bottom);
 
         VHBox inventoryBox = new VHBox(width());
-        if (hero.isSpellUser()) {
-            inventoryBox.add(btnSpells);
-        }
-        
-        // Add pet inventory button next to hero inventory if hero has pets
+        // Add pet inventory button first (closest to quickslots/center in both handedness modes)
         if (PetInventoryManager.hasPets(hero)) {
             inventoryBox.add(btnPetInventory);
+        }
+        if (hero.isSpellUser()) {
+            inventoryBox.add(btnSpells);
         }
         inventoryBox.add(btnInventory);
         inventoryBox.setAlign(VBox.Align.Bottom);
@@ -270,5 +269,10 @@ public class Toolbar extends Component {
     @Override
     public float top() {
         return toolbar.top();
+    }
+
+    /** Call when pet count changes to refresh button visibility */
+    public void refreshPetButton() {
+        layout();
     }
 }

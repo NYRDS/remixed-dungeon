@@ -106,6 +106,10 @@ public class GameScene extends PixelScene {
 
     private static volatile GameScene scene;
 
+    public static GameScene getScene() {
+        return scene;
+    }
+
     // Flag to hide UI for clean screenshots
     public static boolean hideUI = false;
 
@@ -1122,6 +1126,13 @@ public class GameScene extends PixelScene {
                 resume.setPos(uiCamera.width - resume.width(), attack.top() - resume.height());
                 resume.update();
             }
+        }
+    }
+
+    /** Refresh pet inventory button visibility without full toolbar reset */
+    public void refreshPetButton() {
+        if (toolbar != null) {
+            toolbar.refreshPetButton();
         }
     }
 
