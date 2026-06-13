@@ -65,6 +65,7 @@ public class WndPetBag extends WndBag {
     
     @Override
     public void hide() {
+        com.watabou.pixeldungeon.utils.GLog.w("WndPetBag.hide() called, currentInstance=" + currentInstance);
         if (currentInstance == this) {
             currentInstance = null;
         }
@@ -73,6 +74,7 @@ public class WndPetBag extends WndBag {
 
     @Override
     public void updateItems() {
+        com.watabou.pixeldungeon.utils.GLog.w("WndPetBag.updateItems() called");
         // Override parent's updateItems to use our clearAndReplaceItems (which shows equipped items first)
         clearAndReplaceItems();
         addEquippabilityIndicators();
@@ -254,6 +256,12 @@ public class WndPetBag extends WndBag {
             getListener().onSelect(null, hero);
         }
         super.onBackPressed();
+    }
+
+    /** Override to keep bag open when selecting items (like hero inventory) */
+    @Override
+    public boolean hideOnSelect() {
+        return false;
     }
 
     private static class PetBagListener implements WndBag.Listener {
