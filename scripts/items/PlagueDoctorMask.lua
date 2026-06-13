@@ -19,7 +19,7 @@ return item.init{
             name      = "PlagueDoctorMask_Name",
             info      = "PlagueDoctorMask_Info",
             price     = 20,
-            equipable = RPD.Slots.ring
+            equipable = RPD.Slots.artifact
         }
     end,
 
