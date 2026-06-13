@@ -19,6 +19,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ItemSlot;
+import com.watabou.pixeldungeon.ui.Window;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.elements.Tab;
@@ -68,6 +69,18 @@ public class WndPetBag extends WndBag {
             currentInstance = null;
         }
         super.hide();
+    }
+
+    @Override
+    public void updateItems() {
+        // Override parent's updateItems to use our clearAndReplaceItems (which shows equipped items first)
+        clearAndReplaceItems();
+        addEquippabilityIndicators();
+
+        Window activeDialog = getActiveDialog();
+        if (activeDialog != null) {
+            bringToFront(activeDialog);
+        }
     }
 
     private void clearAndReplaceItems() {
