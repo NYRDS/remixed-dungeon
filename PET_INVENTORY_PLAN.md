@@ -250,6 +250,21 @@ private void configureAvailableSlots() {
 - New pet types automatically work (just extend Mob)
 - New character types = override one method
 - Deathling works automatically (extends Mob)
+
+## Toolbar Pet Inventory Button
+
+### Implementation
+- **Toolbar.java**: Added `btnPetInventory` button in `inventoryBox` (first position, closest to quickslots/center)
+- **Icon**: Uses same index as hero inventory (10) with green tint (`0x44AA44`)
+- **Visibility**: Toggled dynamically in `Toolbar.update()` rendering phase via `PetInventoryManager.hasPets(hero)`
+- **Position**: First in right button block (before Spells and Hero Inventory), respects handedness
+
+### Dynamic Update
+- No layout rebuild needed - button always exists in layout, just hidden/shown
+- Checked every frame in `update()` - instant appearance when pet gained/lost
+- Works for: summoning, charming, expelling, pet death, level transitions
+- Clean separation: `layout()` for structure, `update()` for dynamic state
+
 ## UX Improvements Implemented
 
 ### 1. Quantity Selector for Stackable Items (`WndPetQuantity.java`)
@@ -305,6 +320,15 @@ private void configureAvailableSlots() {
 - Equipped items appear first, then backpack items
 - Matches hero inventory behavior exactly
 
+### 9. Pet HP Color Coding in Header
+- Current HP colored based on value in `WndPetBag` title:
+  - **Green** (`0x44FF44`) when full (HP == maxHP)
+  - **Yellow** (`0xFFFF44`) when above half
+  - **Red** (`0xFF4444`) when low (≤ half)
+- Total HP stays white (default)
+- Uses `Text.color()` with `[#color:value]` format
+- Shared `buildPetTitle(pet)` helper used in constructor and `updatePetTitle()`
+
 1. **Serialization**: Pets already save/load belongings via `Char.storeInBundle()`/`restoreFromBundle()`
 2. **Equipment Validation**: Check STR requirements, slot compatibility for pets
 3. **Pet AI**: Equipped items affect pet stats (damage, DR, etc.) - handled by `Belongings` system
@@ -336,6 +360,7 @@ private void configureAvailableSlots() {
 | `Mob.java` | Modify | Override `getAvailableEquipmentSlots()` for pets |
 | `Belongings.java` | Modify | Delegates slot config to `owner.getAvailableEquipmentSlots()` |
 | `WndBag.java` | Modify | Added `placeEquippedForOwner()`, exposed protected fields/methods |
+| `Toolbar.java` | Modify | Added pet inventory button with dynamic visibility |
 
 ## Implementation Order
 
@@ -346,7 +371,8 @@ private void configureAvailableSlots() {
 5. **WndPetItem** - Pet-specific item action window
 6. **CharUtils.actions()/execute()** - Integration
 7. **Item.actions()/_execute()** - Context-aware actions
-8. **Testing** - Verify with various pet types and items
+8. **Toolbar** - Pet inventory button with dynamic visibility
+9. **Testing** - Verify with various pet types and items
 
 ## Build Verification
 
