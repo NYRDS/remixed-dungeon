@@ -200,4 +200,21 @@ public class PetInventoryManager {
     public static boolean hasMultiplePets(@NotNull Hero hero) {
         return getHeroPets(hero).size() > 1;
     }
+
+    /**
+     * Opens pet inventory from toolbar button.
+     * Single pet -> opens inventory options directly.
+     * Multiple pets -> opens pet selector.
+     */
+    @LuaInterface
+    public static void openPetInventoryFromToolbar(@NotNull Hero hero) {
+        java.util.List<Mob> pets = getHeroPets(hero);
+        if (pets.isEmpty()) return;
+
+        if (pets.size() == 1) {
+            openPetInventoryOptions(hero, pets.get(0));
+        } else {
+            openPetSelect(hero);
+        }
+    }
 }

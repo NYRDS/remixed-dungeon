@@ -1,7 +1,7 @@
-
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
@@ -22,10 +22,10 @@ import java.util.ArrayList;
 
 public class Toolbar extends Component {
 
-
     private final Tool btnWait;
     private final Tool btnSearch;
     private final Tool btnInfo;
+    private final Tool btnPetInventory;
 
     @Nullable
     private final Tool btnSpells;
@@ -33,7 +33,6 @@ public class Toolbar extends Component {
     private final InventoryTool btnInventory;
 
     private Component toolbar = new Component();
-
     private final ArrayList<QuickslotTool> slots = new ArrayList<>();
     final private Hero hero;
 
@@ -74,6 +73,16 @@ public class Toolbar extends Component {
             protected void onClick() {
                 if (hero.isReady()) {
                     hero.selectCell(GameScene.informer);
+                }
+            }
+        };
+
+        // Pet inventory button - icon index 13 (paw/icon for pets)
+        btnPetInventory = new Tool(13, Chrome.Type.ACTION_BUTTON) {
+            @Override
+            protected void onClick() {
+                if (hero.isReady()) {
+                    PetInventoryManager.openPetInventoryFromToolbar(hero);
                 }
             }
         };
@@ -137,6 +146,11 @@ public class Toolbar extends Component {
         actionBox.add(btnWait);
         actionBox.add(btnSearch);
         actionBox.add(btnInfo);
+        
+        // Add pet inventory button if hero has pets
+        if (PetInventoryManager.hasPets(hero)) {
+            actionBox.add(btnPetInventory);
+        }
         actionBox.setAlign(VBox.Align.Bottom);
 
         VHBox inventoryBox = new VHBox(width());
@@ -218,5 +232,4 @@ public class Toolbar extends Component {
     public float top() {
         return toolbar.top();
     }
-
 }
