@@ -339,7 +339,7 @@ public class CharUtils {
                 if (target instanceof Mob && hero instanceof Hero) {
                     Mob pet = (Mob) target;
                     if (pet.getOwnerId() == hero.getId()) {
-                        PetInventoryManager.openPetInventory((Hero) hero, pet);
+                        PetInventoryManager.openPetInventoryOptions((Hero) hero, pet);
                     }
                 }
                 return;

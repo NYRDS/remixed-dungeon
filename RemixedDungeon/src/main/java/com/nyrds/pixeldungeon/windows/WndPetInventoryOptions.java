@@ -23,7 +23,8 @@ public class WndPetInventoryOptions extends WndOptions {
         super(Utils.capitalize(pet.getName()),
                 StringsManager.getVar(R.string.PetInventory_Title),
                 StringsManager.getVar(R.string.PetInventory_GiveToPet),
-                StringsManager.getVar(R.string.PetInventory_TakeFromPet));
+                StringsManager.getVar(R.string.PetInventory_TakeFromPet),
+                StringsManager.getVar(R.string.PetInventory_ViewManage));
         this.client = hero;
         this.heroBackpack = hero.getBelongings().backpack;
         this.petBackpack = pet.getBelongings().backpack;
@@ -38,6 +39,9 @@ public class WndPetInventoryOptions extends WndOptions {
                 break;
             case 1:
                 showTakeWnd();
+                break;
+            case 2:
+                showManageWnd();
                 break;
         }
     }
@@ -58,5 +62,9 @@ public class WndPetInventoryOptions extends WndOptions {
                         new TakeFromPetSelector(pet),
                         WndBag.Mode.ALL,
                         StringsManager.getVar(R.string.PetInventory_TakeFromPet)));
+    }
+
+    public void showManageWnd() {
+        GameScene.show(new WndPetBag((Hero) client, pet));
     }
 }
