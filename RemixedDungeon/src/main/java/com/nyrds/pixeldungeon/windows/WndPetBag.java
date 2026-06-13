@@ -37,8 +37,7 @@ public class WndPetBag extends WndBag {
 
     public WndPetBag(@NotNull Hero hero, @NotNull Mob pet) {
         // Use a temporary listener for super() call, will replace after
-        super(pet.getBelongings(), pet.getBelongings().backpack, new PetBagListener(hero, pet, null), Mode.ALL,
-              Utils.capitalize(pet.getName()) + " " + Utils.format(R.string.WndPetBag_HP, pet.hp(), pet.ht()));
+        super(pet.getBelongings(), pet.getBelongings().backpack, new PetBagListener(hero, pet, null), Mode.ALL, buildPetTitle(pet));
 
         this.hero = hero;
         this.pet = pet;
@@ -54,6 +53,23 @@ public class WndPetBag extends WndBag {
 
         // Add equippability indicators to existing item slots
         addEquippabilityIndicators();
+    }
+
+    private static String buildPetTitle(Mob pet) {
+        int currentHp = pet.hp();
+        int maxHp = pet.ht();
+        int hpColor;
+        if (currentHp >= maxHp) {
+            hpColor = 0x44FF44;
+        } else if (currentHp > maxHp / 2) {
+            hpColor = 0xFFFF44;
+        } else {
+            hpColor = 0xFF4444;
+        }
+        String hpText = Utils.format("HP: %s/%d",
+            com.watabou.noosa.Text.color(String.valueOf(currentHp), hpColor),
+            maxHp);
+        return Utils.capitalize(pet.getName()) + " " + hpText;
     }
     
     public static void refreshCurrent() {
@@ -225,7 +241,7 @@ public class WndPetBag extends WndBag {
             txtTitleField.setAccessible(true);
             com.watabou.noosa.Text txtTitle = (com.watabou.noosa.Text) txtTitleField.get(this);
             if (txtTitle != null) {
-                txtTitle.text(Utils.capitalize(pet.getName()) + " " + Utils.format(R.string.WndPetBag_HP, pet.hp(), pet.ht()));
+                txtTitle.text(buildPetTitle(pet));
                 // Re-center the title
                 java.lang.reflect.Field panelWidthField = WndBag.class.getDeclaredField("panelWidth");
                 panelWidthField.setAccessible(true);
