@@ -36,8 +36,17 @@
         ▼                     ▼                     ▼
 ┌───────────────┐    ┌─────────────────┐   ┌────────────────┐
 │  WndPetBag    │    │  Pet Actions    │   │ CharUtils      │
-│  (new window) │    │  (new actions)  │   │  (integration) │
+│  (pet inv UI) │    │  (new actions)  │   │  (integration) │
 └───────────────┘    └─────────────────┘   └────────────────┘
+        │
+        ▼
+┌───────────────┐    ┌─────────────────────────────┐
+│ WndPetQuantity│    │  Shop-Style Interface       │
+│ (quantity)    │    │  WndPetInventoryOptions     │
+└───────────────┘    │  - Give to Pet              │
+                     │  - Take from Pet            │
+                     │  - View/Manage (full bag)   │
+                     └─────────────────────────────┘
 ```
 
 ## Key Components to Create/Modify
@@ -52,12 +61,13 @@ Centralized logic for pet inventory operations:
 
 ### 2. WndPetBag.java (New - extends WndBag)
 Pet inventory UI window:
-- Shows pet's equipped items + backpack
+- Shows pet's equipped items + backpack (equipped items first)
 - Tabs for pet's bags (if any)
 - Action buttons: **Give**, **Take**, **Equip**, **Unequip** (via WndPetItem)
 - Read-only for non-owner, editable for owner
 - Title shows pet name and HP
 - Uses `getListener()` getter instead of accessing private field
+- **Overrides `updateItems()` to show equipped items on refresh**
 
 ### 3. WndPetSelect.java (New)
 Pet selection UI when hero has multiple pets:
@@ -72,8 +82,21 @@ Pet-specific item action window:
   - Item in pet's backpack → "Take from Pet", "Equip on Pet"
   - Item equipped on pet → "Unequip from Pet"
 - Handles cursed items correctly (cannot unequip)
+- **Calls `bag.updateItems()` after equip/unequip to keep bag open**
 
-### 5. New CommonActions
+### 5. WndPetInventoryOptions.java (New) - Shop-Style Interface
+Main options window (like `WndShopOptions`):
+- **Give to Pet** → Hero's backpack with `GiveToPetSelector`
+- **Take from Pet** → Pet's backpack with `TakeFromPetSelector`
+- **View/Manage** → Full `WndPetBag` (equipped items, unequip, etc.)
+
+### 6. GiveToPetSelector / TakeFromPetSelector (New)
+Listeners for bulk transfer (like `BuyItemSelector`/`SellItemSelector`):
+- Handle single items directly
+- Show `WndPetQuantity` for stackables
+- Auto-refresh both hero and pet bag windows
+
+### 7. New CommonActions
 ```java
 MAC_PET_INVENTORY = "CharAction_PetInventory"
 AC_GIVE_TO_PET = "PetInventory_ACGiveToPet"
@@ -83,7 +106,7 @@ AC_UNEQUIP_FROM_PET = "PetInventory_ACUnequipFromPet"
 ```
 Note: Uses `MAC_` prefix for macro actions (consistent with MAC_ORDER, MAC_EXPEL), `AC_` for item actions.
 
-### 6. Item Actions Integration
+### 8. Item Actions Integration
 Modify `CharUtils.actions()` to include pet inventory action when:
 - Target is a pet owned by hero (`target.getOwnerId() == hero.getId()`)
 
@@ -91,11 +114,11 @@ Add pet-specific actions to items based on context:
 - In hero's inventory → "Give to Pet" (if not equipped)
 - In pet's inventory → "Take from Pet", "Equip on Pet", "Unequip from Pet"
 
-### 7. CharUtils.execute() Integration
+### 9. CharUtils.execute() Integration
 Handle `MAC_PET_INVENTORY` action to open pet selection window.
 
-### 8. Item._execute() Integration
-Handle all pet inventory action constants with proper type casting.
+### 10. Item._execute() Integration
+Handle all pet action constants with proper type checks.
 
 ## Deviations from Original Plan
 
@@ -111,6 +134,10 @@ Handle all pet inventory action constants with proper type casting.
 | **Equippability indicators** | Not planned | **Added**: Slot icons (⚔️/🛡️/💍) with green/red coloring |
 | **Equipped items display** | Not planned | **Added**: Shows equipped items in header area (weapon, armor, rings) with unequip action |
 | **Equipment slots architecture** | `instanceof` checks in Belongings | **Polymorphic**: `Char.getAvailableEquipmentSlots()` overridden by Hero/Mob |
+| **Pet inventory menu** | Direct to bag | **Shop-style**: Give/Take/ViewManage menu (WndPetInventoryOptions) |
+| **Bulk transfer** | Per-item WndPetItem | **Shop-style**: WndPetInventoryOptions + selectors (GiveToPetSelector/TakeFromPetSelector) |
+| **Unequip behavior** | Cancels if backpack full | **Aligned with hero**: Drops on ground if backpack full |
+| **Bag refresh on action** | Closes bag | **Stays open**: updateItems() override refreshes equipped + backpack |
 
 ## Integration Points
 
@@ -129,13 +156,13 @@ case CommonActions.MAC_PET_INVENTORY:
     if (target instanceof Mob && hero instanceof Hero) {
         Mob pet = (Mob) target;
         if (pet.getOwnerId() == hero.getId()) {
-            PetInventoryManager.openPetInventory((Hero) hero, pet); // Direct to THAT pet
+            PetInventoryManager.openPetInventoryOptions((Hero) hero, pet); // Opens menu
         }
     }
     return;
 ```
 
-**Note**: Uses `target` (the pet user clicked) directly instead of showing WndPetSelect. WndPetSelect is only shown for "Give to Pet" from hero's inventory where no target pet is pre-selected.
+**Note**: Opens the shop-style menu with Give/Take/ViewManage options. WndPetSelect is only shown for "Give to Pet" from hero's inventory where no target pet is pre-selected.
 
 ### In Item.actions():
 Context-aware pet actions based on item location and actor type.
@@ -151,18 +178,35 @@ Hero taps pet → WndOptions [Move, Attack, Inventory, Expel]
             MAC_PET_INVENTORY executes with `target` = that specific pet
                     ↓
             CharUtils.execute() uses `target` directly:
-            PetInventoryManager.openPetInventory(hero, pet)  // Opens THAT pet's bag
+            PetInventoryManager.openPetInventoryOptions(hero, pet)  // Opens menu
                     ↓
-            WndPetBag for that pet  // No WndPetSelect!
+            WndPetInventoryOptions (3 choices):
+            ┌─────────────────────────────────────────┐
+            │ PetName HP: X/Y                         │
+            ├─────────────────────────────────────────┤
+            │ 1. Give to Pet      → Hero's backpack   │
+            │ 2. Take from Pet    → Pet's backpack    │
+            │ 3. View/Manage      → WndPetBag (full)  │
+            └─────────────────────────────────────────┘
 
----
+--- Give/Take Flow (like shop) ---
+Give to Pet:
+    WndBag(hero's backpack) with GiveToPetSelector
+        → Tap item → Stackable? → WndPetQuantity
+        → Direct transfer → Auto-refresh both bags
 
-Hero's bag → Tap item → "Give to Pet" → WndPetSelect (pick which pet)
-                    ↓
-            WndPetBag (pet's inventory with tabs)
-                    ↓
-            Item tap → WndPetItem with pet actions:
-            [Give to Pet, Take from Pet, Equip on Pet, Unequip from Pet]
+Take from Pet:
+    WndBag(pet's backpack) with TakeFromPetSelector
+        → Tap item → Stackable? → WndPetQuantity
+        → Direct transfer → Auto-refresh both bags
+
+--- View/Manage Flow ---
+View/Manage:
+    WndPetBag (full pet inventory with equipped items)
+        → Equipped items in header (weapon, armor, rings)
+        → Tap equipped item → "Unequip from Pet"
+        → Tap backpack item → "Equip on Pet" / "Take from Pet"
+        → Auto-refresh on any action (updateItems() override)
 ```
 
 ## Equipment Slots Architecture (Final Design)
@@ -198,7 +242,7 @@ private void configureAvailableSlots() {
 - New pet types automatically work (just extend Mob)
 - New character types = override one method
 - Deathling works automatically (extends Mob)
-- Save/load handled via `restoreFromBundle()` calling `configureAvailableSlots()`
+## UX Improvements Implemented
 
 ### 1. Quantity Selector for Stackable Items (`WndPetQuantity.java`)
 - New window for stackable items (potions, scrolls, ammo, food)
@@ -231,20 +275,37 @@ private void configureAvailableSlots() {
 
 ### 5. Equipped Items Display in Pet Inventory
 - Equipped items now shown in header area (weapon, armor, left hand, 2 artifact slots)
-- Uses reflection to call private `WndBag.placeItem()` for pet equipped items
+- Uses `WndBag.placeEquipped()` (protected) for pet equipped items
 - Equipped items are clickable and show "Unequip from Pet" action in `WndPetItem`
 - Fixes issue where equipped items became inaccessible after equipping
 
----
+### 6. Shop-Style Pet Inventory Interface (New)
+- **WndPetInventoryOptions**: Main menu with 3 choices (Give/Take/ViewManage)
+- **Give to Pet**: Hero's backpack with `GiveToPetSelector` (like BuyItemSelector)
+- **Take from Pet**: Pet's backpack with `TakeFromPetSelector` (like SellItemSelector)
+- **View/Manage**: Full `WndPetBag` with equipped items + unequip
+- **WndPetQuantity**: Quantity picker for stackables (like WndTradeItem)
+- Auto-refreshes both hero and pet bag windows on any action
+
+### 7. Unequip Aligned with Hero Behavior
+- If pet's backpack full → item drops on ground (matches hero's `doUnequip`)
+- Previously cancelled unequip; now consistent with hero behavior
+
+### 8. Bag Stays Open on Equip/Unequip
+- `WndPetBag` overrides `updateItems()` to call `clearAndReplaceItems()`
+- Shows equipped items + backpack after any action
+- Equipped items appear first, then backpack items
+- Matches hero inventory behavior exactly
 
 1. **Serialization**: Pets already save/load belongings via `Char.storeInBundle()`/`restoreFromBundle()`
-3. **Equipment Validation**: Check STR requirements, slot compatibility for pets
-4. **Pet AI**: Equipped items affect pet stats (damage, DR, etc.) - handled by `Belongings` system
-5. **Lua/Modding**: All PetInventoryManager methods exposed via `@LuaInterface`
-6. **Cursed Items**: Cannot unequip from pet (same as hero)
-7. **Distance Check**: Hero and pet must be adjacent or on same cell
-
-8. **Save/Load Equipment Slots**: `Belongings.restoreFromBundle()` calls `configureAvailableSlots()` to re-configure slots after loading (since `availableSlots` is not serialized)
+2. **Equipment Validation**: Check STR requirements, slot compatibility for pets
+3. **Pet AI**: Equipped items affect pet stats (damage, DR, etc.) - handled by `Belongings` system
+4. **Lua/Modding**: All PetInventoryManager methods exposed via `@LuaInterface`
+5. **Cursed Items**: Cannot unequip from pet (same as hero)
+6. **Distance Check**: Hero and pet must be adjacent or on same cell
+7. **Save/Load Equipment Slots**: `Belongings.restoreFromBundle()` calls `configureAvailableSlots()` to re-configure slots after loading (since `availableSlots` is not serialized)
+8. **Bag Refresh Pattern**: `WndPetBag.updateItems()` override ensures equipped items stay visible on refresh (parent's method didn't show them)
+9. **Protected API**: `WndBag` exposes protected fields/methods (`nCols`, `nRows`, `titleBottom`, `stuff`, `clearItems`, `placeItem`, `placeEquipped`) for subclass customization
 
 ## Files Created/Modified
 
@@ -255,6 +316,9 @@ private void configureAvailableSlots() {
 | `WndPetSelect.java` | New | Pet selection (if multiple) |
 | `WndPetItem.java` | New | Pet-specific item actions |
 | `WndPetQuantity.java` | New | Quantity selector for stackables |
+| `WndPetInventoryOptions.java` | New | Shop-style menu (Give/Take/ViewManage) |
+| `GiveToPetSelector.java` | New | Listener for hero→pet transfers |
+| `TakeFromPetSelector.java` | New | Listener for pet→hero transfers |
 | `PetItemSlot.java` | New | Placeholder for equippability indicators |
 | `CommonActions.java` | Modify | Add action constants |
 | `CharUtils.java` | Modify | Add pet inventory action + execution |
@@ -263,7 +327,7 @@ private void configureAvailableSlots() {
 | `Hero.java` | Modify | Override `getAvailableEquipmentSlots()` for Hero |
 | `Mob.java` | Modify | Override `getAvailableEquipmentSlots()` for pets |
 | `Belongings.java` | Modify | Delegates slot config to `owner.getAvailableEquipmentSlots()` |
-| `WndBag.java` | Modify | Added `placeEquippedForOwner()` using `hasSlot()` |
+| `WndBag.java` | Modify | Added `placeEquippedForOwner()`, exposed protected fields/methods |
 
 ## Implementation Order
 
