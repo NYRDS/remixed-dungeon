@@ -67,12 +67,34 @@ public class ModdingMode extends ModdingBase{
 			}
 
 			if(!mod.equals(ModdingMode.REMIXED)) {
-				useRetroHeroSprites = !isResourceExistInMod("hero_modern");
+				useRetroHeroSprites = hasRetroSpriteOverrides() && !hasModernHeroSpriteOverrides();
 			}
 		} catch (Exception e) {
 			EventCollector.logException(e);
 			mActiveMod = ModdingMode.REMIXED;
 		}
+	}
+
+	/**
+	 * Checks if the active mod provides retro hero sprite overrides.
+	 * Returns true if the mod has any PNG files under the "hero/" directory (recursive).
+	 */
+	public static boolean hasRetroSpriteOverrides() {
+		if (mActiveMod.equals(REMIXED)) {
+			return false;
+		}
+		List<String> pngFiles = listResources("hero", (dir, name) -> name.toLowerCase().endsWith(".png"));
+		return !pngFiles.isEmpty();
+	}
+
+	/**
+	 * Checks if the active mod provides modern hero sprite overrides.
+	 */
+	public static boolean hasModernHeroSpriteOverrides() {
+		if (mActiveMod.equals(REMIXED)) {
+			return false;
+		}
+		return isResourceExistInMod("hero_modern/");
 	}
 
 	public static int activeModVersion() {

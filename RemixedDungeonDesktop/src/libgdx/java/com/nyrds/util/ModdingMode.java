@@ -54,9 +54,31 @@ public class ModdingMode extends ModdingBase {
         } finally {
             FileSystem.reinitAllCaches();
             if (!mod.equals(ModdingBase.REMIXED)) {
-                useRetroHeroSprites = !isResourceExistInMod("hero_modern");
+                useRetroHeroSprites = hasRetroSpriteOverrides() && !hasModernHeroSpriteOverrides();
             }
         }
+    }
+
+    /**
+     * Checks if the active mod provides retro hero sprite overrides.
+     * Returns true if the mod has any PNG files under the "hero/" directory (recursive).
+     */
+    public static boolean hasRetroSpriteOverrides() {
+        if (mActiveMod.equals(ModdingBase.REMIXED)) {
+            return false;
+        }
+        List<String> pngFiles = listResources("hero", (dir, name) -> name.toLowerCase().endsWith(".png"));
+        return !pngFiles.isEmpty();
+    }
+
+    /**
+     * Checks if the active mod provides modern hero sprite overrides.
+     */
+    public static boolean hasModernHeroSpriteOverrides() {
+        if (mActiveMod.equals(ModdingBase.REMIXED)) {
+            return false;
+        }
+        return isResourceExistInMod("hero_modern/");
     }
 
     public static String getSoundById(String id) {
