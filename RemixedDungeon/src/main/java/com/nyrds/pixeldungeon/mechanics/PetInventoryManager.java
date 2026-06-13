@@ -14,6 +14,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.nyrds.pixeldungeon.windows.WndPetBag;
+import com.nyrds.pixeldungeon.windows.WndPetInventoryOptions;
 import com.nyrds.pixeldungeon.windows.WndPetSelect;
 import com.watabou.pixeldungeon.windows.WndBag;
 
@@ -225,6 +226,16 @@ public class PetInventoryManager {
         }
 
         GameScene.show(new WndPetBag(hero, pet));
+    }
+
+    /** Opens the pet inventory options window (Give/Take). */
+    @LuaInterface
+    public static void openPetInventoryOptions(@NotNull Hero hero, @NotNull Mob pet) {
+        if (!canAccessPetInventory(hero, pet)) {
+            GLog.w(StringsManager.getVar(R.string.PetInventory_TooFar));
+            return;
+        }
+        GameScene.show(new WndPetInventoryOptions(hero, pet));
     }
 
     /**

@@ -3070,6 +3070,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
     <!-- Pet Inventory -->
     <string name="CharAction_PetInventory">Inventory</string>
+    <string name="PetInventory_Title">Pet Inventory</string>
+    <string name="PetInventory_GiveToPet">Give to Pet</string>
+    <string name="PetInventory_TakeFromPet">Take from Pet</string>
     <string name="PetInventory_GaveItem">Gave %1$s to %2$s</string>
     <string name="PetInventory_TookItem">Took %1$s from %2$s</string>
     <string name="PetInventory_EquippedOnPet">Equipped %1$s on %2$s</string>
