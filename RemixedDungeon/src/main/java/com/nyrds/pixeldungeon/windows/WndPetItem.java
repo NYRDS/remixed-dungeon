@@ -21,6 +21,9 @@ import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
+import com.nyrds.pixeldungeon.ml.actions.CharAction;
+import com.nyrds.pixeldungeon.ml.actions.UseItem;
+import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,18 +32,19 @@ public class WndPetItem extends Window {
 
     private static final float BUTTON_WIDTH = 36;
     private VHBox actions;
-
+    private final WndBag bag;
     private final Hero hero;
     private final Mob pet;
     private final Item item;
     private final boolean itemInPetInventory;
 
-    public WndPetItem(@NotNull Hero hero, @NotNull Mob pet, @NotNull Item item) {
+    public WndPetItem(@NotNull WndBag bag, @NotNull Hero hero, @NotNull Mob pet, @NotNull Item item) {
 
         super();
 
         int WIDTH = stdWidth();
 
+        this.bag = bag;
         this.hero = hero;
         this.pet = pet;
         this.item = item;
@@ -115,34 +119,23 @@ public class WndPetItem extends Window {
         RedButton btn = new RedButton(displayName) {
             @Override
             protected void onClick() {
-                executeAction(actionId);
+                CharAction acton = new UseItem(item, actionId);
+                acton.act(hero);
+
                 hide();
+
+                if (!CommonActions.hideBagOnAction(actionId)) {
+                    if (bag != null && bag.getActiveDialog() == null) {
+                        bag.updateItems();
+                    }
+                } else {
+                    if (bag != null) {
+                        bag.hide();
+                    }
+                }
             }
         };
         btn.setSize(Math.max(BUTTON_WIDTH, btn.reqWidth()), BUTTON_HEIGHT);
         actions.add(btn);
-    }
-
-    private void executeAction(String action) {
-        switch (action) {
-            case CommonActions.AC_GIVE_TO_PET:
-                PetInventoryManager.giveItemToPet(hero, pet, item);
-                break;
-            case CommonActions.AC_TAKE_FROM_PET:
-                PetInventoryManager.takeItemFromPet(hero, pet, item);
-                break;
-            case CommonActions.AC_EQUIP_ON_PET:
-                if (item instanceof EquipableItem) {
-                    EquipableItem equipable = (EquipableItem) item;
-                    Belongings.Slot slot = equipable.slot(pet.getBelongings());
-                    PetInventoryManager.equipItemOnPet(hero, pet, equipable, slot);
-                }
-                break;
-            case CommonActions.AC_UNEQUIP_FROM_PET:
-                if (item instanceof EquipableItem) {
-                    PetInventoryManager.unequipItemFromPet(pet, (EquipableItem) item);
-                }
-                break;
-        }
     }
 }

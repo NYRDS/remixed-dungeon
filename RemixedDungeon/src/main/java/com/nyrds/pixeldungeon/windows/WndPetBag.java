@@ -35,12 +35,17 @@ public class WndPetBag extends WndBag {
     private static WndPetBag currentInstance;
 
     public WndPetBag(@NotNull Hero hero, @NotNull Mob pet) {
-        super(pet.getBelongings(), pet.getBelongings().backpack, new PetBagListener(hero, pet), Mode.ALL,
+        // Use a temporary listener for super() call, will replace after
+        super(pet.getBelongings(), pet.getBelongings().backpack, new PetBagListener(hero, pet, null), Mode.ALL,
               Utils.capitalize(pet.getName()) + " " + Utils.format(R.string.WndPetBag_HP, pet.hp(), pet.ht()));
 
         this.hero = hero;
         this.pet = pet;
         currentInstance = this;
+
+        // Now create and set the real listener with bag reference
+        PetBagListener listener = new PetBagListener(hero, pet, this);
+        setListener(listener);
 
         // Parent's placeItems() placed backpack items but NOT equipped items for pets
         // We need to clear and re-place everything in correct order: equipped first, then backpack
@@ -241,10 +246,16 @@ public class WndPetBag extends WndBag {
     private static class PetBagListener implements WndBag.Listener {
         private final Hero hero;
         private final Mob pet;
+        private WndBag bag;
 
-        public PetBagListener(Hero hero, Mob pet) {
+        public PetBagListener(Hero hero, Mob pet, WndBag bag) {
             this.hero = hero;
             this.pet = pet;
+            this.bag = bag;
+        }
+
+        public void setBag(WndBag bag) {
+            this.bag = bag;
         }
 
         @Override
@@ -254,8 +265,8 @@ public class WndPetBag extends WndBag {
                 if (item.quantity() > 1) {
                     GameScene.show(new WndPetQuantity(item, hero, pet));
                 } else {
-                    // Show WndItem with pet-specific actions
-                    GameScene.show(new WndPetItem(hero, pet, item));
+                    // Show WndItem with pet-specific actions (pass bag reference for updateItems)
+                    GameScene.show(new WndPetItem(bag, hero, pet, item));
                 }
             }
         }

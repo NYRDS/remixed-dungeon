@@ -73,14 +73,18 @@ public class WndBag extends WndTabbed {
 	private static final int TAB_WIDTH_L	= 26;
 		
 	@Getter
-    private final Listener listener;
+    private Listener listener;
 	@Getter
     private final Mode mode;
 	private final String title;
 	private final String[] entityNames;
 
 	public String[] getEntityNames() {
-		return entityNames;
+	    return entityNames;
+	}
+
+	public void setListener(Listener listener) {
+	    this.listener = listener;
 	}
 
 	protected int count;
