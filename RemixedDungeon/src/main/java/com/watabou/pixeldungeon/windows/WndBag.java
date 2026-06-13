@@ -109,52 +109,59 @@ public class WndBag extends WndTabbed {
         return heroBagInstance;
     }
 
-	protected final Belongings stuff;
+    // Subclasses can override to disable title hardlight coloring
+    protected boolean useTitleHardlight() {
+        return true;
+    }
 
-	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title) {
-		this(stuff, bag, listener, mode, title, null);
-	}
+    protected final Belongings stuff;
 
-	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title, String[] entityNames) {
+    public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title) {
+        this(stuff, bag, listener, mode, title, null);
+    }
 
-		super();
+    public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title, String[] entityNames) {
 
-		stuff.getOwner().interrupt();
+        super();
 
-		nCols = RemixedDungeon.landscape() ? COLS_L : COLS_P;
-		nRows = (Belongings.BACKPACK_SIZE + 4 + 1) / nCols + ((Belongings.BACKPACK_SIZE + 4 + 1) % nCols > 0 ? 1 : 0);
+        stuff.getOwner().interrupt();
 
-		this.listener = listener;
-		this.mode = mode;
-		this.title = title;
-		this.entityNames = entityNames;
-		this.stuff = stuff;
+        nCols = RemixedDungeon.landscape() ? COLS_L : COLS_P;
+        nRows = (Belongings.BACKPACK_SIZE + 4 + 1) / nCols + ((Belongings.BACKPACK_SIZE + 4 + 1) % nCols > 0 ? 1 : 0);
 
-		lastMode = mode;
+        this.listener = listener;
+        this.mode = mode;
+        this.title = title;
+        this.entityNames = entityNames;
+        this.stuff = stuff;
 
-		if(bag==null) {
-			bag = stuff.backpack;
-		}
+        lastMode = mode;
 
-		lastBag = bag;
+        if(bag==null) {
+            bag = stuff.backpack;
+        }
 
-		panelWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
+        lastBag = bag;
 
-		txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), GuiProperties.titleFontSize());
-		txtTitle.maxWidth(panelWidth);
-		txtTitle.hardlight( TITLE_COLOR );
-		txtTitle.setX(PixelScene.align((panelWidth - txtTitle.width()) / 2));
-		if(txtTitle.getX() <0) {
-			txtTitle.setX(0);
-		}
-		txtTitle.setY(0);
-		add( txtTitle );
+        panelWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
 
-		placeItems( bag );
+        txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), GuiProperties.titleFontSize());
+        txtTitle.maxWidth(panelWidth);
+        if (useTitleHardlight()) {
+            txtTitle.hardlight( TITLE_COLOR );
+        }
+        txtTitle.setX(PixelScene.align((panelWidth - txtTitle.width()) / 2));
+        if(txtTitle.getX() <0) {
+            txtTitle.setX(0);
+        }
+        txtTitle.setY(0);
+        add( txtTitle );
 
-		resize(
-			panelWidth,
-			(int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + titleBottom + SLOT_MARGIN) );
+        placeItems( bag );
+
+        resize(
+                panelWidth,
+                (int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + titleBottom + SLOT_MARGIN) );
 
 		if(stuff.getOwner() instanceof Hero) {
 			Bag[] bags = {

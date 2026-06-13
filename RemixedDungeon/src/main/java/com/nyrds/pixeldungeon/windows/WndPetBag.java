@@ -36,7 +36,7 @@ public class WndPetBag extends WndBag {
     private static WndPetBag currentInstance;
 
     public WndPetBag(@NotNull Hero hero, @NotNull Mob pet) {
-        // Use a temporary listener for super() call, will replace after
+        // Don't pass title to parent - we'll create our own without hardlight
         super(pet.getBelongings(), pet.getBelongings().backpack, new PetBagListener(hero, pet, null), Mode.ALL, buildPetTitle(pet));
 
         this.hero = hero;
@@ -53,6 +53,11 @@ public class WndPetBag extends WndBag {
 
         // Add equippability indicators to existing item slots
         addEquippabilityIndicators();
+    }
+
+    @Override
+    protected boolean useTitleHardlight() {
+        return false;
     }
 
     private static String buildPetTitle(Mob pet) {
