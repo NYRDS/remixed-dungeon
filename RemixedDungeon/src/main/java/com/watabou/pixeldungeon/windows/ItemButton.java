@@ -196,16 +196,12 @@ class ItemButton extends ItemSlot {
 
     @Override
     protected void onClick() {
-        com.watabou.pixeldungeon.utils.GLog.w("ItemButton.onClick wndBag=" + wndBag + " listener=" + wndBag.getListener() + " hideOnSelect=" + wndBag.hideOnSelect());
         if (wndBag.getListener() != null) {
             if(wndBag.hideOnSelect()) {
-                com.watabou.pixeldungeon.utils.GLog.w("ItemButton.onClick: HIDING BAG because hideOnSelect=true");
                 wndBag.hide();
             }
-            com.watabou.pixeldungeon.utils.GLog.w("ItemButton.onClick: calling listener.onSelect");
             wndBag.getListener().onSelect( item, item.getOwner());
         } else {
-            com.watabou.pixeldungeon.utils.GLog.w("ItemButton.onClick: NO LISTENER, showing WndItem");
             wndBag.add( new WndItem(wndBag, item ) );
         }
     }

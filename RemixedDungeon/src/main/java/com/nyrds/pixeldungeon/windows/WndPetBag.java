@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
@@ -86,7 +85,6 @@ public class WndPetBag extends WndBag {
     
     @Override
     public void hide() {
-        com.watabou.pixeldungeon.utils.GLog.w("WndPetBag.hide() called, currentInstance=" + currentInstance);
         if (currentInstance == this) {
             currentInstance = null;
         }
@@ -95,7 +93,6 @@ public class WndPetBag extends WndBag {
 
     @Override
     public void updateItems() {
-        com.watabou.pixeldungeon.utils.GLog.w("WndPetBag.updateItems() called");
         // Override parent's updateItems to use our clearAndReplaceItems (which shows equipped items first)
         clearAndReplaceItems();
         addEquippabilityIndicators();

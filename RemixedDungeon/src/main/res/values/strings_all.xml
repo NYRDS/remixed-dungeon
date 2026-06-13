@@ -3069,28 +3069,21 @@ No, there was no place for her in the light, not anymore. She turned from the me
   <string name="StartScene_UnlockDoctor">To unlock Plague Doctor - complete quest of old Plague Doctor</string>
 
     <!-- Pet Inventory -->
-    <string name="CharAction_PetInventory">Inventory</string>
+    <string name="CharAction_PetInventory">inventory</string>
     <string name="PetInventory_Title">Pet Inventory</string>
     <string name="PetInventory_GiveToPet">Give to Pet</string>
     <string name="PetInventory_TakeFromPet">Take from Pet</string>
-    <string name="PetInventory_ViewManage">View/Manage</string>
+    <string name="PetInventory_ViewManage">Manage</string>
     <string name="PetInventory_GaveItem">Gave %1$s to %2$s</string>
     <string name="PetInventory_TookItem">Took %1$s from %2$s</string>
-    <string name="PetInventory_EquippedOnPet">Equipped %1$s on %2$s</string>
-    <string name="PetInventory_UnequippedFromPet">Unequipped %1$s from %2$s</string>
     <string name="PetInventory_CantGiveEquipped">Cannot give equipped item</string>
     <string name="PetInventory_PetBackpackFull">Pet\'s backpack is full</string>
     <string name="PetInventory_HeroBackpackFull">Your backpack is full</string>
-    <string name="PetInventory_PetTooWeak">%s is too weak to equip this</string>
-    <string name="PetInventory_CursedItem">Cannot unequip cursed item</string>
     <string name="PetInventory_TooFar">Too far from pet</string>
-    <string name="WndPetBag_HP">HP: %1$d/%2$d</string>
     <string name="WndPetSelect_Title">Select Pet</string>
     <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
-    <string name="PetInventory_ACGiveToPet">Give to Pet</string>
-    <string name="PetInventory_ACTakeFromPet">Take from Pet</string>
-    <string name="PetInventory_ACEquipOnPet">Equip on Pet</string>
-    <string name="PetInventory_ACUnequipFromPet">Unequip from Pet</string>
+    <string name="PetInventory_ACGiveToPet">GIVE TO PET</string>
+    <string name="PetInventory_ACTakeFromPet">TAKE FROM PET</string>
     <string name="PetInventory_TakeN">Take %d</string>
     <string name="PetInventory_GiveN">Give %d</string>
 </resources>

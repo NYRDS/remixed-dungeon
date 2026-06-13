@@ -119,8 +119,6 @@ public class WndPetItem extends Window {
         RedButton btn = new RedButton(displayName) {
             @Override
             protected void onClick() {
-                com.watabou.pixeldungeon.utils.GLog.w("WndPetItem.onClick action=" + actionId + " bag=" + bag + " bag.getActiveDialog()=" + bag.getActiveDialog());
-                
                 // Determine correct actor: Hero for GIVE, Pet for TAKE/EQUIP/UNEQUIP
                 Char actor;
                 if (actionId.equals(CommonActions.AC_GIVE_TO_PET)) {
@@ -137,14 +135,10 @@ public class WndPetItem extends Window {
 
                 if (!CommonActions.hideBagOnAction(actionId)) {
                     if (bag != null && bag.getActiveDialog() == null) {
-                        com.watabou.pixeldungeon.utils.GLog.w("WndPetItem: calling bag.updateItems()");
                         bag.updateItems();
-                    } else {
-                        com.watabou.pixeldungeon.utils.GLog.w("WndPetItem: NOT calling updateItems, activeDialog=" + bag.getActiveDialog());
                     }
                 } else {
                     if (bag != null) {
-                        com.watabou.pixeldungeon.utils.GLog.w("WndPetItem: hiding bag because hideBagOnAction=true");
                         bag.hide();
                     }
                 }
