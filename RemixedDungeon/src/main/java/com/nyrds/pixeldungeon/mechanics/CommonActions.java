@@ -24,8 +24,6 @@ public class CommonActions {
     // Pet inventory actions
     public static final String AC_GIVE_TO_PET = "PetInventory_ACGiveToPet";
     public static final String AC_TAKE_FROM_PET = "PetInventory_ACTakeFromPet";
-    public static final String AC_EQUIP_ON_PET = "PetInventory_ACEquipOnPet";
-    public static final String AC_UNEQUIP_FROM_PET = "PetInventory_ACUnequipFromPet";
 
     public static boolean hideBagOnAction(String action) {
         if (AC_EQUIP.equals(action)) {
@@ -41,14 +39,6 @@ public class CommonActions {
         }
 
         if (AC_TAKE_FROM_PET.equals(action)) {
-            return false;
-        }
-
-        if (AC_EQUIP_ON_PET.equals(action)) {
-            return false;
-        }
-
-        if (AC_UNEQUIP_FROM_PET.equals(action)) {
             return false;
         }
 

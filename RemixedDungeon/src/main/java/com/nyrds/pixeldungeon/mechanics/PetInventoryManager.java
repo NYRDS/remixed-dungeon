@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mechanics;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -143,99 +142,11 @@ public class PetInventoryManager {
     }
 
     /**
-     * Equips an item on the pet.
+     * Opens the pet selection window if hero has multiple pets.
      */
     @LuaInterface
-    public static boolean equipItemOnPet(@NotNull Hero hero, @NotNull Mob pet, @NotNull EquipableItem item, @NotNull Belongings.Slot slot) {
-        if (!canAccessPetInventory(hero, pet)) {
-            GLog.w(StringsManager.getVar(R.string.PetInventory_TooFar));
-            return false;
-        }
-
-        if (!pet.getBelongings().backpack.contains(item)) {
-            return false;
-        }
-
-        // Check if pet has the required stats
-        if (!item.statsRequirementsSatisfied()) {
-            GLog.w(StringsManager.getVar(R.string.PetInventory_PetTooWeak), item.name());
-            return false;
-        }
-
-        // Try to equip
-        if (pet.getBelongings().equip(item, slot)) {
-            GLog.i(StringsManager.getVar(R.string.PetInventory_EquippedOnPet), item.name(), pet.getName());
-            pet.updateSprite();
-            // Refresh pet inventory UI if open
-            WndPetBag.refreshCurrent();
-            return true;
-        }
-
-        return false;
-    }
-
-    /**
-     * Unequips an item from the pet.
-     /** Unequips an item from the pet and puts it in pet's backpack (or drops on ground if full). */
-    @LuaInterface
-    public static boolean unequipItemFromPet(@NotNull Mob pet, @NotNull EquipableItem item) {
-        if (!pet.isAlive()) {
-            return false;
-        }
-
-        if (!pet.getBelongings().isEquipped(item)) {
-            return false;
-        }
-
-        if (item.isCursed()) {
-            GLog.w(StringsManager.getVar(R.string.PetInventory_CursedItem), item.name());
-            return false;
-        }
-
-        // Unequip the item (match hero behavior: collect=true drops on ground if full)
-        if (pet.getBelongings().unequip(item)) {
-            // Try to collect into pet's backpack
-            if (!item.collect(pet.getBelongings().backpack)) {
-                // If backpack full, drop on ground (matches hero behavior in doUnequip)
-                item.doDrop(pet);
-                GLog.i(StringsManager.getVar(R.string.PetInventory_UnequippedFromPet), item.name(), pet.getName());
-                pet.updateSprite();
-                // Refresh pet inventory UI if open
-                WndPetBag.refreshCurrent();
-                return true;
-            }
-
-            GLog.i(StringsManager.getVar(R.string.PetInventory_UnequippedFromPet), item.name(), pet.getName());
-            pet.updateSprite();
-            // Refresh pet inventory UI if open
-            WndPetBag.refreshCurrent();
-            return true;
-        }
-
-        return false;
-    }
-
-    /**
-     * Opens the pet inventory window for the given pet.
-     */
-    @LuaInterface
-    public static void openPetInventory(@NotNull Hero hero, @NotNull Mob pet) {
-        if (!canAccessPetInventory(hero, pet)) {
-            GLog.w(StringsManager.getVar(R.string.PetInventory_TooFar));
-            return;
-        }
-
-        GameScene.show(new WndPetBag(hero, pet));
-    }
-
-    /** Opens the pet inventory options window (Give/Take). */
-    @LuaInterface
-    public static void openPetInventoryOptions(@NotNull Hero hero, @NotNull Mob pet) {
-        if (!canAccessPetInventory(hero, pet)) {
-            GLog.w(StringsManager.getVar(R.string.PetInventory_TooFar));
-            return;
-        }
-        GameScene.show(new WndPetInventoryOptions(hero, pet));
+    public static void openPetSelect(@NotNull Hero hero) {
+        openPetSelect(hero, null);
     }
 
     /**
@@ -248,11 +159,15 @@ public class PetInventoryManager {
     }
 
     /**
-     * Opens the pet selection window if hero has multiple pets.
+     * Opens the pet inventory options window (Give/Take/ViewManage).
      */
     @LuaInterface
-    public static void openPetSelect(@NotNull Hero hero) {
-        openPetSelect(hero, null);
+    public static void openPetInventoryOptions(@NotNull Hero hero, @NotNull Mob pet) {
+        if (!canAccessPetInventory(hero, pet)) {
+            GLog.w(StringsManager.getVar(R.string.PetInventory_TooFar));
+            return;
+        }
+        GameScene.show(new WndPetInventoryOptions(hero, pet));
     }
 
     /**

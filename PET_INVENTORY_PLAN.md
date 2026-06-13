@@ -54,8 +54,8 @@
 ### 1. PetInventoryManager.java (New)
 Centralized logic for pet inventory operations:
 - Validation (distance, pet alive, item compatibility, ownership)
-- Transfer logic between hero ↔ pet backpacks
-- Equipment slot management for pets
+- Transfer logic between hero ↔ pet backpacks (`giveItemToPet`, `takeItemFromPet`)
+- ~~Equipment slot management for pets~~ **Removed** - use generic `Belongings.equip()` / `EquipableItem.doUnequip()` with pet as actor
 - Proper owner updates and sprite refresh
 - Lua/Modding support via `@LuaInterface` annotations
 
@@ -79,10 +79,11 @@ Pet selection UI when hero has multiple pets:
 Pet-specific item action window:
 - Shows item info with pet-specific actions based on context:
   - Item in hero's inventory → "Give to Pet"
-  - Item in pet's backpack → "Take from Pet", "Equip on Pet"
-  - Item equipped on pet → "Unequip from Pet"
+  - Item in pet's backpack → "Take from Pet", "Equip" (uses AC_EQUIP)
+  - Item equipped on pet → "Unequip" (uses AC_UNEQUIP)
 - Handles cursed items correctly (cannot unequip)
 - **Calls `bag.updateItems()` after equip/unequip to keep bag open**
+- Uses correct actor: Hero for GIVE, Pet for TAKE/EQUIP/UNEQUIP
 
 ### 5. WndPetInventoryOptions.java (New) - Shop-Style Interface
 Main options window (like `WndShopOptions`):
@@ -96,15 +97,14 @@ Listeners for bulk transfer (like `BuyItemSelector`/`SellItemSelector`):
 - Show `WndPetQuantity` for stackables
 - Auto-refresh both hero and pet bag windows
 
-### 7. New CommonActions
+### 7. CommonActions (Simplified - DRY)
 ```java
 MAC_PET_INVENTORY = "CharAction_PetInventory"
 AC_GIVE_TO_PET = "PetInventory_ACGiveToPet"
 AC_TAKE_FROM_PET = "PetInventory_ACTakeFromPet"
-AC_EQUIP_ON_PET = "PetInventory_ACEquipOnPet"
-AC_UNEQUIP_FROM_PET = "PetInventory_ACUnequipFromPet"
 ```
 Note: Uses `MAC_` prefix for macro actions (consistent with MAC_ORDER, MAC_EXPEL), `AC_` for item actions.
+**Removed**: `AC_EQUIP_ON_PET`, `AC_UNEQUIP_FROM_PET` - use generic `AC_EQUIP`, `AC_UNEQUIP` with pet as actor instead.
 
 ### 8. Item Actions Integration
 Modify `CharUtils.actions()` to include pet inventory action when:
@@ -138,6 +138,8 @@ Handle all pet action constants with proper type checks.
 | **Bulk transfer** | Per-item WndPetItem | **Shop-style**: WndPetInventoryOptions + selectors (GiveToPetSelector/TakeFromPetSelector) |
 | **Unequip behavior** | Cancels if backpack full | **Aligned with hero**: Drops on ground if backpack full |
 | **Bag refresh on action** | Closes bag | **Stays open**: updateItems() override refreshes equipped + backpack |
+| **Equip/Unequip actions** | Pet-specific `AC_EQUIP_ON_PET`, `AC_UNEQUIP_FROM_PET` | **Unified**: Use generic `AC_EQUIP`, `AC_UNEQUIP` with pet as actor (DRY) |
+| **PetInventoryManager equip/unequip** | Separate wrapper methods | **Removed**: Direct `item.doUnequip(pet, true)` / `belongings.equip(item, slot)` |
 
 ## Integration Points
 
@@ -166,9 +168,15 @@ case CommonActions.MAC_PET_INVENTORY:
 
 ### In Item.actions():
 Context-aware pet actions based on item location and actor type.
+- Item in hero's inventory → "Give to Pet" (if not equipped)
+- Item in pet's backpack → "Take from Pet", "Equip" (uses AC_EQUIP)
+- Item equipped on pet → "Unequip" (uses AC_UNEQUIP)
 
 ### In Item._execute():
-Full handling of all pet action constants with proper type checks.
+Handle pet actions with proper actor:
+- `AC_GIVE_TO_PET` → Hero actor
+- `AC_TAKE_FROM_PET` → Pet actor  
+- `AC_EQUIP` / `AC_UNEQUIP` → Actor is item owner (hero or pet) - no special cases needed
 
 ## UI Flow
 
@@ -204,8 +212,8 @@ Take from Pet:
 View/Manage:
     WndPetBag (full pet inventory with equipped items)
         → Equipped items in header (weapon, armor, rings)
-        → Tap equipped item → "Unequip from Pet"
-        → Tap backpack item → "Equip on Pet" / "Take from Pet"
+        → Tap equipped item → "Unequip" (AC_UNEQUIP, actor=pet)
+        → Tap backpack item → "Equip" (AC_EQUIP, actor=pet) / "Take from Pet"
         → Auto-refresh on any action (updateItems() override)
 ```
 
@@ -311,16 +319,16 @@ private void configureAvailableSlots() {
 
 | File | Type | Purpose |
 |------|------|---------|
-| `PetInventoryManager.java` | New | Core logic |
+| `PetInventoryManager.java` | New | Core logic (give/take only, equip/unequip removed) |
 | `WndPetBag.java` | New | Pet inventory UI (extends WndBag) |
 | `WndPetSelect.java` | New | Pet selection (if multiple) |
-| `WndPetItem.java` | New | Pet-specific item actions |
+| `WndPetItem.java` | New | Pet-specific item actions (uses generic AC_EQUIP/AC_UNEQUIP) |
 | `WndPetQuantity.java` | New | Quantity selector for stackables |
 | `WndPetInventoryOptions.java` | New | Shop-style menu (Give/Take/ViewManage) |
 | `GiveToPetSelector.java` | New | Listener for hero→pet transfers |
 | `TakeFromPetSelector.java` | New | Listener for pet→hero transfers |
 | `PetItemSlot.java` | New | Placeholder for equippability indicators |
-| `CommonActions.java` | Modify | Add action constants |
+| `CommonActions.java` | Modify | Add `AC_GIVE_TO_PET`, `AC_TAKE_FROM_PET` (removed pet equip/unequip) |
 | `CharUtils.java` | Modify | Add pet inventory action + execution |
 | `Item.java` | Modify | Pet-specific actions in actions() and _execute() |
 | `Char.java` | Modify | Added `getAvailableEquipmentSlots()` base method |

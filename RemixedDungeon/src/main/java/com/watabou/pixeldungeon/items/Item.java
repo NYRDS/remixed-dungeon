@@ -203,17 +203,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
                 Mob pet = (Mob) hero;
                 if (pet.isPet() && pet.getOwner() != null && pet.getOwner() instanceof Hero) {
                     actions.add(CommonActions.AC_TAKE_FROM_PET);
-                    if (this instanceof EquipableItem) {
-                        EquipableItem equipable = (EquipableItem) this;
-                        if (pet.getBelongings().isEquipped(this)) {
-                            actions.add(CommonActions.AC_UNEQUIP_FROM_PET);
-                        } else {
-                            Belongings.Slot slot = equipable.slot(pet.getBelongings());
-                            if (slot != Belongings.Slot.NONE && !pet.getBelongings().slotBlocked(slot)) {
-                                actions.add(CommonActions.AC_EQUIP_ON_PET);
-                            }
-                        }
-                    }
+                    // Equip/Unequip handled by EquipableItem.actions() using generic AC_EQUIP/AC_UNEQUIP
                 }
             }
         } else {
@@ -280,22 +270,6 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
                         PetInventoryManager.takeItemFromPet(
                             (Hero) pet.getOwner(), pet, this);
                     }
-                }
-                break;
-            case CommonActions.AC_EQUIP_ON_PET:
-                if (chr instanceof Mob && this instanceof EquipableItem) {
-                    Mob pet = (Mob) chr;
-                    if (pet.getOwner() instanceof Hero) {
-                        EquipableItem equipable = (EquipableItem) this;
-                        Belongings.Slot slot = equipable.slot(pet.getBelongings());
-                        PetInventoryManager.equipItemOnPet((Hero) pet.getOwner(), pet, equipable, slot);
-                    }
-                }
-                break;
-            case CommonActions.AC_UNEQUIP_FROM_PET:
-                if (chr instanceof Mob && this instanceof EquipableItem) {
-                    Mob pet = (Mob) chr;
-                    PetInventoryManager.unequipItemFromPet(pet, (EquipableItem) this);
                 }
                 break;
         }

@@ -93,8 +93,8 @@ public class WndPetItem extends Window {
         if (itemInPetInventory) {
             // Item is in pet's inventory - can take, equip, or unequip
             if (pet.getBelongings().isEquipped(item)) {
-                // Item is equipped on pet - can unequip
-                addActionButton(CommonActions.AC_UNEQUIP_FROM_PET, StringsManager.maybeId(CommonActions.AC_UNEQUIP_FROM_PET));
+                // Item is equipped on pet - can unequip (uses generic AC_UNEQUIP)
+                addActionButton(CommonActions.AC_UNEQUIP, StringsManager.maybeId(CommonActions.AC_UNEQUIP));
             } else {
                 // Item is in pet's backpack - can take or equip
                 addActionButton(CommonActions.AC_TAKE_FROM_PET, StringsManager.maybeId(CommonActions.AC_TAKE_FROM_PET));
@@ -103,7 +103,7 @@ public class WndPetItem extends Window {
                     EquipableItem equipable = (EquipableItem) item;
                     Belongings.Slot slot = equipable.slot(pet.getBelongings());
                     if (slot != Belongings.Slot.NONE && !pet.getBelongings().slotBlocked(slot)) {
-                        addActionButton(CommonActions.AC_EQUIP_ON_PET, StringsManager.maybeId(CommonActions.AC_EQUIP_ON_PET));
+                        addActionButton(CommonActions.AC_EQUIP, StringsManager.maybeId(CommonActions.AC_EQUIP));
                     }
                 }
             }
@@ -120,8 +120,18 @@ public class WndPetItem extends Window {
             @Override
             protected void onClick() {
                 com.watabou.pixeldungeon.utils.GLog.w("WndPetItem.onClick action=" + actionId + " bag=" + bag + " bag.getActiveDialog()=" + bag.getActiveDialog());
+                
+                // Determine correct actor: Hero for GIVE, Pet for TAKE/EQUIP/UNEQUIP
+                Char actor;
+                if (actionId.equals(CommonActions.AC_GIVE_TO_PET)) {
+                    actor = hero;
+                } else {
+                    // TAKE_FROM_PET, EQUIP_ON_PET, UNEQUIP_FROM_PET - pet performs the action
+                    actor = pet;
+                }
+                
                 CharAction acton = new UseItem(item, actionId);
-                acton.act(hero);
+                acton.act(actor);
 
                 hide();
 
