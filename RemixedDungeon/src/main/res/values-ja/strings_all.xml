@@ -978,7 +978,7 @@
     <string name="HeroClass_PlagueDoctorPerks_0">ペストドクターは倒した敵から毒腺、腐った臓器、骨片、下劣なエッセンスを採取する。血液は時間をかけて集められ、錬金術を行うために使用される。</string>
     <string name="HeroClass_PlagueDoctorPerks_1">ペストマスク（すべてのガスに免疫）と解剖のこぎりを持ってスタートする。クリティカル・ヒットは追加パーツを落とし、解剖のこぎりは麻痺状態の敵に+50%のダメージを与える。</string>
     <string name="HeroClass_PlagueDoctorPerks_2">麻痺ガスポーションと毒ガスのポーションは最初から特定されている。</string>
-    <string name="HeroClass_PlagueDoctorPerks_3">毒ガスで倒された敵は毒霧となって爆発し、倒された敵1体につき1HP回復する。</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">[yellow:麻痺ガス]と[yellow:毒ガス]のポーションは事前に特定されています。</string>
     <string name="HeroClass_PlagueDoctorPerks_4">ペストドクターは、愛用の解剖のこぎりを手にしていないと命中精度に大きなペナルティを受ける。また、射撃武器を使うことができない。</string>
     <string name="HeroClass_Priest">聖職者</string>
     <string name="HeroClass_Rog">ローグ</string>
@@ -2228,6 +2228,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="TitleScene_InternalStorageLow">内部ストレージにスペースが足りません。進行状況が失われる可能性があります！</string>
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Play</string>
+    <string name="TitleScene_PlayOnPC">PCでプレイ</string>
     <string name="TomeOfKnowledge_Info">この古代の書物には難解な謎とミステリーが詰まっている！読むのは難しいかもしれないが、読みこなせば魔法の力がアップすること間違いなし。</string>
     <string name="TomeOfKnowledge_Name">知識の書</string>
     <string name="TomeOfMastery_ACRead">読む</string>
@@ -3062,6 +3063,8 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
 
 
 

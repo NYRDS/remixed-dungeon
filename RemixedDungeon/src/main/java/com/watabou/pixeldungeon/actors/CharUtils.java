@@ -12,6 +12,7 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Ascend;
@@ -334,6 +335,14 @@ public class CharUtils {
             case CommonActions.MAC_EXPEL:
                 hero.nextAction(new Expel(target));
                 return;
+            case CommonActions.MAC_PET_INVENTORY:
+                if (target instanceof Mob && hero instanceof Hero) {
+                    Mob pet = (Mob) target;
+                    if (pet.getOwnerId() == hero.getId()) {
+                        PetInventoryManager.openPetInventoryOptions((Hero) hero, pet);
+                    }
+                }
+                return;
         }
 
         target.getScript().run("executeAction", target, action);
@@ -365,6 +374,7 @@ public class CharUtils {
         if (target.getOwnerId() == hero.getId()) {
             actions.add(CommonActions.MAC_ORDER);
             actions.add(CommonActions.MAC_EXPEL);
+            actions.add(CommonActions.MAC_PET_INVENTORY);
         }
 
         actions.removeAll(hero.getHeroClass().getForbiddenActions());

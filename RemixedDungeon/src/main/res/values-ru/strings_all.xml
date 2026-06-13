@@ -2238,6 +2238,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="TitleScene_InternalStorageLow">Недостаточно места во\n внутреннем хранилище\n Игра может не сохранится!</string>
     <string name="TitleScene_Mods">Моды</string>
     <string name="TitleScene_Play">Играть</string>
+    <string name="TitleScene_PlayOnPC">Играть на ПК</string>
     <string name="TomeOfKnowledge_Info">Этот древний том наполнен тайными знаниями и загадками! Может это и не самое простое чтиво, но если ты его осилишь, оно обязательно повысит твои магические способности.</string>
     <string name="TomeOfKnowledge_Name">Том Знаний</string>
     <string name="TomeOfMastery_ACRead">ЧИТАТЬ</string>
@@ -3075,11 +3076,22 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
 
-
-
-
-
-
-
-
+    <!-- Pet Inventory -->
+    <string name="CharAction_PetInventory">инвентарь питомца</string>
+    <string name="PetInventory_Title">Инвентарь питомца</string>
+    <string name="PetInventory_GiveToPet">Отдать питомцу</string>
+    <string name="PetInventory_TakeFromPet">Забрать у питомца</string>
+    <string name="PetInventory_ViewManage">Управление</string>
+    <string name="PetInventory_GaveItem">Отдал %1$s питомцу %2$s</string>
+    <string name="PetInventory_TookItem">Забрал %1$s у %2$s</string>
+    <string name="PetInventory_CantGiveEquipped">Нельзя отдать экипированный предмет</string>
+    <string name="PetInventory_PetBackpackFull">Рюкзак питомца полон</string>
+    <string name="PetInventory_HeroBackpackFull">Ваш рюкзак полон</string>
+    <string name="PetInventory_TooFar">Слишком далеко от питомца</string>
+    <string name="WndPetSelect_Title">Выберите питомца</string>
+    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
+    <string name="PetInventory_ACGiveToPet">ОТДАТЬ ПИТОМЦУ</string>
+    <string name="PetInventory_ACTakeFromPet">ЗАБРАТЬ У ПИТОМЦА</string>
+    <string name="PetInventory_TakeN">Забрать %d</string>
+    <string name="PetInventory_GiveN">Отдать %d</string>
 </resources>

@@ -39,7 +39,8 @@ class SpriteViewer {
         this.weaponList = ['none', 'shortsword', 'longsword', 'dagger', 'mace', 'hammer', 
                            'sword', 'wand', 'boomerang', 'bow', 'crossbow', 'spear', 
                            'glaive', 'battleaxe', 'claymore', 'quarterstaff', 'knuckles',
-                           'bonesaw', 'tomahawk', 'halberd', 'kusarigama', 'pickaxe'];
+                           'bonesaw', 'tomahawk', 'halberd', 'kusarigama', 'pickaxe',
+                           'woodenshield', 'toughshield', 'strongshield', 'royalshield', 'chaosshield'];
         this.accessoryList = ['none', 'plaguedoctormask', 'wizardhat', 'nightcap', 'ushanka',
                               'santahat', 'pumpkin', 'fez', 'shades', 'fullfacemask',
                               'pirateset', 'dogemask', 'nekoears', 'rabbitears', 'rudolph',
@@ -356,6 +357,85 @@ class SpriteViewer {
             this.heroLayers = [];
             this.heroTextures = {};
             
+            // Helper to convert to PascalCase with Armor suffix for armor names (matching Java getVisualName())
+            const getArmorVisualName = (armorName) => {
+                if (armorName === 'none') return 'none';
+                const armorMap = {
+                    'cloth': 'ClothArmor',
+                    'leather': 'LeatherArmor',
+                    'mail': 'MailArmor',
+                    'scale': 'ScaleArmor',
+                    'plate': 'PlateArmor',
+                    'gothic': 'GothicArmor',
+                    'rogue': 'RogueArmor',
+                    'warrior': 'WarriorArmor',
+                    'mage': 'MageArmor',
+                    'huntress': 'HuntressArmor',
+                    'scout': 'ScoutArmor',
+                    'shaman': 'ShamanArmor',
+                    'gladiator': 'GladiatorArmor',
+                    'berserk': 'BerserkArmor',
+                    'warlock': 'WarlockArmor',
+                    'battlemage': 'BattleMageArmor',
+                    'assasin': 'AssasinArmor',
+                    'freerunner': 'FreeRunnerArmor',
+                    'sniper': 'SniperArmor',
+                    'warden': 'WardenArmor',
+                    'necromancer': 'NecromancerArmor',
+                    'gnoll': 'GnollArmor',
+                    'spider': 'SpiderArmor',
+                    'rat': 'RatArmor',
+                    'chaos': 'ChaosArmor',
+                    'elf': 'ElfArmor',
+                    'necromancerrobe': 'NecromancerRobe',
+                    'priest': 'PriestArmor',
+                    'paladin': 'PaladinArmor',
+                    'cleric': 'ClericArmor',
+                    'witchdoctor': 'WitchdoctorArmor',
+                    'alchemist': 'AlchemistArmor',
+                    'transmuter': 'TransmuterArmor',
+                    'plaguedoctor': 'PlagueDoctorArmor'
+                };
+                return armorMap[armorName.toLowerCase()] || armorName;
+            };
+
+            // Helper to convert weapon names to PascalCase visual names (matching Java getVisualName())
+            const getWeaponVisualName = (weaponName) => {
+                if (weaponName === 'none') return 'none';
+                const weaponMap = {
+                    'shortsword': 'ShortSword',
+                    'longsword': 'Longsword',
+                    'dagger': 'Dagger',
+                    'mace': 'Mace',
+                    'hammer': 'Hammer',
+                    'sword': 'GoldenSword',
+                    'wand': 'Wand',
+                    'boomerang': 'Boomerang',
+                    'bow': 'CompoundBow',
+                    'crossbow': 'CompositeCrossbow',
+                    'spear': 'Spear',
+                    'glaive': 'Glaive',
+                    'battleaxe': 'BattleAxe',
+                    'claymore': 'Claymore',
+                    'quarterstaff': 'Quarterstaff',
+                    'knuckles': 'Knuckles',
+                    'bonesaw': 'BoneSaw',
+                    'tomahawk': 'GnollTamahawk',
+                    'halberd': 'Halberd',
+                    'kusarigama': 'Kusarigama',
+                    'pickaxe': 'Pickaxe',
+                    'royalshield': 'RoyalShield',
+                    'chaosshield': 'ChaosShield',
+                    'chaossword': 'ChaosSword',
+                    'chaosbow': 'ChaosBow',
+                    'chaosstaff': 'ChaosStaff',
+                    'woodenshield': 'WoodenShield',
+                    'toughshield': 'ToughShield',
+                    'strongshield': 'StrongShield'
+                };
+                return weaponMap[weaponName.toLowerCase()] || this.capitalizeFirst(weaponName);
+            };
+            
             // Body
             const bodyFile = `${basePath}body/${bodyType}.png`;
             await this.loadHeroLayer('body', bodyFile);
@@ -370,35 +450,48 @@ class SpriteViewer {
             
             // Armor
             if (armor !== 'none') {
-                const armorFile = `${basePath}armor/${armor}.png`;
+                const armorVisualName = getArmorVisualName(armor);
+                const armorFile = `${basePath}armor/${armorVisualName}.png`;
                 await this.loadHeroLayer('armor', armorFile);
                 
                 // Armor boots
-                const armorBootsFile = `${basePath}armor/boots/${armor}_${bodyType}.png`;
+                const armorBootsFile = `${basePath}armor/boots/${armorVisualName}_${bodyType}.png`;
                 await this.loadHeroLayer('armor_boots', armorBootsFile);
                 
                 // Helmet
-                const helmetFile = `${basePath}armor/helmet/${armor}.png`;
+                const helmetFile = `${basePath}armor/helmet/${armorVisualName}.png`;
                 await this.loadHeroLayer('helmet', helmetFile);
                 
                 // Collar
-                const collarFile = `${basePath}armor/collar/${armor}.png`;
+                const collarFile = `${basePath}armor/collar/${armorVisualName}.png`;
                 await this.loadHeroLayer('collar', collarFile);
             }
             
-            // Hands
-            const animClass = weapon !== 'none' ? weapon : 'none';
+            // Hands (using lowercase weapon animation class as per Java)
+            const animClass = weapon !== 'none' ? weapon.toLowerCase() : 'none';
             const leftHandFile = `${basePath}body/hands/${bodyType}_${animClass}_left.png`;
             const rightHandFile = `${basePath}body/hands/${bodyType}_${animClass}_right.png`;
             await this.loadHeroLayer('left_hand', leftHandFile);
             await this.loadHeroLayer('right_hand', rightHandFile);
             
-            // Weapon item
+            // Weapon item (using PascalCase visual names as per Java getVisualName())
             if (weapon !== 'none') {
-                const weaponFileRight = `${basePath}items/${weapon}_right.png`;
-                const weaponFileLeft = `${basePath}items/${weapon}_left.png`;
-                await this.loadHeroLayer('right_hand_item', weaponFileRight);
-                await this.loadHeroLayer('left_hand_item', weaponFileLeft);
+                const weaponVisualName = getWeaponVisualName(weapon);
+                
+                // Check if this is a shield (left-hand only item)
+                const isShield = weapon.toLowerCase().includes('shield');
+                
+                if (isShield) {
+                    // Shields only render in left hand
+                    const weaponLeftFile = `${basePath}items/${weaponVisualName}_left.png`;
+                    await this.loadHeroLayer('left_hand_item', weaponLeftFile);
+                } else {
+                    // Regular weapons - try both hands
+                    const weaponFileRight = `${basePath}items/${weaponVisualName}_right.png`;
+                    const weaponFileLeft = `${basePath}items/${weaponVisualName}_left.png`;
+                    await this.loadHeroLayer('right_hand_item', weaponFileRight);
+                    await this.loadHeroLayer('left_hand_item', weaponFileLeft);
+                }
             }
             
             // Accessory
@@ -468,6 +561,11 @@ class SpriteViewer {
         if (heroClass === 'GNOLL') return 'gnoll';
         
         return style === 'modern' ? 'man' : 'man';
+    }
+    
+    capitalizeFirst(str) {
+        if (!str) return str;
+        return str.charAt(0).toUpperCase() + str.slice(1);
     }
     
     updateHeroInfoPanel() {

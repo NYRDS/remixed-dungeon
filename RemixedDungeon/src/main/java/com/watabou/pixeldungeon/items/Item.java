@@ -36,10 +36,14 @@ import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.hero.Backpack;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
@@ -186,6 +190,22 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
             if (hasRecipesWithItem) {
                 actions.add(AC_ALCHEMY);
             }
+
+            // Pet inventory actions
+            if (hero instanceof Hero) {
+                Hero h = (Hero) hero;
+                if (PetInventoryManager.hasPets(h)) {
+                    if (!isEquipped(h)) {
+                        actions.add(CommonActions.AC_GIVE_TO_PET);
+                    }
+                }
+            } else if (hero instanceof Mob) {
+                Mob pet = (Mob) hero;
+                if (pet.isPet() && pet.getOwner() != null && pet.getOwner() instanceof Hero) {
+                    actions.add(CommonActions.AC_TAKE_FROM_PET);
+                    // Equip/Unequip handled by EquipableItem.actions() using generic AC_EQUIP/AC_UNEQUIP
+                }
+            }
         } else {
             actions.add(AC_PICK_UP);
         }
@@ -237,6 +257,20 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
                 break;
             case AC_ALCHEMY:
                 GameScene.show(new WndItemAlchemy(this, chr));
+                break;
+            case CommonActions.AC_GIVE_TO_PET:
+                if (chr instanceof Hero) {
+                    PetInventoryManager.openPetSelect((Hero) chr, this);
+                }
+                break;
+            case CommonActions.AC_TAKE_FROM_PET:
+                if (chr instanceof Mob) {
+                    Mob pet = (Mob) chr;
+                    if (pet.getOwner() instanceof Hero) {
+                        PetInventoryManager.takeItemFromPet(
+                            (Hero) pet.getOwner(), pet, this);
+                    }
+                }
                 break;
         }
     }

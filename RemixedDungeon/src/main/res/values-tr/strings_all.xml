@@ -1237,7 +1237,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Level_TileDescAlchemy">İksir yapmak için buraya birkaç tohum bırak.</string>
     <string name="Level_TileDescBarricade">Ahşap barikat sıkı bir şekilde yerleştirilmiş ancak yıllar boyunca kurumuş. Yanabilir mi?</string>
     <string name="Level_TileDescChasm">Aşağıyı göremezsin.</string>
-    <string name="Level_TileDescEmbers">Kapıyı közler kaplamış.</string>
+    <string name="Level_TileDescEmbers">Közler zemini kaplamış.</string>
     <string name="Level_TileDescEmptyWell">Bu kuyu kurumaya yüz tutmuş.</string>
     <string name="Level_TileDescEntrance">Merdivenler bir üst derinliğe inmenizi sağlar.</string>
     <string name="Level_TileDescExit">Merdivenler bir alt derinliğe geçmenizi sağlar.</string>
@@ -1522,7 +1522,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="PirateSet_Name">Korsan Seti</string>
     <string name="PlagueDoctorMaskHood_Info">Oyma abanoz kafatası, boş göz yuvaları ametist taşların dünyevi olmayan parıltısıyla parlıyor. Çektiğiniz her nefes, borular ve filtrelerden oluşan bir labirentten fısıldayarak geçer, üzerinize yapışan çürümeyi maskeleyen güçlü otlar ve baharatların kokusunu taşır. Ama bu sadece bir maske değil. Gece yarısı kadifesinden ağır bir başlık, yüzünüzü ve başınızı gölgelere bürür. Kapüşon, bir kuzgunun kanadı gibi sırtınızdan aşağı akar, kenarları kemik-beyazı dantelden bir saçakla süslenmiştir, ürpertici derecede güzel bir tezat. Birlikte, maske ve kapüşon, hayaletimsi bir çehre yaratır, çürüme güçlerine karşı bitmeyen savaşın kasvetli bir tanığı.</string>
     <string name="PlagueDoctorMaskHood_Name">Maske ve hood ile veba doktoru</string>
-    <string name="PlagueDoctorMask_Info">This… this is no mere mask. It\'s… a barrier. A shield against the forces of decay that Plague Doctor tirelessly battle against. Crafted from the finest ebony wood, intricately carved with the visage of a ravenous skull. Its hollow eye sockets are filled with glittering, amethyst gemstones that pulse faintly, like the dying embers of a fire. Each breath you take, each utterance you make, is filtered through a labyrinthine network of tubes and filters. A concoction of potent herbs and exotic spices infuses the air within, masking the stench of death that clings to you like a shroud.</string>
+    <string name="PlagueDoctorMask_Info">Bu… bu sadece bir maske değil. Bu… bir bariyer. Veba Doktoru\'nun durmadan mücadele ettiği çürüme güçlerine karşı bir kalkan. En ince çam ağacından yapılmış, açgözlü bir kraniumun yüzüyle özenle oyulmuş. Boş göz yuvaları, söndürülmekte olan bir ateşin kömürleri gibi zayıfla titreyen, parlak ametist değerli taşlarla doludur. Aldığınız her nefes, yaptığınız her söz, borular ve filtrelerin bir labirenti üzerinden süzülür. Güçlü otlar ve egzotik baharatların bir karışımı içindeki havayı kapsar, sizle kefen gibi yapışan ölüm kokusunu maskeleyerek.</string>
     <string name="PlagueDoctorMask_Name">Veba Doktoru maskesi</string>
     <string name="PlagueDoctorNPC_After_Quest">onlara göstereceğim !! onların hepsine göstereceğim !!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Sen hala burada mısın? İşte, al bunu.</string>
@@ -2163,7 +2163,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="Statue_Name_Objective">canlı heykel</string>
     <string name="Stench_Txt">Kokuşmuş %s</string>
     <string name="StoneBloodBuff_Info">Kan, yakındaki duvarlarla birleşen ve onları geçmeyi çok daha kolay hale getiren taşa dönüşür, ama ne pahasına olursa olsun.</string>
-    <string name="StoneBloodBuff_Name">Delikanlı</string>
+    <string name="StoneBloodBuff_Name">Taş Kemiği</string>
     <string name="Str_lose">-1 güç</string>
     <string name="StrongShield_desc">Bu dikdörtgen kalkan bronz levhalarla kaplanmıştır ve renkli kumaşlarla süslenmiştir. Önemli ölçüde daha ağırdır, ancak gelen hasarı çok daha fazla engelleyebilir.</string>
     <string name="StrongShield_name">Tunç Kaplamalı Kalkan</string>
@@ -2230,6 +2230,7 @@ Görüşlerinizi önemsiyoruz!</string>
     <string name="TitleScene_InternalStorageLow">Dahili depolamada\n yeterli yer yok\n İlerlemen kaybolabilir!</string>
     <string name="TitleScene_Mods">Modlar</string>
     <string name="TitleScene_Play">Oyna</string>
+    <string name="TitleScene_PlayOnPC">PC\'de Oyna</string>
     <string name="TomeOfKnowledge_Info">Bu kadim kitap gizemli bilmeceler ve sırlarla dolu! Okuması zor olabilir, ama eğer üstesinden gelirseniz, kesinlikle büyülü güçlerinizi artıracaksınız.</string>
     <string name="TomeOfKnowledge_Name">Bilgi Külliyatı</string>
     <string name="TomeOfMastery_ACRead">OKU</string>
@@ -3052,6 +3053,12 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
+
+
+
 
 
 

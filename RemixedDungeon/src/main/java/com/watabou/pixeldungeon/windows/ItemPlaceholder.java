@@ -5,7 +5,7 @@ import com.watabou.pixeldungeon.items.PseudoItem;
 
 import org.jetbrains.annotations.NotNull;
 
-class ItemPlaceholder extends PseudoItem {
+public class ItemPlaceholder extends PseudoItem {
 
     public static final int RIGHT_HAND = 0;
     public static final int BODY = 1;

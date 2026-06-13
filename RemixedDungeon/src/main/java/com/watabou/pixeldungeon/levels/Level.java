@@ -1340,6 +1340,16 @@ public abstract class Level implements Bundlable {
 		return objectsLayer.values().remove(levelObject);
 	}
 
+	public boolean isCellAreFlags(int x, int y, int terrainFlags) {
+		int cell = cell(x,y);
+		return isCellAreFlags(cell, terrainFlags);
+	}
+	public boolean isCellAreFlags(int cell, int terrainFlags) {
+		if(!cellValid(cell)) {
+			return false;
+		}
+		return TerrainFlags.is(map[cell],terrainFlags);
+	}
 	public boolean isCellSafeForPrize(int cell) {
 		if(!TerrainFlags.is(map[cell],TerrainFlags.PASSABLE )) {
 			return false;

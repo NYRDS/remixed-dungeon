@@ -14,6 +14,7 @@
     <string name="AboutScene_OurSite">Наша веб-сторінка:</string>
     <string name="AboutScene_Snd">Відправити E-Mail</string>
     <string name="AboutScene_Sound">Звуки:</string>
+    <string name="AboutScene_SourceCode">Отримати вихідний код Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Спеціальна подяка:</string>
     <string name="AboutScene_Translation">Переклад:</string>
     <string name="AboutScene_Translation_Names">Ukrainian transifex team\n
@@ -208,6 +209,7 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">божевільний злочинець</string>
     <string name="Bandit_Name_Objective">божевільного злочинця</string>
+    <string name="BardNPC_Desc">Міський бард грає на лютні.</string>
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">Бард</string>
     <string name="BardNPC_Name_Objective">бард</string>
@@ -317,6 +319,7 @@
     <string name="BodyArmorBuff_Name">Міць тіла</string>
     <string name="BodyArmorSpell_Info">Активує резерви м\'язів, тимчасово збільшуючи їх силу значно підвищуючи захист, але ціною швидкості пересування.</string>
     <string name="BodyArmorSpell_Name">Міць тіла</string>
+    <string name="BoneSaw_Info">Точно-проєктована хірургічна пила для швидкого вскривання. Її урон та швидкість атаки стають смердєнішими з навичками Чумного лікаря. Критичні влучення висікають додаткові частини для збирання з ворогів, і вона вдаряє безжально ефективно проти паралізованих противників.</string>
     <string name="BoneSaw_Name">Костяна пила</string>
     <string name="BoneShard_Info">Гострий шматочок кістки, добутого з переможеного ворога. Ці шматочки дивовижно міцні та корисні для створення.</string>
     <string name="BoneShard_Name">Уламок кістки</string>
@@ -383,6 +386,7 @@
     <string name="Caves_TileHighGrass">Люмінесцентні гриби</string>
     <string name="Caves_TileWater">Крижана вода.</string>
     <string name="Challenges_Descriptions_0">Їжа і вода давно зіпсувалися, зводячи з розуму всіх шукачів пригод думками про смерть від страху і голоду. Чи допоможе ваша дієта протриматися достатньо довго?</string>
+    <string name="Challenges_Descriptions_1">Найкращий захист — це напад. Йдучи за цими вченнями, ти вирушаєш у підземелля, де віра стає найсильнішим захисником твого тіла.</string>
     <string name="Challenges_Descriptions_2">Як послідовник природного відновлення обычного тіла, ви завжди були обережні з настоянками, які мають лікувальні властивості. Краще побезпечніше, ніж шкода!</string>
     <string name="Challenges_Descriptions_3">Землі навколо підземелля давно уражені скверною, що перешкоджає росту насіння різних трав і рослин. Хто знає, скільки часу мине, перш ніж остання рослина припинить своє існування на цих безплідних землях.</string>
     <string name="Challenges_Descriptions_4">Зловісна присутність таїться в розумах усіх істот у підземеллі, змушуючи їх усвідомлювати події, що відбуваються одна з одною.</string>
@@ -595,6 +599,7 @@
     <string name="CorpseDust_Name">трупна пилюка</string>
     <string name="CorpseExplosion_Info">Перетворює труп на хмару отруйного газу, поширюючи хворобу та отруту на всіх найближчих ворогів.</string>
     <string name="CorpseExplosion_Name">Трупний вибух</string>
+    <string name="CorpseExplosion_NoCorpse">Там немає трупа.</string>
     <string name="Crab_Defense">відбився</string>
     <string name="Crab_Desc">Ці великі краби розташувалися на верхівці харчової ланки в каналізації. Вони надзвичайно швидкі, а їхній хітин здатний витримати велику кількість ударів.</string>
     <string name="Crab_Gender">masculine</string>
@@ -675,6 +680,7 @@
     <string name="DoctorArmor_Info">Ця броня чумного доктора дозволяє використовувати здібність «Хмара миазми», яка випускає отруйний газ, що отруює, послаблює та дезорієнтує ворогів. Доктор, захищений своєю маскою, несприйнятливий до цих ефектів.</string>
     <string name="DoctorArmor_Name">Одяг лікаря</string>
     <string name="DoctorArmor_NotDoctor">Тільки лікарі чуми можуть використовувати цю обладунку!</string>
+    <string name="DoctorSpecial">Хмара міазми</string>
     <string name="DogeMask_Info">Ви коли-небудь хотіли замаскуватися під знаменитого Doge? Тепер це ваш шанс!\nТака маска! Багато маскування! Оце Так!</string>
     <string name="DogeMask_Name">Маска Doge</string>
     <string name="DonateButton_pleaseDonate">будь ласка, підтримайте проект</string>
@@ -694,6 +700,7 @@
     <string name="DriedRose_Name">посохла роза</string>
     <string name="Drink_ACDrink">ВИПИТИ</string>
     <string name="Drink_Message">Цей напій так освіжає!</string>
+    <string name="DrunkardNPC_Desc">Постійний клієнт трактиру в своєму звичайному стані.</string>
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">п\'яниця</string>
     <string name="DrunkardNPC_Name_Objective">п\'янцю</string>
@@ -752,6 +759,7 @@
     <string name="EncumbranceBuff_CharAct_2">Цей %s занадто важкий для мене, щоб ефективно його використовувати.</string>
     <string name="EncumbranceBuff_CharAct_3">Я маю працювати над силою, перш ніж зможу використовувати %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Мені бракує сили, щоб використовувати %s на повну.</string>
+    <string name="EncumbranceBuff_CharAct_5">Предмет %s зараз занадто важкий для мене.</string>
     <string name="EncumbranceBuff_Info">Недостатньо сили, щоб ефективно використовувати %s.</string>
     <string name="EncumbranceBuff_Name">Тягар</string>
     <string name="EnslavedSoul_Desc">Це примарне створіння практично прозоре. Хоча воно і виглядає як череп, лиш на мить з\'являється обличчя, обличчя сповнене болі та муки.</string>
@@ -952,6 +960,7 @@
     <string name="Hedgehog_Info3">А ти полюбляєш чай з малиновим варенням?</string>
     <string name="Hedgehog_Info4">Візьми цей пиріжок</string>
     <string name="Hedgehog_Name">їжак</string>
+    <string name="HeroClass_Doctor">Чумний Доктор</string>
     <string name="HeroClass_Elf">ельф</string>
     <string name="HeroClass_ElfPerks_0">Ельфи починаються з 15 пунктами здоров\'я та 9 пунктами сили.</string>
     <string name="HeroClass_ElfPerks_1">Ельфи мають імунітет проти сплутування коріннями.</string>
@@ -985,7 +994,6 @@
     <string name="HeroClass_NecromancerPerks_3">Некроманти мають на початку ключ-череп від рівня 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Зілля лікування ідентифіковані з самого початку.</string>
     <string name="HeroClass_None">землянин</string>
-    <string name="HeroClass_Doctor">Чумний Доктор</string>
     <string name="HeroClass_PlagueDoctorPerks_0">Чумні доктори збирають [yellow:Токсичні залози], [yellow:Гнилі органи], [yellow:Уламки кісток] з переможених ворогів.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Чумні доктори — майстри алхімії та можуть використовувати унікальні рецепти.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Починають з [yellow:Маски чумного доктора] (імунітет до всіх газів) та [yellow:Кісткової пили]. Критичні удари вибивають додаткові частини, а Пила завдає x1.5 шкоди паралізованим ворогам.</string>
@@ -1064,6 +1072,7 @@
     <string name="Horror_Name_0">Жахливе %s</string>
     <string name="Horror_Name_1">Жахливий %s</string>
     <string name="Horror_Name_2">Жахлива %s</string>
+    <string name="HungerBuff_Info1">Ти голодний!</string>
     <string name="HungerBuff_Info2">Ви голодуєте! Вам потрібно їсти!</string>
     <string name="HungerBuff_Name1">Голодний</string>
     <string name="HungerBuff_Name2">Виснажений</string>
@@ -1334,6 +1343,7 @@
     <string name="MageArmor_Name">роба мага</string>
     <string name="MageArmor_NotMage">Тільки маги можуть використовувати цю броню!</string>
     <string name="MagicArrow_Info">Добра стара магічна стріла, правильний вибір, коли закінчиться боєкомплект.</string>
+    <string name="MagicArrow_Name">Магічна стріла</string>
     <string name="MagicTorch_Info">Закляття генерує світло, яке розганяє темряву підземелля.</string>
     <string name="MagicTorch_Name">Магічний факел</string>
     <string name="MailArmor_Desc">Переплетені металеві ланки роблять міцний, але гнучкий обладунок.</string>
@@ -1443,6 +1453,7 @@
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">дворф-монах</string>
     <string name="Monk_Name_Objective">дворфа-монаха</string>
+    <string name="MoongraceBuff_Info">Повітря навколо стає більш насиченим, що дозволяє краще концентруватися та відновлювати магічні запаси.</string>
     <string name="MoongraceBuff_Name">Небесна манна</string>
     <string name="Moongrace_Desc">Ці рослини ростуть невеликими кількостями і є джерелом природної магії.</string>
     <string name="Moongrace_Name">Мунгрейс</string>
@@ -2073,6 +2084,7 @@
     <string name="Snail_Desc">Цей малий молюск значно виросла, харчуючись стічними водами, але вона все ще дуже повільна, що робить її легкою здобиччю.</string>
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">слимак</string>
+    <string name="Snail_Name_Objective">слімака</string>
     <string name="SnipersMarkBuff_Info">Цю мітку залишив снайпер.</string>
     <string name="SnipersMarkBuff_Name">Марка снайпера</string>
     <string name="SociologistNPC_AlreadyTaken">Ти вже брав участь у опитуванні, приходь пізніше</string>
@@ -2254,6 +2266,7 @@
     <string name="TitleScene_InternalStorageLow">Недостатньо місця\n у внутрішній пам\'яті пристрою\n Твоя гра може не зберегтись!</string>
     <string name="TitleScene_Mods">Модифікації</string>
     <string name="TitleScene_Play">Грати</string>
+    <string name="TitleScene_PlayOnPC">Грати на ПК</string>
     <string name="TomeOfKnowledge_Info">Цей древній том сповнений потаємним знанням та загадками! Може це й не найпростіше чтиво, але здолавши його, воно обов\'язково підвищить твій магічний рівень.</string>
     <string name="TomeOfKnowledge_Name">Том Знання</string>
     <string name="TomeOfMastery_ACRead">ЧИТАТИ</string>
@@ -2285,6 +2298,7 @@
     <string name="TownShopkeeper_Objective">крамар</string>
     <string name="TownsfolkMovieNPC_Desc">Один із місцевих. Попри те, що це явно простолюдин, його одяг виглядає досить коштовно</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
+    <string name="TownsfolkMovieNPC_Message">Ви знаєте про ту спеціальну послугу, яку надає «кінотеатр»? Шкода, що вони просять якусь екзотичну річ під назвою \&quot;Інтернет\&quot;, я ніколи навіть не чув про таку річ.</string>
     <string name="TownsfolkMovieNPC_Name">городянин</string>
     <string name="TownsfolkMovieNPC_Name_Objective">городянина</string>
     <string name="TownsfolkNPC_Desc">Один з місцевих городян. Не дивлячись не те, що це звичайний простолюдин, одежа на ньому не з дешевих.</string>
@@ -2436,6 +2450,7 @@
     <string name="WaterOfHealth_Info">Вода цього колодязя випромінює силу здоров\'я. Зроби ковток, аби залікувати свої рани та вгамувати голод.</string>
     <string name="WaterOfHealth_Procced">Зробивши ковток твої відчуваєш як твої рани повністю загоїлися.</string>
     <string name="WaterOfTransmutation_Info">Вода цього колодязя випромінює силу змін. Кинь в нього предмет, аби змінити його на дещо інше.</string>
+    <string name="WeaknessBuff_Info">Слабкість охоплює тіло, роблячи ціль легкою здобичею.</string>
     <string name="WeaknessBuff_Name">Послаблений</string>
     <string name="Weapon_Identify">Ти достатньо ознайомився з предметом: %1$s, аби ідентифікувати. Це %2$s.</string>
     <string name="Weapon_Incompatible">Взаємодія несумісних типів магії зняло зачарування з зброї!</string>
@@ -2569,6 +2584,7 @@
     <string name="WndInstallingMod_deleting_file">Видаляємо %s</string>
     <string name="WndInstallingMod_please_wait">Встановлення моду, зачекайте...</string>
     <string name="WndInstallingMod_skipping_file">Пропускаємо %s</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Виконати рецепт</string>
     <string name="WndItemAlchemy_NoRecipes">Немає доступних рецептів з цим предметом та вашим поточним інвентарем.</string>
     <string name="WndItemAlchemy_SelectRecipe">Оберіть рецепт</string>
     <string name="WndItemAlchemy_Title">Алхімічні рецепти з %s</string>
@@ -2860,6 +2876,7 @@
     <string name="town_deco_crate_bottles_name">Ящик для пива</string>
     <string name="town_deco_crate_desc">Міцний дерев\'яний ящик, у якому зберігаються його таємниці.</string>
     <string name="town_deco_crate_name">Ящик</string>
+    <string name="town_deco_crate_scrolls_desc">Ця скринька повна до країв таємними знаннями.</string>
     <string name="town_deco_crate_scrolls_name">Скриня зі сувоїв</string>
     <string name="town_deco_cross_desc">Литий срібний хрест, символ місцевої релігії - \&quot;Свідки Санти - Володаря Глибин\&quot;.</string>
     <string name="town_deco_cross_name">Хрест</string>
@@ -2958,6 +2975,7 @@
     <string name="town_deco_shelf_full_name">Полиця</string>
     <string name="town_deco_shelf_name">Полиці</string>
     <string name="town_deco_shelving_desc">Вражаючих розмірів стелаж, на полицях якого можна знайти різноманітні напої та закуски.</string>
+    <string name="town_deco_shelving_name">Стелаж</string>
     <string name="town_deco_shieldboard_desc">Різноманітні щити висять на стенді. Поки що не для продажу.</string>
     <string name="town_deco_shieldboard_name">Щити</string>
     <string name="town_deco_shop_sign_desc">Скоріш за все тут знаходиться магазин.</string>
@@ -3005,6 +3023,7 @@
     <string name="town_deco_tree_desc">Виникає дивне відчуття, дивлячись на живе дерево в безпосередній близькості від входу до підземелля, наповнені жахом та смертю.</string>
     <string name="town_deco_tree_name">Дерево</string>
     <string name="town_deco_urn_desc">Глиняний урна, можливо, з кимось попелом.</string>
+    <string name="town_deco_urn_name">Урна</string>
     <string name="town_deco_vat_desc">Цей кам\'яний чан заповнений святій водою до самого верху.</string>
     <string name="town_deco_vat_name">Вanna</string>
     <string name="town_deco_wall_beam_desc">Досить надійна опора для даної споруди.</string>
@@ -3041,6 +3060,25 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

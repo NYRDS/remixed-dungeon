@@ -263,7 +263,7 @@
     <string name="BlackSkullOfMastery_Title">Μπορείς να σπάσεις το ξόρκι. Αλλά μπορείς και να τροποποιήσεις τη μαγική του φόρμουλα, με τέτοιον τρόπο ώστε να καταναλώσεις τις δυνάμεις του ξορκιού και του ίδιου του τεχνουργήματος. Αυτό θα σου επιτρέψει να μετατραπείς σε Απέθαντο Επικαλεστή.</string>
     <string name="BlackSkull_Activated">Το μαύρο κρανίο ξύπνησε!</string>
     <string name="BlackSkull_Deactivated">Το μαύρο κρανίο είναι και πάλι αδρανές...</string>
-    <string name="BlackSkull_Gender">neuter</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Ένα μικρό κρανίο από οψιδιανό. Ήταν η πηγή των δυνάμεων της Νεκρόπολης, αλλά, μετά την ήττα του Απέθαντου Επικαλεστή, φαίνεται να έχει απολέσει όλες του τις δυνάμεις. Όταν όμως το κρατάς στα χέρια σου, μια περίεργη σκέψη διατρέχει το μυαλό σου: «Πεινάω».</string>
     <string name="BlackSkull_Info_Awakened">Το κρανίο πάλλεται με απίστευτη ισχύ, την οποία και διακρίνεις να ξεχύνεται από τις κόγχες των ματιών του. Και όσο το κρατάς στα χέρια σου, ακούγεται μια απόκοσμη φωνή: «Ιδού, η επέλαση του θανάτου!».</string>
     <string name="BlackSkull_Name">μαύρο κρανίο</string>
@@ -450,8 +450,8 @@
     <string name="Char_Kill_0">Εξοντώθηκες από: %s...</string>
     <string name="Char_Kill_1">Εξοντώθηκες από: %s...</string>
     <string name="Char_Kill_2">Εξοντώθηκες από: %s...</string>
-    <string name="Char_Name">εχθρός</string>
-    <string name="Char_Name_Objective">εχθρός</string>
+    <string name="Char_Name">τέρας</string>
+    <string name="Char_Name_Objective">τέρας</string>
     <string name="Char_OutParalysis">Ο πόνος ακύρωσε την παράλυση του πλάσματος: %s</string>
     <string name="Char_SmbMissed">%1$s %2$s: %3$s</string>
     <string name="Char_StaAmok">αμόκ</string>
@@ -974,7 +974,7 @@
     <string name="HeroClass_PlagueDoctorPerks_0">Οι Γιατροί Επιδημιών εξάγουν τοξικούς αδένες, σάπια όργανα, θραύσματα οστών και βδελυγρή ουσία από σκοτωμένους εχθρούς. Το αίμα συλλέγεται σταδιακά και χρησιμοποιείται αλχημικά.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Ξεκινά με μια Μάσκα Επιδημιών (ανοσία σε όλα τα αέρια) και ένα Πριόνι Οστών. Τα κρίσιμα χτυπήματα πετούν επιπλέον κομμάτια, και το πριόνι προκαλεί +50% ζημιά σε παραλυμένους εχθρούς.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Τα φίλτρα παραλυτικού και τοξικού αερίου είναι εξ αρχής αναγνωρισμένα.</string>
-    <string name="HeroClass_PlagueDoctorPerks_3">Οι εχθροί που εξοντώνονται από τοξικό αέριο γίνονται τοξική ομίχλη, αναπληρώνοντάς σου 1 ζωή ανά επηρεασμένο εχθρό.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Τα ιξίρια [yellow:Πνεύματος Πνίξεως] και [yellow:Τοξικού Πνεύματος] είναι προ-αναγνωρισμένα.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Οι Γιατροί Επιδημιών έχουν πολύ χαμηλότερη ακρίβεια χωρίς το πριόνι οστών και δεν μπορούν να χρησιμοποιήσουν όπλα απόστασης.</string>
     <string name="HeroClass_Priest">Ιερέας</string>
     <string name="HeroClass_Rog">Κλέφτης</string>
@@ -2218,6 +2218,7 @@
     <string name="TitleScene_InternalStorageLow"> Ανεπαρκής χώρος\n στην εσωτερική μνήμη\n Η πρόοδος μπορεί να χαθεί!</string>
     <string name="TitleScene_Mods">Τροποποιήσεις</string>
     <string name="TitleScene_Play">Παίξε</string>
+    <string name="TitleScene_PlayOnPC">Παίξε σε PC</string>
     <string name="TomeOfKnowledge_Info">Αυτός ο αρχαίος τόμος είναι γεμάτος με μαγικούς γρίφους και μυστήρια! Είναι δύσκολος στην ανάγνωση, αλλά, αν τον καταφέρεις, θα αυξήσει σίγουρα τις μαγικές σου δυνάμεις.</string>
     <string name="TomeOfKnowledge_Name">τόμος της γνώσης</string>
     <string name="TomeOfMastery_ACRead">ΔΙΑΒΑΣΕ</string>
@@ -3050,6 +3051,11 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
+
+
+
+
 
 
 

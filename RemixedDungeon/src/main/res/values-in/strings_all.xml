@@ -63,6 +63,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Amulet_Name">Jimat Yendor</string>
     <string name="AnesthesiaBuff_Info">Tidak merasakan sakit dan tidak akan bangun dari serangan, tetapi tetap menerima kerusakan.</string>
     <string name="AnesthesiaBuff_Name">Anestesi</string>
+    <string name="Anesthesia_Cast">%s jatuh ke dalam tidur yang dalam dan tanpa mimpi.</string>
     <string name="Anesthesia_Info">Menyebabkan tidur yang dalam dan tidak wajar pada target Anda. Bahkan serangan yang paling kejam tidak akan membangunkan mereka dari tidur ini.</string>
     <string name="Anesthesia_Name">Anestesia</string>
     <string name="Ankh_Info">Simbol kuno tentang hidup abadi memberikan kehebatan untuk hidup kembali setelah mati. Saat pembangkitan semua item yang tidak dipakai hilang.</string>
@@ -360,6 +361,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Carcass_DissectFailed">Anda membedah %s tetapi tidak menemukan apa pun yang berharga.</string>
     <string name="Carcass_DissectMessage">Anda membedah bangkai dan mendapatkan %s.</string>
     <string name="Carcass_DissectResult">Dari %1$s kamu memperoleh %2$d %3$s.</string>
+    <string name="Carcass_Info">sisa-sisa %s yang benar-benar mati.</string>
     <string name="Carcass_Kick">%s ini sudah benar-benar mati, tidak perlu menendangnya lagi.</string>
     <string name="Carcass_Name">bangkai %s</string>
     <string name="Carcass_Necromancy">\&quot;Kamu telah membangkitkan mayat %s!\&quot;</string>
@@ -647,6 +649,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="DieHardSpell_Info">Akan meningkatkan regenerasi Anda untuk sementara membuat Anda menjadi Susah Mati yang nyata.</string>
     <string name="DieHardSpell_Name">mati dengan susah payah</string>
     <string name="Displacement_Txt">%s pemindahan</string>
+    <string name="DoctorArmor_Info">Baju zirah dokter wabah ini memungkinkan penggunaan kemampuan \&quot;Awan Miasma\&quot;, yang melepaskan gas racun yang membunuh, melemahkan, dan membingungkan musuh. Dokter, yang dilindungi oleh topengnya, kebal terhadap efek ini.</string>
     <string name="DoctorArmor_Name">Jas Dokter</string>
     <string name="DoctorArmor_NotDoctor">Hanya dokter wabah yang bisa menggunakan baju besi ini!</string>
     <string name="DoctorSpecial">Awan Miasma</string>
@@ -843,6 +846,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="GnollArmor_NotGnoll">Hanya gnoll yang bisa melengkapi Zirah Gnoll!</string>
     <string name="GnollCostume_Info">Kostum yang sangat hangat dan lembut. Siapapun yang memakai kostum ini akan terlihat seperti... seseorang yang mencoba menyamar sebagai gnoll. Tapi gnolls tidak akan jatuh untuk itu, mereka masih akan menyerang Anda</string>
     <string name="GnollCostume_Name">Kostum Gnoll</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">Tomahawk tradisional yang dibuat oleh master Gnoll, di mana setiap klan memiliki desain uniknya sendiri. Tomahawk ini sedikit lebih ringan dari rekan-rekannya.</string>
     <string name="GnollTamahawk_Name">Gnoll tomahawk</string>
     <string name="Gnoll_BecomeGuardianDesc">Menjadi penjaga</string>
@@ -1073,6 +1077,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="IceGuardianCore_Name">penjaga es</string>
     <string name="IceGuardianCore_Name_Objective">penjaga es</string>
     <string name="IceGuardian_Desc">Penjaga Es diciptakan oleh kobold kuno untuk melindungi gua mereka. Selama inti Guardian mengandung energi yang cukup, dia mampu merekonstruksi dirinya sendiri tepat di panasnya pertempuran.</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">penjaga es</string>
     <string name="IceGuardian_Name_Objective">penjaga es</string>
     <string name="IceKey_Info">Kunci ini sepertinya terbuat dari es, tapi kerasnya seperti besi</string>
@@ -1097,6 +1102,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="IncendiaryDart_Info">Lonjakan pada masing-masing anak panah ini dirancang untuk menjepitnya ke targetnya sementara senyawa tidak stabil yang diikatkan pada panjangnya meledak menjadi nyala api yang cemerlang.</string>
     <string name="IncendiaryDart_Name">dart membakar</string>
     <string name="InnKeeperNPC_Desc">Penjaga penginapan bangga pada dirinya sendiri.</string>
+    <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">penjaga penginapan</string>
     <string name="InnKeeperNPC_Name_Objective">penjaga penginapan</string>
     <string name="InnServant_Phrase_1">Ugh, masih banyak yang harus dilakukan!</string>
@@ -1465,6 +1471,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Nightcap_Info">Menaklukkan dungeon di malam hari pasti menjadi tugas yang sangat melelahkan. Bagaimana kalau memakai topi yang hangat dan nyaman ini dan santai saja, dan biarkan seluruh dunia menunggu.</string>
     <string name="Nightcap_Name">minum</string>
     <string name="Nightmare_Desc">Makhluk menjijikan yang terbuat dari tentakel daging yang menyentak. Mimpi seram adalah sebuah manifestasi dari pikiran jahat Dewa Tua.</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name">mimpi seram</string>
     <string name="Nightmare_Name_Objective">mimpi seram</string>
     <string name="No_Valid_Cell">Tidak ada sel yang cocok di dekatnya.</string>
@@ -1494,6 +1501,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Pickaxe_InsufficientStr">Kekuatan tidak cukup untuk menggali!</string>
     <string name="Pickaxe_Name">beliung</string>
     <string name="Pickaxe_NoVein">Tidak ada emas gelap disekitarmu yang bisa digali</string>
+    <string name="Pickaxe_NothingToMine">Tidak ada yang bisa ditambang di sini!</string>
     <string name="Piercing_Name_0">Tajam %s</string>
     <string name="Piercing_Name_1">Tajam %s</string>
     <string name="Piercing_Name_2">Tajam %s</string>
@@ -1505,7 +1513,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PirateSet_Name">Pakaian Bajak Laut</string>
     <string name="PlagueDoctorMaskHood_Info">Sebuah tengkorak ebony yang dipahat, lubang matanya bersinar dengan kilau gaib permata ametis. Setiap napas yang Anda hirup berbisik melalui labirin tabung dan filter, membawa wangi herbal dan rempah yang menyamarkan pembusukan yang melekat pada Anda. Tapi bukan hanya topeng. Sebuah tudung beludru tengah malam yang berat, menyelimuti wajah dan kepala Anda dalam bayangan. Hood, seperti sayap gagak, mengalir di punggung Anda, tepinya dihiasi renda tulang putih, kontras mengerikan yang indah. Bersama masker dan tudung menciptakan wajah spektral, kesaksian mengerikan terhadap pertempuran tanpa henti melawan kekuatan pembusukan.</string>
     <string name="PlagueDoctorMaskHood_Name">Topeng Plague Doctor dengan tudung</string>
-    <string name="PlagueDoctorMask_Info">This… this is no mere mask. It\'s… a barrier. A shield against the forces of decay that Plague Doctor tirelessly battle against. Crafted from the finest ebony wood, intricately carved with the visage of a ravenous skull. Its hollow eye sockets are filled with glittering, amethyst gemstones that pulse faintly, like the dying embers of a fire. Each breath you take, each utterance you make, is filtered through a labyrinthine network of tubes and filters. A concoction of potent herbs and exotic spices infuses the air within, masking the stench of death that clings to you like a shroud.</string>
+    <string name="PlagueDoctorMask_Info">Ini… ini bukan sekadar topeng. Ia… sebuah penghalang. Sebuah perisai melawan kekuatan pembusukan yang ditentang oleh Dokter Wabah tanpa henti. Terbuat dari kayu eben terbaik, diukir rumit dengan wajah tengkorak yang haus. Rongga matanya yang kosong diisi dengan batu permata ametis yang berkilauan dan berdenyut lemah, seperti bara api yang sedang padam. Setiap nafas yang Anda ambil, setiap kata yang Anda ucapkan, disaring melalui jaringan labirin tabung dan penyaring. Ramuan herba kuat dan rempah-rempah eksotik meresap ke udara di dalamnya, menutupi bau busuk kematian yang menempel pada Anda seperti kafan.</string>
     <string name="PlagueDoctorMask_Name">topeng Dokter Wabah</string>
     <string name="PlagueDoctorNPC_After_Quest">Saya akan menunjukkan kepada mereka, saya akan menunjukkan kepada mereka semua!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Kamu masih di sini? Di Sini! Ambil ini.</string>
@@ -1997,6 +2005,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="Shopkeeper_text">Selamat datang di cabang lokal Pixel-Mart.\nAda yang bisa dibantu?</string>
     <string name="Shopkeeper_title">toko</string>
     <string name="ShortSword_ACReforge">TEMPA ULANG</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Ini memang lumayan pendek, hanya beberapa inci lebih panjang, dari sebilah pisau.</string>
     <string name="ShortSword_Name">pedang pendek</string>
     <string name="ShortSword_NotBoomerang">Anda tidak dapat meningkatkan sebuah bumerang dengan cara ini</string>
@@ -2079,6 +2088,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="SpiderGuard_Name">laba-laba penjaga</string>
     <string name="SpiderGuard_Name_Objective">laba-laba penjaga</string>
     <string name="SpiderMindAmber_Desc">Laba-laba amber adalah makhluk langka dan misterius yang memiliki kekuatan pikiran sehingga mirip dengan laba-laba-psi, tapi lebih kuat dari peranakan mereka biasanya. Nama \&quot;amber\&quot; mengarah ke warna kantung otak raksasa mereka, yang diperlihatkan di depan korban mereka, saat Laba-laba Amber menyerang dengan kekuatan mereka.</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">laba-laba amber</string>
     <string name="SpiderMindAmber_Name_Objective">laba-laba amber</string>
     <string name="SpiderMind_Desc">Laba-laba yang kelihatan lemah ini memiliki kekuatan mental yang unik, yang memperbolehkan mereka untuk mengontrol seluruh koloni. Laba-laba-Psi dapat mengontrol semua makhluk hidup, tapi laba-laba ini agak penakut.</string>
@@ -2208,6 +2218,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="TitleScene_InternalStorageLow">Ruang tidak cukup\n di penyimpanan internal\n Kemajuan kamu bisa hilang!</string>
     <string name="TitleScene_Mods">Mod</string>
     <string name="TitleScene_Play">Main</string>
+    <string name="TitleScene_PlayOnPC">Mainkan di PC</string>
     <string name="TomeOfKnowledge_Info">Buku tua ini berisi tentang teka teki yang misterius! ini mungkin sulit untuk dibaca, tetapi bila kamu dapat membacanya, maka dapat dipastikan kekuatan magis mu akan meningkat.</string>
     <string name="TomeOfKnowledge_Name">buku pengetahuan</string>
     <string name="TomeOfMastery_ACRead">BACA</string>
@@ -2558,6 +2569,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="WndInstallingMod_please_wait">Memasang mod, harap tunggu...</string>
     <string name="WndInstallingMod_skipping_file">Melewati %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Jalankan Resep</string>
+    <string name="WndItemAlchemy_NoRecipes">Tidak ada resep tersedia dengan item ini dan inventaris Anda saat ini.</string>
     <string name="WndItemAlchemy_SelectRecipe">Pilih resep</string>
     <string name="WndItemAlchemy_Title">Resep alkimia dengan %s</string>
     <string name="WndItemAlchemy_Transmute">Transmutasi</string>
@@ -3028,6 +3040,20 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

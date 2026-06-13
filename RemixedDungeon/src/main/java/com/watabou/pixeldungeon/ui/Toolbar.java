@@ -1,13 +1,14 @@
-
 package com.watabou.pixeldungeon.ui;
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
 import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.nyrds.platform.input.Keys;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -22,7 +23,6 @@ import java.util.ArrayList;
 
 public class Toolbar extends Component {
 
-
     private final Tool btnWait;
     private final Tool btnSearch;
     private final Tool btnInfo;
@@ -30,10 +30,10 @@ public class Toolbar extends Component {
     @Nullable
     private final Tool btnSpells;
 
+    private final Tool btnPetInventory;
     private final InventoryTool btnInventory;
 
     private Component toolbar = new Component();
-
     private final ArrayList<QuickslotTool> slots = new ArrayList<>();
     final private Hero hero;
 
@@ -78,6 +78,54 @@ public class Toolbar extends Component {
             }
         };
 
+        // Pet inventory button - use same icon as inventory (index 10) but tinted for pets
+        btnPetInventory = new Tool(10, Chrome.Type.ACTION_BUTTON) {
+            @Override
+            protected void onClick() {
+                if (hero.isReady()) {
+                    PetInventoryManager.openPetInventoryFromToolbar(hero);
+                }
+            }
+
+            @Override
+            public void layout() {
+                super.layout();
+                // Tint the icon to distinguish pet inventory from hero inventory
+                // Green tint for pets
+                if (base != null) {
+                    base.hardlight(0x44AA44);
+                }
+            }
+
+            @Override
+            protected void onTouchDown() {
+                super.onTouchDown();
+                if (base != null) {
+                    base.hardlight(0x66CC66);
+                }
+            }
+
+            @Override
+            protected void onTouchUp() {
+                super.onTouchUp();
+                if (base != null) {
+                    base.hardlight(0x44AA44);
+                }
+            }
+
+            @Override
+            public void enable(boolean value) {
+                super.enable(value);
+                if (base != null) {
+                    if (value) {
+                        base.hardlight(0x44AA44);
+                    } else {
+                        base.tint(0x7B8073, 0.7f);
+                    }
+                }
+            }
+        };
+
         btnSpells = new Tool(SpellHelper.iconIdByHero(hero), Chrome.Type.ACTION_BUTTON) {
             @Override
             protected void onClick() {
@@ -88,6 +136,26 @@ public class Toolbar extends Component {
         };
 
         btnInventory = new InventoryTool();
+        
+        // Initially hide pet button (hero starts with no pets)
+        btnPetInventory.setVisible(false);
+        btnPetInventory.enable(false);
+        lastHadPets = false;
+    }
+
+    private boolean lastHadPets = false;
+
+    @Override
+    public void update() {
+        super.update();
+        
+        // Check pet count in rendering phase and toggle button visibility
+        boolean hasPets = PetInventoryManager.hasPets(hero);
+        if (hasPets != lastHadPets) {
+            lastHadPets = hasPets;
+            btnPetInventory.setVisible(hasPets);
+            btnPetInventory.enable(hasPets);
+        }
     }
 
     @Override
@@ -140,6 +208,9 @@ public class Toolbar extends Component {
         actionBox.setAlign(VBox.Align.Bottom);
 
         VHBox inventoryBox = new VHBox(width());
+        // Add pet inventory button first (closest to quickslots/center in both handedness modes)
+        // Always added, visibility toggled in update()
+        inventoryBox.add(btnPetInventory);
         if (hero.isSpellUser()) {
             inventoryBox.add(btnSpells);
         }
@@ -218,5 +289,4 @@ public class Toolbar extends Component {
     public float top() {
         return toolbar.top();
     }
-
 }

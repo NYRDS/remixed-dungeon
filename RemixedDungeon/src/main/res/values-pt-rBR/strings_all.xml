@@ -2222,6 +2222,7 @@ outro local do nível.</string>
     <string name="TitleScene_InternalStorageLow">Sem espaço suficiente\n no armazenamento interno\n Seu progresso pode ser perdido!</string>
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Jogar</string>
+    <string name="TitleScene_PlayOnPC">Jogar no PC</string>
     <string name="TomeOfKnowledge_Info">Este antigo tomo está cheio de enigmas e mistérios arcanos! Pode ser uma leitura difícil, mas se você passar por isso, você definitivamente aumentará seus poderes mágicos.</string>
     <string name="TomeOfKnowledge_Name">Livro do Conhecimento</string>
     <string name="TomeOfMastery_ACRead">LER</string>
@@ -3042,6 +3043,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

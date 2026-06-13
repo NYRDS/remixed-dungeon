@@ -108,6 +108,7 @@ import org.luaj.vm2.LuaValue;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -1567,6 +1568,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             belongings = new Belongings(this);
         }
         return belongings;
+    }
+
+    /** Returns the equipment slots available for this character type.
+     * Subclasses should override to provide their slot configuration. */
+    @NotNull
+    public Set<Belongings.Slot> getAvailableEquipmentSlots() {
+        return Collections.emptySet();
     }
 
     public int gold() {

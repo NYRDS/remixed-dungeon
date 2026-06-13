@@ -654,7 +654,7 @@
     <string name="DieHardSpell_Info">会暂时增加你的回复速度，让你成为真正的死神。</string>
     <string name="DieHardSpell_Name">顽固</string>
     <string name="Displacement_Txt">位移%s</string>
-    <string name="DoctorArmor_Info">A testres hordozója segíthet a bántámás kisimításában, hogy az anyag gyógyuljon</string>
+    <string name="DoctorArmor_Info">这套瘟疫医生的盔甲允许使用\&quot;毒雾云\&quot;能力，释放有毒气体使敌人中毒、虚弱和迷失方向。医生受到面具保护，对这些效果免疫。</string>
     <string name="DoctorArmor_Name">医生的服装</string>
     <string name="DoctorArmor_NotDoctor">Only plague doctors can use this armor!</string>
     <string name="DoctorSpecial">瘴氣雲</string>
@@ -974,7 +974,7 @@
     <string name="HeroClass_PlagueDoctorPerks_0">瘟疫医生会从被杀死的敌人身上收获毒素腺体、腐烂器官、骨片和邪恶精华。血液会随着时间推移而收集起来用于炼金术。</string>
     <string name="HeroClass_PlagueDoctorPerks_1">开始时拥有瘟疫面具（对所有气体免疫）和骨锯。暴击会掉落额外部件，锯子对麻痹敌人造成+50%伤害。</string>
     <string name="HeroClass_PlagueDoctorPerks_2">开始时拥有瘟疫面具（对所有气体免疫）和骨锯。暴击会掉落额外部件，锯子对麻痹敌人造成x1.5伤害。</string>
-    <string name="HeroClass_PlagueDoctorPerks_3">被毒气杀死的敌人会爆炸成毒雾，每影响一个敌人为你恢复 1 点生命值。</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">[yellow:麻痹气体]和[yellow:毒气]药水已预先识别。</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Lekarze zarazy nie mogą używać broni dystansowej i mają ogromne kary za celność bez Szczęki Złamaniny.</string>
     <string name="HeroClass_Priest">牧师</string>
     <string name="HeroClass_Rog">盗贼</string>
@@ -2218,6 +2218,7 @@
     <string name="TitleScene_InternalStorageLow">手机内部存储\n空间不足，\n你的进度可能会丢失！</string>
     <string name="TitleScene_Mods">MOD</string>
     <string name="TitleScene_Play">开始游戏</string>
+    <string name="TitleScene_PlayOnPC">在PC上游玩</string>
     <string name="TomeOfKnowledge_Info">这本古书充满了神秘的谜语和咒文！这可能很难读懂，但如果你能够读懂它，肯定能增加一些魔法力量。</string>
     <string name="TomeOfKnowledge_Name">知识之书</string>
     <string name="TomeOfMastery_ACRead">阅读</string>
@@ -2374,7 +2375,7 @@
     <string name="Wand_Wood_Types_2">\&quot;乌木\&quot;</string>
     <string name="Wand_Wood_Types_3">\&quot;樱桃\&quot;</string>
     <string name="Wand_Wood_Types_4">\&quot;柚木\&quot;</string>
-    <string name="Wand_Wood_Types_5">\&quot;花楸\&quot;</string>
+    <string name="Wand_Wood_Types_5">花楸</string>
     <string name="Wand_Wood_Types_6">\&quot;柳\&quot;</string>
     <string name="Wand_Wood_Types_7">\&quot;桃花心木\&quot;</string>
     <string name="Wand_Wood_Types_8">\&quot;竹\&quot;</string>
@@ -3022,6 +3023,11 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
 
 
 

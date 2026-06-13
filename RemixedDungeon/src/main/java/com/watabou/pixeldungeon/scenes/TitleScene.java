@@ -167,6 +167,17 @@ public class TitleScene extends PixelScene {
         String lang = GamePreferences.uiLanguage();
         final boolean ruUser = lang.equals("ru");
 
+        // Add "Play on PC" button for Russian users
+        if (ruUser) {
+            ImageButton btnPlayOnPC = new ImageButton(Icons.VK_PLAY.get()) {
+                @Override
+                protected void onClick() {
+                    Game.openUrl(StringsManager.getVar(R.string.TitleScene_PlayOnPC), "https://vkplay.ru/play/game/remixed-dungeon-pixel-rogue-42406/");
+                }
+            };
+            leftGroup.add(btnPlayOnPC);
+        }
+
         Icons social = ruUser ? Icons.VK : Icons.FB;
         if (ruUser) {
             leftGroup.add(new ImageButton(social.get()) {

@@ -73,24 +73,28 @@ public class WndBag extends WndTabbed {
 	private static final int TAB_WIDTH_L	= 26;
 		
 	@Getter
-    private final Listener listener;
+    private Listener listener;
 	@Getter
     private final Mode mode;
 	private final String title;
 	private final String[] entityNames;
 
 	public String[] getEntityNames() {
-		return entityNames;
+	    return entityNames;
+	}
+
+	public void setListener(Listener listener) {
+	    this.listener = listener;
 	}
 
 	protected int count;
 	protected int col;
 	protected int row;
 	
-	private final int nCols;
-	private final int nRows;
-
-	private float titleBottom;
+	protected final int nCols;
+	protected final int nRows;
+	
+	protected float titleBottom;
 
 	private static Mode lastMode;
 	private static Bag lastBag;
@@ -98,52 +102,66 @@ public class WndBag extends WndTabbed {
 	@Getter
     private static WndBag instance;
 
-	private final Belongings stuff;
+    // Track hero's bag window separately for UI refresh when pet inventory changes
+    private static WndBag heroBagInstance;
 
-	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title) {
-		this(stuff, bag, listener, mode, title, null);
-	}
+    public static WndBag getHeroBagInstance() {
+        return heroBagInstance;
+    }
 
-	public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title, String[] entityNames) {
+    // Subclasses can override to disable title hardlight coloring
+    protected boolean useTitleHardlight() {
+        return true;
+    }
 
-		super();
+    protected final Belongings stuff;
 
-		stuff.getOwner().interrupt();
+    public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title) {
+        this(stuff, bag, listener, mode, title, null);
+    }
 
-		nCols = RemixedDungeon.landscape() ? COLS_L : COLS_P;
-		nRows = (Belongings.BACKPACK_SIZE + 4 + 1) / nCols + ((Belongings.BACKPACK_SIZE + 4 + 1) % nCols > 0 ? 1 : 0);
+    public WndBag(Belongings stuff, @NotNull Bag bag, Listener listener, Mode mode, String title, String[] entityNames) {
 
-		this.listener = listener;
-		this.mode = mode;
-		this.title = title;
-		this.entityNames = entityNames;
-		this.stuff = stuff;
+        super();
 
-		lastMode = mode;
+        stuff.getOwner().interrupt();
 
-		if(bag==null) {
-			bag = stuff.backpack;
-		}
+        nCols = RemixedDungeon.landscape() ? COLS_L : COLS_P;
+        nRows = (Belongings.BACKPACK_SIZE + 4 + 1) / nCols + ((Belongings.BACKPACK_SIZE + 4 + 1) % nCols > 0 ? 1 : 0);
 
-		lastBag = bag;
+        this.listener = listener;
+        this.mode = mode;
+        this.title = title;
+        this.entityNames = entityNames;
+        this.stuff = stuff;
 
-		panelWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
+        lastMode = mode;
 
-		txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), GuiProperties.titleFontSize());
-		txtTitle.maxWidth(panelWidth);
-		txtTitle.hardlight( TITLE_COLOR );
-		txtTitle.setX(PixelScene.align((panelWidth - txtTitle.width()) / 2));
-		if(txtTitle.getX() <0) {
-			txtTitle.setX(0);
-		}
-		txtTitle.setY(0);
-		add( txtTitle );
+        if(bag==null) {
+            bag = stuff.backpack;
+        }
 
-		placeItems( bag );
+        lastBag = bag;
 
-		resize(
-			panelWidth,
-			(int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + titleBottom + SLOT_MARGIN) );
+        panelWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
+
+        txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), GuiProperties.titleFontSize());
+        txtTitle.maxWidth(panelWidth);
+        if (useTitleHardlight()) {
+            txtTitle.hardlight( TITLE_COLOR );
+        }
+        txtTitle.setX(PixelScene.align((panelWidth - txtTitle.width()) / 2));
+        if(txtTitle.getX() <0) {
+            txtTitle.setX(0);
+        }
+        txtTitle.setY(0);
+        add( txtTitle );
+
+        placeItems( bag );
+
+        resize(
+                panelWidth,
+                (int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + titleBottom + SLOT_MARGIN) );
 
 		if(stuff.getOwner() instanceof Hero) {
 			Bag[] bags = {
@@ -177,6 +195,11 @@ public class WndBag extends WndTabbed {
 		}
 
 		instance = this;
+
+		// Track hero's bag window for UI refresh from pet inventory
+		if (stuff.getOwner() instanceof Hero) {
+			heroBagInstance = this;
+		}
 	}
 
 	public static WndBag lastBag(@NotNull Char owner, Listener listener, Mode mode, String title ) {
@@ -219,7 +242,7 @@ public class WndBag extends WndTabbed {
 		}
 	}
 
-	private void placeEquipped(Item item, Belongings.Slot slot, int image) {
+	protected void placeEquipped(Item item, Belongings.Slot slot, int image) {
 		if(item != ItemsList.DUMMY) {
 			placeItem(item);
 			return;
@@ -231,7 +254,20 @@ public class WndBag extends WndTabbed {
 		}
 
 		placeItem(new ItemPlaceholder(image));
+	}
 
+	/** Places equipped items for characters that have equipment slots */
+	public void placeEquippedForOwner() {
+		// Only show equipped items for characters that have those slots available
+		if (!stuff.hasSlot(Belongings.Slot.WEAPON)) {
+			return;
+		}
+		
+		placeEquipped(stuff.getItemFromSlot(Belongings.Slot.WEAPON),   Belongings.Slot.WEAPON,    ItemPlaceholder.RIGHT_HAND);
+		placeEquipped(stuff.getItemFromSlot(Belongings.Slot.ARMOR),    Belongings.Slot.ARMOR,     ItemPlaceholder.BODY);
+		placeEquipped(stuff.getItemFromSlot(Belongings.Slot.LEFT_HAND), Belongings.Slot.LEFT_HAND, ItemPlaceholder.LEFT_HAND);
+		placeEquipped(stuff.getItemFromSlot(Belongings.Slot.ARTIFACT),    Belongings.Slot.ARTIFACT,  ItemPlaceholder.ARTIFACT);
+		placeEquipped(stuff.getItemFromSlot(Belongings.Slot.LEFT_ARTIFACT),    Belongings.Slot.LEFT_ARTIFACT,  ItemPlaceholder.ARTIFACT);
 	}
 
 	public void setItemsActive(boolean state) {
@@ -243,7 +279,7 @@ public class WndBag extends WndTabbed {
 		}
 	}
 
-	private void clearItems() {
+	protected void clearItems() {
 		row = col = count = 0;
 		var childsToRemove = new ArrayList<ItemButton>();
 		for (var child: members) {
@@ -311,7 +347,7 @@ public class WndBag extends WndTabbed {
 		}
 	}
 	
-	private void placeItem(final Item item) {
+	protected void placeItem(final Item item) {
 
 		if(row >=nRows) {
 			return;

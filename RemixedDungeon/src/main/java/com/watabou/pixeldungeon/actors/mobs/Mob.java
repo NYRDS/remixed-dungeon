@@ -52,6 +52,9 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import java.util.EnumSet;
+import java.util.Set;
+
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
@@ -639,5 +642,12 @@ public abstract class Mob extends Char {
     }
 
     public void adjustStats(int depth) {
+    }
+
+    @Override
+    @NotNull
+    public Set<Belongings.Slot> getAvailableEquipmentSlots() {
+        return EnumSet.of(Belongings.Slot.WEAPON, Belongings.Slot.ARMOR,
+                Belongings.Slot.LEFT_HAND, Belongings.Slot.ARTIFACT, Belongings.Slot.LEFT_ARTIFACT);
     }
 }

@@ -64,6 +64,7 @@
     <string name="AnesthesiaBuff_Info">不感覺疼痛也不會從攻擊中醒來，但仍受到傷害。</string>
     <string name="AnesthesiaBuff_Name">麻醉</string>
     <string name="Anesthesia_Cast">%s 깊은 잠에 빠진다.</string>
+    <string name="Anesthesia_Info">讓目標陷入深度、非自然的睡眠。即使是最猛烈的攻擊也無法將其從這沉睡中喚醒。</string>
     <string name="Anesthesia_Name">麻醉</string>
     <string name="Ankh_Info">此古老的不朽的象徵可以使您從死亡中復活。但會使您丟失所有未裝備的道具。</string>
     <string name="Ankh_Name">十字架</string>
@@ -127,7 +128,7 @@
     <string name="Badges_Champion">挑戰成功</string>
     <string name="Badges_DeathFalling">刺客教條玩上腦</string>
     <string name="Badges_DeathFire">燃燒生命 ,照亮別人</string>
-    <string name="Badges_DeathGas">集中營初體驗</string>
+    <string name="Badges_DeathGas">死於毒氣</string>
     <string name="Badges_DeathGlyph">死於護甲刻印</string>
     <string name="Badges_DeathHunger">饑饉三十</string>
     <string name="Badges_DeathNecrotism">死於瘟疫</string>
@@ -201,10 +202,12 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">瘋狂強盜</string>
     <string name="Bandit_Name_Objective">瘋狂強盜</string>
+    <string name="BardNPC_Desc">城鎮吟遊詩人正在彈奏魯特琴。</string>
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">吟遊詩人</string>
     <string name="BardNPC_Name_Objective">吟遊詩人</string>
     <string name="BardSong_1">我和妻子獨自生活，\n在我們自己的小木屋裡\n她愛琴酒，我愛蘭姆酒\n我告訴你我們有很多樂趣。</string>
+    <string name="BarkskinBuff_Info">身體被樹皮覆蓋，可減輕部分傷害。</string>
     <string name="BarkskinBuff_Name">樹膚</string>
     <string name="Barrel_Desc">一個簡單的木桶，你可以從中聞到油味。而且這玩意非常輕，你可以輕易推動它。</string>
     <string name="Barrel_Name">油筒</string>
@@ -430,9 +433,9 @@
     <string name="ChaosSword_Info">混亂為刃，力量蘊內。刀身發顫，砍山分洪，力無不逮。唯有強者，方能使用。</string>
     <string name="ChaosSword_Name">混沌劍</string>
     <string name="CharAction_Charm">魅惑</string>
-    <string name="CharAction_Expel">pem expulsion</string>
+    <string name="CharAction_Expel">驅逐</string>
     <string name="CharAction_Give">給</string>
-    <string name="CharAction_Hit">memukul</string>
+    <string name="CharAction_Hit">擊打</string>
     <string name="CharAction_Order">命令</string>
     <string name="CharAction_Push">推</string>
     <string name="CharAction_Scare">嚇唬</string>
@@ -688,6 +691,7 @@
     <string name="DrunkardNPC_Desc">自然狀態下的旅店常客。</string>
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">醉漢</string>
+    <string name="DrunkardNPC_Name_Objective">酒鬼</string>
     <string name="Drunkard_Phrase_1">再多點酒！</string>
     <string name="Drunkard_Phrase_2">誰需要水當你有啤酒</string>
     <string name="Drunkard_Phrase_3">這啤酒嘗起來像泥土</string>
@@ -917,6 +921,7 @@
     <string name="Haste_Info">急速會讓實行者以極快的速度移動，他周圍的一切都會顯得靜止。如此急速會消耗大量的能量，所以只能在很短的時間內使用。\n\n熟練的大師能夠在較長的時間內保持急速。</string>
     <string name="Haste_Name">急速</string>
     <string name="Heal_Cast">%s 被治愈了。</string>
+    <string name="Heal_Info">在地牢中相當實用的法術，不是嗎？</string>
     <string name="Heal_Name">治療</string>
     <string name="HealerNPC_Desc">虛無縹緲的直覺告訴我，眼前的老人懂得如何弄法杖。</string>
     <string name="HealerNPC_Gender">masculine</string>
@@ -981,7 +986,7 @@
     <string name="HeroClass_PlagueDoctorPerks_0">瘟疫医生从被杀的敌人身上收集[黄色:毒性腺体]、[黄色:腐烂器官]、[黄色:骨片]。</string>
     <string name="HeroClass_PlagueDoctorPerks_1">開始時擁有瘟疫面具（對所有氣體免疫）和骨鋸。暴擊會掉落額外部件，鋸子對麻痹敵人造成+50%傷害。</string>
     <string name="HeroClass_PlagueDoctorPerks_2">麻痹氣體和毒性氣體的藥水已預先辨識。</string>
-    <string name="HeroClass_PlagueDoctorPerks_3">被毒氣殺死的敵人會爆炸成毒性迷霧，每影響一個敵人就能為你恢復 1 點生命值。</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">[yellow:麻痹氣體]和[yellow:毒氣]藥水已預先識別。</string>
     <string name="HeroClass_PlagueDoctorPerks_4">瘟疫醫生在沒有心愛的骨鋸在手的情況下會遭受嚴重的命中懲罰，並且無法使用遠程武器。</string>
     <string name="HeroClass_Priest">神父</string>
     <string name="HeroClass_Rog">盜賊</string>
@@ -1251,6 +1256,7 @@
     <string name="Level_TileDescLockedDoor">這扇門鎖上了，你需要一把配對的鑰匙來打開它。</string>
     <string name="Level_TileDescLockedExit">沈重的鐵欄桿封鎖住了向下的樓梯。</string>
     <string name="Level_TileDescPedestal">一個小底座。</string>
+    <string name="Level_TileDescPileOfStones">一堆極重的石頭，看起來無法移動。</string>
     <string name="Level_TileDescSign">你從這裏看不到上面寫著什麼。</string>
     <string name="Level_TileDescStatue">有人想裝飾一下這裏，但顯然他沒能成功。</string>
     <string name="Level_TileDescTrap">踩到隱藏的壓力板會啟動這個陷阱。</string>
@@ -1402,6 +1408,7 @@
     <string name="MobAi_status">這個 %1$s 是 %2$s</string>
     <string name="Mob_Attacking">把這個%s當作死了！</string>
     <string name="Mob_Cannot_Be_Pet">你沒法控制住 \&quot;%s\&quot;</string>
+    <string name="Mob_CantDoIt">我做不到。我有小爪子。</string>
     <string name="Mob_Desc">真正的說明即將到來！</string>
     <string name="Mob_Died">你聽到有什麼東西在遠處死去了</string>
     <string name="Mob_GoingTo">已經在路上了！</string>
@@ -1560,6 +1567,7 @@
     <string name="PlagueDoctorQuest_3_2_Epilogue">*他仰頭發出咯咯的笑聲，聲音在他潮濕的實驗室中回盪* 壯觀！一個_死亡騎士_，站在我們面前！從它身上散發的力量……令人陶醉！*他轉向你，眼睛閃爍著狂熱的光芒* 而對你，一個配得上你勇氣的獎勵：一瓶_力量藥水_！願它賜予你征服任何敵人的力量！現在……讓我們檢查我們的主題。它的本質蘊含著可能改寫生命法則的秘密！*他帶著瘋狂的獰笑接近_死亡騎士_，揮舞著一瓶冒泡的綠色液體*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">這不僅僅是野獸！它是死靈力量的活見證！活捉它，不能受傷！這個_死亡騎士_……它是關鍵！</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">一個_死亡騎士_！*他的聲音因興奮而破碎，骨瘦如柴的手指顫抖著緊握著一個充滿渾濁熒光液體的試管*。這樣的生物……是不死之光！要活捉一個……這將是……里程碑式的。想像一下我們可以解鎖多少秘密！它骷髏血管中流淌的力量！是的，一個_死亡騎士_！這對我的研究至關重要！因為它將使我們能夠更深入……探索生命的謎團……以及死亡本身的奧秘！</string>
+    <string name="PlagueDoctorQuest_4_1_Epilogue">太棒了！_矮人術士_，他們的精華現在歸我探索！如此扭曲、腐化的魔法……真是迷人。*他舉起一個閃爍的小瓶，裡面裝著粘稠的深紅色液體。* 這是給你的：一瓶_力量藥水_！吞下它的力量，你將感受到山岳之力在你血管中奔騰！請記住，從這些犧牲中獲得的知識最終將服務於更高的目的……或許甚至能拯救我們所有人免於比死亡更可怕的命運。</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">五個＿矮人巫師＿，他們的身體仍脈動著黑暗魔法微弱的迴響！為我找回他們，我會獎勵你一瓶無與倫比的強力藥水——＿力量藥水＿，它將賦予你十人之力！</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">啊嚏！矮人！那些頑固的地下居民，痴迷於寶石和黃金。但我渴望的是_矮人術士_……他們扭曲的魔法，由他們居住的深淵提供燃料。五個，我需要五個那些枯萎的靈魂！他們的身體是理解某種……現象的關鍵。關於通過大地本身引導奧術能量的事情。我相信我接近突破了，但我需要他們的本質，他們腐敗的魔法！*他劇烈地咳嗽在手帕上，深色的污漬蔓延到精緻的織物上*</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Splendid! Öt _Kobold Jegyző_, jégesszenciájuk most az enyém, hogy felfedezzem! Kapcsolatuk a jeges sivatagokkal, igazán lenyűgöző. Ahogy ők magukkal vízet manipulationálják... igazán figyelemre méltó. *Átad neked egy csillogó ampullát, tele élénk bordó folyadékkal* Ez a bátor fellépésedért: egy _Erő potion_! Szívj mélyet, és érezd a tíz harcos erejének áramlását az ereidben! Emlékezz, tudás az erelem... és az erő az egyetlen fegyverünk a sötétség ellen. Most... boncoljuk szét ezeket a jégmegelmeleket, és fedjük fel jégbelepi titkait!</string>
@@ -1955,6 +1963,7 @@
     <string name="Senior_Name_Objective">武僧大師</string>
     <string name="ServantNPC_Desc">非常忙碌的旅馆服务生。</string>
     <string name="ServantNPC_Gender">feminine</string>
+    <string name="ServantNPC_Name">客棧服務員</string>
     <string name="ServantNPC_Name_Objective">innkeeper</string>
     <string name="ServiceManNPC_Desc">當地企業一名中規中矩的員工。</string>
     <string name="ServiceManNPC_Gender">masculine</string>
@@ -2182,6 +2191,7 @@
     <string name="Succubus_Name">魅魔</string>
     <string name="Succubus_Name_Objective">魅魔</string>
     <string name="SummonBeast_AtYourCommand">遵命！</string>
+    <string name="SummonBeast_Info">嘗試召喚一群強大的野獸服從你的命令。\n結果可能有所不同。</string>
     <string name="SummonBeast_Name">野獸召喚</string>
     <string name="SummonDeathling_Info">召喚亡靈。亡靈的生命力及攻擊力將隨你的等級的提升而增長。\n\n召喚上限 %1$d （每提升一魔力等級上限+1）</string>
     <string name="SummonDeathling_Name">亡靈召喚</string>
@@ -2233,6 +2243,7 @@
     <string name="TitleScene_InternalStorageLow">手機內部存儲空間不足，您的進度可能會丟失！</string>
     <string name="TitleScene_Mods">模組</string>
     <string name="TitleScene_Play">開始遊戲</string>
+    <string name="TitleScene_PlayOnPC">在PC上遊玩</string>
     <string name="TomeOfKnowledge_Info">這古老的書卷充滿了神秘的謎語和謎團！它可能很難讀通，但如果您破譯了他得含意，它將引領你提升魔力等級。</string>
     <string name="TomeOfKnowledge_Name">知識巨著</string>
     <string name="TomeOfMastery_ACRead">閱讀</string>
@@ -2389,7 +2400,7 @@
     <string name="Wand_Wood_Types_2">\&quot;烏木\&quot;</string>
     <string name="Wand_Wood_Types_3">\&quot;櫻桃\&quot;</string>
     <string name="Wand_Wood_Types_4">\&quot;柚木\&quot;</string>
-    <string name="Wand_Wood_Types_5">\&quot;花楸\&quot;</string>
+    <string name="Wand_Wood_Types_5">花楸</string>
     <string name="Wand_Wood_Types_6">\&quot;柳\&quot;</string>
     <string name="Wand_Wood_Types_7">\&quot;桃花心木\&quot;</string>
     <string name="Wand_Wood_Types_8">\&quot;竹\&quot;</string>
@@ -2476,6 +2487,7 @@
     <string name="WndCryptoDonate_ethereum">以太坊</string>
     <string name="WndCryptoDonate_infoText">您可以通過將加密貨幣捐贈發送到以下地址來支持 Remixed Dungeon 的開發。感謝您的慷慨支持！</string>
     <string name="WndCryptoDonate_openWallet">Open Wallet</string>
+    <string name="WndCryptoDonate_supportDev">支援開發者</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">錢包地址</string>
@@ -2795,6 +2807,7 @@
     <string name="town_deco_INN_sign_name">酒館招牌</string>
     <string name="town_deco_armoronhanger_desc">一些不同樣式的盔甲掛在盔甲架上。</string>
     <string name="town_deco_armoronhanger_name">盔甲</string>
+    <string name="town_deco_armorstand_leather_desc">可靠的皮革護甲將是進入地牢前的絕佳購買。</string>
     <string name="town_deco_armorstand_leather_name">皮革護甲</string>
     <string name="town_deco_armorstand_plate_desc">據商人說，這套重型板甲曾經屬於一位偉大的戰士。</string>
     <string name="town_deco_armorstand_plate_name">板甲</string>
@@ -3000,6 +3013,7 @@
     <string name="town_deco_tree_name">樹</string>
     <string name="town_deco_urn_desc">陶製骨灰罈，也許裝著某人的骨灰。</string>
     <string name="town_deco_urn_name">陶罐</string>
+    <string name="town_deco_vat_desc">這個石缸裝滿了聖水。</string>
     <string name="town_deco_vat_name">大桶</string>
     <string name="town_deco_wall_beam_desc">為建築物提供可靠的支持力。</string>
     <string name="town_deco_wall_beam_name">梁</string>
@@ -3035,203 +3049,6 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </resources>

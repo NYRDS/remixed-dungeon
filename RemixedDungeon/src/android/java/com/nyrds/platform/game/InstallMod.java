@@ -92,8 +92,9 @@ public class InstallMod extends RemixedDungeon implements UnzipStateListener {
 
         Uri data = intent.getData();
 
-        if(data==null) {
+        if(data==null ) {
             shutdown();
+            return;
         }
 
         toast("Checking %s", String.valueOf(data.getPath()));

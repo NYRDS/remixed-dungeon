@@ -57,6 +57,7 @@ public enum Icons {
     FB,
     TG,
     DISCORD,
+    VK_PLAY,
     PLUS,
     MINUS,
     FACILITATIONS_ON,
@@ -228,6 +229,9 @@ public enum Icons {
                 break;
             case DISCORD:
                 icon.frame(icon.texture.uvRect(45, 94, 61, 110));
+                break;
+            case VK_PLAY:
+                icon.frame(icon.texture.uvRect(112, 112, 128, 128));
                 break;
             case PLUS:
                 icon.frame(icon.texture.uvRect(14, 114, 22, 122));

@@ -85,6 +85,7 @@ import com.watabou.utils.SystemTime;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -1177,6 +1178,12 @@ public class Hero extends Char {
     }
 
     @Override
+    @NotNull
+    public Set<Belongings.Slot> getAvailableEquipmentSlots() {
+        return EnumSet.of(Belongings.Slot.WEAPON, Belongings.Slot.ARMOR,
+                Belongings.Slot.LEFT_HAND, Belongings.Slot.ARTIFACT, Belongings.Slot.LEFT_ARTIFACT);
+    }
+
     public void collectAnimated(@NotNull Item item) {
         if (item.doPickUp( this )) {
             itemPickedUp(item);
