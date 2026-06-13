@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
 import com.nyrds.pixeldungeon.windows.WndHeroSpells;
 import com.nyrds.platform.input.Keys;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -25,11 +26,11 @@ public class Toolbar extends Component {
     private final Tool btnWait;
     private final Tool btnSearch;
     private final Tool btnInfo;
-    private final Tool btnPetInventory;
 
     @Nullable
     private final Tool btnSpells;
 
+    private final Tool btnPetInventory;
     private final InventoryTool btnInventory;
 
     private Component toolbar = new Component();
@@ -77,12 +78,50 @@ public class Toolbar extends Component {
             }
         };
 
-        // Pet inventory button - icon index 13 (paw/icon for pets)
-        btnPetInventory = new Tool(13, Chrome.Type.ACTION_BUTTON) {
+        // Pet inventory button - use same icon as inventory (index 10) but tinted for pets
+        btnPetInventory = new Tool(10, Chrome.Type.ACTION_BUTTON) {
             @Override
             protected void onClick() {
                 if (hero.isReady()) {
                     PetInventoryManager.openPetInventoryFromToolbar(hero);
+                }
+            }
+
+            @Override
+            public void layout() {
+                super.layout();
+                // Tint the icon to distinguish pet inventory from hero inventory
+                // Green tint for pets
+                if (base != null) {
+                    base.hardlight(0x44AA44);
+                }
+            }
+
+            @Override
+            protected void onTouchDown() {
+                super.onTouchDown();
+                if (base != null) {
+                    base.hardlight(0x66CC66);
+                }
+            }
+
+            @Override
+            protected void onTouchUp() {
+                super.onTouchUp();
+                if (base != null) {
+                    base.hardlight(0x44AA44);
+                }
+            }
+
+            @Override
+            public void enable(boolean value) {
+                super.enable(value);
+                if (base != null) {
+                    if (value) {
+                        base.hardlight(0x44AA44);
+                    } else {
+                        base.tint(0x7B8073, 0.7f);
+                    }
                 }
             }
         };
@@ -146,16 +185,16 @@ public class Toolbar extends Component {
         actionBox.add(btnWait);
         actionBox.add(btnSearch);
         actionBox.add(btnInfo);
-        
-        // Add pet inventory button if hero has pets
-        if (PetInventoryManager.hasPets(hero)) {
-            actionBox.add(btnPetInventory);
-        }
         actionBox.setAlign(VBox.Align.Bottom);
 
         VHBox inventoryBox = new VHBox(width());
         if (hero.isSpellUser()) {
             inventoryBox.add(btnSpells);
+        }
+        
+        // Add pet inventory button next to hero inventory if hero has pets
+        if (PetInventoryManager.hasPets(hero)) {
+            inventoryBox.add(btnPetInventory);
         }
         inventoryBox.add(btnInventory);
         inventoryBox.setAlign(VBox.Align.Bottom);
