@@ -2685,7 +2685,7 @@ public class DebugEndpoints {
             response.put("count", warehouseRooms.size());
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                new com.google.gson.Gson().toJson(response));
+                new JSONObject(response).toString());
         } catch (Exception e) {
             GLog.w("Error in handleDebugGetWarehouseRooms: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
