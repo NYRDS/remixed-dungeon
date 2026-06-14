@@ -2,6 +2,7 @@ pluginManagement {
     repositories {
         mavenLocal() // Check your local Maven repository first
         gradlePluginPortal() // Then check the Gradle Plugin Portal
+        maven { url "https://teavm.org/maven/repository/" } // TeaVM plugin repository
     }
 }
 

@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    // xvik plugin not on plugin portal, use official teavm plugin
+    // Official TeaVM plugin
     id 'org.teavm' version '0.14.1'
 }
 
@@ -83,7 +83,32 @@ repositories {
     maven { url "https://jitpack.io" } // For gdx-teavm
 }
 
+configurations.all {
+    resolutionStrategy {
+        force 'org.teavm:teavm-classlib:0.14.1'
+        force 'org.teavm:teavm-core:0.14.1'
+        force 'org.teavm:teavm-tooling:0.14.1'
+        force 'org.teavm:teavm-interop:0.14.1'
+        force 'org.teavm:teavm-jso-apis:0.14.1'
+        force 'org.teavm:teavm-jso:0.14.1'
+        force 'org.teavm:teavm-jso-impl:0.14.1'
+        force 'org.teavm:teavm-relocated-libs-asm:0.14.1'
+        force 'org.teavm:teavm-relocated-libs-asm-tree:0.14.1'
+        force 'org.teavm:teavm-relocated-libs-asm-commons:0.14.1'
+        force 'org.teavm:teavm-relocated-libs-asm-util:0.14.1'
+        force 'org.teavm:teavm-relocated-libs-asm-analysis:0.14.1'
+        force 'org.teavm:teavm-relocated-libs-hppc:0.14.1'
+        force 'org.teavm:teavm-relocated-libs-rhino:0.14.1'
+        force 'org.teavm:teavm-relocated-libs-commons-io:0.14.1'
+        force 'org.teavm:teavm-metaprogramming-api:0.14.1'
+    }
+}
+
 configurations {
+    // Add all runtime dependencies to teavm configuration for TeaVM compilation
+    teavm {
+        extendsFrom runtimeClasspath
+    }
     teavmClasspath {
         resolutionStrategy {
             exclude group: 'org.teavm', module: 'teavm-extension-spi'
@@ -125,7 +150,10 @@ dependencies {
     implementation "org.teavm:teavm-relocated-libs-asm-tree:$teaVmVersion"
     implementation "org.teavm:teavm-relocated-libs-asm-commons:$teaVmVersion"
     implementation "org.teavm:teavm-relocated-libs-hppc:$teaVmVersion"
-
+    
+    // Platform module for metadata generation
+    implementation "org.teavm:teavm-platform:$teaVmVersion"
+    
     compileOnly "org.teavm:teavm-core:$teaVmVersion"
     annotationProcessor "org.teavm:teavm-core:$teaVmVersion"
     
@@ -133,8 +161,8 @@ dependencies {
     teavmClasspath files('/tmp/supplemental-classlib/supplemental-classlib.jar')
 }
 
-// TeaVM configuration (TeaVM 0.14.1 official DSL)
-// Dependencies from the 'dependencies' block are automatically included
+// TeaVM configuration (official TeaVM 0.14.1 DSL)
+// Dependencies from the 'teavm' configuration are automatically included
 teavm {
     js {
         mainClass = 'com.nyrds.platform.app.client.TeaVMLauncher'
@@ -149,4 +177,35 @@ teavm {
 tasks.matching { it.name.startsWith('teavm') }.configureEach {
     dependsOn compileJava
     dependsOn ':processor:compileJava'
+}
+
+// Custom TeaVM compilation task using TeaVMRunner
+// This runs TeaVMTool directly with the teavm configuration classpath
+tasks.register('compileTeavmApp', JavaExec) {
+    dependsOn compileJava
+    dependsOn ':processor:compileJava'
+    
+    mainClass = 'com.nyrds.teavm.TeaVMRunner'
+    classpath = configurations.teavm + sourceSets.main.output
+    
+    // Arguments: mainClass, targetDir, targetFileName, classpath, sourcePath, reflectionEnabled
+    args = [
+        'com.nyrds.platform.app.client.TeaVMLauncher',
+        "${buildDir}/teavm-output",
+        'teavm-app.js',
+        configurations.teavm.collect { it.absolutePath }.join(File.pathSeparator),
+        sourceSets.main.java.srcDirs.collect { it.absolutePath }.join(File.pathSeparator),
+        'true'
+    ]
+    
+    jvmArgs = ['-Xmx2g']
+    
+    doLast {
+        // Copy output to standard location for consistency
+        copy {
+            from "${buildDir}/teavm-output"
+            into "${buildDir}/teavm"
+            include 'teavm-app.js'
+        }
+    }
 }
