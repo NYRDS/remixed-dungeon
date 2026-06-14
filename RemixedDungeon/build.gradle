@@ -136,7 +136,6 @@ dependencies {
 
     annotationProcessor project(':processor')
 
-    implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'org.luaj:luaj-jse:3.0.1'
     implementation 'info.guardianproject.netcipher:netcipher:2.1.0'
     implementation 'org.hjson:hjson:3.1.0'

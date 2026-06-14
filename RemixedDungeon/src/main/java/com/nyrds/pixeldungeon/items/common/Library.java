@@ -1,7 +1,5 @@
 package com.nyrds.pixeldungeon.items.common;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
@@ -18,10 +16,14 @@ import com.watabou.pixeldungeon.windows.WndChar;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.OutputStream;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import lombok.SneakyThrows;
@@ -40,8 +42,6 @@ public class Library {
     private final static String LIBRARY_FILE = "library.json";
     private static boolean saveNeeded = false;
 
-    private static final Gson gson = new Gson();
-
     static {
         loadLibrary();
     }
@@ -52,9 +52,9 @@ public class Library {
             return;
         }
         saveNeeded = false;
-        gson.toJson(mKnowledgeLevel);
+        JSONObject json = knowledgeMapToJson(mKnowledgeLevel);
         OutputStream output = FileSystem.getOutputStream(getLibraryFile());
-        output.write(gson.toJson(mKnowledgeLevel).getBytes());
+        output.write(json.toString(2).getBytes());
         output.close();
     }
 
@@ -62,10 +62,8 @@ public class Library {
     private static void loadOldLibrary() {
         try {
             if (FileSystem.getInternalStorageFile(LIBRARY_FILE).exists()) {
-                mKnowledgeLevel = gson.fromJson(
-                        JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE), LIBRARY_FILE).toString(),
-                        new TypeToken<Map<String, Map<String, Integer>>>() {
-                        }.getType());
+                JSONObject json = JsonHelper.readJsonFromStream(FileSystem.getInputStream(LIBRARY_FILE), LIBRARY_FILE);
+                mKnowledgeLevel = jsonToKnowledgeMap(json);
             }
         } catch (Exception e) {
             EventCollector.logException(e, "library restore failed");
@@ -77,15 +75,44 @@ public class Library {
         try {
             String libraryFile = getLibraryFile();
             if (FileSystem.getInternalStorageFile(libraryFile).exists()) {
-                mKnowledgeLevel = gson.fromJson(
-                        JsonHelper.readJsonFromStream(FileSystem.getInputStream(libraryFile), libraryFile).toString(),
-                        new TypeToken<Map<String, Map<String, Integer>>>() {
-                        }.getType()
-                );
+                JSONObject json = JsonHelper.readJsonFromStream(FileSystem.getInputStream(libraryFile), libraryFile);
+                mKnowledgeLevel = jsonToKnowledgeMap(json);
             }
         } catch (Exception e) {
             loadOldLibrary();
         }
+    }
+
+    @SneakyThrows
+    private static JSONObject knowledgeMapToJson(Map<String, Map<String, Integer>> map) {
+        JSONObject root = new JSONObject();
+        for (Map.Entry<String, Map<String, Integer>> categoryEntry : map.entrySet()) {
+            JSONObject categoryObj = new JSONObject();
+            for (Map.Entry<String, Integer> itemEntry : categoryEntry.getValue().entrySet()) {
+                categoryObj.put(itemEntry.getKey(), itemEntry.getValue());
+            }
+            root.put(categoryEntry.getKey(), categoryObj);
+        }
+        return root;
+    }
+
+    private static Map<String, Map<String, Integer>> jsonToKnowledgeMap(JSONObject json) {
+        Map<String, Map<String, Integer>> map = new HashMap<>();
+        Iterator<String> categoryKeys = json.keys();
+        while (categoryKeys.hasNext()) {
+            String category = categoryKeys.next();
+            JSONObject categoryObj = json.optJSONObject(category);
+            if (categoryObj != null) {
+                Map<String, Integer> categoryMap = new HashMap<>();
+                Iterator<String> itemKeys = categoryObj.keys();
+                while (itemKeys.hasNext()) {
+                    String item = itemKeys.next();
+                    categoryMap.put(item, categoryObj.optInt(item, 0));
+                }
+                map.put(category, categoryMap);
+            }
+        }
+        return map;
     }
 
     static public void identify(String category, String clazz) {
