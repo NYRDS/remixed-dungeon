@@ -442,6 +442,7 @@ Ein blutroter Helm ist ein wesentliches Symbol eines Chaos Kriegers.</string>
     <string name="CharAction_Give">geben</string>
     <string name="CharAction_Hit">schlagen</string>
     <string name="CharAction_Order">befehlen</string>
+    <string name="CharAction_PetInventory">Inventar</string>
     <string name="CharAction_Push">stoßen</string>
     <string name="CharAction_Scare">erschrecken</string>
     <string name="CharAction_Steal">stehlen</string>
@@ -1508,6 +1509,20 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="ParalyticGas_Info">Eine Wolke lähmendes Gas wirbelt hier. </string>
     <string name="Pasty_Info">Dies ist eine Fleischpastete gefüllt mit Rindfleisch und Kartoffeln.</string>
     <string name="Pasty_Name">Pastete</string>
+    <string name="PetInventory_ACGiveToPet">AN TIER GEBEN</string>
+    <string name="PetInventory_ACTakeFromPet">VOM TIER NEHMEN</string>
+    <string name="PetInventory_CantGiveEquipped">Kann angelegtes Item nicht geben</string>
+    <string name="PetInventory_GaveItem">%1$s an %2$s gegeben</string>
+    <string name="PetInventory_GiveN">Geben %d</string>
+    <string name="PetInventory_GiveToPet">An Tier geben</string>
+    <string name="PetInventory_HeroBackpackFull">Dein Rucksack ist voll</string>
+    <string name="PetInventory_PetBackpackFull">Tierrucksack ist voll</string>
+    <string name="PetInventory_TakeFromPet">Vom Tier nehmen</string>
+    <string name="PetInventory_TakeN">Nehmen %d</string>
+    <string name="PetInventory_Title">Tierinventar</string>
+    <string name="PetInventory_TooFar">Zu weit vom Tier entfernt</string>
+    <string name="PetInventory_TookItem">%1$s von %2$s genommen</string>
+    <string name="PetInventory_ViewManage">Verwalten</string>
     <string name="Pickaxe_ACMine">ABBAUEN</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Dies ist ein großes und stabiles Werkzeug, um Steine zu zerbrechen. Es kann auch als Waffe genutzt werden.</string>
@@ -2583,6 +2598,8 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WndMovieTheatre_Thank_You">Danke, dass du teilgenommen hast!</string>
     <string name="WndMovieTheatre_Title">Kino</string>
     <string name="WndMovieTheatre_Watch">Werbung ansehen</string>
+    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">Tier auswählen</string>
     <string name="WndPlayGames_BackupProgress">Sichere Spielfortschritt</string>
     <string name="WndPlayGames_Connecting">Verbinde zu Google Play Spiele...</string>
     <string name="WndPlayGames_RestoreProgress">Lade Spielfortschritt</string>
@@ -3023,6 +3040,23 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -436,6 +436,7 @@
     <string name="CharAction_Give">beri</string>
     <string name="CharAction_Hit">memukul</string>
     <string name="CharAction_Order">perintah</string>
+    <string name="CharAction_PetInventory">inventori</string>
     <string name="CharAction_Push">tolak</string>
     <string name="CharAction_Scare">menakut-nakuti</string>
     <string name="CharAction_Steal">curi</string>
@@ -1497,6 +1498,20 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="ParalyticGas_Info">Awan gas kelumpuhan berpusaran di sini.</string>
     <string name="Pasty_Info">Pai Cornwall asli ini mengandungi inti tradisi daging dan ubi kentang.</string>
     <string name="Pasty_Name">pai</string>
+    <string name="PetInventory_ACGiveToPet">BERI KEPADA HAIWAN PELIHARAAN</string>
+    <string name="PetInventory_ACTakeFromPet">AMBIL DARI HAIWAN PELIHARAAN</string>
+    <string name="PetInventory_CantGiveEquipped">Tidak boleh memberi item yang dilengkapi</string>
+    <string name="PetInventory_GaveItem">Memberi %1$s kepada %2$s</string>
+    <string name="PetInventory_GiveN">Beri %d</string>
+    <string name="PetInventory_GiveToPet">Beri kepada haiwan peliharaan</string>
+    <string name="PetInventory_HeroBackpackFull">Beg ransel anda penuh</string>
+    <string name="PetInventory_PetBackpackFull">Beg ransel haiwan peliharaan penuh</string>
+    <string name="PetInventory_TakeFromPet">Ambil dari haiwan peliharaan</string>
+    <string name="PetInventory_TakeN">Ambil %d</string>
+    <string name="PetInventory_Title">Inventori haiwan peliharaan</string>
+    <string name="PetInventory_TooFar">Terlalu jauh dari haiwan peliharaan</string>
+    <string name="PetInventory_TookItem">Mengambil %1$s dari %2$s</string>
+    <string name="PetInventory_ViewManage">Urus</string>
     <string name="Pickaxe_ACMine">MELOMBONG</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Alat bersaiz besar dan tegap ini digunakan untuk memecahkan batu. Ia juga boleh digunakan sebagai senjata.</string>
@@ -2567,6 +2582,8 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="WndMovieTheatre_Thank_You">Terima kasih atas sumbangan anda!</string>
     <string name="WndMovieTheatre_Title">Panggung Wayang</string>
     <string name="WndMovieTheatre_Watch">tonton iklan</string>
+    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">Pilih haiwan peliharaan</string>
     <string name="WndPlayGames_BackupProgress">Sandar Kemajuan Permainan</string>
     <string name="WndPlayGames_Connecting">Menyambung ke Permainan Google Play, sila tunggu sebentar</string>
     <string name="WndPlayGames_RestoreProgress">Pulihkan Kemajuan Permainan</string>
@@ -3005,6 +3022,23 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

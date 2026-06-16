@@ -437,6 +437,7 @@
     <string name="CharAction_Give">給</string>
     <string name="CharAction_Hit">擊打</string>
     <string name="CharAction_Order">命令</string>
+    <string name="CharAction_PetInventory">背包</string>
     <string name="CharAction_Push">推</string>
     <string name="CharAction_Scare">嚇唬</string>
     <string name="CharAction_Steal">偷</string>
@@ -1517,6 +1518,20 @@
     <string name="ParalyticGas_Info">麻庳氣體在該處飄浮著。</string>
     <string name="Pasty_Info">這是個正宗康沃爾餡餅，裏面填滿了傳統的牛肉和土豆餡料。</string>
     <string name="Pasty_Name">餡餅</string>
+    <string name="PetInventory_ACGiveToPet">給寵物</string>
+    <string name="PetInventory_ACTakeFromPet">從寵物拿取</string>
+    <string name="PetInventory_CantGiveEquipped">無法給予已裝備的物品</string>
+    <string name="PetInventory_GaveItem">給了 %1$s 給 %2$s</string>
+    <string name="PetInventory_GiveN">給予 %d</string>
+    <string name="PetInventory_GiveToPet">給寵物</string>
+    <string name="PetInventory_HeroBackpackFull">你的背包滿了</string>
+    <string name="PetInventory_PetBackpackFull">寵物的背包滿了</string>
+    <string name="PetInventory_TakeFromPet">從寵物拿取</string>
+    <string name="PetInventory_TakeN">拿取 %d</string>
+    <string name="PetInventory_Title">寵物背包</string>
+    <string name="PetInventory_TooFar">離寵物太遠</string>
+    <string name="PetInventory_TookItem">從 %2$s 拿取了 %1$s</string>
+    <string name="PetInventory_ViewManage">管理</string>
     <string name="Pickaxe_ACMine">挖礦</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">這確是件大型且穩健的掘石工具，也可以當作武器使用。</string>
@@ -2608,6 +2623,8 @@
     <string name="WndMovieTheatre_Thank_You">感謝您的參與！</string>
     <string name="WndMovieTheatre_Title">戲院</string>
     <string name="WndMovieTheatre_Watch">觀看廣告</string>
+    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">選擇寵物</string>
     <string name="WndPlayGames_BackupProgress">備份遊戲進程</string>
     <string name="WndPlayGames_Connecting">正在連線到 Google Play Games, 請閣下稍等...</string>
     <string name="WndPlayGames_RestoreProgress">恢復遊戲進程</string>
@@ -3049,6 +3066,23 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </resources>

@@ -449,6 +449,7 @@
     <string name="CharAction_Give">дати</string>
     <string name="CharAction_Hit">вдарити</string>
     <string name="CharAction_Order">наказ</string>
+    <string name="CharAction_PetInventory">інвентар</string>
     <string name="CharAction_Push">штовхнути</string>
     <string name="CharAction_Scare">налякати</string>
     <string name="CharAction_Steal">викрасти</string>
@@ -1529,6 +1530,20 @@
     <string name="ParalyticGas_Info">Тут крутиться хмара з паралітичним газом.</string>
     <string name="Pasty_Info">Це традиційний Корнуоллський пиріг з начинкою яловичини і картоплі</string>
     <string name="Pasty_Name">пиріг з м\'ясом</string>
+    <string name="PetInventory_ACGiveToPet">ДАТИ УЛЮБЛЕНЦЮ</string>
+    <string name="PetInventory_ACTakeFromPet">ЗАБРАТИ В УЛЮБЛЕНЦЯ</string>
+    <string name="PetInventory_CantGiveEquipped">Не можна дати одягнений предмет</string>
+    <string name="PetInventory_GaveItem">Дав %1$s улюбленцю %2$s</string>
+    <string name="PetInventory_GiveN">Дати %d</string>
+    <string name="PetInventory_GiveToPet">Дати улюбленцю</string>
+    <string name="PetInventory_HeroBackpackFull">Ваш рюкзак повний</string>
+    <string name="PetInventory_PetBackpackFull">Рюкзак улюбленця повний</string>
+    <string name="PetInventory_TakeFromPet">Забрати у улюбленця</string>
+    <string name="PetInventory_TakeN">Забрати %d</string>
+    <string name="PetInventory_Title">Інвентар улюбленця</string>
+    <string name="PetInventory_TooFar">Задалеко від улюбленця</string>
+    <string name="PetInventory_TookItem">Взяв %1$s у %2$s</string>
+    <string name="PetInventory_ViewManage">Керувати</string>
     <string name="Pickaxe_ACMine">ДОБУТИ</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Це великий та міцний інструмент для розколювання каміння. Як зброю теж можна використовувати.</string>
@@ -2618,6 +2633,8 @@
     <string name="WndMovieTheatre_Thank_You">Дякуємо за участь!</string>
     <string name="WndMovieTheatre_Title">Кінотеатр</string>
     <string name="WndMovieTheatre_Watch">Переглянути рекламу</string>
+    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">Виберіть улюбленця</string>
     <string name="WndPlayGames_BackupProgress">Зберегти ігровий поступ</string>
     <string name="WndPlayGames_Connecting">Підключення до Google Play Ігри, будь ласка, зачекайте</string>
     <string name="WndPlayGames_RestoreProgress">Відновити ігровий поступ</string>
@@ -3060,6 +3077,23 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

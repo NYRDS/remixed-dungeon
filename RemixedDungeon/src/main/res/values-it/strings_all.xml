@@ -440,6 +440,7 @@
     <string name="CharAction_Give">dare</string>
     <string name="CharAction_Hit">colpo</string>
     <string name="CharAction_Order">ordinare</string>
+    <string name="CharAction_PetInventory">inventario</string>
     <string name="CharAction_Push">spingere</string>
     <string name="CharAction_Scare">spaventare</string>
     <string name="CharAction_Steal">rubare</string>
@@ -1499,6 +1500,20 @@ Potrebbe bruciare?</string>
     <string name="ParalyticGas_Info">Una nube di gas paralizzante sta vorticando qua.</string>
     <string name="Pasty_Info">Questo è un\'autentico pasticcio della Cornovaglia col ripieno tradizionale di carne e patate.</string>
     <string name="Pasty_Name">pasticcio</string>
+    <string name="PetInventory_ACGiveToPet">DAI AL PET</string>
+    <string name="PetInventory_ACTakeFromPet">PRENDI DAL PET</string>
+    <string name="PetInventory_CantGiveEquipped">Impossibile dare oggetto equipaggiato</string>
+    <string name="PetInventory_GaveItem">Hai dato %1$s a %2$s</string>
+    <string name="PetInventory_GiveN">Dai %d</string>
+    <string name="PetInventory_GiveToPet">Dai al pet</string>
+    <string name="PetInventory_HeroBackpackFull">Il tuo zaino è pieno</string>
+    <string name="PetInventory_PetBackpackFull">Lo zaino del pet è pieno</string>
+    <string name="PetInventory_TakeFromPet">Prendi dal pet</string>
+    <string name="PetInventory_TakeN">Prendi %d</string>
+    <string name="PetInventory_Title">Inventario del pet</string>
+    <string name="PetInventory_TooFar">Troppo lontano dal pet</string>
+    <string name="PetInventory_TookItem">Hai preso %1$s da %2$s</string>
+    <string name="PetInventory_ViewManage">Gestisci</string>
     <string name="Pickaxe_ACMine">ESTRAI</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Questo è un grosso e resistente attrezzo per spaccare pietre. Probabilmente può venir usato come arma.</string>
@@ -2588,6 +2603,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="WndMovieTheatre_Thank_You">Grazie per la tua partecipazione!</string>
     <string name="WndMovieTheatre_Title">Cinema</string>
     <string name="WndMovieTheatre_Watch">guarda un annuncio</string>
+    <string name="WndPetSelect_HP">PV: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">Seleziona pet</string>
     <string name="WndPlayGames_BackupProgress">Salvare la progressione del gioco</string>
     <string name="WndPlayGames_Connecting">Connessione a Google Play Games, prego attendere</string>
     <string name="WndPlayGames_RestoreProgress">Ripristina il Progresso di Gioco</string>
@@ -3026,6 +3043,23 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

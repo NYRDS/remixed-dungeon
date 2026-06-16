@@ -436,6 +436,7 @@
     <string name="CharAction_Give">donner</string>
     <string name="CharAction_Hit">frapper</string>
     <string name="CharAction_Order">commander</string>
+    <string name="CharAction_PetInventory">inventaire</string>
     <string name="CharAction_Push">pousser</string>
     <string name="CharAction_Scare">effrayer</string>
     <string name="CharAction_Steal">voler</string>
@@ -1503,6 +1504,20 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="ParalyticGas_Info">Un nuage de gaz paralysant flotte ici</string>
     <string name="Pasty_Info">L\'authentique pâté en croute de Cornouailles, avec sa farce traditionnelle de boeuf et de pommes de terre. </string>
     <string name="Pasty_Name">pâté en croute</string>
+    <string name="PetInventory_ACGiveToPet">DONNER À L\'ANIMAL</string>
+    <string name="PetInventory_ACTakeFromPet">PRENDRE À L\'ANIMAL</string>
+    <string name="PetInventory_CantGiveEquipped">Impossible de donner un objet équipé</string>
+    <string name="PetInventory_GaveItem">Donné %1$s à %2$s</string>
+    <string name="PetInventory_GiveN">Donner %d</string>
+    <string name="PetInventory_GiveToPet">Donner à l\'animal</string>
+    <string name="PetInventory_HeroBackpackFull">Votre sac est plein</string>
+    <string name="PetInventory_PetBackpackFull">Le sac de l\'animal est plein</string>
+    <string name="PetInventory_TakeFromPet">Prendre à l\'animal</string>
+    <string name="PetInventory_TakeN">Prendre %d</string>
+    <string name="PetInventory_Title">Inventaire de l\'animal</string>
+    <string name="PetInventory_TooFar">Trop loin de l\'animal</string>
+    <string name="PetInventory_TookItem">Pris %1$s à %2$s</string>
+    <string name="PetInventory_ViewManage">Gérer</string>
     <string name="Pickaxe_ACMine">MINER</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">C\'est un outil grand et robuste fait pour casser la pierre. Il pourrait peut-être servir d\'arme.</string>
@@ -2606,6 +2621,8 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="WndMovieTheatre_Thank_You">Merci de votre participation !</string>
     <string name="WndMovieTheatre_Title">Salle de cinéma</string>
     <string name="WndMovieTheatre_Watch">Regarder une publicité</string>
+    <string name="WndPetSelect_HP">PV: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">Sélectionner l\'animal</string>
     <string name="WndPlayGames_BackupProgress">Sauvegarder la progression du jeu</string>
     <string name="WndPlayGames_Connecting">Connexion à Google Play Games, veuillez attendre un peu</string>
     <string name="WndPlayGames_RestoreProgress">Restaurer la progression du jeu</string>
@@ -3046,6 +3063,31 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

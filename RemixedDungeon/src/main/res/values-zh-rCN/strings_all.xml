@@ -434,6 +434,7 @@
     <string name="CharAction_Give">给</string>
     <string name="CharAction_Hit">击打</string>
     <string name="CharAction_Order">命令</string>
+    <string name="CharAction_PetInventory">背包</string>
     <string name="CharAction_Push">推</string>
     <string name="CharAction_Scare">恐惧</string>
     <string name="CharAction_Steal">偷</string>
@@ -1499,6 +1500,20 @@
     <string name="ParalyticGas_Info">这里盘踞着一片麻痹气体</string>
     <string name="Pasty_Info">这是块正宗康沃尔馅饼，里面填满了传统的牛肉和土豆馅料。</string>
     <string name="Pasty_Name">馅饼</string>
+    <string name="PetInventory_ACGiveToPet">给宠物</string>
+    <string name="PetInventory_ACTakeFromPet">从宠物拿取</string>
+    <string name="PetInventory_CantGiveEquipped">无法给予已装备的物品</string>
+    <string name="PetInventory_GaveItem">给了 %1$s 给 %2$s</string>
+    <string name="PetInventory_GiveN">给予 %d</string>
+    <string name="PetInventory_GiveToPet">给宠物</string>
+    <string name="PetInventory_HeroBackpackFull">你的背包已满了</string>
+    <string name="PetInventory_PetBackpackFull">宠物的背包满了</string>
+    <string name="PetInventory_TakeFromPet">从宠物拿取</string>
+    <string name="PetInventory_TakeN">拿取 %d</string>
+    <string name="PetInventory_Title">宠物背包</string>
+    <string name="PetInventory_TooFar">离宠物太远</string>
+    <string name="PetInventory_TookItem">从 %2$s 拿取了 %1$s</string>
+    <string name="PetInventory_ViewManage">管理</string>
     <string name="Pickaxe_ACMine">挖矿</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">这确实是件巨大又可靠的掘石工具。应该也能当武器用。</string>
@@ -2584,6 +2599,8 @@ remix.31.1\n
     <string name="WndMovieTheatre_Thank_You">感谢你的参与！</string>
     <string name="WndMovieTheatre_Title">戏院</string>
     <string name="WndMovieTheatre_Watch">观看广告</string>
+    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">选择宠物</string>
     <string name="WndPlayGames_BackupProgress">备份游戏进程</string>
     <string name="WndPlayGames_Connecting">正在连线到Google Play游戏， 请阁下稍等……</string>
     <string name="WndPlayGames_RestoreProgress">恢复游戏进程</string>
@@ -3023,6 +3040,23 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

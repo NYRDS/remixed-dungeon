@@ -440,6 +440,7 @@
     <string name="CharAction_Give">dar</string>
     <string name="CharAction_Hit">golpear</string>
     <string name="CharAction_Order">pedir</string>
+    <string name="CharAction_PetInventory">inventario</string>
     <string name="CharAction_Push">empujar</string>
     <string name="CharAction_Scare">asustar</string>
     <string name="CharAction_Steal">robar</string>
@@ -1506,6 +1507,20 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="ParalyticGas_Info">Una nube de gas paralizante esta flota en el aire.</string>
     <string name="Pasty_Info">Esto es una autentica empanada con el tradicional relleno de carne y patata.</string>
     <string name="Pasty_Name">empanada</string>
+    <string name="PetInventory_ACGiveToPet">DAR A MASCOTA</string>
+    <string name="PetInventory_ACTakeFromPet">QUITAR DE MASCOTA</string>
+    <string name="PetInventory_CantGiveEquipped">No se puede dar objeto equipado</string>
+    <string name="PetInventory_GaveItem">Diste %1$s a %2$s</string>
+    <string name="PetInventory_GiveN">Dar %d</string>
+    <string name="PetInventory_GiveToPet">Dar a mascota</string>
+    <string name="PetInventory_HeroBackpackFull">Tu mochila está llena</string>
+    <string name="PetInventory_PetBackpackFull">La mochila de la mascota está llena</string>
+    <string name="PetInventory_TakeFromPet">Quitar de mascota</string>
+    <string name="PetInventory_TakeN">Quitar %d</string>
+    <string name="PetInventory_Title">Inventario de mascota</string>
+    <string name="PetInventory_TooFar">Demasiado lejos de la mascota</string>
+    <string name="PetInventory_TookItem">Quitaste %1$s de %2$s</string>
+    <string name="PetInventory_ViewManage">Gestionar</string>
     <string name="Pickaxe_ACMine">EXTRAER</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Esto es una herramienta grande y robusta para romper rocas. Probablemente pueda usarse como arma. </string>
@@ -2596,6 +2611,8 @@ otro lugar del nivel.</string>
     <string name="WndMovieTheatre_Thank_You">¡Gracias por tu participación!</string>
     <string name="WndMovieTheatre_Title">Cine</string>
     <string name="WndMovieTheatre_Watch">¿ver un anuncio?.</string>
+    <string name="WndPetSelect_HP">PS: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">Seleccionar mascota</string>
     <string name="WndPlayGames_BackupProgress">Respaldo del progreso del juego</string>
     <string name="WndPlayGames_Connecting">Conectando a Google Play Juegos, por favor espere un momento.</string>
     <string name="WndPlayGames_RestoreProgress">Restaurar el progreso del juego</string>
@@ -3034,6 +3051,23 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

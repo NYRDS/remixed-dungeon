@@ -435,6 +435,7 @@
     <string name="CharAction_Give">Δώσε</string>
     <string name="CharAction_Hit">Χτύπημα</string>
     <string name="CharAction_Order">Διαταγή</string>
+    <string name="CharAction_PetInventory">αποθήκη</string>
     <string name="CharAction_Push">Σπρωξιά</string>
     <string name="CharAction_Scare">Τρόμαγμα</string>
     <string name="CharAction_Steal">Κλοπή</string>
@@ -1499,6 +1500,20 @@
     <string name="ParalyticGas_Info">Ένα νέφος παραλυτικού αερίου στροβιλίζεται εδώ.</string>
     <string name="Pasty_Info">Μια αυθεντική Κορνουαλική πίτα με παραδοσιακή γέμιση βοδινού και πατάτας.</string>
     <string name="Pasty_Name">πίτα</string>
+    <string name="PetInventory_ACGiveToPet">ΔΩΣΕ ΣΤΟ ΠΕΤ</string>
+    <string name="PetInventory_ACTakeFromPet">ΠΑΡΕ ΑΠΟ ΤΟ ΠΕΤ</string>
+    <string name="PetInventory_CantGiveEquipped">Δεν μπορείς να δώσεις εξοπλισμένο αντικείμενο</string>
+    <string name="PetInventory_GaveItem">Έδωσες %1$s στο %2$s</string>
+    <string name="PetInventory_GiveN">Δώσε %d</string>
+    <string name="PetInventory_GiveToPet">Δώσε στο πετ</string>
+    <string name="PetInventory_HeroBackpackFull">Η σάκος σου είναι γεμάτη</string>
+    <string name="PetInventory_PetBackpackFull">Η σάκος του πετ είναι γεμάτη</string>
+    <string name="PetInventory_TakeFromPet">Πάρε από το πετ</string>
+    <string name="PetInventory_TakeN">Πάρε %d</string>
+    <string name="PetInventory_Title">Αποθήκη πετ</string>
+    <string name="PetInventory_TooFar">Πολύ μακριά από το πετ</string>
+    <string name="PetInventory_TookItem">Πήρες %1$s από το %2$s</string>
+    <string name="PetInventory_ViewManage">Διαχείριση</string>
     <string name="Pickaxe_ACMine">ΕΞΟΡΥΞΕ</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Ένα μεγάλο και στιβαρό εργαλείο για σπάσιμο βράχων. Μάλλον μπορεί να χρησιμοποιηθεί και ως όπλο.</string>
@@ -2613,6 +2628,8 @@ remix.32\n
     <string name="WndMovieTheatre_Thank_You">Ευχαριστούμε για τη συμμετοχή σου!</string>
     <string name="WndMovieTheatre_Title">Κινηματογράφος</string>
     <string name="WndMovieTheatre_Watch">Παρακολούθηση Ad</string>
+    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">Επέλεξε πετ</string>
     <string name="WndPlayGames_BackupProgress">Αντίγραφο ασφαλείας της προόδου</string>
     <string name="WndPlayGames_Connecting">Σύνδεση στο Google Play Games, παρακαλώ περιμένετε.</string>
     <string name="WndPlayGames_RestoreProgress">Ανάκτηση προόδου παιχνιδιού</string>
@@ -3051,6 +3068,24 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

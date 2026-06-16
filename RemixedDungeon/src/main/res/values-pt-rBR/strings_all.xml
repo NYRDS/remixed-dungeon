@@ -435,6 +435,7 @@
     <string name="CharAction_Give">dar</string>
     <string name="CharAction_Hit">acertar</string>
     <string name="CharAction_Order">ordem</string>
+    <string name="CharAction_PetInventory">inventário</string>
     <string name="CharAction_Push">Empurrar</string>
     <string name="CharAction_Scare">assustar</string>
     <string name="CharAction_Steal">roubar</string>
@@ -1501,6 +1502,20 @@ Parede
     <string name="ParalyticGas_Info">Uma nuvem de gás paralisante paira aqui.</string>
     <string name="Pasty_Info">Este autêntico pastel de frango, com receio adicional de carne e batatas.</string>
     <string name="Pasty_Name">pastel de carne</string>
+    <string name="PetInventory_ACGiveToPet">DAR AO PET</string>
+    <string name="PetInventory_ACTakeFromPet">PEGAR DO PET</string>
+    <string name="PetInventory_CantGiveEquipped">Não pode dar item equipado</string>
+    <string name="PetInventory_GaveItem">Deu %1$s para %2$s</string>
+    <string name="PetInventory_GiveN">Dar %d</string>
+    <string name="PetInventory_GiveToPet">Dar ao pet</string>
+    <string name="PetInventory_HeroBackpackFull">Sua mochila está cheia</string>
+    <string name="PetInventory_PetBackpackFull">A mochila do pet está cheia</string>
+    <string name="PetInventory_TakeFromPet">Pegar do pet</string>
+    <string name="PetInventory_TakeN">Pegar %d</string>
+    <string name="PetInventory_Title">Inventário do pet</string>
+    <string name="PetInventory_TooFar">Muito longe do pet</string>
+    <string name="PetInventory_TookItem">Pegou %1$s de %2$s</string>
+    <string name="PetInventory_ViewManage">Gerenciar</string>
     <string name="Pickaxe_ACMine">MINERAR</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Esta é uma ferramenta grande e resistente para quebrar rochas. Provavelmente isto pode ser usado como uma arma.</string>
@@ -2605,6 +2620,8 @@ remix.31.1\n
     <string name="WndMovieTheatre_Thank_You">Obrigado pela sua participação!</string>
     <string name="WndMovieTheatre_Title">Cinema</string>
     <string name="WndMovieTheatre_Watch">assista a um anúncio</string>
+    <string name="WndPetSelect_HP">PV: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">Selecionar pet</string>
     <string name="WndPlayGames_BackupProgress">Criar backup do progresso do jogo</string>
     <string name="WndPlayGames_Connecting">Conectando ao Google Play Jogos, por favor aguarde um pouco</string>
     <string name="WndPlayGames_RestoreProgress">Restaurar progresso do jogo</string>
@@ -3043,6 +3060,23 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
