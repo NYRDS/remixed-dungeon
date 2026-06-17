@@ -8,11 +8,10 @@ import com.watabou.pixeldungeon.utils.GLog;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
 
 
 
@@ -29,19 +28,8 @@ public class XTilemapConfiguration {
 
 	private static void createTerrainMapping() {
 		if(terrainMapping.isEmpty()) {
-			for (Field f : Terrain.class.getDeclaredFields()) {
-				if (f.isSynthetic()) {
-					continue;
-				}
-				int value;
-				try {
-					value = f.getInt(null);
-				} catch (IllegalAccessException | IllegalArgumentException ignored) {
-					continue;
-				}
-				String name = f.getName();
-
-				terrainMapping.put(name, value);
+			for (Map.Entry<String, Integer> entry : TerrainMap.entries()) {
+				terrainMapping.put(entry.getKey(), entry.getValue());
 			}
 		}
 	}

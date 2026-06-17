@@ -1,0 +1,50 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'com.nyrds.pixeldungeon'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url 'https://teavm.org/maven/repository/' }
+}
+
+dependencies {
+    // teavm-classlib needed for classes like Method that we don't override
+    implementation 'org.teavm:teavm-classlib:0.16.0-dev-1'
+    implementation 'org.teavm:teavm-core:0.16.0-dev-1'
+    implementation 'org.teavm:teavm-interop:0.16.0-dev-1'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '--enable-preview'
+    options.compilerArgs << '-Xlint:unchecked'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Implementation-Title': 'TeaVM Supplemental Classlib',
+            'Implementation-Version': version,
+            'Main-Class': ''
+        )
+    }
+    // Include all compiled classes
+    from sourceSets.main.output
+}

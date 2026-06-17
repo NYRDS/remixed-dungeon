@@ -3,13 +3,12 @@ package com.watabou.pixeldungeon.utils;
 
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.ml.ResourceMap;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.noosa.InterstitialPoint;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -18,25 +17,12 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import lombok.SneakyThrows;
-
 public class Utils {
 
     public static final String UNKNOWN = "unknown";
     public static final String EMPTY_STRING = "";
     public static final String[] EMPTY_STRING_ARRAY = new String[0];
     public static final String PLATFORM_ANDROID = "android";
-
-
-    @NotNull
-    private static final Class<?> strings = getR_Field("string");
-    @NotNull
-    private static final Class<?> stringArrays = getR_Field("array");
-
-    @SneakyThrows
-    static private Class<?> getR_Field(String field) {
-        return Class.forName("com.nyrds.pixeldungeon.ml.R$" + field);
-    }
 
     public static String capitalize(String str) {
         if(str.isEmpty()) {
@@ -100,39 +86,33 @@ public class Utils {
         }
     }
 
-    @SneakyThrows
     public static String[] getClassParams(String className, String paramName, String[] defaultValues, boolean warnIfAbsent) {
-
-        if (className.isEmpty()) { // isEmpty() require api level 9
+        if (className.isEmpty()) {
             return defaultValues;
         }
 
-        try {
-            return StringsManager.getVars(stringArrays.getField(className + "_" + paramName).getInt(null));
-        } catch (NoSuchFieldException e) {
-            if (warnIfAbsent) {
-                GLog.w("no definition for  %s_%s :(", className, paramName);
-            }
+        int id = ResourceMap.get(className + "_" + paramName);
+        if (id >= 0) {
+            return StringsManager.getVars(id);
         }
-
+        if (warnIfAbsent) {
+            GLog.w("no definition for  %s_%s :(", className, paramName);
+        }
         return defaultValues;
     }
 
     public static String getClassParam(String className, String paramName, String defaultValue, boolean warnIfAbsent) {
-        if (className==null || className.isEmpty()) {
+        if (className == null || className.isEmpty()) {
             return defaultValue;
         }
 
-        try {
-            return StringsManager.getVar(strings.getField(className + "_" + paramName).getInt(null));
-        } catch (NoSuchFieldException e) {
-            if (Util.isDebug() && warnIfAbsent) {
-                GLog.w("no definition for  %s_%s :(", className, paramName);
-            }
-        } catch (Exception e) {
-            EventCollector.logException(e);
+        int id = ResourceMap.get(className + "_" + paramName);
+        if (id >= 0) {
+            return StringsManager.getVar(id);
         }
-
+        if (Util.isDebug() && warnIfAbsent) {
+            GLog.w("no definition for  %s_%s :(", className, paramName);
+        }
         return defaultValue;
     }
 
