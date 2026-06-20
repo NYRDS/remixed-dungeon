@@ -7,7 +7,7 @@ pluginManagement {
 }
 
 
-include ':processor', ':annotation', ':json_clone', ':supplemental-classlib'
+include ':processor', ':annotation', ':json_clone', ':supplemental-classlib', ':luaj'
 
 // Example project-level settings.gradle
 dependencyResolutionManagement {

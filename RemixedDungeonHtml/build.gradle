@@ -115,8 +115,7 @@ dependencies {
     // Supplemental classlib for missing JDK classes in teavm-classlib
     implementation project(':supplemental-classlib')
     
-    // luaj-jse from mavenLocal (NYRDS fork built from submodule)
-    implementation 'org.luaj:luaj-jse:3.0.2'
+    implementation project(':luaj')
     implementation 'org.hjson:hjson:3.1.0'
     implementation 'commons-io:commons-io:2.6'
     implementation 'org.jetbrains:annotations:24.1.0'
