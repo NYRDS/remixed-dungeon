@@ -1,20 +1,30 @@
-plugins {
-    id 'java'
-    // Official TeaVM plugin
-    id 'org.teavm' version '0.14.1'
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        flatDir {
+            dirs 'teavm-libs'
+        }
+    }
+    dependencies {
+        classpath 'org.teavm:teavm-gradle-plugin:0.14.0-SNAPSHOT'
+    }
 }
+
+apply plugin: 'java'
+apply plugin: 'org.teavm'
 
 project.ext {
     version = '32.3.alpha'
     version_code = 1236
-    teaVmVersion = '0.14.1'
+    teaVmVersion = '0.14.0-SNAPSHOT'
     gdxVersion = '1.12.1'
     gdxTeaVMVersion = '1.3.0'
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 sourceSets {
@@ -24,6 +34,7 @@ sourceSets {
                     'src/html/java',                    // HTML sources first (higher priority)
                     '../RemixedDungeon/src/main/java',  // Main sources second
                     'src/market_none/java',
+                    'build/generated/sources/java/main',  // Generated Lua maps
                     'build/generated/sources/annotationProcessor/java/main'
             ]
         }
@@ -45,18 +56,17 @@ tasks.register('generateBuildConfig') {
         def debug = false
         def buildConfigFile = new File("${projectDir}/src/html/java/com/nyrds/pixeldungeon/ml/BuildConfig.java")
         buildConfigFile.parentFile.mkdirs()
-        buildConfigFile.text = """
-        package com.nyrds.pixeldungeon.ml;
+        buildConfigFile.text = """package com.nyrds.pixeldungeon.ml;
 
-        public class BuildConfig {
-            public static final boolean DEBUG = ${debug};
-            public static final String SAVES_PATH = "./saves/";
-            public static final String FLAVOR_platform = "html";
-            public static final String FLAVOR_market = "vkplay";
-            public static final String VERSION_NAME = "${version}";
-            public static final int VERSION_CODE = ${version_code};
-        }
-        """
+public class BuildConfig {
+    public static final boolean DEBUG = ${debug};
+    public static final String SAVES_PATH = "./saves/";
+    public static final String FLAVOR_platform = "html";
+    public static final String FLAVOR_market = "vkplay";
+    public static final String VERSION_NAME = "${version}";
+    public static final int VERSION_CODE = ${version_code};
+}
+"""
     }
 }
 
@@ -65,6 +75,9 @@ tasks.register('codegen', Exec) {
     doLast {
         exec {
             commandLine 'python3', 'make_json.py'
+        }
+        exec {
+            commandLine 'python3', 'make_lua_maps.py'
         }
     }
 }
@@ -79,28 +92,31 @@ repositories {
     mavenCentral()
     google()
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
-    maven { url "https://teavm.org/maven/repository/" }
     maven { url "https://jitpack.io" } // For gdx-teavm
+    flatDir {
+        dirs 'teavm-libs'
+    }
 }
 
 configurations.all {
     resolutionStrategy {
-        force 'org.teavm:teavm-classlib:0.14.1'
-        force 'org.teavm:teavm-core:0.14.1'
-        force 'org.teavm:teavm-tooling:0.14.1'
-        force 'org.teavm:teavm-interop:0.14.1'
-        force 'org.teavm:teavm-jso-apis:0.14.1'
-        force 'org.teavm:teavm-jso:0.14.1'
-        force 'org.teavm:teavm-jso-impl:0.14.1'
-        force 'org.teavm:teavm-relocated-libs-asm:0.14.1'
-        force 'org.teavm:teavm-relocated-libs-asm-tree:0.14.1'
-        force 'org.teavm:teavm-relocated-libs-asm-commons:0.14.1'
-        force 'org.teavm:teavm-relocated-libs-asm-util:0.14.1'
-        force 'org.teavm:teavm-relocated-libs-asm-analysis:0.14.1'
-        force 'org.teavm:teavm-relocated-libs-hppc:0.14.1'
-        force 'org.teavm:teavm-relocated-libs-rhino:0.14.1'
-        force 'org.teavm:teavm-relocated-libs-commons-io:0.14.1'
-        force 'org.teavm:teavm-metaprogramming-api:0.14.1'
+        force 'org.teavm:teavm-classlib:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-core:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-tooling:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-interop:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-jso-apis:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-jso:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-jso-impl:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-platform:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-relocated-libs-asm:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-relocated-libs-asm-tree:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-relocated-libs-asm-commons:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-relocated-libs-asm-util:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-relocated-libs-asm-analysis:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-relocated-libs-hppc:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-relocated-libs-rhino:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-relocated-libs-commons-io:0.14.0-SNAPSHOT'
+        force 'org.teavm:teavm-metaprogramming-api:0.14.0-SNAPSHOT'
     }
 }
 
@@ -109,13 +125,7 @@ configurations {
     teavm {
         extendsFrom runtimeClasspath
     }
-    teavmClasspath {
-        resolutionStrategy {
-            exclude group: 'org.teavm', module: 'teavm-extension-spi'
-        }
-    }
 }
-
 
 dependencies {
     implementation project(':annotation')
@@ -125,7 +135,11 @@ dependencies {
     compileOnly project(':processor')
     annotationProcessor project(':processor')
     
-    implementation 'org.luaj:luaj-jse:3.0.1'
+    // Supplemental classlib for missing JDK classes in teavm-classlib
+    implementation project(':supplemental-classlib')
+    
+    // luaj-jse from NYRDS fork submodule
+    implementation files('build/patched-libs/luaj-jse-3.0.2.jar')
     implementation 'org.hjson:hjson:3.1.0'
     implementation 'commons-io:commons-io:2.6'
     implementation 'org.jetbrains:annotations:24.1.0'
@@ -133,32 +147,22 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.30'
     implementation 'com.google.guava:guava:32.0.1-jre'
     // NanoHTTPD excluded - web server not needed in HTML build (would require ServerSocket etc.)
-
+    
     // LibGDX dependencies for HTML backend
     implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
     implementation "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
     implementation "com.github.xpenatan.gdx-teavm:backend-teavm:$gdxTeaVMVersion" // Correct dependency name
-    implementation ("org.teavm:teavm-classlib:$teaVmVersion") {
-        exclude group: 'org.teavm', module: 'teavm-extension-spi'
-    }
-    implementation "org.teavm:teavm-jso-apis:$teaVmVersion"
-    implementation "org.teavm:teavm-interop:$teaVmVersion"
     
+    // TeaVM from NYRDS fork (local jars)
+    implementation 'org.teavm:teavm-classlib:0.14.0-SNAPSHOT'
+    implementation 'org.teavm:teavm-jso-apis:0.14.0-SNAPSHOT'
+    implementation 'org.teavm:teavm-jso:0.14.0-SNAPSHOT'
+    implementation 'org.teavm:teavm-interop:0.14.0-SNAPSHOT'
+    implementation 'org.teavm:teavm-platform:0.14.0-SNAPSHOT'
     // Explicitly use matching teavm-tooling version
-    implementation "org.teavm:teavm-tooling:$teaVmVersion"
-    implementation "org.teavm:teavm-relocated-libs-asm:$teaVmVersion"
-    implementation "org.teavm:teavm-relocated-libs-asm-tree:$teaVmVersion"
-    implementation "org.teavm:teavm-relocated-libs-asm-commons:$teaVmVersion"
-    implementation "org.teavm:teavm-relocated-libs-hppc:$teaVmVersion"
-    
-    // Platform module for metadata generation
-    implementation "org.teavm:teavm-platform:$teaVmVersion"
-    
-    compileOnly "org.teavm:teavm-core:$teaVmVersion"
-    annotationProcessor "org.teavm:teavm-core:$teaVmVersion"
-    
-    // Supplemental classlib with missing JDK classes
-    teavmClasspath files('/tmp/supplemental-classlib/supplemental-classlib.jar')
+    implementation 'org.teavm:teavm-tooling:0.14.0-SNAPSHOT'
+    // jzlib for zip compression (used by game code)
+    implementation 'com.jcraft:jzlib:1.1.3'
 }
 
 // TeaVM configuration (official TeaVM 0.14.1 DSL)
@@ -167,45 +171,23 @@ teavm {
     js {
         mainClass = 'com.nyrds.platform.app.client.TeaVMLauncher'
         targetFileName = 'teavm-app.js'
+        // Disable reflection for JS target to avoid {{m0}} errors
+        properties.put('org.teavm.reflect.enableRef', 'false')
+    }
+    wasmGC {
+        mainClass = 'com.nyrds.platform.app.client.TeaVMLauncher'
+        targetFileName = 'teavm-app.wasm'
         // Enable reflection for LuaJ and other runtime reflection needs
         properties.put('org.teavm.reflect.enableRef', 'true')
     }
 }
 
-// Built-in teavmBuild task from TeaVM 0.14.1 plugin handles compilation
-// Ensure our pre-compilation tasks run first
-tasks.matching { it.name.startsWith('teavm') }.configureEach {
-    dependsOn compileJava
-    dependsOn ':processor:compileJava'
-}
-
-// Custom TeaVM compilation task using TeaVMRunner
-// This runs TeaVMTool directly with the teavm configuration classpath
-tasks.register('compileTeavmApp', JavaExec) {
-    dependsOn compileJava
-    dependsOn ':processor:compileJava'
-    
-    mainClass = 'com.nyrds.teavm.TeaVMRunner'
-    classpath = configurations.teavm + sourceSets.main.output
-    
-    // Arguments: mainClass, targetDir, targetFileName, classpath, sourcePath, reflectionEnabled
-    args = [
-        'com.nyrds.platform.app.client.TeaVMLauncher',
-        "${buildDir}/teavm-output",
-        'teavm-app.js',
-        configurations.teavm.collect { it.absolutePath }.join(File.pathSeparator),
-        sourceSets.main.java.srcDirs.collect { it.absolutePath }.join(File.pathSeparator),
-        'true'
-    ]
-    
-    jvmArgs = ['-Xmx2g']
-    
-    doLast {
-        // Copy output to standard location for consistency
-        copy {
-            from "${buildDir}/teavm-output"
-            into "${buildDir}/teavm"
-            include 'teavm-app.js'
-        }
-    }
+// Task to create a patched luaj-jse jar without JavaClassHelper (which uses reflection that crashes TeaVM)
+tasks.register('patchLuajJar', Jar) {
+    from zipTree(file("${projectDir}/../luaj/luaj-jse-3.0.2.jar"))
+    archiveFileName = 'luaj-jse-3.0.2-patched.jar'
+    destinationDirectory = file("${buildDir}/patched-libs")
+    // Exclude the problematic JavaClassHelper class
+    exclude 'org/luaj/vm2/lib/jse/JavaClassHelper.class'
+    exclude 'org/luaj/vm2/lib/jse/JavaClassHelper$*.class'
 }

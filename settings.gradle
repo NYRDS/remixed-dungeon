@@ -1,4 +1,4 @@
-include ':processor', ':annotation', ':json_clone'
+include ':processor', ':annotation', ':json_clone', ':supplemental-classlib'
 
 // Example project-level settings.gradle
 dependencyResolutionManagement {
@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 }
 //include ':RemixedDungeon'
 include ':RemixedDungeonDesktop'
-//include ':RemixedDungeonHtml'
+include ':RemixedDungeonHtml'
