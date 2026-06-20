@@ -7,6 +7,7 @@ import org.teavm.diagnostics.ProblemProvider;
 import org.teavm.diagnostics.Problem;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TeaVMRunner {
@@ -25,6 +26,14 @@ public class TeaVMRunner {
         
         targetDir.mkdirs();
         
+        // Debug: print classpath
+        System.out.println("TeaVMRunner classpath:");
+        List<File> classPathFiles = new ArrayList<>();
+        for (String cp : classpath.split(File.pathSeparator)) {
+            System.out.println("  " + cp);
+            classPathFiles.add(new File(cp));
+        }
+        
         // Set context classloader to ensure TeaVM can find all classes
         Thread.currentThread().setContextClassLoader(TeaVMRunner.class.getClassLoader());
         
@@ -32,14 +41,16 @@ public class TeaVMRunner {
         tool.setMainClass(mainClass);
         tool.setTargetDirectory(targetDir);
         tool.setTargetFileName(targetFileName);
+        tool.setClassPath(classPathFiles);
         
         // Add source file provider for main classes
         tool.addSourceFileProvider(new DirectorySourceFileProvider(new File(sourcePath)));
         
         // Enable reflection if requested
-        if (reflectionEnabled) {
-            tool.getProperties().put("org.teavm.reflect.enableRef", "true");
-        }
+        tool.getProperties().put("org.teavm.reflect.enableRef", reflectionEnabled ? "true" : "false");
+        
+        // Exclude luaj classes from reflection processing to avoid ClassInfoGenerator crash
+        tool.getProperties().put("org.teavm.reflect.exclude", "org.luaj.**");
         
         // Set up logging
         tool.setLog(new TeaVMToolLog() {

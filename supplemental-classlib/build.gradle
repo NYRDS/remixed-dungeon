@@ -26,9 +26,9 @@ repositories {
 
 dependencies {
     // teavm-classlib needed for classes like Method that we don't override
-    implementation 'org.teavm:teavm-classlib:0.16.0-dev-1'
-    implementation 'org.teavm:teavm-core:0.16.0-dev-1'
-    implementation 'org.teavm:teavm-interop:0.16.0-dev-1'
+    implementation 'org.teavm:teavm-classlib:0.13.0-SNAPSHOT'
+    implementation 'org.teavm:teavm-core:0.13.0-SNAPSHOT'
+    implementation 'org.teavm:teavm-interop:0.13.0-SNAPSHOT'
 }
 
 tasks.withType(JavaCompile) {

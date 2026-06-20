@@ -59,12 +59,10 @@ And a custom `compileTeavmApp` task that runs TeaVMTool directly with the `teavm
 
 Error output:
 ```
-ERROR: Class {{c0}} was not found
-ERROR: Method {{m0}} was not found
-ERROR: Field {{f0}} was not found
+ERROR: There's no main class: '{{c0}}'
 ```
-- 60+ errors for missing classes and methods
-- These are placeholder errors from TeaVM classlib
+- 22 placeholder errors `{{c0}}`/`{{m0}}`/`{{f0}}`
+- TeaVM can't resolve main class due to missing JDK class dependencies
 
 ## Technical Root Cause - UPDATED
 **Dependency propagation: SOLVED** ✅

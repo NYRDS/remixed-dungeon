@@ -10,6 +10,7 @@ import org.teavm.classlib.ReflectionSupplier;
 import org.teavm.model.MethodDescriptor;
 
 import com.nyrds.generated.LuaClassMap;
+import com.nyrds.platform.lua.LuaConstructorMap;
 
 /**
  * Tells TeaVM which classes need reflective access because they are accessed
@@ -17,7 +18,9 @@ import com.nyrds.generated.LuaClassMap;
  *
  * Uses the generated LuaClassMap (built by the annotation processor from
  * @LuaInterface annotations) for surgical method/field/constructor exposure.
- * Also maintains supplementary sets for classes not yet annotated.
+ * Also uses the Python-generated LuaClassMap for comprehensive class coverage
+ * from Lua script scanning. Maintains supplementary sets for classes not yet
+ * covered by either source.
  */
 public class LuaReflectionSupplier implements ReflectionSupplier {
 
@@ -79,6 +82,14 @@ public class LuaReflectionSupplier implements ReflectionSupplier {
         SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.items.wands.WandOfBlink");
         SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.items.wands.WandOfTelekinesis");
         SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.items.wands.WandOfFirebolt");
+
+        // Additional classes instantiated from Lua (from script scan)
+        SUPPLEMENTARY_INSTANTIABLE.add("com.nyrds.pixeldungeon.windows.LuaWndBagListener");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.windows.WndBag");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.nyrds.pixeldungeon.utils.Position");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.nyrds.pixeldungeon.windows.WndOptionsLua");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.utils.Bundle");
+        SUPPLEMENTARY_INSTANTIABLE.add("com.watabou.pixeldungeon.sprites.Glowing");
 
         // Classes only accessed via bindClass (static methods) — no constructor needed
         SUPPLEMENTARY_CLASSES.add("com.watabou.pixeldungeon.utils.GLog");
@@ -182,8 +193,16 @@ public class LuaReflectionSupplier implements ReflectionSupplier {
 
     @Override
     public boolean isClassFoundByName(ReflectionContext context, String name) {
-        return LuaClassMap.ALL_CLASSES.contains(name)
-                || SUPPLEMENTARY_INSTANTIABLE.contains(name)
+        // Check annotation processor's map (@LuaInterface annotated classes)
+        if (LuaClassMap.ALL_CLASSES.contains(name)) {
+            return true;
+        }
+        // Check Python script's map (classes found in Lua scripts)
+        if (com.nyrds.platform.lua.LuaClassMap.contains(name)) {
+            return true;
+        }
+        // Check supplementary sets
+        return SUPPLEMENTARY_INSTANTIABLE.contains(name)
                 || SUPPLEMENTARY_CLASSES.contains(name);
     }
 

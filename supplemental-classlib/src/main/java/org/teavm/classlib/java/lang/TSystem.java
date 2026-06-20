@@ -48,6 +48,10 @@ public final class TSystem {
         return System.getProperty("java.io.tmpdir");
     }
 
+    public static String lineSeparator() {
+        return "\n";
+    }
+
     public static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length) {
         // Delegate to actual System.arraycopy
         java.lang.System.arraycopy(src, srcPos, dest, destPos, length);
