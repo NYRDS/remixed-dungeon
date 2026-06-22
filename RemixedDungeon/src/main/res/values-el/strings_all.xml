@@ -3056,7 +3056,7 @@ remix.32\n
   <string name="RottenOrgan_Info">Ένα αποσυντιθέμενο όργανο που αποκτήθηκε από έναν ηττημένο εχθρό. Παρά την άσχημη κατάστασή του, περιέχει πολύτιμα συστατικά για αλχημικές διαδικασίες.</string>
   <string name="BoneShard_Name">Θραύσμα οστού</string>
   <string name="BoneShard_Info">Ένα κοφτερό θραύσμα οστού που αποκτήθηκε από έναν ηττημένο εχθρό. Αυτά τα θραύσματα είναι εξαιρετικά ανθεκτικά και χρήσιμα στην αλχημεία.</string>
-  <string name="VileEssence_Name">Άθλια ουσία</string>
+  <string name="VileEssence_Name">Βδελυγρή ουσία</string>
   <string name="VileEssence_Info">Μια συγκεντρωμένη ουσία διαφθοράς αποκτημένη από έναν ηττημένο εχθρό. Η σκοτεινή ουσία πάλλεται με αποτρόπαιη μαγική ενέργεια και έχει υψηλή υπόληψη σε αλχημικές διαδικασίες.</string>
   <string name="Carcass_DissectMessage">Τεμάχισες τη σορό και απόκτησες: %s.</string>
   <string name="Carcass_DissectResult">Λαμβάνεις: %2$d,%3$s από: %1$s.</string>
