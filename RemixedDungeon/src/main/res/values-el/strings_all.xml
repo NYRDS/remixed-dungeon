@@ -1,4 +1,5 @@
-<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:ns0="http://schemas.android.com/tools" ns0:ignore="MissingTranslation,TypographyEllipsis,TypographyDashes,TypographyFractions">
   <string name="ChaosHelmet_Name">Κράνος του Χάους</string>
   <string name="ChaosHelmet_Info">Αυτό το κατακόκκινο κράνος είναι το ουσιώδες σύμβολο του Πολεμιστή του Χάους.</string>
   <string name="Spells_SummonLimitReached">%1$s: έφτασες το όριο επικλήσεων (τρέχον μέγιστο: %2$d)!</string>
@@ -257,7 +258,7 @@
   <string name="PortalExit_Desc_Necropolis">Νεκρόπολη</string>
   <string name="PortalExit_Desc_IceCaves">Παγωμένα σπήλαια</string>
   <string name="DevourBuff_Name">Καταβρόχθιση</string>
-  <string name="DevourBuff_Info"/>
+  <string name="DevourBuff_Info" />
   <string name="StoneBloodBuff_Name">Πετρώδες αίμα</string>
   <string name="StoneBloodBuff_Info">Το αίμα γίνεται πετρώδες και συγχωνεύεται με τους γύρω τοίχους. Αυτό κάνει ευκολότερη τη διάσχιση των τοίχων... αλλά με τι τίμημα;</string>
   <string name="Welcome_Ok">Εντάξει!</string>
@@ -272,7 +273,9 @@
   <string name="SociologistNPC_Name_Objective">κοινωνιολόγος</string>
   <string name="SociologistNPC_Desc">Ο κοινωνιολόγος είναι στην ιερή αποστολή του: συγκεντρώνει τις απόψεις του κόσμου</string>
   <string name="SociologistNPC_AlreadyTaken">Έλαβες ήδη μέρος σε αυτήν την έρευνα. Έλα ξανά αργότερα.</string>
-  <string name="SociologistNPC_Hi">Γεια!\nΘα ήθελες να λάβεις μέρος στην έρευνά μας; (Απαιτείται σύνδεση στο Ίντερνετ.)\nΗ γνώμη σου μετράει!</string>
+  <string name="SociologistNPC_Hi">Γεια!
+Θα ήθελες να λάβεις μέρος στην έρευνά μας; (Απαιτείται σύνδεση στο Ίντερνετ.)
+Η γνώμη σου μετράει!</string>
   <string name="SociologistNPC_InternetRequired">Λυπάμαι, αλλά δεν μπορούμε να κάνουμε την έρευνα χωρίς σύνδεση στο Ίντερνετ.</string>
   <string name="SociologistNPC_DownloadError">Λυπάμαι, κάτι πήγε στραβά. Ξαναπροσπάθησε αργότερα.</string>
   <string name="town_deco_library_sign_name">Επιγραφή βιβλιοθήκης</string>
@@ -576,6 +579,13 @@
   <string name="FuryBuff_Info">Μάτια ματωμένα από την αστείρευτη εσωτερική οργή.</string>
   <string name="GasImmuneBuff_Name">Ανοσία στο αέριο</string>
   <string name="GasImmuneBuff_Info">Έχεις ανοσία σε όλα τα αέρια.</string>
+  <string name="MiasmaGas_Info">Ένα τοξικό μίασμα που δηλητηριάζει, αποδυναμώνει και αποπροσανατολίζει όσους το εισπνέουν.</string>
+  <string name="DoctorSpecial">Νέφος μιάσματος</string>
+  <string name="DoctorArmor_Name">Κάπα του γιατρού</string>
+  <string name="DoctorArmor_Info">Η πανοπλία του γιατρού της πανούκλας επιτρέπει τη χρήση της ικανότητας «Νέφος μιάσματος», που εκλύει ένα τοξικό νέφος που δηλητηριάζει, αποδυναμώνει και αποσυντονίζει τους εχθρούς. Ο γιατρός προστατεύεται από τη μάσκα του και είναι άτρωτος από αυτές τις επιδράσεις.</string>
+  <string name="DoctorArmor_NotDoctor">Αυτή η πανοπλία είναι μόνο για Γιατρούς της πανούκλας!</string>
+  <string name="AnesthesiaBuff_Name">Αναισθησία</string>
+  <string name="AnesthesiaBuff_Info">Δεν νιώθει πόνο και δεν θα ξυπνήσει με τις επιθέσεις, αλλά λαμβάνει ζημιά κανονικά.</string>
   <string name="Hunger_Death">Λιμοκτόνησες...</string>
   <string name="HungerBuff_Name1">Πείνα</string>
   <string name="HungerBuff_Info1">Πεινάς!</string>
@@ -628,6 +638,7 @@
   <string name="Toolbar_Info1">Δεν γνωρίζεις τι έχει εκεί.</string>
   <string name="Toolbar_Info2">Επίλεξε ένα τετράγωνο να το εξετάσεις</string>
   <string name="TitleScene_Play">Παίξε</string>
+  <string name="TitleScene_PlayOnPC">Παίξε στον PC</string>
   <string name="TitleScene_Highscores">Κατάταξη</string>
   <string name="TitleScene_Badges">Εμβλήματα</string>
   <string name="TitleScene_About">Σχετικά</string>
@@ -803,6 +814,19 @@
   <string name="WndDonate_donate">δωρεά:</string>
   <string name="WndDonate_notConnected">Δεν υπάρχει σύνδεση :(</string>
   <string name="WndDonate_commonDonateText">Remixed Dungeon - Δωρεάν σε όλους και έτσι θα είναι πάντα.\n\nΠαρόλα αυτά, μπορείς να μας βοηθήσεις να το κάνουμε ακόμα καλύτερο.\n\nΜαζί με τις εγκάρδιες ευχαριστίες μας, θα λάβεις και κάποια αισθητικά πρόσθετα.</string>
+  
+  
+  <string name="WndCryptoDonate_supportDev">Υποστήριξε τον δημιουργό</string>
+  <string name="WndCryptoDonate_infoText">Μπορείς να υποστηρίξεις την ανάπτυξη του Remixed Dungeon με την αποστολή δωρεών μέσω κρυπτονομισμάτων στις παρακάτω διευθύνσεις. Ευχαριστώ για την υποστήριξη!</string>
+  <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+  <string name="WndCryptoDonate_ethereum">Ethereum</string>
+  <string name="WndCryptoDonate_tron">TRON</string>
+  <string name="WndCryptoDonate_ton">TON</string>
+  <string name="WndCryptoDonate_currency">Κρυπτονόμισμα</string>
+  <string name="WndCryptoDonate_walletAddress">Διεύθυνση πορτοφολιού</string>
+  <string name="WndCryptoDonate_openWallet">Άνοιγμα πορτοφολιού</string>
+  <string name="WndCryptoDonate_copyAddress">Αντιγραφή διεύθυνσης</string>
+  <string name="WndCryptoDonate_warningText">ΠΡΟΣΟΧΗ: Πάντα να επιβεβαιώνεις την ορθότητα της διεύθυνσης προτού αποστείλεις χρήματα. Οι συναλλαγές μέσω κρυπτονομισμάτων είναι μη αναστρέψιμες!</string>
   <string name="WndDonate_silverDonate">Ασημένια δωρεά</string>
   <string name="WndDonate_goldDonate">Χρυσή δωρεά</string>
   <string name="WndDonate_rubyDonate">Ρουμπινένια δωρεά</string>
@@ -811,7 +835,7 @@
   <string name="WndDonate_rubyDonateText">Η γενναιοδωρία σου μας βοηθά να συνεχίσουμε τη βελτίωση του Remixed Dungeon!</string>
   <string name="WndDonate_silverDonateText2">Επιπλέον, απενεργοποιούνται τα διαφημιστικά από παντού και η Κυνηγός ξεκλειδώνεται εξ αρχής.</string>
   <string name="WndDonate_goldDonateText2">Επιπλέον, το Ξωτικό ξεκλειδώνεται εξ αρχής.</string>
-  <string name="WndDonate_rubyDonateText2"/>
+  <string name="WndDonate_rubyDonateText2" />
   <string name="WndPremiumSettings_std">Κανονική</string>
   <string name="WndPremiumSettings_silver">Ασημένια</string>
   <string name="WndPremiumSettings_gold">Χρυσή</string>
@@ -974,7 +998,7 @@
   <string name="HeroClass_Elf">Ξωτικό</string>
   <string name="HeroClass_None">Κοινός θνητός</string>
   <string name="HeroSubClass_NameNone">Τίποτα</string>
-  <string name="HeroSubClass_DescNone"/>
+  <string name="HeroSubClass_DescNone" />
   <string name="HeroSubClass_NameGlad">Μονομάχος</string>
   <string name="HeroSubClass_DescGlad">Μια επιτυχημένη επίθεση με όπλο κοντινής μάχης επιτρέπει στον _Μονομάχο_ να ξεκινήσει μια διαδοχή χτυπημάτων, κατά την οποία κάθε επακόλουθο χτύπημα προκαλεί επιπλέον ζημιά.</string>
   <string name="HeroSubClass_NameBers">Βάρβαρος</string>
@@ -1487,7 +1511,7 @@
   <string name="Badges_AllScrolls">Αναγνωρίστηκαν όλοι οι πάπυροι</string>
   <string name="Badges_AllRings">Αναγνωρίστηκαν όλα τα δαχτυλίδια</string>
   <string name="Badges_AllWands">Αναγνωρίστηκαν όλα τα ραβδιά</string>
-  <string name="Badges_AllItems">Αναγνωρίστηκε κάθε φίλτρο, πάπυρος, δαχτυλίδι &amp; ραβδί</string>
+  <string name="Badges_AllItems">Αναγνωρίστηκε κάθε φίλτρο, πάπυρος, δαχτυλίδι &amp;amp; ραβδί</string>
   <string name="Badges_AllBags">Αποκτήθηκαν όλοι οι αποθηκευτικοί χώροι</string>
   <string name="Badges_DeathFire">Θάνατος από φωτιά</string>
   <string name="Badges_DeathPoison">Θάνατος από δηλητήριο</string>
@@ -1495,7 +1519,7 @@
   <string name="Badges_DeathHunger">Θάνατος από την πείνα</string>
   <string name="Badges_DeathGlyph">Θάνατος από γλύφο</string>
   <string name="Badges_DeathFalling">Θάνατος από πτώση</string>
-  <string name="Badges_Yasd">Θάνατος από φωτιά, δηλητήριο, τοξικό αέριο &amp; πείνα</string>
+  <string name="Badges_Yasd">Θάνατος από φωτιά, δηλητήριο, τοξικό αέριο &amp;amp; πείνα</string>
   <string name="Badges_BossSlain1">Εξοντώθηκε το Γκου</string>
   <string name="Badges_BossSlain2">Εξοντώθηκε ο Τένγκου</string>
   <string name="Badges_BossSlain3">Εξοντώθηκε το DM-300</string>
@@ -1811,6 +1835,7 @@
   <string name="Blacksmith_Verify5">Είναι σκουπίδι! Η ποιότητα είναι κάκιστη.</string>
   <string name="Blacksmith_Verify6">Δεν μπορώ να τα σφυρηλατήσω αυτά!</string>
   <string name="Ghost_Name">θλιμμένο φάντασμα</string>
+  <string name="Ghost_Name_Objective">φάντασμα</string>
   <string name="Ghost_Desc">Το φάντασμα είναι μετά βίας ορατό. Φαίνεται σαν ακαθόριστο σχήμα αχνού φωτός με θλιμμένη όψη.</string>
   <string name="Ghost_Rose1">Γεια σου... Κάποτε ήμουν σαν κι εσένα... είχα δύναμη και σθένος... μέχρι που σκοτώθηκα... Μα δεν μπορώ να φύγω από εδώ... όχι αν δεν βρω το _ξερό ρόδο_ μου... Είναι πολύτιμο για μένα... και κάποιο τέρας το απέσπασε από το σώμα μου...</string>
   <string name="Ghost_Rose2">Σε παρακαλώ... βοήθησέ με... Βρες το τριαντάφυλλο...</string>
@@ -2135,6 +2160,12 @@
   <string name="Sewer_TileDescDeco">Υγρή κιτρινωπή μούχλα καλύπτει το έδαφος.</string>
   <string name="Sewer_TileDescBookshelf">Αυτή η βιβλιοθήκη είναι γεμάτη φθηνά, άχρηστα βιβλία. Μήπως μπορεί να κατακαεί;</string>
   <string name="AlchemyPot_SelectSeed">Διάλεξε έναν σπόρο να πετάξεις</string>
+  <string name="Item_ACAlchemy">ΑΛΧΗΜΕΙΑ</string>
+  <string name="WndItemAlchemy_Title">Αλχημικές συνταγές με %s</string>
+  <string name="WndItemAlchemy_NoRecipes">Δεν υπάρχει διαθέσιμη συνταγή με αυτό και τα υπόλοιπα αντικείμενά σου.</string>
+  <string name="WndItemAlchemy_SelectRecipe">Επίλεξε συνταγή</string>
+  <string name="WndItemAlchemy_Transmute">Μεταστοιχείωση</string>
+  <string name="WndItemAlchemy_ExecuteRecipe">Εκτέλεση συνταγής</string>
   <string name="Chasm_Chasm">Χάσμα</string>
   <string name="Chasm_Yes">Ναι, ξέρω τι κάνω</string>
   <string name="Chasm_No">Όχι, άλλαξα γνώμη</string>
@@ -2663,14 +2694,28 @@
   <string name="LightningBolt_Info">Ένα ξόρκι που είναι γνωστό στους κύκλους των αρχαίων σαμάνων. Θα κατακεραυνώσει τους εχθρούς με διπλάσια αποτελεσματικότητα--ειδικά αν είναι τόσο ανόητοι ώστε να στέκονται στο νερό.</string>
   <string name="Heal_Name">Θεραπεία</string>
   <string name="Heal_Info">Ένα πολύ χρήσιμο ξόρκι για την κατακόμβη, ή όχι;</string>
+  <string name="Heal_Cast">%s: θεραπεύτηκε.</string>
+  <string name="Anesthesia_Name">Αναισθησία</string>
+  <string name="Anesthesia_Info">Προκαλεί μια βαθιά, αφύσικη ύπνωση στον στόχο. Ακόμα και οι πιο βίαιες επιθέσεις δεν θα τον ξυπνήσουν από τον λήθαργο αυτόν.</string>
+  <string name="Anesthesia_Cast">%s: πέφτει σε βαθύ λήθαργο.</string>
+  <string name="CorpseExplosion_Name">Έκρηξη σορού</string>
+  <string name="CorpseExplosion_Info">Μεταμορφώνει ένα πτώμα σε ένα θανάσιμο νέφος τοξικού αερίου που μεταδίδει ασθένειες και δηλητήριο σε όλους τους κοντινούς εχθρούς.</string>
+  <string name="BloodTransfusion_Name">Μετάγγιση αίματος</string>
+  <string name="BloodTransfusion_Info">Απομυζά όλο σχεδόν το αίμα από έναν στόχο για να θεραπεύσεις τον εαυτό σου. Μια σκοτεινή τελετουργία θυσιασμού και επιβίωσης.</string>
+  <string name="CorpseExplosion_NoCorpse">Δεν υπάρχει πτώμα σε αυτή τη θέση.</string>
+  <string name="BloodTransfusion_WontAgreed">Ο στόχος αντιστέκεται στην απομύζηση της ζωτικής του ουσίας.</string>
+  <string name="BloodTransfusion_FullHP">Το αίμα σου είναι ήδη πλήρες.</string>
+  <string name="BloodTransfusion_Drained">Η ζωτική ουσία κυλά από τον υπόδουλό σου, μέσα σου.</string>
   <string name="Order_Name">Πρόσταγμα</string>
   <string name="Order_Info">Με την κατάλληλη συγκέντρωση, οι προσταγές σου δεν επιφέρουν αντιρρήσεις.</string>
   <string name="Order_Resist">Πώς τολμάς;!!</string>
   <string name="Spell_SelectAChar">Διάλεξε έναν στόχο.</string>
   <string name="Calm_Name">Γαλήνεμα</string>
   <string name="Calm_Info">Είναι πολλά τα επιθετικά πλάσματα εδώ γύρω. Ας τα βοηθήσουμε.</string>
+  <string name="Calm_Cast">%s: ηρεμεί.</string>
   <string name="CharmSpell_Name">Γοητεία</string>
   <string name="CharmSpell_Info">Όλοι αξίζουν λίγη αγάπη, έτσι δεν είναι;</string>
+  <string name="CharmSpell_Cast">%s: γοητεύεται.</string>
   <string name="HideInGrassSpell_Name">Κάλυψη στα χόρτα</string>
   <string name="HideInGrassSpell_Info">Έχεις τελειοποιήσει την ειδικότητά σου στο κρυφτό.</string>
   <string name="HideInGrassSpell_NeedGrassToHide">Ούτε καν εγώ δεν μπορώ να κρυφτώ σε κοινή θέα.</string>
@@ -2796,7 +2841,7 @@
   <string name="EncumbranceBuff_Name">Επιβάρυνση</string>
   <string name="EncumbranceBuff_Info">Μη επαρκής δύναμη για την αποτελεσματική χρήση του εφοδίου «%s».</string>
   <string name="Level_TileDescPedestal">Ένα μικρό βάθρο.</string>
-  <string name="Level_TileDescWell"/>
+  <string name="Level_TileDescWell">Ένα μυστηριώδες πηγάδι. Νιώθεις μια μαγική δύναμη να αναδίδεται από αυτό.</string>
   <string name="Welcome_Text_31_0">
     remix.31.0\n
     - Παιχνίδι:\n
@@ -2849,7 +2894,7 @@
   <string name="WndTilesKind_text">Πρόκειται να μπεις σε μια κατακόμβη που έχει κυριευτεί από τη διαβολική μαγεία· τουλάχιστον μπορείς να επιλέξεις πώς θα τη βλέπεις.\nΘέλεις να είναι με σύγχρονα ψευδο-3D γραφικά ή με την κλασική επίπεδη εμφάνιση;\nΜπορείς να το αλλάξεις αργότερα στο μενού ρυθμίσεων του παιχνιδιού.</string>
   <string name="WndTilesKind_NewLook">Νέα εμφάνιση</string>
   <string name="WndTilesKind_ClassicLook">Κλασική εμφάνιση</string>
-  <string name="MobAi_status">- %s: %s</string>
+  <string name="MobAi_status">- %1$s: %2$s</string>
   <string name="WndCustomizations_Title">Προσαρμογές</string>
   <string name="IceGuardianCore_DieInfo">Κάνει τόσο κρύο εδώ... Καλύτερα να επιστρέψω στο επίπεδο #14 και να βρω ένα πιο ζεστό μέρος.</string>
   <string name="Lich_DieInfo">Ποτέ δεν συμπάθησα αυτόν τον νεκρομάντη. Ώρα να επιστρέψω στο επίπεδο #7 και να αναζητήσω την επόμενη περιπέτεια.</string>
@@ -2901,8 +2946,8 @@ remix.32\n
     - Διορθώσεις σφαλμάτων\n</string>
   <string name="Pickaxe_NothingToMine">Τίποτα να εξορυχθεί εδώ!</string>
   <string name="Pickaxe_InsufficientStr">Ανεπαρκής δύναμη για να εξορύξεις!</string>
-  <string name="Carcass_Name">Λείψανα (%s)</string>
-  <string name="Carcass_Info">Λείψανα ενός παντελώς νεκρού πλάσματος (%s).</string>
+  <string name="Carcass_Name">λείψανα (%s)</string>
+  <string name="Carcass_Info">λείψανα ενός παντελώς νεκρού πλάσματος (%s).</string>
   <string name="ResultDescriptions_Necromancy">Εξαντλήθηκε η ζωτική σου ισχύς κατά την προσπάθεια ανάστασης σορού στο επίπεδο %d</string>
   <string name="Item_ACPickup">Μάζεμα</string>
   <string name="Necromancy_Death">Εξάντλησες όλη σου τη ζωτική ισχύ εξασκώντας τη Νεκρομαντική.</string>
@@ -2912,10 +2957,10 @@ remix.32\n
   <string name="Carcass_Kick">Το πλάσμα (%s) τα έχει τινάξει ήδη. Δεν χρειάζεται να το κλωτσάς.</string>
   <string name="Carcass_Devoured">Καταβρόχθισες τη σορό του πλάσματος: %s!</string>
   <string name="Carcass_Necromancy">Ανέστησες τη σορό του πλάσματος: %s!</string>
-  <string name="Carcass_Necromancy_Failed">Η απόπειρά σου να αναστήσεις τη σορό (%s) απέτυχε!</string>
+  <string name="Carcass_Necromancy_Failed">Δεν μπόρεσες να αναστήσεις τη σορό (%s)!</string>
   <string name="WndInstallingMod_please_wait">Εγκατάσταση τροποποίησης, παρακαλώ περιμένετε...</string>
   <string name="WndInstallingMod_copying_file">Αντιγραφή τροποποίησης «%s» στον αποθηκευτικό χώρο του Remixed Dungeon...</string>
-  <string name="WndInstallingMod_skipping_file">Παράλειψη %s...</string>
+  <string name="WndInstallingMod_skipping_file">\"Παράβλεψη: %s\"</string>
   <string name="WndLocalModInstall_title">Εγκατάσταση τροποποίησης από τη συσκευή</string>
   <string name="WndLocalModInstall_text">Επίλεξε κατάλογο από όπου θα εγκαταστήσεις την τροποποίηση.</string>
   <string name="WndLocalModInstall_pick">Επιλογή φακέλου τροποποίησης</string>
@@ -2972,4 +3017,69 @@ remix.32\n
     -- Τα εξατομικευμένα αντικείμενα μπορούν να εκτελούν ενέργειες ενώ είναι σε σωρούς\n
     - Διορθώσεις σφαλμάτων\n</string>
   <string name="WndInstallingMod_deleting_file">Διαγράφεται: %s</string>
+
+  <string name="Badges_ThisIsSparta">Εδώ είναι Σπάρτη!!!</string>
+  <string name="WndSettings_FpsLimit">Όριο FPS</string>
+  <string name="StartScene_ContinueLatest">Συνέχισε το τελευταίο σου παιχνίδι ή επίλεξε ένα από τα αποθηκευμένα</string>
+  <string name="StartScene_ChooseFromSlot">Επιλογή αποθηκευμένου</string>
+
+  <string name="AboutScene_SourceCode">Λήψη πηγαίου κώδικα του Remixed Dungeon:</string>
+  <string name="HeroClass_Priest">Ιερέας</string>
+  <string name="HeroClass_Doctor">Γιατρός Επιδημιών</string>
+  <string name="StartScene_ComingSoon">Έρχεται σύντομα</string>
+
+  <string name="AC_Dissect">Τεμαχισμός</string>
+
+  <string name="HeroClass_PlagueDoctorPerks_0">Οι Γιατροί Επιδημιών εξάγουν τοξικούς αδένες, σάπια όργανα, θραύσματα οστών και βδελυγρή ουσία από σκοτωμένους εχθρούς.</string>
+  <string name="HeroClass_PlagueDoctorPerks_1">Ο Γιατρός της Πανούκλας είναι κύριος της αλχημείας και μπορεί να χρησιμοποιεί μοναδικές συνταγές.</string>
+  <string name="HeroClass_PlagueDoctorPerks_2">Ξεκινάς με μια μάσκα πανούκλας (ανοσία σε όλα τα αέρια) και ένα πριόνι οστών. Τα κρίσιμα χτυπήματα δίνουν παραπάνω κομμάτια, και το πριόνι οστών προκαλεί 1.5x ζημιά στους παράλυτους εχθρούς.</string>
+  <string name="HeroClass_PlagueDoctorPerks_3">Τα φίλτρα παράλυσης και τοξικού αερίου είναι αναγνωρισμένα εξ αρχής.</string>
+  <string name="HeroClass_PlagueDoctorPerks_4">Οι Γιατροί Επιδημιών έχουν πολύ χαμηλότερη ακρίβεια χωρίς το πριόνι οστών και δεν μπορούν να χρησιμοποιήσουν όπλα απόστασης.</string>
+
+  <string name="BoneSaw_Name">Πριόνι Οστών</string>
+  <string name="BoneSaw_Info">Ένα χειρουργικό πριόνι ακριβείας σχεδιασμένο για ταχύτατο τεμαχισμό. Η ζημιά και η ταχύτητα επίθεσής του μεγαλώνουν μαζί με την ικανότητα του Γιατρού Επιδημιών. Τα κρίσιμα χτυπήματα βγάζουν περισσότερα μέλη από τους εχθρούς, και είναι εξαιρετικά αποτελεσματικό εναντίον παραλυμένων εχθρών.</string>
+
+  <string name="Accuracy_Decreased">Τι να το κάνω αυτό (%s); Λάθος εργαλείο στα λάθος χέρια!</string>
+  <string name="Accuracy_DecreasedDoctor">Κάθε χτύπημα με αυτό το όπλο (%s) επιφέρει την ατέλεια. Το πριόνι οστών θεραπεύει... αυτό μολύνει.</string>
+  <string name="Accuracy_DecreasedDoctorBareHands">Τα γυμνά χέρια προσβάλλουν την τεχνική μου. Χωρίς τη λεπίδα του πριονιού οστών, το σημάδι μου είναι σκέτο χάος.</string>
+
+  <string name="AttackDelay_Increased">Δεν μπορώ να το χρησιμοποιήσω αυτό (%s) έτσι. Αργά χτυπήματα, βαριές αναπνοές...</string>
+  <string name="Mob_GoingTo">Έφυγα!</string>
+  <string name="Mob_Attacking">%s; Πες ότι εξοντώθηκε ήδη!</string>
+  <string name="BuffParam_Cooldown">Χρόνος αναπλήρωσης: %.2f</string>
+  <string name="Challenges_Names_9">Αμνησία</string>
+  <string name="Challenges_Descriptions_9">Η τελευταία «θεραπεία» του γιατρού της πανούκλας σού κατέστρεψε τη χωρική σου μνήμη. Δεν θυμάσαι τίποτα έξω από το οπτικό σου πεδίο.</string>
+
+  <string name="ToxicGland_Name">Τοξικός αδένας</string>
+  <string name="ToxicGland_Info">Ένας τοξικός αδένας που αποκτήθηκε από έναν ηττημένο εχθρό. Αυτοί οι αδένες είναι γεμάτοι ισχυρές τοξίνες που χρησιμοποιούνται σε αλχημικές διαδικασίες.</string>
+  <string name="RottenOrgan_Name">Σάπιο όργανο</string>
+  <string name="RottenOrgan_Info">Ένα αποσυντιθέμενο όργανο που αποκτήθηκε από έναν ηττημένο εχθρό. Παρά την άσχημη κατάστασή του, περιέχει πολύτιμα συστατικά για αλχημικές διαδικασίες.</string>
+  <string name="BoneShard_Name">Θραύσμα οστού</string>
+  <string name="BoneShard_Info">Ένα κοφτερό θραύσμα οστού που αποκτήθηκε από έναν ηττημένο εχθρό. Αυτά τα θραύσματα είναι εξαιρετικά ανθεκτικά και χρήσιμα στην αλχημεία.</string>
+  <string name="VileEssence_Name">Άθλια ουσία</string>
+  <string name="VileEssence_Info">Μια συγκεντρωμένη ουσία διαφθοράς αποκτημένη από έναν ηττημένο εχθρό. Η σκοτεινή ουσία πάλλεται με αποτρόπαιη μαγική ενέργεια και έχει υψηλή υπόληψη σε αλχημικές διαδικασίες.</string>
+  <string name="Carcass_DissectMessage">Τεμάχισες τη σορό και απόκτησες: %s.</string>
+  <string name="Carcass_DissectResult">Λαμβάνεις: %2$d,%3$s από: %1$s.</string>
+  <string name="Carcass_DissectFailed">Τεμαχίζεις: %s. Αλλά δεν βρήκες κάτι χρήσιμο. </string>
+  <string name="Carcass_TooFarToDissect">Πρέπει να είσαι πιο κοντά για να τεμαχίσεις το πτώμα.</string>
+  <string name="StartScene_UnlockDoctor">Για να ξεκλειδώσεις τον Γιατρό της Πανούκλας, ολοκλήρωσε την αποστολή του παλιού γιατρού της πανούκλας.</string>
+
+    <!-- Pet Inventory -->
+    <string name="CharAction_PetInventory">Αποθηκευτικός χώρος</string>
+    <string name="PetInventory_Title">Αποθηκευτικός χώρος υποτακτικού</string>
+    <string name="PetInventory_GiveToPet">Δώσε στον υποτακτικό</string>
+    <string name="PetInventory_TakeFromPet">Πάρε από τον υποτακτικό</string>
+    <string name="PetInventory_ViewManage">Διαχείριση</string>
+    <string name="PetInventory_GaveItem">Έδωσες: %1$s σε: %2$s</string>
+    <string name="PetInventory_TookItem">Πήρες: %1$s από: %2$s</string>
+    <string name="PetInventory_CantGiveEquipped">Δεν μπορείς να δώσεις εξοπλισμένο εφόδιο.</string>
+    <string name="PetInventory_PetBackpackFull">Ο αποθηκευτικός χώρος του υποτακτικού είναι γεμάτος.</string>
+    <string name="PetInventory_HeroBackpackFull">Το σακίδιό σου είναι γεμάτο</string>
+    <string name="PetInventory_TooFar">Είσαι μακριά από τον υποτακτικό.</string>
+    <string name="WndPetSelect_Title">Επιλογή υποτακτικού</string>
+    <string name="WndPetSelect_HP">Ζωή: %1$d/%2$d</string>
+    <string name="PetInventory_ACGiveToPet">ΔΩΣΕ ΣΤΟΝ ΥΠΟΤΑΚΤΙΚΟ</string>
+    <string name="PetInventory_ACTakeFromPet">ΠΑΡΕ ΑΠΟ ΤΟΝ ΥΠΟΤΑΚΤΙΚΟ</string>
+    <string name="PetInventory_TakeN">Πάρε %d</string>
+    <string name="PetInventory_GiveN">Δώσε %d</string>
 </resources>
