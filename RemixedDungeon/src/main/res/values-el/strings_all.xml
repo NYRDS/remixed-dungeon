@@ -789,7 +789,7 @@
   <string name="RawFish_Info">Ένα ωμό ψάρι. Φάε με δική σου ευθύνη.</string>
   <string name="RawFish_Taste">Ψάρωσα!</string>
   <string name="FrozenFish_Name">παγωμένο ψάρι</string>
-  <string name="FrozenFish_Info">Ένα παγωμένο ψάρι. Μοιάζει ζωντανό, αν και παγωμένο.</string>
+  <string name="FrozenFish_Info">Ένα παγωμένο ψάρι. Μοιάζει σαν ζωντανό, αλλά είναι παγωμένο.</string>
   <string name="FriedFish_Name">ψημένο ψάρι</string>
   <string name="FriedFish_Info">Ψημένο ψάρι· φαίνεται νόστιμο.</string>
   <string name="FriedFish_Taste">Νόστιμο!</string>
