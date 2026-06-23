@@ -3060,7 +3060,7 @@ remix.32\n
   <string name="VileEssence_Name">Βδελυγρή ουσία</string>
   <string name="VileEssence_Info">Μια συγκεντρωμένη ουσία διαφθοράς αποκτημένη από έναν ηττημένο εχθρό. Η σκοτεινή ουσία πάλλεται με αποτρόπαιη μαγική ενέργεια και έχει υψηλή υπόληψη σε αλχημικές διαδικασίες.</string>
   <string name="Carcass_DissectMessage">Τεμάχισες τη σορό και απόκτησες: %s.</string>
-  <string name="Carcass_DissectResult">Λαμβάνεις: %2$d,%3$s από: %1$s.</string>
+  <string name="Carcass_DissectResult">Εξάγεις: %2$dx %3$s από: %1$s.</string>
   <string name="Carcass_DissectFailed">Τεμαχίζεις: %s. Αλλά δεν βρήκες κάτι χρήσιμο. </string>
   <string name="Carcass_TooFarToDissect">Πρέπει να είσαι πιο κοντά για να τεμαχίσεις το πτώμα.</string>
   <string name="StartScene_UnlockDoctor">Για να ξεκλειδώσεις τον Γιατρό της Πανούκλας, ολοκλήρωσε την αποστολή του παλιού γιατρού της πανούκλας.</string>
