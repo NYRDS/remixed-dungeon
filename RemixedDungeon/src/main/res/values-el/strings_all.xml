@@ -583,7 +583,7 @@
   <string name="DoctorSpecial">Νέφος μιάσματος</string>
   <string name="DoctorArmor_Name">Κάπα του γιατρού</string>
   <string name="DoctorArmor_Info">Η πανοπλία του Γιατρού της Πανούκλας επιτρέπει τη χρήση της ικανότητας «Νέφος μιάσματος», που εκλύει ένα τοξικό νέφος που δηλητηριάζει, αποδυναμώνει και αποσυντονίζει τους εχθρούς. Ο γιατρός προστατεύεται από τη μάσκα του και είναι άτρωτος από αυτές τις επιδράσεις.</string>
-  <string name="DoctorArmor_NotDoctor">Αυτή η πανοπλία είναι μόνο για Γιατρούς της πανούκλας!</string>
+  <string name="DoctorArmor_NotDoctor">Αυτή η πανοπλία είναι μόνο για Γιατρούς της Πανούκλας!</string>
   <string name="AnesthesiaBuff_Name">Αναισθησία</string>
   <string name="AnesthesiaBuff_Info">Δεν νιώθει πόνο και δεν θα ξυπνήσει με τις επιθέσεις, αλλά λαμβάνει ζημιά κανονικά.</string>
   <string name="Hunger_Death">Λιμοκτόνησες...</string>
