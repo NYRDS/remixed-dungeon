@@ -1445,7 +1445,7 @@
   <string name="SoulShard_Gender">neuter</string>
   <string name="DeathKnight_Name">Ιππότης του Θανάτου</string>
   <string name="DeathKnight_Gender">masculine</string>
-  <string name="DeathKnight_Name_Objective">ιππότης του θανάτου</string>
+  <string name="DeathKnight_Name_Objective">Ιππότης του Θανάτου</string>
   <string name="DeathKnight_Desc">Με την πρώτη ματιά, δεν είναι παρά ένας δυνατός πολεμιστής με βαριά πανοπλία. Το μόνο που τον προδίδει είναι ο μορφασμός του θανάτου. Ο ιππότης του θανάτου είναι η ενσάρκωση της ψυχής ενός ιππότη που απέτυχε να κρατήσει τους όρκους του. Στην καταραμένη του υπόσταση, περιπλανιέται αιώνια αναζητώντας την κάθαρση μέσω της μάχης. Σκοτώνει τους αθώους, ανήμπορος να θυμηθεί ποιους είχε ορκιστεί να προστατεύει.</string>
   <string name="DreadKnight_Name">ανεξιλέωτος ιππότης</string>
   <string name="DreadKnight_Gender">masculine</string>
