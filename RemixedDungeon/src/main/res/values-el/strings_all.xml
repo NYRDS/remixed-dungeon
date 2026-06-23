@@ -2967,7 +2967,7 @@ remix.32\n
   <string name="WndModsDisclaimer_title">Τροποποιήσεις</string>
   <string name="WndModsDisclaimer_manage">Διαχείριση λίστας τροποποιήσεων</string>
   <string name="WndModsDisclaimer_install">Εγκατάσταση τροποποίησης από συσκευή</string>
-  <string name="PlagueDoctor_Name">γιατρός της πανούκλας</string>
+  <string name="PlagueDoctor_Name">Γιατρός της Πανούκλας</string>
   <string name="PlagueDoctor_Gender">masculine</string>
   <string name="PlagueDoctor_Name_Objective">γιατρός της πανούκλας</string>
   <string name="PlagueDoctor_Desc">Ολόκληρο το σώμα αυτού του καμπουριαστού ατόμου κρύβεται πίσω από μια δερμάτινη στολή. Αναδίδει μια απαίσια μυρωδιά φαρμάκου και... σκόρδου;</string>
