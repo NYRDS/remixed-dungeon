@@ -1,4 +1,4 @@
-include ':processor', ':annotation', ':json_clone'
+include ':processor', ':annotation', ':json_clone', ':luaj'
 
 // Example project-level settings.gradle
 dependencyResolutionManagement {

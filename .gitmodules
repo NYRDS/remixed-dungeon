@@ -1,3 +1,6 @@
 [submodule "wiki-data"]
 	path = wiki-data
 	url = ../wiki-data.git
+[submodule "luaj"]
+	path = luaj
+	url = git@github.com:NYRDS/luaj.git

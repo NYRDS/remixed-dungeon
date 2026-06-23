@@ -269,7 +269,7 @@ dependencies {
     compileOnly project(':processor')
     annotationProcessor project(':processor')
 
-    implementation 'org.luaj:luaj-jse:3.0.1'
+    implementation project(':luaj')
     implementation 'org.hjson:hjson:3.1.0'
     implementation 'commons-io:commons-io:2.6'
     implementation 'org.jetbrains:annotations:24.1.0'

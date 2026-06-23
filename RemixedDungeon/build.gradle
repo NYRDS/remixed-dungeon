@@ -136,7 +136,7 @@ dependencies {
 
     annotationProcessor project(':processor')
 
-    implementation 'org.luaj:luaj-jse:3.0.1'
+    implementation project(':luaj')
     implementation 'info.guardianproject.netcipher:netcipher:2.1.0'
     implementation 'org.hjson:hjson:3.1.0'
     implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices

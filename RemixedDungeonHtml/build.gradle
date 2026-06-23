@@ -20,11 +20,19 @@ sourceSets {
     main {
         java {
             srcDirs = [
-                    'src/html/java',                    // HTML sources first (higher priority)
-                    '../RemixedDungeon/src/main/java',  // Main sources second
+                    'src/html/java',                                      // HTML sources first (higher priority)
+                    'build/delomboked/src/main/java',                     // Delomboked main sources (Lombok getters/setters generated)
+                    '../RemixedDungeonDesktop/src/libgdx/java',           // LibGDX backend additions
                     'src/market_none/java',
                     'build/generated/sources/annotationProcessor/java/main'
             ]
+            // Exclude desktop-specific classes from libgdx sources
+            exclude '**/app/WebServerApp.java'
+            exclude '**/app/WebServerOnlyGame.java'
+            exclude '**/app/Notifications.java'
+            exclude '**/platform/audio/**'
+            exclude '**/platform/storage/AndroidSAF.java'
+            exclude '**/platform/storage/CaseInsensitiveFileCache.java'
         }
         resources {
             srcDirs = [
@@ -34,6 +42,12 @@ sourceSets {
             ]
         }
     }
+}
+
+// Configure Lombok for val/var support in HTML build
+compileJava {
+    options.compilerArgs << '-Alombok.val.allowed=true'
+    options.compilerArgs << '-Alombok.var.allowed=true'
 }
 
 // Create a task to generate the BuildConfig.java file
@@ -82,6 +96,9 @@ repositories {
     maven { url "https://jitpack.io" } // For gdx-teavm
 }
 
+configurations {
+    delombok
+}
 
 dependencies {
     implementation project(':annotation')
@@ -91,14 +108,16 @@ dependencies {
     compileOnly project(':processor')
     annotationProcessor project(':processor')
     
-    implementation 'org.luaj:luaj-jse:3.0.1'
+    implementation project(':luaj')
     implementation 'org.hjson:hjson:3.1.0'
     implementation 'commons-io:commons-io:2.6'
     implementation 'org.jetbrains:annotations:24.1.0'
-    annotationProcessor 'org.projectlombok:lombok:1.18.30'
-    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+    compileOnly 'org.projectlombok:lombok:1.18.34'
     implementation 'com.google.guava:guava:32.0.1-jre'
-    // NanoHTTPD excluded - web server not needed in HTML build (would require ServerSocket etc.)
+    // NanoHTTPD needed for DebugEndpoints compilation (uses NanoHTTPD.Response and IHTTPSession)
+    // Not used at runtime in TeaVM build (no ServerSocket support)
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
 
     // LibGDX dependencies for HTML backend
     implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
@@ -109,8 +128,38 @@ dependencies {
     implementation "org.teavm:teavm-interop:$teaVmVersion"
 
     compileOnly "org.teavm:teavm-core:$teaVmVersion"
-    annotationProcessor "org.teavm:teavm-core:$teaVmVersion"
+    // annotationProcessor "org.teavm:teavm-core:$teaVmVersion"  // REMOVED: TeaVM processor interferes with Lombok and custom processor
+
+    // Delombok for generating Lombok code (getters/setters) for TeaVM compatibility
+    delombok 'org.projectlombok:lombok:1.18.34'
 }
+
+// Delombok task - generates Lombok code (getters/setters) for TeaVM compatibility
+// TeaVM's compiler doesn't run Lombok's annotation processor, so we pre-generate the code
+tasks.register('delombok', JavaExec) {
+    group = 'build'
+    description = 'Run delombok to generate getters/setters from Lombok annotations'
+    classpath = configurations.delombok + configurations.compileClasspath
+    mainClass = 'lombok.launch.Main'
+    args = [
+        'delombok',
+        '../RemixedDungeon/src/main/java',
+        '-d', 'build/delomboked/src/main/java',
+        '-v'  // Verbose output
+    ]
+    // Ensure output directory exists
+    doFirst {
+        file('build/delomboked/src/main/java').mkdirs()
+    }
+    // Ignore errors - delombok will copy files even if it can't resolve all types
+    ignoreExitValue = true
+}
+
+// Add delomboked sources to compilation
+sourceSets.main.java.srcDirs += file('build/delomboked/src/main/java')
+
+// Ensure delombok runs before compilation
+compileJava.dependsOn delombok
 
 // TeaVM configuration - explicit configuration
 teavm {
