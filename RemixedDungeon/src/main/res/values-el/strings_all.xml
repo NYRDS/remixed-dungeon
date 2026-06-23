@@ -2918,7 +2918,7 @@
   <string name="ChaosShield_name">ασπίδα του χάους</string>
   <string name="ChaosShield_desc">Η ασπίδα του χάους είναι το αποτέλεσμα της ανάμειξης ενός κρυστάλλου του χάους με μια κοινή ασπίδα. Υλοποιεί τυχαίες χαοτικές επιδράσεις με κάθε επιτυχημένο χτύπημα.</string>
   <string name="ChaosCrystal_ShieldFused">Ο κρύσταλλος ενώθηκε με την ασπίδα σου και πήρε τη μορφή του χάους.</string>
-  <string name="Actions_Speed">Επίπεδο φούριας</string>
+  <string name="Actions_Speed">Επίπεδο βιασύνης</string>
   <string name="ChampionOfAirBuff_Name">Μαχητής του αέρα</string>
   <string name="ChampionOfAirBuff_Info">Αυτό το χαρακτηριστικό δίνει στο πλάσμα την ουσία των ανέμων, ενισχύοντας την ευκινησία και τη μαχητική του δεινότητα. Ο μαχητής του αέρα είναι ένας τρομερός αντίπαλος, ικανός να εξαπολύει ταχείες και καταστροφικές επιθέσεις που αλλάζουν γρήγορα την πορεία της μάχης.</string>
   <string name="ChampionOfWaterBuff_Name">Μαχητής του νερού</string>
