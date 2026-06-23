@@ -653,7 +653,8 @@
   <string name="AboutScene_OurSite">Η ιστοσελίδα μας:</string>
   <string name="AboutScene_Snd">Αποστολή e-mail</string>
   <string name="AboutScene_Translation">Μετάφραση από:</string>
-  <string name="AboutScene_Translation_Names">Aeonius</string>
+  <string name="AboutScene_Translation_Names">Aeonius
+ΣΗΜΕΙΩΣΗ ΤΟΥ ΜΕΤΑΦΡΑΣΤΗ: Ο δημιουργός του παιχνιδιού χρησιμοποιεί αυτόματη μετάφραση μηχανής (π.χ. Google Translate) σε όσα κείμενα παραμένουν μη μεταφρασμένα για κάποιο διάστημα. Επομένως, μπορεί να εμφανίζονται χαμηλής ποιότητας ελληνικά κείμενα που όμως δεν αποτελούν έργο του μεταφραστή.</string>
   <string name="RankingsScene_Title">Κατάταξη κορυφής</string>
   <string name="RankingsScene_Total">Παιχνίδια που έχουν παιχτεί:</string>
   <string name="RankingsScene_NoGames">Δεν έχουν παιχτεί παιχνίδια ακόμα.</string>
