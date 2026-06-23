@@ -232,6 +232,14 @@ public class Utils {
         return "ru".equals(com.nyrds.pixeldungeon.game.GamePreferences.uiLanguage());
     }
     
+    /**
+     * Returns true if the VK Play button should be shown.
+     * This is for Russian language users on Android builds only.
+     */
+    public static boolean shouldShowVkPlayButton() {
+        return isRussianLanguage() && isAndroid();
+    }
+    
     public static class SpuriousReturn implements InterstitialPoint {
 
         @Override

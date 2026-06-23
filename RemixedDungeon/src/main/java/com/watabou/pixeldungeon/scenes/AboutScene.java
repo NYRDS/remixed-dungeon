@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.input.Touchscreen.Touch;
@@ -20,6 +21,7 @@ import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
+import com.watabou.pixeldungeon.ui.ImageButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -172,6 +174,19 @@ public class AboutScene extends PixelScene {
 		Text trn = createText(getTRN(), site);
 		Text getCode = createText(StringsManager.getVar(R.string.AboutScene_SourceCode), trn);
 		Text code = createTouchLink(R.string.AboutScene_SourceCode, "https://github.com/NYRDS/remixed-dungeon", getCode);
+		
+		// Add VK Play button for Russian users on Android near source code link
+		if (Utils.shouldShowVkPlayButton()) {
+			ImageButton btnVkPlay = new ImageButton(Icons.VK_PLAY.get()) {
+				@Override
+				protected void onClick() {
+					Game.openUrl(StringsManager.getVar(R.string.TitleScene_PlayOnPC), "https://vkplay.ru/play/game/remixed-dungeon-pixel-rogue-42406/");
+				}
+			};
+			btnVkPlay.setX(align(code.getX() + code.width() + 10));
+			btnVkPlay.setY(align(code.getY()));
+			add(btnVkPlay);
+		}
 		
 		// Check if WebServer is running and add a link to it
 		createWebServerLink(code);

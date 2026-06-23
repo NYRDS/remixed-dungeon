@@ -2,7 +2,9 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.audio.MusicManager;
+import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
@@ -15,6 +17,8 @@ import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.BadgesList;
 import com.watabou.pixeldungeon.ui.ExitButton;
+import com.watabou.pixeldungeon.ui.Icons;
+import com.watabou.pixeldungeon.ui.ImageButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 
@@ -64,6 +68,19 @@ public class BadgesScene extends PixelScene {
 		ExitButton btnExit = new ExitButton();
 		btnExit.setPos( Camera.main.width - btnExit.width(), 0 );
 		add( btnExit );
+		
+		// Add VK Play button for Russian users on Android near the title
+		if (Utils.shouldShowVkPlayButton()) {
+			ImageButton btnVkPlay = new ImageButton(Icons.VK_PLAY.get()) {
+				@Override
+				protected void onClick() {
+					Game.openUrl(StringsManager.getVar(R.string.TitleScene_PlayOnPC), "https://vkplay.ru/play/game/remixed-dungeon-pixel-rogue-42406/");
+				}
+			};
+			btnVkPlay.setX(align(title.getX() + title.width() + 10));
+			btnVkPlay.setY(align(title.getY()));
+			add(btnVkPlay);
+		}
 		
 		fadeIn();
 	}

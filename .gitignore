@@ -1,75 +1,98 @@
 ```
-# Compiled and build artifacts
-*.class
-*.o
-*.obj
-*.out
-*.dll
-*.so
-*.a
-*.pyc
-__pycache__/
+# Build artifacts
+build/
+target/
 
 # Dependencies
-node_modules/
-venv/
-.venv/
+.gradle/
+libs/
+
+# Logs
+*.log
+
+# Environment
 .env
 .env.local
 *.env.*
 
-# Build directories
-dist/
-build/
-target/
-.gradle/
-
-# IDE files
-.vscode/
+# IDE
 .idea/
-*.swp
-*.swo
-*.tmp
+*.iml
+*.iws
+.vscode/
 
-# System files
+# OS
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
+# Compiled files
+*.class
+*.jar
+*.war
+*.aar
 
 # Coverage
 coverage/
 htmlcov/
 .coverage
 
-# MyPy
-.mypy_cache/
+# Python (if any Python files exist in project)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
 
-# PyTest
-.pytest_cache/
+# Node.js (if any JS files exist in project)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Compressed files
+# Temporary files
+*.tmp
+*.temp
+*~
+.swp
+.swo
+
+# Archives
 *.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
 *.tar.gz
 *.tar.bz2
-*.tar.xz
-*.tar.zst
+*.rar
+*.7z
+
+# Testing
+*.coverage
+coverage.xml
+junit-reports/
+test-results/
+
+# Distribution
+dist/
+out/
+bin/
+
+# MyPy (Python)
+.mypy_cache/
+
+# PyTest (Python)
+.pytest_cache/
+
+# C/C++
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.out
+*.obj
+
+# Java specific build tools
+!/RemixedDungeon/src/main/java/**/*  # Don't ignore source files
 ```
