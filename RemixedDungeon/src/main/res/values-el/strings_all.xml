@@ -1080,7 +1080,7 @@
   <string name="GoldenStatue_Gender">neuter</string>
   <string name="GoldenStatue_Name_Objective">χρυσό άγαλμα</string>
   <string name="GoldenStatue_Desc">Δύσκολο να πιστέψει κανείς ότι αυτό το άγαλμα δεν είναι απλά διακοσμητικό. Πόσο μάλλον ότι έιναι ένα μοχθηρό πλάσμα που καραδοκεί για κάποιον ανύποπτο εξερευνητή. Με την πρώτη ματιά, θα ορκιζόσουν ότι το όπλο του _(%s)_ είναι απλά μέρος του χεριού του.</string>
-  <string name="NecromancerNPC_Name">νεκρομάντης</string>
+  <string name="NecromancerNPC_Name">Νεκρομάντης</string>
   <string name="NecromancerNPC_Gender">masculine</string>
   <string name="NecromancerNPC_Name_Objective">νεκρομάντης</string>
   <string name="NecromancerNPC_Desc">Αυτός ο μεσήλικος άντρας δείχνει τόσο ενοχλημένος όσο και ενθουσιασμένος την ίδια στιγμή. Φορά μια σύνθετη πανοπλία φτιαγμένη από ενωμένα κομμάτια οστών.</string>
