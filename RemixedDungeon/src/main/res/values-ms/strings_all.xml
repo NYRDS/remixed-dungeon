@@ -1386,7 +1386,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="MissileWeapon_No">Tidak, Saya ubah pendirian saya</string>
     <string name="MissileWeapon_Sure">Anda pasti mahu memakainya sebagai senjata tempur?</string>
     <string name="MissileWeapon_Yes">Ya, Saya tahu apa yang saya buat</string>
-    <string name="MobAi_status">Ini %1 %2</string>
+    <string name="MobAi_status">Ini %1$s adalah %2$s</string>
     <string name="Mob_Attacking">Anggap %s ini sudah mati!</string>
     <string name="Mob_Cannot_Be_Pet">Semangat \&quot;%s\&quot; terlalu kuat untuk dikawal!</string>
     <string name="Mob_CantDoIt">I tak boleh buat. Aku ada kaki kecil.</string>
@@ -3022,6 +3022,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

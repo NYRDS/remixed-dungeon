@@ -1393,7 +1393,7 @@ Potrebbe bruciare?</string>
     <string name="MissileWeapon_No">No, ho cambiato idea</string>
     <string name="MissileWeapon_Sure">Vuoi davvero equipaggiarla come arma da mischia?</string>
     <string name="MissileWeapon_Yes">Sì, so quello che faccio</string>
-    <string name="MobAi_status">Questo %1 è %2</string>
+    <string name="MobAi_status">Questo %1$s è %2$s</string>
     <string name="Mob_Attacking">Conta questo %s come morto!</string>
     <string name="Mob_Cannot_Be_Pet">La volontà di un %1$s è troppo forte per essere controllata!</string>
     <string name="Mob_CantDoIt">Non posso farlo. Ho delle zampette piccole.</string>
@@ -3043,6 +3043,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
