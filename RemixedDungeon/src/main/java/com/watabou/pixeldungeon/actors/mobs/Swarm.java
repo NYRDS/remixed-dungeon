@@ -21,6 +21,7 @@ public class Swarm extends Mob {
 		maxLvl = 10;
 		
 		flying = true;
+		carcassChance = 0.2f;
 
 		loot(new PotionOfHealing(), BASIC_LOOT_CHANCE);
 	}
@@ -50,6 +51,7 @@ public class Swarm extends Mob {
 		clone.generation = generation + 1;
 		clone.resetBelongings(new Belongings(clone));
 		clone.loot(new PotionOfHealing(), BASIC_LOOT_CHANCE / (clone.generation + 1f));
+		clone.carcassChance = 0.2f / (clone.generation + 1f);
 		return clone;
 	}
 }
