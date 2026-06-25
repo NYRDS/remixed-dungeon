@@ -277,13 +277,13 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.30'
     implementation 'com.google.guava:guava:32.0.1-jre'
 
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+    implementation 'org.json:json:20210307'
+
     implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
     implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
     implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
     implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
-
-    implementation 'org.nanohttpd:nanohttpd:2.3.1'
-    implementation 'org.json:json:20210307'
 }
 
 // URLs for JDK downloads
