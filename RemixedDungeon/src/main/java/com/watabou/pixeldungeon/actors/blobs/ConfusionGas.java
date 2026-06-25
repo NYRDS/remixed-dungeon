@@ -10,6 +10,11 @@ import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class ConfusionGas extends Blob {
 	
 	@Override

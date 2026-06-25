@@ -13,6 +13,11 @@ import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Foliage extends Blob {
 	
 	@Override

@@ -23,6 +23,11 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Burning extends Buff implements Doom {
 
 	private static final float DURATION = 8f;

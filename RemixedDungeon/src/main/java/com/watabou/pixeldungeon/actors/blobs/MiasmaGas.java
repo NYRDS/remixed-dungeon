@@ -13,6 +13,11 @@ import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class MiasmaGas extends Blob {
 
 	@Override

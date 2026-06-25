@@ -3,6 +3,11 @@ package com.watabou.pixeldungeon.actors.buffs;
 
 import com.watabou.pixeldungeon.actors.Char;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Speed extends FlavourBuff {
 	
 	public static final float DURATION = 10f;

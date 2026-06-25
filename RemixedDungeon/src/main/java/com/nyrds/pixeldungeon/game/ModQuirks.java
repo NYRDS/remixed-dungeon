@@ -1,5 +1,10 @@
 package com.nyrds.pixeldungeon.game;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class ModQuirks {
 
     public static boolean mobLeveling;

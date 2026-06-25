@@ -16,6 +16,11 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Poison extends Buff implements Doom {
 
 	@Override

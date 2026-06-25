@@ -13,6 +13,11 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Frost extends FlavourBuff {
 	private static final float DURATION	= 5f;
 	

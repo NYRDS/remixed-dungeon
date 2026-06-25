@@ -24,6 +24,11 @@ import java.util.Set;
 
 import lombok.val;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 
 public class CustomBuff extends Buff {
 

@@ -27,6 +27,11 @@ import java.util.Set;
 
 import lombok.SneakyThrows;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 
 public class ModdingMode extends ModdingBase {
 

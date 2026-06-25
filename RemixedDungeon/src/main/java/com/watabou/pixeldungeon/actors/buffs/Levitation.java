@@ -8,6 +8,11 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 import org.jetbrains.annotations.NotNull;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Levitation extends FlavourBuff {
 
 	public static final float DURATION	= 20f;

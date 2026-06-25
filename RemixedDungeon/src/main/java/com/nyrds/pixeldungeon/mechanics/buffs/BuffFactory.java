@@ -63,6 +63,11 @@ import java.util.Set;
 
 import lombok.SneakyThrows;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 
 public class BuffFactory {
     public static final String CHAMPION_OF_EARTH = "ChampionOfEarth";

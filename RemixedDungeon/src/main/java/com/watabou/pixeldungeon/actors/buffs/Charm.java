@@ -11,6 +11,11 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 import org.jetbrains.annotations.NotNull;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Charm extends FlavourBuff {
 	
 	@Override

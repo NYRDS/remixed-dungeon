@@ -8,6 +8,11 @@ import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Slow extends FlavourBuff {
 
 	private static final float DURATION = 10f;

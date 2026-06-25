@@ -8,6 +8,11 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Combo extends Buff {
 	
 	public int count = 0;

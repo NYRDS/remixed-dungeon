@@ -11,6 +11,11 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 import org.jetbrains.annotations.NotNull;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Fury extends Buff {
 	
 	public static final float LEVEL	= 0.4f;

@@ -12,6 +12,11 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.particles.WebParticle;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Web extends Blob {
 	
 	@Override

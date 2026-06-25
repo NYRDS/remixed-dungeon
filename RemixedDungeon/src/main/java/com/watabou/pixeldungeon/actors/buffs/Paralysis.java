@@ -14,6 +14,11 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Paralysis extends FlavourBuff {
 
 	private static final float DURATION	= 10f;

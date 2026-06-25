@@ -13,6 +13,11 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Bleeding extends Buff {
 
 	@Override

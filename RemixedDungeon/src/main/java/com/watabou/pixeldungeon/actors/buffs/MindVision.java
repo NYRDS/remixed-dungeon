@@ -8,6 +8,11 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class MindVision extends FlavourBuff {
 
 	public static final float DURATION = 20f;

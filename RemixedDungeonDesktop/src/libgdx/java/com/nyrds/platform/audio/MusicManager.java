@@ -13,6 +13,11 @@ import com.nyrds.util.Util;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public enum MusicManager {
 
     INSTANCE;

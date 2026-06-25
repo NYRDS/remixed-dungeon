@@ -8,6 +8,11 @@ import java.io.FilenameFilter;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 // Stub class for LuaError
 class LuaError extends RuntimeException {
     public LuaError(String message) {

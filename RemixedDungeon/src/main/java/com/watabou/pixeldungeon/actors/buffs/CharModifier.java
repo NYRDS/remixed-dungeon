@@ -9,6 +9,11 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 
 import java.util.Set;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public interface CharModifier {
     int drBonus(Char chr);
     int stealthBonus(Char chr);

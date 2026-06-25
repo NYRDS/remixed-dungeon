@@ -6,6 +6,11 @@ import com.watabou.pixeldungeon.actors.Char;
 
 import org.jetbrains.annotations.NotNull;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class ManaRegeneration extends Buff {
 
     private static final float REGENERATION_DELAY = 20;

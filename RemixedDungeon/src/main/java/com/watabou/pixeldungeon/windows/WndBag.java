@@ -35,6 +35,11 @@ import java.util.List;
 
 import lombok.Getter;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 
 public class WndBag extends WndTabbed {
 

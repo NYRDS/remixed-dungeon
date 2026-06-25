@@ -15,6 +15,11 @@ import java.io.StringWriter;
 
 import lombok.SneakyThrows;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 /**
  * Created by mike on 01.03.2016.
  */

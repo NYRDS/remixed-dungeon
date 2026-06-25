@@ -35,6 +35,11 @@ import com.watabou.pixeldungeon.items.weapon.melee.Sword;
 import com.watabou.pixeldungeon.items.weapon.melee.WarHammer;
 import com.watabou.pixeldungeon.plants.Seed;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class WaterOfTransmutation extends WellWater {
 
     @Override

@@ -31,6 +31,11 @@ import java.util.Set;
 
 import lombok.SneakyThrows;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 /**
  * Created by mike on 08.03.2016.
  */

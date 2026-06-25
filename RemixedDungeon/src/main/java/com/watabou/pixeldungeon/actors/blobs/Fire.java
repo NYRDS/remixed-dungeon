@@ -16,6 +16,11 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class Fire extends Blob {
 	
 	@Override

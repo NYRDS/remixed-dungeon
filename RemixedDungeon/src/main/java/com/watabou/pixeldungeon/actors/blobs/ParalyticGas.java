@@ -10,6 +10,11 @@ import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
+
+
 public class ParalyticGas extends Blob {
 	
 	@Override
