@@ -1,6 +1,7 @@
 package com.nyrds.platform.lua;
 
 import com.nyrds.platform.app.RemixedDungeonApp;
+import com.nyrds.lua.LuaSandbox;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 
@@ -40,6 +41,8 @@ public class PlatformLuajavaLib extends LuajavaLib {
 		if (classRemap.containsKey(name)) {
 			actualClassName = classRemap.get(name);
 		}
+
+		LuaSandbox.warnIfNotAllowed(actualClassName, "<class>", "class");
 
 		try {
 			Class<?> clazz = Class.forName(actualClassName, true, classLoader);

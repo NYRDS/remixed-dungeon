@@ -2,6 +2,7 @@ package com.nyrds.platform.app;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
+import com.nyrds.lua.LuaSandbox;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -31,6 +32,10 @@ public class RemixedDungeonApp {
 
         // Initialize BuildConfig with command line arguments
         BuildConfig.init(args);
+
+        // Initialize LuaSandbox file logging for Desktop
+        File logDir = new File(getUserDataPath());
+        LuaSandbox.initDesktopFileLogging(logDir);
 
         // Check for web server parameter and start if requested
         int webServerPort = -1;
