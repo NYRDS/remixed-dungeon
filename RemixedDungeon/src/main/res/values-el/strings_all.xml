@@ -2694,7 +2694,7 @@
   <string name="LightningBolt_Name">Αστραπή</string>
   <string name="LightningBolt_Info">Ένα ξόρκι που είναι γνωστό στους κύκλους των αρχαίων σαμάνων. Θα κατακεραυνώσει τους εχθρούς με διπλάσια αποτελεσματικότητα--ειδικά αν είναι τόσο ανόητοι ώστε να στέκονται στο νερό.</string>
   <string name="Heal_Name">Θεραπεία</string>
-  <string name="Heal_Info">Ένα πολύ χρήσιμο ξόρκι για την κατακόμβη, ή όχι;</string>
+  <string name="Heal_Info">Πολύ χρήσιμο ξόρκι για μια κατακόμβη. Ή όχι;</string>
   <string name="Heal_Cast">%s: θεραπεύτηκε.</string>
   <string name="Anesthesia_Name">Αναισθησία</string>
   <string name="Anesthesia_Info">Προκαλεί μια βαθιά, αφύσικη ύπνωση στον στόχο. Ακόμα και οι πιο βίαιες επιθέσεις δεν θα τον ξυπνήσουν από τον λήθαργο αυτόν.</string>
