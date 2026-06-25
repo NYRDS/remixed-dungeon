@@ -11,8 +11,6 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Vertigo extends FlavourBuff {
 	
 	public static final float DURATION	= 10f;

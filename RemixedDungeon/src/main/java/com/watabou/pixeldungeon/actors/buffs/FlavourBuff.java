@@ -8,9 +8,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
-//Special kind of buff, that doesn't perform any kind actions
 public class FlavourBuff extends Buff {
 
 	@Override

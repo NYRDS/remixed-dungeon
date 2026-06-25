@@ -13,8 +13,6 @@ import java.util.Arrays;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class LiquidFlame extends Blob {
 
 	@Override

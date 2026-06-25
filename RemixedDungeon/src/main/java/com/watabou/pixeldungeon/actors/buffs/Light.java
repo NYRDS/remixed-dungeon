@@ -10,8 +10,6 @@ import org.jetbrains.annotations.NotNull;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Light extends FlavourBuff {
 
 	public static final float DURATION	= 250f;

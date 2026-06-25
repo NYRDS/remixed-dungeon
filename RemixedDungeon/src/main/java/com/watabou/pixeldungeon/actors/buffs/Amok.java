@@ -9,8 +9,6 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Amok extends FlavourBuff {
 	
 	@Override

@@ -15,8 +15,6 @@ import org.jetbrains.annotations.NotNull;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Moongrace extends Buff {
 
     private static final float STEP = 5f;

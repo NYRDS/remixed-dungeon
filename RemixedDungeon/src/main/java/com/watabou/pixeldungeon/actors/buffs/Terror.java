@@ -14,8 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Terror extends FlavourBuff {
 
 	public static final float DURATION = 10f;

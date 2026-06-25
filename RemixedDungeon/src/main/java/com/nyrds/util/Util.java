@@ -18,11 +18,6 @@ import lombok.SneakyThrows;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
-/**
- * Created by mike on 01.03.2016.
- */
 public class Util {
     public static final String SAVE_ADS_EXPERIMENT = "SaveAdsExperiment2";
     public static final Callback nullCallback = () -> {};

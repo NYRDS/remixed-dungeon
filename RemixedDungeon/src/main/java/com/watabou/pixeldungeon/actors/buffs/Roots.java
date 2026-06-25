@@ -12,8 +12,6 @@ import org.jetbrains.annotations.NotNull;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Roots extends FlavourBuff {
 	
 	@Override

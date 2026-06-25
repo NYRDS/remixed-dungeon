@@ -19,8 +19,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Poison extends Buff implements Doom {
 
 	@Override

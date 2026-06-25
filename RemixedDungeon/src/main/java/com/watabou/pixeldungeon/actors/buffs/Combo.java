@@ -11,8 +11,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Combo extends Buff {
 	
 	public int count = 0;

@@ -38,8 +38,6 @@ import com.watabou.pixeldungeon.plants.Seed;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class WaterOfTransmutation extends WellWater {
 
     @Override

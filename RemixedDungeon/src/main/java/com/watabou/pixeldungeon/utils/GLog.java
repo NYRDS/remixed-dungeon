@@ -18,8 +18,6 @@ import java.util.Queue;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class GLog {
 
 	private static final String RE_PD_LOG_FILE_LOG = "RePdLogFile.log";

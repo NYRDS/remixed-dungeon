@@ -66,9 +66,6 @@ import lombok.SneakyThrows;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
-
 public class BuffFactory {
     public static final String CHAMPION_OF_EARTH = "ChampionOfEarth";
     public static final String CHAMPION_OF_FIRE = "ChampionOfFire";

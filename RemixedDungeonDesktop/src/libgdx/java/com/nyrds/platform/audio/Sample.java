@@ -18,8 +18,6 @@ import java.util.Set;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public enum Sample {
 
 	INSTANCE;

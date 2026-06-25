@@ -14,12 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
-/**
- * Created by mike on 25.03.2018.
- * This file is part of Remixed Pixel Dungeon.
- */
 public class RageBuff extends ArtifactBuff {
     @Override
     public boolean act() {

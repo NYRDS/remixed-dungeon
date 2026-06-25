@@ -16,8 +16,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class MiasmaGas extends Blob {
 
 	@Override

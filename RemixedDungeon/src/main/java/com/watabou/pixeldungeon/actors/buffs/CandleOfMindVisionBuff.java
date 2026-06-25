@@ -6,8 +6,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class CandleOfMindVisionBuff extends MindVision {
 
 	public static final float DURATION = 100f;

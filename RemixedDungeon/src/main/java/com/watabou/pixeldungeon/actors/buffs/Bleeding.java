@@ -16,8 +16,6 @@ import com.watabou.utils.Random;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Bleeding extends Buff {
 
 	@Override

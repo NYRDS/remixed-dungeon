@@ -30,9 +30,6 @@ import lombok.SneakyThrows;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
-
 public class ModdingMode extends ModdingBase {
 
     public static boolean useRetroHeroSprites = false;

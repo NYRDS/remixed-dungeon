@@ -10,8 +10,6 @@ import java.util.LinkedList;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class PathFinder {
 
 	public static int[] distance;

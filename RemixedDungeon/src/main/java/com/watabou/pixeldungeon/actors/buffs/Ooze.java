@@ -12,8 +12,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Ooze extends Buff {
 
 	@Override

@@ -13,8 +13,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class ConfusionGas extends Blob {
 	
 	@Override

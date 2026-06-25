@@ -10,8 +10,6 @@ import org.jetbrains.annotations.NotNull;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Weakness extends FlavourBuff {
 
 	private static final float DURATION = 40f;

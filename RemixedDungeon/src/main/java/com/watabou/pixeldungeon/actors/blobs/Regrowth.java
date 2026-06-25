@@ -15,8 +15,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Regrowth extends Blob {
 	
 	@Override

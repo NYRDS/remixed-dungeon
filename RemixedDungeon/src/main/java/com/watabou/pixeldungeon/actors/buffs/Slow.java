@@ -11,8 +11,6 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Slow extends FlavourBuff {
 
 	private static final float DURATION = 10f;

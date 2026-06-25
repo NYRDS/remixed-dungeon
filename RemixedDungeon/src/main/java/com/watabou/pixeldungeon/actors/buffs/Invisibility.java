@@ -13,8 +13,6 @@ import org.jetbrains.annotations.NotNull;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Invisibility extends FlavourBuff {
 
 	public static final float DURATION	= 15f;

@@ -21,8 +21,6 @@ import com.watabou.utils.Random;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Necrotism extends Buff implements Doom {
 	@Packable
 	public float left;

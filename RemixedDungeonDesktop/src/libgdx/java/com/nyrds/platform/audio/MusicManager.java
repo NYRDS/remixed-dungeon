@@ -16,8 +16,6 @@ import org.jetbrains.annotations.Nullable;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public enum MusicManager {
 
     INSTANCE;

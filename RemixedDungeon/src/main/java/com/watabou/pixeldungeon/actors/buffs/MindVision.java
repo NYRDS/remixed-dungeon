@@ -11,8 +11,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class MindVision extends FlavourBuff {
 
 	public static final float DURATION = 20f;

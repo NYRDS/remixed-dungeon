@@ -21,11 +21,6 @@ import java.util.Set;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
-/**
- * HTML version of StringsManager
- */
 public class StringsManager {
     
     private static final Map<Integer, String> stringMap = new HashMap<>();

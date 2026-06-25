@@ -38,9 +38,6 @@ import lombok.Getter;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
-
 public class WndBag extends WndTabbed {
 
 	private final int panelWidth;

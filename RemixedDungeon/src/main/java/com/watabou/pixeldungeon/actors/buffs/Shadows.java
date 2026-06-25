@@ -13,8 +13,6 @@ import org.jetbrains.annotations.NotNull;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Shadows extends Invisibility {
 
 	@Packable

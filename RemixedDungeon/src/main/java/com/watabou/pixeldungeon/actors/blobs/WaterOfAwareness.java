@@ -24,8 +24,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class WaterOfAwareness extends WellWater {
 
 	@Override

@@ -13,8 +13,6 @@ import org.jetbrains.annotations.NotNull;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Stun extends FlavourBuff {
 
 	private static final float DURATION	= 10f;

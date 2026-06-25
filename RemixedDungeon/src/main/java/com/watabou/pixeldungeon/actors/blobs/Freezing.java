@@ -15,8 +15,6 @@ import com.watabou.utils.Random;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Freezing {
 
 	// for newInstance used if Buff.affect

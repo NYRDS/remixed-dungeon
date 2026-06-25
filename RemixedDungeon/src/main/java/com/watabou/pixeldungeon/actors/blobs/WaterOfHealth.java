@@ -19,8 +19,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class WaterOfHealth extends WellWater {
 
 	@Override

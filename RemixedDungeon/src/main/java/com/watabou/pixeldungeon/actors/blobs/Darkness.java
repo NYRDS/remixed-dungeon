@@ -8,8 +8,6 @@ import com.watabou.pixeldungeon.effects.particles.DarknessParticle;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Darkness extends Blob {
 	
 	@Override

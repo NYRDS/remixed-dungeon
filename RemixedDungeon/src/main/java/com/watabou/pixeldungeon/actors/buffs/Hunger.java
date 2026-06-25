@@ -23,8 +23,6 @@ import org.jetbrains.annotations.NotNull;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Hunger extends Buff implements Doom {
 
 	private static final float STEP	= 10f;

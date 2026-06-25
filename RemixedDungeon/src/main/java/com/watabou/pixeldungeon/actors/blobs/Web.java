@@ -15,8 +15,6 @@ import com.watabou.pixeldungeon.effects.particles.WebParticle;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Web extends Blob {
 	
 	@Override

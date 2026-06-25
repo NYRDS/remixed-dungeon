@@ -27,11 +27,6 @@ import lombok.SneakyThrows;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
-/**
- * Created by mike on 08.03.2016.
- */
 public class StringsManager {
 
     @NotNull

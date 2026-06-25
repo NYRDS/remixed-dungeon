@@ -7,8 +7,6 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class Barkskin extends Buff {
 
 	@Override

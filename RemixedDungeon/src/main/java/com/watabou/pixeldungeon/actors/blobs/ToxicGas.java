@@ -20,8 +20,6 @@ import com.watabou.utils.Random;
 import com.nyrds.LuaInterface;
 
 @LuaInterface
-
-
 public class ToxicGas extends Blob implements Doom {
 	
 	@Override
