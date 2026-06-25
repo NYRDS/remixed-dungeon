@@ -50,7 +50,6 @@ public class LuaInterfaceProcessor extends AbstractProcessor {
     private Elements elementUtils;
     private Types typeUtils;
     private TypeElement luaInterfaceAnnotation;
-    private boolean generated = false;
 
     @Override
     public synchronized void init(ProcessingEnvironment processingEnv) {
@@ -64,9 +63,6 @@ public class LuaInterfaceProcessor extends AbstractProcessor {
 
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
-        if (generated) {
-            return true;
-        }
 
         // Collect all elements annotated with @LuaInterface
         Map<TypeElement, ClassData> classDataMap = new HashMap<>();
@@ -137,7 +133,6 @@ public class LuaInterfaceProcessor extends AbstractProcessor {
                 writeJsonMap(writer, classDataMap);
             }
             messager.printMessage(Diagnostic.Kind.NOTE, "Generated lua-interface-map.json with " + classDataMap.size() + " classes");
-            generated = true;
         } catch (IOException e) {
             messager.printMessage(Diagnostic.Kind.ERROR, "Failed to write lua-interface-map.json: " + e.getMessage());
         }
@@ -233,6 +228,10 @@ public class LuaInterfaceProcessor extends AbstractProcessor {
     }
 
     private TypeElement getEnclosingClass(Element element) {
+        // If the element itself is a class or interface, return it directly
+        if (element.getKind() == ElementKind.CLASS || element.getKind() == ElementKind.INTERFACE) {
+            return (TypeElement) element;
+        }
         Element enclosing = element.getEnclosingElement();
         while (enclosing != null && enclosing.getKind() != ElementKind.CLASS && enclosing.getKind() != ElementKind.INTERFACE) {
             enclosing = enclosing.getEnclosingElement();
