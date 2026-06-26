@@ -1,0 +1,11 @@
+<resources>
+    <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
+    <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
+
+
+    <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
+    <string name="ShortSword_Name">kiếm ngắn</string>
+    <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
+
+
+</resources>

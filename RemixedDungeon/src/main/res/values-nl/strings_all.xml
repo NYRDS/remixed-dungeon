@@ -1,0 +1,11 @@
+<resources>
+    <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
+    <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
+
+
+    <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
+    <string name="ShortSword_Name">kort zwaard</string>
+    <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
+
+
+</resources>
