@@ -1,11 +1,13 @@
 <resources>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
+    <string name="Challenges_Names_3">ארץ עקרה</string>
     <string name="Char_Stole_2">%1$s גנב את %2$s של %3$s!</string>
 
 
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
     <string name="ShortSword_Name">חרב קצרה</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
+
 
 
 </resources>

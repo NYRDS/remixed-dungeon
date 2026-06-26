@@ -8,4 +8,6 @@
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
 
 
+
+    <string name="WndPriest_Heal">علاج - %d ذهب</string>
 </resources>

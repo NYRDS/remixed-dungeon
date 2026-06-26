@@ -8,4 +8,6 @@
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
 
 
+
+    <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
 </resources>
