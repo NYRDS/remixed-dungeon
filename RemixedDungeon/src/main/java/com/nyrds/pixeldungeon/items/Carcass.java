@@ -161,11 +161,12 @@ public class Carcass extends Item implements Doom {
     private void dissect(Char chr) {
         int pos = chr.getPos();
         var heap = getHeap();
+        int effectPos = pos;
         if (heap != null) {
-            pos = heap.pos;
+            effectPos = heap.pos;
         }
 
-        Wound.hit(pos);
+        Wound.hit(effectPos);
 
         // Create random harvestable items to drop
         String[] harvestItems = {"ToxicGland", "RottenOrgan", "BoneShard"};

@@ -383,7 +383,14 @@ public class WndItemAlchemy extends Window {
         int pos = hero.getPos();
 
         if (selectedRecipe != null) {
-            // Remove the required ingredients from the player's inventory
+            // Disable buttons immediately to prevent multiple rapid clicks
+            executeButton.enable(false);
+            executeX5Button.enable(false);
+            executeX10Button.enable(false);
+            executeX50Button.enable(false);
+
+            try {
+                // Remove the required ingredients from the player's inventory
             var inputs = selectedRecipe.getInput();
 
             // Remove ingredients from inventory (times the normal amount)
@@ -467,6 +474,10 @@ public class WndItemAlchemy extends Window {
             } else {
                 hide();
             }
+        } finally {
+            // Re-enable buttons based on current inventory state
+            updateExecuteButton();
         }
     }
+}
 }
