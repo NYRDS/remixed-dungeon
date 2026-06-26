@@ -24,6 +24,9 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class WndTradeItem extends Window {
 
     private static final int WIDTH = 120;
@@ -34,8 +37,12 @@ public class WndTradeItem extends Window {
     @NotNull
     private final ItemOwner shopkeeper;
     private final Hero customer;
-
     private static final int[] tradeQuantity = {1, 5, 10, 50, 100, 500, 1000};
+
+    // Track if a transaction is in progress to prevent rapid-click flooding
+    private boolean transactionInProgress = false;
+    // Store trade buttons (excluding Cancel) for disable/enable during transactions
+    private final List<RedButton> tradeButtons = new ArrayList<>();
 
     public WndTradeItem(final Item item, @NotNull ItemOwner shopkeeper, boolean buy) {
 
@@ -57,6 +64,7 @@ public class WndTradeItem extends Window {
         float pos = createDescription(item, false);
 
         vbox.clear();
+        tradeButtons.clear();
         int priceAll = price(item, false);
 
         if (item.quantity() == 1) {
@@ -69,6 +77,7 @@ public class WndTradeItem extends Window {
             };
             btn.setSize(WIDTH, BTN_HEIGHT);
             vbox.add(btn);
+            tradeButtons.add(btn);
 
         } else {
 
@@ -86,6 +95,7 @@ public class WndTradeItem extends Window {
                     };
                     btnSellN.setSize(WIDTH, BTN_HEIGHT);
                     vbox.add(btnSellN);
+                    tradeButtons.add(btnSellN);
                 }
             }
 
@@ -97,6 +107,7 @@ public class WndTradeItem extends Window {
             };
             btnSellAll.setSize(WIDTH, BTN_HEIGHT);
             vbox.add(btnSellAll);
+            tradeButtons.add(btnSellAll);
         }
 
         RedButton btnCancel = new RedButton(R.string.WndTradeItem_Cancel) {
@@ -117,6 +128,7 @@ public class WndTradeItem extends Window {
         float pos = createDescription(item, true);
 
         vbox.clear();
+        tradeButtons.clear();
 
         int priceAll = price(item, true);
 
@@ -131,6 +143,7 @@ public class WndTradeItem extends Window {
             btnBuy.setSize(WIDTH, BTN_HEIGHT);
             btnBuy.enable(priceAll <= customer.gold());
             vbox.add(btnBuy);
+            tradeButtons.add(btnBuy);
 
         } else {
             for (int i = 0; i < tradeQuantity.length; ++i) {
@@ -149,6 +162,7 @@ public class WndTradeItem extends Window {
                         btnBuyN.enable(priceFor <= customer.gold());
                         btnBuyN.setSize(WIDTH, BTN_HEIGHT);
                         vbox.add(btnBuyN);
+                        tradeButtons.add(btnBuyN);
                     }
                 }
             }
@@ -163,6 +177,7 @@ public class WndTradeItem extends Window {
             btnBuyAll.setSize(WIDTH, BTN_HEIGHT);
             btnBuyAll.enable(priceAll <= customer.gold());
             vbox.add(btnBuyAll);
+            tradeButtons.add(btnBuyAll);
         }
         RedButton btnCancel = new RedButton(R.string.WndTradeItem_Cancel) {
             @Override
@@ -221,47 +236,69 @@ public class WndTradeItem extends Window {
         return price;
     }
 
-    private void buy(@NotNull Item item, final int quantity) {
-        Item boughtItem = item.detach(shopkeeper.getBelongings().backpack, quantity);
-
-        int price = price(boughtItem, true);
-        customer.spendGold(price);
-
-        GLog.i(StringsManager.getVar(R.string.WndTradeItem_Bought), boughtItem.name(), price);
-
-        if (!boughtItem.doPickUp(customer)) {
-            boughtItem.doDrop(customer);
+    private void setTradeButtonsEnabled(boolean enabled) {
+        for (RedButton btn : tradeButtons) {
+            btn.enable(enabled);
         }
+    }
 
-        if (boughtItem != item) {
-            hide();
-            GameScene.show(new WndTradeItem(item, shopkeeper, true));
-        } else {
-            shopkeeper.generateNewItem();
-            hide();
+    private void buy(@NotNull Item item, final int quantity) {
+        if (transactionInProgress) return;
+        transactionInProgress = true;
+        setTradeButtonsEnabled(false);
+
+        try {
+            Item boughtItem = item.detach(shopkeeper.getBelongings().backpack, quantity);
+
+            int price = price(boughtItem, true);
+            customer.spendGold(price);
+
+            GLog.i(StringsManager.getVar(R.string.WndTradeItem_Bought), boughtItem.name(), price);
+
+            if (!boughtItem.doPickUp(customer)) {
+                boughtItem.doDrop(customer);
+            }
+
+            if (boughtItem != item) {
+                hide();
+                GameScene.show(new WndTradeItem(item, shopkeeper, true));
+            } else {
+                shopkeeper.generateNewItem();
+                hide();
+            }
+        } finally {
+            transactionInProgress = false;
+            setTradeButtonsEnabled(true);
         }
     }
 
     private void sell(@NotNull Item item, final int quantity) {
+        if (transactionInProgress) return;
+        transactionInProgress = true;
+        setTradeButtonsEnabled(false);
 
-        if (item.isEquipped(customer) && !((EquipableItem) item).doUnequip(customer, false)) {
+        try {
+            if (item.isEquipped(customer) && !((EquipableItem) item).doUnequip(customer, false)) {
+                hide();
+                return;
+            }
+
+            Item soldItem = item.detach(customer.getBelongings().backpack, quantity);
+            //shopkeeper.placeItemInShop(soldItem);
+
+            int price = price(soldItem, false);
+
+            new Gold(price).doPickUp(customer);
             hide();
-            return;
+            GLog.i(StringsManager.getVar(R.string.WndTradeItem_Sold), soldItem.name(), price);
+
+            if (soldItem != item) {
+                GameScene.show(new WndTradeItem(item, shopkeeper, false));
+            }
+        } finally {
+            transactionInProgress = false;
+            setTradeButtonsEnabled(true);
         }
-
-        Item soldItem = item.detach(customer.getBelongings().backpack, quantity);
-        //shopkeeper.placeItemInShop(soldItem);
-
-        int price = price(soldItem, false);
-
-        new Gold(price).doPickUp(customer);
-        hide();
-        GLog.i(StringsManager.getVar(R.string.WndTradeItem_Sold), soldItem.name(), price);
-
-        if (soldItem != item) {
-            GameScene.show(new WndTradeItem(item, shopkeeper, false));
-        }
-
     }
 
     @Override
