@@ -1,4 +1,3 @@
-```
 # Compiled and build artifacts
 *.class
 *.o
@@ -72,4 +71,6 @@ htmlcov/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
-```
+
+# Desktop runtime directory (IDE run output)
+RemixedDungeonDesktop/src/desktop/rundir/
