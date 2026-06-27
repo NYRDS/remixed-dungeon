@@ -1,5 +1,6 @@
 <resources>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
+    <string name="Badges_AllRings">Đã nhận diện tất cả nhẫn</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
@@ -24,6 +25,7 @@
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
 
 
 

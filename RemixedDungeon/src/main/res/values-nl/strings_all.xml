@@ -14,6 +14,7 @@
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
+    <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
     <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
 
@@ -28,6 +29,7 @@
 
 
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
+
 
 
 

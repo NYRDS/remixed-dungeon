@@ -12,6 +12,7 @@
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="Ring_Gems_1">الأوبال</string>
+    <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
     <string name="ShortSword_Name">سيف قصير</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
@@ -22,6 +23,7 @@
 
 
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
+
 
 
 
