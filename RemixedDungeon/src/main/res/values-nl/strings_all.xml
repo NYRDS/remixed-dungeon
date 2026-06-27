@@ -1,4 +1,5 @@
 <resources>
+    <string name="ArmorKit_Name">rustingset</string>
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="Char_StaBleeding">bloeding</string>
@@ -6,9 +7,12 @@
 
 
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
+    <string name="Eye_Gender">neuter</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
+    <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
+    <string name="SuspiciousRat_Name">Verdachtige rat</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
     <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
 
@@ -23,5 +27,9 @@
 
 
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
+
+
+
+
 
 </resources>

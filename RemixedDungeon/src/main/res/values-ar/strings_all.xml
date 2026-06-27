@@ -4,17 +4,24 @@
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
 
 
+    <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
     <string name="DeferedDamageBuff_Info">تم تحويل الألم إلى ألم بطيء، مما يقلل الضرر المتلقى دفعة واحدة.\nالضرر المتبقي لتلقيه %d</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
     <string name="Ring_Gems_1">الأوبال</string>
     <string name="ShortSword_Name">سيف قصير</string>
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
+    <string name="WaterElemental_Gender">masculine</string>
+    <string name="Weightstone_Fast">لقد قمت بتوازين %s لجعله أسرع</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
 
 
 
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
+
+
+
+
 
 
 

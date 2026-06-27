@@ -1,5 +1,6 @@
 <resources>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
+    <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
     <string name="Char_Stole_2">%1$s גנב את %2$s של %3$s!</string>
 
@@ -7,6 +8,8 @@
     <string name="CharmSpell_Name">הקסמה</string>
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
     <string name="HeroClass_Hun">ציידת</string>
+    <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
+    <string name="ScarecrowNPC_Quest_End">אוי איזו שמחה, אוי איזו התרגשות!\nעל זה תקבל פרוסת פאי מתוקה!</string>
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
     <string name="ShortSword_Name">חרב קצרה</string>
@@ -19,6 +22,9 @@
 
 
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
+
+
+
 
 
 
