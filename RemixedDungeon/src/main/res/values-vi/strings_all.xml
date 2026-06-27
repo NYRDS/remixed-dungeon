@@ -9,10 +9,13 @@
     <string name="DewVial_Name">lọ sương</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
     <string name="Kusarigama_Name">kusarigama</string>
+    <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
     <string name="Potion_Name">%s thuốc</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
     <string name="ShortSword_Name">kiếm ngắn</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
+    <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
@@ -25,6 +28,9 @@
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
 
 
 

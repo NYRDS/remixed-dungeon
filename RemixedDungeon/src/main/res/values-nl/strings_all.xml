@@ -7,10 +7,13 @@
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
 
 
+    <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="Eye_Gender">neuter</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
+    <string name="Scroll_Runes_2">LAGUZ</string>
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
@@ -25,10 +28,15 @@
 
 
 
+    <string name="WndSettings_FpsLimit">FPS-limiet</string>
     <string name="Wraith_Name">wraith</string>
 
 
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
+
+
+
+
 
 
 

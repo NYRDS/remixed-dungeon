@@ -10,6 +10,7 @@
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
     <string name="Food_Message">זה היה טעים מאוד\!</string>
     <string name="HeroClass_Hun">ציידת</string>
+    <string name="IceCaves_TileGrass">דשא קפוא</string>
     <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
     <string name="ScarecrowNPC_Quest_End">אוי איזו שמחה, אוי איזו התרגשות!\nעל זה תקבל פרוסת פאי מתוקה!</string>
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
@@ -24,6 +25,7 @@
 
 
 
+    <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
 
 
@@ -36,5 +38,9 @@
 
 
 
+
+
+
+    <string name="town_deco_wooden_chair_name">כיסא עץ</string>
 
 </resources>
