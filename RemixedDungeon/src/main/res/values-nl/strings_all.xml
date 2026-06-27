@@ -2,6 +2,7 @@
     <string name="ArmorKit_Name">rustingset</string>
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
+    <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
 
@@ -27,6 +28,7 @@
 
 
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
+
 
 
 
