@@ -5,6 +5,9 @@
 
 
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
+    <string name="Kusarigama_Name">kusarigama</string>
+    <string name="Potion_Name">%s thuốc</string>
+    <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
     <string name="ShortSword_Name">kiếm ngắn</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
 
@@ -13,5 +16,8 @@
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
 
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
 
 </resources>
