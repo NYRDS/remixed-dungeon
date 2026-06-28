@@ -4,6 +4,8 @@
     <string name="ArmorKit_Upgraded">لقد قمت بتطبيق مجموعة الدروع لترقية %s</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
+    <string name="BarkskinBuff_Name">لحاء الجلد</string>
+    <string name="Blacksmith_Name">حداد ترول</string>
     <string name="CharAction_Take">التقاط</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
 
@@ -70,5 +72,7 @@
 
 
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
+
+
 
 </resources>

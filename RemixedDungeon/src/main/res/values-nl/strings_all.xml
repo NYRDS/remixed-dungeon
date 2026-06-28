@@ -3,6 +3,7 @@
     <string name="ArmorKit_Name">rustingset</string>
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
+    <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Char_StaBleeding">bloeding</string>
@@ -40,6 +41,7 @@
 
 
     <string name="WndSettings_FpsLimit">FPS-limiet</string>
+    <string name="WndTradeItem_Bought">Je hebt %1$s gekocht voor %2$dg</string>
     <string name="Wraith_Name">wraith</string>
 
 
@@ -67,6 +69,8 @@
 
 
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
+
+
 
 
 
