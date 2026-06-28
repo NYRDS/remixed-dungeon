@@ -13,6 +13,7 @@
     <string name="HeroClass_Hun">ציידת</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
     <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
+    <string name="RottenRation_Name">מנה רקובה</string>
     <string name="ScarecrowNPC_Quest_End">אוי איזו שמחה, אוי איזו התרגשות!\nעל זה תקבל פרוסת פאי מתוקה!</string>
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
@@ -45,6 +46,7 @@
 
 
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 
