@@ -13,8 +13,8 @@ return spell.init{
             targetingType = "char_not_self",
             level         = 2,
             castTime      = 1,
-            spellCost     = 7,
-            cooldown      = 8
+            spellCost     = 2,
+            cooldown      = 1
         }
     end,
 
@@ -29,8 +29,8 @@ return spell.init{
             local missingHp = caster:ht() - caster:hp()
             -- Cap drain at target's current HP (can't drain more than they have)
             local drainAmount = math.min(missingHp, target:hp())
-            -- Transfer rate scales with doctor skill level (55% at lvl 1, 100% at lvl 10)
-            local transferRate = math.min(1.0, 0.5 + caster:skillLevel() * 0.05)
+            -- Transfer rate scales with doctor skill level (75% at lvl 1, 95% at lvl 5, 100% at lvl 6)
+            local transferRate = math.min(1.0, 0.7 + caster:skillLevel() * 0.05)
             local healAmount = drainAmount * transferRate
 
             -- Apply the drain to target and heal to caster
