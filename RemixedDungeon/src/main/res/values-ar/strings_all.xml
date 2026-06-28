@@ -13,6 +13,7 @@
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
     <string name="HeroSubClass_NameScout">كشاف</string>
+    <string name="IceGuardianCore_Desc">تم تصنيع حُرّاس الجليد من قبل الكوبولد القدماء لحماية كهوفهم. الطاقة المخزنة في نواتهم تسمح لحارس الجليد بإعادة بناء نفسه طالما لديه طاقة كافية.</string>
     <string name="IceGuardian_Desc">تم إنشاء حراس الجليد من قبل الكوبولدز القديمة لحماية كهوفهم. طالما أن قلب الحارس يحتوي على طاقة كافية، فهو قادر على إعادة بناء نفسه حتى في خضم المعركة.</string>
     <string name="ImpShopkeeper_Desc">الجان هم شياطين أدنى. فهم لا يتميزون بقوتهم ولا بموهبتهم السحرية. لكنهم أذكياء واجتماعيون تماماً، ويفضل العديد من الجان العيش وممارسة التجارة بين غير الشياطين.</string>
     <string name="Imp_Golems2">كيف تسير سفاري الغوليم الخاصة بك؟</string>
@@ -26,6 +27,7 @@
     <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
     <string name="StartScene_New">لعبة جديدة</string>
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
+    <string name="Warlock_Killed">سهم الظل الخاص بـ %1$s قتلك...</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="Weightstone_Fast">لقد قمت بتوازين %s لجعله أسرع</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
@@ -60,5 +62,9 @@
 
 
 
+
+
+
+    <string name="town_deco_rope_name">حبل</string>
 
 </resources>

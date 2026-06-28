@@ -1,4 +1,5 @@
 <resources>
+    <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
     <string name="Badges_AllRings">Đã nhận diện tất cả nhẫn</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
@@ -16,6 +17,7 @@
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
     <string name="Potion_Name">%s thuốc</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
+    <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
     <string name="ShortSword_Name">kiếm ngắn</string>
@@ -23,6 +25,7 @@
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
+    <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
@@ -31,11 +34,16 @@
 
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
 
+    <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
     <string name="town_deco_broken_wall_name">Bức tường vỡ</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
+
 
 
 

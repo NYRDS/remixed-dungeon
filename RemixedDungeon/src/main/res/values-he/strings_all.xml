@@ -7,6 +7,7 @@
 
 
     <string name="CharmSpell_Name">הקסמה</string>
+    <string name="Codex_Story_23">הספר הזה כתוב בשפה הגמדית</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
     <string name="Food_Message">זה היה טעים מאוד\!</string>
@@ -33,6 +34,7 @@
 
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
     <string name="WndTradeItem_Buy">קנה ב-%d זהב</string>
+    <string name="town_deco_glass_name">חלון רחב</string>
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
 
 
@@ -49,6 +51,8 @@
 
 
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 
