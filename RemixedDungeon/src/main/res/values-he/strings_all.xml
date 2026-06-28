@@ -10,7 +10,10 @@
     <string name="Codex_Story_23">הספר הזה כתוב בשפה הגמדית</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
+    <string name="FireElemental_Desc">אלמנטלי אש נודדים הם תוצר לוואי של זימון ישויות גדולות. הם יותר מדי כאוטיים באופיים כדי להיות נשלטים אפילו על ידי הדמונולוג החזק ביותר.</string>
     <string name="Food_Message">זה היה טעים מאוד\!</string>
+    <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
     <string name="HeroClass_Hun">ציידת</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*הוא בוהה בשתי ה*סוקובוס*, חיוך מאושר מתפשט מתחת למסכתו.* נהדר! מופלא! זה יפתח כל כך הרבה... אפשרויות! *הוא פונה אליך, קולו סמיך מהכרת תודה... ומשהו נוסף.* המאמצים שלך... לא יישכחו. אני חייב לך את תודתי העמוקה ביותר. *מבטו מתעכב על ה*סוקובוס* לרגע ארוך מדי, לפני שהוא נסוג למעבדתו, ממלמל על גילוי סודות הפיתוי.*</string>
@@ -24,6 +27,7 @@
     <string name="Skeleton_Desc">שלדים מורכבים מעצמות גופות של הרפתקנים ותושבי המבוך חסרי מזל, מונפשים על ידי זרמי קסם אפל מהמעמקים. לאחר שנפגעו מספיק, הם מתפרקים בפיצוץ של עצמות.</string>
     <string name="StartScene_New">משחק חדש</string>
     <string name="TownGuardNPC_Name">שומר</string>
+    <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
@@ -34,6 +38,7 @@
 
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
     <string name="WndTradeItem_Buy">קנה ב-%d זהב</string>
+    <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_glass_name">חלון רחב</string>
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
 
@@ -51,6 +56,11 @@
 
 
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 

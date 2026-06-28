@@ -2,6 +2,7 @@
     <string name="AboutScene_Graphics">Grafisch:</string>
     <string name="ArmorKit_Name">rustingset</string>
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
+    <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Char_StaBleeding">bloeding</string>
@@ -13,6 +14,8 @@
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="Eye_Gender">neuter</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
+    <string name="Larva_Gender">feminine</string>
+    <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze ruggetje-persoon is verborgen onder een leer overal. Ook komt er een bittere geur van medicijnen en ... knoflook?</string>
@@ -40,6 +43,7 @@
     <string name="Wraith_Name">wraith</string>
 
 
+    <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
 
 
@@ -63,4 +67,8 @@
 
 
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
+
+
+
+
 </resources>

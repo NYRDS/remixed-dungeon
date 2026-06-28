@@ -21,6 +21,7 @@
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
     <string name="ShortSword_Name">kiếm ngắn</string>
+    <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="Sprout_Name">Mầm Non</string>
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="SuspiciousRat_Gender">feminine</string>
@@ -35,11 +36,14 @@
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
 
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
+    <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
     <string name="town_deco_broken_wall_name">Bức tường vỡ</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
 
 
 
