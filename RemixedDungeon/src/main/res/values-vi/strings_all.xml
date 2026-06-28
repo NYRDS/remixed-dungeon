@@ -3,6 +3,7 @@
     <string name="Badges_AllRings">Đã nhận diện tất cả nhẫn</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="Carcass_Name">tàn dư của %s</string>
+    <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
 
@@ -12,11 +13,13 @@
     <string name="King_Desc">Vua cuối cùng của người lùn nổi tiếng với sự thấu hiểu sâu sắc về quá trình sống và chết. Ngài đã thuyết phục các thành viên triều đình tham gia nghi lễ, hứa hẹn ban tặng thanh xuân vĩnh cửu. Kết cục chỉ có Ngài nhận được nó - và một quân đoàn bất tử làm phần thưởng thêm.</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
+    <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
     <string name="Potion_Name">%s thuốc</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
     <string name="ShortSword_Name">kiếm ngắn</string>
+    <string name="Sprout_Name">Mầm Non</string>
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
@@ -33,6 +36,9 @@
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
 
 
 

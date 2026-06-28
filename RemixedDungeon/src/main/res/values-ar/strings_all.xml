@@ -2,12 +2,14 @@
     <string name="Accuracy_DecreasedDoctorBareHands">يداي العاريتان تفسدان تقنيتي. بدون قطع المنشار النظيف، تتحول دقتي إلى فوضى.</string>
     <string name="ArmorKit_Upgraded">لقد قمت بتطبيق مجموعة الدروع لترقية %s</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
+    <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
     <string name="CharAction_Take">التقاط</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
 
 
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
     <string name="DeferedDamageBuff_Info">تم تحويل الألم إلى ألم بطيء، مما يقلل الضرر المتلقى دفعة واحدة.\nالضرر المتبقي لتلقيه %d</string>
+    <string name="DriedRose_Info2"> ولم تفقد سحرها. تبدو جميلة جدًا، لدرجة أنك تريد الاحتفاظ بها إلى الأبد.</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
     <string name="HeroSubClass_NameScout">كشاف</string>
@@ -21,6 +23,7 @@
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
     <string name="ShortSword_Name">سيف قصير</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
+    <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
     <string name="StartScene_New">لعبة جديدة</string>
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
     <string name="WaterElemental_Gender">masculine</string>
@@ -30,6 +33,9 @@
 
 
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
+
+
+
 
 
 

@@ -9,12 +9,15 @@
 
 
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
+    <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="Eye_Gender">neuter</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="MirrorImage_Gender">masculine</string>
+    <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze ruggetje-persoon is verborgen onder een leer overal. Ook komt er een bittere geur van medicijnen en ... knoflook?</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
+    <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
     <string name="Scroll_Runes_2">LAGUZ</string>
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
@@ -37,6 +40,9 @@
 
 
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
+
+
+
 
 
 
