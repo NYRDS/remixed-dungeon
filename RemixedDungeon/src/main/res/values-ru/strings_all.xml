@@ -438,6 +438,7 @@
     <string name="CharAction_Give">дать</string>
     <string name="CharAction_Hit">ударить</string>
     <string name="CharAction_Order">приказать</string>
+    <string name="CharAction_PetInventory">инвентарь питомца</string>
     <string name="CharAction_Push">толкнуть</string>
     <string name="CharAction_Scare">напугать</string>
     <string name="CharAction_Steal">украсть</string>
@@ -1503,6 +1504,21 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="ParalyticGas_Info">Здесь витает облако паралитического газа.</string>
     <string name="Pasty_Info">Традиционный Корнуоллский пирог с начинкой из говядины и картофеля.</string>
     <string name="Pasty_Name">пирог</string>
+    <string name="PetInventory_ACGiveToPet">ОТДАТЬ ПИТОМЦУ</string>
+    <string name="PetInventory_ACTakeFromPet">ЗАБРАТЬ У ПИТОМЦА</string>
+    <string name="PetInventory_CantGiveEquipped">Нельзя отдать экипированный предмет</string>
+    <string name="PetInventory_GaveItem">Отдал %1$s питомцу %2$s</string>
+    <string name="PetInventory_GiveN">Отдать %d</string>
+
+    <string name="PetInventory_GiveToPet">Отдать питомцу</string>
+    <string name="PetInventory_HeroBackpackFull">Ваш рюкзак полон</string>
+    <string name="PetInventory_PetBackpackFull">Рюкзак питомца полон</string>
+    <string name="PetInventory_TakeFromPet">Забрать у питомца</string>
+    <string name="PetInventory_TakeN">Забрать %d</string>
+    <string name="PetInventory_Title">Инвентарь питомца</string>
+    <string name="PetInventory_TooFar">Слишком далеко от питомца</string>
+    <string name="PetInventory_TookItem">Забрал %1$s у %2$s</string>
+    <string name="PetInventory_ViewManage">Управление</string>
     <string name="Pickaxe_ACMine">ДОБЫВАТЬ</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_Info">Это крупное, крепкое орудие используется для раскалывания камней. Как простое оружие оно тоже может сгодится.</string>
@@ -2515,10 +2531,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndCryptoDonate_currency">Валюта</string>
     <string name="WndCryptoDonate_ethereum">Эфириум</string>
     <string name="WndCryptoDonate_infoText">Вы можете поддержать разработку Remixed Dungeon, отправив криптовалютные пожертвования на адреса, указанные ниже. Спасибо за вашу щедрую поддержку!</string>
-    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_openWallet">Открыть кошелек</string>
     <string name="WndCryptoDonate_supportDev">Поддержать разработчика</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Адрес кошелька</string>
     <string name="WndCryptoDonate_warningText">ВНИМАНИЕ: Всегда проверяйте адрес перед отправкой средств. Транзакции криптовалют необратимы!</string>
     <string name="WndCustomizations_Title">Кастомизации</string>
@@ -2634,6 +2650,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndMovieTheatre_Thank_You">Спасибо вам за участие!</string>
     <string name="WndMovieTheatre_Title">Кинотеатр</string>
     <string name="WndMovieTheatre_Watch">посмотреть рекламу</string>
+    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">Выберите питомца</string>
     <string name="WndPlayGames_BackupProgress">Сохранить Прогресс Игры</string>
     <string name="WndPlayGames_Connecting">Соединение с Google Play Games, пожалуйста подождите</string>
     <string name="WndPlayGames_RestoreProgress">Загрузить Прогресс Игры</string>
@@ -3076,22 +3094,4 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
 
-    <!-- Pet Inventory -->
-    <string name="CharAction_PetInventory">инвентарь питомца</string>
-    <string name="PetInventory_Title">Инвентарь питомца</string>
-    <string name="PetInventory_GiveToPet">Отдать питомцу</string>
-    <string name="PetInventory_TakeFromPet">Забрать у питомца</string>
-    <string name="PetInventory_ViewManage">Управление</string>
-    <string name="PetInventory_GaveItem">Отдал %1$s питомцу %2$s</string>
-    <string name="PetInventory_TookItem">Забрал %1$s у %2$s</string>
-    <string name="PetInventory_CantGiveEquipped">Нельзя отдать экипированный предмет</string>
-    <string name="PetInventory_PetBackpackFull">Рюкзак питомца полон</string>
-    <string name="PetInventory_HeroBackpackFull">Ваш рюкзак полон</string>
-    <string name="PetInventory_TooFar">Слишком далеко от питомца</string>
-    <string name="WndPetSelect_Title">Выберите питомца</string>
-    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
-    <string name="PetInventory_ACGiveToPet">ОТДАТЬ ПИТОМЦУ</string>
-    <string name="PetInventory_ACTakeFromPet">ЗАБРАТЬ У ПИТОМЦА</string>
-    <string name="PetInventory_TakeN">Забрать %d</string>
-    <string name="PetInventory_GiveN">Отдать %d</string>
 </resources>
