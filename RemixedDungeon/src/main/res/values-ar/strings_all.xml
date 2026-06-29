@@ -26,6 +26,7 @@
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="Ring_Gems_1">الأوبال</string>
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
+    <string name="ServiceManNPC_Desc">عامل عادي في المؤسسات المحلية.</string>
     <string name="ShortSword_Name">سيف قصير</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
     <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
@@ -69,10 +70,13 @@
 
 
 
+    <string name="town_deco_library_sign_name">لافتة المكتبة</string>
     <string name="town_deco_rope_name">حبل</string>
 
 
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
+
+
 
 
 

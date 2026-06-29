@@ -20,6 +20,7 @@
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
+    <string name="ServiceManNPC_Desc">Một công nhân thông thường của các cơ sở địa phương.</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
     <string name="ShortSword_Name">kiếm ngắn</string>
@@ -30,6 +31,7 @@
     <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
+    <string name="WndGame_menu">Menu chính</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
 
@@ -45,6 +47,8 @@
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
 
 
 
