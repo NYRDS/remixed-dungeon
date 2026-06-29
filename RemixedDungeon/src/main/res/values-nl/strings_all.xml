@@ -17,6 +17,7 @@
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
+    <string name="Mimic_Name">mimic</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze ruggetje-persoon is verborgen onder een leer overal. Ook komt er een bittere geur van medicijnen en ... knoflook?</string>
@@ -69,6 +70,7 @@
 
 
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
+
 
 
 

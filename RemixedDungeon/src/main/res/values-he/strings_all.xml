@@ -12,6 +12,7 @@
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="FireElemental_Desc">אלמנטלי אש נודדים הם תוצר לוואי של זימון ישויות גדולות. הם יותר מדי כאוטיים באופיים כדי להיות נשלטים אפילו על ידי הדמונולוג החזק ביותר.</string>
+    <string name="Fire_Name_1">בוער %s</string>
     <string name="Food_Message">זה היה טעים מאוד\!</string>
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
     <string name="HeroClass_Hun">ציידת</string>
@@ -58,6 +59,7 @@
 
 
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 
