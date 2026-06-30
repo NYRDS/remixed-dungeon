@@ -92,6 +92,7 @@
 
 
 
+    <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
 
@@ -121,6 +122,9 @@
     <string name="town_deco_wallpaper_name">behang</string>
 
     <string name="town_deco_wooden_drawer_name">lade</string>
+
+
+
 
 
 

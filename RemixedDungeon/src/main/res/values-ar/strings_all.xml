@@ -28,6 +28,7 @@
     <string name="ImpShopkeeper_Desc">الجان هم شياطين أدنى. فهم لا يتميزون بقوتهم ولا بموهبتهم السحرية. لكنهم أذكياء واجتماعيون تماماً، ويفضل العديد من الجان العيش وممارسة التجارة بين غير الشياطين.</string>
     <string name="Imp_Golems2">كيف تسير سفاري الغوليم الخاصة بك؟</string>
     <string name="Level_TileEmptyWell">بئر فارغ</string>
+    <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
     <string name="MailArmor_Name">درع حلقي</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
@@ -120,6 +121,8 @@
 
 
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+
+
 
 
 
