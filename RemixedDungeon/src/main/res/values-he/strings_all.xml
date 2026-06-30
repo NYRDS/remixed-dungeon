@@ -1,9 +1,10 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <string name="AC_Devour">לטרוף</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
     <string name="Challenges_Names_6">רונות אסורות</string>
+    <string name="Char_StaMind">שכל</string>
     <string name="Char_Stole_2">%1$s גנב את %2$s של %3$s!</string>
 
 
@@ -17,6 +18,7 @@
     <string name="Food_Message">זה היה טעים מאוד\!</string>
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
     <string name="HeroClass_Hun">ציידת</string>
+    <string name="HeroClass_HunPerks_3">ציידות מרוויחות יותר בריאות מטללים.</string>
     <string name="HeroSubClass_DescShaman">אלפים _שמאנים_ יכולים להשתמש בשרביטים ככלי נשק לתקיפה מקרוב. לפגיעות מוצלחות יש סיכוי להפעיל את כוח השרביט על מטרה ללא שימוש בטעינה.</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
@@ -30,6 +32,7 @@
     <string name="RottenRation_Name">מנה רקובה</string>
     <string name="ScarecrowNPC_Quest_End">אוי איזו שמחה, אוי איזו התרגשות!\nעל זה תקבל פרוסת פאי מתוקה!</string>
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
+    <string name="ScrollOfUpgrade_Name">מגילת שדרוג</string>
     <string name="ServiceManNPC_Desc">עובד רגיל של הממסדים המקומיים.</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
     <string name="ShortSword_Name">חרב קצרה</string>
@@ -47,7 +50,10 @@
 
 
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
+    <string name="WndResurrect_Yes">כן, אני אלחם!</string>
+    <string name="WndSaveSlotSelect_Delete_No">לא</string>
     <string name="WndTradeItem_Buy">קנה ב-%d זהב</string>
+    <string name="town_deco_crate_bottles_name">ארגז בירה</string>
     <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_glass_name">חלון רחב</string>
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
@@ -66,6 +72,13 @@
 
 
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
 
 
 

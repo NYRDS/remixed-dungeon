@@ -2,6 +2,7 @@
     <string name="Accuracy_DecreasedDoctorBareHands">يداي العاريتان تفسدان تقنيتي. بدون قطع المنشار النظيف، تتحول دقتي إلى فوضى.</string>
     <string name="AmokArrow_Info">سوف يحول المحلول الموجود على رأس هذا السهم أي شخص إلى محارب بربري لا يرحم.</string>
     <string name="ArmorKit_Upgraded">لقد قمت بتطبيق مجموعة الدروع لترقية %s</string>
+    <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
@@ -22,11 +23,14 @@
     <string name="ImpShopkeeper_Desc">الجان هم شياطين أدنى. فهم لا يتميزون بقوتهم ولا بموهبتهم السحرية. لكنهم أذكياء واجتماعيون تماماً، ويفضل العديد من الجان العيش وممارسة التجارة بين غير الشياطين.</string>
     <string name="Imp_Golems2">كيف تسير سفاري الغوليم الخاصة بك؟</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
+    <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
+    <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PotionBelt_Name">حزام جرعات</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="Ring_Gems_1">الأوبال</string>
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
+    <string name="Scroll_Runes_9">بيركانان</string>
     <string name="ServiceManNPC_Desc">عامل عادي في المؤسسات المحلية.</string>
     <string name="ShortSword_Name">سيف قصير</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
@@ -73,11 +77,20 @@
 
 
 
+    <string name="town_deco_crate_bottles_name">صندوق بيرة</string>
     <string name="town_deco_library_sign_name">لافتة المكتبة</string>
+    <string name="town_deco_porch_desc">شرفة مصنوعة من الخشب.</string>
     <string name="town_deco_rope_name">حبل</string>
 
 
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
+
+
+
+
+
+
+
 
 
 
