@@ -30,14 +30,17 @@
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
     <string name="RawFish_Name">rauwe vis</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
+    <string name="SacrificialSword_Gender">masculine</string>
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
     <string name="Scroll_Runes_2">LAGUZ</string>
     <string name="ServiceManNPC_Desc">Een gewone werknemer van de lokale vestigingen.</string>
+    <string name="Shopkeeper_Name">winkelier</string>
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="StartScene_New">Nieuw spel</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
     <string name="Tamahawk_Gender">masculine</string>
+    <string name="Thief_Gender">masculine</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
@@ -102,4 +105,9 @@
 
 
 
+
+
+
+
+    <string name="town_deco_wallpaper_name">behang</string>
 </resources>
