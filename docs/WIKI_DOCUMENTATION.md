@@ -1276,6 +1276,23 @@ These tools help automate wiki maintenance by identifying linking patterns and p
 - Fan content is EXEMPT from standard wiki compliance checks (dokuwiki_linter.py, naming conventions, entity suffix requirements)
 - When running random page selection for maintenance, EXCLUDE fan directories and fan index pages from analysis
 
+### Documentation Pages Preservation
+- **Overview, guide, and reference pages MUST BE PRESERVED** - they provide essential documentation for players and modders
+- Documentation pages include but are not limited to:
+  - **Category/Overview pages**: `buffs.txt`, `debuffs.txt`, `artifacts.txt`, `weapons.txt`, `armor.txt`, `potions.txt`, `scrolls.txt`, `rings.txt`, `wands.txt`, `spells_overview.txt`, `mobs.txt`, `enemies_overview.txt`, `items.txt`, `bosses.txt`, `challenges.txt`, `achievements.txt`, `glyphs.txt`, `enchantments.txt`, `curses.txt`, `status_effects.txt`, `elements.txt`, `elements_affinity.txt`
+  - **Game Mechanics guides**: `combat.txt`, `crafting.txt`, `cooking.txt`, `stealth.txt`, `dual_wielding.txt`, `leveling.txt`, `experience_system.txt`, `energy_system.txt`, `inventory.txt`, `equipment.txt`, `identification.txt`, `damage_over_time.txt`, `control_effects.txt`, `immunities.txt`, `resistances.txt`, `mechanics.txt`, `melee_combat.txt`, `ranged_combat.txt`, `spellcasting.txt`, `buff_mechanics.txt`
+  - **Modding Documentation**: `modding_getting_started_guide.txt`, `modding_custom_items.txt`, `modding_custom_mobs.txt`, `modding_custom_levels.txt`, `modding_quick_reference.txt`, `modding_non_java_techniques.txt`, `modding_platform_abstraction.txt`, `modding_ui_elements.txt`, `items_modding_guide.txt`, `customitem.txt`, `custommob.txt`, `customizations_system.txt`, `json_configs.txt`, `lua_scripts.txt`, `mods.txt`, `mods_list.txt`, `mods_limitations.txt`, `mods_possibilities.txt`, `mods_scripts.txt`, `mods_mobs.txt`, `mods_objects.txt`
+  - **Navigation/UI pages**: `start.txt`, `sidebar.txt`, `welcome.txt`, `interface.txt`, `hotkeys.txt`, `hotbars.txt`, `ui.txt`, `quickslots.txt`
+  - **Project Documentation**: `changelog.txt`, `faq.txt`, `documentation.txt`, `verification_report.txt`, `rpd_mission.txt`, `rpd_stats.txt`, `ai_wiki.txt`, `ai_wiki_tools_suggestions.txt`, `development.txt`, `differences.txt`, `localization.txt`
+  - **Art/Credits pages**: `arts_by_artemij_nesterov.txt`, `arts_by_sergey_andreev.txt`, `arts_by_yuila_kozlova.txt`, `unsorted_arts.txt`, `pixel_ponies.txt`
+  - **Cross-game Reference**: `shattered_pixel_dungeon.txt`, `sprouted_pixel_dungeon.txt`, `lovecraft_pixel_dungeon.txt`, `pixel_dungeon_ml.txt`, `pixel_dungeon_plus.txt`, `easy_pixel_dungeon.txt`, `skillful_pixel_dungeon.txt`, `ripped_pixel_dungeon.txt`, `unleashed_pixel_dungeon.txt`, `yet_another_pixel_dungeon.txt`, `your_pixel_dungeon.txt`, `pd_mini.txt`, `phoenix_pixel_dungeon.txt`
+  - **Special Content pages**: `caged_kobold_message1.txt`, `caged_kobold_message2.txt`, `caged_kobold_message3.txt`
+- Documentation pages do NOT need to follow game entity naming conventions (`_mob`, `_item`, etc.)
+- Documentation pages are EXEMPT from entity suffix requirements in naming convention checks
+- Language-specific documentation directories (e.g., `ru/modding/`, `ru/rpd/engine/`) are also exempt
+- Root-level `.txt` files (e.g., `ai_wiki.txt`, `privacy_policy.txt`, `rpd_stats.txt`, `sidebar.txt`, `start.txt`) are documentation pages
+- When running random page selection for maintenance, EXCLUDE known documentation pages and directories from analysis
+
 ## Enforcement
 
 ### Responsibilities
