@@ -1263,6 +1263,19 @@ These tools help automate wiki maintenance by identifying linking patterns and p
 - Image references in wiki pages should maintain their original naming if they're external assets
 - New images should follow same lowercase convention where possible
 
+### Fan Content Preservation
+- **Fan fiction, stories, and fan art pages MUST BE PRESERVED** - they are community-contributed content that enriches the wiki
+- Fan content is located in language-specific `fan/` subdirectories (e.g., `ru/rpd/fan/`, `en/rpd/fan/`) and index pages like `fan_stories.txt`, `fanart.txt`
+- Wiki maintenance tasks (automated or manual) MUST NOT delete, rename, or restructure fan content
+- Only light housekeeping is permitted on fan content:
+  - Fix broken internal links that point to non-existent pages
+  - Ensure proper DokuWiki header formatting (using `====== Title ======` format)
+  - Verify image references exist (but don't add new images)
+  - Correct obvious typos in navigation/link text
+- Fan content does NOT need to follow game entity naming conventions (`_mob`, `_item`, etc.) - it uses its own naming scheme
+- Fan content is EXEMPT from standard wiki compliance checks (dokuwiki_linter.py, naming conventions, entity suffix requirements)
+- When running random page selection for maintenance, EXCLUDE fan directories and fan index pages from analysis
+
 ## Enforcement
 
 ### Responsibilities

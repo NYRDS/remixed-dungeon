@@ -42,11 +42,11 @@ pick_random_wiki_pages() {
 
     print_info "Picking $num_pages random wiki pages from the entire wiki ($wiki_dir)..."
 
-    # Find all .txt files in the wiki directory, excluding images directory
+    # Find all .txt files in the wiki directory, excluding images and fan content directories
     local all_pages=()
     while IFS= read -r -d '' file; do
         all_pages+=("$file")
-    done < <(find "$wiki_dir" -name "*.txt" -not -path "*/images/*" -print0)
+    done < <(find "$wiki_dir" -name "*.txt" -not -path "*/images/*" -not -path "*/fan/*" -not -name "fan_stories.txt" -not -name "fanart.txt" -print0)
     
     local total_pages=${#all_pages[@]}
     
