@@ -10,6 +10,7 @@
 
 
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
+    <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="DewVial_Name">lọ sương</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
     <string name="King_Desc">Vua cuối cùng của người lùn nổi tiếng với sự thấu hiểu sâu sắc về quá trình sống và chết. Ngài đã thuyết phục các thành viên triều đình tham gia nghi lễ, hứa hẹn ban tặng thanh xuân vĩnh cửu. Kết cục chỉ có Ngài nhận được nó - và một quân đoàn bất tử làm phần thưởng thêm.</string>
@@ -37,6 +38,7 @@
 
 
 
+    <string name="WndPremiumSettings_std">tiêu chuẩn</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
 
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
@@ -47,6 +49,8 @@
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
 
 
 

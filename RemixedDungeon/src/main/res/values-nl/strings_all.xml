@@ -1,5 +1,6 @@
 <resources>
     <string name="AboutScene_Graphics">Grafisch:</string>
+    <string name="AboutScene_Txt_Intro">Remixed Dungeon door NYRDS gebaseerd op de broncode van Pixel Dungeon door Watabou.</string>
     <string name="ArmorKit_Name">rustingset</string>
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
@@ -13,6 +14,7 @@
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
+    <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
     <string name="Eye_Gender">neuter</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="Larva_Gender">feminine</string>
@@ -26,13 +28,16 @@
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
     <string name="RawFish_Name">rauwe vis</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
+    <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
     <string name="Scroll_Runes_2">LAGUZ</string>
     <string name="ServiceManNPC_Desc">Een gewone werknemer van de lokale vestigingen.</string>
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="StartScene_New">Nieuw spel</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
     <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
@@ -50,6 +55,7 @@
 
 
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
+    <string name="town_deco_banner_name">Vaandel</string>
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
 
 
@@ -73,6 +79,12 @@
 
 
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
+
+
+
+
+
+
 
 
 
