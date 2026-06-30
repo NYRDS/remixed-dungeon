@@ -2,6 +2,7 @@
     <string name="Accuracy_DecreasedDoctorBareHands">يداي العاريتان تفسدان تقنيتي. بدون قطع المنشار النظيف، تتحول دقتي إلى فوضى.</string>
     <string name="AmokArrow_Info">سوف يحول المحلول الموجود على رأس هذا السهم أي شخص إلى محارب بربري لا يرحم.</string>
     <string name="ArmorKit_Upgraded">لقد قمت بتطبيق مجموعة الدروع لترقية %s</string>
+    <string name="Armor_Info3">\n\nنظراً لأن قوتك غير كافية، فإن ارتداء هذه الدروع سيقلل من سرعة حركتك ومهاراتك الدفاعية.</string>
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
@@ -20,6 +21,7 @@
     <string name="DriedRose_Info2"> ولم تفقد سحرها. تبدو جميلة جدًا، لدرجة أنك تريد الاحتفاظ بها إلى الأبد.</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
+    <string name="Fadeleaf_Name">ورقة البهتان</string>
     <string name="HeroSubClass_NameScout">كشاف</string>
     <string name="IceGuardianCore_Desc">تم تصنيع حُرّاس الجليد من قبل الكوبولد القدماء لحماية كهوفهم. الطاقة المخزنة في نواتهم تسمح لحارس الجليد بإعادة بناء نفسه طالما لديه طاقة كافية.</string>
     <string name="IceGuardian_Desc">تم إنشاء حراس الجليد من قبل الكوبولدز القديمة لحماية كهوفهم. طالما أن قلب الحارس يحتوي على طاقة كافية، فهو قادر على إعادة بناء نفسه حتى في خضم المعركة.</string>
@@ -37,12 +39,18 @@
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
     <string name="Scroll_Runes_9">بيركانان</string>
     <string name="ServiceManNPC_Desc">عامل عادي في المؤسسات المحلية.</string>
+    <string name="Shades_Gender">feminine</string>
+    <string name="Shades_Info">يقول بعض الناس إن الزنزانات مظلمة جداً لارتداء النظارات الشمسية. وتقول إن هؤلاء الناس ليسوا باريدين بما فيه الكفاية.</string>
+    <string name="Shades_Name">نظارات شمسية</string>
+    <string name="Shades_Name_Objective">نظارات شمسية</string>
     <string name="ShortSword_Name">سيف قصير</string>
+    <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
     <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
     <string name="StartScene_New">لعبة جديدة</string>
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
+    <string name="Wand_SelfTarget">لا يمكنك استهداف نفسك</string>
     <string name="Warlock_Killed">سهم الظل الخاص بـ %1$s قتلك...</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="Weightstone_Fast">لقد قمت بتوازين %s لجعله أسرع</string>
@@ -51,6 +59,7 @@
 
 
 
+    <string name="WndPlayGames_Show_Error">فشلت العملية. حدث خطأ ما...</string>
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
 
 
@@ -111,6 +120,15 @@
 
 
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,7 @@
 <resources>
     <string name="AC_Devour">לטרוף</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
+    <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
     <string name="Bee_Name_Objective">דבורה</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
@@ -12,6 +13,7 @@
 
     <string name="CharmSpell_Name">הקסמה</string>
     <string name="Codex_Story_23">הספר הזה כתוב בשפה הגמדית</string>
+    <string name="ConcreteBlock_Description">נראה שהבלוק הזה דורש %d נקודות כוח כדי לדחוף</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
     <string name="Dungeon_Tips_20">פיקסל-מארט. מחירים מיוחדים לציידי שדים!</string>
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
@@ -30,11 +32,18 @@
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
     <string name="MimicPie_Gender">masculine</string>
+    <string name="Pasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
+    <string name="Pasty_Name">מאפה בשר</string>
+    <string name="Pasty_Name_Objective">מאפה בשר</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">חפש את ה־_moongrace_, שם החשכה פוגשת את הבהוב האור הקלוש ביותר של הירח. _שני זרעים_, תמציתם, יחשפו סודות נסתרים.</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*הוא בוהה בשתי ה*סוקובוס*, חיוך מאושר מתפשט מתחת למסכתו.* נהדר! מופלא! זה יפתח כל כך הרבה... אפשרויות! *הוא פונה אליך, קולו סמיך מהכרת תודה... ומשהו נוסף.* המאמצים שלך... לא יישכחו. אני חייב לך את תודתי העמוקה ביותר. *מבטו מתעכב על ה*סוקובוס* לרגע ארוך מדי, לפני שהוא נסוג למעבדתו, ממלמל על גילוי סודות הפיתוי.*</string>
+    <string name="PseudoPasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
+    <string name="PseudoPasty_Name">מאפה בשר</string>
     <string name="RawFish_Taste">דגיגי!</string>
     <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
     <string name="RogueArmor_Prompt">בחר מיקום לקפוץ אליו</string>
+    <string name="RottenPasty_Info">מאפה הבשר הזה נראה די מגעיל.</string>
+    <string name="RottenPasty_Name">מאפה בשר מקולקל</string>
     <string name="RottenRation_Name">מנה רקובה</string>
     <string name="ScarecrowNPC_Quest_End">אוי איזו שמחה, אוי איזו התרגשות!\nעל זה תקבל פרוסת פאי מתוקה!</string>
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
@@ -47,6 +56,7 @@
     <string name="TownGuardNPC_Name">שומר</string>
     <string name="WandHolster_Name">נרתיק שרביטים</string>
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
+    <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
@@ -55,6 +65,7 @@
 
 
 
+    <string name="WndPlayGames_Show_Error">הפעולה נכשלה. משהו השתבש...</string>
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
     <string name="WndResurrect_Yes">כן, אני אלחם!</string>
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
@@ -79,6 +90,18 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

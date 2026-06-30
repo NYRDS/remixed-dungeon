@@ -1,6 +1,7 @@
 <resources>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
+    <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
     <string name="Badges_AllRings">Đã nhận diện tất cả nhẫn</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="Carcass_Name">tàn dư của %s</string>
@@ -13,6 +14,10 @@
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="DewVial_Name">lọ sương</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
+    <string name="ExplodingSkull_Desc">Đầu lâu bay này đang bốc lửa, có vẻ cực kỳ mong manh, dường như nó sẽ bùng nổ bất cứ lúc nào.</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
+    <string name="ExplodingSkull_Name">đầu lâu nổ</string>
+    <string name="ExplodingSkull_Name_Objective">đầu lâu nổ</string>
     <string name="HeroClass_MagPerks_2">Khi ăn, bất kỳ món ăn nào cũng khôi phục 1 sạc cho tất cả cây gậy phép trong túi đồ.</string>
     <string name="King_Desc">Vua cuối cùng của người lùn nổi tiếng với sự thấu hiểu sâu sắc về quá trình sống và chết. Ngài đã thuyết phục các thành viên triều đình tham gia nghi lễ, hứa hẹn ban tặng thanh xuân vĩnh cửu. Kết cục chỉ có Ngài nhận được nó - và một quân đoàn bất tử làm phần thưởng thêm.</string>
     <string name="Kusarigama_Name">kusarigama</string>
@@ -35,6 +40,7 @@
     <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
+    <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
     <string name="WndGame_menu">Menu chính</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
@@ -42,10 +48,12 @@
 
 
 
+    <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
     <string name="WndPremiumSettings_std">tiêu chuẩn</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
 
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
+    <string name="Wraith_Desc">Một oan hồn là linh hồn oán giận của một kẻ có tội, mộ hoặc lăng mộ của họ bị quấy rối. Là một thực thể phi vật chất, rất khó đánh trúng chúng bằng vũ khí thông thường.</string>
     <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
     <string name="town_deco_broken_wall_name">Bức tường vỡ</string>
     <string name="town_deco_cabinet_desc">Một tủ đồ rộng rãi với nhiều cánh cửa và ngăn kệ.</string>
@@ -54,6 +62,15 @@
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
+
+
+
+
+
+
 
 
 
