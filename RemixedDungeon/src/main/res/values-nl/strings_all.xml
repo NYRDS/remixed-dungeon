@@ -7,6 +7,7 @@
     <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
+    <string name="Challenges_Names_3">Woestijn</string>
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaRooted">geworteld</string>
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
@@ -23,6 +24,7 @@
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="Mimic_Name">mimic</string>
     <string name="MirrorImage_Gender">masculine</string>
+    <string name="Ooze_Death">%s verslindt je...</string>
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze ruggetje-persoon is verborgen onder een leer overal. Ook komt er een bittere geur van medicijnen en ... knoflook?</string>
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
@@ -110,4 +112,8 @@
 
 
     <string name="town_deco_wallpaper_name">behang</string>
+
+    <string name="town_deco_wooden_drawer_name">lade</string>
+
+
 </resources>
