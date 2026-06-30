@@ -32,6 +32,7 @@
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
     <string name="MimicPie_Gender">masculine</string>
+    <string name="MimicPie_Name_Objective">מימיק</string>
     <string name="Paralysis_Name_2">מהממת %s</string>
     <string name="Pasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
     <string name="Pasty_Name">מאפה בשר</string>
@@ -58,6 +59,7 @@
     <string name="WandHolster_Name">נרתיק שרביטים</string>
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
+    <string name="WarriorArmor_Name">שריון לוחם</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
@@ -91,6 +93,8 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 
