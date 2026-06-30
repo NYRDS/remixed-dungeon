@@ -24,6 +24,7 @@
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
+    <string name="RawFish_Name">rauwe vis</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
     <string name="Scroll_Runes_2">LAGUZ</string>
     <string name="ServiceManNPC_Desc">Een gewone werknemer van de lokale vestigingen.</string>
@@ -72,6 +73,7 @@
 
 
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
+
 
 
 

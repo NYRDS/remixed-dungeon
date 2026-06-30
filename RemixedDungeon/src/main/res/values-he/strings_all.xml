@@ -18,6 +18,7 @@
     <string name="HeroClass_Hun">ציידת</string>
     <string name="HeroSubClass_DescShaman">אלפים _שמאנים_ יכולים להשתמש בשרביטים ככלי נשק לתקיפה מקרוב. לפגיעות מוצלחות יש סיכוי להפעיל את כוח השרביט על מטרה ללא שימוש בטעינה.</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
+    <string name="LastLevel_TileGrass">טחב גחלים</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*הוא בוהה בשתי ה*סוקובוס*, חיוך מאושר מתפשט מתחת למסכתו.* נהדר! מופלא! זה יפתח כל כך הרבה... אפשרויות! *הוא פונה אליך, קולו סמיך מהכרת תודה... ומשהו נוסף.* המאמצים שלך... לא יישכחו. אני חייב לך את תודתי העמוקה ביותר. *מבטו מתעכב על ה*סוקובוס* לרגע ארוך מדי, לפני שהוא נסוג למעבדתו, ממלמל על גילוי סודות הפיתוי.*</string>
     <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
@@ -61,6 +62,7 @@
 
 
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 
