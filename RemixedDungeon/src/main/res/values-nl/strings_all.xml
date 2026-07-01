@@ -19,6 +19,8 @@
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
     <string name="Eye_Gender">neuter</string>
+    <string name="HeroClass_GnollPerks_4">Gnollen vallen geen andere Gnollen aan tenzij ze worden uitgedaagd</string>
+    <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="King_Defense">geparreerd</string>
     <string name="Larva_Gender">feminine</string>
@@ -33,6 +35,7 @@
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
     <string name="RawFish_Name">rauwe vis</string>
     <string name="RingOfFrost_Name">Ring van de Vorst</string>
+    <string name="RingOfHerbalism_Info">Deze ring vergroot je kans om dauw en zaden te verzamelen van vertrapt gras.</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
@@ -45,6 +48,7 @@
     <string name="ServiceManNPC_Desc">Een gewone werknemer van de lokale vestigingen.</string>
     <string name="Shopkeeper_Name">winkelier</string>
     <string name="ShortSword_Name">kort zwaard</string>
+    <string name="Skeleton_Name_Objective">skelet</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="StartScene_New">Nieuw spel</string>
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
@@ -124,9 +128,15 @@
 
 
 
+    <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_wallpaper_name">behang</string>
 
     <string name="town_deco_wooden_drawer_name">lade</string>
+
+
+
+
+
 
 
 
