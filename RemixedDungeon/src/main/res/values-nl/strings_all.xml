@@ -81,6 +81,7 @@
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
     <string name="WndSettings_FpsLimit">FPS-limiet</string>
     <string name="WndTradeItem_Bought">Je hebt %1$s gekocht voor %2$dg</string>
+    <string name="WndTradeItem_Sell">Verkopen voor %dg</string>
     <string name="Wraith_Name">wraith</string>
 
 
@@ -139,6 +140,7 @@
     <string name="town_deco_wallpaper_name">behang</string>
 
     <string name="town_deco_wooden_drawer_name">lade</string>
+
 
 
 

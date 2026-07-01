@@ -107,6 +107,7 @@
 
     <string name="WndResurrect_No">لا، أستسلم</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
+    <string name="town_deco_armorstand_scale_name">درع حرشفي</string>
     <string name="town_deco_crate_bottles_name">صندوق بيرة</string>
     <string name="town_deco_library_sign_name">لافتة المكتبة</string>
     <string name="town_deco_pathway_name">مسار</string>
@@ -138,6 +139,7 @@
 
 
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+
 
 
 
