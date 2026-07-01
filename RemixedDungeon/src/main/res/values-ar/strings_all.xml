@@ -3,6 +3,7 @@
     <string name="AmokArrow_Info">سوف يحول المحلول الموجود على رأس هذا السهم أي شخص إلى محارب بربري لا يرحم.</string>
     <string name="ArmorKit_Upgraded">لقد قمت بتطبيق مجموعة الدروع لترقية %s</string>
     <string name="Armor_Info3">\n\nنظراً لأن قوتك غير كافية، فإن ارتداء هذه الدروع سيقلل من سرعة حركتك ومهاراتك الدفاعية.</string>
+    <string name="Armor_Info6">عليه نقوش</string>
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
@@ -36,6 +37,7 @@
     <string name="Imp_Desc">العفاريت هي شياطين أقل شأناً. لا تتميز بقوتها أو موهبتها السحرية، لكنها ذكية واجتماعية تماماً. يفضل العديد من العفاريت العيش بين غير الشياطين.</string>
     <string name="Imp_Golems2">كيف تسير سفاري الغوليم الخاصة بك؟</string>
     <string name="Level_TileEmptyWell">بئر فارغ</string>
+    <string name="Level_TilePedestal">قاعدة</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
     <string name="MailArmor_Name">درع حلقي</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
@@ -53,6 +55,7 @@
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
     <string name="Scroll_Runes_9">بيركانان</string>
     <string name="ServiceManNPC_Desc">عامل عادي في المؤسسات المحلية.</string>
+    <string name="ServiceManNotReadyNPC_Message">أعتذر، لكن هذا المبنى ليس جاهزًا بعد!</string>
     <string name="Shades_Gender">feminine</string>
     <string name="Shades_Info">يقول بعض الناس إن الزنزانات مظلمة جداً لارتداء النظارات الشمسية. وتقول إن هؤلاء الناس ليسوا باريدين بما فيه الكفاية.</string>
     <string name="Shades_Name">نظارات شمسية</string>
@@ -148,6 +151,9 @@
 
 
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+
+
+
 
 
 

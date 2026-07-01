@@ -7,6 +7,7 @@
     <string name="Badges_Info2">סופר תג חדש: %s</string>
     <string name="Bandit_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
+    <string name="BishopNPC_Desc">בישוף הכנסייה הקדושה של סנטה אדון המעמקים</string>
     <string name="BishopNPC_Name_Objective">בישוף</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
@@ -70,9 +71,11 @@
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
     <string name="ScrollOfUpgrade_Name">מגילת שדרוג</string>
     <string name="ServiceManNPC_Desc">עובד רגיל של הממסדים המקומיים.</string>
+    <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
     <string name="ShortSword_Name">חרב קצרה</string>
     <string name="Skeleton_Desc">שלדים מורכבים מעצמות גופות של הרפתקנים ותושבי המבוך חסרי מזל, מונפשים על ידי זרמי קסם אפל מהמעמקים. לאחר שנפגעו מספיק, הם מתפרקים בפיצוץ של עצמות.</string>
+    <string name="SpiderElite_Name">שומר עכביש עלית</string>
     <string name="StartScene_New">משחק חדש</string>
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
     <string name="TownGuardNPC_Name">שומר</string>
@@ -120,6 +123,9 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 
