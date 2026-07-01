@@ -55,7 +55,9 @@
     <string name="ShortSword_Name">חרב קצרה</string>
     <string name="Skeleton_Desc">שלדים מורכבים מעצמות גופות של הרפתקנים ותושבי המבוך חסרי מזל, מונפשים על ידי זרמי קסם אפל מהמעמקים. לאחר שנפגעו מספיק, הם מתפרקים בפיצוץ של עצמות.</string>
     <string name="StartScene_New">משחק חדש</string>
+    <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
     <string name="TownGuardNPC_Name">שומר</string>
+    <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
     <string name="WandHolster_Name">נרתיק שרביטים</string>
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
@@ -72,7 +74,9 @@
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
     <string name="WndResurrect_Yes">כן, אני אלחם!</string>
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
+    <string name="WndTradeItem_Bought">רכשת את %1 תמורת %2</string>
     <string name="WndTradeItem_Buy">קנה ב-%d זהב</string>
+    <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
     <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_glass_name">חלון רחב</string>
@@ -93,6 +97,12 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 

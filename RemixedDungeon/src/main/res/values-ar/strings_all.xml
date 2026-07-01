@@ -7,6 +7,7 @@
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
+    <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
     <string name="Blacksmith_Name">حداد ترول</string>
     <string name="CharAction_Take">التقاط</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
@@ -22,6 +23,7 @@
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
+    <string name="HeroSubClass_DescWard">بفضل ارتباطها القوي بقوى الطبيعة، تتمكن _الحارسة_ من جمع قطرات الندى والبذور من النباتات. كما أن المشي عبر العشب الطويل يمنحها تعزيزاً مؤقتاً للدروع.</string>
     <string name="HeroSubClass_NameScout">كشاف</string>
     <string name="IceGuardianCore_Desc">تم تصنيع حُرّاس الجليد من قبل الكوبولد القدماء لحماية كهوفهم. الطاقة المخزنة في نواتهم تسمح لحارس الجليد بإعادة بناء نفسه طالما لديه طاقة كافية.</string>
     <string name="IceGuardian_Desc">تم إنشاء حراس الجليد من قبل الكوبولدز القديمة لحماية كهوفهم. طالما أن قلب الحارس يحتوي على طاقة كافية، فهو قادر على إعادة بناء نفسه حتى في خضم المعركة.</string>
@@ -50,6 +52,7 @@
     <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
     <string name="StartScene_New">لعبة جديدة</string>
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
+    <string name="SummonBeast_AtYourCommand">يأتي الوحش بأمرك!</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="Wand_SelfTarget">لا يمكنك استهداف نفسك</string>
     <string name="Warlock_Killed">سهم الظل الخاص بـ %1$s قتلك...</string>
@@ -92,12 +95,14 @@
 
 
 
+    <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
     <string name="town_deco_crate_bottles_name">صندوق بيرة</string>
     <string name="town_deco_library_sign_name">لافتة المكتبة</string>
     <string name="town_deco_porch_desc">شرفة مصنوعة من الخشب.</string>
     <string name="town_deco_rope_name">حبل</string>
 
 
+    <string name="town_deco_screen_name">فاصل</string>
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
 
 
@@ -121,6 +126,11 @@
 
 
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+
+
+
+
+
 
 
 
