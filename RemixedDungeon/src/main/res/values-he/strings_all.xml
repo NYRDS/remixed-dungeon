@@ -7,6 +7,7 @@
     <string name="Badges_Info2">סופר תג חדש: %s</string>
     <string name="Bandit_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
+    <string name="BishopNPC_Name_Objective">בישוף</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
@@ -73,6 +74,7 @@
     <string name="StartScene_New">משחק חדש</string>
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
     <string name="TownGuardNPC_Name">שומר</string>
+    <string name="TownsfolkSilentNPC_Message3">המממ...</string>
     <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
     <string name="WandHolster_Name">נרתיק שרביטים</string>
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
@@ -92,6 +94,7 @@
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
     <string name="WndTradeItem_Bought">רכשת את %1 תמורת %2</string>
     <string name="WndTradeItem_Buy">קנה ב-%d זהב</string>
+    <string name="WndTradeItem_Sale">למכירה: %1$s - %2$dג</string>
     <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
     <string name="town_deco_filmtape_name">סרט</string>
@@ -115,6 +118,10 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 

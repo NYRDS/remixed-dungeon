@@ -33,6 +33,7 @@
     <string name="Mimic_Name">mimic</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="Ooze_Death">%s verslindt je...</string>
+    <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze ruggetje-persoon is verborgen onder een leer overal. Ook komt er een bittere geur van medicijnen en ... knoflook?</string>
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
@@ -145,6 +146,7 @@
     <string name="town_deco_wallpaper_name">behang</string>
 
     <string name="town_deco_wooden_drawer_name">lade</string>
+
 
 
 

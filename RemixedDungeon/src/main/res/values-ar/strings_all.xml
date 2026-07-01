@@ -43,6 +43,7 @@
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PotionBelt_Name">حزام جرعات</string>
+    <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
     <string name="RatKing_Name">ملك الفئران</string>
     <string name="RawFish_Name">سمك نيء</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
@@ -145,6 +146,7 @@
 
 
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+
 
 
 
