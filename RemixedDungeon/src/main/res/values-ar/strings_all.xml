@@ -41,6 +41,7 @@
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PotionBelt_Name">حزام جرعات</string>
+    <string name="RawFish_Name">سمك نيء</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="RingOfHerbalism_Info">يزيد هذا الخاتم من فرصك في جمع الندى والبذور من العشب المفرود.</string>
     <string name="Ring_Gems_1">الأوبال</string>
@@ -52,6 +53,7 @@
     <string name="Shades_Name">نظارات شمسية</string>
     <string name="Shades_Name_Objective">نظارات شمسية</string>
     <string name="ShortSword_Name">سيف قصير</string>
+    <string name="SociologistNPC_Desc">هذا العالِم الاجتماعي في رحلة مقدسة لجمع الآراء العامة</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
     <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
@@ -59,6 +61,7 @@
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
     <string name="SummonBeast_AtYourCommand">يأتي الوحش بأمرك!</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
+    <string name="Wand_ACZap">صَعْق</string>
     <string name="Wand_SelfTarget">لا يمكنك استهداف نفسك</string>
     <string name="Warlock_Killed">سهم الظل الخاص بـ %1$s قتلك...</string>
     <string name="WaterElemental_Gender">masculine</string>
@@ -102,6 +105,7 @@
 
 
 
+    <string name="WndResurrect_No">لا، أستسلم</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
     <string name="town_deco_crate_bottles_name">صندوق بيرة</string>
     <string name="town_deco_library_sign_name">لافتة المكتبة</string>
@@ -134,6 +138,13 @@
 
 
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+
+
+
+
+
+
+
 
 
 

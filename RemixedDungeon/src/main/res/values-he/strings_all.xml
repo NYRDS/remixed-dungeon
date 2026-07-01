@@ -1,9 +1,12 @@
 <resources>
     <string name="AC_Devour">לטרוף</string>
+    <string name="AboutScene_Graphics">גרפיקה:</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
+    <string name="Bandit_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
+    <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
     <string name="Challenges_Names_6">רונות אסורות</string>
     <string name="Char_StaMind">שכל</string>
@@ -105,6 +108,10 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 

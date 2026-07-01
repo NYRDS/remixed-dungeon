@@ -38,6 +38,7 @@
     <string name="RawFish_Name">rauwe vis</string>
     <string name="RingOfFrost_Name">Ring van de Vorst</string>
     <string name="RingOfHerbalism_Info">Deze ring vergroot je kans om dauw en zaden te verzamelen van vertrapt gras.</string>
+    <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
@@ -53,6 +54,7 @@
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
+    <string name="StartScene_Load">Spel laden</string>
     <string name="StartScene_New">Nieuw spel</string>
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
@@ -66,6 +68,7 @@
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
     <string name="Weightstone_Info">Met een weegsteen kun je je naarstwapens balanceren om de snelheid of nauwkeurigheid te verhogen.</string>
+    <string name="Weightstone_WndCancel">Laat maar</string>
     <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
 
 
@@ -136,6 +139,11 @@
     <string name="town_deco_wallpaper_name">behang</string>
 
     <string name="town_deco_wooden_drawer_name">lade</string>
+
+
+
+
+
 
 
 

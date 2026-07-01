@@ -6,6 +6,7 @@
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
+    <string name="CandleOfMindVision_Info_Exhausted">Cây nến đã hết, nó không còn sáng khi bạn cầm nó. Trông như bạn không thể dùng nó nữa.</string>
     <string name="Carcass_Name">tàn dư của %s</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
@@ -29,7 +30,9 @@
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
+    <string name="NecrotismBuff_Info">Dấu ấn của chính cái chết, mùi hôi từ đó ảnh hưởng đến những người gần đó và khiến họ chia sẻ chung một định mệnh.</string>
     <string name="Poison_Name_0">Độc %s</string>
+    <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
     <string name="Potion_Name">%s thuốc</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
@@ -56,6 +59,7 @@
     <string name="WndBlacksmith_Prompt">Được, lời đã nói không thể lấy lại, đây là điều tôi có thể làm cho bạn: Tôi có thể luyện lại 2 vật phẩm và biến chúng thành 1 vật phẩm chất lượng tốt hơn.</string>
     <string name="WndGame_menu">Menu chính</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
+    <string name="WndJournal_Title">Nhật Ký</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
 
 
@@ -78,6 +82,12 @@
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
+
+
+
 
 
 
