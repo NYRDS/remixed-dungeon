@@ -8,6 +8,7 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
+    <string name="BurningFist_Name">אגרוף בוער</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
     <string name="Challenges_Names_6">רונות אסורות</string>
     <string name="Char_StaMind">שכל</string>
@@ -29,6 +30,7 @@
     <string name="FireElemental_Desc">אלמנטלי אש נודדים הם תוצר לוואי של זימון ישויות גדולות. הם יותר מדי כאוטיים באופיים כדי להיות נשלטים אפילו על ידי הדמונולוג החזק ביותר.</string>
     <string name="Fire_Name_1">בוער %s</string>
     <string name="Food_Message">זה היה טעים מאוד\!</string>
+    <string name="FreezeGlobe_Info">מקפיא את הדמות שנבחרה, ומונע ממנה לבצע כל פעולה למשך זמן קצר.</string>
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
     <string name="HeroClass_Hun">ציידת</string>
     <string name="HeroClass_HunPerks_3">ציידות מרוויחות יותר בריאות מטללים.</string>
@@ -113,6 +115,8 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 

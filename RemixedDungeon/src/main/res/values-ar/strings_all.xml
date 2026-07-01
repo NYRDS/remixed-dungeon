@@ -7,6 +7,7 @@
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
+    <string name="BlackCat_Phrases_2">مياو!</string>
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
     <string name="Blacksmith_Name">حداد ترول</string>
     <string name="CharAction_Take">التقاط</string>
@@ -144,6 +145,7 @@
 
 
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+
 
 
 
