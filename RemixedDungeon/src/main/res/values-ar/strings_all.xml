@@ -36,6 +36,7 @@
     <string name="ImpShopkeeper_Desc">الجان هم شياطين أدنى. فهم لا يتميزون بقوتهم ولا بموهبتهم السحرية. لكنهم أذكياء واجتماعيون تماماً، ويفضل العديد من الجان العيش وممارسة التجارة بين غير الشياطين.</string>
     <string name="Imp_Desc">العفاريت هي شياطين أقل شأناً. لا تتميز بقوتها أو موهبتها السحرية، لكنها ذكية واجتماعية تماماً. يفضل العديد من العفاريت العيش بين غير الشياطين.</string>
     <string name="Imp_Golems2">كيف تسير سفاري الغوليم الخاصة بك؟</string>
+    <string name="InnKeeperNPC_Name">صاحب الحانة</string>
     <string name="Level_TileEmptyWell">بئر فارغ</string>
     <string name="Level_TilePedestal">قاعدة</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
@@ -51,6 +52,7 @@
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="RingOfHerbalism_Info">يزيد هذا الخاتم من فرصك في جمع الندى والبذور من العشب المفرود.</string>
     <string name="Ring_Gems_1">الأوبال</string>
+    <string name="RogueArmor_ACSpecial">قنبلة دخان</string>
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
     <string name="Scroll_Runes_9">بيركانان</string>
@@ -151,6 +153,8 @@
 
 
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+
+
 
 
 
