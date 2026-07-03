@@ -32,6 +32,7 @@
     <string name="Dungeon_Tips_20">פיקסל-מארט. מחירים מיוחדים לציידי שדים!</string>
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
+    <string name="FetidRat_Name_Objective">עכברוש מצחין</string>
     <string name="FireElemental_Desc">אלמנטלי אש נודדים הם תוצר לוואי של זימון ישויות גדולות. הם יותר מדי כאוטיים באופיים כדי להיות נשלטים אפילו על ידי הדמונולוג החזק ביותר.</string>
     <string name="Fire_Name_1">בוער %s</string>
     <string name="Food_Message">זה היה טעים מאוד\!</string>
@@ -47,6 +48,7 @@
     <string name="IceCaves_TileGrass">דשא קפוא</string>
     <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
     <string name="InterLevelScene_Loading">נטען...</string>
+    <string name="JarOfSouls_Name">כד נשמות</string>
     <string name="Javelin_Name">כידון</string>
     <string name="LastLevel_TileGrass">טחב גחלים</string>
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
@@ -93,6 +95,7 @@
     <string name="WarriorArmor_Name">שריון לוחם</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
+    <string name="WndInstallingMod_skipping_file">מדלג על %s</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
 
 
@@ -130,6 +133,9 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 

@@ -103,6 +103,7 @@
 
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
     <string name="town_deco_banner_name">Vaandel</string>
+    <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
 
 
@@ -157,6 +158,7 @@
     <string name="town_deco_wallpaper_name">behang</string>
 
     <string name="town_deco_wooden_drawer_name">lade</string>
+
 
 
 
