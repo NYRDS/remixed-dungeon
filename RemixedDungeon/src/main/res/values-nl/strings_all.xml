@@ -65,6 +65,7 @@
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SociologistNPC_AlreadyTaken">Je hebt al deelgenomen aan deze enquête, kom later terug</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
+    <string name="SpiderServant_Name">spinnen soldaat</string>
     <string name="StartScene_Load">Spel laden</string>
     <string name="StartScene_New">Nieuw spel</string>
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
@@ -158,6 +159,7 @@
     <string name="town_deco_wallpaper_name">behang</string>
 
     <string name="town_deco_wooden_drawer_name">lade</string>
+
 
 
 

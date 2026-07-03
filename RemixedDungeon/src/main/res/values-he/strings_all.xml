@@ -5,6 +5,7 @@
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
     <string name="Badges_Info2">סופר תג חדש: %s</string>
+    <string name="Badges_RareAll">כל המפלצות הנדירות הושמדו</string>
     <string name="Bandit_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
     <string name="BishopNPC_Desc">בישוף הכנסייה הקדושה של סנטה אדון המעמקים</string>
@@ -133,6 +134,7 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

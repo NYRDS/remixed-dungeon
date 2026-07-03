@@ -1,5 +1,6 @@
 <resources>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
+    <string name="Amulet_Name">Bùa Yendor</string>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
     <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
     <string name="Badges_AllRings">Đã nhận diện tất cả nhẫn</string>
@@ -96,6 +97,7 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
 
 
 

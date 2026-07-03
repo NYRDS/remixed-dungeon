@@ -40,6 +40,7 @@
     <string name="Imp_Desc">العفاريت هي شياطين أقل شأناً. لا تتميز بقوتها أو موهبتها السحرية، لكنها ذكية واجتماعية تماماً. يفضل العديد من العفاريت العيش بين غير الشياطين.</string>
     <string name="Imp_Golems2">كيف تسير سفاري الغوليم الخاصة بك؟</string>
     <string name="InnKeeperNPC_Name">صاحب الحانة</string>
+    <string name="Instability_Name_0">غير مستقر %s</string>
     <string name="InterLevelScene_FileNotFound">لم يتم العثور على الملف. لسبب ما...</string>
     <string name="InterLevelScene_Loading">جاري التحميل...</string>
     <string name="Level_TileEmptyWell">بئر فارغ</string>
@@ -159,6 +160,7 @@
 
 
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+
 
 
 
