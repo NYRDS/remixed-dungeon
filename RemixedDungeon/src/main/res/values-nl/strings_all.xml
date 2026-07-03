@@ -6,6 +6,7 @@
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
     <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
+    <string name="Badges_Info1">Insigne behaald: %s</string>
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
@@ -27,7 +28,10 @@
     <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
+    <string name="HungerBuff_Info1">Je hebt honger!</string>
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
+    <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
+    <string name="InterLevelScene_Loading">Laden...</string>
     <string name="King_Defense">geparreerd</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
@@ -73,6 +77,7 @@
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
+    <string name="Wand_Wood_Types_6">wilgen</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
     <string name="Weightstone_Info">Met een weegsteen kun je je naarstwapens balanceren om de snelheid of nauwkeurigheid te verhogen.</string>
@@ -152,6 +157,11 @@
     <string name="town_deco_wallpaper_name">behang</string>
 
     <string name="town_deco_wooden_drawer_name">lade</string>
+
+
+
+
+
 
 
 

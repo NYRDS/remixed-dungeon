@@ -8,6 +8,7 @@
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
+    <string name="Belongings_Name">حقيبة ظهر</string>
     <string name="BlackCat_Phrases_2">مياو!</string>
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
     <string name="Blacksmith_Name">حداد ترول</string>
@@ -23,10 +24,12 @@
     <string name="Displacement_Txt">%s الإزاحة</string>
     <string name="DreadKnight_Name_Objective">فارس الرعب</string>
     <string name="DriedRose_Info2"> ولم تفقد سحرها. تبدو جميلة جدًا، لدرجة أنك تريد الاحتفاظ بها إلى الأبد.</string>
+    <string name="Dungeon_Tips_18">الطريقة الوحيدة لسحر سلاح هي ترقيته باستخدام مخطوطة ترقية سلاح.</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
     <string name="Firebloom_Name">زهرة النار</string>
+    <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="HeroClass_MagPerks_4">يستخدم السحرة المانا لإلقاء التعاويذ العنصرية.</string>
     <string name="HeroSubClass_DescWard">بفضل ارتباطها القوي بقوى الطبيعة، تتمكن _الحارسة_ من جمع قطرات الندى والبذور من النباتات. كما أن المشي عبر العشب الطويل يمنحها تعزيزاً مؤقتاً للدروع.</string>
     <string name="HeroSubClass_NameScout">كشاف</string>
@@ -37,6 +40,8 @@
     <string name="Imp_Desc">العفاريت هي شياطين أقل شأناً. لا تتميز بقوتها أو موهبتها السحرية، لكنها ذكية واجتماعية تماماً. يفضل العديد من العفاريت العيش بين غير الشياطين.</string>
     <string name="Imp_Golems2">كيف تسير سفاري الغوليم الخاصة بك؟</string>
     <string name="InnKeeperNPC_Name">صاحب الحانة</string>
+    <string name="InterLevelScene_FileNotFound">لم يتم العثور على الملف. لسبب ما...</string>
+    <string name="InterLevelScene_Loading">جاري التحميل...</string>
     <string name="Level_TileEmptyWell">بئر فارغ</string>
     <string name="Level_TilePedestal">قاعدة</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
@@ -71,6 +76,7 @@
     <string name="StartScene_New">لعبة جديدة</string>
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
     <string name="SummonBeast_AtYourCommand">يأتي الوحش بأمرك!</string>
+    <string name="Thief_Stole">%1$s سرق %2$s منك!</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
     <string name="Wand_ACZap">صَعْق</string>
@@ -153,6 +159,12 @@
 
 
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+
+
+
+
+
+
 
 
 

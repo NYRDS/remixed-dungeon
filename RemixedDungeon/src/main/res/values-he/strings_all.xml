@@ -43,7 +43,10 @@
     <string name="HeroClass_NecromancerPerks_0">נקרומנטרים מתחילים עם 15 נקודות בריאות.</string>
     <string name="HeroSubClass_DescShaman">אלפים _שמאנים_ יכולים להשתמש בשרביטים ככלי נשק לתקיפה מקרוב. לפגיעות מוצלחות יש סיכוי להפעיל את כוח השרביט על מטרה ללא שימוש בטעינה.</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
+    <string name="HungerBuff_Name2">מורעב</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
+    <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
+    <string name="InterLevelScene_Loading">נטען...</string>
     <string name="Javelin_Name">כידון</string>
     <string name="LastLevel_TileGrass">טחב גחלים</string>
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
@@ -59,6 +62,7 @@
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">חפש את ה־_moongrace_, שם החשכה פוגשת את הבהוב האור הקלוש ביותר של הירח. _שני זרעים_, תמציתם, יחשפו סודות נסתרים.</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*הוא בוהה בשתי ה*סוקובוס*, חיוך מאושר מתפשט מתחת למסכתו.* נהדר! מופלא! זה יפתח כל כך הרבה... אפשרויות! *הוא פונה אליך, קולו סמיך מהכרת תודה... ומשהו נוסף.* המאמצים שלך... לא יישכחו. אני חייב לך את תודתי העמוקה ביותר. *מבטו מתעכב על ה*סוקובוס* לרגע ארוך מדי, לפני שהוא נסוג למעבדתו, ממלמל על גילוי סודות הפיתוי.*</string>
+    <string name="Potion_Colors_6">פחם</string>
     <string name="PseudoPasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
     <string name="PseudoPasty_Name">מאפה בשר</string>
     <string name="RawFish_Taste">דגיגי!</string>
@@ -76,6 +80,7 @@
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
     <string name="ShortSword_Name">חרב קצרה</string>
     <string name="Skeleton_Desc">שלדים מורכבים מעצמות גופות של הרפתקנים ותושבי המבוך חסרי מזל, מונפשים על ידי זרמי קסם אפל מהמעמקים. לאחר שנפגעו מספיק, הם מתפרקים בפיצוץ של עצמות.</string>
+    <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
     <string name="StartScene_New">משחק חדש</string>
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
@@ -94,6 +99,7 @@
 
 
 
+    <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
     <string name="WndPlayGames_Show_Error">הפעולה נכשלה. משהו השתבש...</string>
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
     <string name="WndResurrect_Yes">כן, אני אלחם!</string>
@@ -124,6 +130,12 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 
