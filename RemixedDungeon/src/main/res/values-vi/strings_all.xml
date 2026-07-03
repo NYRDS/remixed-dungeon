@@ -4,6 +4,7 @@
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
     <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
     <string name="Badges_AllRings">Đã nhận diện tất cả nhẫn</string>
+    <string name="Badges_BossSlain1">Goo đã bị tiêu diệt</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
@@ -16,6 +17,8 @@
 
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
+    <string name="Death_Name_0">Quỷ %s</string>
+    <string name="DeepSnail_Gender">masculine</string>
     <string name="DewVial_Name">lọ sương</string>
     <string name="DriedRose_Info2"> Và nó vẫn chưa mất đi sự quyến rũ của mình. Nó trông đẹp đến mức bạn muốn giữ nó mãi mãi.</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
@@ -56,6 +59,7 @@
     <string name="ShortSword_Name">kiếm ngắn</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
+    <string name="Sprout_Info">Đánh thức các hạt giống ngủ.\nTuy nhiên, cần có cây cỏ trên mặt đất để phép thuật này thành công.</string>
     <string name="Sprout_Name">Mầm Non</string>
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
@@ -97,6 +101,11 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
+
+
 
 
 
