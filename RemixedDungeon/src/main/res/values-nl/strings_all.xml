@@ -19,12 +19,14 @@
 
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
+    <string name="Dagger_Name">dolk</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
     <string name="Eye_Gender">neuter</string>
+    <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
     <string name="HeroClass_GnollPerks_4">Gnollen vallen geen andere Gnollen aan tenzij ze worden uitgedaagd</string>
     <string name="HeroClass_Mag">magier</string>
     <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
@@ -225,6 +227,12 @@
 
 
 
+
+
+
+
+    <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
+    <string name="town_deco_wooden_table_name">Houten tafel</string>
 
 
 

@@ -42,6 +42,7 @@
     <string name="Food_Message">זה היה טעים מאוד\!</string>
     <string name="FreezeGlobe_Info">מקפיא את הדמות שנבחרה, ומונע ממנה לבצע כל פעולה למשך זמן קצר.</string>
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
+    <string name="HeartOfDarkness_Name">לב החושך</string>
     <string name="HeroClass_Hun">ציידת</string>
     <string name="HeroClass_HunPerks_3">ציידות מרוויחות יותר בריאות מטללים.</string>
     <string name="HeroClass_MagPerks_4">מכשפים משתמשים במאנה כדי להטיל כישופים יסודיים.</string>
@@ -67,6 +68,7 @@
     <string name="Pasty_Name">מאפה בשר</string>
     <string name="Pasty_Name_Objective">מאפה בשר</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
+    <string name="PlagueDoctorNPC_Name_Objective">רופא דבר</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">חפש את ה־_moongrace_, שם החשכה פוגשת את הבהוב האור הקלוש ביותר של הירח. _שני זרעים_, תמציתם, יחשפו סודות נסתרים.</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*הוא בוהה בשתי ה*סוקובוס*, חיוך מאושר מתפשט מתחת למסכתו.* נהדר! מופלא! זה יפתח כל כך הרבה... אפשרויות! *הוא פונה אליך, קולו סמיך מהכרת תודה... ומשהו נוסף.* המאמצים שלך... לא יישכחו. אני חייב לך את תודתי העמוקה ביותר. *מבטו מתעכב על ה*סוקובוס* לרגע ארוך מדי, לפני שהוא נסוג למעבדתו, ממלמל על גילוי סודות הפיתוי.*</string>
     <string name="Potion_Colors_6">פחם</string>
@@ -75,6 +77,8 @@
     <string name="RawFish_Taste">דגיגי!</string>
     <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
     <string name="RingOfHerbalism_Info">טבעת זו מגדילה את הסיכוי שלך לאסוף טל וזרעים מעשב רמוס.</string>
+    <string name="RingOfPower_Info">השרביטים שלך יהפכו לחזקים יותר בשדה האנרגיה שמקרינה טבעת זו. טבעות כוח מוחלשות דווקא יחלישו את השרביטים שלך.</string>
+    <string name="RingOfPower_Name">טבעת הכוח</string>
     <string name="RogueArmor_Prompt">בחר מיקום לקפוץ אליו</string>
     <string name="RottenPasty_Info">מאפה הבשר הזה נראה די מגעיל.</string>
     <string name="RottenPasty_Name">מאפה בשר מקולקל</string>
@@ -140,6 +144,10 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 
