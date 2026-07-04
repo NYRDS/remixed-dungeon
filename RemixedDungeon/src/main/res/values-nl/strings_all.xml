@@ -8,8 +8,10 @@
     <string name="Badges_BossSlain1">De Goo is gedood</string>
     <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
     <string name="Badges_Info1">Insigne behaald: %s</string>
+    <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
+    <string name="CagedKobold_Message1">Alstublieft...</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Names_3">Woestijn</string>
     <string name="Char_StaBleeding">bloeding</string>
@@ -35,6 +37,7 @@
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
+    <string name="IceCaves_TileDescDeco">Deze gnoll is levend bevroren. Blijkbaar was hij al een tijdje daar.</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
     <string name="King_Defense">geparreerd</string>
@@ -76,6 +79,7 @@
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
     <string name="Sprout_Info">Weak de slapende zaden.\nEr moet echter wat groen op de grond zijn om de toverspreuk te laten slagen.</string>
+    <string name="StartScene_DifficultySelect">Kies je lot</string>
     <string name="StartScene_Load">Spel laden</string>
     <string name="StartScene_New">Nieuw spel</string>
     <string name="StartScene_UnlockGnoll">Om deze klasse te ontgrendelen moet je de dorpspriester ervan overtuigen de Gnol Brute te genezen</string>
@@ -113,6 +117,7 @@
     <string name="Wraith_Name">wraith</string>
 
 
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
     <string name="town_deco_banner_name">Vaandel</string>
     <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
@@ -236,6 +241,11 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
 
 
 

@@ -8,6 +8,7 @@
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
+    <string name="CagedKobold_Message1">Làm ơn...</string>
     <string name="CandleOfMindVision_Info_Exhausted">Cây nến đã hết, nó không còn sáng khi bạn cầm nó. Trông như bạn không thể dùng nó nữa.</string>
     <string name="Carcass_Name">tàn dư của %s</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
@@ -31,6 +32,8 @@
     <string name="HeroClass_MagPerks_2">Khi ăn, bất kỳ món ăn nào cũng khôi phục 1 sạc cho tất cả cây gậy phép trong túi đồ.</string>
     <string name="HeroClass_MagPerks_4">Pháp sư sử dụng mana để thi triển các phép thuật nguyên tố.</string>
     <string name="HeroSubClass_DescWard">Với sự kết nối mạnh mẽ với các lực lượng thiên nhiên, _Kiến Trùm_ có khả năng thu thập giọt sương và hạt giống từ các cây cỏ. Ngoài ra, đi qua bụi cỏ cao cũng ban cho họ một đợt tăng giáp tạm thời.</string>
+    <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
+    <string name="InnKeeperNPC_Desc">Chủ quán rất tự hào về bản thân.</string>
     <string name="InterLevelScene_FileNotFound">Không tìm thấy tập tin. Với một số lý do...</string>
     <string name="InterLevelScene_Loading">Đang tải...</string>
     <string name="Item_Name">vật phẩm</string>
@@ -52,6 +55,7 @@
     <string name="RingOfHerbalism_Info">Nhẫn này tăng cơ hội thu thập sương mai và hạt giống từ cỏ bị giẫm đạp.</string>
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
+    <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
     <string name="ServiceManNPC_Desc">Một công nhân thông thường của các cơ sở địa phương.</string>
     <string name="ServiceManNotReadyNPC_Message">Xin lỗi, nhưng tòa nhà này chưa sẵn sàng!</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
@@ -65,6 +69,7 @@
     <string name="SpiderExploding_Desc">Trong thời bình, những sinh vật này là những người làm việc chăm chỉ, nhưng chúng sẽ không ngần ngại lao vào kẻ thù và hái lấy cây đầu tiên chúng gặp phải, biến mình thành những quả bom sống.</string>
     <string name="Sprout_Info">Đánh thức các hạt giống ngủ.\nTuy nhiên, cần có cây cỏ trên mặt đất để phép thuật này thành công.</string>
     <string name="Sprout_Name">Mầm Non</string>
+    <string name="StartScene_DifficultySelect">Chọn số phận của bạn</string>
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
     <string name="SuspiciousRat_Gender">feminine</string>
@@ -105,6 +110,11 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
+
+
 
 
 

@@ -13,6 +13,7 @@
     <string name="BishopNPC_Name_Objective">בישוף</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
+    <string name="CagedKobold_Message1">בבקשה...</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
     <string name="Challenges_Names_6">רונות אסורות</string>
     <string name="Char_StaMind">שכל</string>
@@ -50,6 +51,7 @@
     <string name="HeroSubClass_DescShaman">אלפים _שמאנים_ יכולים להשתמש בשרביטים ככלי נשק לתקיפה מקרוב. לפגיעות מוצלחות יש סיכוי להפעיל את כוח השרביט על מטרה ללא שימוש בטעינה.</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
     <string name="HungerBuff_Name2">מורעב</string>
+    <string name="IceCaves_TileDescDeco">הגנול הזה הוקפא חי. כנראה שהוא נמצא שם כבר הרבה זמן.</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
     <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
     <string name="InterLevelScene_Loading">נטען...</string>
@@ -71,6 +73,8 @@
     <string name="PlagueDoctorNPC_Name_Objective">רופא דבר</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">חפש את ה־_moongrace_, שם החשכה פוגשת את הבהוב האור הקלוש ביותר של הירח. _שני זרעים_, תמציתם, יחשפו סודות נסתרים.</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*הוא בוהה בשתי ה*סוקובוס*, חיוך מאושר מתפשט מתחת למסכתו.* נהדר! מופלא! זה יפתח כל כך הרבה... אפשרויות! *הוא פונה אליך, קולו סמיך מהכרת תודה... ומשהו נוסף.* המאמצים שלך... לא יישכחו. אני חייב לך את תודתי העמוקה ביותר. *מבטו מתעכב על ה*סוקובוס* לרגע ארוך מדי, לפני שהוא נסוג למעבדתו, ממלמל על גילוי סודות הפיתוי.*</string>
+    <string name="PlagueDoctorQuest_5_1_InProgress">*מחשבותיו נודדות כשהוא מדבר, קולו נעשה שקט יותר, בקושי לחישה.* הביא לי שתי _סוקובוסיות_… בחיים. כוחן... זה מפתה.</string>
+    <string name="PotionOfMana_Info">השיקוי הזה ישחזר את האנרגיה הרוחנית שלך.</string>
     <string name="Potion_Colors_6">פחם</string>
     <string name="PseudoPasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
     <string name="PseudoPasty_Name">מאפה בשר</string>
@@ -95,6 +99,7 @@
     <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
     <string name="Sprout_Info">הַעִיר אֶת הַזְּרָעִים הַיְשֵׁנִים.\nאַךְ צָרִיךְ לִהְיוֹת יְרַק עַל הָאֲדָמָה כְּדֵי שֶׁהַלַּחַשׁ יַצְלִיחַ.</string>
+    <string name="StartScene_DifficultySelect">בחר את גורלך</string>
     <string name="StartScene_New">משחק חדש</string>
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
     <string name="TownGuardNPC_Name">שומר</string>
@@ -145,6 +150,11 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 
