@@ -97,6 +97,7 @@
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterOfAwareness_Info">تشع قوة المعرفة من ماء هذه البئر. خذ رشفة منه لكشف جميع أسرار معداتك.</string>
     <string name="Weightstone_Fast">لقد قمت بتوازين %s لجعله أسرع</string>
+    <string name="WndBlacksmith_Reforge">أعد تشكيلهم</string>
     <string name="WndCatalogus_Scrolls">اللُفافات</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
@@ -244,6 +245,7 @@
 
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

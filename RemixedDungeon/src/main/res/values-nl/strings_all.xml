@@ -26,6 +26,7 @@
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
     <string name="Eye_Gender">neuter</string>
+    <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
     <string name="HeroClass_GnollPerks_4">Gnollen vallen geen andere Gnollen aan tenzij ze worden uitgedaagd</string>
     <string name="HeroClass_Mag">magier</string>
@@ -48,8 +49,10 @@
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
+    <string name="RatKingCrown_Name">Kroon van de rattenkoning</string>
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
     <string name="RawFish_Name">rauwe vis</string>
+    <string name="ResultDescriptions_Bleeding">Verstorven op niveau %d</string>
     <string name="RingOfFrost_Name">Ring van de Vorst</string>
     <string name="RingOfHerbalism_Info">Deze ring vergroot je kans om dauw en zaden te verzamelen van vertrapt gras.</string>
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
@@ -233,6 +236,9 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 

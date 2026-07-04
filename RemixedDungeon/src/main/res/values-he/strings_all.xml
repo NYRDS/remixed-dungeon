@@ -79,6 +79,7 @@
     <string name="RingOfHerbalism_Info">טבעת זו מגדילה את הסיכוי שלך לאסוף טל וזרעים מעשב רמוס.</string>
     <string name="RingOfPower_Info">השרביטים שלך יהפכו לחזקים יותר בשדה האנרגיה שמקרינה טבעת זו. טבעות כוח מוחלשות דווקא יחלישו את השרביטים שלך.</string>
     <string name="RingOfPower_Name">טבעת הכוח</string>
+    <string name="RogueArmor_ACSpecial">פצצת עשן</string>
     <string name="RogueArmor_Prompt">בחר מיקום לקפוץ אליו</string>
     <string name="RottenPasty_Info">מאפה הבשר הזה נראה די מגעיל.</string>
     <string name="RottenPasty_Name">מאפה בשר מקולקל</string>
@@ -144,6 +145,7 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

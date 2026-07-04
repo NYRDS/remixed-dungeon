@@ -27,6 +27,7 @@
     <string name="ExplodingSkull_Name">đầu lâu nổ</string>
     <string name="ExplodingSkull_Name_Objective">đầu lâu nổ</string>
     <string name="HeartOfDarkness_Name">Trái tim của bóng tối</string>
+    <string name="HeroClass_Mag">pháp sư</string>
     <string name="HeroClass_MagPerks_2">Khi ăn, bất kỳ món ăn nào cũng khôi phục 1 sạc cho tất cả cây gậy phép trong túi đồ.</string>
     <string name="HeroClass_MagPerks_4">Pháp sư sử dụng mana để thi triển các phép thuật nguyên tố.</string>
     <string name="HeroSubClass_DescWard">Với sự kết nối mạnh mẽ với các lực lượng thiên nhiên, _Kiến Trùm_ có khả năng thu thập giọt sương và hạt giống từ các cây cỏ. Ngoài ra, đi qua bụi cỏ cao cũng ban cho họ một đợt tăng giáp tạm thời.</string>
@@ -104,6 +105,7 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
 
 
 
