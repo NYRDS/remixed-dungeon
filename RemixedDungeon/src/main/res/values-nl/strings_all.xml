@@ -63,6 +63,7 @@
     <string name="ServantNPC_Name_Objective">herbergbediende</string>
     <string name="ServiceManNPC_Desc">Een gewone werknemer van de lokale vestigingen.</string>
     <string name="ServiceManNotReadyNPC_Message">Mijn excuses, maar dit gebouw is nog niet klaar!</string>
+    <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="Shopkeeper_Name">winkelier</string>
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="Skeleton_Name_Objective">skelet</string>
@@ -165,6 +166,7 @@
     <string name="town_deco_wallpaper_name">behang</string>
 
     <string name="town_deco_wooden_drawer_name">lade</string>
+
 
 
 

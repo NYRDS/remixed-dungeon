@@ -24,6 +24,7 @@
     <string name="CorpseExplosion_Info">يحول الجثة إلى سحابة قاتلة من الغاز السام، تنشر المرض والسم على جميع الأعداء القريبين.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">تم تحويل الألم إلى ألم بطيء، مما يقلل الضرر المتلقى دفعة واحدة.\nالضرر المتبقي لتلقيه %d</string>
+    <string name="DieHardSpell_Name">موت صعب</string>
     <string name="Displacement_Txt">%s الإزاحة</string>
     <string name="DreadKnight_Name_Objective">فارس الرعب</string>
     <string name="DriedRose_Info2"> ولم تفقد سحرها. تبدو جميلة جدًا، لدرجة أنك تريد الاحتفاظ بها إلى الأبد.</string>
@@ -166,6 +167,7 @@
 
 
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+
 
 
 
