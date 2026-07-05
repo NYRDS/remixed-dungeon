@@ -38,6 +38,7 @@
     <string name="HungerBuff_Info1">Je hebt honger!</string>
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
     <string name="IceCaves_TileDescDeco">Deze gnoll is levend bevroren. Blijkbaar was hij al een tijdje daar.</string>
+    <string name="ImpShopkeeper_Name">ambitieze duiveltje</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
     <string name="King_Defense">geparreerd</string>
@@ -51,6 +52,7 @@
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze ruggetje-persoon is verborgen onder een leer overal. Ook komt er een bittere geur van medicijnen en ... knoflook?</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
+    <string name="RatHide_Name">rattenhuid</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
     <string name="RatKingCrown_Name">Kroon van de rattenkoning</string>
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
@@ -87,6 +89,7 @@
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
     <string name="Tamahawk_Gender">masculine</string>
     <string name="Thief_Gender">masculine</string>
+    <string name="Thief_Name">gekke dief</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Typical_Damage">Typische schade</string>
@@ -241,6 +244,9 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 

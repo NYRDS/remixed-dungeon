@@ -41,6 +41,7 @@
     <string name="King_Desc">Vua cuối cùng của người lùn nổi tiếng với sự thấu hiểu sâu sắc về quá trình sống và chết. Ngài đã thuyết phục các thành viên triều đình tham gia nghi lễ, hứa hẹn ban tặng thanh xuân vĩnh cửu. Kết cục chỉ có Ngài nhận được nó - và một quân đoàn bất tử làm phần thưởng thêm.</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
+    <string name="Level_TileHighGrass">Cỏ cao</string>
     <string name="Moongrace_Desc">Những loài cây này mọc ít ỏi và được biết đến như một nguồn phép thuật tự nhiên.</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
     <string name="NecromancerArmor_Name">Áo giáp xương</string>
@@ -72,6 +73,7 @@
     <string name="StartScene_DifficultySelect">Chọn số phận của bạn</string>
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
+    <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
     <string name="Undead_Defense">chặn</string>
@@ -105,11 +107,15 @@
     <string name="town_deco_pathway_name">đường mòn</string>
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
     <string name="town_deco_red_carpet_name">Thảm đỏ</string>
+    <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
 
 
 

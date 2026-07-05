@@ -16,6 +16,7 @@
     <string name="CagedKobold_Message1">בבקשה...</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
     <string name="Challenges_Names_6">רונות אסורות</string>
+    <string name="Challenges_Names_8">ללא עיר</string>
     <string name="Char_StaMind">שכל</string>
     <string name="Char_StaStunned">מהלום</string>
     <string name="Char_Stole_2">%1$s גנב את %2$s של %3$s!</string>
@@ -61,6 +62,7 @@
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
     <string name="Longsword_Gender">masculine</string>
+    <string name="MageArmor_ACSpecial">אדמה מותכת</string>
     <string name="MimicAmulet_Name">מימיק</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name_Objective">מימיק</string>
@@ -150,6 +152,8 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 
