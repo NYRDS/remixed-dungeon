@@ -24,7 +24,6 @@
     <string name="Char_StaStunned">מהלום</string>
     <string name="Char_Stole_2">%1$s גנב את %2$s של %3$s!</string>
 
-
     <string name="CharmSpell_Name">הקסמה</string>
     <string name="City_TileDescBookshelf">שורות של ספרים בתחומים שונים ממלאות את מדף הספרים.</string>
     <string name="ClassArmor_LowMana">מאנה לא מספיקה!</string>
@@ -54,6 +53,7 @@
     <string name="HeroClass_MagPerks_4">מכשפים משתמשים במאנה כדי להטיל כישופים יסודיים.</string>
     <string name="HeroClass_NecromancerPerks_0">נקרומנטרים מתחילים עם 15 נקודות בריאות.</string>
     <string name="HeroSubClass_DescShaman">אלפים _שמאנים_ יכולים להשתמש בשרביטים ככלי נשק לתקיפה מקרוב. לפגיעות מוצלחות יש סיכוי להפעיל את כוח השרביט על מטרה ללא שימוש בטעינה.</string>
+    <string name="HeroSubClass_DescWarL">לאחר הריגת אויב, ה-וורלוק בולע את נשמתו. זה מרפא את פצעיו ומשביע את רעבונו.</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
     <string name="HungerBuff_Name2">מורעב</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
@@ -65,6 +65,7 @@
     <string name="Javelin_Name">כידון</string>
     <string name="LastLevel_TileGrass">טחב גחלים</string>
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
+    <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
     <string name="Longsword_Gender">masculine</string>
     <string name="MageArmor_ACSpecial">אדמה מותכת</string>
@@ -122,10 +123,6 @@
     <string name="WndInstallingMod_skipping_file">מדלג על %s</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
 
-
-
-
-
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
     <string name="WndPlayGames_Show_Error">הפעולה נכשלה. משהו השתבש...</string>
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
@@ -143,151 +140,7 @@
     <string name="town_deco_pole_name">עמוד</string>
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>

@@ -8,7 +8,9 @@
     <string name="Badges_DeathGlyph">Chết vì glyph</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
+    <string name="Badges_ItemLvl2">Đã có vật phẩm cấp 6</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
+    <string name="BishopNPC_Name_Objective">giám mục</string>
     <string name="CagedKobold_Message1">Làm ơn...</string>
     <string name="CandleOfMindVision_Info_Exhausted">Cây nến đã hết, nó không còn sáng khi bạn cầm nó. Trông như bạn không thể dùng nó nữa.</string>
     <string name="Carcass_Name">tàn dư của %s</string>
@@ -16,13 +18,13 @@
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
 
-
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Death_Name_0">Quỷ %s</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DewVial_Name">lọ sương</string>
+    <string name="DonateButton_thanks">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="DriedRose_Info2"> Và nó vẫn chưa mất đi sự quyến rũ của mình. Nó trông đẹp đến mức bạn muốn giữ nó mãi mãi.</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
     <string name="ExplodingSkull_Desc">Đầu lâu bay này đang bốc lửa, có vẻ cực kỳ mong manh, dường như nó sẽ bùng nổ bất cứ lúc nào.</string>
@@ -35,6 +37,7 @@
     <string name="HeroClass_MagPerks_4">Pháp sư sử dụng mana để thi triển các phép thuật nguyên tố.</string>
     <string name="HeroSubClass_DescWard">Với sự kết nối mạnh mẽ với các lực lượng thiên nhiên, _Kiến Trùm_ có khả năng thu thập giọt sương và hạt giống từ các cây cỏ. Ngoài ra, đi qua bụi cỏ cao cũng ban cho họ một đợt tăng giáp tạm thời.</string>
     <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
+    <string name="Imp_Monks1">Bạn có phải là phiêu lưu gia? Tôi yêu thích những phiêu lưu gia! Bạn luôn có thể dựa vào họ khi cần giết cái gì đó. Đúng không? Dĩ nhiên là phải trả tiền ;)\nTrong trường hợp của tôi là _mönk_ cần bị tiêu diệt. Các bạn thấy, tôi định mở một chút kinh doanh ở đây, nhưng những kẻ điên khùng này không mua gì cả và sẽ làm hoảng sợ khách khác. Vậy hãy giúp tôi tiêu diệt... nói là _8 người_ và phần thưởng sẽ thuộc về bạn.</string>
     <string name="InnKeeperNPC_Desc">Chủ quán rất tự hào về bản thân.</string>
     <string name="InterLevelScene_FileNotFound">Không tìm thấy tập tin. Với một số lý do...</string>
     <string name="InterLevelScene_Loading">Đang tải...</string>
@@ -60,6 +63,22 @@
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
+    <string name="Scroll_Runes_0">KAUNAN</string>
+    <string name="Scroll_Runes_1">SOWILO</string>
+    <string name="Scroll_Runes_10">ODAL</string>
+    <string name="Scroll_Runes_11">TIWAZ</string>
+    <string name="Scroll_Runes_12">ANSUZ</string>
+    <string name="Scroll_Runes_13">IWAZ</string>
+    <string name="Scroll_Runes_14">ALGIZ</string>
+    <string name="Scroll_Runes_15">DAGAZ</string>
+    <string name="Scroll_Runes_2">LAGUZ</string>
+    <string name="Scroll_Runes_3">YNGVI</string>
+    <string name="Scroll_Runes_4">GYFU</string>
+    <string name="Scroll_Runes_5">RAIDO</string>
+    <string name="Scroll_Runes_6">ISAZ</string>
+    <string name="Scroll_Runes_7">MANNAZ</string>
+    <string name="Scroll_Runes_8">NAUDIZ</string>
+    <string name="Scroll_Runes_9">BERKANAN</string>
     <string name="ServiceManNPC_Desc">Một công nhân thông thường của các cơ sở địa phương.</string>
     <string name="ServiceManNotReadyNPC_Message">Xin lỗi, nhưng tòa nhà này chưa sẵn sàng!</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
@@ -67,6 +86,7 @@
     <string name="Sheep_Desc">Đây là một con cừu ma thuật. Điều gì làm nó trở nên ma thuật? Bạn không thể giết nó. Nó sẽ đứng yên tại chỗ cho đến khi nó biến mất bằng phép thuật, trong khi vẫn nhai cỏ với ánh mắt trống rỗng.</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
     <string name="Shopkeeper_BuyPrompt">Để tôi xem hàng hóa của bạn</string>
+    <string name="Shopkeeper_Name">Người bán hàng</string>
     <string name="ShortSword_Name">kiếm ngắn</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
@@ -92,8 +112,6 @@
     <string name="WndJournal_Title">Nhật Ký</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
 
-
-
     <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
     <string name="WndPremiumSettings_std">tiêu chuẩn</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
@@ -118,118 +136,5 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>

@@ -11,6 +11,7 @@
     <string name="Badges_Info1">Insigne behaald: %s</string>
     <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
+    <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
@@ -18,7 +19,6 @@
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaRooted">geworteld</string>
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
-
 
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
@@ -49,6 +49,7 @@
     <string name="MirrorImage_Gender">masculine</string>
     <string name="Ooze_Death">%s verslindt je...</string>
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
+    <string name="Paralysis_Name_2">Verstomming %s</string>
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze ruggetje-persoon is verborgen onder een leer overal. Ook komt er een bittere geur van medicijnen en ... knoflook?</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
@@ -95,6 +96,7 @@
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">gekke dief</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
+    <string name="TownsfolkNPC_Message1">Ah! Nog een avonturier, geweldig! Zorg ervoor dat je zo veel mogelijk waardevolle dingen buitmaakt!</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Typical_Damage">Typische schade</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
@@ -108,13 +110,6 @@
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
     <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
 
-
-
-
-
-
-
-
     <string name="WndModsDisclaimer_install">Lokale mod installeren</string>
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
     <string name="WndRanking_StaAlchemy">Gebrouwen Dranken</string>
@@ -124,7 +119,6 @@
     <string name="WndTradeItem_Sell">Verkopen voor %dg</string>
     <string name="Wraith_Name">wraith</string>
 
-
     <string name="YogsHeart_Gender">masculine</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
     <string name="town_deco_banner_name">Vaandel</string>
@@ -132,53 +126,11 @@
     <string name="town_deco_broken_wall_desc">De balken in deze muur zijn al lang verrot en hebben hun gewone weerstandskracht verloren.</string>
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <string name="town_deco_charcoal_carpet_name">Tapijt</string>
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_shop_sign_desc">Het lijkt erop dat er een winkel in dat gebouw zit.</string>
@@ -186,89 +138,7 @@
 
     <string name="town_deco_wooden_drawer_name">lade</string>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>

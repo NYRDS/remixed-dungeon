@@ -11,6 +11,7 @@
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
     <string name="Belongings_Name">حقيبة ظهر</string>
+    <string name="BishopNPC_Name_Objective">الأسقف</string>
     <string name="BlackCat_Phrases_2">مياو!</string>
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
     <string name="Blacksmith_Name">حداد ترول</string>
@@ -19,7 +20,6 @@
     <string name="Caves_TileDescDeco">تظهر عرق من معدن ما على الجدار. ذهب؟</string>
     <string name="CharAction_Take">التقاط</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
-
 
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
     <string name="Codex_Story_23">هذا الكتاب مكتوب بلغة الأقزام</string>
@@ -69,6 +69,7 @@
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PotionBelt_Name">حزام جرعات</string>
+    <string name="PotionOfMana_Name">إكسير المانا</string>
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
     <string name="RatKing_Name">ملك الفئران</string>
     <string name="RawFish_Name">سمك نيء</string>
@@ -99,6 +100,7 @@
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
     <string name="SummonBeast_AtYourCommand">يأتي الوحش بأمرك!</string>
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="Thief_Stole">%1$s سرق %2$s منك!</string>
     <string name="Undead_Gender">masculine</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
@@ -115,43 +117,13 @@
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
 
-
-
     <string name="WndPlayGames_RestoreProgress">استعادة تقدم اللعبة</string>
     <string name="WndPlayGames_Show_Error">فشلت العملية. حدث خطأ ما...</string>
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <string name="WndPriest_Instruction2_f">أهلاً بك يا ابنتي، أهلاً بك في الكنيسة المقدسة للقديس سانتا سيد الأعماق!</string>
     <string name="WndResurrect_No">لا، أستسلم</string>
+    <string name="WndSettings_InGameUiSettings">إعدادات واجهة المستخدم</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
     <string name="town_deco_armorstand_scale_name">درع حرشفي</string>
     <string name="town_deco_counter_name">كونتر</string>
@@ -163,128 +135,12 @@
     <string name="town_deco_porch_desc">شرفة مصنوعة من الخشب.</string>
     <string name="town_deco_rope_name">حبل</string>
 
-
     <string name="town_deco_screen_name">فاصل</string>
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>
