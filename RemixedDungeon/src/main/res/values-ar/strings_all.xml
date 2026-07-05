@@ -38,6 +38,7 @@
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
     <string name="Firebloom_Name">زهرة النار</string>
+    <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
     <string name="HeartOfDarkness_Name">قلب الظلام</string>
@@ -62,6 +63,8 @@
     <string name="MailArmor_Name">درع حلقي</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
+    <string name="NecromancerNPC_Intro">آه! يا له من منظر نادر! زميل مغامر ليس مجرد جثة بلا حياة! لا يكاد يصدق! أوه... أعتذر، أحياناً أشعر بالحماس الشديد. ترى، أنا نِكْرومانسي (ساحر الموتى). وعلى الرغم من أن دراسة الموتى والموت نفسه هو مهنتي، إلا أن رؤية نفس الأشياء مراراً وتكراراً تصبح مرهقة للغاية في النهاية. من ناحية أخرى، هذا هو السبب بالضبط في وجودي هنا. وفقاً لحساباتي، في غضون أسابيع قليلة، في مكان ما في هذا الزنزانة بالذات، سيحدث شيء مذهل. الـ _نِكْرُوبُولِس_ (المقبرة القديمة)، مدينة الموتى القديمة، ستفتح أبوابها. و... لا يمكنني حقاً قول الكثير، لقد أضعت وقتاً كافياً كما هو الحال. أنا بحاجة للاستعداد، _عد لاحقاً_.</string>
+    <string name="Pickaxe_InsufficientStr">قوة غير كافية للتعدين!</string>
     <string name="PlagueDoctorNPC_Name_Objective">طبيب الطاعون</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PoisonArrow_Gender">feminine</string>
@@ -257,6 +260,11 @@
 
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
 
 
 

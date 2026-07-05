@@ -7,6 +7,7 @@
     <string name="Badges_DeathGlyph">מוות מגליף</string>
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
     <string name="Badges_Info2">סופר תג חדש: %s</string>
+    <string name="Badges_LevelReached4">הגיע לרמה 24</string>
     <string name="Badges_RareAll">כל המפלצות הנדירות הושמדו</string>
     <string name="Bandit_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
@@ -55,6 +56,7 @@
     <string name="HeroSubClass_DescShaman">אלפים _שמאנים_ יכולים להשתמש בשרביטים ככלי נשק לתקיפה מקרוב. לפגיעות מוצלחות יש סיכוי להפעיל את כוח השרביט על מטרה ללא שימוש בטעינה.</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
     <string name="HungerBuff_Name2">מורעב</string>
+    <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
     <string name="IceCaves_TileDescDeco">הגנול הזה הוקפא חי. כנראה שהוא נמצא שם כבר הרבה זמן.</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
     <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
@@ -156,6 +158,10 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 

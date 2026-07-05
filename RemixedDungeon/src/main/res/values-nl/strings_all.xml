@@ -53,6 +53,7 @@
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze ruggetje-persoon is verborgen onder een leer overal. Ook komt er een bittere geur van medicijnen en ... knoflook?</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
+    <string name="Quiver_Info">Leren kogelhouder geschikt voor elke hoeveelheid pijlen</string>
     <string name="RatHide_Name">rattenhuid</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
     <string name="RatKingCrown_Name">Kroon van de rattenkoning</string>
@@ -249,6 +250,8 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

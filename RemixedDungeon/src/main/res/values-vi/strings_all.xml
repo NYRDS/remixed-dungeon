@@ -103,6 +103,7 @@
     <string name="WoodenBow_Info">Cây cung gỗ đơn giản này có thể hữu ích, khi bạn tìm được một vài mũi tên.</string>
     <string name="Wraith_Desc">Một oan hồn là linh hồn oán giận của một kẻ có tội, mộ hoặc lăng mộ của họ bị quấy rối. Là một thực thể phi vật chất, rất khó đánh trúng chúng bằng vũ khí thông thường.</string>
     <string name="YogsEye_Desc">Mắt của Thần Cổ, ánh nhìn toàn kiến đầy ắp căm thù vĩnh cửu. Bạn có thể cảm thấy nó nhìn thấu qua linh hồn của mình.</string>
+    <string name="Zombie_Name">kẻ sống chết</string>
     <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
     <string name="town_deco_broken_wall_name">Bức tường vỡ</string>
     <string name="town_deco_brown_carpet_desc">Chiếc thảm nâu này đã bị đạp nát bởi nhiều phiêu lưu gia, người lang thang và người đi đường.</string>
@@ -117,6 +118,8 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
 
 
 
