@@ -51,6 +51,7 @@
     <string name="King_Defense">geparreerd</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
+    <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
     <string name="Mimic_Name">mimic</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
@@ -74,6 +75,7 @@
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
+    <string name="ScrollOfSummoning_Info">Bij voorlezen zal deze rol een van de monsters uit het huidige dungeon-niveau oproepen. En als de wil van het monster zwak genoeg is, zal het je dienaar worden.</string>
     <string name="Scroll_Runes_10">Odal</string>
     <string name="Scroll_Runes_15">DAGAZ</string>
     <string name="Scroll_Runes_2">LAGUZ</string>
@@ -150,6 +152,8 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

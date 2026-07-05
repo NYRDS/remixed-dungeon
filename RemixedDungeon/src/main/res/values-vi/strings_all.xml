@@ -30,6 +30,7 @@
     <string name="DriedRose_Info2"> Và nó vẫn chưa mất đi sự quyến rũ của mình. Nó trông đẹp đến mức bạn muốn giữ nó mãi mãi.</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
+    <string name="EquipableItem_Unequip">Bạn không thể tháo bỏ %s bị nguyền rủa!</string>
     <string name="ExplodingSkull_Desc">Đầu lâu bay này đang bốc lửa, có vẻ cực kỳ mong manh, dường như nó sẽ bùng nổ bất cứ lúc nào.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">đầu lâu nổ</string>
@@ -40,6 +41,7 @@
     <string name="HeroClass_Mag">pháp sư</string>
     <string name="HeroClass_MagPerks_2">Khi ăn, bất kỳ món ăn nào cũng khôi phục 1 sạc cho tất cả cây gậy phép trong túi đồ.</string>
     <string name="HeroClass_MagPerks_4">Pháp sư sử dụng mana để thi triển các phép thuật nguyên tố.</string>
+    <string name="HeroSubClass_DescGlad">Một cú đánh thành công bằng vũ khí cận chiến cho phép _Gladiator_ bắt đầu một combo, trong đó mỗi đòn đánh thành công tiếp theo gây sát thương lớn hơn.</string>
     <string name="HeroSubClass_DescWard">Với sự kết nối mạnh mẽ với các lực lượng thiên nhiên, _Kiến Trùm_ có khả năng thu thập giọt sương và hạt giống từ các cây cỏ. Ngoài ra, đi qua bụi cỏ cao cũng ban cho họ một đợt tăng giáp tạm thời.</string>
     <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
     <string name="Imp_Monks1">Bạn có phải là phiêu lưu gia? Tôi yêu thích những phiêu lưu gia! Bạn luôn có thể dựa vào họ khi cần giết cái gì đó. Đúng không? Dĩ nhiên là phải trả tiền ;)\nTrong trường hợp của tôi là _mönk_ cần bị tiêu diệt. Các bạn thấy, tôi định mở một chút kinh doanh ở đây, nhưng những kẻ điên khùng này không mua gì cả và sẽ làm hoảng sợ khách khác. Vậy hãy giúp tôi tiêu diệt... nói là _8 người_ và phần thưởng sẽ thuộc về bạn.</string>
@@ -147,6 +149,8 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
 
 
 

@@ -41,6 +41,7 @@
     <string name="Dungeon_Tips_16">כשאתה משדרג כלי נשק מקסום, יש סיכוי שהקסם יהרס.</string>
     <string name="Dungeon_Tips_20">פיקסל-מארט. מחירים מיוחדים לציידי שדים!</string>
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
+    <string name="DwarfToken_Info">גמדים רבים וכמה מהיצירות הגדולות יותר שלהם נושאים את חתיכות המתכת הקטנות האלה של מטרה לא ידועה. אולי הן תכשיטים או איזשהו תעודת זהות. גמדים הם אנשים מוזרים.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EquipableItem_ACUnequip">לְהַסִיר</string>
     <string name="FetidRat_Name_Objective">עכברוש מצחין</string>
@@ -122,6 +123,7 @@
     <string name="TownGuardNPC_Name">שומר</string>
     <string name="TownsfolkSilentNPC_Message3">המממ...</string>
     <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
+    <string name="VampireSkull_Info">המסכה הזו עשויה מגולגולת של ערפד טבעית לחלוטין. למעשה זהו גולגולת... גולגולת של ערפד בעל ראש גדול. מצמרר.</string>
     <string name="WandHolster_Name">נרתיק שרביטים</string>
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
@@ -152,6 +154,8 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 

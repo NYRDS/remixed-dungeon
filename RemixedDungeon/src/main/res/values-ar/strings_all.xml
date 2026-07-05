@@ -25,6 +25,7 @@
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
 
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
+    <string name="Codex_Story_16">سلاح محظوظ - يتجاهل درع العدو تقريباً بالكامل، ويسبب ضرراً أكبر بكثير.</string>
     <string name="Codex_Story_23">هذا الكتاب مكتوب بلغة الأقزام</string>
     <string name="Codex_Story_9">غليف الإزاحة - كلما تعرض البطل للضرب، هناك فرصة أن يتم نقله إلى بلاطة عشوائية مرئية. لا يعمل هذا الغليف في مستويات الزعماء.</string>
     <string name="CorpseExplosion_Info">يحول الجثة إلى سحابة قاتلة من الغاز السام، تنشر المرض والسم على جميع الأعداء القريبين.</string>
@@ -47,6 +48,7 @@
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
     <string name="Halls_TileStatue">عمود</string>
+    <string name="Halls_TileWater">لावा باردة</string>
     <string name="HeartOfDarkness_Name">قلب الظلام</string>
     <string name="HeroClass_MagPerks_4">يستخدم السحرة المانا لإلقاء التعاويذ العنصرية.</string>
     <string name="HeroSubClass_DescWard">بفضل ارتباطها القوي بقوى الطبيعة، تتمكن _الحارسة_ من جمع قطرات الندى والبذور من النباتات. كما أن المشي عبر العشب الطويل يمنحها تعزيزاً مؤقتاً للدروع.</string>
@@ -154,6 +156,9 @@
 
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 
