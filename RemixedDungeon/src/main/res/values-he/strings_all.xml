@@ -1,6 +1,7 @@
 <resources>
     <string name="AC_Devour">לטרוף</string>
     <string name="AboutScene_Graphics">גרפיקה:</string>
+    <string name="AllowStatisticsCollectionScene_Title">איסוף סטטיסטיקות שימוש</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
     <string name="Badges_BossSlain1">הגווּ הובס</string>
@@ -8,6 +9,7 @@
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
     <string name="Badges_Info2">סופר תג חדש: %s</string>
     <string name="Badges_LevelReached4">הגיע לרמה 24</string>
+    <string name="Badges_PotionsCooked3">9 שיקויים מבושלים</string>
     <string name="Badges_RareAll">כל המפלצות הנדירות הושמדו</string>
     <string name="Bandit_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
@@ -36,6 +38,7 @@
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
     <string name="Dungeon_Tips_13">אין טעם להחזיק יותר מאנק אחד בו זמנית, כי תאבדו אותם בתחיית המתים.</string>
+    <string name="Dungeon_Tips_16">כשאתה משדרג כלי נשק מקסום, יש סיכוי שהקסם יהרס.</string>
     <string name="Dungeon_Tips_20">פיקסל-מארט. מחירים מיוחדים לציידי שדים!</string>
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
@@ -46,6 +49,7 @@
     <string name="Food_Message">זה היה טעים מאוד\!</string>
     <string name="FreezeGlobe_Info">מקפיא את הדמות שנבחרה, ומונע ממנה לבצע כל פעולה למשך זמן קצר.</string>
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
+    <string name="Halls_TileStatue">עמוד</string>
     <string name="HeartOfDarkness_Name">לב החושך</string>
     <string name="HeroClass_ElfPerks_4">אלפים מקבלים הרבה יותר בריאות מטיפות טל.</string>
     <string name="HeroClass_Hun">ציידת</string>
@@ -59,6 +63,7 @@
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
     <string name="IceCaves_TileDescDeco">הגנול הזה הוקפא חי. כנראה שהוא נמצא שם כבר הרבה זמן.</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
+    <string name="InnKeeperNPC_Name_Objective">בעל הפונדק</string>
     <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
     <string name="InterLevelScene_Loading">נטען...</string>
     <string name="JarOfSouls_Name">כד נשמות</string>
@@ -72,6 +77,7 @@
     <string name="MimicAmulet_Name">מימיק</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name_Objective">מימיק</string>
+    <string name="Mob_StaHuntingStatus">זה %s צד</string>
     <string name="Mods_RestartRequired">נדרש הפעלה מחדש</string>
     <string name="Necrotism_Death">מתת מנקרוטיזם...</string>
     <string name="Paralysis_Name_2">מהממת %s</string>
@@ -106,6 +112,8 @@
     <string name="ShortSword_Name">חרב קצרה</string>
     <string name="Skeleton_Desc">שלדים מורכבים מעצמות גופות של הרפתקנים ותושבי המבוך חסרי מזל, מונפשים על ידי זרמי קסם אפל מהמעמקים. לאחר שנפגעו מספיק, הם מתפרקים בפיצוץ של עצמות.</string>
     <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
+    <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
+    <string name="SpiderArmor_Info">השריון הזה עשוי מכיטין ישן של עכביש וסוג כלשהו של בד. הכי מפתיע, נראה שהוא עדיין מכיל בלוטות עכביש מתפקדות. אם תלחץ על הלוחות מספיק חזק, הם יורים רשת. וסוליות מחורצות מאפשרות לך לנוע בחופשיות על רשת כזו.</string>
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
     <string name="Sprout_Info">הַעִיר אֶת הַזְּרָעִים הַיְשֵׁנִים.\nאַךְ צָרִיךְ לִהְיוֹת יְרַק עַל הָאֲדָמָה כְּדֵי שֶׁהַלַּחַשׁ יַצְלִיחַ.</string>
     <string name="StartScene_DifficultySelect">בחר את גורלך</string>
@@ -117,6 +125,7 @@
     <string name="WandHolster_Name">נרתיק שרביטים</string>
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
+    <string name="WarHammer_Name">פטיש מלחמה</string>
     <string name="WarriorArmor_Name">שריון לוחם</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
@@ -126,6 +135,7 @@
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
     <string name="WndPlayGames_Show_Error">הפעולה נכשלה. משהו השתבש...</string>
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
+    <string name="WndRanking_StaStr">כוח</string>
     <string name="WndResurrect_Yes">כן, אני אלחם!</string>
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
     <string name="WndTradeItem_Bought">רכשת את %1 תמורת %2</string>
@@ -142,5 +152,20 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </resources>
