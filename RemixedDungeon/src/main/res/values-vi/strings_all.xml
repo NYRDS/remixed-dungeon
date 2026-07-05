@@ -44,6 +44,7 @@
     <string name="HeroClass_MagPerks_4">Pháp sư sử dụng mana để thi triển các phép thuật nguyên tố.</string>
     <string name="HeroSubClass_DescGlad">Một cú đánh thành công bằng vũ khí cận chiến cho phép _Gladiator_ bắt đầu một combo, trong đó mỗi đòn đánh thành công tiếp theo gây sát thương lớn hơn.</string>
     <string name="HeroSubClass_DescWard">Với sự kết nối mạnh mẽ với các lực lượng thiên nhiên, _Kiến Trùm_ có khả năng thu thập giọt sương và hạt giống từ các cây cỏ. Ngoài ra, đi qua bụi cỏ cao cũng ban cho họ một đợt tăng giáp tạm thời.</string>
+    <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
     <string name="Imp_Monks1">Bạn có phải là phiêu lưu gia? Tôi yêu thích những phiêu lưu gia! Bạn luôn có thể dựa vào họ khi cần giết cái gì đó. Đúng không? Dĩ nhiên là phải trả tiền ;)\nTrong trường hợp của tôi là _mönk_ cần bị tiêu diệt. Các bạn thấy, tôi định mở một chút kinh doanh ở đây, nhưng những kẻ điên khùng này không mua gì cả và sẽ làm hoảng sợ khách khác. Vậy hãy giúp tôi tiêu diệt... nói là _8 người_ và phần thưởng sẽ thuộc về bạn.</string>
     <string name="InnKeeperNPC_Desc">Chủ quán rất tự hào về bản thân.</string>
@@ -57,6 +58,7 @@
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
+    <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
     <string name="Mob_StaHuntingStatus">Đây %s đang săn bắn</string>
     <string name="Moongrace_Desc">Những loài cây này mọc ít ỏi và được biết đến như một nguồn phép thuật tự nhiên.</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
@@ -93,6 +95,7 @@
     <string name="ServiceManNPC_Desc">Một công nhân thông thường của các cơ sở địa phương.</string>
     <string name="ServiceManNotReadyNPC_Message">Xin lỗi, nhưng tòa nhà này chưa sẵn sàng!</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
+    <string name="Sewer_TileWater">nước đục</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="Sheep_Desc">Đây là một con cừu ma thuật. Điều gì làm nó trở nên ma thuật? Bạn không thể giết nó. Nó sẽ đứng yên tại chỗ cho đến khi nó biến mất bằng phép thuật, trong khi vẫn nhai cỏ với ánh mắt trống rỗng.</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
@@ -154,6 +157,9 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
 
 
 

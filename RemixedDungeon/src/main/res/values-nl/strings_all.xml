@@ -54,6 +54,7 @@
     <string name="King_Defense">geparreerd</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
+    <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
     <string name="Mimic_Name">mimic</string>
     <string name="MirrorImage_Gender">masculine</string>
@@ -87,6 +88,7 @@
     <string name="ServantNPC_Name">herbergbediende</string>
     <string name="ServantNPC_Name_Objective">herbergbediende</string>
     <string name="ServiceManNPC_Desc">Een gewone werknemer van de lokale vestigingen.</string>
+    <string name="ServiceManNPC_NoConnection">Het spijt me, u kunt onze dienst nu niet gebruiken. (Internetverbinding vereist)</string>
     <string name="ServiceManNotReadyNPC_Message">Mijn excuses, maar dit gebouw is nog niet klaar!</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="Shopkeeper_Name">winkelier</string>
@@ -151,12 +153,17 @@
 
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_shop_sign_desc">Het lijkt erop dat er een winkel in dat gebouw zit.</string>
+    <string name="town_deco_stool_sturdy_name">kruk</string>
     <string name="town_deco_wallpaper_name">behang</string>
 
     <string name="town_deco_wooden_drawer_name">lade</string>
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 

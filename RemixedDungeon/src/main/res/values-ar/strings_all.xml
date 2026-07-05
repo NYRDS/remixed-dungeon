@@ -51,6 +51,7 @@
     <string name="Halls_TileStatue">عمود</string>
     <string name="Halls_TileWater">لावा باردة</string>
     <string name="HeartOfDarkness_Name">قلب الظلام</string>
+    <string name="HeroClass_Elf">الجان</string>
     <string name="HeroClass_MagPerks_4">يستخدم السحرة المانا لإلقاء التعاويذ العنصرية.</string>
     <string name="HeroClass_WarPerks_3">أي قطعة طعام تستعيد بعض الصحة عند أكلها.</string>
     <string name="HeroSubClass_DescWard">بفضل ارتباطها القوي بقوى الطبيعة، تتمكن _الحارسة_ من جمع قطرات الندى والبذور من النباتات. كما أن المشي عبر العشب الطويل يمنحها تعزيزاً مؤقتاً للدروع.</string>
@@ -94,6 +95,7 @@
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
     <string name="ScaleArmor_Desc">تخلق القشور المعدنية المخيطة على سترة جلدية درعاً مرناً، ولكنه يوفر الحماية.</string>
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
+    <string name="Scroll_Runes_13">إيفاز</string>
     <string name="Scroll_Runes_9">بيركانان</string>
     <string name="ServiceManNPC_Desc">عامل عادي في المؤسسات المحلية.</string>
     <string name="ServiceManNotReadyNPC_Message">أعتذر، لكن هذا المبنى ليس جاهزًا بعد!</string>
@@ -128,10 +130,12 @@
     <string name="Warlock_Killed">سهم الظل الخاص بـ %1$s قتلك...</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterOfAwareness_Info">تشع قوة المعرفة من ماء هذه البئر. خذ رشفة منه لكشف جميع أسرار معداتك.</string>
+    <string name="Weapon_Incompatible">تفاعل أنواع مختلفة من السحر ألغى السحر على هذا السلاح!</string>
     <string name="Weightstone_Fast">لقد قمت بتوازين %s لجعله أسرع</string>
     <string name="Weightstone_Name">حجر الوزن</string>
     <string name="WndBlacksmith_Reforge">أعد تشكيلهم</string>
     <string name="WndCatalogus_Scrolls">اللُفافات</string>
+    <string name="WndCryptoDonate_supportDev">دعم المطور</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
 
@@ -161,6 +165,10 @@
 
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 

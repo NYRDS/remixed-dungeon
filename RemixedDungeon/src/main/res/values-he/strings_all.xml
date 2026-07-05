@@ -67,6 +67,7 @@
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
     <string name="IceCaves_TileDescDeco">הגנול הזה הוקפא חי. כנראה שהוא נמצא שם כבר הרבה זמן.</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
+    <string name="IceGuardian_Name_Objective">שומר קרח</string>
     <string name="InnKeeperNPC_Name_Objective">בעל הפונדק</string>
     <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
     <string name="InterLevelScene_Loading">נטען...</string>
@@ -75,6 +76,7 @@
     <string name="LastLevel_TileGrass">טחב גחלים</string>
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
+    <string name="Level_TileDescHighGrass">צמחייה צפופה חוסמת את המבט</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
     <string name="Longsword_Gender">masculine</string>
     <string name="MageArmor_ACSpecial">אדמה מותכת</string>
@@ -123,6 +125,7 @@
     <string name="StartScene_DifficultySelect">בחר את גורלך</string>
     <string name="StartScene_New">משחק חדש</string>
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
+    <string name="TitleScene_Highscores">ציונים גבוהים</string>
     <string name="TownGuardNPC_Name">שומר</string>
     <string name="TownsfolkSilentNPC_Message3">המממ...</string>
     <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
@@ -159,6 +162,9 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 
