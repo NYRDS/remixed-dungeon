@@ -14,8 +14,10 @@
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
     <string name="Badges_PotionsCooked3">9 drankjes gebraagd</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
+    <string name="BlackCat_Gender">feminine</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
+    <string name="Caves_TileWater">IJskoud water</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Names_3">Woestijn</string>
     <string name="Char_StaBleeding">bloeding</string>
@@ -30,6 +32,7 @@
     <string name="Dungeon_Tips_16">Wanneer je een getoverde wapen verbetert, is er een kans dat de toverij vernietigd wordt.</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
+    <string name="EncumbranceBuff_CharAct_2">Dit %s is te zwaar voor mij om effectief te gebruiken.</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Fire_Name_1">Vlamend %s</string>
@@ -90,6 +93,7 @@
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SociologistNPC_AlreadyTaken">Je hebt al deelgenomen aan deze enquête, kom later terug</string>
+    <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
@@ -117,6 +121,7 @@
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
     <string name="Weightstone_Info">Met een weegsteen kun je je naarstwapens balanceren om de snelheid of nauwkeurigheid te verhogen.</string>
+    <string name="Weightstone_Name">gewichtsteen</string>
     <string name="Weightstone_WndCancel">Laat maar</string>
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
     <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
@@ -152,6 +157,11 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
 
 
 

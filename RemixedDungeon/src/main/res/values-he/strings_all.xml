@@ -1,6 +1,7 @@
 <resources>
     <string name="AC_Devour">לטרוף</string>
     <string name="AboutScene_Graphics">גרפיקה:</string>
+    <string name="AlarmTrap_Desc">המלכודת משמיעה קול חודר שמהדהד בכל הצינוק!</string>
     <string name="AllowStatisticsCollectionScene_Title">איסוף סטטיסטיקות שימוש</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
@@ -15,6 +16,7 @@
     <string name="Bee_Name_Objective">דבורה</string>
     <string name="BishopNPC_Desc">בישוף הכנסייה הקדושה של סנטה אדון המעמקים</string>
     <string name="BishopNPC_Name_Objective">בישוף</string>
+    <string name="BlackCat_Gender">feminine</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
     <string name="CagedKobold_Message1">בבקשה...</string>
@@ -35,6 +37,7 @@
     <string name="Codex_Story_9">גליף תזוזה - בכל פעם שהגיבור נפגע, יש סיכוי שהגיבור יטלפורט לאריח גלוי אקראי. גליף זה לא עובד ברמות בוס.</string>
     <string name="CommonArrow_Info">חץ עץ נפוץ עם ראש ברזל.</string>
     <string name="ConcreteBlock_Description">נראה שהבלוק הזה דורש %d נקודות כוח כדי לדחוף</string>
+    <string name="CorpseDustBuff_Info">התקפות מתגברות מאוד עבור אלו שמלאים בצמא דם, מה שהופך אותם למסוכנים במיוחד.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
     <string name="Dungeon_Tips_13">אין טעם להחזיק יותר מאנק אחד בו זמנית, כי תאבדו אותם בתחיית המתים.</string>
@@ -130,12 +133,14 @@
     <string name="WarHammer_Name">פטיש מלחמה</string>
     <string name="WarriorArmor_Name">שריון לוחם</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
+    <string name="Weightstone_Name">אבן משקל</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
     <string name="WndInstallingMod_skipping_file">מדלג על %s</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
 
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
     <string name="WndPlayGames_Show_Error">הפעולה נכשלה. משהו השתבש...</string>
+    <string name="WndPlayGames_Use">השתמש ב-Google Play Games</string>
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
     <string name="WndRanking_StaStr">כוח</string>
     <string name="WndResurrect_Yes">כן, אני אלחם!</string>
@@ -154,6 +159,11 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 
