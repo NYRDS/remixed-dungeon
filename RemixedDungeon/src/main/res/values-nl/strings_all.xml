@@ -20,6 +20,7 @@
     <string name="Caves_TileWater">IJskoud water</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Names_3">Woestijn</string>
+    <string name="ChaosSword_Name">chaoszwaard</string>
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaDizzy">duizelig</string>
     <string name="Char_StaRooted">geworteld</string>
@@ -169,6 +170,8 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

@@ -15,6 +15,7 @@
     <string name="BishopNPC_Name_Objective">giám mục</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="CagedKobold_Message1">Làm ơn...</string>
+    <string name="CagedKobold_Message3">Tôi ghét tất cả mọi thứ về cái lồng này</string>
     <string name="CandleOfMindVision_Info_Exhausted">Cây nến đã hết, nó không còn sáng khi bạn cầm nó. Trông như bạn không thể dùng nó nữa.</string>
     <string name="Carcass_Name">tàn dư của %s</string>
     <string name="Challenges_Names_1">Niềm tin là giáp trụ của tôi</string>
@@ -166,6 +167,8 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
 
 
 

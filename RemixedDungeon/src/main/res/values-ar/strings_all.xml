@@ -16,6 +16,7 @@
     <string name="Badges_PotionsCooked2">تم طهي 6 جرعات</string>
     <string name="Badges_PotionsCooked3">9 جرعات مطبوخة</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
+    <string name="Bat_Desc">هؤلاء السكان السريعون والعنيدون في قباب الكهوف قد يهزمون خصوماً أكبر بكثير من خلال تجديد صحتهم مع كل ضربة ناجحة.</string>
     <string name="Belongings_Name">حقيبة ظهر</string>
     <string name="BishopNPC_Name_Objective">الأسقف</string>
     <string name="BlackCat_Gender">feminine</string>
@@ -76,6 +77,7 @@
     <string name="Keyring_Name">حلقة المفاتيح</string>
     <string name="Level_TileEmptyWell">بئر فارغ</string>
     <string name="Level_TilePedestal">قاعدة</string>
+    <string name="LightBuff_Name">مضيء</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
     <string name="MailArmor_Name">درع حلقي</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
@@ -179,6 +181,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 
