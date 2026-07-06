@@ -43,6 +43,7 @@
     <string name="HeroClass_Mag">magier</string>
     <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
+    <string name="HeroSubClass_NameFreR">freerunner</string>
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
@@ -59,6 +60,7 @@
     <string name="Mimic_Name">mimic</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
+    <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="Ooze_Death">%s verslindt je...</string>
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
@@ -113,6 +115,7 @@
     <string name="Thief_Name">gekke dief</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="TownsfolkNPC_Message1">Ah! Nog een avonturier, geweldig! Zorg ervoor dat je zo veel mogelijk waardevolle dingen buitmaakt!</string>
+    <string name="ToxicGas_Info">Hier zweeft een groenachtige wolk van giftig gas.</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Typical_Damage">Typische schade</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
@@ -135,6 +138,7 @@
     <string name="WndSettings_FpsLimit">FPS-limiet</string>
     <string name="WndSettings_UiSettings">Interface-instellingen</string>
     <string name="WndTradeItem_Bought">Je hebt %1$s gekocht voor %2$dg</string>
+    <string name="WndTradeItem_Cancel">Vergeet het</string>
     <string name="WndTradeItem_Sell">Verkopen voor %dg</string>
     <string name="Wraith_Name">wraith</string>
 
@@ -160,6 +164,11 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
 
 
 

@@ -1,6 +1,7 @@
 <resources>
     <string name="AC_Devour">לטרוף</string>
     <string name="AboutScene_Graphics">גרפיקה:</string>
+    <string name="Accuracy_DecreasedDoctorBareHands">ידיים חשופות מזהמות את הטכניקה שלי. בלי החיתוך הנקי של המסור, המטרה שלי מתפרקת לכאוס.</string>
     <string name="AlarmTrap_Desc">המלכודת משמיעה קול חודר שמהדהד בכל הצינוק!</string>
     <string name="AllowStatisticsCollectionScene_Title">איסוף סטטיסטיקות שימוש</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
@@ -12,6 +13,7 @@
     <string name="Badges_LevelReached4">הגיע לרמה 24</string>
     <string name="Badges_PotionsCooked3">9 שיקויים מבושלים</string>
     <string name="Badges_RareAll">כל המפלצות הנדירות הושמדו</string>
+    <string name="Badges_StrengthAttained2">הושגו 15 נקודות כוח</string>
     <string name="Bandit_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
     <string name="BishopNPC_Desc">בישוף הכנסייה הקדושה של סנטה אדון המעמקים</string>
@@ -55,6 +57,7 @@
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
     <string name="Halls_TileStatue">עמוד</string>
     <string name="HeartOfDarkness_Name">לב החושך</string>
+    <string name="Hedgehog_Name">קיפוד</string>
     <string name="HeroClass_ElfPerks_4">אלפים מקבלים הרבה יותר בריאות מטיפות טל.</string>
     <string name="HeroClass_Hun">ציידת</string>
     <string name="HeroClass_HunPerks_3">ציידות מרוויחות יותר בריאות מטללים.</string>
@@ -120,6 +123,7 @@
     <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
     <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderArmor_Info">השריון הזה עשוי מכיטין ישן של עכביש וסוג כלשהו של בד. הכי מפתיע, נראה שהוא עדיין מכיל בלוטות עכביש מתפקדות. אם תלחץ על הלוחות מספיק חזק, הם יורים רשת. וסוליות מחורצות מאפשרות לך לנוע בחופשיות על רשת כזו.</string>
+    <string name="SpiderElite_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של שומרי העילית משמש לבלבל את המטרה שלהם.</string>
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
     <string name="Sprout_Info">הַעִיר אֶת הַזְּרָעִים הַיְשֵׁנִים.\nאַךְ צָרִיךְ לִהְיוֹת יְרַק עַל הָאֲדָמָה כְּדֵי שֶׁהַלַּחַשׁ יַצְלִיחַ.</string>
     <string name="StartScene_DifficultySelect">בחר את גורלך</string>
@@ -162,6 +166,11 @@
 
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 
