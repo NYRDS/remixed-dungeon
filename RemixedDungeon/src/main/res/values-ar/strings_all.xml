@@ -5,6 +5,7 @@
     <string name="AllowStatisticsCollectionScene_Title">جمع إحصائيات الاستخدام</string>
     <string name="AmokArrow_Info">سوف يحول المحلول الموجود على رأس هذا السهم أي شخص إلى محارب بربري لا يرحم.</string>
     <string name="ArmorKit_Upgraded">لقد قمت بتطبيق مجموعة الدروع لترقية %s</string>
+    <string name="Armor_Incompatible">تفاعل أنواع مختلفة من السحر محا الرموز السحرية على هذه الدروع!</string>
     <string name="Armor_Info3">\n\nنظراً لأن قوتك غير كافية، فإن ارتداء هذه الدروع سيقلل من سرعة حركتك ومهاراتك الدفاعية.</string>
     <string name="Armor_Info6">عليه نقوش</string>
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
@@ -128,6 +129,7 @@
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Thief_Stole">%1$s سرق %2$s منك!</string>
+    <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
     <string name="Undead_Gender">masculine</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
@@ -174,8 +176,13 @@
     <string name="town_deco_stone_wall_desc">بشكل ما، هذا الجدار يصدر حرارة ويبدو رطباً قليلاً.</string>
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
 
+    <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 

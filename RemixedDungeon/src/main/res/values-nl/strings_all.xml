@@ -135,6 +135,7 @@
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
     <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
 
+    <string name="WndModInstall_Version">versie</string>
     <string name="WndModsDisclaimer_install">Lokale mod installeren</string>
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
     <string name="WndRanking_StaAlchemy">Gebrouwen Dranken</string>
@@ -168,6 +169,7 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 

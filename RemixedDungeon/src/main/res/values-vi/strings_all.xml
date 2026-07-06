@@ -61,6 +61,7 @@
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
+    <string name="MeleeWeapon_Info1d">yếu</string>
     <string name="Mob_StaHuntingStatus">Đây %s đang săn bắn</string>
     <string name="Moongrace_Desc">Những loài cây này mọc ít ỏi và được biết đến như một nguồn phép thuật tự nhiên.</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
@@ -165,6 +166,7 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
 
 
 
