@@ -122,6 +122,8 @@
     <string name="Typical_Damage">Typische schade</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
+    <string name="WandOfMagicMissile_Desinchanted">je ontgoochelde de Toverstaf van Magische Projectielen en gebruikte de essentie ervan om je %s te verbeteren</string>
+    <string name="Wand_Prompt">Kies een richting om te zappen</string>
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
     <string name="WarHammer_Name">Oorlogshemel</string>
@@ -166,6 +168,8 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

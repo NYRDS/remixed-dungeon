@@ -77,6 +77,7 @@
     <string name="Level_TilePedestal">قاعدة</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
     <string name="MailArmor_Name">درع حلقي</string>
+    <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
     <string name="Mob_StaHuntingStatus">هذا %s يصطاد</string>
@@ -156,6 +157,7 @@
     <string name="WndSettings_InGameUiSettings">إعدادات واجهة المستخدم</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
     <string name="town_deco_armorstand_scale_name">درع حرشفي</string>
+    <string name="town_deco_bell_desc">جرس كنيسة تقليدي. يبدو أن أحداً لم يقرعه منذ وقت طويل، وحتى الحبل مفقود.</string>
     <string name="town_deco_counter_name">كونتر</string>
     <string name="town_deco_crate_bottles_name">صندوق بيرة</string>
     <string name="town_deco_flowerinthepot_desc">زهرة زينة ذات نكهة حلوة</string>
@@ -166,12 +168,18 @@
     <string name="town_deco_rope_name">حبل</string>
 
     <string name="town_deco_screen_name">فاصل</string>
+    <string name="town_deco_skulls_desc">جماجم مصقولة تنتمي إلى مخلوقات من الزنزانة.</string>
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
 
+    <string name="town_deco_stone_wall_desc">بشكل ما، هذا الجدار يصدر حرارة ويبدو رطباً قليلاً.</string>
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
 
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 
