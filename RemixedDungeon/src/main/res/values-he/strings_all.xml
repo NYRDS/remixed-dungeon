@@ -13,6 +13,7 @@
     <string name="Badges_Info2">סופר תג חדש: %s</string>
     <string name="Badges_LevelReached4">הגיע לרמה 24</string>
     <string name="Badges_PotionsCooked3">9 שיקויים מבושלים</string>
+    <string name="Badges_PotionsCooked5">25 שיקויים נרקחו</string>
     <string name="Badges_RareAll">כל המפלצות הנדירות הושמדו</string>
     <string name="Badges_StrengthAttained2">הושגו 15 נקודות כוח</string>
     <string name="Bandit_Gender">masculine</string>
@@ -34,6 +35,7 @@
     <string name="Char_Stole_2">%1$s גנב את %2$s של %3$s!</string>
 
     <string name="CharmSpell_Name">הקסמה</string>
+    <string name="ChristmasTurkey_Name">תרנגול הודו חגיגי</string>
     <string name="City_TileDescBookshelf">שורות של ספרים בתחומים שונים ממלאות את מדף הספרים.</string>
     <string name="ClassArmor_LowMana">מאנה לא מספיקה!</string>
     <string name="CloakSpell_Name">גלימה</string>
@@ -45,6 +47,7 @@
     <string name="CorpseDustBuff_Info">התקפות מתגברות מאוד עבור אלו שמלאים בצמא דם, מה שהופך אותם למסוכנים במיוחד.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
+    <string name="DriedRose_Name">ורד יבש</string>
     <string name="Dungeon_Tips_13">אין טעם להחזיק יותר מאנק אחד בו זמנית, כי תאבדו אותם בתחיית המתים.</string>
     <string name="Dungeon_Tips_16">כשאתה משדרג כלי נשק מקסום, יש סיכוי שהקסם יהרס.</string>
     <string name="Dungeon_Tips_20">פיקסל-מארט. מחירים מיוחדים לציידי שדים!</string>
@@ -98,6 +101,7 @@
     <string name="MimicPie_Name_Objective">מימיק</string>
     <string name="Mob_StaHuntingStatus">זה %s צד</string>
     <string name="Mods_RestartRequired">נדרש הפעלה מחדש</string>
+    <string name="NecromancerNPC_Intro">איזה מחזה נדיר! הרפתקן שרק לא רק גופה חסרת חיים. בקושי ניתן להאמין! אה... סליחה, לפעמים אני מתרגש מדי. תראו, אני נקרומנסר. ואף על פי שלימוד המתים והמוות עצמו הוא עיסוקי, לראות את אותם דברים שוב ושוב נעשה מתיש בסופו של דבר. מצד שני, זה בדיוק הסיבה שאני כאן. לפי חישוב שלי, בעוד כמה שבועות, במקום כלשהו במבוך הזה, משהו מרהיב עומד לקרות. ה_נקרופוליס_, עיר עתיקה של המתים, עומדת לפתוח את שעריה. ואני... לא יכול לומר יותר, בזבזתי מספיק זמן. אני צריך להתכונן, _לחזור מאוחר יותר_.</string>
     <string name="Necrotism_Death">מתת מנקרוטיזם...</string>
     <string name="Paralysis_Name_2">מהממת %s</string>
     <string name="Pasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
@@ -109,6 +113,7 @@
     <string name="PlagueDoctorQuest_2_2_Prologue">אה, _סונגראס_! פרח עדין, עלי כותרתו מקרינים את חום השמש. אני מאמין שהמהות שלו מחזיקה את המפתח ל... אה, תשכח מהפרטים לעת עתה. מספיק לומר שזה קריטי למחקר שלי. _שני זרעי סונגראס_. הביאו אותם אלי, ואתגמל אתכם במשהו שבוודאי יועיל לכם בהרפתקאותיכם - _שיקום בריאות_, מלא בחיוניות השמש.</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*הוא בוהה בשתי ה*סוקובוס*, חיוך מאושר מתפשט מתחת למסכתו.* נהדר! מופלא! זה יפתח כל כך הרבה... אפשרויות! *הוא פונה אליך, קולו סמיך מהכרת תודה... ומשהו נוסף.* המאמצים שלך... לא יישכחו. אני חייב לך את תודתי העמוקה ביותר. *מבטו מתעכב על ה*סוקובוס* לרגע ארוך מדי, לפני שהוא נסוג למעבדתו, ממלמל על גילוי סודות הפיתוי.*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*מחשבותיו נודדות כשהוא מדבר, קולו נעשה שקט יותר, בקושי לחישה.* הביא לי שתי _סוקובוסיות_… בחיים. כוחן... זה מפתה.</string>
+    <string name="PortalGate_Desc">החריטות על פני השער יוצרות דפוס מוזר. נראה כאילו זהו מנהרה ענקית המובילה למרחק. אבל כשמסתכלים מהצד, מתברר שהפני כמעט שטוחה.</string>
     <string name="PotionOfInvisibility_Info">שתיית שיקוי זה תהפוך אותך לבלתי נראה זמנית. בעודך בלתי נראה, אויבים לא יוכלו לראות אותך. תקיפת אויב, כמו גם שימוש במקל או מגילה מול עיניהם, יבטלו את האפקט.</string>
     <string name="PotionOfMana_Info">השיקוי הזה ישחזר את האנרגיה הרוחנית שלך.</string>
     <string name="Potion_Colors_6">פחם</string>
@@ -126,6 +131,8 @@
     <string name="RottenPasty_Name">מאפה בשר מקולקל</string>
     <string name="RottenRation_Name">מנה רקובה</string>
     <string name="ScarecrowNPC_Quest_End">אוי איזו שמחה, אוי איזו התרגשות!\nעל זה תקבל פרוסת פאי מתוקה!</string>
+    <string name="ScarecrowNPC_Quest_Reminder">חמש סוכריות זה כל מה שאני צריך.\nאוי, הפרס יהיה כל כך מתוק!</string>
+    <string name="ScrollOfIdentify_Name">מגילת זיהוי</string>
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
     <string name="ScrollOfUpgrade_Name">מגילת שדרוג</string>
     <string name="ServiceManNPC_Desc">עובד רגיל של הממסדים המקומיים.</string>
@@ -185,6 +192,14 @@
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
 
 
 

@@ -15,6 +15,7 @@
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
     <string name="Badges_PotionsCooked2">تم طهي 6 جرعات</string>
     <string name="Badges_PotionsCooked3">9 جرعات مطبوخة</string>
+    <string name="Badges_PotionsCooked5">تم تحضير 25 جرعة</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
     <string name="Bat_Desc">هؤلاء السكان السريعون والعنيدون في قباب الكهوف قد يهزمون خصوماً أكبر بكثير من خلال تجديد صحتهم مع كل ضربة ناجحة.</string>
     <string name="Belongings_Name">حقيبة ظهر</string>
@@ -30,6 +31,7 @@
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
 
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
+    <string name="ChristmasTurkey_Name">ديك رومي احتفالي</string>
     <string name="Codex_Story_16">سلاح محظوظ - يتجاهل درع العدو تقريباً بالكامل، ويسبب ضرراً أكبر بكثير.</string>
     <string name="Codex_Story_23">هذا الكتاب مكتوب بلغة الأقزام</string>
     <string name="Codex_Story_9">غليف الإزاحة - كلما تعرض البطل للضرب، هناك فرصة أن يتم نقله إلى بلاطة عشوائية مرئية. لا يعمل هذا الغليف في مستويات الزعماء.</string>
@@ -41,6 +43,7 @@
     <string name="DoctorArmor_Name">ثوب الطبيب</string>
     <string name="DreadKnight_Name_Objective">فارس الرعب</string>
     <string name="DriedRose_Info2"> ولم تفقد سحرها. تبدو جميلة جدًا، لدرجة أنك تريد الاحتفاظ بها إلى الأبد.</string>
+    <string name="DriedRose_Name">وردة مجففة</string>
     <string name="Dungeon_Tips_16">عند ترقية سلاح مسحور، هناك احتمال لتدمير ذلك السحر.</string>
     <string name="Dungeon_Tips_18">الطريقة الوحيدة لسحر سلاح هي ترقيته باستخدام مخطوطة ترقية سلاح.</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
@@ -60,6 +63,7 @@
     <string name="HeroClass_GnollPerks_3">لا يستطيع الغنول القراءة أو الكتابة.</string>
     <string name="HeroClass_MagPerks_4">يستخدم السحرة المانا لإلقاء التعاويذ العنصرية.</string>
     <string name="HeroClass_NecromancerPerks_3">يبدأ النيكرومانسر بمفتاح هيكل عظمي من المستوى 7.</string>
+    <string name="HeroClass_RogPerks_5">تتم معرفة لفائف رسم الخرائط السحرية من البداية.</string>
     <string name="HeroClass_WarPerks_3">أي قطعة طعام تستعيد بعض الصحة عند أكلها.</string>
     <string name="HeroSubClass_DescWard">بفضل ارتباطها القوي بقوى الطبيعة، تتمكن _الحارسة_ من جمع قطرات الندى والبذور من النباتات. كما أن المشي عبر العشب الطويل يمنحها تعزيزاً مؤقتاً للدروع.</string>
     <string name="HeroSubClass_NameScout">كشاف</string>
@@ -80,8 +84,10 @@
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
     <string name="Keyring_Name">حلقة المفاتيح</string>
     <string name="Kusarigama_Pull">سحب</string>
+    <string name="Level_TileEmbers">جمرة</string>
     <string name="Level_TileEmptyWell">بئر فارغ</string>
     <string name="Level_TilePedestal">قاعدة</string>
+    <string name="Lich_Desc">النكرومانسر لقي حتفه في أعماق النكروليس، وبتدريج، تحولت القوى الشريرة التي كانت تتدفق إلى جسده إلى ليتش. ساحر موت، دمية بلا إرادة، تسيطر عليها قوى خبيثة...</string>
     <string name="LightBuff_Name">مضيء</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
     <string name="MailArmor_Name">درع حلقي</string>
@@ -114,6 +120,7 @@
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
     <string name="ScaleArmor_Desc">تخلق القشور المعدنية المخيطة على سترة جلدية درعاً مرناً، ولكنه يوفر الحماية.</string>
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
+    <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
     <string name="Scroll_Runes_13">إيفاز</string>
     <string name="Scroll_Runes_9">بيركانان</string>
     <string name="ServiceManNPC_Desc">عامل عادي في المؤسسات المحلية.</string>
@@ -123,6 +130,7 @@
     <string name="Shades_Name">نظارات شمسية</string>
     <string name="Shades_Name_Objective">نظارات شمسية</string>
     <string name="ShadowLord_Gender">masculine</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="Shaman_Name_Objective">شامان جنول</string>
     <string name="ShortSword_Name">سيف قصير</string>
     <string name="Skeleton_Name">هيكل عظمي</string>
@@ -193,6 +201,16 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
