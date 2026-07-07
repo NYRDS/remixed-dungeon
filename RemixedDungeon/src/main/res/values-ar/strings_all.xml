@@ -69,6 +69,7 @@
     <string name="IceGuardianCore_Name">حارس الجليد</string>
     <string name="IceGuardian_Desc">تم إنشاء حراس الجليد من قبل الكوبولدز القديمة لحماية كهوفهم. طالما أن قلب الحارس يحتوي على طاقة كافية، فهو قادر على إعادة بناء نفسه حتى في خضم المعركة.</string>
     <string name="ImpShopkeeper_Desc">الجان هم شياطين أدنى. فهم لا يتميزون بقوتهم ولا بموهبتهم السحرية. لكنهم أذكياء واجتماعيون تماماً، ويفضل العديد من الجان العيش وممارسة التجارة بين غير الشياطين.</string>
+    <string name="Imp_Cya">إلى اللقاء، %s!</string>
     <string name="Imp_Desc">العفاريت هي شياطين أقل شأناً. لا تتميز بقوتها أو موهبتها السحرية، لكنها ذكية واجتماعية تماماً. يفضل العديد من العفاريت العيش بين غير الشياطين.</string>
     <string name="Imp_Golems2">كيف تسير سفاري الغوليم الخاصة بك؟</string>
     <string name="InnKeeperNPC_Name">صاحب الحانة</string>
@@ -101,6 +102,7 @@
     <string name="PotionBelt_Name">حزام جرعات</string>
     <string name="PotionOfMana_Name">إكسير المانا</string>
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
+    <string name="Potion_Yes">نعم، أعرف ما أفعل</string>
     <string name="RatKing_Name">ملك الفئران</string>
     <string name="RawFish_Name">سمك نيء</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
@@ -153,6 +155,7 @@
     <string name="Weapon_Incompatible">تفاعل أنواع مختلفة من السحر ألغى السحر على هذا السلاح!</string>
     <string name="Weightstone_Fast">لقد قمت بتوازين %s لجعله أسرع</string>
     <string name="Weightstone_Name">حجر الوزن</string>
+    <string name="WindGust_Name">هبة ريح</string>
     <string name="WndBlacksmith_Reforge">أعد تشكيلهم</string>
     <string name="WndCatalogus_Scrolls">اللُفافات</string>
     <string name="WndCryptoDonate_supportDev">دعم المطور</string>
@@ -189,6 +192,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 
