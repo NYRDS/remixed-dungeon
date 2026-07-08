@@ -13,6 +13,7 @@
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
     <string name="Badges_PotionsCooked3">9 thuốc đã nấu</string>
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
+    <string name="BattleAxe_Info">Đầu rìu thép khổng lồ của chiếc rìu chiến này mang lại trọng lượng đáng kể cho mỗi cú gảy.</string>
     <string name="BishopNPC_Name_Objective">giám mục</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackSkullOfMastery_BecomeLichDesc">Lich là một thuật sư tử thi đã đạt đến đỉnh cao của khả năng mình. Sinh tồn giữa sự sống và cái chết, Lich xuất sắc trong thuật hồi sinh, nhưng kỹ năng chiến đấu của hắn thấp hơn rất nhiều so với người thường.</string>
@@ -49,6 +50,7 @@
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
     <string name="GameScene_WelcomeBack">Chào mừng quay lại cấp độ %d của Remixed Dungeon!</string>
+    <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
     <string name="Halls_TileStatue">Cột</string>
     <string name="HeartOfDarkness_Name">Trái tim của bóng tối</string>
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
@@ -91,6 +93,7 @@
     <string name="Poison_Name_0">Độc %s</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
     <string name="Potion_Name">%s thuốc</string>
+    <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="Rat_Name_Objective">chuột túi</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
@@ -188,6 +191,9 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
 
 
 

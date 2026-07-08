@@ -17,6 +17,7 @@
     <string name="Badges_RareAll">כל המפלצות הנדירות הושמדו</string>
     <string name="Badges_StrengthAttained2">הושגו 15 נקודות כוח</string>
     <string name="Bandit_Gender">masculine</string>
+    <string name="BattleAxe_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
     <string name="BishopNPC_Desc">בישוף הכנסייה הקדושה של סנטה אדון המעמקים</string>
     <string name="BishopNPC_Name_Objective">בישוף</string>
@@ -26,6 +27,7 @@
     <string name="CagedKobold_Message1">בבקשה...</string>
     <string name="Carcass_DevourMessage">טרפת גופה של %s!</string>
     <string name="Carcass_Devoured">אכלת גופה של %s!</string>
+    <string name="Challenges_Descriptions_2">כמאמין בהתחדשות טבעית של הגוף הרגיל, תמיד הייתם זהירים מפני שיקויים בעלי תכונות רפואיות. עדיף להיות בטוחים מאשר להצטער!</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
     <string name="Challenges_Names_6">רונות אסורות</string>
     <string name="Challenges_Names_8">ללא עיר</string>
@@ -60,7 +62,9 @@
     <string name="FetidRat_Name_Objective">עכברוש מצחין</string>
     <string name="FireElemental_Desc">אלמנטלי אש נודדים הם תוצר לוואי של זימון ישויות גדולות. הם יותר מדי כאוטיים באופיים כדי להיות נשלטים אפילו על ידי הדמונולוג החזק ביותר.</string>
     <string name="Fire_Name_1">בוער %s</string>
+    <string name="Firebloom_Name">פרח אש</string>
     <string name="Food_Message">זה היה טעים מאוד\!</string>
+    <string name="FortuneTellerNPC_Desc">האישה הזו לבושה בגלימה ארוכה וצבעונית. היא נראית צעירה להפתיע למישהי ששלטה באמנויות הנסתרות של חיזוי העתיד. כשתתקרב, תשמע אותה ממלמלת כשהיא מביטה בכדור הבדולח.</string>
     <string name="FreezeGlobe_Info">מקפיא את הדמות שנבחרה, ומונע ממנה לבצע כל פעולה למשך זמן קצר.</string>
     <string name="FrostAuraBuff_Name">הילת כפור</string>
     <string name="Golem_Name">גולם</string>
@@ -196,6 +200,10 @@
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 

@@ -154,6 +154,7 @@
     <string name="Thief_Stole">%1$s سرق %2$s منك!</string>
     <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
     <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
+    <string name="TownGuardNPC_Message3">هل تظن أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، ذلك لأن هذه المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
@@ -209,6 +210,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

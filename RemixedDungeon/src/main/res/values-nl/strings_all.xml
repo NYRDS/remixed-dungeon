@@ -63,15 +63,18 @@
     <string name="InnKeeperNPC_Name_Objective">herbergier</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
+    <string name="Item_DirThrow">Kies de richting van de worp</string>
     <string name="Item_Name">iets</string>
     <string name="King_Defense">geparreerd</string>
     <string name="Larva_Gender">feminine</string>
+    <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
     <string name="MeleeWeapon_Info3a">Dit is een tamelijk %s wapen.</string>
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
     <string name="Mimic_Name">mimic</string>
     <string name="MirrorImage_Gender">masculine</string>
+    <string name="MissileWeapon_Sure">Weet je zeker dat je het wilt uitrusten als een wapen voor gevechten op korte afstand?</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
@@ -196,6 +199,9 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 
