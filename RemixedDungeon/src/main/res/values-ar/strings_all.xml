@@ -111,6 +111,7 @@
     <string name="PotionBelt_Name">حزام جرعات</string>
     <string name="PotionOfMana_Name">إكسير المانا</string>
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
+    <string name="Potion_SelectForMoisten">اختر العنصر للترطيب</string>
     <string name="Potion_Yes">نعم، أعرف ما أفعل</string>
     <string name="RatKing_Name">ملك الفئران</string>
     <string name="RawFish_Name">سمك نيء</string>
@@ -151,6 +152,7 @@
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Thief_Stole">%1$s سرق %2$s منك!</string>
+    <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
     <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
@@ -169,7 +171,11 @@
     <string name="WindGust_Name">هبة ريح</string>
     <string name="WndBlacksmith_Reforge">أعد تشكيلهم</string>
     <string name="WndCatalogus_Scrolls">اللُفافات</string>
+    <string name="WndCryptoDonate_bitcoin">بيتكوين</string>
+    <string name="WndCryptoDonate_ethereum">إيثيريوم</string>
     <string name="WndCryptoDonate_supportDev">دعم المطور</string>
+    <string name="WndCryptoDonate_ton">تون</string>
+    <string name="WndCryptoDonate_tron">ترون</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
 
@@ -203,6 +209,12 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
 
 
 
