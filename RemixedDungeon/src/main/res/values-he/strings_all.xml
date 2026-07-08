@@ -33,6 +33,7 @@
     <string name="Challenges_Names_8">ללא עיר</string>
     <string name="Challenges_Names_9">אמנזיה</string>
     <string name="ChampionOfEarthBuff_Info">אלוף האדמה מגלם כוח בלתי מתפשר, שכן תכונה זו משפרת את עמידות היצור לנזק ומגדילה את החיוניות המקסימלית שלו. שינוי זה הופך אותו לאויב מאיים במעמקים המסוכנים, המסוגל להדוף התקפות בקלות ולהחזיק מעמד בקרב ממושך עם נחישות בלתי מעורערת.</string>
+    <string name="ChaosCrystal_Info">אתה מרגיש זרמי אנרגיה זורמים דרך ידיך כשאתה מחזיק אותו.</string>
     <string name="Char_StaMind">שכל</string>
     <string name="Char_StaStunned">מהלום</string>
     <string name="Char_Stole_2">%1$s גנב את %2$s של %3$s!</string>
@@ -48,6 +49,7 @@
     <string name="CommonArrow_Info">חץ עץ נפוץ עם ראש ברזל.</string>
     <string name="ConcreteBlock_Description">נראה שהבלוק הזה דורש %d נקודות כוח כדי לדחוף</string>
     <string name="CorpseDustBuff_Info">התקפות מתגברות מאוד עבור אלו שמלאים בצמא דם, מה שהופך אותם למסוכנים במיוחד.</string>
+    <string name="DashSpell_Name">הסתערות</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
     <string name="DriedRose_Name">ורד יבש</string>
@@ -68,6 +70,7 @@
     <string name="FreezeGlobe_Info">מקפיא את הדמות שנבחרה, ומונע ממנה לבצע כל פעולה למשך זמן קצר.</string>
     <string name="FrostAuraBuff_Name">הילת כפור</string>
     <string name="Golem_Name">גולם</string>
+    <string name="GothicArmor_Name">שריון גותי</string>
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
     <string name="Halls_TileStatue">עמוד</string>
     <string name="HeartOfDarkness_Name">לב החושך</string>
@@ -98,6 +101,7 @@
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
     <string name="Level_TileDescHighGrass">צמחייה צפופה חוסמת את המבט</string>
+    <string name="Level_TileWell">באר</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
     <string name="Longsword_Gender">masculine</string>
     <string name="MageArmor_ACSpecial">אדמה מותכת</string>
@@ -116,6 +120,7 @@
     <string name="PlagueDoctorNPC_Name_Objective">רופא דבר</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">חפש את ה־_moongrace_, שם החשכה פוגשת את הבהוב האור הקלוש ביותר של הירח. _שני זרעים_, תמציתם, יחשפו סודות נסתרים.</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">אה, _סונגראס_! פרח עדין, עלי כותרתו מקרינים את חום השמש. אני מאמין שהמהות שלו מחזיקה את המפתח ל... אה, תשכח מהפרטים לעת עתה. מספיק לומר שזה קריטי למחקר שלי. _שני זרעי סונגראס_. הביאו אותם אלי, ואתגמל אתכם במשהו שבוודאי יועיל לכם בהרפתקאותיכם - _שיקום בריאות_, מלא בחיוניות השמש.</string>
+    <string name="PlagueDoctorQuest_3_2_Prologue">אביר מוות! *קולו נסדק בהתרגשות, אצבעותיו הגרמיות רועדות כשהוא אוחז בקבוקון מבעבע מלא בנוזל זרחני עכור*. יצור כזה... מגדלור של אל-מוות! ללכוד אחד, בחיים... זה יהיה... מונומנטלי. תארו לעצמכם אילו סודות נוכל לגלות! הכוח שזורם בעורקיו הגרמיים! כן, אביר מוות! זה חיוני למחקר שלי! כי זה יאפשר לנו לצלול עמוק יותר... לתעלומות החיים... והמוות עצמם!</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*הוא בוהה בשתי ה*סוקובוס*, חיוך מאושר מתפשט מתחת למסכתו.* נהדר! מופלא! זה יפתח כל כך הרבה... אפשרויות! *הוא פונה אליך, קולו סמיך מהכרת תודה... ומשהו נוסף.* המאמצים שלך... לא יישכחו. אני חייב לך את תודתי העמוקה ביותר. *מבטו מתעכב על ה*סוקובוס* לרגע ארוך מדי, לפני שהוא נסוג למעבדתו, ממלמל על גילוי סודות הפיתוי.*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*מחשבותיו נודדות כשהוא מדבר, קולו נעשה שקט יותר, בקושי לחישה.* הביא לי שתי _סוקובוסיות_… בחיים. כוחן... זה מפתה.</string>
     <string name="PortalGate_Desc">החריטות על פני השער יוצרות דפוס מוזר. נראה כאילו זהו מנהרה ענקית המובילה למרחק. אבל כשמסתכלים מהצד, מתברר שהפני כמעט שטוחה.</string>
@@ -146,6 +151,7 @@
     <string name="Shopkeeper_Name">סוחר</string>
     <string name="ShortSword_Name">חרב קצרה</string>
     <string name="Skeleton_Desc">שלדים מורכבים מעצמות גופות של הרפתקנים ותושבי המבוך חסרי מזל, מונפשים על ידי זרמי קסם אפל מהמעמקים. לאחר שנפגעו מספיק, הם מתפרקים בפיצוץ של עצמות.</string>
+    <string name="SlowBuff_Name">מואט</string>
     <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
     <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderArmor_Info">השריון הזה עשוי מכיטין ישן של עכביש וסוג כלשהו של בד. הכי מפתיע, נראה שהוא עדיין מכיל בלוטות עכביש מתפקדות. אם תלחץ על הלוחות מספיק חזק, הם יורים רשת. וסוליות מחורצות מאפשרות לך לנוע בחופשיות על רשת כזו.</string>
@@ -200,6 +206,12 @@
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 

@@ -22,6 +22,8 @@
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Names_3">Woestijn</string>
     <string name="ChaosSword_Name">chaoszwaard</string>
+    <string name="CharAction_Push">duwen</string>
+    <string name="Char_StaAmok">amok</string>
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaDizzy">duizelig</string>
     <string name="Char_StaRooted">geworteld</string>
@@ -33,6 +35,7 @@
     <string name="CommonArrow_Info">Gewone houten pijl met een ijzeren punt.</string>
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
+    <string name="Crab_Name">rioolkrab</string>
     <string name="Dagger_Name">dolk</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
@@ -46,6 +49,7 @@
     <string name="Eye_Gender">neuter</string>
     <string name="Fire_Name_1">Vlamend %s</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
+    <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileStatue">Pilaar</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
     <string name="HeroClass_GnollPerks_3">Gnollen kunnen niet lezen of schrijven.</string>
@@ -159,6 +163,7 @@
     <string name="Weightstone_Name">gewichtsteen</string>
     <string name="Weightstone_WndCancel">Laat maar</string>
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
+    <string name="WndChallenges_Title">Uitdagingen</string>
     <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
 
     <string name="WndModInstall_Version">versie</string>
@@ -199,6 +204,12 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
 
 
 

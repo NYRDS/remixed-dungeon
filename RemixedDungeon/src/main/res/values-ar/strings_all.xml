@@ -10,7 +10,9 @@
     <string name="Armor_Info6">عليه نقوش</string>
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
     <string name="Badges_BossSlain1">تم القضاء على الغو</string>
+    <string name="Badges_GamesPlayed2">تم لعب 100 لعبة</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
+    <string name="Badges_ItemLvl3">تم الحصول على عنصر من المستوى 9</string>
     <string name="Badges_MasteryCombo">كومبو 7 ضربات</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
     <string name="Badges_PotionsCooked2">تم طهي 6 جرعات</string>
@@ -26,6 +28,7 @@
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
     <string name="Blacksmith_Name">حداد ترول</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
+    <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
     <string name="Caves_TileDescDeco">تظهر عرق من معدن ما على الجدار. ذهب؟</string>
     <string name="CharAction_Take">التقاط</string>
@@ -88,6 +91,7 @@
     <string name="Kusarigama_Pull">سحب</string>
     <string name="Level_TileEmbers">جمرة</string>
     <string name="Level_TileEmptyWell">بئر فارغ</string>
+    <string name="Level_TileFireTrap">فخ حريق</string>
     <string name="Level_TilePedestal">قاعدة</string>
     <string name="Lich_Desc">النكرومانسر لقي حتفه في أعماق النكروليس، وبتدريج، تحولت القوى الشريرة التي كانت تتدفق إلى جسده إلى ليتش. ساحر موت، دمية بلا إرادة، تسيطر عليها قوى خبيثة...</string>
     <string name="LightBuff_Name">مضيء</string>
@@ -113,6 +117,7 @@
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
     <string name="Potion_SelectForMoisten">اختر العنصر للترطيب</string>
     <string name="Potion_Yes">نعم، أعرف ما أفعل</string>
+    <string name="RatKing_Died">مات الملك. ليحيا الملك!</string>
     <string name="RatKing_Name">ملك الفئران</string>
     <string name="RawFish_Name">سمك نيء</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
@@ -152,6 +157,7 @@
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Thief_Stole">%1$s سرق %2$s منك!</string>
+    <string name="TomeOfMastery_Blinded">لا يمكنك القراءة وأنت أعمى</string>
     <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
     <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
     <string name="TownGuardNPC_Message3">هل تظن أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، ذلك لأن هذه المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
@@ -210,6 +216,12 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
 
 
 
