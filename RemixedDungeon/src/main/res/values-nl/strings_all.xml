@@ -62,6 +62,7 @@
     <string name="InnKeeperNPC_Name_Objective">herbergier</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
+    <string name="Item_Name">iets</string>
     <string name="King_Defense">geparreerd</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
@@ -179,6 +180,7 @@
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
+    <string name="town_deco_library_books_desc">Nog steeds beter dan de boeken uit de kelder.</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
 
     <string name="town_deco_pathway_name">pad</string>
@@ -190,6 +192,8 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

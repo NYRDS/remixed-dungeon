@@ -18,6 +18,7 @@
     <string name="Badges_PotionsCooked5">تم تحضير 25 جرعة</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
     <string name="Bat_Desc">هؤلاء السكان السريعون والعنيدون في قباب الكهوف قد يهزمون خصوماً أكبر بكثير من خلال تجديد صحتهم مع كل ضربة ناجحة.</string>
+    <string name="Bee_Gender">masculine</string>
     <string name="Belongings_Name">حقيبة ظهر</string>
     <string name="BishopNPC_Name_Objective">الأسقف</string>
     <string name="BlackCat_Gender">feminine</string>
@@ -36,6 +37,7 @@
     <string name="Codex_Story_23">هذا الكتاب مكتوب بلغة الأقزام</string>
     <string name="Codex_Story_9">غليف الإزاحة - كلما تعرض البطل للضرب، هناك فرصة أن يتم نقله إلى بلاطة عشوائية مرئية. لا يعمل هذا الغليف في مستويات الزعماء.</string>
     <string name="CorpseExplosion_Info">يحول الجثة إلى سحابة قاتلة من الغاز السام، تنشر المرض والسم على جميع الأعداء القريبين.</string>
+    <string name="Crab_Name">سرطان المجاري</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">تم تحويل الألم إلى ألم بطيء، مما يقلل الضرر المتلقى دفعة واحدة.\nالضرر المتبقي لتلقيه %d</string>
     <string name="DieHardSpell_Name">موت صعب</string>
@@ -201,6 +203,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 
