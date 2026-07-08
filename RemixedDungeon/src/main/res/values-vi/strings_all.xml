@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
     <string name="AllowStatisticsCollectionScene_Title">Thu thập thống kê sử dụng</string>
@@ -46,7 +45,7 @@
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">đầu lâu nổ</string>
     <string name="ExplodingSkull_Name_Objective">đầu lâu nổ</string>
-    <string name="Eye_Desc">Một trong những cái tên khác của quỷ này là \"cầu bóng căm thù\", vì khi thấy kẻ thù, nó sử dụng cái nhìn tử thần một cách liều lĩnh, thường bỏ qua đồng minh và làm bị thương họ.</string>
+    <string name="Eye_Desc">Một trong những cái tên khác của quỷ này là \&quot;cầu bóng căm thù\&quot;, vì khi thấy kẻ thù, nó sử dụng cái nhìn tử thần một cách liều lĩnh, thường bỏ qua đồng minh và làm bị thương họ.</string>
     <string name="FetidRat_Gender">feminine</string>
     <string name="Fire_Name_1">Đang cháy %s</string>
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
@@ -136,7 +135,7 @@
     <string name="ShortSword_Name">kiếm ngắn</string>
     <string name="SlowBuff_Name">Làm chậm</string>
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
-    <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \"%1$s\".\n\" %2$s \"</string>
+    <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="SpiderExploding_Desc">Trong thời bình, những sinh vật này là những người làm việc chăm chỉ, nhưng chúng sẽ không ngần ngại lao vào kẻ thù và hái lấy cây đầu tiên chúng gặp phải, biến mình thành những quả bom sống.</string>
@@ -175,6 +174,7 @@
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndSettings_ActionButtonSize">Kích thước nút hành động</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
+    <string name="WndTradeItem_SellN">Bán %1$d cho %2$dg</string>
     <string name="WoodenBow_Info">Cây cung gỗ đơn giản này có thể hữu ích, khi bạn tìm được một vài mũi tên.</string>
     <string name="Wraith_Desc">Một oan hồn là linh hồn oán giận của một kẻ có tội, mộ hoặc lăng mộ của họ bị quấy rối. Là một thực thể phi vật chất, rất khó đánh trúng chúng bằng vũ khí thông thường.</string>
     <string name="Wraith_Name">oan hồn</string>
@@ -186,7 +186,7 @@
     <string name="town_deco_brown_carpet_desc">Chiếc thảm nâu này đã bị đạp nát bởi nhiều phiêu lưu gia, người lang thang và người đi đường.</string>
     <string name="town_deco_cabinet_desc">Một tủ đồ rộng rãi với nhiều cánh cửa và ngăn kệ.</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
-    <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \"Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\".</string>
+    <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \&quot;Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\&quot;.</string>
     <string name="town_deco_pathway_name">đường mòn</string>
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
     <string name="town_deco_red_carpet_name">Thảm đỏ</string>
@@ -196,6 +196,7 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
 
 
 

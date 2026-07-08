@@ -27,6 +27,7 @@
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaDizzy">duizelig</string>
     <string name="Char_StaRooted">geworteld</string>
+    <string name="Char_Stole_1">%1$s steelt %2$s van %3$s!</string>
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
 
     <string name="ChristmasTurkey_Name">festelijke kalkoen</string>
@@ -204,6 +205,7 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 

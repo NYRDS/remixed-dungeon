@@ -210,12 +210,14 @@
     <string name="town_deco_skulls_desc">جماجم مصقولة تنتمي إلى مخلوقات من الزنزانة.</string>
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
 
+    <string name="town_deco_slush_name">الثلج المذاب</string>
     <string name="town_deco_stone_wall_desc">بشكل ما، هذا الجدار يصدر حرارة ويبدو رطباً قليلاً.</string>
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
 
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 
