@@ -67,6 +67,7 @@
     <string name="HeroClass_Rog">kẻ lừa đảo</string>
     <string name="HeroClass_RogPerks_5">Cuộn Bản đồ Ma thuật được nhận diện ngay từ đầu.</string>
     <string name="HeroSubClass_DescGlad">Một cú đánh thành công bằng vũ khí cận chiến cho phép _Gladiator_ bắt đầu một combo, trong đó mỗi đòn đánh thành công tiếp theo gây sát thương lớn hơn.</string>
+    <string name="HeroSubClass_DescWarL">Sau khi giết một kẻ thù, _Pháp Sư_ sẽ hấp thụ linh hồn của nó. Điều này chữa lành vết thương và làm no đói của hắn.</string>
     <string name="HeroSubClass_DescWard">Với sự kết nối mạnh mẽ với các lực lượng thiên nhiên, _Kiến Trùm_ có khả năng thu thập giọt sương và hạt giống từ các cây cỏ. Ngoài ra, đi qua bụi cỏ cao cũng ban cho họ một đợt tăng giáp tạm thời.</string>
     <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="HungerBuff_Info1">Bạn đang đói!</string>
@@ -102,6 +103,7 @@
     <string name="Poison_Name_0">Độc %s</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
     <string name="Potion_Name">%s thuốc</string>
+    <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
     <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="Rat_Name_Objective">chuột túi</string>
@@ -214,6 +216,8 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
 
 
 

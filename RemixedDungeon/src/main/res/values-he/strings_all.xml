@@ -20,6 +20,7 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="BattleAxe_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
+    <string name="BellaNPC_Gender">feminine</string>
     <string name="BishopNPC_Desc">בישוף הכנסייה הקדושה של סנטה אדון המעמקים</string>
     <string name="BishopNPC_Name_Objective">בישוף</string>
     <string name="BlackCat_Gender">feminine</string>
@@ -135,6 +136,7 @@
     <string name="PotionOfInvisibility_Info">שתיית שיקוי זה תהפוך אותך לבלתי נראה זמנית. בעודך בלתי נראה, אויבים לא יוכלו לראות אותך. תקיפת אויב, כמו גם שימוש במקל או מגילה מול עיניהם, יבטלו את האפקט.</string>
     <string name="PotionOfMana_Info">השיקוי הזה ישחזר את האנרגיה הרוחנית שלך.</string>
     <string name="Potion_Colors_6">פחם</string>
+    <string name="Potion_No">לא, שיניתי את דעתי</string>
     <string name="Potion_SureThrow">האם אתה בטוח שאתה רוצה לזרוק את זה? ברוב המקרים הגיוני לשתות את זה.</string>
     <string name="PseudoPasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
     <string name="PseudoPasty_Name">מאפה בשר</string>
@@ -195,6 +197,7 @@
     <string name="WeaknessBuff_Name">נחלש</string>
     <string name="Weightstone_Name">אבן משקל</string>
     <string name="Weightstone_WndCancel">לא נורא</string>
+    <string name="WndDonate_goldDonateText">תודה על עזרתך</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
     <string name="WndInstallingMod_skipping_file">מדלג על %s</string>
     <string name="WndItemAlchemy_Title">מתכוני אלכימיה עם %s</string>
@@ -227,6 +230,9 @@
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 

@@ -50,6 +50,7 @@
     <string name="DieHardSpell_Name">موت صعب</string>
     <string name="Displacement_Txt">%s الإزاحة</string>
     <string name="DoctorArmor_Name">ثوب الطبيب</string>
+    <string name="DreadKnight_Name">فارس الرعب</string>
     <string name="DreadKnight_Name_Objective">فارس الرعب</string>
     <string name="DriedRose_Info2"> ولم تفقد سحرها. تبدو جميلة جدًا، لدرجة أنك تريد الاحتفاظ بها إلى الأبد.</string>
     <string name="DriedRose_Name">وردة مجففة</string>
@@ -205,6 +206,7 @@
     <string name="WndCryptoDonate_tron">ترون</string>
     <string name="WndDonate_silverDonate">تبرع فضي</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
+    <string name="WndInfoItem_Chest">صندوق</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
 
     <string name="WndPlayGames_RestoreProgress">استعادة تقدم اللعبة</string>
@@ -240,6 +242,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 
