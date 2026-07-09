@@ -2558,7 +2558,7 @@ remix.32\n
     <string name="WndGame_Load">Φόρτωση</string>
     <string name="WndGame_Ranking">Κατάταξη</string>
     <string name="WndGame_Return">Επιστροφή στο παιχνίδι</string>
-    <string name="WndGame_Save">Αποθήκευση</string>
+    <string name="WndGame_Save">Αποθήκευσε</string>
     <string name="WndGame_Settings">Ρυθμίσεις</string>
     <string name="WndGame_Start">Έναρξη νέου παιχνιδιού</string>
     <string name="WndGame_menu">Κύριο μενού</string>
