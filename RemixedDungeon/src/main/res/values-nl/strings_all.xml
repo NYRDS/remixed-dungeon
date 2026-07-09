@@ -70,6 +70,7 @@
     <string name="InnKeeperNPC_Name_Objective">herbergier</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
+    <string name="InventoryScroll_No">Nee, ik heb mijn keuze veranderd</string>
     <string name="Item_DirThrow">Kies de richting van de worp</string>
     <string name="Item_Name">iets</string>
     <string name="King_Defense">geparreerd</string>
@@ -132,6 +133,7 @@
     <string name="ServiceManNPC_Desc">Een gewone werknemer van de lokale vestigingen.</string>
     <string name="ServiceManNPC_NoConnection">Het spijt me, u kunt onze dienst nu niet gebruiken. (Internetverbinding vereist)</string>
     <string name="ServiceManNotReadyNPC_Message">Mijn excuses, maar dit gebouw is nog niet klaar!</string>
+    <string name="ShadowLord_Intro">Bereid je voor!</string>
     <string name="Shaman_Name">gnol schamaan</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="Shopkeeper_Name">winkelier</string>
@@ -194,6 +196,7 @@
     <string name="WndTradeItem_Sell">Verkopen voor %dg</string>
     <string name="Wnd_Button_Back">Terug</string>
     <string name="WoodenBow_Name">houten boog</string>
+    <string name="Worm_Name_Objective">worm</string>
     <string name="Wraith_Name">wraith</string>
 
     <string name="YogsHeart_Gender">masculine</string>
@@ -202,6 +205,7 @@
     <string name="town_deco_banner_name">Vaandel</string>
     <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
     <string name="town_deco_broken_wall_desc">De balken in deze muur zijn al lang verrot en hebben hun gewone weerstandskracht verloren.</string>
+    <string name="town_deco_brown_carpet_desc">Deze bruine tapijt is onder voet getrapt door veel avonturiers, zwervers en toeschouwers.</string>
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
 
     <string name="town_deco_charcoal_carpet_name">Tapijt</string>
@@ -221,6 +225,10 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 

@@ -32,6 +32,7 @@
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
+    <string name="Crab_Name">cua cống</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Death_Name_0">Quỷ %s</string>
     <string name="DeepSnail_Gender">masculine</string>
@@ -105,6 +106,7 @@
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="Rat_Name_Objective">chuột túi</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
+    <string name="RingOfElements_Name">Nhẫn của các Nguyên tố</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
     <string name="RingOfHerbalism_Info">Nhẫn này tăng cơ hội thu thập sương mai và hạt giống từ cỏ bị giẫm đạp.</string>
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
@@ -154,6 +156,8 @@
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
     <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
+    <string name="TerrorBuff_Info">Có vẻ như ai đó rất sợ hãi.</string>
+    <string name="Torch_ACLight">THÁP</string>
     <string name="Torch_Info">Đây là một vật phẩm không thể thiếu trong Các Điện Thần Quỷ, những nơi nổi tiếng với ánh sáng môi trường kém.</string>
     <string name="TownGuardNPC_Message1">Đi tiếp nào.</string>
     <string name="TownGuardNPC_Name">bảo vệ trấn</string>
@@ -168,6 +172,7 @@
     <string name="WeaknessBuff_Name">Yếu</string>
     <string name="Weightstone_Fast">bạn đã cân bằng %s để làm nó nhanh hơn</string>
     <string name="Weightstone_Name">đá cân</string>
+    <string name="Weightstone_WndCancel">Không sao đâu</string>
     <string name="WndBlacksmith_Prompt">Được, lời đã nói không thể lấy lại, đây là điều tôi có thể làm cho bạn: Tôi có thể luyện lại 2 vật phẩm và biến chúng thành 1 vật phẩm chất lượng tốt hơn.</string>
     <string name="WndDonate_royalDonateText2">Ngoài ra, bạn sẽ nhận được mọi loại mũ từ cửa hàng trong ứng dụng! Cũng như mọi loại mũ sẽ được phát hành trong tương lai.</string>
     <string name="WndGame_menu">Menu chính</string>
@@ -209,6 +214,11 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
+
+
 
 
 
