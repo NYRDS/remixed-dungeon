@@ -31,6 +31,7 @@
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
 
     <string name="ChristmasTurkey_Name">festelijke kalkoen</string>
+    <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="CommonArrow_Info">Gewone houten pijl met een ijzeren punt.</string>
@@ -99,6 +100,7 @@
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
     <string name="PotionOfMight_Apply">Nieuwverkregen kracht stroomt door je lichaam.</string>
     <string name="Potion_Colors_14">onyx</string>
+    <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
     <string name="PumpkinPie_Name">pompoentaart</string>
     <string name="Quiver_Info">Leren kogelhouder geschikt voor elke hoeveelheid pijlen</string>
     <string name="RatHide_Name">rattenhuid</string>
@@ -113,6 +115,7 @@
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
     <string name="Ring_Gems_4">amethist</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
+    <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
@@ -210,10 +213,15 @@
     <string name="town_deco_stool_sturdy_name">kruk</string>
     <string name="town_deco_wallpaper_name">behang</string>
 
+    <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
     <string name="town_deco_wooden_drawer_name">lade</string>
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 

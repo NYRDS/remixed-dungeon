@@ -48,6 +48,7 @@
     <string name="ExplodingSkull_Name_Objective">đầu lâu nổ</string>
     <string name="Eye_Desc">Một trong những cái tên khác của quỷ này là \&quot;cầu bóng căm thù\&quot;, vì khi thấy kẻ thù, nó sử dụng cái nhìn tử thần một cách liều lĩnh, thường bỏ qua đồng minh và làm bị thương họ.</string>
     <string name="FetidRat_Gender">feminine</string>
+    <string name="Fez_Name">Mũ Fez</string>
     <string name="Fire_Name_1">Đang cháy %s</string>
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
@@ -99,6 +100,7 @@
     <string name="Poison_Name_0">Độc %s</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
     <string name="Potion_Name">%s thuốc</string>
+    <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="Rat_Name_Objective">chuột túi</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
@@ -173,11 +175,13 @@
 
     <string name="WndLibrary_Mobs_Btn">Quái vật</string>
     <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
+    <string name="WndPremiumSettings_banners">Chọn chất liệu cờ</string>
     <string name="WndPremiumSettings_chrome">Chọn vật liệu giao diện</string>
     <string name="WndPremiumSettings_std">tiêu chuẩn</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
 
     <string name="WndRanking_StaStr">Sức mạnh</string>
+    <string name="WndRanking_Stats">Thống kê</string>
     <string name="WndSettings_ActionButtonSize">Kích thước nút hành động</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
     <string name="WndTradeItem_SellN">Bán %1$d cho %2$dg</string>
@@ -203,6 +207,10 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
+
 
 
 
