@@ -30,6 +30,7 @@
 
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Death_Name_0">Quỷ %s</string>
     <string name="DeepSnail_Gender">masculine</string>
@@ -196,6 +197,7 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
 
 
 
