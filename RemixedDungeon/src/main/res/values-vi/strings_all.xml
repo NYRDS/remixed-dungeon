@@ -18,6 +18,7 @@
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackSkullOfMastery_BecomeLichDesc">Lich là một thuật sư tử thi đã đạt đến đỉnh cao của khả năng mình. Sinh tồn giữa sự sống và cái chết, Lich xuất sắc trong thuật hồi sinh, nhưng kỹ năng chiến đấu của hắn thấp hơn rất nhiều so với người thường.</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
+    <string name="CagedKobold_Desc">Một kobold, trong một lồng.</string>
     <string name="CagedKobold_Message1">Làm ơn...</string>
     <string name="CagedKobold_Message3">Tôi ghét tất cả mọi thứ về cái lồng này</string>
     <string name="CandleOfMindVision_Info_Exhausted">Cây nến đã hết, nó không còn sáng khi bạn cầm nó. Trông như bạn không thể dùng nó nữa.</string>
@@ -153,6 +154,7 @@
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
     <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
+    <string name="Torch_Info">Đây là một vật phẩm không thể thiếu trong Các Điện Thần Quỷ, những nơi nổi tiếng với ánh sáng môi trường kém.</string>
     <string name="TownGuardNPC_Message1">Đi tiếp nào.</string>
     <string name="TownGuardNPC_Name">bảo vệ trấn</string>
     <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
@@ -207,6 +209,8 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
 
 
 

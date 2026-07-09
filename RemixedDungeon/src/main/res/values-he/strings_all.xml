@@ -192,6 +192,7 @@
     <string name="Weightstone_Name">אבן משקל</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
     <string name="WndInstallingMod_skipping_file">מדלג על %s</string>
+    <string name="WndItemAlchemy_Title">מתכוני אלכימיה עם %s</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
 
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
@@ -217,9 +218,12 @@
     <string name="town_deco_red_carpet_desc">השמועה אומרת ששטיחים אדומים דומים מקשטים את אולמות המטרופולין הגמדי.</string>
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
 
+    <string name="town_deco_stones_desc">סתם ערימת אבנים</string>
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 

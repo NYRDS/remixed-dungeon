@@ -153,6 +153,7 @@
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
+    <string name="Sword_Gender">masculine</string>
     <string name="Tamahawk_Gender">masculine</string>
     <string name="TerrorBuff_Name">Versterkt</string>
     <string name="Thief_Gender">masculine</string>
@@ -182,6 +183,7 @@
     <string name="WndModInstall_Version">versie</string>
     <string name="WndModsDisclaimer_install">Lokale mod installeren</string>
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
+    <string name="WndPremiumSettings_ruby">robijn</string>
     <string name="WndRanking_StaAlchemy">Gebrouwen Dranken</string>
     <string name="WndRanking_StaDuration">Spelduur</string>
     <string name="WndRanking_StaStr">Kracht</string>
@@ -195,6 +197,7 @@
     <string name="Wraith_Name">wraith</string>
 
     <string name="YogsHeart_Gender">masculine</string>
+    <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
     <string name="town_deco_banner_name">Vaandel</string>
     <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
@@ -218,6 +221,9 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 

@@ -34,6 +34,7 @@
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
     <string name="Caves_TileDescDeco">تظهر عرق من معدن ما على الجدار. ذهب؟</string>
+    <string name="Caves_TileDescEntrance">يؤدي السلم إلى العمق العلوي.</string>
     <string name="CharAction_Take">التقاط</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
 
@@ -127,6 +128,7 @@
     <string name="Potion_Yes">نعم، أعرف ما أفعل</string>
     <string name="RatKing_Died">مات الملك. ليحيا الملك!</string>
     <string name="RatKing_Name">ملك الفئران</string>
+    <string name="Rat_Name_Objective">فأر الكيس</string>
     <string name="RawFish_Name">سمك نيء</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="RingOfHerbalism_Info">يزيد هذا الخاتم من فرصك في جمع الندى والبذور من العشب المفرود.</string>
@@ -172,6 +174,7 @@
     <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
     <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
     <string name="TownGuardNPC_Message3">هل تظن أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، ذلك لأن هذه المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
+    <string name="TownGuardNPC_Name">حارس المدينة</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
     <string name="VertigoBuff_Info">الشعور بالدوار يجعل المشي في خط مستقيم أكثر صعوبة!</string>
@@ -232,6 +235,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 
