@@ -4,6 +4,7 @@
     <string name="Acidic_Name_Objective">العقرب الحمضي</string>
     <string name="AllowStatisticsCollectionScene_Title">جمع إحصائيات الاستخدام</string>
     <string name="AmokArrow_Info">سوف يحول المحلول الموجود على رأس هذا السهم أي شخص إلى محارب بربري لا يرحم.</string>
+    <string name="AnesthesiaBuff_Info">لا يشعر بالألم ولا يستيقظ من الهجمات، لكنه لا يزال يتلقى الضرر.</string>
     <string name="ArmorKit_Upgraded">لقد قمت بتطبيق مجموعة الدروع لترقية %s</string>
     <string name="Armor_Incompatible">تفاعل أنواع مختلفة من السحر محا الرموز السحرية على هذه الدروع!</string>
     <string name="Armor_Info3">\n\nنظراً لأن قوتك غير كافية، فإن ارتداء هذه الدروع سيقلل من سرعة حركتك ومهاراتك الدفاعية.</string>
@@ -68,6 +69,7 @@
     <string name="HeroClass_GnollPerks_3">لا يستطيع الغنول القراءة أو الكتابة.</string>
     <string name="HeroClass_MagPerks_4">يستخدم السحرة المانا لإلقاء التعاويذ العنصرية.</string>
     <string name="HeroClass_NecromancerPerks_3">يبدأ النيكرومانسر بمفتاح هيكل عظمي من المستوى 7.</string>
+    <string name="HeroClass_Rog">لص</string>
     <string name="HeroClass_RogPerks_5">تتم معرفة لفائف رسم الخرائط السحرية من البداية.</string>
     <string name="HeroClass_WarPerks_3">أي قطعة طعام تستعيد بعض الصحة عند أكلها.</string>
     <string name="HeroSubClass_DescWard">بفضل ارتباطها القوي بقوى الطبيعة، تتمكن _الحارسة_ من جمع قطرات الندى والبذور من النباتات. كما أن المشي عبر العشب الطويل يمنحها تعزيزاً مؤقتاً للدروع.</string>
@@ -93,6 +95,7 @@
     <string name="Level_TileEmptyWell">بئر فارغ</string>
     <string name="Level_TileFireTrap">فخ حريق</string>
     <string name="Level_TilePedestal">قاعدة</string>
+    <string name="Level_TileSummoningTrap">فخ الاستدعاء</string>
     <string name="Lich_Desc">النكرومانسر لقي حتفه في أعماق النكروليس، وبتدريج، تحولت القوى الشريرة التي كانت تتدفق إلى جسده إلى ليتش. ساحر موت، دمية بلا إرادة، تسيطر عليها قوى خبيثة...</string>
     <string name="LightBuff_Name">مضيء</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
@@ -107,6 +110,7 @@
     <string name="NecromancerNPC_Message2">يجب أن أكون جاهزاً.</string>
     <string name="Paralysis_Name_0">مشلل %s</string>
     <string name="Pickaxe_InsufficientStr">قوة غير كافية للتعدين!</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="PlagueDoctorNPC_Name_Objective">طبيب الطاعون</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PoisonArrow_Gender">feminine</string>
@@ -139,6 +143,7 @@
     <string name="Shades_Name_Objective">نظارات شمسية</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="Shadow_Gender">feminine</string>
+    <string name="Shaman_Name">شامان غنول</string>
     <string name="Shaman_Name_Objective">شامان جنول</string>
     <string name="ShortSword_Name">سيف قصير</string>
     <string name="Skeleton_Name">هيكل عظمي</string>
@@ -164,6 +169,7 @@
     <string name="TownGuardNPC_Message3">هل تظن أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، ذلك لأن هذه المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
+    <string name="VertigoBuff_Info">الشعور بالدوار يجعل المشي في خط مستقيم أكثر صعوبة!</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
     <string name="Wand_ACZap">صَعْق</string>
@@ -184,6 +190,7 @@
     <string name="WndCryptoDonate_supportDev">دعم المطور</string>
     <string name="WndCryptoDonate_ton">تون</string>
     <string name="WndCryptoDonate_tron">ترون</string>
+    <string name="WndDonate_silverDonate">تبرع فضي</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
 
@@ -195,6 +202,7 @@
     <string name="WndRanking_StaStr">القوة</string>
     <string name="WndResurrect_No">لا، أستسلم</string>
     <string name="WndSettings_InGameUiSettings">إعدادات واجهة المستخدم</string>
+    <string name="WoodenBow_Gender">masculine</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
     <string name="town_deco_armorstand_plate_desc">وفقاً للتاجر، كان هذا الدروع الثقيلة ينتمي يوماً ما إلى محارب عظيم.</string>
     <string name="town_deco_armorstand_scale_name">درع حرشفي</string>
@@ -219,6 +227,14 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
 
 
 

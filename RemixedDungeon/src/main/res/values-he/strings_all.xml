@@ -83,6 +83,7 @@
     <string name="HeroClass_MagPerks_4">מכשפים משתמשים במאנה כדי להטיל כישופים יסודיים.</string>
     <string name="HeroClass_NecromancerPerks_0">נקרומנטרים מתחילים עם 15 נקודות בריאות.</string>
     <string name="HeroClass_NecromancerPerks_3">נקרומנטרים מתחילים עם מפתח שלד ברמה 7.</string>
+    <string name="HeroClass_Rog">נוכל</string>
     <string name="HeroSubClass_DescShaman">אלפים _שמאנים_ יכולים להשתמש בשרביטים ככלי נשק לתקיפה מקרוב. לפגיעות מוצלחות יש סיכוי להפעיל את כוח השרביט על מטרה ללא שימוש בטעינה.</string>
     <string name="HeroSubClass_DescWarL">לאחר הריגת אויב, ה-וורלוק בולע את נשמתו. זה מרפא את פצעיו ומשביע את רעבונו.</string>
     <string name="HeroSubClass_NameAssa">מתנקש</string>
@@ -107,6 +108,7 @@
     <string name="Lich_Name_Objective">ליץ\'</string>
     <string name="Longsword_Gender">masculine</string>
     <string name="MageArmor_ACSpecial">אדמה מותכת</string>
+    <string name="MeleeWeapon_Info5">זה מכושף.</string>
     <string name="MimicAmulet_Name">מימיק</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name_Objective">מימיק</string>
@@ -151,6 +153,7 @@
     <string name="ServiceManNPC_Desc">עובד רגיל של הממסדים המקומיים.</string>
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
+    <string name="Shaman_Name">שמאן גנול</string>
     <string name="Shopkeeper_Name">סוחר</string>
     <string name="ShortSword_Name">חרב קצרה</string>
     <string name="Skeleton_Desc">שלדים מורכבים מעצמות גופות של הרפתקנים ותושבי המבוך חסרי מזל, מונפשים על ידי זרמי קסם אפל מהמעמקים. לאחר שנפגעו מספיק, הם מתפרקים בפיצוץ של עצמות.</string>
@@ -160,6 +163,7 @@
     <string name="SpiderArmor_Info">השריון הזה עשוי מכיטין ישן של עכביש וסוג כלשהו של בד. הכי מפתיע, נראה שהוא עדיין מכיל בלוטות עכביש מתפקדות. אם תלחץ על הלוחות מספיק חזק, הם יורים רשת. וסוליות מחורצות מאפשרות לך לנוע בחופשיות על רשת כזו.</string>
     <string name="SpiderElite_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של שומרי העילית משמש לבלבל את המטרה שלהם.</string>
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
+    <string name="SpiderQueen_Desc">גוף של אישה יפה המשולב עם עכביש מחריד. כל היצורים החיים במאורה הזו הם משרתיה. מפגש עם הגברת יוצאת הדופן הזו עלול להתגלות כחוויה קטלנית. כי אתה פולש\!</string>
     <string name="Sprout_Info">הַעִיר אֶת הַזְּרָעִים הַיְשֵׁנִים.\nאַךְ צָרִיךְ לִהְיוֹת יְרַק עַל הָאֲדָמָה כְּדֵי שֶׁהַלַּחַשׁ יַצְלִיחַ.</string>
     <string name="StartScene_DifficultySelect">בחר את גורלך</string>
     <string name="StartScene_Load">טען משחק</string>
@@ -187,6 +191,7 @@
 
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
     <string name="WndPlayGames_Show_Error">הפעולה נכשלה. משהו השתבש...</string>
+    <string name="WndPlayGames_Title">Google Play משחקים</string>
     <string name="WndPlayGames_Use">השתמש ב-Google Play Games</string>
     <string name="WndPortal_Info_Return">הפורטל הזה יחזיר אותך לתוך הצינוק.\nהאם תרצה להשתמש בו?</string>
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
@@ -198,6 +203,7 @@
     <string name="WndTradeItem_Sale">למכירה: %1$s - %2$dג</string>
     <string name="WndTradeItem_Sold">מכרת את ה-%1 תמורת %2</string>
     <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
+    <string name="town_deco_armorstand_leather_desc">שריון עור אמין יהיה רכישה מצוינת לפני היציאה לצינוק.</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
     <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_glass_name">חלון רחב</string>
@@ -209,6 +215,12 @@
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 
