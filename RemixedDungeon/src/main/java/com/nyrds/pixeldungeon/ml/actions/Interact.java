@@ -12,9 +12,9 @@ public class Interact extends CharAction {
         dst = chr.getPos();
     }
 
-    public boolean act(Char hero) {
+    public void act(Char hero) {
         if(!chr.isOnStage()) {
-            return true;
+            return;
         }
 
         if (hero.adjacent(chr)) {
@@ -24,22 +24,21 @@ public class Interact extends CharAction {
             if (!chr.interact(hero)) {
                 new Attack(chr).act(hero);
             }
-            return false;
+            return;
 
         } else {
             if (chr.getOwnerId() == hero.getId()) {
                 hero.spend(TICK/10);
                 hero.setCurAction(null);
                 hero.selectCell(new OrderCellSelector(chr));
-                return false;
+                return;
             }
         }
 
-        if (Dungeon.level.fieldOfView[chr.getPos()] && hero.getCloser(chr.getPos())) {
-            return true;
+        if (hero.level().fieldOfView[chr.getPos()] && hero.getCloser(chr.getPos())) {
+            return;
         }
 
         hero.readyAndIdle();
-        return false;
     }
 }

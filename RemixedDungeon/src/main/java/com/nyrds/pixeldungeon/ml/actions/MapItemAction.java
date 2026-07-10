@@ -13,7 +13,7 @@ public class MapItemAction extends CharAction {
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
         Level level = hero.level();
         int pos = hero.getPos();
         if (level.adjacent(pos, dst)) {
@@ -26,14 +26,13 @@ public class MapItemAction extends CharAction {
 
             hero.readyAndIdle();
 
-            return false;
+            return;
         }
 
         if (hero.getCloser(dst)) {
-            return true;
+            return;
         }
 
         hero.readyAndIdle();
-        return false;
     }
 }

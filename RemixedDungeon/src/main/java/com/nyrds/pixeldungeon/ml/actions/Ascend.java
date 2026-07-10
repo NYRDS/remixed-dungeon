@@ -23,7 +23,7 @@ public class Ascend extends CharAction {
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
         Level level = hero.level();
         int heroPos = hero.getPos();
         if ((heroPos == dst || level.adjacent(heroPos, dst)) && dst == level.getEntrance()) {
@@ -47,14 +47,14 @@ public class Ascend extends CharAction {
                 }
                 InterlevelScene.Do(InterlevelScene.Mode.ASCEND);
             }
-            return false;
+            hero.spend(Char.TICK/hero.speed());
+            return;
         }
 
         if (hero.getCloser(dst)) {
-            return true;
+            return;
         }
 
         hero.readyAndIdle();
-        return false;
     }
 }

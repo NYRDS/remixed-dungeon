@@ -16,7 +16,7 @@ public class Push extends CharAction {
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
         if(!(target.getOwnerId() == hero.getId())) {
             target.setState(MobAi.getStateByClass(Hunting.class));
             target.setTarget(hero.getPos());
@@ -28,6 +28,5 @@ public class Push extends CharAction {
 
         hero.spend(Actor.TICK);
         hero.readyAndIdle();
-        return false;
     }
 }

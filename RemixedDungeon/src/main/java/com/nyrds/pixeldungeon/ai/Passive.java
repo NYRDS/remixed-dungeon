@@ -14,6 +14,7 @@ public class Passive extends MobAi implements AiState {
     @Override
     public void act(@NotNull Char me) {
         me.enemySeen = false;
+        me.spend(Char.TICK);
     }
 
     @Override

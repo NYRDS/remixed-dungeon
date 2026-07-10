@@ -13,10 +13,9 @@ public class Steal extends CharAction {
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
         CharUtils.steal(hero, target);
         hero.spend(Actor.TICK);
         hero.readyAndIdle();
-        return false;
     }
 }

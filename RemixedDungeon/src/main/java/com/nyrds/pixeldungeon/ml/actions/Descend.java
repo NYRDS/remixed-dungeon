@@ -12,7 +12,7 @@ public class Descend extends CharAction {
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
 
         final Level level = Dungeon.level;
 
@@ -26,14 +26,13 @@ public class Descend extends CharAction {
                 hero.hunger().satisfy(-Hunger.STARVING / 10);
             }
             InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
-            return false;
+            return;
         }
 
         if (hero.getCloser(dst, true)) {
-            return true;
+            return;
         }
 
         hero.readyAndIdle();
-        return false;
     }
 }

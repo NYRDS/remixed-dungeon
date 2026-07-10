@@ -11,7 +11,7 @@ public class Attack extends CharAction {
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
 
         hero.setEnemy(target);
 
@@ -19,12 +19,15 @@ public class Attack extends CharAction {
 
             if (hero.bowEquipped()) {
                 if (hero.adjacent(target) && hero.getItemFromSlot(Belongings.Slot.WEAPON).goodForMelee()) {
-                    return hero.actMeleeAttack(target);
+                    hero.actMeleeAttack(target);
+                    return;
                 }
-                return hero.actBowAttack(target);
+                hero.actBowAttack(target);
+                return;
             }
-            return hero.actMeleeAttack(target);
+            hero.actMeleeAttack(target);
+            return;
         }
-        return hero.getCloserIfVisible(dst);
+        hero.getCloserIfVisible(dst);
     }
 }

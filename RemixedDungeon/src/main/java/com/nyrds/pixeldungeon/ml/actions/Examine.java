@@ -15,9 +15,8 @@ public class Examine extends CharAction {
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
         hero.readyAndIdle();
         GameScene.show(new WndChar(target, hero));
-        return false;
     }
 }

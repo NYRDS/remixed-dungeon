@@ -17,12 +17,11 @@ public class Expel extends CharAction {
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
         hero.spend(TICK/10);
         hero.setCurAction(null);
         target.setOwnerId(target.getId());
         target.setFraction(Fraction.DUNGEON);
         CharUtils.clearMarkers();
-        return false;
     }
 }

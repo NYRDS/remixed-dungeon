@@ -16,7 +16,7 @@ public class UseItem extends CharAction{
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
         item.execute(hero, action);
 
         if(hero.getCurAction() == this) {
@@ -26,7 +26,5 @@ public class UseItem extends CharAction{
         if(GameScene.defaultCellSelector() && ! hero.getSprite().doingSomething()) {
             hero.next();
         }
-
-        return false;
     }
 }

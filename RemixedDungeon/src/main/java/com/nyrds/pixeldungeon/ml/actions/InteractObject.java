@@ -11,22 +11,22 @@ public class InteractObject extends CharAction {
         dst = obj.getPos();
     }
 
-    public boolean act(Char hero) {
+    public void act(Char hero) {
 
         if (hero.adjacent(obj)) {
 
             hero.readyAndIdle();
             hero.getSprite().turnTo(hero.getPos(), dst);
             obj.interact(hero);
-            return false;
+            return;
 
         }
 
-        if (Dungeon.level.fieldOfView[obj.getPos()] && hero.getCloser(dst)) {
-            return true;
+        if (hero.level().fieldOfView[obj.getPos()] && hero.getCloser(dst)) {
+            return;
         }
 
         hero.readyAndIdle();
-        return false;
+
     }
 }

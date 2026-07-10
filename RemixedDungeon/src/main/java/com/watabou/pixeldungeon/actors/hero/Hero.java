@@ -307,10 +307,10 @@ public class Hero extends Char {
                     return;
                 }
             }
+            spend(TICK);
 
             if (Dungeon.realtime() ||
                     (controlTargetId != getId() && getControlTarget().getCurAction() != null)) {
-                    spend(TICK);
                     next();
             } else {
                 readyAndIdle();
@@ -328,7 +328,7 @@ public class Hero extends Char {
     }
 
     public void readyAndIdle() {
-        setCurAction(null);
+        super.readyAndIdle();
 
         GameScene.ready();
         getSprite().idle();

@@ -25,6 +25,7 @@ import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKindWithId;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.Move;
@@ -283,10 +284,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Override
     protected void checkedAct(){
         act();
+        if(BuildConfig.DEBUG) {
+            GLog.debug("%s consumed %3.2f time in act", getEntityKind(), time - prevTime);
+            GLog.debug("%s State: %s Action: %s", getEntityKind(), getState().getTag(), getCurAction());
 
-        if (time == prevTime) {
-            GLog.debug("State:", getState().getTag());
-            throw new TrackedRuntimeException(Utils.format("%s consume no time in act", name()));
+            if (time == prevTime) {
+                throw new TrackedRuntimeException(Utils.format("%s consume no time in act", getEntityKind()));
+            }
         }
     }
 
@@ -2004,6 +2008,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void readyAndIdle() {
+        setCurAction(null);
+        spend(TICK/speed());
     }
 
     public void clearActions() {

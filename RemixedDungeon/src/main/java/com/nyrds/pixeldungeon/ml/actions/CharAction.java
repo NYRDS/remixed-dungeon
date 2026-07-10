@@ -9,7 +9,7 @@ public abstract class CharAction {
 	
 	public int dst;
 
-	abstract public boolean act(Char hero);
+	abstract public void act(Char hero);
 
 	public boolean valid() {
 		return true;

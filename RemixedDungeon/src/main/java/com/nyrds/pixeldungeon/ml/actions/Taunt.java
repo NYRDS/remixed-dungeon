@@ -15,7 +15,7 @@ public class Taunt extends CharAction {
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
 
         target.setState(MobAi.getStateByClass(Hunting.class));
         target.setTarget(hero.getPos());
@@ -25,6 +25,5 @@ public class Taunt extends CharAction {
         Sample.INSTANCE.play(Assets.SND_MIMIC);
 
         hero.readyAndIdle();
-        return false;
     }
 }

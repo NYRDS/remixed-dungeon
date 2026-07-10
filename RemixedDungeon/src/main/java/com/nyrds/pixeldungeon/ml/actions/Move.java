@@ -7,12 +7,9 @@ public class Move extends CharAction {
         this.dst = dst;
     }
 
-    public boolean act(Char hero) {
-        if (hero.getCloser(dst)) {
-            return true;
-        } else {
+    public void act(Char hero) {
+        if (!hero.getCloser(dst)) {
             hero.readyAndIdle();
-            return false;
         }
     }
 }

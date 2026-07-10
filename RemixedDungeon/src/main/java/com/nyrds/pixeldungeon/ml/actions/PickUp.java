@@ -11,7 +11,7 @@ public class PickUp extends CharAction {
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
         if (hero.getPos() == dst) {
 
             Heap heap = hero.level().getHeap(hero.getPos());
@@ -25,14 +25,13 @@ public class PickUp extends CharAction {
             } else {
                 hero.readyAndIdle();
             }
-            return false;
+            return;
         }
 
         if (hero.getCloser(dst)) {
-            return true;
+            return;
         }
 
         hero.readyAndIdle();
-        return false;
     }
 }

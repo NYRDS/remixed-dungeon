@@ -22,7 +22,7 @@ public class Unlock extends CharAction {
         this.dst = door;
     }
 
-    public boolean act(@NotNull Char hero) {
+    public void act(@NotNull Char hero) {
         Level level = hero.level();
         if (level.adjacent(hero.getPos(), dst)) {
             Key theKey = null;
@@ -59,14 +59,13 @@ public class Unlock extends CharAction {
                 GLog.w(StringsManager.getVar(R.string.Hero_LockedDoor));
                 hero.readyAndIdle();
             }
-            return false;
+            return;
         }
 
         if (hero.getCloser(dst)) {
-            return true;
+            return;
         }
 
         hero.readyAndIdle();
-        return false;
     }
 }

@@ -13,7 +13,7 @@ public class UseSpell extends CharAction{
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
         spell.cast(hero);
 
         if(hero.getCurAction() == this) {
@@ -23,7 +23,5 @@ public class UseSpell extends CharAction{
         if(GameScene.defaultCellSelector() && !hero.getSprite().doingSomething()) {
             hero.next();
         }
-
-        return false;
     }
 }

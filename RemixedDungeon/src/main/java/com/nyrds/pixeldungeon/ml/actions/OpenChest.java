@@ -19,7 +19,7 @@ public class OpenChest extends CharAction {
     }
 
     @Override
-    public boolean act(Char hero) {
+    public void act(Char hero) {
         Level level = hero.level();
         int heroPos = hero.getPos();
 
@@ -38,7 +38,7 @@ public class OpenChest extends CharAction {
                     if (theKey[0] == null) {
                         GLog.w(StringsManager.getVar(R.string.Hero_LockedChest));
                         hero.readyAndIdle();
-                        return false;
+                        return;
                     }
                 }
 
@@ -65,15 +65,14 @@ public class OpenChest extends CharAction {
                 hero.readyAndIdle();
             }
 
-            return false;
-
+            return;
         }
 
         if (hero.getCloser(dst)) {
-            return true;
+            return;
         }
 
         hero.readyAndIdle();
-        return false;
+
     }
 }
