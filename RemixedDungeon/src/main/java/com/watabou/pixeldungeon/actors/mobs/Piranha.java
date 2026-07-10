@@ -45,12 +45,11 @@ public class Piranha extends Mob {
 	}
 	
 	@Override
-    public boolean act() {
+    public void act() {
 		if (!level().water[getPos()]) {
 			die(CharsList.DUMMY);
-			return true;
 		} else {
-			return super.act();
+			super.act();
 		}
 	}
 

@@ -30,14 +30,13 @@ public class JarOfSouls extends Mob {
 	}
 
 	@Override
-    public boolean act(){
+    public void act(){
 		super.act();
 		if (enemySeen){
 			playAttack(getEnemy().getPos());
 			MobSpawner.spawnRandomMob(level(),getPos(), -1);
 			postpone(15);
 		}
-		return true;
 	}
 
 	@Override

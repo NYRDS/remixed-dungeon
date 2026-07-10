@@ -33,13 +33,11 @@ public class ScriptedActor extends Actor {
 	}
 
 	@Override
-	protected boolean act() {
+	protected void act() {
 		LuaTable actor = LuaEngine.require(sourceFile);
 
 		boolean ret = actor.get("act").call().checkboolean();
 		spend((float) actor.get("actionTime").call().checkdouble());
-
-		return ret;
 	}
 
 	public boolean cellClicked(int cell) {

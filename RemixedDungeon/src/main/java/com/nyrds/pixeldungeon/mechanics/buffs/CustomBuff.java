@@ -119,9 +119,8 @@ public class CustomBuff extends Buff {
     }
 
     @Override
-    public boolean act() {
+    public void act() {
         script.runOptional("act");
-        return true;
     }
 
     @Override

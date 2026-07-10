@@ -187,7 +187,7 @@ public class Ring extends Artifact implements UnknownItem {
         }
 
         @Override
-        public boolean act() {
+        public void act() {
 
             if (!isIdentified() && --ticksToKnow <= 0) {
                 String gemName = Ring.this.name();
@@ -197,8 +197,6 @@ public class Ring extends Artifact implements UnknownItem {
             }
 
             spend(TICK);
-
-            return true;
         }
     }
 

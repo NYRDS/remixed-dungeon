@@ -37,13 +37,12 @@ public class Spinner extends Mob {
 	}
 
 	@Override
-    public boolean act() {
-		boolean result = super.act();
+    public void act() {
+		super.act();
 		
 		if ((getState() instanceof Fleeing) && !hasBuff(Terror.class) && enemySeen && !getEnemy().hasBuff(Poison.class)) {
 			setState(MobAi.getStateByClass(Hunting.class));
 		}
-		return result;
 	}
 	
 	@Override

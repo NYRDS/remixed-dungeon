@@ -99,7 +99,7 @@ public class WandOfFlock extends SimpleWand  {
 		private boolean initialized = false;
 		
 		@Override
-        public boolean act() {
+        public void act() {
 			if (initialized) {
 				destroy();
 				getSprite().die();
@@ -108,7 +108,6 @@ public class WandOfFlock extends SimpleWand  {
 				initialized = true;
 				spend( lifespan + Random.Float( 2 ) );
 			}
-			return true;
 		}
 		
 		@Override

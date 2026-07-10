@@ -63,7 +63,7 @@ public class RunicSkull extends MultiKindMob {
 	}
 
 	@Override
-	public boolean act()
+	public void act()
 	{
 		if (activated){
 			if (!zapping) {
@@ -74,7 +74,7 @@ public class RunicSkull extends MultiKindMob {
 			getSprite().idle();
 			zapping = false;
 		}
-		return super.act();
+		super.act();
 	}
 
 	@Override

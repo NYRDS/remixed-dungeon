@@ -18,11 +18,10 @@ public class DelayedMobSpawner extends Actor {
 	}
 
 	@Override
-	protected boolean act() {
+	protected void act() {
 		if(Actor.findChar(cell) == null) {
 			WandOfBlink.appear(mob, cell);
 		}
 		remove(this);
-		return true;
 	}
 }

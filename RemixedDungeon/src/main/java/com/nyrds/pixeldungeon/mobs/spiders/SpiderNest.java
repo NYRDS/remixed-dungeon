@@ -27,13 +27,11 @@ public class SpiderNest extends Mob {
 	}
 
 	@Override
-    public boolean act(){
+    public void act(){
 		super.act();
 
 		MobSpawner.spawnRandomMob(level(), getPos(), 20);
 		postpone(20);
-		
-		return true;
 	}
 
 	@Override

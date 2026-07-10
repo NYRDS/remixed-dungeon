@@ -16,7 +16,7 @@ public class Regeneration extends Buff {
     private static final float REGENERATION_DELAY = 10;
 
     @Override
-    public boolean act() {
+    public void act() {
         if (target.isAlive()) {
             final int[] bonus = {0};
 
@@ -43,7 +43,6 @@ public class Regeneration extends Buff {
         } else {
             deactivateActor();
         }
-        return true;
     }
 
 	@Override

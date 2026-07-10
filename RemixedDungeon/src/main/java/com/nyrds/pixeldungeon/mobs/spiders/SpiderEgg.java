@@ -24,19 +24,17 @@ public class SpiderEgg extends Mob {
 	}
 
 	@Override
-    public boolean act() {
+    public void act() {
 		super.act();
 
 		Char newSpider = MobSpawner.spawnRandomMob(level(), getPos(), 25);
 
 		if(newSpider.valid()) {
 			remove();
-			return true;
+			return;
 		}
 
 		postpone(20);
-
-		return true;
 	}
 
 	@Override

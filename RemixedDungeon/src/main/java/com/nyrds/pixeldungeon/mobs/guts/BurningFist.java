@@ -67,13 +67,13 @@ public class BurningFist extends Mob implements IZapper {
     }
 
     @Override
-    public boolean act() {
+    public void act() {
 
         for (int i = 0; i < Level.NEIGHBOURS9.length; i++) {
             GameScene.add(Blob.seed(getPos() + Level.NEIGHBOURS9[i], 2, Fire.class));
         }
 
-        return super.act();
+        super.act();
     }
 
     @Override

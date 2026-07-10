@@ -14,14 +14,14 @@ public class ImpShopkeeper extends Shopkeeper {
     private boolean seenBefore = false;
 
     @Override
-    public boolean act() {
+    public void act() {
 
         if (!seenBefore && CharUtils.isVisible(this)) {
             say(Utils.format(R.string.ImpShopkeeper_Greetings));
             seenBefore = true;
         }
 
-        return super.act();
+        super.act();
     }
 
 }

@@ -51,13 +51,13 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         Actor.realTimeMultiplier = realTimeMultiplier;
     }
 
-    protected abstract boolean act();
+    protected abstract void act();
 
     private static final float SPEND_EMA_ALPHA = 0.1f;
     private float spendEma = 1f;
 
     public void spend(float d_t) {
-        GLog.debug("%s spend %4.1f", getEntityKind(), d_t);
+        //GLog.debug("%s spend %4.1f", getEntityKind(), d_t);
         if(this instanceof Char) {
             if (d_t < 0.01) {
                 GLog.debug("sus!");
@@ -207,6 +207,9 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
     }
 
+    protected void checkedAct(){
+        act();
+    }
 
     public static void processTurnBased(float elapsed) {
         Hero hero = Dungeon.hero;
@@ -238,16 +241,16 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
                 }
             }
 
-            GLog.debug("actor %s %4.1f hero: %4.1f now: %4.1f", current.getEntityKind(), current.time, hero.actorTime(), now);
+            //GLog.debug("actor %s %4.1f hero: %4.1f now: %4.1f", current.getEntityKind(), current.time, hero.actorTime(), now);
 
             if (current != hero) {
-                current.act();
+                current.checkedAct();
                 current = null;
                 if(!hero.isAlive()) {
                     break;
                 }
             } else {
-                current.act();
+                current.checkedAct();
                 break;
             }
         }
@@ -476,8 +479,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         return getClass().getSimpleName();
     }
 
-    public boolean testAct() {
-        return act();
+    public void testAct() {
+        act();
     }
 
     public boolean isOnStage() {

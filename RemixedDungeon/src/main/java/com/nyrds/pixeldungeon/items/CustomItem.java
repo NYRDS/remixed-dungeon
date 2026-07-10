@@ -354,13 +354,12 @@ public class CustomItem extends EquipableItem {
     }
 
     @Override
-    protected boolean act() {
+    protected void act() {
         float pre_act_time = actorTime();
         script.runOptional("act");
         if(pre_act_time == actorTime()) { //fix up for items that don't implement act (Epic ones)
             spend(10);
         }
-        return true;
     }
 
     @Override

@@ -119,9 +119,8 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     }
 
     @Override
-    public boolean act() {
+    public void act() {
         deactivateActor();
-        return true;
     }
 
     public int icon() {

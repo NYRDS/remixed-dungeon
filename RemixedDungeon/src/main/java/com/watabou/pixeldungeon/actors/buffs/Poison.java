@@ -33,9 +33,8 @@ public class Poison extends Buff implements Doom {
 	}
 
 	@Override
-	public boolean act() {
+	public void act() {
 		detach();
-		return true;
 	}
 
 	public static float durationFactor(Char ch ) {

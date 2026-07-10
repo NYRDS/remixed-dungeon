@@ -10,7 +10,7 @@ import com.nyrds.LuaInterface;
 public class Barkskin extends Buff {
 
 	@Override
-	public boolean act() {
+	public void act() {
 		if (target.isAlive()) {
 
 			spend( TICK );
@@ -20,8 +20,6 @@ public class Barkskin extends Buff {
 		} else {
 			detach();
 		}
-
-		return true;
 	}
 
 	public void level( int value ) {

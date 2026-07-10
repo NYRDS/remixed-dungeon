@@ -101,7 +101,7 @@ public class Blob extends Actor implements NamedEntityKind {
 	}
 
 	@Override
-	public boolean act() {
+	public void act() {
 
 		spend(TICK);
 
@@ -115,8 +115,6 @@ public class Blob extends Actor implements NamedEntityKind {
 			cur = tmp;
 
 		}
-
-		return true;
 	}
 
 	public void use(BlobEmitter emitter) {

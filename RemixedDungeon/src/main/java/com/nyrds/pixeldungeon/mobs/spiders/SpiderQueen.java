@@ -47,12 +47,12 @@ public class SpiderQueen extends Boss {
 	}
 
 	@Override
-    public boolean act(){
+    public void act(){
 		if(Random.Int(0, 20) == 0) {
 			CharUtils.spawnOnNextCell(this, "SpiderEgg", (int) (100 * GameLoop.getDifficultyFactor()));
 		}
-		
-		return super.act();
+
+		super.act();
 	}
 	
 	@Override

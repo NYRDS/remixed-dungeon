@@ -43,11 +43,9 @@ public class Nightmare extends Mob {
     }
 
     @Override
-    public boolean act(){
+    public void act(){
         super.act();
 
         setState(MobAi.getStateByClass(Hunting.class));
-
-        return true;
     }
 }

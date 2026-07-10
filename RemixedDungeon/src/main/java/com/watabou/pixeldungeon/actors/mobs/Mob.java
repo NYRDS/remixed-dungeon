@@ -186,7 +186,7 @@ public abstract class Mob extends Char {
     }
 
     @Override
-    public boolean act() {
+    public void act() {
         super.act(); //Calculate FoV
 
         getSprite().hideAlert();
@@ -194,7 +194,7 @@ public abstract class Mob extends Char {
         if (paralysed) {
             enemySeen = false;
             spend(TICK);
-            return true;
+            return;
         }
 
         float timeBeforeAct = actorTime();
@@ -209,12 +209,12 @@ public abstract class Mob extends Char {
             GLog.debug("%s is %s", getEntityKind(), getState().getTag());
             getState().act(this);
             if(actorTime() != timeBeforeAct) {
-                return true;
+                return;
             }
             String newTag = getState().getTag();
             if(aiTag.equals(newTag)) { //mob decided to do nothing, this is ok
                 spend(TICK);
-                return true;
+                return;
             }
             aiTag = newTag;
             tags.append(aiTag);
@@ -224,8 +224,6 @@ public abstract class Mob extends Char {
         var error = String.format("actor %s get really confused! (%s)", getEntityKind(), tags);
         spend(TICK);
         EventCollector.logException(error);
-
-        return true;
     }
 
 

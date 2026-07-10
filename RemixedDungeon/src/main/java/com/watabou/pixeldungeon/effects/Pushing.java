@@ -28,12 +28,11 @@ public class Pushing extends Actor {
 	}
 	
 	@Override
-	protected boolean act() {
+	protected void act() {
 		if (effect == null) {
 			effect = new Effect();
 		}
 		deactivateActor();
-		return true;
 	}
 
 	private class Effect extends Visual {

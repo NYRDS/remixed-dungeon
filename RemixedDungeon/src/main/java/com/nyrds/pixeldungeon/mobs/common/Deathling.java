@@ -46,8 +46,8 @@ public class Deathling extends Mob {
     }
 
     @Override
-    public boolean act() {
+    public void act() {
         adjustStats();
-        return super.act();
+        super.act();
     }
 }

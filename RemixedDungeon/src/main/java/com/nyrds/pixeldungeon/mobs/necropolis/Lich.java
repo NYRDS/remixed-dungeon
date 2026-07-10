@@ -207,7 +207,7 @@ public class Lich extends Boss {
     //***
 
     @Override
-    public boolean act() {
+    public void act() {
         timeToSkull--;
         if (timeToSkull < 0){
             timeToSkull = SKULL_DELAY;
@@ -216,7 +216,7 @@ public class Lich extends Boss {
                 useSkull();
             }
         }
-        return super.act();
+        super.act();
     }
 
 

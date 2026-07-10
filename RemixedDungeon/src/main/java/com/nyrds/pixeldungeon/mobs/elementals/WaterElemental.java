@@ -62,12 +62,12 @@ public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
 	}
 
 	@Override
-	public boolean act() {
+	public void act() {
 		if (level().water[getPos()]) {
 			heal(expForKill,this);
 		}
 		
-		return super.act();
+		super.act();
 	}
 	
 	@Override

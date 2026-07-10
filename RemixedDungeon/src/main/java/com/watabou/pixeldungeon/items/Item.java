@@ -37,7 +37,6 @@ import com.watabou.pixeldungeon.actors.hero.Backpack;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
@@ -61,9 +60,6 @@ import org.luaj.vm2.LuaTable;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -568,9 +564,8 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     private static final String LEVEL = "level";
 
     @Override
-    protected boolean act() {
+    protected void act() {
         deactivateActor();
-        return true;
     }
 
     @Override

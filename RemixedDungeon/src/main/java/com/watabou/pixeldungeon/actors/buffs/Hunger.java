@@ -34,7 +34,7 @@ public class Hunger extends Buff implements Doom {
 	public float hungerLevel;
 
 	@Override
-	public boolean act() {
+	public void act() {
 		if (target.isAlive()) {
 
 			int difficulty = GameLoop.getDifficulty();
@@ -109,8 +109,6 @@ public class Hunger extends Buff implements Doom {
 		} else {
 			deactivateActor();
 		}
-		
-		return true;
 	}
 	
 	public void satisfy( float energy ) {

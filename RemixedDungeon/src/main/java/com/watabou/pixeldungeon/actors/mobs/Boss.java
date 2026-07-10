@@ -42,13 +42,13 @@ abstract public class Boss extends Mob {
 	}
 
 	@Override
-	public boolean act() {
+	public void act() {
 		if (state instanceof Hunting) {
 			if (battleMusic != null) {
 				MusicManager.INSTANCE.play(battleMusic, true);
 			}
 		}
-		return super.act();
+		super.act();
 	}
 
 	@Override

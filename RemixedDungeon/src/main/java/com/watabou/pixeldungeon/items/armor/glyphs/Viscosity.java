@@ -96,7 +96,7 @@ public class Viscosity extends Glyph {
 		}
 		
 		@Override
-		public boolean act() {
+		public void act() {
 			if (target.isAlive()) {
 				
 				target.damage( 1, this );
@@ -116,8 +116,6 @@ public class Viscosity extends Glyph {
 			} else {
 				detach();
 			}
-			
-			return true;
 		}
 	}
 }

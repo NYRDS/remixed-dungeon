@@ -6,7 +6,6 @@ import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -56,11 +55,11 @@ public class Statue extends Mob {
 	}
 
 	@Override
-    public boolean act() {
+    public void act() {
 		if (!isPet() && CharUtils.isVisible(this)) {
 			Journal.add( R.string.Journal_Statue );
 		}
-		return super.act();
+		super.act();
 	}
 
 	@Override

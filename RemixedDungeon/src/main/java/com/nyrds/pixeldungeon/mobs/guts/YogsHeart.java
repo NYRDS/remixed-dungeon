@@ -55,7 +55,7 @@ public class YogsHeart extends Mob {
     }
 
 	@Override
-	public boolean act() {
+	public void act() {
 
 		Mob mob = level().getRandomMob();
 
@@ -63,7 +63,7 @@ public class YogsHeart extends Mob {
 			PotionOfHealing.heal(mob,0.2f);
 		}
 
-		return super.act();
+		super.act();
 	}
 
     @Override

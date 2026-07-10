@@ -10,11 +10,11 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 public class ArtifactBuff extends Buff {
 
     @Override
-    public boolean act() {
+    public void act() {
         if(getSourceId()==EntityIdSource.INVALID_ID) { // non-artifact source
             detach();
         }
-        return super.act();
+        super.act();
     }
 
     public String getEntityKind() {

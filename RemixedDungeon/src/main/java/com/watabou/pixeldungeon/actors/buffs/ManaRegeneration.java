@@ -14,7 +14,7 @@ public class ManaRegeneration extends Buff {
     private static final float REGENERATION_DELAY = 20;
 
     @Override
-    public boolean act() {
+    public void act() {
         if (target.isAlive()) {
             if (!target.level().isSafe()) {
                 target.accumulateSkillPoints(1);
@@ -32,7 +32,6 @@ public class ManaRegeneration extends Buff {
         } else {
             deactivateActor();
         }
-        return true;
     }
 
 	@Override

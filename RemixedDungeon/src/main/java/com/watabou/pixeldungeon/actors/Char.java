@@ -281,7 +281,17 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @Override
-    public boolean act() {
+    protected void checkedAct(){
+        act();
+
+        if (time == prevTime) {
+            GLog.debug("State:", getState().getTag());
+            throw new TrackedRuntimeException(Utils.format("%s consume no time in act", name()));
+        }
+    }
+
+    @Override
+    public void act() {
         if (prevTime < time) {
             prevTime = time;
 
@@ -302,8 +312,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
                 Buff.detach(this, "Encumbrance");
             }
         }
-
-        return true;
     }
 
     private static final String TAG_HP = "HP";

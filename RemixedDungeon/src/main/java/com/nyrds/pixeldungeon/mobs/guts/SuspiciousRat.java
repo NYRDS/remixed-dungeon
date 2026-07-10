@@ -41,7 +41,7 @@ public class SuspiciousRat extends Mob {
 	public boolean transforming = false;
 
 	@Override
-	public boolean act() {
+	public void act() {
 		if (enemySeen) {
 			if (!transforming) {
 				spend(TIME_TO_HATCH);
@@ -61,9 +61,9 @@ public class SuspiciousRat extends Mob {
 				}
 				die(this);
 			}
-			return true;
+			return;
 		}
-		return super.act();
+		super.act();
 	}
 
 	@Override

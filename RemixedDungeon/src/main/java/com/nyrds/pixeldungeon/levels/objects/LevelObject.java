@@ -201,9 +201,9 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
     }
 
     @Override
-    protected boolean act() {
+    protected void act() {
         spend(TICK);
-        return true;
+        return;
     }
 
     @Override

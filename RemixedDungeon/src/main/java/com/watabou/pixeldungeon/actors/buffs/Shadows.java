@@ -36,7 +36,7 @@ public class Shadows extends Invisibility {
 	}
 	
 	@Override
-	public boolean act() {
+	public void act() {
 		spend( TICK * 2 );
 
 		if (target.isAlive()) {
@@ -46,8 +46,6 @@ public class Shadows extends Invisibility {
 		} else {
 			detach();
 		}
-		
-		return true;
 	}
 	
 	public void prolong() {

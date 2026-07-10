@@ -84,12 +84,11 @@ public class Earthroot extends Plant {
         }
 
         @Override
-        public boolean act() {
+        public void act() {
             if (target.getPos() != pos) {
                 detach();
             }
             spend(STEP);
-            return true;
         }
 
         public int absorb(int damage) {

@@ -70,9 +70,8 @@ public class CustomObject extends Deco {
     }
 
     @Override
-    protected boolean act() {
+    protected void act() {
         script.runOptional("act");
-        return true;
     }
 
     @Override

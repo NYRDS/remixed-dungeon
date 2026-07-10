@@ -64,11 +64,11 @@ public class DM300 extends Boss {
     }
 
     @Override
-    public boolean act() {
+    public void act() {
 
         GameScene.add(Blob.seed(getPos(), 30, ToxicGas.class));
 
-        return super.act();
+        super.act();
     }
 
     @Override

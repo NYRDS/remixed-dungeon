@@ -17,7 +17,7 @@ public class RespawnerActor extends Actor {
     }
 
     @Override
-    protected boolean act() {
+    protected void act() {
 
         final Hero hero = Dungeon.hero;
 
@@ -46,6 +46,5 @@ public class RespawnerActor extends Actor {
                 : TIME_TO_RESPAWN;
 
         spend(time);
-        return true;
     }
 }

@@ -47,7 +47,7 @@ public class Burning extends Buff implements Doom {
 	}
 		
 	@Override
-	public boolean act() {
+	public void act() {
 		
 		if (target.isAlive()) {
 			
@@ -77,8 +77,6 @@ public class Burning extends Buff implements Doom {
 			
 			detach();
 		}
-		
-		return true;
 	}
 	
 	public void reignite( Char ch ) {

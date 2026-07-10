@@ -20,7 +20,7 @@ public class Ooze extends Buff {
 	}
 
 	@Override
-	public boolean act() {
+	public void act() {
 		if (target.isAlive()) {
 			target.damage(buffLevel, this );
 			if (!target.isAlive() && target == Dungeon.hero) {
@@ -34,6 +34,5 @@ public class Ooze extends Buff {
 				detach();
 			}
 		}
-		return true;
 	}
 }

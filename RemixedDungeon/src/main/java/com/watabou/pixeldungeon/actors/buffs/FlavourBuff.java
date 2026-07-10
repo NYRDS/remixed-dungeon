@@ -21,8 +21,7 @@ public class FlavourBuff extends Buff {
 		return ret;
 	}
 	@Override
-	public boolean act() {
+	public void act() {
 		detach();
-		return true;
 	}
 }

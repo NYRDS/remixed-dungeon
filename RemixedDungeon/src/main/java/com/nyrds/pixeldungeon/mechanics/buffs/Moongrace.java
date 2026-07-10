@@ -29,7 +29,7 @@ public class Moongrace extends Buff {
     }
 
     @Override
-    public boolean act() {
+    public void act() {
         if (target.getPos() != pos || (target.getSkillPoints() >= target.getSkillPointsMax())) {
             detach();
         } else {
@@ -40,7 +40,6 @@ public class Moongrace extends Buff {
             }
         }
         spend(STEP);
-        return true;
     }
 
     @Override

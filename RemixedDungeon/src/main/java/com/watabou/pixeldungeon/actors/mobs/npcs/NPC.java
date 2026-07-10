@@ -32,7 +32,7 @@ public abstract class NPC extends Mob {
 	}
 
 	@Override
-	public boolean act() {
+	public void act() {
 
 		int pos = getPos();
 
@@ -48,8 +48,7 @@ public abstract class NPC extends Mob {
 
 		getSprite().turnTo( pos, Dungeon.hero.getPos() );
 
-		// Call parent act method to preserve existing behavior
-		return super.act();
+		super.act();
 	}
 
 	@Override

@@ -39,7 +39,7 @@ public class Larva extends Mob {
     };
 
     @Override
-    public boolean act() {
+    public void act() {
         if (lvl() >= 2) {
             getSprite().emitter().burst( ShadowParticle.CURSE, 4 );
             Sample.INSTANCE.play( Assets.SND_CURSED );
@@ -49,12 +49,11 @@ public class Larva extends Mob {
             level().spawnMob(mob, 0, getPos());
             die(this);
         }
-        return super.act();
+        super.act();
     }
 
     @Override
     public String getDescription() {
         return StringsManager.getVar(R.string.Yog_Desc);
-
     }
 }

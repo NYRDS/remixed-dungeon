@@ -19,14 +19,12 @@ public class Fury extends Buff {
 	public static final float LEVEL	= 0.4f;
 	
 	@Override
-	public boolean act() {
+	public void act() {
 		if (target.hp() > target.ht() * LEVEL) {
 			detach();
 		}
 		
 		spend( TICK * 10 );
-		
-		return true;
 	}
 
 	@Override

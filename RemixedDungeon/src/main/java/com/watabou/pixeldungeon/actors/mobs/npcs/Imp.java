@@ -37,7 +37,7 @@ public class Imp extends NPC {
 	private boolean seenBefore = false;
 	
 	@Override
-    public boolean act() {
+    public void act() {
 		
 		if (!Quest.given && CharUtils.isVisible(this)) {
 			if (!seenBefore) {
@@ -48,7 +48,7 @@ public class Imp extends NPC {
 			seenBefore = false;
 		}
 
-		return super.act();
+		super.act();
 	}
 	
 	@Override

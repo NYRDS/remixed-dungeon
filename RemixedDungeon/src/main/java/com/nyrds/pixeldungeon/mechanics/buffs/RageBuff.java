@@ -16,7 +16,7 @@ import com.nyrds.LuaInterface;
 @LuaInterface
 public class RageBuff extends ArtifactBuff {
     @Override
-    public boolean act() {
+    public void act() {
         if (target.isAlive()) {
             if (target.hp() > target.ht() / 5 && Math.random() < 0.1f) {
                 target.damage((int) (Math.random() * 5), this);
@@ -27,7 +27,6 @@ public class RageBuff extends ArtifactBuff {
             deactivateActor();
         }
         spend(1);
-        return true;
     }
 
     @Override

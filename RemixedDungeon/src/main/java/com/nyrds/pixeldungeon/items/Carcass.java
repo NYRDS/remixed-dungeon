@@ -20,7 +20,6 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Sungrass;
@@ -67,11 +66,11 @@ public class Carcass extends Item implements Doom {
     }
 
     @Override
-    protected boolean act() {
+    protected void act() {
         spend(1);
         if(getOwner().valid()) {
             ttl = MAX_TTL;
-            return true;
+            return;
         }
         ttl--;
         if(ttl <= 0) {
@@ -81,9 +80,7 @@ public class Carcass extends Item implements Doom {
                 heap.updateHeap();
                 CellEmitter.center(heap.pos).burst(Speck.factory(Speck.EVOKE), 3);
             }
-
         }
-        return true;
     }
 
     @Override

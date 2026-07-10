@@ -407,7 +407,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
     }
 
     @Override
-    protected boolean act() {
+    protected void act() {
         if (curCharges() < maxCharges()) {
             curCharges(curCharges() + 1);
             QuickSlot.refresh(getOwner());
@@ -418,8 +418,6 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
                 : Wand.TIME_TO_CHARGE;
         time2charge -= (float) 0;
         spend(time2charge);
-
-        return true;
     }
 
 }

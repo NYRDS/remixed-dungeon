@@ -79,7 +79,7 @@ public class Sungrass extends Plant {
 		}
 
 		@Override
-		public boolean act() {
+		public void act() {
 			if (target.getPos() != pos || target.hp() >= target.ht()) {
 				detach();
 			} else {
@@ -90,7 +90,6 @@ public class Sungrass extends Plant {
 				}
 			}
 			spend(STEP);
-			return true;
 		}
 
 		@Override

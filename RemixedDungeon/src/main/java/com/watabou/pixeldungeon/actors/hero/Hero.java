@@ -280,7 +280,7 @@ public class Hero extends Char {
     }
 
     @Override
-    public boolean act() {
+    public void act() {
         if (controlTargetId == getId()) {
             super.act();
         }
@@ -290,7 +290,7 @@ public class Hero extends Char {
         if (paralysed) {
             setCurAction(null);
             spendAndNext(TICK);
-            return false;
+            return;
         }
 
         if (controlTargetId != getId()) {
@@ -304,7 +304,7 @@ public class Hero extends Char {
                 } else {
                     spend(TIME_TO_REST);
                     next();
-                    return false;
+                    return;
                 }
             }
 
@@ -315,7 +315,7 @@ public class Hero extends Char {
             } else {
                 readyAndIdle();
             }
-            return false;
+            return;
         }
 
         SystemTime.updateLastActionTime();
@@ -324,7 +324,7 @@ public class Hero extends Char {
 
         GLog.debug("action: %s", getCurAction());
 
-        return getCurAction().act(this);
+        getCurAction().act(this);
     }
 
     public void readyAndIdle() {

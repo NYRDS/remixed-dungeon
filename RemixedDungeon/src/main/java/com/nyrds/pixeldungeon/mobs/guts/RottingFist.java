@@ -72,14 +72,14 @@ public class RottingFist extends Mob {
     }
 
     @Override
-    public boolean act() {
+    public void act() {
 
         if (Dungeon.level.water[getPos()] && hp() < ht()) {
             getSprite().emitter().burst(ShadowParticle.UP, 2);
             heal(REGENERATION, this, true);
         }
 
-        return super.act();
+        super.act();
     }
 
     @Override

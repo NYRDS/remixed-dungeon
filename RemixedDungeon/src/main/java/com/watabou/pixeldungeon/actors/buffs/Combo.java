@@ -41,9 +41,7 @@ public class Combo extends Buff {
 	}
 	
 	@Override
-	public boolean act() {
+	public void act() {
 		detach();
-		return true;
 	}
-	
 }

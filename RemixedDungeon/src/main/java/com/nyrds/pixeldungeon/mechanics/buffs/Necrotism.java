@@ -41,7 +41,7 @@ public class Necrotism extends Buff implements Doom {
 	}
 
 	@Override
-	public boolean act() {
+	public void act() {
 		if (target.isAlive()) {
 
 			target.getSprite().burst( 0x6935a5, 3 );
@@ -77,8 +77,6 @@ public class Necrotism extends Buff implements Doom {
 			detach();
 
 		}
-
-		return true;
 	}
 
 	@Override

@@ -24,7 +24,7 @@ public class Bleeding extends Buff {
 	}
 
 	@Override
-	public boolean act() {
+	public void act() {
 		if (target.isAlive()) {
 			
 			if ((buffLevel = Random.Int( buffLevel / 2, buffLevel)) > 0) {
@@ -49,7 +49,6 @@ public class Bleeding extends Buff {
 		} else {
 			detach();
 		}
-		return true;
 	}
 
 	@Override

@@ -48,11 +48,11 @@ public class MimicAmulet extends Mob {
 
 
 	@Override
-    public boolean act() {
+    public void act() {
 		if(!hasBuff(Levitation.class)) {
 			Buff.affect(this, Levitation.class, 1000000);
 		}
-		return super.act();
+		super.act();
 	}
 
 	public void adjustStats( int level ) {

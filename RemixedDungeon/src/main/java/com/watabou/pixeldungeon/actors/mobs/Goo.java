@@ -61,13 +61,13 @@ public class Goo extends Boss {
 	}
 
 	@Override
-	public boolean act() {
+	public void act() {
 		
 		if (level().water[getPos()] && hp() < ht()) {
 			heal(1,this);
 		}
 		
-		return super.act();
+		super.act();
 	}
 	
 	@Override

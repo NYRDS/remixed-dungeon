@@ -63,13 +63,13 @@ public class Ghost extends NPC {
 	}
 
 	@Override
-	public boolean act() {
+	public void act() {
 
 		if(Quest.given && Math.random() < 0.1) {
 			setTarget(Dungeon.hero.getControlTarget().getPos());
 		}
 
-		return super.act();
+		super.act();
 	}
 
 	@Override
