@@ -18,6 +18,7 @@
     <string name="BlackCat_Gender">feminine</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
+    <string name="Capotain_Name">Capotain</string>
     <string name="Caves_TileWater">IJskoud water</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Names_3">Woestijn</string>
@@ -115,6 +116,7 @@
     <string name="RingOfStoneWalking_ImmuredInStone">Je bent in steen gemetseld. Voor altijd.</string>
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
     <string name="Ring_Gems_4">amethist</string>
+    <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
     <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="SacrificialSword_Gender">masculine</string>
@@ -227,6 +229,8 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

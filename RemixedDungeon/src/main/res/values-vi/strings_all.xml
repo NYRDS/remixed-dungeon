@@ -15,6 +15,7 @@
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
     <string name="BattleAxe_Info">Đầu rìu thép khổng lồ của chiếc rìu chiến này mang lại trọng lượng đáng kể cho mỗi cú gảy.</string>
     <string name="BishopNPC_Name_Objective">giám mục</string>
+    <string name="Bishop_title">Giám mục</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackSkullOfMastery_BecomeLichDesc">Lich là một thuật sư tử thi đã đạt đến đỉnh cao của khả năng mình. Sinh tồn giữa sự sống và cái chết, Lich xuất sắc trong thuật hồi sinh, nhưng kỹ năng chiến đấu của hắn thấp hơn rất nhiều so với người thường.</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
@@ -183,6 +184,7 @@
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
 
     <string name="WndLibrary_Mobs_Btn">Quái vật</string>
+    <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
     <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
     <string name="WndPremiumSettings_banners">Chọn chất liệu cờ</string>
     <string name="WndPremiumSettings_chrome">Chọn vật liệu giao diện</string>
@@ -216,6 +218,8 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
 
 
 
