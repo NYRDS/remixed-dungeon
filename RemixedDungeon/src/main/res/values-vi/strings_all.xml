@@ -171,6 +171,7 @@
     <string name="TownGuardNPC_Name">bảo vệ trấn</string>
     <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
     <string name="Undead_Defense">chặn</string>
+    <string name="Undead_Name_Objective">cùn bất tử</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
@@ -223,6 +224,7 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
 
 
 
