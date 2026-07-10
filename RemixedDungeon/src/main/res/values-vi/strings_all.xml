@@ -89,6 +89,7 @@
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Level_TileDefault">\?\?\?</string>
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
+    <string name="Level_TileDescPileOfStones">Một đống đá cực kỳ nặng, trông không thể di chuyển được.</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
@@ -231,6 +232,7 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
 
 
 
