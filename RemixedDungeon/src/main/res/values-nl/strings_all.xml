@@ -74,6 +74,7 @@
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="HeroSubClass_NameAssa">meuchelmoorder</string>
     <string name="HeroSubClass_NameFreR">freerunner</string>
+    <string name="Hero_Name_Objective">je</string>
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
@@ -91,6 +92,7 @@
     <string name="Journal_Statue">Geanimeerd standbeeld</string>
     <string name="King_Defense">geparreerd</string>
     <string name="Larva_Gender">feminine</string>
+    <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
@@ -267,6 +269,8 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

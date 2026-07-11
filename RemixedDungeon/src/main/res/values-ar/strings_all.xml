@@ -109,6 +109,7 @@
     <string name="Keyring_Name">حلقة المفاتيح</string>
     <string name="King_Desc">كان آخر ملوك الأقزام معروفاً بفهمه العميق لعمليات الحياة والموت. لقد أقنع أعضاء بلاطه بالمشاركة في طقس كان من المفترض أن يمنحهم الشباب الأبدي. في النهاية كان هو الوحيد الذي حصل عليه - وجيش من الموتى الأحياء كمكافأة إضافية.</string>
     <string name="Kusarigama_Pull">سحب</string>
+    <string name="Level_TileDescInactiveTrap">لقد تم تفعيل الفخ من قبل وهو لم يعد خطيراً.</string>
     <string name="Level_TileEmbers">جمرة</string>
     <string name="Level_TileEmptyWell">بئر فارغ</string>
     <string name="Level_TileFireTrap">فخ حريق</string>
@@ -275,5 +276,5 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
-</resources>
 
+</resources>
