@@ -72,6 +72,7 @@
     <string name="HeroClass_NecromancerPerks_3">Necromancers beginnen met een skelet sleutel niveau 7.</string>
     <string name="HeroClass_Rog">schurke</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
+    <string name="HeroSubClass_NameAssa">meuchelmoorder</string>
     <string name="HeroSubClass_NameFreR">freerunner</string>
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
@@ -117,6 +118,7 @@
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
     <string name="PotionOfMight_Apply">Nieuwverkregen kracht stroomt door je lichaam.</string>
+    <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
     <string name="Potion_Colors_14">onyx</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
     <string name="PumpkinPie_Name">pompoentaart</string>
@@ -125,6 +127,7 @@
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
     <string name="RatKingCrown_Name">Kroon van de rattenkoning</string>
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
+    <string name="RatSkull_Info2">Aan de andere kant bewijst het dat de eigenaar in staat is om ratten te doden, zelfs grote en stinkende.</string>
     <string name="RawFish_Name">rauwe vis</string>
     <string name="ResultDescriptions_Bleeding">Verstorven op niveau %d</string>
     <string name="RingOfFrost_Name">Ring van de Vorst</string>
@@ -137,6 +140,7 @@
     <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
+    <string name="ScrollOfChallenge_Name">uitdagingsscrol</string>
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
     <string name="ScrollOfSummoning_Info">Bij voorlezen zal deze rol een van de monsters uit het huidige dungeon-niveau oproepen. En als de wil van het monster zwak genoeg is, zal het je dienaar worden.</string>
@@ -161,6 +165,7 @@
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SociologistNPC_AlreadyTaken">Je hebt al deelgenomen aan deze enquête, kom later terug</string>
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
+    <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
@@ -189,6 +194,7 @@
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
     <string name="WandOfMagicMissile_Desinchanted">je ontgoochelde de Toverstaf van Magische Projectielen en gebruikte de essentie ervan om je %s te verbeteren</string>
+    <string name="WandOfRegrowth_Name">Staf van Herstel</string>
     <string name="Wand_Prompt">Kies een richting om te zappen</string>
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
@@ -202,6 +208,14 @@
     <string name="WndChallenges_Title">Uitdagingen</string>
     <string name="WndChooseWay_Cancel">Ik besluit later</string>
     <string name="WndInfoItem_Chest">Kist</string>
+    <string name="WndItemAlchemy_ExecuteRecipe">Recept uitvoeren</string>
+    <string name="WndItemAlchemy_NoRecipes">Geen recepten beschikbaar met dit item en je huidige inventaris.</string>
+    <string name="WndItemAlchemy_SelectRecipe">Selecteer recept</string>
+    <string name="WndItemAlchemy_Title">Alchemie recepten met %s</string>
+    <string name="WndItemAlchemy_Transmute">Transmuteren</string>
+    <string name="WndJournal_Levels">Niveaus</string>
+    <string name="WndJournal_Logbook">Logboek</string>
+    <string name="WndJournal_Title">Journaal</string>
     <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
 
     <string name="WndModInstall_Version">versie</string>
@@ -212,6 +226,7 @@
     <string name="WndRanking_StaDuration">Spelduur</string>
     <string name="WndRanking_StaStr">Kracht</string>
     <string name="WndSadGhostNecro_Text">Deze geest lijkt te worstelen met zijn vloek. Het lijkt alsof hij me om iets wil vragen. Met behulp van necromantie, kon ik hem ervan overtuigen dat de vraag vervuld is. Het zal me tijd besparen. Maar is het de moeite waard?</string>
+    <string name="WndSadGhost_Wepon">Geest zijn wapen</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Klik hier om deel te nemen aan het Remixed Dungeon vertaalteam</string>
     <string name="WndSettings_FpsLimit">FPS-limiet</string>
     <string name="WndSettings_UiSettings">Interface-instellingen</string>
@@ -244,6 +259,7 @@
     <string name="town_deco_shop_sign_desc">Het lijkt erop dat er een winkel in dat gebouw zit.</string>
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
+    <string name="town_deco_wall_candles_desc">Uitgedoofde kaarsen, waaruit nog steeds een aangename geur uitstreelt.</string>
     <string name="town_deco_wallpaper_name">behang</string>
 
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
@@ -251,5 +267,29 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
-</resources>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>
