@@ -9,6 +9,7 @@
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
     <string name="Badges_BossSlain1">De Goo is gedood</string>
+    <string name="Badges_DeathGas">Dood door giftig gas</string>
     <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
     <string name="Badges_Info1">Insigne behaald: %s</string>
     <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
@@ -51,6 +52,7 @@
     <string name="Dungeon_Tips_12">Als je brandt en zweeft, kun je het vuur niet in water uithassen.</string>
     <string name="Dungeon_Tips_16">Wanneer je een getoverde wapen verbetert, is er een kans dat de toverij vernietigd wordt.</string>
     <string name="Dungeon_Tips_22">De tekst is geschreven in de taal van demonen.</string>
+    <string name="Dungeon_Tips_3">Je kunt je goud uitgeven in winkels in de stad of de dungeon.</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
     <string name="EncumbranceBuff_CharAct_2">Dit %s is te zwaar voor mij om effectief te gebruiken.</string>
@@ -74,6 +76,7 @@
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
+    <string name="Hunger_Starving_1">Je bent uitgehongerd!</string>
     <string name="IceCaves_TileDescDeco">Deze gnoll is levend bevroren. Blijkbaar was hij al een tijdje daar.</string>
     <string name="IceKey_Info">Deze sleutel lijkt van ijs gemaakt te zijn, maar hij is net zo hard als staal.</string>
     <string name="ImpShopkeeper_Name">ambitieze duiveltje</string>
@@ -111,6 +114,7 @@
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Zijn skeletvingers tikken ritmisch tegen een borrelende ketel, de lucht om hem heek dik van de pittige stank van zwavel en verwesing*\n_Kobold Ijsmagiers_! Die jammerlijke wezens, gekrocht in hun bevroren grotten, wanhopig vasthoudend aan hun ijsmagie. Ik heb er vijf nodig, hun bevroren lichamen zullen... verlichtend zijn. Hun meesterwerk van ijs, het is... eigenaardig. Ik geloof dat ze aansluiten bij een oerenergie, een kracht die sluimert onder het oppervlakte van deze wereld.</string>
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
+    <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
     <string name="PotionOfMight_Apply">Nieuwverkregen kracht stroomt door je lichaam.</string>
     <string name="Potion_Colors_14">onyx</string>
@@ -208,6 +212,7 @@
     <string name="WndRanking_StaDuration">Spelduur</string>
     <string name="WndRanking_StaStr">Kracht</string>
     <string name="WndSadGhostNecro_Text">Deze geest lijkt te worstelen met zijn vloek. Het lijkt alsof hij me om iets wil vragen. Met behulp van necromantie, kon ik hem ervan overtuigen dat de vraag vervuld is. Het zal me tijd besparen. Maar is het de moeite waard?</string>
+    <string name="WndSelectLanguage_LinkToTranslationSite">Klik hier om deel te nemen aan het Remixed Dungeon vertaalteam</string>
     <string name="WndSettings_FpsLimit">FPS-limiet</string>
     <string name="WndSettings_UiSettings">Interface-instellingen</string>
     <string name="WndTradeItem_Bought">Je hebt %1$s gekocht voor %2$dg</string>
@@ -232,6 +237,7 @@
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
     <string name="town_deco_library_books_desc">Nog steeds beter dan de boeken uit de kelder.</string>
+    <string name="town_deco_library_sign_name">Bibliotheekbord</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
 
     <string name="town_deco_pathway_name">pad</string>
@@ -245,121 +251,5 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
+

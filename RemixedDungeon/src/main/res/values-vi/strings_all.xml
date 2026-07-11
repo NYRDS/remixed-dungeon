@@ -10,6 +10,8 @@
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
     <string name="Badges_ItemLvl2">Đã có vật phẩm cấp 6</string>
+    <string name="Badges_ItemLvl3">Đã nhận vật phẩm cấp 9</string>
+    <string name="Badges_LevelReached1">Đã đạt cấp độ 6</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
     <string name="Badges_PotionsCooked3">9 thuốc đã nấu</string>
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
@@ -28,6 +30,7 @@
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
+    <string name="Char_Hit_2">%1$s đánh trúng %2$s</string>
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
 
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
@@ -57,6 +60,7 @@
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
     <string name="GameScene_WelcomeBack">Chào mừng quay lại cấp độ %d của Remixed Dungeon!</string>
+    <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
     <string name="Halls_TileStatue">Cột</string>
     <string name="HeartOfDarkness_Name">Trái tim của bóng tối</string>
@@ -92,6 +96,7 @@
     <string name="Level_TileDescPileOfStones">Một đống đá cực kỳ nặng, trông không thể di chuyển được.</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
+    <string name="MailArmor_Name">áo giáp xích</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
     <string name="MimicPie_Gender">masculine</string>
@@ -211,10 +216,12 @@
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndRanking_Stats">Thống kê</string>
     <string name="WndSadGhost_Farewell">Tạm biệt, nhà thám hiểm! Chúc may mắn!</string>
+    <string name="WndSaveSlotSelect_Delete_Title">Bạn có chắc chắn muốn xóa trạng thái lưu này?</string>
     <string name="WndSettings_ActionButtonSize">Kích thước nút hành động</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
     <string name="WndTradeItem_SellN">Bán %1$d cho %2$dg</string>
     <string name="WoodenBow_Info">Cây cung gỗ đơn giản này có thể hữu ích, khi bạn tìm được một vài mũi tên.</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Wraith_Desc">Một oan hồn là linh hồn oán giận của một kẻ có tội, mộ hoặc lăng mộ của họ bị quấy rối. Là một thực thể phi vật chất, rất khó đánh trúng chúng bằng vũ khí thông thường.</string>
     <string name="Wraith_Name">oan hồn</string>
     <string name="Yog_Gender">masculine</string>
@@ -227,6 +234,7 @@
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
     <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \&quot;Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\&quot;.</string>
     <string name="town_deco_pathway_name">đường mòn</string>
+    <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
     <string name="town_deco_potions_name">Thuốc</string>
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
     <string name="town_deco_red_carpet_name">Thảm đỏ</string>
@@ -236,114 +244,5 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
+

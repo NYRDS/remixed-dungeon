@@ -33,6 +33,7 @@
     <string name="BlackCat_Phrases_2">مياو!</string>
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
     <string name="Blacksmith_Name">حداد ترول</string>
+    <string name="Blacksmith_Verify3">أحتاج لمعرفة ما أعمل عليه، حددهما أولاً!</string>
     <string name="Bleeding_Death">نَزَفتَ حتى الموت...</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
@@ -122,6 +123,7 @@
     <string name="MeleeWeapon_Info1c">مُطوَّر</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
+    <string name="MissileWeapon_Yes">نعم، أنا أعلم ما أفعله</string>
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
     <string name="Mob_GoingTo">يتحرك بالفعل!</string>
     <string name="Mob_StaHuntingStatus">هذا %s يصطاد</string>
@@ -148,6 +150,7 @@
     <string name="Rat_Name_Objective">فأر الكيس</string>
     <string name="RawFish_Name">سمك نيء</string>
     <string name="RemixedPixelDungeonApp_sendCrash">لعبةنا تعطلت...\n عذراً.\nيرجى إرسال تقرير العطل لمساعدتنا في إصلاحه.</string>
+    <string name="ResultDescriptions_Trap">قتل بتفريغ %1$s في المستوى %2$d</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="RingOfHerbalism_Info">يزيد هذا الخاتم من فرصك في جمع الندى والبذور من العشب المفرود.</string>
     <string name="RingOfThorns_Info">على الرغم من أن هذا الخاتم لا يوفر أشواكاً حقيقية، فإن أي عدو يهاجمك سيُجرح بجزء من الضرر الذي يلحقه بك. تحسين هذا الخاتم لن يمنح أي مكافآت إضافية.</string>
@@ -158,9 +161,11 @@
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
     <string name="Rudolph_Name">أنف أحمر وقرون</string>
     <string name="ScaleArmor_Desc">تخلق القشور المعدنية المخيطة على سترة جلدية درعاً مرناً، ولكنه يوفر الحماية.</string>
+    <string name="ScaleArmor_Name">درع حرشفي</string>
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
     <string name="Scroll_Runes_13">إيفاز</string>
+    <string name="Scroll_Runes_5">رایدو</string>
     <string name="Scroll_Runes_9">بيركانان</string>
     <string name="ServiceManNPC_Desc">عامل عادي في المؤسسات المحلية.</string>
     <string name="ServiceManNotReadyNPC_Message">أعتذر، لكن هذا المبنى ليس جاهزًا بعد!</string>
@@ -257,6 +262,7 @@
     <string name="town_deco_porch_desc">شرفة مصنوعة من الخشب.</string>
     <string name="town_deco_rope_name">حبل</string>
 
+    <string name="town_deco_rug_desc">مصمم بذوق رفيع</string>
     <string name="town_deco_screen_name">فاصل</string>
     <string name="town_deco_skulls_desc">جماجم مصقولة تنتمي إلى مخلوقات من الزنزانة.</string>
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
@@ -269,152 +275,5 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
+
