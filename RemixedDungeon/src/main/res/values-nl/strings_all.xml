@@ -223,6 +223,7 @@
     <string name="WndModInstall_Version">versie</string>
     <string name="WndModsDisclaimer_install">Lokale mod installeren</string>
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
+    <string name="WndPlayGames_Show_Ok">Gelukt!</string>
     <string name="WndPremiumSettings_ruby">robijn</string>
     <string name="WndRanking_StaAlchemy">Gebrouwen Dranken</string>
     <string name="WndRanking_StaDuration">Spelduur</string>
@@ -269,6 +270,7 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 

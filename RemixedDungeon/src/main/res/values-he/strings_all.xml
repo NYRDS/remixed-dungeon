@@ -98,6 +98,7 @@
     <string name="HeroSubClass_DescShaman">אלפים _שמאנים_ יכולים להשתמש בשרביטים ככלי נשק לתקיפה מקרוב. לפגיעות מוצלחות יש סיכוי להפעיל את כוח השרביט על מטרה ללא שימוש בטעינה.</string>
     <string name="HeroSubClass_DescWarL">לאחר הריגת אויב, ה-וורלוק בולע את נשמתו. זה מרפא את פצעיו ומשביע את רעבונו.</string>
     <string name="HeroSubClass_NameAssa">מתנקש</string>
+    <string name="HeroSubClass_NameFreR">רץ חופשי</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
     <string name="HungerBuff_Name2">מורעב</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
@@ -210,6 +211,7 @@
     <string name="WandHolster_Name">נרתיק שרביטים</string>
     <string name="WandOfAvalanche_Info">כאשר פיצוץ של השרביט פוגע בקיר (או בכל מכשול מוצק אחר) הוא גורם למפולת אבנים, פוגע ומהלם את כל היצורים באזור הפגיעה.</string>
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
+    <string name="Wand_Fizzles">השרביט שלך מפצפץ; כנראה נגמרו המטענים שלו עכשיו</string>
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
     <string name="WarHammer_Name">פטיש מלחמה</string>
     <string name="WarriorArmor_Name">שריון לוחם</string>
@@ -252,6 +254,8 @@
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 

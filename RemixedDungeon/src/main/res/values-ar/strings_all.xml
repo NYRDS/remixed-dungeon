@@ -73,6 +73,7 @@
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
     <string name="Golem_Desc">حاول القزم دمج معرفتهم بالآليات مع قوتهم المكتشفة حديثاً في ربط العناصر. استخدموا أرواح الأرض كـ \&quot;روح\&quot; لأجساد الغوليم الميكانيكية، والتي كان يُعتقد أنها الأكثر قابلية للسيطرة. على الرغم من ذلك، فإن أصغر خطأ في الطقوس قد يتسبب في اندلاع.</string>
+    <string name="Guts_TileWater">سائل لزج غريب</string>
     <string name="Halls_TileStatue">عمود</string>
     <string name="Halls_TileWater">لावा باردة</string>
     <string name="Haste_Name">سرعة قصوى</string>
@@ -220,6 +221,7 @@
     <string name="Weightstone_Fast">لقد قمت بتوازين %s لجعله أسرع</string>
     <string name="Weightstone_Name">حجر الوزن</string>
     <string name="Weightstone_WndCancel">لا بأس</string>
+    <string name="Welcome_Text_30_1">    remix.30.1\n    - طريقة اللعب:\n    -- فئات غنول الفرعية!\n    -- حلزونات!\n    -- تم تقليل سرعة ترقية عناصر الفوضى.\n    -- جرعة المانا أصبحت جرعة عادية من الآن.\n    -- الشارات أصبحت قابلة للحصول عند اللعب بـ DLC (وليس المودات).\n    - إصلاح الأخطاء</string>
     <string name="WindGust_Name">هبة ريح</string>
     <string name="WndBlacksmith_Reforge">أعد تشكيلهم</string>
     <string name="WndCatalogus_Scrolls">اللُفافات</string>
@@ -276,5 +278,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 </resources>
