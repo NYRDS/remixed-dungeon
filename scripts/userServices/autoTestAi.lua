@@ -181,6 +181,11 @@ local function handleWindow(hero)
         return true
     end
 
+    if wndClass:match('WndMessage') then
+        activeWindow:hide()
+        return true
+    end
+
     if wndClass:match('com.watabou.pixeldungeon.scenes.DefaultCellListener') then
         activeWindow:hide()
         return false
