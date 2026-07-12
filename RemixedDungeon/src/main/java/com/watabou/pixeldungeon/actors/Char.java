@@ -286,15 +286,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if(BuildConfig.DEBUG) {
             resetSpendTrace();
         }
+        final var preActAction = getCurAction();
         act();
         if(BuildConfig.DEBUG) {
             reportDoubleSpendIfNew(getEntityKind());
             GLog.debug("%s consumed %3.2f time in act", getEntityKind(), time - prevTime);
-            GLog.debug("%s State: %s Action: %s", getEntityKind(), getState().getTag(), getCurAction());
+            GLog.debug("%s State: %s Action(pre=%s, post=%s)", getEntityKind(), getState().getTag(), preActAction, getCurAction());
 
             if (time == prevTime && isAlive()) {
-                throw new TrackedRuntimeException(Utils.format("%s consume no time in act [state=%s action=%s]",
-                        getEntityKind(), getState().getTag(), getCurAction()));
+                throw new TrackedRuntimeException(Utils.format("%s consume no time in act [state=%s action(pre=%s, post=%s)]",
+                        getEntityKind(), getState().getTag(), preActAction, getCurAction()));
             }
         }
     }

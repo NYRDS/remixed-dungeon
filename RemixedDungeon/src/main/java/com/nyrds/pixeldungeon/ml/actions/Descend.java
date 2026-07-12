@@ -26,6 +26,7 @@ public class Descend extends CharAction {
                 hero.hunger().satisfy(-Hunger.STARVING / 10);
             }
             InterlevelScene.Do(InterlevelScene.Mode.DESCEND);
+            hero.spend(Char.TICK / hero.speed());
             return;
         }
 
