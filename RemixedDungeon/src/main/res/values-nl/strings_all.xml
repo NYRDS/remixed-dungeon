@@ -19,6 +19,7 @@
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="BlackCat_Gender">feminine</string>
+    <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="BurningFist_Name">brandende vuist</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
@@ -52,6 +53,7 @@
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="DriedRose_Name">gedroogde roos</string>
     <string name="DrunkardNPC_Name">dronkaard</string>
+    <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_Tips_12">Als je brandt en zweeft, kun je het vuur niet in water uithassen.</string>
     <string name="Dungeon_Tips_16">Wanneer je een getoverde wapen verbetert, is er een kans dat de toverij vernietigd wordt.</string>
     <string name="Dungeon_Tips_22">De tekst is geschreven in de taal van demonen.</string>
@@ -85,6 +87,7 @@
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
     <string name="Hunger_Starving_1">Je bent uitgehongerd!</string>
     <string name="IceCaves_TileDescDeco">Deze gnoll is levend bevroren. Blijkbaar was hij al een tijdje daar.</string>
+    <string name="IceCaves_TileGrass">Bevroren gras.</string>
     <string name="IceKey_Info">Deze sleutel lijkt van ijs gemaakt te zijn, maar hij is net zo hard als staal.</string>
     <string name="ImpShopkeeper_Name">ambitieze duiveltje</string>
     <string name="Imp_Monks1">Ben je een avonturier? Ik hou van avonturiers! Je kunt altijd op hen rekenen als er iets gedood moet worden. Heb ik gelijk? Voor een beloning, natuurlijk ;)\nIn mijn geval zijn het _monken_ die gedood moeten worden. Je ziet, ik wil hier een klein zakje beginnen, maar deze gekken kopen zelf niets en schrikken andere klanten weg. Dus alsjeblieft, dood... laten we zeggen _8 van hen_ en de beloning is van jou.</string>
@@ -118,6 +121,7 @@
     <string name="Ooze_Death">%s verslindt je...</string>
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
+    <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze ruggetje-persoon is verborgen onder een leer overal. Ook komt er een bittere geur van medicijnen en ... knoflook?</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
@@ -128,9 +132,11 @@
     <string name="PotionOfMight_Apply">Nieuwverkregen kracht stroomt door je lichaam.</string>
     <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
     <string name="Potion_Colors_14">onyx</string>
+    <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
     <string name="PumpkinPie_Name">pompoentaart</string>
     <string name="Quest_DarkGoldOre_full_name">donker gouderts</string>
+    <string name="QuickSlot_SelectSlot">Selecteer een snelslot ervoor</string>
     <string name="Quiver_Info">Leren kogelhouder geschikt voor elke hoeveelheid pijlen</string>
     <string name="RatHide_Name">rattenhuid</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
@@ -168,6 +174,7 @@
     <string name="ShadowLord_Intro">Bereid je voor!</string>
     <string name="ShamanElder_Desc">Deze specifieke gnol ziet er veel ouder uit dan andere schamanen en heeft zeker een hogere status in de stam. Een vreemde aura vormt zich langzaam om hem heen, die alles wat het raakt lijkt te reflecteren.</string>
     <string name="Shaman_Name">gnol schamaan</string>
+    <string name="Sheep_Desc">Dit is een magisch schaap. Wat is er zo magisch aan? Je kunt het niet doden. Het blijft staan tot het magisch verdwijnt, terwijl het herkauwt met een lege blik.</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="Shopkeeper_Name">winkelier</string>
     <string name="ShortSword_Name">kort zwaard</string>
@@ -178,6 +185,7 @@
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
+    <string name="SpiritOfPain_Desc">Een splinter van levende duisternis.</string>
     <string name="SpiritOfPain_Name">geest van pijn</string>
     <string name="Sprout_Info">Weak de slapende zaden.\nEr moet echter wat groen op de grond zijn om de toverspreuk te laten slagen.</string>
     <string name="StartScene_DifficultySelect">Kies je lot</string>
@@ -209,6 +217,7 @@
     <string name="Wand_Wood_Types_6">wilgen</string>
     <string name="WarHammer_Name">Oorlogshemel</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
+    <string name="WeaknessBuff_Name">Verzwakt</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
     <string name="Weightstone_Info">Met een weegsteen kun je je naarstwapens balanceren om de snelheid of nauwkeurigheid te verhogen.</string>
     <string name="Weightstone_Name">gewichtsteen</string>
@@ -240,6 +249,7 @@
     <string name="WndSadGhost_Wepon">Geest zijn wapen</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Klik hier om deel te nemen aan het Remixed Dungeon vertaalteam</string>
     <string name="WndSettings_FpsLimit">FPS-limiet</string>
+    <string name="WndSettings_SelectLanguage">Selecteer Taal</string>
     <string name="WndSettings_UiSettings">Interface-instellingen</string>
     <string name="WndStory_Guts">Verslagen, verstrooid in stukken, maar niet volledig vernietigd, werd de Oude God verzegeld in de diepste niveaus van de kerker. Maar onlangs werd het zegel gebroken, waardoor de toegang tot de demonenhoeve wijd open stond. De nachtmerrieachtige monsters, geschapen door de Oude God in zijn slummer, waren zo talrijk dat, zonder een manier om te vluchten, ze gedwongen waren om met elkaar te smelten en deze gruwelijke hallen te vormen. En terwijl je over hun levende vlees loopt, kun je de klop van een Ouds Gods hart door hen heen voelen.</string>
     <string name="WndTradeItem_Bought">Je hebt %1$s gekocht voor %2$dg</string>
@@ -281,6 +291,16 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

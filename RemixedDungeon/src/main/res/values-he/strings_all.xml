@@ -28,6 +28,7 @@
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
     <string name="CagedKobold_Message1">בבקשה...</string>
+    <string name="CandleOfMindVision_Info">נראה כמו נר רגיל, לא משהו שהיית מצפה למצוא בצינוק מסוכן. מוזר שזה די חם למגע, למרות שזה עדיין לא הודלק.</string>
     <string name="Carcass_DevourMessage">טרפת גופה של %s!</string>
     <string name="Carcass_Devoured">אכלת גופה של %s!</string>
     <string name="Challenges_Descriptions_2">כמאמין בהתחדשות טבעית של הגוף הרגיל, תמיד הייתם זהירים מפני שיקויים בעלי תכונות רפואיות. עדיף להיות בטוחים מאשר להצטער!</string>
@@ -62,6 +63,7 @@
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
     <string name="DriedRose_Name">ורד יבש</string>
+    <string name="Drunkard_Phrase_4">זזזזזז...</string>
     <string name="Dungeon_Tips_13">אין טעם להחזיק יותר מאנק אחד בו זמנית, כי תאבדו אותם בתחיית המתים.</string>
     <string name="Dungeon_Tips_16">כשאתה משדרג כלי נשק מקסום, יש סיכוי שהקסם יהרס.</string>
     <string name="Dungeon_Tips_2">זכור שהגברת כוחך אינה הדרך היחידה לגשת לציוד טוב יותר, אתה יכול ללכת בדרך ההפוכה על ידי הפחתת דרישת הכוח שלו באמצעות מגילות שדרוג.</string>
@@ -85,6 +87,7 @@
     <string name="Golem_Name">גולם</string>
     <string name="GothicArmor_Name">שריון גותי</string>
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
+    <string name="Guts_TileGrass">שיח מיובש</string>
     <string name="Halberd_Info">כידון המורכב מגרזן על קצה מוט.</string>
     <string name="Halls_TileStatue">עמוד</string>
     <string name="Heal_Cast">%s נרפא.</string>
@@ -123,6 +126,7 @@
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
     <string name="Level_TileDescHighGrass">צמחייה צפופה חוסמת את המבט</string>
+    <string name="Level_TileWall">קיר</string>
     <string name="Level_TileWell">באר</string>
     <string name="LibraryBook_Description">הספר העתיק הזה עצום בגודלו. הוא מכיל את כל הידע שהרפתקנים גילו והביאו מהמבוך.</string>
     <string name="Lich_DieInfo">מעולם לא אהבתי את הנקרומנסר הזה. הגיע הזמן לחזור לרמה 7 ולמצוא דרך אחרת להרפתקה החדשה.</string>
@@ -145,6 +149,7 @@
     <string name="Pasty_Name">מאפה בשר</string>
     <string name="Pasty_Name_Objective">מאפה בשר</string>
     <string name="PetInventory_TooFar">רחוק מדי מחיית המחמד</string>
+    <string name="PlagueDoctorMaskHood_Name">מסכת רופא מגפה עם ברדס</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">רופא דבר</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">אהההה... מרהיב! ה_שבלולים_, סודותיהם נפרשים לאט כמו עלי כותרת לאור הירח. שלל מידע אכן! אבל אתה צודק, _חמישים זהב_ בקושי מהווים פרס הולם. *צוחק בביטול*.</string>
@@ -157,9 +162,11 @@
     <string name="PotionOfExperience_Name">שיקוי ניסיון</string>
     <string name="PotionOfInvisibility_Info">שתיית שיקוי זה תהפוך אותך לבלתי נראה זמנית. בעודך בלתי נראה, אויבים לא יוכלו לראות אותך. תקיפת אויב, כמו גם שימוש במקל או מגילה מול עיניהם, יבטלו את האפקט.</string>
     <string name="PotionOfMana_Info">השיקוי הזה ישחזר את האנרגיה הרוחנית שלך.</string>
+    <string name="Potion_Colors_3">ירקן</string>
     <string name="Potion_Colors_6">פחם</string>
     <string name="Potion_Info">בקבוקון זה מכיל נוזל %s מסתחרר. מי יודע מה יקרה כשתשתה או תזרוק אותו?</string>
     <string name="Potion_No">לא, שיניתי את דעתי</string>
+    <string name="Potion_RuneDissaperaed">הרונה נעלמה מ-%s.</string>
     <string name="Potion_SureThrow">האם אתה בטוח שאתה רוצה לזרוק את זה? ברוב המקרים הגיוני לשתות את זה.</string>
     <string name="PseudoPasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
     <string name="PseudoPasty_Name">מאפה בשר</string>
@@ -192,6 +199,7 @@
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
     <string name="Shaman_Name">שמאן גנול</string>
+    <string name="Sheep_Desc">זוהי כבשה קסומה. מה קסום בה? אינך יכול להרוג אותה. היא תעמוד במקום עד שתיעלם בקסם, בזמן שהיא לועסת גרה במבט ריק.</string>
     <string name="ShieldInfoTemplate">מגן זה יחסום עד %1 נזק נכנס. עם סיכוי של %2 %%. ייקח %3.1f שניות להתאושש לאחר חסימה מוצלחת.</string>
     <string name="Shopkeeper_Name">סוחר</string>
     <string name="ShortSword_Name">חרב קצרה</string>
@@ -203,6 +211,7 @@
     <string name="SpiderElite_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של שומרי העילית משמש לבלבל את המטרה שלהם.</string>
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
     <string name="SpiderQueen_Desc">גוף של אישה יפה המשולב עם עכביש מחריד. כל היצורים החיים במאורה הזו הם משרתיה. מפגש עם הגברת יוצאת הדופן הזו עלול להתגלות כחוויה קטלנית. כי אתה פולש\!</string>
+    <string name="SpiritOfPain_Desc">שבר של אפלה חיה.</string>
     <string name="Sprout_Info">הַעִיר אֶת הַזְּרָעִים הַיְשֵׁנִים.\nאַךְ צָרִיךְ לִהְיוֹת יְרַק עַל הָאֲדָמָה כְּדֵי שֶׁהַלַּחַשׁ יַצְלִיחַ.</string>
     <string name="StartScene_DifficultySelect">בחר את גורלך</string>
     <string name="StartScene_Load">טען משחק</string>
@@ -267,6 +276,15 @@
     <string name="town_deco_vat_name">מיכל</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
 
 
 

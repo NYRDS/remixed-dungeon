@@ -1,5 +1,6 @@
 <resources>
     <string name="Abilities_Common">التعاويذ الشائعة</string>
+    <string name="AboutScene_Sound">الصوت:</string>
     <string name="Accuracy_DecreasedDoctorBareHands">يداي العاريتان تفسدان تقنيتي. بدون قطع المنشار النظيف، تتحول دقتي إلى فوضى.</string>
     <string name="Acidic_Name_Objective">العقرب الحمضي</string>
     <string name="AllowStatisticsCollectionScene_Title">جمع إحصائيات الاستخدام</string>
@@ -36,12 +37,14 @@
     <string name="Blacksmith_Name">حداد ترول</string>
     <string name="Blacksmith_Verify3">أحتاج لمعرفة ما أعمل عليه، حددهما أولاً!</string>
     <string name="Bleeding_Death">نَزَفتَ حتى الموت...</string>
+    <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
     <string name="Caves_TileDescDeco">تظهر عرق من معدن ما على الجدار. ذهب؟</string>
     <string name="Caves_TileDescEntrance">يؤدي السلم إلى العمق العلوي.</string>
     <string name="CharAction_Take">التقاط</string>
+    <string name="Char_OutParalysis">كسر الألم شلل %s</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
 
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
@@ -64,6 +67,7 @@
     <string name="DriedRose_Info2"> ولم تفقد سحرها. تبدو جميلة جدًا، لدرجة أنك تريد الاحتفاظ بها إلى الأبد.</string>
     <string name="DriedRose_Name">وردة مجففة</string>
     <string name="DrunkardNPC_Name">سكران</string>
+    <string name="Drunkard_Phrase_4">زززززز...</string>
     <string name="Dungeon_Tips_16">عند ترقية سلاح مسحور، هناك احتمال لتدمير ذلك السحر.</string>
     <string name="Dungeon_Tips_18">الطريقة الوحيدة لسحر سلاح هي ترقيته باستخدام مخطوطة ترقية سلاح.</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
@@ -97,6 +101,7 @@
     <string name="HeroSubClass_NameScout">كشاف</string>
     <string name="Horror_Name_1">%s مخيف</string>
     <string name="IceCaves_TileDescDeco">تم تجميد هذا الغنول وهو حي. على ما يبدو، أنه كان هناك منذ فترة طويلة.</string>
+    <string name="IceCaves_TileGrass">عشب متجمد.</string>
     <string name="IceElemental_Name_Objective">عنصراً جليدياً</string>
     <string name="IceGuardianCore_Desc">تم تصنيع حُرّاس الجليد من قبل الكوبولد القدماء لحماية كهوفهم. الطاقة المخزنة في نواتهم تسمح لحارس الجليد بإعادة بناء نفسه طالما لديه طاقة كافية.</string>
     <string name="IceGuardianCore_Name">حارس الجليد</string>
@@ -143,6 +148,7 @@
     <string name="PetInventory_PetBackpackFull">حقيبة الحيوان الأليف ممتلئة</string>
     <string name="Pickaxe_InsufficientStr">قوة غير كافية للتعدين!</string>
     <string name="Piranha_Gender">feminine</string>
+    <string name="PlagueDoctorMaskHood_Name">قناع طبيب الطاعون مع غطاء رأس</string>
     <string name="PlagueDoctorNPC_Name_Objective">طبيب الطاعون</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PoisonArrow_Gender">feminine</string>
@@ -154,6 +160,7 @@
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
     <string name="Potion_MoistenUseless">يبدو أنك أهدرت هذا الزيت.</string>
     <string name="Potion_Name">%s جرعة</string>
+    <string name="Potion_RuneDissaperaed">اختفت الرون من %s.</string>
     <string name="Potion_SelectForMoisten">اختر العنصر للترطيب</string>
     <string name="Potion_SureThrow">هل أنت متأكد أنك تريد رميه؟ في معظم الحالات، من المنطقي شربه.</string>
     <string name="Potion_Yes">نعم، أعرف ما أفعل</string>
@@ -190,6 +197,7 @@
     <string name="Shadow_Gender">feminine</string>
     <string name="Shaman_Name">شامان غنول</string>
     <string name="Shaman_Name_Objective">شامان جنول</string>
+    <string name="Sheep_Desc">هذه خروف سحري. ما الذي يجعله سحرياً؟ لا يمكنك قتله. سيبقى في مكانه حتى يختفي سحرياً، بينما يمضغ الطعام بنظرة خالية.</string>
     <string name="ShieldWeaponInfo">عند استخدامه كسلاح، سيُلحق هذا الدرع ضررًا بمعدل %1$d في المتوسط.</string>
     <string name="ShootInEye_Name">رمية في العين</string>
     <string name="ShortSword_Name">سيف قصير</string>
@@ -202,6 +210,7 @@
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
     <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
+    <string name="SpiritOfPain_Desc">شظية من ظلام حي.</string>
     <string name="Sprout_Info">أيقظ البذور النائمة.\nومع ذلك، يجب أن تكون هناك بعض النباتات على الأرض لكي ينجح هذا التعويذ.</string>
     <string name="StartScene_DifficultySelect">اختر قدرك</string>
     <string name="StartScene_New">لعبة جديدة</string>
@@ -296,6 +305,15 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
 
 
 

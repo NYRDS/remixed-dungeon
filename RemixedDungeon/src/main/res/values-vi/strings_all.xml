@@ -40,6 +40,7 @@
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="Crab_Name">cua cống</string>
+    <string name="DarkSacrifice_Resist">Ngươi không có quyền lực nào trên ta!</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Death_Name_0">Quỷ %s</string>
     <string name="DeepSnail_Gender">masculine</string>
@@ -48,6 +49,7 @@
     <string name="DriedRose_Info2"> Và nó vẫn chưa mất đi sự quyến rũ của mình. Nó trông đẹp đến mức bạn muốn giữ nó mãi mãi.</string>
     <string name="DriedRose_Name">hoa hồng khô</string>
     <string name="DrunkardNPC_Name">người say xỉn</string>
+    <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
     <string name="Dungeon_Tips_6">Xác định thuốc và cuộn giấy càng sớm càng tốt. Đừng để đến lúc bạn thực sự cần chúng mới làm.</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
@@ -86,6 +88,7 @@
     <string name="HungerBuff_Info1">Bạn đang đói!</string>
     <string name="HuntressArmor_NotHuntress">Chỉ thợ săn mới có thể sử dụng giáp này!</string>
     <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
+    <string name="IceCaves_TileGrass">Cỏ đóng băng.</string>
     <string name="Imp_Monks1">Bạn có phải là phiêu lưu gia? Tôi yêu thích những phiêu lưu gia! Bạn luôn có thể dựa vào họ khi cần giết cái gì đó. Đúng không? Dĩ nhiên là phải trả tiền ;)\nTrong trường hợp của tôi là _mönk_ cần bị tiêu diệt. Các bạn thấy, tôi định mở một chút kinh doanh ở đây, nhưng những kẻ điên khùng này không mua gì cả và sẽ làm hoảng sợ khách khác. Vậy hãy giúp tôi tiêu diệt... nói là _8 người_ và phần thưởng sẽ thuộc về bạn.</string>
     <string name="InnKeeperNPC_Desc">Chủ quán rất tự hào về bản thân.</string>
     <string name="InnKeeperNPC_Name_Objective">chủ quán</string>
@@ -122,12 +125,14 @@
     <string name="PetInventory_TakeFromPet">Lấy từ thú cưng</string>
     <string name="PetInventory_Title">Kho thú cưng</string>
     <string name="PetInventory_ViewManage">Quản lý</string>
+    <string name="PlagueDoctorMaskHood_Name">Mặt nạ Bác Sĩ Chúm với mũ che đầu</string>
     <string name="PlagueDoctorNPC_Name_Objective">bác sĩ dịch hạch</string>
     <string name="Poison_Name_0">Độc %s</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
     <string name="PotionOfMight_Name">Bình Thuốc Mạnh Mẽ</string>
     <string name="Potion_Name">%s thuốc</string>
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
+    <string name="Potion_RuneDissaperaed">Chữ ký biến mất khỏi %s.</string>
     <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="Rat_Name_Objective">chuột túi</string>
@@ -178,10 +183,12 @@
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="SpiderExploding_Desc">Trong thời bình, những sinh vật này là những người làm việc chăm chỉ, nhưng chúng sẽ không ngần ngại lao vào kẻ thù và hái lấy cây đầu tiên chúng gặp phải, biến mình thành những quả bom sống.</string>
+    <string name="SpiritOfPain_Desc">Một mảnh vỡ của bóng tối sống.</string>
     <string name="Sprout_Info">Đánh thức các hạt giống ngủ.\nTuy nhiên, cần có cây cỏ trên mặt đất để phép thuật này thành công.</string>
     <string name="Sprout_Name">Mầm Non</string>
     <string name="StartScene_DifficultySelect">Chọn số phận của bạn</string>
     <string name="StartScene_New">Trò chơi mới</string>
+    <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
     <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
@@ -270,6 +277,15 @@
 
 
 
+
+
+
+
+
+
+
+
+    <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
 
 
 
