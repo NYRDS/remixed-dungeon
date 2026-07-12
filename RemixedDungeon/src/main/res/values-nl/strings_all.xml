@@ -67,11 +67,13 @@
     <string name="Halberd_Gender">feminine</string>
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileStatue">Pilaar</string>
+    <string name="Heal_Cast">%s is genezen.</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
     <string name="HeroClass_GnollPerks_3">Gnollen kunnen niet lezen of schrijven.</string>
     <string name="HeroClass_GnollPerks_4">Gnollen vallen geen andere Gnollen aan tenzij ze worden uitgedaagd</string>
     <string name="HeroClass_Mag">magier</string>
     <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
+    <string name="HeroClass_NecromancerPerks_1">Necromanten gebruiken mana om Doodsspreuken te spreken.</string>
     <string name="HeroClass_NecromancerPerks_3">Necromancers beginnen met een skelet sleutel niveau 7.</string>
     <string name="HeroClass_Rog">schurke</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
@@ -128,6 +130,7 @@
     <string name="Potion_Colors_14">onyx</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
     <string name="PumpkinPie_Name">pompoentaart</string>
+    <string name="Quest_DarkGoldOre_full_name">donker gouderts</string>
     <string name="Quiver_Info">Leren kogelhouder geschikt voor elke hoeveelheid pijlen</string>
     <string name="RatHide_Name">rattenhuid</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
@@ -259,6 +262,7 @@
     <string name="town_deco_charcoal_carpet_name">Tapijt</string>
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
+    <string name="town_deco_entrance_name">ingang</string>
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
     <string name="town_deco_library_books_desc">Nog steeds beter dan de boeken uit de kelder.</string>
     <string name="town_deco_library_sign_name">Bibliotheekbord</string>
@@ -268,6 +272,7 @@
     <string name="town_deco_shop_sign_desc">Het lijkt erop dat er een winkel in dat gebouw zit.</string>
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
+    <string name="town_deco_vat_name">vat</string>
     <string name="town_deco_wall_candles_desc">Uitgedoofde kaarsen, waaruit nog steeds een aangename geur uitstreelt.</string>
     <string name="town_deco_wallpaper_name">behang</string>
 
@@ -276,6 +281,11 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
 
 
 

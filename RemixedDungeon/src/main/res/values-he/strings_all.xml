@@ -87,6 +87,7 @@
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
     <string name="Halberd_Info">כידון המורכב מגרזן על קצה מוט.</string>
     <string name="Halls_TileStatue">עמוד</string>
+    <string name="Heal_Cast">%s נרפא.</string>
     <string name="HeartOfDarkness_Name">לב החושך</string>
     <string name="Hedgehog_Name">קיפוד</string>
     <string name="HeroClass_ElfPerks_4">אלפים מקבלים הרבה יותר בריאות מטיפות טל.</string>
@@ -124,9 +125,11 @@
     <string name="Level_TileDescHighGrass">צמחייה צפופה חוסמת את המבט</string>
     <string name="Level_TileWell">באר</string>
     <string name="LibraryBook_Description">הספר העתיק הזה עצום בגודלו. הוא מכיל את כל הידע שהרפתקנים גילו והביאו מהמבוך.</string>
+    <string name="Lich_DieInfo">מעולם לא אהבתי את הנקרומנסר הזה. הגיע הזמן לחזור לרמה 7 ולמצוא דרך אחרת להרפתקה החדשה.</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
     <string name="Longsword_Gender">masculine</string>
     <string name="MageArmor_ACSpecial">אדמה מותכת</string>
+    <string name="MedicineMask_Name">מסכה כירורגית</string>
     <string name="MeleeWeapon_Info5">זה מכושף.</string>
     <string name="MimicAmulet_Name">מימיק</string>
     <string name="MimicPie_Gender">masculine</string>
@@ -250,6 +253,7 @@
     <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
     <string name="town_deco_armorstand_leather_desc">שריון עור אמין יהיה רכישה מצוינת לפני היציאה לצינוק.</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
+    <string name="town_deco_entrance_name">כניסה</string>
     <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_glass_name">חלון רחב</string>
     <string name="town_deco_library_sign_name">שלט ספרייה</string>
@@ -260,8 +264,15 @@
 
     <string name="town_deco_stones_desc">סתם ערימת אבנים</string>
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
+    <string name="town_deco_vat_name">מיכל</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 

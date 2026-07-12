@@ -63,6 +63,7 @@
     <string name="DreadKnight_Name_Objective">فارس الرعب</string>
     <string name="DriedRose_Info2"> ولم تفقد سحرها. تبدو جميلة جدًا، لدرجة أنك تريد الاحتفاظ بها إلى الأبد.</string>
     <string name="DriedRose_Name">وردة مجففة</string>
+    <string name="DrunkardNPC_Name">سكران</string>
     <string name="Dungeon_Tips_16">عند ترقية سلاح مسحور، هناك احتمال لتدمير ذلك السحر.</string>
     <string name="Dungeon_Tips_18">الطريقة الوحيدة لسحر سلاح هي ترقيته باستخدام مخطوطة ترقية سلاح.</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
@@ -80,11 +81,13 @@
     <string name="Halls_TileStatue">عمود</string>
     <string name="Halls_TileWater">لावा باردة</string>
     <string name="Haste_Name">سرعة قصوى</string>
+    <string name="Heal_Cast">تم شفاء %s.</string>
     <string name="HeartOfDarkness_Name">قلب الظلام</string>
     <string name="HeroClass_Elf">الجان</string>
     <string name="HeroClass_GnollPerks_3">لا يستطيع الغنول القراءة أو الكتابة.</string>
     <string name="HeroClass_MagPerks_3">يمكن للسحرة استخدام العصي السحرية كسلاح قتال قريب.</string>
     <string name="HeroClass_MagPerks_4">يستخدم السحرة المانا لإلقاء التعاويذ العنصرية.</string>
+    <string name="HeroClass_NecromancerPerks_1">يستخدم السحرة الماؤتون المانا لإلقاء تعاويذ الموت.</string>
     <string name="HeroClass_NecromancerPerks_3">يبدأ النيكرومانسر بمفتاح هيكل عظمي من المستوى 7.</string>
     <string name="HeroClass_Rog">لص</string>
     <string name="HeroClass_RogPerks_5">تتم معرفة لفائف رسم الخرائط السحرية من البداية.</string>
@@ -121,6 +124,7 @@
     <string name="Level_TileSummoningTrap">فخ الاستدعاء</string>
     <string name="LibrarianNPC_Name">أمين المكتبة</string>
     <string name="Lich_Desc">النكرومانسر لقي حتفه في أعماق النكروليس، وبتدريج، تحولت القوى الشريرة التي كانت تتدفق إلى جسده إلى ليتش. ساحر موت، دمية بلا إرادة، تسيطر عليها قوى خبيثة...</string>
+    <string name="Lich_DieInfo">لم أحب أبدًا هذا الساحر الميت. حان الوقت للعودة إلى المستوى 7 وإيجاد طريق آخر للمغامرة الجديدة.</string>
     <string name="LightBuff_Name">مضيء</string>
     <string name="LloidsBeacon_Creatures">الهالة النفسية للكائنات المجاورة لا تسمح لك باستخدام منارة لويد في هذه اللحظة.</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
@@ -153,6 +157,7 @@
     <string name="Potion_SelectForMoisten">اختر العنصر للترطيب</string>
     <string name="Potion_SureThrow">هل أنت متأكد أنك تريد رميه؟ في معظم الحالات، من المنطقي شربه.</string>
     <string name="Potion_Yes">نعم، أعرف ما أفعل</string>
+    <string name="Quest_DarkGoldOre_full_name">خام الذهب الداكن</string>
     <string name="RatKing_Died">مات الملك. ليحيا الملك!</string>
     <string name="RatKing_Name">ملك الفئران</string>
     <string name="Rat_Name_Objective">فأر الكيس</string>
@@ -186,11 +191,13 @@
     <string name="Shaman_Name">شامان غنول</string>
     <string name="Shaman_Name_Objective">شامان جنول</string>
     <string name="ShieldWeaponInfo">عند استخدامه كسلاح، سيُلحق هذا الدرع ضررًا بمعدل %1$d في المتوسط.</string>
+    <string name="ShootInEye_Name">رمية في العين</string>
     <string name="ShortSword_Name">سيف قصير</string>
     <string name="Skeleton_Name">هيكل عظمي</string>
     <string name="SmashSpell_NeedWeapon">أحتاج إلى سلاح لهذه الحركة.</string>
     <string name="SociologistNPC_Desc">هذا العالِم الاجتماعي في رحلة مقدسة لجمع الآراء العامة</string>
     <string name="Sorrowmoss_Desc">الزنبق الحزين هو زهرة (وليس طحلب) ذات بتلات حادة كالموس، مغطاة بسم قاتل.</string>
+    <string name="Sorrowmoss_Name">طحلب الحزن</string>
     <string name="SpellBook_Info_Identified">في هذه الصفحات اكتشفت النص الكامل للتعويذة \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
@@ -267,6 +274,7 @@
     <string name="town_deco_counter_name">كونتر</string>
     <string name="town_deco_crate_bottles_name">صندوق بيرة</string>
     <string name="town_deco_dungeon_door_desc">مدخل إلى الزنزانة.</string>
+    <string name="town_deco_entrance_name">مدخل</string>
     <string name="town_deco_flowerinthepot_desc">زهرة زينة ذات نكهة حلوة</string>
     <string name="town_deco_flowerinthepot_name">زهرة في وعاء</string>
     <string name="town_deco_library_sign_name">لافتة المكتبة</string>
@@ -281,12 +289,22 @@
 
     <string name="town_deco_slush_name">الثلج المذاب</string>
     <string name="town_deco_stone_wall_desc">بشكل ما، هذا الجدار يصدر حرارة ويبدو رطباً قليلاً.</string>
+    <string name="town_deco_vat_name">حوض</string>
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
 
     <string name="town_deco_wooden_bench_desc">مقعد، مصنوع من الخشب، يبدو غير مريح للجلوس.</string>
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
 
 
 

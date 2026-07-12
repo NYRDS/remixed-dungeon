@@ -47,6 +47,7 @@
     <string name="DonateButton_thanks">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="DriedRose_Info2"> Và nó vẫn chưa mất đi sự quyến rũ của mình. Nó trông đẹp đến mức bạn muốn giữ nó mãi mãi.</string>
     <string name="DriedRose_Name">hoa hồng khô</string>
+    <string name="DrunkardNPC_Name">người say xỉn</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
     <string name="Dungeon_Tips_6">Xác định thuốc và cuộn giấy càng sớm càng tốt. Đừng để đến lúc bạn thực sự cần chúng mới làm.</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
@@ -67,6 +68,7 @@
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
     <string name="Halls_TileStatue">Cột</string>
+    <string name="Heal_Cast">%s đã được chữa trị.</string>
     <string name="HeartOfDarkness_Name">Trái tim của bóng tối</string>
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
     <string name="HeroClass_GnollPerks_3">Gnoll không thể đọc hoặc viết.</string>
@@ -242,17 +244,25 @@
     <string name="town_deco_cabinet_desc">Một tủ đồ rộng rãi với nhiều cánh cửa và ngăn kệ.</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
     <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \&quot;Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\&quot;.</string>
+    <string name="town_deco_entrance_name">cổng vào</string>
     <string name="town_deco_pathway_name">đường mòn</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
     <string name="town_deco_potions_name">Thuốc</string>
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
     <string name="town_deco_red_carpet_name">Thảm đỏ</string>
+    <string name="town_deco_shelf_full_name">Kệ sách</string>
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_urn_name">Hũ</string>
+    <string name="town_deco_vat_name">chậu</string>
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
+
+
+
+
 
 
 
