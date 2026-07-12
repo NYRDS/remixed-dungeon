@@ -85,6 +85,7 @@
     <string name="Golem_Name">גולם</string>
     <string name="GothicArmor_Name">שריון גותי</string>
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
+    <string name="Halberd_Info">כידון המורכב מגרזן על קצה מוט.</string>
     <string name="Halls_TileStatue">עמוד</string>
     <string name="HeartOfDarkness_Name">לב החושך</string>
     <string name="Hedgehog_Name">קיפוד</string>
@@ -143,6 +144,7 @@
     <string name="PetInventory_TooFar">רחוק מדי מחיית המחמד</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">רופא דבר</string>
+    <string name="PlagueDoctorQuest_1_2_Epilogue">אהההה... מרהיב! ה_שבלולים_, סודותיהם נפרשים לאט כמו עלי כותרת לאור הירח. שלל מידע אכן! אבל אתה צודק, _חמישים זהב_ בקושי מהווים פרס הולם. *צוחק בביטול*.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">חפש את ה־_moongrace_, שם החשכה פוגשת את הבהוב האור הקלוש ביותר של הירח. _שני זרעים_, תמציתם, יחשפו סודות נסתרים.</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">אה, _סונגראס_! פרח עדין, עלי כותרתו מקרינים את חום השמש. אני מאמין שהמהות שלו מחזיקה את המפתח ל... אה, תשכח מהפרטים לעת עתה. מספיק לומר שזה קריטי למחקר שלי. _שני זרעי סונגראס_. הביאו אותם אלי, ואתגמל אתכם במשהו שבוודאי יועיל לכם בהרפתקאותיכם - _שיקום בריאות_, מלא בחיוניות השמש.</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">אביר מוות! *קולו נסדק בהתרגשות, אצבעותיו הגרמיות רועדות כשהוא אוחז בקבוקון מבעבע מלא בנוזל זרחני עכור*. יצור כזה... מגדלור של אל-מוות! ללכוד אחד, בחיים... זה יהיה... מונומנטלי. תארו לעצמכם אילו סודות נוכל לגלות! הכוח שזורם בעורקיו הגרמיים! כן, אביר מוות! זה חיוני למחקר שלי! כי זה יאפשר לנו לצלול עמוק יותר... לתעלומות החיים... והמוות עצמם!</string>
@@ -219,6 +221,7 @@
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
     <string name="WarHammer_Name">פטיש מלחמה</string>
     <string name="WarriorArmor_Name">שריון לוחם</string>
+    <string name="WaterElemental_Name">יסוד מים</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
     <string name="WeaknessBuff_Name">נחלש</string>
     <string name="Weightstone_Name">אבן משקל</string>
@@ -231,6 +234,7 @@
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
 
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
+    <string name="WndPlayGames_Show_Badges">הצג הישגים</string>
     <string name="WndPlayGames_Show_Error">הפעולה נכשלה. משהו השתבש...</string>
     <string name="WndPlayGames_Title">Google Play משחקים</string>
     <string name="WndPlayGames_Use">השתמש ב-Google Play Games</string>
@@ -258,6 +262,10 @@
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 

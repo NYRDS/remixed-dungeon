@@ -224,6 +224,7 @@
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndRanking_Stats">Thống kê</string>
     <string name="WndSadGhost_Farewell">Tạm biệt, nhà thám hiểm! Chúc may mắn!</string>
+    <string name="WndSaveSlotSelect_Delete_No">Không</string>
     <string name="WndSaveSlotSelect_Delete_Title">Bạn có chắc chắn muốn xóa trạng thái lưu này?</string>
     <string name="WndSettings_ActionButtonSize">Kích thước nút hành động</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
@@ -252,6 +253,7 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+
 
 
 

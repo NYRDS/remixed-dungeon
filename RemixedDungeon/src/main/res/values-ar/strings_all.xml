@@ -14,6 +14,7 @@
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
     <string name="Badges_BossSlain1">تم القضاء على الغو</string>
     <string name="Badges_GamesPlayed2">تم لعب 100 لعبة</string>
+    <string name="Badges_Ice_Guardian_Slain">تم القضاء على حارس الجليد</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
     <string name="Badges_ItemLvl3">تم الحصول على عنصر من المستوى 9</string>
     <string name="Badges_ItemLvl5">تم الحصول على عنصر من المستوى 15</string>
@@ -148,6 +149,7 @@
     <string name="PotionOfMana_Name">إكسير المانا</string>
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
     <string name="Potion_MoistenUseless">يبدو أنك أهدرت هذا الزيت.</string>
+    <string name="Potion_Name">%s جرعة</string>
     <string name="Potion_SelectForMoisten">اختر العنصر للترطيب</string>
     <string name="Potion_SureThrow">هل أنت متأكد أنك تريد رميه؟ في معظم الحالات، من المنطقي شربه.</string>
     <string name="Potion_Yes">نعم، أعرف ما أفعل</string>
@@ -251,6 +253,7 @@
     <string name="WndResurrect_No">لا، أستسلم</string>
     <string name="WndSettings_InGameUiSettings">إعدادات واجهة المستخدم</string>
     <string name="WndStory_Sewers">يقع الزنزانة مباشرة تحت المدينة، حيث تشكل مستوياته العليا نظام الصرف الصحي للمدينة. وباعتبارها اسمياً جزءاً من المدينة، فإن هذه المستويات ليست خطرة جداً. لن يسميها أحد مكاناً آمناً، لكنك على الأقل لن تضطر للتعامل مع الكثير من السحر الشرير هنا.</string>
+    <string name="WndStory_Spiders">منذ سنوات عديدة مضت كان هناك منجم غني مليء بالحجارة السحرية. لكن عندما جفت عروق المعادن غادر عمال المناجم تاركين خلفهم شبكة واسعة من الأنفاق. في نهاية المطاف سكن هذا المكان العناكب. لكن حتى هذه المخلوقات الخطيرة الكامنة في الظلام لم تكن كافية لإخافة الشجعان والمجانين الذين يتوقون للكنوز التي قد توجد في المناجم. فمدى الخطر يتناسب دائماً مع كمية الشائعات التي تتحدث عن القطع الأثرية السحرية. ذات مرة تجولت ساحرة شريرة في الأنفاق محاولاً الهروب من الملاحقين. لكن الناس المتشائمون لم يجرؤوا على دخول الظلام. لذا قرروا الانتظار. لكنها لم تظهر أبداً. ربما وجدت الساحرة مخرجاً آخر، أو ربما تمكنت من التسلل بجانب الحراس... أو أنها هلكت محاطة بحفيف مخلوقات الظلام.</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
@@ -284,6 +287,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 

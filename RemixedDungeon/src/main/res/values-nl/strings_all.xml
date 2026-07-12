@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AboutScene_Graphics">Grafisch:</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon door NYRDS gebaseerd op de broncode van Pixel Dungeon door Watabou.</string>
@@ -11,6 +10,7 @@
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
     <string name="Badges_BossSlain1">De Goo is gedood</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
+    <string name="Badges_DeathPoison">Dood door vergiftiging</string>
     <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
     <string name="Badges_Info1">Insigne behaald: %s</string>
     <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
@@ -20,6 +20,7 @@
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
+    <string name="BurningFist_Name">brandende vuist</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Caves_TileGrass">fluorescent mos</string>
@@ -40,6 +41,7 @@
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
+    <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
     <string name="CommonArrow_Info">Gewone houten pijl met een ijzeren punt.</string>
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
@@ -106,7 +108,7 @@
     <string name="Mob_StaAmokStatus">%1$s loopt amok</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
-    <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \"Necrotism\" vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
+    <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="Necromancy_Title">Necromantie</string>
@@ -171,7 +173,7 @@
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
-    <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \"%1$s\" spreuk ontdekt.\n\" %2$s \"</string>
+    <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
     <string name="SpiritOfPain_Name">geest van pijn</string>
     <string name="Sprout_Info">Weak de slapende zaden.\nEr moet echter wat groen op de grond zijn om de toverspreuk te laten slagen.</string>
@@ -274,6 +276,9 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 
