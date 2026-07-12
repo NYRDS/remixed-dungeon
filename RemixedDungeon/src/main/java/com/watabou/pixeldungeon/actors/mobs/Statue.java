@@ -119,7 +119,11 @@ public class Statue extends Mob {
 				((MeleeWeapon) chosenItem).enchant(Enchantment.random());
 			}
 
-			chosenItem.doEquip(this);
+			// Initial gear is placed directly into the slot rather than via doEquip: doEquip
+			// spends time and calls updateSprite, which from inside newSprite()/sprite
+			// creation caused a double-spend and a sprite/logical-position desync on the
+			// statue's first act.
+			getBelongings().setItemForSlot(chosenItem, Belongings.Slot.WEAPON);
 			item = chosenItem;
 		}
 

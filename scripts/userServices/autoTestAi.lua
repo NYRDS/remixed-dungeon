@@ -7,9 +7,89 @@
 local RPD = require "scripts.lib.commonClasses"
 local lru = require "scripts.lib.lru"
 
-local explorationCache = lru.new(10);
+local EXPLORATION_CACHE_SIZE = 10
+local explorationCache = lru.new(EXPLORATION_CACHE_SIZE);
+
+-- Per-level coverage tracking (#5). Keys are kind strings; presence == "exercised".
+-- Cleared on level change by onLeaveLevel, which also dumps the contents.
+local function freshCoverage()
+    return { items = {}, spells = {}, mobs = {}, windows = {}, buffs = {} }
+end
+local coverage = freshCoverage()
+
+-- Best-effort buff scan: Char:buffs() returns a java.util.Set (not indexable), so we
+-- iterate via its iterator. If the API ever misbehaves, the first failure sticks and
+-- disables further scans instead of spamming the log every step.
+local buffScanDisabled = false
 
 local ai = {}
+
+-- #3: runs fn, logs and swallows any error so a single bad decision can't stall the AI.
+local function guarded(label, fn)
+    local ok, err = pcall(fn)
+    if not ok then
+        RPD.debug("[autoTestAi] %s error: %s", label, tostring(err))
+    end
+    return ok
+end
+
+-- Safely extract a kind label from a Java object; nil if getEntityKind is unavailable/throws.
+local function kindOf(obj)
+    if obj == nil then return nil end
+    local ok, k = pcall(function() return obj:getEntityKind() end)
+    if ok and k ~= nil then return tostring(k) end
+    return nil
+end
+
+local function track(setName, key)
+    if key == nil then return end
+    coverage[setName][key] = true
+end
+
+local function scanBuffs(hero)
+    if buffScanDisabled then return end
+    local ok, err = pcall(function()
+        local buffs = hero:buffs()
+        if not buffs then return end
+        local it = buffs:iterator()
+        while it:hasNext() do
+            local k = kindOf(it:next())
+            if k then coverage.buffs[k] = true end
+        end
+    end)
+    if not ok then
+        buffScanDisabled = true
+        RPD.debug("[autoTestAi] buff scan disabled: %s", tostring(err))
+    end
+end
+
+local function dumpCoverage(levelLabel)
+    local function keys(set)
+        local out = {}
+        for k in pairs(set) do out[#out + 1] = k end
+        table.sort(out)
+        if #out == 0 then return "(none)" end
+        return table.concat(out, ", ")
+    end
+    RPD.debug("[autoTestAi] === coverage (%s) ===", levelLabel)
+    RPD.debug("[autoTestAi]   items:   %s", keys(coverage.items))
+    RPD.debug("[autoTestAi]   spells:  %s", keys(coverage.spells))
+    RPD.debug("[autoTestAi]   mobs:    %s", keys(coverage.mobs))
+    RPD.debug("[autoTestAi]   windows: %s", keys(coverage.windows))
+    RPD.debug("[autoTestAi]   buffs:   %s", keys(coverage.buffs))
+end
+
+-- Called by scene.lua before changing level (#1 + #5): report what the AI exercised on the
+-- level it is leaving, then drop the cell cache (which is keyed by cell number and would
+-- otherwise leak into the next level) and reset coverage.
+ai.onLeaveLevel = function()
+    local levelLabel = "unknown"
+    pcall(function() levelLabel = tostring(RPD.Dungeon.hero:level().levelId) end)
+    dumpCoverage(levelLabel)
+    explorationCache = lru.new(EXPLORATION_CACHE_SIZE)
+    coverage = freshCoverage()
+    buffScanDisabled = false
+end
 
 local function handleWindow(hero)
     local activeWindow = RPD.RemixedDungeon:scene():getWindow(0)
@@ -29,6 +109,7 @@ local function handleWindow(hero)
         wndClass = tostring(activeWindow:getClass())
     end
 
+    track("windows", wndClass)
     RPD.debug("wnd: %s", wndClass)
 
     if wndClass:match('WndChar') then
@@ -124,12 +205,16 @@ local function handleItem(hero, item, ignoreAction)
         return
     end
 
+    track("items", kindOf(item))
+
     local actions = item:actions_l(hero)
 
     if #actions > 0 then
         local action = actions[math.random(#actions)]
         if action ~= ignoreAction then
-            item:execute(hero, action)
+            guarded("handleItem:" .. tostring(action), function()
+                item:execute(hero, action)
+            end)
         end
     end
 end
@@ -141,9 +226,16 @@ ai.step = function()
         return
     end
 
+    scanBuffs(hero)
+
     local heroPos = hero:getPos()
 
-    if handleWindow(hero) then
+    -- handleWindow is wrapped as a whole so any window-handler raise is caught and the
+    -- AI falls through to normal decision-making this step instead of aborting.
+    local hwOk, hwHandled = pcall(function() return handleWindow(hero) end)
+    if not hwOk then
+        RPD.debug("[autoTestAi] handleWindow error: %s", tostring(hwHandled))
+    elseif hwHandled then
         return
     end
 
@@ -152,7 +244,7 @@ ai.step = function()
     if hero:buffLevel('Blindness') > 0 then
         local cell = level:getEmptyCellNextTo(heroPos)
         if level:cellValid(cell) then
-            hero:handle(cell)
+            guarded("blindStep", function() hero:handle(cell) end)
         else
             hero:rest(false)
         end
@@ -160,16 +252,24 @@ ai.step = function()
     end
 
     if hero:buffLevel('Charm') == 0 then
-        local enemyPos = hero:getNearestEnemy():getPos()
-        if level:cellValid(enemyPos) and level:adjacent(enemyPos, heroPos) then
+        local enemy = hero:getNearestEnemy()
+        if enemy and enemy:valid() then
+            local enemyPos = enemy:getPos()
+            if level:cellValid(enemyPos) and level:adjacent(enemyPos, heroPos) then
 
-            if hero:getSkillPoints() > 0 and math.random() < 0.25 then
-                RPD.SpellFactory:getRandomSpell():castOnRandomTarget(hero)
+                if hero:getSkillPoints() > 0 and math.random() < 0.25 then
+                    guarded("castSpell(combat)", function()
+                        local spell = RPD.SpellFactory:getRandomSpell()
+                        track("spells", kindOf(spell))
+                        spell:castOnRandomTarget(hero)
+                    end)
+                    return
+                end
+
+                track("mobs", kindOf(enemy))
+                guarded("attackEnemy", function() hero:handle(enemyPos) end)
                 return
             end
-
-            hero:handle(enemyPos)
-            return
         end
     end
 
@@ -183,19 +283,24 @@ ai.step = function()
 
         if level:cellValid(heapPos) and heapPos ~= heroPos and not explorationCache:get(heapPos) then
             explorationCache:set(heapPos, true)
-            hero:handle(heapPos)
+            guarded("lootHeap", function() hero:handle(heapPos) end)
             return
         end
     end
 
     if hero:getSkillPoints() > 0 and math.random() < 0.01 then
-        RPD.SpellFactory:getRandomSpell():castOnRandomTarget(hero)
+        guarded("castSpell(idle)", function()
+            local spell = RPD.SpellFactory:getRandomSpell()
+            track("spells", kindOf(spell))
+            spell:castOnRandomTarget(hero)
+        end)
         return
     end
 
     local enemy = hero:getNearestEnemy()
-    if enemy:valid() then
-        hero:handle(enemy:getPos())
+    if enemy and enemy:valid() then
+        track("mobs", kindOf(enemy))
+        guarded("huntEnemy", function() hero:handle(enemy:getPos()) end)
         return
     end
 
@@ -206,23 +311,29 @@ ai.step = function()
 
         if not explorationCache:get(objectPos) then
             explorationCache:set(objectPos, true)
-            hero:handle(objectPos)
+            guarded("visitObject", function() hero:handle(objectPos) end)
             return
         end
 
         if objectKind == 'Barrel' and not hero:getBelongings():isBackpackEmpty() and objectPos ~= heroPos then
-            hero:getBelongings():randomUnequipped():cast(hero, objectPos)
+            guarded("throwAtBarrel", function()
+                hero:getBelongings():randomUnequipped():cast(hero, objectPos)
+            end)
             return
         end
     end
 
     if not hero:getBelongings():isBackpackEmpty() and math.random() < 0.05 then
-        handleItem(hero, hero:getBelongings():randomUnequipped(), RPD.Actions.drop)
+        local item = hero:getBelongings():randomUnequipped()
+        track("items", kindOf(item))
+        guarded("useItem", function() handleItem(hero, item, RPD.Actions.drop) end)
         return
     end
 
     if math.random() < 0.01 then
-        handleItem(hero, hero:getBelongings():randomEquipped(), RPD.Actions.throw)
+        local item = hero:getBelongings():randomEquipped()
+        track("items", kindOf(item))
+        guarded("useEquipped", function() handleItem(hero, item, RPD.Actions.throw) end)
         return
     end
     --[[
@@ -242,15 +353,15 @@ ai.step = function()
     local doorCell = level:getRandomVisibleTerrainCell(RPD.Terrain.DOOR)
 
     if level:cellValid(doorCell) and not level:isCellVisited(doorCell) then
-        hero:handle(doorCell)
+        guarded("visitDoor", function() hero:handle(doorCell) end)
         return
     end
 
     doorCell = level:getRandomVisibleTerrainCell(RPD.Terrain.LOCKED_DOOR)
 
     if level:cellValid(doorCell) and hero:getItem("IronKey"):valid() and not explorationCache:get(doorCell) then
-        hero:handle(doorCell)
         explorationCache:set(doorCell, true)
+        guarded("visitLockedDoor", function() hero:handle(doorCell) end)
         return
     end
 
@@ -261,7 +372,7 @@ ai.step = function()
 
     explorationCache:set(cell, true)
 
-    hero:handle(cell)
+    guarded("explore", function() hero:handle(cell) end)
 end
 
 ai.selectCell = function(self)

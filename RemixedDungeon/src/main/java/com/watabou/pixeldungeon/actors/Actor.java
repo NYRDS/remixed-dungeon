@@ -6,8 +6,10 @@ import com.google.common.collect.MultimapBuilder;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Dungeon;
@@ -25,9 +27,13 @@ import com.watabou.utils.Random;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import lombok.val;
@@ -56,6 +62,27 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
     private static final float SPEND_EMA_ALPHA = 0.1f;
     private float spendEma = 1f;
 
+    // Debug-only: records each spend() call during one act() for the multiple-spend gate.
+    // Refund-aware: a negative spend cancels the most recent positive entry (LIFO).
+    private List<SpendEntry> debugSpendTrace;
+
+    // Debug-only: one recorded spend() with its call-site frames. Amount is mutable so a later
+    // refund can partially cancel it.
+    private static final class SpendEntry {
+        float amount;
+        final String frames;
+        SpendEntry(float amount, String frames) {
+            this.amount = amount;
+            this.frames = frames;
+        }
+    }
+
+    // Debug-only: dedup set of double-spend signatures already written to the log, so each
+    // unique call-site pattern is reported once instead of every tick.
+    private static final Set<String> reportedDoubleSpends = Collections.synchronizedSet(new HashSet<>());
+    private static final String DOUBLE_SPEND_LOG = "DoubleSpend.log";
+    private static boolean doubleSpendLogFailed = false;
+
     public void spend(float d_t) {
         //GLog.debug("%s spend %4.1f", getEntityKind(), d_t);
         if(this instanceof Char) {
@@ -71,6 +98,123 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         if (spendEma < 0.01) {
             GLog.debug("spendEma = %4.2f", spendEma);
         }
+        if (BuildConfig.DEBUG && debugSpendTrace != null) {
+            if (d_t > 0) {
+                debugSpendTrace.add(new SpendEntry(d_t, captureFrames()));
+            } else if (d_t < 0) {
+                cancelSpend(-d_t); // refund: cancel matching positive charges LIFO
+            }
+        }
+    }
+
+    // Debug-only: cancels the most recent positive spend entries against a refund amount.
+    private void cancelSpend(float refund) {
+        while (refund > 1e-6f && !debugSpendTrace.isEmpty()) {
+            int last = debugSpendTrace.size() - 1;
+            SpendEntry entry = debugSpendTrace.get(last);
+            if (entry.amount <= refund) {
+                refund -= entry.amount;
+                debugSpendTrace.remove(last);
+            } else {
+                entry.amount -= refund;
+                refund = 0;
+            }
+        }
+        // any leftover refund with no matching charge is discarded
+    }
+
+    // Debug-only multiple-spend gate support. Called by Char.checkedAct() before act().
+    public void resetSpendTrace() {
+        if (BuildConfig.DEBUG) {
+            if (debugSpendTrace == null) {
+                debugSpendTrace = new ArrayList<>();
+            } else {
+                debugSpendTrace.clear();
+            }
+        }
+    }
+
+    // Debug-only: if this act() had more than one spend(), record it once per unique signature.
+    // Signature is built from the trimmed spend entries so identical call sites dedup correctly
+    // even when reached via different game-loop paths (turn-based vs realtime).
+    public void reportDoubleSpendIfNew(String entityKind) {
+        if (debugSpendTrace == null || debugSpendTrace.size() <= 1) {
+            return;
+        }
+        String signature = buildSpendSignature(debugSpendTrace);
+        if (!reportedDoubleSpends.add(signature)) {
+            return; // already reported this pattern
+        }
+        StringBuilder block = new StringBuilder();
+        block.append("=== ").append(entityKind).append(" double-spend (")
+            .append(debugSpendTrace.size()).append(" spends) ===\n");
+        for (SpendEntry entry : debugSpendTrace) {
+            block.append(String.format("spend(%4.2f)", entry.amount))
+                .append(entry.frames).append("\n");
+        }
+        GLog.debug(block.toString());
+        appendDoubleSpendLog(block.toString());
+    }
+
+    // Signature ignores the spend amounts (which can vary with speed/buffs) and keeps only the
+    // call-site frames, so the same bug is reported once regardless of numeric variation.
+    private static String buildSpendSignature(List<SpendEntry> trace) {
+        StringBuilder sb = new StringBuilder();
+        for (SpendEntry entry : trace) {
+            sb.append(entry.frames).append("\n--\n");
+        }
+        return sb.toString();
+    }
+
+    private static void appendDoubleSpendLog(String text) {
+        if (doubleSpendLogFailed) {
+            return;
+        }
+        try {
+            File logFile = FileSystem.getExternalStorageFile(DOUBLE_SPEND_LOG);
+            try (FileWriter w = new FileWriter(logFile, true)) {
+                w.write(text);
+                w.write("\n");
+            }
+        } catch (IOException e) {
+            doubleSpendLogFailed = true;
+        }
+    }
+
+    // Captures the call-site frames for a spend() call (without the amount, which lives on
+    // SpendEntry and may be mutated by a later refund).
+    private static String captureFrames() {
+        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
+        StringBuilder sb = new StringBuilder();
+        // stack[0] = getStackTrace, stack[1] = spend, stack[2+] = callers
+        int count = 0;
+        for (int i = 2; i < stack.length && count < 10; i++) {
+            StackTraceElement frame = stack[i];
+            if (isSpendTraceBoundary(frame)) {
+                break;
+            }
+            if (frame.getClassName().startsWith("java.lang.Thread")) {
+                continue;
+            }
+            sb.append("\n  at ").append(frame);
+            count++;
+        }
+        return sb.toString();
+    }
+
+    // Stops capturing at the actor/game-loop boundary so identical bugs produce identical
+    // signatures whether reached via processTurnBased or processReaTime.
+    private static boolean isSpendTraceBoundary(StackTraceElement frame) {
+        String cls = frame.getClassName();
+        String method = frame.getMethodName();
+        if (cls.equals("com.watabou.pixeldungeon.scenes.GameScene")) return true;
+        if (cls.contains("GameLoop")) return true;
+        if (cls.startsWith("java.util.concurrent")) return true;
+        if (cls.equals("com.watabou.pixeldungeon.actors.Char") && method.equals("checkedAct")) return true;
+        if (cls.equals("com.watabou.pixeldungeon.actors.Actor")
+            && (method.equals("checkedAct") || method.equals("processTurnBased")
+                || method.equals("processReaTime") || method.equals("process"))) return true;
+        return false;
     }
 
     public void postpone(float d_t) {

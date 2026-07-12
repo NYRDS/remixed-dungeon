@@ -63,7 +63,9 @@ public class ArmoredStatue extends Statue {
 			if(armor instanceof Armor) {
 				((Armor) armor).inscribe(Armor.Glyph.random());
 			}
-			armor.doEquip(this);
+			// setItemForSlot, not doEquip: see Statue.getItem (avoid spend/updateSprite during
+			// sprite creation).
+			getBelongings().setItemForSlot(armor, Belongings.Slot.ARMOR);
 			item = armor;
 		}
 		STR(Math.max(12,item.requiredSTR()));

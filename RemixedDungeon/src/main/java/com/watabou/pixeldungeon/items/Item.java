@@ -225,6 +225,12 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
     public void doDrop(@NotNull Char chr) {
         chr.spend(TIME_TO_DROP);
+        dropAt(chr);
+    }
+
+    // Places this item at chr's position with the drop animation, without charging chr any time.
+    // Use for environmental drops (grass, plants, generated loot) where the char isn't acting.
+    public void dropAt(@NotNull Char chr) {
         int pos = chr.getPos();
         chr.level().animatedDrop(detachAll(chr.getBelongings().backpack), pos);
     }

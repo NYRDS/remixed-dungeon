@@ -97,6 +97,7 @@ public class Lich extends Boss {
     @Override
     public boolean getCloser(int target, boolean ignorePets) {
         if (Dungeon.level.fieldOfView[target]) {
+            spend(-1 / speed()); // refund doStepTo's pre-charge; jump() spends the real cost
             jump();
             return true;
         } else {

@@ -59,6 +59,12 @@ public class Bones {
 		if (depth == -1) {
 			try {
 				InputStream input = Game.instance().openFileInput(BONES_FILE);
+				if (input == null) {
+					// Desktop/HTML openFileInput returns null when the bones file is absent
+					// (no previous death). Without this guard, Bundle.read(null) builds a
+					// PushbackInputStream over a null stream and throws "Stream closed".
+					return ItemsList.DUMMY;
+				}
 				Bundle bundle = Bundle.read(input);
 				input.close();
 
