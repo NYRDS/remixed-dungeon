@@ -480,7 +480,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
 
         super.update();
 
-        if (paused && listener != null) {
+        if (paused && listener != null && curAnim != null) {
             listener.onComplete(curAnim);
         }
 
