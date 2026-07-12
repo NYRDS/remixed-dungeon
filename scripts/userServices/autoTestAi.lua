@@ -214,13 +214,19 @@ local function handleItem(hero, item, ignoreAction)
 
     local actions = item:actions_l(hero)
 
-    if #actions > 0 then
-        local action = actions[math.random(#actions)]
-        if action ~= ignoreAction then
-            guarded("handleItem:" .. tostring(action), function()
-                item:execute(hero, action)
-            end)
+    -- Filter out ignoreAction first so we never waste a call picking it and bailing.
+    local usable = {}
+    for _, a in ipairs(actions) do
+        if a ~= ignoreAction then
+            usable[#usable + 1] = a
         end
+    end
+
+    if #usable > 0 then
+        local action = usable[math.random(#usable)]
+        guarded("handleItem:" .. tostring(action), function()
+            item:execute(hero, action)
+        end)
     end
 end
 
@@ -283,6 +289,15 @@ ai.step = function()
         return
     end
 
+    -- Use a random backpack item (equip/drink/read/eat/identify). Previously this was at
+    -- ~5% near the bottom of the priority chain, so it almost never fired while enemies
+    -- or heaps competed for attention. Moved up to exercise item code paths more often.
+    if not hero:getBelongings():isBackpackEmpty() and math.random() < 0.08 then
+        local item = hero:getBelongings():randomUnequipped()
+        guarded("useBackpackItem", function() handleItem(hero, item, RPD.Actions.drop) end)
+        return
+    end
+
     if not hero:getBelongings():isBackpackFull() then
         local heapPos = level:getNearestVisibleHeapPosition(heroPos)
 
@@ -328,10 +343,10 @@ ai.step = function()
         end
     end
 
-    if not hero:getBelongings():isBackpackEmpty() and math.random() < 0.05 then
+    -- Drop a random backpack item to free space when getting full.
+    if hero:getBelongings():isBackpackFull() and math.random() < 0.25 then
         local item = hero:getBelongings():randomUnequipped()
-        track("items", kindOf(item))
-        guarded("useItem", function() handleItem(hero, item, RPD.Actions.drop) end)
+        guarded("dropItem", function() item:execute(hero, RPD.Actions.drop) end)
         return
     end
 
@@ -341,20 +356,22 @@ ai.step = function()
         guarded("useEquipped", function() handleItem(hero, item, RPD.Actions.throw) end)
         return
     end
-    --[[
-        local exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.EXIT)
 
+    -- Seek the level exit to descend efficiently rather than relying on the frame timeout.
+    do
+        local exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.EXIT)
         if level:cellValid(exitCell) and not level:getTopLevelObject(exitCell) then
-            hero:handle(exitCell)
+            guarded("seekExit", function() hero:handle(exitCell) end)
             return
         end
 
         exitCell = level:getRandomVisibleTerrainCell(RPD.Terrain.LOCKED_EXIT)
         if level:cellValid(exitCell) and not level:getTopLevelObject(exitCell) and hero:getItem("SkeletonKey"):valid() then
-            hero:handle(exitCell)
+            guarded("seekLockedExit", function() hero:handle(exitCell) end)
             return
         end
-    ]]
+    end
+
     local doorCell = level:getRandomVisibleTerrainCell(RPD.Terrain.DOOR)
 
     if level:cellValid(doorCell) and not level:isCellVisited(doorCell) then
