@@ -19,6 +19,7 @@
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="BlackCat_Gender">feminine</string>
+    <string name="Blacksmith_Verify6">Ik kan deze items niet hersmelten!</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="BurningFist_Name">brandende vuist</string>
@@ -49,6 +50,8 @@
     <string name="Crab_Name">rioolkrab</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">dolk</string>
+    <string name="DashSpell_Info">Das naar een aangewezen richting terwijl je met vijanden botst, schade toebrengend en verstommeling veroorzakend.</string>
+    <string name="DashSpell_Name">Das</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="DriedRose_Name">gedroogde roos</string>
@@ -134,6 +137,8 @@
     <string name="Potion_Colors_14">onyx</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
+    <string name="PseudoRat_Name">pseudo-rat</string>
+    <string name="PseudoRat_Name_Objective">pseudo-rat</string>
     <string name="PumpkinPie_Name">pompoentaart</string>
     <string name="Quest_DarkGoldOre_full_name">donker gouderts</string>
     <string name="QuickSlot_SelectSlot">Selecteer een snelslot ervoor</string>
@@ -152,6 +157,7 @@
     <string name="Ring_Gems_4">amethist</string>
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
+    <string name="RottenFood_Message">Walging!</string>
     <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
@@ -188,6 +194,7 @@
     <string name="SpiritOfPain_Desc">Een splinter van levende duisternis.</string>
     <string name="SpiritOfPain_Name">geest van pijn</string>
     <string name="Sprout_Info">Weak de slapende zaden.\nEr moet echter wat groen op de grond zijn om de toverspreuk te laten slagen.</string>
+    <string name="StartScene_ComingSoon">Binnenkort</string>
     <string name="StartScene_DifficultySelect">Kies je lot</string>
     <string name="StartScene_Load">Spel laden</string>
     <string name="StartScene_New">Nieuw spel</string>
@@ -199,6 +206,7 @@
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
     <string name="Sword_Gender">masculine</string>
+    <string name="Sword_Name">zwaard</string>
     <string name="Tamahawk_Gender">masculine</string>
     <string name="TerrorBuff_Name">Versterkt</string>
     <string name="Thief_Gender">masculine</string>
@@ -225,6 +233,7 @@
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
     <string name="WndChallenges_Title">Uitdagingen</string>
     <string name="WndChooseWay_Cancel">Ik besluit later</string>
+    <string name="WndHero_Awareness">Aandacht</string>
     <string name="WndInfoItem_Chest">Kist</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Recept uitvoeren</string>
     <string name="WndItemAlchemy_NoRecipes">Geen recepten beschikbaar met dit item en je huidige inventaris.</string>
@@ -281,6 +290,8 @@
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_shop_sign_desc">Het lijkt erop dat er een winkel in dat gebouw zit.</string>
     <string name="town_deco_shop_sign_name">Winkelbord</string>
+    <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
+    <string name="town_deco_skullboard_name">trofeerek</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
     <string name="town_deco_vat_name">vat</string>
     <string name="town_deco_wall_candles_desc">Uitgedoofde kaarsen, waaruit nog steeds een aangename geur uitstreelt.</string>
@@ -291,6 +302,19 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

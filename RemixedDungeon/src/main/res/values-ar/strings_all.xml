@@ -36,6 +36,7 @@
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
     <string name="Blacksmith_Name">حداد ترول</string>
     <string name="Blacksmith_Verify3">أحتاج لمعرفة ما أعمل عليه، حددهما أولاً!</string>
+    <string name="Blacksmith_Verify6">لا يمكنني إعادة صياغة هذه العناصر!</string>
     <string name="Bleeding_Death">نَزَفتَ حتى الموت...</string>
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
@@ -136,6 +137,9 @@
     <string name="MailArmor_Name">درع حلقي</string>
     <string name="MeleeWeapon_Info1c">مُطوَّر</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
+    <string name="MimicPie_Desc">الميماكس كائنات سحرية يمكنها اتخاذ أي شكل تريده. هذا يشبه فطيرة كبيرة ولذيذة.</string>
+    <string name="MimicPie_Name">ميميكي</string>
+    <string name="MimicPie_Name_Objective">ميميكي</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
     <string name="MissileWeapon_Yes">نعم، أنا أعلم ما أفعله</string>
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
@@ -164,6 +168,8 @@
     <string name="Potion_SelectForMoisten">اختر العنصر للترطيب</string>
     <string name="Potion_SureThrow">هل أنت متأكد أنك تريد رميه؟ في معظم الحالات، من المنطقي شربه.</string>
     <string name="Potion_Yes">نعم، أعرف ما أفعل</string>
+    <string name="PseudoRat_Name">فأر كاذب</string>
+    <string name="PseudoRat_Name_Objective">فأر كاذب</string>
     <string name="Quest_DarkGoldOre_full_name">خام الذهب الداكن</string>
     <string name="RatKing_Died">مات الملك. ليحيا الملك!</string>
     <string name="RatKing_Name">ملك الفئران</string>
@@ -176,6 +182,7 @@
     <string name="RingOfThorns_Info">على الرغم من أن هذا الخاتم لا يوفر أشواكاً حقيقية، فإن أي عدو يهاجمك سيُجرح بجزء من الضرر الذي يلحقه بك. تحسين هذا الخاتم لن يمنح أي مكافآت إضافية.</string>
     <string name="Ring_Gems_1">الأوبال</string>
     <string name="RogueArmor_ACSpecial">قنبلة دخان</string>
+    <string name="RottenFood_Message">مقزز!</string>
     <string name="RottenMeat_Name">لحم متعفن</string>
     <string name="RottenOrgan_Name">عضو متعفن</string>
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
@@ -255,6 +262,7 @@
     <string name="WndDonate_silverDonate">تبرع فضي</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
     <string name="WndHats_NoConnectionMsg">تعذر الاتصال بـ Google Play.</string>
+    <string name="WndHero_Awareness">اليقظة</string>
     <string name="WndInfoItem_Chest">صندوق</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
 
@@ -305,6 +313,14 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
 
 
 

@@ -22,6 +22,7 @@
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_2">Meo meo!</string>
     <string name="BlackSkullOfMastery_BecomeLichDesc">Lich là một thuật sư tử thi đã đạt đến đỉnh cao của khả năng mình. Sinh tồn giữa sự sống và cái chết, Lich xuất sắc trong thuật hồi sinh, nhưng kỹ năng chiến đấu của hắn thấp hơn rất nhiều so với người thường.</string>
+    <string name="Blacksmith_Verify6">Tôi không thể rèn lại các vật phẩm này!</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="CagedKobold_Desc">Một kobold, trong một lồng.</string>
     <string name="CagedKobold_Message1">Làm ơn...</string>
@@ -108,7 +109,10 @@
     <string name="MailArmor_Name">áo giáp xích</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
+    <string name="MimicPie_Desc">Mimics là những sinh vật phép thuật có thể biến hình thành bất kỳ hình dạng nào chúng muốn. Con này trông như một chiếc bánh ngon to lớn.</string>
     <string name="MimicPie_Gender">masculine</string>
+    <string name="MimicPie_Name">mimik</string>
+    <string name="MimicPie_Name_Objective">mimik</string>
     <string name="MissileWeapon_Missiles">Vũ khí phóng xạ</string>
     <string name="Mob_StaControlledStatus">%s này đang bị ám bởi ma quỷ</string>
     <string name="Mob_StaHuntingStatus">Đây %s đang săn bắn</string>
@@ -134,6 +138,8 @@
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
     <string name="Potion_RuneDissaperaed">Chữ ký biến mất khỏi %s.</string>
     <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
+    <string name="PseudoRat_Name">chuột giả</string>
+    <string name="PseudoRat_Name_Objective">chuột giả</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="Rat_Name_Objective">chuột túi</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
@@ -144,6 +150,7 @@
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
     <string name="Ring_Gems_10">thạch anh</string>
     <string name="Ring_Info1">Bạn chỉ có thể đeo tối đa 2 nhẫn cùng lúc</string>
+    <string name="RottenFood_Message">Ghét quá!</string>
     <string name="RottenRation_Name">Cơm khô hỏng</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
     <string name="ScrollOfIdentify_Name">cuộn nhận diện</string>
@@ -186,6 +193,7 @@
     <string name="SpiritOfPain_Desc">Một mảnh vỡ của bóng tối sống.</string>
     <string name="Sprout_Info">Đánh thức các hạt giống ngủ.\nTuy nhiên, cần có cây cỏ trên mặt đất để phép thuật này thành công.</string>
     <string name="Sprout_Name">Mầm Non</string>
+    <string name="StartScene_ComingSoon">Sắp ra mắt</string>
     <string name="StartScene_DifficultySelect">Chọn số phận của bạn</string>
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
@@ -219,6 +227,7 @@
     <string name="WndGame_Ranking">Bảng xếp hạng</string>
     <string name="WndGame_menu">Menu chính</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
+    <string name="WndHero_Awareness">Nhận thức</string>
     <string name="WndJournal_Title">Nhật Ký</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
 
@@ -286,6 +295,16 @@
 
 
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
