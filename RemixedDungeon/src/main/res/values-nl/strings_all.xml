@@ -105,6 +105,7 @@
     <string name="Larva_Gender">feminine</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
+    <string name="Level_TileLockedDoor">Gesloten deur</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
     <string name="MeleeWeapon_Info3a">Dit is een tamelijk %s wapen.</string>
@@ -221,6 +222,7 @@
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Typical_Damage">Typische schade</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
+    <string name="WandOfAmok_Name">Toverstaf van Amok</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
     <string name="WandOfMagicMissile_Desinchanted">je ontgoochelde de Toverstaf van Magische Projectielen en gebruikte de essentie ervan om je %s te verbeteren</string>
     <string name="WandOfRegrowth_Name">Staf van Herstel</string>
@@ -310,6 +312,8 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

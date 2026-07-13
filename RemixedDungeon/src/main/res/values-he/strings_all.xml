@@ -108,6 +108,7 @@
     <string name="HeroSubClass_NameAssa">מתנקש</string>
     <string name="HeroSubClass_NameFreR">רץ חופשי</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
+    <string name="Hero_StaPoison">אתה מורעל!</string>
     <string name="HungerBuff_Name2">מורעב</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
     <string name="IceCaves_TileDescDeco">הגנול הזה הוקפא חי. כנראה שהוא נמצא שם כבר הרבה זמן.</string>
@@ -140,6 +141,7 @@
     <string name="MimicAmulet_Name">מימיק</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name_Objective">מימיק</string>
+    <string name="Mob_StaFleeingStatus">זה %s בורח</string>
     <string name="Mob_StaHuntingStatus">זה %s צד</string>
     <string name="Mods_RestartRequired">נדרש הפעלה מחדש</string>
     <string name="MoongraceBuff_Name">מָן שָׁמַיִם</string>
@@ -288,6 +290,8 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 

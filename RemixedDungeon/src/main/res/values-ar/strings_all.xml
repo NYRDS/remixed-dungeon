@@ -48,6 +48,7 @@
     <string name="Char_OutParalysis">كسر الألم شلل %s</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
 
+    <string name="CharmBuff_Name">مسحور</string>
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
     <string name="ChristmasTurkey_Name">ديك رومي احتفالي</string>
     <string name="Codex_Story_16">سلاح محظوظ - يتجاهل درع العدو تقريباً بالكامل، ويسبب ضرراً أكبر بكثير.</string>
@@ -94,6 +95,7 @@
     <string name="HeroClass_MagPerks_3">يمكن للسحرة استخدام العصي السحرية كسلاح قتال قريب.</string>
     <string name="HeroClass_MagPerks_4">يستخدم السحرة المانا لإلقاء التعاويذ العنصرية.</string>
     <string name="HeroClass_NecromancerPerks_1">يستخدم السحرة الماؤتون المانا لإلقاء تعاويذ الموت.</string>
+    <string name="HeroClass_NecromancerPerks_2">يبدأ النكرومانسر برداء نكرومانسر فريد، يمنح نقطة مانا واحدة لكل مخلوق يُقتل.</string>
     <string name="HeroClass_NecromancerPerks_3">يبدأ النيكرومانسر بمفتاح هيكل عظمي من المستوى 7.</string>
     <string name="HeroClass_Rog">لص</string>
     <string name="HeroClass_RogPerks_5">تتم معرفة لفائف رسم الخرائط السحرية من البداية.</string>
@@ -319,6 +321,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

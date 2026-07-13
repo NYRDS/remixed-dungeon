@@ -114,6 +114,7 @@
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimik</string>
     <string name="MimicPie_Name_Objective">mimik</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="MissileWeapon_Missiles">Vũ khí phóng xạ</string>
     <string name="Mob_StaControlledStatus">%s này đang bị ám bởi ma quỷ</string>
     <string name="Mob_StaHuntingStatus">Đây %s đang săn bắn</string>
@@ -223,6 +224,7 @@
     <string name="Wand_Wood_Types_7">gõ đỏ</string>
     <string name="WarHammer_Name">Búa chiến tranh</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
+    <string name="WaterOfTransmutation_Info">Sức mạnh của sự biến đổi tỏa ra từ nước của giếng này. Hãy ném một vật phẩm vào giếng để biến nó thành thứ khác.</string>
     <string name="WeaknessBuff_Name">Yếu</string>
     <string name="Weightstone_Fast">bạn đã cân bằng %s để làm nó nhanh hơn</string>
     <string name="Weightstone_Name">đá cân</string>
@@ -332,4 +334,6 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
 </resources>
