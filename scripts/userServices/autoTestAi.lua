@@ -159,6 +159,20 @@ local function maybeSpawnTestItems(hero)
     end)
 end
 
+-- Give items to nearby humanoid mobs so MobItemAi gets exercised.
+-- Uses getNearestEnemy to find a target; isHumanoid gates non-humanoid mobs (rats, etc.).
+local function maybeGiveItemsToMobs(hero)
+    if math.random() > 0.03 then return end
+    local enemy = hero:getNearestEnemy()
+    if not enemy or not enemy:valid() then return end
+    if not enemy:isHumanoid() then return end
+
+    local itemType = testItemPool[math.random(#testItemPool)]
+    guarded("giveItemToMob:" .. itemType, function()
+        enemy:collect(RPD.item(itemType))
+    end)
+end
+
 -- Called by scene.lua before changing level (#1 + #5): report what the AI exercised on the
 -- level it is leaving, then drop the cell cache (which is keyed by cell number and would
 -- otherwise leak into the next level) and reset coverage.
@@ -321,6 +335,8 @@ ai.step = function()
     scanBuffs(hero)
 
     maybeSpawnTestItems(hero)
+
+    maybeGiveItemsToMobs(hero)
 
     local heroPos = hero:getPos()
 
