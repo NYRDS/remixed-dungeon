@@ -205,22 +205,26 @@
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
+    <string name="Swarm_Name">vliegenzwerm</string>
     <string name="Sword_Gender">masculine</string>
     <string name="Sword_Name">zwaard</string>
     <string name="Tamahawk_Gender">masculine</string>
     <string name="TerrorBuff_Name">Versterkt</string>
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">gekke dief</string>
+    <string name="TitleScene_Play">Spelen</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="TownsfolkMovieNPC_Name_Objective">stadbewoner</string>
     <string name="TownsfolkNPC_Message1">Ah! Nog een avonturier, geweldig! Zorg ervoor dat je zo veel mogelijk waardevolle dingen buitmaakt!</string>
     <string name="ToxicGas_Info">Hier zweeft een groenachtige wolk van giftig gas.</string>
+    <string name="ToxicGland_Name">Giftige klier</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Typical_Damage">Typische schade</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
     <string name="WandOfMagicMissile_Desinchanted">je ontgoochelde de Toverstaf van Magische Projectielen en gebruikte de essentie ervan om je %s te verbeteren</string>
     <string name="WandOfRegrowth_Name">Staf van Herstel</string>
+    <string name="Wand_ACZap">ZAP</string>
     <string name="Wand_Prompt">Kies een richting om te zappen</string>
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
@@ -263,6 +267,7 @@
     <string name="WndSettings_UiSettings">Interface-instellingen</string>
     <string name="WndStory_Guts">Verslagen, verstrooid in stukken, maar niet volledig vernietigd, werd de Oude God verzegeld in de diepste niveaus van de kerker. Maar onlangs werd het zegel gebroken, waardoor de toegang tot de demonenhoeve wijd open stond. De nachtmerrieachtige monsters, geschapen door de Oude God in zijn slummer, waren zo talrijk dat, zonder een manier om te vluchten, ze gedwongen waren om met elkaar te smelten en deze gruwelijke hallen te vormen. En terwijl je over hun levende vlees loopt, kun je de klop van een Ouds Gods hart door hen heen voelen.</string>
     <string name="WndTradeItem_Bought">Je hebt %1$s gekocht voor %2$dg</string>
+    <string name="WndTradeItem_Buy">Koop voor %dg</string>
     <string name="WndTradeItem_Cancel">Vergeet het</string>
     <string name="WndTradeItem_Sell">Verkopen voor %dg</string>
     <string name="Wnd_Button_Back">Terug</string>
@@ -289,6 +294,7 @@
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
 
     <string name="town_deco_pathway_name">pad</string>
+    <string name="town_deco_rope_name">touw</string>
     <string name="town_deco_shop_sign_desc">Het lijkt erop dat er een winkel in dat gebouw zit.</string>
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
@@ -299,10 +305,18 @@
     <string name="town_deco_wallpaper_name">behang</string>
 
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
+    <string name="town_deco_wooden_bench_name">Houten bank</string>
     <string name="town_deco_wooden_drawer_name">lade</string>
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
 
 
 

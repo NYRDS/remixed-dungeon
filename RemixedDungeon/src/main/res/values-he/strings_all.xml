@@ -222,7 +222,9 @@
     <string name="StartScene_Load">טען משחק</string>
     <string name="StartScene_New">משחק חדש</string>
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
+    <string name="Swarm_Name">נחיל זבובים</string>
     <string name="TitleScene_Highscores">ציונים גבוהים</string>
+    <string name="TitleScene_Play">שחק</string>
     <string name="TomeOfKnowledge_Name">ספר הידע</string>
     <string name="TownGuardNPC_Message2">תודות להרפתקנים כמוך, המקום הזה הפך לשקט במיוחד</string>
     <string name="TownGuardNPC_Name">שומר</string>
@@ -230,10 +232,12 @@
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message3">המממ...</string>
     <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
+    <string name="ToxicGland_Name">בלוטה רעילה</string>
     <string name="VampireSkull_Info">המסכה הזו עשויה מגולגולת של ערפד טבעית לחלוטין. למעשה זהו גולגולת... גולגולת של ערפד בעל ראש גדול. מצמרר.</string>
     <string name="WandHolster_Name">נרתיק שרביטים</string>
     <string name="WandOfAvalanche_Info">כאשר פיצוץ של השרביט פוגע בקיר (או בכל מכשול מוצק אחר) הוא גורם למפולת אבנים, פוגע ומהלם את כל היצורים באזור הפגיעה.</string>
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
+    <string name="Wand_ACZap">זַאפּ</string>
     <string name="Wand_Fizzles">השרביט שלך מפצפץ; כנראה נגמרו המטענים שלו עכשיו</string>
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
     <string name="WarHammer_Name">פטיש מלחמה</string>
@@ -275,13 +279,22 @@
     <string name="town_deco_pathway_name">שביל</string>
     <string name="town_deco_pole_name">עמוד</string>
     <string name="town_deco_red_carpet_desc">השמועה אומרת ששטיחים אדומים דומים מקשטים את אולמות המטרופולין הגמדי.</string>
+    <string name="town_deco_rope_name">חבל</string>
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
 
     <string name="town_deco_stones_desc">סתם ערימת אבנים</string>
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_vat_name">מיכל</string>
     <string name="town_deco_wallpaper_name">טפט</string>
+    <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
 
 
 

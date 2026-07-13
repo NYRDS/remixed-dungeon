@@ -227,20 +227,23 @@
     <string name="SummonBeast_AtYourCommand">يأتي الوحش بأمرك!</string>
     <string name="SungrassBuff_Name">الشفاء بالأعشاب</string>
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
+    <string name="Swarm_Name">سرب ذباب</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Thief_Stole">%1$s سرق %2$s منك!</string>
     <string name="TitleScene_Badges">الشارات</string>
+    <string name="TitleScene_Play">اللعب</string>
     <string name="TomeOfMastery_Blinded">لا يمكنك القراءة وأنت أعمى</string>
     <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
     <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
     <string name="TownGuardNPC_Message3">هل تظن أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، ذلك لأن هذه المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
     <string name="TownGuardNPC_Name">حارس المدينة</string>
+    <string name="ToxicGland_Name">غدة سامة</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
     <string name="VertigoBuff_Info">الشعور بالدوار يجعل المشي في خط مستقيم أكثر صعوبة!</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
-    <string name="Wand_ACZap">صَعْق</string>
+    <string name="Wand_ACZap">زَاب</string>
     <string name="Wand_SelfTarget">لا يمكنك استهداف نفسك</string>
     <string name="Wand_Wood_Types_7">ماهوغاني</string>
     <string name="WarHammer_Name">مطرقة حرب</string>
@@ -279,6 +282,7 @@
     <string name="WndSettings_InGameUiSettings">إعدادات واجهة المستخدم</string>
     <string name="WndStory_Sewers">يقع الزنزانة مباشرة تحت المدينة، حيث تشكل مستوياته العليا نظام الصرف الصحي للمدينة. وباعتبارها اسمياً جزءاً من المدينة، فإن هذه المستويات ليست خطرة جداً. لن يسميها أحد مكاناً آمناً، لكنك على الأقل لن تضطر للتعامل مع الكثير من السحر الشرير هنا.</string>
     <string name="WndStory_Spiders">منذ سنوات عديدة مضت كان هناك منجم غني مليء بالحجارة السحرية. لكن عندما جفت عروق المعادن غادر عمال المناجم تاركين خلفهم شبكة واسعة من الأنفاق. في نهاية المطاف سكن هذا المكان العناكب. لكن حتى هذه المخلوقات الخطيرة الكامنة في الظلام لم تكن كافية لإخافة الشجعان والمجانين الذين يتوقون للكنوز التي قد توجد في المناجم. فمدى الخطر يتناسب دائماً مع كمية الشائعات التي تتحدث عن القطع الأثرية السحرية. ذات مرة تجولت ساحرة شريرة في الأنفاق محاولاً الهروب من الملاحقين. لكن الناس المتشائمون لم يجرؤوا على دخول الظلام. لذا قرروا الانتظار. لكنها لم تظهر أبداً. ربما وجدت الساحرة مخرجاً آخر، أو ربما تمكنت من التسلل بجانب الحراس... أو أنها هلكت محاطة بحفيف مخلوقات الظلام.</string>
+    <string name="WndTradeItem_Buy">شراء بـ %dغ</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
@@ -311,9 +315,16 @@
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
 
     <string name="town_deco_wooden_bench_desc">مقعد، مصنوع من الخشب، يبدو غير مريح للجلوس.</string>
+    <string name="town_deco_wooden_bench_name">مجلس خشبي</string>
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
 
 
 
