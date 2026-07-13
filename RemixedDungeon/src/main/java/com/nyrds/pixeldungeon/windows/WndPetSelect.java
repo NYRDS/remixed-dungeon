@@ -77,6 +77,22 @@ public class WndPetSelect extends Window {
         resize(WIDTH, (int) (actions.bottom() + GAP));
     }
 
+    // Programmatically select a pet by index. Used by autoTestAi to exercise
+    // the give-item and pet-inventory code paths without clicking buttons.
+    public void onSelect(int index) {
+        if (index >= 0 && index < pets.size()) {
+            hide();
+            Mob pet = pets.get(index);
+            if (itemToGive != null) {
+                PetInventoryManager.giveItemToPet(hero, pet, itemToGive);
+            } else {
+                GameScene.show(new WndPetBag(hero, pet));
+            }
+        } else {
+            hide();
+        }
+    }
+
     private String getPetDisplayName(@NotNull Mob pet) {
         String name = pet.getName();
         String hp = Utils.format(R.string.WndPetSelect_HP, pet.hp(), pet.ht());

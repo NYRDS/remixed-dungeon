@@ -282,6 +282,11 @@ local function handleWindow(hero)
     end
 
     if wndClass:match('WndPetSelect') then
+        activeWindow:onSelect(math.random(0, 1))
+        return true
+    end
+
+    if wndClass:match('WndPetBag') then
         activeWindow:hide()
         return true
     end
