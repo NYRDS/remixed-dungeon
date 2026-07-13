@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.ai;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -14,6 +15,11 @@ public class Fleeing extends MobAi implements AiState {
 
     @Override
     public void act(@NotNull Char me) {
+        if (me instanceof Mob && ((Mob) me).isHumanoid()
+                && MobItemAi.tryUseItem((Mob) me, MobItemAi.Context.FLEEING)) {
+            return;
+        }
+
         me.enemySeen = me.isEnemyInFov();
         if (me.enemySeen) {
             me.setTarget(me.getEnemy().getPos());
