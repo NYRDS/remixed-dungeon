@@ -44,4 +44,9 @@ public class Golem extends Mob {
 		
 		super.die( cause );
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

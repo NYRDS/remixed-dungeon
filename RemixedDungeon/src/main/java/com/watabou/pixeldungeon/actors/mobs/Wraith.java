@@ -84,5 +84,10 @@ public class Wraith extends Mob implements IDepthAdjustable {
 		} else {
 			return null;
 		}
-	}	
+	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

@@ -57,4 +57,9 @@ public class ZombieGnoll extends Mob {
 
         }
     }
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

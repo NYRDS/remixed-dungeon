@@ -6,5 +6,6 @@
    "movable"       :true,
    "aiState"       :"Passive",
    "fraction"      :"NEUTRAL",
-   "immortal"      :true
+   "immortal"      :true,
+   "isHumanoid"    :true
 }

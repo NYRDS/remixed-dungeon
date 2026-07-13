@@ -31,4 +31,8 @@ public class Gnoll extends Mob {
 		super.die( cause );
 	}
 
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

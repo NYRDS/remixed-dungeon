@@ -29,4 +29,9 @@ public class Shadow extends Mob {
 	protected float _attackDelay() {
 		return 0.5f;
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

@@ -65,4 +65,9 @@ public class Thief extends Mob {
 		
 		return desc;
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

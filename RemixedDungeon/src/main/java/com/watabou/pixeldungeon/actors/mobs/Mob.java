@@ -52,6 +52,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
+import java.util.Collections;
 import java.util.EnumSet;
 import java.util.Set;
 
@@ -646,10 +647,18 @@ public abstract class Mob extends Char {
     public void adjustStats(int depth) {
     }
 
+    @LuaInterface
+    public boolean isHumanoid() {
+        return false;
+    }
+
     @Override
     @NotNull
     public Set<Belongings.Slot> getAvailableEquipmentSlots() {
-        return EnumSet.of(Belongings.Slot.WEAPON, Belongings.Slot.ARMOR,
-                Belongings.Slot.LEFT_HAND, Belongings.Slot.ARTIFACT, Belongings.Slot.LEFT_ARTIFACT);
+        if (isHumanoid()) {
+            return EnumSet.of(Belongings.Slot.WEAPON, Belongings.Slot.ARMOR,
+                    Belongings.Slot.LEFT_HAND, Belongings.Slot.ARTIFACT, Belongings.Slot.LEFT_ARTIFACT);
+        }
+        return Collections.emptySet();
     }
 }

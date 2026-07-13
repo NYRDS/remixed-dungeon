@@ -84,4 +84,9 @@ public class Shaman extends Mob implements IZapper {
 			yell(StringsManager.getVar(R.string.Shaman_ZapMiss));
 		}
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

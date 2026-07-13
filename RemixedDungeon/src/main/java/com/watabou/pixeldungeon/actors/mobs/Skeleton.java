@@ -69,4 +69,9 @@ public class Skeleton extends Mob {
             GLog.n(StringsManager.getVar(R.string.Skeleton_Killed));
 		}
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

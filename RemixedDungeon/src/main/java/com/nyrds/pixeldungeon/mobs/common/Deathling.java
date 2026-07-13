@@ -2,7 +2,13 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.Packable;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.util.EnumSet;
+import java.util.Set;
 
 /**
  * Created by DeadDie on 20.08.2016
@@ -49,5 +55,11 @@ public class Deathling extends Mob {
     public void act() {
         adjustStats();
         super.act();
+    }
+
+    @Override
+    @NotNull
+    public Set<Belongings.Slot> getAvailableEquipmentSlots() {
+        return EnumSet.of(Belongings.Slot.ARTIFACT, Belongings.Slot.LEFT_ARTIFACT);
     }
 }

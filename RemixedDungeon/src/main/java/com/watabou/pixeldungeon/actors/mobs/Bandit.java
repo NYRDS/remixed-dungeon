@@ -23,4 +23,9 @@ public class Bandit extends Thief {
 		}
 		return damage;
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

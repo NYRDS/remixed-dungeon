@@ -101,4 +101,9 @@ public class RunicSkull extends MultiKindMob {
 	public boolean canBePet(){
 		return false;
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

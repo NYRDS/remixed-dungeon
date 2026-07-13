@@ -24,5 +24,6 @@
    "walkingType"   :"NORMAL",
    "canBePet"	     : true,
    "flying"		     : false,
-   "friendly"	     : false
+   "friendly"	     : false,
+   "isHumanoid"    :true
 }

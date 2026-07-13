@@ -84,4 +84,9 @@ public class SpiderQueen extends Boss {
 		Badges.validateBossSlain(Badges.Badge.SPIDER_QUEEN_SLAIN);
 		super.die(cause);
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

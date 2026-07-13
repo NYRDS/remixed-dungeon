@@ -50,4 +50,9 @@ public class KoboldIcemancer extends Mob implements IZapper {
 		}
 		return false;
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

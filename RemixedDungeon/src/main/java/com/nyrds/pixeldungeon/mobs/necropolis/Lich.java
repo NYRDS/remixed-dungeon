@@ -287,4 +287,9 @@ public class Lich extends Boss {
             skulls.add(skull);
         }
     }
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

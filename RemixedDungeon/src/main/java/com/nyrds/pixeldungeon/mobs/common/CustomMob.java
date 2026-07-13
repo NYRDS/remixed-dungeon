@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import androidx.annotation.Keep;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -34,6 +35,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 	private boolean friendly;
 	private boolean immortal = false;
+	private boolean humanoid = false;
 
 	//For restoreFromBundle
 	@Keep
@@ -149,6 +151,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 		spriteLayer = classDesc.optInt("spriteLayer",spriteLayer);
 
+		humanoid = classDesc.optBoolean("isHumanoid", humanoid);
+
 		kind = classDesc.optInt("var", kind);
 		carcassChance = (float) classDesc.optDouble("carcassChance", carcassChance);
 
@@ -165,5 +169,11 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	@Override
 	public int getSpriteLayer() {
 		return spriteLayer;
+	}
+
+	@LuaInterface
+	@Override
+	public boolean isHumanoid() {
+		return humanoid;
 	}
 }

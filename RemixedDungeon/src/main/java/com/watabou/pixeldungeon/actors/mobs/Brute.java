@@ -29,4 +29,9 @@ public class Brute extends Mob {
 	public HeroSubClass getSubClass() {
 		return HeroSubClass.BERSERKER;
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

@@ -71,4 +71,9 @@ public class ArmoredStatue extends Statue {
 		STR(Math.max(12,item.requiredSTR()));
 		return item;
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

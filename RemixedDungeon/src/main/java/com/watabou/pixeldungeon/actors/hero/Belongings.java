@@ -270,6 +270,9 @@ public class Belongings implements Iterable<Item>, Bundlable {
     }
 
     public boolean slotBlocked(Slot slot) {
+        if (!owner.getAvailableEquipmentSlots().contains(slot)) {
+            return true;
+        }
         return itemBySlot(slot) != ItemsList.DUMMY || blockedSlots.containsKey(slot);
     }
 
@@ -687,6 +690,10 @@ public class Belongings implements Iterable<Item>, Bundlable {
 
     public boolean equip(@NotNull EquipableItem item, Slot slot) {
         if (slot == Slot.NONE) {
+            return false;
+        }
+
+        if (!owner.getAvailableEquipmentSlots().contains(slot)) {
             return false;
         }
 

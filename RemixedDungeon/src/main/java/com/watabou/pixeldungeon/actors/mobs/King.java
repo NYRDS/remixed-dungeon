@@ -198,10 +198,15 @@ public class King extends Boss {
 		@Override
 		public void die(@NotNull NamedEntityKind cause) {
 			super.die( cause );
-			
+
 			if (CharUtils.isVisible(this)) {
 				Sample.INSTANCE.play( Assets.SND_BONES );
 			}
+		}
+
+		@Override
+		public boolean isHumanoid() {
+			return true;
 		}
 
 	}

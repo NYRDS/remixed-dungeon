@@ -22,4 +22,9 @@ public class Kobold extends Mob {
 		
 		addImmunity( Terror.class );
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

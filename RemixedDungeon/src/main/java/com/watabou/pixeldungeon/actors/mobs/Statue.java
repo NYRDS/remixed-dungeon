@@ -130,4 +130,9 @@ public class Statue extends Mob {
 		STR(Math.max(12,item.requiredSTR()));
 		return item;
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

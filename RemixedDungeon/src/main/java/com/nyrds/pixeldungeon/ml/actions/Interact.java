@@ -19,11 +19,11 @@ public class Interact extends CharAction {
 
         if (hero.adjacent(chr)) {
 
-            hero.readyAndIdle();
             hero.getSprite().turnTo(hero.getPos(), dst);
             if (!chr.interact(hero)) {
                 new Attack(chr).act(hero);
             }
+            hero.readyAndIdle();
             return;
 
         } else {

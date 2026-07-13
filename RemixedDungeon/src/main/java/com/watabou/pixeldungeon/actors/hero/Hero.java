@@ -1079,6 +1079,7 @@ public class Hero extends Char {
                         return false;
                     }
                     observe();
+                    return true;
                 }
             }
 

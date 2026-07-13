@@ -8,12 +8,16 @@ import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.util.ModdingBase;
 import com.nyrds.util.ModdingMode;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+
+import java.util.EnumSet;
+import java.util.Set;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -85,5 +89,14 @@ abstract public class Boss extends Mob {
 	@Override
 	public boolean isBoss() {
 		return true;
+	}
+
+	@Override
+	@NotNull
+	public Set<Belongings.Slot> getAvailableEquipmentSlots() {
+		if (isHumanoid()) {
+			return super.getAvailableEquipmentSlots();
+		}
+		return EnumSet.of(Belongings.Slot.ARTIFACT, Belongings.Slot.LEFT_ARTIFACT);
 	}
 }

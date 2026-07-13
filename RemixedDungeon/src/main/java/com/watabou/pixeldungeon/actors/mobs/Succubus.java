@@ -83,4 +83,9 @@ public class Succubus extends Mob {
 			return super.getCloser(target, ignorePets);
 		}
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

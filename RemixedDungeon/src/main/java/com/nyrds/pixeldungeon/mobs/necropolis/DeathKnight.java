@@ -39,4 +39,9 @@ public class DeathKnight extends Mob {
         }
         return damage;
     }
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

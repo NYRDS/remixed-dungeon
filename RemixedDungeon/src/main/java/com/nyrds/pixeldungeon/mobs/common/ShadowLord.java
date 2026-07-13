@@ -198,4 +198,9 @@ public class ShadowLord extends Boss implements IZapper {
 		level().unseal();
 		Badges.validateBossSlain(Badges.Badge.SHADOW_LORD_SLAIN);
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

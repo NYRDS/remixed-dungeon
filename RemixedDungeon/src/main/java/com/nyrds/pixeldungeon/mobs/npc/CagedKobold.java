@@ -122,6 +122,11 @@ public class CagedKobold extends ImmortalNPC {
 			Journal.remove( Journal.Feature.CAGEDKOBOLD.desc() );
 		}
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }
 
 

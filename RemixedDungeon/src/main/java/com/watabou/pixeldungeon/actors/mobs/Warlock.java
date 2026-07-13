@@ -86,4 +86,8 @@ public class Warlock extends Mob implements IZapper {
 		return false;
 	}
 
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

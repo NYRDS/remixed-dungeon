@@ -16,5 +16,6 @@
    "canBePet"      :true,
    "walkingType"   :"WALL",
    "scriptFile"    :"scripts/mobs/MazeShadow",
-   "aiState"       :"Wandering"
+   "aiState"       :"Wandering",
+   "isHumanoid"    :true
 }

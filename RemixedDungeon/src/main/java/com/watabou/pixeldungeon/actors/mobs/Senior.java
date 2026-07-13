@@ -45,4 +45,9 @@ public class Senior extends Monk {
 			return super.actMeleeAttack(enemy);
 		}
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }

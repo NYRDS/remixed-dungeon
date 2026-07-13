@@ -8,5 +8,6 @@
    "gender"        :"masculine",
    "spriteDesc"    :"spritesDesc/TownsfolkNPC.json",
    "scriptFile"    :"scripts/npc/QuestGiverDemo",
-   "friendly"      :true
+   "friendly"      :true,
+   "isHumanoid"    :true
 }

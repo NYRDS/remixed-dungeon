@@ -37,4 +37,9 @@ public class GoldenStatue extends Statue {
 		}
 		return getItemFromSlot(Belongings.Slot.WEAPON);
 	}
+
+	@Override
+	public boolean isHumanoid() {
+		return true;
+	}
 }
