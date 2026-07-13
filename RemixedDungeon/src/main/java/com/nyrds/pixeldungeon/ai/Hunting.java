@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.ai;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -26,6 +27,11 @@ public class Hunting extends MobAi implements AiState {
 
         if(me.friendly(enemy)) {
             me.setState(getStateByClass(Wandering.class));
+            return;
+        }
+
+        if (me instanceof Mob && ((Mob) me).isHumanoid()
+                && MobItemAi.tryUseItem((Mob) me, MobItemAi.Context.COMBAT)) {
             return;
         }
 
