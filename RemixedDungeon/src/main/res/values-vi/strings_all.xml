@@ -143,6 +143,7 @@
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
     <string name="Potion_RuneDissaperaed">Chữ ký biến mất khỏi %s.</string>
     <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
+    <string name="PseudoPasty_Name">bánh nhúng</string>
     <string name="PseudoRat_Name">chuột giả</string>
     <string name="PseudoRat_Name_Objective">chuột giả</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
@@ -338,6 +339,7 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
 
 
 
