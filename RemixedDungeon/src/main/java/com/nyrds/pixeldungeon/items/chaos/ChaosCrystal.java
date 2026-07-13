@@ -84,8 +84,13 @@ public class ChaosCrystal extends UsableArtifact {
             }
 
             if (item instanceof MeleeWeapon) {
-                selector.collect(new ChaosSword());
-                GLog.p(StringsManager.getVar(R.string.ChaosCrystal_SwordFused));
+                if (((MeleeWeapon) item).blockSlot() == com.watabou.pixeldungeon.actors.hero.Belongings.Slot.LEFT_HAND) {
+                    selector.collect(new ChaosSword());
+                    GLog.p(StringsManager.getVar(R.string.ChaosCrystal_SwordFused));
+                } else {
+                    selector.collect(new ChaosBlade());
+                    GLog.p(StringsManager.getVar(R.string.ChaosCrystal_BladeFused));
+                }
                 return;
             }
 
