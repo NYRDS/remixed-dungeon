@@ -96,7 +96,7 @@ Evaluated in: COMBAT only
 | PotionOfStrength | AC_DRINK | 0.3, **expert-only** (0 otherwise) |
 | PotionOfMight | AC_DRINK | 0.3, **expert-only** (0 otherwise) |
 | ScrollOfUpgrade | AC_READ | 0.3, **expert-only** (0 otherwise) |
-| ScrollOfEnchantWeapon | AC_READ | 0.3, **expert-only** (0 otherwise) |
+| ScrollOfWeaponUpgrade | AC_READ | 0.3, **expert-only** (0 otherwise) |
 | ScrollOfRecharging | AC_READ | 0.2 if wand equipped with 0 charges, else 0 |
 | SpellBook (summoning spell) | AC_READ | 0.3 if no active summon (SummonDeathling), gated by `canCast()` |
 | SpellBook (utility spell) | AC_READ | 0.2 base (WindGust, MagicTorch), gated by `canCast()` |
@@ -119,7 +119,7 @@ These permanent power-up items score 0 on non-expert difficulty:
 - PotionOfStrength
 - PotionOfMight
 - ScrollOfUpgrade
-- ScrollOfEnchantWeapon
+- ScrollOfWeaponUpgrade
 
 Expert difficulty check: `RemixedDungeon.getDifficultyFactor()` meets the expert threshold.
 
@@ -127,10 +127,10 @@ Expert difficulty check: `RemixedDungeon.getDifficultyFactor()` meets the expert
 
 | Category | Scrolls | Behavior |
 |----------|---------|----------|
-| Safe self-use | Identify, RemoveCurse, Recharging, Upgrade*, EnchantWeapon* | Scored normally |
+| Safe self-use | Identify, RemoveCurse, Recharging, Upgrade*, WeaponUpgrade* | Scored normally |
 | Escape | Teleportation | Only in FLEEING context |
 | Offensive area | Terror, PsionicBlast | Scored as offensive (require 2+ enemies visible) |
-| Never use | Rage, Challenge, MagicMapping | Score always 0 — Rage causes amok (self-harm), Challenge draws aggro (suicidal), MagicMapping has no strategic value |
+| Never use | Challenge, MagicMapping, Curse | Score always 0 — Challenge draws aggro (suicidal), MagicMapping has no strategic value, Curse harms self |
 
 (* = expert-only)
 
