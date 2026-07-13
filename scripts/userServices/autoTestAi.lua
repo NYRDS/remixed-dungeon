@@ -24,6 +24,23 @@ local buffScanDisabled = false
 
 local ai = {}
 
+-- Curated item types to spawn into the hero's backpack so item code paths get exercised
+-- even when the hero doesn't find heaps. Covers consumables, equipment, and utility items.
+local testItemPool = {
+    "PotionOfHealing", "PotionOfStrength", "PotionOfMana", "PotionOfInvisibility",
+    "PotionOfLevitation", "PotionOfMindVision", "PotionOfFrost", "PotionOfPurity",
+    "PotionOfToxicGas", "PotionOfParalyticGas",
+    "ScrollOfIdentify", "ScrollOfUpgrade", "ScrollOfMagicMapping", "ScrollOfRemoveCurse",
+    "ScrollOfTeleportation", "ScrollOfChallenge", "ScrollOfMirrorImage", "ScrollOfRecharging",
+    "Dagger", "ShortSword", "Sword", "Mace", "Longsword", "Quarterstaff",
+    "ClothArmor", "LeatherArmor", "MailArmor", "ScaleArmor",
+    "RingOfAccuracy", "RingOfEvasion", "RingOfHaste", "RingOfMending", "RingOfPower",
+    "Ration", "Pasty", "ChargrilledMeat", "MysteryMeat",
+    "Sungrass.Seed", "Firebloom.Seed", "Icecap.Seed", "Earthroot.Seed", "Dreamweed.Seed",
+    "WandOfMagicMissile", "WandOfFirebolt", "WandOfLightning", "WandOfBlink",
+    "Torch", "Ankh", "DewVial", "LloydsBeacon", "ArmorKit",
+}
+
 -- #3: runs fn, logs and swallows any error so a single bad decision can't stall the AI.
 local function guarded(label, fn)
     local ok, err = pcall(fn)
@@ -79,6 +96,69 @@ local function dumpCoverage(levelLabel)
     RPD.debug("[autoTestAi]   buffs:   %s", keys(coverage.buffs))
 end
 
+-- Diagnostic (#5): dump the hero's backpack contents. Uses Belongings:iterator() which
+-- walks both equipped and backpack items. Counts "real" items (excludes DummyItem/Gold
+-- placeholders) so we can tell at a glance whether item spawning/pickup is working.
+local function dumpBackpack(hero)
+    local seen = {}
+    local realCount = 0
+    local total = 0
+    local ok, err = pcall(function()
+        local iter = hero:getBelongings():iterator()
+        while iter:hasNext() do
+            local k = kindOf(iter:next())
+            if k then
+                seen[k] = (seen[k] or 0) + 1
+                total = total + 1
+                if k ~= "DummyItem" and k ~= "Gold" then
+                    realCount = realCount + 1
+                end
+            end
+        end
+    end)
+    if not ok then
+        RPD.debug("[autoTestAi] backpack dump error: %s", tostring(err))
+        return
+    end
+    local parts = {}
+    for k, count in pairs(seen) do
+        parts[#parts + 1] = string.format("%s x%d", k, count)
+    end
+    table.sort(parts)
+    RPD.debug("[autoTestAi] === backpack ===")
+    RPD.debug("[autoTestAi]   real items: %d / %d", realCount, total)
+    RPD.debug("[autoTestAi]   contents:  %s", #parts > 0 and table.concat(parts, ", ") or "(empty)")
+end
+
+-- Improvement #1: spawn a random item into the hero's backpack. Keeps the backpack stocked
+-- with real items to exercise, since the hero rarely picks up dungeon heaps on its own.
+-- Caps at 5 real items to avoid filling the backpack.
+local function countRealItems(belongings)
+    local count = 0
+    pcall(function()
+        local iter = belongings:iterator()
+        while iter:hasNext() do
+            local k = kindOf(iter:next())
+            if k and k ~= "DummyItem" and k ~= "Gold" then
+                count = count + 1
+            end
+        end
+    end)
+    return count
+end
+
+local function maybeSpawnTestItems(hero)
+    if math.random() > 0.02 then return end
+    local belongings = hero:getBelongings()
+    if belongings:isBackpackFull() then return end
+    if countRealItems(belongings) >= 5 then return end
+
+    local itemType = testItemPool[math.random(#testItemPool)]
+    guarded("spawnItem:" .. itemType, function()
+        hero:collect(RPD.item(itemType))
+    end)
+end
+
 -- Called by scene.lua before changing level (#1 + #5): report what the AI exercised on the
 -- level it is leaving, then drop the cell cache (which is keyed by cell number and would
 -- otherwise leak into the next level) and reset coverage.
@@ -86,6 +166,7 @@ ai.onLeaveLevel = function()
     local levelLabel = "unknown"
     pcall(function() levelLabel = tostring(RPD.Dungeon.hero:level().levelId) end)
     dumpCoverage(levelLabel)
+    pcall(function() dumpBackpack(RPD.Dungeon.hero) end)
     explorationCache = lru.new(EXPLORATION_CACHE_SIZE)
     coverage = freshCoverage()
     buffScanDisabled = false
@@ -238,6 +319,8 @@ ai.step = function()
     end
 
     scanBuffs(hero)
+
+    maybeSpawnTestItems(hero)
 
     local heroPos = hero:getPos()
 
