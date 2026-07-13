@@ -44,6 +44,7 @@
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
     <string name="Caves_TileDescDeco">تظهر عرق من معدن ما على الجدار. ذهب؟</string>
     <string name="Caves_TileDescEntrance">يؤدي السلم إلى العمق العلوي.</string>
+    <string name="CharAction_Give">إعطاء</string>
     <string name="CharAction_Take">التقاط</string>
     <string name="Char_OutParalysis">كسر الألم شلل %s</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
@@ -152,7 +153,9 @@
     <string name="NecromancerNPC_Intro">آه! يا له من منظر نادر! زميل مغامر ليس مجرد جثة بلا حياة! لا يكاد يصدق! أوه... أعتذر، أحياناً أشعر بالحماس الشديد. ترى، أنا نِكْرومانسي (ساحر الموتى). وعلى الرغم من أن دراسة الموتى والموت نفسه هو مهنتي، إلا أن رؤية نفس الأشياء مراراً وتكراراً تصبح مرهقة للغاية في النهاية. من ناحية أخرى، هذا هو السبب بالضبط في وجودي هنا. وفقاً لحساباتي، في غضون أسابيع قليلة، في مكان ما في هذا الزنزانة بالذات، سيحدث شيء مذهل. الـ _نِكْرُوبُولِس_ (المقبرة القديمة)، مدينة الموتى القديمة، ستفتح أبوابها. و... لا يمكنني حقاً قول الكثير، لقد أضعت وقتاً كافياً كما هو الحال. أنا بحاجة للاستعداد، _عد لاحقاً_.</string>
     <string name="NecromancerNPC_Message2">يجب أن أكون جاهزاً.</string>
     <string name="Paralysis_Name_0">مشلل %s</string>
+    <string name="PetInventory_GiveN">أعط %d</string>
     <string name="PetInventory_PetBackpackFull">حقيبة الحيوان الأليف ممتلئة</string>
+    <string name="PetInventory_TakeN">خذ %d</string>
     <string name="Pickaxe_InsufficientStr">قوة غير كافية للتعدين!</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="PlagueDoctorMaskHood_Name">قناع طبيب الطاعون مع غطاء رأس</string>
@@ -272,6 +275,7 @@
     <string name="WndInfoItem_Chest">صندوق</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
 
+    <string name="WndLocalModInstall_text">اختر الدليل لتثبيت المود منه</string>
     <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \&quot;إعلان\&quot; مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
     <string name="WndPlayGames_RestoreProgress">استعادة تقدم اللعبة</string>
     <string name="WndPlayGames_Show_Error">فشلت العملية. حدث خطأ ما...</string>
@@ -287,6 +291,7 @@
     <string name="WndTradeItem_Buy">شراء بـ %dغ</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="Wraith_Gender">masculine</string>
+    <string name="WrnExperimental_title">تم تفعيل الخيارات التجريبية!</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
     <string name="YogsHeart_Desc">لسنوات طويلة اعتقد الناس أن المخلوقات عديمة القلب فقط هي القادرة على أفعال الشر الصرفة. ومع ذلك، ها هو هنا أمامك قلب ضخم نابض، يعود للإله القديم نفسه.</string>
     <string name="deco_candle_name">شمعة</string>
@@ -321,6 +326,12 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
 
 
 

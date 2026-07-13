@@ -28,10 +28,12 @@
     <string name="Caves_TileGrass">fluorescent mos</string>
     <string name="Caves_TileWater">IJskoud water</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
+    <string name="Challenges_Descriptions_6">De oude kunst van runen lezen is verboden en wordt tegen alle kosten vermeden, vanwege de vloek die rust op elk perkament dat de kelder of haar omgeving binnenbereikt.</string>
     <string name="Challenges_Names_3">Woestijn</string>
     <string name="ChaosCrystal_Fuse">SMETEN</string>
     <string name="ChaosSword_Name">chaoszwaard</string>
     <string name="CharAction_Push">duwen</string>
+    <string name="Char_Hit_0">%1$s raakte %2$s</string>
     <string name="Char_StaAmok">amok</string>
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaDizzy">duizelig</string>
@@ -277,6 +279,7 @@
     <string name="Worm_Name_Objective">worm</string>
     <string name="Wraith_Name">wraith</string>
 
+    <string name="WrnExperimental_title">Experimentele opties ingeschakeld!</string>
     <string name="YogsHeart_Gender">masculine</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
@@ -312,6 +315,9 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 

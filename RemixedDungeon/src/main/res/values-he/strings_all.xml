@@ -103,6 +103,7 @@
     <string name="HeroClass_NecromancerPerks_0">נקרומנטרים מתחילים עם 15 נקודות בריאות.</string>
     <string name="HeroClass_NecromancerPerks_3">נקרומנטרים מתחילים עם מפתח שלד ברמה 7.</string>
     <string name="HeroClass_Rog">נוכל</string>
+    <string name="HeroSubClass_DescAssa">כאשר מבצעים התקפה מפתיעה, ה_מתנקש_ גורם נזק נוסף למטרתו.</string>
     <string name="HeroSubClass_DescShaman">אלפים _שמאנים_ יכולים להשתמש בשרביטים ככלי נשק לתקיפה מקרוב. לפגיעות מוצלחות יש סיכוי להפעיל את כוח השרביט על מטרה ללא שימוש בטעינה.</string>
     <string name="HeroSubClass_DescWarL">לאחר הריגת אויב, ה-וורלוק בולע את נשמתו. זה מרפא את פצעיו ומשביע את רעבונו.</string>
     <string name="HeroSubClass_NameAssa">מתנקש</string>
@@ -271,7 +272,9 @@
     <string name="WndTradeItem_Buy">קנה ב-%d זהב</string>
     <string name="WndTradeItem_Sale">למכירה: %1$s - %2$dג</string>
     <string name="WndTradeItem_Sold">מכרת את ה-%1 תמורת %2</string>
+    <string name="WrnExperimental_title">אפשרויות ניסיוניות הופעלו!</string>
     <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
+    <string name="town_deco_armoronhanger_name">שריון</string>
     <string name="town_deco_armorstand_leather_desc">שריון עור אמין יהיה רכישה מצוינת לפני היציאה לצינוק.</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
     <string name="town_deco_entrance_name">כניסה</string>
@@ -290,6 +293,9 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 

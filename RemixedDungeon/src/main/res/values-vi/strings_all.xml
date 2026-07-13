@@ -17,6 +17,7 @@
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
     <string name="BattleAxe_Info">Đầu rìu thép khổng lồ của chiếc rìu chiến này mang lại trọng lượng đáng kể cho mỗi cú gảy.</string>
     <string name="BattleAxe_Name">rìu chiến đấu</string>
+    <string name="BishopNPC_Desc">Giám mục của Giáo hội Thánh của Santa Chúa Sâu</string>
     <string name="BishopNPC_Name_Objective">giám mục</string>
     <string name="Bishop_title">Giám mục</string>
     <string name="BlackCat_Gender">feminine</string>
@@ -93,6 +94,7 @@
     <string name="IceCaves_TileGrass">Cỏ đóng băng.</string>
     <string name="Imp_Monks1">Bạn có phải là phiêu lưu gia? Tôi yêu thích những phiêu lưu gia! Bạn luôn có thể dựa vào họ khi cần giết cái gì đó. Đúng không? Dĩ nhiên là phải trả tiền ;)\nTrong trường hợp của tôi là _mönk_ cần bị tiêu diệt. Các bạn thấy, tôi định mở một chút kinh doanh ở đây, nhưng những kẻ điên khùng này không mua gì cả và sẽ làm hoảng sợ khách khác. Vậy hãy giúp tôi tiêu diệt... nói là _8 người_ và phần thưởng sẽ thuộc về bạn.</string>
     <string name="InnKeeperNPC_Desc">Chủ quán rất tự hào về bản thân.</string>
+    <string name="InnKeeperNPC_Name">chủ quán</string>
     <string name="InnKeeperNPC_Name_Objective">chủ quán</string>
     <string name="InterLevelScene_ErrorGeneric">Đã có lỗi xảy ra...</string>
     <string name="InterLevelScene_FileNotFound">Không tìm thấy tập tin. Với một số lý do...</string>
@@ -110,6 +112,7 @@
     <string name="MailArmor_Name">áo giáp xích</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
+    <string name="MeleeWeapon_Info3g">kém chính xác</string>
     <string name="MimicPie_Desc">Mimics là những sinh vật phép thuật có thể biến hình thành bất kỳ hình dạng nào chúng muốn. Con này trông như một chiếc bánh ngon to lớn.</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimik</string>
@@ -262,6 +265,7 @@
     <string name="Worm_Gender">masculine</string>
     <string name="Wraith_Desc">Một oan hồn là linh hồn oán giận của một kẻ có tội, mộ hoặc lăng mộ của họ bị quấy rối. Là một thực thể phi vật chất, rất khó đánh trúng chúng bằng vũ khí thông thường.</string>
     <string name="Wraith_Name">oan hồn</string>
+    <string name="WrnExperimental_title">Các tùy chọn thực nghiệm đã được bật!</string>
     <string name="Yog_Gender">masculine</string>
     <string name="YogsEye_Desc">Mắt của Thần Cổ, ánh nhìn toàn kiến đầy ắp căm thù vĩnh cửu. Bạn có thể cảm thấy nó nhìn thấu qua linh hồn của mình.</string>
     <string name="Zombie_Name">kẻ sống chết</string>
@@ -334,6 +338,10 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
 
 
 </resources>
