@@ -32,6 +32,7 @@ public class Spell implements NamedEntityKind {
     protected float castTime = 1f;
     protected float cooldown = 1f;
 
+    @Getter
     protected String targetingType;
     @Getter
     protected String magicAffinity;
