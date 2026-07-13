@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.ai;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.NotNull;
@@ -20,6 +21,11 @@ public class Wandering extends MobAi implements AiState {
 
         Char enemy = chooseEnemy(me, 1f);
         me.setEnemy(enemy);
+
+        if (me instanceof Mob && ((Mob) me).isHumanoid()
+                && MobItemAi.tryUseItem((Mob) me, MobItemAi.Context.IDLE)) {
+            return;
+        }
 
         if (me.isEnemyInFov()) {
             huntEnemy(me);
