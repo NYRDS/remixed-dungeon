@@ -6,6 +6,7 @@
    "dmgMin"        :8,
    "dmgMax"        :12,
    "dr"            :4,
+   "str"           :12,
    "baseSpeed"     :1,
    "attackDelay"   :1,
    "attackRange"   :6,

@@ -21,7 +21,8 @@ public class Golem extends Mob {
 		dmgMin = 20;
 		dmgMax = 40;
 		dr = 12;
-		
+		STR(16);
+
 		expForKill = 12;
 		maxLvl = 22;
 		

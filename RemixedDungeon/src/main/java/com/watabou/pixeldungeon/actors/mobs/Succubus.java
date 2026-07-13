@@ -28,6 +28,7 @@ public class Succubus extends Mob {
 		dmgMin = 15;
 		dmgMax = 25;
 		dr = 10;
+		STR(13);
 
 		expForKill = 12;
 		maxLvl = 25;

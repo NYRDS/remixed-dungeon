@@ -14,7 +14,8 @@ public class Kobold extends Mob {
 		dmgMin = 10;
 		dmgMax = 17;
 		dr = 9;
-		
+		STR(11);
+
 		expForKill = 10;
 		maxLvl = 20;
 		

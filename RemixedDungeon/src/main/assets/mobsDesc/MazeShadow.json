@@ -5,6 +5,7 @@
    "maxLvl"        :10,
    "dmgMin"        :5,
    "dmgMax"        :10,
+   "str"           :13,
    "baseSpeed"     :2,
    "attackDelay"   :0.5,
    "ht"            :20,

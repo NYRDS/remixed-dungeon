@@ -27,7 +27,8 @@ public class Skeleton extends Mob {
 		dmgMin = 3;
 		dmgMax = 8;
 		dr = 5;
-		
+		STR(11);
+
 		expForKill = 5;
 		maxLvl = 10;
 		setUndead(true);

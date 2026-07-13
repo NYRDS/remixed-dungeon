@@ -15,6 +15,7 @@ public class Senior extends Monk {
 		spriteClass = "spritesDesc/Senior.json";
 		dmgMin = 12;
 		dmgMax = 20;
+		STR(15);
 	}
 	
 	@Override

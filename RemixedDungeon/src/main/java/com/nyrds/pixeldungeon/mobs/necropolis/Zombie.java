@@ -20,6 +20,7 @@ public class Zombie extends Mob {
         dmgMin = 3;
         dmgMax = 10;
         dr = 10;
+        STR(13);
 
         expForKill = 6;
         maxLvl = 15;

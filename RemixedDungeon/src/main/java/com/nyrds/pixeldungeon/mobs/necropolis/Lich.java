@@ -72,6 +72,7 @@ public class Lich extends Boss {
         dmgMin = 12;
         dmgMax = 20;
         dr = 15;
+        STR(14);
 
         addImmunity( Paralysis.class );
         addImmunity( ToxicGas.class );

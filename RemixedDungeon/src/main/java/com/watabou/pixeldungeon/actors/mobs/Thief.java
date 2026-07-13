@@ -24,6 +24,7 @@ public class Thief extends Mob {
 		dmgMin = 1;
 		dmgMax = 7;
 		dr = 3;
+		STR(11);
 
 		expForKill = 5;
 		maxLvl = 10;

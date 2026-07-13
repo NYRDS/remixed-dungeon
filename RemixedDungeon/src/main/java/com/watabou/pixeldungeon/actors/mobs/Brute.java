@@ -19,6 +19,7 @@ public class Brute extends Mob {
 		maxLvl = 15;
 
 		dr = 8;
+		STR(14);
 
 		loot(Gold.class, 0.5f);
 		

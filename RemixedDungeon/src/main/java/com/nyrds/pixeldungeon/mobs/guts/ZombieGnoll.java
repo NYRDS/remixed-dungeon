@@ -31,6 +31,7 @@ public class ZombieGnoll extends Mob {
         dmgMin = 15;
         dmgMax = 35;
         dr = 20;
+        STR(13);
 
         expForKill = 7;
         maxLvl = 35;

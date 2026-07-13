@@ -30,7 +30,8 @@ public class Monk extends Mob {
 		dmgMin = 12;
 		dmgMax = 16;
 		dr = 2;
-		
+		STR(13);
+
 		expForKill = 11;
 		maxLvl = 21;
 		

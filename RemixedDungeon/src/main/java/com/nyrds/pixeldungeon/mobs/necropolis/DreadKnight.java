@@ -23,6 +23,7 @@ public class DreadKnight extends Mob {
         dmgMin = 8;
         dmgMax = 16;
         dr = 12;
+        STR(17);
 
         expForKill = 8;
         maxLvl = 15;

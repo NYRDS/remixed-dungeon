@@ -123,6 +123,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 		dr = classDesc.optInt("dr", dr);
 
+		baseStr = classDesc.optInt("str", baseStr);
+
 		baseSpeed = (float) classDesc.optDouble("baseSpeed", baseSpeed);
 		attackDelay = (float) classDesc.optDouble("attackDelay", attackDelay);
 

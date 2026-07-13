@@ -10,6 +10,7 @@ public class Shadow extends Mob {
 		baseAttackSkill  = 10;
 		dmgMin = 5;
 		dmgMax = 10;
+		STR(13);
 
 		expForKill = 5;
 		maxLvl = 10;

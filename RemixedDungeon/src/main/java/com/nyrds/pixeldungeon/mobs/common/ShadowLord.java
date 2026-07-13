@@ -53,6 +53,7 @@ public class ShadowLord extends Boss implements IZapper {
 		dmgMin = 30;
 		dmgMax = 40;
 		dr = 40;
+		STR(15);
 
 		expForKill = 60;
 

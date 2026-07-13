@@ -20,6 +20,7 @@ public class DeathKnight extends Mob {
         dmgMin = 7;
         dmgMax = 14;
         dr = 7;
+        STR(17);
 
         expForKill = 7;
         maxLvl = 15;

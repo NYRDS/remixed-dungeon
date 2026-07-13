@@ -171,7 +171,8 @@ public class King extends Boss {
 			dmgMin = 12;
 			dmgMax = 16;
 			dr = 5;
-			
+			STR(15);
+
 			expForKill = 0;
 
 			setUndead(true);
