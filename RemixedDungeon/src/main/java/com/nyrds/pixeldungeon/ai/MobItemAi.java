@@ -5,6 +5,9 @@ import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
+import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.util.StringsManager;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -52,8 +55,14 @@ public class MobItemAi {
         }
 
         if (bestItem != null && bestScore > USE_THRESHOLD) {
-            GLog.debug("MobItemAi: %s uses %s (%s) score %.2f",
+            GLog.toFile("MobItemAi: %s uses %s (%s) score %.2f",
                     mob.getEntityKind(), bestItem.getEntityKind(), bestAction, bestScore);
+
+            if (Dungeon.isCellVisible(mob.getPos())) {
+                GLog.i(StringsManager.getVar(R.string.Mob_ItemUse),
+                        mob.getName(), bestItem.name());
+            }
+
             bestItem.execute(mob, bestAction);
             return true;
         }
