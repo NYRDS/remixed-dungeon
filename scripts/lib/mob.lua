@@ -82,6 +82,13 @@ mob.onAct = function(self,mob)
     return not not (self.act and self.act(mob))
 end
 
+mob.onScoreItemAction = function(self, mob, item, action)
+    if not self.scoreItemAction then
+        return 0
+    end
+    return self.scoreItemAction(mob, item, action) or 0
+end
+
 mob.onDamage = function(self,mob,dmg,src)
     return not not (self.damage and self.damage(mob, dmg, src))
 end
