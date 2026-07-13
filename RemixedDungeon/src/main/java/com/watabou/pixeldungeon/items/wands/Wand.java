@@ -261,6 +261,15 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         fx(cell, () -> onZap(cell));
     }
 
+    // Like mobWandUse, but consumes a charge and spends time.
+    // Use this for mobs that carry wands as inventory items (MobItemAi).
+    // mobWandUse stays free for Crystal/BlackCat/blinkTo which have infinite use.
+    public void mobWandUseCharged(Char user, final int tgt) {
+        mobWandUse(user, tgt);
+        curCharges(curCharges() - 1);
+        user.spend(TIME_TO_ZAP);
+    }
+
     protected void fx(int cell, Callback callback) {
         MagicMissile.blueLight(getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback);
         Sample.INSTANCE.play(Assets.SND_ZAP);
