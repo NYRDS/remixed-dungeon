@@ -64,13 +64,17 @@ public class MobItemAi {
                         mob.getName(), bestItem.name());
             }
 
+            Char enemy = mob.getEnemy();
+            int target = enemy.valid() ? enemy.getPos() : mob.getPos();
+
             if (bestAction.equals(AC_ZAP) && bestItem instanceof Wand) {
                 // Wands go through selectCell() in execute() which is a no-op for mobs.
                 // Use mobWandUseCharged which fires the effect AND consumes charge + time.
-                Wand wand = (Wand) bestItem;
-                Char enemy = mob.getEnemy();
-                int target = enemy.valid() ? enemy.getPos() : mob.getPos();
-                wand.mobWandUseCharged(mob, target);
+                ((Wand) bestItem).mobWandUseCharged(mob, target);
+            } else if (bestAction.equals(AC_THROW)) {
+                // Thrown items also go through selectCell() in execute().
+                // cast() detaches the item, spends time, and fires onThrow directly.
+                bestItem.cast(mob, target);
             } else {
                 bestItem.execute(mob, bestAction);
             }
