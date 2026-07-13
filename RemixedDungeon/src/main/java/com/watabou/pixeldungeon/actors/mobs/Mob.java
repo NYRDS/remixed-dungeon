@@ -189,6 +189,10 @@ public abstract class Mob extends Char {
     public void act() {
         super.act(); //Calculate FoV
 
+        if (!isAlive()) {
+            return; // died during buff/item processing — don't run AI on a corpse
+        }
+
         getSprite().hideAlert();
 
         if (paralysed) {

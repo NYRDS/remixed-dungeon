@@ -31,7 +31,9 @@ public class GoldenStatue extends Statue {
 			Weapon weapon = new GoldenSword();
 			weapon.identify();
 			weapon.upgrade(4);
-			weapon.doEquip(this);
+			// setItemForSlot, not doEquip: see Statue.getItem (avoid spend/updateSprite during
+		// sprite creation).
+		getBelongings().setItemForSlot(weapon, Belongings.Slot.WEAPON);
 		}
 		return getItemFromSlot(Belongings.Slot.WEAPON);
 	}

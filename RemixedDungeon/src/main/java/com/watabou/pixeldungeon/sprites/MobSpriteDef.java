@@ -17,6 +17,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.json.JSONArray;
@@ -63,6 +64,11 @@ public class MobSpriteDef extends MobSprite {
 
     private float visualOffsetX;
     private float visualOffsetY;
+
+    // Throttles the null-anim diagnostic in onComplete to one log entry per sprite
+    // instance (CharSprite.update fires onComplete(null) every frame while paused
+    // with no current animation).
+    private boolean nullAnimLogged;
 
 
     static private final Map<String, JSONObject> defMap = new HashMap<>();
@@ -297,7 +303,19 @@ public class MobSpriteDef extends MobSprite {
 
     @Override
     public void onComplete(Animation anim) {
-        if (isVisible() && onCompleteEffects != null) {
+        if (anim == null) {
+            // CharSprite.update() calls onComplete(curAnim) every frame while
+            // paused; curAnim can be null (animation ended, none started). Log
+            // context once per sprite to identify which definition is affected,
+            // then skip handleEventActions — it would NPE on anim.name.
+            if (!nullAnimLogged) {
+                nullAnimLogged = true;
+                final String[] kind = {"<none>"};
+                ch.ifPresent(chr -> kind[0] = chr.getEntityKind());
+                GLog.toFile("[MobSpriteDef] onComplete(null) - kind=%s visible=%s effects=%s",
+                        kind[0], isVisible(), onCompleteEffects);
+            }
+        } else if (isVisible() && onCompleteEffects != null) {
             handleEventActions(anim, onCompleteEffects);
         }
         super.onComplete(anim);

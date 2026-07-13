@@ -283,13 +283,19 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     protected void checkedAct(){
+        if(BuildConfig.DEBUG) {
+            resetSpendTrace();
+        }
+        final var preActAction = getCurAction();
         act();
         if(BuildConfig.DEBUG) {
+            reportDoubleSpendIfNew(getEntityKind());
             GLog.debug("%s consumed %3.2f time in act", getEntityKind(), time - prevTime);
-            GLog.debug("%s State: %s Action: %s", getEntityKind(), getState().getTag(), getCurAction());
+            GLog.debug("%s State: %s Action(pre=%s, post=%s)", getEntityKind(), getState().getTag(), preActAction, getCurAction());
 
-            if (time == prevTime) {
-                throw new TrackedRuntimeException(Utils.format("%s consume no time in act", getEntityKind()));
+            if (time == prevTime && isAlive()) {
+                throw new TrackedRuntimeException(Utils.format("%s consume no time in act [state=%s action(pre=%s, post=%s)]",
+                        getEntityKind(), getState().getTag(), preActAction, getCurAction()));
             }
         }
     }
@@ -2009,7 +2015,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public void readyAndIdle() {
         setCurAction(null);
-        spend(TICK/speed());
+        if (time == prevTime) {
+            spend(TICK/speed());
+        }
     }
 
     public void clearActions() {

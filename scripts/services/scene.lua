@@ -53,10 +53,17 @@ local function levelsTestModeOnStep(self, scene)
 
         if hero:myMove() then
            --RPD.glog("myMove")
-            autoTestAi.step()
+            local ok, err = pcall(autoTestAi.step)
+            if not ok then
+                RPD.debug("[scene] autoTestAi.step error: %s", tostring(err))
+            end
         end
 
         if framesOnLevel > 1000 then
+            -- Report coverage for the level we're leaving and reset the per-level cache so
+            -- cell numbers don't bleed into the next level (#1 + #5).
+            autoTestAi.onLeaveLevel()
+
             currentLevel = currentLevel + 1
 
             if currentLevel < levelsSize then
@@ -75,8 +82,12 @@ local function levelsTestModeOnStep(self, scene)
 
     if scene == "TitleScene" and framesOnScene > 2 then
         levels = RPD.DungeonGenerator:getLevelsList()
-        local classes = {"WARRIOR","MAGE","ROGUE","HUNTRESS","ELF","NECROMANCER","GNOLL"}
-        GameControl:startNewGame(classes[math.random(1, #classes)], 2, true)
+        local classes = {"WARRIOR","MAGE","ROGUE","HUNTRESS","ELF","NECROMANCER","GNOLL","PRIEST","DOCTOR"}
+        local difficulties = { 0, 1, 2, 3 } -- Snail, Rat, Gnoll, Crab
+        local heroClass = classes[math.random(1, #classes)]
+        local difficulty = difficulties[math.random(1, #difficulties)]
+        RPD.glog("autoTest: starting %s difficulty %d", heroClass, difficulty)
+        GameControl:startNewGame(heroClass, difficulty, true)
     end
 end
 

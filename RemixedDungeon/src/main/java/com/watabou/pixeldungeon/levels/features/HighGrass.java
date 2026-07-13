@@ -31,12 +31,12 @@ public class HighGrass {
 
 			// Dew
 			if (herbalismLevel >= 0 && Random.Int(6) <= Random.Int(herbalismLevel + 1)) {
-				Treasury.getLevelTreasury().random(Dewdrop.class.getSimpleName()).doDrop(ch);
+				Treasury.getLevelTreasury().random(Dewdrop.class.getSimpleName()).dropAt(ch);
 			}
 
 			// Seed
 			if (herbalismLevel >= 0 && Random.Int(18) <= Random.Int(herbalismLevel + 1)) {
-				Treasury.getLevelTreasury().random(Treasury.Category.SEED).doDrop(ch);
+				Treasury.getLevelTreasury().random(Treasury.Category.SEED).dropAt(ch);
 			}
 		}
 
