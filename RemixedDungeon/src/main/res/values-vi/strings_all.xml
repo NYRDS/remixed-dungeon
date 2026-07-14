@@ -280,6 +280,7 @@
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
     <string name="town_deco_entrance_name">cổng vào</string>
     <string name="town_deco_pathway_name">đường mòn</string>
+    <string name="town_deco_pillar_desc">Ngày xưa, cột này từng đóng vai trò là đỡ đẹp đẽ và trang trí.</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
     <string name="town_deco_potions_name">Thuốc</string>
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
@@ -341,6 +342,8 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
 
 
 
