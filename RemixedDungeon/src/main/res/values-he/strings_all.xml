@@ -226,6 +226,7 @@
     <string name="StartScene_DifficultySelect">בחר את גורלך</string>
     <string name="StartScene_Load">טען משחק</string>
     <string name="StartScene_New">משחק חדש</string>
+    <string name="StrongShield_desc">המגן המלבני הזה מצופה בלוחות ברזל ומקושט בבד צבעוני. הוא כבד משמעותית, אך מסוגל לחסום נזק רב יותר.</string>
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
     <string name="Swarm_Name">נחיל זבובים</string>
     <string name="TitleScene_Highscores">ציונים גבוהים</string>
@@ -252,6 +253,7 @@
     <string name="WeaknessBuff_Name">נחלש</string>
     <string name="Weightstone_Name">אבן משקל</string>
     <string name="Weightstone_WndCancel">לא נורא</string>
+    <string name="WindGust_Name">משב רוח</string>
     <string name="WndDonate_goldDonateText">תודה על עזרתך</string>
     <string name="WndHero_Awareness">מודעות</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
@@ -276,6 +278,7 @@
     <string name="WndTradeItem_Sold">מכרת את ה-%1 תמורת %2</string>
     <string name="WrnExperimental_title">אפשרויות ניסיוניות הופעלו!</string>
     <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
+    <string name="ZombieGnoll_Info">גנול-זומבי קם מהמתים!</string>
     <string name="town_deco_armoronhanger_name">שריון</string>
     <string name="town_deco_armorstand_leather_desc">שריון עור אמין יהיה רכישה מצוינת לפני היציאה לצינוק.</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
@@ -295,6 +298,9 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 

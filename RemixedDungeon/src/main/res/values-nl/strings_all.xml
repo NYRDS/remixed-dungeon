@@ -70,6 +70,7 @@
     <string name="Eye_Gender">neuter</string>
     <string name="Fire_Info">Hier woedt een vuur.</string>
     <string name="Fire_Name_1">Vlamend %s</string>
+    <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Halberd_Gender">feminine</string>
@@ -281,6 +282,7 @@
     <string name="Wnd_Button_Back">Terug</string>
     <string name="WoodenBow_Name">houten boog</string>
     <string name="Worm_Name_Objective">worm</string>
+    <string name="Wraith_Desc">Een wraith is de wraakzuchtige geest van een zondaar, wiens graf of grafkelder werd verstoord. Als een etherische entiteit is het zeer lastig te raken met een gewoon wapen.</string>
     <string name="Wraith_Name">wraith</string>
 
     <string name="WrnExperimental_title">Experimentele opties ingeschakeld!</string>
@@ -319,6 +321,8 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 
