@@ -256,6 +256,7 @@
     <string name="Wand_Fizzles">השרביט שלך מפצפץ; כנראה נגמרו המטענים שלו עכשיו</string>
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
     <string name="WarHammer_Name">פטיש מלחמה</string>
+    <string name="WarriorArmor_Desc">למרות שהשריון הזה נראה כבד, הוא מאפשר ללוחם לבצע זינוק הירואי לעבר מיקום מטרה, ולנחות עם מכה שמממת את כל האויבים השכנים.</string>
     <string name="WarriorArmor_Name">שריון לוחם</string>
     <string name="WaterElemental_Name">יסוד מים</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
@@ -298,6 +299,7 @@
     <string name="town_deco_entrance_name">כניסה</string>
     <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_glass_name">חלון רחב</string>
+    <string name="town_deco_hay_desc">ערימה קטנה של שחת ריחני</string>
     <string name="town_deco_library_sign_name">שלט ספרייה</string>
     <string name="town_deco_pathway_name">שביל</string>
     <string name="town_deco_pole_name">עמוד</string>
@@ -311,6 +313,8 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 
