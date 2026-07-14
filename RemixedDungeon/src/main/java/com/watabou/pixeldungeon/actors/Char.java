@@ -912,6 +912,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @Override
     public void spend(float d_t) {
+        // A dead/dying char never advances time. On death Belongings.dropAll() -> doDrop/doUnequip
+        // calls spend per carried item, which would bill N*spend to a corpse during someone else's
+        // turn (double-spend). Skipping here also avoids waste (artifact cooldowns, spell timers,
+        // spend-trace recording) for a char that is about to leave the actor queue.
+        if (!isAlive()) {
+            return;
+        }
+
         float scaledTime = d_t * timeScale();
 
         for (Item item : getBelongings()) {

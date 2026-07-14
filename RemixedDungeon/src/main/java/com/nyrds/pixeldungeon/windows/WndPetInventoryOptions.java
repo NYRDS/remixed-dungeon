@@ -50,7 +50,7 @@ public class WndPetInventoryOptions extends WndOptions {
         GameScene.show(
             new WndBag(client.getBelongings(),
                         heroBackpack,
-                        new GiveToPetSelector(pet),
+                        new GiveToPetSelector((Hero) client, pet),
                         WndBag.Mode.ALL,
                         StringsManager.getVar(R.string.PetInventory_GiveToPet)));
     }
@@ -59,7 +59,7 @@ public class WndPetInventoryOptions extends WndOptions {
         GameScene.show(
             new WndBag(pet.getBelongings(),
                         petBackpack,
-                        new TakeFromPetSelector(pet),
+                        new TakeFromPetSelector((Hero) client, pet),
                         WndBag.Mode.ALL,
                         StringsManager.getVar(R.string.PetInventory_TakeFromPet)));
     }
