@@ -53,6 +53,7 @@
     <string name="Death_Name_0">Quỷ %s</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DewVial_Name">lọ sương</string>
+    <string name="DieHardBuff_Info">Tốc độ hồi phục tăng lên.</string>
     <string name="DonateButton_thanks">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="DriedRoseBuff_Info">Bông hồng trông rất quyến rũ.</string>
     <string name="DriedRose_Info2"> Và nó vẫn chưa mất đi sự quyến rũ của mình. Nó trông đẹp đến mức bạn muốn giữ nó mãi mãi.</string>
@@ -158,6 +159,7 @@
     <string name="PseudoRat_Name_Objective">chuột giả</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="Rat_Name_Objective">chuột túi</string>
+    <string name="ResultDescriptions_Necromancy">Hết sức lực khi cố gắng hồi sinh xác ở tầng %d</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
     <string name="RingOfElements_Name">Nhẫn của các Nguyên tố</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
@@ -225,6 +227,7 @@
     <string name="Torch_Info">Đây là một vật phẩm không thể thiếu trong Các Điện Thần Quỷ, những nơi nổi tiếng với ánh sáng môi trường kém.</string>
     <string name="TownGuardNPC_Message1">Đi tiếp nào.</string>
     <string name="TownGuardNPC_Name">bảo vệ trấn</string>
+    <string name="TownsfolkNPC_Message1">A! Một phiêu lưu gia nữa, tuyệt vời! Hãy chắc chắn lấy càng nhiều đồ giá trị càng tốt!</string>
     <string name="ToxicGland_Name">Tuyến độc</string>
     <string name="TrapWnd_Title">Cạm bẫy</string>
     <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
@@ -303,6 +306,7 @@
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_vat_name">chậu</string>
+    <string name="town_deco_wall_beam_desc">Dùng làm một điểm tựa vững chắc cho công trình này.</string>
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
@@ -354,6 +358,10 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
 
 
 

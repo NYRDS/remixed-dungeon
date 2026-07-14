@@ -30,6 +30,7 @@
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Descriptions_6">De oude kunst van runen lezen is verboden en wordt tegen alle kosten vermeden, vanwege de vloek die rust op elk perkament dat de kelder of haar omgeving binnenbereikt.</string>
     <string name="Challenges_Names_3">Woestijn</string>
+    <string name="ChampionOfEarthBuff_Name">Kampioen van de Aarde</string>
     <string name="ChaosCrystal_Fuse">SMETEN</string>
     <string name="ChaosSword_Name">chaoszwaard</string>
     <string name="CharAction_Push">duwen</string>
@@ -82,6 +83,7 @@
     <string name="Heal_Cast">%s is genezen.</string>
     <string name="Heap_Mimic">Dit is een mimic!</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
+    <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
     <string name="HeroClass_GnollPerks_3">Gnollen kunnen niet lezen of schrijven.</string>
     <string name="HeroClass_GnollPerks_4">Gnollen vallen geen andere Gnollen aan tenzij ze worden uitgedaagd</string>
     <string name="HeroClass_Mag">magier</string>
@@ -202,6 +204,7 @@
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
+    <string name="SpiderEgg_Name_Objective">spinnenei</string>
     <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
     <string name="SpiritOfPain_Desc">Een splinter van levende duisternis.</string>
@@ -335,6 +338,11 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
 
 
 

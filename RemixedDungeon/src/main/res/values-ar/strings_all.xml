@@ -169,6 +169,7 @@
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Death">مِتَّ مِن السم...</string>
     <string name="PortalGate_Desc_Activated">البوابة تتسرب منها مادة متوهجة من نوع ما. تبدو ساكنة تماماً، لولا التموجات القادمة من مركزها.</string>
+    <string name="PortalGate_Name">بوابة</string>
     <string name="PortalGate_Used">لمست البوابة و... لم يحدث شيء.</string>
     <string name="PotionBelt_Name">حزام جرعات</string>
     <string name="PotionOfMana_Name">إكسير المانا</string>
@@ -294,6 +295,7 @@
     <string name="WndRanking_StaEnemies">وحوش مقتولة</string>
     <string name="WndRanking_StaStr">القوة</string>
     <string name="WndResurrect_No">لا، أستسلم</string>
+    <string name="WndSettings_Immersive">وضع الغمر</string>
     <string name="WndSettings_InGameUiSettings">إعدادات واجهة المستخدم</string>
     <string name="WndSettings_Quickslots">فتحات سريعة</string>
     <string name="WndStory_Sewers">يقع الزنزانة مباشرة تحت المدينة، حيث تشكل مستوياته العليا نظام الصرف الصحي للمدينة. وباعتبارها اسمياً جزءاً من المدينة، فإن هذه المستويات ليست خطرة جداً. لن يسميها أحد مكاناً آمناً، لكنك على الأقل لن تضطر للتعامل مع الكثير من السحر الشرير هنا.</string>
@@ -328,6 +330,7 @@
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
 
     <string name="town_deco_slush_name">الثلج المذاب</string>
+    <string name="town_deco_snow_name">ثلج</string>
     <string name="town_deco_stone_wall_desc">بشكل ما، هذا الجدار يصدر حرارة ويبدو رطباً قليلاً.</string>
     <string name="town_deco_stone_wall_name">جدار حجري</string>
     <string name="town_deco_vat_name">حوض</string>
@@ -338,6 +341,11 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
 
 
 

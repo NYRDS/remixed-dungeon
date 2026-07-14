@@ -111,6 +111,7 @@
     <string name="HeroSubClass_NameAssa">מתנקש</string>
     <string name="HeroSubClass_NameFreR">רץ חופשי</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
+    <string name="Hero_Name_Objective">אותך</string>
     <string name="Hero_StaPoison">אתה מורעל!</string>
     <string name="HungerBuff_Name2">מורעב</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
@@ -213,6 +214,7 @@
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
     <string name="Shaman_Name">שמאן גנול</string>
+    <string name="Shaman_Name_Objective">גנול שאמאן</string>
     <string name="Sheep_Desc">זוהי כבשה קסומה. מה קסום בה? אינך יכול להרוג אותה. היא תעמוד במקום עד שתיעלם בקסם, בזמן שהיא לועסת גרה במבט ריק.</string>
     <string name="ShieldInfoTemplate">מגן זה יחסום עד %1 נזק נכנס. עם סיכוי של %2 %%. ייקח %3.1f שניות להתאושש לאחר חסימה מוצלחת.</string>
     <string name="Shopkeeper_Name">סוחר</string>
@@ -277,6 +279,7 @@
     <string name="WndRanking_StaStr">כוח</string>
     <string name="WndResurrect_Yes">כן, אני אלחם!</string>
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
+    <string name="WndSettingsInGame_GameLog">יומן משחק</string>
     <string name="WndTradeItem_Bought">רכשת את %1 תמורת %2</string>
     <string name="WndTradeItem_Buy">קנה ב-%d זהב</string>
     <string name="WndTradeItem_Sale">למכירה: %1$s - %2$dג</string>
@@ -306,6 +309,11 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 
