@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="Abilities_Common">التعاويذ الشائعة</string>
     <string name="AboutScene_Sound">الصوت:</string>
@@ -9,6 +8,7 @@
     <string name="AmokArrow_Name">سهم الهياج</string>
     <string name="AmokBuff_Info">اختبر نوبة الهيجان، الآخذة لأرواح البؤساء.</string>
     <string name="AnesthesiaBuff_Info">لا يشعر بالألم ولا يستيقظ من الهجمات، لكنه لا يزال يتلقى الضرر.</string>
+    <string name="Anesthesia_Info">يُسبّب نومًا عميقًا وغير طبيعي لهدفك. حتى أعنف الهجمات لن توقظهم من هذا النوم.</string>
     <string name="ArmorKit_Upgraded">لقد قمت بتطبيق مجموعة الدروع لترقية %s</string>
     <string name="Armor_Incompatible">تفاعل أنواع مختلفة من السحر محا الرموز السحرية على هذه الدروع!</string>
     <string name="Armor_Info3">\n\nنظراً لأن قوتك غير كافية، فإن ارتداء هذه الدروع سيقلل من سرعة حركتك ومهاراتك الدفاعية.</string>
@@ -27,6 +27,7 @@
     <string name="Badges_PotionsCooked5">تم تحضير 25 جرعة</string>
     <string name="Badges_StrengthAttained3">تم تحقيق 17 نقطة من القوة</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
+    <string name="Barrel_Name">برميل</string>
     <string name="Bat_Desc">هؤلاء السكان السريعون والعنيدون في قباب الكهوف قد يهزمون خصوماً أكبر بكثير من خلال تجديد صحتهم مع كل ضربة ناجحة.</string>
     <string name="Bee_Gender">masculine</string>
     <string name="BellaNPC_No">لا، ليس معك</string>
@@ -60,17 +61,18 @@
     <string name="CorpseExplosion_Info">يحول الجثة إلى سحابة قاتلة من الغاز السام، تنشر المرض والسم على جميع الأعداء القريبين.</string>
     <string name="Crab_Name">سرطان المجاري</string>
     <string name="Crystal_Name">بلورة طافية</string>
-    <string name="DarkGold_Info">يُسمى هذا المعدن \"المظلم\" ليس بسبب لونه (فهو لا يختلف عن الذهب العادي)، بل لأنه يذوب في ضوء النهار، مما يجعله عديم الفائدة على السطح.</string>
+    <string name="DarkGold_Info">يُسمى هذا المعدن \&quot;المظلم\&quot; ليس بسبب لونه (فهو لا يختلف عن الذهب العادي)، بل لأنه يذوب في ضوء النهار، مما يجعله عديم الفائدة على السطح.</string>
     <string name="Deathling_Name">ميت صغير</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">تم تحويل الألم إلى ألم بطيء، مما يقلل الضرر المتلقى دفعة واحدة.\nالضرر المتبقي لتلقيه %d</string>
     <string name="DieHardBuff_Name">الموت الصعب</string>
     <string name="DieHardSpell_Name">موت صعب</string>
     <string name="Displacement_Txt">%s الإزاحة</string>
-    <string name="DoctorArmor_Info">تسمح هذه الدروع الخاصة بطبيب الطاعون باستخدام قدرة \"سحابة الميزما\"، التي تطلق غازاً ساماً يسمم ويضعف ويشوش الأعداء. الطبيب، المحمي بقناعه، منيع ضد هذه التأثيرات.</string>
+    <string name="DoctorArmor_Info">تسمح هذه الدروع الخاصة بطبيب الطاعون باستخدام قدرة \&quot;سحابة الميزما\&quot;، التي تطلق غازاً ساماً يسمم ويضعف ويشوش الأعداء. الطبيب، المحمي بقناعه، منيع ضد هذه التأثيرات.</string>
     <string name="DoctorArmor_Name">ثوب الطبيب</string>
     <string name="DreadKnight_Name">فارس الرعب</string>
     <string name="DreadKnight_Name_Objective">فارس الرعب</string>
+    <string name="DriedRoseBuff_Info">الوردة تبدو ساحرة جداً.</string>
     <string name="DriedRose_Info2"> ولم تفقد سحرها. تبدو جميلة جدًا، لدرجة أنك تريد الاحتفاظ بها إلى الأبد.</string>
     <string name="DriedRose_Name">وردة مجففة</string>
     <string name="DrunkardNPC_Name">سكران</string>
@@ -87,7 +89,7 @@
     <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
-    <string name="Golem_Desc">حاول القزم دمج معرفتهم بالآليات مع قوتهم المكتشفة حديثاً في ربط العناصر. استخدموا أرواح الأرض كـ \"روح\" لأجساد الغوليم الميكانيكية، والتي كان يُعتقد أنها الأكثر قابلية للسيطرة. على الرغم من ذلك، فإن أصغر خطأ في الطقوس قد يتسبب في اندلاع.</string>
+    <string name="Golem_Desc">حاول القزم دمج معرفتهم بالآليات مع قوتهم المكتشفة حديثاً في ربط العناصر. استخدموا أرواح الأرض كـ \&quot;روح\&quot; لأجساد الغوليم الميكانيكية، والتي كان يُعتقد أنها الأكثر قابلية للسيطرة. على الرغم من ذلك، فإن أصغر خطأ في الطقوس قد يتسبب في اندلاع.</string>
     <string name="Guts_TileWater">سائل لزج غريب</string>
     <string name="Halls_TileStatue">عمود</string>
     <string name="Halls_TileWater">لावा باردة</string>
@@ -141,6 +143,7 @@
     <string name="LightBuff_Name">مضيء</string>
     <string name="LloidsBeacon_Creatures">الهالة النفسية للكائنات المجاورة لا تسمح لك باستخدام منارة لويد في هذه اللحظة.</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
+    <string name="MageArmor_ACSpecial">أرض منصهرة</string>
     <string name="MailArmor_Name">درع حلقي</string>
     <string name="MeleeWeapon_Info1c">مُطوَّر</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
@@ -152,6 +155,7 @@
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
     <string name="Mob_GoingTo">يتحرك بالفعل!</string>
     <string name="Mob_StaHuntingStatus">هذا %s يصطاد</string>
+    <string name="Mods_AuthorEmail">بريد المؤلف الإلكتروني:</string>
     <string name="Mods_RestartRequired">مطلوب إعادة تشغيل</string>
     <string name="NecromancerNPC_Intro">آه! يا له من منظر نادر! زميل مغامر ليس مجرد جثة بلا حياة! لا يكاد يصدق! أوه... أعتذر، أحياناً أشعر بالحماس الشديد. ترى، أنا نِكْرومانسي (ساحر الموتى). وعلى الرغم من أن دراسة الموتى والموت نفسه هو مهنتي، إلا أن رؤية نفس الأشياء مراراً وتكراراً تصبح مرهقة للغاية في النهاية. من ناحية أخرى، هذا هو السبب بالضبط في وجودي هنا. وفقاً لحساباتي، في غضون أسابيع قليلة، في مكان ما في هذا الزنزانة بالذات، سيحدث شيء مذهل. الـ _نِكْرُوبُولِس_ (المقبرة القديمة)، مدينة الموتى القديمة، ستفتح أبوابها. و... لا يمكنني حقاً قول الكثير، لقد أضعت وقتاً كافياً كما هو الحال. أنا بحاجة للاستعداد، _عد لاحقاً_.</string>
     <string name="NecromancerNPC_Message2">يجب أن أكون جاهزاً.</string>
@@ -167,6 +171,7 @@
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Death">مِتَّ مِن السم...</string>
     <string name="PortalGate_Desc_Activated">البوابة تتسرب منها مادة متوهجة من نوع ما. تبدو ساكنة تماماً، لولا التموجات القادمة من مركزها.</string>
+    <string name="PortalGate_Name">بوابة</string>
     <string name="PortalGate_Used">لمست البوابة و... لم يحدث شيء.</string>
     <string name="PotionBelt_Name">حزام جرعات</string>
     <string name="PotionOfMana_Name">إكسير المانا</string>
@@ -177,6 +182,7 @@
     <string name="Potion_SelectForMoisten">اختر العنصر للترطيب</string>
     <string name="Potion_SureThrow">هل أنت متأكد أنك تريد رميه؟ في معظم الحالات، من المنطقي شربه.</string>
     <string name="Potion_Yes">نعم، أعرف ما أفعل</string>
+    <string name="PseudoPasty_Info">هذا فطيرة كورنيش أصلية مع حشوة تقليدية من اللحم والبطاطس.</string>
     <string name="PseudoRat_Name">فأر كاذب</string>
     <string name="PseudoRat_Name_Objective">فأر كاذب</string>
     <string name="Quest_DarkGoldOre_full_name">خام الذهب الداكن</string>
@@ -189,6 +195,7 @@
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="RingOfHerbalism_Info">يزيد هذا الخاتم من فرصك في جمع الندى والبذور من العشب المفرود.</string>
     <string name="RingOfThorns_Info">على الرغم من أن هذا الخاتم لا يوفر أشواكاً حقيقية، فإن أي عدو يهاجمك سيُجرح بجزء من الضرر الذي يلحقه بك. تحسين هذا الخاتم لن يمنح أي مكافآت إضافية.</string>
+    <string name="Ring_BuffKnown">هذا %s</string>
     <string name="Ring_Gems_1">الأوبال</string>
     <string name="RogueArmor_ACSpecial">قنبلة دخان</string>
     <string name="RottenFood_Message">مقزز!</string>
@@ -222,7 +229,7 @@
     <string name="SociologistNPC_Desc">هذا العالِم الاجتماعي في رحلة مقدسة لجمع الآراء العامة</string>
     <string name="Sorrowmoss_Desc">الزنبق الحزين هو زهرة (وليس طحلب) ذات بتلات حادة كالموس، مغطاة بسم قاتل.</string>
     <string name="Sorrowmoss_Name">طحلب الحزن</string>
-    <string name="SpellBook_Info_Identified">في هذه الصفحات اكتشفت النص الكامل للتعويذة \"%1$s\".\n\" %2$s \"</string>
+    <string name="SpellBook_Info_Identified">في هذه الصفحات اكتشفت النص الكامل للتعويذة \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
     <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
@@ -230,8 +237,9 @@
     <string name="Sprout_Info">أيقظ البذور النائمة.\nومع ذلك، يجب أن تكون هناك بعض النباتات على الأرض لكي ينجح هذا التعويذ.</string>
     <string name="StartScene_DifficultySelect">اختر قدرك</string>
     <string name="StartScene_New">لعبة جديدة</string>
-    <string name="StartScene_WinGame">لفتح \"التحديات\"، أكمل اللعبة مع أي فئة شخصية.</string>
+    <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
     <string name="Stench_Txt">%s نتن</string>
+    <string name="Stylus_Info">هذا القلم السحري مصنوع من حجر داكن وصلب جداً. يمكنك به نقش رمز أو رونه، لكن القلم هو من يختار ما سينقش، ليس أنت.</string>
     <string name="SummonBeast_AtYourCommand">يأتي الوحش بأمرك!</string>
     <string name="SungrassBuff_Name">الشفاء بالأعشاب</string>
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
@@ -245,6 +253,8 @@
     <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
     <string name="TownGuardNPC_Message3">هل تظن أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، ذلك لأن هذه المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
     <string name="TownGuardNPC_Name">حارس المدينة</string>
+    <string name="TownsfolkMovieNPC_Message">هل تعرف تلك الخدمة الخاصة التي تقدمها \&quot;المسارح السينمائية\&quot;؟ للأسف يطلبون شيئاً غريباً يسمى \&quot;الإنترنت\&quot;، لم أسمع به قط من قبل.</string>
+    <string name="TownsfolkNPC_Message2">أصبحت المدينة ثرية بفضل ذلك الزنزانة، لذا يستطيع الجميع هنا تحمل تكاليف العطلات متى شاؤوا! لهذا السبب يوجد عدد قليل جداً من الناس هنا الآن.</string>
     <string name="ToxicGland_Name">غدة سامة</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
@@ -279,7 +289,7 @@
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
 
     <string name="WndLocalModInstall_text">اختر الدليل لتثبيت المود منه</string>
-    <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \"إعلان\" مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
+    <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \&quot;إعلان\&quot; مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
     <string name="WndPlayGames_RestoreProgress">استعادة تقدم اللعبة</string>
     <string name="WndPlayGames_Show_Error">فشلت العملية. حدث خطأ ما...</string>
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
@@ -288,7 +298,9 @@
     <string name="WndRanking_StaEnemies">وحوش مقتولة</string>
     <string name="WndRanking_StaStr">القوة</string>
     <string name="WndResurrect_No">لا، أستسلم</string>
+    <string name="WndSettings_Immersive">وضع الغمر</string>
     <string name="WndSettings_InGameUiSettings">إعدادات واجهة المستخدم</string>
+    <string name="WndSettings_Quickslots">فتحات سريعة</string>
     <string name="WndStory_Sewers">يقع الزنزانة مباشرة تحت المدينة، حيث تشكل مستوياته العليا نظام الصرف الصحي للمدينة. وباعتبارها اسمياً جزءاً من المدينة، فإن هذه المستويات ليست خطرة جداً. لن يسميها أحد مكاناً آمناً، لكنك على الأقل لن تضطر للتعامل مع الكثير من السحر الشرير هنا.</string>
     <string name="WndStory_Spiders">منذ سنوات عديدة مضت كان هناك منجم غني مليء بالحجارة السحرية. لكن عندما جفت عروق المعادن غادر عمال المناجم تاركين خلفهم شبكة واسعة من الأنفاق. في نهاية المطاف سكن هذا المكان العناكب. لكن حتى هذه المخلوقات الخطيرة الكامنة في الظلام لم تكن كافية لإخافة الشجعان والمجانين الذين يتوقون للكنوز التي قد توجد في المناجم. فمدى الخطر يتناسب دائماً مع كمية الشائعات التي تتحدث عن القطع الأثرية السحرية. ذات مرة تجولت ساحرة شريرة في الأنفاق محاولاً الهروب من الملاحقين. لكن الناس المتشائمون لم يجرؤوا على دخول الظلام. لذا قرروا الانتظار. لكنها لم تظهر أبداً. ربما وجدت الساحرة مخرجاً آخر، أو ربما تمكنت من التسلل بجانب الحراس... أو أنها هلكت محاطة بحفيف مخلوقات الظلام.</string>
     <string name="WndTradeItem_Buy">شراء بـ %dغ</string>
@@ -302,6 +314,7 @@
     <string name="town_deco_armorstand_scale_name">درع حرشفي</string>
     <string name="town_deco_bell_desc">جرس كنيسة تقليدي. يبدو أن أحداً لم يقرعه منذ وقت طويل، وحتى الحبل مفقود.</string>
     <string name="town_deco_blue_carpet_name">سجادة</string>
+    <string name="town_deco_canvas_name">قماش</string>
     <string name="town_deco_cinema_sign_desc">يبدو أن هناك سينما داخل هذا المبنى.</string>
     <string name="town_deco_counter_name">كونتر</string>
     <string name="town_deco_crate_bottles_name">صندوق بيرة</string>
@@ -320,7 +333,9 @@
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
 
     <string name="town_deco_slush_name">الثلج المذاب</string>
+    <string name="town_deco_snow_name">ثلج</string>
     <string name="town_deco_stone_wall_desc">بشكل ما، هذا الجدار يصدر حرارة ويبدو رطباً قليلاً.</string>
+    <string name="town_deco_stone_wall_name">جدار حجري</string>
     <string name="town_deco_vat_name">حوض</string>
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
 
@@ -329,6 +344,26 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

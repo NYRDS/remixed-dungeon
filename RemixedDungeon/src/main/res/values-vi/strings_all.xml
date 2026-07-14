@@ -1,9 +1,11 @@
 <resources>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
     <string name="AllowStatisticsCollectionScene_Title">Thu thập thống kê sử dụng</string>
+    <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \&quot;thuyết phục\&quot; nó làm như vậy.</string>
     <string name="Amulet_Name">Bùa Yendor</string>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
     <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
+    <string name="Badges_AllPotions">Tất cả thuốc đã được nhận dạng</string>
     <string name="Badges_AllRings">Đã nhận diện tất cả nhẫn</string>
     <string name="Badges_BossSlain1">Goo đã bị tiêu diệt</string>
     <string name="Badges_DeathGlyph">Chết vì glyph</string>
@@ -18,6 +20,7 @@
     <string name="BattleAxe_Info">Đầu rìu thép khổng lồ của chiếc rìu chiến này mang lại trọng lượng đáng kể cho mỗi cú gảy.</string>
     <string name="BattleAxe_Name">rìu chiến đấu</string>
     <string name="BishopNPC_Desc">Giám mục của Giáo hội Thánh của Santa Chúa Sâu</string>
+    <string name="BishopNPC_Name">Giám mục</string>
     <string name="BishopNPC_Name_Objective">giám mục</string>
     <string name="Bishop_title">Giám mục</string>
     <string name="BlackCat_Gender">feminine</string>
@@ -36,6 +39,9 @@
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
     <string name="Char_Hit_2">%1$s đánh trúng %2$s</string>
+    <string name="Char_StaDodged_0">tránh</string>
+    <string name="Char_StaDodged_1">tránh</string>
+    <string name="Char_StaDodged_2">tránh</string>
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
 
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
@@ -47,7 +53,9 @@
     <string name="Death_Name_0">Quỷ %s</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DewVial_Name">lọ sương</string>
+    <string name="DieHardBuff_Info">Tốc độ hồi phục tăng lên.</string>
     <string name="DonateButton_thanks">Cảm ơn sự hỗ trợ của bạn!</string>
+    <string name="DriedRoseBuff_Info">Bông hồng trông rất quyến rũ.</string>
     <string name="DriedRose_Info2"> Và nó vẫn chưa mất đi sự quyến rũ của mình. Nó trông đẹp đến mức bạn muốn giữ nó mãi mãi.</string>
     <string name="DriedRose_Name">hoa hồng khô</string>
     <string name="DrunkardNPC_Name">người say xỉn</string>
@@ -88,10 +96,12 @@
     <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="HeroSubClass_NameWitchdoctor">thầy pháp</string>
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
+    <string name="Horror_Name_0">Quái dị %s</string>
     <string name="HungerBuff_Info1">Bạn đang đói!</string>
     <string name="HuntressArmor_NotHuntress">Chỉ thợ săn mới có thể sử dụng giáp này!</string>
     <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
     <string name="IceCaves_TileGrass">Cỏ đóng băng.</string>
+    <string name="IceGuardianCore_DieInfo">Ở đây quá lạnh, tôi nên quay lại cấp 14 và cố gắng tìm đường đến nơi ấm áp hơn.</string>
     <string name="Imp_Monks1">Bạn có phải là phiêu lưu gia? Tôi yêu thích những phiêu lưu gia! Bạn luôn có thể dựa vào họ khi cần giết cái gì đó. Đúng không? Dĩ nhiên là phải trả tiền ;)\nTrong trường hợp của tôi là _mönk_ cần bị tiêu diệt. Các bạn thấy, tôi định mở một chút kinh doanh ở đây, nhưng những kẻ điên khùng này không mua gì cả và sẽ làm hoảng sợ khách khác. Vậy hãy giúp tôi tiêu diệt... nói là _8 người_ và phần thưởng sẽ thuộc về bạn.</string>
     <string name="InnKeeperNPC_Desc">Chủ quán rất tự hào về bản thân.</string>
     <string name="InnKeeperNPC_Name">chủ quán</string>
@@ -125,6 +135,7 @@
     <string name="Mob_StaWanderingStatus">%s đang lang thang</string>
     <string name="Moongrace_Desc">Những loài cây này mọc ít ỏi và được biết đến như một nguồn phép thuật tự nhiên.</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
+    <string name="MysteryMeat_Message">Món ăn này có vị... lạ.</string>
     <string name="NecromancerArmor_Info">Bộ giáp này cho phép Pháp sư Hắc huyết triệu hồi tối đa hai Deathling, mỗi thứ tốn 5 linh hồn. Những tôi tớ bất tử này sẽ theo chủ và tấn công kẻ thù. Deathling sẽ trở nên mạnh hơn theo cấp độ anh hùng.</string>
     <string name="NecromancerArmor_Name">Áo giáp xương</string>
     <string name="NecromancerNPC_Intro">À! Thật một cảnh hiếm! Một người bạn đồng hành phiêu lưu không chỉ là một xác chết. Hầu như không thể tin được! Ô... Xin lỗi, đôi khi tôi quá hào hứng. Bạn thấy, tôi là một pháp sư chết chóc. Và dù nghiên cứu xác chết và chính cái chết là nghề nghiệp của tôi, nhưng nhìn thấy những điều giống nhau lặp đi lặp lại cuối cùng cũng cực kỳ mệt mỏi. Mặt khác, đó chính là lý do tôi ở đây. Theo tính toán của tôi, chỉ trong vài tuần nữa, ở đâu đó trong hầm ngục này, sẽ xảy ra một chuyện kỳ diệu. _Necropolis_, một thành phố cổ của người chết sẽ mở cửa. Và... tôi không thể nói thêm, tôi đã lãng phí đủ thời gian. Tôi cần chuẩn bị, _hãy quay lại sau_.</string>
@@ -143,11 +154,14 @@
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
     <string name="Potion_RuneDissaperaed">Chữ ký biến mất khỏi %s.</string>
     <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
+    <string name="PseudoPasty_Info">Đây là chiếc bánh nhân Cornwall chính hiệu với nhân truyền thống là thịt bò và khoai tây.</string>
     <string name="PseudoPasty_Name">bánh nhúng</string>
     <string name="PseudoRat_Name">chuột giả</string>
     <string name="PseudoRat_Name_Objective">chuột giả</string>
+    <string name="Pumpkin_Name">Bí ngô</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="Rat_Name_Objective">chuột túi</string>
+    <string name="ResultDescriptions_Necromancy">Hết sức lực khi cố gắng hồi sinh xác ở tầng %d</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
     <string name="RingOfElements_Name">Nhẫn của các Nguyên tố</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
@@ -192,6 +206,7 @@
     <string name="ShortSword_Name">kiếm ngắn</string>
     <string name="SlowBuff_Name">Làm chậm</string>
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
+    <string name="SoulShard_Info">Đây là một mảnh vỡ lấy từ tàn tích của Hũ Linh Hồn. Nó lấp lánh với sức mạnh bí ẩn, có lẽ có ai đó quan tâm đến thứ như thế này.</string>
     <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
@@ -203,6 +218,9 @@
     <string name="StartScene_DifficultySelect">Chọn số phận của bạn</string>
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
+    <string name="StartScene_UnlockGnoll">Để mở khóa lớp này, bạn phải thuyết phục linh mục làng chữa lành cho Gnoll Brute</string>
+    <string name="Stylus_Info">Chiếc bút bí ẩn này được làm từ một loại đá đen và rất cứng. Bạn có thể dùng nó để khắc các ký tự hoặc rune, nhưng bút mới quyết định khắc cái gì, không phải bạn.</string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
     <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
@@ -214,6 +232,7 @@
     <string name="Torch_Info">Đây là một vật phẩm không thể thiếu trong Các Điện Thần Quỷ, những nơi nổi tiếng với ánh sáng môi trường kém.</string>
     <string name="TownGuardNPC_Message1">Đi tiếp nào.</string>
     <string name="TownGuardNPC_Name">bảo vệ trấn</string>
+    <string name="TownsfolkNPC_Message1">A! Một phiêu lưu gia nữa, tuyệt vời! Hãy chắc chắn lấy càng nhiều đồ giá trị càng tốt!</string>
     <string name="ToxicGland_Name">Tuyến độc</string>
     <string name="TrapWnd_Title">Cạm bẫy</string>
     <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
@@ -242,6 +261,7 @@
     <string name="WndGame_menu">Menu chính</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
     <string name="WndHero_Awareness">Nhận thức</string>
+    <string name="WndInstallingMod_please_wait">Đang cài đặt mod, vui lòng đợi...</string>
     <string name="WndJournal_Title">Nhật Ký</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
 
@@ -274,10 +294,13 @@
     <string name="town_deco_broken_wall_name">Bức tường vỡ</string>
     <string name="town_deco_brown_carpet_desc">Chiếc thảm nâu này đã bị đạp nát bởi nhiều phiêu lưu gia, người lang thang và người đi đường.</string>
     <string name="town_deco_cabinet_desc">Một tủ đồ rộng rãi với nhiều cánh cửa và ngăn kệ.</string>
+    <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
     <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \&quot;Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\&quot;.</string>
+    <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
     <string name="town_deco_entrance_name">cổng vào</string>
     <string name="town_deco_pathway_name">đường mòn</string>
+    <string name="town_deco_pillar_desc">Ngày xưa, cột này từng đóng vai trò là đỡ đẹp đẽ và trang trí.</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
     <string name="town_deco_potions_name">Thuốc</string>
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
@@ -288,6 +311,7 @@
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_vat_name">chậu</string>
+    <string name="town_deco_wall_beam_desc">Dùng làm một điểm tựa vững chắc cho công trình này.</string>
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
@@ -339,6 +363,27 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

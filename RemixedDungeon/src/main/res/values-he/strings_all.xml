@@ -64,6 +64,7 @@
     <string name="DashSpell_Name">הסתערות</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
+    <string name="DriedRoseBuff_Info">הוורד נראה מקסים מאוד.</string>
     <string name="DriedRose_Name">ורד יבש</string>
     <string name="Drunkard_Phrase_4">זזזזזז...</string>
     <string name="Dungeon_Tips_13">אין טעם להחזיק יותר מאנק אחד בו זמנית, כי תאבדו אותם בתחיית המתים.</string>
@@ -103,12 +104,14 @@
     <string name="HeroClass_NecromancerPerks_0">נקרומנטרים מתחילים עם 15 נקודות בריאות.</string>
     <string name="HeroClass_NecromancerPerks_3">נקרומנטרים מתחילים עם מפתח שלד ברמה 7.</string>
     <string name="HeroClass_Rog">נוכל</string>
+    <string name="HeroClass_WarPerks_3">כל פריט מזון משחזר מעט בריאות כאשר נאכל.</string>
     <string name="HeroSubClass_DescAssa">כאשר מבצעים התקפה מפתיעה, ה_מתנקש_ גורם נזק נוסף למטרתו.</string>
     <string name="HeroSubClass_DescShaman">אלפים _שמאנים_ יכולים להשתמש בשרביטים ככלי נשק לתקיפה מקרוב. לפגיעות מוצלחות יש סיכוי להפעיל את כוח השרביט על מטרה ללא שימוש בטעינה.</string>
     <string name="HeroSubClass_DescWarL">לאחר הריגת אויב, ה-וורלוק בולע את נשמתו. זה מרפא את פצעיו ומשביע את רעבונו.</string>
     <string name="HeroSubClass_NameAssa">מתנקש</string>
     <string name="HeroSubClass_NameFreR">רץ חופשי</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
+    <string name="Hero_Name_Objective">אותך</string>
     <string name="Hero_StaPoison">אתה מורעל!</string>
     <string name="HungerBuff_Name2">מורעב</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
@@ -151,6 +154,7 @@
     <string name="NecromancerNPC_Intro">איזה מחזה נדיר! הרפתקן שרק לא רק גופה חסרת חיים. בקושי ניתן להאמין! אה... סליחה, לפעמים אני מתרגש מדי. תראו, אני נקרומנסר. ואף על פי שלימוד המתים והמוות עצמו הוא עיסוקי, לראות את אותם דברים שוב ושוב נעשה מתיש בסופו של דבר. מצד שני, זה בדיוק הסיבה שאני כאן. לפי חישוב שלי, בעוד כמה שבועות, במקום כלשהו במבוך הזה, משהו מרהיב עומד לקרות. ה_נקרופוליס_, עיר עתיקה של המתים, עומדת לפתוח את שעריה. ואני... לא יכול לומר יותר, בזבזתי מספיק זמן. אני צריך להתכונן, _לחזור מאוחר יותר_.</string>
     <string name="Necrotism_Death">מתת מנקרוטיזם...</string>
     <string name="Nightmare_Gender">masculine</string>
+    <string name="Order_Resist">איך אתה מעז?!!</string>
     <string name="Paralysis_Name_2">מהממת %s</string>
     <string name="Pasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
     <string name="Pasty_Name">מאפה בשר</string>
@@ -195,6 +199,7 @@
     <string name="RottenPasty_Info">מאפה הבשר הזה נראה די מגעיל.</string>
     <string name="RottenPasty_Name">מאפה בשר מקולקל</string>
     <string name="RottenRation_Name">מנה רקובה</string>
+    <string name="RottingFist_Name">אגרוף מרקיב</string>
     <string name="Rudolph_Name">אף אדום וקרניים</string>
     <string name="ScarecrowNPC_Quest_End">אוי איזו שמחה, אוי איזו התרגשות!\nעל זה תקבל פרוסת פאי מתוקה!</string>
     <string name="ScarecrowNPC_Quest_Reminder">חמש סוכריות זה כל מה שאני צריך.\nאוי, הפרס יהיה כל כך מתוק!</string>
@@ -204,11 +209,13 @@
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
     <string name="ScrollOfRecharging_Name">מגילת טעינה</string>
     <string name="ScrollOfUpgrade_Name">מגילת שדרוג</string>
+    <string name="Scroll_Info">המגילה הזו מכוסה בכתב בלתי ניתן לפענוח, ונושאת כותרת של רונה %s. מי יודע מה יקרה כשיקראו אותה בקול רם?</string>
     <string name="ServantNPC_Name">מלצרית פונדק</string>
     <string name="ServiceManNPC_Desc">עובד רגיל של הממסדים המקומיים.</string>
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
     <string name="Shaman_Name">שמאן גנול</string>
+    <string name="Shaman_Name_Objective">גנול שאמאן</string>
     <string name="Sheep_Desc">זוהי כבשה קסומה. מה קסום בה? אינך יכול להרוג אותה. היא תעמוד במקום עד שתיעלם בקסם, בזמן שהיא לועסת גרה במבט ריק.</string>
     <string name="ShieldInfoTemplate">מגן זה יחסום עד %1 נזק נכנס. עם סיכוי של %2 %%. ייקח %3.1f שניות להתאושש לאחר חסימה מוצלחת.</string>
     <string name="Shopkeeper_Name">סוחר</string>
@@ -220,12 +227,15 @@
     <string name="SpiderArmor_Info">השריון הזה עשוי מכיטין ישן של עכביש וסוג כלשהו של בד. הכי מפתיע, נראה שהוא עדיין מכיל בלוטות עכביש מתפקדות. אם תלחץ על הלוחות מספיק חזק, הם יורים רשת. וסוליות מחורצות מאפשרות לך לנוע בחופשיות על רשת כזו.</string>
     <string name="SpiderElite_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של שומרי העילית משמש לבלבל את המטרה שלהם.</string>
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
+    <string name="SpiderMind_Name_Objective">עכביש-פסי</string>
     <string name="SpiderQueen_Desc">גוף של אישה יפה המשולב עם עכביש מחריד. כל היצורים החיים במאורה הזו הם משרתיה. מפגש עם הגברת יוצאת הדופן הזו עלול להתגלות כחוויה קטלנית. כי אתה פולש\!</string>
     <string name="SpiritOfPain_Desc">שבר של אפלה חיה.</string>
     <string name="Sprout_Info">הַעִיר אֶת הַזְּרָעִים הַיְשֵׁנִים.\nאַךְ צָרִיךְ לִהְיוֹת יְרַק עַל הָאֲדָמָה כְּדֵי שֶׁהַלַּחַשׁ יַצְלִיחַ.</string>
     <string name="StartScene_DifficultySelect">בחר את גורלך</string>
     <string name="StartScene_Load">טען משחק</string>
     <string name="StartScene_New">משחק חדש</string>
+    <string name="StrongShield_desc">המגן המלבני הזה מצופה בלוחות ברזל ומקושט בבד צבעוני. הוא כבד משמעותית, אך מסוגל לחסום נזק רב יותר.</string>
+    <string name="Stylus_Info">עט מיסטי זה עשוי מאבן כהה וקשה במיוחד. בעזרתו ניתן לחרוט גליף או רונה, אך העט הוא זה שקובע מה ייחרט, לא אתה.</string>
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
     <string name="Swarm_Name">נחיל זבובים</string>
     <string name="TitleScene_Highscores">ציונים גבוהים</string>
@@ -246,12 +256,14 @@
     <string name="Wand_Fizzles">השרביט שלך מפצפץ; כנראה נגמרו המטענים שלו עכשיו</string>
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
     <string name="WarHammer_Name">פטיש מלחמה</string>
+    <string name="WarriorArmor_Desc">למרות שהשריון הזה נראה כבד, הוא מאפשר ללוחם לבצע זינוק הירואי לעבר מיקום מטרה, ולנחות עם מכה שמממת את כל האויבים השכנים.</string>
     <string name="WarriorArmor_Name">שריון לוחם</string>
     <string name="WaterElemental_Name">יסוד מים</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
     <string name="WeaknessBuff_Name">נחלש</string>
     <string name="Weightstone_Name">אבן משקל</string>
     <string name="Weightstone_WndCancel">לא נורא</string>
+    <string name="WindGust_Name">משב רוח</string>
     <string name="WndDonate_goldDonateText">תודה על עזרתך</string>
     <string name="WndHero_Awareness">מודעות</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
@@ -270,18 +282,24 @@
     <string name="WndRanking_StaStr">כוח</string>
     <string name="WndResurrect_Yes">כן, אני אלחם!</string>
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
+    <string name="WndSettingsInGame_GameLog">יומן משחק</string>
     <string name="WndTradeItem_Bought">רכשת את %1 תמורת %2</string>
     <string name="WndTradeItem_Buy">קנה ב-%d זהב</string>
     <string name="WndTradeItem_Sale">למכירה: %1$s - %2$dג</string>
     <string name="WndTradeItem_Sold">מכרת את ה-%1 תמורת %2</string>
     <string name="WrnExperimental_title">אפשרויות ניסיוניות הופעלו!</string>
+    <string name="YogsBrain_Name">המוח של יוג</string>
     <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
+    <string name="ZombieGnoll_Info">גנול-זומבי קם מהמתים!</string>
+    <string name="ZombieMask_Name">מסיכת זומבי</string>
     <string name="town_deco_armoronhanger_name">שריון</string>
     <string name="town_deco_armorstand_leather_desc">שריון עור אמין יהיה רכישה מצוינת לפני היציאה לצינוק.</string>
+    <string name="town_deco_canvas_name">קנבס</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
     <string name="town_deco_entrance_name">כניסה</string>
     <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_glass_name">חלון רחב</string>
+    <string name="town_deco_hay_desc">ערימה קטנה של שחת ריחני</string>
     <string name="town_deco_library_sign_name">שלט ספרייה</string>
     <string name="town_deco_pathway_name">שביל</string>
     <string name="town_deco_pole_name">עמוד</string>
@@ -295,6 +313,27 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

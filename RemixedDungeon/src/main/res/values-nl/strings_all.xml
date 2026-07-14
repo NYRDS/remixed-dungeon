@@ -30,6 +30,7 @@
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Descriptions_6">De oude kunst van runen lezen is verboden en wordt tegen alle kosten vermeden, vanwege de vloek die rust op elk perkament dat de kelder of haar omgeving binnenbereikt.</string>
     <string name="Challenges_Names_3">Woestijn</string>
+    <string name="ChampionOfEarthBuff_Name">Kampioen van de Aarde</string>
     <string name="ChaosCrystal_Fuse">SMETEN</string>
     <string name="ChaosSword_Name">chaoszwaard</string>
     <string name="CharAction_Push">duwen</string>
@@ -56,6 +57,8 @@
     <string name="DashSpell_Name">Das</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
+    <string name="DieHardBuff_Name">Die Hard</string>
+    <string name="DriedRoseBuff_Info">De roos ziet er heel aantrekkelijk uit.</string>
     <string name="DriedRose_Name">gedroogde roos</string>
     <string name="DrunkardNPC_Name">dronkaard</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
@@ -70,13 +73,17 @@
     <string name="Eye_Gender">neuter</string>
     <string name="Fire_Info">Hier woedt een vuur.</string>
     <string name="Fire_Name_1">Vlamend %s</string>
+    <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="GnollTamahawk_Gender">masculine</string>
+    <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="Halberd_Gender">feminine</string>
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileStatue">Pilaar</string>
     <string name="Heal_Cast">%s is genezen.</string>
+    <string name="Heap_Mimic">Dit is een mimic!</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
+    <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
     <string name="HeroClass_GnollPerks_3">Gnollen kunnen niet lezen of schrijven.</string>
     <string name="HeroClass_GnollPerks_4">Gnollen vallen geen andere Gnollen aan tenzij ze worden uitgedaagd</string>
     <string name="HeroClass_Mag">magier</string>
@@ -113,6 +120,7 @@
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
     <string name="MeleeWeapon_Info3a">Dit is een tamelijk %s wapen.</string>
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
+    <string name="MeleeWeapon_Info6a">Vanwege je onvoldoende kracht is de nauwkeurigheid en snelheid van je aanval met dit %s verminderd.</string>
     <string name="Mimic_Name">mimic</string>
     <string name="MindVisionBuff_Info">De innerlijke visie laat duidelijk de beweging van alle levende wezens op de verdieping zien.</string>
     <string name="MirrorImage_Gender">masculine</string>
@@ -142,6 +150,7 @@
     <string name="Potion_Colors_14">onyx</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
+    <string name="PseudoPasty_Info">Dit is een authentiek Cornish pasty met de traditionele vulling van rundvlees en aardappelen.</string>
     <string name="PseudoRat_Name">pseudo-rat</string>
     <string name="PseudoRat_Name_Objective">pseudo-rat</string>
     <string name="PumpkinPie_Name">pompoentaart</string>
@@ -195,6 +204,8 @@
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
+    <string name="SpiderEgg_Name_Objective">spinnenei</string>
+    <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
     <string name="SpiritOfPain_Desc">Een splinter van levende duisternis.</string>
     <string name="SpiritOfPain_Name">geest van pijn</string>
@@ -207,6 +218,7 @@
     <string name="StoneBloodBuff_Info">Het bloed verandert in steen die samensmelt met de nabije muren en het doorlopen ervan veel makkelijker maakt, maar tegen welke prijs.</string>
     <string name="StoneBloodBuff_Name">Stenen bloed</string>
     <string name="Stylus_ACInscribe">Inschrijven</string>
+    <string name="Stylus_Info">Deze arcanische stylus is gemaakt van een donkere, zeer harde steen. Je kunt er een glyph of rune mee graveren, maar je kunt niet kiezen welke er wordt gegraveerd; de stylus beslist voor je.</string>
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
@@ -221,6 +233,7 @@
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="TownsfolkMovieNPC_Name_Objective">stadbewoner</string>
     <string name="TownsfolkNPC_Message1">Ah! Nog een avonturier, geweldig! Zorg ervoor dat je zo veel mogelijk waardevolle dingen buitmaakt!</string>
+    <string name="TownsfolkSilentNPC_Desc">Een van de bewoners. Hoewel dit duidelijk een gewone burger is, lijken die kleren duur te zijn.</string>
     <string name="ToxicGas_Info">Hier zweeft een groenachtige wolk van giftig gas.</string>
     <string name="ToxicGland_Name">Giftige klier</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
@@ -241,9 +254,17 @@
     <string name="Weightstone_Info">Met een weegsteen kun je je naarstwapens balanceren om de snelheid of nauwkeurigheid te verhogen.</string>
     <string name="Weightstone_Name">gewichtsteen</string>
     <string name="Weightstone_WndCancel">Laat maar</string>
+    <string name="WndBag_BuySubtitle">(Je hebt %dg)</string>
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
     <string name="WndChallenges_Title">Uitdagingen</string>
     <string name="WndChooseWay_Cancel">Ik besluit later</string>
+    <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+    <string name="WndCryptoDonate_ethereum">Ethereum</string>
+    <string name="WndCryptoDonate_ton">Ton</string>
+    <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndDonate_royalDonateText">Ik wil niet raar klingen, maar door dit te doen, voed je de developers letterlijk.</string>
+    <string name="WndDonate_silverDonateText2">Ook schakelt u reclame uit in alle spelmodi en ontgrendelt u de Jageres vanaf het begin.</string>
+    <string name="WndGame_Customizations">Aanpassingen</string>
     <string name="WndHero_Awareness">Aandacht</string>
     <string name="WndInfoItem_Chest">Kist</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Recept uitvoeren</string>
@@ -256,6 +277,7 @@
     <string name="WndJournal_Title">Journaal</string>
     <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
 
+    <string name="WndModInstall_PleaseUpdate">Gelieve Remixed Dungeon te updaten voordat u deze mod installeert</string>
     <string name="WndModInstall_Version">versie</string>
     <string name="WndModsDisclaimer_install">Lokale mod installeren</string>
     <string name="WndModsDisclaimer_manage">Mod-lijst beheren</string>
@@ -281,6 +303,7 @@
     <string name="Wnd_Button_Back">Terug</string>
     <string name="WoodenBow_Name">houten boog</string>
     <string name="Worm_Name_Objective">worm</string>
+    <string name="Wraith_Desc">Een wraith is de wraakzuchtige geest van een zondaar, wiens graf of grafkelder werd verstoord. Als een etherische entiteit is het zeer lastig te raken met een gewoon wapen.</string>
     <string name="Wraith_Name">wraith</string>
 
     <string name="WrnExperimental_title">Experimentele opties ingeschakeld!</string>
@@ -293,6 +316,7 @@
     <string name="town_deco_brown_carpet_desc">Deze bruine tapijt is onder voet getrapt door veel avonturiers, zwervers en toeschouwers.</string>
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
 
+    <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_charcoal_carpet_name">Tapijt</string>
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
@@ -319,6 +343,28 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
