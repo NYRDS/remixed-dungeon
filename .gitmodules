@@ -4,3 +4,6 @@
 [submodule "luaj"]
 	path = luaj
 	url = https://github.com/NYRDS/luaj.git
+[submodule "teavm"]
+	path = teavm
+	url = https://github.com/konsoletyper/teavm.git
