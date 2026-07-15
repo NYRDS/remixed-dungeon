@@ -23,6 +23,7 @@
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="BurningFist_Name">brandende vuist</string>
+    <string name="CagedKobold_Intro">Hé... Hé! Jij bent die avonturier, toch? Help me eens, maat, die verdomme militaristen hebben me hier opgesloten! Ze willen een oud wapen heractiveren om de mensen op het oppervlak te veroveren! Maar gezien hoe gevaarlijk het is, was ik het er niet mee eens, dus hebben ze me gewoon buiten gezet en in een kooi gesloten! Ik bid je de sleutel van de cel te vinden, en als dank zal ik je helpen waar ik kan.</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
     <string name="Capotain_Name">Capotain</string>
     <string name="Carcass_Necromancy">Je hebt het lijk van %s opgewekt!</string>
@@ -47,6 +48,7 @@
     <string name="Char_Stole_1">%1$s steelt %2$s van %3$s!</string>
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
 
+    <string name="CharmSpell_Cast">%s is betoverd.</string>
     <string name="ChristmasTurkey_Name">festelijke kalkoen</string>
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
@@ -353,6 +355,8 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

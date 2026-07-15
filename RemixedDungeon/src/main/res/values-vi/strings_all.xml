@@ -66,6 +66,7 @@
     <string name="DrunkardNPC_Name">người say xỉn</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
+    <string name="Dungeon_Tips_3">Bạn có thể dùng vàng của mình ở các cửa hàng hoặc dịch vụ trong thị trấn hoặc ngục.</string>
     <string name="Dungeon_Tips_6">Xác định thuốc và cuộn giấy càng sớm càng tốt. Đừng để đến lúc bạn thực sự cần chúng mới làm.</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
     <string name="EarthElemental_Name_Objective">nguyên tố đất</string>
@@ -124,6 +125,8 @@
     <string name="Level_TileDescPileOfStones">Một đống đá cực kỳ nặng, trông không thể di chuyển được.</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
+    <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
+    <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
     <string name="MailArmor_Name">áo giáp xích</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
@@ -176,6 +179,7 @@
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
     <string name="Ring_Gems_10">thạch anh</string>
     <string name="Ring_Info1">Bạn chỉ có thể đeo tối đa 2 nhẫn cùng lúc</string>
+    <string name="Ring_Info4">%1$s\n\nBạn có thể cảm thấy một phép thuật độc ác ẩn mình bên trong %2$s.</string>
     <string name="RottenFood_Message">Ghét quá!</string>
     <string name="RottenRation_Name">Cơm khô hỏng</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
@@ -248,6 +252,7 @@
     <string name="Typical_Damage">Sát thương điển hình</string>
     <string name="Undead_Defense">chặn</string>
     <string name="Undead_Name_Objective">cùn bất tử</string>
+    <string name="VertigoBuff_Info">Cảm giác choáng váng khiến đi thẳng trở nên khó khăn!</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
@@ -300,6 +305,7 @@
     <string name="Yog_Gender">masculine</string>
     <string name="YogsEye_Desc">Mắt của Thần Cổ, ánh nhìn toàn kiến đầy ắp căm thù vĩnh cửu. Bạn có thể cảm thấy nó nhìn thấu qua linh hồn của mình.</string>
     <string name="Zombie_Name">kẻ sống chết</string>
+    <string name="town_deco_barrel_wine_name">Thùng rượu</string>
     <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
     <string name="town_deco_broken_wall_name">Bức tường vỡ</string>
     <string name="town_deco_brown_carpet_desc">Chiếc thảm nâu này đã bị đạp nát bởi nhiều phiêu lưu gia, người lang thang và người đi đường.</string>
@@ -373,6 +379,13 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
+
+
 
 
 
