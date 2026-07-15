@@ -39,6 +39,10 @@
     <string name="Challenges_Names_8">ללא עיר</string>
     <string name="Challenges_Names_9">אמנזיה</string>
     <string name="ChampionOfEarthBuff_Info">אלוף האדמה מגלם כוח בלתי מתפשר, שכן תכונה זו משפרת את עמידות היצור לנזק ומגדילה את החיוניות המקסימלית שלו. שינוי זה הופך אותו לאויב מאיים במעמקים המסוכנים, המסוגל להדוף התקפות בקלות ולהחזיק מעמד בקרב ממושך עם נחישות בלתי מעורערת.</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">להב חד-ידני של כאוס טהור. הוא גדל עם קרבות כמו בן דודו הדו-ידני, אבל לאט יותר ולפוטנציאל נמוך יותר — ומשאיר את היד השנייה חופשית למגן.</string>
+    <string name="ChaosBlade_Name">להב כאוס</string>
+    <string name="ChaosCrystal_BladeFused">הקריסטל סופג את נשקך ולובש צורת להב</string>
     <string name="ChaosCrystal_Info">אתה מרגיש זרמי אנרגיה זורמים דרך ידיך כשאתה מחזיק אותו.</string>
     <string name="CharAction_Charm">לְקַסֵּם</string>
     <string name="Char_Hit_0">%1 היכה את %2</string>
@@ -147,6 +151,7 @@
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name_Objective">מימיק</string>
     <string name="Mob_GoingTo">כבר הולך!</string>
+    <string name="Mob_ItemUse">%1$s משתמש ב-%2$s</string>
     <string name="Mob_StaFleeingStatus">זה %s בורח</string>
     <string name="Mob_StaHuntingStatus">זה %s צד</string>
     <string name="Mods_RestartRequired">נדרש הפעלה מחדש</string>
@@ -313,6 +318,15 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
 
 
 

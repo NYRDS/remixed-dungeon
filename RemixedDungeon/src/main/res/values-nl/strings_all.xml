@@ -31,6 +31,10 @@
     <string name="Challenges_Descriptions_6">De oude kunst van runen lezen is verboden en wordt tegen alle kosten vermeden, vanwege de vloek die rust op elk perkament dat de kelder of haar omgeving binnenbereikt.</string>
     <string name="Challenges_Names_3">Woestijn</string>
     <string name="ChampionOfEarthBuff_Name">Kampioen van de Aarde</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Een eenhandig zwaard van pure chaos. Het groeit met gevechten zoals zijn tweehandige broer, maar langzamer en tot een lager potentieel — waardoor je linkerhand vrij blijft voor een schild.</string>
+    <string name="ChaosBlade_Name">chaoszwaard</string>
+    <string name="ChaosCrystal_BladeFused">Het kristal absorber je wapen, en nam de vorm van een zwaard aan</string>
     <string name="ChaosCrystal_Fuse">SMETEN</string>
     <string name="ChaosSword_Name">chaoszwaard</string>
     <string name="CharAction_Push">duwen</string>
@@ -125,6 +129,7 @@
     <string name="MindVisionBuff_Info">De innerlijke visie laat duidelijk de beweging van alle levende wezens op de verdieping zien.</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="MissileWeapon_Sure">Weet je zeker dat je het wilt uitrusten als een wapen voor gevechten op korte afstand?</string>
+    <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
     <string name="Mob_StaAmokStatus">%1$s loopt amok</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
@@ -343,6 +348,11 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
 
 
 

@@ -36,7 +36,11 @@
     <string name="Caves_TileDescHighGrass">Nấm khổng lồ chắn tầm nhìn.</string>
     <string name="Challenges_Names_1">Niềm tin là giáp trụ của tôi</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Mot thanh kiem mot tay cua hon loan than khiet. No phat trien trong chien dau nhu nguoi anh em hai tay cua no, nhung cham hon va tiem nang nho hon — de tay con lai tu do cho khiên.</string>
+    <string name="ChaosBlade_Name">kiem hon loan</string>
     <string name="ChaosBow_Gender">masculine</string>
+    <string name="ChaosCrystal_BladeFused">Vien ngoc hap thu vu khi cua ban va bien thanh hinh dang mot thanh kiem</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
     <string name="Char_Hit_2">%1$s đánh trúng %2$s</string>
     <string name="Char_StaDodged_0">tránh</string>
@@ -129,6 +133,7 @@
     <string name="MimicPie_Name_Objective">mimik</string>
     <string name="Mimic_Gender">masculine</string>
     <string name="MissileWeapon_Missiles">Vũ khí phóng xạ</string>
+    <string name="Mob_ItemUse">%1$s sử dụng %2$s</string>
     <string name="Mob_StaControlledStatus">%s này đang bị ám bởi ma quỷ</string>
     <string name="Mob_StaHuntingStatus">Đây %s đang săn bắn</string>
     <string name="Mob_StaSleepingStatus">%s này đang ngủ</string>
@@ -363,6 +368,11 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
 
 
 

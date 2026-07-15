@@ -403,10 +403,14 @@
     <string name="ChampionOfWaterBuff_Name">水之冠軍</string>
     <string name="ChaosArmor_Info">這件盔甲的血紅色金屬板被暗紅的鐵鏈縫接在一起，當你觸碰它時會迸發出混沌能量。</string>
     <string name="ChaosArmor_Name">混沌護甲</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">一把單手混沌之刃。像它的雙手版本一樣隨戰鬥成長，但速度較慢且潛力較低——讓你的副手空閒出來拿盾牌。</string>
+    <string name="ChaosBlade_Name">混沌之刃</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">一把充斥著混沌之力的駭人魔弓，每一發從它這裡射出的箭矢都會攜帶有一些混沌能量。但萬一失手……</string>
     <string name="ChaosBow_Name">混沌弓</string>
     <string name="ChaosCrystal_ArmorFused">水晶與你的護甲融合，並變成了混沌形態。</string>
+    <string name="ChaosCrystal_BladeFused">水晶吸收了你的武器，化作了刃的形態</string>
     <string name="ChaosCrystal_BowFused">水晶吸收你的弓弩，並重新以弓的形式呈現。</string>
     <string name="ChaosCrystal_Fuse">融合</string>
     <string name="ChaosCrystal_Info">當你握住它時，你明顯感受到有股能量竄入指縫間。</string>
@@ -1413,6 +1417,7 @@
     <string name="Mob_Desc">真正的說明即將到來！</string>
     <string name="Mob_Died">你聽到有什麼東西在遠處死去了</string>
     <string name="Mob_GoingTo">已經在路上了！</string>
+    <string name="Mob_ItemUse">%1$s 使用 %2$s</string>
     <string name="Mob_ReadyForOrder">%s準備好接受你的命令了。</string>
     <string name="Mob_StaAmokStatus">這個 %1$s 正在發狂</string>
     <string name="Mob_StaControlledStatus">這個%s被邪惡的力量所控制</string>
@@ -3066,6 +3071,11 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
 
 
 

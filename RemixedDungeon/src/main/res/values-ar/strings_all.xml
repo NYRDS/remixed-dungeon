@@ -47,6 +47,10 @@
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
     <string name="Caves_TileDescDeco">تظهر عرق من معدن ما على الجدار. ذهب؟</string>
     <string name="Caves_TileDescEntrance">يؤدي السلم إلى العمق العلوي.</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">شفرة يد واحدة من الفوضى النقية. تنمو مع القتال مثل نظيرتها ذات اليدين، ولكن ببطء أكبر وإمكانات أقل — مما يترك يدك الحرة لدرع.</string>
+    <string name="ChaosBlade_Name">شفرة الفوضى</string>
+    <string name="ChaosCrystal_BladeFused">يمتص الكريستال سلاحك، ويتخذ شكل شفرة</string>
     <string name="CharAction_Give">إعطاء</string>
     <string name="CharAction_Take">التقاط</string>
     <string name="Char_OutParalysis">كسر الألم شلل %s</string>
@@ -154,6 +158,7 @@
     <string name="MissileWeapon_Yes">نعم، أنا أعلم ما أفعله</string>
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
     <string name="Mob_GoingTo">يتحرك بالفعل!</string>
+    <string name="Mob_ItemUse">%1$s يستخدم %2$s</string>
     <string name="Mob_StaHuntingStatus">هذا %s يصطاد</string>
     <string name="Mods_AuthorEmail">بريد المؤلف الإلكتروني:</string>
     <string name="Mods_RestartRequired">مطلوب إعادة تشغيل</string>
@@ -344,6 +349,16 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
