@@ -87,6 +87,7 @@
     <string name="FetidRat_Name_Objective">עכברוש מצחין</string>
     <string name="FireElemental_Desc">אלמנטלי אש נודדים הם תוצר לוואי של זימון ישויות גדולות. הם יותר מדי כאוטיים באופיים כדי להיות נשלטים אפילו על ידי הדמונולוג החזק ביותר.</string>
     <string name="Fire_Name_1">בוער %s</string>
+    <string name="Firebloom_Desc">כאשר משהו נוגע בפרח אש, הוא פורץ בלהבות.</string>
     <string name="Firebloom_Name">פרח אש</string>
     <string name="Food_Message">זה היה טעים מאוד\!</string>
     <string name="FortuneTellerNPC_Desc">האישה הזו לבושה בגלימה ארוכה וצבעונית. היא נראית צעירה להפתיע למישהי ששלטה באמנויות הנסתרות של חיזוי העתיד. כשתתקרב, תשמע אותה ממלמלת כשהיא מביטה בכדור הבדולח.</string>
@@ -137,6 +138,7 @@
     <string name="King_Info3">איך אתה מעז!</string>
     <string name="KunaiThrow_Name">זריקת קונאי</string>
     <string name="LastLevel_TileGrass">טחב גחלים</string>
+    <string name="LastShopLevel_TileDescEmptySP">שטיח עבה מכסה את הרצפה.</string>
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
     <string name="Level_TileDescHighGrass">צמחייה צפופה חוסמת את המבט</string>
@@ -322,6 +324,7 @@
     <string name="town_deco_library_sign_name">שלט ספרייה</string>
     <string name="town_deco_pathway_name">שביל</string>
     <string name="town_deco_pole_name">עמוד</string>
+    <string name="town_deco_poster_desc">מודעות המכריזות על הקרנות עתידיות בקולנוע.</string>
     <string name="town_deco_red_carpet_desc">השמועה אומרת ששטיחים אדומים דומים מקשטים את אולמות המטרופולין הגמדי.</string>
     <string name="town_deco_rope_name">חבל</string>
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
@@ -332,6 +335,9 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 

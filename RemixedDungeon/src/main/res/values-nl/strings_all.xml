@@ -142,6 +142,7 @@
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="Necromancy_Title">Necromantie</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
+    <string name="OozeBuff_Name">Bijtend Slijk</string>
     <string name="Ooze_Death">%s verslindt je...</string>
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
@@ -153,6 +154,8 @@
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
+    <string name="PotionOfLiquidFlame_Info">Deze fles bevat een onstabiel mengsel dat heftig in vlammen opgaat bij contact met de open lucht.</string>
+    <string name="PotionOfLiquidFlame_Name">Drankje van Vloeibare Vlam</string>
     <string name="PotionOfMight_Apply">Nieuwverkregen kracht stroomt door je lichaam.</string>
     <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
     <string name="Potion_Colors_14">onyx</string>
@@ -207,6 +210,7 @@
     <string name="Shopkeeper_Name">winkelier</string>
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="Skeleton_Name_Objective">skelet</string>
+    <string name="SleepBuff_Info">Volledig in slaap</string>
     <string name="SociologistNPC_AlreadyTaken">Je hebt al deelgenomen aan deze enquête, kom later terug</string>
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
@@ -355,6 +359,10 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 

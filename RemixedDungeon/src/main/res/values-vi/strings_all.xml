@@ -285,6 +285,7 @@
     <string name="WndPremiumSettings_banners">Chọn chất liệu cờ</string>
     <string name="WndPremiumSettings_chrome">Chọn vật liệu giao diện</string>
     <string name="WndPremiumSettings_std">tiêu chuẩn</string>
+    <string name="WndPriest_Title">Linh mục thị trấn</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
 
     <string name="WndRanking_StaStr">Sức mạnh</string>
@@ -379,6 +380,7 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
 
 
 
