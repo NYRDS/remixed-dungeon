@@ -401,10 +401,14 @@
     <string name="ChampionOfWaterBuff_Name">Campeão da Água</string>
     <string name="ChaosArmor_Info">As placas de sangue vermelho desta armadura é costurada junto com correntes vermelhas escuras. Ele irradia energia caótica enquanto você a toca.</string>
     <string name="ChaosArmor_Name">Armadura do Caos</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Uma lâmina de uma mão de puro caos. Cresce com o combate como sua prima de duas mãos, mas mais devagar e com menor potencial — deixando sua mão livre para um escudo.</string>
+    <string name="ChaosBlade_Name">lâmina do caos</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Um arco terrível cheio de poder do Caos. Cada flecha disparada por ele vai levar um pouco de energia do caos para seu destino. Mas se você errar...</string>
     <string name="ChaosBow_Name">Arco do Caos</string>
     <string name="ChaosCrystal_ArmorFused">O cristal fundiu-se com sua armadura e assumiu a forma do caos.</string>
+    <string name="ChaosCrystal_BladeFused">O cristal absorve sua arma e assume a forma de uma lâmina</string>
     <string name="ChaosCrystal_BowFused">O Cristal absorve seu arco, e tomou a forma de um Arco</string>
     <string name="ChaosCrystal_Fuse">FUNDIR</string>
     <string name="ChaosCrystal_Info">Você sente correntes de energia correndo através de suas mãos, enquanto você o segura.</string>
@@ -1397,6 +1401,7 @@ Parede
     <string name="Mob_Desc">A descrição real está chegando em breve!</string>
     <string name="Mob_Died">Você ouve algo morrer a distância.</string>
     <string name="Mob_GoingTo">Já está indo!</string>
+    <string name="Mob_ItemUse">%1 usa %2</string>
     <string name="Mob_ReadyForOrder">%s pronto para o seu pedido.</string>
     <string name="Mob_StaAmokStatus">%1$s está enlouquecendo</string>
     <string name="Mob_StaControlledStatus">Este %s está sob possessão maligna</string>
@@ -3060,6 +3065,11 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
 
 
 

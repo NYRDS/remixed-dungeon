@@ -406,10 +406,14 @@
     <string name="ChampionOfWaterBuff_Name">Campione dell\'Acqua</string>
     <string name="ChaosArmor_Info">Le placche rosso sangue di questa armatura sono tenute insieme con catene rosse oscure. Irradia energia del Caos quando la tocchi. </string>
     <string name="ChaosArmor_Name">Armatura del caos. </string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Una lama a una mano di puro caos. Cresce nel combattimento come sua cugina a due mani, ma più lentamente e con potenziale minore — lasciando la mano libera per uno scudo.</string>
+    <string name="ChaosBlade_Name">lama del caos</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Un terribile arco colmo con il potere del Caos. Ogni freccia scoccata porterà un pezzo di energia del Caos al bersaglio. Ma se manchi il bersaglio...puoi vedere come  </string>
     <string name="ChaosBow_Name">Arco del caos</string>
     <string name="ChaosCrystal_ArmorFused">Il cristallo si è fuso con la tua armatura e ha assunto la forma caotica.</string>
+    <string name="ChaosCrystal_BladeFused">Il cristallo assorbe la tua arma e assume la forma di una lama</string>
     <string name="ChaosCrystal_BowFused">Il Cristallo assorbe l\'arco, e ha preso la forma di un arco</string>
     <string name="ChaosCrystal_Fuse">FONDI</string>
     <string name="ChaosCrystal_Info">Senti i flussi d\'energia, che ti attraversano le mani mentre lo impugni.</string>
@@ -1400,6 +1404,7 @@ Potrebbe bruciare?</string>
     <string name="Mob_Desc">La vera descrizione arriverà presto!</string>
     <string name="Mob_Died">Senti qualcosa morire a distanza.</string>
     <string name="Mob_GoingTo">Ci sto già andando!</string>
+    <string name="Mob_ItemUse">%1 usa %2</string>
     <string name="Mob_ReadyForOrder">%1$s pronto per il tuo ordine.</string>
     <string name="Mob_StaAmokStatus">Questo %1$s è impazzito</string>
     <string name="Mob_StaControlledStatus">Questo %s è sotto una possessione maledetta</string>
@@ -3043,6 +3048,16 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

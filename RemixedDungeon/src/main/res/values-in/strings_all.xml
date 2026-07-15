@@ -405,10 +405,14 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="ChampionOfWaterBuff_Name">Juara Air</string>
     <string name="ChaosArmor_Info">Sebuah lapisan merah darah dipasang bersama dengan rantai merah tua. Zirah ini mengeluarkan energi khaos saat Anda menyentuhnya.</string>
     <string name="ChaosArmor_Name">Zirah khaos</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Pedang satu tangan kaos murni. Tumbuh dalam pertarungan seperti saudaranya dua tangan, tapi lebih lambat dan potensi lebih rendah — meninggalkan tangan bebas untuk perisai.</string>
+    <string name="ChaosBlade_Name">pedang kaos</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Sebuah busur mengerikan dengan kekuatan dari Khaos. Tiap anak panah yang ditembakan dari ini akan membawa sedikit dari kekuatan khaos pada target. Jika Anda meleset...</string>
     <string name="ChaosBow_Name">busur khaos</string>
     <string name="ChaosCrystal_ArmorFused">Kristal melebur dengan baju zirahmu dan mengambil bentuk kekacauan.</string>
+    <string name="ChaosCrystal_BladeFused">Kristal menyerap senjatamu dan mengambil bentuk pedang</string>
     <string name="ChaosCrystal_BowFused">Kristal menyerap busurmu, dan berubah wujud jadi Busur</string>
     <string name="ChaosCrystal_Fuse">Gabungkan</string>
     <string name="ChaosCrystal_Info">Kamu rasakan energi mengalir di tanganmu saat menggenggamnya.</string>
@@ -1391,6 +1395,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Mob_Desc">Deskripsi sebenarnya akan datang!</string>
     <string name="Mob_Died">Anda mendengar ada sesuatu mati di kejauhan</string>
     <string name="Mob_GoingTo">Sudah dalam perjalanan!</string>
+    <string name="Mob_ItemUse">%1 menggunakan %2</string>
     <string name="Mob_ReadyForOrder">%s siap untuk pesanan Anda.</string>
     <string name="Mob_StaAmokStatus">%1$s ini mengamuk</string>
     <string name="Mob_StaControlledStatus">%s ini ada dibawah kendali jahat</string>
@@ -3057,6 +3062,16 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

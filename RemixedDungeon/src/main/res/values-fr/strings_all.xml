@@ -402,10 +402,14 @@
     <string name="ChampionOfWaterBuff_Name">Champion de l\'Eau</string>
     <string name="ChaosArmor_Info">Les plaques rouge sang de cette armure sont fusionnées avec des chaînes rouge foncé. Elle rayonne d\'une énergie chaotique quand vous la touchez.</string>
     <string name="ChaosArmor_Name">Armure du chaos</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Une lame à une main de pur chaos. Elle grandit au combat comme sa cousine à deux mains, mais plus lentement et avec un potentiel moindre — laissant votre main libre pour un bouclier.</string>
+    <string name="ChaosBlade_Name">lame du chaos</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Un arc effrayant rempli du pouvoir du Chaos. Chaque flèche décochée avec cet arc portera un morceau d\'énergie chaotique à la cible. Mais si vous ratez... </string>
     <string name="ChaosBow_Name">arc du chaos</string>
     <string name="ChaosCrystal_ArmorFused">Le cristal s\'est fondu avec votre armure, et il a pris la forme du chaos.</string>
+    <string name="ChaosCrystal_BladeFused">Le cristal absorbe votre arme et prend la forme d\'une lame</string>
     <string name="ChaosCrystal_BowFused">Le cristal a absorbé votre arme, et a pris la forme d\'un arc.</string>
     <string name="ChaosCrystal_Fuse">FUSION</string>
     <string name="ChaosCrystal_Info">Vous sentez des courants d\'énergie parcourir vos mains tandis que vous le portez.</string>
@@ -1398,6 +1402,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Mob_Desc">La vraie description arrive bientôt !</string>
     <string name="Mob_Died">Vous entendez quelque chose mourir au loin</string>
     <string name="Mob_GoingTo">Déjà en mouvement !</string>
+    <string name="Mob_ItemUse">%1 utilise %2</string>
     <string name="Mob_ReadyForOrder">%s attend votre ordre.</string>
     <string name="Mob_StaAmokStatus">Ce %1$s pète un plomb</string>
     <string name="Mob_StaControlledStatus">%s est sous votre possession sacrilège</string>
@@ -3063,6 +3068,17 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

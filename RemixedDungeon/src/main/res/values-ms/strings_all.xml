@@ -402,10 +402,14 @@
     <string name="ChampionOfWaterBuff_Name">Juara Air</string>
     <string name="ChaosArmor_Info">Plat berwarna merah darah perisai ini disulam bersama-sama dengan rantai merah. Ia diselimuti dengan tenaga kekacauan bilamana anda menyentuhnya.</string>
     <string name="ChaosArmor_Name">Perisai Chaos</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Pedang satu tangan kaos murni. Ia tumbuh dalam pertarungan seperti sepupunya dua tangan, tapi lebih perlahan dan potensi lebih rendah — meninggalkan tangan lain bebas untuk perisai.</string>
+    <string name="ChaosBlade_Name">pedang kaos</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Busur hebat yang diperkasa dengan kuasa Chaos. Setiap anak panah yang ditembak akan membawa tenaga chaos ke sasaran. Sebaliknya jika anda tersilap atau tersasar...</string>
     <string name="ChaosBow_Name">busur chaos</string>
     <string name="ChaosCrystal_ArmorFused">Kristal ini telah bercantum dengan perisai anda, dan ia mengambil bentuk kacau.</string>
+    <string name="ChaosCrystal_BladeFused">Kristal menyerap senjata anda dan mengambil bentuk pedang</string>
     <string name="ChaosCrystal_BowFused">Kristal menyerap masuk ke dalam busur anda, dan membentuk Busur</string>
     <string name="ChaosCrystal_Fuse">SEPADU</string>
     <string name="ChaosCrystal_Info">Anda rasai aliran tenaga, meluru masuk dari tangan anda ketika memegangnya.</string>
@@ -1393,6 +1397,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Mob_Desc">Keterangan sebenar akan muncul sebentar lagi!</string>
     <string name="Mob_Died">Anda dengar ada benda yang mati dari jauh</string>
     <string name="Mob_GoingTo">Sudah pergi!</string>
+    <string name="Mob_ItemUse">%1 menggunakan %2</string>
     <string name="Mob_ReadyForOrder">%s sedia menerima arahan anda.</string>
     <string name="Mob_StaAmokStatus">%1$s ini sedang mengamok</string>
     <string name="Mob_StaControlledStatus">%s ini di bawah pengaruhi kegelapan</string>
@@ -3022,6 +3027,16 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

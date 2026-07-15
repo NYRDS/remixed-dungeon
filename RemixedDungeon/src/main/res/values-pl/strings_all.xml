@@ -409,10 +409,14 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
 </string>
     <string name="ChaosArmor_Info">Ta broń składa się z krwistoczerwonych płytek połączonych ze sobą ciemnoczerwonymi łańcuchami. Przy dotknięciu promienieje chaotyczną energią.</string>
     <string name="ChaosArmor_Name">Zbroja Chaosu</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Jednoręczna sztylet czystego chaosu. Rośnie w walce jak sua dwuręczny kuzyn, ale wolniej i do mniejszego potencjału — pozostawiając drugą rękę wolną na tarczę.</string>
+    <string name="ChaosBlade_Name">klingen chaosu</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Złowrogi łuk, przepełniony potęgą Chaosu. Każda wystrzelona z niego strzała, uderzy cząstką energii Chaosu w cel. Lecz jeśli spudłujesz...</string>
     <string name="ChaosBow_Name">Łuk Chaosu</string>
     <string name="ChaosCrystal_ArmorFused">Kryształ zlewa sie z twoją zbroją przyjmując chaotyczną formę.</string>
+    <string name="ChaosCrystal_BladeFused">Kryształ wchłania twoją broń i przyjmuje formę klingen</string>
     <string name="ChaosCrystal_BowFused">Kryształ został wchłonięty przez twój łuk i przyjął formę Łuku</string>
     <string name="ChaosCrystal_Fuse">POŁĄCZ</string>
     <string name="ChaosCrystal_Info">Trzymając to w dłoniach odczuwasz przepływ energii.</string>
@@ -1403,6 +1407,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Mob_Desc">Prawdziwe opisy pojawią się wkrótce!</string>
     <string name="Mob_Died">Usłyszałeś jak coś gdzieś umarło.</string>
     <string name="Mob_GoingTo">Nadchodzi!</string>
+    <string name="Mob_ItemUse">%1 używa %2</string>
     <string name="Mob_ReadyForOrder">%s gotowy na twoje rozkazy</string>
     <string name="Mob_StaAmokStatus">%1$s biegnie w szale</string>
     <string name="Mob_StaControlledStatus"> %s jest objęty władaniem siły nieczystej</string>
@@ -3076,6 +3081,16 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

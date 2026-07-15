@@ -404,10 +404,14 @@
     <string name="ChampionOfWaterBuff_Name">Чемпион Воды</string>
     <string name="ChaosArmor_Info">Эти доспехи состоят из кроваво-красных пластин скреплённых тёмно-красными цепями. Они излучают хаотическую энергию, когда ты их касаешься.</string>
     <string name="ChaosArmor_Name">Доспехи Хаоса</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Одноручный клинок чистого хаоса. Он растёт в бою как свой двуручный собратец, но медленнее и с меньшим потенциал — оставляя вторую руку свободной для щита.</string>
+    <string name="ChaosBlade_Name">хаотичный клинок</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Устрашающий лук, напитанный силой Хаоса. Каждая впущенная из него стрела донесёт до цели частицу хаотичной энергии. Но если ты промахнёшься...</string>
     <string name="ChaosBow_Name">лук хаоса</string>
     <string name="ChaosCrystal_ArmorFused">Кристалл слился с твоей бронёй и принял форму пластинчатого доспеха.</string>
+    <string name="ChaosCrystal_BladeFused">Кристалл впитал ваше оружие и принял форму Клинка</string>
     <string name="ChaosCrystal_BowFused">Кристалл слился с твоим оружием и принял форму Лука</string>
     <string name="ChaosCrystal_Fuse">СЛИТЬ</string>
     <string name="ChaosCrystal_Info">Касаясь его, ты чувствуешь потоки энергии, бегущие по твоим рукам.</string>
@@ -1399,6 +1403,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Mob_Desc">Настоящее описание скоро появится!</string>
     <string name="Mob_Died">Ты слышишь, как что-то умерло вдали</string>
     <string name="Mob_GoingTo">Уже бегу!</string>
+    <string name="Mob_ItemUse">%1 использует %2</string>
     <string name="Mob_ReadyForOrder">Субъект %s готов к вашим указаниям.</string>
     <string name="Mob_StaAmokStatus">%1$s в безумной ярости</string>
     <string name="Mob_StaControlledStatus">Воля существа %s сломлена одержимостью </string>
@@ -3093,5 +3098,10 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
+
+
+
+
 
 </resources>

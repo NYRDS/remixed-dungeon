@@ -401,10 +401,14 @@
     <string name="ChampionOfWaterBuff_Name">Μαχητής του νερού</string>
     <string name="ChaosArmor_Info">Αυτή η πανοπλία αποτελείται από αιμάτινες πλάκες ενωμένες με σκουροκόκκινες αλυσίδες. Εκλύουν χαοτική ενέργεια καθώς τις αγγίζεις.</string>
     <string name="ChaosArmor_Name">χαοτική πανοπλία</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Μια μονοχέρια σπαθί του καθαρού χάους. Μεγαλώνει στον πόλεμο όπως το διχέρι ο άντρας του, αλλά πιο αργά και με μικρότερο δυναμικό — αφήνοντας το χέρι σου ελεύθερο για ασπίδα.</string>
+    <string name="ChaosBlade_Name">σπαθί του χάους</string>
     <string name="ChaosBow_Gender">neuter</string>
     <string name="ChaosBow_Info">Ένα τρομερό τόξο γεμάτο χαοτική ισχύ. Κάθε βέλος του θα μεταφέρει χαοτική ενέργεια μαζί του. Αλλά αν αστοχήσεις...</string>
     <string name="ChaosBow_Name">χαοτικό τόξο</string>
     <string name="ChaosCrystal_ArmorFused">Ο κρύσταλλος ενώθηκε με την πανοπλία σου και πήρε τη μορφή του χάους.</string>
+    <string name="ChaosCrystal_BladeFused">Το κρύσταλλο απορροφά το όπλο σου και παίρνει τη μορφή ενός σπαθιού</string>
     <string name="ChaosCrystal_BowFused">Ο κρύσταλλος απορροφά το τόξο και παίρνει τη μορφή ενός άλλου τόξου.</string>
     <string name="ChaosCrystal_Fuse">ΣΥΓΧΩΝΕΥΣΗ</string>
     <string name="ChaosCrystal_Info">Νιώθεις κύματα ενέργειας να διαπερνούν τα χέρια σου όσο τον κρατάς.</string>
@@ -1395,6 +1399,7 @@
     <string name="Mob_Desc">Η περιγραφή θα προστεθεί σύντομα!</string>
     <string name="Mob_Died">Άκουσες κάτι να πεθαίνει στο βάθος</string>
     <string name="Mob_GoingTo">Έφυγα!</string>
+    <string name="Mob_ItemUse">%1 χρησιμοποιεί %2</string>
     <string name="Mob_ReadyForOrder">%s, στις διαταγές σου.</string>
     <string name="Mob_StaAmokStatus">- %1$s σε αμόκ</string>
     <string name="Mob_StaControlledStatus">- %s υπό ανίερη κατοχή</string>
@@ -3068,6 +3073,11 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
+
+
+
+
 
 
 

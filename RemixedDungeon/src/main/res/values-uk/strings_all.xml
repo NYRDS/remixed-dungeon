@@ -415,10 +415,14 @@
     <string name="ChampionOfWaterBuff_Name">Чемпіон Води</string>
     <string name="ChaosArmor_Info">Криваво червоні пластини цієї броні з\'єднані темно-червоними ланцюгами. Вини випромінюють енергію Хаосу, щоразу, як тільки ти її торкаєшся.</string>
     <string name="ChaosArmor_Name">Обладунки Хаосу</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Одноручний клинок чистого хаосу. Він росте в бою як свій дворучий родич, але повільніше і з меншим потенціалом — залишаючи другу руку вільною для щита.</string>
+    <string name="ChaosBlade_Name">хаотичний клинок</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Лук, який викликає жах, напитаний силою Хаосу. Кожна випущена стріла донесе до цілі частинку енергії Хаосу. Але якщо ти промахнешся...</string>
     <string name="ChaosBow_Name">лук хаосу</string>
     <string name="ChaosCrystal_ArmorFused">Кристал об\'єднався з твоєю бронею і прийняв форму хаотичного обладунку.</string>
+    <string name="ChaosCrystal_BladeFused">Кристал поглинає вашу зброю і приймає форму клинка</string>
     <string name="ChaosCrystal_BowFused">Кристал об\'єднався з твоїм луком і прийняв форму лука</string>
     <string name="ChaosCrystal_Fuse">ОБ\'ЄДНАТИ</string>
     <string name="ChaosCrystal_Info">Торкаючись його, ти відчуваєш потоки енергії, які течуть по твоїх руках.</string>
@@ -1426,6 +1430,7 @@
     <string name="Mob_Desc">Справжній опис буде пізніше!</string>
     <string name="Mob_Died">Ти чуєш, що щось померло в далечі</string>
     <string name="Mob_GoingTo">Вже біжу!</string>
+    <string name="Mob_ItemUse">%1 використовує %2</string>
     <string name="Mob_ReadyForOrder">%s готовий до ваших наказів.</string>
     <string name="Mob_StaAmokStatus">%1$s поводиться несамовито</string>
     <string name="Mob_StaControlledStatus">Цей %s під нечестивим контролем</string>
@@ -3077,6 +3082,16 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -405,10 +405,14 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="ChampionOfWaterBuff_Name">Su Şampiyonu</string>
     <string name="ChaosArmor_Info">Kan kırmızı metal parçalar , kırmızı zincirler ile birlikte dikilmiş. Dokunman ile birlikte kaotik bir enerji yayıyor</string>
     <string name="ChaosArmor_Name">Kaos zırhı</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Sağ bir elden saf kaos kılıcı. İki el olan ailesi gibi savaşla büyür ama daha yavaş ve daha az potansiyel — sol elin kalkan için serbest kalır.</string>
+    <string name="ChaosBlade_Name">kaos kılıcı</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Bu korkunç yay , kaos enerjisi ile dolu. Her fırlattığı ok , bir parça kaos enerjisi taşıyor</string>
     <string name="ChaosBow_Name">kaos yayı</string>
     <string name="ChaosCrystal_ArmorFused">Zırhınızla kristal birleşti ve kaos formunu aldı.</string>
+    <string name="ChaosCrystal_BladeFused">Kristal silahını emer ve bir kılıç formunu alır</string>
     <string name="ChaosCrystal_BowFused">Kristal yayını özümsedi ve yayınla bir bileşik haline geldi</string>
     <string name="ChaosCrystal_Fuse">ERİT</string>
     <string name="ChaosCrystal_Info">Tuttuğunda ellerinden akan enerjiyi hissediyorsun</string>
@@ -1400,6 +1404,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Mob_Desc">Gerçek açıklama yakında gelecek!</string>
     <string name="Mob_Died">Uzakta birşeyin öldüğünü duydun</string>
     <string name="Mob_GoingTo">Zaten gidiyor!</string>
+    <string name="Mob_ItemUse">%1 %2 kullanır</string>
     <string name="Mob_ReadyForOrder">%s siparişiniz için hazır.</string>
     <string name="Mob_StaAmokStatus">Bu %1$s, delidana gibi koşuyor.</string>
     <string name="Mob_StaControlledStatus">Bu %s kutsal olmayan bir şekilde ele geçirilmiş.</string>
@@ -3070,6 +3075,16 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -400,10 +400,14 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="ChampionOfWaterBuff_Name">Víz bajnok</string>
     <string name="ChaosArmor_Info">Ez a páncél sötétvörös láncokkal összefűzött vérvörös lemezekből áll. Kaotikus energiát sugároz, ahogy megérinted.</string>
     <string name="ChaosArmor_Name">Káosz páncél</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Egy egykezes kárdsarok a tiszta káoszból. A harcban nő, mint a kétkezes rokonja, de lassabban és kisebb potenciállal — így a másik kezed szabad marad a pajzshoz.</string>
+    <string name="ChaosBlade_Name">káosz kard</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Egy halálos íj a Káosz hatalmával töltve. Minden nyílvessző amit kilő egy darabka káoszenergiát hordoz. De ha elvéted a célt...</string>
     <string name="ChaosBow_Name">Káosz íj</string>
     <string name="ChaosCrystal_ArmorFused">A kristály összeolvadt a páncéloddal, és káosz formát öltött.</string>
+    <string name="ChaosCrystal_BladeFused">A kristály elnyeli a fegyveredet, és kard formáját ölti</string>
     <string name="ChaosCrystal_BowFused">A kristály elnyelte az íjad és egy Íj alakját vette át</string>
     <string name="ChaosCrystal_Fuse">FÚZIONÁLÁS</string>
     <string name="ChaosCrystal_Info">Energiaáramlásokat érzel, keresztül a kezeden, amíg tartod.</string>
@@ -1396,6 +1400,7 @@ Ennek a viselése azt jelenti, hogy odafigyelsz másokra.</string>
     <string name="Mob_Desc">Hamarosan valódi leírás kerül ide!</string>
     <string name="Mob_Died">Hallod hogy valami meghalt a távolban </string>
     <string name="Mob_GoingTo">Már megy!</string>
+    <string name="Mob_ItemUse">%1 használja %2</string>
     <string name="Mob_ReadyForOrder">%skészen áll a parancsodra.</string>
     <string name="Mob_StaAmokStatus">Ez a(z) %1$s ámokfutásba kezdett.</string>
     <string name="Mob_StaControlledStatus"> %s - átkozott megszállás alatt</string>
@@ -3038,6 +3043,16 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_name">kristálygolyó</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
