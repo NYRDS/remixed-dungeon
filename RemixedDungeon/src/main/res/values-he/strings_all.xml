@@ -68,6 +68,7 @@
     <string name="ConcreteBlock_Description">נראה שהבלוק הזה דורש %d נקודות כוח כדי לדחוף</string>
     <string name="CorpseDustBuff_Info">התקפות מתגברות מאוד עבור אלו שמלאים בצמא דם, מה שהופך אותם למסוכנים במיוחד.</string>
     <string name="CorpseDust_Info">כדור אבק הגופות לא נראה שונה מכדור אבק רגיל. עם זאת, אתה יודע איכשהו שעדיף להיפטר ממנו בהקדם האפשרי.</string>
+    <string name="DashSpell_Info">מזנק בכיוון שצוין תוך התנגשות באויבים, גורם נזק ומטיל \'קטוע\'.</string>
     <string name="DashSpell_Name">הסתערות</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
@@ -338,6 +339,8 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 

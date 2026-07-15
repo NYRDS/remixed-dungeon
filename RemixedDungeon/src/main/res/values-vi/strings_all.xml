@@ -14,6 +14,7 @@
     <string name="Badges_ItemLvl2">Đã có vật phẩm cấp 6</string>
     <string name="Badges_ItemLvl3">Đã nhận vật phẩm cấp 9</string>
     <string name="Badges_LevelReached1">Đã đạt cấp độ 6</string>
+    <string name="Badges_LevelReached4">Đạt cấp 24</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
     <string name="Badges_PotionsCooked3">9 thuốc đã nấu</string>
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
@@ -382,6 +383,7 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
 
 
 
