@@ -83,6 +83,7 @@ import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.TestOnly;
 import org.luaj.vm2.LuaTable;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -1768,6 +1769,52 @@ public abstract class Level implements Bundlable {
 		}
 
 		return oneCellFrom(candidates);
+	}
+
+	// Step-off target for an NPC standing on a level-object tile (e.g. spawned on a sign).
+	// Returns the nearest empty, non-stairs (entrance or exit) standable cell, searching outward
+	// by BFS. If every adjacent cell is occupied or a stair, the search keeps expanding through
+	// standable tiles (even occupied ones) so the NPC can still escape instead of being stranded on
+	// the object. Bounded by maxDepth so it doesn't teleport the NPC across the whole level.
+	// Returns INVALID_CELL if nothing qualifying is reachable within range.
+	public int getEmptyNonStairsCellNextTo(int cell) {
+		if (!cellValid(cell)) {
+			return INVALID_CELL;
+		}
+
+		boolean[] visited = new boolean[getLength()];
+		ArrayDeque<Integer> frontier = new ArrayDeque<>();
+		frontier.add(cell);
+		visited[cell] = true;
+
+		final int maxDepth = 8;
+		for (int depth = 0; depth < maxDepth && !frontier.isEmpty(); depth++) {
+			ArrayList<Integer> candidates = new ArrayList<>();
+			ArrayDeque<Integer> next = new ArrayDeque<>();
+
+			for (int cur : frontier) {
+				for (int n : Level.NEIGHBOURS8) {
+					int p = cur + n;
+					if (!cellValid(p) || visited[p]) {
+						continue;
+					}
+					visited[p] = true;
+					if (!(avoid[p] || passable[p])) {
+						continue; // can't stand on or traverse
+					}
+					if (Actor.findChar(p) == null && !isExit(p) && map[p] != Terrain.ENTRANCE) {
+						candidates.add(p);
+					}
+					next.add(p); // expand through standable tiles even when occupied / stairs
+				}
+			}
+
+			if (!candidates.isEmpty()) {
+				return Random.element(candidates); // nearest wave, random pick within it
+			}
+			frontier = next;
+		}
+		return INVALID_CELL;
 	}
 
 	public int getSafeCellNextTo(int cell) {

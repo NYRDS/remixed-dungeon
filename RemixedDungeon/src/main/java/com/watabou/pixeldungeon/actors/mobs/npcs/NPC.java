@@ -40,7 +40,10 @@ public abstract class NPC extends Mob {
 
 		LevelObject levelObject = level().getTopLevelObject(pos);
 		if (levelObject != null) {
-			int newPos = level().getEmptyCellNextTo(pos);
+			// Step off the object tile, but never onto an entrance or exit (stairs) — an NPC parked
+			// on the stairs blocks ascent/descent. (Reported: WandMaker spawned on a sign, blinked
+			// to the adjacent stairs, interaction blocked.)
+			int newPos = level().getEmptyNonStairsCellNextTo(pos);
 			if (level().cellValid(newPos) && newPos != pos) {
 				WandOfBlink.appear(this, newPos);
 			}
