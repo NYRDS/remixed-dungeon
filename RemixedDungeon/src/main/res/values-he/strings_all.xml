@@ -32,6 +32,7 @@
     <string name="CandleOfMindVision_Info">נראה כמו נר רגיל, לא משהו שהיית מצפה למצוא בצינוק מסוכן. מוזר שזה די חם למגע, למרות שזה עדיין לא הודלק.</string>
     <string name="Carcass_DevourMessage">טרפת גופה של %s!</string>
     <string name="Carcass_Devoured">אכלת גופה של %s!</string>
+    <string name="Carcass_Necromancy">החיית את הגופה של %s!</string>
     <string name="Challenges_Descriptions_2">כמאמין בהתחדשות טבעית של הגוף הרגיל, תמיד הייתם זהירים מפני שיקויים בעלי תכונות רפואיות. עדיף להיות בטוחים מאשר להצטער!</string>
     <string name="Challenges_Descriptions_3">האדמות סביב הצינוק נגועות זה מכבר ברוע, המונע צמיחת זרעים של עשבי מרפא וצמחים שונים. מי יודע כמה זמן יעבור עד שהצמח האחרון יחדל מלהתקיים באדמות שוממות אלה.</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
@@ -250,6 +251,10 @@
     <string name="TownGuardNPC_Message2">תודות להרפתקנים כמוך, המקום הזה הפך לשקט במיוחד</string>
     <string name="TownGuardNPC_Name">שומר</string>
     <string name="TownsfolkMovieNPC_Name">תושבי העיירה</string>
+    <string name="TownsfolkNPC_Message1">אה! הרפתקן נוסף, איזה כיף! תדאג לשדוד כמה שיותר חפצים יקרים!</string>
+    <string name="TownsfolkNPC_Message2">העיר הפכה לעשירה כל כך בזכות הצינוק הזה, עד שכל אחד בעיר יכול להרשות לעצמו לצאת לחופשה מתי שהוא רוצה! למעשה בגלל זה יש כל כך מעט אנשים כאן עכשיו.</string>
+    <string name="TownsfolkNPC_Message3">איזה יום נפלא.</string>
+    <string name="TownsfolkNPC_Message4">אני מקווה שהביוב לא יוצף כשהאביב יגיע. אנחנו לא צריכים עוד מכת עכברים.</string>
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message3">המממ...</string>
     <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
@@ -292,6 +297,7 @@
     <string name="WndTradeItem_Bought">רכשת את %1 תמורת %2</string>
     <string name="WndTradeItem_Buy">קנה ב-%d זהב</string>
     <string name="WndTradeItem_Sale">למכירה: %1$s - %2$dג</string>
+    <string name="WndTradeItem_SellAll">מכור הכל עבור %dg</string>
     <string name="WndTradeItem_Sold">מכרת את ה-%1 תמורת %2</string>
     <string name="WrnExperimental_title">אפשרויות ניסיוניות הופעלו!</string>
     <string name="YogsBrain_Name">המוח של יוג</string>
@@ -319,6 +325,16 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

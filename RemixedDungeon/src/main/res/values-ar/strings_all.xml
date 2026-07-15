@@ -45,6 +45,7 @@
     <string name="CagedKobold_Message1">من فضلك...</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
+    <string name="Carcass_Necromancy">لقد أحيت جثة %s!</string>
     <string name="Caves_TileDescDeco">تظهر عرق من معدن ما على الجدار. ذهب؟</string>
     <string name="Caves_TileDescEntrance">يؤدي السلم إلى العمق العلوي.</string>
     <string name="ChaosBlade_Gender">masculine</string>
@@ -259,7 +260,10 @@
     <string name="TownGuardNPC_Message3">هل تظن أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، ذلك لأن هذه المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
     <string name="TownGuardNPC_Name">حارس المدينة</string>
     <string name="TownsfolkMovieNPC_Message">هل تعرف تلك الخدمة الخاصة التي تقدمها \&quot;المسارح السينمائية\&quot;؟ للأسف يطلبون شيئاً غريباً يسمى \&quot;الإنترنت\&quot;، لم أسمع به قط من قبل.</string>
-    <string name="TownsfolkNPC_Message2">أصبحت المدينة ثرية بفضل ذلك الزنزانة، لذا يستطيع الجميع هنا تحمل تكاليف العطلات متى شاؤوا! لهذا السبب يوجد عدد قليل جداً من الناس هنا الآن.</string>
+    <string name="TownsfolkNPC_Message1">آه! مغامر آخر، يا لها من مفاجأة سارة! تأكد من نهب أكبر قدر ممكن من الأشياء الثمينة!</string>
+    <string name="TownsfolkNPC_Message2">أصبحت المدينة ثرية للغاية بفضل هذا الزنزانة، حتى يستطيع الجميع في المدينة تحمل تكاليف العطلة كلما أرادوا! في الواقع هذا هو السبب في وجود عدد قليل جداً من الناس هنا الآن.</string>
+    <string name="TownsfolkNPC_Message3">يا له من يوم جميل.</string>
+    <string name="TownsfolkNPC_Message4">آمل ألا تغمر المياه المجاري عندما يأتي الربيع. نحن لا نحتاج إلى غزو قوارض آخر.</string>
     <string name="ToxicGland_Name">غدة سامة</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
@@ -309,6 +313,7 @@
     <string name="WndStory_Sewers">يقع الزنزانة مباشرة تحت المدينة، حيث تشكل مستوياته العليا نظام الصرف الصحي للمدينة. وباعتبارها اسمياً جزءاً من المدينة، فإن هذه المستويات ليست خطرة جداً. لن يسميها أحد مكاناً آمناً، لكنك على الأقل لن تضطر للتعامل مع الكثير من السحر الشرير هنا.</string>
     <string name="WndStory_Spiders">منذ سنوات عديدة مضت كان هناك منجم غني مليء بالحجارة السحرية. لكن عندما جفت عروق المعادن غادر عمال المناجم تاركين خلفهم شبكة واسعة من الأنفاق. في نهاية المطاف سكن هذا المكان العناكب. لكن حتى هذه المخلوقات الخطيرة الكامنة في الظلام لم تكن كافية لإخافة الشجعان والمجانين الذين يتوقون للكنوز التي قد توجد في المناجم. فمدى الخطر يتناسب دائماً مع كمية الشائعات التي تتحدث عن القطع الأثرية السحرية. ذات مرة تجولت ساحرة شريرة في الأنفاق محاولاً الهروب من الملاحقين. لكن الناس المتشائمون لم يجرؤوا على دخول الظلام. لذا قرروا الانتظار. لكنها لم تظهر أبداً. ربما وجدت الساحرة مخرجاً آخر، أو ربما تمكنت من التسلل بجانب الحراس... أو أنها هلكت محاطة بحفيف مخلوقات الظلام.</string>
     <string name="WndTradeItem_Buy">شراء بـ %dغ</string>
+    <string name="WndTradeItem_SellAll">بيع الكل مقابل %dg</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="WrnExperimental_title">تم تفعيل الخيارات التجريبية!</string>
@@ -349,6 +354,15 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
 
 
 

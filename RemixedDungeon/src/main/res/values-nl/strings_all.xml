@@ -25,6 +25,7 @@
     <string name="BurningFist_Name">brandende vuist</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
     <string name="Capotain_Name">Capotain</string>
+    <string name="Carcass_Necromancy">Je hebt het lijk van %s opgewekt!</string>
     <string name="Caves_TileGrass">fluorescent mos</string>
     <string name="Caves_TileWater">IJskoud water</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
@@ -237,7 +238,10 @@
     <string name="TitleScene_Play">Spelen</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="TownsfolkMovieNPC_Name_Objective">stadbewoner</string>
-    <string name="TownsfolkNPC_Message1">Ah! Nog een avonturier, geweldig! Zorg ervoor dat je zo veel mogelijk waardevolle dingen buitmaakt!</string>
+    <string name="TownsfolkNPC_Message1">Ah! Nog een avonturier, geweldig! Zorg ervoor dat je zoveel mogelijk waardevolle spullen buitmaakt!</string>
+    <string name="TownsfolkNPC_Message2">De stad is zo rijk geworden door die kelder, dat iedereen in de stad op vakantie kan gaan wanneer we maar willen! Feitelijk daarom is er zo weinig volk hier nu.</string>
+    <string name="TownsfolkNPC_Message3">Wat een prachtige dag.</string>
+    <string name="TownsfolkNPC_Message4">Ik hoop dat de riolering niet overstort wanneer de lente aankomt. We kunnen geen nieuwe rattenplaag gebruiken.</string>
     <string name="TownsfolkSilentNPC_Desc">Een van de bewoners. Hoewel dit duidelijk een gewone burger is, lijken die kleren duur te zijn.</string>
     <string name="ToxicGas_Info">Hier zweeft een groenachtige wolk van giftig gas.</string>
     <string name="ToxicGland_Name">Giftige klier</string>
@@ -305,6 +309,7 @@
     <string name="WndTradeItem_Buy">Koop voor %dg</string>
     <string name="WndTradeItem_Cancel">Vergeet het</string>
     <string name="WndTradeItem_Sell">Verkopen voor %dg</string>
+    <string name="WndTradeItem_SellAll">Alles verkopen voor %dg</string>
     <string name="Wnd_Button_Back">Terug</string>
     <string name="WoodenBow_Name">houten boog</string>
     <string name="Worm_Name_Objective">worm</string>
@@ -348,6 +353,18 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
