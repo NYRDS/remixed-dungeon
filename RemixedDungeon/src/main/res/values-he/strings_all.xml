@@ -137,6 +137,7 @@
     <string name="Item_ACPickup">לקחת</string>
     <string name="JarOfSouls_Name">כד נשמות</string>
     <string name="Javelin_Name">כידון</string>
+    <string name="Journal_Caged_Kobold">קובולד בכלוב</string>
     <string name="King_Info3">איך אתה מעז!</string>
     <string name="KunaiThrow_Name">זריקת קונאי</string>
     <string name="LastLevel_TileGrass">טחב גחלים</string>
@@ -187,6 +188,7 @@
     <string name="PotionOfExperience_Name">שיקוי ניסיון</string>
     <string name="PotionOfInvisibility_Info">שתיית שיקוי זה תהפוך אותך לבלתי נראה זמנית. בעודך בלתי נראה, אויבים לא יוכלו לראות אותך. תקיפת אויב, כמו גם שימוש במקל או מגילה מול עיניהם, יבטלו את האפקט.</string>
     <string name="PotionOfMana_Info">השיקוי הזה ישחזר את האנרגיה הרוחנית שלך.</string>
+    <string name="PotionOfMindVision_Apply2">משהו אומר לך שאתה היצור החי היחיד ברמה זו כרגע.</string>
     <string name="PotionOfPurity_NoSmell">הפסקת להרגיש ריחות\!</string>
     <string name="Potion_Colors_3">ירקן</string>
     <string name="Potion_Colors_6">פחם</string>
@@ -295,6 +297,7 @@
     <string name="WndItemAlchemy_Title">מתכוני אלכימיה עם %s</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
 
+    <string name="WndModInstall_Version">גרסה</string>
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
     <string name="WndPlayGames_Show_Badges">הצג הישגים</string>
     <string name="WndPlayGames_Show_Error">הפעולה נכשלה. משהו השתבש...</string>
@@ -311,6 +314,7 @@
     <string name="WndTradeItem_Sale">למכירה: %1$s - %2$dג</string>
     <string name="WndTradeItem_SellAll">מכור הכל עבור %dg</string>
     <string name="WndTradeItem_Sold">מכרת את ה-%1 תמורת %2</string>
+    <string name="WrnExperimental_realtime">מצב זמן אמת הופעל: זה עכשיו רוגלייק בזמן אמת, הקש מהר או תמות.\nרוצה לבדוק מלאי?\nבהצלחה עם זה בזמן שסרטן הביוב בודק את הקרביים שלך.</string>
     <string name="WrnExperimental_title">אפשרויות ניסיוניות הופעלו!</string>
     <string name="YogsBrain_Name">המוח של יוג</string>
     <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
@@ -336,9 +340,17 @@
     <string name="town_deco_stones_desc">סתם ערימת אבנים</string>
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_vat_name">מיכל</string>
+    <string name="town_deco_wall_candles_name">נרות</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
 
 
 

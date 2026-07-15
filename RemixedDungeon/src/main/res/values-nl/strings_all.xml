@@ -82,6 +82,7 @@
     <string name="Fire_Name_1">Vlamend %s</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
+    <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="Halberd_Gender">feminine</string>
@@ -117,6 +118,7 @@
     <string name="InventoryScroll_No">Nee, ik heb mijn keuze veranderd</string>
     <string name="Item_DirThrow">Kies de richting van de worp</string>
     <string name="Item_Name">iets</string>
+    <string name="Journal_Caged_Kobold">Kobold in een kooi</string>
     <string name="Journal_Statue">Geanimeerd standbeeld</string>
     <string name="King_Defense">geparreerd</string>
     <string name="Larva_Gender">feminine</string>
@@ -138,6 +140,7 @@
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
+    <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
     <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
@@ -323,6 +326,7 @@
     <string name="Wraith_Desc">Een wraith is de wraakzuchtige geest van een zondaar, wiens graf of grafkelder werd verstoord. Als een etherische entiteit is het zeer lastig te raken met een gewoon wapen.</string>
     <string name="Wraith_Name">wraith</string>
 
+    <string name="WrnExperimental_realtime">De real-time modus is geactiveerd: dit is nu een real-time roguelike, tik snel of sterf.\nWil je je inventaris controleren?\nVeel succes daarbij terwijl de rioolkrab je ingewanden bekijkt.</string>
     <string name="WrnExperimental_title">Experimentele opties ingeschakeld!</string>
     <string name="Yog_Gender">masculine</string>
     <string name="YogsHeart_Gender">masculine</string>
@@ -361,6 +365,11 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
 
 
 

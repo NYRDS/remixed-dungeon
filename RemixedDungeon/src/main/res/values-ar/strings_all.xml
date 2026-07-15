@@ -91,6 +91,7 @@
     <string name="EncumbranceBuff_CharAct_2">هذا %s ثقيل جداً بحيث لا يمكنني استخدامه بفعالية.</string>
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
+    <string name="FireElemental_Name_Objective">عنصر النار</string>
     <string name="Fire_Name_1">مشتعل %s</string>
     <string name="Firebloom_Name">زهرة النار</string>
     <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
@@ -135,6 +136,7 @@
     <string name="InterLevelScene_FileNotFound">لم يتم العثور على الملف. لسبب ما...</string>
     <string name="InterLevelScene_Loading">جاري التحميل...</string>
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
+    <string name="Journal_Caged_Kobold">كوبولد مسجون</string>
     <string name="Keyring_Name">حلقة المفاتيح</string>
     <string name="King_Desc">كان آخر ملوك الأقزام معروفاً بفهمه العميق لعمليات الحياة والموت. لقد أقنع أعضاء بلاطه بالمشاركة في طقس كان من المفترض أن يمنحهم الشباب الأبدي. في النهاية كان هو الوحيد الذي حصل عليه - وجيش من الموتى الأحياء كمكافأة إضافية.</string>
     <string name="Kusarigama_Pull">سحب</string>
@@ -325,6 +327,7 @@
     <string name="WndTradeItem_SellAll">بيع الكل مقابل %dg</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="Wraith_Gender">masculine</string>
+    <string name="WrnExperimental_realtime">تم تفعيل وضع الوقت الفعلي! هذه الآن لعبة روجلايك في الوقت الفعلي، اضغط بسرعة أو مت.\nهل تريد التحقق من المخزون؟\nحظاً سعيداً في القيام بذلك بينما يتحقق سرطان المجاري من أحشائك.</string>
     <string name="WrnExperimental_title">تم تفعيل الخيارات التجريبية!</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
     <string name="YogsHeart_Desc">لسنوات طويلة اعتقد الناس أن المخلوقات عديمة القلب فقط هي القادرة على أفعال الشر الصرفة. ومع ذلك، ها هو هنا أمامك قلب ضخم نابض، يعود للإله القديم نفسه.</string>
@@ -363,6 +366,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 
