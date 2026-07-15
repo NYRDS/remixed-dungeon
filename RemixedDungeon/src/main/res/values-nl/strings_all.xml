@@ -323,6 +323,7 @@
     <string name="Wraith_Name">wraith</string>
 
     <string name="WrnExperimental_title">Experimentele opties ingeschakeld!</string>
+    <string name="Yog_Gender">masculine</string>
     <string name="YogsHeart_Gender">masculine</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
@@ -359,6 +360,7 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 

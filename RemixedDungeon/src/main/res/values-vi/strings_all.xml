@@ -315,6 +315,8 @@
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
     <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \&quot;Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\&quot;.</string>
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
+    <string name="town_deco_dungeon_door_desc">lối vào hang động.</string>
+    <string name="town_deco_dungeon_door_name">cửa hang</string>
     <string name="town_deco_entrance_name">cổng vào</string>
     <string name="town_deco_pathway_name">đường mòn</string>
     <string name="town_deco_pillar_desc">Ngày xưa, cột này từng đóng vai trò là đỡ đẹp đẽ và trang trí.</string>
@@ -380,6 +382,8 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
 
 
 

@@ -68,6 +68,7 @@
     <string name="Crab_Name">سرطان المجاري</string>
     <string name="Crystal_Name">بلورة طافية</string>
     <string name="DarkGold_Info">يُسمى هذا المعدن \&quot;المظلم\&quot; ليس بسبب لونه (فهو لا يختلف عن الذهب العادي)، بل لأنه يذوب في ضوء النهار، مما يجعله عديم الفائدة على السطح.</string>
+    <string name="Death_Name_1">مريع %s</string>
     <string name="Deathling_Name">ميت صغير</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">تم تحويل الألم إلى ألم بطيء، مما يقلل الضرر المتلقى دفعة واحدة.\nالضرر المتبقي لتلقيه %d</string>
@@ -203,6 +204,7 @@
     <string name="RemixedPixelDungeonApp_sendCrash">لعبةنا تعطلت...\n عذراً.\nيرجى إرسال تقرير العطل لمساعدتنا في إصلاحه.</string>
     <string name="ResultDescriptions_Trap">قتل بتفريغ %1$s في المستوى %2$d</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
+    <string name="RingOfElements_Name">خاتم العناصر</string>
     <string name="RingOfHerbalism_Info">يزيد هذا الخاتم من فرصك في جمع الندى والبذور من العشب المفرود.</string>
     <string name="RingOfThorns_Info">على الرغم من أن هذا الخاتم لا يوفر أشواكاً حقيقية، فإن أي عدو يهاجمك سيُجرح بجزء من الضرر الذي يلحقه بك. تحسين هذا الخاتم لن يمنح أي مكافآت إضافية.</string>
     <string name="Ring_BuffKnown">هذا %s</string>
@@ -312,6 +314,7 @@
     <string name="WndRanking_StaEnemies">وحوش مقتولة</string>
     <string name="WndRanking_StaStr">القوة</string>
     <string name="WndResurrect_No">لا، أستسلم</string>
+    <string name="WndSadGhost_Wepon">سلاح الشبح</string>
     <string name="WndSettings_Immersive">وضع الغمر</string>
     <string name="WndSettings_InGameUiSettings">إعدادات واجهة المستخدم</string>
     <string name="WndSettings_Quickslots">فتحات سريعة</string>
@@ -359,6 +362,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 
