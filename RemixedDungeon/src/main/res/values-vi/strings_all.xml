@@ -25,6 +25,7 @@
     <string name="BishopNPC_Name_Objective">giám mục</string>
     <string name="Bishop_title">Giám mục</string>
     <string name="BlackCat_Gender">feminine</string>
+    <string name="BlackCat_Phrases_1">Meo...</string>
     <string name="BlackCat_Phrases_2">Meo meo!</string>
     <string name="BlackSkullOfMastery_BecomeLichDesc">Lich là một thuật sư tử thi đã đạt đến đỉnh cao của khả năng mình. Sinh tồn giữa sự sống và cái chết, Lich xuất sắc trong thuật hồi sinh, nhưng kỹ năng chiến đấu của hắn thấp hơn rất nhiều so với người thường.</string>
     <string name="Blacksmith_Verify6">Tôi không thể rèn lại các vật phẩm này!</string>
@@ -44,6 +45,7 @@
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosCrystal_BladeFused">Vien ngoc hap thu vu khi cua ban va bien thanh hinh dang mot thanh kiem</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
+    <string name="ChaosStaff_Name">gậy hỗn loạn</string>
     <string name="Char_Hit_2">%1$s đánh trúng %2$s</string>
     <string name="Char_StaDodged_0">tránh</string>
     <string name="Char_StaDodged_1">tránh</string>
@@ -55,6 +57,7 @@
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="Crab_Name">cua cống</string>
+    <string name="Dagger_Info">Một cây khăn sắt đơn giản với tay cầm gỗ mòn.</string>
     <string name="DarkSacrifice_Resist">Ngươi không có quyền lực nào trên ta!</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Death_Name_0">Quỷ %s</string>
@@ -105,6 +108,7 @@
     <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="HeroSubClass_NameWitchdoctor">thầy pháp</string>
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
+    <string name="Hero_StaBurning">Bạn bị bốc cháy!</string>
     <string name="Horror_Name_0">Quái dị %s</string>
     <string name="HungerBuff_Info1">Bạn đang đói!</string>
     <string name="HuntressArmor_NotHuntress">Chỉ thợ săn mới có thể sử dụng giáp này!</string>
@@ -225,6 +229,7 @@
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="SpiderExploding_Desc">Trong thời bình, những sinh vật này là những người làm việc chăm chỉ, nhưng chúng sẽ không ngần ngại lao vào kẻ thù và hái lấy cây đầu tiên chúng gặp phải, biến mình thành những quả bom sống.</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiritOfPain_Desc">Một mảnh vỡ của bóng tối sống.</string>
     <string name="Sprout_Info">Đánh thức các hạt giống ngủ.\nTuy nhiên, cần có cây cỏ trên mặt đất để phép thuật này thành công.</string>
     <string name="Sprout_Name">Mầm Non</string>
@@ -260,6 +265,7 @@
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
+    <string name="WandOfTeleportation_Info2">không có gì xảy ra</string>
     <string name="Wand_ACZap">ZAP</string>
     <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
     <string name="Wand_Wood_Types_7">gõ đỏ</string>
@@ -388,6 +394,14 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
+
+
+
 
 
 
