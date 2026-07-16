@@ -221,6 +221,7 @@
     <string name="RingOfPower_Name">טבעת הכוח</string>
     <string name="RingOfShadows_Info">אויבים יהיו פחות סביר שיבחינו בך אם תענוד את הטבעת הזו. טבעות צללים מוחלשות יזהירו אויבים שאולי לא היו מבחינים בנוכחותך אחרת.</string>
     <string name="RingOfThorns_Name">טבעת קוצים</string>
+    <string name="Ring_Gems_0">יהלום</string>
     <string name="RogueArmor_ACSpecial">פצצת עשן</string>
     <string name="RogueArmor_Prompt">בחר מיקום לקפוץ אליו</string>
     <string name="RottenFood_Message">מגעיל!</string>
@@ -357,6 +358,7 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

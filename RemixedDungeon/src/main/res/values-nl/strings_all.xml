@@ -57,6 +57,7 @@
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
+    <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
     <string name="CommonArrow_Info">Gewone houten pijl met een ijzeren punt.</string>
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
@@ -381,6 +382,7 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 

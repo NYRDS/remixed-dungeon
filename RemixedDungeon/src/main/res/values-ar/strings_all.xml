@@ -133,6 +133,7 @@
     <string name="IceGuardianCore_Name">حارس الجليد</string>
     <string name="IceGuardian_Desc">تم إنشاء حراس الجليد من قبل الكوبولدز القديمة لحماية كهوفهم. طالما أن قلب الحارس يحتوي على طاقة كافية، فهو قادر على إعادة بناء نفسه حتى في خضم المعركة.</string>
     <string name="IceKey_Name">مفتاح جليدي</string>
+    <string name="Ignite_Info">يشعل الخلية المحددة. يمكن استخدامه لإشعال العشب، الشخصيات والأشياء.</string>
     <string name="ImpShopkeeper_Desc">الجان هم شياطين أدنى. فهم لا يتميزون بقوتهم ولا بموهبتهم السحرية. لكنهم أذكياء واجتماعيون تماماً، ويفضل العديد من الجان العيش وممارسة التجارة بين غير الشياطين.</string>
     <string name="Imp_Cya">إلى اللقاء، %s!</string>
     <string name="Imp_Desc">العفاريت هي شياطين أقل شأناً. لا تتميز بقوتها أو موهبتها السحرية، لكنها ذكية واجتماعية تماماً. يفضل العديد من العفاريت العيش بين غير الشياطين.</string>
@@ -381,6 +382,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 
