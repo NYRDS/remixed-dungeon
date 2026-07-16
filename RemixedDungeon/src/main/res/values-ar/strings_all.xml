@@ -45,6 +45,7 @@
     <string name="Blacksmith_Verify6">لا يمكنني إعادة صياغة هذه العناصر!</string>
     <string name="BlankScroll_Info">مجرد ورقة فارغة. ربما يمكن الكتابة عليها؟</string>
     <string name="Bleeding_Death">نَزَفتَ حتى الموت...</string>
+    <string name="BlindnessBuff_Info">عمى تام، لا يُسمع سوى الأصوات المحيطة.</string>
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
@@ -91,9 +92,11 @@
     <string name="Dungeon_Tips_16">عند ترقية سلاح مسحور، هناك احتمال لتدمير ذلك السحر.</string>
     <string name="Dungeon_Tips_18">الطريقة الوحيدة لسحر سلاح هي ترقيته باستخدام مخطوطة ترقية سلاح.</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
+    <string name="Earthroot_Desc">عندما يلمس مخلوق جذر الأرض، تخلق جذوره نوعًا من الدروع الطبيعية حوله.</string>
     <string name="ElvenDagger_Name">خنجر الجان</string>
     <string name="EncumbranceBuff_CharAct_2">هذا %s ثقيل جداً بحيث لا يمكنني استخدامه بفعالية.</string>
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
+    <string name="Eye_Gender">neuter</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
     <string name="FireElemental_Name_Objective">عنصر النار</string>
     <string name="Fire_Name_1">مشتعل %s</string>
@@ -184,6 +187,7 @@
     <string name="Pickaxe_InsufficientStr">قوة غير كافية للتعدين!</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="PlagueDoctorMaskHood_Name">قناع طبيب الطاعون مع غطاء رأس</string>
+    <string name="PlagueDoctorNPC_After_Quest">سأريهم، سأريهم جميعاً!</string>
     <string name="PlagueDoctorNPC_Name_Objective">طبيب الطاعون</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*يلقي برأسه للوراء ويطلق قهقهة هستيرية، صوتها يتردد في مختبره الرطب* رائع! _فارس الموت_، واقف أمامنا! القوة المنبعثة من كيانه... مسكرة! *يلتفت نحوك، عيناه تلمعان بشدة محمومة* ولك، مكافأة تليق ببسالتك: _جرعة القوة_! لتمنحك القوة لهزيمة أي عدو! الآن... لندرس موضوعنا. جوهره ذاته يخفي أسراراً يمكن أن تعيد كتابة قوانين الحياة ذاتها! *يقترب من _فارس الموت_ بابتسامة مجنونة، ممسكاً بقارورة من سائل أخضر يفور*</string>
@@ -377,6 +381,11 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
 
 
 

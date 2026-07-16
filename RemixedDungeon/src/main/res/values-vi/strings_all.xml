@@ -18,6 +18,7 @@
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
     <string name="Badges_PotionsCooked3">9 thuốc đã nấu</string>
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
+    <string name="Badges_ShadowLord_Slain">Chúa Tể Bóng Tối đã bị tiêu diệt</string>
     <string name="BattleAxe_Info">Đầu rìu thép khổng lồ của chiếc rìu chiến này mang lại trọng lượng đáng kể cho mỗi cú gảy.</string>
     <string name="BattleAxe_Name">rìu chiến đấu</string>
     <string name="BishopNPC_Desc">Giám mục của Giáo hội Thánh của Santa Chúa Sâu</string>
@@ -396,6 +397,7 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
 
 
 

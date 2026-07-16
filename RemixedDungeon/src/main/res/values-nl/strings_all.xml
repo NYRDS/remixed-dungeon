@@ -19,9 +19,11 @@
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
     <string name="Badges_StrengthAttained5">21 punten Kracht bereikt</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
+    <string name="Bishop_no_money">Je kunt er niet voor betalen.</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_1">Miauw...</string>
     <string name="Blacksmith_Verify6">Ik kan deze items niet hersmelten!</string>
+    <string name="BlessedBuff_Info">Moge precisie en ontwijken komen voor hen die door de zegen zijn geraakt!</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="BurningFist_Name">brandende vuist</string>
@@ -82,6 +84,7 @@
     <string name="Eye_Gender">neuter</string>
     <string name="Fire_Info">Hier woedt een vuur.</string>
     <string name="Fire_Name_1">Vlamend %s</string>
+    <string name="FortuneTellerNPC_Name">waarzegster</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
@@ -177,6 +180,7 @@
     <string name="PumpkinPie_Name">pompoentaart</string>
     <string name="Quest_DarkGoldOre_full_name">donker gouderts</string>
     <string name="QuickSlot_SelectSlot">Selecteer een snelslot ervoor</string>
+    <string name="QuickSlot_SelectedItem">Selecteer een item voor de quickslot</string>
     <string name="Quiver_Info">Leren kogelhouder geschikt voor elke hoeveelheid pijlen</string>
     <string name="RatHide_Name">rattenhuid</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
@@ -196,6 +200,7 @@
     <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
+    <string name="Scorpio_Name">schorpioen</string>
     <string name="ScrollOfChallenge_Name">uitdagingsscrol</string>
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
@@ -228,6 +233,7 @@
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
+    <string name="SpiderExploding_Desc">Harde werkers tijdens vredige tijden, deze wezens zullen niet aarzelen om hun vijanden aan te vallen en de eerste plant die ze tegenkomen te grijpen, waardoor ze zichzelf in lopende bommen veranderen.</string>
     <string name="SpiderMindAmber_Name">Amber Spinnewijs</string>
     <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
@@ -375,6 +381,12 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
 
 
 

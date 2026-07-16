@@ -285,6 +285,7 @@
     <string name="VampireSkull_Info">המסכה הזו עשויה מגולגולת של ערפד טבעית לחלוטין. למעשה זהו גולגולת... גולגולת של ערפד בעל ראש גדול. מצמרר.</string>
     <string name="VertigoBuff_Info">תחושת הסחרחורת מקשה על הליכה ישרה!</string>
     <string name="WandHolster_Name">נרתיק שרביטים</string>
+    <string name="WandMaker_Dust2">הצלחת למצוא אבק גופות, %s? ערימות עצמות הן המקומות הכי ברורים לחפש בהם.</string>
     <string name="WandOfAvalanche_Info">כאשר פיצוץ של השרביט פוגע בקיר (או בכל מכשול מוצק אחר) הוא גורם למפולת אבנים, פוגע ומהלם את כל היצורים באזור הפגיעה.</string>
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
     <string name="Wand_ACZap">זַאפּ</string>
@@ -296,6 +297,7 @@
     <string name="WaterElemental_Name">יסוד מים</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
     <string name="WeaknessBuff_Name">נחלש</string>
+    <string name="Weightstone_Info">בעזרת משקולת, אתה יכול לאזן את נשק הקרב שלך כדי להגביר את המהירות או הדיוק שלו.</string>
     <string name="Weightstone_Name">אבן משקל</string>
     <string name="Weightstone_WndCancel">לא נורא</string>
     <string name="WindGust_Name">משב רוח</string>
@@ -355,6 +357,8 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 
