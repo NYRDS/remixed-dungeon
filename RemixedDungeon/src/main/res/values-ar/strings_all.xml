@@ -26,6 +26,7 @@
     <string name="Badges_PotionsCooked2">تم طهي 6 جرعات</string>
     <string name="Badges_PotionsCooked3">9 جرعات مطبوخة</string>
     <string name="Badges_PotionsCooked5">تم تحضير 25 جرعة</string>
+    <string name="Badges_RingThorns">تم الحصول على خاتم الأشواك</string>
     <string name="Badges_StrengthAttained3">تم تحقيق 17 نقطة من القوة</string>
     <string name="BardNPC_Desc">يعزف باردة المدينة على العود.</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
@@ -312,6 +313,7 @@
     <string name="WndHats_NoConnectionMsg">تعذر الاتصال بـ Google Play.</string>
     <string name="WndHero_Awareness">اليقظة</string>
     <string name="WndInfoItem_Chest">صندوق</string>
+    <string name="WndInfoItem_Owner">قد يحتوي هذا القبر القديم على شيء مفيد، لكن مالكه سيعترض بالتأكيد على التفتيش.</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
 
     <string name="WndLocalModInstall_text">اختر الدليل لتثبيت المود منه</string>
@@ -374,6 +376,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

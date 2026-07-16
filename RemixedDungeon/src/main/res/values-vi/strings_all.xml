@@ -330,6 +330,7 @@
     <string name="town_deco_dungeon_door_desc">lối vào hang động.</string>
     <string name="town_deco_dungeon_door_name">cửa hang</string>
     <string name="town_deco_entrance_name">cổng vào</string>
+    <string name="town_deco_flowerinthepot_name">Hoa trong chậu</string>
     <string name="town_deco_pathway_name">đường mòn</string>
     <string name="town_deco_pillar_desc">Ngày xưa, cột này từng đóng vai trò là đỡ đẹp đẽ và trang trí.</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
@@ -394,6 +395,7 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
 
 
 
