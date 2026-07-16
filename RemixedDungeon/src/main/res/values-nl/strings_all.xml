@@ -17,6 +17,7 @@
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
     <string name="Badges_PotionsCooked3">9 drankjes gebraagd</string>
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
+    <string name="Badges_StrengthAttained5">21 punten Kracht bereikt</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="Blacksmith_Verify6">Ik kan deze items niet hersmelten!</string>
@@ -365,6 +366,8 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 
