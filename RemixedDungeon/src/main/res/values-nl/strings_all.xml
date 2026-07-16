@@ -138,6 +138,7 @@
     <string name="Mimic_Name">mimic</string>
     <string name="MindVisionBuff_Info">De innerlijke visie laat duidelijk de beweging van alle levende wezens op de verdieping zien.</string>
     <string name="MirrorImage_Gender">masculine</string>
+    <string name="MissileWeapon_Missiles">Raketwapen</string>
     <string name="MissileWeapon_Sure">Weet je zeker dat je het wilt uitrusten als een wapen voor gevechten op korte afstand?</string>
     <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
     <string name="Mob_StaAmokStatus">%1$s loopt amok</string>
@@ -374,6 +375,7 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 

@@ -325,6 +325,7 @@
     <string name="WndPriest_Instruction2_f">أهلاً بك يا ابنتي، أهلاً بك في الكنيسة المقدسة للقديس سانتا سيد الأعماق!</string>
     <string name="WndRanking_StaEnemies">وحوش مقتولة</string>
     <string name="WndRanking_StaStr">القوة</string>
+    <string name="WndRanking_Stats">الإحصائيات</string>
     <string name="WndResurrect_No">لا، أستسلم</string>
     <string name="WndSadGhost_Wepon">سلاح الشبح</string>
     <string name="WndSettings_Immersive">وضع الغمر</string>
@@ -376,6 +377,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 
