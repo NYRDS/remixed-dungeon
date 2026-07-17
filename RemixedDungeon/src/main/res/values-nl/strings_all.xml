@@ -116,6 +116,7 @@
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="HeroSubClass_NameAssa">meuchelmoorder</string>
     <string name="HeroSubClass_NameFreR">freerunner</string>
+    <string name="HeroSubClass_NameGlad">gladiator</string>
     <string name="Hero_Name_Objective">je</string>
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
     <string name="Hero_StaBurning">Je vliegt in brand!</string>
@@ -135,6 +136,7 @@
     <string name="Item_DirThrow">Kies de richting van de worp</string>
     <string name="Item_Name">iets</string>
     <string name="Journal_Caged_Kobold">Kobold in een kooi</string>
+    <string name="Journal_PlagueDoctorNPC">pestdokter</string>
     <string name="Journal_Statue">Geanimeerd standbeeld</string>
     <string name="King_Defense">geparreerd</string>
     <string name="Larva_Gender">feminine</string>
@@ -148,6 +150,7 @@
     <string name="MeleeWeapon_Info3a">Dit is een tamelijk %s wapen.</string>
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
     <string name="MeleeWeapon_Info6a">Vanwege je onvoldoende kracht is de nauwkeurigheid en snelheid van je aanval met dit %s verminderd.</string>
+    <string name="MercenaryNPC_Desc">Een stevig mannetje.</string>
     <string name="Mimic_Name">mimic</string>
     <string name="MindVisionBuff_Info">De innerlijke visie laat duidelijk de beweging van alle levende wezens op de verdieping zien.</string>
     <string name="MirrorImage_Gender">masculine</string>
@@ -268,6 +271,7 @@
     <string name="Sword_Gender">masculine</string>
     <string name="Sword_Name">zwaard</string>
     <string name="Tamahawk_Gender">masculine</string>
+    <string name="Tengu_Desc">Tengu zijn leden van de oude moordenaarsclan, die ook Tengu heet. Deze moordenaars zijn bekend om hun uitgebreide gebruik van shurikens en vallen.</string>
     <string name="TerrorBuff_Name">Versterkt</string>
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">gekke dief</string>
@@ -388,6 +392,7 @@
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
     <string name="town_deco_skullboard_name">trofeerek</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
+    <string name="town_deco_stove_name">Stenen kachel</string>
     <string name="town_deco_vat_name">vat</string>
     <string name="town_deco_wall_candles_desc">Uitgedoofde kaarsen, waaruit nog steeds een aangename geur uitstreelt.</string>
     <string name="town_deco_wallpaper_name">behang</string>
@@ -398,6 +403,12 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
 
 
 

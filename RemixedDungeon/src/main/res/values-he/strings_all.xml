@@ -139,6 +139,7 @@
     <string name="IceCaves_TileGrass">דשא קפוא</string>
     <string name="IceGuardian_Name_Objective">שומר קרח</string>
     <string name="Ignite_Info">מדליק את התא הנבחר. ניתן להשתמש כדי לשרוף עשב, דמויות וחפצים.</string>
+    <string name="ImpShopkeeper_Name">אימפ שאפתן</string>
     <string name="InnKeeperNPC_Name_Objective">בעל הפונדק</string>
     <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
     <string name="InterLevelScene_Loading">נטען...</string>
@@ -229,6 +230,7 @@
     <string name="RingOfShadows_Info">אויבים יהיו פחות סביר שיבחינו בך אם תענוד את הטבעת הזו. טבעות צללים מוחלשות יזהירו אויבים שאולי לא היו מבחינים בנוכחותך אחרת.</string>
     <string name="RingOfThorns_Name">טבעת קוצים</string>
     <string name="Ring_Gems_0">יהלום</string>
+    <string name="Ring_Identify">כעת אתה מכיר מספיק את %1$s כדי לזהות אותו. זהו %2$s.</string>
     <string name="RogueArmor_ACSpecial">פצצת עשן</string>
     <string name="RogueArmor_Prompt">בחר מיקום לקפוץ אליו</string>
     <string name="RottenFood_Message">מגעיל!</string>
@@ -265,6 +267,7 @@
     <string name="SpiderArmor_Info">השריון הזה עשוי מכיטין ישן של עכביש וסוג כלשהו של בד. הכי מפתיע, נראה שהוא עדיין מכיל בלוטות עכביש מתפקדות. אם תלחץ על הלוחות מספיק חזק, הם יורים רשת. וסוליות מחורצות מאפשרות לך לנוע בחופשיות על רשת כזו.</string>
     <string name="SpiderElite_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של שומרי העילית משמש לבלבל את המטרה שלהם.</string>
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
+    <string name="SpiderExploding_Desc">עובדים חרוצים בזמנים שלווים, היצורים האלה לא יהססו להסתער על אויביהם ולתפוס את הצמח הראשון שהם נתקלים בו, ולהפוך את עצמם לפצצות חיות.</string>
     <string name="SpiderMind_Name_Objective">עכביש-פסי</string>
     <string name="SpiderQueen_Desc">גוף של אישה יפה המשולב עם עכביש מחריד. כל היצורים החיים במאורה הזו הם משרתיה. מפגש עם הגברת יוצאת הדופן הזו עלול להתגלות כחוויה קטלנית. כי אתה פולש\!</string>
     <string name="SpiritOfPain_Desc">שבר של אפלה חיה.</string>
@@ -306,6 +309,7 @@
     <string name="WarriorArmor_Desc">למרות שהשריון הזה נראה כבד, הוא מאפשר ללוחם לבצע זינוק הירואי לעבר מיקום מטרה, ולנחות עם מכה שמממת את כל האויבים השכנים.</string>
     <string name="WarriorArmor_Name">שריון לוחם</string>
     <string name="WaterElemental_Name">יסוד מים</string>
+    <string name="WaterElemental_Name_Objective">יסוד מים</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
     <string name="WeaknessBuff_Name">נחלש</string>
     <string name="Weightstone_Info">בעזרת משקולת, אתה יכול לאזן את נשק הקרב שלך כדי להגביר את המהירות או הדיוק שלו.</string>
@@ -354,6 +358,7 @@
     <string name="town_deco_curtains_name">וילונות</string>
     <string name="town_deco_entrance_name">כניסה</string>
     <string name="town_deco_filmtape_name">סרט</string>
+    <string name="town_deco_fireplace_desc">מצוין לחימום במקום קר כמו זה.</string>
     <string name="town_deco_glass_name">חלון רחב</string>
     <string name="town_deco_hay_desc">ערימה קטנה של שחת ריחני</string>
     <string name="town_deco_library_sign_name">שלט ספרייה</string>
@@ -371,6 +376,11 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 
