@@ -96,6 +96,7 @@
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
+    <string name="FullFaceMask_Name">gasmasker</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="Halberd_Gender">feminine</string>
@@ -381,6 +382,7 @@
 
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_rope_name">touw</string>
+    <string name="town_deco_shelving_name">rekken</string>
     <string name="town_deco_shop_sign_desc">Het lijkt erop dat er een winkel in dat gebouw zit.</string>
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
@@ -396,6 +398,8 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

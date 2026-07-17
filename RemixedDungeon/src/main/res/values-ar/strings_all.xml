@@ -47,6 +47,7 @@
     <string name="BlankScroll_Info">مجرد ورقة فارغة. ربما يمكن الكتابة عليها؟</string>
     <string name="BleedingBuff_Info">الجروح تنزف بسرعة</string>
     <string name="Bleeding_Death">نَزَفتَ حتى الموت...</string>
+    <string name="BlessedBuff_Name">مبارك</string>
     <string name="BlindnessBuff_Info">عمى تام، لا يُسمع سوى الأصوات المحيطة.</string>
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
@@ -63,6 +64,7 @@
     <string name="CharAction_Give">إعطاء</string>
     <string name="CharAction_Take">التقاط</string>
     <string name="Char_OutParalysis">كسر الألم شلل %s</string>
+    <string name="Char_StaBleeding">نزيف</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
 
     <string name="CharmBuff_Name">مسحور</string>
@@ -150,6 +152,7 @@
     <string name="InterLevelScene_Loading">جاري التحميل...</string>
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
     <string name="Journal_Caged_Kobold">كوبولد مسجون</string>
+    <string name="Journal_WellHealt">بئر الصحة</string>
     <string name="Keyring_Name">حلقة المفاتيح</string>
     <string name="King_Desc">كان آخر ملوك الأقزام معروفاً بفهمه العميق لعمليات الحياة والموت. لقد أقنع أعضاء بلاطه بالمشاركة في طقس كان من المفترض أن يمنحهم الشباب الأبدي. في النهاية كان هو الوحيد الذي حصل عليه - وجيش من الموتى الأحياء كمكافأة إضافية.</string>
     <string name="Kusarigama_Pull">سحب</string>
@@ -283,6 +286,7 @@
     <string name="Tengu_Gender">masculine</string>
     <string name="Thief_Stole">%1$s سرق %2$s منك!</string>
     <string name="TitleScene_Badges">الشارات</string>
+    <string name="TitleScene_Mods">مودز</string>
     <string name="TitleScene_Play">اللعب</string>
     <string name="TomeOfMastery_Blinded">لا يمكنك القراءة وأنت أعمى</string>
     <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
@@ -391,6 +395,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 

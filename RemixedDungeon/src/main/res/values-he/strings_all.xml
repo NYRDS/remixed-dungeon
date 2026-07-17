@@ -51,7 +51,9 @@
     <string name="ChaosCrystal_Info">אתה מרגיש זרמי אנרגיה זורמים דרך ידיך כשאתה מחזיק אותו.</string>
     <string name="CharAction_Charm">לְקַסֵּם</string>
     <string name="Char_Hit_0">%1 היכה את %2</string>
+    <string name="Char_StaDodged_1">התחמק</string>
     <string name="Char_StaMind">שכל</string>
+    <string name="Char_StaParalysed">משותק</string>
     <string name="Char_StaStunned">מהלום</string>
     <string name="Char_Stole_2">%1$s גנב את %2$s של %3$s!</string>
 
@@ -243,6 +245,7 @@
     <string name="ScrollOfIdentify_Name">מגילת זיהוי</string>
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
     <string name="ScrollOfRecharging_Name">מגילת טעינה</string>
+    <string name="ScrollOfTeleportation_NoTeleport">אאורה קסומה חזקה של המקום הזה מונעת ממך לטלפורט!</string>
     <string name="ScrollOfUpgrade_Name">מגילת שדרוג</string>
     <string name="Scroll_Info">המגילה הזו מכוסה בכתב בלתי ניתן לפענוח, ונושאת כותרת של רונה %s. מי יודע מה יקרה כשיקראו אותה בקול רם?</string>
     <string name="ServantNPC_Name">מלצרית פונדק</string>
@@ -310,6 +313,7 @@
     <string name="Weightstone_WndCancel">לא נורא</string>
     <string name="WindGust_Name">משב רוח</string>
     <string name="WndDonate_goldDonateText">תודה על עזרתך</string>
+    <string name="WndDonate_ruby">אודם</string>
     <string name="WndFortuneTeller_IdentifyAll">הכל</string>
     <string name="WndHats_UnequipButton">הסר כובע</string>
     <string name="WndHero_Awareness">מודעות</string>
@@ -347,6 +351,7 @@
     <string name="town_deco_barrel_wine_name">חבית יין</string>
     <string name="town_deco_canvas_name">קנבס</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
+    <string name="town_deco_curtains_name">וילונות</string>
     <string name="town_deco_entrance_name">כניסה</string>
     <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_glass_name">חלון רחב</string>
@@ -366,6 +371,11 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 
