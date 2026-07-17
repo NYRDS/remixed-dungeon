@@ -191,6 +191,7 @@
     <string name="Mods_RestartRequired">مطلوب إعادة تشغيل</string>
     <string name="NecromancerNPC_Intro">آه! يا له من منظر نادر! زميل مغامر ليس مجرد جثة بلا حياة! لا يكاد يصدق! أوه... أعتذر، أحياناً أشعر بالحماس الشديد. ترى، أنا نِكْرومانسي (ساحر الموتى). وعلى الرغم من أن دراسة الموتى والموت نفسه هو مهنتي، إلا أن رؤية نفس الأشياء مراراً وتكراراً تصبح مرهقة للغاية في النهاية. من ناحية أخرى، هذا هو السبب بالضبط في وجودي هنا. وفقاً لحساباتي، في غضون أسابيع قليلة، في مكان ما في هذا الزنزانة بالذات، سيحدث شيء مذهل. الـ _نِكْرُوبُولِس_ (المقبرة القديمة)، مدينة الموتى القديمة، ستفتح أبوابها. و... لا يمكنني حقاً قول الكثير، لقد أضعت وقتاً كافياً كما هو الحال. أنا بحاجة للاستعداد، _عد لاحقاً_.</string>
     <string name="NecromancerNPC_Message2">يجب أن أكون جاهزاً.</string>
+    <string name="Necromancy_SummonDeathlingName">استدعاء سمرتة</string>
     <string name="Paralysis_Name_0">مشلل %s</string>
     <string name="PetInventory_ACGiveToPet">أَعْطِ لِلْحَيَوَانِ الأَلِيفِ</string>
     <string name="PetInventory_ACTakeFromPet">خذ من الحيوان الأليف</string>
@@ -285,6 +286,8 @@
     <string name="Stylus_Info">هذا القلم السحري مصنوع من حجر داكن وصلب جداً. يمكنك به نقش رمز أو رونه، لكن القلم هو من يختار ما سينقش، ليس أنت.</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="SummonBeast_AtYourCommand">يأتي الوحش بأمرك!</string>
+    <string name="SummonDeathling_Info">يستدعي تابعاً من الأموات. تزداد قوة سمرتة وصلابته مع مستوى البطل. \n\nحد الاستدعاء: %1$d (+1 لكل مستوى سحر)</string>
+    <string name="SummonDeathling_Name">استدعاء سمرتة</string>
     <string name="SungrassBuff_Name">الشفاء بالأعشاب</string>
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
     <string name="Swarm_Name">سرب ذباب</string>
@@ -333,6 +336,7 @@
     <string name="WndDonate_silverDonate">تبرع فضي</string>
     <string name="WndFortuneTeller_IdentifyAll">الكل</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
+    <string name="WndHats_BuyButton">شراء</string>
     <string name="WndHats_NoConnectionMsg">تعذر الاتصال بـ Google Play.</string>
     <string name="WndHero_Awareness">اليقظة</string>
     <string name="WndInfoItem_Chest">صندوق</string>
@@ -355,6 +359,7 @@
     <string name="WndSettings_Immersive">وضع الغمر</string>
     <string name="WndSettings_InGameUiSettings">إعدادات واجهة المستخدم</string>
     <string name="WndSettings_Quickslots">فتحات سريعة</string>
+    <string name="WndSettings_SelectLanguage">اختر اللغة</string>
     <string name="WndStory_Sewers">يقع الزنزانة مباشرة تحت المدينة، حيث تشكل مستوياته العليا نظام الصرف الصحي للمدينة. وباعتبارها اسمياً جزءاً من المدينة، فإن هذه المستويات ليست خطرة جداً. لن يسميها أحد مكاناً آمناً، لكنك على الأقل لن تضطر للتعامل مع الكثير من السحر الشرير هنا.</string>
     <string name="WndStory_Spiders">منذ سنوات عديدة مضت كان هناك منجم غني مليء بالحجارة السحرية. لكن عندما جفت عروق المعادن غادر عمال المناجم تاركين خلفهم شبكة واسعة من الأنفاق. في نهاية المطاف سكن هذا المكان العناكب. لكن حتى هذه المخلوقات الخطيرة الكامنة في الظلام لم تكن كافية لإخافة الشجعان والمجانين الذين يتوقون للكنوز التي قد توجد في المناجم. فمدى الخطر يتناسب دائماً مع كمية الشائعات التي تتحدث عن القطع الأثرية السحرية. ذات مرة تجولت ساحرة شريرة في الأنفاق محاولاً الهروب من الملاحقين. لكن الناس المتشائمون لم يجرؤوا على دخول الظلام. لذا قرروا الانتظار. لكنها لم تظهر أبداً. ربما وجدت الساحرة مخرجاً آخر، أو ربما تمكنت من التسلل بجانب الحراس... أو أنها هلكت محاطة بحفيف مخلوقات الظلام.</string>
     <string name="WndTradeItem_Buy">شراء بـ %dغ</string>
@@ -403,6 +408,12 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
 
 
 

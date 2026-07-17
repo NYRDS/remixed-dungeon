@@ -151,6 +151,7 @@
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
     <string name="MeleeWeapon_Info6a">Vanwege je onvoldoende kracht is de nauwkeurigheid en snelheid van je aanval met dit %s verminderd.</string>
     <string name="MercenaryNPC_Desc">Een stevig mannetje.</string>
+    <string name="MimicPie_Name">mimic</string>
     <string name="Mimic_Name">mimic</string>
     <string name="MindVisionBuff_Info">De innerlijke visie laat duidelijk de beweging van alle levende wezens op de verdieping zien.</string>
     <string name="MirrorImage_Gender">masculine</string>
@@ -393,6 +394,8 @@
     <string name="town_deco_skullboard_name">trofeerek</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
     <string name="town_deco_stove_name">Stenen kachel</string>
+    <string name="town_deco_urn_desc">Kleien, misschien met as van iemand.</string>
+    <string name="town_deco_urn_name">urn</string>
     <string name="town_deco_vat_name">vat</string>
     <string name="town_deco_wall_candles_desc">Uitgedoofde kaarsen, waaruit nog steeds een aangename geur uitstreelt.</string>
     <string name="town_deco_wallpaper_name">behang</string>
@@ -403,6 +406,10 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 

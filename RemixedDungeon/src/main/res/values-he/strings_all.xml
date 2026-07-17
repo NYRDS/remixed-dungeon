@@ -65,6 +65,7 @@
     <string name="CloakBuff_Name">מוסתר</string>
     <string name="CloakSpell_Name">גלימה</string>
     <string name="ClothArmor_Desc">השריון הקל הזה מציע הגנה בסיסית.</string>
+    <string name="ClothArmor_Name">שריון בד</string>
     <string name="Codex_Story_23">הספר הזה כתוב בשפה הגמדית</string>
     <string name="Codex_Story_9">גליף תזוזה - בכל פעם שהגיבור נפגע, יש סיכוי שהגיבור יטלפורט לאריח גלוי אקראי. גליף זה לא עובד ברמות בוס.</string>
     <string name="ColdSpirit_Desc">רוח הקור היא התגלמות הכפור, בצורתו הטהורה ביותר. בהיותה גוש חסר מודע של אנרגיה קסומה, היא מצייתת לרצון המכשף שקרא לה או פועלת לפי אינסטינקטים בסיסיים.</string>
@@ -79,6 +80,7 @@
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
     <string name="DriedRoseBuff_Info">הוורד נראה מקסים מאוד.</string>
+    <string name="DriedRoseBuff_Name">מקסים</string>
     <string name="DriedRose_Name">ורד יבש</string>
     <string name="Drunkard_Phrase_4">זזזזזז...</string>
     <string name="Dungeon_Tips_13">אין טעם להחזיק יותר מאנק אחד בו זמנית, כי תאבדו אותם בתחיית המתים.</string>
@@ -166,6 +168,10 @@
     <string name="MageArmor_ACSpecial">אדמה מותכת</string>
     <string name="MagicTorch_Name">לפיד קסם</string>
     <string name="MedicineMask_Name">מסכה כירורגית</string>
+    <string name="MeleeWeapon_Info1a">%1$s — %2$s כלי נשק קרוב דרגה %3$d.</string>
+    <string name="MeleeWeapon_Info1b"> </string>
+    <string name="MeleeWeapon_Info1c">משופר</string>
+    <string name="MeleeWeapon_Info1d">מוחלש</string>
     <string name="MeleeWeapon_Info5">זה מכושף.</string>
     <string name="MimicAmulet_Name">מימיק</string>
     <string name="MimicPie_Gender">masculine</string>
@@ -339,6 +345,8 @@
     <string name="WndResurrect_Yes">כן, אני אלחם!</string>
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
     <string name="WndSettingsInGame_GameLog">יומן משחק</string>
+    <string name="WndSettings_GameplaySettings">משחקיות</string>
+    <string name="WndSettings_SelectLanguage">בחר שפה</string>
     <string name="WndTradeItem_Bought">רכשת את %1 תמורת %2</string>
     <string name="WndTradeItem_Buy">קנה ב-%d זהב</string>
     <string name="WndTradeItem_Sale">למכירה: %1$s - %2$dג</string>
@@ -373,9 +381,20 @@
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_vat_name">מיכל</string>
     <string name="town_deco_wall_candles_name">נרות</string>
+    <string name="town_deco_wall_desc">קיר פשוט עשוי בולי עץ.</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

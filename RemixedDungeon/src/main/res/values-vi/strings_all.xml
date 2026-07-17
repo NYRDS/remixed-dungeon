@@ -202,9 +202,11 @@
     <string name="Ring_Info4">%1$s\n\nBạn có thể cảm thấy một phép thuật độc ác ẩn mình bên trong %2$s.</string>
     <string name="RottenFood_Message">Ghét quá!</string>
     <string name="RottenRation_Name">Cơm khô hỏng</string>
+    <string name="SacrificialSword_Name">kiếm hiến tế</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
     <string name="ScrollOfIdentify_Name">cuộn nhận diện</string>
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
+    <string name="ScrollOfTeleportation_NoTeleport">Sức mạnh ma pháp của nơi này ngăn cản việc dịch chuyển của bạn!</string>
     <string name="ScrollOfWeaponUpgrade_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="Scroll_Runes_1">SOWILO</string>
@@ -326,6 +328,7 @@
     <string name="WndSettings_ActionButtonSize">Kích thước nút hành động</string>
     <string name="WndSettings_InGameUiSettings">Cài đặt giao diện</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
+    <string name="WndSettings_SelectLanguage">Chọn ngôn ngữ</string>
     <string name="WndTradeItem_Buy">Mua với %d vàng</string>
     <string name="WndTradeItem_SellAll">Bán tất cả cho %dg</string>
     <string name="WndTradeItem_SellN">Bán %1$d cho %2$dg</string>
@@ -418,6 +421,10 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
 
 
 

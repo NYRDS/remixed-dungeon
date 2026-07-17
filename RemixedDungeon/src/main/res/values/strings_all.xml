@@ -405,10 +405,14 @@
     <string name="ChampionOfWaterBuff_Name">Champion of Water</string>
     <string name="ChaosArmor_Info">This armor consists of blood-red plates that are sewed together with dark red chains. They irradiate chaotic energy as you touch them.</string>
     <string name="ChaosArmor_Name">Chaos armor</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">A one-handed blade of pure chaos. It grows with combat like its two-handed cousin, but more slowly and to a lesser potential — leaving your off-hand free for a shield.</string>
+    <string name="ChaosBlade_Name">chaos blade</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">A dreadful Bow filled with the power of Chaos. Each arrow it shoots will carry piece of chaos energy within it. But if you miss...</string>
     <string name="ChaosBow_Name">chaos bow</string>
     <string name="ChaosCrystal_ArmorFused">The crystal fused with your armor, and it took the chaos form.</string>
+    <string name="ChaosCrystal_BladeFused">Crystal absorbs your weapon, and took the form of a Blade</string>
     <string name="ChaosCrystal_BowFused">Crystal absorbs your bow, and took the form of a Bow</string>
     <string name="ChaosCrystal_Fuse">FUSE</string>
     <string name="ChaosCrystal_Info">You feel streams of energy, running through your hands while you holding it.</string>
@@ -422,7 +426,6 @@
     <string name="ChaosCrystal_SelectForFuse">Choose item to fuse Chaos Crystal in</string>
     <string name="ChaosCrystal_ShieldFused">The crystal fused with your shield, and it took the chaos form.</string>
     <string name="ChaosCrystal_StaffFused">Crystal absorbs your wand, and took the form of a Staff</string>
-    <string name="ChaosCrystal_BladeFused">Crystal absorbs your weapon, and took the form of a Blade</string>
     <string name="ChaosCrystal_SwordFused">Crystal absorbs your weapon, and took the form of a Sword</string>
     <string name="ChaosCrystal_Use">USE</string>
     <string name="ChaosHelmet_Info">A blood red helmet is an essential symbol of a chaos warrior.</string>
@@ -432,9 +435,6 @@
     <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Staff imbued with Power Of Chaos! What else a mage can dream or fear of?</string>
     <string name="ChaosStaff_Name">chaos staff</string>
-    <string name="ChaosBlade_Gender">masculine</string>
-    <string name="ChaosBlade_Info">A one-handed blade of pure chaos. It grows with combat like its two-handed cousin, but more slowly and to a lesser potential — leaving your off-hand free for a shield.</string>
-    <string name="ChaosBlade_Name">chaos blade</string>
     <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">The blade of this sword is made of pure chaos and it mildly vibrates sometimes. Great powers, stored inside this weapon can cut in half almost anything. Although, great skills are needed, to cope the mighty force of the weapon.</string>
     <string name="ChaosSword_Name">chaos sword</string>
@@ -3088,4 +3088,5 @@ Your opinion matters!</string>
     <string name="town_table_fortune_ball_name">Crystal ball</string>
     <string name="town_table_fortune_desc">This table is covered with a silk cloth. You can see various tarot cards laid out in a peculiar order.</string>
     <string name="town_table_fortune_name">Table</string>
+
 </resources>
