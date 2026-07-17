@@ -169,6 +169,7 @@
     <string name="Poison_Name_0">Độc %s</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
     <string name="PotionOfMight_Name">Bình Thuốc Mạnh Mẽ</string>
+    <string name="Potion_ACMoisten">LÀM ẨM</string>
     <string name="Potion_Name">%s thuốc</string>
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
     <string name="Potion_RuneDissaperaed">Chữ ký biến mất khỏi %s.</string>
@@ -295,6 +296,7 @@
     <string name="WndLibrary_Mobs_Btn">Quái vật</string>
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
     <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
+    <string name="WndPortal_Info_Return">Cổng truyền tàng này sẽ đưa bạn trở lại hang động.\nBạn có muốn sử dụng nó không?</string>
     <string name="WndPremiumSettings_banners">Chọn chất liệu cờ</string>
     <string name="WndPremiumSettings_chrome">Chọn vật liệu giao diện</string>
     <string name="WndPremiumSettings_std">tiêu chuẩn</string>
@@ -334,6 +336,7 @@
     <string name="town_deco_dungeon_door_name">cửa hang</string>
     <string name="town_deco_entrance_name">cổng vào</string>
     <string name="town_deco_flowerinthepot_name">Hoa trong chậu</string>
+    <string name="town_deco_furnace_name">Lò nung</string>
     <string name="town_deco_pathway_name">đường mòn</string>
     <string name="town_deco_pillar_desc">Ngày xưa, cột này từng đóng vai trò là đỡ đẹp đẽ và trang trí.</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
@@ -398,6 +401,11 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
 
 
 
