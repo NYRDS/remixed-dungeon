@@ -44,6 +44,7 @@
     <string name="Blacksmith_Verify3">أحتاج لمعرفة ما أعمل عليه، حددهما أولاً!</string>
     <string name="Blacksmith_Verify6">لا يمكنني إعادة صياغة هذه العناصر!</string>
     <string name="BlankScroll_Info">مجرد ورقة فارغة. ربما يمكن الكتابة عليها؟</string>
+    <string name="BleedingBuff_Info">الجروح تنزف بسرعة</string>
     <string name="Bleeding_Death">نَزَفتَ حتى الموت...</string>
     <string name="BlindnessBuff_Info">عمى تام، لا يُسمع سوى الأصوات المحيطة.</string>
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
@@ -73,6 +74,7 @@
     <string name="Crab_Name">سرطان المجاري</string>
     <string name="Crystal_Name">بلورة طافية</string>
     <string name="DarkGold_Info">يُسمى هذا المعدن \&quot;المظلم\&quot; ليس بسبب لونه (فهو لا يختلف عن الذهب العادي)، بل لأنه يذوب في ضوء النهار، مما يجعله عديم الفائدة على السطح.</string>
+    <string name="Darkness_Info">يبدو وكأنه قطع من الظلام الأبدي تطفو في الهواء</string>
     <string name="Death_Name_1">مريع %s</string>
     <string name="Deathling_Name">ميت صغير</string>
     <string name="DeepSnail_Gender">masculine</string>
@@ -153,6 +155,7 @@
     <string name="Level_TileDescInactiveTrap">لقد تم تفعيل الفخ من قبل وهو لم يعد خطيراً.</string>
     <string name="Level_TileEmbers">جمرة</string>
     <string name="Level_TileEmptyWell">بئر فارغ</string>
+    <string name="Level_TileEntrance">مدخل النزول</string>
     <string name="Level_TileFireTrap">فخ حريق</string>
     <string name="Level_TilePedestal">قاعدة</string>
     <string name="Level_TileSummoningTrap">فخ الاستدعاء</string>
@@ -269,6 +272,7 @@
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
     <string name="Stench_Txt">%s نتن</string>
     <string name="Stylus_Info">هذا القلم السحري مصنوع من حجر داكن وصلب جداً. يمكنك به نقش رمز أو رونه، لكن القلم هو من يختار ما سينقش، ليس أنت.</string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="SummonBeast_AtYourCommand">يأتي الوحش بأمرك!</string>
     <string name="SungrassBuff_Name">الشفاء بالأعشاب</string>
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
@@ -315,6 +319,7 @@
     <string name="WndCryptoDonate_ton">تون</string>
     <string name="WndCryptoDonate_tron">ترون</string>
     <string name="WndDonate_silverDonate">تبرع فضي</string>
+    <string name="WndFortuneTeller_IdentifyAll">الكل</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
     <string name="WndHats_NoConnectionMsg">تعذر الاتصال بـ Google Play.</string>
     <string name="WndHero_Awareness">اليقظة</string>
@@ -383,6 +388,11 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
 
 
 
