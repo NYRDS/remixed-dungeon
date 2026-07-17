@@ -416,7 +416,7 @@
     <string name="ChaosCrystal_Info_2">Ναι! Πλέον γνωρίζεις ότι μπορείς να τον συγχωνεύσεις μαγικά με κάποιο αντικείμενο. Και τώρα;</string>
     <string name="ChaosCrystal_Name">παράξενος κρύσταλλος</string>
     <string name="ChaosCrystal_Name_1">χαοτικός κρύσταλλος</string>
-    <string name="ChaosCrystal_Name_2">κρύσταλλος του Χάους</string>
+    <string name="ChaosCrystal_Name_2">κρύσταλλος του χάους</string>
     <string name="ChaosCrystal_Prompt">Διάλεξε το σημείο να ορίσεις το Σημάδι του Χάους</string>
     <string name="ChaosCrystal_ScrollFused">Ο κρύσταλλος απορροφήθηκε από τον ρούνο του παπύρου. Μετατράπηκε σε: %s.</string>
     <string name="ChaosCrystal_SelectForFuse">Ένωσε αντικείμενο με τον Κρύσταλλο του Χάους</string>
