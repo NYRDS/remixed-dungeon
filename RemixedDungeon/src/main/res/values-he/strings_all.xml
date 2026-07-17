@@ -148,6 +148,7 @@
     <string name="King_Info3">איך אתה מעז!</string>
     <string name="KunaiThrow_Name">זריקת קונאי</string>
     <string name="LastLevel_TileGrass">טחב גחלים</string>
+    <string name="LastLevel_TileHighGrass">פטריות גחלת</string>
     <string name="LastShopLevel_TileDescEmptySP">שטיח עבה מכסה את הרצפה.</string>
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
@@ -365,6 +366,7 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

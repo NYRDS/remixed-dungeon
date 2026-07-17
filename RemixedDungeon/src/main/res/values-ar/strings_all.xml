@@ -3,6 +3,7 @@
     <string name="AboutScene_Sound">الصوت:</string>
     <string name="Accuracy_DecreasedDoctorBareHands">يداي العاريتان تفسدان تقنيتي. بدون قطع المنشار النظيف، تتحول دقتي إلى فوضى.</string>
     <string name="Acidic_Name_Objective">العقرب الحمضي</string>
+    <string name="Albino_Desc">فئران الجراب عدوانية، لكنها ضعيفة نسبياً في المجاري. يمكن أن تكون خطرة فقط بأعداد كبيرة. يبدو أن هذا الفأر مهق (ألبينو). كما أن لديه أسناناً حادة بشكل غير طبيعي.</string>
     <string name="AllowStatisticsCollectionScene_Title">جمع إحصائيات الاستخدام</string>
     <string name="AmokArrow_Info">سوف يحول المحلول الموجود على رأس هذا السهم أي شخص إلى محارب بربري لا يرحم.</string>
     <string name="AmokArrow_Name">سهم الهياج</string>
@@ -169,6 +170,7 @@
     <string name="MageArmor_ACSpecial">أرض منصهرة</string>
     <string name="MailArmor_Name">درع حلقي</string>
     <string name="MeleeWeapon_Info1c">مُطوَّر</string>
+    <string name="MeleeWeapon_Info2a">متوسط ضرره %d نقطة لكل ضربة.</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
     <string name="MimicPie_Desc">الميماكس كائنات سحرية يمكنها اتخاذ أي شكل تريده. هذا يشبه فطيرة كبيرة ولذيذة.</string>
     <string name="MimicPie_Name">ميميكي</string>
@@ -205,6 +207,7 @@
     <string name="PotionBelt_Name">حزام جرعات</string>
     <string name="PotionOfMana_Name">إكسير المانا</string>
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
+    <string name="PotionOfStrength_Name">جرعة القوة</string>
     <string name="Potion_MoistenUseless">يبدو أنك أهدرت هذا الزيت.</string>
     <string name="Potion_Name">%s جرعة</string>
     <string name="Potion_RuneDissaperaed">اختفت الرون من %s.</string>
@@ -388,6 +391,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 

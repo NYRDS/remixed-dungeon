@@ -55,6 +55,7 @@
     <string name="Char_StaDodged_2">tránh</string>
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
 
+    <string name="ChargrilledMeat_Name">thịt nướng than hoa</string>
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
@@ -114,6 +115,7 @@
     <string name="Hero_StaBurning">Bạn bị bốc cháy!</string>
     <string name="Horror_Name_0">Quái dị %s</string>
     <string name="HungerBuff_Info1">Bạn đang đói!</string>
+    <string name="HungerBuff_Name1">Đói</string>
     <string name="HuntressArmor_NotHuntress">Chỉ thợ săn mới có thể sử dụng giáp này!</string>
     <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
     <string name="IceCaves_TileGrass">Cỏ đóng băng.</string>
@@ -182,6 +184,7 @@
     <string name="PseudoRat_Name_Objective">chuột giả</string>
     <string name="Pumpkin_Name">Bí ngô</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name_Objective">chuột túi</string>
     <string name="ResultDescriptions_Necromancy">Hết sức lực khi cố gắng hồi sinh xác ở tầng %d</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
@@ -407,6 +410,9 @@
 
 
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
 
 
 

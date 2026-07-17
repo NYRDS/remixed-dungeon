@@ -7,6 +7,7 @@
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
     <string name="Armor_Info7b">, en omdat het vervloekt is, kun je het niet afdoen</string>
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
+    <string name="Backstab_Aware">Het slachtoffer mag niet op zijn hoede zijn voor een succesvolle rugstoot.</string>
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
     <string name="Badges_BossSlain1">De Goo is gedood</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
@@ -15,10 +16,12 @@
     <string name="Badges_Info1">Insigne behaald: %s</string>
     <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
+    <string name="Badges_NightHunter">5 monsters gedood in de nacht</string>
     <string name="Badges_PotionsCooked3">9 drankjes gebraagd</string>
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
     <string name="Badges_StrengthAttained5">21 punten Kracht bereikt</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
+    <string name="Belongings_CantWearBoth">Je kunt %1$s en %2$s niet tegelijkertijd uitrusten!</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="Bishop_no_money">Je kunt er niet voor betalen.</string>
     <string name="BlackCat_Gender">feminine</string>
@@ -49,6 +52,7 @@
     <string name="Char_StaAmok">amok</string>
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaDizzy">duizelig</string>
+    <string name="Char_StaParalysed">verlamd</string>
     <string name="Char_StaRooted">geworteld</string>
     <string name="Char_Stole_1">%1$s steelt %2$s van %3$s!</string>
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
@@ -80,6 +84,7 @@
     <string name="Dungeon_Tips_22">De tekst is geschreven in de taal van demonen.</string>
     <string name="Dungeon_Tips_3">Je kunt je goud uitgeven in winkels in de stad of de dungeon.</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
+    <string name="Dungeon_Tips_9">Laat de Tengu niet vrij!</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
     <string name="EncumbranceBuff_CharAct_2">Dit %s is te zwaar voor mij om effectief te gebruiken.</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
@@ -391,6 +396,13 @@
 
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
 
 
 
