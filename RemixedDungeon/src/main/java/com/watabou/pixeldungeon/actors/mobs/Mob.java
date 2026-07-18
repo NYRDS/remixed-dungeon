@@ -226,7 +226,27 @@ public abstract class Mob extends Char {
         }
 
 
-        var error = String.format("actor %s get really confused! (%s)", getEntityKind(), tags);
+        // Pack diagnostics INTO the exception message: Crashlytics only collects this string, no
+        // separate logs, so the state sequence alone isn't enough to tell why no state spent time.
+        Char enemy = getEnemy();
+        StringBuilder buffNames = new StringBuilder();
+        int shown = 0;
+        for (Buff b : buffs()) {
+            if (shown++ > 0) {
+                buffNames.append(',');
+            }
+            buffNames.append(b.getEntityKind());
+            if (shown >= 10) {
+                break;
+            }
+        }
+        var error = String.format(
+                "actor %s really confused! states=%s enemy=%s enemyValid=%s humanoid=%s items=%d wands=%d speed=%.3f buffs=[%s]",
+                getEntityKind(), tags,
+                enemy == null ? "null" : enemy.getEntityKind(),
+                enemy == null ? "null" : enemy.valid(),
+                isHumanoid(), getBelongings().itemCount(), getBelongings().wandCount(),
+                (double) speed(), buffNames.toString());
         spend(TICK);
         EventCollector.logException(error);
     }

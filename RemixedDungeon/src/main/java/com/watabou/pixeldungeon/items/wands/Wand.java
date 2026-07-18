@@ -265,9 +265,14 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
     // Use this for mobs that carry wands as inventory items (MobItemAi).
     // mobWandUse stays free for Crystal/BlackCat/blinkTo which have infinite use.
     public void mobWandUseCharged(Char user, final int tgt) {
+        // Spend BEFORE firing the effect: a zap can damage the caster (chain lightning arcing back,
+        // blink into a hazard), and that self-damage -> gotDamage -> seekRevenge calls setState()
+        // without spending. Spending first guarantees Mob.act's time-progress check passes even
+        // when the zap triggers a state flip, preventing the WANDERING<->HUNTING ping-pong that
+        // trips the "really confused" breaker.
+        user.spend(TIME_TO_ZAP);
         mobWandUse(user, tgt);
         curCharges(curCharges() - 1);
-        user.spend(TIME_TO_ZAP);
     }
 
     protected void fx(int cell, Callback callback) {

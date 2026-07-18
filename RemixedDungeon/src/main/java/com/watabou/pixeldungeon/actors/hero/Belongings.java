@@ -507,6 +507,26 @@ public class Belongings implements Iterable<Item>, Bundlable {
         }
     }
 
+    // Counts every carried entry (equipped + backpack stacks).
+    public int itemCount() {
+        int n = 0;
+        for (Item ignored : this) {
+            n++;
+        }
+        return n;
+    }
+
+    // Number of wands the owner is carrying (equipped or in backpack).
+    public int wandCount() {
+        int n = 0;
+        for (Item item : this) {
+            if (item instanceof Wand) {
+                n++;
+            }
+        }
+        return n;
+    }
+
     public void setupFromJson(@NotNull JSONObject desc) throws JSONException {
         try {
             Item item;
