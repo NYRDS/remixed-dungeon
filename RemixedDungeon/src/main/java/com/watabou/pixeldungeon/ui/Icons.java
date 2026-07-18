@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.ui;
 
-import com.nyrds.platform.EventCollector;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -53,6 +52,8 @@ public enum Icons {
     BTN_TARGET,
     BTN_QUESTION,
     GNOLL,
+    DOCTOR,
+    PRIEST,
     VK,
     FB,
     TG,
@@ -218,6 +219,16 @@ public enum Icons {
             case GNOLL:
                 icon.frame(icon.texture.uvRect(110, 78, 126, 94));
                 break;
+            case DOCTOR:
+                // Plague-doctor mask (copied from the last tile of items/artifacts.png), placed in
+                // the free slot next to the hero-portrait column. Used as the DOCTOR hero icon.
+                icon.frame(icon.texture.uvRect(112, 96, 128, 112));
+                break;
+            case PRIEST:
+                // Ankh (copied from tile 1 of items.png — ItemSpriteSheet.ANKH). Used as the
+                // PRIEST hero icon.
+                icon.frame(icon.texture.uvRect(96, 112, 112, 128));
+                break;
             case VK:
                 icon.frame(icon.texture.uvRect(62, 94, 78, 110));
                 break;
@@ -246,8 +257,10 @@ public enum Icons {
     public static Image get(HeroClass cl) {
         try {
             return get(valueOf(cl.name()));
-        } catch (IllegalArgumentException err) {
-            EventCollector.logException(err);
+        } catch (IllegalArgumentException ignored) {
+            // No dedicated portrait for this hero class yet (e.g. DOCTOR, PRIEST) — fall back to
+            // NYRDIE silently. This is a known handled case, not an error: logging it polluted crash
+            // reports with "No enum constant Icons.DOCTOR".
             return get(NYRDIE);
         }
     }
