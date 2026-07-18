@@ -482,7 +482,10 @@ public abstract class Mob extends Char {
         }
 
         if (getOwnerId() != getId()) {
-            if (getOwner().friendly(chr, r_level + 1)) {
+            Char owner = getOwner();
+            // Don't recurse into a stale/DUMMY owner (getOwner() returns DUMMY for unresolved ids)
+            // or back into ourselves — both extend/cycle the chain and trip the r_level circuit-breaker.
+            if (owner != this && owner.valid() && owner.friendly(chr, r_level + 1)) {
                 return true;
             }
         }

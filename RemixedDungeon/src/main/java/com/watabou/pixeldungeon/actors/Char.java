@@ -161,6 +161,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
     public int owner = EntityIdSource.INVALID_ID;
 
+    // True while this char is being deserialized from a Bundle (save load OR clone via makeClone).
+    // Suppresses buff side-effects that should only fire when a buff is freshly applied — e.g. a
+    // restored Burning buff must not immediately deal "catch fire" damage. Without this, a split
+    // clone took burn damage mid-construction, waking it and triggering seekRevenge->friendly on a
+    // half-initialized owner chain. Transient: never persisted.
+    public transient boolean restoringFromBundle = false;
+
     @Packable(defaultValue = "-1")//Level.INVALID_CELL
     @Getter
     public int pos = Level.INVALID_CELL;
@@ -372,8 +379,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         ht(bundle.getInt(TAG_HT));
         lvl(bundle.getInt(LEVEL));
 
-        for (Buff b : bundle.getCollection(BUFFS, Buff.class)) {
-            b.attachTo(this);
+        restoringFromBundle = true;
+        try {
+            for (Buff b : bundle.getCollection(BUFFS, Buff.class)) {
+                b.attachTo(this);
+            }
+        } finally {
+            restoringFromBundle = false;
         }
 
         spellsUsage = bundle.getMap(SPELLS_USAGE);
@@ -1038,7 +1050,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         //GLog.debug("%s (%s) added to %s", buff.getEntityKind(), buff.getSource().getEntityKind(), getEntityKind());
 
-        if (!Dungeon.isLoading()) {
+        if (!Dungeon.isLoading() && !restoringFromBundle) {
             if (buff instanceof Burning
             ) {
                 damage(Random.NormalIntRange(1, ht() / 8), buff);
