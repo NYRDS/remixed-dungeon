@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
     <string name="AllowStatisticsCollectionScene_Title">Thu thập thống kê sử dụng</string>
@@ -56,7 +57,6 @@
     <string name="Char_StaDodged_1">tránh</string>
     <string name="Char_StaDodged_2">tránh</string>
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
-
     <string name="ChargrilledMeat_Name">thịt nướng than hoa</string>
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
@@ -307,7 +307,6 @@
     <string name="WndInstallingMod_please_wait">Đang cài đặt mod, vui lòng đợi...</string>
     <string name="WndJournal_Title">Nhật Ký</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
-
     <string name="WndLibrary_Mobs_Btn">Quái vật</string>
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
     <string name="WndPlayGames_Connecting">Đang kết nối với Google Play Games, vui lòng chờ một chút</string>
@@ -319,14 +318,16 @@
     <string name="WndPremiumSettings_std">tiêu chuẩn</string>
     <string name="WndPriest_Title">Linh mục thị trấn</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
-
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndRanking_Stats">Thống kê</string>
     <string name="WndSadGhost_Farewell">Tạm biệt, nhà thám hiểm! Chúc may mắn!</string>
     <string name="WndSaveSlotSelect_Delete_No">Không</string>
     <string name="WndSaveSlotSelect_Delete_Title">Bạn có chắc chắn muốn xóa trạng thái lưu này?</string>
     <string name="WndSettings_ActionButtonSize">Kích thước nút hành động</string>
+    <string name="WndSettings_Handedness">Ưu tiên tay</string>
     <string name="WndSettings_InGameUiSettings">Cài đặt giao diện</string>
+    <string name="WndSettings_Music">Nhạc</string>
+    <string name="WndSettings_Quickslots">Khe truy cập nhanh</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
     <string name="WndSettings_SelectLanguage">Chọn ngôn ngữ</string>
     <string name="WndTradeItem_Buy">Mua với %d vàng</string>
@@ -373,148 +374,6 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
