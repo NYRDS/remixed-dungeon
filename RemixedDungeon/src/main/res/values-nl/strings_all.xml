@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="AboutScene_Graphics">Grafisch:</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon door NYRDS gebaseerd op de broncode van Pixel Dungeon door Watabou.</string>
@@ -8,6 +7,7 @@
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
     <string name="Armor_Info7b">, en omdat het vervloekt is, kun je het niet afdoen</string>
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
+    <string name="AzuterronNPC_Name_Objective">vreemdeling</string>
     <string name="Backstab_Aware">Het slachtoffer mag niet op zijn hoede zijn voor een succesvolle rugstoot.</string>
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
     <string name="Badges_BossSlain1">De Goo is gedood</string>
@@ -64,6 +64,7 @@
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="CommonArrow_Info">Gewone houten pijl met een ijzeren punt.</string>
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
@@ -83,6 +84,7 @@
     <string name="Dungeon_Tips_16">Wanneer je een getoverde wapen verbetert, is er een kans dat de toverij vernietigd wordt.</string>
     <string name="Dungeon_Tips_22">De tekst is geschreven in de taal van demonen.</string>
     <string name="Dungeon_Tips_3">Je kunt je goud uitgeven in winkels in de stad of de dungeon.</string>
+    <string name="Dungeon_Tips_4">Pas op voor de Slijm!</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="Dungeon_Tips_9">Laat de Tengu niet vrij!</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
@@ -92,6 +94,7 @@
     <string name="Facilitations_Names_2">Djinnengeest</string>
     <string name="Fire_Info">Hier woedt een vuur.</string>
     <string name="Fire_Name_1">Vlamend %s</string>
+    <string name="Firebloom_Name">Vuurbloem</string>
     <string name="FortuneTellerNPC_Name">waarzegster</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
@@ -314,6 +317,7 @@
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_ton">Ton</string>
     <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndDonate_goldDonateText">Dank voor uw hulp</string>
     <string name="WndDonate_royalDonateText">Ik wil niet raar klingen, maar door dit te doen, voed je de developers letterlijk.</string>
     <string name="WndDonate_ruby">robijn</string>
     <string name="WndDonate_silverDonateText2">Ook schakelt u reclame uit in alle spelmodi en ontgrendelt u de Jageres vanaf het begin.</string>
@@ -381,6 +385,7 @@
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
     <string name="town_deco_entrance_name">ingang</string>
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
+    <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
     <string name="town_deco_library_books_desc">Nog steeds beter dan de boeken uit de kelder.</string>
     <string name="town_deco_library_sign_name">Bibliotheekbord</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
@@ -403,4 +408,11 @@
     <string name="town_deco_wooden_drawer_name">lade</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
 </resources>

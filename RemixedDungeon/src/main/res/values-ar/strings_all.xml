@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="Abilities_Common">التعاويذ الشائعة</string>
     <string name="AboutScene_Sound">الصوت:</string>
@@ -16,6 +15,7 @@
     <string name="Armor_Incompatible">تفاعل أنواع مختلفة من السحر محا الرموز السحرية على هذه الدروع!</string>
     <string name="Armor_Info3">\n\nنظراً لأن قوتك غير كافية، فإن ارتداء هذه الدروع سيقلل من سرعة حركتك ومهاراتك الدفاعية.</string>
     <string name="Armor_Info6">عليه نقوش</string>
+    <string name="AzuterronNPC_Name_Objective">غريباً</string>
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
     <string name="Badges_BossSlain1">تم القضاء على الغو</string>
     <string name="Badges_GamesPlayed2">تم لعب 100 لعبة</string>
@@ -67,6 +67,7 @@
     <string name="Char_OutParalysis">كسر الألم شلل %s</string>
     <string name="Char_StaBleeding">نزيف</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
+    <string name="ChargrilledMeat_Info">يبدو وكأنه ستيك جيد.</string>
     <string name="CharmBuff_Name">مسحور</string>
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
     <string name="ChristmasTurkey_Name">ديك رومي احتفالي</string>
@@ -96,6 +97,7 @@
     <string name="Drunkard_Phrase_4">زززززز...</string>
     <string name="Dungeon_Tips_16">عند ترقية سلاح مسحور، هناك احتمال لتدمير ذلك السحر.</string>
     <string name="Dungeon_Tips_18">الطريقة الوحيدة لسحر سلاح هي ترقيته باستخدام مخطوطة ترقية سلاح.</string>
+    <string name="Dungeon_Tips_4">احذر من الغو!</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
     <string name="Earthroot_Desc">عندما يلمس مخلوق جذر الأرض، تخلق جذوره نوعًا من الدروع الطبيعية حوله.</string>
     <string name="ElvenDagger_Name">خنجر الجان</string>
@@ -148,6 +150,7 @@
     <string name="Imp_Desc">العفاريت هي شياطين أقل شأناً. لا تتميز بقوتها أو موهبتها السحرية، لكنها ذكية واجتماعية تماماً. يفضل العديد من العفاريت العيش بين غير الشياطين.</string>
     <string name="Imp_Golems2">كيف تسير سفاري الغوليم الخاصة بك؟</string>
     <string name="IncendiaryDart_Info">يُصمَّم سنّ كل من هذه السهام ليغرس في هدفه، بينما تنفجر المركبات غير المستقرة المربوطة بطوله في ألسنة لهبٍ باهرة.</string>
+    <string name="InnKeeperNPC_Desc">صاحب الفندق فخور بنفسه.</string>
     <string name="InnKeeperNPC_Name">صاحب الحانة</string>
     <string name="InnKeeperNPC_Name_Objective">صاحب الحانة</string>
     <string name="Instability_Name_0">غير مستقر %s</string>
@@ -159,6 +162,7 @@
     <string name="Keyring_Name">حلقة المفاتيح</string>
     <string name="King_Desc">كان آخر ملوك الأقزام معروفاً بفهمه العميق لعمليات الحياة والموت. لقد أقنع أعضاء بلاطه بالمشاركة في طقس كان من المفترض أن يمنحهم الشباب الأبدي. في النهاية كان هو الوحيد الذي حصل عليه - وجيش من الموتى الأحياء كمكافأة إضافية.</string>
     <string name="Kusarigama_Pull">سحب</string>
+    <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
     <string name="Level_TileDescInactiveTrap">لقد تم تفعيل الفخ من قبل وهو لم يعد خطيراً.</string>
     <string name="Level_TileEmbers">جمرة</string>
     <string name="Level_TileEmptyWell">بئر فارغ</string>
@@ -251,6 +255,7 @@
     <string name="Scroll_Runes_13">إيفاز</string>
     <string name="Scroll_Runes_5">رایدو</string>
     <string name="Scroll_Runes_9">بيركانان</string>
+    <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name_Objective">خادمة الفندق</string>
     <string name="ServiceManNPC_Desc">عامل عادي في المؤسسات المحلية.</string>
     <string name="ServiceManNotReadyNPC_Message">أعتذر، لكن هذا المبنى ليس جاهزًا بعد!</string>
@@ -333,6 +338,7 @@
     <string name="WndCryptoDonate_supportDev">دعم المطور</string>
     <string name="WndCryptoDonate_ton">تون</string>
     <string name="WndCryptoDonate_tron">ترون</string>
+    <string name="WndDonate_goldDonateText">شكراً لمساعدتكم</string>
     <string name="WndDonate_silverDonate">تبرع فضي</string>
     <string name="WndFortuneTeller_IdentifyAll">الكل</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
@@ -407,4 +413,11 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
 </resources>

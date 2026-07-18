@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
     <string name="AllowStatisticsCollectionScene_Title">Thu thập thống kê sử dụng</string>
@@ -6,6 +5,7 @@
     <string name="Amulet_Name">Bùa Yendor</string>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
     <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
+    <string name="AzuterronNPC_Name_Objective">người lạ</string>
     <string name="AzuterronNPC_Quest_End">Tuyệt vời. Đây, uống bình thuốc này đi, chắc chắn nó sẽ có ích cho bạn.</string>
     <string name="AzuterronNPC_Quest_Reminder">Giúp tôi và tôi sẽ giúp bạn.</string>
     <string name="Badges_AllPotions">Tất cả thuốc đã được nhận dạng</string>
@@ -39,6 +39,7 @@
     <string name="CagedKobold_Message3">Tôi ghét tất cả mọi thứ về cái lồng này</string>
     <string name="CagedKobold_Name">kobold trong lồng</string>
     <string name="CandleOfMindVision_Info_Exhausted">Cây nến đã hết, nó không còn sáng khi bạn cầm nó. Trông như bạn không thể dùng nó nữa.</string>
+    <string name="Carcass_DissectFailed">Bạn phẫu thuật %s nhưng không tìm thấy thứ gì có giá trị.</string>
     <string name="Carcass_Name">tàn dư của %s</string>
     <string name="Carcass_Necromancy">Bạn đã hồi sinh thi thể của %s!</string>
     <string name="Caves_TileDescHighGrass">Nấm khổng lồ chắn tầm nhìn.</string>
@@ -78,6 +79,7 @@
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
     <string name="Dungeon_Tips_3">Bạn có thể dùng vàng của mình ở các cửa hàng hoặc dịch vụ trong thị trấn hoặc ngục.</string>
+    <string name="Dungeon_Tips_4">Cẩn thận Goo!</string>
     <string name="Dungeon_Tips_6">Xác định thuốc và cuộn giấy càng sớm càng tốt. Đừng để đến lúc bạn thực sự cần chúng mới làm.</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
     <string name="EarthElemental_Name_Objective">nguyên tố đất</string>
@@ -90,6 +92,7 @@
     <string name="FetidRat_Gender">feminine</string>
     <string name="Fez_Name">Mũ Fez</string>
     <string name="Fire_Name_1">Đang cháy %s</string>
+    <string name="Firebloom_Name">Hoa Lửa</string>
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
     <string name="GameScene_WelcomeBack">Chào mừng quay lại cấp độ %d của Remixed Dungeon!</string>
@@ -163,6 +166,7 @@
     <string name="NecromancerArmor_Info">Bộ giáp này cho phép Pháp sư Hắc huyết triệu hồi tối đa hai Deathling, mỗi thứ tốn 5 linh hồn. Những tôi tớ bất tử này sẽ theo chủ và tấn công kẻ thù. Deathling sẽ trở nên mạnh hơn theo cấp độ anh hùng.</string>
     <string name="NecromancerArmor_Name">Áo giáp xương</string>
     <string name="NecromancerNPC_Intro">À! Thật một cảnh hiếm! Một người bạn đồng hành phiêu lưu không chỉ là một xác chết. Hầu như không thể tin được! Ô... Xin lỗi, đôi khi tôi quá hào hứng. Bạn thấy, tôi là một pháp sư chết chóc. Và dù nghiên cứu xác chết và chính cái chết là nghề nghiệp của tôi, nhưng nhìn thấy những điều giống nhau lặp đi lặp lại cuối cùng cũng cực kỳ mệt mỏi. Mặt khác, đó chính là lý do tôi ở đây. Theo tính toán của tôi, chỉ trong vài tuần nữa, ở đâu đó trong hầm ngục này, sẽ xảy ra một chuyện kỳ diệu. _Necropolis_, một thành phố cổ của người chết sẽ mở cửa. Và... tôi không thể nói thêm, tôi đã lãng phí đủ thời gian. Tôi cần chuẩn bị, _hãy quay lại sau_.</string>
+    <string name="NecromancerRobe_PetLimitReached">Necromancy: giới hạn triệu hồi đã đạt đến (Hiện tại tối đa: %d)!</string>
     <string name="NecrotismBuff_Info">Dấu ấn của chính cái chết, mùi hôi từ đó ảnh hưởng đến những người gần đó và khiến họ chia sẻ chung một định mệnh.</string>
     <string name="NecrotismBuff_Name">Hoại tử</string>
     <string name="PetInventory_GiveToPet">Cho thú cưng</string>
@@ -224,6 +228,7 @@
     <string name="Scroll_Runes_7">MANNAZ</string>
     <string name="Scroll_Runes_8">NAUDIZ</string>
     <string name="Scroll_Runes_9">BERKANAN</string>
+    <string name="ServantNPC_Gender">feminine</string>
     <string name="ServiceManNPC_Desc">Một công nhân thông thường của các cơ sở địa phương.</string>
     <string name="ServiceManNotReadyNPC_Message">Xin lỗi, nhưng tòa nhà này chưa sẵn sàng!</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
@@ -279,6 +284,7 @@
     <string name="Undead_Defense">chặn</string>
     <string name="Undead_Name_Objective">cùn bất tử</string>
     <string name="VertigoBuff_Info">Cảm giác choáng váng khiến đi thẳng trở nên khó khăn!</string>
+    <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
@@ -298,6 +304,7 @@
     <string name="WndCatalogus_Scrolls">Cuộn</string>
     <string name="WndCatalogus_Title">Danh mục</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndDonate_goldDonateText">Cảm ơn sự giúp đỡ của bạn</string>
     <string name="WndDonate_royalDonateText2">Ngoài ra, bạn sẽ nhận được mọi loại mũ từ cửa hàng trong ứng dụng! Cũng như mọi loại mũ sẽ được phát hành trong tương lai.</string>
     <string name="WndFortuneTeller_IdentifyAll">Tất cả</string>
     <string name="WndGame_Ranking">Bảng xếp hạng</string>
@@ -376,4 +383,12 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
+
+
+
 </resources>

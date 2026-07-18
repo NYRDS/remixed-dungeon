@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="AC_Devour">לטרוף</string>
     <string name="AboutScene_Graphics">גרפיקה:</string>
@@ -11,6 +10,7 @@
     <string name="Amulet_Info">האמולט של ינדור הוא הארטיפקט החזק ביותר הידוע ממקור לא ידוע. נאמר שהוא יכול להגשים כל משאלה אם רצונו של הבעלים חזק מספיק כדי \&quot;לשכנע\&quot; אותו לעשות זאת.</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
+    <string name="AzuterronNPC_Name_Objective">זר</string>
     <string name="Badges_BossSlain1">הגווּ הובס</string>
     <string name="Badges_DeathGlyph">מוות מגליף</string>
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
@@ -88,6 +88,7 @@
     <string name="Dungeon_Tips_2">זכור שהגברת כוחך אינה הדרך היחידה לגשת לציוד טוב יותר, אתה יכול ללכת בדרך ההפוכה על ידי הפחתת דרישת הכוח שלו באמצעות מגילות שדרוג.</string>
     <string name="Dungeon_Tips_20">פיקסל-מארט. מחירים מיוחדים לציידי שדים!</string>
     <string name="Dungeon_Tips_3">אתה יכול להוציא את הזהב שלך בעיר, בחנויות הצינוק או בשירותים.</string>
+    <string name="Dungeon_Tips_4">היזהר מהגו!</string>
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
     <string name="DwarfToken_Info">גמדים רבים וכמה מהיצירות הגדולות יותר שלהם נושאים את חתיכות המתכת הקטנות האלה של מטרה לא ידועה. אולי הן תכשיטים או איזשהו תעודת זהות. גמדים הם אנשים מוזרים.</string>
     <string name="EarthElemental_Desc">אלמנטלי אדמה הם גושי אדמה המונעים על ידי כוחות טבע מרוכזים.</string>
@@ -151,6 +152,7 @@
     <string name="Javelin_Name">כידון</string>
     <string name="Journal_Caged_Kobold">קובולד בכלוב</string>
     <string name="King_Info3">איך אתה מעז!</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KunaiThrow_Name">זריקת קונאי</string>
     <string name="LastLevel_TileGrass">טחב גחלים</string>
     <string name="LastLevel_TileHighGrass">פטריות גחלת</string>
@@ -256,6 +258,7 @@
     <string name="ScrollOfTeleportation_NoTeleport">אאורה קסומה חזקה של המקום הזה מונעת ממך לטלפורט!</string>
     <string name="ScrollOfUpgrade_Name">מגילת שדרוג</string>
     <string name="Scroll_Info">המגילה הזו מכוסה בכתב בלתי ניתן לפענוח, ונושאת כותרת של רונה %s. מי יודע מה יקרה כשיקראו אותה בקול רם?</string>
+    <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">מלצרית פונדק</string>
     <string name="ServiceManNPC_Desc">עובד רגיל של הממסדים המקומיים.</string>
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
@@ -274,6 +277,7 @@
     <string name="SpiderElite_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של שומרי העילית משמש לבלבל את המטרה שלהם.</string>
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
     <string name="SpiderExploding_Desc">עובדים חרוצים בזמנים שלווים, היצורים האלה לא יהססו להסתער על אויביהם ולתפוס את הצמח הראשון שהם נתקלים בו, ולהפוך את עצמם לפצצות חיות.</string>
+    <string name="SpiderMind_Name">עכביש-סיי</string>
     <string name="SpiderMind_Name_Objective">עכביש-פסי</string>
     <string name="SpiderQueen_Desc">גוף של אישה יפה המשולב עם עכביש מחריד. כל היצורים החיים במאורה הזו הם משרתיה. מפגש עם הגברת יוצאת הדופן הזו עלול להתגלות כחוויה קטלנית. כי אתה פולש\!</string>
     <string name="SpiritOfPain_Desc">שבר של אפלה חיה.</string>
@@ -386,4 +390,9 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 </resources>
