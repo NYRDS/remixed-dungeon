@@ -374,6 +374,7 @@
     <string name="WndTradeItem_SellAll">بيع الكل مقابل %dg</string>
     <string name="Wnd_Button_Ok">موافق</string>
     <string name="WoodenBow_Gender">masculine</string>
+    <string name="Worm_Desc">لا يمكن معرفة حجم هذا الدودة. تبرز جزئياً من الأرض، وجسم هذا الكائن مغطى بكتل من اللحم المتعفن والخراء. فكيه العملاقان يعطيان فكرة واضحة عن كيفية تحرك ذلك الوحش عبر السطح.</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="WrnExperimental_realtime">تم تفعيل وضع الوقت الفعلي! هذه الآن لعبة روجلايك في الوقت الفعلي، اضغط بسرعة أو مت.\nهل تريد التحقق من المخزون؟\nحظاً سعيداً في القيام بذلك بينما يتحقق سرطان المجاري من أحشائك.</string>
     <string name="WrnExperimental_title">تم تفعيل الخيارات التجريبية!</string>
@@ -413,6 +414,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

@@ -276,6 +276,7 @@
     <string name="Sword_Name">zwaard</string>
     <string name="Tamahawk_Gender">masculine</string>
     <string name="Tengu_Desc">Tengu zijn leden van de oude moordenaarsclan, die ook Tengu heet. Deze moordenaars zijn bekend om hun uitgebreide gebruik van shurikens en vallen.</string>
+    <string name="Tengu_Info2">Gepakt, %s!</string>
     <string name="TerrorBuff_Name">Versterkt</string>
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">gekke dief</string>
@@ -408,6 +409,7 @@
     <string name="town_deco_wooden_drawer_name">lade</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 
