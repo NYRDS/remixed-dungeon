@@ -43,6 +43,7 @@
     <string name="BlackCat_Phrases_2">مياو!</string>
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
     <string name="Blacksmith_Name">حداد ترول</string>
+    <string name="Blacksmith_Txt4">قلت إنني بحاجة لدم الخفاش على المعول. بسرعة، بسرعة!</string>
     <string name="Blacksmith_Verify3">أحتاج لمعرفة ما أعمل عليه، حددهما أولاً!</string>
     <string name="Blacksmith_Verify6">لا يمكنني إعادة صياغة هذه العناصر!</string>
     <string name="BlankScroll_Info">مجرد ورقة فارغة. ربما يمكن الكتابة عليها؟</string>
@@ -98,11 +99,14 @@
     <string name="Dungeon_Tips_16">عند ترقية سلاح مسحور، هناك احتمال لتدمير ذلك السحر.</string>
     <string name="Dungeon_Tips_18">الطريقة الوحيدة لسحر سلاح هي ترقيته باستخدام مخطوطة ترقية سلاح.</string>
     <string name="Dungeon_Tips_4">احذر من الغو!</string>
+    <string name="Dungeon_Tips_5">بِكسل-مارت - كل ما تحتاجه لمغامرة ناجحة!</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
     <string name="Earthroot_Desc">عندما يلمس مخلوق جذر الأرض، تخلق جذوره نوعًا من الدروع الطبيعية حوله.</string>
     <string name="ElvenDagger_Name">خنجر الجان</string>
     <string name="EncumbranceBuff_CharAct_2">هذا %s ثقيل جداً بحيث لا يمكنني استخدامه بفعالية.</string>
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
+    <string name="Exhumation_Info">فتح القبر عملٌ شائنٌ بحدّ ذاته، لكنّه لا يكفي لمن يخدم الموتَ نفسَه. لمن يُجري هذا الطقسَ الداكنَ فرصةٌ عظيمةٌ (وتزداد مع إتقانه) لأن يخضعَ روحاً مسكينةً لأحدِ الراقدين ههنا.</string>
+    <string name="Exhumation_Name">نبش القبر</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
     <string name="FireElemental_Name">عنصر ناري</string>
@@ -110,6 +114,7 @@
     <string name="Fire_Name_1">مشتعل %s</string>
     <string name="Firebloom_Name">زهرة النار</string>
     <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
+    <string name="GameScene_Grass">رائحة النباتات تفوح في الهواء.</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
     <string name="Gold_Name">الذهب</string>
@@ -209,6 +214,7 @@
     <string name="PlagueDoctorNPC_Name_Objective">طبيب الطاعون</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*يلقي برأسه للوراء ويطلق قهقهة هستيرية، صوتها يتردد في مختبره الرطب* رائع! _فارس الموت_، واقف أمامنا! القوة المنبعثة من كيانه... مسكرة! *يلتفت نحوك، عيناه تلمعان بشدة محمومة* ولك، مكافأة تليق ببسالتك: _جرعة القوة_! لتمنحك القوة لهزيمة أي عدو! الآن... لندرس موضوعنا. جوهره ذاته يخفي أسراراً يمكن أن تعيد كتابة قوانين الحياة ذاتها! *يقترب من _فارس الموت_ بابتسامة مجنونة، ممسكاً بقارورة من سائل أخضر يفور*</string>
+    <string name="PlagueDoctorQuest_4_1_InProgress">خمسة _أقزام_سحرة_، أجسادهم لا تزال تنبض بصدى ضعيف للسحر الأسود! أحضرهم لي، وسأكافئك بـ _جرعة_قوة_ التي ستمنحك قوة عشرة رجال!</string>
     <string name="PlagueDoctorQuest_AllDone">*أطلق ضحكة جافة وصاخبة.* \&quot;أفعالك، لقد كشفت أسرارًا لا تُقاس! المعرفة المكتسبة... تنبض بداخلي، سمفونية من الاكتشاف. لكن المعرفة،\&quot; يضيفها بصوت منخفض، همس متآمر، \&quot;المعرفة هي قوة. والقوة... آه... إنها إكسير مسكر للغاية.\&quot; يحدق فيك بتركيز للحظة، وعيناه الجمشتية تحترقان بشدة حماسية. \&quot;ربما،\&quot; يهمس، \&quot;ستتقاطع طرقنا مرة أخرى. فما زالت هناك... ألغاز... تنتظر كشفها.\&quot;</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Death">مِتَّ مِن السم...</string>
@@ -246,6 +252,7 @@
     <string name="RottenFood_Message">مقزز!</string>
     <string name="RottenMeat_Name">لحم متعفن</string>
     <string name="RottenOrgan_Name">عضو متعفن</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
     <string name="Rudolph_Name">أنف أحمر وقرون</string>
     <string name="ScaleArmor_Desc">تخلق القشور المعدنية المخيطة على سترة جلدية درعاً مرناً، ولكنه يوفر الحماية.</string>
@@ -264,6 +271,7 @@
     <string name="Shades_Name">نظارات شمسية</string>
     <string name="Shades_Name_Objective">نظارات شمسية</string>
     <string name="ShadowLord_Gender">masculine</string>
+    <string name="ShadowLord_Name_Objective">سيد الظلال</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">ظل</string>
     <string name="Shaman_Name">شامان غنول</string>
@@ -316,6 +324,7 @@
     <string name="Undead_Gender">masculine</string>
     <string name="VertigoBuff_Info">الشعور بالدوار يجعل المشي في خط مستقيم أكثر صعوبة!</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
+    <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية الخالصة، مسببة ضرراً معتدلاً للهدف.</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
     <string name="WandOfTeleportation_Info2">لم يحدث شيء</string>
     <string name="Wand_ACZap">زَاب</string>
@@ -352,6 +361,7 @@
     <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \&quot;إعلان\&quot; مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
     <string name="WndPlayGames_RestoreProgress">استعادة تقدم اللعبة</string>
     <string name="WndPlayGames_Show_Error">فشلت العملية. حدث خطأ ما...</string>
+    <string name="WndPortal_Title">البوابة</string>
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
     <string name="WndPriest_Instruction2_f">أهلاً بك يا ابنتي، أهلاً بك في الكنيسة المقدسة للقديس سانتا سيد الأعماق!</string>
     <string name="WndRanking_StaEnemies">وحوش مقتولة</string>
@@ -378,6 +388,7 @@
     <string name="Wraith_Gender">masculine</string>
     <string name="WrnExperimental_realtime">تم تفعيل وضع الوقت الفعلي! هذه الآن لعبة روجلايك في الوقت الفعلي، اضغط بسرعة أو مت.\nهل تريد التحقق من المخزون؟\nحظاً سعيداً في القيام بذلك بينما يتحقق سرطان المجاري من أحشائك.</string>
     <string name="WrnExperimental_title">تم تفعيل الخيارات التجريبية!</string>
+    <string name="Yog_Name_Objective">يوغ-دزيوا</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
     <string name="YogsHeart_Desc">لسنوات طويلة اعتقد الناس أن المخلوقات عديمة القلب فقط هي القادرة على أفعال الشر الصرفة. ومع ذلك، ها هو هنا أمامك قلب ضخم نابض، يعود للإله القديم نفسه.</string>
     <string name="deco_candle_name">شمعة</string>
@@ -386,6 +397,7 @@
     <string name="town_deco_barrel_wine_desc">يستخدم لتخزين مشروب ثمين مثل النبيذ.</string>
     <string name="town_deco_bell_desc">جرس كنيسة تقليدي. يبدو أن أحداً لم يقرعه منذ وقت طويل، وحتى الحبل مفقود.</string>
     <string name="town_deco_blue_carpet_name">سجادة</string>
+    <string name="town_deco_book_desc">يبدو هذا الكتاب وكأن شخصًا ما تركه بإهمال هنا</string>
     <string name="town_deco_canvas_name">قماش</string>
     <string name="town_deco_cinema_sign_desc">يبدو أن هناك سينما داخل هذا المبنى.</string>
     <string name="town_deco_counter_name">كونتر</string>
@@ -414,6 +426,21 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

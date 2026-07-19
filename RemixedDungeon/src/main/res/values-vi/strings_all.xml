@@ -1,9 +1,11 @@
 <resources>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
+    <string name="Accuracy_DecreasedDoctorBareHands">Tay trần làm nhiễm bẩn kỹ thuật. Không có đường cắt sạch của Rọc, sự ngắm bắn của tôi trở nên hỗn loạn.</string>
     <string name="AllowStatisticsCollectionScene_Title">Thu thập thống kê sử dụng</string>
     <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \&quot;thuyết phục\&quot; nó làm như vậy.</string>
     <string name="Amulet_Name">Bùa Yendor</string>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
+    <string name="Armor_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
     <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
     <string name="AzuterronNPC_Name_Objective">người lạ</string>
     <string name="AzuterronNPC_Quest_End">Tuyệt vời. Đây, uống bình thuốc này đi, chắc chắn nó sẽ có ích cho bạn.</string>
@@ -11,6 +13,7 @@
     <string name="Badges_AllPotions">Tất cả thuốc đã được nhận dạng</string>
     <string name="Badges_AllRings">Đã nhận diện tất cả nhẫn</string>
     <string name="Badges_BossSlain1">Goo đã bị tiêu diệt</string>
+    <string name="Badges_DeathFalling">Tử vong do rơi xuống</string>
     <string name="Badges_DeathGlyph">Chết vì glyph</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
@@ -144,12 +147,14 @@
     <string name="Level_TileDescPileOfStones">Một đống đá cực kỳ nặng, trông không thể di chuyển được.</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
+    <string name="Level_TileWell">Giếng</string>
     <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
     <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
     <string name="MailArmor_Name">áo giáp xích</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
     <string name="MeleeWeapon_Info3g">kém chính xác</string>
+    <string name="MercenaryNPC_Name">lính thuê</string>
     <string name="MimicPie_Desc">Mimics là những sinh vật phép thuật có thể biến hình thành bất kỳ hình dạng nào chúng muốn. Con này trông như một chiếc bánh ngon to lớn.</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimik</string>
@@ -181,6 +186,7 @@
     <string name="Poison_Name_0">Độc %s</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
     <string name="PotionOfMight_Name">Bình Thuốc Mạnh Mẽ</string>
+    <string name="PotionOfMindVision_Apply2">Bạn có thể cảm nhận được rằng bạn là sinh vật sống duy nhất trên tầng này lúc này.</string>
     <string name="Potion_ACMoisten">LÀM ẨM</string>
     <string name="Potion_Name">%s thuốc</string>
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
@@ -300,11 +306,15 @@
     <string name="WeaknessBuff_Name">Yếu</string>
     <string name="Weightstone_Fast">bạn đã cân bằng %s để làm nó nhanh hơn</string>
     <string name="Weightstone_Name">đá cân</string>
+    <string name="Weightstone_WndAccuracy">Độ chính xác</string>
     <string name="Weightstone_WndCancel">Không sao đâu</string>
+    <string name="Weightstone_WndChoice">Bạn muốn cân bằng %s như thế nào?</string>
+    <string name="Weightstone_WndSpeed">Tốc độ</string>
     <string name="WndBlacksmith_Prompt">Được, lời đã nói không thể lấy lại, đây là điều tôi có thể làm cho bạn: Tôi có thể luyện lại 2 vật phẩm và biến chúng thành 1 vật phẩm chất lượng tốt hơn.</string>
     <string name="WndCatalogus_Potions">Thuốc</string>
     <string name="WndCatalogus_Scrolls">Cuộn</string>
     <string name="WndCatalogus_Title">Danh mục</string>
+    <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndDonate_goldDonateText">Cảm ơn sự giúp đỡ của bạn</string>
     <string name="WndDonate_royalDonateText2">Ngoài ra, bạn sẽ nhận được mọi loại mũ từ cửa hàng trong ứng dụng! Cũng như mọi loại mũ sẽ được phát hành trong tương lai.</string>
@@ -358,6 +368,7 @@
     <string name="town_deco_brown_carpet_desc">Chiếc thảm nâu này đã bị đạp nát bởi nhiều phiêu lưu gia, người lang thang và người đi đường.</string>
     <string name="town_deco_cabinet_desc">Một tủ đồ rộng rãi với nhiều cánh cửa và ngăn kệ.</string>
     <string name="town_deco_canvas_name">Canvas</string>
+    <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
     <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \&quot;Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\&quot;.</string>
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
@@ -385,6 +396,17 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

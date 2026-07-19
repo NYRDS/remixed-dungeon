@@ -65,6 +65,7 @@
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
     <string name="ColdSpirit_Gender">masculine</string>
+    <string name="ComboBuff_Info">De volgende aanval zal een combo-aanval zijn.</string>
     <string name="CommonArrow_Info">Gewone houten pijl met een ijzeren punt.</string>
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
@@ -100,6 +101,7 @@
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
+    <string name="Glaive_Name">gleve</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="Halberd_Gender">feminine</string>
@@ -158,6 +160,7 @@
     <string name="Mimic_Name">mimic</string>
     <string name="MindVisionBuff_Info">De innerlijke visie laat duidelijk de beweging van alle levende wezens op de verdieping zien.</string>
     <string name="MirrorImage_Gender">masculine</string>
+    <string name="MissileWeapon_Info3">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
     <string name="MissileWeapon_Missiles">Raketwapen</string>
     <string name="MissileWeapon_Sure">Weet je zeker dat je het wilt uitrusten als een wapen voor gevechten op korte afstand?</string>
     <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
@@ -235,6 +238,7 @@
     <string name="ServiceManNPC_NoConnection">Het spijt me, u kunt onze dienst nu niet gebruiken. (Internetverbinding vereist)</string>
     <string name="ServiceManNotReadyNPC_Message">Mijn excuses, maar dit gebouw is nog niet klaar!</string>
     <string name="ShadowLord_Intro">Bereid je voor!</string>
+    <string name="ShadowLord_Name_Objective">Schaduwheer</string>
     <string name="ShamanElder_Desc">Deze specifieke gnol ziet er veel ouder uit dan andere schamanen en heeft zeker een hogere status in de stam. Een vreemde aura vormt zich langzaam om hem heen, die alles wat het raakt lijkt te reflecteren.</string>
     <string name="Shaman_Name">gnol schamaan</string>
     <string name="Shaman_Name_Objective">gnol sjamaan</string>
@@ -304,6 +308,7 @@
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
     <string name="WarHammer_Name">Oorlogshemel</string>
+    <string name="WarriorArmor_Prompt">Kies een richting om te springen</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
     <string name="WeaknessBuff_Name">Verzwakt</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
@@ -318,12 +323,14 @@
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_ton">Ton</string>
     <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndDonate_donate">doneren: </string>
     <string name="WndDonate_goldDonateText">Dank voor uw hulp</string>
     <string name="WndDonate_royalDonateText">Ik wil niet raar klingen, maar door dit te doen, voed je de developers letterlijk.</string>
     <string name="WndDonate_ruby">robijn</string>
     <string name="WndDonate_silverDonateText2">Ook schakelt u reclame uit in alle spelmodi en ontgrendelt u de Jageres vanaf het begin.</string>
     <string name="WndFortuneTeller_IdentifyAll">Alles</string>
     <string name="WndGame_Customizations">Aanpassingen</string>
+    <string name="WndHats_ListTitle">Lijst van accessoires</string>
     <string name="WndHero_Awareness">Aandacht</string>
     <string name="WndInfoItem_Chest">Kist</string>
     <string name="WndInfoItem_Skeleton">Skelettenresten</string>
@@ -407,8 +414,17 @@
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
     <string name="town_deco_wooden_bench_name">Houten bank</string>
     <string name="town_deco_wooden_drawer_name">lade</string>
+    <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
 
 
 

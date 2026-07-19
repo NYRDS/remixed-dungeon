@@ -29,6 +29,7 @@
     <string name="BishopNPC_Name_Objective">בישוף</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_1">מיאו...</string>
+    <string name="BlackCat_Phrases_2">מיאו!</string>
     <string name="Blacksmith_Completed">אוי, חזרת... עדיף מאוחר מאשר אף פעם.</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
     <string name="Blacksmith_Verify6">אני לא יכול לשחזר את הפריטים האלה!</string>
@@ -41,6 +42,7 @@
     <string name="Carcass_Necromancy">החיית את הגופה של %s!</string>
     <string name="Challenges_Descriptions_2">כמאמין בהתחדשות טבעית של הגוף הרגיל, תמיד הייתם זהירים מפני שיקויים בעלי תכונות רפואיות. עדיף להיות בטוחים מאשר להצטער!</string>
     <string name="Challenges_Descriptions_3">האדמות סביב הצינוק נגועות זה מכבר ברוע, המונע צמיחת זרעים של עשבי מרפא וצמחים שונים. מי יודע כמה זמן יעבור עד שהצמח האחרון יחדל מלהתקיים באדמות שוממות אלה.</string>
+    <string name="Challenges_Descriptions_7">התרגלת לעובדה שהחזקה ושימוש בנשק אינם נכונים מבחינה מוסרית, אך מה עוד יכול להגן עלייך מפני היצורים המשוטטים למטה?</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
     <string name="Challenges_Names_6">רונות אסורות</string>
     <string name="Challenges_Names_8">ללא עיר</string>
@@ -101,6 +103,7 @@
     <string name="Fire_Name_1">בוער %s</string>
     <string name="Firebloom_Desc">כאשר משהו נוגע בפרח אש, הוא פורץ בלהבות.</string>
     <string name="Firebloom_Name">פרח אש</string>
+    <string name="Food_ACEat">לֶאֱכוֹל</string>
     <string name="Food_Message">זה היה טעים מאוד\!</string>
     <string name="FortuneTellerNPC_Desc">האישה הזו לבושה בגלימה ארוכה וצבעונית. היא נראית צעירה להפתיע למישהי ששלטה באמנויות הנסתרות של חיזוי העתיד. כשתתקרב, תשמע אותה ממלמלת כשהיא מביטה בכדור הבדולח.</string>
     <string name="FreezeGlobe_Info">מקפיא את הדמות שנבחרה, ומונע ממנה לבצע כל פעולה למשך זמן קצר.</string>
@@ -136,8 +139,10 @@
     <string name="Hero_StaBurning">אתה נדלקת!</string>
     <string name="Hero_StaCripple">אתה נכה!</string>
     <string name="Hero_StaPoison">אתה מורעל!</string>
+    <string name="Hero_StaVertigo">הכל מסתובב סביבך!</string>
     <string name="HungerBuff_Name2">מורעב</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
+    <string name="HuntressArmor_NoEnemies">אין אויבים בטווח ראייה</string>
     <string name="IceCaves_TileDescDeco">הגנול הזה הוקפא חי. כנראה שהוא נמצא שם כבר הרבה זמן.</string>
     <string name="IceCaves_TileDescStatue">עוד פסל נורא... רגע, זה גנול קפוא.</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
@@ -278,6 +283,7 @@
     <string name="SpiderElite_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של שומרי העילית משמש לבלבל את המטרה שלהם.</string>
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
     <string name="SpiderExploding_Desc">עובדים חרוצים בזמנים שלווים, היצורים האלה לא יהססו להסתער על אויביהם ולתפוס את הצמח הראשון שהם נתקלים בו, ולהפוך את עצמם לפצצות חיות.</string>
+    <string name="SpiderMindAmber_Name">עכביש ענבר</string>
     <string name="SpiderMind_Name">עכביש-סיי</string>
     <string name="SpiderMind_Name_Objective">עכביש-פסי</string>
     <string name="SpiderQueen_Desc">גוף של אישה יפה המשולב עם עכביש מחריד. כל היצורים החיים במאורה הזו הם משרתיה. מפגש עם הגברת יוצאת הדופן הזו עלול להתגלות כחוויה קטלנית. כי אתה פולש\!</string>
@@ -306,6 +312,7 @@
     <string name="TownsfolkSilentNPC_Message3">המממ...</string>
     <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
     <string name="ToxicGland_Name">בלוטה רעילה</string>
+    <string name="Undead_Defense">נבלם</string>
     <string name="VampireSkull_Info">המסכה הזו עשויה מגולגולת של ערפד טבעית לחלוטין. למעשה זהו גולגולת... גולגולת של ערפד בעל ראש גדול. מצמרר.</string>
     <string name="VertigoBuff_Info">תחושת הסחרחורת מקשה על הליכה ישרה!</string>
     <string name="WandHolster_Name">נרתיק שרביטים</string>
@@ -345,6 +352,7 @@
     <string name="WndPlayGames_Use">השתמש ב-Google Play Games</string>
     <string name="WndPortal_Info_Return">הפורטל הזה יחזיר אותך לתוך הצינוק.\nהאם תרצה להשתמש בו?</string>
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
+    <string name="WndRanking_StaGold">זהב שנאסף</string>
     <string name="WndRanking_StaStr">כוח</string>
     <string name="WndResurrect_Yes">כן, אני אלחם!</string>
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
@@ -368,6 +376,7 @@
     <string name="town_deco_armoronhanger_name">שריון</string>
     <string name="town_deco_armorstand_leather_desc">שריון עור אמין יהיה רכישה מצוינת לפני היציאה לצינוק.</string>
     <string name="town_deco_barrel_wine_name">חבית יין</string>
+    <string name="town_deco_cabinet_name">ארון</string>
     <string name="town_deco_canvas_name">קנבס</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
     <string name="town_deco_curtains_name">וילונות</string>
@@ -391,6 +400,18 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
