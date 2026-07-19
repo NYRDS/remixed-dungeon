@@ -19,9 +19,11 @@
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
     <string name="Badges_BossSlain1">تم القضاء على الغو</string>
     <string name="Badges_GamesPlayed2">تم لعب 100 لعبة</string>
+    <string name="Badges_GoldColleted4">تم جمع 7500 ذهب</string>
     <string name="Badges_Ice_Guardian_Slain">تم القضاء على حارس الجليد</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
     <string name="Badges_ItemLvl3">تم الحصول على عنصر من المستوى 9</string>
+    <string name="Badges_ItemLvl4">تم الحصول على عنصر بمستوى 12</string>
     <string name="Badges_ItemLvl5">تم الحصول على عنصر من المستوى 15</string>
     <string name="Badges_MasteryCombo">كومبو 7 ضربات</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
@@ -53,6 +55,7 @@
     <string name="BlessedBuff_Name">مبارك</string>
     <string name="BlindnessBuff_Info">عمى تام، لا يُسمع سوى الأصوات المحيطة.</string>
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
+    <string name="Brute_Gender">masculine</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
@@ -114,9 +117,11 @@
     <string name="FireElemental_Name_Objective">عنصر النار</string>
     <string name="Fire_Name_1">مشتعل %s</string>
     <string name="Firebloom_Name">زهرة النار</string>
+    <string name="FrostAuraBuff_Info">يحيط الصقيع بالجسد، مما يبطئ كل ما يقترب منه.</string>
     <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
     <string name="GameScene_Grass">رائحة النباتات تفوح في الهواء.</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
+    <string name="GasImmuneBuff_Name">مناعة الغاز</string>
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
     <string name="Gold_Name">الذهب</string>
     <string name="Golem_Desc">حاول القزم دمج معرفتهم بالآليات مع قوتهم المكتشفة حديثاً في ربط العناصر. استخدموا أرواح الأرض كـ \&quot;روح\&quot; لأجساد الغوليم الميكانيكية، والتي كان يُعتقد أنها الأكثر قابلية للسيطرة. على الرغم من ذلك، فإن أصغر خطأ في الطقوس قد يتسبب في اندلاع.</string>
@@ -145,6 +150,7 @@
     <string name="Hero_StaBurning">لقد اشتعلت בך النار!</string>
     <string name="HideInGrassSpell_NeedGrassToHide">حتى أنا لا أستطيع الاختباء في العراء</string>
     <string name="Horror_Name_1">%s مخيف</string>
+    <string name="HuntressArmor_Name">رداء الصياد</string>
     <string name="IceCaves_TileDescDeco">تم تجميد هذا الغنول وهو حي. على ما يبدو، أنه كان هناك منذ فترة طويلة.</string>
     <string name="IceCaves_TileGrass">عشب متجمد.</string>
     <string name="IceElemental_Name_Objective">عنصراً جليدياً</string>
@@ -248,6 +254,7 @@
     <string name="Rat_Name_Objective">فأر الكيس</string>
     <string name="RawFish_Name">سمك نيء</string>
     <string name="RemixedPixelDungeonApp_sendCrash">لعبةنا تعطلت...\n عذراً.\nيرجى إرسال تقرير العطل لمساعدتنا في إصلاحه.</string>
+    <string name="ResultDescriptions_Hunger">مات جوعاً في المستوى %d</string>
     <string name="ResultDescriptions_Trap">قتل بتفريغ %1$s في المستوى %2$d</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="RingOfElements_Name">خاتم العناصر</string>
@@ -258,6 +265,7 @@
     <string name="Ring_Gems_1">الأوبال</string>
     <string name="Ring_Info2">خاتمك %1$s يضيق حول إصبعك بشكل مؤلم</string>
     <string name="RogueArmor_ACSpecial">قنبلة دخان</string>
+    <string name="RootSpell_Info">يحبس الشخصية المختارة، مما يمنعها من الحركة لفترة قصيرة.</string>
     <string name="RottenFood_Message">مقزز!</string>
     <string name="RottenMeat_Name">لحم متعفن</string>
     <string name="RottenOrgan_Name">عضو متعفن</string>
@@ -361,6 +369,7 @@
     <string name="WndDonate_goldDonateText">شكراً لمساعدتكم</string>
     <string name="WndDonate_silverDonate">تبرع فضي</string>
     <string name="WndFortuneTeller_IdentifyAll">الكل</string>
+    <string name="WndFortuneTeller_Title">العَرّافَة</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
     <string name="WndHats_BuyButton">شراء</string>
     <string name="WndHats_NoConnectionMsg">تعذر الاتصال بـ Google Play.</string>
@@ -407,6 +416,7 @@
     <string name="deco_candle_name">شمعة</string>
     <string name="town_deco_armorstand_plate_desc">وفقاً للتاجر، كان هذا الدروع الثقيلة ينتمي يوماً ما إلى محارب عظيم.</string>
     <string name="town_deco_armorstand_scale_name">درع حرشفي</string>
+    <string name="town_deco_banner_desc">لافتة أنيقة تصور رموز هذه الحانة.</string>
     <string name="town_deco_barrel_wine_desc">يستخدم لتخزين مشروب ثمين مثل النبيذ.</string>
     <string name="town_deco_bell_desc">جرس كنيسة تقليدي. يبدو أن أحداً لم يقرعه منذ وقت طويل، وحتى الحبل مفقود.</string>
     <string name="town_deco_blue_carpet_name">سجادة</string>
@@ -427,6 +437,7 @@
     <string name="town_deco_rope_name">حبل</string>
     <string name="town_deco_rug_desc">مصمم بذوق رفيع</string>
     <string name="town_deco_screen_name">فاصل</string>
+    <string name="town_deco_shop_sign_desc">يبدو أن هناك متجراً داخل هذا المبنى.</string>
     <string name="town_deco_skulls_desc">جماجم مصقولة تنتمي إلى مخلوقات من الزنزانة.</string>
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
     <string name="town_deco_slush_name">الثلج المذاب</string>
@@ -440,6 +451,19 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

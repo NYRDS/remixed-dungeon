@@ -14,14 +14,17 @@
     <string name="Badges_BossSlain1">De Goo is gedood</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
     <string name="Badges_DeathPoison">Dood door vergiftiging</string>
+    <string name="Badges_GoldColleted4">7500 goud verzameld</string>
     <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
     <string name="Badges_Info1">Insigne behaald: %s</string>
+    <string name="Badges_ItemLvl4">Item van niveau 12 verkregen</string>
     <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
     <string name="Badges_NightHunter">5 monsters gedood in de nacht</string>
     <string name="Badges_PotionsCooked3">9 drankjes gebraagd</string>
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
     <string name="Badges_StrengthAttained5">21 punten Kracht bereikt</string>
+    <string name="Bag_ACOpen">OPENEN</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
     <string name="Belongings_CantWearBoth">Je kunt %1$s en %2$s niet tegelijkertijd uitrusten!</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
@@ -103,6 +106,7 @@
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
+    <string name="GasImmuneBuff_Name">Gasimmuniteit</string>
     <string name="Glaive_Name">gleve</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
@@ -149,9 +153,11 @@
     <string name="King_Defense">geparreerd</string>
     <string name="Larva_Gender">feminine</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
+    <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
     <string name="Level_TileDescBarricade">De houten barricade zit stevig, maar is over de jaren uitgedroogd. Zal hij branden?</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
     <string name="Level_TileLockedDoor">Gesloten deur</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
@@ -255,6 +261,7 @@
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="Shopkeeper_Name">winkelier</string>
     <string name="ShortSword_Name">kort zwaard</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SleepBuff_Info">Volledig in slaap</string>
     <string name="SociologistNPC_AlreadyTaken">Je hebt al deelgenomen aan deze enquête, kom later terug</string>
@@ -271,6 +278,7 @@
     <string name="SpiritOfPain_Name">geest van pijn</string>
     <string name="Sprout_Info">Weak de slapende zaden.\nEr moet echter wat groen op de grond zijn om de toverspreuk te laten slagen.</string>
     <string name="StartScene_ComingSoon">Binnenkort</string>
+    <string name="StartScene_DifficultyExpert">Expert</string>
     <string name="StartScene_DifficultyNormal">Normaal</string>
     <string name="StartScene_DifficultySelect">Kies je lot</string>
     <string name="StartScene_Load">Spel laden</string>
@@ -382,6 +390,7 @@
     <string name="WndTradeItem_Sell">Verkopen voor %dg</string>
     <string name="WndTradeItem_SellAll">Alles verkopen voor %dg</string>
     <string name="Wnd_Button_Back">Terug</string>
+    <string name="WoodenBow_Info">Deze eenvoudige houten boog kan nuttig blijken, zodra je pijlen vindt.</string>
     <string name="WoodenBow_Name">houten boog</string>
     <string name="Worm_Name_Objective">worm</string>
     <string name="Wraith_Desc">Een wraith is de wraakzuchtige geest van een zondaar, wiens graf of grafkelder werd verstoord. Als een etherische entiteit is het zeer lastig te raken met een gewoon wapen.</string>
@@ -392,6 +401,7 @@
     <string name="YogsHeart_Gender">masculine</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
+    <string name="town_deco_banner_desc">Een elegante vlag met de symbolen van deze kroeg.</string>
     <string name="town_deco_banner_name">Vaandel</string>
     <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
     <string name="town_deco_broken_wall_desc">De balken in deze muur zijn al lang verrot en hebben hun gewone weerstandskracht verloren.</string>
@@ -429,6 +439,16 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

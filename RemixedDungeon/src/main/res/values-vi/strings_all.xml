@@ -16,9 +16,11 @@
     <string name="Badges_DeathFalling">Tử vong do rơi xuống</string>
     <string name="Badges_DeathGlyph">Chết vì glyph</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
+    <string name="Badges_GoldColleted4">Đã thu thập 7500 vàng</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
     <string name="Badges_ItemLvl2">Đã có vật phẩm cấp 6</string>
     <string name="Badges_ItemLvl3">Đã nhận vật phẩm cấp 9</string>
+    <string name="Badges_ItemLvl4">Đã đạt được vật phẩm cấp 12</string>
     <string name="Badges_LevelReached1">Đã đạt cấp độ 6</string>
     <string name="Badges_LevelReached4">Đạt cấp 24</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
@@ -58,6 +60,7 @@
     <string name="ChaosCrystal_BladeFused">Vien ngoc hap thu vu khi cua ban va bien thanh hinh dang mot thanh kiem</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
     <string name="ChaosStaff_Name">gậy hỗn loạn</string>
+    <string name="CharAction_Push">đẩy</string>
     <string name="Char_Hit_2">%1$s đánh trúng %2$s</string>
     <string name="Char_StaDodged_0">tránh</string>
     <string name="Char_StaDodged_1">tránh</string>
@@ -101,6 +104,7 @@
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
     <string name="GameScene_WelcomeBack">Chào mừng quay lại cấp độ %d của Remixed Dungeon!</string>
+    <string name="GasImmuneBuff_Name">Miễn dịch khí gas</string>
     <string name="Ghost_Name">ma buồn</string>
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
@@ -260,6 +264,7 @@
     <string name="SkeletonKey_Info">Cái chìa khóa này trông rất nghiêm trọng: đầu nó được đúc hình cái sọ. Có lẽ nó có thể mở được cánh cửa quan trọng nào đó.</string>
     <string name="SlowBuff_Name">Làm chậm</string>
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
+    <string name="Snail_Desc">Con ốc sên nhỏ này đã lớn khá nhanh nhờ ăn rác thải, nhưng nó vẫn rất chậm, khiến nó trở thành kẻ địch dễ dàng.</string>
     <string name="SoulShard_Info">Đây là một mảnh vỡ lấy từ tàn tích của Hũ Linh Hồn. Nó lấp lánh với sức mạnh bí ẩn, có lẽ có ai đó quan tâm đến thứ như thế này.</string>
     <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
@@ -372,6 +377,7 @@
     <string name="Yog_Gender">masculine</string>
     <string name="YogsEye_Desc">Mắt của Thần Cổ, ánh nhìn toàn kiến đầy ắp căm thù vĩnh cửu. Bạn có thể cảm thấy nó nhìn thấu qua linh hồn của mình.</string>
     <string name="Zombie_Name">kẻ sống chết</string>
+    <string name="town_deco_banner_desc">Một lá cờ thanh lịch vẽ các biểu tượng của quán rượu này.</string>
     <string name="town_deco_barrel_wine_name">Thùng rượu</string>
     <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
     <string name="town_deco_broken_wall_name">Bức tường vỡ</string>
@@ -396,6 +402,7 @@
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
     <string name="town_deco_red_carpet_name">Thảm đỏ</string>
     <string name="town_deco_rope_name">dây thừng</string>
+    <string name="town_deco_scrolls_name">Cuộn</string>
     <string name="town_deco_shelf_full_name">Kệ sách</string>
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
@@ -407,6 +414,13 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
+
+
 
 
 

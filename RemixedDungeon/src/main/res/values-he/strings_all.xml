@@ -16,8 +16,10 @@
     <string name="Badges_BossSlain1">הגווּ הובס</string>
     <string name="Badges_DeathGlyph">מוות מגליף</string>
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
+    <string name="Badges_GoldColleted4">7500 זהב נאסף</string>
     <string name="Badges_Info2">סופר תג חדש: %s</string>
     <string name="Badges_ItemLvl3">הושג פריט ברמה 9</string>
+    <string name="Badges_ItemLvl4">הושג פריט ברמה 12</string>
     <string name="Badges_LevelReached4">הגיע לרמה 24</string>
     <string name="Badges_PotionsCooked3">9 שיקויים מבושלים</string>
     <string name="Badges_PotionsCooked5">25 שיקויים נרקחו</string>
@@ -115,6 +117,7 @@
     <string name="FriedFish_Name">דג מטוגן</string>
     <string name="FrostAuraBuff_Name">הילת כפור</string>
     <string name="GasImmuneBuff_Info">חסין לכל הגזים</string>
+    <string name="GasImmuneBuff_Name">חסינות לגז</string>
     <string name="Ghost_Name_Objective">רוח</string>
     <string name="Golem_Name">גולם</string>
     <string name="GothicArmor_Name">שריון גותי</string>
@@ -171,6 +174,7 @@
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
     <string name="Level_TileDescHighGrass">צמחייה צפופה חוסמת את המבט</string>
+    <string name="Level_TileSummoningTrap">מלכודת זימון</string>
     <string name="Level_TileWall">קיר</string>
     <string name="Level_TileWell">באר</string>
     <string name="LibraryBook_Description">הספר העתיק הזה עצום בגודלו. הוא מכיל את כל הידע שהרפתקנים גילו והביאו מהמבוך.</string>
@@ -279,6 +283,7 @@
     <string name="ServantNPC_Name">מלצרית פונדק</string>
     <string name="ServiceManNPC_Desc">עובד רגיל של הממסדים המקומיים.</string>
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
     <string name="Shaman_Name">שמאן גנול</string>
     <string name="Shaman_Name_Objective">גנול שאמאן</string>
@@ -298,6 +303,7 @@
     <string name="SpiderMind_Name">עכביש-סיי</string>
     <string name="SpiderMind_Name_Objective">עכביש-פסי</string>
     <string name="SpiderQueen_Desc">גוף של אישה יפה המשולב עם עכביש מחריד. כל היצורים החיים במאורה הזו הם משרתיה. מפגש עם הגברת יוצאת הדופן הזו עלול להתגלות כחוויה קטלנית. כי אתה פולש\!</string>
+    <string name="SpiderServant_Name">חייל עכביש</string>
     <string name="SpiritOfPain_Desc">שבר של אפלה חיה.</string>
     <string name="Sprout_Info">הַעִיר אֶת הַזְּרָעִים הַיְשֵׁנִים.\nאַךְ צָרִיךְ לִהְיוֹת יְרַק עַל הָאֲדָמָה כְּדֵי שֶׁהַלַּחַשׁ יַצְלִיחַ.</string>
     <string name="Sprout_Name">נבט</string>
@@ -388,6 +394,7 @@
     <string name="ZombieMask_Name">מסיכת זומבי</string>
     <string name="town_deco_armoronhanger_name">שריון</string>
     <string name="town_deco_armorstand_leather_desc">שריון עור אמין יהיה רכישה מצוינת לפני היציאה לצינוק.</string>
+    <string name="town_deco_banner_desc">כרזה אלגנטית המתארת את סמלי המסבאה הזו.</string>
     <string name="town_deco_barrel_wine_name">חבית יין</string>
     <string name="town_deco_cabinet_name">ארון</string>
     <string name="town_deco_canvas_name">קנבס</string>
@@ -414,6 +421,14 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
 
 
 
