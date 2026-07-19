@@ -50,6 +50,16 @@ public class ScriptedActor extends Actor {
 		return false;
 	}
 
+	// caveman: per-frame tick (real-time). called every frame from Level.onStep, unlike act()
+	// (which is turn-based and stalls when the hero is idle). Level scripts opt in by defining onStep.
+	public void onStep() {
+		LuaTable actor = LuaEngine.require(sourceFile);
+		var func = actor.get("onStep");
+		if (func.isfunction()) {
+			func.call();
+		}
+	}
+
 	public void activate() {
 		LuaTable actor = LuaEngine.require(sourceFile);
 		actor.get("activate").call();

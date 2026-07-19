@@ -32,16 +32,19 @@ public class VaultPainter extends Painter {
 			break;
 			
 		case 1:
-			Item i1, i2;
+			Item i1 = prize(level);
+			Item i2 = prize(level);
 			int count = 0;
-			do {
-				i1 = prize(level);
-				i2 = prize(level);
-				count++;
-				if (count>1000) {
-					EventCollector.logException(new Exception("Too many attempts"));
+			while (i1.getClass() == i2.getClass()) {
+				if (count++ > 100) {
+					// Couldn't draw two distinct prize classes (wand/ring pool collapsed to one
+					// type, or Treasury returned its Gold fallback). Stop retrying — accept this
+					// pair rather than spinning forever and freezing level generation.
+					EventCollector.logException(new Exception("VaultPainter: too many attempts to get distinct prizes"));
+					break;
 				}
-			} while (i1.getClass() == i2.getClass());
+				i2 = prize(level);
+			}
 			level.drop( i1, c, Type.CRYSTAL_CHEST);
 			level.drop( i2, c + Level.NEIGHBOURS8[Random.Int( 8 )], Type.CRYSTAL_CHEST);
 			level.addItemToSpawn( new GoldenKey() );

@@ -600,6 +600,11 @@ public class GameScene extends PixelScene {
 
         Actor.process(GameLoop.elapsed);
 
+        // caveman: per-frame tick for level scripts (real-time). safe no-op if a script has no onStep.
+        if (Dungeon.level != null) {
+            Dungeon.level.onStep();
+        }
+
         if (hero.isReady() && !hero.paralysed) {
             log.newLine();
         }

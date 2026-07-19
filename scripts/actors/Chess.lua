@@ -78,17 +78,13 @@ end
 local scheduledMoves = {}
 
 local function movePiece(from, to)
-    if RPD.Actor:motionInProgress() then
-        table.insert(scheduledMoves, { from, to })
+    local mob = RPD.Actor:findChar(from)
+    if not mob then
+        -- caveman: no piece here (board desync with sunfish). no crash, skip + log for debug.
+        RPD.debug("movePiece: no mob on cell %s -> %s, skip", tostring(from), tostring(to))
         return
     end
-
-    local mob = RPD.Actor:findChar(from)
     local target = RPD.Actor:findChar(to)
-
-    if not mob then
-        error("mob not found on from cell " .. tostring(from))
-    end
 
     if not target then
         mob:setPos(to)
@@ -149,30 +145,36 @@ for _, v in ipairs(enPassantMovesList) do
 end
 
 local function animateMove(move_str, move_cells, chess_cells)
-    RPD.debug("animating: %s %s", chess_cells[1], chess_cells[2])
     movePiece(move_cells[1], move_cells[2])
-    fillPiecesFromBoard()
 
-    if castleMoves[move_str] then
-        --RPD.glog("check for castle: %s %s", move_str, chess_cells[2])
-        --RPD.glog("check for castle: %s %s", rawPieces[chess_cells[1]], rawPieces[chess_cells[2]])
-        if rawPieces[chess_cells[2]] == 'K' or rawPieces[chess_cells[2]] == 'k' then
-            local rookMove = rookMoves[move_str]
-            local cells = { cellFromChessCell(string.sub(rookMove, 1, 2)),
-                            cellFromChessCell(string.sub(rookMove, 3, 4)) }
-            movePiece(cells[1], cells[2])
-        end
+    -- caveman: promotion. pawn (Rat) reach last rank -> swap to Warlock (queen). no rawPieces needed.
+    -- rank 8 = white (red), rank 1 = black (blue).
+    local destRank = tonumber(string.sub(chess_cells[2], 2, 2))
+    local destMob = RPD.Actor:findChar(move_cells[2])
+    if destMob and destMob:getEntityKind() == 'Rat' and (destRank == 1 or destRank == 8) then
+        destMob:die(destMob)
+        local queen = RPD.MobFactory:mobByName('Warlock')
+        queen:setPos(move_cells[2])
+        RPD.setAi(queen, 'PASSIVE')
+        RPD.Dungeon.level:spawnMob(queen)
+        queen:getSprite():tint(destRank == 8 and 0xFF0000 or 0x0000FF, 0.5)
     end
 
+    -- caveman: castling. king move 2 files. move the rook too. move_str must be visual perspective.
+    if castleMoves[move_str] then
+        local rookMove = rookMoves[move_str]
+        local cells = { cellFromChessCell(string.sub(rookMove, 1, 2)),
+                        cellFromChessCell(string.sub(rookMove, 3, 4)) }
+        movePiece(cells[1], cells[2])
+    end
+
+    -- caveman: en passant. captured pawn beside destination, remove it.
     if enPassantMoves[move_str] then
-        RPD.glog("check en passant: %s %s", move_str, chess_cells[2])
         local pawnCell = pawnVictim[move_str]
-        if rawPieces[pawnCell] == 'P' or rawPieces[pawnCell] == 'p' then
-            local cell = cellFromChessCell(pawnCell)
-            local mob = RPD.Actor:findChar(cell)
-            if mob then
-                mob:die()
-            end
+        local cell = cellFromChessCell(pawnCell)
+        local mob = RPD.Actor:findChar(cell)
+        if mob then
+            mob:die(mob)
         end
     end
 end
@@ -213,10 +215,34 @@ local function processWin()
     end
 
     RPD.glog("You Win!")
+
+    -- caveman: fill chasm ring + board with floor so hero can walk in and grab loot.
+    local level = RPD.Dungeon.level
+    for x = 3, 12 do
+        for y = 3, 12 do
+            level:set(level:cell(x, y), RPD.Terrain.EMPTY)
+        end
+    end
+    RPD.GameScene:updateMap()
+
+    -- Reward: prize chest at board centre. 2-arg drop returns heap; set chest type; sprite:drop shows it.
+    local centerCell = cellFromChessCell("e4")
+    local prize = RPD.ItemFactory:itemByName("WandOfFirebolt")
+    local heap = level:drop(prize, centerCell)
+    heap.type = RPD.Heap.Type.CHEST
+    heap.sprite:drop(centerCell)
+
+    -- Exit portal: place on board (room for the big portal sprite), not at the edge entrance.
+    RPD.createLevelObject(
+        {kind = "PortalGateSender", target = {levelId = "town_2", x = 12, y = 28}},
+        cellFromChessCell("e2")
+    )
+
     gameInProgress = false
 end
 
-local moveDelay = 5
+local AI_DELAY_MS = 800  -- caveman: wall-clock pause before AI reply. bigger = slower.
+local aiMoveAt = 0       -- caveman: wall-clock (ms) when AI reply got queued.
 local allowedMoves = {}
 
 local function getPiece(board, engineCell)
@@ -225,18 +251,19 @@ end
 
 return actor.init({
     act = function()
-        if #scheduledMoves > 0 and not RPD.Actor:motionInProgress() then
-            if moveDelay > 0 then
-                moveDelay = moveDelay - 1
-            else
-                moveDelay = 5
+        return true
+    end,
 
-                local move = scheduledMoves[1]
-                movePiece(move[1], move[2])
+    -- caveman: per-frame, real-time. fire queued AI reply after wall-clock pause.
+    -- ticks every frame via Level.onStep (not act, which stalls turn-based).
+    onStep = function()
+        if #scheduledMoves > 0 then
+            if RPD.SystemTime:now() - aiMoveAt >= AI_DELAY_MS then
+                local m = scheduledMoves[1]
+                animateMove(m[1], m[2], m[3])
                 table.remove(scheduledMoves, 1)
             end
         end
-        return true
     end,
 
     actionTime = function()
@@ -244,6 +271,15 @@ return actor.init({
     end,
 
     activate = function()
+        -- Reset all match state (activate runs on every level entry / re-entry).
+        gameInProgress = true
+        move_str = ''
+        scheduledMoves = {}
+        allowedMoves = {}
+        rawPieces = {}
+
+        RPD.Dungeon.hero:interrupt()
+
         chess = sunfish.new()
         pieces = {}
         local level = RPD.Dungeon.level
@@ -269,10 +305,11 @@ return actor.init({
                             RPD.setAi(mob, "PASSIVE")
                             level:spawnMob(mob)
 
+                            -- caveman: team tint on sprite (after spawn). red vs blue, clear teams.
                             if piece == piece:upper() then
-                                mob:lightness(0.6)
+                                mob:getSprite():tint(0xFF0000, 0.5)
                             else
-                                mob:lightness(0.4)
+                                mob:getSprite():tint(0x0000FF, 0.5)
                             end
 
                             pieces[chessCell] = mob
@@ -297,13 +334,18 @@ return actor.init({
             return false
         end
 
+        -- While the match is in progress the hero is frozen: every click belongs to the board.
+        -- Interrupt any in-flight movement so a chess click cleanly preempts walking.
+        RPD.Dungeon.hero:interrupt()
+
         chessCell = chessCellFromCell(cell)
-        engineCell = sunfish.cell_2_move(chessCell)
 
         if not chessCell then
-            RPD.glog("it is your move, Hero")
-            return false
+            RPD.glog("Click on the board — it is your move, Hero")
+            return true   -- swallow the click so the hero doesn't walk off
         end
+
+        engineCell = sunfish.cell_2_move(chessCell)
 
         RPD.Sfx.HighlightCell:removeAll()
 
@@ -318,53 +360,43 @@ return actor.init({
             local moveCandidates = {}
 
             for i, v in ipairs(pseudoMoves) do
-
                 if sunfish.move_2_cell(v[1]) == chessCell then
-
                     local validMove = true
-
                     local move_str = sunfish.move_2_cell(v[1]) .. sunfish.move_2_cell(v[2])
-                    RPD.debug("checking move: %s", move_str)
-                    RPD.debug("own piece: %d %d %s %s", v[1], v[2],
-                            getPiece(chess.board, v[1]),
-                            getPiece(chess.board, v[2]))
 
-                    probe = sunfish.move(chess, move_str)
-
-                    probeMoves = probe:genMoves()
+                    local probe = sunfish.move(chess, move_str)
+                    local probeMoves = probe:genMoves()
 
                     for ii, vv in ipairs(probeMoves) do
-                        local target = getPiece(probe.board,vv[2])
-                        local move_str = sunfish.move_2_cell(vv[1]) .. sunfish.move_2_cell(vv[2])
-
-                        RPD.debug("ai piece: %d %d %s %s %s",vv[1],vv[2], getPiece(probe.board, vv[1]), target, move_str)
+                        local target = getPiece(probe.board, vv[2])
                         if target == 'k' then
                             validMove = false
                         end
                     end
 
                     if validMove then
-                        RPD.debug("valid")
                         allowedMoves[sunfish.move_2_cell(v[2])] = true
                         table.insert(moveCandidates, v)
-                    else
-                        RPD.debug("invalid")
                     end
                 end
             end
 
-            local hCells = {}
+            -- caveman: highlight selected piece. sparkle burst on its sprite + glow its cell, then legal moves.
+            local selectedMob = RPD.Actor:findChar(move_cells[1])
+            if selectedMob then
+                selectedMob:getSprite():emitter():burst(RPD.Sfx.ElmoParticle.FACTORY, 4)
+            end
+
+            local hCells = { chessCell }
             for i, candidate in ipairs(moveCandidates) do
                 table.insert(hCells, sunfish.move_2_cell(candidate[2]))
             end
-
             highlightCells(hCells)
         else
 
             clickedPiece = getPiece(chess.board, engineCell)
             if string.match(clickedPiece,"%u") then
                 move_str = ''
-                RPD.glog("another piece clicked: %s", clickedPiece)
                 return true
             end
 
@@ -381,12 +413,10 @@ return actor.init({
 
             if moveResult then
                 chess = moveResult:rotate()
-                RPD.glog("your move Position score: %s", chess.score)
 
                 RPD.Sfx.HighlightCell:removeAll()
                 animateMove(move_str, move_cells, chess_cells)
 
-                moveResult:rotate()
                 chess, ai_move, score = sunfish.ai_move(chess:rotate())
 
                 if score <= -sunfish.MATE_VALUE then
@@ -399,12 +429,17 @@ return actor.init({
                     return true
                 end
 
-                local chess_cells = { string.sub(ai_move, 1, 2), string.sub(ai_move, 3, 4) }
+                -- caveman: robust mate check. shallow search may miss mate in score. no legal move -> lose.
+                if #chess:genMoves() == 0 then
+                    processLose()
+                    return true
+                end
 
+                local chess_cells = { string.sub(ai_move, 1, 2), string.sub(ai_move, 3, 4) }
                 ai_cells = { cellFromChessCell(chess_cells[1]), cellFromChessCell(chess_cells[2]) }
 
-                animateMove(ai_move, ai_cells, chess_cells)
-                RPD.glog("ai move Position score: %s", chess.score)
+                table.insert(scheduledMoves, { ai_move, ai_cells, chess_cells })
+                aiMoveAt = RPD.SystemTime:now()
 
             else
                 RPD.glog('illegal move')

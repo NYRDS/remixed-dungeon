@@ -2070,6 +2070,14 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
+	// caveman: per-frame tick for level scripts. called from GameScene.update every frame.
+	// unlike act() (turn-based, stalls when hero idle), this runs in real time.
+	public void onStep() {
+		for(ScriptedActor scriptedActor:scripts) {
+			scriptedActor.onStep();
+		}
+	}
+
 	public boolean getProperty(String key, boolean defVal) {
 		return defVal;
 	}
