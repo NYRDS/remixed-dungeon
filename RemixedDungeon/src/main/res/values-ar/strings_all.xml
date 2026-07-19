@@ -19,9 +19,11 @@
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
     <string name="Badges_BossSlain1">تم القضاء على الغو</string>
     <string name="Badges_GamesPlayed2">تم لعب 100 لعبة</string>
+    <string name="Badges_GoldColleted4">تم جمع 7500 ذهب</string>
     <string name="Badges_Ice_Guardian_Slain">تم القضاء على حارس الجليد</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
     <string name="Badges_ItemLvl3">تم الحصول على عنصر من المستوى 9</string>
+    <string name="Badges_ItemLvl4">تم الحصول على عنصر بمستوى 12</string>
     <string name="Badges_ItemLvl5">تم الحصول على عنصر من المستوى 15</string>
     <string name="Badges_MasteryCombo">كومبو 7 ضربات</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
@@ -47,11 +49,13 @@
     <string name="Blacksmith_Verify3">أحتاج لمعرفة ما أعمل عليه، حددهما أولاً!</string>
     <string name="Blacksmith_Verify6">لا يمكنني إعادة صياغة هذه العناصر!</string>
     <string name="BlankScroll_Info">مجرد ورقة فارغة. ربما يمكن الكتابة عليها؟</string>
+    <string name="BlankScroll_Name">سِجِلّ فارغ</string>
     <string name="BleedingBuff_Info">الجروح تنزف بسرعة</string>
     <string name="Bleeding_Death">نَزَفتَ حتى الموت...</string>
     <string name="BlessedBuff_Name">مبارك</string>
     <string name="BlindnessBuff_Info">عمى تام، لا يُسمع سوى الأصوات المحيطة.</string>
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
+    <string name="Brute_Gender">masculine</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
@@ -113,17 +117,21 @@
     <string name="FireElemental_Name_Objective">عنصر النار</string>
     <string name="Fire_Name_1">مشتعل %s</string>
     <string name="Firebloom_Name">زهرة النار</string>
+    <string name="FrostAuraBuff_Info">يحيط الصقيع بالجسد، مما يبطئ كل ما يقترب منه.</string>
     <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
     <string name="GameScene_Grass">رائحة النباتات تفوح في الهواء.</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
+    <string name="GasImmuneBuff_Name">مناعة الغاز</string>
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
     <string name="Gold_Name">الذهب</string>
     <string name="Golem_Desc">حاول القزم دمج معرفتهم بالآليات مع قوتهم المكتشفة حديثاً في ربط العناصر. استخدموا أرواح الأرض كـ \&quot;روح\&quot; لأجساد الغوليم الميكانيكية، والتي كان يُعتقد أنها الأكثر قابلية للسيطرة. على الرغم من ذلك، فإن أصغر خطأ في الطقوس قد يتسبب في اندلاع.</string>
+    <string name="Goo_Gender">feminine</string>
     <string name="Guts_TileWater">سائل لزج غريب</string>
     <string name="Halls_TileStatue">عمود</string>
     <string name="Halls_TileWater">لावा باردة</string>
     <string name="Haste_Name">سرعة قصوى</string>
     <string name="Heal_Cast">تم شفاء %s.</string>
+    <string name="HeartOfDarkness_Info">قلب أسود نابض لروح الخيانة.</string>
     <string name="HeartOfDarkness_Name">قلب الظلام</string>
     <string name="Hedgehog_Desc">يبدو أن هذا القنفذ متوتر.</string>
     <string name="HeroClass_Elf">الجان</string>
@@ -142,6 +150,7 @@
     <string name="Hero_StaBurning">لقد اشتعلت בך النار!</string>
     <string name="HideInGrassSpell_NeedGrassToHide">حتى أنا لا أستطيع الاختباء في العراء</string>
     <string name="Horror_Name_1">%s مخيف</string>
+    <string name="HuntressArmor_Name">رداء الصياد</string>
     <string name="IceCaves_TileDescDeco">تم تجميد هذا الغنول وهو حي. على ما يبدو، أنه كان هناك منذ فترة طويلة.</string>
     <string name="IceCaves_TileGrass">عشب متجمد.</string>
     <string name="IceElemental_Name_Objective">عنصراً جليدياً</string>
@@ -150,6 +159,7 @@
     <string name="IceGuardian_Desc">تم إنشاء حراس الجليد من قبل الكوبولدز القديمة لحماية كهوفهم. طالما أن قلب الحارس يحتوي على طاقة كافية، فهو قادر على إعادة بناء نفسه حتى في خضم المعركة.</string>
     <string name="IceKey_Name">مفتاح جليدي</string>
     <string name="Ignite_Info">يشعل الخلية المحددة. يمكن استخدامه لإشعال العشب، الشخصيات والأشياء.</string>
+    <string name="Ignite_Name">إشعال</string>
     <string name="ImpShopkeeper_Desc">الجان هم شياطين أدنى. فهم لا يتميزون بقوتهم ولا بموهبتهم السحرية. لكنهم أذكياء واجتماعيون تماماً، ويفضل العديد من الجان العيش وممارسة التجارة بين غير الشياطين.</string>
     <string name="Imp_Cya">إلى اللقاء، %s!</string>
     <string name="Imp_Desc">العفاريت هي شياطين أقل شأناً. لا تتميز بقوتها أو موهبتها السحرية، لكنها ذكية واجتماعية تماماً. يفضل العديد من العفاريت العيش بين غير الشياطين.</string>
@@ -162,6 +172,7 @@
     <string name="InterLevelScene_FileNotFound">لم يتم العثور على الملف. لسبب ما...</string>
     <string name="InterLevelScene_Loading">جاري التحميل...</string>
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
+    <string name="JarOfSouls_Desc">عينا الجمجمة المضيئة المرسومة على هذا الجرّة القديمة، بالإضافة إلى الطاقة الغريبة التي تنبعث منها، تجعلك تشعر بعدم الارتياح.</string>
     <string name="Journal_Caged_Kobold">كوبولد مسجون</string>
     <string name="Journal_WellHealt">بئر الصحة</string>
     <string name="Keyring_Name">حلقة المفاتيح</string>
@@ -195,6 +206,7 @@
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
     <string name="Mob_GoingTo">يتحرك بالفعل!</string>
     <string name="Mob_ItemUse">%1$s يستخدم %2$s</string>
+    <string name="Mob_StaFleeingStatus2">هذا %1$s يهرب من %2$s</string>
     <string name="Mob_StaHuntingStatus">هذا %s يصطاد</string>
     <string name="Mods_AuthorEmail">بريد المؤلف الإلكتروني:</string>
     <string name="Mods_RestartRequired">مطلوب إعادة تشغيل</string>
@@ -236,19 +248,24 @@
     <string name="PseudoRat_Name_Objective">فأر كاذب</string>
     <string name="Quest_DarkGoldOre_full_name">خام الذهب الداكن</string>
     <string name="RaiseDead_NoSpace">فشل إحياء الموتى لأن لا يوجد مكان حر في الجوار.</string>
+    <string name="RatHide_Name">جلد الفأر</string>
     <string name="RatKing_Died">مات الملك. ليحيا الملك!</string>
     <string name="RatKing_Name">ملك الفئران</string>
     <string name="Rat_Name_Objective">فأر الكيس</string>
     <string name="RawFish_Name">سمك نيء</string>
     <string name="RemixedPixelDungeonApp_sendCrash">لعبةنا تعطلت...\n عذراً.\nيرجى إرسال تقرير العطل لمساعدتنا في إصلاحه.</string>
+    <string name="ResultDescriptions_Hunger">مات جوعاً في المستوى %d</string>
     <string name="ResultDescriptions_Trap">قتل بتفريغ %1$s في المستوى %2$d</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="RingOfElements_Name">خاتم العناصر</string>
     <string name="RingOfHerbalism_Info">يزيد هذا الخاتم من فرصك في جمع الندى والبذور من العشب المفرود.</string>
+    <string name="RingOfStoneWalking_Info">هذا الخاتم الغريب مصنوع من حجر متين. ما ظننته في البداية ياقوتة هو في الحقيقة دم سائل يُحتفظ به في مكانه! بالداخل سهم يشير إلى ما يبدو كجدار، إلى جانب قلب مكسور... ماذا قد يفعل؟</string>
     <string name="RingOfThorns_Info">على الرغم من أن هذا الخاتم لا يوفر أشواكاً حقيقية، فإن أي عدو يهاجمك سيُجرح بجزء من الضرر الذي يلحقه بك. تحسين هذا الخاتم لن يمنح أي مكافآت إضافية.</string>
     <string name="Ring_BuffKnown">هذا %s</string>
     <string name="Ring_Gems_1">الأوبال</string>
+    <string name="Ring_Info2">خاتمك %1$s يضيق حول إصبعك بشكل مؤلم</string>
     <string name="RogueArmor_ACSpecial">قنبلة دخان</string>
+    <string name="RootSpell_Info">يحبس الشخصية المختارة، مما يمنعها من الحركة لفترة قصيرة.</string>
     <string name="RottenFood_Message">مقزز!</string>
     <string name="RottenMeat_Name">لحم متعفن</string>
     <string name="RottenOrgan_Name">عضو متعفن</string>
@@ -257,6 +274,7 @@
     <string name="Rudolph_Name">أنف أحمر وقرون</string>
     <string name="ScaleArmor_Desc">تخلق القشور المعدنية المخيطة على سترة جلدية درعاً مرناً، ولكنه يوفر الحماية.</string>
     <string name="ScaleArmor_Name">درع حرشفي</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
     <string name="Scroll_Runes_13">إيفاز</string>
@@ -323,6 +341,7 @@
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
     <string name="VertigoBuff_Info">الشعور بالدوار يجعل المشي في خط مستقيم أكثر صعوبة!</string>
+    <string name="VileEssence_Info">جوهر مركز من الفساد تم حصاده من عدو مهزوم. ينبض هذا الجوهر المظلم بطاقة خبيثة ويُقدّر كثيرًا في العمليات الكيميائية.</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية الخالصة، مسببة ضرراً معتدلاً للهدف.</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
@@ -350,12 +369,14 @@
     <string name="WndDonate_goldDonateText">شكراً لمساعدتكم</string>
     <string name="WndDonate_silverDonate">تبرع فضي</string>
     <string name="WndFortuneTeller_IdentifyAll">الكل</string>
+    <string name="WndFortuneTeller_Title">العَرّافَة</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
     <string name="WndHats_BuyButton">شراء</string>
     <string name="WndHats_NoConnectionMsg">تعذر الاتصال بـ Google Play.</string>
     <string name="WndHero_Awareness">اليقظة</string>
     <string name="WndInfoItem_Chest">صندوق</string>
     <string name="WndInfoItem_Owner">قد يحتوي هذا القبر القديم على شيء مفيد، لكن مالكه سيعترض بالتأكيد على التفتيش.</string>
+    <string name="WndItemAlchemy_SelectRecipe">اختر الوصفة</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
     <string name="WndLocalModInstall_text">اختر الدليل لتثبيت المود منه</string>
     <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \&quot;إعلان\&quot; مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
@@ -378,6 +399,7 @@
     <string name="WndSettings_Quickslots">فتحات الوصول السريع</string>
     <string name="WndSettings_SelectLanguage">اختر اللغة</string>
     <string name="WndSettings_Sound">المؤثرات الصوتية</string>
+    <string name="WndStory_Prision">منذ سنوات عديدة، تم بناء سجن تحت الأرض هنا لأخطر المجرمين. في ذلك الوقت، بدت فكرة ذكية لأن هذا المكان كان صعب الهروب منه حقًا. لكن سرعان ما بدأت أبخرة داكنة بالتسرب من الأسفل، مما أصاب السجناء والحراس بالجنون. في النهاية، تم التخلي عن السجن، تاركين بعض السجناء محبوسين هنا.</string>
     <string name="WndStory_Sewers">يقع الزنزانة مباشرة تحت المدينة، حيث تشكل مستوياته العليا نظام الصرف الصحي للمدينة. وباعتبارها اسمياً جزءاً من المدينة، فإن هذه المستويات ليست خطرة جداً. لن يسميها أحد مكاناً آمناً، لكنك على الأقل لن تضطر للتعامل مع الكثير من السحر الشرير هنا.</string>
     <string name="WndStory_Spiders">منذ سنوات عديدة مضت كان هناك منجم غني مليء بالحجارة السحرية. لكن عندما جفت عروق المعادن غادر عمال المناجم تاركين خلفهم شبكة واسعة من الأنفاق. في نهاية المطاف سكن هذا المكان العناكب. لكن حتى هذه المخلوقات الخطيرة الكامنة في الظلام لم تكن كافية لإخافة الشجعان والمجانين الذين يتوقون للكنوز التي قد توجد في المناجم. فمدى الخطر يتناسب دائماً مع كمية الشائعات التي تتحدث عن القطع الأثرية السحرية. ذات مرة تجولت ساحرة شريرة في الأنفاق محاولاً الهروب من الملاحقين. لكن الناس المتشائمون لم يجرؤوا على دخول الظلام. لذا قرروا الانتظار. لكنها لم تظهر أبداً. ربما وجدت الساحرة مخرجاً آخر، أو ربما تمكنت من التسلل بجانب الحراس... أو أنها هلكت محاطة بحفيف مخلوقات الظلام.</string>
     <string name="WndTradeItem_Buy">شراء بـ %dغ</string>
@@ -394,6 +416,7 @@
     <string name="deco_candle_name">شمعة</string>
     <string name="town_deco_armorstand_plate_desc">وفقاً للتاجر، كان هذا الدروع الثقيلة ينتمي يوماً ما إلى محارب عظيم.</string>
     <string name="town_deco_armorstand_scale_name">درع حرشفي</string>
+    <string name="town_deco_banner_desc">لافتة أنيقة تصور رموز هذه الحانة.</string>
     <string name="town_deco_barrel_wine_desc">يستخدم لتخزين مشروب ثمين مثل النبيذ.</string>
     <string name="town_deco_bell_desc">جرس كنيسة تقليدي. يبدو أن أحداً لم يقرعه منذ وقت طويل، وحتى الحبل مفقود.</string>
     <string name="town_deco_blue_carpet_name">سجادة</string>
@@ -408,11 +431,13 @@
     <string name="town_deco_flowerinthepot_desc">زهرة زينة ذات نكهة حلوة</string>
     <string name="town_deco_flowerinthepot_name">زهرة في وعاء</string>
     <string name="town_deco_library_sign_name">لافتة المكتبة</string>
+    <string name="town_deco_movies_door_name">باب</string>
     <string name="town_deco_pathway_name">مسار</string>
     <string name="town_deco_porch_desc">شرفة مصنوعة من الخشب.</string>
     <string name="town_deco_rope_name">حبل</string>
     <string name="town_deco_rug_desc">مصمم بذوق رفيع</string>
     <string name="town_deco_screen_name">فاصل</string>
+    <string name="town_deco_shop_sign_desc">يبدو أن هناك متجراً داخل هذا المبنى.</string>
     <string name="town_deco_skulls_desc">جماجم مصقولة تنتمي إلى مخلوقات من الزنزانة.</string>
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
     <string name="town_deco_slush_name">الثلج المذاب</string>
@@ -426,6 +451,36 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
