@@ -98,11 +98,14 @@
     <string name="Dungeon_Tips_16">عند ترقية سلاح مسحور، هناك احتمال لتدمير ذلك السحر.</string>
     <string name="Dungeon_Tips_18">الطريقة الوحيدة لسحر سلاح هي ترقيته باستخدام مخطوطة ترقية سلاح.</string>
     <string name="Dungeon_Tips_4">احذر من الغو!</string>
+    <string name="Dungeon_Tips_5">بِكسل-مارت - كل ما تحتاجه لمغامرة ناجحة!</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
     <string name="Earthroot_Desc">عندما يلمس مخلوق جذر الأرض، تخلق جذوره نوعًا من الدروع الطبيعية حوله.</string>
     <string name="ElvenDagger_Name">خنجر الجان</string>
     <string name="EncumbranceBuff_CharAct_2">هذا %s ثقيل جداً بحيث لا يمكنني استخدامه بفعالية.</string>
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
+    <string name="Exhumation_Info">فتح القبر عملٌ شائنٌ بحدّ ذاته، لكنّه لا يكفي لمن يخدم الموتَ نفسَه. لمن يُجري هذا الطقسَ الداكنَ فرصةٌ عظيمةٌ (وتزداد مع إتقانه) لأن يخضعَ روحاً مسكينةً لأحدِ الراقدين ههنا.</string>
+    <string name="Exhumation_Name">نبش القبر</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
     <string name="FireElemental_Name">عنصر ناري</string>
@@ -209,6 +212,7 @@
     <string name="PlagueDoctorNPC_Name_Objective">طبيب الطاعون</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*يلقي برأسه للوراء ويطلق قهقهة هستيرية، صوتها يتردد في مختبره الرطب* رائع! _فارس الموت_، واقف أمامنا! القوة المنبعثة من كيانه... مسكرة! *يلتفت نحوك، عيناه تلمعان بشدة محمومة* ولك، مكافأة تليق ببسالتك: _جرعة القوة_! لتمنحك القوة لهزيمة أي عدو! الآن... لندرس موضوعنا. جوهره ذاته يخفي أسراراً يمكن أن تعيد كتابة قوانين الحياة ذاتها! *يقترب من _فارس الموت_ بابتسامة مجنونة، ممسكاً بقارورة من سائل أخضر يفور*</string>
+    <string name="PlagueDoctorQuest_4_1_InProgress">خمسة _أقزام_سحرة_، أجسادهم لا تزال تنبض بصدى ضعيف للسحر الأسود! أحضرهم لي، وسأكافئك بـ _جرعة_قوة_ التي ستمنحك قوة عشرة رجال!</string>
     <string name="PlagueDoctorQuest_AllDone">*أطلق ضحكة جافة وصاخبة.* \&quot;أفعالك، لقد كشفت أسرارًا لا تُقاس! المعرفة المكتسبة... تنبض بداخلي، سمفونية من الاكتشاف. لكن المعرفة،\&quot; يضيفها بصوت منخفض، همس متآمر، \&quot;المعرفة هي قوة. والقوة... آه... إنها إكسير مسكر للغاية.\&quot; يحدق فيك بتركيز للحظة، وعيناه الجمشتية تحترقان بشدة حماسية. \&quot;ربما،\&quot; يهمس، \&quot;ستتقاطع طرقنا مرة أخرى. فما زالت هناك... ألغاز... تنتظر كشفها.\&quot;</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Death">مِتَّ مِن السم...</string>
@@ -264,6 +268,7 @@
     <string name="Shades_Name">نظارات شمسية</string>
     <string name="Shades_Name_Objective">نظارات شمسية</string>
     <string name="ShadowLord_Gender">masculine</string>
+    <string name="ShadowLord_Name_Objective">سيد الظلال</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">ظل</string>
     <string name="Shaman_Name">شامان غنول</string>
@@ -378,6 +383,7 @@
     <string name="Wraith_Gender">masculine</string>
     <string name="WrnExperimental_realtime">تم تفعيل وضع الوقت الفعلي! هذه الآن لعبة روجلايك في الوقت الفعلي، اضغط بسرعة أو مت.\nهل تريد التحقق من المخزون؟\nحظاً سعيداً في القيام بذلك بينما يتحقق سرطان المجاري من أحشائك.</string>
     <string name="WrnExperimental_title">تم تفعيل الخيارات التجريبية!</string>
+    <string name="Yog_Name_Objective">يوغ-دزيوا</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
     <string name="YogsHeart_Desc">لسنوات طويلة اعتقد الناس أن المخلوقات عديمة القلب فقط هي القادرة على أفعال الشر الصرفة. ومع ذلك، ها هو هنا أمامك قلب ضخم نابض، يعود للإله القديم نفسه.</string>
     <string name="deco_candle_name">شمعة</string>
@@ -386,6 +392,7 @@
     <string name="town_deco_barrel_wine_desc">يستخدم لتخزين مشروب ثمين مثل النبيذ.</string>
     <string name="town_deco_bell_desc">جرس كنيسة تقليدي. يبدو أن أحداً لم يقرعه منذ وقت طويل، وحتى الحبل مفقود.</string>
     <string name="town_deco_blue_carpet_name">سجادة</string>
+    <string name="town_deco_book_desc">يبدو هذا الكتاب وكأن شخصًا ما تركه بإهمال هنا</string>
     <string name="town_deco_canvas_name">قماش</string>
     <string name="town_deco_cinema_sign_desc">يبدو أن هناك سينما داخل هذا المبنى.</string>
     <string name="town_deco_counter_name">كونتر</string>
@@ -414,6 +421,13 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
 
 
 

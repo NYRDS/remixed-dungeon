@@ -65,6 +65,7 @@
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
     <string name="ColdSpirit_Gender">masculine</string>
+    <string name="ComboBuff_Info">De volgende aanval zal een combo-aanval zijn.</string>
     <string name="CommonArrow_Info">Gewone houten pijl met een ijzeren punt.</string>
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
@@ -158,6 +159,7 @@
     <string name="Mimic_Name">mimic</string>
     <string name="MindVisionBuff_Info">De innerlijke visie laat duidelijk de beweging van alle levende wezens op de verdieping zien.</string>
     <string name="MirrorImage_Gender">masculine</string>
+    <string name="MissileWeapon_Info3">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
     <string name="MissileWeapon_Missiles">Raketwapen</string>
     <string name="MissileWeapon_Sure">Weet je zeker dat je het wilt uitrusten als een wapen voor gevechten op korte afstand?</string>
     <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
@@ -235,6 +237,7 @@
     <string name="ServiceManNPC_NoConnection">Het spijt me, u kunt onze dienst nu niet gebruiken. (Internetverbinding vereist)</string>
     <string name="ServiceManNotReadyNPC_Message">Mijn excuses, maar dit gebouw is nog niet klaar!</string>
     <string name="ShadowLord_Intro">Bereid je voor!</string>
+    <string name="ShadowLord_Name_Objective">Schaduwheer</string>
     <string name="ShamanElder_Desc">Deze specifieke gnol ziet er veel ouder uit dan andere schamanen en heeft zeker een hogere status in de stam. Een vreemde aura vormt zich langzaam om hem heen, die alles wat het raakt lijkt te reflecteren.</string>
     <string name="Shaman_Name">gnol schamaan</string>
     <string name="Shaman_Name_Objective">gnol sjamaan</string>
@@ -409,6 +412,9 @@
     <string name="town_deco_wooden_drawer_name">lade</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 
