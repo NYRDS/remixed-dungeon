@@ -164,6 +164,7 @@
     <string name="InterLevelScene_FileNotFound">لم يتم العثور على الملف. لسبب ما...</string>
     <string name="InterLevelScene_Loading">جاري التحميل...</string>
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
+    <string name="JarOfSouls_Desc">عينا الجمجمة المضيئة المرسومة على هذا الجرّة القديمة، بالإضافة إلى الطاقة الغريبة التي تنبعث منها، تجعلك تشعر بعدم الارتياح.</string>
     <string name="Journal_Caged_Kobold">كوبولد مسجون</string>
     <string name="Journal_WellHealt">بئر الصحة</string>
     <string name="Keyring_Name">حلقة المفاتيح</string>
@@ -263,6 +264,7 @@
     <string name="Rudolph_Name">أنف أحمر وقرون</string>
     <string name="ScaleArmor_Desc">تخلق القشور المعدنية المخيطة على سترة جلدية درعاً مرناً، ولكنه يوفر الحماية.</string>
     <string name="ScaleArmor_Name">درع حرشفي</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
     <string name="Scroll_Runes_13">إيفاز</string>
@@ -433,6 +435,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

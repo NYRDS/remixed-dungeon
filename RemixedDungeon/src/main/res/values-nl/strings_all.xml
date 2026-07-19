@@ -129,6 +129,7 @@
     <string name="Hero_StaBurning">Je vliegt in brand!</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
+    <string name="Hunger_Hungry_1">Je hebt honger.</string>
     <string name="Hunger_Starving_1">Je bent uitgehongerd!</string>
     <string name="HuntressArmor_NoEnemies">Geen vijanden in zicht</string>
     <string name="IceCaves_TileDescDeco">Deze gnoll is levend bevroren. Blijkbaar was hij al een tijdje daar.</string>
@@ -422,6 +423,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 

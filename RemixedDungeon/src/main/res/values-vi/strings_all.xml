@@ -182,6 +182,7 @@
     <string name="PetInventory_TakeFromPet">Lấy từ thú cưng</string>
     <string name="PetInventory_Title">Kho thú cưng</string>
     <string name="PetInventory_ViewManage">Quản lý</string>
+    <string name="Pickaxe_NothingToMine">Không có gì để khai thác ở đây!</string>
     <string name="PlagueDoctorMaskHood_Name">Mặt nạ Bác Sĩ Chúm với mũ che đầu</string>
     <string name="PlagueDoctorNPC_Name_Objective">bác sĩ dịch hạch</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Ngón xương khô của hắn gõ nhịp nhàng vào nồi nước sôi sùng sục, không khí quanh hắn dày đặc bởi mùi hôi chua gay của lưu huỳnh và sự phân giải*\n_Kobold Pháp Sư Băng_! Những sinh vật thảm hại kia, trùm mình trong hang động đóng băng, nguội ngút chăm chăm vào phép thuật băng giá của chúng.\nTa cần năm con, xác đóng băng của chúng sẽ... soi sáng sự việc.\nSự thành thạo băng giá của chúng, nó... kỳ lạ.\nTa tin rằng chúng khai thác một năng lượng nguyên thủy, một sức mạnh ngủ quên dưới bề mặt của chính thế giới này.</string>
@@ -402,6 +403,7 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
 
 
 

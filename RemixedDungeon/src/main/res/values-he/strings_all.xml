@@ -341,6 +341,7 @@
     <string name="Weightstone_WndCancel">לא נורא</string>
     <string name="WindGust_Name">משב רוח</string>
     <string name="WndDonate_goldDonateText">תודה על עזרתך</string>
+    <string name="WndDonate_royalDonateText">אני לא רוצה להישמע מוזר, אבל בכך שאתה עושה את זה, אתה ממש מאכיל את המפתחים.</string>
     <string name="WndDonate_ruby">אודם</string>
     <string name="WndFortuneTeller_IdentifyAll">הכל</string>
     <string name="WndHats_UnequipButton">הסר כובע</string>
@@ -407,6 +408,7 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 
