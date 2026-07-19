@@ -28,6 +28,7 @@
     <string name="Barrel_Pumpkin_Name">bí ngô</string>
     <string name="BattleAxe_Info">Đầu rìu thép khổng lồ của chiếc rìu chiến này mang lại trọng lượng đáng kể cho mỗi cú gảy.</string>
     <string name="BattleAxe_Name">rìu chiến đấu</string>
+    <string name="BellaNPC_Angry">Dám... ngươi kẻ nhục nát!</string>
     <string name="BishopNPC_Desc">Giám mục của Giáo hội Thánh của Santa Chúa Sâu</string>
     <string name="BishopNPC_Name">Giám mục</string>
     <string name="BishopNPC_Name_Objective">giám mục</string>
@@ -149,6 +150,7 @@
     <string name="Level_TileHighGrass">Cỏ cao</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
     <string name="Level_TileWell">Giếng</string>
+    <string name="LloidsBeacon_ACSet">ĐẶT</string>
     <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
     <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
     <string name="MailArmor_Name">áo giáp xích</string>
@@ -339,6 +341,7 @@
     <string name="WndPortal_Info_Return">Cổng truyền tàng này sẽ đưa bạn trở lại hang động.\nBạn có muốn sử dụng nó không?</string>
     <string name="WndPremiumSettings_banners">Chọn chất liệu cờ</string>
     <string name="WndPremiumSettings_chrome">Chọn vật liệu giao diện</string>
+    <string name="WndPremiumSettings_notAvailbale">Tùy chọn này chưa có sẵn</string>
     <string name="WndPremiumSettings_ruby">hồng ngọc</string>
     <string name="WndPremiumSettings_std">tiêu chuẩn</string>
     <string name="WndPriest_Title">Linh mục thị trấn</string>
@@ -349,6 +352,7 @@
     <string name="WndSaveSlotSelect_Delete_No">Không</string>
     <string name="WndSaveSlotSelect_Delete_Title">Bạn có chắc chắn muốn xóa trạng thái lưu này?</string>
     <string name="WndSettings_ActionButtonSize">Kích thước nút hành động</string>
+    <string name="WndSettings_ExperementalFont">Font mới</string>
     <string name="WndSettings_Handedness">Ưu tiên tay</string>
     <string name="WndSettings_InGameUiSettings">Cài đặt giao diện</string>
     <string name="WndSettings_Music">Nhạc</string>
@@ -403,6 +407,10 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
 
 
 
