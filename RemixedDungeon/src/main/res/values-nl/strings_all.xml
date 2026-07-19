@@ -277,6 +277,7 @@
     <string name="StoneBloodBuff_Name">Stenen bloed</string>
     <string name="Stylus_ACInscribe">Inschrijven</string>
     <string name="Stylus_Info">Deze arcanische stylus is gemaakt van een donkere, zeer harde steen. Je kunt er een glyph of rune mee graveren, maar je kunt niet kiezen welke er wordt gegraveerd; de stylus beslist voor je.</string>
+    <string name="Stylus_Inscribed">je hebt de %1$s op je %2$s gegraveerd</string>
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
@@ -415,6 +416,8 @@
     <string name="town_deco_urn_desc">Kleien, misschien met as van iemand.</string>
     <string name="town_deco_urn_name">urn</string>
     <string name="town_deco_vat_name">vat</string>
+    <string name="town_deco_wall_beam_desc">Dient als een betrouwbare steun voor deze constructie.</string>
+    <string name="town_deco_wall_beam_name">Balk</string>
     <string name="town_deco_wall_candles_desc">Uitgedoofde kaarsen, waaruit nog steeds een aangename geur uitstreelt.</string>
     <string name="town_deco_wallpaper_name">behang</string>
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
@@ -423,6 +426,9 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 
