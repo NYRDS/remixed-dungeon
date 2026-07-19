@@ -187,6 +187,7 @@
     <string name="Mob_GoingTo">כבר הולך!</string>
     <string name="Mob_ItemUse">%1$s משתמש ב-%2$s</string>
     <string name="Mob_StaFleeingStatus">זה %s בורח</string>
+    <string name="Mob_StaFleeingStatus2">זה %1$s בורח מ-%2$s</string>
     <string name="Mob_StaHuntingStatus">זה %s צד</string>
     <string name="Mods_RestartRequired">נדרש הפעלה מחדש</string>
     <string name="MoongraceBuff_Name">מָן שָׁמַיִם</string>
@@ -234,6 +235,7 @@
     <string name="PseudoRat_Name">עכבר מדומה</string>
     <string name="PseudoRat_Name_Objective">עכבר מדומה</string>
     <string name="Quiver_Info">אשפת עור המתאימה להחזיק כל כמות של חיצים</string>
+    <string name="RatHide_Name">עור חולדה</string>
     <string name="RatSkull_Info">זה יכול להיות גביע ציד נחמד, אבל זה מריח רע מכדי לתלות את זה על הקיר.</string>
     <string name="RawFish_Taste">דגיגי!</string>
     <string name="RegenerationBuff_Info">הפונקציה לריפוי טבעי ממומשת בצורת באף כדי להקל על הדברים.</string>
@@ -247,6 +249,7 @@
     <string name="RingOfThorns_Name">טבעת קוצים</string>
     <string name="Ring_Gems_0">יהלום</string>
     <string name="Ring_Identify">כעת אתה מכיר מספיק את %1$s כדי לזהות אותו. זהו %2$s.</string>
+    <string name="Ring_Info2">ה-%1$s שלך מתהדק סביב האצבע שלך בכאב</string>
     <string name="RogueArmor_ACSpecial">פצצת עשן</string>
     <string name="RogueArmor_Prompt">בחר מיקום לקפוץ אליו</string>
     <string name="RottenFood_Message">מגעיל!</string>
@@ -254,6 +257,7 @@
     <string name="RottenPasty_Name">מאפה בשר מקולקל</string>
     <string name="RottenRation_Name">מנה רקובה</string>
     <string name="RottingFist_Name">אגרוף מרקיב</string>
+    <string name="RubyBow_Gender">masculine</string>
     <string name="Rudolph_Name">אף אדום וקרניים</string>
     <string name="RunicSkull_Name">גולגולת רונית</string>
     <string name="ScarecrowNPC_Quest_End">אוי איזו שמחה, אוי איזו התרגשות!\nעל זה תקבל פרוסת פאי מתוקה!</string>
@@ -403,6 +407,11 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 
