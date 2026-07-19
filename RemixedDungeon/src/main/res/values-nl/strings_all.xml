@@ -101,6 +101,7 @@
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
+    <string name="Glaive_Name">gleve</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="Halberd_Gender">feminine</string>
@@ -322,6 +323,7 @@
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_ton">Ton</string>
     <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndDonate_donate">doneren: </string>
     <string name="WndDonate_goldDonateText">Dank voor uw hulp</string>
     <string name="WndDonate_royalDonateText">Ik wil niet raar klingen, maar door dit te doen, voed je de developers letterlijk.</string>
     <string name="WndDonate_ruby">robijn</string>
@@ -412,8 +414,12 @@
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
     <string name="town_deco_wooden_bench_name">Houten bank</string>
     <string name="town_deco_wooden_drawer_name">lade</string>
+    <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 

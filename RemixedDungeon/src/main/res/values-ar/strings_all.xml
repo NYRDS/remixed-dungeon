@@ -114,6 +114,7 @@
     <string name="Fire_Name_1">مشتعل %s</string>
     <string name="Firebloom_Name">زهرة النار</string>
     <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
+    <string name="GameScene_Grass">رائحة النباتات تفوح في الهواء.</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
     <string name="Gold_Name">الذهب</string>
@@ -323,6 +324,7 @@
     <string name="Undead_Gender">masculine</string>
     <string name="VertigoBuff_Info">الشعور بالدوار يجعل المشي في خط مستقيم أكثر صعوبة!</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
+    <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية الخالصة، مسببة ضرراً معتدلاً للهدف.</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
     <string name="WandOfTeleportation_Info2">لم يحدث شيء</string>
     <string name="Wand_ACZap">زَاب</string>
@@ -359,6 +361,7 @@
     <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \&quot;إعلان\&quot; مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
     <string name="WndPlayGames_RestoreProgress">استعادة تقدم اللعبة</string>
     <string name="WndPlayGames_Show_Error">فشلت العملية. حدث خطأ ما...</string>
+    <string name="WndPortal_Title">البوابة</string>
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
     <string name="WndPriest_Instruction2_f">أهلاً بك يا ابنتي، أهلاً بك في الكنيسة المقدسة للقديس سانتا سيد الأعماق!</string>
     <string name="WndRanking_StaEnemies">وحوش مقتولة</string>
@@ -423,6 +426,12 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
 
 
 

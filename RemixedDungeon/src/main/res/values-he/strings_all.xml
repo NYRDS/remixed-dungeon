@@ -103,6 +103,7 @@
     <string name="Fire_Name_1">בוער %s</string>
     <string name="Firebloom_Desc">כאשר משהו נוגע בפרח אש, הוא פורץ בלהבות.</string>
     <string name="Firebloom_Name">פרח אש</string>
+    <string name="Food_ACEat">לֶאֱכוֹל</string>
     <string name="Food_Message">זה היה טעים מאוד\!</string>
     <string name="FortuneTellerNPC_Desc">האישה הזו לבושה בגלימה ארוכה וצבעונית. היא נראית צעירה להפתיע למישהי ששלטה באמנויות הנסתרות של חיזוי העתיד. כשתתקרב, תשמע אותה ממלמלת כשהיא מביטה בכדור הבדולח.</string>
     <string name="FreezeGlobe_Info">מקפיא את הדמות שנבחרה, ומונע ממנה לבצע כל פעולה למשך זמן קצר.</string>
@@ -141,6 +142,7 @@
     <string name="Hero_StaVertigo">הכל מסתובב סביבך!</string>
     <string name="HungerBuff_Name2">מורעב</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
+    <string name="HuntressArmor_NoEnemies">אין אויבים בטווח ראייה</string>
     <string name="IceCaves_TileDescDeco">הגנול הזה הוקפא חי. כנראה שהוא נמצא שם כבר הרבה זמן.</string>
     <string name="IceCaves_TileDescStatue">עוד פסל נורא... רגע, זה גנול קפוא.</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
@@ -310,6 +312,7 @@
     <string name="TownsfolkSilentNPC_Message3">המממ...</string>
     <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
     <string name="ToxicGland_Name">בלוטה רעילה</string>
+    <string name="Undead_Defense">נבלם</string>
     <string name="VampireSkull_Info">המסכה הזו עשויה מגולגולת של ערפד טבעית לחלוטין. למעשה זהו גולגולת... גולגולת של ערפד בעל ראש גדול. מצמרר.</string>
     <string name="VertigoBuff_Info">תחושת הסחרחורת מקשה על הליכה ישרה!</string>
     <string name="WandHolster_Name">נרתיק שרביטים</string>
@@ -397,6 +400,12 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 
