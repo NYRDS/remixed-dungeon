@@ -138,6 +138,7 @@
     <string name="Hero_StaBurning">אתה נדלקת!</string>
     <string name="Hero_StaCripple">אתה נכה!</string>
     <string name="Hero_StaPoison">אתה מורעל!</string>
+    <string name="Hero_StaVertigo">הכל מסתובב סביבך!</string>
     <string name="HungerBuff_Name2">מורעב</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
     <string name="IceCaves_TileDescDeco">הגנול הזה הוקפא חי. כנראה שהוא נמצא שם כבר הרבה זמן.</string>
@@ -280,6 +281,7 @@
     <string name="SpiderElite_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של שומרי העילית משמש לבלבל את המטרה שלהם.</string>
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
     <string name="SpiderExploding_Desc">עובדים חרוצים בזמנים שלווים, היצורים האלה לא יהססו להסתער על אויביהם ולתפוס את הצמח הראשון שהם נתקלים בו, ולהפוך את עצמם לפצצות חיות.</string>
+    <string name="SpiderMindAmber_Name">עכביש ענבר</string>
     <string name="SpiderMind_Name">עכביש-סיי</string>
     <string name="SpiderMind_Name_Objective">עכביש-פסי</string>
     <string name="SpiderQueen_Desc">גוף של אישה יפה המשולב עם עכביש מחריד. כל היצורים החיים במאורה הזו הם משרתיה. מפגש עם הגברת יוצאת הדופן הזו עלול להתגלות כחוויה קטלנית. כי אתה פולש\!</string>
@@ -395,6 +397,8 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 

@@ -307,6 +307,7 @@
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
     <string name="WarHammer_Name">Oorlogshemel</string>
+    <string name="WarriorArmor_Prompt">Kies een richting om te springen</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
     <string name="WeaknessBuff_Name">Verzwakt</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
@@ -327,6 +328,7 @@
     <string name="WndDonate_silverDonateText2">Ook schakelt u reclame uit in alle spelmodi en ontgrendelt u de Jageres vanaf het begin.</string>
     <string name="WndFortuneTeller_IdentifyAll">Alles</string>
     <string name="WndGame_Customizations">Aanpassingen</string>
+    <string name="WndHats_ListTitle">Lijst van accessoires</string>
     <string name="WndHero_Awareness">Aandacht</string>
     <string name="WndInfoItem_Chest">Kist</string>
     <string name="WndInfoItem_Skeleton">Skelettenresten</string>
@@ -412,6 +414,8 @@
     <string name="town_deco_wooden_drawer_name">lade</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 
