@@ -125,6 +125,7 @@
     <string name="HeroClass_NecromancerPerks_1">Necromanten gebruiken mana om Doodsspreuken te spreken.</string>
     <string name="HeroClass_NecromancerPerks_3">Necromancers beginnen met een skelet sleutel niveau 7.</string>
     <string name="HeroClass_Rog">schurke</string>
+    <string name="HeroSubClass_DescNone">NIET GEVONDEN</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="HeroSubClass_NameAssa">meuchelmoorder</string>
     <string name="HeroSubClass_NameFreR">freerunner</string>
@@ -132,6 +133,7 @@
     <string name="Hero_Name_Objective">je</string>
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
     <string name="Hero_StaBurning">Je vliegt in brand!</string>
+    <string name="Hero_StaPoison">Je bent vergiftigd!</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
     <string name="Hunger_Hungry_1">Je hebt honger.</string>
@@ -321,6 +323,7 @@
     <string name="VampireSkull_Name">Vampierschedel</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
+    <string name="WandOfIcebolt_Name">IJsbultstaf</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
     <string name="WandOfMagicMissile_Desinchanted">je ontgoochelde de Toverstaf van Magische Projectielen en gebruikte de essentie ervan om je %s te verbeteren</string>
     <string name="WandOfRegrowth_Name">Staf van Herstel</string>
@@ -372,6 +375,7 @@
     <string name="WndModsDisclaimer_title">Mods</string>
     <string name="WndMovieTheatre_Instruction">Groetjes en welkom in onze bioscoop! Wij bieden een speciale dienst aan, waarbij je gratis een speciale film kunt kijken genaamd \'reclame\'. En als je die helemaal kijkt, krijg je %d goudmunten als beloning!</string>
     <string name="WndMovieTheatre_Sorry">Er is iets misgegaan en we konden uw beloning niet bezorgen...</string>
+    <string name="WndPlayGames_RestoreProgress">Spelvoortgang herstellen</string>
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
     <string name="WndPlayGames_Show_Ok">Gelukt!</string>
     <string name="WndPremiumSettings_marble">marmer</string>
@@ -445,6 +449,10 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 

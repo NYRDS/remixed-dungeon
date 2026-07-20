@@ -61,6 +61,7 @@
     <string name="ChaosBlade_Name">להב כאוס</string>
     <string name="ChaosCrystal_BladeFused">הקריסטל סופג את נשקך ולובש צורת להב</string>
     <string name="ChaosCrystal_Info">אתה מרגיש זרמי אנרגיה זורמים דרך ידיך כשאתה מחזיק אותו.</string>
+    <string name="ChaosCrystal_Info_2">כן! עכשיו אתה יודע שאפשר למזג אותו עם אחד מהפריטים שלך, אבל מה הלאה?</string>
     <string name="ChaosStaff_Name">צוות כאוס</string>
     <string name="CharAction_Charm">לְקַסֵּם</string>
     <string name="Char_Hit_0">%1 היכה את %2</string>
@@ -206,6 +207,8 @@
     <string name="Mods_RestartRequired">נדרש הפעלה מחדש</string>
     <string name="MoongraceBuff_Name">מָן שָׁמַיִם</string>
     <string name="Moongrace_Name">ברכת הירח</string>
+    <string name="Multiplicity_Txt">%s של ריבוי</string>
+    <string name="NecromancerNPC_Desc">איש בגיל העמידה נראה מעט מעצבן ונרגש בו זמנית. הוא לובש שריון מורכב העשוי משברי עצמות מחוברים יחד.</string>
     <string name="NecromancerNPC_Intro">איזה מחזה נדיר! הרפתקן שרק לא רק גופה חסרת חיים. בקושי ניתן להאמין! אה... סליחה, לפעמים אני מתרגש מדי. תראו, אני נקרומנסר. ואף על פי שלימוד המתים והמוות עצמו הוא עיסוקי, לראות את אותם דברים שוב ושוב נעשה מתיש בסופו של דבר. מצד שני, זה בדיוק הסיבה שאני כאן. לפי חישוב שלי, בעוד כמה שבועות, במקום כלשהו במבוך הזה, משהו מרהיב עומד לקרות. ה_נקרופוליס_, עיר עתיקה של המתים, עומדת לפתוח את שעריה. ואני... לא יכול לומר יותר, בזבזתי מספיק זמן. אני צריך להתכונן, _לחזור מאוחר יותר_.</string>
     <string name="NecromancerNPC_Name_Objective">נקרומנסר</string>
     <string name="Necrotism_ACSpecial">נֶקְרוֹטִיזְם</string>
@@ -430,6 +433,10 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 
