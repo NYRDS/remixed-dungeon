@@ -405,10 +405,14 @@
     <string name="ChampionOfWaterBuff_Name">Μαχητής του νερού</string>
     <string name="ChaosArmor_Info">Αυτή η πανοπλία αποτελείται από αιμάτινες πλάκες ενωμένες με σκουροκόκκινες αλυσίδες. Εκλύουν χαοτική ενέργεια καθώς τις αγγίζεις.</string>
     <string name="ChaosArmor_Name">χαοτική πανοπλία</string>
+    <string name="ChaosBlade_Gender">masculine</string>
+    <string name="ChaosBlade_Info">Ένα λεπίδι ενός χεριού δημιουργημένο από το απόλυτο χάος. Δυναμώνει με τη μάχη όπως το αντίστοιχο σπαθί για τα δύο χέρια, αλλά πιο αργά και με μικρότερη δυναμική. Αφήνει, όμως, το ένα σου χέρι ελεύθερο για μια ασπίδα.</string>
+    <string name="ChaosBlade_Name">λεπίδι του χάους</string>
     <string name="ChaosBow_Gender">neuter</string>
     <string name="ChaosBow_Info">Ένα τρομερό τόξο γεμάτο χαοτική ισχύ. Κάθε βέλος του θα μεταφέρει χαοτική ενέργεια μαζί του. Αλλά αν αστοχήσεις...</string>
     <string name="ChaosBow_Name">χαοτικό τόξο</string>
     <string name="ChaosCrystal_ArmorFused">Ο κρύσταλλος ενώθηκε με την πανοπλία σου και πήρε τη μορφή του χάους.</string>
+    <string name="ChaosCrystal_BladeFused">Ο κρύσταλλος απορροφά το όπλο και παίρνει τη μορφή ενός λεπιδιού.</string>
     <string name="ChaosCrystal_BowFused">Ο κρύσταλλος απορροφά το τόξο και παίρνει τη μορφή ενός άλλου τόξου.</string>
     <string name="ChaosCrystal_Fuse">ΣΥΓΧΩΝΕΥΣΗ</string>
     <string name="ChaosCrystal_Info">Νιώθεις κύματα ενέργειας να διαπερνούν τα χέρια σου όσο τον κρατάς.</string>
@@ -422,7 +426,6 @@
     <string name="ChaosCrystal_SelectForFuse">Ένωσε αντικείμενο με τον Κρύσταλλο του Χάους</string>
     <string name="ChaosCrystal_ShieldFused">Ο κρύσταλλος ενώθηκε με την ασπίδα σου και πήρε τη μορφή του χάους.</string>
     <string name="ChaosCrystal_StaffFused">Ο κρύσταλλος απορροφά το ραβδί και παίρνει τη μορφή μιας ράβδου.</string>
-    <string name="ChaosCrystal_BladeFused">Ο κρύσταλλος απορροφά το όπλο και παίρνει τη μορφή ενός λεπιδιού.</string>
     <string name="ChaosCrystal_SwordFused">Ο κρύσταλλος απορροφά το όπλο και παίρνει τη μορφή ενός σπαθιού.</string>
     <string name="ChaosCrystal_Use">ΧΡΗΣΗ</string>
     <string name="ChaosHelmet_Info">Αυτό το κατακόκκινο κράνος είναι το ουσιώδες σύμβολο του Πολεμιστή του Χάους.</string>
@@ -432,9 +435,6 @@
     <string name="ChaosStaff_Gender">neuter</string>
     <string name="ChaosStaff_Info">Μία ράβδος εμποτισμένη με τη δύναμη του Χάους! Τι άλλο θα μπορούσε να γοητεύσει ή να τρομοκρατήσει έναν μάγο;</string>
     <string name="ChaosStaff_Name">χαοτική ράβδος</string>
-    <string name="ChaosBlade_Gender">masculine</string>
-    <string name="ChaosBlade_Info">Ένα λεπίδι ενός χεριού δημιουργημένο από το απόλυτο χάος. Δυναμώνει με τη μάχη όπως το αντίστοιχο σπαθί για τα δύο χέρια, αλλά πιο αργά και με μικρότερη δυναμική. Αφήνει, όμως, το ένα σου χέρι ελεύθερο για μια ασπίδα.</string>
-    <string name="ChaosBlade_Name">λεπίδι του χάους</string>
     <string name="ChaosSword_Gender">neuter</string>
     <string name="ChaosSword_Info">Η λεπίδα αυτού του σπαθιού είναι φτιαγμένη από αμιγές χάος και ανά διαστήματα πάλλεται ελαφρώς. Οι εξωπραγματικές δυνάμεις μες στο όπλο μπορούν να κόψουν στη μέση σχεδόν τα πάντα. Χρειάζεται, όμως, μεγάλη ικανότητα για να κουμαντάρεις την απίστευτη ισχύ του.</string>
     <string name="ChaosSword_Name">χαοτικό σπαθί</string>
@@ -526,7 +526,7 @@
     <string name="Codex_Story_0">Και δημιούργησε το Watabou Pixel Dungeon. Και κοίταξε τη δημιουργία του. Και είδε αυτός ότι ήταν καλό!</string>
     <string name="Codex_Story_1">Γλύφος εκτροπής - Κάνει τους εχθρούς να πετάγονται προς τα πίσω αφού χτυπήσουν τον ήρωα.</string>
     <string name="Codex_Story_10">Γλύφος περιτύλιξης - Ο ήρωας μπορεί να λάβει φυτική πανοπλία, αλλά ταυτόχρονα θα ριζωθεί.</string>
-    <string name="Codex_Story_11">Όπλο ολέθρου - Ένα επιτυχημένο χτύπημα μπορεί να εξοντώσει ακαριαία τον στόχο (ή να προκαλέσει έως και x2 ζημιά σε αφεντικό).</string>
+    <string name="Codex_Story_11">Όπλο ολέθρου - Ένα επιτυχημένο χτύπημα μπορεί να εξοντώσει ακαριαία τον στόχο (ή να προκαλέσει έως και x2 ζημιά σε αρχηγό).</string>
     <string name="Codex_Story_12">Όπλο ανάφλεξης - Προκαλεί επιπλέον ζημιά στον στόχο και μπορεί να τον αναφλέξει.</string>
     <string name="Codex_Story_13">Όπλο φρικαλεότητας - Με κάθε επιτυχημένο χτύπημα, ο εχθρός μπορεί να τρομοκρατηθεί και να το βάλει στα πόδια.</string>
     <string name="Codex_Story_14">Όπλο αστάθειας - Σε ένα επιτυχημένο χτύπημα, μπορεί να εφαρμόσει την επίδραση μιας τυχαίας μαγικής ενίσχυσης.</string>
@@ -3085,4 +3085,5 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 </resources>
