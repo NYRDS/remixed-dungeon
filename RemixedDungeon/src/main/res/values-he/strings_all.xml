@@ -161,6 +161,7 @@
     <string name="IceGuardian_Name_Objective">שומר קרח</string>
     <string name="Ignite_Info">מדליק את התא הנבחר. ניתן להשתמש כדי לשרוף עשב, דמויות וחפצים.</string>
     <string name="ImpShopkeeper_Name">אימפ שאפתן</string>
+    <string name="Imp_Cya">נתראה, %s!</string>
     <string name="InnKeeperNPC_Name_Objective">בעל הפונדק</string>
     <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
     <string name="InterLevelScene_Loading">נטען...</string>
@@ -427,6 +428,8 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 

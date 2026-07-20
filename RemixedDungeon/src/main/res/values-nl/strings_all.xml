@@ -151,6 +151,7 @@
     <string name="Journal_Caged_Kobold">Kobold in een kooi</string>
     <string name="Journal_PlagueDoctorNPC">pestdokter</string>
     <string name="Journal_Statue">Geanimeerd standbeeld</string>
+    <string name="Journal_Wandmaker">Oude toverstafmaker</string>
     <string name="King_Defense">geparreerd</string>
     <string name="Larva_Gender">feminine</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
@@ -442,6 +443,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 
