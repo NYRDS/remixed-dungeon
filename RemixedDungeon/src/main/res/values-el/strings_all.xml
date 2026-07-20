@@ -2167,7 +2167,7 @@
     <string name="StartScene_New">Νέο παιχνίδι</string>
     <string name="StartScene_No">Όχι, επιστροφή στο μενού</string>
     <string name="StartScene_Really">Θέλεις σίγουρα να ξεκινήσεις νέο παιχνίδι;</string>
-    <string name="StartScene_Unlock">Για να ξεκλειδώσεις αυτήν την κλάση ήρωα, εξόντωσε το αφεντικό DM-300 με οποιαδήποτε άλλη κλάση.</string>
+    <string name="StartScene_Unlock">Για να ξεκλειδώσεις αυτήν την κλάση ήρωα, εξόντωσε τον αρχηγό DM-300 με οποιαδήποτε άλλη κλάση.</string>
     <string name="StartScene_UnlockDoctor">Για να ξεκλειδώσεις τον Γιατρό της Πανούκλας, ολοκλήρωσε την αποστολή του παλιού γιατρού της πανούκλας.</string>
 
     <string name="StartScene_UnlockElf">Για να ξεκλειδώσεις αυτήν την κλάση ήρωα, εξόντωσε τον Βασιλιά Νάνο με οποιαδήποτε άλλη κλάση.</string>
