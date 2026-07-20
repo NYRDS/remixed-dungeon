@@ -14,10 +14,12 @@
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
     <string name="AzuterronNPC_Name_Objective">זר</string>
     <string name="Badges_BossSlain1">הגווּ הובס</string>
+    <string name="Badges_BossSlain3">DM-300 הובס</string>
     <string name="Badges_DeathGlyph">מוות מגליף</string>
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
     <string name="Badges_GoldColleted4">7500 זהב נאסף</string>
     <string name="Badges_Info2">סופר תג חדש: %s</string>
+    <string name="Badges_ItemLvl1">הושג פריט ברמה 3</string>
     <string name="Badges_ItemLvl3">הושג פריט ברמה 9</string>
     <string name="Badges_ItemLvl4">הושג פריט ברמה 12</string>
     <string name="Badges_LevelReached4">הגיע לרמה 24</string>
@@ -52,6 +54,7 @@
     <string name="Challenges_Names_6">רונות אסורות</string>
     <string name="Challenges_Names_8">ללא עיר</string>
     <string name="Challenges_Names_9">אמנזיה</string>
+    <string name="ChampionOfAirBuff_Name">אלוף האוויר</string>
     <string name="ChampionOfEarthBuff_Info">אלוף האדמה מגלם כוח בלתי מתפשר, שכן תכונה זו משפרת את עמידות היצור לנזק ומגדילה את החיוניות המקסימלית שלו. שינוי זה הופך אותו לאויב מאיים במעמקים המסוכנים, המסוגל להדוף התקפות בקלות ולהחזיק מעמד בקרב ממושך עם נחישות בלתי מעורערת.</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">להב חד-ידני של כאוס טהור. הוא גדל עם קרבות כמו בן דודו הדו-ידני, אבל לאט יותר ולפוטנציאל נמוך יותר — ומשאיר את היד השנייה חופשית למגן.</string>
@@ -78,6 +81,7 @@
     <string name="Codex_Story_23">הספר הזה כתוב בשפה הגמדית</string>
     <string name="Codex_Story_9">גליף תזוזה - בכל פעם שהגיבור נפגע, יש סיכוי שהגיבור יטלפורט לאריח גלוי אקראי. גליף זה לא עובד ברמות בוס.</string>
     <string name="ColdSpirit_Desc">רוח הקור היא התגלמות הכפור, בצורתו הטהורה ביותר. בהיותה גוש חסר מודע של אנרגיה קסומה, היא מצייתת לרצון המכשף שקרא לה או פועלת לפי אינסטינקטים בסיסיים.</string>
+    <string name="ComboBuff_Name">קומבו</string>
     <string name="Combo_Combo">%d מכות קומבו!</string>
     <string name="CommonArrow_Info">חץ עץ נפוץ עם ראש ברזל.</string>
     <string name="ConcreteBlock_Description">נראה שהבלוק הזה דורש %d נקודות כוח כדי לדחוף</string>
@@ -255,6 +259,7 @@
     <string name="RingOfPower_Info">השרביטים שלך יהפכו לחזקים יותר בשדה האנרגיה שמקרינה טבעת זו. טבעות כוח מוחלשות דווקא יחלישו את השרביטים שלך.</string>
     <string name="RingOfPower_Name">טבעת הכוח</string>
     <string name="RingOfShadows_Info">אויבים יהיו פחות סביר שיבחינו בך אם תענוד את הטבעת הזו. טבעות צללים מוחלשות יזהירו אויבים שאולי לא היו מבחינים בנוכחותך אחרת.</string>
+    <string name="RingOfStoneWalking_Info">הטבעת המוזרה הזו עשויה מאבן עמידה. מה שחשבת בהתחלה שהוא אודם הוא למעשה דם נוזלי שמוחזק במקום! בפנים יש חץ שמצביע על מה שנראה כמו קיר, לצד לב שבור... מה זה עשוי לעשות?</string>
     <string name="RingOfThorns_Name">טבעת קוצים</string>
     <string name="Ring_Gems_0">יהלום</string>
     <string name="Ring_Identify">כעת אתה מכיר מספיק את %1$s כדי לזהות אותו. זהו %2$s.</string>
@@ -388,6 +393,7 @@
     <string name="WndTradeItem_Sold">מכרת את ה-%1 תמורת %2</string>
     <string name="WrnExperimental_realtime">מצב זמן אמת הופעל: זה עכשיו רוגלייק בזמן אמת, הקש מהר או תמות.\nרוצה לבדוק מלאי?\nבהצלחה עם זה בזמן שסרטן הביוב בודק את הקרביים שלך.</string>
     <string name="WrnExperimental_title">אפשרויות ניסיוניות הופעלו!</string>
+    <string name="Yog_Info2">תקווה היא אשליה...</string>
     <string name="YogsBrain_Name">המוח של יוג</string>
     <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
     <string name="ZombieGnoll_Info">גנול-זומבי קם מהמתים!</string>
@@ -421,6 +427,12 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 

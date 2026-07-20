@@ -10,6 +10,7 @@
     <string name="AmokBuff_Info">اختبر نوبة الهيجان، الآخذة لأرواح البؤساء.</string>
     <string name="Amulet_Info">تعويذة ييندور هي أقوى قطعة أثرية معروفة من أصل مجهول. يُقال إنها قادرة على تحقيق أي رغبة إذا كانت إرادة صاحبها قوية بما يكفي لـ \&quot;إقناعها\&quot; بالقيام بذلك.</string>
     <string name="AnesthesiaBuff_Info">لا يشعر بالألم ولا يستيقظ من الهجمات، لكنه لا يزال يتلقى الضرر.</string>
+    <string name="Anesthesia_Cast">%s يسقط في نوم عميق بلا أحلام.</string>
     <string name="Anesthesia_Info">يُسبّب نومًا عميقًا وغير طبيعي لهدفك. حتى أعنف الهجمات لن توقظهم من هذا النوم.</string>
     <string name="ArmorKit_Upgraded">لقد قمت بتطبيق مجموعة الدروع لترقية %s</string>
     <string name="Armor_Incompatible">تفاعل أنواع مختلفة من السحر محا الرموز السحرية على هذه الدروع!</string>
@@ -84,6 +85,7 @@
     <string name="Crystal_Name">بلورة طافية</string>
     <string name="DarkGold_Info">يُسمى هذا المعدن \&quot;المظلم\&quot; ليس بسبب لونه (فهو لا يختلف عن الذهب العادي)، بل لأنه يذوب في ضوء النهار، مما يجعله عديم الفائدة على السطح.</string>
     <string name="Darkness_Info">يبدو وكأنه قطع من الظلام الأبدي تطفو في الهواء</string>
+    <string name="DashSpell_TooFar">لا يمكنني الاندفاع إلى هذه المسافة البعيدة.</string>
     <string name="Death_Name_1">مريع %s</string>
     <string name="Deathling_Name">ميت صغير</string>
     <string name="DeepSnail_Gender">masculine</string>
@@ -112,6 +114,7 @@
     <string name="Exhumation_Info">فتح القبر عملٌ شائنٌ بحدّ ذاته، لكنّه لا يكفي لمن يخدم الموتَ نفسَه. لمن يُجري هذا الطقسَ الداكنَ فرصةٌ عظيمةٌ (وتزداد مع إتقانه) لأن يخضعَ روحاً مسكينةً لأحدِ الراقدين ههنا.</string>
     <string name="Exhumation_Name">نبش القبر</string>
     <string name="Eye_Gender">neuter</string>
+    <string name="Eye_Name">العين الشريرة</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
     <string name="FireElemental_Name">عنصر ناري</string>
     <string name="FireElemental_Name_Objective">عنصر النار</string>
@@ -123,7 +126,9 @@
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="GasImmuneBuff_Name">مناعة الغاز</string>
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
+    <string name="Gnoll_BecomeGuardianDesc">أن تصبح حارساً</string>
     <string name="Gold_Name">الذهب</string>
+    <string name="GoldenKey_Name">المفتاح الذهبي</string>
     <string name="Golem_Desc">حاول القزم دمج معرفتهم بالآليات مع قوتهم المكتشفة حديثاً في ربط العناصر. استخدموا أرواح الأرض كـ \&quot;روح\&quot; لأجساد الغوليم الميكانيكية، والتي كان يُعتقد أنها الأكثر قابلية للسيطرة. على الرغم من ذلك، فإن أصغر خطأ في الطقوس قد يتسبب في اندلاع.</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Guts_TileWater">سائل لزج غريب</string>
@@ -312,6 +317,7 @@
     <string name="Sprout_Info">أيقظ البذور النائمة.\nومع ذلك، يجب أن تكون هناك بعض النباتات على الأرض لكي ينجح هذا التعويذ.</string>
     <string name="StartScene_DifficultySelect">اختر قدرك</string>
     <string name="StartScene_New">لعبة جديدة</string>
+    <string name="StartScene_No">لا، العودة إلى القائمة الرئيسية</string>
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
     <string name="Stench_Txt">%s نتن</string>
     <string name="Stylus_Info">هذا القلم السحري مصنوع من حجر داكن وصلب جداً. يمكنك به نقش رمز أو رونه، لكن القلم هو من يختار ما سينقش، ليس أنت.</string>
@@ -451,6 +457,15 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
 
 
 

@@ -145,6 +145,7 @@
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
     <string name="InventoryScroll_No">Nee, ik heb mijn keuze veranderd</string>
+    <string name="InvisibilityBuff_Name">Onzichtbaar</string>
     <string name="Item_DirThrow">Kies de richting van de worp</string>
     <string name="Item_Name">iets</string>
     <string name="Journal_Caged_Kobold">Kobold in een kooi</string>
@@ -159,6 +160,7 @@
     <string name="Level_TileLockedDoor">Gesloten deur</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
+    <string name="LightningBolt_Info">Een spreuk die wordt gedeeld onder oude schamanen, die je vijanden tweemaal zo effectief schokt, vooral als ze genoeg dwazen zijn om op water te staan.</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
     <string name="MeleeWeapon_Info3a">Dit is een tamelijk %s wapen.</string>
@@ -435,10 +437,17 @@
     <string name="town_deco_wallpaper_name">behang</string>
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
     <string name="town_deco_wooden_bench_name">Houten bank</string>
+    <string name="town_deco_wooden_drawer_desc">Interessant wat erin bewaard zit.</string>
     <string name="town_deco_wooden_drawer_name">lade</string>
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
 
 
 
