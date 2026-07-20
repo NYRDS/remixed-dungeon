@@ -41,6 +41,7 @@
     <string name="BlackSkullOfMastery_BecomeLichDesc">Lich là một thuật sư tử thi đã đạt đến đỉnh cao của khả năng mình. Sinh tồn giữa sự sống và cái chết, Lich xuất sắc trong thuật hồi sinh, nhưng kỹ năng chiến đấu của hắn thấp hơn rất nhiều so với người thường.</string>
     <string name="Blacksmith_Verify6">Tôi không thể rèn lại các vật phẩm này!</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
+    <string name="Boomerang_Gender">masculine</string>
     <string name="CagedKobold_Desc">Một kobold, trong một lồng.</string>
     <string name="CagedKobold_Message1">Làm ơn...</string>
     <string name="CagedKobold_Message3">Tôi ghét tất cả mọi thứ về cái lồng này</string>
@@ -231,6 +232,7 @@
     <string name="Ring_Info2">Chiếc %1$s của bạn siết chặt vào ngón tay đau đớn</string>
     <string name="Ring_Info4">%1$s\n\nBạn có thể cảm thấy một phép thuật độc ác ẩn mình bên trong %2$s.</string>
     <string name="RottenFood_Message">Ghét quá!</string>
+    <string name="RottenPasty_Info">Cái pasty này trông khá ghê.</string>
     <string name="RottenRation_Name">Cơm khô hỏng</string>
     <string name="SacrificialSword_Name">kiếm hiến tế</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
@@ -256,6 +258,7 @@
     <string name="Scroll_Runes_9">BERKANAN</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServiceManNPC_Desc">Một công nhân thông thường của các cơ sở địa phương.</string>
+    <string name="ServiceManNPC_Name_Objective">nhân viên</string>
     <string name="ServiceManNotReadyNPC_Message">Xin lỗi, nhưng tòa nhà này chưa sẵn sàng!</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
     <string name="Sewer_TileWater">nước đục</string>
@@ -422,6 +425,9 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
 
 
 

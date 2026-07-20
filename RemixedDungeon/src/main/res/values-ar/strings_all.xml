@@ -161,6 +161,7 @@
     <string name="HideInGrassSpell_NeedGrassToHide">حتى أنا لا أستطيع الاختباء في العراء</string>
     <string name="Horror_Name_1">%s مخيف</string>
     <string name="HuntressArmor_Name">رداء الصياد</string>
+    <string name="HuntressArmor_NoEnemies">لا يوجد أعداء مرئيون</string>
     <string name="IceCaves_TileDescDeco">تم تجميد هذا الغنول وهو حي. على ما يبدو، أنه كان هناك منذ فترة طويلة.</string>
     <string name="IceCaves_TileGrass">عشب متجمد.</string>
     <string name="IceElemental_Name_Objective">عنصراً جليدياً</string>
@@ -267,6 +268,7 @@
     <string name="RawFish_Name">سمك نيء</string>
     <string name="RemixedPixelDungeonApp_sendCrash">لعبةنا تعطلت...\n عذراً.\nيرجى إرسال تقرير العطل لمساعدتنا في إصلاحه.</string>
     <string name="ResultDescriptions_Hunger">مات جوعاً في المستوى %d</string>
+    <string name="ResultDescriptions_Necromancy">نضبت قواه الحيوية أثناء محاولة تحريك جثة في المستوى %d</string>
     <string name="ResultDescriptions_Trap">قتل بتفريغ %1$s في المستوى %2$d</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="RingOfElements_Name">خاتم العناصر</string>
@@ -468,6 +470,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 
