@@ -69,6 +69,7 @@
     <string name="ChaosCrystal_Info_2">כן! עכשיו אתה יודע שאפשר למזג אותו עם אחד מהפריטים שלך, אבל מה הלאה?</string>
     <string name="ChaosStaff_Name">צוות כאוס</string>
     <string name="CharAction_Charm">לְקַסֵּם</string>
+    <string name="CharAction_Push">לדחוף</string>
     <string name="Char_Hit_0">%1 היכה את %2</string>
     <string name="Char_StaDodged_1">התחמק</string>
     <string name="Char_StaFrightened">מבוהל</string>
@@ -447,6 +448,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

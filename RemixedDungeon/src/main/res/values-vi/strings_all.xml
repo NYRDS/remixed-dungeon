@@ -1,4 +1,5 @@
 <resources>
+    <string name="AboutScene_Email_Us">Gửi email cho chúng tôi:</string>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Tay trần làm nhiễm bẩn kỹ thuật. Không có đường cắt sạch của Rọc, sự ngắm bắn của tôi trở nên hỗn loạn.</string>
     <string name="AllowStatisticsCollectionScene_Title">Thu thập thống kê sử dụng</string>
@@ -440,6 +441,7 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
 
 
 
