@@ -34,6 +34,7 @@
     <string name="Badges_PotionsCooked3">9 جرعات مطبوخة</string>
     <string name="Badges_PotionsCooked5">تم تحضير 25 جرعة</string>
     <string name="Badges_RingThorns">تم الحصول على خاتم الأشواك</string>
+    <string name="Badges_ShadowLord_Slain">تم هزيمة سيد الظلال</string>
     <string name="Badges_StrengthAttained3">تم تحقيق 17 نقطة من القوة</string>
     <string name="BardNPC_Desc">يعزف باردة المدينة على العود.</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
@@ -488,6 +489,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 
