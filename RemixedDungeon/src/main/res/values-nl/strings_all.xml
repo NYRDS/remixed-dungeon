@@ -26,6 +26,7 @@
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
     <string name="Badges_StrengthAttained5">21 punten Kracht bereikt</string>
     <string name="Bag_ACOpen">OPENEN</string>
+    <string name="Bandit_Name">gekke bandiet</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
     <string name="Belongings_CantWearBoth">Je kunt %1$s en %2$s niet tegelijkertijd uitrusten!</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
@@ -34,6 +35,7 @@
     <string name="BlackCat_Phrases_1">Miauw...</string>
     <string name="Blacksmith_Verify6">Ik kan deze items niet hersmelten!</string>
     <string name="BlessedBuff_Info">Moge precisie en ontwijken komen voor hen die door de zegen zijn geraakt!</string>
+    <string name="BodyArmorBuff_Name">Lichaamspantser</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="BurningFist_Name">brandende vuist</string>
@@ -80,6 +82,7 @@
     <string name="ConfusionGas_Info">Hier zweeft een wolk verwarrend gas.</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
     <string name="Crab_Name">rioolkrab</string>
+    <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">dolk</string>
     <string name="DashSpell_Info">Das naar een aangewezen richting terwijl je met vijanden botst, schade toebrengend en verstommeling veroorzakend.</string>
@@ -125,6 +128,7 @@
     <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
     <string name="HeroClass_GnollPerks_3">Gnollen kunnen niet lezen of schrijven.</string>
     <string name="HeroClass_GnollPerks_4">Gnollen vallen geen andere Gnollen aan tenzij ze worden uitgedaagd</string>
+    <string name="HeroClass_HunPerks_3">Jachtvrouwjes krijgen meer gezondheid van dauwdruppels.</string>
     <string name="HeroClass_Mag">magier</string>
     <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
     <string name="HeroClass_NecromancerPerks_1">Necromanten gebruiken mana om Doodsspreuken te spreken.</string>
@@ -190,6 +194,7 @@
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
+    <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
     <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
@@ -331,6 +336,7 @@
     <string name="WandOfIcebolt_Name">IJsbultstaf</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
     <string name="WandOfMagicMissile_Desinchanted">je ontgoochelde de Toverstaf van Magische Projectielen en gebruikte de essentie ervan om je %s te verbeteren</string>
+    <string name="WandOfMagicMissile_Name">Toverstaf van Magische Projectielen</string>
     <string name="WandOfRegrowth_Name">Staf van Herstel</string>
     <string name="WandOfTeleportation_Info2">er is niets gebeurd</string>
     <string name="Wand_ACZap">ZAP</string>
@@ -457,6 +463,21 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

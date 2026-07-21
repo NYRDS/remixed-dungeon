@@ -58,6 +58,7 @@
     <string name="BlessedBuff_Name">مبارك</string>
     <string name="BlindnessBuff_Info">عمى تام، لا يُسمع سوى الأصوات المحيطة.</string>
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
+    <string name="Bowknot_Info">شريط وردي لامع جميل مربوط بعقدة ومثبت بدبوس شعر.</string>
     <string name="Brute_Gender">masculine</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
@@ -145,6 +146,7 @@
     <string name="Gold_Name">الذهب</string>
     <string name="GoldenKey_Name">المفتاح الذهبي</string>
     <string name="Golem_Desc">حاول القزم دمج معرفتهم بالآليات مع قوتهم المكتشفة حديثاً في ربط العناصر. استخدموا أرواح الأرض كـ \&quot;روح\&quot; لأجساد الغوليم الميكانيكية، والتي كان يُعتقد أنها الأكثر قابلية للسيطرة. على الرغم من ذلك، فإن أصغر خطأ في الطقوس قد يتسبب في اندلاع.</string>
+    <string name="Golem_Name">غول</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Guts_TileWater">سائل لزج غريب</string>
     <string name="Halls_TileStatue">عمود</string>
@@ -398,6 +400,7 @@
     <string name="WndCryptoDonate_tron">ترون</string>
     <string name="WndDonate_goldDonateText">شكراً لمساعدتكم</string>
     <string name="WndDonate_silverDonate">تبرع فضي</string>
+    <string name="WndDonate_silverDonateText2">أيضًا تعطيل الإعلانات في جميع أنماط اللعب وفتح صياد منذ البداية.</string>
     <string name="WndFortuneTeller_IdentifyAll">الكل</string>
     <string name="WndFortuneTeller_Title">العَرّافَة</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
@@ -436,6 +439,7 @@
     <string name="WndStory_Spiders">منذ سنوات عديدة مضت كان هناك منجم غني مليء بالحجارة السحرية. لكن عندما جفت عروق المعادن غادر عمال المناجم تاركين خلفهم شبكة واسعة من الأنفاق. في نهاية المطاف سكن هذا المكان العناكب. لكن حتى هذه المخلوقات الخطيرة الكامنة في الظلام لم تكن كافية لإخافة الشجعان والمجانين الذين يتوقون للكنوز التي قد توجد في المناجم. فمدى الخطر يتناسب دائماً مع كمية الشائعات التي تتحدث عن القطع الأثرية السحرية. ذات مرة تجولت ساحرة شريرة في الأنفاق محاولاً الهروب من الملاحقين. لكن الناس المتشائمون لم يجرؤوا على دخول الظلام. لذا قرروا الانتظار. لكنها لم تظهر أبداً. ربما وجدت الساحرة مخرجاً آخر، أو ربما تمكنت من التسلل بجانب الحراس... أو أنها هلكت محاطة بحفيف مخلوقات الظلام.</string>
     <string name="WndTradeItem_Buy">شراء بـ %dغ</string>
     <string name="WndTradeItem_SellAll">بيع الكل مقابل %dg</string>
+    <string name="WndTradeItem_SellN">بيع %1$d مقابل %2$dغ</string>
     <string name="Wnd_Button_Ok">موافق</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="Worm_Desc">لا يمكن معرفة حجم هذا الدودة. تبرز جزئياً من الأرض، وجسم هذا الكائن مغطى بكتل من اللحم المتعفن والخراء. فكيه العملاقان يعطيان فكرة واضحة عن كيفية تحرك ذلك الوحش عبر السطح.</string>
@@ -484,6 +488,15 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
 
 
 

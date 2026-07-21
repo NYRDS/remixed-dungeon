@@ -78,6 +78,7 @@
     <string name="Char_StaStunned">מבולבל</string>
     <string name="Char_Stole_2">%1$s גנב את %2$s של %3$s!</string>
     <string name="CharmSpell_Name">הקסמה</string>
+    <string name="Chasm_Jump">האם אתה באמת רוצה לקפוץ לתהום? אתה עלול למות.</string>
     <string name="ChristmasTurkey_Name">תרנגול הודו חגיגי</string>
     <string name="City_TileDescBookshelf">שורות של ספרים בתחומים שונים ממלאות את מדף הספרים.</string>
     <string name="ClassArmor_LowMana">מאנה לא מספיקה!</string>
@@ -300,6 +301,7 @@
     <string name="Scroll_Runes_10">אודל</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">מלצרית פונדק</string>
+    <string name="ServantNPC_Name_Objective">מלצרית פונדק</string>
     <string name="ServiceManNPC_Desc">עובד רגיל של הממסדים המקומיים.</string>
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
     <string name="Shadow_Gender">feminine</string>
@@ -444,6 +446,12 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 

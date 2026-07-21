@@ -43,6 +43,7 @@
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="CagedKobold_Desc">Một kobold, trong một lồng.</string>
+    <string name="CagedKobold_Intro">Ê... Ê! Cậu là phiêu lưu gia kia, đúng không? Giúp tớ một chút, bạn ơi, bọn quân phiệt đã giam tớ ở đây! Chúng định kích hoạt lại một vũ khí cổ xưa để chinh phục những con người trên mặt đất! Nhưng vì quá nguy hiểm, tớ đã phản đối, mà chúng ném tớ ra ngoài và giam trong lồng! Tớ xin nhờ cậu tìm chìa khóa cái buồng này, và như hồi báo, tớ sẽ giúp cậu hết sức có thể.</string>
     <string name="CagedKobold_Message1">Làm ơn...</string>
     <string name="CagedKobold_Message3">Tôi ghét tất cả mọi thứ về cái lồng này</string>
     <string name="CagedKobold_Name">kobold trong lồng</string>
@@ -209,6 +210,7 @@
     <string name="PlagueDoctorNPC_Name_Objective">bác sĩ dịch hạch</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Ngón xương khô của hắn gõ nhịp nhàng vào nồi nước sôi sùng sục, không khí quanh hắn dày đặc bởi mùi hôi chua gay của lưu huỳnh và sự phân giải*\n_Kobold Pháp Sư Băng_! Những sinh vật thảm hại kia, trùm mình trong hang động đóng băng, nguội ngút chăm chăm vào phép thuật băng giá của chúng.\nTa cần năm con, xác đóng băng của chúng sẽ... soi sáng sự việc.\nSự thành thạo băng giá của chúng, nó... kỳ lạ.\nTa tin rằng chúng khai thác một năng lượng nguyên thủy, một sức mạnh ngủ quên dưới bề mặt của chính thế giới này.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Hắn ấp úng, giọng khàn khàn như cành cây khô giòn*. A-a, _súc quy_! Hai... có, hai, còn sống! Nó là... hem... cho nghiên cứu của ta! Các ngươi thấy... pheromone của chúng... nó quan trọng để hiểu cái cân bằng tinh tế của... a... *Hắn ngập ngừng, bàn tay xương cốt đưa lên gõ nghiến mặt nạ, ánh mắt chớm chớp nhìn về phía các ngươi với cường độ sốt ruột.* Cái... bản chất của chúng... nó là một câu đố... một câu đố đẹp đẽ, bí ẩn! *Hắn ho khan gắt gao, cố gắng lấy lại bình tĩnh.* Ta hứa, vì mang cho ta hai con... quái vật này... các ngươi sẽ có lòng biết ơn vĩnh cửu của ta. Hãy coi đó như một... một ơn huệ cho tri thức! Đúng! Vì tri thức!</string>
+    <string name="PoisonBuff_Name">Bị Độc</string>
     <string name="Poison_Name_0">Độc %s</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
     <string name="PotionOfMight_Name">Bình Thuốc Mạnh Mẽ</string>
@@ -417,6 +419,7 @@
     <string name="town_deco_flowerinthepot_name">Hoa trong chậu</string>
     <string name="town_deco_furnace_name">Lò nung</string>
     <string name="town_deco_hay_desc">Một đống rơm nhỏ thơm thơm.</string>
+    <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
     <string name="town_deco_pathway_name">đường mòn</string>
     <string name="town_deco_pillar_desc">Ngày xưa, cột này từng đóng vai trò là đỡ đẹp đẽ và trang trí.</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
@@ -436,6 +439,14 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
+
+
+
 
 
 
