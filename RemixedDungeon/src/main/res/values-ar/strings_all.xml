@@ -360,6 +360,7 @@
     <string name="Undead_Gender">masculine</string>
     <string name="VertigoBuff_Info">الشعور بالدوار يجعل المشي في خط مستقيم أكثر صعوبة!</string>
     <string name="VileEssence_Info">جوهر مركز من الفساد تم حصاده من عدو مهزوم. ينبض هذا الجوهر المظلم بطاقة خبيثة ويُقدّر كثيرًا في العمليات الكيميائية.</string>
+    <string name="Viscosity_Txt">%s من اللزوجة</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية الخالصة، مسببة ضرراً معتدلاً للهدف.</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
@@ -373,6 +374,7 @@
     <string name="WaterOfAwareness_Info">تشع قوة المعرفة من ماء هذه البئر. خذ رشفة منه لكشف جميع أسرار معداتك.</string>
     <string name="Weapon_Incompatible">تفاعل أنواع مختلفة من السحر ألغى السحر على هذا السلاح!</string>
     <string name="Weightstone_Fast">لقد قمت بتوازين %s لجعله أسرع</string>
+    <string name="Weightstone_Info">باستخدام حجر الوزن، يمكنك موازنة سلاحك القتالي القريب لزيادة سرعته أو دقته.</string>
     <string name="Weightstone_Name">حجر الوزن</string>
     <string name="Weightstone_WndCancel">لا بأس</string>
     <string name="Welcome_Text_30_1">    remix.30.1\n    - طريقة اللعب:\n    -- فئات غنول الفرعية!\n    -- حلزونات!\n    -- تم تقليل سرعة ترقية عناصر الفوضى.\n    -- جرعة المانا أصبحت جرعة عادية من الآن.\n    -- الشارات أصبحت قابلة للحصول عند اللعب بـ DLC (وليس المودات).\n    - إصلاح الأخطاء</string>
@@ -470,6 +472,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

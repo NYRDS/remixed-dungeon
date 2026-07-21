@@ -79,6 +79,7 @@
     <string name="CloakSpell_Name">גלימה</string>
     <string name="ClothArmor_Desc">השריון הקל הזה מציע הגנה בסיסית.</string>
     <string name="ClothArmor_Name">שריון בד</string>
+    <string name="Codex_Story_16">נשק בר מזל - כמעט מתעלם לחלוטין משריון האויב, וגורם להרבה יותר נזק.</string>
     <string name="Codex_Story_23">הספר הזה כתוב בשפה הגמדית</string>
     <string name="Codex_Story_9">גליף תזוזה - בכל פעם שהגיבור נפגע, יש סיכוי שהגיבור יטלפורט לאריח גלוי אקראי. גליף זה לא עובד ברמות בוס.</string>
     <string name="ColdSpirit_Desc">רוח הקור היא התגלמות הכפור, בצורתו הטהורה ביותר. בהיותה גוש חסר מודע של אנרגיה קסומה, היא מצייתת לרצון המכשף שקרא לה או פועלת לפי אינסטינקטים בסיסיים.</string>
@@ -433,6 +434,7 @@
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

@@ -340,6 +340,7 @@
     <string name="Weightstone_Info">Met een weegsteen kun je je naarstwapens balanceren om de snelheid of nauwkeurigheid te verhogen.</string>
     <string name="Weightstone_Name">gewichtsteen</string>
     <string name="Weightstone_WndCancel">Laat maar</string>
+    <string name="Weightstone_WndChoice">Hoe wil je je %s balanceren?</string>
     <string name="WndBag_BuySubtitle">(Je hebt %dg)</string>
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
     <string name="WndChallenges_Title">Uitdagingen</string>
@@ -449,6 +450,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 
