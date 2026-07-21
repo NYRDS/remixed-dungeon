@@ -39,7 +39,8 @@
     <string name="BurningFist_Name">brandende vuist</string>
     <string name="CagedKobold_Intro">Hé... Hé! Jij bent die avonturier, toch? Help me eens, maat, die verdomme militaristen hebben me hier opgesloten! Ze willen een oud wapen heractiveren om de mensen op het oppervlak te veroveren! Maar gezien hoe gevaarlijk het is, was ik het er niet mee eens, dus hebben ze me gewoon buiten gezet en in een kooi gesloten! Ik bid je de sleutel van de cel te vinden, en als dank zal ik je helpen waar ik kan.</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
-    <string name="Capotain_Name">Capotain</string>
+    <string name="Candy_Name">snoepje</string>
+    <string name="Capotain_Name">Puriteinse hoed</string>
     <string name="Carcass_Necromancy">Je hebt het lijk van %s opgewekt!</string>
     <string name="Caves_TileGrass">fluorescent mos</string>
     <string name="Caves_TileWater">IJskoud water</string>
@@ -58,8 +59,11 @@
     <string name="Char_StaAmok">amok</string>
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaDizzy">duizelig</string>
-    <string name="Char_StaParalysed">verlamd</string>
+    <string name="Char_StaFrightened">verschrikt</string>
+    <string name="Char_StaParalysed">gelamd</string>
+    <string name="Char_StaPoisoned">vergiftigd</string>
     <string name="Char_StaRooted">geworteld</string>
+    <string name="Char_StaStunned">versteld</string>
     <string name="Char_Stole_1">%1$s steelt %2$s van %3$s!</string>
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
     <string name="CharmSpell_Cast">%s is betoverd.</string>
@@ -108,6 +112,7 @@
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
     <string name="GasImmuneBuff_Name">Gasimmuniteit</string>
+    <string name="Ghost_Rose2">Alsjeblieft... Help me... Vind de roos...</string>
     <string name="Glaive_Name">gleve</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
@@ -356,6 +361,7 @@
     <string name="WndDonate_silverDonateText2">Ook schakelt u reclame uit in alle spelmodi en ontgrendelt u de Jageres vanaf het begin.</string>
     <string name="WndFortuneTeller_IdentifyAll">Alles</string>
     <string name="WndGame_Customizations">Aanpassingen</string>
+    <string name="WndGame_Exit">Verlaat Remixed Dungeon</string>
     <string name="WndHats_ListTitle">Lijst van accessoires</string>
     <string name="WndHero_Awareness">Aandacht</string>
     <string name="WndInfoItem_Chest">Kist</string>
@@ -444,12 +450,30 @@
     <string name="town_deco_wall_candles_desc">Uitgedoofde kaarsen, waaruit nog steeds een aangename geur uitstreelt.</string>
     <string name="town_deco_wallpaper_name">behang</string>
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
+    <string name="town_deco_window_name">Raam</string>
     <string name="town_deco_wooden_bench_name">Houten bank</string>
     <string name="town_deco_wooden_drawer_desc">Interessant wat erin bewaard zit.</string>
     <string name="town_deco_wooden_drawer_name">lade</string>
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

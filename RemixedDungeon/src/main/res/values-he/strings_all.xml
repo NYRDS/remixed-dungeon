@@ -44,12 +44,16 @@
     <string name="CagedKobold_Message1">בבקשה...</string>
     <string name="CagedKobold_Quest_End">אוי, תודה לך, תודה רבה! איך הצלחת למצוא את המפתח? אתה... אתה השמדת את הנשק?! זה מדהים! אתה יודע מה, אמרתי שאעזור לך, ואני חושב שאני יודע את הדרך הטובה ביותר. אני אשאר איתך לזמן מה. * הקובולד הכלוא הפך לנר</string>
     <string name="CandleOfMindVision_Info">נראה כמו נר רגיל, לא משהו שהיית מצפה למצוא בצינוק מסוכן. מוזר שזה די חם למגע, למרות שזה עדיין לא הודלק.</string>
+    <string name="Candy_Name">ממתק</string>
+    <string name="Capotain_Name">כובע פוריטני</string>
     <string name="Carcass_DevourMessage">טרפת גופה של %s!</string>
     <string name="Carcass_Devoured">אכלת גופה של %s!</string>
+    <string name="Carcass_Name">שרידי %s</string>
     <string name="Carcass_Necromancy">החיית את הגופה של %s!</string>
     <string name="Challenges_Descriptions_2">כמאמין בהתחדשות טבעית של הגוף הרגיל, תמיד הייתם זהירים מפני שיקויים בעלי תכונות רפואיות. עדיף להיות בטוחים מאשר להצטער!</string>
     <string name="Challenges_Descriptions_3">האדמות סביב הצינוק נגועות זה מכבר ברוע, המונע צמיחת זרעים של עשבי מרפא וצמחים שונים. מי יודע כמה זמן יעבור עד שהצמח האחרון יחדל מלהתקיים באדמות שוממות אלה.</string>
     <string name="Challenges_Descriptions_7">התרגלת לעובדה שהחזקה ושימוש בנשק אינם נכונים מבחינה מוסרית, אך מה עוד יכול להגן עלייך מפני היצורים המשוטטים למטה?</string>
+    <string name="Challenges_Names_0">דיאטה</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
     <string name="Challenges_Names_6">רונות אסורות</string>
     <string name="Challenges_Names_8">ללא עיר</string>
@@ -66,9 +70,12 @@
     <string name="CharAction_Charm">לְקַסֵּם</string>
     <string name="Char_Hit_0">%1 היכה את %2</string>
     <string name="Char_StaDodged_1">התחמק</string>
+    <string name="Char_StaFrightened">מבוהל</string>
     <string name="Char_StaMind">שכל</string>
     <string name="Char_StaParalysed">משותק</string>
-    <string name="Char_StaStunned">מהלום</string>
+    <string name="Char_StaPoisoned">מורעל</string>
+    <string name="Char_StaRooted">מושרש</string>
+    <string name="Char_StaStunned">מבולבל</string>
     <string name="Char_Stole_2">%1$s גנב את %2$s של %3$s!</string>
     <string name="CharmSpell_Name">הקסמה</string>
     <string name="ChristmasTurkey_Name">תרנגול הודו חגיגי</string>
@@ -368,12 +375,14 @@
     <string name="WndDonate_royalDonateText">אני לא רוצה להישמע מוזר, אבל בכך שאתה עושה את זה, אתה ממש מאכיל את המפתחים.</string>
     <string name="WndDonate_ruby">אודם</string>
     <string name="WndFortuneTeller_IdentifyAll">הכל</string>
+    <string name="WndGame_Exit">צא מ-Remixed Dungeon</string>
     <string name="WndHats_UnequipButton">הסר כובע</string>
     <string name="WndHero_Awareness">מודעות</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
     <string name="WndHero_Str">כוח</string>
     <string name="WndInstallingMod_skipping_file">מדלג על %s</string>
     <string name="WndItemAlchemy_Title">מתכוני אלכימיה עם %s</string>
+    <string name="WndJournal_Levels">רמות</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
     <string name="WndModInstall_Version">גרסה</string>
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
@@ -432,8 +441,22 @@
     <string name="town_deco_wall_candles_name">נרות</string>
     <string name="town_deco_wall_desc">קיר פשוט עשוי בולי עץ.</string>
     <string name="town_deco_wallpaper_name">טפט</string>
+    <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

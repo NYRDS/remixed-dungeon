@@ -62,18 +62,28 @@
     <string name="CagedKobold_Message1">من فضلك...</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
+    <string name="Candy_Name">حلوى</string>
+    <string name="Capotain_Name">قبعة بيوريتانية</string>
+    <string name="Carcass_Name">بقايا %s</string>
     <string name="Carcass_Necromancy">لقد أحيت جثة %s!</string>
     <string name="Caves_TileDescDeco">تظهر عرق من معدن ما على الجدار. ذهب؟</string>
     <string name="Caves_TileDescEntrance">يؤدي السلم إلى العمق العلوي.</string>
+    <string name="Challenges_Names_0">حمية</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">شفرة يد واحدة من الفوضى النقية. تنمو مع القتال مثل نظيرتها ذات اليدين، ولكن ببطء أكبر وإمكانات أقل — مما يترك يدك الحرة لدرع.</string>
     <string name="ChaosBlade_Name">شفرة الفوضى</string>
     <string name="ChaosCrystal_BladeFused">يمتص الكريستال سلاحك، ويتخذ شكل شفرة</string>
     <string name="ChaosStaff_Name">عصا الفوضى</string>
     <string name="CharAction_Give">إعطاء</string>
+    <string name="CharAction_PetInventory">مخزن الحيوان الأليف</string>
     <string name="CharAction_Take">التقاط</string>
     <string name="Char_OutParalysis">كسر الألم شلل %s</string>
     <string name="Char_StaBleeding">نزيف</string>
+    <string name="Char_StaFrightened">مرعوب</string>
+    <string name="Char_StaParalysed">مشلول</string>
+    <string name="Char_StaPoisoned">مسموم</string>
+    <string name="Char_StaRooted">مُثبّت</string>
+    <string name="Char_StaStunned">مذهول</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
     <string name="ChargrilledMeat_Info">يبدو وكأنه ستيك جيد.</string>
     <string name="CharmBuff_Name">مسحور</string>
@@ -397,6 +407,7 @@
     <string name="WndInfoItem_Chest">صندوق</string>
     <string name="WndInfoItem_Owner">قد يحتوي هذا القبر القديم على شيء مفيد، لكن مالكه سيعترض بالتأكيد على التفتيش.</string>
     <string name="WndItemAlchemy_SelectRecipe">اختر الوصفة</string>
+    <string name="WndJournal_Levels">المستويات</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
     <string name="WndLocalModInstall_text">اختر الدليل لتثبيت المود منه</string>
     <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \&quot;إعلان\&quot; مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
@@ -467,11 +478,28 @@
     <string name="town_deco_stone_wall_name">جدار حجري</string>
     <string name="town_deco_vat_name">حوض</string>
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+    <string name="town_deco_window_name">نافذة</string>
     <string name="town_deco_wooden_bench_desc">مقعد، مصنوع من الخشب، يبدو غير مريح للجلوس.</string>
     <string name="town_deco_wooden_bench_name">مجلس خشبي</string>
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
