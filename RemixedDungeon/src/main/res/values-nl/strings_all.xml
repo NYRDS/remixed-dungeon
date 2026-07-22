@@ -3,6 +3,9 @@
     <string name="AboutScene_Sound">Geluid:</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon door NYRDS gebaseerd op de broncode van Pixel Dungeon door Watabou.</string>
     <string name="AllowStatisticsCollectionScene_Title">Verzameling van gebruikstatistieken</string>
+    <string name="AmuletScene_Exit">Mijn taak hier is voltooid</string>
+    <string name="AmuletScene_Stay">Ik ben er nog niet klaar mee</string>
+    <string name="AmuletScene_Txt">Eindelijk houd je het in je handen, het Amulet van Yendor. Met zijn kracht kun je de wereld veroveren of vrede en voorspoed brengen of wat dan ook. In ieder geval zal je leven voor altijd veranderen en dit spel eindigt hier. Of je kunt nog even een gewone sterfelijke blijven.</string>
     <string name="ArmorKit_Name">rustingset</string>
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
@@ -252,6 +255,7 @@
     <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
+    <string name="ScarecrowNPC_Name_Objective">vogelverschrikker</string>
     <string name="Scorpio_Name">schorpioen</string>
     <string name="ScrollOfChallenge_Name">uitdagingsscrol</string>
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
@@ -399,7 +403,10 @@
     <string name="WndRanking_StaAlchemy">Gebrouwen Dranken</string>
     <string name="WndRanking_StaDuration">Spelduur</string>
     <string name="WndRanking_StaStr">Kracht</string>
+    <string name="WndSadGhostNecro_No">Nee, laat het spreken</string>
+    <string name="WndSadGhostNecro_Persuaded">De verdrietige geest is overwonnen</string>
     <string name="WndSadGhostNecro_Text">Deze geest lijkt te worstelen met zijn vloek. Het lijkt alsof hij me om iets wil vragen. Met behulp van necromantie, kon ik hem ervan overtuigen dat de vraag vervuld is. Het zal me tijd besparen. Maar is het de moeite waard?</string>
+    <string name="WndSadGhostNecro_Yes">Ja, dwing je wil op</string>
     <string name="WndSadGhost_Wepon">Geest zijn wapen</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Klik hier om deel te nemen aan het Remixed Dungeon vertaalteam</string>
     <string name="WndSettings_FpsLimit">FPS-limiet</string>
@@ -466,6 +473,17 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

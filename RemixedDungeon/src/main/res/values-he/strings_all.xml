@@ -291,6 +291,7 @@
     <string name="RubyBow_Gender">masculine</string>
     <string name="Rudolph_Name">אף אדום וקרניים</string>
     <string name="RunicSkull_Name">גולגולת רונית</string>
+    <string name="ScarecrowNPC_Name_Objective">דחליל</string>
     <string name="ScarecrowNPC_Quest_End">אוי איזו שמחה, אוי איזו התרגשות!\nעל זה תקבל פרוסת פאי מתוקה!</string>
     <string name="ScarecrowNPC_Quest_Reminder">חמש סוכריות זה כל מה שאני צריך.\nאוי, הפרס יהיה כל כך מתוק!</string>
     <string name="ScrollOfChallenge_Info1">הגליל משמיע שאגה מאתגרת המהדהדת בכל המבוך!</string>
@@ -397,9 +398,18 @@
     <string name="WndPlayGames_Use">השתמש ב-Google Play Games</string>
     <string name="WndPortal_Info_Return">הפורטל הזה יחזיר אותך לתוך הצינוק.\nהאם תרצה להשתמש בו?</string>
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
+    <string name="WndPriest_Instruction2">אם אתה זקוק לעזרה, אני יכול לספק שירותי ריפוי רק עבור %d מטבעות זהב!\nאם אתה מחפש ברכה קדושה, או, שסנטה ישמור, קוללת, אנא פגוש את הבישוף בכנסייה הצנועה שלנו.</string>
+    <string name="WndPriest_Instruction2_f">ברוכה הבאה בתי, ברוכה הבאה לכנסייה הקדושה של סנטה הגדול, אדון המעמקים!</string>
+    <string name="WndPriest_Instruction2_m">ברוך הבא בני, ברוך הבא לכנסייה הקדושה של סנטה הגדול, אדון המעמקים!</string>
+    <string name="WndPriest_Instruction_f">ברוכה הבאה בתי, ברוכה הבאה לכנסייה הקדושה של סנטה הגדול, אדון המעמקים! לצערי איני יכול לאפשר לך לעבור כרגע, כי המבנה נמצא בשיפוץ, אבל אם את זקוקה לעזרה, אני יכול לספק שירותי ריפוי ואוכל רק עבור %d מטבעות זהב!</string>
+    <string name="WndPriest_Instruction_m">ברוך הבא בני, ברוך הבא לכנסייה הקדושה של סנטה הגדול, אדון המעמקים! לצערי איני יכול לאפשר לך לעבור כרגע, כי המבנה נמצא בשיפוץ, אבל אם אתה זקוק לעזרה, אני יכול לספק שירותי ריפוי ואוכל רק עבור %d מטבעות זהב!</string>
     <string name="WndRanking_StaGold">זהב שנאסף</string>
     <string name="WndRanking_StaStr">כוח</string>
     <string name="WndResurrect_Yes">כן, אני אלחם!</string>
+    <string name="WndSadGhostNecro_No">לא, תן לזה לדבר.</string>
+    <string name="WndSadGhostNecro_Persuaded">רוח העצב נכנעה!</string>
+    <string name="WndSadGhostNecro_Text">הרוח הזו נראית נאבקת בקללה שלה. נראה שהיא רוצה לבקש ממני משהו. בעזרת נקרומנטיה, יכולתי לשכנע אותה שהבקשה מולאה. זה יחסוך לי זמן. אבל האם כדאי לעשות את זה?</string>
+    <string name="WndSadGhostNecro_Yes">כן, כפה את רצונך עליו.</string>
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
     <string name="WndSettingsInGame_GameLog">יומן משחק</string>
     <string name="WndSettings_GameplaySettings">משחקיות</string>
@@ -449,6 +459,21 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

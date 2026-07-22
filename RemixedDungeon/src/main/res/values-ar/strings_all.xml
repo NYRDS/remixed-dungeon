@@ -8,6 +8,9 @@
     <string name="AmokArrow_Info">سوف يحول المحلول الموجود على رأس هذا السهم أي شخص إلى محارب بربري لا يرحم.</string>
     <string name="AmokArrow_Name">سهم الهياج</string>
     <string name="AmokBuff_Info">اختبر نوبة الهيجان، الآخذة لأرواح البؤساء.</string>
+    <string name="AmuletScene_Exit">مهمتي هنا انتهت</string>
+    <string name="AmuletScene_Stay">لم أنتهِ بعد</string>
+    <string name="AmuletScene_Txt">أخيراً تمسكه بين يديك، تميمة يندور. باستخدام قوتها يمكنك السيطرة على العالم أو جلب السلام والازدهار للناس أو أي شيء آخر. في أي حال، ستتغير حياتك للأبد وستنتهي اللعبة هنا. أو يمكنك البقاء مجرد بشري عادي لفترة أطول قليلاً.</string>
     <string name="Amulet_Info">تعويذة ييندور هي أقوى قطعة أثرية معروفة من أصل مجهول. يُقال إنها قادرة على تحقيق أي رغبة إذا كانت إرادة صاحبها قوية بما يكفي لـ \&quot;إقناعها\&quot; بالقيام بذلك.</string>
     <string name="AnesthesiaBuff_Info">لا يشعر بالألم ولا يستيقظ من الهجمات، لكنه لا يزال يتلقى الضرر.</string>
     <string name="Anesthesia_Cast">%s يسقط في نوم عميق بلا أحلام.</string>
@@ -305,6 +308,7 @@
     <string name="ScaleArmor_Desc">تخلق القشور المعدنية المخيطة على سترة جلدية درعاً مرناً، ولكنه يوفر الحماية.</string>
     <string name="ScaleArmor_Name">درع حرشفي</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
+    <string name="ScarecrowNPC_Name_Objective">فزاعة</string>
     <string name="ScrollHolder_Info">يمكنك وضع أي عدد من اللفائف في هذه الحاوية الأنبوبية. يوفر مساحة في حقيبتك ويحمي اللفائف من النار.</string>
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
@@ -491,6 +495,11 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
 
 
 
