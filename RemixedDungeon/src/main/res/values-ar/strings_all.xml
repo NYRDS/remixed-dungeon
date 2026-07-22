@@ -364,6 +364,7 @@
     <string name="SummonDeathling_Name">استدعاء سمرتة</string>
     <string name="SungrassBuff_Name">الشفاء بالأعشاب</string>
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
+    <string name="SuspiciousRat_Info1">الفأر المشبوه يرتجف بعنف.</string>
     <string name="Swarm_Name">سرب ذباب</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Thief_Carries">\n\n%1 يحمل _%2. مسروق بالطبع.</string>
@@ -481,6 +482,8 @@
     <string name="town_deco_dungeon_door_desc">مدخل إلى الزنزانة.</string>
     <string name="town_deco_emptyboard_desc">الرف العادي لوضع الأشياء للعرض</string>
     <string name="town_deco_entrance_name">مدخل</string>
+    <string name="town_deco_firewood_desc">شيء ضروري في مثل هذه الصقيع القارس.</string>
+    <string name="town_deco_firewood_name">حطب</string>
     <string name="town_deco_flowerinthepot_desc">زهرة زينة ذات نكهة حلوة</string>
     <string name="town_deco_flowerinthepot_name">زهرة في وعاء</string>
     <string name="town_deco_library_sign_name">لافتة المكتبة</string>
@@ -505,6 +508,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 
