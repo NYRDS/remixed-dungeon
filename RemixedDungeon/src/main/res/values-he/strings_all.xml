@@ -57,6 +57,7 @@
     <string name="Challenges_Descriptions_7">התרגלת לעובדה שהחזקה ושימוש בנשק אינם נכונים מבחינה מוסרית, אך מה עוד יכול להגן עלייך מפני היצורים המשוטטים למטה?</string>
     <string name="Challenges_Names_0">דיאטה</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
+    <string name="Challenges_Names_5">אל האפלה</string>
     <string name="Challenges_Names_6">רונות אסורות</string>
     <string name="Challenges_Names_8">ללא עיר</string>
     <string name="Challenges_Names_9">אמנזיה</string>
@@ -133,6 +134,7 @@
     <string name="FreezeGlobe_Info">מקפיא את הדמות שנבחרה, ומונע ממנה לבצע כל פעולה למשך זמן קצר.</string>
     <string name="FriedFish_Name">דג מטוגן</string>
     <string name="FrostAuraBuff_Name">הילת כפור</string>
+    <string name="GameScene_Chasm">צעדיך מהדהדים ברחבי הצינוק.</string>
     <string name="GasImmuneBuff_Info">חסין לכל הגזים</string>
     <string name="GasImmuneBuff_Name">חסינות לגז</string>
     <string name="Ghost_Name_Objective">רוח</string>
@@ -247,6 +249,7 @@
     <string name="PlagueDoctorQuest_4_2_InProgress">השיגו חמישה קובולדים-קרחומאנסים מתים! גופותיהם הקפואות מחזיקות במפתח לפיענוח סודות קסמם המקפיא!</string>
     <string name="PlagueDoctorQuest_5_1_Epilogue">*הוא בוהה בשתי ה*סוקובוס*, חיוך מאושר מתפשט מתחת למסכתו.* נהדר! מופלא! זה יפתח כל כך הרבה... אפשרויות! *הוא פונה אליך, קולו סמיך מהכרת תודה... ומשהו נוסף.* המאמצים שלך... לא יישכחו. אני חייב לך את תודתי העמוקה ביותר. *מבטו מתעכב על ה*סוקובוס* לרגע ארוך מדי, לפני שהוא נסוג למעבדתו, ממלמל על גילוי סודות הפיתוי.*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*מחשבותיו נודדות כשהוא מדבר, קולו נעשה שקט יותר, בקושי לחישה.* הביא לי שתי _סוקובוסיות_… בחיים. כוחן... זה מפתה.</string>
+    <string name="PlagueDoctorQuest_5_1_Prologue">*הוא מגמגם, קולו נסדק כמו ענף שביר*. א-א-ה, _סוקוביות_! שתיים... כן, שתיים, בחיים! זה... הממ... למחקר שלי! אתה מבין... הפורומונים שלהן... זה חיוני להבנת האיזון העדין של... אה... *הוא משתתק, ידו הגרומה עולה בעצבנות לתקן את המסכה, עיניו נורות לעברך בעוצמה קדחתנית*. המהות שלהן... זה פאזל... פאזל יפה, מסתורי! *הוא משתעל באלימות, מנסה להחזיר את שלוותו*. אני מבטיח, עבור הבאת שתיים מה... היצורים האלה... תהיה לך הכרת התודה הנצחית שלי. תחשוב על זה כעל... מתנה לידע! כן! לידע!</string>
     <string name="PlagueDoctorQuest_AllDone">*הוא פולט צחוק יבש וצורמני.* \&quot;מעשיך, הם חשפו סודות מעבר לכל מידה! הידע שנרכש... הוא פועם בתוכי, סימפוניה של גילויים. אבל ידע,\&quot; הוא מוסיף, קולו צונח ללחישה קונספירטיבית, \&quot;ידע הוא כוח. וכוח... אה... זהו השיקוי המשכר ביותר.\&quot; הוא נועץ בך מבט לרגע, עיניו האמתיסטיות בוערות באינטנסיביות קדחתנית. \&quot;אולי,\&quot; הוא ממלמל, \&quot;דרכינו יצטלבו שוב. כי עדיין יש... תעלומות... רבות... שטרם נפתרו.\&quot;</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PortalGate_Desc">החריטות על פני השער יוצרות דפוס מוזר. נראה כאילו זהו מנהרה ענקית המובילה למרחק. אבל כשמסתכלים מהצד, מתברר שהפני כמעט שטוחה.</string>
@@ -432,6 +435,7 @@
     <string name="Yog_Info2">תקווה היא אשליה...</string>
     <string name="YogsBrain_Name">המוח של יוג</string>
     <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
+    <string name="YogsHeart_Name">הלב של יוג</string>
     <string name="ZombieGnoll_Info">גנול-זומבי קם מהמתים!</string>
     <string name="ZombieMask_Name">מסיכת זומבי</string>
     <string name="town_deco_armoronhanger_name">שריון</string>
@@ -465,6 +469,13 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
 
 
 

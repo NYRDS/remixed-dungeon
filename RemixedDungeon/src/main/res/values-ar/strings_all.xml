@@ -22,6 +22,7 @@
     <string name="AzuterronNPC_Name_Objective">غريباً</string>
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
     <string name="Badges_BossSlain1">تم القضاء على الغو</string>
+    <string name="Badges_DeathNecrotism">الموت من التنخر</string>
     <string name="Badges_GamesPlayed1">10 مباريات لُعبت</string>
     <string name="Badges_GamesPlayed2">تم لعب 100 لعبة</string>
     <string name="Badges_GoldColleted1">100 ذهب جُمع</string>
@@ -270,6 +271,7 @@
     <string name="PotionOfMana_Name">إكسير المانا</string>
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
     <string name="PotionOfStrength_Name">جرعة القوة</string>
+    <string name="Potion_ACMoisten">ترطيب</string>
     <string name="Potion_MoistenUseless">يبدو أنك أهدرت هذا الزيت.</string>
     <string name="Potion_Name">%s جرعة</string>
     <string name="Potion_RuneDissaperaed">اختفت الرون من %s.</string>
@@ -364,6 +366,7 @@
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
     <string name="Swarm_Name">سرب ذباب</string>
     <string name="Tengu_Gender">masculine</string>
+    <string name="Thief_Carries">\n\n%1 يحمل _%2. مسروق بالطبع.</string>
     <string name="Thief_Stole">%1$s سرق %2$s منك!</string>
     <string name="TitleScene_Badges">الشارات</string>
     <string name="TitleScene_Mods">مودز</string>
@@ -373,6 +376,7 @@
     <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
     <string name="TownGuardNPC_Message3">هل تظن أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، ذلك لأن هذه المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
     <string name="TownGuardNPC_Name">حارس المدينة</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Message">هل تعرف تلك الخدمة الخاصة التي تقدمها \&quot;المسارح السينمائية\&quot;؟ للأسف يطلبون شيئاً غريباً يسمى \&quot;الإنترنت\&quot;، لم أسمع به قط من قبل.</string>
     <string name="TownsfolkNPC_Message1">آه! مغامر آخر، يا لها من مفاجأة سارة! تأكد من نهب أكبر قدر ممكن من الأشياء الثمينة!</string>
     <string name="TownsfolkNPC_Message2">أصبحت المدينة ثرية للغاية بفضل هذا الزنزانة، حتى يستطيع الجميع في المدينة تحمل تكاليف العطلة كلما أرادوا! في الواقع هذا هو السبب في وجود عدد قليل جداً من الناس هنا الآن.</string>
@@ -422,6 +426,7 @@
     <string name="WndInfoItem_Owner">قد يحتوي هذا القبر القديم على شيء مفيد، لكن مالكه سيعترض بالتأكيد على التفتيش.</string>
     <string name="WndItemAlchemy_SelectRecipe">اختر الوصفة</string>
     <string name="WndJournal_Levels">المستويات</string>
+    <string name="WndJournal_Title">اليوميات</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
     <string name="WndLocalModInstall_text">اختر الدليل لتثبيت المود منه</string>
     <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \&quot;إعلان\&quot; مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
@@ -500,6 +505,15 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
 
 
 

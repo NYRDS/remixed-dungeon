@@ -64,6 +64,7 @@
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosCrystal_BladeFused">Vien ngoc hap thu vu khi cua ban va bien thanh hinh dang mot thanh kiem</string>
     <string name="ChaosCrystal_Fuse">DUNG HỢP</string>
+    <string name="ChaosHelmet_Info">Một chiếc mũ đỏ màu máu là biểu tượng thiết yếu của một chiến binh hỗn loạn.</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
     <string name="ChaosStaff_Name">gậy hỗn loạn</string>
     <string name="CharAction_Push">đẩy</string>
@@ -247,6 +248,7 @@
     <string name="RottenFood_Message">Ghét quá!</string>
     <string name="RottenPasty_Info">Cái pasty này trông khá ghê.</string>
     <string name="RottenRation_Name">Cơm khô hỏng</string>
+    <string name="RunicSkull_Desc">Đối với thứ gì đó được tạo ra nhân tạo, chiếc sọ này quá giống một chiếc sọ thật. Bạn cũng có thể thấy một chút ánh sáng yếu ớt bao quanh nó.</string>
     <string name="SacrificialSword_Name">kiếm hiến tế</string>
     <string name="ScarecrowNPC_Name_Objective">ngáo</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
@@ -363,6 +365,7 @@
     <string name="WndFortuneTeller_IdentifyAll">Tất cả</string>
     <string name="WndGame_Exit">Thoát Remixed Dungeon</string>
     <string name="WndGame_Ranking">Bảng xếp hạng</string>
+    <string name="WndGame_Save">Lưu</string>
     <string name="WndGame_menu">Menu chính</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
     <string name="WndHero_Awareness">Nhận thức</string>
@@ -448,6 +451,9 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
 
 
 

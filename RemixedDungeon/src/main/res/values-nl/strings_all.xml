@@ -11,6 +11,7 @@
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
     <string name="Armor_Info7b">, en omdat het vervloekt is, kun je het niet afdoen</string>
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name_Objective">vreemdeling</string>
     <string name="Backstab_Aware">Het slachtoffer mag niet op zijn hoede zijn voor een succesvolle rugstoot.</string>
     <string name="Backstab_Info">Stille slag in de rug. Oneerlijk, maar uiterst effectief, backstab schade groeit met de vaardigheid van de uitvoerder.\n\nEen geslaagde backstab negeert de pantser of speciale verdedigingsvaardigheden van het slachtoffer volledig.</string>
@@ -225,6 +226,7 @@
     <string name="PotionOfMight_Apply">Nieuwverkregen kracht stroomt door je lichaam.</string>
     <string name="PotionOfMindVision_Apply1">Je kunt op een of andere manier de aanwezigheid van andere wezens\' geesten voelen!</string>
     <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
+    <string name="PotionOfPurity_Name">Zuiveringselixer</string>
     <string name="PotionOfToxicGas_Info">Het ontdopen of verbrijzelen van deze onder druk staande glasfles zal de inhoud laten exploderen tot een dodelijke wolk van giftige groene gas. Je kunt ervoor kiezen om deze drank op verafstaande vijanden te werpen in plaats van hem met de hand te openen.</string>
     <string name="Potion_Colors_14">onyx</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
@@ -245,6 +247,7 @@
     <string name="RawFish_Name">rauwe vis</string>
     <string name="ResultDescriptions_Bleeding">Verstorven op niveau %d</string>
     <string name="ResultDescriptions_Immured">Ingemureerd in steen op niveau %d</string>
+    <string name="ResultDescriptions_Necromancy">Uitgeput van levenskracht tijdens het proberen een lijk te animeren op niveau %d</string>
     <string name="RingOfFrost_Name">Ring van de Vorst</string>
     <string name="RingOfHerbalism_Info">Deze ring vergroot je kans om dauw en zaden te verzamelen van vertrapt gras.</string>
     <string name="RingOfStoneWalking_ImmuredInStone">Je bent in steen gemetseld. Voor altijd.</string>
@@ -476,6 +479,10 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 
