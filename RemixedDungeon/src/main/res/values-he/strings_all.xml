@@ -179,6 +179,7 @@
     <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
     <string name="InterLevelScene_Loading">נטען...</string>
     <string name="InventoryScroll_No">לא, שיניתי את דעתי</string>
+    <string name="InvisibilityBuff_Info">בלתי נראה לחלוטין, מה שיכול לעזור להימנע מסכנות או להפוך לאחת.</string>
     <string name="Item_ACPickup">לקחת</string>
     <string name="JarOfSouls_Name">כד נשמות</string>
     <string name="Javelin_Name">כידון</string>
@@ -192,6 +193,7 @@
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
     <string name="Level_TileDescHighGrass">צמחייה צפופה חוסמת את המבט</string>
+    <string name="Level_TileParalyticTrap">מלכודת גז משתקת</string>
     <string name="Level_TileSummoningTrap">מלכודת זימון</string>
     <string name="Level_TileWall">קיר</string>
     <string name="Level_TileWell">באר</string>
@@ -352,6 +354,7 @@
     <string name="TownsfolkNPC_Message4">אני מקווה שהביוב לא יוצף כשהאביב יגיע. אנחנו לא צריכים עוד מכת עכברים.</string>
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message3">המממ...</string>
+    <string name="TownsfolkSilentNPC_Name">תושב העיר</string>
     <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
     <string name="ToxicGland_Name">בלוטה רעילה</string>
     <string name="Undead_Defense">נבלם</string>
@@ -403,6 +406,7 @@
     <string name="WndPriest_Instruction2_m">ברוך הבא בני, ברוך הבא לכנסייה הקדושה של סנטה הגדול, אדון המעמקים!</string>
     <string name="WndPriest_Instruction_f">ברוכה הבאה בתי, ברוכה הבאה לכנסייה הקדושה של סנטה הגדול, אדון המעמקים! לצערי איני יכול לאפשר לך לעבור כרגע, כי המבנה נמצא בשיפוץ, אבל אם את זקוקה לעזרה, אני יכול לספק שירותי ריפוי ואוכל רק עבור %d מטבעות זהב!</string>
     <string name="WndPriest_Instruction_m">ברוך הבא בני, ברוך הבא לכנסייה הקדושה של סנטה הגדול, אדון המעמקים! לצערי איני יכול לאפשר לך לעבור כרגע, כי המבנה נמצא בשיפוץ, אבל אם אתה זקוק לעזרה, אני יכול לספק שירותי ריפוי ואוכל רק עבור %d מטבעות זהב!</string>
+    <string name="WndRanking_StaChallenges">אתגרים</string>
     <string name="WndRanking_StaGold">זהב שנאסף</string>
     <string name="WndRanking_StaStr">כוח</string>
     <string name="WndResurrect_Yes">כן, אני אלחם!</string>
@@ -414,6 +418,7 @@
     <string name="WndSettingsInGame_GameLog">יומן משחק</string>
     <string name="WndSettings_GameplaySettings">משחקיות</string>
     <string name="WndSettings_Handedness">יד דומיננטית</string>
+    <string name="WndSettings_ImmersiveMode">מצב סוחף</string>
     <string name="WndSettings_Music">מוזיקה</string>
     <string name="WndSettings_Quickslots">חריצי גישה מהירה</string>
     <string name="WndSettings_SelectLanguage">בחר שפה</string>
@@ -443,6 +448,7 @@
     <string name="town_deco_glass_name">חלון רחב</string>
     <string name="town_deco_hay_desc">ערימה קטנה של שחת ריחני</string>
     <string name="town_deco_library_sign_name">שלט ספרייה</string>
+    <string name="town_deco_movies_door_name">דלת</string>
     <string name="town_deco_pathway_name">שביל</string>
     <string name="town_deco_pole_name">עמוד</string>
     <string name="town_deco_poster_desc">מודעות המכריזות על הקרנות עתידיות בקולנוע.</string>
@@ -459,6 +465,12 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 

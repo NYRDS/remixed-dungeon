@@ -119,6 +119,7 @@
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
     <string name="GameScene_WelcomeBack">Chào mừng quay lại cấp độ %d của Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Name">Miễn dịch khí gas</string>
+    <string name="Ghost_Desc">Ma gần như không thể nhìn thấy. Nó trông như một đốm ánh sáng mờ vô hình với một khuôn mặt buồn bã.</string>
     <string name="Ghost_Name">ma buồn</string>
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
@@ -157,6 +158,7 @@
     <string name="InterLevelScene_ErrorGeneric">Đã có lỗi xảy ra...</string>
     <string name="InterLevelScene_FileNotFound">Không tìm thấy tập tin. Với một số lý do...</string>
     <string name="InterLevelScene_Loading">Đang tải...</string>
+    <string name="InvisibilityBuff_Info">Hoàn toàn vô hình, có thể giúp tránh nguy hiểm hoặc trở thành nguy hiểm.</string>
     <string name="Item_Name">vật phẩm</string>
     <string name="Journal_Caged_Kobold">Kobold Bị Giam</string>
     <string name="Journal_Troll">Thợ rèn Troll</string>
@@ -294,6 +296,7 @@
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="SpiderExploding_Desc">Trong thời bình, những sinh vật này là những người làm việc chăm chỉ, nhưng chúng sẽ không ngần ngại lao vào kẻ thù và hái lấy cây đầu tiên chúng gặp phải, biến mình thành những quả bom sống.</string>
     <string name="SpiderMindAmber_Gender">masculine</string>
+    <string name="SpiderMindAmber_Name">nhện hổ phách</string>
     <string name="SpiritOfPain_Desc">Một mảnh vỡ của bóng tối sống.</string>
     <string name="Sprout_Info">Đánh thức các hạt giống ngủ.\nTuy nhiên, cần có cây cỏ trên mặt đất để phép thuật này thành công.</string>
     <string name="Sprout_Name">Mầm Non</string>
@@ -392,6 +395,7 @@
     <string name="WndSettings_Quickslots">Khe truy cập nhanh</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
     <string name="WndSettings_SelectLanguage">Chọn ngôn ngữ</string>
+    <string name="WndSettings_ZoomOut">-</string>
     <string name="WndTradeItem_Buy">Mua với %d vàng</string>
     <string name="WndTradeItem_SellAll">Bán tất cả cho %dg</string>
     <string name="WndTradeItem_SellN">Bán %1$d cho %2$dg</string>
@@ -444,6 +448,10 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
 
 
 

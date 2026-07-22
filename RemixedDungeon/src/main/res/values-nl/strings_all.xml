@@ -160,6 +160,7 @@
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
     <string name="InventoryScroll_No">Nee, ik heb mijn keuze veranderd</string>
+    <string name="InvisibilityBuff_Info">Volledig onzichtbaar, wat kan helpen gevaren te vermijden of er een te worden.</string>
     <string name="InvisibilityBuff_Name">Onzichtbaar</string>
     <string name="Item_DirThrow">Kies de richting van de worp</string>
     <string name="Item_Name">iets</string>
@@ -183,6 +184,7 @@
     <string name="MeleeWeapon_Info3a">Dit is een tamelijk %s wapen.</string>
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
     <string name="MeleeWeapon_Info6a">Vanwege je onvoldoende kracht is de nauwkeurigheid en snelheid van je aanval met dit %s verminderd.</string>
+    <string name="MeleeWeapon_Info6b">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
     <string name="MercenaryNPC_Desc">Een stevig mannetje.</string>
     <string name="MimicPie_Name">mimic</string>
     <string name="Mimic_Name">mimic</string>
@@ -401,6 +403,7 @@
     <string name="WndPremiumSettings_marble">marmer</string>
     <string name="WndPremiumSettings_ruby">robijn</string>
     <string name="WndRanking_StaAlchemy">Gebrouwen Dranken</string>
+    <string name="WndRanking_StaChallenges">Uitdagingen</string>
     <string name="WndRanking_StaDuration">Spelduur</string>
     <string name="WndRanking_StaStr">Kracht</string>
     <string name="WndSadGhostNecro_No">Nee, laat het spreken</string>
@@ -473,6 +476,9 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 
