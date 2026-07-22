@@ -211,6 +211,7 @@
     <string name="Level_TileEmptyWell">بئر فارغ</string>
     <string name="Level_TileEntrance">مدخل النزول</string>
     <string name="Level_TileFireTrap">فخ حريق</string>
+    <string name="Level_TileLockedDoor">باب مقفل</string>
     <string name="Level_TilePedestal">قاعدة</string>
     <string name="Level_TileSummoningTrap">فخ الاستدعاء</string>
     <string name="LibrarianNPC_Message_Not_Ready">أ... أعتذر، ال... المكتبة ليست مفتوحة... بعد\.</string>
@@ -490,6 +491,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

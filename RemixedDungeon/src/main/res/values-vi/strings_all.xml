@@ -315,6 +315,7 @@
     <string name="Torch_Info">Đây là một vật phẩm không thể thiếu trong Các Điện Thần Quỷ, những nơi nổi tiếng với ánh sáng môi trường kém.</string>
     <string name="TownGuardNPC_Message1">Đi tiếp nào.</string>
     <string name="TownGuardNPC_Name">bảo vệ trấn</string>
+    <string name="TownPortal_Name">Cổng Thần Thoại</string>
     <string name="TownsfolkMovieNPC_Name_Objective">người dân thành phố</string>
     <string name="TownsfolkNPC_Message1">À! Một phiêu lưu gia khác, thật tuyệt vời! Hãy chắc chắn lấy càng nhiều đồ giá trị càng tốt!</string>
     <string name="TownsfolkNPC_Message2">Thành phố đã trở nên giàu có nhờ hang động này, đến mức mọi người trong phố đều có thể đi nghỉ bất cứ khi nào họ muốn! Thực tế đó là lý do tại sao lại ít người ở đây đến vậy.</string>
@@ -329,6 +330,7 @@
     <string name="Ushanka_Info">Mũ ushanka ấm áp và êm ái, được trang trí bằng một ngôi sao đỏ sang trọng. Một người bạn đồng hành hoàn hảo cho một người đồng chí chiến đấu chống lại ngục địa tàn ác và lạnh lẽo.</string>
     <string name="VertigoBuff_Info">Cảm giác choáng váng khiến đi thẳng trở nên khó khăn!</string>
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
+    <string name="WandOfDisintegration_Info">Cây gậy này bắn ra một tia năng lượng hủy diệt, xuyên qua tất cả sinh vật trên đường đi của nó. Càng nhiều mục tiêu bị trúng, càng lớn sát thương gây ra cho từng mục tiêu.</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
@@ -441,6 +443,8 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
 
 
 

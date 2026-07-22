@@ -1,5 +1,6 @@
 <resources>
     <string name="AC_Devour">לטרוף</string>
+    <string name="AC_Dissect">נתיחה</string>
     <string name="AboutScene_Graphics">גרפיקה:</string>
     <string name="AboutScene_Sound">צליל:</string>
     <string name="AboutScene_Translation">תרגום:</string>
@@ -448,6 +449,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 
