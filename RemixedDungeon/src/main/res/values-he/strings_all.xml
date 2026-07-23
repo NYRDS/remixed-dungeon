@@ -141,6 +141,7 @@
     <string name="GasImmuneBuff_Info">חסין לכל הגזים</string>
     <string name="GasImmuneBuff_Name">חסינות לגז</string>
     <string name="Ghost_Name_Objective">רוח</string>
+    <string name="GoldenKey_Name">מפתח זהב</string>
     <string name="Golem_Name">גולם</string>
     <string name="GothicArmor_Name">שריון גותי</string>
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
@@ -149,6 +150,7 @@
     <string name="Halls_TileStatue">עמוד</string>
     <string name="Heal_Cast">%s נרפא.</string>
     <string name="HeartOfDarkness_Name">לב החושך</string>
+    <string name="Hedgehog_Info3">האם אתה אוהב תה עם ריבת פטל?</string>
     <string name="Hedgehog_Name">קיפוד</string>
     <string name="HeroClass_ElfPerks_4">אלפים מקבלים הרבה יותר בריאות מטיפות טל.</string>
     <string name="HeroClass_GnollPerks_3">גנולים לא יודעים לקרוא או לכתוב.</string>
@@ -206,6 +208,7 @@
     <string name="LibraryBook_Description">הספר העתיק הזה עצום בגודלו. הוא מכיל את כל הידע שהרפתקנים גילו והביאו מהמבוך.</string>
     <string name="Lich_DieInfo">מעולם לא אהבתי את הנקרומנסר הזה. הגיע הזמן לחזור לרמה 7 ולמצוא דרך אחרת להרפתקה החדשה.</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
+    <string name="LightningTrap_Name">מלכודת ברק</string>
     <string name="Longsword_Gender">masculine</string>
     <string name="Luck_Name_0">בן מזל %s</string>
     <string name="MageArmor_ACSpecial">אדמה מותכת</string>
@@ -224,6 +227,7 @@
     <string name="Mob_StaFleeingStatus">זה %s בורח</string>
     <string name="Mob_StaFleeingStatus2">זה %1$s בורח מ-%2$s</string>
     <string name="Mob_StaHuntingStatus">זה %s צד</string>
+    <string name="Mob_StaHuntingStatus2">זה %1$s צד את %2$s</string>
     <string name="Mods_RestartRequired">נדרש הפעלה מחדש</string>
     <string name="MoongraceBuff_Name">מָן שָׁמַיִם</string>
     <string name="Moongrace_Name">ברכת הירח</string>
@@ -276,6 +280,7 @@
     <string name="Quiver_Info">אשפת עור המתאימה להחזיק כל כמות של חיצים</string>
     <string name="RatHide_Name">עור חולדה</string>
     <string name="RatSkull_Info">זה יכול להיות גביע ציד נחמד, אבל זה מריח רע מכדי לתלות את זה על הקיר.</string>
+    <string name="Ration_Info">אין כאן שום דבר מפואר: בשר מיובש, כמה ביסקוויטים — דברים כאלה.</string>
     <string name="RawFish_Taste">דגיגי!</string>
     <string name="RegenerationBuff_Info">הפונקציה לריפוי טבעי ממומשת בצורת באף כדי להקל על הדברים.</string>
     <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
@@ -439,6 +444,7 @@
     <string name="WrnExperimental_title">אפשרויות ניסיוניות הופעלו!</string>
     <string name="Yog_Info2">תקווה היא אשליה...</string>
     <string name="YogsBrain_Name">המוח של יוג</string>
+    <string name="YogsBrain_Name_Objective">המוח של יוג</string>
     <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
     <string name="YogsHeart_Name">הלב של יוג</string>
     <string name="ZombieGnoll_Info">גנול-זומבי קם מהמתים!</string>
@@ -475,6 +481,12 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 

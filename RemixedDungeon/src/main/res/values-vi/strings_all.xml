@@ -124,6 +124,7 @@
     <string name="Ghost_Desc">Ma gần như không thể nhìn thấy. Nó trông như một đốm ánh sáng mờ vô hình với một khuôn mặt buồn bã.</string>
     <string name="Ghost_Name">ma buồn</string>
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
+    <string name="GoldenKey_Name">chìa khóa vàng</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
     <string name="Halls_TileStatue">Cột</string>
     <string name="Heal_Cast">%s đã được chữa trị.</string>
@@ -175,6 +176,8 @@
     <string name="Level_TileHighGrass">Cỏ cao</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
     <string name="Level_TileWell">Giếng</string>
+    <string name="LibrarianNPC_Name_Objective">thủ thư</string>
+    <string name="LightningTrap_Name">bẫy sét</string>
     <string name="LloidsBeacon_ACSet">ĐẶT</string>
     <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
     <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
@@ -282,6 +285,7 @@
     <string name="ServiceManNotReadyNPC_Message">Xin lỗi, nhưng tòa nhà này chưa sẵn sàng!</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
     <string name="Sewer_TileWater">nước đục</string>
+    <string name="ShadowLord_Desc">Sinh vật này được tạo thành từ sự ác độc thuần khiết và bóng tối không thể thâm nhập. Nhiều người tin rằng chính hắn là Thần Cổ xưa, khi xem xét sức mạnh của hắn. Trong khi những người khác cho rằng hắn chỉ là người gác cửa phòng của Thần Cổ.</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="Shaman_Name">thầy pháp gnoll</string>
@@ -416,6 +420,7 @@
     <string name="WrnExperimental_realtime">Chế độ thời gian thực đã được kích hoạt: đây giờ là một roguelike thời gian thực, nhấn nhanh hoặc chết.\nBạn muốn kiểm tra túi đồ?\nChúc may mắn với việc đó trong khi con cua rạch kiểm tra ruột gan bạn.</string>
     <string name="WrnExperimental_title">Các tùy chọn thực nghiệm đã được bật!</string>
     <string name="Yog_Gender">masculine</string>
+    <string name="YogsBrain_Name_Objective">não của Yog</string>
     <string name="YogsEye_Desc">Mắt của Thần Cổ, ánh nhìn toàn kiến đầy ắp căm thù vĩnh cửu. Bạn có thể cảm thấy nó nhìn thấu qua linh hồn của mình.</string>
     <string name="Zombie_Name">kẻ sống chết</string>
     <string name="town_deco_banner_desc">Một lá cờ thanh lịch vẽ các biểu tượng của quán rượu này.</string>
@@ -456,6 +461,11 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
 
 
 
