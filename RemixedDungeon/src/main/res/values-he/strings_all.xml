@@ -44,6 +44,7 @@
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
     <string name="Blacksmith_Verify6">אני לא יכול לשחזר את הפריטים האלה!</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
+    <string name="CagedKobold_Desc">קובולד, בכלוב.</string>
     <string name="CagedKobold_Message1">בבקשה...</string>
     <string name="CagedKobold_Quest_End">אוי, תודה לך, תודה רבה! איך הצלחת למצוא את המפתח? אתה... אתה השמדת את הנשק?! זה מדהים! אתה יודע מה, אמרתי שאעזור לך, ואני חושב שאני יודע את הדרך הטובה ביותר. אני אשאר איתך לזמן מה. * הקובולד הכלוא הפך לנר</string>
     <string name="CandleOfMindVision_Info">נראה כמו נר רגיל, לא משהו שהיית מצפה למצוא בצינוק מסוכן. מוזר שזה די חם למגע, למרות שזה עדיין לא הודלק.</string>
@@ -141,6 +142,8 @@
     <string name="GasImmuneBuff_Info">חסין לכל הגזים</string>
     <string name="GasImmuneBuff_Name">חסינות לגז</string>
     <string name="Ghost_Name_Objective">רוח</string>
+    <string name="Glaive_Name">גלייב</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="GoldenKey_Name">מפתח זהב</string>
     <string name="Golem_Name">גולם</string>
     <string name="GothicArmor_Name">שריון גותי</string>
@@ -482,6 +485,9 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 

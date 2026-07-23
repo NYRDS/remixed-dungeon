@@ -178,6 +178,7 @@
     <string name="HeroSubClass_NameGlad">مصارع</string>
     <string name="HeroSubClass_NameScout">كشاف</string>
     <string name="Hero_StaBurning">لقد اشتعلت בך النار!</string>
+    <string name="Hero_StaRoots">لا يمكنك التحرك!</string>
     <string name="HideInGrassSpell_NeedGrassToHide">حتى أنا لا أستطيع الاختباء في العراء</string>
     <string name="Horror_Name_1">%s مخيف</string>
     <string name="HuntressArmor_Name">رداء الصياد</string>
@@ -317,6 +318,7 @@
     <string name="ScaleArmor_Name">درع حرشفي</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name_Objective">فزاعة</string>
+    <string name="Scorpio_Desc">تتجنب هذه المخلوقات الشيطانية الشبيهة بالعنكبوت العملاقة القتال القريب بكل وسيلة، مطلقة أشواكًا مسننة مشلولة من مسافات بعيدة.</string>
     <string name="ScrollHolder_Info">يمكنك وضع أي عدد من اللفائف في هذه الحاوية الأنبوبية. يوفر مساحة في حقيبتك ويحمي اللفائف من النار.</string>
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
@@ -480,6 +482,7 @@
     <string name="town_deco_banner_desc">لافتة أنيقة تصور رموز هذه الحانة.</string>
     <string name="town_deco_barrel_wine_desc">يستخدم لتخزين مشروب ثمين مثل النبيذ.</string>
     <string name="town_deco_bell_desc">جرس كنيسة تقليدي. يبدو أن أحداً لم يقرعه منذ وقت طويل، وحتى الحبل مفقود.</string>
+    <string name="town_deco_blue_carpet_desc">سجادة زرقاء فاخرة، مزينة بنقوش بنفسجية.</string>
     <string name="town_deco_blue_carpet_name">سجادة</string>
     <string name="town_deco_book_desc">يبدو هذا الكتاب وكأن شخصًا ما تركه بإهمال هنا</string>
     <string name="town_deco_cabinet_desc">خزانة واسعة ذات أبواب ورفوف كثيرة.</string>
@@ -516,6 +519,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 

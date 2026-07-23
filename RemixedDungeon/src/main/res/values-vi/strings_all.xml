@@ -326,6 +326,7 @@
     <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="Swarm_Name">bầy ruồi</string>
+    <string name="Tamahawk_Info">Mặc dù rìu ném này không quá nặng, nhưng vẫn cần sức mạnh đáng kể để sử dụng hiệu quả.</string>
     <string name="TerrorBuff_Info">Có vẻ như ai đó rất sợ hãi.</string>
     <string name="TitleScene_Highscores">Bảng xếp hạng</string>
     <string name="TitleScene_Play">Chơi</string>
@@ -385,6 +386,7 @@
     <string name="WndJournal_Levels">Cấp độ</string>
     <string name="WndJournal_Title">Nhật Ký</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
+    <string name="WndLibrary_Levels_Btn">Hầm ngục</string>
     <string name="WndLibrary_Mobs_Btn">Quái vật</string>
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
     <string name="WndPlayGames_Connecting">Đang kết nối với Google Play Games, vui lòng chờ một chút</string>
@@ -464,6 +466,8 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
 
 
 
