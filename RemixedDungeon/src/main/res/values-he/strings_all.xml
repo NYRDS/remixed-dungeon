@@ -25,6 +25,7 @@
     <string name="Badges_ItemLvl3">הושג פריט ברמה 9</string>
     <string name="Badges_ItemLvl4">הושג פריט ברמה 12</string>
     <string name="Badges_LevelReached4">הגיע לרמה 24</string>
+    <string name="Badges_NoMonsterSlain">הושלמה רמה מבלי להרוג אף מפלצת</string>
     <string name="Badges_PotionsCooked3">9 שיקויים מבושלים</string>
     <string name="Badges_PotionsCooked5">25 שיקויים נרקחו</string>
     <string name="Badges_RareAll">כל המפלצות הנדירות הושמדו</string>
@@ -195,6 +196,7 @@
     <string name="LastLevel_TileHighGrass">פטריות גחלת</string>
     <string name="LastShopLevel_TileDescEmptySP">שטיח עבה מכסה את הרצפה.</string>
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
+    <string name="Level_HiddenPlate">לוחית לחץ נסתרת נלחצת!</string>
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
     <string name="Level_TileDescHighGrass">צמחייה צפופה חוסמת את המבט</string>
     <string name="Level_TileParalyticTrap">מלכודת גז משתקת</string>
@@ -462,6 +464,7 @@
     <string name="town_deco_red_carpet_desc">השמועה אומרת ששטיחים אדומים דומים מקשטים את אולמות המטרופולין הגמדי.</string>
     <string name="town_deco_rope_name">חבל</string>
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
+    <string name="town_deco_shieldboard_name">מגנים</string>
     <string name="town_deco_skulls_desc">גולגולות מלוטשות השייכות ליצורים מהצינוק.</string>
     <string name="town_deco_stones_desc">סתם ערימת אבנים</string>
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
@@ -584,4 +587,8 @@
 
 
 
-    </resources>
+
+
+
+
+</resources>

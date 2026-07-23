@@ -130,6 +130,7 @@
     <string name="Dungeon_Tips_5">بِكسل-مارت - كل ما تحتاجه لمغامرة ناجحة!</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
     <string name="Earthroot_Desc">عندما يلمس مخلوق جذر الأرض، تخلق جذوره نوعًا من الدروع الطبيعية حوله.</string>
+    <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Name">خنجر الجان</string>
     <string name="EncumbranceBuff_CharAct_2">هذا %s ثقيل جداً بحيث لا يمكنني استخدامه بفعالية.</string>
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
@@ -272,6 +273,7 @@
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
     <string name="PotionOfStrength_Name">جرعة القوة</string>
     <string name="Potion_ACMoisten">ترطيب</string>
+    <string name="Potion_Colors_5">ماجينتا</string>
     <string name="Potion_MoistenUseless">يبدو أنك أهدرت هذا الزيت.</string>
     <string name="Potion_Name">%s جرعة</string>
     <string name="Potion_RuneDissaperaed">اختفت الرون من %s.</string>
@@ -475,6 +477,7 @@
     <string name="town_deco_bell_desc">جرس كنيسة تقليدي. يبدو أن أحداً لم يقرعه منذ وقت طويل، وحتى الحبل مفقود.</string>
     <string name="town_deco_blue_carpet_name">سجادة</string>
     <string name="town_deco_book_desc">يبدو هذا الكتاب وكأن شخصًا ما تركه بإهمال هنا</string>
+    <string name="town_deco_cabinet_desc">خزانة واسعة ذات أبواب ورفوف كثيرة.</string>
     <string name="town_deco_canvas_name">قماش</string>
     <string name="town_deco_cinema_sign_desc">يبدو أن هناك سينما داخل هذا المبنى.</string>
     <string name="town_deco_counter_name">كونتر</string>
@@ -508,6 +511,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 

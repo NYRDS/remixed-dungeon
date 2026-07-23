@@ -42,6 +42,7 @@
     <string name="BodyArmorBuff_Name">Lichaamspantser</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
+    <string name="BurningFist_Desc">Brandende Vuist van de Oude God</string>
     <string name="BurningFist_Name">brandende vuist</string>
     <string name="CagedKobold_Intro">Hé... Hé! Jij bent die avonturier, toch? Help me eens, maat, die verdomme militaristen hebben me hier opgesloten! Ze willen een oud wapen heractiveren om de mensen op het oppervlak te veroveren! Maar gezien hoe gevaarlijk het is, was ik het er niet mee eens, dus hebben ze me gewoon buiten gezet en in een kooi gesloten! Ik bid je de sleutel van de cel te vinden, en als dank zal ik je helpen waar ik kan.</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
@@ -255,6 +256,7 @@
     <string name="RingOfHerbalism_Info">Deze ring vergroot je kans om dauw en zaden te verzamelen van vertrapt gras.</string>
     <string name="RingOfStoneWalking_ImmuredInStone">Je bent in steen gemetseld. Voor altijd.</string>
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
+    <string name="Ring_BuffKnown">Dit is een %1$s</string>
     <string name="Ring_Gems_4">amethist</string>
     <string name="Ring_Info2">Je %1$s knelt zich pijnlijk om je vinger heen</string>
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
@@ -482,6 +484,8 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

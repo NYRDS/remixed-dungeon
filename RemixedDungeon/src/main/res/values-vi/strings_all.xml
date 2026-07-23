@@ -81,6 +81,7 @@
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
     <string name="ChargrilledMeat_Name">thịt nướng than hoa</string>
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
+    <string name="Claymore_Name">Kiếm Claymore</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
@@ -166,6 +167,7 @@
     <string name="Journal_Troll">Thợ rèn Troll</string>
     <string name="King_Desc">Vua cuối cùng của người lùn nổi tiếng với sự thấu hiểu sâu sắc về quá trình sống và chết. Ngài đã thuyết phục các thành viên triều đình tham gia nghi lễ, hứa hẹn ban tặng thanh xuân vĩnh cửu. Kết cục chỉ có Ngài nhận được nó - và một quân đoàn bất tử làm phần thưởng thêm.</string>
     <string name="King_Info1">Bạn không thể giết được tôi, %s... Tôi là... bất tử...</string>
+    <string name="Knuckles_Name">cặp đấm</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Level_TileDefault">\?\?\?</string>
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
@@ -297,6 +299,7 @@
     <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
+    <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderExploding_Desc">Trong thời bình, những sinh vật này là những người làm việc chăm chỉ, nhưng chúng sẽ không ngần ngại lao vào kẻ thù và hái lấy cây đầu tiên chúng gặp phải, biến mình thành những quả bom sống.</string>
     <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">nhện hổ phách</string>
@@ -453,6 +456,9 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
 
 
 
