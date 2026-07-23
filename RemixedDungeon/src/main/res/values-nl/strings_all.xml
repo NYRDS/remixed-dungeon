@@ -159,6 +159,7 @@
     <string name="IceCaves_TileGrass">Bevroren gras.</string>
     <string name="IceKey_Info">Deze sleutel lijkt van ijs gemaakt te zijn, maar hij is net zo hard als staal.</string>
     <string name="ImpShopkeeper_Name">ambitieze duiveltje</string>
+    <string name="Imp_Golems2">Hoe gaat het met je golem-safari?</string>
     <string name="Imp_Monks1">Ben je een avonturier? Ik hou van avonturiers! Je kunt altijd op hen rekenen als er iets gedood moet worden. Heb ik gelijk? Voor een beloning, natuurlijk ;)\nIn mijn geval zijn het _monken_ die gedood moeten worden. Je ziet, ik wil hier een klein zakje beginnen, maar deze gekken kopen zelf niets en schrikken andere klanten weg. Dus alsjeblieft, dood... laten we zeggen _8 van hen_ en de beloning is van jou.</string>
     <string name="InnKeeperNPC_Name_Objective">herbergier</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
@@ -168,6 +169,7 @@
     <string name="InvisibilityBuff_Name">Onzichtbaar</string>
     <string name="Item_DirThrow">Kies de richting van de worp</string>
     <string name="Item_Name">iets</string>
+    <string name="Journal_Azuterron">Onbekende</string>
     <string name="Journal_Caged_Kobold">Kobold in een kooi</string>
     <string name="Journal_PlagueDoctorNPC">pestdokter</string>
     <string name="Journal_Statue">Geanimeerd standbeeld</string>
@@ -489,6 +491,8 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 
