@@ -1,20 +1,45 @@
 <resources>
     <string name="AC_Devour">לטרוף</string>
     <string name="AC_Dissect">נתיחה</string>
+    <string name="AC_Kick">בעיטה</string>
+    <string name="AC_Necromancy">נקרומנסיה</string>
+    <string name="Abilities_Default">יכולת ראשית</string>
+    <string name="Abilities_Elemental">כישופים יסודיים</string>
+    <string name="Abilities_Necromancy">נקרומנסיה</string>
+    <string name="AboutScene_Code">קוד:</string>
+    <string name="AboutScene_Email_Us">שלחו לנו אימייל:</string>
     <string name="AboutScene_Graphics">גרפיקה:</string>
+    <string name="AboutScene_Music">מוזיקה:</string>
+    <string name="AboutScene_OurSite">האתר שלנו:</string>
     <string name="AboutScene_Sound">צליל:</string>
     <string name="AboutScene_Translation">תרגום:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
+    <string name="Accuracy_Decreased">למה חשבתי שאני יכול להשתמש ב-%s? כלי לא נכון, ידיים לא נכונות!</string>
+    <string name="Accuracy_DecreasedDoctor">כל תנופה של ה-%s מפיצה פגימות. מסור העצמות שלי מרפא... זה מדביק.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">ידיים חשופות מזהמות את הטכניקה שלי. בלי החיתוך הנקי של המסור, המטרה שלי מתפרקת לכאוס.</string>
     <string name="Acidic_Gender">masculine</string>
     <string name="AlarmTrap_Desc">המלכודת משמיעה קול חודר שמהדהד בכל הצינוק!</string>
+    <string name="AllowStatisticsCollectionScene_Allow">אפשר</string>
+    <string name="AllowStatisticsCollectionScene_Deny">לסרב</string>
     <string name="AllowStatisticsCollectionScene_Title">איסוף סטטיסטיקות שימוש</string>
+    <string name="AmokArrow_Info">התמיסה על קצה החץ הזה תהפוך כל אחד לברברי חסר רחמים וחסר שכל.</string>
     <string name="AmokArrow_Name">חץ הטירוף</string>
+    <string name="AmokBuff_Info">חווה את הטירוף, הלוקח את חייהם של חסרי המזל.</string>
+    <string name="AmokBuff_Name">טירוף</string>
+    <string name="AmokDart_Gender">masculine</string>
+    <string name="AmokDart_Info">התמיסה על קצה החץ הזה תהפוך כל אחד לברברי חסר רחמים וחסר שכל.</string>
+    <string name="AmokDart_Name">חץ הטירוף</string>
     <string name="Amulet_Info">האמולט של ינדור הוא הארטיפקט החזק ביותר הידוע ממקור לא ידוע. נאמר שהוא יכול להגשים כל משאלה אם רצונו של הבעלים חזק מספיק כדי \&quot;לשכנע\&quot; אותו לעשות זאת.</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
     <string name="AzuterronNPC_Name_Objective">זר</string>
     <string name="BadgesScene_Title">התגים שלך</string>
+    <string name="Badges_AllBags">כל התיקים נקנו</string>
+    <string name="Badges_AllItems">כל השיקויים, המגילות, הטבעות והמטות זוהו</string>
+    <string name="Badges_AllPotions">כל השיקויים זוהו</string>
+    <string name="Badges_AllRings">כל הטבעות זוהו</string>
+    <string name="Badges_AllScrolls">כל המגילות זוהו</string>
+    <string name="Badges_AllWands">כל המטות זוהו</string>
     <string name="Badges_BossSlain1">הגווּ הובס</string>
     <string name="Badges_BossSlain3">DM-300 הובס</string>
     <string name="Badges_DeathGlyph">מוות מגליף</string>
@@ -87,6 +112,7 @@
     <string name="Chasm_Jump">האם אתה באמת רוצה לקפוץ לתהום? אתה עלול למות.</string>
     <string name="ChristmasTurkey_Name">תרנגול הודו חגיגי</string>
     <string name="City_TileDescBookshelf">שורות של ספרים בתחומים שונים ממלאות את מדף הספרים.</string>
+    <string name="City_TileDescDeco">חסרים כאן מספר אריחים.</string>
     <string name="ClassArmor_LowMana">מאנה לא מספיקה!</string>
     <string name="ClassArmor_NotEquipped">אתה צריך ללבוש את השריון הזה כדי להשתמש בכוח המיוחד שלו!</string>
     <string name="CloakBuff_Name">מוסתר</string>
@@ -485,6 +511,38 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

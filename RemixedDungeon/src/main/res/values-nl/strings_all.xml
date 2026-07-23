@@ -1,8 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <string name="AC_Devour">Verslinden</string>
+    <string name="AC_Dissect">Ontleden</string>
+    <string name="AC_Kick">Trappen</string>
+    <string name="AC_Necromancy">Necromantie</string>
+    <string name="Abilities_Default">Hoofdvermogen</string>
+    <string name="Abilities_Elemental">Elementaire toverspreuken</string>
+    <string name="Abilities_Necromancy">Necromantie</string>
+    <string name="AboutScene_Code">Code:</string>
+    <string name="AboutScene_Email_Us">E-mail ons:</string>
     <string name="AboutScene_Graphics">Grafisch:</string>
+    <string name="AboutScene_Music">Muziek:</string>
+    <string name="AboutScene_OurSite">Onze site:</string>
     <string name="AboutScene_Sound">Geluid:</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon door NYRDS gebaseerd op de broncode van Pixel Dungeon door Watabou.</string>
+    <string name="Accuracy_Decreased">Waarom dacht ik dat ik dit %s kon gebruiken? Verkeerd gereedschap, verkeerde handen!</string>
+    <string name="Accuracy_DecreasedDoctor">Elke slag met deze %s verspreidt onvolkomenheden. Mijn botenzaag geneest... dit besmet.</string>
+    <string name="AllowStatisticsCollectionScene_Allow">Toestaan</string>
+    <string name="AllowStatisticsCollectionScene_Deny">Weigeren</string>
     <string name="AllowStatisticsCollectionScene_Title">Verzameling van gebruikstatistieken</string>
+    <string name="AmokArrow_Info">De oplossing op de punt van deze pijl zal iedereen veranderen in een gedachtenloze, genadeloze berzerker.</string>
+    <string name="AmokArrow_Name">Amok-pijl</string>
+    <string name="AmokBuff_Info">Voel de amok, die het leven neemt van de ongelukkigen.</string>
+    <string name="AmokBuff_Name">Amok</string>
+    <string name="AmokDart_Gender">masculine</string>
+    <string name="AmokDart_Info">De oplossing op de punt van deze dart zal iedereen veranderen in een gedachtenloze, genadeloze berzerker.</string>
+    <string name="AmokDart_Name">Amok-dart</string>
     <string name="AmuletScene_Exit">Mijn taak hier is voltooid</string>
     <string name="AmuletScene_Stay">Ik ben er nog niet klaar mee</string>
     <string name="AmuletScene_Txt">Eindelijk houd je het in je handen, het Amulet van Yendor. Met zijn kracht kun je de wereld veroveren of vrede en voorspoed brengen of wat dan ook. In ieder geval zal je leven voor altijd veranderen en dit spel eindigt hier. Of je kunt nog even een gewone sterfelijke blijven.</string>
@@ -15,6 +38,12 @@
     <string name="AzuterronNPC_Name_Objective">vreemdeling</string>
     <string name="Backstab_Aware">Het slachtoffer mag niet op zijn hoede zijn voor een succesvolle rugstoot.</string>
     <string name="Backstab_Info">Stille slag in de rug. Oneerlijk, maar uiterst effectief, backstab schade groeit met de vaardigheid van de uitvoerder.\n\nEen geslaagde backstab negeert de pantser of speciale verdedigingsvaardigheden van het slachtoffer volledig.</string>
+    <string name="BadgesScene_Title">Je insignes</string>
+    <string name="Badges_AllBags">Alle tassen gekocht</string>
+    <string name="Badges_AllItems">Alle drankjes, scrolls, ringen &amp;amp; staven geïdentificeerd</string>
+    <string name="Badges_AllPotions">Alle drankjes geïdentificeerd</string>
+    <string name="Badges_AllRings">Alle ringen geïdentificeerd</string>
+    <string name="Badges_AllScrolls">Alle scrolls geïdentificeerd</string>
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
     <string name="Badges_BossSlain1">De Goo is gedood</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
@@ -76,6 +105,7 @@
     <string name="CharmSpell_Cast">%s is betoverd.</string>
     <string name="ChristmasTurkey_Name">festelijke kalkoen</string>
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
+    <string name="City_TileDescDeco">Er missen hier verschillende tegels.</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
@@ -210,7 +240,7 @@
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
-    <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
+    <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \"Necrotism\" vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="Necromancy_Title">Necromantie</string>
@@ -307,7 +337,7 @@
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
-    <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
+    <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \"%1$s\" spreuk ontdekt.\n\" %2$s \"</string>
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
     <string name="SpiderExploding_Desc">Harde werkers tijdens vredige tijden, deze wezens zullen niet aarzelen om hun vijanden aan te vallen en de eerste plant die ze tegenkomen te grijpen, waardoor ze zichzelf in lopende bommen veranderen.</string>
     <string name="SpiderMindAmber_Name">Amber Spinnewijs</string>
@@ -492,6 +522,41 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

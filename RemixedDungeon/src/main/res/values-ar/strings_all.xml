@@ -1,13 +1,33 @@
 <resources>
+    <string name="AC_Devour">التهام</string>
+    <string name="AC_Dissect">تشريح</string>
+    <string name="AC_Kick">ركل</string>
+    <string name="AC_Necromancy">التنجيم الميت</string>
     <string name="Abilities_Common">التعاويذ الشائعة</string>
+    <string name="Abilities_Default">القدرة الرئيسية</string>
+    <string name="Abilities_Elemental">التعاويذ العنصرية</string>
+    <string name="Abilities_Necromancy">التنجيم الميت</string>
+    <string name="AboutScene_Code">الكود:</string>
+    <string name="AboutScene_Email_Us">راسلنا:</string>
+    <string name="AboutScene_Graphics">الرسومات:</string>
+    <string name="AboutScene_Music">الموسيقى:</string>
+    <string name="AboutScene_OurSite">موقعنا:</string>
     <string name="AboutScene_Sound">الصوت:</string>
+    <string name="Accuracy_Decreased">لماذا ظننت أنني أستطيع استخدام %s؟ أداة خاطئة، أيدي خاطئة!</string>
+    <string name="Accuracy_DecreasedDoctor">كل ضربة من هذا %s تنشر العيوب. منشار عظامي يشفي... هذا يصيب بعدوى.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">يداي العاريتان تفسدان تقنيتي. بدون قطع المنشار النظيف، تتحول دقتي إلى فوضى.</string>
     <string name="Acidic_Name_Objective">العقرب الحمضي</string>
     <string name="Albino_Desc">فئران الجراب عدوانية، لكنها ضعيفة نسبياً في المجاري. يمكن أن تكون خطرة فقط بأعداد كبيرة. يبدو أن هذا الفأر مهق (ألبينو). كما أن لديه أسناناً حادة بشكل غير طبيعي.</string>
+    <string name="AllowStatisticsCollectionScene_Allow">السماح</string>
+    <string name="AllowStatisticsCollectionScene_Deny">رفض</string>
     <string name="AllowStatisticsCollectionScene_Title">جمع إحصائيات الاستخدام</string>
-    <string name="AmokArrow_Info">سوف يحول المحلول الموجود على رأس هذا السهم أي شخص إلى محارب بربري لا يرحم.</string>
+    <string name="AmokArrow_Info">الحل الموجود على رأس هذا السهم سيحول أي شخص إلى محارب بربري لا يرحم.</string>
     <string name="AmokArrow_Name">سهم الهياج</string>
-    <string name="AmokBuff_Info">اختبر نوبة الهيجان، الآخذة لأرواح البؤساء.</string>
+    <string name="AmokBuff_Info">اختبر نوبة الهياج، الآخذة لأرواح البؤساء.</string>
+    <string name="AmokBuff_Name">هياج</string>
+    <string name="AmokDart_Gender">masculine</string>
+    <string name="AmokDart_Info">الحل الموجود على رأس هذا السهم سيحول أي شخص إلى محارب بربري لا يرحم.</string>
+    <string name="AmokDart_Name">سهم الهياج</string>
     <string name="AmuletScene_Exit">مهمتي هنا انتهت</string>
     <string name="AmuletScene_Stay">لم أنتهِ بعد</string>
     <string name="AmuletScene_Txt">أخيراً تمسكه بين يديك، تميمة يندور. باستخدام قوتها يمكنك السيطرة على العالم أو جلب السلام والازدهار للناس أو أي شيء آخر. في أي حال، ستتغير حياتك للأبد وستنتهي اللعبة هنا. أو يمكنك البقاء مجرد بشري عادي لفترة أطول قليلاً.</string>
@@ -20,7 +40,13 @@
     <string name="Armor_Info3">\n\nنظراً لأن قوتك غير كافية، فإن ارتداء هذه الدروع سيقلل من سرعة حركتك ومهاراتك الدفاعية.</string>
     <string name="Armor_Info6">عليه نقوش</string>
     <string name="AzuterronNPC_Name_Objective">غريباً</string>
+    <string name="BadgesScene_Title">شاراتك</string>
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
+    <string name="Badges_AllItems">تم التعرف على جميع الجرعات، اللفائف، الخواتم والعصي</string>
+    <string name="Badges_AllPotions">تم التعرف على جميع الجرعات</string>
+    <string name="Badges_AllRings">تم التعرف على جميع الخواتم</string>
+    <string name="Badges_AllScrolls">تم التعرف على جميع اللفائف</string>
+    <string name="Badges_AllWands">تم التعرف على جميع العصي</string>
     <string name="Badges_BossSlain1">تم القضاء على الغو</string>
     <string name="Badges_DeathNecrotism">الموت من التنخر</string>
     <string name="Badges_GamesPlayed1">10 مباريات لُعبت</string>
@@ -96,6 +122,7 @@
     <string name="CharmBuff_Name">مسحور</string>
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
     <string name="ChristmasTurkey_Name">ديك رومي احتفالي</string>
+    <string name="City_TileDescDeco">يفتقر هذا المكان لعدة بلاط.</string>
     <string name="Codex_Story_16">سلاح محظوظ - يتجاهل درع العدو تقريباً بالكامل، ويسبب ضرراً أكبر بكثير.</string>
     <string name="Codex_Story_23">هذا الكتاب مكتوب بلغة الأقزام</string>
     <string name="Codex_Story_9">غليف الإزاحة - كلما تعرض البطل للضرب، هناك فرصة أن يتم نقله إلى بلاطة عشوائية مرئية. لا يعمل هذا الغليف في مستويات الزعماء.</string>
@@ -519,6 +546,38 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

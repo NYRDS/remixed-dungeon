@@ -1,9 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
+    <string name="AC_Devour">Nuốt chửng</string>
+    <string name="AC_Dissect">Phẫu thuật</string>
+    <string name="AC_Kick">Đá</string>
+    <string name="AC_Necromancy">Hồi sinh tử thi</string>
+    <string name="Abilities_Default">Năng lực chính</string>
+    <string name="Abilities_Elemental">Phép thuật nguyên tố</string>
+    <string name="Abilities_Necromancy">Hồi sinh thuật</string>
+    <string name="AboutScene_Code">Mã:</string>
     <string name="AboutScene_Email_Us">Gửi email cho chúng tôi:</string>
+    <string name="AboutScene_Graphics">Đồ họa:</string>
+    <string name="AboutScene_Music">Nhạc:</string>
+    <string name="AboutScene_OurSite">Trang web của chúng tôi:</string>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
+    <string name="Accuracy_Decreased">Tại sao tôi nghĩ mình có thể dùng %s? Cụm sai, tay sai!</string>
+    <string name="Accuracy_DecreasedDoctor">Mỗi lần gióg %s này lan truyền sự không hoàn hảo. Cây cưa xương của tôi chữa lành... cái này gây nhiễm.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Tay trần làm nhiễm bẩn kỹ thuật. Không có đường cắt sạch của Rọc, sự ngắm bắn của tôi trở nên hỗn loạn.</string>
+    <string name="AllowStatisticsCollectionScene_Allow">Cho phép</string>
+    <string name="AllowStatisticsCollectionScene_Deny">Từ chối</string>
     <string name="AllowStatisticsCollectionScene_Title">Thu thập thống kê sử dụng</string>
-    <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \&quot;thuyết phục\&quot; nó làm như vậy.</string>
+    <string name="AmokArrow_Info">Dung dịch trên mũi mũi tên này sẽ biến bất kỳ ai thành một kẻ điên cuồng tàn bạo không trí tuệ.</string>
+    <string name="AmokArrow_Name">Mũi tên Amok</string>
+    <string name="AmokBuff_Info">Cảm nhận sự điên cuồng, cướp đi sinh mạng của những kẻ bất hạnh.</string>
+    <string name="AmokBuff_Name">Amok</string>
+    <string name="AmokDart_Gender">masculine</string>
+    <string name="AmokDart_Info">Dung dịch trên mũi tên này sẽ biến bất kỳ ai thành một kẻ điên cuồng tàn bạo không trí tuệ.</string>
+    <string name="AmokDart_Name">Đũa Amok</string>
+    <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \"thuyết phục\" nó làm như vậy.</string>
     <string name="Amulet_Name">Bùa Yendor</string>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
     <string name="Armor_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
@@ -11,8 +34,13 @@
     <string name="AzuterronNPC_Name_Objective">người lạ</string>
     <string name="AzuterronNPC_Quest_End">Tuyệt vời. Đây, uống bình thuốc này đi, chắc chắn nó sẽ có ích cho bạn.</string>
     <string name="AzuterronNPC_Quest_Reminder">Giúp tôi và tôi sẽ giúp bạn.</string>
-    <string name="Badges_AllPotions">Tất cả thuốc đã được nhận dạng</string>
-    <string name="Badges_AllRings">Đã nhận diện tất cả nhẫn</string>
+    <string name="BadgesScene_Title">Huy hiệu của bạn</string>
+    <string name="Badges_AllBags">Đã mua tất cả túi</string>
+    <string name="Badges_AllItems">Đã nhận dạng tất cả thuốc, cuốn, nhẫn &amp;amp; gậy</string>
+    <string name="Badges_AllPotions">Đã nhận dạng tất cả thuốc</string>
+    <string name="Badges_AllRings">Đã nhận dạng tất cả nhẫn</string>
+    <string name="Badges_AllScrolls">Đã nhận dạng tất cả cuốn</string>
+    <string name="Badges_AllWands">Đã nhận dạng tất cả gậy</string>
     <string name="Badges_BossSlain1">Goo đã bị tiêu diệt</string>
     <string name="Badges_DeathFalling">Tử vong do rơi xuống</string>
     <string name="Badges_DeathGlyph">Chết vì glyph</string>
@@ -58,7 +86,7 @@
     <string name="Caves_TileDescHighGrass">Nấm khổng lồ chắn tầm nhìn.</string>
     <string name="Challenges_Names_1">Niềm tin là giáp trụ của tôi</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
-    <string name="ChampionOfFireBuff_Info">\&quot;Được thâu nhục bởi cơn giận của ngọn lửa, đặc tính này khuếch đại sự dữ dằn và khả năng chiến đấu của sinh vật. Võ sĩ Lửa nổi lên như một đối thủ đáng sợ, tung ra những đòn tấn công tàn khốc có thể bao quanh kẻ thù trong ngọn lửa thiêu rực, khiến tất cả những kẻ dám chống đối đều run rợn.\&quot;</string>
+    <string name="ChampionOfFireBuff_Info">\"Được thâu nhục bởi cơn giận của ngọn lửa, đặc tính này khuếch đại sự dữ dằn và khả năng chiến đấu của sinh vật. Võ sĩ Lửa nổi lên như một đối thủ đáng sợ, tung ra những đòn tấn công tàn khốc có thể bao quanh kẻ thù trong ngọn lửa thiêu rực, khiến tất cả những kẻ dám chống đối đều run rợn.\"</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">Mot thanh kiem mot tay cua hon loan than khiet. No phat trien trong chien dau nhu nguoi anh em hai tay cua no, nhung cham hon va tiem nang nho hon — de tay con lai tu do cho khiên.</string>
     <string name="ChaosBlade_Name">kiem hon loan</string>
@@ -82,6 +110,7 @@
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
     <string name="ChargrilledMeat_Name">thịt nướng than hoa</string>
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
+    <string name="City_TileDescDeco">Ở đây thiếu một vài viên gạch.</string>
     <string name="Claymore_Name">Kiếm Claymore</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
@@ -113,7 +142,7 @@
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">đầu lâu nổ</string>
     <string name="ExplodingSkull_Name_Objective">đầu lâu nổ</string>
-    <string name="Eye_Desc">Một trong những cái tên khác của quỷ này là \&quot;cầu bóng căm thù\&quot;, vì khi thấy kẻ thù, nó sử dụng cái nhìn tử thần một cách liều lĩnh, thường bỏ qua đồng minh và làm bị thương họ.</string>
+    <string name="Eye_Desc">Một trong những cái tên khác của quỷ này là \"cầu bóng căm thù\", vì khi thấy kẻ thù, nó sử dụng cái nhìn tử thần một cách liều lĩnh, thường bỏ qua đồng minh và làm bị thương họ.</string>
     <string name="Facilitations_Names_1">Cơ thể khỉ lợn</string>
     <string name="FetidRat_Gender">feminine</string>
     <string name="Fez_Name">Mũ Fez</string>
@@ -205,7 +234,7 @@
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
     <string name="MysteryMeat_Message">Món ăn này có vị... lạ.</string>
     <string name="NecromancerArmor_Info">Bộ giáp này cho phép Pháp sư Hắc huyết triệu hồi tối đa hai Deathling, mỗi thứ tốn 5 linh hồn. Những tôi tớ bất tử này sẽ theo chủ và tấn công kẻ thù. Deathling sẽ trở nên mạnh hơn theo cấp độ anh hùng.</string>
-    <string name="NecromancerArmor_Info2">Mặc bộ giáp này cho phép pháp sư tử thi sử dụng khả năng \&quot;Necrotism\&quot;, lan truyền một dịch hạch phép thuật có thể lây nhiễm bất kỳ sinh vật nào trong khu vực, sống hoặc chết.</string>
+    <string name="NecromancerArmor_Info2">Mặc bộ giáp này cho phép pháp sư tử thi sử dụng khả năng \"Necrotism\", lan truyền một dịch hạch phép thuật có thể lây nhiễm bất kỳ sinh vật nào trong khu vực, sống hoặc chết.</string>
     <string name="NecromancerArmor_Name">Áo giáp xương</string>
     <string name="NecromancerNPC_Intro">À! Thật một cảnh hiếm! Một người bạn đồng hành phiêu lưu không chỉ là một xác chết. Hầu như không thể tin được! Ô... Xin lỗi, đôi khi tôi quá hào hứng. Bạn thấy, tôi là một pháp sư chết chóc. Và dù nghiên cứu xác chết và chính cái chết là nghề nghiệp của tôi, nhưng nhìn thấy những điều giống nhau lặp đi lặp lại cuối cùng cũng cực kỳ mệt mỏi. Mặt khác, đó chính là lý do tôi ở đây. Theo tính toán của tôi, chỉ trong vài tuần nữa, ở đâu đó trong hầm ngục này, sẽ xảy ra một chuyện kỳ diệu. _Necropolis_, một thành phố cổ của người chết sẽ mở cửa. Và... tôi không thể nói thêm, tôi đã lãng phí đủ thời gian. Tôi cần chuẩn bị, _hãy quay lại sau_.</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: giới hạn triệu hồi đã đạt đến (Hiện tại tối đa: %d)!</string>
@@ -303,7 +332,7 @@
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
     <string name="Snail_Desc">Con ốc sên nhỏ này đã lớn khá nhanh nhờ ăn rác thải, nhưng nó vẫn rất chậm, khiến nó trở thành kẻ địch dễ dàng.</string>
     <string name="SoulShard_Info">Đây là một mảnh vỡ lấy từ tàn tích của Hũ Linh Hồn. Nó lấp lánh với sức mạnh bí ẩn, có lẽ có ai đó quan tâm đến thứ như thế này.</string>
-    <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
+    <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \"%1$s\".\n\" %2$s \"</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="SpiderEgg_Gender">neuter</string>
@@ -437,7 +466,7 @@
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
-    <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \&quot;Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\&quot;.</string>
+    <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \"Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\".</string>
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
     <string name="town_deco_dungeon_door_desc">lối vào hang động.</string>
     <string name="town_deco_dungeon_door_name">cửa hang</string>
@@ -466,6 +495,40 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
