@@ -401,6 +401,7 @@
     <string name="WndHero_Awareness">מודעות</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
     <string name="WndHero_Str">כוח</string>
+    <string name="WndInfoItem_NeedKey">אבל כדי לפתוח אותו תצטרך מפתח זהב.</string>
     <string name="WndInstallingMod_skipping_file">מדלג על %s</string>
     <string name="WndItemAlchemy_Title">מתכוני אלכימיה עם %s</string>
     <string name="WndJournal_Levels">רמות</string>
@@ -481,6 +482,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

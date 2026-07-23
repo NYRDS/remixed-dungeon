@@ -280,6 +280,7 @@
     <string name="Scroll_Runes_14">ALGIZ</string>
     <string name="Scroll_Runes_15">DAGAZ</string>
     <string name="Scroll_Runes_2">LAGUZ</string>
+    <string name="Senior_Name_Objective">seniore monnik</string>
     <string name="ServantNPC_Desc">Een heel drukke herbergbediende.</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">herbergbediende</string>
@@ -491,6 +492,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 
