@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Nuốt chửng</string>
     <string name="AC_Dissect">Phẫu thuật</string>
@@ -26,7 +25,7 @@
     <string name="AmokDart_Gender">masculine</string>
     <string name="AmokDart_Info">Dung dịch trên mũi tên này sẽ biến bất kỳ ai thành một kẻ điên cuồng tàn bạo không trí tuệ.</string>
     <string name="AmokDart_Name">Đũa Amok</string>
-    <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \"thuyết phục\" nó làm như vậy.</string>
+    <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \&quot;thuyết phục\&quot; nó làm như vậy.</string>
     <string name="Amulet_Name">Bùa Yendor</string>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
     <string name="Armor_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
@@ -86,7 +85,7 @@
     <string name="Caves_TileDescHighGrass">Nấm khổng lồ chắn tầm nhìn.</string>
     <string name="Challenges_Names_1">Niềm tin là giáp trụ của tôi</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
-    <string name="ChampionOfFireBuff_Info">\"Được thâu nhục bởi cơn giận của ngọn lửa, đặc tính này khuếch đại sự dữ dằn và khả năng chiến đấu của sinh vật. Võ sĩ Lửa nổi lên như một đối thủ đáng sợ, tung ra những đòn tấn công tàn khốc có thể bao quanh kẻ thù trong ngọn lửa thiêu rực, khiến tất cả những kẻ dám chống đối đều run rợn.\"</string>
+    <string name="ChampionOfFireBuff_Info">\&quot;Được thâu nhục bởi cơn giận của ngọn lửa, đặc tính này khuếch đại sự dữ dằn và khả năng chiến đấu của sinh vật. Võ sĩ Lửa nổi lên như một đối thủ đáng sợ, tung ra những đòn tấn công tàn khốc có thể bao quanh kẻ thù trong ngọn lửa thiêu rực, khiến tất cả những kẻ dám chống đối đều run rợn.\&quot;</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">Mot thanh kiem mot tay cua hon loan than khiet. No phat trien trong chien dau nhu nguoi anh em hai tay cua no, nhung cham hon va tiem nang nho hon — de tay con lai tu do cho khiên.</string>
     <string name="ChaosBlade_Name">kiem hon loan</string>
@@ -142,9 +141,12 @@
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">đầu lâu nổ</string>
     <string name="ExplodingSkull_Name_Objective">đầu lâu nổ</string>
-    <string name="Eye_Desc">Một trong những cái tên khác của quỷ này là \"cầu bóng căm thù\", vì khi thấy kẻ thù, nó sử dụng cái nhìn tử thần một cách liều lĩnh, thường bỏ qua đồng minh và làm bị thương họ.</string>
+    <string name="Eye_Desc">Một trong những cái tên khác của quỷ này là \&quot;cầu bóng căm thù\&quot;, vì khi thấy kẻ thù, nó sử dụng cái nhìn tử thần một cách liều lĩnh, thường bỏ qua đồng minh và làm bị thương họ.</string>
     <string name="Facilitations_Names_1">Cơ thể khỉ lợn</string>
+    <string name="FetidRat_Desc">Loài chuột túi này lớn hơn nhiều so với chuột thường. Nó bị bao quanh bởi một đám mây hôi thối.</string>
     <string name="FetidRat_Gender">feminine</string>
+    <string name="FetidRat_Name">chuột hôi</string>
+    <string name="FetidRat_Name_Objective">chuột hôi</string>
     <string name="Fez_Name">Mũ Fez</string>
     <string name="Fire_Name_1">Đang cháy %s</string>
     <string name="Firebloom_Name">Hoa Lửa</string>
@@ -153,6 +155,7 @@
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
     <string name="GameScene_WelcomeBack">Chào mừng quay lại cấp độ %d của Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Name">Miễn dịch khí gas</string>
+    <string name="Ghost_Defense">né tránh</string>
     <string name="Ghost_Desc">Ma gần như không thể nhìn thấy. Nó trông như một đốm ánh sáng mờ vô hình với một khuôn mặt buồn bã.</string>
     <string name="Ghost_Name">ma buồn</string>
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
@@ -234,7 +237,7 @@
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
     <string name="MysteryMeat_Message">Món ăn này có vị... lạ.</string>
     <string name="NecromancerArmor_Info">Bộ giáp này cho phép Pháp sư Hắc huyết triệu hồi tối đa hai Deathling, mỗi thứ tốn 5 linh hồn. Những tôi tớ bất tử này sẽ theo chủ và tấn công kẻ thù. Deathling sẽ trở nên mạnh hơn theo cấp độ anh hùng.</string>
-    <string name="NecromancerArmor_Info2">Mặc bộ giáp này cho phép pháp sư tử thi sử dụng khả năng \"Necrotism\", lan truyền một dịch hạch phép thuật có thể lây nhiễm bất kỳ sinh vật nào trong khu vực, sống hoặc chết.</string>
+    <string name="NecromancerArmor_Info2">Mặc bộ giáp này cho phép pháp sư tử thi sử dụng khả năng \&quot;Necrotism\&quot;, lan truyền một dịch hạch phép thuật có thể lây nhiễm bất kỳ sinh vật nào trong khu vực, sống hoặc chết.</string>
     <string name="NecromancerArmor_Name">Áo giáp xương</string>
     <string name="NecromancerNPC_Intro">À! Thật một cảnh hiếm! Một người bạn đồng hành phiêu lưu không chỉ là một xác chết. Hầu như không thể tin được! Ô... Xin lỗi, đôi khi tôi quá hào hứng. Bạn thấy, tôi là một pháp sư chết chóc. Và dù nghiên cứu xác chết và chính cái chết là nghề nghiệp của tôi, nhưng nhìn thấy những điều giống nhau lặp đi lặp lại cuối cùng cũng cực kỳ mệt mỏi. Mặt khác, đó chính là lý do tôi ở đây. Theo tính toán của tôi, chỉ trong vài tuần nữa, ở đâu đó trong hầm ngục này, sẽ xảy ra một chuyện kỳ diệu. _Necropolis_, một thành phố cổ của người chết sẽ mở cửa. Và... tôi không thể nói thêm, tôi đã lãng phí đủ thời gian. Tôi cần chuẩn bị, _hãy quay lại sau_.</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: giới hạn triệu hồi đã đạt đến (Hiện tại tối đa: %d)!</string>
@@ -332,7 +335,7 @@
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
     <string name="Snail_Desc">Con ốc sên nhỏ này đã lớn khá nhanh nhờ ăn rác thải, nhưng nó vẫn rất chậm, khiến nó trở thành kẻ địch dễ dàng.</string>
     <string name="SoulShard_Info">Đây là một mảnh vỡ lấy từ tàn tích của Hũ Linh Hồn. Nó lấp lánh với sức mạnh bí ẩn, có lẽ có ai đó quan tâm đến thứ như thế này.</string>
-    <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \"%1$s\".\n\" %2$s \"</string>
+    <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="SpiderEgg_Gender">neuter</string>
@@ -356,6 +359,7 @@
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="Swarm_Name">bầy ruồi</string>
     <string name="Tamahawk_Info">Mặc dù rìu ném này không quá nặng, nhưng vẫn cần sức mạnh đáng kể để sử dụng hiệu quả.</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="TerrorBuff_Info">Có vẻ như ai đó rất sợ hãi.</string>
     <string name="TitleScene_Highscores">Bảng xếp hạng</string>
     <string name="TitleScene_Play">Chơi</string>
@@ -466,7 +470,7 @@
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
-    <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \"Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\".</string>
+    <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \&quot;Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\&quot;.</string>
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
     <string name="town_deco_dungeon_door_desc">lối vào hang động.</string>
     <string name="town_deco_dungeon_door_name">cửa hang</string>
@@ -495,6 +499,11 @@
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
 
 
 

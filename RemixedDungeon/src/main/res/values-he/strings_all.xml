@@ -30,6 +30,7 @@
     <string name="AmokDart_Info">התמיסה על קצה החץ הזה תהפוך כל אחד לברברי חסר רחמים וחסר שכל.</string>
     <string name="AmokDart_Name">חץ הטירוף</string>
     <string name="Amulet_Info">האמולט של ינדור הוא הארטיפקט החזק ביותר הידוע ממקור לא ידוע. נאמר שהוא יכול להגשים כל משאלה אם רצונו של הבעלים חזק מספיק כדי \&quot;לשכנע\&quot; אותו לעשות זאת.</string>
+    <string name="ArmorKit_Name">ערכת שריון</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
     <string name="AzuterronNPC_Name_Objective">זר</string>
@@ -167,6 +168,7 @@
     <string name="GameScene_Chasm">צעדיך מהדהדים ברחבי הצינוק.</string>
     <string name="GasImmuneBuff_Info">חסין לכל הגזים</string>
     <string name="GasImmuneBuff_Name">חסינות לגז</string>
+    <string name="Ghost_Defense">התחמק</string>
     <string name="Ghost_Name_Objective">רוח</string>
     <string name="Glaive_Name">גלייב</string>
     <string name="Gnoll_Gender">masculine</string>
@@ -383,6 +385,7 @@
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
     <string name="Swarm_Name">נחיל זבובים</string>
     <string name="TenguLiver_Name">כבד טנגו</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="TitleScene_Highscores">ציונים גבוהים</string>
     <string name="TitleScene_Play">שחק</string>
     <string name="TomeOfKnowledge_Name">ספר הידע</string>
@@ -511,6 +514,9 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 

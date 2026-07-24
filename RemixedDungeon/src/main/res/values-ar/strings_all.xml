@@ -175,6 +175,7 @@
     <string name="GameScene_Grass">رائحة النباتات تفوح في الهواء.</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="GasImmuneBuff_Name">مناعة الغاز</string>
+    <string name="Ghost_Defense">تهرب</string>
     <string name="Ghost_Rose1">مرحباً أيها المغامر... يوماً ما كنت مثلك - قوياً واثقاً... والآن أنا ميت... لكنني لا أستطيع مغادرة هذا المكان... ليس قبل أن أستعيد _الوردة المجففة_ الخاصة بي... إنها مهمة جداً لي... سرقها مني وحش ما من جثتي...</string>
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
     <string name="Gnoll_BecomeGuardianDesc">أن تصبح حارساً</string>
@@ -303,6 +304,7 @@
     <string name="PotionOfStrength_Name">جرعة القوة</string>
     <string name="Potion_ACMoisten">ترطيب</string>
     <string name="Potion_Colors_5">ماجينتا</string>
+    <string name="Potion_ItemFliesAway">%s طار بعيداً من يديك.</string>
     <string name="Potion_MoistenUseless">يبدو أنك أهدرت هذا الزيت.</string>
     <string name="Potion_Name">%s جرعة</string>
     <string name="Potion_RuneDissaperaed">اختفت الرون من %s.</string>
@@ -546,6 +548,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

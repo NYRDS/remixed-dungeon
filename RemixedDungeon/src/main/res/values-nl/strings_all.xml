@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Verslinden</string>
     <string name="AC_Dissect">Ontleden</string>
@@ -51,12 +50,20 @@
     <string name="Badges_GoldColleted4">7500 goud verzameld</string>
     <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
     <string name="Badges_Info1">Insigne behaald: %s</string>
+    <string name="Badges_ItemLvl1">Item van niveau 3 verkregen</string>
+    <string name="Badges_ItemLvl2">Item van niveau 6 verkregen</string>
+    <string name="Badges_ItemLvl3">Item van niveau 9 verkregen</string>
     <string name="Badges_ItemLvl4">Item van niveau 12 verkregen</string>
+    <string name="Badges_ItemLvl5">Item van niveau 15 verkregen</string>
     <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
     <string name="Badges_NightHunter">5 monsters gedood in de nacht</string>
     <string name="Badges_PotionsCooked3">9 drankjes gebraagd</string>
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
+    <string name="Badges_StrengthAttained1">13 punten Kracht bereikt</string>
+    <string name="Badges_StrengthAttained2">15 punten Kracht bereikt</string>
+    <string name="Badges_StrengthAttained3">17 punten Kracht bereikt</string>
+    <string name="Badges_StrengthAttained4">19 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained5">21 punten Kracht bereikt</string>
     <string name="Bag_ACOpen">OPENEN</string>
     <string name="Bandit_Name">gekke bandiet</string>
@@ -151,6 +158,7 @@
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
     <string name="GasImmuneBuff_Name">Gasimmuniteit</string>
+    <string name="Ghost_Defense">ontweek</string>
     <string name="Ghost_Rose2">Alsjeblieft... Help me... Vind de roos...</string>
     <string name="Glaive_Name">gleve</string>
     <string name="GnollTamahawk_Gender">masculine</string>
@@ -240,7 +248,7 @@
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
-    <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \"Necrotism\" vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
+    <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="Necromancy_Title">Necromantie</string>
@@ -337,7 +345,7 @@
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
-    <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \"%1$s\" spreuk ontdekt.\n\" %2$s \"</string>
+    <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
     <string name="SpiderExploding_Desc">Harde werkers tijdens vredige tijden, deze wezens zullen niet aarzelen om hun vijanden aan te vallen en de eerste plant die ze tegenkomen te grijpen, waardoor ze zichzelf in lopende bommen veranderen.</string>
     <string name="SpiderMindAmber_Name">Amber Spinnewijs</string>
@@ -366,6 +374,7 @@
     <string name="Sword_Name">zwaard</string>
     <string name="Tamahawk_Gender">masculine</string>
     <string name="Tengu_Desc">Tengu zijn leden van de oude moordenaarsclan, die ook Tengu heet. Deze moordenaars zijn bekend om hun uitgebreide gebruik van shurikens en vallen.</string>
+    <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info2">Gepakt, %s!</string>
     <string name="TerrorBuff_Name">Versterkt</string>
     <string name="Thief_Gender">masculine</string>
@@ -522,6 +531,16 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
