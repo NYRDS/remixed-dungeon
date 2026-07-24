@@ -33,6 +33,7 @@
     <string name="ArmorKit_Name">ערכת שריון</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="AzuterronNPC_Name_Objective">זר</string>
     <string name="BadgesScene_Title">התגים שלך</string>
     <string name="Badges_AllBags">כל התיקים נקנו</string>
@@ -59,6 +60,7 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bat_Name">עטלף ערפד</string>
     <string name="BattleAxe_Gender">masculine</string>
+    <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BishopNPC_Desc">בישוף הכנסייה הקדושה של סנטה אדון המעמקים</string>
@@ -68,6 +70,7 @@
     <string name="BlackCat_Phrases_2">מיאו!</string>
     <string name="Blacksmith_Completed">אוי, חזרת... עדיף מאוחר מאשר אף פעם.</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
+    <string name="Blacksmith_Verify4">אני לא עובד עם פריטים מקוללים!</string>
     <string name="Blacksmith_Verify6">אני לא יכול לשחזר את הפריטים האלה!</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
     <string name="CagedKobold_Desc">קובולד, בכלוב.</string>
@@ -193,9 +196,11 @@
     <string name="HeroClass_Rog">נוכל</string>
     <string name="HeroClass_WarPerks_3">כל פריט מזון משחזר מעט בריאות כאשר נאכל.</string>
     <string name="HeroSubClass_DescAssa">כאשר מבצעים התקפה מפתיעה, ה_מתנקש_ גורם נזק נוסף למטרתו.</string>
+    <string name="HeroSubClass_DescBatM">כאשר מבצעים התקפה מפתיעה, ה-קוסם קרב גורם נזק נוסף למטרתו.</string>
     <string name="HeroSubClass_DescShaman">אלפים _שמאנים_ יכולים להשתמש בשרביטים ככלי נשק לתקיפה מקרוב. לפגיעות מוצלחות יש סיכוי להפעיל את כוח השרביט על מטרה ללא שימוש בטעינה.</string>
     <string name="HeroSubClass_DescWarL">לאחר הריגת אויב, ה-וורלוק בולע את נשמתו. זה מרפא את פצעיו ומשביע את רעבונו.</string>
     <string name="HeroSubClass_NameAssa">מתנקש</string>
+    <string name="HeroSubClass_NameBatM">קוסם קרב</string>
     <string name="HeroSubClass_NameFreR">רץ חופשי</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
     <string name="Hero_Name_Objective">אותך</string>
@@ -223,6 +228,7 @@
     <string name="Javelin_Name">כידון</string>
     <string name="Journal_Caged_Kobold">קובולד בכלוב</string>
     <string name="Journal_PlagueDoctorNPC">רופא מגפה</string>
+    <string name="King_Desc">המלך האחרון של הגמדים נודע בזכות הבנתו העמוקה של תהליכי החיים והמוות. הוא שכנע את חברי חצרו להשתתף בטקס, שאמור היה להעניק להם נעורים נצחיים. בסופו של דבר הוא היה היחיד שקיבל זאת - וצבא מתים-חיים כבונוס.</string>
     <string name="King_Info3">איך אתה מעז!</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KunaiThrow_Name">זריקת קונאי</string>
@@ -278,6 +284,8 @@
     <string name="Pasty_Name_Objective">מאפה בשר</string>
     <string name="PetInventory_TooFar">רחוק מדי מחיית המחמד</string>
     <string name="Piercing_Name_0">חודר %s</string>
+    <string name="Piercing_Name_1">חודר %s</string>
+    <string name="Piercing_Name_2">חודרת %s</string>
     <string name="PlagueDoctorMaskHood_Name">מסכת רופא מגפה עם ברדס</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">רופא דבר</string>
@@ -469,6 +477,7 @@
     <string name="WndSettings_Music">מוזיקה</string>
     <string name="WndSettings_Quickslots">חריצי גישה מהירה</string>
     <string name="WndSettings_SelectLanguage">בחר שפה</string>
+    <string name="WndStory_Prision">לפני שנים רבות נבנה כאן כלא תת-קרקעי עבור הפושעים המסוכנים ביותר. בזמנו זה נראה רעיון חכם מאוד, כי המקום הזה אכן היה קשה מאוד לבריחה. אבל עד מהרה מיאזמה אפלה החלה לחלחל מלמטה, מטריפה את דעתם של אסירים ושומרים כאחד. בסופו של דבר הכלא ננטש, אף שכמה אסירים נותרו נעולים כאן.</string>
     <string name="WndTilesKind_text">אתה עומד להיכנס לצינוק שנכבש על ידי קסם מעוות, אך כעת תוכל לבחור כיצד תראה אותו:\n האם אתה מעדיף מראה פסאודו-3D מודרני או תצוגה שטוחה קלאסית?\nתוכל לשנות זאת מאוחר יותר בתפריט אפשרויות המשחק.</string>
     <string name="WndTradeItem_Bought">רכשת את %1 תמורת %2</string>
     <string name="WndTradeItem_Buy">קנה ב-%d זהב</string>
@@ -517,6 +526,17 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

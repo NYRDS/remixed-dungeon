@@ -68,6 +68,7 @@
     <string name="BlackCat_Phrases_2">Meo meo!</string>
     <string name="BlackSkullOfMastery_BecomeLichDesc">Lich là một thuật sư tử thi đã đạt đến đỉnh cao của khả năng mình. Sinh tồn giữa sự sống và cái chết, Lich xuất sắc trong thuật hồi sinh, nhưng kỹ năng chiến đấu của hắn thấp hơn rất nhiều so với người thường.</string>
     <string name="Blacksmith_Verify2">Chọn 2 vật phẩm cùng loại!</string>
+    <string name="Blacksmith_Verify4">Tôi không làm việc với vật phẩm bị nguyền rủa!</string>
     <string name="Blacksmith_Verify6">Tôi không thể rèn lại các vật phẩm này!</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="Boomerang_Gender">masculine</string>
@@ -195,6 +196,9 @@
     <string name="InnKeeperNPC_Desc">Chủ quán rất tự hào về bản thân.</string>
     <string name="InnKeeperNPC_Name">chủ quán</string>
     <string name="InnKeeperNPC_Name_Objective">chủ quán</string>
+    <string name="Instability_Name_0">Bất ổn %s</string>
+    <string name="Instability_Name_1">Bất ổn %s</string>
+    <string name="Instability_Name_2">Bất ổn %s</string>
     <string name="InterLevelScene_ErrorGeneric">Đã có lỗi xảy ra...</string>
     <string name="InterLevelScene_FileNotFound">Không tìm thấy tập tin. Với một số lý do...</string>
     <string name="InterLevelScene_Loading">Đang tải...</string>
@@ -503,6 +507,10 @@
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_desc">Ghế dài bằng gỗ, trông không thoải mái để ngồi.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
 
 
 

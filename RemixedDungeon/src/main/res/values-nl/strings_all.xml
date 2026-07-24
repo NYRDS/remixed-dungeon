@@ -75,6 +75,7 @@
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_1">Miauw...</string>
     <string name="BlackSkullOfMastery_Name">De Zielbrenger</string>
+    <string name="Blacksmith_Verify4">Ik werk niet met vervloekte items!</string>
     <string name="Blacksmith_Verify6">Ik kan deze items niet hersmelten!</string>
     <string name="BlessedBuff_Info">Moge precisie en ontwijken komen voor hen die door de zegen zijn geraakt!</string>
     <string name="BodyArmorBuff_Name">Lichaamspantser</string>
@@ -535,6 +536,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 
