@@ -145,6 +145,7 @@
     <string name="ExplodingSkull_Name">đầu lâu nổ</string>
     <string name="ExplodingSkull_Name_Objective">đầu lâu nổ</string>
     <string name="Eye_Desc">Một trong những cái tên khác của quỷ này là \&quot;cầu bóng căm thù\&quot;, vì khi thấy kẻ thù, nó sử dụng cái nhìn tử thần một cách liều lĩnh, thường bỏ qua đồng minh và làm bị thương họ.</string>
+    <string name="Eye_Name">con mắt quỷ</string>
     <string name="Facilitations_Names_1">Cơ thể khỉ lợn</string>
     <string name="FetidRat_Desc">Loài chuột túi này lớn hơn nhiều so với chuột thường. Nó bị bao quanh bởi một đám mây hôi thối.</string>
     <string name="FetidRat_Gender">feminine</string>
@@ -507,6 +508,7 @@
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_desc">Ghế dài bằng gỗ, trông không thoải mái để ngồi.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
 
 
 

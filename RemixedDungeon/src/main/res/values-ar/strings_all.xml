@@ -298,6 +298,7 @@
     <string name="PlagueDoctorQuest_AllDone">*أطلق ضحكة جافة وصاخبة.* \&quot;أفعالك، لقد كشفت أسرارًا لا تُقاس! المعرفة المكتسبة... تنبض بداخلي، سمفونية من الاكتشاف. لكن المعرفة،\&quot; يضيفها بصوت منخفض، همس متآمر، \&quot;المعرفة هي قوة. والقوة... آه... إنها إكسير مسكر للغاية.\&quot; يحدق فيك بتركيز للحظة، وعيناه الجمشتية تحترقان بشدة حماسية. \&quot;ربما،\&quot; يهمس، \&quot;ستتقاطع طرقنا مرة أخرى. فما زالت هناك... ألغاز... تنتظر كشفها.\&quot;</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Death">مِتَّ مِن السم...</string>
+    <string name="PortalExit_Desc_IceCaves">كهوف الجليد</string>
     <string name="PortalGate_Desc_Activated">البوابة تتسرب منها مادة متوهجة من نوع ما. تبدو ساكنة تماماً، لولا التموجات القادمة من مركزها.</string>
     <string name="PortalGate_Name">بوابة</string>
     <string name="PortalGate_Used">لمست البوابة و... لم يحدث شيء.</string>
@@ -554,6 +555,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

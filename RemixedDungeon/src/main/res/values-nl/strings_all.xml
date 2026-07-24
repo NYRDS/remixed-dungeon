@@ -132,6 +132,7 @@
     <string name="Dagger_Name">dolk</string>
     <string name="DashSpell_Info">Das naar een aangewezen richting terwijl je met vijanden botst, schade toebrengend en verstommeling veroorzakend.</string>
     <string name="DashSpell_Name">Das</string>
+    <string name="Death_Name_1">Grim %s</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="DieHardBuff_Name">Die Hard</string>
@@ -536,6 +537,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 

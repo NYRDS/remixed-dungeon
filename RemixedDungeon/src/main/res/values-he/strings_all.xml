@@ -448,6 +448,7 @@
     <string name="WndItemAlchemy_Title">מתכוני אלכימיה עם %s</string>
     <string name="WndJournal_Levels">רמות</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
+    <string name="WndLibrary_Catalogue_Title">ספרייה</string>
     <string name="WndModInstall_Version">גרסה</string>
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
     <string name="WndPlayGames_Show_Badges">הצג הישגים</string>
@@ -526,6 +527,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 
