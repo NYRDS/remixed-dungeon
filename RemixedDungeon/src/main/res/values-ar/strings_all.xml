@@ -132,6 +132,7 @@
     <string name="Crystal_Name">بلورة طافية</string>
     <string name="Dagger_Name">خنجر</string>
     <string name="DarkGold_Info">يُسمى هذا المعدن \&quot;المظلم\&quot; ليس بسبب لونه (فهو لا يختلف عن الذهب العادي)، بل لأنه يذوب في ضوء النهار، مما يجعله عديم الفائدة على السطح.</string>
+    <string name="DarkVeilBuff_Info">حجاب من الظلام يحيط بالمالك، يستدعي روحًا في كل مرة يُصاب فيها الضرر.</string>
     <string name="Darkness_Info">يبدو وكأنه قطع من الظلام الأبدي تطفو في الهواء</string>
     <string name="DashSpell_TooFar">لا يمكنني الاندفاع إلى هذه المسافة البعيدة.</string>
     <string name="Death_Name_0">مروع %s</string>
@@ -474,6 +475,7 @@
     <string name="WndPortal_Title">البوابة</string>
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
     <string name="WndPriest_Instruction2_f">أهلاً بك يا ابنتي، أهلاً بك في الكنيسة المقدسة للقديس سانتا سيد الأعماق!</string>
+    <string name="WndRanking_Badges">شارات</string>
     <string name="WndRanking_StaChallenges">التحديات</string>
     <string name="WndRanking_StaEnemies">وحوش مقتولة</string>
     <string name="WndRanking_StaStr">القوة</string>
@@ -550,6 +552,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 
