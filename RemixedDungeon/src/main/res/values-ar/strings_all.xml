@@ -204,6 +204,7 @@
     <string name="HeroClass_WarPerks_3">أي قطعة طعام تستعيد بعض الصحة عند أكلها.</string>
     <string name="HeroSubClass_DescWard">بفضل ارتباطها القوي بقوى الطبيعة، تتمكن _الحارسة_ من جمع قطرات الندى والبذور من النباتات. كما أن المشي عبر العشب الطويل يمنحها تعزيزاً مؤقتاً للدروع.</string>
     <string name="HeroSubClass_NameGlad">مصارع</string>
+    <string name="HeroSubClass_NameNone">لا شيء</string>
     <string name="HeroSubClass_NameScout">كشاف</string>
     <string name="Hero_StaBurning">لقد اشتعلت בך النار!</string>
     <string name="Hero_StaRoots">لا يمكنك التحرك!</string>
@@ -538,6 +539,7 @@
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
     <string name="town_deco_slush_name">الثلج المذاب</string>
     <string name="town_deco_snow_name">ثلج</string>
+    <string name="town_deco_statue_blood_name">تمثال ملاك</string>
     <string name="town_deco_stone_wall_desc">بشكل ما، هذا الجدار يصدر حرارة ويبدو رطباً قليلاً.</string>
     <string name="town_deco_stone_wall_name">جدار حجري</string>
     <string name="town_deco_vat_name">حوض</string>
@@ -548,6 +550,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

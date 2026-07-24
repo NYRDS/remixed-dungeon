@@ -222,6 +222,7 @@
     <string name="JarOfSouls_Name">כד נשמות</string>
     <string name="Javelin_Name">כידון</string>
     <string name="Journal_Caged_Kobold">קובולד בכלוב</string>
+    <string name="Journal_PlagueDoctorNPC">רופא מגפה</string>
     <string name="King_Info3">איך אתה מעז!</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KunaiThrow_Name">זריקת קונאי</string>
@@ -514,6 +515,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

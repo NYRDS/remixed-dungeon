@@ -119,6 +119,7 @@
     <string name="Dagger_Info">Một cây khăn sắt đơn giản với tay cầm gỗ mòn.</string>
     <string name="DarkSacrifice_Resist">Ngươi không có quyền lực nào trên ta!</string>
     <string name="Dart_Gender">masculine</string>
+    <string name="DeathKnight_Desc">Ban đầu, đây là một chiến binh mạnh mẽ trong bộ giáp nặng, và chỉ có một nụ cười chết chóc mới tiết lộ bản chất của hắn. Kỵ sĩ tử thần là sự hiện thân của linh hồn một kỵ sĩ đã thất bại trong việc giữ lời thề. Và trong trạng thái bị nguyền rủa, hắn sẽ mãi mãi lang thang tìm kiếm sự thanh tẩy qua chiến đấu, giết người vô tội, không thể nhớ ra hắn đã thề bảo vệ ai.</string>
     <string name="Death_Name_0">Quỷ %s</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DewVial_Full">Lọ hơi sương đã đầy!</string>
@@ -498,7 +499,10 @@
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
+    <string name="town_deco_wooden_bench_desc">Ghế dài bằng gỗ, trông không thoải mái để ngồi.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
 
 
 
