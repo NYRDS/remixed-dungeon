@@ -244,7 +244,9 @@
     <string name="MirrorImage_Gender">masculine</string>
     <string name="MissileWeapon_Info3">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
     <string name="MissileWeapon_Missiles">Raketwapen</string>
+    <string name="MissileWeapon_No">Nee, ik heb het me anders beslist</string>
     <string name="MissileWeapon_Sure">Weet je zeker dat je het wilt uitrusten als een wapen voor gevechten op korte afstand?</string>
+    <string name="MissileWeapon_Yes">Ja, ik weet wat ik doe</string>
     <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
     <string name="Mob_StaAmokStatus">%1$s loopt amok</string>
     <string name="Mob_StaFleeingStatus2">Deze %1$s vlucht voor %2$s</string>
@@ -471,6 +473,7 @@
     <string name="WndSadGhostNecro_Yes">Ja, dwing je wil op</string>
     <string name="WndSadGhost_Wepon">Geest zijn wapen</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Klik hier om deel te nemen aan het Remixed Dungeon vertaalteam</string>
+    <string name="WndSettings_ExperementalFont">Nieuw lettertype</string>
     <string name="WndSettings_FpsLimit">FPS-limiet</string>
     <string name="WndSettings_Handedness">Handpreferentie</string>
     <string name="WndSettings_Music">Muziek</string>
@@ -539,6 +542,9 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 

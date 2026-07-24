@@ -46,6 +46,7 @@
     <string name="Badges_BossSlain3">DM-300 הובס</string>
     <string name="Badges_DeathGlyph">מוות מגליף</string>
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
+    <string name="Badges_FoodEaten3">30 מנות אוכל נאכלו</string>
     <string name="Badges_GoldColleted4">7500 זהב נאסף</string>
     <string name="Badges_Info2">סופר תג חדש: %s</string>
     <string name="Badges_ItemLvl1">הושג פריט ברמה 3</string>
@@ -419,6 +420,7 @@
     <string name="WandMaker_Dust2">הצלחת למצוא אבק גופות, %s? ערימות עצמות הן המקומות הכי ברורים לחפש בהם.</string>
     <string name="WandOfAvalanche_Info">כאשר פיצוץ של השרביט פוגע בקיר (או בכל מכשול מוצק אחר) הוא גורם למפולת אבנים, פוגע ומהלם את כל היצורים באזור הפגיעה.</string>
     <string name="WandOfPoison_Name">שרביט רעל</string>
+    <string name="WandOfShadowbolt_Info">שרביט זה פולט אנרגיה אפלה וזדונית.</string>
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
     <string name="Wand_ACZap">זַאפּ</string>
     <string name="Wand_Fizzles">השרביט שלך מפצפץ; כנראה נגמרו המטענים שלו עכשיו</string>
@@ -528,6 +530,9 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 

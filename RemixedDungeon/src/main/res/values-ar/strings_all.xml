@@ -102,6 +102,7 @@
     <string name="Carcass_Necromancy">لقد أحيت جثة %s!</string>
     <string name="Caves_TileDescDeco">تظهر عرق من معدن ما على الجدار. ذهب؟</string>
     <string name="Caves_TileDescEntrance">يؤدي السلم إلى العمق العلوي.</string>
+    <string name="Caves_TileGrass">طحلب فلوري</string>
     <string name="Challenges_Names_0">حمية</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">شفرة يد واحدة من الفوضى النقية. تنمو مع القتال مثل نظيرتها ذات اليدين، ولكن ببطء أكبر وإمكانات أقل — مما يترك يدك الحرة لدرع.</string>
@@ -478,6 +479,7 @@
     <string name="WndPlayGames_RestoreProgress">استعادة تقدم اللعبة</string>
     <string name="WndPlayGames_Show_Error">فشلت العملية. حدث خطأ ما...</string>
     <string name="WndPortal_Title">البوابة</string>
+    <string name="WndPortal_Warning_Info">لم تستخدم البوابة في هذا المستوى. بعد المغادرة، لن تتمكن من استخدام هذه البوابة مرة أخرى!\nهل أنت متأكد من أنك تريد المغادرة؟</string>
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
     <string name="WndPriest_Instruction2_f">أهلاً بك يا ابنتي، أهلاً بك في الكنيسة المقدسة للقديس سانتا سيد الأعماق!</string>
     <string name="WndRanking_Badges">شارات</string>
@@ -557,6 +559,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

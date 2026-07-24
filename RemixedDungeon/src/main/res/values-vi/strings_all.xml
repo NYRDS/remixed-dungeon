@@ -181,6 +181,7 @@
     <string name="HeroSubClass_DescGlad">Một cú đánh thành công bằng vũ khí cận chiến cho phép _Gladiator_ bắt đầu một combo, trong đó mỗi đòn đánh thành công tiếp theo gây sát thương lớn hơn.</string>
     <string name="HeroSubClass_DescWarL">Sau khi giết một kẻ thù, _Pháp Sư_ sẽ hấp thụ linh hồn của nó. Điều này chữa lành vết thương và làm no đói của hắn.</string>
     <string name="HeroSubClass_DescWard">Với sự kết nối mạnh mẽ với các lực lượng thiên nhiên, _Kiến Trùm_ có khả năng thu thập giọt sương và hạt giống từ các cây cỏ. Ngoài ra, đi qua bụi cỏ cao cũng ban cho họ một đợt tăng giáp tạm thời.</string>
+    <string name="HeroSubClass_NameFreR">kẻ chạy tự do</string>
     <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="HeroSubClass_NameWitchdoctor">thầy pháp</string>
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
@@ -226,6 +227,7 @@
     <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
     <string name="MailArmor_Name">áo giáp xích</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
+    <string name="MeleeWeapon_Info1c">nâng cấp</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
     <string name="MeleeWeapon_Info3g">kém chính xác</string>
     <string name="MercenaryNPC_Name">lính thuê</string>
@@ -292,6 +294,7 @@
     <string name="RingOfMending_Name">Nhẫn Chữa Lành</string>
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
     <string name="Ring_Gems_10">thạch anh</string>
+    <string name="Ring_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
     <string name="Ring_Info1">Bạn chỉ có thể đeo tối đa 2 nhẫn cùng lúc</string>
     <string name="Ring_Info2">Chiếc %1$s của bạn siết chặt vào ngón tay đau đớn</string>
     <string name="Ring_Info4">%1$s\n\nBạn có thể cảm thấy một phép thuật độc ác ẩn mình bên trong %2$s.</string>
@@ -509,6 +512,9 @@
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_desc">Ghế dài bằng gỗ, trông không thoải mái để ngồi.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
 
 
 
