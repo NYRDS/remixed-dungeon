@@ -217,6 +217,7 @@
     <string name="Level_TileDescPileOfStones">Một đống đá cực kỳ nặng, trông không thể di chuyển được.</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
+    <string name="Level_TileWater">Nước</string>
     <string name="Level_TileWell">Giếng</string>
     <string name="LibrarianNPC_Name_Objective">thủ thư</string>
     <string name="LightningTrap_Name">bẫy sét</string>
@@ -508,6 +509,7 @@
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_desc">Ghế dài bằng gỗ, trông không thoải mái để ngồi.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
 
 
 

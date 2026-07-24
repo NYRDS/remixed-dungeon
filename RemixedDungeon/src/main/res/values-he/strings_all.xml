@@ -68,6 +68,7 @@
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_1">מיאו...</string>
     <string name="BlackCat_Phrases_2">מיאו!</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">או אם תשבור את הכישוף תוכל להשתמש בחפץ זה כמתוכנן.</string>
     <string name="Blacksmith_Completed">אוי, חזרת... עדיף מאוחר מאשר אף פעם.</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
     <string name="Blacksmith_Verify4">אני לא עובד עם פריטים מקוללים!</string>
@@ -527,6 +528,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

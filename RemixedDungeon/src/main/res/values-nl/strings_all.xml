@@ -220,6 +220,7 @@
     <string name="Larva_Gender">feminine</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
+    <string name="Level_TileDescAlchemy">Laat hier wat zaden vallen om een drank te brouwen.</string>
     <string name="Level_TileDescBarricade">De houten barricade zit stevig, maar is over de jaren uitgedroogd. Zal hij branden?</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
     <string name="Level_TileLockedDoor">Gesloten deur</string>
@@ -493,6 +494,7 @@
     <string name="WrnExperimental_title">Experimentele opties ingeschakeld!</string>
     <string name="Yog_Gender">masculine</string>
     <string name="YogsBrain_Name_Objective">Hersenen van Yog</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsHeart_Gender">masculine</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
@@ -537,6 +539,8 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 
