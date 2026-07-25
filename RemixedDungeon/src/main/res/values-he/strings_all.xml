@@ -166,6 +166,7 @@
     <string name="Fire_Name_1">בוער %s</string>
     <string name="Firebloom_Desc">כאשר משהו נוגע בפרח אש, הוא פורץ בלהבות.</string>
     <string name="Firebloom_Name">פרח אש</string>
+    <string name="Foliage_Info">קרני אור חודרות את אפלוליות הגן התת-קרקעי.</string>
     <string name="Food_ACEat">לֶאֱכוֹל</string>
     <string name="Food_Message">זה היה טעים מאוד\!</string>
     <string name="FortuneTellerNPC_Desc">האישה הזו לבושה בגלימה ארוכה וצבעונית. היא נראית צעירה להפתיע למישהי ששלטה באמנויות הנסתרות של חיזוי העתיד. כשתתקרב, תשמע אותה ממלמלת כשהיא מביטה בכדור הבדולח.</string>
@@ -546,6 +547,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 
