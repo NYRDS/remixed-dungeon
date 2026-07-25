@@ -126,6 +126,7 @@
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ComboBuff_Info">De volgende aanval zal een combo-aanval zijn.</string>
+    <string name="Combo_Combo">%d treffer combo!</string>
     <string name="CommonArrow_Info">Gewone houten pijl met een ijzeren punt.</string>
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
     <string name="ConfusionGas_Info">Hier zweeft een wolk verwarrend gas.</string>
@@ -281,6 +282,7 @@
     <string name="Poison_Name_1">Giftig %s</string>
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
+    <string name="Possess_Name">Bezetting</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
     <string name="PotionOfLiquidFlame_Info">Deze fles bevat een onstabiel mengsel dat heftig in vlammen opgaat bij contact met de open lucht.</string>
     <string name="PotionOfLiquidFlame_Name">Drankje van Vloeibare Vlam</string>
@@ -322,6 +324,7 @@
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
     <string name="RottenFood_Message">Walging!</string>
     <string name="RottenRation_Name">Bedederde ratoen</string>
+    <string name="RunicSkull_Desc">Voor iets kunstmatig gemaakts lijkt deze schedel te veel op een echte. Je ziet ook een zwakke gloed om het heen.</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
     <string name="ScarecrowNPC_Name_Objective">vogelverschrikker</string>
@@ -384,6 +387,7 @@
     <string name="Stylus_ACInscribe">Inschrijven</string>
     <string name="Stylus_Info">Deze arcanische stylus is gemaakt van een donkere, zeer harde steen. Je kunt er een glyph of rune mee graveren, maar je kunt niet kiezen welke er wordt gegraveerd; de stylus beslist voor je.</string>
     <string name="Stylus_Inscribed">je hebt de %1$s op je %2$s gegraveerd</string>
+    <string name="Stylus_Name">tooverstylus</string>
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
@@ -555,6 +559,10 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 

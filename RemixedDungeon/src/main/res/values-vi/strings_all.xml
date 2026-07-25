@@ -173,6 +173,7 @@
     <string name="Heal_Cast">%s đã được chữa trị.</string>
     <string name="HeartOfDarkness_Name">Trái tim của bóng tối</string>
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
+    <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
     <string name="HeroClass_GnollPerks_3">Gnoll không thể đọc hoặc viết.</string>
     <string name="HeroClass_Mag">pháp sư</string>
     <string name="HeroClass_MagPerks_2">Khi ăn, bất kỳ món ăn nào cũng khôi phục 1 sạc cho tất cả cây gậy phép trong túi đồ.</string>
@@ -264,6 +265,7 @@
     <string name="PetInventory_TakeFromPet">Lấy từ thú cưng</string>
     <string name="PetInventory_Title">Kho thú cưng</string>
     <string name="PetInventory_ViewManage">Quản lý</string>
+    <string name="Pickaxe_Info">Đây là một công cụ lớn và chắc chắn để phá đá. Nó có thể được dùng như một vũ khí.</string>
     <string name="Pickaxe_NothingToMine">Không có gì để khai thác ở đây!</string>
     <string name="PlagueDoctorMaskHood_Name">Mặt nạ Bác Sĩ Chúm với mũ che đầu</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Bạn vẫn còn ở đây à? Đây, hãy lấy đi!</string>
@@ -374,6 +376,7 @@
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
     <string name="StartScene_UnlockGnoll">Để mở khóa lớp này, bạn phải thuyết phục linh mục làng chữa lành cho Gnoll Brute</string>
     <string name="Stylus_Info">Chiếc bút bí ẩn này được làm từ một loại đá đen và rất cứng. Bạn có thể dùng nó để khắc các ký tự hoặc rune, nhưng bút mới quyết định khắc cái gì, không phải bạn.</string>
+    <string name="Stylus_Name">bút huyền bí</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
     <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
@@ -505,6 +508,7 @@
     <string name="town_deco_furnace_name">Lò nung</string>
     <string name="town_deco_hay_desc">Một đống rơm nhỏ thơm thơm.</string>
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
+    <string name="town_deco_painting_desc">Một tác phẩm nghệ thuật đẹp đẽ.</string>
     <string name="town_deco_pathway_name">đường mòn</string>
     <string name="town_deco_pillar_desc">Ngày xưa, cột này từng đóng vai trò là đỡ đẹp đẽ và trang trí.</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
@@ -526,6 +530,10 @@
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_desc">Ghế dài bằng gỗ, trông không thoải mái để ngồi.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
 
 
 

@@ -317,6 +317,7 @@
     <string name="Potion_ACMoisten">ترطيب</string>
     <string name="Potion_Colors_15">لؤلؤي</string>
     <string name="Potion_Colors_5">ماجينتا</string>
+    <string name="Potion_Colors_7">عاجي</string>
     <string name="Potion_ItemFliesAway">%s طار بعيداً من يديك.</string>
     <string name="Potion_MoistenUseless">يبدو أنك أهدرت هذا الزيت.</string>
     <string name="Potion_Name">%s جرعة</string>
@@ -361,6 +362,7 @@
     <string name="RubyBow_Gender">masculine</string>
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
     <string name="Rudolph_Name">أنف أحمر وقرون</string>
+    <string name="SacrificialSword_Info">وهذا السيف البرونزي القديم المغطى ببقع الصدأ يبدو للوهلة الأولى عديم الفائدة تماماً. لكن قوى قديمة وأصلية نائمة في داخله. هذه القوى يمكنها أن تحول أي مخلوق تقريباً إلى عبد بلا إرادة. ما عليك إلا إيجاد الطريقة المناسبة لإيقاظها...</string>
     <string name="ScaleArmor_Desc">تخلق القشور المعدنية المخيطة على سترة جلدية درعاً مرناً، ولكنه يوفر الحماية.</string>
     <string name="ScaleArmor_Name">درع حرشفي</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
@@ -482,6 +484,7 @@
     <string name="WndHats_BuyButton">شراء</string>
     <string name="WndHats_NoConnectionMsg">تعذر الاتصال بـ Google Play.</string>
     <string name="WndHero_Awareness">اليقظة</string>
+    <string name="WndHero_Depth">أقصى عمق</string>
     <string name="WndInfoItem_Chest">صندوق</string>
     <string name="WndInfoItem_Owner">قد يحتوي هذا القبر القديم على شيء مفيد، لكن مالكه سيعترض بالتأكيد على التفتيش.</string>
     <string name="WndItemAlchemy_SelectRecipe">اختر الوصفة</string>
@@ -540,6 +543,7 @@
     <string name="town_deco_blue_carpet_desc">سجادة زرقاء فاخرة، مزينة بنقوش بنفسجية.</string>
     <string name="town_deco_blue_carpet_name">سجادة</string>
     <string name="town_deco_book_desc">يبدو هذا الكتاب وكأن شخصًا ما تركه بإهمال هنا</string>
+    <string name="town_deco_broken_wall_name">جدار متهدم</string>
     <string name="town_deco_cabinet_desc">خزانة واسعة ذات أبواب ورفوف كثيرة.</string>
     <string name="town_deco_canvas_name">قماش</string>
     <string name="town_deco_cinema_sign_desc">يبدو أن هناك سينما داخل هذا المبنى.</string>
@@ -577,6 +581,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 
