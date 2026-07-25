@@ -103,6 +103,7 @@
     <string name="Caves_TileDescDeco">تظهر عرق من معدن ما على الجدار. ذهب؟</string>
     <string name="Caves_TileDescEntrance">يؤدي السلم إلى العمق العلوي.</string>
     <string name="Caves_TileGrass">طحلب فلوري</string>
+    <string name="Caves_TileHighGrass">فطر مضيء</string>
     <string name="Challenges_Names_0">حمية</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">شفرة يد واحدة من الفوضى النقية. تنمو مع القتال مثل نظيرتها ذات اليدين، ولكن ببطء أكبر وإمكانات أقل — مما يترك يدك الحرة لدرع.</string>
@@ -309,6 +310,7 @@
     <string name="PotionOfHealing_Apply">تشفى جراحك تماماً.</string>
     <string name="PotionOfMana_Name">إكسير المانا</string>
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
+    <string name="PotionOfPurity_Info">سيعمل هذا الترياق بسرعة على تحييد جميع الغازات الضارة في نطاق التأثير. شربه سيمنحك مناعة مؤقتة ضد هذه الغازات.</string>
     <string name="PotionOfStrength_Name">جرعة القوة</string>
     <string name="Potion_ACMoisten">ترطيب</string>
     <string name="Potion_Colors_15">لؤلؤي</string>
@@ -345,6 +347,7 @@
     <string name="Ring_BuffKnown">هذا %s</string>
     <string name="Ring_Gems_1">الأوبال</string>
     <string name="Ring_Info2">خاتمك %1$s يضيق حول إصبعك بشكل مؤلم</string>
+    <string name="Roar_Name">زئير</string>
     <string name="RogueArmor_ACSpecial">قنبلة دخان</string>
     <string name="RootSpell_Info">يحبس الشخصية المختارة، مما يمنعها من الحركة لفترة قصيرة.</string>
     <string name="RottenFood_Message">مقزز!</string>
@@ -435,6 +438,7 @@
     <string name="ToxicGland_Name">غدة سامة</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
+    <string name="Using_Failed_Because_Magic">سحر قوي يمنعك من استخدام \&quot;%s\&quot;.</string>
     <string name="VertigoBuff_Info">الشعور بالدوار يجعل المشي في خط مستقيم أكثر صعوبة!</string>
     <string name="VileEssence_Info">جوهر مركز من الفساد تم حصاده من عدو مهزوم. ينبض هذا الجوهر المظلم بطاقة خبيثة ويُقدّر كثيرًا في العمليات الكيميائية.</string>
     <string name="Viscosity_Txt">%s من اللزوجة</string>
@@ -568,6 +572,12 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
 
 
 

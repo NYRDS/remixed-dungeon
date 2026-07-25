@@ -144,6 +144,7 @@
     <string name="Displacement_Txt">%s של היעתקות</string>
     <string name="DriedRoseBuff_Info">הוורד נראה מקסים מאוד.</string>
     <string name="DriedRoseBuff_Name">מקסים</string>
+    <string name="DriedRose_Info">הוורד הזה התייבש לפני זמן רב, אבל איכשהו שמר על כל עלי הכותרת שלו.</string>
     <string name="DriedRose_Name">ורד יבש</string>
     <string name="Drunkard_Phrase_4">זזזזזז...</string>
     <string name="Dungeon_Tips_13">אין טעם להחזיק יותר מאנק אחד בו זמנית, כי תאבדו אותם בתחיית המתים.</string>
@@ -418,7 +419,9 @@
     <string name="TownsfolkSilentNPC_Name">תושב העיר</string>
     <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
     <string name="ToxicGland_Name">בלוטה רעילה</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Undead_Defense">נבלם</string>
+    <string name="Using_Failed_Because_Magic">קסם רב עוצמה מונע ממך להשתמש ב\&quot;%s\&quot;.</string>
     <string name="VampireSkull_Info">המסכה הזו עשויה מגולגולת של ערפד טבעית לחלוטין. למעשה זהו גולגולת... גולגולת של ערפד בעל ראש גדול. מצמרר.</string>
     <string name="VertigoBuff_Info">תחושת הסחרחורת מקשה על הליכה ישרה!</string>
     <string name="WandHolster_Name">נרתיק שרביטים</string>
@@ -501,6 +504,7 @@
     <string name="YogsBrain_Name">המוח של יוג</string>
     <string name="YogsBrain_Name_Objective">המוח של יוג</string>
     <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">הלב של יוג</string>
     <string name="ZombieGnoll_Info">גנול-זומבי קם מהמתים!</string>
     <string name="ZombieMask_Name">מסיכת זומבי</string>
@@ -538,6 +542,11 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 

@@ -266,6 +266,8 @@
     <string name="PlagueDoctorMaskHood_Name">Mặt nạ Bác Sĩ Chúm với mũ che đầu</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Bạn vẫn còn ở đây à? Đây, hãy lấy đi!</string>
     <string name="PlagueDoctorNPC_Name_Objective">bác sĩ dịch hạch</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Ngón xương khô của hắn gõ nhịp nhàng vào nồi nước sôi sùng sục, không khí quanh hắn dày đặc bởi mùi hôi chua gay của lưu huỳnh và sự phân giải*\n_Kobold Pháp Sư Băng_! Những sinh vật thảm hại kia, trùm mình trong hang động đóng băng, nguội ngút chăm chăm vào phép thuật băng giá của chúng.\nTa cần năm con, xác đóng băng của chúng sẽ... soi sáng sự việc.\nSự thành thạo băng giá của chúng, nó... kỳ lạ.\nTa tin rằng chúng khai thác một năng lượng nguyên thủy, một sức mạnh ngủ quên dưới bề mặt của chính thế giới này.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Hắn ấp úng, giọng khàn khàn như cành cây khô giòn*. A-a, _súc quy_! Hai... có, hai, còn sống! Nó là... hem... cho nghiên cứu của ta! Các ngươi thấy... pheromone của chúng... nó quan trọng để hiểu cái cân bằng tinh tế của... a... *Hắn ngập ngừng, bàn tay xương cốt đưa lên gõ nghiến mặt nạ, ánh mắt chớm chớp nhìn về phía các ngươi với cường độ sốt ruột.* Cái... bản chất của chúng... nó là một câu đố... một câu đố đẹp đẽ, bí ẩn! *Hắn ho khan gắt gao, cố gắng lấy lại bình tĩnh.* Ta hứa, vì mang cho ta hai con... quái vật này... các ngươi sẽ có lòng biết ơn vĩnh cửu của ta. Hãy coi đó như một... một ơn huệ cho tri thức! Đúng! Vì tri thức!</string>
     <string name="PoisonBuff_Name">Bị Độc</string>
@@ -375,6 +377,7 @@
     <string name="Swarm_Name">bầy ruồi</string>
     <string name="Tamahawk_Info">Mặc dù rìu ném này không quá nặng, nhưng vẫn cần sức mạnh đáng kể để sử dụng hiệu quả.</string>
     <string name="Tengu_Gender">masculine</string>
+    <string name="Tengu_Info3">Bắt được rồi, %s!</string>
     <string name="TerrorBuff_Info">Có vẻ như ai đó rất sợ hãi.</string>
     <string name="TitleScene_Highscores">Bảng xếp hạng</string>
     <string name="TitleScene_Play">Chơi</string>
@@ -396,6 +399,7 @@
     <string name="Undead_Defense">chặn</string>
     <string name="Undead_Name_Objective">cùn bất tử</string>
     <string name="Ushanka_Info">Mũ ushanka ấm áp và êm ái, được trang trí bằng một ngôi sao đỏ sang trọng. Một người bạn đồng hành hoàn hảo cho một người đồng chí chiến đấu chống lại ngục địa tàn ác và lạnh lẽo.</string>
+    <string name="Using_Failed_Because_Magic">Một phép thuật mạnh mẽ ngăn cản bạn sử dụng \&quot;%s\&quot;.</string>
     <string name="VertigoBuff_Info">Cảm giác choáng váng khiến đi thẳng trở nên khó khăn!</string>
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
     <string name="WandOfDisintegration_Info">Cây gậy này phát ra một tia năng lượng hủy diệt, xuyên thủng tất cả sinh vật trên đường đi. Càng nhiều mục tiêu bị trúng, càng nhiều sát thương nó gây ra cho mỗi mục tiêu.</string>
@@ -471,6 +475,7 @@
     <string name="Worm_Gender">masculine</string>
     <string name="Wraith_Desc">Một oan hồn là linh hồn oán giận của một kẻ có tội, mộ hoặc lăng mộ của họ bị quấy rối. Là một thực thể phi vật chất, rất khó đánh trúng chúng bằng vũ khí thông thường.</string>
     <string name="Wraith_Name">oan hồn</string>
+    <string name="WrnExperimental_hint">Nếu thế giới kỳ lạ và u ám này quá khắc nghiệt với bạn, hãy tắt các tùy chọn này bằng cách:\nMàn hình chính -&gt; Cài đặt -&gt; Cách chơi\nvà bắt đầu một ván mới hoặc tải một ván khác.</string>
     <string name="WrnExperimental_realtime">Chế độ thời gian thực đã được kích hoạt: đây giờ là một roguelike thời gian thực, nhấn nhanh hoặc chết.\nBạn muốn kiểm tra túi đồ?\nChúc may mắn với việc đó trong khi con cua rạch kiểm tra ruột gan bạn.</string>
     <string name="WrnExperimental_title">Các tùy chọn thực nghiệm đã được bật!</string>
     <string name="Yog_Gender">masculine</string>
@@ -513,9 +518,17 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+    <string name="town_deco_window_name">Cửa sổ</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_desc">Ghế dài bằng gỗ, trông không thoải mái để ngồi.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
+
+
+
+
 
 
 

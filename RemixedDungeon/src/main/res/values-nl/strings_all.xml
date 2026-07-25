@@ -77,6 +77,7 @@
     <string name="BlackSkullOfMastery_Name">De Zielbrenger</string>
     <string name="BlackSkull_Ressurrect">De Zwarte Schedel Heeft Dode Wezens Herrezen Om Je Te Dienen!</string>
     <string name="Blacksmith_Verify4">Ik werk niet met vervloekte items!</string>
+    <string name="Blacksmith_Verify5">Het is prullen, de kwaliteit is te slecht!</string>
     <string name="Blacksmith_Verify6">Ik kan deze items niet hersmelten!</string>
     <string name="BlessedBuff_Info">Moge precisie en ontwijken komen voor hen die door de zegen zijn geraakt!</string>
     <string name="BloodTransfusion_WontAgreed">Het slachtoffer weerst het onttrekken van zijn levensessentie.</string>
@@ -269,10 +270,12 @@
     <string name="Paralysis_Name_2">Verstomming %s</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te mijnen!</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
+    <string name="PlagueDoctorMask_Info">Dit… dit is geen gewone masker. Het is… een barrière. Een schild tegen de krachten van verval waar de Pestmeester onvermoeid tegen vecht. Gemaakt van het fijnste ebenhout, kunstvol ingesneden met het gezicht van een gierige schedel. De holle oogkasjes zijn gevuld met schitterende amethisten die zwak pulseren, als uitgaande kolen van een vuur. Elke adem die je neemt, elk woord dat je spreekt, wordt gefilterd door een labyrintachtig netwerk van buizen en filters. Een mengsel van krachtige kruiden en exotische specerijen vult de lucht binnenin, het stank van de dood maskerend dat als een lijkhemd om je heen hangt.</string>
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze ruggetje-persoon is verborgen onder een leer overal. Ook komt er een bittere geur van medicijnen en ... knoflook?</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Zijn skeletvingers tikken ritmisch tegen een borrelende ketel, de lucht om hem heek dik van de pittige stank van zwavel en verwesing*\n_Kobold Ijsmagiers_! Die jammerlijke wezens, gekrocht in hun bevroren grotten, wanhopig vasthoudend aan hun ijsmagie. Ik heb er vijf nodig, hun bevroren lichamen zullen... verlichtend zijn. Hun meesterwerk van ijs, het is... eigenaardig. Ik geloof dat ze aansluiten bij een oerenergie, een kracht die sluimert onder het oppervlakte van deze wereld.</string>
+    <string name="Poison_Name_1">Giftig %s</string>
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
@@ -547,6 +550,9 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 
