@@ -414,6 +414,7 @@
     <string name="Swarm_Name">נחיל זבובים</string>
     <string name="TenguLiver_Name">כבד טנגו</string>
     <string name="Tengu_Gender">masculine</string>
+    <string name="TitleScene_Badges">תגים</string>
     <string name="TitleScene_Highscores">ציונים גבוהים</string>
     <string name="TitleScene_Play">שחק</string>
     <string name="TomeOfKnowledge_Name">ספר הידע</string>
@@ -549,6 +550,7 @@
     <string name="town_deco_shieldboard_name">מגנים</string>
     <string name="town_deco_skulls_desc">גולגולות מלוטשות השייכות ליצורים מהצינוק.</string>
     <string name="town_deco_stones_desc">סתם ערימת אבנים</string>
+    <string name="town_deco_stove_desc">תנור זה מעניק חמימות נעימה</string>
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_vat_name">מיכל</string>
     <string name="town_deco_wall_candles_name">נרות</string>
@@ -557,6 +559,8 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 
