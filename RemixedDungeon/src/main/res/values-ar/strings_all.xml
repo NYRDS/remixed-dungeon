@@ -262,6 +262,7 @@
     <string name="LightningTrap_Name">فخ البرق</string>
     <string name="LloidsBeacon_Creatures">الهالة النفسية للكائنات المجاورة لا تسمح لك باستخدام منارة لويد في هذه اللحظة.</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
+    <string name="Luck_Name_0">محظوظ %s</string>
     <string name="MageArmor_ACSpecial">أرض منصهرة</string>
     <string name="MailArmor_Name">درع حلقي</string>
     <string name="MeleeWeapon_Info1c">مُطوَّر</string>
@@ -305,6 +306,7 @@
     <string name="PortalGate_Name">بوابة</string>
     <string name="PortalGate_Used">لمست البوابة و... لم يحدث شيء.</string>
     <string name="PotionBelt_Name">حزام جرعات</string>
+    <string name="PotionOfHealing_Apply">تشفى جراحك تماماً.</string>
     <string name="PotionOfMana_Name">إكسير المانا</string>
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
     <string name="PotionOfStrength_Name">جرعة القوة</string>
@@ -321,9 +323,11 @@
     <string name="PseudoPasty_Info">هذا فطيرة كورنيش أصلية مع حشوة تقليدية من اللحم والبطاطس.</string>
     <string name="PseudoRat_Name">فأر كاذب</string>
     <string name="PseudoRat_Name_Objective">فأر كاذب</string>
+    <string name="Quarterstaff_Info">عصا من خشب صلب، أطرافها مغطاة بالحديد.</string>
     <string name="Quest_DarkGoldOre_full_name">خام الذهب الداكن</string>
     <string name="RaiseDead_NoSpace">فشل إحياء الموتى لأن لا يوجد مكان حر في الجوار.</string>
     <string name="RatHide_Name">جلد الفأر</string>
+    <string name="RatKingCrownBuff_Info">عاش سيد الجرذان، سيطيع كل جرذ ويسبح.</string>
     <string name="RatKing_Died">مات الملك. ليحيا الملك!</string>
     <string name="RatKing_Name">ملك الفئران</string>
     <string name="Rat_Name_Objective">فأر الكيس</string>
@@ -531,6 +535,7 @@
     <string name="town_deco_cabinet_desc">خزانة واسعة ذات أبواب ورفوف كثيرة.</string>
     <string name="town_deco_canvas_name">قماش</string>
     <string name="town_deco_cinema_sign_desc">يبدو أن هناك سينما داخل هذا المبنى.</string>
+    <string name="town_deco_clock_desc">عقاربها متجمدة منذ وقت طويل في وضع واحد.</string>
     <string name="town_deco_counter_name">كونتر</string>
     <string name="town_deco_crate_bottles_name">صندوق بيرة</string>
     <string name="town_deco_dungeon_door_desc">مدخل إلى الزنزانة.</string>
@@ -563,6 +568,11 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
 
 
 

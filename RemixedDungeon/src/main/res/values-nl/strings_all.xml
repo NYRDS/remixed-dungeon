@@ -79,6 +79,7 @@
     <string name="Blacksmith_Verify4">Ik werk niet met vervloekte items!</string>
     <string name="Blacksmith_Verify6">Ik kan deze items niet hersmelten!</string>
     <string name="BlessedBuff_Info">Moge precisie en ontwijken komen voor hen die door de zegen zijn geraakt!</string>
+    <string name="BloodTransfusion_WontAgreed">Het slachtoffer weerst het onttrekken van zijn levensessentie.</string>
     <string name="BodyArmorBuff_Name">Lichaamspantser</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
@@ -239,6 +240,7 @@
     <string name="MeleeWeapon_Info6b">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
     <string name="MercenaryNPC_Desc">Een stevig mannetje.</string>
     <string name="MimicPie_Name">mimic</string>
+    <string name="MimicPie_Name_Objective">mimic</string>
     <string name="Mimic_Name">mimic</string>
     <string name="MindVisionBuff_Info">De innerlijke visie laat duidelijk de beweging van alle levende wezens op de verdieping zien.</string>
     <string name="MirrorImage_Desc">Deze illusie lijkt sterk op jou, maar is bleker en trilt een beetje.</string>
@@ -545,6 +547,8 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

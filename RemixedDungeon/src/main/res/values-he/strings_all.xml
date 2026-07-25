@@ -106,6 +106,7 @@
     <string name="CharAction_Charm">לְקַסֵּם</string>
     <string name="CharAction_Push">לדחוף</string>
     <string name="Char_Hit_0">%1 היכה את %2</string>
+    <string name="Char_Hit_1">%1$s היכה את %2$s</string>
     <string name="Char_StaDodged_1">התחמק</string>
     <string name="Char_StaFrightened">מבוהל</string>
     <string name="Char_StaMind">שכל</string>
@@ -512,6 +513,8 @@
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
     <string name="town_deco_curtains_name">וילונות</string>
     <string name="town_deco_entrance_name">כניסה</string>
+    <string name="town_deco_exit_desc">לא ידוע מה מחכה לך אם תרד במדרגות האלה.</string>
+    <string name="town_deco_exit_name">יציאה</string>
     <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_fireplace_desc">מצוין לחימום במקום קר כמו זה.</string>
     <string name="town_deco_glass_name">חלון רחב</string>
@@ -535,6 +538,11 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 

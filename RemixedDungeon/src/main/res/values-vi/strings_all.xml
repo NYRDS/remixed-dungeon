@@ -110,6 +110,7 @@
     <string name="Char_StaStunned">choáng váng</string>
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
     <string name="ChargrilledMeat_Name">thịt nướng than hoa</string>
+    <string name="CharmBuff_Info">Tâm trí và cơ thể đã bị mê hoặc!</string>
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
     <string name="City_TileDescDeco">Ở đây thiếu một vài viên gạch.</string>
     <string name="Claymore_Name">Kiếm Claymore</string>
@@ -119,6 +120,7 @@
     <string name="Crab_Name">cua cống</string>
     <string name="DM300_Info3">Phát hiện nhân viên không được phép.</string>
     <string name="Dagger_Info">Một cây khăn sắt đơn giản với tay cầm gỗ mòn.</string>
+    <string name="DarkSacrifice_Name">Hy Sinh Tối Tăm</string>
     <string name="DarkSacrifice_Resist">Ngươi không có quyền lực nào trên ta!</string>
     <string name="Dart_Gender">masculine</string>
     <string name="DeathKnight_Desc">Ban đầu, đây là một chiến binh mạnh mẽ trong bộ giáp nặng, và chỉ có một nụ cười chết chóc mới tiết lộ bản chất của hắn. Kỵ sĩ tử thần là sự hiện thân của linh hồn một kỵ sĩ đã thất bại trong việc giữ lời thề. Và trong trạng thái bị nguyền rủa, hắn sẽ mãi mãi lang thang tìm kiếm sự thanh tẩy qua chiến đấu, giết người vô tội, không thể nhớ ra hắn đã thề bảo vệ ai.</string>
@@ -514,6 +516,8 @@
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_desc">Ghế dài bằng gỗ, trông không thoải mái để ngồi.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
 
 
 
