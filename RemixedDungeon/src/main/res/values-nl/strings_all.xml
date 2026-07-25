@@ -154,6 +154,7 @@
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
     <string name="EncumbranceBuff_CharAct_2">Dit %s is te zwaar voor mij om effectief te gebruiken.</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
+    <string name="Exhumation_Name">Exhumatie</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Facilitations_Names_2">Djinnengeest</string>
     <string name="Fire_Info">Hier woedt een vuur.</string>
@@ -171,6 +172,7 @@
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="GoldenKey_Name">Gouden sleutel</string>
+    <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
     <string name="Halberd_Gender">feminine</string>
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileStatue">Pilaar</string>
@@ -315,6 +317,7 @@
     <string name="Ring_Gems_4">amethist</string>
     <string name="Ring_Info2">Je %1$s knelt zich pijnlijk om je vinger heen</string>
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
+    <string name="RogueArmor_Fov">Je kunt alleen naar een leeg vakje in je zichtveld teleporteren</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
     <string name="RottenFood_Message">Walging!</string>
     <string name="RottenRation_Name">Bedederde ratoen</string>
@@ -421,6 +424,7 @@
     <string name="Wand_Prompt">Kies een richting om te zappen</string>
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
+    <string name="Wand_Wood_Types_8">bamboe</string>
     <string name="WarHammer_Name">Oorlogshemel</string>
     <string name="WarriorArmor_Prompt">Kies een richting om te springen</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
@@ -550,6 +554,10 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 

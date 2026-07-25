@@ -155,6 +155,7 @@
     <string name="FetidRat_Name">chuột hôi</string>
     <string name="FetidRat_Name_Objective">chuột hôi</string>
     <string name="Fez_Name">Mũ Fez</string>
+    <string name="FireArrow_Gender">feminine</string>
     <string name="Fire_Name_1">Đang cháy %s</string>
     <string name="Firebloom_Name">Hoa Lửa</string>
     <string name="Foliage_Info">Các tia sáng chọc xuyên màn sương của khu vườn ngầm.</string>
@@ -276,6 +277,7 @@
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
     <string name="PotionOfMight_Name">Bình Thuốc Mạnh Mẽ</string>
     <string name="PotionOfMindVision_Apply2">Bạn có thể cảm nhận được rằng bạn là sinh vật sống duy nhất trên tầng này lúc này.</string>
+    <string name="PotionOfPurity_NoSmell">Bạn đã ngừng cảm nhận được mùi hương nào cả!</string>
     <string name="Potion_ACMoisten">LÀM ẨM</string>
     <string name="Potion_Name">%s thuốc</string>
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
@@ -305,6 +307,7 @@
     <string name="Ring_Info4">%1$s\n\nBạn có thể cảm thấy một phép thuật độc ác ẩn mình bên trong %2$s.</string>
     <string name="RottenFood_Message">Ghét quá!</string>
     <string name="RottenPasty_Info">Cái pasty này trông khá ghê.</string>
+    <string name="RottenPumpkinPie_Info">Dù bánh bí ngon đến đâu khi còn tươi, giờ thì chắc chắn không thể ăn được.</string>
     <string name="RottenRation_Name">Cơm khô hỏng</string>
     <string name="RunicSkull_Desc">Đối với thứ gì đó được tạo ra nhân tạo, chiếc sọ này quá giống một chiếc sọ thật. Bạn cũng có thể thấy một chút ánh sáng yếu ớt bao quanh nó.</string>
     <string name="SacrificialSword_Name">kiếm hiến tế</string>
@@ -522,6 +525,9 @@
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_desc">Ghế dài bằng gỗ, trông không thoải mái để ngồi.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+
+
+
 
 
 

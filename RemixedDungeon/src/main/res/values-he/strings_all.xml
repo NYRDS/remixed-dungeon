@@ -179,6 +179,7 @@
     <string name="Ghost_Name_Objective">רוח</string>
     <string name="Glaive_Name">גלייב</string>
     <string name="Gnoll_Gender">masculine</string>
+    <string name="GoldenKey_Info">החריצים במפתח הזהב הזעיר והמסובך. אולי הוא יכול לפתוח מנעול של תיבה כלשהי?</string>
     <string name="GoldenKey_Name">מפתח זהב</string>
     <string name="Golem_Name">גולם</string>
     <string name="GothicArmor_Name">שריון גותי</string>
@@ -319,6 +320,7 @@
     <string name="Potion_Info">בקבוקון זה מכיל נוזל %s מסתחרר. מי יודע מה יקרה כשתשתה או תזרוק אותו?</string>
     <string name="Potion_No">לא, שיניתי את דעתי</string>
     <string name="Potion_RuneDissaperaed">הרונה נעלמה מ-%s.</string>
+    <string name="Potion_Shatter">הבקבוק מתנפץ ו-%s נוזל מתפזר ללא נזק</string>
     <string name="Potion_SureThrow">האם אתה בטוח שאתה רוצה לזרוק את זה? ברוב המקרים הגיוני לשתות את זה.</string>
     <string name="PseudoPasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
     <string name="PseudoPasty_Name">מאפה בשר</string>
@@ -334,6 +336,7 @@
     <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
     <string name="ResultDescriptions_Poison">מת מרעל בקומה %d</string>
     <string name="RingOfEvasion_Info">טבעת זו מגדילה את הסיכוי שלך להתחמק מהתקפת אויב.</string>
+    <string name="RingOfFrost_Name">טבעת הכפור</string>
     <string name="RingOfHerbalism_Info">טבעת זו מגדילה את הסיכוי שלך לאסוף טל וזרעים מעשב רמוס.</string>
     <string name="RingOfPower_Info">השרביטים שלך יהפכו לחזקים יותר בשדה האנרגיה שמקרינה טבעת זו. טבעות כוח מוחלשות דווקא יחלישו את השרביטים שלך.</string>
     <string name="RingOfPower_Name">טבעת הכוח</string>
@@ -415,6 +418,7 @@
     <string name="TownsfolkNPC_Message3">איזה יום נפלא.</string>
     <string name="TownsfolkNPC_Message4">אני מקווה שהביוב לא יוצף כשהאביב יגיע. אנחנו לא צריכים עוד מכת עכברים.</string>
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
+    <string name="TownsfolkSilentNPC_Message1">המפ!</string>
     <string name="TownsfolkSilentNPC_Message3">המממ...</string>
     <string name="TownsfolkSilentNPC_Name">תושב העיר</string>
     <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
@@ -542,6 +546,10 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 
