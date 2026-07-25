@@ -378,6 +378,7 @@
     <string name="Shaman_Name_Objective">شامان جنول</string>
     <string name="Sheep_Desc">هذه خروف سحري. ما الذي يجعله سحرياً؟ لا يمكنك قتله. سيبقى في مكانه حتى يختفي سحرياً، بينما يمضغ الطعام بنظرة خالية.</string>
     <string name="ShieldWeaponInfo">عند استخدامه كسلاح، سيُلحق هذا الدرع ضررًا بمعدل %1$d في المتوسط.</string>
+    <string name="Shielded_Name">الغريم المحمي بالدرع</string>
     <string name="Shielded_Name_Objective">الوحش المحمي</string>
     <string name="ShootInEye_Name">رمية في العين</string>
     <string name="ShortSword_ACReforge">إعادة الصياغة</string>
@@ -409,6 +410,7 @@
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
     <string name="SuspiciousRat_Info1">الفأر المشبوه يرتجف بعنف.</string>
     <string name="Swarm_Name">سرب ذباب</string>
+    <string name="Tamahawk_Info">على الرغم من أن هذا الفأس الرمي ليس ثقيلاً جداً، إلا أنه لا يزال يتطلب قوة كبيرة لاستخدامه بفعالية.</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Thief_Carries">\n\n%1 يحمل _%2. مسروق بالطبع.</string>
     <string name="Thief_Stole">%1$s سرق %2$s منك!</string>
@@ -434,6 +436,7 @@
     <string name="Viscosity_Txt">%s من اللزوجة</string>
     <string name="WandMaker_Defense">امتص</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
+    <string name="WandOfDisintegration_Info">تُصدر هذه العصا شعاعاً من الطاقة المدمرة، يخترق جميع الكائنات في طريقه. كلما أصاب أهدافاً أكثر، زاد الضرر الذي يلحقه بكل منها.</string>
     <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية الخالصة، مسببة ضرراً معتدلاً للهدف.</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
     <string name="WandOfTeleportation_Info2">لم يحدث شيء</string>
@@ -498,6 +501,7 @@
     <string name="WndSettings_Quickslots">فتحات الوصول السريع</string>
     <string name="WndSettings_SelectLanguage">اختر اللغة</string>
     <string name="WndSettings_Sound">المؤثرات الصوتية</string>
+    <string name="WndSettings_ZoomIn">+</string>
     <string name="WndStory_Halls">في الماضي كانت هذه المستويات تعتبر ضواحي المتروبوليس. انتصار الحرب ضد الإله القديم كلف الأقزام ثمناً باهظاً، وكانوا غير قادرين على تطهير المنطقة من الشياطين المتبقية. تدريجياً سيطر الشياطين على هذا المكان والآن يُدعى قاعات الشياطين.\n\nقليل جداً من المغامرين نزلوا إلى هذا العمق...</string>
     <string name="WndStory_Prision">منذ سنوات عديدة، تم بناء سجن تحت الأرض هنا لأخطر المجرمين. في ذلك الوقت، بدت فكرة ذكية لأن هذا المكان كان صعب الهروب منه حقًا. لكن سرعان ما بدأت أبخرة داكنة بالتسرب من الأسفل، مما أصاب السجناء والحراس بالجنون. في النهاية، تم التخلي عن السجن، تاركين بعض السجناء محبوسين هنا.</string>
     <string name="WndStory_Sewers">يقع الزنزانة مباشرة تحت المدينة، حيث تشكل مستوياته العليا نظام الصرف الصحي للمدينة. وباعتبارها اسمياً جزءاً من المدينة، فإن هذه المستويات ليست خطرة جداً. لن يسميها أحد مكاناً آمناً، لكنك على الأقل لن تضطر للتعامل مع الكثير من السحر الشرير هنا.</string>
@@ -559,6 +563,13 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
 
 
 

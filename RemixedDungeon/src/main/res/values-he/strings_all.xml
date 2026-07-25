@@ -181,6 +181,7 @@
     <string name="Golem_Name">גולם</string>
     <string name="GothicArmor_Name">שריון גותי</string>
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
+    <string name="Guts_TileDescExit">חור פעור ברצפה מוביל מטה למפלסים התחתונים</string>
     <string name="Guts_TileGrass">שיח מיובש</string>
     <string name="Halberd_Info">כידון המורכב מגרזן על קצה מוט.</string>
     <string name="Halls_TileStatue">עמוד</string>
@@ -213,6 +214,7 @@
     <string name="HungerBuff_Name2">מורעב</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
     <string name="HuntressArmor_NoEnemies">אין אויבים בטווח ראייה</string>
+    <string name="HuntressArmor_NotHuntress">רק ציידות יכולות להשתמש בשריון זה!</string>
     <string name="IceCaves_TileDescDeco">הגנול הזה הוקפא חי. כנראה שהוא נמצא שם כבר הרבה זמן.</string>
     <string name="IceCaves_TileDescStatue">עוד פסל נורא... רגע, זה גנול קפוא.</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
@@ -284,6 +286,7 @@
     <string name="Pasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
     <string name="Pasty_Name">מאפה בשר</string>
     <string name="Pasty_Name_Objective">מאפה בשר</string>
+    <string name="PetInventory_ACTakeFromPet">קח מהחיה</string>
     <string name="PetInventory_TooFar">רחוק מדי מחיית המחמד</string>
     <string name="Piercing_Name_0">חודר %s</string>
     <string name="Piercing_Name_1">חודר %s</string>
@@ -367,6 +370,7 @@
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Name">שמאן גנול</string>
     <string name="Shaman_Name_Objective">גנול שאמאן</string>
     <string name="Sheep_Desc">זוהי כבשה קסומה. מה קסום בה? אינך יכול להרוג אותה. היא תעמוד במקום עד שתיעלם בקסם, בזמן שהיא לועסת גרה במבט ריק.</string>
@@ -419,6 +423,7 @@
     <string name="WandHolster_Name">נרתיק שרביטים</string>
     <string name="WandMaker_Dust2">הצלחת למצוא אבק גופות, %s? ערימות עצמות הן המקומות הכי ברורים לחפש בהם.</string>
     <string name="WandOfAvalanche_Info">כאשר פיצוץ של השרביט פוגע בקיר (או בכל מכשול מוצק אחר) הוא גורם למפולת אבנים, פוגע ומהלם את כל היצורים באזור הפגיעה.</string>
+    <string name="WandOfDisintegration_Info">מקל זה פולט אלומת אנרגיה הרסנית, החודרת את כל היצורים בדרכה. ככל שהיא פוגעת ביותר מטרות, כך היא גורמת נזק רב יותר לכל אחת מהן.</string>
     <string name="WandOfPoison_Name">שרביט רעל</string>
     <string name="WandOfShadowbolt_Info">שרביט זה פולט אנרגיה אפלה וזדונית.</string>
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
@@ -530,6 +535,11 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 
