@@ -82,6 +82,7 @@
     <string name="CagedKobold_Message1">בבקשה...</string>
     <string name="CagedKobold_Quest_End">אוי, תודה לך, תודה רבה! איך הצלחת למצוא את המפתח? אתה... אתה השמדת את הנשק?! זה מדהים! אתה יודע מה, אמרתי שאעזור לך, ואני חושב שאני יודע את הדרך הטובה ביותר. אני אשאר איתך לזמן מה. * הקובולד הכלוא הפך לנר</string>
     <string name="CandleOfMindVision_Info">נראה כמו נר רגיל, לא משהו שהיית מצפה למצוא בצינוק מסוכן. מוזר שזה די חם למגע, למרות שזה עדיין לא הודלק.</string>
+    <string name="Candy_Info">הסוכרייה הזאת נראית כל כך יפה ומריחה גם טוב. אתה באמת צריך לתת אותה למישהו אחר?</string>
     <string name="Candy_Name">ממתק</string>
     <string name="Capotain_Name">כובע פוריטני</string>
     <string name="Carcass_DevourMessage">טרפת גופה של %s!</string>
@@ -171,6 +172,7 @@
     <string name="Facilitations_Names_0">ללא רעב</string>
     <string name="Facilitations_Names_3">כוח ענק</string>
     <string name="FetidRat_Name_Objective">עכברוש מצחין</string>
+    <string name="FireArrow_Gender">masculine</string>
     <string name="FireElemental_Desc">אלמנטלי אש נודדים הם תוצר לוואי של זימון ישויות גדולות. הם יותר מדי כאוטיים באופיים כדי להיות נשלטים אפילו על ידי הדמונולוג החזק ביותר.</string>
     <string name="Fire_Name_1">בוער %s</string>
     <string name="Firebloom_Desc">כאשר משהו נוגע בפרח אש, הוא פורץ בלהבות.</string>
@@ -548,6 +550,7 @@
     <string name="town_deco_barrel_wine_name">חבית יין</string>
     <string name="town_deco_cabinet_name">ארון</string>
     <string name="town_deco_canvas_name">קנבס</string>
+    <string name="town_deco_counter_desc">שומר על מרחק טוב בינך לבין האדם שעומד מאחוריו.</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
     <string name="town_deco_curtains_name">וילונות</string>
     <string name="town_deco_entrance_name">כניסה</string>
@@ -577,6 +580,10 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 

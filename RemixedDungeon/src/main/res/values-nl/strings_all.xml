@@ -91,6 +91,7 @@
     <string name="BurningFist_Name">brandende vuist</string>
     <string name="CagedKobold_Intro">Hé... Hé! Jij bent die avonturier, toch? Help me eens, maat, die verdomme militaristen hebben me hier opgesloten! Ze willen een oud wapen heractiveren om de mensen op het oppervlak te veroveren! Maar gezien hoe gevaarlijk het is, was ik het er niet mee eens, dus hebben ze me gewoon buiten gezet en in een kooi gesloten! Ik bid je de sleutel van de cel te vinden, en als dank zal ik je helpen waar ik kan.</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
+    <string name="Candy_Info">Deze snoep ziet er zo mooi uit en ruikt ook lekker. Moet je hem echt aan iemand anders geven?</string>
     <string name="Candy_Name">snoepje</string>
     <string name="Capotain_Name">Puriteinse hoed</string>
     <string name="Carcass_Necromancy">Je hebt het lijk van %s opgewekt!</string>
@@ -295,6 +296,7 @@
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
     <string name="Possess_Name">Bezetting</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
+    <string name="PotionOfInvisibility_Info">Als je deze drank opdrinkt, wordt je tijdelijk onzichtbaar. Terwijl je onzichtbaar bent, kunnen vijanden je niet zien. Een vijand aanvallen, evenals een toverstaf of een rol voor de ogen van een vijand gebruiken, doet het effect verdwijnen.</string>
     <string name="PotionOfLiquidFlame_Info">Deze fles bevat een onstabiel mengsel dat heftig in vlammen opgaat bij contact met de open lucht.</string>
     <string name="PotionOfLiquidFlame_Name">Drankje van Vloeibare Vlam</string>
     <string name="PotionOfMight_Apply">Nieuwverkregen kracht stroomt door je lichaam.</string>
@@ -583,4 +585,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 </resources>
