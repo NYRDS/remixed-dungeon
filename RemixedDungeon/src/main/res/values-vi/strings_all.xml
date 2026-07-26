@@ -180,6 +180,7 @@
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
     <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
     <string name="HeroClass_GnollPerks_3">Gnoll không thể đọc hoặc viết.</string>
+    <string name="HeroClass_HunPerks_1">Các Nữ Thợ Săn bắt đầu với một bumerang độc đáo có thể nâng cấp.</string>
     <string name="HeroClass_HunPerks_4">Các Nữ Săn Bắt có thể cảm nhận quái vật lân cận ngay cả khi chúng bị che khuất bởi chướng ngại vật.</string>
     <string name="HeroClass_Mag">pháp sư</string>
     <string name="HeroClass_MagPerks_2">Khi ăn, bất kỳ món ăn nào cũng khôi phục 1 sạc cho tất cả cây gậy phép trong túi đồ.</string>
@@ -732,6 +733,7 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
 
 
 

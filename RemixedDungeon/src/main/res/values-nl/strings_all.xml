@@ -239,6 +239,7 @@
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
     <string name="Level_TileLockedDoor">Gesloten deur</string>
     <string name="Level_TileLockedExit">Vergrendelde uitgang naar de diepte</string>
+    <string name="Level_TileOpenDoor">Open deur</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="Lich_DieInfo">Ik vond deze nekromant nooit leuk. Het is dus tijd om terug te keren naar niveau 7 en een andere weg naar het nieuwe avontuur te vinden.</string>
     <string name="Lich_Gender">masculine</string>
@@ -580,6 +581,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 

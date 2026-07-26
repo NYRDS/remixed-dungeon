@@ -35,6 +35,7 @@
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
+    <string name="ArmoredStatue_Name">פסל מונפש</string>
     <string name="AzuterronNPC_Name_Objective">זר</string>
     <string name="BadgesScene_Title">התגים שלך</string>
     <string name="Badges_AllBags">כל התיקים נקנו</string>
@@ -576,6 +577,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 
