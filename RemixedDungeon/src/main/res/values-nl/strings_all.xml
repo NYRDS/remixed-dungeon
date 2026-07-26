@@ -168,6 +168,7 @@
     <string name="FortuneTellerNPC_Name">waarzegster</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
+    <string name="FrozenCarpaccio_Info2">Je voelt je verharden!</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
     <string name="GasImmuneBuff_Name">Gasimmuniteit</string>
@@ -398,6 +399,7 @@
     <string name="Stylus_Name">tooverstylus</string>
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
     <string name="Swarm_Name">vliegenzwerm</string>
     <string name="Swarm_Name_Objective">vliegenzwerm</string>
@@ -574,6 +576,9 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 

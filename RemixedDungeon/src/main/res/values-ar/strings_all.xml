@@ -367,6 +367,7 @@
     <string name="Roar_Name">زئير</string>
     <string name="RogueArmor_ACSpecial">قنبلة دخان</string>
     <string name="RootSpell_Info">يحبس الشخصية المختارة، مما يمنعها من الحركة لفترة قصيرة.</string>
+    <string name="RottenFish_Info">سمك متعفن، تفوح منه رائحة كريهة</string>
     <string name="RottenFood_Message">مقزز!</string>
     <string name="RottenMeat_Name">لحم متعفن</string>
     <string name="RottenOrgan_Name">عضو متعفن</string>
@@ -504,6 +505,7 @@
     <string name="WndInfoItem_Chest">صندوق</string>
     <string name="WndInfoItem_Owner">قد يحتوي هذا القبر القديم على شيء مفيد، لكن مالكه سيعترض بالتأكيد على التفتيش.</string>
     <string name="WndInfoItem_Remains">هذا كل ما تبقى من أحد أسلافك. ربما يستحق التحقق من وجود أي مقتنيات قيمة.</string>
+    <string name="WndInstallingMod_copying_file">جاري نسخ %s إلى تخزين Remixed Dungeon</string>
     <string name="WndItemAlchemy_SelectRecipe">اختر الوصفة</string>
     <string name="WndJournal_Levels">المستويات</string>
     <string name="WndJournal_Title">اليوميات</string>
@@ -601,6 +603,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 
