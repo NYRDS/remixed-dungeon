@@ -487,6 +487,7 @@
     <string name="Wnd_Button_Yes">Có</string>
     <string name="WoodenBow_Info">Cây cung gỗ đơn giản này có thể hữu ích, khi bạn tìm được một vài mũi tên.</string>
     <string name="Worm_Gender">masculine</string>
+    <string name="Worm_Name">giun</string>
     <string name="Wraith_Desc">Một oan hồn là linh hồn oán giận của một kẻ có tội, mộ hoặc lăng mộ của họ bị quấy rối. Là một thực thể phi vật chất, rất khó đánh trúng chúng bằng vũ khí thông thường.</string>
     <string name="Wraith_Name">oan hồn</string>
     <string name="WrnExperimental_hint">Nếu thế giới kỳ lạ và u ám này quá khắc nghiệt với bạn, hãy tắt các tùy chọn này bằng cách:\nMàn hình chính -&gt; Cài đặt -&gt; Cách chơi\nvà bắt đầu một ván mới hoặc tải một ván khác.</string>
@@ -719,6 +720,7 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
 
 
 

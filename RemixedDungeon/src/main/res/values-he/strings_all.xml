@@ -163,6 +163,7 @@
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EquipableItem_ACUnequip">לְהַסִיר</string>
     <string name="ExplodingSkull_Desc">גולגולת צפה ובוערת זו נראית שבירה ביותר, ונראית כאילו היא עומדת להתפרק לרסיסים בכל רגע.</string>
+    <string name="Facilitations_Names_0">ללא רעב</string>
     <string name="Facilitations_Names_3">כוח ענק</string>
     <string name="FetidRat_Name_Objective">עכברוש מצחין</string>
     <string name="FireElemental_Desc">אלמנטלי אש נודדים הם תוצר לוואי של זימון ישויות גדולות. הם יותר מדי כאוטיים באופיים כדי להיות נשלטים אפילו על ידי הדמונולוג החזק ביותר.</string>
@@ -246,6 +247,8 @@
     <string name="King_Info3">איך אתה מעז!</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KunaiThrow_Name">זריקת קונאי</string>
+    <string name="Larva_Name">לרבת אלוהים</string>
+    <string name="Larva_Name_Objective">לרבת אלוהים</string>
     <string name="LastLevel_TileGrass">טחב גחלים</string>
     <string name="LastLevel_TileHighGrass">פטריות גחלת</string>
     <string name="LastShopLevel_TileDescEmptySP">שטיח עבה מכסה את הרצפה.</string>
@@ -337,6 +340,9 @@
     <string name="Quiver_Info">אשפת עור המתאימה להחזיק כל כמות של חיצים</string>
     <string name="RatHide_Name">עור חולדה</string>
     <string name="RatSkull_Info">זה יכול להיות גביע ציד נחמד, אבל זה מריח רע מכדי לתלות את זה על הקיר.</string>
+    <string name="Rat_Desc">חולדות כיס הן תוקפניות, אך די חלשות — הן תושבות הביוב. הן עלולות להיות מסוכנות רק בכמויות גדולות.</string>
+    <string name="Rat_Name">חולדת כיס</string>
+    <string name="Rat_Name_Objective">חולדת כיס</string>
     <string name="Ration_Info">אין כאן שום דבר מפואר: בשר מיובש, כמה ביסקוויטים — דברים כאלה.</string>
     <string name="RawFish_Taste">דגיגי!</string>
     <string name="RegenerationBuff_Info">הפונקציה לריפוי טבעי ממומשת בצורת באף כדי להקל על הדברים.</string>
@@ -514,6 +520,7 @@
     <string name="WndTradeItem_SellAll">מכור הכל עבור %dg</string>
     <string name="WndTradeItem_Sold">מכרת את ה-%1 תמורת %2</string>
     <string name="WoodenShield_name">מגן עץ</string>
+    <string name="Worm_Name">תולעת</string>
     <string name="WrnExperimental_realtime">מצב זמן אמת הופעל: זה עכשיו רוגלייק בזמן אמת, הקש מהר או תמות.\nרוצה לבדוק מלאי?\nבהצלחה עם זה בזמן שסרטן הביוב בודק את הקרביים שלך.</string>
     <string name="WrnExperimental_title">אפשרויות ניסיוניות הופעלו!</string>
     <string name="Yog_Info2">תקווה היא אשליה...</string>
@@ -559,6 +566,15 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
 
 
 
