@@ -14,11 +14,14 @@
     <string name="AboutScene_OurSite">موقعنا:</string>
     <string name="AboutScene_Snd">إرسال بريد إلكتروني</string>
     <string name="AboutScene_Sound">الصوت:</string>
+    <string name="AboutScene_SourceCode">الحصول على كود مصدر Remixed Dungeon:</string>
+    <string name="AboutScene_Thanks">شكر خاص لـ:</string>
     <string name="Accuracy_Decreased">لماذا ظننت أنني أستطيع استخدام %s؟ أداة خاطئة، أيدي خاطئة!</string>
     <string name="Accuracy_DecreasedDoctor">كل ضربة من هذا %s تنشر العيوب. منشار عظامي يشفي... هذا يصيب بعدوى.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">يداي العاريتان تفسدان تقنيتي. بدون قطع المنشار النظيف، تتحول دقتي إلى فوضى.</string>
     <string name="Acidic_Name_Objective">العقرب الحمضي</string>
     <string name="Albino_Desc">فئران الجراب عدوانية، لكنها ضعيفة نسبياً في المجاري. يمكن أن تكون خطرة فقط بأعداد كبيرة. يبدو أن هذا الفأر مهق (ألبينو). كما أن لديه أسناناً حادة بشكل غير طبيعي.</string>
+    <string name="Albino_Name_Objective">فأر ألبينو</string>
     <string name="AllowStatisticsCollectionScene_Allow">السماح</string>
     <string name="AllowStatisticsCollectionScene_Deny">رفض</string>
     <string name="AllowStatisticsCollectionScene_Title">جمع إحصائيات الاستخدام</string>
@@ -67,6 +70,7 @@
     <string name="Badges_RingThorns">تم الحصول على خاتم الأشواك</string>
     <string name="Badges_ShadowLord_Slain">تم هزيمة سيد الظلال</string>
     <string name="Badges_StrengthAttained3">تم تحقيق 17 نقطة من القوة</string>
+    <string name="Badges_Yasd">الموت من النار، السم، الغاز السام والجوع</string>
     <string name="BardNPC_Desc">يعزف باردة المدينة على العود.</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
     <string name="Barrel_Name">برميل</string>
@@ -208,6 +212,7 @@
     <string name="HeroClass_NecromancerPerks_1">يستخدم السحرة الماؤتون المانا لإلقاء تعاويذ الموت.</string>
     <string name="HeroClass_NecromancerPerks_2">يبدأ النكرومانسر برداء نكرومانسر فريد، يمنح نقطة مانا واحدة لكل مخلوق يُقتل.</string>
     <string name="HeroClass_NecromancerPerks_3">يبدأ النيكرومانسر بمفتاح هيكل عظمي من المستوى 7.</string>
+    <string name="HeroClass_Priest">كاهن</string>
     <string name="HeroClass_Rog">لص</string>
     <string name="HeroClass_RogPerks_5">تتم معرفة لفائف رسم الخرائط السحرية من البداية.</string>
     <string name="HeroClass_WarPerks_3">أي قطعة طعام تستعيد بعض الصحة عند أكلها.</string>
@@ -221,6 +226,7 @@
     <string name="Horror_Name_1">%s مخيف</string>
     <string name="HuntressArmor_Name">رداء الصياد</string>
     <string name="HuntressArmor_NoEnemies">لا يوجد أعداء مرئيون</string>
+    <string name="HuntressArmor_NotHuntress">يمكن للصيادات فقط استخدام هذا الدرع!</string>
     <string name="IceCaves_TileDescDeco">تم تجميد هذا الغنول وهو حي. على ما يبدو، أنه كان هناك منذ فترة طويلة.</string>
     <string name="IceCaves_TileGrass">عشب متجمد.</string>
     <string name="IceElemental_Name_Objective">عنصراً جليدياً</string>
@@ -345,6 +351,7 @@
     <string name="RawFish_Name">سمك نيء</string>
     <string name="RemixedPixelDungeonApp_sendCrash">لعبةنا تعطلت...\n عذراً.\nيرجى إرسال تقرير العطل لمساعدتنا في إصلاحه.</string>
     <string name="ResultDescriptions_Hunger">مات جوعاً في المستوى %d</string>
+    <string name="ResultDescriptions_Immured">تم دفنك حيًا في الحجر على المستوى %d</string>
     <string name="ResultDescriptions_Necromancy">نضبت قواه الحيوية أثناء محاولة تحريك جثة في المستوى %d</string>
     <string name="ResultDescriptions_Trap">قتل بتفريغ %1$s في المستوى %2$d</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
@@ -439,6 +446,7 @@
     <string name="TitleScene_Play">اللعب</string>
     <string name="TomeOfMastery_Blinded">لا يمكنك القراءة وأنت أعمى</string>
     <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
+    <string name="Torch_Info">إنه عنصر لا غنى عنه في قاعات الشياطين، المشهورة بإضاءتها الضعيفة.</string>
     <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
     <string name="TownGuardNPC_Message3">هل تظن أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، ذلك لأن هذه المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
     <string name="TownGuardNPC_Name">حارس المدينة</string>
@@ -495,6 +503,7 @@
     <string name="WndHero_Depth">أقصى عمق</string>
     <string name="WndInfoItem_Chest">صندوق</string>
     <string name="WndInfoItem_Owner">قد يحتوي هذا القبر القديم على شيء مفيد، لكن مالكه سيعترض بالتأكيد على التفتيش.</string>
+    <string name="WndInfoItem_Remains">هذا كل ما تبقى من أحد أسلافك. ربما يستحق التحقق من وجود أي مقتنيات قيمة.</string>
     <string name="WndItemAlchemy_SelectRecipe">اختر الوصفة</string>
     <string name="WndJournal_Levels">المستويات</string>
     <string name="WndJournal_Title">اليوميات</string>
@@ -554,6 +563,7 @@
     <string name="town_deco_blue_carpet_name">سجادة</string>
     <string name="town_deco_book_desc">يبدو هذا الكتاب وكأن شخصًا ما تركه بإهمال هنا</string>
     <string name="town_deco_broken_wall_name">جدار متهدم</string>
+    <string name="town_deco_brown_carpet_desc">هذا السجاد البني قد وطئته أقدام العديد من المغامرين والمتشردين والمارة.</string>
     <string name="town_deco_cabinet_desc">خزانة واسعة ذات أبواب ورفوف كثيرة.</string>
     <string name="town_deco_canvas_name">قماش</string>
     <string name="town_deco_cinema_sign_desc">يبدو أن هناك سينما داخل هذا المبنى.</string>
@@ -591,6 +601,16 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

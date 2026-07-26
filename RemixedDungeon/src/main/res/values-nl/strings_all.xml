@@ -28,6 +28,7 @@
     <string name="AmuletScene_Exit">Mijn taak hier is voltooid</string>
     <string name="AmuletScene_Stay">Ik ben er nog niet klaar mee</string>
     <string name="AmuletScene_Txt">Eindelijk houd je het in je handen, het Amulet van Yendor. Met zijn kracht kun je de wereld veroveren of vrede en voorspoed brengen of wat dan ook. In ieder geval zal je leven voor altijd veranderen en dit spel eindigt hier. Of je kunt nog even een gewone sterfelijke blijven.</string>
+    <string name="AnesthesiaBuff_Info">Voelt geen pijn en wakert niet op bij aanvallen, maar krijgt nog steeds schade.</string>
     <string name="ArmorKit_Name">rustingset</string>
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
@@ -66,6 +67,7 @@
     <string name="Badges_StrengthAttained4">19 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained5">21 punten Kracht bereikt</string>
     <string name="Bag_ACOpen">OPENEN</string>
+    <string name="Bandit_Desc">De diepere verdiepingen van de dungeon hebben altijd een schuilplaats geboden voor allerlei criminelen. Niet iedereen kon gezond van verstand blijven tijdens hun lange verblijf ver van het daglicht. Lange geleden zijn deze dolle dieven en bandieten vergeten wie ze zijn en waarom ze stelen. Deze bandiet lijkt zijn dolk met iets te hebben bestreken!</string>
     <string name="Bandit_Name">gekke bandiet</string>
     <string name="Barrel_Pumpkin_Name">pompoen</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
@@ -120,6 +122,7 @@
     <string name="ChristmasTurkey_Name">festelijke kalkoen</string>
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="City_TileDescDeco">Er missen hier verschillende tegels.</string>
+    <string name="Claymore_Info">Dit massive zwaard zou door alles moeten kunnen snijden.</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
@@ -326,6 +329,7 @@
     <string name="RogueArmor_Fov">Je kunt alleen naar een leeg vakje in je zichtveld teleporteren</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
     <string name="RottenFood_Message">Walging!</string>
+    <string name="RottenPumpkinPie_Info">Hoewel het vers wel heerlijk was, is er geen manier dat het nog eetbaar is.</string>
     <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="RunicSkull_Desc">Voor iets kunstmatig gemaakts lijkt deze schedel te veel op een echte. Je ziet ook een zwakke gloed om het heen.</string>
     <string name="SacrificialSword_Gender">masculine</string>
@@ -465,6 +469,7 @@
     <string name="WndHero_Awareness">Aandacht</string>
     <string name="WndImp_Message">Oh ja! Je bent mijn held!\nWat je beloning betreft, ik heb geen contant geld bij me, maar ik heb iets beters voor je. Dit is mijn familie-erfstukring: mijn opa haalde het van een dode paladijn af.</string>
     <string name="WndInfoItem_Chest">Kist</string>
+    <string name="WndInfoItem_Remains">Dit is alles wat overblijft van een van je voorgangers. Misschien is het de moeite waard om te kijken of er waardevolle items in zitten.</string>
     <string name="WndInfoItem_Skeleton">Skelettenresten</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Recept uitvoeren</string>
     <string name="WndItemAlchemy_NoRecipes">Geen recepten beschikbaar met dit item en je huidige inventaris.</string>
@@ -485,8 +490,10 @@
     <string name="WndPlayGames_RestoreProgress">Spelvoortgang herstellen</string>
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
     <string name="WndPlayGames_Show_Ok">Gelukt!</string>
+    <string name="WndPortal_Warning_Title">Portaal Waarschuwing!</string>
     <string name="WndPremiumSettings_marble">marmer</string>
     <string name="WndPremiumSettings_ruby">robijn</string>
+    <string name="WndPriest_Instruction2_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa de Heer der Diepten!</string>
     <string name="WndRanking_StaAlchemy">Gebrouwen Dranken</string>
     <string name="WndRanking_StaChallenges">Uitdagingen</string>
     <string name="WndRanking_StaDuration">Spelduur</string>
@@ -567,6 +574,13 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
 
 
 
