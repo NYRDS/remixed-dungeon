@@ -237,6 +237,7 @@
     <string name="IceCaves_TileDescDeco">הגנול הזה הוקפא חי. כנראה שהוא נמצא שם כבר הרבה זמן.</string>
     <string name="IceCaves_TileDescStatue">עוד פסל נורא... רגע, זה גנול קפוא.</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
+    <string name="IceElemental_Name_Objective">אלמנטל קרח</string>
     <string name="IceGuardian_Name_Objective">שומר קרח</string>
     <string name="Ignite_Info">מדליק את התא הנבחר. ניתן להשתמש כדי לשרוף עשב, דמויות וחפצים.</string>
     <string name="ImpShopkeeper_Name">אימפ שאפתן</string>
@@ -304,6 +305,7 @@
     <string name="Nightmare_Gender">masculine</string>
     <string name="Ooze_Death">%s בולע אותך...</string>
     <string name="Order_Resist">איך אתה מעז?!!</string>
+    <string name="ParalysisArrow_Name">חץ משתק</string>
     <string name="Paralysis_Name_2">מהממת %s</string>
     <string name="Pasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
     <string name="Pasty_Name">מאפה בשר</string>
@@ -427,6 +429,7 @@
     <string name="Stylus_Info">עט מיסטי זה עשוי מאבן כהה וקשה במיוחד. בעזרתו ניתן לחרוט גליף או רונה, אך העט הוא זה שקובע מה ייחרט, לא אתה.</string>
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
     <string name="Swarm_Name">נחיל זבובים</string>
+    <string name="Sword_Info">הברק של הלהב החד כתער מעניק ביטחון.</string>
     <string name="TenguLiver_Name">כבד טנגו</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="TitleScene_Badges">תגים</string>
@@ -580,6 +583,9 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 
