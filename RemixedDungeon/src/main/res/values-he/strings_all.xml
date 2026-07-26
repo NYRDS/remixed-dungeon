@@ -130,6 +130,7 @@
     <string name="ClothArmor_Name">שריון בד</string>
     <string name="Codex_Story_16">נשק בר מזל - כמעט מתעלם לחלוטין משריון האויב, וגורם להרבה יותר נזק.</string>
     <string name="Codex_Story_17">נשק מהמם - במכה מוצלחת, עלול לשתק את המטרה.</string>
+    <string name="Codex_Story_22">ספר זה כתוב בשפה של שדים</string>
     <string name="Codex_Story_23">הספר הזה כתוב בשפה הגמדית</string>
     <string name="Codex_Story_9">גליף תזוזה - בכל פעם שהגיבור נפגע, יש סיכוי שהגיבור יטלפורט לאריח גלוי אקראי. גליף זה לא עובד ברמות בוס.</string>
     <string name="ColdSpirit_Desc">רוח הקור היא התגלמות הכפור, בצורתו הטהורה ביותר. בהיותה גוש חסר מודע של אנרגיה קסומה, היא מצייתת לרצון המכשף שקרא לה או פועלת לפי אינסטינקטים בסיסיים.</string>
@@ -141,6 +142,7 @@
     <string name="CorpseDustBuff_Info">התקפות מתגברות מאוד עבור אלו שמלאים בצמא דם, מה שהופך אותם למסוכנים במיוחד.</string>
     <string name="CorpseDust_Info">כדור אבק הגופות לא נראה שונה מכדור אבק רגיל. עם זאת, אתה יודע איכשהו שעדיף להיפטר ממנו בהקדם האפשרי.</string>
     <string name="DarkSacrifice_Ok">חַיַּי שֶׁלְּךָ!</string>
+    <string name="Dart_Name">חץ קטן</string>
     <string name="DashSpell_Info">מזנק בכיוון שצוין תוך התנגשות באויבים, גורם נזק ומטיל \'קטוע\'.</string>
     <string name="DashSpell_Name">הסתערות</string>
     <string name="DeepSnail_Gender">masculine</string>
@@ -250,7 +252,7 @@
     <string name="King_Info3">איך אתה מעז!</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KunaiThrow_Name">זריקת קונאי</string>
-    <string name="Larva_Name">לרבת אלוהים</string>
+    <string name="Larva_Name">רימת האל</string>
     <string name="Larva_Name_Objective">לרבת אלוהים</string>
     <string name="LastLevel_TileGrass">טחב גחלים</string>
     <string name="LastLevel_TileHighGrass">פטריות גחלת</string>
@@ -297,6 +299,7 @@
     <string name="Necrotism_Death">מתת מנקרוטיזם...</string>
     <string name="Necrotism_Gender">feminine</string>
     <string name="Nightmare_Gender">masculine</string>
+    <string name="Ooze_Death">%s בולע אותך...</string>
     <string name="Order_Resist">איך אתה מעז?!!</string>
     <string name="Paralysis_Name_2">מהממת %s</string>
     <string name="Pasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
@@ -429,6 +432,7 @@
     <string name="TomeOfKnowledge_Name">ספר הידע</string>
     <string name="Torch_Name">לפיד</string>
     <string name="TownGuardNPC_Message2">תודות להרפתקנים כמוך, המקום הזה הפך לשקט במיוחד</string>
+    <string name="TownGuardNPC_Message3">אתה חושב שיש יותר מדי שומרים בעיר הזאת? ובכן, זה בגלל שזאת העיר היחידה עם מבוך ענק מלא מפלצות, לא?</string>
     <string name="TownGuardNPC_Name">שומר</string>
     <string name="TownsfolkMovieNPC_Name">תושבי העיירה</string>
     <string name="TownsfolkNPC_Message1">אה! הרפתקן נוסף, איזה כיף! תדאג לשדוד כמה שיותר חפצים יקרים!</string>
@@ -473,6 +477,7 @@
     <string name="WndDonate_royalDonateText">אני לא רוצה להישמע מוזר, אבל בכך שאתה עושה את זה, אתה ממש מאכיל את המפתחים.</string>
     <string name="WndDonate_ruby">אודם</string>
     <string name="WndFortuneTeller_IdentifyAll">הכל</string>
+    <string name="WndFortuneTeller_No_Item">היזהר, אתה לא רוצה לבזבז את הכסף שלך לחינם, נכון? אין פריטים לא מזוהים במלאי שלך.</string>
     <string name="WndGame_Exit">צא מ-Remixed Dungeon</string>
     <string name="WndHats_UnequipButton">הסר כובע</string>
     <string name="WndHero_Awareness">מודעות</string>
@@ -571,6 +576,15 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
 
 
 

@@ -138,6 +138,7 @@
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">dolk</string>
+    <string name="Dart_Name">dart</string>
     <string name="DashSpell_Info">Das naar een aangewezen richting terwijl je met vijanden botst, schade toebrengend en verstommeling veroorzakend.</string>
     <string name="DashSpell_Name">Das</string>
     <string name="Death_Name_1">Grim %s</string>
@@ -229,6 +230,7 @@
     <string name="Journal_Wandmaker">Oude toverstafmaker</string>
     <string name="King_Defense">geparreerd</string>
     <string name="Larva_Gender">feminine</string>
+    <string name="Larva_Name">larve van de god</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
     <string name="Level_TileDescAlchemy">Laat hier wat zaden vallen om een drank te brouwen.</string>
@@ -276,7 +278,7 @@
     <string name="Necromancy_Title">Necromantie</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
     <string name="OozeBuff_Name">Bijtend Slijk</string>
-    <string name="Ooze_Death">%s verslindt je...</string>
+    <string name="Ooze_Death">%s slikt je op...</string>
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te mijnen!</string>
@@ -414,6 +416,7 @@
     <string name="Thief_Name">gekke dief</string>
     <string name="TitleScene_Play">Spelen</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
+    <string name="TownGuardNPC_Message3">Je denkt dat er te veel bewakers in deze stad zijn? Nou, dat is omdat dit de enige stad is met een gigantische monster-geïnfesteerde dungeon, niet waar?</string>
     <string name="TownsfolkMovieNPC_Name_Objective">stadbewoner</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">Ah! Nog een avonturier, geweldig! Zorg ervoor dat je zoveel mogelijk waardevolle spullen buitmaakt!</string>
@@ -465,6 +468,7 @@
     <string name="WndDonate_ruby">robijn</string>
     <string name="WndDonate_silverDonateText2">Ook schakelt u reclame uit in alle spelmodi en ontgrendelt u de Jageres vanaf het begin.</string>
     <string name="WndFortuneTeller_IdentifyAll">Alles</string>
+    <string name="WndFortuneTeller_No_Item">Wees voorzichtig, je wilt je geld toch niet voor niets uitgeven, toch? Er zijn geen ongeïdentificeerde items in je inventaris.</string>
     <string name="WndGame_Customizations">Aanpassingen</string>
     <string name="WndGame_Exit">Verlaat Remixed Dungeon</string>
     <string name="WndHats_ListTitle">Lijst van accessoires</string>
@@ -576,6 +580,15 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
 
 
 
