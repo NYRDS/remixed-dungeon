@@ -123,6 +123,7 @@
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="Crab_Name">cua cống</string>
+    <string name="Crystal_Desc">Hòn đá lớn lấp lánh bay giữa không trung. Có vẻ như nó chứa đựng phép thuật mạnh mẽ.</string>
     <string name="DM300_Info1">DM-300 tự sửa chữa!</string>
     <string name="DM300_Info3">Phát hiện nhân viên không được phép.</string>
     <string name="Dagger_Info">Một cây khăn sắt đơn giản với tay cầm gỗ mòn.</string>
@@ -306,6 +307,7 @@
     <string name="PseudoPasty_Name">bánh nhúng</string>
     <string name="PseudoRat_Name">chuột giả</string>
     <string name="PseudoRat_Name_Objective">chuột giả</string>
+    <string name="Pumpkin_Info">Ngày xưa, Người Dług Bửng là một dân tộc hãnh diện và thịnh vượng. Nhưng mọi thứ thay đổi sau khi loài người xuất hiện, chỉ còn lại những đống tàn tích. Và những chiếc đầu bị chặt và khắc của các bộ tộc Dług Bửng đã khuất vẫn còn là lời nhắc nhở về những sự kiện khủng khiếp ấy.</string>
     <string name="Pumpkin_Name">Bí ngô</string>
     <string name="RatHide_Name">da chuột</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
@@ -315,6 +317,7 @@
     <string name="RemixedPixelDungeonApp_sendCrash">Trò chơi của chúng tôi đã bị lỗi...\n Xin lỗi.\nVui lòng gửi báo cáo lỗi để giúp chúng tôi khắc phục.</string>
     <string name="ResultDescriptions_Necromancy">Hết sức lực khi cố gắng hồi sinh xác ở tầng %d</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
+    <string name="RingOfDetection_Name">Nhẫn Phát Hiện</string>
     <string name="RingOfElements_Name">Nhẫn của các Nguyên tố</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
     <string name="RingOfHerbalism_Info">Nhẫn này tăng cơ hội thu thập sương mai và hạt giống từ cỏ bị giẫm đạp.</string>
@@ -399,6 +402,7 @@
     <string name="Succubus_Gender">masculine</string>
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
     <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
+    <string name="SummonBeast_Name">Gọi Thú</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="Swarm_Name">bầy ruồi</string>
     <string name="Tamahawk_Info">Mặc dù rìu ném này không quá nặng, nhưng vẫn cần sức mạnh đáng kể để sử dụng hiệu quả.</string>
@@ -517,6 +521,7 @@
     <string name="Yog_Gender">masculine</string>
     <string name="YogsBrain_Name_Objective">não của Yog</string>
     <string name="YogsEye_Desc">Mắt của Thần Cổ, ánh nhìn toàn kiến đầy ắp căm thù vĩnh cửu. Bạn có thể cảm thấy nó nhìn thấu qua linh hồn của mình.</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
     <string name="town_deco_banner_desc">Một lá cờ thanh lịch vẽ các biểu tượng của quán rượu này.</string>
     <string name="town_deco_barrel_wine_name">Thùng rượu</string>
@@ -742,6 +747,12 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
+
+
+
 
 
 

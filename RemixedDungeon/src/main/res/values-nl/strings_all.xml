@@ -189,9 +189,11 @@
     <string name="Heap_Mimic">Dit is een mimic!</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
     <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
+    <string name="HeroClass_ElfPerks_5">Elfen zijn minder bedreven met naiwapens.</string>
     <string name="HeroClass_GnollPerks_3">Gnollen kunnen niet lezen of schrijven.</string>
     <string name="HeroClass_GnollPerks_4">Gnollen vallen geen andere Gnollen aan tenzij ze worden uitgedaagd</string>
     <string name="HeroClass_HunPerks_3">Jachtvrouwjes krijgen meer gezondheid van dauwdruppels.</string>
+    <string name="HeroClass_HunPerks_4">Jachtvrouwen voelen buurmonsters zelfs als ze achter obstakels verstopt zitten.</string>
     <string name="HeroClass_Mag">magier</string>
     <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
     <string name="HeroClass_NecromancerPerks_1">Necromanten gebruiken mana om Doodsspreuken te spreken.</string>
@@ -346,6 +348,7 @@
     <string name="Scorpio_Name">schorpioen</string>
     <string name="ScrollOfChallenge_Name">uitdagingsscrol</string>
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
+    <string name="ScrollOfLullaby_Info1">De pergament uitte een kalmerende melodie.</string>
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
     <string name="ScrollOfRemoveCurse_Proced">Je zak gloeit met een reinigend licht, en een kwaadaardige energie verdwijnt.</string>
     <string name="ScrollOfSummoning_Info">Bij voorlezen zal deze rol een van de monsters uit het huidige dungeon-niveau oproepen. En als de wil van het monster zwak genoeg is, zal het je dienaar worden.</string>
@@ -562,6 +565,7 @@
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
     <string name="town_deco_entrance_name">ingang</string>
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
+    <string name="town_deco_flowerinthepot_desc">Decoratieve bloem met een zoete smaak</string>
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
     <string name="town_deco_library_books_desc">Nog steeds beter dan de boeken uit de kelder.</string>
     <string name="town_deco_library_sign_name">Bibliotheekbord</string>
@@ -590,6 +594,11 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
 
 
 

@@ -25,6 +25,7 @@
     <string name="AllowStatisticsCollectionScene_Allow">السماح</string>
     <string name="AllowStatisticsCollectionScene_Deny">رفض</string>
     <string name="AllowStatisticsCollectionScene_Title">جمع إحصائيات الاستخدام</string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">الحل الموجود على رأس هذا السهم سيحول أي شخص إلى محارب بربري لا يرحم.</string>
     <string name="AmokArrow_Name">سهم الهياج</string>
     <string name="AmokBuff_Info">اختبر نوبة الهياج، الآخذة لأرواح البؤساء.</string>
@@ -43,6 +44,7 @@
     <string name="Armor_Incompatible">تفاعل أنواع مختلفة من السحر محا الرموز السحرية على هذه الدروع!</string>
     <string name="Armor_Info3">\n\nنظراً لأن قوتك غير كافية، فإن ارتداء هذه الدروع سيقلل من سرعة حركتك ومهاراتك الدفاعية.</string>
     <string name="Armor_Info6">عليه نقوش</string>
+    <string name="ArmoredStatue_Name_Objective">تمثال متحرك</string>
     <string name="AzuterronNPC_Name_Objective">غريباً</string>
     <string name="BadgesScene_Title">شاراتك</string>
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
@@ -134,6 +136,7 @@
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
     <string name="ChristmasTurkey_Name">ديك رومي احتفالي</string>
     <string name="City_TileDescDeco">يفتقر هذا المكان لعدة بلاط.</string>
+    <string name="City_TileDescEntrance">منحدر يؤدي إلى العمق العلوي.</string>
     <string name="CloakSpell_Name">العباءة</string>
     <string name="Codex_Story_16">سلاح محظوظ - يتجاهل درع العدو تقريباً بالكامل، ويسبب ضرراً أكبر بكثير.</string>
     <string name="Codex_Story_22">هذا الكتاب مكتوب بلغة الشياطين</string>
@@ -216,6 +219,7 @@
     <string name="HeartOfDarkness_Name">قلب الظلام</string>
     <string name="Hedgehog_Desc">يبدو أن هذا القنفذ متوتر.</string>
     <string name="HeroClass_Elf">الجان</string>
+    <string name="HeroClass_ElfPerks_5">الجان أقل مهارة في استخدام أسلحة القتال القريب.</string>
     <string name="HeroClass_GnollPerks_3">لا يستطيع الغنول القراءة أو الكتابة.</string>
     <string name="HeroClass_MagPerks_3">يمكن للسحرة استخدام العصي السحرية كسلاح قتال قريب.</string>
     <string name="HeroClass_MagPerks_4">يستخدم السحرة المانا لإلقاء التعاويذ العنصرية.</string>
@@ -437,6 +441,7 @@
     <string name="SociologistNPC_InternetRequired">عذراً، لكن دون الوصول إلى الإنترنت لا يمكنك المشاركة في استطلاعنا</string>
     <string name="Sorrowmoss_Desc">الزنبق الحزين هو زهرة (وليس طحلب) ذات بتلات حادة كالموس، مغطاة بسم قاتل.</string>
     <string name="Sorrowmoss_Name">طحلب الحزن</string>
+    <string name="SpeedBuff_Name">سرعة</string>
     <string name="SpellBook_Info_Identified">في هذه الصفحات اكتشفت النص الكامل للتعويذة \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
@@ -450,6 +455,7 @@
     <string name="StartScene_No">لا، العودة إلى القائمة الرئيسية</string>
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
     <string name="Stench_Txt">%s نتن</string>
+    <string name="Stylus_ACInscribe">نَقْش</string>
     <string name="Stylus_Info">هذا القلم السحري مصنوع من حجر داكن وصلب جداً. يمكنك به نقش رمز أو رونه، لكن القلم هو من يختار ما سينقش، ليس أنت.</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="SummonBeast_AtYourCommand">يأتي الوحش بأمرك!</string>
@@ -478,6 +484,7 @@
     <string name="TownsfolkNPC_Message2">أصبحت المدينة ثرية للغاية بفضل هذا الزنزانة، حتى يستطيع الجميع في المدينة تحمل تكاليف العطلة كلما أرادوا! في الواقع هذا هو السبب في وجود عدد قليل جداً من الناس هنا الآن.</string>
     <string name="TownsfolkNPC_Message3">يا له من يوم جميل.</string>
     <string name="TownsfolkNPC_Message4">آمل ألا تغمر المياه المجاري عندما يأتي الربيع. نحن لا نحتاج إلى غزو قوارض آخر.</string>
+    <string name="TownsfolkSilentNPC_Name_Objective">سكان البلدة</string>
     <string name="ToxicGland_Name">غدة سامة</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
@@ -596,6 +603,7 @@
     <string name="town_deco_common_bed_name">سرير</string>
     <string name="town_deco_counter_name">كونتر</string>
     <string name="town_deco_crate_bottles_name">صندوق بيرة</string>
+    <string name="town_deco_door_name">باب</string>
     <string name="town_deco_dungeon_door_desc">مدخل إلى الزنزانة.</string>
     <string name="town_deco_emptyboard_desc">الرف العادي لوضع الأشياء للعرض</string>
     <string name="town_deco_entrance_name">مدخل</string>
@@ -626,6 +634,18 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

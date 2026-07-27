@@ -143,6 +143,7 @@
     <string name="ConcreteBlock_Description">נראה שהבלוק הזה דורש %d נקודות כוח כדי לדחוף</string>
     <string name="CorpseDustBuff_Info">התקפות מתגברות מאוד עבור אלו שמלאים בצמא דם, מה שהופך אותם למסוכנים במיוחד.</string>
     <string name="CorpseDust_Info">כדור אבק הגופות לא נראה שונה מכדור אבק רגיל. עם זאת, אתה יודע איכשהו שעדיף להיפטר ממנו בהקדם האפשרי.</string>
+    <string name="Crystal_Desc">גביש גדול ומבריק מרחף באוויר. כנראה שהוא מלא בקסם חזק.</string>
     <string name="DarkSacrifice_Ok">חַיַּי שֶׁלְּךָ!</string>
     <string name="Dart_Name">חץ קטן</string>
     <string name="DashSpell_Info">מזנק בכיוון שצוין תוך התנגשות באויבים, גורם נזק ומטיל \'קטוע\'.</string>
@@ -239,6 +240,7 @@
     <string name="IceCaves_TileDescStatue">עוד פסל נורא... רגע, זה גנול קפוא.</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
     <string name="IceElemental_Name_Objective">אלמנטל קרח</string>
+    <string name="IceGuardianCoreModule_Info">זוהי מבנה מורכב עשוי מקרח קסום. אבן זוהרת ממוקמת בתוך ההמצאה הנפלאה הזו.</string>
     <string name="IceGuardian_Name_Objective">שומר קרח</string>
     <string name="Ignite_Info">מדליק את התא הנבחר. ניתן להשתמש כדי לשרוף עשב, דמויות וחפצים.</string>
     <string name="ImpShopkeeper_Name">אימפ שאפתן</string>
@@ -301,10 +303,13 @@
     <string name="NecromancerNPC_Desc">איש בגיל העמידה נראה מעט מעצבן ונרגש בו זמנית. הוא לובש שריון מורכב העשוי משברי עצמות מחוברים יחד.</string>
     <string name="NecromancerNPC_Intro">איזה מחזה נדיר! הרפתקן שרק לא רק גופה חסרת חיים. בקושי ניתן להאמין! אה... סליחה, לפעמים אני מתרגש מדי. תראו, אני נקרומנסר. ואף על פי שלימוד המתים והמוות עצמו הוא עיסוקי, לראות את אותם דברים שוב ושוב נעשה מתיש בסופו של דבר. מצד שני, זה בדיוק הסיבה שאני כאן. לפי חישוב שלי, בעוד כמה שבועות, במקום כלשהו במבוך הזה, משהו מרהיב עומד לקרות. ה_נקרופוליס_, עיר עתיקה של המתים, עומדת לפתוח את שעריה. ואני... לא יכול לומר יותר, בזבזתי מספיק זמן. אני צריך להתכונן, _לחזור מאוחר יותר_.</string>
     <string name="NecromancerNPC_Name_Objective">נקרומנסר</string>
+    <string name="Necromancer_ACSpecial">נֶקְרוֹמַנְטִיָּה</string>
     <string name="Necrotism_ACSpecial">נֶקְרוֹטִיזְם</string>
     <string name="Necrotism_Death">מתת מנקרוטיזם...</string>
     <string name="Necrotism_Gender">feminine</string>
+    <string name="NekoEars_Name">אוזני נeko</string>
     <string name="Nightmare_Gender">masculine</string>
+    <string name="Nightmare_Name_Objective">סיוט</string>
     <string name="Ooze_Death">%s בולע אותך...</string>
     <string name="Order_Resist">איך אתה מעז?!!</string>
     <string name="ParalysisArrow_Name">חץ משתק</string>
@@ -338,6 +343,7 @@
     <string name="PotionOfMana_Info">השיקוי הזה ישחזר את האנרגיה הרוחנית שלך.</string>
     <string name="PotionOfMindVision_Apply2">משהו אומר לך שאתה היצור החי היחיד ברמה זו כרגע.</string>
     <string name="PotionOfPurity_NoSmell">הפסקת להרגיש ריחות\!</string>
+    <string name="Potion_Colors_1">אָדוֹם כֵּהֶה</string>
     <string name="Potion_Colors_3">ירקן</string>
     <string name="Potion_Colors_6">פחם</string>
     <string name="Potion_Info">בקבוקון זה מכיל נוזל %s מסתחרר. מי יודע מה יקרה כשתשתה או תזרוק אותו?</string>
@@ -424,6 +430,7 @@
     <string name="SpiritOfPain_Desc">שבר של אפלה חיה.</string>
     <string name="Sprout_Info">הַעִיר אֶת הַזְּרָעִים הַיְשֵׁנִים.\nאַךְ צָרִיךְ לִהְיוֹת יְרַק עַל הָאֲדָמָה כְּדֵי שֶׁהַלַּחַשׁ יַצְלִיחַ.</string>
     <string name="Sprout_Name">נבט</string>
+    <string name="StartScene_ChooseFromSlot">בחר משבץ</string>
     <string name="StartScene_DifficultySelect">בחר את גורלך</string>
     <string name="StartScene_Load">טען משחק</string>
     <string name="StartScene_New">משחק חדש</string>
@@ -585,6 +592,16 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
