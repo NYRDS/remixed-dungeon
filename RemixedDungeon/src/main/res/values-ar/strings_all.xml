@@ -95,6 +95,7 @@
     <string name="Bleeding_Death">نَزَفتَ حتى الموت...</string>
     <string name="BlessedBuff_Name">مبارك</string>
     <string name="BlindnessBuff_Info">عمى تام، لا يُسمع سوى الأصوات المحيطة.</string>
+    <string name="BloodTransfusion_Drained">تتدفق جوهر الحياة من حيوانك الأليف إليك.</string>
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
     <string name="Bowknot_Info">شريط وردي لامع جميل مربوط بعقدة ومثبت بدبوس شعر.</string>
     <string name="Brute_Gender">masculine</string>
@@ -201,6 +202,7 @@
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
     <string name="Gnoll_BecomeGuardianDesc">أن تصبح حارساً</string>
     <string name="Gold_Name">الذهب</string>
+    <string name="GoldenKey_Info">الشقوق الموجودة على هذا المفتاح الذهبي دقيقة ومعقدة. ربما يستطيع فتح قفل صندوق ما؟</string>
     <string name="GoldenKey_Name">المفتاح الذهبي</string>
     <string name="Golem_Desc">حاول القزم دمج معرفتهم بالآليات مع قوتهم المكتشفة حديثاً في ربط العناصر. استخدموا أرواح الأرض كـ \&quot;روح\&quot; لأجساد الغوليم الميكانيكية، والتي كان يُعتقد أنها الأكثر قابلية للسيطرة. على الرغم من ذلك، فإن أصغر خطأ في الطقوس قد يتسبب في اندلاع.</string>
     <string name="Golem_Name">غول</string>
@@ -266,6 +268,7 @@
     <string name="King_Desc">كان آخر ملوك الأقزام معروفاً بفهمه العميق لعمليات الحياة والموت. لقد أقنع أعضاء بلاطه بالمشاركة في طقس كان من المفترض أن يمنحهم الشباب الأبدي. في النهاية كان هو الوحيد الذي حصل عليه - وجيش من الموتى الأحياء كمكافأة إضافية.</string>
     <string name="King_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">قتلتك سهم الجليد لـ %s...</string>
+    <string name="Kusarigama_Name">كوساريغاما</string>
     <string name="Kusarigama_Pull">سحب</string>
     <string name="Larva_Name">يرقة الإله</string>
     <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
@@ -621,6 +624,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 

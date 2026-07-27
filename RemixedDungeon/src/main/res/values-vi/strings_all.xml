@@ -28,6 +28,7 @@
     <string name="AmuletScene_Stay">Tôi chưa xong đâu</string>
     <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \&quot;thuyết phục\&quot; nó làm như vậy.</string>
     <string name="Amulet_Name">Bùa Yendor</string>
+    <string name="ArmorKit_ACAplly">ÁP DỤNG</string>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
     <string name="Armor_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
     <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
@@ -505,6 +506,7 @@
     <string name="Wnd_Button_Close">Đóng</string>
     <string name="Wnd_Button_Yes">Có</string>
     <string name="WoodenBow_Info">Cây cung gỗ đơn giản này có thể hữu ích, khi bạn tìm được một vài mũi tên.</string>
+    <string name="Worm_Desc">Không thể biết được côn trùng này to đến đâu. Đỉnh đầu nó mọc ra một phần từ sàn nhà, cơ thể sinh vật này bị bao phủ bởi những múi thịt hư hỏng và nhầy nhơa. Những cùm răng khổng lồ cho bạn thấy rõ ràng con quái vật đó di chuyển như thế nào qua bề mặt.</string>
     <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">giun</string>
     <string name="Wraith_Desc">Một oan hồn là linh hồn oán giận của một kẻ có tội, mộ hoặc lăng mộ của họ bị quấy rối. Là một thực thể phi vật chất, rất khó đánh trúng chúng bằng vũ khí thông thường.</string>
@@ -739,6 +741,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 

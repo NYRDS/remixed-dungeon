@@ -278,6 +278,7 @@
     <string name="MageArmor_ACSpecial">אדמה מותכת</string>
     <string name="MagicTorch_Name">לפיד קסם</string>
     <string name="MedicineMask_Name">מסכה כירורגית</string>
+    <string name="MedicineMask_Obtained">התקבלה מסכה כירורגית</string>
     <string name="MeleeWeapon_Info1a">%1$s — %2$s כלי נשק קרוב דרגה %3$d.</string>
     <string name="MeleeWeapon_Info1b"> </string>
     <string name="MeleeWeapon_Info1c">משופר</string>
@@ -583,6 +584,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 
