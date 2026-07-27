@@ -441,6 +441,7 @@
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
     <string name="WandOfBlink_Name">Toverstaf van Blinken</string>
     <string name="WandOfDisintegration_Info">Deze staf straalt een bundel vernietigende energie uit, die alle wezens op zijn pad doorboort. Hoe meer slachtoffers het raakt, des te meer schade het aan elk van hen toebrengt.</string>
+    <string name="WandOfIcebolt_Info1">Je hebt jezelf gedood met je eigen IJsbout...</string>
     <string name="WandOfIcebolt_Name">IJsbultstaf</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
     <string name="WandOfMagicMissile_Desinchanted">je ontgoochelde de Toverstaf van Magische Projectielen en gebruikte de essentie ervan om je %s te verbeteren</string>
@@ -589,6 +590,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 

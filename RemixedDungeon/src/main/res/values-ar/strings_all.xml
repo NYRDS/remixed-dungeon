@@ -239,6 +239,7 @@
     <string name="HuntressArmor_NotHuntress">يمكن للصيادات فقط استخدام هذا الدرع!</string>
     <string name="IceCaves_TileDescDeco">تم تجميد هذا الغنول وهو حي. على ما يبدو، أنه كان هناك منذ فترة طويلة.</string>
     <string name="IceCaves_TileGrass">عشب متجمد.</string>
+    <string name="IceCaves_TileStatue">غنول متجمد</string>
     <string name="IceElemental_Name_Objective">عنصراً جليدياً</string>
     <string name="IceGuardianCore_Desc">تم تصنيع حُرّاس الجليد من قبل الكوبولد القدماء لحماية كهوفهم. الطاقة المخزنة في نواتهم تسمح لحارس الجليد بإعادة بناء نفسه طالما لديه طاقة كافية.</string>
     <string name="IceGuardianCore_Name">حارس الجليد</string>
@@ -359,6 +360,7 @@
     <string name="RaiseDead_NoSpace">فشل إحياء الموتى لأن لا يوجد مكان حر في الجوار.</string>
     <string name="RatHide_Name">جلد الفأر</string>
     <string name="RatKingCrownBuff_Info">عاش سيد الجرذان، سيطيع كل جرذ ويسبح.</string>
+    <string name="RatKingCrown_Info">تاج ذهبي لملك الفئران، رمز للقوة الدائمة</string>
     <string name="RatKing_Died">مات الملك. ليحيا الملك!</string>
     <string name="RatKing_Name">ملك الفئران</string>
     <string name="Rat_Name_Objective">فأر الكيس</string>
@@ -624,6 +626,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 
