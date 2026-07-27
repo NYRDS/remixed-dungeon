@@ -498,6 +498,7 @@
     <string name="WandOfLightning_Name">عصا البرق</string>
     <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية الخالصة، مسببة ضرراً معتدلاً للهدف.</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
+    <string name="WandOfRegrowth_Info">عندما تنتهي حياة ما، تبدأ حياة جديدة بالنمو... الدورة الأبدية لا تنتهي!</string>
     <string name="WandOfTeleportation_Info2">لم يحدث شيء</string>
     <string name="Wand_ACZap">زَاب</string>
     <string name="Wand_SelfTarget">لا يمكنك استهداف نفسك</string>
@@ -634,6 +635,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 
