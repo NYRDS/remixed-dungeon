@@ -72,6 +72,7 @@
     <string name="BlackCat_Phrases_2">Meo meo!</string>
     <string name="BlackSkullOfMastery_BecomeLichDesc">Lich là một thuật sư tử thi đã đạt đến đỉnh cao của khả năng mình. Sinh tồn giữa sự sống và cái chết, Lich xuất sắc trong thuật hồi sinh, nhưng kỹ năng chiến đấu của hắn thấp hơn rất nhiều so với người thường.</string>
     <string name="BlackSkull_Ressurrect">Đỉnh Đen Đã Hồi Sinh Quái Vật Chết Để Phục Vụ Bạn!</string>
+    <string name="Blacksmith_Gold1">Này người! Muốn làm việc hữu ích chứ? Lên cái cuốc này và đào cho ta ít _khoáng vàng đen_, _15 miếng_ là đủ rồi. Cái gì? Như thế nào mà ta trả tiền? Ngươi tham lam...\nỪ, ừ, ta không có tiền trả, nhưng ta có thể làm đồ sắt cho ngươi. Coi ngươi may mắn, ta là thợ rèn duy nhất ở đây.</string>
     <string name="Blacksmith_Verify2">Chọn 2 vật phẩm cùng loại!</string>
     <string name="Blacksmith_Verify4">Tôi không làm việc với vật phẩm bị nguyền rủa!</string>
     <string name="Blacksmith_Verify6">Tôi không thể rèn lại các vật phẩm này!</string>
@@ -179,6 +180,7 @@
     <string name="Ghost_Name">ma buồn</string>
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
     <string name="GoldenKey_Name">chìa khóa vàng</string>
+    <string name="Golem_Name">golem</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
     <string name="Halls_TileStatue">Cột</string>
     <string name="Heal_Cast">%s đã được chữa trị.</string>
@@ -245,6 +247,7 @@
     <string name="LightBuff_Info">Ánh sáng phát ra từ cơ thể, soi sáng mọi thứ xung quanh.</string>
     <string name="LightningTrap_Name">bẫy sét</string>
     <string name="LloidsBeacon_ACSet">ĐẶT</string>
+    <string name="LloidsBeacon_Preventing">Một loại halo ma thuật mạnh mẽ hiện diện ở đây ngăn cản bạn sử dụng cột đèn của Lloyd!</string>
     <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
     <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
     <string name="MailArmor_Name">áo giáp xích</string>
@@ -441,6 +444,7 @@
     <string name="WandOfTeleportation_Info2">không có gì xảy ra</string>
     <string name="Wand_ACZap">ZAP</string>
     <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
+    <string name="Wand_Wood_Types_10">sồi</string>
     <string name="Wand_Wood_Types_7">gõ đỏ</string>
     <string name="WarHammer_Name">Búa chiến tranh</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
@@ -748,6 +752,10 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
+
 
 
 

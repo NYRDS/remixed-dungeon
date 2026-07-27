@@ -44,6 +44,7 @@
     <string name="Armor_Incompatible">تفاعل أنواع مختلفة من السحر محا الرموز السحرية على هذه الدروع!</string>
     <string name="Armor_Info3">\n\nنظراً لأن قوتك غير كافية، فإن ارتداء هذه الدروع سيقلل من سرعة حركتك ومهاراتك الدفاعية.</string>
     <string name="Armor_Info6">عليه نقوش</string>
+    <string name="ArmoredStatue_Name">تمثال متحرك</string>
     <string name="ArmoredStatue_Name_Objective">تمثال متحرك</string>
     <string name="AzuterronNPC_Name_Objective">غريباً</string>
     <string name="BadgesScene_Title">شاراتك</string>
@@ -77,6 +78,7 @@
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
     <string name="Barrel_Name">برميل</string>
     <string name="Bat_Desc">هؤلاء السكان السريعون والعنيدون في قباب الكهوف قد يهزمون خصوماً أكبر بكثير من خلال تجديد صحتهم مع كل ضربة ناجحة.</string>
+    <string name="BattleAxe_Info">رأس هذه الفأس الحربية الفولاذي الضخم يمنح قوة كبيرة لكل ضربة.</string>
     <string name="Bee_Gender">masculine</string>
     <string name="BellaNPC_No">لا، ليس معك</string>
     <string name="Belongings_Name">حقيبة ظهر</string>
@@ -85,6 +87,7 @@
     <string name="BlackCat_Phrases_1">مياؤو...</string>
     <string name="BlackCat_Phrases_2">مياو!</string>
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
+    <string name="Blacksmith_Gold1">يا إنسان! هل تريد أن تكون مفيداً، أليس كذلك؟ خذ هذا المعول واحفر لي بعض _خام الذهب الداكن_، _15 قطعة_ يجب أن تكفي. ماذا تقصد، كيف سأدفع؟ أنت جشع...\nحسناً، حسناً، ليس لدي مال لأدفع، لكن يمكنني القيام ببعض الحدادة لك. اعتبر نفسك محظوظاً، أنا الحدّاد الوحيد في الجوار.</string>
     <string name="Blacksmith_Name">حداد ترول</string>
     <string name="Blacksmith_Txt4">قلت إنني بحاجة لدم الخفاش على المعول. بسرعة، بسرعة!</string>
     <string name="Blacksmith_Verify3">أحتاج لمعرفة ما أعمل عليه، حددهما أولاً!</string>
@@ -293,6 +296,7 @@
     <string name="LightBuff_Name">مضيء</string>
     <string name="LightningTrap_Name">فخ البرق</string>
     <string name="LloidsBeacon_Creatures">الهالة النفسية للكائنات المجاورة لا تسمح لك باستخدام منارة لويد في هذه اللحظة.</string>
+    <string name="LloidsBeacon_Preventing">هالة سحرية قوية موجودة هنا تمنعك من استخدام منارة لويد!</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
     <string name="Luck_Name_0">محظوظ %s</string>
     <string name="MageArmor_ACSpecial">أرض منصهرة</string>
@@ -354,6 +358,7 @@
     <string name="Potion_Name">%s جرعة</string>
     <string name="Potion_RuneDissaperaed">اختفت الرون من %s.</string>
     <string name="Potion_SelectForMoisten">اختر العنصر للترطيب</string>
+    <string name="Potion_Shatter">تنكسر القارورة وينثر %s السائل بلا ضرر</string>
     <string name="Potion_SureThrow">هل أنت متأكد أنك تريد رميه؟ في معظم الحالات، من المنطقي شربه.</string>
     <string name="Potion_Yes">نعم، أعرف ما أفعل</string>
     <string name="PseudoPasty_Info">هذا فطيرة كورنيش أصلية مع حشوة تقليدية من اللحم والبطاطس.</string>
@@ -425,6 +430,7 @@
     <string name="ShadowLord_Name_Objective">سيد الظلال</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">ظل</string>
+    <string name="Shaman_Desc">يمكن لأذكى الغنول إتقان السحر الشاماني. يفضل الشامان الغنول تعويذات المعركة للتعويض عن نقص القوة، دون تردد في استخدامها على من يشككون في مكانتهم في القبيلة.</string>
     <string name="Shaman_Name">شامان غنول</string>
     <string name="Shaman_Name_Objective">شامان جنول</string>
     <string name="Sheep_Desc">هذه خروف سحري. ما الذي يجعله سحرياً؟ لا يمكنك قتله. سيبقى في مكانه حتى يختفي سحرياً، بينما يمضغ الطعام بنظرة خالية.</string>
@@ -459,6 +465,7 @@
     <string name="Stylus_Info">هذا القلم السحري مصنوع من حجر داكن وصلب جداً. يمكنك به نقش رمز أو رونه، لكن القلم هو من يختار ما سينقش، ليس أنت.</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="SummonBeast_AtYourCommand">يأتي الوحش بأمرك!</string>
+    <string name="SummonBeast_Name">نداء الوحش</string>
     <string name="SummonDeathling_Info">يستدعي تابعاً من الأموات. تزداد قوة سمرتة وصلابته مع مستوى البطل. \n\nحد الاستدعاء: %1$d (+1 لكل مستوى سحر)</string>
     <string name="SummonDeathling_Name">استدعاء سمرتة</string>
     <string name="SungrassBuff_Name">الشفاء بالأعشاب</string>
@@ -507,6 +514,7 @@
     <string name="Warlock_Killed">سهم الظل الخاص بـ %1$s قتلك...</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterOfAwareness_Info">تشع قوة المعرفة من ماء هذه البئر. خذ رشفة منه لكشف جميع أسرار معداتك.</string>
+    <string name="WeaknessBuff_Name">مُضعف</string>
     <string name="Weapon_Incompatible">تفاعل أنواع مختلفة من السحر ألغى السحر على هذا السلاح!</string>
     <string name="Weightstone_Fast">لقد قمت بتوازين %s لجعله أسرع</string>
     <string name="Weightstone_Info">باستخدام حجر الوزن، يمكنك موازنة سلاحك القتالي القريب لزيادة سرعته أو دقته.</string>
@@ -635,6 +643,15 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
 
 
 

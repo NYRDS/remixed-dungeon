@@ -33,6 +33,7 @@
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
     <string name="Armor_Info7b">, en omdat het vervloekt is, kun je het niet afdoen</string>
+    <string name="ArmoredStatue_Name">levende standbeeld</string>
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
     <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name_Objective">vreemdeling</string>
@@ -70,6 +71,7 @@
     <string name="Bandit_Desc">De diepere verdiepingen van de dungeon hebben altijd een schuilplaats geboden voor allerlei criminelen. Niet iedereen kon gezond van verstand blijven tijdens hun lange verblijf ver van het daglicht. Lange geleden zijn deze dolle dieven en bandieten vergeten wie ze zijn en waarom ze stelen. Deze bandiet lijkt zijn dolk met iets te hebben bestreken!</string>
     <string name="Bandit_Name">gekke bandiet</string>
     <string name="Barrel_Pumpkin_Name">pompoen</string>
+    <string name="BattleAxe_Info">Het enorme staande hoofd van deze strijdbijl geeft een aanzienlijk gewicht achter elke slag.</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
     <string name="Bee_Gender">masculine</string>
     <string name="Belongings_CantWearBoth">Je kunt %1$s en %2$s niet tegelijkertijd uitrusten!</string>
@@ -79,6 +81,7 @@
     <string name="BlackCat_Phrases_1">Miauw...</string>
     <string name="BlackSkullOfMastery_Name">De Zielbrenger</string>
     <string name="BlackSkull_Ressurrect">De Zwarte Schedel Heeft Dode Wezens Herrezen Om Je Te Dienen!</string>
+    <string name="Blacksmith_Gold1">Hey mens! Wil je nuttig zijn, hé? Pak die houweel en ontgin voor me wat _donker gouderts_, _15 stukken_ zou genoeg moeten zijn. Wat bedoel je, hoe ga ik betalen? Je gierige...\nOké, oké, ik heb geen geld om te betalen, maar ik kan wat smeden voor je. Reken je gelukkig, ik ben de enige smid in de buurt.</string>
     <string name="Blacksmith_Verify4">Ik werk niet met vervloekte items!</string>
     <string name="Blacksmith_Verify5">Het is prullen, de kwaliteit is te slecht!</string>
     <string name="Blacksmith_Verify6">Ik kan deze items niet hersmelten!</string>
@@ -186,6 +189,7 @@
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileStatue">Pilaar</string>
     <string name="Heal_Cast">%s is genezen.</string>
+    <string name="HealthArrow_Info">De punt van deze pijl is bedekt met een genezende drank.</string>
     <string name="Heap_Mimic">Dit is een mimic!</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
     <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
@@ -241,6 +245,7 @@
     <string name="Level_TileDescBarricade">De houten barricade zit stevig, maar is over de jaren uitgedroogd. Zal hij branden?</string>
     <string name="Level_TileDescTrap">Als je op een verborgen drukplaat stapt, activeer je de val.</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
+    <string name="Level_TileExit">Diepte-uitgang</string>
     <string name="Level_TileLockedDoor">Gesloten deur</string>
     <string name="Level_TileLockedExit">Vergrendelde uitgang naar de diepte</string>
     <string name="Level_TileOpenDoor">Open deur</string>
@@ -250,6 +255,7 @@
     <string name="Lich_Name">lich</string>
     <string name="LightningBolt_Info">Een spreuk die wordt gedeeld onder oude schamanen, die je vijanden tweemaal zo effectief schokt, vooral als ze genoeg dwazen zijn om op water te staan.</string>
     <string name="LightningTrap_Name">Bliksemval</string>
+    <string name="LloidsBeacon_Preventing">Een soort sterke magische aura die hier aanwezig is voorkomt dat je Lloyds boei kunt gebruiken!</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
     <string name="MedicineMask_Obtained">Chirurgisch masker verkregen</string>
@@ -292,6 +298,7 @@
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze ruggetje-persoon is verborgen onder een leer overal. Ook komt er een bittere geur van medicijnen en ... knoflook?</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
+    <string name="PlagueDoctorQuest_3_2_InProgress">Dit is geen enkel beest! Het is een levend getuigenis van nekromantische kracht! Vang er eentje, levend en onbeschadigd! Deze _Doodsridder_… hij is de sleutel!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Zijn skeletvingers tikken ritmisch tegen een borrelende ketel, de lucht om hem heek dik van de pittige stank van zwavel en verwesing*\n_Kobold Ijsmagiers_! Die jammerlijke wezens, gekrocht in hun bevroren grotten, wanhopig vasthoudend aan hun ijsmagie. Ik heb er vijf nodig, hun bevroren lichamen zullen... verlichtend zijn. Hun meesterwerk van ijs, het is... eigenaardig. Ik geloof dat ze aansluiten bij een oerenergie, een kracht die sluimert onder het oppervlakte van deze wereld.</string>
     <string name="Poison_Name_1">Giftig %s</string>
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
@@ -411,6 +418,7 @@
     <string name="Stylus_Name">tooverstylus</string>
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
+    <string name="SummonBeast_Name">Beestenroep</string>
     <string name="SuspiciousRat_Desc">Een rat is in de kerkers geen zeldzaamheid, maar dat er zo diep een woont... Je ziet hoe het hele lichaam van de rat spastisch beweegt wanneer hij beweegt.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
@@ -595,6 +603,14 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
 
 
 

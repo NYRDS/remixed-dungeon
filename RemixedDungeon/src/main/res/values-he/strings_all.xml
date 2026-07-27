@@ -63,6 +63,7 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bat_Name">עטלף ערפד</string>
     <string name="BattleAxe_Gender">masculine</string>
+    <string name="BattleAxe_Info">ראש הפלדה העצום של גרזן הקרב הזה מקנה משקל רב לכל מכה.</string>
     <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
     <string name="BellaNPC_Gender">feminine</string>
@@ -75,6 +76,7 @@
     <string name="BlackSkullOfMastery_RemainHumanDesc">או אם תשבור את הכישוף תוכל להשתמש בחפץ זה כמתוכנן.</string>
     <string name="Blacksmith_Completed">אוי, חזרת... עדיף מאוחר מאשר אף פעם.</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
+    <string name="Blacksmith_Gold1">היי, בן אדם! רוצה להיות מועיל, אה? קח את המעדר הזה ותחפור לי קצת _עפרת זהב אפלה_, _15 חתיכות_ יספיקו. למה אתה מתכוון, איך אני אשלם? אתה חמדן...\nבסדר, בסדר, אין לי כסף לשלם, אבל אני יכול לעשות עבודת נפחות בשבילך. תחשיב את עצמך בר מזל, אני הנפח היחיד בסביבה.</string>
     <string name="Blacksmith_Verify4">אני לא עובד עם פריטים מקוללים!</string>
     <string name="Blacksmith_Verify6">אני לא יכול לשחזר את הפריטים האלה!</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
@@ -276,6 +278,7 @@
     <string name="Lich_DieInfo">מעולם לא אהבתי את הנקרומנסר הזה. הגיע הזמן לחזור לרמה 7 ולמצוא דרך אחרת להרפתקה החדשה.</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
     <string name="LightningTrap_Name">מלכודת ברק</string>
+    <string name="LloidsBeacon_Preventing">אאורה קסומה חזקה הנמצאת כאן מונעת ממך להשתמש במגדלור של לויד!</string>
     <string name="Longsword_Gender">masculine</string>
     <string name="Luck_Name_0">בן מזל %s</string>
     <string name="MageArmor_ACSpecial">אדמה מותכת</string>
@@ -304,6 +307,7 @@
     <string name="NecromancerNPC_Intro">איזה מחזה נדיר! הרפתקן שרק לא רק גופה חסרת חיים. בקושי ניתן להאמין! אה... סליחה, לפעמים אני מתרגש מדי. תראו, אני נקרומנסר. ואף על פי שלימוד המתים והמוות עצמו הוא עיסוקי, לראות את אותם דברים שוב ושוב נעשה מתיש בסופו של דבר. מצד שני, זה בדיוק הסיבה שאני כאן. לפי חישוב שלי, בעוד כמה שבועות, במקום כלשהו במבוך הזה, משהו מרהיב עומד לקרות. ה_נקרופוליס_, עיר עתיקה של המתים, עומדת לפתוח את שעריה. ואני... לא יכול לומר יותר, בזבזתי מספיק זמן. אני צריך להתכונן, _לחזור מאוחר יותר_.</string>
     <string name="NecromancerNPC_Name_Objective">נקרומנסר</string>
     <string name="Necromancer_ACSpecial">נֶקְרוֹמַנְטִיָּה</string>
+    <string name="NecrotismBuff_Info">סימן המוות עצמו, הצחנה שממנו משפיעה על הקרובים וגורמת להם לחלוק את אותו גורל.</string>
     <string name="Necrotism_ACSpecial">נֶקְרוֹטִיזְם</string>
     <string name="Necrotism_Death">מתת מנקרוטיזם...</string>
     <string name="Necrotism_Gender">feminine</string>
@@ -351,6 +355,7 @@
     <string name="Potion_RuneDissaperaed">הרונה נעלמה מ-%s.</string>
     <string name="Potion_Shatter">הבקבוק מתנפץ ו-%s נוזל מתפזר ללא נזק</string>
     <string name="Potion_SureThrow">האם אתה בטוח שאתה רוצה לזרוק את זה? ברוב המקרים הגיוני לשתות את זה.</string>
+    <string name="Prison_TileDescDeco">יש כתמי דם ישנים על הרצפה.</string>
     <string name="PseudoPasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
     <string name="PseudoPasty_Name">מאפה בשר</string>
     <string name="PseudoRat_Gender">feminine</string>
@@ -439,6 +444,7 @@
     <string name="StrongShield_desc">המגן המלבני הזה מצופה בלוחות ברזל ומקושט בבד צבעוני. הוא כבד משמעותית, אך מסוגל לחסום נזק רב יותר.</string>
     <string name="Stylus_Info">עט מיסטי זה עשוי מאבן כהה וקשה במיוחד. בעזרתו ניתן לחרוט גליף או רונה, אך העט הוא זה שקובע מה ייחרט, לא אתה.</string>
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
+    <string name="SummonBeast_Name">קריאת החיה</string>
     <string name="Swarm_Name">נחיל זבובים</string>
     <string name="Sword_Info">הברק של הלהב החד כתער מעניק ביטחון.</string>
     <string name="TenguLiver_Name">כבד טנגו</string>
@@ -585,6 +591,7 @@
     <string name="town_deco_shieldboard_name">מגנים</string>
     <string name="town_deco_skulls_desc">גולגולות מלוטשות השייכות ליצורים מהצינוק.</string>
     <string name="town_deco_stones_desc">סתם ערימת אבנים</string>
+    <string name="town_deco_stool_sturdy_name">שרפרף</string>
     <string name="town_deco_stove_desc">תנור זה מעניק חמימות נעימה</string>
     <string name="town_deco_tile_desc">המרצפות האלו שחוקות מאוד מהזמן.</string>
     <string name="town_deco_vat_name">מיכל</string>
@@ -594,6 +601,13 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
 
 
 
