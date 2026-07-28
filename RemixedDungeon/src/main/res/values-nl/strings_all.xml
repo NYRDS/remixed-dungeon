@@ -92,6 +92,7 @@
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="BurningFist_Desc">Brandende Vuist van de Oude God</string>
     <string name="BurningFist_Name">brandende vuist</string>
+    <string name="BurningFist_Name_Objective">brandende vuist</string>
     <string name="CagedKobold_Intro">Hé... Hé! Jij bent die avonturier, toch? Help me eens, maat, die verdomme militaristen hebben me hier opgesloten! Ze willen een oud wapen heractiveren om de mensen op het oppervlak te veroveren! Maar gezien hoe gevaarlijk het is, was ik het er niet mee eens, dus hebben ze me gewoon buiten gezet en in een kooi gesloten! Ik bid je de sleutel van de cel te vinden, en als dank zal ik je helpen waar ik kan.</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
     <string name="Candy_Info">Deze snoep ziet er zo mooi uit en ruikt ook lekker. Moet je hem echt aan iemand anders geven?</string>
@@ -123,6 +124,7 @@
     <string name="Char_Stole_1">%1$s steelt %2$s van %3$s!</string>
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
     <string name="CharmSpell_Cast">%s is betoverd.</string>
+    <string name="Chasm_Info">Je viel naar je dood...</string>
     <string name="ChristmasTurkey_Name">festelijke kalkoen</string>
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="City_TileDescDeco">Er missen hier verschillende tegels.</string>
@@ -215,6 +217,7 @@
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
     <string name="Hero_StaBurning">Je vliegt in brand!</string>
     <string name="Hero_StaPoison">Je bent vergiftigd!</string>
+    <string name="Hero_Wait">...</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
     <string name="Hunger_Hungry_1">Je hebt honger.</string>
@@ -301,7 +304,7 @@
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
     <string name="PlagueDoctorMask_Info">Dit… dit is geen gewone masker. Het is… een barrière. Een schild tegen de krachten van verval waar de Pestmeester onvermoeid tegen vecht. Gemaakt van het fijnste ebenhout, kunstvol ingesneden met het gezicht van een gierige schedel. De holle oogkasjes zijn gevuld met schitterende amethisten die zwak pulseren, als uitgaande kolen van een vuur. Elke adem die je neemt, elk woord dat je spreekt, wordt gefilterd door een labyrintachtig netwerk van buizen en filters. Een mengsel van krachtige kruiden en exotische specerijen vult de lucht binnenin, het stank van de dood maskerend dat als een lijkhemd om je heen hangt.</string>
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
-    <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze ruggetje-persoon is verborgen onder een leer overal. Ook komt er een bittere geur van medicijnen en ... knoflook?</string>
+    <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze gebukte persoon is verborgen onder een leer overall. Van hem komt een bittere geur van medicijnen en... knoflook?</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Dit is geen enkel beest! Het is een levend getuigenis van nekromantische kracht! Vang er eentje, levend en onbeschadigd! Deze _Doodsridder_… hij is de sleutel!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Zijn skeletvingers tikken ritmisch tegen een borrelende ketel, de lucht om hem heek dik van de pittige stank van zwavel en verwesing*\n_Kobold Ijsmagiers_! Die jammerlijke wezens, gekrocht in hun bevroren grotten, wanhopig vasthoudend aan hun ijsmagie. Ik heb er vijf nodig, hun bevroren lichamen zullen... verlichtend zijn. Hun meesterwerk van ijs, het is... eigenaardig. Ik geloof dat ze aansluiten bij een oerenergie, een kracht die sluimert onder het oppervlakte van deze wereld.</string>
@@ -456,12 +459,14 @@
     <string name="VampireSkull_Name">Vampierschedel</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
+    <string name="WandOfAvalanche_Info1">Je verpletterde jezelf met je eigen Toverstaf van Lawine...</string>
     <string name="WandOfBlink_Name">Toverstaf van Blinken</string>
     <string name="WandOfDisintegration_Info">Deze staf straalt een bundel vernietigende energie uit, die alle wezens op zijn pad doorboort. Hoe meer slachtoffers het raakt, des te meer schade het aan elk van hen toebrengt.</string>
     <string name="WandOfIcebolt_Info1">Je hebt jezelf gedood met je eigen IJsbout...</string>
     <string name="WandOfIcebolt_Name">IJsbultstaf</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
     <string name="WandOfMagicMissile_Desinchanted">je ontgoochelde de Toverstaf van Magische Projectielen en gebruikte de essentie ervan om je %s te verbeteren</string>
+    <string name="WandOfMagicMissile_Info">Deze staf lanceert missiles van zuivere magische energie, wat matige schade aan een doelwit toebrengt.</string>
     <string name="WandOfMagicMissile_Name">Toverstaf van Magische Projectielen</string>
     <string name="WandOfRegrowth_Name">Staf van Herstel</string>
     <string name="WandOfTeleportation_Info2">er is niets gebeurd</string>
@@ -609,6 +614,18 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

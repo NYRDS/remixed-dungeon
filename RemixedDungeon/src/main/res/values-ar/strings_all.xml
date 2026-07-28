@@ -74,6 +74,7 @@
     <string name="Badges_ShadowLord_Slain">تم هزيمة سيد الظلال</string>
     <string name="Badges_StrengthAttained3">تم تحقيق 17 نقطة من القوة</string>
     <string name="Badges_Yasd">الموت من النار، السم، الغاز السام والجوع</string>
+    <string name="Bag_ACOpen">فتح</string>
     <string name="BardNPC_Desc">يعزف باردة المدينة على العود.</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
     <string name="Barrel_Name">برميل</string>
@@ -104,6 +105,7 @@
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
     <string name="Bowknot_Info">شريط وردي لامع جميل مربوط بعقدة ومثبت بدبوس شعر.</string>
     <string name="Brute_Gender">masculine</string>
+    <string name="BurningFist_Name_Objective">قبضة مشتعلة</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
@@ -129,6 +131,7 @@
     <string name="CharAction_Take">التقاط</string>
     <string name="Char_OutParalysis">كسر الألم شلل %s</string>
     <string name="Char_StaBleeding">نزيف</string>
+    <string name="Char_StaCrippled">معاق</string>
     <string name="Char_StaFrightened">مرعوب</string>
     <string name="Char_StaParalysed">مشلول</string>
     <string name="Char_StaPoisoned">مسموم</string>
@@ -138,6 +141,7 @@
     <string name="ChargrilledMeat_Info">يبدو وكأنه ستيك جيد.</string>
     <string name="ChargrilledMeat_Name">لحم مشوي على الجمر</string>
     <string name="CharmBuff_Name">مسحور</string>
+    <string name="Chasm_Info">سقطت حتى الموت...</string>
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
     <string name="ChristmasTurkey_Name">ديك رومي احتفالي</string>
     <string name="City_TileDescDeco">يفتقر هذا المكان لعدة بلاط.</string>
@@ -203,6 +207,7 @@
     <string name="FrostAuraBuff_Info">يحيط الصقيع بالجسد، مما يبطئ كل ما يقترب منه.</string>
     <string name="FrostBuff_Name">مجمد</string>
     <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
+    <string name="FrozenCarpaccio_Info4">تشعر بتحسن!</string>
     <string name="GameScene_Grass">رائحة النباتات تفوح في الهواء.</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="GasImmuneBuff_Name">مناعة الغاز</string>
@@ -242,6 +247,7 @@
     <string name="HeroSubClass_NameScout">كشاف</string>
     <string name="Hero_StaBurning">لقد اشتعلت בך النار!</string>
     <string name="Hero_StaRoots">لا يمكنك التحرك!</string>
+    <string name="Hero_Wait">انتظار...</string>
     <string name="HideInGrassSpell_NeedGrassToHide">حتى أنا لا أستطيع الاختباء في العراء</string>
     <string name="Horror_Name_1">%s مخيف</string>
     <string name="HuntressArmor_Name">رداء الصياد</string>
@@ -308,6 +314,7 @@
     <string name="MeleeWeapon_Info1c">مُطوَّر</string>
     <string name="MeleeWeapon_Info2a">متوسط ضرره %d نقطة لكل ضربة.</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
+    <string name="MeleeWeapon_Info6b">بسبب قوتك الزائدة، تم زيادة ضرر هجومك بهذا %s.</string>
     <string name="MeleeWeapon_Info7c">يمكنك الشعور بسحر شرير يكمن داخل %s.</string>
     <string name="MimicPie_Desc">الميماكس كائنات سحرية يمكنها اتخاذ أي شكل تريده. هذا يشبه فطيرة كبيرة ولذيذة.</string>
     <string name="MimicPie_Name">ميميكي</string>
@@ -337,10 +344,12 @@
     <string name="Piranha_Gender">feminine</string>
     <string name="PlagueDoctorMaskHood_Name">قناع طبيب الطاعون مع غطاء رأس</string>
     <string name="PlagueDoctorNPC_After_Quest">سأريهم، سأريهم جميعاً!</string>
+    <string name="PlagueDoctorNPC_Desc">جسد هذا الشخص الحدباء بأكمله مخفي تحت بذلة جلدية. كما تفوح منه رائحة مرّة من الأدوية و... الثوم؟</string>
     <string name="PlagueDoctorNPC_Name_Objective">طبيب الطاعون</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*يلقي برأسه للوراء ويطلق قهقهة هستيرية، صوتها يتردد في مختبره الرطب* رائع! _فارس الموت_، واقف أمامنا! القوة المنبعثة من كيانه... مسكرة! *يلتفت نحوك، عيناه تلمعان بشدة محمومة* ولك، مكافأة تليق ببسالتك: _جرعة القوة_! لتمنحك القوة لهزيمة أي عدو! الآن... لندرس موضوعنا. جوهره ذاته يخفي أسراراً يمكن أن تعيد كتابة قوانين الحياة ذاتها! *يقترب من _فارس الموت_ بابتسامة مجنونة، ممسكاً بقارورة من سائل أخضر يفور*</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">خمسة _أقزام_سحرة_، أجسادهم لا تزال تنبض بصدى ضعيف للسحر الأسود! أحضرهم لي، وسأكافئك بـ _جرعة_قوة_ التي ستمنحك قوة عشرة رجال!</string>
+    <string name="PlagueDoctorQuest_5_1_InProgress">*تتشتت أفكاره وهو يتحدث، ويصبح صوته أكثر هدوءاً، بالكاد همس.* أحضر لي اثنتين من *السُّكُّبات*... أحياء. قوتهن... آسر.</string>
     <string name="PlagueDoctorQuest_AllDone">*أطلق ضحكة جافة وصاخبة.* \&quot;أفعالك، لقد كشفت أسرارًا لا تُقاس! المعرفة المكتسبة... تنبض بداخلي، سمفونية من الاكتشاف. لكن المعرفة،\&quot; يضيفها بصوت منخفض، همس متآمر، \&quot;المعرفة هي قوة. والقوة... آه... إنها إكسير مسكر للغاية.\&quot; يحدق فيك بتركيز للحظة، وعيناه الجمشتية تحترقان بشدة حماسية. \&quot;ربما،\&quot; يهمس، \&quot;ستتقاطع طرقنا مرة أخرى. فما زالت هناك... ألغاز... تنتظر كشفها.\&quot;</string>
     <string name="Plant_Info">ارمِ هذه البذرة في المكان الذي تريد أن تنمو فيه %1.\n\n%2</string>
     <string name="PoisonArrow_Gender">feminine</string>
@@ -420,6 +429,7 @@
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
     <string name="ScrollOfUpgrade_LooksBetter">أصبح %s بالتأكيد يبدو أفضل الآن</string>
     <string name="ScrollOfUpgrade_Name">مخطوطة ترقية</string>
+    <string name="ScrollOfWeaponUpgrade_Info">سيؤدي هذا المخطوطة إلى ترقية سلاح قتال قريب، مما يحسن جودته. على عكس مخطوطة الترقية العادية، لن يدمر هذا الإصدار المتخصص أي سحر على السلاح. بل على العكس، قادر على إضفاء سحر عشوائي على سلاح غير مسحور.</string>
     <string name="Scroll_Runes_13">إيفاز</string>
     <string name="Scroll_Runes_5">رایدو</string>
     <string name="Scroll_Runes_9">بيركانان</string>
@@ -507,9 +517,11 @@
     <string name="Viscosity_Txt">%s من اللزوجة</string>
     <string name="WandMaker_Defense">امتص</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
+    <string name="WandOfAvalanche_Info1">سحقت نفسك بعصاك الخاصة من نوع عصا الانهيار الجليدي...</string>
     <string name="WandOfDisintegration_Info">تُصدر هذه العصا شعاعاً من الطاقة المدمرة، يخترق جميع الكائنات في طريقه. كلما أصاب أهدافاً أكثر، زاد الضرر الذي يلحقه بكل منها.</string>
+    <string name="WandOfFlock_SheepBaa_2">باع.</string>
     <string name="WandOfLightning_Name">عصا البرق</string>
-    <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية الخالصة، مسببة ضرراً معتدلاً للهدف.</string>
+    <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية النقية، مما يلحق ضرراً متوسطاً بالهدف.</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
     <string name="WandOfRegrowth_Info">عندما تنتهي حياة ما، تبدأ حياة جديدة بالنمو... الدورة الأبدية لا تنتهي!</string>
     <string name="WandOfTeleportation_Info2">لم يحدث شيء</string>
@@ -651,6 +663,19 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -78,6 +78,7 @@
     <string name="Blacksmith_Verify6">Tôi không thể rèn lại các vật phẩm này!</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="Boomerang_Gender">masculine</string>
+    <string name="BurningFist_Name_Objective">cú đấm bùng cháy</string>
     <string name="CagedKobold_Desc">Một kobold, trong một lồng.</string>
     <string name="CagedKobold_Intro">Ê... Ê! Cậu là phiêu lưu gia kia, đúng không? Giúp tớ một chút, bạn ơi, bọn quân phiệt đã giam tớ ở đây! Chúng định kích hoạt lại một vũ khí cổ xưa để chinh phục những con người trên mặt đất! Nhưng vì quá nguy hiểm, tớ đã phản đối, mà chúng ném tớ ra ngoài và giam trong lồng! Tớ xin nhờ cậu tìm chìa khóa cái buồng này, và như hồi báo, tớ sẽ giúp cậu hết sức có thể.</string>
     <string name="CagedKobold_Message1">Làm ơn...</string>
@@ -88,6 +89,7 @@
     <string name="Candy_Name">kẹo</string>
     <string name="Capotain_Name">Nón Pu-rinh</string>
     <string name="Carcass_DissectFailed">Bạn phẫu thuật %s nhưng không tìm thấy thứ gì có giá trị.</string>
+    <string name="Carcass_DissectResult">Từ %1 bạn thu được %2 phần thu hoạch %3.</string>
     <string name="Carcass_Info">tàn tích của quái vật hoàn toàn chết %s.</string>
     <string name="Carcass_Name">tàn dư của %s</string>
     <string name="Carcass_Necromancy">Bạn đã hồi sinh thi thể của %s!</string>
@@ -118,6 +120,7 @@
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
     <string name="ChargrilledMeat_Name">thịt nướng than hoa</string>
     <string name="CharmBuff_Info">Tâm trí và cơ thể đã bị mê hoặc!</string>
+    <string name="Chasm_Info">Bạn đã rơi xuống vực chết chóc...</string>
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
     <string name="City_TileDescDeco">Ở đây thiếu một vài viên gạch.</string>
     <string name="Claymore_Name">Kiếm Claymore</string>
@@ -208,6 +211,7 @@
     <string name="HeroSubClass_NameWitchdoctor">thầy pháp</string>
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
     <string name="Hero_StaBurning">Bạn bị bốc cháy!</string>
+    <string name="Hero_Wait">...</string>
     <string name="Horror_Name_0">Quái dị %s</string>
     <string name="HungerBuff_Info1">Bạn đang đói!</string>
     <string name="HungerBuff_Name1">Đói</string>
@@ -293,12 +297,15 @@
     <string name="Piranha_Name">piranha khổng lồ</string>
     <string name="PlagueDoctorMaskHood_Name">Mặt nạ Bác Sĩ Chúm với mũ che đầu</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Bạn vẫn còn ở đây à? Đây, hãy lấy đi!</string>
+    <string name="PlagueDoctorNPC_Desc">Toàn bộ cơ thể của kẻ lưng gù này bị che lấp dưới bộ đồ da. Từ hắn bốc mùi thuốc và... tỏi?</string>
     <string name="PlagueDoctorNPC_Name_Objective">bác sĩ dịch hạch</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">Mười ốc sên, mười thì thầm từ vực thẳm! Chất nhầy của chúng sẽ được phân tích, bản chất của chúng sẽ được thẩm định. Những bí mật chúng chứa đựng đã gần trong tầm tay.</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Ngón xương khô của hắn gõ nhịp nhàng vào nồi nước sôi sùng sục, không khí quanh hắn dày đặc bởi mùi hôi chua gay của lưu huỳnh và sự phân giải*\n_Kobold Pháp Sư Băng_! Những sinh vật thảm hại kia, trùm mình trong hang động đóng băng, nguội ngút chăm chăm vào phép thuật băng giá của chúng.\nTa cần năm con, xác đóng băng của chúng sẽ... soi sáng sự việc.\nSự thành thạo băng giá của chúng, nó... kỳ lạ.\nTa tin rằng chúng khai thác một năng lượng nguyên thủy, một sức mạnh ngủ quên dưới bề mặt của chính thế giới này.</string>
+    <string name="PlagueDoctorQuest_5_1_InProgress">*Tâm trí anh ấy lang thang khi nói, giọng nói càng lúc càng nhỏ, chỉ còn là thì thầm.* Mang cho ta hai *súc quyên*... sống. Quyền năng của chúng... mê hoặc.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Hắn ấp úng, giọng khàn khàn như cành cây khô giòn*. A-a, _súc quy_! Hai... có, hai, còn sống! Nó là... hem... cho nghiên cứu của ta! Các ngươi thấy... pheromone của chúng... nó quan trọng để hiểu cái cân bằng tinh tế của... a... *Hắn ngập ngừng, bàn tay xương cốt đưa lên gõ nghiến mặt nạ, ánh mắt chớm chớp nhìn về phía các ngươi với cường độ sốt ruột.* Cái... bản chất của chúng... nó là một câu đố... một câu đố đẹp đẽ, bí ẩn! *Hắn ho khan gắt gao, cố gắng lấy lại bình tĩnh.* Ta hứa, vì mang cho ta hai con... quái vật này... các ngươi sẽ có lòng biết ơn vĩnh cửu của ta. Hãy coi đó như một... một ơn huệ cho tri thức! Đúng! Vì tri thức!</string>
+    <string name="PlagueDoctor_Name">y sĩ đen</string>
     <string name="PoisonBuff_Name">Bị Độc</string>
     <string name="Poison_Death">Bạn đã chết vì độc...</string>
     <string name="Poison_Name_0">Độc %s</string>
@@ -350,6 +357,7 @@
     <string name="ScrollOfIdentify_Name">cuộn nhận diện</string>
     <string name="ScrollOfLullaby_Info1">Cuộn giấy phát ra giai điệu dịu dàng.</string>
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
+    <string name="ScrollOfRemoveCurse_Info">Lời chú trên cuộn này sẽ tách ngay lập tức khỏi vũ khí, giáp, nhẫn và vật mang theo của người đọc bất kỳ lời nguyền xấu nào có thể ngăn cản người đeo tháo chúng ra.</string>
     <string name="ScrollOfTeleportation_NoTeleport">Sức mạnh ma pháp của nơi này ngăn cản việc dịch chuyển của bạn!</string>
     <string name="ScrollOfWeaponUpgrade_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
@@ -415,6 +423,7 @@
     <string name="SummonBeast_Name">Gọi Thú</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="Swarm_Name">bầy ruồi</string>
+    <string name="Swing_Name_2">Hoang dã %s</string>
     <string name="Tamahawk_Info">Mặc dù rìu ném này không quá nặng, nhưng vẫn cần sức mạnh đáng kể để sử dụng hiệu quả.</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info3">Bắt được rồi, %s!</string>
@@ -443,8 +452,10 @@
     <string name="Using_Failed_Because_Magic">Một phép thuật mạnh mẽ ngăn cản bạn sử dụng \&quot;%s\&quot;.</string>
     <string name="VertigoBuff_Info">Cảm giác choáng váng khiến đi thẳng trở nên khó khăn!</string>
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
+    <string name="WandOfAvalanche_Info1">Bạn đã nghiền nát chính mình bằng Gậy Bão Tuyết của chính mình...</string>
     <string name="WandOfDisintegration_Info">Cây gậy này phát ra một tia năng lượng hủy diệt, xuyên thủng tất cả sinh vật trên đường đi. Càng nhiều mục tiêu bị trúng, càng nhiều sát thương nó gây ra cho mỗi mục tiêu.</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
+    <string name="WandOfMagicMissile_Info">Cây gậy này phóng ra các tên lửa năng lượng ma thuật thuần khiết, gây sát thương trung bình cho mục tiêu.</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
     <string name="WandOfTeleportation_Info2">không có gì xảy ra</string>
@@ -454,6 +465,7 @@
     <string name="Wand_Wood_Types_7">gõ đỏ</string>
     <string name="WarHammer_Name">Búa chiến tranh</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterOfTransmutation_Info">Sức mạnh của sự biến đổi tỏa ra từ nước của giếng này. Hãy ném một vật phẩm vào giếng để biến nó thành thứ khác.</string>
     <string name="WeaknessBuff_Name">Yếu</string>
     <string name="Weightstone_Fast">bạn đã cân bằng %s để làm nó nhanh hơn</string>
@@ -491,6 +503,7 @@
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
     <string name="WndPlayGames_Connecting">Đang kết nối với Google Play Games, vui lòng chờ một chút</string>
     <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
+    <string name="WndPortal_Info">Cổng này sẽ cho phép bạn quay lại thị trấn. Nó có vẻ khá không ổn định, và có lẽ sẽ không hoạt động quá lâu.\nBạn có muốn sử dụng nó không?</string>
     <string name="WndPortal_Info_Return">Cổng truyền tàng này sẽ đưa bạn trở lại hang động.\nBạn có muốn sử dụng nó không?</string>
     <string name="WndPremiumSettings_banners">Chọn chất liệu cờ</string>
     <string name="WndPremiumSettings_chrome">Chọn vật liệu giao diện</string>
@@ -759,6 +772,20 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
