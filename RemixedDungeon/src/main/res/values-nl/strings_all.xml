@@ -295,6 +295,7 @@
     <string name="OozeBuff_Name">Bijtend Slijk</string>
     <string name="Ooze_Death">%s slikt je op...</string>
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
+    <string name="ParalysisBuff_Name">Verlamd</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te mijnen!</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
@@ -568,6 +569,7 @@
     <string name="town_deco_banner_desc">Een elegante vlag met de symbolen van deze kroeg.</string>
     <string name="town_deco_banner_name">Vaandel</string>
     <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
+    <string name="town_deco_blue_carpet_desc">Een luxe blauwe tapijt, versierd met paarse ornamenten.</string>
     <string name="town_deco_broken_wall_desc">De balken in deze muur zijn al lang verrot en hebben hun gewone weerstandskracht verloren.</string>
     <string name="town_deco_brown_carpet_desc">Deze bruine tapijt is onder voet getrapt door veel avonturiers, zwervers en toeschouwers.</string>
     <string name="town_deco_brown_carpet_name">Tapijt</string>
@@ -607,6 +609,8 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

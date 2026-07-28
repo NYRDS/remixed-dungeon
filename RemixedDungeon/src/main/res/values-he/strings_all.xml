@@ -46,6 +46,7 @@
     <string name="Badges_AllWands">כל המטות זוהו</string>
     <string name="Badges_BossSlain1">הגווּ הובס</string>
     <string name="Badges_BossSlain3">DM-300 הובס</string>
+    <string name="Badges_DeathFire">מוות מאש</string>
     <string name="Badges_DeathGlyph">מוות מגליף</string>
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
     <string name="Badges_FoodEaten3">30 מנות אוכל נאכלו</string>
@@ -605,6 +606,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

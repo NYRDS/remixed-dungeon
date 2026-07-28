@@ -123,6 +123,7 @@
     <string name="ChaosBlade_Name">شفرة الفوضى</string>
     <string name="ChaosCrystal_BladeFused">يمتص الكريستال سلاحك، ويتخذ شكل شفرة</string>
     <string name="ChaosStaff_Name">عصا الفوضى</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="CharAction_Give">إعطاء</string>
     <string name="CharAction_PetInventory">مخزن الحيوان الأليف</string>
     <string name="CharAction_Take">التقاط</string>
@@ -135,6 +136,7 @@
     <string name="Char_StaStunned">مذهول</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
     <string name="ChargrilledMeat_Info">يبدو وكأنه ستيك جيد.</string>
+    <string name="ChargrilledMeat_Name">لحم مشوي على الجمر</string>
     <string name="CharmBuff_Name">مسحور</string>
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
     <string name="ChristmasTurkey_Name">ديك رومي احتفالي</string>
@@ -599,6 +601,7 @@
     <string name="YogsHeart_Desc">لسنوات طويلة اعتقد الناس أن المخلوقات عديمة القلب فقط هي القادرة على أفعال الشر الصرفة. ومع ذلك، ها هو هنا أمامك قلب ضخم نابض، يعود للإله القديم نفسه.</string>
     <string name="deco_candle_name">شمعة</string>
     <string name="town_deco_INN_sign_name">لافتة النزل</string>
+    <string name="town_deco_armoronhanger_name">درع</string>
     <string name="town_deco_armorstand_plate_desc">وفقاً للتاجر، كان هذا الدروع الثقيلة ينتمي يوماً ما إلى محارب عظيم.</string>
     <string name="town_deco_armorstand_scale_name">درع حرشفي</string>
     <string name="town_deco_banner_desc">لافتة أنيقة تصور رموز هذه الحانة.</string>
@@ -611,6 +614,7 @@
     <string name="town_deco_brown_carpet_desc">هذا السجاد البني قد وطئته أقدام العديد من المغامرين والمتشردين والمارة.</string>
     <string name="town_deco_cabinet_desc">خزانة واسعة ذات أبواب ورفوف كثيرة.</string>
     <string name="town_deco_canvas_name">قماش</string>
+    <string name="town_deco_carpet_desc">سجادة حمراء فاخرة مخصصة للضيوف المميزين.</string>
     <string name="town_deco_cinema_sign_desc">يبدو أن هناك سينما داخل هذا المبنى.</string>
     <string name="town_deco_clock_desc">عقاربها متجمدة منذ وقت طويل في وضع واحد.</string>
     <string name="town_deco_common_bed_name">سرير</string>
@@ -647,6 +651,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 

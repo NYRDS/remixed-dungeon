@@ -88,6 +88,7 @@
     <string name="Candy_Name">kẹo</string>
     <string name="Capotain_Name">Nón Pu-rinh</string>
     <string name="Carcass_DissectFailed">Bạn phẫu thuật %s nhưng không tìm thấy thứ gì có giá trị.</string>
+    <string name="Carcass_Info">tàn tích của quái vật hoàn toàn chết %s.</string>
     <string name="Carcass_Name">tàn dư của %s</string>
     <string name="Carcass_Necromancy">Bạn đã hồi sinh thi thể của %s!</string>
     <string name="Caves_TileDescHighGrass">Nấm khổng lồ chắn tầm nhìn.</string>
@@ -187,6 +188,7 @@
     <string name="HeartOfDarkness_Name">Trái tim của bóng tối</string>
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
     <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
+    <string name="HeroClass_ElfPerks_5">Yếu tinh kém thành thạo hơn với vũ khí cận chiến.</string>
     <string name="HeroClass_GnollPerks_3">Gnoll không thể đọc hoặc viết.</string>
     <string name="HeroClass_HunPerks_1">Các Nữ Thợ Săn bắt đầu với một bumerang độc đáo có thể nâng cấp.</string>
     <string name="HeroClass_HunPerks_4">Các Nữ Săn Bắt có thể cảm nhận quái vật lân cận ngay cả khi chúng bị che khuất bởi chướng ngại vật.</string>
@@ -225,6 +227,7 @@
     <string name="InterLevelScene_ErrorGeneric">Đã có lỗi xảy ra...</string>
     <string name="InterLevelScene_FileNotFound">Không tìm thấy tập tin. Với một số lý do...</string>
     <string name="InterLevelScene_Loading">Đang tải...</string>
+    <string name="IntroScene_Txt">Nhiều anh hùng đủ mọi loại đã mạo hiểm vào Ngục Trại trước bạn. Một số đã trở về với kho báu và pháp thuật, hầu hết thì không bao giờ được nghe tin tức. Nhưng không ai thành công trong việc lấy được Huyền Chương Yendor, đồ vật được cho là chôn sâu trong lòng Ngục Trại. Bạn cảm thấy mình đã sẵn sàng cho thử thách, và quan trọng hơn, bạn tin rằng may mắn đang mỉm cười với bạn. Đã đến lúc bắt đầu cuộc phiêu lưu của mình!</string>
     <string name="InvisibilityBuff_Info">Hoàn toàn vô hình, có thể giúp tránh nguy hiểm hoặc trở thành nguy hiểm.</string>
     <string name="IronKey_FromDepth">chìa khóa sắt từ độ sâu %d</string>
     <string name="Item_Name">vật phẩm</string>
@@ -756,6 +759,9 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
 
 
 
