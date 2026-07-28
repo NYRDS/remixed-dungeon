@@ -176,6 +176,7 @@
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EquipableItem_ACUnequip">לְהַסִיר</string>
     <string name="ExplodingSkull_Desc">גולגולת צפה ובוערת זו נראית שבירה ביותר, ונראית כאילו היא עומדת להתפרק לרסיסים בכל רגע.</string>
+    <string name="Eye_Kill">מבט המוות של %s הרג אותך...</string>
     <string name="Facilitations_Names_0">ללא רעב</string>
     <string name="Facilitations_Names_3">כוח ענק</string>
     <string name="FetidRat_Name_Objective">עכברוש מצחין</string>
@@ -415,6 +416,7 @@
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
     <string name="ScrollOfRecharging_Name">מגילת טעינה</string>
     <string name="ScrollOfTeleportation_NoTeleport">אאורה קסומה חזקה של המקום הזה מונעת ממך לטלפורט!</string>
+    <string name="ScrollOfTeleportation_Teleport2">בהרף עין %s טלפורטו למיקום אחר ברמה.</string>
     <string name="ScrollOfUpgrade_Name">מגילת שדרוג</string>
     <string name="Scroll_Info">המגילה הזו מכוסה בכתב בלתי ניתן לפענוח, ונושאת כותרת של רונה %s. מי יודע מה יקרה כשיקראו אותה בקול רם?</string>
     <string name="Scroll_Runes_10">אודל</string>
@@ -553,6 +555,7 @@
     <string name="WndSadGhostNecro_Yes">כן, כפה את רצונך עליו.</string>
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
     <string name="WndSettingsInGame_GameLog">יומן משחק</string>
+    <string name="WndSettings_FpsLimit">הגבלת FPS</string>
     <string name="WndSettings_GameplaySettings">משחקיות</string>
     <string name="WndSettings_Handedness">יד דומיננטית</string>
     <string name="WndSettings_ImmersiveMode">מצב סוחף</string>
@@ -590,6 +593,7 @@
     <string name="town_deco_counter_desc">שומר על מרחק טוב בינך לבין האדם שעומד מאחוריו.</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
     <string name="town_deco_curtains_name">וילונות</string>
+    <string name="town_deco_entrance_desc">כניסה זו מובילה לרמות העליונות של הצינוק.</string>
     <string name="town_deco_entrance_name">כניסה</string>
     <string name="town_deco_exit_desc">לא ידוע מה מחכה לך אם תרד במדרגות האלה.</string>
     <string name="town_deco_exit_name">יציאה</string>
@@ -618,6 +622,10 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 
