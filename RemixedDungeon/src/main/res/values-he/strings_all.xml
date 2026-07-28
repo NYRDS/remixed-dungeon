@@ -199,6 +199,7 @@
     <string name="Ghost_Name_Objective">רוח</string>
     <string name="Ghost_Rat1">שלום הרפתקן... פעם הייתי כמוך - חזק ובטוח... ועכשיו אני מת... אבל אני לא יכול לעזוב את המקום הזה... לא עד שאנקום... הרוג את _העכברוש המסריח_, שלקח את חיי...</string>
     <string name="Glaive_Name">גלייב</string>
+    <string name="GnollCostume_Name">תחפושת גנול</string>
     <string name="Gnoll_Desc">גנולים הם דמויי צבועים. הם שוכנים בביובים ובמבוכים, ויוצאים לפשוט על פני השטח מדי פעם. סיירי הגנולים הם חברים רגילים בלהקה, הם לא חזקים כמו בריונים ולא חכמים כמו שאמאנים.</string>
     <string name="Gnoll_Gender">masculine</string>
     <string name="GoldenKey_Info">החריצים במפתח הזהב הזעיר והמסובך. אולי הוא יכול לפתוח מנעול של תיבה כלשהי?</string>
@@ -245,6 +246,7 @@
     <string name="HuntressArmor_NoEnemies">אין אויבים בטווח ראייה</string>
     <string name="HuntressArmor_NotHuntress">רק ציידות יכולות להשתמש בשריון זה!</string>
     <string name="IceCaves_TileDescDeco">הגנול הזה הוקפא חי. כנראה שהוא נמצא שם כבר הרבה זמן.</string>
+    <string name="IceCaves_TileDescHighGrass">צמחייה קפואה וצפופה חוסמת את הראות.</string>
     <string name="IceCaves_TileDescStatue">עוד פסל נורא... רגע, זה גנול קפוא.</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
     <string name="IceElemental_Name_Objective">אלמנטל קרח</string>
@@ -505,6 +507,7 @@
     <string name="WaterElemental_Name_Objective">יסוד מים</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
     <string name="WeaknessBuff_Name">נחלש</string>
+    <string name="Weightstone_ACApply">החל</string>
     <string name="Weightstone_Info">בעזרת משקולת, אתה יכול לאזן את נשק הקרב שלך כדי להגביר את המהירות או הדיוק שלו.</string>
     <string name="Weightstone_Name">אבן משקל</string>
     <string name="Weightstone_WndCancel">לא נורא</string>
@@ -615,6 +618,9 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 

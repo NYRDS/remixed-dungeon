@@ -267,6 +267,7 @@
     <string name="ImpShopkeeper_Desc">الجان هم شياطين أدنى. فهم لا يتميزون بقوتهم ولا بموهبتهم السحرية. لكنهم أذكياء واجتماعيون تماماً، ويفضل العديد من الجان العيش وممارسة التجارة بين غير الشياطين.</string>
     <string name="Imp_Cya">إلى اللقاء، %s!</string>
     <string name="Imp_Desc">العفاريت هي شياطين أقل شأناً. لا تتميز بقوتها أو موهبتها السحرية، لكنها ذكية واجتماعية تماماً. يفضل العديد من العفاريت العيش بين غير الشياطين.</string>
+    <string name="Imp_Golems1">هل أنت مغامر؟ أحب المغامرين! يمكن الاعتماد عليهم دائماً إذا كان هناك شيء يحتاج للقتل. أليس كذلك؟ من أجل المكافأة بالطبع ;)\nفي حالتي هؤلاء هم _الغولم_ الذين يحتاجون للقتل. ترى، سأبدأ مشروعاً صغيراً هنا، لكن هذه الغولم الغبية سيئة للأعمال! من الصعب جداً التفاوض مع كتل الجرانيت المتجولة، لعنة عليهم! لذا من فضلك، اقتل... لنقل _6 منهم_ والمكافأة لك.</string>
     <string name="Imp_Golems2">كيف تسير سفاري الغوليم الخاصة بك؟</string>
     <string name="IncendiaryDart_Info">يُصمَّم سنّ كل من هذه السهام ليغرس في هدفه، بينما تنفجر المركبات غير المستقرة المربوطة بطوله في ألسنة لهبٍ باهرة.</string>
     <string name="InnKeeperNPC_Desc">صاحب الفندق فخور بنفسه.</string>
@@ -600,6 +601,7 @@
     <string name="WndTradeItem_Buy">شراء بـ %dغ</string>
     <string name="WndTradeItem_SellAll">بيع الكل مقابل %dg</string>
     <string name="WndTradeItem_SellN">بيع %1$d مقابل %2$dغ</string>
+    <string name="WndWandmaker_Battle">عصا قتال</string>
     <string name="Wnd_Button_Ok">موافق</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="Worm_Desc">لا يمكن معرفة حجم هذا الدودة. تبرز جزئياً من الأرض، وجسم هذا الكائن مغطى بكتل من اللحم المتعفن والخراء. فكيه العملاقان يعطيان فكرة واضحة عن كيفية تحرك ذلك الوحش عبر السطح.</string>
@@ -611,6 +613,7 @@
     <string name="YogsBrain_Name_Objective">عقل يوغ</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
     <string name="YogsHeart_Desc">لسنوات طويلة اعتقد الناس أن المخلوقات عديمة القلب فقط هي القادرة على أفعال الشر الصرفة. ومع ذلك، ها هو هنا أمامك قلب ضخم نابض، يعود للإله القديم نفسه.</string>
+    <string name="YogsTeeth_Name">أسنان يوغ</string>
     <string name="deco_candle_name">شمعة</string>
     <string name="town_deco_INN_sign_name">لافتة النزل</string>
     <string name="town_deco_armoronhanger_name">درع</string>
@@ -663,6 +666,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 
