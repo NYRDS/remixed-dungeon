@@ -127,6 +127,7 @@
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="City_TileDescDeco">Er missen hier verschillende tegels.</string>
     <string name="Claymore_Info">Dit massive zwaard zou door alles moeten kunnen snijden.</string>
+    <string name="CloakBuff_Info">Een donkere mantel verhult je in de schaduw, waardoor je minder zichtbaar bent voor vijanden.</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
@@ -184,6 +185,8 @@
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="GoldenKey_Name">Gouden sleutel</string>
+    <string name="GoldenStatue_Gender">feminine</string>
+    <string name="Goo_Info1">De slime blaast zichzelf op!</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
     <string name="Halberd_Gender">feminine</string>
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
@@ -256,6 +259,7 @@
     <string name="LightningBolt_Info">Een spreuk die wordt gedeeld onder oude schamanen, die je vijanden tweemaal zo effectief schokt, vooral als ze genoeg dwazen zijn om op water te staan.</string>
     <string name="LightningTrap_Name">Bliksemval</string>
     <string name="LloidsBeacon_Preventing">Een soort sterke magische aura die hier aanwezig is voorkomt dat je Lloyds boei kunt gebruiken!</string>
+    <string name="Longsword_Name">langzwaard</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
     <string name="MedicineMask_Obtained">Chirurgisch masker verkregen</string>
@@ -603,6 +607,11 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
 
 
 

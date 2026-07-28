@@ -150,6 +150,7 @@
     <string name="CorpseExplosion_Info">يحول الجثة إلى سحابة قاتلة من الغاز السام، تنشر المرض والسم على جميع الأعداء القريبين.</string>
     <string name="Crab_Desc">هذه السرطانات الضخمة تتصدر السلسلة الغذائية في المجاري. إنها سريعة للغاية ويمكن لهيكلها الخارجي السميك تحمل الضربات القوية.</string>
     <string name="Crab_Name">سرطان المجاري</string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">بلورة طافية</string>
     <string name="Dagger_Name">خنجر</string>
     <string name="DarkGold_Info">يُسمى هذا المعدن \&quot;المظلم\&quot; ليس بسبب لونه (فهو لا يختلف عن الذهب العادي)، بل لأنه يذوب في ضوء النهار، مما يجعله عديم الفائدة على السطح.</string>
@@ -270,6 +271,7 @@
     <string name="InvisibilityBuff_Info">مخفي تماماً، مما قد يساعد في تجنب الأخطار أو أن تصبح خطراً بحد ذاته.</string>
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
     <string name="JarOfSouls_Desc">عينا الجمجمة المضيئة المرسومة على هذا الجرّة القديمة، بالإضافة إلى الطاقة الغريبة التي تنبعث منها، تجعلك تشعر بعدم الارتياح.</string>
+    <string name="Journal_Azuterron">غريب</string>
     <string name="Journal_Caged_Kobold">كوبولد مسجون</string>
     <string name="Journal_WellHealt">بئر الصحة</string>
     <string name="Keyring_Name">حلقة المفاتيح</string>
@@ -304,6 +306,7 @@
     <string name="MeleeWeapon_Info1c">مُطوَّر</string>
     <string name="MeleeWeapon_Info2a">متوسط ضرره %d نقطة لكل ضربة.</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
+    <string name="MeleeWeapon_Info7c">يمكنك الشعور بسحر شرير يكمن داخل %s.</string>
     <string name="MimicPie_Desc">الميماكس كائنات سحرية يمكنها اتخاذ أي شكل تريده. هذا يشبه فطيرة كبيرة ولذيذة.</string>
     <string name="MimicPie_Name">ميميكي</string>
     <string name="MimicPie_Name_Objective">ميميكي</string>
@@ -316,6 +319,7 @@
     <string name="Mob_StaHuntingStatus">هذا %s يصطاد</string>
     <string name="Mods_AuthorEmail">بريد المؤلف الإلكتروني:</string>
     <string name="Mods_RestartRequired">مطلوب إعادة تشغيل</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">آه! يا له من منظر نادر! زميل مغامر ليس مجرد جثة بلا حياة! لا يكاد يصدق! أوه... أعتذر، أحياناً أشعر بالحماس الشديد. ترى، أنا نِكْرومانسي (ساحر الموتى). وعلى الرغم من أن دراسة الموتى والموت نفسه هو مهنتي، إلا أن رؤية نفس الأشياء مراراً وتكراراً تصبح مرهقة للغاية في النهاية. من ناحية أخرى، هذا هو السبب بالضبط في وجودي هنا. وفقاً لحساباتي، في غضون أسابيع قليلة، في مكان ما في هذا الزنزانة بالذات، سيحدث شيء مذهل. الـ _نِكْرُوبُولِس_ (المقبرة القديمة)، مدينة الموتى القديمة، ستفتح أبوابها. و... لا يمكنني حقاً قول الكثير، لقد أضعت وقتاً كافياً كما هو الحال. أنا بحاجة للاستعداد، _عد لاحقاً_.</string>
     <string name="NecromancerNPC_Message2">يجب أن أكون جاهزاً.</string>
     <string name="Necromancy_SummonDeathlingName">استدعاء سمرتة</string>
@@ -643,6 +647,11 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
 
 
 

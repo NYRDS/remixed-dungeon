@@ -188,6 +188,7 @@
     <string name="FreezeGlobe_Info">מקפיא את הדמות שנבחרה, ומונע ממנה לבצע כל פעולה למשך זמן קצר.</string>
     <string name="FriedFish_Name">דג מטוגן</string>
     <string name="FrostAuraBuff_Name">הילת כפור</string>
+    <string name="FullFaceMask_Info">מסכת גז היא מסכה המשמשת להגנה על הלובש מפני שאיפת מזהמים באוויר וגזים רעילים. המסכה יוצרת כיסוי אטום על האף, הפה והעיניים.\n\nמסננים חסרים ממסכה זו אבל היא עדיין נראית מגניבה.</string>
     <string name="GameScene_Chasm">צעדיך מהדהדים ברחבי הצינוק.</string>
     <string name="GasImmuneBuff_Info">חסין לכל הגזים</string>
     <string name="GasImmuneBuff_Name">חסינות לגז</string>
@@ -227,6 +228,7 @@
     <string name="HeroSubClass_NameAssa">מתנקש</string>
     <string name="HeroSubClass_NameBatM">קוסם קרב</string>
     <string name="HeroSubClass_NameFreR">רץ חופשי</string>
+    <string name="HeroSubClass_NameGuardian">שומר</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
     <string name="Hero_Name_Objective">אותך</string>
     <string name="Hero_StaBurning">אתה נדלקת!</string>
@@ -274,6 +276,7 @@
     <string name="Level_TileSummoningTrap">מלכודת זימון</string>
     <string name="Level_TileWall">קיר</string>
     <string name="Level_TileWell">באר</string>
+    <string name="LibrarianNPC_Name_Objective">ספרן</string>
     <string name="LibraryBook_Description">הספר העתיק הזה עצום בגודלו. הוא מכיל את כל הידע שהרפתקנים גילו והביאו מהמבוך.</string>
     <string name="Lich_DieInfo">מעולם לא אהבתי את הנקרומנסר הזה. הגיע הזמן לחזור לרמה 7 ולמצוא דרך אחרת להרפתקה החדשה.</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
@@ -411,6 +414,7 @@
     <string name="ServantNPC_Name_Objective">מלצרית פונדק</string>
     <string name="ServiceManNPC_Desc">עובד רגיל של הממסדים המקומיים.</string>
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
+    <string name="Sewer_TileDescDeco">טחב צהבהב ולח מכסה את הרצפה.</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
     <string name="Shaman_Gender">masculine</string>
@@ -601,6 +605,11 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 

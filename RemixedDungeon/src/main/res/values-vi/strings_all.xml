@@ -287,6 +287,7 @@
     <string name="PetInventory_ViewManage">Quản lý</string>
     <string name="Pickaxe_Info">Đây là một công cụ lớn và chắc chắn để phá đá. Nó có thể được dùng như một vũ khí.</string>
     <string name="Pickaxe_NothingToMine">Không có gì để khai thác ở đây!</string>
+    <string name="Piranha_Name">piranha khổng lồ</string>
     <string name="PlagueDoctorMaskHood_Name">Mặt nạ Bác Sĩ Chúm với mũ che đầu</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Bạn vẫn còn ở đây à? Đây, hãy lấy đi!</string>
     <string name="PlagueDoctorNPC_Name_Objective">bác sĩ dịch hạch</string>
@@ -299,6 +300,7 @@
     <string name="Poison_Death">Bạn đã chết vì độc...</string>
     <string name="Poison_Name_0">Độc %s</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
+    <string name="PotionOfMana_Name">Bình Mana</string>
     <string name="PotionOfMight_Name">Bình Thuốc Mạnh Mẽ</string>
     <string name="PotionOfMindVision_Apply2">Bạn có thể cảm nhận được rằng bạn là sinh vật sống duy nhất trên tầng này lúc này.</string>
     <string name="PotionOfPurity_NoSmell">Bạn đã ngừng cảm nhận được mùi hương nào cả!</string>
@@ -343,6 +345,7 @@
     <string name="ScrollOfCurse_Info">Cuộn giấy này được tạo ra đặc biệt để trừng phạt những tên trộm đủ ngu ngốc để cố gắng sử dụng phép thuật mà chúng không thể hiểu. Pháp thuật của cuộn giấy hoàn toàn vô dụng thậm chí có hại cho phiêu lưu gia thông thường, nhưng được các thương nhân trân trọng rất cao.</string>
     <string name="ScrollOfIdentify_InvTitle">Chọn một vật phẩm để nhận diện</string>
     <string name="ScrollOfIdentify_Name">cuộn nhận diện</string>
+    <string name="ScrollOfLullaby_Info1">Cuộn giấy phát ra giai điệu dịu dàng.</string>
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
     <string name="ScrollOfTeleportation_NoTeleport">Sức mạnh ma pháp của nơi này ngăn cản việc dịch chuyển của bạn!</string>
     <string name="ScrollOfWeaponUpgrade_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
@@ -558,6 +561,7 @@
     <string name="town_deco_rope_name">dây thừng</string>
     <string name="town_deco_scrolls_name">Cuộn</string>
     <string name="town_deco_shelf_full_name">Kệ sách</string>
+    <string name="town_deco_shelf_name">Các kệ sách</string>
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_urn_name">Hũ</string>
@@ -752,6 +756,11 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
+
+
 
 
 
