@@ -145,6 +145,7 @@
     <string name="DieHardBuff_Info">Tốc độ hồi phục tăng lên.</string>
     <string name="DonateButton_thanks">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="DriedRoseBuff_Info">Bông hồng trông rất quyến rũ.</string>
+    <string name="DriedRose_Info">Bông hồng này đã khô héo từ lâu, nhưng cách nào đó nó vẫn giữ nguyên tất cả cánh hoa.</string>
     <string name="DriedRose_Info2"> Và nó vẫn chưa mất đi sự quyến rũ của mình. Nó trông đẹp đến mức bạn muốn giữ nó mãi mãi.</string>
     <string name="DriedRose_Name">hoa hồng khô</string>
     <string name="Drink_ACDrink">UỐNG</string>
@@ -257,6 +258,7 @@
     <string name="LloidsBeacon_ACSet">ĐẶT</string>
     <string name="LloidsBeacon_Preventing">Một loại halo ma thuật mạnh mẽ hiện diện ở đây ngăn cản bạn sử dụng cột đèn của Lloyd!</string>
     <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
+    <string name="MagicArrow_Name">Mũi Tên Ma Thuật</string>
     <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
     <string name="MailArmor_Name">áo giáp xích</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
@@ -777,6 +779,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 

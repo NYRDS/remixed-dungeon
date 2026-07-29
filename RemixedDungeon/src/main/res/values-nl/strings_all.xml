@@ -302,6 +302,7 @@
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
     <string name="ParalysisBuff_Name">Verlamd</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
+    <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te mijnen!</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
     <string name="PlagueDoctorMask_Info">Dit… dit is geen gewone masker. Het is… een barrière. Een schild tegen de krachten van verval waar de Pestmeester onvermoeid tegen vecht. Gemaakt van het fijnste ebenhout, kunstvol ingesneden met het gezicht van een gierige schedel. De holle oogkasjes zijn gevuld met schitterende amethisten die zwak pulseren, als uitgaande kolen van een vuur. Elke adem die je neemt, elk woord dat je spreekt, wordt gefilterd door een labyrintachtig netwerk van buizen en filters. Een mengsel van krachtige kruiden en exotische specerijen vult de lucht binnenin, het stank van de dood maskerend dat als een lijkhemd om je heen hangt.</string>
@@ -622,6 +623,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 

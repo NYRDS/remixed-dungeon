@@ -222,6 +222,7 @@
     <string name="Golem_Name">غول</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Guts_TileWater">سائل لزج غريب</string>
+    <string name="Halberd_Name">حربة</string>
     <string name="Halls_TileDescWater">يبدو مثل الحمم البركانية، لكنه بارد ومن المحتمل أن يكون آمناً للمس.</string>
     <string name="Halls_TileStatue">عمود</string>
     <string name="Halls_TileWater">لावा باردة</string>
@@ -275,6 +276,7 @@
     <string name="InnKeeperNPC_Name">صاحب الحانة</string>
     <string name="InnKeeperNPC_Name_Objective">صاحب الحانة</string>
     <string name="Instability_Name_0">غير مستقر %s</string>
+    <string name="InterLevelScene_Descending">ننزلق...</string>
     <string name="InterLevelScene_FileNotFound">لم يتم العثور على الملف. لسبب ما...</string>
     <string name="InterLevelScene_Loading">جاري التحميل...</string>
     <string name="InventoryScroll_No">لا، غيّرت رأيي</string>
@@ -489,6 +491,7 @@
     <string name="SungrassBuff_Name">الشفاء بالأعشاب</string>
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
     <string name="SuspiciousRat_Info1">الفأر المشبوه يرتجف بعنف.</string>
+    <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">سرب ذباب</string>
     <string name="Tamahawk_Info">على الرغم من أن هذا الفأس الرمي ليس ثقيلاً جداً، إلا أنه لا يزال يتطلب قوة كبيرة لاستخدامه بفعالية.</string>
     <string name="Tengu_Gender">masculine</string>
@@ -668,6 +671,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 

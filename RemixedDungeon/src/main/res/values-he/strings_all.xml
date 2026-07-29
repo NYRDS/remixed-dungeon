@@ -149,6 +149,7 @@
     <string name="CorpseDustBuff_Info">התקפות מתגברות מאוד עבור אלו שמלאים בצמא דם, מה שהופך אותם למסוכנים במיוחד.</string>
     <string name="CorpseDust_Info">כדור אבק הגופות לא נראה שונה מכדור אבק רגיל. עם זאת, אתה יודע איכשהו שעדיף להיפטר ממנו בהקדם האפשרי.</string>
     <string name="Crystal_Desc">גביש גדול ומבריק מרחף באוויר. כנראה שהוא מלא בקסם חזק.</string>
+    <string name="DM300_Info2">המשימה נכשלה. כיבוי.</string>
     <string name="DarkSacrifice_Ok">חַיַּי שֶׁלְּךָ!</string>
     <string name="Dart_Name">חץ קטן</string>
     <string name="DashSpell_Info">מזנק בכיוון שצוין תוך התנגשות באויבים, גורם נזק ומטיל \'קטוע\'.</string>
@@ -215,6 +216,7 @@
     <string name="Heal_Cast">%s נרפא.</string>
     <string name="HeartOfDarkness_Name">לב החושך</string>
     <string name="Hedgehog_Info3">האם אתה אוהב תה עם ריבת פטל?</string>
+    <string name="Hedgehog_Info4">קח את הפאי הזה</string>
     <string name="Hedgehog_Name">קיפוד</string>
     <string name="HeroClass_ElfPerks_4">אלפים מקבלים הרבה יותר בריאות מטיפות טל.</string>
     <string name="HeroClass_GnollPerks_3">גנולים לא יודעים לקרוא או לכתוב.</string>
@@ -326,6 +328,7 @@
     <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">סיוט</string>
     <string name="Ooze_Death">%s בולע אותך...</string>
+    <string name="Order_Info">בריכוז נכון, הפקודות שלך כמעט בלתי ניתנות לערעור.</string>
     <string name="Order_Resist">איך אתה מעז?!!</string>
     <string name="ParalysisArrow_Name">חץ משתק</string>
     <string name="Paralysis_Name_2">מהממת %s</string>
@@ -604,6 +607,7 @@
     <string name="town_deco_library_sign_name">שלט ספרייה</string>
     <string name="town_deco_movies_door_name">דלת</string>
     <string name="town_deco_pathway_name">שביל</string>
+    <string name="town_deco_pillar_desc">בימים עברו, עמוד זה שימש כתמיכה מצוינת וקישוט.</string>
     <string name="town_deco_pole_name">עמוד</string>
     <string name="town_deco_poster_desc">מודעות המכריזות על הקרנות עתידיות בקולנוע.</string>
     <string name="town_deco_red_carpet_desc">השמועה אומרת ששטיחים אדומים דומים מקשטים את אולמות המטרופולין הגמדי.</string>
@@ -622,6 +626,10 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 
