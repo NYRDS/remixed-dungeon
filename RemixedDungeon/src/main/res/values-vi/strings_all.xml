@@ -185,6 +185,7 @@
     <string name="Ghost_Desc">Ma gần như không thể nhìn thấy. Nó trông như một đốm ánh sáng mờ vô hình với một khuôn mặt buồn bã.</string>
     <string name="Ghost_Name">ma buồn</string>
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
+    <string name="GnollCostume_Info">Một bộ trang phục ấm áp và bồng bềnh cực kỳ. Ai mặc bộ trang phục này sẽ trông như... người đang cố gắng cải trang thành gnoll. Nhưng gnoll sẽ không bị lừa, chúng vẫn sẽ tấn công bạn.</string>
     <string name="GoldenKey_Name">chìa khóa vàng</string>
     <string name="Golem_Name">golem</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
@@ -245,6 +246,7 @@
     <string name="King_Gender">masculine</string>
     <string name="King_Info1">Bạn không thể giết được tôi, %s... Tôi là... bất tử...</string>
     <string name="Knuckles_Name">cặp đấm</string>
+    <string name="Kobold_Gender">masculine</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Level_TileDefault">\?\?\?</string>
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
@@ -789,6 +791,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 

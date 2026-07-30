@@ -492,6 +492,7 @@
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
     <string name="SpiderMind_Desc">تمتلك هذه العناكب الهشة ظاهريًا قوى عقلية فريدة، مما يسمح لها بالسيطرة على المستعمرة بأكملها. يستطيع العنكبوب النفسي التحكم في أي كائن حي، لكنه جبان تمامًا.</string>
     <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
+    <string name="SpiderServant_Name">جندي العنكبوت</string>
     <string name="Spinner_Name">عنكبوت الكهف</string>
     <string name="SpiritOfPain_Desc">شظية من ظلام حي.</string>
     <string name="Sprout_Info">أيقظ البذور النائمة.\nومع ذلك، يجب أن تكون هناك بعض النباتات على الأرض لكي ينجح هذا التعويذ.</string>
@@ -499,6 +500,7 @@
     <string name="StartScene_New">لعبة جديدة</string>
     <string name="StartScene_No">لا، العودة إلى القائمة الرئيسية</string>
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
+    <string name="Statue_Name">تمثال متحرك</string>
     <string name="Stench_Txt">%s نتن</string>
     <string name="Stylus_ACInscribe">نَقْش</string>
     <string name="Stylus_Info">هذا القلم السحري مصنوع من حجر داكن وصلب جداً. يمكنك به نقش رمز أو رونه، لكن القلم هو من يختار ما سينقش، ليس أنت.</string>
@@ -691,6 +693,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 
