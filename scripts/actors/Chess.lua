@@ -14,11 +14,23 @@ local y0 = 4
 local pieces = {}
 local frozenPets = {}  -- caveman: pets frozen during chess, restored when game ends.
 
--- caveman: give pets their brain back.
+-- caveman: give pets their brain back. if reload (frozenPets lost), un-freeze PASSIVE pets.
 local function restorePets()
-    for _, p in ipairs(frozenPets) do
-        if p.mob and p.mob:valid() then
-            RPD.setAi(p.mob, p.tag)
+    if #frozenPets > 0 then
+        for _, p in ipairs(frozenPets) do
+            if p.mob and p.mob:valid() then
+                RPD.setAi(p.mob, p.tag)
+            end
+        end
+    else
+        -- caveman: reload case. frozenPets Lua table gone, but Mob AI tag IS stored/restored
+        -- by the engine. scan for PASSIVE pets (frozen during chess) and un-freeze to WANDERING.
+        local iter = RPD.Dungeon.level.mobs:iterator()
+        while iter:hasNext() do
+            local mob = iter:next()
+            if mob:isPet() and mob:getState():getTag() == "PASSIVE" then
+                RPD.setAi(mob, "WANDERING")
+            end
         end
     end
     frozenPets = {}
