@@ -2086,6 +2086,7 @@ public abstract class Level implements Bundlable {
 		return defVal;
 	}
 
+	@LuaInterface
 	public String getProperty(String key, String defVal) {
 		return defVal;
 	}

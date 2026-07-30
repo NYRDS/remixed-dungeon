@@ -6,8 +6,8 @@ import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.utils.Bundle;
-
 import org.luaj.vm2.LuaTable;
+import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 /**
@@ -19,12 +19,27 @@ public class ScriptedActor extends Actor {
 	@Packable
 	public String sourceFile;
 
+	// caveman: serialized Lua state. saved/restored via bundle so scripts survive save/load.
+	@Packable
+	public String scriptData;
+
 	@Keep
 	public ScriptedActor() {
 	}
 
 	public ScriptedActor(String sSourceFile) {
 		sourceFile = sSourceFile;
+	}
+
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		// caveman: ask Lua to serialize its state before save.
+		LuaTable actor = LuaEngine.require(sourceFile);
+		var func = actor.get("serialize");
+		if (func.isfunction()) {
+			scriptData = func.call().optjstring("");
+		}
+		super.storeInBundle(bundle);
 	}
 
 	@Override
@@ -62,6 +77,7 @@ public class ScriptedActor extends Actor {
 
 	public void activate() {
 		LuaTable actor = LuaEngine.require(sourceFile);
-		actor.get("activate").call();
+		// caveman: pass saved state (scriptData) to Lua activate. empty = fresh start.
+		actor.get("activate").call(LuaValue.valueOf(scriptData != null ? scriptData : ""));
 	}
 }
