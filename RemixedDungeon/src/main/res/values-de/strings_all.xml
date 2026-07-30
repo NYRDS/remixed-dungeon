@@ -500,6 +500,7 @@ Ein blutroter Helm ist ein wesentliches Symbol eines Chaos Kriegers.</string>
     <string name="Chasm_Yes">Ja, ich weiß was ich mache.</string>
     <string name="ChristmasTurkey_Info">Die beste Art, Weihdungeon zu feiern, ist mit einem großen Bissen gebratener Truthahn. So gedenkst auch du dem Tag, als die Monster in den Dungeon einfielen, was Abenteurer und Helden aus aller Welt angelockt und somit den Tourismus und die lokale Wirtschaft gestärkt hat.</string>
     <string name="ChristmasTurkey_Name">Festlicher Truthahn</string>
+    <string name="CityBossLevel_ChessSign">Legt eure Waffen nieder — der König wird euren Verstand prüfen, nicht eure Stärke.</string>
     <string name="City_TileDescBookshelf">Mehrere Reihen Bücher aus verschiedenen Fachrichtungen füllen das Bücherregal.</string>
     <string name="City_TileDescDeco">Mehrere Bodenplatten fehlen hier.</string>
     <string name="City_TileDescEmptySP">Ein dicker Teppich bedeckt den Boden.</string>
@@ -3045,6 +3046,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

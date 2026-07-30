@@ -495,6 +495,7 @@
     <string name="Chasm_Yes">是的，我知道我在做什麼</string>
     <string name="ChristmasTurkey_Info">最好的慶祝聖誕的方式，就是來一只超大的火雞。所以呢，在這天你可以以榮耀的名義，吸引大量的冒險者來這裏探險、殺怪，同時促進這裏的旅遊業和商業的發展。</string>
     <string name="ChristmasTurkey_Name">節日火雞</string>
+    <string name="CityBossLevel_ChessSign">放下武器 — 國王將考驗你的智慧，而非武力。</string>
     <string name="City_TileDescBookshelf">不同學科的書排滿了書架。</string>
     <string name="City_TileDescDeco">這裏的地面少了幾塊地磚。</string>
     <string name="City_TileDescEmptySP">厚厚的地毯覆蓋在地面。</string>
@@ -3071,6 +3072,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

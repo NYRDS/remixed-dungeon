@@ -493,6 +493,7 @@
     <string name="Chasm_Yes">ああ、自分が何をしているかは分かっている</string>
     <string name="ChristmasTurkey_Info">ダンジョンマスを祝うには、七面鳥の丸焼きを食べるのが一番だ。モンスターがダンジョンに侵入した日を祝うためだ。その結果、世界中から信じられないほどの観光客や旅行者が集まり、この地域の経済状況は改善された。</string>
     <string name="ChristmasTurkey_Name">フェスティバルの七面鳥</string>
+    <string name="CityBossLevel_ChessSign">武器を捨てよ — 王は汝の武力ではなく、知恵を試さん。</string>
     <string name="City_TileDescBookshelf">さまざまな分野の本が本棚いっぱいに並んでいる。</string>
     <string name="City_TileDescDeco">ここにはいくつかのタイルが欠けている。</string>
     <string name="City_TileDescEmptySP">厚手のカーペットが床を覆っている。</string>
@@ -3085,6 +3086,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

@@ -496,6 +496,7 @@
     <string name="Chasm_Yes">Да, я знаю, что делаю</string>
     <string name="ChristmasTurkey_Info">Лучший способ отпраздновать \&quot;Подземьество\&quot; это съесть кусочек печённой индейки. Для того чтобы отпраздновать день, когда монстры наводнили подземелье. Что привлекло невероятное количество туристов и путешественников со всего света, улучшая экономическую ситуацию в регионе.</string>
     <string name="ChristmasTurkey_Name">праздничная индейка</string>
+    <string name="CityBossLevel_ChessSign">Покладите оружие — Король испытает ваш ум, а не силу.</string>
     <string name="City_TileDescBookshelf">Полки уставлены разнообразными учебниками.</string>
     <string name="City_TileDescDeco">Здесь недостаёт нескольких плиток.</string>
     <string name="City_TileDescEmptySP">Пол укрыт плотным ковром.</string>
@@ -3098,6 +3099,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
 
 
 

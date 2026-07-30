@@ -497,6 +497,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Chasm_Yes">Evet, ne yaptığımı biliyorum</string>
     <string name="ChristmasTurkey_Info">İyi pişmiş bir parça hindi fırın, Zindan Günü\'nü kutlamanın en iyi şekilde kutlamak için birebirdir: Canavarların zindana tasallut ettikleri ve kasabanın, dünyanın dört bir yanından sayısız turist ve seyyahın göz bebeği haline gelip ekonomik statüsünün gelişmesiyle nihayete eren o günü...</string>
     <string name="ChristmasTurkey_Name">festival hindisi</string>
+    <string name="CityBossLevel_ChessSign">Silahlarınızı bırakın — Kral zihninizi test edecek, gücünüzü değil.</string>
     <string name="City_TileDescBookshelf">Çeşitli ilimler hakkında kitaplarla dolu bir kitaplık</string>
     <string name="City_TileDescDeco">Burada birkaç fayans eksik.</string>
     <string name="City_TileDescEmptySP">İpek Bir Halı Zemini Kaplıyor</string>
@@ -3075,6 +3076,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

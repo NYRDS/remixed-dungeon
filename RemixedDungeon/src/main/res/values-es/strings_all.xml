@@ -498,6 +498,7 @@
     <string name="Chasm_Yes">Sí, se lo que estoy haciendo</string>
     <string name="ChristmasTurkey_Info">La mejor manera de celebrar las \&quot;Dungeonavidades\&quot;, es tener un buen pavo asado. Para honrar el día en que los monstruos invadieron la mazmorra, atrayendo aventureros y héroes de todo el mundo, impulsando así el turismo y beneficiando los oficios locales.</string>
     <string name="ChristmasTurkey_Name">Pavo festivo</string>
+    <string name="CityBossLevel_ChessSign">Depone las armas — el Rey pondrá a prueba tu mente, no tu fuerza.</string>
     <string name="City_TileDescBookshelf">Las filas de libros de distintas disciplinas llenan la estantería.</string>
     <string name="City_TileDescDeco">Faltan varios azulejos aquí.</string>
     <string name="City_TileDescEmptySP">Una gruesa alfombra cubre el suelo.</string>
@@ -3056,6 +3057,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

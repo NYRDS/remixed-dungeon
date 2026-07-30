@@ -351,11 +351,13 @@
     <string name="ResultDescriptions_Burning">Verbrand op niveau %d</string>
     <string name="ResultDescriptions_Immured">Ingemureerd in steen op niveau %d</string>
     <string name="ResultDescriptions_Necromancy">Uitgeput van levenskracht tijdens het proberen een lijk te animeren op niveau %d</string>
+    <string name="ResultDescriptions_Necrotism">Gestorven door Necrotisme op niveau %d</string>
     <string name="RingOfFrost_Name">Ring van de Vorst</string>
     <string name="RingOfHerbalism_Info">Deze ring vergroot je kans om dauw en zaden te verzamelen van vertrapt gras.</string>
     <string name="RingOfStoneWalking_ImmuredInStone">Je bent in steen gemetseld. Voor altijd.</string>
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
     <string name="Ring_BuffKnown">Dit is een %1$s</string>
+    <string name="Ring_Gems_0">diamant</string>
     <string name="Ring_Gems_4">amethist</string>
     <string name="Ring_Info2">Je %1$s knelt zich pijnlijk om je vinger heen</string>
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
@@ -473,6 +475,7 @@
     <string name="WandOfAvalanche_Info1">Je verpletterde jezelf met je eigen Toverstaf van Lawine...</string>
     <string name="WandOfBlink_Name">Toverstaf van Blinken</string>
     <string name="WandOfDisintegration_Info">Deze staf straalt een bundel vernietigende energie uit, die alle wezens op zijn pad doorboort. Hoe meer slachtoffers het raakt, des te meer schade het aan elk van hen toebrengt.</string>
+    <string name="WandOfFlock_Name">Toverstaf van de Kudde</string>
     <string name="WandOfIcebolt_Info1">Je hebt jezelf gedood met je eigen IJsbout...</string>
     <string name="WandOfIcebolt_Name">IJsbultstaf</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
@@ -596,6 +599,7 @@
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_charcoal_carpet_name">Tapijt</string>
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
+    <string name="town_deco_common_bed_desc">Gewoon bed.</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
     <string name="town_deco_entrance_name">ingang</string>
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
@@ -628,6 +632,10 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 

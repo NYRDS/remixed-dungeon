@@ -497,6 +497,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Chasm_Yes">Ya, aku yakin apa yang kulakukan</string>
     <string name="ChristmasTurkey_Info">Cara terbaik untuk merayakan Dungeonmas, adalah makan sepotong kalkun panggang. Untuk merayakan hari ketika monster menyerbu dungeon. Yang pada akhirnya, menarik sejumlah besar wisatawan dan pelancong dari seluruh dunia, meningkatkan situasi ekonomi di wilayah tersebut.</string>
     <string name="ChristmasTurkey_Name">ayam turki festival</string>
+    <string name="CityBossLevel_ChessSign">Letakkan senjatamu — Raja akan menguji pikiranmu, bukan kekuatanmu.</string>
     <string name="City_TileDescBookshelf">Jejeran buku-buku dari disiplin ilmu yang berbeda mengisi rak buku.</string>
     <string name="City_TileDescDeco">Beberapa ubin copot di sini.</string>
     <string name="City_TileDescEmptySP">Karpet tebal menutupi lantai.</string>
@@ -3062,6 +3063,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

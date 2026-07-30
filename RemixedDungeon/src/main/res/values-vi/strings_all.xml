@@ -553,6 +553,7 @@
     <string name="WrnExperimental_realtime">Chế độ thời gian thực đã được kích hoạt: đây giờ là một roguelike thời gian thực, nhấn nhanh hoặc chết.\nBạn muốn kiểm tra túi đồ?\nChúc may mắn với việc đó trong khi con cua rạch kiểm tra ruột gan bạn.</string>
     <string name="WrnExperimental_title">Các tùy chọn thực nghiệm đã được bật!</string>
     <string name="Yog_Gender">masculine</string>
+    <string name="YogsBrain_Desc">Bộ não của Yog-Dzewa. Nguồn gốc của mọi điều ác từng xuất hiện từ ngục dưới đất.</string>
     <string name="YogsBrain_Name_Objective">não của Yog</string>
     <string name="YogsEye_Desc">Mắt của Thần Cổ, ánh nhìn toàn kiến đầy ắp căm thù vĩnh cửu. Bạn có thể cảm thấy nó nhìn thấu qua linh hồn của mình.</string>
     <string name="Zombie_Gender">masculine</string>
@@ -576,6 +577,7 @@
     <string name="town_deco_furnace_name">Lò nung</string>
     <string name="town_deco_grandclock_desc">Một cơ chế khá cũ nhưng vẫn hoạt động.</string>
     <string name="town_deco_hay_desc">Một đống rơm nhỏ thơm thơm.</string>
+    <string name="town_deco_hay_name">Cỏ khô</string>
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
     <string name="town_deco_painting_desc">Một tác phẩm nghệ thuật đẹp đẽ.</string>
     <string name="town_deco_pathway_name">đường mòn</string>
@@ -784,6 +786,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 

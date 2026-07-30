@@ -493,6 +493,7 @@
     <string name="Chasm_Yes">Ναι, ξέρω τι κάνω</string>
     <string name="ChristmasTurkey_Info">Ο καλύτερος τρόπος εορτασμού των Κατακομβογέννων είναι με ένα κομμάτι ψητής γαλοπούλας, προς τιμήν της ημέρας που εισέβαλαν τα τέρατα στην κατακόμβη. Το γεγονός αυτό προσέλκυσε πολλούς τουρίστες και ταξιδιώτες από όλο τον κόσμο και βελτίωσε την οικονομική κατάσταση της περιοχής.</string>
     <string name="ChristmasTurkey_Name">γιορτινή γαλοπούλα</string>
+    <string name="CityBossLevel_ChessSign">Αποθέστε τα όπλα σας — ο Βασιλιάς θα δοκιμάσει το νου σας, όχι τη δύναμή σας.</string>
     <string name="City_TileDescBookshelf">Η βιβλιοθήκη είναι γεμάτη με σειρές από βιβλία διαφόρων θεματικών ενοτήτων.</string>
     <string name="City_TileDescDeco">Εδώ λείπουν αρκετά πλακάκια.</string>
     <string name="City_TileDescEmptySP">Παχύ χαλί καλύπτει το πάτωμα.</string>
@@ -3073,6 +3074,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

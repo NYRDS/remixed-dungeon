@@ -494,6 +494,7 @@
     <string name="Chasm_Yes">Oui, je sais ce que je fais</string>
     <string name="ChristmasTurkey_Info">La meilleur façon de célébrer le Donjonoël est une bonne bouchée de dinde rôtie. Vous pouvez participer, et honorer le jour où les monstres ont envahi le donjon en attirant aventuriers et héros de partout dans le monde, boostant ainsi le tourisme et profitant à toute sorte de commerces locaux.</string>
     <string name="ChristmasTurkey_Name">Dinde festive</string>
+    <string name="CityBossLevel_ChessSign">D\u00e9posez vos armes \u2014 le Roi mettra votre esprit \u00e0 l\u0027\u00e9preuve, non votre force.</string>
     <string name="City_TileDescBookshelf">Des rangs de livres sur des sujets divers remplissent la bibliothèque.</string>
     <string name="City_TileDescDeco">Il manque plusieurs briques ici.</string>
     <string name="City_TileDescEmptySP">Un épais tapis est sur le sol.</string>
@@ -3068,6 +3069,9 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
+
 
 
 

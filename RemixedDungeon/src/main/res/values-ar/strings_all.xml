@@ -82,6 +82,7 @@
     <string name="BattleAxe_Info">رأس هذه الفأس الحربية الفولاذي الضخم يمنح قوة كبيرة لكل ضربة.</string>
     <string name="Bee_Gender">masculine</string>
     <string name="BellaNPC_No">لا، ليس معك</string>
+    <string name="Belongings_CantWearBoth">لا يمكنك تجهيز %1 و %2 في نفس الوقت!</string>
     <string name="Belongings_Name">حقيبة ظهر</string>
     <string name="BishopNPC_Name_Objective">الأسقف</string>
     <string name="BlackCat_Gender">feminine</string>
@@ -105,6 +106,7 @@
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
     <string name="Bowknot_Info">شريط وردي لامع جميل مربوط بعقدة ومثبت بدبوس شعر.</string>
     <string name="Brute_Gender">masculine</string>
+    <string name="BurningFist_Name">قبضة محرقة</string>
     <string name="BurningFist_Name_Objective">قبضة مشتعلة</string>
     <string name="CagedKobold_Intro">مرحباً... مرحباً! أنت ذلك المغامر، صحيح؟ ساعدني يا صديقي، هؤلاء العسكريون الملاعين حبسوني هنا! إنهم ينوون إعادة تنشيط سلاح قديم لغزو البشر على السطح! لكن نظراً لخطورة الأمر، عارضتهم، فرموني وسجنوني في قفص! أتوسل إليك أن تجد مفتاح الزنزانة، وفي المقابل، سأساعدك بأقصى ما أستطيع.</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
@@ -159,6 +161,7 @@
     <string name="Crab_Name">سرطان المجاري</string>
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">بلورة طافية</string>
+    <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">خنجر</string>
     <string name="DarkGold_Info">يُسمى هذا المعدن \&quot;المظلم\&quot; ليس بسبب لونه (فهو لا يختلف عن الذهب العادي)، بل لأنه يذوب في ضوء النهار، مما يجعله عديم الفائدة على السطح.</string>
     <string name="DarkGold_Name">خام الذهب الداكن</string>
@@ -208,6 +211,7 @@
     <string name="FrostAuraBuff_Info">يحيط الصقيع بالجسد، مما يبطئ كل ما يقترب منه.</string>
     <string name="FrostBuff_Name">مجمد</string>
     <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
+    <string name="FrozenCarpaccio_Info3">منعش!</string>
     <string name="FrozenCarpaccio_Info4">تشعر بتحسن!</string>
     <string name="GameScene_Grass">رائحة النباتات تفوح في الهواء.</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
@@ -680,6 +684,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 

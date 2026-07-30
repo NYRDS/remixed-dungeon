@@ -501,6 +501,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Chasm_Yes">Tak, wiem co robię</string>
     <string name="ChristmasTurkey_Info">Najlepszy sposób na obchodzenie Świąt Zlochowacenia, to solidny kęs pieczonego indyka. Możesz tym uhonorować pamięć o dniu, gdy potwory zalęgły się w lochu, przyciągając tym samym rzeszę turystów i podróżników z całego świata, co w końcowym rozrachunku znacząco poprawiło sytuację ekonomiczną regionu.</string>
     <string name="ChristmasTurkey_Name">świąteczny indyk</string>
+    <string name="CityBossLevel_ChessSign">Złóżcie broń — Król postawi wasz umysł na próbie, a nie waszą siłę.</string>
     <string name="City_TileDescBookshelf">Rzędy książek poświęconych różnym dziedzinom zapełniają regały biblioteczki.</string>
     <string name="City_TileDescDeco">Na tej ścianie brakuje kilku kafelków.</string>
     <string name="City_TileDescEmptySP">Gruby dywan pokrywa podłogę.</string>
@@ -3081,6 +3082,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

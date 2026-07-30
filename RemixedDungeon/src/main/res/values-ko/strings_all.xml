@@ -487,6 +487,7 @@
     <string name="Chasm_Yes">네, 내가 뭘 하려는지 잘 알고 있습니다.</string>
     <string name="ChristmasTurkey_Info">던전에 몬스터가 침공했기 때문에 전세계의 모험가와 영웅을 끌어들여서 관광사업을 촉진하고 지역 상업에 이득을 준 날을 기념하는 던전마스를 축하하기 위한 가장 좋은 방법은 구운 칠면조를 먹는 것입니다. 당신도 가능합니다.  </string>
     <string name="ChristmasTurkey_Name">축제 칠면조</string>
+    <string name="CityBossLevel_ChessSign">무기를 내려놓으시오 — 왕은 그대의 힘이 아닌 지혜를 시험할 것이오.</string>
     <string name="City_TileDescBookshelf">다양한 학문과 관련된 책들이 책장을 채우고 있다.</string>
     <string name="City_TileDescDeco">몇몇 타일이 사라지고 없다.</string>
     <string name="City_TileDescEmptySP">두터운 카펫이 복도를 덮고 있다.</string>
@@ -3057,6 +3058,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

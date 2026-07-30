@@ -494,6 +494,7 @@
     <string name="Chasm_Yes">Ya, Saya tahu apa yang perlu dibuat</string>
     <string name="ChristmasTurkey_Info">Cara terbaik meraikan Dungeonmas, ialah makan ayam belanda panggang. Supaya anda dapat menghormati hari kedatangan raksaksa ke kurungan bawah tanah, menarik minat para pengembara dan adiwira dari serata dunia, seterusnya menggalakkan industri perlancongan dan memberi manafaat kepada semua jenis peniaga tempatan.</string>
     <string name="ChristmasTurkey_Name">ayam belanda perayaan</string>
+    <string name="CityBossLevel_ChessSign">Letakkan senjatamu — Raja akan menguji fikiranmu, bukan kekuatanmu.</string>
     <string name="City_TileDescBookshelf">Barisan buku dalam pelbagai bidang ilmu memenuhi rak buku.</string>
     <string name="City_TileDescDeco">Beberapa jubin tidak kelihatan di sini.</string>
     <string name="City_TileDescEmptySP">Permaidani tebal ini menutupi keseluruhan lantai.</string>
@@ -3027,6 +3028,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

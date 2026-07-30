@@ -175,6 +175,7 @@
     <string name="DwarfToken_Info">גמדים רבים וכמה מהיצירות הגדולות יותר שלהם נושאים את חתיכות המתכת הקטנות האלה של מטרה לא ידועה. אולי הן תכשיטים או איזשהו תעודת זהות. גמדים הם אנשים מוזרים.</string>
     <string name="EarthElemental_Desc">אלמנטלי אדמה הם גושי אדמה המונעים על ידי כוחות טבע מרוכזים.</string>
     <string name="ElvenDagger_Name">פגיון אלפים</string>
+    <string name="EncumbranceBuff_Name">עול</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EquipableItem_ACUnequip">לְהַסִיר</string>
     <string name="ExplodingSkull_Desc">גולגולת צפה ובוערת זו נראית שבירה ביותר, ונראית כאילו היא עומדת להתפרק לרסיסים בכל רגע.</string>
@@ -201,6 +202,7 @@
     <string name="Ghost_Defense">התחמק</string>
     <string name="Ghost_Name_Objective">רוח</string>
     <string name="Ghost_Rat1">שלום הרפתקן... פעם הייתי כמוך - חזק ובטוח... ועכשיו אני מת... אבל אני לא יכול לעזוב את המקום הזה... לא עד שאנקום... הרוג את _העכברוש המסריח_, שלקח את חיי...</string>
+    <string name="Ghost_Rose2">בבקשה... תעזור לי... למצוא את הוורד...</string>
     <string name="Glaive_Name">גלייב</string>
     <string name="GnollCostume_Name">תחפושת גנול</string>
     <string name="Gnoll_Desc">גנולים הם דמויי צבועים. הם שוכנים בביובים ובמבוכים, ויוצאים לפשוט על פני השטח מדי פעם. סיירי הגנולים הם חברים רגילים בלהקה, הם לא חזקים כמו בריונים ולא חכמים כמו שאמאנים.</string>
@@ -429,6 +431,7 @@
     <string name="ScrollOfWeaponUpgrade_Info">גלילה זו תשדרג נשק קרבי, ותשפר את איכותו. בניגוד לגלילת שדרוג רגילה, גרסה מיוחדת זו לעולם לא תהרוס קסם על נשק. נהפוך הוא, היא מסוגלת להעניק קסם אקראי לנשק לא מקסום.</string>
     <string name="Scroll_Info">המגילה הזו מכוסה בכתב בלתי ניתן לפענוח, ונושאת כותרת של רונה %s. מי יודע מה יקרה כשיקראו אותה בקול רם?</string>
     <string name="Scroll_Runes_10">אודל</string>
+    <string name="Senior_Desc">הנזירים הללו הם קנאים, שהקדישו את עצמם להגנה על סודות עירם מפני כל זר. הם אינם משתמשים בשום שריון או כלי נשק, ומסתמכים אך ורק על אומנות הלחימה בידיים חשופות. נזיר זה השתלט על אומנות נטרול יריביו.</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">מלצרית פונדק</string>
     <string name="ServantNPC_Name_Objective">מלצרית פונדק</string>
@@ -508,6 +511,7 @@
     <string name="WandOfMagicMissile_Info">שרביט זה משגר טילים של אנרגיה קסומה טהורה, וגורם נזק בינוני למטרה.</string>
     <string name="WandOfPoison_Name">שרביט רעל</string>
     <string name="WandOfShadowbolt_Info">שרביט זה פולט אנרגיה אפלה וזדונית.</string>
+    <string name="WandOfTeleportation_Info1">%1 שיגר את %2 למקום כלשהו</string>
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
     <string name="Wand_ACZap">זַאפּ</string>
     <string name="Wand_Fizzles">השרביט שלך מפצפץ; כנראה נגמרו המטענים שלו עכשיו</string>
@@ -635,6 +639,10 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 

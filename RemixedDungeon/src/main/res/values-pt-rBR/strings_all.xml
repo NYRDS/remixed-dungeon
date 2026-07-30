@@ -493,6 +493,7 @@
     <string name="Chasm_Yes">Sim, eu sei o que estou fazendo</string>
     <string name="ChristmasTurkey_Info">A melhor maneira de celebrar o Dungeonatal, é com um belo peru assado. Assim, você pode homenagear o dia em que monstros invadiram o calabouço, atraindo aventureiros e heróis do mundo todo, aumentando o turismo e beneficiando comércios locais.</string>
     <string name="ChristmasTurkey_Name">Perú festivo</string>
+    <string name="CityBossLevel_ChessSign">Depositem as armas — o Rei testará vossa mente, não vossa força.</string>
     <string name="City_TileDescBookshelf">Fileiras de livros de diferentes assuntos preenchem a estante.</string>
     <string name="City_TileDescDeco">Vários azulejos estão faltando aqui.</string>
     <string name="City_TileDescEmptySP">O tapete grosso cobre o chão.</string>
@@ -3065,6 +3066,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

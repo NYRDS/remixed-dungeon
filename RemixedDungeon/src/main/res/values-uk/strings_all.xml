@@ -507,6 +507,7 @@
     <string name="Chasm_Yes">Так, я знаю що роблю.</string>
     <string name="ChristmasTurkey_Info">Найкращий варіант відсвяткувати Підземство, це добрий шматок запеченої індички. Таким чином, можете відсвяткувати той день, коли монстри заполонили підземелля, приманюючи героїв зі всього світу. Що, в свою чергу, призвело до розвитку туризму та підвищенню товарообігу у місцевих торговців.</string>
     <string name="ChristmasTurkey_Name">святкова індичка</string>
+    <string name="CityBossLevel_ChessSign">Покладіть зброю — Король випробує ваш розум, а не вашу силу.</string>
     <string name="City_TileDescBookshelf">Полки заповнені різноманітними книгами.</string>
     <string name="City_TileDescDeco">Тут не вистачає кількох плиток.</string>
     <string name="City_TileDescEmptySP">Підлогу вкрито щільним килимом.</string>
@@ -3082,6 +3083,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
