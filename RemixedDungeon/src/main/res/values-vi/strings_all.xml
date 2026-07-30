@@ -252,6 +252,7 @@
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
     <string name="Level_TileWater">Nước</string>
     <string name="Level_TileWell">Giếng</string>
+    <string name="LibrarianNPC_Message_Not_Ready">T... Tôi xin lỗi, th-thư viện chưa mở... đợi chút.</string>
     <string name="LibrarianNPC_Name_Objective">thủ thư</string>
     <string name="LightBuff_Info">Ánh sáng phát ra từ cơ thể, soi sáng mọi thứ xung quanh.</string>
     <string name="LightningTrap_Name">bẫy sét</string>
@@ -264,6 +265,7 @@
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
     <string name="MeleeWeapon_Info1c">nâng cấp</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
+    <string name="MeleeWeapon_Info3d">và</string>
     <string name="MeleeWeapon_Info3g">kém chính xác</string>
     <string name="MercenaryNPC_Name">lính thuê</string>
     <string name="MimicPie_Desc">Mimics là những sinh vật phép thuật có thể biến hình thành bất kỳ hình dạng nào chúng muốn. Con này trông như một chiếc bánh ngon to lớn.</string>
@@ -401,6 +403,7 @@
     <string name="SlowBuff_Name">Làm chậm</string>
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
     <string name="Snail_Desc">Con ốc sên nhỏ này đã lớn khá nhanh nhờ ăn rác thải, nhưng nó vẫn rất chậm, khiến nó trở thành kẻ địch dễ dàng.</string>
+    <string name="SociologistNPC_Name">Nhà xã hội học</string>
     <string name="SoulShard_Info">Đây là một mảnh vỡ lấy từ tàn tích của Hũ Linh Hồn. Nó lấp lánh với sức mạnh bí ẩn, có lẽ có ai đó quan tâm đến thứ như thế này.</string>
     <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
@@ -498,6 +501,7 @@
     <string name="WndInfoItem_Remains">Đây là tất cả những gì còn lại từ một trong những người đi trước bạn. Có thể đáng để kiểm tra xem có vật phẩm quý nào không.</string>
     <string name="WndInstallingMod_please_wait">Đang cài đặt mod, vui lòng đợi...</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Thực hiện công thức</string>
+    <string name="WndItemAlchemy_Transmute">Chuyển hóa</string>
     <string name="WndJournal_Levels">Cấp độ</string>
     <string name="WndJournal_Title">Nhật Ký</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
@@ -515,6 +519,7 @@
     <string name="WndPremiumSettings_notAvailbale">Tùy chọn này chưa có sẵn</string>
     <string name="WndPremiumSettings_ruby">hồng ngọc</string>
     <string name="WndPremiumSettings_std">tiêu chuẩn</string>
+    <string name="WndPriest_Instruction_f">Chào con gái của ta, chào mừng đến với nhà thờ thánh của Santa Thần Sâu vĩ đại! Rất tiếc ta không thể cho con đi qua lúc này, vì tòa nhà đang được tu sửa, nhưng nếu con cần giúp đỡ, ta có thể cung cấp dịch vụ chữa lành và thức ăn chỉ với %d vàng!</string>
     <string name="WndPriest_Title">Linh mục thị trấn</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
     <string name="WndRanking_StaStr">Sức mạnh</string>
@@ -779,6 +784,13 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
+
+
+
+
 
 
 

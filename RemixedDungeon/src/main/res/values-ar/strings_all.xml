@@ -106,6 +106,7 @@
     <string name="Bowknot_Info">شريط وردي لامع جميل مربوط بعقدة ومثبت بدبوس شعر.</string>
     <string name="Brute_Gender">masculine</string>
     <string name="BurningFist_Name_Objective">قبضة مشتعلة</string>
+    <string name="CagedKobold_Intro">مرحباً... مرحباً! أنت ذلك المغامر، صحيح؟ ساعدني يا صديقي، هؤلاء العسكريون الملاعين حبسوني هنا! إنهم ينوون إعادة تنشيط سلاح قديم لغزو البشر على السطح! لكن نظراً لخطورة الأمر، عارضتهم، فرموني وسجنوني في قفص! أتوسل إليك أن تجد مفتاح الزنزانة، وفي المقابل، سأساعدك بأقصى ما أستطيع.</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
@@ -287,6 +288,7 @@
     <string name="Journal_Caged_Kobold">كوبولد مسجون</string>
     <string name="Journal_WellHealt">بئر الصحة</string>
     <string name="Keyring_Name">حلقة المفاتيح</string>
+    <string name="KindOfWeapon_EquipCursed">تتقلص عيناك بينما تشتد قبضتك اللاإرادية على %s</string>
     <string name="King_Desc">كان آخر ملوك الأقزام معروفاً بفهمه العميق لعمليات الحياة والموت. لقد أقنع أعضاء بلاطه بالمشاركة في طقس كان من المفترض أن يمنحهم الشباب الأبدي. في النهاية كان هو الوحيد الذي حصل عليه - وجيش من الموتى الأحياء كمكافأة إضافية.</string>
     <string name="King_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">قتلتك سهم الجليد لـ %s...</string>
@@ -317,6 +319,7 @@
     <string name="MailArmor_Name">درع حلقي</string>
     <string name="MeleeWeapon_Info1c">مُطوَّر</string>
     <string name="MeleeWeapon_Info2a">متوسط ضرره %d نقطة لكل ضربة.</string>
+    <string name="MeleeWeapon_Info3d">و</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
     <string name="MeleeWeapon_Info6b">بسبب قوتك الزائدة، تم زيادة ضرر هجومك بهذا %s.</string>
     <string name="MeleeWeapon_Info7c">يمكنك الشعور بسحر شرير يكمن داخل %s.</string>
@@ -345,6 +348,7 @@
     <string name="PetInventory_PetBackpackFull">حقيبة الحيوان الأليف ممتلئة</string>
     <string name="PetInventory_TakeN">خذ %d</string>
     <string name="Pickaxe_InsufficientStr">قوة غير كافية للتعدين!</string>
+    <string name="Pickaxe_Name">كريكة</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="PlagueDoctorMaskHood_Name">قناع طبيب الطاعون مع غطاء رأس</string>
     <string name="PlagueDoctorNPC_After_Quest">سأريهم، سأريهم جميعاً!</string>
@@ -365,6 +369,7 @@
     <string name="PotionBelt_Name">حزام جرعات</string>
     <string name="PotionOfHealing_Apply">تشفى جراحك تماماً.</string>
     <string name="PotionOfMana_Name">إكسير المانا</string>
+    <string name="PotionOfMight_StaApply">+1 قوة، +5 صحة</string>
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
     <string name="PotionOfPurity_Info">سيعمل هذا الترياق بسرعة على تحييد جميع الغازات الضارة في نطاق التأثير. شربه سيمنحك مناعة مؤقتة ضد هذه الغازات.</string>
     <string name="PotionOfStrength_Name">جرعة القوة</string>
@@ -380,6 +385,7 @@
     <string name="Potion_Shatter">تنكسر القارورة وينثر %s السائل بلا ضرر</string>
     <string name="Potion_SureThrow">هل أنت متأكد أنك تريد رميه؟ في معظم الحالات، من المنطقي شربه.</string>
     <string name="Potion_Yes">نعم، أعرف ما أفعل</string>
+    <string name="Prison_TileWater">ماء مظلم بارد.</string>
     <string name="PseudoPasty_Info">هذا فطيرة كورنيش أصلية مع حشوة تقليدية من اللحم والبطاطس.</string>
     <string name="PseudoRat_Name">فأر كاذب</string>
     <string name="PseudoRat_Name_Objective">فأر كاذب</string>
@@ -431,6 +437,7 @@
     <string name="ScrollHolder_Info">يمكنك وضع أي عدد من اللفائف في هذه الحاوية الأنبوبية. يوفر مساحة في حقيبتك ويحمي اللفائف من النار.</string>
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
+    <string name="ScrollOfLullaby_Info1">يتلو اللفافة لحناً هادئاً.</string>
     <string name="ScrollOfUpgrade_LooksBetter">أصبح %s بالتأكيد يبدو أفضل الآن</string>
     <string name="ScrollOfUpgrade_Name">مخطوطة ترقية</string>
     <string name="ScrollOfWeaponUpgrade_Info">سيؤدي هذا المخطوطة إلى ترقية سلاح قتال قريب، مما يحسن جودته. على عكس مخطوطة الترقية العادية، لن يدمر هذا الإصدار المتخصص أي سحر على السلاح. بل على العكس، قادر على إضفاء سحر عشوائي على سلاح غير مسحور.</string>
@@ -462,6 +469,7 @@
     <string name="ShortSword_Name">سيف قصير</string>
     <string name="Skeleton_Killed">قُتلت بانفجار العظام...</string>
     <string name="Skeleton_Name">هيكل عظمي</string>
+    <string name="Slow_Name_1">مُثَلّج %s</string>
     <string name="SmashSpell_NeedWeapon">أحتاج إلى سلاح لهذه الحركة.</string>
     <string name="SociologistNPC_Desc">هذا العالِم الاجتماعي في رحلة مقدسة لجمع الآراء العامة</string>
     <string name="SociologistNPC_InternetRequired">عذراً، لكن دون الوصول إلى الإنترنت لا يمكنك المشاركة في استطلاعنا</string>
@@ -597,6 +605,7 @@
     <string name="WndSettings_Quickslots">فتحات الوصول السريع</string>
     <string name="WndSettings_SelectLanguage">اختر اللغة</string>
     <string name="WndSettings_Sound">المؤثرات الصوتية</string>
+    <string name="WndSettings_UiScale">مقياس واجهة المستخدم</string>
     <string name="WndSettings_ZoomIn">+</string>
     <string name="WndStory_Halls">في الماضي كانت هذه المستويات تعتبر ضواحي المتروبوليس. انتصار الحرب ضد الإله القديم كلف الأقزام ثمناً باهظاً، وكانوا غير قادرين على تطهير المنطقة من الشياطين المتبقية. تدريجياً سيطر الشياطين على هذا المكان والآن يُدعى قاعات الشياطين.\n\nقليل جداً من المغامرين نزلوا إلى هذا العمق...</string>
     <string name="WndStory_Prision">منذ سنوات عديدة، تم بناء سجن تحت الأرض هنا لأخطر المجرمين. في ذلك الوقت، بدت فكرة ذكية لأن هذا المكان كان صعب الهروب منه حقًا. لكن سرعان ما بدأت أبخرة داكنة بالتسرب من الأسفل، مما أصاب السجناء والحراس بالجنون. في النهاية، تم التخلي عن السجن، تاركين بعض السجناء محبوسين هنا.</string>
@@ -671,6 +680,19 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

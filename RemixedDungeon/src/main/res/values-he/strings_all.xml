@@ -83,6 +83,7 @@
     <string name="BurningFist_Name">אגרוף בוער</string>
     <string name="BurningFist_Name_Objective">אגרוף בוער</string>
     <string name="CagedKobold_Desc">קובולד, בכלוב.</string>
+    <string name="CagedKobold_Intro">היי... היי! אתה אותו הרפתקן, נכון? תעזור לי, חבר, הצבאיים הארורים האלה נעלו אותי פה! הם מתכוונים להפעיל מחדש נשק עתיק כדי לכבוש את בני האדם על פני השטח! אבל בהתחשב בכמה שזה מסוכן, התנגדתי, אז הם פשוט זרקו אותי ונעלו אותי בכלוב! אני מתחנן שתמצא את המפתח לתא, ובתמורה, אעזור לך כמיטב יכולתי.</string>
     <string name="CagedKobold_Message1">בבקשה...</string>
     <string name="CagedKobold_Quest_End">אוי, תודה לך, תודה רבה! איך הצלחת למצוא את המפתח? אתה... אתה השמדת את הנשק?! זה מדהים! אתה יודע מה, אמרתי שאעזור לך, ואני חושב שאני יודע את הדרך הטובה ביותר. אני אשאר איתך לזמן מה. * הקובולד הכלוא הפך לנר</string>
     <string name="CandleOfMindVision_Info">נראה כמו נר רגיל, לא משהו שהיית מצפה למצוא בצינוק מסוכן. מוזר שזה די חם למגע, למרות שזה עדיין לא הודלק.</string>
@@ -237,6 +238,7 @@
     <string name="HeroSubClass_NameFreR">רץ חופשי</string>
     <string name="HeroSubClass_NameGuardian">שומר</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
+    <string name="HeroSubClass_NameWard">שומרת</string>
     <string name="Hero_Name_Objective">אותך</string>
     <string name="Hero_StaBurning">אתה נדלקת!</string>
     <string name="Hero_StaCripple">אתה נכה!</string>
@@ -302,6 +304,7 @@
     <string name="MeleeWeapon_Info1b"> </string>
     <string name="MeleeWeapon_Info1c">משופר</string>
     <string name="MeleeWeapon_Info1d">מוחלש</string>
+    <string name="MeleeWeapon_Info3d">ו</string>
     <string name="MeleeWeapon_Info5">זה מכושף.</string>
     <string name="MimicAmulet_Name">מימיק</string>
     <string name="MimicPie_Gender">masculine</string>
@@ -337,6 +340,7 @@
     <string name="Pasty_Name_Objective">מאפה בשר</string>
     <string name="PetInventory_ACTakeFromPet">קח מהחיה</string>
     <string name="PetInventory_TooFar">רחוק מדי מחיית המחמד</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Piercing_Name_0">חודר %s</string>
     <string name="Piercing_Name_1">חודר %s</string>
     <string name="Piercing_Name_2">חודרת %s</string>
@@ -372,6 +376,7 @@
     <string name="Potion_SureThrow">האם אתה בטוח שאתה רוצה לזרוק את זה? ברוב המקרים הגיוני לשתות את זה.</string>
     <string name="Potion_Yes">כן</string>
     <string name="Prison_TileDescDeco">יש כתמי דם ישנים על הרצפה.</string>
+    <string name="Prison_TileWater">מים כהים וקרים.</string>
     <string name="PseudoPasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
     <string name="PseudoPasty_Name">מאפה בשר</string>
     <string name="PseudoRat_Gender">feminine</string>
@@ -421,6 +426,7 @@
     <string name="ScrollOfTeleportation_NoTeleport">אאורה קסומה חזקה של המקום הזה מונעת ממך לטלפורט!</string>
     <string name="ScrollOfTeleportation_Teleport2">בהרף עין %s טלפורטו למיקום אחר ברמה.</string>
     <string name="ScrollOfUpgrade_Name">מגילת שדרוג</string>
+    <string name="ScrollOfWeaponUpgrade_Info">גלילה זו תשדרג נשק קרבי, ותשפר את איכותו. בניגוד לגלילת שדרוג רגילה, גרסה מיוחדת זו לעולם לא תהרוס קסם על נשק. נהפוך הוא, היא מסוגלת להעניק קסם אקראי לנשק לא מקסום.</string>
     <string name="Scroll_Info">המגילה הזו מכוסה בכתב בלתי ניתן לפענוח, ונושאת כותרת של רונה %s. מי יודע מה יקרה כשיקראו אותה בקול רם?</string>
     <string name="Scroll_Runes_10">אודל</string>
     <string name="ServantNPC_Gender">feminine</string>
@@ -442,6 +448,7 @@
     <string name="Skeleton_Name">שלד</string>
     <string name="SlowBuff_Name">מואט</string>
     <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
+    <string name="SociologistNPC_Name">סוציולוג</string>
     <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderArmor_Info">השריון הזה עשוי מכיטין ישן של עכביש וסוג כלשהו של בד. הכי מפתיע, נראה שהוא עדיין מכיל בלוטות עכביש מתפקדות. אם תלחץ על הלוחות מספיק חזק, הם יורים רשת. וסוליות מחורצות מאפשרות לך לנוע בחופשיות על רשת כזו.</string>
     <string name="SpiderEgg_Desc">הביצה השברירית הזו פועמת לרגע, ובפנים ניתן לראות משהו עם הרבה רגליים.</string>
@@ -532,6 +539,7 @@
     <string name="WndInfoItem_Remains">זה כל מה שנותר מאחד מקודמיך. אולי כדאי לבדוק אם יש שם חפצים יקרי ערך.</string>
     <string name="WndInstallingMod_skipping_file">מדלג על %s</string>
     <string name="WndItemAlchemy_Title">מתכוני אלכימיה עם %s</string>
+    <string name="WndItemAlchemy_Transmute">התמרה</string>
     <string name="WndJournal_Levels">רמות</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
     <string name="WndLibrary_Catalogue_Title">ספרייה</string>
@@ -567,6 +575,7 @@
     <string name="WndSettings_Quickslots">חריצי גישה מהירה</string>
     <string name="WndSettings_RecordVideo">הקלטת וידאו</string>
     <string name="WndSettings_SelectLanguage">בחר שפה</string>
+    <string name="WndSettings_UiScale">קנה מידה של ממשק המשתמש</string>
     <string name="WndStory_Prision">לפני שנים רבות נבנה כאן כלא תת-קרקעי עבור הפושעים המסוכנים ביותר. בזמנו זה נראה רעיון חכם מאוד, כי המקום הזה אכן היה קשה מאוד לבריחה. אבל עד מהרה מיאזמה אפלה החלה לחלחל מלמטה, מטריפה את דעתם של אסירים ושומרים כאחד. בסופו של דבר הכלא ננטש, אף שכמה אסירים נותרו נעולים כאן.</string>
     <string name="WndTilesKind_text">אתה עומד להיכנס לצינוק שנכבש על ידי קסם מעוות, אך כעת תוכל לבחור כיצד תראה אותו:\n האם אתה מעדיף מראה פסאודו-3D מודרני או תצוגה שטוחה קלאסית?\nתוכל לשנות זאת מאוחר יותר בתפריט אפשרויות המשחק.</string>
     <string name="WndTradeItem_Bought">רכשת את %1 תמורת %2</string>
@@ -626,6 +635,18 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
