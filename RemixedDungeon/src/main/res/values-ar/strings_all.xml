@@ -55,6 +55,7 @@
     <string name="Badges_AllScrolls">تم التعرف على جميع اللفائف</string>
     <string name="Badges_AllWands">تم التعرف على جميع العصي</string>
     <string name="Badges_BossSlain1">تم القضاء على الغو</string>
+    <string name="Badges_BossSlain1All">تم القضاء على الغو بواسطة جميع الفئات</string>
     <string name="Badges_DeathNecrotism">الموت من التنخر</string>
     <string name="Badges_GamesPlayed1">10 مباريات لُعبت</string>
     <string name="Badges_GamesPlayed2">تم لعب 100 لعبة</string>
@@ -149,7 +150,9 @@
     <string name="ChristmasTurkey_Name">ديك رومي احتفالي</string>
     <string name="City_TileDescDeco">يفتقر هذا المكان لعدة بلاط.</string>
     <string name="City_TileDescEntrance">منحدر يؤدي إلى العمق العلوي.</string>
+    <string name="Claymore_Gender">masculine</string>
     <string name="CloakSpell_Name">العباءة</string>
+    <string name="Codex_Story_12">سلاح مشتعل - عند ضربة ناجحة، يلحق ضررًا إضافيًا بالهدف وقد يحرقه.</string>
     <string name="Codex_Story_16">سلاح محظوظ - يتجاهل درع العدو تقريباً بالكامل، ويسبب ضرراً أكبر بكثير.</string>
     <string name="Codex_Story_22">هذا الكتاب مكتوب بلغة الشياطين</string>
     <string name="Codex_Story_23">هذا الكتاب مكتوب بلغة الأقزام</string>
@@ -191,6 +194,7 @@
     <string name="Dungeon_Tips_4">احذر من الغو!</string>
     <string name="Dungeon_Tips_5">بِكسل-مارت - كل ما تحتاجه لمغامرة ناجحة!</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
+    <string name="EarthElemental_Gender">masculine</string>
     <string name="Earthroot_Desc">عندما يلمس مخلوق جذر الأرض، تخلق جذوره نوعًا من الدروع الطبيعية حوله.</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Name">خنجر الجان</string>
@@ -330,6 +334,7 @@
     <string name="MimicPie_Desc">الميماكس كائنات سحرية يمكنها اتخاذ أي شكل تريده. هذا يشبه فطيرة كبيرة ولذيذة.</string>
     <string name="MimicPie_Name">ميميكي</string>
     <string name="MimicPie_Name_Objective">ميميكي</string>
+    <string name="MirrorImage_Name">ثنائي</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
     <string name="MissileWeapon_Yes">نعم، أنا أعلم ما أفعله</string>
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
@@ -342,6 +347,7 @@
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">آه! يا له من منظر نادر! زميل مغامر ليس مجرد جثة بلا حياة! لا يكاد يصدق! أوه... أعتذر، أحياناً أشعر بالحماس الشديد. ترى، أنا نِكْرومانسي (ساحر الموتى). وعلى الرغم من أن دراسة الموتى والموت نفسه هو مهنتي، إلا أن رؤية نفس الأشياء مراراً وتكراراً تصبح مرهقة للغاية في النهاية. من ناحية أخرى، هذا هو السبب بالضبط في وجودي هنا. وفقاً لحساباتي، في غضون أسابيع قليلة، في مكان ما في هذا الزنزانة بالذات، سيحدث شيء مذهل. الـ _نِكْرُوبُولِس_ (المقبرة القديمة)، مدينة الموتى القديمة، ستفتح أبوابها. و... لا يمكنني حقاً قول الكثير، لقد أضعت وقتاً كافياً كما هو الحال. أنا بحاجة للاستعداد، _عد لاحقاً_.</string>
     <string name="NecromancerNPC_Message2">يجب أن أكون جاهزاً.</string>
+    <string name="NecromancerRobe_Info2">هذا رداء مشبع بالسحر الأسود يسمح للنكرومانسر بأكل أرواح الوحوش المنهزمة.</string>
     <string name="Necromancy_SummonDeathlingName">استدعاء سمرتة</string>
     <string name="Ooze_Death">%s يبتلعك...</string>
     <string name="Order_Info">بركّزك المناسب، أوامرك شبه لا تُرفض.</string>
@@ -355,6 +361,7 @@
     <string name="Pickaxe_Name">كريكة</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="PlagueDoctorMaskHood_Name">قناع طبيب الطاعون مع غطاء رأس</string>
+    <string name="PlagueDoctorMask_Info">هذه... هذه ليست مجرد قناع. إنها... حاجز. درع ضد قوى التحلل التي يحاربها طبيب الطاعون بلا كلل. صُنعت من أجود خشب الأبنوس، منحوتة بدقة بجمجمة نهمة. محاجر عينيها المجوفة مملوءة بالأحجار الكريمة الأرجوانية التي تنبض بخفة، مثل الجمر المحتضر. كل نفس تأخذه، كل كلمة تنطقها، تمر عبر شبكة متاهة من الأنابيب والفلاتر. مزيج من الأعشاب القوية والتوابل الغريبة يعطر الهواء بداخله، يخفي رائحة الموت التي تلتصق بك كالكفن.</string>
     <string name="PlagueDoctorNPC_After_Quest">سأريهم، سأريهم جميعاً!</string>
     <string name="PlagueDoctorNPC_Desc">جسد هذا الشخص الحدباء بأكمله مخفي تحت بذلة جلدية. كما تفوح منه رائحة مرّة من الأدوية و... الثوم؟</string>
     <string name="PlagueDoctorNPC_Name_Objective">طبيب الطاعون</string>
@@ -684,6 +691,13 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
 
 
 

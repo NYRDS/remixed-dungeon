@@ -133,6 +133,7 @@
     <string name="CloakBuff_Info">Een donkere mantel verhult je in de schaduw, waardoor je minder zichtbaar bent voor vijanden.</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
+    <string name="Codex_Story_12">Brandid wapen - Bij een succesvolle treffer geeft dit extra schade en kan het doel in brand steken.</string>
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
     <string name="ColdSpirit_Desc">De koude geest is de uitvlucht van vorst, in zijn zuiverste vorm. Als een gedachtenloze klomp magische energie gehoorzaamt hij de wil van de magiër die hem oproept, of handelt volgens basisinstincten.</string>
@@ -232,6 +233,7 @@
     <string name="Imp_Golems2">Hoe gaat het met je golem-safari?</string>
     <string name="Imp_Monks1">Ben je een avonturier? Ik hou van avonturiers! Je kunt altijd op hen rekenen als er iets gedood moet worden. Heb ik gelijk? Voor een beloning, natuurlijk ;)\nIn mijn geval zijn het _monken_ die gedood moeten worden. Je ziet, ik wil hier een klein zakje beginnen, maar deze gekken kopen zelf niets en schrikken andere klanten weg. Dus alsjeblieft, dood... laten we zeggen _8 van hen_ en de beloning is van jou.</string>
     <string name="InnKeeperNPC_Name_Objective">herbergier</string>
+    <string name="InnServant_Phrase_1">Bah, nog zoveel te doen!</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
     <string name="InventoryScroll_No">Nee, ik heb mijn keuze veranderd</string>
@@ -418,6 +420,7 @@
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
     <string name="SpiderExploding_Desc">Harde werkers tijdens vredige tijden, deze wezens zullen niet aarzelen om hun vijanden aan te vallen en de eerste plant die ze tegenkomen te grijpen, waardoor ze zichzelf in lopende bommen veranderen.</string>
     <string name="SpiderMindAmber_Name">Amber Spinnewijs</string>
+    <string name="SpiderMind_Name">Psi-Spin</string>
     <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
     <string name="SpiritOfPain_Desc">Een splinter van levende duisternis.</string>
@@ -557,6 +560,7 @@
     <string name="WndSadGhostNecro_Text">Deze geest lijkt te worstelen met zijn vloek. Het lijkt alsof hij me om iets wil vragen. Met behulp van necromantie, kon ik hem ervan overtuigen dat de vraag vervuld is. Het zal me tijd besparen. Maar is het de moeite waard?</string>
     <string name="WndSadGhostNecro_Yes">Ja, dwing je wil op</string>
     <string name="WndSadGhost_Wepon">Geest zijn wapen</string>
+    <string name="WndSaveSlotSelect_Delete_Title">Weet je zeker dat je deze opslagstatus wilt verwijderen?</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Klik hier om deel te nemen aan het Remixed Dungeon vertaalteam</string>
     <string name="WndSettings_ExperementalFont">Nieuw lettertype</string>
     <string name="WndSettings_FpsLimit">FPS-limiet</string>
@@ -632,6 +636,10 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 

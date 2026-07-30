@@ -136,6 +136,7 @@
     <string name="CloakSpell_Name">גלימה</string>
     <string name="ClothArmor_Desc">השריון הקל הזה מציע הגנה בסיסית.</string>
     <string name="ClothArmor_Name">שריון בד</string>
+    <string name="Codex_Story_12">נשק בוער - בפגיעה מוצלחת, גורם נזק נוסף למטרה ועלול לשרוף אותה.</string>
     <string name="Codex_Story_16">נשק בר מזל - כמעט מתעלם לחלוטין משריון האויב, וגורם להרבה יותר נזק.</string>
     <string name="Codex_Story_17">נשק מהמם - במכה מוצלחת, עלול לשתק את המטרה.</string>
     <string name="Codex_Story_22">ספר זה כתוב בשפה של שדים</string>
@@ -215,6 +216,7 @@
     <string name="Guts_TileDescExit">חור פעור ברצפה מוביל מטה למפלסים התחתונים</string>
     <string name="Guts_TileGrass">שיח מיובש</string>
     <string name="Halberd_Info">כידון המורכב מגרזן על קצה מוט.</string>
+    <string name="Halls_TileDescBookshelf">ספרים בשפות עתיקות בוערים במדף הספרים.</string>
     <string name="Halls_TileStatue">עמוד</string>
     <string name="Heal_Cast">%s נרפא.</string>
     <string name="HeartOfDarkness_Name">לב החושך</string>
@@ -263,6 +265,7 @@
     <string name="Ignite_Name">הצתה</string>
     <string name="ImpShopkeeper_Name">אימפ שאפתן</string>
     <string name="Imp_Cya">נתראה, %s!</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
     <string name="InnKeeperNPC_Name_Objective">בעל הפונדק</string>
     <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
     <string name="InterLevelScene_Loading">נטען...</string>
@@ -299,6 +302,7 @@
     <string name="Longsword_Gender">masculine</string>
     <string name="Luck_Name_0">בן מזל %s</string>
     <string name="MageArmor_ACSpecial">אדמה מותכת</string>
+    <string name="MageArmor_Name">גלימת קוסם</string>
     <string name="MagicTorch_Name">לפיד קסם</string>
     <string name="MedicineMask_Name">מסכה כירורגית</string>
     <string name="MedicineMask_Obtained">התקבלה מסכה כירורגית</string>
@@ -569,6 +573,7 @@
     <string name="WndSadGhostNecro_Text">הרוח הזו נראית נאבקת בקללה שלה. נראה שהיא רוצה לבקש ממני משהו. בעזרת נקרומנטיה, יכולתי לשכנע אותה שהבקשה מולאה. זה יחסוך לי זמן. אבל האם כדאי לעשות את זה?</string>
     <string name="WndSadGhostNecro_Yes">כן, כפה את רצונך עליו.</string>
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
+    <string name="WndSaveSlotSelect_Delete_Title">האם אתה בטוח שברצונך למצוא מצב שמירה זה?</string>
     <string name="WndSettingsInGame_GameLog">יומן משחק</string>
     <string name="WndSettings_FpsLimit">הגבלת FPS</string>
     <string name="WndSettings_GameplaySettings">משחקיות</string>
@@ -616,6 +621,7 @@
     <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_fireplace_desc">מצוין לחימום במקום קר כמו זה.</string>
     <string name="town_deco_glass_name">חלון רחב</string>
+    <string name="town_deco_glass_stained_desc">יוצר הזכוכית הזו כנראה השקיע בה מאמץ רב.</string>
     <string name="town_deco_hay_desc">ערימה קטנה של שחת ריחני</string>
     <string name="town_deco_library_sign_name">שלט ספרייה</string>
     <string name="town_deco_movies_door_name">דלת</string>
@@ -639,6 +645,12 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 

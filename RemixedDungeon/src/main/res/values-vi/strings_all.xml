@@ -125,6 +125,7 @@
     <string name="City_TileDescDeco">Ở đây thiếu một vài viên gạch.</string>
     <string name="Claymore_Name">Kiếm Claymore</string>
     <string name="CloakSpell_Info">Bước vào bóng tối để trở nên vô hình. Giảm đáng kể cơ hội bị phát hiện. Không thể sử dụng khi kẻ địch ở gần.</string>
+    <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
@@ -449,6 +450,7 @@
     <string name="TownsfolkNPC_Message2">Thành phố đã trở nên giàu có nhờ hang động này, đến mức mọi người trong phố đều có thể đi nghỉ bất cứ khi nào họ muốn! Thực tế đó là lý do tại sao lại ít người ở đây đến vậy.</string>
     <string name="TownsfolkNPC_Message3">Một ngày đẹp đẽ thật.</string>
     <string name="TownsfolkNPC_Message4">Tôi hy vọng cống rãnh sẽ không bị ngập khi mùa xuân đến. Chúng tôi không cần một đợt xâm nhập chuột khác.</string>
+    <string name="ToxicGas_Info">Một đám mây khí độc màu xanh lá cây đang xoáy ở đây.</string>
     <string name="ToxicGland_Name">Tuyến độc</string>
     <string name="TrapWnd_Title">Cạm bẫy</string>
     <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
@@ -575,6 +577,7 @@
     <string name="town_deco_entrance_name">cổng vào</string>
     <string name="town_deco_flowerinthepot_name">Hoa trong chậu</string>
     <string name="town_deco_furnace_name">Lò nung</string>
+    <string name="town_deco_glass_stained_desc">Người làm chiếc kính màu này có lẽ đã rất chăm chỉ.</string>
     <string name="town_deco_grandclock_desc">Một cơ chế khá cũ nhưng vẫn hoạt động.</string>
     <string name="town_deco_hay_desc">Một đống rơm nhỏ thơm thơm.</string>
     <string name="town_deco_hay_name">Cỏ khô</string>
@@ -786,6 +789,9 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
 
 
 
