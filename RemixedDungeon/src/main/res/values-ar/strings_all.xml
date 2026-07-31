@@ -406,6 +406,7 @@
     <string name="PseudoRat_Name_Objective">فأر كاذب</string>
     <string name="Quarterstaff_Info">عصا من خشب صلب، أطرافها مغطاة بالحديد.</string>
     <string name="Quest_DarkGoldOre_full_name">خام الذهب الداكن</string>
+    <string name="RabbitEars_Name">آذان أرنب</string>
     <string name="RaiseDead_NoSpace">فشل إحياء الموتى لأن لا يوجد مكان حر في الجوار.</string>
     <string name="RatHide_Name">جلد الفأر</string>
     <string name="RatKingCrownBuff_Info">عاش سيد الجرذان، سيطيع كل جرذ ويسبح.</string>
@@ -420,6 +421,7 @@
     <string name="ResultDescriptions_Necromancy">نضبت قواه الحيوية أثناء محاولة تحريك جثة في المستوى %d</string>
     <string name="ResultDescriptions_Trap">قتل بتفريغ %1$s في المستوى %2$d</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
+    <string name="RingOfElements_Info">يوفر هذا الخاتم مقاومة للعناصر المختلفة مثل النار والكهرباء والغازات وغيرها. كما أنه يقلل من مدة الآثار السلبية.</string>
     <string name="RingOfElements_Name">خاتم العناصر</string>
     <string name="RingOfFrost_Name">خاتم الصقيع</string>
     <string name="RingOfHaggler_Info">في الواقع، هذا الخاتم لا يوفر أي تأثير سحري، لكنه يُظهر للتجار والبائعين أن مالك الخاتم عضو في نقابة اللصوص. عادةً ما يسعدون بتقديم خصم مقابل ضمان حصانة مؤقتة. ترقية هذا الخاتم لن تمنح أي مكافآت إضافية.</string>
@@ -568,6 +570,7 @@
     <string name="Weightstone_Info">باستخدام حجر الوزن، يمكنك موازنة سلاحك القتالي القريب لزيادة سرعته أو دقته.</string>
     <string name="Weightstone_Name">حجر الوزن</string>
     <string name="Weightstone_WndCancel">لا بأس</string>
+    <string name="Weightstone_WndChoice">كيف تود موازنة %s الخاص بك؟</string>
     <string name="Welcome_Text_30_1">    remix.30.1\n    - طريقة اللعب:\n    -- فئات غنول الفرعية!\n    -- حلزونات!\n    -- تم تقليل سرعة ترقية عناصر الفوضى.\n    -- جرعة المانا أصبحت جرعة عادية من الآن.\n    -- الشارات أصبحت قابلة للحصول عند اللعب بـ DLC (وليس المودات).\n    - إصلاح الأخطاء</string>
     <string name="WindGust_Name">هبة ريح</string>
     <string name="WndBlacksmith_Reforge">أعد تشكيلهم</string>
@@ -688,6 +691,7 @@
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
     <string name="town_deco_slush_name">الثلج المذاب</string>
     <string name="town_deco_snow_name">ثلج</string>
+    <string name="town_deco_sofa_desc">يبدو أن هذا السينما تحاول حقاً توفير أفضل المقاعد لعملائها.</string>
     <string name="town_deco_statue_blood_name">تمثال ملاك</string>
     <string name="town_deco_stone_wall_desc">بشكل ما، هذا الجدار يصدر حرارة ويبدو رطباً قليلاً.</string>
     <string name="town_deco_stone_wall_name">جدار حجري</string>
@@ -699,6 +703,12 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
 
 
 

@@ -130,6 +130,7 @@
     <string name="ChristmasTurkey_Name">festelijke kalkoen</string>
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="City_TileDescDeco">Er missen hier verschillende tegels.</string>
+    <string name="ClassArmor_NotEquipped">Je moet deze pantser dragen om de speciale kracht te gebruiken!</string>
     <string name="Claymore_Info">Dit massive zwaard zou door alles moeten kunnen snijden.</string>
     <string name="CloakBuff_Info">Een donkere mantel verhult je in de schaduw, waardoor je minder zichtbaar bent voor vijanden.</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
@@ -619,9 +620,12 @@
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
     <string name="town_deco_library_books_desc">Nog steeds beter dan de boeken uit de kelder.</string>
     <string name="town_deco_library_sign_name">Bibliotheekbord</string>
+    <string name="town_deco_locked_door_desc">Wat ter wereld zou er achter die deur kunnen zitten?</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
     <string name="town_deco_pathway_name">pad</string>
+    <string name="town_deco_pole_desc">Een hoge paal ontworpen om de touw te spannen.</string>
     <string name="town_deco_rope_name">touw</string>
+    <string name="town_deco_shelf_name">Planken</string>
     <string name="town_deco_shelving_name">rekken</string>
     <string name="town_deco_shop_sign_desc">Het lijkt erop dat er een winkel in dat gebouw zit.</string>
     <string name="town_deco_shop_sign_name">Winkelbord</string>
@@ -644,6 +648,12 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
 
 
 

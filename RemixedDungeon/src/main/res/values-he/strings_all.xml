@@ -35,6 +35,7 @@
     <string name="ArmorKit_Name">ערכת שריון</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
+    <string name="Armor_Info7a">\n\nאתה לובש את ה-%1$s%2$s.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">פסל מונפש</string>
     <string name="AzuterronNPC_Name_Objective">זר</string>
@@ -180,6 +181,7 @@
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
     <string name="DwarfToken_Info">גמדים רבים וכמה מהיצירות הגדולות יותר שלהם נושאים את חתיכות המתכת הקטנות האלה של מטרה לא ידועה. אולי הן תכשיטים או איזשהו תעודת זהות. גמדים הם אנשים מוזרים.</string>
     <string name="EarthElemental_Desc">אלמנטלי אדמה הם גושי אדמה המונעים על ידי כוחות טבע מרוכזים.</string>
+    <string name="EarthElemental_Name">אלמנטל אדמה</string>
     <string name="ElvenDagger_Name">פגיון אלפים</string>
     <string name="EncumbranceBuff_Name">עול</string>
     <string name="EnslavedSoul_Gender">feminine</string>
@@ -299,6 +301,7 @@
     <string name="Level_TileSummoningTrap">מלכודת זימון</string>
     <string name="Level_TileWall">קיר</string>
     <string name="Level_TileWell">באר</string>
+    <string name="LibrarianNPC_Message_Instruction">ש-שלום. ברוכים הבאים לספרייה. כאן תוכלו למצוא מידע על כל מיני דברים שניתן למצוא בצינוק... בעצם אנחנו יכולים לספק רק ידע שנמצא על ידי הרפתקנים. זה... זה קצת מביך. אז בכל פעם שתבקרו אותנו, כנראה שיהיו דברים חדשים לקרוא.</string>
     <string name="LibrarianNPC_Name_Objective">ספרן</string>
     <string name="LibraryBook_Description">הספר העתיק הזה עצום בגודלו. הוא מכיל את כל הידע שהרפתקנים גילו והביאו מהמבוך.</string>
     <string name="Lich_DieInfo">מעולם לא אהבתי את הנקרומנסר הזה. הגיע הזמן לחזור לרמה 7 ולמצוא דרך אחרת להרפתקה החדשה.</string>
@@ -403,6 +406,7 @@
     <string name="Ration_Info">אין כאן שום דבר מפואר: בשר מיובש, כמה ביסקוויטים — דברים כאלה.</string>
     <string name="RawFish_Taste">דגיגי!</string>
     <string name="RegenerationBuff_Info">הפונקציה לריפוי טבעי ממומשת בצורת באף כדי להקל על הדברים.</string>
+    <string name="ResultDescriptions_Boss">הובס על ידי ה-%1 ברמה %2</string>
     <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
     <string name="ResultDescriptions_Poison">מת מרעל בקומה %d</string>
     <string name="RingOfEvasion_Info">טבעת זו מגדילה את הסיכוי שלך להתחמק מהתקפת אויב.</string>
@@ -653,6 +657,12 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 
