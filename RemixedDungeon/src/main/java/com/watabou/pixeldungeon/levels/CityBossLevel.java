@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.levels.LevelTools;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
@@ -132,6 +133,12 @@ public class CityBossLevel extends BossLevel {
 		for (int dy = 0; dy < size; dy++) {
 			for (int dx = 0; dx < size; dx++) {
 				int c = cell(left + dx, top + dy);
+				// caveman: clear statues/pedestals from board area. they block LOS (fog),
+				// block piece movement (AI moves fail), and clutter the board.
+				LevelObject obj;
+				while ((obj = getTopLevelObject(c)) != null) {
+					remove(obj);
+				}
 				boolean border = dx == 0 || dx == size - 1 || dy == 0 || dy == size - 1;
 				if (border) {
 					set(c, Terrain.CHASM);
