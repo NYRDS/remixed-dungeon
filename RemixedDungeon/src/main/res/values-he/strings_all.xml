@@ -18,6 +18,7 @@
     <string name="Accuracy_DecreasedDoctor">כל תנופה של ה-%s מפיצה פגימות. מסור העצמות שלי מרפא... זה מדביק.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">ידיים חשופות מזהמות את הטכניקה שלי. בלי החיתוך הנקי של המסור, המטרה שלי מתפרקת לכאוס.</string>
     <string name="Acidic_Gender">masculine</string>
+    <string name="AirElemental_Name">אלמנטל אוויר</string>
     <string name="AlarmTrap_Desc">המלכודת משמיעה קול חודר שמהדהד בכל הצינוק!</string>
     <string name="AllowStatisticsCollectionScene_Allow">אפשר</string>
     <string name="AllowStatisticsCollectionScene_Deny">לסרב</string>
@@ -160,6 +161,7 @@
     <string name="DashSpell_Info">מזנק בכיוון שצוין תוך התנגשות באויבים, גורם נזק ומטיל \'קטוע\'.</string>
     <string name="DashSpell_Name">הסתערות</string>
     <string name="DeepSnail_Gender">masculine</string>
+    <string name="DeferedDamageBuff_Info">הכאב הפך לכאב מושהה, המפחית את הנזק המתקבל בבת אחת.\nנזק שנותר לקבל %d</string>
     <string name="DevourBuff_Name">טריפה</string>
     <string name="DieHardSpell_Name">למות קשה</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
@@ -227,6 +229,7 @@
     <string name="Hedgehog_Info4">קח את הפאי הזה</string>
     <string name="Hedgehog_Name">קיפוד</string>
     <string name="HeroClass_ElfPerks_4">אלפים מקבלים הרבה יותר בריאות מטיפות טל.</string>
+    <string name="HeroClass_GnollPerks_2">גנולים מתחילים ללא שריון אבל עם טומהוק ייחודי</string>
     <string name="HeroClass_GnollPerks_3">גנולים לא יודעים לקרוא או לכתוב.</string>
     <string name="HeroClass_Hun">ציידת</string>
     <string name="HeroClass_HunPerks_3">ציידות מרוויחות יותר בריאות מטללים.</string>
@@ -443,6 +446,7 @@
     <string name="ServantNPC_Name">מלצרית פונדק</string>
     <string name="ServantNPC_Name_Objective">מלצרית פונדק</string>
     <string name="ServiceManNPC_Desc">עובד רגיל של הממסדים המקומיים.</string>
+    <string name="ServiceManNPC_Name_Objective">עובד</string>
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
     <string name="Sewer_TileDescDeco">טחב צהבהב ולח מכסה את הרצפה.</string>
     <string name="Shadow_Gender">feminine</string>
@@ -561,6 +565,7 @@
     <string name="WndPlayGames_Title">Google Play משחקים</string>
     <string name="WndPlayGames_Use">השתמש ב-Google Play Games</string>
     <string name="WndPortal_Info_Return">הפורטל הזה יחזיר אותך לתוך הצינוק.\nהאם תרצה להשתמש בו?</string>
+    <string name="WndPremiumSettings_chrome">בחר חומר ממשק</string>
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
     <string name="WndPriest_Instruction2">אם אתה זקוק לעזרה, אני יכול לספק שירותי ריפוי רק עבור %d מטבעות זהב!\nאם אתה מחפש ברכה קדושה, או, שסנטה ישמור, קוללת, אנא פגוש את הבישוף בכנסייה הצנועה שלנו.</string>
     <string name="WndPriest_Instruction2_f">ברוכה הבאה בתי, ברוכה הבאה לכנסייה הקדושה של סנטה הגדול, אדון המעמקים!</string>
@@ -648,6 +653,11 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 

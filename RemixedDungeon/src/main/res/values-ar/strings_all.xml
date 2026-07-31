@@ -57,6 +57,7 @@
     <string name="Badges_BossSlain1">تم القضاء على الغو</string>
     <string name="Badges_BossSlain1All">تم القضاء على الغو بواسطة جميع الفئات</string>
     <string name="Badges_DeathNecrotism">الموت من التنخر</string>
+    <string name="Badges_FoodEaten2">تم أكل 20 قطعة طعام</string>
     <string name="Badges_GamesPlayed1">10 مباريات لُعبت</string>
     <string name="Badges_GamesPlayed2">تم لعب 100 لعبة</string>
     <string name="Badges_GoldColleted1">100 ذهب جُمع</string>
@@ -242,6 +243,7 @@
     <string name="Hedgehog_Desc">يبدو أن هذا القنفذ متوتر.</string>
     <string name="HeroClass_Elf">الجان</string>
     <string name="HeroClass_ElfPerks_5">الجان أقل مهارة في استخدام أسلحة القتال القريب.</string>
+    <string name="HeroClass_GnollPerks_2">يبدأ الغنول بدون أي درع ولكن مع فأس حربية فريدة</string>
     <string name="HeroClass_GnollPerks_3">لا يستطيع الغنول القراءة أو الكتابة.</string>
     <string name="HeroClass_MagPerks_3">يمكن للسحرة استخدام العصي السحرية كسلاح قتال قريب.</string>
     <string name="HeroClass_MagPerks_4">يستخدم السحرة المانا لإلقاء التعاويذ العنصرية.</string>
@@ -310,6 +312,7 @@
     <string name="Level_TileEntrance">مدخل النزول</string>
     <string name="Level_TileFireTrap">فخ حريق</string>
     <string name="Level_TileLockedDoor">باب مقفل</string>
+    <string name="Level_TileLockedExit">مخرج سفلي مغلق</string>
     <string name="Level_TilePedestal">قاعدة</string>
     <string name="Level_TileSummoningTrap">فخ الاستدعاء</string>
     <string name="LibrarianNPC_Message_Not_Ready">أ... أعتذر، ال... المكتبة ليست مفتوحة... بعد\.</string>
@@ -600,6 +603,7 @@
     <string name="WndPlayGames_Show_Error">فشلت العملية. حدث خطأ ما...</string>
     <string name="WndPortal_Title">البوابة</string>
     <string name="WndPortal_Warning_Info">لم تستخدم البوابة في هذا المستوى. بعد المغادرة، لن تتمكن من استخدام هذه البوابة مرة أخرى!\nهل أنت متأكد من أنك تريد المغادرة؟</string>
+    <string name="WndPremiumSettings_chrome">اختيار مادة الواجهة</string>
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
     <string name="WndPriest_Instruction2_f">أهلاً بك يا ابنتي، أهلاً بك في الكنيسة المقدسة للقديس سانتا سيد الأعماق!</string>
     <string name="WndRanking_Badges">شارات</string>
@@ -695,6 +699,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 
