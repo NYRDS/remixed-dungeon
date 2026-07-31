@@ -335,6 +335,7 @@
     <string name="MimicPie_Name">ميميكي</string>
     <string name="MimicPie_Name_Objective">ميميكي</string>
     <string name="MirrorImage_Name">ثنائي</string>
+    <string name="MissileWeapon_Info3">بسبب قوتك الزائدة، يزداد ضرر هجومك بـ %s.</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
     <string name="MissileWeapon_Yes">نعم، أنا أعلم ما أفعله</string>
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
@@ -610,6 +611,7 @@
     <string name="WndResurrect_No">لا، أستسلم</string>
     <string name="WndSadGhost_Wepon">سلاح الشبح</string>
     <string name="WndSaveSlotSelect_Delete_Title">هل أنت متأكد أنك تريد حذف هذا الحفظ؟</string>
+    <string name="WndSettings_ActionButtonSize">حجم أزرار الإجراءات</string>
     <string name="WndSettings_FpsLimit">حد الإطارات في الثانية</string>
     <string name="WndSettings_Handedness">اليد المهيمنة</string>
     <string name="WndSettings_Immersive">وضع الغمر</string>
@@ -693,6 +695,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

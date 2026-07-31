@@ -437,6 +437,7 @@
     <string name="StartScene_UnlockGnoll">Om deze klasse te ontgrendelen moet je de dorpspriester ervan overtuigen de Gnol Brute te genezen</string>
     <string name="StoneBloodBuff_Info">Het bloed verandert in steen die samensmelt met de nabije muren en het doorlopen ervan veel makkelijker maakt, maar tegen welke prijs.</string>
     <string name="StoneBloodBuff_Name">Stenen bloed</string>
+    <string name="StrongShield_desc">Dit rechthoekige schild is bekleed met koperen platen en versierd met gekleurde stof. Het is aanzienlijk zwaarder, maar kan veel meer binnenkomende schade blokkeren.</string>
     <string name="Stylus_ACInscribe">Inschrijven</string>
     <string name="Stylus_Info">Deze arcanische stylus is gemaakt van een donkere, zeer harde steen. Je kunt er een glyph of rune mee graveren, maar je kunt niet kiezen welke er wordt gegraveerd; de stylus beslist voor je.</string>
     <string name="Stylus_Inscribed">je hebt de %1$s op je %2$s gegraveerd</string>
@@ -638,6 +639,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 
