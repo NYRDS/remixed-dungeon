@@ -477,6 +477,7 @@
     <string name="SpiderMind_Name">עכביש-סיי</string>
     <string name="SpiderMind_Name_Objective">עכביש-פסי</string>
     <string name="SpiderQueen_Desc">גוף של אישה יפה המשולב עם עכביש מחריד. כל היצורים החיים במאורה הזו הם משרתיה. מפגש עם הגברת יוצאת הדופן הזו עלול להתגלות כחוויה קטלנית. כי אתה פולש\!</string>
+    <string name="SpiderQueen_Name_Objective">מלכת העכבישים</string>
     <string name="SpiderServant_Name">חייל עכביש</string>
     <string name="SpiritOfPain_Desc">שבר של אפלה חיה.</string>
     <string name="Sprout_Info">הַעִיר אֶת הַזְּרָעִים הַיְשֵׁנִים.\nאַךְ צָרִיךְ לִהְיוֹת יְרַק עַל הָאֲדָמָה כְּדֵי שֶׁהַלַּחַשׁ יַצְלִיחַ.</string>
@@ -657,6 +658,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

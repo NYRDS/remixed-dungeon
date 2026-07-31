@@ -270,6 +270,7 @@
     <string name="MagicArrow_Name">Mũi Tên Ma Thuật</string>
     <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
     <string name="MailArmor_Name">áo giáp xích</string>
+    <string name="ManaPotion_Info">Bình này sẽ khôi phục năng lượng tinh thần của bạn.</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
     <string name="MeleeWeapon_Info1c">nâng cấp</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
@@ -523,6 +524,7 @@
     <string name="WndLocalModInstall_pick">Chọn thư mục mod</string>
     <string name="WndMovieTheatre_Bye">Hãy quay lại bất cứ lúc nào, chúng tôi luôn hoan nghênh bạn!</string>
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
+    <string name="WndMovieTheatre_Title">Rạp Phim</string>
     <string name="WndPlayGames_Connecting">Đang kết nối với Google Play Games, vui lòng chờ một chút</string>
     <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
     <string name="WndPortal_Info">Cổng này sẽ cho phép bạn quay lại thị trấn. Nó có vẻ khá không ổn định, và có lẽ sẽ không hoạt động quá lâu.\nBạn có muốn sử dụng nó không?</string>
@@ -801,6 +803,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 

@@ -650,6 +650,7 @@
     <string name="YogsHeart_Desc">لسنوات طويلة اعتقد الناس أن المخلوقات عديمة القلب فقط هي القادرة على أفعال الشر الصرفة. ومع ذلك، ها هو هنا أمامك قلب ضخم نابض، يعود للإله القديم نفسه.</string>
     <string name="YogsTeeth_Name">أسنان يوغ</string>
     <string name="deco_candle_name">شمعة</string>
+    <string name="town_deco_INN_sign_desc">يبدو أن هناك فندقاً داخل هذا المبنى.</string>
     <string name="town_deco_INN_sign_name">لافتة النزل</string>
     <string name="town_deco_armoronhanger_name">درع</string>
     <string name="town_deco_armorstand_plate_desc">وفقاً للتاجر، كان هذا الدروع الثقيلة ينتمي يوماً ما إلى محارب عظيم.</string>
@@ -703,6 +704,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

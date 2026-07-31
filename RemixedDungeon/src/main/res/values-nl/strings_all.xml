@@ -321,6 +321,7 @@
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Dit is geen enkel beest! Het is een levend getuigenis van nekromantische kracht! Vang er eentje, levend en onbeschadigd! Deze _Doodsridder_… hij is de sleutel!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Zijn skeletvingers tikken ritmisch tegen een borrelende ketel, de lucht om hem heek dik van de pittige stank van zwavel en verwesing*\n_Kobold Ijsmagiers_! Die jammerlijke wezens, gekrocht in hun bevroren grotten, wanhopig vasthoudend aan hun ijsmagie. Ik heb er vijf nodig, hun bevroren lichamen zullen... verlichtend zijn. Hun meesterwerk van ijs, het is... eigenaardig. Ik geloof dat ze aansluiten bij een oerenergie, een kracht die sluimert onder het oppervlakte van deze wereld.</string>
+    <string name="PlagueDoctorQuest_5_1_Prologue">*Hij stottert, zijn stem kraakt als een broze tak*. A-ah, _succubi_! Twee... ja, twee, levend! Het is... hem... voor mijn onderzoek! Je ziet... hun feromonen... het is cruciaal om het delicate evenwicht te begrijpen van... ah... *Hij zwijgt, zijn botten hand reikt op om nerveus zijn masker te corrigeren, zijn ogen schieten naar jou met een koortsachtige intensiteit.* Hun... essentie... het is een puzzel... een prachtige, enigmatische puzzel! *Hij hoest hevig, probeert zijn kalmte te herwinnen.* Ik beloof, voor het brengen van twee van deze... wezens... zul je mijn eeuwige dankbaarheid hebben. Zie het als een... een gave aan kennis! Ja! Aan kennis!</string>
     <string name="Poison_Name_1">Giftig %s</string>
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
@@ -648,6 +649,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 
