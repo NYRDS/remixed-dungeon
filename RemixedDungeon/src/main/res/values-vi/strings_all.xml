@@ -196,6 +196,7 @@
     <string name="Halls_TileStatue">Cột</string>
     <string name="Heal_Cast">%s đã được chữa trị.</string>
     <string name="Heal_Info">Một phép thuật khá hữu ích trong ngục, phải không?</string>
+    <string name="HealerNPC_Name">lính tế thành phố</string>
     <string name="HeartOfDarkness_Name">Trái tim của bóng tối</string>
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
     <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
@@ -522,6 +523,7 @@
     <string name="WndLibrary_Levels_Btn">Hầm ngục</string>
     <string name="WndLibrary_Mobs_Btn">Quái vật</string>
     <string name="WndLocalModInstall_pick">Chọn thư mục mod</string>
+    <string name="WndModSelect_ReallyDelete">Thực sự xóa?</string>
     <string name="WndMovieTheatre_Bye">Hãy quay lại bất cứ lúc nào, chúng tôi luôn hoan nghênh bạn!</string>
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
     <string name="WndMovieTheatre_Title">Rạp Phim</string>
@@ -803,6 +805,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 
