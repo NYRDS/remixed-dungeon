@@ -15,6 +15,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
@@ -141,7 +142,22 @@ public class CityBossLevel extends BossLevel {
 		}
 
 		chessBoardOrigin = cell(left + 1, top + 1);  // a8 = interior top-left
+
+		// caveman: reveal board area (no fog of war on chess). mapped cells stay visible permanently.
+		for (int dy = 0; dy < size; dy++) {
+			for (int dx = 0; dx < size; dx++) {
+				mapped[cell(left + dx, top + dy)] = true;
+			}
+		}
+
+		// caveman: move hero just below the board so camera centers on it (hero is frozen for chess).
+		int heroCell = cell(left + size / 2, top + size);
+		if (cellValid(heroCell) && passable[heroCell]) {
+			WandOfBlink.appear(Dungeon.hero, heroCell);
+		}
+
 		GameScene.updateMap();
+		Dungeon.observe();
 	}
 
 	private boolean heroUnarmed(Hero hero) {
