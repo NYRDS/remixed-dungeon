@@ -444,6 +444,7 @@
     <string name="ScrollOfIdentify_Name">מגילת זיהוי</string>
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
     <string name="ScrollOfRecharging_Name">מגילת טעינה</string>
+    <string name="ScrollOfRemoveCurse_Info">הכתובת על המגילה הזו תסיר מיד מהנשק, השריון, הטבעות והפריטים הנישאים של הקורא כל קסם רע שעלול למנוע מהלובש להסיר אותם.</string>
     <string name="ScrollOfTeleportation_NoTeleport">אאורה קסומה חזקה של המקום הזה מונעת ממך לטלפורט!</string>
     <string name="ScrollOfTeleportation_Teleport2">בהרף עין %s טלפורטו למיקום אחר ברמה.</string>
     <string name="ScrollOfUpgrade_Name">מגילת שדרוג</string>
@@ -666,6 +667,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

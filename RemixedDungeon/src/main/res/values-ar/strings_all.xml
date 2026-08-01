@@ -308,6 +308,7 @@
     <string name="KindOfWeapon_EquipCursed">تتقلص عيناك بينما تشتد قبضتك اللاإرادية على %s</string>
     <string name="King_Desc">كان آخر ملوك الأقزام معروفاً بفهمه العميق لعمليات الحياة والموت. لقد أقنع أعضاء بلاطه بالمشاركة في طقس كان من المفترض أن يمنحهم الشباب الأبدي. في النهاية كان هو الوحيد الذي حصل عليه - وجيش من الموتى الأحياء كمكافأة إضافية.</string>
     <string name="King_Gender">masculine</string>
+    <string name="King_Name_Objective">ملك الأقزام</string>
     <string name="KoboldIcemancer_Killed">قتلتك سهم الجليد لـ %s...</string>
     <string name="Kusarigama_Name">كوساريغاما</string>
     <string name="Kusarigama_Pull">سحب</string>
@@ -717,6 +718,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

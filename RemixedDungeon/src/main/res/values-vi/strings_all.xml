@@ -525,6 +525,7 @@
     <string name="WndInfoItem_Remains">Đây là tất cả những gì còn lại từ một trong những người đi trước bạn. Có thể đáng để kiểm tra xem có vật phẩm quý nào không.</string>
     <string name="WndInstallingMod_please_wait">Đang cài đặt mod, vui lòng đợi...</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Thực hiện công thức</string>
+    <string name="WndItemAlchemy_SelectRecipe">Chọn công thức</string>
     <string name="WndItemAlchemy_Transmute">Chuyển hóa</string>
     <string name="WndJournal_Levels">Cấp độ</string>
     <string name="WndJournal_Title">Nhật Ký</string>
@@ -815,6 +816,7 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
 
 
 
