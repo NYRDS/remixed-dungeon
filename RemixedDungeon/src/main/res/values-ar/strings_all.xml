@@ -395,6 +395,7 @@
     <string name="PortalGate_Name">بوابة</string>
     <string name="PortalGate_Used">لمست البوابة و... لم يحدث شيء.</string>
     <string name="PotionBelt_Name">حزام جرعات</string>
+    <string name="PotionOfExperience_Name">جرعة الخبرة</string>
     <string name="PotionOfHealing_Apply">تشفى جراحك تماماً.</string>
     <string name="PotionOfMana_Name">إكسير المانا</string>
     <string name="PotionOfMight_StaApply">+1 قوة، +5 صحة</string>
@@ -444,6 +445,7 @@
     <string name="RingOfThorns_Info">على الرغم من أن هذا الخاتم لا يوفر أشواكاً حقيقية، فإن أي عدو يهاجمك سيُجرح بجزء من الضرر الذي يلحقه بك. تحسين هذا الخاتم لن يمنح أي مكافآت إضافية.</string>
     <string name="Ring_BuffKnown">هذا %s</string>
     <string name="Ring_Gems_1">الأوبال</string>
+    <string name="Ring_Gems_11">العقيق</string>
     <string name="Ring_Info2">خاتمك %1$s يضيق حول إصبعك بشكل مؤلم</string>
     <string name="Roar_Name">زئير</string>
     <string name="RogueArmor_ACSpecial">قنبلة دخان</string>
@@ -718,6 +720,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

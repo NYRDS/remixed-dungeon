@@ -78,6 +78,7 @@
     <string name="Blacksmith_Verify2">Chọn 2 vật phẩm cùng loại!</string>
     <string name="Blacksmith_Verify4">Tôi không làm việc với vật phẩm bị nguyền rủa!</string>
     <string name="Blacksmith_Verify6">Tôi không thể rèn lại các vật phẩm này!</string>
+    <string name="Bleeding_Death">Bạn đã chết vì mất máu...</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Brute_Name_Objective">gnoll brute</string>
@@ -116,6 +117,7 @@
     <string name="CharAction_Take">Nhặt lấy</string>
     <string name="Char_Hit_2">%1$s đánh trúng %2$s</string>
     <string name="Char_StaAmok">phát cuồng</string>
+    <string name="Char_StaDizzy">choáng váng</string>
     <string name="Char_StaDodged_0">tránh</string>
     <string name="Char_StaDodged_1">tránh</string>
     <string name="Char_StaDodged_2">tránh</string>
@@ -818,6 +820,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 
