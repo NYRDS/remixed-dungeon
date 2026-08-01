@@ -334,6 +334,7 @@
     <string name="PotionOfLiquidFlame_Info">Deze fles bevat een onstabiel mengsel dat heftig in vlammen opgaat bij contact met de open lucht.</string>
     <string name="PotionOfLiquidFlame_Name">Drankje van Vloeibare Vlam</string>
     <string name="PotionOfMight_Apply">Nieuwverkregen kracht stroomt door je lichaam.</string>
+    <string name="PotionOfMight_Info">Deze krachtige vloeistof stroomt door je spieren en verhoogt permanent je kracht met één punt en je gezondheid met vijf punten.</string>
     <string name="PotionOfMindVision_Apply1">Je kunt op een of andere manier de aanwezigheid van andere wezens\' geesten voelen!</string>
     <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
     <string name="PotionOfPurity_Name">Zuiveringselixer</string>
@@ -355,6 +356,7 @@
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
     <string name="RatKingCrown_Name">Kroon van de rattenkoning</string>
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
+    <string name="RatSkullBuff_Name">Ratverdelger</string>
     <string name="RatSkull_Info2">Aan de andere kant bewijst het dat de eigenaar in staat is om ratten te doden, zelfs grote en stinkende.</string>
     <string name="RawFish_Name">rauwe vis</string>
     <string name="ResultDescriptions_Bleeding">Verstorven op niveau %d</string>
@@ -652,6 +654,8 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 
