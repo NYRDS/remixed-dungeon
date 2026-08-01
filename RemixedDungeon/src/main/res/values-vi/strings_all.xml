@@ -15,6 +15,7 @@
     <string name="Accuracy_Decreased">Tại sao tôi nghĩ mình có thể dùng %s? Cụm sai, tay sai!</string>
     <string name="Accuracy_DecreasedDoctor">Mỗi lần gióg %s này lan truyền sự không hoàn hảo. Cây cưa xương của tôi chữa lành... cái này gây nhiễm.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Tay trần làm nhiễm bẩn kỹ thuật. Không có đường cắt sạch của Rọc, sự ngắm bắn của tôi trở nên hỗn loạn.</string>
+    <string name="AirElemental_Desc">Yếu tố không khí là những sinh vật phép thuật bay được tạo thành từ không khí sống.</string>
     <string name="AlchemyPot_SelectSeed">Chọn một hạt giống để ném</string>
     <string name="AllowStatisticsCollectionScene_Allow">Cho phép</string>
     <string name="AllowStatisticsCollectionScene_Deny">Từ chối</string>
@@ -392,6 +393,7 @@
     <string name="ScrollOfLullaby_Info1">Cuộn giấy phát ra giai điệu dịu dàng.</string>
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
     <string name="ScrollOfRemoveCurse_Info">Lời chú trên cuộn này sẽ tách ngay lập tức khỏi vũ khí, giáp, nhẫn và vật mang theo của người đọc bất kỳ lời nguyền xấu nào có thể ngăn cản người đeo tháo chúng ra.</string>
+    <string name="ScrollOfRemoveCurse_Proced">Cái ba lô của bạn phát sáng bằng ánh sáng thanh tẩy, và một năng lượng dữ tợn tan biến.</string>
     <string name="ScrollOfTeleportation_NoTeleport">Sức mạnh ma pháp của nơi này ngăn cản việc dịch chuyển của bạn!</string>
     <string name="ScrollOfTeleportation_Teleport">Trong nháy mắt, bạn đã được dịch chuyển đến một vị trí khác trên cấp độ này.</string>
     <string name="ScrollOfWeaponUpgrade_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
@@ -429,6 +431,7 @@
     <string name="Shopkeeper_BuyPrompt">Để tôi xem hàng hóa của bạn</string>
     <string name="Shopkeeper_Name">Người bán hàng</string>
     <string name="ShortSword_ACReforge">ĐÁNH LẠI</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Name">kiếm ngắn</string>
     <string name="SkeletonKey_Info">Cái chìa khóa này trông rất nghiêm trọng: đầu nó được đúc hình cái sọ. Có lẽ nó có thể mở được cánh cửa quan trọng nào đó.</string>
     <string name="SlowBuff_Name">Làm chậm</string>
@@ -825,6 +828,9 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
 
 
 

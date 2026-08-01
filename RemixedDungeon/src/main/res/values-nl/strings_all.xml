@@ -15,6 +15,7 @@
     <string name="AboutScene_Txt_Intro">Remixed Dungeon door NYRDS gebaseerd op de broncode van Pixel Dungeon door Watabou.</string>
     <string name="Accuracy_Decreased">Waarom dacht ik dat ik dit %s kon gebruiken? Verkeerd gereedschap, verkeerde handen!</string>
     <string name="Accuracy_DecreasedDoctor">Elke slag met deze %s verspreidt onvolkomenheden. Mijn botenzaag geneest... dit besmet.</string>
+    <string name="AirElemental_Desc">Luchtelementalen zijn vliegende magische wezens gemaakt van levende lucht.</string>
     <string name="AllowStatisticsCollectionScene_Allow">Toestaan</string>
     <string name="AllowStatisticsCollectionScene_Deny">Weigeren</string>
     <string name="AllowStatisticsCollectionScene_Title">Verzameling van gebruikstatistieken</string>
@@ -279,6 +280,7 @@
     <string name="Longsword_Name">langzwaard</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
+    <string name="MedicineMask_Name">Chirurgisch masker</string>
     <string name="MedicineMask_Obtained">Chirurgisch masker verkregen</string>
     <string name="MeleeWeapon_Info3a">Dit is een tamelijk %s wapen.</string>
     <string name="MeleeWeapon_Info3d">en</string>
@@ -317,6 +319,7 @@
     <string name="ParalysisBuff_Name">Verlamd</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
     <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
+    <string name="PetInventory_Title">Huisdiereninventaris</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te mijnen!</string>
     <string name="Pickaxe_Name">houweel</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
@@ -423,6 +426,7 @@
     <string name="ShieldBuffNotReady_Info">Je schild is nog niet klaar om de volgende aanval te blokkeren.</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="Shopkeeper_Name">winkelier</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Name_Objective">skelet</string>
@@ -663,6 +667,10 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 

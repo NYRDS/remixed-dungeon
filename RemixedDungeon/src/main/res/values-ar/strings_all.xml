@@ -20,6 +20,7 @@
     <string name="Accuracy_DecreasedDoctor">كل ضربة من هذا %s تنشر العيوب. منشار عظامي يشفي... هذا يصيب بعدوى.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">يداي العاريتان تفسدان تقنيتي. بدون قطع المنشار النظيف، تتحول دقتي إلى فوضى.</string>
     <string name="Acidic_Name_Objective">العقرب الحمضي</string>
+    <string name="AirElemental_Desc">العناصر الجوية هي كائنات سحرية طائرة مصنوعة من الهواء الحي.</string>
     <string name="Albino_Desc">فئران الجراب عدوانية، لكنها ضعيفة نسبياً في المجاري. يمكن أن تكون خطرة فقط بأعداد كبيرة. يبدو أن هذا الفأر مهق (ألبينو). كما أن لديه أسناناً حادة بشكل غير طبيعي.</string>
     <string name="Albino_Name_Objective">فأر ألبينو</string>
     <string name="AllowStatisticsCollectionScene_Allow">السماح</string>
@@ -373,6 +374,7 @@
     <string name="PetInventory_GiveN">أعط %d</string>
     <string name="PetInventory_PetBackpackFull">حقيبة الحيوان الأليف ممتلئة</string>
     <string name="PetInventory_TakeN">خذ %d</string>
+    <string name="PetInventory_Title">مخزن الحيوانات الأليفة</string>
     <string name="Pickaxe_InsufficientStr">قوة غير كافية للتعدين!</string>
     <string name="Pickaxe_Name">كريكة</string>
     <string name="Piranha_Gender">feminine</string>
@@ -502,6 +504,7 @@
     <string name="Shielded_Name_Objective">الوحش المحمي</string>
     <string name="ShootInEye_Name">رمية في العين</string>
     <string name="ShortSword_ACReforge">إعادة الصياغة</string>
+    <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Name">سيف قصير</string>
     <string name="Skeleton_Killed">قُتلت بانفجار العظام...</string>
     <string name="Skeleton_Name">هيكل عظمي</string>
@@ -675,6 +678,7 @@
     <string name="town_deco_INN_sign_desc">يبدو أن هناك فندقاً داخل هذا المبنى.</string>
     <string name="town_deco_INN_sign_name">لافتة النزل</string>
     <string name="town_deco_armoronhanger_name">درع</string>
+    <string name="town_deco_armorstand_leather_name">درع جلدي</string>
     <string name="town_deco_armorstand_plate_desc">وفقاً للتاجر، كان هذا الدروع الثقيلة ينتمي يوماً ما إلى محارب عظيم.</string>
     <string name="town_deco_armorstand_scale_name">درع حرشفي</string>
     <string name="town_deco_banner_desc">لافتة أنيقة تصور رموز هذه الحانة.</string>
@@ -726,6 +730,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 
