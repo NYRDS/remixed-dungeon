@@ -402,6 +402,7 @@
     <string name="Scroll_Runes_14">ALGIZ</string>
     <string name="Scroll_Runes_15">DAGAZ</string>
     <string name="Scroll_Runes_2">LAGUZ</string>
+    <string name="Scroll_Runes_7">MANNAZ</string>
     <string name="Senior_Name_Objective">seniore monnik</string>
     <string name="ServantNPC_Desc">Een heel drukke herbergbediende.</string>
     <string name="ServantNPC_Gender">feminine</string>
@@ -440,6 +441,7 @@
     <string name="SpiderMind_Name">Psi-Spin</string>
     <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
+    <string name="Spinner_Name_Objective">grotspin</string>
     <string name="SpiritOfPain_Desc">Een splinter van levende duisternis.</string>
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">geest van pijn</string>
@@ -661,6 +663,8 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

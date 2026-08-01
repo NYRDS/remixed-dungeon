@@ -220,6 +220,7 @@
     <string name="HeroClass_Mag">pháp sư</string>
     <string name="HeroClass_MagPerks_2">Khi ăn, bất kỳ món ăn nào cũng khôi phục 1 sạc cho tất cả cây gậy phép trong túi đồ.</string>
     <string name="HeroClass_MagPerks_4">Pháp sư sử dụng mana để thi triển các phép thuật nguyên tố.</string>
+    <string name="HeroClass_Necromancer">pháp sư</string>
     <string name="HeroClass_NecromancerPerks_3">Pháp sư gọi hồn bắt đầu với một chiếc chìa khóa xương cấp 7.</string>
     <string name="HeroClass_Rog">kẻ lừa đảo</string>
     <string name="HeroClass_RogPerks_0">Kẻ lừa đảo bắt đầu với Nhẫn Bóng Tối+1.</string>
@@ -824,6 +825,7 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
 
 
 
