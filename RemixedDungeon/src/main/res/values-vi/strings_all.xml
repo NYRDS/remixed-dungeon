@@ -80,6 +80,7 @@
     <string name="Blacksmith_Verify6">Tôi không thể rèn lại các vật phẩm này!</string>
     <string name="Bleeding_Death">Bạn đã chết vì mất máu...</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
+    <string name="BoneSaw_Info">Một cái cạo phẫu thuật được thiết kế chính xác để thâm nhiễm nhanh chóng. Sát thương và tốc độ tấn công của nó trở nên nguy hiểm hơn cùng với kỹ năng của Bác sĩ Chết Chóc. Các đòn chí mạng cắt thêm các phần có thể thu hoạch từ kẻ thù, và nó tấn công với hiệu quả tàn nhẫn đối với kẻ thù bị tê liệt.</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Brute_Name_Objective">gnoll brute</string>
     <string name="BurningFist_Name_Objective">cú đấm bùng cháy</string>
@@ -136,6 +137,7 @@
     <string name="Claymore_Name">Kiếm Claymore</string>
     <string name="CloakSpell_Info">Bước vào bóng tối để trở nên vô hình. Giảm đáng kể cơ hội bị phát hiện. Không thể sử dụng khi kẻ địch ở gần.</string>
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
+    <string name="Codex_Story_17">Vũ khí gây choáng - Khi đánh trúng, có thể khiến mục tiêu bị tê liệt.</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
@@ -197,6 +199,7 @@
     <string name="Ghost_Defense">né tránh</string>
     <string name="Ghost_Desc">Ma gần như không thể nhìn thấy. Nó trông như một đốm ánh sáng mờ vô hình với một khuôn mặt buồn bã.</string>
     <string name="Ghost_Name">ma buồn</string>
+    <string name="Ghost_Rose2">Làm ơn... Giúp tôi... Tìm đóa hồng...</string>
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
     <string name="GnollCostume_Info">Một bộ trang phục ấm áp và bồng bềnh cực kỳ. Ai mặc bộ trang phục này sẽ trông như... người đang cố gắng cải trang thành gnoll. Nhưng gnoll sẽ không bị lừa, chúng vẫn sẽ tấn công bạn.</string>
     <string name="GoldenKey_Name">chìa khóa vàng</string>
@@ -407,6 +410,7 @@
     <string name="Scroll_Runes_7">MANNAZ</string>
     <string name="Scroll_Runes_8">NAUDIZ</string>
     <string name="Scroll_Runes_9">BERKANAN</string>
+    <string name="SeedPouch_Info">Túi velour nhỏ này cho phép bạn chứa bất kỳ số lượng hạt giống nào trong đó. Rất tiện lợi.</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServiceManNPC_Desc">Một công nhân thông thường của các cơ sở địa phương.</string>
     <string name="ServiceManNPC_Name_Objective">nhân viên</string>
@@ -820,6 +824,10 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
+
 
 
 

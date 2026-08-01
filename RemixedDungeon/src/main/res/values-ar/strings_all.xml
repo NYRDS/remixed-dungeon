@@ -107,6 +107,7 @@
     <string name="BlessedBuff_Name">مبارك</string>
     <string name="BlindnessBuff_Info">عمى تام، لا يُسمع سوى الأصوات المحيطة.</string>
     <string name="BloodTransfusion_Drained">تتدفق جوهر الحياة من حيوانك الأليف إليك.</string>
+    <string name="BoneSaw_Name">منشار العظام</string>
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
     <string name="Bowknot_Info">شريط وردي لامع جميل مربوط بعقدة ومثبت بدبوس شعر.</string>
     <string name="Brute_Gender">masculine</string>
@@ -159,6 +160,7 @@
     <string name="CloakSpell_Name">العباءة</string>
     <string name="Codex_Story_12">سلاح مشتعل - عند ضربة ناجحة، يلحق ضررًا إضافيًا بالهدف وقد يحرقه.</string>
     <string name="Codex_Story_16">سلاح محظوظ - يتجاهل درع العدو تقريباً بالكامل، ويسبب ضرراً أكبر بكثير.</string>
+    <string name="Codex_Story_17">سلاح مخدر - عند الضرب بنجاح، قد يشل الهدف.</string>
     <string name="Codex_Story_22">هذا الكتاب مكتوب بلغة الشياطين</string>
     <string name="Codex_Story_23">هذا الكتاب مكتوب بلغة الأقزام</string>
     <string name="Codex_Story_9">غليف الإزاحة - كلما تعرض البطل للضرب، هناك فرصة أن يتم نقله إلى بلاطة عشوائية مرئية. لا يعمل هذا الغليف في مستويات الزعماء.</string>
@@ -229,6 +231,7 @@
     <string name="GasImmuneBuff_Name">مناعة الغاز</string>
     <string name="Ghost_Defense">تهرب</string>
     <string name="Ghost_Rose1">مرحباً أيها المغامر... يوماً ما كنت مثلك - قوياً واثقاً... والآن أنا ميت... لكنني لا أستطيع مغادرة هذا المكان... ليس قبل أن أستعيد _الوردة المجففة_ الخاصة بي... إنها مهمة جداً لي... سرقها مني وحش ما من جثتي...</string>
+    <string name="Ghost_Rose2">من فضلك... ساعدني... ابحث عن الوردة...</string>
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
     <string name="Gnoll_BecomeGuardianDesc">أن تصبح حارساً</string>
     <string name="Gold_Name">الذهب</string>
@@ -608,6 +611,7 @@
     <string name="WndHero_Awareness">اليقظة</string>
     <string name="WndHero_Depth">أقصى عمق</string>
     <string name="WndInfoItem_Chest">صندوق</string>
+    <string name="WndInfoItem_CrystalChest">صندوق كريستالي</string>
     <string name="WndInfoItem_Owner">قد يحتوي هذا القبر القديم على شيء مفيد، لكن مالكه سيعترض بالتأكيد على التفتيش.</string>
     <string name="WndInfoItem_Remains">هذا كل ما تبقى من أحد أسلافك. ربما يستحق التحقق من وجود أي مقتنيات قيمة.</string>
     <string name="WndInstallingMod_copying_file">جاري نسخ %s إلى تخزين Remixed Dungeon</string>
@@ -649,6 +653,7 @@
     <string name="WndStory_Prision">منذ سنوات عديدة، تم بناء سجن تحت الأرض هنا لأخطر المجرمين. في ذلك الوقت، بدت فكرة ذكية لأن هذا المكان كان صعب الهروب منه حقًا. لكن سرعان ما بدأت أبخرة داكنة بالتسرب من الأسفل، مما أصاب السجناء والحراس بالجنون. في النهاية، تم التخلي عن السجن، تاركين بعض السجناء محبوسين هنا.</string>
     <string name="WndStory_Sewers">يقع الزنزانة مباشرة تحت المدينة، حيث تشكل مستوياته العليا نظام الصرف الصحي للمدينة. وباعتبارها اسمياً جزءاً من المدينة، فإن هذه المستويات ليست خطرة جداً. لن يسميها أحد مكاناً آمناً، لكنك على الأقل لن تضطر للتعامل مع الكثير من السحر الشرير هنا.</string>
     <string name="WndStory_Spiders">منذ سنوات عديدة مضت كان هناك منجم غني مليء بالحجارة السحرية. لكن عندما جفت عروق المعادن غادر عمال المناجم تاركين خلفهم شبكة واسعة من الأنفاق. في نهاية المطاف سكن هذا المكان العناكب. لكن حتى هذه المخلوقات الخطيرة الكامنة في الظلام لم تكن كافية لإخافة الشجعان والمجانين الذين يتوقون للكنوز التي قد توجد في المناجم. فمدى الخطر يتناسب دائماً مع كمية الشائعات التي تتحدث عن القطع الأثرية السحرية. ذات مرة تجولت ساحرة شريرة في الأنفاق محاولاً الهروب من الملاحقين. لكن الناس المتشائمون لم يجرؤوا على دخول الظلام. لذا قرروا الانتظار. لكنها لم تظهر أبداً. ربما وجدت الساحرة مخرجاً آخر، أو ربما تمكنت من التسلل بجانب الحراس... أو أنها هلكت محاطة بحفيف مخلوقات الظلام.</string>
+    <string name="WndTradeItem_Bought">لقد اشتريت %1 مقابل %2 ذهبية</string>
     <string name="WndTradeItem_Buy">شراء بـ %dغ</string>
     <string name="WndTradeItem_SellAll">بيع الكل مقابل %dg</string>
     <string name="WndTradeItem_SellN">بيع %1$d مقابل %2$dغ</string>
@@ -720,6 +725,11 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
 
 
 

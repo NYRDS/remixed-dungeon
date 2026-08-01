@@ -138,6 +138,7 @@
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="Codex_Story_12">Brandid wapen - Bij een succesvolle treffer geeft dit extra schade en kan het doel in brand steken.</string>
+    <string name="Codex_Story_17">Verstikkend wapen - Bij succesvolle treffer kan het doelwit verlamd raken.</string>
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
     <string name="ColdSpirit_Desc">De koude geest is de uitvlucht van vorst, in zijn zuiverste vorm. Als een gedachtenloze klomp magische energie gehoorzaamt hij de wil van de magiër die hem oproept, of handelt volgens basisinstincten.</string>
@@ -274,6 +275,7 @@
     <string name="LightningBolt_Info">Een spreuk die wordt gedeeld onder oude schamanen, die je vijanden tweemaal zo effectief schokt, vooral als ze genoeg dwazen zijn om op water te staan.</string>
     <string name="LightningTrap_Name">Bliksemval</string>
     <string name="LloidsBeacon_Preventing">Een soort sterke magische aura die hier aanwezig is voorkomt dat je Lloyds boei kunt gebruiken!</string>
+    <string name="LloidsBeacon_Set">\n\nDeze beacon is ergens op niveau %d van Remixed Dungeon ingesteld.</string>
     <string name="Longsword_Name">langzwaard</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
@@ -330,6 +332,7 @@
     <string name="PortalExit_Desc">Deze poort brengt je naar het eerste niveau van de %s.</string>
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
     <string name="Possess_Name">Bezetting</string>
+    <string name="Possess_PossessionFailed">Wil van %s is te sterk</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
     <string name="PotionOfInvisibility_Info">Als je deze drank opdrinkt, wordt je tijdelijk onzichtbaar. Terwijl je onzichtbaar bent, kunnen vijanden je niet zien. Een vijand aanvallen, evenals een toverstaf of een rol voor de ogen van een vijand gebruiken, doet het effect verdwijnen.</string>
     <string name="PotionOfLiquidFlame_Info">Deze fles bevat een onstabiel mengsel dat heftig in vlammen opgaat bij contact met de open lucht.</string>
@@ -405,6 +408,7 @@
     <string name="ServantNPC_Name">herbergbediende</string>
     <string name="ServantNPC_Name_Objective">herbergbediende</string>
     <string name="ServiceManNPC_Desc">Een gewone werknemer van de lokale vestigingen.</string>
+    <string name="ServiceManNPC_Name_Objective">medewerker</string>
     <string name="ServiceManNPC_NoConnection">Het spijt me, u kunt onze dienst nu niet gebruiken. (Internetverbinding vereist)</string>
     <string name="ServiceManNotReadyNPC_Message">Mijn excuses, maar dit gebouw is nog niet klaar!</string>
     <string name="Shades_Info">Sommige mensen zeggen dat kerkers te donker zijn om die te dragen. En jij zegt dat die mensen gewoon niet cool genoeg zijn.</string>
@@ -657,6 +661,10 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 
