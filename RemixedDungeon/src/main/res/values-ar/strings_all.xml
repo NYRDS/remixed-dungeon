@@ -127,6 +127,7 @@
     <string name="Caves_TileHighGrass">فطر مضيء</string>
     <string name="Challenges_Names_0">حمية</string>
     <string name="Challenges_Names_6">الرموز المحرمة</string>
+    <string name="ChampionOfEarthBuff_Info">يجسد بطل الأرض قوة لا تلين، حيث تعزز هذه السمة مقاومة المخلوق للضرر وتزيد من حيويته القصوى. يجعل هذا التحول منه خصمًا مرعبًا في الأعماق الغادرة، قادرًا على صد الهجمات بسهولة وتحمل معارك مطولة بعزيمة لا تلين.</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">شفرة يد واحدة من الفوضى النقية. تنمو مع القتال مثل نظيرتها ذات اليدين، ولكن ببطء أكبر وإمكانات أقل — مما يترك يدك الحرة لدرع.</string>
     <string name="ChaosBlade_Name">شفرة الفوضى</string>
@@ -716,6 +717,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

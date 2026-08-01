@@ -430,6 +430,7 @@
     <string name="RottenFood_Message">מגעיל!</string>
     <string name="RottenPasty_Info">מאפה הבשר הזה נראה די מגעיל.</string>
     <string name="RottenPasty_Name">מאפה בשר מקולקל</string>
+    <string name="RottenPumpkinPie_Info">לא משנה כמה טוב זה היה כשהיה טרי, אין סיכוי שזה עדיין אכיל.</string>
     <string name="RottenRation_Name">מנה רקובה</string>
     <string name="RottingFist_Name">אגרוף מרקיב</string>
     <string name="RubyBow_Gender">masculine</string>
@@ -665,6 +666,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

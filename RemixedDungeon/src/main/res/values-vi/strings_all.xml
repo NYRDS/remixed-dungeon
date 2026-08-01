@@ -80,6 +80,7 @@
     <string name="Blacksmith_Verify6">Tôi không thể rèn lại các vật phẩm này!</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="Boomerang_Gender">masculine</string>
+    <string name="Brute_Name_Objective">gnoll brute</string>
     <string name="BurningFist_Name_Objective">cú đấm bùng cháy</string>
     <string name="CagedKobold_Desc">Một kobold, trong một lồng.</string>
     <string name="CagedKobold_Intro">Ê... Ê! Cậu là phiêu lưu gia kia, đúng không? Giúp tớ một chút, bạn ơi, bọn quân phiệt đã giam tớ ở đây! Chúng định kích hoạt lại một vũ khí cổ xưa để chinh phục những con người trên mặt đất! Nhưng vì quá nguy hiểm, tớ đã phản đối, mà chúng ném tớ ra ngoài và giam trong lồng! Tớ xin nhờ cậu tìm chìa khóa cái buồng này, và như hồi báo, tớ sẽ giúp cậu hết sức có thể.</string>
@@ -592,6 +593,7 @@
     <string name="town_deco_cabinet_desc">Một tủ đồ rộng rãi với nhiều cánh cửa và ngăn kệ.</string>
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
+    <string name="town_deco_crate_bottles_desc">Chai bia đã trở thành một sở thích rất phổ biến giữa các chủ quán rượu.</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
     <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \&quot;Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\&quot;.</string>
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
@@ -813,6 +815,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 
