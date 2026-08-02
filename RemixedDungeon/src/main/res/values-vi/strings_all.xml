@@ -269,6 +269,7 @@
     <string name="Knuckles_Name">cặp đấm</string>
     <string name="Kobold_Gender">masculine</string>
     <string name="Kusarigama_Name">kusarigama</string>
+    <string name="Leech_Name_0">Hút máu %s</string>
     <string name="Level_TileDefault">\?\?\?</string>
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
     <string name="Level_TileDescPileOfStones">Một đống đá cực kỳ nặng, trông không thể di chuyển được.</string>
@@ -828,6 +829,7 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
 
 
 

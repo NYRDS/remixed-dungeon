@@ -660,6 +660,7 @@
     <string name="town_deco_movies_door_name">דלת</string>
     <string name="town_deco_pathway_name">שביל</string>
     <string name="town_deco_pillar_desc">בימים עברו, עמוד זה שימש כתמיכה מצוינת וקישוט.</string>
+    <string name="town_deco_pole_desc">עמוד גבוה שנועד למתיחת החבל.</string>
     <string name="town_deco_pole_name">עמוד</string>
     <string name="town_deco_poster_desc">מודעות המכריזות על הקרנות עתידיות בקולנוע.</string>
     <string name="town_deco_red_carpet_desc">השמועה אומרת ששטיחים אדומים דומים מקשטים את אולמות המטרופולין הגמדי.</string>
@@ -679,6 +680,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

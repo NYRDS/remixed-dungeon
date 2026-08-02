@@ -159,6 +159,7 @@
     <string name="DashSpell_Name">Das</string>
     <string name="DashSpell_TooFar">Ik kan niet zo ver dasen.</string>
     <string name="Death_Name_1">Grim %s</string>
+    <string name="Deathling_Desc">De Doodsling is de ziel van een gevallen held die ongelukkig genoeg werd opgeroepen door een mede-avonturier die necromancie beoefent.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">De pijn is omgezet in vertraagde pijn, wat de schade die op een keer wordt opgelopen vermindert.\nOvergebleven schade om te ontvangen %d</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
@@ -667,6 +668,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
 
 
 

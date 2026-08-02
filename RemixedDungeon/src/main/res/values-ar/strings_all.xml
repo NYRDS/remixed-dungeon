@@ -47,6 +47,7 @@
     <string name="Armor_Info6">عليه نقوش</string>
     <string name="ArmoredStatue_Name">تمثال متحرك</string>
     <string name="ArmoredStatue_Name_Objective">تمثال متحرك</string>
+    <string name="Attack_Range">مدى الهجوم</string>
     <string name="AzuterronNPC_Name_Objective">غريباً</string>
     <string name="BadgesScene_Title">شاراتك</string>
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
@@ -215,6 +216,7 @@
     <string name="Eye_Name">العين الشريرة</string>
     <string name="Facilitations_Descriptions_0">عومل المتحورون دائماً بازدراء وخوف، لكن انعدام الجوع سيمنحك مرة أخرى التفوق، هذه المرة في غزو أعماق الزنزانة.</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
+    <string name="FetidRat_Desc">هذا الجرذ الجرابي أكبر بكثير من الجرذ العادي. تحيط به سحابة كريهة الرائحة.</string>
     <string name="FireElemental_Desc">العناصر النارية المتجولة هي منتج ثانوي لاستدعاء كيانات أعظم. فطبيعتها الفوضوية تجعل السيطرة عليها مستحيلة حتى لأقوى علماء الشياطين.</string>
     <string name="FireElemental_Name">عنصر ناري</string>
     <string name="FireElemental_Name_Objective">عنصر النار</string>
@@ -730,6 +732,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 
