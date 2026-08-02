@@ -478,6 +478,7 @@
     <string name="Shaman_Name_Objective">גנול שאמאן</string>
     <string name="Sheep_Desc">זוהי כבשה קסומה. מה קסום בה? אינך יכול להרוג אותה. היא תעמוד במקום עד שתיעלם בקסם, בזמן שהיא לועסת גרה במבט ריק.</string>
     <string name="ShieldInfoTemplate">מגן זה יחסום עד %1 נזק נכנס. עם סיכוי של %2 %%. ייקח %3.1f שניות להתאושש לאחר חסימה מוצלחת.</string>
+    <string name="ShootInEye_Name">ירי בעין</string>
     <string name="Shopkeeper_Name">סוחר</string>
     <string name="ShortSword_ACReforge">לעצב מחדש</string>
     <string name="ShortSword_Gender">feminine</string>
@@ -686,6 +687,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

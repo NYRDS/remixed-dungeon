@@ -618,6 +618,7 @@
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
     <string name="WndHats_BuyButton">شراء</string>
     <string name="WndHats_NoConnectionMsg">تعذر الاتصال بـ Google Play.</string>
+    <string name="WndHats_Purchased">موجود!</string>
     <string name="WndHero_Awareness">اليقظة</string>
     <string name="WndHero_Depth">أقصى عمق</string>
     <string name="WndInfoItem_Chest">صندوق</string>
@@ -738,6 +739,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

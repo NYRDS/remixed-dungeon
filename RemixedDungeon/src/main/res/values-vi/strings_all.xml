@@ -589,6 +589,7 @@
     <string name="WndTradeItem_Buy">Mua với %d vàng</string>
     <string name="WndTradeItem_SellAll">Bán tất cả cho %dg</string>
     <string name="WndTradeItem_SellN">Bán %1$d cho %2$dg</string>
+    <string name="Wnd_Button_Cancel">Hủy</string>
     <string name="Wnd_Button_Close">Đóng</string>
     <string name="Wnd_Button_Yes">Có</string>
     <string name="WoodenBow_Info">Cây cung gỗ đơn giản này có thể hữu ích, khi bạn tìm được một vài mũi tên.</string>
@@ -837,6 +838,7 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
 
 
 
