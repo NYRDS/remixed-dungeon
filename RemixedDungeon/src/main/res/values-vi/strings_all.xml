@@ -195,6 +195,7 @@
     <string name="Firebloom_Name">Hoa Lửa</string>
     <string name="Foliage_Info">Các tia sáng chọc xuyên màn sương của khu vườn ngầm.</string>
     <string name="FortuneTellerNPC_Name">người xem bói</string>
+    <string name="FortuneTellerNPC_Name_Objective">bà giải điềm</string>
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
     <string name="GameScene_Welcome">Chào mừng bạn đến cấp %d của Remixed Dungeon!</string>
@@ -838,6 +839,7 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
 
 
 
