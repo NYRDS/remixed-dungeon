@@ -61,6 +61,7 @@
     <string name="Badges_ItemLvl4">הושג פריט ברמה 12</string>
     <string name="Badges_LevelReached4">הגיע לרמה 24</string>
     <string name="Badges_NoMonsterSlain">הושלמה רמה מבלי להרוג אף מפלצת</string>
+    <string name="Badges_Piranhas">6 פיראניות נהרגו</string>
     <string name="Badges_PotionsCooked3">9 שיקויים מבושלים</string>
     <string name="Badges_PotionsCooked5">25 שיקויים נרקחו</string>
     <string name="Badges_RareAll">כל המפלצות הנדירות הושמדו</string>
@@ -86,6 +87,7 @@
     <string name="Blacksmith_Gold1">היי, בן אדם! רוצה להיות מועיל, אה? קח את המעדר הזה ותחפור לי קצת _עפרת זהב אפלה_, _15 חתיכות_ יספיקו. למה אתה מתכוון, איך אני אשלם? אתה חמדן...\nבסדר, בסדר, אין לי כסף לשלם, אבל אני יכול לעשות עבודת נפחות בשבילך. תחשיב את עצמך בר מזל, אני הנפח היחיד בסביבה.</string>
     <string name="Blacksmith_Verify4">אני לא עובד עם פריטים מקוללים!</string>
     <string name="Blacksmith_Verify6">אני לא יכול לשחזר את הפריטים האלה!</string>
+    <string name="Brute_Enraged">%s נכנס לזעם!</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
     <string name="BurningFist_Name_Objective">אגרוף בוער</string>
     <string name="CagedKobold_Desc">קובולד, בכלוב.</string>
@@ -684,6 +686,8 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 

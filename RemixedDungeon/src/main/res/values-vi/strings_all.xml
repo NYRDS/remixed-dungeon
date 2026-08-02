@@ -78,6 +78,7 @@
     <string name="Blacksmith_Gold1">Này người! Muốn làm việc hữu ích chứ? Lên cái cuốc này và đào cho ta ít _khoáng vàng đen_, _15 miếng_ là đủ rồi. Cái gì? Như thế nào mà ta trả tiền? Ngươi tham lam...\nỪ, ừ, ta không có tiền trả, nhưng ta có thể làm đồ sắt cho ngươi. Coi ngươi may mắn, ta là thợ rèn duy nhất ở đây.</string>
     <string name="Blacksmith_Verify2">Chọn 2 vật phẩm cùng loại!</string>
     <string name="Blacksmith_Verify4">Tôi không làm việc với vật phẩm bị nguyền rủa!</string>
+    <string name="Blacksmith_Verify5">Đây chỉ là đồ rác, chất lượng quá kém!</string>
     <string name="Blacksmith_Verify6">Tôi không thể rèn lại các vật phẩm này!</string>
     <string name="Bleeding_Death">Bạn đã chết vì mất máu...</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
@@ -463,6 +464,7 @@
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
     <string name="StartScene_UnlockGnoll">Để mở khóa lớp này, bạn phải thuyết phục linh mục làng chữa lành cho Gnoll Brute</string>
+    <string name="StunBuff_Name">Choáng</string>
     <string name="Stylus_Info">Chiếc bút bí ẩn này được làm từ một loại đá đen và rất cứng. Bạn có thể dùng nó để khắc các ký tự hoặc rune, nhưng bút mới quyết định khắc cái gì, không phải bạn.</string>
     <string name="Stylus_Name">bút huyền bí</string>
     <string name="Succubus_Gender">masculine</string>
@@ -835,6 +837,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 

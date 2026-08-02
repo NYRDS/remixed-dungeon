@@ -82,6 +82,7 @@
     <string name="Bishop_no_money">Je kunt er niet voor betalen.</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_1">Miauw...</string>
+    <string name="BlackSkullOfMastery_Lich">Word een Lich</string>
     <string name="BlackSkullOfMastery_Name">De Zielbrenger</string>
     <string name="BlackSkull_Ressurrect">De Zwarte Schedel Heeft Dode Wezens Herrezen Om Je Te Dienen!</string>
     <string name="Blacksmith_Gold1">Hey mens! Wil je nuttig zijn, hé? Pak die houweel en ontgin voor me wat _donker gouderts_, _15 stukken_ zou genoeg moeten zijn. Wat bedoel je, hoe ga ik betalen? Je gierige...\nOké, oké, ik heb geen geld om te betalen, maar ik kan wat smeden voor je. Reken je gelukkig, ik ben de enige smid in de buurt.</string>
@@ -624,6 +625,7 @@
     <string name="YogsEye_Gender">masculine</string>
     <string name="YogsHeart_Gender">masculine</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
+    <string name="deco_candle_desc">Grote kaars</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
     <string name="town_deco_banner_desc">Een elegante vlag met de symbolen van deze kroeg.</string>
     <string name="town_deco_banner_name">Vaandel</string>
@@ -672,6 +674,8 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 
