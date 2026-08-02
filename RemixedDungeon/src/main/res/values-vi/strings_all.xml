@@ -239,6 +239,9 @@
     <string name="Horror_Name_0">Quái dị %s</string>
     <string name="HungerBuff_Info1">Bạn đang đói!</string>
     <string name="HungerBuff_Name1">Đói</string>
+    <string name="Hunger_Starving_0">Bạn đang chết đói!</string>
+    <string name="Hunger_Starving_1">Bạn đang chết đói!</string>
+    <string name="Hunger_Starving_2">Bạn đang chết đói!</string>
     <string name="HuntressArmor_NotHuntress">Chỉ thợ săn mới có thể sử dụng giáp này!</string>
     <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
     <string name="IceCaves_TileGrass">Cỏ đóng băng.</string>
@@ -829,6 +832,9 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
 
 
 
