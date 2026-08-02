@@ -282,6 +282,7 @@
     <string name="Longsword_Name">langzwaard</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
+    <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Name">Chirurgisch masker</string>
     <string name="MedicineMask_Obtained">Chirurgisch masker verkregen</string>
     <string name="MeleeWeapon_Info3a">Dit is een tamelijk %s wapen.</string>
@@ -308,6 +309,7 @@
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
     <string name="Monk_Defense">geparreerd</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
@@ -670,6 +672,8 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
 
 
 

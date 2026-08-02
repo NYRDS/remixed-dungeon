@@ -143,6 +143,7 @@
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CorpseDust_Name">bụi xác</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">cua cống</string>
     <string name="Crystal_Desc">Hòn đá lớn lấp lánh bay giữa không trung. Có vẻ như nó chứa đựng phép thuật mạnh mẽ.</string>
     <string name="DM300_Info1">DM-300 tự sửa chữa!</string>
@@ -528,6 +529,7 @@
     <string name="WndCatalogus_Title">Danh mục</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndDonate_goldDonate">quyên góp vàng</string>
     <string name="WndDonate_goldDonateText">Cảm ơn sự giúp đỡ của bạn</string>
     <string name="WndDonate_royalDonateText2">Ngoài ra, bạn sẽ nhận được mọi loại mũ từ cửa hàng trong ứng dụng! Cũng như mọi loại mũ sẽ được phát hành trong tương lai.</string>
     <string name="WndFortuneTeller_IdentifyAll">Tất cả</string>
@@ -833,6 +835,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 

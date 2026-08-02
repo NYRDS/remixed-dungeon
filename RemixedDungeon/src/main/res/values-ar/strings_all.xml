@@ -525,6 +525,7 @@
     <string name="SpiderMind_Desc">تمتلك هذه العناكب الهشة ظاهريًا قوى عقلية فريدة، مما يسمح لها بالسيطرة على المستعمرة بأكملها. يستطيع العنكبوب النفسي التحكم في أي كائن حي، لكنه جبان تمامًا.</string>
     <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
     <string name="SpiderServant_Name">جندي العنكبوت</string>
+    <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name">عنكبوت الكهف</string>
     <string name="SpiritOfPain_Desc">شظية من ظلام حي.</string>
     <string name="Sprout_Info">أيقظ البذور النائمة.\nومع ذلك، يجب أن تكون هناك بعض النباتات على الأرض لكي ينجح هذا التعويذ.</string>
@@ -577,6 +578,7 @@
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="WandOfAvalanche_Info1">سحقت نفسك بعصاك الخاصة من نوع عصا الانهيار الجليدي...</string>
     <string name="WandOfDisintegration_Info">تُصدر هذه العصا شعاعاً من الطاقة المدمرة، يخترق جميع الكائنات في طريقه. كلما أصاب أهدافاً أكثر، زاد الضرر الذي يلحقه بكل منها.</string>
+    <string name="WandOfFirebolt_Info">هذه العصا تطلق موجات من النار السحرية. ستشعل التضاريس القابلة للاشتعال، وستلحق الضرر وتحرق الكائن الذي تصيبه.</string>
     <string name="WandOfFlock_SheepBaa_2">باع.</string>
     <string name="WandOfLightning_Name">عصا البرق</string>
     <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية النقية، مما يلحق ضرراً متوسطاً بالهدف.</string>
@@ -734,6 +736,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

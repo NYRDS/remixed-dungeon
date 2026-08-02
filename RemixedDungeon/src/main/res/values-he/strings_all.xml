@@ -467,6 +467,7 @@
     <string name="ServiceManNPC_Name_Objective">עובד</string>
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
     <string name="Sewer_TileDescDeco">טחב צהבהב ולח מכסה את הרצפה.</string>
+    <string name="Shades_Info">יש אנשים שאומרים שמבוכים חשוכים מדי בשביל ללבוש את אלה. ואתה אומר שהאנשים האלה פשוט לא מספיק מגניבים.</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
@@ -543,6 +544,7 @@
     <string name="WandOfAvalanche_Info">כאשר פיצוץ של השרביט פוגע בקיר (או בכל מכשול מוצק אחר) הוא גורם למפולת אבנים, פוגע ומהלם את כל היצורים באזור הפגיעה.</string>
     <string name="WandOfAvalanche_Info1">מחצת את עצמך עם שרביט המפולת שלך...</string>
     <string name="WandOfDisintegration_Info">מקל זה פולט אלומת אנרגיה הרסנית, החודרת את כל היצורים בדרכה. ככל שהיא פוגעת ביותר מטרות, כך היא גורמת נזק רב יותר לכל אחת מהן.</string>
+    <string name="WandOfIcebolt_Info1">הרגת את עצמך עם שרביט הקרח שלך...</string>
     <string name="WandOfMagicMissile_Info">שרביט זה משגר טילים של אנרגיה קסומה טהורה, וגורם נזק בינוני למטרה.</string>
     <string name="WandOfMagicMissile_SelectWand">בחר שרביט לשדרוג</string>
     <string name="WandOfPoison_Name">שרביט רעל</string>
@@ -682,6 +684,8 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 
