@@ -656,6 +656,7 @@
     <string name="town_deco_glass_name">חלון רחב</string>
     <string name="town_deco_glass_stained_desc">יוצר הזכוכית הזו כנראה השקיע בה מאמץ רב.</string>
     <string name="town_deco_hay_desc">ערימה קטנה של שחת ריחני</string>
+    <string name="town_deco_library_sign_desc">נראה שיש ספרייה בתוך הבניין הזה.</string>
     <string name="town_deco_library_sign_name">שלט ספרייה</string>
     <string name="town_deco_movies_door_desc">דלת זו נראית עשויה היטב במיוחד. סביר להניח שהיא מובילה למשהו מדהים.</string>
     <string name="town_deco_movies_door_name">דלת</string>
@@ -681,6 +682,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 
