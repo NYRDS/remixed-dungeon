@@ -194,6 +194,7 @@
     <string name="EquipableItem_ACUnequip">לְהַסִיר</string>
     <string name="ExplodingSkull_Desc">גולגולת צפה ובוערת זו נראית שבירה ביותר, ונראית כאילו היא עומדת להתפרק לרסיסים בכל רגע.</string>
     <string name="Eye_Kill">מבט המוות של %s הרג אותך...</string>
+    <string name="Facilitations_Descriptions_1">עדיין לא ידוע מי היו הוריך, אבל הרגנרציה הטבעית דמוית-טרול תעזור לרפא את כל הצלקות הקרב העתידות לבוא.</string>
     <string name="Facilitations_Names_0">ללא רעב</string>
     <string name="Facilitations_Names_3">כוח ענק</string>
     <string name="FetidRat_Name_Objective">עכברוש מצחין</string>
@@ -423,6 +424,7 @@
     <string name="ResultDescriptions_Boss">הובס על ידי ה-%1 ברמה %2</string>
     <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
     <string name="ResultDescriptions_Poison">מת מרעל בקומה %d</string>
+    <string name="ResultDescriptions_Trap">נהרג על ידי פריקת %1$s ברמה %2$d</string>
     <string name="RingOfEvasion_Info">טבעת זו מגדילה את הסיכוי שלך להתחמק מהתקפת אויב.</string>
     <string name="RingOfFrost_Name">טבעת הכפור</string>
     <string name="RingOfHerbalism_Info">טבעת זו מגדילה את הסיכוי שלך לאסוף טל וזרעים מעשב רמוס.</string>
@@ -654,6 +656,7 @@
     <string name="town_deco_counter_desc">שומר על מרחק טוב בינך לבין האדם שעומד מאחוריו.</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
     <string name="town_deco_curtains_name">וילונות</string>
+    <string name="town_deco_door_name">דלת</string>
     <string name="town_deco_entrance_desc">כניסה זו מובילה לרמות העליונות של הצינוק.</string>
     <string name="town_deco_entrance_name">כניסה</string>
     <string name="town_deco_exit_desc">לא ידוע מה מחכה לך אם תרד במדרגות האלה.</string>
@@ -689,6 +692,10 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 

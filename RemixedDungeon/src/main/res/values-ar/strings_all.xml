@@ -74,6 +74,7 @@
     <string name="Badges_PotionsCooked2">تم طهي 6 جرعات</string>
     <string name="Badges_PotionsCooked3">9 جرعات مطبوخة</string>
     <string name="Badges_PotionsCooked5">تم تحضير 25 جرعة</string>
+    <string name="Badges_RareAll">تم القضاء على جميع الوحوش النادرة</string>
     <string name="Badges_RingThorns">تم الحصول على خاتم الأشواك</string>
     <string name="Badges_ShadowLord_Slain">تم هزيمة سيد الظلال</string>
     <string name="Badges_StrengthAttained3">تم تحقيق 17 نقطة من القوة</string>
@@ -155,6 +156,7 @@
     <string name="ChargrilledMeat_Name">لحم مشوي على الجمر</string>
     <string name="CharmBuff_Name">مسحور</string>
     <string name="Chasm_Info">سقطت حتى الموت...</string>
+    <string name="Chasm_No">لا، لقد غيرت رأيي</string>
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
     <string name="ChristmasTurkey_Name">ديك رومي احتفالي</string>
     <string name="City_TileDescDeco">يفتقر هذا المكان لعدة بلاط.</string>
@@ -741,6 +743,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 
