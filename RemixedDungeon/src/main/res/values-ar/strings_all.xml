@@ -449,6 +449,7 @@
     <string name="RingOfFrost_Name">خاتم الصقيع</string>
     <string name="RingOfHaggler_Info">في الواقع، هذا الخاتم لا يوفر أي تأثير سحري، لكنه يُظهر للتجار والبائعين أن مالك الخاتم عضو في نقابة اللصوص. عادةً ما يسعدون بتقديم خصم مقابل ضمان حصانة مؤقتة. ترقية هذا الخاتم لن تمنح أي مكافآت إضافية.</string>
     <string name="RingOfHerbalism_Info">يزيد هذا الخاتم من فرصك في جمع الندى والبذور من العشب المفرود.</string>
+    <string name="RingOfHerbalism_Name">خاتم الأعشاب</string>
     <string name="RingOfPower_Info">ستصبح عصيك السحرية أكثر قوة في مجال الطاقة المنبعث من هذا الخاتم. الخواتم المضعفة ستضعف عصيك بدلاً من ذلك.</string>
     <string name="RingOfPower_Name">خاتم القوة</string>
     <string name="RingOfStoneWalking_Info">هذا الخاتم الغريب مصنوع من حجر متين. ما ظننته في البداية ياقوتة هو في الحقيقة دم سائل يُحتفظ به في مكانه! بالداخل سهم يشير إلى ما يبدو كجدار، إلى جانب قلب مكسور... ماذا قد يفعل؟</string>
@@ -740,6 +741,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

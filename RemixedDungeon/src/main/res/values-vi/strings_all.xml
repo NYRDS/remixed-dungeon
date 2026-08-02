@@ -647,6 +647,7 @@
     <string name="town_deco_shelf_name">Các kệ sách</string>
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
+    <string name="town_deco_tree_name">Cây</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_vat_name">chậu</string>
     <string name="town_deco_wall_beam_desc">Dùng làm một điểm tựa vững chắc cho công trình này.</string>
@@ -839,6 +840,7 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
 
 
 
