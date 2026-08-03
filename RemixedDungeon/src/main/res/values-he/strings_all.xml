@@ -163,6 +163,8 @@
     <string name="Crystal_Desc">גביש גדול ומבריק מרחף באוויר. כנראה שהוא מלא בקסם חזק.</string>
     <string name="DM300_Info2">המשימה נכשלה. כיבוי.</string>
     <string name="DarkSacrifice_Ok">חַיַּי שֶׁלְּךָ!</string>
+    <string name="Dart_Info">חודים מתכתיים פשוטים אלו מאוזנים בצורה אידיאלית כדי לחדור במדויק את טרפם.</string>
+
     <string name="Dart_Name">חץ קטן</string>
     <string name="DashSpell_Info">מזנק בכיוון שצוין תוך התנגשות באויבים, גורם נזק ומטיל \'קטוע\'.</string>
     <string name="DashSpell_Name">הסתערות</string>
@@ -267,6 +269,7 @@
     <string name="Hero_Wait">...</string>
     <string name="Horror_Name_1">אימתני %s</string>
     <string name="HungerBuff_Name2">מורעב</string>
+    <string name="Hunger_Hungry_0">אתה רעב.</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
     <string name="HuntressArmor_NoEnemies">אין אויבים בטווח ראייה</string>
     <string name="HuntressArmor_NotHuntress">רק ציידות יכולות להשתמש בשריון זה!</string>
@@ -346,6 +349,7 @@
     <string name="Multiplicity_Txt">%s של ריבוי</string>
     <string name="NecromancerNPC_Desc">איש בגיל העמידה נראה מעט מעצבן ונרגש בו זמנית. הוא לובש שריון מורכב העשוי משברי עצמות מחוברים יחד.</string>
     <string name="NecromancerNPC_Intro">איזה מחזה נדיר! הרפתקן שרק לא רק גופה חסרת חיים. בקושי ניתן להאמין! אה... סליחה, לפעמים אני מתרגש מדי. תראו, אני נקרומנסר. ואף על פי שלימוד המתים והמוות עצמו הוא עיסוקי, לראות את אותם דברים שוב ושוב נעשה מתיש בסופו של דבר. מצד שני, זה בדיוק הסיבה שאני כאן. לפי חישוב שלי, בעוד כמה שבועות, במקום כלשהו במבוך הזה, משהו מרהיב עומד לקרות. ה_נקרופוליס_, עיר עתיקה של המתים, עומדת לפתוח את שעריה. ואני... לא יכול לומר יותר, בזבזתי מספיק זמן. אני צריך להתכונן, _לחזור מאוחר יותר_.</string>
+    <string name="NecromancerNPC_Name">נקרומנסר</string>
     <string name="NecromancerNPC_Name_Objective">נקרומנסר</string>
     <string name="Necromancer_ACSpecial">נֶקְרוֹמַנְטִיָּה</string>
     <string name="Necromancy_NotEnoughSouls">אין לך מספיק נשמות כדי להטיל כישוף \&quot;%1\&quot;.</string>
@@ -462,6 +466,7 @@
     <string name="ScrollOfTeleportation_Teleport2">בהרף עין %s טלפורטו למיקום אחר ברמה.</string>
     <string name="ScrollOfUpgrade_Name">מגילת שדרוג</string>
     <string name="ScrollOfWeaponUpgrade_Info">גלילה זו תשדרג נשק קרבי, ותשפר את איכותו. בניגוד לגלילת שדרוג רגילה, גרסה מיוחדת זו לעולם לא תהרוס קסם על נשק. נהפוך הוא, היא מסוגלת להעניק קסם אקראי לנשק לא מקסום.</string>
+    <string name="ScrollOfWeaponUpgrade_Name">מגילת שדרוג נשק</string>
     <string name="Scroll_Info">המגילה הזו מכוסה בכתב בלתי ניתן לפענוח, ונושאת כותרת של רונה %s. מי יודע מה יקרה כשיקראו אותה בקול רם?</string>
     <string name="Scroll_Runes_10">אודל</string>
     <string name="Senior_Desc">הנזירים הללו הם קנאים, שהקדישו את עצמם להגנה על סודות עירם מפני כל זר. הם אינם משתמשים בשום שריון או כלי נשק, ומסתמכים אך ורק על אומנות הלחימה בידיים חשופות. נזיר זה השתלט על אומנות נטרול יריביו.</string>
@@ -1060,5 +1065,6 @@
 
 
 
-    <string name="Dart_Info">חודים מתכתיים פשוטים אלו מאוזנים בצורה אידיאלית כדי לחדור במדויק את טרפם.</string>
+
+
 </resources>

@@ -127,6 +127,8 @@
     <string name="Char_StaPoisoned">vergiftigd</string>
     <string name="Char_StaRooted">geworteld</string>
     <string name="Char_StaStunned">versteld</string>
+    <string name="Char_Stole_0">%1$s stal %2$s van %3$s!</string>
+
     <string name="Char_Stole_1">%1$s steelt %2$s van %3$s!</string>
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
     <string name="CharmSpell_Cast">%s is betoverd.</string>
@@ -235,6 +237,7 @@
     <string name="Hero_Wait">...</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
+    <string name="Hunger_Hungry_0">Je hebt honger.</string>
     <string name="Hunger_Hungry_1">Je hebt honger.</string>
     <string name="Hunger_Hungry_2">Je hebt honger.</string>
     <string name="Hunger_Starving_1">Je bent uitgehongerd!</string>
@@ -242,6 +245,7 @@
     <string name="IceCaves_TileDescDeco">Deze gnoll is levend bevroren. Blijkbaar was hij al een tijdje daar.</string>
     <string name="IceCaves_TileGrass">Bevroren gras.</string>
     <string name="IceKey_Info">Deze sleutel lijkt van ijs gemaakt te zijn, maar hij is net zo hard als staal.</string>
+    <string name="Ignite_Name">Ontbranden</string>
     <string name="ImpShopkeeper_Name">ambitieze duiveltje</string>
     <string name="Imp_Golems2">Hoe gaat het met je golem-safari?</string>
     <string name="Imp_Monks1">Ben je een avonturier? Ik hou van avonturiers! Je kunt altijd op hen rekenen als er iets gedood moet worden. Heb ik gelijk? Voor een beloning, natuurlijk ;)\nIn mijn geval zijn het _monken_ die gedood moeten worden. Je ziet, ik wil hier een klein zakje beginnen, maar deze gekken kopen zelf niets en schrikken andere klanten weg. Dus alsjeblieft, dood... laten we zeggen _8 van hen_ en de beloning is van jou.</string>
@@ -314,10 +318,13 @@
     <string name="Monk_Gender">masculine</string>
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
+    <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
+
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
     <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
+    <string name="NecromancerNPC_Name">nekromant</string>
     <string name="Necromancy_Title">Necromantie</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
     <string name="OozeBuff_Name">Bijtend Slijk</string>
@@ -793,7 +800,6 @@
 
 
 
-    <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
 
-    <string name="Char_Stole_0">%1$s stal %2$s van %3$s!</string>
+
 </resources>
