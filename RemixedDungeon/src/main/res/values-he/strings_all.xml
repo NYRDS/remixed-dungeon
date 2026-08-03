@@ -379,6 +379,7 @@
     <string name="PlagueDoctorNPC_Desc">כל גופו של אדם גיבן זה מוסתר מתחת לחליפת עור. ממנו עולה ריח מר של תרופות ו... שום?</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">רופא דבר</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">תביא לי %d עורות עכברוש.</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">אהההה... מרהיב! ה_שבלולים_, סודותיהם נפרשים לאט כמו עלי כותרת לאור הירח. שלל מידע אכן! אבל אתה צודק, _חמישים זהב_ בקושי מהווים פרס הולם. *צוחק בביטול*.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">חפש את ה־_moongrace_, שם החשכה פוגשת את הבהוב האור הקלוש ביותר של הירח. _שני זרעים_, תמציתם, יחשפו סודות נסתרים.</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">אה, _סונגראס_! פרח עדין, עלי כותרתו מקרינים את חום השמש. אני מאמין שהמהות שלו מחזיקה את המפתח ל... אה, תשכח מהפרטים לעת עתה. מספיק לומר שזה קריטי למחקר שלי. _שני זרעי סונגראס_. הביאו אותם אלי, ואתגמל אתכם במשהו שבוודאי יועיל לכם בהרפתקאותיכם - _שיקום בריאות_, מלא בחיוניות השמש.</string>
@@ -547,6 +548,7 @@
     <string name="ToxicGland_Name">בלוטה רעילה</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Undead_Defense">נבלם</string>
+    <string name="Undead_Gender">masculine</string>
     <string name="Using_Failed_Because_Magic">קסם רב עוצמה מונע ממך להשתמש ב\&quot;%s\&quot;.</string>
     <string name="VampireSkull_Info">המסכה הזו עשויה מגולגולת של ערפד טבעית לחלוטין. למעשה זהו גולגולת... גולגולת של ערפד בעל ראש גדול. מצמרר.</string>
     <string name="VertigoBuff_Info">תחושת הסחרחורת מקשה על הליכה ישרה!</string>
@@ -697,6 +699,8 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 

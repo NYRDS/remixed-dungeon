@@ -297,8 +297,10 @@
     <string name="LloidsBeacon_ACSet">ĐẶT</string>
     <string name="LloidsBeacon_Preventing">Một loại halo ma thuật mạnh mẽ hiện diện ở đây ngăn cản bạn sử dụng cột đèn của Lloyd!</string>
     <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
+    <string name="MageArmor_NotMage">Chỉ pháp sư mới có thể sử dụng giáp này!</string>
     <string name="MagicArrow_Name">Mũi Tên Ma Thuật</string>
     <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
+    <string name="MailArmor_Desc">Các vòng kim loại liên kết tạo nên một bộ giáp cứng cáp nhưng linh hoạt.</string>
     <string name="MailArmor_Name">áo giáp xích</string>
     <string name="ManaPotion_Info">Bình này sẽ khôi phục năng lượng tinh thần của bạn.</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
@@ -327,6 +329,7 @@
     <string name="NecromancerArmor_Name">Áo giáp xương</string>
     <string name="NecromancerNPC_Intro">À! Thật một cảnh hiếm! Một người bạn đồng hành phiêu lưu không chỉ là một xác chết. Hầu như không thể tin được! Ô... Xin lỗi, đôi khi tôi quá hào hứng. Bạn thấy, tôi là một pháp sư chết chóc. Và dù nghiên cứu xác chết và chính cái chết là nghề nghiệp của tôi, nhưng nhìn thấy những điều giống nhau lặp đi lặp lại cuối cùng cũng cực kỳ mệt mỏi. Mặt khác, đó chính là lý do tôi ở đây. Theo tính toán của tôi, chỉ trong vài tuần nữa, ở đâu đó trong hầm ngục này, sẽ xảy ra một chuyện kỳ diệu. _Necropolis_, một thành phố cổ của người chết sẽ mở cửa. Và... tôi không thể nói thêm, tôi đã lãng phí đủ thời gian. Tôi cần chuẩn bị, _hãy quay lại sau_.</string>
     <string name="NecromancerNPC_Name">pháp sư chết chóc</string>
+    <string name="NecromancerRobe_Info">Chiếc áo choàng này sẽ cho phép Necromancer triệu hồi Deathling với chi phí 5 linh hồn. Deathling là một tỳ phu bất tử sẽ mạnh lên cùng với chủ nhân của nó.</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: giới hạn triệu hồi đã đạt đến (Hiện tại tối đa: %d)!</string>
     <string name="Necromancy_SoulsCountLabel">Linh hồn</string>
     <string name="NecrotismBuff_Info">Dấu ấn của chính cái chết, mùi hôi từ đó ảnh hưởng đến những người gần đó và khiến họ chia sẻ chung một định mệnh.</string>
@@ -851,6 +854,9 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
 
 
 

@@ -95,6 +95,7 @@
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_1">مياؤو...</string>
     <string name="BlackCat_Phrases_2">مياو!</string>
+    <string name="BlackSkullOfMastery_Necromancer">اكسر التعويذة</string>
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
     <string name="Blacksmith_Gold1">يا إنسان! هل تريد أن تكون مفيداً، أليس كذلك؟ خذ هذا المعول واحفر لي بعض _خام الذهب الداكن_، _15 قطعة_ يجب أن تكفي. ماذا تقصد، كيف سأدفع؟ أنت جشع...\nحسناً، حسناً، ليس لدي مال لأدفع، لكن يمكنني القيام ببعض الحدادة لك. اعتبر نفسك محظوظاً، أنا الحدّاد الوحيد في الجوار.</string>
     <string name="Blacksmith_Name">حداد ترول</string>
@@ -468,6 +469,7 @@
     <string name="RottenFood_Message">مقزز!</string>
     <string name="RottenMeat_Name">لحم متعفن</string>
     <string name="RottenOrgan_Name">عضو متعفن</string>
+    <string name="RottenRation_Info">في يوم من الأيام كان يمكن أكله</string>
     <string name="RottenRation_Name">وجبة متعفنة</string>
     <string name="RottingFist_Name">قبضة متعفّنة</string>
     <string name="RubyBow_Gender">masculine</string>
@@ -747,6 +749,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 
