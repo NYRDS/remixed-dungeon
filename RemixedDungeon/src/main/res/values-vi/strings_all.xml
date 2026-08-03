@@ -155,6 +155,7 @@
     <string name="DarkSacrifice_Name">Hy Sinh Tối Tăm</string>
     <string name="DarkSacrifice_Resist">Ngươi không có quyền lực nào trên ta!</string>
     <string name="Dart_Gender">masculine</string>
+    <string name="Dart_Info">Những chiếc gai kim loại đơn giản này được cân bằng lý tưởng để đâm trúng con mồi của chúng một cách chính xác.</string>
     <string name="Dart_Name">đĩa</string>
     <string name="DeathKnight_Desc">Ban đầu, đây là một chiến binh mạnh mẽ trong bộ giáp nặng, và chỉ có một nụ cười chết chóc mới tiết lộ bản chất của hắn. Kỵ sĩ tử thần là sự hiện thân của linh hồn một kỵ sĩ đã thất bại trong việc giữ lời thề. Và trong trạng thái bị nguyền rủa, hắn sẽ mãi mãi lang thang tìm kiếm sự thanh tẩy qua chiến đấu, giết người vô tội, không thể nhớ ra hắn đã thề bảo vệ ai.</string>
     <string name="Death_Name_0">Quỷ %s</string>
@@ -506,6 +507,7 @@
     <string name="TownsfolkNPC_Message2">Thành phố đã trở nên giàu có nhờ hang động này, đến mức mọi người trong phố đều có thể đi nghỉ bất cứ khi nào họ muốn! Thực tế đó là lý do tại sao lại ít người ở đây đến vậy.</string>
     <string name="TownsfolkNPC_Message3">Một ngày đẹp đẽ thật.</string>
     <string name="TownsfolkNPC_Message4">Tôi hy vọng cống rãnh sẽ không bị ngập khi mùa xuân đến. Chúng tôi không cần một đợt xâm nhập chuột khác.</string>
+    <string name="TownsfolkNPC_Name">người dân thành phố</string>
     <string name="ToxicGas_Info">Một đám mây khí độc màu xanh lá cây đang xoáy ở đây.</string>
     <string name="ToxicGland_Name">Tuyến độc</string>
     <string name="TrapWnd_Title">Cạm bẫy</string>
@@ -856,6 +858,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 

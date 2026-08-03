@@ -446,6 +446,7 @@
     <string name="Roar_Name">שאגה</string>
     <string name="RogueArmor_ACSpecial">פצצת עשן</string>
     <string name="RogueArmor_Prompt">בחר מיקום לקפוץ אליו</string>
+    <string name="RottenFish_Taste">מגעיל!</string>
     <string name="RottenFood_Message">מגעיל!</string>
     <string name="RottenPasty_Info">מאפה הבשר הזה נראה די מגעיל.</string>
     <string name="RottenPasty_Name">מאפה בשר מקולקל</string>
@@ -458,6 +459,7 @@
     <string name="ScarecrowNPC_Name_Objective">דחליל</string>
     <string name="ScarecrowNPC_Quest_End">אוי איזו שמחה, אוי איזו התרגשות!\nעל זה תקבל פרוסת פאי מתוקה!</string>
     <string name="ScarecrowNPC_Quest_Reminder">חמש סוכריות זה כל מה שאני צריך.\nאוי, הפרס יהיה כל כך מתוק!</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">למה שלום ילד קטן, איך אתה?\nיש לי משהו מרגש בשבילך!\n\nאה, כמה אסיר תודה אהיה,\nאם תלך ותאסוף קצת ממתקים בשבילי!\n\n</string>
     <string name="ScrollOfChallenge_Info1">הגליל משמיע שאגה מאתגרת המהדהדת בכל המבוך!</string>
     <string name="ScrollOfIdentify_Info">חושף לצמיתות את כל הסודות של פריט בודד.</string>
     <string name="ScrollOfIdentify_Name">מגילת זיהוי</string>
@@ -515,6 +517,7 @@
     <string name="Sprout_Info">הַעִיר אֶת הַזְּרָעִים הַיְשֵׁנִים.\nאַךְ צָרִיךְ לִהְיוֹת יְרַק עַל הָאֲדָמָה כְּדֵי שֶׁהַלַּחַשׁ יַצְלִיחַ.</string>
     <string name="Sprout_Name">נבט</string>
     <string name="StartScene_ChooseFromSlot">בחר משבץ</string>
+    <string name="StartScene_ComingSoon">בקרוב</string>
     <string name="StartScene_DifficultySelect">בחר את גורלך</string>
     <string name="StartScene_Load">טען משחק</string>
     <string name="StartScene_New">משחק חדש</string>
@@ -532,6 +535,7 @@
     <string name="TitleScene_Highscores">ציונים גבוהים</string>
     <string name="TitleScene_Play">שחק</string>
     <string name="TomeOfKnowledge_Name">ספר הידע</string>
+    <string name="Torch_ACLight">הַדְלֵק</string>
     <string name="Torch_Name">לפיד</string>
     <string name="TownGuardNPC_Message2">תודות להרפתקנים כמוך, המקום הזה הפך לשקט במיוחד</string>
     <string name="TownGuardNPC_Message3">אתה חושב שיש יותר מדי שומרים בעיר הזאת? ובכן, זה בגלל שזאת העיר היחידה עם מבוך ענק מלא מפלצות, לא?</string>
@@ -542,6 +546,7 @@
     <string name="TownsfolkNPC_Message2">העיר הפכה לעשירה כל כך בזכות הצינוק הזה, עד שכל אחד בעיר יכול להרשות לעצמו לצאת לחופשה מתי שהוא רוצה! למעשה בגלל זה יש כל כך מעט אנשים כאן עכשיו.</string>
     <string name="TownsfolkNPC_Message3">איזה יום נפלא.</string>
     <string name="TownsfolkNPC_Message4">אני מקווה שהביוב לא יוצף כשהאביב יגיע. אנחנו לא צריכים עוד מכת עכברים.</string>
+    <string name="TownsfolkNPC_Name">תושבי העיר</string>
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message1">המפ!</string>
     <string name="TownsfolkSilentNPC_Message3">המממ...</string>
@@ -701,6 +706,11 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 

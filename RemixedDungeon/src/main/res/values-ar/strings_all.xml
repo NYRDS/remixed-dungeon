@@ -250,6 +250,7 @@
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Name">الهلام</string>
     <string name="Guts_TileWater">سائل لزج غريب</string>
+    <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Name">حربة</string>
     <string name="Halls_TileDescWater">يبدو مثل الحمم البركانية، لكنه بارد ومن المحتمل أن يكون آمناً للمس.</string>
     <string name="Halls_TileStatue">عمود</string>
@@ -462,6 +463,7 @@
     <string name="Ring_BuffKnown">هذا %s</string>
     <string name="Ring_Gems_1">الأوبال</string>
     <string name="Ring_Gems_11">العقيق</string>
+    <string name="Ring_Info">هذا السوار المعدني مزين بجوهرة %s كبيرة تتلألأ في الظلام. من يدري ما هو تأثيرها عند ارتدائها؟</string>
     <string name="Ring_Info2">خاتمك %1$s يضيق حول إصبعك بشكل مؤلم</string>
     <string name="Roar_Name">زئير</string>
     <string name="RogueArmor_ACSpecial">قنبلة دخان</string>
@@ -492,6 +494,7 @@
     <string name="ScrollOfWeaponUpgrade_Info">سيؤدي هذا المخطوطة إلى ترقية سلاح قتال قريب، مما يحسن جودته. على عكس مخطوطة الترقية العادية، لن يدمر هذا الإصدار المتخصص أي سحر على السلاح. بل على العكس، قادر على إضفاء سحر عشوائي على سلاح غير مسحور.</string>
     <string name="ScrollOfWeaponUpgrade_Name">مخطوطة ترقية السلاح</string>
     <string name="Scroll_Runes_13">إيفاز</string>
+    <string name="Scroll_Runes_2">لاغوز</string>
     <string name="Scroll_Runes_5">رایدو</string>
     <string name="Scroll_Runes_6">إيساز</string>
     <string name="Scroll_Runes_9">بيركانان</string>
@@ -566,6 +569,7 @@
     <string name="TitleScene_Play">اللعب</string>
     <string name="TomeOfMastery_Blinded">لا يمكنك القراءة وأنت أعمى</string>
     <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
+    <string name="Torch_ACLight">أشعل</string>
     <string name="Torch_Info">إنه عنصر لا غنى عنه في قاعات الشياطين، المشهورة بإضاءتها الضعيفة.</string>
     <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
     <string name="TownGuardNPC_Message3">هل تعتقد أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، هذا لأنها المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
@@ -576,6 +580,7 @@
     <string name="TownsfolkNPC_Message2">أصبحت المدينة ثرية للغاية بفضل هذا الزنزانة، حتى يستطيع الجميع في المدينة تحمل تكاليف العطلة كلما أرادوا! في الواقع هذا هو السبب في وجود عدد قليل جداً من الناس هنا الآن.</string>
     <string name="TownsfolkNPC_Message3">يا له من يوم جميل.</string>
     <string name="TownsfolkNPC_Message4">آمل ألا تغمر المياه المجاري عندما يأتي الربيع. نحن لا نحتاج إلى غزو قوارض آخر.</string>
+    <string name="TownsfolkNPC_Name">أهالي المدينة</string>
     <string name="TownsfolkSilentNPC_Name_Objective">سكان البلدة</string>
     <string name="ToxicGland_Name">غدة سامة</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
@@ -751,6 +756,11 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
 
 
 

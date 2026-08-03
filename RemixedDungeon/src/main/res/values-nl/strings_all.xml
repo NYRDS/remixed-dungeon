@@ -417,6 +417,7 @@
     <string name="ScrollOfRemoveCurse_Proced">Je zak gloeit met een reinigend licht, en een kwaadaardige energie verdwijnt.</string>
     <string name="ScrollOfSummoning_Info">Bij voorlezen zal deze rol een van de monsters uit het huidige dungeon-niveau oproepen. En als de wil van het monster zwak genoeg is, zal het je dienaar worden.</string>
     <string name="ScrollOfTeleportation_Teleport">In een oogwenk ben je geteleporteerd naar een andere plek op dit niveau.</string>
+    <string name="ScrollOfUpgrade_LooksBetter">je %s ziet er nu zeker beter uit</string>
     <string name="ScrollOfWeaponUpgrade_Info">Deze rol zal een wapen voor nabijgevecht upgraden, de kwaliteit verbeterend. In tegenstelling tot een gewone Upgrade Scroll, zal deze gespecialiseerde versie nooit een begoocheling op een wapen vernietigen. Integendeel, het kan een onbetoverde wapen een willekeurige begoocheling geven.</string>
     <string name="Scroll_Runes_10">Odal</string>
     <string name="Scroll_Runes_11">TIWAZ</string>
@@ -503,6 +504,7 @@
     <string name="Thief_Name">gekke dief</string>
     <string name="TitleScene_Play">Spelen</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
+    <string name="Torch_ACLight">AANSTEKEN</string>
     <string name="TownGuardNPC_Message3">Je denkt dat er te veel bewakers in deze stad zijn? Nou, dat is omdat dit de enige stad is met een gigantische monster-geïnfesteerde dungeon, niet waar?</string>
     <string name="TownsfolkMovieNPC_Name_Objective">stadbewoner</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
@@ -510,6 +512,7 @@
     <string name="TownsfolkNPC_Message2">De stad is zo rijk geworden door die kelder, dat iedereen in de stad op vakantie kan gaan wanneer we maar willen! Feitelijk daarom is er zo weinig volk hier nu.</string>
     <string name="TownsfolkNPC_Message3">Wat een prachtige dag.</string>
     <string name="TownsfolkNPC_Message4">Ik hoop dat de riolering niet overstort wanneer de lente aankomt. We kunnen geen nieuwe rattenplaag gebruiken.</string>
+    <string name="TownsfolkNPC_Name">stedelingen</string>
     <string name="TownsfolkSilentNPC_Desc">Een van de bewoners. Hoewel dit duidelijk een gewone burger is, lijken die kleren duur te zijn.</string>
     <string name="ToxicGas_Info">Hier zweeft een groenachtige wolk van giftig gas.</string>
     <string name="ToxicGland_Name">Giftige klier</string>
@@ -670,6 +673,7 @@
     <string name="town_deco_rope_name">touw</string>
     <string name="town_deco_shelf_name">Planken</string>
     <string name="town_deco_shelving_name">rekken</string>
+    <string name="town_deco_shieldboard_desc">Verschillende schilden hangen op het bord. Nog niet te koop.</string>
     <string name="town_deco_shop_sign_desc">Het lijkt erop dat er een winkel in dat gebouw zit.</string>
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
@@ -691,6 +695,10 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
 
 
 
