@@ -99,6 +99,7 @@
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
     <string name="Blacksmith_Gold1">يا إنسان! هل تريد أن تكون مفيداً، أليس كذلك؟ خذ هذا المعول واحفر لي بعض _خام الذهب الداكن_، _15 قطعة_ يجب أن تكفي. ماذا تقصد، كيف سأدفع؟ أنت جشع...\nحسناً، حسناً، ليس لدي مال لأدفع، لكن يمكنني القيام ببعض الحدادة لك. اعتبر نفسك محظوظاً، أنا الحدّاد الوحيد في الجوار.</string>
     <string name="Blacksmith_Name">حداد ترول</string>
+    <string name="Blacksmith_Txt3">خام الذهب الداكن. 15 قطعة. بجد، صعب كده؟</string>
     <string name="Blacksmith_Txt4">قلت إنني بحاجة لدم الخفاش على المعول. بسرعة، بسرعة!</string>
     <string name="Blacksmith_Verify3">أحتاج لمعرفة ما أعمل عليه، حددهما أولاً!</string>
     <string name="Blacksmith_Verify4">لا أعمل مع الأشياء الملعونة!</string>
@@ -587,6 +588,7 @@
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="WandOfAvalanche_Info1">سحقت نفسك بعصاك الخاصة من نوع عصا الانهيار الجليدي...</string>
     <string name="WandOfDisintegration_Info">تُصدر هذه العصا شعاعاً من الطاقة المدمرة، يخترق جميع الكائنات في طريقه. كلما أصاب أهدافاً أكثر، زاد الضرر الذي يلحقه بكل منها.</string>
+    <string name="WandOfDisintegration_Name">عصا التفكك</string>
     <string name="WandOfFirebolt_Info">هذه العصا تطلق موجات من النار السحرية. ستشعل التضاريس القابلة للاشتعال، وستلحق الضرر وتحرق الكائن الذي تصيبه.</string>
     <string name="WandOfFlock_SheepBaa_2">باع.</string>
     <string name="WandOfLightning_Name">عصا البرق</string>
@@ -749,6 +751,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

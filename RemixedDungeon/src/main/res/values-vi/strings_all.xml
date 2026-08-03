@@ -621,6 +621,7 @@
     <string name="YogsBrain_Desc">Bộ não của Yog-Dzewa. Nguồn gốc của mọi điều ác từng xuất hiện từ ngục dưới đất.</string>
     <string name="YogsBrain_Name_Objective">não của Yog</string>
     <string name="YogsEye_Desc">Mắt của Thần Cổ, ánh nhìn toàn kiến đầy ắp căm thù vĩnh cửu. Bạn có thể cảm thấy nó nhìn thấu qua linh hồn của mình.</string>
+    <string name="YogsHeart_Name_Objective">trái tim Yog</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
     <string name="town_deco_banner_desc">Một lá cờ thanh lịch vẽ các biểu tượng của quán rượu này.</string>
@@ -668,6 +669,7 @@
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
+    <string name="town_deco_window_desc">Cửa sổ kính thông thường, không có gì đặc biệt.</string>
     <string name="town_deco_window_name">Cửa sổ</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_desc">Ghế dài bằng gỗ, trông không thoải mái để ngồi.</string>
@@ -854,6 +856,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 

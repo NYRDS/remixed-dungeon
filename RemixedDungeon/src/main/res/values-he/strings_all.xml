@@ -103,6 +103,7 @@
     <string name="Carcass_Name">שרידי %s</string>
     <string name="Carcass_Necromancy">החיית את הגופה של %s!</string>
     <string name="Carcass_Necromancy_Failed">הניסיון שלך להעלות את גופת %s נכשל!</string>
+    <string name="Caves_TileWater">מים קרים מקפיאים.</string>
     <string name="Challenges_Descriptions_2">כמאמין בהתחדשות טבעית של הגוף הרגיל, תמיד הייתם זהירים מפני שיקויים בעלי תכונות רפואיות. עדיף להיות בטוחים מאשר להצטער!</string>
     <string name="Challenges_Descriptions_3">האדמות סביב הצינוק נגועות זה מכבר ברוע, המונע צמיחת זרעים של עשבי מרפא וצמחים שונים. מי יודע כמה זמן יעבור עד שהצמח האחרון יחדל מלהתקיים באדמות שוממות אלה.</string>
     <string name="Challenges_Descriptions_7">התרגלת לעובדה שהחזקה ושימוש בנשק אינם נכונים מבחינה מוסרית, אך מה עוד יכול להגן עלייך מפני היצורים המשוטטים למטה?</string>
@@ -287,6 +288,7 @@
     <string name="IncendiaryDart_Gender">masculine</string>
     <string name="InnKeeperNPC_Name_Objective">בעל הפונדק</string>
     <string name="InnServant_Phrase_1">אוף, עדיין יש כל כך הרבה מה לעשות!</string>
+    <string name="InnServant_Phrase_2">השיכור הזה משגע אותי!</string>
     <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
     <string name="InterLevelScene_Loading">נטען...</string>
     <string name="InventoryScroll_No">לא, שיניתי את דעתי</string>
@@ -699,6 +701,8 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 
