@@ -792,4 +792,8 @@
 
 
 
+
+    <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
+
+    <string name="Char_Stole_0">%1$s stal %2$s van %3$s!</string>
 </resources>
