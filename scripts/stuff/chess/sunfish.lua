@@ -8,7 +8,7 @@ local string_sub = string.sub
 local string_byte = string.byte
 local string_format = string.format
 
-local NODES_SEARCHED = 10000
+local NODES_SEARCHED = 1000
 local MATE_VALUE = 30000
 local TT_SIZE = 65536 -- fixed-size transposition table (bounded memory, ~64k slots)
 
@@ -1848,6 +1848,12 @@ end
 -- what a responsiveness deadline wants on the Android RPD layer.
 function sunfish.set_time_budget(seconds)
     TIME_BUDGET = seconds or 0
+end
+
+-- Node budget per ai_move search (default NODES_SEARCHED). Raise for stronger
+-- play, lower for faster response; exposed so the host can tune at runtime.
+function sunfish.set_nodes(n)
+    NODES_SEARCHED = n or NODES_SEARCHED
 end
 
 -- F2 measurement: TT probe/hit/occupancy stats from the last search.

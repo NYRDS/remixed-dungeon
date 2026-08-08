@@ -338,9 +338,59 @@ local kingInCheckCell = nil -- caveman: king cell if in check, nil otherwise.
 local checkFlashTimer = 0  -- caveman: flash timer for king-in-check visual.
 local aiMoveAt = 0
 local allowedMoves = {}
+local halfmoveClock = 0 -- caveman: plies since last pawn move / capture (50-move rule; 100 = draw)
 
 local function getPiece(board, engineCell)
     return string.sub(board, engineCell+1, engineCell + 1)
+end
+
+-- caveman: 50-move rule. a move resets the clock if it is a pawn move (incl.
+-- en passant / promotion) or a capture. `board` is the PRE-move board, standard frame.
+local function resetsFifty(board, moveStr)
+    local mover = getPiece(board, sunfish.cell_2_move(string.sub(moveStr, 1, 2)))
+    if mover == 'P' or mover == 'p' then return true end
+    local target = getPiece(board, sunfish.cell_2_move(string.sub(moveStr, 3, 4)))
+    return target ~= '.' and target ~= ' ' and target ~= '\n'
+end
+
+-- caveman: tick the halfmove clock for `moveStr` on the PRE-move `board`.
+-- returns true if the 50-move draw (100 plies) has been reached.
+local function tickFifty(board, moveStr)
+    if resetsFifty(board, moveStr) then
+        halfmoveClock = 0
+    else
+        halfmoveClock = halfmoveClock + 1
+    end
+    return halfmoveClock >= 100
+end
+
+-- caveman: insufficient material -> draw (tie). KvK, KBK, KNK, and KBKB with
+-- bishops on the same color. Any pawn or major (Q/R) means sufficient material.
+local function isInsufficientMaterial(board)
+    local wMinors, bMinors = 0, 0
+    local wBishopColor, bBishopColor
+    for c = 1, #board do
+        local ch = board:sub(c, c)
+        if ch == 'P' or ch == 'p' or ch == 'Q' or ch == 'q' or ch == 'R' or ch == 'r' then
+            return false -- pawn or major -> sufficient
+        elseif ch == 'N' or ch == 'B' then
+            wMinors = wMinors + 1
+            if wMinors == 1 and ch == 'B' then
+                local col = (c - 1) % 10; wBishopColor = (col + (c - 1 - col) / 10) % 2
+            end
+        elseif ch == 'n' or ch == 'b' then
+            bMinors = bMinors + 1
+            if bMinors == 1 and ch == 'b' then
+                local col = (c - 1) % 10; bBishopColor = (col + (c - 1 - col) / 10) % 2
+            end
+        end
+    end
+    if wMinors == 0 and bMinors == 0 then return true end                       -- KvK
+    if wMinors + bMinors == 1 then return true end                               -- KBK / KNK
+    if wMinors == 1 and bMinors == 1
+       and wBishopColor ~= nil and bBishopColor ~= nil
+       and wBishopColor == bBishopColor then return true end                     -- KBKB same color
+    return false
 end
 
 return actor.init({
@@ -384,14 +434,18 @@ return actor.init({
                 -- caveman: process AI result. moved here from cellClicked so search runs async.
                 local result = aiResult
                 aiResult = nil
-                chess = result.chess
                 local ai_move = result.ai_move
+                -- caveman: 50-move rule on the AI's move (pre-move board is chess, standard frame).
+                local fiftyDraw = ai_move and tickFifty(chess:ensure_board(), ai_move) or false
+                chess = result.chess
                 local score = result.score
+                local insufficient = isInsufficientMaterial(chess:ensure_board()) -- caveman: KvK/KBK/KNK/KBKB
 
                 -- caveman: outcome from search score. -MATE = AI got mated = player win.
                 local match_end = nil
                 if score <= -sunfish.MATE_VALUE then match_end = "win" end
                 if score >= sunfish.MATE_VALUE then match_end = "lose" end
+                if not match_end and (fiftyDraw or insufficient) then match_end = "tie" end -- caveman: draw
 
                 if not ai_move then
                     -- caveman: AI had no move. mated -> win; stalemated -> tie; else lose.
@@ -506,6 +560,7 @@ return actor.init({
             chess.bc = { parts[4]:sub(1,1) == "T", parts[4]:sub(2,2) == "T" }
             chess.ep = tonumber(parts[5]) or 0
             chess.kp = tonumber(parts[6]) or 0
+            halfmoveClock = tonumber(parts[7]) or 0 -- caveman: restore 50-move clock
             gameInProgress = true
             move_str = ''
             scheduledMoves = {}
@@ -520,6 +575,7 @@ return actor.init({
             scheduledMoves = {}
             allowedMoves = {}
             chess = sunfish.new()
+            halfmoveClock = 0 -- caveman: fresh game, reset 50-move clock
             pieces = {}
 
             -- caveman: freeze hero pets so they not walk board / kill pieces / get captured.
@@ -682,18 +738,24 @@ return actor.init({
             local moveResult = sunfish.move(chess, move_str)
 
             if moveResult then
+                local fiftyDraw = tickFifty(chess.board, move_str) -- caveman: 50-move check on pre-move board
                 chess = moveResult:rotate()
                 chess:ensure_board() -- caveman: rotate() leaves board nil (lazy). materialize it.
+                local insufficient = isInsufficientMaterial(chess.board) -- caveman: KvK/KBK/KNK/KBKB
 
                 RPD.Sfx.HighlightCell:removeAll()
                 animateMove(move_str, move_cells, player_chess_cells)
 
-                -- caveman: launch AI search as coroutine. yields every 256 nodes (YIELD_QUANTUM).
-                -- onStep resumes it each frame so game animations keep running during deep search.
-                aiCoroutine = coroutine.create(function()
-                    local c, m, s = sunfish.ai_move(chess:rotate())
-                    aiResult = { chess = c, ai_move = m, score = s }
-                end)
+                if fiftyDraw or insufficient then
+                    processTie() -- caveman: draw (50-move or insufficient material) -> tie
+                else
+                    -- caveman: launch AI search as coroutine. yields every 256 nodes (YIELD_QUANTUM).
+                    -- onStep resumes it each frame so game animations keep running during deep search.
+                    aiCoroutine = coroutine.create(function()
+                        local c, m, s = sunfish.ai_move(chess:rotate())
+                        aiResult = { chess = c, ai_move = m, score = s }
+                    end)
+                end
             else
                 RPD.glog('illegal move')
             end
@@ -713,6 +775,7 @@ return actor.init({
                (chess.wc[1] and "T" or "F") .. (chess.wc[2] and "T" or "F") .. "|" ..
                (chess.bc[1] and "T" or "F") .. (chess.bc[2] and "T" or "F") .. "|" ..
                tostring(chess.ep) .. "|" ..
-               tostring(chess.kp)
+               tostring(chess.kp) .. "|" ..
+               tostring(halfmoveClock)
     end
 })
