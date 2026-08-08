@@ -14,6 +14,7 @@ import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -116,6 +117,18 @@ public class CityBossLevel extends BossLevel {
 	}
 
 	@Override
+	public void updateFieldOfView(Char c) {
+		super.updateFieldOfView(c);
+		// caveman: during chess, force ALL cells visible. observeImpl copies fieldOfView -> visible,
+		// so we set fieldOfView here (not visible — that gets overwritten by the arraycopy).
+		if (chessBoardOrigin != INVALID_CELL) {
+			for (int i = 0; i < getLength(); i++) {
+				fieldOfView[i] = true;
+			}
+		}
+	}
+
+	@Override
 	public String getProperty(String key, String defVal) {
 		// caveman: expose carved chess board origin to Chess.lua. "" = no board (normal boss fight).
 		if ("chessBoardOrigin".equals(key) && chessBoardOrigin != INVALID_CELL) {
@@ -137,7 +150,7 @@ public class CityBossLevel extends BossLevel {
 				// block piece movement (AI moves fail), and clutter the board.
 				LevelObject obj;
 				while ((obj = getTopLevelObject(c)) != null) {
-					remove(obj);
+					obj.remove();  // caveman: kill sprite + remove logically. was Level.remove (no sprite kill).
 				}
 				boolean border = dx == 0 || dx == size - 1 || dy == 0 || dy == size - 1;
 				if (border) {
@@ -150,11 +163,11 @@ public class CityBossLevel extends BossLevel {
 
 		chessBoardOrigin = cell(left + 1, top + 1);  // a8 = interior top-left
 
-		// caveman: reveal board area (no fog of war on chess). mapped cells stay visible permanently.
-		for (int dy = 0; dy < size; dy++) {
-			for (int dx = 0; dx < size; dx++) {
-				mapped[cell(left + dx, top + dy)] = true;
-			}
+		// caveman: reveal entire level during chess (no fog of war). set mapped + visible for ALL cells.
+		// don't call observe() — it would overwrite visible[] from LOS (hero can't see whole board).
+		for (int i = 0; i < getLength(); i++) {
+			mapped[i] = true;
+			Dungeon.visible[i] = true;
 		}
 
 		// caveman: move hero just below the board so camera centers on it (hero is frozen for chess).
@@ -164,7 +177,7 @@ public class CityBossLevel extends BossLevel {
 		}
 
 		GameScene.updateMap();
-		Dungeon.observe();
+		Dungeon.observe();  // caveman: trigger fog update with forced-all-visible fieldOfView.
 	}
 
 	private boolean heroUnarmed(Hero hero) {
@@ -190,6 +203,28 @@ public class CityBossLevel extends BossLevel {
 		}
 
 		// unlock the exit (was LOCKED_EXIT since boss never spawned).
+		int exit = getExit(0);
+		if (cellValid(exit)) {
+			set(exit, Terrain.UNLOCKED_EXIT);
+		}
+
+		GameScene.updateMap();
+	}
+
+	// caveman: stalemate tie. King yields (NOT slain -> no boss-slain badge).
+	// same board clear + exit unlock as onChessWin, minus the badge.
+	@LuaInterface
+	public void onChessTie() {
+		if (chessBoardOrigin != INVALID_CELL) {
+			int bx = cellX(chessBoardOrigin) - 1;
+			int by = cellY(chessBoardOrigin) - 1;
+			for (int dy = 0; dy < 10; dy++) {
+				for (int dx = 0; dx < 10; dx++) {
+					set(cell(bx + dx, by + dy), Terrain.EMPTY);
+				}
+			}
+		}
+
 		int exit = getExit(0);
 		if (cellValid(exit)) {
 			set(exit, Terrain.UNLOCKED_EXIT);

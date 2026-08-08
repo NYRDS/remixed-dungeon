@@ -12,6 +12,7 @@ local x0 = 4
 local y0 = 4
 
 local pieces = {}
+local needsRetint = false  -- caveman: set on reload, handled in onStep when mobs are registered.
 local frozenPets = {}  -- caveman: pets frozen during chess, restored when game ends.
 
 -- caveman: give pets their brain back. if reload (frozenPets lost), un-freeze PASSIVE pets.
@@ -99,7 +100,7 @@ local scheduledMoves = {}
 local function movePiece(from, to)
     local mob = RPD.Actor:findChar(from)
     if not mob then
-        RPD.debug("movePiece: no mob on cell %s -> %s, skip", tostring(from), tostring(to))
+        RPD.glog("movePiece: no mob on cell %s -> %s, skip", tostring(from), tostring(to))
         return
     end
     local target = RPD.Actor:findChar(to)
@@ -155,16 +156,18 @@ local function animateMove(move_str, move_cells, target_chess_cells)
 
     movePiece(move_cells[1], move_cells[2])
 
-    -- caveman: promotion. pawn (Rat) reach last rank -> swap to Warlock (queen).
+    -- caveman: promotion. pawn (Rat) reach last rank -> swap to promoted piece.
+    -- AI move may carry a 5th UCI char (q/r/b/n); player move is 4-char -> queen.
     local destRank = tonumber(string.sub(target_chess_cells[2], 2, 2))
     local destMob = RPD.Actor:findChar(move_cells[2])
     if destMob and destMob:getEntityKind() == 'Rat' and (destRank == 1 or destRank == 8) then
         destMob:die(destMob)
-        local queen = RPD.MobFactory:mobByName('Warlock')
-        queen:setPos(move_cells[2])
-        RPD.setAi(queen, 'PASSIVE')
-        RPD.Dungeon.level:spawnMob(queen)
-        queen:getSprite():tint(destRank == 8 and 0xFF0000 or 0x0000FF, 0.5)
+        local promoChar = string.len(move_str) >= 5 and string.sub(move_str, 5, 5) or 'q'
+        local promoted = RPD.MobFactory:mobByName(pieces_set[promoChar] or 'Warlock')
+        promoted:setPos(move_cells[2])
+        RPD.setAi(promoted, 'PASSIVE')
+        RPD.Dungeon.level:spawnMob(promoted)
+        promoted:getSprite():tint(destRank == 8 and 0xFF0000 or 0x0000FF, 0.5)
     end
 
     -- FIX: Castling - Ensure the piece that just moved is actually a King
@@ -264,7 +267,75 @@ local function processWin()
     gameInProgress = false
 end
 
+-- caveman: stalemate tie. King yields and lets hero pass. becomes neutral (fights back if hurt).
+-- clears the other 31 pieces, replaces the Java King piece with a NeutralKing mob.
+local function processTie()
+    RPD.glog("Stalemate! The King yields the field and lets you pass.")
+    restorePets()
+
+    local level = RPD.Dungeon.level
+    local kingCell = nil
+    local toClear = {}
+
+    local iterator = level.mobs:iterator()
+    while iterator:hasNext() do
+        local m = iterator:next()
+        local kind = m:getEntityKind()
+        local isChessPiece = false
+        for _, pieceName in pairs(pieces_set) do
+            if pieceName == kind then
+                isChessPiece = true
+                break
+            end
+        end
+        if isChessPiece then
+            if kind == "King" and kingCell == nil then
+                kingCell = m:getPos() -- caveman: remember where the king stood
+            end
+            toClear[#toClear + 1] = m
+        end
+    end
+
+    for _, m in ipairs(toClear) do
+        if m:getEntityKind() == "King" then
+            m:destroy() -- caveman: remove boss piece cleanly (no SkeletonKey / boss-death fx)
+        else
+            m:die(RPD.Dungeon.hero)
+        end
+    end
+
+    -- caveman: neutral king takes the old king's place. passive until provoked.
+    if kingCell then
+        RPD.spawnMob("NeutralKing", kingCell)
+    end
+
+    local origin = level:getProperty("chessBoardOrigin", "")
+    if origin and origin ~= "" then
+        -- caveman: CityBossLevel. clear board (chasm -> floor) + unlock exit. no boss-slain badge.
+        level:onChessTie()
+    else
+        -- caveman: chess_level debug. clear board + portal out (same as win).
+        for x = 3, 12 do
+            for y = 3, 12 do
+                level:set(level:cell(x, y), RPD.Terrain.EMPTY)
+            end
+        end
+        RPD.GameScene:updateMap()
+        RPD.createLevelObject(
+                {kind = "PortalGateSender", target = {levelId = "town_2", x = 12, y = 28}},
+                cellFromChessCell("e2")
+        )
+    end
+
+    gameInProgress = false
+end
+
 local AI_DELAY_MS = 800
+
+local aiCoroutine = nil     -- caveman: background AI search coroutine.
+local aiResult = nil        -- caveman: result from the coroutine when it finishes.
+local kingInCheckCell = nil -- caveman: king cell if in check, nil otherwise.
+local checkFlashTimer = 0  -- caveman: flash timer for king-in-check visual.
 local aiMoveAt = 0
 local allowedMoves = {}
 
@@ -278,8 +349,108 @@ return actor.init({
     end,
 
     onStep = function()
+        -- caveman: re-tint pieces after reload (one-shot). mobs not in CharsList at activate time,
+        -- but they ARE by the first onStep frame.
+        if needsRetint then
+            needsRetint = false
+            local boardData = util.split(chess.board, "\n")
+            for i, v in ipairs(boardData) do
+                if i >= 3 and i <= 10 then
+                    local y = i - 2
+                    local bcell = cellFromChess(0, y)
+                    for ii = 1, 8 do
+                        local piece = string.sub(v, ii + 1, ii + 1)
+                        if pieces_set[piece] then
+                            local mob = RPD.Actor:findChar(bcell)
+                            if mob then
+                                mob:getSprite():tint(piece == piece:upper() and 0xFF0000 or 0x0000FF, 0.5)
+                            end
+                        end
+                        bcell = bcell + 1
+                    end
+                end
+            end
+            RPD.glog("chess: re-tinted %d pieces", 0)
+        end
+
+        -- caveman: resume AI search coroutine. yields every 256 nodes (YIELD_QUANTUM). keeps animations alive.
+        if aiCoroutine then
+            local ok, err = coroutine.resume(aiCoroutine)
+            if not ok then
+                RPD.glog("AI search error: %s", tostring(err))
+                aiCoroutine = nil
+            elseif coroutine.status(aiCoroutine) == "dead" then
+                aiCoroutine = nil
+                -- caveman: process AI result. moved here from cellClicked so search runs async.
+                local result = aiResult
+                aiResult = nil
+                chess = result.chess
+                local ai_move = result.ai_move
+                local score = result.score
+
+                -- caveman: outcome from search score. -MATE = AI got mated = player win.
+                local match_end = nil
+                if score <= -sunfish.MATE_VALUE then match_end = "win" end
+                if score >= sunfish.MATE_VALUE then match_end = "lose" end
+
+                if not ai_move then
+                    -- caveman: AI had no move. mated -> win; stalemated -> tie; else lose.
+                    if match_end == "win" then
+                        processWin()
+                    elseif sunfish.is_stalemate(chess) then
+                        processTie()
+                    else
+                        processLose()
+                    end
+                    return
+                end
+
+                -- caveman: AI moved. chess is now player-to-move frame. materialize lazy board.
+                chess:ensure_board()
+
+                -- caveman: player mated by AI? score flags mate, not stalemate.
+                -- stalemate = tie (King yields). checkmate = lose.
+                if not match_end then
+                    if sunfish.is_checkmate(chess) then match_end = "lose"
+                    elseif sunfish.is_stalemate(chess) then match_end = "tie" end
+                end
+
+                -- caveman: player in check after AI move? flash player king cell.
+                kingInCheckCell = nil
+                if chess:in_check() then
+                    local ki = chess:king_index() -- 1-based square of player king (K)
+                    if ki then
+                        kingInCheckCell = cellFromChessCell(sunfish.move_2_cell(ki - 1))
+                    end
+                end
+
+                -- caveman: queue AI move for animation. win/lose fires after it visually lands.
+                local atc = { string.sub(ai_move, 1, 2), string.sub(ai_move, 3, 4) }
+                local ac = { cellFromChessCell(atc[1]), cellFromChessCell(atc[2]) }
+                table.insert(scheduledMoves, { ai_move, ac, atc, match_end })
+                aiMoveAt = RPD.SystemTime:now()
+                RPD.glog("queued AI move %s cells=%s,%s queued=%d match_end=%s", tostring(ai_move), tostring(ac[1]), tostring(ac[2]), #scheduledMoves, tostring(match_end))
+            end
+            return -- don't process scheduled moves while AI is thinking
+        end
+
+        -- caveman: king-in-check visual. flash red particles on the king every ~30 frames.
+        if kingInCheckCell then
+            checkFlashTimer = checkFlashTimer + 1
+            if checkFlashTimer >= 30 then
+                checkFlashTimer = 0
+                local mob = RPD.Actor:findChar(kingInCheckCell)
+                if mob and mob:getSprite() then
+                    mob:getSprite():emitter():burst(RPD.Sfx.ElmoParticle.FACTORY, 3)
+                end
+            end
+        end
+
         if #scheduledMoves > 0 then
-            if RPD.SystemTime:now() - aiMoveAt >= AI_DELAY_MS then
+            -- caveman: diagnostic. if this not show in slog, onStep not running.
+            local elapsed = RPD.SystemTime:now() - aiMoveAt
+            if elapsed >= AI_DELAY_MS then
+                RPD.glog("onStep: draining AI move (queued=%d)", #scheduledMoves)
                 local m = scheduledMoves[1]
                 animateMove(m[1], m[2], m[3])
 
@@ -291,6 +462,8 @@ return actor.init({
                     processWin()
                 elseif match_end == "lose" then
                     processLose()
+                elseif match_end == "tie" then
+                    processTie()
                 end
             end
         end
@@ -316,11 +489,17 @@ return actor.init({
             y0 = 4
         end
 
+        -- caveman: save/load. "OVER" = game already won/lost. don't restart.
+        if data == "OVER" then
+            gameInProgress = false
+            return
+        end
+
         -- caveman: save/load. if data (serialized state from ScriptedActor), restore sunfish.
         -- pieces already exist as saved mobs — don't respawn.
         if data and data ~= "" then
             chess = sunfish.new()
-            local parts = util.split(data, "\n")
+            local parts = util.split(data, "|")
             chess.board = parts[1] or chess.board
             chess.score = tonumber(parts[2]) or 0
             chess.wc = { parts[3]:sub(1,1) == "T", parts[3]:sub(2,2) == "T" }
@@ -331,6 +510,10 @@ return actor.init({
             move_str = ''
             scheduledMoves = {}
             allowedMoves = {}
+
+            -- caveman: re-tint pieces after reload. defer to onStep (mobs not in CharsList at activate time).
+            needsRetint = true
+            RPD.glog("chess restored from save, will re-tint on next frame")
         elseif not chess then
             gameInProgress = true
             move_str = ''
@@ -389,7 +572,13 @@ return actor.init({
     cellClicked = function(cell)
 
         if not gameInProgress then
+            RPD.glog("chess: gameInProgress=false, click ignored")
             return false
+        end
+
+        -- caveman: AI thinking. block player input so they can't move during AI search.
+        if aiCoroutine then
+            return true
         end
 
         RPD.Dungeon.hero:interrupt()
@@ -402,6 +591,33 @@ return actor.init({
             return true
         end
 
+        RPD.glog("chess click: cell=%d chessCell=%s move_str='%s'", cell, tostring(chessCell), move_str)
+
+        -- caveman: lazy re-tint after reload (sprites not ready at activate/onStep time).
+        if needsRetint then
+            needsRetint = false
+            local tinted = 0
+            local boardData = util.split(chess.board, "\n")
+            for i, v in ipairs(boardData) do
+                if i >= 3 and i <= 10 then
+                    local y = i - 2
+                    local bcell = cellFromChess(0, y)
+                    for ii = 1, 8 do
+                        local piece = string.sub(v, ii + 1, ii + 1)
+                        if pieces_set[piece] then
+                            local mob = RPD.Actor:findChar(bcell)
+                            if mob and mob:getSprite() then
+                                mob:getSprite():tint(piece == piece:upper() and 0xFF0000 or 0x0000FF, 0.5)
+                                tinted = tinted + 1
+                            end
+                        end
+                        bcell = bcell + 1
+                    end
+                end
+            end
+            RPD.glog("chess: re-tinted %d pieces", tinted)
+        end
+
         -- FIX: added local
         local engineCell = sunfish.cell_2_move(chessCell)
 
@@ -411,7 +627,9 @@ return actor.init({
 
             -- FIX: Ignore empty cells / enemy piece clicks when starting a selection
             local clickedPiece = getPiece(chess.board, engineCell)
+            RPD.glog("chess select: chessCell=%s engineCell=%s piece='%s'", chessCell, tostring(engineCell), clickedPiece)
             if not string.match(clickedPiece, "%u") then
+                RPD.glog("chess select: not your piece (lowercase or empty), ignored")
                 return true
             end
 
@@ -421,28 +639,14 @@ return actor.init({
 
             allowedMoves = {}
 
-            local pseudoMoves = chess:genMoves()
-            local moveCandidates = {}
-
-            for i, v in ipairs(pseudoMoves) do
-                if sunfish.move_2_cell(v[1]) == chessCell then
-                    local validMove = true
-                    local probe_move_str = sunfish.move_2_cell(v[1]) .. sunfish.move_2_cell(v[2])
-
-                    local probe = sunfish.move(chess, probe_move_str)
-                    local probeMoves = probe:genMoves()
-
-                    for ii, vv in ipairs(probeMoves) do
-                        local target = getPiece(probe.board, vv[2])
-                        if target == 'k' then
-                            validMove = false
-                        end
-                    end
-
-                    if validMove then
-                        allowedMoves[sunfish.move_2_cell(v[2])] = true
-                        table.insert(moveCandidates, v)
-                    end
+            -- caveman: engine hands legal moves as coord strings ("e2e4"). keep the ones
+            -- that start on the clicked square; their destinations are the highlights.
+            local hCells = { chessCell }
+            for _, uci in ipairs(sunfish.legal_moves_uci(chess)) do
+                if string.sub(uci, 1, 2) == chessCell then
+                    local to = string.sub(uci, 3, 4)
+                    allowedMoves[to] = true
+                    table.insert(hCells, to)
                 end
             end
 
@@ -451,10 +655,6 @@ return actor.init({
                 selectedMob:getSprite():emitter():burst(RPD.Sfx.ElmoParticle.FACTORY, 4)
             end
 
-            local hCells = { chessCell }
-            for i, candidate in ipairs(moveCandidates) do
-                table.insert(hCells, sunfish.move_2_cell(candidate[2]))
-            end
             highlightCells(hCells)
         else
 
@@ -483,36 +683,17 @@ return actor.init({
 
             if moveResult then
                 chess = moveResult:rotate()
+                chess:ensure_board() -- caveman: rotate() leaves board nil (lazy). materialize it.
 
                 RPD.Sfx.HighlightCell:removeAll()
                 animateMove(move_str, move_cells, player_chess_cells)
 
-                local score
-                -- FIX: Added local ai_move
-                local ai_move
-                chess, ai_move, score = sunfish.ai_move(chess:rotate())
-
-                -- FIX: Let the move animate before triggering Win/Lose
-                local match_end = nil
-                if score <= -sunfish.MATE_VALUE then match_end = "win" end
-                if score >= sunfish.MATE_VALUE then match_end = "lose" end
-                if #chess:genMoves() == 0 then match_end = "lose" end
-
-                -- Safety check: If AI couldn't generate a move, bypass the animation queue
-                if not ai_move then
-                    if match_end == "win" then processWin() end
-                    if match_end == "lose" then processLose() end
-                    return true
-                end
-
-                local ai_target_chess_cells = { string.sub(ai_move, 1, 2), string.sub(ai_move, 3, 4) }
-                -- FIX: added local
-                local ai_cells = { cellFromChessCell(ai_target_chess_cells[1]), cellFromChessCell(ai_target_chess_cells[2]) }
-
-                -- Push the Match status to element 4 so it fires AFTER the piece visually lands
-                table.insert(scheduledMoves, { ai_move, ai_cells, ai_target_chess_cells, match_end })
-                aiMoveAt = RPD.SystemTime:now()
-
+                -- caveman: launch AI search as coroutine. yields every 256 nodes (YIELD_QUANTUM).
+                -- onStep resumes it each frame so game animations keep running during deep search.
+                aiCoroutine = coroutine.create(function()
+                    local c, m, s = sunfish.ai_move(chess:rotate())
+                    aiResult = { chess = c, ai_move = m, score = s }
+                end)
             else
                 RPD.glog('illegal move')
             end
@@ -524,12 +705,14 @@ return actor.init({
 
     -- caveman: serialize sunfish state for save/load. ScriptedActor calls this on save.
     serialize = function()
-        if not chess then return "" end
-        return chess.board .. "\n" ..
-               tostring(chess.score) .. "\n" ..
-               (chess.wc[1] and "T" or "F") .. (chess.wc[2] and "T" or "F") .. "\n" ..
-               (chess.bc[1] and "T" or "F") .. (chess.bc[2] and "T" or "F") .. "\n" ..
-               tostring(chess.ep) .. "\n" ..
+        if not chess or not gameInProgress then return "OVER" end
+        chess:ensure_board() -- caveman: board can be nil (lazy) after move/rotate. materialize before concat.
+        -- caveman: use | not \n — chess.board itself contains \n (row separators).
+        return chess.board .. "|" ..
+               tostring(chess.score) .. "|" ..
+               (chess.wc[1] and "T" or "F") .. (chess.wc[2] and "T" or "F") .. "|" ..
+               (chess.bc[1] and "T" or "F") .. (chess.bc[2] and "T" or "F") .. "|" ..
+               tostring(chess.ep) .. "|" ..
                tostring(chess.kp)
     end
 })

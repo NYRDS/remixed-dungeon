@@ -1,0 +1,18 @@
+{
+   "spriteDesc"    :"spritesDesc/King.json",
+   "scriptFile"    :"scripts/mobs/NeutralKing",
+   "fraction"      :"NEUTRAL",
+   "aiState"       :"Passive",
+   "ht"            :300,
+   "dmgMin"        :20,
+   "dmgMax"        :38,
+   "str"           :40,
+   "defenseSkill"  :25,
+   "attackSkill"   :32,
+   "exp"           :0,
+   "name"          :"King_Name",
+   "name_objective":"King_Name_Objective",
+   "description"   :"King_Desc",
+   "gender"        :"King_Gender",
+   "isHumanoid"    :true
+}
