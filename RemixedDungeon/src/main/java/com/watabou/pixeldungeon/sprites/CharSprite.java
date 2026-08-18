@@ -127,7 +127,6 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         super();
         listener = this;
         setIsometricShift(true);
-        GLog.debug("new sprite");
     }
 
     public void link(Char owner) {
