@@ -7,7 +7,9 @@ import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
+import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -93,7 +95,7 @@ public class King extends Boss {
 		int count = 0;
 
 		for(Mob mob:level().getCopyOfMobsArray()){
-			if (mob instanceof Undead) {
+			if (mob.undead && !mob.isPet()) {
 				count++;
 			}
 		}
@@ -132,23 +134,42 @@ public class King extends Boss {
 		return true;
 	}
 
+	// caveman: undead versions of common City mobs the King raises (no Succubus,
+	// no FireElemental — a burning elemental makes no sense as a corpse).
+	private static final String[] UNDEAD_CITY_MOBS = { "Monk", "Warlock", "Golem", "Senior" };
+
+	private Mob createSummonedServant() {
+		if (Random.Int(2) == 0) {
+			return new Undead();
+		}
+		Mob servant = MobFactory.mobByName(UNDEAD_CITY_MOBS[Random.Int(UNDEAD_CITY_MOBS.length)]);
+		servant.setUndead(true);
+		servant.expForKill = 0; // caveman: summons give no XP — no farming the boss
+		servant.setState(MobAi.getStateByClass(Hunting.class));
+		return servant;
+	}
+
 	private void summon() {
 		lastPedestal = targetPedestal;
 
-		getSprite().centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.4f, 2 );		
+		getSprite().centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.4f, 2 );
 		Sample.INSTANCE.play( Assets.SND_CHALLENGE );
-		
+
 		int undeadsToSummon = maxArmySize() - countServants();
 
 		for (int i=0; i < undeadsToSummon; i++) {
 			int pos = level().getEmptyCellNextTo(lastPedestal);
 
 			if (level().cellValid(pos)) {
-				Mob servant = new Undead();
+				Mob servant = createSummonedServant();
 				servant.setPos(pos);
 				level().spawnMob(servant, 0, lastPedestal);
 
 				WandOfBlink.appear(servant, pos);
+				// caveman: deathly green tint marks raised city mobs as undead.
+				if (!(servant instanceof Undead)) {
+					servant.getSprite().tint(0x225522, 0.5f);
+				}
 				new Flare(3, 32).color(0x000000, false).show(servant.getSprite(), 2f);
 			}
 		}

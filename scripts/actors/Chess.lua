@@ -8,11 +8,14 @@ local util = require "scripts/lib/util"
 local actor = require "scripts/lib/actor"
 local sunfish = require "scripts.stuff.chess.sunfish"
 
+-- caveman: enable bkm_light KRK/KQK solver + opening book (both opt-in).
+sunfish.set_use_bkm_light(true)
+sunfish.set_book_data(require("scripts.stuff.chess.book"), os.time())
+
 local x0 = 4
 local y0 = 4
 
 local pieces = {}
-local needsRetint = false  -- caveman: set on reload, handled in onStep when mobs are registered.
 local frozenPets = {}  -- caveman: pets frozen during chess, restored when game ends.
 
 -- caveman: give pets their brain back. if reload (frozenPets lost), un-freeze PASSIVE pets.
@@ -393,35 +396,42 @@ local function isInsufficientMaterial(board)
     return false
 end
 
+-- caveman: tint all chess pieces red (player/uppercase) or blue (AI/lowercase).
+-- Called every onStep frame so resize (sprite recreate) is recovered within one
+-- frame. tint() is idempotent (sets absolute values, doesn't accumulate).
+local function retintPieces()
+    if not chess then return end
+    if #scheduledMoves > 0 then return end -- caveman: skip during animation — board is ahead of visuals
+    chess:ensure_board()
+    local boardData = util.split(chess.board, "\n")
+    for i, v in ipairs(boardData) do
+        if i >= 3 and i <= 10 then
+            local y = i - 2
+            local bcell = cellFromChess(0, y)
+            for ii = 1, 8 do
+                local piece = string.sub(v, ii + 1, ii + 1)
+                if pieces_set[piece] then
+                    local mob = RPD.Actor:findChar(bcell)
+                    if mob and mob:getSprite() then
+                        mob:getSprite():tint(piece == piece:upper() and 0xFF0000 or 0x0000FF, 0.5)
+                    end
+                end
+                bcell = bcell + 1
+            end
+        end
+    end
+end
+
 return actor.init({
     act = function()
         return true
     end,
 
     onStep = function()
-        -- caveman: re-tint pieces after reload (one-shot). mobs not in CharsList at activate time,
-        -- but they ARE by the first onStep frame.
-        if needsRetint then
-            needsRetint = false
-            local boardData = util.split(chess.board, "\n")
-            for i, v in ipairs(boardData) do
-                if i >= 3 and i <= 10 then
-                    local y = i - 2
-                    local bcell = cellFromChess(0, y)
-                    for ii = 1, 8 do
-                        local piece = string.sub(v, ii + 1, ii + 1)
-                        if pieces_set[piece] then
-                            local mob = RPD.Actor:findChar(bcell)
-                            if mob then
-                                mob:getSprite():tint(piece == piece:upper() and 0xFF0000 or 0x0000FF, 0.5)
-                            end
-                        end
-                        bcell = bcell + 1
-                    end
-                end
-            end
-            RPD.glog("chess: re-tinted %d pieces", 0)
-        end
+        -- caveman: re-tint every frame. tint() is idempotent (sets absolute values),
+        -- and resize recreates sprites — so per-frame tinting recovers from resize
+        -- within one frame. ~30 cheap findChar calls/frame, negligible cost.
+        retintPieces()
 
         -- caveman: resume AI search coroutine. yields every 256 nodes (YIELD_QUANTUM). keeps animations alive.
         if aiCoroutine then
@@ -549,26 +559,26 @@ return actor.init({
             return
         end
 
-        -- caveman: save/load. if data (serialized state from ScriptedActor), restore sunfish.
-        -- pieces already exist as saved mobs — don't respawn.
+        -- caveman: save/load. use restore_data so piece_count/material/fifty are
+        -- initialized from the board (bkm_light gate needs piece_count == 3).
         if data and data ~= "" then
-            chess = sunfish.new()
             local parts = util.split(data, "|")
-            chess.board = parts[1] or chess.board
-            chess.score = tonumber(parts[2]) or 0
-            chess.wc = { parts[3]:sub(1,1) == "T", parts[3]:sub(2,2) == "T" }
-            chess.bc = { parts[4]:sub(1,1) == "T", parts[4]:sub(2,2) == "T" }
-            chess.ep = tonumber(parts[5]) or 0
-            chess.kp = tonumber(parts[6]) or 0
-            halfmoveClock = tonumber(parts[7]) or 0 -- caveman: restore 50-move clock
+            chess = sunfish.restore_data({
+                board = parts[1] or "",
+                score = tonumber(parts[2]) or 0,
+                wc = { parts[3]:sub(1,1) == "T", parts[3]:sub(2,2) == "T" },
+                bc = { parts[4]:sub(1,1) == "T", parts[4]:sub(2,2) == "T" },
+                ep = tonumber(parts[5]) or 0,
+                kp = tonumber(parts[6]) or 0,
+                fifty = tonumber(parts[7]) or 0,
+            })
             gameInProgress = true
             move_str = ''
             scheduledMoves = {}
             allowedMoves = {}
 
-            -- caveman: re-tint pieces after reload. defer to onStep (mobs not in CharsList at activate time).
-            needsRetint = true
-            RPD.glog("chess restored from save, will re-tint on next frame")
+            -- caveman: retintPieces() runs every onStep frame, no flag needed.
+
         elseif not chess then
             gameInProgress = true
             move_str = ''
@@ -648,31 +658,6 @@ return actor.init({
         end
 
         RPD.glog("chess click: cell=%d chessCell=%s move_str='%s'", cell, tostring(chessCell), move_str)
-
-        -- caveman: lazy re-tint after reload (sprites not ready at activate/onStep time).
-        if needsRetint then
-            needsRetint = false
-            local tinted = 0
-            local boardData = util.split(chess.board, "\n")
-            for i, v in ipairs(boardData) do
-                if i >= 3 and i <= 10 then
-                    local y = i - 2
-                    local bcell = cellFromChess(0, y)
-                    for ii = 1, 8 do
-                        local piece = string.sub(v, ii + 1, ii + 1)
-                        if pieces_set[piece] then
-                            local mob = RPD.Actor:findChar(bcell)
-                            if mob and mob:getSprite() then
-                                mob:getSprite():tint(piece == piece:upper() and 0xFF0000 or 0x0000FF, 0.5)
-                                tinted = tinted + 1
-                            end
-                        end
-                        bcell = bcell + 1
-                    end
-                end
-            end
-            RPD.glog("chess: re-tinted %d pieces", tinted)
-        end
 
         -- FIX: added local
         local engineCell = sunfish.cell_2_move(chessCell)

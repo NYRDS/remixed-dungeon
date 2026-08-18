@@ -1189,6 +1189,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="King_Info2">Arise, slaves!</string>
     <string name="King_Info3">How dare you!</string>
     <string name="CityBossLevel_ChessSign">Lay down your arms — the King will test your mind, not your might.</string>
+    <string name="PalaceServant_Monk_1">The King\'s peace must not be disturbed.</string>
+    <string name="PalaceServant_Monk_2">Meditate on your trespass, surface dweller.</string>
+    <string name="PalaceServant_Monk_3">We guard the throne. Do not test us.</string>
+    <string name="PalaceServant_Warlock_1">My magic serves the crown, not you.</string>
+    <string name="PalaceServant_Warlock_2">You bring steel to a sanctuary?</string>
+    <string name="PalaceServant_Warlock_3">The King\'s patience is not endless.</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">This hall is sacred.</string>
+    <string name="PalaceServant_Golem_3">*low rumble*</string>
     <string name="King_Name">King of Dwarves</string>
     <string name="King_Name_Objective">King of Dwarves</string>
     <string name="Knuckles_Gender">masculine</string>
