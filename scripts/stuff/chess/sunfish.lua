@@ -13,12 +13,11 @@ local MATE_VALUE = 30000
 local MATE_BAND = MATE_VALUE - 30 -- scores above |this| are distance-to-mate
 local TT_SIZE = 65536 -- fixed-size transposition table (bounded memory, ~64k slots)
 
--- Yield tuning: the search yields periodically so the caller can poll. Under
--- LuaJ each coroutine.yield() is a JVM context hop, so a bigger countdown
--- quantum is measurably faster (~33% at 256, ~41% at 1024). YIELD_QUANTUM is a
--- tunable; the Android layer can lower it for responsiveness or raise it for
--- throughput. YIELD_ENABLED lets the benchmark harness measure the uncapped
--- ceiling (no coroutine switches).
+-- Yield tuning: the search yields periodically so the caller can poll. the
+-- yield is fiber.yield (zero-thread luaj lib). YIELD_QUANTUM is a tunable; the
+-- Android layer can lower it for responsiveness or raise it for throughput.
+-- YIELD_ENABLED lets the benchmark harness measure the uncapped ceiling
+-- (no fiber switches).
 local YIELD_QUANTUM = 32
 local YIELD_ENABLED = true
 
@@ -1590,12 +1589,13 @@ end
 local function bound(pos, gamma, depth, maxn, ply, path)
     nodes = nodes + 1
     -- Countdown-based yield: one decrement + compare per node (vs a modulo),
-    -- and a coroutine switch only every YIELD_QUANTUM nodes.
+    -- and a fiber switch only every YIELD_QUANTUM nodes. fiber = zero-thread
+    -- luaj lib: search suspends on heap, no JVM thread parked per yield.
     if YIELD_ENABLED then
         yield_left = yield_left - 1
         if yield_left == 0 then
             yield_left = YIELD_QUANTUM
-            coroutine.yield()
+            fiber.yield()
         end
     end
 

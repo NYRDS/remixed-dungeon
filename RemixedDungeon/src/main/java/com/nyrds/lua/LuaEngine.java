@@ -28,6 +28,7 @@ import org.luaj.vm2.lib.ResourceFinder;
 import org.luaj.vm2.lib.StringLib;
 import org.luaj.vm2.lib.TableLib;
 import org.luaj.vm2.lib.VarArgFunction;
+import org.luaj.vm2.lib.fiber.FiberLib;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.JseBaseLib;
 import org.luaj.vm2.lib.jse.JseIoLib;
@@ -123,6 +124,7 @@ public class LuaEngine implements ResourceFinder {
 		globals.load(new TableLib());
 		globals.load(new StringLib());
 		globals.load(new CoroutineLib());
+		globals.load(new FiberLib());
 		globals.load(new RpdMathLib());
 		globals.load(new JseIoLib());
 		globals.load(new JseOsLib());

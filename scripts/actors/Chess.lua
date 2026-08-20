@@ -335,7 +335,7 @@ end
 
 local AI_DELAY_MS = 800
 
-local aiCoroutine = nil     -- caveman: background AI search coroutine.
+local aiCoroutine = nil     -- caveman: background AI search fiber.
 local aiResult = nil        -- caveman: result from the coroutine when it finishes.
 local kingInCheckCell = nil -- caveman: king cell if in check, nil otherwise.
 local checkFlashTimer = 0  -- caveman: flash timer for king-in-check visual.
@@ -433,13 +433,14 @@ return actor.init({
         -- within one frame. ~30 cheap findChar calls/frame, negligible cost.
         retintPieces()
 
-        -- caveman: resume AI search coroutine. yields every 256 nodes (YIELD_QUANTUM). keeps animations alive.
+        -- caveman: resume AI search fiber. yields every 256 nodes (YIELD_QUANTUM). keeps animations alive.
+        -- fiber = zero-thread luaj lib: no JVM thread per search, heap frames only.
         if aiCoroutine then
-            local ok, err = coroutine.resume(aiCoroutine)
+            local ok, err = fiber.resume(aiCoroutine)
             if not ok then
                 RPD.glog("AI search error: %s", tostring(err))
                 aiCoroutine = nil
-            elseif coroutine.status(aiCoroutine) == "dead" then
+            elseif fiber.status(aiCoroutine) == "dead" then
                 aiCoroutine = nil
                 -- caveman: process AI result. moved here from cellClicked so search runs async.
                 local result = aiResult
@@ -734,9 +735,9 @@ return actor.init({
                 if fiftyDraw or insufficient then
                     processTie() -- caveman: draw (50-move or insufficient material) -> tie
                 else
-                    -- caveman: launch AI search as coroutine. yields every 256 nodes (YIELD_QUANTUM).
+                    -- caveman: launch AI search as fiber. yields every 256 nodes (YIELD_QUANTUM).
                     -- onStep resumes it each frame so game animations keep running during deep search.
-                    aiCoroutine = coroutine.create(function()
+                    aiCoroutine = fiber.create(function()
                         local c, m, s = sunfish.ai_move(chess:rotate())
                         aiResult = { chess = c, ai_move = m, score = s }
                     end)
