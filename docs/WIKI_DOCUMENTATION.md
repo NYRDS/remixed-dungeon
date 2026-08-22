@@ -19,7 +19,7 @@ The Remixed Dungeon wiki uses a namespace system to organize content by language
 - When running Python tools for wiki maintenance, use `python3`:
   - `python3 tools/py-tools/find_red_links.py`
   - `python3 tools/py-tools/scale_sprites_for_wiki.py`
-  - `python3 tools/py-tools/check_broken_images.py`
+  - `python3 tools/py-tools/check_unused_images.py`
   - `python3 tools/py-tools/dokuwiki_linter.py`
   - And other Python scripts in the tools/py-tools directory
 
@@ -44,6 +44,8 @@ Always include references to the source code when documenting game mechanics, as
 **Important Note**: The script output provides only basic context. Rigorous codebase research is always necessary to fully understand entity behavior and relationships. The script serves as a starting point for deeper investigation, not as a definitive source of truth.
 
 **Mandatory Usage for mr: Pages**: When creating or updating machine-readable namespace pages (mr:), this script is mandatory to ensure accurate code references and complete understanding of entity implementation. The output provides essential information about where and how entities are used throughout the codebase, which is critical for creating comprehensive mr: pages that serve as reference material for AI and automated tools.
+
+**Mandatory Usage for Factual Changes on Any Page**: When a maintenance edit adds or corrects entity facts on any wiki page — stats, HP/damage values, drop tables, resistances, special abilities, spawn locations, or mechanical behavior — this script must be run for the affected entity first, so the change is grounded in the actual implementation rather than inferred from other wiki pages or translations. Formatting-only fixes (links, images, headers, lint issues) do not require it.
 
 ## Localization for Multiple Languages
 
@@ -1237,7 +1239,7 @@ These tools help automate wiki maintenance by identifying linking patterns and p
 ### Script Usage
 - Use `tools/py-tools/find_red_links.py` to periodically scan for broken or incorrect links
 - Use the merge script to handle any future duplicate files that may be created
-- Use `pick_random_wiki_pages.sh` to randomly select wiki pages for review or editing
+- Use `pick_random_wiki_pages.sh` (repo root, not tools/) to randomly select wiki pages for review or editing
 - Use `tools/py-tools/dokuwiki_linter.py` to validate wiki pages against documentation standards
 - Implement automated checking in development workflow to catch naming convention violations
 
@@ -1248,7 +1250,7 @@ These tools help automate wiki maintenance by identifying linking patterns and p
 4. Check that merged content doesn't introduce duplicate information within pages
 
 ### Random Wiki Page Selection
-- Use the `pick_random_wiki_pages.sh` script to randomly select wiki pages for review
+- Use the `pick_random_wiki_pages.sh` script (located in the repo root) to randomly select wiki pages for review
 - Run with optional argument for number of pages (defaults to 5): `./pick_random_wiki_pages.sh 3`
 - Useful for identifying pages that need updates or quality checks
 - Helps with rotating focus across the wiki content to ensure overall quality
@@ -1539,7 +1541,7 @@ When updating and maintaining wiki pages, follow this systematic workflow to ens
 - Note: Avoid performing unused image cleanup as a standard part of wiki improvement, as this may remove images that are legitimately in use
 
 ### 2. Page Selection
-- Use the `pick_random_wiki_pages.sh` script to randomly select wiki pages for review: `./pick_random_wiki_pages.sh [number_of_pages]`
+- Use the `pick_random_wiki_pages.sh` script (repo root) to randomly select wiki pages for review: `./pick_random_wiki_pages.sh [number_of_pages]`
 - Alternatively, select pages that correspond to recently updated game features
 
 ### 3. Verification Against Code

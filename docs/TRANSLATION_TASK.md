@@ -228,11 +228,10 @@ This will add the string to the appropriate localization file with proper format
 - Runs automated translation tasks in a loop with 1-hour intervals
 - Performs git operations to commit and push changes
 
-#### translation_iteration_with_check.sh
-- Runs various translation-related tools in sequence:
-  1. Checks for missing strings
-  2. Selects a random missing string
-  3. Checks random string translation across all languages
+#### wiki_translation_maintenance.sh
+- Combined maintenance loop (repo root) that randomly alternates between wiki and translation tasks
+- Runs each task via a `qwen -y` agent, commits and pushes changes, sleeps 1 hour between iterations
+- Sibling variants exist (`wiki_translation_maintenance_grok.sh`, `wiki_translation_maintenance_yoyo.sh`, `wiki_iteration.sh`, `translation_iteration.sh`) — check which is actually in use before changing behavior
 
 ## Reference Materials
 
