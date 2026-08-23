@@ -317,6 +317,7 @@
     <string name="LastLevel_TileStatue">Pilaar</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
+    <string name="Level_TileBarricade">Barricade</string>
     <string name="Level_TileDescAlchemy">Laat hier wat zaden vallen om een drank te brouwen.</string>
     <string name="Level_TileDescBarricade">De houten barricade zit stevig, maar is over de jaren uitgedroogd. Zal hij branden?</string>
     <string name="Level_TileDescChasm">Je kunt de bodem niet zien.</string>
@@ -549,6 +550,7 @@
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
     <string name="SpiderElite_Name">spinnen elitewachter</string>
     <string name="SpiderExploding_Desc">Harde werkers tijdens vredige tijden, deze wezens zullen niet aarzelen om hun vijanden aan te vallen en de eerste plant die ze tegenkomen te grijpen, waardoor ze zichzelf in lopende bommen veranderen.</string>
+    <string name="SpiderGuard_Desc">Net als soldaten hebben spinnenwachters een eed afgelegd om hun koninkrijk te beschermen. Het gif van de wachter wordt gebruikt om zijn doelwit te verlammen, waardoor verlamming ontstaat en het een makkelijke prooi wordt.</string>
     <string name="SpiderMindAmber_Name">Amber Spinnewijs</string>
     <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Psi-Spin</string>
@@ -1055,6 +1057,8 @@
 
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 

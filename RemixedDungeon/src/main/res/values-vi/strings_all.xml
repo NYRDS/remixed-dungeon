@@ -269,6 +269,7 @@
     <string name="HeroClass_RogPerks_0">Kẻ lừa đảo bắt đầu với Nhẫn Bóng Tối+1.</string>
     <string name="HeroClass_RogPerks_3">Kẻ trộm thành thạo trong việc phát hiện cửa và bẫy ẩn giấu.</string>
     <string name="HeroClass_RogPerks_5">Cuộn Bản đồ Ma thuật được nhận diện ngay từ đầu.</string>
+    <string name="HeroSubClass_DescAssa">Khi thực hiện một đòn tấn công bất ngờ, _Sát Thủ_ gây thêm sát thương lên mục tiêu của mình.</string>
     <string name="HeroSubClass_DescFreR">_Kẻ Vượt Rào_ có thể di chuyển gần gấp đôi so với hầu hết quái vật. Khi đang chạy, kẻ vượt rào khó bị đánh trúng hơn nhiều. Nhưng để làm được điều đó, anh ta không được quá tải và phải no bụng.</string>
     <string name="HeroSubClass_DescGlad">Một cú đánh thành công bằng vũ khí cận chiến cho phép _Gladiator_ bắt đầu một combo, trong đó mỗi đòn đánh thành công tiếp theo gây sát thương lớn hơn.</string>
     <string name="HeroSubClass_DescWarL">Sau khi giết một kẻ thù, _Pháp Sư_ sẽ hấp thụ linh hồn của nó. Điều này chữa lành vết thương và làm no đói của hắn.</string>
@@ -1242,6 +1243,7 @@
 
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
