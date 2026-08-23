@@ -33,7 +33,7 @@ EOF
 
 run_task() {
     local prompt_file="$1"
-    hermes chat -q \
+    hermes chat \
         --query-file "$prompt_file" \
         --in "$REPO_ROOT" \
         --toolsets "$TOOLSETS" \
