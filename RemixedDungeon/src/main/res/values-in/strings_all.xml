@@ -1491,6 +1491,15 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="OverpricedRation_Info">Terlihat sama seperti ransum makanan standar tapi lebih kecil.</string>
     <string name="OverpricedRation_Message">Makanan itu terasa lumayan.</string>
     <string name="OverpricedRation_Name">ransum makanan mahal</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">Aula ini suci.</string>
+    <string name="PalaceServant_Golem_3">*dengung rendah*</string>
+    <string name="PalaceServant_Monk_1">Kedamaian Raja tidak boleh diganggu.</string>
+    <string name="PalaceServant_Monk_2">Renungkan pelanggaranmu, penduduk permukaan.</string>
+    <string name="PalaceServant_Monk_3">Kami menjaga takhta. Jangan uji kami.</string>
+    <string name="PalaceServant_Warlock_1">Sihir saya melayani mahkota, bukan kamu.</string>
+    <string name="PalaceServant_Warlock_2">Kamu membawa baja ke tempat suci?</string>
+    <string name="PalaceServant_Warlock_3">Kesabaran Raja tidaklah tanpa batas.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Anak panah ini dilapisi curare.</string>
     <string name="ParalysisArrow_Name">anak panah melumpuhkan</string>
@@ -3063,6 +3072,15 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
 
 
 

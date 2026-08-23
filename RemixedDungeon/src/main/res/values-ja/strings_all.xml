@@ -122,7 +122,7 @@
     <string name="Badges_BossSlain3">DM-300を壊した</string>
     <string name="Badges_BossSlain3All">すべてのクラスでDM-300を壊した</string>
     <string name="Badges_BossSlain4">ドワーフの王を殺した</string>
-    <string name="Badges_Champion">Challenge won</string>
+    <string name="Badges_Champion">挑戦に勝利</string>
     <string name="Badges_DeathFalling">落下による死亡</string>
     <string name="Badges_DeathFire">火災による死亡</string>
     <string name="Badges_DeathGas">毒ガスによる死亡</string>
@@ -1501,6 +1501,15 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="OverpricedRation_Info">見た目は標準的な糧食にそっくりだが、もっと小さい。</string>
     <string name="OverpricedRation_Message">味はまあまあだった。</string>
     <string name="OverpricedRation_Name">高品質な糧食</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">この広間は神聖だ。</string>
+    <string name="PalaceServant_Golem_3">*低い唸り*</string>
+    <string name="PalaceServant_Monk_1">王の平和を乱してはならない。</string>
+    <string name="PalaceServant_Monk_2">侵入の罪を省みよ、地上の者よ。</string>
+    <string name="PalaceServant_Monk_3">我らが玉座を守る。試すな。</string>
+    <string name="PalaceServant_Warlock_1">わが魔法は王冠に仕えるものであり、お前のためではない。</string>
+    <string name="PalaceServant_Warlock_2">聖域に鋼を持ち込むのか?</string>
+    <string name="PalaceServant_Warlock_3">王の忍耐は無限ではないぞ。</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">この矢にはクラーレが塗られている。</string>
     <string name="ParalysisArrow_Name">麻痺の矢</string>
@@ -3086,6 +3095,16 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

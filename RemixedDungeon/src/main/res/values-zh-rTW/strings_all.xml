@@ -1513,6 +1513,15 @@
     <string name="OverpricedRation_Info">這看起來就是一份普通的口糧，雖然小了一些</string>
     <string name="OverpricedRation_Message">這份食物吃起來還不錯。</string>
     <string name="OverpricedRation_Name">小包口糧</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">這座大廳是神聖的。</string>
+    <string name="PalaceServant_Golem_3">*低沉的轟鳴*</string>
+    <string name="PalaceServant_Monk_1">國王的安寧不容擾亂。</string>
+    <string name="PalaceServant_Monk_2">反思你的冒犯吧，地面的訪客。</string>
+    <string name="PalaceServant_Monk_3">我們守護王座。別想考驗我們。</string>
+    <string name="PalaceServant_Warlock_1">我的魔法效忠於王冠，而非你。</string>
+    <string name="PalaceServant_Warlock_2">你竟將鋼鐵帶進聖殿？</string>
+    <string name="PalaceServant_Warlock_3">國王的耐心是有限的。</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">這支箭已被塗上麻痺毒藥。</string>
     <string name="ParalysisArrow_Name">麻痺箭</string>
@@ -3072,6 +3081,15 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
+
 
 
 

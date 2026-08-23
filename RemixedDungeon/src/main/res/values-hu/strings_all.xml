@@ -1495,6 +1495,15 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="OverpricedRation_Info">Úgy néz ki mint a normális étel adag csak kisebb.</string>
     <string name="OverpricedRation_Message">Ez jó volt!</string>
     <string name="OverpricedRation_Name">méregdrága készletek</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">Ez a terem szent.</string>
+    <string name="PalaceServant_Golem_3">*mély morajlás*</string>
+    <string name="PalaceServant_Monk_1">A Király békéjét nem szabad megzavarni.</string>
+    <string name="PalaceServant_Monk_2">Elmélkedj vétkedről, felszíni lakó.</string>
+    <string name="PalaceServant_Monk_3">Őrizzük a trónt. Ne próbálj ki minket.</string>
+    <string name="PalaceServant_Warlock_1">A mágiam a koronát szolgálja, nem téged.</string>
+    <string name="PalaceServant_Warlock_2">Acélt hozol egy szentélybe?</string>
+    <string name="PalaceServant_Warlock_3">A Király türelme nem végtelen.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Ezt a nyílvesszőt méreg borítja.</string>
     <string name="ParalysisArrow_Name">bénító nyíl</string>
@@ -3044,6 +3053,15 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_name">kristálygolyó</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
+
+
+
+
 
 
 

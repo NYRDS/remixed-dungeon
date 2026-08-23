@@ -127,7 +127,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Badges_BossSlain3">DM-300 Öldürüldü </string>
     <string name="Badges_BossSlain3All">DM-300 tüm alt sınıflar tarafından öldürüldü</string>
     <string name="Badges_BossSlain4">Kral öldürüldü </string>
-    <string name="Badges_Champion">Düello kazanıldı</string>
+    <string name="Badges_Champion">Meydan okuma kazanıldı</string>
     <string name="Badges_DeathFalling">Düşerek ölüm</string>
     <string name="Badges_DeathFire">Ateş yüzünden ölüm</string>
     <string name="Badges_DeathGas">Zehirli gaz yüzünden ölüm</string>
@@ -1500,6 +1500,15 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="OverpricedRation_Info">Standart porsiyon gibi görünüyor ama daha küçük.</string>
     <string name="OverpricedRation_Message">Bu yemek güzeldi.</string>
     <string name="OverpricedRation_Name">kazık fiyatlı porsiyon</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">Bu salon kutsaldır.</string>
+    <string name="PalaceServant_Golem_3">*alçak uğultu*</string>
+    <string name="PalaceServant_Monk_1">Kral\'ın barışı bozulmamalıdır.</string>
+    <string name="PalaceServant_Monk_2">İhlalinin üzerinde düşün, yüzey sakini.</string>
+    <string name="PalaceServant_Monk_3">Biz tahtı koruruz. Bizi deneme.</string>
+    <string name="PalaceServant_Warlock_1">Büyüm taca hizmet eder, senin için değil.</string>
+    <string name="PalaceServant_Warlock_2">Kutsal bir yere çelik mi getiriyorsun?</string>
+    <string name="PalaceServant_Warlock_3">Kral\'ın sabrı sonsuz değildir.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Bu ok kürar ile kaplanmış.</string>
     <string name="ParalysisArrow_Name">felç edici ok</string>
@@ -3076,6 +3085,16 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

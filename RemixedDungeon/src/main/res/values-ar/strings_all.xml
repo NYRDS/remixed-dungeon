@@ -378,6 +378,15 @@
     <string name="Necromancy_SummonDeathlingName">استدعاء سمرتة</string>
     <string name="Ooze_Death">%s يبتلعك...</string>
     <string name="Order_Info">بركّزك المناسب، أوامرك شبه لا تُرفض.</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">هذه القاعة مقدسة.</string>
+    <string name="PalaceServant_Golem_3">*همهمة منخفضة*</string>
+    <string name="PalaceServant_Monk_1">يجب ألا يُزعج سلام الملك.</string>
+    <string name="PalaceServant_Monk_2">تأمل في تجاوزك، يا ساكن السطح.</string>
+    <string name="PalaceServant_Monk_3">نحن نحرس العرش. لا تختبرنا.</string>
+    <string name="PalaceServant_Warlock_1">سحري يخدم التاج، وليس أنت.</string>
+    <string name="PalaceServant_Warlock_2">هل تُدخل الفولاذ إلى مكان مقدس؟</string>
+    <string name="PalaceServant_Warlock_3">صبر الملك ليس لانهائيًا.</string>
     <string name="Paralysis_Name_0">مشلل %s</string>
     <string name="PetInventory_ACGiveToPet">أَعْطِ لِلْحَيَوَانِ الأَلِيفِ</string>
     <string name="PetInventory_ACTakeFromPet">خذ من الحيوان الأليف</string>
@@ -756,6 +765,15 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
 
 
 

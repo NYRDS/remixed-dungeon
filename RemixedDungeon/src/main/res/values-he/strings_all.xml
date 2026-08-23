@@ -365,6 +365,15 @@
     <string name="Ooze_Death">%s בולע אותך...</string>
     <string name="Order_Info">בריכוז נכון, הפקודות שלך כמעט בלתי ניתנות לערעור.</string>
     <string name="Order_Resist">איך אתה מעז?!!</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">האולם הזה קדוש.</string>
+    <string name="PalaceServant_Golem_3">*רעידה נמוכה*</string>
+    <string name="PalaceServant_Monk_1">אסור להפריע לשלום המלך.</string>
+    <string name="PalaceServant_Monk_2">חשוב על עבירתך, בן פני השטח.</string>
+    <string name="PalaceServant_Monk_3">אנו שומרים על הכס. אל תנסה אותנו.</string>
+    <string name="PalaceServant_Warlock_1">הקסם שלי משרת את הכתר, לא אותך.</string>
+    <string name="PalaceServant_Warlock_2">אתה מביא פלדה למקדש?</string>
+    <string name="PalaceServant_Warlock_3">סבלנותו של המלך אינה אינסופית.</string>
     <string name="ParalysisArrow_Name">חץ משתק</string>
     <string name="Paralysis_Name_2">מהממת %s</string>
     <string name="Pasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
@@ -706,6 +715,15 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
 
 
 

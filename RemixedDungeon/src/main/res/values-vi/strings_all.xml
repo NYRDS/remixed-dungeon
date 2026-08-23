@@ -336,6 +336,15 @@
     <string name="NecrotismBuff_Info">Dấu ấn của chính cái chết, mùi hôi từ đó ảnh hưởng đến những người gần đó và khiến họ chia sẻ chung một định mệnh.</string>
     <string name="NecrotismBuff_Name">Hoại tử</string>
     <string name="Ooze_Death">%s nuốt chửng bạn...</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">Hội trường này là thiêng liêng.</string>
+    <string name="PalaceServant_Golem_3">*tiếng gầm trầm thấp*</string>
+    <string name="PalaceServant_Monk_1">Sự bình yên của Nhà vua không được phép bị xâm phạm.</string>
+    <string name="PalaceServant_Monk_2">Hãy suy ngẫm về lỗi lạm phạm của ngươi, cư dân mặt đất.</string>
+    <string name="PalaceServant_Monk_3">Chúng ta canh giữ ngai vàng. Đừng thử thách chúng ta.</string>
+    <string name="PalaceServant_Warlock_1">Ma thuật của ta phục vụ vương quyền, chứ không phải ngươi.</string>
+    <string name="PalaceServant_Warlock_2">Ngươi mang thép đến một thánh địa ư?</string>
+    <string name="PalaceServant_Warlock_3">Sự kiên nhẫn của Nhà vua là có hạn.</string>
     <string name="PetInventory_GiveToPet">Cho thú cưng</string>
     <string name="PetInventory_PetBackpackFull">Ba lô của thú cưng đã đầy</string>
     <string name="PetInventory_TakeFromPet">Lấy từ thú cưng</string>
@@ -860,6 +869,15 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Verslinden</string>
     <string name="AC_Dissect">Ontleden</string>
@@ -77,7 +76,7 @@
     <string name="BattleAxe_Info">Het enorme staande hoofd van deze strijdbijl geeft een aanzienlijk gewicht achter elke slag.</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
     <string name="Bee_Gender">masculine</string>
-    <string name="BellaNPC_Desc">Een heel posh meisje. Haar hele uiterlijk zegt je: \"Ik ben te goed voor iedereen.\"</string>
+    <string name="BellaNPC_Desc">Een heel posh meisje. Haar hele uiterlijk zegt je: \&quot;Ik ben te goed voor iedereen.\&quot;</string>
     <string name="Belongings_CantWearBoth">Je kunt %1$s en %2$s niet tegelijkertijd uitrusten!</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="Bishop_no_money">Je kunt er niet voor betalen.</string>
@@ -145,7 +144,7 @@
     <string name="Codex_Story_12">Brandid wapen - Bij een succesvolle treffer geeft dit extra schade en kan het doel in brand steken.</string>
     <string name="Codex_Story_17">Verstikkend wapen - Bij succesvolle treffer kan het doelwit verlamd raken.</string>
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
-    <string name="Codex_Story_25">Zij stak, bevroren, voor de zware eikenen deur, en keek naar het licht dat uit de deurranden doordrong. Uit een verwaarloosd hoekje van haar geest kwam herkenning.\n\"Zonlicht..\" mompelde ze tegen zichzelf. Hoe lang was het geweest? In de eeuwige duisternis van de Kelder had ze lang geleden opgehouden de dagen te tellen. Het licht verlichtte vergeten herinneringen. Ze herinnerde haar training, lange dagen van zware oefening met boomerang en zwaard, van logboek bijhouden en kaarten maken. Ze herinnerde de mantra\'s en disciplines die bedoeld waren om haar een schijn van gezond verstand te laten behouden terwijl ze de onbekende diepgang verkennde. Wat ze niet herinnerde, niet kon herinneren, waren mensen.\nZe herinnerde hun stemmen, hun bevelen en hun waarschuwingen, maar niet hun gezichten, noch hun aanraking.\nPijn had haar getraind. Onthoud de gevaren, altijd de gevaren. Tollende dieren, onoversterven, onzinnige bendes en slimme ninja\'s waren voor haar gevallen. Ze had gesneden, gebrand, gestoken en vergiftigd haar weg gebaan door afschuwelijke wezens, demonen, klokwerk-afschuwelijkheden en onzinnige necromanten. Zelfs goden waren voor haar gevallen.\nZe had Yog gevolgd door Hemel en Hel, voordat ze zijn corrumpterende fluisteringen voor altijd stilte. Toch was er nog werk te doen. Yog was een dienaar van iemand nog meer occulte en krachtigere dan hijzelf.\nZo dook ze verder, dieper. Het dagboek van de oude tovenaar, nog steeds stralend van kracht, had haar de weg getoond. Met de magie in zijn bladen reisde ze naar een woud nieuw land, een klein dorpje verborgen in een machtig bos. Daar voltooide ze ten slotte het kwaad tot zijn doolhof-achtige bron, en versloeg allen die voor haar stonden.\nNu, in het felle daglicht, onderzocht ze zichzelf in een kuil grotwater. Haar lichaam was door magie bijna onherkenbaar vervormd. Haar huid, bleek tot het punt van doorschijnend, was bedekt met vuil, slijk en roet. Haar ketting met ringen kon een koningsgeld waard zijn, en haar wapenhouder met staven bevatte genoeg magische energie om legers te verwoesten. Ze greep haar wapens, letterlijk fijn genoeg om de goden zelf neer te hakken. Werkelijk, ze was meester geworden van dit donkere rijk, deze woestijn van wanhoop.\nZe had het kwaad gejaagd tot in de verre hoeken van het multiversum, maar nu was ze bevroren van angst. Wat als ze haar verwerpte? Wat als ze dat niet deed? Hoe kon ze nog ooit met deze mensen omgaan? Hel, ze had de keren dat de dood haar had geëist, en weer was weggehaald uit zijn ijzergreep, niet meer geteld.\nNee, er was geen plek voor haar in het licht, niet meer. Ze keerde zich af van het mager licht, en daalde in het donker, misschien voor de laatste keer.\n\n\n\tby drazool from reddit</string>
+    <string name="Codex_Story_25">Zij stak, bevroren, voor de zware eikenen deur, en keek naar het licht dat uit de deurranden doordrong. Uit een verwaarloosd hoekje van haar geest kwam herkenning.\n\&quot;Zonlicht..\&quot; mompelde ze tegen zichzelf. Hoe lang was het geweest? In de eeuwige duisternis van de Kelder had ze lang geleden opgehouden de dagen te tellen. Het licht verlichtte vergeten herinneringen. Ze herinnerde haar training, lange dagen van zware oefening met boomerang en zwaard, van logboek bijhouden en kaarten maken. Ze herinnerde de mantra\'s en disciplines die bedoeld waren om haar een schijn van gezond verstand te laten behouden terwijl ze de onbekende diepgang verkennde. Wat ze niet herinnerde, niet kon herinneren, waren mensen.\nZe herinnerde hun stemmen, hun bevelen en hun waarschuwingen, maar niet hun gezichten, noch hun aanraking.\nPijn had haar getraind. Onthoud de gevaren, altijd de gevaren. Tollende dieren, onoversterven, onzinnige bendes en slimme ninja\'s waren voor haar gevallen. Ze had gesneden, gebrand, gestoken en vergiftigd haar weg gebaan door afschuwelijke wezens, demonen, klokwerk-afschuwelijkheden en onzinnige necromanten. Zelfs goden waren voor haar gevallen.\nZe had Yog gevolgd door Hemel en Hel, voordat ze zijn corrumpterende fluisteringen voor altijd stilte. Toch was er nog werk te doen. Yog was een dienaar van iemand nog meer occulte en krachtigere dan hijzelf.\nZo dook ze verder, dieper. Het dagboek van de oude tovenaar, nog steeds stralend van kracht, had haar de weg getoond. Met de magie in zijn bladen reisde ze naar een woud nieuw land, een klein dorpje verborgen in een machtig bos. Daar voltooide ze ten slotte het kwaad tot zijn doolhof-achtige bron, en versloeg allen die voor haar stonden.\nNu, in het felle daglicht, onderzocht ze zichzelf in een kuil grotwater. Haar lichaam was door magie bijna onherkenbaar vervormd. Haar huid, bleek tot het punt van doorschijnend, was bedekt met vuil, slijk en roet. Haar ketting met ringen kon een koningsgeld waard zijn, en haar wapenhouder met staven bevatte genoeg magische energie om legers te verwoesten. Ze greep haar wapens, letterlijk fijn genoeg om de goden zelf neer te hakken. Werkelijk, ze was meester geworden van dit donkere rijk, deze woestijn van wanhoop.\nZe had het kwaad gejaagd tot in de verre hoeken van het multiversum, maar nu was ze bevroren van angst. Wat als ze haar verwerpte? Wat als ze dat niet deed? Hoe kon ze nog ooit met deze mensen omgaan? Hel, ze had de keren dat de dood haar had geëist, en weer was weggehaald uit zijn ijzergreep, niet meer geteld.\nNee, er was geen plek voor haar in het licht, niet meer. Ze keerde zich af van het mager licht, en daalde in het donker, misschien voor de laatste keer.\n\n\n\tby drazool from reddit</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
     <string name="ColdSpirit_Desc">De koude geest is de uitvlucht van vorst, in zijn zuiverste vorm. Als een gedachtenloze klomp magische energie gehoorzaamt hij de wil van de magiër die hem oproept, of handelt volgens basisinstincten.</string>
     <string name="ColdSpirit_Gender">masculine</string>
@@ -186,7 +185,7 @@
     <string name="EncumbranceBuff_CharAct_2">Dit %s is te zwaar voor mij om effectief te gebruiken.</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
     <string name="Exhumation_Name">Exhumatie</string>
-    <string name="Eye_Desc">Een van de andere namen van deze demon is \"orb of hatred\", omdat wanneer hij een vijand ziet, hij zijn doodsblik onbeschoft gebruikt, vaak de bondgenoten negerend en ze verwondend.</string>
+    <string name="Eye_Desc">Een van de andere namen van deze demon is \&quot;orb of hatred\&quot;, omdat wanneer hij een vijand ziet, hij zijn doodsblik onbeschoft gebruikt, vaak de bondgenoten negerend en ze verwondend.</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Facilitations_Names_2">Djinnengeest</string>
     <string name="Fire_Info">Hier woedt een vuur.</string>
@@ -323,7 +322,7 @@
     <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
 
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
-    <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \"Necrotism\" vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
+    <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="NecromancerNPC_Name">nekromant</string>
@@ -333,6 +332,15 @@
     <string name="Ooze_Death">%s slikt je op...</string>
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
     <string name="OverpricedRation_Message">Dat eten smaakte oké.</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">Deze zaal is heilig.</string>
+    <string name="PalaceServant_Golem_3">*laag gerommel*</string>
+    <string name="PalaceServant_Monk_1">De vrede van de Koning mag niet worden verstoord.</string>
+    <string name="PalaceServant_Monk_2">Denk na over je overtreding, bewoner van de oppervlakte.</string>
+    <string name="PalaceServant_Monk_3">Wij bewaken de troon. Test ons niet.</string>
+    <string name="PalaceServant_Warlock_1">Mijn magie dient de kroon, niet jou.</string>
+    <string name="PalaceServant_Warlock_2">Breng je staal naar een heiligdom?</string>
+    <string name="PalaceServant_Warlock_3">Het geduld van de Koning is niet eindeloos.</string>
     <string name="ParalysisBuff_Name">Verlamd</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
     <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
@@ -458,7 +466,7 @@
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
-    <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \"%1$s\" spreuk ontdekt.\n\" %2$s \"</string>
+    <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
     <string name="SpiderExploding_Desc">Harde werkers tijdens vredige tijden, deze wezens zullen niet aarzelen om hun vijanden aan te vallen en de eerste plant die ze tegenkomen te grijpen, waardoor ze zichzelf in lopende bommen veranderen.</string>
@@ -519,7 +527,7 @@
     <string name="ToxicGland_Name">Giftige klier</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Typical_Damage">Typische schade</string>
-    <string name="Using_Failed_Because_Magic">Krachtige magie voorkomt dat je \"%s\" gebruikt.</string>
+    <string name="Using_Failed_Because_Magic">Krachtige magie voorkomt dat je \&quot;%s\&quot; gebruikt.</string>
     <string name="VampireSkull_Name">Vampierschedel</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
@@ -698,6 +706,15 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
+
+
+
+
+
+
 
 
 

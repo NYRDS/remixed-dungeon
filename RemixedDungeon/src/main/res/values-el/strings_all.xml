@@ -1495,6 +1495,15 @@
     <string name="OverpricedRation_Info">Μοιάζει με μια κανονική μερίδα φαγητού, αλλά είναι μικρότερη.</string>
     <string name="OverpricedRation_Message">Το φαγητό ήταν εντάξει.</string>
     <string name="OverpricedRation_Name">ακριβή μερίδα φαγητού</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">Αυτή η αίθουσα είναι ιερή.</string>
+    <string name="PalaceServant_Golem_3">*χαμηλή βουή*</string>
+    <string name="PalaceServant_Monk_1">Η ειρήνη του Βασιλιά δεν πρέπει να διαταραχθεί.</string>
+    <string name="PalaceServant_Monk_2">Στοχάσου την παράβαση σου, κάτοικος της επιφάνειας.</string>
+    <string name="PalaceServant_Monk_3">Φυλάμε τον θρόνο. Μην μας δοκιμάζεις.</string>
+    <string name="PalaceServant_Warlock_1">Η μαγεία μου υπηρετεί το στέμμα, όχι εσένα.</string>
+    <string name="PalaceServant_Warlock_2">Φέρνεις ατσάλι σε ένα ιερό;</string>
+    <string name="PalaceServant_Warlock_3">Η υπομονή του Βασιλιά δεν είναι ατελείωτη.</string>
     <string name="ParalysisArrow_Gender">neuter</string>
     <string name="ParalysisArrow_Info">Αυτό το βέλος έχει επικαλυφθεί με μυοχαλαρωτικό.</string>
     <string name="ParalysisArrow_Name">παραλυτικό βέλος</string>
@@ -3074,6 +3083,15 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
+
+
+
+
+
+
+
+
 
 
 

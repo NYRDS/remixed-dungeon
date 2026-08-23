@@ -1495,6 +1495,15 @@
     <string name="OverpricedRation_Info">这看起来就是一份普通的口粮，虽然小了一些。</string>
     <string name="OverpricedRation_Message">这份食物吃起来还不错。</string>
     <string name="OverpricedRation_Name">小包口粮</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">这座大厅是神圣的。</string>
+    <string name="PalaceServant_Golem_3">*低沉的轰鸣*</string>
+    <string name="PalaceServant_Monk_1">国王的安宁不容扰乱。</string>
+    <string name="PalaceServant_Monk_2">反思你的僭越吧，地面来客。</string>
+    <string name="PalaceServant_Monk_3">我们守护王座。休要试探我们。</string>
+    <string name="PalaceServant_Warlock_1">我的魔法效忠于王冠，而不是你。</string>
+    <string name="PalaceServant_Warlock_2">你竟把钢铁带进圣殿？</string>
+    <string name="PalaceServant_Warlock_3">国王的耐心是有限的。</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">这支箭已被涂上麻痺毒药。</string>
     <string name="ParalysisArrow_Name">麻痺箭</string>
@@ -3046,6 +3055,15 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
+
 
 
 

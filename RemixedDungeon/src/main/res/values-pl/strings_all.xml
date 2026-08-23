@@ -1503,6 +1503,15 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="OverpricedRation_Info">Wygląda dokładnie jak zwykła racja żywieniowa, ale jest mniejsza.</string>
     <string name="OverpricedRation_Message">To jedzenie smakowało dobrze.</string>
     <string name="OverpricedRation_Name">przeceniona racja żywieniowa</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">Ta sala jest święta.</string>
+    <string name="PalaceServant_Golem_3">*niskie buczenie*</string>
+    <string name="PalaceServant_Monk_1">Pokój Króla nie może zostać zakłócony.</string>
+    <string name="PalaceServant_Monk_2">Rozważ swoje przewinienie, mieszkańcu powierzchni.</string>
+    <string name="PalaceServant_Monk_3">Strzegemy tronu. Nie wystawiaj nas na próbę.</string>
+    <string name="PalaceServant_Warlock_1">Moja magia służy koronie, nie tobie.</string>
+    <string name="PalaceServant_Warlock_2">Przynosisz stal do sanktuarium?</string>
+    <string name="PalaceServant_Warlock_3">Cierpliwość Króla nie jest nieskończona.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Ta strzała pokryta jest kurarą, rośliną znaną z paraliżowania układu nerwowego ofiary.</string>
     <string name="ParalysisArrow_Name">strzała paraliżująca</string>
@@ -3082,6 +3091,15 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
+
+
+
+
+
+
+
 
 
 

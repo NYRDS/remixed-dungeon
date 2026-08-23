@@ -1497,6 +1497,15 @@ Parede
     <string name="OverpricedRation_Info">É como uma ração normal, mas menor.</string>
     <string name="OverpricedRation_Message">Aquela comida estava deliciosa.</string>
     <string name="OverpricedRation_Name">ração acima do preço</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">Este salão é sagrado.</string>
+    <string name="PalaceServant_Golem_3">*rumor baixo*</string>
+    <string name="PalaceServant_Monk_1">A paz do Rei não deve ser perturbada.</string>
+    <string name="PalaceServant_Monk_2">Reflita sobre sua transgressão, habitante da superfície.</string>
+    <string name="PalaceServant_Monk_3">Guardamos o trono. Não nos teste.</string>
+    <string name="PalaceServant_Warlock_1">Minha magia serve à coroa, não a você.</string>
+    <string name="PalaceServant_Warlock_2">Você traz aço para um santuário?</string>
+    <string name="PalaceServant_Warlock_3">A paciência do Rei não é infinita.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Esta flecha é revestida com curare, um veneno paralisante.</string>
     <string name="ParalysisArrow_Name">flecha paralisante</string>
@@ -3066,6 +3075,15 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
+
+
 
 
 

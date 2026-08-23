@@ -1499,6 +1499,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="OverpricedRation_Info">Он как обычный сухпаёк, только маленький.</string>
     <string name="OverpricedRation_Message">Достаточно вкусно.</string>
     <string name="OverpricedRation_Name">дорогущий сухпаёк</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">Этот зал священен.</string>
+    <string name="PalaceServant_Golem_3">*низкое гудение*</string>
+    <string name="PalaceServant_Monk_1">Мир короля нельзя нарушать.</string>
+    <string name="PalaceServant_Monk_2">Размысли о своём проступке, житель поверхности.</string>
+    <string name="PalaceServant_Monk_3">Мы сторожим трон. Не испытывай нас.</string>
+    <string name="PalaceServant_Warlock_1">Моя магия служит короне, а не тебе.</string>
+    <string name="PalaceServant_Warlock_2">Ты приносишь сталь в святилище?</string>
+    <string name="PalaceServant_Warlock_3">Терпение короля не бесконечно.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Эта стрела испускает лёгкий, но такой знакомый запах кураре.</string>
     <string name="ParalysisArrow_Name">парализующая стрела</string>
@@ -3099,6 +3108,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">Хрустальный шар</string>
     <string name="town_table_fortune_desc">Этот стол укрыт шёлковой скатертью. На нём лежат карты Таро, выложенные в причудливом порядке.</string>
     <string name="town_table_fortune_name">Стол</string>
+
+
+
+
+
+
+
+
+
 
 
 

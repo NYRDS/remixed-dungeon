@@ -1490,6 +1490,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="OverpricedRation_Info">일반적인 비상 식량과 똑같이 생겼지만 크기가 좀 더 작습니다.</string>
     <string name="OverpricedRation_Message">맛이 좋습니다.</string>
     <string name="OverpricedRation_Name">비싼 비상 식량</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">이 홀은 신성하다.</string>
+    <string name="PalaceServant_Golem_3">*낮은 윙윙거림*</string>
+    <string name="PalaceServant_Monk_1">왕의 평화를 어지럽혀서는 안 된다.</string>
+    <string name="PalaceServant_Monk_2">너의 침범을 반성하라, 지상의 자여.</string>
+    <string name="PalaceServant_Monk_3">우리는 왕좌를 지킨다. 우리를 시험하지 마라.</string>
+    <string name="PalaceServant_Warlock_1">나의 마법은 왕관을 위해 쓰이는 것이지 너를 위한 것이 아니다.</string>
+    <string name="PalaceServant_Warlock_2">성역에 강철을 들이나?</string>
+    <string name="PalaceServant_Warlock_3">왕의 인내는 무한하지 않다.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">이 화살은 쿠라레 독이 칠해져 있다.</string>
     <string name="ParalysisArrow_Name">마비 화살</string>
@@ -3058,6 +3067,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
+
+
+
 
 
 

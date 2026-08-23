@@ -1295,7 +1295,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Info">Cahaya terpancar dari badan, menerangi segala-galanya di sekeliling.</string>
     <string name="LightBuff_Name">Bercahaya</string>
-    <string name="LightningBolt_Info">A spell that is shared among ancient shamans, that will shock your enemies twice as effectively, especially if they are foolish enough to be on standing on water.</string>
+    <string name="LightningBolt_Info">Mantra yang dikongsi antara dukun kuno, yang akan mengejutkan musuh anda dua kali lebih berkesan, terutamanya jika mereka cukup bodoh untuk berdiri di atas air.</string>
     <string name="LightningBolt_Name">Sambaran kilat</string>
     <string name="LightningTrap_Desc">Anda terbunuh kerana ada nyahcas dari perangkap panahan kiliat...</string>
     <string name="LightningTrap_Name">perangkap panahan kilat</string>
@@ -1493,6 +1493,15 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="OverpricedRation_Info">Kelihatan bekalan makanan biasa tetapi lebih kecil</string>
     <string name="OverpricedRation_Message">Makanan ini rasanya sedap.</string>
     <string name="OverpricedRation_Name">bekalan makanan mahal</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">Dewan ini suci.</string>
+    <string name="PalaceServant_Golem_3">*dengung rendah*</string>
+    <string name="PalaceServant_Monk_1">Kedamaian Raja tidak boleh diganggu.</string>
+    <string name="PalaceServant_Monk_2">Fikirkan tentang pelanggaran awak, penduduk permukaan.</string>
+    <string name="PalaceServant_Monk_3">Kami menjaga takhta. Jangan cabar kami.</string>
+    <string name="PalaceServant_Warlock_1">Sihir saya berkhidmat untuk mahkota, bukan untuk awak.</string>
+    <string name="PalaceServant_Warlock_2">Awak membawa besi ke tempat suci?</string>
+    <string name="PalaceServant_Warlock_3">Kesabaran Raja tidak berpanjangan.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Anak panah ini disalut dengan kurare.</string>
     <string name="ParalysisArrow_Name">anak panah melumpuh</string>
@@ -3028,6 +3037,16 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

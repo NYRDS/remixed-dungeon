@@ -1525,6 +1525,15 @@
     <string name="OverpricedRation_Info">Він виглядає так само, як і стандартний сухий пайок, але менший.</string>
     <string name="OverpricedRation_Message">Ця їжа добра на смак.</string>
     <string name="OverpricedRation_Name">дорогий сухий пайок</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">Ця зала священна.</string>
+    <string name="PalaceServant_Golem_3">*низьке гудіння*</string>
+    <string name="PalaceServant_Monk_1">Спокій Короля не можна порушувати.</string>
+    <string name="PalaceServant_Monk_2">Поміркуй про свій проступок, мешканцю поверхні.</string>
+    <string name="PalaceServant_Monk_3">Ми сторожимо трон. Не випробовуй нас.</string>
+    <string name="PalaceServant_Warlock_1">Моя магія служить короні, а не тобі.</string>
+    <string name="PalaceServant_Warlock_2">Ти приносиш сталь до святині?</string>
+    <string name="PalaceServant_Warlock_3">Терпіння Короля не безмежне.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Ця стріла змочена в кураре.</string>
     <string name="ParalysisArrow_Name">паралізуюча стріла</string>
@@ -3083,6 +3092,15 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
+
+
+
+
 
 
 
