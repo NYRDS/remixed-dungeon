@@ -160,6 +160,7 @@
     <string name="Claymore_Info">Thanh kiếm đồ sộ này chắc chắn có thể chém xuyên qua bất cứ thứ gì.</string>
     <string name="Claymore_Name">Kiếm Claymore</string>
     <string name="CloakSpell_Info">Bước vào bóng tối để trở nên vô hình. Giảm đáng kể cơ hội bị phát hiện. Không thể sử dụng khi kẻ địch ở gần.</string>
+    <string name="Codex_Story_10">Glyph Entangle - Anh hùng có thể nhận được giáp thảo mộc, nhưng đồng thời cũng có thể bị rễ cây trói chân.</string>
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
     <string name="Codex_Story_17">Vũ khí gây choáng - Khi đánh trúng, có thể khiến mục tiêu bị tê liệt.</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
@@ -172,6 +173,7 @@
     <string name="DM300_Info1">DM-300 tự sửa chữa!</string>
     <string name="DM300_Info3">Phát hiện nhân viên không được phép.</string>
     <string name="Dagger_Info">Một cây khăn sắt đơn giản với tay cầm gỗ mòn.</string>
+    <string name="Damage_Reduction">Giảm sát thương</string>
     <string name="DarkSacrifice_Name">Hy Sinh Tối Tăm</string>
     <string name="DarkSacrifice_Resist">Ngươi không có quyền lực nào trên ta!</string>
     <string name="Dart_Gender">masculine</string>
@@ -230,6 +232,7 @@
     <string name="Foliage_Info">Các tia sáng chọc xuyên màn sương của khu vườn ngầm.</string>
     <string name="FortuneTellerNPC_Name">người xem bói</string>
     <string name="FortuneTellerNPC_Name_Objective">bà giải điềm</string>
+    <string name="FrostArrow_Gender">feminine</string>
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenCarpaccio_Info3">Sảng khoái!</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
@@ -321,6 +324,7 @@
     <string name="Item_Name">vật phẩm</string>
     <string name="JarOfSouls_Desc">Cặp mắt sáng lóa của chiếc sọ được vẽ trên cái hũ cũ này, cũng như năng lượng kỳ lạ mà nó tỏa ra, khiến bạn cảm thấy bất an.</string>
     <string name="JarOfSouls_Name_Objective">bình chứa linh hồn</string>
+    <string name="Journal_Alchemy">Nồi giả kim thuật</string>
     <string name="Journal_Caged_Kobold">Kobold Bị Giam</string>
     <string name="Journal_Troll">Thợ rèn Troll</string>
     <string name="King_Desc">Vua cuối cùng của người lùn nổi tiếng với sự thấu hiểu sâu sắc về quá trình sống và chết. Ngài đã thuyết phục các thành viên triều đình tham gia nghi lễ, hứa hẹn ban tặng thanh xuân vĩnh cửu. Kết cục chỉ có Ngài nhận được nó - và một quân đoàn bất tử làm phần thưởng thêm.</string>
@@ -330,6 +334,7 @@
     <string name="Kobold_Desc">Người ta tin rằng Kobold chỉ là truyền thuyết. Là tổ tiên của loài quỷ lùn, kobold cư ngụ trong những hang động sâu và lạnh nhất. Người ta cũng kể rằng giống loài này đã làm chủ kỹ nghệ và máy móc từ lâu trước khi người lùn làm được điều đó.</string>
     <string name="Kobold_Gender">masculine</string>
     <string name="KunaiThrow_Name">Ném kunai</string>
+    <string name="Kusarigama_Info">Vũ khí này gồm một lưỡi liềm gắn trên chuỗi xích kim loại với một quả tạ sắt nặng ở đầu bên kia.</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Leech_Name_0">Hút máu %s</string>
     <string name="Level_TileDefault">\?\?\?</string>
@@ -628,6 +633,7 @@
     <string name="WandOfMagicMissile_Info">Cây gậy này phóng ra các tên lửa năng lượng ma thuật thuần khiết, gây sát thương trung bình cho mục tiêu.</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
+    <string name="WandOfSlowness_Info">Cây gậy này khiến sinh vật bị trúng di chuyển và tấn công chậm hơn một nửa cho đến khi hiệu ứng kết thúc.</string>
     <string name="WandOfSlowness_Info1">Không có gì xảy ra.</string>
     <string name="WandOfTeleportation_Info2">không có gì xảy ra</string>
     <string name="Wand_ACZap">ZAP</string>
@@ -1247,6 +1253,12 @@
 
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
 
 
 

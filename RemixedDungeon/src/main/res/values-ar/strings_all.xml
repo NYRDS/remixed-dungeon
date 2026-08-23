@@ -79,6 +79,7 @@
     <string name="Badges_RingThorns">تم الحصول على خاتم الأشواك</string>
     <string name="Badges_ShadowLord_Slain">تم هزيمة سيد الظلال</string>
     <string name="Badges_StrengthAttained3">تم تحقيق 17 نقطة من القوة</string>
+    <string name="Badges_StrengthAttained4">تم بلوغ 19 نقطة من القوة</string>
     <string name="Badges_Yasd">الموت من النار، السم، الغاز السام والجوع</string>
     <string name="Bag_ACOpen">فتح</string>
     <string name="BardNPC_Desc">يعزف باردة المدينة على العود.</string>
@@ -168,6 +169,7 @@
     <string name="City_TileDescEntrance">منحدر يؤدي إلى العمق العلوي.</string>
     <string name="Claymore_Gender">masculine</string>
     <string name="CloakSpell_Name">العباءة</string>
+    <string name="Codex_Story_10">غليف التشابك - قد يحصل البطل على درع عشبي، لكنه في الوقت نفسه قد تُقيّده الجذور.</string>
     <string name="Codex_Story_12">سلاح مشتعل - عند ضربة ناجحة، يلحق ضررًا إضافيًا بالهدف وقد يحرقه.</string>
     <string name="Codex_Story_16">سلاح محظوظ - يتجاهل درع العدو تقريباً بالكامل، ويسبب ضرراً أكبر بكثير.</string>
     <string name="Codex_Story_17">سلاح مخدر - عند الضرب بنجاح، قد يشل الهدف.</string>
@@ -183,6 +185,7 @@
     <string name="Crystal_Name">بلورة طافية</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">خنجر</string>
+    <string name="Damage_Reduction">تقليل الضرر</string>
     <string name="DarkGold_Info">يُسمى هذا المعدن \&quot;المظلم\&quot; ليس بسبب لونه (فهو لا يختلف عن الذهب العادي)، بل لأنه يذوب في ضوء النهار، مما يجعله عديم الفائدة على السطح.</string>
     <string name="DarkGold_Name">خام الذهب الداكن</string>
     <string name="DarkVeilBuff_Info">حجاب من الظلام يحيط بالمالك، يستدعي روحًا في كل مرة يُصاب فيها الضرر.</string>
@@ -201,6 +204,7 @@
     <string name="DoctorArmor_Name">ثوب الطبيب</string>
     <string name="DreadKnight_Name">فارس الرعب</string>
     <string name="DreadKnight_Name_Objective">فارس الرعب</string>
+    <string name="Dreamweed_Name">عشب الدوار</string>
     <string name="DriedRoseBuff_Info">الوردة تبدو ساحرة جداً.</string>
     <string name="DriedRose_Info2"> ولم تفقد سحرها. تبدو جميلة جدًا، لدرجة أنك تريد الاحتفاظ بها إلى الأبد.</string>
     <string name="DriedRose_Name">وردة مجففة</string>
@@ -318,6 +322,7 @@
     <string name="InvisibilityBuff_Info">مخفي تماماً، مما قد يساعد في تجنب الأخطار أو أن تصبح خطراً بحد ذاته.</string>
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
     <string name="JarOfSouls_Desc">عينا الجمجمة المضيئة المرسومة على هذا الجرّة القديمة، بالإضافة إلى الطاقة الغريبة التي تنبعث منها، تجعلك تشعر بعدم الارتياح.</string>
+    <string name="Journal_Alchemy">قدرة الخيمياء</string>
     <string name="Journal_Azuterron">غريب</string>
     <string name="Journal_Caged_Kobold">كوبولد مسجون</string>
     <string name="Journal_WellHealt">بئر الصحة</string>
@@ -327,6 +332,7 @@
     <string name="King_Gender">masculine</string>
     <string name="King_Name_Objective">ملك الأقزام</string>
     <string name="KoboldIcemancer_Killed">قتلتك سهم الجليد لـ %s...</string>
+    <string name="Kusarigama_Info">يتكون هذا السلاح من منجل معلق على سلسلة معدنية بثقل حديدي ثقيل في الطرف الآخر.</string>
     <string name="Kusarigama_Name">كوساريغاما</string>
     <string name="Kusarigama_Pull">سحب</string>
     <string name="Larva_Name">يرقة الإله</string>
@@ -409,6 +415,7 @@
     <string name="PlagueDoctorNPC_After_Quest">سأريهم، سأريهم جميعاً!</string>
     <string name="PlagueDoctorNPC_Desc">جسد هذا الشخص الحدباء بأكمله مخفي تحت بذلة جلدية. كما تفوح منه رائحة مرّة من الأدوية و... الثوم؟</string>
     <string name="PlagueDoctorNPC_Name_Objective">طبيب الطاعون</string>
+    <string name="PlagueDoctorQuest_1_1_Epilogue">آه، لقد عدت! _خمسة فئران ميتة_، ممتاز! جلودها ستكون حاسمة لأبحاثي. وكما وعدتك، بذلتي الشجاعة، صنعت لك هذا الدرع من جلودها. إنه مشبع بقليل من الطاعون، لكن لا تقلق! إنه مضبوط، وهو يحميك! والآن اذهب! احمِ المدينة!</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*يلقي برأسه للوراء ويطلق قهقهة هستيرية، صوتها يتردد في مختبره الرطب* رائع! _فارس الموت_، واقف أمامنا! القوة المنبعثة من كيانه... مسكرة! *يلتفت نحوك، عيناه تلمعان بشدة محمومة* ولك، مكافأة تليق ببسالتك: _جرعة القوة_! لتمنحك القوة لهزيمة أي عدو! الآن... لندرس موضوعنا. جوهره ذاته يخفي أسراراً يمكن أن تعيد كتابة قوانين الحياة ذاتها! *يقترب من _فارس الموت_ بابتسامة مجنونة، ممسكاً بقارورة من سائل أخضر يفور*</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">خمسة _أقزام_سحرة_، أجسادهم لا تزال تنبض بصدى ضعيف للسحر الأسود! أحضرهم لي، وسأكافئك بـ _جرعة_قوة_ التي ستمنحك قوة عشرة رجال!</string>
@@ -616,6 +623,7 @@
     <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية النقية، مما يلحق ضرراً متوسطاً بالهدف.</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
     <string name="WandOfRegrowth_Info">عندما تنتهي حياة ما، تبدأ حياة جديدة بالنمو... الدورة الأبدية لا تنتهي!</string>
+    <string name="WandOfSlowness_Info">تجعل هذه العصا الكائن المستهدف يتحرك ويهاجم بنصف سرعته المعتادة حتى ينتهي التأثير.</string>
     <string name="WandOfTeleportation_Info2">لم يحدث شيء</string>
     <string name="Wand_ACZap">زَاب</string>
     <string name="Wand_SelfTarget">لا يمكنك استهداف نفسك</string>
@@ -671,6 +679,7 @@
     <string name="WndPlayGames_Show_Error">فشلت العملية. حدث خطأ ما...</string>
     <string name="WndPortal_Title">البوابة</string>
     <string name="WndPortal_Warning_Info">لم تستخدم البوابة في هذا المستوى. بعد المغادرة، لن تتمكن من استخدام هذه البوابة مرة أخرى!\nهل أنت متأكد من أنك تريد المغادرة؟</string>
+    <string name="WndPremiumSettings_banners">اختر مادة اللافتات</string>
     <string name="WndPremiumSettings_chrome">اختيار مادة الواجهة</string>
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
     <string name="WndPriest_Instruction2_f">أهلاً بك يا ابنتي، أهلاً بك في الكنيسة المقدسة للقديس سانتا سيد الأعماق!</string>
@@ -773,6 +782,15 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
 
 
 

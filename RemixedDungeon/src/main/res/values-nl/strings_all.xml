@@ -180,6 +180,7 @@
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">dolk</string>
+    <string name="Damage_Reduction">Schadevermindering</string>
     <string name="Dart_Name">dart</string>
     <string name="DashSpell_Info">Das naar een aangewezen richting terwijl je met vijanden botst, schade toebrengend en verstommeling veroorzakend.</string>
     <string name="DashSpell_Name">Das</string>
@@ -223,6 +224,7 @@
     <string name="Firebloom_Name">Vuurbloem</string>
     <string name="FortuneTellerNPC_Name">waarzegster</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
+    <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="FrozenCarpaccio_Info2">Je voelt je verharden!</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
@@ -308,6 +310,7 @@
     <string name="Item_Info2">iets</string>
     <string name="Item_Name">iets</string>
     <string name="JarOfSouls_Name_Objective">pot met zielen</string>
+    <string name="Journal_Alchemy">Alchemieketel</string>
     <string name="Journal_Azuterron">Onbekende</string>
     <string name="Journal_Caged_Kobold">Kobold in een kooi</string>
     <string name="Journal_PlagueDoctorNPC">pestdokter</string>
@@ -316,6 +319,7 @@
     <string name="King_Defense">geparreerd</string>
     <string name="Kobold_Desc">Er werd aangenomen dat kobolds niets meer waren dan een legende. Als voorouders van de gewone gnolls woonden kobolds in de diepste en koudste grotten. Er wordt ook verteld dat hun ras techniek en machinebouw beheerste lang voordat de dwergen dat deden.</string>
     <string name="KunaiThrow_Name">Kunai-worp</string>
+    <string name="Kusarigama_Info">Dit wapen bestaat uit een zeis aan een metalen ketting met een zwaar ijzeren gewicht aan het andere uiteinde.</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">larve van de god</string>
     <string name="LastLevel_TileStatue">Pilaar</string>
@@ -329,6 +333,7 @@
     <string name="Level_TileDescTrap">Als je op een verborgen drukplaat stapt, activeer je de val.</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
     <string name="Level_TileExit">Diepte-uitgang</string>
+    <string name="Level_TileGrippingTrap">Klemval</string>
     <string name="Level_TileLockedDoor">Gesloten deur</string>
     <string name="Level_TileLockedExit">Vergrendelde uitgang naar de diepte</string>
     <string name="Level_TileOpenDoor">Open deur</string>
@@ -373,6 +378,7 @@
     <string name="MissileWeapon_No">Nee, ik heb het me anders beslist</string>
     <string name="MissileWeapon_Sure">Weet je zeker dat je het wilt uitrusten als een wapen voor gevechten op korte afstand?</string>
     <string name="MissileWeapon_Yes">Ja, ik weet wat ik doe</string>
+    <string name="Mob_Attacking">Reken deze %s als dood!</string>
     <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
     <string name="Mob_StaAmokStatus">%1$s loopt amok</string>
     <string name="Mob_StaFleeingStatus2">Deze %1$s vlucht voor %2$s</string>
@@ -640,6 +646,7 @@
     <string name="WandOfMagicMissile_Info">Deze staf lanceert missiles van zuivere magische energie, wat matige schade aan een doelwit toebrengt.</string>
     <string name="WandOfMagicMissile_Name">Toverstaf van Magische Projectielen</string>
     <string name="WandOfRegrowth_Name">Staf van Herstel</string>
+    <string name="WandOfSlowness_Info">Deze toverstaf zorgt ervoor dat een wezen met de helft van zijn normale snelheid beweegt en aanvalt, totdat het effect afloopt.</string>
     <string name="WandOfSlowness_Info1">Er gebeurde niets.</string>
     <string name="WandOfTeleportation_Info2">er is niets gebeurd</string>
     <string name="Wand_ACZap">ZAP</string>
@@ -712,6 +719,7 @@
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
     <string name="WndPlayGames_Show_Ok">Gelukt!</string>
     <string name="WndPortal_Warning_Title">Portaal Waarschuwing!</string>
+    <string name="WndPremiumSettings_banners">Selecteer het materiaal van de banieren</string>
     <string name="WndPremiumSettings_chrome">Selecteer GUI-materiaal</string>
     <string name="WndPremiumSettings_marble">marmer</string>
     <string name="WndPremiumSettings_ruby">robijn</string>
@@ -1062,6 +1070,14 @@
 
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
 
 
 
