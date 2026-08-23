@@ -1504,6 +1504,15 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="OverpricedRation_Info">Es sieht genauso aus wie eine normale Essensration, nur kleiner.</string>
     <string name="OverpricedRation_Message">Das Essen hat gut geschmeckt.</string>
     <string name="OverpricedRation_Name">Überteuerte Essensration</string>
+    <string name="PalaceServant_Golem_1">...</string>
+    <string name="PalaceServant_Golem_2">Diese Halle ist heilig.</string>
+    <string name="PalaceServant_Golem_3">*dumpfes Grollen*</string>
+    <string name="PalaceServant_Monk_1">Der Frieden des Königs darf nicht gestört werden.</string>
+    <string name="PalaceServant_Monk_2">Betrachte deine Übertretung, Bewohner der Oberfläche.</string>
+    <string name="PalaceServant_Monk_3">Wir bewachen den Thron. Fordere uns nicht heraus.</string>
+    <string name="PalaceServant_Warlock_1">Meine Magie dient der Krone, nicht dir.</string>
+    <string name="PalaceServant_Warlock_2">Du bringst Stahl in ein Heiligtum?</string>
+    <string name="PalaceServant_Warlock_3">Die Geduld des Königs ist nicht endlos.</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Dieser Pfeil ist mit Curare beschichtet.</string>
     <string name="ParalysisArrow_Name">Lähmender Pfeil</string>
@@ -2392,7 +2401,7 @@ Ich bin hier weil ich eine seltene Zutat suche _Leichenstaub_. Meistens bei Übe
     <string name="WandOfShadowbolt_Info">Dieser Stab strahlt dunkle, böse Energie aus.</string>
     <string name="WandOfShadowbolt_Name">Stab des Schattenblitzes</string>
     <string name="WandOfSlowness_Info">Dieser Stab zwingt eine Kreatur dazu, sich mit der halben Geschwindigkeit zu Bewegen und zu Attackieren, bis der Effekt endet.</string>
-    <string name="WandOfSlowness_Info1">nichts ist geschehen</string>
+    <string name="WandOfSlowness_Info1">Nichts ist geschehen.</string>
     <string name="WandOfSlowness_Name">Zauberstab der Verlangsamung</string>
     <string name="WandOfTelekinesis_Info">Wellen von Magischer Energie von diesem Stab werden alle Felder auf ihrem Weg beeinflussen. Dies löst Fallen aus, zerstört hohes Gras und öffnet oder schließt Türen. Sie stoßen auch Gegner zurück.</string>
     <string name="WandOfTelekinesis_Name">Zauberstab der Telekinese</string>
@@ -3046,6 +3055,16 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

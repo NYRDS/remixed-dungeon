@@ -525,6 +525,7 @@
     <string name="WandOfMagicMissile_Info">Cây gậy này phóng ra các tên lửa năng lượng ma thuật thuần khiết, gây sát thương trung bình cho mục tiêu.</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
+    <string name="WandOfSlowness_Info1">Không có gì xảy ra.</string>
     <string name="WandOfTeleportation_Info2">không có gì xảy ra</string>
     <string name="Wand_ACZap">ZAP</string>
     <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
@@ -626,6 +627,7 @@
     <string name="YogsHeart_Name_Objective">trái tim Yog</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
+    <string name="Zombie_Name_Objective">kẻ sống chết</string>
     <string name="town_deco_banner_desc">Một lá cờ thanh lịch vẽ các biểu tượng của quán rượu này.</string>
     <string name="town_deco_barrel_wine_name">Thùng rượu</string>
     <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
@@ -858,6 +860,8 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
 
 
 
