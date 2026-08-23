@@ -14,6 +14,12 @@ public class PUtil {
     }
 
     static public void slog(String tag, String txt) {
+        // caveman: Gdx.app null before libgdx init. early log calls (webserver
+        // startup, pre-init errors) must not crash - fall back to stdout.
+        if (com.badlogic.gdx.Gdx.app == null) {
+            System.out.println("[" + tag + "] " + txt);
+            return;
+        }
         logger.setLevel(Logger.INFO);
         logger.info(txt);
     }
