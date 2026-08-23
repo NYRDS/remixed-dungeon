@@ -167,13 +167,14 @@ public class DebugEndpoints {
                 mob.makePet(Dungeon.hero);
             }
 
-            // Add the mob to the game
-            Actor.occupyCell(mob);
-            Dungeon.level.mobs.add(mob);
+            // caveman: use level.spawnMob - it does Actor.addDelayed + sprite + onSpawn.
+            // old way (occupyCell + mobs.add only) made ghost mob: findChar blind to it,
+            // no sprite, never took turns. broke attack tests.
+            Dungeon.level.spawnMob(mob);
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                String.format("{\"success\":true,\"message\":\"Created mob '%s' at (%d,%d)\",\"mobType\":\"%s\",\"x\":%d,\"y\":%d,\"owned\":%b}",
-                    mobType, x, y, mobType, x, y, owned));
+                String.format("{\"success\":true,\"message\":\"Created mob '%s' at (%d,%d)\",\"mobType\":\"%s\",\"x\":%d,\"y\":%d,\"owned\":%b,\"id\":%d}",
+                    mobType, x, y, mobType, x, y, owned, mob.getId()));
         } catch (Exception e) {
             GLog.w("Error in handleDebugCreateMob: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
@@ -528,12 +529,15 @@ public class DebugEndpoints {
             int heroHt = (int) htField.get(Dungeon.hero);
 
             // Create a simple JSON response instead of using Bundle.toJson()
+            // caveman: actor time + now exposed so turn-economy tests can check spend per action
             String jsonString = String.format(
-                "{\"hero\":{\"class\":\"%s\",\"level\":%d,\"hp\":%d,\"max_hp\":%d},\"level\":{\"depth\":%d,\"width\":%d,\"height\":%d},\"depth\":%d}",
+                "{\"hero\":{\"class\":\"%s\",\"level\":%d,\"hp\":%d,\"max_hp\":%d,\"actor_time\":%f,\"world_time\":%f},\"level\":{\"depth\":%d,\"width\":%d,\"height\":%d},\"depth\":%d}",
                 Dungeon.hero.className(),
                 heroLvl,
                 heroHp,
                 heroHt,
+                Dungeon.hero.actorTime(),
+                Actor.localTime(),
                 Dungeon.depth,
                 Dungeon.level.getWidth(),
                 Dungeon.level.getHeight(),

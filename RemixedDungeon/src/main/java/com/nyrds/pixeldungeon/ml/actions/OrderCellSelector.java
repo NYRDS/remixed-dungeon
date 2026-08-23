@@ -48,7 +48,8 @@ class OrderCellSelector implements CellSelector.Listener {
             Attack attack = (Attack) action;
             target.setState(MobAi.getStateByClass(KillOrder.class));
             target.setEnemy(attack.target);
-            target.say(Utils.format(R.string.Mob_Attacking, target.getName()));
+            // caveman: name the victim, not the pet twice. objective case for ru grammar
+            target.say(Utils.format(R.string.Mob_Attacking, attack.target.getName_objective()));
             return;
         }
 

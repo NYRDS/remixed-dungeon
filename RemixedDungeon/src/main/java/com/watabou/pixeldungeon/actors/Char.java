@@ -300,7 +300,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             GLog.debug("%s consumed %3.2f time in act", getEntityKind(), time - prevTime);
             GLog.debug("%s State: %s Action(pre=%s, post=%s)", getEntityKind(), getState().getTag(), preActAction, getCurAction());
 
-            if (time == prevTime && isAlive()) {
+            // caveman: hero waiting for input is legal zero-time act, skip throw
+            if (time == prevTime && isAlive() && !(this instanceof Hero)) {
                 throw new TrackedRuntimeException(Utils.format("%s consume no time in act [state=%s action(pre=%s, post=%s)]",
                         getEntityKind(), getState().getTag(), preActAction, getCurAction()));
             }
@@ -2034,10 +2035,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void readyAndIdle() {
+        // caveman: no spend here. some callers spend async (bow shot spends in
+        // missile callback), auto-spend made every failed/idle act eat full tick.
         setCurAction(null);
-        if (time == prevTime) {
-            spend(TICK/speed());
-        }
     }
 
     public void clearActions() {

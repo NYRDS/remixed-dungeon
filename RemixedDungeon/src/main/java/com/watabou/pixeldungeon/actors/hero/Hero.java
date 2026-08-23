@@ -307,10 +307,11 @@ public class Hero extends Char {
                     return;
                 }
             }
-            spend(TICK);
-
+            // caveman: only burn tick when game keeps moving without hero input
+            // (realtime mode or controlling a mob). turn-based hero waits for free.
             if (Dungeon.realtime() ||
                     (controlTargetId != getId() && getControlTarget().getCurAction() != null)) {
+                    spend(TICK);
                     next();
             } else {
                 readyAndIdle();
