@@ -300,8 +300,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             GLog.debug("%s consumed %3.2f time in act", getEntityKind(), time - prevTime);
             GLog.debug("%s State: %s Action(pre=%s, post=%s)", getEntityKind(), getState().getTag(), preActAction, getCurAction());
 
-            // caveman: hero waiting for input is legal zero-time act, skip throw
-            if (time == prevTime && isAlive() && !(this instanceof Hero)) {
+            // caveman: hero with no action after act is waiting for player input -
+            // legal zero-time act. hero that HAD an action and spent nothing is a bug.
+            if (time == prevTime && isAlive() && !(this instanceof Hero && getCurAction() == null)) {
                 throw new TrackedRuntimeException(Utils.format("%s consume no time in act [state=%s action(pre=%s, post=%s)]",
                         getEntityKind(), getState().getTag(), preActAction, getCurAction()));
             }

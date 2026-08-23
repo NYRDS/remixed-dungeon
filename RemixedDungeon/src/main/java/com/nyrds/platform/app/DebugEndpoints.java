@@ -157,24 +157,50 @@ public class DebugEndpoints {
                 y = cell / Dungeon.level.getWidth();
             }
 
-            // Create the mob using the factory
-            Mob mob = MobFactory.mobByName(mobType);
+            final int finalX = x;
+            final int finalY = y;
+            final String finalMobType = mobType;
+            final boolean finalOwned = owned;
+            final int[] mobId = new int[1];
+            final String[] error = new String[1];
 
-            // Set the mob's position
-            mob.pos = x + y * Dungeon.level.getWidth();
+            // caveman: run on game thread like other mutating endpoints.
+            // spawnMob touches Actor.all (not thread-safe) and scene sprites.
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            GameLoop.pushUiTask(() -> {
+                try {
+                    Mob mob = MobFactory.mobByName(finalMobType);
+                    mob.pos = finalX + finalY * Dungeon.level.getWidth();
 
-            if (owned && Dungeon.hero != null) {
-                mob.makePet(Dungeon.hero);
+                    if (finalOwned && Dungeon.hero != null) {
+                        mob.makePet(Dungeon.hero);
+                    }
+
+                    // use level.spawnMob - it does Actor.addDelayed + sprite + onSpawn.
+                    // old way (occupyCell + mobs.add only) made ghost mob: findChar blind to it,
+                    // no sprite, never took turns.
+                    Dungeon.level.spawnMob(mob);
+                    mobId[0] = mob.getId();
+                } catch (Exception e) {
+                    error[0] = "Error creating mob: " + e.getMessage();
+                    GLog.n(error[0]);
+                } finally {
+                    latch.countDown();
+                }
+            });
+
+            if (!latch.await(5, java.util.concurrent.TimeUnit.SECONDS)) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for mob creation\"}");
             }
-
-            // caveman: use level.spawnMob - it does Actor.addDelayed + sprite + onSpawn.
-            // old way (occupyCell + mobs.add only) made ghost mob: findChar blind to it,
-            // no sprite, never took turns. broke attack tests.
-            Dungeon.level.spawnMob(mob);
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"%s\"}", error[0]));
+            }
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"message\":\"Created mob '%s' at (%d,%d)\",\"mobType\":\"%s\",\"x\":%d,\"y\":%d,\"owned\":%b,\"id\":%d}",
-                    mobType, x, y, mobType, x, y, owned, mob.getId()));
+                    mobType, x, y, mobType, x, y, owned, mobId[0]));
         } catch (Exception e) {
             GLog.w("Error in handleDebugCreateMob: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
@@ -515,20 +541,12 @@ public class DebugEndpoints {
                     "{\"error\":\"Game state not initialized - start a game first\"}");
             }
 
-            // Use reflection to access private fields
-            Field lvlField = Char.class.getDeclaredField("lvl");
-            lvlField.setAccessible(true);
-            int heroLvl = (int) lvlField.get(Dungeon.hero);
+            // caveman: use public accessors. raw fields HP/HT/lvl are Scrambler-encoded
+            // (reflection here returned garbage like -2081372377) and Hero has no 'lvl'.
+            int heroLvl = Dungeon.hero.lvl();
+            int heroHp = Dungeon.hero.hp();
+            int heroHt = Dungeon.hero.ht();
 
-            Field hpField = Char.class.getDeclaredField("HP");
-            hpField.setAccessible(true);
-            int heroHp = (int) hpField.get(Dungeon.hero);
-
-            Field htField = Char.class.getDeclaredField("HT");
-            htField.setAccessible(true);
-            int heroHt = (int) htField.get(Dungeon.hero);
-
-            // Create a simple JSON response instead of using Bundle.toJson()
             // caveman: actor time + now exposed so turn-economy tests can check spend per action
             String jsonString = String.format(
                 "{\"hero\":{\"class\":\"%s\",\"level\":%d,\"hp\":%d,\"max_hp\":%d,\"actor_time\":%f,\"world_time\":%f},\"level\":{\"depth\":%d,\"width\":%d,\"height\":%d},\"depth\":%d}",
