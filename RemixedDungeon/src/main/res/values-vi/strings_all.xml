@@ -179,6 +179,7 @@
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
     <string name="EarthElemental_Name">nguyên tố đất</string>
     <string name="EarthElemental_Name_Objective">nguyên tố đất</string>
+    <string name="ElvenDagger_Gender">masculine</string>
     <string name="EquipableItem_Unequip">Bạn không thể tháo bỏ %s bị nguyền rủa!</string>
     <string name="ExplodingSkull_Desc">Đầu lâu bay này đang bốc lửa, có vẻ cực kỳ mong manh, dường như nó sẽ bùng nổ bất cứ lúc nào.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
@@ -212,6 +213,7 @@
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
     <string name="GnollCostume_Info">Một bộ trang phục ấm áp và bồng bềnh cực kỳ. Ai mặc bộ trang phục này sẽ trông như... người đang cố gắng cải trang thành gnoll. Nhưng gnoll sẽ không bị lừa, chúng vẫn sẽ tấn công bạn.</string>
     <string name="GoldenKey_Name">chìa khóa vàng</string>
+    <string name="GoldenStatue_Gender">feminine</string>
     <string name="Golem_Name">golem</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
     <string name="Halls_TileStatue">Cột</string>
@@ -367,6 +369,7 @@
     <string name="PoisonBuff_Name">Bị Độc</string>
     <string name="Poison_Death">Bạn đã chết vì độc...</string>
     <string name="Poison_Name_0">Độc %s</string>
+    <string name="PotionBelt_Info">Chiếc đai da chắc chắn này có thể đựng tất cả bình thuốc của bạn, đồng thời bảo vệ chúng không bị vỡ do giá lạnh.</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
     <string name="PotionOfMana_Name">Bình Mana</string>
     <string name="PotionOfMight_Name">Bình Thuốc Mạnh Mẽ</string>
@@ -869,6 +872,9 @@
 
 
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+
+
+
 
 
 

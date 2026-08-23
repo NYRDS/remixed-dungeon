@@ -48,6 +48,7 @@
     <string name="Badges_AllScrolls">Alle scrolls geïdentificeerd</string>
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
     <string name="Badges_BossSlain1">De Goo is gedood</string>
+    <string name="Badges_Champion">Uitdaging gewonnen</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
     <string name="Badges_DeathPoison">Dood door vergiftiging</string>
     <string name="Badges_GoldColleted4">7500 goud verzameld</string>
@@ -182,6 +183,7 @@
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="Dungeon_Tips_9">Laat de Tengu niet vrij!</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
+    <string name="ElvenDagger_Gender">masculine</string>
     <string name="EncumbranceBuff_CharAct_2">Dit %s is te zwaar voor mij om effectief te gebruiken.</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
     <string name="Exhumation_Name">Exhumatie</string>
@@ -706,6 +708,9 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+
+
+
 
 
 
