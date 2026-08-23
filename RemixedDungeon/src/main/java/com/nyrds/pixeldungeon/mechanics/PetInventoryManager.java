@@ -155,6 +155,13 @@ public class PetInventoryManager {
      */
     @LuaInterface
     public static void openPetSelect(@NotNull Hero hero, @Nullable Item itemToGive) {
+        // caveman: hide hero bag window - modal pet chooser on top, taps must not
+        // fall through to item buttons underneath (player report: clicking pet
+        // button gave potion instead)
+        WndBag heroBag = WndBag.getHeroBagInstance();
+        if (heroBag != null) {
+            heroBag.hide();
+        }
         GameScene.show(new WndPetSelect(hero, itemToGive));
     }
 

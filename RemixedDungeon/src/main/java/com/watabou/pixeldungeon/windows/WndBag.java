@@ -421,6 +421,19 @@ public class WndBag extends WndTabbed {
 		return 24;
 	}
 
+	// caveman: static refs must not outlive the window - after hide() they pointed
+	// at a destroyed window and later updateItems() calls repopulated a dead UI
+	@Override
+	public void destroy() {
+		if (instance == this) {
+			instance = null;
+		}
+		if (heroBagInstance == this) {
+			heroBagInstance = null;
+		}
+		super.destroy();
+	}
+
 	public boolean hideOnSelect() {
 		return  !(mode == Mode.FOR_SALE || mode == Mode.FOR_BUY);
 	}
