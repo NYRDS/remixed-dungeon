@@ -142,6 +142,7 @@
     <string name="ChaosBow_Name">قوس الفوضى</string>
     <string name="ChaosCrystal_BladeFused">يمتص الكريستال سلاحك، ويتخذ شكل شفرة</string>
     <string name="ChaosCrystal_Fuse">دمج</string>
+    <string name="ChaosHelmet_Name">خوذة الفوضى</string>
     <string name="ChaosStaff_Name">عصا الفوضى</string>
     <string name="ChaosSword_Gender">masculine</string>
     <string name="CharAction_Give">إعطاء</string>
@@ -348,6 +349,7 @@
     <string name="Lich_DieInfo">لم أحب أبدًا هذا الساحر الميت. حان الوقت للعودة إلى المستوى 7 وإيجاد طريق آخر للمغامرة الجديدة.</string>
     <string name="Lich_Name_Objective">ليتش</string>
     <string name="LightBuff_Name">مضيء</string>
+    <string name="LightningBolt_Info">تعويذة تُتداول بين الشامان القدماء، تصعق أعداءك بفعالية مضاعفة، خاصة إذا كانوا أغبياء بما يكفي ليقفوا فوق الماء.</string>
     <string name="LightningTrap_Name">فخ البرق</string>
     <string name="LloidsBeacon_Creatures">الهالة النفسية للكائنات المجاورة لا تسمح لك باستخدام منارة لويد في هذه اللحظة.</string>
     <string name="LloidsBeacon_Preventing">هالة سحرية قوية موجودة هنا تمنعك من استخدام منارة لويد!</string>
@@ -770,6 +772,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

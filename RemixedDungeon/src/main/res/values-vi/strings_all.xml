@@ -348,6 +348,7 @@
     <string name="LibrarianNPC_Message_Not_Ready">T... Tôi xin lỗi, th-thư viện chưa mở... đợi chút.</string>
     <string name="LibrarianNPC_Name_Objective">thủ thư</string>
     <string name="LightBuff_Info">Ánh sáng phát ra từ cơ thể, soi sáng mọi thứ xung quanh.</string>
+    <string name="LightningBolt_Info">Phép thuật được lưu truyền giữa các pháp sư cổ, khiến kẻ thù của bạn bị choáng gấp đôi hiệu quả, đặc biệt nếu chúng ngu ngốc đến mức đứng trên mặt nước.</string>
     <string name="LightningTrap_Name">bẫy sét</string>
     <string name="LloidsBeacon_ACReturn">TRỞ VỀ</string>
     <string name="LloidsBeacon_ACSet">ĐẶT</string>
@@ -380,6 +381,7 @@
     <string name="Mob_StaFleeingStatus2">Cái %1$s này đang chạy trốn khỏi %2$s</string>
     <string name="Mob_StaHuntingStatus">Đây %s đang săn bắn</string>
     <string name="Mob_StaSleepingStatus">%s này đang ngủ</string>
+    <string name="Mob_StaTerrorStatus2">%1 này kinh hoàng trước %2</string>
     <string name="Mob_StaWanderingStatus">%s đang lang thang</string>
     <string name="Moongrace_Desc">Những loài cây này mọc ít ỏi và được biết đến như một nguồn phép thuật tự nhiên.</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
@@ -1243,6 +1245,8 @@
 
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
