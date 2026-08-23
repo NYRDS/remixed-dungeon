@@ -953,12 +953,27 @@ public class Hero extends Char {
         maxSp = Scrambler.scramble(points);
     }
 
+    private long extraAnimStallStart = 0;
+
     @Override
     protected boolean timeout() {
         if (SystemTime.now() - SystemTime.getLastActionTime() > Dungeon.moveTimeout()) {
-            // Don't timeout if hero sprite is playing an animation from extras
             if (getSprite().isPlayingExtraAnimation()) {
-                return false;
+                // caveman: stuck extra animation (mod lua gone wrong) must not
+                // freeze hero forever. after 10s wall clock, force the timeout.
+                long now = SystemTime.now();
+                if (extraAnimStallStart == 0) {
+                    extraAnimStallStart = now;
+                    return false;
+                }
+                if (now - extraAnimStallStart < 10_000) {
+                    return false;
+                }
+                EventCollector.logException("hero extra animation stalled >10s, forcing turn timeout");
+                extraAnimStallStart = 0;
+                // fall through: force timeout
+            } else {
+                extraAnimStallStart = 0;
             }
             SystemTime.updateLastActionTime();
             spend(TIME_TO_REST);
