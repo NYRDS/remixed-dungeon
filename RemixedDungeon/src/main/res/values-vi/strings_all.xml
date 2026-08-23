@@ -130,6 +130,7 @@
     <string name="ChaosCrystal_Fuse">DUNG HỢP</string>
     <string name="ChaosCrystal_SwordFused">Kính hấp thụ vũ khí của bạn và biến thành một Chiếc Kiếm</string>
     <string name="ChaosHelmet_Info">Một chiếc mũ đỏ màu máu là biểu tượng thiết yếu của một chiến binh hỗn loạn.</string>
+    <string name="ChaosShield_desc">Khiên Hỗn Mang là kết quả của việc hợp nhất một Viên Ngọc Hỗn Mang với chiếc khiên thường, khiến nó tạo ra những hiệu ứng hỗn loạn ngẫu nhiên khi chặn thành công.</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
     <string name="ChaosStaff_Name">gậy hỗn loạn</string>
     <string name="CharAction_Hit">đánh</string>
@@ -244,6 +245,7 @@
     <string name="GnollCostume_Info">Một bộ trang phục ấm áp và bồng bềnh cực kỳ. Ai mặc bộ trang phục này sẽ trông như... người đang cố gắng cải trang thành gnoll. Nhưng gnoll sẽ không bị lừa, chúng vẫn sẽ tấn công bạn.</string>
     <string name="GoldenKey_Name">chìa khóa vàng</string>
     <string name="GoldenStatue_Gender">feminine</string>
+    <string name="Golem_Defense">đã chặn</string>
     <string name="Golem_Name">golem</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
     <string name="Halls_TileStatue">Cột</string>
@@ -297,8 +299,10 @@
     <string name="IceGuardian_Name_Objective">vệ binh băng</string>
     <string name="IceKey_Name">chìa khóa băng</string>
     <string name="Ignite_Name">Đốt Cháy</string>
+    <string name="Imp_Desc">Imp là những con quỷ cấp thấp. Chúng không nổi bật về sức mạnh hay tài năng phép thuật, nhưng lại khá thông minh và dễ gần. Nhiều imp thích sống giữa những người không phải quỷ.</string>
     <string name="Imp_Monks1">Bạn có phải là phiêu lưu gia? Tôi yêu thích những phiêu lưu gia! Bạn luôn có thể dựa vào họ khi cần giết cái gì đó. Đúng không? Dĩ nhiên là phải trả tiền ;)\nTrong trường hợp của tôi là _mönk_ cần bị tiêu diệt. Các bạn thấy, tôi định mở một chút kinh doanh ở đây, nhưng những kẻ điên khùng này không mua gì cả và sẽ làm hoảng sợ khách khác. Vậy hãy giúp tôi tiêu diệt... nói là _8 người_ và phần thưởng sẽ thuộc về bạn.</string>
     <string name="Imp_Monks2">Ôi, bạn vẫn còn sống! Tôi biết rằng kung-fu của bạn mạnh hơn ;) Chỉ đừng quên nhặt những tín chỉ của các nhà sư này.</string>
+    <string name="Imp_Name">imp tham vọng</string>
     <string name="IncendiaryDart_Name">phi tiêu phóng hỏa</string>
     <string name="InnKeeperNPC_Desc">Chủ quán rất tự hào về bản thân.</string>
     <string name="InnKeeperNPC_Name">chủ quán</string>
@@ -328,6 +332,7 @@
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Leech_Name_0">Hút máu %s</string>
     <string name="Level_TileDefault">\?\?\?</string>
+    <string name="Level_TileDescChasm">Bạn không thể thấy đáy.</string>
     <string name="Level_TileDescExit">Cầu thang dẫn xuống tầng sâu hơn.</string>
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
     <string name="Level_TileDescPileOfStones">Một đống đá cực kỳ nặng, trông không thể di chuyển được.</string>
@@ -405,6 +410,7 @@
     <string name="PetInventory_PetBackpackFull">Ba lô của thú cưng đã đầy</string>
     <string name="PetInventory_TakeFromPet">Lấy từ thú cưng</string>
     <string name="PetInventory_Title">Kho thú cưng</string>
+    <string name="PetInventory_TookItem">Đã lấy %1$s từ %2$s</string>
     <string name="PetInventory_ViewManage">Quản lý</string>
     <string name="Pickaxe_Info">Đây là một công cụ lớn và chắc chắn để phá đá. Nó có thể được dùng như một vũ khí.</string>
     <string name="Pickaxe_InsufficientStr">Không đủ sức mạnh để khai thác!</string>
@@ -469,6 +475,7 @@
     <string name="RingOfMending_Name">Nhẫn Chữa Lành</string>
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
     <string name="Ring_Gems_10">thạch anh</string>
+    <string name="Ring_Gems_11">mã não</string>
     <string name="Ring_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
     <string name="Ring_Info1">Bạn chỉ có thể đeo tối đa 2 nhẫn cùng lúc</string>
     <string name="Ring_Info2">Chiếc %1$s của bạn siết chặt vào ngón tay đau đớn</string>
@@ -623,6 +630,7 @@
     <string name="Wand_Wood_Types_10">sồi</string>
     <string name="Wand_Wood_Types_7">gõ đỏ</string>
     <string name="Wand_Wood_Types_9">gỗ tím</string>
+    <string name="WarHammer_Info">Rất ít sinh vật có thể chịu đựng đòn đánh đập tan tành của khối chì và thép khổng lồ này, nhưng chỉ những nhà phiêu lưu mạnh nhất mới có thể sử dụng nó hiệu quả.</string>
     <string name="WarHammer_Name">Búa chiến tranh</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
     <string name="WaterElemental_Gender">masculine</string>
@@ -731,6 +739,7 @@
     <string name="YogsBrain_Name_Objective">não của Yog</string>
     <string name="YogsEye_Desc">Mắt của Thần Cổ, ánh nhìn toàn kiến đầy ắp căm thù vĩnh cửu. Bạn có thể cảm thấy nó nhìn thấu qua linh hồn của mình.</string>
     <string name="YogsHeart_Name_Objective">trái tim Yog</string>
+    <string name="ZombieGnoll_Desc">Cơ thể biến dạng, gãy đổ của gnoll zombie không còn giống người hay linh chó nữa. Còn lại chỉ là một đống thịt thối và xương, đầy lòng thù ghét khao khát giết chóc và nhấn nhá.</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
     <string name="Zombie_Name_Objective">kẻ sống chết</string>
@@ -776,6 +785,7 @@
     <string name="town_deco_shelf_name">Các kệ sách</string>
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
+    <string name="town_deco_statue_blood_desc">Một bức tượng thiên thần uy nghi đang cầm chiếc bát đựng máu.</string>
     <string name="town_deco_tree_name">Cây</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_vat_name">chậu</string>
@@ -1232,6 +1242,16 @@
 
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -131,6 +131,7 @@
     <string name="ChaosBow_Name">chaosboog</string>
     <string name="ChaosCrystal_BladeFused">Het kristal absorber je wapen, en nam de vorm van een zwaard aan</string>
     <string name="ChaosCrystal_Fuse">SMETEN</string>
+    <string name="ChaosShield_desc">Het Chaos Schild ontstaat door het samensmelten van een Chaos Kristal met een gewoon schild, waardoor het bij elke succesvolle blokkade willekeurige chaotische effecten vertoont.</string>
     <string name="ChaosSword_Name">chaoszwaard</string>
     <string name="CharAction_Hit">slaan</string>
     <string name="CharAction_Push">duwen</string>
@@ -233,6 +234,7 @@
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="GoldenKey_Name">Gouden sleutel</string>
     <string name="GoldenStatue_Gender">feminine</string>
+    <string name="Golem_Defense">geblokkeerd</string>
     <string name="Goo_Info1">De slime blaast zichzelf op!</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
     <string name="Halberd_Gender">feminine</string>
@@ -262,6 +264,7 @@
     <string name="HeroSubClass_NameFreR">freerunner</string>
     <string name="HeroSubClass_NameGlad">gladiator</string>
     <string name="HeroSubClass_NameSnip">sluipschutter</string>
+    <string name="HeroSubClass_NameWitchdoctor">toverdokter</string>
     <string name="Hero_Name_Objective">je</string>
     <string name="Hero_NewLevel">Welkom op niveau %d! Je bent nu gezonder en scherper. Het is makkelijker geworden om vijanden te raken en hun aanvallen te ontwijken.</string>
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
@@ -284,8 +287,10 @@
     <string name="IceKey_Info">Deze sleutel lijkt van ijs gemaakt te zijn, maar hij is net zo hard als staal.</string>
     <string name="Ignite_Name">Ontbranden</string>
     <string name="ImpShopkeeper_Name">ambitieze duiveltje</string>
+    <string name="Imp_Desc">Imps zijn mindere demonen. Ze zijn niet bekend om hun kracht of hun magisch talent, maar ze zijn behoorlijk slim en gezellig. Veel imps wonen liever tussen niet-demonen.</string>
     <string name="Imp_Golems2">Hoe gaat het met je golem-safari?</string>
     <string name="Imp_Monks1">Ben je een avonturier? Ik hou van avonturiers! Je kunt altijd op hen rekenen als er iets gedood moet worden. Heb ik gelijk? Voor een beloning, natuurlijk ;)\nIn mijn geval zijn het _monken_ die gedood moeten worden. Je ziet, ik wil hier een klein zakje beginnen, maar deze gekken kopen zelf niets en schrikken andere klanten weg. Dus alsjeblieft, dood... laten we zeggen _8 van hen_ en de beloning is van jou.</string>
+    <string name="Imp_Name">ambitieus duiveltje</string>
     <string name="IncendiaryDart_Name">brandpijl</string>
     <string name="InnKeeperNPC_Desc">De herbergier is trots op zichzelf.</string>
     <string name="InnKeeperNPC_Name_Objective">herbergier</string>
@@ -314,6 +319,7 @@
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
     <string name="Level_TileDescAlchemy">Laat hier wat zaden vallen om een drank te brouwen.</string>
     <string name="Level_TileDescBarricade">De houten barricade zit stevig, maar is over de jaren uitgedroogd. Zal hij branden?</string>
+    <string name="Level_TileDescChasm">Je kunt de bodem niet zien.</string>
     <string name="Level_TileDescExit">De treden leiden naar beneden, naar een diepere verdieping.</string>
     <string name="Level_TileDescTrap">Als je op een verborgen drukplaat stapt, activeer je de val.</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
@@ -400,6 +406,7 @@
     <string name="Paralysis_Name_2">Verstomming %s</string>
     <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
     <string name="PetInventory_Title">Huisdiereninventaris</string>
+    <string name="PetInventory_TookItem">%1$s genomen van %2$s</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te delven!</string>
     <string name="Pickaxe_Name">houweel</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
@@ -465,6 +472,7 @@
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
     <string name="Ring_BuffKnown">Dit is een %1$s</string>
     <string name="Ring_Gems_0">diamant</string>
+    <string name="Ring_Gems_11">agaat</string>
     <string name="Ring_Gems_3">robijn</string>
     <string name="Ring_Gems_4">amethist</string>
     <string name="Ring_Info2">Je %1$s knelt zich pijnlijk om je vinger heen</string>
@@ -616,6 +624,8 @@
     <string name="WandOfAvalanche_Info1">Je verpletterde jezelf met je eigen Toverstaf van Lawine...</string>
     <string name="WandOfBlink_Name">Toverstaf van Blinken</string>
     <string name="WandOfDisintegration_Info">Deze staf straalt een bundel vernietigende energie uit, die alle wezens op zijn pad doorboort. Hoe meer slachtoffers het raakt, des te meer schade het aan elk van hen toebrengt.</string>
+    <string name="WandOfFirebolt_Info1">Je verbrandde jezelf met je eigen Toverstaf van Vuurpijl...</string>
+    <string name="WandOfFirebolt_Name">Toverstaf van Vuurpijl</string>
     <string name="WandOfFlock_Name">Toverstaf van de Kudde</string>
     <string name="WandOfIcebolt_Info1">Je hebt jezelf gedood met je eigen IJsbout...</string>
     <string name="WandOfIcebolt_Name">IJsbultstaf</string>
@@ -632,6 +642,7 @@
     <string name="Wand_Wood_Types_6">wilgen</string>
     <string name="Wand_Wood_Types_8">bamboe</string>
     <string name="Wand_Wood_Types_9">paars hart</string>
+    <string name="WarHammer_Info">Weinig wezens kunnen de verpletterende klap van deze torenhoge massa lood en staal weerstaan, maar alleen de sterkste avonturiers kunnen het effectief gebruiken.</string>
     <string name="WarHammer_Name">oorlogshamer</string>
     <string name="WarriorArmor_Prompt">Kies een richting om te springen</string>
     <string name="WaterElemental_Desc">Water elementalen komen voor bij grote watermassa\'s. Meestal dwalen deze magisch gebonden golven gewoon rond.</string>
@@ -747,6 +758,7 @@
     <string name="YogsBrain_Name_Objective">Hersenen van Yog</string>
     <string name="YogsEye_Gender">masculine</string>
     <string name="YogsHeart_Gender">masculine</string>
+    <string name="ZombieGnoll_Desc">Het verwrongen, gebroken lichaam van een gnoll-zombie lijkt niet meer op een mensachtige of een hyena. Al wat overblijft is een hoop rottend vlees en beenderen, vervuld van een kwaadaardige drang om te doden en te verslinden.</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
     <string name="deco_candle_desc">Grote kaars</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
@@ -1043,6 +1055,19 @@
 
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

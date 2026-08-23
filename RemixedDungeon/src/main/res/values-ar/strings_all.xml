@@ -615,6 +615,7 @@
     <string name="Wand_ACZap">زَاب</string>
     <string name="Wand_SelfTarget">لا يمكنك استهداف نفسك</string>
     <string name="Wand_Wood_Types_7">ماهوغاني</string>
+    <string name="WarHammer_Info">قليلة هي المخلوقات التي تصمد أمام الضربة الساحقة لهذه الكتلة الشاهقة من الرصاص والفولاذ، لكن أقوى المغامرين فقط يمكنهم استخدامه بفعالية.</string>
     <string name="WarHammer_Name">مطرقة حرب</string>
     <string name="Warlock_Killed">سهم الظل الخاص بـ %1$s قتلك...</string>
     <string name="WaterElemental_Gender">masculine</string>
@@ -767,6 +768,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 
