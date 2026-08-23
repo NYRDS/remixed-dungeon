@@ -77,6 +77,7 @@
     <string name="Bag_ACOpen">OPENEN</string>
     <string name="Bandit_Desc">De diepere verdiepingen van de dungeon hebben altijd een schuilplaats geboden voor allerlei criminelen. Niet iedereen kon gezond van verstand blijven tijdens hun lange verblijf ver van het daglicht. Lange geleden zijn deze dolle dieven en bandieten vergeten wie ze zijn en waarom ze stelen. Deze bandiet lijkt zijn dolk met iets te hebben bestreken!</string>
     <string name="Bandit_Name">gekke bandiet</string>
+    <string name="Bandit_Name_Objective">gekke bandiet</string>
     <string name="Barrel_Name">vat</string>
     <string name="Barrel_Pumpkin_Name">pompoen</string>
     <string name="BattleAxe_Gender">masculine</string>
@@ -378,6 +379,7 @@
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="NecromancerNPC_Name">nekromant</string>
     <string name="Necromancy_Title">Necromantie</string>
+    <string name="Necrotism_ACSpecial">NECROTISME</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
     <string name="Nightmare_Name_Objective">nachtmerrie</string>
     <string name="OozeBuff_Name">Bijtend Slijk</string>
@@ -600,6 +602,7 @@
     <string name="TownsfolkNPC_Name">stedelingen</string>
     <string name="TownsfolkSilentNPC_Desc">Een van de bewoners. Hoewel dit duidelijk een gewone burger is, lijken die kleren duur te zijn.</string>
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
+    <string name="TownsfolkSilentNPC_Name">stadbewoner</string>
     <string name="ToxicGas_Info">Hier zweeft een groenachtige wolk van giftig gas.</string>
     <string name="ToxicGland_Name">Giftige klier</string>
     <string name="TreacherousSpirit_Desc">Deze monsterlijke verschijning lijkt op een wolk van levende duisternis. Zijn gigantische oog staart je aan en pulseert bij elke beweging die je maakt.</string>
@@ -753,6 +756,7 @@
     <string name="town_deco_barrel_desc">Een gewoon vat, ook niet meer in de beste staat.</string>
     <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
     <string name="town_deco_blue_carpet_desc">Een luxe blauwe tapijt, versierd met paarse ornamenten.</string>
+    <string name="town_deco_broken_roof_desc">De dakpannen op dit dak zijn gebarsten en moeten vervangen worden.</string>
     <string name="town_deco_broken_wall_desc">De balken in deze muur zijn al lang verrot en hebben hun gewone weerstandskracht verloren.</string>
     <string name="town_deco_brown_carpet_desc">Deze bruine tapijt is onder voet getrapt door veel avonturiers, zwervers en toeschouwers.</string>
     <string name="town_deco_brown_carpet_name">Tapijt</string>
@@ -1039,6 +1043,10 @@
 
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
 
 
 
