@@ -193,6 +193,7 @@
     <string name="DriedRoseBuff_Info">De roos ziet er heel aantrekkelijk uit.</string>
     <string name="DriedRose_Name">gedroogde roos</string>
     <string name="Drink_Message">Die drank was verfrissend!</string>
+    <string name="DrunkardNPC_Desc">Vaste klant van de herberg in natuurlijke staat.</string>
     <string name="DrunkardNPC_Name">dronkaard</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_Tips_12">Als je brandt en zweeft, kun je het vuur niet in water uithassen.</string>
@@ -285,6 +286,7 @@
     <string name="Imp_Golems2">Hoe gaat het met je golem-safari?</string>
     <string name="Imp_Monks1">Ben je een avonturier? Ik hou van avonturiers! Je kunt altijd op hen rekenen als er iets gedood moet worden. Heb ik gelijk? Voor een beloning, natuurlijk ;)\nIn mijn geval zijn het _monken_ die gedood moeten worden. Je ziet, ik wil hier een klein zakje beginnen, maar deze gekken kopen zelf niets en schrikken andere klanten weg. Dus alsjeblieft, dood... laten we zeggen _8 van hen_ en de beloning is van jou.</string>
     <string name="IncendiaryDart_Name">brandpijl</string>
+    <string name="InnKeeperNPC_Desc">De herbergier is trots op zichzelf.</string>
     <string name="InnKeeperNPC_Name_Objective">herbergier</string>
     <string name="InnServant_Phrase_1">Bah, nog zoveel te doen!</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
@@ -532,6 +534,7 @@
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
+    <string name="Spells_NotTooFast">%s is nog niet klaar voor gebruik</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
     <string name="SpiderElite_Name">spinnen elitewachter</string>
@@ -756,6 +759,7 @@
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_charcoal_carpet_name">Tapijt</string>
+    <string name="town_deco_chest_desc">Handig meubelstuk voor het opbergen van allerlei spullen en sieraden.</string>
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
     <string name="town_deco_common_bed_desc">Gewoon bed.</string>
     <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
@@ -766,6 +770,7 @@
     <string name="town_deco_fireplace_desc">Uitstekend om je mee op te warmen in zo\'n koude plek als deze.</string>
     <string name="town_deco_flowerinthepot_desc">Decoratieve bloem met een zoete smaak</string>
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
+    <string name="town_deco_inn_bed_desc">Ziet eruit als een heel comfortabel bed.</string>
     <string name="town_deco_library_books_desc">Nog steeds beter dan de boeken uit de kelder.</string>
     <string name="town_deco_library_sign_name">Bibliotheekbord</string>
     <string name="town_deco_locked_door_desc">Wat ter wereld zou er achter die deur kunnen zitten?</string>
@@ -1034,6 +1039,11 @@
 
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
 
 
 

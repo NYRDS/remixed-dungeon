@@ -192,6 +192,7 @@
     <string name="DriedRose_Name">hoa hồng khô</string>
     <string name="Drink_ACDrink">UỐNG</string>
     <string name="Drink_Message">Thức uống đó thật sảng khoái!</string>
+    <string name="DrunkardNPC_Desc">Khách quen của quán rượu trong trạng thái tự nhiên.</string>
     <string name="DrunkardNPC_Name">người say xỉn</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
@@ -455,6 +456,7 @@
     <string name="RawFish_Name">cá sống</string>
     <string name="RawFish_Taste">Vị cá!</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Trò chơi của chúng tôi đã bị lỗi...\n Xin lỗi.\nVui lòng gửi báo cáo lỗi để giúp chúng tôi khắc phục.</string>
+    <string name="ResultDescriptions_Immured">Bị vùi kín trong đá ở tầng %d</string>
     <string name="ResultDescriptions_Necromancy">Hết sức lực khi cố gắng hồi sinh xác ở tầng %d</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
     <string name="RingOfDetection_Info">Đeo nhẫn này giúp bạn nhận ra những bí mật ẩn giấu - bẫy và cửa bí mật - mà không cần dành thời gian tìm kiếm. Nhẫn dò tìm xuống cấp sẽ làm tê liệt giác quan của bạn, khiến bạn khó nhận ra bí mật hơn ngay cả khi chủ động tìm kiếm.</string>
@@ -754,6 +756,7 @@
     <string name="town_deco_grandclock_desc">Một cơ chế khá cũ nhưng vẫn hoạt động.</string>
     <string name="town_deco_hay_desc">Một đống rơm nhỏ thơm thơm.</string>
     <string name="town_deco_hay_name">Cỏ khô</string>
+    <string name="town_deco_inn_bed_desc">Trông có vẻ là một chiếc giường rất thoải mái.</string>
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
     <string name="town_deco_painting_desc">Một tác phẩm nghệ thuật đẹp đẽ.</string>
     <string name="town_deco_pathway_name">đường mòn</string>
@@ -1226,6 +1229,9 @@
 
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
