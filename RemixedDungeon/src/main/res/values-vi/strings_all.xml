@@ -16,6 +16,7 @@
     <string name="Accuracy_DecreasedDoctor">Mỗi lần gióg %s này lan truyền sự không hoàn hảo. Cây cưa xương của tôi chữa lành... cái này gây nhiễm.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Tay trần làm nhiễm bẩn kỹ thuật. Không có đường cắt sạch của Rọc, sự ngắm bắn của tôi trở nên hỗn loạn.</string>
     <string name="AirElemental_Desc">Yếu tố không khí là những sinh vật phép thuật bay được tạo thành từ không khí sống.</string>
+    <string name="AirElemental_Name_Objective">nguyên tố khí</string>
     <string name="AlchemyPot_SelectSeed">Chọn một hạt giống để ném</string>
     <string name="AllowStatisticsCollectionScene_Allow">Cho phép</string>
     <string name="AllowStatisticsCollectionScene_Deny">Từ chối</string>
@@ -32,6 +33,7 @@
     <string name="Amulet_Name">Bùa Yendor</string>
     <string name="ArmorKit_ACAplly">ÁP DỤNG</string>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
+    <string name="Armor_Glyph">chữ khắc</string>
     <string name="Armor_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
     <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
     <string name="ArmoredStatue_Name">tượng hoạt động</string>
@@ -57,15 +59,20 @@
     <string name="Badges_ItemLvl4">Đã đạt được vật phẩm cấp 12</string>
     <string name="Badges_LevelReached1">Đã đạt cấp độ 6</string>
     <string name="Badges_LevelReached4">Đạt cấp 24</string>
+    <string name="Badges_MonsterSlain5">Hạ gục 1000 kẻ địch</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
+    <string name="Badges_Piranhas">Săn được 6 cá ăn thịt người</string>
     <string name="Badges_PotionsCooked3">9 thuốc đã nấu</string>
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
     <string name="Badges_ShadowLord_Slain">Chúa Tể Bóng Tối đã bị tiêu diệt</string>
+    <string name="Barrel_Name">thùng gỗ</string>
     <string name="Barrel_Pumpkin_Name">bí ngô</string>
     <string name="BattleAxe_Info">Đầu rìu thép khổng lồ của chiếc rìu chiến này mang lại trọng lượng đáng kể cho mỗi cú gảy.</string>
     <string name="BattleAxe_Name">rìu chiến đấu</string>
+    <string name="Bee_Gender">masculine</string>
     <string name="BellaNPC_Angry">Dám... ngươi kẻ nhục nát!</string>
     <string name="BellaNPC_Desc">Một cô gái trông rất sang trọng. Toàn bộ vẻ ngoài của cô ấy nói với bạn: \&quot;Tôi quá tốt cho mọi người.\&quot;</string>
+    <string name="BellaNPC_Yes_End_Game">Chắc chắn rồi (Kết thúc trò chơi)</string>
     <string name="BishopNPC_Desc">Giám mục của Giáo hội Thánh của Santa Chúa Sâu</string>
     <string name="BishopNPC_Name">Giám mục</string>
     <string name="BishopNPC_Name_Objective">giám mục</string>
@@ -76,6 +83,7 @@
     <string name="BlackCat_Phrases_1">Meo...</string>
     <string name="BlackCat_Phrases_2">Meo meo!</string>
     <string name="BlackSkullOfMastery_BecomeLichDesc">Lich là một thuật sư tử thi đã đạt đến đỉnh cao của khả năng mình. Sinh tồn giữa sự sống và cái chết, Lich xuất sắc trong thuật hồi sinh, nhưng kỹ năng chiến đấu của hắn thấp hơn rất nhiều so với người thường.</string>
+    <string name="BlackSkull_Activated">Đầu lâu đen đã thức tỉnh!</string>
     <string name="BlackSkull_Ressurrect">Đỉnh Đen Đã Hồi Sinh Quái Vật Chết Để Phục Vụ Bạn!</string>
     <string name="Blacksmith_Gold1">Này người! Muốn làm việc hữu ích chứ? Lên cái cuốc này và đào cho ta ít _khoáng vàng đen_, _15 miếng_ là đủ rồi. Cái gì? Như thế nào mà ta trả tiền? Ngươi tham lam...\nỪ, ừ, ta không có tiền trả, nhưng ta có thể làm đồ sắt cho ngươi. Coi ngươi may mắn, ta là thợ rèn duy nhất ở đây.</string>
     <string name="Blacksmith_Verify2">Chọn 2 vật phẩm cùng loại!</string>
@@ -87,6 +95,7 @@
     <string name="BoneSaw_Info">Một cái cạo phẫu thuật được thiết kế chính xác để thâm nhiễm nhanh chóng. Sát thương và tốc độ tấn công của nó trở nên nguy hiểm hơn cùng với kỹ năng của Bác sĩ Chết Chóc. Các đòn chí mạng cắt thêm các phần có thể thu hoạch từ kẻ thù, và nó tấn công với hiệu quả tàn nhẫn đối với kẻ thù bị tê liệt.</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Brute_Name_Objective">gnoll brute</string>
+    <string name="BurningBuff_Info">Cơ thể bị lửa thiêu đốt!</string>
     <string name="BurningFist_Name_Objective">cú đấm bùng cháy</string>
     <string name="CagedKobold_Desc">Một kobold, trong một lồng.</string>
     <string name="CagedKobold_Intro">Ê... Ê! Cậu là phiêu lưu gia kia, đúng không? Giúp tớ một chút, bạn ơi, bọn quân phiệt đã giam tớ ở đây! Chúng định kích hoạt lại một vũ khí cổ xưa để chinh phục những con người trên mặt đất! Nhưng vì quá nguy hiểm, tớ đã phản đối, mà chúng ném tớ ra ngoài và giam trong lồng! Tớ xin nhờ cậu tìm chìa khóa cái buồng này, và như hồi báo, tớ sẽ giúp cậu hết sức có thể.</string>
@@ -103,7 +112,11 @@
     <string name="Carcass_Name">tàn dư của %s</string>
     <string name="Carcass_Necromancy">Bạn đã hồi sinh thi thể của %s!</string>
     <string name="Caves_TileDescHighGrass">Nấm khổng lồ chắn tầm nhìn.</string>
+    <string name="Caves_TileHighGrass">Nấm phát sáng</string>
+    <string name="Caves_TileWater">Nước lạnh buốt.</string>
+    <string name="Challenges_Descriptions_3">Vùng đất xung quanh hầm ngục đã lâu bị ác ý xâm nhiễm, ngăn cản sự nảy mầm của hạt giống cho các loại thảo mộc và thực vật. Ai biết được còn bao lâu nữa cây cối cuối cùng sẽ ngừng tồn tại trên vùng đất hoang tàn này.</string>
     <string name="Challenges_Names_1">Niềm tin là giáp trụ của tôi</string>
+    <string name="Challenges_Names_5">Vào bóng tối</string>
     <string name="ChampionOfAirBuff_Info">Đặc tính này ban tặng cho sinh vật bản chất của gió, nâng cao sự nhanh nhẹn và khả năng chiến đấu. Võ sĩ Bậc Thầy Khí trở thành đối thủ đáng gờm, có thể tung ra những đòn tấn công nhanh chóng và tàn phá có thể thay đổi nhanh chóng cục diện trận chiến.</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Được thâu nhục bởi cơn giận của ngọn lửa, đặc tính này khuếch đại sự dữ dằn và khả năng chiến đấu của sinh vật. Võ sĩ Lửa nổi lên như một đối thủ đáng sợ, tung ra những đòn tấn công tàn khốc có thể bao quanh kẻ thù trong ngọn lửa thiêu rực, khiến tất cả những kẻ dám chống đối đều run rợn.\&quot;</string>
@@ -118,8 +131,10 @@
     <string name="ChaosHelmet_Info">Một chiếc mũ đỏ màu máu là biểu tượng thiết yếu của một chiến binh hỗn loạn.</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
     <string name="ChaosStaff_Name">gậy hỗn loạn</string>
+    <string name="CharAction_Hit">đánh</string>
     <string name="CharAction_Push">đẩy</string>
     <string name="CharAction_Take">Nhặt lấy</string>
+    <string name="CharAction_Taunt">khiêu khích</string>
     <string name="Char_Hit_2">%1$s đánh trúng %2$s</string>
     <string name="Char_StaAmok">phát cuồng</string>
     <string name="Char_StaDizzy">choáng váng</string>
@@ -130,6 +145,7 @@
     <string name="Char_StaParalysed">liệt</string>
     <string name="Char_StaPoisoned">bị độc</string>
     <string name="Char_StaRooted">bị rễ</string>
+    <string name="Char_StaSlowed">bị làm chậm</string>
     <string name="Char_StaStunned">choáng váng</string>
     <string name="Char_StaVision">tầm nhìn</string>
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
@@ -138,6 +154,8 @@
     <string name="Chasm_Info">Bạn đã rơi xuống vực chết chóc...</string>
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
     <string name="City_TileDescDeco">Ở đây thiếu một vài viên gạch.</string>
+    <string name="ClassArmor_NotEquipped">Bạn cần mặc bộ giáp này để sử dụng sức mạnh đặc biệt của nó!</string>
+    <string name="Claymore_Info">Thanh kiếm đồ sộ này chắc chắn có thể chém xuyên qua bất cứ thứ gì.</string>
     <string name="Claymore_Name">Kiếm Claymore</string>
     <string name="CloakSpell_Info">Bước vào bóng tối để trở nên vô hình. Giảm đáng kể cơ hội bị phát hiện. Không thể sử dụng khi kẻ địch ở gần.</string>
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
@@ -157,19 +175,23 @@
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Những chiếc gai kim loại đơn giản này được cân bằng lý tưởng để đâm trúng con mồi của chúng một cách chính xác.</string>
     <string name="Dart_Name">đĩa</string>
+    <string name="DashSpell_OnSelf">Tôi không thể lướt tại chỗ.</string>
     <string name="DeathKnight_Desc">Ban đầu, đây là một chiến binh mạnh mẽ trong bộ giáp nặng, và chỉ có một nụ cười chết chóc mới tiết lộ bản chất của hắn. Kỵ sĩ tử thần là sự hiện thân của linh hồn một kỵ sĩ đã thất bại trong việc giữ lời thề. Và trong trạng thái bị nguyền rủa, hắn sẽ mãi mãi lang thang tìm kiếm sự thanh tẩy qua chiến đấu, giết người vô tội, không thể nhớ ra hắn đã thề bảo vệ ai.</string>
     <string name="Death_Name_0">Quỷ %s</string>
+    <string name="DeepSnail_Desc">Loài thân mềm này thường xuất hiện gần nguồn nước và nhanh hơn nhiều so với ốc sên thường. Tuy nhiên hãy cẩn thận với vết cắn, chúng có thể gây ảnh hưởng khó chịu lên làn da của bạn.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">Cơn đau đã biến thành cơn đau chậm, làm giảm sát thương nhận được một lần.\nSát thương còn lại để nhận %d</string>
     <string name="DewVial_Full">Lọ hơi sương đã đầy!</string>
     <string name="DewVial_Name">lọ sương</string>
     <string name="DieHardBuff_Info">Tốc độ hồi phục tăng lên.</string>
+    <string name="DoctorArmor_Name">Trang phục bác sĩ</string>
     <string name="DonateButton_thanks">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="DriedRoseBuff_Info">Bông hồng trông rất quyến rũ.</string>
     <string name="DriedRose_Info">Bông hồng này đã khô héo từ lâu, nhưng cách nào đó nó vẫn giữ nguyên tất cả cánh hoa.</string>
     <string name="DriedRose_Info2"> Và nó vẫn chưa mất đi sự quyến rũ của mình. Nó trông đẹp đến mức bạn muốn giữ nó mãi mãi.</string>
     <string name="DriedRose_Name">hoa hồng khô</string>
     <string name="Drink_ACDrink">UỐNG</string>
+    <string name="Drink_Message">Thức uống đó thật sảng khoái!</string>
     <string name="DrunkardNPC_Name">người say xỉn</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
@@ -179,7 +201,10 @@
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
     <string name="EarthElemental_Name">nguyên tố đất</string>
     <string name="EarthElemental_Name_Objective">nguyên tố đất</string>
+    <string name="ElfArmor_ACSpecial">TIẾNG GỌI CỦA THIÊN NHIÊN</string>
     <string name="ElvenDagger_Gender">masculine</string>
+    <string name="EncumbranceBuff_CharAct_2">Cái %s này quá nặng để tôi có thể sử dụng hiệu quả.</string>
+    <string name="EncumbranceBuff_CharAct_4">Tôi thiếu sức mạnh để sử dụng %s với đầy đủ tiềm năng của nó.</string>
     <string name="EquipableItem_Unequip">Bạn không thể tháo bỏ %s bị nguyền rủa!</string>
     <string name="ExplodingSkull_Desc">Đầu lâu bay này đang bốc lửa, có vẻ cực kỳ mong manh, dường như nó sẽ bùng nổ bất cứ lúc nào.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
@@ -188,6 +213,7 @@
     <string name="Eye_Desc">Một trong những cái tên khác của quỷ này là \&quot;cầu bóng căm thù\&quot;, vì khi thấy kẻ thù, nó sử dụng cái nhìn tử thần một cách liều lĩnh, thường bỏ qua đồng minh và làm bị thương họ.</string>
     <string name="Eye_Name">con mắt quỷ</string>
     <string name="Facilitations_Names_1">Cơ thể khỉ lợn</string>
+    <string name="Facilitations_Names_2">Linh hồn thần đèn</string>
     <string name="FetidRat_Desc">Loài chuột túi này lớn hơn nhiều so với chuột thường. Nó bị bao quanh bởi một đám mây hôi thối.</string>
     <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">chuột hôi</string>
@@ -203,6 +229,7 @@
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenCarpaccio_Info3">Sảng khoái!</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
+    <string name="GameScene_NightMode">Hãy cẩn thận, hầm ngục còn nguy hiểm hơn vào ban đêm!</string>
     <string name="GameScene_Welcome">Chào mừng bạn đến cấp %d của Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Chào mừng quay lại cấp độ %d của Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Name">Miễn dịch khí gas</string>
@@ -237,16 +264,22 @@
     <string name="HeroClass_RogPerks_0">Kẻ lừa đảo bắt đầu với Nhẫn Bóng Tối+1.</string>
     <string name="HeroClass_RogPerks_3">Kẻ trộm thành thạo trong việc phát hiện cửa và bẫy ẩn giấu.</string>
     <string name="HeroClass_RogPerks_5">Cuộn Bản đồ Ma thuật được nhận diện ngay từ đầu.</string>
+    <string name="HeroSubClass_DescFreR">_Kẻ Vượt Rào_ có thể di chuyển gần gấp đôi so với hầu hết quái vật. Khi đang chạy, kẻ vượt rào khó bị đánh trúng hơn nhiều. Nhưng để làm được điều đó, anh ta không được quá tải và phải no bụng.</string>
     <string name="HeroSubClass_DescGlad">Một cú đánh thành công bằng vũ khí cận chiến cho phép _Gladiator_ bắt đầu một combo, trong đó mỗi đòn đánh thành công tiếp theo gây sát thương lớn hơn.</string>
     <string name="HeroSubClass_DescWarL">Sau khi giết một kẻ thù, _Pháp Sư_ sẽ hấp thụ linh hồn của nó. Điều này chữa lành vết thương và làm no đói của hắn.</string>
     <string name="HeroSubClass_DescWard">Với sự kết nối mạnh mẽ với các lực lượng thiên nhiên, _Kiến Trùm_ có khả năng thu thập giọt sương và hạt giống từ các cây cỏ. Ngoài ra, đi qua bụi cỏ cao cũng ban cho họ một đợt tăng giáp tạm thời.</string>
     <string name="HeroSubClass_NameFreR">kẻ chạy tự do</string>
+    <string name="HeroSubClass_NameSnip">xạ thủ</string>
     <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="HeroSubClass_NameWitchdoctor">thầy pháp</string>
+    <string name="Hero_NewLevel">Chào mừng đến cấp độ %d! Giờ bạn khỏe mạnh và tập trung hơn. Dễ dàng đánh trúng kẻ địch và né tránh đòn tấn công của chúng hơn.</string>
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
     <string name="Hero_StaBurning">Bạn bị bốc cháy!</string>
+    <string name="Hero_StaCharm">Bạn bị mê hoặc!</string>
     <string name="Hero_Wait">...</string>
     <string name="Horror_Name_0">Quái dị %s</string>
+    <string name="Horror_Name_1">%s rùng rợn</string>
+    <string name="Horror_Name_2">%s rùng rợn</string>
     <string name="HungerBuff_Info1">Bạn đang đói!</string>
     <string name="HungerBuff_Name1">Đói</string>
     <string name="Hunger_Hungry_0">Bạn đang đói.</string>
@@ -258,10 +291,12 @@
     <string name="IceCaves_TileGrass">Cỏ đóng băng.</string>
     <string name="IceGuardianCoreModule_Info">Đây là một cấu trúc phức tạp được làm từ băng ma thuật. Một viên đá phát sáng được đặt bên trong phát minh kỳ diệu này.</string>
     <string name="IceGuardianCore_DieInfo">Ở đây quá lạnh, tôi nên quay lại cấp 14 và cố gắng tìm đường đến nơi ấm áp hơn.</string>
+    <string name="IceGuardian_Name_Objective">vệ binh băng</string>
     <string name="IceKey_Name">chìa khóa băng</string>
     <string name="Ignite_Name">Đốt Cháy</string>
     <string name="Imp_Monks1">Bạn có phải là phiêu lưu gia? Tôi yêu thích những phiêu lưu gia! Bạn luôn có thể dựa vào họ khi cần giết cái gì đó. Đúng không? Dĩ nhiên là phải trả tiền ;)\nTrong trường hợp của tôi là _mönk_ cần bị tiêu diệt. Các bạn thấy, tôi định mở một chút kinh doanh ở đây, nhưng những kẻ điên khùng này không mua gì cả và sẽ làm hoảng sợ khách khác. Vậy hãy giúp tôi tiêu diệt... nói là _8 người_ và phần thưởng sẽ thuộc về bạn.</string>
     <string name="Imp_Monks2">Ôi, bạn vẫn còn sống! Tôi biết rằng kung-fu của bạn mạnh hơn ;) Chỉ đừng quên nhặt những tín chỉ của các nhà sư này.</string>
+    <string name="IncendiaryDart_Name">phi tiêu phóng hỏa</string>
     <string name="InnKeeperNPC_Desc">Chủ quán rất tự hào về bản thân.</string>
     <string name="InnKeeperNPC_Name">chủ quán</string>
     <string name="InnKeeperNPC_Name_Objective">chủ quán</string>
@@ -274,34 +309,44 @@
     <string name="IntroScene_Txt">Nhiều anh hùng đủ mọi loại đã mạo hiểm vào Ngục Trại trước bạn. Một số đã trở về với kho báu và pháp thuật, hầu hết thì không bao giờ được nghe tin tức. Nhưng không ai thành công trong việc lấy được Huyền Chương Yendor, đồ vật được cho là chôn sâu trong lòng Ngục Trại. Bạn cảm thấy mình đã sẵn sàng cho thử thách, và quan trọng hơn, bạn tin rằng may mắn đang mỉm cười với bạn. Đã đến lúc bắt đầu cuộc phiêu lưu của mình!</string>
     <string name="InvisibilityBuff_Info">Hoàn toàn vô hình, có thể giúp tránh nguy hiểm hoặc trở thành nguy hiểm.</string>
     <string name="IronKey_FromDepth">chìa khóa sắt từ độ sâu %d</string>
+    <string name="Item_Info2">điều gì đó</string>
     <string name="Item_Name">vật phẩm</string>
     <string name="JarOfSouls_Desc">Cặp mắt sáng lóa của chiếc sọ được vẽ trên cái hũ cũ này, cũng như năng lượng kỳ lạ mà nó tỏa ra, khiến bạn cảm thấy bất an.</string>
+    <string name="JarOfSouls_Name_Objective">bình chứa linh hồn</string>
     <string name="Journal_Caged_Kobold">Kobold Bị Giam</string>
     <string name="Journal_Troll">Thợ rèn Troll</string>
     <string name="King_Desc">Vua cuối cùng của người lùn nổi tiếng với sự thấu hiểu sâu sắc về quá trình sống và chết. Ngài đã thuyết phục các thành viên triều đình tham gia nghi lễ, hứa hẹn ban tặng thanh xuân vĩnh cửu. Kết cục chỉ có Ngài nhận được nó - và một quân đoàn bất tử làm phần thưởng thêm.</string>
     <string name="King_Gender">masculine</string>
     <string name="King_Info1">Bạn không thể giết được tôi, %s... Tôi là... bất tử...</string>
     <string name="Knuckles_Name">cặp đấm</string>
+    <string name="Kobold_Desc">Người ta tin rằng Kobold chỉ là truyền thuyết. Là tổ tiên của loài quỷ lùn, kobold cư ngụ trong những hang động sâu và lạnh nhất. Người ta cũng kể rằng giống loài này đã làm chủ kỹ nghệ và máy móc từ lâu trước khi người lùn làm được điều đó.</string>
     <string name="Kobold_Gender">masculine</string>
+    <string name="KunaiThrow_Name">Ném kunai</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Leech_Name_0">Hút máu %s</string>
     <string name="Level_TileDefault">\?\?\?</string>
+    <string name="Level_TileDescExit">Cầu thang dẫn xuống tầng sâu hơn.</string>
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
     <string name="Level_TileDescPileOfStones">Một đống đá cực kỳ nặng, trông không thể di chuyển được.</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
+    <string name="Level_TilePedestal">Bệ đá</string>
     <string name="Level_TilePileOfStones">Đống đá</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
     <string name="Level_TileWater">Nước</string>
     <string name="Level_TileWell">Giếng</string>
+    <string name="LevitationBuff_Info">Cơ thể lơ lửng trên mặt đất, tránh các bẫy và nguy hiểm khác trên mặt đất.</string>
+    <string name="LibrarianNPC_Message_Instruction">Ch-chào. Chào mừng đến Thư viện. Ở đây bạn có thể tìm thông tin về đủ thứ có thể tìm thấy trong hầm ngục... thực ra chúng tôi chỉ cung cấp kiến thức do các nhà mạo hiểm khám phá ra thôi. Điều đó... hơi đáng xấu hổ. Nên mỗi lần bạn ghé thăm, có lẽ sẽ lại có điều mới để đọc.</string>
     <string name="LibrarianNPC_Message_Not_Ready">T... Tôi xin lỗi, th-thư viện chưa mở... đợi chút.</string>
     <string name="LibrarianNPC_Name_Objective">thủ thư</string>
     <string name="LightBuff_Info">Ánh sáng phát ra từ cơ thể, soi sáng mọi thứ xung quanh.</string>
     <string name="LightningTrap_Name">bẫy sét</string>
+    <string name="LloidsBeacon_ACReturn">TRỞ VỀ</string>
     <string name="LloidsBeacon_ACSet">ĐẶT</string>
     <string name="LloidsBeacon_Preventing">Một loại halo ma thuật mạnh mẽ hiện diện ở đây ngăn cản bạn sử dụng cột đèn của Lloyd!</string>
     <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
+    <string name="MageArmor_ACSpecial">ĐẤT NONG</string>
     <string name="MageArmor_NotMage">Chỉ pháp sư mới có thể sử dụng giáp này!</string>
-    <string name="MagicArrow_Name">Mũi Tên Ma Thuật</string>
+    <string name="MagicArrow_Name">Mũi tên phép thuật</string>
     <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
     <string name="MailArmor_Desc">Các vòng kim loại liên kết tạo nên một bộ giáp cứng cáp nhưng linh hoạt.</string>
     <string name="MailArmor_Name">áo giáp xích</string>
@@ -309,6 +354,8 @@
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
     <string name="MeleeWeapon_Info1c">nâng cấp</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
+    <string name="MeleeWeapon_Info2a">Sát thương trung bình là %d điểm mỗi lần đánh.</string>
+    <string name="MeleeWeapon_Info3a">Đây là một vũ khí khá %s.</string>
     <string name="MeleeWeapon_Info3d">và</string>
     <string name="MeleeWeapon_Info3g">kém chính xác</string>
     <string name="MercenaryNPC_Name">lính thuê</string>
@@ -317,6 +364,7 @@
     <string name="MimicPie_Name">mimik</string>
     <string name="MimicPie_Name_Objective">mimik</string>
     <string name="Mimic_Gender">masculine</string>
+    <string name="MissileWeapon_Info1">\n\nSát thương trung bình của vũ khí này bằng %d điểm mỗi lần đánh.</string>
     <string name="MissileWeapon_Missiles">Vũ khí phóng xạ</string>
     <string name="Mob_ItemUse">%1$s sử dụng %2$s</string>
     <string name="Mob_StaControlledStatus">%s này đang bị ám bởi ma quỷ</string>
@@ -337,6 +385,7 @@
     <string name="Necromancy_SoulsCountLabel">Linh hồn</string>
     <string name="NecrotismBuff_Info">Dấu ấn của chính cái chết, mùi hôi từ đó ảnh hưởng đến những người gần đó và khiến họ chia sẻ chung một định mệnh.</string>
     <string name="NecrotismBuff_Name">Hoại tử</string>
+    <string name="Nightmare_Name_Objective">ác mộng</string>
     <string name="Ooze_Death">%s nuốt chửng bạn...</string>
     <string name="PalaceServant_Golem_1">...</string>
     <string name="PalaceServant_Golem_2">Hội trường này là thiêng liêng.</string>
@@ -347,17 +396,21 @@
     <string name="PalaceServant_Warlock_1">Ma thuật của ta phục vụ vương quyền, chứ không phải ngươi.</string>
     <string name="PalaceServant_Warlock_2">Ngươi mang thép đến một thánh địa ư?</string>
     <string name="PalaceServant_Warlock_3">Sự kiên nhẫn của Nhà vua là có hạn.</string>
+    <string name="ParalysisBuff_Name">Bị tê liệt</string>
+    <string name="Paralysis_Name_0">%s choáng váng</string>
     <string name="PetInventory_GiveToPet">Cho thú cưng</string>
     <string name="PetInventory_PetBackpackFull">Ba lô của thú cưng đã đầy</string>
     <string name="PetInventory_TakeFromPet">Lấy từ thú cưng</string>
     <string name="PetInventory_Title">Kho thú cưng</string>
     <string name="PetInventory_ViewManage">Quản lý</string>
     <string name="Pickaxe_Info">Đây là một công cụ lớn và chắc chắn để phá đá. Nó có thể được dùng như một vũ khí.</string>
+    <string name="Pickaxe_InsufficientStr">Không đủ sức mạnh để khai thác!</string>
     <string name="Pickaxe_NothingToMine">Không có gì để khai thác ở đây!</string>
     <string name="Piranha_Name">piranha khổng lồ</string>
     <string name="PlagueDoctorMaskHood_Name">Mặt nạ Bác Sĩ Chúm với mũ che đầu</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Bạn vẫn còn ở đây à? Đây, hãy lấy đi!</string>
     <string name="PlagueDoctorNPC_Desc">Toàn bộ cơ thể của kẻ lưng gù này bị che lấp dưới bộ đồ da. Từ hắn bốc mùi thuốc và... tỏi?</string>
+    <string name="PlagueDoctorNPC_Name">bác sĩ dịch hạch</string>
     <string name="PlagueDoctorNPC_Name_Objective">bác sĩ dịch hạch</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
@@ -369,8 +422,11 @@
     <string name="PoisonBuff_Name">Bị Độc</string>
     <string name="Poison_Death">Bạn đã chết vì độc...</string>
     <string name="Poison_Name_0">Độc %s</string>
+    <string name="PortalExit_Desc">Cổng dịch chuyển này sẽ đưa bạn đến tầng đầu tiên của %s.</string>
+    <string name="PortalGate_Desc">Những đường khắc trên bề mặt cổng dịch chuyển này tạo thành một hoa văn kỳ lạ. Nó trông giống như một đường hầm khổng lồ dẫn về phía xa. Nhưng nhìn từ bên cạnh, ta thấy rõ bề mặt của nó gần như phẳng lì.</string>
     <string name="PotionBelt_Info">Chiếc đai da chắc chắn này có thể đựng tất cả bình thuốc của bạn, đồng thời bảo vệ chúng không bị vỡ do giá lạnh.</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
+    <string name="PotionOfMana_Info">Bình thuốc này sẽ phục hồi năng lượng tinh thần của bạn.</string>
     <string name="PotionOfMana_Name">Bình Mana</string>
     <string name="PotionOfMight_Name">Bình Thuốc Mạnh Mẽ</string>
     <string name="PotionOfMindVision_Apply2">Bạn có thể cảm nhận được rằng bạn là sinh vật sống duy nhất trên tầng này lúc này.</string>
@@ -378,6 +434,7 @@
     <string name="PotionOfPurity_NoSmell">Bạn đã ngừng cảm nhận được mùi hương nào cả!</string>
     <string name="Potion_ACMoisten">LÀM ẨM</string>
     <string name="Potion_Beneficial">Chai thuốc có lợi</string>
+    <string name="Potion_Colors_1">đỏ tươi</string>
     <string name="Potion_Colors_8">màu hổ phách</string>
     <string name="Potion_Name">%s thuốc</string>
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
@@ -391,15 +448,18 @@
     <string name="Pumpkin_Name">Bí ngô</string>
     <string name="RatHide_Name">da chuột</string>
     <string name="RatKing_Died">Vua đã chết. Chúc Vua vạn tuế!</string>
+    <string name="RatKing_Info1">Ta không ngủ!</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name_Objective">chuột túi</string>
     <string name="RawFish_Name">cá sống</string>
+    <string name="RawFish_Taste">Vị cá!</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Trò chơi của chúng tôi đã bị lỗi...\n Xin lỗi.\nVui lòng gửi báo cáo lỗi để giúp chúng tôi khắc phục.</string>
     <string name="ResultDescriptions_Necromancy">Hết sức lực khi cố gắng hồi sinh xác ở tầng %d</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
+    <string name="RingOfDetection_Info">Đeo nhẫn này giúp bạn nhận ra những bí mật ẩn giấu - bẫy và cửa bí mật - mà không cần dành thời gian tìm kiếm. Nhẫn dò tìm xuống cấp sẽ làm tê liệt giác quan của bạn, khiến bạn khó nhận ra bí mật hơn ngay cả khi chủ động tìm kiếm.</string>
     <string name="RingOfDetection_Name">Nhẫn Phát Hiện</string>
-    <string name="RingOfElements_Name">Nhẫn của các Nguyên tố</string>
+    <string name="RingOfElements_Name">Nhẫn Nguyên tố</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
     <string name="RingOfHerbalism_Info">Nhẫn này tăng cơ hội thu thập sương mai và hạt giống từ cỏ bị giẫm đạp.</string>
     <string name="RingOfMending_Name">Nhẫn Chữa Lành</string>
@@ -420,6 +480,7 @@
     <string name="SacrificialSword_Name">kiếm hiến tế</string>
     <string name="ScarecrowNPC_Name_Objective">ngáo</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
+    <string name="Scorpio_Desc">Những sinh vật ác quỷ khổng lồ giống nhện này né tránh chiến đấu cận chiến bằng mọi giá, bắn ra những gai răng cưa làm tê liệt từ khoảng cách xa.</string>
     <string name="ScrollOfCurse_Info">Cuộn giấy này được tạo ra đặc biệt để trừng phạt những tên trộm đủ ngu ngốc để cố gắng sử dụng phép thuật mà chúng không thể hiểu. Pháp thuật của cuộn giấy hoàn toàn vô dụng thậm chí có hại cho phiêu lưu gia thông thường, nhưng được các thương nhân trân trọng rất cao.</string>
     <string name="ScrollOfIdentify_InvTitle">Chọn một vật phẩm để nhận diện</string>
     <string name="ScrollOfIdentify_Name">cuộn nhận diện</string>
@@ -427,8 +488,10 @@
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
     <string name="ScrollOfRemoveCurse_Info">Lời chú trên cuộn này sẽ tách ngay lập tức khỏi vũ khí, giáp, nhẫn và vật mang theo của người đọc bất kỳ lời nguyền xấu nào có thể ngăn cản người đeo tháo chúng ra.</string>
     <string name="ScrollOfRemoveCurse_Proced">Cái ba lô của bạn phát sáng bằng ánh sáng thanh tẩy, và một năng lượng dữ tợn tan biến.</string>
+    <string name="ScrollOfSummoning_Info">Khi đọc to, cuộn giấy này sẽ triệu hồi một con quái vật từ tầng hầm ngục hiện tại. Và nếu ý chí của nó đủ yếu, nó sẽ trở thành tôi tớ của bạn.</string>
     <string name="ScrollOfTeleportation_NoTeleport">Sức mạnh ma pháp của nơi này ngăn cản việc dịch chuyển của bạn!</string>
     <string name="ScrollOfTeleportation_Teleport">Trong nháy mắt, bạn đã được dịch chuyển đến một vị trí khác trên cấp độ này.</string>
+    <string name="ScrollOfTerror_Info3">Cuộn giấy phát ra một tia sáng đỏ rực và lũ quái vật bỏ chạy!</string>
     <string name="ScrollOfWeaponUpgrade_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
     <string name="ScrollOfWeaponUpgrade_Name">Cuộn Nâng Cấp Vũ Khí</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
@@ -450,33 +513,39 @@
     <string name="SeedPouch_Info">Túi velour nhỏ này cho phép bạn chứa bất kỳ số lượng hạt giống nào trong đó. Rất tiện lợi.</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServiceManNPC_Desc">Một công nhân thông thường của các cơ sở địa phương.</string>
+    <string name="ServiceManNPC_Name">nhân viên</string>
     <string name="ServiceManNPC_Name_Objective">nhân viên</string>
     <string name="ServiceManNotReadyNPC_Message">Xin lỗi, nhưng tòa nhà này chưa sẵn sàng!</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
     <string name="Sewer_TileWater">nước đục</string>
     <string name="ShadowLord_Desc">Sinh vật này được tạo thành từ sự ác độc thuần khiết và bóng tối không thể thâm nhập. Nhiều người tin rằng chính hắn là Thần Cổ xưa, khi xem xét sức mạnh của hắn. Trong khi những người khác cho rằng hắn chỉ là người gác cửa phòng của Thần Cổ.</string>
     <string name="ShadowLord_Gender">masculine</string>
+    <string name="Shadow_Desc">Bóng ma lặng lẽ phiêu dạt trong đống đổ nát của nhà tù cổ đại, chỉ thỉnh thoảng mới hiện ra trước mắt nhà mạo hiểm giả, thường là trong chuyến phiêu lưu cuối cùng của họ.</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="Shaman_Name">thầy pháp gnoll</string>
     <string name="Sheep_Desc">Đây là một con cừu ma thuật. Điều gì làm nó trở nên ma thuật? Bạn không thể giết nó. Nó sẽ đứng yên tại chỗ cho đến khi nó biến mất bằng phép thuật, trong khi vẫn nhai cỏ với ánh mắt trống rỗng.</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
     <string name="ShieldStrTemplate">Người đeo khiên cần có ít nhất %1$d điểm Sức mạnh để sử dụng nó đúng cách.</string>
+    <string name="Shielded_Name">côn đồ khiên thủ</string>
     <string name="Shopkeeper_BuyPrompt">Để tôi xem hàng hóa của bạn</string>
     <string name="Shopkeeper_Name">Người bán hàng</string>
     <string name="ShortSword_ACReforge">ĐÁNH LẠI</string>
     <string name="ShortSword_Gender">masculine</string>
+    <string name="ShortSword_Info">Nó quả thật khá ngắn, chỉ dài hơn con dao găm vài inch.</string>
     <string name="ShortSword_Name">kiếm ngắn</string>
     <string name="SkeletonKey_Info">Cái chìa khóa này trông rất nghiêm trọng: đầu nó được đúc hình cái sọ. Có lẽ nó có thể mở được cánh cửa quan trọng nào đó.</string>
     <string name="SlowBuff_Name">Làm chậm</string>
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
     <string name="Snail_Desc">Con ốc sên nhỏ này đã lớn khá nhanh nhờ ăn rác thải, nhưng nó vẫn rất chậm, khiến nó trở thành kẻ địch dễ dàng.</string>
+    <string name="SnipersMarkBuff_Name">Dấu ấn xạ thủ</string>
     <string name="SociologistNPC_Name">Nhà xã hội học</string>
     <string name="SoulShard_Info">Đây là một mảnh vỡ lấy từ tàn tích của Hũ Linh Hồn. Nó lấp lánh với sức mạnh bí ẩn, có lẽ có ai đó quan tâm đến thứ như thế này.</string>
     <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="SpiderEgg_Gender">neuter</string>
+    <string name="SpiderElite_Name">vệ binh nhện tinh nhuệ</string>
     <string name="SpiderExploding_Desc">Trong thời bình, những sinh vật này là những người làm việc chăm chỉ, nhưng chúng sẽ không ngần ngại lao vào kẻ thù và hái lấy cây đầu tiên chúng gặp phải, biến mình thành những quả bom sống.</string>
     <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">nhện hổ phách</string>
@@ -491,6 +560,7 @@
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
     <string name="StartScene_UnlockGnoll">Để mở khóa lớp này, bạn phải thuyết phục linh mục làng chữa lành cho Gnoll Brute</string>
+    <string name="Statue_Name">tượng sống</string>
     <string name="StunBuff_Name">Choáng</string>
     <string name="Stylus_Info">Chiếc bút bí ẩn này được làm từ một loại đá đen và rất cứng. Bạn có thể dùng nó để khắc các ký tự hoặc rune, nhưng bút mới quyết định khắc cái gì, không phải bạn.</string>
     <string name="Stylus_Name">bút huyền bí</string>
@@ -498,6 +568,7 @@
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
     <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
     <string name="SummonBeast_Name">Gọi Thú</string>
+    <string name="Sungrass_Desc">Cỏ mặt trời nổi tiếng nhờ nhựa cây có tác dụng chữa lành.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="Swarm_Name">bầy ruồi</string>
     <string name="Swing_Name_2">Hoang dã %s</string>
@@ -509,10 +580,12 @@
     <string name="TitleScene_Play">Chơi</string>
     <string name="Torch_ACLight">THÁP</string>
     <string name="Torch_Info">Đây là một vật phẩm không thể thiếu trong Các Điện Thần Quỷ, những nơi nổi tiếng với ánh sáng môi trường kém.</string>
+    <string name="ToughShield_desc">Chiếc khiên được gia cố bằng da này trông chắc chắn hơn loại gỗ. Chắc chắn nó có thể đỡ được nhiều sát thương hơn.</string>
     <string name="TownGuardNPC_Message1">Đi tiếp nào.</string>
     <string name="TownGuardNPC_Message3">Bạn nghĩ có quá nhiều vệ sĩ ở thành phố này? Vâng, vì đây là thành phố duy nhất có một hang động khổng lồ đầy quái vật, đúng không?</string>
-    <string name="TownGuardNPC_Name">bảo vệ trấn</string>
+    <string name="TownGuardNPC_Name">lính gác thị trấn</string>
     <string name="TownPortal_Name">Cổng Thần Thoại</string>
+    <string name="TownsfolkMovieNPC_Desc">Một người dân địa phương. Dù rõ ràng chỉ là thường dân, bộ quần áo của hắn lại trông rất đắt tiền.</string>
     <string name="TownsfolkMovieNPC_Name_Objective">người dân thành phố</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">À! Một phiêu lưu gia khác, thật tuyệt vời! Hãy chắc chắn lấy càng nhiều đồ giá trị càng tốt!</string>
@@ -523,7 +596,9 @@
     <string name="ToxicGas_Info">Một đám mây khí độc màu xanh lá cây đang xoáy ở đây.</string>
     <string name="ToxicGland_Name">Tuyến độc</string>
     <string name="TrapWnd_Title">Cạm bẫy</string>
+    <string name="TreacherousSpirit_Desc">Sinh vật quái dị này trông giống như một đám mây bóng tối sống động. Con mắt khổng lồ không mí của nó nhìn chằm chằm vào bạn, đập lên theo từng cử động của bạn.</string>
     <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
+    <string name="TreacherousSpirit_Name_Objective">linh hồn phản bội</string>
     <string name="Typical_Damage">Sát thương điển hình</string>
     <string name="Undead_Defense">chặn</string>
     <string name="Undead_Name_Objective">cùn bất tử</string>
@@ -543,22 +618,26 @@
     <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
     <string name="Wand_Wood_Types_10">sồi</string>
     <string name="Wand_Wood_Types_7">gõ đỏ</string>
+    <string name="Wand_Wood_Types_9">gỗ tím</string>
     <string name="WarHammer_Name">Búa chiến tranh</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterOfTransmutation_Info">Sức mạnh của sự biến đổi tỏa ra từ nước của giếng này. Hãy ném một vật phẩm vào giếng để biến nó thành thứ khác.</string>
     <string name="WeaknessBuff_Name">Yếu</string>
+    <string name="Weightstone_Accurate">bạn đã cân bằng %s để nó chính xác hơn</string>
     <string name="Weightstone_Fast">bạn đã cân bằng %s để làm nó nhanh hơn</string>
     <string name="Weightstone_Name">đá cân</string>
     <string name="Weightstone_WndAccuracy">Độ chính xác</string>
     <string name="Weightstone_WndCancel">Không sao đâu</string>
     <string name="Weightstone_WndChoice">Bạn muốn cân bằng %s như thế nào?</string>
     <string name="Weightstone_WndSpeed">Tốc độ</string>
+    <string name="WindGust_Info">Triệu hồi một cơn gió giật, đẩy nhân vật được chọn ra xa.</string>
     <string name="WndBlacksmith_Prompt">Được, lời đã nói không thể lấy lại, đây là điều tôi có thể làm cho bạn: Tôi có thể luyện lại 2 vật phẩm và biến chúng thành 1 vật phẩm chất lượng tốt hơn.</string>
     <string name="WndCatalogus_Potions">Thuốc</string>
     <string name="WndCatalogus_Scrolls">Cuộn</string>
     <string name="WndCatalogus_Title">Danh mục</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+    <string name="WndCryptoDonate_supportDev">Ủng hộ nhà phát triển</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndDonate_goldDonate">quyên góp vàng</string>
     <string name="WndDonate_goldDonateText">Cảm ơn sự giúp đỡ của bạn</string>
@@ -569,20 +648,25 @@
     <string name="WndGame_Ranking">Bảng xếp hạng</string>
     <string name="WndGame_Save">Lưu</string>
     <string name="WndGame_menu">Menu chính</string>
+    <string name="WndHats_InfoButton">Xem xét</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
     <string name="WndHero_Awareness">Nhận thức</string>
+    <string name="WndHero_StaJournal">Nhật ký</string>
     <string name="WndInfoItem_NeedKey">Nhưng để mở nó, bạn cần một chìa khóa vàng.</string>
     <string name="WndInfoItem_Remains">Đây là tất cả những gì còn lại từ một trong những người đi trước bạn. Có thể đáng để kiểm tra xem có vật phẩm quý nào không.</string>
     <string name="WndInstallingMod_please_wait">Đang cài đặt mod, vui lòng đợi...</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Thực hiện công thức</string>
     <string name="WndItemAlchemy_SelectRecipe">Chọn công thức</string>
+    <string name="WndItemAlchemy_Title">Công thức luyện đan với %s</string>
     <string name="WndItemAlchemy_Transmute">Chuyển hóa</string>
     <string name="WndJournal_Levels">Cấp độ</string>
     <string name="WndJournal_Title">Nhật Ký</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
+    <string name="WndLibrary_Codex_Btn">Truyện kể</string>
     <string name="WndLibrary_Levels_Btn">Hầm ngục</string>
     <string name="WndLibrary_Mobs_Btn">Quái vật</string>
     <string name="WndLocalModInstall_pick">Chọn thư mục mod</string>
+    <string name="WndModInstall_Version">phiên bản</string>
     <string name="WndModSelect_ReallyDelete">Thực sự xóa?</string>
     <string name="WndMovieTheatre_Bye">Hãy quay lại bất cứ lúc nào, chúng tôi luôn hoan nghênh bạn!</string>
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
@@ -595,9 +679,13 @@
     <string name="WndPremiumSettings_chrome">Chọn vật liệu giao diện</string>
     <string name="WndPremiumSettings_notAvailbale">Tùy chọn này chưa có sẵn</string>
     <string name="WndPremiumSettings_ruby">hồng ngọc</string>
+    <string name="WndPremiumSettings_status">Chọn chất liệu thanh trạng thái</string>
     <string name="WndPremiumSettings_std">tiêu chuẩn</string>
+    <string name="WndPriest_Heal_Minions">Chữa trị tất cả tùy tùng của bạn - Chỉ %d vàng!</string>
+    <string name="WndPriest_Instruction2_f">Chào con gái của ta, chào mừng đến với nhà thờ thánh của Santa Thần Sâu vĩ đại!</string>
     <string name="WndPriest_Instruction_f">Chào con gái của ta, chào mừng đến với nhà thờ thánh của Santa Thần Sâu vĩ đại! Rất tiếc ta không thể cho con đi qua lúc này, vì tòa nhà đang được tu sửa, nhưng nếu con cần giúp đỡ, ta có thể cung cấp dịch vụ chữa lành và thức ăn chỉ với %d vàng!</string>
     <string name="WndPriest_Title">Linh mục thị trấn</string>
+    <string name="WndRanking_Items">Vật phẩm</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndRanking_Stats">Thống kê</string>
@@ -605,6 +693,7 @@
     <string name="WndSaveSlotSelect_Delete_No">Không</string>
     <string name="WndSaveSlotSelect_Delete_Title">Bạn có chắc chắn muốn xóa trạng thái lưu này?</string>
     <string name="WndSelectLanguage_ImproveTranslation">Vui lòng giúp cải thiện bản dịch Remixed Dungeon</string>
+    <string name="WndSettingsInGame_GameLog">Nhật ký trò chơi</string>
     <string name="WndSettings_ActionButtonSize">Kích thước nút hành động</string>
     <string name="WndSettings_ExperementalFont">Font mới</string>
     <string name="WndSettings_Handedness">Ưu tiên tay</string>
@@ -622,6 +711,7 @@
     <string name="Wnd_Button_Close">Đóng</string>
     <string name="Wnd_Button_Yes">Có</string>
     <string name="WoodenBow_Info">Cây cung gỗ đơn giản này có thể hữu ích, khi bạn tìm được một vài mũi tên.</string>
+    <string name="WoodenCrossbow_Info">Cái nỏ gỗ đơn giản này có vẻ được thiết kế để bắn mũi tên cung.</string>
     <string name="WoodenShield_name">Khiên Gỗ</string>
     <string name="Worm_Desc">Không thể biết được côn trùng này to đến đâu. Đỉnh đầu nó mọc ra một phần từ sàn nhà, cơ thể sinh vật này bị bao phủ bởi những múi thịt hư hỏng và nhầy nhơa. Những cùm răng khổng lồ cho bạn thấy rõ ràng con quái vật đó di chuyển như thế nào qua bề mặt.</string>
     <string name="Worm_Gender">masculine</string>
@@ -640,7 +730,9 @@
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
     <string name="Zombie_Name_Objective">kẻ sống chết</string>
+    <string name="town_deco_armorstand_plate_desc">Theo người buôn, bộ giáp tấm nặng nề này từng thuộc về một chiến binh vĩ đại.</string>
     <string name="town_deco_banner_desc">Một lá cờ thanh lịch vẽ các biểu tượng của quán rượu này.</string>
+    <string name="town_deco_barrel_desc">Một chiếc thùng gỗ bình thường, cũng không còn ở tình trạng tốt nữa.</string>
     <string name="town_deco_barrel_wine_name">Thùng rượu</string>
     <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
     <string name="town_deco_broken_wall_name">Bức tường vỡ</string>
@@ -650,7 +742,7 @@
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
     <string name="town_deco_crate_bottles_desc">Chai bia đã trở thành một sở thích rất phổ biến giữa các chủ quán rượu.</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
-    <string name="town_deco_cross_desc">Một chiếc thập giá bằng bạc đúc, biểu tượng của tôn giáo địa phương - \&quot;Các Nhà Thứ Đường Của Santa Chúa Tể Của Sâu\&quot;.</string>
+    <string name="town_deco_cross_desc">Một chiếc thập giá bạc nguyên khối, biểu tượng của tôn giáo địa phương - \&quot;Các Nhân chứng của Santa Chúa Tể Vực Sâu\&quot;.</string>
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
     <string name="town_deco_dungeon_door_desc">lối vào hang động.</string>
     <string name="town_deco_dungeon_door_name">cửa hang</string>
@@ -688,7 +780,7 @@
     <string name="town_deco_window_desc">Cửa sổ kính thông thường, không có gì đặc biệt.</string>
     <string name="town_deco_window_name">Cửa sổ</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
-    <string name="town_deco_wooden_bench_desc">Ghế dài bằng gỗ, trông không thoải mái để ngồi.</string>
+    <string name="town_deco_wooden_bench_desc">Chiếc ghế dài bằng gỗ trông không thoải mái để ngồi.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
 
 
@@ -1033,6 +1125,107 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
 
 
