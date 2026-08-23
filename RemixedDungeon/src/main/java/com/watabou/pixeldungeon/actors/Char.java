@@ -1068,7 +1068,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             return true;
         }
 
-        buff.attachVisual();
+        // caveman: char outside field of view shows buff particles to player -
+        // emitters draw in own pass, sprite visibility does not stop them
+        if (Dungeon.isCellVisible(getPos())) {
+            buff.attachVisual();
+        }
         return true;
     }
 
