@@ -257,6 +257,7 @@
     <string name="HeroClass_Mag">magier</string>
     <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
     <string name="HeroClass_NecromancerPerks_1">Necromanten gebruiken mana om Doodsspreuken te spreken.</string>
+    <string name="HeroClass_NecromancerPerks_2">Necromanten beginnen met een uniek Necromantengewaad, dat 1 manapunt geeft voor elk verslagen wezen.</string>
     <string name="HeroClass_NecromancerPerks_3">Necromancers beginnen met een skelet sleutel niveau 7.</string>
     <string name="HeroClass_Rog">schurke</string>
     <string name="HeroSubClass_DescFreR">De _Vrijsprinter_ kan zich bijna twee keer zo snel voortbewegen als de meeste monsters. Tijdens het rennen is de Vrijsprinter veel moeilijker te raken. Maar daarvoor moet hij onbelast en niet verhongerd zijn.</string>
@@ -798,6 +799,7 @@
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_pole_desc">Een hoge paal ontworpen om de touw te spannen.</string>
+    <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_rope_name">touw</string>
     <string name="town_deco_shelf_name">Planken</string>
     <string name="town_deco_shelving_name">rekken</string>
@@ -1060,6 +1062,8 @@
 
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 

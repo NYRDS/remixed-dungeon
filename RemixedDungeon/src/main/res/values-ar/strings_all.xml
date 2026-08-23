@@ -382,6 +382,7 @@
     <string name="NecromancerNPC_Message2">يجب أن أكون جاهزاً.</string>
     <string name="NecromancerRobe_Info2">هذا رداء مشبع بالسحر الأسود يسمح للنكرومانسر بأكل أرواح الوحوش المنهزمة.</string>
     <string name="Necromancy_SummonDeathlingName">استدعاء سمرتة</string>
+    <string name="Necrotism_Death">مُتَّ مِن التنخر...</string>
     <string name="Ooze_Death">%s يبتلعك...</string>
     <string name="Order_Info">بركّزك المناسب، أوامرك شبه لا تُرفض.</string>
     <string name="PalaceServant_Golem_1">...</string>
@@ -772,6 +773,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

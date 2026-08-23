@@ -500,6 +500,7 @@
     <string name="ScrollOfIdentify_Name">cuộn nhận diện</string>
     <string name="ScrollOfLullaby_Info1">Cuộn giấy phát ra giai điệu dịu dàng.</string>
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
+    <string name="ScrollOfRecharging_Info1b">một dòng năng lượng lan tỏa qua túi đồ của bạn, sạc lại năng lượng cho các gậy phép</string>
     <string name="ScrollOfRemoveCurse_Info">Lời chú trên cuộn này sẽ tách ngay lập tức khỏi vũ khí, giáp, nhẫn và vật mang theo của người đọc bất kỳ lời nguyền xấu nào có thể ngăn cản người đeo tháo chúng ra.</string>
     <string name="ScrollOfRemoveCurse_Proced">Cái ba lô của bạn phát sáng bằng ánh sáng thanh tẩy, và một năng lượng dữ tợn tan biến.</string>
     <string name="ScrollOfSummoning_Info">Khi đọc to, cuộn giấy này sẽ triệu hồi một con quái vật từ tầng hầm ngục hiện tại. Và nếu ý chí của nó đủ yếu, nó sẽ trở thành tôi tớ của bạn.</string>
@@ -561,6 +562,7 @@
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderElite_Name">vệ binh nhện tinh nhuệ</string>
     <string name="SpiderExploding_Desc">Trong thời bình, những sinh vật này là những người làm việc chăm chỉ, nhưng chúng sẽ không ngần ngại lao vào kẻ thù và hái lấy cây đầu tiên chúng gặp phải, biến mình thành những quả bom sống.</string>
+    <string name="SpiderGuard_Name_Objective">vệ binh nhện</string>
     <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">nhện hổ phách</string>
     <string name="SpiderNest_Name">lòng tử cung nhện</string>
@@ -1245,6 +1247,8 @@
 
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
