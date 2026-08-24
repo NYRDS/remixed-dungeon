@@ -197,6 +197,7 @@
     <string name="EncumbranceBuff_Name">עול</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EquipableItem_ACUnequip">לְהַסִיר</string>
+    <string name="Exhumation_Info">פתיחת הקבר היא מעשה מרושע כשלעצמו, אך אינו מספיק עבור מי שמשרת את המוות עצמו. למבצע הטקס האפל יש סיכוי גדול (שגדל עם רמת המיומנות של המבצע) להכניע את הנשמה האומללת של הטמון כאן.</string>
     <string name="ExplodingSkull_Desc">גולגולת צפה ובוערת זו נראית שבירה ביותר, ונראית כאילו היא עומדת להתפרק לרסיסים בכל רגע.</string>
     <string name="Eye_Kill">מבט המוות של %s הרג אותך...</string>
     <string name="Facilitations_Descriptions_1">עדיין לא ידוע מי היו הוריך, אבל הרגנרציה הטבעית דמוית-טרול תעזור לרפא את כל הצלקות הקרב העתידות לבוא.</string>
@@ -251,6 +252,7 @@
     <string name="HeroClass_MagPerks_4">מכשפים משתמשים במאנה כדי להטיל כישופים יסודיים.</string>
     <string name="HeroClass_NecromancerPerks_0">נקרומנטרים מתחילים עם 15 נקודות בריאות.</string>
     <string name="HeroClass_NecromancerPerks_3">נקרומנטרים מתחילים עם מפתח שלד ברמה 7.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">רופאי הדבר סובלים מקנסות דיוק חמורים ללא המסור העצמות האהוב ביד, ואינם יכולים להשתמש בנשק מטווח.</string>
     <string name="HeroClass_Priest">כומר</string>
     <string name="HeroClass_Rog">נוכל</string>
     <string name="HeroClass_WarPerks_3">כל פריט מזון משחזר מעט בריאות כאשר נאכל.</string>
@@ -300,6 +302,7 @@
     <string name="Javelin_Name">כידון</string>
     <string name="Journal_Caged_Kobold">קובולד בכלוב</string>
     <string name="Journal_PlagueDoctorNPC">רופא מגפה</string>
+    <string name="Journal_WellAwareness">באר המודעות</string>
     <string name="King_Desc">המלך האחרון של הגמדים נודע בזכות הבנתו העמוקה של תהליכי החיים והמוות. הוא שכנע את חברי חצרו להשתתף בטקס, שאמור היה להעניק להם נעורים נצחיים. בסופו של דבר הוא היה היחיד שקיבל זאת - וצבא מתים-חיים כבונוס.</string>
     <string name="King_Info3">איך אתה מעז!</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
@@ -480,6 +483,7 @@
     <string name="ScrollOfRemoveCurse_Info">הכתובת על המגילה הזו תסיר מיד מהנשק, השריון, הטבעות והפריטים הנישאים של הקורא כל קסם רע שעלול למנוע מהלובש להסיר אותם.</string>
     <string name="ScrollOfTeleportation_NoTeleport">אאורה קסומה חזקה של המקום הזה מונעת ממך לטלפורט!</string>
     <string name="ScrollOfTeleportation_Teleport2">בהרף עין %s טלפורטו למיקום אחר ברמה.</string>
+    <string name="ScrollOfTerror_Info3">המגילה פולטת הבזק בהיר של אור אדום והמפלצות נמלטות!</string>
     <string name="ScrollOfUpgrade_Name">מגילת שדרוג</string>
     <string name="ScrollOfWeaponUpgrade_Info">גלילה זו תשדרג נשק קרבי, ותשפר את איכותו. בניגוד לגלילת שדרוג רגילה, גרסה מיוחדת זו לעולם לא תהרוס קסם על נשק. נהפוך הוא, היא מסוגלת להעניק קסם אקראי לנשק לא מקסום.</string>
     <string name="ScrollOfWeaponUpgrade_Name">מגילת שדרוג נשק</string>
@@ -721,6 +725,11 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 

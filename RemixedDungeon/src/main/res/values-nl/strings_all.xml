@@ -179,6 +179,7 @@
     <string name="CommonArrow_Info">Gewone houten pijl met een ijzeren punt.</string>
     <string name="CommonArrow_Name">pijl</string>
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
+    <string name="ConcreteBlock_Name">Zwaar betonnen blok</string>
     <string name="ConfusionGas_Info">Hier zweeft een wolk verwarrend gas.</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
     <string name="Crab_Name">rioolkrab</string>
@@ -269,6 +270,7 @@
     <string name="HeroClass_NecromancerPerks_1">Necromanten gebruiken mana om Doodsspreuken te spreken.</string>
     <string name="HeroClass_NecromancerPerks_2">Necromanten beginnen met een uniek Necromantengewaad, dat 1 manapunt geeft voor elk verslagen wezen.</string>
     <string name="HeroClass_NecromancerPerks_3">Necromancers beginnen met een skelet sleutel niveau 7.</string>
+    <string name="HeroClass_PlagueDoctorPerks_4">Plagedokters lijden aan grote accuraatheidsstraffen zonder hun geliefde Beenzaag in de hand en kunnen geen afstandswapens gebruiken.</string>
     <string name="HeroClass_Rog">schurke</string>
     <string name="HeroClass_War">krijger</string>
     <string name="HeroSubClass_DescFreR">De _Vrijsprinter_ kan zich bijna twee keer zo snel voortbewegen als de meeste monsters. Tijdens het rennen is de Vrijsprinter veel moeilijker te raken. Maar daarvoor moet hij onbelast en niet verhongerd zijn.</string>
@@ -326,6 +328,7 @@
     <string name="Journal_PlagueDoctorNPC">pestdokter</string>
     <string name="Journal_Statue">Geanimeerd standbeeld</string>
     <string name="Journal_Wandmaker">Oude toverstafmaker</string>
+    <string name="Journal_WellAwareness">Bron van Bewustzijn</string>
     <string name="King_Defense">geparreerd</string>
     <string name="Kobold_Desc">Er werd aangenomen dat kobolds niets meer waren dan een legende. Als voorouders van de gewone gnolls woonden kobolds in de diepste en koudste grotten. Er wordt ook verteld dat hun ras techniek en machinebouw beheerste lang voordat de dwergen dat deden.</string>
     <string name="KunaiThrow_Name">Kunai-worp</string>
@@ -1092,6 +1095,9 @@
 
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
