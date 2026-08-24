@@ -169,6 +169,7 @@
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
     <string name="Codex_Story_17">Vũ khí gây choáng - Khi đánh trúng, có thể khiến mục tiêu bị tê liệt.</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
+    <string name="Codex_Story_9">Glyph Dịch Chuyển - Mỗi khi Anh Hùng trúng đòn, có khả năng Anh Hùng sẽ được dịch chuyển đến một ô ngẫu nhiên trong tầm nhìn. Glyph này không hoạt động ở các cấp độ Trùm.</string>
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
@@ -284,6 +285,7 @@
     <string name="HeroClass_RogPerks_3">Kẻ trộm thành thạo trong việc phát hiện cửa và bẫy ẩn giấu.</string>
     <string name="HeroClass_RogPerks_5">Cuộn Bản đồ Ma thuật được nhận diện ngay từ đầu.</string>
     <string name="HeroClass_War">chiến binh</string>
+    <string name="HeroClass_WarPerks_2">Chiến binh kém thành thạo hơn với vũ khí tầm xa.</string>
     <string name="HeroSubClass_DescAssa">Khi thực hiện một đòn tấn công bất ngờ, _Sát Thủ_ gây thêm sát thương lên mục tiêu của mình.</string>
     <string name="HeroSubClass_DescFreR">_Kẻ Vượt Rào_ có thể di chuyển gần gấp đôi so với hầu hết quái vật. Khi đang chạy, kẻ vượt rào khó bị đánh trúng hơn nhiều. Nhưng để làm được điều đó, anh ta không được quá tải và phải no bụng.</string>
     <string name="HeroSubClass_DescGlad">Một cú đánh thành công bằng vũ khí cận chiến cho phép _Gladiator_ bắt đầu một combo, trong đó mỗi đòn đánh thành công tiếp theo gây sát thương lớn hơn.</string>
@@ -620,6 +622,7 @@
     <string name="TitleScene_Play">Chơi</string>
     <string name="Torch_ACLight">THÁP</string>
     <string name="Torch_Info">Đây là một vật phẩm không thể thiếu trong Các Điện Thần Quỷ, những nơi nổi tiếng với ánh sáng môi trường kém.</string>
+    <string name="Torch_Info2">Đây là vật phẩm không thể thiếu trong hầm ngục, vốn nổi tiếng là thiếu ánh sáng.</string>
     <string name="ToughShield_desc">Chiếc khiên được gia cố bằng da này trông chắc chắn hơn loại gỗ. Chắc chắn nó có thể đỡ được nhiều sát thương hơn.</string>
     <string name="TownGuardNPC_Message1">Đi tiếp nào.</string>
     <string name="TownGuardNPC_Message3">Bạn nghĩ có quá nhiều vệ sĩ ở thành phố này? Vâng, vì đây là thành phố duy nhất có một hang động khổng lồ đầy quái vật, đúng không?</string>
@@ -748,6 +751,7 @@
     <string name="WndSettings_Quickslots">Khe truy cập nhanh</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
     <string name="WndSettings_SelectLanguage">Chọn ngôn ngữ</string>
+    <string name="WndSettings_UiScale">Tỷ lệ giao diện</string>
     <string name="WndSettings_ZoomOut">-</string>
     <string name="WndStory_Metropolis">Thành phố Lục phủ Mat người lùn từng là lớn nhất trong các thành bang của người lùn. Vào thời kỳ thịnh vượng, quân đội cơ giới của người lùn đã đẩy lùi thành công cuộc xâm lược của vị thần cổ xưa và quân đoàn quỷ của ngài. Người ta nói rằng, các chiến binh trở về đã mang theo những hạt giống của sự tàn phá, và chiến thắng đó là khởi đầu của sự chấm dứt cho vương quốc dưới đất.</string>
     <string name="WndTradeItem_Buy">Mua với %d vàng</string>
@@ -837,4 +841,8 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
 </resources>

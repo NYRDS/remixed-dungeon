@@ -288,6 +288,7 @@
     <string name="HeroSubClass_NameGlad">مصارع</string>
     <string name="HeroSubClass_NameNone">لا شيء</string>
     <string name="HeroSubClass_NameScout">كشاف</string>
+    <string name="HeroSubClass_NameWitchdoctor">طبيب ساحر</string>
     <string name="Hero_StaBurning">لقد اشتعلت בך النار!</string>
     <string name="Hero_StaFurious">غاضب</string>
     <string name="Hero_StaRoots">لا يمكنك التحرك!</string>
@@ -790,6 +791,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

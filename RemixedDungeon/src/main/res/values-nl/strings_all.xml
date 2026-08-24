@@ -172,6 +172,7 @@
     <string name="Codex_Story_12">Brandid wapen - Bij een succesvolle treffer geeft dit extra schade en kan het doel in brand steken.</string>
     <string name="Codex_Story_14">Onstabiel wapen - Bij een succesvolle treffer kan het effect van willekeurige betovering optreden.</string>
     <string name="Codex_Story_17">Verstikkend wapen - Bij succesvolle treffer kan het doelwit verlamd raken.</string>
+    <string name="Codex_Story_20">Vrieswapen - Een succesvolle treffer kan het doel vertragen en voorkomen dat het in brand vliegt.</string>
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
     <string name="Codex_Story_25">Zij stak, bevroren, voor de zware eikenen deur, en keek naar het licht dat uit de deurranden doordrong. Uit een verwaarloosd hoekje van haar geest kwam herkenning.\n\&quot;Zonlicht..\&quot; mompelde ze tegen zichzelf. Hoe lang was het geweest? In de eeuwige duisternis van de Kelder had ze lang geleden opgehouden de dagen te tellen. Het licht verlichtte vergeten herinneringen. Ze herinnerde haar training, lange dagen van zware oefening met boomerang en zwaard, van logboek bijhouden en kaarten maken. Ze herinnerde de mantra\'s en disciplines die bedoeld waren om haar een schijn van gezond verstand te laten behouden terwijl ze de onbekende diepgang verkennde. Wat ze niet herinnerde, niet kon herinneren, waren mensen.\nZe herinnerde hun stemmen, hun bevelen en hun waarschuwingen, maar niet hun gezichten, noch hun aanraking.\nPijn had haar getraind. Onthoud de gevaren, altijd de gevaren. Tollende dieren, onoversterven, onzinnige bendes en slimme ninja\'s waren voor haar gevallen. Ze had gesneden, gebrand, gestoken en vergiftigd haar weg gebaan door afschuwelijke wezens, demonen, klokwerk-afschuwelijkheden en onzinnige necromanten. Zelfs goden waren voor haar gevallen.\nZe had Yog gevolgd door Hemel en Hel, voordat ze zijn corrumpterende fluisteringen voor altijd stilte. Toch was er nog werk te doen. Yog was een dienaar van iemand nog meer occulte en krachtigere dan hijzelf.\nZo dook ze verder, dieper. Het dagboek van de oude tovenaar, nog steeds stralend van kracht, had haar de weg getoond. Met de magie in zijn bladen reisde ze naar een woud nieuw land, een klein dorpje verborgen in een machtig bos. Daar voltooide ze ten slotte het kwaad tot zijn doolhof-achtige bron, en versloeg allen die voor haar stonden.\nNu, in het felle daglicht, onderzocht ze zichzelf in een kuil grotwater. Haar lichaam was door magie bijna onherkenbaar vervormd. Haar huid, bleek tot het punt van doorschijnend, was bedekt met vuil, slijk en roet. Haar ketting met ringen kon een koningsgeld waard zijn, en haar wapenhouder met staven bevatte genoeg magische energie om legers te verwoesten. Ze greep haar wapens, letterlijk fijn genoeg om de goden zelf neer te hakken. Werkelijk, ze was meester geworden van dit donkere rijk, deze woestijn van wanhoop.\nZe had het kwaad gejaagd tot in de verre hoeken van het multiversum, maar nu was ze bevroren van angst. Wat als ze haar verwerpte? Wat als ze dat niet deed? Hoe kon ze nog ooit met deze mensen omgaan? Hel, ze had de keren dat de dood haar had geëist, en weer was weggehaald uit zijn ijzergreep, niet meer geteld.\nNee, er was geen plek voor haar in het licht, niet meer. Ze keerde zich af van het mager licht, en daalde in het donker, misschien voor de laatste keer.\n\n\n\tby drazool from reddit</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
@@ -252,6 +253,7 @@
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="GoldenKey_Name">Gouden sleutel</string>
     <string name="GoldenStatue_Gender">feminine</string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="Golem_Defense">geblokkeerd</string>
     <string name="Goo_Info1">De slime blaast zichzelf op!</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
@@ -782,6 +784,7 @@
     <string name="WndSettings_SelectLanguage">Selecteer taal</string>
     <string name="WndSettings_TextScaleDefault">Standaardlettertype</string>
     <string name="WndSettings_ThirdQuickslot">Derde sneltoets</string>
+    <string name="WndSettings_UiScale">Schaal van de interface</string>
     <string name="WndSettings_UiSettings">Interface-instellingen</string>
     <string name="WndStory_Guts">Verslagen, verstrooid in stukken, maar niet volledig vernietigd, werd de Oude God verzegeld in de diepste niveaus van de kerker. Maar onlangs werd het zegel gebroken, waardoor de toegang tot de demonenhoeve wijd open stond. De nachtmerrieachtige monsters, geschapen door de Oude God in zijn slummer, waren zo talrijk dat, zonder een manier om te vluchten, ze gedwongen waren om met elkaar te smelten en deze gruwelijke hallen te vormen. En terwijl je over hun levende vlees loopt, kun je de klop van een Ouds Gods hart door hen heen voelen.</string>
     <string name="WndTilesKind_Title">Nog één ding:</string>
@@ -794,6 +797,7 @@
     <string name="WoodenBow_Info">Deze eenvoudige houten boog kan nuttig blijken, zodra je pijlen vindt.</string>
     <string name="WoodenBow_Name">houten boog</string>
     <string name="WoodenCrossbow_Info">Een eenvoudige houten kruisboog, lijkt ontworpen om pijlen mee af te schieten.</string>
+    <string name="WoodenShield_name">Houten schild</string>
     <string name="Worm_Name">worm</string>
     <string name="Worm_Name_Objective">worm</string>
     <string name="Wraith_Desc">Een wraith is de wraakzuchtige geest van een zondaar, wiens graf of grafkelder werd verstoord. Als een etherische entiteit is het zeer lastig te raken met een gewoon wapen.</string>
@@ -868,4 +872,8 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
 </resources>

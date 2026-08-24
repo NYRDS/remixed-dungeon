@@ -266,6 +266,7 @@
     <string name="HeroSubClass_NameGuardian">שומר</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
     <string name="HeroSubClass_NameWard">שומרת</string>
+    <string name="HeroSubClass_NameWitchdoctor">רופא אליל</string>
     <string name="Hero_Name_Objective">אותך</string>
     <string name="Hero_StaBurning">אתה נדלקת!</string>
     <string name="Hero_StaCripple">אתה נכה!</string>
@@ -725,6 +726,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 
