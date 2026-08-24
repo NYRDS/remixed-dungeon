@@ -12,6 +12,7 @@
     <string name="AboutScene_Music">Muziek:</string>
     <string name="AboutScene_OurSite">Onze site:</string>
     <string name="AboutScene_Sound">Geluid:</string>
+    <string name="AboutScene_Thanks">Speciale dank aan:</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon door NYRDS gebaseerd op de broncode van Pixel Dungeon door Watabou.</string>
     <string name="Accuracy_Decreased">Waarom dacht ik dat ik dit %s kon gebruiken? Verkeerd gereedschap, verkeerde handen!</string>
     <string name="Accuracy_DecreasedDoctor">Elke slag met deze %s verspreidt onvolkomenheden. Mijn botenzaag geneest... dit besmet.</string>
@@ -116,6 +117,7 @@
     <string name="Candy_Name">snoepje</string>
     <string name="Capotain_Name">Puriteinse hoed</string>
     <string name="Carcass_Necromancy">Je hebt het lijk van %s opgewekt!</string>
+    <string name="Caves_TileDescEntrance">De ladder leidt omhoog naar het bovenste deel.</string>
     <string name="Caves_TileGrass">fluorescent mos</string>
     <string name="Caves_TileHighGrass">Fluorescerende paddenstoelen</string>
     <string name="Caves_TileWater">IJskoud water.</string>
@@ -177,6 +179,7 @@
     <string name="ConfusionGas_Info">Hier zweeft een wolk verwarrend gas.</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
     <string name="Crab_Name">rioolkrab</string>
+    <string name="Crystal_Name">zwevend kristal</string>
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">dolk</string>
@@ -263,6 +266,7 @@
     <string name="HeroClass_NecromancerPerks_2">Necromanten beginnen met een uniek Necromantengewaad, dat 1 manapunt geeft voor elk verslagen wezen.</string>
     <string name="HeroClass_NecromancerPerks_3">Necromancers beginnen met een skelet sleutel niveau 7.</string>
     <string name="HeroClass_Rog">schurke</string>
+    <string name="HeroClass_War">krijger</string>
     <string name="HeroSubClass_DescFreR">De _Vrijsprinter_ kan zich bijna twee keer zo snel voortbewegen als de meeste monsters. Tijdens het rennen is de Vrijsprinter veel moeilijker te raken. Maar daarvoor moet hij onbelast en niet verhongerd zijn.</string>
     <string name="HeroSubClass_DescNone">NIET GEVONDEN</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
@@ -271,6 +275,7 @@
     <string name="HeroSubClass_NameGlad">gladiator</string>
     <string name="HeroSubClass_NameSnip">sluipschutter</string>
     <string name="HeroSubClass_NameWitchdoctor">toverdokter</string>
+    <string name="Hero_LockedDoor">Je hebt geen bijpassende sleutel</string>
     <string name="Hero_Name_Objective">je</string>
     <string name="Hero_NewLevel">Welkom op niveau %d! Je bent nu gezonder en scherper. Het is makkelijker geworden om vijanden te raken en hun aanvallen te ontwijken.</string>
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
@@ -399,6 +404,7 @@
     <string name="Necromancy_Title">Necromantie</string>
     <string name="Necrotism_ACSpecial">NECROTISME</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
+    <string name="Nightcap_Name">Slaapmuts</string>
     <string name="Nightmare_Name_Objective">nachtmerrie</string>
     <string name="OozeBuff_Name">Bijtend Slijk</string>
     <string name="Ooze_Death">%s slikt je op...</string>
@@ -453,6 +459,7 @@
     <string name="Potion_Colors_14">onyx</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
+    <string name="Prison_TileDescDeco">Er zijn oude bloedvlekken op de vloer.</string>
     <string name="PseudoPasty_Info">Dit is een authentiek Cornish pasty met de traditionele vulling van rundvlees en aardappelen.</string>
     <string name="PseudoRat_Name">pseudo-rat</string>
     <string name="PseudoRat_Name_Objective">pseudo-rat</string>
@@ -559,11 +566,13 @@
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_NotTooFast">%s is nog niet klaar voor gebruik</string>
+    <string name="SpiderCharm_Info">Deze exotische snuisterij is gehuld in een aura van mysterie. Wie weet wat er gebeurt met degene die hem draagt?</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
     <string name="SpiderElite_Name">spinnen elitewachter</string>
     <string name="SpiderExploding_Desc">Harde werkers tijdens vredige tijden, deze wezens zullen niet aarzelen om hun vijanden aan te vallen en de eerste plant die ze tegenkomen te grijpen, waardoor ze zichzelf in lopende bommen veranderen.</string>
     <string name="SpiderGuard_Desc">Net als soldaten hebben spinnenwachters een eed afgelegd om hun koninkrijk te beschermen. Het gif van de wachter wordt gebruikt om zijn doelwit te verlammen, waardoor verlamming ontstaat en het een makkelijke prooi wordt.</string>
+    <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">Amber Spinnewijs</string>
     <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Psi-Spin</string>
@@ -599,6 +608,7 @@
     <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">vliegenzwerm</string>
     <string name="Swarm_Name_Objective">vliegenzwerm</string>
+    <string name="Swing_Name_2">Wild %s</string>
     <string name="Sword_Gender">masculine</string>
     <string name="Sword_Name">zwaard</string>
     <string name="Tamahawk_Gender">masculine</string>
@@ -609,6 +619,7 @@
     <string name="TerrorBuff_Name">Versterkt</string>
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">gekke dief</string>
+    <string name="Thief_Name_Objective">gekke dief</string>
     <string name="TitleScene_Play">Spelen</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="Torch_ACLight">AANSTEKEN</string>
@@ -1073,6 +1084,17 @@
 
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -11,6 +11,7 @@
     <string name="AboutScene_Graphics">Đồ họa:</string>
     <string name="AboutScene_Music">Nhạc:</string>
     <string name="AboutScene_OurSite">Trang web của chúng tôi:</string>
+    <string name="AboutScene_Thanks">Cảm ơn đặc biệt đến:</string>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
     <string name="Accuracy_Decreased">Tại sao tôi nghĩ mình có thể dùng %s? Cụm sai, tay sai!</string>
     <string name="Accuracy_DecreasedDoctor">Mỗi lần gióg %s này lan truyền sự không hoàn hảo. Cây cưa xương của tôi chữa lành... cái này gây nhiễm.</string>
@@ -273,6 +274,7 @@
     <string name="HeroClass_RogPerks_0">Kẻ lừa đảo bắt đầu với Nhẫn Bóng Tối+1.</string>
     <string name="HeroClass_RogPerks_3">Kẻ trộm thành thạo trong việc phát hiện cửa và bẫy ẩn giấu.</string>
     <string name="HeroClass_RogPerks_5">Cuộn Bản đồ Ma thuật được nhận diện ngay từ đầu.</string>
+    <string name="HeroClass_War">chiến binh</string>
     <string name="HeroSubClass_DescAssa">Khi thực hiện một đòn tấn công bất ngờ, _Sát Thủ_ gây thêm sát thương lên mục tiêu của mình.</string>
     <string name="HeroSubClass_DescFreR">_Kẻ Vượt Rào_ có thể di chuyển gần gấp đôi so với hầu hết quái vật. Khi đang chạy, kẻ vượt rào khó bị đánh trúng hơn nhiều. Nhưng để làm được điều đó, anh ta không được quá tải và phải no bụng.</string>
     <string name="HeroSubClass_DescGlad">Một cú đánh thành công bằng vũ khí cận chiến cho phép _Gladiator_ bắt đầu một combo, trong đó mỗi đòn đánh thành công tiếp theo gây sát thương lớn hơn.</string>
@@ -464,6 +466,7 @@
     <string name="PseudoRat_Name_Objective">chuột giả</string>
     <string name="Pumpkin_Info">Ngày xưa, Người Dług Bửng là một dân tộc hãnh diện và thịnh vượng. Nhưng mọi thứ thay đổi sau khi loài người xuất hiện, chỉ còn lại những đống tàn tích. Và những chiếc đầu bị chặt và khắc của các bộ tộc Dług Bửng đã khuất vẫn còn là lời nhắc nhở về những sự kiện khủng khiếp ấy.</string>
     <string name="Pumpkin_Name">Bí ngô</string>
+    <string name="RankingsScene_Title">Bảng Xếp Hạng Cao Nhất</string>
     <string name="RatHide_Name">da chuột</string>
     <string name="RatKing_Died">Vua đã chết. Chúc Vua vạn tuế!</string>
     <string name="RatKing_Info1">Ta không ngủ!</string>
@@ -1257,6 +1260,9 @@
 
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
