@@ -222,6 +222,7 @@
     <string name="Fire_Info">Hier woedt een vuur.</string>
     <string name="Fire_Name_1">Vlamend %s</string>
     <string name="Firebloom_Name">Vuurbloem</string>
+    <string name="FortuneTellerNPC_Desc">Deze vrouw draagt een lange, felgekleurde pij. Ze ziet er verrassend jong uit voor iemand die de geheime kunsten van de waarzeggerij beheerst. Als je dichterbij komt, hoor je haar zachtjes mompelen terwijl ze in de kristallen bol staart.</string>
     <string name="FortuneTellerNPC_Name">waarzegster</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostArrow_Gender">feminine</string>
@@ -416,6 +417,7 @@
     <string name="Paralysis_Name_0">Verdovende %s</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
     <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
+    <string name="PetInventory_HeroBackpackFull">Je rugzak is vol</string>
     <string name="PetInventory_Title">Huisdiereninventaris</string>
     <string name="PetInventory_TookItem">%1$s genomen van %2$s</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te delven!</string>
@@ -463,6 +465,7 @@
     <string name="RatHide_Name">rattenhuid</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
     <string name="RatKingCrown_Name">Kroon van de rattenkoning</string>
+    <string name="RatKing_Desc">Deze rat is een beetje groter dan een gewone buidelrat en draagt een klein kroontje op zijn hoofd.</string>
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
     <string name="RatKing_Info1">Ik slaap niet!</string>
     <string name="RatSkullBuff_Name">Ratverdelger</string>
@@ -1070,6 +1073,9 @@
 
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 

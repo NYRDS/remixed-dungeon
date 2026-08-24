@@ -155,6 +155,7 @@
     <string name="Codex_Story_23">הספר הזה כתוב בשפה הגמדית</string>
     <string name="Codex_Story_9">גליף תזוזה - בכל פעם שהגיבור נפגע, יש סיכוי שהגיבור יטלפורט לאריח גלוי אקראי. גליף זה לא עובד ברמות בוס.</string>
     <string name="ColdSpirit_Desc">רוח הקור היא התגלמות הכפור, בצורתו הטהורה ביותר. בהיותה גוש חסר מודע של אנרגיה קסומה, היא מצייתת לרצון המכשף שקרא לה או פועלת לפי אינסטינקטים בסיסיים.</string>
+    <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name_Objective">רוח קרה</string>
     <string name="ComboBuff_Name">קומבו</string>
     <string name="Combo_Combo">%d מכות קומבו!</string>
@@ -585,6 +586,7 @@
     <string name="WandOfTeleportation_Info2">כלום לא קרה</string>
     <string name="Wand_ACZap">זַאפּ</string>
     <string name="Wand_Fizzles">השרביט שלך מפצפץ; כנראה נגמרו המטענים שלו עכשיו</string>
+    <string name="Wand_Prompt">בחר כיוון לירי</string>
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
     <string name="WarHammer_Name">פטיש מלחמה</string>
     <string name="WarriorArmor_Desc">למרות שהשריון הזה נראה כבד, הוא מאפשר ללוחם לבצע זינוק הירואי לעבר מיקום מטרה, ולנחות עם מכה שמממת את כל האויבים השכנים.</string>
@@ -696,6 +698,7 @@
     <string name="town_deco_movies_door_desc">דלת זו נראית עשויה היטב במיוחד. סביר להניח שהיא מובילה למשהו מדהים.</string>
     <string name="town_deco_movies_door_name">דלת</string>
     <string name="town_deco_pathway_name">שביל</string>
+    <string name="town_deco_pedestal_desc">כן עם ספר קודש מונח עליו.</string>
     <string name="town_deco_pillar_desc">בימים עברו, עמוד זה שימש כתמיכה מצוינת וקישוט.</string>
     <string name="town_deco_pole_desc">עמוד גבוה שנועד למתיחת החבל.</string>
     <string name="town_deco_pole_name">עמוד</string>
@@ -717,6 +720,9 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 
