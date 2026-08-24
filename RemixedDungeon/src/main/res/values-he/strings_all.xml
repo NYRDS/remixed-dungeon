@@ -655,6 +655,7 @@
     <string name="WndSettings_SelectLanguage">בחר שפה</string>
     <string name="WndSettings_UiScale">קנה מידה של ממשק המשתמש</string>
     <string name="WndStory_Prision">לפני שנים רבות נבנה כאן כלא תת-קרקעי עבור הפושעים המסוכנים ביותר. בזמנו זה נראה רעיון חכם מאוד, כי המקום הזה אכן היה קשה מאוד לבריחה. אבל עד מהרה מיאזמה אפלה החלה לחלחל מלמטה, מטריפה את דעתם של אסירים ושומרים כאחד. בסופו של דבר הכלא ננטש, אף שכמה אסירים נותרו נעולים כאן.</string>
+    <string name="WndTilesKind_ClassicLook">מראה קלאסי</string>
     <string name="WndTilesKind_text">אתה עומד להיכנס לצינוק שנכבש על ידי קסם מעוות, אך כעת תוכל לבחור כיצד תראה אותו:\n האם אתה מעדיף מראה פסאודו-3D מודרני או תצוגה שטוחה קלאסית?\nתוכל לשנות זאת מאוחר יותר בתפריט אפשרויות המשחק.</string>
     <string name="WndTradeItem_Bought">רכשת את %1 תמורת %2</string>
     <string name="WndTradeItem_Buy">קנה ב-%d זהב</string>
@@ -720,6 +721,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

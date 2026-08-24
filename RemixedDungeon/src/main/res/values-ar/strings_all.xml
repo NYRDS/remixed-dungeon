@@ -243,6 +243,7 @@
     <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
     <string name="FrozenCarpaccio_Info3">منعش!</string>
     <string name="FrozenCarpaccio_Info4">تشعر بتحسن!</string>
+    <string name="FrozenCarpaccio_Name">كارباتشو مجمد</string>
     <string name="GameScene_Grass">رائحة النباتات تفوح في الهواء.</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="GasImmuneBuff_Name">مناعة الغاز</string>
@@ -266,6 +267,7 @@
     <string name="Halls_TileWater">لावा باردة</string>
     <string name="Haste_Name">سرعة قصوى</string>
     <string name="Heal_Cast">تم شفاء %s.</string>
+    <string name="HealthArrow_Info">طرف هذه السهم مغطى بجرعة الشفاء.</string>
     <string name="HeartOfDarkness_Info">قلب أسود نابض لروح الخيانة.</string>
     <string name="HeartOfDarkness_Name">قلب الظلام</string>
     <string name="Hedgehog_Desc">يبدو أن هذا القنفذ متوتر.</string>
@@ -673,6 +675,7 @@
     <string name="WndJournal_Levels">المستويات</string>
     <string name="WndJournal_Title">اليوميات</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
+    <string name="WndLibrary_Items_Btn">العناصر</string>
     <string name="WndLocalModInstall_text">اختر الدليل لتثبيت المود منه</string>
     <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \&quot;إعلان\&quot; مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
     <string name="WndPlayGames_BackupProgress">نسخ احتياطي لتقدم اللعبة</string>
@@ -785,6 +788,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 

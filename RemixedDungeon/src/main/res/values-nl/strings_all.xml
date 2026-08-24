@@ -164,6 +164,7 @@
     <string name="ClassArmor_NotEquipped">Je moet dit pantser dragen om zijn speciale kracht te gebruiken!</string>
     <string name="Claymore_Info">Dit massieve zwaard zou in staat moeten zijn om door alles heen te snijden.</string>
     <string name="CloakBuff_Info">Een donkere mantel verhult je in de schaduw, waardoor je minder zichtbaar bent voor vijanden.</string>
+    <string name="ClothArmor_Desc">Deze lichte bepantsering biedt eenvoudige bescherming.</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="Codex_Story_12">Brandid wapen - Bij een succesvolle treffer geeft dit extra schade en kan het doel in brand steken.</string>
@@ -233,6 +234,7 @@
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="FrozenCarpaccio_Info2">Je voelt je verharden!</string>
+    <string name="FrozenCarpaccio_Name">bevroren carpaccio</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
     <string name="GameScene_NightMode">Wees voorzichtig, de kerker is \'s nachts nog gevaarlijker!</string>
@@ -676,6 +678,7 @@
     <string name="Wand_Wood_Types_9">paars hart</string>
     <string name="WarHammer_Info">Weinig wezens kunnen de verpletterende klap van deze torenhoge massa lood en staal weerstaan, maar alleen de sterkste avonturiers kunnen het effectief gebruiken.</string>
     <string name="WarHammer_Name">oorlogshamer</string>
+    <string name="Warlock_Killed">%s\'s schaduwbliksem heeft je gedood...</string>
     <string name="WarriorArmor_Prompt">Kies een richting om te springen</string>
     <string name="WaterElemental_Desc">Water elementalen komen voor bij grote watermassa\'s. Meestal dwalen deze magisch gebonden golven gewoon rond.</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
@@ -1089,6 +1092,9 @@
 
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 

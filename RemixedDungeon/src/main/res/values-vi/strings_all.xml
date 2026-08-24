@@ -53,6 +53,7 @@
     <string name="Badges_DeathGlyph">Chết vì glyph</string>
     <string name="Badges_DeathHunger">Chết vì đói</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
+    <string name="Badges_GamesPlayed2">Đã chơi 100 ván</string>
     <string name="Badges_GoldColleted4">Đã thu thập 7500 vàng</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
     <string name="Badges_ItemLvl2">Đã có vật phẩm cấp 6</string>
@@ -162,6 +163,7 @@
     <string name="Claymore_Info">Thanh kiếm đồ sộ này chắc chắn có thể chém xuyên qua bất cứ thứ gì.</string>
     <string name="Claymore_Name">Kiếm Claymore</string>
     <string name="CloakSpell_Info">Bước vào bóng tối để trở nên vô hình. Giảm đáng kể cơ hội bị phát hiện. Không thể sử dụng khi kẻ địch ở gần.</string>
+    <string name="ClothArmor_Desc">Bộ giáp nhẹ này chỉ cung cấp khả năng bảo vệ cơ bản.</string>
     <string name="Codex_Story_10">Glyph Entangle - Anh hùng có thể nhận được giáp thảo mộc, nhưng đồng thời cũng có thể bị rễ cây trói chân.</string>
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
     <string name="Codex_Story_17">Vũ khí gây choáng - Khi đánh trúng, có thể khiến mục tiêu bị tê liệt.</string>
@@ -654,6 +656,7 @@
     <string name="Wand_Wood_Types_9">gỗ tím</string>
     <string name="WarHammer_Info">Rất ít sinh vật có thể chịu đựng đòn đánh đập tan tành của khối chì và thép khổng lồ này, nhưng chỉ những nhà phiêu lưu mạnh nhất mới có thể sử dụng nó hiệu quả.</string>
     <string name="WarHammer_Name">Búa chiến tranh</string>
+    <string name="Warlock_Killed">Tia bóng tối của %1$s đã giết bạn...</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterOfTransmutation_Info">Sức mạnh của sự biến đổi tỏa ra từ nước của giếng này. Hãy ném một vật phẩm vào giếng để biến nó thành thứ khác.</string>
@@ -1264,6 +1267,9 @@
 
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
