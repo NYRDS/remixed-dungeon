@@ -82,6 +82,7 @@
     <string name="Bandit_Name_Objective">gekke bandiet</string>
     <string name="Barrel_Name">vat</string>
     <string name="Barrel_Pumpkin_Name">pompoen</string>
+    <string name="Bat_Defense">ontweken</string>
     <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">Het enorme staande hoofd van deze strijdbijl geeft een aanzienlijk gewicht achter elke slag.</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
@@ -205,6 +206,7 @@
     <string name="DieHardBuff_Name">Die Hard</string>
     <string name="DoctorArmor_Name">Doktersgewaad</string>
     <string name="DriedRoseBuff_Info">De roos ziet er heel aantrekkelijk uit.</string>
+    <string name="DriedRoseCursedBuff_Name">Verliefd</string>
     <string name="DriedRose_Name">gedroogde roos</string>
     <string name="Drink_Message">Die drank was verfrissend!</string>
     <string name="DrunkardNPC_Desc">Vaste klant van de herberg in natuurlijke staat.</string>
@@ -241,6 +243,7 @@
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
     <string name="GameScene_NightMode">Wees voorzichtig, de kerker is \'s nachts nog gevaarlijker!</string>
+    <string name="GasImmuneBuff_Info">Immuun voor alle gassen.</string>
     <string name="GasImmuneBuff_Name">Gasimmuniteit</string>
     <string name="Ghost_Defense">ontweek</string>
     <string name="Ghost_Rose2">Alsjeblieft... Help me... Vind de roos...</string>
@@ -256,6 +259,7 @@
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileStatue">Pilaar</string>
     <string name="Heal_Cast">%s is genezen.</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealthArrow_Info">De punt van deze pijl is bedekt met een genezende drank.</string>
     <string name="Heap_Mimic">Dit is een mimic!</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
@@ -864,5 +868,4 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
-
 </resources>

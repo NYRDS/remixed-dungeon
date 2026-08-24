@@ -247,6 +247,7 @@
     <string name="GameScene_NightMode">Hãy cẩn thận, hầm ngục còn nguy hiểm hơn vào ban đêm!</string>
     <string name="GameScene_Welcome">Chào mừng bạn đến cấp %d của Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Chào mừng quay lại cấp độ %d của Remixed Dungeon!</string>
+    <string name="GasImmuneBuff_Info">Miễn nhiễm với mọi loại khí.</string>
     <string name="GasImmuneBuff_Name">Miễn dịch khí gas</string>
     <string name="Ghost_Defense">né tránh</string>
     <string name="Ghost_Desc">Ma gần như không thể nhìn thấy. Nó trông như một đốm ánh sáng mờ vô hình với một khuôn mặt buồn bã.</string>
@@ -262,6 +263,7 @@
     <string name="Halls_TileStatue">Cột</string>
     <string name="Heal_Cast">%s đã được chữa trị.</string>
     <string name="Heal_Info">Một phép thuật khá hữu ích trong ngục, phải không?</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Name">lính tế thành phố</string>
     <string name="HeartOfDarkness_Name">Trái tim của bóng tối</string>
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
@@ -631,6 +633,7 @@
     <string name="TownsfolkNPC_Message3">Một ngày đẹp đẽ thật.</string>
     <string name="TownsfolkNPC_Message4">Tôi hy vọng cống rãnh sẽ không bị ngập khi mùa xuân đến. Chúng tôi không cần một đợt xâm nhập chuột khác.</string>
     <string name="TownsfolkNPC_Name">người dân thành phố</string>
+    <string name="TownsfolkSilentNPC_Name">người dân thành phố</string>
     <string name="ToxicGas_Info">Một đám mây khí độc màu xanh lá cây đang xoáy ở đây.</string>
     <string name="ToxicGas_Info1">Bạn đã chết vì hít phải khí độc...</string>
     <string name="ToxicGland_Name">Tuyến độc</string>
@@ -834,5 +837,4 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
-
 </resources>
