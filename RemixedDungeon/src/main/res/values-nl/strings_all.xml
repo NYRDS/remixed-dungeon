@@ -18,6 +18,7 @@
     <string name="Accuracy_DecreasedDoctor">Elke slag met deze %s verspreidt onvolkomenheden. Mijn botenzaag geneest... dit besmet.</string>
     <string name="AirElemental_Desc">Luchtelementalen zijn vliegende magische wezens gemaakt van levende lucht.</string>
     <string name="AirElemental_Name_Objective">luchtelementaal</string>
+    <string name="AlarmTrap_Desc">De val laat een doordringend geluid horen dat door de hele dungeon weergalmt!</string>
     <string name="AlchemyPot_SelectSeed">Selecteer een zaadje om te werpen</string>
     <string name="AllowStatisticsCollectionScene_Allow">Toestaan</string>
     <string name="AllowStatisticsCollectionScene_Deny">Weigeren</string>
@@ -134,6 +135,7 @@
     <string name="ChaosBow_Name">chaosboog</string>
     <string name="ChaosCrystal_BladeFused">Het kristal absorber je wapen, en nam de vorm van een zwaard aan</string>
     <string name="ChaosCrystal_Fuse">SMETEN</string>
+    <string name="ChaosCrystal_Name_2">Chaos Kristal</string>
     <string name="ChaosShield_desc">Het Chaos Schild ontstaat door het samensmelten van een Chaos Kristal met een gewoon schild, waardoor het bij elke succesvolle blokkade willekeurige chaotische effecten vertoont.</string>
     <string name="ChaosSword_Name">chaoszwaard</string>
     <string name="CharAction_Hit">slaan</string>
@@ -589,6 +591,7 @@
     <string name="StartScene_DifficultySelect">Kies je lot</string>
     <string name="StartScene_Load">Spel laden</string>
     <string name="StartScene_New">Nieuw spel</string>
+    <string name="StartScene_Really">Wil je echt een nieuw spel starten?</string>
     <string name="StartScene_UnlockGnoll">Om deze klasse te ontgrendelen moet je de dorpspriester ervan overtuigen de Gnol Brute te genezen</string>
     <string name="Statue_Name">levend standbeeld</string>
     <string name="StoneBloodBuff_Info">Het bloed verandert in steen die samensmelt met de nabije muren en het doorlopen ervan veel makkelijker maakt, maar tegen welke prijs.</string>
@@ -598,6 +601,7 @@
     <string name="Stylus_Info">Deze arcanische stylus is gemaakt van een donkere, zeer harde steen. Je kunt er een glyph of rune mee graveren, maar je kunt niet kiezen welke er wordt gegraveerd; de stylus beslist voor je.</string>
     <string name="Stylus_Inscribed">je hebt de %1$s op je %2$s gegraveerd</string>
     <string name="Stylus_Name">tooverstylus</string>
+    <string name="Succubus_Name">succubus</string>
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
     <string name="SummonBeast_Name">Beestenroep</string>
@@ -638,6 +642,7 @@
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Name">stadbewoner</string>
     <string name="ToxicGas_Info">Hier zweeft een groenachtige wolk van giftig gas.</string>
+    <string name="ToxicGas_Info1">Je bent gestorven doordat je giftig gas inademde...</string>
     <string name="ToxicGland_Name">Giftige klier</string>
     <string name="TreacherousSpirit_Desc">Deze monsterlijke verschijning lijkt op een wolk van levende duisternis. Zijn gigantische oog staart je aan en pulseert bij elke beweging die je maakt.</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
@@ -1084,6 +1089,11 @@
 
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
 
 
 

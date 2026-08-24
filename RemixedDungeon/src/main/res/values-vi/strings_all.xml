@@ -129,6 +129,7 @@
     <string name="ChaosBow_Name">cung hỗn loạn</string>
     <string name="ChaosCrystal_BladeFused">Vien ngoc hap thu vu khi cua ban va bien thanh hinh dang mot thanh kiem</string>
     <string name="ChaosCrystal_Fuse">DUNG HỢP</string>
+    <string name="ChaosCrystal_Name_2">Viên Ngọc Hỗn Mang</string>
     <string name="ChaosCrystal_SwordFused">Kính hấp thụ vũ khí của bạn và biến thành một Chiếc Kiếm</string>
     <string name="ChaosHelmet_Info">Một chiếc mũ đỏ màu máu là biểu tượng thiết yếu của một chiến binh hỗn loạn.</string>
     <string name="ChaosShield_desc">Khiên Hỗn Mang là kết quả của việc hợp nhất một Viên Ngọc Hỗn Mang với chiếc khiên thường, khiến nó tạo ra những hiệu ứng hỗn loạn ngẫu nhiên khi chặn thành công.</string>
@@ -202,6 +203,7 @@
     <string name="DrunkardNPC_Name">người say xỉn</string>
     <string name="Drunkard_Phrase_1">CHO ANH XIN THÊM RƯỢU!</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
+    <string name="Dungeon_NoTips">Chữ viết không thể đọc được...</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
     <string name="Dungeon_Tips_3">Bạn có thể dùng vàng của mình ở các cửa hàng hoặc dịch vụ trong thị trấn hoặc ngục.</string>
     <string name="Dungeon_Tips_4">Cẩn thận Goo!</string>
@@ -592,6 +594,7 @@
     <string name="Stylus_Info">Chiếc bút bí ẩn này được làm từ một loại đá đen và rất cứng. Bạn có thể dùng nó để khắc các ký tự hoặc rune, nhưng bút mới quyết định khắc cái gì, không phải bạn.</string>
     <string name="Stylus_Name">bút huyền bí</string>
     <string name="Succubus_Gender">masculine</string>
+    <string name="Succubus_Name">succubus</string>
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
     <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
     <string name="SummonBeast_Name">Gọi Thú</string>
@@ -621,6 +624,7 @@
     <string name="TownsfolkNPC_Message4">Tôi hy vọng cống rãnh sẽ không bị ngập khi mùa xuân đến. Chúng tôi không cần một đợt xâm nhập chuột khác.</string>
     <string name="TownsfolkNPC_Name">người dân thành phố</string>
     <string name="ToxicGas_Info">Một đám mây khí độc màu xanh lá cây đang xoáy ở đây.</string>
+    <string name="ToxicGas_Info1">Bạn đã chết vì hít phải khí độc...</string>
     <string name="ToxicGland_Name">Tuyến độc</string>
     <string name="TrapWnd_Title">Cạm bẫy</string>
     <string name="TreacherousSpirit_Desc">Sinh vật quái dị này trông giống như một đám mây bóng tối sống động. Con mắt khổng lồ không mí của nó nhìn chằm chằm vào bạn, đập lên theo từng cử động của bạn.</string>
@@ -1260,6 +1264,11 @@
 
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
 
 
 
