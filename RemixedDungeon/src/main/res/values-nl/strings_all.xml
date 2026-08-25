@@ -109,6 +109,7 @@
     <string name="BloodTransfusion_WontAgreed">Het slachtoffer weerst het onttrekken van zijn levensessentie.</string>
     <string name="BodyArmorBuff_Name">Lichaamspantser</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
+    <string name="Bow_Info1">Dit is een afstandswapen. Het is nutteloos voor iedereen behalve elfen op zeer korte afstand. Met een boog uitgerust kun je pijlen afschieten.\n\n</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="BurningBuff_Info">Het lichaam is verteerd in razende vlammen!</string>
     <string name="BurningBuff_Name">In brand</string>
@@ -541,6 +542,7 @@
     <string name="ScrollOfTerror_Info3">De rol zendt een felle flits van rood licht uit en de monsters vluchten!</string>
     <string name="ScrollOfUpgrade_LooksBetter">je %s ziet er nu zeker beter uit</string>
     <string name="ScrollOfWeaponUpgrade_Info">Deze rol zal een wapen voor nabijgevecht upgraden, de kwaliteit verbeterend. In tegenstelling tot een gewone Upgrade Scroll, zal deze gespecialiseerde versie nooit een begoocheling op een wapen vernietigen. Integendeel, het kan een onbetoverde wapen een willekeurige begoocheling geven.</string>
+    <string name="Scroll_Info">Dit perkament is bedekt met onleesbaar schrift en draagt de titel van rune %s. Wie weet wat er gebeurt als het hardop wordt gelezen?</string>
     <string name="Scroll_Runes_10">Odal</string>
     <string name="Scroll_Runes_11">TIWAZ</string>
     <string name="Scroll_Runes_14">ALGIZ</string>
@@ -723,6 +725,7 @@
     <string name="WndDonate_ruby">robijn</string>
     <string name="WndDonate_silverDonate">zilverdonatie</string>
     <string name="WndDonate_silverDonateText2">Ook schakelt u reclame uit in alle spelmodi en ontgrendelt u de Jageres vanaf het begin.</string>
+    <string name="WndDontLikeAds_NotThisTime">Niet deze keer</string>
     <string name="WndFortuneTeller_IdentifyAll">Alles</string>
     <string name="WndFortuneTeller_No_Item">Wees voorzichtig, je wilt je geld toch niet voor niets uitgeven, toch? Er zijn geen ongeïdentificeerde items in je inventaris.</string>
     <string name="WndGame_Customizations">Aanpassingen</string>
@@ -830,6 +833,7 @@
     <string name="town_deco_brown_carpet_name">Tapijt</string>
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
     <string name="town_deco_canvas_name">Canvas</string>
+    <string name="town_deco_carpet_name">Tapijt</string>
     <string name="town_deco_charcoal_carpet_name">Tapijt</string>
     <string name="town_deco_chest_desc">Handig meubelstuk voor het opbergen van allerlei spullen en sieraden.</string>
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
@@ -881,6 +885,10 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
 
 
 

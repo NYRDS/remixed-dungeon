@@ -88,6 +88,7 @@
     <string name="Blacksmith_Gold1">היי, בן אדם! רוצה להיות מועיל, אה? קח את המעדר הזה ותחפור לי קצת _עפרת זהב אפלה_, _15 חתיכות_ יספיקו. למה אתה מתכוון, איך אני אשלם? אתה חמדן...\nבסדר, בסדר, אין לי כסף לשלם, אבל אני יכול לעשות עבודת נפחות בשבילך. תחשיב את עצמך בר מזל, אני הנפח היחיד בסביבה.</string>
     <string name="Blacksmith_Verify4">אני לא עובד עם פריטים מקוללים!</string>
     <string name="Blacksmith_Verify6">אני לא יכול לשחזר את הפריטים האלה!</string>
+    <string name="Bow_Info1">זהו נשק טווח. הוא חסר תועלת לכולם מלבד אלפים בטווח קרוב מאוד. כשקשת מצוידת אפשר לירות חצים.\n\n</string>
     <string name="Brute_Enraged">%s נכנס לזעם!</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
     <string name="BurningFist_Name_Objective">אגרוף בוער</string>
@@ -165,6 +166,7 @@
     <string name="CorpseDust_Info">כדור אבק הגופות לא נראה שונה מכדור אבק רגיל. עם זאת, אתה יודע איכשהו שעדיף להיפטר ממנו בהקדם האפשרי.</string>
     <string name="Crystal_Desc">גביש גדול ומבריק מרחף באוויר. כנראה שהוא מלא בקסם חזק.</string>
     <string name="DM300_Info2">המשימה נכשלה. כיבוי.</string>
+    <string name="DarkGold_Name">עפרת זהב אפלה</string>
     <string name="DarkSacrifice_Ok">חַיַּי שֶׁלְּךָ!</string>
     <string name="Dart_Info">חודים מתכתיים פשוטים אלו מאוזנים בצורה אידיאלית כדי לחדור במדויק את טרפם.</string>
 
@@ -612,6 +614,7 @@
     <string name="WndDonate_goldDonateText">תודה על עזרתך</string>
     <string name="WndDonate_royalDonateText">אני לא רוצה להישמע מוזר, אבל בכך שאתה עושה את זה, אתה ממש מאכיל את המפתחים.</string>
     <string name="WndDonate_ruby">אודם</string>
+    <string name="WndDontLikeAds_NotThisTime">לא הפעם</string>
     <string name="WndFortuneTeller_IdentifyAll">הכל</string>
     <string name="WndFortuneTeller_No_Item">היזהר, אתה לא רוצה לבזבז את הכסף שלך לחינם, נכון? אין פריטים לא מזוהים במלאי שלך.</string>
     <string name="WndGame_Exit">צא מ-Remixed Dungeon</string>
@@ -729,4 +732,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 </resources>

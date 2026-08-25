@@ -116,6 +116,7 @@
     <string name="BloodTransfusion_Drained">تتدفق جوهر الحياة من حيوانك الأليف إليك.</string>
     <string name="BoneSaw_Name">منشار العظام</string>
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
+    <string name="Bow_Info1">هذا سلاح بعيد المدى. لا يفيد أحدًا إلا الجنّيات في المدى القريب جدًا. امتلاك قوس مسلّح يتيح لك إطلاق السهام.\n\n</string>
     <string name="Bowknot_Info">شريط وردي لامع جميل مربوط بعقدة ومثبت بدبوس شعر.</string>
     <string name="Brute_Gender">masculine</string>
     <string name="BurningFist_Name">قبضة محرقة</string>
@@ -660,6 +661,7 @@
     <string name="WndDonate_goldDonateText">شكراً لمساعدتكم</string>
     <string name="WndDonate_silverDonate">تبرع فضي</string>
     <string name="WndDonate_silverDonateText2">أيضًا تعطيل الإعلانات في جميع أنماط اللعب وفتح صياد منذ البداية.</string>
+    <string name="WndDontLikeAds_NotThisTime">ليس هذه المرة</string>
     <string name="WndFortuneTeller_IdentifyAll">الكل</string>
     <string name="WndFortuneTeller_No_Item">احذر، أنت لا تريد إنفاق أموالك بلا فائدة، أليس كذلك؟ لا توجد عناصر غير محددة في مخزونك.</string>
     <string name="WndFortuneTeller_Title">العَرّافَة</string>
@@ -792,4 +794,6 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 </resources>

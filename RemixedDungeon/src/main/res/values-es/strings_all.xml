@@ -2533,7 +2533,7 @@ otro lugar del nivel.</string>
     <string name="WndDonate_silverDonate">donación de plata</string>
     <string name="WndDonate_silverDonateText">Cualquier donación ayudará al desarrollo del proyecto</string>
     <string name="WndDonate_silverDonateText2">Además, elimina los anuncios y desbloquea a la cazadora desde el principio.</string>
-    <string name="WndDontLikeAds_NotThisTime">No ésta vez.</string>
+    <string name="WndDontLikeAds_NotThisTime">No esta vez.</string>
     <string name="WndError_Title">ERROR</string>
     <string name="WndFortuneTeller_IdentifyAll">Todo</string>
     <string name="WndFortuneTeller_Instruction">Puedo revelar los secretos detrás de los artículos que posees.\n Una identificación le costará %d monedas.</string>
@@ -3066,6 +3066,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

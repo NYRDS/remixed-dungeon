@@ -99,6 +99,7 @@
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="BoneSaw_Info">Một cái cạo phẫu thuật được thiết kế chính xác để thâm nhiễm nhanh chóng. Sát thương và tốc độ tấn công của nó trở nên nguy hiểm hơn cùng với kỹ năng của Bác sĩ Chết Chóc. Các đòn chí mạng cắt thêm các phần có thể thu hoạch từ kẻ thù, và nó tấn công với hiệu quả tàn nhẫn đối với kẻ thù bị tê liệt.</string>
     <string name="Boomerang_Gender">masculine</string>
+    <string name="Bow_Info1">Đây là vũ khí tầm xa. Nó vô dụng với mọi người trừ tinh linh ở cự ly rất gần. Trang bị cung cho phép bạn bắn tên.\n\n</string>
     <string name="Brute_Name_Objective">gnoll brute</string>
     <string name="BurningBuff_Info">Cơ thể bị lửa thiêu đốt!</string>
     <string name="BurningFist_Name_Objective">cú đấm bùng cháy</string>
@@ -696,6 +697,7 @@
     <string name="WndDonate_goldDonate">quyên góp vàng</string>
     <string name="WndDonate_goldDonateText">Cảm ơn sự giúp đỡ của bạn</string>
     <string name="WndDonate_royalDonateText2">Ngoài ra, bạn sẽ nhận được mọi loại mũ từ cửa hàng trong ứng dụng! Cũng như mọi loại mũ sẽ được phát hành trong tương lai.</string>
+    <string name="WndDontLikeAds_NotThisTime">Không phải lần này</string>
     <string name="WndFortuneTeller_IdentifyAll">Tất cả</string>
     <string name="WndFortuneTeller_No_Item">Cẩn thận, bạn chắc không muốn tiêu tiền oan, phải không? Trong túi đồ của bạn không có vật phẩm chưa định danh.</string>
     <string name="WndGame_Exit">Thoát Remixed Dungeon</string>
@@ -822,6 +824,7 @@
     <string name="town_deco_pedestal_desc">Một giá đỡ có một cuốn sách thánh trên đó.</string>
     <string name="town_deco_pillar_desc">Ngày xưa, cột này từng đóng vai trò là đỡ đẹp đẽ và trang trí.</string>
     <string name="town_deco_porch_desc">Hiên làm bằng gỗ.</string>
+    <string name="town_deco_poster_name">Áp phích</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
     <string name="town_deco_potions_name">Thuốc</string>
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
@@ -849,6 +852,9 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
