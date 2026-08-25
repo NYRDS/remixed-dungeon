@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Nuốt chửng</string>
     <string name="AC_Dissect">Phẫu thuật</string>
@@ -32,7 +31,7 @@
     <string name="AmokDart_Info">Dung dịch trên mũi tên này sẽ biến bất kỳ ai thành một kẻ điên cuồng tàn bạo không trí tuệ.</string>
     <string name="AmokDart_Name">Đũa Amok</string>
     <string name="AmuletScene_Stay">Tôi chưa xong đâu</string>
-    <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \"thuyết phục\" nó làm như vậy.</string>
+    <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \&quot;thuyết phục\&quot; nó làm như vậy.</string>
     <string name="Amulet_Name">Bùa Yendor</string>
     <string name="ArmorKit_ACAplly">ÁP DỤNG</string>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
@@ -78,7 +77,7 @@
     <string name="BattleAxe_Name">rìu chiến đấu</string>
     <string name="Bee_Gender">masculine</string>
     <string name="BellaNPC_Angry">Dám... ngươi kẻ nhục nát!</string>
-    <string name="BellaNPC_Desc">Một cô gái trông rất sang trọng. Toàn bộ vẻ ngoài của cô ấy nói với bạn: \"Tôi quá tốt cho mọi người.\"</string>
+    <string name="BellaNPC_Desc">Một cô gái trông rất sang trọng. Toàn bộ vẻ ngoài của cô ấy nói với bạn: \&quot;Tôi quá tốt cho mọi người.\&quot;</string>
     <string name="BellaNPC_Yes_End_Game">Chắc chắn rồi (Kết thúc trò chơi)</string>
     <string name="BishopNPC_Desc">Giám mục của Giáo hội Thánh của Santa Chúa Sâu</string>
     <string name="BishopNPC_Name">Giám mục</string>
@@ -129,7 +128,7 @@
     <string name="Challenges_Names_5">Vào bóng tối</string>
     <string name="ChampionOfAirBuff_Info">Đặc tính này ban tặng cho sinh vật bản chất của gió, nâng cao sự nhanh nhẹn và khả năng chiến đấu. Võ sĩ Bậc Thầy Khí trở thành đối thủ đáng gờm, có thể tung ra những đòn tấn công nhanh chóng và tàn phá có thể thay đổi nhanh chóng cục diện trận chiến.</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
-    <string name="ChampionOfFireBuff_Info">\"Được thâu nhục bởi cơn giận của ngọn lửa, đặc tính này khuếch đại sự dữ dằn và khả năng chiến đấu của sinh vật. Võ sĩ Lửa nổi lên như một đối thủ đáng sợ, tung ra những đòn tấn công tàn khốc có thể bao quanh kẻ thù trong ngọn lửa thiêu rực, khiến tất cả những kẻ dám chống đối đều run rợn.\"</string>
+    <string name="ChampionOfFireBuff_Info">\&quot;Được thâu nhục bởi cơn giận của ngọn lửa, đặc tính này khuếch đại sự dữ dằn và khả năng chiến đấu của sinh vật. Võ sĩ Lửa nổi lên như một đối thủ đáng sợ, tung ra những đòn tấn công tàn khốc có thể bao quanh kẻ thù trong ngọn lửa thiêu rực, khiến tất cả những kẻ dám chống đối đều run rợn.\&quot;</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">Mot thanh kiem mot tay cua hon loan than khiet. No phat trien trong chien dau nhu nguoi anh em hai tay cua no, nhung cham hon va tiem nang nho hon — de tay con lai tu do cho khiên.</string>
     <string name="ChaosBlade_Name">kiem hon loan</string>
@@ -199,6 +198,7 @@
     <string name="DeathKnight_Name">kỵ sĩ tử thần</string>
     <string name="DeathKnight_Name_Objective">kỵ sĩ tử thần</string>
     <string name="Death_Name_0">Quỷ %s</string>
+    <string name="Death_Name_1">%s tử thần</string>
     <string name="DeepSnail_Desc">Loài thân mềm này thường xuất hiện gần nguồn nước và nhanh hơn nhiều so với ốc sên thường. Tuy nhiên hãy cẩn thận với vết cắn, chúng có thể gây ảnh hưởng khó chịu lên làn da của bạn.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">Cơn đau đã biến thành cơn đau chậm, làm giảm sát thương nhận được một lần.\nSát thương còn lại để nhận %d</string>
@@ -221,6 +221,7 @@
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_NoTips">Chữ viết không thể đọc được...</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
+    <string name="Dungeon_Tips_18">Cách duy nhất để phù phép vũ khí là nâng cấp nó bằng cuộn giấy Nâng cấp vũ khí.</string>
     <string name="Dungeon_Tips_3">Bạn có thể dùng vàng của mình ở các cửa hàng hoặc dịch vụ trong thị trấn hoặc ngục.</string>
     <string name="Dungeon_Tips_4">Cẩn thận Goo!</string>
     <string name="Dungeon_Tips_6">Xác định thuốc và cuộn giấy càng sớm càng tốt. Đừng để đến lúc bạn thực sự cần chúng mới làm.</string>
@@ -236,7 +237,7 @@
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">đầu lâu nổ</string>
     <string name="ExplodingSkull_Name_Objective">đầu lâu nổ</string>
-    <string name="Eye_Desc">Một trong những cái tên khác của quỷ này là \"cầu bóng căm thù\", vì khi thấy kẻ thù, nó sử dụng cái nhìn tử thần một cách liều lĩnh, thường bỏ qua đồng minh và làm bị thương họ.</string>
+    <string name="Eye_Desc">Một trong những cái tên khác của quỷ này là \&quot;cầu bóng căm thù\&quot;, vì khi thấy kẻ thù, nó sử dụng cái nhìn tử thần một cách liều lĩnh, thường bỏ qua đồng minh và làm bị thương họ.</string>
     <string name="Eye_Name">con mắt quỷ</string>
     <string name="Facilitations_Names_1">Cơ thể khỉ lợn</string>
     <string name="Facilitations_Names_2">Linh hồn thần đèn</string>
@@ -304,6 +305,7 @@
     <string name="HeroSubClass_DescWarL">Sau khi giết một kẻ thù, _Pháp Sư_ sẽ hấp thụ linh hồn của nó. Điều này chữa lành vết thương và làm no đói của hắn.</string>
     <string name="HeroSubClass_DescWard">Với sự kết nối mạnh mẽ với các lực lượng thiên nhiên, _Kiến Trùm_ có khả năng thu thập giọt sương và hạt giống từ các cây cỏ. Ngoài ra, đi qua bụi cỏ cao cũng ban cho họ một đợt tăng giáp tạm thời.</string>
     <string name="HeroSubClass_NameFreR">kẻ chạy tự do</string>
+    <string name="HeroSubClass_NameLich">Lich</string>
     <string name="HeroSubClass_NameSnip">xạ thủ</string>
     <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="HeroSubClass_NameWitchdoctor">thầy pháp</string>
@@ -361,6 +363,8 @@
     <string name="Knuckles_Name">cặp đấm</string>
     <string name="Kobold_Desc">Người ta tin rằng Kobold chỉ là truyền thuyết. Là tổ tiên của loài quỷ lùn, kobold cư ngụ trong những hang động sâu và lạnh nhất. Người ta cũng kể rằng giống loài này đã làm chủ kỹ nghệ và máy móc từ lâu trước khi người lùn làm được điều đó.</string>
     <string name="Kobold_Gender">masculine</string>
+    <string name="KunaiThrow_Info">Đòn ném kunai chết người này được thực hiện cực kỳ nhanh, nhanh đến mức bạn thậm chí không thể chọn mục tiêu.\n\nBậc thầy thực sự có thể ném nhiều hơn một kunai cùng lúc.</string>
+
     <string name="KunaiThrow_Name">Ném kunai</string>
     <string name="Kusarigama_Info">Vũ khí này gồm một lưỡi liềm gắn trên chuỗi xích kim loại với một quả tạ sắt nặng ở đầu bên kia.</string>
     <string name="Kusarigama_Name">kusarigama</string>
@@ -422,7 +426,7 @@
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
     <string name="MysteryMeat_Message">Món ăn này có vị... lạ.</string>
     <string name="NecromancerArmor_Info">Bộ giáp này cho phép Pháp sư Hắc huyết triệu hồi tối đa hai Deathling, mỗi thứ tốn 5 linh hồn. Những tôi tớ bất tử này sẽ theo chủ và tấn công kẻ thù. Deathling sẽ trở nên mạnh hơn theo cấp độ anh hùng.</string>
-    <string name="NecromancerArmor_Info2">Mặc bộ giáp này cho phép pháp sư tử thi sử dụng khả năng \"Necrotism\", lan truyền một dịch hạch phép thuật có thể lây nhiễm bất kỳ sinh vật nào trong khu vực, sống hoặc chết.</string>
+    <string name="NecromancerArmor_Info2">Mặc bộ giáp này cho phép pháp sư tử thi sử dụng khả năng \&quot;Necrotism\&quot;, lan truyền một dịch hạch phép thuật có thể lây nhiễm bất kỳ sinh vật nào trong khu vực, sống hoặc chết.</string>
     <string name="NecromancerArmor_Name">Áo giáp xương</string>
     <string name="NecromancerNPC_Intro">À! Thật một cảnh hiếm! Một người bạn đồng hành phiêu lưu không chỉ là một xác chết. Hầu như không thể tin được! Ô... Xin lỗi, đôi khi tôi quá hào hứng. Bạn thấy, tôi là một pháp sư chết chóc. Và dù nghiên cứu xác chết và chính cái chết là nghề nghiệp của tôi, nhưng nhìn thấy những điều giống nhau lặp đi lặp lại cuối cùng cũng cực kỳ mệt mỏi. Mặt khác, đó chính là lý do tôi ở đây. Theo tính toán của tôi, chỉ trong vài tuần nữa, ở đâu đó trong hầm ngục này, sẽ xảy ra một chuyện kỳ diệu. _Necropolis_, một thành phố cổ của người chết sẽ mở cửa. Và... tôi không thể nói thêm, tôi đã lãng phí đủ thời gian. Tôi cần chuẩn bị, _hãy quay lại sau_.</string>
     <string name="NecromancerNPC_Name">pháp sư chết chóc</string>
@@ -466,7 +470,7 @@
     <string name="PlagueDoctorQuest_4_2_Prologue">*Ngón xương khô của hắn gõ nhịp nhàng vào nồi nước sôi sùng sục, không khí quanh hắn dày đặc bởi mùi hôi chua gay của lưu huỳnh và sự phân giải*\n_Kobold Pháp Sư Băng_! Những sinh vật thảm hại kia, trùm mình trong hang động đóng băng, nguội ngút chăm chăm vào phép thuật băng giá của chúng.\nTa cần năm con, xác đóng băng của chúng sẽ... soi sáng sự việc.\nSự thành thạo băng giá của chúng, nó... kỳ lạ.\nTa tin rằng chúng khai thác một năng lượng nguyên thủy, một sức mạnh ngủ quên dưới bề mặt của chính thế giới này.</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Tâm trí anh ấy lang thang khi nói, giọng nói càng lúc càng nhỏ, chỉ còn là thì thầm.* Mang cho ta hai *súc quyên*... sống. Quyền năng của chúng... mê hoặc.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Hắn ấp úng, giọng khàn khàn như cành cây khô giòn*. A-a, _súc quy_! Hai... có, hai, còn sống! Nó là... hem... cho nghiên cứu của ta! Các ngươi thấy... pheromone của chúng... nó quan trọng để hiểu cái cân bằng tinh tế của... a... *Hắn ngập ngừng, bàn tay xương cốt đưa lên gõ nghiến mặt nạ, ánh mắt chớm chớp nhìn về phía các ngươi với cường độ sốt ruột.* Cái... bản chất của chúng... nó là một câu đố... một câu đố đẹp đẽ, bí ẩn! *Hắn ho khan gắt gao, cố gắng lấy lại bình tĩnh.* Ta hứa, vì mang cho ta hai con... quái vật này... các ngươi sẽ có lòng biết ơn vĩnh cửu của ta. Hãy coi đó như một... một ơn huệ cho tri thức! Đúng! Vì tri thức!</string>
-    <string name="PlagueDoctorQuest_AllDone">*Hắn bật ra một tràng cười khàn khô.* \"Chiến công của ngươi đã mở khóa những bí mật vô biên! Khối kiến thức thu được… đang dồn dập trong ta, như một bản giao hưởng của khám phá. Nhưng kiến thức,\" hắn nói thêm, giọng hạ xuống thành lời thì thầm đầy mưu mẹo, \"kiến thức là quyền lực. Và quyền lực… à… đó là thứ thuốc tiên say đắm nhất.\" Hắn chăm chú nhìn bạn một lúc, đôi mắt tím hổ phách rực cháy cuồng nhiệt. \"Biết đâu,\" hắn lẩm bẩm, \"đường chúng ta sẽ lại giao nhau. Vì vẫn còn nhiều… bí ẩn… chờ được vén màn.\"</string>
+    <string name="PlagueDoctorQuest_AllDone">*Hắn bật ra một tràng cười khàn khô.* \&quot;Chiến công của ngươi đã mở khóa những bí mật vô biên! Khối kiến thức thu được… đang dồn dập trong ta, như một bản giao hưởng của khám phá. Nhưng kiến thức,\&quot; hắn nói thêm, giọng hạ xuống thành lời thì thầm đầy mưu mẹo, \&quot;kiến thức là quyền lực. Và quyền lực… à… đó là thứ thuốc tiên say đắm nhất.\&quot; Hắn chăm chú nhìn bạn một lúc, đôi mắt tím hổ phách rực cháy cuồng nhiệt. \&quot;Biết đâu,\&quot; hắn lẩm bẩm, \&quot;đường chúng ta sẽ lại giao nhau. Vì vẫn còn nhiều… bí ẩn… chờ được vén màn.\&quot;</string>
     <string name="PlagueDoctor_Name">y sĩ đen</string>
     <string name="PoisonBuff_Name">Bị Độc</string>
     <string name="Poison_Death">Bạn đã chết vì độc...</string>
@@ -538,10 +542,12 @@
     <string name="ScarecrowNPC_Name_Objective">ngáo</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
     <string name="Scorpio_Desc">Những sinh vật ác quỷ khổng lồ giống nhện này né tránh chiến đấu cận chiến bằng mọi giá, bắn ra những gai răng cưa làm tê liệt từ khoảng cách xa.</string>
+    <string name="ScrollOfChallenge_Name">Cuộn giấy Khiêu chiến</string>
     <string name="ScrollOfCurse_Info">Cuộn giấy này được tạo ra đặc biệt để trừng phạt những tên trộm đủ ngu ngốc để cố gắng sử dụng phép thuật mà chúng không thể hiểu. Pháp thuật của cuộn giấy hoàn toàn vô dụng thậm chí có hại cho phiêu lưu gia thông thường, nhưng được các thương nhân trân trọng rất cao.</string>
     <string name="ScrollOfIdentify_InvTitle">Chọn một vật phẩm để nhận diện</string>
     <string name="ScrollOfIdentify_Name">cuộn nhận diện</string>
     <string name="ScrollOfLullaby_Info1">Cuộn giấy phát ra giai điệu dịu dàng.</string>
+    <string name="ScrollOfLullaby_Info2">Cuộn giấy vang lên giai điệu dịu dàng và %s đã chìm vào giấc ngủ!</string>
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
     <string name="ScrollOfRecharging_Info1b">một dòng năng lượng lan tỏa qua túi đồ của bạn, sạc lại năng lượng cho các gậy phép</string>
     <string name="ScrollOfRemoveCurse_Info">Lời chú trên cuộn này sẽ tách ngay lập tức khỏi vũ khí, giáp, nhẫn và vật mang theo của người đọc bất kỳ lời nguyền xấu nào có thể ngăn cản người đeo tháo chúng ra.</string>
@@ -601,8 +607,8 @@
     <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Name">Nhà xã hội học</string>
     <string name="SoulShard_Info">Đây là một mảnh vỡ lấy từ tàn tích của Hũ Linh Hồn. Nó lấp lánh với sức mạnh bí ẩn, có lẽ có ai đó quan tâm đến thứ như thế này.</string>
-    <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \"%1$s\".\n\" %2$s \"</string>
-    <string name="Spells_NotEnoughSP">Bạn không đủ mana để thi triển phép \"%1$s\".</string>
+    <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
+    <string name="Spells_NotEnoughSP">Bạn không đủ mana để thi triển phép \&quot;%1$s\&quot;.</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="SpiderEgg_Gender">neuter</string>
@@ -623,6 +629,7 @@
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
     <string name="StartScene_UnlockGnoll">Để mở khóa lớp này, bạn phải thuyết phục linh mục làng chữa lành cho Gnoll Brute</string>
     <string name="Statue_Name">tượng sống</string>
+    <string name="Stench_Txt">%s hôi thối</string>
     <string name="StunBuff_Name">Choáng</string>
     <string name="Stylus_Info">Chiếc bút bí ẩn này được làm từ một loại đá đen và rất cứng. Bạn có thể dùng nó để khắc các ký tự hoặc rune, nhưng bút mới quyết định khắc cái gì, không phải bạn.</string>
     <string name="Stylus_Name">bút huyền bí</string>
@@ -670,7 +677,7 @@
     <string name="Undead_Defense">chặn</string>
     <string name="Undead_Name_Objective">cùn bất tử</string>
     <string name="Ushanka_Info">Mũ ushanka ấm áp và êm ái, được trang trí bằng một ngôi sao đỏ sang trọng. Một người bạn đồng hành hoàn hảo cho một người đồng chí chiến đấu chống lại ngục địa tàn ác và lạnh lẽo.</string>
-    <string name="Using_Failed_Because_Magic">Một phép thuật mạnh mẽ ngăn cản bạn sử dụng \"%s\".</string>
+    <string name="Using_Failed_Because_Magic">Một phép thuật mạnh mẽ ngăn cản bạn sử dụng \&quot;%s\&quot;.</string>
     <string name="VertigoBuff_Info">Cảm giác choáng váng khiến đi thẳng trở nên khó khăn!</string>
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
     <string name="WandOfAvalanche_Info1">Bạn đã nghiền nát chính mình bằng Gậy Bão Tuyết của chính mình...</string>
@@ -780,6 +787,8 @@
     <string name="WndSettings_SelectLanguage">Chọn ngôn ngữ</string>
     <string name="WndSettings_UiScale">Tỷ lệ giao diện</string>
     <string name="WndSettings_ZoomOut">-</string>
+    <string name="WndStory_Guts">Thần Cổ bị đánh bại, vỡ vụn thành trăm mảnh nhưng chưa bị tiêu diệt hoàn toàn, đã bị phong ấn tại những tầng sâu nhất của hầm ngục. Nhưng gần đây con dấu đã bị phá vỡ, mở toang lối đi đến tổ của quỷ dữ. Những con quái vật ác mộng mà Thần Cổ tạo ra trong giấc ngủ của ngài đông đến mức chẳng còn lối thoát, chúng buộc phải hợp nhất với nhau tạo nên những đại sảnh kỳ dị này. Và khi bạn bước trên lớp thịt sống của chúng, bạn có thể cảm nhận nhịp đập trái tim của Thần Cổ vang vọng khắp nơi.</string>
+
     <string name="WndStory_Metropolis">Thành phố Lục phủ Mat người lùn từng là lớn nhất trong các thành bang của người lùn. Vào thời kỳ thịnh vượng, quân đội cơ giới của người lùn đã đẩy lùi thành công cuộc xâm lược của vị thần cổ xưa và quân đoàn quỷ của ngài. Người ta nói rằng, các chiến binh trở về đã mang theo những hạt giống của sự tàn phá, và chiến thắng đó là khởi đầu của sự chấm dứt cho vương quốc dưới đất.</string>
     <string name="WndTradeItem_Buy">Mua với %d vàng</string>
     <string name="WndTradeItem_SellAll">Bán tất cả cho %dg</string>
@@ -822,7 +831,7 @@
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
     <string name="town_deco_crate_bottles_desc">Chai bia đã trở thành một sở thích rất phổ biến giữa các chủ quán rượu.</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
-    <string name="town_deco_cross_desc">Một chiếc thập giá bạc nguyên khối, biểu tượng của tôn giáo địa phương - \"Các Nhân chứng của Santa Chúa Tể Vực Sâu\".</string>
+    <string name="town_deco_cross_desc">Một chiếc thập giá bạc nguyên khối, biểu tượng của tôn giáo địa phương - \&quot;Các Nhân chứng của Santa Chúa Tể Vực Sâu\&quot;.</string>
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
     <string name="town_deco_curtains_name">Bức rèm</string>
     <string name="town_deco_dungeon_door_desc">lối vào hang động.</string>
@@ -872,6 +881,12 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
 
 
 

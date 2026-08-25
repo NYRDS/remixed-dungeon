@@ -177,6 +177,7 @@
     <string name="Dart_Name">חץ קטן</string>
     <string name="DashSpell_Info">מזנק בכיוון שצוין תוך התנגשות באויבים, גורם נזק ומטיל \'קטוע\'.</string>
     <string name="DashSpell_Name">הסתערות</string>
+    <string name="Death_Name_1">מוות %s</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">הכאב הפך לכאב מושהה, המפחית את הנזק המתקבל בבת אחת.\nנזק שנותר לקבל %d</string>
     <string name="DeferedDamage_Killed_Txt">%s הרג אותך...</string>
@@ -192,6 +193,7 @@
     <string name="Drunkard_Phrase_4">זזזזזז...</string>
     <string name="Dungeon_Tips_13">אין טעם להחזיק יותר מאנק אחד בו זמנית, כי תאבדו אותם בתחיית המתים.</string>
     <string name="Dungeon_Tips_16">כשאתה משדרג כלי נשק מקסום, יש סיכוי שהקסם יהרס.</string>
+    <string name="Dungeon_Tips_18">הדרך היחידה לשדרג כישוף על נשק היא באמצעות מגילת שדרוג.</string>
     <string name="Dungeon_Tips_2">זכור שהגברת כוחך אינה הדרך היחידה לגשת לציוד טוב יותר, אתה יכול ללכת בדרך ההפוכה על ידי הפחתת דרישת הכוח שלו באמצעות מגילות שדרוג.</string>
     <string name="Dungeon_Tips_20">פיקסל-מארט. מחירים מיוחדים לציידי שדים!</string>
     <string name="Dungeon_Tips_3">אתה יכול להוציא את הזהב שלך בעיר, בחנויות הצינוק או בשירותים.</string>
@@ -317,6 +319,8 @@
     <string name="King_Desc">המלך האחרון של הגמדים נודע בזכות הבנתו העמוקה של תהליכי החיים והמוות. הוא שכנע את חברי חצרו להשתתף בטקס, שאמור היה להעניק להם נעורים נצחיים. בסופו של דבר הוא היה היחיד שקיבל זאת - וצבא מתים-חיים כבונוס.</string>
     <string name="King_Info3">איך אתה מעז!</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
+    <string name="KunaiThrow_Info">זריקת הקונאי הקטלנית הזו מבוצעת במהירות עצומה, כה מהירה שאף לא תוכל לבחור מטרה.\n\nאמנים אמיתיים מסוגלים לזרוק יותר מקונאי אחד בבת אחת.</string>
+
     <string name="KunaiThrow_Name">זריקת קונאי</string>
     <string name="Larva_Name">רימת האל</string>
     <string name="Larva_Name_Objective">לרבת אלוהים</string>
@@ -558,6 +562,7 @@
     <string name="StartScene_Load">טען משחק</string>
     <string name="StartScene_New">משחק חדש</string>
     <string name="StartScene_Warning">ההתקדמות הנוכחית שלך במשחק תימחק.</string>
+    <string name="Stench_Txt">%s של סירחון</string>
     <string name="StrongShield_desc">המגן המלבני הזה מצופה בלוחות ברזל ומקושט בבד צבעוני. הוא כבד משמעותית, אך מסוגל לחסום נזק רב יותר.</string>
     <string name="Stylus_Info">עט מיסטי זה עשוי מאבן כהה וקשה במיוחד. בעזרתו ניתן לחרוט גליף או רונה, אך העט הוא זה שקובע מה ייחרט, לא אתה.</string>
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
@@ -681,6 +686,8 @@
     <string name="WndSettings_RecordVideo">הקלטת וידאו</string>
     <string name="WndSettings_SelectLanguage">בחר שפה</string>
     <string name="WndSettings_UiScale">קנה מידה של ממשק המשתמש</string>
+    <string name="WndStory_Guts">מובס, מרוסק לחתיכים אך לא הושמד כליל, האל העתיק נחתם במעמקי המבוך ביותר. אך לאחרונה החותם נשבר, והותיר את הדרך אל קן השדים פתוחה לרווחה. המפלצות מהסיוטים שנבראו בשנתו של האל העתיק היו רבות כל כך, עד שלא נותרה להן דרך מילוט והן נאלצו להתמזג יחדיו וליצור את האולמות המרתיעים האלה. וככל שאתה דורך על בשרם החי, אתה מרגיש את פעימות לבו של האל העתיק מהדהדות בתוכם.</string>
+
     <string name="WndStory_Prision">לפני שנים רבות נבנה כאן כלא תת-קרקעי עבור הפושעים המסוכנים ביותר. בזמנו זה נראה רעיון חכם מאוד, כי המקום הזה אכן היה קשה מאוד לבריחה. אבל עד מהרה מיאזמה אפלה החלה לחלחל מלמטה, מטריפה את דעתם של אסירים ושומרים כאחד. בסופו של דבר הכלא ננטש, אף שכמה אסירים נותרו נעולים כאן.</string>
     <string name="WndTilesKind_ClassicLook">מראה קלאסי</string>
     <string name="WndTilesKind_text">אתה עומד להיכנס לצינוק שנכבש על ידי קסם מעוות, אך כעת תוכל לבחור כיצד תראה אותו:\n האם אתה מעדיף מראה פסאודו-3D מודרני או תצוגה שטוחה קלאסית?\nתוכל לשנות זאת מאוחר יותר בתפריט אפשרויות המשחק.</string>
@@ -750,6 +757,9 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 
