@@ -114,6 +114,7 @@
     <string name="Challenges_Descriptions_7">התרגלת לעובדה שהחזקה ושימוש בנשק אינם נכונים מבחינה מוסרית, אך מה עוד יכול להגן עלייך מפני היצורים המשוטטים למטה?</string>
     <string name="Challenges_Names_0">דיאטה</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
+    <string name="Challenges_Names_4">אינטליגנציית הלהקה</string>
     <string name="Challenges_Names_5">אל האפלה</string>
     <string name="Challenges_Names_6">רונות אסורות</string>
     <string name="Challenges_Names_8">ללא עיר</string>
@@ -522,6 +523,7 @@
     <string name="Shades_Info">יש אנשים שאומרים שמבוכים חשוכים מדי בשביל ללבוש את אלה. ואתה אומר שהאנשים האלה פשוט לא מספיק מגניבים.</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="Shadow_Gender">feminine</string>
+    <string name="Shadow_Name_Objective">צל</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Name">שמאן גנול</string>
@@ -595,6 +597,7 @@
     <string name="TownsfolkSilentNPC_Name">תושב העיר</string>
     <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
     <string name="ToxicGland_Name">בלוטה רעילה</string>
+    <string name="TrapWnd_Step">האם אתה באמת רוצה לדרוך על המלכודת הזו? ייתכן שתמות.</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Undead_Defense">נבלם</string>
     <string name="Undead_Gender">masculine</string>
@@ -709,6 +712,7 @@
     <string name="YogsEye_Name">העין של יוג</string>
     <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">הלב של יוג</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">גנול-זומבי קם מהמתים!</string>
     <string name="ZombieMask_Name">מסיכת זומבי</string>
     <string name="town_deco_armoronhanger_name">שריון</string>
@@ -758,6 +762,10 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 

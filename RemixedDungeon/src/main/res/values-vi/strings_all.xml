@@ -312,6 +312,7 @@
     <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="HeroSubClass_NameWitchdoctor">thầy pháp</string>
     <string name="Hero_Name">bạn</string>
+    <string name="Hero_Name_Objective">bạn</string>
     <string name="Hero_NewLevel">Chào mừng đến cấp độ %d! Giờ bạn khỏe mạnh và tập trung hơn. Dễ dàng đánh trúng kẻ địch và né tránh đòn tấn công của chúng hơn.</string>
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
     <string name="Hero_StaBurning">Bạn bị bốc cháy!</string>
@@ -588,6 +589,7 @@
     <string name="ShadowLord_Gender">masculine</string>
     <string name="Shadow_Desc">Bóng ma lặng lẽ phiêu dạt trong đống đổ nát của nhà tù cổ đại, chỉ thỉnh thoảng mới hiện ra trước mắt nhà mạo hiểm giả, thường là trong chuyến phiêu lưu cuối cùng của họ.</string>
     <string name="Shadow_Gender">feminine</string>
+    <string name="Shadow_Name_Objective">bóng ma</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="Shaman_Name">thầy pháp gnoll</string>
     <string name="Sheep_Desc">Đây là một con cừu ma thuật. Điều gì làm nó trở nên ma thuật? Bạn không thể giết nó. Nó sẽ đứng yên tại chỗ cho đến khi nó biến mất bằng phép thuật, trong khi vẫn nhai cỏ với ánh mắt trống rỗng.</string>
@@ -672,6 +674,7 @@
     <string name="ToxicGas_Info">Một đám mây khí độc màu xanh lá cây đang xoáy ở đây.</string>
     <string name="ToxicGas_Info1">Bạn đã chết vì hít phải khí độc...</string>
     <string name="ToxicGland_Name">Tuyến độc</string>
+    <string name="TrapWnd_Step">Bạn thực sự muốn giẫm lên cái bẫy này? Bạn có thể chết đấy.</string>
     <string name="TrapWnd_Title">Cạm bẫy</string>
     <string name="TreacherousSpirit_Desc">Sinh vật quái dị này trông giống như một đám mây bóng tối sống động. Con mắt khổng lồ không mí của nó nhìn chằm chằm vào bạn, đập lên theo từng cử động của bạn.</string>
     <string name="TreacherousSpirit_Name">Thần linh gian dối</string>
@@ -818,6 +821,7 @@
     <string name="YogsEye_Name">mắt của Yog</string>
     <string name="YogsHeart_Name_Objective">trái tim Yog</string>
     <string name="ZombieGnoll_Desc">Cơ thể biến dạng, gãy đổ của gnoll zombie không còn giống người hay linh chó nữa. Còn lại chỉ là một đống thịt thối và xương, đầy lòng thù ghét khao khát giết chóc và nhấn nhá.</string>
+    <string name="ZombieGnoll_Gender">masculine</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
     <string name="Zombie_Name_Objective">kẻ sống chết</string>
@@ -858,6 +862,7 @@
     <string name="town_deco_poster_name">Áp phích</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
     <string name="town_deco_potions_name">Thuốc</string>
+    <string name="town_deco_projector_name">Máy chiếu phim</string>
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
     <string name="town_deco_red_carpet_name">Thảm đỏ</string>
     <string name="town_deco_rope_name">dây thừng</string>
@@ -884,6 +889,11 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
 
 
 
