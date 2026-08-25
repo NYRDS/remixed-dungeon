@@ -207,6 +207,7 @@
     <string name="DewVial_Full">Lọ hơi sương đã đầy!</string>
     <string name="DewVial_Name">lọ sương</string>
     <string name="DieHardBuff_Info">Tốc độ hồi phục tăng lên.</string>
+    <string name="Displacement_Txt">%s الخدمة</string>
     <string name="DoctorArmor_Name">Trang phục bác sĩ</string>
     <string name="DonateButton_thanks">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="DriedRoseBuff_Info">Bông hồng trông rất quyến rũ.</string>
@@ -273,6 +274,7 @@
     <string name="Golem_Defense">đã chặn</string>
     <string name="Golem_Name">golem</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
+    <string name="Guts_TileGrass">Bụi cây khô</string>
     <string name="Halls_TileHighGrass">Nấm than hồng</string>
     <string name="Halls_TileStatue">Cột</string>
     <string name="Heal_Cast">%s đã được chữa trị.</string>
@@ -618,6 +620,7 @@
     <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">nhện hổ phách</string>
     <string name="SpiderNest_Name">lòng tử cung nhện</string>
+    <string name="SpiderQueen_Desc">Cơ thể một người phụ nữ xinh đẹp kết hợp với con nhện ghê tởm. Mọi sinh vật sống trong hang ổ này đều là tôi tớ của bà ta. Gặp gỡ người phụ nữ phi thường này có thể là trải nghiệm chí mạng. Vì bạn là kẻ đột nhập!</string>
     <string name="SpiderQueen_Name_Objective">nữ hoàng nhện</string>
     <string name="SpiritOfPain_Desc">Một mảnh vỡ của bóng tối sống.</string>
     <string name="Sprout_Info">Đánh thức các hạt giống ngủ.\nTuy nhiên, cần có cây cỏ trên mặt đất để phép thuật này thành công.</string>
@@ -881,6 +884,9 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

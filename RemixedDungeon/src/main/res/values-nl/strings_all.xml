@@ -270,6 +270,7 @@
     <string name="Golem_Defense">geblokkeerd</string>
     <string name="Goo_Info1">De slime blaast zichzelf op!</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
+    <string name="Guts_TileGrass">Droge struik</string>
     <string name="Halberd_Gender">feminine</string>
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileStatue">Pilaar</string>
@@ -547,6 +548,7 @@
     <string name="ScarecrowNPC_Name_Objective">vogelverschrikker</string>
     <string name="Scorpio_Desc">Deze enorme, op spinnen lijkende demonische wezens vermijden gevechten van dichtbij ten koste van alles en schieten vanaf grote afstand verlammende getande stekels af.</string>
     <string name="Scorpio_Name">schorpioen</string>
+    <string name="ScrollHolder_Name">koker voor perkamentrollen</string>
     <string name="ScrollOfChallenge_Name">uitdagingsscrol</string>
     <string name="ScrollOfIdentify_Info1">Het is %s</string>
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
@@ -913,6 +915,8 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 

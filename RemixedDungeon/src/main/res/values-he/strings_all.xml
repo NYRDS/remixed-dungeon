@@ -539,6 +539,7 @@
     <string name="SlowBuff_Name">מואט</string>
     <string name="Snail_Desc">רכיכה קטנה זו גדלה לממדים ניכרים בזכות אכילת ביוב, אך היא עדיין איטית מאוד, מה שהופך אותה ליריבה קלה.</string>
     <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
+    <string name="SociologistNPC_AlreadyTaken">כבר השתתפת בסקר הזה, אנא חזור מאוחר יותר</string>
     <string name="SociologistNPC_Name">סוציולוג</string>
     <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_NotEnoughSP">אין לך מספיק מנה כדי ללחוש לחש \&quot;%1$s\&quot;.</string>
@@ -757,6 +758,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

@@ -47,6 +47,7 @@
     <string name="Armor_Info6">عليه نقوش</string>
     <string name="ArmoredStatue_Name">تمثال متحرك</string>
     <string name="ArmoredStatue_Name_Objective">تمثال متحرك</string>
+    <string name="AttackDelay_Increased">لا يمكنك استخدام %s بهذه الطريقة. تأرجحات بطيئة، وأنفاس ثقيلة…</string>
     <string name="Attack_Range">مدى الهجوم</string>
     <string name="AzuterronNPC_Name_Objective">غريباً</string>
     <string name="BadgesScene_Title">شاراتك</string>
@@ -129,6 +130,7 @@
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
     <string name="Candy_Info">هذه الحلوى تبدو جميلة جداً ورائحتها طيبة أيضاً. هل تحتاج حقاً لإعطائها لشخص آخر؟</string>
     <string name="Candy_Name">حلوى</string>
+    <string name="Candy_Warning_2">لقد أفرطت حقًا هذه المرة. بطنك يؤلمك لأنك أكلت الكثير من الحلوى.</string>
     <string name="Capotain_Name">قبعة بيوريتانية</string>
     <string name="Carcass_Name">بقايا %s</string>
     <string name="Carcass_Necromancy">لقد أحيت جثة %s!</string>
@@ -221,6 +223,7 @@
     <string name="Dungeon_Tips_4">احذر من الغو!</string>
     <string name="Dungeon_Tips_5">بِكسل-مارت - كل ما تحتاجه لمغامرة ناجحة!</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
+    <string name="Dungeon_Tips_8">الهجمات المفاجئة لديها فرصة أكبر للإصابة. على سبيل المثال، يمكنك نصب كمين لعدوك خلف باب مغلق عندما تعلم أنه يقترب.</string>
     <string name="EarthElemental_Gender">masculine</string>
     <string name="Earthroot_Desc">عندما يلمس مخلوق جذر الأرض، تخلق جذوره نوعًا من الدروع الطبيعية حوله.</string>
     <string name="ElvenDagger_Gender">masculine</string>
@@ -271,6 +274,7 @@
     <string name="Halls_TileWater">لावा باردة</string>
     <string name="Haste_Name">سرعة قصوى</string>
     <string name="Heal_Cast">تم شفاء %s.</string>
+    <string name="HealerNPC_Name_Objective">كاهن البلدة</string>
     <string name="HealthArrow_Info">طرف هذه السهم مغطى بجرعة الشفاء.</string>
     <string name="HeartOfDarkness_Info">قلب أسود نابض لروح الخيانة.</string>
     <string name="HeartOfDarkness_Name">قلب الظلام</string>
@@ -341,6 +345,8 @@
     <string name="King_Gender">masculine</string>
     <string name="King_Name_Objective">ملك الأقزام</string>
     <string name="KoboldIcemancer_Killed">قتلتك سهم الجليد لـ %s...</string>
+    <string name="KunaiThrow_Info">ستُنفَّذ هذه الرميّة القاتلة للكوناي بسرعة بالغة، بسرعة تجعلك عاجزًا حتى عن اختيار هدف.\n\nالأساتذة الحقيقيون قادرون على رمي أكثر من كوناي في آنٍ واحد.</string>
+
     <string name="Kusarigama_Info">يتكون هذا السلاح من منجل معلق على سلسلة معدنية بثقل حديدي ثقيل في الطرف الآخر.</string>
     <string name="Kusarigama_Name">كوساريغاما</string>
     <string name="Kusarigama_Pull">سحب</string>
@@ -720,6 +726,8 @@
     <string name="WndSettings_Sound">المؤثرات الصوتية</string>
     <string name="WndSettings_UiScale">مقياس واجهة المستخدم</string>
     <string name="WndSettings_ZoomIn">+</string>
+    <string name="WndStory_Guts">بعد هزيمته وتحطّمه إلى شظايا دون أن يُدمَّر تمامًا، خُتم الإله القديم في أعمق طوابق الزنزانة. لكن مؤخرًا انكسر الختم، فاتسع الممر نحو عشّ الشياطين على مصراعيه. الوحوش الكابوسية التي وُلدت من أحلام الإله القديم أثناء سُباته كانت كثيرة لدرجة أنه لم يكن أمامها مفر، فاضطرت إلى الاندماج معًا مكوِّنة هذه القاعات البشعة. وبينما تسير فوق لحومها الحية، تشعر بنبض قلب الإله القديم يصدح عبرها.</string>
+
     <string name="WndStory_Halls">في الماضي كانت هذه المستويات تعتبر ضواحي المتروبوليس. انتصار الحرب ضد الإله القديم كلف الأقزام ثمناً باهظاً، وكانوا غير قادرين على تطهير المنطقة من الشياطين المتبقية. تدريجياً سيطر الشياطين على هذا المكان والآن يُدعى قاعات الشياطين.\n\nقليل جداً من المغامرين نزلوا إلى هذا العمق...</string>
     <string name="WndStory_Prision">منذ سنوات عديدة، تم بناء سجن تحت الأرض هنا لأخطر المجرمين. في ذلك الوقت، بدت فكرة ذكية لأن هذا المكان كان صعب الهروب منه حقًا. لكن سرعان ما بدأت أبخرة داكنة بالتسرب من الأسفل، مما أصاب السجناء والحراس بالجنون. في النهاية، تم التخلي عن السجن، تاركين بعض السجناء محبوسين هنا.</string>
     <string name="WndStory_Sewers">يقع الزنزانة مباشرة تحت المدينة، حيث تشكل مستوياته العليا نظام الصرف الصحي للمدينة. وباعتبارها اسمياً جزءاً من المدينة، فإن هذه المستويات ليست خطرة جداً. لن يسميها أحد مكاناً آمناً، لكنك على الأقل لن تضطر للتعامل مع الكثير من السحر الشرير هنا.</string>
@@ -813,7 +821,7 @@
 
 
 
-    <string name="KunaiThrow_Info">ستُنفَّذ هذه الرميّة القاتلة للكوناي بسرعة بالغة، بسرعة تجعلك عاجزًا حتى عن اختيار هدف.\n\nالأساتذة الحقيقيون قادرون على رمي أكثر من كوناي في آنٍ واحد.</string>
 
-    <string name="WndStory_Guts">بعد هزيمته وتحطّمه إلى شظايا دون أن يُدمَّر تمامًا، خُتم الإله القديم في أعمق طوابق الزنزانة. لكن مؤخرًا انكسر الختم، فاتسع الممر نحو عشّ الشياطين على مصراعيه. الوحوش الكابوسية التي وُلدت من أحلام الإله القديم أثناء سُباته كانت كثيرة لدرجة أنه لم يكن أمامها مفر، فاضطرت إلى الاندماج معًا مكوِّنة هذه القاعات البشعة. وبينما تسير فوق لحومها الحية، تشعر بنبض قلب الإله القديم يصدح عبرها.</string>
+
+
 </resources>
