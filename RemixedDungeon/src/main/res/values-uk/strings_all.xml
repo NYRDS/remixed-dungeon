@@ -2066,7 +2066,7 @@
     <string name="ShieldBuffReady_Info">Твій щит готовий заблокувати наступну атаку.</string>
     <string name="ShieldBuffReady_Name">Щит готовий</string>
     <string name="ShieldInfoTemplate">Цей щит блокує до %1$d заданої шкоди. Із %2$d %% шансом. Потребує %3$3.1fсекунд на відновлення після успішного блокування.</string>
-    <string name="ShieldStrTemplate">Для правильного використання щита необхідно мати хоча б %1$dсили.</string>
+    <string name="ShieldStrTemplate">Для правильного використання щита його власникові потрібно щонайменше %1$d очок Сили.</string>
     <string name="ShieldWeaponInfo">Коли використовується як зброя, цей щит завдасть в середньому %1$d шкоди.</string>
     <string name="Shielded_Defense">прикрився</string>
     <string name="Shielded_Desc">Громили - найбільші, найсильніші та найвитриваліші з усіх гноллів. Маючи значні пошкодження, вони здатні впадати в лють, завдаючи значної шкоди супротивнику. Цей громила прикрився гігантським щитом!</string>
@@ -2137,7 +2137,7 @@
     <string name="SpeedBuff_Name">Швидкість</string>
     <string name="SpellBook_Info">Це скоріш за все схоже на кіпку сторінок, а ніж на книгу. Проте є можливість з неї щось дістати, якщо приділити достатню увагу.</string>
     <string name="SpellBook_Info_Identified">Серед сторінок виявився повний текст закляття \&quot;%1$s\&quot;.\n\&quot;%2$s\&quot;</string>
-    <string name="SpellBook_Name">Книга Заклять</string>
+    <string name="SpellBook_Name">Книга Заклинань</string>
     <string name="Spell_SelectACell">Оберіть ціль.</string>
     <string name="Spell_SelectAChar">Оберіть істоту-ціль.</string>
     <string name="Spells_NotEnoughSP">Тобі не вистачає мани для закляття «%1$s».</string>
@@ -3092,6 +3092,8 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

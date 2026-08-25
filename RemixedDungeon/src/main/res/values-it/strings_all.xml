@@ -75,7 +75,7 @@
     <string name="ArmorKit_Name">Kit per armature</string>
     <string name="ArmorKit_SelectArmor">Seleziona l\'armatura d\'aggiornare</string>
     <string name="ArmorKit_Upgraded">Hai utilizzato il Kit per armature per migliorare la tua %s</string>
-    <string name="Armor_EquipCursed">il/la tuo/a %s ti si stringe addosso dolorosamente</string>
+    <string name="Armor_EquipCursed">il tuo %s ti si stringe addosso dolorosamente</string>
     <string name="Armor_Glyph">glifo</string>
     <string name="Armor_Identify">hai abbastanza confidenza con il/la tuo/a %1$s per identificarlo/a. È %2$s.</string>
     <string name="Armor_Incompatible">L\'interazione di diversi tipi di magia ha cancellato il glifo su questa armatura!</string>
@@ -3058,6 +3058,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

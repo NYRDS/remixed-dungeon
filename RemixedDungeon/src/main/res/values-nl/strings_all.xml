@@ -155,6 +155,7 @@
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaDizzy">duizelig</string>
     <string name="Char_StaFrightened">verschrikt</string>
+    <string name="Char_StaInvisible">onzichtbaar</string>
     <string name="Char_StaParalysed">gelamd</string>
     <string name="Char_StaPoisoned">vergiftigd</string>
     <string name="Char_StaRooted">geworteld</string>
@@ -193,6 +194,7 @@
     <string name="ConcreteBlock_Name">Zwaar betonnen blok</string>
     <string name="ConfusionGas_Info">Hier zweeft een wolk verwarrend gas.</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
+    <string name="CorpseDust_Name">lijkenstof</string>
     <string name="Crab_Name">rioolkrab</string>
     <string name="Crystal_Name">zwevend kristal</string>
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
@@ -539,6 +541,7 @@
     <string name="Scorpio_Desc">Deze enorme, op spinnen lijkende demonische wezens vermijden gevechten van dichtbij ten koste van alles en schieten vanaf grote afstand verlammende getande stekels af.</string>
     <string name="Scorpio_Name">schorpioen</string>
     <string name="ScrollOfChallenge_Name">uitdagingsscrol</string>
+    <string name="ScrollOfIdentify_Info1">Het is %s</string>
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
     <string name="ScrollOfLullaby_Info1">De pergament uitte een kalmerende melodie.</string>
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
@@ -596,7 +599,7 @@
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
-    <string name="Spells_NotEnoughSP">Je hebt niet genoeg mana om de spreuk \"%1$s\" te casten.</string>
+    <string name="Spells_NotEnoughSP">Je hebt niet genoeg mana om de spreuk \&quot;%1$s\&quot; te casten.</string>
     <string name="Spells_NotTooFast">%s is nog niet klaar voor gebruik</string>
     <string name="SpiderCharm_Info">Deze exotische snuisterij is gehuld in een aura van mysterie. Wie weet wat er gebeurt met degene die hem draagt?</string>
     <string name="SpiderEgg_Gender">neuter</string>
@@ -898,6 +901,9 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 

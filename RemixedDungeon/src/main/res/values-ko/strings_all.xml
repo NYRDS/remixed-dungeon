@@ -1626,7 +1626,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PotionOfFrost_Name">서리의 물약</string>
     <string name="PotionOfHealing_Apply">상처가 완전히 회복되었다.</string>
     <string name="PotionOfHealing_Info">순식간에 체력을 완전히 회복시켜주고 중독을 치료하는 묘약이다.</string>
-    <string name="PotionOfHealing_Name">회복의 물약 </string>
+    <string name="PotionOfHealing_Name">회복의 물약</string>
     <string name="PotionOfInvisibility_Apply">당신의 손이 눈앞에서 투명하게 변했습니다!</string>
     <string name="PotionOfInvisibility_Info">이 물약을 마시면 잠시동안 당신의 모습을 투명하게  만들어 줄 것입니다. 투명화된 동안 적들은 당신을 볼 수 없을 것입니다.적의 시야에서 적을 공격하거나 마법봉 또는 두루마리를 사용하면 효과가 풀릴 것입니다.</string>
     <string name="PotionOfInvisibility_Name">투명화의 물약</string>
@@ -3067,6 +3067,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
