@@ -82,6 +82,7 @@
     <string name="Badges_StrengthAttained3">تم تحقيق 17 نقطة من القوة</string>
     <string name="Badges_StrengthAttained4">تم بلوغ 19 نقطة من القوة</string>
     <string name="Badges_Yasd">الموت من النار، السم، الغاز السام والجوع</string>
+    <string name="Badges_Yog_Slain">تم القضاء على يوغ-زفا</string>
     <string name="Bag_ACOpen">فتح</string>
     <string name="BardNPC_Desc">يعزف باردة المدينة على العود.</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
@@ -566,7 +567,7 @@
     <string name="Sorrowmoss_Name">طحلب الحزن</string>
     <string name="SpeedBuff_Name">سرعة</string>
     <string name="SpellBook_Info_Identified">في هذه الصفحات اكتشفت النص الكامل للتعويذة \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
-    <string name="Spells_NotEnoughSP">ليس لديك ما يكفي من المانا لإلقاء تعويذة \"%1$s\".</string>
+    <string name="Spells_NotEnoughSP">ليس لديك ما يكفي من المانا لإلقاء تعويذة \&quot;%1$s\&quot;.</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderElite_Desc">تماماً مثل الجنود، حرس العناكب أقسموا على حماية مملكتهم. يُستخدم سم الحرس النخبوي لتشتيت هدفهم.</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
@@ -739,6 +740,7 @@
     <string name="Yog_Name_Objective">يوغ-دزيوا</string>
     <string name="YogsBrain_Name_Objective">عقل يوغ</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
+    <string name="YogsEye_Name">عين يوغ</string>
     <string name="YogsHeart_Desc">لسنوات طويلة اعتقد الناس أن المخلوقات عديمة القلب فقط هي القادرة على أفعال الشر الصرفة. ومع ذلك، ها هو هنا أمامك قلب ضخم نابض، يعود للإله القديم نفسه.</string>
     <string name="YogsTeeth_Name">أسنان يوغ</string>
     <string name="deco_candle_name">شمعة</string>
@@ -800,6 +802,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

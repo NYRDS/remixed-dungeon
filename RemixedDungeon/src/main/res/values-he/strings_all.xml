@@ -68,6 +68,7 @@
     <string name="Badges_RareAll">כל המפלצות הנדירות הושמדו</string>
     <string name="Badges_StrengthAttained2">הושגו 15 נקודות כוח</string>
     <string name="Badges_StrengthAttained4">הושגו 19 נקודות כוח</string>
+    <string name="Badges_Yog_Slain">יוג-זבה הובס</string>
     <string name="Bandit_Desc">המפלסים העמוקים יותר של המבוך שימשו תמיד מקום מסתור לכל מיני פושעים. לא כולם שמרו על דעת צלולה בתקופות הארוכות שבילו הרחק מאור היום. לפני זמן רב שכחו הגנבים והשודדים המשוגעים האלה מי הם ומדוע הם גונבים. נראה שהשודד הזה ציפה את פגיונו במשהו!</string>
     <string name="Bandit_Gender">masculine</string>
     <string name="Bat_Name">עטלף ערפד</string>
@@ -227,6 +228,7 @@
     <string name="FrostAuraBuff_Name">הילת כפור</string>
     <string name="FullFaceMask_Info">מסכת גז היא מסכה המשמשת להגנה על הלובש מפני שאיפת מזהמים באוויר וגזים רעילים. המסכה יוצרת כיסוי אטום על האף, הפה והעיניים.\n\nמסננים חסרים ממסכה זו אבל היא עדיין נראית מגניבה.</string>
     <string name="GameScene_Chasm">צעדיך מהדהדים ברחבי הצינוק.</string>
+    <string name="GameScene_Welcome">ברוך בואך לרמה %d של Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Info">חסין לכל הגזים</string>
     <string name="GasImmuneBuff_Name">חסינות לגז</string>
     <string name="Ghost_Defense">התחמק</string>
@@ -535,7 +537,7 @@
     <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
     <string name="SociologistNPC_Name">סוציולוג</string>
     <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
-    <string name="Spells_NotEnoughSP">אין לך מספיק מנה כדי ללחוש לחש \"%1$s\".</string>
+    <string name="Spells_NotEnoughSP">אין לך מספיק מנה כדי ללחוש לחש \&quot;%1$s\&quot;.</string>
     <string name="SpiderArmor_Info">השריון הזה עשוי מכיטין ישן של עכביש וסוג כלשהו של בד. הכי מפתיע, נראה שהוא עדיין מכיל בלוטות עכביש מתפקדות. אם תלחץ על הלוחות מספיק חזק, הם יורים רשת. וסוליות מחורצות מאפשרות לך לנוע בחופשיות על רשת כזו.</string>
     <string name="SpiderEgg_Desc">הביצה השברירית הזו פועמת לרגע, ובפנים ניתן לראות משהו עם הרבה רגליים.</string>
     <string name="SpiderElite_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של שומרי העילית משמש לבלבל את המטרה שלהם.</string>
@@ -696,6 +698,7 @@
     <string name="YogsBrain_Name">המוח של יוג</string>
     <string name="YogsBrain_Name_Objective">המוח של יוג</string>
     <string name="YogsEye_Desc">עין האל העתיק, מבט רואה-כל מלא בשנאה נצחית. אתה יכול להרגיש אותה מביטה ישר דרך נשמתך.</string>
+    <string name="YogsEye_Name">העין של יוג</string>
     <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">הלב של יוג</string>
     <string name="ZombieGnoll_Info">גנול-זומבי קם מהמתים!</string>
@@ -747,6 +750,9 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 
