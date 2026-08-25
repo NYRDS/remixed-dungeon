@@ -2181,7 +2181,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="StoneBloodBuff_Info">피가 돌로 변하여 주변 벽과 융합되어 지나가기 쉽게 만들지만, 과연 어떤 대가를 치러야 할까.</string>
     <string name="StoneBloodBuff_Name">혈석</string>
     <string name="Str_lose">-1 힘</string>
-    <string name="StrongShield_desc">Perisai kuat.</string>
+    <string name="StrongShield_desc">이 직사각형 방패는 청동판으로 덮여 있고 색천으로 장식되어 있다. 확연히 무겁지만 훨씬 더 많은 피해를 막아낼 수 있다.</string>
     <string name="StrongShield_name">청동 도금 방패</string>
     <string name="StunBuff_Info">スタン！</string>
     <string name="StunBuff_Name">Pengertian</string>
@@ -3067,6 +3067,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

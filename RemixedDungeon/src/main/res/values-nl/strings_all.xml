@@ -596,6 +596,7 @@
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
+    <string name="Spells_NotEnoughSP">Je hebt niet genoeg mana om de spreuk \"%1$s\" te casten.</string>
     <string name="Spells_NotTooFast">%s is nog niet klaar voor gebruik</string>
     <string name="SpiderCharm_Info">Deze exotische snuisterij is gehuld in een aura van mysterie. Wie weet wat er gebeurt met degene die hem draagt?</string>
     <string name="SpiderEgg_Gender">neuter</string>
@@ -897,6 +898,7 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 

@@ -595,6 +595,7 @@
     <string name="SociologistNPC_Name">Nhà xã hội học</string>
     <string name="SoulShard_Info">Đây là một mảnh vỡ lấy từ tàn tích của Hũ Linh Hồn. Nó lấp lánh với sức mạnh bí ẩn, có lẽ có ai đó quan tâm đến thứ như thế này.</string>
     <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
+    <string name="Spells_NotEnoughSP">Bạn không đủ mana để thi triển phép \"%1$s\".</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="SpiderEgg_Gender">neuter</string>
@@ -863,6 +864,7 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

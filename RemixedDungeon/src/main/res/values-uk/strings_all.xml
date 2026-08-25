@@ -2231,7 +2231,7 @@
     <string name="StoneBloodBuff_Info">Кров перетворюється на камінь, який зливається зі стінами поблизу і значно полегшує пересування через них, але якою ціною.</string>
     <string name="StoneBloodBuff_Name">Кам\'яна кров</string>
     <string name="Str_lose">-1 сили</string>
-    <string name="StrongShield_desc">This rectangular shield is plated with bronze sheets and decorated with colored cloth. It is significantly heavier, but can block much more incoming damage.</string>
+    <string name="StrongShield_desc">Цей прямокутний щит покритий бронзовими пластинами та прикрашений кольоровою тканиною. Він значно важчий, проте блокує значно більше шкоди.</string>
     <string name="StrongShield_name">Бронзовий щит</string>
     <string name="StunBuff_Info">Оглушено!</string>
     <string name="StunBuff_Name">Оглушено</string>
@@ -3092,6 +3092,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

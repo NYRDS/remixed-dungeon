@@ -131,6 +131,7 @@
     <string name="Capotain_Name">قبعة بيوريتانية</string>
     <string name="Carcass_Name">بقايا %s</string>
     <string name="Carcass_Necromancy">لقد أحيت جثة %s!</string>
+    <string name="Carcass_Necromancy_Failed">فشلت محاولتك لإحياء جثة %s!</string>
     <string name="Caves_TileDescDeco">تظهر عرق من معدن ما على الجدار. ذهب؟</string>
     <string name="Caves_TileDescEntrance">يؤدي السلم إلى العمق العلوي.</string>
     <string name="Caves_TileGrass">طحلب فلوري</string>
@@ -556,6 +557,7 @@
     <string name="Shuriken_Name">شوريكين</string>
     <string name="Skeleton_Killed">قُتلت بانفجار العظام...</string>
     <string name="Skeleton_Name">هيكل عظمي</string>
+    <string name="SlowBuff_Info">الشعور بالخمول يجعل المرء أبطأ من المعتاد.</string>
     <string name="Slow_Name_1">مُثَلّج %s</string>
     <string name="SmashSpell_NeedWeapon">أحتاج إلى سلاح لهذه الحركة.</string>
     <string name="SociologistNPC_Desc">هذا العالِم الاجتماعي في رحلة مقدسة لجمع الآراء العامة</string>
@@ -564,6 +566,7 @@
     <string name="Sorrowmoss_Name">طحلب الحزن</string>
     <string name="SpeedBuff_Name">سرعة</string>
     <string name="SpellBook_Info_Identified">في هذه الصفحات اكتشفت النص الكامل للتعويذة \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
+    <string name="Spells_NotEnoughSP">ليس لديك ما يكفي من المانا لإلقاء تعويذة \"%1$s\".</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderElite_Desc">تماماً مثل الجنود، حرس العناكب أقسموا على حماية مملكتهم. يُستخدم سم الحرس النخبوي لتشتيت هدفهم.</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
@@ -762,6 +765,7 @@
     <string name="town_deco_common_bed_name">سرير</string>
     <string name="town_deco_counter_name">كونتر</string>
     <string name="town_deco_crate_bottles_name">صندوق بيرة</string>
+    <string name="town_deco_crossroad_desc">عمود خشبي بسيط عليه لوائح على شكل سهم، وقد باهت النص عليها منذ زمن طويل، ربما بسبب قسوة الطقس.</string>
     <string name="town_deco_door_name">باب</string>
     <string name="town_deco_dungeon_door_desc">مدخل إلى الزنزانة.</string>
     <string name="town_deco_emptyboard_desc">الرف العادي لوضع الأشياء للعرض</string>
@@ -796,6 +800,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 

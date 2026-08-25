@@ -354,6 +354,9 @@
     <string name="MimicAmulet_Name">מימיק</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name_Objective">מימיק</string>
+    <string name="MirrorImage_Gender">masculine</string>
+    <string name="MirrorImage_Name">תמונת ראי</string>
+    <string name="MirrorImage_Name_Objective">תמונת ראי</string>
     <string name="Mob_GoingTo">כבר הולך!</string>
     <string name="Mob_ItemUse">%1$s משתמש ב-%2$s</string>
     <string name="Mob_StaFleeingStatus">זה %s בורח</string>
@@ -361,6 +364,7 @@
     <string name="Mob_StaHuntingStatus">זה %s צד</string>
     <string name="Mob_StaHuntingStatus2">זה %1$s צד את %2$s</string>
     <string name="Mods_RestartRequired">נדרש הפעלה מחדש</string>
+    <string name="Monk_Defense">הדף</string>
     <string name="MoongraceBuff_Name">מָן שָׁמַיִם</string>
     <string name="Moongrace_Name">ברכת הירח</string>
     <string name="Multiplicity_Txt">%s של ריבוי</string>
@@ -421,6 +425,7 @@
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">טיפת רעל קטלני נוצצת על ראש החץ הזה.</string>
     <string name="PortalGate_Desc">החריטות על פני השער יוצרות דפוס מוזר. נראה כאילו זהו מנהרה ענקית המובילה למרחק. אבל כשמסתכלים מהצד, מתברר שהפני כמעט שטוחה.</string>
+    <string name="Potential_Txt">%s של פוטנציאל</string>
     <string name="PotionOfExperience_Name">שיקוי ניסיון</string>
     <string name="PotionOfInvisibility_Info">שתיית שיקוי זה תהפוך אותך לבלתי נראה זמנית. בעודך בלתי נראה, אויבים לא יוכלו לראות אותך. תקיפת אויב, כמו גם שימוש במקל או מגילה מול עיניהם, יבטלו את האפקט.</string>
     <string name="PotionOfMana_Info">השיקוי הזה ישחזר את האנרגיה הרוחנית שלך.</string>
@@ -530,6 +535,7 @@
     <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
     <string name="SociologistNPC_Name">סוציולוג</string>
     <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
+    <string name="Spells_NotEnoughSP">אין לך מספיק מנה כדי ללחוש לחש \"%1$s\".</string>
     <string name="SpiderArmor_Info">השריון הזה עשוי מכיטין ישן של עכביש וסוג כלשהו של בד. הכי מפתיע, נראה שהוא עדיין מכיל בלוטות עכביש מתפקדות. אם תלחץ על הלוחות מספיק חזק, הם יורים רשת. וסוליות מחורצות מאפשרות לך לנוע בחופשיות על רשת כזו.</string>
     <string name="SpiderEgg_Desc">הביצה השברירית הזו פועמת לרגע, ובפנים ניתן לראות משהו עם הרבה רגליים.</string>
     <string name="SpiderElite_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של שומרי העילית משמש לבלבל את המטרה שלהם.</string>
@@ -741,6 +747,12 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
 
 
 

@@ -660,7 +660,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DieHardSpell_Info">Aumentará temporariamente a regeneração fazendo você realmente seja Duro de Matar</string>
     <string name="DieHardSpell_Name">Duro de Matar</string>
     <string name="Displacement_Txt">%s de deslocamento</string>
-    <string name="DoctorArmor_Info">Esta armadura do médico de peste permite o uso da habilidade \\&quot;Nuvem de Miasma\\&quot;, que libera um gás nocivo que envenena, enfraquece e desorienta os inimigos. O médico, protegido por sua máscara, é imune a esses efeitos.</string>
+    <string name="DoctorArmor_Info">Esta armadura do médico de peste permite o uso da habilidade \"Nuvem de Miasma\", que libera um gás nocivo que envenena, enfraquece e desorienta os inimigos. O médico, protegido por sua máscara, é imune a esses efeitos.</string>
     <string name="DoctorArmor_Name">Vestuário do Médico</string>
     <string name="DoctorArmor_NotDoctor">Apenas médicos das pragas podem usar esta armadura!</string>
     <string name="DoctorSpecial">Nuvem de Miasma</string>
