@@ -59,6 +59,7 @@
     <string name="Badges_ItemLvl2">Đã có vật phẩm cấp 6</string>
     <string name="Badges_ItemLvl3">Đã nhận vật phẩm cấp 9</string>
     <string name="Badges_ItemLvl4">Đã đạt được vật phẩm cấp 12</string>
+    <string name="Badges_ItemLvl5">Đã có vật phẩm cấp 15</string>
     <string name="Badges_LevelReached1">Đã đạt cấp độ 6</string>
     <string name="Badges_LevelReached4">Đạt cấp 24</string>
     <string name="Badges_MonsterSlain5">Hạ gục 1000 kẻ địch</string>
@@ -721,6 +722,7 @@
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
     <string name="WndMovieTheatre_Title">Rạp Phim</string>
     <string name="WndPlayGames_Connecting">Đang kết nối với Google Play Games, vui lòng chờ một chút</string>
+    <string name="WndPlayGames_Show_Badges">Hiện huy hiệu</string>
     <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
     <string name="WndPortal_Info">Cổng này sẽ cho phép bạn quay lại thị trấn. Nó có vẻ khá không ổn định, và có lẽ sẽ không hoạt động quá lâu.\nBạn có muốn sử dụng nó không?</string>
     <string name="WndPortal_Info_Return">Cổng truyền tàng này sẽ đưa bạn trở lại hang động.\nBạn có muốn sử dụng nó không?</string>
@@ -841,6 +843,8 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

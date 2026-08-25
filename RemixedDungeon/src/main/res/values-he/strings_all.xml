@@ -177,6 +177,7 @@
     <string name="DieHardSpell_Name">למות קשה</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
     <string name="DoctorArmor_Name">גלימת רופא</string>
+    <string name="DonateButton_thanks">תודה על תמיכתך!</string>
     <string name="DriedRoseBuff_Info">הוורד נראה מקסים מאוד.</string>
     <string name="DriedRoseBuff_Name">מקסים</string>
     <string name="DriedRose_Info">הוורד הזה התייבש לפני זמן רב, אבל איכשהו שמר על כל עלי הכותרת שלו.</string>
@@ -726,6 +727,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

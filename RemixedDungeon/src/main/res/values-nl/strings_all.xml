@@ -110,6 +110,7 @@
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="BurningBuff_Info">Het lichaam is verteerd in razende vlammen!</string>
+    <string name="BurningBuff_Name">In brand</string>
     <string name="BurningFist_Desc">Brandende Vuist van de Oude God</string>
     <string name="BurningFist_Name">brandende vuist</string>
     <string name="BurningFist_Name_Objective">brandende vuist</string>
@@ -206,6 +207,7 @@
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="DieHardBuff_Name">Die Hard</string>
     <string name="DoctorArmor_Name">Doktersgewaad</string>
+    <string name="DonateButton_thanks">Bedankt voor je steun!</string>
     <string name="DriedRoseBuff_Info">De roos ziet er heel aantrekkelijk uit.</string>
     <string name="DriedRoseCursedBuff_Name">Verliefd</string>
     <string name="DriedRose_Name">gedroogde roos</string>
@@ -704,6 +706,7 @@
     <string name="Weightstone_WndSpeed">Voor snelheid</string>
     <string name="WndBag_BuySubtitle">(Je hebt %dg)</string>
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
+    <string name="WndCatalogus_Title">Catalogus</string>
     <string name="WndChallenges_Title">Uitdagingen</string>
     <string name="WndChooseWay_Cancel">Ik besluit later</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
@@ -872,6 +875,9 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
