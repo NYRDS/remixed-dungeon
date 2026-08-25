@@ -197,6 +197,7 @@
     <string name="DeepSnail_Desc">Loài thân mềm này thường xuất hiện gần nguồn nước và nhanh hơn nhiều so với ốc sên thường. Tuy nhiên hãy cẩn thận với vết cắn, chúng có thể gây ảnh hưởng khó chịu lên làn da của bạn.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">Cơn đau đã biến thành cơn đau chậm, làm giảm sát thương nhận được một lần.\nSát thương còn lại để nhận %d</string>
+    <string name="DeferedDamage_Killed_Txt">%s đã giết bạn...</string>
     <string name="DewVial_Full">Lọ hơi sương đã đầy!</string>
     <string name="DewVial_Name">lọ sương</string>
     <string name="DieHardBuff_Info">Tốc độ hồi phục tăng lên.</string>
@@ -299,6 +300,7 @@
     <string name="HeroSubClass_NameSnip">xạ thủ</string>
     <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="HeroSubClass_NameWitchdoctor">thầy pháp</string>
+    <string name="Hero_Name">bạn</string>
     <string name="Hero_NewLevel">Chào mừng đến cấp độ %d! Giờ bạn khỏe mạnh và tập trung hơn. Dễ dàng đánh trúng kẻ địch và né tránh đòn tấn công của chúng hơn.</string>
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
     <string name="Hero_StaBurning">Bạn bị bốc cháy!</string>
@@ -484,6 +486,7 @@
     <string name="PseudoRat_Name_Objective">chuột giả</string>
     <string name="Pumpkin_Info">Ngày xưa, Người Dług Bửng là một dân tộc hãnh diện và thịnh vượng. Nhưng mọi thứ thay đổi sau khi loài người xuất hiện, chỉ còn lại những đống tàn tích. Và những chiếc đầu bị chặt và khắc của các bộ tộc Dług Bửng đã khuất vẫn còn là lời nhắc nhở về những sự kiện khủng khiếp ấy.</string>
     <string name="Pumpkin_Name">Bí ngô</string>
+    <string name="RabbitEars_Info">Có quan niệm rằng thỏ sinh ra đã mang may mắn, và người sở hữu một phần cơ thể của nó sẽ được thú cưng ấy ban cho vận may. Nghĩ kỹ lại, bị giết chỉ vì đôi tai của bạn – thứ sẽ dùng để làm đồ trang sức – nghe có vẻ không mấy may mắn.</string>
     <string name="RankingsScene_Title">Bảng Xếp Hạng Cao Nhất</string>
     <string name="RatHide_Name">da chuột</string>
     <string name="RatKing_Died">Vua đã chết. Chúc Vua vạn tuế!</string>
@@ -507,6 +510,7 @@
     <string name="RingOfShadows_Info">Kẻ thù sẽ khó nhận ra bạn hơn khi bạn đeo nhẫn này. Nhẫn Bóng Tối xuống cấp sẽ báo động cho kẻ thù mà lẽ ra chúng không hề để ý đến sự hiện diện của bạn.</string>
     <string name="Ring_Gems_10">thạch anh</string>
     <string name="Ring_Gems_11">mã não</string>
+    <string name="Ring_Gems_9">lam ngọc</string>
     <string name="Ring_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
     <string name="Ring_Info1">Bạn chỉ có thể đeo tối đa 2 nhẫn cùng lúc</string>
     <string name="Ring_Info2">Chiếc %1$s của bạn siết chặt vào ngón tay đau đớn</string>
@@ -670,6 +674,7 @@
     <string name="Wand_Prompt">Chọn hướng để phóng phép</string>
     <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
     <string name="Wand_Wood_Types_10">sồi</string>
+    <string name="Wand_Wood_Types_2">gỗ mun</string>
     <string name="Wand_Wood_Types_7">gõ đỏ</string>
     <string name="Wand_Wood_Types_9">gỗ tím</string>
     <string name="WarHammer_Info">Rất ít sinh vật có thể chịu đựng đòn đánh đập tan tành của khối chì và thép khổng lồ này, nhưng chỉ những nhà phiêu lưu mạnh nhất mới có thể sử dụng nó hiệu quả.</string>
@@ -694,6 +699,7 @@
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_supportDev">Ủng hộ nhà phát triển</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndDonate_commonDonateText">Remixed Dungeon - miễn phí cho tất cả mọi người và mãi mãi như vậy.\n\nTuy nhiên, bạn có thể giúp chúng tôi làm cho trò chơi còn tốt hơn nữa.\n\nNgoài lời cảm ơn chân thành, bạn sẽ nhận được một số cải tiến thẩm mỹ.</string>
     <string name="WndDonate_goldDonate">quyên góp vàng</string>
     <string name="WndDonate_goldDonateText">Cảm ơn sự giúp đỡ của bạn</string>
     <string name="WndDonate_royalDonateText2">Ngoài ra, bạn sẽ nhận được mọi loại mũ từ cửa hàng trong ứng dụng! Cũng như mọi loại mũ sẽ được phát hành trong tương lai.</string>
@@ -836,6 +842,7 @@
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_statue_blood_desc">Một bức tượng thiên thần uy nghi đang cầm chiếc bát đựng máu.</string>
+    <string name="town_deco_stone_wall_desc">Không hiểu sao bức tường này lại tỏa ra hơi ấm và có vẻ hơi ẩm.</string>
     <string name="town_deco_tree_name">Cây</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_vat_name">chậu</string>
@@ -852,6 +859,13 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
 
 
 

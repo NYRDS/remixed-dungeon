@@ -147,7 +147,9 @@
     <string name="CharAction_Hit">slaan</string>
     <string name="CharAction_Push">duwen</string>
     <string name="CharAction_Taunt">uitdagen</string>
+    <string name="CharInfo_Level">Dit is een %2$s op niveau %1$d.</string>
     <string name="Char_Hit_0">%1$s raakte %2$s</string>
+    <string name="Char_Kill_0">%s heeft je gedood...</string>
     <string name="Char_StaAmok">amok</string>
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaDizzy">duizelig</string>
@@ -206,6 +208,7 @@
     <string name="DeepSnail_Desc">Dit soort weekdier is vaak te zien nabij waterbronnen en is veel sneller dan een gewone slak. Pas echter op voor de beten, die kunnen een onaangenaam effect hebben op je huid.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">De pijn is omgezet in vertraagde pijn, wat de schade die op een keer wordt opgelopen vermindert.\nOvergebleven schade om te ontvangen %d</string>
+    <string name="DeferedDamage_Killed_Txt">%s heeft je gedood...</string>
     <string name="DewVial_Collected">Je verzamelde een dauwdruppel in je dauwflesje.</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="DieHardBuff_Name">Die Hard</string>
@@ -488,6 +491,7 @@
     <string name="QuickSlot_SelectSlot">Selecteer een snelslot ervoor</string>
     <string name="QuickSlot_SelectedItem">Selecteer een item voor de quickslot</string>
     <string name="Quiver_Info">Leren kogelhouder geschikt voor elke hoeveelheid pijlen</string>
+    <string name="RabbitEars_Info">Er bestaat een bijgeloof dat konijnen geluk geboren worden en dat iemand die een deel van het dier verkrijgt, vergezeld zal worden door het geluk van het beest. Bij nader inzien klinkt het niet echt als geluk: gedood worden om je oren, waar versieringen van gemaakt zullen worden.</string>
     <string name="RankingsScene_Total">Totaal gespeelde spellen: </string>
     <string name="RatHide_Name">rattenhuid</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
@@ -692,6 +696,7 @@
     <string name="Wand_ACZap">ZAP</string>
     <string name="Wand_Prompt">Kies een richting om te zappen</string>
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
+    <string name="Wand_Wood_Types_2">ebbenhout</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
     <string name="Wand_Wood_Types_8">bamboe</string>
     <string name="Wand_Wood_Types_9">paars hart</string>
@@ -719,6 +724,7 @@
     <string name="WndCryptoDonate_supportDev">Ondersteun de ontwikkelaar</string>
     <string name="WndCryptoDonate_ton">Ton</string>
     <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndDonate_commonDonateText">Remixed Dungeon - gratis voor iedereen en dat blijft zo.\n\nJe kunt ons echter helpen om het spel nog beter te maken.\n\nNaast onze oprechte dank ontvang je enkele cosmetische verbeteringen.</string>
     <string name="WndDonate_donate">doneren: </string>
     <string name="WndDonate_goldDonateText">Dank voor uw hulp</string>
     <string name="WndDonate_royalDonateText">Ik wil niet raar klingen, maar door dit te doen, voed je de developers letterlijk.</string>
@@ -865,6 +871,7 @@
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
     <string name="town_deco_skullboard_name">trofeerek</string>
+    <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
     <string name="town_deco_stove_name">Stenen kachel</string>
     <string name="town_deco_urn_desc">Kleien, misschien met as van iemand.</string>
@@ -885,6 +892,13 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
 
 
 

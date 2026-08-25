@@ -124,6 +124,7 @@
     <string name="ChaosCrystal_BladeFused">הקריסטל סופג את נשקך ולובש צורת להב</string>
     <string name="ChaosCrystal_Info">אתה מרגיש זרמי אנרגיה זורמים דרך ידיך כשאתה מחזיק אותו.</string>
     <string name="ChaosCrystal_Info_2">כן! עכשיו אתה יודע שאפשר למזג אותו עם אחד מהפריטים שלך, אבל מה הלאה?</string>
+    <string name="ChaosShield_desc">מגן הכאוס הוא תוצאה של מיזוג גביש כאוס עם מגן רגיל, מה שגורם לו להפגין השפעות כאוטיות אקראיות בעת חסימה מוצלחת.</string>
     <string name="ChaosStaff_Name">צוות כאוס</string>
     <string name="CharAction_Charm">לְקַסֵּם</string>
     <string name="CharAction_Push">לדחוף</string>
@@ -175,6 +176,7 @@
     <string name="DashSpell_Name">הסתערות</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">הכאב הפך לכאב מושהה, המפחית את הנזק המתקבל בבת אחת.\nנזק שנותר לקבל %d</string>
+    <string name="DeferedDamage_Killed_Txt">%s הרג אותך...</string>
     <string name="DevourBuff_Name">טריפה</string>
     <string name="DieHardSpell_Name">למות קשה</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
@@ -611,6 +613,7 @@
     <string name="Weightstone_WndCancel">לא נורא</string>
     <string name="Weightstone_WndChoice">איך תרצה לאזן את ה-%s שלך?</string>
     <string name="WindGust_Name">משב רוח</string>
+    <string name="WndDonate_commonDonateText">Remixed Dungeon - חינמי לכולם ויישאר כך תמיד.\n\nעם זאת, אתה יכול לעזור לנו לשפר את המשחק עוד יותר.\n\nבנוסף לתודתנו הכנה תקבל כמה שיפורים קוסמטיים.</string>
     <string name="WndDonate_goldDonateText">תודה על עזרתך</string>
     <string name="WndDonate_royalDonateText">אני לא רוצה להישמע מוזר, אבל בכך שאתה עושה את זה, אתה ממש מאכיל את המפתחים.</string>
     <string name="WndDonate_ruby">אודם</string>
@@ -720,6 +723,7 @@
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
     <string name="town_deco_shieldboard_name">מגנים</string>
     <string name="town_deco_skulls_desc">גולגולות מלוטשות השייכות ליצורים מהצינוק.</string>
+    <string name="town_deco_stone_wall_desc">איכשהו הקיר הזה פולט חום ונראה קצת רטוב.</string>
     <string name="town_deco_stones_desc">סתם ערימת אבנים</string>
     <string name="town_deco_stool_sturdy_name">שרפרף</string>
     <string name="town_deco_stove_desc">תנור זה מעניק חמימות נעימה</string>
@@ -732,6 +736,10 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
 
 
 
