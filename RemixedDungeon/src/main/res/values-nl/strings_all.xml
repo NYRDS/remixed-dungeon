@@ -830,6 +830,7 @@
     <string name="town_deco_charcoal_carpet_name">Tapijt</string>
     <string name="town_deco_chest_desc">Handig meubelstuk voor het opbergen van allerlei spullen en sieraden.</string>
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
+    <string name="town_deco_cinema_sign_desc">Het lijkt erop dat er een bioscoop in dat gebouw zit.</string>
     <string name="town_deco_common_bed_desc">Gewoon bed.</string>
     <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
     <string name="town_deco_crossroad_desc">Een ruwe houten paal met pijlvormige bordjes, de tekst waarop vervaagd is door de harde weersomstandigheden.</string>
@@ -875,6 +876,7 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 

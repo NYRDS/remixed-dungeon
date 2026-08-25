@@ -516,6 +516,7 @@
     <string name="Skeleton_Desc">שלדים מורכבים מעצמות גופות של הרפתקנים ותושבי המבוך חסרי מזל, מונפשים על ידי זרמי קסם אפל מהמעמקים. לאחר שנפגעו מספיק, הם מתפרקים בפיצוץ של עצמות.</string>
     <string name="Skeleton_Name">שלד</string>
     <string name="SlowBuff_Name">מואט</string>
+    <string name="Snail_Desc">רכיכה קטנה זו גדלה לממדים ניכרים בזכות אכילת ביוב, אך היא עדיין איטית מאוד, מה שהופך אותה ליריבה קלה.</string>
     <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
     <string name="SociologistNPC_Name">סוציולוג</string>
     <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
@@ -727,6 +728,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
 
 
 

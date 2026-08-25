@@ -501,6 +501,7 @@
     <string name="RingOfHerbalism_Info">Nhẫn này tăng cơ hội thu thập sương mai và hạt giống từ cỏ bị giẫm đạp.</string>
     <string name="RingOfMending_Name">Nhẫn Chữa Lành</string>
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
+    <string name="RingOfShadows_Info">Kẻ thù sẽ khó nhận ra bạn hơn khi bạn đeo nhẫn này. Nhẫn Bóng Tối xuống cấp sẽ báo động cho kẻ thù mà lẽ ra chúng không hề để ý đến sự hiện diện của bạn.</string>
     <string name="Ring_Gems_10">thạch anh</string>
     <string name="Ring_Gems_11">mã não</string>
     <string name="Ring_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
@@ -613,6 +614,7 @@
     <string name="SummonBeast_Name">Gọi Thú</string>
     <string name="Sungrass_Desc">Cỏ mặt trời nổi tiếng nhờ nhựa cây có tác dụng chữa lành.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
+    <string name="SuspiciousRat_Info1">Con chuột đáng ngờ đang co giật dữ dội.</string>
     <string name="Swarm_Name">bầy ruồi</string>
     <string name="Swing_Name_2">Hoang dã %s</string>
     <string name="Tamahawk_Info">Mặc dù rìu ném này không quá nặng, nhưng vẫn cần sức mạnh đáng kể để sử dụng hiệu quả.</string>
@@ -843,6 +845,8 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

@@ -2233,7 +2233,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Cette hache de jet n\'est pas si lourde, mais la manier efficacement requiert une force importante.</string>
     <string name="Tamahawk_Name">tomahawk</string>
-    <string name="TenguLiver_Info">Ce foie appartient à un ennemi valeureux. Juste à le regarder, vos instincts primaires prennent le dessus, et vous ressentez le besoin de le consommer.</string>
+    <string name="TenguLiver_Info">Ce foie appartient à un ennemi puissant. Rien qu\'à le regarder, vos instincts sauvages prennent le dessus et vous ressentez le besoin de le dévorer.</string>
     <string name="TenguLiver_Name">Foie de Tengu</string>
     <string name="Tengu_Desc">Les Tengu sont les membres d\'un ancien clan d\'assassins, qui est aussi appelé Tengu. Ces assassins sont connus pour leur usage excessif de shurikens et de pièges.</string>
     <string name="Tengu_Gender">masculine</string>
@@ -3079,10 +3079,6 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
-
-
-
-
 
 
 
