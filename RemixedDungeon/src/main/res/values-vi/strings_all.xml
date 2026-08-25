@@ -21,6 +21,7 @@
     <string name="AlchemyPot_SelectSeed">Chọn một hạt giống để ném</string>
     <string name="AllowStatisticsCollectionScene_Allow">Cho phép</string>
     <string name="AllowStatisticsCollectionScene_Deny">Từ chối</string>
+    <string name="AllowStatisticsCollectionScene_Request">Nếu bạn cho phép, Remixed Dungeon sẽ thu thập thống kê sử dụng. Dữ liệu đó sẽ được dùng để:\n\n    - phát hiện và sửa các lỗi nhỏ (nếu xảy ra lỗi nghiêm trọng, trò chơi sẽ yêu cầu bạn gửi báo cáo)\n\n    - cải thiện cân bằng trò chơi\n\n    - khắc phục các vấn đề hiệu năng riêng của từng thiết bị\n\n    - công bố những sự thật thống kê thú vị thỉnh thoảng\n\n    Bạn có thể thay đổi quyết định của mình bất cứ lúc nào (bấm biểu đồ ở màn hình chính)</string>
     <string name="AllowStatisticsCollectionScene_Title">Thu thập thống kê sử dụng</string>
     <string name="AmokArrow_Info">Dung dịch trên mũi mũi tên này sẽ biến bất kỳ ai thành một kẻ điên cuồng tàn bạo không trí tuệ.</string>
     <string name="AmokArrow_Name">Mũi tên Amok</string>
@@ -62,6 +63,7 @@
     <string name="Badges_ItemLvl5">Đã có vật phẩm cấp 15</string>
     <string name="Badges_LevelReached1">Đã đạt cấp độ 6</string>
     <string name="Badges_LevelReached4">Đạt cấp 24</string>
+    <string name="Badges_LevelReached5">Đã đạt cấp 30</string>
     <string name="Badges_MonsterSlain5">Hạ gục 1000 kẻ địch</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
     <string name="Badges_Piranhas">Săn được 6 cá ăn thịt người</string>
@@ -476,6 +478,7 @@
     <string name="Potion_Beneficial">Chai thuốc có lợi</string>
     <string name="Potion_Colors_1">đỏ tươi</string>
     <string name="Potion_Colors_8">màu hổ phách</string>
+    <string name="Potion_ItemFliesAway">%s vừa bay vụt khỏi tay bạn.</string>
     <string name="Potion_Name">%s thuốc</string>
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
     <string name="Potion_RuneDissaperaed">Chữ ký biến mất khỏi %s.</string>
@@ -582,6 +585,7 @@
     <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Nó quả thật khá ngắn, chỉ dài hơn con dao găm vài inch.</string>
     <string name="ShortSword_Name">kiếm ngắn</string>
+    <string name="Shuriken_Name">shuriken</string>
     <string name="SkeletonKey_Info">Cái chìa khóa này trông rất nghiêm trọng: đầu nó được đúc hình cái sọ. Có lẽ nó có thể mở được cánh cửa quan trọng nào đó.</string>
     <string name="SlowBuff_Name">Làm chậm</string>
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
@@ -859,6 +863,10 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
 
 
 

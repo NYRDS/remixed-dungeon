@@ -70,6 +70,7 @@
     <string name="Badges_ItemLvl3">تم الحصول على عنصر من المستوى 9</string>
     <string name="Badges_ItemLvl4">تم الحصول على عنصر بمستوى 12</string>
     <string name="Badges_ItemLvl5">تم الحصول على عنصر من المستوى 15</string>
+    <string name="Badges_LevelReached5">وصلت إلى المستوى 30</string>
     <string name="Badges_MasteryCombo">كومبو 7 ضربات</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
     <string name="Badges_PotionsCooked2">تم طهي 6 جرعات</string>
@@ -552,6 +553,7 @@
     <string name="ShortSword_ACReforge">إعادة الصياغة</string>
     <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Name">سيف قصير</string>
+    <string name="Shuriken_Name">شوريكين</string>
     <string name="Skeleton_Killed">قُتلت بانفجار العظام...</string>
     <string name="Skeleton_Name">هيكل عظمي</string>
     <string name="Slow_Name_1">مُثَلّج %s</string>
@@ -794,6 +796,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 </resources>

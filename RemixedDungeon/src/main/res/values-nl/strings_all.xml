@@ -65,6 +65,7 @@
     <string name="Badges_ItemLvl3">Item van niveau 9 verkregen</string>
     <string name="Badges_ItemLvl4">Item van niveau 12 verkregen</string>
     <string name="Badges_ItemLvl5">Item van niveau 15 verkregen</string>
+    <string name="Badges_LevelReached5">Niveau 30 bereikt</string>
     <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
     <string name="Badges_MonsterSlain5">1000 vijanden verslagen</string>
@@ -288,6 +289,7 @@
     <string name="HeroClass_NecromancerPerks_3">Necromancers beginnen met een skelet sleutel niveau 7.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Plagedokters lijden aan grote accuraatheidsstraffen zonder hun geliefde Beenzaag in de hand en kunnen geen afstandswapens gebruiken.</string>
     <string name="HeroClass_Rog">schurke</string>
+    <string name="HeroClass_RogPerks_2">Schurken zijn bedreven in lichte bepantsering en ontwijken aanvallen er beter in.</string>
     <string name="HeroClass_War">krijger</string>
     <string name="HeroSubClass_DescFreR">De _Vrijsprinter_ kan zich bijna twee keer zo snel voortbewegen als de meeste monsters. Tijdens het rennen is de Vrijsprinter veel moeilijker te raken. Maar daarvoor moet hij onbelast en niet verhongerd zijn.</string>
     <string name="HeroSubClass_DescNone">NIET GEVONDEN</string>
@@ -467,6 +469,7 @@
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
     <string name="Possess_Name">Bezetting</string>
     <string name="Possess_PossessionFailed">Wil van %s is te sterk</string>
+    <string name="PotionBelt_Info">Deze sterke leren riem kan al je drankjes bevatten en beschermt ze tegen het breken door vorst.</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
     <string name="PotionOfInvisibility_Info">Als je deze drank opdrinkt, wordt je tijdelijk onzichtbaar. Terwijl je onzichtbaar bent, kunnen vijanden je niet zien. Een vijand aanvallen, evenals een toverstaf of een rol voor de ogen van een vijand gebruiken, doet het effect verdwijnen.</string>
     <string name="PotionOfLiquidFlame_Info">Deze fles bevat een onstabiel mengsel dat heftig in vlammen opgaat bij contact met de open lucht.</string>
@@ -480,6 +483,7 @@
     <string name="PotionOfToxicGas_Info">Het ontdopen of verbrijzelen van deze onder druk staande glasfles zal de inhoud laten exploderen tot een dodelijke wolk van giftige groene gas. Je kunt ervoor kiezen om deze drank op verafstaande vijanden te werpen in plaats van hem met de hand te openen.</string>
     <string name="Potion_Colors_1">karmozijn</string>
     <string name="Potion_Colors_14">onyx</string>
+    <string name="Potion_ItemFliesAway">%s vliegt zomaar uit je handen weg.</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
     <string name="Prison_TileDescDeco">Er zijn oude bloedvlekken op de vloer.</string>
@@ -581,6 +585,7 @@
     <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Dit zwaard is inderdaad vrij kort, slechts enkele centimeters langer dan een dolk.</string>
     <string name="ShortSword_Name">kort zwaard</string>
+    <string name="Shuriken_Name">shuriken</string>
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SleepBuff_Info">Volledig in slaap</string>
@@ -892,6 +897,11 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
 
 
 

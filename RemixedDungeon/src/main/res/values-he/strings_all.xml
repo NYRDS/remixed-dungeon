@@ -60,6 +60,7 @@
     <string name="Badges_ItemLvl3">הושג פריט ברמה 9</string>
     <string name="Badges_ItemLvl4">הושג פריט ברמה 12</string>
     <string name="Badges_LevelReached4">הגיע לרמה 24</string>
+    <string name="Badges_LevelReached5">הגעת לרמה 30</string>
     <string name="Badges_NoMonsterSlain">הושלמה רמה מבלי להרוג אף מפלצת</string>
     <string name="Badges_Piranhas">6 פיראניות נהרגו</string>
     <string name="Badges_PotionsCooked3">9 שיקויים מבושלים</string>
@@ -92,6 +93,7 @@
     <string name="Brute_Enraged">%s נכנס לזעם!</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
     <string name="BurningFist_Name_Objective">אגרוף בוער</string>
+    <string name="Burning_Death">נשרפת למוות...</string>
     <string name="CagedKobold_Desc">קובולד, בכלוב.</string>
     <string name="CagedKobold_Intro">היי... היי! אתה אותו הרפתקן, נכון? תעזור לי, חבר, הצבאיים הארורים האלה נעלו אותי פה! הם מתכוונים להפעיל מחדש נשק עתיק כדי לכבוש את בני האדם על פני השטח! אבל בהתחשב בכמה שזה מסוכן, התנגדתי, אז הם פשוט זרקו אותי ונעלו אותי בכלוב! אני מתחנן שתמצא את המפתח לתא, ובתמורה, אעזור לך כמיטב יכולתי.</string>
     <string name="CagedKobold_Message1">בבקשה...</string>
@@ -204,6 +206,7 @@
     <string name="EquipableItem_ACUnequip">לְהַסִיר</string>
     <string name="Exhumation_Info">פתיחת הקבר היא מעשה מרושע כשלעצמו, אך אינו מספיק עבור מי שמשרת את המוות עצמו. למבצע הטקס האפל יש סיכוי גדול (שגדל עם רמת המיומנות של המבצע) להכניע את הנשמה האומללת של הטמון כאן.</string>
     <string name="ExplodingSkull_Desc">גולגולת צפה ובוערת זו נראית שבירה ביותר, ונראית כאילו היא עומדת להתפרק לרסיסים בכל רגע.</string>
+    <string name="ExplodingSkull_Name">גולגולת מתפוצצת</string>
     <string name="Eye_Kill">מבט המוות של %s הרג אותך...</string>
     <string name="Facilitations_Descriptions_1">עדיין לא ידוע מי היו הוריך, אבל הרגנרציה הטבעית דמוית-טרול תעזור לרפא את כל הצלקות הקרב העתידות לבוא.</string>
     <string name="Facilitations_Names_0">ללא רעב</string>
@@ -428,6 +431,7 @@
     <string name="Potion_Colors_3">ירקן</string>
     <string name="Potion_Colors_6">פחם</string>
     <string name="Potion_Info">בקבוקון זה מכיל נוזל %s מסתחרר. מי יודע מה יקרה כשתשתה או תזרוק אותו?</string>
+    <string name="Potion_ItemFliesAway">%s פשוט עף מהידיים שלך.</string>
     <string name="Potion_No">לא, שיניתי את דעתי</string>
     <string name="Potion_RuneDissaperaed">הרונה נעלמה מ-%s.</string>
     <string name="Potion_Shatter">הבקבוק מתנפץ ו-%s נוזל מתפזר ללא נזק</string>
@@ -518,6 +522,7 @@
     <string name="ShortSword_ACReforge">לעצב מחדש</string>
     <string name="ShortSword_Gender">feminine</string>
     <string name="ShortSword_Name">חרב קצרה</string>
+    <string name="Shuriken_Name">שוריקן</string>
     <string name="Skeleton_Desc">שלדים מורכבים מעצמות גופות של הרפתקנים ותושבי המבוך חסרי מזל, מונפשים על ידי זרמי קסם אפל מהמעמקים. לאחר שנפגעו מספיק, הם מתפרקים בפיצוץ של עצמות.</string>
     <string name="Skeleton_Name">שלד</string>
     <string name="SlowBuff_Name">מואט</string>
@@ -736,6 +741,11 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 
