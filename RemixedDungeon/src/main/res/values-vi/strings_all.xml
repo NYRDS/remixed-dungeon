@@ -11,6 +11,7 @@
     <string name="AboutScene_Graphics">Đồ họa:</string>
     <string name="AboutScene_Music">Nhạc:</string>
     <string name="AboutScene_OurSite">Trang web của chúng tôi:</string>
+    <string name="AboutScene_SourceCode">Tải mã nguồn Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Cảm ơn đặc biệt đến:</string>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
     <string name="Accuracy_Decreased">Tại sao tôi nghĩ mình có thể dùng %s? Cụm sai, tay sai!</string>
@@ -142,6 +143,7 @@
     <string name="ChaosShield_desc">Khiên Hỗn Mang là kết quả của việc hợp nhất một Viên Ngọc Hỗn Mang với chiếc khiên thường, khiến nó tạo ra những hiệu ứng hỗn loạn ngẫu nhiên khi chặn thành công.</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
     <string name="ChaosStaff_Name">gậy hỗn loạn</string>
+    <string name="ChaosSword_Info">Lưỡi của thanh kiếm này được tạo nên từ hỗn loạn thuần khiết và thỉnh thoảng lại rung nhẹ. Sức mạnh vĩ đại ẩn chứa trong vũ khí này có thể chém đôi gần như mọi thứ. Tuy nhiên, cần kỹ năng phi thường mới có thể khuất phục được sức mạnh hùng hậu của nó.</string>
     <string name="CharAction_Hit">đánh</string>
     <string name="CharAction_Push">đẩy</string>
     <string name="CharAction_Take">Nhặt lấy</string>
@@ -162,6 +164,7 @@
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
     <string name="ChargrilledMeat_Name">thịt nướng than hoa</string>
     <string name="CharmBuff_Info">Tâm trí và cơ thể đã bị mê hoặc!</string>
+    <string name="Chasm_Chasm">Vực</string>
     <string name="Chasm_Info">Bạn đã rơi xuống vực chết chóc...</string>
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
     <string name="City_TileDescDeco">Ở đây thiếu một vài viên gạch.</string>
@@ -374,6 +377,7 @@
     <string name="KunaiThrow_Name">Ném kunai</string>
     <string name="Kusarigama_Info">Vũ khí này gồm một lưỡi liềm gắn trên chuỗi xích kim loại với một quả tạ sắt nặng ở đầu bên kia.</string>
     <string name="Kusarigama_Name">kusarigama</string>
+    <string name="LastShopLevel_TileDescEntrance">Một lối dẫn lên tầng trên.</string>
     <string name="Leech_Name_0">Hút máu %s</string>
     <string name="Level_TileDefault">\?\?\?</string>
     <string name="Level_TileDescChasm">Bạn không thể thấy đáy.</string>

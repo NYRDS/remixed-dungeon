@@ -12,6 +12,7 @@
     <string name="AboutScene_Music">Muziek:</string>
     <string name="AboutScene_OurSite">Onze site:</string>
     <string name="AboutScene_Sound">Geluid:</string>
+    <string name="AboutScene_SourceCode">Download de broncode van Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Speciale dank aan:</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon door NYRDS gebaseerd op de broncode van Pixel Dungeon door Watabou.</string>
     <string name="Accuracy_Decreased">Waarom dacht ik dat ik dit %s kon gebruiken? Verkeerd gereedschap, verkeerde handen!</string>
@@ -434,6 +435,7 @@
     <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
+    <string name="NecromancerNPC_Message3">Ik hoor de roep van de doden.</string>
     <string name="NecromancerNPC_Name">nekromant</string>
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
     <string name="Necromancy_Title">Necromantie</string>
@@ -626,6 +628,7 @@
     <string name="SpiderMindAmber_Name">Amber Spinnewijs</string>
     <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Psi-Spin</string>
+    <string name="SpiderQueen_DieInfo">De Spinnenkoningin is verslagen! Nu moet ik terug naar niveau 5 en mijn reis naar de Diepten voortzetten.</string>
     <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
     <string name="Spinner_Name_Objective">grotspin</string>
@@ -816,6 +819,7 @@
     <string name="WndSelectLanguage_ImproveTranslation">Help alsjebliept de vertalingen van Remixed Dungeon te verbeteren</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Klik hier om deel te nemen aan het Remixed Dungeon vertaalteam</string>
     <string name="WndSettingsInGame_GameLog">Spellog</string>
+    <string name="WndSettings_ActionButtonSize">Grootte van actieknoppen</string>
     <string name="WndSettings_ExperementalFont">Nieuw lettertype</string>
     <string name="WndSettings_FpsLimit">FPS-limiet</string>
     <string name="WndSettings_Handedness">Handpreferentie</string>

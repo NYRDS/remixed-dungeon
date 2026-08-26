@@ -12,6 +12,7 @@
     <string name="AboutScene_Music">מוזיקה:</string>
     <string name="AboutScene_OurSite">האתר שלנו:</string>
     <string name="AboutScene_Sound">צליל:</string>
+    <string name="AboutScene_SourceCode">קבלת קוד המקור של Remixed Dungeon:</string>
     <string name="AboutScene_Translation">תרגום:</string>
     <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
     <string name="Accuracy_Decreased">למה חשבתי שאני יכול להשתמש ב-%s? כלי לא נכון, ידיים לא נכונות!</string>
@@ -643,6 +644,7 @@
     <string name="WndDonate_goldDonateText">תודה על עזרתך</string>
     <string name="WndDonate_royalDonateText">אני לא רוצה להישמע מוזר, אבל בכך שאתה עושה את זה, אתה ממש מאכיל את המפתחים.</string>
     <string name="WndDonate_ruby">אודם</string>
+    <string name="WndDonate_silver">כסף</string>
     <string name="WndDontLikeAds_NotThisTime">לא הפעם</string>
     <string name="WndFortuneTeller_IdentifyAll">הכל</string>
     <string name="WndFortuneTeller_No_Item">היזהר, אתה לא רוצה לבזבז את הכסף שלך לחינם, נכון? אין פריטים לא מזוהים במלאי שלך.</string>
