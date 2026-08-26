@@ -397,6 +397,7 @@
     <string name="MimicPie_Name_Objective">ميميكي</string>
     <string name="MirrorImage_Name">ثنائي</string>
     <string name="MissileWeapon_Info3">بسبب قوتك الزائدة، يزداد ضرر هجومك بـ %s.</string>
+    <string name="MissileWeapon_No">لا، غيّرت رأيي</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
     <string name="MissileWeapon_Yes">نعم، أنا أعلم ما أفعله</string>
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
@@ -792,7 +793,7 @@
     <string name="town_deco_emptyboard_desc">الرف العادي لوضع الأشياء للعرض</string>
     <string name="town_deco_entrance_name">مدخل</string>
     <string name="town_deco_fence_name">سياج</string>
-    <string name="town_deco_firewood_desc">شيء ضروري في مثل هذه الصقيع القارس.</string>
+    <string name="town_deco_firewood_desc">شيء ضروري في مثل هذا الصقيع القارس.</string>
     <string name="town_deco_firewood_name">حطب</string>
     <string name="town_deco_flowerinthepot_desc">زهرة زينة ذات نكهة حلوة</string>
     <string name="town_deco_flowerinthepot_name">زهرة في وعاء</string>
@@ -821,6 +822,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 </resources>

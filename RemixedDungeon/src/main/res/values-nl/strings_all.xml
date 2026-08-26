@@ -718,6 +718,7 @@
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
     <string name="WandOfAvalanche_Info1">Je verpletterde jezelf met je eigen Toverstaf van Lawine...</string>
     <string name="WandOfAvalanche_Name">Toverstaf van Lawine</string>
+    <string name="WandOfBlink_Info">Deze toverstaf stelt je in staat om je te teleporteren in de gekozen richting. Wezens en levenloze obstakels blokkeren de teleportatie.</string>
     <string name="WandOfBlink_Name">Toverstaf van Blinken</string>
     <string name="WandOfDisintegration_Info">Deze staf straalt een bundel vernietigende energie uit, die alle wezens op zijn pad doorboort. Hoe meer slachtoffers het raakt, des te meer schade het aan elk van hen toebrengt.</string>
     <string name="WandOfFirebolt_Info1">Je verbrandde jezelf met je eigen Toverstaf van Vuurpijl...</string>
@@ -859,6 +860,7 @@
     <string name="Worm_Name">worm</string>
     <string name="Worm_Name_Objective">worm</string>
     <string name="Wraith_Desc">Een wraith is de wraakzuchtige geest van een zondaar, wiens graf of grafkelder werd verstoord. Als een etherische entiteit is het zeer lastig te raken met een gewoon wapen.</string>
+    <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">wraith</string>
     <string name="WrnExperimental_realtime">De real-time modus is geactiveerd: dit is nu een real-time roguelike, tik snel of sterf.\nWil je je inventaris controleren?\nVeel succes daarbij terwijl de rioolkrab je ingewanden bekijkt.</string>
     <string name="WrnExperimental_title">Experimentele opties ingeschakeld!</string>
@@ -898,6 +900,7 @@
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
     <string name="town_deco_fireplace_desc">Uitstekend om je mee op te warmen in zo\'n koude plek als deze.</string>
     <string name="town_deco_fireplace_name">Open haard</string>
+    <string name="town_deco_firewood_desc">Een onmisbaar ding bij zulke streng vorst.</string>
     <string name="town_deco_flowerinthepot_desc">Decoratieve bloem met een zoete smaak</string>
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
     <string name="town_deco_hay_desc">Een klein hoopje lekker ruikend hooi.</string>
@@ -939,6 +942,9 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 

@@ -205,6 +205,7 @@
     <string name="Dungeon_Tips_18">הדרך היחידה לשדרג כישוף על נשק היא באמצעות מגילת שדרוג.</string>
     <string name="Dungeon_Tips_2">זכור שהגברת כוחך אינה הדרך היחידה לגשת לציוד טוב יותר, אתה יכול ללכת בדרך ההפוכה על ידי הפחתת דרישת הכוח שלו באמצעות מגילות שדרוג.</string>
     <string name="Dungeon_Tips_20">פיקסל-מארט. מחירים מיוחדים לציידי שדים!</string>
+    <string name="Dungeon_Tips_23">הטקסט כתוב בשפת שדים.</string>
     <string name="Dungeon_Tips_3">אתה יכול להוציא את הזהב שלך בעיר, בחנויות הצינוק או בשירותים.</string>
     <string name="Dungeon_Tips_4">היזהר מהגו!</string>
     <string name="Dungeon_Tips_5">פיקסל-מארט - כל מה שאתה צריך להרפתקה מוצלחת!</string>
@@ -279,6 +280,7 @@
     <string name="HeroClass_WarPerks_3">כל פריט מזון משחזר מעט בריאות כאשר נאכל.</string>
     <string name="HeroSubClass_DescAssa">כאשר מבצעים התקפה מפתיעה, ה_מתנקש_ גורם נזק נוסף למטרתו.</string>
     <string name="HeroSubClass_DescBatM">כאשר מבצעים התקפה מפתיעה, ה-קוסם קרב גורם נזק נוסף למטרתו.</string>
+    <string name="HeroSubClass_DescGuardian">ידע מגננתי מיומן מאפשר ל_שומר_ להגיב בהתקפת נגד בעזרת מגן, והופך אותו ליריב אדיר עבור מי שמעז לתקוף מצודה מהלכת זו.</string>
     <string name="HeroSubClass_DescShaman">אלפים _שמאנים_ יכולים להשתמש בשרביטים ככלי נשק לתקיפה מקרוב. לפגיעות מוצלחות יש סיכוי להפעיל את כוח השרביט על מטרה ללא שימוש בטעינה.</string>
     <string name="HeroSubClass_DescWarL">לאחר הריגת אויב, ה-וורלוק בולע את נשמתו. זה מרפא את פצעיו ומשביע את רעבונו.</string>
     <string name="HeroSubClass_NameAssa">מתנקש</string>
@@ -376,6 +378,7 @@
     <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">תמונת ראי</string>
     <string name="MirrorImage_Name_Objective">תמונת ראי</string>
+    <string name="MissileWeapon_No">לא, החלפתי את דעתי</string>
     <string name="Mob_GoingTo">כבר הולך!</string>
     <string name="Mob_ItemUse">%1$s משתמש ב-%2$s</string>
     <string name="Mob_StaFleeingStatus">זה %s בורח</string>
@@ -693,6 +696,7 @@
     <string name="WndSadGhostNecro_Persuaded">רוח העצב נכנעה!</string>
     <string name="WndSadGhostNecro_Text">הרוח הזו נראית נאבקת בקללה שלה. נראה שהיא רוצה לבקש ממני משהו. בעזרת נקרומנטיה, יכולתי לשכנע אותה שהבקשה מולאה. זה יחסוך לי זמן. אבל האם כדאי לעשות את זה?</string>
     <string name="WndSadGhostNecro_Yes">כן, כפה את רצונך עליו.</string>
+    <string name="WndSadGhost_Rose">כן! כן!!! זה מה שצריך! בבקשה, תן לי את זה! ואתה יכול לקחת אחד מהפריטים האלה, אולי יהיו שימושיים לך במסע...</string>
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
     <string name="WndSaveSlotSelect_Delete_Title">האם אתה בטוח שברצונך למצוא מצב שמירה זה?</string>
     <string name="WndSettingsInGame_GameLog">יומן משחק</string>
@@ -747,6 +751,7 @@
     <string name="town_deco_exit_name">יציאה</string>
     <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_fireplace_desc">מצוין לחימום במקום קר כמו זה.</string>
+    <string name="town_deco_firewood_desc">פריט חיוני בקור כזה.</string>
     <string name="town_deco_glass_name">חלון רחב</string>
     <string name="town_deco_glass_stained_desc">יוצר הזכוכית הזו כנראה השקיע בה מאמץ רב.</string>
     <string name="town_deco_hay_desc">ערימה קטנה של שחת ריחני</string>
@@ -778,6 +783,11 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
 
 
 

@@ -431,6 +431,7 @@
     <string name="Mimic_Gender">masculine</string>
     <string name="MissileWeapon_Info1">\n\nSát thương trung bình của vũ khí này bằng %d điểm mỗi lần đánh.</string>
     <string name="MissileWeapon_Missiles">Vũ khí phóng xạ</string>
+    <string name="MissileWeapon_No">Không, tôi đã đổi ý rồi</string>
     <string name="Mob_ItemUse">%1$s sử dụng %2$s</string>
     <string name="Mob_StaControlledStatus">%s này đang bị ám bởi ma quỷ</string>
     <string name="Mob_StaFleeingStatus2">Cái %1$s này đang chạy trốn khỏi %2$s</string>
@@ -797,6 +798,7 @@
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndRanking_Stats">Thống kê</string>
     <string name="WndSadGhost_Farewell">Tạm biệt, nhà thám hiểm! Chúc may mắn!</string>
+    <string name="WndSadGhost_Rose">Đúng rồi! Đúng rồi!!! Chính là nó! Xin hãy đưa nó cho tôi! Và bạn có thể lấy một trong những món đồ này, biết đâu chúng sẽ hữu ích cho bạn trên hành trình...</string>
     <string name="WndSaveSlotSelect_Delete_No">Không</string>
     <string name="WndSaveSlotSelect_Delete_Title">Bạn có chắc chắn muốn xóa trạng thái lưu này?</string>
     <string name="WndSelectLanguage_ImproveTranslation">Vui lòng giúp cải thiện bản dịch Remixed Dungeon</string>
@@ -864,6 +866,7 @@
     <string name="town_deco_dungeon_door_name">cửa hang</string>
     <string name="town_deco_emptyboard_name">Kệ đựng</string>
     <string name="town_deco_entrance_name">cổng vào</string>
+    <string name="town_deco_firewood_desc">Vật dụng thiết yếu trong những đợt rét khắc nghiệt như thế này.</string>
     <string name="town_deco_flowerinthepot_name">Hoa trong chậu</string>
     <string name="town_deco_furnace_name">Lò nung</string>
     <string name="town_deco_glass_stained_desc">Người làm chiếc kính màu này có lẽ đã rất chăm chỉ.</string>
@@ -909,6 +912,9 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 </resources>
