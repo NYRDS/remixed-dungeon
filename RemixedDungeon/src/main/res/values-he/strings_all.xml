@@ -67,6 +67,7 @@
     <string name="Badges_PotionsCooked3">9 שיקויים מבושלים</string>
     <string name="Badges_PotionsCooked5">25 שיקויים נרקחו</string>
     <string name="Badges_RareAll">כל המפלצות הנדירות הושמדו</string>
+    <string name="Badges_StrengthAttained1">הושגו 13 נקודות כוח</string>
     <string name="Badges_StrengthAttained2">הושגו 15 נקודות כוח</string>
     <string name="Badges_StrengthAttained4">הושגו 19 נקודות כוח</string>
     <string name="Badges_Yog_Slain">יוג-זבה הובס</string>
@@ -83,6 +84,7 @@
     <string name="BellaNPC_Name">בלה</string>
     <string name="BishopNPC_Desc">בישוף הכנסייה הקדושה של סנטה אדון המעמקים</string>
     <string name="BishopNPC_Name_Objective">בישוף</string>
+    <string name="Bishop_text">אני מתפלל עבורך יומם ולילה, ילדי.</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_1">מיאו...</string>
     <string name="BlackCat_Phrases_2">מיאו!</string>
@@ -768,5 +770,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 </resources>

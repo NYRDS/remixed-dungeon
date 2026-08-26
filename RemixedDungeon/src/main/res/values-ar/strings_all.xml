@@ -80,6 +80,7 @@
     <string name="Badges_RareAll">تم القضاء على جميع الوحوش النادرة</string>
     <string name="Badges_RingThorns">تم الحصول على خاتم الأشواك</string>
     <string name="Badges_ShadowLord_Slain">تم هزيمة سيد الظلال</string>
+    <string name="Badges_StrengthAttained1">تم الحصول على 13 نقطة قوة</string>
     <string name="Badges_StrengthAttained3">تم تحقيق 17 نقطة من القوة</string>
     <string name="Badges_StrengthAttained4">تم بلوغ 19 نقطة من القوة</string>
     <string name="Badges_Yasd">الموت من النار، السم، الغاز السام والجوع</string>
@@ -97,6 +98,7 @@
     <string name="Belongings_CantWearBoth">لا يمكنك تجهيز %1 و %2 في نفس الوقت!</string>
     <string name="Belongings_Name">حقيبة ظهر</string>
     <string name="BishopNPC_Name_Objective">الأسقف</string>
+    <string name="Bishop_text">أدعو لك ليلًا ونهارًا يا بنتي.</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_1">مياؤو...</string>
     <string name="BlackCat_Phrases_2">مياو!</string>
@@ -818,5 +820,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 </resources>
