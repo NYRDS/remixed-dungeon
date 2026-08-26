@@ -317,6 +317,7 @@
     <string name="Hero_StaBurning">Je vliegt in brand!</string>
     <string name="Hero_StaCharm">Je bent betoverd!</string>
     <string name="Hero_StaPoison">Je bent vergiftigd!</string>
+    <string name="Hero_StaRoots">Je kunt je niet bewegen!</string>
     <string name="Hero_StaWeakness">Je voelt je verzwakt!</string>
     <string name="Hero_Wait">...</string>
     <string name="Horror_Name_1">Griezelige %s</string>
@@ -441,6 +442,7 @@
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="NecromancerNPC_Message3">Ik hoor de roep van de doden.</string>
     <string name="NecromancerNPC_Name">nekromant</string>
+    <string name="NecromancerRobe_Info">Dit gewaad stelt de Nekromant in staat om een Doodsling op te roepen ten koste van 5 zielen. De Doodsling is een ondode dienaar die sterker wordt samen met zijn meester.</string>
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
     <string name="Necromancy_Title">Necromantie</string>
     <string name="Necrotism_ACSpecial">NECROTISME</string>
@@ -935,12 +937,5 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
-
-
-
-
-
-
-
 
 </resources>

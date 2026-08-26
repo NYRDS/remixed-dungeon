@@ -96,6 +96,7 @@
     <string name="BlackSkull_Activated">Đầu lâu đen đã thức tỉnh!</string>
     <string name="BlackSkull_Name">đầu lâu đen</string>
     <string name="BlackSkull_Ressurrect">Đỉnh Đen Đã Hồi Sinh Quái Vật Chết Để Phục Vụ Bạn!</string>
+    <string name="Blacksmith_GetLost">Tôi đang bận. Cút đi!</string>
     <string name="Blacksmith_Gold1">Này người! Muốn làm việc hữu ích chứ? Lên cái cuốc này và đào cho ta ít _khoáng vàng đen_, _15 miếng_ là đủ rồi. Cái gì? Như thế nào mà ta trả tiền? Ngươi tham lam...\nỪ, ừ, ta không có tiền trả, nhưng ta có thể làm đồ sắt cho ngươi. Coi ngươi may mắn, ta là thợ rèn duy nhất ở đây.</string>
     <string name="Blacksmith_Verify2">Chọn 2 vật phẩm cùng loại!</string>
     <string name="Blacksmith_Verify4">Tôi không làm việc với vật phẩm bị nguyền rủa!</string>
@@ -183,6 +184,7 @@
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
+    <string name="CompositeCrossbow_Name">nỏ composite</string>
     <string name="CompoundBow_Info">Các mũi tên bắn từ cây cung hợp kim này gây sát thương lớn và có độ chính xác tốt hơn cung gỗ, đổi lại là phần nào chậm hơn.</string>
     <string name="CorpseDust_Name">bụi xác</string>
     <string name="Crab_Gender">masculine</string>
@@ -324,6 +326,7 @@
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
     <string name="Hero_StaBurning">Bạn bị bốc cháy!</string>
     <string name="Hero_StaCharm">Bạn bị mê hoặc!</string>
+    <string name="Hero_StaRoots">Bạn không thể di chuyển!</string>
     <string name="Hero_Wait">...</string>
     <string name="Horror_Name_0">Quái dị %s</string>
     <string name="Horror_Name_1">%s rùng rợn</string>
@@ -485,6 +488,7 @@
     <string name="PlagueDoctorQuest_5_1_Prologue">*Hắn ấp úng, giọng khàn khàn như cành cây khô giòn*. A-a, _súc quy_! Hai... có, hai, còn sống! Nó là... hem... cho nghiên cứu của ta! Các ngươi thấy... pheromone của chúng... nó quan trọng để hiểu cái cân bằng tinh tế của... a... *Hắn ngập ngừng, bàn tay xương cốt đưa lên gõ nghiến mặt nạ, ánh mắt chớm chớp nhìn về phía các ngươi với cường độ sốt ruột.* Cái... bản chất của chúng... nó là một câu đố... một câu đố đẹp đẽ, bí ẩn! *Hắn ho khan gắt gao, cố gắng lấy lại bình tĩnh.* Ta hứa, vì mang cho ta hai con... quái vật này... các ngươi sẽ có lòng biết ơn vĩnh cửu của ta. Hãy coi đó như một... một ơn huệ cho tri thức! Đúng! Vì tri thức!</string>
     <string name="PlagueDoctorQuest_AllDone">*Hắn bật ra một tràng cười khàn khô.* \&quot;Chiến công của ngươi đã mở khóa những bí mật vô biên! Khối kiến thức thu được… đang dồn dập trong ta, như một bản giao hưởng của khám phá. Nhưng kiến thức,\&quot; hắn nói thêm, giọng hạ xuống thành lời thì thầm đầy mưu mẹo, \&quot;kiến thức là quyền lực. Và quyền lực… à… đó là thứ thuốc tiên say đắm nhất.\&quot; Hắn chăm chú nhìn bạn một lúc, đôi mắt tím hổ phách rực cháy cuồng nhiệt. \&quot;Biết đâu,\&quot; hắn lẩm bẩm, \&quot;đường chúng ta sẽ lại giao nhau. Vì vẫn còn nhiều… bí ẩn… chờ được vén màn.\&quot;</string>
     <string name="PlagueDoctor_Name">y sĩ đen</string>
+    <string name="PlateArmor_Name">áo giáp tấm</string>
     <string name="PoisonBuff_Name">Bị Độc</string>
     <string name="Poison_Death">Bạn đã chết vì độc...</string>
     <string name="Poison_Name_0">Độc %s</string>
@@ -887,6 +891,7 @@
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_statue_blood_desc">Một bức tượng thiên thần uy nghi đang cầm chiếc bát đựng máu.</string>
     <string name="town_deco_stone_wall_desc">Không hiểu sao bức tường này lại tỏa ra hơi ấm và có vẻ hơi ẩm.</string>
+    <string name="town_deco_stones_desc">Chỉ là một đống đá.</string>
     <string name="town_deco_tree_name">Cây</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_vat_name">chậu</string>
@@ -903,4 +908,5 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 </resources>

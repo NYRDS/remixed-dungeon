@@ -172,6 +172,7 @@
     <string name="ComboBuff_Name">קומבו</string>
     <string name="Combo_Combo">%d מכות קומבו!</string>
     <string name="CommonArrow_Info">חץ עץ נפוץ עם ראש ברזל.</string>
+    <string name="CompositeCrossbow_Name">קשת מורכבת</string>
     <string name="ConcreteBlock_Description">נראה שהבלוק הזה דורש %d נקודות כוח כדי לדחוף</string>
     <string name="CorpseDustBuff_Info">התקפות מתגברות מאוד עבור אלו שמלאים בצמא דם, מה שהופך אותם למסוכנים במיוחד.</string>
     <string name="CorpseDust_Info">כדור אבק הגופות לא נראה שונה מכדור אבק רגיל. עם זאת, אתה יודע איכשהו שעדיף להיפטר ממנו בהקדם האפשרי.</string>
@@ -291,6 +292,7 @@
     <string name="Hero_StaBurning">אתה נדלקת!</string>
     <string name="Hero_StaCripple">אתה נכה!</string>
     <string name="Hero_StaPoison">אתה מורעל!</string>
+    <string name="Hero_StaRoots">אינך יכול לזוז!</string>
     <string name="Hero_StaVertigo">הכל מסתובב סביבך!</string>
     <string name="Hero_Wait">...</string>
     <string name="Horror_Name_1">אימתני %s</string>
@@ -358,6 +360,7 @@
     <string name="MageArmor_ACSpecial">אדמה מותכת</string>
     <string name="MageArmor_Name">גלימת קוסם</string>
     <string name="MagicTorch_Name">לפיד קסם</string>
+    <string name="ManaRegenerationBuff_Info">פונקציית התחדשות המאנה קיימת בצורת באפ כדי להקל על הדברים.</string>
     <string name="MedicineMask_Name">מסכה כירורגית</string>
     <string name="MedicineMask_Obtained">התקבלה מסכה כירורגית</string>
     <string name="MeleeWeapon_Info1a">%1$s — %2$s כלי נשק קרוב דרגה %3$d.</string>
@@ -773,10 +776,5 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
-
-
-
-
-
 
 </resources>
