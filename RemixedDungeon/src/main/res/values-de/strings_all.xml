@@ -453,9 +453,9 @@ Ein blutroter Helm ist ein wesentliches Symbol eines Chaos Kriegers.</string>
     <string name="CharAction_Take">nehmen</string>
     <string name="CharAction_Taunt">verspotten</string>
     <string name="CharInfo_Level">Dies ist ein Level-%1$d %2$s.</string>
-    <string name="Char_Defeat_0">%1$s vernichtest %2$s</string>
-    <string name="Char_Defeat_1">%1$s vernichtest %2$s</string>
-    <string name="Char_Defeat_2">%1$s vernichtest %2$s</string>
+    <string name="Char_Defeat_0">%1$s vernichtete %2$s</string>
+    <string name="Char_Defeat_1">%1$s vernichtete %2$s</string>
+    <string name="Char_Defeat_2">%1$s vernichtete %2$s</string>
     <string name="Char_Hit_0">%1$s trifft %2$s</string>
     <string name="Char_Hit_1">%1$s trifft %2$s</string>
     <string name="Char_Hit_2">%1$s trifft %2$s</string>
@@ -1844,8 +1844,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="RogueArmor_Name">Schurkentracht</string>
     <string name="RogueArmor_NotRogue">Nur Schurken können diese Rüstung nutzen!</string>
     <string name="RogueArmor_Prompt">Wähle den Ort, zu dem du springen willst.</string>
-    <string name="RootSpell_Info">Verwurzelt ausgewählten Charakter und macht es ihm unmöglich für eine kurze Weile sich zu Bewegen.
-Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich sich fortzubewegen.</string>
+    <string name="RootSpell_Info">Verwurzelt den ausgewählten Charakter und macht es ihm kurzzeitig unmöglich, sich fortzubewegen.</string>
     <string name="RootSpell_Name">Verwurzeln</string>
     <string name="RootsBuff_Info">Aus dem Boden sprießende Wurzeln wickeln sich um den Körper und verhindern, das auch nur ein Schritt gemacht wird..</string>
     <string name="RootsBuff_Name">Festgewachsen</string>

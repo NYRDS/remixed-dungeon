@@ -457,6 +457,7 @@
     <string name="Paralysis_Name_2">Verstomming %s</string>
     <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
     <string name="PetInventory_HeroBackpackFull">Je rugzak is vol</string>
+    <string name="PetInventory_TakeFromPet">Nemen van huisdier</string>
     <string name="PetInventory_Title">Huisdiereninventaris</string>
     <string name="PetInventory_TookItem">%1$s genomen van %2$s</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te delven!</string>
@@ -878,6 +879,7 @@
     <string name="town_deco_entrance_name">ingang</string>
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
     <string name="town_deco_fireplace_desc">Uitstekend om je mee op te warmen in zo\'n koude plek als deze.</string>
+    <string name="town_deco_fireplace_name">Open haard</string>
     <string name="town_deco_flowerinthepot_desc">Decoratieve bloem met een zoete smaak</string>
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
     <string name="town_deco_hay_desc">Een klein hoopje lekker ruikend hooi.</string>
@@ -919,6 +921,8 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 

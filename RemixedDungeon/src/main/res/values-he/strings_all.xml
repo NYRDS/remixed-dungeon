@@ -69,6 +69,7 @@
     <string name="Badges_StrengthAttained2">הושגו 15 נקודות כוח</string>
     <string name="Badges_StrengthAttained4">הושגו 19 נקודות כוח</string>
     <string name="Badges_Yog_Slain">יוג-זבה הובס</string>
+    <string name="Bag_ACOpen">פתח</string>
     <string name="Bandit_Desc">המפלסים העמוקים יותר של המבוך שימשו תמיד מקום מסתור לכל מיני פושעים. לא כולם שמרו על דעת צלולה בתקופות הארוכות שבילו הרחק מאור היום. לפני זמן רב שכחו הגנבים והשודדים המשוגעים האלה מי הם ומדוע הם גונבים. נראה שהשודד הזה ציפה את פגיונו במשהו!</string>
     <string name="Bandit_Gender">masculine</string>
     <string name="Bat_Name">עטלף ערפד</string>
@@ -92,6 +93,7 @@
     <string name="Blacksmith_Verify6">אני לא יכול לשחזר את הפריטים האלה!</string>
     <string name="Bow_Info1">זהו נשק טווח. הוא חסר תועלת לכולם מלבד אלפים בטווח קרוב מאוד. כשקשת מצוידת אפשר לירות חצים.\n\n</string>
     <string name="Brute_Enraged">%s נכנס לזעם!</string>
+    <string name="Brute_Gender">masculine</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
     <string name="BurningFist_Name_Objective">אגרוף בוער</string>
     <string name="Burning_Death">נשרפת למוות...</string>
@@ -762,6 +764,8 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 
 

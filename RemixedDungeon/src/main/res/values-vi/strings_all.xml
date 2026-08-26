@@ -770,6 +770,7 @@
     <string name="WndPremiumSettings_ruby">hồng ngọc</string>
     <string name="WndPremiumSettings_status">Chọn chất liệu thanh trạng thái</string>
     <string name="WndPremiumSettings_std">tiêu chuẩn</string>
+    <string name="WndPriest_Heal">chữa trị - %d vàng</string>
     <string name="WndPriest_Heal_Minions">Chữa trị tất cả tùy tùng của bạn - Chỉ %d vàng!</string>
     <string name="WndPriest_Instruction2_f">Chào con gái của ta, chào mừng đến với nhà thờ thánh của Santa Thần Sâu vĩ đại!</string>
     <string name="WndPriest_Instruction_f">Chào con gái của ta, chào mừng đến với nhà thờ thánh của Santa Thần Sâu vĩ đại! Rất tiếc ta không thể cho con đi qua lúc này, vì tòa nhà đang được tu sửa, nhưng nếu con cần giúp đỡ, ta có thể cung cấp dịch vụ chữa lành và thức ăn chỉ với %d vàng!</string>
@@ -889,6 +890,7 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
