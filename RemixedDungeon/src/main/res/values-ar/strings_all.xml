@@ -220,6 +220,7 @@
     <string name="DrunkardNPC_Name">سكران</string>
     <string name="Drunkard_Phrase_4">زززززز...</string>
     <string name="Dungeon_Tips_16">عند ترقية سلاح مسحور، هناك احتمال لتدمير ذلك السحر.</string>
+    <string name="Dungeon_Tips_17">بئر التحويل يمكن أن يمنحك عنصرا لا يمكن الحصول عليه بأي طريقة أخرى.</string>
     <string name="Dungeon_Tips_18">الطريقة الوحيدة لسحر سلاح هي ترقيته باستخدام مخطوطة ترقية سلاح.</string>
     <string name="Dungeon_Tips_4">احذر من الغو!</string>
     <string name="Dungeon_Tips_5">بِكسل-مارت - كل ما تحتاجه لمغامرة ناجحة!</string>
@@ -231,6 +232,7 @@
     <string name="ElvenDagger_Name">خنجر الجان</string>
     <string name="EncumbranceBuff_CharAct_2">هذا %s ثقيل جداً بحيث لا يمكنني استخدامه بفعالية.</string>
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
+    <string name="EquipableItem_ACUnequip">خلع المعدات</string>
     <string name="Exhumation_Info">فتح القبر عملٌ شائنٌ بحدّ ذاته، لكنّه لا يكفي لمن يخدم الموتَ نفسَه. لمن يُجري هذا الطقسَ الداكنَ فرصةٌ عظيمةٌ (وتزداد مع إتقانه) لأن يخضعَ روحاً مسكينةً لأحدِ الراقدين ههنا.</string>
     <string name="Exhumation_Name">نبش القبر</string>
     <string name="ExplodingSkull_Desc">يبدو هذا الجمجمة الطافية المحترقة هشة للغاية، ويبدو أنها ستنفجر إلى قطع في أي لحظة.</string>
@@ -581,6 +583,7 @@
     <string name="SpiderElite_Desc">تماماً مثل الجنود، حرس العناكب أقسموا على حماية مملكتهم. يُستخدم سم الحرس النخبوي لتشتيت هدفهم.</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
     <string name="SpiderMind_Desc">تمتلك هذه العناكب الهشة ظاهريًا قوى عقلية فريدة، مما يسمح لها بالسيطرة على المستعمرة بأكملها. يستطيع العنكبوب النفسي التحكم في أي كائن حي، لكنه جبان تمامًا.</string>
+    <string name="SpiderMind_Name">عنكبوت نفسي</string>
     <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
     <string name="SpiderServant_Name">جندي العنكبوت</string>
     <string name="Spinner_Gender">masculine</string>
@@ -815,23 +818,5 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>

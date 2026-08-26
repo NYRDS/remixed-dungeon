@@ -228,6 +228,7 @@
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_Tips_12">Als je brandt en zweeft, kun je het vuur niet in water uithassen.</string>
     <string name="Dungeon_Tips_16">Wanneer je een getoverde wapen verbetert, is er een kans dat de toverij vernietigd wordt.</string>
+    <string name="Dungeon_Tips_17">Een Bron van Transmutatie kan je een voorwerp geven dat je op geen enkele andere manier kunt verkrijgen.</string>
     <string name="Dungeon_Tips_18">De enige manier om een wapen te betoveren is door het te verbeteren met een Schrift van Wapenverbetering.</string>
     <string name="Dungeon_Tips_22">De tekst is geschreven in de taal van demonen.</string>
     <string name="Dungeon_Tips_3">Je kunt je goud uitgeven in winkels in de stad of de dungeon.</string>
@@ -434,6 +435,7 @@
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="NecromancerNPC_Name">nekromant</string>
+    <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
     <string name="Necromancy_Title">Necromantie</string>
     <string name="Necrotism_ACSpecial">NECROTISME</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
@@ -921,55 +923,5 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>
