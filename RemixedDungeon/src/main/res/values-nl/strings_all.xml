@@ -616,6 +616,7 @@
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SleepBuff_Info">Volledig in slaap</string>
+    <string name="SmashSpell_Name">Verpletteren</string>
     <string name="Snail_Desc">Deze kleine weekdier is behoorlijk gegroeid door te voeden met rioolwater, maar hij is nog steeds heel traag, wat hem een makkelijke tegenstander maakt.</string>
     <string name="SnipersMarkBuff_Name">Teken van de sluipschutter</string>
     <string name="SociologistNPC_AlreadyTaken">Je hebt al deelgenomen aan deze enquête, kom later terug</string>
@@ -853,6 +854,7 @@
     <string name="WoodenBow_Info">Deze eenvoudige houten boog kan nuttig blijken, zodra je pijlen vindt.</string>
     <string name="WoodenBow_Name">houten boog</string>
     <string name="WoodenCrossbow_Info">Een eenvoudige houten kruisboog, lijkt ontworpen om pijlen mee af te schieten.</string>
+    <string name="WoodenShield_desc">Een grof gemaakt houten schild is het eenvoudigste schild dat verkrijgbaar is. Het is rond en kan af en toe een deel van de schade blokkeren.</string>
     <string name="WoodenShield_name">Houten schild</string>
     <string name="Worm_Name">worm</string>
     <string name="Worm_Name_Objective">worm</string>
@@ -937,5 +939,7 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 </resources>

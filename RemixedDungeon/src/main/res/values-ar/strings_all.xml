@@ -674,6 +674,7 @@
     <string name="WindGust_Name">هبة ريح</string>
     <string name="WndBlacksmith_Reforge">أعد تشكيلهم</string>
     <string name="WndCatalogus_Scrolls">اللُفافات</string>
+    <string name="WndCatalogus_Title">الكتالوجات</string>
     <string name="WndCryptoDonate_bitcoin">بيتكوين</string>
     <string name="WndCryptoDonate_ethereum">إيثيريوم</string>
     <string name="WndCryptoDonate_supportDev">دعم المطور</string>
@@ -820,5 +821,6 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 </resources>

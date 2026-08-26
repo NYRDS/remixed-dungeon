@@ -418,6 +418,7 @@
     <string name="Pasty_Name">מאפה בשר</string>
     <string name="Pasty_Name_Objective">מאפה בשר</string>
     <string name="PetInventory_ACTakeFromPet">קח מהחיה</string>
+    <string name="PetInventory_PetBackpackFull">התיק של חיית המחמד מלא</string>
     <string name="PetInventory_Title">מלאי חיית מחמד</string>
     <string name="PetInventory_TooFar">רחוק מדי מחיית המחמד</string>
     <string name="Pickaxe_Gender">feminine</string>
@@ -647,6 +648,7 @@
     <string name="Weightstone_WndCancel">לא נורא</string>
     <string name="Weightstone_WndChoice">איך תרצה לאזן את ה-%s שלך?</string>
     <string name="WindGust_Name">משב רוח</string>
+    <string name="WndCatalogus_Title">קטלוגים</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - חינמי לכולם ויישאר כך תמיד.\n\nעם זאת, אתה יכול לעזור לנו לשפר את המשחק עוד יותר.\n\nבנוסף לתודתנו הכנה תקבל כמה שיפורים קוסמטיים.</string>
     <string name="WndDonate_goldDonateText">תודה על עזרתך</string>
     <string name="WndDonate_royalDonateText">אני לא רוצה להישמע מוזר, אבל בכך שאתה עושה את זה, אתה ממש מאכיל את המפתחים.</string>
@@ -776,5 +778,7 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
 
 </resources>
