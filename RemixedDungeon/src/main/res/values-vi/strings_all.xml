@@ -471,6 +471,7 @@
     <string name="Pickaxe_NothingToMine">Không có gì để khai thác ở đây!</string>
     <string name="Piranha_Name">piranha khổng lồ</string>
     <string name="PlagueDoctorMaskHood_Name">Mặt nạ Bác Sĩ Chúm với mũ che đầu</string>
+    <string name="PlagueDoctorMask_Info">Đây... đây không phải là một chiếc mặt nạ bình thường. Nó là... một lá chắn. Khiên chống lại các thế lực của sự phân hủy mà Bác sĩ Dịch hằng ngày kiên trì chiến đấu. Được chế tác từ gỗ ebony tốt nhất, được chạm khắc công phu thành hình một cái sọ tham ăn. Những hốc mắt rỗng được lấp đầy bởi những viên đá quý tím amethyst lấp lánh, nhẹ nhàng đập động như những than hồng sắp tắt của đống lửa. Mỗi hơi thở, mỗi lời nói của bạn đều đi qua một mạng lưới ống dẫn và bộ lọc như mê cung. Hỗn hợp các loại thảo mộc mạnh và gia vị kỳ lạ thấm vào không khí bên trong, che giấu mùi tử khí bám vào bạn như một tấm vải liệm.</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Bạn vẫn còn ở đây à? Đây, hãy lấy đi!</string>
     <string name="PlagueDoctorNPC_Desc">Toàn bộ cơ thể của kẻ lưng gù này bị che lấp dưới bộ đồ da. Từ hắn bốc mùi thuốc và... tỏi?</string>
     <string name="PlagueDoctorNPC_Name">bác sĩ dịch hạch</string>
@@ -902,9 +903,4 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
-
-
-
-
-
 </resources>

@@ -378,6 +378,7 @@
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
     <string name="Level_TileExit">Diepte-uitgang</string>
     <string name="Level_TileGrippingTrap">Klemval</string>
+    <string name="Level_TileHighGrass">Hoog gras</string>
     <string name="Level_TileLockedDoor">Gesloten deur</string>
     <string name="Level_TileLockedExit">Vergrendelde uitgang naar de diepte</string>
     <string name="Level_TileOpenDoor">Open deur</string>
@@ -553,6 +554,7 @@
     <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="RunicSkull_Desc">Voor iets kunstmatig gemaakts lijkt deze schedel te veel op een echte. Je ziet ook een zwakke gloed om het heen.</string>
     <string name="SacrificialSword_Gender">masculine</string>
+    <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
     <string name="ScarecrowNPC_Name_Objective">vogelverschrikker</string>
     <string name="Scorpio_Desc">Deze enorme, op spinnen lijkende demonische wezens vermijden gevechten van dichtbij ten koste van alles en schieten vanaf grote afstand verlammende getande stekels af.</string>
@@ -626,6 +628,7 @@
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
     <string name="SpiderElite_Name">spinnen elitewachter</string>
     <string name="SpiderExploding_Desc">Harde werkers tijdens vredige tijden, deze wezens zullen niet aarzelen om hun vijanden aan te vallen en de eerste plant die ze tegenkomen te grijpen, waardoor ze zichzelf in lopende bommen veranderen.</string>
+    <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderGuard_Desc">Net als soldaten hebben spinnenwachters een eed afgelegd om hun koninkrijk te beschermen. Het gif van de wachter wordt gebruikt om zijn doelwit te verlammen, waardoor verlamming ontstaat en het een makkelijke prooi wordt.</string>
     <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">spinnenwachter</string>
@@ -633,6 +636,7 @@
     <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Psi-Spin</string>
     <string name="SpiderQueen_DieInfo">De Spinnenkoningin is verslagen! Nu moet ik terug naar niveau 5 en mijn reis naar de Diepten voortzetten.</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
     <string name="Spinner_Name_Objective">grotspin</string>
@@ -931,6 +935,10 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
 
 
 

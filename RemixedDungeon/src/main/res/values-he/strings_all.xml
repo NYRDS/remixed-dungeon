@@ -339,6 +339,7 @@
     <string name="Level_HiddenPlate">לוחית לחץ נסתרת נלחצת!</string>
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
     <string name="Level_TileDescHighGrass">צמחייה צפופה חוסמת את המבט</string>
+    <string name="Level_TileHighGrass">דשא גבוה</string>
     <string name="Level_TileParalyticTrap">מלכודת גז משתקת</string>
     <string name="Level_TileSummoningTrap">מלכודת זימון</string>
     <string name="Level_TileWall">קיר</string>
@@ -363,6 +364,7 @@
     <string name="MeleeWeapon_Info1b"> </string>
     <string name="MeleeWeapon_Info1c">משופר</string>
     <string name="MeleeWeapon_Info1d">מוחלש</string>
+    <string name="MeleeWeapon_Info2a">הנזק הממוצע שלה הוא %d נקודות לפגיעה.</string>
     <string name="MeleeWeapon_Info3d">ו</string>
     <string name="MeleeWeapon_Info5">זה מכושף.</string>
     <string name="MimicAmulet_Name">מימיק</string>
@@ -651,6 +653,7 @@
     <string name="WndFortuneTeller_IdentifyAll">הכל</string>
     <string name="WndFortuneTeller_No_Item">היזהר, אתה לא רוצה לבזבז את הכסף שלך לחינם, נכון? אין פריטים לא מזוהים במלאי שלך.</string>
     <string name="WndGame_Exit">צא מ-Remixed Dungeon</string>
+    <string name="WndGame_Return">חזרה למשחק</string>
     <string name="WndHats_UnequipButton">הסר כובע</string>
     <string name="WndHero_Awareness">מודעות</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
@@ -770,6 +773,9 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 
