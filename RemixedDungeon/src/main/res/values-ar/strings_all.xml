@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">التهام</string>
     <string name="AC_Dissect">تشريح</string>
@@ -37,7 +38,7 @@
     <string name="AmuletScene_Exit">مهمتي هنا انتهت</string>
     <string name="AmuletScene_Stay">لم أنتهِ بعد</string>
     <string name="AmuletScene_Txt">أخيراً تمسكه بين يديك، تميمة يندور. باستخدام قوتها يمكنك السيطرة على العالم أو جلب السلام والازدهار للناس أو أي شيء آخر. في أي حال، ستتغير حياتك للأبد وستنتهي اللعبة هنا. أو يمكنك البقاء مجرد بشري عادي لفترة أطول قليلاً.</string>
-    <string name="Amulet_Info">تعويذة ييندور هي أقوى قطعة أثرية معروفة من أصل مجهول. يُقال إنها قادرة على تحقيق أي رغبة إذا كانت إرادة صاحبها قوية بما يكفي لـ \&quot;إقناعها\&quot; بالقيام بذلك.</string>
+    <string name="Amulet_Info">تعويذة ييندور هي أقوى قطعة أثرية معروفة من أصل مجهول. يُقال إنها قادرة على تحقيق أي رغبة إذا كانت إرادة صاحبها قوية بما يكفي لـ \"إقناعها\" بالقيام بذلك.</string>
     <string name="AnesthesiaBuff_Info">لا يشعر بالألم ولا يستيقظ من الهجمات، لكنه لا يزال يتلقى الضرر.</string>
     <string name="Anesthesia_Cast">%s يسقط في نوم عميق بلا أحلام.</string>
     <string name="Anesthesia_Info">يُسبّب نومًا عميقًا وغير طبيعي لهدفك. حتى أعنف الهجمات لن توقظهم من هذا النوم.</string>
@@ -93,7 +94,7 @@
     <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">رأس هذه الفأس الحربية الفولاذي الضخم يمنح قوة كبيرة لكل ضربة.</string>
     <string name="Bee_Gender">masculine</string>
-    <string name="BellaNPC_Desc">فتاة تبدو راقية جداً. مظهرها بالكامل يخبرك \&quot;أنا جيدة جداً للجميع.\&quot;</string>
+    <string name="BellaNPC_Desc">فتاة تبدو راقية جداً. مظهرها بالكامل يخبرك \"أنا جيدة جداً للجميع.\"</string>
     <string name="BellaNPC_No">لا، ليس معك</string>
     <string name="Belongings_CantWearBoth">لا يمكنك تجهيز %1 و %2 في نفس الوقت!</string>
     <string name="Belongings_Name">حقيبة ظهر</string>
@@ -104,6 +105,7 @@
     <string name="BlackCat_Phrases_2">مياو!</string>
     <string name="BlackSkullOfMastery_Necromancer">اكسر التعويذة</string>
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
+    <string name="BlackSkull_Info">جمجمة صغيرة من السبج. كانت مصدر قوى مدينة الأموات، لكن بعد هزيمة الليش يبدو أنها فقدت كل قواها. ومع ذلك، حين تمسكها بين يديك، تمر فكرة غريبة في ذهنك: \"إنها جائعة\".</string>
     <string name="Blacksmith_Gold1">يا إنسان! هل تريد أن تكون مفيداً، أليس كذلك؟ خذ هذا المعول واحفر لي بعض _خام الذهب الداكن_، _15 قطعة_ يجب أن تكفي. ماذا تقصد، كيف سأدفع؟ أنت جشع...\nحسناً، حسناً، ليس لدي مال لأدفع، لكن يمكنني القيام ببعض الحدادة لك. اعتبر نفسك محظوظاً، أنا الحدّاد الوحيد في الجوار.</string>
     <string name="Blacksmith_Name">حداد ترول</string>
     <string name="Blacksmith_Txt3">خام الذهب الداكن. 15 قطعة. بجد، صعب كده؟</string>
@@ -146,6 +148,7 @@
     <string name="Challenges_Names_6">الرموز المحرمة</string>
     <string name="Challenges_Names_8">بلا مدينة</string>
     <string name="ChampionOfEarthBuff_Info">يجسد بطل الأرض قوة لا تلين، حيث تعزز هذه السمة مقاومة المخلوق للضرر وتزيد من حيويته القصوى. يجعل هذا التحول منه خصمًا مرعبًا في الأعماق الغادرة، قادرًا على صد الهجمات بسهولة وتحمل معارك مطولة بعزيمة لا تلين.</string>
+    <string name="ChampionOfFireBuff_Info">\"منقوعًا بغضب اللهب، تضخّم هذه السمة شراسة المخلوق وبراعته القتالية. يبرز بطل النار كخصم مخيف، مطلقًا هجمات مدمرة يمكن أن تبتلع أعداءه في لهيب حارق، وتزرع الرعب في كل من يجرؤ على معارضته.</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">شفرة يد واحدة من الفوضى النقية. تنمو مع القتال مثل نظيرتها ذات اليدين، ولكن ببطء أكبر وإمكانات أقل — مما يترك يدك الحرة لدرع.</string>
     <string name="ChaosBlade_Name">شفرة الفوضى</string>
@@ -153,19 +156,23 @@
     <string name="ChaosCrystal_BladeFused">يمتص الكريستال سلاحك، ويتخذ شكل شفرة</string>
     <string name="ChaosCrystal_Fuse">دمج</string>
     <string name="ChaosHelmet_Name">خوذة الفوضى</string>
+    <string name="ChaosStaff_Info">عصا مشبعة بقوة الفوضى! بماذا يمكن أن يحلم ساحر آخر أو يخشاه؟</string>
     <string name="ChaosStaff_Name">عصا الفوضى</string>
     <string name="ChaosSword_Gender">masculine</string>
     <string name="CharAction_Give">إعطاء</string>
     <string name="CharAction_PetInventory">مخزن الحيوان الأليف</string>
     <string name="CharAction_Take">التقاط</string>
+    <string name="Char_Kill_1">%s قتلك...</string>
     <string name="Char_OutParalysis">كسر الألم شلل %s</string>
     <string name="Char_StaBleeding">نزيف</string>
     <string name="Char_StaCrippled">معاق</string>
     <string name="Char_StaFrightened">مرعوب</string>
+    <string name="Char_StaMind">عقل</string>
     <string name="Char_StaParalysed">مشلول</string>
     <string name="Char_StaPoisoned">مسموم</string>
     <string name="Char_StaRooted">مُثبّت</string>
     <string name="Char_StaStunned">مذهول</string>
+    <string name="Char_StaVision">رؤية</string>
     <string name="Char_Stole_2">%1$s سرق %2$s من %3$s!</string>
     <string name="ChargrilledMeat_Info">يبدو وكأنه ستيك جيد.</string>
     <string name="ChargrilledMeat_Name">لحم مشوي على الجمر</string>
@@ -174,6 +181,7 @@
     <string name="Chasm_No">لا، لقد غيرت رأيي</string>
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
     <string name="ChristmasTurkey_Name">ديك رومي احتفالي</string>
+    <string name="CityBossLevel_ChessSign">ضع أسلحتك — الملك سيختبر عقلك، لا قوتك.</string>
     <string name="City_TileDescDeco">يفتقر هذا المكان لعدة بلاط.</string>
     <string name="City_TileDescEntrance">منحدر يؤدي إلى العمق العلوي.</string>
     <string name="Claymore_Gender">masculine</string>
@@ -197,7 +205,7 @@
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">خنجر</string>
     <string name="Damage_Reduction">تقليل الضرر</string>
-    <string name="DarkGold_Info">يُسمى هذا المعدن \&quot;المظلم\&quot; ليس بسبب لونه (فهو لا يختلف عن الذهب العادي)، بل لأنه يذوب في ضوء النهار، مما يجعله عديم الفائدة على السطح.</string>
+    <string name="DarkGold_Info">يُسمى هذا المعدن \"المظلم\" ليس بسبب لونه (فهو لا يختلف عن الذهب العادي)، بل لأنه يذوب في ضوء النهار، مما يجعله عديم الفائدة على السطح.</string>
     <string name="DarkGold_Name">خام الذهب الداكن</string>
     <string name="DarkVeilBuff_Info">حجاب من الظلام يحيط بالمالك، يستدعي روحًا في كل مرة يُصاب فيها الضرر.</string>
     <string name="Darkness_Info">يبدو وكأنه قطع من الظلام الأبدي تطفو في الهواء</string>
@@ -211,7 +219,7 @@
     <string name="DieHardBuff_Name">الموت الصعب</string>
     <string name="DieHardSpell_Name">موت صعب</string>
     <string name="Displacement_Txt">%s الإزاحة</string>
-    <string name="DoctorArmor_Info">تسمح هذه الدروع الخاصة بطبيب الطاعون باستخدام قدرة \&quot;سحابة الميزما\&quot;، التي تطلق غازاً ساماً يسمم ويضعف ويشوش الأعداء. الطبيب، المحمي بقناعه، منيع ضد هذه التأثيرات.</string>
+    <string name="DoctorArmor_Info">تسمح هذه الدروع الخاصة بطبيب الطاعون باستخدام قدرة \"سحابة الميزما\"، التي تطلق غازاً ساماً يسمم ويضعف ويشوش الأعداء. الطبيب، المحمي بقناعه، منيع ضد هذه التأثيرات.</string>
     <string name="DoctorArmor_Name">ثوب الطبيب</string>
     <string name="DreadKnight_Name">فارس الرعب</string>
     <string name="DreadKnight_Name_Objective">فارس الرعب</string>
@@ -229,6 +237,7 @@
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
     <string name="Dungeon_Tips_8">الهجمات المفاجئة لديها فرصة أكبر للإصابة. على سبيل المثال، يمكنك نصب كمين لعدوك خلف باب مغلق عندما تعلم أنه يقترب.</string>
     <string name="EarthElemental_Gender">masculine</string>
+    <string name="EarthElemental_Name_Objective">عنصر الأرض</string>
     <string name="Earthroot_Desc">عندما يلمس مخلوق جذر الأرض، تخلق جذوره نوعًا من الدروع الطبيعية حوله.</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Name">خنجر الجان</string>
@@ -267,7 +276,7 @@
     <string name="Gold_Name">الذهب</string>
     <string name="GoldenKey_Info">الشقوق الموجودة على هذا المفتاح الذهبي دقيقة ومعقدة. ربما يستطيع فتح قفل صندوق ما؟</string>
     <string name="GoldenKey_Name">المفتاح الذهبي</string>
-    <string name="Golem_Desc">حاول القزم دمج معرفتهم بالآليات مع قوتهم المكتشفة حديثاً في ربط العناصر. استخدموا أرواح الأرض كـ \&quot;روح\&quot; لأجساد الغوليم الميكانيكية، والتي كان يُعتقد أنها الأكثر قابلية للسيطرة. على الرغم من ذلك، فإن أصغر خطأ في الطقوس قد يتسبب في اندلاع.</string>
+    <string name="Golem_Desc">حاول القزم دمج معرفتهم بالآليات مع قوتهم المكتشفة حديثاً في ربط العناصر. استخدموا أرواح الأرض كـ \"روح\" لأجساد الغوليم الميكانيكية، والتي كان يُعتقد أنها الأكثر قابلية للسيطرة. على الرغم من ذلك، فإن أصغر خطأ في الطقوس قد يتسبب في اندلاع.</string>
     <string name="Golem_Name">غول</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Name">الهلام</string>
@@ -280,6 +289,7 @@
     <string name="Halls_TileWater">لावा باردة</string>
     <string name="Haste_Name">سرعة قصوى</string>
     <string name="Heal_Cast">تم شفاء %s.</string>
+    <string name="HealerNPC_Message1">علاج مجاني لكل مغامر!</string>
     <string name="HealerNPC_Name_Objective">كاهن البلدة</string>
     <string name="HealthArrow_Info">طرف هذه السهم مغطى بجرعة الشفاء.</string>
     <string name="HeartOfDarkness_Info">قلب أسود نابض لروح الخيانة.</string>
@@ -294,6 +304,7 @@
     <string name="HeroClass_NecromancerPerks_1">يستخدم السحرة الماؤتون المانا لإلقاء تعاويذ الموت.</string>
     <string name="HeroClass_NecromancerPerks_2">يبدأ النكرومانسر برداء نكرومانسر فريد، يمنح نقطة مانا واحدة لكل مخلوق يُقتل.</string>
     <string name="HeroClass_NecromancerPerks_3">يبدأ النيكرومانسر بمفتاح هيكل عظمي من المستوى 7.</string>
+    <string name="HeroClass_None">رجل عامي</string>
     <string name="HeroClass_Priest">كاهن</string>
     <string name="HeroClass_Rog">لص</string>
     <string name="HeroClass_RogPerks_5">تتم معرفة لفائف رسم الخرائط السحرية من البداية.</string>
@@ -310,12 +321,14 @@
     <string name="Hero_Wait">انتظار...</string>
     <string name="HideInGrassSpell_NeedGrassToHide">حتى أنا لا أستطيع الاختباء في العراء</string>
     <string name="Horror_Name_1">%s مخيف</string>
+    <string name="HungerBuff_Info1">أنت جائع!</string>
     <string name="Hunger_Hungry_0">أنت جائع.</string>
     <string name="HuntressArmor_Name">رداء الصياد</string>
     <string name="HuntressArmor_NoEnemies">لا يوجد أعداء مرئيون</string>
     <string name="HuntressArmor_NotHuntress">يمكن للصيادات فقط استخدام هذا الدرع!</string>
     <string name="IceCaves_TileDescDeco">تم تجميد هذا الغنول وهو حي. على ما يبدو، أنه كان هناك منذ فترة طويلة.</string>
     <string name="IceCaves_TileGrass">عشب متجمد.</string>
+    <string name="IceCaves_TileHighGrass">عشب طويل متجمد</string>
     <string name="IceCaves_TileStatue">غنول متجمد</string>
     <string name="IceElemental_Name_Objective">عنصراً جليدياً</string>
     <string name="IceGuardianCore_Desc">تم تصنيع حُرّاس الجليد من قبل الكوبولد القدماء لحماية كهوفهم. الطاقة المخزنة في نواتهم تسمح لحارس الجليد بإعادة بناء نفسه طالما لديه طاقة كافية.</string>
@@ -359,6 +372,7 @@
     <string name="Kusarigama_Pull">سحب</string>
     <string name="Larva_Name">يرقة الإله</string>
     <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
+    <string name="Level_TileDescChasm">لا تستطيع رؤية القاع.</string>
     <string name="Level_TileDescInactiveTrap">لقد تم تفعيل الفخ من قبل وهو لم يعد خطيراً.</string>
     <string name="Level_TileDescLockedDoor">هذا الباب مغلق، تحتاج إلى مفتاح مطابق لفتحه.</string>
     <string name="Level_TileEmbers">جمرة</string>
@@ -444,7 +458,7 @@
     <string name="PlagueDoctorQuest_3_2_Epilogue">*يلقي برأسه للوراء ويطلق قهقهة هستيرية، صوتها يتردد في مختبره الرطب* رائع! _فارس الموت_، واقف أمامنا! القوة المنبعثة من كيانه... مسكرة! *يلتفت نحوك، عيناه تلمعان بشدة محمومة* ولك، مكافأة تليق ببسالتك: _جرعة القوة_! لتمنحك القوة لهزيمة أي عدو! الآن... لندرس موضوعنا. جوهره ذاته يخفي أسراراً يمكن أن تعيد كتابة قوانين الحياة ذاتها! *يقترب من _فارس الموت_ بابتسامة مجنونة، ممسكاً بقارورة من سائل أخضر يفور*</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">خمسة _أقزام_سحرة_، أجسادهم لا تزال تنبض بصدى ضعيف للسحر الأسود! أحضرهم لي، وسأكافئك بـ _جرعة_قوة_ التي ستمنحك قوة عشرة رجال!</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*تتشتت أفكاره وهو يتحدث، ويصبح صوته أكثر هدوءاً، بالكاد همس.* أحضر لي اثنتين من *السُّكُّبات*... أحياء. قوتهن... آسر.</string>
-    <string name="PlagueDoctorQuest_AllDone">*أطلق ضحكة جافة وصاخبة.* \&quot;أفعالك، لقد كشفت أسرارًا لا تُقاس! المعرفة المكتسبة... تنبض بداخلي، سمفونية من الاكتشاف. لكن المعرفة،\&quot; يضيفها بصوت منخفض، همس متآمر، \&quot;المعرفة هي قوة. والقوة... آه... إنها إكسير مسكر للغاية.\&quot; يحدق فيك بتركيز للحظة، وعيناه الجمشتية تحترقان بشدة حماسية. \&quot;ربما،\&quot; يهمس، \&quot;ستتقاطع طرقنا مرة أخرى. فما زالت هناك... ألغاز... تنتظر كشفها.\&quot;</string>
+    <string name="PlagueDoctorQuest_AllDone">*أطلق ضحكة جافة وصاخبة.* \"أفعالك، لقد كشفت أسرارًا لا تُقاس! المعرفة المكتسبة... تنبض بداخلي، سمفونية من الاكتشاف. لكن المعرفة،\" يضيفها بصوت منخفض، همس متآمر، \"المعرفة هي قوة. والقوة... آه... إنها إكسير مسكر للغاية.\" يحدق فيك بتركيز للحظة، وعيناه الجمشتية تحترقان بشدة حماسية. \"ربما،\" يهمس، \"ستتقاطع طرقنا مرة أخرى. فما زالت هناك... ألغاز... تنتظر كشفها.\"</string>
     <string name="PlagueDoctor_Desc">جسد هذا الشخص الحدباء بأكمله مخفي تحت بذلة جلدية. كما تفوح منه رائحة مرّة من الأدوية و... الثوم؟</string>
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">طبيب الطاعون</string>
@@ -453,13 +467,16 @@
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Death">مِتَّ مِن السم...</string>
     <string name="PortalExit_Desc_IceCaves">كهوف الجليد</string>
+    <string name="PortalGate_Activated">لقد استيقظت البوابة القديمة!</string>
     <string name="PortalGate_Desc_Activated">البوابة تتسرب منها مادة متوهجة من نوع ما. تبدو ساكنة تماماً، لولا التموجات القادمة من مركزها.</string>
     <string name="PortalGate_Name">بوابة</string>
     <string name="PortalGate_Used">لمست البوابة و... لم يحدث شيء.</string>
     <string name="PotionBelt_Name">حزام جرعات</string>
     <string name="PotionOfExperience_Name">جرعة الخبرة</string>
     <string name="PotionOfHealing_Apply">تشفى جراحك تماماً.</string>
+    <string name="PotionOfLiquidFlame_Name">جرعة اللهب السائل</string>
     <string name="PotionOfMana_Name">إكسير المانا</string>
+    <string name="PotionOfMight_Name">جرعة القوة</string>
     <string name="PotionOfMight_StaApply">+1 قوة، +5 صحة</string>
     <string name="PotionOfMindVision_Apply2">تشعر لسبب ما بأنك الكائن الحي الوحيد في هذا المستوى حاليًا.</string>
     <string name="PotionOfPurity_Info">سيعمل هذا الترياق بسرعة على تحييد جميع الغازات الضارة في نطاق التأثير. شربه سيمنحك مناعة مؤقتة ضد هذه الغازات.</string>
@@ -480,6 +497,7 @@
     <string name="PseudoPasty_Info">هذا فطيرة كورنيش أصلية مع حشوة تقليدية من اللحم والبطاطس.</string>
     <string name="PseudoRat_Name">فأر كاذب</string>
     <string name="PseudoRat_Name_Objective">فأر كاذب</string>
+    <string name="Pumpkin_Info">في الأيام الخوالي، كان شعب اليقطين أمة فخورة ومزدهرة. لكن كل شيء تغيّر بعد مجيء البشر، تاركين خلفهم الدمار فقط. وتبقى الرؤوس المنحوتة والمقطوعة لقبائل اليقطين المنقرضة تذكيراً بتلك الأحداث المروعة.</string>
     <string name="Quarterstaff_Info">عصا من خشب صلب، أطرافها مغطاة بالحديد.</string>
     <string name="Quest_DarkGoldOre_full_name">خام الذهب الداكن</string>
     <string name="RabbitEars_Name">آذان أرنب</string>
@@ -526,7 +544,7 @@
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
     <string name="Rudolph_Name">أنف أحمر وقرون</string>
     <string name="SacrificialSword_Info">وهذا السيف البرونزي القديم المغطى ببقع الصدأ يبدو للوهلة الأولى عديم الفائدة تماماً. لكن قوى قديمة وأصلية نائمة في داخله. هذه القوى يمكنها أن تحول أي مخلوق تقريباً إلى عبد بلا إرادة. ما عليك إلا إيجاد الطريقة المناسبة لإيقاظها...</string>
-    <string name="SantaHat_Info">لا شيء يضعك في مزاج \&quot;استكشاف الزنزانات\&quot; مثل القبعة الحريرية الحمراء لسانتا، سيد الأعماق.</string>
+    <string name="SantaHat_Info">لا شيء يضعك في مزاج \"استكشاف الزنزانات\" مثل القبعة الحريرية الحمراء لسانتا، سيد الأعماق.</string>
     <string name="ScaleArmor_Desc">تخلق القشور المعدنية المخيطة على سترة جلدية درعاً مرناً، ولكنه يوفر الحماية.</string>
     <string name="ScaleArmor_Name">درع حرشفي</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
@@ -534,14 +552,17 @@
     <string name="Scorpio_Desc">تتجنب هذه المخلوقات الشيطانية الشبيهة بالعنكبوت العملاقة القتال القريب بكل وسيلة، مطلقة أشواكًا مسننة مشلولة من مسافات بعيدة.</string>
     <string name="ScrollHolder_Info">يمكنك وضع أي عدد من اللفائف في هذه الحاوية الأنبوبية. يوفر مساحة في حقيبتك ويحمي اللفائف من النار.</string>
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
+    <string name="ScrollOfCurse_Name">لفافة اللعنة</string>
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
     <string name="ScrollOfLullaby_Info1">يتلو اللفافة لحناً هادئاً.</string>
     <string name="ScrollOfUpgrade_LooksBetter">أصبح %s بالتأكيد يبدو أفضل الآن</string>
     <string name="ScrollOfUpgrade_Name">مخطوطة ترقية</string>
     <string name="ScrollOfWeaponUpgrade_Info">سيؤدي هذا المخطوطة إلى ترقية سلاح قتال قريب، مما يحسن جودته. على عكس مخطوطة الترقية العادية، لن يدمر هذا الإصدار المتخصص أي سحر على السلاح. بل على العكس، قادر على إضفاء سحر عشوائي على سلاح غير مسحور.</string>
     <string name="ScrollOfWeaponUpgrade_Name">مخطوطة ترقية السلاح</string>
+    <string name="Scroll_Name">لفافة \"%s\"</string>
     <string name="Scroll_Runes_13">إيفاز</string>
     <string name="Scroll_Runes_2">لاغوز</string>
+    <string name="Scroll_Runes_4">GYFU</string>
     <string name="Scroll_Runes_5">رایدو</string>
     <string name="Scroll_Runes_6">إيساز</string>
     <string name="Scroll_Runes_9">بيركانان</string>
@@ -580,13 +601,14 @@
     <string name="Sorrowmoss_Desc">الزنبق الحزين هو زهرة (وليس طحلب) ذات بتلات حادة كالموس، مغطاة بسم قاتل.</string>
     <string name="Sorrowmoss_Name">طحلب الحزن</string>
     <string name="SpeedBuff_Name">سرعة</string>
-    <string name="SpellBook_Info_Identified">في هذه الصفحات اكتشفت النص الكامل للتعويذة \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
-    <string name="Spells_NotEnoughSP">ليس لديك ما يكفي من المانا لإلقاء تعويذة \&quot;%1$s\&quot;.</string>
+    <string name="SpellBook_Info_Identified">في هذه الصفحات اكتشفت النص الكامل للتعويذة \"%1$s\".\n\" %2$s \"</string>
+    <string name="Spells_NotEnoughSP">ليس لديك ما يكفي من المانا لإلقاء تعويذة \"%1$s\".</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderElite_Desc">تماماً مثل الجنود، حرس العناكب أقسموا على حماية مملكتهم. يُستخدم سم الحرس النخبوي لتشتيت هدفهم.</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
     <string name="SpiderMind_Desc">تمتلك هذه العناكب الهشة ظاهريًا قوى عقلية فريدة، مما يسمح لها بالسيطرة على المستعمرة بأكملها. يستطيع العنكبوب النفسي التحكم في أي كائن حي، لكنه جبان تمامًا.</string>
     <string name="SpiderMind_Name">عنكبوت نفسي</string>
+    <string name="SpiderNest_Desc">هذا الشرنقة مصنوعة من أرفع خيوط الحرير وتخفي شيئاً حيّاً بداخلها.</string>
     <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
     <string name="SpiderServant_Name">جندي العنكبوت</string>
     <string name="Spinner_Gender">masculine</string>
@@ -596,7 +618,7 @@
     <string name="StartScene_DifficultySelect">اختر قدرك</string>
     <string name="StartScene_New">لعبة جديدة</string>
     <string name="StartScene_No">لا، العودة إلى القائمة الرئيسية</string>
-    <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
+    <string name="StartScene_WinGame">لفتح \"التحديات\"، أكمل اللعبة مع أي فئة شخصية.</string>
     <string name="Statue_Name">تمثال متحرك</string>
     <string name="Stench_Txt">%s نتن</string>
     <string name="Stylus_ACInscribe">نَقْش</string>
@@ -611,6 +633,7 @@
     <string name="SuspiciousRat_Info1">الفأر المشبوه يرتجف بعنف.</string>
     <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">سرب ذباب</string>
+    <string name="Swing_Name_1">%s البري</string>
     <string name="Tamahawk_Info">على الرغم من أن هذا الفأس الرمي ليس ثقيلاً جداً، إلا أنه لا يزال يتطلب قوة كبيرة لاستخدامه بفعالية.</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Thief_Carries">\n\n%1 يحمل _%2. مسروق بالطبع.</string>
@@ -622,11 +645,12 @@
     <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
     <string name="Torch_ACLight">أشعل</string>
     <string name="Torch_Info">إنه عنصر لا غنى عنه في قاعات الشياطين، المشهورة بإضاءتها الضعيفة.</string>
+    <string name="ToughShield_name">درع جلدي مقوى</string>
     <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
     <string name="TownGuardNPC_Message3">هل تعتقد أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، هذا لأنها المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
     <string name="TownGuardNPC_Name">حارس المدينة</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
-    <string name="TownsfolkMovieNPC_Message">هل تعرف تلك الخدمة الخاصة التي تقدمها \&quot;المسارح السينمائية\&quot;؟ للأسف يطلبون شيئاً غريباً يسمى \&quot;الإنترنت\&quot;، لم أسمع به قط من قبل.</string>
+    <string name="TownsfolkMovieNPC_Message">هل تعرف تلك الخدمة الخاصة التي تقدمها \"المسارح السينمائية\"؟ للأسف يطلبون شيئاً غريباً يسمى \"الإنترنت\"، لم أسمع به قط من قبل.</string>
     <string name="TownsfolkNPC_Message1">آه! مغامر آخر، يا لها من مفاجأة سارة! تأكد من نهب أكبر قدر ممكن من الأشياء الثمينة!</string>
     <string name="TownsfolkNPC_Message2">أصبحت المدينة ثرية للغاية بفضل هذا الزنزانة، حتى يستطيع الجميع في المدينة تحمل تكاليف العطلة كلما أرادوا! في الواقع هذا هو السبب في وجود عدد قليل جداً من الناس هنا الآن.</string>
     <string name="TownsfolkNPC_Message3">يا له من يوم جميل.</string>
@@ -637,7 +661,7 @@
     <string name="TrapWnd_Step">هل تريد حقاً خطو على هذا الفخ؟ قد تموت.</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
-    <string name="Using_Failed_Because_Magic">سحر قوي يمنعك من استخدام \&quot;%s\&quot;.</string>
+    <string name="Using_Failed_Because_Magic">سحر قوي يمنعك من استخدام \"%s\".</string>
     <string name="VertigoBuff_Info">الشعور بالدوار يجعل المشي في خط مستقيم أكثر صعوبة!</string>
     <string name="VileEssence_Info">جوهر مركز من الفساد تم حصاده من عدو مهزوم. ينبض هذا الجوهر المظلم بطاقة خبيثة ويُقدّر كثيرًا في العمليات الكيميائية.</string>
     <string name="Viscosity_Txt">%s من اللزوجة</string>
@@ -705,7 +729,7 @@
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
     <string name="WndLibrary_Items_Btn">العناصر</string>
     <string name="WndLocalModInstall_text">اختر الدليل لتثبيت المود منه</string>
-    <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \&quot;إعلان\&quot; مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
+    <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \"إعلان\" مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
     <string name="WndPlayGames_BackupProgress">نسخ احتياطي لتقدم اللعبة</string>
     <string name="WndPlayGames_Connecting">جاري الاتصال بـ Google Play Games، يرجى الانتظار قليلاً</string>
 
@@ -764,6 +788,7 @@
     <string name="YogsTeeth_Name">أسنان يوغ</string>
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="deco_candle_name">شمعة</string>
+    <string name="gdpr_title">خصّص تجربتك الإعلانية</string>
     <string name="town_deco_INN_sign_desc">يبدو أن هناك فندقاً داخل هذا المبنى.</string>
     <string name="town_deco_INN_sign_name">لافتة النزل</string>
     <string name="town_deco_armoronhanger_name">درع</string>
@@ -781,6 +806,7 @@
     <string name="town_deco_cabinet_desc">خزانة واسعة ذات أبواب ورفوف كثيرة.</string>
     <string name="town_deco_canvas_name">قماش</string>
     <string name="town_deco_carpet_desc">سجادة حمراء فاخرة مخصصة للضيوف المميزين.</string>
+    <string name="town_deco_church_sign_desc">يبدو أن هناك كنيسة داخل هذا المبنى.</string>
     <string name="town_deco_church_sign_name">لافتة الكنيسة</string>
     <string name="town_deco_cinema_sign_desc">يبدو أن هناك سينما داخل هذا المبنى.</string>
     <string name="town_deco_clock_desc">عقاربها متجمدة منذ وقت طويل في وضع واحد.</string>
@@ -822,6 +848,34 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

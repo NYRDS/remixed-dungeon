@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">לטרוף</string>
     <string name="AC_Dissect">נתיחה</string>
@@ -33,7 +34,7 @@
     <string name="AmokDart_Info">התמיסה על קצה החץ הזה תהפוך כל אחד לברברי חסר רחמים וחסר שכל.</string>
     <string name="AmokDart_Name">חץ הטירוף</string>
     <string name="AmuletScene_Stay">עדיין לא סיימתי</string>
-    <string name="Amulet_Info">האמולט של ינדור הוא הארטיפקט החזק ביותר הידוע ממקור לא ידוע. נאמר שהוא יכול להגשים כל משאלה אם רצונו של הבעלים חזק מספיק כדי \&quot;לשכנע\&quot; אותו לעשות זאת.</string>
+    <string name="Amulet_Info">האמולט של ינדור הוא הארטיפקט החזק ביותר הידוע ממקור לא ידוע. נאמר שהוא יכול להגשים כל משאלה אם רצונו של הבעלים חזק מספיק כדי \"לשכנע\" אותו לעשות זאת.</string>
     <string name="ArmorKit_Name">ערכת שריון</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
@@ -79,7 +80,7 @@
     <string name="BattleAxe_Info">ראש הפלדה העצום של גרזן הקרב הזה מקנה משקל רב לכל מכה.</string>
     <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
-    <string name="BellaNPC_Desc">נערה שנראית מאוד אלגנטית. כל המראה שלה אומר לך \&quot;אני טובה מדי עבור כולם.\&quot;</string>
+    <string name="BellaNPC_Desc">נערה שנראית מאוד אלגנטית. כל המראה שלה אומר לך \"אני טובה מדי עבור כולם.\"</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Name">בלה</string>
     <string name="BishopNPC_Desc">בישוף הכנסייה הקדושה של סנטה אדון המעמקים</string>
@@ -89,6 +90,7 @@
     <string name="BlackCat_Phrases_1">מיאו...</string>
     <string name="BlackCat_Phrases_2">מיאו!</string>
     <string name="BlackSkullOfMastery_RemainHumanDesc">או אם תשבור את הכישוף תוכל להשתמש בחפץ זה כמתוכנן.</string>
+    <string name="BlackSkull_Info">גולגולת אובסידיאן קטנה. היא הייתה מקור כוחה של נקרופוליס, אך לאחר תבוסת הליצ\' נראה שהיא איבדה את כל כוחה. עם זאת, כשאתה מחזיק אותה בידיך, מחשבה מוזרה חולפת בראשך: \"היא רעבה\".</string>
     <string name="Blacksmith_Completed">אוי, חזרת... עדיף מאוחר מאשר אף פעם.</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
     <string name="Blacksmith_Gold1">היי, בן אדם! רוצה להיות מועיל, אה? קח את המעדר הזה ותחפור לי קצת _עפרת זהב אפלה_, _15 חתיכות_ יספיקו. למה אתה מתכוון, איך אני אשלם? אתה חמדן...\nבסדר, בסדר, אין לי כסף לשלם, אבל אני יכול לעשות עבודת נפחות בשבילך. תחשיב את עצמך בר מזל, אני הנפח היחיד בסביבה.</string>
@@ -127,6 +129,7 @@
     <string name="Challenges_Names_9">אמנזיה</string>
     <string name="ChampionOfAirBuff_Name">אלוף האוויר</string>
     <string name="ChampionOfEarthBuff_Info">אלוף האדמה מגלם כוח בלתי מתפשר, שכן תכונה זו משפרת את עמידות היצור לנזק ומגדילה את החיוניות המקסימלית שלו. שינוי זה הופך אותו לאויב מאיים במעמקים המסוכנים, המסוגל להדוף התקפות בקלות ולהחזיק מעמד בקרב ממושך עם נחישות בלתי מעורערת.</string>
+    <string name="ChampionOfFireBuff_Info">\"שרוי בזעם הלהבות, מאפיין זה מגביר את האכזריות ואת כוח הלחימה של היצור. אלוף האש צץ כיריב מאיים, המשחרר מתקפות הרסניות שיכולות לעטוף את אויביו בלהבות צורבות, מטיל אימה בכל מי שמעז להתנגד לו.</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">להב חד-ידני של כאוס טהור. הוא גדל עם קרבות כמו בן דודו הדו-ידני, אבל לאט יותר ולפוטנציאל נמוך יותר — ומשאיר את היד השנייה חופשית למגן.</string>
     <string name="ChaosBlade_Name">להב כאוס</string>
@@ -135,11 +138,13 @@
     <string name="ChaosCrystal_Info">אתה מרגיש זרמי אנרגיה זורמים דרך ידיך כשאתה מחזיק אותו.</string>
     <string name="ChaosCrystal_Info_2">כן! עכשיו אתה יודע שאפשר למזג אותו עם אחד מהפריטים שלך, אבל מה הלאה?</string>
     <string name="ChaosShield_desc">מגן הכאוס הוא תוצאה של מיזוג גביש כאוס עם מגן רגיל, מה שגורם לו להפגין השפעות כאוטיות אקראיות בעת חסימה מוצלחת.</string>
+    <string name="ChaosStaff_Info">שרביט שנטבל בכוח הכאוס! מה עוד יכול קוסם לחלום עליו — או לפחד ממנו?</string>
     <string name="ChaosStaff_Name">צוות כאוס</string>
     <string name="CharAction_Charm">לְקַסֵּם</string>
     <string name="CharAction_Push">לדחוף</string>
     <string name="Char_Hit_0">%1 היכה את %2</string>
     <string name="Char_Hit_1">%1$s היכה את %2$s</string>
+    <string name="Char_Kill_1">%s הרג אותך...</string>
     <string name="Char_StaDodged_1">התחמק</string>
     <string name="Char_StaFrightened">מבוהל</string>
     <string name="Char_StaMind">שכל</string>
@@ -147,11 +152,13 @@
     <string name="Char_StaPoisoned">מורעל</string>
     <string name="Char_StaRooted">מושרש</string>
     <string name="Char_StaStunned">מבולבל</string>
+    <string name="Char_StaVision">חזון</string>
     <string name="Char_Stole_2">%1$s גנב את %2$s של %3$s!</string>
     <string name="CharmSpell_Name">הקסמה</string>
     <string name="Chasm_Info">נפלת אל מותך...</string>
     <string name="Chasm_Jump">האם אתה באמת רוצה לקפוץ לתהום? אתה עלול למות.</string>
     <string name="ChristmasTurkey_Name">תרנגול הודו חגיגי</string>
+    <string name="CityBossLevel_ChessSign">הניחו את נשקיכם — המלך יבחן את שכלכם, לא את כוחכם.</string>
     <string name="City_TileDescBookshelf">שורות של ספרים בתחומים שונים ממלאות את מדף הספרים.</string>
     <string name="City_TileDescDeco">חסרים כאן מספר אריחים.</string>
     <string name="ClassArmor_LowMana">מאנה לא מספיקה!</string>
@@ -213,6 +220,7 @@
     <string name="DwarfToken_Info">גמדים רבים וכמה מהיצירות הגדולות יותר שלהם נושאים את חתיכות המתכת הקטנות האלה של מטרה לא ידועה. אולי הן תכשיטים או איזשהו תעודת זהות. גמדים הם אנשים מוזרים.</string>
     <string name="EarthElemental_Desc">אלמנטלי אדמה הם גושי אדמה המונעים על ידי כוחות טבע מרוכזים.</string>
     <string name="EarthElemental_Name">אלמנטל אדמה</string>
+    <string name="EarthElemental_Name_Objective">אלמנטל אדמה</string>
     <string name="ElvenDagger_Name">פגיון אלפים</string>
     <string name="EncumbranceBuff_Name">עול</string>
     <string name="EnslavedSoul_Gender">feminine</string>
@@ -262,6 +270,7 @@
     <string name="Halls_TileDescBookshelf">ספרים בשפות עתיקות בוערים במדף הספרים.</string>
     <string name="Halls_TileStatue">עמוד</string>
     <string name="Heal_Cast">%s נרפא.</string>
+    <string name="HealerNPC_Message1">טיפול חינם לכל מטייל!</string>
     <string name="HeartOfDarkness_Name">לב החושך</string>
     <string name="Hedgehog_Info3">האם אתה אוהב תה עם ריבת פטל?</string>
     <string name="Hedgehog_Info4">קח את הפאי הזה</string>
@@ -274,6 +283,7 @@
     <string name="HeroClass_MagPerks_4">מכשפים משתמשים במאנה כדי להטיל כישופים יסודיים.</string>
     <string name="HeroClass_NecromancerPerks_0">נקרומנטרים מתחילים עם 15 נקודות בריאות.</string>
     <string name="HeroClass_NecromancerPerks_3">נקרומנטרים מתחילים עם מפתח שלד ברמה 7.</string>
+    <string name="HeroClass_None">אזרח פשוט</string>
     <string name="HeroClass_PlagueDoctorPerks_4">רופאי הדבר סובלים מקנסות דיוק חמורים ללא המסור העצמות האהוב ביד, ואינם יכולים להשתמש בנשק מטווח.</string>
     <string name="HeroClass_Priest">כומר</string>
     <string name="HeroClass_Rog">נוכל</string>
@@ -298,6 +308,7 @@
     <string name="Hero_StaVertigo">הכל מסתובב סביבך!</string>
     <string name="Hero_Wait">...</string>
     <string name="Horror_Name_1">אימתני %s</string>
+    <string name="HungerBuff_Info1">אתה רעב!</string>
     <string name="HungerBuff_Name2">מורעב</string>
     <string name="Hunger_Hungry_0">אתה רעב.</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
@@ -307,6 +318,7 @@
     <string name="IceCaves_TileDescHighGrass">צמחייה קפואה וצפופה חוסמת את הראות.</string>
     <string name="IceCaves_TileDescStatue">עוד פסל נורא... רגע, זה גנול קפוא.</string>
     <string name="IceCaves_TileGrass">דשא קפוא</string>
+    <string name="IceCaves_TileHighGrass">דשא גבוה קפוא</string>
     <string name="IceElemental_Name_Objective">אלמנטל קרח</string>
     <string name="IceGuardianCoreModule_Info">זוהי מבנה מורכב עשוי מקרח קסום. אבן זוהרת ממוקמת בתוך ההמצאה הנפלאה הזו.</string>
     <string name="IceGuardian_Name_Objective">שומר קרח</string>
@@ -342,6 +354,7 @@
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Level_HiddenPlate">לוחית לחץ נסתרת נלחצת!</string>
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
+    <string name="Level_TileDescChasm">אינך יכול לראות את התחתית.</string>
     <string name="Level_TileDescHighGrass">צמחייה צפופה חוסמת את המבט</string>
     <string name="Level_TileHighGrass">דשא גבוה</string>
     <string name="Level_TileParalyticTrap">מלכודת גז משתקת</string>
@@ -395,7 +408,7 @@
     <string name="NecromancerNPC_Name">נקרומנסר</string>
     <string name="NecromancerNPC_Name_Objective">נקרומנסר</string>
     <string name="Necromancer_ACSpecial">נֶקְרוֹמַנְטִיָּה</string>
-    <string name="Necromancy_NotEnoughSouls">אין לך מספיק נשמות כדי להטיל כישוף \&quot;%1\&quot;.</string>
+    <string name="Necromancy_NotEnoughSouls">אין לך מספיק נשמות כדי להטיל כישוף \"%1\".</string>
     <string name="NecrotismBuff_Info">סימן המוות עצמו, הצחנה שממנו משפיעה על הקרובים וגורמת להם לחלוק את אותו גורל.</string>
     <string name="Necrotism_ACSpecial">נֶקְרוֹטִיזְם</string>
     <string name="Necrotism_Death">מתת מנקרוטיזם...</string>
@@ -443,15 +456,20 @@
     <string name="PlagueDoctorQuest_5_1_Epilogue">*הוא בוהה בשתי ה*סוקובוס*, חיוך מאושר מתפשט מתחת למסכתו.* נהדר! מופלא! זה יפתח כל כך הרבה... אפשרויות! *הוא פונה אליך, קולו סמיך מהכרת תודה... ומשהו נוסף.* המאמצים שלך... לא יישכחו. אני חייב לך את תודתי העמוקה ביותר. *מבטו מתעכב על ה*סוקובוס* לרגע ארוך מדי, לפני שהוא נסוג למעבדתו, ממלמל על גילוי סודות הפיתוי.*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*מחשבותיו נודדות כשהוא מדבר, קולו נעשה שקט יותר, בקושי לחישה.* הביא לי שתי _סוקובוסיות_… בחיים. כוחן... זה מפתה.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*הוא מגמגם, קולו נסדק כמו ענף שביר*. א-א-ה, _סוקוביות_! שתיים... כן, שתיים, בחיים! זה... הממ... למחקר שלי! אתה מבין... הפורומונים שלהן... זה חיוני להבנת האיזון העדין של... אה... *הוא משתתק, ידו הגרומה עולה בעצבנות לתקן את המסכה, עיניו נורות לעברך בעוצמה קדחתנית*. המהות שלהן... זה פאזל... פאזל יפה, מסתורי! *הוא משתעל באלימות, מנסה להחזיר את שלוותו*. אני מבטיח, עבור הבאת שתיים מה... היצורים האלה... תהיה לך הכרת התודה הנצחית שלי. תחשוב על זה כעל... מתנה לידע! כן! לידע!</string>
-    <string name="PlagueDoctorQuest_AllDone">*הוא פולט צחוק יבש וצורמני.* \&quot;מעשיך, הם חשפו סודות מעבר לכל מידה! הידע שנרכש... הוא פועם בתוכי, סימפוניה של גילויים. אבל ידע,\&quot; הוא מוסיף, קולו צונח ללחישה קונספירטיבית, \&quot;ידע הוא כוח. וכוח... אה... זהו השיקוי המשכר ביותר.\&quot; הוא נועץ בך מבט לרגע, עיניו האמתיסטיות בוערות באינטנסיביות קדחתנית. \&quot;אולי,\&quot; הוא ממלמל, \&quot;דרכינו יצטלבו שוב. כי עדיין יש... תעלומות... רבות... שטרם נפתרו.\&quot;</string>
+    <string name="PlagueDoctorQuest_AllDone">*הוא פולט צחוק יבש וצורמני.* \"מעשיך, הם חשפו סודות מעבר לכל מידה! הידע שנרכש... הוא פועם בתוכי, סימפוניה של גילויים. אבל ידע,\" הוא מוסיף, קולו צונח ללחישה קונספירטיבית, \"ידע הוא כוח. וכוח... אה... זהו השיקוי המשכר ביותר.\" הוא נועץ בך מבט לרגע, עיניו האמתיסטיות בוערות באינטנסיביות קדחתנית. \"אולי,\" הוא ממלמל, \"דרכינו יצטלבו שוב. כי עדיין יש... תעלומות... רבות... שטרם נפתרו.\"</string>
+    <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlateArmor_Desc">לוחות מתכת עצומים מחוברים יחד לחליפה המספקת הגנה ללא תחרות לכל הרפתקן חזק מספיק לשאת את משקלה המדהים.</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">טיפת רעל קטלני נוצצת על ראש החץ הזה.</string>
+    <string name="PortalGate_Activated">השער העתיק התעורר!</string>
     <string name="PortalGate_Desc">החריטות על פני השער יוצרות דפוס מוזר. נראה כאילו זהו מנהרה ענקית המובילה למרחק. אבל כשמסתכלים מהצד, מתברר שהפני כמעט שטוחה.</string>
+    <string name="PortalGate_Used">נגעת בשער ו... שום דבר לא קרה.</string>
     <string name="Potential_Txt">%s של פוטנציאל</string>
     <string name="PotionOfExperience_Name">שיקוי ניסיון</string>
     <string name="PotionOfInvisibility_Info">שתיית שיקוי זה תהפוך אותך לבלתי נראה זמנית. בעודך בלתי נראה, אויבים לא יוכלו לראות אותך. תקיפת אויב, כמו גם שימוש במקל או מגילה מול עיניהם, יבטלו את האפקט.</string>
+    <string name="PotionOfLiquidFlame_Name">שיקוי להבה נוזלית</string>
     <string name="PotionOfMana_Info">השיקוי הזה ישחזר את האנרגיה הרוחנית שלך.</string>
+    <string name="PotionOfMight_Name">שיקוי עוצמה</string>
     <string name="PotionOfMight_StaApply">+1 כוח, +5 בריאות</string>
     <string name="PotionOfMindVision_Apply2">משהו אומר לך שאתה היצור החי היחיד ברמה זו כרגע.</string>
     <string name="PotionOfPurity_NoSmell">הפסקת להרגיש ריחות\!</string>
@@ -472,6 +490,7 @@
     <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">עכבר מדומה</string>
     <string name="PseudoRat_Name_Objective">עכבר מדומה</string>
+    <string name="Pumpkin_Info">בימים עברו, אנשי הדלעת היו אומה גאה ומשגשגת. אך הכל השתנה עם בוא האנשים, שהותירו אחריהם רק חורבות. הראשים הכרותים והמגולפים של שבטי הדלעת שנעלמו מזמן משמשים כתזכורת לאירועים הנוראים ההם.</string>
     <string name="Quiver_Info">אשפת עור המתאימה להחזיק כל כמות של חיצים</string>
     <string name="RatHide_Name">עור חולדה</string>
     <string name="RatSkull_Info">זה יכול להיות גביע ציד נחמד, אבל זה מריח רע מכדי לתלות את זה על הקיר.</string>
@@ -513,7 +532,9 @@
     <string name="ScarecrowNPC_Quest_End">אוי איזו שמחה, אוי איזו התרגשות!\nעל זה תקבל פרוסת פאי מתוקה!</string>
     <string name="ScarecrowNPC_Quest_Reminder">חמש סוכריות זה כל מה שאני צריך.\nאוי, הפרס יהיה כל כך מתוק!</string>
     <string name="ScarecrowNPC_Quest_Start_Male">למה שלום ילד קטן, איך אתה?\nיש לי משהו מרגש בשבילך!\n\nאה, כמה אסיר תודה אהיה,\nאם תלך ותאסוף קצת ממתקים בשבילי!\n\n</string>
+    <string name="ScrollHolder_Info">במכל הגלילי הזה ניתן לאחסן מספר בלתי מוגבל של מגילות. הוא חוסך מקום בתרמיל שלך ומגן על המגילות מפני אש.</string>
     <string name="ScrollOfChallenge_Info1">הגליל משמיע שאגה מאתגרת המהדהדת בכל המבוך!</string>
+    <string name="ScrollOfCurse_Name">מגילת קללה</string>
     <string name="ScrollOfIdentify_Info">חושף לצמיתות את כל הסודות של פריט בודד.</string>
     <string name="ScrollOfIdentify_Name">מגילת זיהוי</string>
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
@@ -527,7 +548,9 @@
     <string name="ScrollOfWeaponUpgrade_Info">גלילה זו תשדרג נשק קרבי, ותשפר את איכותו. בניגוד לגלילת שדרוג רגילה, גרסה מיוחדת זו לעולם לא תהרוס קסם על נשק. נהפוך הוא, היא מסוגלת להעניק קסם אקראי לנשק לא מקסום.</string>
     <string name="ScrollOfWeaponUpgrade_Name">מגילת שדרוג נשק</string>
     <string name="Scroll_Info">המגילה הזו מכוסה בכתב בלתי ניתן לפענוח, ונושאת כותרת של רונה %s. מי יודע מה יקרה כשיקראו אותה בקול רם?</string>
+    <string name="Scroll_Name">מגילת \"%s\"</string>
     <string name="Scroll_Runes_10">אודל</string>
+    <string name="Scroll_Runes_4">GYFU</string>
     <string name="Senior_Desc">הנזירים הללו הם קנאים, שהקדישו את עצמם להגנה על סודות עירם מפני כל זר. הם אינם משתמשים בשום שריון או כלי נשק, ומסתמכים אך ורק על אומנות הלחימה בידיים חשופות. נזיר זה השתלט על אומנות נטרול יריביו.</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">מלצרית פונדק</string>
@@ -559,8 +582,8 @@
     <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
     <string name="SociologistNPC_AlreadyTaken">כבר השתתפת בסקר הזה, אנא חזור מאוחר יותר</string>
     <string name="SociologistNPC_Name">סוציולוג</string>
-    <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
-    <string name="Spells_NotEnoughSP">אין לך מספיק מנה כדי ללחוש לחש \&quot;%1$s\&quot;.</string>
+    <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \"%1$s\".\n\" %2$s \"</string>
+    <string name="Spells_NotEnoughSP">אין לך מספיק מנה כדי ללחוש לחש \"%1$s\".</string>
     <string name="SpiderArmor_Info">השריון הזה עשוי מכיטין ישן של עכביש וסוג כלשהו של בד. הכי מפתיע, נראה שהוא עדיין מכיל בלוטות עכביש מתפקדות. אם תלחץ על הלוחות מספיק חזק, הם יורים רשת. וסוליות מחורצות מאפשרות לך לנוע בחופשיות על רשת כזו.</string>
     <string name="SpiderEgg_Desc">הביצה השברירית הזו פועמת לרגע, ובפנים ניתן לראות משהו עם הרבה רגליים.</string>
     <string name="SpiderElite_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של שומרי העילית משמש לבלבל את המטרה שלהם.</string>
@@ -569,6 +592,7 @@
     <string name="SpiderMindAmber_Name">עכביש ענבר</string>
     <string name="SpiderMind_Name">עכביש-פסי</string>
     <string name="SpiderMind_Name_Objective">עכביש-פסי</string>
+    <string name="SpiderNest_Desc">הפקעת הזו עשויה מהמשי הדק ביותר ומסתירה משהו חי.</string>
     <string name="SpiderQueen_Desc">גוף של אישה יפה המשולב עם עכביש מחריד. כל היצורים החיים במאורה הזו הם משרתיה. מפגש עם הגברת יוצאת הדופן הזו עלול להתגלות כחוויה קטלנית. כי אתה פולש\!</string>
     <string name="SpiderQueen_Name_Objective">מלכת העכבישים</string>
     <string name="SpiderServant_Name">חייל עכביש</string>
@@ -587,6 +611,7 @@
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
     <string name="SummonBeast_Name">קריאת החיה</string>
     <string name="Swarm_Name">נחיל זבובים</string>
+    <string name="Swing_Name_1">%s פראי</string>
     <string name="Sword_Info">הברק של הלהב החד כתער מעניק ביטחון.</string>
     <string name="TenguLiver_Name">כבד טנגו</string>
     <string name="Tengu_Desc">טנגו הם חברים בחוליית המתנקשים העתיקה, שגם היא נקראת טנגו. מתנקשים אלה ידועים בשימוש נרחב בשוריקנים ובמלכודות.</string>
@@ -597,6 +622,7 @@
     <string name="TomeOfKnowledge_Name">ספר הידע</string>
     <string name="Torch_ACLight">הַדְלֵק</string>
     <string name="Torch_Name">לפיד</string>
+    <string name="ToughShield_name">מגן עור מחוזק</string>
     <string name="TownGuardNPC_Message2">תודות להרפתקנים כמוך, המקום הזה הפך לשקט במיוחד</string>
     <string name="TownGuardNPC_Message3">אתה חושב שיש יותר מדי שומרים בעיר הזאת? ובכן, זה בגלל שזאת העיר היחידה עם מבוך ענק מלא מפלצות, לא?</string>
     <string name="TownGuardNPC_Name">שומר</string>
@@ -617,7 +643,7 @@
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Undead_Defense">נבלם</string>
     <string name="Undead_Gender">masculine</string>
-    <string name="Using_Failed_Because_Magic">קסם רב עוצמה מונע ממך להשתמש ב\&quot;%s\&quot;.</string>
+    <string name="Using_Failed_Because_Magic">קסם רב עוצמה מונע ממך להשתמש ב\"%s\".</string>
     <string name="VampireSkull_Info">המסכה הזו עשויה מגולגולת של ערפד טבעית לחלוטין. למעשה זהו גולגולת... גולגולת של ערפד בעל ראש גדול. מצמרר.</string>
     <string name="VertigoBuff_Info">תחושת הסחרחורת מקשה על הליכה ישרה!</string>
     <string name="VileEssence_Info">جوهر فساد مركّز تم حصاده من عدو مهزوم. هذه المادة الداكنة تنبض بطاقة خبيثة وتُقدَّر كثيراً في العمليات الكيميائية.</string>
@@ -721,6 +747,8 @@
     <string name="WndTradeItem_Sell1">למכור 1 עבור %dg</string>
     <string name="WndTradeItem_SellAll">מכור הכל עבור %dg</string>
     <string name="WndTradeItem_Sold">מכרת את ה-%1 תמורת %2</string>
+    <string name="WndWandmaker_Battle">שרביט קרב</string>
+    <string name="Wnd_Button_Ok">אישור</string>
     <string name="WoodenShield_name">מגן עץ</string>
     <string name="Worm_Name">תולעת</string>
     <string name="WrnExperimental_realtime">מצב זמן אמת הופעל: זה עכשיו רוגלייק בזמן אמת, הקש מהר או תמות.\nרוצה לבדוק מלאי?\nבהצלחה עם זה בזמן שסרטן הביוב בודק את הקרביים שלך.</string>
@@ -735,12 +763,15 @@
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">גנול-זומבי קם מהמתים!</string>
     <string name="ZombieMask_Name">מסיכת זומבי</string>
+    <string name="gdpr_title">התאם אישית את חוויית הפרסום שלך</string>
     <string name="town_deco_armoronhanger_name">שריון</string>
     <string name="town_deco_armorstand_leather_desc">שריון עור אמין יהיה רכישה מצוינת לפני היציאה לצינוק.</string>
     <string name="town_deco_banner_desc">כרזה אלגנטית המתארת את סמלי המסבאה הזו.</string>
+    <string name="town_deco_barrel_wine_desc">משמשת לאחסון משקה יקר ערך כמו יין.</string>
     <string name="town_deco_barrel_wine_name">חבית יין</string>
     <string name="town_deco_cabinet_name">ארון</string>
     <string name="town_deco_canvas_name">קנבס</string>
+    <string name="town_deco_church_sign_desc">נראה שיש כנסייה בתוך הבניין הזה.</string>
     <string name="town_deco_counter_desc">שומר על מרחק טוב בינך לבין האדם שעומד מאחוריו.</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
     <string name="town_deco_curtains_name">וילונות</string>
@@ -783,6 +814,38 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
