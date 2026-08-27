@@ -319,6 +319,7 @@
     <string name="HeroSubClass_NameScout">كشاف</string>
     <string name="HeroSubClass_NameWitchdoctor">طبيب ساحر</string>
     <string name="Hero_Name_Objective">أنت</string>
+    <string name="Hero_Search">بحث</string>
     <string name="Hero_StaBurning">لقد اشتعلت בך النار!</string>
     <string name="Hero_StaFurious">غاضب</string>
     <string name="Hero_StaFury">لقد أصبحت متوحشًا!</string>
@@ -359,6 +360,7 @@
     <string name="InventoryScroll_No">لا، غيّرت رأيي</string>
     <string name="InvisibilityBuff_Info">مخفي تماماً، مما قد يساعد في تجنب الأخطار أو أن تصبح خطراً بحد ذاته.</string>
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
+    <string name="Item_Name">شيء ما</string>
     <string name="JarOfSouls_Desc">عينا الجمجمة المضيئة المرسومة على هذا الجرّة القديمة، بالإضافة إلى الطاقة الغريبة التي تنبعث منها، تجعلك تشعر بعدم الارتياح.</string>
     <string name="Journal_Alchemy">قدرة الخيمياء</string>
     <string name="Journal_Azuterron">غريب</string>
@@ -378,6 +380,7 @@
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">يرقة الإله</string>
     <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
+    <string name="Level_TileBarricade">متاريس</string>
     <string name="Level_TileDescChasm">لا تستطيع رؤية القاع.</string>
     <string name="Level_TileDescInactiveTrap">لقد تم تفعيل الفخ من قبل وهو لم يعد خطيراً.</string>
     <string name="Level_TileDescLockedDoor">هذا الباب مغلق، تحتاج إلى مفتاح مطابق لفتحه.</string>
@@ -475,6 +478,7 @@
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">طبيب الطاعون</string>
     <string name="PlagueDoctor_Name_Objective">طبيب الطاعون</string>
+    <string name="Plant_ACPlant">ازرع</string>
     <string name="Plant_Info">ارمِ هذه البذرة في المكان الذي تريد أن تنمو فيه %1.\n\n%2</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Death">مِتَّ مِن السم...</string>
@@ -494,6 +498,7 @@
     <string name="PotionOfPurity_Info">سيعمل هذا الترياق بسرعة على تحييد جميع الغازات الضارة في نطاق التأثير. شربه سيمنحك مناعة مؤقتة ضد هذه الغازات.</string>
     <string name="PotionOfStrength_Name">جرعة القوة</string>
     <string name="Potion_ACMoisten">ترطيب</string>
+    <string name="Potion_Colors_13">كوارتز</string>
     <string name="Potion_Colors_15">لؤلؤي</string>
     <string name="Potion_Colors_5">ماجينتا</string>
     <string name="Potion_Colors_7">عاجي</string>
@@ -525,6 +530,7 @@
     <string name="ResultDescriptions_Hunger">مات جوعاً في المستوى %d</string>
     <string name="ResultDescriptions_Immured">تم دفنك حيًا في الحجر على المستوى %d</string>
     <string name="ResultDescriptions_Necromancy">نضبت قواه الحيوية أثناء محاولة تحريك جثة في المستوى %d</string>
+    <string name="ResultDescriptions_Poison">مات بسبب السم في المستوى %d</string>
     <string name="ResultDescriptions_Trap">قتل بتفريغ %1$s في المستوى %2$d</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="RingOfElements_Info">يوفر هذا الخاتم مقاومة للعناصر المختلفة مثل النار والكهرباء والغازات وغيرها. كما أنه يقلل من مدة الآثار السلبية.</string>
@@ -550,6 +556,7 @@
     <string name="RottenFood_Message">مقزز!</string>
     <string name="RottenMeat_Name">لحم متعفن</string>
     <string name="RottenOrgan_Name">عضو متعفن</string>
+    <string name="RottenPasty_Name">فطيرة فاسدة</string>
     <string name="RottenRation_Info">في يوم من الأيام كان يمكن أكله</string>
     <string name="RottenRation_Name">وجبة متعفنة</string>
     <string name="RottingFist_Name">قبضة متعفّنة</string>
@@ -609,6 +616,7 @@
     <string name="SlowBuff_Info">الشعور بالخمول يجعل المرء أبطأ من المعتاد.</string>
     <string name="Slow_Name_1">مُثَلّج %s</string>
     <string name="SmashSpell_NeedWeapon">أحتاج إلى سلاح لهذه الحركة.</string>
+    <string name="Snail_Desc">هذا الرخوي الصغير كبر كثيراً من تغذيه على مياه الصرف، لكنه لا يزال بطيئاً جداً، مما يجعله عدواً سهلاً.</string>
     <string name="Snail_Name">حلزون</string>
     <string name="SociologistNPC_Desc">هذا العالِم الاجتماعي في رحلة مقدسة لجمع الآراء العامة</string>
     <string name="SociologistNPC_InternetRequired">عذراً، لكن دون الوصول إلى الإنترنت لا يمكنك المشاركة في استطلاعنا</string>
@@ -656,11 +664,13 @@
     <string name="TitleScene_Badges">الشارات</string>
     <string name="TitleScene_Mods">مودز</string>
     <string name="TitleScene_Play">اللعب</string>
+    <string name="TitleScene_PlayOnPC">العب على الحاسوب</string>
     <string name="TomeOfMastery_Blinded">لا يمكنك القراءة وأنت أعمى</string>
     <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
     <string name="Torch_ACLight">أشعل</string>
     <string name="Torch_Info">إنه عنصر لا غنى عنه في قاعات الشياطين، المشهورة بإضاءتها الضعيفة.</string>
     <string name="ToughShield_name">درع جلدي مقوى</string>
+    <string name="TownGuardNPC_Desc">حارس مدينة عادي.</string>
     <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
     <string name="TownGuardNPC_Message3">هل تعتقد أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، هذا لأنها المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
     <string name="TownGuardNPC_Name">حارس المدينة</string>
@@ -829,6 +839,8 @@
     <string name="town_deco_church_sign_name">لافتة الكنيسة</string>
     <string name="town_deco_cinema_sign_desc">يبدو أن هناك سينما داخل هذا المبنى.</string>
     <string name="town_deco_clock_desc">عقاربها متجمدة منذ وقت طويل في وضع واحد.</string>
+    <string name="town_deco_clock_name">ساعة</string>
+    <string name="town_deco_common_bed_desc">سرير عادي.</string>
     <string name="town_deco_common_bed_name">سرير</string>
     <string name="town_deco_counter_name">كونتر</string>
     <string name="town_deco_crate_bottles_name">صندوق بيرة</string>
@@ -867,6 +879,18 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

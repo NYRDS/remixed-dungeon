@@ -153,6 +153,7 @@
     <string name="ChaosStaff_Info">Cây gậy thấm đẫm Quyền Năng Hỗn Mang! Còn điều gì mà một pháp sư có thể mơ ước hay khiếp sợ hơn thế?</string>
     <string name="ChaosStaff_Name">gậy hỗn loạn</string>
     <string name="ChaosSword_Info">Lưỡi của thanh kiếm này được tạo nên từ hỗn loạn thuần khiết và thỉnh thoảng lại rung nhẹ. Sức mạnh vĩ đại ẩn chứa trong vũ khí này có thể chém đôi gần như mọi thứ. Tuy nhiên, cần kỹ năng phi thường mới có thể khuất phục được sức mạnh hùng hậu của nó.</string>
+    <string name="ChaosSword_Name">kiếm hỗn loạn</string>
     <string name="CharAction_Hit">đánh</string>
     <string name="CharAction_Push">đẩy</string>
     <string name="CharAction_Take">Nhặt lấy</string>
@@ -180,6 +181,7 @@
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
     <string name="CityBossLevel_ChessSign">Hãy buông vũ khí — Vua sẽ thử thách trí tuệ của ngươi, chứ không phải sức mạnh.</string>
     <string name="City_TileDescDeco">Ở đây thiếu một vài viên gạch.</string>
+    <string name="City_TileDescEmptySP">Một tấm thảm dày phủ kín sàn.</string>
     <string name="ClassArmor_NotEquipped">Bạn cần mặc bộ giáp này để sử dụng sức mạnh đặc biệt của nó!</string>
     <string name="Claymore_Info">Thanh kiếm đồ sộ này chắc chắn có thể chém xuyên qua bất cứ thứ gì.</string>
     <string name="Claymore_Name">Kiếm Claymore</string>
@@ -191,6 +193,7 @@
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
     <string name="Codex_Story_9">Glyph Dịch Chuyển - Mỗi khi Anh Hùng trúng đòn, có khả năng Anh Hùng sẽ được dịch chuyển đến một ô ngẫu nhiên trong tầm nhìn. Glyph này không hoạt động ở các cấp độ Trùm.</string>
     <string name="ColdSpirit_Gender">masculine</string>
+    <string name="ComboBuff_Name">Liên hoàn</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Name">nỏ composite</string>
@@ -251,6 +254,7 @@
     <string name="EarthElemental_Name_Objective">nguyên tố đất</string>
     <string name="ElfArmor_ACSpecial">TIẾNG GỌI CỦA THIÊN NHIÊN</string>
     <string name="ElvenDagger_Gender">masculine</string>
+    <string name="EncumbranceBuff_CharAct_1">Tôi không đủ sức để sử dụng %s đúng cách.</string>
     <string name="EncumbranceBuff_CharAct_2">Cái %s này quá nặng để tôi có thể sử dụng hiệu quả.</string>
     <string name="EncumbranceBuff_CharAct_4">Tôi thiếu sức mạnh để sử dụng %s với đầy đủ tiềm năng của nó.</string>
     <string name="EquipableItem_Unequip">Bạn không thể tháo bỏ %s bị nguyền rủa!</string>
@@ -342,6 +346,7 @@
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
     <string name="Hero_StaBurning">Bạn bị bốc cháy!</string>
     <string name="Hero_StaCharm">Bạn bị mê hoặc!</string>
+    <string name="Hero_StaFurious">cuồng nộ</string>
     <string name="Hero_StaFury">Ngươi trở nên cuồng bạo!</string>
     <string name="Hero_StaRoots">Bạn không thể di chuyển!</string>
     <string name="Hero_Wait">...</string>
@@ -538,6 +543,7 @@
     <string name="Potion_ACMoisten">LÀM ẨM</string>
     <string name="Potion_Beneficial">Chai thuốc có lợi</string>
     <string name="Potion_Colors_1">đỏ tươi</string>
+    <string name="Potion_Colors_10">chàm</string>
     <string name="Potion_Colors_8">màu hổ phách</string>
     <string name="Potion_ItemFliesAway">%s vừa bay vụt khỏi tay bạn.</string>
     <string name="Potion_Name">%s thuốc</string>
@@ -572,6 +578,7 @@
     <string name="RingOfMending_Name">Nhẫn Chữa Lành</string>
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
     <string name="RingOfShadows_Info">Kẻ thù sẽ khó nhận ra bạn hơn khi bạn đeo nhẫn này. Nhẫn Bóng Tối xuống cấp sẽ báo động cho kẻ thù mà lẽ ra chúng không hề để ý đến sự hiện diện của bạn.</string>
+    <string name="Ring_BuffKnown">Đây là %s</string>
     <string name="Ring_Gems_10">thạch anh</string>
     <string name="Ring_Gems_11">mã não</string>
     <string name="Ring_Gems_9">lam ngọc</string>
@@ -614,6 +621,7 @@
     <string name="ScrollOfUpgrade_Info">Cuộn giấy này sẽ nâng cấp một vật phẩm duy nhất, cải thiện chất lượng của nó. Một cây đũa phép sẽ tăng sức mạnh và số lượng điện tích; một vũ khí sẽ gây thêm sát thương hoặc tìm điểm yếu thường xuyên hơn; một bộ giáp sẽ đỡ thêm nhiều đòn; hiệu quả của chiếc nhẫn lên người đeo sẽ được tăng cường. Vũ khí và giáp cũng sẽ yêu cầu ít sức mạnh hơn để sử dụng, và mọi lời nguyền trên vật phẩm sẽ được hóa giải.</string>
     <string name="ScrollOfWeaponUpgrade_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
     <string name="ScrollOfWeaponUpgrade_Name">Cuộn Nâng Cấp Vũ Khí</string>
+    <string name="Scroll_ACRead">ĐỌC</string>
     <string name="Scroll_Name">cuộn giấy \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="Scroll_Runes_1">SOWILO</string>
@@ -758,6 +766,7 @@
     <string name="WandOfSlowness_Info1">Không có gì xảy ra.</string>
     <string name="WandOfTeleportation_Info2">không có gì xảy ra</string>
     <string name="Wand_ACZap">ZAP</string>
+    <string name="Wand_Damage">Khi cây đũa này được sử dụng như vũ khí cận chiến, sát thương trung bình là %d điểm mỗi lần đánh.</string>
     <string name="Wand_Prompt">Chọn hướng để phóng phép</string>
     <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
     <string name="Wand_Wood_Types_10">sồi</string>
@@ -778,6 +787,7 @@
     <string name="Weightstone_WndCancel">Không sao đâu</string>
     <string name="Weightstone_WndChoice">Bạn muốn cân bằng %s như thế nào?</string>
     <string name="Weightstone_WndSpeed">Tốc độ</string>
+    <string name="Welcome_Title">Chào mừng!</string>
     <string name="WindGust_Info">Triệu hồi một cơn gió giật, đẩy nhân vật được chọn ra xa.</string>
     <string name="WndBlacksmith_Prompt">Được, lời đã nói không thể lấy lại, đây là điều tôi có thể làm cho bạn: Tôi có thể luyện lại 2 vật phẩm và biến chúng thành 1 vật phẩm chất lượng tốt hơn.</string>
     <string name="WndCatalogus_Potions">Thuốc</string>
@@ -796,6 +806,7 @@
     <string name="WndGame_Exit">Thoát Remixed Dungeon</string>
     <string name="WndGame_Ranking">Bảng xếp hạng</string>
     <string name="WndGame_Save">Lưu</string>
+    <string name="WndGame_Start">Bắt đầu trò chơi mới</string>
     <string name="WndGame_menu">Menu chính</string>
     <string name="WndHats_InfoButton">Xem xét</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
@@ -941,6 +952,7 @@
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
     <string name="town_deco_red_carpet_name">Thảm đỏ</string>
     <string name="town_deco_rope_name">dây thừng</string>
+    <string name="town_deco_rug_desc">Được thiết kế với phong cách tinh tế.</string>
     <string name="town_deco_scrolls_name">Cuộn</string>
     <string name="town_deco_shelf_full_name">Kệ sách</string>
     <string name="town_deco_shelf_name">Các kệ sách</string>
@@ -966,6 +978,18 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
