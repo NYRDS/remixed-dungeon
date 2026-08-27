@@ -668,6 +668,7 @@
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_NotEnoughSP">Je hebt niet genoeg mana om de spreuk \&quot;%1$s\&quot; te casten.</string>
     <string name="Spells_NotTooFast">%s is nog niet klaar voor gebruik</string>
+    <string name="SpiderArmor_Info">Deze pantser is gemaakt van oude spinnep chitine en een soort kleding. Wat verrassend is, lijkt het nog steeds werkende spinnepklieren te bevatten. Als je de platen hard genoeg indrukt, schieten ze web uit. En getande zolen laten je vrij bewegen op dergelijke web.</string>
     <string name="SpiderCharm_Info">Deze exotische snuisterij is gehuld in een aura van mysterie. Wie weet wat er gebeurt met degene die hem draagt?</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
@@ -725,6 +726,7 @@
     <string name="Sword_Name">zwaard</string>
     <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Hoewel deze werpbijl niet zo zwaar is, vereist hij toch behoorlijk wat kracht om effectief te kunnen gebruiken.</string>
+    <string name="TenguLiver_Info">Deze lever behoort aan een machtige vijand. Alleen door ernaar te kijken, nemen je instincten de overhand, en voel je de drang om het te consumeren.</string>
     <string name="Tengu_Desc">Tengu zijn leden van de oude moordenaarsclan, die ook Tengu heet. Deze moordenaars zijn bekend om hun uitgebreide gebruik van shurikens en vallen.</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info2">Gepakt, %s!</string>
@@ -944,6 +946,7 @@
     <string name="town_deco_charcoal_carpet_name">Tapijt</string>
     <string name="town_deco_chest_desc">Handig meubelstuk voor het opbergen van allerlei spullen en sieraden.</string>
     <string name="town_deco_chest_name">Kist</string>
+    <string name="town_deco_chimney_name">Schoorsteen</string>
     <string name="town_deco_church_sign_desc">Het lijkt erop dat er een kerk in dat gebouw zit.</string>
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
     <string name="town_deco_cinema_sign_desc">Het lijkt erop dat er een bioscoop in dat gebouw zit.</string>
@@ -999,6 +1002,9 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 

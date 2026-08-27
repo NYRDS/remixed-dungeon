@@ -411,6 +411,7 @@
     <string name="Level_TileDescExit">Cầu thang dẫn xuống tầng sâu hơn.</string>
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
     <string name="Level_TileDescPileOfStones">Một đống đá cực kỳ nặng, trông không thể di chuyển được.</string>
+    <string name="Level_TileDescSign">Bạn không thể đọc được văn bản từ đây.</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
     <string name="Level_TilePedestal">Bệ đá</string>
     <string name="Level_TilePileOfStones">Đống đá</string>
@@ -453,6 +454,7 @@
     <string name="MissileWeapon_Info1">\n\nSát thương trung bình của vũ khí này bằng %d điểm mỗi lần đánh.</string>
     <string name="MissileWeapon_Missiles">Vũ khí phóng xạ</string>
     <string name="MissileWeapon_No">Không, tôi đã đổi ý rồi</string>
+    <string name="Mob_GoingTo">Đang đi rồi!</string>
     <string name="Mob_ItemUse">%1$s sử dụng %2$s</string>
     <string name="Mob_StaControlledStatus">%s này đang bị ám bởi ma quỷ</string>
     <string name="Mob_StaFleeingStatus2">Cái %1$s này đang chạy trốn khỏi %2$s</string>
@@ -893,6 +895,7 @@
     <string name="Zombie_Name">kẻ sống chết</string>
     <string name="Zombie_Name_Objective">kẻ sống chết</string>
     <string name="gdpr_title">Cá nhân hóa trải nghiệm quảng cáo của bạn</string>
+    <string name="town_deco_armoronhanger_desc">Loại giáp nào đó trên móc treo.</string>
     <string name="town_deco_armorstand_plate_desc">Theo người buôn, bộ giáp tấm nặng nề này từng thuộc về một chiến binh vĩ đại.</string>
     <string name="town_deco_armorstand_scale_desc">Những tấm thép mạ vàng của bộ giáp vảy này trông như mới tinh.</string>
     <string name="town_deco_banner_desc">Một lá cờ thanh lịch vẽ các biểu tượng của quán rượu này.</string>
@@ -963,6 +966,9 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

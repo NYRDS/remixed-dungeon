@@ -213,6 +213,7 @@
     <string name="Darkness_Info">يبدو وكأنه قطع من الظلام الأبدي تطفو في الهواء</string>
     <string name="Dart_Name">سهم صغير</string>
     <string name="DashSpell_TooFar">لا يمكنني الاندفاع إلى هذه المسافة البعيدة.</string>
+    <string name="DeathKnight_Desc">للوهلة الأولى، يبدو وكأنه محارب جبار يرتدي درعاً ثقيلاً، ولا تكشفه سوى ابتسامة ميتة. فارس الموت هو تجسيد لروح فارس فشل في الوفاء بنذوره. وفي حالته الملعونة، سيظل يتجول ساعياً للتطهير في المعارك، قاتلاً الأبرياء، غير قادر على تذكر من أقسم على حمايتهم.</string>
     <string name="Death_Name_0">مروع %s</string>
     <string name="Death_Name_1">مريع %s</string>
     <string name="Deathling_Name">ميت صغير</string>
@@ -374,6 +375,7 @@
     <string name="Kusarigama_Info">يتكون هذا السلاح من منجل معلق على سلسلة معدنية بثقل حديدي ثقيل في الطرف الآخر.</string>
     <string name="Kusarigama_Name">كوساريغاما</string>
     <string name="Kusarigama_Pull">اسحب</string>
+    <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">يرقة الإله</string>
     <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
     <string name="Level_TileDescChasm">لا تستطيع رؤية القاع.</string>
@@ -415,6 +417,7 @@
     <string name="MimicPie_Name">ميميكي</string>
     <string name="MimicPie_Name_Objective">ميميكي</string>
     <string name="MirrorImage_Name">ثنائي</string>
+    <string name="MissileWeapon_Info2">بسبب قوتك غير الكافية، تتناقص دقة وسرعة هجومك بهذا %s.</string>
     <string name="MissileWeapon_Info3">بسبب قوتك الزائدة، يزداد ضرر هجومك بـ %s.</string>
     <string name="MissileWeapon_No">لا، غيّرت رأيي</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
@@ -864,6 +867,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 

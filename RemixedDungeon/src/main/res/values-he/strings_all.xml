@@ -96,6 +96,7 @@
     <string name="Blacksmith_Gold1">היי, בן אדם! רוצה להיות מועיל, אה? קח את המעדר הזה ותחפור לי קצת _עפרת זהב אפלה_, _15 חתיכות_ יספיקו. למה אתה מתכוון, איך אני אשלם? אתה חמדן...\nבסדר, בסדר, אין לי כסף לשלם, אבל אני יכול לעשות עבודת נפחות בשבילך. תחשיב את עצמך בר מזל, אני הנפח היחיד בסביבה.</string>
     <string name="Blacksmith_Verify4">אני לא עובד עם פריטים מקוללים!</string>
     <string name="Blacksmith_Verify6">אני לא יכול לשחזר את הפריטים האלה!</string>
+    <string name="Bounce_Txt">%s של הקפצה</string>
     <string name="Bow_Info1">זהו נשק טווח. הוא חסר תועלת לכולם מלבד אלפים בטווח קרוב מאוד. כשקשת מצוידת אפשר לירות חצים.\n\n</string>
     <string name="Brute_Enraged">%s נכנס לזעם!</string>
     <string name="Brute_Gender">masculine</string>
@@ -223,6 +224,7 @@
     <string name="EarthElemental_Desc">אלמנטלי אדמה הם גושי אדמה המונעים על ידי כוחות טבע מרוכזים.</string>
     <string name="EarthElemental_Name">אלמנטל אדמה</string>
     <string name="EarthElemental_Name_Objective">אלמנטל אדמה</string>
+    <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Name">פגיון אלפים</string>
     <string name="EncumbranceBuff_Name">עול</string>
     <string name="EnslavedSoul_Gender">feminine</string>
@@ -816,6 +818,7 @@
     <string name="town_deco_red_carpet_desc">השמועה אומרת ששטיחים אדומים דומים מקשטים את אולמות המטרופולין הגמדי.</string>
     <string name="town_deco_rope_name">חבל</string>
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
+    <string name="town_deco_shieldboard_desc">מגינים שונים תלויים על הלוח. עדיין לא למכירה.</string>
     <string name="town_deco_shieldboard_name">מגנים</string>
     <string name="town_deco_skulls_desc">גולגולות מלוטשות השייכות ליצורים מהצינוק.</string>
     <string name="town_deco_stone_wall_desc">איכשהו הקיר הזה פולט חום ונראה קצת רטוב.</string>
@@ -831,6 +834,9 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
 
 
 
