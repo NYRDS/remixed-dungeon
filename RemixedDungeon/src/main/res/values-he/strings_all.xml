@@ -130,6 +130,7 @@
     <string name="ChampionOfAirBuff_Name">אלוף האוויר</string>
     <string name="ChampionOfEarthBuff_Info">אלוף האדמה מגלם כוח בלתי מתפשר, שכן תכונה זו משפרת את עמידות היצור לנזק ומגדילה את החיוניות המקסימלית שלו. שינוי זה הופך אותו לאויב מאיים במעמקים המסוכנים, המסוגל להדוף התקפות בקלות ולהחזיק מעמד בקרב ממושך עם נחישות בלתי מעורערת.</string>
     <string name="ChampionOfFireBuff_Info">\&quot;שרוי בזעם הלהבות, מאפיין זה מגביר את האכזריות ואת כוח הלחימה של היצור. אלוף האש צץ כיריב מאיים, המשחרר מתקפות הרסניות שיכולות לעטוף את אויביו בלהבות צורבות, מטיל אימה בכל מי שמעז להתנגד לו.</string>
+    <string name="ChampionOfFireBuff_Name">אלוף האש</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">להב חד-ידני של כאוס טהור. הוא גדל עם קרבות כמו בן דודו הדו-ידני, אבל לאט יותר ולפוטנציאל נמוך יותר — ומשאיר את היד השנייה חופשית למגן.</string>
     <string name="ChaosBlade_Name">להב כאוס</string>
@@ -183,6 +184,7 @@
     <string name="ConcreteBlock_Description">נראה שהבלוק הזה דורש %d נקודות כוח כדי לדחוף</string>
     <string name="CorpseDustBuff_Info">התקפות מתגברות מאוד עבור אלו שמלאים בצמא דם, מה שהופך אותם למסוכנים במיוחד.</string>
     <string name="CorpseDust_Info">כדור אבק הגופות לא נראה שונה מכדור אבק רגיל. עם זאת, אתה יודע איכשהו שעדיף להיפטר ממנו בהקדם האפשרי.</string>
+    <string name="CorpseExplosion_Name">פיצוץ גופה</string>
     <string name="Crystal_Desc">גביש גדול ומבריק מרחף באוויר. כנראה שהוא מלא בקסם חזק.</string>
     <string name="DM300_Info2">המשימה נכשלה. כיבוי.</string>
     <string name="DarkGold_Name">עפרת זהב אפלה</string>
@@ -212,7 +214,7 @@
     <string name="Dungeon_Tips_18">הדרך היחידה לשדרג כישוף על נשק היא באמצעות מגילת שדרוג.</string>
     <string name="Dungeon_Tips_2">זכור שהגברת כוחך אינה הדרך היחידה לגשת לציוד טוב יותר, אתה יכול ללכת בדרך ההפוכה על ידי הפחתת דרישת הכוח שלו באמצעות מגילות שדרוג.</string>
     <string name="Dungeon_Tips_20">פיקסל-מארט. מחירים מיוחדים לציידי שדים!</string>
-    <string name="Dungeon_Tips_23">הטקסט כתוב בשפת שדים.</string>
+    <string name="Dungeon_Tips_23">הטקסט כתוב בשפה שטנית.</string>
     <string name="Dungeon_Tips_3">אתה יכול להוציא את הזהב שלך בעיר, בחנויות הצינוק או בשירותים.</string>
     <string name="Dungeon_Tips_4">היזהר מהגו!</string>
     <string name="Dungeon_Tips_5">פיקסל-מארט - כל מה שאתה צריך להרפתקה מוצלחת!</string>
@@ -261,6 +263,7 @@
     <string name="Gnoll_Gender">masculine</string>
     <string name="GoldenKey_Info">החריצים במפתח הזהב הזעיר והמסובך. אולי הוא יכול לפתוח מנעול של תיבה כלשהי?</string>
     <string name="GoldenKey_Name">מפתח זהב</string>
+    <string name="GoldenSword_Name">חרב זהב</string>
     <string name="Golem_Name">גולם</string>
     <string name="GothicArmor_Name">שריון גותי</string>
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
@@ -303,6 +306,7 @@
     <string name="Hero_Name_Objective">אותך</string>
     <string name="Hero_StaBurning">אתה נדלקת!</string>
     <string name="Hero_StaCripple">אתה נכה!</string>
+    <string name="Hero_StaFury">אתה נעשה זועם!</string>
     <string name="Hero_StaPoison">אתה מורעל!</string>
     <string name="Hero_StaRoots">אינך יכול לזוז!</string>
     <string name="Hero_StaVertigo">הכל מסתובב סביבך!</string>
@@ -346,6 +350,7 @@
     <string name="KunaiThrow_Info">זריקת הקונאי הקטלנית הזו מבוצעת במהירות עצומה, כה מהירה שאף לא תוכל לבחור מטרה.\n\nאמנים אמיתיים מסוגלים לזרוק יותר מקונאי אחד בבת אחת.</string>
 
     <string name="KunaiThrow_Name">זריקת קונאי</string>
+    <string name="Kusarigama_Pull">משוך</string>
     <string name="Larva_Name">רימת האל</string>
     <string name="Larva_Name_Objective">לרבת אלוהים</string>
     <string name="LastLevel_TileGrass">טחב גחלים</string>
@@ -392,7 +397,7 @@
     <string name="MirrorImage_Name">תמונת ראי</string>
     <string name="MirrorImage_Name_Objective">תמונת ראי</string>
     <string name="MissileWeapon_No">לא, החלפתי את דעתי</string>
-    <string name="Mob_GoingTo">כבר הולך!</string>
+    <string name="Mob_GoingTo">כבר בדרך!</string>
     <string name="Mob_ItemUse">%1$s משתמש ב-%2$s</string>
     <string name="Mob_StaFleeingStatus">זה %s בורח</string>
     <string name="Mob_StaFleeingStatus2">זה %1$s בורח מ-%2$s</string>
@@ -400,9 +405,11 @@
     <string name="Mob_StaHuntingStatus2">זה %1$s צד את %2$s</string>
     <string name="Mods_RestartRequired">נדרש הפעלה מחדש</string>
     <string name="Monk_Defense">הדף</string>
+    <string name="Monk_Name">נזיר גמד</string>
     <string name="MoongraceBuff_Name">מָן שָׁמַיִם</string>
     <string name="Moongrace_Name">ברכת הירח</string>
     <string name="Multiplicity_Txt">%s של ריבוי</string>
+    <string name="MysteryMeat_Info2">אתה לא מרגיש את הרגליים שלך!</string>
     <string name="NecromancerNPC_Desc">איש בגיל העמידה נראה מעט מעצבן ונרגש בו זמנית. הוא לובש שריון מורכב העשוי משברי עצמות מחוברים יחד.</string>
     <string name="NecromancerNPC_Intro">איזה מחזה נדיר! הרפתקן שרק לא רק גופה חסרת חיים. בקושי ניתן להאמין! אה... סליחה, לפעמים אני מתרגש מדי. תראו, אני נקרומנסר. ואף על פי שלימוד המתים והמוות עצמו הוא עיסוקי, לראות את אותם דברים שוב ושוב נעשה מתיש בסופו של דבר. מצד שני, זה בדיוק הסיבה שאני כאן. לפי חישוב שלי, בעוד כמה שבועות, במקום כלשהו במבוך הזה, משהו מרהיב עומד לקרות. ה_נקרופוליס_, עיר עתיקה של המתים, עומדת לפתוח את שעריה. ואני... לא יכול לומר יותר, בזבזתי מספיק זמן. אני צריך להתכונן, _לחזור מאוחר יותר_.</string>
     <string name="NecromancerNPC_Name">נקרומנסר</string>
@@ -418,6 +425,7 @@
     <string name="Nightmare_Name_Objective">סיוט</string>
     <string name="Ooze_Death">%s בולע אותך...</string>
     <string name="Order_Info">בריכוז נכון, הפקודות שלך כמעט בלתי ניתנות לערעור.</string>
+    <string name="Order_Name">ציווי</string>
     <string name="Order_Resist">איך אתה מעז?!!</string>
     <string name="PalaceServant_Golem_1">...</string>
     <string name="PalaceServant_Golem_2">האולם הזה קדוש.</string>
@@ -442,6 +450,7 @@
     <string name="Piercing_Name_1">חודר %s</string>
     <string name="Piercing_Name_2">חודרת %s</string>
     <string name="PlagueDoctorMaskHood_Name">מסכת רופא מגפה עם ברדס</string>
+    <string name="PlagueDoctorNPC_After_Quest_2">אתה עדיין כאן? הנה! קח את זה.</string>
     <string name="PlagueDoctorNPC_Desc">כל גופו של אדם גיבן זה מוסתר מתחת לחליפת עור. ממנו עולה ריח מר של תרופות ו... שום?</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">רופא דבר</string>
@@ -579,9 +588,11 @@
     <string name="Skeleton_Name">שלד</string>
     <string name="SlowBuff_Name">מואט</string>
     <string name="Snail_Desc">רכיכה קטנה זו גדלה לממדים ניכרים בזכות אכילת ביוב, אך היא עדיין איטית מאוד, מה שהופך אותה ליריבה קלה.</string>
+    <string name="Snail_Name">חילזון</string>
     <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
     <string name="SociologistNPC_AlreadyTaken">כבר השתתפת בסקר הזה, אנא חזור מאוחר יותר</string>
     <string name="SociologistNPC_Name">סוציולוג</string>
+    <string name="Spear_Info">מוט עץ דק שבקצהו ברזל מחודד.</string>
     <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_NotEnoughSP">אין לך מספיק מנה כדי ללחוש לחש \&quot;%1$s\&quot;.</string>
     <string name="SpiderArmor_Info">השריון הזה עשוי מכיטין ישן של עכביש וסוג כלשהו של בד. הכי מפתיע, נראה שהוא עדיין מכיל בלוטות עכביש מתפקדות. אם תלחץ על הלוחות מספיק חזק, הם יורים רשת. וסוליות מחורצות מאפשרות לך לנוע בחופשיות על רשת כזו.</string>
@@ -589,6 +600,7 @@
     <string name="SpiderElite_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של שומרי העילית משמש לבלבל את המטרה שלהם.</string>
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
     <string name="SpiderExploding_Desc">עובדים חרוצים בזמנים שלווים, היצורים האלה לא יהססו להסתער על אויביהם ולתפוס את הצמח הראשון שהם נתקלים בו, ולהפוך את עצמם לפצצות חיות.</string>
+    <string name="SpiderGuard_Name">שומר עכביש</string>
     <string name="SpiderMindAmber_Name">עכביש ענבר</string>
     <string name="SpiderMind_Name">עכביש-פסי</string>
     <string name="SpiderMind_Name_Objective">עכביש-פסי</string>
@@ -626,6 +638,7 @@
     <string name="TownGuardNPC_Message2">תודות להרפתקנים כמוך, המקום הזה הפך לשקט במיוחד</string>
     <string name="TownGuardNPC_Message3">אתה חושב שיש יותר מדי שומרים בעיר הזאת? ובכן, זה בגלל שזאת העיר היחידה עם מבוך ענק מלא מפלצות, לא?</string>
     <string name="TownGuardNPC_Name">שומר</string>
+    <string name="TownPortal_Info">הלחש הזה מאפשר לך לחזור לבטחה באופן מיידי. עם זאת, מקורות קסם חזקים בקרבת מקום עלולים למנוע ממנו לפעול כמתוכנן.</string>
     <string name="TownScript_NeedWeapon">אני לא אלך לצינוק בידיים ריקות!\nאולי כדאי לבקר בחנות העירונית קודם?</string>
     <string name="TownsfolkMovieNPC_Name">תושבי העיירה</string>
     <string name="TownsfolkNPC_Message1">אה! הרפתקן נוסף, איזה כיף! תדאג לשדוד כמה שיותר חפצים יקרים!</string>
@@ -653,6 +666,7 @@
     <string name="WandOfAvalanche_Info">כאשר פיצוץ של השרביט פוגע בקיר (או בכל מכשול מוצק אחר) הוא גורם למפולת אבנים, פוגע ומהלם את כל היצורים באזור הפגיעה.</string>
     <string name="WandOfAvalanche_Info1">מחצת את עצמך עם שרביט המפולת שלך...</string>
     <string name="WandOfDisintegration_Info">מקל זה פולט אלומת אנרגיה הרסנית, החודרת את כל היצורים בדרכה. ככל שהיא פוגעת ביותר מטרות, כך היא גורמת נזק רב יותר לכל אחת מהן.</string>
+    <string name="WandOfDisintegration_Name">שרביט התפוררות</string>
     <string name="WandOfIcebolt_Info1">הרגת את עצמך עם שרביט הקרח שלך...</string>
     <string name="WandOfMagicMissile_Info">שרביט זה משגר טילים של אנרגיה קסומה טהורה, וגורם נזק בינוני למטרה.</string>
     <string name="WandOfMagicMissile_SelectWand">בחר שרביט לשדרוג</string>
@@ -736,6 +750,7 @@
     <string name="WndSettings_Quickslots">חריצי גישה מהירה</string>
     <string name="WndSettings_RecordVideo">הקלטת וידאו</string>
     <string name="WndSettings_SelectLanguage">בחר שפה</string>
+    <string name="WndSettings_ThirdQuickslot">חריץ שלישי</string>
     <string name="WndSettings_UiScale">קנה מידה של ממשק המשתמש</string>
     <string name="WndStory_Guts">מובס, מרוסק לחתיכים אך לא הושמד כליל, האל העתיק נחתם במעמקי המבוך ביותר. אך לאחרונה החותם נשבר, והותיר את הדרך אל קן השדים פתוחה לרווחה. המפלצות מהסיוטים שנבראו בשנתו של האל העתיק היו רבות כל כך, עד שלא נותרה להן דרך מילוט והן נאלצו להתמזג יחדיו וליצור את האולמות המרתיעים האלה. וככל שאתה דורך על בשרם החי, אתה מרגיש את פעימות לבו של האל העתיק מהדהדות בתוכם.</string>
 
@@ -772,6 +787,7 @@
     <string name="town_deco_barrel_wine_name">חבית יין</string>
     <string name="town_deco_cabinet_name">ארון</string>
     <string name="town_deco_canvas_name">קנבס</string>
+    <string name="town_deco_chest_name">תיבה</string>
     <string name="town_deco_church_sign_desc">נראה שיש כנסייה בתוך הבניין הזה.</string>
     <string name="town_deco_counter_desc">שומר על מרחק טוב בינך לבין האדם שעומד מאחוריו.</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
@@ -815,6 +831,25 @@
     <string name="town_deco_window_name">חלון</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

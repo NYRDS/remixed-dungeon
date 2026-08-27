@@ -80,6 +80,7 @@
     <string name="Badges_StrengthAttained3">17 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained4">19 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained5">21 punten Kracht bereikt</string>
+    <string name="Badges_VictoryAll">Amulet van Yendor verkregen door alle klassen</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa verslagen</string>
     <string name="Bag_ACOpen">OPENEN</string>
     <string name="Bandit_Desc">De diepere verdiepingen van de dungeon hebben altijd een schuilplaats geboden voor allerlei criminelen. Niet iedereen kon gezond van verstand blijven tijdens hun lange verblijf ver van het daglicht. Lange geleden zijn deze dolle dieven en bandieten vergeten wie ze zijn en waarom ze stelen. Deze bandiet lijkt zijn dolk met iets te hebben bestreken!</string>
@@ -144,6 +145,7 @@
     <string name="ChampionOfEarthBuff_Info">De Kampioen van de Aarde belichaamt onwrikbare kracht: deze eigenschap verbetert de schadeweerstand van het wezen en vergroot zijn maximale vitaliteit. Deze transformatie maakt hem een geduchte tegenstander in de verraderlijke diepten, die aanvallen moeiteloos kan pareren en langdurige gevechten doorstaat met onwrikbaar vastberadenheid.</string>
     <string name="ChampionOfEarthBuff_Name">Kampioen van de Aarde</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Doordrenkt met de woede van de vlammen, versterkt deze eigenschap de felheid en gevechtskracht van het wezen. De Kampioen van het Vuur doemt op als een geduchte tegenstander, die verwoestende aanvallen ontketent die zijn vijanden in verzengende vlammen hullen, en angst inboezemt bij allen die het wagen zich tegen hem te verzetten.</string>
+    <string name="ChampionOfFireBuff_Name">Kampioen van Vuur</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">Een eenhandig zwaard van pure chaos. Het groeit met gevechten zoals zijn tweehandige broer, maar langzamer en tot een lager potentieel — waardoor je linkerhand vrij blijft voor een schild.</string>
     <string name="ChaosBlade_Name">chaoszwaard</string>
@@ -188,6 +190,7 @@
     <string name="Claymore_Info">Dit massieve zwaard zou in staat moeten zijn om door alles heen te snijden.</string>
     <string name="CloakBuff_Info">Een donkere mantel verhult je in de schaduw, waardoor je minder zichtbaar bent voor vijanden.</string>
     <string name="ClothArmor_Desc">Deze lichte bepantsering biedt eenvoudige bescherming.</string>
+    <string name="ClothArmor_Name">stoffen pantser</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="Codex_Story_12">Brandid wapen - Bij een succesvolle treffer geeft dit extra schade en kan het doel in brand steken.</string>
@@ -208,6 +211,7 @@
     <string name="ConfusionGas_Info">Hier zweeft een wolk verwarrend gas.</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
     <string name="CorpseDust_Name">lijkenstof</string>
+    <string name="CorpseExplosion_Name">Lijk Explosie</string>
     <string name="Crab_Name">rioolkrab</string>
     <string name="Crystal_Name">zwevend kristal</string>
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
@@ -263,6 +267,7 @@
     <string name="Firebloom_Name">Vuurbloem</string>
     <string name="FortuneTellerNPC_Desc">Deze vrouw draagt een lange, felgekleurde pij. Ze ziet er verrassend jong uit voor iemand die de geheime kunsten van de waarzeggerij beheerst. Als je dichterbij komt, hoor je haar zachtjes mompelen terwijl ze in de kristallen bol staart.</string>
     <string name="FortuneTellerNPC_Name">waarzegster</string>
+    <string name="FreezeGlobe_Info">Bevriest het geselecteerde personage, waardoor het korte tijd geen acties kan uitvoeren.</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
@@ -312,6 +317,7 @@
     <string name="HeroClass_Rog">schurke</string>
     <string name="HeroClass_RogPerks_2">Schurken zijn bedreven in lichte bepantsering en ontwijken aanvallen er beter in.</string>
     <string name="HeroClass_War">krijger</string>
+    <string name="HeroSubClass_DescAssa">Bij het uitvoeren van een verrassingsaanval, richt de _Meuchelmoorder_ extra schade aan bij zijn doelwit.</string>
     <string name="HeroSubClass_DescFreR">De _Vrijsprinter_ kan zich bijna twee keer zo snel voortbewegen als de meeste monsters. Tijdens het rennen is de Vrijsprinter veel moeilijker te raken. Maar daarvoor moet hij onbelast en niet verhongerd zijn.</string>
     <string name="HeroSubClass_DescNone">NIET GEVONDEN</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
@@ -373,11 +379,13 @@
     <string name="Journal_Wandmaker">Oude toverstafmaker</string>
     <string name="Journal_WellAwareness">Bron van Bewustzijn</string>
     <string name="King_Defense">geparreerd</string>
+    <string name="Knuckles_Name">boksbeugel</string>
     <string name="Kobold_Desc">Er werd aangenomen dat kobolds niets meer waren dan een legende. Als voorouders van de gewone gnolls woonden kobolds in de diepste en koudste grotten. Er wordt ook verteld dat hun ras techniek en machinebouw beheerste lang voordat de dwergen dat deden.</string>
     <string name="KunaiThrow_Info">Deze dodelijke kunai-worp wordt extreem snel uitgevoerd, zo snel dat je niet eens een doelwit kunt kiezen.\n\nWare meesters kunnen meer dan één kunai tegelijk werpen.</string>
 
     <string name="KunaiThrow_Name">Kunai-worp</string>
     <string name="Kusarigama_Info">Dit wapen bestaat uit een zeis aan een metalen ketting met een zwaar ijzeren gewicht aan het andere uiteinde.</string>
+    <string name="Kusarigama_Pull">TREKKEN</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">larve van de god</string>
     <string name="LastLevel_TileStatue">Pilaar</string>
@@ -397,6 +405,8 @@
     <string name="Level_TileLockedExit">Vergrendelde uitgang naar de diepte</string>
     <string name="Level_TileOpenDoor">Open deur</string>
     <string name="Level_TilePedestal">Voetstuk</string>
+    <string name="Level_TileStatue">Standbeeld</string>
+    <string name="Level_TileToxicTrap">Giftig gas val</string>
     <string name="LevitationBuff_Info">Het lichaam zweeft boven de grond en vermijdt vallen en andere gevaren op de grond.</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">H-hallo. Welkom in de bibliotheek. Hier vind je informatie over allerlei dingen die in de kerker te vinden zijn... eigenlijk kunnen we alleen kennis verstrekken die door avonturiers is ontdekt. Het... het is wat gênant. Dus elke keer dat je ons bezoekt, staat er waarschijnlijk iets nieuws te lezen.</string>
@@ -438,8 +448,10 @@
     <string name="MissileWeapon_Sure">Weet je zeker dat je het wilt uitrusten als een wapen voor gevechten op korte afstand?</string>
     <string name="MissileWeapon_Yes">Ja, ik weet wat ik doe</string>
     <string name="Mob_Attacking">Reken deze %s als dood!</string>
+    <string name="Mob_GoingTo">Al onderweg!</string>
     <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
     <string name="Mob_StaAmokStatus">%1$s loopt amok</string>
+    <string name="Mob_StaFleeingStatus">Deze %s vlucht</string>
     <string name="Mob_StaFleeingStatus2">Deze %1$s vlucht voor %2$s</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
@@ -464,6 +476,7 @@
     <string name="Nightmare_Name_Objective">nachtmerrie</string>
     <string name="OozeBuff_Name">Bijtend Slijk</string>
     <string name="Ooze_Death">%s slikt je op...</string>
+    <string name="Order_Name">Bevelen</string>
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
     <string name="OverpricedRation_Message">Dat eten smaakte oké.</string>
     <string name="PalaceServant_Golem_1">...</string>
@@ -488,11 +501,14 @@
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
     <string name="PlagueDoctorMask_Info">Dit… dit is geen gewone masker. Het is… een barrière. Een schild tegen de krachten van verval waar de Pestmeester onvermoeid tegen vecht. Gemaakt van het fijnste ebenhout, kunstvol ingesneden met het gezicht van een gierige schedel. De holle oogkasjes zijn gevuld met schitterende amethisten die zwak pulseren, als uitgaande kolen van een vuur. Elke adem die je neemt, elk woord dat je spreekt, wordt gefilterd door een labyrintachtig netwerk van buizen en filters. Een mengsel van krachtige kruiden en exotische specerijen vult de lucht binnenin, het stank van de dood maskerend dat als een lijkhemd om je heen hangt.</string>
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
+    <string name="PlagueDoctorNPC_After_Quest_2">Ben je er nog steeds? Hier! Neem dit.</string>
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze gebukte persoon is verborgen onder een leer overall. Van hem komt een bittere geur van medicijnen en... knoflook?</string>
     <string name="PlagueDoctorNPC_Name">pestarts</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… prachtig! De _slakken_, hun geheimen langzaam ontvouwend als bloemblaadjes in het maanlicht. Een schat aan informatie! Maar je hebt gelijk, _vijftig goud_ is nauwelijks een passende beloning. *Gikkelt maniakaal*.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
+    <string name="PlagueDoctorQuest_3_1_InProgress">Breng me een _vampier vleermuis_, levend en onbeschadigd! Haar bloed, haar vleugels… ze bevatten geheimen die ik moet onthullen!</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Dit is geen enkel beest! Het is een levend getuigenis van nekromantische kracht! Vang er eentje, levend en onbeschadigd! Deze _Doodsridder_… hij is de sleutel!</string>
+    <string name="PlagueDoctorQuest_4_2_Epilogue">Schitterend! Vijf _Kobold Ijsmagiers_, hun ijzige essentie nu van mij om te onderzoeken! Hun verbinding met de bevroren woestenijen, het is werkelijk fascinerend. De manier waarop ze water zelf manipuleren… werkelijk opmerkelijk. *Hij overhandigt je een flonkerende fiool gevuld met een levendige karmozijnrode vloeistof* Dit, is voor je dappere inspanningen: een _Drankje van Kracht_! Drink diep en voel de kracht van tien krijgers door je aderen stromen! Onthoud, kennis is macht… en macht is het enige wapen dat we hebben tegen de naderende duisternis. Nu… laten we deze ijzige zielen ontleden en hun ijzige geheimen onthullen!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Zijn skeletvingers tikken ritmisch tegen een borrelende ketel, de lucht om hem heek dik van de pittige stank van zwavel en verwesing*\n_Kobold Ijsmagiers_! Die jammerlijke wezens, gekrocht in hun bevroren grotten, wanhopig vasthoudend aan hun ijsmagie. Ik heb er vijf nodig, hun bevroren lichamen zullen... verlichtend zijn. Hun meesterwerk van ijs, het is... eigenaardig. Ik geloof dat ze aansluiten bij een oerenergie, een kracht die sluimert onder het oppervlakte van deze wereld.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Hij stottert, zijn stem kraakt als een broze tak*. A-ah, _succubi_! Twee... ja, twee, levend! Het is... hem... voor mijn onderzoek! Je ziet... hun feromonen... het is cruciaal om het delicate evenwicht te begrijpen van... ah... *Hij zwijgt, zijn botten hand reikt op om nerveus zijn masker te corrigeren, zijn ogen schieten naar jou met een koortsachtige intensiteit.* Hun... essentie... het is een puzzel... een prachtige, enigmatische puzzel! *Hij hoest hevig, probeert zijn kalmte te herwinnen.* Ik beloof, voor het brengen van twee van deze... wezens... zul je mijn eeuwige dankbaarheid hebben. Zie het als een... een gave aan kennis! Ja! Aan kennis!</string>
     <string name="PlagueDoctorQuest_AllDone">*Hij laat een droge, hijgende lach horen.* \&quot;Jouw daden hebben geheimen ontsluierd zonder maat! De verkregen kennis… het pulsert in mij, een symfonie van ontdekking. Maar kennis,\&quot; voegt hij eraan toe, zijn zinkend tot een samenzweerderig fluisteren, \&quot;kennis is macht. En macht… ah… dat is de meest bedwelmende elixer.\&quot; Hij kijkt je even intens aan, zijn amethistoogen branden met koortsachtige felheid. \&quot;Misschien,\&quot; mompelt hij, \&quot;kruisen onze paden elkaar weer. Want er zijn nog vele… mysteries… die nog ontrafeld moeten worden.\&quot;</string>
@@ -535,6 +551,7 @@
     <string name="QuickSlot_SelectedItem">Selecteer een item voor de quickslot</string>
     <string name="Quiver_Info">Leren kogelhouder geschikt voor elke hoeveelheid pijlen</string>
     <string name="RabbitEars_Info">Er bestaat een bijgeloof dat konijnen geluk geboren worden en dat iemand die een deel van het dier verkrijgt, vergezeld zal worden door het geluk van het beest. Bij nader inzien klinkt het niet echt als geluk: gedood worden om je oren, waar versieringen van gemaakt zullen worden.</string>
+    <string name="RaiseDead_Name">Dood opwekken</string>
     <string name="RankingsScene_Total">Totaal gespeelde spellen: </string>
     <string name="RatHide_Name">rattenhuid</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
@@ -628,17 +645,21 @@
     <string name="Sheep_Desc">Dit is een magisch schaap. Wat is er zo magisch aan? Je kunt het niet doden. Het blijft staan tot het magisch verdwijnt, terwijl het herkauwt met een lege blik.</string>
     <string name="ShieldBuffNotReady_Info">Je schild is nog niet klaar om de volgende aanval te blokkeren.</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
+    <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">schildgedrocht</string>
+    <string name="Shopkeeper_BuyPrompt">Laat me je inventaris zien</string>
     <string name="Shopkeeper_Name">winkelier</string>
     <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Dit zwaard is inderdaad vrij kort, slechts enkele centimeters langer dan een dolk.</string>
     <string name="ShortSword_Name">kort zwaard</string>
+    <string name="ShortSword_Reforged">je hebt de korte zwaard hersmeed om je %s te upgraden</string>
     <string name="Shuriken_Name">shuriken</string>
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SleepBuff_Info">Volledig in slaap</string>
     <string name="SmashSpell_Name">Verpletteren</string>
     <string name="Snail_Desc">Deze kleine weekdier is behoorlijk gegroeid door te voeden met rioolwater, maar hij is nog steeds heel traag, wat hem een makkelijke tegenstander maakt.</string>
+    <string name="Snail_Name">slak</string>
     <string name="SnipersMarkBuff_Name">Teken van de sluipschutter</string>
     <string name="SociologistNPC_AlreadyTaken">Je hebt al deelgenomen aan deze enquête, kom later terug</string>
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
@@ -711,6 +732,7 @@
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">gekke dief</string>
     <string name="Thief_Name_Objective">gekke dief</string>
+    <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Spelen</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="Torch_ACLight">AANSTEKEN</string>
@@ -875,6 +897,7 @@
     <string name="WndTradeItem_Buy">Koop voor %dg</string>
     <string name="WndTradeItem_Cancel">Vergeet het</string>
     <string name="WndTradeItem_Sell">Verkopen voor %dg</string>
+    <string name="WndTradeItem_Sell1">Verkoop 1 voor %dg</string>
     <string name="WndTradeItem_SellAll">Alles verkopen voor %dg</string>
     <string name="WndWandmaker_Battle">Gevechtsstaf</string>
     <string name="Wnd_Button_Back">Terug</string>
@@ -884,6 +907,7 @@
     <string name="WoodenCrossbow_Info">Een eenvoudige houten kruisboog, lijkt ontworpen om pijlen mee af te schieten.</string>
     <string name="WoodenShield_desc">Een grof gemaakt houten schild is het eenvoudigste schild dat verkrijgbaar is. Het is rond en kan af en toe een deel van de schade blokkeren.</string>
     <string name="WoodenShield_name">Houten schild</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">worm</string>
     <string name="Worm_Name_Objective">worm</string>
     <string name="Wraith_Desc">Een wraith is de wraakzuchtige geest van een zondaar, wiens graf of grafkelder werd verstoord. Als een etherische entiteit is het zeer lastig te raken met een gewoon wapen.</string>
@@ -892,9 +916,11 @@
     <string name="WrnExperimental_realtime">De real-time modus is geactiveerd: dit is nu een real-time roguelike, tik snel of sterf.\nWil je je inventaris controleren?\nVeel succes daarbij terwijl de rioolkrab je ingewanden bekijkt.</string>
     <string name="WrnExperimental_title">Experimentele opties ingeschakeld!</string>
     <string name="Yog_Gender">masculine</string>
+    <string name="Yog_Info1">...</string>
     <string name="YogsBrain_Name_Objective">Hersenen van Yog</string>
     <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">oog van Yog</string>
+    <string name="YogsEye_Name_Objective">Oog van Yog</string>
     <string name="YogsHeart_Gender">masculine</string>
     <string name="ZombieGnoll_Desc">Het verwrongen, gebroken lichaam van een gnoll-zombie lijkt niet meer op een mensachtige of een hyena. Al wat overblijft is een hoop rottend vlees en beenderen, vervuld van een kwaadaardige drang om te doden en te verslinden.</string>
     <string name="ZombieGnoll_Gender">masculine</string>
@@ -917,10 +943,12 @@
     <string name="town_deco_carpet_name">Tapijt</string>
     <string name="town_deco_charcoal_carpet_name">Tapijt</string>
     <string name="town_deco_chest_desc">Handig meubelstuk voor het opbergen van allerlei spullen en sieraden.</string>
+    <string name="town_deco_chest_name">Kist</string>
     <string name="town_deco_church_sign_desc">Het lijkt erop dat er een kerk in dat gebouw zit.</string>
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
     <string name="town_deco_cinema_sign_desc">Het lijkt erop dat er een bioscoop in dat gebouw zit.</string>
     <string name="town_deco_common_bed_desc">Gewoon bed.</string>
+    <string name="town_deco_crate_desc">Een stevige houten kist die zijn geheimen van binnen bewaart.</string>
     <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
     <string name="town_deco_crossroad_desc">Een ruwe houten paal met pijlvormige bordjes, de tekst waarop vervaagd is door de harde weersomstandigheden.</string>
     <string name="town_deco_dungeon_door_desc">De ingang van de kerker.</string>
@@ -971,6 +999,36 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -120,6 +120,7 @@
     <string name="CandleOfMindVision_Name">Nến Tầm Nhìn</string>
     <string name="Candy_Info">Viên kẹo này trông rất đẹp và mùi cũng thơm. Bạn có thực sự muốn tặng nó cho người khác không?</string>
     <string name="Candy_Name">kẹo</string>
+    <string name="Candy_Warning_2">Bây giờ thì ngươi thực sự đã ăn quá nhiều rồi. Bụng ngươi đau vì ăn quá nhiều kẹo.</string>
     <string name="Capotain_Name">Nón Pu-rinh</string>
     <string name="Carcass_DissectFailed">Bạn phẫu thuật %s nhưng không tìm thấy thứ gì có giá trị.</string>
     <string name="Carcass_DissectResult">Từ %1 bạn thu được %2 phần thu hoạch %3.</string>
@@ -136,6 +137,7 @@
     <string name="ChampionOfAirBuff_Info">Đặc tính này ban tặng cho sinh vật bản chất của gió, nâng cao sự nhanh nhẹn và khả năng chiến đấu. Võ sĩ Bậc Thầy Khí trở thành đối thủ đáng gờm, có thể tung ra những đòn tấn công nhanh chóng và tàn phá có thể thay đổi nhanh chóng cục diện trận chiến.</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Được thâu nhục bởi cơn giận của ngọn lửa, đặc tính này khuếch đại sự dữ dằn và khả năng chiến đấu của sinh vật. Võ sĩ Lửa nổi lên như một đối thủ đáng sợ, tung ra những đòn tấn công tàn khốc có thể bao quanh kẻ thù trong ngọn lửa thiêu rực, khiến tất cả những kẻ dám chống đối đều run rợn.\&quot;</string>
+    <string name="ChampionOfFireBuff_Name">Nhà Vô Địch Lửa</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">Mot thanh kiem mot tay cua hon loan than khiet. No phat trien trong chien dau nhu nguoi anh em hai tay cua no, nhung cham hon va tiem nang nho hon — de tay con lai tu do cho khiên.</string>
     <string name="ChaosBlade_Name">kiem hon loan</string>
@@ -194,6 +196,7 @@
     <string name="CompositeCrossbow_Name">nỏ composite</string>
     <string name="CompoundBow_Info">Các mũi tên bắn từ cây cung hợp kim này gây sát thương lớn và có độ chính xác tốt hơn cung gỗ, đổi lại là phần nào chậm hơn.</string>
     <string name="CorpseDust_Name">bụi xác</string>
+    <string name="CorpseExplosion_Name">Nổ Xác Chết</string>
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">cua cống</string>
     <string name="Crab_Name_Objective">cua cống</string>
@@ -233,11 +236,13 @@
     <string name="DrunkardNPC_Desc">Khách quen của quán rượu trong trạng thái tự nhiên.</string>
     <string name="DrunkardNPC_Name">người say xỉn</string>
     <string name="Drunkard_Phrase_1">CHO ANH XIN THÊM RƯỢU!</string>
+    <string name="Drunkard_Phrase_3">Cái bia này có vị như đất</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_NoTips">Chữ viết không thể đọc được...</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
     <string name="Dungeon_Tips_17">Giếng Chuyển Hóa có thể ban cho bạn một vật phẩm không thể có được bằng cách khác.</string>
     <string name="Dungeon_Tips_18">Cách duy nhất để phù phép vũ khí là nâng cấp nó bằng cuộn giấy Nâng cấp vũ khí.</string>
+    <string name="Dungeon_Tips_23">Văn bản được viết bằng ngôn ngữ quỷ dữ.</string>
     <string name="Dungeon_Tips_3">Bạn có thể dùng vàng của mình ở các cửa hàng hoặc dịch vụ trong thị trấn hoặc ngục.</string>
     <string name="Dungeon_Tips_4">Cẩn thận Goo!</string>
     <string name="Dungeon_Tips_6">Xác định thuốc và cuộn giấy càng sớm càng tốt. Đừng để đến lúc bạn thực sự cần chúng mới làm.</string>
@@ -296,7 +301,9 @@
     <string name="Heal_Info">Một phép thuật khá hữu ích trong ngục, phải không?</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Chữa trị miễn phí cho mọi phiêu lưu giả!</string>
+    <string name="HealerNPC_Message3">Tôi tự hỏi tại sao nhà thờ không cho phép chúng tôi đội mũ... trời lạnh lắm ngoài này.</string>
     <string name="HealerNPC_Name">lính tế thành phố</string>
+    <string name="HealthArrow_Info">Đầu mũi tên này được phủ bởi thuốc hồi máu.</string>
     <string name="HeartOfDarkness_Name">Trái tim của bóng tối</string>
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
     <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
@@ -335,6 +342,7 @@
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
     <string name="Hero_StaBurning">Bạn bị bốc cháy!</string>
     <string name="Hero_StaCharm">Bạn bị mê hoặc!</string>
+    <string name="Hero_StaFury">Ngươi trở nên cuồng bạo!</string>
     <string name="Hero_StaRoots">Bạn không thể di chuyển!</string>
     <string name="Hero_Wait">...</string>
     <string name="Horror_Name_0">Quái dị %s</string>
@@ -377,6 +385,7 @@
     <string name="JarOfSouls_Desc">Cặp mắt sáng lóa của chiếc sọ được vẽ trên cái hũ cũ này, cũng như năng lượng kỳ lạ mà nó tỏa ra, khiến bạn cảm thấy bất an.</string>
     <string name="JarOfSouls_Name_Objective">bình chứa linh hồn</string>
     <string name="Journal_Alchemy">Nồi giả kim thuật</string>
+    <string name="Journal_Azuterron">Người lạ</string>
     <string name="Journal_Caged_Kobold">Kobold Bị Giam</string>
     <string name="Journal_Troll">Thợ rèn Troll</string>
     <string name="Journal_WellAwareness">Giếng Nhận Thức</string>
@@ -392,7 +401,10 @@
     <string name="KunaiThrow_Name">Ném kunai</string>
     <string name="Kusarigama_Info">Vũ khí này gồm một lưỡi liềm gắn trên chuỗi xích kim loại với một quả tạ sắt nặng ở đầu bên kia.</string>
     <string name="Kusarigama_Name">kusarigama</string>
+    <string name="Kusarigama_Pull">KÉO</string>
+    <string name="Larva_Desc">Ấu trùng của Thần Cổ</string>
     <string name="LastShopLevel_TileDescEntrance">Một lối dẫn lên tầng trên.</string>
+    <string name="LastShopLevel_TileHighGrass">Hoa nở rộ</string>
     <string name="Leech_Name_0">Hút máu %s</string>
     <string name="Level_TileDefault">\?\?\?</string>
     <string name="Level_TileDescChasm">Ngươi không thấy đáy.</string>
@@ -448,7 +460,9 @@
     <string name="Mob_StaSleepingStatus">%s này đang ngủ</string>
     <string name="Mob_StaTerrorStatus2">%1 này kinh hoàng trước %2</string>
     <string name="Mob_StaWanderingStatus">%s đang lang thang</string>
+    <string name="Monk_Name">tu sĩ lùn</string>
     <string name="Moongrace_Desc">Những loài cây này mọc ít ỏi và được biết đến như một nguồn phép thuật tự nhiên.</string>
+    <string name="MysteryMeat_Info2">Ngươi không cảm thấy chân mình nữa!</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
     <string name="MysteryMeat_Message">Món ăn này có vị... lạ.</string>
     <string name="NecromancerArmor_Info">Bộ giáp này cho phép Pháp sư Hắc huyết triệu hồi tối đa hai Deathling, mỗi thứ tốn 5 linh hồn. Những tôi tớ bất tử này sẽ theo chủ và tấn công kẻ thù. Deathling sẽ trở nên mạnh hơn theo cấp độ anh hùng.</string>
@@ -463,6 +477,7 @@
     <string name="NecrotismBuff_Name">Hoại tử</string>
     <string name="Nightmare_Name_Objective">ác mộng</string>
     <string name="Ooze_Death">%s nuốt chửng bạn...</string>
+    <string name="Order_Name">Mệnh lệnh</string>
     <string name="PalaceServant_Golem_1">...</string>
     <string name="PalaceServant_Golem_2">Hội trường này là thiêng liêng.</string>
     <string name="PalaceServant_Golem_3">*tiếng gầm trầm thấp*</string>
@@ -571,7 +586,9 @@
     <string name="RottenPumpkinPie_Info">Dù bánh bí ngon đến đâu khi còn tươi, giờ thì chắc chắn không thể ăn được.</string>
     <string name="RottenRation_Name">Cơm khô hỏng</string>
     <string name="RottingFist_Desc">Nắm đấm thối rữa của Thần Cổ</string>
+    <string name="RottingFist_Name_Objective">nắm đấm thối rữa</string>
     <string name="RunicSkull_Desc">Đối với thứ gì đó được tạo ra nhân tạo, chiếc sọ này quá giống một chiếc sọ thật. Bạn cũng có thể thấy một chút ánh sáng yếu ớt bao quanh nó.</string>
+    <string name="RunicSkull_Name">đầu lâu rune</string>
     <string name="SacrificialSword_Name">kiếm hiến tế</string>
     <string name="ScarecrowNPC_Name_Objective">ngáo</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
@@ -592,6 +609,7 @@
     <string name="ScrollOfTeleportation_NoTeleport">Sức mạnh ma pháp của nơi này ngăn cản việc dịch chuyển của bạn!</string>
     <string name="ScrollOfTeleportation_Teleport">Trong nháy mắt, bạn đã được dịch chuyển đến một vị trí khác trên cấp độ này.</string>
     <string name="ScrollOfTerror_Info3">Cuộn giấy phát ra một tia sáng đỏ rực và lũ quái vật bỏ chạy!</string>
+    <string name="ScrollOfUpgrade_Info">Cuộn giấy này sẽ nâng cấp một vật phẩm duy nhất, cải thiện chất lượng của nó. Một cây đũa phép sẽ tăng sức mạnh và số lượng điện tích; một vũ khí sẽ gây thêm sát thương hoặc tìm điểm yếu thường xuyên hơn; một bộ giáp sẽ đỡ thêm nhiều đòn; hiệu quả của chiếc nhẫn lên người đeo sẽ được tăng cường. Vũ khí và giáp cũng sẽ yêu cầu ít sức mạnh hơn để sử dụng, và mọi lời nguyền trên vật phẩm sẽ được hóa giải.</string>
     <string name="ScrollOfWeaponUpgrade_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
     <string name="ScrollOfWeaponUpgrade_Name">Cuộn Nâng Cấp Vũ Khí</string>
     <string name="Scroll_Name">cuộn giấy \&quot;%s\&quot;</string>
@@ -645,6 +663,7 @@
     <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Name">Nhà xã hội học</string>
     <string name="SoulShard_Info">Đây là một mảnh vỡ lấy từ tàn tích của Hũ Linh Hồn. Nó lấp lánh với sức mạnh bí ẩn, có lẽ có ai đó quan tâm đến thứ như thế này.</string>
+    <string name="SoulShard_Name">mảnh linh hồn</string>
     <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_NotEnoughSP">Bạn không đủ mana để thi triển phép \&quot;%1$s\&quot;.</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
@@ -652,6 +671,7 @@
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderElite_Name">vệ binh nhện tinh nhuệ</string>
     <string name="SpiderExploding_Desc">Trong thời bình, những sinh vật này là những người làm việc chăm chỉ, nhưng chúng sẽ không ngần ngại lao vào kẻ thù và hái lấy cây đầu tiên chúng gặp phải, biến mình thành những quả bom sống.</string>
+    <string name="SpiderGuard_Name">nhện canh gác</string>
     <string name="SpiderGuard_Name_Objective">vệ binh nhện</string>
     <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">nhện hổ phách</string>
@@ -699,6 +719,7 @@
     <string name="TownGuardNPC_Message1">Đi tiếp nào.</string>
     <string name="TownGuardNPC_Message3">Bạn nghĩ có quá nhiều vệ sĩ ở thành phố này? Vâng, vì đây là thành phố duy nhất có một hang động khổng lồ đầy quái vật, đúng không?</string>
     <string name="TownGuardNPC_Name">lính gác thị trấn</string>
+    <string name="TownPortal_Info">Phép thuật này cho phép bạn quay về nơi an toàn ngay lập tức. Tuy nhiên, các nguồn sức mạnh phép thuật gần đó có thể ngăn nó hoạt động như mong muốn.</string>
     <string name="TownPortal_Name">Cổng Thần Thoại</string>
     <string name="TownsfolkMovieNPC_Desc">Một người dân địa phương. Dù rõ ràng chỉ là thường dân, bộ quần áo của hắn lại trông rất đắt tiền.</string>
     <string name="TownsfolkMovieNPC_Name_Objective">người dân thành phố</string>
@@ -726,6 +747,7 @@
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
     <string name="WandOfAvalanche_Info1">Bạn đã nghiền nát chính mình bằng Gậy Bão Tuyết của chính mình...</string>
     <string name="WandOfDisintegration_Info">Cây gậy này phát ra một tia năng lượng hủy diệt, xuyên thủng tất cả sinh vật trên đường đi. Càng nhiều mục tiêu bị trúng, càng nhiều sát thương nó gây ra cho mỗi mục tiêu.</string>
+    <string name="WandOfDisintegration_Name">Đũa phép Phân rã</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfMagicMissile_Info">Cây gậy này phóng ra các tên lửa năng lượng ma thuật thuần khiết, gây sát thương trung bình cho mục tiêu.</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
@@ -817,6 +839,7 @@
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndRanking_Stats">Thống kê</string>
+    <string name="WndSadGhostNecro_No">Không, để nó nói.</string>
     <string name="WndSadGhost_Farewell">Tạm biệt, nhà thám hiểm! Chúc may mắn!</string>
     <string name="WndSadGhost_Rose">Đúng rồi! Đúng rồi!!! Chính là nó! Xin hãy đưa nó cho tôi! Và bạn có thể lấy một trong những món đồ này, biết đâu chúng sẽ hữu ích cho bạn trên hành trình...</string>
     <string name="WndSaveSlotSelect_Delete_No">Không</string>
@@ -831,6 +854,7 @@
     <string name="WndSettings_Quickslots">Khe truy cập nhanh</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
     <string name="WndSettings_SelectLanguage">Chọn ngôn ngữ</string>
+    <string name="WndSettings_ThirdQuickslot">Khoản truy cập nhanh thứ ba</string>
     <string name="WndSettings_UiScale">Tỷ lệ giao diện</string>
     <string name="WndSettings_ZoomOut">-</string>
     <string name="WndStory_Guts">Thần Cổ bị đánh bại, vỡ vụn thành trăm mảnh nhưng chưa bị tiêu diệt hoàn toàn, đã bị phong ấn tại những tầng sâu nhất của hầm ngục. Nhưng gần đây con dấu đã bị phá vỡ, mở toang lối đi đến tổ của quỷ dữ. Những con quái vật ác mộng mà Thần Cổ tạo ra trong giấc ngủ của ngài đông đến mức chẳng còn lối thoát, chúng buộc phải hợp nhất với nhau tạo nên những đại sảnh kỳ dị này. Và khi bạn bước trên lớp thịt sống của chúng, bạn có thể cảm nhận nhịp đập trái tim của Thần Cổ vang vọng khắp nơi.</string>
@@ -861,6 +885,7 @@
     <string name="YogsBrain_Name_Objective">não của Yog</string>
     <string name="YogsEye_Desc">Mắt của Thần Cổ, ánh nhìn toàn kiến đầy ắp căm thù vĩnh cửu. Bạn có thể cảm thấy nó nhìn thấu qua linh hồn của mình.</string>
     <string name="YogsEye_Name">mắt của Yog</string>
+    <string name="YogsHeart_Name">trái tim của Yog</string>
     <string name="YogsHeart_Name_Objective">trái tim Yog</string>
     <string name="ZombieGnoll_Desc">Cơ thể biến dạng, gãy đổ của gnoll zombie không còn giống người hay linh chó nữa. Còn lại chỉ là một đống thịt thối và xương, đầy lòng thù ghét khao khát giết chóc và nhấn nhá.</string>
     <string name="ZombieGnoll_Gender">masculine</string>
@@ -916,6 +941,7 @@
     <string name="town_deco_scrolls_name">Cuộn</string>
     <string name="town_deco_shelf_full_name">Kệ sách</string>
     <string name="town_deco_shelf_name">Các kệ sách</string>
+    <string name="town_deco_shieldboard_desc">Các loại khiên treo trên bảng. Chưa được bán.</string>
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_statue_blood_desc">Một bức tượng thiên thần uy nghi đang cầm chiếc bát đựng máu.</string>
@@ -937,6 +963,35 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
