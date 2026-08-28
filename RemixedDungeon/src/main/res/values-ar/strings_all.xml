@@ -399,6 +399,7 @@
     <string name="LibrarianNPC_Name">أمين المكتبة</string>
     <string name="Lich_Desc">النكرومانسر لقي حتفه في أعماق النكروليس، وبتدريج، تحولت القوى الشريرة التي كانت تتدفق إلى جسده إلى ليتش. ساحر موت، دمية بلا إرادة، تسيطر عليها قوى خبيثة...</string>
     <string name="Lich_DieInfo">لم أحب أبدًا هذا الساحر الميت. حان الوقت للعودة إلى المستوى 7 وإيجاد طريق آخر للمغامرة الجديدة.</string>
+    <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name_Objective">ليتش</string>
     <string name="LightBuff_Name">مضيء</string>
     <string name="LightningBolt_Info">تعويذة تُتداول بين الشامان القدماء، تصعق أعداءك بفعالية مضاعفة، خاصة إذا كانوا أغبياء بما يكفي ليقفوا فوق الماء.</string>
@@ -434,6 +435,7 @@
     <string name="Mods_RestartRequired">مطلوب إعادة تشغيل</string>
     <string name="Monk_Name">راهب قزم</string>
     <string name="MysteryMeat_Info2">لا تستطيع أن تشعر بساقيك!</string>
+    <string name="NatureArmorSpell_Name">درع الطبيعة</string>
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">آه! يا له من منظر نادر! زميل مغامر ليس مجرد جثة بلا حياة! لا يكاد يصدق! أوه... أعتذر، أحياناً أشعر بالحماس الشديد. ترى، أنا نِكْرومانسي (ساحر الموتى). وعلى الرغم من أن دراسة الموتى والموت نفسه هو مهنتي، إلا أن رؤية نفس الأشياء مراراً وتكراراً تصبح مرهقة للغاية في النهاية. من ناحية أخرى، هذا هو السبب بالضبط في وجودي هنا. وفقاً لحساباتي، في غضون أسابيع قليلة، في مكان ما في هذا الزنزانة بالذات، سيحدث شيء مذهل. الـ _نِكْرُوبُولِس_ (المقبرة القديمة)، مدينة الموتى القديمة، ستفتح أبوابها. و... لا يمكنني حقاً قول الكثير، لقد أضعت وقتاً كافياً كما هو الحال. أنا بحاجة للاستعداد، _عد لاحقاً_.</string>
     <string name="NecromancerNPC_Message2">يجب أن أكون جاهزاً.</string>
@@ -575,6 +577,7 @@
     <string name="ScrollOfCurse_Name">لفافة اللعنة</string>
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
     <string name="ScrollOfLullaby_Info1">يتلو اللفافة لحناً هادئاً.</string>
+    <string name="ScrollOfTerror_Info3">يصدر المخطوط وميضاً أحمر ساطعاً وتفر الوحوش!</string>
     <string name="ScrollOfUpgrade_LooksBetter">أصبح %s بالتأكيد يبدو أفضل الآن</string>
     <string name="ScrollOfUpgrade_Name">مخطوطة ترقية</string>
     <string name="ScrollOfWeaponUpgrade_Info">سيؤدي هذا المخطوطة إلى ترقية سلاح قتال قريب، مما يحسن جودته. على عكس مخطوطة الترقية العادية، لن يدمر هذا الإصدار المتخصص أي سحر على السلاح. بل على العكس، قادر على إضفاء سحر عشوائي على سلاح غير مسحور.</string>
@@ -587,6 +590,7 @@
     <string name="Scroll_Runes_6">إيساز</string>
     <string name="Scroll_Runes_9">بيركانان</string>
     <string name="SeedPouch_Info">هذه الحقيبة المخملية الصغيرة تسمح لك بتخزين أي عدد من البذور فيها. مريحة جداً.</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name_Objective">خادمة الفندق</string>
     <string name="ServiceManNPC_Desc">عامل عادي في المؤسسات المحلية.</string>
@@ -829,6 +833,7 @@
     <string name="town_deco_blue_carpet_desc">سجادة زرقاء فاخرة، مزينة بنقوش بنفسجية.</string>
     <string name="town_deco_blue_carpet_name">سجادة</string>
     <string name="town_deco_book_desc">يبدو هذا الكتاب وكأن شخصًا ما تركه بإهمال هنا</string>
+    <string name="town_deco_broken_wall_desc">الجذوع في هذا الجدار قد تعفنت منذ زمن طويل وفقدت مرونتها المعتادة.</string>
     <string name="town_deco_broken_wall_name">جدار متهدم</string>
     <string name="town_deco_brown_carpet_desc">هذا السجاد البني قد وطئته أقدام العديد من المغامرين والمتشردين والمارة.</string>
     <string name="town_deco_cabinet_desc">خزانة واسعة ذات أبواب ورفوف كثيرة.</string>
@@ -862,6 +867,7 @@
     <string name="town_deco_rug_desc">مصمم بذوق رفيع</string>
     <string name="town_deco_screen_name">فاصل</string>
     <string name="town_deco_shelf_full_desc">على هذا الرف توجد مقتنيات صغيرة متنوعة.</string>
+    <string name="town_deco_shelving_name">أرفف</string>
     <string name="town_deco_shop_sign_desc">يبدو أن هناك متجراً داخل هذا المبنى.</string>
     <string name="town_deco_skulls_desc">جماجم مصقولة تنتمي إلى مخلوقات من الزنزانة.</string>
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
@@ -879,6 +885,12 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
 
 
 

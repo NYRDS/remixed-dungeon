@@ -282,6 +282,7 @@
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenCarpaccio_Info3">Sảng khoái!</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
+    <string name="FuryBuff_Name">Cuồng Nộ</string>
     <string name="GameScene_NightMode">Hãy cẩn thận, hầm ngục còn nguy hiểm hơn vào ban đêm!</string>
     <string name="GameScene_Welcome">Chào mừng bạn đến cấp %d của Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Chào mừng quay lại cấp độ %d của Remixed Dungeon!</string>
@@ -312,6 +313,7 @@
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
     <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
     <string name="HeroClass_ElfPerks_5">Yếu tinh kém thành thạo hơn với vũ khí cận chiến.</string>
+    <string name="HeroClass_GnollPerks_1">Gnoll bắt đầu với 5 điểm sức khỏe</string>
     <string name="HeroClass_GnollPerks_2">Gnoll bắt đầu không có giáp nào nhưng có một cái rìu tomahawk độc nhất</string>
     <string name="HeroClass_GnollPerks_3">Gnoll không thể đọc hoặc viết.</string>
     <string name="HeroClass_HunPerks_1">Các Nữ Thợ Săn bắt đầu với một bumerang độc đáo có thể nâng cấp.</string>
@@ -365,6 +367,7 @@
     <string name="IceCaves_TileHighGrass">Cỏ cao đóng băng</string>
     <string name="IceGuardianCoreModule_Info">Đây là một cấu trúc phức tạp được làm từ băng ma thuật. Một viên đá phát sáng được đặt bên trong phát minh kỳ diệu này.</string>
     <string name="IceGuardianCore_DieInfo">Ở đây quá lạnh, tôi nên quay lại cấp 14 và cố gắng tìm đường đến nơi ấm áp hơn.</string>
+    <string name="IceGuardian_Desc">Vệ Binh Băng được tạo ra bởi những kobold cổ xưa để bảo vệ hang động của chúng. Cho đến khi lõi của Vệ Binh chứa đủ năng lượng, hắn có thể tự tái tạo ngay giữa trận chiến.</string>
     <string name="IceGuardian_Name_Objective">vệ binh băng</string>
     <string name="IceKey_Name">chìa khóa băng</string>
     <string name="Ignite_Name">Đốt Cháy</string>
@@ -399,6 +402,7 @@
     <string name="King_Info1">Bạn không thể giết được tôi, %s... Tôi là... bất tử...</string>
     <string name="King_Info2">Dậy đi, lũ nô lệ!</string>
     <string name="Knuckles_Name">cặp đấm</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="Kobold_Desc">Người ta tin rằng Kobold chỉ là truyền thuyết. Là tổ tiên của loài quỷ lùn, kobold cư ngụ trong những hang động sâu và lạnh nhất. Người ta cũng kể rằng giống loài này đã làm chủ kỹ nghệ và máy móc từ lâu trước khi người lùn làm được điều đó.</string>
     <string name="Kobold_Gender">masculine</string>
     <string name="KunaiThrow_Info">Đòn ném kunai chết người này được thực hiện cực kỳ nhanh, nhanh đến mức bạn thậm chí không thể chọn mục tiêu.\n\nBậc thầy thực sự có thể ném nhiều hơn một kunai cùng lúc.</string>
@@ -411,6 +415,7 @@
     <string name="LastShopLevel_TileDescEntrance">Một lối dẫn lên tầng trên.</string>
     <string name="LastShopLevel_TileHighGrass">Hoa nở rộ</string>
     <string name="Leech_Name_0">Hút máu %s</string>
+    <string name="Level_TileClosedDoor">Cửa đóng</string>
     <string name="Level_TileDefault">\?\?\?</string>
     <string name="Level_TileDescChasm">Ngươi không thấy đáy.</string>
     <string name="Level_TileDescExit">Cầu thang dẫn xuống tầng sâu hơn.</string>
@@ -596,6 +601,7 @@
     <string name="RottenRation_Name">Cơm khô hỏng</string>
     <string name="RottingFist_Desc">Nắm đấm thối rữa của Thần Cổ</string>
     <string name="RottingFist_Name_Objective">nắm đấm thối rữa</string>
+    <string name="Rudolph_Name">Mũi đỏ và sừng hươu</string>
     <string name="RunicSkull_Desc">Đối với thứ gì đó được tạo ra nhân tạo, chiếc sọ này quá giống một chiếc sọ thật. Bạn cũng có thể thấy một chút ánh sáng yếu ớt bao quanh nó.</string>
     <string name="RunicSkull_Name">đầu lâu rune</string>
     <string name="SacrificialSword_Name">kiếm hiến tế</string>
@@ -978,6 +984,12 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
 
 
 
