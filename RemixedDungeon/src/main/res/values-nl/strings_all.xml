@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Verslinden</string>
     <string name="AC_Dissect">Ontleden</string>
@@ -59,6 +58,7 @@
     <string name="Badges_Champion">Uitdaging gewonnen</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
     <string name="Badges_DeathPoison">Dood door vergiftiging</string>
+    <string name="Badges_GnollUnlocked">Gnoll ontgrendeld</string>
     <string name="Badges_GoldColleted4">7500 goud verzameld</string>
     <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
     <string name="Badges_Immured">Dood door inmuring</string>
@@ -94,7 +94,7 @@
     <string name="BattleAxe_Info">Het enorme staande hoofd van deze strijdbijl geeft een aanzienlijk gewicht achter elke slag.</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
     <string name="Bee_Gender">masculine</string>
-    <string name="BellaNPC_Desc">Een heel posh meisje. Haar hele uiterlijk zegt je: \"Ik ben te goed voor iedereen.\"</string>
+    <string name="BellaNPC_Desc">Een heel posh meisje. Haar hele uiterlijk zegt je: \&quot;Ik ben te goed voor iedereen.\&quot;</string>
     <string name="BellaNPC_Yes_End_Game">Zeker (Beëindig het spel)</string>
     <string name="Belongings_CantWearBoth">Je kunt %1$s en %2$s niet tegelijkertijd uitrusten!</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
@@ -106,7 +106,7 @@
     <string name="BlackSkullOfMastery_Lich">Word een Lich</string>
     <string name="BlackSkullOfMastery_Name">De Zielbrenger</string>
     <string name="BlackSkull_Activated">De Zwarte Schedel is ontwaakt!</string>
-    <string name="BlackSkull_Info">Een kleine schedel van obsidiaan. Het was de bron van de krachten van de Necropolis, maar na de nederlaag van de Lich lijkt het al zijn krachten verloren te hebben. Maar wanneer je het in je handen houdt, gaat er een vreemde gedachte door je heen: \"Het Hongert\".</string>
+    <string name="BlackSkull_Info">Een kleine schedel van obsidiaan. Het was de bron van de krachten van de Necropolis, maar na de nederlaag van de Lich lijkt het al zijn krachten verloren te hebben. Maar wanneer je het in je handen houdt, gaat er een vreemde gedachte door je heen: \&quot;Het Hongert\&quot;.</string>
     <string name="BlackSkull_Name">zwarte schedel</string>
     <string name="BlackSkull_Ressurrect">De Zwarte Schedel Heeft Dode Wezens Herrezen Om Je Te Dienen!</string>
     <string name="Blacksmith_Gold1">Hey mens! Wil je nuttig zijn, hé? Pak die houweel en ontgin voor me wat _donker gouderts_, _15 stukken_ zou genoeg moeten zijn. Wat bedoel je, hoe ga ik betalen? Je gierige...\nOké, oké, ik heb geen geld om te betalen, maar ik kan wat smeden voor je. Reken je gelukkig, ik ben de enige smid in de buurt.</string>
@@ -145,7 +145,7 @@
     <string name="Challenges_Names_5">In de duisternis</string>
     <string name="ChampionOfEarthBuff_Info">De Kampioen van de Aarde belichaamt onwrikbare kracht: deze eigenschap verbetert de schadeweerstand van het wezen en vergroot zijn maximale vitaliteit. Deze transformatie maakt hem een geduchte tegenstander in de verraderlijke diepten, die aanvallen moeiteloos kan pareren en langdurige gevechten doorstaat met onwrikbaar vastberadenheid.</string>
     <string name="ChampionOfEarthBuff_Name">Kampioen van de Aarde</string>
-    <string name="ChampionOfFireBuff_Info">\"Doordrenkt met de woede van de vlammen, versterkt deze eigenschap de felheid en gevechtskracht van het wezen. De Kampioen van het Vuur doemt op als een geduchte tegenstander, die verwoestende aanvallen ontketent die zijn vijanden in verzengende vlammen hullen, en angst inboezemt bij allen die het wagen zich tegen hem te verzetten.</string>
+    <string name="ChampionOfFireBuff_Info">\&quot;Doordrenkt met de woede van de vlammen, versterkt deze eigenschap de felheid en gevechtskracht van het wezen. De Kampioen van het Vuur doemt op als een geduchte tegenstander, die verwoestende aanvallen ontketent die zijn vijanden in verzengende vlammen hullen, en angst inboezemt bij allen die het wagen zich tegen hem te verzetten.</string>
     <string name="ChampionOfFireBuff_Name">Kampioen van Vuur</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">Een eenhandig zwaard van pure chaos. Het groeit met gevechten zoals zijn tweehandige broer, maar langzamer en tot een lager potentieel — waardoor je linkerhand vrij blijft voor een schild.</string>
@@ -199,7 +199,7 @@
     <string name="Codex_Story_17">Verstikkend wapen - Bij succesvolle treffer kan het doelwit verlamd raken.</string>
     <string name="Codex_Story_20">Vrieswapen - Een succesvolle treffer kan het doel vertragen en voorkomen dat het in brand vliegt.</string>
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
-    <string name="Codex_Story_25">Zij stak, bevroren, voor de zware eikenen deur, en keek naar het licht dat uit de deurranden doordrong. Uit een verwaarloosd hoekje van haar geest kwam herkenning.\n\"Zonlicht..\" mompelde ze tegen zichzelf. Hoe lang was het geweest? In de eeuwige duisternis van de Kelder had ze lang geleden opgehouden de dagen te tellen. Het licht verlichtte vergeten herinneringen. Ze herinnerde haar training, lange dagen van zware oefening met boomerang en zwaard, van logboek bijhouden en kaarten maken. Ze herinnerde de mantra\'s en disciplines die bedoeld waren om haar een schijn van gezond verstand te laten behouden terwijl ze de onbekende diepgang verkennde. Wat ze niet herinnerde, niet kon herinneren, waren mensen.\nZe herinnerde hun stemmen, hun bevelen en hun waarschuwingen, maar niet hun gezichten, noch hun aanraking.\nPijn had haar getraind. Onthoud de gevaren, altijd de gevaren. Tollende dieren, onoversterven, onzinnige bendes en slimme ninja\'s waren voor haar gevallen. Ze had gesneden, gebrand, gestoken en vergiftigd haar weg gebaan door afschuwelijke wezens, demonen, klokwerk-afschuwelijkheden en onzinnige necromanten. Zelfs goden waren voor haar gevallen.\nZe had Yog gevolgd door Hemel en Hel, voordat ze zijn corrumpterende fluisteringen voor altijd stilte. Toch was er nog werk te doen. Yog was een dienaar van iemand nog meer occulte en krachtigere dan hijzelf.\nZo dook ze verder, dieper. Het dagboek van de oude tovenaar, nog steeds stralend van kracht, had haar de weg getoond. Met de magie in zijn bladen reisde ze naar een woud nieuw land, een klein dorpje verborgen in een machtig bos. Daar voltooide ze ten slotte het kwaad tot zijn doolhof-achtige bron, en versloeg allen die voor haar stonden.\nNu, in het felle daglicht, onderzocht ze zichzelf in een kuil grotwater. Haar lichaam was door magie bijna onherkenbaar vervormd. Haar huid, bleek tot het punt van doorschijnend, was bedekt met vuil, slijk en roet. Haar ketting met ringen kon een koningsgeld waard zijn, en haar wapenhouder met staven bevatte genoeg magische energie om legers te verwoesten. Ze greep haar wapens, letterlijk fijn genoeg om de goden zelf neer te hakken. Werkelijk, ze was meester geworden van dit donkere rijk, deze woestijn van wanhoop.\nZe had het kwaad gejaagd tot in de verre hoeken van het multiversum, maar nu was ze bevroren van angst. Wat als ze haar verwerpte? Wat als ze dat niet deed? Hoe kon ze nog ooit met deze mensen omgaan? Hel, ze had de keren dat de dood haar had geëist, en weer was weggehaald uit zijn ijzergreep, niet meer geteld.\nNee, er was geen plek voor haar in het licht, niet meer. Ze keerde zich af van het mager licht, en daalde in het donker, misschien voor de laatste keer.\n\n\n\tby drazool from reddit</string>
+    <string name="Codex_Story_25">Zij stak, bevroren, voor de zware eikenen deur, en keek naar het licht dat uit de deurranden doordrong. Uit een verwaarloosd hoekje van haar geest kwam herkenning.\n\&quot;Zonlicht..\&quot; mompelde ze tegen zichzelf. Hoe lang was het geweest? In de eeuwige duisternis van de Kelder had ze lang geleden opgehouden de dagen te tellen. Het licht verlichtte vergeten herinneringen. Ze herinnerde haar training, lange dagen van zware oefening met boomerang en zwaard, van logboek bijhouden en kaarten maken. Ze herinnerde de mantra\'s en disciplines die bedoeld waren om haar een schijn van gezond verstand te laten behouden terwijl ze de onbekende diepgang verkennde. Wat ze niet herinnerde, niet kon herinneren, waren mensen.\nZe herinnerde hun stemmen, hun bevelen en hun waarschuwingen, maar niet hun gezichten, noch hun aanraking.\nPijn had haar getraind. Onthoud de gevaren, altijd de gevaren. Tollende dieren, onoversterven, onzinnige bendes en slimme ninja\'s waren voor haar gevallen. Ze had gesneden, gebrand, gestoken en vergiftigd haar weg gebaan door afschuwelijke wezens, demonen, klokwerk-afschuwelijkheden en onzinnige necromanten. Zelfs goden waren voor haar gevallen.\nZe had Yog gevolgd door Hemel en Hel, voordat ze zijn corrumpterende fluisteringen voor altijd stilte. Toch was er nog werk te doen. Yog was een dienaar van iemand nog meer occulte en krachtigere dan hijzelf.\nZo dook ze verder, dieper. Het dagboek van de oude tovenaar, nog steeds stralend van kracht, had haar de weg getoond. Met de magie in zijn bladen reisde ze naar een woud nieuw land, een klein dorpje verborgen in een machtig bos. Daar voltooide ze ten slotte het kwaad tot zijn doolhof-achtige bron, en versloeg allen die voor haar stonden.\nNu, in het felle daglicht, onderzocht ze zichzelf in een kuil grotwater. Haar lichaam was door magie bijna onherkenbaar vervormd. Haar huid, bleek tot het punt van doorschijnend, was bedekt met vuil, slijk en roet. Haar ketting met ringen kon een koningsgeld waard zijn, en haar wapenhouder met staven bevatte genoeg magische energie om legers te verwoesten. Ze greep haar wapens, letterlijk fijn genoeg om de goden zelf neer te hakken. Werkelijk, ze was meester geworden van dit donkere rijk, deze woestijn van wanhoop.\nZe had het kwaad gejaagd tot in de verre hoeken van het multiversum, maar nu was ze bevroren van angst. Wat als ze haar verwerpte? Wat als ze dat niet deed? Hoe kon ze nog ooit met deze mensen omgaan? Hel, ze had de keren dat de dood haar had geëist, en weer was weggehaald uit zijn ijzergreep, niet meer geteld.\nNee, er was geen plek voor haar in het licht, niet meer. Ze keerde zich af van het mager licht, en daalde in het donker, misschien voor de laatste keer.\n\n\n\tby drazool from reddit</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
     <string name="ColdSpirit_Desc">De koude geest is de uitvlucht van vorst, in zijn zuiverste vorm. Als een gedachtenloze klomp magische energie gehoorzaamt hij de wil van de magiër die hem oproept, of handelt volgens basisinstincten.</string>
     <string name="ColdSpirit_Gender">masculine</string>
@@ -232,6 +232,7 @@
     <string name="DeferedDamageBuff_Info">De pijn is omgezet in vertraagde pijn, wat de schade die op een keer wordt opgelopen vermindert.\nOvergebleven schade om te ontvangen %d</string>
     <string name="DeferedDamage_Killed_Txt">%s heeft je gedood...</string>
     <string name="DewVial_Collected">Je verzamelde een dauwdruppel in je dauwflesje.</string>
+    <string name="DewVial_Full">Je dauwflesje is vol!</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="DieHardBuff_Name">Die Hard</string>
     <string name="DoctorArmor_Name">Doktersgewaad</string>
@@ -261,7 +262,7 @@
     <string name="EncumbranceBuff_CharAct_4">Mij ontbreekt de kracht om %s optimaal te benutten.</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
     <string name="Exhumation_Name">Exhumatie</string>
-    <string name="Eye_Desc">Een van de andere namen van deze demon is \"orb of hatred\", omdat wanneer hij een vijand ziet, hij zijn doodsblik onbeschoft gebruikt, vaak de bondgenoten negerend en ze verwondend.</string>
+    <string name="Eye_Desc">Een van de andere namen van deze demon is \&quot;orb of hatred\&quot;, omdat wanneer hij een vijand ziet, hij zijn doodsblik onbeschoft gebruikt, vaak de bondgenoten negerend en ze verwondend.</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
     <string name="Fire_Info">Hier woedt een vuur.</string>
@@ -419,6 +420,7 @@
     <string name="LightningBolt_Name">Bliksemschicht</string>
     <string name="LightningTrap_Name">Bliksemval</string>
     <string name="LloidsBeacon_ACReturn">TERUGKEER</string>
+    <string name="LloidsBeacon_Info">De baken van Lloyd is een ingewikkeld magisch apparaat waarmee je kunt terugkeren naar een plek waar je al eerder bent geweest.</string>
     <string name="LloidsBeacon_Preventing">Een soort sterke magische aura die hier aanwezig is voorkomt dat je Lloyds boei kunt gebruiken!</string>
     <string name="LloidsBeacon_Set">\n\nDeze beacon is ergens op niveau %d van Remixed Dungeon ingesteld.</string>
     <string name="Longsword_Name">langzwaard</string>
@@ -465,13 +467,13 @@
     <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
 
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
-    <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \"Necrotism\" vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
+    <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="NecromancerNPC_Message3">Ik hoor de roep van de doden.</string>
     <string name="NecromancerNPC_Name">nekromant</string>
     <string name="NecromancerRobe_Info">Dit gewaad stelt de Nekromant in staat om een Doodsling op te roepen ten koste van 5 zielen. De Doodsling is een ondode dienaar die sterker wordt samen met zijn meester.</string>
-    <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \"%1$s\"-spreuk te gebruiken.</string>
+    <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
     <string name="Necromancy_Title">Necromantie</string>
     <string name="Necrotism_ACSpecial">NECROTISME</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
@@ -515,7 +517,7 @@
     <string name="PlagueDoctorQuest_4_2_Epilogue">Schitterend! Vijf _Kobold Ijsmagiers_, hun ijzige essentie nu van mij om te onderzoeken! Hun verbinding met de bevroren woestenijen, het is werkelijk fascinerend. De manier waarop ze water zelf manipuleren… werkelijk opmerkelijk. *Hij overhandigt je een flonkerende fiool gevuld met een levendige karmozijnrode vloeistof* Dit, is voor je dappere inspanningen: een _Drankje van Kracht_! Drink diep en voel de kracht van tien krijgers door je aderen stromen! Onthoud, kennis is macht… en macht is het enige wapen dat we hebben tegen de naderende duisternis. Nu… laten we deze ijzige zielen ontleden en hun ijzige geheimen onthullen!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Zijn skeletvingers tikken ritmisch tegen een borrelende ketel, de lucht om hem heek dik van de pittige stank van zwavel en verwesing*\n_Kobold Ijsmagiers_! Die jammerlijke wezens, gekrocht in hun bevroren grotten, wanhopig vasthoudend aan hun ijsmagie. Ik heb er vijf nodig, hun bevroren lichamen zullen... verlichtend zijn. Hun meesterwerk van ijs, het is... eigenaardig. Ik geloof dat ze aansluiten bij een oerenergie, een kracht die sluimert onder het oppervlakte van deze wereld.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Hij stottert, zijn stem kraakt als een broze tak*. A-ah, _succubi_! Twee... ja, twee, levend! Het is... hem... voor mijn onderzoek! Je ziet... hun feromonen... het is cruciaal om het delicate evenwicht te begrijpen van... ah... *Hij zwijgt, zijn botten hand reikt op om nerveus zijn masker te corrigeren, zijn ogen schieten naar jou met een koortsachtige intensiteit.* Hun... essentie... het is een puzzel... een prachtige, enigmatische puzzel! *Hij hoest hevig, probeert zijn kalmte te herwinnen.* Ik beloof, voor het brengen van twee van deze... wezens... zul je mijn eeuwige dankbaarheid hebben. Zie het als een... een gave aan kennis! Ja! Aan kennis!</string>
-    <string name="PlagueDoctorQuest_AllDone">*Hij laat een droge, hijgende lach horen.* \"Jouw daden hebben geheimen ontsluierd zonder maat! De verkregen kennis… het pulsert in mij, een symfonie van ontdekking. Maar kennis,\" voegt hij eraan toe, zijn zinkend tot een samenzweerderig fluisteren, \"kennis is macht. En macht… ah… dat is de meest bedwelmende elixer.\" Hij kijkt je even intens aan, zijn amethistoogen branden met koortsachtige felheid. \"Misschien,\" mompelt hij, \"kruisen onze paden elkaar weer. Want er zijn nog vele… mysteries… die nog ontrafeld moeten worden.\"</string>
+    <string name="PlagueDoctorQuest_AllDone">*Hij laat een droge, hijgende lach horen.* \&quot;Jouw daden hebben geheimen ontsluierd zonder maat! De verkregen kennis… het pulsert in mij, een symfonie van ontdekking. Maar kennis,\&quot; voegt hij eraan toe, zijn zinkend tot een samenzweerderig fluisteren, \&quot;kennis is macht. En macht… ah… dat is de meest bedwelmende elixer.\&quot; Hij kijkt je even intens aan, zijn amethistoogen branden met koortsachtige felheid. \&quot;Misschien,\&quot; mompelt hij, \&quot;kruisen onze paden elkaar weer. Want er zijn nog vele… mysteries… die nog ontrafeld moeten worden.\&quot;</string>
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Name_1">Giftig %s</string>
@@ -598,7 +600,7 @@
     <string name="RottingFist_Desc">Verrottende Vuist van de Oude God</string>
     <string name="RunicSkull_Desc">Voor iets kunstmatig gemaakts lijkt deze schedel te veel op een echte. Je ziet ook een zwakke gloed om het heen.</string>
     <string name="SacrificialSword_Gender">masculine</string>
-    <string name="SantaHat_Info">Niets zet je zo in de \"Dungeoning\" stemming als de rode zijden hoed van Santa, Heer van de Diepten.</string>
+    <string name="SantaHat_Info">Niets zet je zo in de \&quot;Dungeoning\&quot; stemming als de rode zijden hoed van Santa, Heer van de Diepten.</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
     <string name="ScarecrowNPC_Name_Objective">vogelverschrikker</string>
@@ -623,7 +625,7 @@
     <string name="ScrollOfUpgrade_LooksBetter">je %s ziet er nu zeker beter uit</string>
     <string name="ScrollOfWeaponUpgrade_Info">Deze rol zal een wapen voor nabijgevecht upgraden, de kwaliteit verbeterend. In tegenstelling tot een gewone Upgrade Scroll, zal deze gespecialiseerde versie nooit een begoocheling op een wapen vernietigen. Integendeel, het kan een onbetoverde wapen een willekeurige begoocheling geven.</string>
     <string name="Scroll_Info">Dit perkament is bedekt met onleesbaar schrift en draagt de titel van rune %s. Wie weet wat er gebeurt als het hardop wordt gelezen?</string>
-    <string name="Scroll_Name">scrol \"%s\"</string>
+    <string name="Scroll_Name">scrol \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_10">Odal</string>
     <string name="Scroll_Runes_11">TIWAZ</string>
     <string name="Scroll_Runes_14">ALGIZ</string>
@@ -676,9 +678,9 @@
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
-    <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \"%1$s\" spreuk ontdekt.\n\" %2$s \"</string>
+    <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="Spell_SelectACell">Selecteer een doelcel.</string>
-    <string name="Spells_NotEnoughSP">Je hebt niet genoeg mana om de spreuk \"%1$s\" te casten.</string>
+    <string name="Spells_NotEnoughSP">Je hebt niet genoeg mana om de spreuk \&quot;%1$s\&quot; te casten.</string>
     <string name="Spells_NotTooFast">%s is nog niet klaar voor gebruik</string>
     <string name="SpiderArmor_Info">Deze pantser is gemaakt van oude spinnep chitine en een soort kleding. Wat verrassend is, lijkt het nog steeds werkende spinnepklieren te bevatten. Als je de platen hard genoeg indrukt, schieten ze web uit. En getande zolen laten je vrij bewegen op dergelijke web.</string>
     <string name="SpiderCharm_Info">Deze exotische snuisterij is gehuld in een aura van mysterie. Wie weet wat er gebeurt met degene die hem draagt?</string>
@@ -776,7 +778,7 @@
     <string name="TreacherousSpirit_Name_Objective">verradelijke geest</string>
     <string name="Typical_Damage">Typische schade</string>
     <string name="Undead_Defense">geblokkeerd</string>
-    <string name="Using_Failed_Because_Magic">Krachtige magie voorkomt dat je \"%s\" gebruikt.</string>
+    <string name="Using_Failed_Because_Magic">Krachtige magie voorkomt dat je \&quot;%s\&quot; gebruikt.</string>
     <string name="VampireSkull_Info">Deze masker is gemaakt van een volledig natuurlijke vampierschedel. Eigenlijk is het een vampierschedel... schedel van een grootkopige vampier. Griezelig.</string>
     <string name="VampireSkull_Name">Vampierschedel</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
@@ -970,7 +972,7 @@
     <string name="town_deco_cinema_sign_desc">Het lijkt erop dat er een bioscoop in dat gebouw zit.</string>
     <string name="town_deco_common_bed_desc">Gewoon bed.</string>
     <string name="town_deco_crate_desc">Een stevige houten kist die zijn geheimen van binnen bewaart.</string>
-    <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \"De Getuigen van Santa de Heer der Diepten\".</string>
+    <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
     <string name="town_deco_crossroad_desc">Een ruwe houten paal met pijlvormige bordjes, de tekst waarop vervaagd is door de harde weersomstandigheden.</string>
     <string name="town_deco_dungeon_door_desc">De ingang van de kerker.</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
@@ -1021,6 +1023,9 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 

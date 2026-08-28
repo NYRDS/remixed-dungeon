@@ -65,6 +65,7 @@
     <string name="Badges_LevelReached1">Đã đạt cấp độ 6</string>
     <string name="Badges_LevelReached4">Đạt cấp 24</string>
     <string name="Badges_LevelReached5">Đã đạt cấp 30</string>
+    <string name="Badges_MonsterSlain1">10 kẻ thù đã bị tiêu diệt</string>
     <string name="Badges_MonsterSlain5">Hạ gục 1000 kẻ địch</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
     <string name="Badges_Piranhas">Săn được 6 cá ăn thịt người</string>
@@ -80,6 +81,7 @@
     <string name="Bee_Gender">masculine</string>
     <string name="BellaNPC_Angry">Dám... ngươi kẻ nhục nát!</string>
     <string name="BellaNPC_Desc">Một cô gái trông rất sang trọng. Toàn bộ vẻ ngoài của cô ấy nói với bạn: \&quot;Tôi quá tốt cho mọi người.\&quot;</string>
+    <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Yes_End_Game">Chắc chắn rồi (Kết thúc trò chơi)</string>
     <string name="BishopNPC_Desc">Giám mục của Giáo hội Thánh của Santa Chúa Sâu</string>
     <string name="BishopNPC_Name">Giám mục</string>
@@ -127,6 +129,7 @@
     <string name="Carcass_Info">tàn tích của quái vật hoàn toàn chết %s.</string>
     <string name="Carcass_Name">tàn dư của %s</string>
     <string name="Carcass_Necromancy">Bạn đã hồi sinh thi thể của %s!</string>
+    <string name="Carcass_Necromancy_Failed">Việc hồi sinh thi thể của %s đã thất bại!</string>
     <string name="Caves_TileDescHighGrass">Nấm khổng lồ chắn tầm nhìn.</string>
     <string name="Caves_TileHighGrass">Nấm phát sáng</string>
     <string name="Caves_TileWater">Nước lạnh buốt.</string>
@@ -984,6 +987,9 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
