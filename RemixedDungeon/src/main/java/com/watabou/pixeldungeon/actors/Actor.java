@@ -389,6 +389,12 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
             if (current != hero) {
                 current.checkedAct();
+                // caveman: char that dodged die() (hp written below 0 in defenseProc
+                // etc.) must not wedge the turn loop - dead Mob.act returns without
+                // spend and would be picked forever
+                if (current instanceof Char && !((Char) current).isAlive()) {
+                    remove(current);
+                }
                 current = null;
                 if(!hero.isAlive()) {
                     break;

@@ -32,16 +32,18 @@ public class Swarm extends Mob {
 	@Override
 	public int defenseProc( Char enemy, int damage ) {
 
-		if (hp() >= damage + 2) {
+		// caveman: split must not kill the swarm - bare hp() write past the death
+		// guard + damage() early-return left a dead swarm in the actor list ->
+		// silent turn-loop freeze
+		if (damage > 0 && hp() >= damage + 2) {
 			int cell = level().getEmptyCellNextTo(getPos());
 
 			if (level().cellValid(cell)) {
-				int cloneHp = split(cell, damage).hp();
-
+				int cloneHp = Math.min(split(cell, damage).hp(), hp() - 1);
 				hp(hp() - cloneHp);
 			}
 		}
-		
+
 		return damage;
 	}
 
