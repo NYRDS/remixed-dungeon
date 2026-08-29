@@ -13,6 +13,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
@@ -28,6 +29,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -96,6 +98,12 @@ public class ShadowLord extends Boss implements IZapper {
 		{
 			LevelTools.makeEmptyLevel(level, false);
 			LevelTools.buildShadowLordMaze(level, 6);
+
+			// caveman: maze buries whoever stands on a grid line - hero sealed
+			// in solid terrain gets no line of fire, boss stalls forever (#23)
+			carveAround(level, Dungeon.hero.getPos());
+			carveAround(level, getPos());
+
 			levelCreated = true;
 		}
 
@@ -123,6 +131,23 @@ public class ShadowLord extends Boss implements IZapper {
 				level.fillAreaWith(Darkness.class, x - 2, y - 2, 5, 5, 1);
 			} else {
 				damage(ht() / 9, this);
+			}
+		}
+	}
+
+	private void carveAround(Level level, int cell) {
+		if (!level.cellValid(cell)) {
+			return;
+		}
+
+		int x = level.cellX(cell);
+		int y = level.cellY(cell);
+		for (int i = x - 1; i <= x + 1; i++) {
+			for (int j = y - 1; j <= y + 1; j++) {
+				if (level.cellValid(i, j) && level.get(i, j) != Terrain.EMPTY) {
+					level.set(i, j, Terrain.EMPTY);
+					GameScene.updateMap(level.cell(i, j));
+				}
 			}
 		}
 	}
