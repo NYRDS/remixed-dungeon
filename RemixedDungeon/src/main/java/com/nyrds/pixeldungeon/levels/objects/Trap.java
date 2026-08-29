@@ -138,6 +138,13 @@ public class Trap extends LevelObject {
 
 		if (presser instanceof Item && activatedByItem) {
 			activate(null);
+			return;
+		}
+
+		// caveman: explicit opt-in only (telekinesis beam) - Char/Item are
+		// Pressers too, must not set traps off here
+		if (presser.dischargesTraps()) {
+			activate(null);
 		}
 	}
 

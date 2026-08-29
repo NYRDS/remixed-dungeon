@@ -127,7 +127,12 @@ public class WandOfTelekinesis extends Wand {
 	public static class Effect implements Presser {
 		@Override
 		public boolean affectLevelObjects() {
-			return false;
+			return true;
+		}
+
+		@Override
+		public boolean dischargesTraps() {
+			return true; // caveman: description promises "discharges traps"
 		}
 	}
 }
