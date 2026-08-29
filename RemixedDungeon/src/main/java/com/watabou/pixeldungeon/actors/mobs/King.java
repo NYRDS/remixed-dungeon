@@ -86,9 +86,12 @@ public class King extends Boss {
 	
 	@Override
     public boolean canAttack(@NotNull Char enemy) {
-		return canTryToSummon() ? 
-			getPos() == targetPedestal :
-			adjacent(enemy);
+		// caveman: summoning must not suppress melee - king stood passive next
+		// to the hero for the whole pedestal phase
+		if (adjacent(enemy)) {
+			return true;
+		}
+		return canTryToSummon() && getPos() == targetPedestal;
 	}
 
 	private int countServants() {
