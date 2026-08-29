@@ -143,6 +143,7 @@
     <string name="CagedKobold_Message1">Làm ơn...</string>
     <string name="CagedKobold_Message3">Tôi ghét tất cả mọi thứ về cái lồng này</string>
     <string name="CagedKobold_Name">kobold trong lồng</string>
+    <string name="CagedKobold_Name_Objective">kobold bị nhốt</string>
     <string name="Calm_Info">Có rất nhiều sinh vật đang bị kích động xung quanh, hãy giúp chúng.</string>
     <string name="CandleOfMindVision_Info_Exhausted">Cây nến đã hết, nó không còn sáng khi bạn cầm nó. Trông như bạn không thể dùng nó nữa.</string>
     <string name="CandleOfMindVision_Name">Nến Tầm Nhìn</string>
@@ -419,6 +420,7 @@
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
     <string name="Hero_StaBurning">Bạn bị bốc cháy!</string>
     <string name="Hero_StaCharm">Bạn bị mê hoặc!</string>
+    <string name="Hero_StaCripple">Bạn bị tàn phế!</string>
     <string name="Hero_StaFurious">cuồng nộ</string>
     <string name="Hero_StaFury">Ngươi trở nên cuồng bạo!</string>
     <string name="Hero_StaRoots">Bạn không thể di chuyển!</string>
@@ -461,6 +463,7 @@
     <string name="InterLevelScene_ErrorGeneric">Đã có lỗi xảy ra...</string>
     <string name="InterLevelScene_FileNotFound">Không tìm thấy tập tin. Với một số lý do...</string>
     <string name="InterLevelScene_Loading">Đang tải...</string>
+    <string name="InterLevelScene_Returning">Đang quay lại...</string>
     <string name="IntroScene_Txt">Nhiều anh hùng đủ mọi loại đã mạo hiểm vào Ngục Trại trước bạn. Một số đã trở về với kho báu và pháp thuật, hầu hết thì không bao giờ được nghe tin tức. Nhưng không ai thành công trong việc lấy được Huyền Chương Yendor, đồ vật được cho là chôn sâu trong lòng Ngục Trại. Bạn cảm thấy mình đã sẵn sàng cho thử thách, và quan trọng hơn, bạn tin rằng may mắn đang mỉm cười với bạn. Đã đến lúc bắt đầu cuộc phiêu lưu của mình!</string>
     <string name="InvisibilityBuff_Info">Hoàn toàn vô hình, có thể giúp tránh nguy hiểm hoặc trở thành nguy hiểm.</string>
     <string name="IronKey_FromDepth">chìa khóa sắt từ độ sâu %d</string>
@@ -556,6 +559,7 @@
     <string name="Mimic_Gender">masculine</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="MissileWeapon_Info1">\n\nSát thương trung bình của vũ khí này bằng %d điểm mỗi lần đánh.</string>
+    <string name="MissileWeapon_Info2">Vì thể lực không đủ, độ chính xác và tốc độ tấn công của bạn với %1$s này bị giảm.</string>
     <string name="MissileWeapon_Missiles">Vũ khí phóng xạ</string>
     <string name="MissileWeapon_No">Không, tôi đã đổi ý rồi</string>
     <string name="Mob_GoingTo">Đang đi rồi!</string>
@@ -806,6 +810,7 @@
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
     <string name="Snail_Desc">Con ốc sên nhỏ này đã lớn khá nhanh nhờ ăn rác thải, nhưng nó vẫn rất chậm, khiến nó trở thành kẻ địch dễ dàng.</string>
     <string name="Snail_Gender">masculine</string>
+    <string name="SnipersMarkBuff_Info">Dấu ấn này được tạo ra bởi một xạ thủ.</string>
     <string name="SnipersMarkBuff_Name">Dấu ấn xạ thủ</string>
     <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Name">Nhà xã hội học</string>
@@ -840,6 +845,7 @@
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name_Objective">nữ hoàng nhện</string>
     <string name="SpiderServant_Gender">masculine</string>
+    <string name="SpiderServant_Name">nhện lính</string>
     <string name="Spinner_Gender">masculine</string>
     <string name="SpiritOfPain_Desc">Một mảnh vỡ của bóng tối sống.</string>
     <string name="SpiritOfPain_Gender">masculine</string>
@@ -1012,6 +1018,7 @@
     <string name="WndPremiumSettings_chrome">Chọn vật liệu giao diện</string>
     <string name="WndPremiumSettings_notAvailbale">Tùy chọn này chưa có sẵn</string>
     <string name="WndPremiumSettings_ruby">hồng ngọc</string>
+    <string name="WndPremiumSettings_silver">bạc</string>
     <string name="WndPremiumSettings_status">Chọn chất liệu thanh trạng thái</string>
     <string name="WndPremiumSettings_std">tiêu chuẩn</string>
     <string name="WndPriest_Heal">chữa trị - %d vàng</string>
@@ -1106,12 +1113,14 @@
     <string name="town_deco_crate_bottles_desc">Chai bia đã trở thành một sở thích rất phổ biến giữa các chủ quán rượu.</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
     <string name="town_deco_cross_desc">Một chiếc thập giá bạc nguyên khối, biểu tượng của tôn giáo địa phương - \&quot;Các Nhân chứng của Santa Chúa Tể Vực Sâu\&quot;.</string>
+    <string name="town_deco_crossroad_name">Biển chỉ đường ngã tư</string>
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
     <string name="town_deco_curtains_name">Bức rèm</string>
     <string name="town_deco_dungeon_door_desc">lối vào hang động.</string>
     <string name="town_deco_dungeon_door_name">cửa hang</string>
     <string name="town_deco_emptyboard_name">Kệ đựng</string>
     <string name="town_deco_entrance_name">cổng vào</string>
+    <string name="town_deco_fireplace_name">Lò sưởi</string>
     <string name="town_deco_firewood_desc">Vật dụng thiết yếu trong những đợt rét khắc nghiệt như thế này.</string>
     <string name="town_deco_flowerinthepot_name">Hoa trong chậu</string>
     <string name="town_deco_furnace_name">Lò nung</string>
@@ -1161,6 +1170,15 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">לטרוף</string>
     <string name="AC_Dissect">נתיחה</string>
@@ -41,7 +40,7 @@
     <string name="AmokDart_Name">חץ הטירוף</string>
     <string name="AmuletScene_Exit">בואו נקרא לזה יום</string>
     <string name="AmuletScene_Stay">עדיין לא סיימתי</string>
-    <string name="Amulet_Info">האמולט של ינדור הוא הארטיפקט החזק ביותר הידוע ממקור לא ידוע. נאמר שהוא יכול להגשים כל משאלה אם רצונו של הבעלים חזק מספיק כדי \"לשכנע\" אותו לעשות זאת.</string>
+    <string name="Amulet_Info">האמולט של ינדור הוא הארטיפקט החזק ביותר הידוע ממקור לא ידוע. נאמר שהוא יכול להגשים כל משאלה אם רצונו של הבעלים חזק מספיק כדי \&quot;לשכנע\&quot; אותו לעשות זאת.</string>
     <string name="ArmorKit_Name">ערכת שריון</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
@@ -93,7 +92,7 @@
     <string name="BattleAxe_Info">ראש הפלדה העצום של גרזן הקרב הזה מקנה משקל רב לכל מכה.</string>
     <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
-    <string name="BellaNPC_Desc">נערה שנראית מאוד אלגנטית. כל המראה שלה אומר לך \"אני טובה מדי עבור כולם.\"</string>
+    <string name="BellaNPC_Desc">נערה שנראית מאוד אלגנטית. כל המראה שלה אומר לך \&quot;אני טובה מדי עבור כולם.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Name">בלה</string>
     <string name="BishopNPC_Desc">בישוף הכנסייה הקדושה של סנטה אדון המעמקים</string>
@@ -105,7 +104,7 @@
     <string name="BlackCat_Phrases_2">מיאו!</string>
     <string name="BlackSkullOfMastery_RemainHumanDesc">או אם תשבור את הכישוף תוכל להשתמש בחפץ זה כמתוכנן.</string>
     <string name="BlackSkull_Gender">masculine</string>
-    <string name="BlackSkull_Info">גולגולת אובסידיאן קטנה. היא הייתה מקור כוחה של נקרופוליס, אך לאחר תבוסת הליצ\' נראה שהיא איבדה את כל כוחה. עם זאת, כשאתה מחזיק אותה בידיך, מחשבה מוזרה חולפת בראשך: \"היא רעבה\".</string>
+    <string name="BlackSkull_Info">גולגולת אובסידיאן קטנה. היא הייתה מקור כוחה של נקרופוליס, אך לאחר תבוסת הליצ\' נראה שהיא איבדה את כל כוחה. עם זאת, כשאתה מחזיק אותה בידיך, מחשבה מוזרה חולפת בראשך: \&quot;היא רעבה\&quot;.</string>
     <string name="BlackSkull_Ressurrect">הגולגולת השחורה הקימה את המפלצת המתה כדי לשרת אותך!</string>
     <string name="Blacksmith_Completed">אוי, חזרת... עדיף מאוחר מאשר אף פעם.</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
@@ -131,6 +130,7 @@
     <string name="CagedKobold_Intro">היי... היי! אתה אותו הרפתקן, נכון? תעזור לי, חבר, הצבאיים הארורים האלה נעלו אותי פה! הם מתכוונים להפעיל מחדש נשק עתיק כדי לכבוש את בני האדם על פני השטח! אבל בהתחשב בכמה שזה מסוכן, התנגדתי, אז הם פשוט זרקו אותי ונעלו אותי בכלוב! אני מתחנן שתמצא את המפתח לתא, ובתמורה, אעזור לך כמיטב יכולתי.</string>
     <string name="CagedKobold_Message1">בבקשה...</string>
     <string name="CagedKobold_Message2">אתה חייב לעזור לי לצאת, חבר</string>
+    <string name="CagedKobold_Name_Objective">קובולד בכלוב</string>
     <string name="CagedKobold_Quest_End">אוי, תודה לך, תודה רבה! איך הצלחת למצוא את המפתח? אתה... אתה השמדת את הנשק?! זה מדהים! אתה יודע מה, אמרתי שאעזור לך, ואני חושב שאני יודע את הדרך הטובה ביותר. אני אשאר איתך לזמן מה. * הקובולד הכלוא הפך לנר</string>
     <string name="CandleOfMindVision_Info">נראה כמו נר רגיל, לא משהו שהיית מצפה למצוא בצינוק מסוכן. מוזר שזה די חם למגע, למרות שזה עדיין לא הודלק.</string>
     <string name="Candy_Info">הסוכרייה הזאת נראית כל כך יפה ומריחה גם טוב. אתה באמת צריך לתת אותה למישהו אחר?</string>
@@ -142,6 +142,7 @@
     <string name="Carcass_Necromancy">החיית את הגופה של %s!</string>
     <string name="Carcass_Necromancy_Failed">הניסיון שלך להעלות את גופת %s נכשל!</string>
     <string name="Caves_TileWater">מים קרים מקפיאים.</string>
+    <string name="Challenges_Descriptions_0">האוכל והמים היו רקובים זה מכבר, וגורמים לכל הרפתקן להשתגע ממחשבות על מוות מפחד ורעב. האם הדיאטה שלך תעזור לך להחזיק מעמד מספיק זמן?</string>
     <string name="Challenges_Descriptions_1">ההתקפה היא ההגנה הטובה ביותר. בעקבות תורות אלה, אתה יוצא למבוך, כשהאמונה היא השומר החזק ביותר של גופך.</string>
     <string name="Challenges_Descriptions_2">כמאמין בהתחדשות טבעית של הגוף הרגיל, תמיד הייתם זהירים מפני שיקויים בעלי תכונות רפואיות. עדיף להיות בטוחים מאשר להצטער!</string>
     <string name="Challenges_Descriptions_3">האדמות סביב הצינוק נגועות זה מכבר ברוע, המונע צמיחת זרעים של עשבי מרפא וצמחים שונים. מי יודע כמה זמן יעבור עד שהצמח האחרון יחדל מלהתקיים באדמות שוממות אלה.</string>
@@ -155,7 +156,7 @@
     <string name="Challenges_Names_9">אמנזיה</string>
     <string name="ChampionOfAirBuff_Name">אלוף האוויר</string>
     <string name="ChampionOfEarthBuff_Info">אלוף האדמה מגלם כוח בלתי מתפשר, שכן תכונה זו משפרת את עמידות היצור לנזק ומגדילה את החיוניות המקסימלית שלו. שינוי זה הופך אותו לאויב מאיים במעמקים המסוכנים, המסוגל להדוף התקפות בקלות ולהחזיק מעמד בקרב ממושך עם נחישות בלתי מעורערת.</string>
-    <string name="ChampionOfFireBuff_Info">\"שרוי בזעם הלהבות, מאפיין זה מגביר את האכזריות ואת כוח הלחימה של היצור. אלוף האש צץ כיריב מאיים, המשחרר מתקפות הרסניות שיכולות לעטוף את אויביו בלהבות צורבות, מטיל אימה בכל מי שמעז להתנגד לו.</string>
+    <string name="ChampionOfFireBuff_Info">\&quot;שרוי בזעם הלהבות, מאפיין זה מגביר את האכזריות ואת כוח הלחימה של היצור. אלוף האש צץ כיריב מאיים, המשחרר מתקפות הרסניות שיכולות לעטוף את אויביו בלהבות צורבות, מטיל אימה בכל מי שמעז להתנגד לו.</string>
     <string name="ChampionOfFireBuff_Name">אלוף האש</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">להב חד-ידני של כאוס טהור. הוא גדל עם קרבות כמו בן דודו הדו-ידני, אבל לאט יותר ולפוטנציאל נמוך יותר — ומשאיר את היד השנייה חופשית למגן.</string>
@@ -163,6 +164,7 @@
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Name">קשת הכאוס</string>
     <string name="ChaosCrystal_BladeFused">הקריסטל סופג את נשקך ולובש צורת להב</string>
+    <string name="ChaosCrystal_Fuse">מזג</string>
     <string name="ChaosCrystal_Info">אתה מרגיש זרמי אנרגיה זורמים דרך ידיך כשאתה מחזיק אותו.</string>
     <string name="ChaosCrystal_Info_2">כן! עכשיו אתה יודע שאפשר למזג אותו עם אחד מהפריטים שלך, אבל מה הלאה?</string>
     <string name="ChaosCrystal_Use">השתמש</string>
@@ -387,6 +389,7 @@
     <string name="Hero_StaBurning">אתה נדלקת!</string>
     <string name="Hero_StaCripple">אתה נכה!</string>
     <string name="Hero_StaFury">אתה נעשה זועם!</string>
+    <string name="Hero_StaParalysis">אתה משותק!</string>
     <string name="Hero_StaPoison">אתה מורעל!</string>
     <string name="Hero_StaRoots">אינך יכול לזוז!</string>
     <string name="Hero_StaVertigo">הכל מסתובב סביבך!</string>
@@ -420,6 +423,7 @@
     <string name="InnServant_Phrase_2">השיכור הזה משגע אותי!</string>
     <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
     <string name="InterLevelScene_Loading">נטען...</string>
+    <string name="InterLevelScene_Returning">חוזר...</string>
     <string name="InventoryScroll_No">לא, שיניתי את דעתי</string>
     <string name="InvisibilityBuff_Info">בלתי נראה לחלוטין, מה שיכול לעזור להימנע מסכנות או להפוך לאחת.</string>
     <string name="Item_ACPickup">לקחת</string>
@@ -502,6 +506,7 @@
     <string name="MirrorImage_Name">תמונת ראי</string>
     <string name="MirrorImage_Name_Objective">תמונת ראי</string>
     <string name="MissileWeapon_Info3">בשל כוחך העודף, הנזק של התקפתך עם %s זה גדל.</string>
+    <string name="MissileWeapon_Missiles">נשק לטווח רחוק</string>
     <string name="MissileWeapon_No">לא, החלפתי את דעתי</string>
     <string name="MissileWeapon_Sure">האם אתה באמת רוצה לצייד את זה כנשק קרוב?</string>
     <string name="Mob_GoingTo">כבר בדרך!</string>
@@ -528,7 +533,7 @@
     <string name="NecromancerNPC_Name">נקרומנסר</string>
     <string name="NecromancerNPC_Name_Objective">נקרומנסר</string>
     <string name="Necromancer_ACSpecial">נֶקְרוֹמַנְטִיָּה</string>
-    <string name="Necromancy_NotEnoughSouls">אין לך מספיק נשמות כדי להטיל כישוף \"%1\".</string>
+    <string name="Necromancy_NotEnoughSouls">אין לך מספיק נשמות כדי להטיל כישוף \&quot;%1\&quot;.</string>
     <string name="NecrotismBuff_Info">סימן המוות עצמו, הצחנה שממנו משפיעה על הקרובים וגורמת להם לחלוק את אותו גורל.</string>
     <string name="Necrotism_ACSpecial">נֶקְרוֹטִיזְם</string>
     <string name="Necrotism_Death">מתת מנקרוטיזם...</string>
@@ -581,7 +586,7 @@
     <string name="PlagueDoctorQuest_5_1_Epilogue">*הוא בוהה בשתי ה*סוקובוס*, חיוך מאושר מתפשט מתחת למסכתו.* נהדר! מופלא! זה יפתח כל כך הרבה... אפשרויות! *הוא פונה אליך, קולו סמיך מהכרת תודה... ומשהו נוסף.* המאמצים שלך... לא יישכחו. אני חייב לך את תודתי העמוקה ביותר. *מבטו מתעכב על ה*סוקובוס* לרגע ארוך מדי, לפני שהוא נסוג למעבדתו, ממלמל על גילוי סודות הפיתוי.*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*מחשבותיו נודדות כשהוא מדבר, קולו נעשה שקט יותר, בקושי לחישה.* הביא לי שתי _סוקובוסיות_… בחיים. כוחן... זה מפתה.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*הוא מגמגם, קולו נסדק כמו ענף שביר*. א-א-ה, _סוקוביות_! שתיים... כן, שתיים, בחיים! זה... הממ... למחקר שלי! אתה מבין... הפורומונים שלהן... זה חיוני להבנת האיזון העדין של... אה... *הוא משתתק, ידו הגרומה עולה בעצבנות לתקן את המסכה, עיניו נורות לעברך בעוצמה קדחתנית*. המהות שלהן... זה פאזל... פאזל יפה, מסתורי! *הוא משתעל באלימות, מנסה להחזיר את שלוותו*. אני מבטיח, עבור הבאת שתיים מה... היצורים האלה... תהיה לך הכרת התודה הנצחית שלי. תחשוב על זה כעל... מתנה לידע! כן! לידע!</string>
-    <string name="PlagueDoctorQuest_AllDone">*הוא פולט צחוק יבש וצורמני.* \"מעשיך, הם חשפו סודות מעבר לכל מידה! הידע שנרכש... הוא פועם בתוכי, סימפוניה של גילויים. אבל ידע,\" הוא מוסיף, קולו צונח ללחישה קונספירטיבית, \"ידע הוא כוח. וכוח... אה... זהו השיקוי המשכר ביותר.\" הוא נועץ בך מבט לרגע, עיניו האמתיסטיות בוערות באינטנסיביות קדחתנית. \"אולי,\" הוא ממלמל, \"דרכינו יצטלבו שוב. כי עדיין יש... תעלומות... רבות... שטרם נפתרו.\"</string>
+    <string name="PlagueDoctorQuest_AllDone">*הוא פולט צחוק יבש וצורמני.* \&quot;מעשיך, הם חשפו סודות מעבר לכל מידה! הידע שנרכש... הוא פועם בתוכי, סימפוניה של גילויים. אבל ידע,\&quot; הוא מוסיף, קולו צונח ללחישה קונספירטיבית, \&quot;ידע הוא כוח. וכוח... אה... זהו השיקוי המשכר ביותר.\&quot; הוא נועץ בך מבט לרגע, עיניו האמתיסטיות בוערות באינטנסיביות קדחתנית. \&quot;אולי,\&quot; הוא ממלמל, \&quot;דרכינו יצטלבו שוב. כי עדיין יש... תעלומות... רבות... שטרם נפתרו.\&quot;</string>
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlateArmor_Desc">לוחות מתכת עצומים מחוברים יחד לחליפה המספקת הגנה ללא תחרות לכל הרפתקן חזק מספיק לשאת את משקלה המדהים.</string>
     <string name="PoisonArrow_Gender">feminine</string>
@@ -692,7 +697,7 @@
     <string name="ScrollOfWeaponUpgrade_Info">גלילה זו תשדרג נשק קרבי, ותשפר את איכותו. בניגוד לגלילת שדרוג רגילה, גרסה מיוחדת זו לעולם לא תהרוס קסם על נשק. נהפוך הוא, היא מסוגלת להעניק קסם אקראי לנשק לא מקסום.</string>
     <string name="ScrollOfWeaponUpgrade_Name">מגילת שדרוג נשק</string>
     <string name="Scroll_Info">המגילה הזו מכוסה בכתב בלתי ניתן לפענוח, ונושאת כותרת של רונה %s. מי יודע מה יקרה כשיקראו אותה בקול רם?</string>
-    <string name="Scroll_Name">מגילת \"%s\"</string>
+    <string name="Scroll_Name">מגילת \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_10">אודל</string>
     <string name="Scroll_Runes_13">איוואז</string>
     <string name="Scroll_Runes_4">GYFU</string>
@@ -743,9 +748,10 @@
     <string name="SoulShard_Gender">masculine</string>
     <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">מוט עץ דק שבקצהו ברזל מחודד.</string>
-    <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \"%1$s\".\n\" %2$s \"</string>
-    <string name="Spells_NotEnoughSP">אין לך מספיק מנה כדי ללחוש לחש \"%1$s\".</string>
+    <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
+    <string name="Spells_NotEnoughSP">אין לך מספיק מנה כדי ללחוש לחש \&quot;%1$s\&quot;.</string>
     <string name="Spells_NotInOwnBody">אתה לא יכול לבצע %s כאשר הנשמה שלך מנותקת מהגוף.</string>
+    <string name="Spells_SummonLimitReached">%1$s: הגעת למגבלת הזימון (מקסימום נוכחי: %2$d)!</string>
     <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">השריון הזה עשוי מכיטין ישן של עכביש וסוג כלשהו של בד. הכי מפתיע, נראה שהוא עדיין מכיל בלוטות עכביש מתפקדות. אם תלחץ על הלוחות מספיק חזק, הם יורים רשת. וסוליות מחורצות מאפשרות לך לנוע בחופשיות על רשת כזו.</string>
     <string name="SpiderCharm_Use">השתמש</string>
@@ -784,7 +790,7 @@
     <string name="StartScene_Load">טען משחק</string>
     <string name="StartScene_New">משחק חדש</string>
     <string name="StartScene_Warning">ההתקדמות הנוכחית שלך במשחק תימחק.</string>
-    <string name="StartScene_WinGame">כדי לפתוח \"אתגרים\", נצח את המשחק עם כל סוג דמות.</string>
+    <string name="StartScene_WinGame">כדי לפתוח \&quot;אתגרים\&quot;, נצח את המשחק עם כל סוג דמות.</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Stench_Txt">%s של סירחון</string>
     <string name="StrongShield_desc">המגן המלבני הזה מצופה בלוחות ברזל ומקושט בבד צבעוני. הוא כבד משמעותית, אך מסוגל לחסום נזק רב יותר.</string>
@@ -809,6 +815,7 @@
     <string name="TitleScene_Play">שחק</string>
     <string name="TomeOfKnowledge_Name">ספר הידע</string>
     <string name="TomeOfMastery_ACRead">קרא</string>
+    <string name="TomeOfMastery_Info">ספר עור בלוי זה אינו עבה במיוחד, אך אתה חש בדרך כלשהי שניתן ללמוד ממנו רבות. זכור עם זאת שקריאת כרך זה עשויה לדרוש זמן מה.</string>
     <string name="Torch_ACLight">הַדְלֵק</string>
     <string name="Torch_Name">לפיד</string>
     <string name="ToughShield_name">מגן עור מחוזק</string>
@@ -838,7 +845,7 @@
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Undead_Defense">נבלם</string>
     <string name="Undead_Gender">masculine</string>
-    <string name="Using_Failed_Because_Magic">קסם רב עוצמה מונע ממך להשתמש ב\"%s\".</string>
+    <string name="Using_Failed_Because_Magic">קסם רב עוצמה מונע ממך להשתמש ב\&quot;%s\&quot;.</string>
     <string name="VampireSkull_Info">המסכה הזו עשויה מגולגולת של ערפד טבעית לחלוטין. למעשה זהו גולגולת... גולגולת של ערפד בעל ראש גדול. מצמרר.</string>
     <string name="VertigoBuff_Info">תחושת הסחרחורת מקשה על הליכה ישרה!</string>
     <string name="VileEssence_Info">جوهر فساد مركّز تم حصاده من عدو مهزوم. هذه المادة الداكنة تنبض بطاقة خبيثة وتُقدَّر كثيراً في العمليات الكيميائية.</string>
@@ -922,6 +929,7 @@
     <string name="WndPremiumSettings_chrome">בחר חומר ממשק</string>
     <string name="WndPremiumSettings_silver">כסף</string>
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
+    <string name="WndPremiumSettings_std">רגיל</string>
     <string name="WndPriest_Instruction2">אם אתה זקוק לעזרה, אני יכול לספק שירותי ריפוי רק עבור %d מטבעות זהב!\nאם אתה מחפש ברכה קדושה, או, שסנטה ישמור, קוללת, אנא פגוש את הבישוף בכנסייה הצנועה שלנו.</string>
     <string name="WndPriest_Instruction2_f">ברוכה הבאה בתי, ברוכה הבאה לכנסייה הקדושה של סנטה הגדול, אדון המעמקים!</string>
     <string name="WndPriest_Instruction2_m">ברוך הבא בני, ברוך הבא לכנסייה הקדושה של סנטה הגדול, אדון המעמקים!</string>
@@ -947,6 +955,7 @@
     <string name="WndSettings_Music">מוזיקה</string>
     <string name="WndSettings_Quickslots">חריצי גישה מהירה</string>
     <string name="WndSettings_RecordVideo">הקלטת וידאו</string>
+    <string name="WndSettings_SecondQuickslot">חריץ שני</string>
     <string name="WndSettings_SelectLanguage">בחר שפה</string>
     <string name="WndSettings_ThirdQuickslot">חריץ שלישי</string>
     <string name="WndSettings_UiScale">קנה מידה של ממשק המשתמש</string>
@@ -1123,6 +1132,16 @@
 
 
     <string name="town_deco_wooden_drawer_desc">מעניין מה שמור בפנים.</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

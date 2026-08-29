@@ -75,6 +75,7 @@
     <string name="Badges_GoldColleted4">تم جمع 7500 ذهب</string>
     <string name="Badges_Ice_Guardian_Slain">تم القضاء على حارس الجليد</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
+    <string name="Badges_Info3">شارة جديدة: %s</string>
     <string name="Badges_ItemLvl3">تم الحصول على عنصر من المستوى 9</string>
     <string name="Badges_ItemLvl4">تم الحصول على عنصر بمستوى 12</string>
     <string name="Badges_ItemLvl5">تم الحصول على عنصر من المستوى 15</string>
@@ -149,6 +150,7 @@
     <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">مرحباً... مرحباً! أنت ذلك المغامر، صحيح؟ ساعدني يا صديقي، هؤلاء العسكريون الملاعين حبسوني هنا! إنهم ينوون إعادة تنشيط سلاح قديم لغزو البشر على السطح! لكن نظراً لخطورة الأمر، عارضتهم، فرموني وسجنوني في قفص! أتوسل إليك أن تجد مفتاح الزنزانة، وفي المقابل، سأساعدك بأقصى ما أستطيع.</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
+    <string name="CagedKobold_Name_Objective">كوبولد مسجون</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
     <string name="Candy_Info">هذه الحلوى تبدو جميلة جداً ورائحتها طيبة أيضاً. هل تحتاج حقاً لإعطائها لشخص آخر؟</string>
@@ -164,6 +166,7 @@
     <string name="Caves_TileHighGrass">فطر مضيء</string>
     <string name="Challenges_Descriptions_1">الهجوم خير وسيلة للدفاع. اتباعًا لهذه التعاليم، تنطلق في الزنزانة، والإيمان هو أقوى حارس لجسدك.</string>
     <string name="Challenges_Names_0">حمية</string>
+    <string name="Challenges_Names_4">ذكاء السرب</string>
     <string name="Challenges_Names_5">إلى الظلام</string>
     <string name="Challenges_Names_6">الرموز المحرمة</string>
     <string name="Challenges_Names_8">بلا مدينة</string>
@@ -237,6 +240,7 @@
     <string name="Crystal_Name">بلورة طافية</string>
     <string name="CurareDart_Gender">masculine</string>
     <string name="DM300_Gender">masculine</string>
+    <string name="DM300_Name">DM-300</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">خنجر</string>
     <string name="Damage_Reduction">تقليل الضرر</string>
@@ -306,6 +310,7 @@
     <string name="FireElemental_Name_Objective">عنصر النار</string>
     <string name="Fire_Info">هنا نار مشتعلة.</string>
     <string name="Fire_Name_1">مشتعل %s</string>
+    <string name="Firebloom_Desc">عندما يلمس شيء زهرة النار، تشتعل فيها النيران.</string>
     <string name="Firebloom_Name">زهرة النار</string>
     <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">عرافة</string>
@@ -425,6 +430,7 @@
     <string name="InterLevelScene_Descending">ننزلق...</string>
     <string name="InterLevelScene_FileNotFound">لم يتم العثور على الملف. لسبب ما...</string>
     <string name="InterLevelScene_Loading">جاري التحميل...</string>
+    <string name="InterLevelScene_Returning">عودة...</string>
     <string name="InventoryScroll_No">لا، غيّرت رأيي</string>
     <string name="InvisibilityBuff_Info">مخفي تماماً، مما قد يساعد في تجنب الأخطار أو أن تصبح خطراً بحد ذاته.</string>
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
@@ -641,6 +647,7 @@
     <string name="RingOfDetection_Info">ارتداء هذه الخاتم سيمكنك من ملاحظة الأسرار المخفية - الفخاخ والأبواب السرية - دون الحاجة لأخذ وقت للبحث. الخواتم المتدهورة من الكشف ستبلد حواسك، مما يجعل ملاحظة الأسرار أصعب حتى عند البحث عنها بفعالية.</string>
     <string name="RingOfElements_Info">يوفر هذا الخاتم مقاومة للعناصر المختلفة مثل النار والكهرباء والغازات وغيرها. كما أنه يقلل من مدة الآثار السلبية.</string>
     <string name="RingOfElements_Name">خاتم العناصر</string>
+    <string name="RingOfEvasion_Info">هذا الخاتم يزيد من فرصتك في تفادي هجمات الأعداء.</string>
     <string name="RingOfFrost_Name">خاتم الصقيع</string>
     <string name="RingOfHaggler_Info">في الواقع، هذا الخاتم لا يوفر أي تأثير سحري، لكنه يُظهر للتجار والبائعين أن مالك الخاتم عضو في نقابة اللصوص. عادةً ما يسعدون بتقديم خصم مقابل ضمان حصانة مؤقتة. ترقية هذا الخاتم لن تمنح أي مكافآت إضافية.</string>
     <string name="RingOfHerbalism_Info">يزيد هذا الخاتم من فرصك في جمع الندى والبذور من العشب المفرود.</string>
@@ -717,6 +724,7 @@
     <string name="ShadowLord_Name_Objective">سيد الظلال</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">ظل</string>
+    <string name="ShadowsBuff_Name">اندمج في الظلال</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="Shaman_Desc">يمكن لأذكى الغنول إتقان السحر الشاماني. يفضل الشامان الغنول تعويذات المعركة للتعويض عن نقص القوة، دون تردد في استخدامها على من يشككون في مكانتهم في القبيلة.</string>
     <string name="Shaman_Gender">masculine</string>
@@ -943,6 +951,7 @@
     <string name="WndSettings_InGameUiSettings">إعدادات واجهة المستخدم</string>
     <string name="WndSettings_Music">الموسيقى</string>
     <string name="WndSettings_Quickslots">فتحات الوصول السريع</string>
+    <string name="WndSettings_SecondQuickslot">الفتحة السريعة الثانية</string>
     <string name="WndSettings_SelectLanguage">اختر اللغة</string>
     <string name="WndSettings_Sound">المؤثرات الصوتية</string>
     <string name="WndSettings_ThirdQuickslot">الفتحة السريعة الثالثة</string>
@@ -1031,6 +1040,7 @@
     <string name="town_deco_rope_name">حبل</string>
     <string name="town_deco_rug_desc">مصمم بذوق رفيع</string>
     <string name="town_deco_screen_name">فاصل</string>
+    <string name="town_deco_scrolls_desc">رف مغبر مليء بأنواع مختلفة من اللفائف والكتب.</string>
     <string name="town_deco_shelf_full_desc">على هذا الرف توجد مقتنيات صغيرة متنوعة.</string>
     <string name="town_deco_shelving_name">أرفف</string>
     <string name="town_deco_shop_sign_desc">يبدو أن هناك متجراً داخل هذا المبنى.</string>
@@ -1038,6 +1048,7 @@
     <string name="town_deco_slush_desc">بدأ هذا الثلج بالذوبان، محولاً المكان من حوله إلى طين.</string>
     <string name="town_deco_slush_name">الثلج المذاب</string>
     <string name="town_deco_snow_name">ثلج</string>
+    <string name="town_deco_snowy_plate_name">لوح ثلجي</string>
     <string name="town_deco_sofa_desc">يبدو أن هذا السينما تحاول حقاً توفير أفضل المقاعد لعملائها.</string>
     <string name="town_deco_statue_blood_desc">تمثال مهيب لملاك يمسك وعاءً من الدم.</string>
     <string name="town_deco_statue_blood_name">تمثال ملاك</string>
@@ -1051,6 +1062,17 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
