@@ -1106,11 +1106,12 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
         GLog.debug("WebServer: " + uri);
 
-        // Handle debugging endpoints using routing map
-        for (Map.Entry<String, Function<NanoHTTPD.IHTTPSession, NanoHTTPD.Response>> entry : debugEndpoints.entrySet()) {
-            if (uri.startsWith(entry.getKey())) {
-                return entry.getValue().apply(session);
-            }
+        // caveman: exact match only. startsWith() on a HashMap made routing
+        // order-dependent - "/debug/cast_spell" is a prefix of
+        // "/debug/cast_spell_on_target" and could shadow it by iteration luck.
+        Function<NanoHTTPD.IHTTPSession, NanoHTTPD.Response> debugHandler = debugEndpoints.get(uri);
+        if (debugHandler != null) {
+            return debugHandler.apply(session);
         }
 
         if (session.getMethod() == Method.GET) {
