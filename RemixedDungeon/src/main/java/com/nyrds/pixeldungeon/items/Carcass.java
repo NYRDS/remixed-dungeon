@@ -274,6 +274,7 @@ public class Carcass extends Item implements Doom {
 
     @Override
     public int price() {
-        return src.ht() / 6  * quantity() * upgradeMultiplier();
+        // caveman: divide last, small critters (ht<6) must stay sellable
+        return Math.max(1, src.ht() * quantity() * upgradeMultiplier() / 6);
     }
 }
