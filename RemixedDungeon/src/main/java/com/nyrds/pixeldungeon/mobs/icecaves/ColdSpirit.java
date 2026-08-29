@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.icecaves;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
+import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
@@ -26,6 +27,8 @@ public class ColdSpirit extends Mob {
         dmgMin = 12;
         dmgMax = 15;
         dr = 22;
+
+        addImmunity( Frost.class ); // caveman: ice spirit must not be frozen
 
         loot(Gold.class, 0.02f);
     }
