@@ -34,7 +34,7 @@ local function flipAllServants()
             RPD.setAi(m, "Hunting")
         end
     end
-    RPD.glog("The palace servants turn on you!")
+    RPD.glog("PalaceServants_Hostile")
 end
 
 return actor.init({

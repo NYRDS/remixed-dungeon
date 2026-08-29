@@ -358,7 +358,9 @@
     <string name="Carcass_Devoured">Ты пожрал труп %s!</string>
     <string name="Carcass_DissectFailed">Вы рассекли %s, но не нашли ничего ценного.</string>
     <string name="Carcass_DissectMessage">Вы разобрали тушу и получили %s.</string>
-    <string name="Carcass_DissectResult">Из %1$s вы получили %2$d урожай %3$s.</string>
+    <string name="Carcass_DissectResult_One">Из %1$s вы получили один предмет.</string>
+    <string name="Carcass_DissectResult_Many">Из %1$s вы получили предметов: %2$d.</string>
+    <string name="Carcass_SelectItem">Выберите предмет</string>
     <string name="Carcass_Info">Останки абсолютно мертвого монстра %s.</string>
     <string name="Carcass_Kick">Это существо, %s, совершенно мертво, нет смысла бить его дальше.</string>
     <string name="Carcass_Name">Останки %s</string>
@@ -1502,6 +1504,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PalaceServant_Golem_1">...</string>
     <string name="PalaceServant_Golem_2">Этот зал священен.</string>
     <string name="PalaceServant_Golem_3">*низкое гудение*</string>
+    <string name="PalaceServants_Hostile">Слуги дворца обращаются против вас!</string>
+    <string name="NeutralKing_Hostile">Король обращается против вас!</string>
+    <string name="Chess_YouWin">Вы победили!</string>
+    <string name="Chess_YouLose">Вы проиграли!</string>
+    <string name="Chess_Stalemate">Пат! Король покидает поле боя и пропускает вас.</string>
+    <string name="Chess_YourMove">Кликните по доске — ваш ход, Герой</string>
     <string name="PalaceServant_Monk_1">Мир короля нельзя нарушать.</string>
     <string name="PalaceServant_Monk_2">Размысли о своём проступке, житель поверхности.</string>
     <string name="PalaceServant_Monk_3">Мы сторожим трон. Не испытывай нас.</string>

@@ -218,7 +218,7 @@ end
 local gameInProgress = true
 
 local function processLose()
-    RPD.glog("You Lose!")
+    RPD.glog("Chess_YouLose")
     restorePets()
     RPD.Dungeon.hero:die(RPD.Dungeon.hero)
     gameInProgress = false
@@ -241,7 +241,7 @@ local function processWin()
         mob:die(RPD.Dungeon.hero)
     end
 
-    RPD.glog("You Win!")
+    RPD.glog("Chess_YouWin")
 
     local level = RPD.Dungeon.level
     local origin = level:getProperty("chessBoardOrigin", "")
@@ -277,7 +277,7 @@ end
 -- caveman: stalemate tie. King yields and lets hero pass. becomes neutral (fights back if hurt).
 -- clears the other 31 pieces, replaces the Java King piece with a NeutralKing mob.
 local function processTie()
-    RPD.glog("Stalemate! The King yields the field and lets you pass.")
+    RPD.glog("Chess_Stalemate")
     restorePets()
 
     local level = RPD.Dungeon.level
@@ -714,7 +714,7 @@ return actor.init({
         local chessCell = chessCellFromCell(cell)
 
         if not chessCell then
-            RPD.glog("Click on the board — it is your move, Hero")
+            RPD.glog("Chess_YourMove")
             return true
         end
 

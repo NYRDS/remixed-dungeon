@@ -15,7 +15,7 @@ return mob.init({
         if self:fraction():name() == "NEUTRAL" then
             self:setFraction(Fraction.DUNGEON)
             RPD.setAi(self, "Hunting")
-            RPD.glog("The King turns on you!")
+            RPD.glog("NeutralKing_Hostile")
         end
     end
 })

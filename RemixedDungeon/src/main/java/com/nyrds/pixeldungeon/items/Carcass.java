@@ -187,8 +187,12 @@ public class Carcass extends Item implements Doom {
         }
 
         if (itemsObtained > 0) {
-            String itemText = itemsObtained == 1 ? "item" : "items";
-            GLog.i(Utils.format(R.string.Carcass_DissectResult, src.getName(), itemsObtained, itemText));
+            // caveman: plural-free strings - RU has 3 plural forms, not worth the logic
+            if (itemsObtained == 1) {
+                GLog.i(Utils.format(R.string.Carcass_DissectResult_One, src.getName()));
+            } else {
+                GLog.i(Utils.format(R.string.Carcass_DissectResult_Many, src.getName(), itemsObtained));
+            }
         } else {
             GLog.i(Utils.format(R.string.Carcass_DissectFailed, src.getName()));
         }
@@ -200,7 +204,7 @@ public class Carcass extends Item implements Doom {
             selector,
             callback,
             WndBag.Mode.ENTITY_NAMES,
-            "Select an item",
+            StringsManager.getVar(R.string.Carcass_SelectItem),
             entityNames
         );
     }

@@ -359,7 +359,9 @@
     <string name="Carcass_Devoured">\&quot;You have devoured corpse of %s!\&quot;</string>
     <string name="Carcass_DissectFailed">You dissect the %s but find nothing of value.</string>
     <string name="Carcass_DissectMessage">You dissect the carcass and obtain a %s.</string>
-    <string name="Carcass_DissectResult">From the %1$s you obtain %2$d harvest %3$s.</string>
+    <string name="Carcass_DissectResult_One">From the %1$s you obtain one item.</string>
+    <string name="Carcass_DissectResult_Many">From the %1$s you obtain %2$d items.</string>
+    <string name="Carcass_SelectItem">Select an item</string>
     <string name="Carcass_Info">remains of totally dead %s.</string>
     <string name="Carcass_Kick">This %s is totally dead, no need to kick it.</string>
     <string name="Carcass_Name">remains of %s</string>
@@ -1198,6 +1200,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PalaceServant_Golem_1">...</string>
     <string name="PalaceServant_Golem_2">This hall is sacred.</string>
     <string name="PalaceServant_Golem_3">*low rumble*</string>
+    <string name="PalaceServants_Hostile">The palace servants turn on you!</string>
+    <string name="NeutralKing_Hostile">The King turns on you!</string>
+    <string name="Chess_YouWin">You Win!</string>
+    <string name="Chess_YouLose">You Lose!</string>
+    <string name="Chess_Stalemate">Stalemate! The King yields the field and lets you pass.</string>
+    <string name="Chess_YourMove">Click on the board — it is your move, Hero</string>
     <string name="King_Name">King of Dwarves</string>
     <string name="King_Name_Objective">King of Dwarves</string>
     <string name="Knuckles_Gender">masculine</string>
