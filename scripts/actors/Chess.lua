@@ -101,24 +101,30 @@ end
 local scheduledMoves = {}
 
 local function movePiece(from, to)
-    local mob = RPD.Actor:findChar(from)
-    if not mob then
-        RPD.glog("movePiece: no mob on cell %s -> %s, skip", tostring(from), tostring(to))
-        return
-    end
-    local target = RPD.Actor:findChar(to)
-
-    if not target then
-        mob:setPos(to)
-        mob:moveSprite(from, to)
+    local fromCell = chessCellFromCell(from)
+    local toCell = chessCellFromCell(to)
+    if not fromCell or not toCell then
+        RPD.glog("movePiece: %s -> %s outside board, skip", tostring(from), tostring(to))
         return
     end
 
-    if target then
+    -- caveman: registry authoritative - never move a stranger found by cell
+    local mob = pieces[fromCell]
+    if not mob or not mob:valid() then
+        RPD.glog("movePiece: no tracked piece on %s -> %s, skip", fromCell, toCell)
+        return
+    end
+
+    local target = pieces[toCell]
+    if target and target ~= mob and target:isAlive() then
         target:die(mob)
-        mob:setPos(to)
-        mob:moveSprite(from, to)
     end
+
+    pieces[fromCell] = nil
+    pieces[toCell] = mob
+
+    mob:setPos(to)
+    mob:moveSprite(from, to)
 end
 
 local move_str = ''
@@ -147,11 +153,12 @@ end
 
 local function animateMove(move_str, move_cells, target_chess_cells)
 
-    -- FIX: Verify En Passant by ensuring the target cell is EMPTY *before* the move
+    -- FIX: Verify En Passant by ensuring the target square is EMPTY *before* the move
     local isEnPassant = false
-    local targetMob = RPD.Actor:findChar(move_cells[2])
-    if enPassantMoves[move_str] and not targetMob then
-        local movedMob = RPD.Actor:findChar(move_cells[1])
+    local epDestCell = chessCellFromCell(move_cells[2])
+    if enPassantMoves[move_str] and (epDestCell == nil or pieces[epDestCell] == nil) then
+        local epFromCell = chessCellFromCell(move_cells[1])
+        local movedMob = epFromCell and pieces[epFromCell]
         if movedMob and movedMob:getEntityKind() == 'Rat' then
             isEnPassant = true
         end
@@ -161,16 +168,23 @@ local function animateMove(move_str, move_cells, target_chess_cells)
 
     -- caveman: promotion. pawn (Rat) reach last rank -> swap to promoted piece.
     -- AI move may carry a 5th UCI char (q/r/b/n); player move is 4-char -> queen.
+    local destCell = chessCellFromCell(move_cells[2])
+    local destMob = destCell and pieces[destCell]
     local destRank = tonumber(string.sub(target_chess_cells[2], 2, 2))
-    local destMob = RPD.Actor:findChar(move_cells[2])
     if destMob and destMob:getEntityKind() == 'Rat' and (destRank == 1 or destRank == 8) then
         destMob:die(destMob)
         local promoChar = string.len(move_str) >= 5 and string.sub(move_str, 5, 5) or 'q'
         local promoted = RPD.MobFactory:mobByName(pieces_set[promoChar] or 'Warlock')
+        promoted.noResurrection = true
+        promoted.carcassChance = 0
         promoted:setPos(move_cells[2])
         RPD.setAi(promoted, 'PASSIVE')
         RPD.Dungeon.level:spawnMob(promoted)
         promoted:getSprite():tint(destRank == 8 and 0xFF0000 or 0x0000FF, 0.5)
+        if destCell then
+            pieces[destCell] = promoted
+        end
+        destMob = promoted
     end
 
     -- FIX: Castling - Ensure the piece that just moved is actually a King
@@ -184,11 +198,11 @@ local function animateMove(move_str, move_cells, target_chess_cells)
     -- caveman: en passant. captured pawn beside destination, remove it.
     if isEnPassant then
         local pawnCell = pawnVictim[move_str]
-        local cell = cellFromChessCell(pawnCell)
-        local mob = RPD.Actor:findChar(cell)
-        if mob then
-            mob:die(mob)
+        local victim = pawnCell and pieces[pawnCell]
+        if victim and victim:isAlive() then
+            victim:die(victim)
         end
+        pieces[pawnCell] = nil
     end
 end
 
@@ -212,26 +226,16 @@ end
 
 local function processWin()
     restorePets()
-    local mobs = RPD.Dungeon.level.mobs
-    local iterator = mobs:iterator()
+
+    -- caveman: only tracked pieces die - same-kind mobs (real Warlocks on
+    -- CityBossLevel) must survive
     local mobsToDie = {}
-
-    while iterator:hasNext() do
-        local mob = iterator:next()
-        -- FIX: Prevent mass-extinction of pets/merchants. Only target chess pieces.
-        local kind = mob:getEntityKind()
-        local isChessPiece = false
-        for _, pieceName in pairs(pieces_set) do
-            if pieceName == kind then
-                isChessPiece = true
-                break
-            end
-        end
-
-        if isChessPiece then
+    for _, mob in pairs(pieces) do
+        if mob and mob:isAlive() then
             table.insert(mobsToDie, mob)
         end
     end
+    pieces = {}
 
     for i,mob in ipairs(mobsToDie) do
         mob:die(RPD.Dungeon.hero)
@@ -280,24 +284,16 @@ local function processTie()
     local kingCell = nil
     local toClear = {}
 
-    local iterator = level.mobs:iterator()
-    while iterator:hasNext() do
-        local m = iterator:next()
-        local kind = m:getEntityKind()
-        local isChessPiece = false
-        for _, pieceName in pairs(pieces_set) do
-            if pieceName == kind then
-                isChessPiece = true
-                break
-            end
-        end
-        if isChessPiece then
-            if kind == "King" and kingCell == nil then
+    -- caveman: tracked pieces only, same as processWin
+    for _, m in pairs(pieces) do
+        if m and m:isAlive() then
+            if m:getEntityKind() == "King" and kingCell == nil then
                 kingCell = m:getPos() -- caveman: remember where the king stood
             end
             toClear[#toClear + 1] = m
         end
     end
+    pieces = {}
 
     for _, m in ipairs(toClear) do
         if m:getEntityKind() == "King" then
@@ -411,12 +407,48 @@ local function retintPieces()
             for ii = 1, 8 do
                 local piece = string.sub(v, ii + 1, ii + 1)
                 if pieces_set[piece] then
-                    local mob = RPD.Actor:findChar(bcell)
-                    if mob and mob:getSprite() then
+                    local cc = chessCellFromCell(bcell)
+                    local mob = cc and pieces[cc]
+                    if mob and mob:valid() and mob:getSprite() then
                         mob:getSprite():tint(piece == piece:upper() and 0xFF0000 or 0x0000FF, 0.5)
                     end
                 end
                 bcell = bcell + 1
+            end
+        end
+    end
+end
+
+-- caveman: board self-heal. engine board is authoritative: a square that must
+-- hold a piece but lost its mob (killed by hero/pet out-of-band) gets a fresh
+-- piece. keeps picture == engine (#21), killing pieces can't break the game.
+local function repairPieces()
+    if not chess then return end
+    if #scheduledMoves > 0 then return end
+    chess:ensure_board()
+    local boardData = util.split(chess.board, "\n")
+    for i, v in ipairs(boardData) do
+        if i >= 3 and i <= 10 then
+            local y = i - 2
+            local cell = cellFromChess(0, y)
+            for ii = 1, 8 do
+                local piece = string.sub(v, ii + 1, ii + 1)
+                local cc = chessCellFromCell(cell)
+                if pieces_set[piece] and cc then
+                    local mob = pieces[cc]
+                    if not mob or not mob:valid() or not mob:isAlive() then
+                        local fresh = RPD.MobFactory:mobByName(pieces_set[piece])
+                        fresh.noResurrection = true
+                        fresh.carcassChance = 0
+                        fresh:setPos(cell)
+                        RPD.setAi(fresh, 'PASSIVE')
+                        RPD.Dungeon.level:spawnMob(fresh)
+                        fresh:getSprite():tint(piece == piece:upper() and 0xFF0000 or 0x0000FF, 0.5)
+                        pieces[cc] = fresh
+                        RPD.glog("chess: repaired %s on %s", pieces_set[piece], cc)
+                    end
+                end
+                cell = cell + 1
             end
         end
     end
@@ -430,8 +462,9 @@ return actor.init({
     onStep = function()
         -- caveman: re-tint every frame. tint() is idempotent (sets absolute values),
         -- and resize recreates sprites — so per-frame tinting recovers from resize
-        -- within one frame. ~30 cheap findChar calls/frame, negligible cost.
+        -- within one frame. registry lookups only, negligible cost.
         retintPieces()
+        repairPieces()
 
         -- caveman: resume AI search fiber. yields every 256 nodes (YIELD_QUANTUM). keeps animations alive.
         -- fiber = zero-thread luaj lib: no JVM thread per search, heap frames only.
@@ -504,7 +537,8 @@ return actor.init({
             checkFlashTimer = checkFlashTimer + 1
             if checkFlashTimer >= 30 then
                 checkFlashTimer = 0
-                local mob = RPD.Actor:findChar(kingInCheckCell)
+                local kingCC = chessCellFromCell(kingInCheckCell)
+                local mob = kingCC and pieces[kingCC]
                 if mob and mob:getSprite() then
                     mob:getSprite():emitter():burst(RPD.Sfx.ElmoParticle.FACTORY, 3)
                 end
@@ -578,6 +612,29 @@ return actor.init({
             scheduledMoves = {}
             allowedMoves = {}
 
+            -- caveman: rebuild the piece registry positionally. deterministic at
+            -- load time: piece mobs were just deserialized at their saved squares.
+            pieces = {}
+            chess:ensure_board()
+            local boardData = util.split(chess.board, "\n")
+            for i, v in ipairs(boardData) do
+                if i >= 3 and i <= 10 then
+                    local y = i - 2
+                    local cell = cellFromChess(0, y)
+                    for ii = 1, 8 do
+                        local piece = string.sub(v, ii + 1, ii + 1)
+                        local cc = chessCellFromCell(cell)
+                        if pieces_set[piece] and cc then
+                            local mob = RPD.Actor:findChar(cell)
+                            if mob then
+                                pieces[cc] = mob
+                            end
+                        end
+                        cell = cell + 1
+                    end
+                end
+            end
+
             -- caveman: retintPieces() runs every onStep frame, no flag needed.
 
         elseif not chess then
@@ -617,6 +674,9 @@ return actor.init({
                         if pieces_set[piece] then
                             local mob = RPD.MobFactory:mobByName(pieces_set[piece])
 
+                            -- caveman: pieces must not resurrect/reanimate - breaks the board
+                            mob.noResurrection = true
+                            mob.carcassChance = 0
                             mob:setPos(cell)
                             RPD.setAi(mob, "PASSIVE")
                             level:spawnMob(mob)
@@ -692,8 +752,8 @@ return actor.init({
                 end
             end
 
-            local selectedMob = RPD.Actor:findChar(move_cells[1])
-            if selectedMob then
+            local selectedMob = pieces[chessCell]
+            if selectedMob and selectedMob:isAlive() then
                 selectedMob:getSprite():emitter():burst(RPD.Sfx.ElmoParticle.FACTORY, 4)
             end
 
