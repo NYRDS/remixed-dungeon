@@ -12,6 +12,7 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.HealthArrow;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -28,7 +29,11 @@ public class PotionOfHealing extends Potion {
 	protected void apply(Char hero ) {
 		setKnown();
 		heal( hero, 1f );
-        GLog.p(StringsManager.getVar(R.string.PotionOfHealing_Apply));
+		// caveman: hero-phrased log only for the hero - MobItemAi already
+		// announces mob item use, "your wounds healed" for a kobold is wrong
+		if (hero instanceof Hero) {
+			GLog.p(StringsManager.getVar(R.string.PotionOfHealing_Apply));
+		}
 	}
 	
 	public static void heal( Char ch, float portion ) {
