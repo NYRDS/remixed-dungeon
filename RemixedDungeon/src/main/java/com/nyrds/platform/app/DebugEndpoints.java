@@ -2693,7 +2693,6 @@ public class DebugEndpoints {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
                     "{\"error\":\"No level loaded\"}");
             }
-
             java.util.List<java.util.Map<String, Integer>> warehouseRooms = new java.util.ArrayList<>();
 
             // Check all rooms for warehouse type
@@ -2732,6 +2731,255 @@ public class DebugEndpoints {
                 new JSONObject(response).toString());
         } catch (Exception e) {
             GLog.w("Error in handleDebugGetWarehouseRooms: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    // ---- LLM control surface ----
+    // caveman: one call per loop tick for an agent. observe = full frame,
+    // hero_status = cheap poll, get_map = planning grid.
+
+    // caveman: alive/pos/action poll - lets a driver WAIT instead of sleep()
+    public static NanoHTTPD.Response handleDebugHeroStatus(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.hero == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Hero not initialized - start a game first").toString());
+            }
+
+            var hero = Dungeon.hero;
+            int pos = hero.getPos();
+            int x = -1, y = -1;
+            if (Dungeon.level != null) {
+                int width = Dungeon.level.getWidth();
+                x = pos % width;
+                y = pos / width;
+            }
+
+            // caveman: no curAction == idle. that is the thing a driver polls for.
+            var action = hero.getCurAction();
+            String actionName = (action == null) ? "idle" : action.getClass().getSimpleName();
+
+            String levelId = (Dungeon.level != null) ? DungeonGenerator.getCurrentLevelId() : "";
+
+            String jsonString = String.format(
+                "{\"alive\":%b,\"hp\":%d,\"ht\":%d,\"pos\":%d,\"x\":%d,\"y\":%d,\"action\":\"%s\",\"levelId\":\"%s\",\"depth\":%d}",
+                hero.isAlive(),
+                hero.hp(),
+                hero.ht(),
+                pos, x, y,
+                actionName,
+                levelId,
+                Dungeon.depth
+            );
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", jsonString);
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugHeroStatus: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    // caveman: atomic frame. agent reads this ONE response and decides.
+    // visible mobs + items + stairs + hero vitals, all from the same tick.
+    public static NanoHTTPD.Response handleDebugObserve(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.hero == null || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Game state not initialized - start a game first").toString());
+            }
+
+            var hero = Dungeon.hero;
+            Level level = Dungeon.level;
+            int width = level.getWidth();
+            int height = level.getHeight();
+            int heroPos = hero.getPos();
+
+            JSONObject root = new JSONObject();
+            root.put("levelId", DungeonGenerator.getCurrentLevelId());
+            root.put("depth", Dungeon.depth);
+            root.put("width", width);
+            root.put("height", height);
+
+            // hero vitals + current action
+            JSONObject heroJson = new JSONObject();
+            heroJson.put("class", hero.className());
+            heroJson.put("level", hero.lvl());
+            heroJson.put("hp", hero.hp());
+            heroJson.put("max_hp", hero.ht());
+            heroJson.put("str", hero.effectiveSTR());
+            heroJson.put("gold", hero.gold());
+            var hunger = hero.hunger();
+            heroJson.put("hunger", hunger.level());
+            heroJson.put("starving", hero.isStarving());
+            heroJson.put("x", heroPos % width);
+            heroJson.put("y", heroPos / width);
+            var action = hero.getCurAction();
+            heroJson.put("action", (action == null) ? "idle" : action.getClass().getSimpleName());
+            org.json.JSONArray buffsJson = new org.json.JSONArray();
+            for (var buff : hero.buffs()) {
+                JSONObject buffJson = new JSONObject();
+                buffJson.put("name", buff.getClass().getSimpleName());
+                buffJson.put("level", buff.level());
+                buffsJson.put(buffJson);
+            }
+            heroJson.put("buffs", buffsJson);
+            root.put("hero", heroJson);
+
+            // visible mobs
+            org.json.JSONArray mobsJson = new org.json.JSONArray();
+            for (Mob mob : level.mobs) {
+                int mobPos = mob.getPos();
+                if (!Dungeon.visible[mobPos]) {
+                    continue;
+                }
+                JSONObject mobJson = new JSONObject();
+                mobJson.put("id", mob.getId());
+                mobJson.put("type", mob.getEntityKind());
+                mobJson.put("x", mobPos % width);
+                mobJson.put("y", mobPos / width);
+                mobJson.put("hp", mob.hp());
+                mobJson.put("ht", mob.ht());
+                mobJson.put("state", mob.getState().getClass().getSimpleName());
+                mobJson.put("dist", level.distance(heroPos, mobPos));
+                mobJson.put("owned", mob.getOwnerId() == hero.getId());
+                mobsJson.put(mobJson);
+            }
+            root.put("mobs", mobsJson);
+
+            // visible item heaps
+            org.json.JSONArray itemsJson = new org.json.JSONArray();
+            Field heapsField = Level.class.getDeclaredField("heaps");
+            heapsField.setAccessible(true);
+            @SuppressWarnings("unchecked")
+            java.util.Map<Integer, Heap> heaps = (java.util.Map<Integer, Heap>) heapsField.get(level);
+            for (java.util.Map.Entry<Integer, Heap> entry : heaps.entrySet()) {
+                int heapPos = entry.getKey();
+                if (!Dungeon.visible[heapPos]) {
+                    continue;
+                }
+                Item item = entry.getValue().peek();
+                if (item == null) {
+                    continue;
+                }
+                JSONObject itemJson = new JSONObject();
+                itemJson.put("x", heapPos % width);
+                itemJson.put("y", heapPos / width);
+                itemJson.put("type", item.getEntityKind());
+                itemJson.put("quantity", item.quantity());
+                itemsJson.put(itemJson);
+            }
+            root.put("items", itemsJson);
+
+            // stairs: entrance field + exit scan (exitMap has no public reader)
+            org.json.JSONArray exitsJson = new org.json.JSONArray();
+            for (int cell = 0; cell < level.getLength(); cell++) {
+                if (level.isExit(cell)) {
+                    JSONObject exitJson = new JSONObject();
+                    exitJson.put("x", cell % width);
+                    exitJson.put("y", cell / width);
+                    exitsJson.put(exitJson);
+                }
+            }
+            root.put("exits", exitsJson);
+
+            int entrance = level.entrance;
+            if (entrance >= 0) {
+                JSONObject entranceJson = new JSONObject();
+                entranceJson.put("x", entrance % width);
+                entranceJson.put("y", entrance / width);
+                root.put("entrance", entranceJson);
+            }
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", root.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugObserve: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    // caveman: whole level as grid. terrain ints per row (same codes
+    // get_tile_info reports), masks as 0/1 strings, stairs marked.
+    // mask=1 -> unexplored AND not visible cells come back as terrain -1.
+    public static NanoHTTPD.Response handleDebugGetMap(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Level not initialized - start a game first").toString());
+            }
+
+            boolean masked = false;
+            String query = session.getQueryParameterString();
+            if (query != null && query.contains("mask=1")) {
+                masked = true;
+            }
+
+            Level level = Dungeon.level;
+            int width = level.getWidth();
+            int height = level.getHeight();
+
+            org.json.JSONArray terrainRows = new org.json.JSONArray();
+            org.json.JSONArray passableRows = new org.json.JSONArray();
+            org.json.JSONArray visibleRows = new org.json.JSONArray();
+            org.json.JSONArray mappedRows = new org.json.JSONArray();
+
+            for (int row = 0; row < height; row++) {
+                org.json.JSONArray terrainRow = new org.json.JSONArray();
+                StringBuilder passableRow = new StringBuilder(width);
+                StringBuilder visibleRow = new StringBuilder(width);
+                StringBuilder mappedRow = new StringBuilder(width);
+
+                for (int col = 0; col < width; col++) {
+                    int cell = row * width + col;
+                    boolean known = !masked || Dungeon.visible[cell] || level.mapped[cell];
+                    terrainRow.put(known ? level.map[cell] : -1);
+                    passableRow.append(level.passable[cell] ? '1' : '0');
+                    visibleRow.append(Dungeon.visible[cell] ? '1' : '0');
+                    mappedRow.append(level.mapped[cell] ? '1' : '0');
+                }
+
+                terrainRows.put(terrainRow);
+                passableRows.put(passableRow.toString());
+                visibleRows.put(visibleRow.toString());
+                mappedRows.put(mappedRow.toString());
+            }
+
+            JSONObject root = new JSONObject();
+            root.put("levelId", DungeonGenerator.getCurrentLevelId());
+            root.put("depth", Dungeon.depth);
+            root.put("width", width);
+            root.put("height", height);
+            root.put("terrain", terrainRows);
+            root.put("passable", passableRows);
+            root.put("visible", visibleRows);
+            root.put("mapped", mappedRows);
+
+            // stair cells for pathing targets
+            org.json.JSONArray exitsJson = new org.json.JSONArray();
+            for (int cell = 0; cell < level.getLength(); cell++) {
+                if (level.isExit(cell)) {
+                    JSONObject exitJson = new JSONObject();
+                    exitJson.put("x", cell % width);
+                    exitJson.put("y", cell / width);
+                    exitsJson.put(exitJson);
+                }
+            }
+            root.put("exits", exitsJson);
+
+            int entrance = level.entrance;
+            if (entrance >= 0) {
+                JSONObject entranceJson = new JSONObject();
+                entranceJson.put("x", entrance % width);
+                entranceJson.put("y", entrance / width);
+                root.put("entrance", entranceJson);
+            }
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", root.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugGetMap: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
