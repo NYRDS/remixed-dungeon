@@ -151,6 +151,7 @@
     <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">مرحباً... مرحباً! أنت ذلك المغامر، صحيح؟ ساعدني يا صديقي، هؤلاء العسكريون الملاعين حبسوني هنا! إنهم ينوون إعادة تنشيط سلاح قديم لغزو البشر على السطح! لكن نظراً لخطورة الأمر، عارضتهم، فرموني وسجنوني في قفص! أتوسل إليك أن تجد مفتاح الزنزانة، وفي المقابل، سأساعدك بأقصى ما أستطيع.</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
+    <string name="CagedKobold_Name">كوبولد مسجون</string>
     <string name="CagedKobold_Name_Objective">كوبولد مسجون</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
@@ -1039,6 +1040,7 @@
     <string name="town_deco_dungeon_door_desc">مدخل إلى الزنزانة.</string>
     <string name="town_deco_emptyboard_desc">الرف العادي لوضع الأشياء للعرض</string>
     <string name="town_deco_entrance_name">مدخل</string>
+    <string name="town_deco_fence_desc">سياج خشبي مغطى بالثلج.</string>
     <string name="town_deco_fence_name">سياج</string>
     <string name="town_deco_firewood_desc">شيء ضروري في مثل هذا الصقيع القارس.</string>
     <string name="town_deco_firewood_name">حطب</string>
@@ -1074,6 +1076,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 

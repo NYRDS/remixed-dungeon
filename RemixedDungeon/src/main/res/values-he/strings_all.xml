@@ -131,6 +131,7 @@
     <string name="CagedKobold_Intro">היי... היי! אתה אותו הרפתקן, נכון? תעזור לי, חבר, הצבאיים הארורים האלה נעלו אותי פה! הם מתכוונים להפעיל מחדש נשק עתיק כדי לכבוש את בני האדם על פני השטח! אבל בהתחשב בכמה שזה מסוכן, התנגדתי, אז הם פשוט זרקו אותי ונעלו אותי בכלוב! אני מתחנן שתמצא את המפתח לתא, ובתמורה, אעזור לך כמיטב יכולתי.</string>
     <string name="CagedKobold_Message1">בבקשה...</string>
     <string name="CagedKobold_Message2">אתה חייב לעזור לי לצאת, חבר</string>
+    <string name="CagedKobold_Name">קובולד כלוא</string>
     <string name="CagedKobold_Name_Objective">קובולד בכלוב</string>
     <string name="CagedKobold_Quest_End">אוי, תודה לך, תודה רבה! איך הצלחת למצוא את המפתח? אתה... אתה השמדת את הנשק?! זה מדהים! אתה יודע מה, אמרתי שאעזור לך, ואני חושב שאני יודע את הדרך הטובה ביותר. אני אשאר איתך לזמן מה. * הקובולד הכלוא הפך לנר</string>
     <string name="CandleOfMindVision_Info">נראה כמו נר רגיל, לא משהו שהיית מצפה למצוא בצינוק מסוכן. מוזר שזה די חם למגע, למרות שזה עדיין לא הודלק.</string>
@@ -725,6 +726,7 @@
     <string name="ShadowLord_Name_Objective">אדון הצללים</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">צל</string>
+    <string name="ShadowsBuff_Name">התמזגות עם הצללים</string>
     <string name="ShamanElder_Desc">הגנול המסוים הזה נראה הרבה יותר מבוגר משאמנים אחרים ובוודאי יש לו מעמד גבוה יותר בשבט. הילה מוזרה נוצרת סביבו באיטיות, שנראה שמשקפת כל מה שנוגע בה.</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="Shaman_Gender">masculine</string>
@@ -1028,6 +1030,7 @@
     <string name="town_deco_entrance_name">כניסה</string>
     <string name="town_deco_exit_desc">לא ידוע מה מחכה לך אם תרד במדרגות האלה.</string>
     <string name="town_deco_exit_name">יציאה</string>
+    <string name="town_deco_fence_desc">גדר עץ מכוסה בשלג.</string>
     <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_fireplace_desc">מצוין לחימום במקום קר כמו זה.</string>
     <string name="town_deco_firewood_desc">פריט חיוני בקור כזה.</string>
@@ -1145,6 +1148,9 @@
 
 
     <string name="town_deco_wooden_drawer_desc">מעניין מה שמור בפנים.</string>
+
+
+
 
 
 
