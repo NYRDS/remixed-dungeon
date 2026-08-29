@@ -66,6 +66,7 @@
     <string name="Badges_GamesPlayed1">10 مباريات لُعبت</string>
     <string name="Badges_GamesPlayed2">تم لعب 100 لعبة</string>
     <string name="Badges_GoldColleted1">100 ذهب جُمع</string>
+    <string name="Badges_GoldColleted3">تم جمع 2500 ذهب</string>
     <string name="Badges_GoldColleted4">تم جمع 7500 ذهب</string>
     <string name="Badges_Ice_Guardian_Slain">تم القضاء على حارس الجليد</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
@@ -261,6 +262,7 @@
     <string name="FireElemental_Desc">العناصر النارية المتجولة هي منتج ثانوي لاستدعاء كيانات أعظم. فطبيعتها الفوضوية تجعل السيطرة عليها مستحيلة حتى لأقوى علماء الشياطين.</string>
     <string name="FireElemental_Name">عنصر ناري</string>
     <string name="FireElemental_Name_Objective">عنصر النار</string>
+    <string name="Fire_Info">هنا نار مشتعلة.</string>
     <string name="Fire_Name_1">مشتعل %s</string>
     <string name="Firebloom_Name">زهرة النار</string>
     <string name="FortuneTellerNPC_Name">عرافة</string>
@@ -273,6 +275,7 @@
     <string name="FrozenCarpaccio_Name">كارباتشو مجمد</string>
     <string name="GameScene_Grass">رائحة النباتات تفوح في الهواء.</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
+    <string name="GameScene_WelcomeBack">مرحباً بعودتك إلى المستوى %d من Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Name">مناعة الغاز</string>
     <string name="Ghost_Defense">تهرب</string>
     <string name="Ghost_Rose1">مرحباً أيها المغامر... يوماً ما كنت مثلك - قوياً واثقاً... والآن أنا ميت... لكنني لا أستطيع مغادرة هذا المكان... ليس قبل أن أستعيد _الوردة المجففة_ الخاصة بي... إنها مهمة جداً لي... سرقها مني وحش ما من جثتي...</string>
@@ -307,6 +310,7 @@
     <string name="HeroClass_GnollPerks_3">لا يستطيع الغنول القراءة أو الكتابة.</string>
     <string name="HeroClass_MagPerks_3">يمكن للسحرة استخدام العصي السحرية كسلاح قتال قريب.</string>
     <string name="HeroClass_MagPerks_4">يستخدم السحرة المانا لإلقاء التعاويذ العنصرية.</string>
+    <string name="HeroClass_MagPerks_5">تتم التعرف على لفافات التعريف منذ البداية.</string>
     <string name="HeroClass_NecromancerPerks_1">يستخدم السحرة الماؤتون المانا لإلقاء تعاويذ الموت.</string>
     <string name="HeroClass_NecromancerPerks_2">يبدأ النكرومانسر برداء نكرومانسر فريد، يمنح نقطة مانا واحدة لكل مخلوق يُقتل.</string>
     <string name="HeroClass_NecromancerPerks_3">يبدأ النيكرومانسر بمفتاح هيكل عظمي من المستوى 7.</string>
@@ -393,6 +397,7 @@
     <string name="Level_TileFireTrap">فخ حريق</string>
     <string name="Level_TileLockedDoor">باب مقفل</string>
     <string name="Level_TileLockedExit">مخرج سفلي مغلق</string>
+    <string name="Level_TileParalyticTrap">فخ غاز مشل</string>
     <string name="Level_TilePedestal">قاعدة</string>
     <string name="Level_TileSign">لافتة</string>
     <string name="Level_TileSummoningTrap">فخ الاستدعاء</string>
@@ -415,12 +420,13 @@
     <string name="MageArmor_ACSpecial">أرض منصهرة</string>
     <string name="MageArmor_Name">رداء الساحر</string>
     <string name="MailArmor_Name">درع حلقي</string>
-    <string name="MeleeWeapon_Info1c">مُطوَّر</string>
+    <string name="MeleeWeapon_Info1c">مُحسَّن</string>
     <string name="MeleeWeapon_Info2a">متوسط ضرره %d نقطة لكل ضربة.</string>
     <string name="MeleeWeapon_Info3d">و</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
     <string name="MeleeWeapon_Info6b">بسبب قوتك الزائدة، تم زيادة ضرر هجومك بهذا %s.</string>
     <string name="MeleeWeapon_Info7c">يمكنك الشعور بسحر شرير يكمن داخل %s.</string>
+    <string name="MimicAmulet_Name">مُقلِّد</string>
     <string name="MimicPie_Desc">الميماكس كائنات سحرية يمكنها اتخاذ أي شكل تريده. هذا يشبه فطيرة كبيرة ولذيذة.</string>
     <string name="MimicPie_Name">ميميكي</string>
     <string name="MimicPie_Name_Objective">ميميكي</string>
@@ -517,6 +523,7 @@
     <string name="Potion_Shatter">تنكسر القارورة وينثر %s السائل بلا ضرر</string>
     <string name="Potion_SureThrow">هل أنت متأكد أنك تريد رميه؟ في معظم الحالات، من المنطقي شربه.</string>
     <string name="Potion_Yes">نعم، أعرف ما أفعل</string>
+    <string name="Prison_TileDescBookshelf">هذا على الأرجح بقايا مكتبة السجن. هل يمكن أن يحترق؟</string>
     <string name="Prison_TileWater">ماء مظلم بارد.</string>
     <string name="PseudoPasty_Info">هذا فطيرة كورنيش أصلية مع حشوة تقليدية من اللحم والبطاطس.</string>
     <string name="PseudoRat_Name">فأر كاذب</string>
@@ -829,6 +836,7 @@
     <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">أسنان يوغ</string>
     <string name="ZombieGnoll_Gender">masculine</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="deco_candle_name">شمعة</string>
     <string name="gdpr_title">خصّص تجربتك الإعلانية</string>
     <string name="town_deco_INN_sign_desc">يبدو أن هناك فندقاً داخل هذا المبنى.</string>
@@ -896,6 +904,15 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
 
 
 

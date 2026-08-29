@@ -57,6 +57,7 @@
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="Badges_GamesPlayed2">Đã chơi 100 ván</string>
     <string name="Badges_GamesPlayed5">Đã chơi 5000 ván</string>
+    <string name="Badges_GoldColleted3">Đã thu thập 2500 vàng</string>
     <string name="Badges_GoldColleted4">Đã thu thập 7500 vàng</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
     <string name="Badges_ItemLvl2">Đã có vật phẩm cấp 6</string>
@@ -142,6 +143,7 @@
     <string name="Challenges_Names_5">Vào bóng tối</string>
     <string name="ChampionOfAirBuff_Info">Đặc tính này ban tặng cho sinh vật bản chất của gió, nâng cao sự nhanh nhẹn và khả năng chiến đấu. Võ sĩ Bậc Thầy Khí trở thành đối thủ đáng gờm, có thể tung ra những đòn tấn công nhanh chóng và tàn phá có thể thay đổi nhanh chóng cục diện trận chiến.</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
+    <string name="ChampionOfEarthBuff_Name">Nhà vô địch Đất</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Được thâu nhục bởi cơn giận của ngọn lửa, đặc tính này khuếch đại sự dữ dằn và khả năng chiến đấu của sinh vật. Võ sĩ Lửa nổi lên như một đối thủ đáng sợ, tung ra những đòn tấn công tàn khốc có thể bao quanh kẻ thù trong ngọn lửa thiêu rực, khiến tất cả những kẻ dám chống đối đều run rợn.\&quot;</string>
     <string name="ChampionOfFireBuff_Name">Nhà Vô Địch Lửa</string>
     <string name="ChaosBlade_Gender">masculine</string>
@@ -164,6 +166,7 @@
     <string name="CharAction_Push">đẩy</string>
     <string name="CharAction_Take">Nhặt lấy</string>
     <string name="CharAction_Taunt">khiêu khích</string>
+    <string name="Char_Defeat_0">%1 đã đánh bại %2</string>
     <string name="Char_Hit_2">%1$s đánh trúng %2$s</string>
     <string name="Char_Kill_1">%s đã giết ngươi...</string>
     <string name="Char_StaAmok">phát cuồng</string>
@@ -292,7 +295,7 @@
     <string name="FuryBuff_Name">Cuồng Nộ</string>
     <string name="GameScene_NightMode">Hãy cẩn thận, hầm ngục còn nguy hiểm hơn vào ban đêm!</string>
     <string name="GameScene_Welcome">Chào mừng bạn đến cấp %d của Remixed Dungeon!</string>
-    <string name="GameScene_WelcomeBack">Chào mừng quay lại cấp độ %d của Remixed Dungeon!</string>
+    <string name="GameScene_WelcomeBack">Chào mừng quay lại cấp %d của Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Info">Miễn nhiễm với mọi loại khí.</string>
     <string name="GasImmuneBuff_Name">Miễn dịch khí gas</string>
     <string name="Ghost_Defense">né tránh</string>
@@ -328,6 +331,7 @@
     <string name="HeroClass_Mag">pháp sư</string>
     <string name="HeroClass_MagPerks_2">Khi ăn, bất kỳ món ăn nào cũng khôi phục 1 sạc cho tất cả cây gậy phép trong túi đồ.</string>
     <string name="HeroClass_MagPerks_4">Pháp sư sử dụng mana để thi triển các phép thuật nguyên tố.</string>
+    <string name="HeroClass_MagPerks_5">Cuộn giấy Nhận diện đã được nhận diện ngay từ đầu.</string>
     <string name="HeroClass_Necromancer">pháp sư</string>
     <string name="HeroClass_NecromancerPerks_3">Pháp sư gọi hồn bắt đầu với một chiếc chìa khóa xương cấp 7.</string>
     <string name="HeroClass_None">thường dân</string>
@@ -457,7 +461,7 @@
     <string name="ManaShieldBuff_Name">Khiên phép thuật</string>
     <string name="Mana_Title">Năng lượng</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
-    <string name="MeleeWeapon_Info1c">nâng cấp</string>
+    <string name="MeleeWeapon_Info1c">đã nâng cấp</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
     <string name="MeleeWeapon_Info2a">Sát thương trung bình là %d điểm mỗi lần đánh.</string>
     <string name="MeleeWeapon_Info3a">Đây là một vũ khí khá %s.</string>
@@ -563,6 +567,7 @@
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
     <string name="Potion_RuneDissaperaed">Chữ ký biến mất khỏi %s.</string>
     <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
+    <string name="Prison_TileDescBookshelf">Đây có lẽ là dấu tích của một thư viện nhà tù. Liệu nó có cháy không?</string>
     <string name="PseudoPasty_Info">Đây là chiếc bánh nhân Cornwall chính hiệu với nhân truyền thống là thịt bò và khoai tây.</string>
     <string name="PseudoPasty_Name">bánh nhúng</string>
     <string name="PseudoRat_Name">chuột giả</string>
@@ -583,6 +588,7 @@
     <string name="ResultDescriptions_Immured">Bị vùi kín trong đá ở tầng %d</string>
     <string name="ResultDescriptions_Necromancy">Hết sức lực khi cố gắng hồi sinh xác ở tầng %d</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
+    <string name="ResultDescriptions_Wand">Bị giết bởi chính %1 của bạn ở tầng %2</string>
     <string name="RingOfDetection_Info">Đeo nhẫn này giúp bạn nhận ra những bí mật ẩn giấu - bẫy và cửa bí mật - mà không cần dành thời gian tìm kiếm. Nhẫn dò tìm xuống cấp sẽ làm tê liệt giác quan của bạn, khiến bạn khó nhận ra bí mật hơn ngay cả khi chủ động tìm kiếm.</string>
     <string name="RingOfDetection_Name">Nhẫn Phát Hiện</string>
     <string name="RingOfElements_Name">Nhẫn Nguyên tố</string>
@@ -813,6 +819,7 @@
     <string name="WndDonate_commonDonateText">Remixed Dungeon - miễn phí cho tất cả mọi người và mãi mãi như vậy.\n\nTuy nhiên, bạn có thể giúp chúng tôi làm cho trò chơi còn tốt hơn nữa.\n\nNgoài lời cảm ơn chân thành, bạn sẽ nhận được một số cải tiến thẩm mỹ.</string>
     <string name="WndDonate_goldDonate">quyên góp vàng</string>
     <string name="WndDonate_goldDonateText">Cảm ơn sự giúp đỡ của bạn</string>
+    <string name="WndDonate_royalDonate">quyên góp hoàng gia</string>
     <string name="WndDonate_royalDonateText2">Ngoài ra, bạn sẽ nhận được mọi loại mũ từ cửa hàng trong ứng dụng! Cũng như mọi loại mũ sẽ được phát hành trong tương lai.</string>
     <string name="WndDontLikeAds_NotThisTime">Không phải lần này</string>
     <string name="WndFortuneTeller_IdentifyAll">Tất cả</string>
@@ -993,6 +1000,15 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
 
 
 

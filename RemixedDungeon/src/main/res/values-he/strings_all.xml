@@ -167,6 +167,7 @@
     <string name="CityBossLevel_ChessSign">הניחו את נשקיכם — המלך יבחן את שכלכם, לא את כוחכם.</string>
     <string name="City_TileDescBookshelf">שורות של ספרים בתחומים שונים ממלאות את מדף הספרים.</string>
     <string name="City_TileDescDeco">חסרים כאן מספר אריחים.</string>
+    <string name="City_TileDescExit">רמפה מובילה לעומק התחתון.</string>
     <string name="ClassArmor_LowMana">מאנה לא מספיקה!</string>
     <string name="ClassArmor_NotEquipped">אתה צריך ללבוש את השריון הזה כדי להשתמש בכוח המיוחד שלו!</string>
     <string name="CloakBuff_Name">מוסתר</string>
@@ -194,6 +195,7 @@
     <string name="DM300_Info2">המשימה נכשלה. כיבוי.</string>
     <string name="DarkGold_Name">עפרת זהב אפלה</string>
     <string name="DarkSacrifice_Ok">חַיַּי שֶׁלְּךָ!</string>
+    <string name="DarkVeilBuff_Info">מסך של חושך מקיף את הבעלים, ומזמן רוח בכל פעם שמתקבל נזק.</string>
     <string name="Dart_Info">חודים מתכתיים פשוטים אלו מאוזנים בצורה אידיאלית כדי לחדור במדויק את טרפם.</string>
 
     <string name="Dart_Name">חץ קטן</string>
@@ -260,6 +262,7 @@
     <string name="FullFaceMask_Info">מסכת גז היא מסכה המשמשת להגנה על הלובש מפני שאיפת מזהמים באוויר וגזים רעילים. המסכה יוצרת כיסוי אטום על האף, הפה והעיניים.\n\nמסננים חסרים ממסכה זו אבל היא עדיין נראית מגניבה.</string>
     <string name="GameScene_Chasm">צעדיך מהדהדים ברחבי הצינוק.</string>
     <string name="GameScene_Welcome">ברוך בואך לרמה %d של Remixed Dungeon!</string>
+    <string name="GameScene_WelcomeBack">ברוך שובך לשלב %d של Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Info">חסין לכל הגזים</string>
     <string name="GasImmuneBuff_Name">חסינות לגז</string>
     <string name="Ghost_Defense">התחמק</string>
@@ -293,6 +296,7 @@
     <string name="HeroClass_Hun">ציידת</string>
     <string name="HeroClass_HunPerks_3">ציידות מרוויחות יותר בריאות מטללים.</string>
     <string name="HeroClass_MagPerks_4">מכשפים משתמשים במאנה כדי להטיל כישופים יסודיים.</string>
+    <string name="HeroClass_MagPerks_5">מגילות הזיהוי כבר מזוהות מההתחלה.</string>
     <string name="HeroClass_NecromancerPerks_0">נקרומנטרים מתחילים עם 15 נקודות בריאות.</string>
     <string name="HeroClass_NecromancerPerks_3">נקרומנטרים מתחילים עם מפתח שלד ברמה 7.</string>
     <string name="HeroClass_None">אזרח פשוט</string>
@@ -396,12 +400,13 @@
     <string name="MedicineMask_Obtained">התקבלה מסכה כירורגית</string>
     <string name="MeleeWeapon_Info1a">%1$s — %2$s כלי נשק קרוב דרגה %3$d.</string>
     <string name="MeleeWeapon_Info1b"> </string>
-    <string name="MeleeWeapon_Info1c">משופר</string>
+    <string name="MeleeWeapon_Info1c">משודרג</string>
     <string name="MeleeWeapon_Info1d">מוחלש</string>
     <string name="MeleeWeapon_Info2a">הנזק הממוצע שלה הוא %d נקודות לפגיעה.</string>
     <string name="MeleeWeapon_Info3d">ו</string>
     <string name="MeleeWeapon_Info5">זה מכושף.</string>
     <string name="MimicAmulet_Name">מימיק</string>
+    <string name="MimicPie_Desc">מימיקים הם יצורים קסומים שיכולים לקבל כל צורה שירצו. זה נראה כמו מאפה גדול וטעים</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name_Objective">מימיק</string>
     <string name="MirrorImage_Gender">masculine</string>
@@ -507,6 +512,7 @@
     <string name="Potion_Shatter">הבקבוק מתנפץ ו-%s נוזל מתפזר ללא נזק</string>
     <string name="Potion_SureThrow">האם אתה בטוח שאתה רוצה לזרוק את זה? ברוב המקרים הגיוני לשתות את זה.</string>
     <string name="Potion_Yes">כן</string>
+    <string name="Prison_TileDescBookshelf">זה כנראה שריד של ספריית בית סוהר. אולי זה יבער?</string>
     <string name="Prison_TileDescDeco">יש כתמי דם ישנים על הרצפה.</string>
     <string name="Prison_TileWater">מים כהים וקרים.</string>
     <string name="PseudoPasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
@@ -587,6 +593,7 @@
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
     <string name="Sewer_TileDescDeco">טחב צהבהב ולח מכסה את הרצפה.</string>
     <string name="Shades_Info">יש אנשים שאומרים שמבוכים חשוכים מדי בשביל ללבוש את אלה. ואתה אומר שהאנשים האלה פשוט לא מספיק מגניבים.</string>
+    <string name="ShadowLord_Death">לאאאא...</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Name_Objective">אדון הצללים</string>
     <string name="Shadow_Gender">feminine</string>
@@ -656,6 +663,7 @@
     <string name="TitleScene_Highscores">ציונים גבוהים</string>
     <string name="TitleScene_Play">שחק</string>
     <string name="TomeOfKnowledge_Name">ספר הידע</string>
+    <string name="TomeOfMastery_ACRead">קרא</string>
     <string name="Torch_ACLight">הַדְלֵק</string>
     <string name="Torch_Name">לפיד</string>
     <string name="ToughShield_name">מגן עור מחוזק</string>
@@ -941,6 +949,15 @@
 
 
     <string name="town_deco_wooden_drawer_desc">מעניין מה שמור בפנים.</string>
+
+
+
+
+
+
+
+
+
 
 
 
