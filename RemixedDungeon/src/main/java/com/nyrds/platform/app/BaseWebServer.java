@@ -95,6 +95,46 @@ public abstract class BaseWebServer extends NanoHTTPD {
         return instance != null && instance.started;
     }
 
+    // caveman: one gate for every client-supplied resource path.
+    // mod-relative paths only. kills ".." segments, absolute paths,
+    // windows drives, backslashes. empty path = root dir, that is fine.
+    public static boolean isSafeResourcePath(String path) {
+        if (path == null) {
+            return false;
+        }
+        if (path.isEmpty()) {
+            return true;
+        }
+        if (path.indexOf('\0') >= 0 || path.indexOf('\\') >= 0) {
+            return false;
+        }
+        if (new File(path).isAbsolute() || path.matches("^[A-Za-z]:.*")) {
+            return false;
+        }
+        for (String segment : path.split("/")) {
+            if (segment.equals("..")) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // caveman: resolved file must stay inside external storage root.
+    // belt-and-braces for write endpoints, catches symlink games too.
+    protected static boolean isInsideStorageRoot(File file) {
+        try {
+            String root = FileSystem.getExternalStorageFile("").getCanonicalPath();
+            return file.getCanonicalPath().startsWith(root + File.separator);
+        } catch (IOException e) {
+            return false;
+        }
+    }
+
+    protected static Response forbiddenPath() {
+        return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+            "{\"error\":\"Illegal path\"}");
+    }
+
     public static String getServerAddress() {
         if (instance != null && instance.serverAddress != null) {
             return instance.serverAddress;
@@ -527,6 +567,11 @@ public abstract class BaseWebServer extends NanoHTTPD {
     protected Response serveFs(String file) {
         GLog.debug("serveFs called with file: '" + file + "'");
 
+        if (!isSafeResourcePath(file)) {
+            GLog.w("Blocked path traversal attempt on /fs/: " + file);
+            return forbiddenPath();
+        }
+
         // Remove trailing slash for directory checking (if present)
         String cleanPath = file;
         if (cleanPath.endsWith("/")) {
@@ -630,7 +675,14 @@ public abstract class BaseWebServer extends NanoHTTPD {
             }
 
             // Sanitize the path
-            path = path.replace("..", ""); // Prevent directory traversal
+            // caveman: old code silently stripped ".." from path but never checked
+            // the filename - multipart filename carried the traversal instead.
+            // strict check on both, fail closed.
+            if (!isSafeResourcePath(path) || !isSafeResourcePath(filename)) {
+                GLog.w("Blocked illegal upload path: '" + path + "' file: '" + filename + "'");
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "text/html",
+                    serveUploadForm("ERROR: Illegal path.", ""));
+            }
             path = path.replace("//", "/"); // Normalize path separators
 
             // Ensure path ends with / if not empty
@@ -644,6 +696,14 @@ public abstract class BaseWebServer extends NanoHTTPD {
             String fullPath = ModdingMode.activeMod() + "/" + path + filename;
             GLog.debug("Full file path: " + fullPath);
 
+            File destFile = FileSystem.getExternalStorageFile(fullPath);
+
+            if (!isInsideStorageRoot(destFile)) {
+                GLog.w("Blocked upload outside storage root: " + fullPath);
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "text/html",
+                    serveUploadForm("ERROR: Destination outside mod storage.", ""));
+            }
+
             // Get the temporary uploaded file
             String tempFilePath = files.get("file");
             GLog.debug("Temp file path: " + tempFilePath);
@@ -654,7 +714,6 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
             // Move the file to the correct location
             File tempFile = new File(tempFilePath);
-            File destFile = FileSystem.getExternalStorageFile(fullPath);
             GLog.debug("Destination file path: " + destFile.getAbsolutePath());
 
             // Create directories if needed
@@ -788,7 +847,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             }
 
             // Validate that the file path is within the allowed mod directory
-            if (filePath.contains("../") || filePath.startsWith("../")) {
+            if (!isSafeResourcePath(filePath)) {
                 GLog.debug("Directory traversal attempt detected: " + filePath);
                 return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
                     "{\"error\":\"Directory traversal is not allowed.\"}");
@@ -810,6 +869,12 @@ public abstract class BaseWebServer extends NanoHTTPD {
             // Create the file
             File destFile = FileSystem.getExternalStorageFile(fullPath);
             GLog.debug("Destination file path: " + destFile.getAbsolutePath());
+
+            if (!isInsideStorageRoot(destFile)) {
+                GLog.w("Blocked JSON save outside storage root: " + fullPath);
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Destination outside mod storage.\"}");
+            }
 
             // Create directories if needed
             File destDir = destFile.getParentFile();
@@ -939,7 +1004,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             }
 
             // Validate that the file path is within the allowed mod directory
-            if (filePath.contains("../") || filePath.startsWith("../")) {
+            if (!isSafeResourcePath(filePath)) {
                 GLog.debug("Directory traversal attempt detected: " + filePath);
                 return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
                     "{\"error\":\"Directory traversal is not allowed.\"}");
@@ -952,6 +1017,12 @@ public abstract class BaseWebServer extends NanoHTTPD {
             // Create the file
             File destFile = FileSystem.getExternalStorageFile(fullPath);
             GLog.debug("Destination file path: " + destFile.getAbsolutePath());
+
+            if (!isInsideStorageRoot(destFile)) {
+                GLog.w("Blocked Lua save outside storage root: " + fullPath);
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Destination outside mod storage.\"}");
+            }
 
             // Create directories if needed
             File destDir = destFile.getParentFile();
@@ -1122,6 +1193,9 @@ public abstract class BaseWebServer extends NanoHTTPD {
                 }
 
                 GLog.debug("File to edit: '" + filePath + "'");
+                if (!isSafeResourcePath(filePath)) {
+                    return forbiddenPath();
+                }
                 if (!filePath.isEmpty()) {
                     return newFixedLengthResponse(Response.Status.OK, "text/html",
                         serveJsonEditor(filePath));
@@ -1163,6 +1237,9 @@ public abstract class BaseWebServer extends NanoHTTPD {
                 }
 
                 GLog.debug("Lua file to edit: '" + filePath + "'");
+                if (!isSafeResourcePath(filePath)) {
+                    return forbiddenPath();
+                }
                 if (!filePath.isEmpty()) {
                     return newFixedLengthResponse(Response.Status.OK, "text/html", serveLuaEditor(filePath));
                 } else {
@@ -1202,6 +1279,9 @@ public abstract class BaseWebServer extends NanoHTTPD {
                 }
 
                 GLog.debug("Image to preview: '" + filePath + "'");
+                if (!isSafeResourcePath(filePath)) {
+                    return forbiddenPath();
+                }
                 if (!filePath.isEmpty()) {
                     return serveImagePreview(filePath);
                 } else {
@@ -1241,6 +1321,9 @@ public abstract class BaseWebServer extends NanoHTTPD {
                 }
 
                 GLog.debug("PNG file to edit: '" + filePath + "'");
+                if (!isSafeResourcePath(filePath)) {
+                    return forbiddenPath();
+                }
                 if (!filePath.isEmpty()) {
                     return servePngEditor(filePath);
                 } else {
@@ -1255,6 +1338,10 @@ public abstract class BaseWebServer extends NanoHTTPD {
             if(uri.startsWith("/fs/")) {
                 // Check for download parameter
                 String file = uri.substring(4);
+                if (!isSafeResourcePath(file)) {
+                    GLog.w("Blocked path traversal attempt on /fs/ download: " + file);
+                    return forbiddenPath();
+                }
                 String downloadParam = session.getParameters().get("download") != null ?
                     session.getParameters().get("download").get(0) : null;
 
@@ -1280,6 +1367,11 @@ public abstract class BaseWebServer extends NanoHTTPD {
                 String file = uri.substring("/web/pixelcraft/".length());
                 if (file.isEmpty()) {
                     file = "index.html"; // Default to index.html if no specific file requested
+                }
+
+                if (!isSafeResourcePath(file)) {
+                    GLog.w("Blocked path traversal attempt on /web/pixelcraft/: " + file);
+                    return forbiddenPath();
                 }
 
                 try {
@@ -1317,6 +1409,10 @@ public abstract class BaseWebServer extends NanoHTTPD {
             if(uri.startsWith("/raw/")) {
                 // Handle raw file content requests (for editor content loading)
                 String file = uri.substring(5); // "/raw/".length() = 5
+                if (!isSafeResourcePath(file)) {
+                    GLog.w("Blocked path traversal attempt on /raw/: " + file);
+                    return forbiddenPath();
+                }
                 try {
                     InputStream fis = ModdingMode.getInputStream(file);
                     Response response = newChunkedResponse(Response.Status.OK, "application/octet-stream", fis);
@@ -1331,6 +1427,9 @@ public abstract class BaseWebServer extends NanoHTTPD {
                 return serveDebugList("");
             } else if(uri.startsWith("/debug-list/")) {
                 String path = uri.substring(12); // "/debug-list/".length() = 12
+                if (!isSafeResourcePath(path)) {
+                    return forbiddenPath();
+                }
                 return serveDebugList(path);
             }
         } else if (session.getMethod() == Method.POST) {

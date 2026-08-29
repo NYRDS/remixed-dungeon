@@ -842,7 +842,7 @@ public class WebServer extends BaseWebServer {
             }
 
             // Validate that the file path is within the allowed mod directory
-            if (filename.contains("../") || filename.startsWith("../")) {
+            if (!isSafeResourcePath(filename)) {
                 GLog.debug("Directory traversal attempt detected: " + filename);
                 return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
                     "{\"error\":\"Directory traversal is not allowed.\"}");
@@ -858,6 +858,12 @@ public class WebServer extends BaseWebServer {
             // Create the file
             File destFile = FileSystem.getExternalStorageFile(fullPath);
             GLog.debug("Destination file path: " + destFile.getAbsolutePath());
+
+            if (!isInsideStorageRoot(destFile)) {
+                GLog.w("Blocked texture save outside storage root: " + fullPath);
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Destination outside mod storage.\"}");
+            }
 
             // Create directories if needed
             File destDir = destFile.getParentFile();
@@ -899,6 +905,11 @@ public class WebServer extends BaseWebServer {
     protected Response handleTextureGet(String filePath) {
         try {
             GLog.debug("Handling texture get request for: " + filePath);
+
+            if (!isSafeResourcePath(filePath)) {
+                GLog.w("Blocked path traversal attempt on /api/get_texture: " + filePath);
+                return forbiddenPath();
+            }
 
             // Create the full path for the file
             String fullPath = ModdingMode.activeMod() + "/" + filePath;

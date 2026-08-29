@@ -349,6 +349,10 @@ public class WebServer extends BaseWebServer {
             if(uri.startsWith("/fs/")) {
                 // Check for download parameter
                 String file = uri.substring(4);
+                if (!isSafeResourcePath(file)) {
+                    GLog.w("Blocked path traversal attempt on /fs/ download: " + file);
+                    return forbiddenPath();
+                }
                 String downloadParam = session.getParameters().get("download") != null ?
                     session.getParameters().get("download").get(0) : null;
 
@@ -371,6 +375,10 @@ public class WebServer extends BaseWebServer {
             if(uri.startsWith("/raw/")) {
                 // Handle raw file content requests (for editor content loading)
                 String file = uri.substring(5); // "/raw/".length() = 5
+                if (!isSafeResourcePath(file)) {
+                    GLog.w("Blocked path traversal attempt on /raw/: " + file);
+                    return forbiddenPath();
+                }
                 try {
                     InputStream fis = ModdingMode.getInputStream(file);
                     Response response = newChunkedResponse(Response.Status.OK, "application/octet-stream", fis);
@@ -387,6 +395,11 @@ public class WebServer extends BaseWebServer {
                 String file = uri.substring("/web/pixelcraft/".length());
                 if (file.isEmpty()) {
                     file = "index.html"; // Default to index.html if no specific file requested
+                }
+
+                if (!isSafeResourcePath(file)) {
+                    GLog.w("Blocked path traversal attempt on /web/pixelcraft/: " + file);
+                    return forbiddenPath();
                 }
 
                 try {
@@ -457,6 +470,10 @@ public class WebServer extends BaseWebServer {
                             break;
                         }
                     }
+                }
+
+                if (!isSafeResourcePath(filePath)) {
+                    return forbiddenPath();
                 }
 
                 if (!filePath.isEmpty()) {
