@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.levels.CityBossLevel;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
@@ -191,6 +192,11 @@ public class Imp extends NPC {
 		
 		public static void process( Mob mob ) {
 			if (spawned && given && !completed) {
+				// caveman: no tokens from the Dwarf King fight - palace servants
+				// and raised undead made the quest a token farm
+				if (mob.undead || Dungeon.level instanceof CityBossLevel) {
+					return;
+				}
 				if ((alternative && mob instanceof Monk) ||
 					(!alternative && mob instanceof Golem)) {
 
