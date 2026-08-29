@@ -42,7 +42,7 @@ public class WaterOfTransmutation extends WellWater {
 
     @Override
     protected Item affectItem(Item item) {
-        Item transmutedItem = item;
+        Item transmutedItem = null;
 
         if (item instanceof SpellBook) {
             transmutedItem = new SpellBook();
@@ -58,11 +58,13 @@ public class WaterOfTransmutation extends WellWater {
             transmutedItem = changeWand(item);
         } else if (item instanceof Seed) {
             transmutedItem = changeSeed(item);
+        } else {
+            // caveman: not transmutable - reject, well keeps its water
+            // (regression: returning the item itself dried the well permanently)
+            return null;
         }
 
-        if (transmutedItem != item) {
-            clear();
-        }
+        clear();
         return transmutedItem;
     }
 
