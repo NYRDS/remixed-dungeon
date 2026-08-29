@@ -157,6 +157,10 @@ def check_page_language_consistency(file_path: Path, pages_dir: Path) -> List[Tu
         if target.startswith(('wiki:', 'doku>')):
             continue
 
+        # Skip mr: namespace (machine-readable pages, not a language)
+        if target.startswith('mr:'):
+            continue
+
         # Skip special relative links like :start and :sidebar
         if target.startswith(':'):
             continue
