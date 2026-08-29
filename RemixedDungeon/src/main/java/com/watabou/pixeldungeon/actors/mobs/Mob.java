@@ -387,6 +387,11 @@ public abstract class Mob extends Char {
 
         Mob clone = (Mob) makeClone();
 
+        // caveman: split must not duplicate gear - Multiplicity glyph on pet armor
+        // turned this into an enchanted-armor farm (precedent: Carcass.reanimate
+        // clears belongings too)
+        clone.getBelongings().clear();
+
         clone.hp(Math.max((hp() - damage) / 2, 1));
         clone.setPos(cell);
         clone.setState(MobAi.getStateByClass(Hunting.class));
