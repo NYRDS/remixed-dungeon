@@ -649,6 +649,7 @@
     <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Name">ملك الفئران</string>
     <string name="Rat_Gender">feminine</string>
+    <string name="Rat_Name">جراب الفأر</string>
     <string name="Rat_Name_Objective">فأر الكيس</string>
     <string name="RawFish_Name">سمك نيء</string>
     <string name="RegenerationBuff_Info">وظيفة التجدد الطبيعي موجودة في صيغة تأثير مؤقت لتسهيل الأمور.</string>
@@ -1085,6 +1086,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 

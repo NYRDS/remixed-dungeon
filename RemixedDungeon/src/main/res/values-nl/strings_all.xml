@@ -704,6 +704,7 @@
     <string name="RatSkullBuff_Name">Ratverdelger</string>
     <string name="RatSkull_Info2">Aan de andere kant bewijst het dat de eigenaar in staat is om ratten te doden, zelfs grote en stinkende.</string>
     <string name="Rat_Gender">feminine</string>
+    <string name="Rat_Name">buidelrat</string>
     <string name="RawFish_Name">rauwe vis</string>
     <string name="RawFish_Taste">Visachtig!</string>
     <string name="RegenerationBuff_Info">De functie voor natuurlijke regeneratie is in een buff-vorm om het makkelijker te maken.</string>
@@ -1238,6 +1239,7 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 

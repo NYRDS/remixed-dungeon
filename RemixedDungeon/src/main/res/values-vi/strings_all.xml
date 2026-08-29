@@ -697,6 +697,7 @@
     <string name="RatKing_Info1">Ta không ngủ!</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="Rat_Gender">feminine</string>
+    <string name="Rat_Name">chuột túi</string>
     <string name="Rat_Name_Objective">chuột túi</string>
     <string name="RawFish_Name">cá sống</string>
     <string name="RawFish_Taste">Vị cá!</string>
@@ -794,6 +795,7 @@
     <string name="SeedPouch_Info">Túi velour nhỏ này cho phép bạn chứa bất kỳ số lượng hạt giống nào trong đó. Rất tiện lợi.</string>
     <string name="Senior_Gender">masculine</string>
     <string name="ServantNPC_Gender">feminine</string>
+    <string name="ServantNPC_Name_Objective">nhân viên khách sạn</string>
     <string name="ServiceManNPC_Desc">Một công nhân thông thường của các cơ sở địa phương.</string>
     <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Name">nhân viên</string>
@@ -1196,6 +1198,8 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
