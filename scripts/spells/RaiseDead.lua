@@ -49,6 +49,22 @@ return spell.init{
             local level = RPD.Dungeon.level
             local mobPos = latestDeadMob.pos
 
+            -- caveman: resurrecting into a chasm cell kills the pet instantly and
+            -- wastes the spell - fall back to a free solid cell next to the death spot
+            if not level:isPassable(mobPos) then
+                local safeCell = nil
+                RPD.forCellsAround(mobPos, function(cell)
+                    if safeCell == nil and level:isPassable(cell) and not RPD.Actor:findChar(cell) then
+                        safeCell = cell
+                    end
+                end)
+                if safeCell == nil then
+                    RPD.glog("RaiseDead_NoSpace")
+                    return false
+                end
+                mobPos = safeCell
+            end
+
             if level:cellValid(mobPos) then
                 mob:setPos(mobPos)
                 mob:loot(RPD.ItemFactory:itemByName("Gold"))

@@ -182,40 +182,42 @@ public class Dungeon {
     public static void init() {
         synchronized (GameLoop.stepLock) {
             GameLoop.loadingOrSaving.incrementAndGet();
+            try {
+                SaveUtils.deleteLevels(heroClass);
 
-            SaveUtils.deleteLevels(heroClass);
+                gameId = String.valueOf(SystemTime.now());
 
-            gameId = String.valueOf(SystemTime.now());
+                reset();
 
-            reset();
+                Wand.initWoods();
+                Ring.initGems();
+                Scroll.initLabels();
+                Potion.initColors();
 
-            Wand.initWoods();
-            Ring.initGems();
-            Scroll.initLabels();
-            Potion.initColors();
+                depth = 0;
 
-            depth = 0;
+                potionOfStrength = 0;
+                scrollsOfUpgrade = 0;
+                arcaneStyli = 0;
+                dewVial = true;
+                transmutation = Random.IntRange(6, 14);
 
-            potionOfStrength = 0;
-            scrollsOfUpgrade = 0;
-            arcaneStyli = 0;
-            dewVial = true;
-            transmutation = Random.IntRange(6, 14);
+                chapters = new HashSet<>();
 
-            chapters = new HashSet<>();
+                Room.shuffleTypes();
 
-            Room.shuffleTypes();
+                hero = new Hero(GameLoop.getDifficulty());
 
-            hero = new Hero(GameLoop.getDifficulty());
+                heroClass.initHero(hero);
 
-            heroClass.initHero(hero);
+                hero.levelId = DungeonGenerator.getEntryLevel();
 
-            hero.levelId = DungeonGenerator.getEntryLevel();
-
-            realtime = GamePreferences.realtime();
-            moveTimeoutIndex = GamePreferences.limitTimeoutIndex(GamePreferences.moveTimeout());
-
-            GameLoop.loadingOrSaving.decrementAndGet();
+                realtime = GamePreferences.realtime();
+                moveTimeoutIndex = GamePreferences.limitTimeoutIndex(GamePreferences.moveTimeout());
+            } finally {
+                // caveman: failed init must not leak the counter - game wedges forever
+                GameLoop.loadingOrSaving.decrementAndGet();
+            }
         }
     }
 
@@ -242,21 +244,25 @@ public class Dungeon {
         synchronized (GameLoop.stepLock) {
             GameLoop.loadingOrSaving.incrementAndGet();
 
-            updateStatistics();
+            Level level = null;
+            try {
+                updateStatistics();
 
-            if (!DungeonGenerator.isLevelExist(pos.levelId)) {
-                pos.levelId = DungeonGenerator.getEntryLevel();
-                pos.cellId = -1;
-                pos = DungeonGenerator.descend(pos);
+                if (!DungeonGenerator.isLevelExist(pos.levelId)) {
+                    pos.levelId = DungeonGenerator.getEntryLevel();
+                    pos.cellId = -1;
+                    pos = DungeonGenerator.descend(pos);
+                }
+
+                level = DungeonGenerator.createLevel(pos);
+
+                Dungeon.hero.setPos(level.entrance);
+
+                Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId, "isSafe", false);
+            } finally {
+                // caveman: failed level creation must not leak the counter
+                GameLoop.loadingOrSaving.decrementAndGet();
             }
-
-            Level level = DungeonGenerator.createLevel(pos);
-
-            Dungeon.hero.setPos(level.entrance);
-
-            Statistics.qualifiedForNoKilling = !DungeonGenerator.getLevelProperty(level.levelId, "isSafe", false);
-
-            GameLoop.loadingOrSaving.decrementAndGet();
             return level;
         }
     }
@@ -587,10 +593,14 @@ public class Dungeon {
         }
 
         GameLoop.loadingOrSaving.incrementAndGet();
-        synchronized (GameLoop.stepLock) {
-            saveAllImpl();
+        try {
+            synchronized (GameLoop.stepLock) {
+                saveAllImpl();
+            }
+        } finally {
+            // caveman: failed save must not leak the counter - game wedges forever
+            GameLoop.loadingOrSaving.decrementAndGet();
         }
-        GameLoop.loadingOrSaving.decrementAndGet();
 
         lastSaveTimestamp = SystemTime.now();
     }
