@@ -94,6 +94,7 @@
     <string name="Bee_Name_Objective">דבורה</string>
     <string name="BellaNPC_Desc">נערה שנראית מאוד אלגנטית. כל המראה שלה אומר לך \&quot;אני טובה מדי עבור כולם.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
+    <string name="BellaNPC_Message">אין לי עניין בפשוטי עם כמוך!</string>
     <string name="BellaNPC_Name">בלה</string>
     <string name="BishopNPC_Desc">בישוף הכנסייה הקדושה של סנטה אדון המעמקים</string>
     <string name="BishopNPC_Gender">masculine</string>
@@ -209,6 +210,7 @@
     <string name="Codex_Story_12">נשק בוער - בפגיעה מוצלחת, גורם נזק נוסף למטרה ועלול לשרוף אותה.</string>
     <string name="Codex_Story_16">נשק בר מזל - כמעט מתעלם לחלוטין משריון האויב, וגורם להרבה יותר נזק.</string>
     <string name="Codex_Story_17">נשק מהמם - במכה מוצלחת, עלול לשתק את המטרה.</string>
+    <string name="Codex_Story_21">נשק פראי - בעת פגיעה מוצלחת, עלול לגרום נזק לכל האויבים הסמוכים למטרה.</string>
     <string name="Codex_Story_22">ספר זה כתוב בשפה של שדים</string>
     <string name="Codex_Story_23">הספר הזה כתוב בשפה הגמדית</string>
     <string name="Codex_Story_9">גליף תזוזה - בכל פעם שהגיבור נפגע, יש סיכוי שהגיבור יטלפורט לאריח גלוי אקראי. גליף זה לא עובד ברמות בוס.</string>
@@ -231,6 +233,7 @@
     <string name="Crystal_Gender">masculine</string>
     <string name="CurareDart_Gender">masculine</string>
     <string name="DM300_Gender">masculine</string>
+    <string name="DM300_Info1">DM-300 מתקן את עצמו!</string>
     <string name="DM300_Info2">המשימה נכשלה. כיבוי.</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="DarkGold_Name">עפרת זהב אפלה</string>
@@ -271,6 +274,7 @@
     <string name="Dungeon_Tips_4">היזהר מהגו!</string>
     <string name="Dungeon_Tips_5">פיקסל-מארט - כל מה שאתה צריך להרפתקה מוצלחת!</string>
     <string name="Dungeon_Tips_7">רעב לא כואב, אבל רעב חמור כואב.</string>
+    <string name="Dungeon_saveIoError">כשמנסים ליצור קובץ שמירה:</string>
     <string name="DwarfToken_Info">גמדים רבים וכמה מהיצירות הגדולות יותר שלהם נושאים את חתיכות המתכת הקטנות האלה של מטרה לא ידועה. אולי הן תכשיטים או איזשהו תעודת זהות. גמדים הם אנשים מוזרים.</string>
     <string name="EarthElemental_Desc">אלמנטלי אדמה הם גושי אדמה המונעים על ידי כוחות טבע מרוכזים.</string>
     <string name="EarthElemental_Gender">masculine</string>
@@ -386,6 +390,7 @@
     <string name="HeroSubClass_NameWard">שומרת</string>
     <string name="HeroSubClass_NameWitchdoctor">רופא אליל</string>
     <string name="Hero_Name_Objective">אותך</string>
+    <string name="Hero_Search">חיפוש</string>
     <string name="Hero_StaBurning">אתה נדלקת!</string>
     <string name="Hero_StaCripple">אתה נכה!</string>
     <string name="Hero_StaFury">אתה נעשה זועם!</string>
@@ -443,6 +448,7 @@
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">קובולד</string>
     <string name="Kobold_Name_Objective">קובולד</string>
+    <string name="KrampusHead_Info">האם אי פעם תהית איך זה מרגיש לקחת תפקיד יותר מרושע בזמן חקר הצינוק? ובכן, עם המראה השטני הזה, בוודאי תביא אימה לעכברונים המקומיים.</string>
     <string name="KunaiThrow_Info">זריקת הקונאי הקטלנית הזו מבוצעת במהירות עצומה, כה מהירה שאף לא תוכל לבחור מטרה.\n\nאמנים אמיתיים מסוגלים לזרוק יותר מקונאי אחד בבת אחת.</string>
 
     <string name="KunaiThrow_Name">זריקת קונאי</string>
@@ -628,6 +634,7 @@
     <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">אשפת עור המתאימה להחזיק כל כמות של חיצים</string>
+    <string name="RatArmor_Name">שריון חולדות</string>
     <string name="RatHide_Name">עור חולדה</string>
     <string name="RatKing_Gender">masculine</string>
     <string name="RatSkull_Info">זה יכול להיות גביע ציד נחמד, אבל זה מריח רע מכדי לתלות את זה על הקיר.</string>
@@ -685,6 +692,7 @@
     <string name="ScrollOfCurse_Name">מגילת קללה</string>
     <string name="ScrollOfIdentify_Info">חושף לצמיתות את כל הסודות של פריט בודד.</string>
     <string name="ScrollOfIdentify_Name">מגילת זיהוי</string>
+    <string name="ScrollOfLullaby_Info3">המגילה משמיעה מנגינה מרגיעה והמפלצות נרדמות!</string>
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
     <string name="ScrollOfMirrorImage_Info">הלחש על מגילה זו ייצור תאומים אשלייתיים של הקורא, שירדפו אחר אויביו.</string>
     <string name="ScrollOfRecharging_Name">מגילת טעינה</string>
@@ -786,6 +794,8 @@
     <string name="StartScene_ChooseFromSlot">בחר משבץ</string>
     <string name="StartScene_ComingSoon">בקרוב</string>
     <string name="StartScene_Depth">עומק: %1$d\nשלב: %2$d</string>
+    <string name="StartScene_DifficultyEasyNoAds">קל</string>
+    <string name="StartScene_DifficultyNormalWithSavesNoAds">רגיל עם שמירות</string>
     <string name="StartScene_DifficultySelect">בחר את גורלך</string>
     <string name="StartScene_Load">טען משחק</string>
     <string name="StartScene_New">משחק חדש</string>
@@ -794,6 +804,7 @@
     <string name="Statue_Gender">feminine</string>
     <string name="Stench_Txt">%s של סירחון</string>
     <string name="StrongShield_desc">המגן המלבני הזה מצופה בלוחות ברזל ומקושט בבד צבעוני. הוא כבד משמעותית, אך מסוגל לחסום נזק רב יותר.</string>
+    <string name="Stylus_ACInscribe">חָרֹת</string>
     <string name="Stylus_Info">עט מיסטי זה עשוי מאבן כהה וקשה במיוחד. בעזרתו ניתן לחרוט גליף או רונה, אך העט הוא זה שקובע מה ייחרט, לא אתה.</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="SummonBeast_AtYourCommand">לפקודתך!</string>
@@ -912,6 +923,7 @@
     <string name="WndHero_StaJournal">יומן</string>
     <string name="WndHero_Str">כוח</string>
     <string name="WndInfoItem_NeedKey">אבל כדי לפתוח אותו תצטרך מפתח זהב.</string>
+    <string name="WndInfoItem_Owner">קבר עתיק זה עשוי להכיל משהו שימושי, אבל הבעלים שלו בוודאי יתנגד לבדיקה.</string>
     <string name="WndInfoItem_Remains">זה כל מה שנותר מאחד מקודמיך. אולי כדאי לבדוק אם יש שם חפצים יקרי ערך.</string>
     <string name="WndInstallingMod_skipping_file">מדלג על %s</string>
     <string name="WndItemAlchemy_Title">מתכוני אלכימיה עם %s</string>
@@ -1002,6 +1014,7 @@
     <string name="town_deco_banner_desc">כרזה אלגנטית המתארת את סמלי המסבאה הזו.</string>
     <string name="town_deco_barrel_wine_desc">משמשת לאחסון משקה יקר ערך כמו יין.</string>
     <string name="town_deco_barrel_wine_name">חבית יין</string>
+    <string name="town_deco_blue_carpet_name">שטיח</string>
     <string name="town_deco_cabinet_name">ארון</string>
     <string name="town_deco_canvas_name">קנבס</string>
     <string name="town_deco_chest_name">תיבה</string>
@@ -1132,6 +1145,19 @@
 
 
     <string name="town_deco_wooden_drawer_desc">מעניין מה שמור בפנים.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

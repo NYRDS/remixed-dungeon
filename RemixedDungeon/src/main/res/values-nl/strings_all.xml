@@ -111,6 +111,7 @@
     <string name="Bee_Gender">masculine</string>
     <string name="BellaNPC_Desc">Een heel posh meisje. Haar hele uiterlijk zegt je: \&quot;Ik ben te goed voor iedereen.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
+    <string name="BellaNPC_Message">Ik heb geen interesse in plebejers zoals jij!</string>
     <string name="BellaNPC_Yes_End_Game">Zeker (Beëindig het spel)</string>
     <string name="Belongings_CantWearBoth">Je kunt %1$s en %2$s niet tegelijkertijd uitrusten!</string>
     <string name="BishopNPC_Gender">masculine</string>
@@ -143,6 +144,8 @@
     <string name="Bow_Info1">Dit is een afstandswapen. Het is nutteloos voor iedereen behalve elfen op zeer korte afstand. Met een boog uitgerust kun je pijlen afschieten.\n\n</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="Brute_Gender">masculine</string>
+    <string name="Brute_Name">grom</string>
+    <string name="Brute_Name_Objective">grom</string>
     <string name="BurningBuff_Info">Het lichaam is verteerd in razende vlammen!</string>
     <string name="BurningBuff_Name">In brand</string>
     <string name="BurningFist_Desc">Brandende Vuist van de Oude God</string>
@@ -302,6 +305,7 @@
     <string name="Dungeon_Tips_4">Pas op voor de Slijm!</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="Dungeon_Tips_9">Laat de Tengu niet vrij!</string>
+    <string name="Dungeon_saveIoError">Bij het proberen een opslagbestand aan te maken:</string>
     <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name_Objective">aardelementaal</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
@@ -348,6 +352,8 @@
     <string name="Glaive_Name">gleve</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gnoll_Gender">masculine</string>
+    <string name="Gnoll_Name">gnol verkenner</string>
+    <string name="Gnoll_Name_Objective">gnol verkenner</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="GoldenKey_Name">Gouden sleutel</string>
     <string name="GoldenStatue_Gender">feminine</string>
@@ -389,6 +395,7 @@
     <string name="HeroClass_NecromancerPerks_3">Necromancers beginnen met een skelet sleutel niveau 7.</string>
     <string name="HeroClass_None">gewoon burger</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Plagedokters lijden aan grote accuraatheidsstraffen zonder hun geliefde Beenzaag in de hand en kunnen geen afstandswapens gebruiken.</string>
+    <string name="HeroClass_Priest">priester</string>
     <string name="HeroClass_Rog">schurke</string>
     <string name="HeroClass_RogPerks_2">Schurken zijn bedreven in lichte bepantsering en ontwijken aanvallen er beter in.</string>
     <string name="HeroClass_War">krijger</string>
@@ -406,6 +413,7 @@
     <string name="Hero_Name_Objective">je</string>
     <string name="Hero_NewLevel">Welkom op niveau %d! Je bent nu gezonder en scherper. Het is makkelijker geworden om vijanden te raken en hun aanvallen te ontwijken.</string>
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
+    <string name="Hero_Search">zoeken</string>
     <string name="Hero_StaBurning">Je vliegt in brand!</string>
     <string name="Hero_StaCharm">Je bent betoverd!</string>
     <string name="Hero_StaPoison">Je bent vergiftigd!</string>
@@ -472,6 +480,7 @@
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
+    <string name="KrampusHead_Info">Heb je je ooit afgevraagd hoe het voelt om een meer duistere rol te spelen tijdens het verkennen van de dungeon? Nou, met deze duivelse uitstraling zul je de lokale babyratten zeker angst aanjagen.</string>
     <string name="KunaiThrow_Info">Deze dodelijke kunai-worp wordt extreem snel uitgevoerd, zo snel dat je niet eens een doelwit kunt kiezen.\n\nWare meesters kunnen meer dan één kunai tegelijk werpen.</string>
 
     <string name="KunaiThrow_Name">Kunai-worp</string>
@@ -482,6 +491,7 @@
     <string name="Larva_Name">larve van de god</string>
     <string name="LastLevel_TileStatue">Pilaar</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
+    <string name="LastShopLevel_TileDescExit">Een helling leidt naar beneden in de hel.</string>
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
     <string name="Leech_Name_2">Vampier %s</string>
     <string name="Level_TileBarricade">Barricade</string>
@@ -674,6 +684,7 @@
     <string name="RabbitEars_Name">Konijnenoren</string>
     <string name="RaiseDead_Name">Dood opwekken</string>
     <string name="RankingsScene_Total">Totaal gespeelde spellen: </string>
+    <string name="RatArmor_Name">ratten pantser</string>
     <string name="RatHide_Name">rattenhuid</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
     <string name="RatKingCrown_Name">Kroon van de rattenkoning</string>
@@ -716,6 +727,7 @@
     <string name="RootsBuff_Name">Geworteld</string>
     <string name="RottenFood_Message">Walging!</string>
     <string name="RottenPumpkinPie_Info">Hoewel het vers wel heerlijk was, is er geen manier dat het nog eetbaar is.</string>
+    <string name="RottenPumpkinPie_Name">bedorven pompoentaart</string>
     <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="RottingFist_Desc">Verrottende Vuist van de Oude God</string>
     <string name="RottingFist_Gender">masculine</string>
@@ -740,6 +752,7 @@
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
     <string name="ScrollOfLullaby_Info1">De pergament uitte een kalmerende melodie.</string>
     <string name="ScrollOfLullaby_Info2">Het pergament brengt een kalmerende melodie voort en de %s valt in slaap!</string>
+    <string name="ScrollOfLullaby_Info3">De scroll spreekt een kalmerende melodie uit en de monsters vallen in slaap!</string>
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
     <string name="ScrollOfMagicMapping_Name">Scroll van Magische Kaartvorming</string>
     <string name="ScrollOfRemoveCurse_Name">Schrift van Vervloeking Verwijderen</string>
@@ -801,7 +814,9 @@
     <string name="ShortSword_Reforged">je hebt de korte zwaard hersmeed om je %s te upgraden</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Name">shuriken</string>
+    <string name="Skeleton_Desc">Skeletten zijn samengesteld uit botten van ongelukkige avonturiers en bewoners van de dungeon, tot leven gewekt door uitstralingen van het kwaad uit de diepte. Zodra ze genoeg beschadigd zijn, vallen ze uiteen in een ontploffing van botten.</string>
     <string name="Skeleton_Gender">masculine</string>
+    <string name="Skeleton_Name">skelet</string>
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SleepBuff_Info">Volledig in slaap</string>
     <string name="SmashSpell_Name">Verpletteren</string>
@@ -821,6 +836,7 @@
     <string name="Spells_NotEnoughSP">Je hebt niet genoeg mana om de spreuk \&quot;%1$s\&quot; te casten.</string>
     <string name="Spells_NotInOwnBody">Je kunt %s niet uitvoeren terwijl je ziel gescheiden is van je lichaam.</string>
     <string name="Spells_NotTooFast">%s is nog niet klaar voor gebruik</string>
+    <string name="Spells_SummonLimitReached">%1: oproeplimiet bereikt (huidig maximum: %2)!</string>
     <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">Deze pantser is gemaakt van oude spinnep chitine en een soort kleding. Wat verrassend is, lijkt het nog steeds werkende spinnepklieren te bevatten. Als je de platen hard genoeg indrukt, schieten ze web uit. En getande zolen laten je vrij bewegen op dergelijke web.</string>
     <string name="SpiderCharm_Info">Deze exotische snuisterij is gehuld in een aura van mysterie. Wie weet wat er gebeurt met degene die hem draagt?</string>
@@ -855,8 +871,10 @@
     <string name="StartScene_ComingSoon">Binnenkort</string>
     <string name="StartScene_ContinueLatest">Ga verder met je laatste spel of kies een opslagplek</string>
     <string name="StartScene_Depth">Diepte: %1$d\nNiveau: %2$d</string>
+    <string name="StartScene_DifficultyEasyNoAds">makkelijk</string>
     <string name="StartScene_DifficultyExpert">Expert</string>
     <string name="StartScene_DifficultyNormal">Normaal</string>
+    <string name="StartScene_DifficultyNormalWithSavesNoAds">normaal met opslaan</string>
     <string name="StartScene_DifficultySelect">Kies je lot</string>
     <string name="StartScene_Load">Spel laden</string>
     <string name="StartScene_New">Nieuw spel</string>
@@ -964,6 +982,7 @@
     <string name="Wand_Wood_Types_1">taxus</string>
     <string name="Wand_Wood_Types_2">ebbenhout</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
+    <string name="Wand_Wood_Types_7">mahonie</string>
     <string name="Wand_Wood_Types_8">bamboe</string>
     <string name="Wand_Wood_Types_9">paars hart</string>
     <string name="WarHammer_Gender">masculine</string>
@@ -1020,6 +1039,7 @@
     <string name="WndImp_Message">Oh ja! Je bent mijn held!\nWat je beloning betreft, ik heb geen contant geld bij me, maar ik heb iets beters voor je. Dit is mijn familie-erfstukring: mijn opa haalde het van een dode paladijn af.</string>
     <string name="WndInfoItem_Chest">Kist</string>
     <string name="WndInfoItem_NeedKey"> Maar om het te openen heb je een gouden sleutel nodig.</string>
+    <string name="WndInfoItem_Owner">Deze oude graf kan iets nuttigs bevatten, maar de eigenaar zal zich zeker verzetten tegen het controleren ervan.</string>
     <string name="WndInfoItem_Remains">Dit is alles wat overblijft van een van je voorgangers. Misschien is het de moeite waard om te kijken of er waardevolle items in zitten.</string>
     <string name="WndInfoItem_Skeleton">Skelettenresten</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Recept uitvoeren</string>
@@ -1131,6 +1151,7 @@
     <string name="town_deco_barrel_desc">Een gewoon vat, ook niet meer in de beste staat.</string>
     <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
     <string name="town_deco_blue_carpet_desc">Een luxe blauwe tapijt, versierd met paarse ornamenten.</string>
+    <string name="town_deco_blue_carpet_name">kleedje</string>
     <string name="town_deco_broken_roof_desc">De dakpannen op dit dak zijn gebarsten en moeten vervangen worden.</string>
     <string name="town_deco_broken_wall_desc">De balken in deze muur zijn al lang verrot en hebben hun gewone weerstandskracht verloren.</string>
     <string name="town_deco_brown_carpet_desc">Deze bruine tapijt is onder voet getrapt door veel avonturiers, zwervers en toeschouwers.</string>
@@ -1201,6 +1222,29 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

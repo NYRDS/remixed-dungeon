@@ -106,6 +106,7 @@
     <string name="Bee_Gender">masculine</string>
     <string name="BellaNPC_Desc">فتاة تبدو راقية جداً. مظهرها بالكامل يخبرك \&quot;أنا جيدة جداً للجميع.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
+    <string name="BellaNPC_Message">أنا لا أهتم بعامة الناس مثلك!</string>
     <string name="BellaNPC_No">لا، ليس معك</string>
     <string name="Belongings_CantWearBoth">لا يمكنك تجهيز %1 و %2 في نفس الوقت!</string>
     <string name="Belongings_Name">حقيبة ظهر</string>
@@ -226,6 +227,7 @@
     <string name="Codex_Story_6">رمز الأيض - سيتم شفاء البطل جزئياً قبل تطبيق ضرر العدو، لكن الجوع سيزداد بشكل كبير. يعمل فقط إذا لم يكن البطل يتضور جوعاً.</string>
     <string name="Codex_Story_9">غليف الإزاحة - كلما تعرض البطل للضرب، هناك فرصة أن يتم نقله إلى بلاطة عشوائية مرئية. لا يعمل هذا الغليف في مستويات الزعماء.</string>
     <string name="ColdSpirit_Gender">masculine</string>
+    <string name="Combo_Combo">مجموعة %d ضربة!</string>
     <string name="CommonArrow_Gender">feminine</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompoundBow_Gender">masculine</string>
@@ -240,6 +242,7 @@
     <string name="Crystal_Name">بلورة طافية</string>
     <string name="CurareDart_Gender">masculine</string>
     <string name="DM300_Gender">masculine</string>
+    <string name="DM300_Info1">إصلاح DM-300 ذاتي!</string>
     <string name="DM300_Name">DM-300</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">خنجر</string>
@@ -282,6 +285,7 @@
     <string name="Dungeon_Tips_5">بِكسل-مارت - كل ما تحتاجه لمغامرة ناجحة!</string>
     <string name="Dungeon_Tips_7">الجوع لا يؤذي، لكن المجاعة تؤذي.</string>
     <string name="Dungeon_Tips_8">الهجمات المفاجئة لديها فرصة أكبر للإصابة. على سبيل المثال، يمكنك نصب كمين لعدوك خلف باب مغلق عندما تعلم أنه يقترب.</string>
+    <string name="Dungeon_saveIoError">عند محاولة إنشاء ملف الحفظ:</string>
     <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name_Objective">عنصر الأرض</string>
     <string name="Earthroot_Desc">عندما يلمس مخلوق جذر الأرض، تخلق جذوره نوعًا من الدروع الطبيعية حوله.</string>
@@ -453,6 +457,7 @@
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">كوبلد</string>
     <string name="Kobold_Name_Objective">كوبلد</string>
+    <string name="KrampusHead_Info">هل تساءلت يومًا كيف سيكون شعورك عند لعب دور أكثر شرًا أثناء استكشاف الزنزانات؟ حسنًا، ستلقين الرعب في قلوب جرذان الأطفال المحليين بهذا المظهر الشيطاني.</string>
     <string name="KunaiThrow_Info">ستُنفَّذ هذه الرميّة القاتلة للكوناي بسرعة بالغة، بسرعة تجعلك عاجزًا حتى عن اختيار هدف.\n\nالأساتذة الحقيقيون قادرون على رمي أكثر من كوناي في آنٍ واحد.</string>
 
     <string name="Kusarigama_Gender">feminine</string>
@@ -461,6 +466,7 @@
     <string name="Kusarigama_Pull">اسحب</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">يرقة الإله</string>
+    <string name="LastShopLevel_TileDescExit">ممر يؤدي إلى الجحيم.</string>
     <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
     <string name="Leech_Name_0">مصاص دماء %s</string>
     <string name="Leech_Name_2">مصاص دماء %s</string>
@@ -628,6 +634,7 @@
     <string name="Quiver_Gender">masculine</string>
     <string name="RabbitEars_Name">آذان أرنب</string>
     <string name="RaiseDead_NoSpace">فشل إحياء الموتى لأن لا يوجد مكان حر في الجوار.</string>
+    <string name="RatArmor_Name">درع جرذان</string>
     <string name="RatHide_Name">جلد الفأر</string>
     <string name="RatKingCrownBuff_Info">عاش سيد الجرذان، سيطيع كل جرذ ويسبح.</string>
     <string name="RatKingCrown_Info">تاج ذهبي لملك الفئران، رمز للقوة الدائمة</string>
@@ -695,6 +702,7 @@
     <string name="ScrollOfCurse_Name">لفافة اللعنة</string>
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
     <string name="ScrollOfLullaby_Info1">يتلو اللفافة لحناً هادئاً.</string>
+    <string name="ScrollOfLullaby_Info3">القرطاس ينطق بلحن هادئ والوحوش تنام!</string>
     <string name="ScrollOfTeleportation_Teleport">في غمضة عين، تم نقلك فجأة إلى موقع آخر من المستوى.</string>
     <string name="ScrollOfTerror_Info3">يصدر المخطوط وميضاً أحمر ساطعاً وتفر الوحوش!</string>
     <string name="ScrollOfUpgrade_LooksBetter">أصبح %s بالتأكيد يبدو أفضل الآن</string>
@@ -762,6 +770,7 @@
     <string name="SpellBook_Info_Identified">في هذه الصفحات اكتشفت النص الكامل للتعويذة \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_NotEnoughSP">ليس لديك ما يكفي من المانا لإلقاء تعويذة \&quot;%1$s\&quot;.</string>
     <string name="Spells_NotInOwnBody">لا يمكنك تنفيذ %s عندما تنفصل روحك عن جسدك.</string>
+    <string name="Spells_SummonLimitReached">%1: تم الوصول لحد الاستدعاء (الحد الأقصى الحالي: %2)!</string>
     <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderCharm_Use">استخدام</string>
     <string name="SpiderEgg_Gender">neuter</string>
@@ -787,6 +796,8 @@
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="Sprout_Info">أيقظ البذور النائمة.\nومع ذلك، يجب أن تكون هناك بعض النباتات على الأرض لكي ينجح هذا التعويذ.</string>
     <string name="StartScene_Depth">العمق: %1$d\nالمستوى: %2$d</string>
+    <string name="StartScene_DifficultyEasyNoAds">سهل</string>
+    <string name="StartScene_DifficultyNormalWithSavesNoAds">عادي مع الحفظ</string>
     <string name="StartScene_DifficultySelect">اختر قدرك</string>
     <string name="StartScene_New">لعبة جديدة</string>
     <string name="StartScene_No">لا، العودة إلى القائمة الرئيسية</string>
@@ -1036,6 +1047,7 @@
     <string name="town_deco_library_sign_name">لافتة المكتبة</string>
     <string name="town_deco_movies_door_name">باب</string>
     <string name="town_deco_pathway_name">مسار</string>
+    <string name="town_deco_pillar_desc">في الماضي، كان هذا العمود يُستخدم كدعم ممتاز وزخرفة.</string>
     <string name="town_deco_porch_desc">شرفة مصنوعة من الخشب.</string>
     <string name="town_deco_rope_name">حبل</string>
     <string name="town_deco_rug_desc">مصمم بذوق رفيع</string>
@@ -1062,6 +1074,19 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

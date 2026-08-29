@@ -97,6 +97,7 @@
     <string name="BellaNPC_Angry">Dám... ngươi kẻ nhục nát!</string>
     <string name="BellaNPC_Desc">Một cô gái trông rất sang trọng. Toàn bộ vẻ ngoài của cô ấy nói với bạn: \&quot;Tôi quá tốt cho mọi người.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
+    <string name="BellaNPC_Message">Tôi không quan tâm đến những kẻ phàm nhân như bạn!</string>
     <string name="BellaNPC_Yes_End_Game">Chắc chắn rồi (Kết thúc trò chơi)</string>
     <string name="BishopNPC_Desc">Giám mục của Giáo hội Thánh của Santa Chúa Sâu</string>
     <string name="BishopNPC_Gender">masculine</string>
@@ -232,6 +233,7 @@
     <string name="Codex_Story_9">Glyph Dịch Chuyển - Mỗi khi Anh Hùng trúng đòn, có khả năng Anh Hùng sẽ được dịch chuyển đến một ô ngẫu nhiên trong tầm nhìn. Glyph này không hoạt động ở các cấp độ Trùm.</string>
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ComboBuff_Name">Liên hoàn</string>
+    <string name="Combo_Combo">%d combo đánh trúng!</string>
     <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
@@ -417,12 +419,14 @@
     <string name="Hero_Name">bạn</string>
     <string name="Hero_Name_Objective">bạn</string>
     <string name="Hero_NewLevel">Chào mừng đến cấp độ %d! Giờ bạn khỏe mạnh và tập trung hơn. Dễ dàng đánh trúng kẻ địch và né tránh đòn tấn công của chúng hơn.</string>
+    <string name="Hero_Search">tìm kiếm</string>
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
     <string name="Hero_StaBurning">Bạn bị bốc cháy!</string>
     <string name="Hero_StaCharm">Bạn bị mê hoặc!</string>
     <string name="Hero_StaCripple">Bạn bị tàn phế!</string>
     <string name="Hero_StaFurious">cuồng nộ</string>
     <string name="Hero_StaFury">Ngươi trở nên cuồng bạo!</string>
+    <string name="Hero_StaOoze">Bùn ăn mòn ăn mòn cơ thể bạn. Rửa sạch nó đi!</string>
     <string name="Hero_StaRoots">Bạn không thể di chuyển!</string>
     <string name="Hero_Wait">...</string>
     <string name="Horror_Name_0">Quái dị %s</string>
@@ -489,6 +493,7 @@
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
+    <string name="KrampusHead_Info">Bạn có từng tự hỏi cảm giác như thế nào khi đóng vai một kẻ phản diện khi khám phá ngục giam? Vâng, với ngoại hình ác quỷ này, bạn chắc chắn sẽ mang lại nỗi sợ hãi cho những chú chuột con địa phương.</string>
     <string name="KunaiThrow_Info">Đòn ném kunai chết người này được thực hiện cực kỳ nhanh, nhanh đến mức bạn thậm chí không thể chọn mục tiêu.\n\nBậc thầy thực sự có thể ném nhiều hơn một kunai cùng lúc.</string>
 
     <string name="KunaiThrow_Name">Ném kunai</string>
@@ -499,6 +504,7 @@
     <string name="Larva_Desc">Ấu trùng của Thần Cổ</string>
     <string name="Larva_Gender">feminine</string>
     <string name="LastShopLevel_TileDescEntrance">Một lối dẫn lên tầng trên.</string>
+    <string name="LastShopLevel_TileDescExit">Một con dốc dẫn xuống địa ngục.</string>
     <string name="LastShopLevel_TileHighGrass">Hoa nở rộ</string>
     <string name="LeatherArmor_Desc">Áo giáp làm từ da thú đã thuộc. Không nhẹ như áo giáp vải, nhưng cho khả năng bảo vệ tốt hơn.</string>
     <string name="Leech_Name_0">Hút máu %s</string>
@@ -677,6 +683,7 @@
     <string name="Quiver_Gender">masculine</string>
     <string name="RabbitEars_Info">Có quan niệm rằng thỏ sinh ra đã mang may mắn, và người sở hữu một phần cơ thể của nó sẽ được thú cưng ấy ban cho vận may. Nghĩ kỹ lại, bị giết chỉ vì đôi tai của bạn – thứ sẽ dùng để làm đồ trang sức – nghe có vẻ không mấy may mắn.</string>
     <string name="RankingsScene_Title">Bảng Xếp Hạng Cao Nhất</string>
+    <string name="RatArmor_Name">giáp chuột</string>
     <string name="RatHide_Name">da chuột</string>
     <string name="RatKing_Died">Vua đã chết. Chúc Vua vạn tuế!</string>
     <string name="RatKing_Gender">masculine</string>
@@ -742,7 +749,9 @@
     <string name="ScrollOfIdentify_Name">cuộn nhận diện</string>
     <string name="ScrollOfLullaby_Info1">Cuộn giấy phát ra giai điệu dịu dàng.</string>
     <string name="ScrollOfLullaby_Info2">Cuộn giấy vang lên giai điệu dịu dàng và %s đã chìm vào giấc ngủ!</string>
+    <string name="ScrollOfLullaby_Info3">Cuộn giấy phát ra giai điệu êm dịu và quái vật ngủ say!</string>
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
+    <string name="ScrollOfMirrorImage_Name">Cuộn giấy Bản sao Gương</string>
     <string name="ScrollOfRecharging_Info1b">một dòng năng lượng lan tỏa qua túi đồ của bạn, sạc lại năng lượng cho các gậy phép</string>
     <string name="ScrollOfRemoveCurse_Info">Lời chú trên cuộn này sẽ tách ngay lập tức khỏi vũ khí, giáp, nhẫn và vật mang theo của người đọc bất kỳ lời nguyền xấu nào có thể ngăn cản người đeo tháo chúng ra.</string>
     <string name="ScrollOfRemoveCurse_Proced">Cái ba lô của bạn phát sáng bằng ánh sáng thanh tẩy, và một năng lượng dữ tợn tan biến.</string>
@@ -790,6 +799,7 @@
     <string name="ShamanElder_Gender">masculine</string>
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Name">thầy pháp gnoll</string>
+    <string name="Shaman_Name_Objective">gnoll shaman</string>
     <string name="Sheep_Desc">Đây là một con cừu ma thuật. Điều gì làm nó trở nên ma thuật? Bạn không thể giết nó. Nó sẽ đứng yên tại chỗ cho đến khi nó biến mất bằng phép thuật, trong khi vẫn nhai cỏ với ánh mắt trống rỗng.</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
@@ -853,7 +863,9 @@
     <string name="Sprout_Name">Mầm Non</string>
     <string name="StartScene_ComingSoon">Sắp ra mắt</string>
     <string name="StartScene_Depth">Độ sâu: %1$d\nCấp độ: %2$d</string>
+    <string name="StartScene_DifficultyEasyNoAds">dễ</string>
     <string name="StartScene_DifficultyNormalWithSaves">Bình thường với lưu (và quảng cáo)</string>
+    <string name="StartScene_DifficultyNormalWithSavesNoAds">bình thường có lưu</string>
     <string name="StartScene_DifficultySelect">Chọn số phận của bạn</string>
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
@@ -862,6 +874,7 @@
     <string name="Statue_Name">tượng sống</string>
     <string name="Stench_Txt">%s hôi thối</string>
     <string name="StunBuff_Name">Choáng</string>
+    <string name="Stylus_ACInscribe">KHẮC</string>
     <string name="Stylus_Info">Chiếc bút bí ẩn này được làm từ một loại đá đen và rất cứng. Bạn có thể dùng nó để khắc các ký tự hoặc rune, nhưng bút mới quyết định khắc cái gì, không phải bạn.</string>
     <string name="Stylus_Name">bút huyền bí</string>
     <string name="Succubus_Gender">masculine</string>
@@ -885,6 +898,7 @@
     <string name="Thief_Gender">masculine</string>
     <string name="TitleScene_Highscores">Bảng xếp hạng</string>
     <string name="TitleScene_Play">Chơi</string>
+    <string name="TitleScene_PlayOnPC">Chơi trên PC</string>
     <string name="Torch_ACLight">THÁP</string>
     <string name="Torch_Info">Đây là một vật phẩm không thể thiếu trong Các Điện Thần Quỷ, những nơi nổi tiếng với ánh sáng môi trường kém.</string>
     <string name="Torch_Info2">Đây là vật phẩm không thể thiếu trong hầm ngục, vốn nổi tiếng là thiếu ánh sáng.</string>
@@ -991,6 +1005,7 @@
     <string name="WndHero_StaCatalogus">Danh mục</string>
     <string name="WndHero_StaJournal">Nhật ký</string>
     <string name="WndInfoItem_NeedKey">Nhưng để mở nó, bạn cần một chìa khóa vàng.</string>
+    <string name="WndInfoItem_Owner">Ngòi mộ cổ này có thể chứa vật hữu ích, nhưng chủ sở hữu chắc chắn sẽ phản đối việc kiểm tra.</string>
     <string name="WndInfoItem_Remains">Đây là tất cả những gì còn lại từ một trong những người đi trước bạn. Có thể đáng để kiểm tra xem có vật phẩm quý nào không.</string>
     <string name="WndInstallingMod_please_wait">Đang cài đặt mod, vui lòng đợi...</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Thực hiện công thức</string>
@@ -1101,6 +1116,7 @@
     <string name="town_deco_barrel_desc">Một chiếc thùng gỗ bình thường, cũng không còn ở tình trạng tốt nữa.</string>
     <string name="town_deco_barrel_wine_desc">Được dùng để chứa một thức uống quý giá như rượu vang.</string>
     <string name="town_deco_barrel_wine_name">Thùng rượu</string>
+    <string name="town_deco_blue_carpet_name">thảm</string>
     <string name="town_deco_broken_roof_desc">Các viên ngói trên mái nhà này bị nứt và cần được thay thế.</string>
     <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
     <string name="town_deco_broken_wall_name">Bức tường vỡ</string>
@@ -1170,6 +1186,22 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
