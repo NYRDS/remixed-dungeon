@@ -489,7 +489,21 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
             return null;
         }
 
-        Collections.sort(toActBeforeHero, (a1, a2) -> Float.compare(a1.time, a2.time));
+        Collections.sort(toActBeforeHero, (a1, a2) -> {
+            int result = Float.compare(a1.time, a2.time);
+            if (result != 0) {
+                return result;
+            }
+            // caveman: exact ties fell to HashSet order - a pet could act
+            // before the hero after a click. hero wins ties.
+            if (a1 == Dungeon.hero) {
+                return -1;
+            }
+            if (a2 == Dungeon.hero) {
+                return 1;
+            }
+            return 0;
+        });
 
         return toActBeforeHero.get(0);
     }
