@@ -2188,7 +2188,6 @@ Your opinion matters!</string>
     <string name="StartScene_WinGame">To unlock \&quot;Challenges\&quot;, win the game with any character class.</string>
     <string name="StartScene_Yes">Yes, start new game</string>
     <string name="Statue_Desc">You would think that it\'s just another ugly statue of this dungeon, but its red glowing eyes give itself away. While the statue itself is made of stone, the _%s_, it\'s wielding, looks real.</string>
-    <string name="Statue_NakedDesc">A stone statue. It holds nothing anymore.</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">animated statue</string>
     <string name="Statue_Name_Objective">animated statue</string>

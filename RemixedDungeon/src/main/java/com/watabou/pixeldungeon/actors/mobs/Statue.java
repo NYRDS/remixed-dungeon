@@ -7,7 +7,6 @@ import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -89,10 +88,10 @@ public class Statue extends Mob {
 	public String getDescription() {
 		val item = getItem();
 
-		// caveman: naked enslaved statue - gearGranted blocks refill, plain
-		// description instead of throwing on the dummy item
+		// caveman: naked enslaved statue - gearGranted blocks refill, plain name
+		// instead of throwing on the dummy item
 		if(!item.valid()) {
-			return StringsManager.getVar(R.string.Statue_NakedDesc);
+			return getName();
 		}
 
 		if(ItemUtils.usableAsWeapon(item)) {
