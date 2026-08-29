@@ -235,6 +235,11 @@ public class WndBag extends WndTabbed {
 	}
 
 	public void updateItems() {
+		// caveman: window hidden/destroyed (pet chooser hides hero bag) - rebuilding
+		// items here would orphan new ItemButtons with live TouchAreas -> ghost clicks
+		if (getParent() == null) {
+			return;
+		}
 		clearItems();
 		placeItems(lastBag);
 
