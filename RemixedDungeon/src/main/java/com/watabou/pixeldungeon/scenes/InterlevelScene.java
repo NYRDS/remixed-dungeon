@@ -374,7 +374,12 @@ public class InterlevelScene extends PixelScene {
 
             Level level = Dungeon.loadLevel(restorePos);
 
-            Dungeon.switchLevel(level, Dungeon.hero.getPos(), CharsList.emptyMobList);
+            // caveman: roster restored from the bundle spawns through the
+            // dup-guarded switchLevel loop
+            Dungeon.switchLevel(level, Dungeon.hero.getPos(),
+                    Dungeon.pendingFollowers != null && !Dungeon.pendingFollowers.isEmpty()
+                            ? Dungeon.pendingFollowers
+                            : CharsList.emptyMobList);
 
         } catch (Exception e) {
             rescue(e);

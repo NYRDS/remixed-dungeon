@@ -73,10 +73,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.HashSet;
 
 import lombok.Getter;
@@ -98,6 +100,10 @@ public class Dungeon {
 
     @NotNull
     public static Hero hero = CharsList.DUMMY_HERO;
+
+    // caveman: pet roster in flight between levels - persisted in the game
+    // bundle so a crash mid-transition cannot delete the pets
+    public static List<Mob> pendingFollowers = null;
 
     public static Level level;
     public static String levelId;
@@ -175,6 +181,8 @@ public class Dungeon {
         ItemsList.reset();
         CharsList.reset();
         QuickSlot.reset();
+
+        pendingFollowers = null;
 
         hero = CharsList.DUMMY_HERO;
     }
@@ -428,6 +436,7 @@ public class Dungeon {
     private static final String MOVE_TIMEOUT = "move_timeout";
     private static final String LAST_USED_ID = "lastUsedId";
     private static final String MOD = "mod";
+    private static final String FOLLOWERS = "followers";
     private static final String REALTIME = "realtime";
     private static final String CHALLENGES = "challenges";
     private static final String FACILITATIONS = "facilations";
@@ -499,6 +508,12 @@ public class Dungeon {
 
         bundle.put(LAST_USED_ID, EntityIdSource.getNextId());
         CharsList.storeInBundle(bundle);
+
+        // caveman: pet roster in flight between levels - a crash mid-transition
+        // must not delete the pets
+        if (pendingFollowers != null && !pendingFollowers.isEmpty()) {
+            bundle.put(FOLLOWERS, pendingFollowers);
+        }
         bundle.put(MOD, ModdingBase.activeMod());
 
         OutputStream output = FileSystem.getOutputStream(fileName);
@@ -555,6 +570,9 @@ public class Dungeon {
 
                 saveGame(saveToGame);
                 saveLevel(saveToLevel, thisLevel);
+
+                // caveman: level file now owns the pets - roster can retire
+                pendingFollowers = null;
 
                 Library.saveLibrary();
 
@@ -631,6 +649,7 @@ public class Dungeon {
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
         EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID, 1));
         CharsList.restoreFromBundle(bundle);
+        pendingFollowers = new ArrayList<>(bundle.getCollection(FOLLOWERS, Mob.class));
 
         Scroll.restore(bundle);
         Potion.restore(bundle);
@@ -993,6 +1012,19 @@ public class Dungeon {
 
     public static void saveCurrentLevel() {
         saveLevel(getLevelSaveFile(currentPosition()), Dungeon.level);
+    }
+
+    // caveman: called right after the roster is stripped from the old level -
+    // gets the pets on disk before the transition continues
+    public static void persistPendingFollowers() {
+        if (pendingFollowers == null || pendingFollowers.isEmpty()) {
+            return;
+        }
+        try {
+            saveGame(SaveUtils.gameFile(hero.getHeroClass()));
+        } catch (IOException e) {
+            EventCollector.logException(e, "cannot persist follower roster");
+        }
     }
 
 

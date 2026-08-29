@@ -403,6 +403,11 @@ public abstract class Level implements Bundlable {
 		}
 
 		Dungeon.saveCurrentLevel(); //save level
+
+		// caveman: roster into the game bundle right away - a crash before the
+		// next full save must not delete the pets
+		Dungeon.pendingFollowers = mobsToNextLevel;
+		Dungeon.persistPendingFollowers();
 		return mobsToNextLevel;
 	}
 
