@@ -243,7 +243,8 @@ public class Trap extends LevelObject {
 	@Override
 	public boolean nonPassable(Char ch) {
 		if(ch instanceof Mob) {
-			return !secret && uses > 0;
+			// caveman: flyers never trigger traps - must not block their path
+			return !ch.isFlying() && !secret && uses > 0;
 		}
 		return false;
 	}
