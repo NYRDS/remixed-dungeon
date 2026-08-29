@@ -19,9 +19,12 @@
     <string name="Accuracy_Decreased">لماذا ظننت أنني أستطيع استخدام %s؟ أداة خاطئة، أيدي خاطئة!</string>
     <string name="Accuracy_DecreasedDoctor">كل ضربة من هذا %s تنشر العيوب. منشار عظامي يشفي... هذا يصيب بعدوى.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">يداي العاريتان تفسدان تقنيتي. بدون قطع المنشار النظيف، تتحول دقتي إلى فوضى.</string>
+    <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name_Objective">العقرب الحمضي</string>
     <string name="AirElemental_Desc">العناصر الجوية هي كائنات سحرية طائرة مصنوعة من الهواء الحي.</string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="Albino_Desc">فئران الجراب عدوانية، لكنها ضعيفة نسبياً في المجاري. يمكن أن تكون خطرة فقط بأعداد كبيرة. يبدو أن هذا الفأر مهق (ألبينو). كما أن لديه أسناناً حادة بشكل غير طبيعي.</string>
+    <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name_Objective">فأر ألبينو</string>
     <string name="AllowStatisticsCollectionScene_Allow">السماح</string>
     <string name="AllowStatisticsCollectionScene_Deny">رفض</string>
@@ -45,11 +48,13 @@
     <string name="Armor_Incompatible">تفاعل أنواع مختلفة من السحر محا الرموز السحرية على هذه الدروع!</string>
     <string name="Armor_Info3">\n\nنظراً لأن قوتك غير كافية، فإن ارتداء هذه الدروع سيقلل من سرعة حركتك ومهاراتك الدفاعية.</string>
     <string name="Armor_Info6">عليه نقوش</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">تمثال متحرك</string>
     <string name="ArmoredStatue_Name_Objective">تمثال متحرك</string>
     <string name="AttackDelay_Increased">لا يمكنك استخدام %s بهذه الطريقة. تأرجحات بطيئة، وأنفاس ثقيلة…</string>
     <string name="Attack_Cooldown">فترة إعادة الهجوم</string>
     <string name="Attack_Range">مدى الهجوم</string>
+    <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name_Objective">غريباً</string>
     <string name="BadgesScene_Title">شاراتك</string>
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
@@ -88,17 +93,22 @@
     <string name="Badges_Yasd">الموت من النار، السم، الغاز السام والجوع</string>
     <string name="Badges_Yog_Slain">تم القضاء على يوغ-زفا</string>
     <string name="Bag_ACOpen">فتح</string>
+    <string name="Bandit_Gender">masculine</string>
     <string name="BardNPC_Desc">يعزف باردة المدينة على العود.</string>
+    <string name="BardNPC_Gender">masculine</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
     <string name="Barrel_Name">برميل</string>
     <string name="Bat_Desc">هؤلاء السكان السريعون والعنيدون في قباب الكهوف قد يهزمون خصوماً أكبر بكثير من خلال تجديد صحتهم مع كل ضربة ناجحة.</string>
+    <string name="Bat_Gender">masculine</string>
     <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">رأس هذه الفأس الحربية الفولاذي الضخم يمنح قوة كبيرة لكل ضربة.</string>
     <string name="Bee_Gender">masculine</string>
     <string name="BellaNPC_Desc">فتاة تبدو راقية جداً. مظهرها بالكامل يخبرك \&quot;أنا جيدة جداً للجميع.\&quot;</string>
+    <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_No">لا، ليس معك</string>
     <string name="Belongings_CantWearBoth">لا يمكنك تجهيز %1 و %2 في نفس الوقت!</string>
     <string name="Belongings_Name">حقيبة ظهر</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name_Objective">الأسقف</string>
     <string name="Bishop_text">أدعو لك ليلًا ونهارًا يا بنتي.</string>
     <string name="BlackCat_Gender">feminine</string>
@@ -106,6 +116,7 @@
     <string name="BlackCat_Phrases_2">مياو!</string>
     <string name="BlackSkullOfMastery_Necromancer">اكسر التعويذة</string>
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">جمجمة صغيرة من السبج. كانت مصدر قوى مدينة الأموات، لكن بعد هزيمة الليش يبدو أنها فقدت كل قواها. ومع ذلك، حين تمسكها بين يديك، تمر فكرة غريبة في ذهنك: \&quot;إنها جائعة\&quot;.</string>
     <string name="BlackSkull_Ressurrect">الجمجمة السوداء أقامت الوحش الميت ليخدمك!</string>
     <string name="Blacksmith_Gold1">يا إنسان! هل تريد أن تكون مفيداً، أليس كذلك؟ خذ هذا المعول واحفر لي بعض _خام الذهب الداكن_، _15 قطعة_ يجب أن تكفي. ماذا تقصد، كيف سأدفع؟ أنت جشع...\nحسناً، حسناً، ليس لدي مال لأدفع، لكن يمكنني القيام ببعض الحدادة لك. اعتبر نفسك محظوظاً، أنا الحدّاد الوحيد في الجوار.</string>
@@ -119,17 +130,22 @@
     <string name="BlankScroll_Name">سِجِلّ فارغ</string>
     <string name="BlankScroll_ReallyBlank">هذا المخطوط فارغ</string>
     <string name="BleedingBuff_Info">الجروح تنزف بسرعة</string>
+    <string name="BleedingBuff_Name">نزيف</string>
     <string name="Bleeding_Death">نَزَفتَ حتى الموت...</string>
     <string name="BlessedBuff_Name">مبارك</string>
     <string name="BlindnessBuff_Info">عمى تام، لا يُسمع سوى الأصوات المحيطة.</string>
     <string name="BloodTransfusion_Drained">تتدفق جوهر الحياة من حيوانك الأليف إليك.</string>
     <string name="BoneSaw_Name">منشار العظام</string>
+    <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
     <string name="Bow_Info1">هذا سلاح بعيد المدى. لا يفيد أحدًا إلا الجنّيات في المدى القريب جدًا. امتلاك قوس مسلّح يتيح لك إطلاق السهام.\n\n</string>
     <string name="Bowknot_Info">شريط وردي لامع جميل مربوط بعقدة ومثبت بدبوس شعر.</string>
     <string name="Brute_Gender">masculine</string>
+    <string name="BurningBuff_Name">مشتعل</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">قبضة محرقة</string>
     <string name="BurningFist_Name_Objective">قبضة مشتعلة</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">مرحباً... مرحباً! أنت ذلك المغامر، صحيح؟ ساعدني يا صديقي، هؤلاء العسكريون الملاعين حبسوني هنا! إنهم ينوون إعادة تنشيط سلاح قديم لغزو البشر على السطح! لكن نظراً لخطورة الأمر، عارضتهم، فرموني وسجنوني في قفص! أتوسل إليك أن تجد مفتاح الزنزانة، وفي المقابل، سأساعدك بأقصى ما أستطيع.</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
@@ -145,6 +161,7 @@
     <string name="Caves_TileDescEntrance">يؤدي السلم إلى العمق العلوي.</string>
     <string name="Caves_TileGrass">طحلب فلوري</string>
     <string name="Caves_TileHighGrass">فطر مضيء</string>
+    <string name="Challenges_Descriptions_1">الهجوم خير وسيلة للدفاع. اتباعًا لهذه التعاليم، تنطلق في الزنزانة، والإيمان هو أقوى حارس لجسدك.</string>
     <string name="Challenges_Names_0">حمية</string>
     <string name="Challenges_Names_5">إلى الظلام</string>
     <string name="Challenges_Names_6">الرموز المحرمة</string>
@@ -155,16 +172,22 @@
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">شفرة يد واحدة من الفوضى النقية. تنمو مع القتال مثل نظيرتها ذات اليدين، ولكن ببطء أكبر وإمكانات أقل — مما يترك يدك الحرة لدرع.</string>
     <string name="ChaosBlade_Name">شفرة الفوضى</string>
+    <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Name">قوس الفوضى</string>
     <string name="ChaosCrystal_BladeFused">يمتص الكريستال سلاحك، ويتخذ شكل شفرة</string>
     <string name="ChaosCrystal_Fuse">دمج</string>
+    <string name="ChaosCrystal_Use">استخدام</string>
     <string name="ChaosHelmet_Name">خوذة الفوضى</string>
+    <string name="ChaosShield_name">درع الفوضى</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">عصا مشبعة بقوة الفوضى! بماذا يمكن أن يحلم ساحر آخر أو يخشاه؟</string>
     <string name="ChaosStaff_Name">عصا الفوضى</string>
     <string name="ChaosSword_Gender">masculine</string>
     <string name="CharAction_Give">إعطاء</string>
     <string name="CharAction_PetInventory">مخزن الحيوان الأليف</string>
     <string name="CharAction_Take">التقاط</string>
+    <string name="Char_Hit_1">%1$s ضرب %2$s</string>
+    <string name="Char_Hit_2">%1$s ضرب %2$s</string>
     <string name="Char_Kill_1">%s قتلك...</string>
     <string name="Char_OutParalysis">كسر الألم شلل %s</string>
     <string name="Char_StaBleeding">نزيف</string>
@@ -199,14 +222,20 @@
     <string name="Codex_Story_6">رمز الأيض - سيتم شفاء البطل جزئياً قبل تطبيق ضرر العدو، لكن الجوع سيزداد بشكل كبير. يعمل فقط إذا لم يكن البطل يتضور جوعاً.</string>
     <string name="Codex_Story_9">غليف الإزاحة - كلما تعرض البطل للضرب، هناك فرصة أن يتم نقله إلى بلاطة عشوائية مرئية. لا يعمل هذا الغليف في مستويات الزعماء.</string>
     <string name="ColdSpirit_Gender">masculine</string>
+    <string name="CommonArrow_Gender">feminine</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
+    <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">السهام المنطلقة من هذا القوس المركب تسبب قدراً كبيراً من الضرر وتتمتع بدقة أفضل من القوس الخشبي على حساب بعض السرعة.</string>
     <string name="CorpseDust_Info2">ربما لأن مجرد حمله يجعلك تشعر بالقلق والغضب.</string>
     <string name="CorpseExplosion_Info">يحول الجثة إلى سحابة قاتلة من الغاز السام، تنشر المرض والسم على جميع الأعداء القريبين.</string>
     <string name="CorpseExplosion_Name">انفجار الجثة</string>
     <string name="Crab_Desc">هذه السرطانات الضخمة تتصدر السلسلة الغذائية في المجاري. إنها سريعة للغاية ويمكن لهيكلها الخارجي السميك تحمل الضربات القوية.</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">سرطان المجاري</string>
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">بلورة طافية</string>
+    <string name="CurareDart_Gender">masculine</string>
+    <string name="DM300_Gender">masculine</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">خنجر</string>
     <string name="Damage_Reduction">تقليل الضرر</string>
@@ -214,11 +243,14 @@
     <string name="DarkGold_Name">خام الذهب الداكن</string>
     <string name="DarkVeilBuff_Info">حجاب من الظلام يحيط بالمالك، يستدعي روحًا في كل مرة يُصاب فيها الضرر.</string>
     <string name="Darkness_Info">يبدو وكأنه قطع من الظلام الأبدي تطفو في الهواء</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Name">سهم صغير</string>
     <string name="DashSpell_TooFar">لا يمكنني الاندفاع إلى هذه المسافة البعيدة.</string>
     <string name="DeathKnight_Desc">للوهلة الأولى، يبدو وكأنه محارب جبار يرتدي درعاً ثقيلاً، ولا تكشفه سوى ابتسامة ميتة. فارس الموت هو تجسيد لروح فارس فشل في الوفاء بنذوره. وفي حالته الملعونة، سيظل يتجول ساعياً للتطهير في المعارك، قاتلاً الأبرياء، غير قادر على تذكر من أقسم على حمايتهم.</string>
+    <string name="DeathKnight_Gender">masculine</string>
     <string name="Death_Name_0">مروع %s</string>
     <string name="Death_Name_1">مريع %s</string>
+    <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">ميت صغير</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">تم تحويل الألم إلى ألم بطيء، مما يقلل الضرر المتلقى دفعة واحدة.\nالضرر المتبقي لتلقيه %d</string>
@@ -227,12 +259,14 @@
     <string name="Displacement_Txt">%s الإزاحة</string>
     <string name="DoctorArmor_Info">تسمح هذه الدروع الخاصة بطبيب الطاعون باستخدام قدرة \&quot;سحابة الميزما\&quot;، التي تطلق غازاً ساماً يسمم ويضعف ويشوش الأعداء. الطبيب، المحمي بقناعه، منيع ضد هذه التأثيرات.</string>
     <string name="DoctorArmor_Name">ثوب الطبيب</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">فارس الرعب</string>
     <string name="DreadKnight_Name_Objective">فارس الرعب</string>
     <string name="Dreamweed_Name">عشب الدوار</string>
     <string name="DriedRoseBuff_Info">الوردة تبدو ساحرة جداً.</string>
     <string name="DriedRose_Info2"> ولم تفقد سحرها. تبدو جميلة جدًا، لدرجة أنك تريد الاحتفاظ بها إلى الأبد.</string>
     <string name="DriedRose_Name">وردة مجففة</string>
+    <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">سكران</string>
     <string name="Drunkard_Phrase_4">زززززز...</string>
     <string name="Dungeon_Tips_16">عند ترقية سلاح مسحور، هناك احتمال لتدمير ذلك السحر.</string>
@@ -246,27 +280,36 @@
     <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name_Objective">عنصر الأرض</string>
     <string name="Earthroot_Desc">عندما يلمس مخلوق جذر الأرض، تخلق جذوره نوعًا من الدروع الطبيعية حوله.</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Name">خنجر الجان</string>
     <string name="EncumbranceBuff_CharAct_2">هذا %s ثقيل جداً بحيث لا يمكنني استخدامه بفعالية.</string>
     <string name="EncumbranceBuff_CharAct_5">العنصر %s ثقيل جداً بالنسبة لي الآن.</string>
+    <string name="EncumbranceBuff_Name">العبء</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EquipableItem_ACUnequip">خلع المعدات</string>
     <string name="Exhumation_Info">فتح القبر عملٌ شائنٌ بحدّ ذاته، لكنّه لا يكفي لمن يخدم الموتَ نفسَه. لمن يُجري هذا الطقسَ الداكنَ فرصةٌ عظيمةٌ (وتزداد مع إتقانه) لأن يخضعَ روحاً مسكينةً لأحدِ الراقدين ههنا.</string>
     <string name="Exhumation_Name">نبش القبر</string>
     <string name="ExplodingSkull_Desc">يبدو هذا الجمجمة الطافية المحترقة هشة للغاية، ويبدو أنها ستنفجر إلى قطع في أي لحظة.</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Eye_Name">العين الشريرة</string>
     <string name="Facilitations_Descriptions_0">عومل المتحورون دائماً بازدراء وخوف، لكن انعدام الجوع سيمنحك مرة أخرى التفوق، هذه المرة في غزو أعماق الزنزانة.</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
     <string name="FetidRat_Desc">هذا الجرذ الجرابي أكبر بكثير من الجرذ العادي. تحيط به سحابة كريهة الرائحة.</string>
+    <string name="FetidRat_Gender">feminine</string>
+    <string name="FireArrow_Gender">feminine</string>
     <string name="FireElemental_Desc">العناصر النارية المتجولة هي منتج ثانوي لاستدعاء كيانات أعظم. فطبيعتها الفوضوية تجعل السيطرة عليها مستحيلة حتى لأقوى علماء الشياطين.</string>
+    <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">عنصر ناري</string>
     <string name="FireElemental_Name_Objective">عنصر النار</string>
     <string name="Fire_Info">هنا نار مشتعلة.</string>
     <string name="Fire_Name_1">مشتعل %s</string>
     <string name="Firebloom_Name">زهرة النار</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">عرافة</string>
     <string name="FriedFish_Name">سمك مقلي</string>
+    <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Info">يحيط الصقيع بالجسد، مما يبطئ كل ما يقترب منه.</string>
     <string name="FrostBuff_Name">مجمد</string>
     <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
@@ -280,14 +323,22 @@
     <string name="Ghost_Defense">تهرب</string>
     <string name="Ghost_Rose1">مرحباً أيها المغامر... يوماً ما كنت مثلك - قوياً واثقاً... والآن أنا ميت... لكنني لا أستطيع مغادرة هذا المكان... ليس قبل أن أستعيد _الوردة المجففة_ الخاصة بي... إنها مهمة جداً لي... سرقها مني وحش ما من جثتي...</string>
     <string name="Ghost_Rose2">من فضلك... ساعدني... ابحث عن الوردة...</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="GnollArmor_ACSpecial">هَيْمَن</string>
+    <string name="GnollTamahawk_Gender">masculine</string>
+    <string name="GnollTamahawk_Name">tomahawk الغنول</string>
     <string name="Gnoll_BecomeGuardianDesc">أن تصبح حارساً</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gold_Name">الذهب</string>
     <string name="GoldenKey_Info">الشقوق الموجودة على هذا المفتاح الذهبي دقيقة ومعقدة. ربما يستطيع فتح قفل صندوق ما؟</string>
     <string name="GoldenKey_Name">المفتاح الذهبي</string>
+    <string name="GoldenStatue_Gender">feminine</string>
+    <string name="GoldenSword_Gender">masculine</string>
     <string name="Golem_Desc">حاول القزم دمج معرفتهم بالآليات مع قوتهم المكتشفة حديثاً في ربط العناصر. استخدموا أرواح الأرض كـ \&quot;روح\&quot; لأجساد الغوليم الميكانيكية، والتي كان يُعتقد أنها الأكثر قابلية للسيطرة. على الرغم من ذلك، فإن أصغر خطأ في الطقوس قد يتسبب في اندلاع.</string>
+    <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">غول</string>
     <string name="Goo_Gender">feminine</string>
+    <string name="Goo_Info3">جلرب-جلرب!</string>
     <string name="Goo_Name">الهلام</string>
     <string name="Guts_TileWater">سائل لزج غريب</string>
     <string name="Halberd_Gender">feminine</string>
@@ -298,9 +349,13 @@
     <string name="Halls_TileWater">لावा باردة</string>
     <string name="Haste_Name">سرعة قصوى</string>
     <string name="Heal_Cast">تم شفاء %s.</string>
+    <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">علاج مجاني لكل مغامر!</string>
     <string name="HealerNPC_Name_Objective">كاهن البلدة</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">طرف هذه السهم مغطى بجرعة الشفاء.</string>
+    <string name="HealthDart_Gender">masculine</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">قلب أسود نابض لروح الخيانة.</string>
     <string name="HeartOfDarkness_Name">قلب الظلام</string>
     <string name="Hedgehog_Desc">يبدو أن هذا القنفذ متوتر.</string>
@@ -342,10 +397,13 @@
     <string name="IceCaves_TileGrass">عشب متجمد.</string>
     <string name="IceCaves_TileHighGrass">عشب طويل متجمد</string>
     <string name="IceCaves_TileStatue">غنول متجمد</string>
+    <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name_Objective">عنصراً جليدياً</string>
     <string name="IceGuardianCore_Desc">تم تصنيع حُرّاس الجليد من قبل الكوبولد القدماء لحماية كهوفهم. الطاقة المخزنة في نواتهم تسمح لحارس الجليد بإعادة بناء نفسه طالما لديه طاقة كافية.</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name">حارس الجليد</string>
     <string name="IceGuardian_Desc">تم إنشاء حراس الجليد من قبل الكوبولدز القديمة لحماية كهوفهم. طالما أن قلب الحارس يحتوي على طاقة كافية، فهو قادر على إعادة بناء نفسه حتى في خضم المعركة.</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceKey_Name">مفتاح جليدي</string>
     <string name="Icecap_Name">قلنسوة جليدية</string>
     <string name="Ignite_Info">يشعل الخلية المحددة. يمكن استخدامه لإشعال العشب، الشخصيات والأشياء.</string>
@@ -355,8 +413,10 @@
     <string name="Imp_Desc">العفاريت هي شياطين أقل شأناً. لا تتميز بقوتها أو موهبتها السحرية، لكنها ذكية واجتماعية تماماً. يفضل العديد من العفاريت العيش بين غير الشياطين.</string>
     <string name="Imp_Golems1">هل أنت مغامر؟ أحب المغامرين! يمكن الاعتماد عليهم دائماً إذا كان هناك شيء يحتاج للقتل. أليس كذلك؟ من أجل المكافأة بالطبع ;)\nفي حالتي هؤلاء هم _الغولم_ الذين يحتاجون للقتل. ترى، سأبدأ مشروعاً صغيراً هنا، لكن هذه الغولم الغبية سيئة للأعمال! من الصعب جداً التفاوض مع كتل الجرانيت المتجولة، لعنة عليهم! لذا من فضلك، اقتل... لنقل _6 منهم_ والمكافأة لك.</string>
     <string name="Imp_Golems2">كيف تسير سفاري الغوليم الخاصة بك؟</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Info">يُصمَّم سنّ كل من هذه السهام ليغرس في هدفه، بينما تنفجر المركبات غير المستقرة المربوطة بطوله في ألسنة لهبٍ باهرة.</string>
     <string name="InnKeeperNPC_Desc">صاحب الفندق فخور بنفسه.</string>
+    <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">صاحب الحانة</string>
     <string name="InnKeeperNPC_Name_Objective">صاحب الحانة</string>
     <string name="Instability_Name_0">غير مستقر %s</string>
@@ -368,6 +428,8 @@
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
     <string name="Item_Name">شيء ما</string>
     <string name="JarOfSouls_Desc">عينا الجمجمة المضيئة المرسومة على هذا الجرّة القديمة، بالإضافة إلى الطاقة الغريبة التي تنبعث منها، تجعلك تشعر بعدم الارتياح.</string>
+    <string name="JarOfSouls_Gender">masculine</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Journal_Alchemy">قدرة الخيمياء</string>
     <string name="Journal_Azuterron">غريب</string>
     <string name="Journal_Caged_Kobold">كوبولد مسجون</string>
@@ -377,9 +439,15 @@
     <string name="King_Desc">كان آخر ملوك الأقزام معروفاً بفهمه العميق لعمليات الحياة والموت. لقد أقنع أعضاء بلاطه بالمشاركة في طقس كان من المفترض أن يمنحهم الشباب الأبدي. في النهاية كان هو الوحيد الذي حصل عليه - وجيش من الموتى الأحياء كمكافأة إضافية.</string>
     <string name="King_Gender">masculine</string>
     <string name="King_Name_Objective">ملك الأقزام</string>
+    <string name="Knuckles_Gender">masculine</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">قتلتك سهم الجليد لـ %s...</string>
+    <string name="Kobold_Gender">masculine</string>
+    <string name="Kobold_Name">كوبلد</string>
+    <string name="Kobold_Name_Objective">كوبلد</string>
     <string name="KunaiThrow_Info">ستُنفَّذ هذه الرميّة القاتلة للكوناي بسرعة بالغة، بسرعة تجعلك عاجزًا حتى عن اختيار هدف.\n\nالأساتذة الحقيقيون قادرون على رمي أكثر من كوناي في آنٍ واحد.</string>
 
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">يتكون هذا السلاح من منجل معلق على سلسلة معدنية بثقل حديدي ثقيل في الطرف الآخر.</string>
     <string name="Kusarigama_Name">كوساريغاما</string>
     <string name="Kusarigama_Pull">اسحب</string>
@@ -387,13 +455,15 @@
     <string name="Larva_Name">يرقة الإله</string>
     <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
     <string name="Leech_Name_0">مصاص دماء %s</string>
+    <string name="Leech_Name_2">مصاص دماء %s</string>
     <string name="Level_TileBarricade">متاريس</string>
     <string name="Level_TileDescChasm">لا تستطيع رؤية القاع.</string>
     <string name="Level_TileDescInactiveTrap">لقد تم تفعيل الفخ من قبل وهو لم يعد خطيراً.</string>
     <string name="Level_TileDescLockedDoor">هذا الباب مغلق، تحتاج إلى مفتاح مطابق لفتحه.</string>
     <string name="Level_TileEmbers">جمرة</string>
     <string name="Level_TileEmptyWell">بئر فارغ</string>
-    <string name="Level_TileEntrance">مدخل النزول</string>
+    <string name="Level_TileEntrance">مدخل العمق</string>
+    <string name="Level_TileExit">مخرج العمق</string>
     <string name="Level_TileFireTrap">فخ حريق</string>
     <string name="Level_TileLockedDoor">باب مقفل</string>
     <string name="Level_TileLockedExit">مخرج سفلي مغلق</string>
@@ -416,7 +486,9 @@
     <string name="LloidsBeacon_Creatures">الهالة النفسية للكائنات المجاورة لا تسمح لك باستخدام منارة لويد في هذه اللحظة.</string>
     <string name="LloidsBeacon_Preventing">هالة سحرية قوية موجودة هنا تمنعك من استخدام منارة لويد!</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Luck_Name_0">محظوظ %s</string>
+    <string name="Mace_Gender">feminine</string>
     <string name="MageArmor_ACSpecial">أرض منصهرة</string>
     <string name="MageArmor_Name">رداء الساحر</string>
     <string name="MailArmor_Name">درع حلقي</string>
@@ -426,10 +498,15 @@
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
     <string name="MeleeWeapon_Info6b">بسبب قوتك الزائدة، تم زيادة ضرر هجومك بهذا %s.</string>
     <string name="MeleeWeapon_Info7c">يمكنك الشعور بسحر شرير يكمن داخل %s.</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
+    <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">مُقلِّد</string>
     <string name="MimicPie_Desc">الميماكس كائنات سحرية يمكنها اتخاذ أي شكل تريده. هذا يشبه فطيرة كبيرة ولذيذة.</string>
+    <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">ميميكي</string>
     <string name="MimicPie_Name_Objective">ميميكي</string>
+    <string name="Mimic_Gender">masculine</string>
+    <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">ثنائي</string>
     <string name="MissileWeapon_Info2">بسبب قوتك غير الكافية، تتناقص دقة وسرعة هجومك بهذا %s.</string>
     <string name="MissileWeapon_Info3">بسبب قوتك الزائدة، يزداد ضرر هجومك بـ %s.</string>
@@ -441,8 +518,10 @@
     <string name="Mob_ItemUse">%1$s يستخدم %2$s</string>
     <string name="Mob_StaFleeingStatus2">هذا %1$s يهرب من %2$s</string>
     <string name="Mob_StaHuntingStatus">هذا %s يصطاد</string>
+    <string name="Mob_StaSleepingStatus">هذا %s نائم</string>
     <string name="Mods_AuthorEmail">بريد المؤلف الإلكتروني:</string>
     <string name="Mods_RestartRequired">مطلوب إعادة تشغيل</string>
+    <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">راهب قزم</string>
     <string name="MysteryMeat_Info2">لا تستطيع أن تشعر بساقيك!</string>
     <string name="MysteryMeat_Message">كان طعم ذلك الطعام... غريباً.</string>
@@ -453,6 +532,7 @@
     <string name="NecromancerRobe_Info2">هذا رداء مشبع بالسحر الأسود يسمح للنكرومانسر بأكل أرواح الوحوش المنهزمة.</string>
     <string name="Necromancy_SummonDeathlingName">استدعاء سمرتة</string>
     <string name="Necrotism_Death">مُتَّ مِن التنخر...</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Ooze_Death">%s يبتلعك...</string>
     <string name="Order_Info">بركّزك المناسب، أوامرك شبه لا تُرفض.</string>
     <string name="Order_Name">أمر</string>
@@ -465,6 +545,7 @@
     <string name="PalaceServant_Warlock_1">سحري يخدم التاج، وليس أنت.</string>
     <string name="PalaceServant_Warlock_2">هل تُدخل الفولاذ إلى مكان مقدس؟</string>
     <string name="PalaceServant_Warlock_3">صبر الملك ليس لانهائيًا.</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
     <string name="Paralysis_Name_0">مشلل %s</string>
     <string name="PetInventory_ACGiveToPet">أَعْطِ لِلْحَيَوَانِ الأَلِيفِ</string>
     <string name="PetInventory_ACTakeFromPet">خذ من الحيوان الأليف</string>
@@ -472,6 +553,7 @@
     <string name="PetInventory_PetBackpackFull">حقيبة الحيوان الأليف ممتلئة</string>
     <string name="PetInventory_TakeN">خذ %d</string>
     <string name="PetInventory_Title">مخزن الحيوانات الأليفة</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_InsufficientStr">قوة غير كافية للتعدين!</string>
     <string name="Pickaxe_Name">كريكة</string>
     <string name="Piranha_Gender">feminine</string>
@@ -480,6 +562,7 @@
     <string name="PlagueDoctorNPC_After_Quest">سأريهم، سأريهم جميعاً!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">هل ما زلت هنا؟ خذ هذا!</string>
     <string name="PlagueDoctorNPC_Desc">جسد هذا الشخص الحدباء بأكمله مخفي تحت بذلة جلدية. كما تفوح منه رائحة مرّة من الأدوية و... الثوم؟</string>
+    <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">طبيب الطاعون</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">آه، لقد عدت! _خمسة فئران ميتة_، ممتاز! جلودها ستكون حاسمة لأبحاثي. وكما وعدتك، بذلتي الشجاعة، صنعت لك هذا الدرع من جلودها. إنه مشبع بقليل من الطاعون، لكن لا تقلق! إنه مضبوط، وهو يحميك! والآن اذهب! احمِ المدينة!</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
@@ -515,6 +598,7 @@
     <string name="Potion_Colors_15">لؤلؤي</string>
     <string name="Potion_Colors_5">ماجينتا</string>
     <string name="Potion_Colors_7">عاجي</string>
+    <string name="Potion_Colors_8">كهرماني</string>
     <string name="Potion_ItemFliesAway">%s طار بعيداً من يديك.</string>
     <string name="Potion_MoistenUseless">يبدو أنك أهدرت هذا الزيت.</string>
     <string name="Potion_Name">%s جرعة</string>
@@ -526,18 +610,23 @@
     <string name="Prison_TileDescBookshelf">هذا على الأرجح بقايا مكتبة السجن. هل يمكن أن يحترق؟</string>
     <string name="Prison_TileWater">ماء مظلم بارد.</string>
     <string name="PseudoPasty_Info">هذا فطيرة كورنيش أصلية مع حشوة تقليدية من اللحم والبطاطس.</string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">فأر كاذب</string>
     <string name="PseudoRat_Name_Objective">فأر كاذب</string>
     <string name="Pumpkin_Info">في الأيام الخوالي، كان شعب اليقطين أمة فخورة ومزدهرة. لكن كل شيء تغيّر بعد مجيء البشر، تاركين خلفهم الدمار فقط. وتبقى الرؤوس المنحوتة والمقطوعة لقبائل اليقطين المنقرضة تذكيراً بتلك الأحداث المروعة.</string>
+    <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">عصا من خشب صلب، أطرافها مغطاة بالحديد.</string>
     <string name="Quest_DarkGoldOre_full_name">خام الذهب الداكن</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="RabbitEars_Name">آذان أرنب</string>
     <string name="RaiseDead_NoSpace">فشل إحياء الموتى لأن لا يوجد مكان حر في الجوار.</string>
     <string name="RatHide_Name">جلد الفأر</string>
     <string name="RatKingCrownBuff_Info">عاش سيد الجرذان، سيطيع كل جرذ ويسبح.</string>
     <string name="RatKingCrown_Info">تاج ذهبي لملك الفئران، رمز للقوة الدائمة</string>
     <string name="RatKing_Died">مات الملك. ليحيا الملك!</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Name">ملك الفئران</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name_Objective">فأر الكيس</string>
     <string name="RawFish_Name">سمك نيء</string>
     <string name="RemixedPixelDungeonApp_sendCrash">لعبةنا تعطلت...\n عذراً.\nيرجى إرسال تقرير العطل لمساعدتنا في إصلاحه.</string>
@@ -556,6 +645,7 @@
     <string name="RingOfHerbalism_Name">خاتم الأعشاب</string>
     <string name="RingOfPower_Info">ستصبح عصيك السحرية أكثر قوة في مجال الطاقة المنبعث من هذا الخاتم. الخواتم المضعفة ستضعف عصيك بدلاً من ذلك.</string>
     <string name="RingOfPower_Name">خاتم القوة</string>
+    <string name="RingOfSatiety_Name">خاتم الشبع</string>
     <string name="RingOfStoneWalking_Info">هذا الخاتم الغريب مصنوع من حجر متين. ما ظننته في البداية ياقوتة هو في الحقيقة دم سائل يُحتفظ به في مكانه! بالداخل سهم يشير إلى ما يبدو كجدار، إلى جانب قلب مكسور... ماذا قد يفعل؟</string>
     <string name="RingOfThorns_Info">على الرغم من أن هذا الخاتم لا يوفر أشواكاً حقيقية، فإن أي عدو يهاجمك سيُجرح بجزء من الضرر الذي يلحقه بك. تحسين هذا الخاتم لن يمنح أي مكافآت إضافية.</string>
     <string name="Ring_BuffKnown">هذا %s</string>
@@ -567,6 +657,7 @@
     <string name="Roar_Name">زئير</string>
     <string name="RogueArmor_ACSpecial">قنبلة دخان</string>
     <string name="RootSpell_Info">يحبس الشخصية المختارة، مما يمنعها من الحركة لفترة قصيرة.</string>
+    <string name="RootsBuff_Name">متجذر</string>
     <string name="RottenFish_Info">سمك متعفن، تفوح منه رائحة كريهة</string>
     <string name="RottenFood_Message">مقزز!</string>
     <string name="RottenMeat_Name">لحم متعفن</string>
@@ -574,10 +665,14 @@
     <string name="RottenPasty_Name">فطيرة فاسدة</string>
     <string name="RottenRation_Info">في يوم من الأيام كان يمكن أكله</string>
     <string name="RottenRation_Name">وجبة متعفنة</string>
+    <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">قبضة متعفّنة</string>
     <string name="RubyBow_Gender">masculine</string>
+    <string name="RubyCrossbow_Gender">masculine</string>
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
     <string name="Rudolph_Name">أنف أحمر وقرون</string>
+    <string name="RunicSkull_Gender">masculine</string>
+    <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Info">وهذا السيف البرونزي القديم المغطى ببقع الصدأ يبدو للوهلة الأولى عديم الفائدة تماماً. لكن قوى قديمة وأصلية نائمة في داخله. هذه القوى يمكنها أن تحول أي مخلوق تقريباً إلى عبد بلا إرادة. ما عليك إلا إيجاد الطريقة المناسبة لإيقاظها...</string>
     <string name="SantaHat_Info">لا شيء يضعك في مزاج \&quot;استكشاف الزنزانات\&quot; مثل القبعة الحريرية الحمراء لسانتا، سيد الأعماق.</string>
     <string name="ScaleArmor_Desc">تخلق القشور المعدنية المخيطة على سترة جلدية درعاً مرناً، ولكنه يوفر الحماية.</string>
@@ -585,6 +680,7 @@
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name_Objective">فزاعة</string>
     <string name="Scorpio_Desc">تتجنب هذه المخلوقات الشيطانية الشبيهة بالعنكبوت العملاقة القتال القريب بكل وسيلة، مطلقة أشواكًا مسننة مشلولة من مسافات بعيدة.</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="ScrollHolder_Info">يمكنك وضع أي عدد من اللفائف في هذه الحاوية الأنبوبية. يوفر مساحة في حقيبتك ويحمي اللفائف من النار.</string>
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
     <string name="ScrollOfCurse_Name">لفافة اللعنة</string>
@@ -608,6 +704,7 @@
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name_Objective">خادمة الفندق</string>
     <string name="ServiceManNPC_Desc">عامل عادي في المؤسسات المحلية.</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNotReadyNPC_Message">أعتذر، لكن هذا المبنى ليس جاهزًا بعد!</string>
     <string name="Shades_Gender">feminine</string>
     <string name="Shades_Info">يقول بعض الناس إن الزنزانات مظلمة جداً لارتداء النظارات الشمسية. وتقول إن هؤلاء الناس ليسوا باريدين بما فيه الكفاية.</string>
@@ -617,49 +714,73 @@
     <string name="ShadowLord_Name_Objective">سيد الظلال</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">ظل</string>
+    <string name="ShamanElder_Gender">masculine</string>
     <string name="Shaman_Desc">يمكن لأذكى الغنول إتقان السحر الشاماني. يفضل الشامان الغنول تعويذات المعركة للتعويض عن نقص القوة، دون تردد في استخدامها على من يشككون في مكانتهم في القبيلة.</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Name">شامان غنول</string>
     <string name="Shaman_Name_Objective">شامان جنول</string>
     <string name="Sheep_Desc">هذه خروف سحري. ما الذي يجعله سحرياً؟ لا يمكنك قتله. سيبقى في مكانه حتى يختفي سحرياً، بينما يمضغ الطعام بنظرة خالية.</string>
+    <string name="Sheep_Gender">feminine</string>
     <string name="ShieldWeaponInfo">عند استخدامه كسلاح، سيُلحق هذا الدرع ضررًا بمعدل %1$d في المتوسط.</string>
+    <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">الغريم المحمي بالدرع</string>
     <string name="Shielded_Name_Objective">الوحش المحمي</string>
     <string name="ShootInEye_Name">رمية في العين</string>
     <string name="ShortSword_ACReforge">إعادة الصياغة</string>
     <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Name">سيف قصير</string>
+    <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Name">شوريكين</string>
+    <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">قُتلت بانفجار العظام...</string>
     <string name="Skeleton_Name">هيكل عظمي</string>
     <string name="SlowBuff_Info">الشعور بالخمول يجعل المرء أبطأ من المعتاد.</string>
     <string name="Slow_Name_1">مُثَلّج %s</string>
     <string name="SmashSpell_NeedWeapon">أحتاج إلى سلاح لهذه الحركة.</string>
     <string name="Snail_Desc">هذا الرخوي الصغير كبر كثيراً من تغذيه على مياه الصرف، لكنه لا يزال بطيئاً جداً، مما يجعله عدواً سهلاً.</string>
+    <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">حلزون</string>
     <string name="SociologistNPC_Desc">هذا العالِم الاجتماعي في رحلة مقدسة لجمع الآراء العامة</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_InternetRequired">عذراً، لكن دون الوصول إلى الإنترنت لا يمكنك المشاركة في استطلاعنا</string>
     <string name="Sorrowmoss_Desc">الزنبق الحزين هو زهرة (وليس طحلب) ذات بتلات حادة كالموس، مغطاة بسم قاتل.</string>
     <string name="Sorrowmoss_Name">طحلب الحزن</string>
+    <string name="SoulShard_Gender">masculine</string>
+    <string name="Spear_Gender">neuter</string>
     <string name="SpeedBuff_Name">سرعة</string>
     <string name="SpellBook_Info_Identified">في هذه الصفحات اكتشفت النص الكامل للتعويذة \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_NotEnoughSP">ليس لديك ما يكفي من المانا لإلقاء تعويذة \&quot;%1$s\&quot;.</string>
+    <string name="Spells_NotInOwnBody">لا يمكنك تنفيذ %s عندما تنفصل روحك عن جسدك.</string>
+    <string name="SpiderArmor_Gender">feminine</string>
+    <string name="SpiderCharm_Use">استخدام</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderElite_Desc">تماماً مثل الجنود، حرس العناكب أقسموا على حماية مملكتهم. يُستخدم سم الحرس النخبوي لتشتيت هدفهم.</string>
+    <string name="SpiderElite_Gender">masculine</string>
+    <string name="SpiderExploding_Gender">masculine</string>
+    <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">حارس العنكبوت</string>
     <string name="SpiderGuard_Name_Objective">حارس العنكبوت</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMind_Desc">تمتلك هذه العناكب الهشة ظاهريًا قوى عقلية فريدة، مما يسمح لها بالسيطرة على المستعمرة بأكملها. يستطيع العنكبوب النفسي التحكم في أي كائن حي، لكنه جبان تمامًا.</string>
+    <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">عنكبوت نفسي</string>
     <string name="SpiderNest_Desc">هذا الشرنقة مصنوعة من أرفع خيوط الحرير وتخفي شيئاً حيّاً بداخلها.</string>
+    <string name="SpiderNest_Gender">neuter</string>
+    <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderServant_Desc">الجنود هم الوحدات الأكثر عددًا في جحر العنكبوت. وُلدوا لحماية أراضيهم. تطورت مخالب الجنود بغدد سامة لتسميم أعدائهم.</string>
+    <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">جندي العنكبوت</string>
     <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name">عنكبوت الكهف</string>
     <string name="SpiritOfPain_Desc">شظية من ظلام حي.</string>
+    <string name="SpiritOfPain_Gender">masculine</string>
     <string name="Sprout_Info">أيقظ البذور النائمة.\nومع ذلك، يجب أن تكون هناك بعض النباتات على الأرض لكي ينجح هذا التعويذ.</string>
+    <string name="StartScene_Depth">العمق: %1$d\nالمستوى: %2$d</string>
     <string name="StartScene_DifficultySelect">اختر قدرك</string>
     <string name="StartScene_New">لعبة جديدة</string>
     <string name="StartScene_No">لا، العودة إلى القائمة الرئيسية</string>
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
+    <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">تمثال متحرك</string>
     <string name="Stench_Txt">%s نتن</string>
     <string name="Stylus_ACInscribe">نَقْش</string>
@@ -671,13 +792,17 @@
     <string name="SummonDeathling_Name">استدعاء سمرتة</string>
     <string name="SungrassBuff_Name">الشفاء بالأعشاب</string>
     <string name="SurfaceScene_GameOver">انتهت اللعبة</string>
+    <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">الفأر المشبوه يرتجف بعنف.</string>
     <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">سرب ذباب</string>
     <string name="Swing_Name_1">%s البري</string>
+    <string name="Sword_Gender">masculine</string>
+    <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">على الرغم من أن هذا الفأس الرمي ليس ثقيلاً جداً، إلا أنه لا يزال يتطلب قوة كبيرة لاستخدامه بفعالية.</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Thief_Carries">\n\n%1 يحمل _%2. مسروق بالطبع.</string>
+    <string name="Thief_Gender">masculine</string>
     <string name="Thief_Stole">%1$s سرق %2$s منك!</string>
     <string name="TitleScene_Badges">الشارات</string>
     <string name="TitleScene_Mods">مودز</string>
@@ -689,20 +814,25 @@
     <string name="Torch_Info">إنه عنصر لا غنى عنه في قاعات الشياطين، المشهورة بإضاءتها الضعيفة.</string>
     <string name="ToughShield_name">درع جلدي مقوى</string>
     <string name="TownGuardNPC_Desc">حارس مدينة عادي.</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message2">بفضل المغامرين مثلك، أصبح المكان هنا هادئاً جداً.</string>
     <string name="TownGuardNPC_Message3">هل تعتقد أن هناك الكثير من الحراس في هذه المدينة؟ حسناً، هذا لأنها المدينة الوحيدة التي يوجد بها زنزانة عملاقة مليئة بالوحوش، أليس كذلك؟</string>
     <string name="TownGuardNPC_Name">حارس المدينة</string>
     <string name="TownPortal_Info">هذه التعويذة تسمح لك بالعودة الفورية إلى مكان آمن. ومع ذلك، قد تمنعك مصادر سحرية قوية قريبة من العمل كما هو مقصود.</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Message">هل تعرف تلك الخدمة الخاصة التي تقدمها \&quot;المسارح السينمائية\&quot;؟ للأسف يطلبون شيئاً غريباً يسمى \&quot;الإنترنت\&quot;، لم أسمع به قط من قبل.</string>
+    <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">آه! مغامر آخر، يا لها من مفاجأة سارة! تأكد من نهب أكبر قدر ممكن من الأشياء الثمينة!</string>
     <string name="TownsfolkNPC_Message2">أصبحت المدينة ثرية للغاية بفضل هذا الزنزانة، حتى يستطيع الجميع في المدينة تحمل تكاليف العطلة كلما أرادوا! في الواقع هذا هو السبب في وجود عدد قليل جداً من الناس هنا الآن.</string>
     <string name="TownsfolkNPC_Message3">يا له من يوم جميل.</string>
     <string name="TownsfolkNPC_Message4">آمل ألا تغمر المياه المجاري عندما يأتي الربيع. نحن لا نحتاج إلى غزو قوارض آخر.</string>
     <string name="TownsfolkNPC_Name">أهالي المدينة</string>
+    <string name="TownsfolkSilentNPC_Gender">masculine</string>
+    <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Name_Objective">سكان البلدة</string>
     <string name="ToxicGland_Name">غدة سامة</string>
     <string name="TrapWnd_Step">هل تريد حقاً خطو على هذا الفخ؟ قد تموت.</string>
+    <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
     <string name="Using_Failed_Because_Magic">سحر قوي يمنعك من استخدام \&quot;%s\&quot;.</string>
@@ -725,10 +855,14 @@
     <string name="Wand_ACZap">زَاب</string>
     <string name="Wand_Prompt">اختر اتجاهًا للإطلاق</string>
     <string name="Wand_SelfTarget">لا يمكنك استهداف نفسك</string>
+    <string name="Wand_Wood_Types_2">أبنوس</string>
+    <string name="Wand_Wood_Types_3">كرز</string>
     <string name="Wand_Wood_Types_7">ماهوغاني</string>
     <string name="Wand_Wood_Types_9">خشب القلب الأرجواني</string>
+    <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">قليلة هي المخلوقات التي تصمد أمام الضربة الساحقة لهذه الكتلة الشاهقة من الرصاص والفولاذ، لكن أقوى المغامرين فقط يمكنهم استخدامه بفعالية.</string>
     <string name="WarHammer_Name">مطرقة حرب</string>
+    <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">سهم الظل الخاص بـ %1$s قتلك...</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterOfAwareness_Info">تشع قوة المعرفة من ماء هذه البئر. خذ رشفة منه لكشف جميع أسرار معداتك.</string>
@@ -758,11 +892,13 @@
     <string name="WndFortuneTeller_No_Item">احذر، أنت لا تريد إنفاق أموالك بلا فائدة، أليس كذلك؟ لا توجد عناصر غير محددة في مخزونك.</string>
     <string name="WndFortuneTeller_Title">العَرّافَة</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
+    <string name="WndHats_BackButton">رجوع</string>
     <string name="WndHats_BuyButton">شراء</string>
     <string name="WndHats_NoConnectionMsg">تعذر الاتصال بـ Google Play.</string>
     <string name="WndHats_Purchased">موجود!</string>
     <string name="WndHero_Awareness">اليقظة</string>
     <string name="WndHero_Depth">أقصى عمق</string>
+    <string name="WndHero_StaJournal">اليوميات</string>
     <string name="WndInfoItem_Chest">صندوق</string>
     <string name="WndInfoItem_CrystalChest">صندوق كريستالي</string>
     <string name="WndInfoItem_Owner">قد يحتوي هذا القبر القديم على شيء مفيد، لكن مالكه سيعترض بالتأكيد على التفتيش.</string>
@@ -820,19 +956,26 @@
     <string name="WndTradeItem_SellAll">بيع الكل مقابل %dg</string>
     <string name="WndTradeItem_SellN">بيع %1$d مقابل %2$dغ</string>
     <string name="WndWandmaker_Battle">عصا قتال</string>
+    <string name="Wnd_Button_Back">رجوع</string>
     <string name="Wnd_Button_Ok">موافق</string>
     <string name="WoodenBow_Gender">masculine</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">قوس خشبي أساسي، يبدو أنه مصمم لإطلاق سهام القوس.</string>
     <string name="Worm_Desc">لا يمكن معرفة حجم هذا الدودة. تبرز جزئياً من الأرض، وجسم هذا الكائن مغطى بكتل من اللحم المتعفن والخراء. فكيه العملاقان يعطيان فكرة واضحة عن كيفية تحرك ذلك الوحش عبر السطح.</string>
+    <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">دودة</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="WrnExperimental_realtime">تم تفعيل وضع الوقت الفعلي! هذه الآن لعبة روجلايك في الوقت الفعلي، اضغط بسرعة أو مت.\nهل تريد التحقق من المخزون؟\nحظاً سعيداً في القيام بذلك بينما يتحقق سرطان المجاري من أحشائك.</string>
     <string name="WrnExperimental_title">تم تفعيل الخيارات التجريبية!</string>
+    <string name="Yog_Gender">masculine</string>
     <string name="Yog_Name_Objective">يوغ-دزيوا</string>
+    <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name_Objective">عقل يوغ</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
+    <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">عين يوغ</string>
     <string name="YogsHeart_Desc">لسنوات طويلة اعتقد الناس أن المخلوقات عديمة القلب فقط هي القادرة على أفعال الشر الصرفة. ومع ذلك، ها هو هنا أمامك قلب ضخم نابض، يعود للإله القديم نفسه.</string>
+    <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">أسنان يوغ</string>
     <string name="ZombieGnoll_Gender">masculine</string>
@@ -904,6 +1047,150 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

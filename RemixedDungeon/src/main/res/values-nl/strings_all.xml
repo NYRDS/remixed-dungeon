@@ -19,13 +19,19 @@
     <string name="Accuracy_Decreased">Waarom dacht ik dat ik dit %s kon gebruiken? Verkeerd gereedschap, verkeerde handen!</string>
     <string name="Accuracy_DecreasedDoctor">Elke slag met deze %s verspreidt onvolkomenheden. Mijn botenzaag geneest... dit besmet.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Blote handen besmetten mijn techniek. Zonder de zuivere snede van de Zaag verziekt mijn richtkunst tot chaos.</string>
+    <string name="Acidic_Gender">masculine</string>
+    <string name="Acidic_Name">zure schorpioen</string>
+    <string name="Acidic_Name_Objective">zure schorpioen</string>
     <string name="AirElemental_Desc">Luchtelementalen zijn vliegende magische wezens gemaakt van levende lucht.</string>
+    <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name_Objective">luchtelementaal</string>
     <string name="AlarmTrap_Desc">De val laat een doordringend geluid horen dat door de hele dungeon weergalmt!</string>
+    <string name="Albino_Gender">masculine</string>
     <string name="AlchemyPot_SelectSeed">Selecteer een zaadje om te werpen</string>
     <string name="AllowStatisticsCollectionScene_Allow">Toestaan</string>
     <string name="AllowStatisticsCollectionScene_Deny">Weigeren</string>
     <string name="AllowStatisticsCollectionScene_Title">Verzameling van gebruikstatistieken</string>
+    <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">De oplossing op de punt van deze pijl zal iedereen veranderen in een gedachtenloze, genadeloze berzerker.</string>
     <string name="AmokArrow_Name">Amok-pijl</string>
     <string name="AmokBuff_Info">Voel de amok, die het leven neemt van de ongelukkigen.</string>
@@ -42,6 +48,7 @@
     <string name="Armor_Glyph">glyph</string>
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
     <string name="Armor_Info7b">, en omdat het vervloekt is, kun je het niet afdoen</string>
+    <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">levende standbeeld</string>
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
     <string name="AzuterronNPC_Gender">masculine</string>
@@ -59,7 +66,9 @@
     <string name="Badges_Champion">Uitdaging gewonnen</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
     <string name="Badges_DeathPoison">Dood door vergiftiging</string>
+    <string name="Badges_GamesPlayed2">100 spellen gespeeld</string>
     <string name="Badges_GnollUnlocked">Gnoll ontgrendeld</string>
+    <string name="Badges_GoldColleted2">500 goud verzameld</string>
     <string name="Badges_GoldColleted4">7500 goud verzameld</string>
     <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
     <string name="Badges_Immured">Dood door inmuring</string>
@@ -77,6 +86,7 @@
     <string name="Badges_Piranhas">6 piranha\'s gedood</string>
     <string name="Badges_PotionsCooked3">9 drankjes gebraagd</string>
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
+    <string name="Badges_ShadowLord_Slain">Schaduwheer verslagen</string>
     <string name="Badges_StrengthAttained1">13 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained2">15 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained3">17 punten Kracht bereikt</string>
@@ -86,18 +96,23 @@
     <string name="Badges_Yog_Slain">Yog-Dzewa verslagen</string>
     <string name="Bag_ACOpen">OPENEN</string>
     <string name="Bandit_Desc">De diepere verdiepingen van de dungeon hebben altijd een schuilplaats geboden voor allerlei criminelen. Niet iedereen kon gezond van verstand blijven tijdens hun lange verblijf ver van het daglicht. Lange geleden zijn deze dolle dieven en bandieten vergeten wie ze zijn en waarom ze stelen. Deze bandiet lijkt zijn dolk met iets te hebben bestreken!</string>
+    <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">gekke bandiet</string>
     <string name="Bandit_Name_Objective">gekke bandiet</string>
+    <string name="BardNPC_Gender">masculine</string>
     <string name="Barrel_Name">vat</string>
     <string name="Barrel_Pumpkin_Name">pompoen</string>
     <string name="Bat_Defense">ontweken</string>
+    <string name="Bat_Gender">masculine</string>
     <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">Het enorme staande hoofd van deze strijdbijl geeft een aanzienlijk gewicht achter elke slag.</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
     <string name="Bee_Gender">masculine</string>
     <string name="BellaNPC_Desc">Een heel posh meisje. Haar hele uiterlijk zegt je: \&quot;Ik ben te goed voor iedereen.\&quot;</string>
+    <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Yes_End_Game">Zeker (Beëindig het spel)</string>
     <string name="Belongings_CantWearBoth">Je kunt %1$s en %2$s niet tegelijkertijd uitrusten!</string>
+    <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="Bishop_no_money">Je kunt er niet voor betalen.</string>
     <string name="Bishop_text">Dag en nacht bid ik voor u, mijn kind.</string>
@@ -107,6 +122,7 @@
     <string name="BlackSkullOfMastery_Lich">Word een Lich</string>
     <string name="BlackSkullOfMastery_Name">De Zielbrenger</string>
     <string name="BlackSkull_Activated">De Zwarte Schedel is ontwaakt!</string>
+    <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Een kleine schedel van obsidiaan. Het was de bron van de krachten van de Necropolis, maar na de nederlaag van de Lich lijkt het al zijn krachten verloren te hebben. Maar wanneer je het in je handen houdt, gaat er een vreemde gedachte door je heen: \&quot;Het Hongert\&quot;.</string>
     <string name="BlackSkull_Name">zwarte schedel</string>
     <string name="BlackSkull_Ressurrect">De Zwarte Schedel Heeft Dode Wezens Herrezen Om Je Te Dienen!</string>
@@ -115,19 +131,25 @@
     <string name="Blacksmith_Verify4">Ik werk niet met vervloekte items!</string>
     <string name="Blacksmith_Verify5">Het is prullen, de kwaliteit is te slecht!</string>
     <string name="Blacksmith_Verify6">Ik kan deze items niet hersmelten!</string>
+    <string name="BlankScroll_ReallyBlank">Deze perkament is leeg</string>
+    <string name="BleedingBuff_Name">Bloedend</string>
     <string name="BlessedBuff_Info">Moge precisie en ontwijken komen voor hen die door de zegen zijn geraakt!</string>
     <string name="BloodTransfusion_Name">Bloedtransfusie</string>
     <string name="BloodTransfusion_WontAgreed">Het slachtoffer weerst het onttrekken van zijn levensessentie.</string>
     <string name="BodyArmorBuff_Name">Lichaamspantser</string>
+    <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Bow_Info1">Dit is een afstandswapen. Het is nutteloos voor iedereen behalve elfen op zeer korte afstand. Met een boog uitgerust kun je pijlen afschieten.\n\n</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
+    <string name="Brute_Gender">masculine</string>
     <string name="BurningBuff_Info">Het lichaam is verteerd in razende vlammen!</string>
     <string name="BurningBuff_Name">In brand</string>
     <string name="BurningFist_Desc">Brandende Vuist van de Oude God</string>
+    <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">brandende vuist</string>
     <string name="BurningFist_Name_Objective">brandende vuist</string>
     <string name="Burning_Death">Je bent verbrand...</string>
+    <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">Hé... Hé! Jij bent die avonturier, toch? Help me eens, maat, die verdomme militaristen hebben me hier opgesloten! Ze willen een oud wapen heractiveren om de mensen op het oppervlak te veroveren! Maar gezien hoe gevaarlijk het is, was ik het er niet mee eens, dus hebben ze me gewoon buiten gezet en in een kooi gesloten! Ik bid je de sleutel van de cel te vinden, en als dank zal ik je helpen waar ik kan.</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
     <string name="CagedKobold_Message3">Ik haat alles aan deze kooi</string>
@@ -140,6 +162,7 @@
     <string name="Caves_TileGrass">fluorescent mos</string>
     <string name="Caves_TileHighGrass">Fluorescerende paddenstoelen</string>
     <string name="Caves_TileWater">IJskoud water.</string>
+    <string name="Challenges_Descriptions_1">Aanval is de beste verdediging. Volgens deze leerstellingen waag je je in de kerker, met geloof als de sterkste beschermer van je lichaam.</string>
     <string name="Challenges_Descriptions_3">Het land rond de kerker is al lang besmet met boosaardigheid, waardoor de zaden van allerlei kruiden en planten niet kunnen groeien. Wie weet hoe lang het nog duurt voordat de laatste plant op deze barre gronden ophoudt te bestaan.</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Descriptions_6">De oude kunst van runen lezen is verboden en wordt tegen alle kosten vermeden, vanwege de vloek die rust op elk perkament dat de kelder of haar omgeving binnenbereikt.</string>
@@ -152,18 +175,25 @@
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">Een eenhandig zwaard van pure chaos. Het groeit met gevechten zoals zijn tweehandige broer, maar langzamer en tot een lager potentieel — waardoor je linkerhand vrij blijft voor een schild.</string>
     <string name="ChaosBlade_Name">chaoszwaard</string>
+    <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Name">chaosboog</string>
     <string name="ChaosCrystal_BladeFused">Het kristal absorber je wapen, en nam de vorm van een zwaard aan</string>
     <string name="ChaosCrystal_Fuse">SMETEN</string>
     <string name="ChaosCrystal_Name_2">Chaos Kristal</string>
     <string name="ChaosShield_desc">Het Chaos Schild ontstaat door het samensmelten van een Chaos Kristal met een gewoon schild, waardoor het bij elke succesvolle blokkade willekeurige chaotische effecten vertoont.</string>
+    <string name="ChaosShield_name">Chaos Schild</string>
+    <string name="ChaosStaff_Gender">masculine</string>
     <string name="ChaosStaff_Info">Een staf doordrenkt met de Kracht van de Chaos! Waar kan een magiër nog van dromen — of bang voor zijn?</string>
+    <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Name">chaoszwaard</string>
     <string name="CharAction_Hit">slaan</string>
+    <string name="CharAction_PetInventory">inventaris</string>
     <string name="CharAction_Push">duwen</string>
     <string name="CharAction_Taunt">uitdagen</string>
     <string name="CharInfo_Level">Dit is een %2$s op niveau %1$d.</string>
     <string name="Char_Hit_0">%1$s raakte %2$s</string>
+    <string name="Char_Hit_1">%1$s raakte %2$s</string>
+    <string name="Char_Hit_2">%1$s raakte %2$s</string>
     <string name="Char_Kill_0">%s heeft je gedood...</string>
     <string name="Char_Kill_1">%s heeft je gedood...</string>
     <string name="Char_StaAmok">amok</string>
@@ -190,6 +220,7 @@
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="City_TileDescDeco">Er missen hier verschillende tegels.</string>
     <string name="ClassArmor_NotEquipped">Je moet dit pantser dragen om zijn speciale kracht te gebruiken!</string>
+    <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Dit massieve zwaard zou in staat moeten zijn om door alles heen te snijden.</string>
     <string name="CloakBuff_Info">Een donkere mantel verhult je in de schaduw, waardoor je minder zichtbaar bent voor vijanden.</string>
     <string name="ClothArmor_Desc">Deze lichte bepantsering biedt eenvoudige bescherming.</string>
@@ -207,28 +238,38 @@
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ComboBuff_Info">De volgende aanval zal een combo-aanval zijn.</string>
     <string name="Combo_Combo">%d treffer combo!</string>
+    <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">Gewone houten pijl met een ijzeren punt.</string>
     <string name="CommonArrow_Name">pijl</string>
+    <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
+    <string name="CompoundBow_Gender">masculine</string>
     <string name="ConcreteBlock_Name">Zwaar betonnen blok</string>
     <string name="ConfusionGas_Info">Hier zweeft een wolk verwarrend gas.</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
     <string name="CorpseDust_Name">lijkenstof</string>
     <string name="CorpseExplosion_Name">Lijk Explosie</string>
+    <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">rioolkrab</string>
     <string name="CrippleBuff_Info">Het lichaam is verlamd, maar de strijd gaat door.</string>
+    <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">zwevend kristal</string>
+    <string name="CurareDart_Gender">masculine</string>
+    <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">dolk</string>
     <string name="Damage_Reduction">Schadevermindering</string>
+    <string name="Dart_Gender">masculine</string>
     <string name="Dart_Name">dart</string>
     <string name="DashSpell_Info">Das naar een aangewezen richting terwijl je met vijanden botst, schade toebrengend en verstommeling veroorzakend.</string>
     <string name="DashSpell_Name">Das</string>
     <string name="DashSpell_OnSelf">Ik kan niet ter plekke een sprint maken.</string>
     <string name="DashSpell_TooFar">Ik kan niet zo ver dasen.</string>
+    <string name="DeathKnight_Gender">masculine</string>
     <string name="Death_Name_1">Grim %s</string>
     <string name="Deathling_Desc">De Doodsling is de ziel van een gevallen held die ongelukkig genoeg werd opgeroepen door een mede-avonturier die necromancie beoefent.</string>
+    <string name="Deathling_Gender">masculine</string>
     <string name="DeepSnail_Desc">Dit soort weekdier is vaak te zien nabij waterbronnen en is veel sneller dan een gewone slak. Pas echter op voor de beten, die kunnen een onaangenaam effect hebben op je huid.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">De pijn is omgezet in vertraagde pijn, wat de schade die op een keer wordt opgelopen vermindert.\nOvergebleven schade om te ontvangen %d</string>
@@ -239,12 +280,14 @@
     <string name="DieHardBuff_Name">Die Hard</string>
     <string name="DoctorArmor_Name">Doktersgewaad</string>
     <string name="DonateButton_thanks">Bedankt voor je steun!</string>
+    <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">angstridder</string>
     <string name="DriedRoseBuff_Info">De roos ziet er heel aantrekkelijk uit.</string>
     <string name="DriedRoseCursedBuff_Name">Verliefd</string>
     <string name="DriedRose_Name">gedroogde roos</string>
     <string name="Drink_Message">Die drank was verfrissend!</string>
     <string name="DrunkardNPC_Desc">Vaste klant van de herberg in natuurlijke staat.</string>
+    <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">dronkaard</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_DeadEnd">Wat doe je hier?!</string>
@@ -257,21 +300,32 @@
     <string name="Dungeon_Tips_4">Pas op voor de Slijm!</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="Dungeon_Tips_9">Laat de Tengu niet vrij!</string>
+    <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name_Objective">aardelementaal</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
     <string name="ElfArmor_ACSpecial">ROEP VAN DE NATUUR</string>
+    <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="EncumbranceBuff_CharAct_2">Deze %s is te zwaar voor mij om effectief te gebruiken.</string>
     <string name="EncumbranceBuff_CharAct_4">Mij ontbreekt de kracht om %s optimaal te benutten.</string>
+    <string name="EncumbranceBuff_Name">Last</string>
+    <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
     <string name="Exhumation_Name">Exhumatie</string>
+    <string name="ExplodingSkull_Gender">masculine</string>
     <string name="Eye_Desc">Een van de andere namen van deze demon is \&quot;orb of hatred\&quot;, omdat wanneer hij een vijand ziet, hij zijn doodsblik onbeschoft gebruikt, vaak de bondgenoten negerend en ze verwondend.</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
+    <string name="FetidRat_Gender">feminine</string>
+    <string name="FireArrow_Gender">feminine</string>
+    <string name="FireElemental_Gender">masculine</string>
+    <string name="FireElemental_Name">vuurelementair</string>
+    <string name="FireElemental_Name_Objective">vuurelementair</string>
     <string name="Fire_Info">Hier woedt een vuur.</string>
     <string name="Fire_Name_1">Vlamend %s</string>
     <string name="Firebloom_Name">Vuurbloem</string>
     <string name="FortuneTellerNPC_Desc">Deze vrouw draagt een lange, felgekleurde pij. Ze ziet er verrassend jong uit voor iemand die de geheime kunsten van de waarzeggerij beheerst. Als je dichterbij komt, hoor je haar zachtjes mompelen terwijl ze in de kristallen bol staart.</string>
+    <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">waarzegster</string>
     <string name="FreezeGlobe_Info">Bevriest het geselecteerde personage, waardoor het korte tijd geen acties kan uitvoeren.</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
@@ -287,13 +341,17 @@
     <string name="GasImmuneBuff_Name">Gasimmuniteit</string>
     <string name="Ghost_Defense">ontweek</string>
     <string name="Ghost_Rose2">Alsjeblieft... Help me... Vind de roos...</string>
+    <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Name">gleve</string>
     <string name="GnollTamahawk_Gender">masculine</string>
+    <string name="Gnoll_Gender">masculine</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="GoldenKey_Name">Gouden sleutel</string>
     <string name="GoldenStatue_Gender">feminine</string>
     <string name="GoldenSword_Gender">masculine</string>
     <string name="Golem_Defense">geblokkeerd</string>
+    <string name="Golem_Gender">masculine</string>
+    <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">De slime blaast zichzelf op!</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
@@ -304,9 +362,13 @@
     <string name="Heal_Cast">%s is genezen.</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Gratis behandeling voor elke avonturier!</string>
+    <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">De punt van deze pijl is bedekt met een genezende drank.</string>
+    <string name="HealthDart_Gender">masculine</string>
     <string name="Heap_Mimic">Dit is een mimic!</string>
+    <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
+    <string name="HeroClass_Doctor">Pestdokter</string>
     <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
     <string name="HeroClass_ElfPerks_5">Elfen zijn minder bedreven met naiwapens.</string>
     <string name="HeroClass_GnollPerks_2">Gnollen beginnen zonder enige pantser maar met een unieke tomahawk</string>
@@ -358,6 +420,9 @@
     <string name="IceCaves_TileDescDeco">Deze gnoll is levend bevroren. Blijkbaar was hij al een tijdje daar.</string>
     <string name="IceCaves_TileGrass">Bevroren gras.</string>
     <string name="IceCaves_TileHighGrass">Bevroren hoog gras</string>
+    <string name="IceElemental_Gender">masculine</string>
+    <string name="IceGuardianCore_Gender">masculine</string>
+    <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name_Objective">ijsbewaker</string>
     <string name="IceKey_Info">Deze sleutel lijkt van ijs gemaakt te zijn, maar hij is net zo hard als staal.</string>
     <string name="Ignite_Name">Ontbranden</string>
@@ -366,8 +431,10 @@
     <string name="Imp_Golems2">Hoe gaat het met je golem-safari?</string>
     <string name="Imp_Monks1">Ben je een avonturier? Ik hou van avonturiers! Je kunt altijd op hen rekenen als er iets gedood moet worden. Heb ik gelijk? Voor een beloning, natuurlijk ;)\nIn mijn geval zijn het _monken_ die gedood moeten worden. Je ziet, ik wil hier een klein zakje beginnen, maar deze gekken kopen zelf niets en schrikken andere klanten weg. Dus alsjeblieft, dood... laten we zeggen _8 van hen_ en de beloning is van jou.</string>
     <string name="Imp_Name">ambitieus duiveltje</string>
+    <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Name">brandpijl</string>
     <string name="InnKeeperNPC_Desc">De herbergier is trots op zichzelf.</string>
+    <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name_Objective">herbergier</string>
     <string name="InnServant_Phrase_1">Bah, nog zoveel te doen!</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
@@ -379,7 +446,9 @@
     <string name="Item_DirThrow">Kies de richting van de worp</string>
     <string name="Item_Info2">iets</string>
     <string name="Item_Name">iets</string>
+    <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name_Objective">pot met zielen</string>
+    <string name="Javelin_Gender">neuter</string>
     <string name="Journal_Alchemy">Alchemieketel</string>
     <string name="Journal_Azuterron">Onbekende</string>
     <string name="Journal_Caged_Kobold">Kobold in een kooi</string>
@@ -388,11 +457,20 @@
     <string name="Journal_Wandmaker">Oude toverstafmaker</string>
     <string name="Journal_WellAwareness">Bron van Bewustzijn</string>
     <string name="King_Defense">geparreerd</string>
+    <string name="King_Gender">masculine</string>
+    <string name="King_Name">Koning der Dwergen</string>
+    <string name="King_Name_Objective">Koning der Dwergen</string>
+    <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Name">boksbeugel</string>
+    <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="Kobold_Desc">Er werd aangenomen dat kobolds niets meer waren dan een legende. Als voorouders van de gewone gnolls woonden kobolds in de diepste en koudste grotten. Er wordt ook verteld dat hun ras techniek en machinebouw beheerste lang voordat de dwergen dat deden.</string>
+    <string name="Kobold_Gender">masculine</string>
+    <string name="Kobold_Name">kobold</string>
+    <string name="Kobold_Name_Objective">kobold</string>
     <string name="KunaiThrow_Info">Deze dodelijke kunai-worp wordt extreem snel uitgevoerd, zo snel dat je niet eens een doelwit kunt kiezen.\n\nWare meesters kunnen meer dan één kunai tegelijk werpen.</string>
 
     <string name="KunaiThrow_Name">Kunai-worp</string>
+    <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Dit wapen bestaat uit een zeis aan een metalen ketting met een zwaar ijzeren gewicht aan het andere uiteinde.</string>
     <string name="Kusarigama_Pull">TREKKEN</string>
     <string name="Larva_Gender">feminine</string>
@@ -400,6 +478,7 @@
     <string name="LastLevel_TileStatue">Pilaar</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
+    <string name="Leech_Name_2">Vampier %s</string>
     <string name="Level_TileBarricade">Barricade</string>
     <string name="Level_TileDescAlchemy">Laat hier wat zaden vallen om een drank te brouwen.</string>
     <string name="Level_TileDescBarricade">De houten barricade zit stevig, maar is over de jaren uitgedroogd. Zal hij branden?</string>
@@ -407,6 +486,7 @@
     <string name="Level_TileDescExit">De treden leiden naar beneden, naar een diepere verdieping.</string>
     <string name="Level_TileDescTrap">Als je op een verborgen drukplaat stapt, activeer je de val.</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
+    <string name="Level_TileEntrance">Diepte-ingang</string>
     <string name="Level_TileExit">Diepte-uitgang</string>
     <string name="Level_TileGrippingTrap">Klemval</string>
     <string name="Level_TileHighGrass">Hoog gras</string>
@@ -429,8 +509,10 @@
     <string name="LloidsBeacon_Info">De baken van Lloyd is een ingewikkeld magisch apparaat waarmee je kunt terugkeren naar een plek waar je al eerder bent geweest.</string>
     <string name="LloidsBeacon_Preventing">Een soort sterke magische aura die hier aanwezig is voorkomt dat je Lloyds boei kunt gebruiken!</string>
     <string name="LloidsBeacon_Set">\n\nDeze beacon is ergens op niveau %d van Remixed Dungeon ingesteld.</string>
+    <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Name">langzwaard</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
+    <string name="Mace_Gender">feminine</string>
     <string name="MageArmor_ACSpecial">GESMOLTEN AARDE</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
     <string name="MagicArrow_Name">Magische pijl</string>
@@ -446,9 +528,13 @@
     <string name="MeleeWeapon_Info6a">Vanwege je onvoldoende kracht is de nauwkeurigheid en snelheid van je aanval met dit %s verminderd.</string>
     <string name="MeleeWeapon_Info6b">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
     <string name="MercenaryNPC_Desc">Een stevig mannetje.</string>
+    <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">huurling</string>
+    <string name="MimicAmulet_Gender">masculine</string>
+    <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimic</string>
     <string name="MimicPie_Name_Objective">mimic</string>
+    <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">mimic</string>
     <string name="MindVisionBuff_Info">De innerlijke visie laat duidelijk de beweging van alle levende wezens op de verdieping zien.</string>
     <string name="MirrorImage_Desc">Deze illusie lijkt sterk op jou, maar is bleker en trilt een beetje.</string>
@@ -466,15 +552,19 @@
     <string name="Mob_StaFleeingStatus">Deze %s vlucht</string>
     <string name="Mob_StaFleeingStatus2">Deze %1$s vlucht voor %2$s</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
+    <string name="Mob_StaSleepingStatus">Deze %s slaapt</string>
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
     <string name="Monk_Defense">geparreerd</string>
     <string name="Monk_Gender">masculine</string>
+    <string name="Monk_Name">dwerg monnik</string>
+    <string name="Monk_Name_Objective">dwerg monnik</string>
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
     <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
 
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
     <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
+    <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="NecromancerNPC_Message3">Ik hoor de roep van de doden.</string>
@@ -485,6 +575,7 @@
     <string name="Necrotism_ACSpecial">NECROTISME</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
     <string name="Nightcap_Name">Slaapmuts</string>
+    <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">nachtmerrie</string>
     <string name="OozeBuff_Name">Bijtend Slijk</string>
     <string name="Ooze_Death">%s slikt je op...</string>
@@ -500,6 +591,7 @@
     <string name="PalaceServant_Warlock_1">Mijn magie dient de kroon, niet jou.</string>
     <string name="PalaceServant_Warlock_2">Breng je staal naar een heiligdom?</string>
     <string name="PalaceServant_Warlock_3">Het geduld van de Koning is niet eindeloos.</string>
+    <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisBuff_Name">Verlamd</string>
     <string name="Paralysis_Name_0">Verdovende %s</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
@@ -508,8 +600,10 @@
     <string name="PetInventory_TakeFromPet">Nemen van huisdier</string>
     <string name="PetInventory_Title">Huisdiereninventaris</string>
     <string name="PetInventory_TookItem">%1$s genomen van %2$s</string>
+    <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te delven!</string>
     <string name="Pickaxe_Name">houweel</string>
+    <string name="Piranha_Gender">feminine</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
     <string name="PlagueDoctorMask_Info">Dit… dit is geen gewone masker. Het is… een barrière. Een schild tegen de krachten van verval waar de Pestmeester onvermoeid tegen vecht. Gemaakt van het fijnste ebenhout, kunstvol ingesneden met het gezicht van een gierige schedel. De holle oogkasjes zijn gevuld met schitterende amethisten die zwak pulseren, als uitgaande kolen van een vuur. Elke adem die je neemt, elk woord dat je spreekt, wordt gefilterd door een labyrintachtig netwerk van buizen en filters. Een mengsel van krachtige kruiden en exotische specerijen vult de lucht binnenin, het stank van de dood maskerend dat als een lijkhemd om je heen hangt.</string>
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
@@ -551,6 +645,7 @@
     <string name="PotionOfToxicGas_Info">Het ontdopen of verbrijzelen van deze onder druk staande glasfles zal de inhoud laten exploderen tot een dodelijke wolk van giftige groene gas. Je kunt ervoor kiezen om deze drank op verafstaande vijanden te werpen in plaats van hem met de hand te openen.</string>
     <string name="Potion_Colors_1">karmozijn</string>
     <string name="Potion_Colors_14">onyx</string>
+    <string name="Potion_Colors_8">amber</string>
     <string name="Potion_ItemFliesAway">%s vliegt zomaar uit je handen weg.</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
@@ -558,13 +653,16 @@
     <string name="Prison_TileDescDeco">Er zijn oude bloedvlekken op de vloer.</string>
     <string name="PseudoPasty_Info">Dit is een authentiek Cornish pasty met de traditionele vulling van rundvlees en aardappelen.</string>
     <string name="PseudoPasty_Name">pasteitje</string>
+    <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">pseudo-rat</string>
     <string name="PseudoRat_Name_Objective">pseudo-rat</string>
     <string name="PumpkinPie_Name">pompoentaart</string>
     <string name="Pumpkin_Info">Vroeger waren Pompoenmensen een trots en bloeiend volk. Maar alles veranderde toen de mensen kwamen, die alleen ruïnes achterlieten. En de afgehakte, uitgeholde hoofden van lang verdwenen Pompoenstammen herinneren nog aan die verschrikkelijke gebeurtenissen.</string>
+    <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quest_DarkGoldOre_full_name">donker gouderts</string>
     <string name="QuickSlot_SelectSlot">Selecteer een snelslot ervoor</string>
     <string name="QuickSlot_SelectedItem">Selecteer een item voor de quickslot</string>
+    <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">Leren kogelhouder geschikt voor elke hoeveelheid pijlen</string>
     <string name="RabbitEars_Info">Er bestaat een bijgeloof dat konijnen geluk geboren worden en dat iemand die een deel van het dier verkrijgt, vergezeld zal worden door het geluk van het beest. Bij nader inzien klinkt het niet echt als geluk: gedood worden om je oren, waar versieringen van gemaakt zullen worden.</string>
     <string name="RabbitEars_Name">Konijnenoren</string>
@@ -575,9 +673,11 @@
     <string name="RatKingCrown_Name">Kroon van de rattenkoning</string>
     <string name="RatKing_Desc">Deze rat is een beetje groter dan een gewone buidelrat en draagt een klein kroontje op zijn hoofd.</string>
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
+    <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">Ik slaap niet!</string>
     <string name="RatSkullBuff_Name">Ratverdelger</string>
     <string name="RatSkull_Info2">Aan de andere kant bewijst het dat de eigenaar in staat is om ratten te doden, zelfs grote en stinkende.</string>
+    <string name="Rat_Gender">feminine</string>
     <string name="RawFish_Name">rauwe vis</string>
     <string name="RawFish_Taste">Visachtig!</string>
     <string name="ResultDescriptions_Bleeding">Verstorven op niveau %d</string>
@@ -589,9 +689,11 @@
     <string name="RingOfElements_Name">Ring der Elementen</string>
     <string name="RingOfEvasion_Name">Ring van Ontwijking</string>
     <string name="RingOfFrost_Name">Ring van de Vorst</string>
+    <string name="RingOfHaste_Name">Ring van Snelheid</string>
     <string name="RingOfHerbalism_Info">Deze ring vergroot je kans om dauw en zaden te verzamelen van vertrapt gras.</string>
     <string name="RingOfMending_Info">Deze ring verhoogt de regeneratieve eigenschappen van het lichaam, waardoor men verloren gezondheid kan herstellen met een versnelde snelheid. Verslechterde ringen zullen de natuurlijke regeneratie verminderen of zelfs stopzetten.</string>
     <string name="RingOfMending_Name">Ring der Genezing</string>
+    <string name="RingOfSatiety_Name">Ring van Voldoening</string>
     <string name="RingOfStoneWalking_ImmuredInStone">Je bent in steen gemetseld. Voor altijd.</string>
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
     <string name="Ring_BuffKnown">Dit is een %1$s</string>
@@ -603,11 +705,16 @@
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
     <string name="RogueArmor_Fov">Je kunt alleen naar een leeg vakje in je zichtveld teleporteren</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
+    <string name="RootsBuff_Name">Geworteld</string>
     <string name="RottenFood_Message">Walging!</string>
     <string name="RottenPumpkinPie_Info">Hoewel het vers wel heerlijk was, is er geen manier dat het nog eetbaar is.</string>
     <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="RottingFist_Desc">Verrottende Vuist van de Oude God</string>
+    <string name="RottingFist_Gender">masculine</string>
+    <string name="RubyBow_Gender">masculine</string>
+    <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RunicSkull_Desc">Voor iets kunstmatig gemaakts lijkt deze schedel te veel op een echte. Je ziet ook een zwakke gloed om het heen.</string>
+    <string name="RunicSkull_Gender">masculine</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="SantaHat_Info">Niets zet je zo in de \&quot;Dungeoning\&quot; stemming als de rode zijden hoed van Santa, Heer van de Diepten.</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
@@ -615,6 +722,7 @@
     <string name="ScarecrowNPC_Name_Objective">vogelverschrikker</string>
     <string name="ScarecrowNPC_Quest_Start_Female">Nou, hallo klein meisje, hoe gaat het met je?\nIk heb iets spannends voor je!\n\nOh, hoe dankbaar zou ik zijn,\nAls je gaat en wat snoepjes voor me verzamelt!\n\n</string>
     <string name="Scorpio_Desc">Deze enorme, op spinnen lijkende demonische wezens vermijden gevechten van dichtbij ten koste van alles en schieten vanaf grote afstand verlammende getande stekels af.</string>
+    <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">schorpioen</string>
     <string name="ScrollHolder_Info">In deze buisvormige houder kun je een willekeurig aantal scrollen plaatsen. Het bespaart ruimte in je rugzak en beschermt scrollen tegen vuur.</string>
     <string name="ScrollHolder_Name">koker voor perkamentrollen</string>
@@ -632,6 +740,7 @@
     <string name="ScrollOfTeleportation_Teleport">In een oogwenk ben je geteleporteerd naar een andere plek op dit niveau.</string>
     <string name="ScrollOfTerror_Info1">De perkamentrol flitst met een fel rood licht</string>
     <string name="ScrollOfTerror_Info3">De rol zendt een felle flits van rood licht uit en de monsters vluchten!</string>
+    <string name="ScrollOfUpgrade_InvTitle">Kies een voorwerp om te upgraden</string>
     <string name="ScrollOfUpgrade_LooksBetter">je %s ziet er nu zeker beter uit</string>
     <string name="ScrollOfWeaponUpgrade_Info">Deze rol zal een wapen voor nabijgevecht upgraden, de kwaliteit verbeterend. In tegenstelling tot een gewone Upgrade Scroll, zal deze gespecialiseerde versie nooit een begoocheling op een wapen vernietigen. Integendeel, het kan een onbetoverde wapen een willekeurige begoocheling geven.</string>
     <string name="Scroll_Info">Dit perkament is bedekt met onleesbaar schrift en draagt de titel van rune %s. Wie weet wat er gebeurt als het hardop wordt gelezen?</string>
@@ -644,12 +753,14 @@
     <string name="Scroll_Runes_4">GYFU</string>
     <string name="Scroll_Runes_7">MANNAZ</string>
     <string name="Scroll_Runes_9">BERKANAN</string>
+    <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name_Objective">seniore monnik</string>
     <string name="ServantNPC_Desc">Een heel drukke herbergbediende.</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">herbergbediende</string>
     <string name="ServantNPC_Name_Objective">herbergbediende</string>
     <string name="ServiceManNPC_Desc">Een gewone werknemer van de lokale vestigingen.</string>
+    <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Name">bediende</string>
     <string name="ServiceManNPC_Name_Objective">medewerker</string>
     <string name="ServiceManNPC_NoConnection">Het spijt me, u kunt onze dienst nu niet gebruiken. (Internetverbinding vereist)</string>
@@ -660,11 +771,15 @@
     <string name="ShadowLord_Intro">Bereid je voor!</string>
     <string name="ShadowLord_Name_Objective">Schaduwheer</string>
     <string name="Shadow_Desc">Schaduwen dwalen geruisloos door de ruïnes van de oude gevangenis en tonen zich slechts af en toe aan avonturiers, meestal tijdens hun laatste avontuur.</string>
+    <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">schaduw</string>
     <string name="ShamanElder_Desc">Deze specifieke gnol ziet er veel ouder uit dan andere schamanen en heeft zeker een hogere status in de stam. Een vreemde aura vormt zich langzaam om hem heen, die alles wat het raakt lijkt te reflecteren.</string>
+    <string name="ShamanElder_Gender">masculine</string>
+    <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Name">gnol schamaan</string>
     <string name="Shaman_Name_Objective">gnol sjamaan</string>
     <string name="Sheep_Desc">Dit is een magisch schaap. Wat is er zo magisch aan? Je kunt het niet doden. Het blijft staan tot het magisch verdwijnt, terwijl het herkauwt met een lege blik.</string>
+    <string name="Sheep_Gender">feminine</string>
     <string name="ShieldBuffNotReady_Info">Je schild is nog niet klaar om de volgende aanval te blokkeren.</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="Shielded_Gender">masculine</string>
@@ -676,46 +791,59 @@
     <string name="ShortSword_Info">Dit zwaard is inderdaad vrij kort, slechts enkele centimeters langer dan een dolk.</string>
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="ShortSword_Reforged">je hebt de korte zwaard hersmeed om je %s te upgraden</string>
+    <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Name">shuriken</string>
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SleepBuff_Info">Volledig in slaap</string>
     <string name="SmashSpell_Name">Verpletteren</string>
     <string name="Snail_Desc">Deze kleine weekdier is behoorlijk gegroeid door te voeden met rioolwater, maar hij is nog steeds heel traag, wat hem een makkelijke tegenstander maakt.</string>
+    <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">slak</string>
     <string name="SnipersMarkBuff_Name">Teken van de sluipschutter</string>
     <string name="SociologistNPC_AlreadyTaken">Je hebt al deelgenomen aan deze enquête, kom later terug</string>
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
+    <string name="SociologistNPC_Gender">masculine</string>
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
+    <string name="SoulShard_Gender">masculine</string>
+    <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="Spell_SelectACell">Selecteer een doelcel.</string>
     <string name="Spells_NotEnoughSP">Je hebt niet genoeg mana om de spreuk \&quot;%1$s\&quot; te casten.</string>
+    <string name="Spells_NotInOwnBody">Je kunt %s niet uitvoeren terwijl je ziel gescheiden is van je lichaam.</string>
     <string name="Spells_NotTooFast">%s is nog niet klaar voor gebruik</string>
+    <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">Deze pantser is gemaakt van oude spinnep chitine en een soort kleding. Wat verrassend is, lijkt het nog steeds werkende spinnepklieren te bevatten. Als je de platen hard genoeg indrukt, schieten ze web uit. En getande zolen laten je vrij bewegen op dergelijke web.</string>
     <string name="SpiderCharm_Info">Deze exotische snuisterij is gehuld in een aura van mysterie. Wie weet wat er gebeurt met degene die hem draagt?</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
+    <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">spinnen elitewachter</string>
     <string name="SpiderExploding_Desc">Harde werkers tijdens vredige tijden, deze wezens zullen niet aarzelen om hun vijanden aan te vallen en de eerste plant die ze tegenkomen te grijpen, waardoor ze zichzelf in lopende bommen veranderen.</string>
     <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderGuard_Desc">Net als soldaten hebben spinnenwachters een eed afgelegd om hun koninkrijk te beschermen. Het gif van de wachter wordt gebruikt om zijn doelwit te verlammen, waardoor verlamming ontstaat en het een makkelijke prooi wordt.</string>
     <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">spinnenwachter</string>
-    <string name="SpiderMindAmber_Name">Amber Spinnewijs</string>
+    <string name="SpiderMindAmber_Gender">masculine</string>
+    <string name="SpiderMindAmber_Name">amber spin</string>
+    <string name="SpiderMindAmber_Name_Objective">amber spin</string>
     <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Psi-Spin</string>
     <string name="SpiderNest_Desc">Deze cocon is gemaakt van het fijnste zijde en verbergt iets levends.</string>
+    <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderQueen_DieInfo">De Spinnenkoningin is verslagen! Nu moet ik terug naar niveau 5 en mijn reis naar de Diepten voortzetten.</string>
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
+    <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name_Objective">grotspin</string>
     <string name="SpiritOfPain_Desc">Een splinter van levende duisternis.</string>
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">geest van pijn</string>
     <string name="Sprout_Info">Weak de slapende zaden.\nEr moet echter wat groen op de grond zijn om de toverspreuk te laten slagen.</string>
     <string name="StartScene_ComingSoon">Binnenkort</string>
+    <string name="StartScene_Depth">Diepte: %1$d\nNiveau: %2$d</string>
     <string name="StartScene_DifficultyExpert">Expert</string>
     <string name="StartScene_DifficultyNormal">Normaal</string>
     <string name="StartScene_DifficultySelect">Kies je lot</string>
@@ -733,6 +861,7 @@
     <string name="Stylus_Info">Deze arcanische stylus is gemaakt van een donkere, zeer harde steen. Je kunt er een glyph of rune mee graveren, maar je kunt niet kiezen welke er wordt gegraveerd; de stylus beslist voor je.</string>
     <string name="Stylus_Inscribed">je hebt de %1$s op je %2$s gegraveerd</string>
     <string name="Stylus_Name">tooverstylus</string>
+    <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">succubus</string>
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
@@ -764,11 +893,13 @@
     <string name="Torch_ACLight">AANSTEKEN</string>
     <string name="ToughShield_desc">Dit met riemen versterkte schild oogt robuuster dan een houten exemplaar. Het kan zeker meer schade blokkeren.</string>
     <string name="ToughShield_name">Versterkt Leren Schild</string>
+    <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message3">Je denkt dat er te veel bewakers in deze stad zijn? Nou, dat is omdat dit de enige stad is met een gigantische monster-geïnfesteerde dungeon, niet waar?</string>
     <string name="TownGuardNPC_Name">stadswacht</string>
     <string name="TownShopkeeper_Desc">Deze kerel is een typische winkelier. Je ziet meteen dat hij je prijs al kent.</string>
     <string name="TownShopkeeper_Name">winkelier</string>
     <string name="TownsfolkMovieNPC_Desc">Een van de plaatselijke bewoners. Hoewel dit duidelijk een gewone burger is, zien die kleren er duur uit.</string>
+    <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Name_Objective">stadbewoner</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">Ah! Nog een avonturier, geweldig! Zorg ervoor dat je zoveel mogelijk waardevolle spullen buitmaakt!</string>
@@ -778,17 +909,20 @@
     <string name="TownsfolkNPC_Name">stedelingen</string>
     <string name="TownsfolkSilentNPC_Desc">Een van de bewoners. Hoewel dit duidelijk een gewone burger is, lijken die kleren duur te zijn.</string>
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
+    <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Name">stadbewoner</string>
     <string name="ToxicGas_Info">Hier zweeft een groenachtige wolk van giftig gas.</string>
     <string name="ToxicGas_Info1">Je bent gestorven doordat je giftig gas inademde...</string>
     <string name="ToxicGland_Info">Een giftige klier geoogst van een verslagen vijand. Deze klieren zitten vol sterke toxines en kunnen worden gebruikt in alchemistische processen.</string>
     <string name="ToxicGland_Name">Giftige klier</string>
     <string name="TrapWnd_Step">Wil je echt op deze val stappen? Je kunt eraan sterven.</string>
+    <string name="TrapWnd_Title">Val</string>
     <string name="TreacherousSpirit_Desc">Deze monsterlijke verschijning lijkt op een wolk van levende duisternis. Zijn gigantische oog staart je aan en pulseert bij elke beweging die je maakt.</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="TreacherousSpirit_Name_Objective">verradelijke geest</string>
     <string name="Typical_Damage">Typische schade</string>
     <string name="Undead_Defense">geblokkeerd</string>
+    <string name="Undead_Gender">masculine</string>
     <string name="Using_Failed_Because_Magic">Krachtige magie voorkomt dat je \&quot;%s\&quot; gebruikt.</string>
     <string name="VampireSkull_Info">Deze masker is gemaakt van een volledig natuurlijke vampierschedel. Eigenlijk is het een vampierschedel... schedel van een grootkopige vampier. Griezelig.</string>
     <string name="VampireSkull_Name">Vampierschedel</string>
@@ -820,11 +954,14 @@
     <string name="Wand_Wood_Types_6">wilgen</string>
     <string name="Wand_Wood_Types_8">bamboe</string>
     <string name="Wand_Wood_Types_9">paars hart</string>
+    <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">Weinig wezens kunnen de verpletterende klap van deze torenhoge massa lood en staal weerstaan, maar alleen de sterkste avonturiers kunnen het effectief gebruiken.</string>
     <string name="WarHammer_Name">oorlogshamer</string>
+    <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">%s\'s schaduwbliksem heeft je gedood...</string>
     <string name="WarriorArmor_Prompt">Kies een richting om te springen</string>
     <string name="WaterElemental_Desc">Water elementalen komen voor bij grote watermassa\'s. Meestal dwalen deze magisch gebonden golven gewoon rond.</string>
+    <string name="WaterElemental_Gender">masculine</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
     <string name="WeaknessBuff_Name">Verzwakt</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
@@ -837,7 +974,7 @@
     <string name="Weightstone_WndSpeed">Voor snelheid</string>
     <string name="WndBag_BuySubtitle">(Je hebt %dg)</string>
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
-    <string name="WndCatalogus_Title">Catalogus</string>
+    <string name="WndCatalogus_Title">Catalogi</string>
     <string name="WndChallenges_Title">Uitdagingen</string>
     <string name="WndChooseWay_Cancel">Ik besluit later</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
@@ -845,6 +982,7 @@
     <string name="WndCryptoDonate_supportDev">Ondersteun de ontwikkelaar</string>
     <string name="WndCryptoDonate_ton">Ton</string>
     <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndCryptoDonate_warningText">WAARSCHUWING: Verifieer altijd het adres voordat je geld stuurt. Cryptocurrency-transacties zijn onomkeerbaar!</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - gratis voor iedereen en dat blijft zo.\n\nJe kunt ons echter helpen om het spel nog beter te maken.\n\nNaast onze oprechte dank ontvang je enkele cosmetische verbeteringen.</string>
     <string name="WndDonate_donate">doneren: </string>
     <string name="WndDonate_goldDonateText">Dank voor uw hulp</string>
@@ -858,11 +996,14 @@
     <string name="WndGame_Customizations">Aanpassingen</string>
     <string name="WndGame_Exit">Verlaat Remixed Dungeon</string>
     <string name="WndGame_Load">Laden</string>
+    <string name="WndHats_BackButton">Terug</string>
     <string name="WndHats_BuyButton">Kopen</string>
     <string name="WndHats_InfoButton">Bekijken</string>
     <string name="WndHats_ListTitle">Lijst van accessoires</string>
     <string name="WndHero_Awareness">Aandacht</string>
+    <string name="WndHero_StaCatalogus">Catalogi</string>
     <string name="WndHero_StaJournal">Dagboek</string>
+    <string name="WndHero_Str">Kracht</string>
     <string name="WndImp_Message">Oh ja! Je bent mijn held!\nWat je beloning betreft, ik heb geen contant geld bij me, maar ik heb iets beters voor je. Dit is mijn familie-erfstukring: mijn opa haalde het van een dode paladijn af.</string>
     <string name="WndInfoItem_Chest">Kist</string>
     <string name="WndInfoItem_NeedKey"> Maar om het te openen heb je een gouden sleutel nodig.</string>
@@ -889,6 +1030,7 @@
     <string name="WndPlayGames_RestoreProgress">Spelvoortgang herstellen</string>
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
     <string name="WndPlayGames_Show_Ok">Gelukt!</string>
+    <string name="WndPlayGames_Title">Google Play Games</string>
     <string name="WndPortal_Warning_Title">Portaal Waarschuwing!</string>
     <string name="WndPremiumSettings_banners">Selecteer het materiaal van de banieren</string>
     <string name="WndPremiumSettings_chrome">Selecteer GUI-materiaal</string>
@@ -938,8 +1080,10 @@
     <string name="WndWandmaker_Battle">Gevechtsstaf</string>
     <string name="Wnd_Button_Back">Terug</string>
     <string name="Wnd_Button_Ok">Ok</string>
+    <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Deze eenvoudige houten boog kan nuttig blijken, zodra je pijlen vindt.</string>
     <string name="WoodenBow_Name">houten boog</string>
+    <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Een eenvoudige houten kruisboog, lijkt ontworpen om pijlen mee af te schieten.</string>
     <string name="WoodenShield_desc">Een grof gemaakt houten schild is het eenvoudigste schild dat verkrijgbaar is. Het is rond en kan af en toe een deel van de schade blokkeren.</string>
     <string name="WoodenShield_name">Houten schild</string>
@@ -953,14 +1097,17 @@
     <string name="WrnExperimental_title">Experimentele opties ingeschakeld!</string>
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
+    <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name_Objective">Hersenen van Yog</string>
     <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">oog van Yog</string>
     <string name="YogsEye_Name_Objective">Oog van Yog</string>
     <string name="YogsHeart_Gender">masculine</string>
+    <string name="YogsTeeth_Gender">masculine</string>
     <string name="ZombieGnoll_Desc">Het verwrongen, gebroken lichaam van een gnoll-zombie lijkt niet meer op een mensachtige of een hyena. Al wat overblijft is een hoop rottend vlees en beenderen, vervuld van een kwaadaardige drang om te doden en te verslinden.</string>
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
+    <string name="Zombie_Gender">masculine</string>
     <string name="deco_candle_desc">Grote kaars</string>
     <string name="gdpr_title">Personaliseer uw advertentie-ervaring</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
@@ -986,6 +1133,7 @@
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
     <string name="town_deco_cinema_sign_desc">Het lijkt erop dat er een bioscoop in dat gebouw zit.</string>
     <string name="town_deco_common_bed_desc">Gewoon bed.</string>
+    <string name="town_deco_counter_name">Toonbank</string>
     <string name="town_deco_crate_desc">Een stevige houten kist die zijn geheimen van binnen bewaart.</string>
     <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
     <string name="town_deco_crossroad_desc">Een ruwe houten paal met pijlvormige bordjes, de tekst waarop vervaagd is door de harde weersomstandigheden.</string>
@@ -998,6 +1146,7 @@
     <string name="town_deco_firewood_desc">Een onmisbaar ding bij zulke streng vorst.</string>
     <string name="town_deco_flowerinthepot_desc">Decoratieve bloem met een zoete smaak</string>
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
+    <string name="town_deco_glass_stained_name">Glas in lood</string>
     <string name="town_deco_hay_desc">Een klein hoopje lekker ruikend hooi.</string>
     <string name="town_deco_inn_bed_desc">Ziet eruit als een heel comfortabel bed.</string>
     <string name="town_deco_inn_bed_name">Bed</string>
@@ -1039,6 +1188,163 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
