@@ -1,11 +1,13 @@
 
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Passive;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -31,6 +33,11 @@ import org.jetbrains.annotations.NotNull;
 import lombok.val;
 
 public class Statue extends Mob {
+
+	// caveman: one-shot gear generation flag - blocks endless refill after
+	// unequip (enslaved statue was an item farm)
+	@Packable(defaultValue = "false")
+	public boolean gearGranted = false;
 
 	public Statue() {
 		expForKill = 0;
@@ -82,6 +89,12 @@ public class Statue extends Mob {
 	public String getDescription() {
 		val item = getItem();
 
+		// caveman: naked enslaved statue - gearGranted blocks refill, plain
+		// description instead of throwing on the dummy item
+		if(!item.valid()) {
+			return StringsManager.getVar(R.string.Statue_NakedDesc);
+		}
+
 		if(ItemUtils.usableAsWeapon(item)) {
             return Utils.format(R.string.Statue_Desc, getItem().name());
 		}
@@ -102,7 +115,7 @@ public class Statue extends Mob {
 	public EquipableItem getItem() {
 		var item = getItemFromSlot(Belongings.Slot.WEAPON);
 
-		if(!item.valid()) {
+		if(!item.valid() && !gearGranted) {
 			Item weaponCandidate;
 			do {
 				weaponCandidate = Treasury.getLevelTreasury().random(Treasury.Category.WEAPON );
@@ -124,10 +137,13 @@ public class Statue extends Mob {
 			// creation caused a double-spend and a sprite/logical-position desync on the
 			// statue's first act.
 			getBelongings().setItemForSlot(chosenItem, Belongings.Slot.WEAPON);
+			// caveman: STR fixed from own gear, once - sync with worn armor made the
+			// STR requirement self-fulfilling
+			STR(Math.max(12, chosenItem.requiredSTR()));
+			gearGranted = true;
 			item = chosenItem;
 		}
 
-		STR(Math.max(12,item.requiredSTR()));
 		return item;
 	}
 

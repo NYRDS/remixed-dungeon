@@ -47,7 +47,8 @@ public class ArmoredStatue extends Statue {
     @Override
 	public EquipableItem getItem() {
 		var item = getItemFromSlot(Belongings.Slot.ARMOR);
-		if( !item.valid()) {
+		// caveman: one-shot generation - see Statue.getItem
+		if( !item.valid() && !gearGranted) {
 			Item armorCandidate;
 			do {
 				armorCandidate = Treasury.getLevelTreasury().random(Treasury.Category.ARMOR);
@@ -66,9 +67,10 @@ public class ArmoredStatue extends Statue {
 			// setItemForSlot, not doEquip: see Statue.getItem (avoid spend/updateSprite during
 			// sprite creation).
 			getBelongings().setItemForSlot(armor, Belongings.Slot.ARMOR);
+			STR(Math.max(12, armor.requiredSTR()));
+			gearGranted = true;
 			item = armor;
 		}
-		STR(Math.max(12,item.requiredSTR()));
 		return item;
 	}
 

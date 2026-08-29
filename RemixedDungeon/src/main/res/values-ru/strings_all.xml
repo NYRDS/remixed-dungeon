@@ -2197,6 +2197,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="StartScene_WinGame">Чтобы открыть \&quot;Испытания\&quot;, пройдите игру любым персонажем.</string>
     <string name="StartScene_Yes">Да, начать новую игру</string>
     <string name="Statue_Desc">Может показаться, что это просто очередная неприметная статуя, но красные светящиеся глаза выдают её намерения. Хоть статуя и сработана из камня, её оружие, _%s_, выглядит настоящим.</string>
+    <string name="Statue_NakedDesc">Каменная статуя. Больше она ничего не держит.</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">ожившая статуя</string>
     <string name="Statue_Name_Objective">статую</string>
