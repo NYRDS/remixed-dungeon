@@ -133,6 +133,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public CharAction lastAction = null;
     @Packable(defaultValue = "false")
     public boolean enemySeen;
+
+    // caveman: quest/script mobs (chess pieces) must not be resurrected by
+    // BlackSkull or raisable by RaiseDead - breaks scripted boards
+    @Packable(defaultValue = "false")
+    public boolean noResurrection = false;
     @Packable(defaultValue = "-1")//EntityIdSource.INVALID_ID
     public int enemyId = EntityIdSource.INVALID_ID;
 

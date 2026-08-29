@@ -40,6 +40,11 @@ public class BlackSkull extends Artifact {
             return;
         }
 
+        // caveman: script-flagged mobs (chess pieces) neither charge nor resurrect
+        if (mob.noResurrection) {
+            return;
+        }
+
         if (mob.canBePet()) {
             if (activated) {
                 mob.resurrect(hero);

@@ -18,7 +18,8 @@ local latest_kill_index = "__latest_dead_mob"
 local function updateLatestDeadMob(mob)
     local mobClass = mob:getMobClassName()
 
-    if mob:canBePet() and mobClass ~= "MirrorImage" then
+    -- caveman: noResurrection mobs (chess pieces) are not raisable either
+    if mob:canBePet() and not mob.noResurrection and mobClass ~= "MirrorImage" then
         storage.put(latest_kill_index, {class = mob:getEntityKind(), pos = mob:getPos()})
     end
 end
