@@ -119,6 +119,7 @@
     <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">جمجمة صغيرة من السبج. كانت مصدر قوى مدينة الأموات، لكن بعد هزيمة الليش يبدو أنها فقدت كل قواها. ومع ذلك، حين تمسكها بين يديك، تمر فكرة غريبة في ذهنك: \&quot;إنها جائعة\&quot;.</string>
     <string name="BlackSkull_Ressurrect">الجمجمة السوداء أقامت الوحش الميت ليخدمك!</string>
+    <string name="Blacksmith_Blood1">يا إنسان! تريد أن تكون مفيدًا، أليس كذلك؟ خذ هذا المعول و_اقتل خفاشاً_ به، أحتاج دمه على رأسه. ماذا تقصد، كيف سأدفع لك؟ أنت جشع...\nحسناً، حسناً، ليس لدي مال لأدفع لك، لكن يمكنني القيام ببعض الحدادة لك. اعتبر نفسك محظوظاً، أنا الحدّاد الوحيد في الجوار.</string>
     <string name="Blacksmith_Gold1">يا إنسان! هل تريد أن تكون مفيداً، أليس كذلك؟ خذ هذا المعول واحفر لي بعض _خام الذهب الداكن_، _15 قطعة_ يجب أن تكفي. ماذا تقصد، كيف سأدفع؟ أنت جشع...\nحسناً، حسناً، ليس لدي مال لأدفع، لكن يمكنني القيام ببعض الحدادة لك. اعتبر نفسك محظوظاً، أنا الحدّاد الوحيد في الجوار.</string>
     <string name="Blacksmith_Name">حداد ترول</string>
     <string name="Blacksmith_Txt3">خام الذهب الداكن. 15 قطعة. بجد، صعب كده؟</string>
@@ -378,6 +379,7 @@
     <string name="HeroSubClass_NameGlad">مصارع</string>
     <string name="HeroSubClass_NameNone">لا شيء</string>
     <string name="HeroSubClass_NameScout">كشاف</string>
+    <string name="HeroSubClass_NameWarL">مُشعوذ</string>
     <string name="HeroSubClass_NameWitchdoctor">طبيب ساحر</string>
     <string name="Hero_Name_Objective">أنت</string>
     <string name="Hero_Search">بحث</string>
@@ -686,6 +688,7 @@
     <string name="ScrollOfCurse_Name">لفافة اللعنة</string>
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
     <string name="ScrollOfLullaby_Info1">يتلو اللفافة لحناً هادئاً.</string>
+    <string name="ScrollOfTeleportation_Teleport">في غمضة عين، تم نقلك فجأة إلى موقع آخر من المستوى.</string>
     <string name="ScrollOfTerror_Info3">يصدر المخطوط وميضاً أحمر ساطعاً وتفر الوحوش!</string>
     <string name="ScrollOfUpgrade_LooksBetter">أصبح %s بالتأكيد يبدو أفضل الآن</string>
     <string name="ScrollOfUpgrade_Name">مخطوطة ترقية</string>
@@ -840,6 +843,7 @@
     <string name="VileEssence_Info">جوهر مركز من الفساد تم حصاده من عدو مهزوم. ينبض هذا الجوهر المظلم بطاقة خبيثة ويُقدّر كثيرًا في العمليات الكيميائية.</string>
     <string name="Viscosity_Txt">%s من اللزوجة</string>
     <string name="WandMaker_Defense">امتص</string>
+    <string name="WandMaker_RotberryDesc">توت هذا الشجيرة طعمه كالموت الحلو، الحلو.</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="WandOfAvalanche_Info1">سحقت نفسك بعصاك الخاصة من نوع عصا الانهيار الجليدي...</string>
     <string name="WandOfDisintegration_Info">تُصدر هذه العصا شعاعاً من الطاقة المدمرة، يخترق جميع الكائنات في طريقه. كلما أصاب أهدافاً أكثر، زاد الضرر الذي يلحقه بكل منها.</string>
@@ -1047,6 +1051,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 

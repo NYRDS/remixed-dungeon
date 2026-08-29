@@ -327,6 +327,7 @@
     <string name="FortuneTellerNPC_Desc">Deze vrouw draagt een lange, felgekleurde pij. Ze ziet er verrassend jong uit voor iemand die de geheime kunsten van de waarzeggerij beheerst. Als je dichterbij komt, hoor je haar zachtjes mompelen terwijl ze in de kristallen bol staart.</string>
     <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">waarzegster</string>
+    <string name="FortuneTellerNPC_Name_Objective">waarzegster</string>
     <string name="FreezeGlobe_Info">Bevriest het geselecteerde personage, waardoor het korte tijd geen acties kan uitvoeren.</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostArrow_Gender">feminine</string>
@@ -356,6 +357,7 @@
     <string name="Goo_Info3">GLURP-GLURP!</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
     <string name="Guts_TileGrass">Droge struik</string>
+    <string name="Guts_TileWater">Vreemde slijmerige vloeistof</string>
     <string name="Halberd_Gender">feminine</string>
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileStatue">Pilaar</string>
@@ -616,6 +618,7 @@
     <string name="PlagueDoctorQuest_3_1_InProgress">Breng me een _vampier vleermuis_, levend en onbeschadigd! Haar bloed, haar vleugels… ze bevatten geheimen die ik moet onthullen!</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Dit is geen enkel beest! Het is een levend getuigenis van nekromantische kracht! Vang er eentje, levend en onbeschadigd! Deze _Doodsridder_… hij is de sleutel!</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Schitterend! Vijf _Kobold Ijsmagiers_, hun ijzige essentie nu van mij om te onderzoeken! Hun verbinding met de bevroren woestenijen, het is werkelijk fascinerend. De manier waarop ze water zelf manipuleren… werkelijk opmerkelijk. *Hij overhandigt je een flonkerende fiool gevuld met een levendige karmozijnrode vloeistof* Dit, is voor je dappere inspanningen: een _Drankje van Kracht_! Drink diep en voel de kracht van tien krijgers door je aderen stromen! Onthoud, kennis is macht… en macht is het enige wapen dat we hebben tegen de naderende duisternis. Nu… laten we deze ijzige zielen ontleden en hun ijzige geheimen onthullen!</string>
+    <string name="PlagueDoctorQuest_4_2_InProgress">Haal vijf dode _Kobold Ijsbezweerders_ op! Hun bevroren lichamen bevatten de sleutel tot het ontrafelen van de geheimen van hun ijzige magie!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Zijn skeletvingers tikken ritmisch tegen een borrelende ketel, de lucht om hem heek dik van de pittige stank van zwavel en verwesing*\n_Kobold Ijsmagiers_! Die jammerlijke wezens, gekrocht in hun bevroren grotten, wanhopig vasthoudend aan hun ijsmagie. Ik heb er vijf nodig, hun bevroren lichamen zullen... verlichtend zijn. Hun meesterwerk van ijs, het is... eigenaardig. Ik geloof dat ze aansluiten bij een oerenergie, een kracht die sluimert onder het oppervlakte van deze wereld.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Hij stottert, zijn stem kraakt als een broze tak*. A-ah, _succubi_! Twee... ja, twee, levend! Het is... hem... voor mijn onderzoek! Je ziet... hun feromonen... het is cruciaal om het delicate evenwicht te begrijpen van... ah... *Hij zwijgt, zijn botten hand reikt op om nerveus zijn masker te corrigeren, zijn ogen schieten naar jou met een koortsachtige intensiteit.* Hun... essentie... het is een puzzel... een prachtige, enigmatische puzzel! *Hij hoest hevig, probeert zijn kalmte te herwinnen.* Ik beloof, voor het brengen van twee van deze... wezens... zul je mijn eeuwige dankbaarheid hebben. Zie het als een... een gave aan kennis! Ja! Aan kennis!</string>
     <string name="PlagueDoctorQuest_AllDone">*Hij laat een droge, hijgende lach horen.* \&quot;Jouw daden hebben geheimen ontsluierd zonder maat! De verkregen kennis… het pulsert in mij, een symfonie van ontdekking. Maar kennis,\&quot; voegt hij eraan toe, zijn zinkend tot een samenzweerderig fluisteren, \&quot;kennis is macht. En macht… ah… dat is de meest bedwelmende elixer.\&quot; Hij kijkt je even intens aan, zijn amethistoogen branden met koortsachtige felheid. \&quot;Misschien,\&quot; mompelt hij, \&quot;kruisen onze paden elkaar weer. Want er zijn nog vele… mysteries… die nog ontrafeld moeten worden.\&quot;</string>
@@ -936,6 +939,7 @@
     <string name="WandOfFirebolt_Info1">Je verbrandde jezelf met je eigen Toverstaf van Vuurpijl...</string>
     <string name="WandOfFirebolt_Name">Toverstaf van Vuurpijl</string>
     <string name="WandOfFlock_Name">Toverstaf van de Kudde</string>
+    <string name="WandOfFlock_SheepBaa_3">Baa...</string>
     <string name="WandOfIcebolt_Info1">Je hebt jezelf gedood met je eigen IJsbout...</string>
     <string name="WandOfIcebolt_Name">IJsbultstaf</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
@@ -1188,6 +1192,10 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
 
 
 
