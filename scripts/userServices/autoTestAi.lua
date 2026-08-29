@@ -366,6 +366,28 @@ ai.step = function()
 
     local level = hero:level()
 
+    -- caveman: chess board (chess_level or King throne room) - play the game,
+    -- never wander the board or attack pieces. chessTestClick is a global from
+    -- Chess.lua holding the engine state; nil there = safe idle.
+    local onChessBoard = false
+    pcall(function()
+        if level.levelId == 'chess_level' or (level:getProperty('chessBoardOrigin', '') ~= '') then
+            onChessBoard = true
+        end
+    end)
+    if onChessBoard then
+        local click = nil
+        pcall(function()
+            if chessTestClick then
+                click = chessTestClick()
+            end
+        end)
+        if click then
+            guarded("chessClick", function() RPD.GameScene:handleCell(click) end)
+        end
+        return
+    end
+
     if hero:buffLevel('Blindness') > 0 then
         local cell = level:getEmptyCellNextTo(heroPos)
         if level:cellValid(cell) then

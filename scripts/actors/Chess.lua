@@ -206,8 +206,7 @@ local function animateMove(move_str, move_cells, target_chess_cells)
     end
 end
 
-local function highlightCells(cells)
-    RPD.Sfx.HighlightCell:removeAll()
+local function highlightCells(cells)    RPD.Sfx.HighlightCell:removeAll()
 
     for k, cell in pairs(cells) do
         local pos = cellFromChessCell(cell)
@@ -452,6 +451,41 @@ local function repairPieces()
             end
         end
     end
+end
+
+-- caveman: autoTestAi hook (global). returns the next board cell for the test
+-- AI to click (piece selection or legal destination), nil when nothing to do.
+chessTestClick = function()
+    if not chess or not gameInProgress or aiCoroutine then
+        return nil
+    end
+
+    -- mid-selection: finish the move with a random legal destination
+    if string.len(move_str) > 0 then
+        local dests = {}
+        for dest in pairs(allowedMoves) do
+            dests[#dests + 1] = dest
+        end
+        if #dests == 0 then
+            move_str = ''
+            return nil
+        end
+        return cellFromChessCell(dests[math.random(#dests)])
+    end
+
+    -- fresh move: click a piece that has at least one legal move
+    local froms = {}
+    for _, uci in ipairs(sunfish.legal_moves_uci(chess)) do
+        froms[string.sub(uci, 1, 2)] = true
+    end
+    local list = {}
+    for from in pairs(froms) do
+        list[#list + 1] = from
+    end
+    if #list == 0 then
+        return nil
+    end
+    return cellFromChessCell(list[math.random(#list)])
 end
 
 return actor.init({

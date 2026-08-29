@@ -35,11 +35,23 @@ end
 
 local function levelsTestModeOnStep(self, scene)
 
-    if scene ~= prevScene then
+    local sceneChanged = scene ~= prevScene
+    if sceneChanged then
         prevScene = scene
         framesOnScene = 0
     else
         framesOnScene = framesOnScene + 1
+    end
+
+    -- caveman: amulet taken - run won. report coverage, back to title for the
+    -- next run (the loop would otherwise strand here: no GameScene to step).
+    if scene == "AmuletScene" then
+        if sceneChanged then
+            RPD.glog("autoTest: amulet reached, run complete")
+            autoTestAi.onLeaveLevel()
+            GameControl:titleScene()
+        end
+        return
     end
 
     if scene == "GameScene" then
