@@ -434,16 +434,25 @@ public class WebServer extends BaseWebServer {
                 }
             }
         } else if (session.getMethod() == Method.POST) {
+            Response postResponse = null;
             if(uri.startsWith("/upload")) {
-                return handleFileUpload(session);
+                postResponse = handleFileUpload(session);
             }
 
-            if(uri.startsWith("/api/save-json")) {
-                return handleJsonSave(session);
+            if (postResponse == null && uri.startsWith("/api/save-json")) {
+                postResponse = handleJsonSave(session);
             }
 
-            if (uri.equals("/api/save_texture") && session.getMethod() == Method.POST) {
-                return handleTextureSave(session);
+            if (postResponse == null && uri.equals("/api/save_texture")) {
+                postResponse = handleTextureSave(session);
+            }
+
+            if (postResponse != null) {
+                // caveman: nanohttpd 2.3.1 does not drain POST bodies fully -
+                // next keep-alive request on the socket reads leftover bytes
+                // ("BAD REQUEST: Missing URI"). close connection after every POST.
+                postResponse.addHeader("Connection", "close");
+                return postResponse;
             }
         }
 
