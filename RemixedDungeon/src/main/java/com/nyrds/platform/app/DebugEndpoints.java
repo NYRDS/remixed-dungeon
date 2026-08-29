@@ -642,8 +642,8 @@ public class DebugEndpoints {
                     int mobX = mob.pos % width;
                     int mobY = mob.pos / width;
                     boolean owned = mob.getOwnerId() == (Dungeon.hero != null ? Dungeon.hero.getId() : -1);
-                    mobJson += String.format(",\"id\":%d,\"pos\":%d,\"x\":%d,\"y\":%d,\"owned\":%b}",
-                        mob.getId(), mob.pos, mobX, mobY, owned);
+                    mobJson += String.format(",\"id\":%d,\"pos\":%d,\"x\":%d,\"y\":%d,\"owned\":%b,\"type\":\"%s\"}",
+                        mob.getId(), mob.pos, mobX, mobY, owned, mob.getEntityKind());
                 }
                 mobsJson.append(mobJson);
                 first = false;
@@ -2153,6 +2153,28 @@ public class DebugEndpoints {
                     currentLevelId, targetLevelId, levelKind, depth));
         } catch (Exception e) {
             GLog.w("Error in handleDebugDescendTo: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    // caveman: full load path (loadGame from bundle + level restore) - exercises
+    // the pendingFollowers roster restore, like a crash+reload
+    public static NanoHTTPD.Response handleDebugReloadGame(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.hero == null || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Game not initialized - start a game first\"}");
+            }
+
+            String currentLevelId = DungeonGenerator.getCurrentLevelId();
+            InterlevelScene.scheduleAndWait(InterlevelScene.Mode.CONTINUE, null, "Debug: reloading game");
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"reloadedFrom\":\"%s\",\"nowAt\":\"%s\"}",
+                    currentLevelId, DungeonGenerator.getCurrentLevelId()));
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugReloadGame: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }

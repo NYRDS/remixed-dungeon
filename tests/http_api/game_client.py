@@ -191,6 +191,10 @@ class GameClient:
         """Descend to a connected level."""
         return self._get(f"/debug/descend_to?id={level_id}")
 
+    def reload_game(self) -> Dict[str, Any]:
+        """Reload the game from the save bundle (full load path, like crash+restart)."""
+        return self._get("/debug/reload_game")
+
     def ascend(self) -> Dict[str, Any]:
         """Ascend to previous level."""
         return self._get("/debug/ascend")
