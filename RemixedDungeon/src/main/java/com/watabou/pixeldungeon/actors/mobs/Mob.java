@@ -368,7 +368,11 @@ public abstract class Mob extends Char {
         Library.identify(Library.MOB, getEntityKind());
 
         if (!(cause instanceof Chasm)) {
-            if (Random.Float(1) <= carcassChance) {
+            // caveman: no carcass if the body just came back (BlackSkull), and
+            // pets never leave one - reanimating a pet carcass is an undead factory
+            if (!resurrectedOnDeath
+                && getOwnerId() == getId()
+                && Random.Float(1) <= carcassChance) {
                 Item carcass = carcass();
                 if (carcass.valid()) {
                     level().drop(carcass, getPos());
@@ -416,6 +420,10 @@ public abstract class Mob extends Char {
         }
     }
 
+    // caveman: set when this dying body spawned a replacement (BlackSkull) -
+    // suppresses the carcass roll in die(), not persisted
+    private boolean resurrectedOnDeath = false;
+
     @Override
     public void resurrect(Char parent) {
 
@@ -425,9 +433,11 @@ public abstract class Mob extends Char {
         if (level().cellValid(spawnPos)) {
             new_mob.setPos(spawnPos);
             Mob.makePet(new_mob, parent.getId());
+            new_mob.setUndead(true); // caveman: skull-raised pets are undead - no combat XP, same as necromancy
             Actor.addDelayed(new Pushing(new_mob, parent.getPos(), new_mob.getPos()), -1);
             level().spawnMob(new_mob);
             level().press(spawnPos, new_mob);
+            resurrectedOnDeath = true;
         }
     }
 
