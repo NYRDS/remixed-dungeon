@@ -2318,7 +2318,7 @@ local function bkm_successor_key(st, mv)
     end
 end
 
-function sunfish.ai_move(game)
+function sunfish.ai_move(game, black_to_move)
     -- Opening book (opt-in): if the position's Zobrist key is in the book,
     -- play a weighted-random book move instead of searching. Book moves are
     -- stored in real-board coordinates; map into the engine's current frame
@@ -2332,7 +2332,11 @@ function sunfish.ai_move(game)
                 -- real-board 1-based frame squares (parse uses A1=92)
                 local rfrom = 92 + (from % 8) - 10 * math.floor(from / 8)
                 local rto = 92 + (to % 8) - 10 * math.floor(to / 8)
-                local black = stm_is_black(game)
+                -- caveman: caller knows the side (bridge passes true - AI is
+                -- always black there). positional scan below breaks on advanced
+                -- pawns crossing the midline; kept only as fallback.
+                local black = black_to_move
+                if black == nil then black = stm_is_black(game) end
                 local f1, f2 = rfrom, rto
                 if black then f1, f2 = 121 - rfrom, 121 - rto end
                 local uci = render(f1) .. render(f2)

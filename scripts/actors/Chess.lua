@@ -798,7 +798,7 @@ return actor.init({
                     -- caveman: launch AI search as fiber. yields every 256 nodes (YIELD_QUANTUM).
                     -- onStep resumes it each frame so game animations keep running during deep search.
                     aiCoroutine = fiber.create(function()
-                        local c, m, s = sunfish.ai_move(chess:rotate())
+                        local c, m, s = sunfish.ai_move(chess:rotate(), true) -- caveman: AI is black
                         aiResult = { chess = c, ai_move = m, score = s }
                     end)
                 end
