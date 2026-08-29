@@ -358,17 +358,30 @@ public class Dungeon {
             var dup = CharsList.getById(mob.getId());
 
             if (dup.valid()) {
-                GLog.debug("Removing dup: %s, %d", dup.getEntityKind(), dup.getId());
+                GLog.toFile("Removing dup: %s, %d", dup.getEntityKind(), dup.getId());
                 Actor.remove(dup);
                 Actor.freeCell(dup);
                 CharsList.remove(dup.getId());
                 level.mobs.remove(dup);
             }
 
+            GLog.toFile("follower spawn: %s id=%d at %s",
+                    mob.getEntityKind(), mob.getId(), level.levelId);
             spawnPet(level, mob);
         }
 
+        // caveman: same dup guard as followers - initialAlies had none (#3)
         for (Mob mob : hero.initialAlies) {
+            var dup = CharsList.getById(mob.getId());
+
+            if (dup.valid()) {
+                GLog.toFile("Removing initialAlies dup: %s, %d", dup.getEntityKind(), dup.getId());
+                Actor.remove(dup);
+                Actor.freeCell(dup);
+                CharsList.remove(dup.getId());
+                level.mobs.remove(dup);
+            }
+
             spawnPet(level, mob);
         }
         hero.initialAlies.clear();

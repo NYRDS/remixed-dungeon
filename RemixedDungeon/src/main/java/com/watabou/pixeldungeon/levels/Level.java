@@ -402,6 +402,13 @@ public abstract class Level implements Bundlable {
 			}
 		}
 
+		// caveman: minion-dupe reported in the spider nest (#3) - log every
+		// follower transfer so a repro carries data
+		for (Mob mob : mobsToNextLevel) {
+			GLog.toFile("follower transfer: %s id=%d from %s mode=%s",
+					mob.getEntityKind(), mob.getId(), level.levelId, changeMode);
+		}
+
 		Dungeon.saveCurrentLevel(); //save level
 
 		// caveman: roster into the game bundle right away - a crash before the
