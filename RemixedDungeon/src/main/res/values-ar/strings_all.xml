@@ -48,6 +48,7 @@
     <string name="ArmoredStatue_Name">تمثال متحرك</string>
     <string name="ArmoredStatue_Name_Objective">تمثال متحرك</string>
     <string name="AttackDelay_Increased">لا يمكنك استخدام %s بهذه الطريقة. تأرجحات بطيئة، وأنفاس ثقيلة…</string>
+    <string name="Attack_Cooldown">فترة إعادة الهجوم</string>
     <string name="Attack_Range">مدى الهجوم</string>
     <string name="AzuterronNPC_Name_Objective">غريباً</string>
     <string name="BadgesScene_Title">شاراتك</string>
@@ -105,6 +106,7 @@
     <string name="BlackSkullOfMastery_Necromancer">اكسر التعويذة</string>
     <string name="BlackSkull_Deactivated">الجمجمة السوداء خامدة مرة أخرى...</string>
     <string name="BlackSkull_Info">جمجمة صغيرة من السبج. كانت مصدر قوى مدينة الأموات، لكن بعد هزيمة الليش يبدو أنها فقدت كل قواها. ومع ذلك، حين تمسكها بين يديك، تمر فكرة غريبة في ذهنك: \&quot;إنها جائعة\&quot;.</string>
+    <string name="BlackSkull_Ressurrect">الجمجمة السوداء أقامت الوحش الميت ليخدمك!</string>
     <string name="Blacksmith_Gold1">يا إنسان! هل تريد أن تكون مفيداً، أليس كذلك؟ خذ هذا المعول واحفر لي بعض _خام الذهب الداكن_، _15 قطعة_ يجب أن تكفي. ماذا تقصد، كيف سأدفع؟ أنت جشع...\nحسناً، حسناً، ليس لدي مال لأدفع، لكن يمكنني القيام ببعض الحدادة لك. اعتبر نفسك محظوظاً، أنا الحدّاد الوحيد في الجوار.</string>
     <string name="Blacksmith_Name">حداد ترول</string>
     <string name="Blacksmith_Txt3">خام الذهب الداكن. 15 قطعة. بجد، صعب كده؟</string>
@@ -380,6 +382,7 @@
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">يرقة الإله</string>
     <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
+    <string name="Leech_Name_0">مصاص دماء %s</string>
     <string name="Level_TileBarricade">متاريس</string>
     <string name="Level_TileDescChasm">لا تستطيع رؤية القاع.</string>
     <string name="Level_TileDescInactiveTrap">لقد تم تفعيل الفخ من قبل وهو لم يعد خطيراً.</string>
@@ -404,6 +407,7 @@
     <string name="LightBuff_Name">مضيء</string>
     <string name="LightningBolt_Info">تعويذة تُتداول بين الشامان القدماء، تصعق أعداءك بفعالية مضاعفة، خاصة إذا كانوا أغبياء بما يكفي ليقفوا فوق الماء.</string>
     <string name="LightningTrap_Name">فخ البرق</string>
+    <string name="LloidsBeacon_ACSet">تعيين</string>
     <string name="LloidsBeacon_Creatures">الهالة النفسية للكائنات المجاورة لا تسمح لك باستخدام منارة لويد في هذه اللحظة.</string>
     <string name="LloidsBeacon_Preventing">هالة سحرية قوية موجودة هنا تمنعك من استخدام منارة لويد!</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
@@ -536,6 +540,7 @@
     <string name="ResultDescriptions_Poison">مات بسبب السم في المستوى %d</string>
     <string name="ResultDescriptions_Trap">قتل بتفريغ %1$s في المستوى %2$d</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
+    <string name="RingOfDetection_Info">ارتداء هذه الخاتم سيمكنك من ملاحظة الأسرار المخفية - الفخاخ والأبواب السرية - دون الحاجة لأخذ وقت للبحث. الخواتم المتدهورة من الكشف ستبلد حواسك، مما يجعل ملاحظة الأسرار أصعب حتى عند البحث عنها بفعالية.</string>
     <string name="RingOfElements_Info">يوفر هذا الخاتم مقاومة للعناصر المختلفة مثل النار والكهرباء والغازات وغيرها. كما أنه يقلل من مدة الآثار السلبية.</string>
     <string name="RingOfElements_Name">خاتم العناصر</string>
     <string name="RingOfFrost_Name">خاتم الصقيع</string>
@@ -584,6 +589,7 @@
     <string name="ScrollOfWeaponUpgrade_Info">سيؤدي هذا المخطوطة إلى ترقية سلاح قتال قريب، مما يحسن جودته. على عكس مخطوطة الترقية العادية، لن يدمر هذا الإصدار المتخصص أي سحر على السلاح. بل على العكس، قادر على إضفاء سحر عشوائي على سلاح غير مسحور.</string>
     <string name="ScrollOfWeaponUpgrade_Name">مخطوطة ترقية السلاح</string>
     <string name="Scroll_Name">لفافة \&quot;%s\&quot;</string>
+    <string name="Scroll_Runes_12">أنسوز</string>
     <string name="Scroll_Runes_13">إيفاز</string>
     <string name="Scroll_Runes_2">لاغوز</string>
     <string name="Scroll_Runes_4">GYFU</string>
@@ -737,6 +743,7 @@
     <string name="WndCryptoDonate_ton">تون</string>
     <string name="WndCryptoDonate_tron">ترون</string>
     <string name="WndDonate_goldDonateText">شكراً لمساعدتكم</string>
+    <string name="WndDonate_royalDonateText2">بالإضافة إلى ذلك، ستحصل على كل قبعة من متجر التطبيق! وكذلك كل قبعة سيتم إصدارها مستقبلاً.</string>
     <string name="WndDonate_silverDonate">تبرع فضي</string>
     <string name="WndDonate_silverDonateText2">أيضًا تعطيل الإعلانات في جميع أنماط اللعب وفتح صياد منذ البداية.</string>
     <string name="WndDontLikeAds_NotThisTime">ليس هذه المرة</string>
@@ -877,6 +884,7 @@
     <string name="town_deco_slush_name">الثلج المذاب</string>
     <string name="town_deco_snow_name">ثلج</string>
     <string name="town_deco_sofa_desc">يبدو أن هذا السينما تحاول حقاً توفير أفضل المقاعد لعملائها.</string>
+    <string name="town_deco_statue_blood_desc">تمثال مهيب لملاك يمسك وعاءً من الدم.</string>
     <string name="town_deco_statue_blood_name">تمثال ملاك</string>
     <string name="town_deco_stone_wall_desc">بشكل ما، هذا الجدار يصدر حرارة ويبدو رطباً قليلاً.</string>
     <string name="town_deco_stone_wall_name">جدار حجري</string>
@@ -888,6 +896,14 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
 
 
 

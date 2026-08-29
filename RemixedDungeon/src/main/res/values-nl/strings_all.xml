@@ -14,6 +14,7 @@
     <string name="AboutScene_Sound">Geluid:</string>
     <string name="AboutScene_SourceCode">Download de broncode van Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Speciale dank aan:</string>
+    <string name="AboutScene_Translation">Lokalisatie door:</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon door NYRDS gebaseerd op de broncode van Pixel Dungeon door Watabou.</string>
     <string name="Accuracy_Decreased">Waarom dacht ik dat ik dit %s kon gebruiken? Verkeerd gereedschap, verkeerde handen!</string>
     <string name="Accuracy_DecreasedDoctor">Elke slag met deze %s verspreidt onvolkomenheden. Mijn botenzaag geneest... dit besmet.</string>
@@ -291,6 +292,7 @@
     <string name="GoldenSword_Gender">masculine</string>
     <string name="Golem_Defense">geblokkeerd</string>
     <string name="Goo_Info1">De slime blaast zichzelf op!</string>
+    <string name="Goo_Info3">GLURP-GLURP!</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
     <string name="Guts_TileGrass">Droge struik</string>
     <string name="Halberd_Gender">feminine</string>
@@ -604,6 +606,7 @@
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
     <string name="ScarecrowNPC_Name_Objective">vogelverschrikker</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">Nou, hallo klein meisje, hoe gaat het met je?\nIk heb iets spannends voor je!\n\nOh, hoe dankbaar zou ik zijn,\nAls je gaat en wat snoepjes voor me verzamelt!\n\n</string>
     <string name="Scorpio_Desc">Deze enorme, op spinnen lijkende demonische wezens vermijden gevechten van dichtbij ten koste van alles en schieten vanaf grote afstand verlammende getande stekels af.</string>
     <string name="Scorpio_Name">schorpioen</string>
     <string name="ScrollHolder_Info">In deze buisvormige houder kun je een willekeurig aantal scrollen plaatsen. Het bespaart ruimte in je rugzak en beschermt scrollen tegen vuur.</string>
@@ -771,6 +774,7 @@
     <string name="TownsfolkSilentNPC_Name">stadbewoner</string>
     <string name="ToxicGas_Info">Hier zweeft een groenachtige wolk van giftig gas.</string>
     <string name="ToxicGas_Info1">Je bent gestorven doordat je giftig gas inademde...</string>
+    <string name="ToxicGland_Info">Een giftige klier geoogst van een verslagen vijand. Deze klieren zitten vol sterke toxines en kunnen worden gebruikt in alchemistische processen.</string>
     <string name="ToxicGland_Name">Giftige klier</string>
     <string name="TrapWnd_Step">Wil je echt op deze val stappen? Je kunt eraan sterven.</string>
     <string name="TreacherousSpirit_Desc">Deze monsterlijke verschijning lijkt op een wolk van levende duisternis. Zijn gigantische oog staart je aan en pulseert bij elke beweging die je maakt.</string>
@@ -894,6 +898,7 @@
     <string name="WndSadGhostNecro_Persuaded">De verdrietige geest is overwonnen</string>
     <string name="WndSadGhostNecro_Text">Deze geest lijkt te worstelen met zijn vloek. Het lijkt alsof hij me om iets wil vragen. Met behulp van necromantie, kon ik hem ervan overtuigen dat de vraag vervuld is. Het zal me tijd besparen. Maar is het de moeite waard?</string>
     <string name="WndSadGhostNecro_Yes">Ja, dwing je wil op</string>
+    <string name="WndSadGhost_Armor">Pantser van de geest</string>
     <string name="WndSadGhost_Wepon">Geest zijn wapen</string>
     <string name="WndSaveSlotSelect_Delete_Title">Weet je zeker dat je deze opslagstatus wilt verwijderen?</string>
     <string name="WndSaveSlotSelect_Delete_Yes">Ja, verwijder het!</string>
@@ -951,6 +956,7 @@
     <string name="gdpr_title">Personaliseer uw advertentie-ervaring</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
     <string name="town_deco_armorstand_plate_desc">Volgens de koopman behoorde deze zware plastruim ooit toe aan een groot krijger.</string>
+    <string name="town_deco_armorstand_scale_name">Schubbenpantser</string>
     <string name="town_deco_banner_desc">Een elegante vlag met de symbolen van deze kroeg.</string>
     <string name="town_deco_banner_name">Vaandel</string>
     <string name="town_deco_barrel_desc">Een gewoon vat, ook niet meer in de beste staat.</string>
@@ -1001,6 +1007,7 @@
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
     <string name="town_deco_skullboard_name">trofeerek</string>
+    <string name="town_deco_statue_blood_desc">Een majestueuze standbeeld van een engel die een kom bloed vasthoudt.</string>
     <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
     <string name="town_deco_stove_name">Stenen kachel</string>
@@ -1023,6 +1030,13 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
 
 
 

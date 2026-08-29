@@ -92,9 +92,11 @@
     <string name="BlackCat_Phrases_2">מיאו!</string>
     <string name="BlackSkullOfMastery_RemainHumanDesc">או אם תשבור את הכישוף תוכל להשתמש בחפץ זה כמתוכנן.</string>
     <string name="BlackSkull_Info">גולגולת אובסידיאן קטנה. היא הייתה מקור כוחה של נקרופוליס, אך לאחר תבוסת הליצ\' נראה שהיא איבדה את כל כוחה. עם זאת, כשאתה מחזיק אותה בידיך, מחשבה מוזרה חולפת בראשך: \&quot;היא רעבה\&quot;.</string>
+    <string name="BlackSkull_Ressurrect">הגולגולת השחורה הקימה את המפלצת המתה כדי לשרת אותך!</string>
     <string name="Blacksmith_Completed">אוי, חזרת... עדיף מאוחר מאשר אף פעם.</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
     <string name="Blacksmith_Gold1">היי, בן אדם! רוצה להיות מועיל, אה? קח את המעדר הזה ותחפור לי קצת _עפרת זהב אפלה_, _15 חתיכות_ יספיקו. למה אתה מתכוון, איך אני אשלם? אתה חמדן...\nבסדר, בסדר, אין לי כסף לשלם, אבל אני יכול לעשות עבודת נפחות בשבילך. תחשיב את עצמך בר מזל, אני הנפח היחיד בסביבה.</string>
+    <string name="Blacksmith_Txt3">עופרת זהב כהה. 15 חתיכות. ברצינות, זה כזה קשה?</string>
     <string name="Blacksmith_Verify4">אני לא עובד עם פריטים מקוללים!</string>
     <string name="Blacksmith_Verify6">אני לא יכול לשחזר את הפריטים האלה!</string>
     <string name="BloodTransfusion_FullHP">הדם שלך כבר במלוא הקיבולת.</string>
@@ -421,6 +423,7 @@
     <string name="Moongrace_Name">ברכת הירח</string>
     <string name="Multiplicity_Txt">%s של ריבוי</string>
     <string name="MysteryMeat_Info2">אתה לא מרגיש את הרגליים שלך!</string>
+    <string name="NatureArmorSpell_Info">גם האלפים יכולים להיות קשוחים, במיוחד כשהם מוגנים על ידי האם טבע עצמה.</string>
     <string name="NecromancerNPC_Desc">איש בגיל העמידה נראה מעט מעצבן ונרגש בו זמנית. הוא לובש שריון מורכב העשוי משברי עצמות מחוברים יחד.</string>
     <string name="NecromancerNPC_Intro">איזה מחזה נדיר! הרפתקן שרק לא רק גופה חסרת חיים. בקושי ניתן להאמין! אה... סליחה, לפעמים אני מתרגש מדי. תראו, אני נקרומנסר. ואף על פי שלימוד המתים והמוות עצמו הוא עיסוקי, לראות את אותם דברים שוב ושוב נעשה מתיש בסופו של דבר. מצד שני, זה בדיוק הסיבה שאני כאן. לפי חישוב שלי, בעוד כמה שבועות, במקום כלשהו במבוך הזה, משהו מרהיב עומד לקרות. ה_נקרופוליס_, עיר עתיקה של המתים, עומדת לפתוח את שעריה. ואני... לא יכול לומר יותר, בזבזתי מספיק זמן. אני צריך להתכונן, _לחזור מאוחר יותר_.</string>
     <string name="NecromancerNPC_Name">נקרומנסר</string>
@@ -548,6 +551,7 @@
     <string name="RottenRation_Name">מנה רקובה</string>
     <string name="RottingFist_Name">אגרוף מרקיב</string>
     <string name="RubyBow_Gender">masculine</string>
+    <string name="RubyCrossbow_Info">כלי הנשק הקטלני הזה הוא באמת יצירת מופת של ההנדסה הגמדית.</string>
     <string name="Rudolph_Name">אף אדום וקרניים</string>
     <string name="RunicSkull_Name">גולגולת רונית</string>
     <string name="ScarecrowNPC_Name_Objective">דחליל</string>
@@ -572,6 +576,7 @@
     <string name="Scroll_Info">המגילה הזו מכוסה בכתב בלתי ניתן לפענוח, ונושאת כותרת של רונה %s. מי יודע מה יקרה כשיקראו אותה בקול רם?</string>
     <string name="Scroll_Name">מגילת \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_10">אודל</string>
+    <string name="Scroll_Runes_13">איוואז</string>
     <string name="Scroll_Runes_4">GYFU</string>
     <string name="Senior_Desc">הנזירים הללו הם קנאים, שהקדישו את עצמם להגנה על סודות עירם מפני כל זר. הם אינם משתמשים בשום שריון או כלי נשק, ומסתמכים אך ורק על אומנות הלחימה בידיים חשופות. נזיר זה השתלט על אומנות נטרול יריביו.</string>
     <string name="ServantNPC_Gender">feminine</string>
@@ -745,6 +750,7 @@
     <string name="WndPlayGames_Use">השתמש ב-Google Play Games</string>
     <string name="WndPortal_Info_Return">הפורטל הזה יחזיר אותך לתוך הצינוק.\nהאם תרצה להשתמש בו?</string>
     <string name="WndPremiumSettings_chrome">בחר חומר ממשק</string>
+    <string name="WndPremiumSettings_silver">כסף</string>
     <string name="WndPremiumSettings_status">בחר חומר לשורת מצב</string>
     <string name="WndPriest_Instruction2">אם אתה זקוק לעזרה, אני יכול לספק שירותי ריפוי רק עבור %d מטבעות זהב!\nאם אתה מחפש ברכה קדושה, או, שסנטה ישמור, קוללת, אנא פגוש את הבישוף בכנסייה הצנועה שלנו.</string>
     <string name="WndPriest_Instruction2_f">ברוכה הבאה בתי, ברוכה הבאה לכנסייה הקדושה של סנטה הגדול, אדון המעמקים!</string>
@@ -841,6 +847,7 @@
     <string name="town_deco_shieldboard_desc">מגינים שונים תלויים על הלוח. עדיין לא למכירה.</string>
     <string name="town_deco_shieldboard_name">מגנים</string>
     <string name="town_deco_skulls_desc">גולגולות מלוטשות השייכות ליצורים מהצינוק.</string>
+    <string name="town_deco_statue_blood_desc">פסל מפואר של מלאך המחזיק קערת דם.</string>
     <string name="town_deco_stone_wall_desc">איכשהו הקיר הזה פולט חום ונראה קצת רטוב.</string>
     <string name="town_deco_stones_desc">סתם ערימת אבנים</string>
     <string name="town_deco_stool_sturdy_name">שרפרף</string>
@@ -934,6 +941,13 @@
 
 
     <string name="town_deco_wooden_drawer_desc">מעניין מה שמור בפנים.</string>
+
+
+
+
+
+
+
 
 
 
