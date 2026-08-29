@@ -35,6 +35,7 @@ public class RunicSkull extends MultiKindMob {
 		baseAttackSkill = 1;
 
 		pacified = true;
+		flying = true; // caveman: floating skull - no Roots, no trap press
 		kind = Random.Int(4);
 		setState(MobAi.getStateByClass(Wandering.class));
 

@@ -22,6 +22,8 @@ public class ExplodingSkull extends Mob {
 
         baseSpeed = 1.5f;
 
+        flying = true; // caveman: floating skull - no Roots, no trap press
+
         expForKill = 1;
         maxLvl = 1;
 
