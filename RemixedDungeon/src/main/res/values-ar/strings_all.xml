@@ -143,6 +143,7 @@
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
     <string name="Bow_Info1">هذا سلاح بعيد المدى. لا يفيد أحدًا إلا الجنّيات في المدى القريب جدًا. امتلاك قوس مسلّح يتيح لك إطلاق السهام.\n\n</string>
     <string name="Bowknot_Info">شريط وردي لامع جميل مربوط بعقدة ومثبت بدبوس شعر.</string>
+    <string name="Brute_Desc">الغوغاء هم الأكبر والأقوى والأكثر صلابة بين جميع الغنول. عندما يُصابون بجروح بالغة، يفقدون السيطرة ويلحقون ضرراً أكبر بأعدائهم.</string>
     <string name="Brute_Gender">masculine</string>
     <string name="BurningBuff_Name">مشتعل</string>
     <string name="BurningFist_Gender">masculine</string>
@@ -239,6 +240,7 @@
     <string name="Crab_Desc">هذه السرطانات الضخمة تتصدر السلسلة الغذائية في المجاري. إنها سريعة للغاية ويمكن لهيكلها الخارجي السميك تحمل الضربات القوية.</string>
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">سرطان المجاري</string>
+    <string name="CrippleBuff_Name">معاق</string>
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">بلورة طافية</string>
     <string name="CurareDart_Gender">masculine</string>
@@ -278,6 +280,7 @@
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">سكران</string>
     <string name="Drunkard_Phrase_4">زززززز...</string>
+    <string name="Dungeon_Tips_14">خطر! الآلات الثقيلة يمكن أن تسبب الإصابة، بتر الأطراف أو الموت!</string>
     <string name="Dungeon_Tips_16">عند ترقية سلاح مسحور، هناك احتمال لتدمير ذلك السحر.</string>
     <string name="Dungeon_Tips_17">بئر التحويل يمكن أن يمنحك عنصرا لا يمكن الحصول عليه بأي طريقة أخرى.</string>
     <string name="Dungeon_Tips_18">الطريقة الوحيدة لسحر سلاح هي ترقيته باستخدام مخطوطة ترقية سلاح.</string>
@@ -374,6 +377,7 @@
     <string name="HeroClass_ElfPerks_5">الجان أقل مهارة في استخدام أسلحة القتال القريب.</string>
     <string name="HeroClass_GnollPerks_2">يبدأ الغنول بدون أي درع ولكن مع فأس حربية فريدة</string>
     <string name="HeroClass_GnollPerks_3">لا يستطيع الغنول القراءة أو الكتابة.</string>
+    <string name="HeroClass_HunPerks_1">تبدأ الصيادات ببوميرانغ فريد قابل للترقية.</string>
     <string name="HeroClass_MagPerks_3">يمكن للسحرة استخدام العصي السحرية كسلاح قتال قريب.</string>
     <string name="HeroClass_MagPerks_4">يستخدم السحرة المانا لإلقاء التعاويذ العنصرية.</string>
     <string name="HeroClass_MagPerks_5">تتم التعرف على لفافات التعريف منذ البداية.</string>
@@ -502,6 +506,7 @@
     <string name="LloidsBeacon_Preventing">هالة سحرية قوية موجودة هنا تمنعك من استخدام منارة لويد!</string>
     <string name="LloidsBeacon_Set">\n\nتم ضبط هذا المنارة في مكان ما على المستوى %d من Remixed Dungeon.</string>
     <string name="Longsword_Gender">masculine</string>
+    <string name="Longsword_Name">سيف طويل</string>
     <string name="Luck_Name_0">محظوظ %s</string>
     <string name="Mace_Gender">feminine</string>
     <string name="MageArmor_ACSpecial">أرض منصهرة</string>
@@ -598,6 +603,7 @@
     <string name="PortalGate_Desc_Activated">البوابة تتسرب منها مادة متوهجة من نوع ما. تبدو ساكنة تماماً، لولا التموجات القادمة من مركزها.</string>
     <string name="PortalGate_Name">بوابة</string>
     <string name="PortalGate_Used">لمست البوابة و... لم يحدث شيء.</string>
+    <string name="Possess_Info">الفن المظلم للتحكم العقلي يسمح للمتعويذة بثني إرادة معظم المخلوقات.</string>
     <string name="PotionBelt_Name">حزام جرعات</string>
     <string name="PotionOfExperience_Name">جرعة الخبرة</string>
     <string name="PotionOfHealing_Apply">تشفى جراحك تماماً.</string>
@@ -645,6 +651,7 @@
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name_Objective">فأر الكيس</string>
     <string name="RawFish_Name">سمك نيء</string>
+    <string name="RegenerationBuff_Info">وظيفة التجدد الطبيعي موجودة في صيغة تأثير مؤقت لتسهيل الأمور.</string>
     <string name="RemixedPixelDungeonApp_sendCrash">لعبةنا تعطلت...\n عذراً.\nيرجى إرسال تقرير العطل لمساعدتنا في إصلاحه.</string>
     <string name="ResultDescriptions_Hunger">مات جوعاً في المستوى %d</string>
     <string name="ResultDescriptions_Immured">تم دفنك حيًا في الحجر على المستوى %d</string>
@@ -1006,6 +1013,7 @@
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="deco_candle_name">شمعة</string>
+    <string name="gdpr_agree">نعم، أوافق</string>
     <string name="gdpr_title">خصّص تجربتك الإعلانية</string>
     <string name="town_deco_INN_sign_desc">يبدو أن هناك فندقاً داخل هذا المبنى.</string>
     <string name="town_deco_INN_sign_name">لافتة النزل</string>
@@ -1046,6 +1054,7 @@
     <string name="town_deco_firewood_name">حطب</string>
     <string name="town_deco_flowerinthepot_desc">زهرة زينة ذات نكهة حلوة</string>
     <string name="town_deco_flowerinthepot_name">زهرة في وعاء</string>
+    <string name="town_deco_ladder_desc">سلم قديم، يبدو غير موثوق به.</string>
     <string name="town_deco_library_sign_name">لافتة المكتبة</string>
     <string name="town_deco_movies_door_name">باب</string>
     <string name="town_deco_pathway_name">مسار</string>
@@ -1076,6 +1085,15 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
 
 
 

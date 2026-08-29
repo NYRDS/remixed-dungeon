@@ -101,6 +101,7 @@
     <string name="Bandit_Name">gekke bandiet</string>
     <string name="Bandit_Name_Objective">gekke bandiet</string>
     <string name="BardNPC_Gender">masculine</string>
+    <string name="BarkskinBuff_Info">Het lichaam is bedekt met bast die een deel van de ontvangen schade blokkeert.</string>
     <string name="Barrel_Name">vat</string>
     <string name="Barrel_Pumpkin_Name">pompoen</string>
     <string name="Bat_Defense">ontweken</string>
@@ -142,7 +143,7 @@
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Bow_Info1">Dit is een afstandswapen. Het is nutteloos voor iedereen behalve elfen op zeer korte afstand. Met een boog uitgerust kun je pijlen afschieten.\n\n</string>
-    <string name="Brute_Desc">Grommen zijn de grootste, sterkste en zachtste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
+    <string name="Brute_Desc">Grommen zijn de grootste, sterkste en hardste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">grom</string>
     <string name="Brute_Name_Objective">grom</string>
@@ -229,6 +230,7 @@
     <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Dit massieve zwaard zou in staat moeten zijn om door alles heen te snijden.</string>
     <string name="CloakBuff_Info">Een donkere mantel verhult je in de schaduw, waardoor je minder zichtbaar bent voor vijanden.</string>
+    <string name="CloakBuff_Name">Verguld</string>
     <string name="ClothArmor_Desc">Deze lichte bepantsering biedt eenvoudige bescherming.</string>
     <string name="ClothArmor_Name">stoffen pantser</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
@@ -258,6 +260,7 @@
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">rioolkrab</string>
     <string name="CrippleBuff_Info">Het lichaam is verlamd, maar de strijd gaat door.</string>
+    <string name="CrippleBuff_Name">Verstompt</string>
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">zwevend kristal</string>
     <string name="CurareDart_Gender">masculine</string>
@@ -298,6 +301,7 @@
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_DeadEnd">Wat doe je hier?!</string>
     <string name="Dungeon_Tips_12">Als je brandt en zweeft, kun je het vuur niet in water uithassen.</string>
+    <string name="Dungeon_Tips_14">GEVAAR! Zware machines kunnen letsel, verlies van ledematen of de dood veroorzaken!</string>
     <string name="Dungeon_Tips_16">Wanneer je een getoverde wapen verbetert, is er een kans dat de toverij vernietigd wordt.</string>
     <string name="Dungeon_Tips_17">Een Bron van Transmutatie kan je een voorwerp geven dat je op geen enkele andere manier kunt verkrijgen.</string>
     <string name="Dungeon_Tips_18">De enige manier om een wapen te betoveren is door het te verbeteren met een Schrift van Wapenverbetering.</string>
@@ -322,6 +326,7 @@
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="Eye_Desc">Een van de andere namen van deze demon is \&quot;orb of hatred\&quot;, omdat wanneer hij een vijand ziet, hij zijn doodsblik onbeschoft gebruikt, vaak de bondgenoten negerend en ze verwondend.</string>
     <string name="Eye_Gender">neuter</string>
+    <string name="Facilitations_Names_0">Geen honger</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
     <string name="FetidRat_Gender">feminine</string>
     <string name="FireArrow_Gender">feminine</string>
@@ -330,6 +335,7 @@
     <string name="FireElemental_Name_Objective">vuurelementair</string>
     <string name="Fire_Info">Hier woedt een vuur.</string>
     <string name="Fire_Name_1">Vlamend %s</string>
+    <string name="Firebloom_Desc">Als iets een Vuurbloom aanraakt, barst het in vlammen uit.</string>
     <string name="Firebloom_Name">Vuurbloem</string>
     <string name="FortuneTellerNPC_Desc">Deze vrouw draagt een lange, felgekleurde pij. Ze ziet er verrassend jong uit voor iemand die de geheime kunsten van de waarzeggerij beheerst. Als je dichterbij komt, hoor je haar zachtjes mompelen terwijl ze in de kristallen bol staart.</string>
     <string name="FortuneTellerNPC_Gender">feminine</string>
@@ -386,6 +392,7 @@
     <string name="HeroClass_GnollPerks_3">Gnollen kunnen niet lezen of schrijven.</string>
     <string name="HeroClass_GnollPerks_4">Gnollen vallen geen andere Gnollen aan tenzij ze worden uitgedaagd</string>
     <string name="HeroClass_Hun">jachtvrouw</string>
+    <string name="HeroClass_HunPerks_1">Jachtvrouwen beginnen met een unieke, upgradeerbare boemerang.</string>
     <string name="HeroClass_HunPerks_3">Jachtvrouwjes krijgen meer gezondheid van dauwdruppels.</string>
     <string name="HeroClass_HunPerks_4">Jachtvrouwen voelen buurmonsters zelfs als ze achter obstakels verstopt zitten.</string>
     <string name="HeroClass_Mag">magier</string>
@@ -644,6 +651,7 @@
     <string name="PortalGate_Activated">De oude portaal is ontwaakt!</string>
     <string name="PortalGate_Desc">De gravures op het oppervlak van deze portal vormen een eigenaardig patroon. Het lijkt alsof het een gigantische tunnel is die in de verte leidt. Maar vanaf de zijkant bekeken wordt duidelijk dat het oppervlak bijna vlak is.</string>
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
+    <string name="Possess_Info">De donkere kunst van geestelijke controle stelt de spreker in staat de wil van de meeste wezens te buigen.</string>
     <string name="Possess_Name">Bezetting</string>
     <string name="Possess_PossessionFailed">Wil van %s is te sterk</string>
     <string name="PotionBelt_Info">Deze sterke leren riem kan al je drankjes bevatten en beschermt ze tegen het breken door vorst.</string>
@@ -698,12 +706,15 @@
     <string name="Rat_Gender">feminine</string>
     <string name="RawFish_Name">rauwe vis</string>
     <string name="RawFish_Taste">Visachtig!</string>
+    <string name="RegenerationBuff_Info">De functie voor natuurlijke regeneratie is in een buff-vorm om het makkelijker te maken.</string>
     <string name="ResultDescriptions_Bleeding">Verstorven op niveau %d</string>
     <string name="ResultDescriptions_Boss">Vermoord door de %1$s op niveau %2$d</string>
     <string name="ResultDescriptions_Burning">Verbrand op niveau %d</string>
+    <string name="ResultDescriptions_Fall">Ter dood gevallen op niveau %d</string>
     <string name="ResultDescriptions_Immured">Ingemureerd in steen op niveau %d</string>
     <string name="ResultDescriptions_Necromancy">Uitgeput van levenskracht tijdens het proberen een lijk te animeren op niveau %d</string>
     <string name="ResultDescriptions_Necrotism">Gestorven door Necrotisme op niveau %d</string>
+    <string name="ResultDescriptions_Poison">Gestorven aan vergiftiging op niveau %d</string>
     <string name="RingOfDetection_Info">Als je deze ring draagt, merk je verborgen geheimen - vallen en geheime deuren - op zonder tijd aan zoeken te besteden. Versleten detectieringen verdoven je zinnen, waardoor het moeilijker wordt om geheimen op te merken, zelfs als je er actief naar zoekt.</string>
     <string name="RingOfElements_Name">Ring der Elementen</string>
     <string name="RingOfEvasion_Info">Deze ring vergroot je kans om een aanval van een vijand te ontwijken.</string>
@@ -981,6 +992,7 @@
     <string name="Wand_ACZap">ZAP</string>
     <string name="Wand_Prompt">Kies een richting om te zappen</string>
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
+    <string name="Wand_Wood_Types_0">hulst</string>
     <string name="Wand_Wood_Types_1">taxus</string>
     <string name="Wand_Wood_Types_2">ebbenhout</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
@@ -1066,6 +1078,7 @@
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
     <string name="WndPlayGames_Show_Ok">Gelukt!</string>
     <string name="WndPlayGames_Title">Google Play Games</string>
+    <string name="WndPortal_Title">Portaal</string>
     <string name="WndPortal_Warning_Title">Portaal Waarschuwing!</string>
     <string name="WndPremiumSettings_banners">Selecteer het materiaal van de banieren</string>
     <string name="WndPremiumSettings_chrome">Selecteer GUI-materiaal</string>
@@ -1225,6 +1238,19 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

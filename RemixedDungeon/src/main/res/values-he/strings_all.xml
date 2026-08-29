@@ -119,6 +119,7 @@
     <string name="Boomerang_Gender">masculine</string>
     <string name="Bounce_Txt">%s של הקפצה</string>
     <string name="Bow_Info1">זהו נשק טווח. הוא חסר תועלת לכולם מלבד אלפים בטווח קרוב מאוד. כשקשת מצוידת אפשר לירות חצים.\n\n</string>
+    <string name="Brute_Desc">ברוטים הם הגדולים, החזקים והקשוחים ביותר מכל הגנולים. כשהם נפצעים קשה, הם משתוללים וגורמים נזק רב עוד יותר לאויביהם.</string>
     <string name="Brute_Enraged">%s נכנס לזעם!</string>
     <string name="Brute_Gender">masculine</string>
     <string name="BurningBuff_Name">בוער</string>
@@ -230,6 +231,7 @@
     <string name="CorpseDust_Info">כדור אבק הגופות לא נראה שונה מכדור אבק רגיל. עם זאת, אתה יודע איכשהו שעדיף להיפטר ממנו בהקדם האפשרי.</string>
     <string name="CorpseExplosion_Name">פיצוץ גופה</string>
     <string name="Crab_Gender">masculine</string>
+    <string name="CrippleBuff_Name">נכה</string>
     <string name="Crystal_Desc">גביש גדול ומבריק מרחף באוויר. כנראה שהוא מלא בקסם חזק.</string>
     <string name="Crystal_Gender">masculine</string>
     <string name="CurareDart_Gender">masculine</string>
@@ -265,6 +267,7 @@
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="Drunkard_Phrase_4">זזזזזז...</string>
     <string name="Dungeon_Tips_13">אין טעם להחזיק יותר מאנק אחד בו זמנית, כי תאבדו אותם בתחיית המתים.</string>
+    <string name="Dungeon_Tips_14">סכנה! מכונות כבדות עלולות לגרום לפציעה, אובדן גפיים או מוות!</string>
     <string name="Dungeon_Tips_16">כשאתה משדרג כלי נשק מקסום, יש סיכוי שהקסם יהרס.</string>
     <string name="Dungeon_Tips_17">באר הטרנסמוטציה יכולה לתת לך פריט שאי אפשר להשיג בדרך אחרת.</string>
     <string name="Dungeon_Tips_18">הדרך היחידה לשדרג כישוף על נשק היא באמצעות מגילת שדרוג.</string>
@@ -368,6 +371,7 @@
     <string name="HeroClass_GnollPerks_3">גנולים לא יודעים לקרוא או לכתוב.</string>
     <string name="HeroClass_GnollPerks_4">גנולים לא תוקפים גנולים אחרים אלא אם כן הותקפו</string>
     <string name="HeroClass_Hun">ציידת</string>
+    <string name="HeroClass_HunPerks_1">ציידות מתחילות עם בומרנג ייחודי שניתן לשדרג.</string>
     <string name="HeroClass_HunPerks_3">ציידות מרוויחות יותר בריאות מטללים.</string>
     <string name="HeroClass_MagPerks_4">מכשפים משתמשים במאנה כדי להטיל כישופים יסודיים.</string>
     <string name="HeroClass_MagPerks_5">מגילות הזיהוי כבר מזוהות מההתחלה.</string>
@@ -601,6 +605,7 @@
     <string name="PortalGate_Activated">השער העתיק התעורר!</string>
     <string name="PortalGate_Desc">החריטות על פני השער יוצרות דפוס מוזר. נראה כאילו זהו מנהרה ענקית המובילה למרחק. אבל כשמסתכלים מהצד, מתברר שהפני כמעט שטוחה.</string>
     <string name="PortalGate_Used">נגעת בשער ו... שום דבר לא קרה.</string>
+    <string name="Possess_Info">האומנות האפלה של שליטה במוח מאפשרת למטיל הכישוף לכופף את רצונן של רוב היצורים.</string>
     <string name="Potential_Txt">%s של פוטנציאל</string>
     <string name="PotionOfExperience_Name">שיקוי ניסיון</string>
     <string name="PotionOfInvisibility_Info">שתיית שיקוי זה תהפוך אותך לבלתי נראה זמנית. בעודך בלתי נראה, אויבים לא יוכלו לראות אותך. תקיפת אויב, כמו גם שימוש במקל או מגילה מול עיניהם, יבטלו את האפקט.</string>
@@ -635,6 +640,7 @@
     <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">אשפת עור המתאימה להחזיק כל כמות של חיצים</string>
+    <string name="RankingsScene_NoInfo">אין מידע נוסף</string>
     <string name="RatArmor_Name">שריון חולדות</string>
     <string name="RatHide_Name">עור חולדה</string>
     <string name="RatKing_Gender">masculine</string>
@@ -783,6 +789,7 @@
     <string name="SpiderMind_Name_Objective">עכביש-פסי</string>
     <string name="SpiderNest_Desc">הפקעת הזו עשויה מהמשי הדק ביותר ומסתירה משהו חי.</string>
     <string name="SpiderNest_Gender">neuter</string>
+    <string name="SpiderQueenCarapace_Info">רסיס משריון מלכת העכבישים. אפשר לראות חתיכה של בלוטת עכביש בתוכו, נראית כמעט חיה.</string>
     <string name="SpiderQueen_Desc">גוף של אישה יפה המשולב עם עכביש מחריד. כל היצורים החיים במאורה הזו הם משרתיה. מפגש עם הגברת יוצאת הדופן הזו עלול להתגלות כחוויה קטלנית. כי אתה פולש\!</string>
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name_Objective">מלכת העכבישים</string>
@@ -801,6 +808,7 @@
     <string name="StartScene_DifficultySelect">בחר את גורלך</string>
     <string name="StartScene_Load">טען משחק</string>
     <string name="StartScene_New">משחק חדש</string>
+    <string name="StartScene_No">לא, חזרה לתפריט הראשי</string>
     <string name="StartScene_Warning">ההתקדמות הנוכחית שלך במשחק תימחק.</string>
     <string name="StartScene_WinGame">כדי לפתוח \&quot;אתגרים\&quot;, נצח את המשחק עם כל סוג דמות.</string>
     <string name="Statue_Gender">feminine</string>
@@ -886,6 +894,7 @@
     <string name="Wand_Prompt">בחר כיוון לירי</string>
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
     <string name="WarHammer_Gender">masculine</string>
+    <string name="WarHammer_Info">מעטות היצורים שיכולות לעמוד בפני המכה המוחצת של המסה האדירה הזו של עופרת ופלדה, אבל רק ההרפתקנים החזקים ביותר יכולים להשתמש בה ביעילות.</string>
     <string name="WarHammer_Name">פטיש מלחמה</string>
     <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Name_Objective">מכשף גמדי</string>
@@ -1148,6 +1157,16 @@
 
 
     <string name="town_deco_wooden_drawer_desc">מעניין מה שמור בפנים.</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
