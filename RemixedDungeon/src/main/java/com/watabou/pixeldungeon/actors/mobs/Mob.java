@@ -77,6 +77,11 @@ public abstract class Mob extends Char {
     protected int maxLvl = 50;
     protected float carcassChance = ModdingBase.inMod() ? ModQuirks.defaultCarcassChance : 0.5f;
 
+    // caveman: scripts must be able to flag mobs as carcass-free (chess pieces)
+    public void setCarcassChance(float chance) {
+        carcassChance = chance;
+    }
+
     public static final float TIME_TO_WAKE_UP = 1f;
 
     private static final String STATE = "state";

@@ -176,7 +176,7 @@ local function animateMove(move_str, move_cells, target_chess_cells)
         local promoChar = string.len(move_str) >= 5 and string.sub(move_str, 5, 5) or 'q'
         local promoted = RPD.MobFactory:mobByName(pieces_set[promoChar] or 'Warlock')
         promoted.noResurrection = true
-        promoted.carcassChance = 0
+        promoted:setCarcassChance(0)
         promoted:setPos(move_cells[2])
         RPD.setAi(promoted, 'PASSIVE')
         RPD.Dungeon.level:spawnMob(promoted)
@@ -439,7 +439,7 @@ local function repairPieces()
                     if not mob or not mob:valid() or not mob:isAlive() then
                         local fresh = RPD.MobFactory:mobByName(pieces_set[piece])
                         fresh.noResurrection = true
-                        fresh.carcassChance = 0
+                        fresh:setCarcassChance(0)
                         fresh:setPos(cell)
                         RPD.setAi(fresh, 'PASSIVE')
                         RPD.Dungeon.level:spawnMob(fresh)
@@ -676,7 +676,7 @@ return actor.init({
 
                             -- caveman: pieces must not resurrect/reanimate - breaks the board
                             mob.noResurrection = true
-                            mob.carcassChance = 0
+                            mob:setCarcassChance(0)
                             mob:setPos(cell)
                             RPD.setAi(mob, "PASSIVE")
                             level:spawnMob(mob)
