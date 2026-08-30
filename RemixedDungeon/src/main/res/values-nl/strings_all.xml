@@ -464,6 +464,7 @@
     <string name="IceKey_Info">Deze sleutel lijkt van ijs gemaakt te zijn, maar hij is net zo hard als staal.</string>
     <string name="Ignite_Name">Ontbranden</string>
     <string name="ImpShopkeeper_Name">ambitieze duiveltje</string>
+    <string name="Imp_Cya">Tot ziens, %s!</string>
     <string name="Imp_Desc">Imps zijn mindere demonen. Ze zijn niet bekend om hun kracht of hun magisch talent, maar ze zijn behoorlijk slim en gezellig. Veel imps wonen liever tussen niet-demonen.</string>
     <string name="Imp_Golems2">Hoe gaat het met je golem-safari?</string>
     <string name="Imp_Monks1">Ben je een avonturier? Ik hou van avonturiers! Je kunt altijd op hen rekenen als er iets gedood moet worden. Heb ik gelijk? Voor een beloning, natuurlijk ;)\nIn mijn geval zijn het _monken_ die gedood moeten worden. Je ziet, ik wil hier een klein zakje beginnen, maar deze gekken kopen zelf niets en schrikken andere klanten weg. Dus alsjeblieft, dood... laten we zeggen _8 van hen_ en de beloning is van jou.</string>
@@ -1276,6 +1277,7 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 

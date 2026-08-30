@@ -1066,6 +1066,7 @@
     <string name="WndLocalModInstall_pick">Chọn thư mục mod</string>
     <string name="WndModInstall_Version">phiên bản</string>
     <string name="WndModSelect_ReallyDelete">Thực sự xóa?</string>
+    <string name="WndModsDisclaimer_manage">Quản lý mod</string>
     <string name="WndMovieTheatre_Bye">Hãy quay lại bất cứ lúc nào, chúng tôi luôn hoan nghênh bạn!</string>
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
     <string name="WndMovieTheatre_Title">Rạp Phim</string>
@@ -1233,6 +1234,7 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

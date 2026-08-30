@@ -27,6 +27,7 @@
     <string name="AirElemental_Name">אלמנטל אוויר</string>
     <string name="AlarmTrap_Desc">המלכודת משמיעה קול חודר שמהדהד בכל הצינוק!</string>
     <string name="Albino_Gender">masculine</string>
+    <string name="Albino_Name_Objective">עכבר לבקן</string>
     <string name="AllowStatisticsCollectionScene_Allow">אפשר</string>
     <string name="AllowStatisticsCollectionScene_Deny">לסרב</string>
     <string name="AllowStatisticsCollectionScene_Title">איסוף סטטיסטיקות שימוש</string>
@@ -1435,6 +1436,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

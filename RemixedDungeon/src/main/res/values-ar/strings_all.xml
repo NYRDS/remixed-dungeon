@@ -591,6 +591,7 @@
     <string name="PetInventory_PetBackpackFull">حقيبة الحيوان الأليف ممتلئة</string>
     <string name="PetInventory_TakeN">خذ %d</string>
     <string name="PetInventory_Title">مخزن الحيوانات الأليفة</string>
+    <string name="Pickaxe_ACMine">تعدين</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_InsufficientStr">قوة غير كافية للتعدين!</string>
     <string name="Pickaxe_Name">كريكة</string>
@@ -1114,6 +1115,7 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
 
 
 
