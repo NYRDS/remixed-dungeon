@@ -41,9 +41,21 @@ need; it costs a small new AI state up front.
 
 ## The puppet
 
-A normal `Mob` of a real mob type (rat, spider — no new Char class), made a
-pet of the hero, placed in a new AI state `RemoteAi` (tag
-`RemoteControlled`).
+A normal `Mob` of a real mob type (rat, spider — no new Char class), placed in
+a new AI state `RemoteAi` (tag `RemoteControlled`).
+
+**Stance toward the dungeon hero is the driver's choice** (`stance=friend|foe`
+at spawn/possess), not baked in:
+
+- `friend` → `Mob.makePet(mob, hero)` — HEROES fraction: dungeon mobs hunt it,
+  hero's side treats it as friendly, and pet plumbing gives it level-transfer
+  following.
+- `foe` → untouched dungeon mob — DUNGEON fraction, owns itself: hero and pets
+  treat it as an enemy, and it can be commanded to attack the hero.
+
+`RemoteAi` itself is fraction-blind: friend/foe is pure Fraction/ownership
+state, orthogonal to who drives the char. `release` drops remote control but
+does not change allegiance.
 
 ### `RemoteAi` contract
 
@@ -92,8 +104,8 @@ pet of the hero, placed in a new AI state `RemoteAi` (tag
 
 | Endpoint | Behavior |
 |---|---|
-| `/debug/remote/spawn?type=Rat&x=&y=&revertAfter=` | spawn via `MobFactory`, `makePet(hero)`, `setState(RemoteAi)` → `{id}` |
-| `/debug/remote/possess?id=&revertAfter=` | flip an existing mob to remote; remembers its current state as the revert target |
+| `/debug/remote/spawn?type=Rat&x=&y=&stance=&revertAfter=` | spawn via `MobFactory`, apply stance (`friend` → `makePet(hero)`, `foe` → untouched), `setState(RemoteAi)` → `{id}` |
+| `/debug/remote/possess?id=&stance=&revertAfter=` | flip an existing mob to remote; applies stance change if given; remembers its current state as the revert target |
 | `/debug/remote/release?id=` | immediate revert to remembered state (same path as watchdog) |
 | `/debug/remote/list` | derive from live mobs whose state tag is `RemoteControlled` — no registry to keep in sync |
 | `/debug/char_status?id=` | `hero_status` shape for any char: `alive`, `hp`, `ht`, `pos`, `x`, `y`, `action`, `levelId`, plus `type`, `fraction`, `remote`, `reverted`; works regardless of hero FOV |
@@ -111,17 +123,24 @@ pet of the hero, placed in a new AI state `RemoteAi` (tag
   no-ops.
 - **Hero death with live puppets** → normal game-over takes everyone.
   Accepted for slices 1-2; slice 3 revisits (spectator mode).
+- **`foe` puppets are level-bound.** Level-transfer following comes from pet
+  plumbing (`followOnLevelChanged`), so only `friend` puppets follow the hero
+  through stairs. A `foe` puppet stays on its level.
 - **All clock and queue manipulation on the GL thread** via
   `GameLoop.pushUiTask` — the queue is not thread-safe (same discipline as
   every existing mutating endpoint).
 
 ## Test plan (`tests/http_api/test_remote_chars.py`)
 
-- spawn → `char_status` idle → `move_to` walk to a cell → reaches it
+- friend puppet: spawn → `char_status` idle → `move_to` walk → reaches it;
+  `friendly(hero)` holds
+- foe puppet: commanded to attack the hero (lands hits, hero HP drops); hero
+  and pets see it as an enemy
 - tap on a dungeon mob resolves Attack and the puppet lands hits
 - two puppets, interleaved walks (multi-agent kernel)
 - `reload_game` → puppet still alive, still `RemoteControlled`, same id
-- descend with puppet following → pet-transfer path (follower-bug territory)
+- descend with friend puppet following → pet-transfer path (follower-bug
+  territory)
 - watchdog: puppet with no commands for `revertAfter` turns reverts and
   resumes default AI
 
