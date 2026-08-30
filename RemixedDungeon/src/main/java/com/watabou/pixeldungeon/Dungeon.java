@@ -1096,7 +1096,10 @@ public class Dungeon {
             EventCollector.logException(Utils.format("visibility check on %d", cell));
             return false;
         }
-        return visible[cell];
+        // caveman: validate against the array itself - mid-transition level()
+        // and visible[] can disagree (stale level passed 766 on a 256-cell
+        // level) and the AIOOBE here killed the render thread.
+        return visible != null && cell >= 0 && cell < visible.length && visible[cell];
     }
 
     public static boolean isNorthWallVisible(int cell) {
