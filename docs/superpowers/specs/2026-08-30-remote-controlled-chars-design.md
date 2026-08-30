@@ -1,7 +1,7 @@
 # Remote-Controlled Chars — Design
 
 Date: 2026-08-30
-Status: approved direction (approach B — direct drive), slice 1 pending implementation plan
+Status: slice 1 implemented (see docs/superpowers/plans/2026-08-30-remote-controlled-chars.md)
 Related: LLM control surface (`observe`/`get_map`/`hero_status`/`move_to`), beads roadmap snap-rgt/snap-84s/snap-3kj/snap-bjl
 
 ## Purpose
