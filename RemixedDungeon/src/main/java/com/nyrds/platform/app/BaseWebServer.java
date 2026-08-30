@@ -96,6 +96,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
         debugEndpoints.put("/debug/remote/possess", DebugEndpoints::handleRemotePossess);
         debugEndpoints.put("/debug/remote/release", DebugEndpoints::handleRemoteRelease);
         debugEndpoints.put("/debug/remote/list", DebugEndpoints::handleRemoteList);
+        debugEndpoints.put("/debug/char_status", DebugEndpoints::handleCharStatus);
     }
 
     public static boolean isRunning() {

@@ -2847,6 +2847,7 @@ public class DebugEndpoints {
                 mobJson.put("state", mob.getState().getClass().getSimpleName());
                 mobJson.put("dist", level.distance(heroPos, mobPos));
                 mobJson.put("owned", mob.getOwnerId() == hero.getId());
+                mobJson.put("remote", isRemote(mob));
                 mobsJson.put(mobJson);
             }
             root.put("mobs", mobsJson);
@@ -3384,6 +3385,68 @@ public class DebugEndpoints {
                 new JSONObject(response).toString());
         } catch (Exception e) {
             GLog.w("Error in handleRemoteList: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    // GET /debug/char_status?id= - hero_status shape for any char on the level
+    public static NanoHTTPD.Response handleCharStatus(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            int id = -1;
+            if (query != null && !query.isEmpty()) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        try {
+                            id = Integer.parseInt(java.net.URLDecoder.decode(param.substring(3), "UTF-8"));
+                        } catch (NumberFormatException ignored) {
+                        }
+                    }
+                }
+            }
+
+            if (Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Game state not initialized - start a game first").toString());
+            }
+
+            Mob mob = findMobById(id);
+            if (mob == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.NOT_FOUND, "application/json",
+                    createErrorResponse("No mob with id " + id).toString());
+            }
+
+            int pos = mob.getPos();
+            int width = Dungeon.level.getWidth();
+            var action = mob.getCurAction();
+            String actionName = (action == null) ? "idle" : action.getClass().getSimpleName();
+
+            // one-shot: the driver learns the watchdog fired
+            boolean reverted = mob.remoteReverted;
+            mob.remoteReverted = false;
+
+            String jsonString = String.format(
+                "{\"alive\":%b,\"hp\":%d,\"ht\":%d,\"pos\":%d,\"x\":%d,\"y\":%d," +
+                    "\"action\":\"%s\",\"levelId\":\"%s\",\"depth\":%d," +
+                    "\"type\":\"%s\",\"fraction\":\"%s\",\"remote\":%b,\"reverted\":%b,\"revertAfter\":%d}",
+                mob.isAlive(),
+                mob.hp(),
+                mob.ht(),
+                pos, pos % width, pos / width,
+                actionName,
+                DungeonGenerator.getCurrentLevelId(),
+                Dungeon.depth,
+                mob.getEntityKind(),
+                mob.fraction().name(),
+                isRemote(mob),
+                reverted,
+                mob.remoteRevertAfter
+            );
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", jsonString);
+        } catch (Exception e) {
+            GLog.w("Error in handleCharStatus: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
