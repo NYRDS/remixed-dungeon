@@ -105,6 +105,7 @@
     <string name="Barrel_Name">vat</string>
     <string name="Barrel_Pumpkin_Name">pompoen</string>
     <string name="Bat_Defense">ontweken</string>
+    <string name="Bat_Desc">Deze kwieke en taaie bewoners van grotkoepels kunnen grotere tegenstanders verslaan door bij elke succesvolle aanval hun gezondheid aan te vullen.</string>
     <string name="Bat_Gender">masculine</string>
     <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">Het enorme staande hoofd van deze strijdbijl geeft een aanzienlijk gewicht achter elke slag.</string>
@@ -243,6 +244,7 @@
     <string name="CloakBuff_Name">Verguld</string>
     <string name="ClothArmor_Desc">Deze lichte bepantsering biedt eenvoudige bescherming.</string>
     <string name="ClothArmor_Name">stoffen pantser</string>
+    <string name="Codex_Info">Een van de vele boeken die in elke bibliotheek te vinden zijn</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="Codex_Story_12">Brandid wapen - Bij een succesvolle treffer geeft dit extra schade en kan het doel in brand steken.</string>
@@ -311,6 +313,7 @@
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_DeadEnd">Wat doe je hier?!</string>
     <string name="Dungeon_NoTips">De tekst is onleesbaar...</string>
+    <string name="Dungeon_Tips_0">Overschat je kracht niet, gebruik wapens en uitrusting die je aankunt.</string>
     <string name="Dungeon_Tips_12">Als je brandt en zweeft, kun je het vuur niet in water uithassen.</string>
     <string name="Dungeon_Tips_14">GEVAAR! Zware machines kunnen letsel, verlies van ledematen of de dood veroorzaken!</string>
     <string name="Dungeon_Tips_16">Wanneer je een getoverde wapen verbetert, is er een kans dat de toverij vernietigd wordt.</string>
@@ -545,6 +548,7 @@
     <string name="LloidsBeacon_ACReturn">TERUGKEER</string>
     <string name="LloidsBeacon_Info">De baken van Lloyd is een ingewikkeld magisch apparaat waarmee je kunt terugkeren naar een plek waar je al eerder bent geweest.</string>
     <string name="LloidsBeacon_Preventing">Een soort sterke magische aura die hier aanwezig is voorkomt dat je Lloyds boei kunt gebruiken!</string>
+    <string name="LloidsBeacon_Return">De baken van Lloyd is succesvol geplaatst op je huidige locatie, nu kun je hier altijd terugkeren.</string>
     <string name="LloidsBeacon_Set">\n\nDeze beacon is ergens op niveau %d van Remixed Dungeon ingesteld.</string>
     <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Name">langzwaard</string>
@@ -610,6 +614,7 @@
     <string name="NecromancerNPC_Name">nekromant</string>
     <string name="NecromancerRobe_Info">Dit gewaad stelt de Nekromant in staat om een Doodsling op te roepen ten koste van 5 zielen. De Doodsling is een ondode dienaar die sterker wordt samen met zijn meester.</string>
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
+    <string name="Necromancy_SoulsCountLabel">Zielen</string>
     <string name="Necromancy_Title">Necromantie</string>
     <string name="Necrotism_ACSpecial">NECROTISME</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
@@ -1271,5 +1276,10 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
 
 </resources>

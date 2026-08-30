@@ -146,6 +146,7 @@
     <string name="Bowknot_Info">شريط وردي لامع جميل مربوط بعقدة ومثبت بدبوس شعر.</string>
     <string name="Brute_Desc">الغوغاء هم الأكبر والأقوى والأكثر صلابة بين جميع الغنول. عندما يُصابون بجروح بالغة، يفقدون السيطرة ويلحقون ضرراً أكبر بأعدائهم.</string>
     <string name="Brute_Gender">masculine</string>
+    <string name="BurningBuff_Info">الجسم ملتهب بلهب متوهج!</string>
     <string name="BurningBuff_Name">مشتعل</string>
     <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">قبضة محرقة</string>
@@ -180,6 +181,7 @@
     <string name="ChampionOfEarthBuff_Info">يجسد بطل الأرض قوة لا تلين، حيث تعزز هذه السمة مقاومة المخلوق للضرر وتزيد من حيويته القصوى. يجعل هذا التحول منه خصمًا مرعبًا في الأعماق الغادرة، قادرًا على صد الهجمات بسهولة وتحمل معارك مطولة بعزيمة لا تلين.</string>
     <string name="ChampionOfFireBuff_Info">\&quot;منقوعًا بغضب اللهب، تضخّم هذه السمة شراسة المخلوق وبراعته القتالية. يبرز بطل النار كخصم مخيف، مطلقًا هجمات مدمرة يمكن أن تبتلع أعداءه في لهيب حارق، وتزرع الرعب في كل من يجرؤ على معارضته.</string>
     <string name="ChampionOfFireBuff_Name">بطل النار</string>
+    <string name="ChampionOfWaterBuff_Info">يجسد بطل الماء قوة المحيطات التي لا تُقهر، مما يعزز مرونة وصلابة المخلوق. ونتيجة لذلك، يصبح خصمًا ثابتًا، قادرًا على تحمل وابل لا هوادة فيه من الهجمات والوقوف كحارس لا يتزعزع في وجه الشدائد.</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">شفرة يد واحدة من الفوضى النقية. تنمو مع القتال مثل نظيرتها ذات اليدين، ولكن ببطء أكبر وإمكانات أقل — مما يترك يدك الحرة لدرع.</string>
     <string name="ChaosBlade_Name">شفرة الفوضى</string>
@@ -532,6 +534,7 @@
     <string name="MeleeWeapon_Info6b">بسبب قوتك الزائدة، تم زيادة ضرر هجومك بهذا %s.</string>
     <string name="MeleeWeapon_Info7c">يمكنك الشعور بسحر شرير يكمن داخل %s.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
+    <string name="MercenaryNPC_Name">مرتزق</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">مُقلِّد</string>
     <string name="MimicPie_Desc">الميماكس كائنات سحرية يمكنها اتخاذ أي شكل تريده. هذا يشبه فطيرة كبيرة ولذيذة.</string>
@@ -1111,5 +1114,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 </resources>

@@ -123,6 +123,7 @@
     <string name="Brute_Desc">ברוטים הם הגדולים, החזקים והקשוחים ביותר מכל הגנולים. כשהם נפצעים קשה, הם משתוללים וגורמים נזק רב עוד יותר לאויביהם.</string>
     <string name="Brute_Enraged">%s נכנס לזעם!</string>
     <string name="Brute_Gender">masculine</string>
+    <string name="BurningBuff_Info">הגוף לכוד בלהבות בוערות!</string>
     <string name="BurningBuff_Name">בוער</string>
     <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">אגרוף בוער</string>
@@ -165,6 +166,7 @@
     <string name="ChampionOfEarthBuff_Info">אלוף האדמה מגלם כוח בלתי מתפשר, שכן תכונה זו משפרת את עמידות היצור לנזק ומגדילה את החיוניות המקסימלית שלו. שינוי זה הופך אותו לאויב מאיים במעמקים המסוכנים, המסוגל להדוף התקפות בקלות ולהחזיק מעמד בקרב ממושך עם נחישות בלתי מעורערת.</string>
     <string name="ChampionOfFireBuff_Info">\&quot;שרוי בזעם הלהבות, מאפיין זה מגביר את האכזריות ואת כוח הלחימה של היצור. אלוף האש צץ כיריב מאיים, המשחרר מתקפות הרסניות שיכולות לעטוף את אויביו בלהבות צורבות, מטיל אימה בכל מי שמעז להתנגד לו.</string>
     <string name="ChampionOfFireBuff_Name">אלוף האש</string>
+    <string name="ChampionOfWaterBuff_Info">אלוף המים מגלם את כוח האוקיינוסים הבלתי מתפשר, ומשפר את החוסן והעוז של היצור. כתוצאה מכך, הוא הופך ליריב איתן, המסוגל לעמוד במתקפה בלתי פוסקת של התקפות ולעמוד כשומר בלתי מתפשר מול המצוקות.</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">להב חד-ידני של כאוס טהור. הוא גדל עם קרבות כמו בן דודו הדו-ידני, אבל לאט יותר ולפוטנציאל נמוך יותר — ומשאיר את היד השנייה חופשית למגן.</string>
     <string name="ChaosBlade_Name">להב כאוס</string>
@@ -517,6 +519,7 @@
     <string name="MeleeWeapon_Info3d">ו</string>
     <string name="MeleeWeapon_Info5">זה מכושף.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
+    <string name="MercenaryNPC_Name">שכיר חרב</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">מימיק</string>
     <string name="MimicPie_Desc">מימיקים הם יצורים קסומים שיכולים לקבל כל צורה שירצו. זה נראה כמו מאפה גדול וטעים</string>
@@ -1432,5 +1435,8 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
 
 </resources>

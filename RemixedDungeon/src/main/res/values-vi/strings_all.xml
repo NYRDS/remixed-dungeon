@@ -130,6 +130,7 @@
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="BodyArmorBuff_Name">Giáp Cơ Thể</string>
     <string name="BoneSaw_Info">Một cái cạo phẫu thuật được thiết kế chính xác để thâm nhiễm nhanh chóng. Sát thương và tốc độ tấn công của nó trở nên nguy hiểm hơn cùng với kỹ năng của Bác sĩ Chết Chóc. Các đòn chí mạng cắt thêm các phần có thể thu hoạch từ kẻ thù, và nó tấn công với hiệu quả tàn nhẫn đối với kẻ thù bị tê liệt.</string>
+    <string name="BoneSaw_Name">Cưa Xương</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Bow_Info1">Đây là vũ khí tầm xa. Nó vô dụng với mọi người trừ tinh linh ở cự ly rất gần. Trang bị cung cho phép bạn bắn tên.\n\n</string>
     <string name="Brute_Desc">Quái nhân là những kẻ to lớn, mạnh mẽ và cứng rắn nhất trong tất cả các gnoll. Khi bị thương nặng, chúng phát cuồng và gây sát thương lớn hơn cho kẻ thù.</string>
@@ -480,6 +481,7 @@
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">chủ quán</string>
     <string name="InnKeeperNPC_Name_Objective">chủ quán</string>
+    <string name="InnServant_Phrase_2">Gã say rượu này khiến tôi phát điên!</string>
     <string name="Instability_Name_0">Bất ổn %s</string>
     <string name="Instability_Name_1">Bất ổn %s</string>
     <string name="Instability_Name_2">Bất ổn %s</string>
@@ -488,6 +490,7 @@
     <string name="InterLevelScene_Loading">Đang tải...</string>
     <string name="InterLevelScene_Returning">Đang quay lại...</string>
     <string name="IntroScene_Txt">Nhiều anh hùng đủ mọi loại đã mạo hiểm vào Ngục Trại trước bạn. Một số đã trở về với kho báu và pháp thuật, hầu hết thì không bao giờ được nghe tin tức. Nhưng không ai thành công trong việc lấy được Huyền Chương Yendor, đồ vật được cho là chôn sâu trong lòng Ngục Trại. Bạn cảm thấy mình đã sẵn sàng cho thử thách, và quan trọng hơn, bạn tin rằng may mắn đang mỉm cười với bạn. Đã đến lúc bắt đầu cuộc phiêu lưu của mình!</string>
+    <string name="InventoryScroll_Warning">Bạn có thực sự muốn hủy việc sử dụng cuộn giấy này không? Nó sẽ bị tiêu hao dù sao.</string>
     <string name="InvisibilityBuff_Info">Hoàn toàn vô hình, có thể giúp tránh nguy hiểm hoặc trở thành nguy hiểm.</string>
     <string name="IronKey_FromDepth">chìa khóa sắt từ độ sâu %d</string>
     <string name="Item_Info2">điều gì đó</string>
@@ -709,6 +712,7 @@
     <string name="Pumpkin_Name">Bí ngô</string>
     <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quiver_Gender">masculine</string>
+    <string name="Quiver_Info">Ống đựng tên bằng da phù hợp để chứa bất kỳ số lượng mũi tên nào</string>
     <string name="RabbitEars_Info">Có quan niệm rằng thỏ sinh ra đã mang may mắn, và người sở hữu một phần cơ thể của nó sẽ được thú cưng ấy ban cho vận may. Nghĩ kỹ lại, bị giết chỉ vì đôi tai của bạn – thứ sẽ dùng để làm đồ trang sức – nghe có vẻ không mấy may mắn.</string>
     <string name="RankingsScene_Title">Bảng Xếp Hạng Cao Nhất</string>
     <string name="RatArmor_Name">giáp chuột</string>
@@ -1170,6 +1174,7 @@
     <string name="town_deco_counter_name">Quầy</string>
     <string name="town_deco_crate_bottles_desc">Chai bia đã trở thành một sở thích rất phổ biến giữa các chủ quán rượu.</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
+    <string name="town_deco_crate_scrolls_name">Thùng đựng cuộn giấy</string>
     <string name="town_deco_cross_desc">Một chiếc thập giá bạc nguyên khối, biểu tượng của tôn giáo địa phương - \&quot;Các Nhân chứng của Santa Chúa Tể Vực Sâu\&quot;.</string>
     <string name="town_deco_crossroad_name">Biển chỉ đường ngã tư</string>
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
@@ -1228,5 +1233,10 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
 
 </resources>
