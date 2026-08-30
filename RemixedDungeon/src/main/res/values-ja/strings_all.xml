@@ -1414,7 +1414,7 @@
     <string name="Mob_Desc">本当の説明は近日公開！</string>
     <string name="Mob_Died">あなたは何かが死ぬ音を聞いた</string>
     <string name="Mob_GoingTo">もう行っている!</string>
-    <string name="Mob_ItemUse">%1が%2を使用</string>
+    <string name="Mob_ItemUse">%1$sが%2$sを使用</string>
     <string name="Mob_ReadyForOrder">%sは命令を待っている。</string>
     <string name="Mob_StaAmokStatus">%1$sが暴走している</string>
     <string name="Mob_StaControlledStatus">この%sは既に不浄なものに精神を支配されている</string>

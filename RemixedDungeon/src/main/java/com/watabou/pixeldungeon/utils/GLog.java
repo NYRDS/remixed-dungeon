@@ -104,7 +104,15 @@ public class GLog {
 		}
 
 		if (args.length > 0) {
-			text = Utils.format( text, args );
+			// caveman: a malformed l10n format (bare %1/%2 from Android-style
+			// imports) thrown here aborted the whole update step - the world
+			// never advanced past that actor (turn loop wedge). Log the raw
+			// text instead of dying on the format.
+			try {
+				text = Utils.format( text, args );
+			} catch (Exception e) {
+				PUtil.slog(TAG, "format failed for \"" + text + "\": " + e.getMessage());
+			}
 		}
 
 		if(text.isEmpty()) {

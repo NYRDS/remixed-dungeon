@@ -1403,7 +1403,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Mob_Desc">Deskripsi sebenarnya akan datang!</string>
     <string name="Mob_Died">Anda mendengar ada sesuatu mati di kejauhan</string>
     <string name="Mob_GoingTo">Sudah dalam perjalanan!</string>
-    <string name="Mob_ItemUse">%1 menggunakan %2</string>
+    <string name="Mob_ItemUse">%1$s menggunakan %2$s</string>
     <string name="Mob_ReadyForOrder">%s siap untuk pesanan Anda.</string>
     <string name="Mob_StaAmokStatus">%1$s ini mengamuk</string>
     <string name="Mob_StaControlledStatus">%s ini ada dibawah kendali jahat</string>

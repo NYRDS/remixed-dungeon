@@ -1415,7 +1415,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Mob_Desc">Prawdziwe opisy pojawią się wkrótce!</string>
     <string name="Mob_Died">Usłyszałeś jak coś gdzieś umarło.</string>
     <string name="Mob_GoingTo">Nadchodzi!</string>
-    <string name="Mob_ItemUse">%1 używa %2</string>
+    <string name="Mob_ItemUse">%1$s używa %2$s</string>
     <string name="Mob_ReadyForOrder">%s gotowy na twoje rozkazy</string>
     <string name="Mob_StaAmokStatus">%1$s biegnie w szale</string>
     <string name="Mob_StaControlledStatus"> %s jest objęty władaniem siły nieczystej</string>

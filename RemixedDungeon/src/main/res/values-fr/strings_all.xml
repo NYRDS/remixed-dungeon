@@ -1410,7 +1410,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Mob_Desc">La vraie description arrive bientôt !</string>
     <string name="Mob_Died">Vous entendez quelque chose mourir au loin</string>
     <string name="Mob_GoingTo">Déjà en mouvement !</string>
-    <string name="Mob_ItemUse">%1 utilise %2</string>
+    <string name="Mob_ItemUse">%1$s utilise %2$s</string>
     <string name="Mob_ReadyForOrder">%s attend votre ordre.</string>
     <string name="Mob_StaAmokStatus">Ce %1$s pète un plomb</string>
     <string name="Mob_StaControlledStatus">%s est sous votre possession sacrilège</string>

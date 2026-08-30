@@ -1414,7 +1414,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Mob_Desc">¡Pronto tendremos una descripción más fiable!</string>
     <string name="Mob_Died">Oyes algo morir a lo lejos.</string>
     <string name="Mob_GoingTo">¡Ya voy!</string>
-    <string name="Mob_ItemUse">%1 usa %2</string>
+    <string name="Mob_ItemUse">%1$s usa %2$s</string>
     <string name="Mob_ReadyForOrder">%slisto para usarse.</string>
     <string name="Mob_StaAmokStatus">%1$sestá corriendo sin control</string>
     <string name="Mob_StaControlledStatus">Este %s esta bajo posesión impía.</string>

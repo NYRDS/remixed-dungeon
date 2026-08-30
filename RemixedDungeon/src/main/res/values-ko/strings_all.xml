@@ -1402,7 +1402,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Mob_Desc">진짜 설명은 곧 나올 예정입니다!</string>
     <string name="Mob_Died">당신은 저 멀리서 무언가가 죽는 소리를 들었습니다.</string>
     <string name="Mob_GoingTo">Menuju</string>
-    <string name="Mob_ItemUse">%1가 %2을(를) 사용함</string>
+    <string name="Mob_ItemUse">%1$s가 %2$s을(를) 사용함</string>
     <string name="Mob_ReadyForOrder">%s이(가) 명령을 받기를 기다리고 있습니다.</string>
     <string name="Mob_StaAmokStatus">이 %1$s은/는 광란에 빠졌습니다</string>
     <string name="Mob_StaControlledStatus">이 %s는 사악한 존재에게 정신을 지배당하고 있습니다.</string>

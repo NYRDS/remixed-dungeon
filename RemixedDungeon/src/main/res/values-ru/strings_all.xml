@@ -1406,7 +1406,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Mob_Desc">Настоящее описание скоро появится!</string>
     <string name="Mob_Died">Ты слышишь, как что-то умерло вдали</string>
     <string name="Mob_GoingTo">Уже бегу!</string>
-    <string name="Mob_ItemUse">%1 использует %2</string>
+    <string name="Mob_ItemUse">%1$s использует %2$s</string>
     <string name="Mob_ReadyForOrder">Субъект %s готов к вашим указаниям.</string>
     <string name="Mob_StaAmokStatus">%1$s в безумной ярости</string>
     <string name="Mob_StaControlledStatus">Воля существа %s сломлена одержимостью </string>

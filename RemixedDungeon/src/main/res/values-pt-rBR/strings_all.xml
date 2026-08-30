@@ -1409,7 +1409,7 @@ Parede
     <string name="Mob_Desc">A descrição real está chegando em breve!</string>
     <string name="Mob_Died">Você ouve algo morrer a distância.</string>
     <string name="Mob_GoingTo">Já está indo!</string>
-    <string name="Mob_ItemUse">%1 usa %2</string>
+    <string name="Mob_ItemUse">%1$s usa %2$s</string>
     <string name="Mob_ReadyForOrder">%s pronto para o seu pedido.</string>
     <string name="Mob_StaAmokStatus">%1$s está enlouquecendo</string>
     <string name="Mob_StaControlledStatus">Este %s está sob possessão maligna</string>

@@ -1405,7 +1405,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Mob_Desc">Keterangan sebenar akan muncul sebentar lagi!</string>
     <string name="Mob_Died">Anda dengar ada benda yang mati dari jauh</string>
     <string name="Mob_GoingTo">Sudah pergi!</string>
-    <string name="Mob_ItemUse">%1 menggunakan %2</string>
+    <string name="Mob_ItemUse">%1$s menggunakan %2$s</string>
     <string name="Mob_ReadyForOrder">%s sedia menerima arahan anda.</string>
     <string name="Mob_StaAmokStatus">%1$s ini sedang mengamok</string>
     <string name="Mob_StaControlledStatus">%s ini di bawah pengaruhi kegelapan</string>

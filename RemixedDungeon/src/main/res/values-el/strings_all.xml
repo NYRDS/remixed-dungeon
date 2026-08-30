@@ -1407,7 +1407,7 @@
     <string name="Mob_Desc">Η περιγραφή θα προστεθεί σύντομα!</string>
     <string name="Mob_Died">Άκουσες κάτι να πεθαίνει στο βάθος</string>
     <string name="Mob_GoingTo">Έφυγα!</string>
-    <string name="Mob_ItemUse">%1 χρησιμοποιεί %2</string>
+    <string name="Mob_ItemUse">%1$s χρησιμοποιεί %2$s</string>
     <string name="Mob_ReadyForOrder">%s, στις διαταγές σου.</string>
     <string name="Mob_StaAmokStatus">- %1$s σε αμόκ</string>
     <string name="Mob_StaControlledStatus">- %s υπό ανίερη κατοχή</string>

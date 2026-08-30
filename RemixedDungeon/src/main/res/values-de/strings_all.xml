@@ -1417,7 +1417,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="Mob_Desc">Richtige Beschreibung folgt!</string>
     <string name="Mob_Died">Du hörst wie etwas in der Ferne stirbt</string>
     <string name="Mob_GoingTo">Bereits unterwegs!</string>
-    <string name="Mob_ItemUse">%1 benutzt %2</string>
+    <string name="Mob_ItemUse">%1$s benutzt %2$s</string>
     <string name="Mob_ReadyForOrder">%sfür deine Bestellung bereit.</string>
     <string name="Mob_StaAmokStatus">Dieser %1$s läuft Amok</string>
     <string name="Mob_StaControlledStatus">Diese/r/s %s ist in unheiligem Besitz</string>

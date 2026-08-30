@@ -1438,7 +1438,7 @@
     <string name="Mob_Desc">Справжній опис буде пізніше!</string>
     <string name="Mob_Died">Ти чуєш, що щось померло в далечі</string>
     <string name="Mob_GoingTo">Вже біжу!</string>
-    <string name="Mob_ItemUse">%1 використовує %2</string>
+    <string name="Mob_ItemUse">%1$s використовує %2$s</string>
     <string name="Mob_ReadyForOrder">%s готовий до ваших наказів.</string>
     <string name="Mob_StaAmokStatus">%1$s поводиться несамовито</string>
     <string name="Mob_StaControlledStatus">Цей %s під нечестивим контролем</string>

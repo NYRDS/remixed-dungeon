@@ -1412,7 +1412,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Mob_Desc">Gerçek açıklama yakında gelecek!</string>
     <string name="Mob_Died">Uzakta birşeyin öldüğünü duydun</string>
     <string name="Mob_GoingTo">Zaten gidiyor!</string>
-    <string name="Mob_ItemUse">%1 %2 kullanır</string>
+    <string name="Mob_ItemUse">%1$s %2$s kullanır</string>
     <string name="Mob_ReadyForOrder">%s siparişiniz için hazır.</string>
     <string name="Mob_StaAmokStatus">Bu %1$s, delidana gibi koşuyor.</string>
     <string name="Mob_StaControlledStatus">Bu %s kutsal olmayan bir şekilde ele geçirilmiş.</string>
