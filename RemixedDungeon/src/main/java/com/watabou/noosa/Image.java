@@ -18,6 +18,10 @@ import lombok.Getter;
 public class Image extends Visual implements IPlaceable {
 
     public SmartTexture texture;
+
+    // caveman: images already reported for null texture (see draw())
+    private static java.util.Set<Integer> noTextureReported;
+
     protected RectF frame;
 
     public boolean flipHorizontal;
@@ -172,6 +176,21 @@ public class Image extends Visual implements IPlaceable {
     public void draw() {
 
         super.draw();
+
+        // caveman: snap-brm - a texture-less image drew mid-scene-build (group
+        // build runs on the update thread, draw on main) and the NPE killed the
+        // whole render loop. nothing to draw here anyway - skip and report once.
+        if (texture == null) {
+            if (noTextureReported == null) {
+                noTextureReported = new java.util.HashSet<>();
+            }
+            if (noTextureReported.add(hashCode())) {
+                System.out.println("[null-texture] " + getClass().getName()
+                    + " hash=" + hashCode());
+                new Exception("image construction stack").printStackTrace(System.out);
+            }
+            return;
+        }
 
         NoosaScript script = NoosaScript.get();
 
