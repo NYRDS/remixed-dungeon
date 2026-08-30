@@ -2901,6 +2901,105 @@ public class DebugEndpoints {
         }
     }
 
+    // caveman: tap on a cell - the exact path a human screen tap takes
+    // (Hero.handle -> CharUtils.actionForCell). empty passable cell ->
+    // pathfinding walk; mob -> attack; heap -> pickup/open; stairs -> descend;
+    // locked door -> unlock; object -> interact. agent does not re-derive
+    // any of that. poll hero_status until action==idle to know when done.
+    public static NanoHTTPD.Response handleDebugMoveTo(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            int x = -1, y = -1;
+            int cell = -1;
+
+            if (query != null && !query.isEmpty()) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("x=")) {
+                        x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                    } else if (param.startsWith("y=")) {
+                        y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                    } else if (param.startsWith("cell=")) {
+                        cell = Integer.parseInt(java.net.URLDecoder.decode(param.substring(5), "UTF-8"));
+                    }
+                }
+            }
+
+            if (Dungeon.hero == null || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Game not initialized - start a game first").toString());
+            }
+
+            var hero = Dungeon.hero;
+
+            if (!hero.isReady()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.CONFLICT, "application/json",
+                    createErrorResponse("Hero is busy, poll hero_status until action==idle").toString());
+            }
+
+            if (x >= 0 && y >= 0) {
+                cell = x + y * Dungeon.level.getWidth();
+            }
+
+            if (cell < 0 || !Dungeon.level.cellValid(cell)) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Missing or invalid coordinates. Provide x&y or cell").toString());
+            }
+
+            final int targetCell = cell;
+
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            final String[] error = new String[1];
+            final String[] preview = new String[1];
+
+            GameLoop.pushUiTask(() -> {
+                try {
+                    // preview the resolution for the response, then tap for real.
+                    // hero.handle does the same resolution internally.
+                    Dungeon.level.updateFieldOfView(hero);
+                    var action = com.watabou.pixeldungeon.actors.CharUtils.actionForCell(hero, targetCell, Dungeon.level);
+                    preview[0] = action.toString();
+
+                    if (action.valid()) {
+                        hero.handle(targetCell);
+                    } else {
+                        error[0] = "No action possible at cell " + targetCell;
+                    }
+                } catch (Exception e) {
+                    error[0] = "Error in move_to: " + e.getMessage();
+                    GLog.n(error[0]);
+                } finally {
+                    latch.countDown();
+                }
+            });
+
+            if (!latch.await(5, java.util.concurrent.TimeUnit.SECONDS)) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse("Timeout waiting for move_to").toString());
+            }
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse(error[0]).toString());
+            }
+
+            int respX = targetCell % Dungeon.level.getWidth();
+            int respY = targetCell / Dungeon.level.getWidth();
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", true);
+            response.put("cell", targetCell);
+            response.put("x", respX);
+            response.put("y", respY);
+            response.put("resolved", preview[0]);
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                new JSONObject(response).toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugMoveTo: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
     // caveman: whole level as grid. terrain ints per row (same codes
     // get_tile_info reports), masks as 0/1 strings, stairs marked.
     // mask=1 -> unexplored AND not visible cells come back as terrain -1.

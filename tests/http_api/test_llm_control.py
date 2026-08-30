@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
-LLM control surface slice 1 (beads snap-d75, snap-jc6, snap-vbu).
+LLM control surface (beads snap-d75, snap-jc6, snap-vbu).
 
-Covers the three endpoints an agent driver needs per loop tick:
+Agent driver loop endpoints:
 - /debug/observe      - atomic world frame (hero, visible mobs/items, stairs)
 - /debug/get_map      - grid dump (terrain rows, passable/visible/mapped masks)
 - /debug/hero_status  - alive/pos/action poll (idle detection)
+- /debug/move_to      - tap on a cell: walk / attack / pickup / descend,
+                        resolved by the game's own tap logic (Hero.handle)
 
 Also guards the exact-match router fix: /debug/cast_spell_on_target must
 reach its own handler, not be shadowed by the /debug/cast_spell prefix.
@@ -116,7 +118,16 @@ class TestRunner:
             self.failed += 1
 
     def get(self, path: str):
-        return requests.get(self.base_url + path, timeout=10).json()
+        try:
+            return requests.get(self.base_url + path, timeout=10).json()
+        except Exception as e:
+            return {"error": f"request failed: {e}"}
+
+    def raw_get(self, path: str):
+        try:
+            return requests.get(self.base_url + path, timeout=10).json()
+        except Exception as e:
+            return {"error": f"request failed: {e}"}
 
     def test_hero_status_shape(self):
         status = self.get("/debug/hero_status")
@@ -250,15 +261,191 @@ class TestRunner:
     def test_exact_router(self):
         # pre-fix, this could be shadowed by /debug/cast_spell depending on
         # HashMap iteration order - that handler ignores x/y and returns success
-        r = requests.get(
-            self.base_url + "/debug/cast_spell_on_target?type=BloodTransfusion&x=-5&y=-5",
-            timeout=10).json()
+        r = self.raw_get("/debug/cast_spell_on_target?type=BloodTransfusion&x=-5&y=-5")
         self.check("router: cast_spell_on_target reaches own handler",
                    "Invalid coordinates" in str(r.get("error", r.get("message", ""))),
                    str(r))
         # unknown /debug path must NOT match a prefix anymore
-        r = requests.get(self.base_url + "/debug/cast_spell_nonexistent", timeout=10)
-        self.check("router: no prefix slop", r.status_code == 404, f"got {r.status_code}")
+        try:
+            r = requests.get(self.base_url + "/debug/cast_spell_nonexistent", timeout=10)
+            self.check("router: no prefix slop", r.status_code == 404, f"got {r.status_code}")
+        except Exception as e:
+            self.check("router: no prefix slop", False, f"exception {e}")
+
+    def move_to(self, x, y):
+        return self.raw_get(f"/debug/move_to?x={x}&y={y}")
+
+    def poll_idle(self, timeout=30):
+        deadline = time.time() + timeout
+        final = None
+        while time.time() < deadline:
+            final = self.get("/debug/hero_status")
+            if final.get("action") == "idle" or not final.get("alive"):
+                break
+            time.sleep(0.2)
+        return final
+
+    def test_move_to_walk(self, status):
+        # straight-line reachable passable target: all cells on the segment passable
+        m = self.get("/debug/get_map")
+        w = m["width"]
+        passable, visited, mapped = m["passable"], m["visible"], m["mapped"]
+
+        def walkable(cx, cy):
+            return (passable[cy][cx] == "1"
+                    and (visited[cy][cx] == "1" or mapped[cy][cx] == "1"))
+
+        x, y = status["x"], status["y"]
+        target = None
+        for d in (6, 5, 4, 3):
+            for dx, dy in ((d, 0), (-d, 0), (0, d), (0, -d)):
+                cells = [(x + dx * i // d, y + dy * i // d) for i in range(1, d + 1)]
+                if all(0 <= cx < w and 0 <= cy < len(passable)
+                       and walkable(cx, cy) for cx, cy in cells):
+                    target = cells[-1]
+                    break
+            if target:
+                break
+        self.check("move_to: straight target found", target is not None)
+        if not target:
+            return
+        tx, ty = target
+
+        r = self.move_to(tx, ty)
+        self.check("move_to: accepted", r.get("success") is True, str(r))
+        self.check("move_to: resolved is Move", "Move" in str(r.get("resolved", "")),
+                   str(r.get("resolved")))
+
+        final = self.poll_idle(30)
+        self.check("move_to: reached target", final and (final["x"], final["y"]) == (tx, ty),
+                   f"want {(tx, ty)} got {(final.get('x'), final.get('y')) if final else None}")
+
+    def test_move_to_attack(self, status):
+        # hostile rat on an adjacent cell - tap must resolve to Attack
+        x, y = status["x"], status["y"]
+        resolved = None
+        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            cx, cy = x + dx, y + dy
+            created = self.raw_get(f"/debug/create_mob?type=Rat&x={cx}&y={cy}")
+            if not created.get("success"):
+                continue
+            r = self.move_to(cx, cy)
+            resolved = str(r.get("resolved", ""))
+            if "Attack" in resolved:
+                break
+            # rat wandered off - try another cell
+        self.check("move_to: occupied by mob resolves to Attack",
+                   resolved is not None and "Attack" in resolved, str(resolved))
+        self.poll_idle(15)
+
+    def test_move_to_pickup(self, status):
+        x, y = status["x"], status["y"]
+        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            cx, cy = x + dx, y + dy
+            made = self.raw_get(f"/debug/create_item?type=PotionOfHealing&x={cx}&y={cy}")
+            if not made.get("success"):
+                continue
+            r = self.move_to(cx, cy)
+            resolved = str(r.get("resolved", ""))
+            if "PickUp" in resolved:
+                self.check("move_to: occupied by item resolves to PickUp", True)
+                self.poll_idle(15)
+                return
+        self.check("move_to: occupied by item resolves to PickUp", False,
+                   "no free adjacent cell for the heap")
+
+    @staticmethod
+    def _bfs_reachable(passable, visited, mapped, w, h, start, goal):
+        # mirror Hero.getCloser: walkable = passable && (visited || mapped)
+        from collections import deque
+        walkable = [[passable[y][x] == "1" and (visited[y][x] == "1" or mapped[y][x] == "1")
+                     for x in range(w)] for y in range(h)]
+        seen = {start}
+        q = deque([start])
+        while q:
+            cur = q.popleft()
+            if cur == goal:
+                return True
+            cx, cy = cur % w, cur // w
+            for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                nx, ny = cx + dx, cy + dy
+                n = ny * w + nx
+                if 0 <= nx < w and 0 <= ny < h and n not in seen and walkable[ny][nx]:
+                    seen.add(n)
+                    q.append(n)
+        return False
+
+    def test_move_to_stairs(self):
+        # last test - the level changes under our feet.
+        # stairs may be unreachable from spawn on some levels (getCloser gives
+        # up, hero idles - same as a human tapping an unreachable stair), so
+        # try candidate levels and assert on the first one with a walkable exit.
+        candidates = ["1", "4", "5", "6", "7", "8", "9", "10"]
+        for lvl in candidates:
+            self.raw_get(f"/debug/go_to_level?id={lvl}")
+            deadline = time.time() + 15
+            cur = None
+            while time.time() < deadline:
+                cur = self.get("/debug/hero_status").get("levelId")
+                if cur == lvl:
+                    break
+                time.sleep(0.5)
+            if cur != lvl:
+                continue
+            time.sleep(1)
+
+            # an agent that knows its target stairs reveals the level first -
+            # getCloser paths only through visited||mapped cells
+            self.raw_get("/debug/reveal_map")
+            time.sleep(1)
+
+            # visible hostiles interrupt tap-walking - clear them like a
+            # player would (fight through), so the walk can complete
+            for mob in self.get("/debug/observe").get("mobs", []):
+                self.raw_get(f"/debug/kill_mob?x={mob['x']}&y={mob['y']}")
+            time.sleep(1)
+
+            m = self.get("/debug/get_map")
+            exits = m.get("exits", [])
+            if not exits:
+                continue
+            w, h = m["width"], m["height"]
+            hs = self.get("/debug/hero_status")
+            start = hs["y"] * w + hs["x"]
+            goal = exits[0]["y"] * w + exits[0]["x"]
+            if not self._bfs_reachable(m["passable"], m["visible"], m["mapped"],
+                                       w, h, start, goal):
+                continue
+
+            before = cur
+            ex, ey = exits[0]["x"], exits[0]["y"]
+            r = self.move_to(ex, ey)
+            if "Descend" not in str(r.get("resolved", "")):
+                continue  # tap resolved to something else - try next level
+
+            # like a human: re-tap whenever the walk gets interrupted
+            # (enemy spotted, pushable object) until the level changes
+            deadline = time.time() + 90
+            level_id = before
+            retaps = 0
+            while time.time() < deadline and level_id == before and retaps < 10:
+                time.sleep(0.5)
+                hs = self.get("/debug/hero_status")
+                level_id = hs.get("levelId")
+                if level_id != before:
+                    break
+                if hs.get("action") == "idle":
+                    self.move_to(ex, ey)
+                    retaps += 1
+
+            if level_id != before:
+                self.check("move_to: stairs resolves to Descend", True)
+                self.check("move_to: descend changed level", True,
+                           f"{before} -> {level_id} after {retaps} retaps")
+                return
+
+        self.check("move_to: stairs resolve to Descend and change level", False,
+                   "no candidate level reached its stairs")
 
     def run_test(self):
         result = self.client.start_game("WARRIOR", 0)
@@ -277,7 +464,12 @@ class TestRunner:
         obs = self.test_observe_shape()
         self.test_get_map_shape(obs)
         self.test_hero_status_idle_poll(status)
+        self.test_move_to_walk(status)
+        self.test_move_to_attack(status)
+        self.test_move_to_pickup(status)
         self.test_mask_on_dungeon_level()
+        # stairs last - the level changes under our feet
+        self.test_move_to_stairs()
 
     def run_all(self):
         self.run_test()
