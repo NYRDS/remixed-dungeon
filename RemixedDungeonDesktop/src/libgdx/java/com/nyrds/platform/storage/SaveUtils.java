@@ -151,19 +151,31 @@ public class SaveUtils {
 	}
 
 	public static void deleteLevels(HeroClass cl) {
-		FileHandle[] files = local("").list();
+		FileHandle base = local("");
+		FileHandle[] files = base.list();
+
+		// caveman: snap-brm followup - the new-game purge failed silently once
+		// (stale chess level board resurrected into a fresh game). make it loud.
+		GLog.toFile("deleteLevels: base=%s files=%d class=%s",
+			base.file().getAbsolutePath(), files.length, cl.tag());
 
 		for (FileHandle file : files) {
 			String path = file.path();
 			if (path.endsWith(".dat") && hasClassTag(cl, path)) {
-				file.delete();
+				if (!file.delete()) {
+					GLog.toFile("deleteLevels: FAILED to delete %s", path);
+				} else {
+					GLog.toFile("deleteLevels: deleted %s", path);
+				}
 			}
 		}
 	}
 
 	public static void deleteGameFile(HeroClass cl) {
 		String gameFile = gameFile(cl);
-		local("").child(gameFile).delete();
+		FileHandle gf = local("").child(gameFile);
+		GLog.toFile("deleteGameFile: %s exists=%b", gf.file().getAbsolutePath(), gf.exists());
+		gf.delete();
 	}
 
 	public static String gameFile(HeroClass cl) {
