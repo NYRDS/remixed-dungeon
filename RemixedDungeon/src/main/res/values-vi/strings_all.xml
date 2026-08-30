@@ -169,6 +169,7 @@
     <string name="Challenges_Descriptions_3">Vùng đất xung quanh hầm ngục đã lâu bị ác ý xâm nhiễm, ngăn cản sự nảy mầm của hạt giống cho các loại thảo mộc và thực vật. Ai biết được còn bao lâu nữa cây cối cuối cùng sẽ ngừng tồn tại trên vùng đất hoang tàn này.</string>
     <string name="Challenges_Descriptions_4">Một hiện diện tà ác đang ẩn nấp trong tâm trí của tất cả sinh vật trong hầm ngục, khiến chúng nhận thức được những sự kiện xảy ra với nhau.</string>
     <string name="Challenges_Names_1">Niềm tin là giáp trụ của tôi</string>
+    <string name="Challenges_Names_4">Trí tuệ bầy đàn</string>
     <string name="Challenges_Names_5">Vào bóng tối</string>
     <string name="ChampionOfAirBuff_Info">Đặc tính này ban tặng cho sinh vật bản chất của gió, nâng cao sự nhanh nhẹn và khả năng chiến đấu. Võ sĩ Bậc Thầy Khí trở thành đối thủ đáng gờm, có thể tung ra những đòn tấn công nhanh chóng và tàn phá có thể thay đổi nhanh chóng cục diện trận chiến.</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
@@ -324,6 +325,7 @@
     <string name="EncumbranceBuff_CharAct_2">Cái %s này quá nặng để tôi có thể sử dụng hiệu quả.</string>
     <string name="EncumbranceBuff_CharAct_4">Tôi thiếu sức mạnh để sử dụng %s với đầy đủ tiềm năng của nó.</string>
     <string name="EncumbranceBuff_Name">Gánh nặng</string>
+    <string name="EnslavedSoul_Desc">Bạn gần như có thể nhìn xuyên qua bóng ma này. Và mặc dù nó trông giống một chiếc hộp sọ, đôi khi trong tích tắc một khuôn mặt hiện ra, ngập tràn đau đớn và khổ sở.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EquipableItem_Unequip">Bạn không thể tháo bỏ %s bị nguyền rủa!</string>
     <string name="ExplodingSkull_Desc">Đầu lâu bay này đang bốc lửa, có vẻ cực kỳ mong manh, dường như nó sẽ bùng nổ bất cứ lúc nào.</string>
@@ -588,6 +590,7 @@
     <string name="MissileWeapon_Info2">Vì thể lực không đủ, độ chính xác và tốc độ tấn công của bạn với %1$s này bị giảm.</string>
     <string name="MissileWeapon_Missiles">Vũ khí phóng xạ</string>
     <string name="MissileWeapon_No">Không, tôi đã đổi ý rồi</string>
+    <string name="Mob_Attacking">Hãy coi %s này như đã chết!</string>
     <string name="Mob_GoingTo">Đang đi rồi!</string>
     <string name="Mob_ItemUse">%1$s sử dụng %2$s</string>
     <string name="Mob_StaControlledStatus">%s này đang bị ám bởi ma quỷ</string>
@@ -726,6 +729,7 @@
     <string name="ResultDescriptions_Necromancy">Hết sức lực khi cố gắng hồi sinh xác ở tầng %d</string>
     <string name="ResultDescriptions_Poison">Chết vì nhiễm độc ở cấp độ %d</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
+    <string name="ResultDescriptions_Unknown">Chết dưới hoàn cảnh bí ẩn ở tầng %d</string>
     <string name="ResultDescriptions_Wand">Bị giết bởi chính %1 của bạn ở tầng %2</string>
     <string name="RingOfDetection_Info">Đeo nhẫn này giúp bạn nhận ra những bí mật ẩn giấu - bẫy và cửa bí mật - mà không cần dành thời gian tìm kiếm. Nhẫn dò tìm xuống cấp sẽ làm tê liệt giác quan của bạn, khiến bạn khó nhận ra bí mật hơn ngay cả khi chủ động tìm kiếm.</string>
     <string name="RingOfDetection_Name">Nhẫn Phát Hiện</string>
@@ -1224,339 +1228,5 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>

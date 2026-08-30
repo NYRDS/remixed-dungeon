@@ -180,6 +180,7 @@
     <string name="Challenges_Descriptions_6">De oude kunst van runen lezen is verboden en wordt tegen alle kosten vermeden, vanwege de vloek die rust op elk perkament dat de kelder of haar omgeving binnenbereikt.</string>
     <string name="Challenges_Names_3">Woestijn</string>
     <string name="Challenges_Names_5">In de duisternis</string>
+    <string name="Challenges_Names_8">Geen stad</string>
     <string name="ChampionOfEarthBuff_Info">De Kampioen van de Aarde belichaamt onwrikbare kracht: deze eigenschap verbetert de schadeweerstand van het wezen en vergroot zijn maximale vitaliteit. Deze transformatie maakt hem een geduchte tegenstander in de verraderlijke diepten, die aanvallen moeiteloos kan pareren en langdurige gevechten doorstaat met onwrikbaar vastberadenheid.</string>
     <string name="ChampionOfEarthBuff_Name">Kampioen van de Aarde</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Doordrenkt met de woede van de vlammen, versterkt deze eigenschap de felheid en gevechtskracht van het wezen. De Kampioen van het Vuur doemt op als een geduchte tegenstander, die verwoestende aanvallen ontketent die zijn vijanden in verzengende vlammen hullen, en angst inboezemt bij allen die het wagen zich tegen hem te verzetten.</string>
@@ -553,6 +554,7 @@
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
     <string name="MagicArrow_Name">Magische pijl</string>
     <string name="MailArmor_Name">maliënkolder</string>
+    <string name="ManaPotion_Info">Deze drank herstelt je spirituele energie.</string>
     <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Name">Chirurgisch masker</string>
     <string name="MedicineMask_Obtained">Chirurgisch masker verkregen</string>
@@ -687,6 +689,7 @@
     <string name="PotionOfToxicGas_Info">Het ontdopen of verbrijzelen van deze onder druk staande glasfles zal de inhoud laten exploderen tot een dodelijke wolk van giftige groene gas. Je kunt ervoor kiezen om deze drank op verafstaande vijanden te werpen in plaats van hem met de hand te openen.</string>
     <string name="Potion_Colors_1">karmozijn</string>
     <string name="Potion_Colors_14">onyx</string>
+    <string name="Potion_Colors_3">jade</string>
     <string name="Potion_Colors_8">amber</string>
     <string name="Potion_ItemFliesAway">%s vliegt zomaar uit je handen weg.</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
@@ -733,6 +736,7 @@
     <string name="ResultDescriptions_Necromancy">Uitgeput van levenskracht tijdens het proberen een lijk te animeren op niveau %d</string>
     <string name="ResultDescriptions_Necrotism">Gestorven door Necrotisme op niveau %d</string>
     <string name="ResultDescriptions_Poison">Gestorven aan vergiftiging op niveau %d</string>
+    <string name="ResultDescriptions_Unknown">Stierf onder mysterieuze omstandigheden op niveau %d</string>
     <string name="RingOfDetection_Info">Als je deze ring draagt, merk je verborgen geheimen - vallen en geheime deuren - op zonder tijd aan zoeken te besteden. Versleten detectieringen verdoven je zinnen, waardoor het moeilijker wordt om geheimen op te merken, zelfs als je er actief naar zoekt.</string>
     <string name="RingOfElements_Name">Ring der Elementen</string>
     <string name="RingOfEvasion_Info">Deze ring vergroot je kans om een aanval van een vijand te ontwijken.</string>

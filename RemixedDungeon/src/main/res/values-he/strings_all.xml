@@ -669,6 +669,7 @@
     <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
     <string name="ResultDescriptions_Poison">מת מרעל בקומה %d</string>
     <string name="ResultDescriptions_Trap">נהרג על ידי פריקת %1$s ברמה %2$d</string>
+    <string name="ResultDescriptions_Unknown">מת בנסיבות מסתוריות בשלב %d</string>
     <string name="RingOfEvasion_Info">טבעת זו מגדילה את הסיכוי שלך להתחמק מהתקפת אויב.</string>
     <string name="RingOfFrost_Name">טבעת הכפור</string>
     <string name="RingOfHaste_Name">טבעת המהירות</string>
@@ -929,6 +930,7 @@
     <string name="Welcome_Text_31_1">    remix.31.1\n\n    - משחקיות:\n\n    -- התאמות אישיות חדשות!\n\n    -- סוג עכביש חדש!\n\n    -- עכבישי-פסי כעת מחזקים עכבישים אחרים במקום להחליש את הגיבור.\n\n    - תיקוני באגים\n\n    </string>
     <string name="WindGust_Name">משב רוח</string>
     <string name="WndCatalogus_Title">קטלוגים</string>
+    <string name="WndCryptoDonate_openWallet">פתח ארנק</string>
     <string name="WndCryptoDonate_warningText">אזהרה: תמיד אמת את הכתובת לפני שליחת כספים. עסקאות מטבעות קריפטוגרפיים אינן הפיכות!</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - חינמי לכולם ויישאר כך תמיד.\n\nעם זאת, אתה יכול לעזור לנו לשפר את המשחק עוד יותר.\n\nבנוסף לתודתנו הכנה תקבל כמה שיפורים קוסמטיים.</string>
     <string name="WndDonate_goldDonateText">תודה על עזרתך</string>
@@ -986,6 +988,7 @@
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
     <string name="WndSaveSlotSelect_Delete_Title">האם אתה בטוח שברצונך למצוא מצב שמירה זה?</string>
     <string name="WndSettingsInGame_GameLog">יומן משחק</string>
+    <string name="WndSettings_Brightness">בהירות</string>
     <string name="WndSettings_FpsLimit">הגבלת FPS</string>
     <string name="WndSettings_GameplaySettings">משחקיות</string>
     <string name="WndSettings_Handedness">יד דומיננטית</string>
@@ -1429,6 +1432,5 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
-
 
 </resources>
