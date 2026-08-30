@@ -122,6 +122,7 @@
     <string name="Bishop_text">Dag en nacht bid ik voor u, mijn kind.</string>
 
     <string name="BlackCat_Gender">feminine</string>
+    <string name="BlackCat_Phrases_0">Prrrrrrr</string>
     <string name="BlackCat_Phrases_1">Miauw...</string>
     <string name="BlackSkullOfMastery_Lich">Word een Lich</string>
     <string name="BlackSkullOfMastery_Name">De Zielbrenger</string>
@@ -135,6 +136,7 @@
     <string name="Blacksmith_Verify4">Ik werk niet met vervloekte items!</string>
     <string name="Blacksmith_Verify5">Het is prullen, de kwaliteit is te slecht!</string>
     <string name="Blacksmith_Verify6">Ik kan deze items niet hersmelten!</string>
+    <string name="BlankScroll_Info">Gewoon een leeg perkament. Misschien kan er iets op geschreven worden?</string>
     <string name="BlankScroll_ReallyBlank">Deze perkament is leeg</string>
     <string name="BleedingBuff_Name">Bloedend</string>
     <string name="BlessedBuff_Info">Moge precisie en ontwijken komen voor hen die door de zegen zijn geraakt!</string>
@@ -538,6 +540,7 @@
     <string name="Level_TileStatue">Standbeeld</string>
     <string name="Level_TileToxicTrap">Giftig gas val</string>
     <string name="LevitationBuff_Info">Het lichaam zweeft boven de grond en vermijdt vallen en andere gevaren op de grond.</string>
+    <string name="LevitationBuff_Name">Zwevend</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">H-hallo. Welkom in de bibliotheek. Hier vind je informatie over allerlei dingen die in de kerker te vinden zijn... eigenlijk kunnen we alleen kennis verstrekken die door avonturiers is ontdekt. Het... het is wat gênant. Dus elke keer dat je ons bezoekt, staat er waarschijnlijk iets nieuws te lezen.</string>
     <string name="Lich_DieInfo">Ik vond deze nekromant nooit leuk. Het is dus tijd om terug te keren naar niveau 7 en een andere weg naar het nieuwe avontuur te vinden.</string>
@@ -871,9 +874,12 @@
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
     <string name="SociologistNPC_Gender">masculine</string>
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
+    <string name="Sorrowmoss_Name">Treurmos</string>
     <string name="SoulShard_Gender">masculine</string>
+    <string name="SoulShard_Name">zielenscherf</string>
     <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
+    <string name="SpeedBuff_Name">Snelheid</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="Spell_SelectACell">Selecteer een doelcel.</string>
     <string name="Spells_NotEnoughSP">Je hebt niet genoeg mana om de spreuk \&quot;%1$s\&quot; te casten.</string>
@@ -900,6 +906,7 @@
     <string name="SpiderMind_Name">Psi-Spin</string>
     <string name="SpiderNest_Desc">Deze cocon is gemaakt van het fijnste zijde en verbergt iets levends.</string>
     <string name="SpiderNest_Gender">neuter</string>
+    <string name="SpiderQueenCarapace_Name">Spinnenkoninginnenpantser</string>
     <string name="SpiderQueen_DieInfo">De Spinnenkoningin is verslagen! Nu moet ik terug naar niveau 5 en mijn reis naar de Diepten voortzetten.</string>
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderServant_Gender">masculine</string>
@@ -999,6 +1006,7 @@
     <string name="Using_Failed_Because_Magic">Krachtige magie voorkomt dat je \&quot;%s\&quot; gebruikt.</string>
     <string name="VampireSkull_Info">Deze masker is gemaakt van een volledig natuurlijke vampierschedel. Eigenlijk is het een vampierschedel... schedel van een grootkopige vampier. Griezelig.</string>
     <string name="VampireSkull_Name">Vampierschedel</string>
+    <string name="WandMaker_Desc">Deze oude maar kerngezonde heer draagt een lichtelijk verwarde uitdrukking. Hij wordt beschermd door een magisch schild.</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
     <string name="WandOfAvalanche_Info1">Je verpletterde jezelf met je eigen Toverstaf van Lawine...</string>
@@ -1039,6 +1047,7 @@
     <string name="WarriorArmor_Prompt">Kies een richting om te springen</string>
     <string name="WaterElemental_Desc">Water elementalen komen voor bij grote watermassa\'s. Meestal dwalen deze magisch gebonden golven gewoon rond.</string>
     <string name="WaterElemental_Gender">masculine</string>
+    <string name="WaterElemental_Name_Objective">waterelementair</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
     <string name="WeaknessBuff_Name">Verzwakt</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
@@ -1187,6 +1196,7 @@
     <string name="YogsEye_Name">oog van Yog</string>
     <string name="YogsEye_Name_Objective">Oog van Yog</string>
     <string name="YogsHeart_Gender">masculine</string>
+    <string name="YogsHeart_Name_Objective">hart van Yog</string>
     <string name="YogsTeeth_Gender">masculine</string>
     <string name="ZombieGnoll_Desc">Het verwrongen, gebroken lichaam van een gnoll-zombie lijkt niet meer op een mensachtige of een hyena. Al wat overblijft is een hoop rottend vlees en beenderen, vervuld van een kwaadaardige drang om te doden en te verslinden.</string>
     <string name="ZombieGnoll_Gender">masculine</string>
@@ -1277,6 +1287,17 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

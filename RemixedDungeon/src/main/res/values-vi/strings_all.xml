@@ -20,6 +20,7 @@
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">bọ cạp axit</string>
     <string name="Acidic_Name_Objective">bọ cạp axit</string>
+    <string name="Actions_Speed">Cấp tốc hành</string>
     <string name="AirElemental_Desc">Yếu tố không khí là những sinh vật phép thuật bay được tạo thành từ không khí sống.</string>
     <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name_Objective">nguyên tố khí</string>
@@ -86,6 +87,7 @@
     <string name="Badges_StrengthAttained1">Đạt 13 điểm Sức mạnh</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa đã bị tiêu diệt</string>
     <string name="Bandit_Gender">masculine</string>
+    <string name="BardNPC_Desc">Nhạc sĩ thị trấn đang chơi đàn luýt của mình.</string>
     <string name="BardNPC_Gender">masculine</string>
     <string name="Barrel_Name">thùng gỗ</string>
     <string name="Barrel_Pumpkin_Name">bí ngô</string>
@@ -549,6 +551,7 @@
     <string name="Level_TileWater">Nước</string>
     <string name="Level_TileWell">Giếng</string>
     <string name="LevitationBuff_Info">Cơ thể lơ lửng trên mặt đất, tránh các bẫy và nguy hiểm khác trên mặt đất.</string>
+    <string name="LevitationBuff_Name">Lơ lửng</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">Ch-chào. Chào mừng đến Thư viện. Ở đây bạn có thể tìm thông tin về đủ thứ có thể tìm thấy trong hầm ngục... thực ra chúng tôi chỉ cung cấp kiến thức do các nhà mạo hiểm khám phá ra thôi. Điều đó... hơi đáng xấu hổ. Nên mỗi lần bạn ghé thăm, có lẽ sẽ lại có điều mới để đọc.</string>
     <string name="LibrarianNPC_Message_Not_Ready">T... Tôi xin lỗi, th-thư viện chưa mở... đợi chút.</string>
@@ -559,6 +562,7 @@
     <string name="LightningTrap_Name">bẫy sét</string>
     <string name="LloidsBeacon_ACReturn">TRỞ VỀ</string>
     <string name="LloidsBeacon_ACSet">ĐẶT</string>
+    <string name="LloidsBeacon_Info">Đèn hiệu của Lloyd là một thiết bị phép thuật phức tạp, cho phép bạn quay lại nơi mà bạn đã từng đến.</string>
     <string name="LloidsBeacon_Preventing">Một loại halo ma thuật mạnh mẽ hiện diện ở đây ngăn cản bạn sử dụng cột đèn của Lloyd!</string>
     <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
     <string name="Longsword_Gender">masculine</string>
@@ -864,10 +868,12 @@
     <string name="SnipersMarkBuff_Name">Dấu ấn xạ thủ</string>
     <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Name">Nhà xã hội học</string>
+    <string name="Sorrowmoss_Name">Rêu Buồn</string>
     <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">Đây là một mảnh vỡ lấy từ tàn tích của Hũ Linh Hồn. Nó lấp lánh với sức mạnh bí ẩn, có lẽ có ai đó quan tâm đến thứ như thế này.</string>
     <string name="SoulShard_Name">mảnh linh hồn</string>
     <string name="Spear_Gender">neuter</string>
+    <string name="SpeedBuff_Name">Tốc độ</string>
     <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spells_NotEnoughSP">Bạn không đủ mana để thi triển phép \&quot;%1$s\&quot;.</string>
     <string name="Spells_NotInOwnBody">Bạn không thể thực hiện %s khi linh hồn bạn tách rời khỏi cơ thể.</string>
@@ -927,6 +933,7 @@
     <string name="SuspiciousRat_Info1">Con chuột đáng ngờ đang co giật dữ dội.</string>
     <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">bầy ruồi</string>
+    <string name="Swarm_Name_Objective">bầy ruồi</string>
     <string name="Swing_Name_1">%s hoang dã</string>
     <string name="Swing_Name_2">Hoang dã %s</string>
     <string name="Sword_Gender">masculine</string>
@@ -937,6 +944,7 @@
     <string name="TerrorBuff_Info">Có vẻ như ai đó rất sợ hãi.</string>
     <string name="Thief_Gender">masculine</string>
     <string name="TitleScene_Highscores">Bảng xếp hạng</string>
+    <string name="TitleScene_Mods">Mod</string>
     <string name="TitleScene_Play">Chơi</string>
     <string name="TitleScene_PlayOnPC">Chơi trên PC</string>
     <string name="Torch_ACLight">THÁP</string>
@@ -1008,6 +1016,7 @@
     <string name="Warlock_Killed">Tia bóng tối của %1$s đã giết bạn...</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
     <string name="WaterElemental_Gender">masculine</string>
+    <string name="WaterElemental_Name_Objective">nguyên tố nước</string>
     <string name="WaterOfTransmutation_Info">Sức mạnh của sự biến đổi tỏa ra từ nước của giếng này. Hãy ném một vật phẩm vào giếng để biến nó thành thứ khác.</string>
     <string name="WeaknessBuff_Name">Yếu</string>
     <string name="Weightstone_Accurate">bạn đã cân bằng %s để nó chính xác hơn</string>
@@ -1234,6 +1243,15 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
 
 
 
