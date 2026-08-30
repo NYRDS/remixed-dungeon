@@ -445,6 +445,7 @@
     <string name="Hero_StaOoze">Bùn ăn mòn ăn mòn cơ thể bạn. Rửa sạch nó đi!</string>
     <string name="Hero_StaRoots">Bạn không thể di chuyển!</string>
     <string name="Hero_Wait">...</string>
+    <string name="HideInGrassSpell_NeedGrassToHide">Ngay cả tôi cũng không thể ẩn nấp ngay trước mũi.</string>
     <string name="Horror_Name_0">Quái dị %s</string>
     <string name="Horror_Name_1">%s rùng rợn</string>
     <string name="Horror_Name_2">%s rùng rợn</string>
@@ -700,6 +701,7 @@
     <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">chuột giả</string>
     <string name="PseudoRat_Name_Objective">chuột giả</string>
+    <string name="PumpkinPie_Name">Bánh bí ngô</string>
     <string name="Pumpkin_Info">Ngày xưa, Người Dług Bửng là một dân tộc hãnh diện và thịnh vượng. Nhưng mọi thứ thay đổi sau khi loài người xuất hiện, chỉ còn lại những đống tàn tích. Và những chiếc đầu bị chặt và khắc của các bộ tộc Dług Bửng đã khuất vẫn còn là lời nhắc nhở về những sự kiện khủng khiếp ấy.</string>
     <string name="Pumpkin_Name">Bí ngô</string>
     <string name="Quarterstaff_Gender">masculine</string>
@@ -769,6 +771,7 @@
     <string name="Scorpio_Desc">Những sinh vật ác quỷ khổng lồ giống nhện này né tránh chiến đấu cận chiến bằng mọi giá, bắn ra những gai răng cưa làm tê liệt từ khoảng cách xa.</string>
     <string name="Scorpio_Gender">masculine</string>
     <string name="ScrollHolder_Info">Bạn có thể đặt bất kỳ số lượng cuộn giấy nào vào chiếc hộp hình ống này. Nó tiết kiệm chỗ trong ba lô của bạn và bảo vệ các cuộn giấy khỏi lửa.</string>
+    <string name="ScrollOfChallenge_Info1">Cuộn giấy phát ra tiếng gầm thách thức vang dội khắp hầm ngục!</string>
     <string name="ScrollOfChallenge_Name">Cuộn giấy Khiêu chiến</string>
     <string name="ScrollOfCurse_Info">Cuộn giấy này được tạo ra đặc biệt để trừng phạt những tên trộm đủ ngu ngốc để cố gắng sử dụng phép thuật mà chúng không thể hiểu. Pháp thuật của cuộn giấy hoàn toàn vô dụng thậm chí có hại cho phiêu lưu gia thông thường, nhưng được các thương nhân trân trọng rất cao.</string>
     <string name="ScrollOfCurse_Name">Cuộn Giấy Nguyền Rủa</string>
@@ -1077,6 +1080,7 @@
     <string name="WndPriest_Title">Linh mục thị trấn</string>
     <string name="WndRanking_Items">Vật phẩm</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
+    <string name="WndRanking_StaHealth">Máu</string>
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndRanking_Stats">Thống kê</string>
     <string name="WndSadGhostNecro_No">Không, để nó nói.</string>
@@ -1220,6 +1224,10 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
 
 
 

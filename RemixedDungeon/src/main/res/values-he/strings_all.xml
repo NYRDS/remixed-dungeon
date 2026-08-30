@@ -57,6 +57,7 @@
     <string name="Badges_AllScrolls">כל המגילות זוהו</string>
     <string name="Badges_AllWands">כל המטות זוהו</string>
     <string name="Badges_BossSlain1">הגווּ הובס</string>
+    <string name="Badges_BossSlain2">טנגו הובס</string>
     <string name="Badges_BossSlain3">DM-300 הובס</string>
     <string name="Badges_BossSlain3All">DM-300 נהרג על ידי כל תת-המקצועות</string>
     <string name="Badges_DeathFire">מוות מאש</string>
@@ -762,6 +763,7 @@
     <string name="ShortSword_Name">חרב קצרה</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Name">שוריקן</string>
+    <string name="SkeletonKey_Info">המפתח הזה נראה רציני: ראשו בצורת גולגולת. כנראה שהוא יכול לפתוח דלת רצינית כלשהי.</string>
     <string name="Skeleton_Desc">שלדים מורכבים מעצמות גופות של הרפתקנים ותושבי המבוך חסרי מזל, מונפשים על ידי זרמי קסם אפל מהמעמקים. לאחר שנפגעו מספיק, הם מתפרקים בפיצוץ של עצמות.</string>
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Name">שלד</string>
@@ -890,6 +892,7 @@
     <string name="WandOfAvalanche_Info1">מחצת את עצמך עם שרביט המפולת שלך...</string>
     <string name="WandOfDisintegration_Info">מקל זה פולט אלומת אנרגיה הרסנית, החודרת את כל היצורים בדרכה. ככל שהיא פוגעת ביותר מטרות, כך היא גורמת נזק רב יותר לכל אחת מהן.</string>
     <string name="WandOfDisintegration_Name">שרביט התפוררות</string>
+    <string name="WandOfIcebolt_Info">שרביט זה יורה כדור קרח הגורם נזק קל למטרה. יש גם סיכוי להאט או אפילו להקפיא את האויב.</string>
     <string name="WandOfIcebolt_Info1">הרגת את עצמך עם שרביט הקרח שלך...</string>
     <string name="WandOfIcebolt_Name">שרביט קרח</string>
     <string name="WandOfMagicMissile_Info">שרביט זה משגר טילים של אנרגיה קסומה טהורה, וגורם נזק בינוני למטרה.</string>
@@ -1421,6 +1424,11 @@
 
 
 
+
+
+
+
+    <string name="town_table_fortune_name">שולחן</string>
 
 
 </resources>

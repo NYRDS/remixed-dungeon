@@ -137,6 +137,7 @@
     <string name="BlankScroll_ReallyBlank">Deze perkament is leeg</string>
     <string name="BleedingBuff_Name">Bloedend</string>
     <string name="BlessedBuff_Info">Moge precisie en ontwijken komen voor hen die door de zegen zijn geraakt!</string>
+    <string name="BloodTransfusion_Drained">De levensessentie vloeit van je huisdier naar jou.</string>
     <string name="BloodTransfusion_Name">Bloedtransfusie</string>
     <string name="BloodTransfusion_WontAgreed">Het slachtoffer weerst het onttrekken van zijn levensessentie.</string>
     <string name="BodyArmorBuff_Name">Lichaamspantser</string>
@@ -160,6 +161,7 @@
     <string name="CagedKobold_Message3">Ik haat alles aan deze kooi</string>
     <string name="CagedKobold_Name">gekooide kobold</string>
     <string name="CagedKobold_Name_Objective">opgesloten kobold</string>
+    <string name="Calm_Name">Kalmte</string>
     <string name="Candy_Info">Deze snoep ziet er zo mooi uit en ruikt ook lekker. Moet je hem echt aan iemand anders geven?</string>
     <string name="Candy_Name">snoepje</string>
     <string name="Capotain_Name">Puriteinse hoed</string>
@@ -1086,6 +1088,7 @@
     <string name="WndJournal_Title">Journaal</string>
     <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
     <string name="WndLibrary_Codex_Btn">Verhalen</string>
+    <string name="WndLibrary_Items_Btn">Voorwerpen</string>
     <string name="WndModInstall_PleaseUpdate">Gelieve Remixed Dungeon te updaten voordat u deze mod installeert</string>
     <string name="WndModInstall_Version">versie</string>
     <string name="WndModsDisclaimer_install">Lokale mod installeren</string>
@@ -1105,6 +1108,7 @@
     <string name="WndPremiumSettings_marble">marmer</string>
     <string name="WndPremiumSettings_ruby">robijn</string>
     <string name="WndPremiumSettings_status">Selecteer materiaal van de statusbalk</string>
+    <string name="WndPremiumSettings_std">standaard</string>
     <string name="WndPriest_Heal_Minions">Genees al je volgelingen - Slechts %d goud!</string>
     <string name="WndPriest_Instruction2_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa de Heer der Diepten!</string>
     <string name="WndPriest_Instruction_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa, de Heer der Diepten! Helaas kan ik je nu niet doorlaten, want het gebouw wordt gerenoveerd. Maar als je hulp zoekt, kan ik genezing en voedsel aanbieden voor slechts %d gouden munten!</string>
@@ -1188,6 +1192,7 @@
     <string name="town_deco_banner_name">Vaandel</string>
     <string name="town_deco_barrel_desc">Een gewoon vat, ook niet meer in de beste staat.</string>
     <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
+    <string name="town_deco_bell_tower_desc">Traditioneel worden kerkklokken in hoge torens geïnstalleerd zodat het gelui over grotere afstand te horen is.</string>
     <string name="town_deco_blue_carpet_desc">Een luxe blauwe tapijt, versierd met paarse ornamenten.</string>
     <string name="town_deco_blue_carpet_name">kleedje</string>
     <string name="town_deco_broken_roof_desc">De dakpannen op dit dak zijn gebarsten en moeten vervangen worden.</string>
@@ -1262,347 +1267,5 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>

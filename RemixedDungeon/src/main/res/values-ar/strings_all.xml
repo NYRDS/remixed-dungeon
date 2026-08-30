@@ -445,6 +445,7 @@
     <string name="InnKeeperNPC_Name">صاحب الحانة</string>
     <string name="InnKeeperNPC_Name_Objective">صاحب الحانة</string>
     <string name="Instability_Name_0">غير مستقر %s</string>
+    <string name="Instability_Name_2">غير مستقر %s</string>
     <string name="InterLevelScene_Descending">ننزلق...</string>
     <string name="InterLevelScene_FileNotFound">لم يتم العثور على الملف. لسبب ما...</string>
     <string name="InterLevelScene_Loading">جاري التحميل...</string>
@@ -485,6 +486,7 @@
     <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
     <string name="Leech_Name_0">مصاص دماء %s</string>
     <string name="Leech_Name_2">مصاص دماء %s</string>
+    <string name="Level_TileAlarmTrap">فخ إنذار</string>
     <string name="Level_TileBarricade">متاريس</string>
     <string name="Level_TileDescChasm">لا تستطيع رؤية القاع.</string>
     <string name="Level_TileDescInactiveTrap">لقد تم تفعيل الفخ من قبل وهو لم يعد خطيراً.</string>
@@ -869,6 +871,7 @@
     <string name="TownPortal_Info">هذه التعويذة تسمح لك بالعودة الفورية إلى مكان آمن. ومع ذلك، قد تمنعك مصادر سحرية قوية قريبة من العمل كما هو مقصود.</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Message">هل تعرف تلك الخدمة الخاصة التي تقدمها \&quot;المسارح السينمائية\&quot;؟ للأسف يطلبون شيئاً غريباً يسمى \&quot;الإنترنت\&quot;، لم أسمع به قط من قبل.</string>
+    <string name="TownsfolkNPC_Desc">أحد السكان المحليين. رغم أنه يبدو من عامة الناس بوضوح، تبدو ملابسه باهظة الثمن.</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">آه! مغامر آخر، يا لها من مفاجأة سارة! تأكد من نهب أكبر قدر ممكن من الأشياء الثمينة!</string>
     <string name="TownsfolkNPC_Message2">أصبحت المدينة ثرية للغاية بفضل هذا الزنزانة، حتى يستطيع الجميع في المدينة تحمل تكاليف العطلة كلما أرادوا! في الواقع هذا هو السبب في وجود عدد قليل جداً من الناس هنا الآن.</string>
@@ -995,6 +998,7 @@
     <string name="WndSettings_ThirdQuickslot">الفتحة السريعة الثالثة</string>
     <string name="WndSettings_UiScale">مقياس واجهة المستخدم</string>
     <string name="WndSettings_ZoomIn">+</string>
+    <string name="WndStory_Caves">الكهوف الممتدة تحت السجن المهجور قليلة السكان. تقع في عمق كبير جدًا بحيث لا تستطيع المدينة استغلالها، وهي فقيرة جدًا بالمعادن لإثارة اهتمام الأقزام. في الماضي، كانت هناك نقطة تجارية هنا على الطريق بين هاتين الدولتين، لكنها اندثرت منذ تراجع عاصمة الأقزام. لم يسكنها الآن سوى بنات آوى المتواجدين في كل مكان والحيوانات تحت الأرض.</string>
     <string name="WndStory_Guts">بعد هزيمته وتحطّمه إلى شظايا دون أن يُدمَّر تمامًا، خُتم الإله القديم في أعمق طوابق الزنزانة. لكن مؤخرًا انكسر الختم، فاتسع الممر نحو عشّ الشياطين على مصراعيه. الوحوش الكابوسية التي وُلدت من أحلام الإله القديم أثناء سُباته كانت كثيرة لدرجة أنه لم يكن أمامها مفر، فاضطرت إلى الاندماج معًا مكوِّنة هذه القاعات البشعة. وبينما تسير فوق لحومها الحية، تشعر بنبض قلب الإله القديم يصدح عبرها.</string>
 
     <string name="WndStory_Halls">في الماضي كانت هذه المستويات تعتبر ضواحي المتروبوليس. انتصار الحرب ضد الإله القديم كلف الأقزام ثمناً باهظاً، وكانوا غير قادرين على تطهير المنطقة من الشياطين المتبقية. تدريجياً سيطر الشياطين على هذا المكان والآن يُدعى قاعات الشياطين.\n\nقليل جداً من المغامرين نزلوا إلى هذا العمق...</string>
@@ -1104,6 +1108,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 
