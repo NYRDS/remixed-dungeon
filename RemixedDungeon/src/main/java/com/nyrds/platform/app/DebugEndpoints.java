@@ -7,13 +7,20 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.pixeldungeon.ml.actions.Attack;
+import com.nyrds.pixeldungeon.ml.actions.Interact;
+import com.nyrds.pixeldungeon.ml.actions.InteractObject;
+import com.nyrds.pixeldungeon.ml.actions.Move;
+import com.nyrds.pixeldungeon.ml.actions.Unlock;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
@@ -2914,6 +2921,7 @@ public class DebugEndpoints {
             String query = session.getQueryParameterString();
             int x = -1, y = -1;
             int cell = -1;
+            int charId = -1;
 
             if (query != null && !query.isEmpty()) {
                 for (String param : query.split("&")) {
@@ -2923,6 +2931,8 @@ public class DebugEndpoints {
                         y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
                     } else if (param.startsWith("cell=")) {
                         cell = Integer.parseInt(java.net.URLDecoder.decode(param.substring(5), "UTF-8"));
+                    } else if (param.startsWith("char=")) {
+                        charId = Integer.parseInt(java.net.URLDecoder.decode(param.substring(5), "UTF-8"));
                     }
                 }
             }
@@ -2932,11 +2942,26 @@ public class DebugEndpoints {
                     createErrorResponse("Game not initialized - start a game first").toString());
             }
 
-            var hero = Dungeon.hero;
+            final Char actor;
+            if (charId < 0) {
+                actor = Dungeon.hero;
+            } else {
+                Mob puppet = findMobById(charId);
+                if (puppet == null) {
+                    return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.NOT_FOUND, "application/json",
+                        createErrorResponse("No mob with id " + charId).toString());
+                }
+                if (!isRemote(puppet)) {
+                    return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                        createErrorResponse("Char " + charId + " is not remote-controlled (use /debug/remote/possess)").toString());
+                }
+                actor = puppet;
+            }
 
-            if (!hero.isReady()) {
+            final boolean heroPath = (actor == Dungeon.hero);
+            if (heroPath ? !actor.isReady() : actor.getCurAction() != null) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.CONFLICT, "application/json",
-                    createErrorResponse("Hero is busy, poll hero_status until action==idle").toString());
+                    createErrorResponse("Char is busy, poll char_status/hero_status until action==idle").toString());
             }
 
             if (x >= 0 && y >= 0) {
@@ -2958,14 +2983,48 @@ public class DebugEndpoints {
                 try {
                     // preview the resolution for the response, then tap for real.
                     // hero.handle does the same resolution internally.
-                    Dungeon.level.updateFieldOfView(hero);
-                    var action = com.watabou.pixeldungeon.actors.CharUtils.actionForCell(hero, targetCell, Dungeon.level);
+                    Dungeon.level.updateFieldOfView(actor);
+                    var action = CharUtils.actionForCell(actor, targetCell, Dungeon.level);
                     preview[0] = action.toString();
 
-                    if (action.valid()) {
-                        hero.handle(targetCell);
-                    } else {
+                    if (!action.valid()) {
                         error[0] = "No action possible at cell " + targetCell;
+                        return;
+                    }
+
+                    if (!heroPath) {
+                        // caveman: puppet whitelist - Descend/Ascend would transition
+                        // the HERO's interlevel state, PickUp/OpenChest are
+                        // hero-belongings paths. Move/Attack/Interact family only.
+                        Class<?> actionClass = action.getClass();
+                        boolean supported =
+                            actionClass == Move.class
+                            || actionClass == Attack.class
+                            || actionClass == Interact.class
+                            || actionClass == InteractObject.class
+                            || actionClass == Unlock.class;
+                        if (!supported) {
+                            error[0] = "Action not supported for remote char: " + action.getClass().getSimpleName();
+                            return;
+                        }
+                    }
+
+                    if (heroPath) {
+                        Dungeon.hero.handle(targetCell);
+                    } else {
+                        actor.nextAction(action);
+                    }
+
+                    // caveman: command-pump - let the world run while the char acts.
+                    // turn-based clock parks at the hero, so the hero waits one
+                    // tick per loop (same primitive as /debug/wait_ticks). bounded.
+                    int guard = 0;
+                    while (guard++ < 20 && actor.isAlive() && actor.getCurAction() != null) {
+                        Hero hero = Dungeon.hero;
+                        if (hero != null && hero.isAlive() && hero.getCurAction() == null && !Dungeon.realtime()) {
+                            hero.spendAndNext(Actor.TICK);
+                        }
+                        Actor.processTurnBased(0f);
                     }
                 } catch (Exception e) {
                     error[0] = "Error in move_to: " + e.getMessage();
@@ -2975,7 +3034,7 @@ public class DebugEndpoints {
                 }
             });
 
-            if (!latch.await(5, java.util.concurrent.TimeUnit.SECONDS)) {
+            if (!latch.await(15, java.util.concurrent.TimeUnit.SECONDS)) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     createErrorResponse("Timeout waiting for move_to").toString());
             }
