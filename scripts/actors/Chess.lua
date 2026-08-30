@@ -217,13 +217,21 @@ end
 local gameInProgress = true
 
 local function processLose()
-    RPD.glog("Chess_YouLose")
+    RPD.glog("chess: processLose ENTER")
     restorePets()
-    RPD.Dungeon.hero:die(RPD.Dungeon.hero)
+    -- caveman: hero:die at difficulty<2 opens the "AnotherTry" save-slot modal.
+    -- any throw here aborts BEFORE gameInProgress=false - cellClicked then eats
+    -- every click forever (soft lock). trap and report.
+    local ok, err = pcall(function() RPD.Dungeon.hero:die(RPD.Dungeon.hero) end)
+    if not ok then
+        RPD.glog("chess: hero:die FAILED: %s", tostring(err))
+    end
+    RPD.glog("chess: processLose hero:die done, closing game")
     gameInProgress = false
 end
 
 local function processWin()
+    RPD.glog("chess: processWin ENTER")
     restorePets()
 
     -- caveman: only tracked pieces die - same-kind mobs (real Warlocks on
@@ -254,7 +262,8 @@ local function processWin()
 
     if origin and origin ~= "" then
         -- caveman: CityBossLevel. King defeated via chess. Java clears board + badge + unlocks exit.
-        level:onChessWin()
+        local okW, errW = pcall(function() level:onChessWin() end)
+        if not okW then RPD.glog("chess: onChessWin FAILED: %s", tostring(errW)) end
     else
         -- caveman: chess_level debug. fill chasm ring + exit portal to town.
         for x = 3, 12 do
@@ -270,6 +279,7 @@ local function processWin()
         )
     end
 
+    RPD.glog("chess: processWin EXIT")
     gameInProgress = false
 end
 
@@ -335,6 +345,7 @@ local aiResult = nil        -- caveman: result from the coroutine when it finish
 local kingInCheckCell = nil -- caveman: king cell if in check, nil otherwise.
 local checkFlashTimer = 0  -- caveman: flash timer for king-in-check visual.
 local aiMoveAt = 0
+local hbCount = 0 -- caveman: onStep heartbeat counter
 local allowedMoves = {}
 local halfmoveClock = 0 -- caveman: plies since last pawn move / capture (50-move rule; 100 = draw)
 
@@ -497,6 +508,13 @@ return actor.init({
     end,
 
     onStep = function()
+        -- caveman: heartbeat - chess state every ~120 ticks, names a wedge
+        hbCount = hbCount + 1
+        if hbCount % 120 == 0 then
+            RPD.glog("chess:hb gi=%s ai=%s sched=%d pieces=%d",
+                tostring(gameInProgress), tostring(aiCoroutine ~= nil),
+                #scheduledMoves, #pieces)
+        end
         -- caveman: re-tint every frame. tint() is idempotent (sets absolute values),
         -- and resize recreates sprites — so per-frame tinting recovers from resize
         -- within one frame. registry lookups only, negligible cost.
