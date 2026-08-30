@@ -6,7 +6,11 @@ This folder contains test scripts for testing the game through the WebServer deb
 
 1. Start the game with webserver in windowed mode:
    ```bash
-   # Using the helper script
+   # Using serverctl (recommended): start + wait for /ready + game init
+   ./tests/http_api/serverctl.py start --game WARRIOR
+   ./tests/http_api/serverctl.py status | cmd /debug/hero_status | logs -f | stop
+
+   # Or the helper script
    ./tests/http_api/start_game_server.sh
 
    # Or manually
