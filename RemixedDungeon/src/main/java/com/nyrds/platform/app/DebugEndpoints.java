@@ -1,5 +1,7 @@
 package com.nyrds.platform.app;
 
+import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.RemoteControlled;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
@@ -3079,6 +3081,309 @@ public class DebugEndpoints {
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", root.toString());
         } catch (Exception e) {
             GLog.w("Error in handleDebugGetMap: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    // ---- remote-controlled chars (see docs/superpowers/specs/2026-08-30-remote-controlled-chars-design.md) ----
+
+    private static boolean isRemote(Mob mob) {
+        return mob.getState().getTag().equals(MobAi.getStateByClass(RemoteControlled.class).getTag());
+    }
+
+    private static Mob findMobById(int id) {
+        if (Dungeon.level == null) {
+            return null;
+        }
+        for (Mob mob : Dungeon.level.mobs) {
+            if (mob.getId() == id) {
+                return mob;
+            }
+        }
+        return null;
+    }
+
+    private static void applyStance(Mob mob, String stance) {
+        if ("friend".equalsIgnoreCase(stance) && Dungeon.hero != null) {
+            mob.makePet(Dungeon.hero);
+        }
+        // "foe" = untouched dungeon mob - nothing to do
+    }
+
+    // GET /debug/remote/spawn?type=Rat&x=&y=&stance=&revertAfter=
+    public static NanoHTTPD.Response handleRemoteSpawn(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            String type = null;
+            String stance = "foe";
+            int x = -1, y = -1;
+            int revertAfter = 10;
+
+            if (query != null && !query.isEmpty()) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("type=")) {
+                        type = java.net.URLDecoder.decode(param.substring(5), "UTF-8");
+                    } else if (param.startsWith("stance=")) {
+                        stance = java.net.URLDecoder.decode(param.substring(7), "UTF-8");
+                    } else if (param.startsWith("revertAfter=")) {
+                        try {
+                            revertAfter = Integer.parseInt(java.net.URLDecoder.decode(param.substring(12), "UTF-8"));
+                        } catch (NumberFormatException ignored) {
+                        }
+                    } else if (param.startsWith("x=")) {
+                        try {
+                            x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                        } catch (NumberFormatException ignored) {
+                        }
+                    } else if (param.startsWith("y=")) {
+                        try {
+                            y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                        } catch (NumberFormatException ignored) {
+                        }
+                    }
+                }
+            }
+
+            if (type == null || type.isEmpty()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Missing type parameter").toString());
+            }
+            if (Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Game state not initialized - start a game first").toString());
+            }
+            if ("friend".equalsIgnoreCase(stance) && Dungeon.hero == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("stance=friend needs a hero").toString());
+            }
+
+            final String finalType = type;
+            final String finalStance = stance;
+            final int finalX = x, finalY = y;
+            final int finalRevertAfter = revertAfter;
+            final int[] mobId = new int[1];
+            final String[] error = new String[1];
+
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            GameLoop.pushUiTask(() -> {
+                try {
+                    Mob mob = MobFactory.mobByName(finalType);
+                    if (mob == null) {
+                        error[0] = "Unknown mob type: " + finalType;
+                        return;
+                    }
+                    int cell = (finalX >= 0 && finalY >= 0)
+                        ? finalX + finalY * Dungeon.level.getWidth()
+                        : Dungeon.level.randomPassableCell();
+                    mob.setPos(cell);
+                    mob.remoteRevertStateTag = mob.getState().getTag();
+                    Dungeon.level.spawnMob(mob);
+                    applyStance(mob, finalStance);
+                    mob.remoteRevertAfter = finalRevertAfter;
+                    mob.remoteIdleTurns = 0;
+                    mob.setState(MobAi.getStateByClass(RemoteControlled.class));
+                    mobId[0] = mob.getId();
+                } catch (Exception e) {
+                    error[0] = "spawn failed: " + e.getMessage();
+                    GLog.n(error[0]);
+                } finally {
+                    latch.countDown();
+                }
+            });
+
+            if (!latch.await(5, java.util.concurrent.TimeUnit.SECONDS)) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse("Timeout waiting for remote spawn").toString());
+            }
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse(error[0]).toString());
+            }
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", true);
+            response.put("id", mobId[0]);
+            response.put("stance", finalStance);
+            response.put("revertAfter", finalRevertAfter);
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                new JSONObject(response).toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleRemoteSpawn: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    // GET /debug/remote/possess?id=&stance=&revertAfter=
+    public static NanoHTTPD.Response handleRemotePossess(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            int id = -1;
+            String stance = null;
+            int revertAfter = -1;
+
+            if (query != null && !query.isEmpty()) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        try {
+                            id = Integer.parseInt(java.net.URLDecoder.decode(param.substring(3), "UTF-8"));
+                        } catch (NumberFormatException ignored) {
+                        }
+                    } else if (param.startsWith("stance=")) {
+                        stance = java.net.URLDecoder.decode(param.substring(7), "UTF-8");
+                    } else if (param.startsWith("revertAfter=")) {
+                        try {
+                            revertAfter = Integer.parseInt(java.net.URLDecoder.decode(param.substring(12), "UTF-8"));
+                        } catch (NumberFormatException ignored) {
+                        }
+                    }
+                }
+            }
+
+            final int finalId = id;
+            final String finalStance = stance;
+            final int finalRevertAfter = revertAfter;
+            final String[] error = new String[1];
+
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            GameLoop.pushUiTask(() -> {
+                try {
+                    Mob mob = findMobById(finalId);
+                    if (mob == null) {
+                        error[0] = "No mob with id " + finalId;
+                        return;
+                    }
+                    if (isRemote(mob)) {
+                        return; // already remote - nothing to do
+                    }
+                    mob.remoteRevertStateTag = mob.getState().getTag();
+                    if (finalStance != null) {
+                        applyStance(mob, finalStance);
+                    }
+                    if (finalRevertAfter >= 0) {
+                        mob.remoteRevertAfter = finalRevertAfter;
+                    } else if (mob.remoteRevertAfter <= 0) {
+                        mob.remoteRevertAfter = 10;
+                    }
+                    mob.remoteIdleTurns = 0;
+                    mob.setState(MobAi.getStateByClass(RemoteControlled.class));
+                } catch (Exception e) {
+                    error[0] = "possess failed: " + e.getMessage();
+                    GLog.n(error[0]);
+                } finally {
+                    latch.countDown();
+                }
+            });
+
+            if (!latch.await(5, java.util.concurrent.TimeUnit.SECONDS)) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse("Timeout waiting for possess").toString());
+            }
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.NOT_FOUND, "application/json",
+                    createErrorResponse(error[0]).toString());
+            }
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", true);
+            response.put("id", finalId);
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                new JSONObject(response).toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleRemotePossess: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    // GET /debug/remote/release?id=
+    public static NanoHTTPD.Response handleRemoteRelease(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            int id = -1;
+            if (query != null && !query.isEmpty()) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        try {
+                            id = Integer.parseInt(java.net.URLDecoder.decode(param.substring(3), "UTF-8"));
+                        } catch (NumberFormatException ignored) {
+                        }
+                    }
+                }
+            }
+
+            final int finalId = id;
+            final String[] error = new String[1];
+
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            GameLoop.pushUiTask(() -> {
+                try {
+                    Mob mob = findMobById(finalId);
+                    if (mob == null) {
+                        error[0] = "No mob with id " + finalId;
+                        return;
+                    }
+                    mob.revertRemoteControl();
+                } catch (Exception e) {
+                    error[0] = "release failed: " + e.getMessage();
+                    GLog.n(error[0]);
+                } finally {
+                    latch.countDown();
+                }
+            });
+
+            if (!latch.await(5, java.util.concurrent.TimeUnit.SECONDS)) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse("Timeout waiting for release").toString());
+            }
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.NOT_FOUND, "application/json",
+                    createErrorResponse(error[0]).toString());
+            }
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", true);
+            response.put("id", finalId);
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                new JSONObject(response).toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleRemoteRelease: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    // GET /debug/remote/list
+    public static NanoHTTPD.Response handleRemoteList(NanoHTTPD.IHTTPSession session) {
+        try {
+            if (Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("Game state not initialized - start a game first").toString());
+            }
+
+            org.json.JSONArray list = new org.json.JSONArray();
+            int width = Dungeon.level.getWidth();
+            for (Mob mob : Dungeon.level.mobs) {
+                if (!isRemote(mob)) {
+                    continue;
+                }
+                JSONObject entry = new JSONObject();
+                entry.put("id", mob.getId());
+                entry.put("type", mob.getEntityKind());
+                entry.put("x", mob.getPos() % width);
+                entry.put("y", mob.getPos() / width);
+                entry.put("stance", mob.isPet() ? "friend" : "foe");
+                list.put(entry);
+            }
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("count", list.length());
+            response.put("remote", list);
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                new JSONObject(response).toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleRemoteList: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
