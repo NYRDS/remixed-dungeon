@@ -94,6 +94,17 @@ public abstract class Mob extends Char {
 
     private Carcass carcassRef;
 
+    // caveman: remote-control watchdog - see RemoteControlled state.
+    // remoteRevertAfter persists in the bundle; counters do not (reset on load).
+    public static final String REMOTE_REVERT_AFTER = "remoteRevertAfter";
+
+    @Packable(defaultValue = "0")
+    public int remoteRevertAfter = 0;
+
+    public transient int remoteIdleTurns = 0;
+    public String remoteRevertStateTag = null;
+    public boolean remoteReverted = false;
+
     public Mob() {
         super();
         setupCharData();
@@ -106,6 +117,16 @@ public abstract class Mob extends Char {
     public void releasePet() {
         setFraction(Fraction.DUNGEON);
         setOwnerId(getId());
+    }
+
+    public void revertRemoteControl() {
+        remoteIdleTurns = 0;
+        remoteReverted = true;
+        setCurAction(null);
+        String tag = remoteRevertStateTag != null ? remoteRevertStateTag : "WANDERING";
+        remoteRevertStateTag = null;
+        remoteRevertAfter = 0;
+        setState(MobAi.getStateByTag(tag));
     }
 
     @LuaInterface
@@ -150,6 +171,7 @@ public abstract class Mob extends Char {
 
         bundle.put(STATE, getState().getTag());
         bundle.put(FRACTION, fraction.ordinal());
+        bundle.put(REMOTE_REVERT_AFTER, remoteRevertAfter);
     }
 
     @Override
@@ -161,6 +183,9 @@ public abstract class Mob extends Char {
         setState(state);
 
         fraction = Fraction.values()[bundle.optInt(FRACTION, Fraction.DUNGEON.ordinal())];
+
+        remoteRevertAfter = bundle.optInt(REMOTE_REVERT_AFTER, 0);
+        remoteIdleTurns = 0; // watchdog counts live world turns only
 
         if (bundle.contains(LOOT)) { //pre 29.6 saves compatibility
             loot(bundle.get(LOOT), 1);
