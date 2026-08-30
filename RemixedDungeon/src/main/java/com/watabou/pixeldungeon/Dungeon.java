@@ -401,7 +401,11 @@ public class Dungeon {
         }
 
         mob.setEnemy(CharsList.DUMMY);
-        mob.setState(MobAi.getStateByClass(Wandering.class));
+        // caveman: remote-controlled followers keep their injected state -
+        // the driver owns them, Wandering would silently free them
+        if (!mob.isRemoteControlled()) {
+            mob.setState(MobAi.getStateByClass(Wandering.class));
+        }
         level.spawnMob(mob);
     }
 

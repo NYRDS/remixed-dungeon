@@ -9,6 +9,7 @@ import com.nyrds.pixeldungeon.ai.Horrified;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.RunningAmok;
+import com.nyrds.pixeldungeon.ai.RemoteControlled;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.ModQuirks;
@@ -127,6 +128,11 @@ public abstract class Mob extends Char {
         remoteRevertStateTag = null;
         remoteRevertAfter = 0;
         setState(MobAi.getStateByTag(tag));
+    }
+
+    public boolean isRemoteControlled() {
+        return MobAi.getStateByClass(RemoteControlled.class)
+            .getTag().equals(getState().getTag());
     }
 
     @LuaInterface

@@ -3149,7 +3149,7 @@ public class DebugEndpoints {
     // ---- remote-controlled chars (see docs/superpowers/specs/2026-08-30-remote-controlled-chars-design.md) ----
 
     private static boolean isRemote(Mob mob) {
-        return mob.getState().getTag().equals(MobAi.getStateByClass(RemoteControlled.class).getTag());
+        return mob.isRemoteControlled();
     }
 
     private static Mob findMobById(int id) {
