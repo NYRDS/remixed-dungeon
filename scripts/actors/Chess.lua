@@ -422,7 +422,10 @@ end
 -- hold a piece but lost its mob (killed by hero/pet out-of-band) gets a fresh
 -- piece. keeps picture == engine (#21), killing pieces can't break the game.
 local function repairPieces()
-    if not chess then return end
+    -- caveman: game over = board stays dead. without this guard repairPieces
+    -- resurrects the whole cleared board every tick after win/lose/tie
+    -- (chess engine object outlives the game) - PASSIVE flood + re-blocked exit.
+    if not chess or not gameInProgress then return end
     if #scheduledMoves > 0 then return end
     chess:ensure_board()
     local boardData = util.split(chess.board, "\n")
