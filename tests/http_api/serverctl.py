@@ -155,7 +155,7 @@ def do_stop(args) -> int:
     if pid is not None:
         # the tracked pid is the gradle wrapper; its process group covers the game jvm
         try:
-            targets.update(p for p in os.listdir("/proc") if p.isdigit()
+            targets.update(int(p) for p in os.listdir("/proc") if p.isdigit()
                            and int(p) in (pid, os.getpgid(pid)))
             targets.add(os.getpgid(pid))
         except OSError:
