@@ -354,6 +354,7 @@
     <string name="Golem_Name">גולם</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info3">גלורפ-גלורפ!</string>
+    <string name="Goo_Name">גוגו</string>
     <string name="GothicArmor_Name">שריון גותי</string>
     <string name="Guts_TileDescEntrance">חור פעור בתקרה מוביל לקומות העליונות</string>
     <string name="Guts_TileDescExit">חור פעור ברצפה מוביל מטה למפלסים התחתונים</string>
@@ -373,6 +374,7 @@
     <string name="Hedgehog_Info4">קח את הפאי הזה</string>
     <string name="Hedgehog_Name">קיפוד</string>
     <string name="HeroClass_Doctor">רופא הדבר</string>
+    <string name="HeroClass_Elf">אלף</string>
     <string name="HeroClass_ElfPerks_4">אלפים מקבלים הרבה יותר בריאות מטיפות טל.</string>
     <string name="HeroClass_GnollPerks_2">גנולים מתחילים ללא שריון אבל עם טומהוק ייחודי</string>
     <string name="HeroClass_GnollPerks_3">גנולים לא יודעים לקרוא או לכתוב.</string>
@@ -564,6 +566,7 @@
     <string name="Order_Info">בריכוז נכון, הפקודות שלך כמעט בלתי ניתנות לערעור.</string>
     <string name="Order_Name">ציווי</string>
     <string name="Order_Resist">איך אתה מעז?!!</string>
+    <string name="OverpricedRation_Info">זה נראה בדיוק כמו מנת מזון סטנדרטית, רק יותר קטנה.</string>
     <string name="PalaceServant_Golem_1">...</string>
     <string name="PalaceServant_Golem_2">האולם הזה קדוש.</string>
     <string name="PalaceServant_Golem_3">*רעידה נמוכה*</string>
@@ -902,6 +905,7 @@
     <string name="Wand_Fizzles">השרביט שלך מפצפץ; כנראה נגמרו המטענים שלו עכשיו</string>
     <string name="Wand_Prompt">בחר כיוון לירי</string>
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
+    <string name="Wand_Wood_Types_3">דובדבן</string>
     <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">מעטות היצורים שיכולות לעמוד בפני המכה המוחצת של המסה האדירה הזו של עופרת ופלדה, אבל רק ההרפתקנים החזקים ביותר יכולים להשתמש בה ביעילות.</string>
     <string name="WarHammer_Name">פטיש מלחמה</string>
@@ -1073,6 +1077,7 @@
     <string name="town_deco_shieldboard_name">מגנים</string>
     <string name="town_deco_skulls_desc">גולגולות מלוטשות השייכות ליצורים מהצינוק.</string>
     <string name="town_deco_statue_blood_desc">פסל מפואר של מלאך המחזיק קערת דם.</string>
+    <string name="town_deco_stock_desc">מצבורי מזון מאוחסנים כאן, יחד עם ערמה של גרוטאות מכל מיני סוגים וצבעים.</string>
     <string name="town_deco_stone_wall_desc">איכשהו הקיר הזה פולט חום ונראה קצת רטוב.</string>
     <string name="town_deco_stones_desc">סתם ערימת אבנים</string>
     <string name="town_deco_stool_sturdy_name">שרפרף</string>
@@ -1166,6 +1171,11 @@
 
 
     <string name="town_deco_wooden_drawer_desc">מעניין מה שמור בפנים.</string>
+
+
+
+
+
 
 
 

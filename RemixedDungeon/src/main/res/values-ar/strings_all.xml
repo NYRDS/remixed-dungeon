@@ -524,6 +524,7 @@
     <string name="MailArmor_Name">درع حلقي</string>
     <string name="MeleeWeapon_Info1c">مُحسَّن</string>
     <string name="MeleeWeapon_Info2a">متوسط ضرره %d نقطة لكل ضربة.</string>
+    <string name="MeleeWeapon_Info2c">هذا السلاح ربما ثقيل جداً عليك.</string>
     <string name="MeleeWeapon_Info3d">و</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
     <string name="MeleeWeapon_Info6b">بسبب قوتك الزائدة، تم زيادة ضرر هجومك بهذا %s.</string>
@@ -663,6 +664,7 @@
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">جراب الفأر</string>
     <string name="Rat_Name_Objective">فأر الكيس</string>
+    <string name="Ration_Name">وجبة طعام</string>
     <string name="RawFish_Name">سمك نيء</string>
     <string name="RegenerationBuff_Info">وظيفة التجدد الطبيعي موجودة في صيغة تأثير مؤقت لتسهيل الأمور.</string>
     <string name="RemixedPixelDungeonApp_sendCrash">لعبةنا تعطلت...\n عذراً.\nيرجى إرسال تقرير العطل لمساعدتنا في إصلاحه.</string>
@@ -749,6 +751,7 @@
     <string name="Shades_Info">يقول بعض الناس إن الزنزانات مظلمة جداً لارتداء النظارات الشمسية. وتقول إن هؤلاء الناس ليسوا باريدين بما فيه الكفاية.</string>
     <string name="Shades_Name">نظارات شمسية</string>
     <string name="Shades_Name_Objective">نظارات شمسية</string>
+    <string name="ShadowLord_Desc">هذا المخلوق مصنوع من شر خالص وظلام لا يُخترق. يعتقد الكثيرون أنه الإله القديم نفسه، نظراً لمدى قوته. بينما يفترض آخرون أنه مجرد حارس لأروقة الإله القديم.</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Name_Objective">سيد الظلال</string>
     <string name="Shadow_Gender">feminine</string>
@@ -825,6 +828,7 @@
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">تمثال متحرك</string>
+    <string name="Statue_Name_Objective">تمثال متحرك</string>
     <string name="Stench_Txt">%s نتن</string>
     <string name="Stylus_ACInscribe">نَقْش</string>
     <string name="Stylus_Info">هذا القلم السحري مصنوع من حجر داكن وصلب جداً. يمكنك به نقش رمز أو رونه، لكن القلم هو من يختار ما سينقش، ليس أنت.</string>
@@ -913,6 +917,7 @@
     <string name="WaterOfAwareness_Info">تشع قوة المعرفة من ماء هذه البئر. خذ رشفة منه لكشف جميع أسرار معداتك.</string>
     <string name="WeaknessBuff_Name">مُضعف</string>
     <string name="Weapon_Incompatible">تفاعل أنواع مختلفة من السحر ألغى السحر على هذا السلاح!</string>
+    <string name="Weightstone_Accurate">لقد قمت بتوازن %s لجعله أدق</string>
     <string name="Weightstone_Fast">لقد قمت بتوازين %s لجعله أسرع</string>
     <string name="Weightstone_Info">باستخدام حجر الوزن، يمكنك موازنة سلاحك القتالي القريب لزيادة سرعته أو دقته.</string>
     <string name="Weightstone_Name">حجر الوزن</string>
@@ -1099,6 +1104,11 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
 
 
 

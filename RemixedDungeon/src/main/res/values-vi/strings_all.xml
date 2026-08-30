@@ -229,6 +229,7 @@
     <string name="CityBossLevel_ChessSign">Hãy buông vũ khí — Vua sẽ thử thách trí tuệ của ngươi, chứ không phải sức mạnh.</string>
     <string name="City_TileDescDeco">Ở đây thiếu một vài viên gạch.</string>
     <string name="City_TileDescEmptySP">Một tấm thảm dày phủ kín sàn.</string>
+    <string name="ClassArmor_LowMana">Không đủ mana!</string>
     <string name="ClassArmor_NotEquipped">Bạn cần mặc bộ giáp này để sử dụng sức mạnh đặc biệt của nó!</string>
     <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Thanh kiếm đồ sộ này chắc chắn có thể chém xuyên qua bất cứ thứ gì.</string>
@@ -497,6 +498,7 @@
     <string name="Journal_Caged_Kobold">Kobold Bị Giam</string>
     <string name="Journal_Troll">Thợ rèn Troll</string>
     <string name="Journal_WellAwareness">Giếng Nhận Thức</string>
+    <string name="Journal_WellTransmut">Giếng Chuyển Hóa</string>
     <string name="King_Desc">Vua cuối cùng của người lùn nổi tiếng với sự thấu hiểu sâu sắc về quá trình sống và chết. Ngài đã thuyết phục các thành viên triều đình tham gia nghi lễ, hứa hẹn ban tặng thanh xuân vĩnh cửu. Kết cục chỉ có Ngài nhận được nó - và một quân đoàn bất tử làm phần thưởng thêm.</string>
     <string name="King_Gender">masculine</string>
     <string name="King_Info1">Bạn không thể giết được tôi, %s... Tôi là... bất tử...</string>
@@ -642,6 +644,7 @@
     <string name="Pickaxe_InsufficientStr">Không đủ sức mạnh để khai thác!</string>
     <string name="Pickaxe_Name">cuốc chim</string>
     <string name="Pickaxe_NothingToMine">Không có gì để khai thác ở đây!</string>
+    <string name="Piercing_Name_0">Thâm Nhập %s</string>
     <string name="Piercing_Name_2">Thâm Nhập %s</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">piranha khổng lồ</string>
@@ -984,6 +987,7 @@
     <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
     <string name="Wand_Wood_Types_10">sồi</string>
     <string name="Wand_Wood_Types_2">gỗ mun</string>
+    <string name="Wand_Wood_Types_4">gỗ tếch</string>
     <string name="Wand_Wood_Types_7">gõ đỏ</string>
     <string name="Wand_Wood_Types_9">gỗ tím</string>
     <string name="WarHammer_Gender">masculine</string>
@@ -997,6 +1001,7 @@
     <string name="WeaknessBuff_Name">Yếu</string>
     <string name="Weightstone_Accurate">bạn đã cân bằng %s để nó chính xác hơn</string>
     <string name="Weightstone_Fast">bạn đã cân bằng %s để làm nó nhanh hơn</string>
+    <string name="Weightstone_Info">Sử dụng đá cân, bạn có thể cân bằng vũ khí cận chiến của mình để tăng tốc độ hoặc độ chính xác.</string>
     <string name="Weightstone_Name">đá cân</string>
     <string name="Weightstone_WndAccuracy">Độ chính xác</string>
     <string name="Weightstone_WndCancel">Không sao đâu</string>
@@ -1215,6 +1220,11 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
 
 
 

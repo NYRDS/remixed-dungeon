@@ -307,6 +307,7 @@
     <string name="DrunkardNPC_Name">dronkaard</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_DeadEnd">Wat doe je hier?!</string>
+    <string name="Dungeon_NoTips">De tekst is onleesbaar...</string>
     <string name="Dungeon_Tips_12">Als je brandt en zweeft, kun je het vuur niet in water uithassen.</string>
     <string name="Dungeon_Tips_14">GEVAAR! Zware machines kunnen letsel, verlies van ledematen of de dood veroorzaken!</string>
     <string name="Dungeon_Tips_16">Wanneer je een getoverde wapen verbetert, is er een kans dat de toverij vernietigd wordt.</string>
@@ -329,7 +330,9 @@
     <string name="EncumbranceBuff_Name">Last</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
+    <string name="Entanglement_Txt">%s van verstrengeling</string>
     <string name="Exhumation_Name">Exhumatie</string>
+    <string name="Exhumation_NoGrave">Hier is geen graf om een Exhumatie uit te voeren.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="Eye_Desc">Een van de andere namen van deze demon is \&quot;orb of hatred\&quot;, omdat wanneer hij een vijand ziet, hij zijn doodsblik onbeschoft gebruikt, vaak de bondgenoten negerend en ze verwondend.</string>
     <string name="Eye_Gender">neuter</string>
@@ -399,6 +402,7 @@
     <string name="HeroClass_GnollPerks_3">Gnollen kunnen niet lezen of schrijven.</string>
     <string name="HeroClass_GnollPerks_4">Gnollen vallen geen andere Gnollen aan tenzij ze worden uitgedaagd</string>
     <string name="HeroClass_Hun">jachtvrouw</string>
+    <string name="HeroClass_HunPerks_0">Jachtvrouwen beginnen met 15 levenspunten.</string>
     <string name="HeroClass_HunPerks_1">Jachtvrouwen beginnen met een unieke, upgradeerbare boemerang.</string>
     <string name="HeroClass_HunPerks_3">Jachtvrouwjes krijgen meer gezondheid van dauwdruppels.</string>
     <string name="HeroClass_HunPerks_4">Jachtvrouwen voelen buurmonsters zelfs als ze achter obstakels verstopt zitten.</string>
@@ -827,6 +831,7 @@
     <string name="Shaman_Name_Objective">gnol sjamaan</string>
     <string name="Sheep_Desc">Dit is een magisch schaap. Wat is er zo magisch aan? Je kunt het niet doden. Het blijft staan tot het magisch verdwijnt, terwijl het herkauwt met een lege blik.</string>
     <string name="Sheep_Gender">feminine</string>
+    <string name="Sheep_Name_Objective">schaap</string>
     <string name="ShieldBuffNotReady_Info">Je schild is nog niet klaar om de volgende aanval te blokkeren.</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="Shielded_Gender">masculine</string>
@@ -1221,6 +1226,7 @@
     <string name="town_deco_library_books_desc">Nog steeds beter dan de boeken uit de kelder.</string>
     <string name="town_deco_library_sign_name">Bibliotheekbord</string>
     <string name="town_deco_locked_door_desc">Wat ter wereld zou er achter die deur kunnen zitten?</string>
+    <string name="town_deco_magenta_carpet_desc">De magenta kleur van dit tapijt doet denken aan lokale wijn.</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_pole_desc">Een hoge paal ontworpen om de touw te spannen.</string>
@@ -1256,6 +1262,12 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
 
 
 
