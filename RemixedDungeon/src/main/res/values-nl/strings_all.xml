@@ -702,6 +702,7 @@
     <string name="Potion_Colors_8">amber</string>
     <string name="Potion_ItemFliesAway">%s vliegt zomaar uit je handen weg.</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
+    <string name="Potion_SelectForMoisten">Selecteer een item om te bevochtigen</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
     <string name="Prison_TileDescBookshelf">Dit is waarschijnlijk een overblijfsel van een gevangenisbibliotheek. Zou het branden?</string>
     <string name="Prison_TileDescDeco">Er zijn oude bloedvlekken op de vloer.</string>
@@ -769,6 +770,7 @@
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
     <string name="RootsBuff_Name">Geworteld</string>
     <string name="RottenFood_Message">Walging!</string>
+    <string name="RottenOrgan_Info">Een ontbindend orgaan, geoogst van een verslagen vijand. Ondanks zijn verrotte staat bevat het waardevolle stoffen voor alchemistische processen.</string>
     <string name="RottenPumpkinPie_Info">Hoewel het vers wel heerlijk was, is er geen manier dat het nog eetbaar is.</string>
     <string name="RottenPumpkinPie_Name">bedorven pompoentaart</string>
     <string name="RottenRation_Name">Bedederde ratoen</string>
@@ -808,6 +810,7 @@
     <string name="ScrollOfUpgrade_InvTitle">Kies een voorwerp om te upgraden</string>
     <string name="ScrollOfUpgrade_LooksBetter">je %s ziet er nu zeker beter uit</string>
     <string name="ScrollOfWeaponUpgrade_Info">Deze rol zal een wapen voor nabijgevecht upgraden, de kwaliteit verbeterend. In tegenstelling tot een gewone Upgrade Scroll, zal deze gespecialiseerde versie nooit een begoocheling op een wapen vernietigen. Integendeel, het kan een onbetoverde wapen een willekeurige begoocheling geven.</string>
+    <string name="Scroll_Blinded">Je kunt geen scroll lezen terwijl je verblind bent</string>
     <string name="Scroll_Info">Dit perkament is bedekt met onleesbaar schrift en draagt de titel van rune %s. Wie weet wat er gebeurt als het hardop wordt gelezen?</string>
     <string name="Scroll_Name">scrol \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_10">Odal</string>
@@ -1198,6 +1201,7 @@
     <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name_Objective">hart van Yog</string>
     <string name="YogsTeeth_Gender">masculine</string>
+    <string name="YogsTeeth_Name">Tanden van Yog</string>
     <string name="ZombieGnoll_Desc">Het verwrongen, gebroken lichaam van een gnoll-zombie lijkt niet meer op een mensachtige of een hyena. Al wat overblijft is een hoop rottend vlees en beenderen, vervuld van een kwaadaardige drang om te doden en te verslinden.</string>
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
@@ -1287,6 +1291,10 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
 
 
 
