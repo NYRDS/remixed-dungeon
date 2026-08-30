@@ -26,13 +26,43 @@ Options:
 
 ## Available Debug Endpoints
 
+Routing is **exact-match** on the URI path (`/debug/foo` matches only that path).
+`/ready` answers before the game is initialized; every other endpoint returns
+503 until a game is running (call `/debug/start_game` and poll
+`/debug/get_game_state` until a `hero` key appears). Responses to POST requests
+close the connection (NanoHTTPD 2.3.1 keep-alive desyncs on reused POST
+connections).
+
+### LLM / Agent Control Surface
+
+The endpoints an autonomous driver (LLM or script) needs per loop tick. The
+full working loop is exercised by `test_llm_control.py` (41 checks).
+
+| Endpoint | Parameters | Description |
+|----------|------------|-------------|
+| `/debug/observe` | - | **Atomic world frame**: hero vitals (class, level, hp/ht, str, gold, hunger, starving, buffs, pos, current action), visible mobs (id, type, pos, hp, state, distance, owned), visible item heaps, stair cells, levelId/depth/dimensions. One consistent read replaces 5-8 non-atomic calls |
+| `/debug/get_map` | `mask` (optional) | Level as grid: `terrain` rows (int codes, same as `get_tile_info`), `passable`/`visible`/`mapped` masks as 0/1 strings per row, `entrance` + `exits` cells. `mask=1` returns terrain `-1` for unexplored-and-unseen cells |
+| `/debug/hero_status` | - | Cheap poll: `alive`, `hp`, `ht`, `pos`, `x`, `y`, `action` (current action class or `"idle"`), `levelId`, `depth`. `action=="idle"` is the signal to issue the next command |
+| `/debug/move_to` | `x`, `y` (or `cell`) | **Tap on a cell** — resolved by the game's own tap logic (`Hero.handle` → `CharUtils.actionForCell`): empty passable cell → pathfinding walk, hostile mob → Attack, heap → PickUp/OpenChest, exit stairs → Descend, locked door → Unlock, object → InteractObject. Response carries the `resolved` action. Returns 409 + "busy" if the hero is mid-action |
+
+Agent loop pattern (see `test_llm_control.py`):
+
+1. `observe` → decide
+2. `move_to` → poll `hero_status` until `action=="idle"`
+3. re-`move_to` on idle if the walk was interrupted (visible hostiles
+   interrupt tap-walking, same as for a human player)
+4. pathing note: the game walks only cells that are `passable && (visited || mapped)`
+   — route over `get_map` masks, and `reveal_map` first when targeting
+   undiscovered stairs
+
 ### Game Control
 | Endpoint | Parameters | Description |
 |----------|------------|-------------|
-| `/debug/start_game` | `class`, `difficulty` | Start a new game |
+| `/debug/start_game` | `class`, `difficulty` | Start a new game (async — poll `get_game_state` until `hero` appears) |
 | `/debug/get_game_state` | - | Get current game state |
-| `/debug/get_hero_info` | - | Get detailed hero info |
+| `/debug/get_hero_info` | - | Get detailed hero info (raw save bundle — noisy; prefer `observe`/`hero_status`) |
 | `/debug/get_level_info` | - | Get current level info |
+| `/debug/reload_game` | - | Full save/load cycle (exercises bundle restore path) |
 
 ### Spell Testing
 | Endpoint | Parameters | Description |
@@ -85,6 +115,15 @@ Options:
 | `/debug/get_entrances` | - | Get entrances to current level |
 | `/debug/descend_to` | `id` | Descend to connected level |
 | `/debug/ascend` | - | Ascend to previous level |
+| `/debug/reveal_map` | - | Reveal whole level (sets visible/visited/mapped) |
+
+### Tile Inspection
+| Endpoint | Parameters | Description |
+|----------|------------|-------------|
+| `/debug/get_tile_info` | `x`, `y` | Terrain, passable, visibility flags, item heap and character at a cell |
+| `/debug/handle_cell` | `x`, `y` | Legacy primitive: move-or-attack toward a cell (prefer `move_to`) |
+| `/debug/remove_item` | `x`, `y` | Remove item heap at position |
+| `/debug/spawn_at` | `entity`, `value`, `x`, `y` | Spawn mob or item at exact coordinates |
 
 ### Alchemy System
 | Endpoint | Parameters | Description |

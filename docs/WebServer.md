@@ -53,9 +53,18 @@ The upload interface allows you to:
 
 For security reasons, file uploads to the main "Remixed" mod are disabled. This prevents accidental or malicious modification of core game files. Users can only upload files to custom mods.
 
-### Path Sanitization
+### Path Validation
 
-The WebServer implements path sanitization to prevent directory traversal attacks. Dangerous path sequences like `../` are automatically removed from file paths.
+All client-supplied file paths (URI paths under `/fs/`, `/raw/`, `/web/pixelcraft/`, editor and texture `file=` parameters, upload paths and multipart filenames) pass through a strict path validator before use:
+
+- `..` path segments, absolute paths, Windows drive prefixes and backslashes are rejected with **403 Forbidden** (nothing is silently stripped)
+- Write endpoints additionally verify that the resolved file stays inside the external storage root (canonical-path containment), which also defeats symlink tricks
+
+Earlier builds only stripped `..` from the upload `path` parameter and trusted the multipart filename, which allowed traversal reads and writes; this was closed in snap-37j.
+
+### Debug HTTP API
+
+The same server exposes a JSON debug/control API under `/debug/*` (game control, world inspection, agent control surface — `observe`, `get_map`, `hero_status`, `move_to`). See `tests/http_api/README.md` for the full endpoint reference. The server binds to all interfaces; only run it on trusted networks.
 
 ## Technical Implementation
 
@@ -175,10 +184,10 @@ With the addition of the PNG editor and preview features, users can now:
 
 ## Limitations
 
-1. **Android Only**: This feature is only available on Android devices as desktop users can directly access the file system.
-2. **Network Required**: Both the Android device and the computer need to be on the same network.
+1. **Platform**: On Android it is a deliberate hidden feature (AboutScene easter egg, see above). On desktop it runs via the `--webserver` launch flag (game with web server or the standalone server below).
+2. **Network Required**: The device and the controlling computer need to be on the same network.
 3. **Performance**: Large file transfers may be slower than direct file system access.
-4. **Security**: The WebServer should only be used on trusted networks as it provides file system access.
+4. **Security**: The WebServer should only be used on trusted networks as it provides file system access and a full debug/control API.
 5. **Hidden Feature**: The WebServer is not obvious to enable, requiring knowledge of the hidden button in AboutScene.
 
 ## Accessing the WebServer
