@@ -645,7 +645,7 @@ Replace the whole body of `handleDebugMoveTo` with:
 					createErrorResponse("Game not initialized - start a game first").toString());
 			}
 
-			final com.watabou.pixeldungeon.actors.Char actor;
+			final Char actor;
 			if (charId < 0) {
 				actor = Dungeon.hero;
 			} else {
@@ -686,7 +686,7 @@ Replace the whole body of `handleDebugMoveTo` with:
 				try {
 					// preview the resolution for the response, then tap for real.
 					Dungeon.level.updateFieldOfView(actor);
-					var action = com.watabou.pixeldungeon.actors.CharUtils.actionForCell(actor, targetCell, Dungeon.level);
+					var action = CharUtils.actionForCell(actor, targetCell, Dungeon.level);
 					preview[0] = action.toString();
 
 					if (!action.valid()) {
@@ -700,11 +700,11 @@ Replace the whole body of `handleDebugMoveTo` with:
 						// hero-belongings paths. Move/Attack/Interact family only.
 						Class<?> actionClass = action.getClass();
 						boolean supported =
-							actionClass == com.nyrds.pixeldungeon.ml.actions.Move.class
-							|| actionClass == com.nyrds.pixeldungeon.ml.actions.Attack.class
-							|| actionClass == com.nyrds.pixeldungeon.ml.actions.Interact.class
-							|| actionClass == com.nyrds.pixeldungeon.ml.actions.InteractObject.class
-							|| actionClass == com.nyrds.pixeldungeon.ml.actions.Unlock.class;
+							actionClass == Move.class
+							|| actionClass == Attack.class
+							|| actionClass == Interact.class
+							|| actionClass == InteractObject.class
+							|| actionClass == Unlock.class;
 						if (!supported) {
 							error[0] = "Action not supported for remote char: " + action.getClass().getSimpleName();
 							return;
@@ -768,10 +768,16 @@ Replace the whole body of `handleDebugMoveTo` with:
 Add missing imports to `DebugEndpoints.java`:
 
 ```java
+import com.nyrds.pixeldungeon.ml.actions.Attack;
+import com.nyrds.pixeldungeon.ml.actions.Interact;
+import com.nyrds.pixeldungeon.ml.actions.InteractObject;
+import com.nyrds.pixeldungeon.ml.actions.Move;
+import com.nyrds.pixeldungeon.ml.actions.Unlock;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 ```
 
-(`Actor` is already imported; check `Mob`, `Map`, `HashMap`, `JSONObject` are — they are.)
+(`Actor`, `Char`, `Mob`, `Map`, `HashMap`, `JSONObject` are already imported. Style: use imports and short names for project classes - no fully-qualified references in code.)
 
 - [ ] **Step 2: Compile both platforms**
 
