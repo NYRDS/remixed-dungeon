@@ -361,11 +361,14 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Carcass_DissectFailed">Anda membedah %s tetapi tidak menemukan apa pun yang berharga.</string>
     <string name="Carcass_DissectMessage">Anda membedah bangkai dan mendapatkan %s.</string>
     <string name="Carcass_DissectResult">Dari %1$s kamu memperoleh %2$d %3$s.</string>
+    <string name="Carcass_DissectResult_Many">Dari %1$s kamu memperoleh %2$d item.</string>
+    <string name="Carcass_DissectResult_One">Dari %1$s kamu memperoleh satu item.</string>
     <string name="Carcass_Info">sisa-sisa %s yang benar-benar mati.</string>
     <string name="Carcass_Kick">%s ini sudah benar-benar mati, tidak perlu menendangnya lagi.</string>
     <string name="Carcass_Name">bangkai %s</string>
     <string name="Carcass_Necromancy">\&quot;Kamu telah membangkitkan mayat %s!\&quot;</string>
     <string name="Carcass_Necromancy_Failed">\&quot;Upaya Anda untuk menghidupkan mayat %s gagal!\&quot;</string>
+    <string name="Carcass_SelectItem">Pilih sebuah item</string>
     <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk membedah bangkai.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang butuh rak buku di gua?</string>
     <string name="Caves_TileDescDeco">Kilauan dari beberapa logam terlihat pada tembok. Emas?</string>
@@ -495,6 +498,10 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="Chasm_Jump">Apakah anda yakin akan melompat ke dalam jurang? Anda mungkin dapat mati.</string>
     <string name="Chasm_No">Tidak, aku berubah pikiran</string>
     <string name="Chasm_Yes">Ya, aku yakin apa yang kulakukan</string>
+    <string name="Chess_Stalemate">Stalemate! Raja meninggalkan papan dan membiarkanmu lewat.</string>
+    <string name="Chess_YouLose">Kamu Kalah!</string>
+    <string name="Chess_YouWin">Kamu Menang!</string>
+    <string name="Chess_YourMove">Klik pada papan — ini giliranmu, Pahlawan.</string>
     <string name="ChristmasTurkey_Info">Cara terbaik untuk merayakan Dungeonmas, adalah makan sepotong kalkun panggang. Untuk merayakan hari ketika monster menyerbu dungeon. Yang pada akhirnya, menarik sejumlah besar wisatawan dan pelancong dari seluruh dunia, meningkatkan situasi ekonomi di wilayah tersebut.</string>
     <string name="ChristmasTurkey_Name">ayam turki festival</string>
     <string name="CityBossLevel_ChessSign">Letakkan senjatamu — Raja akan menguji pikiranmu, bukan kekuatanmu.</string>
@@ -1475,6 +1482,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="Necrotism_Death">Anda meninggal karena Nekrotisme...</string>
     <string name="NekoEars_Info">Terkadang Anda ingin membersihkan semua darah dan kotoran monster itu dari diri Anda dan hanya merasa lucu dan lembut... Atau setidaknya Anda bisa memakai telinga kucing yang lucu.</string>
     <string name="NekoEars_Name">Telinga Neko</string>
+    <string name="NeutralKing_Hostile">Raja berbalik menyerangmu!</string>
     <string name="Nightcap_Info">Menaklukkan dungeon di malam hari pasti menjadi tugas yang sangat melelahkan. Bagaimana kalau memakai topi yang hangat dan nyaman ini dan santai saja, dan biarkan seluruh dunia menunggu.</string>
     <string name="Nightcap_Name">minum</string>
     <string name="Nightmare_Desc">Makhluk menjijikan yang terbuat dari tentakel daging yang menyentak. Mimpi seram adalah sebuah manifestasi dari pikiran jahat Dewa Tua.</string>
@@ -1500,6 +1508,7 @@ kalinya.\n\n\n\t oleh drazool dari reddit</string>
     <string name="PalaceServant_Warlock_1">Sihir saya melayani mahkota, bukan kamu.</string>
     <string name="PalaceServant_Warlock_2">Kamu membawa baja ke tempat suci?</string>
     <string name="PalaceServant_Warlock_3">Kesabaran Raja tidaklah tanpa batas.</string>
+    <string name="PalaceServants_Hostile">Para pelayan istana berbalik menyerangmu!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Anak panah ini dilapisi curare.</string>
     <string name="ParalysisArrow_Name">anak panah melumpuhkan</string>
@@ -3072,6 +3081,15 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
 
 
 

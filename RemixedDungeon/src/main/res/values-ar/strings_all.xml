@@ -138,6 +138,7 @@
     <string name="BlessedBuff_Name">مبارك</string>
     <string name="BlindnessBuff_Info">عمى تام، لا يُسمع سوى الأصوات المحيطة.</string>
     <string name="BloodTransfusion_Drained">تتدفق جوهر الحياة من حيوانك الأليف إليك.</string>
+    <string name="BodyArmorBuff_Info">تزداد الدروع على حساب سرعة الحركة.</string>
     <string name="BoneSaw_Name">منشار العظام</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
@@ -160,9 +161,12 @@
     <string name="Candy_Name">حلوى</string>
     <string name="Candy_Warning_2">لقد أفرطت حقًا هذه المرة. بطنك يؤلمك لأنك أكلت الكثير من الحلوى.</string>
     <string name="Capotain_Name">قبعة بيوريتانية</string>
+    <string name="Carcass_DissectResult_Many">حصلت على %2$d عناصر من %1$s.</string>
+    <string name="Carcass_DissectResult_One">حصلت على عنصر واحد من %1$s.</string>
     <string name="Carcass_Name">بقايا %s</string>
     <string name="Carcass_Necromancy">لقد أحيت جثة %s!</string>
     <string name="Carcass_Necromancy_Failed">فشلت محاولتك لإحياء جثة %s!</string>
+    <string name="Carcass_SelectItem">اختر عنصراً</string>
     <string name="Caves_TileDescDeco">تظهر عرق من معدن ما على الجدار. ذهب؟</string>
     <string name="Caves_TileDescEntrance">يؤدي السلم إلى العمق العلوي.</string>
     <string name="Caves_TileGrass">طحلب فلوري</string>
@@ -213,6 +217,10 @@
     <string name="Chasm_Info">سقطت حتى الموت...</string>
     <string name="Chasm_No">لا، لقد غيرت رأيي</string>
     <string name="Chasm_Yes">نعم، أنا أعرف ما أقوم به</string>
+    <string name="Chess_Stalemate">تعادل! الملك يترك الميدان ويتركك تمر.</string>
+    <string name="Chess_YouLose">لقد خسرت!</string>
+    <string name="Chess_YouWin">لقد فزت!</string>
+    <string name="Chess_YourMove">انقر على الرقعة — دورك أيها البطل.</string>
     <string name="ChristmasTurkey_Name">ديك رومي احتفالي</string>
     <string name="CityBossLevel_ChessSign">ضع أسلحتك — الملك سيختبر عقلك، لا قوتك.</string>
     <string name="City_TileDescDeco">يفتقر هذا المكان لعدة بلاط.</string>
@@ -405,6 +413,7 @@
     <string name="HideInGrassSpell_NeedGrassToHide">حتى أنا لا أستطيع الاختباء في العراء</string>
     <string name="Horror_Name_1">%s مخيف</string>
     <string name="HungerBuff_Info1">أنت جائع!</string>
+    <string name="HungerBuff_Name2">يموت من الجوع</string>
     <string name="Hunger_Hungry_0">أنت جائع.</string>
     <string name="HuntressArmor_Name">رداء الصياد</string>
     <string name="HuntressArmor_NoEnemies">لا يوجد أعداء مرئيون</string>
@@ -471,6 +480,7 @@
     <string name="Kusarigama_Pull">اسحب</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">يرقة الإله</string>
+    <string name="LastLevel_TileDescStatue">العمود مصنوع من جماجم بشرية حقيقية. مذهل.</string>
     <string name="LastShopLevel_TileDescExit">ممر يؤدي إلى الجحيم.</string>
     <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
     <string name="Leech_Name_0">مصاص دماء %s</string>
@@ -552,6 +562,7 @@
     <string name="NecromancerRobe_Info2">هذا رداء مشبع بالسحر الأسود يسمح للنكرومانسر بأكل أرواح الوحوش المنهزمة.</string>
     <string name="Necromancy_SummonDeathlingName">استدعاء سمرتة</string>
     <string name="Necrotism_Death">مُتَّ مِن التنخر...</string>
+    <string name="NeutralKing_Hostile">الملك ينقلب عليك!</string>
     <string name="Nightmare_Gender">masculine</string>
     <string name="Ooze_Death">%s يبتلعك...</string>
     <string name="Order_Info">بركّزك المناسب، أوامرك شبه لا تُرفض.</string>
@@ -565,6 +576,7 @@
     <string name="PalaceServant_Warlock_1">سحري يخدم التاج، وليس أنت.</string>
     <string name="PalaceServant_Warlock_2">هل تُدخل الفولاذ إلى مكان مقدس؟</string>
     <string name="PalaceServant_Warlock_3">صبر الملك ليس لانهائيًا.</string>
+    <string name="PalaceServants_Hostile">خدم القصر ينقلبون عليك!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="Paralysis_Name_0">مشلل %s</string>
     <string name="PetInventory_ACGiveToPet">أَعْطِ لِلْحَيَوَانِ الأَلِيفِ</string>
@@ -840,6 +852,7 @@
     <string name="TitleScene_Play">اللعب</string>
     <string name="TitleScene_PlayOnPC">العب على الحاسوب</string>
     <string name="TomeOfMastery_Blinded">لا يمكنك القراءة وأنت أعمى</string>
+    <string name="TomeOfMastery_Choose">لقد اخترت درب الـ %s!</string>
     <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
     <string name="Torch_ACLight">أشعل</string>
     <string name="Torch_Info">إنه عنصر لا غنى عنه في قاعات الشياطين، المشهورة بإضاءتها الضعيفة.</string>
@@ -1086,6 +1099,19 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

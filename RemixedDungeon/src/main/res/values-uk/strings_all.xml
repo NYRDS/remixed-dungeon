@@ -371,11 +371,14 @@
     <string name="Carcass_DissectFailed">Ти розсікаєш %s, але не знаходиш нічого цінного.</string>
     <string name="Carcass_DissectMessage">Ви розчленували труп і отримали %s.</string>
     <string name="Carcass_DissectResult">A %1$s-ből %2$d aratót kapsz: %3$s.</string>
+    <string name="Carcass_DissectResult_Many">Із %1$s ви отримали %2$d предметів.</string>
+    <string name="Carcass_DissectResult_One">Із %1$s ви отримали один предмет.</string>
     <string name="Carcass_Info">рештки повністю мертвого %s.</string>
     <string name="Carcass_Kick">Ця істота, %s, совершенно мертва, немає сенсу бити її далі.</string>
     <string name="Carcass_Name">решки %s</string>
     <string name="Carcass_Necromancy">Ти підняв тіло %s!</string>
     <string name="Carcass_Necromancy_Failed">Спроба підняти тіло %s не вдалася!</string>
+    <string name="Carcass_SelectItem">Виберіть предмет</string>
     <string name="Carcass_TooFarToDissect">Вам потрібно підійти ближче, щоб розчленувати труп.</string>
     <string name="Caves_TileDescBookshelf">Кому в підземеллі знадобилася книжкова шафа?</string>
     <string name="Caves_TileDescDeco">На стіні видно відкриту жилу якоїсь руди. Чи то не золото?</string>
@@ -505,6 +508,10 @@
     <string name="Chasm_Jump">Ти впевнений що бажаєш стрибнути донизу? Можеш розбитися.</string>
     <string name="Chasm_No">Ні, я змінив свою думку</string>
     <string name="Chasm_Yes">Так, я знаю що роблю.</string>
+    <string name="Chess_Stalemate">Пат! Король залишає поле бою і пропускає вас.</string>
+    <string name="Chess_YouLose">Ви програли!</string>
+    <string name="Chess_YouWin">Ви перемогли!</string>
+    <string name="Chess_YourMove">Натисніть на дошку — ваш хід, Герою.</string>
     <string name="ChristmasTurkey_Info">Найкращий варіант відсвяткувати Підземство, це добрий шматок запеченої індички. Таким чином, можете відсвяткувати той день, коли монстри заполонили підземелля, приманюючи героїв зі всього світу. Що, в свою чергу, призвело до розвитку туризму та підвищенню товарообігу у місцевих торговців.</string>
     <string name="ChristmasTurkey_Name">святкова індичка</string>
     <string name="CityBossLevel_ChessSign">Покладіть зброю — Король випробує ваш розум, а не вашу силу.</string>
@@ -1509,6 +1516,7 @@
     <string name="Necrotism_Death">Ви померли від некротизму...</string>
     <string name="NekoEars_Info">Іноді хочеться змити з себе залишки монстрів та бруд, та відчути себе білим та пухнастим... Або ж можна обмежитися гарними котячими вушками.</string>
     <string name="NekoEars_Name">Котячі вушка</string>
+    <string name="NeutralKing_Hostile">Король обертається проти вас!</string>
     <string name="Nightcap_Info">Підкорення підземелля в нічну пору може бути досить нудною справою. От якби одягти теплий та затишний ковпак та розслабитись, то вас покинуть всі ваші турботи.</string>
     <string name="Nightcap_Name">Нічний ковпак</string>
     <string name="Nightmare_Desc">Гротескна істота, у вигляді вусиків з плоті, що безперестану смикаються. Сонна мара є втіленням зловісних думок Старого Бога.</string>
@@ -1534,6 +1542,7 @@
     <string name="PalaceServant_Warlock_1">Моя магія служить короні, а не тобі.</string>
     <string name="PalaceServant_Warlock_2">Ти приносиш сталь до святині?</string>
     <string name="PalaceServant_Warlock_3">Терпіння Короля не безмежне.</string>
+    <string name="PalaceServants_Hostile">Слуги палацу обертаються проти вас!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Ця стріла змочена в кураре.</string>
     <string name="ParalysisArrow_Name">паралізуюча стріла</string>
@@ -3092,6 +3101,15 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
+
+
+
+
+
+
+
 
 
 

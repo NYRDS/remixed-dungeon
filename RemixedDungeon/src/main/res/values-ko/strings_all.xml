@@ -351,11 +351,14 @@
     <string name="Carcass_DissectFailed">%s을(를) 해부했지만 아무것도 얻지 못했다.</string>
     <string name="Carcass_DissectMessage">시신을 해부하여 %s 을(를) 얻었다.</string>
     <string name="Carcass_DissectResult">Pembedahan berhasil!</string>
+    <string name="Carcass_DissectResult_Many">%1$s에서 아이템 %2$d개를 얻었다.</string>
+    <string name="Carcass_DissectResult_One">%1$s에서 아이템 1개를 얻었다.</string>
     <string name="Carcass_Info">완전히 죽은 %s의 시신.</string>
     <string name="Carcass_Kick">Menendang bangkai.</string>
     <string name="Carcass_Name">%s의 잔해</string>
     <string name="Carcass_Necromancy">Menarik roh dari bangkai.</string>
     <string name="Carcass_Necromancy_Failed">Nekromansi gagal.</string>
+    <string name="Carcass_SelectItem">아이템을 선택하세요</string>
     <string name="Carcass_TooFarToDissect">시신을 해부하려면 더 가까이 다가가야 합니다.</string>
     <string name="Caves_TileDescBookshelf">동굴에 책장이 대체 왜 필요한 거지?</string>
     <string name="Caves_TileDescDeco">어떤 광물의 광맥이 벽에 보인다. 금인가?</string>
@@ -485,6 +488,10 @@
     <string name="Chasm_Jump">정말로 이 틈 아래로 뛰어 들겠습니까? 죽을 수도 있습니다.</string>
     <string name="Chasm_No">아니요, 생각을 바꿨습니다.</string>
     <string name="Chasm_Yes">네, 내가 뭘 하려는지 잘 알고 있습니다.</string>
+    <string name="Chess_Stalemate">스테일메이트! 왕이 전장을 떠나 당신을 보내준다.</string>
+    <string name="Chess_YouLose">당신이 졌다!</string>
+    <string name="Chess_YouWin">당신이 이겼다!</string>
+    <string name="Chess_YourMove">보드판을 클릭하라 — 당신의 차례다, 영웅.</string>
     <string name="ChristmasTurkey_Info">던전에 몬스터가 침공했기 때문에 전세계의 모험가와 영웅을 끌어들여서 관광사업을 촉진하고 지역 상업에 이득을 준 날을 기념하는 던전마스를 축하하기 위한 가장 좋은 방법은 구운 칠면조를 먹는 것입니다. 당신도 가능합니다.  </string>
     <string name="ChristmasTurkey_Name">축제 칠면조</string>
     <string name="CityBossLevel_ChessSign">무기를 내려놓으시오 — 왕은 그대의 힘이 아닌 지혜를 시험할 것이오.</string>
@@ -1474,6 +1481,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Necrotism_Death">당신은 네크로티즘에 의해 사망하였습니다...</string>
     <string name="NekoEars_Info">가끔씩 당신은 모든 몬스터의 피와 흙을 씻고 귀엽고 복실복실함을 느끼고 싶으실 겁니다... 최소한 당신은 귀여운 고양이 귀를 쓸 수 있겠죠.</string>
     <string name="NekoEars_Name">고양이 귀 머리띠</string>
+    <string name="NeutralKing_Hostile">왕이 당신을 향해 돌변했다!</string>
     <string name="Nightcap_Info">밤에 던전을 정복하는 것은 매우 피곤한 일일 겁니다. 따뜻하고 아늑한 모자를 써서 진정되고 당신의 걱정들을 없애 보는건 어떨까요?</string>
     <string name="Nightcap_Name">잠옷 모자</string>
     <string name="Nightmare_Desc">경련하는 살점 촉수로 이루어진 기괴한 생명체입니다. 이 악몽들은 고대신의 불길한 계획의 확실한 징후입니다.</string>
@@ -1499,6 +1507,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PalaceServant_Warlock_1">나의 마법은 왕관을 위해 쓰이는 것이지 너를 위한 것이 아니다.</string>
     <string name="PalaceServant_Warlock_2">성역에 강철을 들이나?</string>
     <string name="PalaceServant_Warlock_3">왕의 인내는 무한하지 않다.</string>
+    <string name="PalaceServants_Hostile">궁정의 하인들이 당신을 향해 돌변했다!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">이 화살은 쿠라레 독이 칠해져 있다.</string>
     <string name="ParalysisArrow_Name">마비 화살</string>
@@ -3067,6 +3076,15 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
+
+
+
+
+
+
+
+
 
 
 

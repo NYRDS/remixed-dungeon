@@ -358,11 +358,14 @@
     <string name="Carcass_DissectFailed">Anda menyiasat %s tetapi tidak menemui apa-apa yang berharga.</string>
     <string name="Carcass_DissectMessage">Anda menyiasat bangkai dan mendapat %s.</string>
     <string name="Carcass_DissectResult">Daripada %1$s anda memperoleh %2$d hasil %3$s.</string>
+    <string name="Carcass_DissectResult_Many">Daripada %1$s anda memperoleh %2$d item.</string>
+    <string name="Carcass_DissectResult_One">Daripada %1$s anda memperoleh satu item.</string>
     <string name="Carcass_Info">Bangkai %s yang benar-benar mati</string>
     <string name="Carcass_Kick">Ini %s sudah mati sepenuhnya, tiada perlu sepak.</string>
     <string name="Carcass_Name">baki-baki %s</string>
     <string name="Carcass_Necromancy">Anda telah membangkitkan mayat %s!</string>
     <string name="Carcass_Necromancy_Failed">\&quot;Percubaan anda untuk menghidupkan mayat %s gagal!\&quot;</string>
+    <string name="Carcass_SelectItem">Pilih satu item</string>
     <string name="Carcass_TooFarToDissect">Anda perlu lebih dekat untuk menyiasat bangkai tersebut.</string>
     <string name="Caves_TileDescBookshelf">Siapa yang perlukan rak buku di dalam gua?</string>
     <string name="Caves_TileDescDeco">Ada telerang bijih yang kelihatan menonjol di atas dinding. Adakah ia Emas?</string>
@@ -492,6 +495,10 @@
     <string name="Chasm_Jump">Anda pasti mahu melompat masuk ke dalam jurang ini? Berkemungkinan anda boleh mati.</string>
     <string name="Chasm_No">Tidak, Saya ubah pendirian saya</string>
     <string name="Chasm_Yes">Ya, Saya tahu apa yang perlu dibuat</string>
+    <string name="Chess_Stalemate">Stalemate! Raja meninggalkan papan dan membiarkan anda lalu.</string>
+    <string name="Chess_YouLose">Anda Kalah!</string>
+    <string name="Chess_YouWin">Anda Menang!</string>
+    <string name="Chess_YourMove">Klik pada papan — giliran anda, Wira.</string>
     <string name="ChristmasTurkey_Info">Cara terbaik meraikan Dungeonmas, ialah makan ayam belanda panggang. Supaya anda dapat menghormati hari kedatangan raksaksa ke kurungan bawah tanah, menarik minat para pengembara dan adiwira dari serata dunia, seterusnya menggalakkan industri perlancongan dan memberi manafaat kepada semua jenis peniaga tempatan.</string>
     <string name="ChristmasTurkey_Name">ayam belanda perayaan</string>
     <string name="CityBossLevel_ChessSign">Letakkan senjatamu — Raja akan menguji fikiranmu, bukan kekuatanmu.</string>
@@ -1477,6 +1484,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="Necrotism_Death">Anda mati disebabkan necrostima...</string>
     <string name="NekoEars_Info">Kadangkala anda mahu bersihkan diri dari darah dan kotoran raksaksa dan menjadi kiut miut dan gebu... Atau pun sekurang-kurangnya anda boleh memakai telinga kucing yang comel ini.</string>
     <string name="NekoEars_Name">Telinga Kucing</string>
+    <string name="NeutralKing_Hostile">Raja menyerang anda!</string>
     <string name="Nightcap_Info">Menakluki kurungan bawah tanah pada waktu malam adalah pekerjaan yang sangat memenatkan. Oleh yang demikian apa kata pakai topi serkup yang panas dan menenangkan ini supaya semua kerisauan anda dapat dilupakan.</string>
     <string name="Nightcap_Name">Topi Malam</string>
     <string name="Nightmare_Desc">Makhluk lokoh yang mempunyai sesungut bersentakan. Mimpi Ngeri merupakan manifestasi dari tanggapan jahat Dewa Purba.</string>
@@ -1502,6 +1510,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="PalaceServant_Warlock_1">Sihir saya berkhidmat untuk mahkota, bukan untuk awak.</string>
     <string name="PalaceServant_Warlock_2">Awak membawa besi ke tempat suci?</string>
     <string name="PalaceServant_Warlock_3">Kesabaran Raja tidak berpanjangan.</string>
+    <string name="PalaceServants_Hostile">Hamba istana menyerang anda!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Anak panah ini disalut dengan kurare.</string>
     <string name="ParalysisArrow_Name">anak panah melumpuh</string>
@@ -3037,6 +3046,15 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
+
+
+
+
+
+
+
+
 
 
 

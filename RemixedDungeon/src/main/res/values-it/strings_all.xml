@@ -362,11 +362,14 @@
     <string name="Carcass_DissectFailed">Dissezioni il %s ma non trovi nulla di valore.</string>
     <string name="Carcass_DissectMessage">Dissechi la carcassa e ottieni un %s.</string>
     <string name="Carcass_DissectResult">Dal %1$s ottieni %2$d %3$s.</string>
+    <string name="Carcass_DissectResult_Many">Ottieni %2$d oggetti da %1$s.</string>
+    <string name="Carcass_DissectResult_One">Ottieni un oggetto da %1$s.</string>
     <string name="Carcass_Info">resti di una creatura completamente morta %s.</string>
     <string name="Carcass_Kick">Questo %s è completamente morto, non serve calciarlo.</string>
     <string name="Carcass_Name">resti di %s</string>
     <string name="Carcass_Necromancy">Hai rianimato il cadavere di %s!</string>
     <string name="Carcass_Necromancy_Failed">Il tuo tentativo di rianimare il cadavere di %s è fallito!</string>
+    <string name="Carcass_SelectItem">Seleziona un oggetto</string>
     <string name="Carcass_TooFarToDissect">Devi avvicinarti di più per dissezionare la carcassa.</string>
     <string name="Caves_TileDescBookshelf">A chi servirebbe una libreria dentro una caverna?</string>
     <string name="Caves_TileDescDeco">una vena di materiale è visibile sulla parete. sarà oro?</string>
@@ -496,6 +499,10 @@
     <string name="Chasm_Jump">Vuoi davvero fare un salto nel baratro? Probabilmente si può morire.</string>
     <string name="Chasm_No">No, ho cambiato idea</string>
     <string name="Chasm_Yes">Sì, so quello che faccio</string>
+    <string name="Chess_Stalemate">Stallo! Il Re abbandona il campo e ti lascia passare.</string>
+    <string name="Chess_YouLose">Hai perso!</string>
+    <string name="Chess_YouWin">Hai vinto!</string>
+    <string name="Chess_YourMove">Clicca sulla scacchiera — è il tuo turno, eroe.</string>
     <string name="ChristmasTurkey_Info">Il modo migliore per celebrare il Dungeonmas è mangiare una fetta di tacchino al forno. Per celebrare il giorno in cui i mostri hanno invaso il dungeon. Il quale, alla fine, ha attirato un numero incredibile di turisti e viaggiatori da tutto il mondo, migliorando la situazione economica della regione.</string>
     <string name="ChristmasTurkey_Name">tacchino festivo</string>
     <string name="CityBossLevel_ChessSign">Posate le armi — il Re metterà alla prova la vostra mente, non la vostra forza.</string>
@@ -1479,6 +1486,7 @@ Potrebbe bruciare?</string>
     <string name="Necrotism_Death">Sei morto di necrotismo...</string>
     <string name="NekoEars_Info">A volte vuoi lavar via tutto quel sangue di mostro e quello sporco e sentirti carino e morbidoso... O per lo meno puoi indossare queste dolci orecchie da gatto.</string>
     <string name="NekoEars_Name">Orecchie Neko</string>
+    <string name="NeutralKing_Hostile">Il Re si rivolta contro di te!</string>
     <string name="Nightcap_Info">Conquistare i dungeon di notte dev\'essere un lavoro molto stancante. Che ne dite di mettere un berretto caldo, accogliente e rilassarvi, in modo che tutte le vostre preoccupazioni vadano via .</string>
     <string name="Nightcap_Name">Berretto da notte</string>
     <string name="Nightmare_Desc">creatura grottesca fatta di spasmi tentacoli carne. Gli incubi è una manifestazione di pensieri sinistri del vecchio dio.</string>
@@ -1504,6 +1512,7 @@ Potrebbe bruciare?</string>
     <string name="PalaceServant_Warlock_1">La mia magia serve la corona, non te.</string>
     <string name="PalaceServant_Warlock_2">Porti l\'acciaio in un santuario?</string>
     <string name="PalaceServant_Warlock_3">La pazienza del Re non è infinita.</string>
+    <string name="PalaceServants_Hostile">I servitori del palazzo si rivoltano contro di te!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Questa freccia è imbevuta di curare.</string>
     <string name="ParalysisArrow_Name">freccia paralizzante</string>
@@ -3058,6 +3067,15 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
+
+
+
+
+
+
+
 
 
 

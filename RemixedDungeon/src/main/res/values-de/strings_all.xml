@@ -363,11 +363,14 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="Carcass_DissectFailed">Aufschlüsselung fehlgeschlagen</string>
     <string name="Carcass_DissectMessage">Du sezierst die Leiche und erhältst %s.</string>
     <string name="Carcass_DissectResult">Aus dem %1$s erhält man %2$d Ernte %3$s.</string>
+    <string name="Carcass_DissectResult_Many">Aus dem %1$s erhältst du %2$d Gegenstände.</string>
+    <string name="Carcass_DissectResult_One">Aus dem %1$s erhältst du einen Gegenstand.</string>
     <string name="Carcass_Info">Überreste eines völlig toten %s.</string>
     <string name="Carcass_Kick">Dieses %s ist völlig tot, keinen Grund es zu treten.</string>
     <string name="Carcass_Name">Überreste von %s</string>
     <string name="Carcass_Necromancy">Nekromantie des Leichnams</string>
     <string name="Carcass_Necromancy_Failed">Dein Versuch, die Leiche von %s zu erwecken, ist gescheitert!</string>
+    <string name="Carcass_SelectItem">Wähle einen Gegenstand</string>
     <string name="Carcass_TooFarToDissect">Du musst näher herangehen, um die Leiche zu sezieren.</string>
     <string name="Caves_TileDescBookshelf">Wer braucht denn ein Bücherregal in einer Höhle?</string>
     <string name="Caves_TileDescDeco">Eine Erzader ist in der Wand sichtbar. Gold?</string>
@@ -498,6 +501,10 @@ Ein blutroter Helm ist ein wesentliches Symbol eines Chaos Kriegers.</string>
     <string name="Chasm_Jump">Willst du wirklich in den Abgrund springen? Du stirbst möglicherweise.</string>
     <string name="Chasm_No">Nein, ich habe meine Meinung geändert.</string>
     <string name="Chasm_Yes">Ja, ich weiß was ich mache.</string>
+    <string name="Chess_Stalemate">Patt! Der König räumt das Feld und lässt dich passieren.</string>
+    <string name="Chess_YouLose">Du verlierst!</string>
+    <string name="Chess_YouWin">Du gewinnst!</string>
+    <string name="Chess_YourMove">Klicke auf das Brett — du bist am Zug, Held.</string>
     <string name="ChristmasTurkey_Info">Die beste Art, Weihdungeon zu feiern, ist mit einem großen Bissen gebratener Truthahn. So gedenkst auch du dem Tag, als die Monster in den Dungeon einfielen, was Abenteurer und Helden aus aller Welt angelockt und somit den Tourismus und die lokale Wirtschaft gestärkt hat.</string>
     <string name="ChristmasTurkey_Name">Festlicher Truthahn</string>
     <string name="CityBossLevel_ChessSign">Legt eure Waffen nieder — der König wird euren Verstand prüfen, nicht eure Stärke.</string>
@@ -1488,6 +1495,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Necrotism_Death">Du bist an Nekrose gestorben...</string>
     <string name="NekoEars_Info">Manchmal möchtest du all das Monsterblut und den Schmutz abwaschen und dich einfach niedlich und fluffig fühlen... oder du kannst niedliche Katzenohren tragen. Das wäre das Mindeste.</string>
     <string name="NekoEars_Name">Katzenohren</string>
+    <string name="NeutralKing_Hostile">Der König wendet sich gegen dich!</string>
     <string name="Nightcap_Info">Dungeons in der Nacht zu erkunden muss eine sehr ermüdende Tätigkeit sein. Warum nicht einen warmen, kuscheligen Hut aufsetzen und entspannen, sodass all deine Sorgen verschwinden?</string>
     <string name="Nightcap_Name">Schlafmütze</string>
     <string name="Nightmare_Desc">Groteske Kreatur, von zuckenden fleischigen Tentakeln. Der Nachtmahr ist eine schreckliche Manifestiation der finsteren Gedanken des Alten Gottes.</string>
@@ -1513,6 +1521,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="PalaceServant_Warlock_1">Meine Magie dient der Krone, nicht dir.</string>
     <string name="PalaceServant_Warlock_2">Du bringst Stahl in ein Heiligtum?</string>
     <string name="PalaceServant_Warlock_3">Die Geduld des Königs ist nicht endlos.</string>
+    <string name="PalaceServants_Hostile">Die Diener des Palastes wenden sich gegen dich!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Dieser Pfeil ist mit Curare beschichtet.</string>
     <string name="ParalysisArrow_Name">Lähmender Pfeil</string>
@@ -3054,6 +3063,18 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

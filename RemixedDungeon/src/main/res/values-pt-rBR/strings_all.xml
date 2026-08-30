@@ -357,11 +357,14 @@
     <string name="Carcass_DissectFailed">Você disseca o %s mas não encontra nada de valor.</string>
     <string name="Carcass_DissectMessage">Você diseca o cadáver e obtém um %s.</string>
     <string name="Carcass_DissectResult">Do %1$s você obtém %2$d colheita %3$s.</string>
+    <string name="Carcass_DissectResult_Many">De %1$s você obtém %2$d itens.</string>
+    <string name="Carcass_DissectResult_One">De %1$s você obtém um item.</string>
     <string name="Carcass_Info">restos de %s totalmente morto.</string>
     <string name="Carcass_Kick">This %s is totally dead, no need to kick it.</string>
     <string name="Carcass_Name">remains of %s</string>
     <string name="Carcass_Necromancy">Você ergueu um cadáver de %s!</string>
     <string name="Carcass_Necromancy_Failed">\&quot;Sua tentativa de levantar o cadáver de %s falhou!\&quot;</string>
+    <string name="Carcass_SelectItem">Selecione um item</string>
     <string name="Carcass_TooFarToDissect">Você precisa estar mais perto para dissecar a carcaça.</string>
     <string name="Caves_TileDescBookshelf">Quem precisa de uma estante de livros em uma caverna?</string>
     <string name="Caves_TileDescDeco">Um veio de algum minério está visível na parede. Será Ouro?</string>
@@ -491,6 +494,10 @@
     <string name="Chasm_Jump">Você realmente quer pular no abismo? Provavelmente, você vai morrer.</string>
     <string name="Chasm_No">Não, eu mudei de idéia</string>
     <string name="Chasm_Yes">Sim, eu sei o que estou fazendo</string>
+    <string name="Chess_Stalemate">Empate! O Rei deixa o campo e permite sua passagem.</string>
+    <string name="Chess_YouLose">Você perdeu!</string>
+    <string name="Chess_YouWin">Você venceu!</string>
+    <string name="Chess_YourMove">Clique no tabuleiro — é a sua vez, herói.</string>
     <string name="ChristmasTurkey_Info">A melhor maneira de celebrar o Dungeonatal, é com um belo peru assado. Assim, você pode homenagear o dia em que monstros invadiram o calabouço, atraindo aventureiros e heróis do mundo todo, aumentando o turismo e beneficiando comércios locais.</string>
     <string name="ChristmasTurkey_Name">Perú festivo</string>
     <string name="CityBossLevel_ChessSign">Depositem as armas — o Rei testará vossa mente, não vossa força.</string>
@@ -660,7 +667,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="DieHardSpell_Info">Aumentará temporariamente a regeneração fazendo você realmente seja Duro de Matar</string>
     <string name="DieHardSpell_Name">Duro de Matar</string>
     <string name="Displacement_Txt">%s de deslocamento</string>
-    <string name="DoctorArmor_Info">Esta armadura do médico de peste permite o uso da habilidade \"Nuvem de Miasma\", que libera um gás nocivo que envenena, enfraquece e desorienta os inimigos. O médico, protegido por sua máscara, é imune a esses efeitos.</string>
+    <string name="DoctorArmor_Info">Esta armadura do médico de peste permite o uso da habilidade \&quot;Nuvem de Miasma\&quot;, que libera um gás nocivo que envenena, enfraquece e desorienta os inimigos. O médico, protegido por sua máscara, é imune a esses efeitos.</string>
     <string name="DoctorArmor_Name">Vestuário do Médico</string>
     <string name="DoctorArmor_NotDoctor">Apenas médicos das pragas podem usar esta armadura!</string>
     <string name="DoctorSpecial">Nuvem de Miasma</string>
@@ -1481,6 +1488,7 @@ Parede
     <string name="Necrotism_Death">Você foi morto pelo necrotismo...</string>
     <string name="NekoEars_Info">Às vezes você só quer lavar todo esse sangue de monstro e sujeira e se sentir bonito e fofinho...  Ou pelo menos você pode usar lindas orelhas de gato. </string>
     <string name="NekoEars_Name">Orelhas de Gato</string>
+    <string name="NeutralKing_Hostile">O Rei se volta contra você!</string>
     <string name="Nightcap_Info">Conquistar masmorras a noite deve ser um trabalho muito cansativo. Que tal colocar um chapéu quente, acolhedor e relaxar, para que todas as suas preocupações sumam?</string>
     <string name="Nightcap_Name">Touca de Dormir</string>
     <string name="Nightmare_Desc">Criatura grotesca feita de tentáculos de carne contorcidos. Os Pesadelos são a manifestação dos pensamentos sinistros do Deus Antigo.</string>
@@ -1506,6 +1514,7 @@ Parede
     <string name="PalaceServant_Warlock_1">Minha magia serve à coroa, não a você.</string>
     <string name="PalaceServant_Warlock_2">Você traz aço para um santuário?</string>
     <string name="PalaceServant_Warlock_3">A paciência do Rei não é infinita.</string>
+    <string name="PalaceServants_Hostile">Os servos do palácio se voltam contra você!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Esta flecha é revestida com curare, um veneno paralisante.</string>
     <string name="ParalysisArrow_Name">flecha paralisante</string>
@@ -3075,6 +3084,15 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
+
+
 
 
 

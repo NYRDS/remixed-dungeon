@@ -356,11 +356,14 @@
     <string name="Carcass_DissectFailed">Τεμαχίζετε το/τη %s αλλά δεν βρίσκετε τίποτα πολύτιμο.</string>
     <string name="Carcass_DissectMessage">Ανατεμαχίζεις τη σορό και αποκτάς %s.</string>
     <string name="Carcass_DissectResult">Από το %1$s λαμβάνετε %2$d συγκομιδή %3$s.</string>
+    <string name="Carcass_DissectResult_Many">Πήρες %2$d αντικείμενα από το %1$s.</string>
+    <string name="Carcass_DissectResult_One">Πήρες ένα αντικείμενο από το %1$s.</string>
     <string name="Carcass_Info">Λείψανα ενός παντελώς νεκρού πλάσματος (%s).</string>
     <string name="Carcass_Kick">Το πλάσμα (%s) τα έχει τινάξει ήδη. Δεν χρειάζεται να το κλωτσάς.</string>
     <string name="Carcass_Name">Λείψανα (%s)</string>
     <string name="Carcass_Necromancy">Ανέστησες τη σορό του πλάσματος: %s!</string>
     <string name="Carcass_Necromancy_Failed">Η απόπειρά σου να αναστήσεις τη σορό (%s) απέτυχε!</string>
+    <string name="Carcass_SelectItem">Επιλέξτε ένα αντικείμενο</string>
     <string name="Carcass_TooFarToDissect">Πρέπει να πλησιάσεις περισσότερο για να ανατεμαχίσεις τη σορό.</string>
     <string name="Caves_TileDescBookshelf">Ποιος χρειάζεται τη βιβλιοθήκη στη σπηλιά;</string>
     <string name="Caves_TileDescDeco">Μια φλέβα από κάποιο ορυκτό διακρίνεται στον τοίχο. Χρυσός;</string>
@@ -491,6 +494,10 @@
     <string name="Chasm_Jump">Θέλεις σίγουρα να πηδήξεις στο χάσμα; Μπορεί και να πεθάνεις.</string>
     <string name="Chasm_No">Όχι, άλλαξα γνώμη</string>
     <string name="Chasm_Yes">Ναι, ξέρω τι κάνω</string>
+    <string name="Chess_Stalemate">Αδιέξοδο! Ο Βασιλιάς εγκαταλείπει το πεδίο και σε αφήνει να περάσεις.</string>
+    <string name="Chess_YouLose">Έχασες!</string>
+    <string name="Chess_YouWin">Νίκησες!</string>
+    <string name="Chess_YourMove">Κάνε κλικ στη σκακιέρα — είναι η σειρά σου, ήρωα.</string>
     <string name="ChristmasTurkey_Info">Ο καλύτερος τρόπος εορτασμού των Κατακομβογέννων είναι με ένα κομμάτι ψητής γαλοπούλας, προς τιμήν της ημέρας που εισέβαλαν τα τέρατα στην κατακόμβη. Το γεγονός αυτό προσέλκυσε πολλούς τουρίστες και ταξιδιώτες από όλο τον κόσμο και βελτίωσε την οικονομική κατάσταση της περιοχής.</string>
     <string name="ChristmasTurkey_Name">γιορτινή γαλοπούλα</string>
     <string name="CityBossLevel_ChessSign">Αποθέστε τα όπλα σας — ο Βασιλιάς θα δοκιμάσει το νου σας, όχι τη δύναμή σας.</string>
@@ -1479,6 +1486,7 @@
     <string name="Necrotism_Death">Εξοντώθηκες από τον νεκροτισμό...</string>
     <string name="NekoEars_Info">Κάποιες φορές, θες απλά να ξεπλύνεις το αίμα των τεράτων και τη βρομιά από πάνω σου και να νιώσεις τη χάρη και την ανεμελιά. Ή μπορείς απλά να φοράς δυο χαριτωμένα γατίσια αυτιά.</string>
     <string name="NekoEars_Name">Αυτιά Neko</string>
+    <string name="NeutralKing_Hostile">Ο Βασιλιάς γυρίζει εναντίον σου!</string>
     <string name="Nightcap_Info">Πρέπει να είναι πολύ κουραστικό να κατακτάς κατακόμβες μες στη νύχτα. Τι θα έλεγες να φορέσεις αυτό το ζεστό και άνετο σκουφάκι και να χαλαρώσεις λίγο; Και άστους όλους να περιμένουν.</string>
     <string name="Nightcap_Name">Νυχτερινός σκούφος</string>
     <string name="Nightmare_Desc">Μια αποκρουστική οντότητα που μοιάζει με ένα μάτσο από σαρκώδη πλοκάμια. Οι εφιάλτες είναι η εμψύχωση των διαβολικών σκέψεων του Παλιού Θεού.</string>
@@ -1504,6 +1512,7 @@
     <string name="PalaceServant_Warlock_1">Η μαγεία μου υπηρετεί το στέμμα, όχι εσένα.</string>
     <string name="PalaceServant_Warlock_2">Φέρνεις ατσάλι σε ένα ιερό;</string>
     <string name="PalaceServant_Warlock_3">Η υπομονή του Βασιλιά δεν είναι ατελείωτη.</string>
+    <string name="PalaceServants_Hostile">Οι υπηρέτες του παλατιού γυρίζουν εναντίον σου!</string>
     <string name="ParalysisArrow_Gender">neuter</string>
     <string name="ParalysisArrow_Info">Αυτό το βέλος έχει επικαλυφθεί με μυοχαλαρωτικό.</string>
     <string name="ParalysisArrow_Name">παραλυτικό βέλος</string>
@@ -3083,6 +3092,15 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
+
+
+
+
+
+
+
+
 
 
 

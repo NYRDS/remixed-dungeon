@@ -362,11 +362,14 @@
     <string name="Carcass_DissectFailed">Diseccionas el %s pero no encuentras nada de valor.</string>
     <string name="Carcass_DissectMessage">Disecas la carroña y obtienes un %s.</string>
     <string name="Carcass_DissectResult">Del %1$s obtienes %2$d %3$s.</string>
+    <string name="Carcass_DissectResult_Many">De %1$s obtienes %2$d objetos.</string>
+    <string name="Carcass_DissectResult_One">De %1$s obtienes un objeto.</string>
     <string name="Carcass_Info">Cadáver</string>
     <string name="Carcass_Kick">Este %s está completamente muerto, no hay necesidad de patearlo.</string>
     <string name="Carcass_Name">restos de %s</string>
     <string name="Carcass_Necromancy">¡Has levantado el cadáver de %s!</string>
     <string name="Carcass_Necromancy_Failed">¡Tu intento de levantar el cadáver de %s ha fallado!</string>
+    <string name="Carcass_SelectItem">Selecciona un objeto</string>
     <string name="Carcass_TooFarToDissect">Necesitas acercarte más para diseccionar la carroña.</string>
     <string name="Caves_TileDescBookshelf">¿Quién necesita una estantería en una caverna?</string>
     <string name="Caves_TileDescDeco">La veta de algún material puede verse en la pared. ¿Oro?</string>
@@ -496,6 +499,10 @@
     <string name="Chasm_Jump">¿De verdad quieres saltar al abismo? Probablemente morirás.</string>
     <string name="Chasm_No">No, he cambiado de opinión</string>
     <string name="Chasm_Yes">Sí, se lo que estoy haciendo</string>
+    <string name="Chess_Stalemate">¡Empate! El Rey abandona el tablero y te deja pasar.</string>
+    <string name="Chess_YouLose">¡Has perdido!</string>
+    <string name="Chess_YouWin">¡Has ganado!</string>
+    <string name="Chess_YourMove">Haz clic en el tablero — es tu turno, héroe.</string>
     <string name="ChristmasTurkey_Info">La mejor manera de celebrar las \&quot;Dungeonavidades\&quot;, es tener un buen pavo asado. Para honrar el día en que los monstruos invadieron la mazmorra, atrayendo aventureros y héroes de todo el mundo, impulsando así el turismo y beneficiando los oficios locales.</string>
     <string name="ChristmasTurkey_Name">Pavo festivo</string>
     <string name="CityBossLevel_ChessSign">Depone las armas — el Rey pondrá a prueba tu mente, no tu fuerza.</string>
@@ -1486,6 +1493,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Necrotism_Death">La necrosis te ha matado...</string>
     <string name="NekoEars_Info">A veces quieres lavar toda la sangre de monstruo y suciedad o simplemente te sientes lindo y esponjoso... al menos puedes usar oídos de gato. </string>
     <string name="NekoEars_Name">Orejas de Gato</string>
+    <string name="NeutralKing_Hostile">¡El Rey se vuelve contra ti!</string>
     <string name="Nightcap_Info">El conquistar una mazmorra por la noche es una tarea muy agotadora. ¿Por qué no ponerse en un ambiente cálido, acogedor y un sombrero para relajarse de forma que todas las preocupaciones se vayan?</string>
     <string name="Nightcap_Name">Gorro de dormir</string>
     <string name="Nightmare_Desc">Grotesca criatura hecha de tentáculos retorcidos de carne. Las pesadillas son una manifestación de los pensamientos del siniestro Antiguo Dios.</string>
@@ -1511,6 +1519,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PalaceServant_Warlock_1">Mi magia sirve a la corona, no a ti.</string>
     <string name="PalaceServant_Warlock_2">¿Traes acero a un santuario?</string>
     <string name="PalaceServant_Warlock_3">La paciencia del Rey no es infinita.</string>
+    <string name="PalaceServants_Hostile">¡Los sirvientes del palacio se vuelven contra ti!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Esta flecha está empapada en curare.</string>
     <string name="ParalysisArrow_Name">flecha paralizante</string>
@@ -3066,6 +3075,18 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -359,11 +359,14 @@
     <string name="Carcass_DissectFailed">你解剖了 %s，但沒發現任何有價值的东西。</string>
     <string name="Carcass_DissectMessage">你解剖了屍體並獲得了一個 %s。</string>
     <string name="Carcass_DissectResult">З %1$s ви отримали %2$d врожай %3$s.</string>
+    <string name="Carcass_DissectResult_Many">從%1$s獲得了 %2$d 件物品。</string>
+    <string name="Carcass_DissectResult_One">從%1$s獲得了 1 件物品。</string>
     <string name="Carcass_Info">已死亡%s的殘骸。</string>
     <string name="Carcass_Kick">這隻%s已經完全死了,沒有必要再踢它。</string>
     <string name="Carcass_Name">%s 的遺骸</string>
     <string name="Carcass_Necromancy">你已復活了%s 的屍體！</string>
     <string name="Carcass_Necromancy_Failed">你嘗試復活%s 的屍體失敗了！</string>
+    <string name="Carcass_SelectItem">選擇一個物品</string>
     <string name="Carcass_TooFarToDissect">你需要離得更近才能解剖屍體。</string>
     <string name="Caves_TileDescBookshelf">誰會需要在礦洞裏放個書架？</string>
     <string name="Caves_TileDescDeco">一些礦脈在墻上清晰可見。是金子嗎？</string>
@@ -493,6 +496,10 @@
     <string name="Chasm_Jump">你真的要跳到裂縫當中嗎？這樣做可能會讓你死掉。</string>
     <string name="Chasm_No">不，我改主意了</string>
     <string name="Chasm_Yes">是的，我知道我在做什麼</string>
+    <string name="Chess_Stalemate">僵局！國王讓出戰場，放你通過。</string>
+    <string name="Chess_YouLose">你輸了！</string>
+    <string name="Chess_YouWin">你贏了！</string>
+    <string name="Chess_YourMove">點擊棋盤——輪到你了，勇者。</string>
     <string name="ChristmasTurkey_Info">最好的慶祝聖誕的方式，就是來一只超大的火雞。所以呢，在這天你可以以榮耀的名義，吸引大量的冒險者來這裏探險、殺怪，同時促進這裏的旅遊業和商業的發展。</string>
     <string name="ChristmasTurkey_Name">節日火雞</string>
     <string name="CityBossLevel_ChessSign">放下武器 — 國王將考驗你的智慧，而非武力。</string>
@@ -1497,6 +1504,7 @@
     <string name="Necrotism_Death">你被壞死所殺…</string>
     <string name="NekoEars_Info">有時也許你想要洗掉你身上那些怪物血液和塵土並讓自己像是那些毛茸茸的小可愛……或者至少你能戴對可愛的貓耳。</string>
     <string name="NekoEars_Name">貓耳</string>
+    <string name="NeutralKing_Hostile">國王向你倒戈！</string>
     <string name="Nightcap_Info">在夜晚征服地牢想必是十分疲累的事。那為何不帶上一頂溫暖舒適的帽子好好休息一下，拋開自己的煩惱呢？</string>
     <string name="Nightcap_Name">睡帽</string>
     <string name="Nightmare_Desc">以肉質觸手構成的怪誕造物。夢魘是古神危險思想的具象。</string>
@@ -1522,6 +1530,7 @@
     <string name="PalaceServant_Warlock_1">我的魔法效忠於王冠，而非你。</string>
     <string name="PalaceServant_Warlock_2">你竟將鋼鐵帶進聖殿？</string>
     <string name="PalaceServant_Warlock_3">國王的耐心是有限的。</string>
+    <string name="PalaceServants_Hostile">宮廷僕從向你倒戈！</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">這支箭已被塗上麻痺毒藥。</string>
     <string name="ParalysisArrow_Name">麻痺箭</string>
@@ -3081,6 +3090,15 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
+
 
 
 

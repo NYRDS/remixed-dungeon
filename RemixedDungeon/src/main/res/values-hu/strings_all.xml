@@ -356,11 +356,14 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Carcass_DissectFailed">Megvizsgálod a(z) %s-t, de semmi értékeset nem találsz.</string>
     <string name="Carcass_DissectMessage">Széttéped a tetemet és %s tárgyat szerzel.</string>
     <string name="Carcass_DissectResult">A(z) %1$s %2$d termés %3$s-t ad.</string>
+    <string name="Carcass_DissectResult_Many">A(z) %1$s %2$d tárgyat ad.</string>
+    <string name="Carcass_DissectResult_One">A(z) %1$s egy tárgyat ad.</string>
     <string name="Carcass_Info">maradványai teljesen elpusztultak: %s</string>
     <string name="Carcass_Kick">Ez a(z) %s teljesen halott, nincs értelme rugdosni.</string>
     <string name="Carcass_Name">%s maradványai</string>
     <string name="Carcass_Necromancy">Feltámasztottad a %s holt testét!</string>
     <string name="Carcass_Necromancy_Failed">A(z) %s holttestének feltámasztási kísérleted sikertelen!</string>
+    <string name="Carcass_SelectItem">Válassz egy tárgyat</string>
     <string name="Carcass_TooFarToDissect">Közelebb kell menned a tetemhez, hogy boncolhasd.</string>
     <string name="Caves_TileDescBookshelf">Minek kéne neked egy könyvespolc egy bányába?</string>
     <string name="Caves_TileDescDeco">Érctelérek láthatók a falon. Talán arany?</string>
@@ -491,6 +494,10 @@ Akármikor megváltoztathatod a döntésedet erről ( Klikkelj a diagram ikonra 
     <string name="Chasm_Jump">Tényleg beleakarsz ugorni? Meg is halhatsz. </string>
     <string name="Chasm_No">Nem, meggondoltam magam</string>
     <string name="Chasm_Yes">Igen, tudom mit csinálok</string>
+    <string name="Chess_Stalemate">Patthelyzet! A Király elhagyja a táblát és átenged.</string>
+    <string name="Chess_YouLose">Vesztettél!</string>
+    <string name="Chess_YouWin">Nyertél!</string>
+    <string name="Chess_YourMove">Kattints a táblára — te következel, hős.</string>
     <string name="ChristmasTurkey_Info">A legjobb módja a Kazamatakarácsony megünneplésének a sültpulykaevés. Ezzel ünnepelhetjük a napot amikor a szörnyek elárasztották a kazamatát. Ami végül idevonzotta a turistákat és utazókat szerte a világból, fellendítve az idegenforgalmat, ami jó üzlet a régióban.</string>
     <string name="ChristmasTurkey_Name">ünnepi pulyka</string>
     <string name="CityBossLevel_ChessSign">Tegyétek le a fegyvereket — a Király az eszeteket próbítja, nem az erőt.</string>
@@ -1479,6 +1486,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="Necrotism_Death">Belehaltál a nekrotizmusba...</string>
     <string name="NekoEars_Info">Néha csak le akarod mosni magadról a szörnyek vérét és a mocskot hogy egyszerűen csak aranyosbak és bolyhosnak érezhesd magad... Vagy legvégső esetben viselheted ezeket az aranyos cica füleket.</string>
     <string name="NekoEars_Name">Neko fülek</string>
+    <string name="NeutralKing_Hostile">A Király ellenéd fordul!</string>
     <string name="Nightcap_Info">Meghóditani a kazamatát éjszaka elég fárasztó dolog. Mit szólnál helyette, ha felvennéd ezt a meleg, kényelmes kis sapkát, hogy pihenj egy kicsit, és hagyd hogy az egész világ várjon.</string>
     <string name="Nightcap_Name">Hálósapka</string>
     <string name="Nightmare_Desc">Egy furcsa lény, ami egy csokor húsos csápra hasonlít. A Rémálmok az Ősi Isten sötét gondolatainak a megtestesült alakjai.</string>
@@ -1504,6 +1512,7 @@ Csak saját felelősségre töltsd le őket; azért jó szórakozást!</string>
     <string name="PalaceServant_Warlock_1">A mágiam a koronát szolgálja, nem téged.</string>
     <string name="PalaceServant_Warlock_2">Acélt hozol egy szentélybe?</string>
     <string name="PalaceServant_Warlock_3">A Király türelme nem végtelen.</string>
+    <string name="PalaceServants_Hostile">A palota szolgái ellenéd fordulnak!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Ezt a nyílvesszőt méreg borítja.</string>
     <string name="ParalysisArrow_Name">bénító nyíl</string>
@@ -3053,6 +3062,15 @@ A beleegyezéseddel megerősíted, hogy elmúltál 16 éves és elfogadod a szem
     <string name="town_table_fortune_ball_name">kristálygolyó</string>
     <string name="town_table_fortune_desc">Ez az asztal, rajta selyem tarosszal. Különböző tarot kártyákat látsz az asztalon, adott sorrendben lerakva. </string>
     <string name="town_table_fortune_name">Asztal</string>
+
+
+
+
+
+
+
+
+
 
 
 

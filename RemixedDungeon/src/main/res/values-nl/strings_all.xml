@@ -163,8 +163,11 @@
     <string name="Candy_Info">Deze snoep ziet er zo mooi uit en ruikt ook lekker. Moet je hem echt aan iemand anders geven?</string>
     <string name="Candy_Name">snoepje</string>
     <string name="Capotain_Name">Puriteinse hoed</string>
+    <string name="Carcass_DissectResult_Many">Uit %1$s krijg je %2$d voorwerpen.</string>
+    <string name="Carcass_DissectResult_One">Uit %1$s krijg je één voorwerp.</string>
     <string name="Carcass_Kick">Deze %s is volledig dood, geen reden om het te schoppen.</string>
     <string name="Carcass_Necromancy">Je hebt het lijk van %s opgewekt!</string>
+    <string name="Carcass_SelectItem">Selecteer een voorwerp</string>
     <string name="Caves_TileDescEntrance">De ladder leidt omhoog naar het bovenste deel.</string>
     <string name="Caves_TileGrass">fluorescent mos</string>
     <string name="Caves_TileHighGrass">Fluorescerende paddenstoelen</string>
@@ -222,6 +225,10 @@
     <string name="CharmBuff_Info">Geest en lichaam waren betoverd!</string>
     <string name="CharmSpell_Cast">%s is betoverd.</string>
     <string name="Chasm_Info">Je viel naar je dood...</string>
+    <string name="Chess_Stalemate">Pat! De Koning verlaat het bord en laat je passeren.</string>
+    <string name="Chess_YouLose">Je verliest!</string>
+    <string name="Chess_YouWin">Je wint!</string>
+    <string name="Chess_YourMove">Klik op het bord — jij bent aan de beurt, Held.</string>
     <string name="ChristmasTurkey_Name">festelijke kalkoen</string>
     <string name="CityBossLevel_ChessSign">Leg je wapens neer — de Koning zal je verstand op de proef stellen, niet je kracht.</string>
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
@@ -559,6 +566,7 @@
     <string name="MimicPie_Name_Objective">mimic</string>
     <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">mimic</string>
+    <string name="Mimic_Name_Objective">mimic</string>
     <string name="MindVisionBuff_Info">De innerlijke visie laat duidelijk de beweging van alle levende wezens op de verdieping zien.</string>
     <string name="MirrorImage_Desc">Deze illusie lijkt sterk op jou, maar is bleker en trilt een beetje.</string>
     <string name="MirrorImage_Gender">masculine</string>
@@ -597,6 +605,7 @@
     <string name="Necromancy_Title">Necromantie</string>
     <string name="Necrotism_ACSpecial">NECROTISME</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
+    <string name="NeutralKing_Hostile">De Koning keert zich tegen je!</string>
     <string name="Nightcap_Name">Slaapmuts</string>
     <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">nachtmerrie</string>
@@ -614,6 +623,7 @@
     <string name="PalaceServant_Warlock_1">Mijn magie dient de kroon, niet jou.</string>
     <string name="PalaceServant_Warlock_2">Breng je staal naar een heiligdom?</string>
     <string name="PalaceServant_Warlock_3">Het geduld van de Koning is niet eindeloos.</string>
+    <string name="PalaceServants_Hostile">De palijdienaren keren zich tegen je!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisBuff_Name">Verlamd</string>
     <string name="Paralysis_Name_0">Verdovende %s</string>
@@ -623,6 +633,7 @@
     <string name="PetInventory_TakeFromPet">Nemen van huisdier</string>
     <string name="PetInventory_Title">Huisdiereninventaris</string>
     <string name="PetInventory_TookItem">%1$s genomen van %2$s</string>
+    <string name="PetInventory_ViewManage">Beheren</string>
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te delven!</string>
     <string name="Pickaxe_Name">houweel</string>
@@ -746,6 +757,7 @@
     <string name="RottingFist_Gender">masculine</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyCrossbow_Gender">masculine</string>
+    <string name="Rudolph_Info">Wat is er feestelijker dan een gloeiende rode neus? Samen met een gewei, natuurlijk.</string>
     <string name="RunicSkull_Desc">Voor iets kunstmatig gemaakts lijkt deze schedel te veel op een echte. Je ziet ook een zwakke gloed om het heen.</string>
     <string name="RunicSkull_Gender">masculine</string>
     <string name="SacrificialSword_Gender">masculine</string>
@@ -954,6 +966,7 @@
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Name">stadbewoner</string>
+    <string name="TownsfolkSilentNPC_Name_Objective">stadbewoner</string>
     <string name="ToxicGas_Info">Hier zweeft een groenachtige wolk van giftig gas.</string>
     <string name="ToxicGas_Info1">Je bent gestorven doordat je giftig gas inademde...</string>
     <string name="ToxicGland_Info">Een giftige klier geoogst van een verslagen vijand. Deze klieren zitten vol sterke toxines en kunnen worden gebruikt in alchemistische processen.</string>
@@ -983,6 +996,7 @@
     <string name="WandOfIcebolt_Info1">Je hebt jezelf gedood met je eigen IJsbout...</string>
     <string name="WandOfIcebolt_Name">IJsbultstaf</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
+    <string name="WandOfMagicMissile_ACDisenchant">ONTDOEN</string>
     <string name="WandOfMagicMissile_Desinchanted">je ontgoochelde de Toverstaf van Magische Projectielen en gebruikte de essentie ervan om je %s te verbeteren</string>
     <string name="WandOfMagicMissile_Info">Deze staf lanceert missiles van zuivere magische energie, wat matige schade aan een doelwit toebrengt.</string>
     <string name="WandOfMagicMissile_Name">Toverstaf van Magische Projectielen</string>
@@ -1088,6 +1102,7 @@
     <string name="WndPremiumSettings_status">Selecteer materiaal van de statusbalk</string>
     <string name="WndPriest_Heal_Minions">Genees al je volgelingen - Slechts %d goud!</string>
     <string name="WndPriest_Instruction2_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa de Heer der Diepten!</string>
+    <string name="WndPriest_Instruction_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa, de Heer der Diepten! Helaas kan ik je nu niet doorlaten, want het gebouw wordt gerenoveerd. Maar als je hulp zoekt, kan ik genezing en voedsel aanbieden voor slechts %d gouden munten!</string>
     <string name="WndRanking_Items">Voorwerpen</string>
     <string name="WndRanking_StaAlchemy">Gebrouwen Dranken</string>
     <string name="WndRanking_StaChallenges">Uitdagingen</string>
@@ -1114,6 +1129,7 @@
     <string name="WndSettings_Quickslots">Sneltoetsen</string>
     <string name="WndSettings_SecondQuickslot">Tweede sneltoets</string>
     <string name="WndSettings_SelectLanguage">Selecteer taal</string>
+    <string name="WndSettings_SwitchLand">Naar liggend scherm</string>
     <string name="WndSettings_TextScaleDefault">Standaardlettertype</string>
     <string name="WndSettings_ThirdQuickslot">Derde sneltoets</string>
     <string name="WndSettings_UiScale">Schaal van de interface</string>
@@ -1157,6 +1173,7 @@
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
     <string name="Zombie_Gender">masculine</string>
+    <string name="Zombie_Name_Objective">zombie</string>
     <string name="deco_candle_desc">Grote kaars</string>
     <string name="gdpr_title">Personaliseer uw advertentie-ervaring</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
@@ -1239,6 +1256,23 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

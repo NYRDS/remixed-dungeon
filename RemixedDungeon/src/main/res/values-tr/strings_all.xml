@@ -361,11 +361,14 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Carcass_DissectFailed">%s\'yi dissektör edip hiçbir değer bulamadınız.</string>
     <string name="Carcass_DissectMessage">Leşi parçalara ayırarak bir %s elde edersiniz.</string>
     <string name="Carcass_DissectResult">Dari %1$s, kamu mendapatkan %2$d panen %3$s.</string>
+    <string name="Carcass_DissectResult_Many">%1$s\'dan %2$d eşya elde ettin.</string>
+    <string name="Carcass_DissectResult_One">%1$s\'dan bir eşya elde ettin.</string>
     <string name="Carcass_Info">tamamen ölmüş %s kalıntıları.</string>
     <string name="Carcass_Kick">Bu %s tamamen ölü, tekme atmanın bir anlamı yok.</string>
     <string name="Carcass_Name">%s\'in kalıntıları</string>
     <string name="Carcass_Necromancy">%s cesedini dirilttin!</string>
     <string name="Carcass_Necromancy_Failed">%s cesedini diriltme girişiminiz başarısız oldu!</string>
+    <string name="Carcass_SelectItem">Bir eşya seç</string>
     <string name="Carcass_TooFarToDissect">Cesedi otopsi yapmak için daha yakın olmalısınız.</string>
     <string name="Caves_TileDescBookshelf">Kim bir mağarada kitaplığa ihtiyaç duyar ki?</string>
     <string name="Caves_TileDescDeco">Duvarda bir maden damarı gözüküyor, Altın olmasın?</string>
@@ -495,6 +498,10 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="Chasm_Jump">Gerçekten uçuruma atlamak istiyor musun? Muhtemelen ölebilirsin.</string>
     <string name="Chasm_No">Hayır, fikrimi değiştirdim</string>
     <string name="Chasm_Yes">Evet, ne yaptığımı biliyorum</string>
+    <string name="Chess_Stalemate">Pat! Kral sahayı terk eder ve seni geçirir.</string>
+    <string name="Chess_YouLose">Kaybettin!</string>
+    <string name="Chess_YouWin">Kazandın!</string>
+    <string name="Chess_YourMove">Tahtaya tıkla — sıra sende, Kahraman.</string>
     <string name="ChristmasTurkey_Info">İyi pişmiş bir parça hindi fırın, Zindan Günü\'nü kutlamanın en iyi şekilde kutlamak için birebirdir: Canavarların zindana tasallut ettikleri ve kasabanın, dünyanın dört bir yanından sayısız turist ve seyyahın göz bebeği haline gelip ekonomik statüsünün gelişmesiyle nihayete eren o günü...</string>
     <string name="ChristmasTurkey_Name">festival hindisi</string>
     <string name="CityBossLevel_ChessSign">Silahlarınızı bırakın — Kral zihninizi test edecek, gücünüzü değil.</string>
@@ -1484,6 +1491,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="Necrotism_Death">Nekrotizm\'den öldün...</string>
     <string name="NekoEars_Info">Bazen tüm o canavar kanı ve çamurdan kurtulmak isteyip şirin ve yumuşak hissetmek istersin... Veya en azından şirin kedi kulakları takabilirsin.</string>
     <string name="NekoEars_Name">Kedi Kulakları</string>
+    <string name="NeutralKing_Hostile">Kral sana karşı dönüyor!</string>
     <string name="Nightcap_Info">Gece vakti zindanları fethetmek çok yorucu bir iş olmalı. Bu sıcak, rahat şapkayı takıp rahatlamaya ve tüm dünyanın beklemesine izin vermeye ne dersiniz?</string>
     <string name="Nightcap_Name">Takke</string>
     <string name="Nightmare_Desc">Titreşen dokunaçlardan yapılmış karabasanlar Eski Tanrının uğursuz düşüncelerinin göstergesi gibidir.</string>
@@ -1509,6 +1517,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="PalaceServant_Warlock_1">Büyüm taca hizmet eder, senin için değil.</string>
     <string name="PalaceServant_Warlock_2">Kutsal bir yere çelik mi getiriyorsun?</string>
     <string name="PalaceServant_Warlock_3">Kral\'ın sabrı sonsuz değildir.</string>
+    <string name="PalaceServants_Hostile">Saray hizmetkârları sana karşı dönüyor!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">Bu ok kürar ile kaplanmış.</string>
     <string name="ParalysisArrow_Name">felç edici ok</string>
@@ -3085,6 +3094,15 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
+
+
+
+
+
+
 
 
 

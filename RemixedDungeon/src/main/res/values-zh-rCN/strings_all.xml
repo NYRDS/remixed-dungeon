@@ -356,11 +356,14 @@
     <string name="Carcass_DissectFailed">你解剖了%s，但没有发现任何有价值的东西。</string>
     <string name="Carcass_DissectMessage">你解剖了尸体，获得了%s。</string>
     <string name="Carcass_DissectResult">从 %1$s 你获得了 %2$d 个收获物%3$s。</string>
+    <string name="Carcass_DissectResult_Many">从%1$s获得了 %2$d 件物品。</string>
+    <string name="Carcass_DissectResult_One">从%1$s获得了 1 件物品。</string>
     <string name="Carcass_Info">完全死亡的 %s 的残骸。</string>
     <string name="Carcass_Kick">这个%s已经完全死了，没必要踢它。</string>
     <string name="Carcass_Name">%s 的残骸</string>
     <string name="Carcass_Necromancy">你复活了%s的尸体！</string>
     <string name="Carcass_Necromancy_Failed">你尝试复活%s的尸体失败了！</string>
+    <string name="Carcass_SelectItem">选择一个物品</string>
     <string name="Carcass_TooFarToDissect">你需要离得更近才能解剖残骸。</string>
     <string name="Caves_TileDescBookshelf">谁会需要在矿洞里放个书架？</string>
     <string name="Caves_TileDescDeco">一些矿脉在墙上清晰可见。是金子吗？</string>
@@ -490,6 +493,10 @@
     <string name="Chasm_Jump">你真的要跳到裂缝当中吗？这样做可能会让你死掉。</string>
     <string name="Chasm_No">不，我改变主意了</string>
     <string name="Chasm_Yes">是的，我知道我在做什么</string>
+    <string name="Chess_Stalemate">僵局！国王让出战场，放你通过。</string>
+    <string name="Chess_YouLose">你输了！</string>
+    <string name="Chess_YouWin">你赢了！</string>
+    <string name="Chess_YourMove">点击棋盘——轮到你了，勇者。</string>
     <string name="ChristmasTurkey_Info">最好的庆祝圣诞的方式，就是来一只超大的火鸡。所以呢，在这天你可以以荣耀的名义，吸引大量的冒险者来这里探险、杀怪，同时促进这里的旅游业和商业的发展。</string>
     <string name="ChristmasTurkey_Name">节日火鸡</string>
     <string name="CityBossLevel_ChessSign">放下武器 — 国王将考验你的智慧，而非武力。</string>
@@ -1479,6 +1486,7 @@
     <string name="Necrotism_Death">你死于坏死……</string>
     <string name="NekoEars_Info">有时也许你想要洗掉你身上那些怪物血液和尘土并让自己像是那些毛茸茸的小可爱……或者至少你能戴对可爱的猫耳。</string>
     <string name="NekoEars_Name">猫耳</string>
+    <string name="NeutralKing_Hostile">国王向你倒戈！</string>
     <string name="Nightcap_Info">在夜晚征服地牢想必是十分疲累的事。那为何不带上一顶温暖舒适的帽子好好休息一下，抛开自己的烦恼呢？</string>
     <string name="Nightcap_Name">睡帽</string>
     <string name="Nightmare_Desc">以肉质触手构成的怪诞造物。梦魇是古神危险思想的具象。</string>
@@ -1504,6 +1512,7 @@
     <string name="PalaceServant_Warlock_1">我的魔法效忠于王冠，而不是你。</string>
     <string name="PalaceServant_Warlock_2">你竟把钢铁带进圣殿？</string>
     <string name="PalaceServant_Warlock_3">国王的耐心是有限的。</string>
+    <string name="PalaceServants_Hostile">宫廷仆从向你倒戈！</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Info">这支箭已被涂上麻痺毒药。</string>
     <string name="ParalysisArrow_Name">麻痺箭</string>
@@ -3055,6 +3064,15 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
+
+
+
+
+
+
+
 
 
 
