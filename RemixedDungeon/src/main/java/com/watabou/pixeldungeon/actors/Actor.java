@@ -395,6 +395,7 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
 
 
         GLog.debug("Main loop start - %d actors", all.size());
+        GLog.toFile("Main loop start - %d actors", all.size()); // caveman: file copy - the turn-loop wedge discriminator
         while ((current = nextActor()) != null) {
             now = current.time;
 
