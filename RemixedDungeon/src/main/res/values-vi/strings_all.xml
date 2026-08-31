@@ -122,6 +122,7 @@
     <string name="BlackSkull_Ressurrect">Đỉnh Đen Đã Hồi Sinh Quái Vật Chết Để Phục Vụ Bạn!</string>
     <string name="Blacksmith_GetLost">Tôi đang bận. Cút đi!</string>
     <string name="Blacksmith_Gold1">Này người! Muốn làm việc hữu ích chứ? Lên cái cuốc này và đào cho ta ít _khoáng vàng đen_, _15 miếng_ là đủ rồi. Cái gì? Như thế nào mà ta trả tiền? Ngươi tham lam...\nỪ, ừ, ta không có tiền trả, nhưng ta có thể làm đồ sắt cho ngươi. Coi ngươi may mắn, ta là thợ rèn duy nhất ở đây.</string>
+    <string name="Blacksmith_Verify1">Hãy chọn 2 vật phẩm khác nhau, không được chọn cùng một vật phẩm hai lần!</string>
     <string name="Blacksmith_Verify2">Chọn 2 vật phẩm cùng loại!</string>
     <string name="Blacksmith_Verify4">Tôi không làm việc với vật phẩm bị nguyền rủa!</string>
     <string name="Blacksmith_Verify5">Đây chỉ là đồ rác, chất lượng quá kém!</string>
@@ -244,6 +245,7 @@
     <string name="Codex_Story_10">Glyph Entangle - Anh hùng có thể nhận được giáp thảo mộc, nhưng đồng thời cũng có thể bị rễ cây trói chân.</string>
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
     <string name="Codex_Story_17">Vũ khí gây choáng - Khi đánh trúng, có thể khiến mục tiêu bị tê liệt.</string>
+    <string name="Codex_Story_22">Cuốn sách này được viết bằng ngôn ngữ quỷ</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
     <string name="Codex_Story_9">Glyph Dịch Chuyển - Mỗi khi Anh Hùng trúng đòn, có khả năng Anh Hùng sẽ được dịch chuyển đến một ô ngẫu nhiên trong tầm nhìn. Glyph này không hoạt động ở các cấp độ Trùm.</string>
     <string name="ColdSpirit_Gender">masculine</string>
@@ -283,6 +285,7 @@
     <string name="DeathKnight_Name_Objective">kỵ sĩ tử thần</string>
     <string name="Death_Name_0">Quỷ %s</string>
     <string name="Death_Name_1">%s tử thần</string>
+    <string name="Deathling_Desc">Doodsling là linh hồn của một người hùng đã ngã xuống, kém may mắn khi bị triệu hồi bởi một đồng đội phiêu lưu đang thực hành thuật gọi hồn.</string>
     <string name="Deathling_Gender">masculine</string>
     <string name="DeepSnail_Desc">Loài thân mềm này thường xuất hiện gần nguồn nước và nhanh hơn nhiều so với ốc sên thường. Tuy nhiên hãy cẩn thận với vết cắn, chúng có thể gây ảnh hưởng khó chịu lên làn da của bạn.</string>
     <string name="DeepSnail_Gender">masculine</string>
@@ -579,6 +582,7 @@
     <string name="ManaPotion_Info">Bình này sẽ khôi phục năng lượng tinh thần của bạn.</string>
     <string name="ManaShieldBuff_Name">Khiên phép thuật</string>
     <string name="Mana_Title">Năng lượng</string>
+    <string name="MedicineMask_Name">Khẩu trang y tế</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
     <string name="MeleeWeapon_Info1c">đã nâng cấp</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
@@ -586,6 +590,7 @@
     <string name="MeleeWeapon_Info3a">Đây là một vũ khí khá %s.</string>
     <string name="MeleeWeapon_Info3d">và</string>
     <string name="MeleeWeapon_Info3g">kém chính xác</string>
+    <string name="MeleeWeapon_Info6b">Do sức mạnh dư thừa, sát thương tấn công của bạn với %s này được tăng lên.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">lính thuê</string>
     <string name="MimicAmulet_Gender">masculine</string>
@@ -608,6 +613,7 @@
     <string name="Mob_StaSleepingStatus">%s này đang ngủ</string>
     <string name="Mob_StaTerrorStatus2">%1 này kinh hoàng trước %2</string>
     <string name="Mob_StaWanderingStatus">%s đang lang thang</string>
+    <string name="Mods_AuthorSite">Trang tác giả:</string>
     <string name="Monk_Disarm">%1$s đã đánh rơi %2$s khỏi tay bạn!</string>
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">tu sĩ lùn</string>
@@ -806,6 +812,7 @@
     <string name="ScrollOfTerror_Info3">Cuộn giấy phát ra một tia sáng đỏ rực và lũ quái vật bỏ chạy!</string>
     <string name="ScrollOfUpgrade_Info">Cuộn giấy này sẽ nâng cấp một vật phẩm duy nhất, cải thiện chất lượng của nó. Một cây đũa phép sẽ tăng sức mạnh và số lượng điện tích; một vũ khí sẽ gây thêm sát thương hoặc tìm điểm yếu thường xuyên hơn; một bộ giáp sẽ đỡ thêm nhiều đòn; hiệu quả của chiếc nhẫn lên người đeo sẽ được tăng cường. Vũ khí và giáp cũng sẽ yêu cầu ít sức mạnh hơn để sử dụng, và mọi lời nguyền trên vật phẩm sẽ được hóa giải.</string>
     <string name="ScrollOfUpgrade_InvTitle">Chọn một vật phẩm để nâng cấp</string>
+    <string name="ScrollOfWeaponUpgrade_Info">Cuộn này sẽ nâng cấp một vũ khí cận chiến, cải thiện chất lượng của nó. Khác với Cuộn Nâng Cấp thông thường, phiên bản chuyên biệt này sẽ không bao giờ phá hủy phép thuật đang có trên vũ khí. Ngược lại, nó có thể phù phép ngẫu nhiên cho một vũ khí chưa có phép thuật.</string>
     <string name="ScrollOfWeaponUpgrade_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
     <string name="ScrollOfWeaponUpgrade_Name">Cuộn Nâng Cấp Vũ Khí</string>
     <string name="Scroll_ACRead">ĐỌC</string>
@@ -946,6 +953,7 @@
     <string name="Tengu_Info3">Bắt được rồi, %s!</string>
     <string name="TerrorBuff_Info">Có vẻ như ai đó rất sợ hãi.</string>
     <string name="Thief_Gender">masculine</string>
+    <string name="Thief_Name">tên trộm điên</string>
     <string name="TitleScene_Highscores">Bảng xếp hạng</string>
     <string name="TitleScene_Mods">Mod</string>
     <string name="TitleScene_Play">Chơi</string>
@@ -1021,12 +1029,14 @@
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name_Objective">nguyên tố nước</string>
+    <string name="WaterOfHealth_Info">Sức mạnh của sức khỏe tỏa ra từ nước của giếng này. Hãy nhấp một ngụm để chữa lành vết thương và thỏa mãn cơn đói.</string>
     <string name="WaterOfTransmutation_Info">Sức mạnh của sự biến đổi tỏa ra từ nước của giếng này. Hãy ném một vật phẩm vào giếng để biến nó thành thứ khác.</string>
     <string name="WeaknessBuff_Name">Yếu</string>
     <string name="Weightstone_Accurate">bạn đã cân bằng %s để nó chính xác hơn</string>
     <string name="Weightstone_Fast">bạn đã cân bằng %s để làm nó nhanh hơn</string>
     <string name="Weightstone_Info">Sử dụng đá cân, bạn có thể cân bằng vũ khí cận chiến của mình để tăng tốc độ hoặc độ chính xác.</string>
     <string name="Weightstone_Name">đá cân</string>
+    <string name="Weightstone_Select">Chọn một vũ khí để cân bằng</string>
     <string name="Weightstone_WndAccuracy">Độ chính xác</string>
     <string name="Weightstone_WndCancel">Không sao đâu</string>
     <string name="Weightstone_WndChoice">Bạn muốn cân bằng %s như thế nào?</string>
@@ -1126,6 +1136,7 @@
     <string name="WndStory_Guts">Thần Cổ bị đánh bại, vỡ vụn thành trăm mảnh nhưng chưa bị tiêu diệt hoàn toàn, đã bị phong ấn tại những tầng sâu nhất của hầm ngục. Nhưng gần đây con dấu đã bị phá vỡ, mở toang lối đi đến tổ của quỷ dữ. Những con quái vật ác mộng mà Thần Cổ tạo ra trong giấc ngủ của ngài đông đến mức chẳng còn lối thoát, chúng buộc phải hợp nhất với nhau tạo nên những đại sảnh kỳ dị này. Và khi bạn bước trên lớp thịt sống của chúng, bạn có thể cảm nhận nhịp đập trái tim của Thần Cổ vang vọng khắp nơi.</string>
 
     <string name="WndStory_Metropolis">Thành phố Lục phủ Mat người lùn từng là lớn nhất trong các thành bang của người lùn. Vào thời kỳ thịnh vượng, quân đội cơ giới của người lùn đã đẩy lùi thành công cuộc xâm lược của vị thần cổ xưa và quân đoàn quỷ của ngài. Người ta nói rằng, các chiến binh trở về đã mang theo những hạt giống của sự tàn phá, và chiến thắng đó là khởi đầu của sự chấm dứt cho vương quốc dưới đất.</string>
+    <string name="WndTilesKind_text">Bạn sắp bước vào một Hầm ngục bị xâm chiếm bởi ma thuật bóp méo, nhưng bây giờ bạn có thể chọn cách nhìn nó:\n Bạn có muốn dùng dạng giả 3D hiện đại hay dạng phẳng cổ điển không?\nBạn có thể thay đổi sau trong menu tùy chọn trò chơi.</string>
     <string name="WndTradeItem_Buy">Mua với %d vàng</string>
     <string name="WndTradeItem_SellAll">Bán tất cả cho %dg</string>
     <string name="WndTradeItem_SellN">Bán %1$d cho %2$dg</string>
@@ -1144,6 +1155,7 @@
     <string name="Worm_Desc">Không thể biết được côn trùng này to đến đâu. Đỉnh đầu nó mọc ra một phần từ sàn nhà, cơ thể sinh vật này bị bao phủ bởi những múi thịt hư hỏng và nhầy nhơa. Những cùm răng khổng lồ cho bạn thấy rõ ràng con quái vật đó di chuyển như thế nào qua bề mặt.</string>
     <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">giun</string>
+    <string name="Worm_Name_Objective">giun</string>
     <string name="Wraith_Desc">Một oan hồn là linh hồn oán giận của một kẻ có tội, mộ hoặc lăng mộ của họ bị quấy rối. Là một thực thể phi vật chất, rất khó đánh trúng chúng bằng vũ khí thông thường.</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">oan hồn</string>
@@ -1206,6 +1218,7 @@
     <string name="town_deco_grandclock_desc">Một cơ chế khá cũ nhưng vẫn hoạt động.</string>
     <string name="town_deco_hay_desc">Một đống rơm nhỏ thơm thơm.</string>
     <string name="town_deco_hay_name">Cỏ khô</string>
+    <string name="town_deco_identifier_sign_name">Biển hiệu Quả Cầu Phép Thuật</string>
     <string name="town_deco_inn_bed_desc">Trông có vẻ là một chiếc giường rất thoải mái.</string>
     <string name="town_deco_inn_bed_name">Giường</string>
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
@@ -1231,6 +1244,7 @@
     <string name="town_deco_statue_blood_desc">Một bức tượng đầy uy nghi của thiên thần đang cầm một bát máu.</string>
     <string name="town_deco_stone_wall_desc">Không hiểu sao bức tường này lại tỏa ra hơi ấm và có vẻ hơi ẩm.</string>
     <string name="town_deco_stones_desc">Chỉ là một đống đá.</string>
+    <string name="town_deco_stones_name">Đá</string>
     <string name="town_deco_tree_name">Cây</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_vat_name">chậu</string>
@@ -1247,6 +1261,20 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

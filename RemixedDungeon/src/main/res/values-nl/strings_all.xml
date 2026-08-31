@@ -52,6 +52,7 @@
     <string name="ArmoredStatue_Name">levende standbeeld</string>
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
     <string name="AttackDelay_Increased">Kan de %1$s niet zo hanteren. Langzame slagen, zware ademhaling...</string>
+    <string name="AwarenessBuff_Info">De zintuigen zijn verscherpt, wat meer bewustzijn van de omgeving geeft.</string>
     <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name_Objective">vreemdeling</string>
     <string name="Backstab_Aware">Het slachtoffer mag niet op zijn hoede zijn voor een succesvolle rugstoot.</string>
@@ -67,6 +68,7 @@
     <string name="Badges_Champion">Uitdaging gewonnen</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
     <string name="Badges_DeathPoison">Dood door vergiftiging</string>
+    <string name="Badges_GamesPlayed1">10 spellen gespeeld</string>
     <string name="Badges_GamesPlayed2">100 spellen gespeeld</string>
     <string name="Badges_GnollUnlocked">Gnoll ontgrendeld</string>
     <string name="Badges_GoldColleted2">500 goud verzameld</string>
@@ -124,6 +126,7 @@
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_0">Prrrrrrr</string>
     <string name="BlackCat_Phrases_1">Miauw...</string>
+    <string name="BlackCat_Phrases_2">Miauw!</string>
     <string name="BlackSkullOfMastery_Lich">Word een Lich</string>
     <string name="BlackSkullOfMastery_Name">De Zielbrenger</string>
     <string name="BlackSkull_Activated">De Zwarte Schedel is ontwaakt!</string>
@@ -253,6 +256,7 @@
     <string name="Codex_Story_14">Onstabiel wapen - Bij een succesvolle treffer kan het effect van willekeurige betovering optreden.</string>
     <string name="Codex_Story_17">Verstikkend wapen - Bij succesvolle treffer kan het doelwit verlamd raken.</string>
     <string name="Codex_Story_20">Vrieswapen - Een succesvolle treffer kan het doel vertragen en voorkomen dat het in brand vliegt.</string>
+    <string name="Codex_Story_22">Dit boek is geschreven in de taal der demonen</string>
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
     <string name="Codex_Story_25">Zij stak, bevroren, voor de zware eikenen deur, en keek naar het licht dat uit de deurranden doordrong. Uit een verwaarloosd hoekje van haar geest kwam herkenning.\n\&quot;Zonlicht..\&quot; mompelde ze tegen zichzelf. Hoe lang was het geweest? In de eeuwige duisternis van de Kelder had ze lang geleden opgehouden de dagen te tellen. Het licht verlichtte vergeten herinneringen. Ze herinnerde haar training, lange dagen van zware oefening met boomerang en zwaard, van logboek bijhouden en kaarten maken. Ze herinnerde de mantra\'s en disciplines die bedoeld waren om haar een schijn van gezond verstand te laten behouden terwijl ze de onbekende diepgang verkennde. Wat ze niet herinnerde, niet kon herinneren, waren mensen.\nZe herinnerde hun stemmen, hun bevelen en hun waarschuwingen, maar niet hun gezichten, noch hun aanraking.\nPijn had haar getraind. Onthoud de gevaren, altijd de gevaren. Tollende dieren, onoversterven, onzinnige bendes en slimme ninja\'s waren voor haar gevallen. Ze had gesneden, gebrand, gestoken en vergiftigd haar weg gebaan door afschuwelijke wezens, demonen, klokwerk-afschuwelijkheden en onzinnige necromanten. Zelfs goden waren voor haar gevallen.\nZe had Yog gevolgd door Hemel en Hel, voordat ze zijn corrumpterende fluisteringen voor altijd stilte. Toch was er nog werk te doen. Yog was een dienaar van iemand nog meer occulte en krachtigere dan hijzelf.\nZo dook ze verder, dieper. Het dagboek van de oude tovenaar, nog steeds stralend van kracht, had haar de weg getoond. Met de magie in zijn bladen reisde ze naar een woud nieuw land, een klein dorpje verborgen in een machtig bos. Daar voltooide ze ten slotte het kwaad tot zijn doolhof-achtige bron, en versloeg allen die voor haar stonden.\nNu, in het felle daglicht, onderzocht ze zichzelf in een kuil grotwater. Haar lichaam was door magie bijna onherkenbaar vervormd. Haar huid, bleek tot het punt van doorschijnend, was bedekt met vuil, slijk en roet. Haar ketting met ringen kon een koningsgeld waard zijn, en haar wapenhouder met staven bevatte genoeg magische energie om legers te verwoesten. Ze greep haar wapens, letterlijk fijn genoeg om de goden zelf neer te hakken. Werkelijk, ze was meester geworden van dit donkere rijk, deze woestijn van wanhoop.\nZe had het kwaad gejaagd tot in de verre hoeken van het multiversum, maar nu was ze bevroren van angst. Wat als ze haar verwerpte? Wat als ze dat niet deed? Hoe kon ze nog ooit met deze mensen omgaan? Hel, ze had de keren dat de dood haar had geëist, en weer was weggehaald uit zijn ijzergreep, niet meer geteld.\nNee, er was geen plek voor haar in het licht, niet meer. Ze keerde zich af van het mager licht, en daalde in het donker, misschien voor de laatste keer.\n\n\n\tby drazool from reddit</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
@@ -368,6 +372,7 @@
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
     <string name="GameScene_NightMode">Wees voorzichtig, de kerker is \'s nachts nog gevaarlijker!</string>
+    <string name="GameScene_Welcome">Welkom op niveau %d van Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Welkom terug op niveau %d van Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Info">Immuun voor alle gassen.</string>
     <string name="GasImmuneBuff_Name">Gasimmuniteit</string>
@@ -429,6 +434,7 @@
     <string name="HeroSubClass_DescAssa">Bij het uitvoeren van een verrassingsaanval, richt de _Meuchelmoorder_ extra schade aan bij zijn doelwit.</string>
     <string name="HeroSubClass_DescFreR">De _Vrijsprinter_ kan zich bijna twee keer zo snel voortbewegen als de meeste monsters. Tijdens het rennen is de Vrijsprinter veel moeilijker te raken. Maar daarvoor moet hij onbelast en niet verhongerd zijn.</string>
     <string name="HeroSubClass_DescNone">NIET GEVONDEN</string>
+    <string name="HeroSubClass_DescSnip">_Sluipschutters_ zijn in staat om zwakke punten in de bepantsering van een vijand te ontdekken, waardoor ze deze effectief negeren bij het gebruik van een afstandswapen.</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="HeroSubClass_NameAssa">meuchelmoorder</string>
     <string name="HeroSubClass_NameFreR">freerunner</string>
@@ -580,6 +586,7 @@
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimic</string>
     <string name="MimicPie_Name_Objective">mimic</string>
+    <string name="Mimic_Desc">Mimics zijn magische wezens die elke gewenste vorm kunnen aannemen. In kerkers kiezen ze bijna altijd de vorm van een schatkist, omdat ze weten hoe ze een avonturier kunnen lokken.</string>
     <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">mimic</string>
     <string name="Mimic_Name_Objective">mimic</string>
@@ -726,6 +733,7 @@
     <string name="RatArmor_Name">ratten pantser</string>
     <string name="RatHide_Name">rattenhuid</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
+    <string name="RatKingCrown_Info">Gouden kroon van Zijn Rattigheid, symbool van eeuwigdurende Macht</string>
     <string name="RatKingCrown_Name">Kroon van de rattenkoning</string>
     <string name="RatKing_Desc">Deze rat is een beetje groter dan een gewone buidelrat en draagt een klein kroontje op zijn hoofd.</string>
     <string name="RatKing_Died">De koning is dood. Lang leve de koning!</string>
@@ -795,6 +803,7 @@
     <string name="ScrollOfChallenge_Name">uitdagingsscrol</string>
     <string name="ScrollOfCurse_Name">Vloekscrol</string>
     <string name="ScrollOfIdentify_Info1">Het is %s</string>
+    <string name="ScrollOfIdentify_InvTitle">Kies een voorwerp om te identificeren</string>
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
     <string name="ScrollOfLullaby_Info1">De pergament uitte een kalmerende melodie.</string>
     <string name="ScrollOfLullaby_Info2">Het pergament brengt een kalmerende melodie voort en de %s valt in slaap!</string>
@@ -868,6 +877,7 @@
     <string name="Skeleton_Name">skelet</string>
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SleepBuff_Info">Volledig in slaap</string>
+    <string name="SmashSpell_Info">Spring omhoog en creëer een krachtige klap bij het raken van de grond, die tijdelijk vijanden in de buurt verdooft en tegelijkertijd fysieke schade toebrengt.</string>
     <string name="SmashSpell_Name">Verpletteren</string>
     <string name="Snail_Desc">Deze kleine weekdier is behoorlijk gegroeid door te voeden met rioolwater, maar hij is nog steeds heel traag, wat hem een makkelijke tegenstander maakt.</string>
     <string name="Snail_Gender">masculine</string>
@@ -1031,6 +1041,7 @@
     <string name="WandOfRegrowth_Name">Staf van Herstel</string>
     <string name="WandOfSlowness_Info">Deze toverstaf zorgt ervoor dat een wezen met de helft van zijn normale snelheid beweegt en aanvalt, totdat het effect afloopt.</string>
     <string name="WandOfSlowness_Info1">Er gebeurde niets.</string>
+    <string name="WandOfSlowness_Name">Toverstaf van Vertraging</string>
     <string name="WandOfTeleportation_Info2">er is niets gebeurd</string>
     <string name="Wand_ACZap">ZAP</string>
     <string name="Wand_Prompt">Kies een richting om te zappen</string>
@@ -1051,6 +1062,7 @@
     <string name="WaterElemental_Desc">Water elementalen komen voor bij grote watermassa\'s. Meestal dwalen deze magisch gebonden golven gewoon rond.</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name_Objective">waterelementair</string>
+    <string name="WaterOfHealth_Info">De kracht van gezondheid straalt uit het water van deze put. Neem een slok om je wonden te helen en je honger te stillen.</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
     <string name="WeaknessBuff_Name">Verzwakt</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
@@ -1078,6 +1090,7 @@
     <string name="WndDonate_royalDonateText">Ik wil niet raar klingen, maar door dit te doen, voed je de developers letterlijk.</string>
     <string name="WndDonate_ruby">robijn</string>
     <string name="WndDonate_silverDonate">zilverdonatie</string>
+    <string name="WndDonate_silverDonateText">Elke donatie helpt de ontwikkeling van het project</string>
     <string name="WndDonate_silverDonateText2">Ook schakelt u reclame uit in alle spelmodi en ontgrendelt u de Jageres vanaf het begin.</string>
     <string name="WndDontLikeAds_NotThisTime">Niet deze keer</string>
     <string name="WndFortuneTeller_IdentifyAll">Alles</string>
@@ -1270,6 +1283,7 @@
     <string name="town_deco_skullboard_name">trofeerek</string>
     <string name="town_deco_statue_blood_desc">Een majestueuze standbeeld van een engel die een kom bloed vasthoudt.</string>
     <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
+    <string name="town_deco_stones_name">Stenen</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
     <string name="town_deco_stove_name">Stenen kachel</string>
     <string name="town_deco_urn_desc">Kleien, misschien met as van iemand.</string>
@@ -1291,6 +1305,20 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
