@@ -23,6 +23,7 @@
     <string name="Actions_Speed">Cấp tốc hành</string>
     <string name="AirElemental_Desc">Yếu tố không khí là những sinh vật phép thuật bay được tạo thành từ không khí sống.</string>
     <string name="AirElemental_Gender">masculine</string>
+    <string name="AirElemental_Name">nguyên tố không khí</string>
     <string name="AirElemental_Name_Objective">nguyên tố khí</string>
     <string name="Albino_Gender">masculine</string>
     <string name="AlchemyPot_SelectSeed">Chọn một hạt giống để ném</string>
@@ -231,6 +232,7 @@
     <string name="Chess_YouLose">Bạn thua!</string>
     <string name="Chess_YouWin">Bạn thắng!</string>
     <string name="Chess_YourMove">Nhấp vào bàn cờ — đến lượt bạn, Anh Hùng.</string>
+    <string name="ChristmasTurkey_Info">Cách tốt nhất để kỷ niệm Lễ Giáng Sinh Ngục, là ăn một mảnh gà tây nướng. Để kỷ niệm ngày mà quái vật xâm chiếm ngục. Việc này cuối cùng đã thu hút một lượng lớn du khách và hành khách từ khắp nơi trên thế giới, cải thiện tình hình kinh tế trong khu vực.</string>
     <string name="ChristmasTurkey_Name">gà tây lễ hội</string>
     <string name="CityBossLevel_ChessSign">Hãy buông vũ khí — Vua sẽ thử thách trí tuệ của ngươi, chứ không phải sức mạnh.</string>
     <string name="City_TileDescDeco">Ở đây thiếu một vài viên gạch.</string>
@@ -437,6 +439,7 @@
     <string name="HeroSubClass_DescWarL">Sau khi giết một kẻ thù, _Pháp Sư_ sẽ hấp thụ linh hồn của nó. Điều này chữa lành vết thương và làm no đói của hắn.</string>
     <string name="HeroSubClass_DescWard">Với sự kết nối mạnh mẽ với các lực lượng thiên nhiên, _Kiến Trùm_ có khả năng thu thập giọt sương và hạt giống từ các cây cỏ. Ngoài ra, đi qua bụi cỏ cao cũng ban cho họ một đợt tăng giáp tạm thời.</string>
     <string name="HeroSubClass_NameFreR">kẻ chạy tự do</string>
+    <string name="HeroSubClass_NameGuardian">thủ vệ</string>
     <string name="HeroSubClass_NameLich">Lich</string>
     <string name="HeroSubClass_NameSnip">xạ thủ</string>
     <string name="HeroSubClass_NameWard">trùm phu</string>
@@ -499,6 +502,7 @@
     <string name="InventoryScroll_Warning">Bạn có thực sự muốn hủy việc sử dụng cuộn giấy này không? Nó sẽ bị tiêu hao dù sao.</string>
     <string name="InvisibilityBuff_Info">Hoàn toàn vô hình, có thể giúp tránh nguy hiểm hoặc trở thành nguy hiểm.</string>
     <string name="IronKey_FromDepth">chìa khóa sắt từ độ sâu %d</string>
+    <string name="Item_ACDrop">THẢ</string>
     <string name="Item_Info2">điều gì đó</string>
     <string name="Item_Name">vật phẩm</string>
     <string name="JarOfSouls_Desc">Cặp mắt sáng lóa của chiếc sọ được vẽ trên cái hũ cũ này, cũng như năng lượng kỳ lạ mà nó tỏa ra, khiến bạn cảm thấy bất an.</string>
@@ -630,6 +634,8 @@
     <string name="NecromancerNPC_Name">pháp sư chết chóc</string>
     <string name="NecromancerRobe_Info">Chiếc áo choàng này sẽ cho phép Necromancer triệu hồi Deathling với chi phí 5 linh hồn. Deathling là một tỳ phu bất tử sẽ mạnh lên cùng với chủ nhân của nó.</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: giới hạn triệu hồi đã đạt đến (Hiện tại tối đa: %d)!</string>
+    <string name="Necromancy_BecameALich">Bạn đã trở thành Lich! Sức mạnh của bạn tăng lên và dung lượng linh hồn đã được gấp đôi! Nhưng bạn đã mất %1$d điểm sức mạnh.</string>
+    <string name="Necromancy_NotEnoughSouls">Bạn không đủ linh hồn để thi triển phép thuật \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_SoulsCountLabel">Linh hồn</string>
     <string name="NecrotismBuff_Info">Dấu ấn của chính cái chết, mùi hôi từ đó ảnh hưởng đến những người gần đó và khiến họ chia sẻ chung một định mệnh.</string>
     <string name="NecrotismBuff_Name">Hoại tử</string>
@@ -678,6 +684,7 @@
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">Mười ốc sên, mười thì thầm từ vực thẳm! Chất nhầy của chúng sẽ được phân tích, bản chất của chúng sẽ được thẩm định. Những bí mật chúng chứa đựng đã gần trong tầm tay.</string>
+    <string name="PlagueDoctorQuest_3_2_Prologue">Một _Kỵ Sĩ Cửu U_! *Giọng nói nứt nẻ vì hứng thú, ngón tay xương khô run rẩy khi nắm chặt bình thuốc bủa bọt đầy hỗn hợp mờ tối, chói lòa*. Một sinh vật như vậy… một ngọn đèn hiệu của cái chết! Bắt được một con, còn sống… đó sẽ là… một kỳ quan. Hãy tưởng tượng những bí mật chúng ta có thể khai phá! Sức mạnh chảy trong những mạch xương khô đó! Đúng, một _Kỵ Sĩ Cửu U_! Nó quan trọng cho nghiên cứu của ta! Vì nó sẽ cho phép chúng ta đi sâu hơn… vào những bí ẩn của sự sống… và cái chết bản thân!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Ngón xương khô của hắn gõ nhịp nhàng vào nồi nước sôi sùng sục, không khí quanh hắn dày đặc bởi mùi hôi chua gay của lưu huỳnh và sự phân giải*\n_Kobold Pháp Sư Băng_! Những sinh vật thảm hại kia, trùm mình trong hang động đóng băng, nguội ngút chăm chăm vào phép thuật băng giá của chúng.\nTa cần năm con, xác đóng băng của chúng sẽ... soi sáng sự việc.\nSự thành thạo băng giá của chúng, nó... kỳ lạ.\nTa tin rằng chúng khai thác một năng lượng nguyên thủy, một sức mạnh ngủ quên dưới bề mặt của chính thế giới này.</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Tâm trí anh ấy lang thang khi nói, giọng nói càng lúc càng nhỏ, chỉ còn là thì thầm.* Mang cho ta hai *súc quyên*... sống. Quyền năng của chúng... mê hoặc.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Hắn ấp úng, giọng khàn khàn như cành cây khô giòn*. A-a, _súc quy_! Hai... có, hai, còn sống! Nó là... hem... cho nghiên cứu của ta! Các ngươi thấy... pheromone của chúng... nó quan trọng để hiểu cái cân bằng tinh tế của... a... *Hắn ngập ngừng, bàn tay xương cốt đưa lên gõ nghiến mặt nạ, ánh mắt chớm chớp nhìn về phía các ngươi với cường độ sốt ruột.* Cái... bản chất của chúng... nó là một câu đố... một câu đố đẹp đẽ, bí ẩn! *Hắn ho khan gắt gao, cố gắng lấy lại bình tĩnh.* Ta hứa, vì mang cho ta hai con... quái vật này... các ngươi sẽ có lòng biết ơn vĩnh cửu của ta. Hãy coi đó như một... một ơn huệ cho tri thức! Đúng! Vì tri thức!</string>
@@ -809,6 +816,7 @@
     <string name="ScrollOfSummoning_Info">Khi đọc to, cuộn giấy này sẽ triệu hồi một con quái vật từ tầng hầm ngục hiện tại. Và nếu ý chí của nó đủ yếu, nó sẽ trở thành tôi tớ của bạn.</string>
     <string name="ScrollOfTeleportation_NoTeleport">Sức mạnh ma pháp của nơi này ngăn cản việc dịch chuyển của bạn!</string>
     <string name="ScrollOfTeleportation_Teleport">Trong nháy mắt, bạn đã được dịch chuyển đến một vị trí khác trên cấp độ này.</string>
+    <string name="ScrollOfTerror_Info2">Cuộn giấy bắn ra một tia chớp đỏ rực và %s bỏ chạy!</string>
     <string name="ScrollOfTerror_Info3">Cuộn giấy phát ra một tia sáng đỏ rực và lũ quái vật bỏ chạy!</string>
     <string name="ScrollOfUpgrade_Info">Cuộn giấy này sẽ nâng cấp một vật phẩm duy nhất, cải thiện chất lượng của nó. Một cây đũa phép sẽ tăng sức mạnh và số lượng điện tích; một vũ khí sẽ gây thêm sát thương hoặc tìm điểm yếu thường xuyên hơn; một bộ giáp sẽ đỡ thêm nhiều đòn; hiệu quả của chiếc nhẫn lên người đeo sẽ được tăng cường. Vũ khí và giáp cũng sẽ yêu cầu ít sức mạnh hơn để sử dụng, và mọi lời nguyền trên vật phẩm sẽ được hóa giải.</string>
     <string name="ScrollOfUpgrade_InvTitle">Chọn một vật phẩm để nâng cấp</string>
@@ -1000,6 +1008,7 @@
     <string name="VertigoBuff_Info">Cảm giác choáng váng khiến đi thẳng trở nên khó khăn!</string>
     <string name="WandMaker_Dust1">Ôi, thật bất ngờ dễ chịu khi gặp được một người đàng hoàng ở nơi này! Tôi đến đây để tìm một nguyên liệu hiếm - _bụi xác chết_. Nó có thể thu thập từ những bộ xương, và trong dungeon có rất nhiều. Là một pháp sư, tôi hoàn toàn có thể tự vệ trước quái vật nơi đây, nhưng tôi lạc mất chỉ trong chốc lát — thật xấu hổ. Có lẽ bạn có thể giúp tôi? Tôi sẽ vui lòng trả công cho bạn bằng một trong những cây đũa phép tốt nhất của mình.</string>
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
+    <string name="WandOfAvalanche_Info">Khi một xung điện của que này trúng vào tường (hoặc bất kỳ chướng ngại vật rắn nào khác), nó gây ra một trận băng tuyết đá, gây sát thương và choáng tất cả sinh vật trong khu vực bị ảnh hưởng.</string>
     <string name="WandOfAvalanche_Info1">Bạn đã nghiền nát chính mình bằng Gậy Bão Tuyết của chính mình...</string>
     <string name="WandOfDisintegration_Info">Cây gậy này phát ra một tia năng lượng hủy diệt, xuyên thủng tất cả sinh vật trên đường đi. Càng nhiều mục tiêu bị trúng, càng nhiều sát thương nó gây ra cho mỗi mục tiêu.</string>
     <string name="WandOfDisintegration_Name">Đũa phép Phân rã</string>
@@ -1096,6 +1105,7 @@
     <string name="WndPlayGames_Connecting">Đang kết nối với Google Play Games, vui lòng chờ một chút</string>
     <string name="WndPlayGames_Show_Badges">Hiện huy hiệu</string>
     <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
+    <string name="WndPlayGames_Use">sử dụng Google Play Games</string>
     <string name="WndPortal_Info">Cổng này sẽ cho phép bạn quay lại thị trấn. Nó có vẻ khá không ổn định, và có lẽ sẽ không hoạt động quá lâu.\nBạn có muốn sử dụng nó không?</string>
     <string name="WndPortal_Info_Return">Cổng truyền tàng này sẽ đưa bạn trở lại hang động.\nBạn có muốn sử dụng nó không?</string>
     <string name="WndPremiumSettings_banners">Chọn chất liệu cờ</string>
@@ -1193,6 +1203,7 @@
     <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
     <string name="town_deco_broken_wall_name">Bức tường vỡ</string>
     <string name="town_deco_brown_carpet_desc">Chiếc thảm nâu này đã bị đạp nát bởi nhiều phiêu lưu gia, người lang thang và người đi đường.</string>
+    <string name="town_deco_brown_carpet_name">Thảm</string>
     <string name="town_deco_cabinet_desc">Một tủ đồ rộng rãi với nhiều cánh cửa và ngăn kệ.</string>
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_church_sign_desc">Có vẻ như bên trong tòa nhà này có một nhà thờ.</string>
@@ -1239,12 +1250,15 @@
     <string name="town_deco_shelf_full_name">Kệ sách</string>
     <string name="town_deco_shelf_name">Các kệ sách</string>
     <string name="town_deco_shieldboard_desc">Các loại khiên treo trên bảng. Chưa được bán.</string>
+    <string name="town_deco_skulls_desc">Các chiếc sọ được mài bóng thuộc về các sinh vật trong ngục.</string>
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
+    <string name="town_deco_snowdrift_desc">Đó là một đống tuyết khá lớn và rõ ràng không ai định dọn nó.</string>
     <string name="town_deco_statue_blood_desc">Một bức tượng đầy uy nghi của thiên thần đang cầm một bát máu.</string>
     <string name="town_deco_stone_wall_desc">Không hiểu sao bức tường này lại tỏa ra hơi ấm và có vẻ hơi ẩm.</string>
     <string name="town_deco_stones_desc">Chỉ là một đống đá.</string>
     <string name="town_deco_stones_name">Đá</string>
+    <string name="town_deco_tree_desc">Một cảm giác kỳ lạ dâng lên khi nhìn chiếc cây sống và bình yên này. Dù sao, không xa nơi này là một ngục địa đầy rẫy khủng khiếp và cái chết.</string>
     <string name="town_deco_tree_name">Cây</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_vat_name">chậu</string>
@@ -1261,6 +1275,21 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

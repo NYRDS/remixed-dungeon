@@ -57,6 +57,7 @@
     <string name="AzuterronNPC_Name_Objective">vreemdeling</string>
     <string name="Backstab_Aware">Het slachtoffer mag niet op zijn hoede zijn voor een succesvolle rugstoot.</string>
     <string name="Backstab_Info">Stille slag in de rug. Oneerlijk, maar uiterst effectief, backstab schade groeit met de vaardigheid van de uitvoerder.\n\nEen geslaagde backstab negeert de pantser of speciale verdedigingsvaardigheden van het slachtoffer volledig.</string>
+    <string name="Backstab_TooFar">Slachtoffer te ver weg voor een succesvolle slag.</string>
     <string name="BadgesScene_Title">Je insignes</string>
     <string name="Badges_AllBags">Alle tassen gekocht</string>
     <string name="Badges_AllItems">Alle drankjes, scrolls, ringen &amp;amp; staven geïdentificeerd</string>
@@ -199,6 +200,7 @@
     <string name="ChaosCrystal_BladeFused">Het kristal absorber je wapen, en nam de vorm van een zwaard aan</string>
     <string name="ChaosCrystal_Fuse">SMETEN</string>
     <string name="ChaosCrystal_Name_2">Chaos Kristal</string>
+    <string name="ChaosHelmet_Name">Chaos Helm</string>
     <string name="ChaosShield_desc">Het Chaos Schild ontstaat door het samensmelten van een Chaos Kristal met een gewoon schild, waardoor het bij elke succesvolle blokkade willekeurige chaotische effecten vertoont.</string>
     <string name="ChaosShield_name">Chaos Schild</string>
     <string name="ChaosStaff_Gender">masculine</string>
@@ -325,6 +327,7 @@
     <string name="Dungeon_Tips_16">Wanneer je een getoverde wapen verbetert, is er een kans dat de toverij vernietigd wordt.</string>
     <string name="Dungeon_Tips_17">Een Bron van Transmutatie kan je een voorwerp geven dat je op geen enkele andere manier kunt verkrijgen.</string>
     <string name="Dungeon_Tips_18">De enige manier om een wapen te betoveren is door het te verbeteren met een Schrift van Wapenverbetering.</string>
+    <string name="Dungeon_Tips_19">Geen wapens toegestaan in de aanwezigheid van Zijne Majesteit!</string>
     <string name="Dungeon_Tips_22">De tekst is geschreven in de taal van demonen.</string>
     <string name="Dungeon_Tips_3">Je kunt je goud uitgeven in winkels in de stad of de dungeon.</string>
     <string name="Dungeon_Tips_4">Pas op voor de Slijm!</string>
@@ -449,6 +452,7 @@
     <string name="Hero_Search">zoeken</string>
     <string name="Hero_StaBurning">Je vliegt in brand!</string>
     <string name="Hero_StaCharm">Je bent betoverd!</string>
+    <string name="Hero_StaFurious">furieus</string>
     <string name="Hero_StaPoison">Je bent vergiftigd!</string>
     <string name="Hero_StaRoots">Je kunt je niet bewegen!</string>
     <string name="Hero_StaWeakness">Je voelt je verzwakt!</string>
@@ -487,6 +491,7 @@
     <string name="InterLevelScene_Loading">Laden...</string>
     <string name="InterLevelScene_Returning">Terugkeren...</string>
     <string name="InventoryScroll_No">Nee, ik heb mijn keuze veranderd</string>
+    <string name="InventoryScroll_Title">Selecteer een voorwerp</string>
     <string name="InvisibilityBuff_Info">Volledig onzichtbaar, wat kan helpen gevaren te vermijden of er een te worden.</string>
     <string name="InvisibilityBuff_Name">Onzichtbaar</string>
     <string name="IronKey_FromDepth">ijzeren sleutel van diepte %d</string>
@@ -547,6 +552,7 @@
     <string name="Level_TileToxicTrap">Giftig gas val</string>
     <string name="LevitationBuff_Info">Het lichaam zweeft boven de grond en vermijdt vallen en andere gevaren op de grond.</string>
     <string name="LevitationBuff_Name">Zwevend</string>
+    <string name="LibrarianNPC_Desc">Een heel verlegen persoon, die een ongemakkelijk uitziend vest en een dikke bril draagt.</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">H-hallo. Welkom in de bibliotheek. Hier vind je informatie over allerlei dingen die in de kerker te vinden zijn... eigenlijk kunnen we alleen kennis verstrekken die door avonturiers is ontdekt. Het... het is wat gênant. Dus elke keer dat je ons bezoekt, staat er waarschijnlijk iets nieuws te lezen.</string>
     <string name="Lich_DieInfo">Ik vond deze nekromant nooit leuk. Het is dus tijd om terug te keren naar niveau 7 en een andere weg naar het nieuwe avontuur te vinden.</string>
@@ -579,6 +585,7 @@
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
     <string name="MeleeWeapon_Info6a">Vanwege je onvoldoende kracht is de nauwkeurigheid en snelheid van je aanval met dit %s verminderd.</string>
     <string name="MeleeWeapon_Info6b">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
+    <string name="MeleeWeapon_Info7a">Je houdt de %1$s gereed%2$s.</string>
     <string name="MercenaryNPC_Desc">Een stevig mannetje.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">huurling</string>
@@ -614,6 +621,7 @@
     <string name="Monk_Name_Objective">dwerg monnik</string>
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
+    <string name="MysteryMeat_Info">Eet op eigen risico!</string>
     <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
 
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
@@ -661,6 +669,8 @@
     <string name="Pickaxe_Gender">feminine</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te delven!</string>
     <string name="Pickaxe_Name">houweel</string>
+    <string name="Pickaxe_NothingToMine">Hier is niets om te delven!</string>
+    <string name="Piercing_Name_2">Doorborende %s</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
     <string name="PlagueDoctorMask_Info">Dit… dit is geen gewone masker. Het is… een barrière. Een schild tegen de krachten van verval waar de Pestmeester onvermoeid tegen vecht. Gemaakt van het fijnste ebenhout, kunstvol ingesneden met het gezicht van een gierige schedel. De holle oogkasjes zijn gevuld met schitterende amethisten die zwak pulseren, als uitgaande kolen van een vuur. Elke adem die je neemt, elk woord dat je spreekt, wordt gefilterd door een labyrintachtig netwerk van buizen en filters. Een mengsel van krachtige kruiden en exotische specerijen vult de lucht binnenin, het stank van de dood maskerend dat als een lijkhemd om je heen hangt.</string>
@@ -669,6 +679,7 @@
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze gebukte persoon is verborgen onder een leer overall. Van hem komt een bittere geur van medicijnen en... knoflook?</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">pestarts</string>
+    <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, je bent terug! _Vijf dode ratten_, perfect! Hun huiden zullen cruciaal zijn voor mijn onderzoek. En zoals beloofd, voor je dappere inspanning heb ik dit harnas voor je gemaakt van hun eigen vellen. Het is doordrenkt met een vleugje van de pest, maar maak je geen zorgen! Het is gecontroleerd, het beschermt! Ga nu! Bescherm de stad!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… prachtig! De _slakken_, hun geheimen langzaam ontvouwend als bloemblaadjes in het maanlicht. Een schat aan informatie! Maar je hebt gelijk, _vijftig goud_ is nauwelijks een passende beloning. *Gikkelt maniakaal*.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Breng me een _vampier vleermuis_, levend en onbeschadigd! Haar bloed, haar vleugels… ze bevatten geheimen die ik moet onthullen!</string>
@@ -699,6 +710,7 @@
     <string name="PotionOfMight_Info">Deze krachtige vloeistof stroomt door je spieren en verhoogt permanent je kracht met één punt en je gezondheid met vijf punten.</string>
     <string name="PotionOfMight_Name">Drankje van Kracht</string>
     <string name="PotionOfMindVision_Apply1">Je kunt op een of andere manier de aanwezigheid van andere wezens\' geesten voelen!</string>
+    <string name="PotionOfMindVision_Apply2">Je kunt op de een of andere manier voelen dat je op dit moment alleen bent op dit level.</string>
     <string name="PotionOfParalyticGas_Info">Bij blootstelling aan open lucht verdampt de vloeistof in deze fles tot een benauwende gele nevel. Wie de wolk inademt, wordt onmiddellijk ge paralyseerd, en kan een tijdje niet bewegen nadat de wolk is verdampt. Dit item kan op verafstaande vijanden worden gegooid om hen in het effect van de gas te betrekken.</string>
     <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
     <string name="PotionOfPurity_Name">Zuiveringselixer</string>
@@ -813,6 +825,7 @@
     <string name="ScrollOfRemoveCurse_Name">Schrift van Vervloeking Verwijderen</string>
     <string name="ScrollOfRemoveCurse_Proced">Je zak gloeit met een reinigend licht, en een kwaadaardige energie verdwijnt.</string>
     <string name="ScrollOfSummoning_Info">Bij voorlezen zal deze rol een van de monsters uit het huidige kerker-niveau oproepen. En als de wil van het monster zwak genoeg is, zal het je dienaar worden.</string>
+    <string name="ScrollOfSummoning_Info_2">Het monster heeft je oproep beantwoord!</string>
     <string name="ScrollOfTeleportation_Teleport">In een oogwenk ben je geteleporteerd naar een andere plek op dit niveau.</string>
     <string name="ScrollOfTerror_Info1">De perkamentrol flitst met een fel rood licht</string>
     <string name="ScrollOfTerror_Info3">De rol zendt een felle flits van rood licht uit en de monsters vluchten!</string>
@@ -975,6 +988,7 @@
     <string name="Tengu_Desc">Tengu zijn leden van de oude moordenaarsclan, die ook Tengu heet. Deze moordenaars zijn bekend om hun uitgebreide gebruik van shurikens en vallen.</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info2">Gepakt, %s!</string>
+    <string name="Tengu_Name">tengu</string>
     <string name="TerrorBuff_Name">Versterkt</string>
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">gekke dief</string>
@@ -1199,6 +1213,7 @@
     <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">worm</string>
     <string name="Worm_Name_Objective">worm</string>
+    <string name="Wraith_Defense">ontweken</string>
     <string name="Wraith_Desc">Een wraith is de wraakzuchtige geest van een zondaar, wiens graf of grafkelder werd verstoord. Als een etherische entiteit is het zeer lastig te raken met een gewoon wapen.</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">wraith</string>
@@ -1305,6 +1320,21 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
