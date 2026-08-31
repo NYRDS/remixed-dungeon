@@ -187,9 +187,11 @@
     <string name="ChaosBlade_Name">شفرة الفوضى</string>
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Name">قوس الفوضى</string>
+    <string name="ChaosCrystal_ArmorFused">اندمج البلور مع درعك، وأخذ شكل الفوضى.</string>
     <string name="ChaosCrystal_BladeFused">يمتص الكريستال سلاحك، ويتخذ شكل شفرة</string>
     <string name="ChaosCrystal_Fuse">دمج</string>
     <string name="ChaosCrystal_Use">استخدام</string>
+    <string name="ChaosHelmet_Info">الخوذة ذات اللون الأحمر الدموي هي رمز جوهري لمحارب الفوضى.</string>
     <string name="ChaosHelmet_Name">خوذة الفوضى</string>
     <string name="ChaosShield_name">درع الفوضى</string>
     <string name="ChaosStaff_Gender">masculine</string>
@@ -199,6 +201,7 @@
     <string name="CharAction_Give">إعطاء</string>
     <string name="CharAction_PetInventory">مخزن الحيوان الأليف</string>
     <string name="CharAction_Take">التقاط</string>
+    <string name="Char_Defeat_0">هزم %1$s الـ%2$s</string>
     <string name="Char_Hit_1">%1$s ضرب %2$s</string>
     <string name="Char_Hit_2">%1$s ضرب %2$s</string>
     <string name="Char_Kill_1">%s قتلك...</string>
@@ -485,6 +488,7 @@
     <string name="Larva_Name">يرقة الإله</string>
     <string name="LastLevel_TileDescStatue">العمود مصنوع من جماجم بشرية حقيقية. مذهل.</string>
     <string name="LastShopLevel_TileDescExit">ممر يؤدي إلى الجحيم.</string>
+    <string name="LastShopLevel_TileHighGrass">أزهار متفتحة عالية</string>
     <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
     <string name="Leech_Name_0">مصاص دماء %s</string>
     <string name="Leech_Name_2">مصاص دماء %s</string>
@@ -528,6 +532,7 @@
     <string name="MailArmor_Name">درع حلقي</string>
     <string name="MeleeWeapon_Info1c">مُحسَّن</string>
     <string name="MeleeWeapon_Info2a">متوسط ضرره %d نقطة لكل ضربة.</string>
+    <string name="MeleeWeapon_Info2b">متوسط ضرره المعتاد هو %1$d نقطة لكل ضربة وعادة ما يتطلب %2$d نقطة قوة.</string>
     <string name="MeleeWeapon_Info2c">هذا السلاح ربما ثقيل جداً عليك.</string>
     <string name="MeleeWeapon_Info3d">و</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
@@ -618,6 +623,7 @@
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Death">مِتَّ مِن السم...</string>
     <string name="PortalExit_Desc_IceCaves">كهوف الجليد</string>
+    <string name="PortalExit_Desc_Necropolis">مدينة الأموات</string>
     <string name="PortalGate_Activated">لقد استيقظت البوابة القديمة!</string>
     <string name="PortalGate_Desc_Activated">البوابة تتسرب منها مادة متوهجة من نوع ما. تبدو ساكنة تماماً، لولا التموجات القادمة من مركزها.</string>
     <string name="PortalGate_Name">بوابة</string>
@@ -694,6 +700,7 @@
     <string name="RingOfPower_Name">خاتم القوة</string>
     <string name="RingOfSatiety_Name">خاتم الشبع</string>
     <string name="RingOfStoneWalking_Info">هذا الخاتم الغريب مصنوع من حجر متين. ما ظننته في البداية ياقوتة هو في الحقيقة دم سائل يُحتفظ به في مكانه! بالداخل سهم يشير إلى ما يبدو كجدار، إلى جانب قلب مكسور... ماذا قد يفعل؟</string>
+    <string name="RingOfStoneWalking_Name">خاتم الدم الحجري</string>
     <string name="RingOfThorns_Info">على الرغم من أن هذا الخاتم لا يوفر أشواكاً حقيقية، فإن أي عدو يهاجمك سيُجرح بجزء من الضرر الذي يلحقه بك. تحسين هذا الخاتم لن يمنح أي مكافآت إضافية.</string>
     <string name="Ring_BuffKnown">هذا %s</string>
     <string name="Ring_Gems_1">الأوبال</string>
@@ -701,6 +708,7 @@
     <string name="Ring_Info">هذا السوار المعدني مزين بجوهرة %s كبيرة تتلألأ في الظلام. من يدري ما هو تأثيرها عند ارتدائها؟</string>
     <string name="Ring_Info1">يمكنك ارتداء 2 خواتم فقط في وقت واحد</string>
     <string name="Ring_Info2">خاتمك %1$s يضيق حول إصبعك بشكل مؤلم</string>
+    <string name="Ring_Info3b">، ولأنه ملعون، لا تملك أي قوة لإزالته.</string>
     <string name="Roar_Name">زئير</string>
     <string name="RogueArmor_ACSpecial">قنبلة دخان</string>
     <string name="RootSpell_Info">يحبس الشخصية المختارة، مما يمنعها من الحركة لفترة قصيرة.</string>
@@ -734,6 +742,7 @@
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
     <string name="ScrollOfLullaby_Info1">يتلو اللفافة لحناً هادئاً.</string>
     <string name="ScrollOfLullaby_Info3">القرطاس ينطق بلحن هادئ والوحوش تنام!</string>
+    <string name="ScrollOfMagicMapping_Info">عند قراءة هذه اللفيفة، ستنطبع صورة بوضوح البلور في ذاكرتك، لتنبيهك على التخطيط الدقيق للمستوى وكشف جميع الأسرار المخفية. ستبقى مواقع الأشياء والمخلوقات مجهولة.</string>
     <string name="ScrollOfTeleportation_Teleport">في غمضة عين، تم نقلك فجأة إلى موقع آخر من المستوى.</string>
     <string name="ScrollOfTerror_Info3">يصدر المخطوط وميضاً أحمر ساطعاً وتفر الوحوش!</string>
     <string name="ScrollOfUpgrade_LooksBetter">أصبح %s بالتأكيد يبدو أفضل الآن</string>
@@ -840,6 +849,7 @@
     <string name="Stench_Txt">%s نتن</string>
     <string name="Stylus_ACInscribe">نَقْش</string>
     <string name="Stylus_Info">هذا القلم السحري مصنوع من حجر داكن وصلب جداً. يمكنك به نقش رمز أو رونه، لكن القلم هو من يختار ما سينقش، ليس أنت.</string>
+    <string name="Succubus_Desc">الشياطين المارقة هي شياطين تبدو كفتاة غواية (بطريقة قوطية قليلاً). باستخدام سحرها، تستطيع الساحرة أن تسحر البطل، الذي يصبح غير قادر على مهاجمة أي شيء حتى يزول تأثير السحر.</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="SummonBeast_AtYourCommand">يأتي الوحش بأمرك!</string>
     <string name="SummonBeast_Name">نداء الوحش</string>
@@ -925,6 +935,7 @@
     <string name="Warlock_Killed">سهم الظل الخاص بـ %1$s قتلك...</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterOfAwareness_Info">تشع قوة المعرفة من ماء هذه البئر. خذ رشفة منه لكشف جميع أسرار معداتك.</string>
+    <string name="WaterOfHealth_Procced">مع رشفتك الأولى، تشعر أن جروحك قد شُفيت تماماً.</string>
     <string name="WeaknessBuff_Name">مُضعف</string>
     <string name="Weapon_Incompatible">تفاعل أنواع مختلفة من السحر ألغى السحر على هذا السلاح!</string>
     <string name="Weightstone_Accurate">لقد قمت بتوازن %s لجعله أدق</string>
@@ -1063,6 +1074,7 @@
     <string name="town_deco_cabinet_desc">خزانة واسعة ذات أبواب ورفوف كثيرة.</string>
     <string name="town_deco_canvas_name">قماش</string>
     <string name="town_deco_carpet_desc">سجادة حمراء فاخرة مخصصة للضيوف المميزين.</string>
+    <string name="town_deco_charcoal_carpet_desc">سعياً وراء راحة الضيوف، اختارت إدارة السينما أعلى جودة من السجاد ذي اللون الفحمي.</string>
     <string name="town_deco_chest_name">صندوق</string>
     <string name="town_deco_church_sign_desc">يبدو أن هناك كنيسة داخل هذا المبنى.</string>
     <string name="town_deco_church_sign_name">لافتة الكنيسة</string>
@@ -1115,6 +1127,18 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
