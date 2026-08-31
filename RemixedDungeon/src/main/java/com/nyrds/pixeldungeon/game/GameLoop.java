@@ -17,6 +17,7 @@ import com.nyrds.platform.input.Keys;
 import com.nyrds.platform.input.PointerEvent;
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.util.TrackedRuntimeException;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.ReportingExecutor;
 import com.watabou.gltextures.TextureCache;
@@ -303,20 +304,16 @@ public class GameLoop {
                 if (stuckMs > 15000 && System.currentTimeMillis() - lastDump > 30000) {
                     lastDump = System.currentTimeMillis();
                     Runtime rt = Runtime.getRuntime();
-                    String header = "WATCHDOG: update step stuck " + stuckMs + " ms, mem used "
-                        + ((rt.totalMemory() - rt.freeMemory()) >> 20) + "M/"
-                        + (rt.totalMemory() >> 20) + "M - dumping all stacks";
-                    System.out.println("[WATCHDOG] " + header);
+                    GLog.toFile("WATCHDOG: update step stuck %d ms, mem used %dM/%dM - dumping all stacks",
+                        stuckMs, (rt.totalMemory() - rt.freeMemory()) >> 20, rt.totalMemory() >> 20);
                     Thread.getAllStackTraces().forEach((thread, st) -> {
                         if (st.length == 0) {
                             return;
                         }
-                        StringBuilder sb = new StringBuilder("[WATCHDOG] thread ")
-                            .append(thread.getName()).append(" state=").append(thread.getState()).append('\n');
+                        GLog.toFile("WATCHDOG thread %s state=%s", thread.getName(), thread.getState());
                         for (StackTraceElement el : st) {
-                            sb.append("  at ").append(el).append('\n');
+                            GLog.toFile("  at " + el);
                         }
-                        System.out.print(sb);
                     });
                 }
             }
