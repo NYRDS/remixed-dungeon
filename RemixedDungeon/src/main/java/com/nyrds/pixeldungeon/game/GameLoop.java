@@ -276,8 +276,67 @@ public class GameLoop {
         }
     }
 
+    // caveman: snap-brm family - wedged update steps (deep lua/fiber work, scene
+    // races) used to be invisible: no logs, UI frozen. the watchdog dumps all
+    // thread stacks + memory when one update step runs too long.
+    private static volatile long updateStartAt = 0L;
+    private static volatile boolean watchdogStarted = false;
+
+    private void startUpdateWatchdog() {
+        if (watchdogStarted) {
+            return;
+        }
+        watchdogStarted = true;
+        Thread watchdog = new Thread(() -> {
+            long lastDump = 0;
+            while (true) {
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    return;
+                }
+                long started = updateStartAt;
+                if (started == 0) {
+                    continue;
+                }
+                long stuckMs = System.currentTimeMillis() - started;
+                if (stuckMs > 15000 && System.currentTimeMillis() - lastDump > 30000) {
+                    lastDump = System.currentTimeMillis();
+                    Runtime rt = Runtime.getRuntime();
+                    String header = "WATCHDOG: update step stuck " + stuckMs + " ms, mem used "
+                        + ((rt.totalMemory() - rt.freeMemory()) >> 20) + "M/"
+                        + (rt.totalMemory() >> 20) + "M - dumping all stacks";
+                    System.out.println("[WATCHDOG] " + header);
+                    Thread.getAllStackTraces().forEach((thread, st) -> {
+                        if (st.length == 0) {
+                            return;
+                        }
+                        StringBuilder sb = new StringBuilder("[WATCHDOG] thread ")
+                            .append(thread.getName()).append(" state=").append(thread.getState()).append('\n');
+                        for (StackTraceElement el : st) {
+                            sb.append("  at ").append(el).append('\n');
+                        }
+                        System.out.print(sb);
+                    });
+                }
+            }
+        }, "update-watchdog");
+        watchdog.setDaemon(true);
+        watchdog.start();
+    }
+
     @SneakyThrows
     public void update() {
+        startUpdateWatchdog();
+        updateStartAt = System.currentTimeMillis();
+        try {
+            runUpdateStep();
+        } finally {
+            updateStartAt = 0;
+        }
+    }
+
+    private void runUpdateStep() {
         synchronized (stepLock) {
 
             Keys.processEvent(new KeyEvent(Keys.Key.BEGIN_OF_FRAME, KeyEvent.ACTION_DOWN));
