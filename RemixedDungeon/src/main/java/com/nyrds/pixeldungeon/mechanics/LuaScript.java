@@ -60,7 +60,25 @@ public class LuaScript {
     }
 
     private LuaValue run(String method, LuaValue[] args) {
-        return getScript().invokemethod(method, args).arg1();
+        // caveman: snap-ps4 followup - a lua script can wedge mid-execution
+        // (infinite loop, runaway search) and luaj frames are invisible to
+        // stack dumps. name the wedged script + handler + owner.
+        long slowScriptStart = System.currentTimeMillis();
+        try {
+            return getScript().invokemethod(method, args).arg1();
+        } finally {
+            long took = System.currentTimeMillis() - slowScriptStart;
+            if (took > 10_000) {
+                String who = "script=" + scriptFile;
+                if (parent instanceof com.watabou.pixeldungeon.actors.Char) {
+                    com.watabou.pixeldungeon.actors.Char c = (com.watabou.pixeldungeon.actors.Char) parent;
+                    who += " char=" + c.getEntityKind() + " id=" + c.getId() + " pos=" + c.getPos();
+                }
+                String line = "SLOW SCRIPT: " + who + " handler=" + method + " took " + took + " ms";
+                System.out.println("[SLOW SCRIPT] " + line);
+                com.watabou.pixeldungeon.utils.GLog.toFile(line);
+            }
+        }
     }
 
     public LuaValue run(String method, Object arg1) {
