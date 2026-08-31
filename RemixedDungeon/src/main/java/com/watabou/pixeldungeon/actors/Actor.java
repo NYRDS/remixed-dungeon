@@ -123,9 +123,14 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         // any leftover refund with no matching charge is discarded
     }
 
+    // caveman: spend tracing is EXPENSIVE (Thread.getStackTrace + string build
+    // per spend) and must be opt-in. Always-on in DEBUG builds it turned the
+    // chess endgame turn-flood into a CPU spiral + 0.3GB/min allocation churn.
+    public static boolean SPEND_TRACE_ENABLED = false;
+
     // Debug-only multiple-spend gate support. Called by Char.checkedAct() before act().
     public void resetSpendTrace() {
-        if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG && SPEND_TRACE_ENABLED) {
             if (debugSpendTrace == null) {
                 debugSpendTrace = new ArrayList<>();
             } else {
