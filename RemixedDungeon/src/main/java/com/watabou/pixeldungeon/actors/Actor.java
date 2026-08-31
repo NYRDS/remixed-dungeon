@@ -256,6 +256,20 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
     // *** Static members ***
 
     private static final HashSet<Actor> all = new HashSet<>();
+
+    // caveman: watchdog diagnostics - name actor explosions before they wedge
+    // the turn loop (nextActor sorts `all` on every actor turn).
+    public static int count() {
+        return all.size();
+    }
+
+    public static java.util.Map<String, Integer> classHistogram() {
+        java.util.Map<String, Integer> hist = new java.util.HashMap<>();
+        for (Actor a : all) {
+            hist.merge(a.getClass().getSimpleName(), 1, Integer::sum);
+        }
+        return hist;
+    }
     private static Actor current;
 
     private static float now = 0;

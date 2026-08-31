@@ -5,6 +5,7 @@ import android.view.KeyEvent;
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.platform.ConcurrencyProvider;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.PlatformAtomicInteger;
 import com.nyrds.platform.audio.MusicManager;
@@ -306,6 +307,17 @@ public class GameLoop {
                     Runtime rt = Runtime.getRuntime();
                     GLog.toFile("WATCHDOG: update step stuck %d ms, mem used %dM/%dM - dumping all stacks",
                         stuckMs, (rt.totalMemory() - rt.freeMemory()) >> 20, rt.totalMemory() >> 20);
+                    try {
+                        java.util.Map<String, Integer> hist = Actor.classHistogram();
+                        String top = hist.entrySet().stream()
+                            .sorted(java.util.Map.Entry.<String, Integer>comparingByValue().reversed())
+                            .limit(8)
+                            .map(e -> e.getKey() + " x" + e.getValue())
+                            .collect(java.util.stream.Collectors.joining(", "));
+                        GLog.toFile("WATCHDOG: %d actors; top: %s", Actor.count(), top);
+                    } catch (Throwable t) {
+                        GLog.toFile("WATCHDOG: histogram failed: %s", t);
+                    }
                     Thread.getAllStackTraces().forEach((thread, st) -> {
                         if (st.length == 0) {
                             return;
