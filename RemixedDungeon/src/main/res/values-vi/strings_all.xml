@@ -247,6 +247,7 @@
     <string name="Codex_Story_10">Glyph Entangle - Anh hùng có thể nhận được giáp thảo mộc, nhưng đồng thời cũng có thể bị rễ cây trói chân.</string>
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
     <string name="Codex_Story_17">Vũ khí gây choáng - Khi đánh trúng, có thể khiến mục tiêu bị tê liệt.</string>
+    <string name="Codex_Story_19">Vũ khí đính độc - Khi tấn công trúng mục tiêu, có thể gây độc.</string>
     <string name="Codex_Story_22">Cuốn sách này được viết bằng ngôn ngữ quỷ</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
     <string name="Codex_Story_9">Glyph Dịch Chuyển - Mỗi khi Anh Hùng trúng đòn, có khả năng Anh Hùng sẽ được dịch chuyển đến một ô ngẫu nhiên trong tầm nhìn. Glyph này không hoạt động ở các cấp độ Trùm.</string>
@@ -408,6 +409,7 @@
     <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Trái tim đen nhịp đập của Thần Gian Dối.</string>
     <string name="HeartOfDarkness_Name">Trái tim của bóng tối</string>
+    <string name="Hedgehog_Info1">Cậu có đang tìm chú Gấu không?</string>
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
     <string name="HeroClass_Doctor">Bác Sĩ Dịch Hạch</string>
     <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
@@ -472,6 +474,7 @@
     <string name="IceCaves_TileGrass">Cỏ đóng băng.</string>
     <string name="IceCaves_TileHighGrass">Cỏ cao đóng băng</string>
     <string name="IceElemental_Gender">masculine</string>
+    <string name="IceElemental_Name_Objective">nguyên tố băng</string>
     <string name="IceGuardianCoreModule_Info">Đây là một cấu trúc phức tạp được làm từ băng ma thuật. Một viên đá phát sáng được đặt bên trong phát minh kỳ diệu này.</string>
     <string name="IceGuardianCore_DieInfo">Ở đây quá lạnh, tôi nên quay lại cấp 14 và cố gắng tìm đường đến nơi ấm áp hơn.</string>
     <string name="IceGuardianCore_Gender">masculine</string>
@@ -1198,6 +1201,7 @@
     <string name="town_deco_barrel_desc">Một chiếc thùng gỗ bình thường, cũng không còn ở tình trạng tốt nữa.</string>
     <string name="town_deco_barrel_wine_desc">Được dùng để chứa một thức uống quý giá như rượu vang.</string>
     <string name="town_deco_barrel_wine_name">Thùng rượu</string>
+    <string name="town_deco_bell_desc">Một cái chuông giáo đường điển hình. Trông nó như đã không ai rung chuông này được khá lâu rồi, thậm chí dây treo cũng đã mất.</string>
     <string name="town_deco_blue_carpet_name">thảm</string>
     <string name="town_deco_broken_roof_desc">Các viên ngói trên mái nhà này bị nứt và cần được thay thế.</string>
     <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
@@ -1241,6 +1245,7 @@
     <string name="town_deco_poster_name">Áp phích</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
     <string name="town_deco_potions_name">Thuốc</string>
+    <string name="town_deco_projector_desc">Một thiết bị cũ để chiếu phim và giải trí mọi người.</string>
     <string name="town_deco_projector_name">Máy chiếu phim</string>
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
     <string name="town_deco_red_carpet_name">Thảm đỏ</string>
@@ -1275,6 +1280,11 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
 
 
 

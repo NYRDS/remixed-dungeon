@@ -533,6 +533,7 @@
     <string name="LastShopLevel_TileDescExit">Een helling leidt naar beneden in de hel.</string>
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
     <string name="Leech_Name_2">Vampier %s</string>
+    <string name="Level_TileAlchemy">Alchemiepot</string>
     <string name="Level_TileBarricade">Barricade</string>
     <string name="Level_TileDescAlchemy">Laat hier wat zaden vallen om een drank te brouwen.</string>
     <string name="Level_TileDescBarricade">De houten barricade zit stevig, maar is over de jaren uitgedroogd. Zal hij branden?</string>
@@ -630,6 +631,7 @@
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="NecromancerNPC_Message3">Ik hoor de roep van de doden.</string>
+    <string name="NecromancerNPC_Message4">Er is iets bijzonders verstopt in de Necropolis.</string>
     <string name="NecromancerNPC_Name">nekromant</string>
     <string name="NecromancerRobe_Info">Dit gewaad stelt de Nekromant in staat om een Doodsling op te roepen ten koste van 5 zielen. De Doodsling is een ondode dienaar die sterker wordt samen met zijn meester.</string>
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
@@ -702,6 +704,7 @@
     <string name="Possess_PossessionFailed">Wil van %s is te sterk</string>
     <string name="PotionBelt_Info">Deze sterke leren riem kan al je drankjes bevatten en beschermt ze tegen het breken door vorst.</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
+    <string name="PotionOfInvisibility_Apply">Je ziet je handen onzichtbaar worden!</string>
     <string name="PotionOfInvisibility_Info">Als je deze drank opdrinkt, wordt je tijdelijk onzichtbaar. Terwijl je onzichtbaar bent, kunnen vijanden je niet zien. Een vijand aanvallen, evenals een toverstaf of een rol voor de ogen van een vijand gebruiken, doet het effect verdwijnen.</string>
     <string name="PotionOfLiquidFlame_Info">Deze fles bevat een onstabiel mengsel dat heftig in vlammen opgaat bij contact met de open lucht.</string>
     <string name="PotionOfLiquidFlame_Name">Drankje van Vloeibare Vlam</string>
@@ -711,10 +714,12 @@
     <string name="PotionOfMight_Name">Drankje van Kracht</string>
     <string name="PotionOfMindVision_Apply1">Je kunt op een of andere manier de aanwezigheid van andere wezens\' geesten voelen!</string>
     <string name="PotionOfMindVision_Apply2">Je kunt op de een of andere manier voelen dat je op dit moment alleen bent op dit level.</string>
+    <string name="PotionOfMindVision_Name">Drank van Geestesblik</string>
     <string name="PotionOfParalyticGas_Info">Bij blootstelling aan open lucht verdampt de vloeistof in deze fles tot een benauwende gele nevel. Wie de wolk inademt, wordt onmiddellijk ge paralyseerd, en kan een tijdje niet bewegen nadat de wolk is verdampt. Dit item kan op verafstaande vijanden worden gegooid om hen in het effect van de gas te betrekken.</string>
     <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
     <string name="PotionOfPurity_Name">Zuiveringselixer</string>
     <string name="PotionOfToxicGas_Info">Het ontdopen of verbrijzelen van deze onder druk staande glasfles zal de inhoud laten exploderen tot een dodelijke wolk van giftige groene gas. Je kunt ervoor kiezen om deze drank op verafstaande vijanden te werpen in plaats van hem met de hand te openen.</string>
+    <string name="Potion_Colors_0">turkoois</string>
     <string name="Potion_Colors_1">karmozijn</string>
     <string name="Potion_Colors_14">onyx</string>
     <string name="Potion_Colors_3">jade</string>
@@ -1320,6 +1325,11 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
 
 
 
