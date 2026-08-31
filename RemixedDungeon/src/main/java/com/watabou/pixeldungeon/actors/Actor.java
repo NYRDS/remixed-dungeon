@@ -256,9 +256,14 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
     // *** Static members ***
 
     private static final HashSet<Actor> all = new HashSet<>();
+    private static int lastLoggedActorCount = -1;
 
     // caveman: watchdog diagnostics - name actor explosions before they wedge
     // the turn loop (nextActor sorts `all` on every actor turn).
+    public static boolean inQueue(Actor actor) {
+        return actor != null && all.contains(actor);
+    }
+
     public static int count() {
         return all.size();
     }
@@ -411,8 +416,19 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         }
 
 
-        GLog.debug("Main loop start - %d actors", all.size());
-        GLog.toFile("Main loop start - %d actors", all.size()); // caveman: file copy - the turn-loop wedge discriminator
+        // caveman: the hero must be in the actor queue for this loop to ever
+        // terminate (it exits at the hero's turn). heroless - chess loss ->
+        // slot restore once raced world time 400k+ ticks: CPU pinned, log
+        // flooded, UI frozen. park the world until the hero is re-queued.
+        if (!inQueue(hero)) {
+            return;
+        }
+
+        if (lastLoggedActorCount != all.size()) {
+            lastLoggedActorCount = all.size();
+            GLog.debug("Main loop start - %d actors", all.size());
+            GLog.toFile("Main loop start - %d actors", all.size());
+        }
         while ((current = nextActor()) != null) {
             now = current.time;
 
