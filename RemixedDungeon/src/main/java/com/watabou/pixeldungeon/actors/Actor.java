@@ -263,6 +263,23 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
         return all.size();
     }
 
+    // caveman: why is the turn loop spinning? min actor vs hero presence.
+    public static String queueState() {
+        Actor min = null;
+        for (Actor a : all) {
+            if (min == null || a.time < min.time) {
+                min = a;
+            }
+        }
+        Hero hero = Dungeon.hero;
+        boolean heroIn = hero != null && all.contains(hero);
+        return "min=" + (min == null ? "null" : min.getClass().getSimpleName() + "@"
+            + min.time + " alive=" + (min instanceof Char ? ((Char) min).isAlive() : "?"))
+            + " heroIn=" + heroIn
+            + " heroTime=" + (hero != null ? hero.time : -1f)
+            + " heroAlive=" + (hero != null && hero.isAlive());
+    }
+
     public static java.util.Map<String, Integer> classHistogram() {
         java.util.Map<String, Integer> hist = new java.util.HashMap<>();
         for (Actor a : all) {

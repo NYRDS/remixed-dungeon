@@ -315,6 +315,7 @@ public class GameLoop {
                             .map(e -> e.getKey() + " x" + e.getValue())
                             .collect(java.util.stream.Collectors.joining(", "));
                         GLog.toFile("WATCHDOG: %d actors; top: %s", Actor.count(), top);
+                        GLog.toFile("WATCHDOG: %s", Actor.queueState());
                     } catch (Throwable t) {
                         GLog.toFile("WATCHDOG: histogram failed: %s", t);
                     }
