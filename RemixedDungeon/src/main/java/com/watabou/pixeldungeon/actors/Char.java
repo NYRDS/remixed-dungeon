@@ -1390,6 +1390,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return fraction;
     }
 
+    // caveman: lua-safe neutral check. `self:fraction()` from scripts resolves
+    // the public FIELD (userdata) before the method, and calling it crashes
+    // with "attempt to call a userdata value" (NeutralKing damage handler).
+    public boolean isNeutral() {
+        return fraction == Fraction.NEUTRAL;
+    }
+
     public int getOwnerId() {
         if (owner < 0) {
             setOwnerId(getId());
