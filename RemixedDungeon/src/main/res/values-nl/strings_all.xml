@@ -71,6 +71,7 @@
     <string name="Badges_BossSlain1">De Goo is gedood</string>
     <string name="Badges_Champion">Uitdaging gewonnen</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
+    <string name="Badges_DeathGlyph">Dood door een glyph</string>
     <string name="Badges_DeathPoison">Dood door vergiftiging</string>
     <string name="Badges_GamesPlayed1">10 spellen gespeeld</string>
     <string name="Badges_GamesPlayed2">100 spellen gespeeld</string>
@@ -547,6 +548,7 @@
     <string name="Kusarigama_Pull">TREKKEN</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">larve van de god</string>
+    <string name="LastLevel_TileDescWater">Het lijkt op lava, maar het is koud en waarschijnlijk veilig om aan te raken.</string>
     <string name="LastLevel_TileStatue">Pilaar</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
     <string name="LastShopLevel_TileDescExit">Een helling leidt naar beneden in de hel.</string>
@@ -704,6 +706,7 @@
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze gebukte persoon is verborgen onder een leer overall. Van hem komt een bittere geur van medicijnen en... knoflook?</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">pestarts</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">Breng me %d rattenhuiden.</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, je bent terug! _Vijf dode ratten_, perfect! Hun huiden zullen cruciaal zijn voor mijn onderzoek. En zoals beloofd, voor je dappere inspanning heb ik dit harnas voor je gemaakt van hun eigen vellen. Het is doordrenkt met een vleugje van de pest, maar maak je geen zorgen! Het is gecontroleerd, het beschermt! Ga nu! Bescherm de stad!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… prachtig! De _slakken_, hun geheimen langzaam ontvouwend als bloemblaadjes in het maanlicht. Een schat aan informatie! Maar je hebt gelijk, _vijftig goud_ is nauwelijks een passende beloning. *Gikkelt maniakaal*.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
@@ -772,6 +775,7 @@
     <string name="RabbitEars_Name">Konijnenoren</string>
     <string name="RaiseDead_Name">Dood opwekken</string>
     <string name="RankingsScene_Total">Totaal gespeelde spellen: </string>
+    <string name="RatArmor_Info">Een leren pantser gemaakt van rattenhuid. Het is waarschijnlijk niet besmettelijk...</string>
     <string name="RatArmor_Name">ratten pantser</string>
     <string name="RatHide_Name">rattenhuid</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
@@ -1127,6 +1131,7 @@
     <string name="Weightstone_WndCancel">Laat maar</string>
     <string name="Weightstone_WndChoice">Hoe wil je je %s balanceren?</string>
     <string name="Weightstone_WndSpeed">Voor snelheid</string>
+    <string name="Welcome_Title">Welkom!</string>
     <string name="WndBag_BuySubtitle">(Je hebt %dg)</string>
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
     <string name="WndCatalogus_Title">Catalogi</string>
@@ -1344,6 +1349,7 @@
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
     <string name="town_deco_skullboard_name">trofeerek</string>
+    <string name="town_deco_snowy_plate_name">besneeuwde plaat</string>
     <string name="town_deco_statue_blood_desc">Een majestueuze standbeeld van een engel die een kom bloed vasthoudt.</string>
     <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
     <string name="town_deco_stones_name">Stenen</string>
@@ -1370,6 +1376,12 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
 
 
 

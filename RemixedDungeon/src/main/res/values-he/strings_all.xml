@@ -62,6 +62,7 @@
     <string name="Badges_BossSlain2">טנגו הובס</string>
     <string name="Badges_BossSlain3">DM-300 הובס</string>
     <string name="Badges_BossSlain3All">DM-300 נהרג על ידי כל תת-המקצועות</string>
+    <string name="Badges_BossSlain4">המלך הובס</string>
     <string name="Badges_DeathFire">מוות מאש</string>
     <string name="Badges_DeathGlyph">מוות מגליף</string>
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
@@ -677,6 +678,7 @@
     <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">אשפת עור המתאימה להחזיק כל כמות של חיצים</string>
+    <string name="RaiseDead_Info">ניסיון להחיות את היצור האחרון שנהרג (הטקס דורש חומר טרי למדי). בעת שימוש באמנות האפלה הזו, זכור: כמעט כל יצור יכול לקום לתחייה, אך לא תמיד קל לכופף את רצונו.</string>
     <string name="RankingsScene_NoInfo">אין מידע נוסף</string>
     <string name="RatArmor_Name">שריון חולדות</string>
     <string name="RatHide_Name">עור חולדה</string>
@@ -1473,6 +1475,8 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
 
 
 

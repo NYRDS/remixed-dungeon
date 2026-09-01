@@ -206,6 +206,7 @@
     <string name="ChaosStaff_Info">عصا مشبعة بقوة الفوضى! بماذا يمكن أن يحلم ساحر آخر أو يخشاه؟</string>
     <string name="ChaosStaff_Name">عصا الفوضى</string>
     <string name="ChaosSword_Gender">masculine</string>
+    <string name="ChaosSword_Info">نصل هذا السيف مصنوع من الفوضى الخالصة، وأحياناً يرتجف قليلاً. القوى العظيمة المخزنة داخل هذا السلاح يمكنها أن تشق إلى نصفين أي شيء تقريباً. ومع ذلك، فإن المهارات العظيمة مطلوبة للتعامل مع القوة الهائلة لهذا السلاح.</string>
     <string name="CharAction_Give">إعطاء</string>
     <string name="CharAction_PetInventory">مخزن الحيوان الأليف</string>
     <string name="CharAction_Steal">سرقة</string>
@@ -411,6 +412,7 @@
     <string name="HeroClass_NecromancerPerks_2">يبدأ النكرومانسر برداء نكرومانسر فريد، يمنح نقطة مانا واحدة لكل مخلوق يُقتل.</string>
     <string name="HeroClass_NecromancerPerks_3">يبدأ النيكرومانسر بمفتاح هيكل عظمي من المستوى 7.</string>
     <string name="HeroClass_None">رجل عامي</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">يتم التعرف على جرعات [yellow:غاز الشلل] و[yellow:الغاز السام] منذ البداية.</string>
     <string name="HeroClass_Priest">كاهن</string>
     <string name="HeroClass_Rog">لص</string>
     <string name="HeroClass_RogPerks_5">تتم معرفة لفائف رسم الخرائط السحرية من البداية.</string>
@@ -1164,6 +1166,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

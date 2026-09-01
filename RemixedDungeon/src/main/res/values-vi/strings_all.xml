@@ -151,6 +151,7 @@
     <string name="BurningBuff_Name">Đang cháy</string>
     <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name_Objective">cú đấm bùng cháy</string>
+    <string name="Burning_Burns">%s bốc cháy!</string>
     <string name="CagedKobold_Desc">Một kobold, trong một lồng.</string>
     <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">Ê... Ê! Cậu là phiêu lưu gia kia, đúng không? Giúp tớ một chút, bạn ơi, bọn quân phiệt đã giam tớ ở đây! Chúng định kích hoạt lại một vũ khí cổ xưa để chinh phục những con người trên mặt đất! Nhưng vì quá nguy hiểm, tớ đã phản đối, mà chúng ném tớ ra ngoài và giam trong lồng! Tớ xin nhờ cậu tìm chìa khóa cái buồng này, và như hồi báo, tớ sẽ giúp cậu hết sức có thể.</string>
@@ -196,6 +197,7 @@
     <string name="ChaosCrystal_BladeFused">Vien ngoc hap thu vu khi cua ban va bien thanh hinh dang mot thanh kiem</string>
     <string name="ChaosCrystal_Fuse">DUNG HỢP</string>
     <string name="ChaosCrystal_Name_2">Viên Ngọc Hỗn Mang</string>
+    <string name="ChaosCrystal_StaffFused">Viên ngọc hấp thụ cây đũa phép của bạn và biến thành hình dạng một Cây Gậy</string>
     <string name="ChaosCrystal_SwordFused">Kính hấp thụ vũ khí của bạn và biến thành một Chiếc Kiếm</string>
     <string name="ChaosCrystal_Use">DÙNG</string>
     <string name="ChaosHelmet_Info">Một chiếc mũ đỏ màu máu là biểu tượng thiết yếu của một chiến binh hỗn loạn.</string>
@@ -613,6 +615,7 @@
     <string name="MeleeWeapon_Info1d">yếu</string>
     <string name="MeleeWeapon_Info2a">Sát thương trung bình là %d điểm mỗi lần đánh.</string>
     <string name="MeleeWeapon_Info3a">Đây là một vũ khí khá %s.</string>
+    <string name="MeleeWeapon_Info3c">chậm</string>
     <string name="MeleeWeapon_Info3d">và</string>
     <string name="MeleeWeapon_Info3g">kém chính xác</string>
     <string name="MeleeWeapon_Info6b">Do sức mạnh dư thừa, sát thương tấn công của bạn với %s này được tăng lên.</string>
@@ -681,6 +684,7 @@
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisBuff_Name">Bị tê liệt</string>
     <string name="Paralysis_Name_0">%s choáng váng</string>
+    <string name="PetInventory_GaveItem">Đã cho %1$s cho %2$s</string>
     <string name="PetInventory_GiveToPet">Cho thú cưng</string>
     <string name="PetInventory_PetBackpackFull">Ba lô của thú cưng đã đầy</string>
     <string name="PetInventory_TakeFromPet">Lấy từ thú cưng</string>
@@ -991,6 +995,7 @@
     <string name="Swing_Name_1">%s hoang dã</string>
     <string name="Swing_Name_2">Hoang dã %s</string>
     <string name="Sword_Gender">masculine</string>
+    <string name="Sword_Info">Lưỡi kiếm thép sắc như dao cạo tỏa sáng một cách đáng tin cậy.</string>
     <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Mặc dù rìu ném này không quá nặng, nhưng vẫn cần sức mạnh đáng kể để sử dụng hiệu quả.</string>
     <string name="Tamahawk_Name">rìu tomahawk</string>
@@ -1324,6 +1329,12 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
 
 
 
