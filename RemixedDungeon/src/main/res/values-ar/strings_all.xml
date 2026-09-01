@@ -108,6 +108,7 @@
     <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">رأس هذه الفأس الحربية الفولاذي الضخم يمنح قوة كبيرة لكل ضربة.</string>
     <string name="Bee_Gender">masculine</string>
+    <string name="BellaNPC_Angry">كيف تجرؤ... أنت دهماء!</string>
     <string name="BellaNPC_Desc">فتاة تبدو راقية جداً. مظهرها بالكامل يخبرك \&quot;أنا جيدة جداً للجميع.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">أنا لا أهتم بعامة الناس مثلك!</string>
@@ -398,6 +399,7 @@
     <string name="HeartOfDarkness_Name">قلب الظلام</string>
     <string name="Hedgehog_Desc">يبدو أن هذا القنفذ متوتر.</string>
     <string name="HeroClass_Elf">الجان</string>
+    <string name="HeroClass_ElfPerks_2">يبدأ الجني بعبادة خشبية محسنة وحزمة من الأسهم.</string>
     <string name="HeroClass_ElfPerks_5">الجان أقل مهارة في استخدام أسلحة القتال القريب.</string>
     <string name="HeroClass_GnollPerks_2">يبدأ الغنول بدون أي درع ولكن مع فأس حربية فريدة</string>
     <string name="HeroClass_GnollPerks_3">لا يستطيع الغنول القراءة أو الكتابة.</string>
@@ -550,6 +552,7 @@
     <string name="MeleeWeapon_Info2a">متوسط ضرره %d نقطة لكل ضربة.</string>
     <string name="MeleeWeapon_Info2b">متوسط ضرره المعتاد هو %1$d نقطة لكل ضربة وعادة ما يتطلب %2$d نقطة قوة.</string>
     <string name="MeleeWeapon_Info2c">هذا السلاح ربما ثقيل جداً عليك.</string>
+    <string name="MeleeWeapon_Info3b">سريع</string>
     <string name="MeleeWeapon_Info3d">و</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
     <string name="MeleeWeapon_Info6b">بسبب قوتك الزائدة، تم زيادة ضرر هجومك بهذا %s.</string>
@@ -580,6 +583,7 @@
     <string name="Mods_RestartRequired">مطلوب إعادة تشغيل</string>
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">راهب قزم</string>
+    <string name="Mushroom_Eat_Message">هذا الفطر طعمه غريب!</string>
     <string name="MysteryMeat_Info2">لا تستطيع أن تشعر بساقيك!</string>
     <string name="MysteryMeat_Message">كان طعم ذلك الطعام... غريباً.</string>
     <string name="NatureArmorSpell_Name">درع الطبيعة</string>
@@ -610,6 +614,7 @@
     <string name="PetInventory_ACTakeFromPet">خذ من الحيوان الأليف</string>
     <string name="PetInventory_GiveN">أعط %d</string>
     <string name="PetInventory_PetBackpackFull">حقيبة الحيوان الأليف ممتلئة</string>
+    <string name="PetInventory_TakeFromPet">خذ من الحيوان الأليف</string>
     <string name="PetInventory_TakeN">خذ %d</string>
     <string name="PetInventory_Title">مخزن الحيوانات الأليفة</string>
     <string name="Pickaxe_ACMine">تعدين</string>
@@ -800,6 +805,7 @@
     <string name="Shaman_Name_Objective">شامان جنول</string>
     <string name="Sheep_Desc">هذه خروف سحري. ما الذي يجعله سحرياً؟ لا يمكنك قتله. سيبقى في مكانه حتى يختفي سحرياً، بينما يمضغ الطعام بنظرة خالية.</string>
     <string name="Sheep_Gender">feminine</string>
+    <string name="ShieldBuffReady_Info">درعك جاهز لمنع الهجوم القادم.</string>
     <string name="ShieldWeaponInfo">عند استخدامه كسلاح، سيُلحق هذا الدرع ضررًا بمعدل %1$d في المتوسط.</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">الغريم المحمي بالدرع</string>
@@ -1150,6 +1156,7 @@
     <string name="town_deco_trapdoor_desc">إلى أين قد يؤدي هذا؟</string>
     <string name="town_deco_vat_name">حوض</string>
     <string name="town_deco_wall_brazier_name">مجمرة</string>
+    <string name="town_deco_wall_desc">جدار بسيط مصنوع من جذوع الخشب.</string>
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
     <string name="town_deco_window_name">نافذة</string>
     <string name="town_deco_wooden_bench_desc">مقعد، مصنوع من الخشب، يبدو غير مريح للجلوس.</string>
@@ -1157,6 +1164,13 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
+
+
+
 
 
 

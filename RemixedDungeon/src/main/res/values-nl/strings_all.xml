@@ -119,6 +119,7 @@
     <string name="BattleAxe_Info">Het enorme staande hoofd van deze strijdbijl geeft een aanzienlijk gewicht achter elke slag.</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
     <string name="Bee_Gender">masculine</string>
+    <string name="BellaNPC_Angry">Hoe durf je... je plebejer!</string>
     <string name="BellaNPC_Desc">Een heel posh meisje. Haar hele uiterlijk zegt je: \&quot;Ik ben te goed voor iedereen.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Ik heb geen interesse in plebejers zoals jij!</string>
@@ -127,6 +128,7 @@
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="Bishop_no_money">Je kunt er niet voor betalen.</string>
+    <string name="Bishop_remove_curse">Vervloeking verwijderen - %d g</string>
     <string name="Bishop_text">Dag en nacht bid ik voor u, mijn kind.</string>
 
     <string name="BlackCat_Desc">Dit is een zwarte kat</string>
@@ -425,6 +427,7 @@
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
     <string name="HeroClass_Doctor">Pestdokter</string>
     <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
+    <string name="HeroClass_ElfPerks_2">Elven beginnen met een verbeterde houten boog en een hoop pijlen.</string>
     <string name="HeroClass_ElfPerks_5">Elfen zijn minder bedreven met naiwapens.</string>
     <string name="HeroClass_GnollPerks_2">Gnollen beginnen zonder enige pantser maar met een unieke tomahawk</string>
     <string name="HeroClass_GnollPerks_3">Gnollen kunnen niet lezen of schrijven.</string>
@@ -552,6 +555,7 @@
     <string name="Leech_Name_2">Vampier %s</string>
     <string name="Level_TileAlchemy">Alchemiepot</string>
     <string name="Level_TileBarricade">Barricade</string>
+    <string name="Level_TileDefault">\???</string>
     <string name="Level_TileDescAlchemy">Laat hier wat zaden vallen om een drank te brouwen.</string>
     <string name="Level_TileDescBarricade">De houten barricade zit stevig, maar is over de jaren uitgedroogd. Zal hij branden?</string>
     <string name="Level_TileDescChasm">Je kunt de bodem niet zien.</string>
@@ -639,6 +643,7 @@
     <string name="Monk_Name_Objective">dwerg monnik</string>
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
+    <string name="Mushroom_Eat_Message">Die paddenstoel smaakt raar!</string>
     <string name="MysteryMeat_Info">Eet op eigen risico!</string>
     <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
 
@@ -1092,6 +1097,7 @@
     <string name="WandOfSlowness_Name">Toverstaf van Vertraging</string>
     <string name="WandOfTeleportation_Info2">er is niets gebeurd</string>
     <string name="Wand_ACZap">ZAP</string>
+    <string name="Wand_Name">%s toverstaf</string>
     <string name="Wand_Prompt">Kies een richting om te zappen</string>
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
     <string name="Wand_Wood_Types_0">hulst</string>
@@ -1364,6 +1370,12 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
 
 
 

@@ -424,6 +424,7 @@
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
     <string name="HeroClass_Doctor">Bác Sĩ Dịch Hạch</string>
     <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
+    <string name="HeroClass_ElfPerks_2">Tiên nữ bắt đầu với một cây cung gỗ được nâng cấp và một lứa tên.</string>
     <string name="HeroClass_ElfPerks_5">Yếu tinh kém thành thạo hơn với vũ khí cận chiến.</string>
     <string name="HeroClass_GnollPerks_1">Gnoll bắt đầu với 5 điểm sức khỏe</string>
     <string name="HeroClass_GnollPerks_2">Gnoll bắt đầu không có giáp nào nhưng có một cái rìu tomahawk độc nhất</string>
@@ -644,6 +645,7 @@
     <string name="Monk_Name">tu sĩ lùn</string>
     <string name="Monk_Name_Objective">tu sĩ lùn</string>
     <string name="Moongrace_Desc">Những loài cây này mọc ít ỏi và được biết đến như một nguồn phép thuật tự nhiên.</string>
+    <string name="Mushroom_Eat_Message">Cái nấm này có vị kỳ lạ!</string>
     <string name="MysteryMeat_Info2">Ngươi không cảm thấy chân mình nữa!</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
     <string name="MysteryMeat_Message">Món ăn này có vị... lạ.</string>
@@ -872,6 +874,7 @@
     <string name="SeedPouch_Name">túi hạt giống</string>
     <string name="Senior_Gender">masculine</string>
     <string name="ServantNPC_Gender">feminine</string>
+    <string name="ServantNPC_Name">nhân viên khách sạn</string>
     <string name="ServantNPC_Name_Objective">nhân viên khách sạn</string>
     <string name="ServiceManNPC_Desc">Một công nhân thông thường của các cơ sở địa phương.</string>
     <string name="ServiceManNPC_Gender">masculine</string>
@@ -893,9 +896,11 @@
     <string name="Sheep_Gender">feminine</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
     <string name="ShieldStrTemplate">Người đeo khiên cần có ít nhất %1$d điểm Sức mạnh để sử dụng nó đúng cách.</string>
+    <string name="Shielded_Desc">Quái vật lớn nhất, mạnh nhất và kiên cường nhất trong số tất cả các gnoll. Khi bị thương nặng, chúng sẽ điên cuồng, gây thiệt hại lớn hơn cho kẻ thù. Quái vật này đang khiêng một khiên khổng lồ!</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">côn đồ khiên thủ</string>
     <string name="Shopkeeper_BuyPrompt">Để tôi xem hàng hóa của bạn</string>
+    <string name="Shopkeeper_Desc">Người đàn ông này trông giống như một thương nhân ở khu thương mại thành phố lớn hơn là ở hang động. Giá cả của anh ấy giải thích vì sao anh ấy thích làm ăn ở đây.</string>
     <string name="Shopkeeper_Name">Người bán hàng</string>
     <string name="ShortSword_ACReforge">ĐÁNH LẠI</string>
     <string name="ShortSword_Gender">masculine</string>
@@ -1319,6 +1324,11 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
 
 
 
