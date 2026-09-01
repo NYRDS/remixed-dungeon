@@ -345,7 +345,6 @@ local aiResult = nil        -- caveman: result from the coroutine when it finish
 local kingInCheckCell = nil -- caveman: king cell if in check, nil otherwise.
 local checkFlashTimer = 0  -- caveman: flash timer for king-in-check visual.
 local aiMoveAt = 0
-local hbCount = 0 -- caveman: onStep heartbeat counter
 local allowedMoves = {}
 local halfmoveClock = 0 -- caveman: plies since last pawn move / capture (50-move rule; 100 = draw)
 
@@ -508,13 +507,6 @@ return actor.init({
     end,
 
     onStep = function()
-        -- caveman: heartbeat - chess state every ~120 ticks, names a wedge
-        hbCount = hbCount + 1
-        if hbCount % 120 == 0 then
-            RPD.glog("chess:hb gi=%s ai=%s sched=%d pieces=%d",
-                tostring(gameInProgress), tostring(aiCoroutine ~= nil),
-                #scheduledMoves, #pieces)
-        end
         -- caveman: re-tint every frame. tint() is idempotent (sets absolute values),
         -- and resize recreates sprites — so per-frame tinting recovers from resize
         -- within one frame. registry lookups only, negligible cost.

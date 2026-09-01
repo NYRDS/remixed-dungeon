@@ -155,20 +155,24 @@ public class SaveUtils {
 		FileHandle[] files = base.list();
 
 		// caveman: snap-brm followup - the new-game purge failed silently once
-		// (stale chess level board resurrected into a fresh game). make it loud.
-		GLog.toFile("deleteLevels: base=%s files=%d class=%s",
-			base.file().getAbsolutePath(), files.length, cl.tag());
+		// (stale chess level board resurrected into a fresh game). log a summary
+		// + failures only - per-file lines spammed users' device logs.
+		int deleted = 0;
+		java.util.List<String> failures = new java.util.ArrayList<>();
 
 		for (FileHandle file : files) {
 			String path = file.path();
 			if (path.endsWith(".dat") && hasClassTag(cl, path)) {
-				if (!file.delete()) {
-					GLog.toFile("deleteLevels: FAILED to delete %s", path);
+				if (file.delete()) {
+					deleted++;
 				} else {
-					GLog.toFile("deleteLevels: deleted %s", path);
+					failures.add(path);
 				}
 			}
 		}
+
+		GLog.toFile("deleteLevels: purged %d files for %s%s",
+			deleted, cl.tag(), failures.isEmpty() ? "" : " FAILED: " + String.join(", ", failures));
 	}
 
 	public static void deleteGameFile(HeroClass cl) {

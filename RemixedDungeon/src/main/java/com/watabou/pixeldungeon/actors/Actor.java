@@ -256,7 +256,6 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
     // *** Static members ***
 
     private static final HashSet<Actor> all = new HashSet<>();
-    private static int lastLoggedActorCount = -1;
 
     // caveman: watchdog diagnostics - name actor explosions before they wedge
     // the turn loop (nextActor sorts `all` on every actor turn).
@@ -424,11 +423,6 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
             return;
         }
 
-        if (lastLoggedActorCount != all.size()) {
-            lastLoggedActorCount = all.size();
-            GLog.debug("Main loop start - %d actors", all.size());
-            GLog.toFile("Main loop start - %d actors", all.size());
-        }
         while ((current = nextActor()) != null) {
             now = current.time;
 

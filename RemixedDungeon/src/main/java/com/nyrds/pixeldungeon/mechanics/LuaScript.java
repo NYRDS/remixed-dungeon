@@ -28,6 +28,10 @@ public class LuaScript {
     @Nullable
     private final Object   parent;
 
+    // caveman: report each wedged script+handler once - a stuck script runs
+    // its handler every tick and must not flood the device log.
+    private static final java.util.Set<String> slowScriptReported = new java.util.HashSet<>();
+
     public LuaScript(String scriptFile, @Nullable Object parent)
     {
         this.parent = parent;

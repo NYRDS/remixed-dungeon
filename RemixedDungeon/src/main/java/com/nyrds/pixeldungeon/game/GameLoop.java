@@ -291,6 +291,7 @@ public class GameLoop {
         watchdogStarted = true;
         Thread watchdog = new Thread(() -> {
             long lastDump = 0;
+            int dumps = 0; // caveman: capped - a hung game must not grow logs forever
             while (true) {
                 try {
                     Thread.sleep(5000);
@@ -302,7 +303,8 @@ public class GameLoop {
                     continue;
                 }
                 long stuckMs = System.currentTimeMillis() - started;
-                if (stuckMs > 15000 && System.currentTimeMillis() - lastDump > 30000) {
+                if (stuckMs > 15000 && dumps < 3 && System.currentTimeMillis() - lastDump > 30000) {
+                    dumps++;
                     lastDump = System.currentTimeMillis();
                     Runtime rt = Runtime.getRuntime();
                     GLog.toFile("WATCHDOG: update step stuck %d ms, mem used %dM/%dM - dumping all stacks",
