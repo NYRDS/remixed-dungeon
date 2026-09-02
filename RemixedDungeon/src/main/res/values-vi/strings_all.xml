@@ -42,6 +42,7 @@
     <string name="AmuletScene_Stay">Tôi chưa xong đâu</string>
     <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \&quot;thuyết phục\&quot; nó làm như vậy.</string>
     <string name="Amulet_Name">Bùa Yendor</string>
+    <string name="Ankh_Name">Ankh</string>
     <string name="ArmorKit_ACAplly">ÁP DỤNG</string>
     <string name="ArmorKit_Name">bộ nâng cấp giáp</string>
     <string name="ArmorKit_Upgraded">Bạn đã áp dụng bộ nâng cấp giáp để nâng cấp %s của mình</string>
@@ -147,6 +148,7 @@
     <string name="BoneSaw_Name">Cưa Xương</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Bow_Info1">Đây là vũ khí tầm xa. Nó vô dụng với mọi người trừ tinh linh ở cự ly rất gần. Trang bị cung cho phép bạn bắn tên.\n\n</string>
+    <string name="Bowknot_Info">Một dải ruy-băng hồng lấp lánh xinh xắn, được thắt thành nơ và gắn vào một chiếc kẹp tóc.</string>
     <string name="Brute_Desc">Quái nhân là những kẻ to lớn, mạnh mẽ và cứng rắn nhất trong tất cả các gnoll. Khi bị thương nặng, chúng phát cuồng và gây sát thương lớn hơn cho kẻ thù.</string>
     <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name_Objective">gnoll brute</string>
@@ -658,6 +660,7 @@
     <string name="MysteryMeat_Info2">Ngươi không cảm thấy chân mình nữa!</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
     <string name="MysteryMeat_Message">Món ăn này có vị... lạ.</string>
+    <string name="NatureArmorSpell_Name">Giáp Thiên Nhiên</string>
     <string name="NecromancerArmor_Info">Bộ giáp này cho phép Pháp sư Hắc huyết triệu hồi tối đa hai Deathling, mỗi thứ tốn 5 linh hồn. Những tôi tớ bất tử này sẽ theo chủ và tấn công kẻ thù. Deathling sẽ trở nên mạnh hơn theo cấp độ anh hùng.</string>
     <string name="NecromancerArmor_Info2">Mặc bộ giáp này cho phép pháp sư tử thi sử dụng khả năng \&quot;Necrotism\&quot;, lan truyền một dịch hạch phép thuật có thể lây nhiễm bất kỳ sinh vật nào trong khu vực, sống hoặc chết.</string>
     <string name="NecromancerArmor_Name">Áo giáp xương</string>
@@ -718,6 +721,7 @@
     <string name="PlagueDoctorNPC_Quest_End">À, cảm ơn cậu. Tôi hy vọng lần này ít nhất chúng cũng có dấu vết của bệnh tật. Những mẫu trước hoàn toàn vô hại. Vì thế tôi đã có thời gian làm món này cho cậu trong lúc chờ mẫu mới.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
+    <string name="PlagueDoctorQuest_1_2_Epilogue">Aaaa… tuyệt vời! Những _con ốc sên_, bí mật của chúng từ từ hé lộ như những cánh hoa dưới ánh trăng. Quả là một món quà thông tin dồi dào! Nhưng bạn nói đúng, _năm mươi đồng vàng_ chẳng phải là phần thưởng xứng đáng. *Cười man rợ*.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">Mười ốc sên, mười thì thầm từ vực thẳm! Chất nhầy của chúng sẽ được phân tích, bản chất của chúng sẽ được thẩm định. Những bí mật chúng chứa đựng đã gần trong tầm tay.</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">Một _Kỵ Sĩ Cửu U_! *Giọng nói nứt nẻ vì hứng thú, ngón tay xương khô run rẩy khi nắm chặt bình thuốc bủa bọt đầy hỗn hợp mờ tối, chói lòa*. Một sinh vật như vậy… một ngọn đèn hiệu của cái chết! Bắt được một con, còn sống… đó sẽ là… một kỳ quan. Hãy tưởng tượng những bí mật chúng ta có thể khai phá! Sức mạnh chảy trong những mạch xương khô đó! Đúng, một _Kỵ Sĩ Cửu U_! Nó quan trọng cho nghiên cứu của ta! Vì nó sẽ cho phép chúng ta đi sâu hơn… vào những bí ẩn của sự sống… và cái chết bản thân!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Ngón xương khô của hắn gõ nhịp nhàng vào nồi nước sôi sùng sục, không khí quanh hắn dày đặc bởi mùi hôi chua gay của lưu huỳnh và sự phân giải*\n_Kobold Pháp Sư Băng_! Những sinh vật thảm hại kia, trùm mình trong hang động đóng băng, nguội ngút chăm chăm vào phép thuật băng giá của chúng.\nTa cần năm con, xác đóng băng của chúng sẽ... soi sáng sự việc.\nSự thành thạo băng giá của chúng, nó... kỳ lạ.\nTa tin rằng chúng khai thác một năng lượng nguyên thủy, một sức mạnh ngủ quên dưới bề mặt của chính thế giới này.</string>
@@ -795,6 +799,7 @@
     <string name="ResultDescriptions_Wand">Bị giết bởi chính %1 của bạn ở tầng %2</string>
     <string name="RingOfDetection_Info">Đeo nhẫn này giúp bạn nhận ra những bí mật ẩn giấu - bẫy và cửa bí mật - mà không cần dành thời gian tìm kiếm. Nhẫn dò tìm xuống cấp sẽ làm tê liệt giác quan của bạn, khiến bạn khó nhận ra bí mật hơn ngay cả khi chủ động tìm kiếm.</string>
     <string name="RingOfDetection_Name">Nhẫn Phát Hiện</string>
+    <string name="RingOfElements_Info">Chiếc nhẫn này giúp kháng lại các nguyên tố khác nhau, chẳng hạn như lửa, điện, khí độc, v.v. Nó cũng làm giảm thời gian chịu các hiệu ứng bất lợi.</string>
     <string name="RingOfElements_Name">Nhẫn Nguyên tố</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
     <string name="RingOfHaste_Name">Nhẫn Tốc Độ</string>
@@ -1341,121 +1346,4 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

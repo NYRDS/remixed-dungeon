@@ -44,6 +44,7 @@
     <string name="AnesthesiaBuff_Info">لا يشعر بالألم ولا يستيقظ من الهجمات، لكنه لا يزال يتلقى الضرر.</string>
     <string name="Anesthesia_Cast">%s يسقط في نوم عميق بلا أحلام.</string>
     <string name="Anesthesia_Info">يُسبّب نومًا عميقًا وغير طبيعي لهدفك. حتى أعنف الهجمات لن توقظهم من هذا النوم.</string>
+    <string name="Ankh_Name">عنخ</string>
     <string name="ArmorKit_Name">مجموعة دروع</string>
     <string name="ArmorKit_Upgraded">لقد قمت بتطبيق مجموعة الدروع لترقية %s</string>
     <string name="Armor_Incompatible">تفاعل أنواع مختلفة من السحر محا الرموز السحرية على هذه الدروع!</string>
@@ -821,6 +822,7 @@
     <string name="Shielded_Name">الغريم المحمي بالدرع</string>
     <string name="Shielded_Name_Objective">الوحش المحمي</string>
     <string name="ShootInEye_Name">رمية في العين</string>
+    <string name="Shopkeeper_Sell">اختر عنصرًا لبيعه</string>
     <string name="ShortSword_ACReforge">إعادة الصياغة</string>
     <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Name">سيف قصير</string>
@@ -995,6 +997,7 @@
     <string name="WndCryptoDonate_supportDev">دعم المطور</string>
     <string name="WndCryptoDonate_ton">تون</string>
     <string name="WndCryptoDonate_tron">ترون</string>
+    <string name="WndDonate_gold">ذهب</string>
     <string name="WndDonate_goldDonateText">شكراً لمساعدتكم</string>
     <string name="WndDonate_royalDonateText2">بالإضافة إلى ذلك، ستحصل على كل قبعة من متجر التطبيق! وكذلك كل قبعة سيتم إصدارها مستقبلاً.</string>
     <string name="WndDonate_silverDonate">تبرع فضي</string>
@@ -1178,72 +1181,4 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

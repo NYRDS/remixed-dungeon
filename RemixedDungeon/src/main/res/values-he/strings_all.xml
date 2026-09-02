@@ -86,6 +86,7 @@
     <string name="Badges_StrengthAttained4">הושגו 19 נקודות כוח</string>
     <string name="Badges_ThisIsSparta">זה ספרטה!!!</string>
     <string name="Badges_VictoryAll">קמיע ינדור הושג על ידי כל הדמויות</string>
+    <string name="Badges_Yasd">מוות מאש, רעל, גז רעיל ורעב</string>
     <string name="Badges_Yog_Slain">יוג-זבה הובס</string>
     <string name="Bag_ACOpen">פתח</string>
     <string name="Bandit_Desc">המפלסים העמוקים יותר של המבוך שימשו תמיד מקום מסתור לכל מיני פושעים. לא כולם שמרו על דעת צלולה בתקופות הארוכות שבילו הרחק מאור היום. לפני זמן רב שכחו הגנבים והשודדים המשוגעים האלה מי הם ומדוע הם גונבים. נראה שהשודד הזה ציפה את פגיונו במשהו!</string>
@@ -510,6 +511,7 @@
     <string name="Level_TileEntrance">כניסה לעומק</string>
     <string name="Level_TileExit">יציאה מהעומק</string>
     <string name="Level_TileHighGrass">דשא גבוה</string>
+    <string name="Level_TileLockedDoor">דלת נעולה</string>
     <string name="Level_TileParalyticTrap">מלכודת גז משתקת</string>
     <string name="Level_TileSummoningTrap">מלכודת זימון</string>
     <string name="Level_TileWall">קיר</string>
@@ -1045,6 +1047,7 @@
     <string name="WndSettings_RecordVideo">הקלטת וידאו</string>
     <string name="WndSettings_SecondQuickslot">חריץ שני</string>
     <string name="WndSettings_SelectLanguage">בחר שפה</string>
+    <string name="WndSettings_TextScaleDefault">גופן ברירת מחדל</string>
     <string name="WndSettings_ThirdQuickslot">חריץ שלישי</string>
     <string name="WndSettings_UiScale">קנה מידה של ממשק המשתמש</string>
     <string name="WndSettings_ZoomDef">זום ברירת מחדל</string>
@@ -1088,6 +1091,7 @@
     <string name="ZombieGnoll_Info">גנול-זומבי קם מהמתים!</string>
     <string name="ZombieMask_Name">מסיכת זומבי</string>
     <string name="Zombie_Gender">masculine</string>
+    <string name="gdpr_choose">אנא בחרו</string>
     <string name="gdpr_title">התאם אישית את חוויית הפרסום שלך</string>
     <string name="town_deco_armoronhanger_name">שריון</string>
     <string name="town_deco_armorstand_leather_desc">שריון עור אמין יהיה רכישה מצוינת לפני היציאה לצינוק.</string>
@@ -1487,60 +1491,4 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

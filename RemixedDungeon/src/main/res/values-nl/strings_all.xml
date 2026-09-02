@@ -44,6 +44,7 @@
     <string name="AmuletScene_Stay">Ik ben er nog niet klaar mee</string>
     <string name="AmuletScene_Txt">Eindelijk houd je het in je handen, het Amulet van Yendor. Met zijn kracht kun je de wereld veroveren of vrede en voorspoed brengen of wat dan ook. In ieder geval zal je leven voor altijd veranderen en dit spel eindigt hier. Of je kunt nog even een gewone sterfelijke blijven.</string>
     <string name="AnesthesiaBuff_Info">Voelt geen pijn en wakert niet op bij aanvallen, maar krijgt nog steeds schade.</string>
+    <string name="Ankh_Name">Ankh</string>
     <string name="ArmorKit_Name">rustingset</string>
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
     <string name="Armor_Glyph">glyph</string>
@@ -80,6 +81,7 @@
     <string name="Badges_GoldColleted2">500 goud verzameld</string>
     <string name="Badges_GoldColleted4">7500 goud verzameld</string>
     <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
+    <string name="Badges_HappyEnd">Goede afloop</string>
     <string name="Badges_Immured">Dood door inmuring</string>
     <string name="Badges_Info1">Insigne behaald: %s</string>
     <string name="Badges_ItemLvl1">Item van niveau 3 verkregen</string>
@@ -778,6 +780,7 @@
     <string name="Quiver_Info">Leren kogelhouder geschikt voor elke hoeveelheid pijlen</string>
     <string name="RabbitEars_Info">Er bestaat een bijgeloof dat konijnen geluk geboren worden en dat iemand die een deel van het dier verkrijgt, vergezeld zal worden door het geluk van het beest. Bij nader inzien klinkt het niet echt als geluk: gedood worden om je oren, waar versieringen van gemaakt zullen worden.</string>
     <string name="RabbitEars_Name">Konijnenoren</string>
+    <string name="RaiseDead_Info">Poging om het laatst gedode wezen op te wekken (het ritueel vereist vrij vers materiaal). Bij het gebruik van deze duistere kunst, onthoud: bijna elk wezen kan worden opgewekt, maar niet ieders wil is gemakkelijk te buigen.</string>
     <string name="RaiseDead_Name">Dood opwekken</string>
     <string name="RankingsScene_Total">Totaal gespeelde spellen: </string>
     <string name="RatArmor_Info">Een leren pantser gemaakt van rattenhuid. Het is waarschijnlijk niet besmettelijk...</string>
@@ -1355,6 +1358,7 @@
     <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_rope_name">touw</string>
     <string name="town_deco_shelf_name">Planken</string>
+    <string name="town_deco_shelving_desc">Een indrukwekkend groot rek, waarvan de planken gevuld zijn met diverse dranken en versnaperingen.</string>
     <string name="town_deco_shelving_name">rekken</string>
     <string name="town_deco_shieldboard_desc">Verschillende schilden hangen op het bord. Nog niet te koop.</string>
     <string name="town_deco_shop_sign_desc">Het lijkt erop dat er een winkel in dat gebouw zit.</string>
@@ -1388,123 +1392,4 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
