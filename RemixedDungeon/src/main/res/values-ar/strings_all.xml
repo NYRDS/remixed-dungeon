@@ -221,6 +221,7 @@
     <string name="Char_OutParalysis">كسر الألم شلل %s</string>
     <string name="Char_StaBleeding">نزيف</string>
     <string name="Char_StaCrippled">معاق</string>
+    <string name="Char_StaDodged_2">تجنبت</string>
     <string name="Char_StaFrightened">مرعوب</string>
     <string name="Char_StaMind">عقل</string>
     <string name="Char_StaParalysed">مشلول</string>
@@ -352,6 +353,7 @@
     <string name="Firebloom_Name">زهرة النار</string>
     <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">عرافة</string>
+    <string name="FreezeGlobe_Info">يجمد الشخصية المحددة، مما يجعلها غير قادرة على القيام بأي إجراءات لفترة قصيرة من الزمن.</string>
     <string name="FriedFish_Name">سمك مقلي</string>
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Info">يحيط الصقيع بالجسد، مما يبطئ كل ما يقترب منه.</string>
@@ -517,6 +519,7 @@
     <string name="LastShopLevel_TileHighGrass">أزهار متفتحة عالية</string>
     <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
     <string name="Leech_Name_0">مصاص دماء %s</string>
+    <string name="Leech_Name_1">مصاص دماء %s</string>
     <string name="Leech_Name_2">مصاص دماء %s</string>
     <string name="Level_TileAlarmTrap">فخ إنذار</string>
     <string name="Level_TileBarricade">متاريس</string>
@@ -990,6 +993,7 @@
     <string name="Weightstone_Name">حجر الوزن</string>
     <string name="Weightstone_WndCancel">لا بأس</string>
     <string name="Weightstone_WndChoice">كيف تود موازنة %s الخاص بك؟</string>
+    <string name="Weightstone_WndSpeed">للسرعة</string>
     <string name="Welcome_Text_30_1">    remix.30.1\n    - طريقة اللعب:\n    -- فئات غنول الفرعية!\n    -- حلزونات!\n    -- تم تقليل سرعة ترقية عناصر الفوضى.\n    -- جرعة المانا أصبحت جرعة عادية من الآن.\n    -- الشارات أصبحت قابلة للحصول عند اللعب بـ DLC (وليس المودات).\n    - إصلاح الأخطاء</string>
     <string name="Welcome_Title">أهلاً بك!</string>
     <string name="WindGust_Name">هبة ريح</string>
@@ -1085,6 +1089,7 @@
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">قوس خشبي أساسي، يبدو أنه مصمم لإطلاق سهام القوس.</string>
+    <string name="WoodenShield_name">درع خشبي</string>
     <string name="Worm_Desc">لا يمكن معرفة حجم هذا الدودة. تبرز جزئياً من الأرض، وجسم هذا الكائن مغطى بكتل من اللحم المتعفن والخراء. فكيه العملاقان يعطيان فكرة واضحة عن كيفية تحرك ذلك الوحش عبر السطح.</string>
     <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">دودة</string>
@@ -1188,6 +1193,11 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
 
 
 

@@ -416,6 +416,7 @@
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
     <string name="Guts_TileGrass">Bụi cây khô</string>
     <string name="Halberd_Gender">feminine</string>
+    <string name="Halls_TileDescWater">Nó trông như dung nham, nhưng nó lạnh và có thể an toàn để chạm.</string>
     <string name="Halls_TileHighGrass">Nấm than hồng</string>
     <string name="Halls_TileStatue">Cột</string>
     <string name="Heal_Cast">%s đã được chữa trị.</string>
@@ -499,6 +500,7 @@
     <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
     <string name="IceCaves_TileGrass">Cỏ đóng băng.</string>
     <string name="IceCaves_TileHighGrass">Cỏ cao đóng băng</string>
+    <string name="IceElemental_Desc">Trong tất cả các nguyên tố hiện có trong hầm, nguyên tố băng khó có thể được coi là mạnh mẽ nhất, nhưng thực sự có thể được gọi là một trong những nguy hiểm nhất. Khí lạnh phát ra từ cơ thể chúng có thể làm chậm bất kỳ kẻ thù nào.</string>
     <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name_Objective">nguyên tố băng</string>
     <string name="IceGuardianCoreModule_Info">Đây là một cấu trúc phức tạp được làm từ băng ma thuật. Một viên đá phát sáng được đặt bên trong phát minh kỳ diệu này.</string>
@@ -554,6 +556,7 @@
     <string name="Knuckles_Gender">masculine</string>
     <string name="Knuckles_Name">cặp đấm</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
+    <string name="KoboldIcemancer_Killed">Bolt băng của %s đã giết bạn...</string>
     <string name="Kobold_Desc">Người ta tin rằng Kobold chỉ là truyền thuyết. Là tổ tiên của loài quỷ lùn, kobold cư ngụ trong những hang động sâu và lạnh nhất. Người ta cũng kể rằng giống loài này đã làm chủ kỹ nghệ và máy móc từ lâu trước khi người lùn làm được điều đó.</string>
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">kobold</string>
@@ -743,6 +746,7 @@
     <string name="PortalGate_Used">Ngươi chạm vào cổng và... không có gì xảy ra.</string>
     <string name="Possess_Info">Nghệ thuật đen tối của kiểm soát tâm trí cho phép người thi phép cong vẹo ý chí của hầu hết các sinh vật.</string>
     <string name="PotionBelt_Info">Chiếc đai da chắc chắn này có thể đựng tất cả bình thuốc của bạn, đồng thời bảo vệ chúng không bị vỡ do giá lạnh.</string>
+    <string name="PotionOfInvisibility_Apply">Bạn thấy đôi tay mình trở nên vô hình!</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
     <string name="PotionOfLiquidFlame_Name">Bình thuốc Ngọn Lửa Lỏng</string>
     <string name="PotionOfMana_Info">Bình thuốc này sẽ phục hồi năng lượng tinh thần của bạn.</string>
@@ -1215,6 +1219,7 @@
     <string name="WndStory_Guts">Thần Cổ bị đánh bại, vỡ vụn thành trăm mảnh nhưng chưa bị tiêu diệt hoàn toàn, đã bị phong ấn tại những tầng sâu nhất của hầm ngục. Nhưng gần đây con dấu đã bị phá vỡ, mở toang lối đi đến tổ của quỷ dữ. Những con quái vật ác mộng mà Thần Cổ tạo ra trong giấc ngủ của ngài đông đến mức chẳng còn lối thoát, chúng buộc phải hợp nhất với nhau tạo nên những đại sảnh kỳ dị này. Và khi bạn bước trên lớp thịt sống của chúng, bạn có thể cảm nhận nhịp đập trái tim của Thần Cổ vang vọng khắp nơi.</string>
 
     <string name="WndStory_Metropolis">Thành phố Lục phủ Mat người lùn từng là lớn nhất trong các thành bang của người lùn. Vào thời kỳ thịnh vượng, quân đội cơ giới của người lùn đã đẩy lùi thành công cuộc xâm lược của vị thần cổ xưa và quân đoàn quỷ của ngài. Người ta nói rằng, các chiến binh trở về đã mang theo những hạt giống của sự tàn phá, và chiến thắng đó là khởi đầu của sự chấm dứt cho vương quốc dưới đất.</string>
+    <string name="WndTilesKind_ClassicLook">Giao diện cổ điển</string>
     <string name="WndTilesKind_text">Bạn sắp bước vào một Hầm ngục bị xâm chiếm bởi ma thuật bóp méo, nhưng bây giờ bạn có thể chọn cách nhìn nó:\n Bạn có muốn dùng dạng giả 3D hiện đại hay dạng phẳng cổ điển không?\nBạn có thể thay đổi sau trong menu tùy chọn trò chơi.</string>
     <string name="WndTradeItem_Buy">Mua với %d vàng</string>
     <string name="WndTradeItem_SellAll">Bán tất cả cho %dg</string>
@@ -1351,6 +1356,13 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
 
 
 

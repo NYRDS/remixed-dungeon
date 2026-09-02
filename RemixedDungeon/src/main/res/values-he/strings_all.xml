@@ -158,6 +158,7 @@
     <string name="Carcass_Necromancy">החיית את הגופה של %s!</string>
     <string name="Carcass_Necromancy_Failed">הניסיון שלך להעלות את גופת %s נכשל!</string>
     <string name="Carcass_SelectItem">בחר פריט</string>
+    <string name="Caves_TileDescHighGrass">פטריות ענקיות חוסמות את הנוף.</string>
     <string name="Caves_TileWater">מים קרים מקפיאים.</string>
     <string name="Challenges_Descriptions_0">האוכל והמים היו רקובים זה מכבר, וגורמים לכל הרפתקן להשתגע ממחשבות על מוות מפחד ורעב. האם הדיאטה שלך תעזור לך להחזיק מעמד מספיק זמן?</string>
     <string name="Challenges_Descriptions_1">ההתקפה היא ההגנה הטובה ביותר. בעקבות תורות אלה, אתה יוצא למבוך, כשהאמונה היא השומר החזק ביותר של גופך.</string>
@@ -550,6 +551,7 @@
     <string name="MimicAmulet_Name">מימיק</string>
     <string name="MimicPie_Desc">מימיקים הם יצורים קסומים שיכולים לקבל כל צורה שירצו. זה נראה כמו מאפה גדול וטעים</string>
     <string name="MimicPie_Gender">masculine</string>
+    <string name="MimicPie_Name">מימיק</string>
     <string name="MimicPie_Name_Objective">מימיק</string>
     <string name="Mimic_Gender">masculine</string>
     <string name="MirrorImage_Gender">masculine</string>
@@ -632,6 +634,7 @@
     <string name="PlagueDoctorNPC_Name_Objective">רופא דבר</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">תביא לי %d עורות עכברוש.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">בה! אתה מאמין לזה?! הטיפשים האלה עדיין לא הבינו כמה מסוכן הביוב הזה! כאילו שומרים והרפתקנים יכולים להגן על העיר מכל דבר. הא! שום נשק לא יכול לעצור את התפשטות המחלה. אבל אני צריך הוכחות, אולי תוכל לעזור לי עם זה? תביא לי %d עורות עכברוש, כדי שאוכל לערוך כמה בדיקות נוספות.</string>
+    <string name="PlagueDoctorQuest_1_1_InProgress">הביאו לי _חמש חולדות מתות_! כל אחת שאתם מביאים מקרבת אותנו להבנת המגפה הנוראית הזו.</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">אהההה... מרהיב! ה_שבלולים_, סודותיהם נפרשים לאט כמו עלי כותרת לאור הירח. שלל מידע אכן! אבל אתה צודק, _חמישים זהב_ בקושי מהווים פרס הולם. *צוחק בביטול*.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">חפש את ה־_moongrace_, שם החשכה פוגשת את הבהוב האור הקלוש ביותר של הירח. _שני זרעים_, תמציתם, יחשפו סודות נסתרים.</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">אה, _סונגראס_! פרח עדין, עלי כותרתו מקרינים את חום השמש. אני מאמין שהמהות שלו מחזיקה את המפתח ל... אה, תשכח מהפרטים לעת עתה. מספיק לומר שזה קריטי למחקר שלי. _שני זרעי סונגראס_. הביאו אותם אלי, ואתגמל אתכם במשהו שבוודאי יועיל לכם בהרפתקאותיכם - _שיקום בריאות_, מלא בחיוניות השמש.</string>
@@ -809,6 +812,7 @@
     <string name="Skeleton_Desc">שלדים מורכבים מעצמות גופות של הרפתקנים ותושבי המבוך חסרי מזל, מונפשים על ידי זרמי קסם אפל מהמעמקים. לאחר שנפגעו מספיק, הם מתפרקים בפיצוץ של עצמות.</string>
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Name">שלד</string>
+    <string name="Skeleton_Name_Objective">שלד</string>
     <string name="SlowBuff_Name">מואט</string>
     <string name="Snail_Desc">רכיכה קטנה זו גדלה לממדים ניכרים בזכות אכילת ביוב, אך היא עדיין איטית מאוד, מה שהופך אותה ליריבה קלה.</string>
     <string name="Snail_Gender">masculine</string>
@@ -938,6 +942,7 @@
     <string name="WandOfAmok_Info1">שום דבר לא קרה</string>
     <string name="WandOfAvalanche_Info">כאשר פיצוץ של השרביט פוגע בקיר (או בכל מכשול מוצק אחר) הוא גורם למפולת אבנים, פוגע ומהלם את כל היצורים באזור הפגיעה.</string>
     <string name="WandOfAvalanche_Info1">מחצת את עצמך עם שרביט המפולת שלך...</string>
+    <string name="WandOfBlink_Name">שרביט הבזק</string>
     <string name="WandOfDisintegration_Info">מקל זה פולט אלומת אנרגיה הרסנית, החודרת את כל היצורים בדרכה. ככל שהיא פוגעת ביותר מטרות, כך היא גורמת נזק רב יותר לכל אחת מהן.</string>
     <string name="WandOfDisintegration_Name">שרביט התפוררות</string>
     <string name="WandOfFlock_Info">נפנוף קל בשרביט זה מזמן עדר של כבשים קסומות, ויוצר מכשול חסין זמני.</string>
@@ -1496,6 +1501,11 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
 
 
 
