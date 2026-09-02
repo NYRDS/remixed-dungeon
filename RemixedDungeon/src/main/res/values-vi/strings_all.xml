@@ -50,6 +50,7 @@
     <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">tượng hoạt động</string>
+    <string name="ArmoredStatue_Name_Objective">tượng hoạt động</string>
     <string name="AttackDelay_Increased">Không thể vung %s theo cách này. Những nhát chém chậm chạp, hơi thở nặng nề…</string>
     <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name_Objective">người lạ</string>
@@ -402,6 +403,7 @@
     <string name="GoldenKey_Info">Những khía trên chiếc chìa khóa vàng này rất nhỏ và tinh xảo. Có lẽ nó có thể mở ổ khóa của một chiếc rương nào đó?</string>
     <string name="GoldenKey_Name">chìa khóa vàng</string>
     <string name="GoldenStatue_Gender">feminine</string>
+    <string name="GoldenStatue_Name_Objective">bức tượng vàng</string>
     <string name="GoldenSword_Gender">masculine</string>
     <string name="Golem_Defense">đã chặn</string>
     <string name="Golem_Gender">masculine</string>
@@ -922,6 +924,7 @@
     <string name="Shuriken_Name">shuriken</string>
     <string name="SkeletonKey_Info">Cái chìa khóa này trông rất nghiêm trọng: đầu nó được đúc hình cái sọ. Có lẽ nó có thể mở được cánh cửa quan trọng nào đó.</string>
     <string name="Skeleton_Gender">masculine</string>
+    <string name="SlowBuff_Info">Cảm giác chậm chạp khiến người ta chậm hơn bình thường.</string>
     <string name="SlowBuff_Name">Làm chậm</string>
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
     <string name="Snail_Desc">Con ốc sên nhỏ này đã lớn khá nhanh nhờ ăn rác thải, nhưng nó vẫn rất chậm, khiến nó trở thành kẻ địch dễ dàng.</string>
@@ -1183,6 +1186,7 @@
     <string name="WndSadGhost_Farewell">Tạm biệt, nhà thám hiểm! Chúc may mắn!</string>
     <string name="WndSadGhost_Rat">Vâng! Con quái vật xấu xí đã bị tiêu diệt và cuối cùng tôi có thể yên nghỉ... Xin hãy nhận lấy một trong những vật phẩm này, biết đâu chúng sẽ hữu ích cho bạn trên hành trình...</string>
     <string name="WndSadGhost_Rose">Đúng rồi! Đúng rồi!!! Chính là nó! Xin hãy đưa nó cho tôi! Và bạn có thể lấy một trong những món đồ này, biết đâu chúng sẽ hữu ích cho bạn trên hành trình...</string>
+    <string name="WndSadGhost_Wepon">Vũ khí ma</string>
     <string name="WndSaveSlotSelect_Delete_No">Không</string>
     <string name="WndSaveSlotSelect_Delete_Title">Bạn có chắc chắn muốn xóa trạng thái lưu này?</string>
     <string name="WndSelectLanguage_ImproveTranslation">Vui lòng giúp cải thiện bản dịch Remixed Dungeon</string>
@@ -1337,6 +1341,10 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
 
 
 

@@ -452,6 +452,7 @@
     <string name="HeroClass_Rog">schurke</string>
     <string name="HeroClass_RogPerks_2">Schurken zijn bedreven in lichte bepantsering en ontwijken aanvallen er beter in.</string>
     <string name="HeroClass_War">krijger</string>
+    <string name="HeroClass_WarPerks_4">Krachtpotionen zijn van het begin bekend.</string>
     <string name="HeroSubClass_DescAssa">Bij het uitvoeren van een verrassingsaanval, richt de _Meuchelmoorder_ extra schade aan bij zijn doelwit.</string>
     <string name="HeroSubClass_DescFreR">De _Vrijsprinter_ kan zich bijna twee keer zo snel voortbewegen als de meeste monsters. Tijdens het rennen is de Vrijsprinter veel moeilijker te raken. Maar daarvoor moet hij onbelast en niet verhongerd zijn.</string>
     <string name="HeroSubClass_DescNone">NIET GEVONDEN</string>
@@ -872,6 +873,7 @@
     <string name="ScrollOfUpgrade_InvTitle">Kies een voorwerp om te upgraden</string>
     <string name="ScrollOfUpgrade_LooksBetter">je %s ziet er nu zeker beter uit</string>
     <string name="ScrollOfWeaponUpgrade_Info">Deze rol zal een wapen voor nabijgevecht upgraden, de kwaliteit verbeterend. In tegenstelling tot een gewone Upgrade Scroll, zal deze gespecialiseerde versie nooit een begoocheling op een wapen vernietigen. Integendeel, het kan een onbetoverde wapen een willekeurige begoocheling geven.</string>
+    <string name="Scroll_ACRead">LEZEN</string>
     <string name="Scroll_Blinded">Je kunt geen scroll lezen terwijl je verblind bent</string>
     <string name="Scroll_Info">Dit perkament is bedekt met onleesbaar schrift en draagt de titel van rune %s. Wie weet wat er gebeurt als het hardop wordt gelezen?</string>
     <string name="Scroll_Name">scrol \&quot;%s\&quot;</string>
@@ -904,6 +906,7 @@
     <string name="ShadowLord_Name_Objective">Schaduwheer</string>
     <string name="Shadow_Desc">Schaduwen dwalen geruisloos door de ruïnes van de oude gevangenis en tonen zich slechts af en toe aan avonturiers, meestal tijdens hun laatste avontuur.</string>
     <string name="Shadow_Gender">feminine</string>
+    <string name="Shadow_Name">schaduw</string>
     <string name="Shadow_Name_Objective">schaduw</string>
     <string name="ShadowsBuff_Name">samengesmoren met de schaduw</string>
     <string name="ShamanElder_Desc">Deze specifieke gnol ziet er veel ouder uit dan andere schamanen en heeft zeker een hogere status in de stam. Een vreemde aura vormt zich langzaam om hem heen, die alles wat het raakt lijkt te reflecteren.</string>
@@ -1043,6 +1046,7 @@
     <string name="Thief_Name_Objective">gekke dief</string>
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Spelen</string>
+    <string name="TomeOfKnowledge_Name">Boek van Kennis</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="Torch_ACLight">AANSTEKEN</string>
     <string name="ToughShield_desc">Dit met riemen versterkte schild oogt robuuster dan een houten exemplaar. Het kan zeker meer schade blokkeren.</string>
@@ -1384,6 +1388,10 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
 
 
 

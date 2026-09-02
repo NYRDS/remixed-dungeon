@@ -288,6 +288,7 @@
     <string name="DriedRose_Name">ורד יבש</string>
     <string name="Drink_Message">המשקה הזה היה מרענן!</string>
     <string name="DrunkardNPC_Gender">masculine</string>
+    <string name="Drunkard_Phrase_2">מי צריך מים כשיש בירה!</string>
     <string name="Drunkard_Phrase_4">זזזזזז...</string>
     <string name="Dungeon_Tips_13">אין טעם להחזיק יותר מאנק אחד בו זמנית, כי תאבדו אותם בתחיית המתים.</string>
     <string name="Dungeon_Tips_14">סכנה! מכונות כבדות עלולות לגרום לפציעה, אובדן גפיים או מוות!</string>
@@ -309,6 +310,7 @@
     <string name="EarthElemental_Name_Objective">אלמנטל אדמה</string>
     <string name="ElfArmor_Name">אדרת אלפים</string>
     <string name="ElvenBow_Gender">masculine</string>
+    <string name="ElvenBow_Info">דוגמה יוצאת דופן לאומנות אלפים. ברור שהוא יעיל ומדויק יותר מקשת עץ רגילה.</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Name">פגיון אלפים</string>
     <string name="EncumbranceBuff_Name">עול</string>
@@ -348,6 +350,7 @@
     <string name="FullFaceMask_Info">מסכת גז היא מסכה המשמשת להגנה על הלובש מפני שאיפת מזהמים באוויר וגזים רעילים. המסכה יוצרת כיסוי אטום על האף, הפה והעיניים.\n\nמסננים חסרים ממסכה זו אבל היא עדיין נראית מגניבה.</string>
     <string name="GameScene_Chasm">צעדיך מהדהדים ברחבי הצינוק.</string>
     <string name="GameScene_NightMode">היה זהיר, כי המבוך מסוכן עוד יותר בלילה!</string>
+    <string name="GameScene_Secrets">האווירה רומזת שהקומה הזו מסתירה סודות רבים.</string>
     <string name="GameScene_Welcome">ברוך בואך לרמה %d של Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">ברוך שובך לשלב %d של Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Info">חסין לכל הגזים</string>
@@ -499,6 +502,7 @@
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Leech_Name_2">ערפדי %s</string>
     <string name="Level_HiddenPlate">לוחית לחץ נסתרת נלחצת!</string>
+    <string name="Level_TileBookshelf">כוננית ספרים</string>
     <string name="Level_TileChasm">תהום</string>
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
     <string name="Level_TileDescChasm">אינך יכול לראות את התחתית.</string>
@@ -1483,6 +1487,10 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
 
 
 

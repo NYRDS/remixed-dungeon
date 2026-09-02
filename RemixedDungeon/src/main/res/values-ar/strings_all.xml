@@ -441,6 +441,7 @@
     <string name="HungerBuff_Info1">أنت جائع!</string>
     <string name="HungerBuff_Name2">يموت من الجوع</string>
     <string name="Hunger_Hungry_0">أنت جائع.</string>
+    <string name="HuntressArmor_Desc">يمكن للصياد في مثل هذا الرداء أن يخلق مروحة من الشفرات الشبحية. سيستهدف كل من هذه الشفرات عدواً واحداً في مجال رؤية الصياد، مسبباً ضرراً يعتمد على سلاحه القريب الحالي.</string>
     <string name="HuntressArmor_Name">رداء الصياد</string>
     <string name="HuntressArmor_NoEnemies">لا يوجد أعداء مرئيون</string>
     <string name="HuntressArmor_NotHuntress">يمكن للصيادات فقط استخدام هذا الدرع!</string>
@@ -582,6 +583,7 @@
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
     <string name="Mob_GoingTo">سائرة بالفعل!</string>
     <string name="Mob_ItemUse">%1$s يستخدم %2$s</string>
+    <string name="Mob_StaFleeingStatus">هذا %s يهرب</string>
     <string name="Mob_StaFleeingStatus2">هذا %1$s يهرب من %2$s</string>
     <string name="Mob_StaHuntingStatus">هذا %s يصطاد</string>
     <string name="Mob_StaSleepingStatus">هذا %s نائم</string>
@@ -635,6 +637,7 @@
     <string name="PlagueDoctorNPC_Desc">جسد هذا الشخص الحدباء بأكمله مخفي تحت بذلة جلدية. كما تفوح منه رائحة مرّة من الأدوية و... الثوم؟</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">طبيب الطاعون</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">أحضر لي %d جلود فئران.</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">آه، لقد عدت! _خمسة فئران ميتة_، ممتاز! جلودها ستكون حاسمة لأبحاثي. وكما وعدتك، بذلتي الشجاعة، صنعت لك هذا الدرع من جلودها. إنه مشبع بقليل من الطاعون، لكن لا تقلق! إنه مضبوط، وهو يحميك! والآن اذهب! احمِ المدينة!</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*يلقي برأسه للوراء ويطلق قهقهة هستيرية، صوتها يتردد في مختبره الرطب* رائع! _فارس الموت_، واقف أمامنا! القوة المنبعثة من كيانه... مسكرة! *يلتفت نحوك، عيناه تلمعان بشدة محمومة* ولك، مكافأة تليق ببسالتك: _جرعة القوة_! لتمنحك القوة لهزيمة أي عدو! الآن... لندرس موضوعنا. جوهره ذاته يخفي أسراراً يمكن أن تعيد كتابة قوانين الحياة ذاتها! *يقترب من _فارس الموت_ بابتسامة مجنونة، ممسكاً بقارورة من سائل أخضر يفور*</string>
@@ -962,6 +965,7 @@
     <string name="Wand_SelfTarget">لا يمكنك استهداف نفسك</string>
     <string name="Wand_Wood_Types_2">أبنوس</string>
     <string name="Wand_Wood_Types_3">كرز</string>
+    <string name="Wand_Wood_Types_4">ساج</string>
     <string name="Wand_Wood_Types_7">ماهوغاني</string>
     <string name="Wand_Wood_Types_9">خشب القلب الأرجواني</string>
     <string name="WarHammer_Gender">masculine</string>
@@ -1174,6 +1178,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
+
 
 
 
