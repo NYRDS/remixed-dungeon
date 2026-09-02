@@ -94,6 +94,7 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="BardNPC_Desc">Nhạc sĩ thị trấn đang chơi đàn luýt của mình.</string>
     <string name="BardNPC_Gender">masculine</string>
+    <string name="BardNPC_Name">bard</string>
     <string name="Barrel_Name">thùng gỗ</string>
     <string name="Barrel_Pumpkin_Name">bí ngô</string>
     <string name="Bat_Gender">masculine</string>
@@ -140,6 +141,7 @@
     <string name="Bleeding_Death">Bạn đã chết vì mất máu...</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="BodyArmorBuff_Name">Giáp Cơ Thể</string>
+    <string name="BodyArmorSpell_Info">Kích hoạt sức mạnh cơ bắp dự trữ, làm cho chúng tạm thời mạnh hơn, từ đó tăng đáng kể giáp của bạn nhưng đánh đổi tốc độ di chuyển.</string>
     <string name="BoneSaw_Info">Một cái cạo phẫu thuật được thiết kế chính xác để thâm nhiễm nhanh chóng. Sát thương và tốc độ tấn công của nó trở nên nguy hiểm hơn cùng với kỹ năng của Bác sĩ Chết Chóc. Các đòn chí mạng cắt thêm các phần có thể thu hoạch từ kẻ thù, và nó tấn công với hiệu quả tàn nhẫn đối với kẻ thù bị tê liệt.</string>
     <string name="BoneSaw_Name">Cưa Xương</string>
     <string name="Boomerang_Gender">masculine</string>
@@ -414,6 +416,7 @@
     <string name="Heal_Info">Một phép thuật khá hữu ích trong ngục, phải không?</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Chữa trị miễn phí cho mọi phiêu lưu giả!</string>
+    <string name="HealerNPC_Message2">Quay lại bất cứ khi nào bạn cảm thấy ốm hoặc đói nhé!</string>
     <string name="HealerNPC_Message3">Tôi tự hỏi tại sao nhà thờ không cho phép chúng tôi đội mũ... trời lạnh lắm ngoài này.</string>
     <string name="HealerNPC_Name">lính tế thành phố</string>
     <string name="HealthArrow_Gender">feminine</string>
@@ -1331,6 +1334,9 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

@@ -293,6 +293,7 @@
     <string name="Crab_Name">rioolkrab</string>
     <string name="CrippleBuff_Info">Het lichaam is verlamd, maar de strijd gaat door.</string>
     <string name="CrippleBuff_Name">Verstompt</string>
+    <string name="Crystal_Desc">Grote schitterende kristal zweeft in de lucht. Waarschijnlijk is het vol met krachtige magie.</string>
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">zwevend kristal</string>
     <string name="CurareDart_Gender">masculine</string>
@@ -1032,6 +1033,7 @@
     <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info2">Gepakt, %s!</string>
     <string name="Tengu_Name">tengu</string>
+    <string name="Tengu_Name_Objective">Tengu</string>
     <string name="TerrorBuff_Name">Versterkt</string>
     <string name="Thief_Desc">De diepere verdiepingen van de dungeon zijn altijd een schuilplaats geweest voor allerlei criminelen. Niet iedereen kon zijn verstand behouden tijdens langdurige afwezigheid van daglicht. Lang geleden vergeten deze gekke dieven en bandieten wie ze zijn en waarom ze stelen.</string>
     <string name="Thief_Gender">masculine</string>
@@ -1078,6 +1080,7 @@
     <string name="Using_Failed_Because_Magic">Krachtige magie voorkomt dat je \&quot;%s\&quot; gebruikt.</string>
     <string name="VampireSkull_Info">Deze masker is gemaakt van een volledig natuurlijke vampierschedel. Eigenlijk is het een vampierschedel... schedel van een grootkopige vampier. Griezelig.</string>
     <string name="VampireSkull_Name">Vampierschedel</string>
+    <string name="Viscosity_Txt">%s van viscositeit</string>
     <string name="WandMaker_Desc">Deze oude maar kerngezonde heer draagt een lichtelijk verwarde uitdrukking. Hij wordt beschermd door een magisch schild.</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
@@ -1378,6 +1381,9 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 

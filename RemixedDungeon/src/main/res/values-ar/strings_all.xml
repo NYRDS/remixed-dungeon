@@ -771,6 +771,7 @@
     <string name="ScrollOfLullaby_Info3">القرطاس ينطق بلحن هادئ والوحوش تنام!</string>
     <string name="ScrollOfMagicMapping_Info">عند قراءة هذه اللفيفة، ستنطبع صورة بوضوح البلور في ذاكرتك، لتنبيهك على التخطيط الدقيق للمستوى وكشف جميع الأسرار المخفية. ستبقى مواقع الأشياء والمخلوقات مجهولة.</string>
     <string name="ScrollOfTeleportation_Teleport">في غمضة عين، تم نقلك فجأة إلى موقع آخر من المستوى.</string>
+    <string name="ScrollOfTerror_Info2">يصدر المخطوطة وميضاً ساطعاً من الضوء الأحمر ويهرب %s!</string>
     <string name="ScrollOfTerror_Info3">يصدر المخطوط وميضاً أحمر ساطعاً وتفر الوحوش!</string>
     <string name="ScrollOfUpgrade_LooksBetter">أصبح %s بالتأكيد يبدو أفضل الآن</string>
     <string name="ScrollOfUpgrade_Name">مخطوطة ترقية</string>
@@ -873,6 +874,7 @@
     <string name="StartScene_New">لعبة جديدة</string>
     <string name="StartScene_No">لا، العودة إلى القائمة الرئيسية</string>
     <string name="StartScene_WinGame">لفتح \&quot;التحديات\&quot;، أكمل اللعبة مع أي فئة شخصية.</string>
+    <string name="Statue_Desc">قد تظن أنها مجرد تمثال قبيح آخر في هذا الزنزانة، لكن عينيها الحمراء المتوهجة تكشف حقيقتهما. بينما التمثال نفسه مصنوع من الحجر، الـ _%s_ الذي يحمله يبدو حقيقياً.</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">تمثال متحرك</string>
     <string name="Statue_Name_Objective">تمثال متحرك</string>
@@ -966,6 +968,7 @@
     <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">سهم الظل الخاص بـ %1$s قتلك...</string>
     <string name="WaterElemental_Gender">masculine</string>
+    <string name="WaterElemental_Name">عنصر مائي</string>
     <string name="WaterOfAwareness_Info">تشع قوة المعرفة من ماء هذه البئر. خذ رشفة منه لكشف جميع أسرار معداتك.</string>
     <string name="WaterOfHealth_Procced">مع رشفتك الأولى، تشعر أن جروحك قد شُفيت تماماً.</string>
     <string name="WeaknessBuff_Name">مُضعف</string>
@@ -1168,6 +1171,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 
