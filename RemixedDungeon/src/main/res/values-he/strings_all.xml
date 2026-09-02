@@ -464,6 +464,7 @@
     <string name="InnKeeperNPC_Name_Objective">בעל הפונדק</string>
     <string name="InnServant_Phrase_1">אוף, עדיין יש כל כך הרבה מה לעשות!</string>
     <string name="InnServant_Phrase_2">השיכור הזה משגע אותי!</string>
+    <string name="InterLevelScene_Falling">נופלים...</string>
     <string name="InterLevelScene_FileNotFound">הקובץ לא נמצא. מסיבה כלשהי...</string>
     <string name="InterLevelScene_Loading">נטען...</string>
     <string name="InterLevelScene_Returning">חוזר...</string>
@@ -672,6 +673,7 @@
     <string name="Potion_No">לא, שיניתי את דעתי</string>
     <string name="Potion_RuneDissaperaed">הרונה נעלמה מ-%s.</string>
     <string name="Potion_Shatter">הבקבוק מתנפץ ו-%s נוזל מתפזר ללא נזק</string>
+    <string name="Potion_SureDrink">האם אתה בטוח שאתה רוצה לשתות את זה? ברוב המקרים כדאי לזרוק שיקויים כאלה על אויבים.</string>
     <string name="Potion_SureThrow">האם אתה בטוח שאתה רוצה לזרוק את זה? ברוב המקרים הגיוני לשתות את זה.</string>
     <string name="Potion_Yes">כן</string>
     <string name="Prison_TileDescBookshelf">זה כנראה שריד של ספריית בית סוהר. אולי זה יבער?</string>
@@ -781,6 +783,7 @@
     <string name="Shades_Info">יש אנשים שאומרים שמבוכים חשוכים מדי בשביל ללבוש את אלה. ואתה אומר שהאנשים האלה פשוט לא מספיק מגניבים.</string>
     <string name="ShadowLord_Death">לאאאא...</string>
     <string name="ShadowLord_Gender">masculine</string>
+    <string name="ShadowLord_Name">אדון הצללים</string>
     <string name="ShadowLord_Name_Objective">אדון הצללים</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">צל</string>
@@ -1036,6 +1039,7 @@
     <string name="WndSaveSlotSelect_Delete_No">לא</string>
     <string name="WndSaveSlotSelect_Delete_Title">האם אתה בטוח שברצונך למצוא מצב שמירה זה?</string>
     <string name="WndSettingsInGame_GameLog">יומן משחק</string>
+    <string name="WndSettings_ActionButtonSize">גודל כפתורי פעולה</string>
     <string name="WndSettings_Brightness">בהירות</string>
     <string name="WndSettings_FpsLimit">הגבלת FPS</string>
     <string name="WndSettings_GameplaySettings">משחקיות</string>
@@ -1124,6 +1128,7 @@
     <string name="town_deco_library_books_name">חומר קריאה</string>
     <string name="town_deco_library_sign_desc">נראה שיש ספרייה בתוך הבניין הזה.</string>
     <string name="town_deco_library_sign_name">שלט ספרייה</string>
+    <string name="town_deco_magenta_carpet_name">שטיח</string>
     <string name="town_deco_movies_door_desc">דלת זו נראית עשויה היטב במיוחד. סביר להניח שהיא מובילה למשהו מדהים.</string>
     <string name="town_deco_movies_door_name">דלת</string>
     <string name="town_deco_mud_desc">אדמה מופשרת באזור קפוא-עד זה.</string>
@@ -1491,4 +1496,9 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
 </resources>

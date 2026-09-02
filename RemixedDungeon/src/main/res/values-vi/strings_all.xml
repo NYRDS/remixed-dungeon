@@ -399,6 +399,7 @@
     <string name="Ghost_Rose2">Làm ơn... Giúp tôi... Tìm đóa hồng...</string>
     <string name="Glaive_Gender">feminine</string>
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
+    <string name="GnollArmor_NotGnoll">Chỉ gnoll mới có thể trang bị Áo Giáp Gnoll!</string>
     <string name="GnollCostume_Info">Một bộ trang phục ấm áp và bồng bềnh cực kỳ. Ai mặc bộ trang phục này sẽ trông như... người đang cố gắng cải trang thành gnoll. Nhưng gnoll sẽ không bị lừa, chúng vẫn sẽ tấn công bạn.</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gnoll_Gender">masculine</string>
@@ -430,6 +431,7 @@
     <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Trái tim đen nhịp đập của Thần Gian Dối.</string>
     <string name="HeartOfDarkness_Name">Trái tim của bóng tối</string>
+    <string name="Hedgehog_ImLate">Tôi đến muộn, tôi đến muộn kinh khủng...</string>
     <string name="Hedgehog_Info1">Cậu có đang tìm chú Gấu không?</string>
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
     <string name="HeroClass_Doctor">Bác Sĩ Dịch Hạch</string>
@@ -755,6 +757,7 @@
     <string name="Potion_Colors_1">đỏ tươi</string>
     <string name="Potion_Colors_10">chàm</string>
     <string name="Potion_Colors_15">ngọc trai</string>
+    <string name="Potion_Colors_4">vàng kim</string>
     <string name="Potion_Colors_8">hổ phách</string>
     <string name="Potion_ItemFliesAway">%s vừa bay vụt khỏi tay bạn.</string>
     <string name="Potion_Name">%s thuốc</string>
@@ -811,6 +814,7 @@
     <string name="Ring_BuffKnown">Đây là %s</string>
     <string name="Ring_Gems_10">thạch anh</string>
     <string name="Ring_Gems_11">mã não</string>
+    <string name="Ring_Gems_7">tourmalin</string>
     <string name="Ring_Gems_9">lam ngọc</string>
     <string name="Ring_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
     <string name="Ring_Info1">Bạn chỉ có thể đeo tối đa 2 nhẫn cùng lúc</string>
@@ -820,6 +824,7 @@
     <string name="RootSpell_Info">Gây rễ nhân vật được chọn, khiến hắn không thể di chuyển trong một khoảng thời gian ngắn.</string>
     <string name="RootSpell_Name">Rễ</string>
     <string name="RootsBuff_Name">Bám rễ</string>
+    <string name="RottenFish_Info">Cá thối, bốc mùi khủng khiếp</string>
     <string name="RottenFood_Message">Ghét quá!</string>
     <string name="RottenPasty_Info">Cái pasty này trông khá ghê.</string>
     <string name="RottenPasty_Name">Bánh nướng thối</string>
@@ -1346,4 +1351,9 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
 </resources>

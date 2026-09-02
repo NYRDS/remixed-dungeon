@@ -254,6 +254,7 @@
     <string name="Chess_YouLose">Je verliest!</string>
     <string name="Chess_YouWin">Je wint!</string>
     <string name="Chess_YourMove">Klik op het bord — jij bent aan de beurt, Held.</string>
+    <string name="ChristmasTurkey_Info">De beste manier om Dungeonmas te vieren is een stuk gebakken kalkoen te eten. Om de dag te vieren waarop monsters de kerker binnenkwamen. Wat uiteindelijk een ongelooflijk aantal toeristen en reizigers uit alle windstreken aantrok, waardoor de economische situatie in de regio verbeterde.</string>
     <string name="ChristmasTurkey_Name">festelijke kalkoen</string>
     <string name="CityBossLevel_ChessSign">Leg je wapens neer — de Koning zal je verstand op de proef stellen, niet je kracht.</string>
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
@@ -575,6 +576,7 @@
     <string name="Level_TileExit">Diepte-uitgang</string>
     <string name="Level_TileGrippingTrap">Klemval</string>
     <string name="Level_TileHighGrass">Hoog gras</string>
+    <string name="Level_TileInactiveTrap">Geactiveerde val</string>
     <string name="Level_TileLockedDoor">Gesloten deur</string>
     <string name="Level_TileLockedExit">Vergrendelde uitgang naar de diepte</string>
     <string name="Level_TileOpenDoor">Open deur</string>
@@ -736,6 +738,7 @@
     <string name="Possess_Name">Bezetting</string>
     <string name="Possess_PossessionFailed">Wil van %s is te sterk</string>
     <string name="PotionBelt_Info">Deze sterke leren riem kan al je drankjes bevatten en beschermt ze tegen het breken door vorst.</string>
+    <string name="PotionOfExperience_Info">De belevenissen van talloze veldslagen, herleid tot vloeibare vorm; deze drank verhoogt onmiddellijk je ervaringsniveau.</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
     <string name="PotionOfInvisibility_Apply">Je ziet je handen onzichtbaar worden!</string>
     <string name="PotionOfInvisibility_Info">Als je deze drank opdrinkt, wordt je tijdelijk onzichtbaar. Terwijl je onzichtbaar bent, kunnen vijanden je niet zien. Een vijand aanvallen, evenals een toverstaf of een rol voor de ogen van een vijand gebruiken, doet het effect verdwijnen.</string>
@@ -1032,6 +1035,7 @@
     <string name="Swing_Name_1">Wilde %s</string>
     <string name="Swing_Name_2">Wild %s</string>
     <string name="Sword_Gender">masculine</string>
+    <string name="Sword_Info">Het vlijmscherpe stalen lemmet glanst op een geruststellende manier.</string>
     <string name="Sword_Name">zwaard</string>
     <string name="Tamahawk_Gender">masculine</string>
     <string name="Tamahawk_Info">Hoewel deze werpbijl niet zo zwaar is, vereist hij toch behoorlijk wat kracht om effectief te kunnen gebruiken.</string>
@@ -1197,6 +1201,7 @@
     <string name="WndJournal_Logbook">Logboek</string>
     <string name="WndJournal_Title">Journaal</string>
     <string name="WndLibrary_Catalogue_Instruction">Kies hieronder een van de categorieën.</string>
+    <string name="WndLibrary_Catalogue_Title">Bibliotheek</string>
     <string name="WndLibrary_Codex_Btn">Verhalen</string>
     <string name="WndLibrary_Items_Btn">Voorwerpen</string>
     <string name="WndLocalModInstall_title">Mod installeren vanuit lokale map</string>
@@ -1392,4 +1397,9 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
 </resources>

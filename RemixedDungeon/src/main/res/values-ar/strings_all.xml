@@ -707,6 +707,7 @@
     <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info2">ما هذا؟ ليس لدي وقت لهذا الهراء. مملكتي لن تحكم نفسها!</string>
     <string name="RatKing_Name">ملك الفئران</string>
+    <string name="RatSkull_Info">قد يكون غنيمة صيد لطيفة، لكن رائحته كريهة جداً لدرجة لا يمكن تعليقها على الحائط.</string>
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">جراب الفأر</string>
     <string name="Rat_Name_Objective">فأر الكيس</string>
@@ -776,6 +777,7 @@
     <string name="ScrollOfLullaby_Info1">يتلو اللفافة لحناً هادئاً.</string>
     <string name="ScrollOfLullaby_Info3">القرطاس ينطق بلحن هادئ والوحوش تنام!</string>
     <string name="ScrollOfMagicMapping_Info">عند قراءة هذه اللفيفة، ستنطبع صورة بوضوح البلور في ذاكرتك، لتنبيهك على التخطيط الدقيق للمستوى وكشف جميع الأسرار المخفية. ستبقى مواقع الأشياء والمخلوقات مجهولة.</string>
+    <string name="ScrollOfMirrorImage_Info">سيؤدي التعويذة الموجودة على هذه اللفافة إلى إنشاء توأم وهمي للقارئ، والذي سيطارد أعداءه.</string>
     <string name="ScrollOfTeleportation_Teleport">في غمضة عين، تم نقلك فجأة إلى موقع آخر من المستوى.</string>
     <string name="ScrollOfTerror_Info2">يصدر المخطوطة وميضاً ساطعاً من الضوء الأحمر ويهرب %s!</string>
     <string name="ScrollOfTerror_Info3">يصدر المخطوط وميضاً أحمر ساطعاً وتفر الوحوش!</string>
@@ -916,6 +918,7 @@
     <string name="TitleScene_PlayOnPC">العب على الحاسوب</string>
     <string name="TomeOfMastery_Blinded">لا يمكنك القراءة وأنت أعمى</string>
     <string name="TomeOfMastery_Choose">لقد اخترت درب الـ %s!</string>
+    <string name="TomeOfMastery_Info">هذا الكتاب الجلدي البالي ليس سميكاً جداً، لكنك تشعر بطريقة ما أنه يمكنك تعلم الكثير منه. تذكر مع ذلك أن قراءة هذا الكتاب قد تتطلب بعض الوقت.</string>
     <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
     <string name="Torch_ACLight">أشعل</string>
     <string name="Torch_Info">إنه عنصر لا غنى عنه في قاعات الشياطين، المشهورة بإضاءتها الضعيفة.</string>
@@ -988,6 +991,7 @@
     <string name="Weightstone_WndCancel">لا بأس</string>
     <string name="Weightstone_WndChoice">كيف تود موازنة %s الخاص بك؟</string>
     <string name="Welcome_Text_30_1">    remix.30.1\n    - طريقة اللعب:\n    -- فئات غنول الفرعية!\n    -- حلزونات!\n    -- تم تقليل سرعة ترقية عناصر الفوضى.\n    -- جرعة المانا أصبحت جرعة عادية من الآن.\n    -- الشارات أصبحت قابلة للحصول عند اللعب بـ DLC (وليس المودات).\n    - إصلاح الأخطاء</string>
+    <string name="Welcome_Title">أهلاً بك!</string>
     <string name="WindGust_Name">هبة ريح</string>
     <string name="WndBlacksmith_Reforge">أعد تشكيلهم</string>
     <string name="WndCatalogus_Scrolls">اللُفافات</string>
@@ -1181,4 +1185,10 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+    <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
 </resources>
