@@ -273,6 +273,7 @@
     <string name="CompositeCrossbow_Name">nỏ composite</string>
     <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">Các mũi tên bắn từ cây cung hợp kim này gây sát thương lớn và có độ chính xác tốt hơn cung gỗ, đổi lại là phần nào chậm hơn.</string>
+    <string name="ConcreteBlock_Description">Có vẻ khối này cần %d điểm sức mạnh để đẩy</string>
     <string name="CorpseDust_Name">bụi xác</string>
     <string name="CorpseExplosion_Name">Nổ Xác Chết</string>
     <string name="Crab_Gender">masculine</string>
@@ -817,6 +818,7 @@
     <string name="RottenPasty_Name">Bánh nướng thối</string>
 
     <string name="RottenPumpkinPie_Info">Dù bánh bí ngon đến đâu khi còn tươi, giờ thì chắc chắn không thể ăn được.</string>
+    <string name="RottenPumpkinPie_Name">bánh bí ngô thối</string>
     <string name="RottenRation_Name">Cơm khô hỏng</string>
     <string name="RottingFist_Desc">Nắm đấm thối rữa của Thần Cổ</string>
     <string name="RottingFist_Gender">masculine</string>
@@ -902,6 +904,7 @@
     <string name="Shaman_Name_Objective">gnoll shaman</string>
     <string name="Sheep_Desc">Đây là một con cừu ma thuật. Điều gì làm nó trở nên ma thuật? Bạn không thể giết nó. Nó sẽ đứng yên tại chỗ cho đến khi nó biến mất bằng phép thuật, trong khi vẫn nhai cỏ với ánh mắt trống rỗng.</string>
     <string name="Sheep_Gender">feminine</string>
+    <string name="ShieldBuffNotReady_Info">Khiên của bạn chưa sẵn sàng để chặn đòn tấn công tiếp theo.</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
     <string name="ShieldStrTemplate">Người đeo khiên cần có ít nhất %1$d điểm Sức mạnh để sử dụng nó đúng cách.</string>
     <string name="Shielded_Desc">Quái vật lớn nhất, mạnh nhất và kiên cường nhất trong số tất cả các gnoll. Khi bị thương nặng, chúng sẽ điên cuồng, gây thiệt hại lớn hơn cho kẻ thù. Quái vật này đang khiêng một khiên khổng lồ!</string>
@@ -1334,6 +1337,9 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

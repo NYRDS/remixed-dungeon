@@ -144,6 +144,7 @@
     <string name="Bleeding_Death">نَزَفتَ حتى الموت...</string>
     <string name="BlessedBuff_Name">مبارك</string>
     <string name="BlindnessBuff_Info">عمى تام، لا يُسمع سوى الأصوات المحيطة.</string>
+    <string name="BlindnessBuff_Name">مُعمّى</string>
     <string name="BloodTransfusion_Drained">تتدفق جوهر الحياة من حيوانك الأليف إليك.</string>
     <string name="BodyArmorBuff_Info">تزداد الدروع على حساب سرعة الحركة.</string>
     <string name="BoneSaw_Name">منشار العظام</string>
@@ -158,6 +159,7 @@
     <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name">قبضة محرقة</string>
     <string name="BurningFist_Name_Objective">قبضة مشتعلة</string>
+    <string name="CagedKobold_Desc">كوبولد في قفص.</string>
     <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">مرحباً... مرحباً! أنت ذلك المغامر، صحيح؟ ساعدني يا صديقي، هؤلاء العسكريون الملاعين حبسوني هنا! إنهم ينوون إعادة تنشيط سلاح قديم لغزو البشر على السطح! لكن نظراً لخطورة الأمر، عارضتهم، فرموني وسجنوني في قفص! أتوسل إليك أن تجد مفتاح الزنزانة، وفي المقابل، سأساعدك بأقصى ما أستطيع.</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
@@ -1131,6 +1133,7 @@
     <string name="town_deco_entrance_name">مدخل</string>
     <string name="town_deco_fence_desc">سياج خشبي مغطى بالثلج.</string>
     <string name="town_deco_fence_name">سياج</string>
+    <string name="town_deco_fireplace_name">المدفأة</string>
     <string name="town_deco_firewood_desc">شيء ضروري في مثل هذا الصقيع القارس.</string>
     <string name="town_deco_firewood_name">حطب</string>
     <string name="town_deco_flowerinthepot_desc">زهرة زينة ذات نكهة حلوة</string>
@@ -1171,6 +1174,9 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
+
 
 
 

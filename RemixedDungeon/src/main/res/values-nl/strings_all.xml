@@ -347,6 +347,7 @@
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="Dungeon_Tips_9">Laat de Tengu niet vrij!</string>
     <string name="Dungeon_saveIoError">Bij het proberen een opslagbestand aan te maken:</string>
+    <string name="DwarfToken_Name">dwerg-teken</string>
     <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name_Objective">aardelementaal</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
@@ -471,6 +472,7 @@
     <string name="Hero_StaBurning">Je vliegt in brand!</string>
     <string name="Hero_StaCharm">Je bent betoverd!</string>
     <string name="Hero_StaFurious">furieus</string>
+    <string name="Hero_StaOoze">Bijtend slijm vreet aan je vlees. Was het weg!</string>
     <string name="Hero_StaPoison">Je bent vergiftigd!</string>
     <string name="Hero_StaRoots">Je kunt je niet bewegen!</string>
     <string name="Hero_StaWeakness">Je voelt je verzwakt!</string>
@@ -1159,6 +1161,7 @@
     <string name="WndDontLikeAds_NotThisTime">Niet deze keer</string>
     <string name="WndFortuneTeller_IdentifyAll">Alles</string>
     <string name="WndFortuneTeller_No_Item">Wees voorzichtig, je wilt je geld toch niet voor niets uitgeven, toch? Er zijn geen ongeïdentificeerde items in je inventaris.</string>
+    <string name="WndGame_Challenges">Uitdagingen</string>
     <string name="WndGame_Customizations">Aanpassingen</string>
     <string name="WndGame_Exit">Verlaat Remixed Dungeon</string>
     <string name="WndGame_Load">Laden</string>
@@ -1381,6 +1384,9 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 

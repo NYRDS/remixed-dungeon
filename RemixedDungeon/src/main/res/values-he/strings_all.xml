@@ -624,6 +624,7 @@
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name_Objective">רופא דבר</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">תביא לי %d עורות עכברוש.</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">בה! אתה מאמין לזה?! הטיפשים האלה עדיין לא הבינו כמה מסוכן הביוב הזה! כאילו שומרים והרפתקנים יכולים להגן על העיר מכל דבר. הא! שום נשק לא יכול לעצור את התפשטות המחלה. אבל אני צריך הוכחות, אולי תוכל לעזור לי עם זה? תביא לי %d עורות עכברוש, כדי שאוכל לערוך כמה בדיקות נוספות.</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">אהההה... מרהיב! ה_שבלולים_, סודותיהם נפרשים לאט כמו עלי כותרת לאור הירח. שלל מידע אכן! אבל אתה צודק, _חמישים זהב_ בקושי מהווים פרס הולם. *צוחק בביטול*.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">חפש את ה־_moongrace_, שם החשכה פוגשת את הבהוב האור הקלוש ביותר של הירח. _שני זרעים_, תמציתם, יחשפו סודות נסתרים.</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">אה, _סונגראס_! פרח עדין, עלי כותרתו מקרינים את חום השמש. אני מאמין שהמהות שלו מחזיקה את המפתח ל... אה, תשכח מהפרטים לעת עתה. מספיק לומר שזה קריטי למחקר שלי. _שני זרעי סונגראס_. הביאו אותם אלי, ואתגמל אתכם במשהו שבוודאי יועיל לכם בהרפתקאותיכם - _שיקום בריאות_, מלא בחיוניות השמש.</string>
@@ -826,6 +827,7 @@
     <string name="SpiderElite_Name">שומר עכביש עלית</string>
     <string name="SpiderExploding_Desc">עובדים חרוצים בזמנים שלווים, היצורים האלה לא יהססו להסתער על אויביהם ולתפוס את הצמח הראשון שהם נתקלים בו, ולהפוך את עצמם לפצצות חיות.</string>
     <string name="SpiderExploding_Gender">masculine</string>
+    <string name="SpiderGuard_Desc">בדומה לחיילים, שומרי העכבישים נשבעו להגן על ממלכתם. הארס של השומרים משמש לשיתוק המטרה שלהם, וגורם לשיתוק והופך אותם לטרף קל.</string>
     <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">שומר עכביש</string>
     <string name="SpiderMindAmber_Gender">masculine</string>
@@ -929,6 +931,7 @@
     <string name="WandOfAvalanche_Info1">מחצת את עצמך עם שרביט המפולת שלך...</string>
     <string name="WandOfDisintegration_Info">מקל זה פולט אלומת אנרגיה הרסנית, החודרת את כל היצורים בדרכה. ככל שהיא פוגעת ביותר מטרות, כך היא גורמת נזק רב יותר לכל אחת מהן.</string>
     <string name="WandOfDisintegration_Name">שרביט התפוררות</string>
+    <string name="WandOfFlock_Info">נפנוף קל בשרביט זה מזמן עדר של כבשים קסומות, ויוצר מכשול חסין זמני.</string>
     <string name="WandOfIcebolt_Info">שרביט זה יורה כדור קרח הגורם נזק קל למטרה. יש גם סיכוי להאט או אפילו להקפיא את האויב.</string>
     <string name="WandOfIcebolt_Info1">הרגת את עצמך עם שרביט הקרח שלך...</string>
     <string name="WandOfIcebolt_Name">שרביט קרח</string>
@@ -1480,6 +1483,9 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
 
 
 
