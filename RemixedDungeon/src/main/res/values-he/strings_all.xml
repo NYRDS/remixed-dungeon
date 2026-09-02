@@ -683,6 +683,7 @@
     <string name="RatArmor_Name">שריון חולדות</string>
     <string name="RatHide_Name">עור חולדה</string>
     <string name="RatKing_Gender">masculine</string>
+    <string name="RatKing_Info1">אני לא ישן!</string>
     <string name="RatKing_Info2">מה זה? אין לי זמן לשטויות האלה. הממלכה שלי לא תשלוט בעצמה!</string>
     <string name="RatSkull_Info">זה יכול להיות גביע ציד נחמד, אבל זה מריח רע מכדי לתלות את זה על הקיר.</string>
     <string name="Rat_Desc">חולדות כיס הן תוקפניות, אך די חלשות — הן תושבות הביוב. הן עלולות להיות מסוכנות רק בכמויות גדולות.</string>
@@ -1037,6 +1038,7 @@
     <string name="WndSettings_SelectLanguage">בחר שפה</string>
     <string name="WndSettings_ThirdQuickslot">חריץ שלישי</string>
     <string name="WndSettings_UiScale">קנה מידה של ממשק המשתמש</string>
+    <string name="WndSettings_ZoomDef">זום ברירת מחדל</string>
     <string name="WndStory_Guts">מובס, מרוסק לחתיכים אך לא הושמד כליל, האל העתיק נחתם במעמקי המבוך ביותר. אך לאחרונה החותם נשבר, והותיר את הדרך אל קן השדים פתוחה לרווחה. המפלצות מהסיוטים שנבראו בשנתו של האל העתיק היו רבות כל כך, עד שלא נותרה להן דרך מילוט והן נאלצו להתמזג יחדיו וליצור את האולמות המרתיעים האלה. וככל שאתה דורך על בשרם החי, אתה מרגיש את פעימות לבו של האל העתיק מהדהדות בתוכם.</string>
 
     <string name="WndStory_Prision">לפני שנים רבות נבנה כאן כלא תת-קרקעי עבור הפושעים המסוכנים ביותר. בזמנו זה נראה רעיון חכם מאוד, כי המקום הזה אכן היה קשה מאוד לבריחה. אבל עד מהרה מיאזמה אפלה החלה לחלחל מלמטה, מטריפה את דעתם של אסירים ושומרים כאחד. בסופו של דבר הכלא ננטש, אף שכמה אסירים נותרו נעולים כאן.</string>
@@ -1475,6 +1477,8 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
 
 
 

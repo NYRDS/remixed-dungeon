@@ -289,6 +289,7 @@
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">تم تحويل الألم إلى ألم بطيء، مما يقلل الضرر المتلقى دفعة واحدة.\nالضرر المتبقي لتلقيه %d</string>
     <string name="DewVial_Full">قارورة الندى ممتلئة!</string>
+    <string name="DewVial_Name">قارورة ندى</string>
     <string name="DieHardBuff_Name">الموت الصعب</string>
     <string name="DieHardSpell_Name">موت صعب</string>
     <string name="Displacement_Txt">%s الإزاحة</string>
@@ -336,6 +337,7 @@
     <string name="Fadeleaf_Name">ورقة البهتان</string>
     <string name="FetidRat_Desc">هذا الجرذ الجرابي أكبر بكثير من الجرذ العادي. تحيط به سحابة كريهة الرائحة.</string>
     <string name="FetidRat_Gender">feminine</string>
+    <string name="Fez_Info">إنه غطاء رأس على شكل مخروط مقطوع مصنوع من القماش الأحمر، مع بومبوم مربوط في الأعلى. ولا، لا يجعل العالم ثلاثي الأبعاد.</string>
     <string name="FireArrow_Gender">feminine</string>
     <string name="FireElemental_Desc">العناصر النارية المتجولة هي منتج ثانوي لاستدعاء كيانات أعظم. فطبيعتها الفوضوية تجعل السيطرة عليها مستحيلة حتى لأقوى علماء الشياطين.</string>
     <string name="FireElemental_Gender">masculine</string>
@@ -1166,6 +1168,8 @@
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
+
+
 
 
 

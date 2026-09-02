@@ -843,6 +843,7 @@
     <string name="ScrollOfLullaby_Info3">Cuộn giấy phát ra giai điệu êm dịu và quái vật ngủ say!</string>
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
     <string name="ScrollOfMirrorImage_Name">Cuộn giấy Bản sao Gương</string>
+    <string name="ScrollOfRecharging_Info1a">một luồng năng lượng tràn qua ba lô của bạn, nạp lại phép thuật cho gậy phép thuật của bạn</string>
     <string name="ScrollOfRecharging_Info1b">một dòng năng lượng lan tỏa qua túi đồ của bạn, sạc lại năng lượng cho các gậy phép</string>
     <string name="ScrollOfRemoveCurse_Info">Lời chú trên cuộn này sẽ tách ngay lập tức khỏi vũ khí, giáp, nhẫn và vật mang theo của người đọc bất kỳ lời nguyền xấu nào có thể ngăn cản người đeo tháo chúng ra.</string>
     <string name="ScrollOfRemoveCurse_Proced">Cái ba lô của bạn phát sáng bằng ánh sáng thanh tẩy, và một năng lượng dữ tợn tan biến.</string>
@@ -1148,6 +1149,7 @@
     <string name="WndMovieTheatre_Bye">Hãy quay lại bất cứ lúc nào, chúng tôi luôn hoan nghênh bạn!</string>
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
     <string name="WndMovieTheatre_Title">Rạp Phim</string>
+    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
     <string name="WndPlayGames_Connecting">Đang kết nối với Google Play Games, vui lòng chờ một chút</string>
     <string name="WndPlayGames_Show_Badges">Hiện huy hiệu</string>
     <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
@@ -1329,6 +1331,8 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
