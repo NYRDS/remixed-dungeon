@@ -16,6 +16,7 @@
     <string name="AboutScene_Sound">الصوت:</string>
     <string name="AboutScene_SourceCode">الحصول على كود مصدر Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">شكر خاص لـ:</string>
+    <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
     <string name="Accuracy_Decreased">لماذا ظننت أنني أستطيع استخدام %s؟ أداة خاطئة، أيدي خاطئة!</string>
     <string name="Accuracy_DecreasedDoctor">كل ضربة من هذا %s تنشر العيوب. منشار عظامي يشفي... هذا يصيب بعدوى.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">يداي العاريتان تفسدان تقنيتي. بدون قطع المنشار النظيف، تتحول دقتي إلى فوضى.</string>
@@ -171,6 +172,7 @@
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info">يبدو كشمعة عادية، ليس شيئاً تتوقع العثور عليه في زنزنة خطيرة. الغريب أنه دافئ جداً عند لمسه، رغم أنه لم يُشعل بعد.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
+    <string name="CandleOfMindVision_Info_Lighted">اشتعلت الشمعة في اللحظة التي أخرجتها فيها من حقيبتك. يصدر اللهب ضوءاً أرجوانياً خافتاً، وبينما تنظر من خلاله، تصبح جميع الوحوش القريبة مرئية لك.</string>
     <string name="Candy_Info">هذه الحلوى تبدو جميلة جداً ورائحتها طيبة أيضاً. هل تحتاج حقاً لإعطائها لشخص آخر؟</string>
     <string name="Candy_Name">حلوى</string>
     <string name="Candy_Warning_2">لقد أفرطت حقًا هذه المرة. بطنك يؤلمك لأنك أكلت الكثير من الحلوى.</string>
@@ -203,6 +205,7 @@
     <string name="ChaosCrystal_ArmorFused">اندمج البلور مع درعك، وأخذ شكل الفوضى.</string>
     <string name="ChaosCrystal_BladeFused">يمتص الكريستال سلاحك، ويتخذ شكل شفرة</string>
     <string name="ChaosCrystal_Fuse">دمج</string>
+    <string name="ChaosCrystal_Name_2">بلورة الفوضى</string>
     <string name="ChaosCrystal_SwordFused">البلورة تمتص سلاحك وتأخذ شكل سيف</string>
     <string name="ChaosCrystal_Use">استخدام</string>
     <string name="ChaosHelmet_Info">الخوذة ذات اللون الأحمر الدموي هي رمز جوهري لمحارب الفوضى.</string>
@@ -368,6 +371,7 @@
     <string name="FrozenCarpaccio_Info3">منعش!</string>
     <string name="FrozenCarpaccio_Info4">تشعر بتحسن!</string>
     <string name="FrozenCarpaccio_Name">كارباتشو مجمد</string>
+    <string name="FuryBuff_Name">جنون</string>
     <string name="GameScene_Grass">رائحة النباتات تفوح في الهواء.</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="GameScene_WelcomeBack">مرحباً بعودتك إلى المستوى %d من Remixed Dungeon!</string>
@@ -438,6 +442,7 @@
     <string name="HeroSubClass_NameWarL">مُشعوذ</string>
     <string name="HeroSubClass_NameWitchdoctor">طبيب ساحر</string>
     <string name="Hero_AnotherTry">لقد مت.\n هل تريد المحاولة مرة أخرى؟</string>
+    <string name="Hero_Name">أنت</string>
     <string name="Hero_Name_Objective">أنت</string>
     <string name="Hero_Search">بحث</string>
     <string name="Hero_StaBurning">لقد اشتعلت בך النار!</string>
@@ -455,6 +460,7 @@
     <string name="HuntressArmor_NoEnemies">لا يوجد أعداء مرئيون</string>
     <string name="HuntressArmor_NotHuntress">يمكن للصيادات فقط استخدام هذا الدرع!</string>
     <string name="IceCaves_TileDescDeco">تم تجميد هذا الغنول وهو حي. على ما يبدو، أنه كان هناك منذ فترة طويلة.</string>
+    <string name="IceCaves_TileDescStatue">تمثال آخر بشع... أوه انتظر، هذا غنول متجمد.</string>
     <string name="IceCaves_TileGrass">عشب متجمد.</string>
     <string name="IceCaves_TileHighGrass">عشب طويل متجمد</string>
     <string name="IceCaves_TileStatue">غنول متجمد</string>
@@ -529,6 +535,7 @@
     <string name="Leech_Name_2">مصاص دماء %s</string>
     <string name="Level_TileAlarmTrap">فخ إنذار</string>
     <string name="Level_TileBarricade">متاريس</string>
+    <string name="Level_TileChasm">هاوية</string>
     <string name="Level_TileDescChasm">لا تستطيع رؤية القاع.</string>
     <string name="Level_TileDescInactiveTrap">لقد تم تفعيل الفخ من قبل وهو لم يعد خطيراً.</string>
     <string name="Level_TileDescLockedDoor">هذا الباب مغلق، تحتاج إلى مفتاح مطابق لفتحه.</string>
@@ -611,6 +618,7 @@
     <string name="NecromancerNPC_Intro">آه! يا له من منظر نادر! زميل مغامر ليس مجرد جثة بلا حياة! لا يكاد يصدق! أوه... أعتذر، أحياناً أشعر بالحماس الشديد. ترى، أنا نِكْرومانسي (ساحر الموتى). وعلى الرغم من أن دراسة الموتى والموت نفسه هو مهنتي، إلا أن رؤية نفس الأشياء مراراً وتكراراً تصبح مرهقة للغاية في النهاية. من ناحية أخرى، هذا هو السبب بالضبط في وجودي هنا. وفقاً لحساباتي، في غضون أسابيع قليلة، في مكان ما في هذا الزنزانة بالذات، سيحدث شيء مذهل. الـ _نِكْرُوبُولِس_ (المقبرة القديمة)، مدينة الموتى القديمة، ستفتح أبوابها. و... لا يمكنني حقاً قول الكثير، لقد أضعت وقتاً كافياً كما هو الحال. أنا بحاجة للاستعداد، _عد لاحقاً_.</string>
     <string name="NecromancerNPC_Message2">يجب أن أكون جاهزاً.</string>
     <string name="NecromancerRobe_Info2">هذا رداء مشبع بالسحر الأسود يسمح للنكرومانسر بأكل أرواح الوحوش المنهزمة.</string>
+    <string name="Necromancer_ACSpecial">نِيكرومانسيا</string>
     <string name="Necromancy_SummonDeathlingName">استدعاء سمرتة</string>
     <string name="Necrotism_Death">مُتَّ مِن التنخر...</string>
     <string name="NeutralKing_Hostile">الملك ينقلب عليك!</string>
@@ -791,6 +799,7 @@
     <string name="ScrollOfLullaby_Info3">القرطاس ينطق بلحن هادئ والوحوش تنام!</string>
     <string name="ScrollOfMagicMapping_Info">عند قراءة هذه اللفيفة، ستنطبع صورة بوضوح البلور في ذاكرتك، لتنبيهك على التخطيط الدقيق للمستوى وكشف جميع الأسرار المخفية. ستبقى مواقع الأشياء والمخلوقات مجهولة.</string>
     <string name="ScrollOfMirrorImage_Info">سيؤدي التعويذة الموجودة على هذه اللفافة إلى إنشاء توأم وهمي للقارئ، والذي سيطارد أعداءه.</string>
+    <string name="ScrollOfPsionicBlast_Info">تحتوي هذه اللفيفة على طاقة مدمرة، يمكن توجيهها نفسانياً لإلحاق ضرر هائل بجميع المخلوقات في نطاق الرؤية. ستُصاحبها ومضة ضوء تُعمى مؤقتاً كل من في منطقة التأثير، بما في ذلك قارئ اللفيفة.</string>
     <string name="ScrollOfTeleportation_Teleport">في غمضة عين، تم نقلك فجأة إلى موقع آخر من المستوى.</string>
     <string name="ScrollOfTerror_Info2">يصدر المخطوطة وميضاً ساطعاً من الضوء الأحمر ويهرب %s!</string>
     <string name="ScrollOfTerror_Info3">يصدر المخطوط وميضاً أحمر ساطعاً وتفر الوحوش!</string>
@@ -1173,6 +1182,7 @@
     <string name="town_deco_library_sign_name">لافتة المكتبة</string>
     <string name="town_deco_movies_door_name">باب</string>
     <string name="town_deco_mud_desc">تربة ذائبة في هذه المنطقة دائمة التجمد.</string>
+    <string name="town_deco_painting_name">لوحة</string>
     <string name="town_deco_pathway_name">مسار</string>
     <string name="town_deco_pillar_desc">في الماضي، كان هذا العمود يُستخدم كدعم ممتاز وزخرفة.</string>
     <string name="town_deco_porch_desc">شرفة مصنوعة من الخشب.</string>
@@ -1207,6 +1217,18 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

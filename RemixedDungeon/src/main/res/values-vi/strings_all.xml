@@ -14,6 +14,7 @@
     <string name="AboutScene_SourceCode">Tải mã nguồn Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Cảm ơn đặc biệt đến:</string>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
+    <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
     <string name="Accuracy_Decreased">Tại sao tôi nghĩ mình có thể dùng %s? Cụm sai, tay sai!</string>
     <string name="Accuracy_DecreasedDoctor">Mỗi lần gióg %s này lan truyền sự không hoàn hảo. Cây cưa xương của tôi chữa lành... cái này gây nhiễm.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Tay trần làm nhiễm bẩn kỹ thuật. Không có đường cắt sạch của Rọc, sự ngắm bắn của tôi trở nên hỗn loạn.</string>
@@ -168,6 +169,7 @@
     <string name="Calm_Info">Có rất nhiều sinh vật đang bị kích động xung quanh, hãy giúp chúng.</string>
     <string name="CandleOfMindVision_Info">Trông như một cây nến bình thường, không phải thứ bạn mong đợi tìm thấy trong ngục nguy hiểm. Lạ thay nó khá ấm khi chạm vào, mặc dù nó chưa được thắp.</string>
     <string name="CandleOfMindVision_Info_Exhausted">Cây nến đã hết, nó không còn sáng khi bạn cầm nó. Trông như bạn không thể dùng nó nữa.</string>
+    <string name="CandleOfMindVision_Info_Lighted">Ngọn nến sáng lên ngay khi bạn lấy nó ra khỏi ba lô. Ngọn lửa phát ra ánh sáng màu tím nhạt, và khi bạn nhìn xuyên qua nó, tất cả quái vật ở gần sẽ trở nên hiển thị với bạn.</string>
     <string name="CandleOfMindVision_Name">Nến Tầm Nhìn</string>
     <string name="Candy_Info">Viên kẹo này trông rất đẹp và mùi cũng thơm. Bạn có thực sự muốn tặng nó cho người khác không?</string>
     <string name="Candy_Name">kẹo</string>
@@ -504,6 +506,7 @@
     <string name="HuntressArmor_Desc">Một thợ săn trong chiếc áo choàng này có thể tạo ra một quạt các lưỡi kiếm linh hồn. Mỗi lưỡi kiếm sẽ nhắm vào một kẻ thù duy nhất trong tầm nhìn của thợ săn, gây sát thương tùy thuộc vào vũ khí cận chiến hiện tại của cô ấy.</string>
     <string name="HuntressArmor_NotHuntress">Chỉ thợ săn mới có thể sử dụng giáp này!</string>
     <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
+    <string name="IceCaves_TileDescStatue">Một bức tượng khủng khiếp nữa... Ồ khoan đã, đó là một con gnoll bị đóng băng.</string>
     <string name="IceCaves_TileGrass">Cỏ đóng băng.</string>
     <string name="IceCaves_TileHighGrass">Cỏ cao đóng băng</string>
     <string name="IceElemental_Desc">Trong tất cả các nguyên tố hiện có trong hầm, nguyên tố băng khó có thể được coi là mạnh mẽ nhất, nhưng thực sự có thể được gọi là một trong những nguy hiểm nhất. Khí lạnh phát ra từ cơ thể chúng có thể làm chậm bất kỳ kẻ thù nào.</string>
@@ -584,6 +587,7 @@
     <string name="LeatherArmor_Desc">Áo giáp làm từ da thú đã thuộc. Không nhẹ như áo giáp vải, nhưng cho khả năng bảo vệ tốt hơn.</string>
     <string name="Leech_Name_0">Hút máu %s</string>
     <string name="Leech_Name_2">Hút máu %s</string>
+    <string name="Level_TileChasm">Vực thẳm</string>
     <string name="Level_TileClosedDoor">Cửa đóng</string>
     <string name="Level_TileDefault">\?\?\?</string>
     <string name="Level_TileDescChasm">Ngươi không thấy đáy.</string>
@@ -683,6 +687,7 @@
     <string name="NecromancerNPC_Name">pháp sư chết chóc</string>
     <string name="NecromancerRobe_Info">Chiếc áo choàng này sẽ cho phép Necromancer triệu hồi Deathling với chi phí 5 linh hồn. Deathling là một tỳ phu bất tử sẽ mạnh lên cùng với chủ nhân của nó.</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: giới hạn triệu hồi đã đạt đến (Hiện tại tối đa: %d)!</string>
+    <string name="Necromancer_ACSpecial">THUẬT HỒI SINH</string>
     <string name="Necromancy_BecameALich">Bạn đã trở thành Lich! Sức mạnh của bạn tăng lên và dung lượng linh hồn đã được gấp đôi! Nhưng bạn đã mất %1$d điểm sức mạnh.</string>
     <string name="Necromancy_NotEnoughSouls">Bạn không đủ linh hồn để thi triển phép thuật \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_SoulsCountLabel">Linh hồn</string>
@@ -774,6 +779,7 @@
     <string name="Potion_Colors_4">vàng kim</string>
     <string name="Potion_Colors_8">hổ phách</string>
     <string name="Potion_ItemFliesAway">%s vừa bay vụt khỏi tay bạn.</string>
+    <string name="Potion_MoistenUseless">Có vẻ bạn vừa lãng phí bình thuốc này.</string>
     <string name="Potion_Name">%s thuốc</string>
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
     <string name="Potion_RuneDissaperaed">Chữ ký biến mất khỏi %s.</string>
@@ -874,6 +880,7 @@
     <string name="ScrollOfLullaby_Info3">Cuộn giấy phát ra giai điệu êm dịu và quái vật ngủ say!</string>
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
     <string name="ScrollOfMirrorImage_Name">Cuộn giấy Bản sao Gương</string>
+    <string name="ScrollOfPsionicBlast_Info">Cuộn giấy này chứa năng lượng hủy diệt, có thể được kênh tâm linh để gây sát thương cực lớn cho tất cả sinh vật trong tầm nhìn. Một tia chớp ánh sáng đi kèm sẽ tạm thời làm mù tất cả mọi người trong vùng ảnh hưởng, bao gồm cả người đọc cuộn giấy.</string>
     <string name="ScrollOfRecharging_Info1a">một luồng năng lượng tràn qua ba lô của bạn, nạp lại phép thuật cho gậy phép thuật của bạn</string>
     <string name="ScrollOfRecharging_Info1b">một dòng năng lượng lan tỏa qua túi đồ của bạn, sạc lại năng lượng cho các gậy phép</string>
     <string name="ScrollOfRemoveCurse_Info">Lời chú trên cuộn này sẽ tách ngay lập tức khỏi vũ khí, giáp, nhẫn và vật mang theo của người đọc bất kỳ lời nguyền xấu nào có thể ngăn cản người đeo tháo chúng ra.</string>
@@ -1325,6 +1332,7 @@
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
     <string name="town_deco_mud_desc">Đất đã tan chảy trong vùng băng vĩnh cửu này.</string>
     <string name="town_deco_painting_desc">Một tác phẩm nghệ thuật đẹp đẽ.</string>
+    <string name="town_deco_painting_name">Bức Tranh</string>
     <string name="town_deco_pathway_name">đường mòn</string>
     <string name="town_deco_pedestal_desc">Một giá đỡ có một cuốn sách thánh trên đó.</string>
     <string name="town_deco_pillar_desc">Ngày xưa, cột này từng đóng vai trò là đỡ đẹp đẽ và trang trí.</string>
@@ -1369,6 +1377,16 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -149,6 +149,7 @@
     <string name="CagedKobold_Name_Objective">קובולד בכלוב</string>
     <string name="CagedKobold_Quest_End">אוי, תודה לך, תודה רבה! איך הצלחת למצוא את המפתח? אתה... אתה השמדת את הנשק?! זה מדהים! אתה יודע מה, אמרתי שאעזור לך, ואני חושב שאני יודע את הדרך הטובה ביותר. אני אשאר איתך לזמן מה. * הקובולד הכלוא הפך לנר</string>
     <string name="CandleOfMindVision_Info">נראה כמו נר רגיל, לא משהו שהיית מצפה למצוא בצינוק מסוכן. מוזר שזה די חם למגע, למרות שזה עדיין לא הודלק.</string>
+    <string name="CandleOfMindVision_Info_Lighted">הנר נדלק ברגע שהוצאת אותו מתרמילך. הלהבה פולטת אור סגול חלש, וכשאתה מביט דרכו, כל המפלצות הקרובות נראות לעיניך.</string>
     <string name="Candy_Info">הסוכרייה הזאת נראית כל כך יפה ומריחה גם טוב. אתה באמת צריך לתת אותה למישהו אחר?</string>
     <string name="Candy_Name">ממתק</string>
     <string name="Capotain_Name">כובע פוריטני</string>
@@ -188,6 +189,7 @@
     <string name="ChaosCrystal_Fuse">מזג</string>
     <string name="ChaosCrystal_Info">אתה מרגיש זרמי אנרגיה זורמים דרך ידיך כשאתה מחזיק אותו.</string>
     <string name="ChaosCrystal_Info_2">כן! עכשיו אתה יודע שאפשר למזג אותו עם אחד מהפריטים שלך, אבל מה הלאה?</string>
+    <string name="ChaosCrystal_Name_2">קריסטל תוהו</string>
     <string name="ChaosCrystal_SwordFused">הגביש סופג את נשקך ולובש צורת חרב</string>
     <string name="ChaosCrystal_Use">השתמש</string>
     <string name="ChaosShield_desc">מגן הכאוס הוא תוצאה של מיזוג גביש כאוס עם מגן רגיל, מה שגורם לו להפגין השפעות כאוטיות אקראיות בעת חסימה מוצלחת.</string>
@@ -356,6 +358,7 @@
     <string name="FrostAuraBuff_Name">הילת כפור</string>
     <string name="Frost_Shatter">הקור גורם ל-%s להתנפץ!</string>
     <string name="FullFaceMask_Info">מסכת גז היא מסכה המשמשת להגנה על הלובש מפני שאיפת מזהמים באוויר וגזים רעילים. המסכה יוצרת כיסוי אטום על האף, הפה והעיניים.\n\nמסננים חסרים ממסכה זו אבל היא עדיין נראית מגניבה.</string>
+    <string name="FuryBuff_Name">זעם</string>
     <string name="GameScene_Chasm">צעדיך מהדהדים ברחבי הצינוק.</string>
     <string name="GameScene_NightMode">היה זהיר, כי המבוך מסוכן עוד יותר בלילה!</string>
     <string name="GameScene_Secrets">האווירה רומזת שהקומה הזו מסתירה סודות רבים.</string>
@@ -434,6 +437,7 @@
     <string name="HeroSubClass_NameWard">שומרת</string>
     <string name="HeroSubClass_NameWitchdoctor">רופא אליל</string>
     <string name="Hero_AnotherTry">מתת.\n האם תרצה לנסות שוב?</string>
+    <string name="Hero_Name">אתה</string>
     <string name="Hero_Name_Objective">אותך</string>
     <string name="Hero_Search">חיפוש</string>
     <string name="Hero_StaBurning">אתה נדלקת!</string>
@@ -682,6 +686,7 @@
     <string name="Potion_Colors_8">ענבר</string>
     <string name="Potion_Info">בקבוקון זה מכיל נוזל %s מסתחרר. מי יודע מה יקרה כשתשתה או תזרוק אותו?</string>
     <string name="Potion_ItemFliesAway">%s פשוט עף מהידיים שלך.</string>
+    <string name="Potion_MoistenUseless">נראה שבזבזת את השיקוי הזה.</string>
     <string name="Potion_No">לא, שיניתי את דעתי</string>
     <string name="Potion_RuneDissaperaed">הרונה נעלמה מ-%s.</string>
     <string name="Potion_Shatter">הבקבוק מתנפץ ו-%s נוזל מתפזר ללא נזק</string>
@@ -716,6 +721,7 @@
     <string name="Ration_Info">אין כאן שום דבר מפואר: בשר מיובש, כמה ביסקוויטים — דברים כאלה.</string>
     <string name="RawFish_Taste">דגיגי!</string>
     <string name="RegenerationBuff_Info">הפונקציה לריפוי טבעי ממומשת בצורת באף כדי להקל על הדברים.</string>
+    <string name="RemixedPixelDungeonApp_sendCrash">המשחק שלנו קרס...\n סליחה.\nאנא שלחו לנו דוח קריסה כדי לעזור לנו לתקן זאת.</string>
     <string name="ResultDescriptions_Boss">הובס על ידי ה-%1 ברמה %2</string>
     <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
     <string name="ResultDescriptions_Poison">מת מרעל בקומה %d</string>
@@ -768,6 +774,7 @@
     <string name="ScrollOfLullaby_Info3">המגילה משמיעה מנגינה מרגיעה והמפלצות נרדמות!</string>
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
     <string name="ScrollOfMirrorImage_Info">הלחש על מגילה זו ייצור תאומים אשלייתיים של הקורא, שירדפו אחר אויביו.</string>
+    <string name="ScrollOfPsionicBlast_Info">מגילה זו מכילה אנרגיה הרסנית, שניתן לרתום אותה בכוח הנפש כדי להסב נזק עצום לכל היצורים בשדה הראייה. הבזק אור נלווה יעוור זמנית את כולם באזור ההשפעה, כולל קורא המגילה.</string>
     <string name="ScrollOfRecharging_Name">מגילת טעינה</string>
     <string name="ScrollOfRemoveCurse_Info">הכתובת על המגילה הזו תסיר מיד מהנשק, השריון, הטבעות והפריטים הנישאים של הקורא כל קסם רע שעלול למנוע מהלובש להסיר אותם.</string>
     <string name="ScrollOfTeleportation_NoTeleport">אאורה קסומה חזקה של המקום הזה מונעת ממך לטלפורט!</string>
@@ -1150,6 +1157,7 @@
     <string name="town_deco_movies_door_desc">דלת זו נראית עשויה היטב במיוחד. סביר להניח שהיא מובילה למשהו מדהים.</string>
     <string name="town_deco_movies_door_name">דלת</string>
     <string name="town_deco_mud_desc">אדמה מופשרת באזור קפוא-עד זה.</string>
+    <string name="town_deco_painting_name">ציור</string>
     <string name="town_deco_pathway_name">שביל</string>
     <string name="town_deco_pedestal_desc">כן עם ספר קודש מונח עליו.</string>
     <string name="town_deco_pillar_desc">בימים עברו, עמוד זה שימש כתמיכה מצוינת וקישוט.</string>
@@ -1514,6 +1522,17 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

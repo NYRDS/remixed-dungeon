@@ -15,6 +15,7 @@
     <string name="AboutScene_SourceCode">Download de broncode van Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Speciale dank aan:</string>
     <string name="AboutScene_Translation">Lokalisatie door:</string>
+    <string name="AboutScene_Translation_Names">NYRDS &amp;amp; Omen267901</string>
     <string name="AboutScene_Txt_Intro">Remixed Dungeon door NYRDS gebaseerd op de broncode van Pixel Dungeon door Watabou.</string>
     <string name="Accuracy_Decreased">Waarom dacht ik dat ik dit %s kon gebruiken? Verkeerd gereedschap, verkeerde handen!</string>
     <string name="Accuracy_DecreasedDoctor">Elke slag met deze %s verspreidt onvolkomenheden. Mijn botenzaag geneest... dit besmet.</string>
@@ -184,6 +185,7 @@
     <string name="CagedKobold_Name_Objective">opgesloten kobold</string>
     <string name="Calm_Name">Kalmte</string>
     <string name="CandleOfMindVision_Info">Lijkt op een gewone kaars, niet iets wat je zou verwachten in een gevaarlijk duistere kelder. Raar genoeg is hij vrij warm aan de kant, ondanks dat hij nog niet was aangebrand.</string>
+    <string name="CandleOfMindVision_Info_Lighted">De kaars lichtte op het moment dat je hem uit je rugzak haalde. De vlam geeft een zwak paars licht, en als je er doorheen kijkt, worden alle nabijgelegen monsters zichtbaar voor je.</string>
     <string name="Candy_Info">Deze snoep ziet er zo mooi uit en ruikt ook lekker. Moet je hem echt aan iemand anders geven?</string>
     <string name="Candy_Name">snoepje</string>
     <string name="Capotain_Name">Puriteinse hoed</string>
@@ -397,6 +399,7 @@
     <string name="FrozenCarpaccio_Name">bevroren carpaccio</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
+    <string name="FuryBuff_Name">Woede</string>
     <string name="GameScene_NightMode">Wees voorzichtig, de kerker is \'s nachts nog gevaarlijker!</string>
     <string name="GameScene_Welcome">Welkom op niveau %d van Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Welkom terug op niveau %d van Remixed Dungeon!</string>
@@ -477,6 +480,7 @@
     <string name="HeroSubClass_NameWitchdoctor">toverdokter</string>
     <string name="Hero_AnotherTry">Je bent gestorven.\n Wil je het opnieuw proberen?</string>
     <string name="Hero_LockedDoor">Je hebt geen bijpassende sleutel</string>
+    <string name="Hero_Name">jij</string>
     <string name="Hero_Name_Objective">je</string>
     <string name="Hero_NewLevel">Welkom op niveau %d! Je bent nu gezonder en scherper. Het is makkelijker geworden om vijanden te raken en hun aanvallen te ontwijken.</string>
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
@@ -499,6 +503,7 @@
     <string name="Hunger_Starving_1">Je bent uitgehongerd!</string>
     <string name="HuntressArmor_NoEnemies">Geen vijanden in zicht</string>
     <string name="IceCaves_TileDescDeco">Deze gnoll is levend bevroren. Blijkbaar was hij al een tijdje daar.</string>
+    <string name="IceCaves_TileDescStatue">Weer een afschuwelijk standbeeld... Oh wacht, dat is een bevroren gnol.</string>
     <string name="IceCaves_TileGrass">Bevroren gras.</string>
     <string name="IceCaves_TileHighGrass">Bevroren hoog gras</string>
     <string name="IceElemental_Gender">masculine</string>
@@ -573,6 +578,7 @@
     <string name="Leech_Name_2">Vampier %s</string>
     <string name="Level_TileAlchemy">Alchemiepot</string>
     <string name="Level_TileBarricade">Barricade</string>
+    <string name="Level_TileChasm">Afgrond</string>
     <string name="Level_TileDefault">\???</string>
     <string name="Level_TileDescAlchemy">Laat hier wat zaden vallen om een drank te brouwen.</string>
     <string name="Level_TileDescBarricade">De houten barricade zit stevig, maar is over de jaren uitgedroogd. Zal hij branden?</string>
@@ -677,6 +683,7 @@
     <string name="NecromancerNPC_Message4">Er is iets bijzonders verstopt in de Necropolis.</string>
     <string name="NecromancerNPC_Name">nekromant</string>
     <string name="NecromancerRobe_Info">Dit gewaad stelt de Nekromant in staat om een Doodsling op te roepen ten koste van 5 zielen. De Doodsling is een ondode dienaar die sterker wordt samen met zijn meester.</string>
+    <string name="Necromancer_ACSpecial">NEKROMANTIE</string>
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
     <string name="Necromancy_SoulsCountLabel">Zielen</string>
     <string name="Necromancy_Title">Necromantie</string>
@@ -773,6 +780,7 @@
     <string name="Potion_Colors_3">jade</string>
     <string name="Potion_Colors_8">amber</string>
     <string name="Potion_ItemFliesAway">%s vliegt zomaar uit je handen weg.</string>
+    <string name="Potion_MoistenUseless">Het lijkt erop dat je dit drankje net hebt verspild.</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
     <string name="Potion_SelectForMoisten">Selecteer een item om te bevochtigen</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
@@ -815,6 +823,7 @@
     <string name="RawFish_Name">rauwe vis</string>
     <string name="RawFish_Taste">Visachtig!</string>
     <string name="RegenerationBuff_Info">De functie voor natuurlijke regeneratie is in een buff-vorm om het makkelijker te maken.</string>
+    <string name="RemixedPixelDungeonApp_sendCrash">Onze game is gecrasht...\n Sorry.\nStuur ons het crashrapport om ons te helpen het te verhelpen.</string>
     <string name="ResultDescriptions_Bleeding">Verstorven op niveau %d</string>
     <string name="ResultDescriptions_Boss">Vermoord door de %1$s op niveau %2$d</string>
     <string name="ResultDescriptions_Burning">Verbrand op niveau %d</string>
@@ -880,6 +889,7 @@
     <string name="ScrollOfLullaby_Info3">De scroll spreekt een kalmerende melodie uit en de monsters vallen in slaap!</string>
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
     <string name="ScrollOfMagicMapping_Name">Scroll van Magische Kaartvorming</string>
+    <string name="ScrollOfPsionicBlast_Info">Deze scroll bevat vernietigende energie, die psionisch kan worden gekanaliseerd om massale schade toe te brengen aan alle wezens binnen het gezichtsveld. Een begeleidende lichtflits zal tijdelijk iedereen in het effectgebied verblinden, inclusief de lezer van de scroll.</string>
     <string name="ScrollOfRemoveCurse_Name">Schrift van Vervloeking Verwijderen</string>
     <string name="ScrollOfRemoveCurse_Proced">Je zak gloeit met een reinigend licht, en een kwaadaardige energie verdwijnt.</string>
     <string name="ScrollOfSummoning_Info">Bij voorlezen zal deze rol een van de monsters uit het huidige kerker-niveau oproepen. En als de wil van het monster zwak genoeg is, zal het je dienaar worden.</string>
@@ -1375,6 +1385,7 @@
     <string name="town_deco_magenta_carpet_desc">De magenta kleur van dit tapijt doet denken aan lokale wijn.</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
     <string name="town_deco_mud_desc">Ontdooide grond in dit permafrostgebied.</string>
+    <string name="town_deco_painting_name">Schilderij</string>
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_pole_desc">Een hoge paal ontworpen om de touw te spannen.</string>
     <string name="town_deco_porch_name">Veranda</string>
@@ -1414,6 +1425,19 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
