@@ -106,6 +106,7 @@
     <string name="BishopNPC_Desc">בישוף הכנסייה הקדושה של סנטה אדון המעמקים</string>
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name_Objective">בישוף</string>
+    <string name="Bishop_great_bless">ברכה גדולה - %d g</string>
     <string name="Bishop_text">אני מתפלל עבורך יומם ולילה, ילדי.</string>
     <string name="BlackCat_Desc">זהו חתול שחור</string>
     <string name="BlackCat_Gender">feminine</string>
@@ -1501,6 +1502,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

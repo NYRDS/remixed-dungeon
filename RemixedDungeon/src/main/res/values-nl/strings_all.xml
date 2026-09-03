@@ -846,6 +846,7 @@
     <string name="RottingFist_Gender">masculine</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyCrossbow_Gender">masculine</string>
+    <string name="RubyCrossbow_Info">Dit dodelijke wapen is werkelijk een meesterwerk van dwergentechniek.</string>
     <string name="Rudolph_Info">Wat is er feestelijker dan een gloeiende rode neus? Samen met een gewei, natuurlijk.</string>
     <string name="RunicSkull_Desc">Voor iets kunstmatig gemaakts lijkt deze schedel te veel op een echte. Je ziet ook een zwakke gloed om het heen.</string>
     <string name="RunicSkull_Gender">masculine</string>
@@ -1402,6 +1403,7 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 

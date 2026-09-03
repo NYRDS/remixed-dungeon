@@ -577,6 +577,7 @@
     <string name="MimicPie_Name">ميميكي</string>
     <string name="MimicPie_Name_Objective">ميميكي</string>
     <string name="Mimic_Gender">masculine</string>
+    <string name="MirrorImage_Desc">هذا الوهم يشبهك كثيرًا، لكنه شاحب بعض الشيء ويومض قليلاً.</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">ثنائي</string>
     <string name="MissileWeapon_Info2">بسبب قوتك غير الكافية، تتناقص دقة وسرعة هجومك بهذا %s.</string>
@@ -1193,6 +1194,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

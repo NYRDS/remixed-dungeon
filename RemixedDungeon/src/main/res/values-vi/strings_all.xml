@@ -647,6 +647,7 @@
     <string name="MissileWeapon_No">Không, tôi đã đổi ý rồi</string>
     <string name="MobAi_status">Con %1$s này đang %2$s</string>
     <string name="Mob_Attacking">Hãy coi %s này như đã chết!</string>
+    <string name="Mob_Died">Bạn nghe thấy thứ gì đó đã chết ở phía xa</string>
     <string name="Mob_GoingTo">Đang đi rồi!</string>
     <string name="Mob_ItemUse">%1$s sử dụng %2$s</string>
     <string name="Mob_StaControlledStatus">%s này đang bị ám bởi ma quỷ</string>
@@ -1356,6 +1357,7 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
