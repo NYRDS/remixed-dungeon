@@ -466,6 +466,7 @@
     <string name="HeroClass_PlagueDoctorPerks_4">Plagedokters lijden aan grote accuraatheidsstraffen zonder hun geliefde Beenzaag in de hand en kunnen geen afstandswapens gebruiken.</string>
     <string name="HeroClass_Priest">priester</string>
     <string name="HeroClass_Rog">schurke</string>
+    <string name="HeroClass_RogPerks_1">Schurken identificeren het type van een ring bij het uitrusten ervan.</string>
     <string name="HeroClass_RogPerks_2">Schurken zijn bedreven in lichte bepantsering en ontwijken aanvallen er beter in.</string>
     <string name="HeroClass_War">krijger</string>
     <string name="HeroClass_WarPerks_4">Krachtpotionen zijn van het begin bekend.</string>
@@ -821,6 +822,7 @@
     <string name="RatKing_Info1">Ik slaap niet!</string>
     <string name="RatKing_Info2">Wat is dit? Ik heb geen tijd voor deze onzin. Mijn koninkrijk regeert zichzelf niet!</string>
     <string name="RatSkullBuff_Name">Ratverdelger</string>
+    <string name="RatSkull_Info">Het zou een mooie jagdtrofee kunnen zijn, maar het ruikt te slecht om het aan de muur te hangen.</string>
     <string name="RatSkull_Info2">Aan de andere kant bewijst het dat de eigenaar in staat is om ratten te doden, zelfs grote en stinkende.</string>
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">buidelrat</string>
@@ -1410,6 +1412,7 @@
     <string name="town_deco_skullboard_name">trofeerek</string>
     <string name="town_deco_snowy_plate_name">besneeuwde plaat</string>
     <string name="town_deco_statue_blood_desc">Een majestueuze standbeeld van een engel die een kom bloed vasthoudt.</string>
+    <string name="town_deco_statue_water_desc">Een majestueuze standbeeld van een engel die een kom met water vasthoudt.</string>
     <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
     <string name="town_deco_stones_name">Stenen</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
@@ -1435,6 +1438,9 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 

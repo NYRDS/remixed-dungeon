@@ -396,6 +396,7 @@
     <string name="FrozenCarpaccio_Info3">Sảng khoái!</string>
     <string name="FrozenCarpaccio_Name">carpaccio đông lạnh</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
+    <string name="FuryBuff_Info">Đôi mắt đỏ máu vì cơn giận dữ bên trong.</string>
     <string name="FuryBuff_Name">Cuồng Nộ</string>
     <string name="GameScene_Chasm">Bước chân của bạn vang vọng khắp hầm ngục.</string>
     <string name="GameScene_NightMode">Hãy cẩn thận, hầm ngục còn nguy hiểm hơn vào ban đêm!</string>
@@ -483,6 +484,7 @@
     <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="HeroSubClass_NameWitchdoctor">thầy pháp</string>
     <string name="Hero_AnotherTry">Bạn đã chết.\n Bạn có muốn thử lại không?</string>
+    <string name="Hero_LevelUp">lên cấp!</string>
     <string name="Hero_Name">bạn</string>
     <string name="Hero_Name_Objective">bạn</string>
     <string name="Hero_NewLevel">Chào mừng đến cấp độ %d! Giờ bạn khỏe mạnh và tập trung hơn. Dễ dàng đánh trúng kẻ địch và né tránh đòn tấn công của chúng hơn.</string>
@@ -786,6 +788,7 @@
     <string name="Potion_Name">%s thuốc</string>
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
     <string name="Potion_RuneDissaperaed">Chữ ký biến mất khỏi %s.</string>
+    <string name="Potion_SureDrink">Bạn có chắc chắn muốn uống nó không? Trong hầu hết các trường hợp, bạn nên ném loại thuốc này vào kẻ thù của mình.</string>
     <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
     <string name="Prison_TileDescBookshelf">Đây có lẽ là dấu tích của một thư viện nhà tù. Liệu nó có cháy không?</string>
     <string name="PseudoPasty_Info">Đây là chiếc bánh nhân Cornwall chính hiệu với nhân truyền thống là thịt bò và khoai tây.</string>
@@ -1381,6 +1384,9 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
