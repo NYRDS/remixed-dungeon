@@ -142,6 +142,7 @@
     <string name="BlankScroll_ReallyBlank">Cuộn giấy này trống không</string>
     <string name="BleedingBuff_Name">Đang chảy máu</string>
     <string name="Bleeding_Death">Bạn đã chết vì mất máu...</string>
+    <string name="BlessedBuff_Name">Được Chúc Phước</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="BodyArmorBuff_Name">Giáp Cơ Thể</string>
     <string name="BodyArmorSpell_Info">Kích hoạt sức mạnh cơ bắp dự trữ, làm cho chúng tạm thời mạnh hơn, từ đó tăng đáng kể giáp của bạn nhưng đánh đổi tốc độ di chuyển.</string>
@@ -1377,6 +1378,7 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

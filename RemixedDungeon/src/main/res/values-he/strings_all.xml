@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">לטרוף</string>
     <string name="AC_Dissect">נתיחה</string>
@@ -41,7 +42,7 @@
     <string name="AmokDart_Name">חץ הטירוף</string>
     <string name="AmuletScene_Exit">בואו נקרא לזה יום</string>
     <string name="AmuletScene_Stay">עדיין לא סיימתי</string>
-    <string name="Amulet_Info">האמולט של ינדור הוא הארטיפקט החזק ביותר הידוע ממקור לא ידוע. נאמר שהוא יכול להגשים כל משאלה אם רצונו של הבעלים חזק מספיק כדי \&quot;לשכנע\&quot; אותו לעשות זאת.</string>
+    <string name="Amulet_Info">האמולט של ינדור הוא הארטיפקט החזק ביותר הידוע ממקור לא ידוע. נאמר שהוא יכול להגשים כל משאלה אם רצונו של הבעלים חזק מספיק כדי \"לשכנע\" אותו לעשות זאת.</string>
     <string name="ArmorKit_Name">ערכת שריון</string>
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
@@ -99,7 +100,7 @@
     <string name="Bee_Gender">masculine</string>
     <string name="Bee_Name_Objective">דבורה</string>
     <string name="BellaNPC_Angry">איך אתה מעז... אתה פשוט עני!</string>
-    <string name="BellaNPC_Desc">נערה שנראית מאוד אלגנטית. כל המראה שלה אומר לך \&quot;אני טובה מדי עבור כולם.\&quot;</string>
+    <string name="BellaNPC_Desc">נערה שנראית מאוד אלגנטית. כל המראה שלה אומר לך \"אני טובה מדי עבור כולם.\"</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">אין לי עניין בפשוטי עם כמוך!</string>
     <string name="BellaNPC_Name">בלה</string>
@@ -115,7 +116,7 @@
     <string name="BlackSkullOfMastery_BecomeLichDesc">ה-_ליץ\' הוא נקרומנסר שהגיע לשיא יכולותיו. קיים בין חיים ומוות, ה-_ליץ\' מצטיין בנקרומנסיה, אבל כישורי הלחימה שלו נמוכים בהרבה משל אדם רגיל.</string>
     <string name="BlackSkullOfMastery_RemainHumanDesc">או אם תשבור את הכישוף תוכל להשתמש בחפץ זה כמתוכנן.</string>
     <string name="BlackSkull_Gender">masculine</string>
-    <string name="BlackSkull_Info">גולגולת אובסידיאן קטנה. היא הייתה מקור כוחה של נקרופוליס, אך לאחר תבוסת הליצ\' נראה שהיא איבדה את כל כוחה. עם זאת, כשאתה מחזיק אותה בידיך, מחשבה מוזרה חולפת בראשך: \&quot;היא רעבה\&quot;.</string>
+    <string name="BlackSkull_Info">גולגולת אובסידיאן קטנה. היא הייתה מקור כוחה של נקרופוליס, אך לאחר תבוסת הליצ\' נראה שהיא איבדה את כל כוחה. עם זאת, כשאתה מחזיק אותה בידיך, מחשבה מוזרה חולפת בראשך: \"היא רעבה\".</string>
     <string name="BlackSkull_Ressurrect">הגולגולת השחורה הקימה את המפלצת המתה כדי לשרת אותך!</string>
     <string name="Blacksmith_Completed">אוי, חזרת... עדיף מאוחר מאשר אף פעם.</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
@@ -177,7 +178,7 @@
     <string name="Challenges_Names_9">אמנזיה</string>
     <string name="ChampionOfAirBuff_Name">אלוף האוויר</string>
     <string name="ChampionOfEarthBuff_Info">אלוף האדמה מגלם כוח בלתי מתפשר, שכן תכונה זו משפרת את עמידות היצור לנזק ומגדילה את החיוניות המקסימלית שלו. שינוי זה הופך אותו לאויב מאיים במעמקים המסוכנים, המסוגל להדוף התקפות בקלות ולהחזיק מעמד בקרב ממושך עם נחישות בלתי מעורערת.</string>
-    <string name="ChampionOfFireBuff_Info">\&quot;שרוי בזעם הלהבות, מאפיין זה מגביר את האכזריות ואת כוח הלחימה של היצור. אלוף האש צץ כיריב מאיים, המשחרר מתקפות הרסניות שיכולות לעטוף את אויביו בלהבות צורבות, מטיל אימה בכל מי שמעז להתנגד לו.</string>
+    <string name="ChampionOfFireBuff_Info">\"שרוי בזעם הלהבות, מאפיין זה מגביר את האכזריות ואת כוח הלחימה של היצור. אלוף האש צץ כיריב מאיים, המשחרר מתקפות הרסניות שיכולות לעטוף את אויביו בלהבות צורבות, מטיל אימה בכל מי שמעז להתנגד לו.</string>
     <string name="ChampionOfFireBuff_Name">אלוף האש</string>
     <string name="ChampionOfWaterBuff_Info">אלוף המים מגלם את כוח האוקיינוסים הבלתי מתפשר, ומשפר את החוסן והעוז של היצור. כתוצאה מכך, הוא הופך ליריב איתן, המסוגל לעמוד במתקפה בלתי פוסקת של התקפות ולעמוד כשומר בלתי מתפשר מול המצוקות.</string>
     <string name="ChaosBlade_Gender">masculine</string>
@@ -533,6 +534,7 @@
     <string name="LibrarianNPC_Message_Instruction">ש-שלום. ברוכים הבאים לספרייה. כאן תוכלו למצוא מידע על כל מיני דברים שניתן למצוא בצינוק... בעצם אנחנו יכולים לספק רק ידע שנמצא על ידי הרפתקנים. זה... זה קצת מביך. אז בכל פעם שתבקרו אותנו, כנראה שיהיו דברים חדשים לקרוא.</string>
     <string name="LibrarianNPC_Name_Objective">ספרן</string>
     <string name="LibraryBook_Description">הספר העתיק הזה עצום בגודלו. הוא מכיל את כל הידע שהרפתקנים גילו והביאו מהמבוך.</string>
+    <string name="Lich_Desc">הנקרומנסר מצא את מותו בעומק הנקרופוליס, ובהדרגה, כוחות הרשע שזרמו לגופו הפכו אותו לליץ\'. מכשף מוות, בובה חסרת רצון, נשלט על ידי כוחות זדוניים...</string>
     <string name="Lich_DieInfo">מעולם לא אהבתי את הנקרומנסר הזה. הגיע הזמן לחזור לרמה 7 ולמצוא דרך אחרת להרפתקה החדשה.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
@@ -597,7 +599,7 @@
     <string name="NecromancerNPC_Name">נקרומנסר</string>
     <string name="NecromancerNPC_Name_Objective">נקרומנסר</string>
     <string name="Necromancer_ACSpecial">נֶקְרוֹמַנְטִיָּה</string>
-    <string name="Necromancy_NotEnoughSouls">אין לך מספיק נשמות כדי להטיל כישוף \&quot;%1\&quot;.</string>
+    <string name="Necromancy_NotEnoughSouls">אין לך מספיק נשמות כדי להטיל כישוף \"%1\".</string>
     <string name="NecrotismBuff_Info">סימן המוות עצמו, הצחנה שממנו משפיעה על הקרובים וגורמת להם לחלוק את אותו גורל.</string>
     <string name="Necrotism_ACSpecial">נֶקְרוֹטִיזְם</string>
     <string name="Necrotism_Death">מתת מנקרוטיזם...</string>
@@ -658,7 +660,7 @@
     <string name="PlagueDoctorQuest_5_1_Epilogue">*הוא בוהה בשתי ה*סוקובוס*, חיוך מאושר מתפשט מתחת למסכתו.* נהדר! מופלא! זה יפתח כל כך הרבה... אפשרויות! *הוא פונה אליך, קולו סמיך מהכרת תודה... ומשהו נוסף.* המאמצים שלך... לא יישכחו. אני חייב לך את תודתי העמוקה ביותר. *מבטו מתעכב על ה*סוקובוס* לרגע ארוך מדי, לפני שהוא נסוג למעבדתו, ממלמל על גילוי סודות הפיתוי.*</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*מחשבותיו נודדות כשהוא מדבר, קולו נעשה שקט יותר, בקושי לחישה.* הביא לי שתי _סוקובוסיות_… בחיים. כוחן... זה מפתה.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*הוא מגמגם, קולו נסדק כמו ענף שביר*. א-א-ה, _סוקוביות_! שתיים... כן, שתיים, בחיים! זה... הממ... למחקר שלי! אתה מבין... הפורומונים שלהן... זה חיוני להבנת האיזון העדין של... אה... *הוא משתתק, ידו הגרומה עולה בעצבנות לתקן את המסכה, עיניו נורות לעברך בעוצמה קדחתנית*. המהות שלהן... זה פאזל... פאזל יפה, מסתורי! *הוא משתעל באלימות, מנסה להחזיר את שלוותו*. אני מבטיח, עבור הבאת שתיים מה... היצורים האלה... תהיה לך הכרת התודה הנצחית שלי. תחשוב על זה כעל... מתנה לידע! כן! לידע!</string>
-    <string name="PlagueDoctorQuest_AllDone">*הוא פולט צחוק יבש וצורמני.* \&quot;מעשיך, הם חשפו סודות מעבר לכל מידה! הידע שנרכש... הוא פועם בתוכי, סימפוניה של גילויים. אבל ידע,\&quot; הוא מוסיף, קולו צונח ללחישה קונספירטיבית, \&quot;ידע הוא כוח. וכוח... אה... זהו השיקוי המשכר ביותר.\&quot; הוא נועץ בך מבט לרגע, עיניו האמתיסטיות בוערות באינטנסיביות קדחתנית. \&quot;אולי,\&quot; הוא ממלמל, \&quot;דרכינו יצטלבו שוב. כי עדיין יש... תעלומות... רבות... שטרם נפתרו.\&quot;</string>
+    <string name="PlagueDoctorQuest_AllDone">*הוא פולט צחוק יבש וצורמני.* \"מעשיך, הם חשפו סודות מעבר לכל מידה! הידע שנרכש... הוא פועם בתוכי, סימפוניה של גילויים. אבל ידע,\" הוא מוסיף, קולו צונח ללחישה קונספירטיבית, \"ידע הוא כוח. וכוח... אה... זהו השיקוי המשכר ביותר.\" הוא נועץ בך מבט לרגע, עיניו האמתיסטיות בוערות באינטנסיביות קדחתנית. \"אולי,\" הוא ממלמל, \"דרכינו יצטלבו שוב. כי עדיין יש... תעלומות... רבות... שטרם נפתרו.\"</string>
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlateArmor_Desc">לוחות מתכת עצומים מחוברים יחד לחליפה המספקת הגנה ללא תחרות לכל הרפתקן חזק מספיק לשאת את משקלה המדהים.</string>
     <string name="PlateArmor_Name">שריון לוחות</string>
@@ -771,6 +773,7 @@
     <string name="ScrollOfCurse_Name">מגילת קללה</string>
     <string name="ScrollOfIdentify_Info">חושף לצמיתות את כל הסודות של פריט בודד.</string>
     <string name="ScrollOfIdentify_Name">מגילת זיהוי</string>
+    <string name="ScrollOfLullaby_Info1">המגילה משמיעה מנגינה מרגיעה.</string>
     <string name="ScrollOfLullaby_Info3">המגילה משמיעה מנגינה מרגיעה והמפלצות נרדמות!</string>
     <string name="ScrollOfMagicMapping_Name">מגילת מיפוי קסם</string>
     <string name="ScrollOfMirrorImage_Info">הלחש על מגילה זו ייצור תאומים אשלייתיים של הקורא, שירדפו אחר אויביו.</string>
@@ -785,7 +788,7 @@
     <string name="ScrollOfWeaponUpgrade_Info">גלילה זו תשדרג נשק קרבי, ותשפר את איכותו. בניגוד לגלילת שדרוג רגילה, גרסה מיוחדת זו לעולם לא תהרוס קסם על נשק. נהפוך הוא, היא מסוגלת להעניק קסם אקראי לנשק לא מקסום.</string>
     <string name="ScrollOfWeaponUpgrade_Name">מגילת שדרוג נשק</string>
     <string name="Scroll_Info">המגילה הזו מכוסה בכתב בלתי ניתן לפענוח, ונושאת כותרת של רונה %s. מי יודע מה יקרה כשיקראו אותה בקול רם?</string>
-    <string name="Scroll_Name">מגילת \&quot;%s\&quot;</string>
+    <string name="Scroll_Name">מגילת \"%s\"</string>
     <string name="Scroll_Runes_10">אודל</string>
     <string name="Scroll_Runes_13">איוואז</string>
     <string name="Scroll_Runes_4">GYFU</string>
@@ -841,9 +844,9 @@
     <string name="SoulShard_Gender">masculine</string>
     <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">מוט עץ דק שבקצהו ברזל מחודד.</string>
-    <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
+    <string name="SpellBook_Info_Identified">בין הדפים האלה גילית טקסט מלא של כישוף \"%1$s\".\n\" %2$s \"</string>
     <string name="Spell_SelectAChar">בחר מטרה.</string>
-    <string name="Spells_NotEnoughSP">אין לך מספיק מנה כדי ללחוש לחש \&quot;%1$s\&quot;.</string>
+    <string name="Spells_NotEnoughSP">אין לך מספיק מנה כדי ללחוש לחש \"%1$s\".</string>
     <string name="Spells_NotInOwnBody">אתה לא יכול לבצע %s כאשר הנשמה שלך מנותקת מהגוף.</string>
     <string name="Spells_SummonLimitReached">%1$s: הגעת למגבלת הזימון (מקסימום נוכחי: %2$d)!</string>
     <string name="SpiderArmor_Gender">feminine</string>
@@ -890,7 +893,7 @@
     <string name="StartScene_New">משחק חדש</string>
     <string name="StartScene_No">לא, חזרה לתפריט הראשי</string>
     <string name="StartScene_Warning">ההתקדמות הנוכחית שלך במשחק תימחק.</string>
-    <string name="StartScene_WinGame">כדי לפתוח \&quot;אתגרים\&quot;, נצח את המשחק עם כל סוג דמות.</string>
+    <string name="StartScene_WinGame">כדי לפתוח \"אתגרים\", נצח את המשחק עם כל סוג דמות.</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Stench_Txt">%s של סירחון</string>
     <string name="StrongShield_desc">המגן המלבני הזה מצופה בלוחות ברזל ומקושט בבד צבעוני. הוא כבד משמעותית, אך מסוגל לחסום נזק רב יותר.</string>
@@ -949,7 +952,7 @@
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Undead_Defense">נבלם</string>
     <string name="Undead_Gender">masculine</string>
-    <string name="Using_Failed_Because_Magic">קסם רב עוצמה מונע ממך להשתמש ב\&quot;%s\&quot;.</string>
+    <string name="Using_Failed_Because_Magic">קסם רב עוצמה מונע ממך להשתמש ב\"%s\".</string>
     <string name="VampireSkull_Info">המסכה הזו עשויה מגולגולת של ערפד טבעית לחלוטין. למעשה זהו גולגולת... גולגולת של ערפד בעל ראש גדול. מצמרר.</string>
     <string name="VertigoBuff_Info">תחושת הסחרחורת מקשה על הליכה ישרה!</string>
     <string name="VileEssence_Info">جوهر فساد مركّز تم حصاده من عدو مهزوم. هذه المادة الداكنة تنبض بطاقة خبيثة وتُقدَّر كثيراً في العمليات الكيميائية.</string>
@@ -1522,6 +1525,8 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
 
 
 

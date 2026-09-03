@@ -789,6 +789,7 @@
     <string name="ScaleArmor_Name">درع حرشفي</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name_Objective">فزاعة</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">أهلاً يا بني الصغير، كيف حالك؟\nلديّ شيء مثير لك!\n\nكم سأكون ممتناً،\nلو ذهبت وجمعت بعض الحلوى من أجلي!\n\n</string>
     <string name="Scorpio_Desc">تتجنب هذه المخلوقات الشيطانية الشبيهة بالعنكبوت العملاقة القتال القريب بكل وسيلة، مطلقة أشواكًا مسننة مشلولة من مسافات بعيدة.</string>
     <string name="Scorpio_Gender">masculine</string>
     <string name="ScrollHolder_Info">يمكنك وضع أي عدد من اللفائف في هذه الحاوية الأنبوبية. يوفر مساحة في حقيبتك ويحمي اللفائف من النار.</string>
@@ -1170,6 +1171,7 @@
     <string name="town_deco_dungeon_door_desc">مدخل إلى الزنزانة.</string>
     <string name="town_deco_emptyboard_desc">الرف العادي لوضع الأشياء للعرض</string>
     <string name="town_deco_entrance_name">مدخل</string>
+    <string name="town_deco_exit_desc">من غير المعروف ما ينتظرك إذا نزلت هذه الدرجات.</string>
     <string name="town_deco_fence_desc">سياج خشبي مغطى بالثلج.</string>
     <string name="town_deco_fence_name">سياج</string>
     <string name="town_deco_fireplace_name">المدفأة</string>
@@ -1217,6 +1219,8 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
 
 
 

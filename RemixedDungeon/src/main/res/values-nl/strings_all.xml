@@ -236,6 +236,7 @@
     <string name="Char_Hit_2">%1$s raakte %2$s</string>
     <string name="Char_Kill_0">%s heeft je gedood...</string>
     <string name="Char_Kill_1">%s heeft je gedood...</string>
+    <string name="Char_Name">wezen</string>
     <string name="Char_StaAmok">amok</string>
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaDizzy">duizelig</string>
@@ -683,6 +684,7 @@
     <string name="NecromancerNPC_Message4">Er is iets bijzonders verstopt in de Necropolis.</string>
     <string name="NecromancerNPC_Name">nekromant</string>
     <string name="NecromancerRobe_Info">Dit gewaad stelt de Nekromant in staat om een Doodsling op te roepen ten koste van 5 zielen. De Doodsling is een ondode dienaar die sterker wordt samen met zijn meester.</string>
+    <string name="NecromancerRobe_Info2">Deze robes is bedekt met donkere magie en zal de Nekromant in staat stellen de zielen van gevallen monsters te consumeren.</string>
     <string name="Necromancer_ACSpecial">NEKROMANTIE</string>
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
     <string name="Necromancy_SoulsCountLabel">Zielen</string>
@@ -1145,6 +1147,7 @@
     <string name="Wand_Name">%s toverstaf</string>
     <string name="Wand_Prompt">Kies een richting om te zappen</string>
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
+    <string name="Wand_Wood">Deze dunne %s toverstaf voelt warm aan. Wie weet wat hij doet als je hem gebruikt?</string>
     <string name="Wand_Wood_Types_0">hulst</string>
     <string name="Wand_Wood_Types_1">taxus</string>
     <string name="Wand_Wood_Types_2">ebbenhout</string>
@@ -1173,6 +1176,7 @@
     <string name="Weightstone_WndCancel">Laat maar</string>
     <string name="Weightstone_WndChoice">Hoe wil je je %s balanceren?</string>
     <string name="Weightstone_WndSpeed">Voor snelheid</string>
+    <string name="Welcome_Text_32_1">    remix.32.1\n\n    - Gameplay:\n\n    -- Pesten Dokter questlijn\n\n    -- Lichamen van monsters nu enigszins bruikbare items\n\n    -- Betere huisdierenbesturing\n\n    - UX:\n\n    -- Verbeterd beheer van saves\n\n    - Modding:\n\n    -- Lokale mod installatiemethoden\n\n    -- Aangepaste items kunnen nu acties uitvoeren terwijl ze in stapels liggen\n\n    - Bugs opgelost\n\n    </string>
     <string name="Welcome_Title">Welkom!</string>
     <string name="WndBag_BuySubtitle">(Je hebt %dg)</string>
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
@@ -1425,6 +1429,10 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
 
 
 
