@@ -297,6 +297,7 @@
     <string name="ConcreteBlock_Name">Zwaar betonnen blok</string>
     <string name="ConfusionGas_Info">Hier zweeft een wolk verwarrend gas.</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
+    <string name="CorpseDust_Info2">Misschien omdat het er maar aan vast te houden je al ongerust en boos maakt.</string>
     <string name="CorpseDust_Name">lijkenstof</string>
     <string name="CorpseExplosion_Name">Lijk Explosie</string>
     <string name="Crab_Gender">masculine</string>
@@ -715,6 +716,7 @@
     <string name="Paralysis_Name_0">Verdovende %s</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
     <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
+    <string name="PetInventory_GaveItem">Gaf %1 aan %2</string>
     <string name="PetInventory_HeroBackpackFull">Je rugzak is vol</string>
     <string name="PetInventory_TakeFromPet">Nemen van huisdier</string>
     <string name="PetInventory_Title">Huisdiereninventaris</string>
@@ -1114,6 +1116,7 @@
     <string name="Typical_Damage">Typische schade</string>
     <string name="Undead_Defense">geblokkeerd</string>
     <string name="Undead_Gender">masculine</string>
+    <string name="Undead_Name_Objective">on-dode dwerg</string>
     <string name="Using_Failed_Because_Blind">Je kunt \\&quot;%s\\&quot; niet gebruiken terwijl je verblind bent.</string>
     <string name="Using_Failed_Because_Magic">Krachtige magie voorkomt dat je \&quot;%s\&quot; gebruikt.</string>
     <string name="VampireSkull_Info">Deze masker is gemaakt van een volledig natuurlijke vampierschedel. Eigenlijk is het een vampierschedel... schedel van een grootkopige vampier. Griezelig.</string>
@@ -1131,6 +1134,7 @@
     <string name="WandOfFirebolt_Name">Toverstaf van Vuurpijl</string>
     <string name="WandOfFlock_Name">Toverstaf van de Kudde</string>
     <string name="WandOfFlock_SheepBaa_3">Baa...</string>
+    <string name="WandOfIcebolt_Info">Deze toverstaf lanceert een ijsbout, die lichte schade toebrengt aan het doelwit. Er is ook een kans om de vijand te vertragen of zelfs te bevriezen.</string>
     <string name="WandOfIcebolt_Info1">Je hebt jezelf gedood met je eigen IJsbout...</string>
     <string name="WandOfIcebolt_Name">IJsbultstaf</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
@@ -1337,6 +1341,8 @@
     <string name="Zombie_Name_Objective">zombie</string>
     <string name="deco_candle_desc">Grote kaars</string>
     <string name="gdpr_title">Personaliseer uw advertentie-ervaring</string>
+    <string name="town_deco_armoronhanger_desc">Iets wat lijkt op pantser op een hanger.</string>
+    <string name="town_deco_armoronhanger_name">Pantser</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
     <string name="town_deco_armorstand_plate_desc">Volgens de koopman behoorde deze zware plastruim ooit toe aan een groot krijger.</string>
     <string name="town_deco_armorstand_scale_name">Schubbenpantser</string>
@@ -1429,6 +1435,12 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
 
 
 

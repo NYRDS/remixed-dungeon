@@ -169,6 +169,7 @@
     <string name="CagedKobold_Message1">من فضلك...</string>
     <string name="CagedKobold_Name">كوبولد مسجون</string>
     <string name="CagedKobold_Name_Objective">كوبولد مسجون</string>
+    <string name="Calm_Cast">%s يهدأ.</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info">يبدو كشمعة عادية، ليس شيئاً تتوقع العثور عليه في زنزنة خطيرة. الغريب أنه دافئ جداً عند لمسه، رغم أنه لم يُشعل بعد.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
@@ -640,6 +641,7 @@
     <string name="Paralysis_Name_0">مشلل %s</string>
     <string name="PetInventory_ACGiveToPet">أَعْطِ لِلْحَيَوَانِ الأَلِيفِ</string>
     <string name="PetInventory_ACTakeFromPet">خذ من الحيوان الأليف</string>
+    <string name="PetInventory_GaveItem">أعطيت %1 لـ %2</string>
     <string name="PetInventory_GiveN">أعط %d</string>
     <string name="PetInventory_PetBackpackFull">حقيبة الحيوان الأليف ممتلئة</string>
     <string name="PetInventory_TakeFromPet">خذ من الحيوان الأليف</string>
@@ -848,6 +850,7 @@
     <string name="Shielded_Name_Objective">الوحش المحمي</string>
     <string name="ShootInEye_Name">رمية في العين</string>
     <string name="Shopkeeper_Sell">اختر عنصرًا لبيعه</string>
+    <string name="Shopkeeper_SellPrompt">لدي أشياء للبيع</string>
     <string name="ShortSword_ACReforge">إعادة الصياغة</string>
     <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Name">سيف قصير</string>
@@ -970,6 +973,7 @@
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
+    <string name="Undead_Name_Objective">قزم ميت حي</string>
     <string name="Using_Failed_Because_Magic">سحر قوي يمنعك من استخدام \&quot;%s\&quot;.</string>
     <string name="VertigoBuff_Info">الشعور بالدوار يجعل المشي في خط مستقيم أكثر صعوبة!</string>
     <string name="VileEssence_Info">جوهر مركز من الفساد تم حصاده من عدو مهزوم. ينبض هذا الجوهر المظلم بطاقة خبيثة ويُقدّر كثيرًا في العمليات الكيميائية.</string>
@@ -1219,6 +1223,10 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
 
 
 

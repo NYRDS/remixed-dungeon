@@ -43,6 +43,8 @@
     <string name="AmuletScene_Stay">Tôi chưa xong đâu</string>
     <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \&quot;thuyết phục\&quot; nó làm như vậy.</string>
     <string name="Amulet_Name">Bùa Yendor</string>
+    <string name="Anesthesia_Info">Gây ra giấc ngủ sâu, phi tự nhiên cho mục tiêu. Ngay cả những đòn tấn công tàn bạo nhất cũng không đánh thức được chúng khỏi giấc ngủ này.</string>
+    <string name="Anesthesia_Name">Gây mê</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="ArmorKit_ACAplly">ÁP DỤNG</string>
     <string name="ArmorKit_Name">bộ nâng cấp giáp</string>
@@ -947,6 +949,7 @@
     <string name="Shopkeeper_BuyPrompt">Để tôi xem hàng hóa của bạn</string>
     <string name="Shopkeeper_Desc">Người đàn ông này trông giống như một thương nhân ở khu thương mại thành phố lớn hơn là ở hang động. Giá cả của anh ấy giải thích vì sao anh ấy thích làm ăn ở đây.</string>
     <string name="Shopkeeper_Name">Người bán hàng</string>
+    <string name="Shopkeeper_SellPrompt">Tôi có đồ để bán</string>
     <string name="ShortSword_ACReforge">ĐÁNH LẠI</string>
     <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Nó quả thật khá ngắn, chỉ dài hơn con dao găm vài inch.</string>
@@ -1378,6 +1381,9 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
