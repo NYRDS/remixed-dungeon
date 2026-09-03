@@ -164,6 +164,7 @@
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Bow_Info1">Dit is een afstandswapen. Het is nutteloos voor iedereen behalve elfen op zeer korte afstand. Met een boog uitgerust kun je pijlen afschieten.\n\n</string>
+    <string name="Bowknot_Name">Lintknoop</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en hardste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">grom</string>
@@ -182,6 +183,7 @@
     <string name="CagedKobold_Name">gekooide kobold</string>
     <string name="CagedKobold_Name_Objective">opgesloten kobold</string>
     <string name="Calm_Name">Kalmte</string>
+    <string name="CandleOfMindVision_Info">Lijkt op een gewone kaars, niet iets wat je zou verwachten in een gevaarlijk duistere kelder. Raar genoeg is hij vrij warm aan de kant, ondanks dat hij nog niet was aangebrand.</string>
     <string name="Candy_Info">Deze snoep ziet er zo mooi uit en ruikt ook lekker. Moet je hem echt aan iemand anders geven?</string>
     <string name="Candy_Name">snoepje</string>
     <string name="Capotain_Name">Puriteinse hoed</string>
@@ -286,6 +288,7 @@
     <string name="CommonArrow_Info">Gewone houten pijl met een ijzeren punt.</string>
     <string name="CommonArrow_Name">pijl</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
+    <string name="CompositeCrossbow_Info">Deze versterkte handboog bewijst een efficiënter instrument te zijn dan zijn houten tegenhanger.</string>
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
     <string name="CompoundBow_Gender">masculine</string>
     <string name="ConcreteBlock_Name">Zwaar betonnen blok</string>
@@ -316,6 +319,7 @@
     <string name="Death_Name_1">Grim %s</string>
     <string name="Deathling_Desc">De Doodsling is de ziel van een gevallen held die ongelukkig genoeg werd opgeroepen door een mede-avonturier die necromancie beoefent.</string>
     <string name="Deathling_Gender">masculine</string>
+    <string name="Deathling_Name_Objective">doodsklief</string>
     <string name="DeepSnail_Desc">Dit soort weekdier is vaak te zien nabij waterbronnen en is veel sneller dan een gewone slak. Pas echter op voor de beten, die kunnen een onaangenaam effect hebben op je huid.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">De pijn is omgezet in vertraagde pijn, wat de schade die op een keer wordt opgelopen vermindert.\nOvergebleven schade om te ontvangen %d</string>
@@ -388,6 +392,7 @@
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
+    <string name="Frost_Shatter">De koude doet %s barsten!</string>
     <string name="FrozenCarpaccio_Info2">Je voelt je verharden!</string>
     <string name="FrozenCarpaccio_Name">bevroren carpaccio</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
@@ -605,6 +610,7 @@
     <string name="Longsword_Name">langzwaard</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="Mace_Gender">feminine</string>
+    <string name="Mace_Info">De ijzeren kop van dit wapen richt aanzienlijke schade aan.</string>
     <string name="MageArmor_ACSpecial">GESMOLTEN AARDE</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
     <string name="MagicArrow_Name">Magische pijl</string>
@@ -720,6 +726,7 @@
     <string name="PlagueDoctorNPC_Quest_Reminder">Breng me %d rattenhuiden.</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, je bent terug! _Vijf dode ratten_, perfect! Hun huiden zullen cruciaal zijn voor mijn onderzoek. En zoals beloofd, voor je dappere inspanning heb ik dit harnas voor je gemaakt van hun eigen vellen. Het is doordrenkt met een vleugje van de pest, maar maak je geen zorgen! Het is gecontroleerd, het beschermt! Ga nu! Bescherm de stad!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… prachtig! De _slakken_, hun geheimen langzaam ontvouwend als bloemblaadjes in het maanlicht. Een schat aan informatie! Maar je hebt gelijk, _vijftig goud_ is nauwelijks een passende beloning. *Gikkelt maniakaal*.</string>
+    <string name="PlagueDoctorQuest_1_2_Prologue"> *Hoest hevig* Hatsjoe!\n De slakken... ze glijden. Ze slijmen. En ze fluisteren geheimen van een vergeten eeuw. Ik heb ze nodig, _tien_ van hen, hun schillen nog intact. Denk je dat slechts _vijftig goudmunten_ genoeg is voor zulke kostbare kennis?\n Bah! Maakt niet uit. De informatie die ze bergen kan de sleutel zijn om deze pest te stoppen. Of... het kan ons leiden tot iets nog vreselijker. Jij beslist.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Breng me een _vampier vleermuis_, levend en onbeschadigd! Haar bloed, haar vleugels… ze bevatten geheimen die ik moet onthullen!</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Dit is geen enkel beest! Het is een levend getuigenis van nekromantische kracht! Vang er eentje, levend en onbeschadigd! Deze _Doodsridder_… hij is de sleutel!</string>
@@ -1161,6 +1168,7 @@
     <string name="WndChallenges_Title">Uitdagingen</string>
     <string name="WndChooseWay_Cancel">Ik besluit later</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+    <string name="WndCryptoDonate_copyAddress">Adres kopiëren</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_supportDev">Ondersteun de ontwikkelaar</string>
     <string name="WndCryptoDonate_ton">Ton</string>
@@ -1253,6 +1261,7 @@
     <string name="WndSelectLanguage_LinkToTranslationSite">Klik hier om deel te nemen aan het Remixed Dungeon vertaalteam</string>
     <string name="WndSettingsInGame_GameLog">Spellog</string>
     <string name="WndSettings_ActionButtonSize">Grootte van actieknoppen</string>
+    <string name="WndSettings_ClassicFont">Klassiek lettertype</string>
     <string name="WndSettings_ExperementalFont">Nieuw lettertype</string>
     <string name="WndSettings_FpsLimit">FPS-limiet</string>
     <string name="WndSettings_Handedness">Handpreferentie</string>
@@ -1403,6 +1412,15 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
 
 
 

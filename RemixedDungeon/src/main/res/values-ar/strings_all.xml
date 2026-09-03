@@ -153,6 +153,7 @@
     <string name="Boomerang_Info">عند رميها على العدو، سيعود هذا القذيفة الخشبية المسطحة والمقوسة إلى يد راميها.</string>
     <string name="Bow_Info1">هذا سلاح بعيد المدى. لا يفيد أحدًا إلا الجنّيات في المدى القريب جدًا. امتلاك قوس مسلّح يتيح لك إطلاق السهام.\n\n</string>
     <string name="Bowknot_Info">شريط وردي لامع جميل مربوط بعقدة ومثبت بدبوس شعر.</string>
+    <string name="Bowknot_Name">عقدة قوس</string>
     <string name="Brute_Desc">الغوغاء هم الأكبر والأقوى والأكثر صلابة بين جميع الغنول. عندما يُصابون بجروح بالغة، يفقدون السيطرة ويلحقون ضرراً أكبر بأعدائهم.</string>
     <string name="Brute_Gender">masculine</string>
     <string name="BurningBuff_Info">الجسم ملتهب بلهب متوهج!</string>
@@ -167,6 +168,7 @@
     <string name="CagedKobold_Name">كوبولد مسجون</string>
     <string name="CagedKobold_Name_Objective">كوبولد مسجون</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
+    <string name="CandleOfMindVision_Info">يبدو كشمعة عادية، ليس شيئاً تتوقع العثور عليه في زنزنة خطيرة. الغريب أنه دافئ جداً عند لمسه، رغم أنه لم يُشعل بعد.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
     <string name="Candy_Info">هذه الحلوى تبدو جميلة جداً ورائحتها طيبة أيضاً. هل تحتاج حقاً لإعطائها لشخص آخر؟</string>
     <string name="Candy_Name">حلوى</string>
@@ -259,6 +261,7 @@
     <string name="Combo_Combo">مجموعة %d ضربة!</string>
     <string name="CommonArrow_Gender">feminine</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
+    <string name="CompositeCrossbow_Info">يُثبت هذا النصل المعزز أنه أداة أكثر كفاءة من نظيره الخشبي.</string>
     <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">السهام المنطلقة من هذا القوس المركب تسبب قدراً كبيراً من الضرر وتتمتع بدقة أفضل من القوس الخشبي على حساب بعض السرعة.</string>
     <string name="CorpseDust_Info2">ربما لأن مجرد حمله يجعلك تشعر بالقلق والغضب.</string>
@@ -290,6 +293,7 @@
     <string name="Death_Name_1">مريع %s</string>
     <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">ميت صغير</string>
+    <string name="Deathling_Name_Objective">ميت صغير</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">تم تحويل الألم إلى ألم بطيء، مما يقلل الضرر المتلقى دفعة واحدة.\nالضرر المتبقي لتلقيه %d</string>
     <string name="DewVial_Full">قارورة الندى ممتلئة!</string>
@@ -358,6 +362,7 @@
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Info">يحيط الصقيع بالجسد، مما يبطئ كل ما يقترب منه.</string>
     <string name="FrostBuff_Name">مجمد</string>
+    <string name="Frost_Shatter">البرد يتسبب في تحطم %s!</string>
     <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
     <string name="FrozenCarpaccio_Info3">منعش!</string>
     <string name="FrozenCarpaccio_Info4">تشعر بتحسن!</string>
@@ -556,6 +561,7 @@
     <string name="Longsword_Name">سيف طويل</string>
     <string name="Luck_Name_0">محظوظ %s</string>
     <string name="Mace_Gender">feminine</string>
+    <string name="Mace_Info">رأس هذا السلاح الحديدي يلحق أضراراً جسيمة.</string>
     <string name="MageArmor_ACSpecial">أرض منصهرة</string>
     <string name="MageArmor_Name">رداء الساحر</string>
     <string name="MailArmor_Name">درع حلقي</string>
@@ -645,6 +651,7 @@
     <string name="PlagueDoctorNPC_Quest_Reminder">أحضر لي %d جلود فئران.</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">آه، لقد عدت! _خمسة فئران ميتة_، ممتاز! جلودها ستكون حاسمة لأبحاثي. وكما وعدتك، بذلتي الشجاعة، صنعت لك هذا الدرع من جلودها. إنه مشبع بقليل من الطاعون، لكن لا تقلق! إنه مضبوط، وهو يحميك! والآن اذهب! احمِ المدينة!</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">عشر حلزونات، عشر همسات من الهاوية! سيتم تحليل مخاطهم، وستفحص جوهرهم. الأسرار التي يحملونها في متناول اليد.</string>
+    <string name="PlagueDoctorQuest_1_2_Prologue"> *يسعل بعنف* أتشو!\n _الحلزونات_... تزحف. تفرز المخاط. وتهمس بأسرار عصر منسي. أحتاج إليها، _عشرة_ منها، أصدافها لا تزال سليمة. هل تظن أن _خمسين قطعة ذهبية_ فقط تكفي لمثل هذه المعرفة الثمينة؟\n به! لا يهم. المعلومات التي تحملها قد تكون المفتاح لإيقاف هذا الوباء. أو... قد تقودنا إلى شيء أكثر رعباً. أنتم تقررون.</string>
     <string name="PlagueDoctorQuest_3_2_Epilogue">*يلقي برأسه للوراء ويطلق قهقهة هستيرية، صوتها يتردد في مختبره الرطب* رائع! _فارس الموت_، واقف أمامنا! القوة المنبعثة من كيانه... مسكرة! *يلتفت نحوك، عيناه تلمعان بشدة محمومة* ولك، مكافأة تليق ببسالتك: _جرعة القوة_! لتمنحك القوة لهزيمة أي عدو! الآن... لندرس موضوعنا. جوهره ذاته يخفي أسراراً يمكن أن تعيد كتابة قوانين الحياة ذاتها! *يقترب من _فارس الموت_ بابتسامة مجنونة، ممسكاً بقارورة من سائل أخضر يفور*</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">خمسة _أقزام_سحرة_، أجسادهم لا تزال تنبض بصدى ضعيف للسحر الأسود! أحضرهم لي، وسأكافئك بـ _جرعة_قوة_ التي ستمنحك قوة عشرة رجال!</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*تتشتت أفكاره وهو يتحدث، ويصبح صوته أكثر هدوءاً، بالكاد همس.* أحضر لي اثنتين من *السُّكُّبات*... أحياء. قوتهن... آسر.</string>
@@ -756,6 +763,7 @@
     <string name="RottenMeat_Name">لحم متعفن</string>
     <string name="RottenOrgan_Name">عضو متعفن</string>
     <string name="RottenPasty_Name">فطيرة فاسدة</string>
+    <string name="RottenPumpkinPie_Name">فطيرة يقطين فاسدة</string>
     <string name="RottenRation_Info">في يوم من الأيام كان يمكن أكله</string>
     <string name="RottenRation_Name">وجبة متعفنة</string>
     <string name="RottingFist_Gender">masculine</string>
@@ -970,6 +978,7 @@
     <string name="WandOfSlowness_Info">تجعل هذه العصا الكائن المستهدف يتحرك ويهاجم بنصف سرعته المعتادة حتى ينتهي التأثير.</string>
     <string name="WandOfTeleportation_Info2">لم يحدث شيء</string>
     <string name="Wand_ACZap">زَاب</string>
+    <string name="Wand_Name">عصا %s</string>
     <string name="Wand_Prompt">اختر اتجاهًا للإطلاق</string>
     <string name="Wand_SelfTarget">لا يمكنك استهداف نفسك</string>
     <string name="Wand_Wood_Types_2">أبنوس</string>
@@ -1002,6 +1011,7 @@
     <string name="WndCatalogus_Scrolls">اللُفافات</string>
     <string name="WndCatalogus_Title">الكتالوجات</string>
     <string name="WndCryptoDonate_bitcoin">بيتكوين</string>
+    <string name="WndCryptoDonate_copyAddress">نسخ العنوان</string>
     <string name="WndCryptoDonate_ethereum">إيثيريوم</string>
     <string name="WndCryptoDonate_supportDev">دعم المطور</string>
     <string name="WndCryptoDonate_ton">تون</string>
@@ -1059,6 +1069,7 @@
     <string name="WndSadGhost_Wepon">سلاح الشبح</string>
     <string name="WndSaveSlotSelect_Delete_Title">هل أنت متأكد أنك تريد حذف هذا الحفظ؟</string>
     <string name="WndSettings_ActionButtonSize">حجم أزرار الإجراءات</string>
+    <string name="WndSettings_ClassicFont">خط كلاسيكي</string>
     <string name="WndSettings_FpsLimit">حد الإطارات في الثانية</string>
     <string name="WndSettings_Handedness">اليد المهيمنة</string>
     <string name="WndSettings_Immersive">وضع الغمر</string>
@@ -1194,6 +1205,17 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

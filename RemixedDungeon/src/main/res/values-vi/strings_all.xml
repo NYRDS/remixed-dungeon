@@ -149,6 +149,7 @@
     <string name="Boomerang_Gender">masculine</string>
     <string name="Bow_Info1">Đây là vũ khí tầm xa. Nó vô dụng với mọi người trừ tinh linh ở cự ly rất gần. Trang bị cung cho phép bạn bắn tên.\n\n</string>
     <string name="Bowknot_Info">Một dải ruy-băng hồng lấp lánh xinh xắn, được thắt thành nơ và gắn vào một chiếc kẹp tóc.</string>
+    <string name="Bowknot_Name">Nơ</string>
     <string name="Brute_Desc">Quái nhân là những kẻ to lớn, mạnh mẽ và cứng rắn nhất trong tất cả các gnoll. Khi bị thương nặng, chúng phát cuồng và gây sát thương lớn hơn cho kẻ thù.</string>
     <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name_Objective">gnoll brute</string>
@@ -165,6 +166,7 @@
     <string name="CagedKobold_Name">kobold trong lồng</string>
     <string name="CagedKobold_Name_Objective">kobold bị nhốt</string>
     <string name="Calm_Info">Có rất nhiều sinh vật đang bị kích động xung quanh, hãy giúp chúng.</string>
+    <string name="CandleOfMindVision_Info">Trông như một cây nến bình thường, không phải thứ bạn mong đợi tìm thấy trong ngục nguy hiểm. Lạ thay nó khá ấm khi chạm vào, mặc dù nó chưa được thắp.</string>
     <string name="CandleOfMindVision_Info_Exhausted">Cây nến đã hết, nó không còn sáng khi bạn cầm nó. Trông như bạn không thể dùng nó nữa.</string>
     <string name="CandleOfMindVision_Name">Nến Tầm Nhìn</string>
     <string name="Candy_Info">Viên kẹo này trông rất đẹp và mùi cũng thơm. Bạn có thực sự muốn tặng nó cho người khác không?</string>
@@ -273,6 +275,7 @@
     <string name="CommonArrow_Info">Mũi tên gỗ thông thường với đầu sắt.</string>
     <string name="CommonArrow_Name">mũi tên</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
+    <string name="CompositeCrossbow_Info">Chiếc nỏ cường hóa này chứng minh là công cụ hiệu quả hơn so với phiên bản bằng gỗ của nó.</string>
     <string name="CompositeCrossbow_Name">nỏ composite</string>
     <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">Các mũi tên bắn từ cây cung hợp kim này gây sát thương lớn và có độ chính xác tốt hơn cung gỗ, đổi lại là phần nào chậm hơn.</string>
@@ -307,6 +310,7 @@
     <string name="Death_Name_1">%s tử thần</string>
     <string name="Deathling_Desc">Doodsling là linh hồn của một người hùng đã ngã xuống, kém may mắn khi bị triệu hồi bởi một đồng đội phiêu lưu đang thực hành thuật gọi hồn.</string>
     <string name="Deathling_Gender">masculine</string>
+    <string name="Deathling_Name_Objective">chết con</string>
     <string name="DeepSnail_Desc">Loài thân mềm này thường xuất hiện gần nguồn nước và nhanh hơn nhiều so với ốc sên thường. Tuy nhiên hãy cẩn thận với vết cắn, chúng có thể gây ảnh hưởng khó chịu lên làn da của bạn.</string>
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeferedDamageBuff_Info">Cơn đau đã biến thành cơn đau chậm, làm giảm sát thương nhận được một lần.\nSát thương còn lại để nhận %d</string>
@@ -381,6 +385,7 @@
     <string name="FortuneTellerNPC_Name">người xem bói</string>
     <string name="FortuneTellerNPC_Name_Objective">bà giải điềm</string>
     <string name="FrostArrow_Gender">feminine</string>
+    <string name="Frost_Shatter">Lạnh làm %s vỡ nát!</string>
     <string name="FrozenCarpaccio_Info1">Bạn thấy tay mình trở nên vô hình!</string>
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenCarpaccio_Info3">Sảng khoái!</string>
@@ -612,6 +617,7 @@
     <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
     <string name="Longsword_Gender">masculine</string>
     <string name="Mace_Gender">feminine</string>
+    <string name="Mace_Info">Phần đầu sắt của vũ khí này gây sát thương đáng kể.</string>
     <string name="MageArmor_ACSpecial">ĐẤT NONG</string>
     <string name="MageArmor_Desc">Mặc chiếc áo choàng lộng lẫy này, một pháp sư có thể niệm phép đất nóng chảy: mọi kẻ thù trong tầm nhìn sẽ bị thiêu cháy và đồng thời không thể di chuyển.</string>
     <string name="MageArmor_NotMage">Chỉ pháp sư mới có thể sử dụng giáp này!</string>
@@ -729,6 +735,7 @@
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Aaaa… tuyệt vời! Những _con ốc sên_, bí mật của chúng từ từ hé lộ như những cánh hoa dưới ánh trăng. Quả là một món quà thông tin dồi dào! Nhưng bạn nói đúng, _năm mươi đồng vàng_ chẳng phải là phần thưởng xứng đáng. *Cười man rợ*.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">Mười ốc sên, mười thì thầm từ vực thẳm! Chất nhầy của chúng sẽ được phân tích, bản chất của chúng sẽ được thẩm định. Những bí mật chúng chứa đựng đã gần trong tầm tay.</string>
+    <string name="PlagueDoctorQuest_1_2_Prologue"> *Ho khan dữ dội* Hắt xì!\n Những con ốc... chúng trườn. Chúng tiết nhờn. Và chúng thì thầm bí mật của một thời đại bị lãng quên. Tôi cần chúng, _mười_ con, vỏ vẫn còn nguyên vẹn. Bạn nghĩ _năm mươi đồng vàng_ có đủ cho tri thức quý giá như vậy không?\n Ba! Không quan trọng. Thông tin chúng giữ có thể là chìa khóa để dừng dịch bệnh này. Hoặc... nó có thể dẫn chúng ta đến thứ gì đó còn kinh khủng hơn. Bạn quyết định.</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">Một _Kỵ Sĩ Cửu U_! *Giọng nói nứt nẻ vì hứng thú, ngón tay xương khô run rẩy khi nắm chặt bình thuốc bủa bọt đầy hỗn hợp mờ tối, chói lòa*. Một sinh vật như vậy… một ngọn đèn hiệu của cái chết! Bắt được một con, còn sống… đó sẽ là… một kỳ quan. Hãy tưởng tượng những bí mật chúng ta có thể khai phá! Sức mạnh chảy trong những mạch xương khô đó! Đúng, một _Kỵ Sĩ Cửu U_! Nó quan trọng cho nghiên cứu của ta! Vì nó sẽ cho phép chúng ta đi sâu hơn… vào những bí ẩn của sự sống… và cái chết bản thân!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Ngón xương khô của hắn gõ nhịp nhàng vào nồi nước sôi sùng sục, không khí quanh hắn dày đặc bởi mùi hôi chua gay của lưu huỳnh và sự phân giải*\n_Kobold Pháp Sư Băng_! Những sinh vật thảm hại kia, trùm mình trong hang động đóng băng, nguội ngút chăm chăm vào phép thuật băng giá của chúng.\nTa cần năm con, xác đóng băng của chúng sẽ... soi sáng sự việc.\nSự thành thạo băng giá của chúng, nó... kỳ lạ.\nTa tin rằng chúng khai thác một năng lượng nguyên thủy, một sức mạnh ngủ quên dưới bề mặt của chính thế giới này.</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Tâm trí anh ấy lang thang khi nói, giọng nói càng lúc càng nhỏ, chỉ còn là thì thầm.* Mang cho ta hai *súc quyên*... sống. Quyền năng của chúng... mê hoặc.</string>
@@ -1092,6 +1099,7 @@
     <string name="WandOfTeleportation_Info2">không có gì xảy ra</string>
     <string name="Wand_ACZap">ZAP</string>
     <string name="Wand_Damage">Khi cây đũa này được sử dụng như vũ khí cận chiến, sát thương trung bình là %d điểm mỗi lần đánh.</string>
+    <string name="Wand_Name">%s phép thuật</string>
     <string name="Wand_Prompt">Chọn hướng để phóng phép</string>
     <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
     <string name="Wand_Wood_Types_10">sồi</string>
@@ -1126,6 +1134,7 @@
     <string name="WndCatalogus_Scrolls">Cuộn</string>
     <string name="WndCatalogus_Title">Danh mục</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
+    <string name="WndCryptoDonate_copyAddress">Sao chép địa chỉ</string>
     <string name="WndCryptoDonate_supportDev">Ủng hộ nhà phát triển</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_warningText">CẢNH BÁO: Luôn xác minh địa chỉ trước khi gửi tiền. Các giao dịch tiền điện tử không thể đảo ngược!</string>
@@ -1207,6 +1216,7 @@
     <string name="WndSelectLanguage_ImproveTranslation">Vui lòng giúp cải thiện bản dịch Remixed Dungeon</string>
     <string name="WndSettingsInGame_GameLog">Nhật ký trò chơi</string>
     <string name="WndSettings_ActionButtonSize">Kích thước nút hành động</string>
+    <string name="WndSettings_ClassicFont">Font Classic</string>
     <string name="WndSettings_ExperementalFont">Font mới</string>
     <string name="WndSettings_Handedness">Ưu tiên tay</string>
     <string name="WndSettings_InGameUiSettings">Cài đặt giao diện</string>
@@ -1357,6 +1367,16 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
