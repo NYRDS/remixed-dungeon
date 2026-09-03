@@ -76,6 +76,7 @@
     <string name="Badges_GoldColleted1">100 ذهب جُمع</string>
     <string name="Badges_GoldColleted3">تم جمع 2500 ذهب</string>
     <string name="Badges_GoldColleted4">تم جمع 7500 ذهب</string>
+    <string name="Badges_HappyEnd">نهاية سعيدة</string>
     <string name="Badges_Ice_Guardian_Slain">تم القضاء على حارس الجليد</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
     <string name="Badges_Info3">شارة جديدة: %s</string>
@@ -1058,6 +1059,7 @@
     <string name="WndPremiumSettings_chrome">اختيار مادة الواجهة</string>
     <string name="WndPriest_Heal">علاج - %d ذهب</string>
     <string name="WndPriest_Instruction2_f">أهلاً بك يا ابنتي، أهلاً بك في الكنيسة المقدسة للقديس سانتا سيد الأعماق!</string>
+    <string name="WndPriest_Instruction_m">أهلاً بك يا بني، أهلاً بك في الكنيسة المقدسة لسانتا العظيم سيد الأعماق! لسوء الحظ لا يمكنني السماح لك بالمرور الآن، لأن المبنى قيد إعادة الإعمار، لكن إذا كنت تبحث عن المساعدة، يمكنني تقديم خدمة الشفاء والطعام فقط مقابل %d قطعة ذهبية!</string>
     <string name="WndRanking_Badges">شارات</string>
     <string name="WndRanking_StaChallenges">التحديات</string>
     <string name="WndRanking_StaEnemies">وحوش مقتولة</string>
@@ -1205,6 +1207,8 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
 
 
 

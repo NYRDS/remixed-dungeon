@@ -407,6 +407,7 @@
     <string name="Ghost_Rose2">Alsjeblieft... Help me... Vind de roos...</string>
     <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Name">gleve</string>
+    <string name="GnollArmor_Info">Draagsters van het Gnome-Luitenant-kostuum zijn bekend om hun vermogen om zelfs de woestste monsters te overtuigen tot loyale dienaren van de Kroon.</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnol verkenner</string>
@@ -616,6 +617,7 @@
     <string name="MagicArrow_Name">Magische pijl</string>
     <string name="MailArmor_Name">maliënkolder</string>
     <string name="ManaPotion_Info">Deze drank herstelt je spirituele energie.</string>
+    <string name="Mana_Cost">Manakosten: </string>
     <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Name">Chirurgisch masker</string>
     <string name="MedicineMask_Obtained">Chirurgisch masker verkregen</string>
@@ -1412,6 +1414,8 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 

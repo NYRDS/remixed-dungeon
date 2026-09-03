@@ -501,6 +501,7 @@
     <string name="Hunger_Starving_0">Bạn đang chết đói!</string>
     <string name="Hunger_Starving_1">Bạn đang chết đói!</string>
     <string name="Hunger_Starving_2">Bạn đang chết đói!</string>
+    <string name="HuntressArmor_Desc">Một thợ săn trong chiếc áo choàng này có thể tạo ra một quạt các lưỡi kiếm linh hồn. Mỗi lưỡi kiếm sẽ nhắm vào một kẻ thù duy nhất trong tầm nhìn của thợ săn, gây sát thương tùy thuộc vào vũ khí cận chiến hiện tại của cô ấy.</string>
     <string name="HuntressArmor_NotHuntress">Chỉ thợ săn mới có thể sử dụng giáp này!</string>
     <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
     <string name="IceCaves_TileGrass">Cỏ đóng băng.</string>
@@ -672,6 +673,7 @@
     <string name="MysteryMeat_Info2">Ngươi không cảm thấy chân mình nữa!</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
     <string name="MysteryMeat_Message">Món ăn này có vị... lạ.</string>
+    <string name="NatureArmorSpell_Info">Thiên thần cũng có thể cứng rắn, đặc biệt khi được bảo vệ bởi chính Mẹ Thiên Nhiên.</string>
     <string name="NatureArmorSpell_Name">Giáp Thiên Nhiên</string>
     <string name="NecromancerArmor_Info">Bộ giáp này cho phép Pháp sư Hắc huyết triệu hồi tối đa hai Deathling, mỗi thứ tốn 5 linh hồn. Những tôi tớ bất tử này sẽ theo chủ và tấn công kẻ thù. Deathling sẽ trở nên mạnh hơn theo cấp độ anh hùng.</string>
     <string name="NecromancerArmor_Info2">Mặc bộ giáp này cho phép pháp sư tử thi sử dụng khả năng \&quot;Necrotism\&quot;, lan truyền một dịch hạch phép thuật có thể lây nhiễm bất kỳ sinh vật nào trong khu vực, sống hoặc chết.</string>
@@ -1367,6 +1369,8 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
