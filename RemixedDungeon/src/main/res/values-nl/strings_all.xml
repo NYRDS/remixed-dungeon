@@ -482,6 +482,7 @@
     <string name="HeroSubClass_NameSnip">sluipschutter</string>
     <string name="HeroSubClass_NameWitchdoctor">toverdokter</string>
     <string name="Hero_AnotherTry">Je bent gestorven.\n Wil je het opnieuw proberen?</string>
+    <string name="Hero_LevelUp">niveau omhoog!</string>
     <string name="Hero_LockedDoor">Je hebt geen bijpassende sleutel</string>
     <string name="Hero_Name">jij</string>
     <string name="Hero_Name_Objective">je</string>
@@ -1415,6 +1416,7 @@
     <string name="town_deco_statue_water_desc">Een majestueuze standbeeld van een engel die een kom met water vasthoudt.</string>
     <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
     <string name="town_deco_stones_name">Stenen</string>
+    <string name="town_deco_stool_broken_name">Gebroken kruk</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
     <string name="town_deco_stove_name">Stenen kachel</string>
     <string name="town_deco_trapdoor_desc">Waar zou dit toch naartoe leiden?</string>
@@ -1438,6 +1440,8 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 

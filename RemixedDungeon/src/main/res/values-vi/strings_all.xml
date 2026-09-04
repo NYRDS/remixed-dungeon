@@ -144,6 +144,7 @@
     <string name="BlankScroll_ReallyBlank">Cuộn giấy này trống không</string>
     <string name="BleedingBuff_Name">Đang chảy máu</string>
     <string name="Bleeding_Death">Bạn đã chết vì mất máu...</string>
+    <string name="BlessedBuff_Info">Cầu mong sự chính xác và né tránh sẽ đến với những ai được chúc phước!</string>
     <string name="BlessedBuff_Name">Được Chúc Phước</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="BodyArmorBuff_Name">Giáp Cơ Thể</string>
@@ -810,6 +811,7 @@
     <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">Ta không ngủ!</string>
     <string name="RatKing_Info2">Cái gì vậy? Tôi không có thời gian cho những điều vô nghĩa này. Vương quốc của tôi không thể tự cai trị!</string>
+    <string name="RatSkullBuff_Info">Mùi hôi nồng nặc khiến tất cả các loài gặm nhấm xung quanh khiếp sợ, làm chúng phải bỏ chạy khỏi người mang chiếc sọ này.</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">chuột túi</string>
@@ -847,6 +849,7 @@
     <string name="Ring_Info2">Chiếc %1$s của bạn siết chặt vào ngón tay đau đớn</string>
     <string name="Ring_Info3b">, và vì nó bị nguyền rủa, bạn không có cách nào tháo nó ra.</string>
     <string name="Ring_Info4">%1$s\n\nBạn có thể cảm thấy một phép thuật độc ác ẩn mình bên trong %2$s.</string>
+    <string name="Roar_Name">Gầm thét</string>
     <string name="RootSpell_Info">Gây rễ nhân vật được chọn, khiến hắn không thể di chuyển trong một khoảng thời gian ngắn.</string>
     <string name="RootSpell_Name">Rễ</string>
     <string name="RootsBuff_Name">Bám rễ</string>
@@ -1232,6 +1235,7 @@
     <string name="WndSelectLanguage_ImproveTranslation">Vui lòng giúp cải thiện bản dịch Remixed Dungeon</string>
     <string name="WndSettingsInGame_GameLog">Nhật ký trò chơi</string>
     <string name="WndSettings_ActionButtonSize">Kích thước nút hành động</string>
+    <string name="WndSettings_Brightness">Độ sáng</string>
     <string name="WndSettings_ClassicFont">Font Classic</string>
     <string name="WndSettings_ExperementalFont">Font mới</string>
     <string name="WndSettings_Handedness">Ưu tiên tay</string>
@@ -1255,6 +1259,7 @@
     <string name="Wnd_Button_Back">Quay lại</string>
     <string name="Wnd_Button_Cancel">Hủy</string>
     <string name="Wnd_Button_Close">Đóng</string>
+    <string name="Wnd_Button_No">Không</string>
     <string name="Wnd_Button_Ok">Ok</string>
     <string name="Wnd_Button_Yes">Có</string>
     <string name="WoodenBow_Gender">masculine</string>
@@ -1384,6 +1389,11 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
 
 
 
