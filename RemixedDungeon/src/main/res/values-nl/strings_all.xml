@@ -54,6 +54,7 @@
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">levende standbeeld</string>
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
+    <string name="Artifact_Limit">Je kunt maar 2 artefacten tegelijk dragen.</string>
     <string name="AttackDelay_Increased">Kan de %1$s niet zo hanteren. Langzame slagen, zware ademhaling...</string>
     <string name="AwarenessBuff_Info">De zintuigen zijn verscherpt, wat meer bewustzijn van de omgeving geeft.</string>
     <string name="AzuterronNPC_Gender">masculine</string>
@@ -62,6 +63,7 @@
     <string name="AzuterronNPC_Quest_Reminder">Help mij en ik help jou.</string>
     <string name="Backstab_Aware">Het slachtoffer mag niet op zijn hoede zijn voor een succesvolle rugstoot.</string>
     <string name="Backstab_Info">Stille slag in de rug. Oneerlijk, maar uiterst effectief, backstab schade groeit met de vaardigheid van de uitvoerder.\n\nEen geslaagde backstab negeert de pantser of speciale verdedigingsvaardigheden van het slachtoffer volledig.</string>
+    <string name="Backstab_Name">rugstoot</string>
     <string name="Backstab_TooFar">Slachtoffer te ver weg voor een succesvolle slag.</string>
     <string name="BadgesScene_Title">Je insignes</string>
     <string name="Badges_AllBags">Alle tassen gekocht</string>
@@ -78,6 +80,7 @@
     <string name="Badges_FoodEaten3">30 stukken voedsel gegeten</string>
     <string name="Badges_GamesPlayed1">10 spellen gespeeld</string>
     <string name="Badges_GamesPlayed2">100 spellen gespeeld</string>
+    <string name="Badges_GamesPlayed4">2000 spellen gespeeld</string>
     <string name="Badges_GamesPlayed5">5000 spellen gespeeld</string>
     <string name="Badges_GnollUnlocked">Gnoll ontgrendeld</string>
     <string name="Badges_GoldColleted2">500 goud verzameld</string>
@@ -124,6 +127,8 @@
     <string name="BattleAxe_Info">Het enorme staande hoofd van deze strijdbijl geeft een aanzienlijk gewicht achter elke slag.</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
     <string name="Bee_Gender">masculine</string>
+    <string name="BellaNPC_Amulet_F">Waarom hallo daar schatje, wat heb je daar? Ah, zo\'n uitmuntende amulet! En jij... je schittert zo veel helderder dan iedereen. Wat als we een wandeling maken en ons gezamenlijke toekomst bespreken?</string>
+    <string name="BellaNPC_Amulet_M">Waarom hallo daar knapkerel, wat heb je daar? Ah, zo\'n uitmuntende amulet! En jij... je staat hoofd en schouders boven die plebejers. Wat als we een wandeling maken en ons gezamenlijke toekomst bespreken?</string>
     <string name="BellaNPC_Angry">Hoe durf je... je plebejer!</string>
     <string name="BellaNPC_Desc">Een heel posh meisje. Haar hele uiterlijk zegt je: \&quot;Ik ben te goed voor iedereen.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
@@ -135,7 +140,6 @@
     <string name="Bishop_no_money">Je kunt er niet voor betalen.</string>
     <string name="Bishop_remove_curse">Vervloeking verwijderen - %d g</string>
     <string name="Bishop_text">Dag en nacht bid ik voor u, mijn kind.</string>
-
     <string name="BlackCat_Desc">Dit is een zwarte kat</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_0">Prrrrrrr</string>
@@ -195,6 +199,7 @@
     <string name="Carcass_Necromancy">Je hebt het lijk van %s opgewekt!</string>
     <string name="Carcass_SelectItem">Selecteer een voorwerp</string>
     <string name="Caves_TileDescEntrance">De ladder leidt omhoog naar het bovenste deel.</string>
+    <string name="Caves_TileDescHighGrass">Reuze paddenstoelen blokkeren het zicht.</string>
     <string name="Caves_TileGrass">fluorescent mos</string>
     <string name="Caves_TileHighGrass">Fluorescerende paddenstoelen</string>
     <string name="Caves_TileWater">IJskoud water.</string>
@@ -250,7 +255,6 @@
     <string name="Char_StaStunned">versteld</string>
     <string name="Char_StaVision">visie</string>
     <string name="Char_Stole_0">%1$s stal %2$s van %3$s!</string>
-
     <string name="Char_Stole_1">%1$s steelt %2$s van %3$s!</string>
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
     <string name="CharmBuff_Info">Geest en lichaam waren betoverd!</string>
@@ -294,6 +298,7 @@
     <string name="CompositeCrossbow_Info">Deze versterkte handboog bewijst een efficiënter instrument te zijn dan zijn houten tegenhanger.</string>
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
     <string name="CompoundBow_Gender">masculine</string>
+    <string name="CompoundBow_Name">compogite boog</string>
     <string name="ConcreteBlock_Name">Zwaar betonnen blok</string>
     <string name="ConfusionGas_Info">Hier zweeft een wolk verwarrend gas.</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
@@ -332,6 +337,7 @@
     <string name="DewVial_Full">Je dauwflesje is vol!</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="DieHardBuff_Name">Die Hard</string>
+    <string name="DoctorArmor_Info">Deze pantser van de pestdokter maakt gebruik mogelijk van de \&quot;Miasma Wolk\&quot; vaardigheid, die een giftige gas vrijlaat dat vijanden vergiftigt, verzwakt en desorienteert. De dokter, beschermd door hun masker, is immuun voor deze effecten.</string>
     <string name="DoctorArmor_Name">Doktersgewaad</string>
     <string name="DonateButton_thanks">Bedankt voor je steun!</string>
     <string name="DreadKnight_Gender">masculine</string>
@@ -353,6 +359,7 @@
     <string name="Dungeon_Tips_17">Een Bron van Transmutatie kan je een voorwerp geven dat je op geen enkele andere manier kunt verkrijgen.</string>
     <string name="Dungeon_Tips_18">De enige manier om een wapen te betoveren is door het te verbeteren met een Schrift van Wapenverbetering.</string>
     <string name="Dungeon_Tips_19">Geen wapens toegestaan in de aanwezigheid van Zijne Majesteit!</string>
+    <string name="Dungeon_Tips_20">Pixel-Mart. Speciale prijzen voor demonenjagers!</string>
     <string name="Dungeon_Tips_22">De tekst is geschreven in de taal van demonen.</string>
     <string name="Dungeon_Tips_3">Je kunt je goud uitgeven in winkels in de stad of de dungeon.</string>
     <string name="Dungeon_Tips_4">Pas op voor de Slijm!</string>
@@ -513,6 +520,7 @@
     <string name="IceCaves_TileHighGrass">Bevroren hoog gras</string>
     <string name="IceElemental_Gender">masculine</string>
     <string name="IceGuardianCore_Gender">masculine</string>
+    <string name="IceGuardianCore_Name_Objective">ijswachter</string>
     <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name_Objective">ijsbewaker</string>
     <string name="IceKey_Info">Deze sleutel lijkt van ijs gemaakt te zijn, maar hij is net zo hard als staal.</string>
@@ -530,6 +538,7 @@
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name_Objective">herbergier</string>
     <string name="InnServant_Phrase_1">Bah, nog zoveel te doen!</string>
+    <string name="InnServant_Phrase_2">Deze dronken drijft me in de waanzin!</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
     <string name="InterLevelScene_Returning">Terugkeren...</string>
@@ -567,7 +576,6 @@
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="KrampusHead_Info">Heb je je ooit afgevraagd hoe het voelt om een meer duistere rol te spelen tijdens het verkennen van de dungeon? Nou, met deze duivelse uitstraling zul je de lokale babyratten zeker angst aanjagen.</string>
     <string name="KunaiThrow_Info">Deze dodelijke kunai-worp wordt extreem snel uitgevoerd, zo snel dat je niet eens een doelwit kunt kiezen.\n\nWare meesters kunnen meer dan één kunai tegelijk werpen.</string>
-
     <string name="KunaiThrow_Name">Kunai-worp</string>
     <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Dit wapen bestaat uit een zeis aan een metalen ketting met een zwaar ijzeren gewicht aan het andere uiteinde.</string>
@@ -678,7 +686,6 @@
     <string name="Mushroom_Eat_Message">Die paddenstoel smaakt raar!</string>
     <string name="MysteryMeat_Info">Eet op eigen risico!</string>
     <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
-
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
     <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
     <string name="NecromancerNPC_Gender">masculine</string>
@@ -715,6 +722,7 @@
     <string name="PalaceServant_Warlock_3">Het geduld van de Koning is niet eindeloos.</string>
     <string name="PalaceServants_Hostile">De palijdienaren keren zich tegen je!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
+    <string name="ParalysisArrow_Name">verlamende pijl</string>
     <string name="ParalysisBuff_Name">Verlamd</string>
     <string name="Paralysis_Name_0">Verdovende %s</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
@@ -740,6 +748,7 @@
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">pestarts</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Breng me %d rattenhuiden.</string>
+    <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Kun je het geloven?! Die idiooten hebben nog steeds niet door hoe gevaarlijk deze verdomde riool is! Alsof bewakers en avonturiers de stad kunnen beschermen tegen wat dan ook. Hah! Geen wapen kan de ziekte tegenhouden. Maar ik heb bewijzen nodig, misschien kun je me helpen? Breng me %d rattenvellen, zodat ik extra tests kan doen.</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, je bent terug! _Vijf dode ratten_, perfect! Hun huiden zullen cruciaal zijn voor mijn onderzoek. En zoals beloofd, voor je dappere inspanning heb ik dit harnas voor je gemaakt van hun eigen vellen. Het is doordrenkt met een vleugje van de pest, maar maak je geen zorgen! Het is gecontroleerd, het beschermt! Ga nu! Bescherm de stad!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… prachtig! De _slakken_, hun geheimen langzaam ontvouwend als bloemblaadjes in het maanlicht. Een schat aan informatie! Maar je hebt gelijk, _vijftig goud_ is nauwelijks een passende beloning. *Gikkelt maniakaal*.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Hoest hevig* Hatsjoe!\n De slakken... ze glijden. Ze slijmen. En ze fluisteren geheimen van een vergeten eeuw. Ik heb ze nodig, _tien_ van hen, hun schillen nog intact. Denk je dat slechts _vijftig goudmunten_ genoeg is voor zulke kostbare kennis?\n Bah! Maakt niet uit. De informatie die ze bergen kan de sleutel zijn om deze pest te stoppen. Of... het kan ons leiden tot iets nog vreselijker. Jij beslist.</string>
@@ -785,6 +794,7 @@
     <string name="Potion_Colors_14">onyx</string>
     <string name="Potion_Colors_15">parelmoer</string>
     <string name="Potion_Colors_3">jade</string>
+    <string name="Potion_Colors_6">anthraciet</string>
     <string name="Potion_Colors_8">amber</string>
     <string name="Potion_ItemFliesAway">%s vliegt zomaar uit je handen weg.</string>
     <string name="Potion_MoistenUseless">Het lijkt erop dat je dit drankje net hebt verspild.</string>
@@ -1058,6 +1068,7 @@
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
     <string name="SummonBeast_Name">Beestenroep</string>
     <string name="Sungrass_Desc">Zonnegras staat bekend om de geneeskrachtige werking van zijn sap.</string>
+    <string name="Sungrass_Name">zonnegras</string>
     <string name="SuspiciousRat_Desc">Een rat is in de kerkers geen zeldzaamheid, maar dat er zo diep een woont... Je ziet hoe het hele lichaam van de rat spastisch beweegt wanneer hij beweegt.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
@@ -1151,6 +1162,7 @@
     <string name="WandOfSlowness_Info">Deze toverstaf zorgt ervoor dat een wezen met de helft van zijn normale snelheid beweegt en aanvalt, totdat het effect afloopt.</string>
     <string name="WandOfSlowness_Info1">Er gebeurde niets.</string>
     <string name="WandOfSlowness_Name">Toverstaf van Vertraging</string>
+    <string name="WandOfTelekinesis_Name">Staff van Telekinese</string>
     <string name="WandOfTeleportation_Info2">er is niets gebeurd</string>
     <string name="Wand_ACZap">ZAP</string>
     <string name="Wand_Name">%s toverstaf</string>
@@ -1231,6 +1243,7 @@
     <string name="WndInfoItem_Owner">Deze oude graf kan iets nuttigs bevatten, maar de eigenaar zal zich zeker verzetten tegen het controleren ervan.</string>
     <string name="WndInfoItem_Remains">Dit is alles wat overblijft van een van je voorgangers. Misschien is het de moeite waard om te kijken of er waardevolle items in zitten.</string>
     <string name="WndInfoItem_Skeleton">Skelettenresten</string>
+    <string name="WndInstallingMod_skipping_file">Overslaan %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Recept uitvoeren</string>
     <string name="WndItemAlchemy_NoRecipes">Geen recepten beschikbaar met dit item en je huidige inventaris.</string>
     <string name="WndItemAlchemy_SelectRecipe">Selecteer recept</string>
@@ -1355,7 +1368,9 @@
     <string name="town_deco_banner_desc">Een elegante vlag met de symbolen van deze kroeg.</string>
     <string name="town_deco_banner_name">Vaandel</string>
     <string name="town_deco_barrel_desc">Een gewoon vat, ook niet meer in de beste staat.</string>
+    <string name="town_deco_barrel_name">vat</string>
     <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
+    <string name="town_deco_beige_carpet_name">tapijt</string>
     <string name="town_deco_bell_tower_desc">Traditioneel worden kerkklokken in hoge torens geïnstalleerd zodat het gelui over grotere afstand te horen is.</string>
     <string name="town_deco_blue_carpet_desc">Een luxe blauwe tapijt, versierd met paarse ornamenten.</string>
     <string name="town_deco_blue_carpet_name">kleedje</string>
@@ -1441,60 +1456,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
-
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </resources>
