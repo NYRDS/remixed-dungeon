@@ -493,6 +493,7 @@
     <string name="Hero_StaCharm">Je bent betoverd!</string>
     <string name="Hero_StaFurious">furieus</string>
     <string name="Hero_StaOoze">Bijtend slijm vreet aan je vlees. Was het weg!</string>
+    <string name="Hero_StaParalysis">Je bent gelamd!</string>
     <string name="Hero_StaPoison">Je bent vergiftigd!</string>
     <string name="Hero_StaRoots">Je kunt je niet bewegen!</string>
     <string name="Hero_StaWeakness">Je voelt je verzwakt!</string>
@@ -870,6 +871,7 @@
     <string name="RottingFist_Desc">Verrottende Vuist van de Oude God</string>
     <string name="RottingFist_Gender">masculine</string>
     <string name="RubyBow_Gender">masculine</string>
+    <string name="RubyBow_Info">Alleen de grootste bogenschutters kunnen deze robijnboog gebruiken. Bijna elke pijl doorboort de vijand, een groot gat in zijn lichaam achterlatend, maar extreme kracht is nodig om de boogteef te spannen.</string>
     <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Info">Dit dodelijke wapen is werkelijk een meesterwerk van dwergentechniek.</string>
     <string name="Rudolph_Info">Wat is er feestelijker dan een gloeiende rode neus? Samen met een gewei, natuurlijk.</string>
@@ -1212,6 +1214,7 @@
     <string name="WndGame_Customizations">Aanpassingen</string>
     <string name="WndGame_Exit">Verlaat Remixed Dungeon</string>
     <string name="WndGame_Load">Laden</string>
+    <string name="WndGame_Save">Opslaan</string>
     <string name="WndHats_BackButton">Terug</string>
     <string name="WndHats_BuyButton">Kopen</string>
     <string name="WndHats_InfoButton">Bekijken</string>
@@ -1440,6 +1443,10 @@
     <string name="town_deco_wooden_table_name">Houten tafel</string>
 
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
 
 
 

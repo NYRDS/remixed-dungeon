@@ -723,6 +723,7 @@
     <string name="PetInventory_PetBackpackFull">Ba lô của thú cưng đã đầy</string>
     <string name="PetInventory_TakeFromPet">Lấy từ thú cưng</string>
     <string name="PetInventory_Title">Kho thú cưng</string>
+    <string name="PetInventory_TooFar">Quá xa khỏi thú cưng</string>
     <string name="PetInventory_TookItem">Đã lấy %1$s từ %2$s</string>
     <string name="PetInventory_ViewManage">Quản lý</string>
     <string name="Pickaxe_ACMine">ĐÀO MỎ</string>
@@ -817,6 +818,7 @@
     <string name="Rat_Name">chuột túi</string>
     <string name="Rat_Name_Objective">chuột túi</string>
     <string name="Ration_Info">Không có gì đặc sắc: thịt khô, vài chiếc bánh quy - những thứ như vậy.</string>
+    <string name="Ration_Name">phần ăn khô</string>
     <string name="RawFish_Name">cá sống</string>
     <string name="RawFish_Taste">Vị cá!</string>
     <string name="RegenerationBuff_Info">Chức năng hồi phục tự nhiên được thể hiện dưới dạng buff để làm cho mọi thứ dễ dàng hơn.</string>
@@ -1341,6 +1343,7 @@
     <string name="town_deco_inn_bed_desc">Trông có vẻ là một chiếc giường rất thoải mái.</string>
     <string name="town_deco_inn_bed_name">Giường</string>
     <string name="town_deco_library_books_name">Vật liệu đọc</string>
+    <string name="town_deco_locked_door_name">Cửa khóa</string>
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
     <string name="town_deco_mud_desc">Đất đã tan chảy trong vùng băng vĩnh cửu này.</string>
     <string name="town_deco_painting_desc">Một tác phẩm nghệ thuật đẹp đẽ.</string>
@@ -1389,6 +1392,9 @@
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
 
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
