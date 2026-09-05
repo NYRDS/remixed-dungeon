@@ -19,6 +19,8 @@ import com.watabou.pixeldungeon.windows.WndBag;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PetInventoryManager {
 
@@ -182,8 +184,8 @@ public class PetInventoryManager {
      */
     @LuaInterface
     @NotNull
-    public static java.util.List<Mob> getHeroPets(@NotNull Hero hero) {
-        java.util.List<Mob> pets = new java.util.ArrayList<>();
+    public static List<Mob> getHeroPets(@NotNull Hero hero) {
+        List<Mob> pets = new ArrayList<>();
         for (Mob mob : hero.level().mobs) {
             if (mob.getOwnerId() == hero.getId() && mob.isAlive()) {
                 pets.add(mob);
@@ -215,7 +217,7 @@ public class PetInventoryManager {
      */
     @LuaInterface
     public static void openPetInventoryFromToolbar(@NotNull Hero hero) {
-        java.util.List<Mob> pets = getHeroPets(hero);
+        List<Mob> pets = getHeroPets(hero);
         if (pets.isEmpty()) return;
 
         if (pets.size() == 1) {

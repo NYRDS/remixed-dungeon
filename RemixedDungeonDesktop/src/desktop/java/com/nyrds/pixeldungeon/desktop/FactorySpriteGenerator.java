@@ -56,6 +56,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import java.io.File;
+import java.io.FileWriter;
 
 
 /**
@@ -71,7 +73,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
 
         // Create the sprites directory if it doesn't exist
         try {
-            java.io.File spritesDir = new java.io.File("../../../../sprites/");
+            File spritesDir = new File("../../../../sprites/");
             if (!spritesDir.exists()) {
                 spritesDir.mkdirs();
                 GLog.i("Created sprites directory at: %s", spritesDir.getAbsolutePath());
@@ -1199,7 +1201,7 @@ public class FactorySpriteGenerator extends RemixedDungeon {
 
         // Create the entities directory if it doesn't exist
         try {
-            java.io.File entitiesDir = new java.io.File("../../../../entities/");
+            File entitiesDir = new File("../../../../entities/");
             if (!entitiesDir.exists()) {
                 entitiesDir.mkdirs();
                 GLog.i("Created entities directory at: %s", entitiesDir.getAbsolutePath());
@@ -1305,14 +1307,14 @@ public class FactorySpriteGenerator extends RemixedDungeon {
             Collections.sort(entityNames);
 
             // Create entities directory if not exists
-            java.io.File entitiesDir = new java.io.File("../../../../entities/");
+            File entitiesDir = new File("../../../../entities/");
             if (!entitiesDir.exists()) {
                 entitiesDir.mkdirs();
             }
 
             // Write to file in the entities directory
             String filePath = "../../../../entities/" + fileName;
-            java.io.FileWriter writer = new java.io.FileWriter(filePath);
+            FileWriter writer = new FileWriter(filePath);
             for (String entityName : entityNames) {
                 writer.write(entityName + "\n");
             }

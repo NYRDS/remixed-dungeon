@@ -11,6 +11,21 @@ import java.io.File;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.Base64;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * WebServer implementation for desktop platforms.
@@ -40,11 +55,11 @@ public class WebServer extends BaseWebServer {
     private String loadTemplate(String templateName) {
         try {
             // Use the new FilesystemAccess abstraction to get the input stream
-            java.io.InputStream inputStream = FilesystemAccess.getInputStream("html/" + templateName);
+            InputStream inputStream = FilesystemAccess.getInputStream("html/" + templateName);
 
             if (inputStream != null) {
                 StringBuilder content = new StringBuilder();
-                try (java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(inputStream))) {
+                try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
                     String line;
                     while ((line = reader.readLine()) != null) {
                         content.append(line).append("\n");
@@ -67,9 +82,9 @@ public class WebServer extends BaseWebServer {
     /**
      * Replace placeholders in template
      */
-    private String replacePlaceholders(String template, java.util.Map<String, String> replacements) {
+    private String replacePlaceholders(String template, Map<String, String> replacements) {
         String result = template;
-        for (java.util.Map.Entry<String, String> entry : replacements.entrySet()) {
+        for (Map.Entry<String, String> entry : replacements.entrySet()) {
             result = result.replace("{{" + entry.getKey() + "}}", entry.getValue());
         }
         return result;
@@ -79,7 +94,7 @@ public class WebServer extends BaseWebServer {
     public String serveRoot() {
         String template = loadTemplate("root_template.html");
 
-        java.util.Map<String, String> replacements = new java.util.HashMap<>();
+        Map<String, String> replacements = new HashMap<>();
         replacements.put("GAME_VERSION", com.watabou.pixeldungeon.utils.Utils.format("%s (%d)", GameLoop.version, GameLoop.versionCode));
         replacements.put("MOD_INFO", com.watabou.pixeldungeon.utils.Utils.format("%s (%d)", ModdingMode.activeMod(), ModdingMode.activeModVersion()));
 
@@ -103,8 +118,8 @@ public class WebServer extends BaseWebServer {
 
         if (contents != null) {
             // Separate directories and files
-            java.util.List<String> directories = new java.util.ArrayList<>();
-            java.util.List<String> files = new java.util.ArrayList<>();
+            List<String> directories = new ArrayList<>();
+            List<String> files = new ArrayList<>();
 
             for (String name : contents) {
                 if (isDirectoryItem("", name)) {
@@ -115,8 +130,8 @@ public class WebServer extends BaseWebServer {
             }
 
             // Sort directories and files separately
-            java.util.Collections.sort(directories);
-            java.util.Collections.sort(files);
+            Collections.sort(directories);
+            Collections.sort(files);
 
 
             // List directories first
@@ -131,7 +146,7 @@ public class WebServer extends BaseWebServer {
                     // For JSON files, add both download and edit links
                     String encodedPath2;
                     try {
-                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
@@ -140,7 +155,7 @@ public class WebServer extends BaseWebServer {
                     // For Lua files, add both download and edit links
                     String encodedPath2;
                     try {
-                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
@@ -149,7 +164,7 @@ public class WebServer extends BaseWebServer {
                     // For image files, add download, preview, and edit links
                     String encodedPath2;
                     try {
-                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
@@ -161,12 +176,12 @@ public class WebServer extends BaseWebServer {
             }
         }
 
-        java.util.Map<String, String> replacements = new java.util.HashMap<>();
+        Map<String, String> replacements = new HashMap<>();
         replacements.put("MOD_NAME", ModdingMode.activeMod());
 
         // For the root directory, use empty string for upload path
         try {
-            replacements.put("ENCODED_UPLOAD_PATH", java.net.URLEncoder.encode("", "UTF-8"));
+            replacements.put("ENCODED_UPLOAD_PATH", URLEncoder.encode("", "UTF-8"));
         } catch (Exception e) {
             replacements.put("ENCODED_UPLOAD_PATH", ""); // Fallback if encoding fails
         }
@@ -201,8 +216,8 @@ public class WebServer extends BaseWebServer {
 
         if (contents != null) {
             // Separate directories and files
-            java.util.List<String> directories = new java.util.ArrayList<>();
-            java.util.List<String> files = new java.util.ArrayList<>();
+            List<String> directories = new ArrayList<>();
+            List<String> files = new ArrayList<>();
 
             for (String name : contents) {
                 if (isDirectoryItem(directoryPath, name)) {
@@ -213,8 +228,8 @@ public class WebServer extends BaseWebServer {
             }
 
             // Sort directories and files separately
-            java.util.Collections.sort(directories);
-            java.util.Collections.sort(files);
+            Collections.sort(directories);
+            Collections.sort(files);
 
 
             // List directories first
@@ -230,7 +245,7 @@ public class WebServer extends BaseWebServer {
                     // For JSON files, add both download and edit links
                     String encodedPath2;
                     try {
-                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
@@ -240,7 +255,7 @@ public class WebServer extends BaseWebServer {
                     // For Lua files, add both download and edit links
                     String encodedPath2;
                     try {
-                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
@@ -250,7 +265,7 @@ public class WebServer extends BaseWebServer {
                     // For image files, add download, preview, and edit links
                     String encodedPath2;
                     try {
-                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
@@ -264,7 +279,7 @@ public class WebServer extends BaseWebServer {
             }
         }
 
-        java.util.Map<String, String> replacements = new java.util.HashMap<>();
+        Map<String, String> replacements = new HashMap<>();
         replacements.put("DIRECTORY_PATH", directoryPath.isEmpty() ? "/" : directoryPath);
 
         // For the template's upload link in header, use the directory path with potential slash added
@@ -273,7 +288,7 @@ public class WebServer extends BaseWebServer {
             templateUploadPath += "/";
         }
         try {
-            replacements.put("ENCODED_UPLOAD_PATH", java.net.URLEncoder.encode(templateUploadPath, "UTF-8"));
+            replacements.put("ENCODED_UPLOAD_PATH", URLEncoder.encode(templateUploadPath, "UTF-8"));
         } catch (Exception e) {
             replacements.put("ENCODED_UPLOAD_PATH", templateUploadPath); // Fallback if encoding fails
         }
@@ -287,7 +302,7 @@ public class WebServer extends BaseWebServer {
     public String serveUploadForm(String message, String currentPath) {
         String template = loadTemplate("upload_form_template.html");
 
-        java.util.Map<String, String> replacements = new java.util.HashMap<>();
+        Map<String, String> replacements = new HashMap<>();
 
         // Prepare message div
         String messageDiv = "";
@@ -321,7 +336,7 @@ public class WebServer extends BaseWebServer {
 
         String uploadPath = filePath.contains("/") ? filePath.substring(0, filePath.lastIndexOf("/")) : "";
 
-        java.util.Map<String, String> replacements = new java.util.HashMap<>();
+        Map<String, String> replacements = new HashMap<>();
         replacements.put("UPLOAD_PATH", uploadPath);
         replacements.put("FILE_PATH", filePath);
         replacements.put("ESCAPED_FILE_PATH", javaScriptEscape(filePath));
@@ -332,7 +347,7 @@ public class WebServer extends BaseWebServer {
     @Override
     public String serveNotFound() {
         String template = loadTemplate("not_found_template.html");
-        return replacePlaceholders(template, new java.util.HashMap<>());
+        return replacePlaceholders(template, new HashMap<>());
     }
 
     private static String javaScriptEscape(String str) {
@@ -354,7 +369,7 @@ public class WebServer extends BaseWebServer {
 
         try {
             // Use ModdingMode to get a combined list of both assets and external files
-            java.util.List<String> resourceList = ModdingMode.listResources(path, (dir, name) -> {
+            List<String> resourceList = ModdingMode.listResources(path, (dir, name) -> {
                 // Include all items in the directory
                 return true;
             });
@@ -363,7 +378,7 @@ public class WebServer extends BaseWebServer {
 
             // ModdingMode.listResources returns direct child names, so no path prefix filtering is needed
             // Filter the resources to only include direct children, not nested items
-            java.util.List<String> filteredList = new java.util.ArrayList<>();
+            List<String> filteredList = new ArrayList<>();
 
             for (String resource : resourceList) {
                 // Only include direct children, not nested items
@@ -515,7 +530,7 @@ public class WebServer extends BaseWebServer {
             }
 
             return newFixedLengthResponse(Response.Status.OK, "image/png",
-                new java.io.ByteArrayInputStream(pngData[0]), pngData[0].length);
+                new ByteArrayInputStream(pngData[0]), pngData[0].length);
         } catch (Exception e) {
             return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
                 "{\"error\":\"" + e.getMessage() + "\"}");
@@ -610,7 +625,7 @@ public class WebServer extends BaseWebServer {
 
             // Also show what our filtering logic would return (updated)
             response.append("<h2>Filtering Logic Results (Fixed):</h2>");
-            List<String> filteredList = new java.util.ArrayList<>();
+            List<String> filteredList = new ArrayList<>();
 
             for (String resource : resourceList) {
                 // Only include direct children, not nested items
@@ -643,7 +658,7 @@ public class WebServer extends BaseWebServer {
 
         String uploadPath = filePath.contains("/") ? filePath.substring(0, filePath.lastIndexOf("/")) : "";
 
-        java.util.Map<String, String> replacements = new java.util.HashMap<>();
+        Map<String, String> replacements = new HashMap<>();
         replacements.put("UPLOAD_PATH", uploadPath);
         replacements.put("FILE_PATH", filePath);
         replacements.put("ESCAPED_FILE_PATH", javaScriptEscape(filePath));
@@ -667,7 +682,7 @@ public class WebServer extends BaseWebServer {
             }
 
             // Create an HTML page to display the image
-            String encodedFilePath = java.net.URLEncoder.encode(filePath, "UTF-8");
+            String encodedFilePath = URLEncoder.encode(filePath, "UTF-8");
             String html = String.format(
                 "<!DOCTYPE html>" +
                 "<html>" +
@@ -725,7 +740,7 @@ public class WebServer extends BaseWebServer {
             }
 
             // Redirect to PixelCraft with the edit_file parameter
-            String encodedFilePath = java.net.URLEncoder.encode(filePath, "UTF-8");
+            String encodedFilePath = URLEncoder.encode(filePath, "UTF-8");
             String pixelCraftUrl = "/web/pixelcraft/?edit_file=" + encodedFilePath;
 
             // Create a redirect page
@@ -760,7 +775,7 @@ public class WebServer extends BaseWebServer {
             GLog.debug("Handling texture save request");
 
             // Use the same approach as JSON save, but for texture data
-            Map<String, String> files = new java.util.HashMap<>();
+            Map<String, String> files = new HashMap<>();
 
             // This will parse the body and handle both form data and raw data
             session.parseBody(files);
@@ -773,18 +788,18 @@ public class WebServer extends BaseWebServer {
                 // Get query parameters in case the data was sent as query parameters
                 String body = session.getQueryParameterString();
                 if (body != null && !body.isEmpty()) {
-                    jsonString = java.net.URLDecoder.decode(body, "UTF-8");
+                    jsonString = URLDecoder.decode(body, "UTF-8");
                 }
             }
 
             // If still null, try to read from the input stream directly
             if (jsonString == null || jsonString.isEmpty()) {
                 GLog.debug("Reading texture data from input stream");
-                java.util.Map<String, java.util.List<String>> parms = session.getParameters();
+                Map<String, List<String>> parms = session.getParameters();
 
                 // If parameters exist, check if we have JSON in parameters
                 if (!parms.isEmpty()) {
-                    for (java.util.Map.Entry<String, java.util.List<String>> entry : parms.entrySet()) {
+                    for (Map.Entry<String, List<String>> entry : parms.entrySet()) {
                         // Look for JSON-like strings in parameters
                         for (String value : entry.getValue()) {
                             if (value.startsWith("{") && value.endsWith("}")) {
@@ -801,7 +816,7 @@ public class WebServer extends BaseWebServer {
                     try {
                         // Create a buffer and read with timeout
                         byte[] buffer = new byte[8192]; // Increased buffer size for image data
-                        java.io.InputStream inputStream = session.getInputStream();
+                        InputStream inputStream = session.getInputStream();
 
                         // Mark and reset approach to avoid issues with already-read streams
                         if (inputStream.markSupported()) {
@@ -853,7 +868,7 @@ public class WebServer extends BaseWebServer {
             GLog.debug("Full file path: " + fullPath);
 
             // Decode the base64 content using Java's built-in Base64 decoder
-            byte[] imageBytes = java.util.Base64.getDecoder().decode(base64Content);
+            byte[] imageBytes = Base64.getDecoder().decode(base64Content);
 
             // Create the file
             File destFile = FileSystem.getExternalStorageFile(fullPath);
@@ -875,7 +890,7 @@ public class WebServer extends BaseWebServer {
 
             // Write the content to the file
             GLog.debug("Writing texture content to file");
-            try (java.io.FileOutputStream fos = new java.io.FileOutputStream(destFile)) {
+            try (FileOutputStream fos = new FileOutputStream(destFile)) {
                 fos.write(imageBytes);
             }
 
@@ -922,12 +937,12 @@ public class WebServer extends BaseWebServer {
             if (textureFile.exists()) {
                 // File exists in mod directory, read from there
                 fileBytes = new byte[(int) textureFile.length()];
-                try (java.io.FileInputStream fis = new java.io.FileInputStream(textureFile)) {
+                try (FileInputStream fis = new FileInputStream(textureFile)) {
                     fis.read(fileBytes);
                 }
             } else {
                 // File doesn't exist in mod directory, try to read from assets via ModdingMode
-                try (java.io.InputStream fis = ModdingMode.getInputStream(filePath)) {
+                try (InputStream fis = ModdingMode.getInputStream(filePath)) {
                     if (fis == null) {
                         GLog.debug("Texture file does not exist in mod directory or assets: " + fullPath);
                         return newFixedLengthResponse(Response.Status.NOT_FOUND, "application/json",
@@ -935,7 +950,7 @@ public class WebServer extends BaseWebServer {
                     }
 
                     // Read all bytes from input stream
-                    java.io.ByteArrayOutputStream buffer = new java.io.ByteArrayOutputStream();
+                    ByteArrayOutputStream buffer = new ByteArrayOutputStream();
                     int nRead;
                     byte[] data = new byte[1024];
                     while ((nRead = fis.read(data, 0, data.length)) != -1) {
@@ -946,7 +961,7 @@ public class WebServer extends BaseWebServer {
             }
 
             // Encode to base64 using Java's built-in Base64 encoder
-            String base64Content = java.util.Base64.getEncoder().encodeToString(fileBytes);
+            String base64Content = Base64.getEncoder().encodeToString(fileBytes);
 
             // Create a JSON response with the base64 content
             String jsonResponse = "{\"name\":\"" + filePath + "\",\"image\":\"" + base64Content + "\"}";

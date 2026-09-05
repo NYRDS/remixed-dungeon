@@ -16,6 +16,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import com.nyrds.LuaInterface;
+import java.util.ArrayList;
+import java.util.List;
 
 @LuaInterface
 public class GLog {
@@ -175,7 +177,7 @@ public class GLog {
 	 */
 	public static String[] getRecentMessagesSinceLastCall() {
 		long currentTimestamp = System.currentTimeMillis();
-		java.util.List<String> messages = new java.util.ArrayList<>();
+		List<String> messages = new ArrayList<>();
 		
 		synchronized(recentMessages) {
 			for (TimedLogMessage timedMsg : recentMessages) {
@@ -194,7 +196,7 @@ public class GLog {
 	 * @return Array of recent log messages
 	 */
 	public static String[] getAllRecentMessages() {
-		java.util.List<String> messages = new java.util.ArrayList<>();
+		List<String> messages = new ArrayList<>();
 		
 		synchronized(recentMessages) {
 			for (TimedLogMessage timedMsg : recentMessages) {

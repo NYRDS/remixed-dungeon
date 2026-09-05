@@ -24,6 +24,7 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import com.watabou.pixeldungeon.scenes.WebViewScene;
+import java.io.IOException;
 
 public class AboutScene extends PixelScene {
 
@@ -252,7 +253,7 @@ public class AboutScene extends PixelScene {
 							try {
 								server.start();
 								Game.toast("WebServer started on port 8080");
-							} catch (java.io.IOException e) {
+							} catch (IOException e) {
 								com.nyrds.platform.EventCollector.logException(e, "WebServer");
 								Game.toast("Failed to start WebServer");
 							}

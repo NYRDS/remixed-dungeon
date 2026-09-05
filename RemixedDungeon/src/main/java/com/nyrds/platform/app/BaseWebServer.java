@@ -26,6 +26,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.function.Function;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Base WebServer implementation that provides common functionality for all platforms.
@@ -251,8 +260,8 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
         if (contents != null) {
             // Separate directories and files
-            java.util.List<String> directories = new java.util.ArrayList<>();
-            java.util.List<String> files = new java.util.ArrayList<>();
+            List<String> directories = new ArrayList<>();
+            List<String> files = new ArrayList<>();
 
             for (String name : contents) {
                 if (isDirectoryItem(directoryPath, name)) {
@@ -274,7 +283,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             GLog.debug("Generating upload link for directory: '" + uploadPath + "'");
             String encodedUploadPath;
             try {
-                encodedUploadPath = java.net.URLEncoder.encode(uploadPath, "UTF-8");
+                encodedUploadPath = URLEncoder.encode(uploadPath, "UTF-8");
                 GLog.debug("Encoded upload path: '" + encodedUploadPath + "' from original: '" + uploadPath + "'");
             } catch (Exception e) {
                 encodedUploadPath = uploadPath; // Fallback if encoding fails
@@ -295,7 +304,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     // For JSON files, add both download and edit links
                     String encodedPath2;
                     try {
-                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
@@ -305,7 +314,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     // For Lua files, add both download and edit links
                     String encodedPath2;
                     try {
-                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
@@ -315,7 +324,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     // For image files, add download, preview, and edit links
                     String encodedPath2;
                     try {
-                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
@@ -342,7 +351,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
      */
     private String getEncodedPath(String path) {
         try {
-            return java.net.URLEncoder.encode(path, "UTF-8");
+            return URLEncoder.encode(path, "UTF-8");
         } catch (Exception e) {
             return path; // Fallback if encoding fails
         }
@@ -485,8 +494,8 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
         if (contents != null) {
             // Separate directories and files
-            java.util.List<String> directories = new java.util.ArrayList<>();
-            java.util.List<String> files = new java.util.ArrayList<>();
+            List<String> directories = new ArrayList<>();
+            List<String> files = new ArrayList<>();
 
             for (String name : contents) {
                 GLog.debug("Processing item: '" + name + "' in path: '" + path + "'");
@@ -500,8 +509,8 @@ public abstract class BaseWebServer extends NanoHTTPD {
             }
 
             // Sort directories and files separately
-            java.util.Collections.sort(directories);
-            java.util.Collections.sort(files);
+            Collections.sort(directories);
+            Collections.sort(files);
 
             msg.append("<div class=\"file-list\">");
 
@@ -522,7 +531,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     if (name.toLowerCase().endsWith(".json")) {
                         String encodedPath1;
                         try {
-                            encodedPath1 = java.net.URLEncoder.encode(name, "UTF-8");
+                            encodedPath1 = URLEncoder.encode(name, "UTF-8");
                         } catch (Exception e) {
                             encodedPath1 = name; // Fallback if encoding fails
                         }
@@ -530,7 +539,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     } else if (name.toLowerCase().endsWith(".lua")) {
                         String encodedPath1;
                         try {
-                            encodedPath1 = java.net.URLEncoder.encode(name, "UTF-8");
+                            encodedPath1 = URLEncoder.encode(name, "UTF-8");
                         } catch (Exception e) {
                             encodedPath1 = name; // Fallback if encoding fails
                         }
@@ -543,7 +552,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     if (name.toLowerCase().endsWith(".json")) {
                         String encodedPath;
                         try {
-                            encodedPath = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                            encodedPath = URLEncoder.encode(fullPath, "UTF-8");
                         } catch (Exception e) {
                             encodedPath = fullPath; // Fallback if encoding fails
                         }
@@ -553,7 +562,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     } else if (name.toLowerCase().endsWith(".lua")) {
                         String encodedPath;
                         try {
-                            encodedPath = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                            encodedPath = URLEncoder.encode(fullPath, "UTF-8");
                         } catch (Exception e) {
                             encodedPath = fullPath; // Fallback if encoding fails
                         }
@@ -659,7 +668,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                 return newFixedLengthResponse(Response.Status.FORBIDDEN, "text/html", serveUploadForm("ERROR: Upload to the main 'Remixed' mod is disabled for security reasons.", ""));
             }
 
-            Map<String, String> files = new java.util.HashMap<>();
+            Map<String, String> files = new HashMap<>();
             session.parseBody(files);
 
             // Get the uploaded file
@@ -771,7 +780,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             GLog.debug("Handling JSON save request");
 
             // Use the same approach as file upload, but for raw JSON data
-            Map<String, String> files = new java.util.HashMap<>();
+            Map<String, String> files = new HashMap<>();
 
             // This will parse the body and handle both form data and raw data
             session.parseBody(files);
@@ -785,19 +794,19 @@ public abstract class BaseWebServer extends NanoHTTPD {
                 // (less likely for large JSON but possible for small payloads)
                 String body = session.getQueryParameterString();
                 if (body != null && !body.isEmpty()) {
-                    jsonString = java.net.URLDecoder.decode(body, "UTF-8");
+                    jsonString = URLDecoder.decode(body, "UTF-8");
                 }
             }
 
             // If still null, try to read from the input stream directly, but carefully
             if (jsonString == null || jsonString.isEmpty()) {
                 GLog.debug("Reading JSON from input stream");
-                java.util.Map<String, java.util.List<String>> parms = session.getParameters();
+                Map<String, List<String>> parms = session.getParameters();
 
                 // If parameters exist, check if we have JSON in parameters
                 // This is unlikely but possible depending on how client sends data
                 if (!parms.isEmpty()) {
-                    for (java.util.Map.Entry<String, java.util.List<String>> entry : parms.entrySet()) {
+                    for (Map.Entry<String, List<String>> entry : parms.entrySet()) {
                         // Look for JSON-like strings in parameters
                         for (String value : entry.getValue()) {
                             if (value.startsWith("{") && value.endsWith("}")) {
@@ -814,7 +823,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     try {
                         // Create a smaller buffer and read with timeout
                         byte[] buffer = new byte[4096];
-                        java.io.InputStream inputStream = session.getInputStream();
+                        InputStream inputStream = session.getInputStream();
 
                         // Mark and reset approach to avoid issues with already-read streams
                         if (inputStream.markSupported()) {
@@ -894,7 +903,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
             // Write the content to the file
             GLog.debug("Writing JSON content to file");
-            try (java.io.FileOutputStream fos = new java.io.FileOutputStream(destFile)) {
+            try (FileOutputStream fos = new FileOutputStream(destFile)) {
                 fos.write(content.getBytes("UTF-8"));
             }
 
@@ -929,7 +938,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             GLog.debug("Handling Lua save request");
 
             // Use the same approach as JSON save, but for raw Lua data
-            Map<String, String> files = new java.util.HashMap<>();
+            Map<String, String> files = new HashMap<>();
 
             // This will parse the body and handle both form data and raw data
             session.parseBody(files);
@@ -942,17 +951,17 @@ public abstract class BaseWebServer extends NanoHTTPD {
                 // Get query parameters in case the data was sent as query parameters
                 String body = session.getQueryParameterString();
                 if (body != null && !body.isEmpty()) {
-                    luaString = java.net.URLDecoder.decode(body, "UTF-8");
+                    luaString = URLDecoder.decode(body, "UTF-8");
                 }
             }
 
             // If still null, try to read from the input stream directly
             if (luaString == null || luaString.isEmpty()) {
                 GLog.debug("Reading Lua from input stream");
-                java.util.Map<String, java.util.List<String>> parms = session.getParameters();
+                Map<String, List<String>> parms = session.getParameters();
 
                 if (!parms.isEmpty()) {
-                    for (java.util.Map.Entry<String, java.util.List<String>> entry : parms.entrySet()) {
+                    for (Map.Entry<String, List<String>> entry : parms.entrySet()) {
                         // Look for Lua-like strings in parameters
                         for (String value : entry.getValue()) {
                             if (value.trim().startsWith("local ") || value.trim().startsWith("function ") || 
@@ -970,7 +979,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     try {
                         // Create a smaller buffer and read with timeout
                         byte[] buffer = new byte[4096];
-                        java.io.InputStream inputStream = session.getInputStream();
+                        InputStream inputStream = session.getInputStream();
 
                         // Mark and reset approach to avoid issues with already-read streams
                         if (inputStream.markSupported()) {
@@ -1042,7 +1051,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
             // Write the content to the file
             GLog.debug("Writing Lua content to file");
-            try (java.io.FileOutputStream fos = new java.io.FileOutputStream(destFile)) {
+            try (FileOutputStream fos = new FileOutputStream(destFile)) {
                 fos.write(content.getBytes("UTF-8"));
             }
 
@@ -1152,7 +1161,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                             path = param.substring(5); // Remove "path=" prefix
                             // URL decode the path
                             try {
-                                path = java.net.URLDecoder.decode(path, "UTF-8");
+                                path = URLDecoder.decode(path, "UTF-8");
                             } catch (Exception e) {
                                 // If decoding fails, use the path as is
                             }
@@ -1188,7 +1197,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                             filePath = param.substring(5); // Remove "file=" prefix
                             // URL decode the path
                             try {
-                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                                filePath = URLDecoder.decode(filePath, "UTF-8");
                             } catch (Exception e) {
                                 // If decoding fails, use the path as is
                             }
@@ -1232,7 +1241,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                             filePath = param.substring(5); // Remove "file=" prefix
                             // URL decode the path
                             try {
-                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                                filePath = URLDecoder.decode(filePath, "UTF-8");
                             } catch (Exception e) {
                                 // If decoding fails, use the path as is
                             }
@@ -1274,7 +1283,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                             filePath = param.substring(5); // Remove "file=" prefix
                             // URL decode the path
                             try {
-                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                                filePath = URLDecoder.decode(filePath, "UTF-8");
                             } catch (Exception e) {
                                 // If decoding fails, use the path as is
                             }
@@ -1316,7 +1325,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                             filePath = param.substring(5); // Remove "file=" prefix
                             // URL decode the path
                             try {
-                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                                filePath = URLDecoder.decode(filePath, "UTF-8");
                             } catch (Exception e) {
                                 // If decoding fails, use the path as is
                             }
@@ -1481,7 +1490,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                         if (param.startsWith("file=")) {
                             filePath = param.substring(5); // Remove "file=" prefix
                             try {
-                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                                filePath = URLDecoder.decode(filePath, "UTF-8");
                             } catch (Exception e) {
                                 // If decoding fails, use the path as is
                             }

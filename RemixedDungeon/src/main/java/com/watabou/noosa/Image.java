@@ -14,13 +14,15 @@ import org.jetbrains.annotations.NotNull;
 import java.nio.FloatBuffer;
 
 import lombok.Getter;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Image extends Visual implements IPlaceable {
 
     public SmartTexture texture;
 
     // caveman: images already reported for null texture (see draw())
-    private static java.util.Set<Integer> noTextureReported;
+    private static Set<Integer> noTextureReported;
 
     protected RectF frame;
 
@@ -182,7 +184,7 @@ public class Image extends Visual implements IPlaceable {
         // whole render loop. nothing to draw here anyway - skip and report once.
         if (texture == null) {
             if (noTextureReported == null) {
-                noTextureReported = new java.util.HashSet<>();
+                noTextureReported = new HashSet<>();
             }
             if (noTextureReported.add(hashCode())) {
                 System.out.println("[null-texture] " + getClass().getName()

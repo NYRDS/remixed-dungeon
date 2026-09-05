@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.test;
 
 import org.junit.Test;
+import java.io.File;
 
 import static org.junit.Assert.*;
 
@@ -15,8 +16,8 @@ public class SimpleResourceTest {
         String stringsFilePath = "/home/mike/StudioProjects/remixed-dungeon/RemixedDungeon/src/main/res/values/strings_all.xml";
         String arraysFilePath = "/home/mike/StudioProjects/remixed-dungeon/RemixedDungeon/src/main/res/values/string_arrays.xml";
         
-        java.io.File stringsFile = new java.io.File(stringsFilePath);
-        java.io.File arraysFile = new java.io.File(arraysFilePath);
+        File stringsFile = new File(stringsFilePath);
+        File arraysFile = new File(arraysFilePath);
         
         assertTrue("strings_all.xml should exist", stringsFile.exists());
         assertTrue("string_arrays.xml should exist", arraysFile.exists());

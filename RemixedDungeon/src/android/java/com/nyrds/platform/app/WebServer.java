@@ -19,6 +19,14 @@ import java.util.Enumeration;
 import java.util.Map;
 
 import fi.iki.elonen.NanoHTTPD;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class WebServer extends BaseWebServer {
     public WebServer(int port) {
@@ -169,7 +177,7 @@ public class WebServer extends BaseWebServer {
                             path = param.substring(5); // Remove "path=" prefix
                             // URL decode the path
                             try {
-                                path = java.net.URLDecoder.decode(path, "UTF-8");
+                                path = URLDecoder.decode(path, "UTF-8");
                             } catch (Exception e) {
                                 // If decoding fails, use the path as is
                             }
@@ -204,7 +212,7 @@ public class WebServer extends BaseWebServer {
                             filePath = param.substring(5); // Remove "file=" prefix
                             // URL decode the path
                             try {
-                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                                filePath = URLDecoder.decode(filePath, "UTF-8");
                             } catch (Exception e) {
                                 // If decoding fails, use the path as is
                             }
@@ -243,7 +251,7 @@ public class WebServer extends BaseWebServer {
                             filePath = param.substring(5); // Remove "file=" prefix
                             // URL decode the path
                             try {
-                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                                filePath = URLDecoder.decode(filePath, "UTF-8");
                             } catch (Exception e) {
                                 // If decoding fails, use the path as is
                             }
@@ -282,7 +290,7 @@ public class WebServer extends BaseWebServer {
                             filePath = param.substring(5); // Remove "file=" prefix
                             // URL decode the path
                             try {
-                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                                filePath = URLDecoder.decode(filePath, "UTF-8");
                             } catch (Exception e) {
                                 // If decoding fails, use the path as is
                             }
@@ -321,7 +329,7 @@ public class WebServer extends BaseWebServer {
                             filePath = param.substring(5); // Remove "file=" prefix
                             // URL decode the path
                             try {
-                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                                filePath = URLDecoder.decode(filePath, "UTF-8");
                             } catch (Exception e) {
                                 // If decoding fails, use the path as is
                             }
@@ -469,7 +477,7 @@ public class WebServer extends BaseWebServer {
                         if (param.startsWith("file=")) {
                             filePath = param.substring(5); // Remove "file=" prefix
                             try {
-                                filePath = java.net.URLDecoder.decode(filePath, "UTF-8");
+                                filePath = URLDecoder.decode(filePath, "UTF-8");
                             } catch (Exception e) {
                                 // If decoding fails, use the path as is
                             }
@@ -504,7 +512,7 @@ public class WebServer extends BaseWebServer {
             GLog.debug("Handling texture save request");
 
             // Use the same approach as JSON save, but for texture data
-            Map<String, String> files = new java.util.HashMap<>();
+            Map<String, String> files = new HashMap<>();
 
             // This will parse the body and handle both form data and raw data
             session.parseBody(files);
@@ -517,18 +525,18 @@ public class WebServer extends BaseWebServer {
                 // Get query parameters in case the data was sent as query parameters
                 String body = session.getQueryParameterString();
                 if (body != null && !body.isEmpty()) {
-                    jsonString = java.net.URLDecoder.decode(body, "UTF-8");
+                    jsonString = URLDecoder.decode(body, "UTF-8");
                 }
             }
 
             // If still null, try to read from the input stream directly
             if (jsonString == null || jsonString.isEmpty()) {
                 GLog.debug("Reading texture data from input stream");
-                java.util.Map<String, java.util.List<String>> parms = session.getParameters();
+                Map<String, List<String>> parms = session.getParameters();
 
                 // If parameters exist, check if we have JSON in parameters
                 if (!parms.isEmpty()) {
-                    for (java.util.Map.Entry<String, java.util.List<String>> entry : parms.entrySet()) {
+                    for (Map.Entry<String, List<String>> entry : parms.entrySet()) {
                         // Look for JSON-like strings in parameters
                         for (String value : entry.getValue()) {
                             if (value.startsWith("{") && value.endsWith("}")) {
@@ -545,7 +553,7 @@ public class WebServer extends BaseWebServer {
                     try {
                         // Create a buffer and read with timeout
                         byte[] buffer = new byte[8192]; // Increased buffer size for image data
-                        java.io.InputStream inputStream = session.getInputStream();
+                        InputStream inputStream = session.getInputStream();
 
                         // Mark and reset approach to avoid issues with already-read streams
                         if (inputStream.markSupported()) {
@@ -613,7 +621,7 @@ public class WebServer extends BaseWebServer {
 
             // Write the content to the file
             GLog.debug("Writing texture content to file");
-            try (java.io.FileOutputStream fos = new java.io.FileOutputStream(destFile)) {
+            try (FileOutputStream fos = new FileOutputStream(destFile)) {
                 fos.write(imageBytes);
             }
 
@@ -662,7 +670,7 @@ public class WebServer extends BaseWebServer {
 
             // Read the file content
             byte[] fileBytes = new byte[(int) textureFile.length()];
-            try (java.io.FileInputStream fis = new java.io.FileInputStream(textureFile)) {
+            try (FileInputStream fis = new FileInputStream(textureFile)) {
                 fis.read(fileBytes);
             }
 
@@ -700,7 +708,7 @@ public class WebServer extends BaseWebServer {
             }
 
             // Create an HTML page to display the image
-            String encodedFilePath = java.net.URLEncoder.encode(filePath, "UTF-8");
+            String encodedFilePath = URLEncoder.encode(filePath, "UTF-8");
             String html = String.format(
                 "<!DOCTYPE html>" +
                 "<html>" +
@@ -757,7 +765,7 @@ public class WebServer extends BaseWebServer {
             }
 
             // Redirect to PixelCraft with the edit_file parameter
-            String encodedFilePath = java.net.URLEncoder.encode(filePath, "UTF-8");
+            String encodedFilePath = URLEncoder.encode(filePath, "UTF-8");
             String pixelCraftUrl = "/web/pixelcraft/?edit_file=" + encodedFilePath;
 
             // Create a redirect page

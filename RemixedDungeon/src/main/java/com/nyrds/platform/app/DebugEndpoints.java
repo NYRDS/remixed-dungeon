@@ -40,6 +40,13 @@ import java.util.List;
 import java.util.Map;
 
 import fi.iki.elonen.NanoHTTPD;
+import java.net.URLDecoder;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class DebugEndpoints {
     
@@ -60,7 +67,7 @@ public class DebugEndpoints {
                     if (param.startsWith("level=")) {
                         String levelStr = param.substring(6); // Remove "level=" prefix
                         try {
-                            level = Integer.parseInt(java.net.URLDecoder.decode(levelStr, "UTF-8"));
+                            level = Integer.parseInt(URLDecoder.decode(levelStr, "UTF-8"));
                         } catch (Exception e) {
                             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
                                 "{\"error\":\"Invalid level parameter\"}");
@@ -120,16 +127,16 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("type=")) {
-                        mobType = java.net.URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
+                        mobType = URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
                     } else if (param.startsWith("x=")) {
                         try {
-                            x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
+                            x = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
                     } else if (param.startsWith("y=")) {
                         try {
-                            y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
+                            y = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
@@ -227,16 +234,16 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("type=")) {
-                        itemType = java.net.URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
+                        itemType = URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
                     } else if (param.startsWith("x=")) {
                         try {
-                            x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
+                            x = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
                     } else if (param.startsWith("y=")) {
                         try {
-                            y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
+                            y = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
@@ -288,7 +295,7 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("type=")) {
-                        mapType = java.net.URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
+                        mapType = URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
                     }
                 }
             }
@@ -378,7 +385,7 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("type=")) {
-                        itemType = java.net.URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
+                        itemType = URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
                     }
                 }
             }
@@ -421,18 +428,18 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("entity=")) {
-                        entityType = java.net.URLDecoder.decode(param.substring(7), "UTF-8"); // Remove "entity=" prefix
+                        entityType = URLDecoder.decode(param.substring(7), "UTF-8"); // Remove "entity=" prefix
                     } else if (param.startsWith("value=")) {
-                        entityValue = java.net.URLDecoder.decode(param.substring(6), "UTF-8"); // Remove "value=" prefix
+                        entityValue = URLDecoder.decode(param.substring(6), "UTF-8"); // Remove "value=" prefix
                     } else if (param.startsWith("x=")) {
                         try {
-                            x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
+                            x = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
                     } else if (param.startsWith("y=")) {
                         try {
-                            y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
+                            y = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
@@ -504,10 +511,10 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("class=")) {
-                        heroClass = java.net.URLDecoder.decode(param.substring(6), "UTF-8").toUpperCase(); // Remove "class=" prefix and convert to uppercase
+                        heroClass = URLDecoder.decode(param.substring(6), "UTF-8").toUpperCase(); // Remove "class=" prefix and convert to uppercase
                     } else if (param.startsWith("difficulty=")) {
                         try {
-                            difficulty = Integer.parseInt(java.net.URLDecoder.decode(param.substring(11), "UTF-8")); // Remove "difficulty=" prefix
+                            difficulty = Integer.parseInt(URLDecoder.decode(param.substring(11), "UTF-8")); // Remove "difficulty=" prefix
                         } catch (NumberFormatException e) {
                             // Use default difficulty if parsing fails
                         }
@@ -681,7 +688,7 @@ public class DebugEndpoints {
             Field heapsField = Level.class.getDeclaredField("heaps");
             heapsField.setAccessible(true);
             @SuppressWarnings("unchecked")
-            java.util.Map<Integer, Heap> heaps = (java.util.Map<Integer, Heap>) heapsField.get(Dungeon.level);
+            Map<Integer, Heap> heaps = (Map<Integer, Heap>) heapsField.get(Dungeon.level);
 
             // Create JSON array of items
             StringBuilder itemsJson = new StringBuilder("[");
@@ -784,10 +791,10 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("stat=")) {
-                        stat = java.net.URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "stat=" prefix
+                        stat = URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "stat=" prefix
                     } else if (param.startsWith("value=")) {
                         try {
-                            value = Integer.parseInt(java.net.URLDecoder.decode(param.substring(6), "UTF-8")); // Remove "value=" prefix
+                            value = Integer.parseInt(URLDecoder.decode(param.substring(6), "UTF-8")); // Remove "value=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid value
                         }
@@ -853,19 +860,19 @@ public class DebugEndpoints {
                 for (String param : params) {
                     if (param.startsWith("x=")) {
                         try {
-                            x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                            x = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8"));
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
                     } else if (param.startsWith("y=")) {
                         try {
-                            y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                            y = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8"));
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
                     } else if (param.startsWith("id=")) {
                         try {
-                            mobId = Integer.parseInt(java.net.URLDecoder.decode(param.substring(3), "UTF-8"));
+                            mobId = Integer.parseInt(URLDecoder.decode(param.substring(3), "UTF-8"));
                         } catch (NumberFormatException e) {
                             // Ignore invalid id
                         }
@@ -928,13 +935,13 @@ public class DebugEndpoints {
                 for (String param : params) {
                     if (param.startsWith("x=")) {
                         try {
-                            x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
+                            x = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
                     } else if (param.startsWith("y=")) {
                         try {
-                            y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
+                            y = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
@@ -960,7 +967,7 @@ public class DebugEndpoints {
             Field heapsField = Level.class.getDeclaredField("heaps");
             heapsField.setAccessible(true);
             @SuppressWarnings("unchecked")
-            java.util.Map<Integer, Heap> heaps = (java.util.Map<Integer, Heap>) heapsField.get(Dungeon.level);
+            Map<Integer, Heap> heaps = (Map<Integer, Heap>) heapsField.get(Dungeon.level);
 
             // Remove the heap at this location if it exists
             if (heaps.containsKey(cellPos)) {
@@ -1046,7 +1053,7 @@ public class DebugEndpoints {
                 for (String param : params) {
                     if (param.startsWith("seed=")) {
                         try {
-                            seed = Long.parseLong(java.net.URLDecoder.decode(param.substring(5), "UTF-8")); // Remove "seed=" prefix
+                            seed = Long.parseLong(URLDecoder.decode(param.substring(5), "UTF-8")); // Remove "seed=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid seed
                         }
@@ -1080,13 +1087,13 @@ public class DebugEndpoints {
                 for (String param : params) {
                     if (param.startsWith("x=")) {
                         try {
-                            x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
+                            x = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
                     } else if (param.startsWith("y=")) {
                         try {
-                            y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
+                            y = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
@@ -1128,7 +1135,7 @@ public class DebugEndpoints {
             Field heapsField = Level.class.getDeclaredField("heaps");
             heapsField.setAccessible(true);
             @SuppressWarnings("unchecked")
-            java.util.Map<Integer, Heap> heaps = (java.util.Map<Integer, Heap>) heapsField.get(Dungeon.level);
+            Map<Integer, Heap> heaps = (Map<Integer, Heap>) heapsField.get(Dungeon.level);
 
             // Check for heaps (items) at this location
             if (heaps.containsKey(cellPos)) {
@@ -1185,13 +1192,13 @@ public class DebugEndpoints {
                 for (String param : params) {
                     if (param.startsWith("x=")) {
                         try {
-                            x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
+                            x = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "x=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
                     } else if (param.startsWith("y=")) {
                         try {
-                            y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
+                            y = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8")); // Remove "y=" prefix
                         } catch (NumberFormatException e) {
                             // Ignore invalid coordinate
                         }
@@ -1260,7 +1267,7 @@ public class DebugEndpoints {
             Field heapsField = Level.class.getDeclaredField("heaps");
             heapsField.setAccessible(true);
             @SuppressWarnings("unchecked")
-            java.util.Map<Integer, Heap> heaps = (java.util.Map<Integer, Heap>) heapsField.get(Dungeon.level);
+            Map<Integer, Heap> heaps = (Map<Integer, Heap>) heapsField.get(Dungeon.level);
 
             // Return information about what happened at the cell
             StringBuilder response = new StringBuilder("{");
@@ -1299,7 +1306,7 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("type=")) {
-                        spellName = java.net.URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
+                        spellName = URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
                         break;
                     }
                 }
@@ -1377,9 +1384,9 @@ public class DebugEndpoints {
             if (query != null && !query.isEmpty()) {
                 for (String param : query.split("&")) {
                     if (param.startsWith("spell=")) {
-                        spellName = java.net.URLDecoder.decode(param.substring(6), "UTF-8");
+                        spellName = URLDecoder.decode(param.substring(6), "UTF-8");
                     } else if (param.startsWith("mobType=")) {
-                        mobType = java.net.URLDecoder.decode(param.substring(8), "UTF-8");
+                        mobType = URLDecoder.decode(param.substring(8), "UTF-8");
                     } else if (param.equals("owned=true")) {
                         ownedOnly = true;
                     }
@@ -1478,11 +1485,11 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("type=")) {
-                        spellName = java.net.URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
+                        spellName = URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
                     } else if (param.startsWith("x=")) {
-                        targetXStr = java.net.URLDecoder.decode(param.substring(2), "UTF-8"); // Remove "x=" prefix
+                        targetXStr = URLDecoder.decode(param.substring(2), "UTF-8"); // Remove "x=" prefix
                     } else if (param.startsWith("y=")) {
-                        targetYStr = java.net.URLDecoder.decode(param.substring(2), "UTF-8"); // Remove "y=" prefix
+                        targetYStr = URLDecoder.decode(param.substring(2), "UTF-8"); // Remove "y=" prefix
                     }
                 }
             }
@@ -1597,7 +1604,7 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("affinity=")) {
-                        affinity = java.net.URLDecoder.decode(param.substring(9), "UTF-8"); // Remove "affinity=" prefix
+                        affinity = URLDecoder.decode(param.substring(9), "UTF-8"); // Remove "affinity=" prefix
                         break;
                     }
                 }
@@ -1719,11 +1726,11 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("x=")) {
-                        x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                        x = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8"));
                     } else if (param.startsWith("y=")) {
-                        y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                        y = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8"));
                     } else if (param.startsWith("cell=")) {
-                        cell = Integer.parseInt(java.net.URLDecoder.decode(param.substring(5), "UTF-8"));
+                        cell = Integer.parseInt(URLDecoder.decode(param.substring(5), "UTF-8"));
                     }
                 }
             }
@@ -1801,11 +1808,11 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("x=")) {
-                        x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                        x = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8"));
                     } else if (param.startsWith("y=")) {
-                        y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                        y = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8"));
                     } else if (param.startsWith("cell=")) {
-                        cell = Integer.parseInt(java.net.URLDecoder.decode(param.substring(5), "UTF-8"));
+                        cell = Integer.parseInt(URLDecoder.decode(param.substring(5), "UTF-8"));
                     }
                 }
             }
@@ -1888,7 +1895,7 @@ public class DebugEndpoints {
                 for (String param : params) {
                     if (param.startsWith("ticks=")) {
                         try {
-                            ticks = Integer.parseInt(java.net.URLDecoder.decode(param.substring(6), "UTF-8"));
+                            ticks = Integer.parseInt(URLDecoder.decode(param.substring(6), "UTF-8"));
                         } catch (Exception e) {
                             // Use default value
                         }
@@ -1955,9 +1962,9 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("id=")) {
-                        levelId = java.net.URLDecoder.decode(param.substring(3), "UTF-8");
+                        levelId = URLDecoder.decode(param.substring(3), "UTF-8");
                     } else if (param.startsWith("entrance=")) {
-                        entranceCell = Integer.parseInt(java.net.URLDecoder.decode(param.substring(9), "UTF-8"));
+                        entranceCell = Integer.parseInt(URLDecoder.decode(param.substring(9), "UTF-8"));
                     }
                 }
             }
@@ -2118,7 +2125,7 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("id=")) {
-                        targetLevelId = java.net.URLDecoder.decode(param.substring(3), "UTF-8");
+                        targetLevelId = URLDecoder.decode(param.substring(3), "UTF-8");
                     }
                 }
             }
@@ -2296,7 +2303,7 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("ingredient=")) {
-                        String ingredientName = java.net.URLDecoder.decode(param.substring(11), "UTF-8");
+                        String ingredientName = URLDecoder.decode(param.substring(11), "UTF-8");
                         ingredientNames.add(ingredientName);
                     }
                 }
@@ -2394,11 +2401,11 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("ingredient=")) {
-                        String ingredientName = java.net.URLDecoder.decode(param.substring(11), "UTF-8");
+                        String ingredientName = URLDecoder.decode(param.substring(11), "UTF-8");
                         ingredientNames.add(ingredientName);
                     } else if (param.startsWith("times=")) {
                         try {
-                            times = Integer.parseInt(java.net.URLDecoder.decode(param.substring(6), "UTF-8"));
+                            times = Integer.parseInt(URLDecoder.decode(param.substring(6), "UTF-8"));
                         } catch (NumberFormatException e) {
                             // Use default value
                         }
@@ -2465,7 +2472,7 @@ public class DebugEndpoints {
             List<com.nyrds.pixeldungeon.alchemy.InputItem> recipeInputs = matchedRecipe.getInput();
 
             // Check if hero has required ingredients
-            java.util.Map<String, Integer> heroInventory = com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.buildAlchemyInventory(Dungeon.hero);
+            Map<String, Integer> heroInventory = com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.buildAlchemyInventory(Dungeon.hero);
 
             for (com.nyrds.pixeldungeon.alchemy.InputItem ingredient : recipeInputs) {
                 String name = ingredient.getName();
@@ -2561,12 +2568,12 @@ public class DebugEndpoints {
                     "{\"error\":\"Hero not initialized - start a game first\"}");
             }
 
-            java.util.Map<String, Integer> inventory = com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.buildAlchemyInventory(Dungeon.hero);
+            Map<String, Integer> inventory = com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.buildAlchemyInventory(Dungeon.hero);
 
             StringBuilder json = new StringBuilder("{\"count\":").append(inventory.size()).append(",\"inventory\":[");
 
             boolean first = true;
-            for (java.util.Map.Entry<String, Integer> entry : inventory.entrySet()) {
+            for (Map.Entry<String, Integer> entry : inventory.entrySet()) {
                 if (!first) {
                     json.append(",");
                 }
@@ -2595,16 +2602,16 @@ public class DebugEndpoints {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("type=")) {
-                        itemType = java.net.URLDecoder.decode(param.substring(5), "UTF-8");
+                        itemType = URLDecoder.decode(param.substring(5), "UTF-8");
                     } else if (param.startsWith("count=")) {
                         try {
-                            count = Integer.parseInt(java.net.URLDecoder.decode(param.substring(6), "UTF-8"));
+                            count = Integer.parseInt(URLDecoder.decode(param.substring(6), "UTF-8"));
                         } catch (NumberFormatException e) {
                             // Use default value
                         }
                     } else if (param.startsWith("level=")) {
                         try {
-                            level = Integer.parseInt(java.net.URLDecoder.decode(param.substring(6), "UTF-8"));
+                            level = Integer.parseInt(URLDecoder.decode(param.substring(6), "UTF-8"));
                         } catch (NumberFormatException e) {
                             // Use default value
                         }
@@ -2676,12 +2683,12 @@ public class DebugEndpoints {
             }
 
             // Reveal entire map
-            java.util.Arrays.fill(Dungeon.visible, true);
+            Arrays.fill(Dungeon.visible, true);
             if (Dungeon.level.visited != null) {
-                java.util.Arrays.fill(Dungeon.level.visited, true);
+                Arrays.fill(Dungeon.level.visited, true);
             }
             if (Dungeon.level.mapped != null) {
-                java.util.Arrays.fill(Dungeon.level.mapped, true);
+                Arrays.fill(Dungeon.level.mapped, true);
             }
 
             // Update fog of war
@@ -2702,17 +2709,17 @@ public class DebugEndpoints {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
                     "{\"error\":\"No level loaded\"}");
             }
-            java.util.List<java.util.Map<String, Integer>> warehouseRooms = new java.util.ArrayList<>();
+            List<Map<String, Integer>> warehouseRooms = new ArrayList<>();
 
             // Check all rooms for warehouse type
             if (Dungeon.level instanceof com.watabou.pixeldungeon.levels.RegularLevel) {
                 com.watabou.pixeldungeon.levels.RegularLevel regularLevel =
                     (com.watabou.pixeldungeon.levels.RegularLevel) Dungeon.level;
 
-                java.util.Set<com.watabou.pixeldungeon.levels.Room> levelRooms = regularLevel.getRooms();
+                Set<com.watabou.pixeldungeon.levels.Room> levelRooms = regularLevel.getRooms();
                 for (com.watabou.pixeldungeon.levels.Room room : levelRooms) {
                     if (room.type == com.watabou.pixeldungeon.levels.Room.Type.WAREHOUSE) {
-                        java.util.Map<String, Integer> roomInfo = new java.util.HashMap<>();
+                        Map<String, Integer> roomInfo = new HashMap<>();
                         roomInfo.put("left", room.left);
                         roomInfo.put("right", room.right);
                         roomInfo.put("top", room.top);
@@ -2731,7 +2738,7 @@ public class DebugEndpoints {
                 }
             }
 
-            java.util.Map<String, Object> response = new java.util.HashMap<>();
+            Map<String, Object> response = new HashMap<>();
             response.put("success", true);
             response.put("warehouseRooms", warehouseRooms);
             response.put("count", warehouseRooms.size());
@@ -2864,8 +2871,8 @@ public class DebugEndpoints {
             Field heapsField = Level.class.getDeclaredField("heaps");
             heapsField.setAccessible(true);
             @SuppressWarnings("unchecked")
-            java.util.Map<Integer, Heap> heaps = (java.util.Map<Integer, Heap>) heapsField.get(level);
-            for (java.util.Map.Entry<Integer, Heap> entry : heaps.entrySet()) {
+            Map<Integer, Heap> heaps = (Map<Integer, Heap>) heapsField.get(level);
+            for (Map.Entry<Integer, Heap> entry : heaps.entrySet()) {
                 int heapPos = entry.getKey();
                 if (!Dungeon.visible[heapPos]) {
                     continue;
@@ -2926,13 +2933,13 @@ public class DebugEndpoints {
             if (query != null && !query.isEmpty()) {
                 for (String param : query.split("&")) {
                     if (param.startsWith("x=")) {
-                        x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                        x = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8"));
                     } else if (param.startsWith("y=")) {
-                        y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                        y = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8"));
                     } else if (param.startsWith("cell=")) {
-                        cell = Integer.parseInt(java.net.URLDecoder.decode(param.substring(5), "UTF-8"));
+                        cell = Integer.parseInt(URLDecoder.decode(param.substring(5), "UTF-8"));
                     } else if (param.startsWith("char=")) {
-                        charId = Integer.parseInt(java.net.URLDecoder.decode(param.substring(5), "UTF-8"));
+                        charId = Integer.parseInt(URLDecoder.decode(param.substring(5), "UTF-8"));
                     }
                 }
             }
@@ -3183,22 +3190,22 @@ public class DebugEndpoints {
             if (query != null && !query.isEmpty()) {
                 for (String param : query.split("&")) {
                     if (param.startsWith("type=")) {
-                        type = java.net.URLDecoder.decode(param.substring(5), "UTF-8");
+                        type = URLDecoder.decode(param.substring(5), "UTF-8");
                     } else if (param.startsWith("stance=")) {
-                        stance = java.net.URLDecoder.decode(param.substring(7), "UTF-8");
+                        stance = URLDecoder.decode(param.substring(7), "UTF-8");
                     } else if (param.startsWith("revertAfter=")) {
                         try {
-                            revertAfter = Integer.parseInt(java.net.URLDecoder.decode(param.substring(12), "UTF-8"));
+                            revertAfter = Integer.parseInt(URLDecoder.decode(param.substring(12), "UTF-8"));
                         } catch (NumberFormatException ignored) {
                         }
                     } else if (param.startsWith("x=")) {
                         try {
-                            x = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                            x = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8"));
                         } catch (NumberFormatException ignored) {
                         }
                     } else if (param.startsWith("y=")) {
                         try {
-                            y = Integer.parseInt(java.net.URLDecoder.decode(param.substring(2), "UTF-8"));
+                            y = Integer.parseInt(URLDecoder.decode(param.substring(2), "UTF-8"));
                         } catch (NumberFormatException ignored) {
                         }
                     }
@@ -3287,14 +3294,14 @@ public class DebugEndpoints {
                 for (String param : query.split("&")) {
                     if (param.startsWith("id=")) {
                         try {
-                            id = Integer.parseInt(java.net.URLDecoder.decode(param.substring(3), "UTF-8"));
+                            id = Integer.parseInt(URLDecoder.decode(param.substring(3), "UTF-8"));
                         } catch (NumberFormatException ignored) {
                         }
                     } else if (param.startsWith("stance=")) {
-                        stance = java.net.URLDecoder.decode(param.substring(7), "UTF-8");
+                        stance = URLDecoder.decode(param.substring(7), "UTF-8");
                     } else if (param.startsWith("revertAfter=")) {
                         try {
-                            revertAfter = Integer.parseInt(java.net.URLDecoder.decode(param.substring(12), "UTF-8"));
+                            revertAfter = Integer.parseInt(URLDecoder.decode(param.substring(12), "UTF-8"));
                         } catch (NumberFormatException ignored) {
                         }
                     }
@@ -3366,7 +3373,7 @@ public class DebugEndpoints {
                 for (String param : query.split("&")) {
                     if (param.startsWith("id=")) {
                         try {
-                            id = Integer.parseInt(java.net.URLDecoder.decode(param.substring(3), "UTF-8"));
+                            id = Integer.parseInt(URLDecoder.decode(param.substring(3), "UTF-8"));
                         } catch (NumberFormatException ignored) {
                         }
                     }
@@ -3458,7 +3465,7 @@ public class DebugEndpoints {
                 for (String param : query.split("&")) {
                     if (param.startsWith("id=")) {
                         try {
-                            id = Integer.parseInt(java.net.URLDecoder.decode(param.substring(3), "UTF-8"));
+                            id = Integer.parseInt(URLDecoder.decode(param.substring(3), "UTF-8"));
                         } catch (NumberFormatException ignored) {
                         }
                     }

@@ -11,6 +11,12 @@ import com.watabou.pixeldungeon.utils.Utils;
 import java.io.File;
 import java.util.Collections;
 import java.util.List;
+import java.io.InputStream;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 /**
  * HTML generation utilities for the WebServer
@@ -22,8 +28,8 @@ class WebServerHtml {
      */
     private static String loadTemplate(String templateName) {
         try {
-            java.io.InputStream inputStream = ModdingMode.getInputStream("html/" + templateName);
-            java.util.Scanner scanner = new java.util.Scanner(inputStream, "UTF-8").useDelimiter("\\A");
+            InputStream inputStream = ModdingMode.getInputStream("html/" + templateName);
+            Scanner scanner = new Scanner(inputStream, "UTF-8").useDelimiter("\\A");
             return scanner.hasNext() ? scanner.next() : "";
         } catch (Exception e) {
             GLog.w("Failed to load template: " + templateName + ", error: " + e.getMessage());
@@ -34,9 +40,9 @@ class WebServerHtml {
     /**
      * Replace placeholders in template
      */
-    private static String replacePlaceholders(String template, java.util.Map<String, String> replacements) {
+    private static String replacePlaceholders(String template, Map<String, String> replacements) {
         String result = template;
-        for (java.util.Map.Entry<String, String> entry : replacements.entrySet()) {
+        for (Map.Entry<String, String> entry : replacements.entrySet()) {
             result = result.replace("{{" + entry.getKey() + "}}", entry.getValue());
         }
         return result;
@@ -64,7 +70,7 @@ class WebServerHtml {
     public static String serveRoot() {
         String template = loadTemplate("root_template.html");
 
-        java.util.Map<String, String> replacements = new java.util.HashMap<>();
+        Map<String, String> replacements = new HashMap<>();
         replacements.put("GAME_VERSION", Utils.format("%s (%d)", GameLoop.version, GameLoop.versionCode));
         replacements.put("MOD_INFO", Utils.format("%s (%d)", ModdingMode.activeMod(), ModdingMode.activeModVersion()));
 
@@ -87,7 +93,7 @@ class WebServerHtml {
         StringBuilder dirContent = new StringBuilder();
         listDir(dirContent, "");
 
-        java.util.Map<String, String> replacements = new java.util.HashMap<>();
+        Map<String, String> replacements = new HashMap<>();
         replacements.put("MOD_NAME", ModdingMode.activeMod());
         replacements.put("DIRECTORY_CONTENTS", dirContent.toString());
 
@@ -119,8 +125,8 @@ class WebServerHtml {
 
         if (contents != null) {
             // Separate directories and files
-            List<String> directories = new java.util.ArrayList<>();
-            List<String> files = new java.util.ArrayList<>();
+            List<String> directories = new ArrayList<>();
+            List<String> files = new ArrayList<>();
 
             for (String name : contents) {
                 if (isDirectoryItem(directoryPath, name)) {
@@ -142,7 +148,7 @@ class WebServerHtml {
             GLog.debug("Generating upload link for directory in serveFs: '" + uploadPath + "'");
             String encodedUploadPath;
             try {
-                encodedUploadPath = java.net.URLEncoder.encode(uploadPath, "UTF-8");
+                encodedUploadPath = URLEncoder.encode(uploadPath, "UTF-8");
                 GLog.debug("Encoded upload path in serveFs: '" + encodedUploadPath + "' from original: '" + uploadPath + "'");
             } catch (Exception e) {
                 encodedUploadPath = uploadPath; // Fallback if encoding fails
@@ -164,7 +170,7 @@ class WebServerHtml {
                     // For JSON files, add both download and edit links
                     String encodedPath2;
                     try {
-                        encodedPath2 = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
@@ -179,10 +185,10 @@ class WebServerHtml {
         }
 
         // Prepare replacements for the template
-        java.util.Map<String, String> replacements = new java.util.HashMap<>();
+        Map<String, String> replacements = new HashMap<>();
         replacements.put("DIRECTORY_PATH", directoryPath.isEmpty() ? "/" : directoryPath);
         try {
-            replacements.put("ENCODED_UPLOAD_PATH", java.net.URLEncoder.encode(directoryPath, "UTF-8"));
+            replacements.put("ENCODED_UPLOAD_PATH", URLEncoder.encode(directoryPath, "UTF-8"));
         } catch (Exception e) {
             replacements.put("ENCODED_UPLOAD_PATH", directoryPath); // Fallback if encoding fails
         }
@@ -198,7 +204,7 @@ class WebServerHtml {
     public static String serveUploadForm(String message, String currentPath) {
         String template = loadTemplate("upload_form_template.html");
 
-        java.util.Map<String, String> replacements = new java.util.HashMap<>();
+        Map<String, String> replacements = new HashMap<>();
 
         // Prepare message div
         String messageDiv = "";
@@ -248,7 +254,7 @@ class WebServerHtml {
 
         String uploadPath = filePath.contains("/") ? filePath.substring(0, filePath.lastIndexOf("/")) : "";
 
-        java.util.Map<String, String> replacements = new java.util.HashMap<>();
+        Map<String, String> replacements = new HashMap<>();
         replacements.put("UPLOAD_PATH", uploadPath);
         replacements.put("FILE_PATH", filePath);
         replacements.put("ESCAPED_FILE_PATH", javaScriptEscape(filePath));
@@ -261,7 +267,7 @@ class WebServerHtml {
      */
     public static String serveNotFound() {
         String template = loadTemplate("not_found_template.html");
-        return replacePlaceholders(template, new java.util.HashMap<>());
+        return replacePlaceholders(template, new HashMap<>());
     }
 
     /**
@@ -330,8 +336,8 @@ class WebServerHtml {
         List<String> list = ModdingMode.listResources(path,(dir, name)->true);
         
         // Separate directories and files
-        List<String> directories = new java.util.ArrayList<>();
-        List<String> files = new java.util.ArrayList<>();
+        List<String> directories = new ArrayList<>();
+        List<String> files = new ArrayList<>();
         
         for (String name : list) {
             // Check if this is a directory by looking at both the filesystem and assets
@@ -382,7 +388,7 @@ class WebServerHtml {
         GLog.debug("Generating upload link for directory: '" + uploadPath + "'");
         String encodedUploadPath;
         try {
-            encodedUploadPath = java.net.URLEncoder.encode(uploadPath, "UTF-8");
+            encodedUploadPath = URLEncoder.encode(uploadPath, "UTF-8");
             GLog.debug("Encoded upload path: '" + encodedUploadPath + "' from original: '" + uploadPath + "'");
         } catch (Exception e) {
             encodedUploadPath = uploadPath; // Fallback if encoding fails
@@ -410,7 +416,7 @@ class WebServerHtml {
                     // For JSON files, add both download and edit links
                     String encodedPath1;
                     try {
-                        encodedPath1 = java.net.URLEncoder.encode(name, "UTF-8");
+                        encodedPath1 = URLEncoder.encode(name, "UTF-8");
                     } catch (Exception e) {
                         encodedPath1 = name; // Fallback if encoding fails
                     }
@@ -425,7 +431,7 @@ class WebServerHtml {
                     String fullPath = path + "/" + name;
                     String encodedPath;
                     try {
-                        encodedPath = java.net.URLEncoder.encode(fullPath, "UTF-8");
+                        encodedPath = URLEncoder.encode(fullPath, "UTF-8");
                     } catch (Exception e) {
                         encodedPath = fullPath; // Fallback if encoding fails
                     }

@@ -32,7 +32,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.List;
 import java.util.Set;
 
@@ -284,8 +286,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
             + " heroAlive=" + (hero != null && hero.isAlive());
     }
 
-    public static java.util.Map<String, Integer> classHistogram() {
-        java.util.Map<String, Integer> hist = new java.util.HashMap<>();
+    public static Map<String, Integer> classHistogram() {
+        Map<String, Integer> hist = new HashMap<>();
         for (Actor a : all) {
             hist.merge(a.getClass().getSimpleName(), 1, Integer::sum);
         }

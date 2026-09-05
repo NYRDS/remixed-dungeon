@@ -36,6 +36,8 @@ import javax.tools.Diagnostic;
 import javax.tools.FileObject;
 import javax.tools.JavaFileObject;
 import javax.tools.StandardLocation;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Annotation processor for @LuaInterface.
@@ -249,7 +251,7 @@ public class LuaInterfaceProcessor extends AbstractProcessor {
         // Track which classes we've already processed for closure
         Set<TypeElement> visited = new HashSet<>();
         // Queue of classes to process
-        java.util.Queue<TypeElement> queue = new java.util.LinkedList<>();
+        Queue<TypeElement> queue = new LinkedList<>();
 
         // Initially, add all classes that have class-level @LuaInterface annotation
         for (Map.Entry<TypeElement, ClassData> entry : classDataMap.entrySet()) {

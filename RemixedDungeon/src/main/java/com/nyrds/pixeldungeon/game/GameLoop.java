@@ -33,8 +33,12 @@ import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
+import java.util.Map;
 import java.util.Queue;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import lombok.Getter;
 import lombok.SneakyThrows;
@@ -122,7 +126,7 @@ public class GameLoop {
             return;
         }
 
-        java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+        CountDownLatch latch = new CountDownLatch(1);
 
         // Wrap the task to count down the latch when done
         Runnable wrappedTask = () -> {
@@ -137,7 +141,7 @@ public class GameLoop {
 
         // Wait for the task to complete (up to 5 seconds)
         try {
-            latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            latch.await(5, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
@@ -311,12 +315,12 @@ public class GameLoop {
                     GLog.toFile("WATCHDOG: update step stuck %d ms, mem used %dM/%dM - dumping all stacks",
                         stuckMs, (rt.totalMemory() - rt.freeMemory()) >> 20, rt.totalMemory() >> 20);
                     try {
-                        java.util.Map<String, Integer> hist = Actor.classHistogram();
+                        Map<String, Integer> hist = Actor.classHistogram();
                         String top = hist.entrySet().stream()
-                            .sorted(java.util.Map.Entry.<String, Integer>comparingByValue().reversed())
+                            .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
                             .limit(8)
                             .map(e -> e.getKey() + " x" + e.getValue())
-                            .collect(java.util.stream.Collectors.joining(", "));
+                            .collect(Collectors.joining(", "));
                         GLog.toFile("WATCHDOG: %d actors; top: %s", Actor.count(), top);
                         GLog.toFile("WATCHDOG: %s", Actor.queueState());
                     } catch (Throwable t) {

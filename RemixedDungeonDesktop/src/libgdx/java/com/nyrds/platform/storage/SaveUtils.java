@@ -19,6 +19,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SaveUtils {
 
@@ -158,7 +160,7 @@ public class SaveUtils {
 		// (stale chess level board resurrected into a fresh game). log a summary
 		// + failures only - per-file lines spammed users' device logs.
 		int deleted = 0;
-		java.util.List<String> failures = new java.util.ArrayList<>();
+		List<String> failures = new ArrayList<>();
 
 		for (FileHandle file : files) {
 			String path = file.path();

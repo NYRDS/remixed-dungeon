@@ -5,6 +5,8 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 import org.jetbrains.annotations.Nullable;
@@ -12,6 +14,9 @@ import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.CoerceLuaToJava;
+
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created by mike on 26.05.2018.
@@ -30,8 +35,7 @@ public class LuaScript {
 
     // caveman: report each wedged script+handler once - a stuck script runs
     // its handler every tick and must not flood the device log.
-    private static final java.util.Set<String> slowScriptReported =
-        java.util.concurrent.ConcurrentHashMap.newKeySet();
+    private static final Set<String> slowScriptReported = ConcurrentHashMap.newKeySet();
 
     public LuaScript(String scriptFile, @Nullable Object parent)
     {
@@ -75,13 +79,13 @@ public class LuaScript {
             long took = System.currentTimeMillis() - slowScriptStart;
             if (took > 10_000 && slowScriptReported.add(scriptFile + ":" + method)) {
                 String who = "script=" + scriptFile;
-                if (parent instanceof com.watabou.pixeldungeon.actors.Char) {
-                    com.watabou.pixeldungeon.actors.Char c = (com.watabou.pixeldungeon.actors.Char) parent;
+                if (parent instanceof Char) {
+                    Char c = (Char) parent;
                     who += " char=" + c.getEntityKind() + " id=" + c.getId() + " pos=" + c.getPos();
                 }
                 String line = "SLOW SCRIPT: " + who + " handler=" + method + " took " + took + " ms";
                 System.out.println("[SLOW SCRIPT] " + line);
-                com.watabou.pixeldungeon.utils.GLog.toFile(line);
+                GLog.toFile(line);
             }
         }
     }
