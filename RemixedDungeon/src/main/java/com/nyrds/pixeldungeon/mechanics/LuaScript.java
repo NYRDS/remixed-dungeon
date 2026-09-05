@@ -30,7 +30,8 @@ public class LuaScript {
 
     // caveman: report each wedged script+handler once - a stuck script runs
     // its handler every tick and must not flood the device log.
-    private static final java.util.Set<String> slowScriptReported = new java.util.HashSet<>();
+    private static final java.util.Set<String> slowScriptReported =
+        java.util.concurrent.ConcurrentHashMap.newKeySet();
 
     public LuaScript(String scriptFile, @Nullable Object parent)
     {
@@ -72,7 +73,7 @@ public class LuaScript {
             return getScript().invokemethod(method, args).arg1();
         } finally {
             long took = System.currentTimeMillis() - slowScriptStart;
-            if (took > 10_000) {
+            if (took > 10_000 && slowScriptReported.add(scriptFile + ":" + method)) {
                 String who = "script=" + scriptFile;
                 if (parent instanceof com.watabou.pixeldungeon.actors.Char) {
                     com.watabou.pixeldungeon.actors.Char c = (com.watabou.pixeldungeon.actors.Char) parent;

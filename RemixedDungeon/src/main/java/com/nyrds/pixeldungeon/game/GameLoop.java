@@ -291,7 +291,7 @@ public class GameLoop {
         watchdogStarted = true;
         Thread watchdog = new Thread(() -> {
             long lastDump = 0;
-            int dumps = 0; // caveman: capped - a hung game must not grow logs forever
+            int dumps = 0; // caveman: 3 dumps per stuck episode - a hung game must not grow logs forever
             while (true) {
                 try {
                     Thread.sleep(5000);
@@ -300,6 +300,7 @@ public class GameLoop {
                 }
                 long started = updateStartAt;
                 if (started == 0) {
+                    dumps = 0; // caveman: no step in flight - any stuck episode is over, budget resets
                     continue;
                 }
                 long stuckMs = System.currentTimeMillis() - started;
