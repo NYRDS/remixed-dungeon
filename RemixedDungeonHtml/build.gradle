@@ -26,13 +26,30 @@ sourceSets {
                     'src/market_none/java',
                     'build/generated/sources/annotationProcessor/java/main'
             ]
-            // Exclude desktop-specific classes from libgdx sources
-            exclude '**/app/WebServerApp.java'
-            exclude '**/app/WebServerOnlyGame.java'
-            exclude '**/app/Notifications.java'
-            exclude '**/platform/audio/**'
-            exclude '**/platform/storage/AndroidSAF.java'
-            exclude '**/platform/storage/CaseInsensitiveFileCache.java'
+            // Exclude desktop-specific classes from the libgdx sources.
+            // Scoped to the desktop dir: html shims shadow most desktop classes
+            // with their own TeaVM implementations, and a global ant pattern
+            // would drop the html copies too (that's what broke platform/audio).
+            def desktopLibgdx = project.file('../RemixedDungeonDesktop/src/libgdx/java').absolutePath + '/'
+            def htmlShadows = [] as Set
+            ['src/html/java', 'src/market_none/java'].each { d ->
+                def root = project.file(d)
+                root.eachFileRecurse(groovy.io.FileType.FILES) { f ->
+                    if (f.toString().endsWith('.java')) {
+                        htmlShadows << root.toPath().relativize(f.toPath()).toString()
+                    }
+                }
+            }
+            exclude { e ->
+                e.file.absolutePath.startsWith(desktopLibgdx) && (
+                    htmlShadows.contains(e.relativePath.pathString) ||
+                    e.relativePath.pathString in [
+                            'com/nyrds/platform/app/WebServerApp.java',
+                            'com/nyrds/platform/app/WebServerOnlyGame.java',
+                            'com/nyrds/platform/storage/CaseInsensitiveFileCache.java',
+                    ]
+                )
+            }
         }
         resources {
             srcDirs = [
