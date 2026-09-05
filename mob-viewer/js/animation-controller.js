@@ -62,6 +62,19 @@ export class AnimationController {
         return this.isPlaying;
     }
 
+    // Play/resume. A completed one-shot animation (parked on its last
+    // frame) restarts from the beginning - plain isPlaying=true would
+    // advance past the end and instantly re-pause, appearing dead.
+    play(anim) {
+        const finished = !!anim && !anim.looped &&
+            this.animationFrame >= anim.frames.length - 1;
+        if (!this.isPlaying && finished) {
+            this.animationFrame = 0;
+            this.lastFrameTime = performance.now();
+        }
+        this.isPlaying = true;
+    }
+
     toggleLoop() {
         this.isLooping = !this.isLooping;
         if (!this.isLooping) {

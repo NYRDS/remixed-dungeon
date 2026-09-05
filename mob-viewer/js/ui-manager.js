@@ -54,7 +54,8 @@ export class UIManager {
 
         // Play/Pause buttons drive the animation controller
         document.getElementById('playBtn').addEventListener('click', () => {
-            this.viewer.animationController.isPlaying = true;
+            const data = this.viewer.getCurrentData();
+            this.viewer.animationController.play(data && data[this.viewer.currentAnim]);
         });
 
         document.getElementById('pauseBtn').addEventListener('click', () => {
