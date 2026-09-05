@@ -12,8 +12,17 @@ relative area in both systems, so a faithful conversion is:
 
 Converted layers are the ones RetroHeroSpriteDef renders:
 body, collar, head, hair, facial_hair, armor, helmet, death.
-Modern-only layers (hands, held items, shoulders, boots, accessories) have
+Modern-only layers (held items, shoulders, boots, accessories) have
 no retro counterpart and are skipped.
+
+Two retro-specific corrections are applied:
+- bare-hand layers (body/hands/<bodyType>_none_*.png) are baked into
+  the converted body - modern stores hands separately, retro bakes
+  them into the body sheet;
+- frames 14-18 (the die animation) are cleared on every converted
+  layer and the death layer is copied from the hand-drawn retro set -
+  modern keeps a falling body there and its own death sheet is too
+  sparse for retro's 5-frame wisp.
 
 Usage:
   tools/retro_from_modern.py convert --class WARRIOR --subclass NONE \
@@ -28,6 +37,7 @@ Requires Pillow.
 import argparse
 import json
 import os
+import shutil
 import sys
 from PIL import Image
 
@@ -90,6 +100,7 @@ COVER_HAIR = {
 
 FRAMES = 21                       # modern indices 0..20 (idle..two-hand attack)
 RETRO_COLS = 36                   # 512 / 14
+DIE_FRAMES = (14, 15, 16, 17, 18) # retro empties every layer but death here
 
 
 def assets_dir():
@@ -128,22 +139,27 @@ def armor_visual(name):
 
 
 def source_layers(hero_class, sub_class, armors):
-    """Yield (src_rel, dst_rel) modern->retro layer pairs that exist."""
+    """Return (src_rel, dst_rel, kind) modern->retro layer entries that exist.
+
+    kind: 'body' (gets bare hands baked in), 'death' (reused from the
+    hand-drawn retro set - the modern death sheet is too sparse for the
+    retro 5-frame wisp), or 'layer' (plain crop, die frames cleared).
+    """
     cd = f"{hero_class}_{sub_class}"
     bt = body_type(hero_class, sub_class)
 
     pairs = []
-    for src, dst in [
-        (f"{MODERN}body/{bt}.png", f"{RETRO}body/{bt}.png"),
-        (f"{MODERN}head/{cd}.png", f"{RETRO}head/{cd}.png"),
-        (f"{MODERN}head/hair/{cd}_HAIR.png", f"{RETRO}head/hair/{cd}_HAIR.png"),
+    for src, dst, kind in [
+        (f"{MODERN}body/{bt}.png", f"{RETRO}body/{bt}.png", "body"),
+        (f"{MODERN}head/{cd}.png", f"{RETRO}head/{cd}.png", "layer"),
+        (f"{MODERN}head/hair/{cd}_HAIR.png", f"{RETRO}head/hair/{cd}_HAIR.png", "layer"),
         (f"{MODERN}head/facial_hair/{cd}_FACIAL_HAIR.png",
-         f"{RETRO}head/facial_hair/{cd}_FACIAL_HAIR.png"),
-        (f"{MODERN}death/{'warlock' if cd == 'MAGE_WARLOCK' else 'common'}.png",
-         f"{RETRO}death/{'warlock' if cd == 'MAGE_WARLOCK' else 'common'}.png"),
+         f"{RETRO}head/facial_hair/{cd}_FACIAL_HAIR.png", "layer"),
+        (f"{RETRO}death/{'warlock' if cd == 'MAGE_WARLOCK' else 'common'}.png",
+         f"{RETRO}death/{'warlock' if cd == 'MAGE_WARLOCK' else 'common'}.png", "death"),
     ]:
         if os.path.exists(os.path.join(assets_dir(), src)):
-            pairs.append((src, dst))
+            pairs.append((src, dst, kind))
 
     for armor in armors:
         armor = armor_visual(armor)
@@ -151,15 +167,53 @@ def source_layers(hero_class, sub_class, armors):
             src = f"{MODERN}armor/{sub}{armor}.png"
             dst = f"{RETRO}armor/{sub}{armor}.png"
             if os.path.exists(os.path.join(assets_dir(), src)):
-                pairs.append((src, dst))
+                pairs.append((src, dst, "layer"))
     return pairs
 
 
-def convert_sheet(src_rel, dst_rel, out_dir, box, into_assets=False):
+def convert_pairs(pairs, out_dir, box, into_assets, verbose=False, tag=""):
+    total = 0
+    for src, dst, kind in pairs:
+        if kind == "body":
+            bt = os.path.basename(dst)[:-4]
+            hands = [f"{MODERN}body/hands/{bt}_none_{hand}.png" for hand in ("left", "right")]
+            hands = [h for h in hands if os.path.exists(os.path.join(assets_dir(), h))]
+            n = convert_sheet(src, dst, out_dir, box, into_assets,
+                              overlays=hands, empty_frames=DIE_FRAMES)
+        elif kind == "death":
+            if into_assets:
+                continue  # target is the original file
+            d = os.path.join(out_dir, dst)
+            os.makedirs(os.path.dirname(d), exist_ok=True)
+            shutil.copyfile(os.path.join(assets_dir(), dst), d)
+            n = 0
+        else:
+            n = convert_sheet(src, dst, out_dir, box, into_assets,
+                              empty_frames=DIE_FRAMES)
+        total += 1
+        if verbose:
+            note = {"body": " (hands baked)", "death": " (copied from retro)"}.get(kind, "")
+            print(f"{tag}{src} -> {dst} ({n} frames){note}")
+    return total
+
+
+def convert_sheet(src_rel, dst_rel, out_dir, box, into_assets=False,
+                  overlays=(), empty_frames=()):
+    """Crop one modern sheet into a retro-format sheet.
+
+    overlays: extra modern sheets composited onto each frame before the
+    crop (used to bake the bare-hand layers into the body - modern keeps
+    hands in separate sheets, retro bakes them into the body).
+    empty_frames: frame indices output fully transparent - retro clears
+    every layer except death during the die animation, while modern
+    sheets keep falling-body art there.
+    """
     ox, oy, w, h = box
     src = os.path.join(assets_dir(), src_rel)
     img = Image.open(src).convert("RGBA")
     cols = img.width // 32
+
+    ov_imgs = [Image.open(os.path.join(assets_dir(), o)).convert("RGBA") for o in overlays]
 
     out = Image.new("RGBA", (512, 32), (0, 0, 0, 0))
     written = 0
@@ -168,6 +222,15 @@ def convert_sheet(src_rel, dst_rel, out_dir, box, into_assets=False):
         if fy + 32 > img.height:
             break
         cell = img.crop((fx + ox, fy + oy, fx + ox + w, fy + oy + h))
+        for j, oimg in enumerate(ov_imgs):
+            ocols = oimg.width // 32
+            ofx, ofy = (i % ocols) * 32, (i // ocols) * 32
+            if ofy + 32 > oimg.height:
+                continue
+            ocell = oimg.crop((ofx + ox, ofy + oy, ofx + ox + w, ofy + oy + h))
+            cell.alpha_composite(ocell)
+        if i in empty_frames:
+            cell = Image.new("RGBA", cell.size, (0, 0, 0, 0))
         out.alpha_composite(cell, ((i % RETRO_COLS) * w, 0))
         written += 1
 
@@ -220,11 +283,7 @@ def cmd_convert(args):
     box = visual_box()
     armors = ARMORS if args.armor == ["all"] else args.armor
     pairs = source_layers(args.hero_class, args.sub_class, armors)
-    total = 0
-    for src, dst in pairs:
-        n = convert_sheet(src, dst, args.out, box, args.into_assets)
-        print(f"{src} -> {dst} ({n} frames)")
-        total += 1
+    total = convert_pairs(pairs, args.out, box, args.into_assets, verbose=True)
     print(f"converted {total} layer sheet(s); visual box {box}")
     return 0
 
@@ -235,12 +294,11 @@ def cmd_all(args):
     for cls, subs in CLASSES.items():
         for sub in subs:
             pairs = source_layers(cls, sub, ARMORS)
-            for src, dst in pairs:
-                total += 1
-                if not args.dry_run:
-                    n = convert_sheet(src, dst, args.out, box, args.into_assets)
-                    if args.verbose:
-                        print(f"{cls}_{sub}: {src} -> {dst} ({n} frames)")
+            if args.dry_run:
+                total += len(pairs)
+            else:
+                total += convert_pairs(pairs, args.out, box, args.into_assets,
+                                       verbose=args.verbose, tag=f"{cls}_{sub}: ")
     print(f"{'would convert' if args.dry_run else 'converted'} {total} layer sheet(s) "
           f"for {sum(len(s) for s in CLASSES.values())} class/subclass combos")
     return 0
