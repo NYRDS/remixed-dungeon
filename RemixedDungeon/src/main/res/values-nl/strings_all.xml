@@ -1452,6 +1452,7 @@
     <string name="town_deco_snowy_plate_name">besneeuwde plaat</string>
     <string name="town_deco_statue_blood_desc">Een majestueuze standbeeld van een engel die een kom bloed vasthoudt.</string>
     <string name="town_deco_statue_water_desc">Een majestueuze standbeeld van een engel die een kom met water vasthoudt.</string>
+    <string name="town_deco_stock_name">voorraad</string>
     <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
     <string name="town_deco_stones_name">Stenen</string>
     <string name="town_deco_stool_broken_name">Gebroken kruk</string>
@@ -1477,6 +1478,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 

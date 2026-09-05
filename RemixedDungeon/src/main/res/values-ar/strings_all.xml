@@ -1222,6 +1222,7 @@
     <string name="town_deco_sofa_desc">يبدو أن هذا السينما تحاول حقاً توفير أفضل المقاعد لعملائها.</string>
     <string name="town_deco_statue_blood_desc">تمثال مهيب لملاك يمسك وعاءً من الدم.</string>
     <string name="town_deco_statue_blood_name">تمثال ملاك</string>
+    <string name="town_deco_stock_name">مخزون</string>
     <string name="town_deco_stone_wall_desc">بشكل ما، هذا الجدار يصدر حرارة ويبدو رطباً قليلاً.</string>
     <string name="town_deco_stone_wall_name">جدار حجري</string>
     <string name="town_deco_trapdoor_desc">إلى أين قد يؤدي هذا؟</string>
@@ -1238,6 +1239,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

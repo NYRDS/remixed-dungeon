@@ -1200,6 +1200,7 @@
     <string name="town_deco_skulls_desc">גולגולות מלוטשות השייכות ליצורים מהצינוק.</string>
     <string name="town_deco_statue_blood_desc">פסל מפואר של מלאך המחזיק קערת דם.</string>
     <string name="town_deco_stock_desc">מצבורי מזון מאוחסנים כאן, יחד עם ערמה של גרוטאות מכל מיני סוגים וצבעים.</string>
+    <string name="town_deco_stock_name">מלאי</string>
     <string name="town_deco_stone_wall_desc">איכשהו הקיר הזה פולט חום ונראה קצת רטוב.</string>
     <string name="town_deco_stones_desc">סתם ערימת אבנים</string>
     <string name="town_deco_stool_sturdy_name">שרפרף</string>
@@ -1551,6 +1552,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 
