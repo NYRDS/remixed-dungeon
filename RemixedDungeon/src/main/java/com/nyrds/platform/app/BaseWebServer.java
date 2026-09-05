@@ -25,6 +25,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.function.Function;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Base WebServer implementation that provides common functionality for all platforms.
@@ -840,7 +842,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             GLog.debug("Received JSON: " + jsonString.substring(0, Math.min(200, jsonString.length())) + "...");
 
             // Parse the JSON to extract filePath and content
-            org.json.JSONObject jsonData = new org.json.JSONObject(jsonString);
+            JSONObject jsonData = new JSONObject(jsonString);
             String filePath = jsonData.getString("filePath");
             String content = jsonData.getString("content");
 
@@ -862,8 +864,8 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
             // Validate JSON content
             try {
-                new org.json.JSONObject(content);
-            } catch (org.json.JSONException e) {
+                new JSONObject(content);
+            } catch (JSONException e) {
                 GLog.debug("Invalid JSON content: " + e.getMessage());
                 return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
                     "{\"error\":\"Invalid JSON content: " + e.getMessage() + "\"}");
@@ -905,7 +907,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             return newFixedLengthResponse(Response.Status.OK, "application/json",
                 "{\"success\":true, \"message\":\"File saved successfully to: " + fullPath + "\"}");
 
-        } catch (org.json.JSONException e) {
+        } catch (JSONException e) {
             GLog.debug("=== JSON PARSING ERROR ===");
             GLog.debug("JSON parsing error: " + e.getMessage());
             e.printStackTrace();
@@ -997,7 +999,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
             // Parse the data to extract filePath and content
             // For Lua, we expect the data to be in the format: {"filePath":"path","content":"lua code here"}
-            org.json.JSONObject jsonData = new org.json.JSONObject(luaString);
+            JSONObject jsonData = new JSONObject(luaString);
             String filePath = jsonData.getString("filePath");
             String content = jsonData.getString("content");
 
@@ -1053,7 +1055,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             return newFixedLengthResponse(Response.Status.OK, "application/json",
                 "{\"success\":true, \"message\":\"File saved successfully to: " + fullPath + "\"}");
 
-        } catch (org.json.JSONException e) {
+        } catch (JSONException e) {
             GLog.debug("=== JSON PARSING ERROR ===");
             GLog.debug("JSON parsing error: " + e.getMessage());
             e.printStackTrace();
@@ -1490,6 +1492,11 @@ public abstract class BaseWebServer extends NanoHTTPD {
                             break;
                         }
                     }
+                }
+
+                if (!isSafeResourcePath(filePath)) {
+                    GLog.w("Blocked path traversal attempt on /api/get_texture: " + filePath);
+                    return forbiddenPath();
                 }
 
                 if (!filePath.isEmpty()) {
