@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.SimpleButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.IconTitle;
-
 import org.jetbrains.annotations.NotNull;
 
 public class WndSpellInfo extends Window {

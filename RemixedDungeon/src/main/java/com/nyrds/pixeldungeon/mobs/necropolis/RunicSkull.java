@@ -13,7 +13,6 @@ import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class RunicSkull extends MultiKindMob {

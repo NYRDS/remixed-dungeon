@@ -16,7 +16,6 @@ import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class ScrollOfCurse extends Scroll {

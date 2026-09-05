@@ -1,15 +1,14 @@
 package com.nyrds.platform.storage;
 
-import org.hjson.JsonObject;
-import org.hjson.JsonValue;
-import org.hjson.Stringify;
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import org.hjson.JsonObject;
+import org.hjson.JsonValue;
+import org.hjson.Stringify;
 
 public enum Preferences {
 

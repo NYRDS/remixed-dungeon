@@ -2,7 +2,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import android.view.KeyEvent;
-
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -27,15 +27,10 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tab;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import lombok.Getter;
-
-import com.nyrds.LuaInterface;
+import org.jetbrains.annotations.NotNull;
 
 @LuaInterface
 public class WndBag extends WndTabbed {

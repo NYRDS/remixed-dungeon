@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
-
 import org.jetbrains.annotations.NotNull;
 
 public class ScrollOfIdentify extends InventoryScroll {

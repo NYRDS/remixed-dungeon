@@ -7,10 +7,8 @@ import com.watabou.noosa.CompositeImage;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Tilemap;
 import com.watabou.pixeldungeon.levels.Level;
-
 import java.util.HashMap;
 import java.util.Map;
-
 import lombok.SneakyThrows;
 
 /**

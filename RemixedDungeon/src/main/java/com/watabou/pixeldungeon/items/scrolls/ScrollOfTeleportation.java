@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-
 import org.jetbrains.annotations.NotNull;
 
 public class ScrollOfTeleportation extends Scroll {

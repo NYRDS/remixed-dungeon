@@ -17,7 +17,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.Nullable;
 
 public class LightningTrap implements ITrigger{

@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
-
 import org.jetbrains.annotations.NotNull;
 
 public abstract class InventoryScroll extends Scroll {

@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.effects.Flare;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Rat extends Mob {

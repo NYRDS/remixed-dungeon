@@ -1,18 +1,15 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import androidx.annotation.Keep;
-
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
-
+import lombok.SneakyThrows;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import lombok.SneakyThrows;
 
 public class CustomObject extends Deco {
 

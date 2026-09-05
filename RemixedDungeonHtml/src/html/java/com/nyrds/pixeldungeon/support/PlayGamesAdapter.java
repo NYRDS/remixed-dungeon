@@ -1,9 +1,8 @@
 package com.nyrds.pixeldungeon.support;
 
-import org.jetbrains.annotations.Nullable;
-
 import java.io.File;
 import java.io.FileFilter;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Stub implementation of PlayGamesAdapter for HTML backend

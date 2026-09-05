@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.buffs;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -8,10 +9,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
-
 import org.jetbrains.annotations.NotNull;
-
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class RageBuff extends ArtifactBuff {

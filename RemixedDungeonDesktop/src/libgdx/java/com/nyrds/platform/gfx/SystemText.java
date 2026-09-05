@@ -11,15 +11,12 @@ import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.SystemTextBase;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lombok.val;
+import org.jetbrains.annotations.NotNull;
 
 public class SystemText extends SystemTextBase {
     private static FreeTypeFontGenerator pixelGenerator;

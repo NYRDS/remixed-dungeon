@@ -1,13 +1,10 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.content.Intent;
-
 import com.watabou.pixeldungeon.ui.WndPlayGames;
-
-import org.jetbrains.annotations.Nullable;
-
 import java.io.File;
 import java.io.FileFilter;
+import org.jetbrains.annotations.Nullable;
 
 public class PlayGames {
     public static boolean usable() {

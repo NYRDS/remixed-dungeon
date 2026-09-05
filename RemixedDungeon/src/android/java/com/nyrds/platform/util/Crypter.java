@@ -1,11 +1,8 @@
 package com.nyrds.platform.util;
 
 import android.util.Base64;
-
 import com.nyrds.platform.EventCollector;
-
 import java.security.spec.KeySpec;
-
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;

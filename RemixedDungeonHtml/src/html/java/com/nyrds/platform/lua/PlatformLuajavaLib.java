@@ -3,11 +3,9 @@ package com.nyrds.platform.lua;
 import com.nyrds.lua.LuaSandbox;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingBase;
-
-import org.luaj.vm2.lib.jse.LuajavaLib;
-
 import java.util.HashMap;
 import java.util.Map;
+import org.luaj.vm2.lib.jse.LuajavaLib;
 
 /**
  * HTML version of PlatformLuajavaLib

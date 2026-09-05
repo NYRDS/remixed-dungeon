@@ -8,7 +8,6 @@ import com.watabou.noosa.Animation;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-
 import org.jetbrains.annotations.NotNull;
 
 public class DummySprite extends HeroSpriteDef {

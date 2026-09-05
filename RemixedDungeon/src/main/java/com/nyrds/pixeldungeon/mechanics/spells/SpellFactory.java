@@ -5,17 +5,14 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.utils.Random;
-
-import org.jetbrains.annotations.NotNull;
-import org.luaj.vm2.LuaTable;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
 import lombok.SneakyThrows;
+import org.jetbrains.annotations.NotNull;
+import org.luaj.vm2.LuaTable;
 
 
 public class SpellFactory {

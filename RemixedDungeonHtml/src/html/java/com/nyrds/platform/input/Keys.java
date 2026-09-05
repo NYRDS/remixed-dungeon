@@ -1,7 +1,6 @@
 package com.nyrds.platform.input;
 
 import android.view.KeyEvent;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.watabou.utils.Signal;
 

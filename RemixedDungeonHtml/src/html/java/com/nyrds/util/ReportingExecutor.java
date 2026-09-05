@@ -1,10 +1,8 @@
 package com.nyrds.util;
 
 import com.nyrds.platform.EventCollector;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.concurrent.Future;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * TeaVM-specific implementation of ReportingExecutor that executes tasks synchronously

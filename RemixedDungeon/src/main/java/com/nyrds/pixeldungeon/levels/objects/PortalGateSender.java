@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 

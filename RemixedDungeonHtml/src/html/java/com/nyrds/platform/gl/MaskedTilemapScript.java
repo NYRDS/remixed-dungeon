@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.glscripts.Script;
 import com.watabou.glwrap.Quad;
 import com.watabou.noosa.Camera;
-
 import java.nio.FloatBuffer;
 
 public class MaskedTilemapScript extends Script {

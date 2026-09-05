@@ -16,12 +16,10 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
-
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.TestOnly;
-
 import lombok.Getter;
 import lombok.val;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.TestOnly;
 
 
 public class Spell implements NamedEntityKind {

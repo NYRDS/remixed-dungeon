@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfLullaby;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Succubus extends Mob {

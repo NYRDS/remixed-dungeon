@@ -15,10 +15,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.DummySprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
-
-import org.jetbrains.annotations.NotNull;
-
 import lombok.SneakyThrows;
+import org.jetbrains.annotations.NotNull;
 
 public class MirrorImage extends Mob {
 

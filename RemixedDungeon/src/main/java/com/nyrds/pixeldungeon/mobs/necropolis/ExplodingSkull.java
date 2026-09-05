@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.mobs.necropolis;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
-
 import org.jetbrains.annotations.NotNull;
 
 /**

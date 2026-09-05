@@ -7,10 +7,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.platform.EventCollector;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;

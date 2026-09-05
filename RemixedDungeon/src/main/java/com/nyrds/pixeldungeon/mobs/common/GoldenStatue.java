@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.utils.Utils;
-
 import org.jetbrains.annotations.NotNull;
 
 public class GoldenStatue extends Statue {

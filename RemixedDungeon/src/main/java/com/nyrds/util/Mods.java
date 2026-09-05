@@ -5,17 +5,14 @@ import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.watabou.pixeldungeon.utils.Utils;
-
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
-
-import lombok.SneakyThrows;
 
 /**
  * Created by mike on 16.10.2016.

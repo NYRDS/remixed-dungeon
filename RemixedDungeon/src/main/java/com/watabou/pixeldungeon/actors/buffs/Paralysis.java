@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -11,10 +12,7 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
-
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class Paralysis extends FlavourBuff {

@@ -14,7 +14,6 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.IntroScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
-
 import java.util.HashMap;
 import java.util.Map;
 

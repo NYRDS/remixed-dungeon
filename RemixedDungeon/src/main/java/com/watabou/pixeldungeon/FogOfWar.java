@@ -6,7 +6,6 @@ import com.nyrds.platform.gl.Texture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
-
 import java.util.Arrays;
 
 public class FogOfWar extends Image {

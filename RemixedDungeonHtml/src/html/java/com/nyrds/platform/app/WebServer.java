@@ -3,13 +3,7 @@ package com.nyrds.platform.app;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.utils.GLog;
-
 import java.io.File;
-import java.io.InputStream;
-import java.util.List;
-import java.util.Map;
 
 /**
  * WebServer implementation for HTML platform.

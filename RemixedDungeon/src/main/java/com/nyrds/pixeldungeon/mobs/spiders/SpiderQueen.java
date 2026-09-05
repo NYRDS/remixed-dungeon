@@ -16,7 +16,6 @@ import com.watabou.pixeldungeon.items.SpiderCharm;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Fire;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class SpiderQueen extends Boss {

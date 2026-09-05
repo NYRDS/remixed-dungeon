@@ -26,10 +26,8 @@ import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import org.jetbrains.annotations.NotNull;
-
 import lombok.val;
+import org.jetbrains.annotations.NotNull;
 
 public class Statue extends Mob {
 

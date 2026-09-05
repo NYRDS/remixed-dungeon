@@ -4,11 +4,10 @@ import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.levels.CustomLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
-import org.luaj.vm2.LuaTable;
-import org.luaj.vm2.LuaValue;
-
 import java.util.HashMap;
 import java.util.Map;
+import org.luaj.vm2.LuaTable;
+import org.luaj.vm2.LuaValue;
 
 /**
  * A painter that delegates painting to Lua scripts

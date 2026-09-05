@@ -6,7 +6,6 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
-
 import org.jetbrains.annotations.NotNull;
 
 class Thrower implements CellSelector.Listener {

@@ -1,10 +1,10 @@
 package com.nyrds.pixeldungeon.items;
 
 import androidx.annotation.Keep;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.effects.Devour;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.util.StringsManager;
@@ -19,21 +19,17 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Wound;
-import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Sungrass;
-import com.watabou.pixeldungeon.sprites.DummySprite;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.sprites.DummySprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
-
 import lombok.val;
+import org.jetbrains.annotations.NotNull;
 
 public class Carcass extends Item implements Doom {
     public static final String AC_NECROMANCY = "AC_Necromancy";

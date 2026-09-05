@@ -2,10 +2,8 @@ package com.nyrds.pixeldungeon.support;
 
 import android.app.Activity;
 import android.content.Intent;
-
 import com.nyrds.platform.support.Iap;
 import com.watabou.pixeldungeon.utils.Utils;
-
 import java.util.List;
 
 public class IapAdapter {

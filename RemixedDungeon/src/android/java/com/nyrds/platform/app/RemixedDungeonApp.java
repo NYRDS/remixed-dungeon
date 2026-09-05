@@ -10,30 +10,18 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
-
 import androidx.annotation.Nullable;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
-
 import com.nyrds.market.MarketApp;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.EventCollector;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
-
-import org.jetbrains.annotations.NotNull;
-
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
 import java.security.MessageDigest;
-import java.util.Collections;
-import java.util.Enumeration;
 import java.util.concurrent.ThreadPoolExecutor;
-
 import lombok.SneakyThrows;
+import org.jetbrains.annotations.NotNull;
 
 public class RemixedDungeonApp extends MultiDexApplication {
 

@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import androidx.annotation.Keep;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -12,7 +11,6 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
-
 import org.json.JSONObject;
 
 /**

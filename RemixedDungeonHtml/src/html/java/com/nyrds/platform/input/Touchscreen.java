@@ -2,10 +2,8 @@
 
 package com.nyrds.platform.input;
 
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Signal;
-
 import java.util.HashMap;
 
 public class Touchscreen {

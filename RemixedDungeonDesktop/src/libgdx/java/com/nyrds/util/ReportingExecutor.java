@@ -1,9 +1,6 @@
 package com.nyrds.util;
 
 import com.nyrds.platform.EventCollector;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
@@ -11,6 +8,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+import org.jetbrains.annotations.NotNull;
 
 public class ReportingExecutor extends ThreadPoolExecutor {
     public ReportingExecutor() {

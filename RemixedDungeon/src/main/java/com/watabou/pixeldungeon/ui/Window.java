@@ -16,10 +16,8 @@ import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.utils.Signal;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import lombok.Getter;
 
 

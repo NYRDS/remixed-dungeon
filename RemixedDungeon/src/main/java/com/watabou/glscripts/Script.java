@@ -5,7 +5,6 @@ package com.watabou.glscripts;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.gl.Program;
 import com.nyrds.platform.gl.Shader;
-
 import java.util.HashMap;
 import java.util.Map;
 

@@ -9,8 +9,6 @@ import com.badlogic.gdx.graphics.PixmapIO;
 import com.badlogic.gdx.graphics.g2d.Gdx2DPixmap;
 import com.nyrds.LuaInterface;
 import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.util.PUtil;
-
 import java.io.InputStream;
 
 @LuaInterface

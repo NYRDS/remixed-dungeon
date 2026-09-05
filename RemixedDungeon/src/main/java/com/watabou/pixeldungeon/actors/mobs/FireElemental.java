@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Fire;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class FireElemental extends Mob {

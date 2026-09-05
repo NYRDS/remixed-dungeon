@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.GenericInfo;
-
 import org.jetbrains.annotations.NotNull;
 
 public class WndInfoItem extends Window {

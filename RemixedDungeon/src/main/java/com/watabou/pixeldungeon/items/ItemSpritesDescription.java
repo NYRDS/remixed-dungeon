@@ -3,12 +3,10 @@ package com.watabou.pixeldungeon.items;
 import com.nyrds.platform.game.Game;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
-
-import org.json.JSONObject;
-
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import org.json.JSONObject;
 
 public class ItemSpritesDescription {
 	private static final String SPRITES_DESC_ITEMS_JSON = "spritesDesc/items.json";

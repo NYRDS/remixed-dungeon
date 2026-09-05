@@ -19,7 +19,6 @@ import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class WandOfFlock extends SimpleWand  {

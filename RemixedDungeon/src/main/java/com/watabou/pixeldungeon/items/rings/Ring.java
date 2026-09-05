@@ -17,7 +17,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Ring extends Artifact implements UnknownItem {

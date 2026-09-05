@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.items;
 
 import androidx.annotation.Keep;
-
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
@@ -18,12 +17,10 @@ import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
-
+import java.util.ArrayList;
 import org.jetbrains.annotations.NotNull;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
-
-import java.util.ArrayList;
 
 /**
  * Created by mike on 26.05.2018.

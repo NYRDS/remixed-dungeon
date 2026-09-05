@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
-
 import org.jetbrains.annotations.NotNull;
 
 public class RootSpell extends Spell{

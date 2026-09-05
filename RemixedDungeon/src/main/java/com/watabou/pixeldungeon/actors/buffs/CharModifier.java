@@ -1,15 +1,12 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.CharSprite;
-
 import java.util.Set;
-
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public interface CharModifier {

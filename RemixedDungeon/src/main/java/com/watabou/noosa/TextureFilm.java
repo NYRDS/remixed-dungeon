@@ -5,10 +5,8 @@ package com.watabou.noosa;
 import com.nyrds.platform.compatibility.RectF;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
-
-import org.jetbrains.annotations.Nullable;
-
 import java.util.HashMap;
+import org.jetbrains.annotations.Nullable;
 
 public class TextureFilm {
 

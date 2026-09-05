@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
-
 import org.jetbrains.annotations.NotNull;
 
 public class ScrollOfMirrorImage extends Scroll {

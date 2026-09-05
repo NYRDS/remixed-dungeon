@@ -1,7 +1,6 @@
 package com.nyrds.platform.game;
 
 import android.view.KeyEvent;
-
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Graphics;
@@ -28,12 +27,10 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.GameScene;
-
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.zip.Deflater;
-
 import lombok.Getter;
 
 public class Game implements ApplicationListener, InputProcessor {

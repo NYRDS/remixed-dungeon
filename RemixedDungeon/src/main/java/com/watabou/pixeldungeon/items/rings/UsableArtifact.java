@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon.items.rings;
 
 import com.watabou.pixeldungeon.actors.Char;
-
 import java.util.ArrayList;
 
 public class UsableArtifact extends Artifact {

@@ -17,7 +17,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 

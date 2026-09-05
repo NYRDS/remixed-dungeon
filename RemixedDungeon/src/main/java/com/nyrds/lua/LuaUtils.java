@@ -1,11 +1,9 @@
 package com.nyrds.lua;
 
 import com.nyrds.LuaInterface;
-
+import java.util.Collection;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
-
-import java.util.Collection;
 
 @LuaInterface
 public class LuaUtils {

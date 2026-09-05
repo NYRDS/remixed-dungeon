@@ -6,7 +6,6 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
-
 import java.util.HashMap;
 import java.util.Map;
 

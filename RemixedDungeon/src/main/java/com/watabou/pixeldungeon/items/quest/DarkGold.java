@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-
 import org.jetbrains.annotations.NotNull;
 
 public class DarkGold extends Item {

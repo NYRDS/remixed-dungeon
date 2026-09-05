@@ -11,7 +11,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.market.MarketOptions;
 import com.nyrds.pixeldungeon.game.GameLoop;

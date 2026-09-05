@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.ui.Component;
-
 import java.util.ArrayList;
 import java.util.List;
 

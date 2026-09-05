@@ -5,7 +5,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.platform.game.Game;
 

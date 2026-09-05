@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.Nullable;
 
 public class WandOfShadowbolt extends Wand {

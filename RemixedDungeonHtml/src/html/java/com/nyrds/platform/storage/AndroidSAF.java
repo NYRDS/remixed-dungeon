@@ -1,7 +1,6 @@
 package com.nyrds.platform.storage;
 
 import com.nyrds.platform.game.Game;
-
 import java.io.IOException;
 import java.io.OutputStream;
 

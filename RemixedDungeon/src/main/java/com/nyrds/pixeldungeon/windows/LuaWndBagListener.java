@@ -1,9 +1,9 @@
 package com.nyrds.pixeldungeon.windows;
 
-import com.watabou.pixeldungeon.windows.WndBag;
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.actors.Char;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.windows.WndBag;
 
 public class LuaWndBagListener implements WndBag.Listener {
     private int callbackId;

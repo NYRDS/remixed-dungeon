@@ -14,7 +14,6 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Spinner extends Mob {

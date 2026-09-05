@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.watabou.pixeldungeon.actors.Char;
-
 import org.jetbrains.annotations.NotNull;
 
 /**

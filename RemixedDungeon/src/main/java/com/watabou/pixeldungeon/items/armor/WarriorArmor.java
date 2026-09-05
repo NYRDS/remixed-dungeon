@@ -18,7 +18,6 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
-
 import org.jetbrains.annotations.NotNull;
 
 public class WarriorArmor extends ClassArmor {

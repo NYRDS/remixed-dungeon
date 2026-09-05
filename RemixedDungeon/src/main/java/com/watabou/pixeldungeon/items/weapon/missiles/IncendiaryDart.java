@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class IncendiaryDart extends Dart {

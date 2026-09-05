@@ -27,4 +27,3 @@ public class SystemTime {
 		lastActionTime = now();
 	}
 }
-

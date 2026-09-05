@@ -19,7 +19,6 @@ import com.watabou.pixeldungeon.items.wands.WandOfFirebolt;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
-
 import org.jetbrains.annotations.NotNull;
 
 public class BurningFist extends Mob implements IZapper {

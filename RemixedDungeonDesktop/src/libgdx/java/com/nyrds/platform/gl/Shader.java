@@ -4,10 +4,8 @@ package com.nyrds.platform.gl;
 
 
 import com.badlogic.gdx.Gdx;
-
-import org.lwjgl.BufferUtils;
-
 import java.nio.IntBuffer;
+import org.lwjgl.BufferUtils;
 
 public class Shader {
 

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.buffs;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -17,8 +18,6 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
-
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class Necrotism extends Buff implements Doom {

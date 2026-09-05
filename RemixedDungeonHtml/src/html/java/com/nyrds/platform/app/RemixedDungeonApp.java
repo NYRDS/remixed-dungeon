@@ -1,7 +1,6 @@
 package com.nyrds.platform.app;
 
 import com.badlogic.gdx.ApplicationListener;
-import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.PUtil;
 

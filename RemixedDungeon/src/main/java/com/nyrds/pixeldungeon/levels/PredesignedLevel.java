@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
 import androidx.annotation.Keep;
-
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -14,13 +13,11 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Bundle;
-
+import lombok.SneakyThrows;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import lombok.SneakyThrows;
 
 
 public class PredesignedLevel extends CustomLevel {

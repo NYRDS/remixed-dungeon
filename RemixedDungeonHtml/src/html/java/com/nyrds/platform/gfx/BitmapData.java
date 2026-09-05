@@ -4,8 +4,6 @@ import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Gdx2DPixmap;
 
-import java.io.InputStream;
-import java.nio.ByteBuffer;
 
 /**
  * HTML version of BitmapData

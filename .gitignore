@@ -74,3 +74,4 @@ htmlcov/
 
 # Desktop runtime directory (IDE run output)
 RemixedDungeonDesktop/src/desktop/rundir/RemixedDungeonDesktop/src/generated/java/com/nyrds/pixeldungeon/ml/BuildConfig.java
+RemixedDungeonDesktop/src/desktop/rundir/

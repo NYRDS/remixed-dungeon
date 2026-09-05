@@ -1,13 +1,8 @@
 package com.nyrds.platform.gfx;
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
-import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.SystemTextBase;
-
 import java.util.HashMap;
 import java.util.Map;
 

@@ -18,7 +18,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;

@@ -7,12 +7,9 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.util.Log;
 import android.util.Pair;
-
 import androidx.documentfile.provider.DocumentFile;
-
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,7 +23,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
 import lombok.SneakyThrows;
 import lombok.val;
 

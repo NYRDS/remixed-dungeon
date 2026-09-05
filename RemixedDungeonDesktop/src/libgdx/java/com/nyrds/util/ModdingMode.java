@@ -1,14 +1,11 @@
 package com.nyrds.util;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.storage.FileSystem;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import org.apache.commons.io.input.BOMInputStream;
-import org.jetbrains.annotations.NotNull;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -24,10 +21,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
 import lombok.SneakyThrows;
-
-import com.nyrds.LuaInterface;
+import org.apache.commons.io.input.BOMInputStream;
+import org.jetbrains.annotations.NotNull;
 
 @LuaInterface
 public class ModdingMode extends ModdingBase {

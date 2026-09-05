@@ -17,7 +17,6 @@ import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class EarthElemental extends MultiKindMob implements IDepthAdjustable {

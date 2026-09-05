@@ -3,7 +3,6 @@
 package com.nyrds.platform.gl;
 
 import com.badlogic.gdx.Gdx;
-
 import java.nio.FloatBuffer;
 
 public class Attribute {

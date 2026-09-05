@@ -14,7 +14,6 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.utils.Utils;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Sorrowmoss extends Plant {

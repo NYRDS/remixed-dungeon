@@ -5,15 +5,14 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.Os;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.ParallelDownloadTask;
 import com.nyrds.util.Mods;
+import com.nyrds.util.ParallelDownloadTask;
 import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ModsButton;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
-
 import java.io.File;
 
 public class WndModsDisclaimer extends WndOptions {

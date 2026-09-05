@@ -6,7 +6,6 @@ import com.nyrds.platform.gfx.SystemText;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.Utils;
-
 import org.jetbrains.annotations.NotNull;
 
 public abstract class Text extends Visual implements IPlaceable {

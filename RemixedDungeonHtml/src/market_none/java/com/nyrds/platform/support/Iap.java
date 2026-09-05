@@ -1,14 +1,8 @@
 package com.nyrds.platform.support;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.pixeldungeon.items.accessories.Accessory;
-import com.nyrds.platform.game.Game;
-
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
 
 /**
  * HTML version of Iap with market_none flavor

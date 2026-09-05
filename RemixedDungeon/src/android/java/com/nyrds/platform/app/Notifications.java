@@ -4,13 +4,10 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
-
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
-
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Notifications {

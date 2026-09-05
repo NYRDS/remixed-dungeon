@@ -15,7 +15,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
-
 import org.jetbrains.annotations.NotNull;
 
 public class AzuterronNPC extends Shopkeeper {
@@ -144,5 +143,3 @@ public class AzuterronNPC extends Shopkeeper {
         }
     }
 }
-
-

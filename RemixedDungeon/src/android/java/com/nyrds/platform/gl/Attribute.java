@@ -3,7 +3,6 @@
 package com.nyrds.platform.gl;
 
 import android.opengl.GLES20;
-
 import java.nio.FloatBuffer;
 
 public class Attribute {

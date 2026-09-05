@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 

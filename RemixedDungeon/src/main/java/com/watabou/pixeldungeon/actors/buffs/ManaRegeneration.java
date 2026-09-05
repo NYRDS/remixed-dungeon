@@ -1,12 +1,10 @@
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.LuaInterface;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.actors.Char;
-
 import org.jetbrains.annotations.NotNull;
-
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class ManaRegeneration extends Buff {

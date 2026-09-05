@@ -21,15 +21,11 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndError;
-
-import org.jetbrains.annotations.Nullable;
-
 import java.util.Collection;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-
 import lombok.SneakyThrows;
+import org.jetbrains.annotations.Nullable;
 
 public class InterlevelScene extends PixelScene {
 

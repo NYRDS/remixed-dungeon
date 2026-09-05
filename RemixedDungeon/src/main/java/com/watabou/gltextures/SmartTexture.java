@@ -5,7 +5,6 @@ package com.watabou.gltextures;
 import com.nyrds.platform.compatibility.RectF;
 import com.nyrds.platform.gfx.BitmapData;
 import com.nyrds.platform.gl.Texture;
-
 import org.jetbrains.annotations.NotNull;
 
 public class SmartTexture extends Texture {

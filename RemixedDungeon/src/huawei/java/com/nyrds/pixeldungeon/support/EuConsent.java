@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.content.Context;
-
 import com.google.ads.consent.ConsentInfoUpdateListener;
 import com.google.ads.consent.ConsentInformation;
 import com.google.ads.consent.ConsentStatus;

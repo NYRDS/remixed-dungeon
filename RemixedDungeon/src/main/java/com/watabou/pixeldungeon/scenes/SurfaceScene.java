@@ -28,7 +28,6 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.utils.Point;
 import com.watabou.utils.Random;
-
 import java.nio.FloatBuffer;
 
 public class SurfaceScene extends PixelScene {

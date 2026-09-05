@@ -18,7 +18,6 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class RottingFist extends Mob {

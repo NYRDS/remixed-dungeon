@@ -7,10 +7,8 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StatFs;
-
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
-
 import java.io.File;
 
 public class Os {

@@ -1,17 +1,14 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import androidx.annotation.Keep;
-
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
-
-import org.json.JSONObject;
-
 import lombok.Getter;
 import lombok.Setter;
+import org.json.JSONObject;
 
 /**
  * Created by mike on 01.07.2016.

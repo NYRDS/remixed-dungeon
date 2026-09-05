@@ -1,14 +1,13 @@
 
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
-
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class Vertigo extends FlavourBuff {

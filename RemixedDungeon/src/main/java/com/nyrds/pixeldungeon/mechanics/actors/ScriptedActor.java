@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.actors;
 
 import androidx.annotation.Keep;
-
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.watabou.pixeldungeon.actors.Actor;

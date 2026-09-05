@@ -3,8 +3,6 @@ package com.nyrds.platform.app;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.GLog;
-
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;

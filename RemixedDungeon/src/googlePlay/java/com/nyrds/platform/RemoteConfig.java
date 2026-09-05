@@ -2,9 +2,7 @@ package com.nyrds.platform;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
 import androidx.annotation.NonNull;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
@@ -12,7 +10,6 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigValue;
 import com.nyrds.platform.util.PUtil;
 import com.watabou.pixeldungeon.utils.GLog;
-
 import java.util.HashMap;
 import java.util.Map;
 

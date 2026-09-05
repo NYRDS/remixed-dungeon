@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
@@ -17,10 +18,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
-
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class Hunger extends Buff implements Doom {

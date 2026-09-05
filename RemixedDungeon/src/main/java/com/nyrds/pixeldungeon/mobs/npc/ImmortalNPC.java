@@ -6,7 +6,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
-
 import org.jetbrains.annotations.NotNull;
 
 public abstract class ImmortalNPC extends NPC {

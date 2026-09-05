@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.buffs;
 
 import androidx.annotation.Keep;
-
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
@@ -15,16 +15,11 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
-
-import org.jetbrains.annotations.NotNull;
-import org.luaj.vm2.LuaTable;
-
 import java.util.HashSet;
 import java.util.Set;
-
 import lombok.val;
-
-import com.nyrds.LuaInterface;
+import org.jetbrains.annotations.NotNull;
+import org.luaj.vm2.LuaTable;
 
 @LuaInterface
 public class CustomBuff extends Buff {

@@ -4,14 +4,10 @@ import static com.nyrds.pixeldungeon.ml.BuildConfig.SAVES_PATH;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingBase;
-
-import org.jetbrains.annotations.NotNull;
-
-import com.nyrds.pixeldungeon.ml.BuildConfig;
-
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
@@ -24,8 +20,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
-
 import lombok.SneakyThrows;
+import org.jetbrains.annotations.NotNull;
 
 public class FileSystem {
 	static CaseInsensitiveFileCache fileCache = null;

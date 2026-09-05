@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.support;
 
 
 import androidx.annotation.Nullable;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
@@ -15,7 +14,6 @@ import com.yandex.mobile.ads.interstitial.InterstitialAd;
 import com.yandex.mobile.ads.interstitial.InterstitialAdEventListener;
 import com.yandex.mobile.ads.interstitial.InterstitialAdLoadListener;
 import com.yandex.mobile.ads.interstitial.InterstitialAdLoader;
-
 import org.jetbrains.annotations.NotNull;
 
 public class YandexInterstitialProvider implements AdsUtilsCommon.IInterstitialProvider {

@@ -15,7 +15,6 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class ItemUtils {

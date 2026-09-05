@@ -12,10 +12,8 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import org.jetbrains.annotations.NotNull;
-
 import lombok.Setter;
+import org.jetbrains.annotations.NotNull;
 
 public class ItemSlot extends Button {
 

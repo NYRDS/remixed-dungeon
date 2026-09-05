@@ -14,16 +14,13 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
-
+import java.util.HashMap;
+import java.util.Map;
+import lombok.Getter;
+import lombok.SneakyThrows;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import lombok.Getter;
-import lombok.SneakyThrows;
 
 /**
  * Created by mike on 01.07.2016.

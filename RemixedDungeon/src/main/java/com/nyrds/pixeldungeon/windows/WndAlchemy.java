@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

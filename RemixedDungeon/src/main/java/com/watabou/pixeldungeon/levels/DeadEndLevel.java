@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-
 import java.util.Arrays;
 
 public class DeadEndLevel extends Level {

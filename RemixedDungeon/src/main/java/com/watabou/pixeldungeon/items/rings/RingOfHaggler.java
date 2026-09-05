@@ -6,7 +6,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
-
 import org.jetbrains.annotations.NotNull;
 
 public class RingOfHaggler extends Ring {

@@ -7,7 +7,6 @@ import com.watabou.noosa.Group;
 import com.watabou.noosa.Visual;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Emitter extends Group {

@@ -14,7 +14,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Unlock extends CharAction {

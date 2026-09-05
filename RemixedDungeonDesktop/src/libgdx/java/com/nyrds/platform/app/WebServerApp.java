@@ -3,18 +3,8 @@ package com.nyrds.platform.app;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
-import com.nyrds.platform.game.RemixedDungeon;
-import com.nyrds.util.ModdingMode;
-import com.watabou.pixeldungeon.utils.GLog;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.Arrays;
 
 /**
  * Headless desktop application that only runs the web server without the game UI

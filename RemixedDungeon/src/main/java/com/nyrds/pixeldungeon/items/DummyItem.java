@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.items;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.EquipableItem;
-
 import org.jetbrains.annotations.NotNull;
 
 public class DummyItem extends EquipableItem {

@@ -131,5 +131,3 @@ public class ScarecrowNPC extends ImmortalNPC {
 		}
 	}
 }
-
-

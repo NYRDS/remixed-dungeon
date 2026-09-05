@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class RingOfThorns extends Ring {

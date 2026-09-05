@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Random;
-
 import lombok.val;
 
 public class TreasuryPainter extends Painter {

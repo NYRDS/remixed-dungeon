@@ -13,10 +13,8 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.scenes.GameScene;
-
 import java.util.HashMap;
 import java.util.Map;
-
 import lombok.val;
 
 public class BuffIndicator extends Component {

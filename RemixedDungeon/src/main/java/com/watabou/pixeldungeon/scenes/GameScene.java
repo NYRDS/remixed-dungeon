@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.scenes;
 
 import android.view.KeyEvent;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.effects.CustomClipEffect;
 import com.nyrds.pixeldungeon.effects.EffectsFactory;
@@ -90,13 +89,10 @@ import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndInGameMenu;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 import com.watabou.utils.Random;
-
+import java.util.HashSet;
+import lombok.Setter;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.HashSet;
-
-import lombok.Setter;
 
 
 public class GameScene extends PixelScene {

@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class SpiderExploding extends MultiKindMob {

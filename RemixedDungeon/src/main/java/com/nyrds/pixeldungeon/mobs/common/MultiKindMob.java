@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Bundle;
-
 import org.json.JSONObject;
 
 public class MultiKindMob extends Mob {

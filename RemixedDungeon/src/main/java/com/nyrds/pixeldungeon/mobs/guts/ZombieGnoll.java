@@ -16,7 +16,6 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 /**

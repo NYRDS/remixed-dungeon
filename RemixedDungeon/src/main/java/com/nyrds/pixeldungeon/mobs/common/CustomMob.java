@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
 import androidx.annotation.Keep;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
@@ -12,11 +11,9 @@ import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.utils.GLog;
-
+import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
-
-import lombok.SneakyThrows;
 
 /**
  * Created by mike on 11.04.2017.

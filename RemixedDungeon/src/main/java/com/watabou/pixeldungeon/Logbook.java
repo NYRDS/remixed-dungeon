@@ -3,7 +3,6 @@ package com.watabou.pixeldungeon;
 import com.nyrds.Packable;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
-
 import java.util.LinkedList;
 import java.util.List;
 

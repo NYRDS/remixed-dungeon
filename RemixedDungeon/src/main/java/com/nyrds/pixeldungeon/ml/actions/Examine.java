@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.ml.actions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndChar;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Examine extends CharAction {

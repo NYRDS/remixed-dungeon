@@ -20,15 +20,12 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
 import com.watabou.utils.Rect;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
 import lombok.SneakyThrows;
+import org.jetbrains.annotations.NotNull;
 
 
 public abstract class RegularLevel extends CustomLevel {

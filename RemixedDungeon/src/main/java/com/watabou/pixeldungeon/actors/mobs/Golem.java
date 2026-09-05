@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Golem extends Mob {

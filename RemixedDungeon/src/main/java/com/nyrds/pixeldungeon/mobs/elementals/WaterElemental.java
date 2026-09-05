@@ -13,7 +13,6 @@ import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class WaterElemental extends MultiKindMob implements IDepthAdjustable {

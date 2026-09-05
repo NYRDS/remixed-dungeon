@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 /**

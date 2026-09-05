@@ -5,10 +5,8 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.concurrent.ConcurrentHashMap;
+import org.jetbrains.annotations.NotNull;
 
 @Packable
 public class ItemsList {

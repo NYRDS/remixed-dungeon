@@ -4,7 +4,6 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Push extends CharAction {

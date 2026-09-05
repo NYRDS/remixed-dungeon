@@ -31,12 +31,10 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Random;
-
+import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import lombok.SneakyThrows;
 
 public class Armor extends EquipableItem {
 

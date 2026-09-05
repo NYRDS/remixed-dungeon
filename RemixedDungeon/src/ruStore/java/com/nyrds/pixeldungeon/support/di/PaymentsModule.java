@@ -1,11 +1,9 @@
 package com.nyrds.pixeldungeon.support.di;
 
 import android.app.Application;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.util.StringsManager;
-
 import ru.rustore.sdk.billingclient.RuStoreBillingClient;
 import ru.rustore.sdk.billingclient.RuStoreBillingClientFactory;
 

@@ -2,13 +2,11 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.platform.game.Game;
+import com.watabou.noosa.Gizmo;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 import com.watabou.pixeldungeon.windows.elements.TabContent;
-import com.watabou.noosa.Gizmo;
-
 import java.util.ArrayList;
 import java.util.List;
 

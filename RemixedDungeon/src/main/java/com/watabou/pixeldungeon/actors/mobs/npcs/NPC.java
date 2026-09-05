@@ -14,11 +14,9 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.utils.Random;
-
+import java.util.Locale;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
-
-import java.util.Locale;
 
 public abstract class NPC extends Mob {
 	protected NPC() {

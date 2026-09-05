@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.game;
 
 import android.annotation.SuppressLint;
-
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
@@ -20,7 +19,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.ui.ModsButton;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tool;
-
 import java.util.Locale;
 
 public class GamePreferences {

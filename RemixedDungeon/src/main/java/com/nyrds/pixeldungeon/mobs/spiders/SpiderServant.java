@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class SpiderServant extends MultiKindMob {

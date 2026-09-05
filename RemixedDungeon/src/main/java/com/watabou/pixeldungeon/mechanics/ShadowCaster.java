@@ -4,7 +4,6 @@ package com.watabou.pixeldungeon.mechanics;
 import com.nyrds.Packable;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.levels.Level;
-
 import java.util.Arrays;
 
 @Packable

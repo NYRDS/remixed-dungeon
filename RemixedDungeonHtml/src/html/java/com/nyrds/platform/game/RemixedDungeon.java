@@ -1,6 +1,5 @@
 package com.nyrds.platform.game;
 
-import com.badlogic.gdx.Gdx;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
@@ -11,7 +10,6 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.utils.GLog;
 
-import java.util.Arrays;
 
 public class RemixedDungeon extends Game {
 

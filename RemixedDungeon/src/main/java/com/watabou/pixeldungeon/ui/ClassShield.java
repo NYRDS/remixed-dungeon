@@ -14,7 +14,6 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.StartScene;
-
 import java.util.Locale;
 
 public class ClassShield extends Button {

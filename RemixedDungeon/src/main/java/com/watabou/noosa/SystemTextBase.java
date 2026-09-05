@@ -1,15 +1,13 @@
 package com.watabou.noosa;
 
 import com.nyrds.pixeldungeon.game.GamePreferences;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.jetbrains.annotations.NotNull;
 
 public abstract class SystemTextBase extends Text {
     // Combined markup pattern for violet highlighting (_text_), bronze ("text"), and generic color tags ([color:text])

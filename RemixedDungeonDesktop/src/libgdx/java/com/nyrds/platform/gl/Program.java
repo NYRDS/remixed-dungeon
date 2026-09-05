@@ -2,10 +2,8 @@ package com.nyrds.platform.gl;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-
-import org.lwjgl.BufferUtils;
-
 import java.nio.IntBuffer;
+import org.lwjgl.BufferUtils;
 
 public class Program {
 

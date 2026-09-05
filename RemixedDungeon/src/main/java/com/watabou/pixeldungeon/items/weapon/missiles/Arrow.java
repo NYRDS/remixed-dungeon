@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public abstract class Arrow extends MissileWeapon {

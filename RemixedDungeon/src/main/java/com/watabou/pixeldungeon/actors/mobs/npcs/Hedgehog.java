@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.items.food.Pasty;
 import com.watabou.pixeldungeon.levels.RegularLevel;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Hedgehog extends NPC {

@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.mobs.necropolis;
 import com.nyrds.pixeldungeon.mobs.common.MobSpawner;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-
 import org.jetbrains.annotations.NotNull;
 
 public class JarOfSouls extends Mob {

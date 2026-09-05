@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.effects.BadgeBanner;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndBadge;
-
 import java.util.ArrayList;
 
 public class BadgesList extends ScrollPane {

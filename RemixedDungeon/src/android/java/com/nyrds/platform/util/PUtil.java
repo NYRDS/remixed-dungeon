@@ -9,11 +9,9 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.StatFs;
 import android.util.Log;
-
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
-
 import java.io.File;
 import java.util.UUID;
 

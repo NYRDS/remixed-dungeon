@@ -4,11 +4,9 @@ import com.nyrds.Packable;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.EnumSet;
 import java.util.Set;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by DeadDie on 20.08.2016

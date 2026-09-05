@@ -11,7 +11,6 @@ import com.watabou.gltextures.SmartTexture;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;

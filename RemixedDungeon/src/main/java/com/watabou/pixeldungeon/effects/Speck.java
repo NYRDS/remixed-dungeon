@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.effects;
 
 import android.annotation.SuppressLint;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.gltextures.TextureCache;
@@ -28,7 +27,6 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
-
 import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Map;

@@ -16,7 +16,6 @@ import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Point;
 import com.watabou.utils.Random;
-
 import java.util.List;
 
 public class PrisonBossLevel extends BossLevel {

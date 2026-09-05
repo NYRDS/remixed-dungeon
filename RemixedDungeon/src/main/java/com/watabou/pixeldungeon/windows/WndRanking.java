@@ -35,7 +35,6 @@ import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.RankingTab;
 import com.watabou.pixeldungeon.windows.elements.Tab;
-
 import java.util.Locale;
 
 public class WndRanking extends WndTabbed {

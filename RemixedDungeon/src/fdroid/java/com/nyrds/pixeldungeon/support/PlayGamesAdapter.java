@@ -1,11 +1,9 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.content.Intent;
-
-import org.jetbrains.annotations.Nullable;
-
 import java.io.File;
 import java.io.FileFilter;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Stub implementation of PlayGamesAdapter for non-Google Play flavors

@@ -9,7 +9,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
-
 import com.watabou.utils.Random;
 
 public class Larva extends Mob {

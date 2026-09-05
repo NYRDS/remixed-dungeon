@@ -1,13 +1,6 @@
 package com.nyrds.platform;
 
-import com.nyrds.platform.storage.CommonPrefs;
-import com.nyrds.platform.storage.Preferences;
-import com.nyrds.util.Util;
-import com.watabou.pixeldungeon.utils.GLog;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.Arrays;
 import java.util.Map;
 
 public class EventCollector {

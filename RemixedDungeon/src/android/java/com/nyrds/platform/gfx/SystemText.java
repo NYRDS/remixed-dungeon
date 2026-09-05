@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.text.TextPaint;
-
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
@@ -19,16 +18,13 @@ import com.watabou.noosa.SystemTextBase;
 import com.watabou.noosa.SystemTextLine;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lombok.Synchronized;
 import lombok.val;
+import org.jetbrains.annotations.NotNull;
 
 public class SystemText extends SystemTextBase {
 

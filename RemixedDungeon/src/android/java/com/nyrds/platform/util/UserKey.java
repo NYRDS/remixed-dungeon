@@ -1,9 +1,7 @@
 package com.nyrds.platform.util;
 
 import android.content.SharedPreferences;
-
 import com.nyrds.platform.storage.Preferences;
-
 import java.util.UUID;
 
 public class UserKey {

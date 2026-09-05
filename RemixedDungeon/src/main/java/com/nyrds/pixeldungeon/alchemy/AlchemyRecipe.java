@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.alchemy;
 
 import java.util.List;
 import java.util.Objects;
-
 import lombok.Getter;
 
 /**

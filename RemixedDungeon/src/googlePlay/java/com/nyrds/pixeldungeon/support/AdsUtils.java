@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.support;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
-
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
@@ -16,7 +15,6 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.platform.support.AAdsComboProvider;
 import com.nyrds.platform.util.StringsManager;
 import com.yandex.mobile.ads.banner.BannerAdView;
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 

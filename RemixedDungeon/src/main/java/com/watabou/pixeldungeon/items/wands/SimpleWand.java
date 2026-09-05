@@ -1,7 +1,6 @@
 package com.watabou.pixeldungeon.items.wands;
 
 import com.watabou.utils.Random;
-
 import lombok.SneakyThrows;
 
 public abstract class SimpleWand extends Wand {

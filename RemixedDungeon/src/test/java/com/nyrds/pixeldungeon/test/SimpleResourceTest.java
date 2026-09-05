@@ -1,9 +1,9 @@
 package com.nyrds.pixeldungeon.test;
 
-import org.junit.Test;
-import java.io.File;
-
 import static org.junit.Assert.*;
+
+import java.io.File;
+import org.junit.Test;
 
 /**
  * Simple test to verify that the test infrastructure works

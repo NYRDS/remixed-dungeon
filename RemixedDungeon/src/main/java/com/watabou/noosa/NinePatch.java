@@ -5,7 +5,6 @@ import com.nyrds.platform.gl.NoosaScript;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
-
 import java.nio.FloatBuffer;
 
 public class NinePatch extends Visual {

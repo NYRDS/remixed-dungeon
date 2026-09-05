@@ -1,11 +1,9 @@
 package com.nyrds.pixeldungeon.game;
 
 import android.view.KeyEvent;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.platform.ConcurrencyProvider;
-import com.watabou.pixeldungeon.actors.Actor;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.PlatformAtomicInteger;
 import com.nyrds.platform.audio.MusicManager;
@@ -18,31 +16,29 @@ import com.nyrds.platform.input.Keys;
 import com.nyrds.platform.input.PointerEvent;
 import com.nyrds.platform.input.Touchscreen;
 import com.nyrds.platform.util.TrackedRuntimeException;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.ReportingExecutor;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Scene;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.SystemTime;
-
-import org.luaj.vm2.LuaError;
-import org.luaj.vm2.LuaValue;
-import org.luaj.vm2.lib.jse.CoerceJavaToLua;
-
 import java.util.Map;
 import java.util.Queue;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
-
 import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.val;
+import org.luaj.vm2.LuaError;
+import org.luaj.vm2.LuaValue;
+import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 public class GameLoop {
 

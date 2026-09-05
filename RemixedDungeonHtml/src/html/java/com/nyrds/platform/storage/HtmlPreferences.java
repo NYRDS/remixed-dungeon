@@ -2,10 +2,8 @@ package com.nyrds.platform.storage;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
-
 import org.json.JSONObject;
 
-import java.util.Iterator;
 
 public class HtmlPreferences {
     private static final String PREF_NAME = "RemixedDungeon";

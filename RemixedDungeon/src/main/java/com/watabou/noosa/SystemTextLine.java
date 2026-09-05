@@ -6,7 +6,6 @@ import com.nyrds.platform.gl.NoosaScript;
 import com.nyrds.platform.gl.Texture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.glwrap.Quad;
-
 import java.nio.FloatBuffer;
 
 public class SystemTextLine extends Visual {

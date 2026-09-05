@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Build;
-
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.common.api.ResolvableApiException;
@@ -29,9 +28,6 @@ import com.nyrds.util.Unzip;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import org.jetbrains.annotations.Nullable;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -39,6 +35,7 @@ import java.io.FileFilter;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Updated to Play Games Services v2 (2025)

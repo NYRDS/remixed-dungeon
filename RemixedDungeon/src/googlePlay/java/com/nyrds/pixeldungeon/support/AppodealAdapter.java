@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.support;
 
 
 import android.os.Build;
-
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.utils.Log;
 import com.nyrds.pixeldungeon.ml.R;

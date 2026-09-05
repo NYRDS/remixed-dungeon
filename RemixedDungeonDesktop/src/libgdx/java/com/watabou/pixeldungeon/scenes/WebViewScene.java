@@ -5,7 +5,6 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
-import com.watabou.utils.Bundle;
 
 public class WebViewScene extends PixelScene {
 

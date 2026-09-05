@@ -15,7 +15,6 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.ImageButton;
 import com.watabou.pixeldungeon.windows.elements.TabContent;
-
 import lombok.val;
 
 class BuffsTab extends TabContent {

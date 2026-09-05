@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.PointF;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Pushing extends Actor {

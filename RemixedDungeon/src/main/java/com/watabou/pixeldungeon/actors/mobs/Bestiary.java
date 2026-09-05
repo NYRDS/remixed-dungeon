@@ -8,12 +8,10 @@ import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModError;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.Iterator;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Bestiary {
 

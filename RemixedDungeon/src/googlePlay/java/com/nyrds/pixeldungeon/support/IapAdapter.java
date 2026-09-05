@@ -2,9 +2,7 @@ package com.nyrds.pixeldungeon.support;
 
 import android.content.Context;
 import android.content.Intent;
-
 import androidx.annotation.Nullable;
-
 import com.android.billingclient.api.AcknowledgePurchaseParams;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
@@ -28,9 +26,6 @@ import com.nyrds.platform.support.IPurchasesUpdated;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,6 +34,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
+import org.jetbrains.annotations.NotNull;
 
 public class IapAdapter implements PurchasesUpdatedListener, ConsumeResponseListener {
 

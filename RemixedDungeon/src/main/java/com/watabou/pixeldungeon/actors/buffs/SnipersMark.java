@@ -1,9 +1,8 @@
 
 package com.watabou.pixeldungeon.actors.buffs;
 
-import com.watabou.pixeldungeon.ui.BuffIndicator;
-
 import com.nyrds.LuaInterface;
+import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 @LuaInterface
 public class SnipersMark extends FlavourBuff {

@@ -2,10 +2,8 @@ package com.nyrds.platform.gl;
 
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
-
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.gfx.BitmapData;
-
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;

@@ -19,7 +19,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 abstract public class RottenFood extends Food{

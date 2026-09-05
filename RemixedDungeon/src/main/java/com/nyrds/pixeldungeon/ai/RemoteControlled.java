@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.utils.GLog;
-
 import org.jetbrains.annotations.NotNull;
 
 /**

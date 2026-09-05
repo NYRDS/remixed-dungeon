@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.windows.WndResurrect;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Ankh extends Item {

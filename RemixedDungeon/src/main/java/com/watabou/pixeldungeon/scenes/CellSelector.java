@@ -15,7 +15,6 @@ import com.watabou.pixeldungeon.ui.IWindow;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.PointF;
-
 import org.jetbrains.annotations.NotNull;
 
 

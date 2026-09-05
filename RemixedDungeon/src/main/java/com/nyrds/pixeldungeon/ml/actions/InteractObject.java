@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.ml.actions;
 
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 
 public class InteractObject extends CharAction {

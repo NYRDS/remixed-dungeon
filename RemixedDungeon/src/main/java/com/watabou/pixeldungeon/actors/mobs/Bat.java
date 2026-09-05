@@ -4,7 +4,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Bat extends Mob {

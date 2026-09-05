@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.support;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
@@ -12,7 +11,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.yandex.mobile.ads.banner.BannerAdView;
 import com.yandex.mobile.ads.common.InitializationListener;
 import com.yandex.mobile.ads.common.MobileAds;
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 

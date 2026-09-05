@@ -33,7 +33,6 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class DM300 extends Boss {

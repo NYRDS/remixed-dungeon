@@ -20,5 +20,3 @@ public class TownsfolkSilentNPC extends ImmortalNPC {
 		return true;
 	}
 }
-
-

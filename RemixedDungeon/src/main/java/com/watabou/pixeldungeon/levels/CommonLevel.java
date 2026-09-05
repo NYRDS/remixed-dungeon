@@ -5,7 +5,6 @@ import com.nyrds.platform.EventCollector;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.utils.Random;
-
 import java.util.HashMap;
 import java.util.Map;
 

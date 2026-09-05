@@ -14,7 +14,6 @@ import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
-
 import org.jetbrains.annotations.NotNull;
 
 public class IceGuardianCore extends Boss {

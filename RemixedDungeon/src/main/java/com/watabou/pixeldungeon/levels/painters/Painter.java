@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Point;
 import com.watabou.utils.Rect;
-
 import java.util.Arrays;
 
 public class Painter {

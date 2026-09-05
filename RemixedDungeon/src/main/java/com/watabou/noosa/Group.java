@@ -2,12 +2,10 @@
 
 package com.watabou.noosa;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.Collections;
-
 import lombok.SneakyThrows;
+import org.jetbrains.annotations.NotNull;
 
 public class Group extends Gizmo {
 

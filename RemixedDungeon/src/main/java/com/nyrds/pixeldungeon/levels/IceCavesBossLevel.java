@@ -17,9 +17,7 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
-
 import java.util.HashSet;
-
 import lombok.val;
 
 public class IceCavesBossLevel extends BossLevel {

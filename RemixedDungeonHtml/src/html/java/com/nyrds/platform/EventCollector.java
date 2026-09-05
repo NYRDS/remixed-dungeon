@@ -1,7 +1,6 @@
 package com.nyrds.platform;
 
 import com.nyrds.pixeldungeon.ml.BuildConfig;
-
 import java.util.Map;
 
 public class EventCollector {

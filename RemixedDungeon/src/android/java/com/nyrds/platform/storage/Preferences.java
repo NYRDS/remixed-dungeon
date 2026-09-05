@@ -4,12 +4,10 @@ package com.nyrds.platform.storage;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.SharedPreferences;
-
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.util.UserKey;
 import com.watabou.pixeldungeon.utils.Utils;
-
 import java.util.HashMap;
 import java.util.Map;
 

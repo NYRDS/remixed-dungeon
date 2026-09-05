@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Swing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.ui.QuickSlot;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Boomerang extends MissileWeapon {

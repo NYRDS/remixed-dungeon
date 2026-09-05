@@ -1,7 +1,6 @@
 package com.nyrds.platform.app;
 
 import com.badlogic.gdx.ApplicationListener;
-import com.badlogic.gdx.Gdx;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.scenes.TitleScene;

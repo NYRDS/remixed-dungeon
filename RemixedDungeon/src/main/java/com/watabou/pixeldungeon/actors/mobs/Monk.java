@@ -14,10 +14,8 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
-
-import org.jetbrains.annotations.NotNull;
-
 import lombok.val;
+import org.jetbrains.annotations.NotNull;
 
 public class Monk extends Mob {
 

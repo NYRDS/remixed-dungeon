@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Slow;
 import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-
 import org.jetbrains.annotations.NotNull;
 
 public class FreezeGlobe extends Spell{

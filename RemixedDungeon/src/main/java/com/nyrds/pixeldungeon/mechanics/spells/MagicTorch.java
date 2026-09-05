@@ -4,7 +4,6 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
-
 import org.jetbrains.annotations.NotNull;
 
 /**

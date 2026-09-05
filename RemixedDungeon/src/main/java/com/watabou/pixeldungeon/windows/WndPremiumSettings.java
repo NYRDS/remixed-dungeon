@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
-
 import java.util.HashMap;
 import java.util.Map;
 

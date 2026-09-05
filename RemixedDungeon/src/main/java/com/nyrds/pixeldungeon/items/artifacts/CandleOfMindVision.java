@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.utils.Bundle;
-
 import org.jetbrains.annotations.NotNull;
 
 public class CandleOfMindVision extends Artifact implements IActingItem {

@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.windows.IconTitle;
-
 import org.jetbrains.annotations.NotNull;
 
 public class WndBuffInfo extends Window {

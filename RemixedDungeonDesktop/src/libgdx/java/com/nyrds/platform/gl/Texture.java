@@ -2,7 +2,6 @@ package com.nyrds.platform.gl;
 
 import com.badlogic.gdx.Gdx;
 import com.nyrds.platform.gfx.BitmapData;
-
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;

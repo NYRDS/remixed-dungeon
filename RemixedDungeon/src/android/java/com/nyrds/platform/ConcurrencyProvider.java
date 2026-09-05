@@ -1,7 +1,6 @@
 package com.nyrds.platform;
 
 import com.nyrds.util.ReportingExecutor;
-
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicInteger;

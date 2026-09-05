@@ -19,5 +19,3 @@ public class BellaNPC extends ImmortalNPC {
 		return true;
 	}
 }
-
-

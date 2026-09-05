@@ -1,7 +1,6 @@
 package com.nyrds.market;
 
 import android.content.Context;
-
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.nyrds.platform.EventCollector;

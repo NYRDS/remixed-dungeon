@@ -128,5 +128,3 @@ public class CagedKobold extends ImmortalNPC {
 		return true;
 	}
 }
-
-

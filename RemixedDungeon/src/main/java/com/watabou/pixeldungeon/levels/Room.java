@@ -35,7 +35,6 @@ import com.watabou.utils.Graph;
 import com.watabou.utils.Point;
 import com.watabou.utils.Random;
 import com.watabou.utils.Rect;
-
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,7 +42,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-
 import lombok.SneakyThrows;
 
 public class Room extends Rect implements Graph.Node, Bundlable {
@@ -297,17 +295,3 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

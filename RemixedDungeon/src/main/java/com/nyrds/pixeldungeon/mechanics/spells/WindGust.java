@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.particles.WindParticle;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-
 import org.jetbrains.annotations.NotNull;
 
 public class WindGust extends Spell{

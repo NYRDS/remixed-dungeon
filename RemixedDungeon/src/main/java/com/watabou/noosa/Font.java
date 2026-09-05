@@ -8,7 +8,6 @@ import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
-
 import java.util.HashMap;
 
 public class Font extends TextureFilm {

@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Signal;
-
 import java.util.regex.Pattern;
 
 public class GameLog extends Component implements Signal.Listener<String> {

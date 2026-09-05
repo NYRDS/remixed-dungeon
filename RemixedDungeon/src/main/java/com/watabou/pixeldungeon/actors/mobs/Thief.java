@@ -11,10 +11,8 @@ import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import org.jetbrains.annotations.NotNull;
-
 import lombok.val;
+import org.jetbrains.annotations.NotNull;
 
 public class Thief extends Mob {
 	{

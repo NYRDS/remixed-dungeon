@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Dewdrop extends Item {

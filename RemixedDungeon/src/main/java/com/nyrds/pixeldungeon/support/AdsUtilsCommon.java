@@ -3,10 +3,8 @@ package com.nyrds.pixeldungeon.support;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.watabou.noosa.InterstitialPoint;
-
-import org.jetbrains.annotations.Nullable;
-
 import java.util.Map;
+import org.jetbrains.annotations.Nullable;
 
 public class AdsUtilsCommon {
 

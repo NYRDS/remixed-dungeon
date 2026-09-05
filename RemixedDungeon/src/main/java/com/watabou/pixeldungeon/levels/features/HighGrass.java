@@ -16,7 +16,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.Nullable;
 
 public class HighGrass {

@@ -22,8 +22,6 @@ import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import com.watabou.pixeldungeon.scenes.WebViewScene;
 import java.io.IOException;
 
 public class AboutScene extends PixelScene {

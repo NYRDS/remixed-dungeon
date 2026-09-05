@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.desktop;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.game.QuickModTest;
 import com.nyrds.util.ModdingMode;
@@ -10,7 +9,6 @@ import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.utils.GLog;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;

@@ -4,7 +4,6 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
-
 import org.jetbrains.annotations.NotNull;
 
 public class LevelHelpers {

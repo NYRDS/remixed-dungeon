@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.nyrds.platform.gl.NoosaScript;
 import com.watabou.glwrap.Quad;
 import com.watabou.noosa.Visual;
-
 import java.nio.Buffer;
 import java.nio.FloatBuffer;
 import java.util.HashMap;

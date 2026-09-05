@@ -13,10 +13,8 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Iterator;
+import org.jetbrains.annotations.NotNull;
 
 public class ScrollOfRemoveCurse extends Scroll {
 

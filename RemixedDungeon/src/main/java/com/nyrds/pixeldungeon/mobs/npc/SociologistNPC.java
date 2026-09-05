@@ -14,11 +14,9 @@ import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndOptions;
-
+import java.io.File;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
-
-import java.io.File;
 
 /**
  * Created by mike on 09.03.2018.

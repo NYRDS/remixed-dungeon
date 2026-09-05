@@ -9,7 +9,9 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.platform.lua.PlatformLuajavaLib;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.GLog;
-
+import java.io.InputStream;
+import java.util.WeakHashMap;
+import lombok.Synchronized;
 import org.apache.commons.io.input.BOMInputStream;
 import org.jetbrains.annotations.NotNull;
 import org.luaj.vm2.Globals;
@@ -33,11 +35,6 @@ import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.JseBaseLib;
 import org.luaj.vm2.lib.jse.JseIoLib;
 import org.luaj.vm2.lib.jse.JseOsLib;
-
-import java.io.InputStream;
-import java.util.WeakHashMap;
-
-import lombok.Synchronized;
 
 
 public class LuaEngine implements ResourceFinder {

@@ -16,7 +16,6 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class MysteryMeat extends Food {

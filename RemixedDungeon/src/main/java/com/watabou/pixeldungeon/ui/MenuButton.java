@@ -4,7 +4,6 @@ import com.nyrds.platform.audio.Sample;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.scenes.GameScene;
-
 import lombok.SneakyThrows;
 
 /**

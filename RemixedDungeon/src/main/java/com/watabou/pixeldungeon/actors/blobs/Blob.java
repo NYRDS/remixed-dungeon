@@ -11,9 +11,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
-
 import java.util.Arrays;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;

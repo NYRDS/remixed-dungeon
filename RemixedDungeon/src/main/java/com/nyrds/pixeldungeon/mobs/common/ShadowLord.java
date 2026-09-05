@@ -34,7 +34,6 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Callback;
-
 import org.jetbrains.annotations.NotNull;
 
 /**

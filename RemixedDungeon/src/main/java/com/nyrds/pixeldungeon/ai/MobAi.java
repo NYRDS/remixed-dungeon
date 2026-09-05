@@ -14,12 +14,10 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
 
 public abstract class MobAi implements AiState {
 

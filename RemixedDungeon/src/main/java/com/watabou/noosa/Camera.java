@@ -6,10 +6,8 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
+import org.jetbrains.annotations.NotNull;
 
 public class Camera extends Gizmo {
 

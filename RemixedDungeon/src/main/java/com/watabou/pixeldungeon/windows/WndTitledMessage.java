@@ -1,12 +1,12 @@
 
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
-import com.nyrds.util.GuiProperties;
 
 public class WndTitledMessage extends Window {
 

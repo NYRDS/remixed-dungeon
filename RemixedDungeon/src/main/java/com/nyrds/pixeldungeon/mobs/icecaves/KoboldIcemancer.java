@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class KoboldIcemancer extends Mob implements IZapper {

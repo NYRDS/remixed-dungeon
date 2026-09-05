@@ -39,7 +39,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndClass;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndSaveSlotSelect;
-
 import java.util.ArrayList;
 
 public class StartScene extends PixelScene {

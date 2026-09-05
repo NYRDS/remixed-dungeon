@@ -1,24 +1,12 @@
 package com.nyrds.platform.util;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import org.apache.commons.io.input.BOMInputStream;
-import org.json.JSONArray;
-import org.json.JSONException;
-
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Field;
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class StringsManager {

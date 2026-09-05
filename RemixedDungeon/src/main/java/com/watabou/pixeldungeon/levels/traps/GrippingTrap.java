@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.effects.Wound;
-
 import org.jetbrains.annotations.Nullable;
 
 public class GrippingTrap implements ITrigger {

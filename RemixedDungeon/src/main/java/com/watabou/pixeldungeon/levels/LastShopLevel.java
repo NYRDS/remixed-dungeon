@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
-
 import java.util.List;
 
 public class LastShopLevel extends RegularLevel {

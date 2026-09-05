@@ -11,7 +11,6 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.scenes.PixelScene;
-
 import org.jetbrains.annotations.Nullable;
 
 public class Toast extends Component implements IWindow {

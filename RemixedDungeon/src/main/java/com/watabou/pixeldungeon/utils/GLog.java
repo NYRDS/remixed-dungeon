@@ -1,23 +1,21 @@
 package com.watabou.pixeldungeon.utils;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.utils.Signal;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
-import java.util.Queue;
-
-import com.nyrds.LuaInterface;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 @LuaInterface
 public class GLog {

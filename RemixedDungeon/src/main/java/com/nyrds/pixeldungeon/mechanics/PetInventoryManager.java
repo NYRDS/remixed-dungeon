@@ -2,25 +2,21 @@ package com.nyrds.pixeldungeon.mechanics;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndPetBag;
+import com.nyrds.pixeldungeon.windows.WndPetInventoryOptions;
+import com.nyrds.pixeldungeon.windows.WndPetSelect;
 import com.nyrds.platform.util.StringsManager;
-import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.nyrds.pixeldungeon.windows.WndPetBag;
-import com.nyrds.pixeldungeon.windows.WndPetInventoryOptions;
-import com.nyrds.pixeldungeon.windows.WndPetSelect;
 import com.watabou.pixeldungeon.windows.WndBag;
-
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class PetInventoryManager {
 

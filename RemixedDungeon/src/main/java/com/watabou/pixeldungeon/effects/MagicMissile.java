@@ -18,7 +18,6 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.ColorMath;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.Nullable;
 
 public class MagicMissile extends Emitter {

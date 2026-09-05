@@ -9,7 +9,6 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.effects.CircleMask;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.PointF;
-
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;

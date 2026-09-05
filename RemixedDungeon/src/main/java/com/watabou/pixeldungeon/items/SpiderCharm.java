@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Sungrass.Health;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-
 import org.jetbrains.annotations.NotNull;
 
 public class SpiderCharm extends UsableArtifact {

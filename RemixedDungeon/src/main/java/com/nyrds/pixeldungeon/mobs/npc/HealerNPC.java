@@ -36,5 +36,3 @@ public class HealerNPC extends ImmortalNPC {
 		super.act();
 	}
 }
-
-

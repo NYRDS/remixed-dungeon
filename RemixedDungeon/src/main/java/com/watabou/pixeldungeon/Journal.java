@@ -7,10 +7,8 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
+import org.jetbrains.annotations.NotNull;
 
 public class Journal {
 

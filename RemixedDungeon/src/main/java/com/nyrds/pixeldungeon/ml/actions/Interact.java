@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.ml.actions;
 
 import static com.watabou.pixeldungeon.actors.Actor.TICK;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 
 public class Interact extends CharAction {

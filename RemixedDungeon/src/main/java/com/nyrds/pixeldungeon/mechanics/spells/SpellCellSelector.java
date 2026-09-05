@@ -5,7 +5,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.CellSelector;
-
 import org.jetbrains.annotations.NotNull;
 
 class SpellCellSelector implements CellSelector.Listener {

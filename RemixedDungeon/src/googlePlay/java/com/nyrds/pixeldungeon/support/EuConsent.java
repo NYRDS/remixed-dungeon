@@ -1,12 +1,10 @@
 package com.nyrds.pixeldungeon.support;
 
 import android.content.Context;
-
 import com.google.ads.consent.ConsentInfoUpdateListener;
 import com.google.ads.consent.ConsentInformation;
 import com.google.ads.consent.ConsentStatus;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.storage.Preferences;
 import com.nyrds.platform.util.StringsManager;

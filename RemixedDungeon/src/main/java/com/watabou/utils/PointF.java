@@ -3,9 +3,7 @@
 package com.watabou.utils;
 
 import android.annotation.SuppressLint;
-
 import com.watabou.pixeldungeon.utils.Utils;
-
 import org.jetbrains.annotations.NotNull;
 
 @SuppressLint("FloatMath")

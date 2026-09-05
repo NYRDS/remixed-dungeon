@@ -2,8 +2,8 @@ package com.nyrds.platform.app.client;
 
 import com.github.xpenatan.gdx.backends.teavm.TeaApplication;
 import com.github.xpenatan.gdx.backends.teavm.TeaApplicationConfiguration;
-import com.nyrds.platform.game.RemixedDungeon; // Your existing application listener
-import com.nyrds.teavm.reflection.ReflectionConfig; // Reflection configuration
+import com.nyrds.platform.game.RemixedDungeon;
+import com.nyrds.teavm.reflection.ReflectionConfig;
 
 /**
  * The main entry point for the TeaVM build.

@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
-
 import com.nyrds.pixeldungeon.support.AdsUtilsCommon;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;

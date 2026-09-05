@@ -2,7 +2,6 @@ package com.watabou.pixeldungeon.windows;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.PseudoItem;
-
 import org.jetbrains.annotations.NotNull;
 
 public class ItemPlaceholder extends PseudoItem {

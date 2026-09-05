@@ -18,5 +18,3 @@ public class TownsfolkMovieNPC extends ImmortalNPC {
 		return true;
 	}
 }
-
-

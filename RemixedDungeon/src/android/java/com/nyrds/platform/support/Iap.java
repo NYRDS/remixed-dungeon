@@ -1,19 +1,16 @@
 package com.nyrds.platform.support;
 
 import android.content.Intent;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.items.accessories.Accessory;
 import com.nyrds.pixeldungeon.support.IapAdapter;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by mike on 24.05.2016.

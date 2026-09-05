@@ -16,10 +16,8 @@ import com.watabou.pixeldungeon.items.food.MysteryMeat;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.utils.Random;
-
-import org.jetbrains.annotations.NotNull;
-
 import lombok.val;
+import org.jetbrains.annotations.NotNull;
 
 public class SpiderMind extends Mob {
 

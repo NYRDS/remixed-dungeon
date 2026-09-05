@@ -4,17 +4,14 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
-
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
-
-import com.nyrds.util.ModdingMode;
-import com.nyrds.util.Util;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.RemixedDungeon;
-
 import java.util.concurrent.ThreadPoolExecutor;
 
 public class RemixedDungeonApp extends MultiDexApplication {

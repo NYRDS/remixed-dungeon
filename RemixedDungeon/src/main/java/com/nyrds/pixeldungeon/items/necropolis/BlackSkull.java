@@ -7,7 +7,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.utils.GLog;
-
 import java.util.Collection;
 
 public class BlackSkull extends Artifact {

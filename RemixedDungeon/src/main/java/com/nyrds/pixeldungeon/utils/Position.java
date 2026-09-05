@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.utils;
 
 import androidx.annotation.Keep;
-
 import com.nyrds.Packable;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundlable;

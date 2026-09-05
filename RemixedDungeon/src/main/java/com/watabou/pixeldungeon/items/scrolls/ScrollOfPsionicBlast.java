@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class ScrollOfPsionicBlast extends Scroll {

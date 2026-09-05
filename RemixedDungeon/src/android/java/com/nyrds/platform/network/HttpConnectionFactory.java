@@ -1,9 +1,8 @@
 package com.nyrds.platform.network;
 
+import info.guardianproject.netcipher.NetCipher;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
-import info.guardianproject.netcipher.NetCipher;
 import lombok.SneakyThrows;
 
 public class HttpConnectionFactory {

@@ -2,14 +2,12 @@
 package com.watabou.pixeldungeon;
 
 import android.annotation.SuppressLint;
-
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.Stylus;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

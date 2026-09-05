@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.utils;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.pixeldungeon.utils.Utils;
-
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,7 +1,6 @@
 package com.nyrds.platform.gl;
 
 import android.opengl.GLES20;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 
 

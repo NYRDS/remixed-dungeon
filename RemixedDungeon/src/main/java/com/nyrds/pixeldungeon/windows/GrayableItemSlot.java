@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.ui.ItemSlot;
-
 import lombok.Getter;
 
 /**

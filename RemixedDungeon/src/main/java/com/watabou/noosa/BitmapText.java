@@ -6,10 +6,8 @@ import com.nyrds.platform.compatibility.RectF;
 import com.nyrds.platform.gl.NoosaScript;
 import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
-import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.PointF;
-
 import java.nio.FloatBuffer;
 
 public class BitmapText extends Text {

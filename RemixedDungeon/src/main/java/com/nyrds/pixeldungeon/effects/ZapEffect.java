@@ -20,7 +20,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.utils.PointF;
-
 import lombok.val;
 
 public class ZapEffect {

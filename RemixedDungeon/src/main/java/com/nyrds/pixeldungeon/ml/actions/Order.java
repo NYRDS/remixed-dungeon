@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.ml.actions;
 
 import com.watabou.pixeldungeon.actors.Char;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Order extends CharAction {

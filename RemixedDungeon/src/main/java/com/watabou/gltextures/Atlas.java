@@ -1,7 +1,6 @@
 package com.watabou.gltextures;
 
 import com.nyrds.platform.compatibility.RectF;
-
 import java.util.HashMap;
 import java.util.Map;
 

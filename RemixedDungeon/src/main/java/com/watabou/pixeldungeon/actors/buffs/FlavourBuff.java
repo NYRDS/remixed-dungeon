@@ -1,11 +1,10 @@
 
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class FlavourBuff extends Buff {

@@ -1,8 +1,7 @@
 package com.nyrds.util;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Random;
+import org.jetbrains.annotations.NotNull;
 
 public class SeededRandom extends Random {
 

@@ -1,12 +1,12 @@
 package com.nyrds.pixeldungeon.utils;
 
+import com.nyrds.pixeldungeon.windows.WndPetQuantity;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndBag;
-import com.nyrds.pixeldungeon.windows.WndPetQuantity;
 
 public class GiveToPetSelector implements WndBag.Listener {
     private final Hero hero;

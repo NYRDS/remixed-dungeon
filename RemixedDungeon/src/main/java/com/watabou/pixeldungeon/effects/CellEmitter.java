@@ -5,7 +5,6 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.PointF;
-
 import org.jetbrains.annotations.NotNull;
 
 public class CellEmitter {

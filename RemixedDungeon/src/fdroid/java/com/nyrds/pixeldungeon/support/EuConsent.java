@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.support;
 
 
 import android.content.Context;
-
 import com.nyrds.platform.storage.Preferences;
 
 /**

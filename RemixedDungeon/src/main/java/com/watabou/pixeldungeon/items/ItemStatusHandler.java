@@ -3,13 +3,11 @@ package com.watabou.pixeldungeon.items;
 
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import org.jetbrains.annotations.NotNull;
 
 public class ItemStatusHandler<T extends Item> {
 

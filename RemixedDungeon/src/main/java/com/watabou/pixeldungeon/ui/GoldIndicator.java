@@ -8,7 +8,6 @@ import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.elements.Tool;
-
 import org.jetbrains.annotations.NotNull;
 
 public class GoldIndicator extends Component {

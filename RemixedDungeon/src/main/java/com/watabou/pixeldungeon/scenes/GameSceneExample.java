@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.scenes;
 
-import com.nyrds.platform.gfx.BitmapData;
 import com.watabou.gltextures.SmartTexture;
 
 /**

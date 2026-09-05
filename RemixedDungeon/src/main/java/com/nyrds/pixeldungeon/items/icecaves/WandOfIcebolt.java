@@ -18,7 +18,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.Nullable;
 
 public class WandOfIcebolt extends Wand {

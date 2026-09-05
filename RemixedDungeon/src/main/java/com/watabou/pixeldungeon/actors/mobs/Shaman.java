@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Shaman extends Mob implements IZapper {

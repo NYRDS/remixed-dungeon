@@ -6,14 +6,11 @@ import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.levels.CommonLevel;
 import com.watabou.utils.Bundle;
-
+import java.io.ByteArrayInputStream;
+import lombok.val;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
-
-import java.io.ByteArrayInputStream;
-
-import lombok.val;
 
 /**
  * Created by mike on 13.11.2016.

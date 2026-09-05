@@ -6,19 +6,7 @@ import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.scenes.AboutScene;
 import com.watabou.pixeldungeon.utils.GLog;
-
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.util.Collections;
-import java.util.Enumeration;
-import java.util.Map;
-
-import fi.iki.elonen.NanoHTTPD;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;

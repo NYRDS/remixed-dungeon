@@ -8,14 +8,11 @@ import com.nyrds.util.ModError;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Quad;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.nio.FloatBuffer;
-
-import lombok.Getter;
 import java.util.HashSet;
 import java.util.Set;
+import lombok.Getter;
+import org.jetbrains.annotations.NotNull;
 
 public class Image extends Visual implements IPlaceable {
 

@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

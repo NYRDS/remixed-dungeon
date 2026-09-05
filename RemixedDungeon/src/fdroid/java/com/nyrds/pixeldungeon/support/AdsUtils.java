@@ -2,12 +2,10 @@ package com.nyrds.pixeldungeon.support;
 
 import android.view.View;
 import android.webkit.WebView;
-
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.support.AAdsComboProvider;
-
 import java.util.HashMap;
 import java.util.Map;
 

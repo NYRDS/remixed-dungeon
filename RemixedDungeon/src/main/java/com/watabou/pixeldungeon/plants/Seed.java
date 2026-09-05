@@ -14,12 +14,9 @@ import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
-
 import lombok.SneakyThrows;
+import org.jetbrains.annotations.NotNull;
 
 public class Seed extends Item {
 

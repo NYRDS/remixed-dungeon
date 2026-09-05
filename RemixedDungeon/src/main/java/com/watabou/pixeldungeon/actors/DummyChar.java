@@ -8,10 +8,8 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.DummySprite;
 import com.watabou.pixeldungeon.utils.GLog;
-
-import org.jetbrains.annotations.Nullable;
-
 import java.util.HashSet;
+import org.jetbrains.annotations.Nullable;
 
 public class DummyChar extends Char {
 

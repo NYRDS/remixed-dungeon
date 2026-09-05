@@ -2,7 +2,6 @@ package com.nyrds.platform.network;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
-
 import lombok.SneakyThrows;
 
 public class HttpConnectionFactory {

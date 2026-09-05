@@ -4,10 +4,8 @@ package com.watabou.pixeldungeon;
 import com.nyrds.platform.storage.SaveUtils;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-
 import java.util.HashMap;
 import java.util.Map;
-
 import lombok.val;
 
 public class GamesInProgress {

@@ -1,7 +1,6 @@
 package com.nyrds.platform.input;
 
 import android.view.KeyEvent;
-
 import com.watabou.utils.Signal;
 
 public class Keys {

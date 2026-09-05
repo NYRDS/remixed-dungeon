@@ -27,3 +27,24 @@ buildscript {
     }
 }
 
+plugins {
+    // root-level on purpose: the root project exists under every settings.*.gradle
+    // variant (desktop/android/html), so spotlessApply/spotlessCheck work with all of them.
+    id 'com.diffplug.spotless' version '6.25.0'
+}
+
+spotless {
+    java {
+        // path-based targets: covers android/html sources even when their module
+        // is commented out of the active settings file. vendored trees excluded.
+        target 'RemixedDungeon/src/**/*.java',
+               'RemixedDungeonDesktop/src/**/*.java',
+               'RemixedDungeonHtml/src/**/*.java',
+               'processor/src/**/*.java'
+        targetExclude '**/src/generated/**', '**/ml/BuildConfig.java'
+        encoding 'UTF-8'
+        removeUnusedImports() // google-java-format: drops unused and duplicate imports
+        importOrder()         // sorts alphabetically, merges duplicate import lines
+    }
+}
+

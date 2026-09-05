@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
 import androidx.annotation.Keep;
-
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -15,15 +14,12 @@ import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.utils.Random;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import lombok.SneakyThrows;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class RandomLevel extends RegularLevel {
 

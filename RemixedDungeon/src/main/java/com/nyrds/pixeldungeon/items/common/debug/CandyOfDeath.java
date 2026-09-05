@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.items.common.debug;
 
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.food.Food;
-
 import org.jetbrains.annotations.NotNull;
 
 public class CandyOfDeath extends Food {

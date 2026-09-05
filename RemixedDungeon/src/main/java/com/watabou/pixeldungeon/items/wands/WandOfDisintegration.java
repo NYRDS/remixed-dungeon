@@ -15,7 +15,6 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
-
 import java.util.ArrayList;
 
 public class WandOfDisintegration extends SimpleWand  {

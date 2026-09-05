@@ -2,16 +2,12 @@ package com.nyrds.pixeldungeon.support;
 
 import android.app.Activity;
 import android.content.Intent;
-
 import com.nyrds.pixeldungeon.support.di.PaymentsModule;
 import com.nyrds.platform.support.Iap;
 import com.watabou.pixeldungeon.utils.Utils;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import ru.rustore.sdk.billingclient.RuStoreBillingClient;
 
 public class IapAdapter {

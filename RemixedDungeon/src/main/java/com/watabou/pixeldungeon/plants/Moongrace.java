@@ -15,7 +15,6 @@ import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfMana;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Moongrace extends Plant {

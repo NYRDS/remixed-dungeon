@@ -1,7 +1,6 @@
 package com.nyrds.platform;
 
 import android.os.Bundle;
-
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.nyrds.pixeldungeon.game.GameLoop;
@@ -12,7 +11,6 @@ import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.Arrays;

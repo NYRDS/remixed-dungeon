@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Random;
-
 import java.util.Arrays;
 
 public class LastLevel extends Level {

@@ -10,7 +10,6 @@ import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.pixeldungeon.utils.GLog;
-
 import java.util.Arrays;
 
 public class RemixedDungeon extends Game {

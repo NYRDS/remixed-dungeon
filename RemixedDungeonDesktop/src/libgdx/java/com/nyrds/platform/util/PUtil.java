@@ -1,7 +1,6 @@
 package com.nyrds.platform.util;
 
 import com.badlogic.gdx.utils.Logger;
-
 import java.util.UUID;
 
 public class PUtil {

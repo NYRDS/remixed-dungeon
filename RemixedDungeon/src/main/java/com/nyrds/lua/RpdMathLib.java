@@ -1,10 +1,9 @@
 package com.nyrds.lua;
 
+import java.util.Random;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.LibFunction;
 import org.luaj.vm2.lib.jse.JseMathLib;
-
-import java.util.Random;
 
 public class RpdMathLib extends JseMathLib {
 

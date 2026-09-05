@@ -2,7 +2,6 @@ package com.nyrds.pixeldungeon.support;
 
 
 import com.watabou.pixeldungeon.utils.Utils;
-
 import java.util.List;
 
 class IapAdapter {

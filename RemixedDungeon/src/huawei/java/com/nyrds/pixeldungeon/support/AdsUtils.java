@@ -2,12 +2,10 @@ package com.nyrds.pixeldungeon.support;
 
 import android.view.View;
 import android.webkit.WebView;
-
 import com.appodeal.ads.BannerView;
 import com.nyrds.android.RemixedDungeonApp;
 import com.nyrds.pixeldungeon.ml.EventCollector;
 import com.watabou.noosa.Game;
-
 import java.util.HashMap;
 import java.util.Map;
 

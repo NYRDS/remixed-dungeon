@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-
 import org.jetbrains.annotations.NotNull;
 
 public class PseudoPasty extends Food {

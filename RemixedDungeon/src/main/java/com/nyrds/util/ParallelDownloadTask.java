@@ -3,7 +3,6 @@ package com.nyrds.util;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.network.HttpConnectionFactory;
 import com.watabou.pixeldungeon.utils.GLog;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -11,7 +10,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.security.cert.X509Certificate;
 import java.util.concurrent.atomic.AtomicBoolean;
-
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;

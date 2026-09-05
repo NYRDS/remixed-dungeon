@@ -16,13 +16,10 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.HashSet;
-
 import lombok.SneakyThrows;
+import org.jetbrains.annotations.NotNull;
 
 public abstract class Scroll extends Item implements UnknownItem {
 

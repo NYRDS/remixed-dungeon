@@ -2,12 +2,10 @@
 
 package com.watabou.utils;
 
+import com.nyrds.LuaInterface;
 import com.watabou.pixeldungeon.levels.Level;
-
 import java.util.Arrays;
 import java.util.LinkedList;
-
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class PathFinder {

@@ -5,12 +5,10 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.app.Notifications;
 import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.utils.GLog;
-
-import org.luaj.vm2.LuaError;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.luaj.vm2.LuaError;
 
 public class ModError extends RuntimeException {
 

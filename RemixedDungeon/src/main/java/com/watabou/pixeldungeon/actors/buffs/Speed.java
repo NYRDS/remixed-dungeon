@@ -1,9 +1,8 @@
 
 package com.watabou.pixeldungeon.actors.buffs;
 
-import com.watabou.pixeldungeon.actors.Char;
-
 import com.nyrds.LuaInterface;
+import com.watabou.pixeldungeon.actors.Char;
 
 @LuaInterface
 public class Speed extends FlavourBuff {

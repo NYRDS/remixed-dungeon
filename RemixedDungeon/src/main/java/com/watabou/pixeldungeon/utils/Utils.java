@@ -8,17 +8,14 @@ import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
 import com.watabou.noosa.InterstitialPoint;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.Locale;
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import lombok.SneakyThrows;
+import org.jetbrains.annotations.NotNull;
 
 public class Utils {
 

@@ -4,7 +4,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
-
 import org.jetbrains.annotations.NotNull;
 
 public class Crab extends Mob {

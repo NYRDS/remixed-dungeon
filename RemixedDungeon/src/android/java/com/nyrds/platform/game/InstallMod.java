@@ -3,7 +3,6 @@ package com.nyrds.platform.game;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
@@ -15,9 +14,7 @@ import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndModInstall;
 import com.watabou.pixeldungeon.windows.WndModSelect;
-
 import java.io.FileNotFoundException;
-
 import lombok.SneakyThrows;
 
 

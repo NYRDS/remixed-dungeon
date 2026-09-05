@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-
 import org.jetbrains.annotations.NotNull;
 
 public class AirElemental extends Mob implements IDepthAdjustable {

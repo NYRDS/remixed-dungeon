@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Random;
-
 import java.util.Arrays;
 
 public class FakeLastLevel extends Level {

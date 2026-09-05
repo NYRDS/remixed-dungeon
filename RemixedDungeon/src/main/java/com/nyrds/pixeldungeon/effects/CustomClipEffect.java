@@ -9,7 +9,6 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 

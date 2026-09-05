@@ -16,7 +16,6 @@ import com.watabou.pixeldungeon.windows.WndChar;
 import com.watabou.pixeldungeon.windows.WndInfoCell;
 import com.watabou.pixeldungeon.windows.WndInfoItem;
 import com.watabou.pixeldungeon.windows.WndMessage;
-
 import org.jetbrains.annotations.NotNull;
 
 public class InformerCellListener implements CellSelector.Listener {

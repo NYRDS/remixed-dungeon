@@ -3,14 +3,11 @@ package com.nyrds.pixeldungeon.windows;
 
 
 import com.watabou.noosa.Gizmo;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import lombok.Getter;
 import lombok.Setter;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by mike on 01.05.2018.
