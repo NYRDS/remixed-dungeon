@@ -12,6 +12,9 @@ export class AnimationController {
     reset() {
         this.animationFrame = 0;
         this.lastFrameTime = performance.now();
+        // a completed non-looped animation pauses the controller; switching
+        // mob/animation must re-arm playback, otherwise everything stays frozen
+        this.isPlaying = true;
     }
 
     update(currentTime, currentData, currentAnim) {

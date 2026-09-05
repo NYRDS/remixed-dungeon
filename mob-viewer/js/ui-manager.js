@@ -34,23 +34,20 @@ export class UIManager {
             this.viewer.resetAnimation();
         });
 
-        // Play/Pause buttons
+        // Play/Pause buttons drive the animation controller
         document.getElementById('playBtn').addEventListener('click', () => {
-            this.viewer.isPlaying = true;
+            this.viewer.animationController.isPlaying = true;
         });
 
         document.getElementById('pauseBtn').addEventListener('click', () => {
-            this.viewer.isPlaying = false;
+            this.viewer.animationController.isPlaying = false;
         });
 
         // Loop toggle
         document.getElementById('loopBtn').addEventListener('click', (e) => {
-            this.viewer.isLooping = !this.viewer.isLooping;
-            e.target.classList.toggle('active');
-            e.target.textContent = `🔁 Loop: ${this.viewer.isLooping ? 'ON' : 'OFF'}`;
-            if (!this.viewer.isLooping) {
-                this.viewer.animationFrame = 0;
-            }
+            const looping = this.viewer.animationController.toggleLoop();
+            e.target.classList.toggle('active', looping);
+            e.target.textContent = `🔁 Loop: ${looping ? 'ON' : 'OFF'}`;
         });
 
         // Scale slider
@@ -61,8 +58,8 @@ export class UIManager {
 
         // Speed slider
         document.getElementById('speedSlider').addEventListener('input', (e) => {
-            this.viewer.speedMultiplier = parseFloat(e.target.value);
-            document.getElementById('speedValue').textContent = `${this.viewer.speedMultiplier}x`;
+            this.viewer.animationController.setSpeed(parseFloat(e.target.value));
+            document.getElementById('speedValue').textContent = `${e.target.value}x`;
         });
 
         // Search box
@@ -96,7 +93,7 @@ export class UIManager {
         });
     }
 
-    updateAnimationSelect(animations, currentAnim) {
+    updateAnimationSelect(animations, currentAnim, data) {
         const select = document.getElementById('animationSelect');
         select.innerHTML = '';
 
@@ -107,11 +104,14 @@ export class UIManager {
             select.appendChild(option);
         }
 
-        // Set to idle if available, otherwise first animation
+        // Prefer idle, then any looped animation - a non-looped default (die,
+        // zap) would play once and pause the controller
         if (animations.includes('idle')) {
             select.value = 'idle';
-        } else if (animations.length > 0) {
-            select.value = animations[0];
+        } else {
+            const firstLooped = animations.find(
+                a => data && data[a] && data[a].looped);
+            select.value = firstLooped || (animations.length > 0 ? animations[0] : '');
         }
 
         return select.value;

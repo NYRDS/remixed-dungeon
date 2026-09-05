@@ -57,7 +57,7 @@ class SpriteViewer {
             this.currentHero = null;
             
             const animations = this.mobLoader.getAvailableAnimations(this.currentMob.data);
-            this.currentAnim = this.uiManager.updateAnimationSelect(animations, this.currentAnim);
+            this.currentAnim = this.uiManager.updateAnimationSelect(animations, this.currentAnim, this.currentMob.data);
             
             this.uiManager.updateInfoPanel(
                 this.currentMob.name,
@@ -115,7 +115,7 @@ class SpriteViewer {
                 this.currentHero.data[key].frames
             );
             
-            this.currentAnim = this.uiManager.updateAnimationSelect(animations, this.currentAnim);
+            this.currentAnim = this.uiManager.updateAnimationSelect(animations, this.currentAnim, this.currentHero.data);
             
             this.uiManager.updateInfoPanel(
                 this.currentHero.name,

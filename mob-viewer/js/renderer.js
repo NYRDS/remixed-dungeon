@@ -16,11 +16,14 @@ export class Renderer {
         }
 
         const anim = currentMob.data[currentAnim];
-        if (!anim) {
+        if (!anim || !anim.frames || anim.frames.length === 0) {
             return;
         }
 
         const frameIndex = anim.frames[animationFrame];
+        if (!Number.isInteger(frameIndex)) {
+            return; // stale frame index (e.g. mid-switch) - skip this tick
+        }
         const framesInRow = Math.floor(textureImage.width / currentMob.width);
 
         const frameX = (frameIndex % framesInRow) * currentMob.width;
@@ -49,11 +52,14 @@ export class Renderer {
         }
 
         const anim = currentHero.data[currentAnim];
-        if (!anim) {
+        if (!anim || !anim.frames || anim.frames.length === 0) {
             return;
         }
 
         const frameIndex = anim.frames[animationFrame];
+        if (!Number.isInteger(frameIndex)) {
+            return; // stale frame index (e.g. mid-switch) - skip this tick
+        }
         const frameWidth = currentHero.width;
         const frameHeight = currentHero.height;
 
