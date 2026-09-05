@@ -67,23 +67,36 @@ export class HeroLoader {
             }
         }
 
-        // helmet first (it decides hair/accessory suppression), then hair
+        // helmet first (it suppresses the accessory), then hair per the Java
+        // branch structure: without an accessory the armor's coverHair flag
+        // decides; with an accessory only the accessory's flag does, and only
+        // when the accessory actually renders (no helmet). Retro suppresses
+        // hair only for a hair-covering armor whose helmet is present.
         const helmetPath = armorVisual ? `${basePath}armor/helmet/${armorVisual}.png` : null;
         const hasHelmet = helmetPath ? await this.checkResourceExists(helmetPath) : false;
         if (hasHelmet) {
             wanted.set('helmet', helmetPath);
         }
 
-        const accFlags = accVisual ? (ACCESSORY_FLAGS[accVisual] || {}) : {};
         const armorFlags = armorVisual ? (ARMOR_FLAGS[armorVisual] || {}) : {};
-        const helmetCoversHair = hasHelmet; // approximation of armor.isCoveringHair()
-        const hairSuppressed = hasHelmet || armorFlags.coverHair || accFlags.coverHair;
+        const accFlags = accVisual ? (ACCESSORY_FLAGS[accVisual] || {}) : {};
 
-        if (!hairSuppressed) {
+        let drawHair;
+        if (style === 'retro') {
+            drawHair = !(hasHelmet && armorFlags.coverHair);
+        } else if (!accVisual) {
+            drawHair = !armorFlags.coverHair;
+        } else {
+            drawHair = hasHelmet || !accFlags.coverHair;
+        }
+
+        if (drawHair) {
             wanted.set('hair', `${basePath}head/hair/${classDescriptor}_HAIR.png`);
         }
 
-        if (!accFlags.coverHair) {
+        // facial hair: suppressed by the accessory's or the armor's
+        // coverFacialHair flag (accessory flag applies even under a helmet)
+        if (!(accVisual && accFlags.coverFacialHair) && !armorFlags.coverFacialHair) {
             wanted.set('facial_hair', `${basePath}head/facial_hair/${classDescriptor}_FACIAL_HAIR.png`);
         }
 

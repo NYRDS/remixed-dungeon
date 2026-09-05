@@ -14,7 +14,7 @@ export const SUBCLASSES = {
     'DOCTOR': ['NONE', 'ALCHEMIST', 'TRANSMUTER']
 };
 
-export const ARMOR_LIST = ['none', 'cloth', 'leather', 'mail', 'scale', 'plate', 'gothic',
+export const ARMOR_LIST = ['cloth', 'leather', 'mail', 'scale', 'plate', 'gothic',
                           'rogue', 'warrior', 'mage', 'huntress', 'scout', 'shaman',
                           'gladiator', 'berserk', 'warlock', 'battlemage', 'assasin',
                           'freerunner', 'sniper', 'warden', 'necromancer', 'lich', 'necromancerRobe',
@@ -22,13 +22,13 @@ export const ARMOR_LIST = ['none', 'cloth', 'leather', 'mail', 'scale', 'plate',
                           'priest', 'paladin', 'cleric', 'witchdoctor',
                           'alchemist', 'transmuter', 'plaguedoctor'];
 
-export const WEAPON_LIST = ['none', 'shortsword', 'longsword', 'dagger', 'mace', 'hammer',
+export const WEAPON_LIST = ['shortsword', 'longsword', 'dagger', 'mace', 'hammer',
                            'sword', 'wand', 'bow', 'crossbow', 'spear',
                            'glaive', 'battleaxe', 'claymore', 'quarterstaff', 'knuckles',
                            'bonesaw', 'tomahawk', 'halberd', 'kusarigama', 'pickaxe',
                            'royalshield', 'chaosshield'];
 
-export const ACCESSORY_LIST = ['none', 'plaguedoctormask', 'wizardhat', 'nightcap', 'ushanka',
+export const ACCESSORY_LIST = ['plaguedoctormask', 'wizardhat', 'nightcap', 'ushanka',
                               'santahat', 'pumpkin', 'fez', 'shades', 'fullfacemask',
                               'pirateset', 'dogemask', 'nekoears', 'rabbitears', 'rudolph',
                               'vampireskull', 'krampushead', 'zombiemask', 'filteredmask',
@@ -81,12 +81,15 @@ export const ARMOR_MAP = {
     'plaguedoctor': 'PlagueDoctorArmor'
 };
 
-// Armors with coverHair=true (Armor subclasses)
+// Armor covering flags (Armor subclasses)
 export const ARMOR_FLAGS = {
     'HuntressArmor': { coverHair: true },
     'ShamanArmor': { coverHair: true },
     'GuardianArmor': { coverHair: true },
-    'GladiatorArmor': { coverHair: true }
+    'GladiatorArmor': { coverHair: true },
+    'WitchdoctorArmor': { coverHair: true, coverFacialHair: true },
+    'BerserkArmor': { coverHair: true },
+    'WardenArmor': { coverHair: true }
 };
 
 // Weapon definitions: visual name, hands/shoulders animation class,
@@ -145,23 +148,28 @@ export const ACCESSORY_MAP = {
 
 export const ACCESSORY_FLAGS = {
     'GnollCostume': { coverHair: true, coverItems: true },
-    'FullFaceMask': { coverHair: true },
+    'FullFaceMask': { coverHair: true, coverFacialHair: true },
     'RabbitEars': { coverHair: true },
     'Rudolph': { coverHair: true },
-    'VampireSkull': { coverHair: true },
+    'VampireSkull': { coverHair: true, coverFacialHair: true },
     'Ushanka': { coverHair: true },
-    'DogeMask': { coverHair: true },
-    'Pumpkin': { coverHair: true },
-    'KrampusHead': { coverHair: true },
+    'DogeMask': { coverHair: true, coverFacialHair: true },
+    'Pumpkin': { coverHair: true, coverFacialHair: true },
+    'KrampusHead': { coverHair: true, coverFacialHair: true },
     'PirateSet': { coverHair: true, coverItems: true },
     'Nightcap': { coverHair: true },
     'Fez': { coverHair: true },
     'Capotain': { coverHair: true },
-    'ZombieMask': { coverHair: true },
+    'ZombieMask': { coverHair: true, coverFacialHair: true },
     'NekoEars': { coverHair: true },
     'SantaHat': { coverHair: true },
-    'ChaosHelmet': { coverHair: true },
-    'WizardHat': { coverHair: true }
+    'ChaosHelmet': { coverHair: true, coverFacialHair: true },
+    'WizardHat': { coverHair: true },
+    'PlagueDoctorMask': { coverFacialHair: true },
+    'FilteredMask': { coverFacialHair: true },
+    'MedicineMask': { coverFacialHair: true },
+    'Shades': {},
+    'Bowknot': {}
 };
 
 // Merged z-order of both styles, from ModernHeroSpriteDef.layersOrder and
