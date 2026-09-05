@@ -5,7 +5,7 @@ import { HeroLoader } from './hero-loader.js';
 import { Renderer } from './renderer.js';
 import { UIManager } from './ui-manager.js';
 import { AnimationController, isAnimationDesc } from './animation-controller.js';
-import { HERO_CLASSES, SUBCLASSES, ARMOR_LIST, WEAPON_LIST, ACCESSORY_LIST, LAYERS_ORDER } from './config.js';
+import { HERO_CLASSES, SUBCLASSES, ARMOR_LIST, WEAPON_LIST, LAYERS_ORDER } from './config.js';
 
 class SpriteViewer {
     constructor() {
@@ -34,7 +34,7 @@ class SpriteViewer {
     
     async init() {
         this.uiManager.setupEventListeners();
-        this.uiManager.setupHeroSelectors(ARMOR_LIST, WEAPON_LIST, ACCESSORY_LIST, SUBCLASSES);
+        this.uiManager.setupHeroSelectors(ARMOR_LIST, WEAPON_LIST, SUBCLASSES);
         await this.reloadData();
         this.uiManager.hideLoading();
         this.startRenderLoop();
@@ -105,12 +105,14 @@ class SpriteViewer {
     
     async applyHeroConfiguration() {
         const config = this.uiManager.getHeroConfiguration();
-        await this.loadHero(config.style, config.heroClass, config.subClass, config.armor, config.weapon, config.accessory);
+        await this.loadHero(config.style, config.heroClass, config.subClass,
+                            config.armor, config.weapon, config.leftWeapon);
     }
-    
-    async loadHero(style, heroClass, subClass, armor, weapon, accessory) {
+
+    async loadHero(style, heroClass, subClass, armor, weapon, leftWeapon) {
         try {
-            const result = await this.heroLoader.loadHero(style, heroClass, subClass, armor, weapon, accessory);
+            const result = await this.heroLoader.loadHero(style, heroClass, subClass,
+                                                          armor, weapon, leftWeapon);
             
             this.currentHero = result.hero;
             this.heroTextures = result.textures;

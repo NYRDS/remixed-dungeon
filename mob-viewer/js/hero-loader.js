@@ -3,7 +3,7 @@
 
 import {
     BODY_TYPE_MAP, LAYERS_ORDER, ARMOR_MAP, ARMOR_FLAGS,
-    WEAPON_DEFS, ACCESSORY_MAP, ACCESSORY_FLAGS
+    WEAPON_DEFS
 } from './config.js';
 import { resolve } from './data-source.js';
 
@@ -13,7 +13,7 @@ export class HeroLoader {
         this.heroLayers = [];
     }
 
-    async loadHero(style, heroClass, subClass, armor, weapon, accessory) {
+    async loadHero(style, heroClass, subClass, armor, weapon, leftWeapon) {
         const basePath = style === 'modern' ? 'assets/hero_modern/' : 'assets/hero/';
         const jsonPath = resolve(basePath + 'spritesDesc/Hero.json');
 
@@ -30,15 +30,13 @@ export class HeroLoader {
         const weaponDef = weapon !== 'none'
             ? (WEAPON_DEFS[weapon.toLowerCase()] || { visual: weapon, anim: 'none', twoHanded: false })
             : null;
-        const accVisual = accessory !== 'none'
-            ? (ACCESSORY_MAP[accessory.toLowerCase()] || accessory)
+        const leftDef = leftWeapon !== 'none'
+            ? (WEAPON_DEFS[leftWeapon.toLowerCase()] || { visual: leftWeapon, anim: 'none', twoHanded: false })
             : null;
 
         // -- covering rules from ModernHeroSpriteDef.createLayersDesc --------
-        // A helmet suppresses the accessory; a hair-covering helmet, armor or
-        // accessory suppresses hair; an item-covering accessory suppresses
-        // held items. Availability of files gates everything else, matching
-        // ModdingMode.isResourceExists in applyLayersDesc.
+        // A hair-covering armor suppresses hair; availability of files gates
+        // everything else, matching ModdingMode.isResourceExists.
 
         // Layer candidates: name -> path. Missing files are skipped at load.
         const wanted = new Map();
@@ -46,10 +44,10 @@ export class HeroLoader {
         if (style === 'modern') {
             // back items render behind the body
             if (weaponDef) {
-                wanted.set('right_back_item', `${basePath}items/${weaponDef.visual}_back_right.png`);
-                if (weaponDef.shield) {
-                    wanted.set('left_back_item', `${basePath}items/${weaponDef.visual}_back_left.png`);
-                }
+                wanted.set('right_back_item', `${basePath}items/${weaponDef.visual}_back_${weaponDef.shield ? 'left' : 'right'}.png`);
+            }
+            if (leftDef) {
+                wanted.set('left_back_item', `${basePath}items/${leftDef.visual}_back_left.png`);
             }
         }
 
@@ -68,11 +66,9 @@ export class HeroLoader {
             }
         }
 
-        // helmet first (it suppresses the accessory), then hair per the Java
-        // branch structure: without an accessory the armor's coverHair flag
-        // decides; with an accessory only the accessory's flag does, and only
-        // when the accessory actually renders (no helmet). Retro suppresses
-        // hair only for a hair-covering armor whose helmet is present.
+        // hair per the Java branch structure: the armor's coverHair flag
+        // decides (no accessory layer anymore). Retro suppresses hair only
+        // for a hair-covering armor whose helmet is present.
         const helmetPath = armorVisual ? `${basePath}armor/helmet/${armorVisual}.png` : null;
         const hasHelmet = helmetPath ? await this.checkResourceExists(helmetPath) : false;
         if (hasHelmet) {
@@ -80,24 +76,16 @@ export class HeroLoader {
         }
 
         const armorFlags = armorVisual ? (ARMOR_FLAGS[armorVisual] || {}) : {};
-        const accFlags = accVisual ? (ACCESSORY_FLAGS[accVisual] || {}) : {};
 
-        let drawHair;
-        if (style === 'retro') {
-            drawHair = !(hasHelmet && armorFlags.coverHair);
-        } else if (!accVisual) {
-            drawHair = !armorFlags.coverHair;
-        } else {
-            drawHair = hasHelmet || !accFlags.coverHair;
-        }
+        const drawHair = style === 'retro'
+            ? !(hasHelmet && armorFlags.coverHair)
+            : !armorFlags.coverHair;
 
         if (drawHair) {
             wanted.set('hair', `${basePath}head/hair/${classDescriptor}_HAIR.png`);
         }
 
-        // facial hair: suppressed by the accessory's or the armor's
-        // coverFacialHair flag (accessory flag applies even under a helmet)
-        if (!(accVisual && accFlags.coverFacialHair) && !armorFlags.coverFacialHair) {
+        if (!armorFlags.coverFacialHair) {
             wanted.set('facial_hair', `${basePath}head/facial_hair/${classDescriptor}_FACIAL_HAIR.png`);
         }
 
@@ -108,36 +96,39 @@ export class HeroLoader {
 
         if (style === 'modern') {
             const handAnim = weaponDef ? weaponDef.anim : 'none';
-            // one-handed weapon -> right hand in weapon pose, left hand free;
-            // two-handed -> both hands in weapon pose; shield -> plain hands
-            const leftAnim = weaponDef && weaponDef.twoHanded && !weaponDef.shield ? handAnim : 'none';
-            wanted.set('left_hand', `${basePath}body/hands/${bodyType}_${leftAnim}_left.png`);
+            // left hand pose: the left item's own animation class; a
+            // two-handed right weapon engages the left hand in the same pose
+            const leftHandAnim = weaponDef && weaponDef.twoHanded && !weaponDef.shield
+                ? handAnim
+                : leftDef ? leftDef.anim : 'none';
+            wanted.set('left_hand', `${basePath}body/hands/${bodyType}_${leftHandAnim}_left.png`);
             wanted.set('right_hand', `${basePath}body/hands/${bodyType}_${handAnim}_right.png`);
 
-            // shoulders: for a hand holding a two-handed weapon use the
-            // weapon pose variant, otherwise the plain hand variant
+            // shoulders (armorShoulderDescriptor): the weapon-pose variant is
+            // used only by an item that BLOCKS the off-hand slot (two-handed
+            // weapons); everything else takes the plain hand variant
             if (armorVisual) {
-                wanted.set('left_hand_armor', weaponDef && weaponDef.twoHanded && !weaponDef.shield
-                    ? `${basePath}armor/shoulders/${armorVisual}_${weaponDef.anim}.png`
-                    : `${basePath}armor/shoulders/${armorVisual}_left.png`);
-                wanted.set('right_hand_armor', weaponDef && !weaponDef.shield
-                    ? `${basePath}armor/shoulders/${armorVisual}_${weaponDef.anim}.png`
-                    : `${basePath}armor/shoulders/${armorVisual}_right.png`);
+                const rightShoulder = weaponDef && weaponDef.twoHanded && !weaponDef.shield
+                    ? `${armorVisual}_${weaponDef.anim}.png` : `${armorVisual}_right.png`;
+                const leftShoulder = (weaponDef && weaponDef.twoHanded && !weaponDef.shield)
+                        || (leftDef && leftDef.twoHanded && !leftDef.shield)
+                    ? `${armorVisual}_${(leftDef && leftDef.twoHanded && !leftDef.shield) ? leftDef.anim : weaponDef.anim}.png`
+                    : `${armorVisual}_left.png`;
+                wanted.set('left_hand_armor', `${basePath}armor/shoulders/${leftShoulder}`);
+                wanted.set('right_hand_armor', `${basePath}armor/shoulders/${rightShoulder}`);
             }
 
-            // accessory renders under the helmet (helmet replaces it)
-            if (accVisual && !hasHelmet) {
-                wanted.set('accessory', `${basePath}accessories/${accVisual}.png`);
-            }
-
-            // held items, unless the accessory is a costume covering them
-            if (weaponDef && !accFlags.coverItems) {
+            // held items: shields always render in the left hand, everything
+            // else in the hand that holds it
+            if (weaponDef) {
                 if (weaponDef.shield) {
                     wanted.set('left_hand_item', `${basePath}items/${weaponDef.visual}_left.png`);
                 } else {
                     wanted.set('right_hand_item', `${basePath}items/${weaponDef.visual}_right.png`);
-                    wanted.set('left_hand_item', `${basePath}items/${weaponDef.visual}_left.png`);
                 }
+            }
+            if (leftDef && !(leftDef.shield && weaponDef && weaponDef.shield)) {
+                wanted.set('left_hand_item', `${basePath}items/${leftDef.visual}_left.png`);
             }
         }
 
@@ -152,10 +143,15 @@ export class HeroLoader {
             await this.loadHeroLayer(name, wanted.get(name));
         }
 
-        // attack/zap override per weapon, as heroUpdated() does in Java
+        // attack/zap override per held weapons, as heroUpdated() does in Java:
+        // both hands melee -> dual, right melee -> right, left melee -> left;
+        // a two-handed right weapon plays the dual (both-hands) sequence
         let attackOverride = null;
-        if (style === 'modern' && weaponDef && !weaponDef.shield) {
-            attackOverride = weaponDef.twoHanded ? 'dual' : 'right';
+        if (style === 'modern') {
+            const rightAttack = weaponDef && !weaponDef.shield
+                ? (weaponDef.twoHanded ? 'dual' : 'right') : null;
+            const leftAttack = leftDef && !leftDef.shield ? 'left' : null;
+            attackOverride = rightAttack && leftAttack ? 'dual' : (rightAttack || leftAttack);
         }
 
         const currentHero = {

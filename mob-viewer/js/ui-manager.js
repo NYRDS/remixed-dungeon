@@ -160,7 +160,7 @@ export class UIManager {
         }
     }
 
-    setupHeroSelectors(armorList, weaponList, accessoryList, subclasses) {
+    setupHeroSelectors(armorList, weaponList, subclasses) {
         // Populate armor dropdown
         const armorSelect = document.getElementById('heroArmorSelect');
         for (const armor of armorList) {
@@ -170,22 +170,15 @@ export class UIManager {
             armorSelect.appendChild(option);
         }
 
-        // Populate weapon dropdown
-        const weaponSelect = document.getElementById('heroWeaponSelect');
-        for (const weapon of weaponList) {
-            const option = document.createElement('option');
-            option.value = weapon;
-            option.textContent = weapon.charAt(0).toUpperCase() + weapon.slice(1).replace(/([A-Z])/g, ' $1');
-            weaponSelect.appendChild(option);
-        }
-
-        // Populate accessory dropdown
-        const accessorySelect = document.getElementById('heroAccessorySelect');
-        for (const accessory of accessoryList) {
-            const option = document.createElement('option');
-            option.value = accessory;
-            option.textContent = accessory.charAt(0).toUpperCase() + accessory.slice(1).replace(/([A-Z])/g, ' $1');
-            accessorySelect.appendChild(option);
+        // Populate both hand weapon dropdowns
+        for (const selectId of ['heroWeaponSelect', 'heroLeftWeaponSelect']) {
+            const weaponSelect = document.getElementById(selectId);
+            for (const weapon of weaponList) {
+                const option = document.createElement('option');
+                option.value = weapon;
+                option.textContent = weapon.charAt(0).toUpperCase() + weapon.slice(1).replace(/([A-Z])/g, ' $1');
+                weaponSelect.appendChild(option);
+            }
         }
     }
 
@@ -209,7 +202,7 @@ export class UIManager {
             subClass: document.getElementById('heroSubclassSelect').value,
             armor: document.getElementById('heroArmorSelect').value,
             weapon: document.getElementById('heroWeaponSelect').value,
-            accessory: document.getElementById('heroAccessorySelect').value
+            leftWeapon: document.getElementById('heroLeftWeaponSelect').value
         };
     }
 }
