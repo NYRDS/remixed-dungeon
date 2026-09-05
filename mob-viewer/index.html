@@ -299,10 +299,6 @@
         </aside>
         
         <main class="main-content">
-            <div class="canvas-container">
-                <canvas id="spriteCanvas" width="256" height="256"></canvas>
-            </div>
-            
             <div class="controls">
                 <label>
                     Animation:
@@ -313,22 +309,26 @@
                         <option value="die">Die</option>
                     </select>
                 </label>
-                
+
                 <button id="playBtn">▶ Play</button>
                 <button id="pauseBtn">⏸ Pause</button>
                 <button id="loopBtn" class="active">🔁 Loop: ON</button>
-                
+
                 <label>
                     Scale:
                     <input type="range" id="scaleSlider" min="1" max="8" value="4" step="1">
                     <span id="scaleValue">4x</span>
                 </label>
-                
+
                 <label>
                     Speed:
                     <input type="range" id="speedSlider" min="0.25" max="4" value="1" step="0.25">
                     <span id="speedValue">1x</span>
                 </label>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="spriteCanvas" width="256" height="256"></canvas>
             </div>
         </main>
     </div>

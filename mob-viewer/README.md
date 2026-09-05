@@ -16,18 +16,22 @@ A web application to load and play mob animations from Remixed Dungeon using exi
 
 ## Running the Application
 
-### Option 1: Python HTTP Server (Recommended)
+### Option 1: No-Cache Python Server (Recommended)
 
 ```bash
-cd /workspace
-python3 -m http.server 8080
+python3 mob-viewer/serve.py 8099
 ```
 
-Then open your browser to: `http://localhost:8080/mob-viewer/index.html`
+Then open your browser to: `http://localhost:8099/mob-viewer/index.html`
+
+This wrapper sends `Cache-Control: no-store`, so sprite/JS edits show up
+on a normal reload. `python3 -m http.server` does not send cache headers
+and Chrome heuristically caches the ES modules - stale code survives
+normal reloads and looks like "the fix doesn't work".
 
 ### Option 2: Any Static File Server
 
-You can use any static file server (nginx, Apache, Node.js http-server, etc.) to serve the `/workspace` directory.
+You can use any static file server (nginx, Apache, Node.js http-server, etc.) to serve the `/workspace` directory. If sprite or viewer-code edits don't appear after a reload, hard-refresh (Ctrl+Shift+R).
 
 ## How It Works
 

@@ -9,6 +9,23 @@ export class UIManager {
         document.getElementById('loading').style.display = 'none';
     }
 
+    // Loop button reflects EFFECTIVE looping for the current animation:
+    // user preference AND the animation's own looped flag. One-shot
+    // animations (attack/die/zap) show the button disabled so the state
+    // never silently disagrees with playback.
+    refreshLoopIndicator() {
+        const c = this.viewer.animationController;
+        const data = this.viewer.getCurrentData();
+        const anim = data ? data[this.viewer.currentAnim] : null;
+        const canLoop = !!(anim && anim.looped);
+        const effective = canLoop && c.isLooping;
+        const btn = document.getElementById('loopBtn');
+        btn.classList.toggle('active', effective);
+        btn.textContent = `🔁 Loop: ${effective ? 'ON' : 'OFF'}`;
+        btn.disabled = !canLoop;
+        btn.title = canLoop ? '' : 'This animation plays once';
+    }
+
     setupEventListeners() {
         // Mode switching
         document.getElementById('modeMobBtn').addEventListener('click', () => {
@@ -32,6 +49,7 @@ export class UIManager {
         document.getElementById('animationSelect').addEventListener('change', (e) => {
             this.viewer.currentAnim = e.target.value;
             this.viewer.resetAnimation();
+            this.refreshLoopIndicator();
         });
 
         // Play/Pause buttons drive the animation controller
@@ -43,11 +61,11 @@ export class UIManager {
             this.viewer.animationController.isPlaying = false;
         });
 
-        // Loop toggle
+        // Loop toggle - a preference; effective looping also depends on the
+        // current animation (one-shot anims like attack/die never loop)
         document.getElementById('loopBtn').addEventListener('click', (e) => {
-            const looping = this.viewer.animationController.toggleLoop();
-            e.target.classList.toggle('active', looping);
-            e.target.textContent = `🔁 Loop: ${looping ? 'ON' : 'OFF'}`;
+            this.viewer.animationController.toggleLoop();
+            this.refreshLoopIndicator();
         });
 
         // Scale slider

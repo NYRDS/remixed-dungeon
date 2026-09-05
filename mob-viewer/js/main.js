@@ -65,9 +65,10 @@ class SpriteViewer {
                 this.currentMob.data.texture,
                 animations
             );
-            
+
             this.animationController.reset();
-            
+            this.uiManager.refreshLoopIndicator();
+
         } catch (error) {
             console.error(`Failed to load ${mobName}:`, error);
             alert(error.message);
@@ -124,9 +125,10 @@ class SpriteViewer {
                 animations,
                 this.heroLayers
             );
-            
+
             this.animationController.reset();
-            
+            this.uiManager.refreshLoopIndicator();
+
         } catch (error) {
             console.error(`Failed to load hero:`, error);
             alert(`Failed to load hero configuration.`);
