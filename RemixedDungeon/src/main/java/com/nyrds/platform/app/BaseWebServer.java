@@ -7,6 +7,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import fi.iki.elonen.NanoHTTPD;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -214,7 +215,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
         return generateHtmlWithTemplate("root_template.html",
             "{{GAME_VERSION}}", Utils.format("%s (%d)", GameLoop.version, GameLoop.versionCode),
             "{{MOD_INFO}}", Utils.format("%s (%d)", ModdingMode.activeMod(), ModdingMode.activeModVersion()),
-            "{{LEVEL_INFO}}", Dungeon.level != null ? Utils.format("<p>Level: %s</p>", Dungeon.level.levelId) : "");
+            "{{LEVEL_INFO}}", Dungeon.level != null ? Utils.format("<p>Level: %s</p>", Dungeon.level.levelId) : "<p>standalone mode</p>");
     }
 
     /**
@@ -225,7 +226,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
         listDir(dirContent, "");
 
         return generateHtmlWithTemplate("list_template.html",
-            "{{MOD_NAME}}", ModdingMode.activeMod(),
+            "{{MOD_NAME}}", htmlEscape(ModdingMode.activeMod()),
             "{{DIRECTORY_CONTENTS}}", dirContent.toString());
     }
 
@@ -430,6 +431,65 @@ public abstract class BaseWebServer extends NanoHTTPD {
     }
 
     /**
+     * caveman: NanoHTTPD already parsed and decoded query (and form) params.
+     * The old hand-rolled per-route parsers double-decoded them.
+     */
+    protected static String queryParam(IHTTPSession session, String name) {
+        List<String> values = session.getParameters().get(name);
+        if (values == null || values.isEmpty() || values.get(0) == null) {
+            return "";
+        }
+        return values.get(0);
+    }
+
+    /**
+     * caveman: one body extractor for the save endpoints - raw body
+     * (postData), then URL-encoded query, then a first-chunk stream read.
+     * The editors always POST raw bodies; the fallbacks cover hand-rolled
+     * clients only.
+     */
+    protected String readPostBody(IHTTPSession session) {
+        Map<String, String> files = new HashMap<>();
+        try {
+            session.parseBody(files);
+        } catch (Exception e) {
+            GLog.debug("Error parsing request body: " + e.getMessage());
+        }
+        String body = files.get("postData");
+
+        if (body == null || body.isEmpty()) {
+            String query = session.getQueryParameterString();
+            if (query != null && !query.isEmpty()) {
+                try {
+                    body = URLDecoder.decode(query, "UTF-8");
+                } catch (Exception e) {
+                    body = query;
+                }
+            }
+        }
+
+        if (body == null || body.isEmpty()) {
+            try {
+                InputStream inputStream = session.getInputStream();
+                if (inputStream.markSupported()) {
+                    inputStream.mark(8192);
+                    byte[] buffer = new byte[8192];
+                    int bytesRead = inputStream.read(buffer);
+                    if (bytesRead > 0) {
+                        body = new String(buffer, 0, bytesRead, "UTF-8");
+                    } else {
+                        inputStream.reset();
+                    }
+                }
+            } catch (Exception e) {
+                GLog.debug("Error reading request body stream: " + e.getMessage());
+            }
+        }
+
+        return body;
+    }
+
+    /**
      * caveman: file names land in a Content-Disposition quoted-string -
      * quotes, backslashes and control chars would break the header.
      */
@@ -530,32 +590,17 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
             // Then list files
             for (String name : files) {
-                if(path.isEmpty()) {
-                    if (name.toLowerCase().endsWith(".json")) {
-                        String encodedPath1 = getEncodedPath(name);
-                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", encodedPath1, htmlEscape(name), encodedPath1, encodedPath1));
-                    } else if (name.toLowerCase().endsWith(".lua")) {
-                        String encodedPath1 = getEncodedPath(name);
-                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", encodedPath1, htmlEscape(name), encodedPath1, encodedPath1));
-                    } else {
-                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", getEncodedPath(name), htmlEscape(name)));
-                    }
+                String fullPath = path.isEmpty() ? name : path + "/" + name;
+                String encoded = getEncodedPath(fullPath);
+                String lower = name.toLowerCase();
+                if (lower.endsWith(".json")) {
+                    msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", encoded, htmlEscape(name), encoded, encoded));
+                } else if (lower.endsWith(".lua")) {
+                    msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", encoded, htmlEscape(name), encoded, encoded));
+                } else if (lower.endsWith(".png") || lower.endsWith(".jpg") || lower.endsWith(".jpeg")) {
+                    msg.append(Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>", encoded, htmlEscape(name), encoded, encoded));
                 } else {
-                    String fullPath = path + "/" + name; // Proper path for accessing the file
-                    if (name.toLowerCase().endsWith(".json")) {
-                        String encodedPath = getEncodedPath(fullPath);
-                        // Show just the filename, but use full path for href
-                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>",
-                            encodedPath, htmlEscape(name), encodedPath, encodedPath));
-                    } else if (name.toLowerCase().endsWith(".lua")) {
-                        String encodedPath = getEncodedPath(fullPath);
-                        // Show just the filename, but use full path for href
-                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>",
-                            encodedPath, htmlEscape(name), encodedPath, encodedPath));
-                    } else {
-                        // Show just the filename, but use full path for href
-                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", getEncodedPath(fullPath), htmlEscape(name)));
-                    }
+                    msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", encoded, htmlEscape(name)));
                 }
             }
             msg.append("</div>");
@@ -761,88 +806,29 @@ public abstract class BaseWebServer extends NanoHTTPD {
     }
 
     /**
-     * Handle saving JSON content to a file
+     * Shared body of /api/save-json and /api/save-lua - identical flow,
+     * JSON additionally validates its content.
      */
-    protected Response handleJsonSave(IHTTPSession session) {
+    private Response handleFileSave(IHTTPSession session, boolean validateJson, String kind) {
         try {
-            GLog.debug("Handling JSON save request");
+            GLog.debug("Handling " + kind + " save request");
 
-            // Use the same approach as file upload, but for raw JSON data
-            Map<String, String> files = new HashMap<>();
+            String body = readPostBody(session);
 
-            // This will parse the body and handle both form data and raw data
-            session.parseBody(files);
-
-            // Try to get the raw JSON from postData
-            String jsonString = files.get("postData");
-
-            // If postData is null, the content may be in the input stream directly
-            if (jsonString == null || jsonString.isEmpty()) {
-                // Get query parameters in case the data was sent as query parameters
-                // (less likely for large JSON but possible for small payloads)
-                String body = session.getQueryParameterString();
-                if (body != null && !body.isEmpty()) {
-                    jsonString = URLDecoder.decode(body, "UTF-8");
-                }
-            }
-
-            // If still null, try to read from the input stream directly, but carefully
-            if (jsonString == null || jsonString.isEmpty()) {
-                GLog.debug("Reading JSON from input stream");
-                Map<String, List<String>> parms = session.getParameters();
-
-                // If parameters exist, check if we have JSON in parameters
-                // This is unlikely but possible depending on how client sends data
-                if (!parms.isEmpty()) {
-                    for (Map.Entry<String, List<String>> entry : parms.entrySet()) {
-                        // Look for JSON-like strings in parameters
-                        for (String value : entry.getValue()) {
-                            if (value.startsWith("{") && value.endsWith("}")) {
-                                jsonString = value;
-                                break;
-                            }
-                        }
-                        if (jsonString != null) break;
-                    }
-                }
-
-                // If still not found, try direct input stream reading as last resort
-                if (jsonString == null || jsonString.isEmpty()) {
-                    try {
-                        // Create a smaller buffer and read with timeout
-                        byte[] buffer = new byte[4096];
-                        InputStream inputStream = session.getInputStream();
-
-                        // Mark and reset approach to avoid issues with already-read streams
-                        if (inputStream.markSupported()) {
-                            inputStream.mark(4096);
-                            int bytesRead = inputStream.read(buffer);
-                            if (bytesRead > 0) {
-                                jsonString = new String(buffer, 0, bytesRead, "UTF-8");
-                            } else {
-                                inputStream.reset(); // Reset to marked position
-                            }
-                        }
-                    } catch (Exception e) {
-                        GLog.debug("Error reading from input stream: " + e.getMessage());
-                    }
-                }
-            }
-
-            if (jsonString == null || jsonString.isEmpty()) {
-                GLog.debug("No JSON data found in request");
+            if (body == null || body.isEmpty()) {
+                GLog.debug("No " + kind + " data found in request");
                 return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
                     "{\"error\":\"Empty request body\"}");
             }
 
-            GLog.debug("Received JSON: " + jsonString.substring(0, Math.min(200, jsonString.length())) + "...");
+            GLog.debug("Received " + kind + ": " + body.substring(0, Math.min(200, body.length())) + "...");
 
-            // Parse the JSON to extract filePath and content
-            JSONObject jsonData = new JSONObject(jsonString);
+            // The payload is {"filePath":"...","content":"..."} for both editors
+            JSONObject jsonData = new JSONObject(body);
             String filePath = jsonData.getString("filePath");
             String content = jsonData.getString("content");
 
-            GLog.debug("Saving JSON to: " + filePath);
+            GLog.debug("Saving " + kind + " to: " + filePath);
 
             // Check if we're trying to save to the main Remixed mod
             if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
@@ -858,13 +844,14 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     "{\"error\":\"Directory traversal is not allowed.\"}");
             }
 
-            // Validate JSON content
-            try {
-                new JSONObject(content);
-            } catch (JSONException e) {
-                GLog.debug("Invalid JSON content: " + e.getMessage());
-                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
-                    "{\"error\":\"Invalid JSON content: " + e.getMessage() + "\"}");
+            if (validateJson) {
+                try {
+                    new JSONObject(content);
+                } catch (JSONException e) {
+                    GLog.debug("Invalid JSON content: " + e.getMessage());
+                    return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
+                        "{\"error\":\"Invalid JSON content: " + e.getMessage() + "\"}");
+                }
             }
 
             // Create the full path for the file
@@ -876,194 +863,49 @@ public abstract class BaseWebServer extends NanoHTTPD {
             GLog.debug("Destination file path: " + destFile.getAbsolutePath());
 
             if (!isInsideStorageRoot(destFile)) {
-                GLog.w("Blocked JSON save outside storage root: " + fullPath);
+                GLog.w("Blocked " + kind + " save outside storage root: " + fullPath);
                 return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
                     "{\"error\":\"Destination outside mod storage.\"}");
             }
 
             // Create directories if needed
             File destDir = destFile.getParentFile();
-            GLog.debug("Destination directory: " + (destDir != null ? destDir.getAbsolutePath() : "null"));
             if (destDir != null && !destDir.exists()) {
-                GLog.debug("Creating destination directory");
                 destDir.mkdirs();
             }
 
             // Write the content to the file
-            GLog.debug("Writing JSON content to file");
             try (FileOutputStream fos = new FileOutputStream(destFile)) {
                 fos.write(content.getBytes("UTF-8"));
             }
 
-            // Reinitialize the mod cache to reflect the newly saved file
-            GLog.debug("Reinitializing mod cache after JSON save");
-            // FileSystem.reinitModCache(); // Not available on Android platform
-
-            GLog.debug("=== JSON SAVE COMPLETED SUCCESSFULLY ===");
             return newFixedLengthResponse(Response.Status.OK, "application/json",
                 "{\"success\":true, \"message\":\"File saved successfully to: " + fullPath + "\"}");
 
         } catch (JSONException e) {
-            GLog.debug("=== JSON PARSING ERROR ===");
-            GLog.debug("JSON parsing error: " + e.getMessage());
-            e.printStackTrace();
+            GLog.debug(kind + " save: JSON parsing error: " + e.getMessage());
             return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
                 "{\"error\":\"Invalid JSON format in request: " + e.getMessage() + "\"}");
         } catch (Exception e) {
-            GLog.debug("=== JSON SAVE FAILED ===");
-            GLog.debug("JSON save error: " + e.getMessage());
-            e.printStackTrace(); // Log the full stack trace for debugging
+            GLog.debug(kind + " save failed: " + e.getMessage());
+            e.printStackTrace();
             return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
-                "{\"error\":\"Failed to save JSON file: " + e.getMessage() + "\"}");
+                "{\"error\":\"Failed to save " + kind + " file: " + e.getMessage() + "\"}");
         }
+    }
+
+    /**
+     * Handle saving JSON content to a file
+     */
+    protected Response handleJsonSave(IHTTPSession session) {
+        return handleFileSave(session, true, "JSON");
     }
 
     /**
      * Handle saving Lua content to a file
      */
     protected Response handleLuaSave(IHTTPSession session) {
-        try {
-            GLog.debug("Handling Lua save request");
-
-            // Use the same approach as JSON save, but for raw Lua data
-            Map<String, String> files = new HashMap<>();
-
-            // This will parse the body and handle both form data and raw data
-            session.parseBody(files);
-
-            // Try to get the raw Lua from postData
-            String luaString = files.get("postData");
-
-            // If postData is null, the content may be in the input stream directly
-            if (luaString == null || luaString.isEmpty()) {
-                // Get query parameters in case the data was sent as query parameters
-                String body = session.getQueryParameterString();
-                if (body != null && !body.isEmpty()) {
-                    luaString = URLDecoder.decode(body, "UTF-8");
-                }
-            }
-
-            // If still null, try to read from the input stream directly
-            if (luaString == null || luaString.isEmpty()) {
-                GLog.debug("Reading Lua from input stream");
-                Map<String, List<String>> parms = session.getParameters();
-
-                if (!parms.isEmpty()) {
-                    for (Map.Entry<String, List<String>> entry : parms.entrySet()) {
-                        // Look for Lua-like strings in parameters
-                        for (String value : entry.getValue()) {
-                            if (value.trim().startsWith("local ") || value.trim().startsWith("function ") || 
-                                value.trim().startsWith("--") || value.trim().contains("=")) { // Basic Lua indicators
-                                luaString = value;
-                                break;
-                            }
-                        }
-                        if (luaString != null) break;
-                    }
-                }
-
-                // If still not found, try direct input stream reading as last resort
-                if (luaString == null || luaString.isEmpty()) {
-                    try {
-                        // Create a smaller buffer and read with timeout
-                        byte[] buffer = new byte[4096];
-                        InputStream inputStream = session.getInputStream();
-
-                        // Mark and reset approach to avoid issues with already-read streams
-                        if (inputStream.markSupported()) {
-                            inputStream.mark(4096);
-                            int bytesRead = inputStream.read(buffer);
-                            if (bytesRead > 0) {
-                                luaString = new String(buffer, 0, bytesRead, "UTF-8");
-                            } else {
-                                inputStream.reset(); // Reset to marked position
-                            }
-                        }
-                    } catch (Exception e) {
-                        GLog.debug("Error reading from input stream: " + e.getMessage());
-                    }
-                }
-            }
-
-            if (luaString == null || luaString.isEmpty()) {
-                GLog.debug("No Lua data found in request");
-                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
-                    "{\"error\":\"Empty request body\"}");
-            }
-
-            GLog.debug("Received Lua: " + luaString.substring(0, Math.min(200, luaString.length())) + "...");
-
-            // Parse the data to extract filePath and content
-            // For Lua, we expect the data to be in the format: {"filePath":"path","content":"lua code here"}
-            JSONObject jsonData = new JSONObject(luaString);
-            String filePath = jsonData.getString("filePath");
-            String content = jsonData.getString("content");
-
-            GLog.debug("Saving Lua to: " + filePath);
-
-            // Check if we're trying to save to the main Remixed mod
-            if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
-                GLog.debug("Save blocked - attempt to save to main 'Remixed' mod");
-                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
-                    "{\"error\":\"Save to the main 'Remixed' mod is disabled for security reasons.\"}");
-            }
-
-            // Validate that the file path is within the allowed mod directory
-            if (!isSafeResourcePath(filePath)) {
-                GLog.debug("Directory traversal attempt detected: " + filePath);
-                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
-                    "{\"error\":\"Directory traversal is not allowed.\"}");
-            }
-
-            // Create the full path for the file
-            String fullPath = ModdingMode.activeMod() + "/" + filePath;
-            GLog.debug("Full file path: " + fullPath);
-
-            // Create the file
-            File destFile = FileSystem.getExternalStorageFile(fullPath);
-            GLog.debug("Destination file path: " + destFile.getAbsolutePath());
-
-            if (!isInsideStorageRoot(destFile)) {
-                GLog.w("Blocked Lua save outside storage root: " + fullPath);
-                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
-                    "{\"error\":\"Destination outside mod storage.\"}");
-            }
-
-            // Create directories if needed
-            File destDir = destFile.getParentFile();
-            GLog.debug("Destination directory: " + (destDir != null ? destDir.getAbsolutePath() : "null"));
-            if (destDir != null && !destDir.exists()) {
-                GLog.debug("Creating destination directory");
-                destDir.mkdirs();
-            }
-
-            // Write the content to the file
-            GLog.debug("Writing Lua content to file");
-            try (FileOutputStream fos = new FileOutputStream(destFile)) {
-                fos.write(content.getBytes("UTF-8"));
-            }
-
-            // Reinitialize the mod cache to reflect the newly saved file
-            GLog.debug("Reinitializing mod cache after Lua save");
-            // FileSystem.reinitModCache(); // Not available on Android platform
-
-            GLog.debug("=== LUA SAVE COMPLETED SUCCESSFULLY ===");
-            return newFixedLengthResponse(Response.Status.OK, "application/json",
-                "{\"success\":true, \"message\":\"File saved successfully to: " + fullPath + "\"}");
-
-        } catch (JSONException e) {
-            GLog.debug("=== JSON PARSING ERROR ===");
-            GLog.debug("JSON parsing error: " + e.getMessage());
-            e.printStackTrace();
-            return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
-                "{\"error\":\"Invalid JSON format in request: " + e.getMessage() + "\"}");
-        } catch (Exception e) {
-            GLog.debug("=== LUA SAVE FAILED ===");
-            GLog.debug("Lua save error: " + e.getMessage());
-            e.printStackTrace(); // Log the full stack trace for debugging
-            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
-                "{\"error\":\"Failed to save Lua file: " + e.getMessage() + "\"}");
-        }
+        return handleFileSave(session, false, "Lua");
     }
 
     /**
@@ -1132,72 +974,12 @@ public abstract class BaseWebServer extends NanoHTTPD {
             }
 
             if(uri.startsWith("/upload")) {
-                // Extract path from query parameters if present
-                String path = "";
-                GLog.debug("Upload URI: " + uri);
-
-                // Try to get query parameters
-                String query = session.getQueryParameterString();
-                GLog.debug("Query parameter string: " + query);
-
-                // Parse query parameters manually
-                if (query != null && !query.isEmpty()) {
-                    // Split by & to get parameter pairs
-                    String[] params = query.split("&");
-                    for (String param : params) {
-                        if (param.startsWith("path=")) {
-                            path = param.substring(5); // Remove "path=" prefix
-                            // URL decode the path
-                            try {
-                                path = URLDecoder.decode(path, "UTF-8");
-                            } catch (Exception e) {
-                                // If decoding fails, use the path as is
-                            }
-                            // Ensure path is not null
-                            if (path == null) {
-                                path = "";
-                            }
-                            break;
-                        }
-                    }
-                }
-
-                GLog.debug("Final upload path: '" + path + "'");
                 return newFixedLengthResponse(Response.Status.OK, "text/html",
-                    serveUploadForm("", path));
+                    serveUploadForm("", queryParam(session, "path")));
             }
 
             if(uri.startsWith("/edit-json")) {
-                // Extract file path from query parameters
-                String filePath = "";
-                GLog.debug("Edit JSON URI: " + uri);
-
-                // Try to get query parameters
-                String query = session.getQueryParameterString();
-                GLog.debug("Query parameter string: " + query);
-
-                // Parse query parameters manually
-                if (query != null && !query.isEmpty()) {
-                    // Split by & to get parameter pairs
-                    String[] params = query.split("&");
-                    for (String param : params) {
-                        if (param.startsWith("file=")) {
-                            filePath = param.substring(5); // Remove "file=" prefix
-                            // URL decode the path
-                            try {
-                                filePath = URLDecoder.decode(filePath, "UTF-8");
-                            } catch (Exception e) {
-                                // If decoding fails, use the path as is
-                            }
-                            // Ensure path is not null
-                            if (filePath == null) {
-                                filePath = "";
-                            }
-                            break;
-                        }
-                    }
-                }
-
+                String filePath = queryParam(session, "file");
                 GLog.debug("File to edit: '" + filePath + "'");
                 if (!isSafeResourcePath(filePath)) {
                     return forbiddenPath();
@@ -1212,36 +994,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             }
 
             if(uri.startsWith("/edit-lua")) {
-                // Extract file path from query parameters
-                String filePath = "";
-                GLog.debug("Edit Lua URI: " + uri);
-
-                // Try to get query parameters
-                String query = session.getQueryParameterString();
-                GLog.debug("Query parameter string: " + query);
-
-                // Parse query parameters manually
-                if (query != null && !query.isEmpty()) {
-                    // Split by & to get parameter pairs
-                    String[] params = query.split("&");
-                    for (String param : params) {
-                        if (param.startsWith("file=")) {
-                            filePath = param.substring(5); // Remove "file=" prefix
-                            // URL decode the path
-                            try {
-                                filePath = URLDecoder.decode(filePath, "UTF-8");
-                            } catch (Exception e) {
-                                // If decoding fails, use the path as is
-                            }
-                            // Ensure path is not null
-                            if (filePath == null) {
-                                filePath = "";
-                            }
-                            break;
-                        }
-                    }
-                }
-
+                String filePath = queryParam(session, "file");
                 GLog.debug("Lua file to edit: '" + filePath + "'");
                 if (!isSafeResourcePath(filePath)) {
                     return forbiddenPath();
@@ -1254,36 +1007,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             }
 
             if(uri.startsWith("/preview-image")) {
-                // Extract file path from query parameters
-                String filePath = "";
-                GLog.debug("Preview image URI: " + uri);
-
-                // Try to get query parameters
-                String query = session.getQueryParameterString();
-                GLog.debug("Query parameter string: " + query);
-
-                // Parse query parameters manually
-                if (query != null && !query.isEmpty()) {
-                    // Split by & to get parameter pairs
-                    String[] params = query.split("&");
-                    for (String param : params) {
-                        if (param.startsWith("file=")) {
-                            filePath = param.substring(5); // Remove "file=" prefix
-                            // URL decode the path
-                            try {
-                                filePath = URLDecoder.decode(filePath, "UTF-8");
-                            } catch (Exception e) {
-                                // If decoding fails, use the path as is
-                            }
-                            // Ensure path is not null
-                            if (filePath == null) {
-                                filePath = "";
-                            }
-                            break;
-                        }
-                    }
-                }
-
+                String filePath = queryParam(session, "file");
                 GLog.debug("Image to preview: '" + filePath + "'");
                 if (!isSafeResourcePath(filePath)) {
                     return forbiddenPath();
@@ -1296,36 +1020,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             }
 
             if(uri.startsWith("/edit-png")) {
-                // Extract file path from query parameters
-                String filePath = "";
-                GLog.debug("Edit PNG URI: " + uri);
-
-                // Try to get query parameters
-                String query = session.getQueryParameterString();
-                GLog.debug("Query parameter string: " + query);
-
-                // Parse query parameters manually
-                if (query != null && !query.isEmpty()) {
-                    // Split by & to get parameter pairs
-                    String[] params = query.split("&");
-                    for (String param : params) {
-                        if (param.startsWith("file=")) {
-                            filePath = param.substring(5); // Remove "file=" prefix
-                            // URL decode the path
-                            try {
-                                filePath = URLDecoder.decode(filePath, "UTF-8");
-                            } catch (Exception e) {
-                                // If decoding fails, use the path as is
-                            }
-                            // Ensure path is not null
-                            if (filePath == null) {
-                                filePath = "";
-                            }
-                            break;
-                        }
-                    }
-                }
-
+                String filePath = queryParam(session, "file");
                 GLog.debug("PNG file to edit: '" + filePath + "'");
                 if (!isSafeResourcePath(filePath)) {
                     return forbiddenPath();
@@ -1468,27 +1163,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
         // Add handling for GET requests to the texture API
         if (session.getMethod() == Method.GET) {
             if (uri.startsWith("/api/get_texture")) {
-                // Extract file path from query parameters
-                String filePath = "";
-                String query = session.getQueryParameterString();
-
-                if (query != null && !query.isEmpty()) {
-                    String[] params = query.split("&");
-                    for (String param : params) {
-                        if (param.startsWith("file=")) {
-                            filePath = param.substring(5); // Remove "file=" prefix
-                            try {
-                                filePath = URLDecoder.decode(filePath, "UTF-8");
-                            } catch (Exception e) {
-                                // If decoding fails, use the path as is
-                            }
-                            if (filePath == null) {
-                                filePath = "";
-                            }
-                            break;
-                        }
-                    }
-                }
+                String filePath = queryParam(session, "file");
 
                 if (!isSafeResourcePath(filePath)) {
                     GLog.w("Blocked path traversal attempt on /api/get_texture: " + filePath);
@@ -1508,21 +1183,110 @@ public abstract class BaseWebServer extends NanoHTTPD {
     }
 
     /**
-     * Serve image preview page (needs to be implemented in subclasses)
+     * caveman: platform Base64 - android.util vs java.util, so the hooks
+     * are abstract. Everything around texture save/get is shared.
+     */
+    protected abstract byte[] base64Decode(String data);
+
+    protected abstract String base64Encode(byte[] data);
+
+    /**
+     * Serve image preview page
      */
     protected Response serveImagePreview(String filePath) {
-        // This method should be implemented in the platform-specific subclass
-        // For now, return a not found response
-        return newFixedLengthResponse(Response.Status.NOT_IMPLEMENTED, "text/html", serveNotFound());
+        try {
+            GLog.debug("Serving image preview for: " + filePath);
+
+            // Verify that the file exists and is an image
+            if (!filePath.toLowerCase().endsWith(".png") &&
+                !filePath.toLowerCase().endsWith(".jpg") &&
+                !filePath.toLowerCase().endsWith(".jpeg")) {
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html",
+                    "<html><body><h1>Invalid image file</h1></body></html>");
+            }
+
+            // Create an HTML page to display the image
+            String encodedFilePath = getEncodedPath(filePath);
+            String html = String.format(
+                "<!DOCTYPE html>" +
+                "<html>" +
+                "<head>" +
+                "    <title>Image Preview - %s</title>" +
+                "    <style>" +
+                "        body { font-family: Arial, sans-serif; margin: 20px; background: #f0f0f0; }" +
+                "        .container { background: white; padding: 20px; border-radius: 8px; max-width: 800px; margin: 0 auto; }" +
+                "        .image-container { text-align: center; margin: 20px 0; }" +
+                "        img { max-width: 100%%; height: auto; border: 1px solid #ccc; }" +
+                "        .controls { text-align: center; margin: 20px 0; }" +
+                "        .controls a { margin: 0 10px; padding: 10px 15px; background: #4CAF50; color: white; text-decoration: none; border-radius: 4px; }" +
+                "        .controls a:hover { background: #45a049; }" +
+                "    </style>" +
+                "</head>" +
+                "<body>" +
+                "    <div class='container'>" +
+                "        <h1>Preview: %s</h1>" +
+                "        <div class='image-container'>" +
+                "            <img src='/fs/%s' alt='%s'>" +
+                "        </div>" +
+                "        <div class='controls'>" +
+                "            <a href='/edit-png?file=%s'>Edit with PixelCraft</a>" +
+                "            <a href='/fs/%s?download=true'>Download</a>" +
+                "            <a href='/list'>Back to directory</a>" +
+                "        </div>" +
+                "    </div>" +
+                "</body>" +
+                "</html>",
+                htmlEscape(filePath), htmlEscape(filePath), getEncodedPath(filePath),
+                htmlEscape(filePath), encodedFilePath, getEncodedPath(filePath));
+
+            return newFixedLengthResponse(Response.Status.OK, "text/html", html);
+
+        } catch (Exception e) {
+            GLog.debug("Error serving image preview: " + e.getMessage());
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html",
+                "<html><body><h1>Error serving image preview</h1></body></html>");
+        }
     }
 
     /**
-     * Serve PNG editor page (needs to be implemented in subclasses)
+     * Serve PNG editor page (redirects to PixelCraft with the image loaded)
      */
     protected Response servePngEditor(String filePath) {
-        // This method should be implemented in the platform-specific subclass
-        // For now, return a not found response
-        return newFixedLengthResponse(Response.Status.NOT_IMPLEMENTED, "text/html", serveNotFound());
+        try {
+            GLog.debug("Serving PNG editor for: " + filePath);
+
+            // Verify that the file exists and is an image
+            if (!filePath.toLowerCase().endsWith(".png") &&
+                !filePath.toLowerCase().endsWith(".jpg") &&
+                !filePath.toLowerCase().endsWith(".jpeg")) {
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html",
+                    "<html><body><h1>Invalid image file</h1></body></html>");
+            }
+
+            // Redirect to PixelCraft with the edit_file parameter
+            String pixelCraftUrl = "/web/pixelcraft/?edit_file=" + getEncodedPath(filePath);
+
+            // Create a redirect page
+            String html = String.format(
+                "<!DOCTYPE html>" +
+                "<html>" +
+                "<head>" +
+                "    <meta http-equiv='refresh' content='0; url=%s'>" +
+                "    <title>Redirecting to PixelCraft Editor</title>" +
+                "</head>" +
+                "<body>" +
+                "    <p>If you are not redirected to PixelCraft automatically, <a href='%s'>click here</a>.</p>" +
+                "</body>" +
+                "</html>",
+                pixelCraftUrl, pixelCraftUrl);
+
+            return newFixedLengthResponse(Response.Status.OK, "text/html", html);
+
+        } catch (Exception e) {
+            GLog.debug("Error serving PNG editor: " + e.getMessage());
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/html",
+                "<html><body><h1>Error serving PNG editor</h1></body></html>");
+        }
     }
 
     /**
@@ -1538,18 +1302,142 @@ public abstract class BaseWebServer extends NanoHTTPD {
      * Handle saving texture content from PixelCraft editor
      */
     protected Response handleTextureSave(IHTTPSession session) {
-        // This method should be implemented in the platform-specific subclass
-        // For now, return a not found response
-        return newFixedLengthResponse(Response.Status.NOT_IMPLEMENTED, "application/json", "{}");
+        try {
+            GLog.debug("Handling texture save request");
+
+            String jsonString = readPostBody(session);
+
+            if (jsonString == null || jsonString.isEmpty()) {
+                GLog.debug("No texture data found in request");
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Empty request body\"}");
+            }
+
+            GLog.debug("Received texture data (length): " + jsonString.length());
+
+            // Parse the JSON to extract filename and image content
+            JSONObject jsonData = new JSONObject(jsonString);
+            String filename = jsonData.getString("name");
+            String base64Content = jsonData.getString("image");
+
+            GLog.debug("Saving texture to: " + filename);
+
+            // Check if we're trying to save to the main Remixed mod
+            if (ModdingMode.activeMod().equals(ModdingMode.REMIXED)) {
+                GLog.debug("Save blocked - attempt to save to main 'Remixed' mod");
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Save to the main 'Remixed' mod is disabled for security reasons.\"}");
+            }
+
+            // Validate that the file path is within the allowed mod directory
+            if (!isSafeResourcePath(filename)) {
+                GLog.debug("Directory traversal attempt detected: " + filename);
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Directory traversal is not allowed.\"}");
+            }
+
+            // Decode the base64 content
+            byte[] imageBytes = base64Decode(base64Content);
+
+            // Create the full path for the file
+            String fullPath = ModdingMode.activeMod() + "/" + filename;
+
+            // Create the file
+            File destFile = FileSystem.getExternalStorageFile(fullPath);
+            GLog.debug("Destination file path: " + destFile.getAbsolutePath());
+
+            if (!isInsideStorageRoot(destFile)) {
+                GLog.w("Blocked texture save outside storage root: " + fullPath);
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Destination outside mod storage.\"}");
+            }
+
+            // Create directories if needed
+            File destDir = destFile.getParentFile();
+            if (destDir != null && !destDir.exists()) {
+                destDir.mkdirs();
+            }
+
+            // Write the content to the file
+            try (FileOutputStream fos = new FileOutputStream(destFile)) {
+                fos.write(imageBytes);
+            }
+
+            return newFixedLengthResponse(Response.Status.OK, "application/json",
+                "{\"success\":true, \"message\":\"File saved successfully to: " + fullPath + "\"}");
+
+        } catch (JSONException e) {
+            GLog.debug("Texture save: JSON parsing error: " + e.getMessage());
+            return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
+                "{\"error\":\"Invalid JSON format in request: " + e.getMessage() + "\"}");
+        } catch (Exception e) {
+            GLog.debug("Texture save failed: " + e.getMessage());
+            e.printStackTrace();
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
+                "{\"error\":\"Failed to save texture file: " + e.getMessage() + "\"}");
+        }
     }
 
     /**
-     * Handle getting texture content for PixelCraft editor
+     * Handle getting texture content for PixelCraft editor.
+     * Mod dir first, falls back to active-mod assets.
      */
     protected Response handleTextureGet(String filePath) {
-        // This method should be implemented in the platform-specific subclass
-        // For now, return a not found response
-        return newFixedLengthResponse(Response.Status.NOT_IMPLEMENTED, "application/json", "{}");
+        try {
+            GLog.debug("Handling texture get request for: " + filePath);
+
+            if (!isSafeResourcePath(filePath)) {
+                GLog.w("Blocked path traversal attempt on /api/get_texture: " + filePath);
+                return forbiddenPath();
+            }
+
+            // Create the full path for the file
+            String fullPath = ModdingMode.activeMod() + "/" + filePath;
+            GLog.debug("Full file path: " + fullPath);
+
+            byte[] fileBytes;
+            // First, check if the file exists in the mod directory
+            File textureFile = FileSystem.getExternalStorageFile(fullPath);
+
+            if (textureFile.exists()) {
+                // File exists in mod directory, read from there
+                fileBytes = new byte[(int) textureFile.length()];
+                try (FileInputStream fis = new FileInputStream(textureFile)) {
+                    fis.read(fileBytes);
+                }
+            } else {
+                // File doesn't exist in mod directory, try to read from assets via ModdingMode
+                try (InputStream fis = ModdingMode.getInputStream(filePath)) {
+                    if (fis == null) {
+                        GLog.debug("Texture file does not exist in mod directory or assets: " + fullPath);
+                        return newFixedLengthResponse(Response.Status.NOT_FOUND, "application/json",
+                            "{\"error\":\"File not found: " + filePath + "\"}");
+                    }
+
+                    // Read all bytes from input stream
+                    ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+                    int nRead;
+                    byte[] data = new byte[1024];
+                    while ((nRead = fis.read(data, 0, data.length)) != -1) {
+                        buffer.write(data, 0, nRead);
+                    }
+                    fileBytes = buffer.toByteArray();
+                }
+            }
+
+            // Create a JSON response with the base64 content
+            JSONObject jsonResponse = new JSONObject();
+            jsonResponse.put("name", filePath);
+            jsonResponse.put("image", base64Encode(fileBytes));
+
+            return newFixedLengthResponse(Response.Status.OK, "application/json", jsonResponse.toString());
+
+        } catch (Exception e) {
+            GLog.debug("Texture get failed: " + e.getMessage());
+            e.printStackTrace();
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
+                "{\"error\":\"Failed to get texture file: " + e.getMessage() + "\"}");
+        }
     }
 
 }
