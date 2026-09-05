@@ -377,7 +377,8 @@ public class WebServer extends BaseWebServer {
                 "    </div>" +
                 "</body>" +
                 "</html>",
-                filePath, filePath, filePath, filePath, encodedFilePath, filePath);
+                htmlEscape(filePath), htmlEscape(filePath), getEncodedPath(filePath),
+                htmlEscape(filePath), encodedFilePath, getEncodedPath(filePath));
 
             return newFixedLengthResponse(Response.Status.OK, "text/html", html);
 

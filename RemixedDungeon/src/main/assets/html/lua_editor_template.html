@@ -52,6 +52,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ace.min.js"></script>
 
 <script>
+    // caveman: path injected by the server, JS-escaped - use this var,
+    // never the raw FILE_PATH placeholder, inside script strings
+    const filePath = "{{ESCAPED_FILE_PATH}}";
+
     // 2. Initialize Editor
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai"); // Dark theme
@@ -72,7 +76,7 @@
     };
 
     function loadFileContent() {
-        fetch('/raw/{{FILE_PATH}}')
+        fetch('/raw/' + encodeURIComponent(filePath))
             .then(response => response.text())
             .then(content => {
                 editor.setValue(content);
@@ -129,11 +133,11 @@
 
     function saveCode() {
         var luaCode = editor.getValue();
-        console.log("Saving code to: {{FILE_PATH}}");
+        console.log("Saving code to: " + filePath);
         
         // Prepare data to send to server
         var data = {
-            filePath: "{{FILE_PATH}}",
+            filePath: filePath,
             content: luaCode
         };
 

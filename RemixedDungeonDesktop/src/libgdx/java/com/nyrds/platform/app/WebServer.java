@@ -142,47 +142,32 @@ public class WebServer extends BaseWebServer {
             // List directories first
             for (String name : directories) {
                 String fullPath = name; // For root, path is just the name
-                dirContent.append(Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>", fullPath, name));
+                dirContent.append(Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>", getEncodedPath(fullPath), htmlEscape(name)));
             }
             // Then list files
             for (String name : files) {
                 String fullPath = name; // For root, path is just the name
                 if (name.toLowerCase().endsWith(".json")) {
                     // For JSON files, add both download and edit links
-                    String encodedPath2;
-                    try {
-                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
-                    } catch (Exception e) {
-                        encodedPath2 = fullPath; // Fallback if encoding fails
-                    }
-                    dirContent.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>", fullPath, name, encodedPath2));
+                    String encodedPath2 = getEncodedPath(fullPath);
+                    dirContent.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>", encodedPath2, htmlEscape(name), encodedPath2));
                 } else if (name.toLowerCase().endsWith(".lua")) {
                     // For Lua files, add both download and edit links
-                    String encodedPath2;
-                    try {
-                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
-                    } catch (Exception e) {
-                        encodedPath2 = fullPath; // Fallback if encoding fails
-                    }
-                    dirContent.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", fullPath, name, encodedPath2, fullPath));
+                    String encodedPath2 = getEncodedPath(fullPath);
+                    dirContent.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", encodedPath2, htmlEscape(name), encodedPath2, encodedPath2));
                 } else if (name.toLowerCase().endsWith(".png") || name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".jpeg")) {
                     // For image files, add download, preview, and edit links
-                    String encodedPath2;
-                    try {
-                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
-                    } catch (Exception e) {
-                        encodedPath2 = fullPath; // Fallback if encoding fails
-                    }
-                    dirContent.append(Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>", fullPath, name, encodedPath2, encodedPath2));
+                    String encodedPath2 = getEncodedPath(fullPath);
+                    dirContent.append(Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>", encodedPath2, htmlEscape(name), encodedPath2, encodedPath2));
                 } else {
                     // For other files, just show download link
-                    dirContent.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", fullPath, name));
+                    dirContent.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", getEncodedPath(fullPath), htmlEscape(name)));
                 }
             }
         }
 
         Map<String, String> replacements = new HashMap<>();
-        replacements.put("MOD_NAME", ModdingMode.activeMod());
+        replacements.put("MOD_NAME", htmlEscape(ModdingMode.activeMod()));
 
         // For the root directory, use empty string for upload path
         try {
@@ -207,7 +192,7 @@ public class WebServer extends BaseWebServer {
             if (upOneLevel.isEmpty()) {
                 upOneLevelLink = "<p><a href=\"/list\">..</a></p>";
             } else {
-                upOneLevelLink = Utils.format("<p><a href=\"/fs/%s/\">..</a></p>", upOneLevel);
+                upOneLevelLink = Utils.format("<p><a href=\"/fs/%s/\">..</a></p>", getEncodedPath(upOneLevel));
             }
         } else {
             upOneLevelLink = "<p><a href=\"/list\">..</a></p>";
@@ -241,51 +226,36 @@ public class WebServer extends BaseWebServer {
             for (String name : directories) {
                 String fullPath = directoryPath.isEmpty() ? name : directoryPath + "/" + name;
                 dirListing.append(Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>",
-                    fullPath, name));
+                    getEncodedPath(fullPath), htmlEscape(name)));
             }
             // Then list files
             for (String name : files) {
                 String fullPath = directoryPath.isEmpty() ? name : directoryPath + "/" + name;
                 if (name.toLowerCase().endsWith(".json")) {
                     // For JSON files, add both download and edit links
-                    String encodedPath2;
-                    try {
-                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
-                    } catch (Exception e) {
-                        encodedPath2 = fullPath; // Fallback if encoding fails
-                    }
+                    String encodedPath2 = getEncodedPath(fullPath);
                     dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>",
-                        fullPath, name, encodedPath2));
+                        encodedPath2, htmlEscape(name), encodedPath2));
                 } else if (name.toLowerCase().endsWith(".lua")) {
                     // For Lua files, add both download and edit links
-                    String encodedPath2;
-                    try {
-                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
-                    } catch (Exception e) {
-                        encodedPath2 = fullPath; // Fallback if encoding fails
-                    }
+                    String encodedPath2 = getEncodedPath(fullPath);
                     dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>",
-                        fullPath, name, encodedPath2, fullPath));
+                        encodedPath2, htmlEscape(name), encodedPath2, encodedPath2));
                 } else if (name.toLowerCase().endsWith(".png") || name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".jpeg")) {
                     // For image files, add download, preview, and edit links
-                    String encodedPath2;
-                    try {
-                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
-                    } catch (Exception e) {
-                        encodedPath2 = fullPath; // Fallback if encoding fails
-                    }
+                    String encodedPath2 = getEncodedPath(fullPath);
                     dirListing.append(Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>",
-                        fullPath, name, encodedPath2, encodedPath2));
+                        encodedPath2, htmlEscape(name), encodedPath2, encodedPath2));
                 } else {
                     // For other files, just show download link
                     dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>",
-                        fullPath, name));
+                        getEncodedPath(fullPath), htmlEscape(name)));
                 }
             }
         }
 
         Map<String, String> replacements = new HashMap<>();
-        replacements.put("DIRECTORY_PATH", directoryPath.isEmpty() ? "/" : directoryPath);
+        replacements.put("DIRECTORY_PATH", htmlEscape(directoryPath.isEmpty() ? "/" : directoryPath));
 
         // For the template's upload link in header, use the directory path with potential slash added
         String templateUploadPath = directoryPath.isEmpty() ? "" : directoryPath;
@@ -304,46 +274,14 @@ public class WebServer extends BaseWebServer {
     }
 
     @Override
-    public String serveUploadForm(String message, String currentPath) {
-        String template = loadTemplate("upload_form_template.html");
-
-        Map<String, String> replacements = new HashMap<>();
-
-        // Prepare message div
-        String messageDiv = "";
-        if (message != null && !message.isEmpty()) {
-            if (message.startsWith("ERROR:")) {
-                messageDiv = "<div class=\"error\">" + message.substring(6) + "</div>";
-            } else {
-                messageDiv = "<div class=\"success\">" + message + "</div>";
-            }
-        }
-        replacements.put("MESSAGE_DIV", messageDiv);
-
-        // Prepare form action and path display
-        String formAction = "/upload";
-        String pathDisplay = currentPath != null ? currentPath : "";
-        replacements.put("FORM_ACTION", formAction);
-        replacements.put("CURRENT_PATH", pathDisplay);
-
-        // Prepare upload link
-        String uploadLink = currentPath != null && !currentPath.isEmpty()
-            ? Utils.format("<p><a href=\"/fs/%s/\">Back to directory</a></p>", currentPath)
-            : "<p><a href=\"/list\">Back to main directory</a></p>";
-        replacements.put("UPLOAD_LINK", uploadLink);
-
-        return replacePlaceholders(template, replacements);
-    }
-
-    @Override
     public String serveJsonEditor(String filePath) {
         String template = loadTemplate("json_editor_template.html");
 
         String uploadPath = filePath.contains("/") ? filePath.substring(0, filePath.lastIndexOf("/")) : "";
 
         Map<String, String> replacements = new HashMap<>();
-        replacements.put("UPLOAD_PATH", uploadPath);
-        replacements.put("FILE_PATH", filePath);
+        replacements.put("UPLOAD_PATH", htmlEscape(uploadPath));
+        replacements.put("FILE_PATH", htmlEscape(filePath));
         replacements.put("ESCAPED_FILE_PATH", javaScriptEscape(filePath));
 
         return replacePlaceholders(template, replacements);
@@ -664,8 +602,8 @@ public class WebServer extends BaseWebServer {
         String uploadPath = filePath.contains("/") ? filePath.substring(0, filePath.lastIndexOf("/")) : "";
 
         Map<String, String> replacements = new HashMap<>();
-        replacements.put("UPLOAD_PATH", uploadPath);
-        replacements.put("FILE_PATH", filePath);
+        replacements.put("UPLOAD_PATH", htmlEscape(uploadPath));
+        replacements.put("FILE_PATH", htmlEscape(filePath));
         replacements.put("ESCAPED_FILE_PATH", javaScriptEscape(filePath));
 
         return replacePlaceholders(template, replacements);
@@ -717,7 +655,8 @@ public class WebServer extends BaseWebServer {
                 "    </div>" +
                 "</body>" +
                 "</html>",
-                filePath, filePath, filePath, filePath, encodedFilePath, filePath);
+                htmlEscape(filePath), htmlEscape(filePath), getEncodedPath(filePath),
+                htmlEscape(filePath), encodedFilePath, getEncodedPath(filePath));
 
             return newFixedLengthResponse(Response.Status.OK, "text/html", html);
 

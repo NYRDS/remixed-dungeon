@@ -240,7 +240,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
             if (upOneLevel.isEmpty()) {
                 upOneLevelLink = "<p><a href=\"/list\">..</a></p>";
             } else {
-                upOneLevelLink = Utils.format("<p><a href=\"/fs/%s/\">..</a></p>", upOneLevel);
+                upOneLevelLink = Utils.format("<p><a href=\"/fs/%s/\">..</a></p>", getEncodedPath(upOneLevel));
             }
         }
 
@@ -287,66 +287,40 @@ public abstract class BaseWebServer extends NanoHTTPD {
             for (String name : directories) {
                 String fullPath = directoryPath.isEmpty() ? name : directoryPath + "/" + name;
                 dirListing.append(Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>",
-                    fullPath, name));
+                    getEncodedPath(fullPath), htmlEscape(name)));
             }
             // Then list files
             for (String name : files) {
                 String fullPath = directoryPath.isEmpty() ? name : directoryPath + "/" + name;
                 if (name.toLowerCase().endsWith(".json")) {
                     // For JSON files, add both download and edit links
-                    String encodedPath2;
-                    try {
-                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
-                    } catch (Exception e) {
-                        encodedPath2 = fullPath; // Fallback if encoding fails
-                    }
+                    String encodedPath2 = getEncodedPath(fullPath);
                     dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>",
-                        fullPath, name, encodedPath2));
+                        encodedPath2, htmlEscape(name), encodedPath2));
                 } else if (name.toLowerCase().endsWith(".lua")) {
                     // For Lua files, add both download and edit links
-                    String encodedPath2;
-                    try {
-                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
-                    } catch (Exception e) {
-                        encodedPath2 = fullPath; // Fallback if encoding fails
-                    }
+                    String encodedPath2 = getEncodedPath(fullPath);
                     dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>",
-                        fullPath, name, encodedPath2, fullPath));
+                        encodedPath2, htmlEscape(name), encodedPath2, encodedPath2));
                 } else if (name.toLowerCase().endsWith(".png") || name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".jpeg")) {
                     // For image files, add download, preview, and edit links
-                    String encodedPath2;
-                    try {
-                        encodedPath2 = URLEncoder.encode(fullPath, "UTF-8");
-                    } catch (Exception e) {
-                        encodedPath2 = fullPath; // Fallback if encoding fails
-                    }
+                    String encodedPath2 = getEncodedPath(fullPath);
                     dirListing.append(Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>",
-                        fullPath, name, encodedPath2, encodedPath2));
+                        encodedPath2, htmlEscape(name), encodedPath2, encodedPath2));
                 } else {
                     // For non-JSON files, just show download link
                     dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>",
-                        fullPath, name));
+                        getEncodedPath(fullPath), htmlEscape(name)));
                 }
             }
         }
 
         // Prepare replacements for the template
         return generateHtmlWithTemplate("directory_listing_template.html",
-            "{{DIRECTORY_PATH}}", directoryPath.isEmpty() ? "/" : directoryPath,
+            "{{DIRECTORY_PATH}}", htmlEscape(directoryPath.isEmpty() ? "/" : directoryPath),
             "{{ENCODED_UPLOAD_PATH}}", getEncodedPath(directoryPath),
             "{{UP_ONE_LEVEL_LINK}}", upOneLevelLink,
             "{{DIRECTORY_LISTING}}", dirListing.toString());
-    }
-
-    /**
-     * Helper method to get encoded path for URL
-     */
-    private String getEncodedPath(String path) {
-        try {
-            return URLEncoder.encode(path, "UTF-8");
-        } catch (Exception e) {
-            return path; // Fallback if encoding fails
-        }
     }
 
     /**
@@ -357,9 +331,9 @@ public abstract class BaseWebServer extends NanoHTTPD {
         String messageDiv = "";
         if (message != null && !message.isEmpty()) {
             if (message.startsWith("ERROR:")) {
-                messageDiv = "<div class=\"error\">" + message.substring(6) + "</div>";
+                messageDiv = "<div class=\"error\">" + htmlEscape(message.substring(6)) + "</div>";
             } else {
-                messageDiv = "<div class=\"success\">" + message + "</div>";
+                messageDiv = "<div class=\"success\">" + htmlEscape(message) + "</div>";
             }
         }
 
@@ -370,16 +344,16 @@ public abstract class BaseWebServer extends NanoHTTPD {
         } else {
             StringBuilder formContent = new StringBuilder();
             formContent.append("<div class=\"upload-form\">");
-            formContent.append("<h2>Upload to Mod: ").append(ModdingMode.activeMod()).append("</h2>");
+            formContent.append("<h2>Upload to Mod: ").append(htmlEscape(ModdingMode.activeMod())).append("</h2>");
             if (currentPath != null && !currentPath.isEmpty()) {
-                formContent.append("<h3>Current Directory: ").append(currentPath).append("</h3>");
+                formContent.append("<h3>Current Directory: ").append(htmlEscape(currentPath)).append("</h3>");
             } else {
                 formContent.append("<h3>Current Directory: Root</h3>");
             }
             formContent.append("<form method=\"post\" action=\"/upload\" enctype=\"multipart/form-data\">");
             // Make sure we handle null paths
             String safePath = (currentPath != null) ? currentPath : "";
-            formContent.append("<input type=\"hidden\" name=\"path\" value=\"").append(safePath).append("\">");
+            formContent.append("<input type=\"hidden\" name=\"path\" value=\"").append(htmlEscape(safePath)).append("\">");
             formContent.append("<label for=\"file\">Select file to upload:</label><br>");
             formContent.append("<input type=\"file\" name=\"file\" id=\"file\" required><br>");
             formContent.append("<button type=\"submit\">Upload File</button>");
@@ -400,8 +374,8 @@ public abstract class BaseWebServer extends NanoHTTPD {
         String uploadPath = filePath.contains("/") ? filePath.substring(0, filePath.lastIndexOf("/")) : "";
 
         return generateHtmlWithTemplate("json_editor_template.html",
-            "{{UPLOAD_PATH}}", uploadPath,
-            "{{FILE_PATH}}", filePath,
+            "{{UPLOAD_PATH}}", htmlEscape(uploadPath),
+            "{{FILE_PATH}}", htmlEscape(filePath),
             "{{ESCAPED_FILE_PATH}}", javaScriptEscape(filePath));
     }
 
@@ -412,8 +386,8 @@ public abstract class BaseWebServer extends NanoHTTPD {
         String uploadPath = filePath.contains("/") ? filePath.substring(0, filePath.lastIndexOf("/")) : "";
 
         return generateHtmlWithTemplate("lua_editor_template.html",
-            "{{UPLOAD_PATH}}", uploadPath,
-            "{{FILE_PATH}}", filePath,
+            "{{UPLOAD_PATH}}", htmlEscape(uploadPath),
+            "{{FILE_PATH}}", htmlEscape(filePath),
             "{{ESCAPED_FILE_PATH}}", javaScriptEscape(filePath));
     }
 
@@ -438,6 +412,43 @@ public abstract class BaseWebServer extends NanoHTTPD {
                   .replace("\r", "\\r")
                   .replace("\t", "\\t")
                   .replace("</", "<\\/"); // Prevent breaking out of script tags
+    }
+
+    /**
+     * caveman: every user-controlled string (query params, mod file names)
+     * lands in server-generated HTML - escape at the substitution point.
+     */
+    protected static String htmlEscape(String str) {
+        if (str == null) {
+            return "";
+        }
+        return str.replace("&", "&amp;")
+                  .replace("<", "&lt;")
+                  .replace(">", "&gt;")
+                  .replace("\"", "&quot;")
+                  .replace("'", "&#39;");
+    }
+
+    /**
+     * caveman: file names land in a Content-Disposition quoted-string -
+     * quotes, backslashes and control chars would break the header.
+     */
+    protected static String headerFilename(String path) {
+        if (path == null) {
+            return "file";
+        }
+        return path.replace("\"", "_").replace("\\", "_").replaceAll("\\p{Cntrl}", "_");
+    }
+
+    /**
+     * Helper method to get encoded path for URL
+     */
+    protected static String getEncodedPath(String path) {
+        try {
+            return URLEncoder.encode(path, "UTF-8");
+        } catch (Exception e) {
+            return path; // Fallback if encoding fails
+        }
     }
 
     /**
@@ -510,10 +521,10 @@ public abstract class BaseWebServer extends NanoHTTPD {
             for (String name : directories) {
                 if(path.isEmpty()) {
                     GLog.debug("Generating directory link for root directory: " + name);
-                    msg.append(Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>", name, name));
+                    msg.append(Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>", getEncodedPath(name), htmlEscape(name)));
                 } else {
                     String fullPath = path + "/" + name; // Proper path for accessing the directory
-                    msg.append(Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>", fullPath, name));
+                    msg.append(Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>", getEncodedPath(fullPath), htmlEscape(name)));
                 }
             }
 
@@ -521,49 +532,29 @@ public abstract class BaseWebServer extends NanoHTTPD {
             for (String name : files) {
                 if(path.isEmpty()) {
                     if (name.toLowerCase().endsWith(".json")) {
-                        String encodedPath1;
-                        try {
-                            encodedPath1 = URLEncoder.encode(name, "UTF-8");
-                        } catch (Exception e) {
-                            encodedPath1 = name; // Fallback if encoding fails
-                        }
-                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", name, name, encodedPath1, name));
+                        String encodedPath1 = getEncodedPath(name);
+                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", encodedPath1, htmlEscape(name), encodedPath1, encodedPath1));
                     } else if (name.toLowerCase().endsWith(".lua")) {
-                        String encodedPath1;
-                        try {
-                            encodedPath1 = URLEncoder.encode(name, "UTF-8");
-                        } catch (Exception e) {
-                            encodedPath1 = name; // Fallback if encoding fails
-                        }
-                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", name, name, encodedPath1, name));
+                        String encodedPath1 = getEncodedPath(name);
+                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", encodedPath1, htmlEscape(name), encodedPath1, encodedPath1));
                     } else {
-                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", name, name));
+                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", getEncodedPath(name), htmlEscape(name)));
                     }
                 } else {
                     String fullPath = path + "/" + name; // Proper path for accessing the file
                     if (name.toLowerCase().endsWith(".json")) {
-                        String encodedPath;
-                        try {
-                            encodedPath = URLEncoder.encode(fullPath, "UTF-8");
-                        } catch (Exception e) {
-                            encodedPath = fullPath; // Fallback if encoding fails
-                        }
-                        // FIXED: Show just the filename, but use full path for href
+                        String encodedPath = getEncodedPath(fullPath);
+                        // Show just the filename, but use full path for href
                         msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>",
-                            fullPath, name, encodedPath, fullPath));
+                            encodedPath, htmlEscape(name), encodedPath, encodedPath));
                     } else if (name.toLowerCase().endsWith(".lua")) {
-                        String encodedPath;
-                        try {
-                            encodedPath = URLEncoder.encode(fullPath, "UTF-8");
-                        } catch (Exception e) {
-                            encodedPath = fullPath; // Fallback if encoding fails
-                        }
-                        // FIXED: Show just the filename, but use full path for href
+                        String encodedPath = getEncodedPath(fullPath);
+                        // Show just the filename, but use full path for href
                         msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>",
-                            fullPath, name, encodedPath, fullPath));
+                            encodedPath, htmlEscape(name), encodedPath, encodedPath));
                     } else {
-                        // FIXED: Show just the filename, but use full path for href
-                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", fullPath, name));
+                        // Show just the filename, but use full path for href
+                        msg.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", getEncodedPath(fullPath), htmlEscape(name)));
                     }
                 }
             }
@@ -623,7 +614,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     // Actual download parameter handling will be done in the actual serve method that receives the session
                     InputStream fis = ModdingMode.getInputStream(file);
                     Response response = newChunkedResponse(Response.Status.OK, "application/octet-stream", fis);
-                    response.addHeader("Content-Disposition", "attachment; filename=\"" + file + "\"");
+                    response.addHeader("Content-Disposition", "attachment; filename=\"" + headerFilename(file) + "\"");
                     return response;
                 } catch (Exception e) {
                     GLog.w("Error serving file " + file + ": " + e.getMessage());
@@ -663,8 +654,13 @@ public abstract class BaseWebServer extends NanoHTTPD {
             Map<String, String> files = new HashMap<>();
             session.parseBody(files);
 
-            // Get the uploaded file
-            String filename = session.getParameters().get("file").get(0);
+            // Get the uploaded file - missing param used to NPE into a 500
+            List<String> fileParams = session.getParameters().get("file");
+            if (fileParams == null || fileParams.isEmpty() || fileParams.get(0) == null) {
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/html",
+                    serveUploadForm("ERROR: No file selected.", ""));
+            }
+            String filename = fileParams.get(0);
             GLog.debug("Uploaded filename: " + filename);
 
             String path = "";
@@ -1130,7 +1126,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     serveRoot());
             }
 
-            if(uri.startsWith("/list")) {
+            if(uri.equals("/list")) {
                 return newFixedLengthResponse(Response.Status.OK, "text/html",
                     serveList());
             }
@@ -1360,7 +1356,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
                     try {
                         InputStream fis = ModdingMode.getInputStream(file);
                         Response response = newChunkedResponse(Response.Status.OK, "application/octet-stream", fis);
-                        response.addHeader("Content-Disposition", "attachment; filename=\"" + file + "\"");
+                        response.addHeader("Content-Disposition", "attachment; filename=\"" + headerFilename(file) + "\"");
                         return response;
                     } catch (Exception e) {
                         GLog.w("Error serving raw file " + file + ": " + e.getMessage());
