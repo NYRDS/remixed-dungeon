@@ -174,6 +174,7 @@ def source_layers(hero_class, sub_class, armors):
 def convert_pairs(pairs, out_dir, box, into_assets, verbose=False, tag=""):
     total = 0
     for src, dst, kind in pairs:
+        overlays = ()
         if kind == "body":
             bt = os.path.basename(dst)[:-4]
             hands = [f"{MODERN}body/hands/{bt}_none_{hand}.png" for hand in ("left", "right")]
@@ -188,11 +189,21 @@ def convert_pairs(pairs, out_dir, box, into_assets, verbose=False, tag=""):
             shutil.copyfile(os.path.join(assets_dir(), dst), d)
             n = 0
         else:
+            # armor torso sheets get the shoulder (sleeve) layers baked in -
+            # modern renders sleeves as separate shoulder overlays, retro
+            # bakes them into the armor sheet. Armors without shoulder
+            # files (robes) are sleeveless in-game too.
+            if kind == "layer" and "/armor/" in dst and "helmet" not in dst and "collar" not in dst:
+                name = os.path.basename(dst)[:-4]
+                overlays = [f"{MODERN}armor/shoulders/{name}_{hand}.png" for hand in ("left", "right")]
+                overlays = [o for o in overlays if os.path.exists(os.path.join(assets_dir(), o))]
             n = convert_sheet(src, dst, out_dir, box, into_assets,
-                              empty_frames=DIE_FRAMES)
+                              overlays=overlays, empty_frames=DIE_FRAMES)
         total += 1
         if verbose:
             note = {"body": " (hands baked)", "death": " (copied from retro)"}.get(kind, "")
+            if overlays:
+                note += " (shoulders baked)"
             print(f"{tag}{src} -> {dst} ({n} frames){note}")
     return total
 
