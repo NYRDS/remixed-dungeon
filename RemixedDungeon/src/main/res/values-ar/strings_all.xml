@@ -367,6 +367,7 @@
     <string name="FireElemental_Name_Objective">عنصر النار</string>
     <string name="Fire_Info">هنا نار مشتعلة.</string>
     <string name="Fire_Name_1">مشتعل %s</string>
+    <string name="Fire_Name_2">مشتعل %s</string>
     <string name="Firebloom_Desc">عندما يلمس شيء زهرة النار، تشتعل فيها النيران.</string>
     <string name="Firebloom_Name">زهرة النار</string>
     <string name="FortuneTellerNPC_Gender">feminine</string>
@@ -851,6 +852,7 @@
     <string name="ShadowLord_Desc">هذا المخلوق مصنوع من شر خالص وظلام لا يُخترق. يعتقد الكثيرون أنه الإله القديم نفسه، نظراً لمدى قوته. بينما يفترض آخرون أنه مجرد حارس لأروقة الإله القديم.</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Name_Objective">سيد الظلال</string>
+    <string name="Shadow_Desc">تتجول الظلال بصمت عبر أنقاض السجن القديم، ولا تظهر للمغامرين إلا في مناسبات نادرة، عادةً في مغامرتهم الأخيرة.</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">ظل</string>
     <string name="ShadowsBuff_Name">اندمج في الظلال</string>
@@ -1001,6 +1003,7 @@
     <string name="Viscosity_Txt">%s من اللزوجة</string>
     <string name="WandMaker_Defense">امتص</string>
     <string name="WandMaker_Desc">هذا الشيخ الوقور لكنه قوي البنية يبدو عليه الارتباك الطفيف. إنه محمي بدرع سحري.</string>
+    <string name="WandMaker_Dust1">يا لها من مفاجأة سارة أن ألتقي بشخص لائق في مثل هذا المكان! جئت إلى هنا بحثاً عن مكون نادر - _غبار الجثث_. يمكن جمعه من الهياكل العظمية المتوفرة بكثرة في الزنزانة. بصفتي مستخدماً للسحر، أستطيع الدفاع عن نفسي ضد الوحوش المحلية، لكنني أضيع بسهولة بالغة، وهذا محرج جداً. هل يمكن أن تساعدني؟ سأكون سعيداً بدفع أجر خدمتك بإحدى أفضل عصاي السحرية.</string>
     <string name="WandMaker_RotberryDesc">توت هذا الشجيرة طعمه كالموت الحلو، الحلو.</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="WandOfAvalanche_Info1">سحقت نفسك بعصاك الخاصة من نوع عصا الانهيار الجليدي...</string>
@@ -1242,6 +1245,7 @@
     <string name="town_deco_wall_brazier_name">مجمرة</string>
     <string name="town_deco_wall_desc">جدار بسيط مصنوع من جذوع الخشب.</string>
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
+    <string name="town_deco_wardrobe_desc">خزانة خشبية كبيرة.</string>
     <string name="town_deco_window_name">نافذة</string>
     <string name="town_deco_wooden_bench_desc">مقعد، مصنوع من الخشب، يبدو غير مريح للجلوس.</string>
     <string name="town_deco_wooden_bench_name">مجلس خشبي</string>
@@ -1251,6 +1255,10 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
 
 
 

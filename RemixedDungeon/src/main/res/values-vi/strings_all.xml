@@ -716,6 +716,7 @@
     <string name="NecromancerArmor_Name">Áo giáp xương</string>
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">À! Thật một cảnh hiếm! Một người bạn đồng hành phiêu lưu không chỉ là một xác chết. Hầu như không thể tin được! Ô... Xin lỗi, đôi khi tôi quá hào hứng. Bạn thấy, tôi là một pháp sư chết chóc. Và dù nghiên cứu xác chết và chính cái chết là nghề nghiệp của tôi, nhưng nhìn thấy những điều giống nhau lặp đi lặp lại cuối cùng cũng cực kỳ mệt mỏi. Mặt khác, đó chính là lý do tôi ở đây. Theo tính toán của tôi, chỉ trong vài tuần nữa, ở đâu đó trong hầm ngục này, sẽ xảy ra một chuyện kỳ diệu. _Necropolis_, một thành phố cổ của người chết sẽ mở cửa. Và... tôi không thể nói thêm, tôi đã lãng phí đủ thời gian. Tôi cần chuẩn bị, _hãy quay lại sau_.</string>
+    <string name="NecromancerNPC_Intro2">À! Một bạn đồng hành phiêu lưu không chỉ là một xác chết vô tri. Chẳng thể tin nổi! Ô... xin lỗi, đôi khi tôi hơi quá hứng phấn. Cậu thấy, chính tôi là một pháp sư phục sinh. Dù việc nghiên cứu xác chết và chính cái chết được chúng tôi coi trọng, nhưng sự đơn điệu này sớm muộn cũng khiến ai đó chán nản. Mặt khác đó chính là lý do tôi ở đây. Hôm kia có chuyện lớn xảy ra! _Necropolis_, một thành phố cổ của người chết đã mở cửa cho chúng ta ngắm nhìn. Thực lòng mà nói, chúng ta đang đứng ngay trước cánh cửa ấy. Và... cậu biết sao, hãy lấy chìa khóa và đi trước đi, cậu thích những phiêu lưu, phải không? Còn tôi sẽ theo sau... chỉ cần chuẩn bị chút đã.</string>
     <string name="NecromancerNPC_Name">pháp sư chết chóc</string>
     <string name="NecromancerRobe_Info">Chiếc áo choàng này sẽ cho phép Necromancer triệu hồi Deathling với chi phí 5 linh hồn. Deathling là một tỳ phu bất tử sẽ mạnh lên cùng với chủ nhân của nó.</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: giới hạn triệu hồi đã đạt đến (Hiện tại tối đa: %d)!</string>
@@ -849,12 +850,14 @@
     <string name="Rat_Name_Objective">chuột túi</string>
     <string name="Ration_Info">Không có gì đặc sắc: thịt khô, vài chiếc bánh quy - những thứ như vậy.</string>
     <string name="Ration_Name">phần ăn khô</string>
+    <string name="RawFish_Info">Cá sống, ăn tại rủi ro của bạn</string>
     <string name="RawFish_Name">cá sống</string>
     <string name="RawFish_Taste">Vị cá!</string>
     <string name="RegenerationBuff_Info">Chức năng hồi phục tự nhiên được thể hiện dưới dạng buff để làm cho mọi thứ dễ dàng hơn.</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Trò chơi của chúng tôi đã bị lỗi...\n Xin lỗi.\nVui lòng gửi báo cáo lỗi để giúp chúng tôi khắc phục.</string>
     <string name="ResultDescriptions_Burning">Bị thiêu rụi trên cấp độ %d</string>
     <string name="ResultDescriptions_Immured">Bị vùi kín trong đá ở tầng %d</string>
+    <string name="ResultDescriptions_Mob">Bị giết bởi %1$s ở tầng %2$d</string>
     <string name="ResultDescriptions_Necromancy">Hết sức lực khi cố gắng hồi sinh xác ở tầng %d</string>
     <string name="ResultDescriptions_Poison">Chết vì nhiễm độc ở cấp độ %d</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
@@ -1158,6 +1161,7 @@
     <string name="WandOfSlowness_Info1">Không có gì xảy ra.</string>
     <string name="WandOfTelekinesis_Name">Gậy Thôi Miên</string>
     <string name="WandOfTeleportation_Info2">không có gì xảy ra</string>
+    <string name="WandOfTeleportation_Name">Đũa phép Dịch chuyển</string>
     <string name="Wand_ACZap">ZAP</string>
     <string name="Wand_Damage">Khi cây đũa này được sử dụng như vũ khí cận chiến, sát thương trung bình là %d điểm mỗi lần đánh.</string>
     <string name="Wand_Name">%s phép thuật</string>
@@ -1439,6 +1443,12 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
 
 
 

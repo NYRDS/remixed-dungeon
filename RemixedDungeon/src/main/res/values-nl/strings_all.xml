@@ -202,6 +202,7 @@
     <string name="Carcass_Kick">Deze %s is volledig dood, geen reden om het te schoppen.</string>
     <string name="Carcass_Necromancy">Je hebt het lijk van %s opgewekt!</string>
     <string name="Carcass_SelectItem">Selecteer een voorwerp</string>
+    <string name="Carcass_TooFarToDissect">Je moet dichterbij zijn om de karkas te ontleden.</string>
     <string name="Caves_TileDescEntrance">De ladder leidt omhoog naar het bovenste deel.</string>
     <string name="Caves_TileDescHighGrass">Reuze paddenstoelen blokkeren het zicht.</string>
     <string name="Caves_TileGrass">fluorescent mos</string>
@@ -218,6 +219,7 @@
     <string name="ChampionOfEarthBuff_Name">Kampioen van de Aarde</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Doordrenkt met de woede van de vlammen, versterkt deze eigenschap de felheid en gevechtskracht van het wezen. De Kampioen van het Vuur doemt op als een geduchte tegenstander, die verwoestende aanvallen ontketent die zijn vijanden in verzengende vlammen hullen, en angst inboezemt bij allen die het wagen zich tegen hem te verzetten.</string>
     <string name="ChampionOfFireBuff_Name">Kampioen van Vuur</string>
+    <string name="ChaosArmor_Info">Deze pantser bestaat uit bloedrode platen die samen zijn genaaid met donkerrode ketens. Ze stralen chaotische energie uit wanneer je ze aanraakt.</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">Een eenhandig zwaard van pure chaos. Het groeit met gevechten zoals zijn tweehandige broer, maar langzamer en tot een lager potentieel — waardoor je linkerhand vrij blijft voor een schild.</string>
     <string name="ChaosBlade_Name">chaoszwaard</string>
@@ -1018,6 +1020,7 @@
     <string name="SociologistNPC_Desc">Deze socioloog is op een heilige zoektocht om publieke meningen te verzamelen</string>
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
     <string name="SociologistNPC_Gender">masculine</string>
+    <string name="SociologistNPC_Name_Objective">Socioloog</string>
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Sorrowmoss_Name">Treurmos</string>
     <string name="SoulShard_Gender">masculine</string>
@@ -1418,6 +1421,7 @@
     <string name="town_deco_church_sign_desc">Het lijkt erop dat er een kerk in dat gebouw zit.</string>
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
     <string name="town_deco_cinema_sign_desc">Het lijkt erop dat er een bioscoop in dat gebouw zit.</string>
+    <string name="town_deco_clock_name">Klok</string>
     <string name="town_deco_common_bed_desc">Gewoon bed.</string>
     <string name="town_deco_common_bed_name">Bed</string>
     <string name="town_deco_counter_name">Toonbank</string>
@@ -1489,6 +1493,10 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
 
 
 
