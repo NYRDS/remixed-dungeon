@@ -1,6 +1,11 @@
 package com.nyrds.platform.app;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.alchemy.AlchemyRecipe;
+import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
+import com.nyrds.pixeldungeon.alchemy.InputItem;
+import com.nyrds.pixeldungeon.alchemy.OutputItem;
+import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.ai.RemoteControlled;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
@@ -26,6 +31,9 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.RegularLevel;
+import com.watabou.pixeldungeon.levels.Room;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
@@ -39,6 +47,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class DebugEndpoints {
@@ -81,25 +92,40 @@ public class DebugEndpoints {
                     "{\"error\":\"Game state not initialized - start a game first\"}");
             }
 
-            // Create a position object for the level
-            Position position = new Position();
-            position.levelId = String.valueOf(level);
+            // caveman: level switch touches scene + actor state - game thread only.
+            // pushUiTaskAndWait runs inline when the loop is down (headless test use).
+            final String finalLevelId = String.valueOf(level);
+            final String[] error = new String[1];
 
-            // Use the createLevel method
-            Level newLevel = DungeonGenerator.createLevel(position);
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    // Create a position object for the level
+                    Position position = new Position();
+                    position.levelId = finalLevelId;
 
-            // Change the level - need to provide the correct parameters
-            Collection<Mob> mobs = new ArrayList<>();
-            if (Dungeon.level != null) {
-                // Collect any existing mobs to transfer to the new level
-                for (Mob mob : Dungeon.level.mobs) {
-                    mobs.add(mob);
+                    // Use the createLevel method
+                    Level newLevel = DungeonGenerator.createLevel(position);
+
+                    // Collect any existing mobs to transfer to the new level
+                    Collection<Mob> mobs = new ArrayList<>();
+                    if (Dungeon.level != null) {
+                        for (Mob mob : Dungeon.level.mobs) {
+                            mobs.add(mob);
+                        }
+                    }
+
+                    // Change the level - use a single integer position instead of array
+                    int startPos = 1 + 1 * newLevel.getWidth(); // Convert x,y to cell position
+                    Dungeon.switchLevel(newLevel, startPos, mobs); // Start at position 1,1
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
                 }
-            }
+            });
 
-            // Change the level - use a single integer position instead of array
-            int startPos = 1 + 1 * newLevel.getWidth(); // Convert x,y to cell position
-            Dungeon.switchLevel(newLevel, startPos, mobs); // Start at position 1,1
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Internal error: %s\"}", error[0]));
+            }
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"message\":\"Changed to level %d\",\"level\":%d}", level, level));
@@ -175,7 +201,7 @@ public class DebugEndpoints {
 
             // caveman: run on game thread like other mutating endpoints.
             // spawnMob touches Actor.all (not thread-safe) and scene sprites.
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             GameLoop.pushUiTask(() -> {
                 try {
                     Mob mob = MobFactory.mobByName(finalMobType);
@@ -198,7 +224,7 @@ public class DebugEndpoints {
                 }
             });
 
-            if (!latch.await(5, java.util.concurrent.TimeUnit.SECONDS)) {
+            if (!latch.await(5, TimeUnit.SECONDS)) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     "{\"error\":\"Timeout waiting for mob creation\"}");
             }
@@ -263,11 +289,28 @@ public class DebugEndpoints {
                 y = cell / Dungeon.level.getWidth();
             }
 
-            // Create the item using the factory
-            Item item = ItemFactory.itemByName(itemType);
+            // caveman: item drop mutates level heaps - game thread only
+            final String finalItemType = itemType;
+            final int finalX = x;
+            final int finalY = y;
+            final String[] error = new String[1];
 
-            // Drop the item at the specified location
-            Dungeon.level.drop(item, x + y * Dungeon.level.getWidth());
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    // Create the item using the factory
+                    Item item = ItemFactory.itemByName(finalItemType);
+
+                    // Drop the item at the specified location
+                    Dungeon.level.drop(item, finalX + finalY * Dungeon.level.getWidth());
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Internal error: %s\"}", error[0]));
+            }
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"message\":\"Created item '%s' at (%d,%d)\",\"itemType\":\"%s\",\"x\":%d,\"y\":%d}",
@@ -309,7 +352,6 @@ public class DebugEndpoints {
 
             // For map type changes, we'll use the DungeonGenerator approach
             // This is a simplified approach - we'll create a position based on the map type
-            Position position = new Position();
 
             // Map the type to a known level ID
             String levelId;
@@ -336,28 +378,44 @@ public class DebugEndpoints {
                     break;
             }
 
-            position.levelId = levelId;
+            // caveman: level switch touches scene + actor state - game thread only
+            final String finalLevelId = levelId;
+            final String finalMapType = mapType;
+            final String[] error = new String[1];
 
-            // Use the createLevel method
-            Level newLevel = DungeonGenerator.createLevel(position);
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    Position position = new Position();
+                    position.levelId = finalLevelId;
 
-            if (newLevel == null) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
-                    String.format("{\"error\":\"Unknown map type: %s\"}", mapType));
-            }
+                    // Use the createLevel method
+                    Level newLevel = DungeonGenerator.createLevel(position);
 
-            // Switch to the new level - need to provide the correct parameters
-            Collection<Mob> mobs = new ArrayList<>();
-            if (Dungeon.level != null) {
-                // Collect any existing mobs to transfer to the new level
-                for (Mob mob : Dungeon.level.mobs) {
-                    mobs.add(mob);
+                    if (newLevel == null) {
+                        error[0] = String.format("Unknown map type: %s", finalMapType);
+                        return;
+                    }
+
+                    // Collect any existing mobs to transfer to the new level
+                    Collection<Mob> mobs = new ArrayList<>();
+                    if (Dungeon.level != null) {
+                        for (Mob mob : Dungeon.level.mobs) {
+                            mobs.add(mob);
+                        }
+                    }
+
+                    // Switch to the new level - use a single integer position instead of array
+                    int startPos = 1 + 1 * newLevel.getWidth(); // Convert x,y to cell position
+                    Dungeon.switchLevel(newLevel, startPos, mobs);
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
                 }
-            }
+            });
 
-            // Switch to the new level - use a single integer position instead of array
-            int startPos = 1 + 1 * newLevel.getWidth(); // Convert x,y to cell position
-            Dungeon.switchLevel(newLevel, startPos, mobs);
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"%s\"}", error[0]));
+            }
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"message\":\"Changed map to type '%s'\",\"mapType\":\"%s\"}",
@@ -394,11 +452,26 @@ public class DebugEndpoints {
                     "{\"error\":\"Hero not initialized - start a game first\"}");
             }
 
-            // Create the item using the factory
-            Item item = ItemFactory.itemByName(itemType);
+            // caveman: inventory collection touches hero state - game thread only
+            final String finalItemType = itemType;
+            final String[] error = new String[1];
 
-            // Give the item to the hero
-            Dungeon.hero.getBelongings().collect(item);
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    // Create the item using the factory
+                    Item item = ItemFactory.itemByName(finalItemType);
+
+                    // Give the item to the hero
+                    Dungeon.hero.getBelongings().collect(item);
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Internal error: %s\"}", error[0]));
+            }
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"message\":\"Gave item '%s' to hero\",\"itemType\":\"%s\"}",
@@ -456,37 +529,54 @@ public class DebugEndpoints {
                     "{\"error\":\"Game state not initialized - start a game first\"}");
             }
 
-            int levelWidth = Dungeon.level.getWidth();
-
-            int cellPos = x + y * levelWidth;
-
-            if ("mob".equalsIgnoreCase(entityType)) {
-                // Spawn a mob
-                Mob mob = MobFactory.mobByName(entityValue);
-
-                // Set the mob's position
-                mob.pos = cellPos;
-
-                // Add the mob to the game
-                Actor.occupyCell(mob);
-
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                    String.format("{\"success\":true,\"message\":\"Spawned mob '%s' at (%d,%d)\",\"entityType\":\"%s\",\"entityValue\":\"%s\",\"x\":%d,\"y\":%d}",
-                        entityValue, x, y, entityType, entityValue, x, y));
-            } else if ("item".equalsIgnoreCase(entityType)) {
-                // Spawn an item
-                Item item = ItemFactory.itemByName(entityValue);
-
-                // Drop the item at the specified location
-                Dungeon.level.drop(item, cellPos);
-
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                    String.format("{\"success\":true,\"message\":\"Spawned item '%s' at (%d,%d)\",\"entityType\":\"%s\",\"entityValue\":\"%s\",\"x\":%d,\"y\":%d}",
-                        entityValue, x, y, entityType, entityValue, x, y));
-            } else {
+            final boolean spawnMob = "mob".equalsIgnoreCase(entityType);
+            final boolean spawnItem = "item".equalsIgnoreCase(entityType);
+            if (!spawnMob && !spawnItem) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
                     String.format("{\"error\":\"Unknown entity type: %s\"}", entityType));
             }
+
+            // caveman: actors + heaps are game-thread state
+            final String finalEntityValue = entityValue;
+            final int finalCellPos = x + y * Dungeon.level.getWidth();
+            final String[] error = new String[1];
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    if (spawnMob) {
+                        // Spawn a mob
+                        Mob mob = MobFactory.mobByName(finalEntityValue);
+
+                        // Set the mob's position
+                        mob.pos = finalCellPos;
+
+                        // Add the mob to the game
+                        Actor.occupyCell(mob);
+                    } else {
+                        // Spawn an item
+                        Item item = ItemFactory.itemByName(finalEntityValue);
+
+                        // Drop the item at the specified location
+                        Dungeon.level.drop(item, finalCellPos);
+                    }
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Internal error: %s\"}", error[0]));
+            }
+
+            if (spawnMob) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                    String.format("{\"success\":true,\"message\":\"Spawned mob '%s' at (%d,%d)\",\"entityType\":\"%s\",\"entityValue\":\"%s\",\"x\":%d,\"y\":%d}",
+                        entityValue, x, y, entityType, entityValue, x, y));
+            }
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"message\":\"Spawned item '%s' at (%d,%d)\",\"entityType\":\"%s\",\"entityValue\":\"%s\",\"x\":%d,\"y\":%d}",
+                    entityValue, x, y, entityType, entityValue, x, y));
         } catch (Exception e) {
             GLog.w("Error in handleDebugSpawnAt: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
@@ -529,8 +619,24 @@ public class DebugEndpoints {
                     String.format("{\"error\":\"Unknown hero class: %s. Valid classes: WARRIOR, MAGE, ROGUE, HUNTRESS, ELF, NECROMANCER, GNOLL, PRIEST, DOCTOR\"}", heroClass));
             }
 
-            // Call the startNewGame method - using the correct method from GameControl
-            GameControl.startNewGame(heroClass, difficulty, false);
+            // caveman: startNewGame swaps Dungeon statics and switches scenes - game thread only
+            final String finalHeroClass = heroClass;
+            final int finalDifficulty = difficulty;
+            final String[] error = new String[1];
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    // Call the startNewGame method - using the correct method from GameControl
+                    GameControl.startNewGame(finalHeroClass, finalDifficulty, false);
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Internal error: %s\"}", error[0]));
+            }
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"message\":\"Started new game with %s\",\"heroClass\":\"%s\",\"difficulty\":%d}",
@@ -808,11 +914,15 @@ public class DebugEndpoints {
 
             // Set the specified stat
             switch (stat.toLowerCase()) {
-                case "hp":
-                    Dungeon.hero.hp(Math.min(value, Dungeon.hero.ht()));
+                case "hp": {
+                    // caveman: hp writes fire UI observers - game thread only
+                    final Hero hero = Dungeon.hero;
+                    final int finalValue = value;
+                    GameLoop.pushUiTaskAndWait(() -> hero.hp(Math.min(finalValue, hero.ht())));
                     return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                         String.format("{\"success\":true,\"message\":\"Set HP to %d\",\"stat\":\"%s\",\"value\":%d}",
                             value, stat, value));
+                }
                 case "max_hp":
                 case "ht":
                     // Note: HT is a private field, so we can't set it directly
@@ -879,38 +989,63 @@ public class DebugEndpoints {
                     "{\"error\":\"Level not initialized - start a game first\"}");
             }
 
-            Mob targetMob = null;
-            
-            if (mobId > 0) {
-                // Find mob by ID
-                for (Mob mob : Dungeon.level.mobs) {
-                    if (mob.getId() == mobId) {
-                        targetMob = mob;
-                        break;
+            // caveman: mob lookup + die() fire death effects and sprites - game thread only
+            final int finalMobId = mobId;
+            final int finalX = x;
+            final int finalY = y;
+            final int[] killedId = new int[1];
+            final boolean[] found = new boolean[1];
+            final String[] error = new String[1];
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    Mob targetMob = null;
+
+                    if (finalMobId > 0) {
+                        // Find mob by ID
+                        for (Mob mob : Dungeon.level.mobs) {
+                            if (mob.getId() == finalMobId) {
+                                targetMob = mob;
+                                break;
+                            }
+                        }
+                    } else if (finalX >= 0 && finalY >= 0) {
+                        // Find mob at the specified coordinates
+                        int cellPos = finalX + finalY * Dungeon.level.getWidth();
+                        for (Mob mob : Dungeon.level.mobs) {
+                            if (mob.pos == cellPos) {
+                                targetMob = mob;
+                                break;
+                            }
+                        }
                     }
-                }
-            } else if (x >= 0 && y >= 0) {
-                // Find mob at the specified coordinates
-                int cellPos = x + y * Dungeon.level.getWidth();
-                for (Mob mob : Dungeon.level.mobs) {
-                    if (mob.pos == cellPos) {
-                        targetMob = mob;
-                        break;
+
+                    if (targetMob == null) {
+                        return;
                     }
+
+                    found[0] = true;
+                    // Kill the mob
+                    targetMob.die(targetMob);
+                    killedId[0] = targetMob.getId();
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
                 }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Internal error: %s\"}", error[0]));
             }
 
-            if (targetMob == null) {
+            if (!found[0]) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
                     String.format("{\"error\":\"No mob found (id=%d or coords=(%d,%d))\"}", mobId, x, y));
             }
 
-            // Kill the mob
-            targetMob.die(targetMob);
-
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"message\":\"Killed mob with id=%d\",\"id\":%d}",
-                    targetMob.getId(), targetMob.getId()));
+                    killedId[0], killedId[0]));
         } catch (Exception e) {
             GLog.w("Error in handleDebugKillMob: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
@@ -953,20 +1088,40 @@ public class DebugEndpoints {
                     "{\"error\":\"Level not initialized - start a game first\"}");
             }
 
-            // Remove item at the specified coordinates
-            int cellPos = x + y * Dungeon.level.getWidth();
+            // caveman: heap destroy mutates level state - game thread only
+            final int finalX = x;
+            final int finalY = y;
+            final boolean[] found = new boolean[1];
+            final String[] error = new String[1];
 
-            // Access the heaps field using reflection
-            Field heapsField = Level.class.getDeclaredField("heaps");
-            heapsField.setAccessible(true);
-            @SuppressWarnings("unchecked")
-            Map<Integer, Heap> heaps = (Map<Integer, Heap>) heapsField.get(Dungeon.level);
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    // Remove item at the specified coordinates
+                    int cellPos = finalX + finalY * Dungeon.level.getWidth();
 
-            // Remove the heap at this location if it exists
-            if (heaps.containsKey(cellPos)) {
-                Heap heap = heaps.get(cellPos);
-                heap.destroy(); // Use destroy() method instead of clear()
-            } else {
+                    // Access the heaps field using reflection
+                    Field heapsField = Level.class.getDeclaredField("heaps");
+                    heapsField.setAccessible(true);
+                    @SuppressWarnings("unchecked")
+                    Map<Integer, Heap> heaps = (Map<Integer, Heap>) heapsField.get(Dungeon.level);
+
+                    // Remove the heap at this location if it exists
+                    if (heaps.containsKey(cellPos)) {
+                        Heap heap = heaps.get(cellPos);
+                        heap.destroy(); // Use destroy() method instead of clear()
+                        found[0] = true;
+                    }
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Internal error: %s\"}", error[0]));
+            }
+
+            if (!found[0]) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
                     String.format("{\"error\":\"No item found at coordinates (%d,%d)\"}", x, y));
             }
@@ -991,21 +1146,36 @@ public class DebugEndpoints {
 
             // Get current depth to recreate the same level
             int currentDepth = Dungeon.depth;
-            
-            // Create a new level of the same type
-            Position position = new Position();
-            position.levelId = String.valueOf(currentDepth);
-            Level newLevel = DungeonGenerator.createLevel(position);
 
-            // Collect existing mobs to transfer to the new level
-            Collection<Mob> mobs = new ArrayList<>();
-            for (Mob mob : Dungeon.level.mobs) {
-                mobs.add(mob);
+            // caveman: level switch touches scene + actor state - game thread only
+            final int finalDepth = currentDepth;
+            final String[] error = new String[1];
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    // Create a new level of the same type
+                    Position position = new Position();
+                    position.levelId = String.valueOf(finalDepth);
+                    Level newLevel = DungeonGenerator.createLevel(position);
+
+                    // Collect existing mobs to transfer to the new level
+                    Collection<Mob> mobs = new ArrayList<>();
+                    for (Mob mob : Dungeon.level.mobs) {
+                        mobs.add(mob);
+                    }
+
+                    // Switch to the new level
+                    int startPos = Dungeon.hero.pos; // Keep hero at the same position
+                    Dungeon.switchLevel(newLevel, startPos, mobs);
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Internal error: %s\"}", error[0]));
             }
-
-            // Switch to the new level
-            int startPos = Dungeon.hero.pos; // Keep hero at the same position
-            Dungeon.switchLevel(newLevel, startPos, mobs);
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"message\":\"Reset level %d\",\"level\":%d}", currentDepth, currentDepth));
@@ -1223,7 +1393,7 @@ public class DebugEndpoints {
             final int finalY = y;
             
             // Use CountDownLatch to wait for action to complete on game thread
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             
             // Schedule the action to run on the main game thread
             GameLoop.pushUiTask(() -> {
@@ -1250,7 +1420,7 @@ public class DebugEndpoints {
             });
 
             // Wait for the action to complete (up to 5 seconds)
-            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            boolean completed = latch.await(5, TimeUnit.SECONDS);
             if (!completed) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     "{\"error\":\"Timeout waiting for cell handling to complete\"}");
@@ -1313,7 +1483,7 @@ public class DebugEndpoints {
             final String finalSpellName = spellName; // Make it final for lambda access
 
             // Use CountDownLatch to wait for spell casting to complete
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             final String[] error = new String[1];
             
             // Schedule the spell casting on the main game thread
@@ -1344,7 +1514,7 @@ public class DebugEndpoints {
             });
 
             // Wait for the spell casting to complete (up to 5 seconds)
-            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            boolean completed = latch.await(5, TimeUnit.SECONDS);
             if (!completed) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     "{\"error\":\"Timeout waiting for spell casting to complete\"}");
@@ -1399,7 +1569,7 @@ public class DebugEndpoints {
             final String finalMobType = mobType;
             final boolean finalOwnedOnly = ownedOnly;
 
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             final String[] error = new String[1];
             final boolean[] success = new boolean[1];
 
@@ -1443,7 +1613,7 @@ public class DebugEndpoints {
                 }
             });
 
-            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            boolean completed = latch.await(5, TimeUnit.SECONDS);
             if (!completed) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     "{\"error\":\"Timeout waiting for spell casting\"}");
@@ -1505,7 +1675,7 @@ public class DebugEndpoints {
             final int finalTargetY = targetY;
             
             // Use CountDownLatch to wait for spell casting to complete
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             final String[] error = new String[1];
             
             // Schedule the spell casting on the main game thread
@@ -1560,7 +1730,7 @@ public class DebugEndpoints {
             });
 
             // Wait for the spell casting to complete (up to 5 seconds)
-            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            boolean completed = latch.await(5, TimeUnit.SECONDS);
             if (!completed) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     "{\"error\":\"Timeout waiting for spell casting to complete\"}");
@@ -1751,12 +1921,12 @@ public class DebugEndpoints {
             final int targetCell = cell;
             
             // Use CountDownLatch to wait for move to complete
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             final String[] error = new String[1];
             
             GameLoop.pushUiTask(() -> {
                 try {
-                    Dungeon.hero.nextAction(new com.nyrds.pixeldungeon.ml.actions.Move(targetCell));
+                    Dungeon.hero.nextAction(new Move(targetCell));
                     GLog.i("Moving hero to cell %d", targetCell);
                 } catch (Exception e) {
                     error[0] = "Error moving hero: " + e.getMessage();
@@ -1767,7 +1937,7 @@ public class DebugEndpoints {
             });
 
             // Wait for the move to complete (up to 5 seconds)
-            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            boolean completed = latch.await(5, TimeUnit.SECONDS);
             if (!completed) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     "{\"error\":\"Timeout waiting for hero move to complete\"}");
@@ -1841,12 +2011,12 @@ public class DebugEndpoints {
             final int targetCell = cell;
             
             // Use CountDownLatch to wait for attack to complete
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             final String[] error = new String[1];
             
             GameLoop.pushUiTask(() -> {
                 try {
-                    Dungeon.hero.nextAction(new com.nyrds.pixeldungeon.ml.actions.Attack(targetMob));
+                    Dungeon.hero.nextAction(new Attack(targetMob));
                     GLog.i("Hero attacking %s at cell %d", targetMob.getEntityKind(), targetCell);
                 } catch (Exception e) {
                     error[0] = "Error attacking: " + e.getMessage();
@@ -1857,7 +2027,7 @@ public class DebugEndpoints {
             });
 
             // Wait for the attack to complete (up to 5 seconds)
-            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            boolean completed = latch.await(5, TimeUnit.SECONDS);
             if (!completed) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     "{\"error\":\"Timeout waiting for attack to complete\"}");
@@ -1905,7 +2075,7 @@ public class DebugEndpoints {
             final int finalTicks = ticks;
             
             // Use CountDownLatch to wait for tick waiting to complete
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             final String[] error = new String[1];
             
             // Schedule tick waiting
@@ -1925,7 +2095,7 @@ public class DebugEndpoints {
             });
 
             // Wait for tick waiting to complete (up to 5 seconds)
-            boolean completed = latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+            boolean completed = latch.await(5, TimeUnit.SECONDS);
             if (!completed) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     "{\"error\":\"Timeout waiting for ticks to complete\"}");
@@ -2051,7 +2221,7 @@ public class DebugEndpoints {
             }
 
             String currentLevelId = DungeonGenerator.getCurrentLevelId();
-            org.json.JSONArray exits = DungeonGenerator.getLevelExits(currentLevelId);
+            JSONArray exits = DungeonGenerator.getLevelExits(currentLevelId);
 
             StringBuilder json = new StringBuilder("{\"levelId\":\"").append(currentLevelId).append("\",\"exits\":[");
 
@@ -2084,7 +2254,7 @@ public class DebugEndpoints {
             }
 
             String currentLevelId = DungeonGenerator.getCurrentLevelId();
-            org.json.JSONArray entrances = DungeonGenerator.getLevelEntrances(currentLevelId);
+            JSONArray entrances = DungeonGenerator.getLevelEntrances(currentLevelId);
 
             StringBuilder json = new StringBuilder("{\"levelId\":\"").append(currentLevelId).append("\",\"entrances\":[");
 
@@ -2135,7 +2305,7 @@ public class DebugEndpoints {
 
             // Verify the target is a valid exit from current level
             String currentLevelId = DungeonGenerator.getCurrentLevelId();
-            org.json.JSONArray exits = DungeonGenerator.getLevelExits(currentLevelId);
+            JSONArray exits = DungeonGenerator.getLevelExits(currentLevelId);
             boolean validExit = false;
             for (int i = 0; i < exits.length(); i++) {
                 if (exits.getString(i).equals(targetLevelId)) {
@@ -2197,7 +2367,7 @@ public class DebugEndpoints {
             }
 
             String currentLevelId = DungeonGenerator.getCurrentLevelId();
-            org.json.JSONArray entrances = DungeonGenerator.getLevelEntrances(currentLevelId);
+            JSONArray entrances = DungeonGenerator.getLevelEntrances(currentLevelId);
 
             if (entrances.length() == 0) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
@@ -2242,12 +2412,12 @@ public class DebugEndpoints {
 
     public static NanoHTTPD.Response handleAlchemyListRecipes(NanoHTTPD.IHTTPSession session) {
         try {
-            List<com.nyrds.pixeldungeon.alchemy.AlchemyRecipe> recipes = com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.getAllRecipes();
+            List<AlchemyRecipe> recipes = AlchemyRecipes.getAllRecipes();
 
             StringBuilder json = new StringBuilder("{\"count\":").append(recipes.size()).append(",\"recipes\":[");
 
             boolean first = true;
-            for (com.nyrds.pixeldungeon.alchemy.AlchemyRecipe recipe : recipes) {
+            for (AlchemyRecipe recipe : recipes) {
                 if (!first) {
                     json.append(",");
                 }
@@ -2257,7 +2427,7 @@ public class DebugEndpoints {
 
                 // Input items
                 json.append("\"inputs\":[");
-                List<com.nyrds.pixeldungeon.alchemy.InputItem> inputs = recipe.getInput();
+                List<InputItem> inputs = recipe.getInput();
                 for (int i = 0; i < inputs.size(); i++) {
                     if (i > 0) json.append(",");
                     json.append(String.format("{\"name\":\"%s\",\"count\":%d}", inputs.get(i).getName(), inputs.get(i).getCount()));
@@ -2266,7 +2436,7 @@ public class DebugEndpoints {
 
                 // Output items
                 json.append("\"outputs\":[");
-                List<com.nyrds.pixeldungeon.alchemy.OutputItem> outputs = recipe.getOutput();
+                List<OutputItem> outputs = recipe.getOutput();
                 for (int i = 0; i < outputs.size(); i++) {
                     if (i > 0) json.append(",");
                     json.append(String.format("{\"name\":\"%s\",\"count\":%d}", outputs.get(i).getName(), outputs.get(i).getCount()));
@@ -2308,9 +2478,9 @@ public class DebugEndpoints {
             }
 
             // Try to find matching recipe by ingredient names (ignoring counts)
-            com.nyrds.pixeldungeon.alchemy.AlchemyRecipe matchedRecipe = null;
-            for (com.nyrds.pixeldungeon.alchemy.AlchemyRecipe recipe : com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.getAllRecipes()) {
-                List<com.nyrds.pixeldungeon.alchemy.InputItem> recipeInputs = recipe.getInput();
+            AlchemyRecipe matchedRecipe = null;
+            for (AlchemyRecipe recipe : AlchemyRecipes.getAllRecipes()) {
+                List<InputItem> recipeInputs = recipe.getInput();
 
                 // Check if the number of ingredients matches
                 if (recipeInputs.size() != ingredientNames.size()) {
@@ -2319,7 +2489,7 @@ public class DebugEndpoints {
 
                 // Check if all ingredient names match (order-independent)
                 boolean namesMatch = true;
-                for (com.nyrds.pixeldungeon.alchemy.InputItem recipeInput : recipeInputs) {
+                for (InputItem recipeInput : recipeInputs) {
                     if (!ingredientNames.contains(recipeInput.getName())) {
                         namesMatch = false;
                         break;
@@ -2329,7 +2499,7 @@ public class DebugEndpoints {
                 // Also check that all requested ingredient names are in the recipe
                 for (String requestedName : ingredientNames) {
                     boolean found = false;
-                    for (com.nyrds.pixeldungeon.alchemy.InputItem recipeInput : recipeInputs) {
+                    for (InputItem recipeInput : recipeInputs) {
                         if (recipeInput.getName().equals(requestedName)) {
                             found = true;
                             break;
@@ -2359,8 +2529,8 @@ public class DebugEndpoints {
                     String.format("{\"error\":\"No recipe found for ingredients: %s\"}", ingList.toString()));
             }
 
-            List<com.nyrds.pixeldungeon.alchemy.OutputItem> outputs = matchedRecipe.getOutput();
-            List<com.nyrds.pixeldungeon.alchemy.InputItem> inputs = matchedRecipe.getInput();
+            List<OutputItem> outputs = matchedRecipe.getOutput();
+            List<InputItem> inputs = matchedRecipe.getInput();
 
             // Build response
             StringBuilder json = new StringBuilder("{\"success\":true,\"inputs\":[");
@@ -2417,9 +2587,9 @@ public class DebugEndpoints {
             }
 
             // Try to find matching recipe by ingredient names (ignoring counts)
-            com.nyrds.pixeldungeon.alchemy.AlchemyRecipe matchedRecipe = null;
-            for (com.nyrds.pixeldungeon.alchemy.AlchemyRecipe recipe : com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.getAllRecipes()) {
-                List<com.nyrds.pixeldungeon.alchemy.InputItem> recipeInputs = recipe.getInput();
+            AlchemyRecipe matchedRecipe = null;
+            for (AlchemyRecipe recipe : AlchemyRecipes.getAllRecipes()) {
+                List<InputItem> recipeInputs = recipe.getInput();
 
                 // Check if the number of ingredients matches
                 if (recipeInputs.size() != ingredientNames.size()) {
@@ -2428,7 +2598,7 @@ public class DebugEndpoints {
 
                 // Check if all ingredient names match (order-independent)
                 boolean namesMatch = true;
-                for (com.nyrds.pixeldungeon.alchemy.InputItem recipeInput : recipeInputs) {
+                for (InputItem recipeInput : recipeInputs) {
                     if (!ingredientNames.contains(recipeInput.getName())) {
                         namesMatch = false;
                         break;
@@ -2438,7 +2608,7 @@ public class DebugEndpoints {
                 // Also check that all requested ingredient names are in the recipe
                 for (String requestedName : ingredientNames) {
                     boolean found = false;
-                    for (com.nyrds.pixeldungeon.alchemy.InputItem recipeInput : recipeInputs) {
+                    for (InputItem recipeInput : recipeInputs) {
                         if (recipeInput.getName().equals(requestedName)) {
                             found = true;
                             break;
@@ -2461,79 +2631,89 @@ public class DebugEndpoints {
                     "{\"error\":\"No recipe found for the given ingredients\"}");
             }
 
-            List<com.nyrds.pixeldungeon.alchemy.OutputItem> outputs = matchedRecipe.getOutput();
-            List<com.nyrds.pixeldungeon.alchemy.InputItem> recipeInputs = matchedRecipe.getInput();
+            List<OutputItem> outputs = matchedRecipe.getOutput();
+            List<InputItem> recipeInputs = matchedRecipe.getInput();
 
-            // Check if hero has required ingredients
-            Map<String, Integer> heroInventory = com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.buildAlchemyInventory(Dungeon.hero);
+            // caveman: inventory + heaps are game-thread state; pushUiTaskAndWait
+            // runs the task inline when the loop is down (headless/test use)
+            final int finalTimes = times;
+            final String[] error = new String[1];
 
-            for (com.nyrds.pixeldungeon.alchemy.InputItem ingredient : recipeInputs) {
-                String name = ingredient.getName();
-                int required = ingredient.getCount() * times;
-                int available = heroInventory.getOrDefault(name, 0);
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    // Check if hero has required ingredients (on the game thread)
+                    Map<String, Integer> heroInventory = AlchemyRecipes.buildAlchemyInventory(Dungeon.hero);
 
-                if (available < required) {
-                    return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
-                        String.format("{\"error\":\"Insufficient ingredients: %s (have %d, need %d)\"}", name, available, required));
-                }
-            }
+                    for (InputItem ingredient : recipeInputs) {
+                        String name = ingredient.getName();
+                        int required = ingredient.getCount() * finalTimes;
+                        int available = heroInventory.getOrDefault(name, 0);
 
-            // Execute crafting - do it directly (not via pushUiTask)
-            // because the game loop may not be running in headless mode
-            try {
-                // Consume ingredients
-                for (com.nyrds.pixeldungeon.alchemy.InputItem ingredient : recipeInputs) {
-                    String name = ingredient.getName();
-                    int toRemove = ingredient.getCount() * times;
+                        if (available < required) {
+                            error[0] = String.format("Insufficient ingredients: %s (have %d, need %d)", name, available, required);
+                            return;
+                        }
+                    }
 
-                    // Find and remove items from inventory
-                    for (Item item : Dungeon.hero.getBelongings()) {
-                        if (item.getEntityKind().equals(name) && toRemove > 0) {
-                            int multiplier = (item instanceof com.nyrds.pixeldungeon.items.Carcass)
-                                    ? ((com.nyrds.pixeldungeon.items.Carcass) item).upgradeMultiplier()
-                                    : 1;
-                            int itemsNeeded = (int) Math.ceil((double) toRemove / multiplier);
-                            int toConsume = Math.min(item.quantity(), itemsNeeded);
+                    // Consume ingredients
+                    for (InputItem ingredient : recipeInputs) {
+                        String name = ingredient.getName();
+                        int toRemove = ingredient.getCount() * finalTimes;
 
-                            item.quantity(item.quantity() - toConsume);
-                            toRemove -= toConsume * multiplier;
-                            if (item.quantity() <= 0) {
-                                item.detach(Dungeon.hero.getBelongings().backpack);
+                        // Find and remove items from inventory
+                        for (Item item : Dungeon.hero.getBelongings()) {
+                            if (item.getEntityKind().equals(name) && toRemove > 0) {
+                                int multiplier = (item instanceof Carcass)
+                                        ? ((Carcass) item).upgradeMultiplier()
+                                        : 1;
+                                int itemsNeeded = (int) Math.ceil((double) toRemove / multiplier);
+                                int toConsume = Math.min(item.quantity(), itemsNeeded);
+
+                                item.quantity(item.quantity() - toConsume);
+                                toRemove -= toConsume * multiplier;
+                                if (item.quantity() <= 0) {
+                                    item.detach(Dungeon.hero.getBelongings().backpack);
+                                }
                             }
                         }
                     }
-                }
 
-                // Create outputs
-                for (com.nyrds.pixeldungeon.alchemy.OutputItem output : outputs) {
-                    com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.EntityType entityType =
-                        com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.determineEntityType(output.getName());
+                    // Create outputs
+                    for (OutputItem output : outputs) {
+                        AlchemyRecipes.EntityType entityType =
+                            AlchemyRecipes.determineEntityType(output.getName());
 
-                    if (entityType == com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.EntityType.ITEM) {
-                        // Create item and give to hero
-                        for (int i = 0; i < output.getCount() * times; i++) {
-                            Item item = ItemFactory.itemByName(output.getName());
-                            if (item != null) {
-                                Dungeon.hero.getBelongings().collect(item);
+                        if (entityType == AlchemyRecipes.EntityType.ITEM) {
+                            // Create item and give to hero
+                            for (int i = 0; i < output.getCount() * finalTimes; i++) {
+                                Item item = ItemFactory.itemByName(output.getName());
+                                if (item != null) {
+                                    Dungeon.hero.getBelongings().collect(item);
+                                }
                             }
-                        }
-                    } else if (entityType == com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.EntityType.MOB) {
-                        // Create mob
-                        for (int i = 0; i < output.getCount() * times; i++) {
-                            Mob mob = MobFactory.mobByName(output.getName());
-                            if (mob != null && Dungeon.level != null) {
-                                int cell = Dungeon.level.randomPassableCell();
-                                mob.pos = cell;
-                                mob.makePet(Dungeon.hero);
-                                Actor.occupyCell(mob);
+                        } else if (entityType == AlchemyRecipes.EntityType.MOB) {
+                            // Create mob
+                            for (int i = 0; i < output.getCount() * finalTimes; i++) {
+                                Mob mob = MobFactory.mobByName(output.getName());
+                                if (mob != null && Dungeon.level != null) {
+                                    int cell = Dungeon.level.randomPassableCell();
+                                    mob.pos = cell;
+                                    mob.makePet(Dungeon.hero);
+                                    Actor.occupyCell(mob);
+                                }
                             }
                         }
                     }
-                }
 
-                GLog.i("Crafted %dx recipe", times);
-            } catch (Exception e) {
-                GLog.n("Error crafting: %s", e.getMessage());
+                    GLog.i("Crafted %dx recipe", finalTimes);
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"%s\"}", error[0]));
             }
 
             // Build response
@@ -2561,7 +2741,7 @@ public class DebugEndpoints {
                     "{\"error\":\"Hero not initialized - start a game first\"}");
             }
 
-            Map<String, Integer> inventory = com.nyrds.pixeldungeon.alchemy.AlchemyRecipes.buildAlchemyInventory(Dungeon.hero);
+            Map<String, Integer> inventory = AlchemyRecipes.buildAlchemyInventory(Dungeon.hero);
 
             StringBuilder json = new StringBuilder("{\"count\":").append(inventory.size()).append(",\"inventory\":[");
 
@@ -2622,18 +2802,34 @@ public class DebugEndpoints {
                     "{\"error\":\"Hero not initialized - start a game first\"}");
             }
 
-            // Give items to hero - do it directly (not via pushUiTask)
-            // because the game loop may not be running in headless mode
-            for (int i = 0; i < count; i++) {
-                Item item = ItemFactory.itemByName(itemType);
-                if (item != null) {
-                    if (level > 0) {
-                        item.upgrade(level);
+            // caveman: inventory collection touches hero state - game thread only;
+            // pushUiTaskAndWait runs inline when the loop is down (headless/test use)
+            final String finalItemType = itemType;
+            final int finalCount = count;
+            final int finalLevel = level;
+            final String[] error = new String[1];
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    for (int i = 0; i < finalCount; i++) {
+                        Item item = ItemFactory.itemByName(finalItemType);
+                        if (item != null) {
+                            if (finalLevel > 0) {
+                                item.upgrade(finalLevel);
+                            }
+                            Dungeon.hero.getBelongings().collect(item);
+                        }
                     }
-                    Dungeon.hero.getBelongings().collect(item);
+                    GLog.i("Gave %dx %s +%d to hero", finalCount, finalItemType, finalLevel);
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
                 }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Internal error: %s\"}", error[0]));
             }
-            GLog.i("Gave %dx %s +%d to hero", count, itemType, level);
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"message\":\"Gave %dx %s +%d to hero\",\"type\":\"%s\",\"count\":%d,\"level\":%d}",
@@ -2652,11 +2848,15 @@ public class DebugEndpoints {
 
     public static NanoHTTPD.Response handleDebugToggleUI(NanoHTTPD.IHTTPSession session) {
         try {
-            com.watabou.pixeldungeon.scenes.GameScene.hideUI = !com.watabou.pixeldungeon.scenes.GameScene.hideUI;
-            boolean uiHidden = com.watabou.pixeldungeon.scenes.GameScene.hideUI;
+            final boolean[] uiHidden = new boolean[1];
+            // caveman: hideUI is read by the render loop - flip it on the game thread
+            GameLoop.pushUiTaskAndWait(() -> {
+                GameScene.hideUI = !GameScene.hideUI;
+                uiHidden[0] = GameScene.hideUI;
+            });
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                String.format("{\"success\":true,\"uiHidden\":%b,\"message\":\"UI is now %s\"}", 
-                    uiHidden, uiHidden ? "hidden" : "visible"));
+                String.format("{\"success\":true,\"uiHidden\":%b,\"message\":\"UI is now %s\"}",
+                    uiHidden[0], uiHidden[0] ? "hidden" : "visible"));
         } catch (Exception e) {
             GLog.w("Error in handleDebugToggleUI: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
@@ -2671,21 +2871,35 @@ public class DebugEndpoints {
                     "{\"error\":\"No level loaded\"}");
             }
 
-            if (Dungeon.visible == null) {
-                Dungeon.visible = new boolean[Dungeon.level.getLength()];
-            }
+            // caveman: fog + visibility arrays are game-thread state
+            final String[] error = new String[1];
 
-            // Reveal entire map
-            Arrays.fill(Dungeon.visible, true);
-            if (Dungeon.level.visited != null) {
-                Arrays.fill(Dungeon.level.visited, true);
-            }
-            if (Dungeon.level.mapped != null) {
-                Arrays.fill(Dungeon.level.mapped, true);
-            }
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    if (Dungeon.visible == null) {
+                        Dungeon.visible = new boolean[Dungeon.level.getLength()];
+                    }
 
-            // Update fog of war
-            com.watabou.pixeldungeon.scenes.GameScene.updateFog();
+                    // Reveal entire map
+                    Arrays.fill(Dungeon.visible, true);
+                    if (Dungeon.level.visited != null) {
+                        Arrays.fill(Dungeon.level.visited, true);
+                    }
+                    if (Dungeon.level.mapped != null) {
+                        Arrays.fill(Dungeon.level.mapped, true);
+                    }
+
+                    // Update fog of war
+                    GameScene.updateFog();
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"Internal error: %s\"}", error[0]));
+            }
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 "{\"success\":true,\"message\":\"Map revealed\"}");
@@ -2705,13 +2919,13 @@ public class DebugEndpoints {
             List<Map<String, Integer>> warehouseRooms = new ArrayList<>();
 
             // Check all rooms for warehouse type
-            if (Dungeon.level instanceof com.watabou.pixeldungeon.levels.RegularLevel) {
-                com.watabou.pixeldungeon.levels.RegularLevel regularLevel =
-                    (com.watabou.pixeldungeon.levels.RegularLevel) Dungeon.level;
+            if (Dungeon.level instanceof RegularLevel) {
+                RegularLevel regularLevel =
+                    (RegularLevel) Dungeon.level;
 
-                Set<com.watabou.pixeldungeon.levels.Room> levelRooms = regularLevel.getRooms();
-                for (com.watabou.pixeldungeon.levels.Room room : levelRooms) {
-                    if (room.type == com.watabou.pixeldungeon.levels.Room.Type.WAREHOUSE) {
+                Set<Room> levelRooms = regularLevel.getRooms();
+                for (Room room : levelRooms) {
+                    if (room.type == Room.Type.WAREHOUSE) {
                         Map<String, Integer> roomInfo = new HashMap<>();
                         roomInfo.put("left", room.left);
                         roomInfo.put("right", room.right);
@@ -2827,7 +3041,7 @@ public class DebugEndpoints {
             heroJson.put("y", heroPos / width);
             var action = hero.getCurAction();
             heroJson.put("action", (action == null) ? "idle" : action.getClass().getSimpleName());
-            org.json.JSONArray buffsJson = new org.json.JSONArray();
+            JSONArray buffsJson = new JSONArray();
             for (var buff : hero.buffs()) {
                 JSONObject buffJson = new JSONObject();
                 buffJson.put("name", buff.getClass().getSimpleName());
@@ -2838,7 +3052,7 @@ public class DebugEndpoints {
             root.put("hero", heroJson);
 
             // visible mobs
-            org.json.JSONArray mobsJson = new org.json.JSONArray();
+            JSONArray mobsJson = new JSONArray();
             for (Mob mob : level.mobs) {
                 int mobPos = mob.getPos();
                 if (!Dungeon.visible[mobPos]) {
@@ -2860,7 +3074,7 @@ public class DebugEndpoints {
             root.put("mobs", mobsJson);
 
             // visible item heaps
-            org.json.JSONArray itemsJson = new org.json.JSONArray();
+            JSONArray itemsJson = new JSONArray();
             Field heapsField = Level.class.getDeclaredField("heaps");
             heapsField.setAccessible(true);
             @SuppressWarnings("unchecked")
@@ -2884,7 +3098,7 @@ public class DebugEndpoints {
             root.put("items", itemsJson);
 
             // stairs: entrance field + exit scan (exitMap has no public reader)
-            org.json.JSONArray exitsJson = new org.json.JSONArray();
+            JSONArray exitsJson = new JSONArray();
             for (int cell = 0; cell < level.getLength(); cell++) {
                 if (level.isExit(cell)) {
                     JSONObject exitJson = new JSONObject();
@@ -2975,7 +3189,7 @@ public class DebugEndpoints {
 
             final int targetCell = cell;
 
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             final String[] error = new String[1];
             final String[] preview = new String[1];
 
@@ -3034,7 +3248,7 @@ public class DebugEndpoints {
                 }
             });
 
-            if (!latch.await(15, java.util.concurrent.TimeUnit.SECONDS)) {
+            if (!latch.await(15, TimeUnit.SECONDS)) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     createErrorResponse("Timeout waiting for move_to").toString());
             }
@@ -3082,13 +3296,13 @@ public class DebugEndpoints {
             int width = level.getWidth();
             int height = level.getHeight();
 
-            org.json.JSONArray terrainRows = new org.json.JSONArray();
-            org.json.JSONArray passableRows = new org.json.JSONArray();
-            org.json.JSONArray visibleRows = new org.json.JSONArray();
-            org.json.JSONArray mappedRows = new org.json.JSONArray();
+            JSONArray terrainRows = new JSONArray();
+            JSONArray passableRows = new JSONArray();
+            JSONArray visibleRows = new JSONArray();
+            JSONArray mappedRows = new JSONArray();
 
             for (int row = 0; row < height; row++) {
-                org.json.JSONArray terrainRow = new org.json.JSONArray();
+                JSONArray terrainRow = new JSONArray();
                 StringBuilder passableRow = new StringBuilder(width);
                 StringBuilder visibleRow = new StringBuilder(width);
                 StringBuilder mappedRow = new StringBuilder(width);
@@ -3119,7 +3333,7 @@ public class DebugEndpoints {
             root.put("mapped", mappedRows);
 
             // stair cells for pathing targets
-            org.json.JSONArray exitsJson = new org.json.JSONArray();
+            JSONArray exitsJson = new JSONArray();
             for (int cell = 0; cell < level.getLength(); cell++) {
                 if (level.isExit(cell)) {
                     JSONObject exitJson = new JSONObject();
@@ -3225,7 +3439,7 @@ public class DebugEndpoints {
             final int[] mobId = new int[1];
             final String[] error = new String[1];
 
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             GameLoop.pushUiTask(() -> {
                 try {
                     Mob mob = MobFactory.mobByName(finalType);
@@ -3252,7 +3466,7 @@ public class DebugEndpoints {
                 }
             });
 
-            if (!latch.await(5, java.util.concurrent.TimeUnit.SECONDS)) {
+            if (!latch.await(5, TimeUnit.SECONDS)) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     createErrorResponse("Timeout waiting for remote spawn").toString());
             }
@@ -3306,7 +3520,7 @@ public class DebugEndpoints {
             final int finalRevertAfter = revertAfter;
             final String[] error = new String[1];
 
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             GameLoop.pushUiTask(() -> {
                 try {
                     Mob mob = findMobById(finalId);
@@ -3336,7 +3550,7 @@ public class DebugEndpoints {
                 }
             });
 
-            if (!latch.await(5, java.util.concurrent.TimeUnit.SECONDS)) {
+            if (!latch.await(5, TimeUnit.SECONDS)) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     createErrorResponse("Timeout waiting for possess").toString());
             }
@@ -3376,7 +3590,7 @@ public class DebugEndpoints {
             final int finalId = id;
             final String[] error = new String[1];
 
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             GameLoop.pushUiTask(() -> {
                 try {
                     Mob mob = findMobById(finalId);
@@ -3393,7 +3607,7 @@ public class DebugEndpoints {
                 }
             });
 
-            if (!latch.await(5, java.util.concurrent.TimeUnit.SECONDS)) {
+            if (!latch.await(5, TimeUnit.SECONDS)) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                     createErrorResponse("Timeout waiting for release").toString());
             }
@@ -3422,7 +3636,7 @@ public class DebugEndpoints {
                     createErrorResponse("Game state not initialized - start a game first").toString());
             }
 
-            org.json.JSONArray list = new org.json.JSONArray();
+            JSONArray list = new JSONArray();
             int width = Dungeon.level.getWidth();
             for (Mob mob : Dungeon.level.mobs) {
                 if (!isRemote(mob)) {
