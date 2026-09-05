@@ -136,7 +136,13 @@ def cmd_validate(args):
             continue
         bbox, opaque = cell_content(sheet, idx, fw, fh, cols)
         if bbox is None or opaque == 0:
-            rep.error("frame %d (in %s) is fully transparent" % (idx, ",".join(used[idx])))
+            msg = "frame %d (in %s) is fully transparent" % (idx, ",".join(used[idx]))
+            # hero layer sheets legitimately have empty frames (body/armor
+            # vanish during the death anim; the death layer takes over)
+            if args.allow_empty:
+                rep.warn(msg + " (allowed by --allow-empty)")
+            else:
+                rep.error(msg)
             continue
         cx0, cy0 = cell_box(idx, fw, fh, cols)
         x0, y0, x1, y1 = bbox  # content extent inside the cell
@@ -310,6 +316,8 @@ def main():
     v = sub.add_parser("validate", help="validate sheet + spritesDesc")
     v.add_argument("sheet")
     v.add_argument("desc")
+    v.add_argument("--allow-empty", action="store_true",
+                   help="transparent frames are warnings, not errors (hero layer sheets)")
     v.set_defaults(func=cmd_validate)
 
     p = sub.add_parser("preview", help="render annotated contact sheet")
