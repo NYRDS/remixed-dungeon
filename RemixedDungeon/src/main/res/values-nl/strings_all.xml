@@ -99,6 +99,7 @@
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
     <string name="Badges_MonsterSlain5">1000 vijanden verslagen</string>
     <string name="Badges_NightHunter">5 monsters gedood in de nacht</string>
+    <string name="Badges_NoMonsterSlain">Niveau voltooid zonder monsters te doden</string>
     <string name="Badges_Piranhas">6 piranha\'s gedood</string>
     <string name="Badges_PotionsCooked3">9 drankjes gebraagd</string>
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
@@ -154,6 +155,7 @@
     <string name="BlackSkull_Name">zwarte schedel</string>
     <string name="BlackSkull_Ressurrect">De Zwarte Schedel Heeft Dode Wezens Herrezen Om Je Te Dienen!</string>
     <string name="Blacksmith_Gold1">Hey mens! Wil je nuttig zijn, hé? Pak die houweel en ontgin voor me wat _donker gouderts_, _15 stukken_ zou genoeg moeten zijn. Wat bedoel je, hoe ga ik betalen? Je gierige...\nOké, oké, ik heb geen geld om te betalen, maar ik kan wat smeden voor je. Reken je gelukkig, ik ben de enige smid in de buurt.</string>
+    <string name="Blacksmith_LooksBetter">je %s ziet er nu zeker beter uit</string>
     <string name="Blacksmith_Verify3">Ik moet weten waarmee ik werk, identificeer ze eerst!</string>
     <string name="Blacksmith_Verify4">Ik werk niet met vervloekte items!</string>
     <string name="Blacksmith_Verify5">Het is prullen, de kwaliteit is te slecht!</string>
@@ -383,6 +385,7 @@
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
     <string name="Entanglement_Txt">%s van verstrengeling</string>
+    <string name="EquipableItem_ACUnequip">UITRUSTEN</string>
     <string name="Exhumation_Name">Exhumatie</string>
     <string name="Exhumation_NoGrave">Hier is geen graf om een Exhumatie uit te voeren.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
@@ -879,8 +882,10 @@
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
     <string name="RogueArmor_Fov">Je kunt alleen naar een leeg vakje in je zichtveld teleporteren</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
+    <string name="RootSpell_Info">Bevestigt de geselecteerde karakter met wortels, waardoor hij voor korte tijd niet kan bewegen.</string>
     <string name="RootsBuff_Name">Geworteld</string>
     <string name="RottenFood_Message">Walging!</string>
+    <string name="RottenMeat_Name">bedorven vlees</string>
     <string name="RottenOrgan_Info">Een ontbindend orgaan, geoogst van een verslagen vijand. Ondanks zijn verrotte staat bevat het waardevolle stoffen voor alchemistische processen.</string>
     <string name="RottenPumpkinPie_Info">Hoewel het vers wel heerlijk was, is er geen manier dat het nog eetbaar is.</string>
     <string name="RottenPumpkinPie_Name">bedorven pompoentaart</string>
@@ -896,6 +901,7 @@
     <string name="RunicSkull_Gender">masculine</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="SantaHat_Info">Niets zet je zo in de \&quot;Dungeoning\&quot; stemming als de rode zijden hoed van Santa, Heer van de Diepten.</string>
+    <string name="ScaleArmor_Name">schubpantser</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
     <string name="ScarecrowNPC_Name_Objective">vogelverschrikker</string>
@@ -984,6 +990,7 @@
     <string name="ShortSword_Reforged">je hebt de korte zwaard hersmeed om je %s te upgraden</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Name">shuriken</string>
+    <string name="SkeletonKey_Info">Deze sleutel ziet er serieus uit: het kopje is vormgegeven als een schedel. Waarschijnlijk kan hij een serieuze deur openen.</string>
     <string name="Skeleton_Desc">Skeletten zijn samengesteld uit botten van ongelukkige avonturiers en bewoners van de dungeon, tot leven gewekt door uitstralingen van het kwaad uit de diepte. Zodra ze genoeg beschadigd zijn, vallen ze uiteen in een ontploffing van botten.</string>
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Name">skelet</string>
@@ -1106,6 +1113,7 @@
     <string name="TitleScene_Play">Spelen</string>
     <string name="TomeOfKnowledge_Name">Boek van Kennis</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
+    <string name="Toolbar_Info1">Je weet niet wat er is.</string>
     <string name="Torch_ACLight">AANSTEKEN</string>
     <string name="ToughShield_desc">Dit met riemen versterkte schild oogt robuuster dan een houten exemplaar. Het kan zeker meer schade blokkeren.</string>
     <string name="ToughShield_name">Versterkt Leren Schild</string>
@@ -1296,6 +1304,7 @@
     <string name="WndRanking_StaDuration">Spelduur</string>
     <string name="WndRanking_StaHealth">Gezondheid</string>
     <string name="WndRanking_StaStr">Kracht</string>
+    <string name="WndRanking_StaTitle">Level %1 %2</string>
     <string name="WndSadGhostNecro_No">Nee, laat het spreken</string>
     <string name="WndSadGhostNecro_Persuaded">De verdrietige geest is overwonnen</string>
     <string name="WndSadGhostNecro_Text">Deze geest lijkt te worstelen met zijn vloek. Het lijkt alsof hij me om iets wil vragen. Met behulp van necromantie, kon ik hem ervan overtuigen dat de vraag vervuld is. Het zal me tijd besparen. Maar is het de moeite waard?</string>
@@ -1468,6 +1477,15 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
 
 
 

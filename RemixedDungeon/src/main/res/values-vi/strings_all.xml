@@ -93,6 +93,7 @@
     <string name="Badges_MonsterSlain4">250 kẻ thù đã bị tiêu diệt</string>
     <string name="Badges_MonsterSlain5">Hạ gục 1000 kẻ địch</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
+    <string name="Badges_NoMonsterSlain">Hoàn thành cấp độ mà không giết quái vật nào</string>
     <string name="Badges_Piranhas">Săn được 6 cá ăn thịt người</string>
     <string name="Badges_PotionsCooked1">3 bình thuốc đã nấu</string>
     <string name="Badges_PotionsCooked3">9 thuốc đã nấu</string>
@@ -143,6 +144,7 @@
     <string name="BlackSkull_Ressurrect">Đỉnh Đen Đã Hồi Sinh Quái Vật Chết Để Phục Vụ Bạn!</string>
     <string name="Blacksmith_GetLost">Tôi đang bận. Cút đi!</string>
     <string name="Blacksmith_Gold1">Này người! Muốn làm việc hữu ích chứ? Lên cái cuốc này và đào cho ta ít _khoáng vàng đen_, _15 miếng_ là đủ rồi. Cái gì? Như thế nào mà ta trả tiền? Ngươi tham lam...\nỪ, ừ, ta không có tiền trả, nhưng ta có thể làm đồ sắt cho ngươi. Coi ngươi may mắn, ta là thợ rèn duy nhất ở đây.</string>
+    <string name="Blacksmith_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
     <string name="Blacksmith_Verify1">Hãy chọn 2 vật phẩm khác nhau, không được chọn cùng một vật phẩm hai lần!</string>
     <string name="Blacksmith_Verify2">Chọn 2 vật phẩm cùng loại!</string>
     <string name="Blacksmith_Verify4">Tôi không làm việc với vật phẩm bị nguyền rủa!</string>
@@ -223,6 +225,7 @@
     <string name="ChaosCrystal_SwordFused">Kính hấp thụ vũ khí của bạn và biến thành một Chiếc Kiếm</string>
     <string name="ChaosCrystal_Use">DÙNG</string>
     <string name="ChaosHelmet_Info">Một chiếc mũ đỏ màu máu là biểu tượng thiết yếu của một chiến binh hỗn loạn.</string>
+    <string name="ChaosHelmet_Name">Mũ Sắt Hỗn Loạn</string>
     <string name="ChaosShield_desc">Khiên Hỗn Mang là kết quả của việc hợp nhất một Viên Ngọc Hỗn Mang với chiếc khiên thường, khiến nó tạo ra những hiệu ứng hỗn loạn ngẫu nhiên khi chặn thành công.</string>
     <string name="ChaosShield_name">Khiên Hỗn Loạn</string>
     <string name="ChaosStaff_Gender">masculine</string>
@@ -276,6 +279,7 @@
     <string name="Claymore_Name">Kiếm Claymore</string>
     <string name="CloakSpell_Info">Bước vào bóng tối để trở nên vô hình. Giảm đáng kể cơ hội bị phát hiện. Không thể sử dụng khi kẻ địch ở gần.</string>
     <string name="ClothArmor_Desc">Bộ giáp nhẹ này chỉ cung cấp khả năng bảo vệ cơ bản.</string>
+    <string name="Codex_Info">Một trong nhiều cuốn sách có thể tìm thấy ở bất kỳ thư viện nào</string>
     <string name="Codex_Story_10">Glyph Entangle - Anh hùng có thể nhận được giáp thảo mộc, nhưng đồng thời cũng có thể bị rễ cây trói chân.</string>
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
     <string name="Codex_Story_16">Vũ khí may mắn - gần như hoàn toàn bỏ qua giáp địch, và gây nhiều sát thương hơn đáng kể.</string>
@@ -376,6 +380,7 @@
     <string name="EncumbranceBuff_Name">Gánh nặng</string>
     <string name="EnslavedSoul_Desc">Bạn gần như có thể nhìn xuyên qua bóng ma này. Và mặc dù nó trông giống một chiếc hộp sọ, đôi khi trong tích tắc một khuôn mặt hiện ra, ngập tràn đau đớn và khổ sở.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
+    <string name="EquipableItem_ACUnequip">THÁO TRANG BỊ</string>
     <string name="EquipableItem_Unequip">Bạn không thể tháo bỏ %s bị nguyền rủa!</string>
     <string name="ExplodingSkull_Desc">Đầu lâu bay này đang bốc lửa, có vẻ cực kỳ mong manh, dường như nó sẽ bùng nổ bất cứ lúc nào.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
@@ -579,6 +584,7 @@
     <string name="Journal_Troll">Thợ rèn Troll</string>
     <string name="Journal_WellAwareness">Giếng Nhận Thức</string>
     <string name="Journal_WellTransmut">Giếng Chuyển Hóa</string>
+    <string name="King_Defense">chặn</string>
     <string name="King_Desc">Vua cuối cùng của người lùn nổi tiếng với sự thấu hiểu sâu sắc về quá trình sống và chết. Ngài đã thuyết phục các thành viên triều đình tham gia nghi lễ, hứa hẹn ban tặng thanh xuân vĩnh cửu. Kết cục chỉ có Ngài nhận được nó - và một quân đoàn bất tử làm phần thưởng thêm.</string>
     <string name="King_Gender">masculine</string>
     <string name="King_Info1">Bạn không thể giết được tôi, %s... Tôi là... bất tử...</string>
@@ -857,6 +863,7 @@
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
     <string name="RingOfHaste_Name">Nhẫn Tốc Độ</string>
     <string name="RingOfHerbalism_Info">Nhẫn này tăng cơ hội thu thập sương mai và hạt giống từ cỏ bị giẫm đạp.</string>
+    <string name="RingOfMending_Info">Nhẫn này tăng cường khả năng tái sinh của cơ thể, cho phép hồi phục sức khỏe đã mất ở tốc độ nhanh hơn. Nhẫn bị suy yếu sẽ giảm hoặc thậm chí dừng lại quá trình tái sinh tự nhiên.</string>
     <string name="RingOfMending_Name">Nhẫn Chữa Lành</string>
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
     <string name="RingOfSatiety_Name">Nhẫn No Đủ</string>
@@ -877,6 +884,7 @@
     <string name="RootsBuff_Name">Bám rễ</string>
     <string name="RottenFish_Info">Cá thối, bốc mùi khủng khiếp</string>
     <string name="RottenFood_Message">Ghét quá!</string>
+    <string name="RottenMeat_Name">thịt thối</string>
     <string name="RottenPasty_Info">Cái pasty này trông khá ghê.</string>
     <string name="RottenPasty_Name">Bánh nướng thối</string>
     <string name="RottenPumpkinPie_Info">Dù bánh bí ngon đến đâu khi còn tươi, giờ thì chắc chắn không thể ăn được.</string>
@@ -893,6 +901,7 @@
     <string name="RunicSkull_Name">đầu lâu rune</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="SacrificialSword_Name">kiếm hiến tế</string>
+    <string name="ScaleArmor_Name">giáp vảy</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name_Objective">ngáo</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
@@ -1086,6 +1095,7 @@
     <string name="TitleScene_Mods">Mod</string>
     <string name="TitleScene_Play">Chơi</string>
     <string name="TitleScene_PlayOnPC">Chơi trên PC</string>
+    <string name="Toolbar_Info1">Bạn không biết đó có gì.</string>
     <string name="Torch_ACLight">THÁP</string>
     <string name="Torch_Info">Đây là một vật phẩm không thể thiếu trong Các Điện Thần Quỷ, những nơi nổi tiếng với ánh sáng môi trường kém.</string>
     <string name="Torch_Info2">Đây là vật phẩm không thể thiếu trong hầm ngục, vốn nổi tiếng là thiếu ánh sáng.</string>
@@ -1127,6 +1137,7 @@
     <string name="Using_Failed_Because_Blind">Bạn không thể sử dụng \\&quot;%s\\&quot; khi đang bị mù.</string>
     <string name="Using_Failed_Because_Magic">Một phép thuật mạnh mẽ ngăn cản bạn sử dụng \&quot;%s\&quot;.</string>
     <string name="VertigoBuff_Info">Cảm giác choáng váng khiến đi thẳng trở nên khó khăn!</string>
+    <string name="WandMaker_Desc">Người đàn ông già nua nhưng vẫn khỏe mạnh này mang vẻ bối rối nhẹ. Anh ta được bảo vệ bởi một khiên phép thuật.</string>
     <string name="WandMaker_Dust1">Ôi, thật bất ngờ dễ chịu khi gặp được một người đàng hoàng ở nơi này! Tôi đến đây để tìm một nguyên liệu hiếm - _bụi xác chết_. Nó có thể thu thập từ những bộ xương, và trong dungeon có rất nhiều. Là một pháp sư, tôi hoàn toàn có thể tự vệ trước quái vật nơi đây, nhưng tôi lạc mất chỉ trong chốc lát — thật xấu hổ. Có lẽ bạn có thể giúp tôi? Tôi sẽ vui lòng trả công cho bạn bằng một trong những cây đũa phép tốt nhất của mình.</string>
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
     <string name="WandOfAvalanche_Info">Khi một xung điện của que này trúng vào tường (hoặc bất kỳ chướng ngại vật rắn nào khác), nó gây ra một trận băng tuyết đá, gây sát thương và choáng tất cả sinh vật trong khu vực bị ảnh hưởng.</string>
@@ -1255,6 +1266,7 @@
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
     <string name="WndRanking_StaHealth">Máu</string>
     <string name="WndRanking_StaStr">Sức mạnh</string>
+    <string name="WndRanking_StaTitle">Cấp %1 %2</string>
     <string name="WndRanking_Stats">Thống kê</string>
     <string name="WndSadGhostNecro_No">Không, để nó nói.</string>
     <string name="WndSadGhost_Farewell">Tạm biệt, nhà thám hiểm! Chúc may mắn!</string>
@@ -1421,6 +1433,18 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

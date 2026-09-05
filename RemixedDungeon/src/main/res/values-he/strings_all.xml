@@ -121,6 +121,7 @@
     <string name="Blacksmith_Completed">אוי, חזרת... עדיף מאוחר מאשר אף פעם.</string>
     <string name="Blacksmith_Desc">נפח הטרול הזה נראה כמו שכל הטרולים נראים: הוא גבוה ורזה, ועורו דומה לאבן הן בצבע והן במרקם. נפח הטרול מתעסק עם כלים קטנים באופן לא פרופורציונלי.</string>
     <string name="Blacksmith_Gold1">היי, בן אדם! רוצה להיות מועיל, אה? קח את המעדר הזה ותחפור לי קצת _עפרת זהב אפלה_, _15 חתיכות_ יספיקו. למה אתה מתכוון, איך אני אשלם? אתה חמדן...\nבסדר, בסדר, אין לי כסף לשלם, אבל אני יכול לעשות עבודת נפחות בשבילך. תחשיב את עצמך בר מזל, אני הנפח היחיד בסביבה.</string>
+    <string name="Blacksmith_LooksBetter">ה%s שלך נראה הרבה יותר טוב עכשיו</string>
     <string name="Blacksmith_Txt3">עופרת זהב כהה. 15 חתיכות. ברצינות, זה כזה קשה?</string>
     <string name="Blacksmith_Verify4">אני לא עובד עם פריטים מקוללים!</string>
     <string name="Blacksmith_Verify6">אני לא יכול לשחזר את הפריטים האלה!</string>
@@ -195,6 +196,7 @@
     <string name="ChaosCrystal_Name_2">קריסטל תוהו</string>
     <string name="ChaosCrystal_SwordFused">הגביש סופג את נשקך ולובש צורת חרב</string>
     <string name="ChaosCrystal_Use">השתמש</string>
+    <string name="ChaosHelmet_Name">קסדת הכאוס</string>
     <string name="ChaosShield_desc">מגן הכאוס הוא תוצאה של מיזוג גביש כאוס עם מגן רגיל, מה שגורם לו להפגין השפעות כאוטיות אקראיות בעת חסימה מוצלחת.</string>
     <string name="ChaosShield_name">מגן התוהו</string>
     <string name="ChaosStaff_Gender">masculine</string>
@@ -240,6 +242,7 @@
     <string name="CloakSpell_Name">גלימה</string>
     <string name="ClothArmor_Desc">השריון הקל הזה מציע הגנה בסיסית.</string>
     <string name="ClothArmor_Name">שריון בד</string>
+    <string name="Codex_Info">אחד מהספרים הרבים שניתן למצוא בכל ספרייה</string>
     <string name="Codex_Story_12">נשק בוער - בפגיעה מוצלחת, גורם נזק נוסף למטרה ועלול לשרוף אותה.</string>
     <string name="Codex_Story_16">נשק בר מזל - כמעט מתעלם לחלוטין משריון האויב, וגורם להרבה יותר נזק.</string>
     <string name="Codex_Story_17">נשק מהמם - במכה מוצלחת, עלול לשתק את המטרה.</string>
@@ -498,6 +501,7 @@
     <string name="Journal_Imp">שד שאפתני</string>
     <string name="Journal_PlagueDoctorNPC">רופא מגפה</string>
     <string name="Journal_WellAwareness">באר המודעות</string>
+    <string name="King_Defense">הדף</string>
     <string name="King_Desc">המלך האחרון של הגמדים נודע בזכות הבנתו העמוקה של תהליכי החיים והמוות. הוא שכנע את חברי חצרו להשתתף בטקס, שאמור היה להעניק להם נעורים נצחיים. בסופו של דבר הוא היה היחיד שקיבל זאת - וצבא מתים-חיים כבונוס.</string>
     <string name="King_Gender">masculine</string>
     <string name="King_Info3">איך אתה מעז!</string>
@@ -741,6 +745,7 @@
     <string name="RingOfFrost_Name">טבעת הכפור</string>
     <string name="RingOfHaste_Name">טבעת המהירות</string>
     <string name="RingOfHerbalism_Info">טבעת זו מגדילה את הסיכוי שלך לאסוף טל וזרעים מעשב רמוס.</string>
+    <string name="RingOfMending_Info">טבעת זו מגבירה את תכונות ההתחדשות של הגוף, ומאפשרת החלמה מהירה יותר של חיים אבודים. טבעות מוחלשות יפחיתו ואף יעצרו התחדשות טבעית.</string>
     <string name="RingOfPower_Info">השרביטים שלך יהפכו לחזקים יותר בשדה האנרגיה שמקרינה טבעת זו. טבעות כוח מוחלשות דווקא יחלישו את השרביטים שלך.</string>
     <string name="RingOfPower_Name">טבעת הכוח</string>
     <string name="RingOfSatiety_Name">טבעת השובע</string>
@@ -753,9 +758,11 @@
     <string name="Roar_Name">שאגה</string>
     <string name="RogueArmor_ACSpecial">פצצת עשן</string>
     <string name="RogueArmor_Prompt">בחר מיקום לקפוץ אליו</string>
+    <string name="RootSpell_Info">משריש את הדמות הנבחרת, ומונע ממנה לזוז לפרק זמן קצר.</string>
     <string name="RootsBuff_Name">שורש</string>
     <string name="RottenFish_Taste">מגעיל!</string>
     <string name="RottenFood_Message">מגעיל!</string>
+    <string name="RottenMeat_Name">בשר רקוב</string>
     <string name="RottenPasty_Info">מאפה הבשר הזה נראה די מגעיל.</string>
     <string name="RottenPasty_Name">מאפה בשר מקולקל</string>
     <string name="RottenPumpkinPie_Info">לא משנה כמה טוב זה היה כשהיה טרי, אין סיכוי שזה עדיין אכיל.</string>
@@ -770,6 +777,7 @@
     <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">גולגולת רונית</string>
     <string name="SacrificialSword_Gender">masculine</string>
+    <string name="ScaleArmor_Name">שריון קשקשים</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name_Objective">דחליל</string>
     <string name="ScarecrowNPC_Quest_End">אוי איזו שמחה, אוי איזו התרגשות!\nעל זה תקבל פרוסת פאי מתוקה!</string>
@@ -933,6 +941,7 @@
     <string name="TomeOfKnowledge_Name">ספר הידע</string>
     <string name="TomeOfMastery_ACRead">קרא</string>
     <string name="TomeOfMastery_Info">ספר עור בלוי זה אינו עבה במיוחד, אך אתה חש בדרך כלשהי שניתן ללמוד ממנו רבות. זכור עם זאת שקריאת כרך זה עשויה לדרוש זמן מה.</string>
+    <string name="Toolbar_Info1">אתה לא יודע מה יש שם.</string>
     <string name="Torch_ACLight">הַדְלֵק</string>
     <string name="Torch_Name">לפיד</string>
     <string name="ToughShield_name">מגן עור מחוזק</string>
@@ -969,6 +978,7 @@
     <string name="VileEssence_Info">جوهر فساد مركّز تم حصاده من عدو مهزوم. هذه المادة الداكنة تنبض بطاقة خبيثة وتُقدَّر كثيراً في العمليات الكيميائية.</string>
     <string name="WandHolster_Info">מחזיק דק זה עשוי מעור של חיה אקזוטית. הוא מאפשר לשאת באופן קומפקטי עד %d שרביטים.</string>
     <string name="WandHolster_Name">נרתיק שרביטים</string>
+    <string name="WandMaker_Desc">הזקן החזק הזה נראה מעט מבולבל. הוא מוגן על ידי מגן קסום.</string>
     <string name="WandMaker_Dust2">הצלחת למצוא אבק גופות, %s? ערימות עצמות הן המקומות הכי ברורים לחפש בהם.</string>
     <string name="WandOfAmok_Info1">שום דבר לא קרה</string>
     <string name="WandOfAvalanche_Info">כאשר פיצוץ של השרביט פוגע בקיר (או בכל מכשול מוצק אחר) הוא גורם למפולת אבנים, פוגע ומהלם את כל היצורים באזור הפגיעה.</string>
@@ -1048,6 +1058,7 @@
     <string name="WndJournal_Levels">רמות</string>
     <string name="WndLibrary_Catalogue_Instruction">אנא בחר אחת מהקטגוריות למטה.</string>
     <string name="WndLibrary_Catalogue_Title">ספרייה</string>
+    <string name="WndLibrary_Codex_Btn">סיפורים</string>
     <string name="WndLibrary_Items_Btn">פריטים</string>
     <string name="WndLocalModInstall_title">התקן מוד ממחלקה מקומית</string>
     <string name="WndModInstall_Version">גרסה</string>
@@ -1069,6 +1080,7 @@
     <string name="WndRanking_StaChallenges">אתגרים</string>
     <string name="WndRanking_StaGold">זהב שנאסף</string>
     <string name="WndRanking_StaStr">כוח</string>
+    <string name="WndRanking_StaTitle">רמה %1 %2</string>
     <string name="WndResurrect_Yes">כן, אני אלחם!</string>
     <string name="WndSadGhostNecro_No">לא, תן לזה לדבר.</string>
     <string name="WndSadGhostNecro_Persuaded">רוח העצב נכנעה!</string>
@@ -1539,6 +1551,18 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

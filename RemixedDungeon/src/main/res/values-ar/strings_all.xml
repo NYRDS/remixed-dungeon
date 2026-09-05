@@ -87,6 +87,7 @@
     <string name="Badges_LevelReached5">وصلت إلى المستوى 30</string>
     <string name="Badges_MasteryCombo">كومبو 7 ضربات</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
+    <string name="Badges_NoMonsterSlain">تم إكمال المستوى دون قتل أي وحوش</string>
     <string name="Badges_PotionsCooked2">تم طهي 6 جرعات</string>
     <string name="Badges_PotionsCooked3">9 جرعات مطبوخة</string>
     <string name="Badges_PotionsCooked5">تم تحضير 25 جرعة</string>
@@ -133,6 +134,7 @@
     <string name="BlackSkull_Ressurrect">الجمجمة السوداء أقامت الوحش الميت ليخدمك!</string>
     <string name="Blacksmith_Blood1">يا إنسان! تريد أن تكون مفيدًا، أليس كذلك؟ خذ هذا المعول و_اقتل خفاشاً_ به، أحتاج دمه على رأسه. ماذا تقصد، كيف سأدفع لك؟ أنت جشع...\nحسناً، حسناً، ليس لدي مال لأدفع لك، لكن يمكنني القيام ببعض الحدادة لك. اعتبر نفسك محظوظاً، أنا الحدّاد الوحيد في الجوار.</string>
     <string name="Blacksmith_Gold1">يا إنسان! هل تريد أن تكون مفيداً، أليس كذلك؟ خذ هذا المعول واحفر لي بعض _خام الذهب الداكن_، _15 قطعة_ يجب أن تكفي. ماذا تقصد، كيف سأدفع؟ أنت جشع...\nحسناً، حسناً، ليس لدي مال لأدفع، لكن يمكنني القيام ببعض الحدادة لك. اعتبر نفسك محظوظاً، أنا الحدّاد الوحيد في الجوار.</string>
+    <string name="Blacksmith_LooksBetter">عنصرك %s يبدو أفضل الآن</string>
     <string name="Blacksmith_Name">حداد ترول</string>
     <string name="Blacksmith_Txt3">خام الذهب الداكن. 15 قطعة. بجد، صعب كده؟</string>
     <string name="Blacksmith_Txt4">قلت إنني بحاجة لدم الخفاش على المعول. بسرعة، بسرعة!</string>
@@ -511,6 +513,7 @@
     <string name="Journal_WellHealt">بئر الصحة</string>
     <string name="Keyring_Name">حلقة المفاتيح</string>
     <string name="KindOfWeapon_EquipCursed">تتقلص عيناك بينما تشتد قبضتك اللاإرادية على %s</string>
+    <string name="King_Defense">صدّ</string>
     <string name="King_Desc">كان آخر ملوك الأقزام معروفاً بفهمه العميق لعمليات الحياة والموت. لقد أقنع أعضاء بلاطه بالمشاركة في طقس كان من المفترض أن يمنحهم الشباب الأبدي. في النهاية كان هو الوحيد الذي حصل عليه - وجيش من الموتى الأحياء كمكافأة إضافية.</string>
     <string name="King_Gender">masculine</string>
     <string name="King_Name_Objective">ملك الأقزام</string>
@@ -756,6 +759,7 @@
     <string name="RingOfHaggler_Info">في الواقع، هذا الخاتم لا يوفر أي تأثير سحري، لكنه يُظهر للتجار والبائعين أن مالك الخاتم عضو في نقابة اللصوص. عادةً ما يسعدون بتقديم خصم مقابل ضمان حصانة مؤقتة. ترقية هذا الخاتم لن تمنح أي مكافآت إضافية.</string>
     <string name="RingOfHerbalism_Info">يزيد هذا الخاتم من فرصك في جمع الندى والبذور من العشب المفرود.</string>
     <string name="RingOfHerbalism_Name">خاتم الأعشاب</string>
+    <string name="RingOfMending_Info">هذا الخاتم يزيد من خصائص التجدد الجسدي، مما يسمح للشخص باستعادة الصحة المفقودة بمعدل متسارع. الخواتم المتدهورة ستقلل أو حتى توقف التجدد الطبيعي.</string>
     <string name="RingOfPower_Info">ستصبح عصيك السحرية أكثر قوة في مجال الطاقة المنبعث من هذا الخاتم. الخواتم المضعفة ستضعف عصيك بدلاً من ذلك.</string>
     <string name="RingOfPower_Name">خاتم القوة</string>
     <string name="RingOfSatiety_Name">خاتم الشبع</string>
@@ -860,6 +864,7 @@
     <string name="ShortSword_Name">سيف قصير</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Name">شوريكين</string>
+    <string name="SkeletonKey_Info">هذا المفتاح يبدو جاداً: رأسه على شكل جمجمة. على الأرجح يمكنه فتح باب جاد.</string>
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">قُتلت بانفجار العظام...</string>
     <string name="Skeleton_Name">هيكل عظمي</string>
@@ -949,7 +954,7 @@
     <string name="TomeOfMastery_Blinded">لا يمكنك القراءة وأنت أعمى</string>
     <string name="TomeOfMastery_Choose">لقد اخترت درب الـ %s!</string>
     <string name="TomeOfMastery_Info">هذا الكتاب الجلدي البالي ليس سميكاً جداً، لكنك تشعر بطريقة ما أنه يمكنك تعلم الكثير منه. تذكر مع ذلك أن قراءة هذا الكتاب قد تتطلب بعض الوقت.</string>
-    <string name="Toolbar_Info1">لا تعرف ما يوجد هناك.</string>
+    <string name="Toolbar_Info1">أنت لا تعرف ما يوجد هناك.</string>
     <string name="Torch_ACLight">أشعل</string>
     <string name="Torch_Info">إنه عنصر لا غنى عنه في قاعات الشياطين، المشهورة بإضاءتها الضعيفة.</string>
     <string name="ToughShield_name">درع جلدي مقوى</string>
@@ -971,6 +976,7 @@
     <string name="TownsfolkNPC_Name">أهالي المدينة</string>
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
+    <string name="TownsfolkSilentNPC_Name">سكان المدينة</string>
     <string name="TownsfolkSilentNPC_Name_Objective">سكان البلدة</string>
     <string name="ToxicGland_Name">غدة سامة</string>
     <string name="TrapWnd_Step">هل تريد حقاً خطو على هذا الفخ؟ قد تموت.</string>
@@ -983,6 +989,7 @@
     <string name="VileEssence_Info">جوهر مركز من الفساد تم حصاده من عدو مهزوم. ينبض هذا الجوهر المظلم بطاقة خبيثة ويُقدّر كثيرًا في العمليات الكيميائية.</string>
     <string name="Viscosity_Txt">%s من اللزوجة</string>
     <string name="WandMaker_Defense">امتص</string>
+    <string name="WandMaker_Desc">هذا الشيخ الوقور لكنه قوي البنية يبدو عليه الارتباك الطفيف. إنه محمي بدرع سحري.</string>
     <string name="WandMaker_RotberryDesc">توت هذا الشجيرة طعمه كالموت الحلو، الحلو.</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="WandOfAvalanche_Info1">سحقت نفسك بعصاك الخاصة من نوع عصا الانهيار الجليدي...</string>
@@ -1064,6 +1071,7 @@
     <string name="WndJournal_Levels">المستويات</string>
     <string name="WndJournal_Title">اليوميات</string>
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
+    <string name="WndLibrary_Codex_Btn">قصص</string>
     <string name="WndLibrary_Items_Btn">العناصر</string>
     <string name="WndLocalModInstall_text">اختر الدليل لتثبيت المود منه</string>
     <string name="WndLocalModInstall_title">تثبيت التعديل من دليل محلي</string>
@@ -1230,6 +1238,15 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
+
+
+
+
 
 
 
