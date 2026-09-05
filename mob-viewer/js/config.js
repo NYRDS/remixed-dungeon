@@ -2,6 +2,8 @@
 
 export const HERO_CLASSES = ['WARRIOR', 'MAGE', 'ROGUE', 'HUNTRESS', 'ELF', 'NECROMANCER', 'GNOLL', 'PRIEST', 'DOCTOR'];
 
+// Only combinations reachable in-game (WndClass.java mastery tab +
+// HeroSubClass enum): Priest and Doctor have no subclasses.
 export const SUBCLASSES = {
     'WARRIOR': ['NONE', 'GLADIATOR', 'BERSERKER'],
     'MAGE': ['NONE', 'WARLOCK', 'BATTLEMAGE'],
@@ -10,8 +12,8 @@ export const SUBCLASSES = {
     'ELF': ['NONE', 'SCOUT', 'SHAMAN'],
     'NECROMANCER': ['NONE', 'LICH'],
     'GNOLL': ['NONE', 'GUARDIAN', 'WITCHDOCTOR'],
-    'PRIEST': ['NONE', 'CLERIC', 'PALADIN'],
-    'DOCTOR': ['NONE', 'ALCHEMIST', 'TRANSMUTER']
+    'PRIEST': ['NONE'],
+    'DOCTOR': ['NONE']
 };
 
 export const ARMOR_LIST = ['cloth', 'leather', 'mail', 'scale', 'plate', 'gothic',
@@ -19,8 +21,8 @@ export const ARMOR_LIST = ['cloth', 'leather', 'mail', 'scale', 'plate', 'gothic
                           'gladiator', 'berserk', 'warlock', 'battlemage', 'assasin',
                           'freerunner', 'sniper', 'warden', 'necromancer', 'lich', 'necromancerRobe',
                           'gnoll', 'spider', 'rat', 'chaos', 'elf',
-                          'priest', 'paladin', 'cleric', 'witchdoctor',
-                          'alchemist', 'transmuter', 'plaguedoctor'];
+                          'priest', 'witchdoctor',
+                          'plaguedoctor'];
 
 export const WEAPON_LIST = ['shortsword', 'longsword', 'dagger', 'mace', 'hammer',
                            'sword', 'wand', 'bow', 'crossbow', 'spear',

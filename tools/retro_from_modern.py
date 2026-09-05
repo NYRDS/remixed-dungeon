@@ -50,6 +50,8 @@ FEMININE_CLASSES = {"HUNTRESS"}          # HeroClass.getGender()
 CLASS_BODY = {"GNOLL": "gnoll"}          # body_types map in spritesDesc
 SUBCLASS_BODY = {"WARLOCK": "warlock", "LICH": "lich"}
 
+# only combinations reachable in-game (WndClass.java mastery tab +
+# HeroSubClass enum): Priest and Doctor have no subclasses.
 CLASSES = {
     "WARRIOR": ["NONE", "GLADIATOR", "BERSERKER"],
     "MAGE": ["NONE", "WARLOCK", "BATTLEMAGE"],
@@ -58,8 +60,8 @@ CLASSES = {
     "ELF": ["NONE", "SCOUT", "SHAMAN"],
     "NECROMANCER": ["NONE", "LICH"],
     "GNOLL": ["NONE", "GUARDIAN", "WITCHDOCTOR"],
-    "PRIEST": ["NONE", "CLERIC", "PALADIN"],
-    "DOCTOR": ["NONE", "ALCHEMIST", "TRANSMUTER"],
+    "PRIEST": ["NONE"],
+    "DOCTOR": ["NONE"],
 }
 
 ARMORS = [
@@ -69,8 +71,7 @@ ARMORS = [
     "WarlockArmor", "BattleMageArmor", "AssasinArmor", "FreeRunnerArmor",
     "SniperArmor", "WardenArmor", "NecromancerArmor", "NecromancerRobe",
     "GnollArmor", "SpiderArmor", "RatArmor", "ChaosArmor", "ElfArmor",
-    "PriestArmor", "PaladinArmor", "ClericArmor", "WitchdoctorArmor",
-    "AlchemistArmor", "TransmuterArmor", "PlagueDoctorArmor",
+    "PriestArmor", "PlagueDoctorArmor", "WitchdoctorArmor",
 ]
 
 # short keys accepted on the CLI, mirroring the mob-viewer config
@@ -86,9 +87,8 @@ ARMOR_KEYS = {
     "necromancer": "NecromancerArmor", "lich": "NecromancerArmor",
     "necromancerrobe": "NecromancerRobe", "gnoll": "GnollArmor",
     "spider": "SpiderArmor", "rat": "RatArmor", "chaos": "ChaosArmor",
-    "elf": "ElfArmor", "priest": "PriestArmor", "paladin": "PaladinArmor",
-    "cleric": "ClericArmor", "witchdoctor": "WitchdoctorArmor",
-    "alchemist": "AlchemistArmor", "transmuter": "TransmuterArmor",
+    "elf": "ElfArmor", "priest": "PriestArmor",
+    "witchdoctor": "WitchdoctorArmor",
     "plaguedoctor": "PlagueDoctorArmor",
 }
 
