@@ -54,38 +54,36 @@ export class Renderer {
         }
 
         const frameIndex = anim.frames[animationFrame];
-        const framesInRow = 8; // Standard frames per row for hero sprites
+        const frameWidth = currentHero.width;
+        const frameHeight = currentHero.height;
 
-        const frameX = (frameIndex % framesInRow) * currentHero.width;
-        const frameY = Math.floor(frameIndex / framesInRow) * currentHero.height;
+        const scaledWidth = frameWidth * scale;
+        const scaledHeight = frameHeight * scale;
 
-        // Use visual dimensions if available (for proper centering)
-        const visualWidth = currentHero.visualWidth || currentHero.width;
-        const visualHeight = currentHero.visualHeight || currentHero.height;
-        const offsetX = currentHero.visualOffsetX || 0;
-        const offsetY = currentHero.visualOffsetY || 0;
-
-        const scaledWidth = visualWidth * scale;
-        const scaledHeight = visualHeight * scale;
-
-        // Center the sprite with offset
-        const baseX = (this.canvas.width - scaledWidth) / 2 + offsetX * scale;
-        const baseY = (this.canvas.height - scaledHeight) / 2 + offsetY * scale;
+        const baseX = (this.canvas.width - scaledWidth) / 2;
+        const baseY = (this.canvas.height - scaledHeight) / 2;
 
         this.ctx.imageSmoothingEnabled = false;
 
-        // Render each layer in order
+        // layers are pre-sorted into z-order by the hero loader; each layer
+        // sheet has its own geometry (modern sheets are 1024px/32 cols,
+        // retro 512px/36 cols of 14x17 cells)
         for (const layerName of heroLayers) {
             const layerImg = heroTextures[layerName];
-            if (layerImg) {
-                this.ctx.drawImage(
-                    layerImg,
-                    frameX, frameY,
-                    currentHero.width, currentHero.height,
-                    baseX, baseY,
-                    scaledWidth, scaledHeight
-                );
+            if (!layerImg) {
+                continue;
             }
+            const framesInRow = Math.max(1, Math.floor(layerImg.width / frameWidth));
+            const frameX = (frameIndex % framesInRow) * frameWidth;
+            const frameY = Math.floor(frameIndex / framesInRow) * frameHeight;
+
+            this.ctx.drawImage(
+                layerImg,
+                frameX, frameY,
+                frameWidth, frameHeight,
+                baseX, baseY,
+                scaledWidth, scaledHeight
+            );
         }
     }
 

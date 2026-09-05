@@ -139,7 +139,20 @@ class SpriteViewer {
     
     getCurrentData() {
         if (this.isHeroMode) {
-            return this.currentHero ? this.currentHero.data : null;
+            if (!this.currentHero) {
+                return null;
+            }
+            const data = this.currentHero.data;
+            // the game swaps attack/zap to a weapon-specific sequence
+            // (ModernHeroSpriteDef.heroUpdated -> weapon_anim)
+            const override = this.currentHero.attackOverride;
+            if (override && data.weapon_anim && data.weapon_anim[override]) {
+                return Object.assign({}, data, {
+                    attack: data.weapon_anim[override],
+                    zap: data.weapon_anim[override]
+                });
+            }
+            return data;
         } else {
             return this.currentMob ? this.currentMob.data : null;
         }

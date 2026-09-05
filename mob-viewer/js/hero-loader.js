@@ -1,6 +1,10 @@
-// Hero Loader - Handles loading hero sprite layers
+// Hero Loader - builds layer stacks exactly like the game does.
+// Ground truth: ModernHeroSpriteDef.java, RetroHeroSpriteDef.java.
 
-import { BODY_TYPE_MAP, LAYERS_ORDER } from './config.js';
+import {
+    BODY_TYPE_MAP, LAYERS_ORDER, ARMOR_MAP, ARMOR_FLAGS,
+    WEAPON_DEFS, ACCESSORY_MAP, ACCESSORY_FLAGS
+} from './config.js';
 
 export class HeroLoader {
     constructor() {
@@ -9,245 +13,156 @@ export class HeroLoader {
     }
 
     async loadHero(style, heroClass, subClass, armor, weapon, accessory) {
-        try {
-            const basePath = style === 'modern' ? 'assets/hero_modern/' : 'assets/hero/';
-            const jsonPath = basePath + 'spritesDesc/Hero.json';
+        const basePath = style === 'modern' ? 'assets/hero_modern/' : 'assets/hero/';
+        const jsonPath = basePath + 'spritesDesc/Hero.json';
 
-            const response = await fetch(jsonPath);
-            if (!response.ok) {
-                throw new Error(`Hero sprite JSON not found: ${jsonPath}`);
-            }
-            const spriteData = await response.json();
-
-            // Build layer configuration based on hero setup
-            const classDescriptor = heroClass + '_' + subClass;
-            const bodyType = this.getBodyType(heroClass, subClass, style);
-
-            this.heroLayers = [];
-            this.heroTextures = {};
-
-            // Helper to convert to PascalCase with Armor suffix for armor names (matching Java getVisualName())
-            const getArmorVisualName = (armorName) => {
-                if (armorName === 'none') return 'none';
-                // Map lowercase config names to actual file names (PascalCase + Armor suffix)
-                const armorMap = {
-                    'cloth': 'ClothArmor',
-                    'leather': 'LeatherArmor',
-                    'mail': 'MailArmor',
-                    'scale': 'ScaleArmor',
-                    'plate': 'PlateArmor',
-                    'gothic': 'GothicArmor',
-                    'rogue': 'RogueArmor',
-                    'warrior': 'WarriorArmor',
-                    'mage': 'MageArmor',
-                    'huntress': 'HuntressArmor',
-                    'scout': 'ScoutArmor',
-                    'shaman': 'ShamanArmor',
-                    'gladiator': 'GladiatorArmor',
-                    'berserk': 'BerserkArmor',
-                    'warlock': 'WarlockArmor',
-                    'battlemage': 'BattleMageArmor',
-                    'assasin': 'AssasinArmor',
-                    'freerunner': 'FreeRunnerArmor',
-                    'sniper': 'SniperArmor',
-                    'warden': 'WardenArmor',
-                    'necromancer': 'NecromancerArmor',
-                    'gnoll': 'GnollArmor',
-                    'spider': 'SpiderArmor',
-                    'rat': 'RatArmor',
-                    'chaos': 'ChaosArmor',
-                    'elf': 'ElfArmor',
-                    'necromancerrobe': 'NecromancerRobe',
-                    'priest': 'PriestArmor',
-                    'paladin': 'PaladinArmor',
-                    'cleric': 'ClericArmor',
-                    'witchdoctor': 'WitchdoctorArmor',
-                    'alchemist': 'AlchemistArmor',
-                    'transmuter': 'TransmuterArmor',
-                    'plaguedoctor': 'PlagueDoctorArmor'
-                };
-                return armorMap[armorName.toLowerCase()] || armorName;
-            };
-
-            // Helper to convert weapon names to PascalCase visual names (matching Java getVisualName())
-            const getWeaponVisualName = (weaponName) => {
-                if (weaponName === 'none') return 'none';
-                const weaponMap = {
-                    'shortsword': 'ShortSword',
-                    'longsword': 'Longsword',
-                    'dagger': 'Dagger',
-                    'mace': 'Mace',
-                    'hammer': 'Hammer',
-                    'sword': 'GoldenSword',
-                    'wand': 'Wand',
-                    'boomerang': 'Boomerang',
-                    'bow': 'CompoundBow',
-                    'crossbow': 'CompositeCrossbow',
-                    'spear': 'Spear',
-                    'glaive': 'Glaive',
-                    'battleaxe': 'BattleAxe',
-                    'claymore': 'Claymore',
-                    'quarterstaff': 'Quarterstaff',
-                    'knuckles': 'Knuckles',
-                    'bonesaw': 'BoneSaw',
-                    'tomahawk': 'GnollTamahawk',
-                    'halberd': 'Halberd',
-                    'kusarigama': 'Kusarigama',
-                    'pickaxe': 'Pickaxe',
-                    'royalshield': 'RoyalShield',
-                    'chaosshield': 'ChaosShield',
-                    'chaossword': 'ChaosSword',
-                    'chaosbow': 'ChaosBow',
-                    'chaosstaff': 'ChaosStaff',
-                    'woodenshield': 'WoodenShield',
-                    'toughshield': 'ToughShield',
-                    'strongshield': 'StrongShield'
-                };
-                return weaponMap[weaponName.toLowerCase()] || this.capitalizeFirst(weaponName);
-            };
-
-            // Helper to convert accessory names to PascalCase (matching file names)
-            const getAccessoryVisualName = (accName) => {
-                if (accName === 'none') return 'none';
-                return this.capitalizeFirst(accName);
-            };
-
-            // Body - verify it exists first
-            const bodyFile = `${basePath}body/${bodyType}.png`;
-            if (await this.checkResourceExists(bodyFile)) {
-                await this.loadHeroLayer('body', bodyFile);
-            } else {
-                console.warn(`Body texture not found: ${bodyFile}, trying fallback...`);
-                const fallbackBody = `${basePath}body/man.png`;
-                if (await this.checkResourceExists(fallbackBody)) {
-                    await this.loadHeroLayer('body', fallbackBody);
-                }
-            }
-
-            // Collar (loaded early as per Java layer order - after body, before head)
-            if (armor !== 'none') {
-                const armorVisualName = getArmorVisualName(armor);
-                const collarFile = `${basePath}armor/collar/${armorVisualName}.png`;
-                if (await this.checkResourceExists(collarFile)) {
-                    await this.loadHeroLayer('collar', collarFile);
-                }
-            }
-
-            // Head
-            const headFile = `${basePath}head/${classDescriptor}.png`;
-            if (await this.checkResourceExists(headFile)) {
-                await this.loadHeroLayer('head', headFile);
-            }
-
-            // Hair
-            const hairFile = `${basePath}head/hair/${classDescriptor}_HAIR.png`;
-            if (await this.checkResourceExists(hairFile)) {
-                await this.loadHeroLayer('hair', hairFile);
-            }
-
-            // Facial hair (between hair and helmet as per Java layer order)
-            const facialHairFile = `${basePath}head/facial_hair/${classDescriptor}_FACIAL_HAIR.png`;
-            if (await this.checkResourceExists(facialHairFile)) {
-                await this.loadHeroLayer('facial_hair', facialHairFile);
-            }
-
-            // Armor
-            if (armor !== 'none') {
-                const armorVisualName = getArmorVisualName(armor);
-                const armorFile = `${basePath}armor/${armorVisualName}.png`;
-                if (await this.checkResourceExists(armorFile)) {
-                    await this.loadHeroLayer('armor', armorFile);
-
-                    // Armor boots (note: file naming is ArmorName_bodyType.png, NOT ArmorName_boots_bodyType.png)
-                    const armorBootsFile = `${basePath}armor/boots/${armorVisualName}_${bodyType}.png`;
-                    if (await this.checkResourceExists(armorBootsFile)) {
-                        await this.loadHeroLayer('armor_boots', armorBootsFile);
-                    }
-
-                    // Helmet
-                    const helmetFile = `${basePath}armor/helmet/${armorVisualName}.png`;
-                    if (await this.checkResourceExists(helmetFile)) {
-                        await this.loadHeroLayer('helmet', helmetFile);
-                    }
-                }
-            }
-
-            // Hands (using lowercase weapon animation class as per Java)
-            const animClass = weapon !== 'none' ? weapon.toLowerCase() : 'none';
-            const leftHandFile = `${basePath}body/hands/${bodyType}_${animClass}_left.png`;
-            const rightHandFile = `${basePath}body/hands/${bodyType}_${animClass}_right.png`;
-            
-            if (await this.checkResourceExists(leftHandFile)) {
-                await this.loadHeroLayer('left_hand', leftHandFile);
-            }
-            if (await this.checkResourceExists(rightHandFile)) {
-                await this.loadHeroLayer('right_hand', rightHandFile);
-            }
-
-            // Weapon item (using PascalCase visual names as per Java getVisualName())
-            if (weapon !== 'none') {
-                const weaponVisualName = getWeaponVisualName(weapon);
-                
-                // Check if this is a shield (left-hand only item)
-                const isShield = weapon.toLowerCase().includes('shield');
-                
-                if (isShield) {
-                    // Shields only render in left hand
-                    const weaponLeftFile = `${basePath}items/${weaponVisualName}_left.png`;
-                    if (await this.checkResourceExists(weaponLeftFile)) {
-                        await this.loadHeroLayer('left_hand_item', weaponLeftFile);
-                    }
-                } else {
-                    // Regular weapons - try both hands
-                    const weaponRightFile = `${basePath}items/${weaponVisualName}_right.png`;
-                    const weaponLeftFile = `${basePath}items/${weaponVisualName}_left.png`;
-                    
-                    if (await this.checkResourceExists(weaponRightFile)) {
-                        await this.loadHeroLayer('right_hand_item', weaponRightFile);
-                    }
-                    if (await this.checkResourceExists(weaponLeftFile)) {
-                        await this.loadHeroLayer('left_hand_item', weaponLeftFile);
-                    }
-                }
-            }
-
-            // Accessory (using PascalCase names matching file names)
-            if (accessory !== 'none') {
-                const accessoryVisualName = getAccessoryVisualName(accessory);
-                const accessoryFile = `${basePath}accessories/${accessoryVisualName}.png`;
-                if (await this.checkResourceExists(accessoryFile)) {
-                    await this.loadHeroLayer('accessory', accessoryFile);
-                }
-            }
-
-            // Set up hero data
-            const currentHero = {
-                name: `${heroClass} (${subClass})`,
-                data: spriteData,
-                width: spriteData.width,
-                height: spriteData.height,
-                visualWidth: spriteData.visualWidth || spriteData.width,
-                visualHeight: spriteData.visualHeight || spriteData.height,
-                visualOffsetX: spriteData.visualOffsetX || 0,
-                visualOffsetY: spriteData.visualOffsetY || 0,
-                style: style,
-                class: heroClass,
-                subClass: subClass,
-                layers: this.heroLayers
-            };
-
-            return {
-                hero: currentHero,
-                textures: this.heroTextures,
-                layers: this.heroLayers
-            };
-
-        } catch (error) {
-            console.error(`Failed to load hero:`, error);
-            throw error;
+        const response = await fetch(jsonPath);
+        if (!response.ok) {
+            throw new Error(`Hero sprite JSON not found: ${jsonPath}`);
         }
+        const spriteData = await response.json();
+
+        const classDescriptor = heroClass + '_' + subClass;
+        const bodyType = this.getBodyType(heroClass, subClass, style);
+
+        const armorVisual = armor !== 'none' ? (ARMOR_MAP[armor.toLowerCase()] || armor) : null;
+        const weaponDef = weapon !== 'none'
+            ? (WEAPON_DEFS[weapon.toLowerCase()] || { visual: weapon, anim: 'none', twoHanded: false })
+            : null;
+        const accVisual = accessory !== 'none'
+            ? (ACCESSORY_MAP[accessory.toLowerCase()] || accessory)
+            : null;
+
+        // -- covering rules from ModernHeroSpriteDef.createLayersDesc --------
+        // A helmet suppresses the accessory; a hair-covering helmet, armor or
+        // accessory suppresses hair; an item-covering accessory suppresses
+        // held items. Availability of files gates everything else, matching
+        // ModdingMode.isResourceExists in applyLayersDesc.
+
+        // Layer candidates: name -> path. Missing files are skipped at load.
+        const wanted = new Map();
+
+        if (style === 'modern') {
+            // back items render behind the body
+            if (weaponDef) {
+                wanted.set('right_back_item', `${basePath}items/${weaponDef.visual}_back_right.png`);
+                if (weaponDef.shield) {
+                    wanted.set('left_back_item', `${basePath}items/${weaponDef.visual}_back_left.png`);
+                }
+            }
+        }
+
+        wanted.set('body', `${basePath}body/${bodyType}.png`);
+
+        if (armorVisual) {
+            wanted.set('collar', `${basePath}armor/collar/${armorVisual}.png`);
+        }
+
+        wanted.set('head', `${basePath}head/${classDescriptor}.png`);
+
+        if (armorVisual) {
+            wanted.set('armor', `${basePath}armor/${armorVisual}.png`);
+            if (style === 'modern') {
+                wanted.set('armor_boots', `${basePath}armor/boots/${armorVisual}_${bodyType}.png`);
+            }
+        }
+
+        // helmet first (it decides hair/accessory suppression), then hair
+        const helmetPath = armorVisual ? `${basePath}armor/helmet/${armorVisual}.png` : null;
+        const hasHelmet = helmetPath ? await this.checkResourceExists(helmetPath) : false;
+        if (hasHelmet) {
+            wanted.set('helmet', helmetPath);
+        }
+
+        const accFlags = accVisual ? (ACCESSORY_FLAGS[accVisual] || {}) : {};
+        const armorFlags = armorVisual ? (ARMOR_FLAGS[armorVisual] || {}) : {};
+        const helmetCoversHair = hasHelmet; // approximation of armor.isCoveringHair()
+        const hairSuppressed = hasHelmet || armorFlags.coverHair || accFlags.coverHair;
+
+        if (!hairSuppressed) {
+            wanted.set('hair', `${basePath}head/hair/${classDescriptor}_HAIR.png`);
+        }
+
+        if (!accFlags.coverHair) {
+            wanted.set('facial_hair', `${basePath}head/facial_hair/${classDescriptor}_FACIAL_HAIR.png`);
+        }
+
+        if (style === 'retro') {
+            const deathDescriptor = classDescriptor === 'MAGE_WARLOCK' ? 'warlock' : 'common';
+            wanted.set('death', `${basePath}death/${deathDescriptor}.png`);
+        }
+
+        if (style === 'modern') {
+            const handAnim = weaponDef ? weaponDef.anim : 'none';
+            // one-handed weapon -> right hand in weapon pose, left hand free;
+            // two-handed -> both hands in weapon pose; shield -> plain hands
+            const leftAnim = weaponDef && weaponDef.twoHanded && !weaponDef.shield ? handAnim : 'none';
+            wanted.set('left_hand', `${basePath}body/hands/${bodyType}_${leftAnim}_left.png`);
+            wanted.set('right_hand', `${basePath}body/hands/${bodyType}_${handAnim}_right.png`);
+
+            // shoulders: for a hand holding a two-handed weapon use the
+            // weapon pose variant, otherwise the plain hand variant
+            if (armorVisual) {
+                wanted.set('left_hand_armor', weaponDef && weaponDef.twoHanded && !weaponDef.shield
+                    ? `${basePath}armor/shoulders/${armorVisual}_${weaponDef.anim}.png`
+                    : `${basePath}armor/shoulders/${armorVisual}_left.png`);
+                wanted.set('right_hand_armor', weaponDef && !weaponDef.shield
+                    ? `${basePath}armor/shoulders/${armorVisual}_${weaponDef.anim}.png`
+                    : `${basePath}armor/shoulders/${armorVisual}_right.png`);
+            }
+
+            // accessory renders under the helmet (helmet replaces it)
+            if (accVisual && !hasHelmet) {
+                wanted.set('accessory', `${basePath}accessories/${accVisual}.png`);
+            }
+
+            // held items, unless the accessory is a costume covering them
+            if (weaponDef && !accFlags.coverItems) {
+                if (weaponDef.shield) {
+                    wanted.set('left_hand_item', `${basePath}items/${weaponDef.visual}_left.png`);
+                } else {
+                    wanted.set('right_hand_item', `${basePath}items/${weaponDef.visual}_right.png`);
+                    wanted.set('left_hand_item', `${basePath}items/${weaponDef.visual}_left.png`);
+                }
+            }
+        }
+
+        // -- load layers, keep canonical z-order -----------------------------
+        this.heroTextures = {};
+        this.heroLayers = [];
+
+        const names = [...wanted.keys()]
+            .sort((a, b) => LAYERS_ORDER.indexOf(a) - LAYERS_ORDER.indexOf(b));
+
+        for (const name of names) {
+            await this.loadHeroLayer(name, wanted.get(name));
+        }
+
+        // attack/zap override per weapon, as heroUpdated() does in Java
+        let attackOverride = null;
+        if (style === 'modern' && weaponDef && !weaponDef.shield) {
+            attackOverride = weaponDef.twoHanded ? 'dual' : 'right';
+        }
+
+        const currentHero = {
+            name: `${heroClass} (${subClass})`,
+            data: spriteData,
+            width: spriteData.width,
+            height: spriteData.height,
+            style: style,
+            class: heroClass,
+            subClass: subClass,
+            attackOverride: attackOverride,
+            layers: this.heroLayers
+        };
+
+        return {
+            hero: currentHero,
+            textures: this.heroTextures,
+            layers: this.heroLayers
+        };
     }
-    
+
     async checkResourceExists(path) {
         try {
             const response = await fetch(path, { method: 'HEAD' });
@@ -266,7 +181,7 @@ export class HeroLoader {
                 resolve();
             };
             img.onerror = () => {
-                // Layer file doesn't exist, skip it
+                // Layer file doesn't exist, skip it (game does the same)
                 resolve();
             };
             img.src = filePath;
@@ -274,20 +189,13 @@ export class HeroLoader {
     }
 
     getBodyType(heroClass, subClass, style) {
-        // Check subclass first, then class (matching Java bodyDescriptor)
+        // subclass first, then class (matching Java bodyDescriptor)
         if (BODY_TYPE_MAP[subClass]) return BODY_TYPE_MAP[subClass];
         if (BODY_TYPE_MAP[heroClass]) return BODY_TYPE_MAP[heroClass];
 
-        // Default based on class
-        if (heroClass === 'HUNTRESS') return 'woman';
-        if (heroClass === 'NECROMANCER' && subClass === 'LICH') return 'lich';
-        if (heroClass === 'GNOLL') return 'gnoll';
+        // retro uses the hero's gender: only HUNTRESS is feminine (HeroClass.getGender)
+        if (style === 'retro' && heroClass === 'HUNTRESS') return 'woman';
 
-        return style === 'modern' ? 'man' : 'man';
-    }
-
-    capitalizeFirst(str) {
-        if (!str) return str;
-        return str.charAt(0).toUpperCase() + str.slice(1);
+        return 'man';
     }
 }
