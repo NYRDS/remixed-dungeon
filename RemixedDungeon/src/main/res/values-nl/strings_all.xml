@@ -166,6 +166,7 @@
     <string name="BloodTransfusion_Name">Bloedtransfusie</string>
     <string name="BloodTransfusion_WontAgreed">Het slachtoffer weerst het onttrekken van zijn levensessentie.</string>
     <string name="BodyArmorBuff_Name">Lichaamspantser</string>
+    <string name="BoneSaw_Info">Een precisie-geengineerde chirurgische zaag ontworpen voor snelle ontleding. De schade en aanvalsnelheid worden dodelijker met de vaardigheid van de Pestdokter. Critische treffers snijden extra oogstbare delen van vijanden, en het slaat met ruthloze efficiëntie tegen gelamde vijanden.</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Bow_Info1">Dit is een afstandswapen. Het is nutteloos voor iedereen behalve elfen op zeer korte afstand. Met een boog uitgerust kun je pijlen afschieten.\n\n</string>
@@ -221,6 +222,7 @@
     <string name="ChaosBow_Name">chaosboog</string>
     <string name="ChaosCrystal_BladeFused">Het kristal absorber je wapen, en nam de vorm van een zwaard aan</string>
     <string name="ChaosCrystal_Fuse">SMETEN</string>
+    <string name="ChaosCrystal_Name">Vreemde Kristal</string>
     <string name="ChaosCrystal_Name_2">Chaos Kristal</string>
     <string name="ChaosCrystal_SwordFused">De kristal absorbeert je wapen en neemt de vorm aan van een Zwaard</string>
     <string name="ChaosHelmet_Name">Chaos Helm</string>
@@ -233,6 +235,7 @@
     <string name="CharAction_Hit">slaan</string>
     <string name="CharAction_PetInventory">inventaris</string>
     <string name="CharAction_Push">duwen</string>
+    <string name="CharAction_Scare">bang maken</string>
     <string name="CharAction_Steal">stelen</string>
     <string name="CharAction_Taunt">uitdagen</string>
     <string name="CharInfo_Level">Dit is een %2$s op niveau %1$d.</string>
@@ -281,6 +284,7 @@
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="Codex_Story_12">Brandid wapen - Bij een succesvolle treffer geeft dit extra schade en kan het doel in brand steken.</string>
     <string name="Codex_Story_14">Onstabiel wapen - Bij een succesvolle treffer kan het effect van willekeurige betovering optreden.</string>
+    <string name="Codex_Story_16">Gelukkig wapen - negeert bijna volledig de pantser van de vijand, en doet veel meer schade.</string>
     <string name="Codex_Story_17">Verstikkend wapen - Bij succesvolle treffer kan het doelwit verlamd raken.</string>
     <string name="Codex_Story_20">Vrieswapen - Een succesvolle treffer kan het doel vertragen en voorkomen dat het in brand vliegt.</string>
     <string name="Codex_Story_22">Dit boek is geschreven in de taal der demonen</string>
@@ -402,6 +406,7 @@
     <string name="FreezeGlobe_Info">Bevriest het geselecteerde personage, waardoor het korte tijd geen acties kan uitvoeren.</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostArrow_Gender">feminine</string>
+    <string name="FrostAuraBuff_Info">Vorst omringt het lichaam, wat alles in de buurt vertraagt.</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="Frost_Shatter">De koude doet %s barsten!</string>
     <string name="FrozenCarpaccio_Info2">Je voelt je verharden!</string>
@@ -419,6 +424,7 @@
     <string name="Ghost_Rose2">Alsjeblieft... Help me... Vind de roos...</string>
     <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Name">gleve</string>
+    <string name="GnollArmor_ACSpecial">DOMINEREN</string>
     <string name="GnollArmor_Info">Draagsters van het Gnome-Luitenant-kostuum zijn bekend om hun vermogen om zelfs de woestste monsters te overtuigen tot loyale dienaren van de Kroon.</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gnoll_Gender">masculine</string>
@@ -608,6 +614,7 @@
     <string name="Level_TileLockedExit">Vergrendelde uitgang naar de diepte</string>
     <string name="Level_TileOpenDoor">Open deur</string>
     <string name="Level_TilePedestal">Voetstuk</string>
+    <string name="Level_TilePoisonTrap">Gifpijl-val</string>
     <string name="Level_TileStatue">Standbeeld</string>
     <string name="Level_TileToxicTrap">Giftig gas val</string>
     <string name="LevitationBuff_Info">Het lichaam zweeft boven de grond en vermijdt vallen en andere gevaren op de grond.</string>
@@ -983,6 +990,7 @@
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SleepBuff_Info">Volledig in slaap</string>
     <string name="SlowBuff_Name">Vertraagd</string>
+    <string name="Slow_Name_2">Bevriezend %s</string>
     <string name="SmashSpell_Info">Spring omhoog en creëer een krachtige klap bij het raken van de grond, die tijdelijk vijanden in de buurt verdooft en tegelijkertijd fysieke schade toebrengt.</string>
     <string name="SmashSpell_Name">Verpletteren</string>
     <string name="Snail_Desc">Deze kleine weekdier is behoorlijk gegroeid door te voeden met rioolwater, maar hij is nog steeds heel traag, wat hem een makkelijke tegenstander maakt.</string>
@@ -1186,6 +1194,7 @@
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name_Objective">waterelementair</string>
     <string name="WaterOfHealth_Info">De kracht van gezondheid straalt uit het water van deze put. Neem een slok om je wonden te helen en je honger te stillen.</string>
+    <string name="WaterOfTransmutation_Info">Kracht van verandering straalt uit van het water van deze put. Gooi een item in de put om het in iets anders te veranderen.</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
     <string name="WeaknessBuff_Name">Verzwakt</string>
     <string name="Weapon_Incompatible">Interactie van verschillende typen magie heeft de toverij op dit wapen ontkend!</string>
@@ -1395,6 +1404,7 @@
     <string name="town_deco_crate_desc">Een stevige houten kist die zijn geheimen van binnen bewaart.</string>
     <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
     <string name="town_deco_crossroad_desc">Een ruwe houten paal met pijlvormige bordjes, de tekst waarop vervaagd is door de harde weersomstandigheden.</string>
+    <string name="town_deco_curtains_name">Gordijnen</string>
     <string name="town_deco_dungeon_door_desc">De ingang van de kerker.</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
     <string name="town_deco_entrance_name">ingang</string>
@@ -1418,6 +1428,7 @@
     <string name="town_deco_mud_desc">Ontdooide grond in dit permafrostgebied.</string>
     <string name="town_deco_painting_name">Schilderij</string>
     <string name="town_deco_pathway_name">pad</string>
+    <string name="town_deco_pedestal_name">Postament</string>
     <string name="town_deco_pole_desc">Een hoge paal ontworpen om de touw te spannen.</string>
     <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_rope_name">touw</string>
@@ -1457,6 +1468,18 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </resources>

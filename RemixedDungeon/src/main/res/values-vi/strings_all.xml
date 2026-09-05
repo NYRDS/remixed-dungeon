@@ -74,6 +74,7 @@
     <string name="Badges_DeathGlyph">Chết vì glyph</string>
     <string name="Badges_DeathHunger">Chết vì đói</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
+    <string name="Badges_GamesPlayed1">Đã chơi 10 ván</string>
     <string name="Badges_GamesPlayed2">Đã chơi 100 ván</string>
     <string name="Badges_GamesPlayed4">Đã chơi 2000 ván</string>
     <string name="Badges_GamesPlayed5">Đã chơi 5000 ván</string>
@@ -93,6 +94,7 @@
     <string name="Badges_MonsterSlain5">Hạ gục 1000 kẻ địch</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
     <string name="Badges_Piranhas">Săn được 6 cá ăn thịt người</string>
+    <string name="Badges_PotionsCooked1">3 bình thuốc đã nấu</string>
     <string name="Badges_PotionsCooked3">9 thuốc đã nấu</string>
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
     <string name="Badges_ShadowLord_Slain">Chúa Tể Bóng Tối đã bị tiêu diệt</string>
@@ -215,6 +217,7 @@
     <string name="ChaosBow_Name">cung hỗn loạn</string>
     <string name="ChaosCrystal_BladeFused">Vien ngoc hap thu vu khi cua ban va bien thanh hinh dang mot thanh kiem</string>
     <string name="ChaosCrystal_Fuse">DUNG HỢP</string>
+    <string name="ChaosCrystal_Name">Huyền Tinh Kỳ Lạ</string>
     <string name="ChaosCrystal_Name_2">Viên Ngọc Hỗn Mang</string>
     <string name="ChaosCrystal_StaffFused">Viên ngọc hấp thụ cây đũa phép của bạn và biến thành hình dạng một Cây Gậy</string>
     <string name="ChaosCrystal_SwordFused">Kính hấp thụ vũ khí của bạn và biến thành một Chiếc Kiếm</string>
@@ -275,6 +278,7 @@
     <string name="ClothArmor_Desc">Bộ giáp nhẹ này chỉ cung cấp khả năng bảo vệ cơ bản.</string>
     <string name="Codex_Story_10">Glyph Entangle - Anh hùng có thể nhận được giáp thảo mộc, nhưng đồng thời cũng có thể bị rễ cây trói chân.</string>
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
+    <string name="Codex_Story_16">Vũ khí may mắn - gần như hoàn toàn bỏ qua giáp địch, và gây nhiều sát thương hơn đáng kể.</string>
     <string name="Codex_Story_17">Vũ khí gây choáng - Khi đánh trúng, có thể khiến mục tiêu bị tê liệt.</string>
     <string name="Codex_Story_19">Vũ khí đính độc - Khi tấn công trúng mục tiêu, có thể gây độc.</string>
     <string name="Codex_Story_22">Cuốn sách này được viết bằng ngôn ngữ quỷ</string>
@@ -419,6 +423,7 @@
     <string name="Ghost_Name">ma buồn</string>
     <string name="Ghost_Rose2">Làm ơn... Giúp tôi... Tìm đóa hồng...</string>
     <string name="Glaive_Gender">feminine</string>
+    <string name="GnollArmor_ACSpecial">CHIẾM LĨNH</string>
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
     <string name="GnollArmor_NotGnoll">Chỉ gnoll mới có thể trang bị Áo Giáp Gnoll!</string>
     <string name="GnollCostume_Info">Một bộ trang phục ấm áp và bồng bềnh cực kỳ. Ai mặc bộ trang phục này sẽ trông như... người đang cố gắng cải trang thành gnoll. Nhưng gnoll sẽ không bị lừa, chúng vẫn sẽ tấn công bạn.</string>
@@ -732,6 +737,7 @@
     <string name="Paralysis_Name_0">%s choáng váng</string>
     <string name="PetInventory_GaveItem">Đã cho %1$s cho %2$s</string>
     <string name="PetInventory_GiveToPet">Cho thú cưng</string>
+    <string name="PetInventory_HeroBackpackFull">Balo của bạn đã đầy</string>
     <string name="PetInventory_PetBackpackFull">Ba lô của thú cưng đã đầy</string>
     <string name="PetInventory_TakeFromPet">Lấy từ thú cưng</string>
     <string name="PetInventory_Title">Kho thú cưng</string>
@@ -762,6 +768,7 @@
     <string name="PlagueDoctorQuest_1_2_Epilogue">Aaaa… tuyệt vời! Những _con ốc sên_, bí mật của chúng từ từ hé lộ như những cánh hoa dưới ánh trăng. Quả là một món quà thông tin dồi dào! Nhưng bạn nói đúng, _năm mươi đồng vàng_ chẳng phải là phần thưởng xứng đáng. *Cười man rợ*.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">Mười ốc sên, mười thì thầm từ vực thẳm! Chất nhầy của chúng sẽ được phân tích, bản chất của chúng sẽ được thẩm định. Những bí mật chúng chứa đựng đã gần trong tầm tay.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Ho khan dữ dội* Hắt xì!\n Những con ốc... chúng trườn. Chúng tiết nhờn. Và chúng thì thầm bí mật của một thời đại bị lãng quên. Tôi cần chúng, _mười_ con, vỏ vẫn còn nguyên vẹn. Bạn nghĩ _năm mươi đồng vàng_ có đủ cho tri thức quý giá như vậy không?\n Ba! Không quan trọng. Thông tin chúng giữ có thể là chìa khóa để dừng dịch bệnh này. Hoặc... nó có thể dẫn chúng ta đến thứ gì đó còn kinh khủng hơn. Bạn quyết định.</string>
+    <string name="PlagueDoctorQuest_2_1_Epilogue">_Thiên Hương_… minh chứng cho phép thuật vần vò thế giới này. Ta đã học được nhiều từ bản chất của chúng, nhưng phần thưởng của ngươi… tại ha, đã được chuẩn bị tận tâm. *Hàng cho anh hùng một bình _Mana Potion_ lấp lánh* Nguyện sức mạnh nó dẫn dắt ngươi vượt qua những hiểm nguy phía trước.</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">Một _Kỵ Sĩ Cửu U_! *Giọng nói nứt nẻ vì hứng thú, ngón tay xương khô run rẩy khi nắm chặt bình thuốc bủa bọt đầy hỗn hợp mờ tối, chói lòa*. Một sinh vật như vậy… một ngọn đèn hiệu của cái chết! Bắt được một con, còn sống… đó sẽ là… một kỳ quan. Hãy tưởng tượng những bí mật chúng ta có thể khai phá! Sức mạnh chảy trong những mạch xương khô đó! Đúng, một _Kỵ Sĩ Cửu U_! Nó quan trọng cho nghiên cứu của ta! Vì nó sẽ cho phép chúng ta đi sâu hơn… vào những bí ẩn của sự sống… và cái chết bản thân!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Ngón xương khô của hắn gõ nhịp nhàng vào nồi nước sôi sùng sục, không khí quanh hắn dày đặc bởi mùi hôi chua gay của lưu huỳnh và sự phân giải*\n_Kobold Pháp Sư Băng_! Những sinh vật thảm hại kia, trùm mình trong hang động đóng băng, nguội ngút chăm chăm vào phép thuật băng giá của chúng.\nTa cần năm con, xác đóng băng của chúng sẽ... soi sáng sự việc.\nSự thành thạo băng giá của chúng, nó... kỳ lạ.\nTa tin rằng chúng khai thác một năng lượng nguyên thủy, một sức mạnh ngủ quên dưới bề mặt của chính thế giới này.</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Tâm trí anh ấy lang thang khi nói, giọng nói càng lúc càng nhỏ, chỉ còn là thì thầm.* Mang cho ta hai *súc quyên*... sống. Quyền năng của chúng... mê hoặc.</string>
@@ -984,6 +991,7 @@
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
     <string name="Snail_Desc">Con ốc sên nhỏ này đã lớn khá nhanh nhờ ăn rác thải, nhưng nó vẫn rất chậm, khiến nó trở thành kẻ địch dễ dàng.</string>
     <string name="Snail_Gender">masculine</string>
+    <string name="Snail_Name">ốc sên</string>
     <string name="SnipersMarkBuff_Info">Dấu ấn này được tạo ra bởi một xạ thủ.</string>
     <string name="SnipersMarkBuff_Name">Dấu ấn xạ thủ</string>
     <string name="SociologistNPC_Gender">masculine</string>
@@ -1040,6 +1048,7 @@
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
     <string name="StartScene_UnlockGnoll">Để mở khóa lớp này, bạn phải thuyết phục linh mục làng chữa lành cho Gnoll Brute</string>
+    <string name="StartScene_UnlockNecromancer">Để mở khóa lớp nhân vật này, hãy tiêu diệt Lich bằng bất kỳ lớp nào khác.</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">tượng sống</string>
     <string name="Stench_Txt">%s hôi thối</string>
@@ -1163,8 +1172,10 @@
     <string name="Weightstone_WndCancel">Không sao đâu</string>
     <string name="Weightstone_WndChoice">Bạn muốn cân bằng %s như thế nào?</string>
     <string name="Weightstone_WndSpeed">Tốc độ</string>
+    <string name="Welcome_Ok">Được thôi!</string>
     <string name="Welcome_Title">Chào mừng!</string>
     <string name="WindGust_Info">Triệu hồi một cơn gió giật, đẩy nhân vật được chọn ra xa.</string>
+    <string name="WizardHat_Name">Nón Phép Thuật</string>
     <string name="WndBlacksmith_Prompt">Được, lời đã nói không thể lấy lại, đây là điều tôi có thể làm cho bạn: Tôi có thể luyện lại 2 vật phẩm và biến chúng thành 1 vật phẩm chất lượng tốt hơn.</string>
     <string name="WndCatalogus_Potions">Thuốc</string>
     <string name="WndCatalogus_Scrolls">Cuộn</string>
@@ -1191,6 +1202,7 @@
     <string name="WndGame_menu">Menu chính</string>
     <string name="WndHats_BackButton">Quay lại</string>
     <string name="WndHats_InfoButton">Xem xét</string>
+    <string name="WndHats_ListTitle">Danh sách Phụ kiện</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
     <string name="WndHero_Awareness">Nhận thức</string>
     <string name="WndHero_Exp">Kinh nghiệm</string>
@@ -1360,6 +1372,7 @@
     <string name="town_deco_identifier_sign_name">Biển hiệu Quả Cầu Phép Thuật</string>
     <string name="town_deco_inn_bed_desc">Trông có vẻ là một chiếc giường rất thoải mái.</string>
     <string name="town_deco_inn_bed_name">Giường</string>
+    <string name="town_deco_library_books_desc">Vẫn còn tốt hơn sách từ ngục.</string>
     <string name="town_deco_library_books_name">Vật liệu đọc</string>
     <string name="town_deco_locked_door_name">Cửa khóa</string>
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
@@ -1408,6 +1421,20 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

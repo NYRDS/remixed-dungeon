@@ -189,6 +189,7 @@
     <string name="Caves_TileGrass">طحلب فلوري</string>
     <string name="Caves_TileHighGrass">فطر مضيء</string>
     <string name="Challenges_Descriptions_1">الهجوم خير وسيلة للدفاع. اتباعًا لهذه التعاليم، تنطلق في الزنزانة، والإيمان هو أقوى حارس لجسدك.</string>
+    <string name="Challenges_Descriptions_3">الأراضي المحيطة بالزنزانة ملوثة بالشر منذ زمن بعيد، مما يمنع نمو بذور الأعشاب والنباتات المختلفة. من يدري كم سيمر من الوقت قبل أن تختفي آخر نبتة في هذه الأراضي القاحلة.</string>
     <string name="Challenges_Names_0">حمية</string>
     <string name="Challenges_Names_4">ذكاء السرب</string>
     <string name="Challenges_Names_5">إلى الظلام</string>
@@ -206,6 +207,7 @@
     <string name="ChaosCrystal_ArmorFused">اندمج البلور مع درعك، وأخذ شكل الفوضى.</string>
     <string name="ChaosCrystal_BladeFused">يمتص الكريستال سلاحك، ويتخذ شكل شفرة</string>
     <string name="ChaosCrystal_Fuse">دمج</string>
+    <string name="ChaosCrystal_Name">بلورة غريبة</string>
     <string name="ChaosCrystal_Name_2">بلورة الفوضى</string>
     <string name="ChaosCrystal_SwordFused">البلورة تمتص سلاحك وتأخذ شكل سيف</string>
     <string name="ChaosCrystal_Use">استخدام</string>
@@ -549,12 +551,14 @@
     <string name="Level_TileLockedExit">مخرج سفلي مغلق</string>
     <string name="Level_TileParalyticTrap">فخ غاز مشل</string>
     <string name="Level_TilePedestal">قاعدة</string>
+    <string name="Level_TilePoisonTrap">فخ السهام السامة</string>
     <string name="Level_TileSign">لافتة</string>
     <string name="Level_TileSummoningTrap">فخ الاستدعاء</string>
     <string name="LevitationBuff_Info">يطفو الجسم فوق الأرض متجنبًا الفخاخ وغيرها من المخاطر الأرضية.</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Not_Ready">أ... أعتذر، ال... المكتبة ليست مفتوحة... بعد\.</string>
     <string name="LibrarianNPC_Name">أمين المكتبة</string>
+    <string name="LibraryBook_Name">كتاب المكتبة</string>
     <string name="Lich_Desc">النكرومانسر لقي حتفه في أعماق النكروليس، وبتدريج، تحولت القوى الشريرة التي كانت تتدفق إلى جسده إلى ليتش. ساحر موت، دمية بلا إرادة، تسيطر عليها قوى خبيثة...</string>
     <string name="Lich_DieInfo">لم أحب أبدًا هذا الساحر الميت. حان الوقت للعودة إلى المستوى 7 وإيجاد طريق آخر للمغامرة الجديدة.</string>
     <string name="Lich_Gender">masculine</string>
@@ -986,6 +990,7 @@
     <string name="WandOfDisintegration_Name">عصا التفكك</string>
     <string name="WandOfFirebolt_Info">هذه العصا تطلق موجات من النار السحرية. ستشعل التضاريس القابلة للاشتعال، وستلحق الضرر وتحرق الكائن الذي تصيبه.</string>
     <string name="WandOfFlock_SheepBaa_2">باع.</string>
+    <string name="WandOfFlock_SheepBaa_4">نحلة...</string>
     <string name="WandOfLightning_Name">عصا البرق</string>
     <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية النقية، مما يلحق ضرراً متوسطاً بالهدف.</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
@@ -1033,6 +1038,7 @@
     <string name="WndCryptoDonate_tron">ترون</string>
     <string name="WndDonate_gold">ذهب</string>
     <string name="WndDonate_goldDonateText">شكراً لمساعدتكم</string>
+    <string name="WndDonate_royal">ملكي</string>
     <string name="WndDonate_royalDonateText2">بالإضافة إلى ذلك، ستحصل على كل قبعة من متجر التطبيق! وكذلك كل قبعة سيتم إصدارها مستقبلاً.</string>
     <string name="WndDonate_silverDonate">تبرع فضي</string>
     <string name="WndDonate_silverDonateText2">أيضًا تعطيل الإعلانات في جميع أنماط اللعب وفتح صياد منذ البداية.</string>
@@ -1043,6 +1049,7 @@
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
     <string name="WndHats_BackButton">رجوع</string>
     <string name="WndHats_BuyButton">شراء</string>
+    <string name="WndHats_ListTitle">قائمة الملحقات</string>
     <string name="WndHats_NoConnectionMsg">تعذر الاتصال بـ Google Play.</string>
     <string name="WndHats_Purchased">موجود!</string>
     <string name="WndHero_Awareness">اليقظة</string>
@@ -1223,6 +1230,13 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
+
+
 
 
 

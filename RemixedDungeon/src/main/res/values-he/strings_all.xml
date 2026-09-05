@@ -67,6 +67,7 @@
     <string name="Badges_DeathGlyph">מוות מגליף</string>
     <string name="Badges_DeathNecrotism">מוות מנקרוטיזם</string>
     <string name="Badges_FoodEaten3">30 מנות אוכל נאכלו</string>
+    <string name="Badges_GamesPlayed4">2000 משחקים שוחקו</string>
     <string name="Badges_GamesPlayed5">5000 משחקים שוחקו</string>
     <string name="Badges_GoldColleted4">7500 זהב נאסף</string>
     <string name="Badges_Info2">סופר תג חדש: %s</string>
@@ -127,6 +128,7 @@
     <string name="BlankScroll_ReallyBlank">המגילה ריקה</string>
     <string name="BleedingBuff_Name">מדמם</string>
     <string name="BloodTransfusion_FullHP">הדם שלך כבר במלוא הקיבולת.</string>
+    <string name="BloodTransfusion_Name">עירוי דם</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Bounce_Txt">%s של הקפצה</string>
     <string name="Bow_Info1">זהו נשק טווח. הוא חסר תועלת לכולם מלבד אלפים בטווח קרוב מאוד. כשקשת מצוידת אפשר לירות חצים.\n\n</string>
@@ -189,6 +191,7 @@
     <string name="ChaosCrystal_Fuse">מזג</string>
     <string name="ChaosCrystal_Info">אתה מרגיש זרמי אנרגיה זורמים דרך ידיך כשאתה מחזיק אותו.</string>
     <string name="ChaosCrystal_Info_2">כן! עכשיו אתה יודע שאפשר למזג אותו עם אחד מהפריטים שלך, אבל מה הלאה?</string>
+    <string name="ChaosCrystal_Name">גביש מוזר</string>
     <string name="ChaosCrystal_Name_2">קריסטל תוהו</string>
     <string name="ChaosCrystal_SwordFused">הגביש סופג את נשקך ולובש צורת חרב</string>
     <string name="ChaosCrystal_Use">השתמש</string>
@@ -278,6 +281,7 @@
     <string name="DashSpell_Info">מזנק בכיוון שצוין תוך התנגשות באויבים, גורם נזק ומטיל \'קטוע\'.</string>
     <string name="DashSpell_Name">הסתערות</string>
     <string name="DeathKnight_Gender">masculine</string>
+    <string name="DeathKnight_Name">אביר המוות</string>
     <string name="Death_Name_1">מוות %s</string>
     <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name_Objective">נפטר קטן</string>
@@ -317,6 +321,7 @@
     <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">אלמנטל אדמה</string>
     <string name="EarthElemental_Name_Objective">אלמנטל אדמה</string>
+    <string name="ElfArmor_ACSpecial">קריאת הטבע</string>
     <string name="ElfArmor_Name">אדרת אלפים</string>
     <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">דוגמה יוצאת דופן לאומנות אלפים. ברור שהוא יעיל ומדויק יותר מקשת עץ רגילה.</string>
@@ -373,6 +378,7 @@
     <string name="Ghost_Rose2">בבקשה... תעזור לי... למצוא את הוורד...</string>
     <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Name">גלייב</string>
+    <string name="GnollArmor_ACSpecial">להשתלט</string>
     <string name="GnollCostume_Name">תחפושת גנול</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gnoll_Desc">גנולים הם דמויי צבועים. הם שוכנים בביובים ובמבוכים, ויוצאים לפשוט על פני השטח מדי פעם. סיירי הגנולים הם חברים רגילים בלהקה, הם לא חזקים כמו בריונים ולא חכמים כמו שאמאנים.</string>
@@ -525,6 +531,7 @@
     <string name="Level_TileHighGrass">דשא גבוה</string>
     <string name="Level_TileLockedDoor">דלת נעולה</string>
     <string name="Level_TileParalyticTrap">מלכודת גז משתקת</string>
+    <string name="Level_TilePoisonTrap">מלכודת חץ מורעל</string>
     <string name="Level_TileSummoningTrap">מלכודת זימון</string>
     <string name="Level_TileWall">קיר</string>
     <string name="Level_TileWell">באר</string>
@@ -682,6 +689,7 @@
     <string name="PotionOfPurity_NoSmell">הפסקת להרגיש ריחות\!</string>
     <string name="Potion_Beneficial">שיקוי מועיל</string>
     <string name="Potion_Colors_1">אָדוֹם כֵּהֶה</string>
+    <string name="Potion_Colors_11">כסוף</string>
     <string name="Potion_Colors_15">פנינה</string>
     <string name="Potion_Colors_3">ירקן</string>
     <string name="Potion_Colors_6">פחם</string>
@@ -888,6 +896,7 @@
     <string name="StartScene_ComingSoon">בקרוב</string>
     <string name="StartScene_Depth">עומק: %1$d\nשלב: %2$d</string>
     <string name="StartScene_DifficultyEasyNoAds">קל</string>
+    <string name="StartScene_DifficultyNormalWithSaves">רגיל עם שמירות (ופרסומות)</string>
     <string name="StartScene_DifficultyNormalWithSavesNoAds">רגיל עם שמירות</string>
     <string name="StartScene_DifficultySelect">בחר את גורלך</string>
     <string name="StartScene_Load">טען משחק</string>
@@ -1023,6 +1032,7 @@
     <string name="WndGame_Ranking">דירוגים</string>
     <string name="WndGame_Return">חזרה למשחק</string>
     <string name="WndHats_BackButton">חזרה</string>
+    <string name="WndHats_ListTitle">רשימת אביזרים</string>
     <string name="WndHats_UnequipButton">הסר כובע</string>
     <string name="WndHero_Awareness">מודעות</string>
     <string name="WndHero_DefenceSkill">מיומנות הגנה</string>
@@ -1187,6 +1197,7 @@
     <string name="town_deco_tree_desc">מתעוררת תחושה מוזרה כשמביטים בעץ החי והשליו הזה. הרי לא רחוק מכאן שוכן מבוך מלא באימה ומוות.</string>
     <string name="town_deco_vat_name">מיכל</string>
     <string name="town_deco_wall_brazier_name">מחבת בעירה</string>
+    <string name="town_deco_wall_candles_desc">נרות כבויים, שמהם עדיין נודף ניחוח נעים.</string>
     <string name="town_deco_wall_candles_name">נרות</string>
     <string name="town_deco_wall_desc">קיר פשוט עשוי בולי עץ.</string>
     <string name="town_deco_wallpaper_name">טפט</string>
@@ -1528,6 +1539,17 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
