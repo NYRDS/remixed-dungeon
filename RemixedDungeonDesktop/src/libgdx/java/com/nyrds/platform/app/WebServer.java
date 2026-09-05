@@ -1,11 +1,16 @@
 package com.nyrds.platform.app;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Pixmap;
+import com.badlogic.gdx.graphics.PixmapIO;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -22,6 +27,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * WebServer implementation for desktop platforms.
@@ -36,7 +45,7 @@ public class WebServer extends BaseWebServer {
     public boolean isReady() {
         // Check if libGDX files is available (indicates libGDX is initialized)
         try {
-            return com.badlogic.gdx.Gdx.files != null && GameLoop.instance() != null;
+            return Gdx.files != null && GameLoop.instance() != null;
         } catch (Exception e) {
             return false;
         }
@@ -91,11 +100,11 @@ public class WebServer extends BaseWebServer {
         String template = loadTemplate("root_template.html");
 
         Map<String, String> replacements = new HashMap<>();
-        replacements.put("GAME_VERSION", com.watabou.pixeldungeon.utils.Utils.format("%s (%d)", GameLoop.version, GameLoop.versionCode));
-        replacements.put("MOD_INFO", com.watabou.pixeldungeon.utils.Utils.format("%s (%d)", ModdingMode.activeMod(), ModdingMode.activeModVersion()));
+        replacements.put("GAME_VERSION", Utils.format("%s (%d)", GameLoop.version, GameLoop.versionCode));
+        replacements.put("MOD_INFO", Utils.format("%s (%d)", ModdingMode.activeMod(), ModdingMode.activeModVersion()));
 
         String levelInfo = GameLoop.instance() != null && Dungeon.level != null ?
-            com.watabou.pixeldungeon.utils.Utils.format("<p>Level: %s</p>", Dungeon.level.levelId) :
+            Utils.format("<p>Level: %s</p>", Dungeon.level.levelId) :
             "standalone mode";
         replacements.put("LEVEL_INFO", levelInfo);
 
@@ -133,7 +142,7 @@ public class WebServer extends BaseWebServer {
             // List directories first
             for (String name : directories) {
                 String fullPath = name; // For root, path is just the name
-                dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>", fullPath, name));
+                dirContent.append(Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>", fullPath, name));
             }
             // Then list files
             for (String name : files) {
@@ -146,7 +155,7 @@ public class WebServer extends BaseWebServer {
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
-                    dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>", fullPath, name, encodedPath2));
+                    dirContent.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>", fullPath, name, encodedPath2));
                 } else if (name.toLowerCase().endsWith(".lua")) {
                     // For Lua files, add both download and edit links
                     String encodedPath2;
@@ -155,7 +164,7 @@ public class WebServer extends BaseWebServer {
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
-                    dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", fullPath, name, encodedPath2, fullPath));
+                    dirContent.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>", fullPath, name, encodedPath2, fullPath));
                 } else if (name.toLowerCase().endsWith(".png") || name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".jpeg")) {
                     // For image files, add download, preview, and edit links
                     String encodedPath2;
@@ -164,10 +173,10 @@ public class WebServer extends BaseWebServer {
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
-                    dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>", fullPath, name, encodedPath2, encodedPath2));
+                    dirContent.append(Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>", fullPath, name, encodedPath2, encodedPath2));
                 } else {
                     // For other files, just show download link
-                    dirContent.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", fullPath, name));
+                    dirContent.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>", fullPath, name));
                 }
             }
         }
@@ -198,7 +207,7 @@ public class WebServer extends BaseWebServer {
             if (upOneLevel.isEmpty()) {
                 upOneLevelLink = "<p><a href=\"/list\">..</a></p>";
             } else {
-                upOneLevelLink = com.watabou.pixeldungeon.utils.Utils.format("<p><a href=\"/fs/%s/\">..</a></p>", upOneLevel);
+                upOneLevelLink = Utils.format("<p><a href=\"/fs/%s/\">..</a></p>", upOneLevel);
             }
         } else {
             upOneLevelLink = "<p><a href=\"/list\">..</a></p>";
@@ -231,7 +240,7 @@ public class WebServer extends BaseWebServer {
             // List directories first
             for (String name : directories) {
                 String fullPath = directoryPath.isEmpty() ? name : directoryPath + "/" + name;
-                dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>",
+                dirListing.append(Utils.format("<p>📁 <a href=\"/fs/%s/\">%s/</a></p>",
                     fullPath, name));
             }
             // Then list files
@@ -245,7 +254,7 @@ public class WebServer extends BaseWebServer {
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
-                    dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>",
+                    dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-json?file=%s\">edit</a>)</p>",
                         fullPath, name, encodedPath2));
                 } else if (name.toLowerCase().endsWith(".lua")) {
                     // For Lua files, add both download and edit links
@@ -255,7 +264,7 @@ public class WebServer extends BaseWebServer {
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
-                    dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>",
+                    dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a> (<a href=\"/edit-lua?file=%s\">edit</a>) (<a href=\"/fs/%s?download=1\">download</a>)</p>",
                         fullPath, name, encodedPath2, fullPath));
                 } else if (name.toLowerCase().endsWith(".png") || name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".jpeg")) {
                     // For image files, add download, preview, and edit links
@@ -265,11 +274,11 @@ public class WebServer extends BaseWebServer {
                     } catch (Exception e) {
                         encodedPath2 = fullPath; // Fallback if encoding fails
                     }
-                    dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>",
+                    dirListing.append(Utils.format("<p>🖼️ <a href=\"/fs/%s\">%s</a> (<a href=\"/preview-image?file=%s\">preview</a>) (<a href=\"/edit-png?file=%s\">edit</a>)</p>",
                         fullPath, name, encodedPath2, encodedPath2));
                 } else {
                     // For other files, just show download link
-                    dirListing.append(com.watabou.pixeldungeon.utils.Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>",
+                    dirListing.append(Utils.format("<p>📄 <a href=\"/fs/%s\">%s</a></p>",
                         fullPath, name));
                 }
             }
@@ -319,7 +328,7 @@ public class WebServer extends BaseWebServer {
 
         // Prepare upload link
         String uploadLink = currentPath != null && !currentPath.isEmpty()
-            ? com.watabou.pixeldungeon.utils.Utils.format("<p><a href=\"/fs/%s/\">Back to directory</a></p>", currentPath)
+            ? Utils.format("<p><a href=\"/fs/%s/\">Back to directory</a></p>", currentPath)
             : "<p><a href=\"/list\">Back to main directory</a></p>";
         replacements.put("UPLOAD_LINK", uploadLink);
 
@@ -482,24 +491,24 @@ public class WebServer extends BaseWebServer {
 
     private Response handleDebugScreenshot(IHTTPSession session) {
         try {
-            int width = com.badlogic.gdx.Gdx.graphics.getWidth();
-            int height = com.badlogic.gdx.Gdx.graphics.getHeight();
+            int width = Gdx.graphics.getWidth();
+            int height = Gdx.graphics.getHeight();
 
-            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            CountDownLatch latch = new CountDownLatch(1);
             final byte[][] pngData = new byte[1][];
             final String[] error = new String[1];
 
-            com.nyrds.pixeldungeon.game.GameLoop.pushUiTask(() -> {
+            GameLoop.pushUiTask(() -> {
                 try {
-                    com.badlogic.gdx.graphics.Pixmap pixmap = com.badlogic.gdx.graphics.Pixmap.createFromFrameBuffer(0, 0, width, height);
+                    Pixmap pixmap = Pixmap.createFromFrameBuffer(0, 0, width, height);
                     if (pixmap == null) {
                         error[0] = "Failed to capture screenshot";
                         latch.countDown();
                         return;
                     }
 
-                    com.badlogic.gdx.files.FileHandle fileHandle = com.badlogic.gdx.Gdx.files.local("screenshot_tmp.png");
-                    com.badlogic.gdx.graphics.PixmapIO.writePNG(fileHandle, pixmap);
+                    FileHandle fileHandle = Gdx.files.local("screenshot_tmp.png");
+                    PixmapIO.writePNG(fileHandle, pixmap);
                     pngData[0] = fileHandle.readBytes();
                     fileHandle.delete();
                     pixmap.dispose();
@@ -510,7 +519,7 @@ public class WebServer extends BaseWebServer {
                 }
             });
 
-            if (!latch.await(5, java.util.concurrent.TimeUnit.SECONDS)) {
+            if (!latch.await(5, TimeUnit.SECONDS)) {
                 return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
                     "{\"error\":\"Timeout waiting for screenshot\"}");
             }
@@ -839,7 +848,7 @@ public class WebServer extends BaseWebServer {
             GLog.debug("Received texture data (length): " + jsonString.length());
 
             // Parse the JSON to extract filename and image content
-            org.json.JSONObject jsonData = new org.json.JSONObject(jsonString);
+            JSONObject jsonData = new JSONObject(jsonString);
             String filename = jsonData.getString("name");
             String base64Content = jsonData.getString("image");
 
@@ -895,7 +904,7 @@ public class WebServer extends BaseWebServer {
             return newFixedLengthResponse(Response.Status.OK, "application/json",
                 "{\"success\":true, \"message\":\"File saved successfully to: " + fullPath + "\"}");
 
-        } catch (org.json.JSONException e) {
+        } catch (JSONException e) {
             GLog.debug("=== JSON PARSING ERROR ===");
             GLog.debug("JSON parsing error: " + e.getMessage());
             e.printStackTrace();
