@@ -5,6 +5,7 @@ import {
     BODY_TYPE_MAP, LAYERS_ORDER, ARMOR_MAP, ARMOR_FLAGS,
     WEAPON_DEFS, ACCESSORY_MAP, ACCESSORY_FLAGS
 } from './config.js';
+import { resolve } from './data-source.js';
 
 export class HeroLoader {
     constructor() {
@@ -14,7 +15,7 @@ export class HeroLoader {
 
     async loadHero(style, heroClass, subClass, armor, weapon, accessory) {
         const basePath = style === 'modern' ? 'assets/hero_modern/' : 'assets/hero/';
-        const jsonPath = basePath + 'spritesDesc/Hero.json';
+        const jsonPath = resolve(basePath + 'spritesDesc/Hero.json');
 
         const response = await fetch(jsonPath);
         if (!response.ok) {
@@ -178,7 +179,7 @@ export class HeroLoader {
 
     async checkResourceExists(path) {
         try {
-            const response = await fetch(path, { method: 'HEAD' });
+            const response = await fetch(resolve(path), { method: 'HEAD' });
             return response.ok;
         } catch (e) {
             return false;
@@ -186,18 +187,20 @@ export class HeroLoader {
     }
 
     async loadHeroLayer(layerName, filePath) {
-        return new Promise((resolve) => {
+        return new Promise((resolvePromise) => {
             const img = new Image();
             img.onload = () => {
                 this.heroTextures[layerName] = img;
                 this.heroLayers.push(layerName);
-                resolve();
+                resolvePromise();
             };
             img.onerror = () => {
                 // Layer file doesn't exist, skip it (game does the same)
-                resolve();
+                resolvePromise();
             };
-            img.src = filePath;
+            // keep the canvas untainted when layers come from GitHub
+            img.crossOrigin = 'anonymous';
+            img.src = resolve(filePath);
         });
     }
 

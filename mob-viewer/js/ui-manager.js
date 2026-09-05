@@ -1,5 +1,7 @@
 // UI Manager - Handles all UI interactions and updates
 
+import { getMode, setMode } from './data-source.js';
+
 export class UIManager {
     constructor(spriteViewer) {
         this.viewer = spriteViewer;
@@ -27,6 +29,14 @@ export class UIManager {
     }
 
     setupEventListeners() {
+        // Data source switching (local server vs GitHub master)
+        const dataSourceSelect = document.getElementById('dataSourceSelect');
+        dataSourceSelect.value = getMode();
+        dataSourceSelect.addEventListener('change', async (e) => {
+            setMode(e.target.value);
+            await this.viewer.reloadData();
+        });
+
         // Mode switching
         document.getElementById('modeMobBtn').addEventListener('click', () => {
             this.viewer.switchToMobMode();

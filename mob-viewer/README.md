@@ -16,6 +16,20 @@ A web application to load and play mob animations from Remixed Dungeon using exi
 
 ## Running the Application
 
+### Data Sources
+
+The header has a **Data source** switch (persisted in localStorage):
+
+- **Local server** (default) - fetches from the server serving this page.
+- **GitHub (master)** - fetches sprite JSONs and textures straight from
+  `raw.githubusercontent.com/NYRDS/remixed-dungeon`, with the mob list
+  from the GitHub contents API. Works from any host (or `file://`) with
+  no local checkout of assets; subject to the unauthenticated GitHub API
+  rate limit (60 req/h, mob list only - raw file fetches are unlimited
+  for practical purposes). Textures load with `crossOrigin=anonymous`
+  and raw.githubusercontent sends CORS headers, so the canvas stays
+  readable.
+
 ### Option 1: No-Cache Python Server (Recommended)
 
 ```bash

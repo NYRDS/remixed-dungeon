@@ -1,6 +1,7 @@
 // Mob Loader - Handles loading mob sprite data
 
 import { isAnimationDesc } from './animation-controller.js';
+import { resolve, listSpritesDesc } from './data-source.js';
 
 export class MobLoader {
     constructor() {
@@ -10,9 +11,16 @@ export class MobLoader {
     }
 
     async loadMobList() {
+        // GitHub mode: contents API provides the directory listing
+        const listed = await listSpritesDesc();
+        if (listed && listed.length > 0) {
+            this.availableMobs = listed;
+            return this.availableMobs;
+        }
+
         try {
             // Fetch the list of sprite JSON files dynamically
-            const response = await fetch('assets/spritesDesc/');
+            const response = await fetch(resolve('assets/spritesDesc/'));
             if (response.ok) {
                 const text = await response.text();
                 // Parse directory listing if available (some servers provide this)
@@ -20,7 +28,7 @@ export class MobLoader {
                 const doc = parser.parseFromString(text, 'text/html');
                 const links = doc.querySelectorAll('a[href$=".json"]');
                 if (links.length > 0) {
-                    this.availableMobs = Array.from(links).map(link => 
+                    this.availableMobs = Array.from(links).map(link =>
                         decodeURIComponent(link.getAttribute('href').replace('.json', ''))
                     );
                 }
@@ -28,12 +36,12 @@ export class MobLoader {
         } catch (error) {
             console.log('Directory listing not available, using fallback method...');
         }
-        
+
         // If directory listing didn't work, use predefined list as fallback
         if (this.availableMobs.length === 0) {
             await this.loadMobNamesFromConfig();
         }
-        
+
         return this.availableMobs;
     }
     
@@ -68,7 +76,7 @@ export class MobLoader {
     async selectMob(mobName) {
         try {
             // Load sprite JSON
-            const jsonPath = `assets/spritesDesc/${mobName}.json`;
+            const jsonPath = resolve(`assets/spritesDesc/${mobName}.json`);
             const jsonResponse = await fetch(jsonPath);
             if (!jsonResponse.ok) {
                 throw new Error(`Sprite JSON not found: ${jsonPath}`);
@@ -76,21 +84,21 @@ export class MobLoader {
             const spriteData = await jsonResponse.json();
 
             // Build texture path from the texture field in JSON
-            let texturePath = `assets/${spriteData.texture}`;
-            
+            let texturePath = resolve(`assets/${spriteData.texture}`);
+
             // Verify texture exists before loading
             const textureExists = await this.checkResourceExists(texturePath);
             if (!textureExists) {
                 console.warn(`Texture not found at ${texturePath}, checking alternative paths...`);
-                
+
                 // Try alternative paths for mobs that use subdirectories
                 const textureName = spriteData.texture;
                 const altPaths = [
-                    `assets/mobs/${textureName}`,
-                    `assets/${textureName.toLowerCase()}`,
-                    `assets/mobs/${textureName.toLowerCase()}`
+                    resolve(`assets/mobs/${textureName}`),
+                    resolve(`assets/${textureName.toLowerCase()}`),
+                    resolve(`assets/mobs/${textureName.toLowerCase()}`)
                 ];
-                
+
                 for (const altPath of altPaths) {
                     if (await this.checkResourceExists(altPath)) {
                         texturePath = altPath;
@@ -98,7 +106,7 @@ export class MobLoader {
                     }
                 }
             }
-            
+
             await this.loadTexture(texturePath);
 
             const currentMob = {
@@ -137,6 +145,8 @@ export class MobLoader {
                 console.error('Failed to load texture:', path);
                 reject(new Error('Failed to load texture'));
             };
+            // keep the canvas untainted when textures come from GitHub
+            this.textureImage.crossOrigin = 'anonymous';
             this.textureImage.src = path;
         });
     }

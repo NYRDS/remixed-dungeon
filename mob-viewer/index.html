@@ -26,6 +26,23 @@
             text-align: center;
             border-bottom: 2px solid #0f3460;
         }
+
+        header .data-source {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            color: #9aa7bd;
+            font-size: 14px;
+        }
+
+        header select {
+            background: #0f3460;
+            color: #e0e0e0;
+            border: 1px solid #16213e;
+            border-radius: 4px;
+            padding: 6px 10px;
+        }
         
         header h1 {
             color: #e94560;
@@ -198,6 +215,13 @@
     <header>
         <h1>🎮 Mob & Hero Animation Viewer</h1>
         <p>Load and play mob and hero animations from Remixed Dungeon</p>
+        <label class="data-source">
+            Data source:
+            <select id="dataSourceSelect">
+                <option value="local">Local server</option>
+                <option value="github">GitHub (master)</option>
+            </select>
+        </label>
     </header>
     
     <div class="container">

@@ -33,18 +33,24 @@ class SpriteViewer {
     }
     
     async init() {
-        const mobNames = await this.mobLoader.loadMobList();
         this.uiManager.setupEventListeners();
         this.uiManager.setupHeroSelectors(ARMOR_LIST, WEAPON_LIST, ACCESSORY_LIST, SUBCLASSES);
-        this.uiManager.populateMobList(mobNames, (mobName) => this.selectMob(mobName));
-        
-        // Load first mob by default
-        if (mobNames.length > 0) {
-            await this.selectMob(mobNames[0]);
-        }
-        
+        await this.reloadData();
         this.uiManager.hideLoading();
         this.startRenderLoop();
+    }
+
+    // (re)load the mob list for the active data source and select a first
+    // entry; in hero mode the current hero configuration is re-applied
+    async reloadData() {
+        const mobNames = await this.mobLoader.loadMobList();
+        this.uiManager.populateMobList(mobNames, (mobName) => this.selectMob(mobName));
+
+        if (this.isHeroMode && this.currentHero) {
+            await this.applyHeroConfiguration();
+        } else if (mobNames.length > 0) {
+            await this.selectMob(mobNames[0]);
+        }
     }
     
     async selectMob(mobName) {
