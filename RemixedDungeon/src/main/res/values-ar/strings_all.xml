@@ -353,6 +353,7 @@
     <string name="ExplodingSkull_Desc">يبدو هذا الجمجمة الطافية المحترقة هشة للغاية، ويبدو أنها ستنفجر إلى قطع في أي لحظة.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="Eye_Gender">neuter</string>
+    <string name="Eye_Kill">نظر الموت من %s قتلك...</string>
     <string name="Eye_Name">العين الشريرة</string>
     <string name="Facilitations_Descriptions_0">عومل المتحورون دائماً بازدراء وخوف، لكن انعدام الجوع سيمنحك مرة أخرى التفوق، هذه المرة في غزو أعماق الزنزانة.</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
@@ -529,6 +530,7 @@
     <string name="Kobold_Name">كوبلد</string>
     <string name="Kobold_Name_Objective">كوبلد</string>
     <string name="KrampusHead_Info">هل تساءلت يومًا كيف سيكون شعورك عند لعب دور أكثر شرًا أثناء استكشاف الزنزانات؟ حسنًا، ستلقين الرعب في قلوب جرذان الأطفال المحليين بهذا المظهر الشيطاني.</string>
+    <string name="KrampusHead_Name">رأس كرامبوس</string>
     <string name="KunaiThrow_Info">ستُنفَّذ هذه الرميّة القاتلة للكوناي بسرعة بالغة، بسرعة تجعلك عاجزًا حتى عن اختيار هدف.\n\nالأساتذة الحقيقيون قادرون على رمي أكثر من كوناي في آنٍ واحد.</string>
 
     <string name="Kusarigama_Gender">feminine</string>
@@ -562,6 +564,7 @@
     <string name="Level_TilePoisonTrap">فخ السهام السامة</string>
     <string name="Level_TileSign">لافتة</string>
     <string name="Level_TileSummoningTrap">فخ الاستدعاء</string>
+    <string name="Level_TileWell">بئر</string>
     <string name="LevitationBuff_Info">يطفو الجسم فوق الأرض متجنبًا الفخاخ وغيرها من المخاطر الأرضية.</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Not_Ready">أ... أعتذر، ال... المكتبة ليست مفتوحة... بعد\.</string>
@@ -793,6 +796,7 @@
     <string name="RottenRation_Name">وجبة متعفنة</string>
     <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">قبضة متعفّنة</string>
+    <string name="RottingFist_Name_Objective">قبضة متعفنة</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyCrossbow_Gender">masculine</string>
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
@@ -1175,6 +1179,7 @@
     <string name="town_deco_blue_carpet_desc">سجادة زرقاء فاخرة، مزينة بنقوش بنفسجية.</string>
     <string name="town_deco_blue_carpet_name">سجادة</string>
     <string name="town_deco_book_desc">يبدو هذا الكتاب وكأن شخصًا ما تركه بإهمال هنا</string>
+    <string name="town_deco_broken_roof_name">سقف مكسور</string>
     <string name="town_deco_broken_wall_desc">الجذوع في هذا الجدار قد تعفنت منذ زمن طويل وفقدت مرونتها المعتادة.</string>
     <string name="town_deco_broken_wall_name">جدار متهدم</string>
     <string name="town_deco_brown_carpet_desc">هذا السجاد البني قد وطئته أقدام العديد من المغامرين والمتشردين والمارة.</string>
@@ -1246,6 +1251,11 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
 
 
 

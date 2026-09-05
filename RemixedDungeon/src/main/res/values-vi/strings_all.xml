@@ -388,6 +388,7 @@
     <string name="ExplodingSkull_Name_Objective">đầu lâu nổ</string>
     <string name="Eye_Desc">Một trong những cái tên khác của quỷ này là \&quot;cầu bóng căm thù\&quot;, vì khi thấy kẻ thù, nó sử dụng cái nhìn tử thần một cách liều lĩnh, thường bỏ qua đồng minh và làm bị thương họ.</string>
     <string name="Eye_Gender">neuter</string>
+    <string name="Eye_Kill">Tia tử thần của %s đã giết bạn...</string>
     <string name="Eye_Name">con mắt quỷ</string>
     <string name="Facilitations_Names_1">Cơ thể khỉ lợn</string>
     <string name="Facilitations_Names_2">Linh hồn thần đèn</string>
@@ -601,6 +602,7 @@
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="KrampusHead_Info">Bạn có từng tự hỏi cảm giác như thế nào khi đóng vai một kẻ phản diện khi khám phá ngục giam? Vâng, với ngoại hình ác quỷ này, bạn chắc chắn sẽ mang lại nỗi sợ hãi cho những chú chuột con địa phương.</string>
+    <string name="KrampusHead_Name">Đầu Krampus</string>
     <string name="KunaiThrow_Info">Đòn ném kunai chết người này được thực hiện cực kỳ nhanh, nhanh đến mức bạn thậm chí không thể chọn mục tiêu.\n\nBậc thầy thực sự có thể ném nhiều hơn một kunai cùng lúc.</string>
     <string name="KunaiThrow_Name">Ném kunai</string>
     <string name="Kusarigama_Gender">feminine</string>
@@ -1437,6 +1439,8 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

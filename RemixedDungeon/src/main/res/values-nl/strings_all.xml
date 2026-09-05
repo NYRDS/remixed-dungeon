@@ -393,6 +393,7 @@
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="Eye_Desc">Een van de andere namen van deze demon is \&quot;orb of hatred\&quot;, omdat wanneer hij een vijand ziet, hij zijn doodsblik onbeschoft gebruikt, vaak de bondgenoten negerend en ze verwondend.</string>
     <string name="Eye_Gender">neuter</string>
+    <string name="Eye_Kill">De doodskijk van %s heeft je gedood...</string>
     <string name="Facilitations_Names_0">Geen honger</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
     <string name="FetidRat_Gender">feminine</string>
@@ -587,6 +588,7 @@
     <string name="Kobold_Name">kobold</string>
     <string name="Kobold_Name_Objective">kobold</string>
     <string name="KrampusHead_Info">Heb je je ooit afgevraagd hoe het voelt om een meer duistere rol te spelen tijdens het verkennen van de dungeon? Nou, met deze duivelse uitstraling zul je de lokale babyratten zeker angst aanjagen.</string>
+    <string name="KrampusHead_Name">Krampus Hoofd</string>
     <string name="KunaiThrow_Info">Deze dodelijke kunai-worp wordt extreem snel uitgevoerd, zo snel dat je niet eens een doelwit kunt kiezen.\n\nWare meesters kunnen meer dan één kunai tegelijk werpen.</string>
     <string name="KunaiThrow_Name">Kunai-worp</string>
     <string name="Kusarigama_Gender">feminine</string>
@@ -609,6 +611,7 @@
     <string name="Level_TileDescBarricade">De houten barricade zit stevig, maar is over de jaren uitgedroogd. Zal hij branden?</string>
     <string name="Level_TileDescChasm">Je kunt de bodem niet zien.</string>
     <string name="Level_TileDescExit">De treden leiden naar beneden, naar een diepere verdieping.</string>
+    <string name="Level_TileDescLockedDoor">Deze deur is op slot, je hebt een passende sleutel nodig om hem te openen.</string>
     <string name="Level_TileDescTrap">Als je op een verborgen drukplaat stapt, activeer je de val.</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
     <string name="Level_TileEntrance">Diepte-ingang</string>
@@ -623,6 +626,7 @@
     <string name="Level_TilePoisonTrap">Gifpijl-val</string>
     <string name="Level_TileStatue">Standbeeld</string>
     <string name="Level_TileToxicTrap">Giftig gas val</string>
+    <string name="Level_TileWell">put</string>
     <string name="LevitationBuff_Info">Het lichaam zweeft boven de grond en vermijdt vallen en andere gevaren op de grond.</string>
     <string name="LevitationBuff_Name">Zwevend</string>
     <string name="LibrarianNPC_Desc">Een heel verlegen persoon, die een ongemakkelijk uitziend vest en een dikke bril draagt.</string>
@@ -895,6 +899,7 @@
     <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="RottingFist_Desc">Verrottende Vuist van de Oude God</string>
     <string name="RottingFist_Gender">masculine</string>
+    <string name="RottingFist_Name_Objective">vergaande vuist</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Alleen de grootste bogenschutters kunnen deze robijnboog gebruiken. Bijna elke pijl doorboort de vijand, een groot gat in zijn lichaam achterlatend, maar extreme kracht is nodig om de boogteef te spannen.</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -1398,6 +1403,7 @@
     <string name="town_deco_blue_carpet_desc">Een luxe blauwe tapijt, versierd met paarse ornamenten.</string>
     <string name="town_deco_blue_carpet_name">kleedje</string>
     <string name="town_deco_broken_roof_desc">De dakpannen op dit dak zijn gebarsten en moeten vervangen worden.</string>
+    <string name="town_deco_broken_roof_name">kapot dak</string>
     <string name="town_deco_broken_wall_desc">De balken in deze muur zijn al lang verrot en hebben hun gewone weerstandskracht verloren.</string>
     <string name="town_deco_brown_carpet_desc">Deze bruine tapijt is onder voet getrapt door veel avonturiers, zwervers en toeschouwers.</string>
     <string name="town_deco_brown_carpet_name">Tapijt</string>
@@ -1483,6 +1489,12 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
 
 
 

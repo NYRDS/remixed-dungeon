@@ -514,6 +514,7 @@
     <string name="Kobold_Name">קובולד</string>
     <string name="Kobold_Name_Objective">קובולד</string>
     <string name="KrampusHead_Info">האם אי פעם תהית איך זה מרגיש לקחת תפקיד יותר מרושע בזמן חקר הצינוק? ובכן, עם המראה השטני הזה, בוודאי תביא אימה לעכברונים המקומיים.</string>
+    <string name="KrampusHead_Name">ראש קרמפוס</string>
     <string name="KunaiThrow_Info">זריקת הקונאי הקטלנית הזו מבוצעת במהירות עצומה, כה מהירה שאף לא תוכל לבחור מטרה.\n\nאמנים אמיתיים מסוגלים לזרוק יותר מקונאי אחד בבת אחת.</string>
 
     <string name="KunaiThrow_Name">זריקת קונאי</string>
@@ -533,6 +534,7 @@
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
     <string name="Level_TileDescChasm">אינך יכול לראות את התחתית.</string>
     <string name="Level_TileDescHighGrass">צמחייה צפופה חוסמת את המבט</string>
+    <string name="Level_TileDescLockedDoor">הדלת הזו נעולה, אתה צריך מפתח תואם כדי לפתוח אותה.</string>
     <string name="Level_TileEntrance">כניסה לעומק</string>
     <string name="Level_TileExit">יציאה מהעומק</string>
     <string name="Level_TileHighGrass">דשא גבוה</string>
@@ -773,6 +775,7 @@
     <string name="RottenRation_Name">מנה רקובה</string>
     <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">אגרוף מרקיב</string>
+    <string name="RottingFist_Name_Objective">אגרוף נרקב</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Info">כלי הנשק הקטלני הזה הוא באמת יצירת מופת של ההנדסה הגמדית.</string>
@@ -1160,6 +1163,7 @@
     <string name="town_deco_barrel_wine_desc">משמשת לאחסון משקה יקר ערך כמו יין.</string>
     <string name="town_deco_barrel_wine_name">חבית יין</string>
     <string name="town_deco_blue_carpet_name">שטיח</string>
+    <string name="town_deco_broken_roof_name">גג שבור</string>
     <string name="town_deco_cabinet_name">ארון</string>
     <string name="town_deco_canvas_name">קנבס</string>
     <string name="town_deco_carpet_desc">שטיח אדום מפואר השמור לאורחים מיוחדים.</string>
@@ -1556,6 +1560,11 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
 
 
 
