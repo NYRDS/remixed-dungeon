@@ -194,6 +194,7 @@
     <string name="Caves_TileHighGrass">فطر مضيء</string>
     <string name="Challenges_Descriptions_1">الهجوم خير وسيلة للدفاع. اتباعًا لهذه التعاليم، تنطلق في الزنزانة، والإيمان هو أقوى حارس لجسدك.</string>
     <string name="Challenges_Descriptions_3">الأراضي المحيطة بالزنزانة ملوثة بالشر منذ زمن بعيد، مما يمنع نمو بذور الأعشاب والنباتات المختلفة. من يدري كم سيمر من الوقت قبل أن تختفي آخر نبتة في هذه الأراضي القاحلة.</string>
+    <string name="Challenges_Descriptions_8">ستبدأ رحلتك في مجاري البلدة المظلمة والخطيرة، مع انسداد الطريق الوحيد إلى السطح. والأسوأ من ذلك، أنك لن تتمكن إلا من استخدام المعدات التي تجدها داخل الزنزانة. وبموارد ومعدات محدودة، سيعتمد بقاؤك على مهاراتك واستراتيجيتك.</string>
     <string name="Challenges_Names_0">حمية</string>
     <string name="Challenges_Names_4">ذكاء السرب</string>
     <string name="Challenges_Names_5">إلى الظلام</string>
@@ -788,6 +789,7 @@
     <string name="RootSpell_Info">يحبس الشخصية المختارة، مما يمنعها من الحركة لفترة قصيرة.</string>
     <string name="RootsBuff_Name">متجذر</string>
     <string name="RottenFish_Info">سمك متعفن، تفوح منه رائحة كريهة</string>
+    <string name="RottenFish_Name">سمكة فاسدة</string>
     <string name="RottenFood_Message">مقزز!</string>
     <string name="RottenMeat_Name">لحم متعفن</string>
     <string name="RottenOrgan_Name">عضو متعفن</string>
@@ -958,6 +960,7 @@
     <string name="Thief_Carries">\n\n%1 يحمل _%2. مسروق بالطبع.</string>
     <string name="Thief_Desc">المستويات الأعمق من الزنزانة كانت دائماً ملاذاً لجميع أنواع المجرمين. ليس كل منهم استطاع الحفاظ على عقله أثناء فترات طويلة بعيدة عن ضوء النهار. منذ زمن بعيد، نسي هؤلاء اللصوص وقطاع الطرق المجانين من هم ولماذا يسرقون.</string>
     <string name="Thief_Gender">masculine</string>
+    <string name="Thief_Name_Objective">اللص المجنون</string>
     <string name="Thief_Stole">%1$s سرق %2$s منك!</string>
     <string name="TitleScene_Badges">الشارات</string>
     <string name="TitleScene_Mods">مودز</string>
@@ -1255,6 +1258,9 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
 
 
 

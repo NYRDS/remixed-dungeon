@@ -428,6 +428,7 @@
     <string name="Ghost_Defense">né tránh</string>
     <string name="Ghost_Desc">Ma gần như không thể nhìn thấy. Nó trông như một đốm ánh sáng mờ vô hình với một khuôn mặt buồn bã.</string>
     <string name="Ghost_Name">ma buồn</string>
+    <string name="Ghost_Name_Objective">ma</string>
     <string name="Ghost_Rose1">Chào bạn phiêu lưu gia... Một thời tôi giống như bạn - mạnh mẽ và tự tin... Và bây giờ tôi đã chết... Nhưng tôi không thể rời khỏi nơi này... Cho đến khi tôi tìm được _bông hồng khô_ của tôi... Nó rất quan trọng với tôi... Một vài quái vật đã cướp nó từ thi thể của tôi...</string>
     <string name="Ghost_Rose2">Làm ơn... Giúp tôi... Tìm đóa hồng...</string>
     <string name="Glaive_Gender">feminine</string>
@@ -930,6 +931,7 @@
     <string name="ScrollOfRecharging_Info1a">một luồng năng lượng tràn qua ba lô của bạn, nạp lại phép thuật cho gậy phép thuật của bạn</string>
     <string name="ScrollOfRecharging_Info1b">một dòng năng lượng lan tỏa qua túi đồ của bạn, sạc lại năng lượng cho các gậy phép</string>
     <string name="ScrollOfRemoveCurse_Info">Lời chú trên cuộn này sẽ tách ngay lập tức khỏi vũ khí, giáp, nhẫn và vật mang theo của người đọc bất kỳ lời nguyền xấu nào có thể ngăn cản người đeo tháo chúng ra.</string>
+    <string name="ScrollOfRemoveCurse_NoProced">Balo của bạn phát sáng với ánh sáng thanh tẩy, nhưng không có gì xảy ra.</string>
     <string name="ScrollOfRemoveCurse_Proced">Cái ba lô của bạn phát sáng bằng ánh sáng thanh tẩy, và một năng lượng dữ tợn tan biến.</string>
     <string name="ScrollOfSummoning_Info">Khi đọc to, cuộn giấy này sẽ triệu hồi một con quái vật từ tầng hầm ngục hiện tại. Và nếu ý chí của nó đủ yếu, nó sẽ trở thành tôi tớ của bạn.</string>
     <string name="ScrollOfTeleportation_NoTeleport">Sức mạnh ma pháp của nơi này ngăn cản việc dịch chuyển của bạn!</string>
@@ -1443,6 +1445,8 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

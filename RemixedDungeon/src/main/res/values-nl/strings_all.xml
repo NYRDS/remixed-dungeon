@@ -46,6 +46,7 @@
     <string name="AmuletScene_Txt">Eindelijk houd je het in je handen, het Amulet van Yendor. Met zijn kracht kun je de wereld veroveren of vrede en voorspoed brengen of wat dan ook. In ieder geval zal je leven voor altijd veranderen en dit spel eindigt hier. Of je kunt nog even een gewone sterfelijke blijven.</string>
     <string name="AnesthesiaBuff_Info">Voelt geen pijn en wakert niet op bij aanvallen, maar krijgt nog steeds schade.</string>
     <string name="Ankh_Name">Ankh</string>
+    <string name="ArmorKit_ACAplly">TOEPASSSEN</string>
     <string name="ArmorKit_Name">rustingset</string>
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
     <string name="Armor_Glyph">glyph</string>
@@ -399,6 +400,7 @@
     <string name="Facilitations_Names_0">Geen honger</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
     <string name="FetidRat_Gender">feminine</string>
+    <string name="Fez_Name">Fez</string>
     <string name="FireArrow_Gender">feminine</string>
     <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">vuurelementair</string>
@@ -1078,6 +1080,7 @@
     <string name="StartScene_DifficultySelect">Kies je lot</string>
     <string name="StartScene_Load">Spel laden</string>
     <string name="StartScene_New">Nieuw spel</string>
+    <string name="StartScene_No">Nee, terug naar hoofdmenu</string>
     <string name="StartScene_Really">Wil je echt een nieuw spel starten?</string>
     <string name="StartScene_UnlockGnoll">Om deze klasse te ontgrendelen moet je de dorpspriester ervan overtuigen de Gnol Brute te genezen</string>
     <string name="Statue_Gender">feminine</string>
@@ -1493,6 +1496,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
