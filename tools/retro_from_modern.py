@@ -171,9 +171,18 @@ def source_layers(hero_class, sub_class, armors):
     return pairs
 
 
-def convert_pairs(pairs, out_dir, box, into_assets, verbose=False, tag=""):
+def convert_pairs(pairs, out_dir, box, into_assets, verbose=False, tag="",
+                  missing_only=False):
     total = 0
+    skipped = 0
     for src, dst, kind in pairs:
+        if missing_only:
+            if into_assets and os.path.exists(os.path.join(assets_dir(), dst)):
+                skipped += 1
+                continue
+            if not into_assets and os.path.exists(os.path.join(out_dir, dst)):
+                skipped += 1
+                continue
         overlays = ()
         if kind == "body":
             bt = os.path.basename(dst)[:-4]
@@ -205,6 +214,8 @@ def convert_pairs(pairs, out_dir, box, into_assets, verbose=False, tag=""):
             if overlays:
                 note += " (shoulders baked)"
             print(f"{tag}{src} -> {dst} ({n} frames){note}")
+    if skipped:
+        print(f"{tag}skipped {skipped} existing sheet(s) (--missing-only)")
     return total
 
 
@@ -294,7 +305,8 @@ def cmd_convert(args):
     box = visual_box()
     armors = ARMORS if args.armor == ["all"] else args.armor
     pairs = source_layers(args.hero_class, args.sub_class, armors)
-    total = convert_pairs(pairs, args.out, box, args.into_assets, verbose=True)
+    total = convert_pairs(pairs, args.out, box, args.into_assets,
+                          verbose=True, missing_only=args.missing_only)
     print(f"converted {total} layer sheet(s); visual box {box}")
     return 0
 
@@ -309,7 +321,8 @@ def cmd_all(args):
                 total += len(pairs)
             else:
                 total += convert_pairs(pairs, args.out, box, args.into_assets,
-                                       verbose=args.verbose, tag=f"{cls}_{sub}: ")
+                                       verbose=args.verbose, tag=f"{cls}_{sub}: ",
+                                       missing_only=args.missing_only)
     print(f"{'would convert' if args.dry_run else 'converted'} {total} layer sheet(s) "
           f"for {sum(len(s) for s in CLASSES.values())} class/subclass combos")
     return 0
@@ -362,11 +375,15 @@ def main():
     c.add_argument("--out", default="generated/retro")
     c.add_argument("--into-assets", action="store_true",
                    help="write into assets/hero/ (overwrites hand-drawn art!)")
+    c.add_argument("--missing-only", action="store_true",
+                   help="skip sheets whose retro destination already exists")
     c.set_defaults(func=cmd_convert)
 
     a = sub.add_parser("all", help="convert every class/subclass/armor")
     a.add_argument("--out", default="generated/retro")
     a.add_argument("--into-assets", action="store_true")
+    a.add_argument("--missing-only", action="store_true",
+                   help="skip sheets whose retro destination already exists")
     a.add_argument("--dry-run", action="store_true")
     a.add_argument("--verbose", action="store_true")
     a.set_defaults(func=cmd_all)
