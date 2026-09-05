@@ -86,6 +86,7 @@
     <string name="Badges_ItemLvl5">تم الحصول على عنصر من المستوى 15</string>
     <string name="Badges_LevelReached5">وصلت إلى المستوى 30</string>
     <string name="Badges_MasteryCombo">كومبو 7 ضربات</string>
+    <string name="Badges_MonsterSlain1">تم قتل 10 أعداء</string>
     <string name="Badges_NightHunter">5 وحوش قُتلت ليلاً</string>
     <string name="Badges_NoMonsterSlain">تم إكمال المستوى دون قتل أي وحوش</string>
     <string name="Badges_PotionsCooked2">تم طهي 6 جرعات</string>
@@ -109,6 +110,7 @@
     <string name="Bat_Desc">هؤلاء السكان السريعون والعنيدون في قباب الكهوف قد يهزمون خصوماً أكبر بكثير من خلال تجديد صحتهم مع كل ضربة ناجحة.</string>
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">خفاش مصاص دماء</string>
+    <string name="Bat_Name_Objective">خفاش مصاص للدماء</string>
     <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">رأس هذه الفأس الحربية الفولاذي الضخم يمنح قوة كبيرة لكل ضربة.</string>
     <string name="Bee_Gender">masculine</string>
@@ -327,6 +329,7 @@
     <string name="Dungeon_Tips_16">عند ترقية سلاح مسحور، هناك احتمال لتدمير ذلك السحر.</string>
     <string name="Dungeon_Tips_17">بئر التحويل يمكن أن يمنحك عنصرا لا يمكن الحصول عليه بأي طريقة أخرى.</string>
     <string name="Dungeon_Tips_18">الطريقة الوحيدة لسحر سلاح هي ترقيته باستخدام مخطوطة ترقية سلاح.</string>
+    <string name="Dungeon_Tips_20">بكسل-مارت. أسعار خاصة لصيادي الشياطين!</string>
     <string name="Dungeon_Tips_23">النص مكتوب بلغة شيطانية.</string>
     <string name="Dungeon_Tips_4">احذر من الغو!</string>
     <string name="Dungeon_Tips_5">بِكسل-مارت - كل ما تحتاجه لمغامرة ناجحة!</string>
@@ -344,6 +347,7 @@
     <string name="EncumbranceBuff_Name">العبء</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EquipableItem_ACUnequip">خلع المعدات</string>
+    <string name="EquipableItem_Unequip">لا يمكنك إزالة %s الملعون!</string>
     <string name="Exhumation_Info">فتح القبر عملٌ شائنٌ بحدّ ذاته، لكنّه لا يكفي لمن يخدم الموتَ نفسَه. لمن يُجري هذا الطقسَ الداكنَ فرصةٌ عظيمةٌ (وتزداد مع إتقانه) لأن يخضعَ روحاً مسكينةً لأحدِ الراقدين ههنا.</string>
     <string name="Exhumation_Name">نبش القبر</string>
     <string name="ExplodingSkull_Desc">يبدو هذا الجمجمة الطافية المحترقة هشة للغاية، ويبدو أنها ستنفجر إلى قطع في أي لحظة.</string>
@@ -370,6 +374,7 @@
     <string name="FriedFish_Name">سمك مقلي</string>
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Info">يحيط الصقيع بالجسد، مما يبطئ كل ما يقترب منه.</string>
+    <string name="FrostAuraBuff_Name">هالة الصقيع</string>
     <string name="FrostBuff_Name">مجمد</string>
     <string name="Frost_Shatter">البرد يتسبب في تحطم %s!</string>
     <string name="FrozenCarpaccio_Info1">ترى يديك تصبحان غير مرئيتين!</string>
@@ -625,6 +630,7 @@
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">آه! يا له من منظر نادر! زميل مغامر ليس مجرد جثة بلا حياة! لا يكاد يصدق! أوه... أعتذر، أحياناً أشعر بالحماس الشديد. ترى، أنا نِكْرومانسي (ساحر الموتى). وعلى الرغم من أن دراسة الموتى والموت نفسه هو مهنتي، إلا أن رؤية نفس الأشياء مراراً وتكراراً تصبح مرهقة للغاية في النهاية. من ناحية أخرى، هذا هو السبب بالضبط في وجودي هنا. وفقاً لحساباتي، في غضون أسابيع قليلة، في مكان ما في هذا الزنزانة بالذات، سيحدث شيء مذهل. الـ _نِكْرُوبُولِس_ (المقبرة القديمة)، مدينة الموتى القديمة، ستفتح أبوابها. و... لا يمكنني حقاً قول الكثير، لقد أضعت وقتاً كافياً كما هو الحال. أنا بحاجة للاستعداد، _عد لاحقاً_.</string>
     <string name="NecromancerNPC_Message2">يجب أن أكون جاهزاً.</string>
+    <string name="NecromancerNPC_Name">ساحر الموت</string>
     <string name="NecromancerRobe_Info2">هذا رداء مشبع بالسحر الأسود يسمح للنكرومانسر بأكل أرواح الوحوش المنهزمة.</string>
     <string name="Necromancer_ACSpecial">نِيكرومانسيا</string>
     <string name="Necromancy_SummonDeathlingName">استدعاء سمرتة</string>
@@ -980,6 +986,7 @@
     <string name="TownsfolkSilentNPC_Name_Objective">سكان البلدة</string>
     <string name="ToxicGland_Name">غدة سامة</string>
     <string name="TrapWnd_Step">هل تريد حقاً خطو على هذا الفخ؟ قد تموت.</string>
+    <string name="TrapWnd_Title">فخ</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
     <string name="Typical_Damage">الضرر المعتاد</string>
     <string name="Undead_Gender">masculine</string>
@@ -1239,6 +1246,13 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
+
+
 
 
 

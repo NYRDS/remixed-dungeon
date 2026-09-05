@@ -409,6 +409,7 @@
     <string name="FortuneTellerNPC_Name">người xem bói</string>
     <string name="FortuneTellerNPC_Name_Objective">bà giải điềm</string>
     <string name="FrostArrow_Gender">feminine</string>
+    <string name="FrostAuraBuff_Name">Hơi sương băng</string>
     <string name="Frost_Shatter">Lạnh làm %s vỡ nát!</string>
     <string name="FrozenCarpaccio_Info1">Bạn thấy tay mình trở nên vô hình!</string>
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
@@ -426,6 +427,7 @@
     <string name="Ghost_Defense">né tránh</string>
     <string name="Ghost_Desc">Ma gần như không thể nhìn thấy. Nó trông như một đốm ánh sáng mờ vô hình với một khuôn mặt buồn bã.</string>
     <string name="Ghost_Name">ma buồn</string>
+    <string name="Ghost_Rose1">Chào bạn phiêu lưu gia... Một thời tôi giống như bạn - mạnh mẽ và tự tin... Và bây giờ tôi đã chết... Nhưng tôi không thể rời khỏi nơi này... Cho đến khi tôi tìm được _bông hồng khô_ của tôi... Nó rất quan trọng với tôi... Một vài quái vật đã cướp nó từ thi thể của tôi...</string>
     <string name="Ghost_Rose2">Làm ơn... Giúp tôi... Tìm đóa hồng...</string>
     <string name="Glaive_Gender">feminine</string>
     <string name="GnollArmor_ACSpecial">CHIẾM LĨNH</string>
@@ -995,6 +997,7 @@
     <string name="Shuriken_Name">shuriken</string>
     <string name="SkeletonKey_Info">Cái chìa khóa này trông rất nghiêm trọng: đầu nó được đúc hình cái sọ. Có lẽ nó có thể mở được cánh cửa quan trọng nào đó.</string>
     <string name="Skeleton_Gender">masculine</string>
+    <string name="Skeleton_Killed">Bạn đã bị giết bởi vụ nổ xương...</string>
     <string name="SlowBuff_Info">Cảm giác chậm chạp khiến người ta chậm hơn bình thường.</string>
     <string name="SlowBuff_Name">Làm chậm</string>
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
@@ -1434,6 +1437,9 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

@@ -76,6 +76,7 @@
     <string name="Badges_ItemLvl4">הושג פריט ברמה 12</string>
     <string name="Badges_LevelReached4">הגיע לרמה 24</string>
     <string name="Badges_LevelReached5">הגעת לרמה 30</string>
+    <string name="Badges_MonsterSlain1">10 אויבים הושמדו</string>
     <string name="Badges_NoMonsterSlain">הושלמה רמה מבלי להרוג אף מפלצת</string>
     <string name="Badges_Piranhas">6 פיראניות נהרגו</string>
     <string name="Badges_PotionsCooked3">9 שיקויים מבושלים</string>
@@ -95,6 +96,7 @@
     <string name="BardNPC_Gender">masculine</string>
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">עטלף ערפד</string>
+    <string name="Bat_Name_Objective">עטלף ערפד</string>
     <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">ראש הפלדה העצום של גרזן הקרב הזה מקנה משקל רב לכל מכה.</string>
     <string name="Bee_Gender">masculine</string>
@@ -378,6 +380,7 @@
     <string name="Ghost_Desc">הרוח בקושי נראית. זה נראה כמו כתם חסר צורה של אור חלש עם פנים עצובות.</string>
     <string name="Ghost_Name_Objective">רוח</string>
     <string name="Ghost_Rat1">שלום הרפתקן... פעם הייתי כמוך - חזק ובטוח... ועכשיו אני מת... אבל אני לא יכול לעזוב את המקום הזה... לא עד שאנקום... הרוג את _העכברוש המסריח_, שלקח את חיי...</string>
+    <string name="Ghost_Rose1">שלום הרפתקן... פעם הייתי כמוך - חזק ובטוח... ועכשיו אני מת... אבל אני לא יכול לעזוב את המקום הזה... לא עד שיהיה לי את _הוורד היבש_ שלי... זה מאוד חשוב לי... איזה מפלצת גנבה אותו מגופתי...</string>
     <string name="Ghost_Rose2">בבקשה... תעזור לי... למצוא את הוורד...</string>
     <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Name">גלייב</string>
@@ -848,6 +851,7 @@
     <string name="SkeletonKey_Info">המפתח הזה נראה רציני: ראשו בצורת גולגולת. כנראה שהוא יכול לפתוח דלת רצינית כלשהי.</string>
     <string name="Skeleton_Desc">שלדים מורכבים מעצמות גופות של הרפתקנים ותושבי המבוך חסרי מזל, מונפשים על ידי זרמי קסם אפל מהמעמקים. לאחר שנפגעו מספיק, הם מתפרקים בפיצוץ של עצמות.</string>
     <string name="Skeleton_Gender">masculine</string>
+    <string name="Skeleton_Killed">נרצחת על ידי פיצוץ העצמות...</string>
     <string name="Skeleton_Name">שלד</string>
     <string name="Skeleton_Name_Objective">שלד</string>
     <string name="SlowBuff_Name">מואט</string>
@@ -1552,6 +1556,10 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
 
 
 

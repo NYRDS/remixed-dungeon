@@ -124,6 +124,7 @@
     <string name="Bat_Desc">Deze kwieke en taaie bewoners van grotkoepels kunnen grotere tegenstanders verslaan door bij elke succesvolle aanval hun gezondheid aan te vullen.</string>
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">vampiervleermuis</string>
+    <string name="Bat_Name_Objective">vampiervleermuis</string>
     <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">Het enorme staande hoofd van deze strijdbijl geeft een aanzienlijk gewicht achter elke slag.</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
@@ -386,6 +387,7 @@
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
     <string name="Entanglement_Txt">%s van verstrengeling</string>
     <string name="EquipableItem_ACUnequip">UITRUSTEN</string>
+    <string name="EquipableItem_Unequip">Je kunt de vervloekte %s niet verwijderen!</string>
     <string name="Exhumation_Name">Exhumatie</string>
     <string name="Exhumation_NoGrave">Hier is geen graf om een Exhumatie uit te voeren.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
@@ -424,6 +426,7 @@
     <string name="GasImmuneBuff_Name">Gasimmuniteit</string>
     <string name="Ghost_Defense">ontweek</string>
     <string name="Ghost_Desc">De geest is nauwelijks zichtbaar. Het lijkt op een vormloze vlek van zwak licht met een droevig gezicht.</string>
+    <string name="Ghost_Rose1">Hallo avonturier... Eens was ik als jij - sterk en zelfverzekerd... En nu ben ik dood... Maar ik kan deze plek niet verlaten... Niet voordat ik mijn _gedroogde roos_ terugheb... Het is heel belangrijk voor me... Sommige monsters hebben het van mijn lichaam gestolen...</string>
     <string name="Ghost_Rose2">Alsjeblieft... Help me... Vind de roos...</string>
     <string name="Glaive_Gender">feminine</string>
     <string name="Glaive_Name">gleve</string>
@@ -984,6 +987,7 @@
     <string name="Shopkeeper_BuyPrompt">Laat me je inventaris zien</string>
     <string name="Shopkeeper_Name">winkelier</string>
     <string name="Shopkeeper_SellPrompt">Ik heb spullen te verkopen</string>
+    <string name="ShortSword_ACReforge">HERKASTEN</string>
     <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Dit zwaard is inderdaad vrij kort, slechts enkele centimeters langer dan een dolk.</string>
     <string name="ShortSword_Name">kort zwaard</string>
@@ -993,6 +997,7 @@
     <string name="SkeletonKey_Info">Deze sleutel ziet er serieus uit: het kopje is vormgegeven als een schedel. Waarschijnlijk kan hij een serieuze deur openen.</string>
     <string name="Skeleton_Desc">Skeletten zijn samengesteld uit botten van ongelukkige avonturiers en bewoners van de dungeon, tot leven gewekt door uitstralingen van het kwaad uit de diepte. Zodra ze genoeg beschadigd zijn, vallen ze uiteen in een ontploffing van botten.</string>
     <string name="Skeleton_Gender">masculine</string>
+    <string name="Skeleton_Killed">Je bent gedood door de ontploffing van botten...</string>
     <string name="Skeleton_Name">skelet</string>
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SleepBuff_Info">Volledig in slaap</string>
@@ -1478,6 +1483,11 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
 
 
 
