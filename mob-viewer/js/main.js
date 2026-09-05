@@ -4,7 +4,7 @@ import { MobLoader } from './mob-loader.js';
 import { HeroLoader } from './hero-loader.js';
 import { Renderer } from './renderer.js';
 import { UIManager } from './ui-manager.js';
-import { AnimationController } from './animation-controller.js';
+import { AnimationController, isAnimationDesc } from './animation-controller.js';
 import { HERO_CLASSES, SUBCLASSES, ARMOR_LIST, WEAPON_LIST, ACCESSORY_LIST, LAYERS_ORDER } from './config.js';
 
 class SpriteViewer {
@@ -112,8 +112,7 @@ class SpriteViewer {
             this.currentMob = null;
             
             const animations = Object.keys(this.currentHero.data).filter(key =>
-                typeof this.currentHero.data[key] === 'object' &&
-                this.currentHero.data[key].frames
+                isAnimationDesc(this.currentHero.data[key])
             );
             
             this.currentAnim = this.uiManager.updateAnimationSelect(animations, this.currentAnim, this.currentHero.data);

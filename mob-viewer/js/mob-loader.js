@@ -1,5 +1,7 @@
 // Mob Loader - Handles loading mob sprite data
 
+import { isAnimationDesc } from './animation-controller.js';
+
 export class MobLoader {
     constructor() {
         this.textureImage = null;
@@ -140,12 +142,7 @@ export class MobLoader {
     }
 
     getAvailableAnimations(mobData) {
-        return Object.keys(mobData).filter(key => 
-            key !== 'texture' && key !== 'width' && key !== 'height' &&
-            key !== 'scale' && key !== 'visualWidth' && key !== 'visualHeight' &&
-            key !== 'visualOffsetX' && key !== 'visualOffsetY' &&
-            key !== 'bloodColor' && key !== 'alpha' && key !== 'blendMode'
-        );
+        return Object.keys(mobData).filter(key => isAnimationDesc(mobData[key]));
     }
 
     getAnimationFrames(mobData, animName) {

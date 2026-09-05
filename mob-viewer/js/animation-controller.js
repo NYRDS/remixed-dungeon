@@ -1,5 +1,13 @@
 // Animation Controller - Manages animation state and timing
 
+// True for entries shaped like a playable animation ({fps, looped, frames}),
+// as read by JsonHelper.readAnimation on the game side. Descriptor metadata
+// (zapEffect, bloodColor, particleEmitters, ...) does not match.
+export function isAnimationDesc(value) {
+    return !!value && typeof value === 'object' &&
+        typeof value.fps === 'number' && Array.isArray(value.frames);
+}
+
 export class AnimationController {
     constructor() {
         this.animationFrame = 0;
