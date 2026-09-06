@@ -4,17 +4,69 @@ Branch: `html-port-runnable` (work in progress, see git log)
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
-## Current state (as of 2026-09-06, session 3)
+## Current state (as of 2026-09-06, session 4)
 
-- **TITLE SCREEN RENDERS AND RUNS** in the browser at ~58fps: lua boot
-  completes, title scene draws (logo, archs background, buttons), zero
-  uncaught errors, error count stable.
-- **INPUT WORKS END TO END**: clicks drive scene switches (Title ⇄
-  Rankings) with correct coordinates under page scroll. Keys enqueued too
-  (unverified live).
-- Compile ✅ html/desktop/android. teavm-app.js ~38MB debug (obfuscated=false).
+- **TEXT RENDERS** — the session-3 blocker is gone. Title button labels,
+  version string, StartScene (hero names, Load/New Game, subtitles), wrapped
+  multiline colored hint text and the WndClass info window (bulleted
+  paragraphs) all render correctly with the pixel font. Verified in-browser
+  via in-page canvas captures.
+- **INPUT STILL WORKS**: clicks drive Title ⇄ StartScene switches (verified
+  live again this session).
+- Boot is healthy: strings parse, lua sandbox initializes, error count stable
+  at boot-time-only entries, ~58fps.
+- Compile ✅ html/desktop/android. teavm-app.js ~40MB debug (obfuscated=false).
 
-## What was fixed this session (in boot order)
+## What was fixed this session (text rendering, in boot order)
+
+0. **gdx version skew** — gradle resolved gdx 1.12.1 → **1.13.5** (gdx-teavm
+   1.3.0's transitive wins). The module now declares 1.13.5 explicitly; 1.12.1
+   silently linked 1.13.5 classes all along.
+1. **FreeType on TeaVM** — html SystemText was a measure-only stub (never
+   drew). Rewrote it as a copy of the desktop FreeType implementation
+   (FreeTypeFontGenerator + PseudoGlyphLayout/PseudoPixmapPacker +
+   SystemTextPseudoBatch → NoosaScript VBO quads, oversample 4, markup, wrap).
+   Deps: `com.badlogicgames.gdx:gdx-freetype` + `com.github.xpenatan.gdx-teavm:
+   gdx-freetype-teavm` (its emu FreeType replaces the JNI class via the
+   mapPackageHierarchy plugin, already active from backend-teavm). The 18MB
+   CJK fallback font is deliberately NOT shipped — fallback generator is
+   optional, CJK falls back to the pixel font for now.
+2. **freetype.js deployment** — the emscripten freetype Module ships as a jar
+   resource; make_webapp.py extracts it to `scripts/freetype.js` and
+   TeaVMLauncher's `config.preloadListener` loads it before the app starts.
+3. **i18n bundles were never loaded** — the html StringsManager was a stub
+   whose maps stayed empty (every getVar returned ""!). Ported the desktop
+   implementation (line-based JSON parsing, format-regex, allChars). l10ns
+   (`RemixedDungeonHtml/l10ns/strings_*.json`, 22 langs) are copied into the
+   webapp + manifest by make_webapp.py.
+4. **R name→id mapping without reflection** — make_r.py now emits
+   `R.names[]` (index == id); StringsManager builds keyToInt from it.
+5. **R$string/R$array for TeaVM reflection** — Utils.getR_Field does
+   Class.forName("...R$string") in clinit; added both to
+   LuaReflectionSupplier's REFLECT_EXTRAS (findable by name + exposed
+   fields) so Class.forName/getField/getInt work.
+6. **GlyphRun pool crashed TeaVM** — `Pools.get(GlyphRun.class)` uses
+   reflective instantiation ("missing no-arg constructor"). TeaVMLauncher now
+   registers a direct-alloc pool via `Pools.set` before anything touches
+   GlyphLayout (covers stock GlyphLayout too).
+7. **delombok REMOVED** (Mike: fix the noise) — lombok already runs as an
+   annotationProcessor in compileJava, so TeaVM consumes expanded bytecode;
+   the delomboked tree only duplicated sources and spewed unfixable "cannot
+   find symbol" noise. Build output is clean now.
+8. **EventCollector.setSessionData spam** — LuaScript calls it every tick;
+   each print became a console.error and the flood starved browser DevTools
+   and screenshot capture. Now silent.
+
+## Debug tooling added
+
+- In-page canvas capture (works around IAB screenshot timeouts): wrap
+  window.requestAnimationFrame so that right after the game's frame callback
+  returns, `canvas.toDataURL('image/png')` runs in the same task
+  (preserveDrawingBuffer=false otherwise yields black). Poll
+  `window.__frameData`, decode outside. Screenshot surface prep routinely
+  times out on this page otherwise.
+
+## Session 3 fixes (boot + input), for history
 
 0. **Input plumbing (session 3)** — clicks on title buttons did nothing because
    the html `Touchscreen.processEvent` was a stub (`println` only); GameLoop
@@ -76,19 +128,20 @@ Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 
 ## Remaining / next steps
 
-1. **Text/font rendering is now THE blocker** — confirmed by input testing:
-   every scene renders textures fine (logo, dashboard icons, archs) but ALL
-   text is invisible (title button labels, RankingsScene table, StartScene is
-   background-only). SystemText/PlatformSupportingText path needs a pass; the
-   reference port's font shims are the first place to look.
-2. Title screen layout vs desktop: camera is 800x480 here, 480x320 on
-   desktop; dashboard sits lower than computed from code (text height=0
-   shifts VBox/baseline math). Re-check after fonts work.
-3. New game → dungeon generation → gameplay loop.
-4. Saves (HtmlPreferences works? localStorage; `save_io_exception` already
+1. **New game → dungeon generation → gameplay loop** (the next big rock;
+   StartScene renders, so the path is: New Game click → level gen → game
+   scene with tilemap/items/mobs).
+2. RU/other-locale text: strings_ru.json loads, Cyrillic glyphs come from
+   langNames in getAllCharsAsString — verify a switched locale renders.
+3. CJK fallback font (LXGWWenKaiScreen.ttf, 18MB) — currently not shipped;
+   CJK falls back to the pixel font (missing glyphs). Decide: ship lazily
+   (fetch on demand) or accept missing CJK on web.
+4. Title screen layout vs desktop: camera is 800x480 here, 480x320 on
+   desktop. Re-check proportions now that text measures correctly.
+5. Saves (HtmlPreferences works? localStorage; `save_io_exception` already
    logged at boot), sound (stubs), mods (listResources empty).
-5. Keys flow now enqueues events but is unverified live (Escape/back).
-6. Remove debug breadcrumbs (jsErrLog hook ok to keep, cheap; System.setOut
+6. Keys flow now enqueues events but is unverified live (Escape/back).
+7. Remove debug breadcrumbs (jsErrLog hook ok to keep, cheap; System.setOut
    merge worth keeping while porting) and build with
    `-Pteavm.obfuscated=true` before shipping.
 
@@ -114,8 +167,9 @@ solving anything hard ourselves:
   client-arrays→VBO conversion as our GlBuffers/NoosaScript fix, but done
   inside the watabou glwrap plumbing (may be the cleaner place for
   Text/Emitter/Tilemap draw paths we haven't hit yet).
-- Browser font and file handling shims for TeaVM (our Text rendering is
-  unverified — look here first when it breaks).
+- Browser font and file handling shims for TeaVM — RESOLVED for fonts: they
+  use FreeTypeFontGenerator on TeaVM via gdx-freetype-teavm (same module we
+  adopted; see session 4). Still worth mining for file-handling patterns.
 - Save/reload logic reworked for browser lifecycle (pagehide/visibility) —
   relevant for our HtmlPreferences/localStorage work.
 

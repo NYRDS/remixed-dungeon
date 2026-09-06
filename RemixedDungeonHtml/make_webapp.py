@@ -18,6 +18,9 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ASSETS_SRC = os.path.normpath(os.path.join(HERE, "..", "RemixedDungeon", "src", "main", "assets"))
+# line-based JSON i18n bundles read by StringsManager.useLocale via
+# ModdingMode.getInputStream("strings_<lang>.json")
+L10NS_SRC = os.path.join(HERE, "l10ns")
 
 
 def build_teavm_js() -> str:
@@ -194,10 +197,25 @@ def find_backend_jar() -> str:
     return sorted(hits)[-1]
 
 
+def find_freetype_jar() -> str:
+    """Locate the gdx-teavm freetype jar (ships the emscripten freetype.js)."""
+    import glob
+    hits = glob.glob(os.path.expanduser(
+        "~/.gradle/caches/modules-2/files-2.1/com.github.xpenatan.gdx-teavm/"
+        "gdx-freetype-teavm/*/*/gdx-freetype-teavm-*.jar"))
+    hits = [h for h in hits if not h.endswith("sources.jar")]
+    if not hits:
+        raise SystemExit("gdx-freetype-teavm jar not found in gradle cache")
+    return sorted(hits)[-1]
+
+
 def extract_backend_resources(app_dir: str) -> None:
     """TeaApplication.initGdx() loads <page>/scripts/gdx.wasm.js and the
     preload screen wants assets/startup-logo.png - both are backend jar
-    resources that TeaBuilder would normally copy into the webapp."""
+    resources that TeaBuilder would normally copy into the webapp.
+    freetype.js (emscripten freetype Module) comes from gdx-freetype-teavm;
+    TeaVMLauncher's preload listener loads <page>/scripts/freetype.js before
+    the game starts, so FreeTypeFontGenerator works."""
     import zipfile
     jar = find_backend_jar()
     os.makedirs(os.path.join(app_dir, "scripts"), exist_ok=True)
@@ -207,6 +225,10 @@ def extract_backend_resources(app_dir: str) -> None:
             shutil.copyfileobj(src, dst)
         with z.open("startup-logo.png") as src, \
                 open(os.path.join(app_dir, "assets", "startup-logo.png"), "wb") as dst:
+            shutil.copyfileobj(src, dst)
+    with zipfile.ZipFile(find_freetype_jar()) as z:
+        with z.open("freetype.js") as src, \
+                open(os.path.join(app_dir, "scripts", "freetype.js"), "wb") as dst:
             shutil.copyfileobj(src, dst)
 
 
@@ -223,10 +245,13 @@ def extract_classpath_resources(assets_dir: str, lines: list) -> None:
     import glob
     import zipfile
     jars = glob.glob(os.path.expanduser(
-        "~/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.12.1/*/gdx-1.12.1.jar"))
+        "~/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/*/*/gdx-*.jar"))
+    # only the core gdx jar, not -sources and not sibling artifacts
+    jars = [j for j in jars if "/gdx/" in j and not j.endswith("sources.jar")]
     if not jars:
         raise SystemExit("gdx jar not found in gradle cache")
-    with zipfile.ZipFile(sorted(jars)[-1]) as z:
+    jars.sort()
+    with zipfile.ZipFile(jars[-1]) as z:
         for res in CLASSPATH_RESOURCES:
             target = os.path.join(assets_dir, res)
             os.makedirs(os.path.dirname(target), exist_ok=True)
@@ -287,6 +312,15 @@ def main() -> None:
             count += 1
 
     extract_classpath_resources(assets_dir, lines)
+
+    # i18n bundles - StringsManager parses strings_<lang>.json at boot
+    for name in sorted(os.listdir(L10NS_SRC)):
+        if not name.endswith(".json"):
+            continue
+        src = os.path.join(L10NS_SRC, name)
+        shutil.copy2(src, os.path.join(assets_dir, name))
+        lines.append("i:b:%s:%d:0" % (name, os.path.getsize(src)))
+        count += 1
 
     with open(os.path.join(assets_dir, "assets.txt"), "w") as f:
         f.write("\n".join(lines) + "\n")

@@ -92,13 +92,13 @@ public class EventCollector {
     
     // Additional methods needed for HTML version
     public static void setSessionData(String key, String value) {
-        // Session data is not supported in HTML build
-        System.out.println("SessionData: " + key + " = " + value);
+        // Session data is not supported in HTML build.
+        // Deliberately silent: LuaScript calls this every tick, and each print
+        // becomes a console.error - the flood starves browser debugging.
     }
-    
+
     public static void setSessionData(String key, boolean value) {
         // Session data is not supported in HTML build
-        System.out.println("SessionData: " + key + " = " + value);
     }
     
     public static void disable() {

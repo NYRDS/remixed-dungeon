@@ -7,7 +7,9 @@ project.ext {
     version = '32.3.alpha'
     version_code = 1236
     teaVmVersion = '0.13.1'
-    gdxVersion = '1.12.1'
+    // must match the gdx version gdx-teavm 1.3.0 was built against; gradle
+    // resolves conflicts to highest anyway, so 1.12.1 here silently became 1.13.5
+    gdxVersion = '1.13.5'
     gdxTeaVMVersion = '1.3.0'
 }
 
@@ -21,7 +23,7 @@ sourceSets {
         java {
             srcDirs = [
                     'src/html/java',                                      // HTML sources first (higher priority)
-                    'build/delomboked/src/main/java',                     // Delomboked main sources (Lombok getters/setters generated)
+                    '../RemixedDungeon/src/main/java',                    // shared game sources (lombok runs in compileJava)
                     '../RemixedDungeonDesktop/src/libgdx/java',           // LibGDX backend additions
                     'src/market_none/java',
                     'build/generated/sources/annotationProcessor/java/main'
@@ -113,10 +115,6 @@ repositories {
     maven { url "https://jitpack.io" } // For gdx-teavm
 }
 
-configurations {
-    delombok
-}
-
 dependencies {
     implementation project(':annotation')
     
@@ -142,7 +140,11 @@ dependencies {
     // LibGDX dependencies for HTML backend
     implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
     implementation "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
+    implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
     implementation "com.github.xpenatan.gdx-teavm:backend-teavm:$gdxTeaVMVersion" // Correct dependency name
+    // emu FreeType (TeaVM-safe replacement for the stock JNI FreeType class)
+    // + freetype.js (emscripten freetype Module, loaded as a preload script)
+    implementation "com.github.xpenatan.gdx-teavm:gdx-freetype-teavm:$gdxTeaVMVersion"
     implementation "org.teavm:teavm-classlib:$teaVmVersion"
     implementation "org.teavm:teavm-jso-apis:$teaVmVersion"
     implementation "org.teavm:teavm-interop:$teaVmVersion"
@@ -152,37 +154,12 @@ dependencies {
     // against teavm-core's ReflectionSupplier/ model classes
     implementation "org.teavm:teavm-core:$teaVmVersion"
     // annotationProcessor "org.teavm:teavm-core:$teaVmVersion"  // REMOVED: TeaVM processor interferes with Lombok and custom processor
-
-    // Delombok for generating Lombok code (getters/setters) for TeaVM compatibility
-    delombok 'org.projectlombok:lombok:1.18.34'
 }
 
-// Delombok task - generates Lombok code (getters/setters) for TeaVM compatibility
-// TeaVM's compiler doesn't run Lombok's annotation processor, so we pre-generate the code
-tasks.register('delombok', JavaExec) {
-    group = 'build'
-    description = 'Run delombok to generate getters/setters from Lombok annotations'
-    classpath = configurations.delombok + configurations.compileClasspath
-    mainClass = 'lombok.launch.Main'
-    args = [
-        'delombok',
-        '../RemixedDungeon/src/main/java',
-        '-d', 'build/delomboked/src/main/java',
-        '-v'  // Verbose output
-    ]
-    // Ensure output directory exists
-    doFirst {
-        file('build/delomboked/src/main/java').mkdirs()
-    }
-    // Ignore errors - delombok will copy files even if it can't resolve all types
-    ignoreExitValue = true
-}
-
-// Add delomboked sources to compilation
-sourceSets.main.java.srcDirs += file('build/delomboked/src/main/java')
-
-// Ensure delombok runs before compilation
-compileJava.dependsOn delombok
+// NOTE: no delombok step. Lombok runs as an annotationProcessor in compileJava
+// (val/var enabled above), so the compiled classes TeaVM consumes are already
+// lombok-expanded. The old delombok pass only produced thousands of unfixable
+// "cannot find symbol" noise lines while duplicating the whole source tree.
 
 // TeaVM configuration - explicit configuration
 teavm {

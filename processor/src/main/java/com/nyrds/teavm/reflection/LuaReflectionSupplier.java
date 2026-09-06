@@ -40,6 +40,22 @@ public class LuaReflectionSupplier implements ReflectionSupplier {
     private static final String LUA_INTERFACE = "com.nyrds.LuaInterface";
     private static final String MAP_RESOURCE = "lua-interface-map.json";
 
+    /**
+     * android-style R lookups: Utils.getClassParam/getClassParams reflect over
+     * the generated R$string/R$array int constants (Class.forName + getField +
+     * getInt). make_r.py generates those classes for the html build.
+     */
+    private static final Set<String> REFLECT_EXTRAS = Set.of(
+            "com.nyrds.pixeldungeon.ml.R$string",
+            "com.nyrds.pixeldungeon.ml.R$array"
+    );
+
+    private static Set<String> allFindableNames(ReflectionContext context) {
+        Set<String> names = new HashSet<>(luaClassesByName(context));
+        names.addAll(REFLECT_EXTRAS);
+        return names;
+    }
+
     private static Set<String> luaClassesByName;
 
     /**
@@ -73,12 +89,12 @@ public class LuaReflectionSupplier implements ReflectionSupplier {
 
     @Override
     public Collection<String> getClassesFoundByName(ReflectionContext context) {
-        return luaClassesByName(context);
+        return allFindableNames(context);
     }
 
     @Override
     public boolean isClassFoundByName(ReflectionContext context, String name) {
-        return luaClassesByName(context).contains(name);
+        return allFindableNames(context).contains(name);
     }
 
     private static boolean isLuaClass(ReflectionContext context, String className) {
@@ -176,7 +192,8 @@ public class LuaReflectionSupplier implements ReflectionSupplier {
     );
 
     private static boolean isExposed(ReflectionContext context, String className) {
-        return isLuaClass(context, className) || EXTRA_EXPOSED.contains(className);
+        return isLuaClass(context, className) || EXTRA_EXPOSED.contains(className)
+                || REFLECT_EXTRAS.contains(className);
     }
 
     private static boolean typeLinkable(ReflectionContext context, ValueType type) {
