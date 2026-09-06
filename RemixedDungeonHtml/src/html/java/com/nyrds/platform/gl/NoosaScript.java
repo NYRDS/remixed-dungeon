@@ -22,7 +22,10 @@ public class NoosaScript extends Script {
 	public Attribute aUV;
 	
 	private Camera lastCamera;
-	
+
+	private int vertexBuffer;
+	private int indexBuffer;
+
 	public NoosaScript() {
 		
 		super();
@@ -56,31 +59,29 @@ public class NoosaScript extends Script {
 		aUV.disable();
 	}
 
+	// WebGL has no client-side arrays - the game's direct NIO buffers get
+	// uploaded into GL buffer objects and drawn with byte offsets
 	public void drawElements(FloatBuffer vertices, ShortBuffer indices, int size ) {
 
+		vertexBuffer = GlBuffers.upload( vertexBuffer, Gdx.gl20.GL_ARRAY_BUFFER, vertices, 4, true );
+		indexBuffer  = GlBuffers.upload( indexBuffer, Gdx.gl20.GL_ELEMENT_ARRAY_BUFFER, indices, 2, false );
+
 		vertices.position( 0 );
-		aXY.vertexPointer( 2, 4, vertices );
-		
+		aXY.vertexPointer( 2, 4, 0 );
+
 		vertices.position( 2 );
-		aUV.vertexPointer( 2, 4, vertices );
-		
-		Gdx.gl20.glDrawElements( GL20.GL_TRIANGLES, Quad.SIZE * size, GL20.GL_UNSIGNED_SHORT, indices );
+		aUV.vertexPointer( 2, 4, 8 );
+
+		Gdx.gl20.glDrawElements( GL20.GL_TRIANGLES, Quad.SIZE * size, GL20.GL_UNSIGNED_SHORT, 0 );
 	}
-	
+
 	public void drawQuad( FloatBuffer vertices ) {
 
 		if(vertices.limit()<16){
 			throw new AssertionError();
 		}
 
-		vertices.position( 0);
-		aXY.vertexPointer( 2, 4, vertices );
-		
-		vertices.position( 2 );
-		aUV.vertexPointer( 2, 4, vertices );
-
-		Gdx.gl20.glDrawElements( GL20.GL_TRIANGLES, Quad.SIZE, GL20.GL_UNSIGNED_SHORT, Quad.getIndices( 1 ) );
-		
+		drawElements( vertices, Quad.getIndices( 1 ), 1 );
 	}
 	
 	public void drawQuadSet( FloatBuffer vertices, int size ) {

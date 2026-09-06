@@ -3,9 +3,11 @@ package com.nyrds.platform.audio;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.files.FileHandle;
+import com.nyrds.LuaInterface;
 import java.util.HashMap;
 import java.util.Map;
 
+@LuaInterface
 public enum MusicManager {
     INSTANCE;
 

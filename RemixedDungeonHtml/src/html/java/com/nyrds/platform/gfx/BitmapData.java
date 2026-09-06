@@ -3,11 +3,13 @@ package com.nyrds.platform.gfx;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Gdx2DPixmap;
+import com.nyrds.LuaInterface;
 
 
 /**
  * HTML version of BitmapData
  */
+@LuaInterface
 public class BitmapData {
     public Gdx2DPixmap bmp;
     public Texture texture;

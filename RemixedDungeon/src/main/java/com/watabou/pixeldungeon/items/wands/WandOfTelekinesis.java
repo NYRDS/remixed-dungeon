@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.ml.R;
@@ -20,6 +21,7 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 
+@LuaInterface
 public class WandOfTelekinesis extends Wand {
 
 	{

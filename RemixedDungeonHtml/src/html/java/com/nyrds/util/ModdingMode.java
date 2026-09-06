@@ -11,9 +11,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-@LuaInterface
-
-
 // Stub class for LuaError
 class LuaError extends RuntimeException {
     public LuaError(String message) {
@@ -28,6 +25,7 @@ class LuaError extends RuntimeException {
 /**
  * HTML version of ModdingMode
  */
+@LuaInterface
 public class ModdingMode extends ModdingBase {
     public static boolean useRetroHeroSprites = false;
     private static boolean mTextRenderingMode = false;

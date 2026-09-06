@@ -29,6 +29,47 @@ def build_teavm_js() -> str:
     return os.path.join(HERE, "build", "generated", "teavm", "js", "teavm-app.js")
 
 
+# TeaVM's Long_fromNumber (double -> long cast) throws RangeError on Infinity/NaN
+# (BigInt of a non-integer), while JVM semantics clamp to Long.MAX/MIN and map
+# NaN to 0 - luaj's LuaDouble.tojstring hits this on tostring(inf). Patch the
+# runtime helper until a local teavm-core build can replace the upstream jar.
+LONG_FROM_NUMBER_SRC = (
+    "Long_fromNumber = val => BigInt.asIntN(64, "
+    "BigInt(val >= 0 ? Math.floor(val) : Math.ceil(val)))"
+)
+LONG_FROM_NUMBER_DST = (
+    "Long_fromNumber = val => val !== val ? BigInt(0)"
+    " : (val >= 9223372036854775808 ? BigInt('9223372036854775807')"
+    " : (val < -9223372036854775808 ? BigInt('-9223372036854775808')"
+    " : BigInt.asIntN(64, BigInt(val >= 0 ? Math.floor(val) : Math.ceil(val)))))"
+)
+
+
+def patch_teavm_js(js_text: str) -> str:
+    if LONG_FROM_NUMBER_SRC in js_text:
+        js_text = js_text.replace(LONG_FROM_NUMBER_SRC, LONG_FROM_NUMBER_DST)
+    else:
+        print("warning: Long_fromNumber pattern not found - runtime patch skipped")
+    # keep a ring buffer of JS errors crossing into Java, with real JS stacks
+    # (TeaVM's getStackTrace is always empty, so this is the only way to see
+    # where a (JavaScript) TypeError actually came from)
+    wrap_src = "$rt_wrapException = err => {\n    let ex = err[$rt_javaExceptionProp];"
+    wrap_dst = (
+        "$rt_wrapException = err => {\n"
+        "    if (typeof window !== 'undefined') {\n"
+        "        let rb = (window.__jsErrLog = window.__jsErrLog || []);\n"
+        "        if (rb.length < 50) rb.push({msg: String(err && err.message || err),\n"
+        "            stack: String(err && err.stack || '')});\n"
+        "    }\n"
+        "    let ex = err[$rt_javaExceptionProp];"
+    )
+    if wrap_src in js_text:
+        js_text = js_text.replace(wrap_src, wrap_dst)
+    else:
+        print("warning: $rt_wrapException pattern not found - error log hook skipped")
+    return js_text
+
+
 INDEX_HTML = """<!DOCTYPE html>
 <html>
 <head>
@@ -102,6 +143,18 @@ INDEX_HTML = """<!DOCTYPE html>
     </div>
     <script type="text/javascript" src="teavm-app.js"></script>
     <script>
+        // count render-loop ticks so the boot overlay can retire itself once
+        // the game is actually drawing
+        (function() {
+            var ticks = 0;
+            var orig = window.requestAnimationFrame;
+            if (!orig) { return; }
+            window.requestAnimationFrame = function(cb) {
+                ticks++;
+                window.__rafTicks = ticks;
+                return orig.call(window, cb);
+            };
+        })();
         // TeaVM exports the entry point as main() - plain script tags put it
         // on window, so start the game explicitly
         if (typeof main === "function") {
@@ -110,6 +163,19 @@ INDEX_HTML = """<!DOCTYPE html>
             document.getElementById("loading").textContent =
                 "teavm-app.js did not export main()";
         }
+        // the game never touches this div; once the render loop is ticking it
+        // only covers the canvas, so drop it
+        (function() {
+            var tries = 0;
+            var timer = setInterval(function() {
+                tries++;
+                if (window.__rafTicks > 5 || tries > 30) {
+                    clearInterval(timer);
+                    var el = document.getElementById("loading");
+                    if (el) { el.style.display = "none"; }
+                }
+            }, 1000);
+        })();
     </script>
 </body>
 </html>
@@ -190,7 +256,11 @@ def main() -> None:
     if not args.skip_build and os.environ.get("MAKE_WEBAPP_BUILD") == "1":
         js_src = build_teavm_js()
 
-    shutil.copy2(js_src, os.path.join(app_dir, "teavm-app.js"))
+    with open(js_src, "r", encoding="utf-8") as f:
+        js_text = f.read()
+    js_text = patch_teavm_js(js_text)
+    with open(os.path.join(app_dir, "teavm-app.js"), "w", encoding="utf-8") as f:
+        f.write(js_text)
     for extra in ("teavm-app.js.map", "teavm-app.js.teavmdbg"):
         side = os.path.join(os.path.dirname(js_src), extra)
         if os.path.exists(side):

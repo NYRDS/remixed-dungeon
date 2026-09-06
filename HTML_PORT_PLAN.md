@@ -4,61 +4,98 @@ Branch: `html-port-runnable` (work in progress, see git log)
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
-## Current state (as of 2026-09-06)
+## Current state (as of 2026-09-06, session 2)
 
-- `RemixedDungeonHtml:compileJava` ✅, `generateJavaScript` ✅ (~38 MB debug /
-  ~7.7 MB obfuscated teavm-app.js), desktop ✅ (Java 11), android fdroid ✅.
-- Game in browser boots through: main() → preload screen → all 1303 assets →
-  shader compile → real textures → LuaEngine init → ~59 luajava bindClass calls.
-- **Blocker**: lua `require` still dies in `luajava.newInstance` →
-  `LuajavaLib_invoke` → `getConstructor()` returns null for some class
-  (constructor metadata not emitted). Title screen not yet reached. Error count
-  grows per frame (123 at last check) — the exception repeats each render tick.
+- **TITLE SCREEN RENDERS AND RUNS** in the browser at ~58fps: lua boot
+  completes, title scene draws (logo, archs background, buttons), zero
+  uncaught errors, error count stable.
+- Compile ✅ html/desktop/android. teavm-app.js ~38MB debug (obfuscated=false).
 
-## Immediate next steps
+## What was fixed this session (in boot order)
 
-1. Identify the class failing `getConstructor()`:
-   - `PlatformLuajavaLib.classForName` logs every bindClass request to the
-     browser console (`LUAJAVA: classForName: ...`, via `window.__errors`).
-     The last logged name before the crash is the module being loaded; the
-     crash itself is a `luajava.newInstance` on some class.
-   - Add logging around newInstance (override `LuajavaLib` NEWINSTANCE path or
-     log in `classForName` callers).
-2. Constructor metadata: TeaVM emits reflection metadata per class from the
-   `ReflectionSupplier` output (`<init>` MethodDescriptors included). If the
-   failing class is in `lua-interface-map.json` but its ctor is still null,
-   check `ReflectionDependencyListener.handleClassNewInstance` flow — possibly
-   the class needs `agent.linkClass` before metadata is emitted (we already do
-   that via `getClassesFoundByName`), or the ctor body references something
-   unlinkable and TeaVM silently dropped it.
-3. After lua loads: expect further boot errors (title scene render, save/load,
-   Preferences on localStorage). Iterate the same loop:
-   reproduce → read `window.__errors` (`CAUSE-JSSTACK` = JS stack of the
-   innermost Java cause) → fix → rebuild (`generateJavaScript`) → 
-   `make_webapp.py --skip-build` → browser reload.
-4. Once title screen + new-game works: remove debug breadcrumbs, rebuild with
-   `-Pteavm.obfuscated=true` (build.gradle reads it, default false for now),
-   commit, push.
+1. **@LuaInterfaceProcessor dropped enums** — getEnclosingClass didn't accept
+   ElementKind.ENUM → Fraction/Sample/MusicManager missing from the map.
+2. **Missing @LuaInterface**: WandOfBlink/Telekinesis/Firebolt (newInstance'd
+   from scripts/lib/commonClasses.lua:127-132 — the first newInstance crash),
+   LuaWndBagListener, html Sample/MusicManager/ModdingMode (annotation was on
+   the LuaError stub by mistake!)/BitmapData. Diff tool: extract
+   `luajava.bindClass/newInstance("...")` literals from scripts/**/*.lua vs
+   the generated map.
+3. **Supplier exposed native methods** → "Native method has no implementation"
+   (HtmlPreferences → JSONObject → Method.invoke links every static of every
+   map class incl. ModdingMode.jsLog). Filter ElementModifier.NATIVE.
+4. **lua-interface-map.json not on runtime classpath** → LuaResourceSupplier
+   (ResourceSupplier SPI in :processor) embeds it at build time.
+5. **TeaVM Long_fromNumber throws on Infinity/NaN** (BigInt of non-integer) —
+   luaj LuaDouble.tojstring cast. Fixed luaj tojstring (NaN/Inf checks first)
+   AND make_webapp.py patches the runtime helper to clamp (JVM semantics).
+6. **TeaVM TDeflater/TInflater throw on Z_BUF_ERROR** (Badges.saveGlobal gzip)
+   — JVM returns 0. Fixed in the local classlib fork (republish:
+   `cd teavm && ./gradlew :classlib:publishToMavenLocal
+   -Pteavm.project.version=0.13.1`, then rebuild with --refresh-dependencies).
+7. **Reflection callables don't box primitives** — `list:size()` returned a
+   raw JS number → luaj CoerceJavaToLua crashed ($hashCode of undefined).
+   ClassGenerator.renderCallable now boxes (boxIfNecessary).
+8. **Constructor.newInstance didn't run <clinit>** — initClass in
+   ClassGenerator now emits class-init for <init> too (was needed for Wand
+   statics; note Wand.handler null at title time is DESKTOP behavior too —
+   ctor catches).
+9. **JDK classes returned to lua had no metadata** — supplier now exposes an
+   explicit EXTRA_EXPOSED allowlist (collections + java.lang basics +
+   org.json). Keep it tight: broad exposure (guava/java.io/java.lang.Class)
+   OOMs the build or hits unlinked classlib APIs.
+10. **WebGL has no client-side vertex arrays** — black screen, every
+    drawElements GL_INVALID_OPERATION. html NoosaScript/MaskedTilemapScript
+    now upload quad data to VBOs (GlBuffers helper) and draw with byte
+    offsets; Attribute got an int-offset vertexPointer overload.
+
+## Debug tooling added
+
+- make_webapp.py patches teavm-app.js at assembly: Long_fromNumber clamp +
+  `$rt_wrapException` ring buffer `window.__jsErrLog` (real JS stacks for
+  errors crossing into Java — TeaVM's own getStackTrace is always empty).
+- index.html hides the boot overlay once rAF ticks (>5), and reads
+  `window.__rafTicks`.
+- Browser loop: reload → evaluate `window.__errors` (console.error capture),
+  `window.__jsErrLog`. Error count stable = boot OK.
+
+## Remaining / next steps
+
+1. **Input**: canvas click on title buttons did nothing yet — pointer/touch
+   event plumbing from TeaApplication to Game.input needs a pass.
+2. Title screen visual check vs desktop (possible scale/layout offsets:
+   camera is 800x480 here, 480x320 on desktop).
+3. Text/font rendering not verified (no visible text on title yet).
+4. New game → dungeon generation → gameplay loop.
+5. Saves (HtmlPreferences works? localStorage), sound (stubs), mods
+   (listResources empty).
+6. Remove debug breadcrumbs (jsErrLog hook ok to keep, cheap) and build with
+   `-Pteavm.obfuscated=true` before shipping.
+7. Reference port worth mining for tricks: github glassesmonkey/
+   shattered-pixel-dungeon-web (TeaVM + gdx-teavm, WebGL-safe VBO paths in
+   glwrap/Vertexbuffer + noosa, browser font/file shims).
 
 ## How to debug this port (hard-won notes)
 
 - **Boot hooks**: `make_webapp.py` embeds an inline script BEFORE
-  `teavm-app.js` capturing `window.__errors` (with `e.error.stack`) and
-  `window.__logs`. `Game.render` (html shim) dumps the innermost cause's raw
-  JS stack via `$jsException` (`CAUSE-JSSTACK:` lines) — TeaVM's own
-  `getStackTrace()` is always empty.
-- **`CAUSE-JSSTACK` positions** map to `teavm-app.js` only in the
+  `teavm-app.js` capturing `window.__errors` (console.error + window error
+  events) and `window.__logs` (console.log/warn). System.err reaches the
+  browser console (console.error); System.out does not.
+- **`$jsException`**: TeaVM stores the raw JS error on wrapped Java
+  Throwables — the jsErrLog hook records those stacks at the crossing point.
+- **CAUSE-JSSTACK positions** map to `teavm-app.js` only in the
   unobfuscated build (`obfuscated = false` is the current default in
   RemixedDungeonHtml/build.gradle via `-Pteavm.obfuscated`).
-- **System.err reaches the browser console; System.out does not.**
-  EventCollector (html shim) prints via System.err → visible.
 - **Delombok is stale-prone**: main-source edits land in
   `RemixedDungeonHtml/build/delomboked/` — if output looks old, check there.
+  Its "package does not exist" errors are pre-existing noise
+  (ignoreExitValue = true).
 - **hjson is unusable on TeaVM** (its regexes use `\x{...}` escapes) —
   `Util.sanitizeJson` now tries strict JSON first, hjson as fallback.
 - **`BOMInputStream.close()` throws on TeaVM** even after a successful read —
   `JsonHelper.readJsonFromStream` treats a close failure with content in hand
-  as non-fatal; keep that structure.
+  as non-fatal; keep that structure. The "Stream is closed" boot log line is
+  this and is benign.
 - **TeaVM reflection** (enableRef=true): `Class.forName` finds only classes
   TeaVM linked. `LuaReflectionSupplier` (in :processor,
   META-INF/services/org.teavm.classlib.ReflectionSupplier) declares all
@@ -66,44 +103,38 @@ Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
   their members. If new lua-bound classes appear, annotate them with
   `@LuaInterface` (method-level annotation puts the class in the map).
 - **Classes that reference `java.text.*` / `java.util.logging.*`** must stay
-  out of reflection metadata AND out of reachable-from-lua code — TeaVM cannot
-  link those packages (no TCollator/TFileHandler). App code was moved to
+  out of reflection metadata AND out of reachable-from-lua code — TeaVM
+  cannot link those packages. App code was moved to
   String.CASE_INSENSITIVE_ORDER / GLog+FileWriter.
-- **Mixed versions**: gradle plugin is upstream 0.13.1 (teavm.org), classlib is
-  the local fork (mavenLocal, commit 52f17f621 with stubs). `js.obfuscated`
-  property from the CLI (`-Pjs.obfuscated=false`) does NOT work; use the DSL
-  `obfuscated = ...` in build.gradle (done).
+- **Mixed versions**: gradle plugin is upstream 0.13.1 (teavm.org), classlib
+  is the local fork (mavenLocal, 0.13.1 — republish after fork edits, then
+  build with --refresh-dependencies). `js.obfuscated` property from the CLI
+  (`-Pjs.obfuscated=false`) does NOT work; use the DSL `obfuscated = ...` in
+  build.gradle (done).
 - The `teavm` and `luaj` git submodules are pinned and clean; luaj had
   `os.execute` stripped (JseProcess excluded from jar, JseOsLib returns
-  EXEC_ERROR).
+  EXEC_ERROR). Both submodules now carry local commits (see git log) —
+  commit inside the submodule first, then bump the pin here.
 
 ## Tooling
 
-- `RemixedDungeonHtml/make_webapp.py` — assembles `build/webapp`: teavm-app.js,
-  index.html (with hooks + main() call), assets/ + assets.txt manifest
-  (type:kind:path:length:overwrite), `scripts/gdx.wasm.js` +
-  `assets/startup-logo.png` extracted from backend jar, gdx classpath
+- `RemixedDungeonHtml/make_webapp.py` — assembles `build/webapp`: teavm-app.js
+  (+ runtime patches), index.html (hooks + main() call), assets/ +
+  assets.txt manifest (type:kind:path:length:overwrite), `scripts/gdx.wasm.js`
+  + `assets/startup-logo.png` extracted from backend jar, gdx classpath
   resources. `--skip-build` reuses the last generateJavaScript output.
 - `RemixedDungeonHtml/serve.py --port 8081` — no-store static server.
-- Browser test loop: reload → evaluate `window.__errors` / `window.__logs`.
+- Browser test loop: reload → evaluate `window.__errors` / `window.__jsErrLog`.
 - Three-platform compile check:
   - html: `./gradlew -c settings.html.gradle :RemixedDungeonHtml:generateJavaScript`
   - desktop: `./gradlew :RemixedDungeonDesktop:compileJava`
   - android: `./gradlew -c settings.android.gradle :RemixedDungeon:compileAndroidFdroidDebugJavaWithJavac`
-
-## Commits on this branch (topic → files)
-
-1. `fix: html build - scope desktop excludes...` — compile fix.
-2. (uncommitted, squashed by topic at commit time — see git log) TeaVM boot
-   fixes, asset pipeline, lua reflection supplier + @LuaInterface sweep,
-   TeaVM-compat app fixes, webapp tooling.
 
 ## Open questions / later
 
 - Sound: html audio shims are stubs; `isSoundExists` returns true blindly.
   Low priority per goal.
 - Mods on web: `listResources` returns empty; mod loading unexplored.
-- Saves: HtmlPreferences/localStorage — untested.
 - `index.html` in `RemixedDungeonHtml/src/main/webapp/` is stale GWT-era junk
   (the real one is generated by make_webapp.py).
 - Consider upstream TeaVM master (2f378217c) — has Integer.sum etc.; we fixed

@@ -8,6 +8,7 @@ import org.teavm.classlib.ReflectionContext;
 import org.teavm.classlib.ReflectionSupplier;
 import org.teavm.model.AnnotationContainerReader;
 import org.teavm.model.ClassReader;
+import org.teavm.model.ElementModifier;
 import org.teavm.model.FieldReader;
 import org.teavm.model.MethodDescriptor;
 import org.teavm.model.MethodReader;
@@ -23,8 +24,14 @@ import org.teavm.model.ValueType;
  * reflection can serve them, keeping everything else (and its transitive
  * bodies) out of reflection linking.
  *
+ * On top of @LuaInterface classes, a fixed allowlist of JDK classes is
+ * exposed: lua calls methods on RETURNED objects (a DungeonGenerator
+ * returning ArrayList means lua needs ArrayList:size/get). On the JVM plain
+ * reflection covers that; TeaVM needs metadata per class.
+ *
  * Members whose signatures reference classes TeaVM cannot link
- * (java.util.logging, java.text) are withheld.
+ * (java.util.logging, java.text) are withheld, as are native methods (they
+ * have no renderable reflection callable).
  *
  * Loaded via META-INF/services from the TeaVM tool's classpath.
  */
@@ -105,6 +112,73 @@ public class LuaReflectionSupplier implements ReflectionSupplier {
         return false;
     }
 
+    /**
+     * JDK classes lua operates on through RETURNED objects. Deliberately an
+     * explicit allowlist rather than an automatic signature scan: linking the
+     * members of a class pulls its whole body into TeaVM, and broad automatic
+     * exposure (guava, java.io) trips over classlib APIs TeaVM never links.
+     * Classes missing here surface as "attempt to call a nil value" lua errors
+     * naming the class - add them case by case.
+     */
+    private static final Set<String> EXTRA_EXPOSED = Set.of(
+            // collections
+            "java.util.List",
+            "java.util.ArrayList",
+            "java.util.Arrays$ArrayList",
+            "java.util.Arrays",
+            "java.util.Collection",
+            "java.util.Collections",
+            "java.util.Deque",
+            "java.util.Enumeration",
+            "java.util.HashMap",
+            "java.util.HashSet",
+            "java.util.Hashtable",
+            "java.util.Iterator",
+            "java.util.LinkedHashMap",
+            "java.util.LinkedHashSet",
+            "java.util.LinkedList",
+            "java.util.ListIterator",
+            "java.util.Map",
+            "java.util.Map$Entry",
+            "java.util.NavigableMap",
+            "java.util.NavigableSet",
+            "java.util.PriorityQueue",
+            "java.util.Queue",
+            "java.util.Random",
+            "java.util.Set",
+            "java.util.SortedMap",
+            "java.util.SortedSet",
+            "java.util.Stack",
+            "java.util.TreeMap",
+            "java.util.TreeSet",
+            "java.util.Vector",
+            // java.lang basics - Class/Object/Throwable deliberately excluded:
+            // exposing them links TeaVM runtime internals (getNameImpl,
+            // RuntimeClass.unpack) that have no renderable callable
+            "java.lang.Boolean",
+            "java.lang.Byte",
+            "java.lang.Character",
+            "java.lang.Double",
+            "java.lang.Enum",
+            "java.lang.Float",
+            "java.lang.Integer",
+            "java.lang.Long",
+            "java.lang.Math",
+            "java.lang.Number",
+            "java.lang.Short",
+            "java.lang.String",
+            "java.lang.StringBuffer",
+            "java.lang.StringBuilder",
+            // json
+            "org.json.JSONObject",
+            "org.json.JSONArray",
+            "org.json.JSONTokener"
+    );
+
+    private static boolean isExposed(ReflectionContext context, String className) {
+        return isLuaClass(context, className) || EXTRA_EXPOSED.contains(className);
+    }
+
     private static boolean typeLinkable(ReflectionContext context, ValueType type) {
         if (!(type instanceof ValueType.Object)) {
             return true;
@@ -133,7 +207,7 @@ public class LuaReflectionSupplier implements ReflectionSupplier {
 
     @Override
     public Collection<String> getAccessibleFields(ReflectionContext context, String className) {
-        if (!isLuaClass(context, className)) {
+        if (!isExposed(context, className)) {
             return Collections.emptyList();
         }
         ClassReader cls = context.getClassSource().get(className);
@@ -151,7 +225,7 @@ public class LuaReflectionSupplier implements ReflectionSupplier {
 
     @Override
     public Collection<MethodDescriptor> getAccessibleMethods(ReflectionContext context, String className) {
-        if (!isLuaClass(context, className)) {
+        if (!isExposed(context, className)) {
             return Collections.emptyList();
         }
         ClassReader cls = context.getClassSource().get(className);
@@ -160,6 +234,12 @@ public class LuaReflectionSupplier implements ReflectionSupplier {
         }
         Set<MethodDescriptor> methods = new HashSet<>();
         for (MethodReader method : cls.getMethods()) {
+            // native methods (JSBody shims etc.) have no renderable reflection
+            // callable - linking them via Method.invoke fails the build with
+            // "Native method has no implementation"
+            if (method.hasModifier(ElementModifier.NATIVE)) {
+                continue;
+            }
             if (methodLinkable(context, method.getDescriptor())) {
                 methods.add(method.getDescriptor());
             }

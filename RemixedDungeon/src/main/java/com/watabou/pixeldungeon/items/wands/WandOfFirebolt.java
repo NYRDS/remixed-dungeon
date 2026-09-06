@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -23,6 +24,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
+@LuaInterface
 public class WandOfFirebolt extends SimpleWand  {
 
 	@Override
