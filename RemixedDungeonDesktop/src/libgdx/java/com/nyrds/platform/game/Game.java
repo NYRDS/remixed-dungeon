@@ -298,11 +298,19 @@ public class Game implements ApplicationListener, InputProcessor {
 
         Pixmap pixmap = Pixmap.createFromFrameBuffer(0, 0, width, height);
 
+        // glReadPixels rows run bottom-up; PNG wants top-down
+        int h = pixmap.getHeight();
+        Pixmap flipped = new Pixmap(pixmap.getWidth(), h, pixmap.getFormat());
+        for (int y = 0; y < h; y++) {
+            flipped.drawPixmap(pixmap, 0, y, pixmap.getWidth(), 1, 0, h - 1 - y, pixmap.getWidth(), 1);
+        }
+        pixmap.dispose();
+
         long timestamp = System.currentTimeMillis();
 
-        PixmapIO.writePNG(Gdx.files.absolute("screenshot" + timestamp + ".png"), pixmap, Deflater.DEFAULT_COMPRESSION, true);
+        PixmapIO.writePNG(Gdx.files.absolute("screenshot" + timestamp + ".png"), flipped, Deflater.DEFAULT_COMPRESSION, true);
 
-        pixmap.dispose();
+        flipped.dispose();
     }
 
     public static void updateFpsLimit() {
