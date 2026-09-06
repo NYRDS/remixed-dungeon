@@ -71,9 +71,24 @@ Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
    (listResources empty).
 6. Remove debug breadcrumbs (jsErrLog hook ok to keep, cheap) and build with
    `-Pteavm.obfuscated=true` before shipping.
-7. Reference port worth mining for tricks: github glassesmonkey/
-   shattered-pixel-dungeon-web (TeaVM + gdx-teavm, WebGL-safe VBO paths in
-   glwrap/Vertexbuffer + noosa, browser font/file shims).
+
+## Reference port
+
+**github.com/glassesmonkey/shattered-pixel-dungeon-web** — Shattered Pixel
+Dungeon playable in the browser, built exactly like this port (TeaVM + the
+libgdx TeaVM backend, JS not WASM, static webapp). Worth mining before
+solving anything hard ourselves:
+
+- "WebGL-safe vertex-buffer paths for dynamic text, effects, tilemap updates,
+  and partial VBO uploads" in `SPD-classes`
+  (`com/watabou/glwrap/Vertexbuffer.java`) and the `noosa` layer — same
+  client-arrays→VBO conversion as our GlBuffers/NoosaScript fix, but done
+  inside the watabou glwrap plumbing (may be the cleaner place for
+  Text/Emitter/Tilemap draw paths we haven't hit yet).
+- Browser font and file handling shims for TeaVM (our Text rendering is
+  unverified — look here first when it breaks).
+- Save/reload logic reworked for browser lifecycle (pagehide/visibility) —
+  relevant for our HtmlPreferences/localStorage work.
 
 ## How to debug this port (hard-won notes)
 
