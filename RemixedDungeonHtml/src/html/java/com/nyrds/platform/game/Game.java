@@ -119,14 +119,25 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public void render() {
+        touchJsHeartbeat();
+
         if (instance() == null || GameLoop.width == 0 || GameLoop.height == 0) {
             gameLoop.framesSinceInit = 0;
             return;
         }
 
         if (paused) {
-            gameLoop.framesSinceInit = 0;
-            return;
+            // TeaApplication pauses us on visibilitychange "hidden", but the
+            // matching "visible" resume can be missed (fired while booting,
+            // before initState reaches APP_LOOP, or dropped by the embedded
+            // pane). Self-heal: once the document is visible again, resume.
+            if (isDocumentVisible()) {
+                GLog.debug("paused but document visible - resuming");
+                resume();
+            } else {
+                gameLoop.framesSinceInit = 0;
+                return;
+            }
         }
 
         Gdx.gl20.glEnable(GL20.GL_BLEND);
@@ -160,7 +171,15 @@ public class Game implements ApplicationListener, InputProcessor {
         if (BuildConfig.DEBUG && Gdx.input.isButtonPressed(Input.Buttons.RIGHT)) {
             // Screenshot functionality not supported in HTML
         }
+
+        renderDoneMarker();
     }
+
+    // browser debug: set after render() fully returns; distinguishes "hung
+    // inside onFrame" from "returned but loop not rescheduled"
+    @org.teavm.jso.JSBody(script =
+            "var s = window.__gameState || (window.__gameState = {}); s.renderDone = Date.now();")
+    private static native void renderDoneMarker();
 
     @Override
     public void pause() {
@@ -312,4 +331,13 @@ public class Game implements ApplicationListener, InputProcessor {
             "var je = t && t['$jsException'];"
             + "console.error('CAUSE-JSSTACK: ' + (je && je.stack ? je.stack : (t && t.stack)));")
     private static native void dumpJsException(Throwable t);
+
+    // browser debug heartbeat: window.__gameState.frame = ms timestamp of the
+    // last TeaApplication render() entry; frames = total render() count
+    @org.teavm.jso.JSBody(script =
+            "var s = window.__gameState || (window.__gameState = {}); s.frames = (s.frames || 0) + 1; s.frame = Date.now();")
+    private static native void touchJsHeartbeat();
+
+    @org.teavm.jso.JSBody(script = "return document.visibilityState === 'visible';")
+    private static native boolean isDocumentVisible();
 }

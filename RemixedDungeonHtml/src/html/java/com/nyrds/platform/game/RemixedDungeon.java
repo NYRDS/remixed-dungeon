@@ -79,6 +79,8 @@ public class RemixedDungeon extends Game {
 		updateFpsLimit();
 
 		super.create();
+
+		DebugEntryPoints.scheduleFromUrl();
 	}
 
 	@Override

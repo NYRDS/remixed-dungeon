@@ -73,6 +73,27 @@ def patch_teavm_js(js_text: str) -> str:
         js_text = js_text.replace(wrap_src, wrap_dst)
     else:
         print("warning: $rt_wrapException pattern not found - error log hook skipped")
+    # TeaVM async suspensions unwind the frame chain SILENTLY (no exception, no
+    # promise): when $rt_suspending() turns true the generated code breaks out
+    # of the frame callback and parks the continuation on the native thread.
+    # Record the JS stack at each unwind so a stalled loop can be attributed to
+    # the exact suspension point (e.g. file IO inside level loading).
+    susp_src = "$rt_suspending = () => {\n    let thread = $rt_nativeThread();\n    return thread != null && thread.isSuspending();\n}"
+    susp_dst = (
+        "$rt_suspending = () => {\n"
+        "    let thread = $rt_nativeThread();\n"
+        "    let r = thread != null && thread.isSuspending();\n"
+        "    if (r && typeof window !== 'undefined') {\n"
+        "        window.__lastSuspendStack = String(new Error().stack || '');\n"
+        "        window.__lastSuspendAt = Date.now();\n"
+        "    }\n"
+        "    return r;\n"
+        "}"
+    )
+    if susp_src in js_text:
+        js_text = js_text.replace(susp_src, susp_dst)
+    else:
+        print("warning: $rt_suspending pattern not found - suspend tracer skipped")
     return js_text
 
 
@@ -177,35 +198,126 @@ INDEX_HTML = """<!DOCTYPE html>
 <body>
     <script>
         // rAF never fires in an occluded pane/tab, which stalls the whole game.
-        // When hidden, drive the TeaApplication frame callback from timers
-        // instead (throttled to ~1/s by the browser; GameLoop clamps dt to
-        // 250ms, so game time advances at ~0.25x). Visible mode is untouched.
+        // Occlusion comes in two flavors: visibilityState 'hidden' (real background
+        // tab) and 'visible' but throttled (embedded pane in an unfocused window) -
+        // real rAF just never delivers in both. So: schedule via real rAF, and arm
+        // a 250ms timer as a stall fallback. When rAF is punctual (any normal
+        // visible page) the fallback no-ops; when rAF is dead the fallback drives
+        // frames at timer pace (throttled to ~1/s; GameLoop clamps dt to 250ms, so
+        // game time advances at ~0.25x).
         (function() {
             var origRAF = window.requestAnimationFrame.bind(window);
             var synthT = 0;
-            window.__rafShimStats = { sched: 0, fired: 0, err: 0 };
-            window.requestAnimationFrame = function(cb) {
-                if (document.visibilityState !== 'hidden') return origRAF(cb);
-                window.__rafShimStats.sched++;
-                setTimeout(function() {
-                    window.__rafShimStats.fired++;
-                    if (document.visibilityState !== 'hidden') { origRAF(cb); return; }
-                    synthT += 250;
-                    try {
-                        cb(synthT);
-                    } catch (e) {
-                        window.__rafShimStats.err++;
-                        window.__errors.push('shim cb error: ' + e);
-                        return;
+            var lastRafFire = 0;
+            window.__rafCbCounts = new Map();
+            window.__rafShimStats = { sched: 0, fired: 0, viaRaf: 0, viaFallback: 0, viaWorker: 0, err: 0 };
+            // Web-worker ticker: unlike the page's timers and rAF, a worker's
+            // setInterval keeps firing (at ~500ms) when the page is occluded or
+            // backgrounded. Every scheduled frame registers with it; a frame
+            // that rAF (or the starvation timer) hasn't run within 600ms of its
+            // schedule is fired from the tick, so the game keeps making
+            // progress instead of hard-freezing in the background.
+            var pendingFrames = [];
+            var workerOn = false;
+            try {
+                var blob = new Blob(
+                    ['setInterval(function(){postMessage(0)},500);'],
+                    {type: 'application/javascript'});
+                var w = new Worker(URL.createObjectURL(blob));
+                w.onmessage = function() {
+                    workerOn = true;
+                    window.__workerTicks = (window.__workerTicks || 0) + 1;
+                    if (pendingFrames.length === 0) { return; }
+                    var now = Date.now();
+                    var still = [];
+                    for (var i = 0; i < pendingFrames.length; i++) {
+                        var p = pendingFrames[i];
+                        if (p.done) { continue; }
+                        if (now - p.at > 600) {
+                            p.done = true;
+                            window.__rafShimStats.viaWorker++;
+                            runFrame(p.cb, 0, false);
+                        } else {
+                            still.push(p);
+                        }
                     }
-                    try {
-                        window.__frameData =
-                            document.getElementById('canvas').toDataURL('image/png');
-                    } catch (e) {}
-                }, 30);
+                    pendingFrames = still;
+                };
+            } catch (e) { window.__rafShimStats.noWorker = true; }
+            var runFrame = function(cb, t, viaRaf) {
+                window.__rafShimStats.fired++;
+                var before = window.__rafShimStats.sched;
+                var r = undefined;
+                try {
+                    r = cb(synthT);
+                } catch (e) {
+                    window.__rafShimStats.err++;
+                    window.__errors.push('shim cb error: ' + e);
+                    return;
+                }
+                if (viaRaf) { window.__rafShimStats.viaRaf++; synthT = t; }
+                else { window.__rafShimStats.viaFallback++; synthT += 250; }
+                // TeaVM async suspension: a blocking call (latch await, sleep)
+                // unwinds the frame as a returned Promise; the loop stops until
+                // it resolves. Log both that and a plain "no reschedule" stall.
+                if (r && typeof r.then === 'function') {
+                    window.__errors.push('shim: frame suspended async (promise returned)');
+                    r.then(function() {
+                            window.__errors.push('shim: async frame resumed');
+                        }, function(e) {
+                            window.__rafShimStats.err++;
+                            window.__errors.push('shim: async frame failed: ' + e);
+                        });
+                    return;
+                }
+                if (window.__rafShimStats.sched === before) {
+                    window.__rafShimStats.err++;
+                    window.__errors.push('shim: chain stalled - frame cb returned without rescheduling');
+                }
+                try {
+                    window.__frameData =
+                        document.getElementById('canvas').toDataURL('image/png');
+                } catch (e) {}
+            };
+            window.requestAnimationFrame = function(cb) {
+                window.__rafShimStats.sched++;
+                // Remember the most recent scheduled callback: the game's frame
+                // loop reschedules itself, so on a stall the last one is the
+                // loop's continuation and can be poked with __kickLoop().
+                window.__lastGameRafCb = cb;
+                window.__lastScheduleAt = Date.now();
+                var done = false;
+                var pending = { done: false, at: Date.now(), cb: cb };
+                pendingFrames.push(pending);
+                window.__pendingCount = pendingFrames.length;
+                origRAF(function(t) {
+                    if (done) { return; }
+                    done = true;
+                    pending.done = true;
+                    lastRafFire = Date.now();
+                    runFrame(cb, t, true);
+                });
+                // Starvation timer for the lightly-throttled case (fires at
+                // ~250ms); the worker tick above is the last resort when even
+                // page timers stop running.
+                if (Date.now() - lastRafFire > 1000) {
+                    setTimeout(function() {
+                        if (done) { return; }
+                        done = true;
+                        pending.done = true;
+                        runFrame(cb, 0, false);
+                    }, 250);
+                }
                 return 0;
             };
         })();
+        // Emergency restart for the TeaApplication frame loop: re-invoke the
+        // game's last frame callback; it reschedules itself if still alive.
+        window.__kickLoop = function() {
+            var cb = window.__lastGameRafCb;
+            if (!cb) { return 'no cb'; }
+            try { cb(0); return 'kicked'; } catch (e) { return 'kick threw: ' + e; }
+        };
         // boot error capture - must run before teavm-app.js
         window.__errors = [];
         window.__logs = [];
@@ -261,6 +373,49 @@ INDEX_HTML = """<!DOCTYPE html>
     </div>
     <script type="text/javascript" src="teavm-app.js"></script>
     <script>
+        // TeaVM coroutine tracer: TeaVM async calls unwind the JS stack
+        // SILENTLY via TeaVMThread.suspend (no exception, no promise), which
+        // kills the rAF frame chain until thread.resume(). Log every suspend
+        // with a JS stack so a stalled loop can be attributed.
+        (function() {
+            if (!window.TeaVMThread) { return; }
+            var proto = window.TeaVMThread.prototype;
+            window.__suspends = [];
+            var origSuspend = proto.suspend;
+            proto.suspend = function(cb) {
+                try {
+                    var st = '';
+                    try { st = (new Error().stack || '').split('\\n').slice(1, 8).join(' | '); } catch (e) {}
+                    window.__suspends.push(st);
+                    if (window.__suspends.length > 30) { window.__suspends.shift(); }
+                    window.__gameState = window.__gameState || {};
+                    window.__gameState.lastSuspend = Date.now();
+                } catch (e) {}
+                return origSuspend.call(this, cb);
+            };
+            // push() stashes continuation frames when an async call unwinds -
+            // catches suspensions regardless of which check flag was used
+            var origPush = proto.push;
+            proto.push = function() {
+                try {
+                    window.__pushCount = (window.__pushCount || 0) + 1;
+                    if (!window.__lastPushStack) {
+                        window.__lastPushStack = (new Error().stack || '').split('\\n').slice(1, 8).join(' | ');
+                    }
+                    window.__gameState = window.__gameState || {};
+                    window.__gameState.lastPush = Date.now();
+                } catch (e) {}
+                return origPush.apply(this, arguments);
+            };
+            var origResume = proto.resume;
+            proto.resume = function() {
+                try {
+                    window.__gameState = window.__gameState || {};
+                    window.__gameState.lastResume = Date.now();
+                } catch (e) {}
+                return origResume.call(this);
+            };
+        })();
         // count render-loop ticks so the boot overlay can retire itself once
         // the game is actually drawing
         (function() {
