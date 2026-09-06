@@ -343,6 +343,7 @@
     <string name="Displacement_Txt">%s الخدمة</string>
     <string name="DoctorArmor_Name">Trang phục bác sĩ</string>
     <string name="DogeMask_Info">Bạn có từng muốn cải trang thành Doge nổi tiếng? Bây giờ là cơ hội của bạn!\nCái Mặt nạ Đấy! Nhiều Cải Trang! Wow!</string>
+    <string name="DonateButton_pleaseDonate">vui lòng cân nhắc ủng hộ</string>
     <string name="DonateButton_thanks">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DriedRoseBuff_Info">Bông hồng trông rất quyến rũ.</string>
@@ -1068,6 +1069,7 @@
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
     <string name="StartScene_UnlockGnoll">Để mở khóa lớp này, bạn phải thuyết phục linh mục làng chữa lành cho Gnoll Brute</string>
     <string name="StartScene_UnlockNecromancer">Để mở khóa lớp nhân vật này, hãy tiêu diệt Lich bằng bất kỳ lớp nào khác.</string>
+    <string name="StartScene_Yes">Có, bắt đầu trò chơi mới</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">tượng sống</string>
     <string name="Stench_Txt">%s hôi thối</string>
@@ -1371,6 +1373,7 @@
     <string name="town_deco_church_sign_desc">Có vẻ như bên trong tòa nhà này có một nhà thờ.</string>
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
     <string name="town_deco_common_bed_desc">Giường bình thường.</string>
+    <string name="town_deco_counter_desc">Giữ khoảng cách hợp lý giữa bạn và người đứng phía sau nó.</string>
     <string name="town_deco_counter_name">Quầy</string>
     <string name="town_deco_crate_bottles_desc">Chai bia đã trở thành một sở thích rất phổ biến giữa các chủ quán rượu.</string>
     <string name="town_deco_crate_bottles_name">Thùng bia</string>
@@ -1445,6 +1448,9 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

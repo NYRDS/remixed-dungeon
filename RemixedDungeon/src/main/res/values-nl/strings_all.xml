@@ -179,6 +179,7 @@
     <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">grom</string>
     <string name="Brute_Name_Objective">grom</string>
+    <string name="Brute_StaEnraged">woedend</string>
     <string name="BurningBuff_Info">Het lichaam is verteerd in razende vlammen!</string>
     <string name="BurningBuff_Name">In brand</string>
     <string name="BurningFist_Desc">Brandende Vuist van de Oude God</string>
@@ -750,6 +751,7 @@
     <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
     <string name="PetInventory_GaveItem">Gaf %1 aan %2</string>
     <string name="PetInventory_HeroBackpackFull">Je rugzak is vol</string>
+    <string name="PetInventory_PetBackpackFull">De rugzak van het huisdier is vol</string>
     <string name="PetInventory_TakeFromPet">Nemen van huisdier</string>
     <string name="PetInventory_Title">Huisdiereninventaris</string>
     <string name="PetInventory_TookItem">%1$s genomen van %2$s</string>
@@ -783,6 +785,7 @@
     <string name="PlagueDoctorQuest_AllDone">*Hij laat een droge, hijgende lach horen.* \&quot;Jouw daden hebben geheimen ontsluierd zonder maat! De verkregen kennis… het pulsert in mij, een symfonie van ontdekking. Maar kennis,\&quot; voegt hij eraan toe, zijn zinkend tot een samenzweerderig fluisteren, \&quot;kennis is macht. En macht… ah… dat is de meest bedwelmende elixer.\&quot; Hij kijkt je even intens aan, zijn amethistoogen branden met koortsachtige felheid. \&quot;Misschien,\&quot; mompelt hij, \&quot;kruisen onze paden elkaar weer. Want er zijn nog vele… mysteries… die nog ontrafeld moeten worden.\&quot;</string>
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name_Objective">pestdokter</string>
+    <string name="Plant_Info">Worp deze zaad naar de plaats waar je %1$s wilt laten groeien.\n\n%2$s</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Name_1">Giftig %s</string>
     <string name="PortalExit_Desc">Deze portal brengt je naar het eerste niveau van de %s.</string>
@@ -1496,6 +1499,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
