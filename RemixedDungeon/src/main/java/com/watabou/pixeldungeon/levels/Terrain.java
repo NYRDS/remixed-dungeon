@@ -1,6 +1,9 @@
 
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
 public class Terrain {
 
 	public static final int CHASM = 0;

@@ -5,6 +5,7 @@ import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingBase;
 import java.util.HashMap;
 import java.util.Map;
+import org.luaj.vm2.LuaError;
 import org.luaj.vm2.lib.jse.LuajavaLib;
 
 /**
@@ -40,11 +41,20 @@ public class PlatformLuajavaLib extends LuajavaLib {
         LuaSandbox.warnIfNotAllowed(actualClassName, "<class>", "class");
 
         try {
+            jsLog("classForName: " + actualClassName);
             Class clazz = Class.forName(actualClassName, true, classLoader);
             return clazz;
         } catch (ClassNotFoundException e) {
             ModError.doReport("Failed to load class ["+classLoader.toString() + "] in mod "+ ModdingBase.activeMod(), e);
-            return Object.class;
+            jsLog("classForName failed: " + actualClassName);
+            // match the desktop behaviour: luaj wraps this into a LuaError so
+            // pcall()'d module loads survive classes absent from the web build
+            // (ads/surveys etc). Returning Object.class made newInstance blow
+            // up with a bare NPE instead.
+            throw new LuaError(e);
         }
     }
+
+    @org.teavm.jso.JSBody(params = "text", script = "console.error('LUAJAVA: ' + text);")
+    private static native void jsLog(String text);
 }

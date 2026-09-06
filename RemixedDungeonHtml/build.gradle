@@ -124,6 +124,9 @@ dependencies {
     
     compileOnly project(':processor')
     annotationProcessor project(':processor')
+    // on the runtime classpath so TeaVM's tool ServiceLoader can pick up
+    // LuaReflectionSupplier (META-INF/services/org.teavm.classlib.ReflectionSupplier)
+    implementation project(':processor')
     
     implementation project(':luaj')
     implementation 'org.hjson:hjson:3.1.0'
@@ -145,6 +148,9 @@ dependencies {
     implementation "org.teavm:teavm-interop:$teaVmVersion"
 
     compileOnly "org.teavm:teavm-core:$teaVmVersion"
+    // on the tool classpath: LuaReflectionSupplier (in :processor) links
+    // against teavm-core's ReflectionSupplier/ model classes
+    implementation "org.teavm:teavm-core:$teaVmVersion"
     // annotationProcessor "org.teavm:teavm-core:$teaVmVersion"  // REMOVED: TeaVM processor interferes with Lombok and custom processor
 
     // Delombok for generating Lombok code (getters/setters) for TeaVM compatibility
@@ -183,7 +189,13 @@ teavm {
     js {
         mainClass = 'com.nyrds.platform.app.client.TeaVMLauncher'
         targetFileName = 'teavm-app.js'
-        
+
         properties.put('org.teavm.reflect.enableRef', 'true')
+        // source map + $rt_decodeStack: readable Java stack traces at runtime,
+        // worth the size for debugging the web port
+        sourceMap = true
+        // readable stack traces when debugging boot failures;
+        // flip back to true for the shipped artifact
+        obfuscated = Boolean.parseBoolean(project.findProperty('teavm.obfuscated') ?: 'false')
     }
 }

@@ -8,7 +8,9 @@ import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 import java.util.ArrayList;
 import org.jetbrains.annotations.NotNull;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class Camera extends Gizmo {
 
 	protected static final ArrayList<Camera> all = new ArrayList<>();

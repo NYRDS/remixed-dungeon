@@ -7,7 +7,9 @@ import com.watabou.pixeldungeon.utils.Utils;
 import java.util.HashMap;
 import java.util.Map;
 import org.json.JSONObject;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class EffectsFactory {
 
     private static final Map<String, JSONObject> effects = new HashMap<>();

@@ -8,11 +8,16 @@ dependencies {
     implementation 'com.google.guava:guava:32.0.1-jre'
     implementation 'com.squareup:javapoet:1.11.1'
 
+    // TeaVM build-time reflection SPI (org.teavm.classlib.ReflectionSupplier)
+    // used by LuaReflectionSupplier for the html/web build
+    compileOnly 'org.teavm:teavm-core:0.13.1'
+
     annotationProcessor 'org.projectlombok:lombok:1.18.42'
     compileOnly 'org.projectlombok:lombok:1.18.42'
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    // teavm-core 0.13.1 ships Java 11+ classfiles
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }

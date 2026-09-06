@@ -19,7 +19,9 @@ import com.watabou.utils.ColorMath;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 import org.jetbrains.annotations.Nullable;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class MagicMissile extends Emitter {
 
 	private static final float SPEED	= 200f;

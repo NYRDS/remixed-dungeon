@@ -6,7 +6,9 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.PointF;
 import org.jetbrains.annotations.NotNull;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class CellEmitter {
 
 	@NotNull

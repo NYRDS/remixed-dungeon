@@ -6,7 +6,9 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Effects;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class DeathStroke extends Image {
 
 	private static final float TIME_TO_FADE = 0.8f;

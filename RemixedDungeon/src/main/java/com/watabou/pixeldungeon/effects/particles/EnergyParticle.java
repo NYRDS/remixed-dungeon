@@ -6,7 +6,9 @@ import com.watabou.noosa.particles.Emitter.Factory;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class EnergyParticle extends PixelParticle {
 	
 	public static final Emitter.Factory FACTORY = new Factory() {	

@@ -18,7 +18,9 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import org.jetbrains.annotations.NotNull;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public abstract class MobAi implements AiState {
 
     private static final Map<String, AiState> aiStateInstances = new HashMap<>();

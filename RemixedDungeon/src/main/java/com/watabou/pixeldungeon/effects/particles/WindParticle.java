@@ -10,7 +10,9 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class WindParticle extends PixelParticle {
 
 	public static final Emitter.Factory FACTORY = new Factory() {	
