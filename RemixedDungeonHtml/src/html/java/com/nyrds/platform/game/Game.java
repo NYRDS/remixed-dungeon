@@ -1,5 +1,6 @@
 package com.nyrds.platform.game;
 
+import android.view.KeyEvent;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -151,7 +152,7 @@ public class Game implements ApplicationListener, InputProcessor {
             int keycode = entry.getKey();
             long lastFireTime = entry.getValue();
             if (currentTime - lastFireTime >= AUTO_FIRE_INTERVAL) {
-                // For HTML, we use Gdx InputEvent instead of Android KeyEvent
+                GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_DOWN));
                 keyDownTimes.put(keycode, currentTime); // Update the last fire time
             }
         }
@@ -204,7 +205,7 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public boolean keyDown(int keycode) {
-        // For HTML, we use Gdx InputEvent instead of Android KeyEvent
+        GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_DOWN));
         keyDownTimes.put(keycode, System.currentTimeMillis()); // Record the time when the key was pressed
 
         if (keycode == Input.Keys.F11) {
@@ -216,7 +217,7 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public boolean keyUp(int keycode) {
-        // For HTML, we use Gdx InputEvent instead of Android KeyEvent
+        GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_UP));
         keyDownTimes.remove(keycode); // Remove the key from the map when it's released
         return true;
     }

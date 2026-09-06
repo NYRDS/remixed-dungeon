@@ -10,6 +10,11 @@ import com.nyrds.teavm.reflection.ReflectionConfig;
  */
 public class TeaVMLauncher {
     public static void main(String[] args) {
+        // TeaVM's System.out goes nowhere in the browser console (System.err is
+        // the only stream that surfaces, via console.error) - merge them so
+        // game logs are visible in the web debug loop.
+        System.setOut(System.err);
+
         // --- THIS IS THE NEW LINE ---
         // Call this first to enable reflection before the application starts.
         ReflectionConfig.enableReflectionForDebugging();

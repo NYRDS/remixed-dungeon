@@ -4,14 +4,29 @@ Branch: `html-port-runnable` (work in progress, see git log)
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
-## Current state (as of 2026-09-06, session 2)
+## Current state (as of 2026-09-06, session 3)
 
 - **TITLE SCREEN RENDERS AND RUNS** in the browser at ~58fps: lua boot
   completes, title scene draws (logo, archs background, buttons), zero
   uncaught errors, error count stable.
+- **INPUT WORKS END TO END**: clicks drive scene switches (Title ⇄
+  Rankings) with correct coordinates under page scroll. Keys enqueued too
+  (unverified live).
 - Compile ✅ html/desktop/android. teavm-app.js ~38MB debug (obfuscated=false).
 
 ## What was fixed this session (in boot order)
+
+0. **Input plumbing (session 3)** — clicks on title buttons did nothing because
+   the html `Touchscreen.processEvent` was a stub (`println` only); GameLoop
+   polls it via `Touchscreen.processEvent(PointerEvent)`. Replaced with the
+   desktop implementation verbatim (Signal dispatch of Touch, pointers map).
+   Also wired html `Game.keyDown/keyUp` + render() auto-fire to enqueue
+   `KeyEvent`s into `GameLoop.keysEvents` exactly like desktop (they only
+   tracked keyDownTimes before). Verified END TO END in the browser:
+   Title→Rankings (dashboard click) and Rankings→Title (exit button), correct
+   coords with the page scrolled both axes. `System.setOut(System.err)` added
+   in TeaVMLauncher — System.out never reaches the browser console; merging
+   makes all game logs visible in the `__errors` capture.
 
 1. **@LuaInterfaceProcessor dropped enums** — getEnclosingClass didn't accept
    ElementKind.ENUM → Fraction/Sample/MusicManager missing from the map.
@@ -61,16 +76,30 @@ Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 
 ## Remaining / next steps
 
-1. **Input**: canvas click on title buttons did nothing yet — pointer/touch
-   event plumbing from TeaApplication to Game.input needs a pass.
-2. Title screen visual check vs desktop (possible scale/layout offsets:
-   camera is 800x480 here, 480x320 on desktop).
-3. Text/font rendering not verified (no visible text on title yet).
-4. New game → dungeon generation → gameplay loop.
-5. Saves (HtmlPreferences works? localStorage), sound (stubs), mods
-   (listResources empty).
-6. Remove debug breadcrumbs (jsErrLog hook ok to keep, cheap) and build with
+1. **Text/font rendering is now THE blocker** — confirmed by input testing:
+   every scene renders textures fine (logo, dashboard icons, archs) but ALL
+   text is invisible (title button labels, RankingsScene table, StartScene is
+   background-only). SystemText/PlatformSupportingText path needs a pass; the
+   reference port's font shims are the first place to look.
+2. Title screen layout vs desktop: camera is 800x480 here, 480x320 on
+   desktop; dashboard sits lower than computed from code (text height=0
+   shifts VBox/baseline math). Re-check after fonts work.
+3. New game → dungeon generation → gameplay loop.
+4. Saves (HtmlPreferences works? localStorage; `save_io_exception` already
+   logged at boot), sound (stubs), mods (listResources empty).
+5. Keys flow now enqueues events but is unverified live (Escape/back).
+6. Remove debug breadcrumbs (jsErrLog hook ok to keep, cheap; System.setOut
+   merge worth keeping while porting) and build with
    `-Pteavm.obfuscated=true` before shipping.
+
+## Browser-testing notes (in-app pane)
+
+- The IAB pane's real css viewport ≠ setViewportSize; measure
+  `getBoundingClientRect()` + `window.innerWidth/devicePixelRatio` per
+  session. `tab.cua` clicks are css × dpr (observed 1.331); screenshots are
+  in the same cua space. The pane can be smaller than the 800x480 canvas —
+  scroll (`document.scrollingElement.scrollLeft/Top`) and TeaInput's
+  scroll-compensating math handles it (verified).
 
 ## Reference port
 
