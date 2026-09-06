@@ -21,6 +21,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -131,7 +132,18 @@ public class Game implements ApplicationListener, InputProcessor {
         Gl.blendSrcAlphaOneMinusAlpha();
         Gdx.gl20.glEnable(GL20.GL_SCISSOR_TEST);
 
-        gameLoop.onFrame();
+        try {
+            gameLoop.onFrame();
+        } catch (Throwable t) {
+            // TeaVM keeps the original JS Error (with a readable stack) on the
+            // throwable - surface it, since getStackTrace() is empty on web
+            Throwable cur = t;
+            while (cur.getCause() != null && cur.getCause() != cur) {
+                cur = cur.getCause();
+            }
+            dumpJsException(cur);
+            throw t;
+        }
 
         // Check for auto-fire events
         long currentTime = System.currentTimeMillis();
@@ -289,4 +301,14 @@ public class Game implements ApplicationListener, InputProcessor {
             returnTo.returnToWork(true);
         }
     }
+
+    // caveman: watchdog support - TeaVM has no Thread.getAllStackTraces()
+    public static void dumpThreadStacks() {
+        GLog.toFile("WATCHDOG: thread stacks not available on web");
+    }
+
+    @org.teavm.jso.JSBody(params = "t", script =
+            "var je = t && t['$jsException'];"
+            + "console.error('CAUSE-JSSTACK: ' + (je && je.stack ? je.stack : (t && t.stack)));")
+    private static native void dumpJsException(Throwable t);
 }

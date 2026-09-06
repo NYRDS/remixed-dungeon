@@ -65,12 +65,24 @@ public class Util {
 
 	@SneakyThrows
 	public static JSONObject sanitizeJson(String jsonInput) {
+		// strict JSON first: hjson's parser relies on regex features
+		// (\x{...} escapes) TeaVM cannot run, so on web it always fails
+		try {
+			return new JSONObject(jsonInput);
+		} catch (Exception ignored) {
+			// fall through to hjson, which tolerates comments and loose syntax
+		}
 		JsonValue jsonValue = JsonValue.readHjson(jsonInput).asObject();
-        return new JSONObject(jsonValue.toString());
+		return new JSONObject(jsonValue.toString());
 	}
 
 	@SneakyThrows
 	public static JSONArray sanitizeJsonArray(String jsonInput) {
+		try {
+			return new JSONArray(jsonInput);
+		} catch (Exception ignored) {
+			// fall through to hjson, which tolerates comments and loose syntax
+		}
 		JsonValue jsonValue = JsonValue.readHjson(jsonInput).asArray();
 		return new JSONArray(jsonValue.toString());
 	}

@@ -8,6 +8,7 @@ import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import java.util.Collections;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import org.jetbrains.annotations.Nullable;
@@ -33,7 +34,9 @@ public class LuaScript {
 
     // caveman: report each wedged script+handler once - a stuck script runs
     // its handler every tick and must not flood the device log.
-    private static final Set<String> slowScriptReported = ConcurrentHashMap.newKeySet();
+    // TeaVM has no ConcurrentHashMap.newKeySet - build the same thing manually.
+    private static final Set<String> slowScriptReported =
+            Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());
 
     public LuaScript(String scriptFile, @Nullable Object parent)
     {

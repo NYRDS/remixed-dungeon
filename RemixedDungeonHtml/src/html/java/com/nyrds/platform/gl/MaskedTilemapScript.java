@@ -135,7 +135,9 @@ public class MaskedTilemapScript extends Script {
             "  vUV = aUV;" +
             "  vUV_mask = aUV_mask;" +
             "}" +
-            "//" +
+            "//\n" +
+            // WebGL1 requires an explicit float precision in fragment shaders
+            "precision mediump float;\n" +
             "varying vec2 vUV;" +
             "varying vec2 vUV_mask;" +
             "uniform sampler2D uTex;" +

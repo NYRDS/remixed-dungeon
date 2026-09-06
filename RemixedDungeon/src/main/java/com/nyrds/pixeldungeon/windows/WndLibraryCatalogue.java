@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.TextButton;
 import com.watabou.pixeldungeon.ui.Window;
-import java.text.Collator;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -49,7 +48,8 @@ public class WndLibraryCatalogue extends Window {
 				(o1, o2) -> {
 					var e1 = Library.infoHeader(category, o1);
 					var e2 = Library.infoHeader(category, o2);
-					return Collator.getInstance().compare(e1.header, e2.header);
+					// plain compare: java.text.Collator has no TeaVM implementation
+					return String.CASE_INSENSITIVE_ORDER.compare(e1.header, e2.header);
 				});
 
 		//List

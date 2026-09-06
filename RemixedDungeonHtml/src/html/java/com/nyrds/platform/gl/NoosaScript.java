@@ -142,8 +142,12 @@ public class NoosaScript extends Script {
 		"  gl_Position = uCamera * uModel * aXYZW;" +
 		"  vUV = aUV;" +
 		"}" +
-		
+
 		"//\n" +
+
+		// WebGL1 requires an explicit float precision in fragment shaders -
+		// desktop GL defaults to highp, WebGL does not
+		"precision mediump float;\n" +
 
 		"varying vec2 vUV;" +
 		"uniform sampler2D uTex;" +

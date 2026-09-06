@@ -27,6 +27,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -312,5 +313,18 @@ public class Game implements ApplicationListener, InputProcessor {
     static public void copyToClipboard(String label, String text) {
         Gdx.app.getClipboard().setContents(text);
         toast("Copied to clipboard", (Object[]) null);
+    }
+
+    // caveman: watchdog support - dump every live thread's stack to the game log
+    public static void dumpThreadStacks() {
+        Thread.getAllStackTraces().forEach((thread, st) -> {
+            if (st.length == 0) {
+                return;
+            }
+            GLog.toFile("WATCHDOG thread %s state=%s", thread.getName(), thread.getState());
+            for (StackTraceElement el : st) {
+                GLog.toFile("  at " + el);
+            }
+        });
     }
 }

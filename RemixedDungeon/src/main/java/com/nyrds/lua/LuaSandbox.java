@@ -1,7 +1,9 @@
 package com.nyrds.lua;
 
+import com.watabou.pixeldungeon.utils.GLog;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -9,20 +11,16 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.logging.FileHandler;
-import java.util.logging.LogRecord;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 public class LuaSandbox {
-    private static final Logger LOG = Logger.getLogger(LuaSandbox.class.getName());
     private static final String MAP_RESOURCE = "lua-interface-map.json";
 
     // Deduplication: track already-logged warnings
     private static final Set<String> LOGGED_WARNINGS = new HashSet<>();
 
-    // File logging for Desktop
-    private static FileHandler fileHandler = null;
+    // File logging for Desktop. Plain FileWriter instead of
+    // java.util.logging.FileHandler - TeaVM has no java.util.logging handlers
+    private static FileWriter fileLogWriter = null;
     private static boolean fileLoggingInitialized = false;
 
     private static final Map<String, Set<String>> CLASS_METHODS = new HashMap<>();
@@ -33,6 +31,24 @@ public class LuaSandbox {
 
     static {
         initialize();
+    }
+
+    private static void log(String level, String msg) {
+        System.err.println(level + ": " + msg);
+        GLog.toFile(level + ": " + msg);
+        appendToFile(level + ": " + msg);
+    }
+
+    private static synchronized void appendToFile(String line) {
+        if (fileLogWriter == null) {
+            return;
+        }
+        try {
+            fileLogWriter.write(line + "\n");
+            fileLogWriter.flush();
+        } catch (IOException e) {
+            fileLogWriter = null;
+        }
     }
 
     /**
@@ -47,19 +63,11 @@ public class LuaSandbox {
                 logDir.mkdirs();
             }
             File logFile = new File(logDir, "lua-sandbox.log");
-            fileHandler = new FileHandler(logFile.getAbsolutePath(), true); // append mode
-            fileHandler.setFormatter(new SimpleFormatter() {
-                @Override
-                public String format(LogRecord record) {
-                    return record.getLevel() + ": " + formatMessage(record) + "\n";
-                }
-            });
-            LOG.addHandler(fileHandler);
-            LOG.setUseParentHandlers(true); // Also log to console
+            fileLogWriter = new FileWriter(logFile, true); // append mode
             fileLoggingInitialized = true;
-            LOG.info("LuaSandbox: Desktop file logging initialized at " + logFile.getAbsolutePath());
+            log("INFO", "LuaSandbox: Desktop file logging initialized at " + logFile.getAbsolutePath());
         } catch (IOException e) {
-            LOG.severe("LuaSandbox: Failed to initialize file logging: " + e.getMessage());
+            log("SEVERE", "LuaSandbox: Failed to initialize file logging: " + e.getMessage());
         }
     }
 
@@ -68,7 +76,7 @@ public class LuaSandbox {
 
         try (InputStream is = LuaSandbox.class.getClassLoader().getResourceAsStream(MAP_RESOURCE)) {
             if (is == null) {
-                LOG.warning("LuaSandbox: " + MAP_RESOURCE + " not found on classpath - no sandbox enforcement");
+                log("WARNING", "LuaSandbox: " + MAP_RESOURCE + " not found on classpath - no sandbox enforcement");
                 return;
             }
 
@@ -85,11 +93,11 @@ public class LuaSandbox {
             // Parse JSON with custom parser (no GSON dependency)
             parseJsonMap(json);
 
-            LOG.info("LuaSandbox initialized with " + CLASS_METHODS.size() + " classes");
+            log("INFO", "LuaSandbox initialized with " + CLASS_METHODS.size() + " classes");
             initialized = true;
 
         } catch (Exception e) {
-            LOG.severe("LuaSandbox: Failed to load " + MAP_RESOURCE + ": " + e.getMessage());
+            log("SEVERE", "LuaSandbox: Failed to load " + MAP_RESOURCE + ": " + e.getMessage());
         }
     }
 
@@ -333,7 +341,7 @@ public class LuaSandbox {
         if (!canAccessClass(className)) {
             String key = "class:" + className;
             if (LOGGED_WARNINGS.add(key)) { // Only log if not seen before
-                LOG.warning("LuaSandbox: Mod attempted to access unregistered class '" + className
+                log("WARNING", "LuaSandbox: Mod attempted to access unregistered class '" + className
                     + "' (not annotated with @LuaInterface)");
             }
             return;
@@ -354,7 +362,7 @@ public class LuaSandbox {
         if (!allowed) {
             String key = memberType + ":" + className + ":" + member;
             if (LOGGED_WARNINGS.add(key)) { // Only log if not seen before
-                LOG.warning("LuaSandbox: Mod attempted to access " + memberType + " '" + member
+                log("WARNING", "LuaSandbox: Mod attempted to access " + memberType + " '" + member
                     + "' on class '" + className + "' which is not exposed via @LuaInterface");
             }
         }
