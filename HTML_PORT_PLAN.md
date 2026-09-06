@@ -4,6 +4,42 @@ Branch: `html-port-runnable` (work in progress, see git log)
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
+## Current state (as of 2026-09-06, session 6)
+
+- **Debug entrypoints**: `?ep=newgame[&hero=WARRIOR&difficulty=2]` boots
+  straight into a fresh dungeon (title still builds first, intro skipped).
+  GameScene reached and rendered; verified against desktop via its
+  `/debug/screenshot` endpoint.
+- **The "stuck story window / frozen loop" family is fixed** (three stacked
+  causes): (1) TeaApplication pauses on visibilitychange-hidden and the
+  matching resume was missed after occlusion → permanent pause; html
+  Game.render now self-heals when the document is visible again. (2) The rAF
+  shim armed a 250ms timer per frame unconditionally → Chromium timer-budget
+  throttling froze visible pages; fallbacks now arm only while rAF looks
+  dead, and a web-worker ticker (worker timers survive occlusion) fires
+  frames pending >600ms. (3) DebugEntryPoints originally reposted itself via
+  pushUiTask *inside the uiTask drain* → infinite drain spin; reposts go
+  through Gdx.app.postRunnable (copied-then-drained per step).
+- **Browser telemetry** (read via console/evaluate): `window.__gameState`
+  (scene name, frame heartbeat, renderDone), `__rafShimStats`
+  (viaRaf/viaFallback/viaWorker/err), `__workerTicks`, `__epPoll`,
+  `__kickLoop()` (re-invokes the last frame callback), `__lastSuspendStack`
+  ($rt_suspending tracer), `__suspends` (TeaVMThread tracer). The canvas
+  capture (`__frameData`) now lives in the shim itself.
+- **GameScene defect review vs desktop**: black void right of the town map
+  also exists on desktop — NOT a bug. Toolbar-top vs html toolbar-bottom is
+  branch age (html branch is 32.3.alpha code, which anchors the toolbar
+  bottom; desktop master moved it up) — NOT a bug. REAL defect: StatusPane
+  top-bar renders wrong texture regions on web (glyph-atlas rows around the
+  portrait, pink menu button, missing mana bar) — bd snap-4o4.
+- **Desktop debug server recipe**: `-Pargs` does NOT propagate to
+  runDesktopGameWithWebServer (game boots fullscreen, no server). Launch
+  java directly from `RemixedDungeonDesktop/src/desktop/rundir` with the
+  runtime classpath (see bd snap-fqj notes) plus `--windowed
+  --webserver=8090`, then `curl /debug/start_game?class=WARRIOR&difficulty=2`
+  and `/debug/screenshot`. System.out.println is INVISIBLE on web — use
+  PUtil.slog (gdx Logger → console.error) for web-visible markers.
+
 ## Current state (as of 2026-09-06, session 5)
 
 - **THE GAME IS PLAYABLE END TO END**: boot → title → hero select →
