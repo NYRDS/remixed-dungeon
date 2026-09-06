@@ -4,6 +4,58 @@ Branch: `html-port-runnable` (work in progress, see git log)
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
+## Current state (as of 2026-09-06, session 5)
+
+- **THE GAME IS PLAYABLE END TO END**: boot → title → hero select →
+  difficulty → intro → dungeon generation → GameScene renders (tilemap, hero,
+  mobs, UI) and click-to-move works. Verified live in the browser with canvas
+  captures.
+- Blocked-to-playable fixes this session (in discovery order):
+  1. **TeaInput click coordinates** (gdx-teavm 1.3.0 bug): the
+     `getSubPixelAbsoluteLeft/Top` offset walk advances the wrong variable,
+     dropping the parent-element offset (our centered #game-container), so
+     every click landed shifted by (240,20) and hit the wrong button.
+     make_webapp.py rewrites the 4 `getRelativeX/Y` fns to use
+     `getBoundingClientRect()` (scroll-correct, keeps CSS-scale ratio).
+  2. **`ReportingExecutor.submit()` returned null** (html stub; TeaVM has no
+     ThreadPoolExecutor/ExecutorService/FutureTask) → `GameLoop.stepExecute`
+     future was null → InterlevelScene crashed on `levelChanger.isDone()`.
+     Fixed with `SimpleFuture` (shared, TeaVM-safe: TeaVM's TFuture has no
+     TimeoutException) + real submit() in the html executor.
+  3. **Room.Type painter `getMethod("paint")` threw NoSuchMethodException**
+     (TeaVM exposes reflective methods only for reflection-scope classes;
+     painters aren't in it) → level gen died → "GameScene when level is nil".
+     Replaced reflection with direct `Painter::paint` method refs (shared
+     code, desktop-identical).
+  4. **`Char.getHeroClass`/`HeroClass.getEntityKind` lacked @LuaInterface** —
+     desktop luajava reflects any public method, TeaVM luajava only exposes
+     annotated ones → `PlagueDoctor.lua:211 attempt to call a nil value`
+     killed GameScene.create via GameLoop's LuaError→ModError rethrow.
+- Diagnostics added (keep, cheap): `__reflFail` wrapper logs failed
+  getMethod/getDeclaredConstructor/newInstance lookups with class+member;
+  LevelChanger and GameLoop scene-switch now report exceptions via
+  EventCollector (Java stack traces are empty on TeaVM — this is the only
+  attribution path).
+- **Occlusion shim**: rAF never fires in an occluded pane and TeaApplication
+  never schedules frames again until visibility returns; index.html (via
+  make_webapp.py) drives rAF callbacks from timers when
+  `document.visibilityState === 'hidden'` (~0.25x game speed, stats in
+  `__rafShimStats`). Visible mode untouched.
+- Known cosmetic issues: top-left UI strip draws font-atlas glyph rows
+  (wrong texture region in some top-bar element), right side of town level
+  renders black beyond the map bounds (level 0 town is small; check whether
+  desktop shows void the same way).
+
+## Debug tooling added (session 5)
+
+- In-page capture wrapper (install after boot): wraps rAF, stores
+  `window.__frameData` via toDataURL after each frame.
+- Click geometry: canvas css offset (fresh `getBoundingClientRect()` per
+  session) + css→cua scale (probe with a click + mousedown listener; was
+  1.3315 then 4/3 across pane resizes). gameX = clientX - rect.left.
+- `window.__reflFail`, `window.__rafShimStats`, `__jsErrLog` (50-entry ring),
+  `__errors` (console.error capture; ~350 entries per boot is the baseline).
+
 ## Current state (as of 2026-09-06, session 4)
 
 - **TEXT RENDERS** — the session-3 blocker is gone. Title button labels,
@@ -172,6 +224,13 @@ solving anything hard ourselves:
   adopted; see session 4). Still worth mining for file-handling patterns.
 - Save/reload logic reworked for browser lifecycle (pagehide/visibility) —
   relevant for our HtmlPreferences/localStorage work.
+
+**github.com/ArcaneCircle/pixel-dungeon** ("Arcane Dungeon") — secondary
+reference: classic Watabou Pixel Dungeon as a Webxdc app. NOT TeaVM — it's a
+GWT (Java→JS) port with vite/pnpm tooling, shipped as a .xdc for Delta Chat
+rather than a hosted site. Still worth mining for GWT-era solutions to the
+same problems (canvas input mapping, asset packaging, saves in
+localStorage). GPL-3.0 like upstream.
 
 ## How to debug this port (hard-won notes)
 

@@ -12,6 +12,7 @@ After it, run serve.py --dir build/webapp and open http://localhost:8081
 """
 import argparse
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -53,6 +54,8 @@ def patch_teavm_js(js_text: str) -> str:
         js_text = js_text.replace(LONG_FROM_NUMBER_SRC, LONG_FROM_NUMBER_DST)
     else:
         print("warning: Long_fromNumber pattern not found - runtime patch skipped")
+    js_text = patch_tea_input_coords(js_text)
+    js_text = patch_reflection_failure_log(js_text)
     # keep a ring buffer of JS errors crossing into Java, with real JS stacks
     # (TeaVM's getStackTrace is always empty, so this is the only way to see
     # where a (JavaScript) TypeError actually came from)
@@ -70,6 +73,88 @@ def patch_teavm_js(js_text: str) -> str:
         js_text = js_text.replace(wrap_src, wrap_dst)
     else:
         print("warning: $rt_wrapException pattern not found - error log hook skipped")
+    return js_text
+
+
+# Java-side exceptions on TeaVM carry no stack frames, so a bare
+# NoSuchMethodException (e.g. from a failed getMethod/getDeclaredConstructor
+# during level generation) is otherwise unattributable. Wrap TeaVM's
+# reflective lookup entry points to record which class/member failed.
+REFL_HOOK_ANCHOR = "$rt_exports.main = $rt_export_main;"
+REFL_HOOK_CODE = """{
+const __reflWrap = (orig, label, withName) => (...a) => {
+    try { return orig(...a); } catch (e) {
+        try {
+            let m = label + "(" + $rt_ustr(jl_Class_getName(a[0]));
+            if (withName && typeof a[1] === "object" && a[1] !== null) m += ", " + $rt_ustr(a[1]);
+            m += ") -> " + e;
+            (window.__reflFail = window.__reflFail || []).push(m);
+        } catch (e2) {}
+        throw e;
+    }
+};
+const __reflWrapIf = (name, label, withName) => {
+    // some of these are dead-code-eliminated by TeaVM; ReferenceError means skip
+    try {
+        const cur = eval(name);
+        if (typeof cur === "function") eval(name + " = __reflWrap(cur, label, withName)");
+    } catch (e) {}
+};
+__reflWrapIf("jl_Class_getMethod", "getMethod", true);
+__reflWrapIf("jl_Class_getDeclaredMethod", "getDeclaredMethod", true);
+__reflWrapIf("jl_Class_getConstructor", "getConstructor", false);
+__reflWrapIf("jl_Class_getDeclaredConstructor", "getDeclaredConstructor", false);
+__reflWrapIf("jl_Class_newInstance", "newInstance", false);
+}
+"""
+
+
+def patch_reflection_failure_log(js_text: str) -> str:
+    if REFL_HOOK_ANCHOR not in js_text:
+        print("warning: reflection hook anchor not found - no reflective failure logging")
+        return js_text
+    js_text = js_text.replace(REFL_HOOK_ANCHOR, REFL_HOOK_CODE + REFL_HOOK_ANCHOR, 1)
+    print("reflection failure logging installed (5 entry points wrapped)")
+    return js_text
+
+
+# xpenatan gdx-teavm 1.3.0 TeaInput.getSubPixelAbsoluteLeft/Top advances its
+# second loop with the wrong local (elem = curr.getOffsetParent() instead of
+# elem.getOffsetParent()), so any canvas offset coming from a parent element
+# (e.g. our centered #game-container) is dropped and every click lands
+# shifted by that offset. Replace the clientXY -> canvasXY conversion with
+# getBoundingClientRect(), which is viewport-relative (ancestor scroll
+# already included) and pairs directly with clientX/clientY; keep the
+# canvas-pixel / CSS-client ratio so CSS scaling still maps correctly.
+TEA_INPUT_COORD_FUNCS = {
+    # generated fn name: (event param, client prop, rect prop, canvas size prop, client size fn)
+    "getRelativeX0": ("$e", "clientX", "left", "width", "getClientWidth"),
+    "getRelativeY0": ("$e", "clientY", "top", "height", "getClientHeight"),
+    "getRelativeX": ("$touch", "clientX", "left", "width", "getClientWidth"),
+    "getRelativeY": ("$touch", "clientY", "top", "height", "getClientHeight"),
+}
+
+
+def patch_tea_input_coords(js_text: str) -> str:
+    patched = 0
+    for fn, (ev, client, rect, size, dim_fn) in TEA_INPUT_COORD_FUNCS.items():
+        pattern = re.compile(
+            r"([\w$]+)_TeaInput_" + fn
+            + r" = \(\$this, " + re.escape(ev) + r", \$target\) => \{\n"
+            r"    return [^\n]*\n\},")
+        def repl(m, fn=fn, ev=ev, client=client, rect=rect, size=size, dim_fn=dim_fn):
+            p = m.group(1)
+            return (f"{p}_TeaInput_{fn} = ($this, {ev}, $target) => {{\n"
+                    f"    return jl_Math_round($target.{size} * 1.0"
+                    f" / {p}_TeaInput_{dim_fn}($this, $target)"
+                    f" * ({ev}.{client} - $target.getBoundingClientRect().{rect}));\n}},")
+        js_text, n = pattern.subn(repl, js_text)
+        patched += n
+    if patched < len(TEA_INPUT_COORD_FUNCS):
+        print(f"warning: TeaInput coord patch applied to {patched}/"
+              f"{len(TEA_INPUT_COORD_FUNCS)} functions")
+    else:
+        print("TeaInput coord patch: 4 functions rewritten (getBoundingClientRect)")
     return js_text
 
 
@@ -91,6 +176,36 @@ INDEX_HTML = """<!DOCTYPE html>
 </head>
 <body>
     <script>
+        // rAF never fires in an occluded pane/tab, which stalls the whole game.
+        // When hidden, drive the TeaApplication frame callback from timers
+        // instead (throttled to ~1/s by the browser; GameLoop clamps dt to
+        // 250ms, so game time advances at ~0.25x). Visible mode is untouched.
+        (function() {
+            var origRAF = window.requestAnimationFrame.bind(window);
+            var synthT = 0;
+            window.__rafShimStats = { sched: 0, fired: 0, err: 0 };
+            window.requestAnimationFrame = function(cb) {
+                if (document.visibilityState !== 'hidden') return origRAF(cb);
+                window.__rafShimStats.sched++;
+                setTimeout(function() {
+                    window.__rafShimStats.fired++;
+                    if (document.visibilityState !== 'hidden') { origRAF(cb); return; }
+                    synthT += 250;
+                    try {
+                        cb(synthT);
+                    } catch (e) {
+                        window.__rafShimStats.err++;
+                        window.__errors.push('shim cb error: ' + e);
+                        return;
+                    }
+                    try {
+                        window.__frameData =
+                            document.getElementById('canvas').toDataURL('image/png');
+                    } catch (e) {}
+                }, 30);
+                return 0;
+            };
+        })();
         // boot error capture - must run before teavm-app.js
         window.__errors = [];
         window.__logs = [];

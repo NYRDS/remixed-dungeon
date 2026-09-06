@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.DoctorArmor;
@@ -469,6 +470,7 @@ public enum HeroClass implements CharModifier, NamedEntityKind {
     }
 
     @Override
+    @LuaInterface
     public String getEntityKind() {
         return name();
     }

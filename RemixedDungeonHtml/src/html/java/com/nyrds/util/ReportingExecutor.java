@@ -29,6 +29,16 @@ public class ReportingExecutor {
     }
 
     public Future<?> submit(Runnable task) {
-        return null;
+        SimpleFuture<Void> future = new SimpleFuture<>(task, null);
+        execute(future);
+        Throwable error = future.getError();
+        if (error != null) {
+            if (error instanceof Exception) {
+                EventCollector.logException((Exception) error, this.toString());
+            } else {
+                EventCollector.logException(error.toString());
+            }
+        }
+        return future;
     }
 }

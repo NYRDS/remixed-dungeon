@@ -255,6 +255,7 @@ public class GameLoop {
                             return;
                         }
                     } catch (LuaError e) {
+                        EventCollector.logException(e, "GameLoop scene switch lua error: " + e.getMessage());
                         throw ModdingMode.modException(e);
                     } catch (Exception e) {
                         throw new TrackedRuntimeException(e);
