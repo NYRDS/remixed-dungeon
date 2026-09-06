@@ -86,6 +86,7 @@
     <string name="Badges_ItemLvl4">Đã đạt được vật phẩm cấp 12</string>
     <string name="Badges_ItemLvl5">Đã có vật phẩm cấp 15</string>
     <string name="Badges_LevelReached1">Đã đạt cấp độ 6</string>
+    <string name="Badges_LevelReached3">Đã đạt cấp 18</string>
     <string name="Badges_LevelReached4">Đạt cấp 24</string>
     <string name="Badges_LevelReached5">Đã đạt cấp 30</string>
     <string name="Badges_Lich_Slain">Đã hạ Lich</string>
@@ -100,6 +101,7 @@
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
     <string name="Badges_ShadowLord_Slain">Chúa Tể Bóng Tối đã bị tiêu diệt</string>
     <string name="Badges_StrengthAttained1">Đạt 13 điểm Sức mạnh</string>
+    <string name="Badges_ThisIsSparta">Đây là Sparta!!!</string>
     <string name="Badges_VictoryAll">Bùa Yendor thu được bởi tất cả các lớp nhân vật</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa đã bị tiêu diệt</string>
     <string name="Bandit_Gender">masculine</string>
@@ -202,6 +204,7 @@
     <string name="Caves_TileHighGrass">Nấm phát sáng</string>
     <string name="Caves_TileWater">Nước lạnh buốt.</string>
     <string name="Challenges_Descriptions_1">Tấn công là phòng thủ tốt nhất. Theo những lời dạy này, bạn đi vào hầm ngục, với đức tin là người bảo vệ mạnh mẽ nhất cho cơ thể bạn.</string>
+    <string name="Challenges_Descriptions_2">Là một tín徒 của sự hồi phục tự nhiên của cơ thể bình thường, bạn luôn cảnh giác với những loại thuốc có tác dụng chữa bệnh. Thà phòng còn hơn chữa!</string>
     <string name="Challenges_Descriptions_3">Vùng đất xung quanh hầm ngục đã lâu bị ác ý xâm nhiễm, ngăn cản sự nảy mầm của hạt giống cho các loại thảo mộc và thực vật. Ai biết được còn bao lâu nữa cây cối cuối cùng sẽ ngừng tồn tại trên vùng đất hoang tàn này.</string>
     <string name="Challenges_Descriptions_4">Một hiện diện tà ác đang ẩn nấp trong tâm trí của tất cả sinh vật trong hầm ngục, khiến chúng nhận thức được những sự kiện xảy ra với nhau.</string>
     <string name="Challenges_Names_1">Niềm tin là giáp trụ của tôi</string>
@@ -1448,6 +1451,9 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

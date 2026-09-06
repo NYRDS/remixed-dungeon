@@ -279,6 +279,7 @@
     <string name="CityBossLevel_ChessSign">Leg je wapens neer — de Koning zal je verstand op de proef stellen, niet je kracht.</string>
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="City_TileDescDeco">Er missen hier verschillende tegels.</string>
+    <string name="ClassArmor_Desc">Het ding ziet er geweldig uit!</string>
     <string name="ClassArmor_NotEquipped">Je moet dit pantser dragen om zijn speciale kracht te gebruiken!</string>
     <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Dit massieve zwaard zou in staat moeten zijn om door alles heen te snijden.</string>
@@ -432,6 +433,7 @@
     <string name="GasImmuneBuff_Name">Gasimmuniteit</string>
     <string name="Ghost_Defense">ontweek</string>
     <string name="Ghost_Desc">De geest is nauwelijks zichtbaar. Het lijkt op een vormloze vlek van zwak licht met een droevig gezicht.</string>
+    <string name="Ghost_Rat1">Hallo avonturier... Ik was ooit als jij - sterk en vol vertrouwen... En nu ben ik dood... Maar ik kan deze plek niet verlaten... Niet voordat ik mijn wraak heb... Dood de _stinkende rat_, die mijn leven heeft genomen...</string>
     <string name="Ghost_Rose1">Hallo avonturier... Eens was ik als jij - sterk en zelfverzekerd... En nu ben ik dood... Maar ik kan deze plek niet verlaten... Niet voordat ik mijn _gedroogde roos_ terugheb... Het is heel belangrijk voor me... Sommige monsters hebben het van mijn lichaam gestolen...</string>
     <string name="Ghost_Rose2">Alsjeblieft... Help me... Vind de roos...</string>
     <string name="Glaive_Gender">feminine</string>
@@ -961,6 +963,7 @@
     <string name="Scroll_Runes_5">RAIDO</string>
     <string name="Scroll_Runes_7">MANNAZ</string>
     <string name="Scroll_Runes_9">BERKANAN</string>
+    <string name="SeedPouch_Info">Deze kleine fluweelzakje stelt je in staat om elk aantal zaden in op te slaan. Erg handig.</string>
     <string name="SeedPouch_Name">zaadzakje</string>
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name_Objective">seniore monnik</string>
@@ -1499,6 +1502,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
