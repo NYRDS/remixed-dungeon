@@ -4,6 +4,28 @@ Branch: `html-port-runnable` (work in progress, see git log)
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
+## Current state (as of 2026-09-08, session 10)
+
+- **Isometric tile-variant re-roll FIXED** (Mike report: "after each hero
+  action floor & walls tiles re-roll visual variant"): TeaVM classlib's
+  `TRandom` had `setSeed()` as a NO-OP and drew every value from
+  `Math.random()` — so `SeededRandom.oneOf(cell, tiles)` (which reseeds
+  per cell and should be deterministic) returned a fresh pick on every
+  call. Every hero action fires `Level.observe()` → `GameScene.updateMap()`
+  → `updateAll()` → full tilemap rebuild → all visible isometric
+  floor/wall/deco/roof variants re-rolled. Fix: TRandom now implements the
+  JVM 48-bit LCG exactly (teavm submodule commit 80df5d1bc, pushed to
+  nyrdsteavm/remixed-patches; classlib republished to mavenLocal). Bonus:
+  `new Random(seed)` (TransmutationCircle) is now reproducible on web.
+  GOTCHA: make_webapp.py does NOT rebuild teavm JS by default even without
+  --skip-build — it reuses build/generated/teavm/js/teavm-app.js; after a
+  classlib republish, delete the generated file first AND check the served
+  JS picked the change (grep a new symbol — long constants are emitted as
+  `Long_create(lo, hi)` pairs, decimal grep misses them).
+  Verified: `scripts/stuff/htmlport/tile_reroll.js` — per-16px-block frame
+  diffs around hero actions: idle 1.3% / walk (fog reveal) ~17% / second
+  walk 1.8%; pre-fix was map-wide ~79% re-roll.
+
 ## Current state (as of 2026-09-07, session 9)
 
 - **SAVES WORK** (bd snap-01u closed): game files, level files, library,
