@@ -82,12 +82,16 @@ public class MaskedTilemapScript extends Script {
         maskBuffer   = GlBuffers.upload( maskBuffer,   Gdx.gl20.GL_ARRAY_BUFFER, mask,     4, true );
         indexBuffer  = GlBuffers.upload( indexBuffer,  Gdx.gl20.GL_ELEMENT_ARRAY_BUFFER, Quad.getIndices( size ), 2, false );
 
+        // each attribute pointer captures the ARRAY_BUFFER bound at call time,
+        // so rebind the right buffer before pointing into it
+        Gdx.gl20.glBindBuffer( Gdx.gl20.GL_ARRAY_BUFFER, vertexBuffer );
         vertices.position(0);
         aXY.vertexPointer(2, 4, 0);
 
         vertices.position(2);
         aUV.vertexPointer(2, 4, 8);
 
+        Gdx.gl20.glBindBuffer( Gdx.gl20.GL_ARRAY_BUFFER, maskBuffer );
         mask.position(0);
         aUV_mask.vertexPointer(2, 2, 0);
 

@@ -4,6 +4,37 @@ Branch: `html-port-runnable` (work in progress, see git log)
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
+## Current state (as of 2026-09-07, session 7)
+
+- **StatusPane defect (bd snap-4o4) CLOSED** — three stacked web-only causes:
+  1. **BitmapText glyph rows**: html `BitmapData.isEmptyPixel` was a stub
+     returning `false`; `Font.splitByAlpha` collapsed every glyph rect into a
+     full-atlas row, so every BitmapText drew whole-atlas quads. Fixed with
+     the desktop alpha check `(getPixel(x,y) & 0xff) == 0`.
+  2. **Town roof garbage**: html `MaskedTilemapScript.drawQuadSet` uploaded
+     the mask VBO after the vertex VBO, so `aXY`/`aUV` pointers captured the
+     MASK buffer (WebGL attribute pointers snapshot the bound ARRAY_BUFFER).
+     Fixed with explicit rebinds before each vertexPointer. NoosaScript was
+     unaffected (single ARRAY buffer).
+  3. **Roof fully invisible**: html `BitmapData.makeCircleMask` was an empty
+     stub → CircleMask texture all-transparent → masked roof pass multiplied
+     by alpha 0. Implemented the desktop concentric-circle fill (outer
+     a=0xf7, middle 0x77, inner 0) with per-pixel drawPixel rows (gdx
+     Pixmap.drawLine has a different signature on the TeaVM emu).
+  Verified headless (swiftshader puppeteer) vs desktop /debug/screenshot:
+  status pane text/bars and town roofs now match. "Pink menu button" was
+  misattributed (hats button looks like that on desktop too); "missing mana
+  bar" was occlusion by the glyph garbage.
+- Headless verification harness: `scripts/stuff/htmlport/{shot_town,walk_town,verify_roof}.js`
+  (puppeteer + `--use-gl=swiftshader`, boot wait on `window.__gameState`,
+  frames via `window.__frameData`). In-app browser pane failed to attach this
+  session ("guest not attached") — headless is the fallback.
+- Debug-only leftover (NOT in build): temp GL hooks were injected into
+  build/webapp/{index.html,teavm-app.js} during the hunt for a 1px dark line
+  at a tile-row boundary on the town map — web-only, terrain-group draw,
+  occluded by trees; Mike deprioritized it. All probe patches are wiped by
+  re-running make_webapp.py (they lived only in build/webapp).
+
 ## Current state (as of 2026-09-06, session 6)
 
 - **Debug entrypoints**: `?ep=newgame[&hero=WARRIOR&difficulty=2]` boots

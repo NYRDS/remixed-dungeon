@@ -55,8 +55,17 @@ public class BitmapData {
     }
     
     public boolean isEmptyPixel(int x, int y) {
-        // Simple implementation for HTML version
-        return false;
+        // alpha byte of the RGBA8888 pixel, matches the desktop Gdx2DPixmap check
+        return (getPixel(x, y) & 0xff) == 0;
+    }
+
+    // ARGB (0xAARRGGBB) -> RGBA8888 packed, same as the desktop helper
+    private static int color(int color) {
+        int a = (color >> 24) & 0xFF;
+        int r = (color >> 16) & 0xFF;
+        int g = (color >> 8) & 0xFF;
+        int b = color & 0xFF;
+        return (r << 24) | (g << 16) | (b << 8) | a;
     }
     
     public void eraseColor(int color) {
@@ -93,7 +102,29 @@ public class BitmapData {
     }
     
     public void makeCircleMask(int radius, int c1, int c2, int c3) {
-        // Simple implementation for HTML version
+        if (pixmap == null) {
+            return;
+        }
+        // desktop Gdx2d semantics: opaque fill, concentric circles painted
+        // outer->inner, later fills overwrite earlier ones
+        pixmap.setColor(color(0xffffffff));
+        pixmap.fill();
+
+        int centerX = radius;
+        int centerY = radius;
+        fillCircle(centerX, centerY, radius, c3);
+        fillCircle(centerX, centerY, (int) (0.75f * radius), c2);
+        fillCircle(centerX, centerY, (int) (0.5f * radius), c1);
+    }
+
+    private void fillCircle(int cx, int cy, int r, int argbColor) {
+        int rgba = color(argbColor);
+        for (int dy = -r; dy <= r; dy++) {
+            int span = (int) Math.floor(Math.sqrt((double) r * r - (double) dy * dy));
+            for (int x = cx - span; x <= cx + span; x++) {
+                pixmap.drawPixel(x, cy + dy, rgba);
+            }
+        }
     }
     
     public void makeHalo(int radius, int c1, int c2) {
