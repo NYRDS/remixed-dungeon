@@ -162,6 +162,7 @@
     <string name="BlessedBuff_Info">Cầu mong sự chính xác và né tránh sẽ đến với những ai được chúc phước!</string>
     <string name="BlessedBuff_Name">Được Chúc Phước</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
+    <string name="BodyArmorBuff_Info">Giáp được tăng nhưng phải hy sinh tốc độ di chuyển.</string>
     <string name="BodyArmorBuff_Name">Giáp Cơ Thể</string>
     <string name="BodyArmorSpell_Info">Kích hoạt sức mạnh cơ bắp dự trữ, làm cho chúng tạm thời mạnh hơn, từ đó tăng đáng kể giáp của bạn nhưng đánh đổi tốc độ di chuyển.</string>
     <string name="BoneSaw_Info">Một cái cạo phẫu thuật được thiết kế chính xác để thâm nhiễm nhanh chóng. Sát thương và tốc độ tấn công của nó trở nên nguy hiểm hơn cùng với kỹ năng của Bác sĩ Chết Chóc. Các đòn chí mạng cắt thêm các phần có thể thu hoạch từ kẻ thù, và nó tấn công với hiệu quả tàn nhẫn đối với kẻ thù bị tê liệt.</string>
@@ -368,6 +369,7 @@
     <string name="Drunkard_Phrase_3">Cái bia này có vị như đất</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_NoTips">Chữ viết không thể đọc được...</string>
+    <string name="Dungeon_Tips_12">Nếu bạn đang cháy và đang bay, bạn không thể dập lửa trong nước.</string>
     <string name="Dungeon_Tips_14">NGUY HIỂM! Máy móc nặng có thể gây thương tích, mất chi hoặc tử vong!</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
     <string name="Dungeon_Tips_17">Giếng Chuyển Hóa có thể ban cho bạn một vật phẩm không thể có được bằng cách khác.</string>
@@ -747,6 +749,7 @@
     <string name="NecrotismBuff_Info">Dấu ấn của chính cái chết, mùi hôi từ đó ảnh hưởng đến những người gần đó và khiến họ chia sẻ chung một định mệnh.</string>
     <string name="NecrotismBuff_Name">Hoại tử</string>
     <string name="NeutralKing_Hostile">Nhà Vua quay lại tấn công bạn!</string>
+    <string name="Nightmare_Desc">Một sinh vật quái dị trông giống như một bó xúc tu làm bằng thịt. Ác mộng là hiện thân của những suy nghĩ đen tối của Thần Cổ Đại.</string>
     <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">ác mộng</string>
     <string name="Ooze_Death">%s nuốt chửng bạn...</string>
@@ -844,6 +847,7 @@
     <string name="Potion_RuneDissaperaed">Chữ ký biến mất khỏi %s.</string>
     <string name="Potion_SureDrink">Bạn có chắc chắn muốn uống nó không? Trong hầu hết các trường hợp, bạn nên ném loại thuốc này vào kẻ thù của mình.</string>
     <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
+    <string name="Potion_Yes">Vâng, tôi biết tôi đang làm gì</string>
     <string name="Prison_TileDescBookshelf">Đây có lẽ là dấu tích của một thư viện nhà tù. Liệu nó có cháy không?</string>
     <string name="PseudoPasty_Info">Đây là chiếc bánh nhân Cornwall chính hiệu với nhân truyền thống là thịt bò và khoai tây.</string>
     <string name="PseudoPasty_Name">bánh nhúng</string>
@@ -877,6 +881,7 @@
     <string name="RegenerationBuff_Info">Chức năng hồi phục tự nhiên được thể hiện dưới dạng buff để làm cho mọi thứ dễ dàng hơn.</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Trò chơi của chúng tôi đã bị lỗi...\n Xin lỗi.\nVui lòng gửi báo cáo lỗi để giúp chúng tôi khắc phục.</string>
     <string name="ResultDescriptions_Burning">Bị thiêu rụi trên cấp độ %d</string>
+    <string name="ResultDescriptions_Gas">Chết vì khí độc ở tầng %d</string>
     <string name="ResultDescriptions_Immured">Bị vùi kín trong đá ở tầng %d</string>
     <string name="ResultDescriptions_Mob">Bị giết bởi %1$s ở tầng %2$d</string>
     <string name="ResultDescriptions_Necromancy">Hết sức lực khi cố gắng hồi sinh xác ở tầng %d</string>
@@ -900,6 +905,7 @@
     <string name="Ring_Gems_1">opal</string>
     <string name="Ring_Gems_10">thạch anh</string>
     <string name="Ring_Gems_11">mã não</string>
+    <string name="Ring_Gems_2">garnet</string>
     <string name="Ring_Gems_7">tourmalin</string>
     <string name="Ring_Gems_9">lam ngọc</string>
     <string name="Ring_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
@@ -924,6 +930,7 @@
     <string name="RottingFist_Name_Objective">nắm đấm thối rữa</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyCrossbow_Gender">masculine</string>
+    <string name="Rudolph_Info">Có gì lễ hội hơn một chiếc mũi đỏ phát sáng? Cùng với một đôi gạc nai, tất nhiên.</string>
     <string name="Rudolph_Name">Mũi đỏ và sừng hươu</string>
     <string name="RunicSkull_Desc">Đối với thứ gì đó được tạo ra nhân tạo, chiếc sọ này quá giống một chiếc sọ thật. Bạn cũng có thể thấy một chút ánh sáng yếu ớt bao quanh nó.</string>
     <string name="RunicSkull_Gender">masculine</string>
@@ -1012,6 +1019,7 @@
     <string name="Shielded_Desc">Quái vật lớn nhất, mạnh nhất và kiên cường nhất trong số tất cả các gnoll. Khi bị thương nặng, chúng sẽ điên cuồng, gây thiệt hại lớn hơn cho kẻ thù. Quái vật này đang khiêng một khiên khổng lồ!</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">côn đồ khiên thủ</string>
+    <string name="Shopkeeper_Buy">Chọn vật phẩm để mua</string>
     <string name="Shopkeeper_BuyPrompt">Để tôi xem hàng hóa của bạn</string>
     <string name="Shopkeeper_Desc">Người đàn ông này trông giống như một thương nhân ở khu thương mại thành phố lớn hơn là ở hang động. Giá cả của anh ấy giải thích vì sao anh ấy thích làm ăn ở đây.</string>
     <string name="Shopkeeper_Name">Người bán hàng</string>
@@ -1089,6 +1097,7 @@
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
     <string name="StartScene_UnlockGnoll">Để mở khóa lớp này, bạn phải thuyết phục linh mục làng chữa lành cho Gnoll Brute</string>
     <string name="StartScene_UnlockNecromancer">Để mở khóa lớp nhân vật này, hãy tiêu diệt Lich bằng bất kỳ lớp nào khác.</string>
+    <string name="StartScene_WinGame">Để mở khóa \&quot;Thử thách\&quot;, hãy thắng trò chơi với bất kỳ lớp nhân vật nào.</string>
     <string name="StartScene_Yes">Có, bắt đầu trò chơi mới</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">tượng sống</string>
@@ -1218,6 +1227,12 @@
     <string name="Weightstone_WndChoice">Bạn muốn cân bằng %s như thế nào?</string>
     <string name="Weightstone_WndSpeed">Tốc độ</string>
     <string name="Welcome_Ok">Được thôi!</string>
+    <string name="Welcome_Text_31_0">remix.31.0
+- Lối chơi:
+-- Chế độ Isometric tùy chọn!
+- Mod:
+-- Các đối tượng mức có thể mod
+- Đã sửa lỗi</string>
     <string name="Welcome_Title">Chào mừng!</string>
     <string name="WindGust_Info">Triệu hồi một cơn gió giật, đẩy nhân vật được chọn ra xa.</string>
     <string name="WizardHat_Name">Nón Phép Thuật</string>
@@ -1237,6 +1252,7 @@
     <string name="WndDonate_royalDonate">quyên góp hoàng gia</string>
     <string name="WndDonate_royalDonateText2">Ngoài ra, bạn sẽ nhận được mọi loại mũ từ cửa hàng trong ứng dụng! Cũng như mọi loại mũ sẽ được phát hành trong tương lai.</string>
     <string name="WndDonate_silverDonate">quyên góp bạc</string>
+    <string name="WndDonate_silverDonateText">Mọi khoản quyên góp đều sẽ giúp phát triển dự án</string>
     <string name="WndDontLikeAds_NotThisTime">Không phải lần này</string>
     <string name="WndFortuneTeller_IdentifyAll">Tất cả</string>
     <string name="WndFortuneTeller_No_Item">Cẩn thận, bạn chắc không muốn tiêu tiền oan, phải không? Trong túi đồ của bạn không có vật phẩm chưa định danh.</string>
@@ -1474,6 +1490,18 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -238,6 +238,7 @@
     <string name="Char_Hit_2">%1$s ضرب %2$s</string>
     <string name="Char_Kill_1">%s قتلك...</string>
     <string name="Char_OutParalysis">كسر الألم شلل %s</string>
+    <string name="Char_StaAmok">هائج</string>
     <string name="Char_StaBleeding">نزيف</string>
     <string name="Char_StaCrippled">معاق</string>
     <string name="Char_StaDodged_2">تجنبت</string>
@@ -331,6 +332,7 @@
     <string name="Drink_Message">هذا المشروب منعش!</string>
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">سكران</string>
+    <string name="Drunkard_Phrase_3">هذا الجعة طعمها زي التراب</string>
     <string name="Drunkard_Phrase_4">زززززز...</string>
     <string name="Dungeon_Tips_14">خطر! الآلات الثقيلة يمكن أن تسبب الإصابة، بتر الأطراف أو الموت!</string>
     <string name="Dungeon_Tips_16">عند ترقية سلاح مسحور، هناك احتمال لتدمير ذلك السحر.</string>
@@ -769,6 +771,7 @@
     <string name="RawFish_Name">سمك نيء</string>
     <string name="RegenerationBuff_Info">وظيفة التجدد الطبيعي موجودة في صيغة تأثير مؤقت لتسهيل الأمور.</string>
     <string name="RemixedPixelDungeonApp_sendCrash">لعبةنا تعطلت...\n عذراً.\nيرجى إرسال تقرير العطل لمساعدتنا في إصلاحه.</string>
+    <string name="ResultDescriptions_Gas">مات من غاز سام في المستوى %d</string>
     <string name="ResultDescriptions_Hunger">مات جوعاً في المستوى %d</string>
     <string name="ResultDescriptions_Immured">تم دفنك حيًا في الحجر على المستوى %d</string>
     <string name="ResultDescriptions_Necromancy">نضبت قواه الحيوية أثناء محاولة تحريك جثة في المستوى %d</string>
@@ -885,6 +888,7 @@
     <string name="Shielded_Name">الغريم المحمي بالدرع</string>
     <string name="Shielded_Name_Objective">الوحش المحمي</string>
     <string name="ShootInEye_Name">رمية في العين</string>
+    <string name="Shopkeeper_Buy">اختر عنصرًا لشرائه</string>
     <string name="Shopkeeper_Sell">اختر عنصرًا لبيعه</string>
     <string name="Shopkeeper_SellPrompt">لدي أشياء للبيع</string>
     <string name="ShortSword_ACReforge">إعادة الصياغة</string>
@@ -1027,6 +1031,7 @@
     <string name="WandOfDisintegration_Info">تُصدر هذه العصا شعاعاً من الطاقة المدمرة، يخترق جميع الكائنات في طريقه. كلما أصاب أهدافاً أكثر، زاد الضرر الذي يلحقه بكل منها.</string>
     <string name="WandOfDisintegration_Name">عصا التفكك</string>
     <string name="WandOfFirebolt_Info">هذه العصا تطلق موجات من النار السحرية. ستشعل التضاريس القابلة للاشتعال، وستلحق الضرر وتحرق الكائن الذي تصيبه.</string>
+    <string name="WandOfFirebolt_Info1">لقد أحرقت نفسك بعصا كرة النار الخاصة بك...</string>
     <string name="WandOfFlock_SheepBaa_2">باع.</string>
     <string name="WandOfFlock_SheepBaa_4">نحلة...</string>
     <string name="WandOfLightning_Name">عصا البرق</string>
@@ -1079,6 +1084,7 @@
     <string name="WndDonate_royal">ملكي</string>
     <string name="WndDonate_royalDonateText2">بالإضافة إلى ذلك، ستحصل على كل قبعة من متجر التطبيق! وكذلك كل قبعة سيتم إصدارها مستقبلاً.</string>
     <string name="WndDonate_silverDonate">تبرع فضي</string>
+    <string name="WndDonate_silverDonateText">أي تبرع سيساعد في تطوير المشروع</string>
     <string name="WndDonate_silverDonateText2">أيضًا تعطيل الإعلانات في جميع أنماط اللعب وفتح صياد منذ البداية.</string>
     <string name="WndDontLikeAds_NotThisTime">ليس هذه المرة</string>
     <string name="WndFortuneTeller_IdentifyAll">الكل</string>
@@ -1087,6 +1093,7 @@
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
     <string name="WndHats_BackButton">رجوع</string>
     <string name="WndHats_BuyButton">شراء</string>
+    <string name="WndHats_EquipButton">تجهيز</string>
     <string name="WndHats_ListTitle">قائمة الملحقات</string>
     <string name="WndHats_NoConnectionMsg">تعذر الاتصال بـ Google Play.</string>
     <string name="WndHats_Purchased">موجود!</string>
@@ -1129,6 +1136,7 @@
     <string name="WndResurrect_No">لا، أستسلم</string>
     <string name="WndSadGhost_Rat">نعم! لقد قُتل هذا المخلوق القبيح وأستطيع أخيراً أن أرتاح... من فضلك خذ أحد هذه العناصر، ربما ستكون مفيدة لك في رحلتك...</string>
     <string name="WndSadGhost_Wepon">سلاح الشبح</string>
+    <string name="WndSaveSlotSelect_Delete_No">لا</string>
     <string name="WndSaveSlotSelect_Delete_Title">هل أنت متأكد أنك تريد حذف هذا الحفظ؟</string>
     <string name="WndSettings_ActionButtonSize">حجم أزرار الإجراءات</string>
     <string name="WndSettings_ClassicFont">خط كلاسيكي</string>
@@ -1196,6 +1204,7 @@
     <string name="town_deco_armorstand_scale_name">درع حرشفي</string>
     <string name="town_deco_banner_desc">لافتة أنيقة تصور رموز هذه الحانة.</string>
     <string name="town_deco_barrel_wine_desc">يستخدم لتخزين مشروب ثمين مثل النبيذ.</string>
+    <string name="town_deco_beige_carpet_name">سجادة</string>
     <string name="town_deco_bell_desc">جرس كنيسة تقليدي. يبدو أن أحداً لم يقرعه منذ وقت طويل، وحتى الحبل مفقود.</string>
     <string name="town_deco_blue_carpet_desc">سجادة زرقاء فاخرة، مزينة بنقوش بنفسجية.</string>
     <string name="town_deco_blue_carpet_name">سجادة</string>
@@ -1276,6 +1285,15 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
+
+
+
+
 
 
 

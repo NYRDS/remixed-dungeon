@@ -137,6 +137,7 @@
     <string name="BloodTransfusion_FullHP">הדם שלך כבר במלוא הקיבולת.</string>
     <string name="BloodTransfusion_Info">מנקז כמעט את כל הדם ממטרה כדי לרפא את עצמך. טקס אפל של הקרבה והישרדות.</string>
     <string name="BloodTransfusion_Name">עירוי דם</string>
+    <string name="BodyArmorBuff_Info">השריון גדל על חשבון מהירות התנועה.</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Bounce_Txt">%s של הקפצה</string>
     <string name="Bow_Info1">זהו נשק טווח. הוא חסר תועלת לכולם מלבד אלפים בטווח קרוב מאוד. כשקשת מצוידת אפשר לירות חצים.\n\n</string>
@@ -159,6 +160,7 @@
     <string name="CagedKobold_Name_Objective">קובולד בכלוב</string>
     <string name="CagedKobold_Quest_End">אוי, תודה לך, תודה רבה! איך הצלחת למצוא את המפתח? אתה... אתה השמדת את הנשק?! זה מדהים! אתה יודע מה, אמרתי שאעזור לך, ואני חושב שאני יודע את הדרך הטובה ביותר. אני אשאר איתך לזמן מה. * הקובולד הכלוא הפך לנר</string>
     <string name="CandleOfMindVision_Info">נראה כמו נר רגיל, לא משהו שהיית מצפה למצוא בצינוק מסוכן. מוזר שזה די חם למגע, למרות שזה עדיין לא הודלק.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">הנר דלק וכבה, הוא כבר לא נדלק כשאתה מחזיק בו. נראה שלא תוכל להשתמש בו יותר.</string>
     <string name="CandleOfMindVision_Info_Lighted">הנר נדלק ברגע שהוצאת אותו מתרמילך. הלהבה פולטת אור סגול חלש, וכשאתה מביט דרכו, כל המפלצות הקרובות נראות לעיניך.</string>
     <string name="Candy_Info">הסוכרייה הזאת נראית כל כך יפה ומריחה גם טוב. אתה באמת צריך לתת אותה למישהו אחר?</string>
     <string name="Candy_Name">ממתק</string>
@@ -317,6 +319,7 @@
     <string name="Drink_Message">המשקה הזה היה מרענן!</string>
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="Drunkard_Phrase_2">מי צריך מים כשיש בירה!</string>
+    <string name="Drunkard_Phrase_3">הבירה הזאת טעמה כמו לכלוך</string>
     <string name="Drunkard_Phrase_4">זזזזזז...</string>
     <string name="Dungeon_Tips_13">אין טעם להחזיק יותר מאנק אחד בו זמנית, כי תאבדו אותם בתחיית המתים.</string>
     <string name="Dungeon_Tips_14">סכנה! מכונות כבדות עלולות לגרום לפציעה, אובדן גפיים או מוות!</string>
@@ -399,6 +402,7 @@
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gnoll_Desc">גנולים הם דמויי צבועים. הם שוכנים בביובים ובמבוכים, ויוצאים לפשוט על פני השטח מדי פעם. סיירי הגנולים הם חברים רגילים בלהקה, הם לא חזקים כמו בריונים ולא חכמים כמו שאמאנים.</string>
     <string name="Gnoll_Gender">masculine</string>
+    <string name="Gold_Info1">מטבע זהב אחד.</string>
     <string name="Gold_Name">זהב</string>
     <string name="GoldenKey_Info">החריצים במפתח הזהב הזעיר והמסובך. אולי הוא יכול לפתוח מנעול של תיבה כלשהי?</string>
     <string name="GoldenKey_Name">מפתח זהב</string>
@@ -662,6 +666,7 @@
     <string name="PalaceServants_Hostile">משרתי הארמון פונים נגדך!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Name">חץ משתק</string>
+    <string name="Paralysis_Name_0">הלם %s</string>
     <string name="Paralysis_Name_2">מהממת %s</string>
     <string name="Pasty_Info">זהו מאפה בשר קורנישי אותנטי עם מילוי מסורתי של בשר בקר ותפוחי אדמה.</string>
     <string name="Pasty_Name">מאפה בשר</string>
@@ -764,6 +769,7 @@
     <string name="RegenerationBuff_Info">הפונקציה לריפוי טבעי ממומשת בצורת באף כדי להקל על הדברים.</string>
     <string name="RemixedPixelDungeonApp_sendCrash">המשחק שלנו קרס...\n סליחה.\nאנא שלחו לנו דוח קריסה כדי לעזור לנו לתקן זאת.</string>
     <string name="ResultDescriptions_Boss">הובס על ידי ה-%1 ברמה %2</string>
+    <string name="ResultDescriptions_Gas">מת מגז רעיל בשלב %d</string>
     <string name="ResultDescriptions_Hunger">מת מרעב בקומה %d</string>
     <string name="ResultDescriptions_Poison">מת מרעל בקומה %d</string>
     <string name="ResultDescriptions_Trap">נהרג על ידי פריקת %1$s ברמה %2$d</string>
@@ -804,6 +810,7 @@
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Info">כלי הנשק הקטלני הזה הוא באמת יצירת מופת של ההנדסה הגמדית.</string>
+    <string name="Rudolph_Info">מה יכול להיות יותר חגיגי מאף אדום זוהר? יחד עם זוג קרניים, כמובן.</string>
     <string name="Rudolph_Name">אף אדום וקרניים</string>
     <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">גולגולת רונית</string>
@@ -829,6 +836,7 @@
     <string name="ScrollOfRemoveCurse_Info">הכתובת על המגילה הזו תסיר מיד מהנשק, השריון, הטבעות והפריטים הנישאים של הקורא כל קסם רע שעלול למנוע מהלובש להסיר אותם.</string>
     <string name="ScrollOfTeleportation_NoTeleport">אאורה קסומה חזקה של המקום הזה מונעת ממך לטלפורט!</string>
     <string name="ScrollOfTeleportation_Teleport2">בהרף עין %s טלפורטו למיקום אחר ברמה.</string>
+    <string name="ScrollOfTerror_Info">הבזק של אור אדום ישתלט על כל היצורים בשדה הראייה שלך בפחד, והם יסתובבו ויברחו. תקיפת אויב בורח תסיר את ההשפעה.</string>
     <string name="ScrollOfTerror_Info3">המגילה פולטת הבזק בהיר של אור אדום והמפלצות נמלטות!</string>
     <string name="ScrollOfUpgrade_InvTitle">בחר פריט לשדרוג</string>
     <string name="ScrollOfUpgrade_Name">מגילת שדרוג</string>
@@ -869,6 +877,7 @@
     <string name="ShieldInfoTemplate">מגן זה יחסום עד %1 נזק נכנס. עם סיכוי של %2 %%. ייקח %3.1f שניות להתאושש לאחר חסימה מוצלחת.</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="ShootInEye_Name">ירי בעין</string>
+    <string name="Shopkeeper_Buy">בחר פריט לקנייה</string>
     <string name="Shopkeeper_Name">סוחר</string>
     <string name="Shopkeeper_SellPrompt">יש לי דברים למכור</string>
     <string name="ShortSword_ACReforge">לעצב מחדש</string>
@@ -973,6 +982,7 @@
     <string name="TitleScene_Play">שחק</string>
     <string name="TomeOfKnowledge_Name">ספר הידע</string>
     <string name="TomeOfMastery_ACRead">קרא</string>
+    <string name="TomeOfMastery_Choose">בחרת את דרך %s!</string>
     <string name="TomeOfMastery_Info">ספר עור בלוי זה אינו עבה במיוחד, אך אתה חש בדרך כלשהי שניתן ללמוד ממנו רבות. זכור עם זאת שקריאת כרך זה עשויה לדרוש זמן מה.</string>
     <string name="Toolbar_Info1">אתה לא יודע מה יש שם.</string>
     <string name="Torch_ACLight">הַדְלֵק</string>
@@ -1045,6 +1055,7 @@
     <string name="WarHammer_Info">מעטות היצורים שיכולות לעמוד בפני המכה המוחצת של המסה האדירה הזו של עופרת ופלדה, אבל רק ההרפתקנים החזקים ביותר יכולים להשתמש בה ביעילות.</string>
     <string name="WarHammer_Name">פטיש מלחמה</string>
     <string name="Warlock_Gender">masculine</string>
+    <string name="Warlock_Killed">חץ הצללים של %s הרג אותך...</string>
     <string name="Warlock_Name_Objective">מכשף גמדי</string>
     <string name="WarriorArmor_Desc">למרות שהשריון הזה נראה כבד, הוא מאפשר ללוחם לבצע זינוק הירואי לעבר מיקום מטרה, ולנחות עם מכה שמממת את כל האויבים השכנים.</string>
     <string name="WarriorArmor_Name">שריון לוחם</string>
@@ -1072,6 +1083,7 @@
     <string name="WndDonate_ruby">אודם</string>
     <string name="WndDonate_silver">כסף</string>
     <string name="WndDonate_silverDonate">תרומת כסף</string>
+    <string name="WndDonate_silverDonateText">כל תרומה תעזור לפיתוח הפרויקט</string>
     <string name="WndDontLikeAds_NotThisTime">לא הפעם</string>
     <string name="WndFortuneTeller_IdentifyAll">הכל</string>
     <string name="WndFortuneTeller_No_Item">היזהר, אתה לא רוצה לבזבז את הכסף שלך לחינם, נכון? אין פריטים לא מזוהים במלאי שלך.</string>
@@ -1595,6 +1607,18 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

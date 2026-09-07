@@ -161,6 +161,7 @@
     <string name="BlackSkull_Info">Een kleine schedel van obsidiaan. Het was de bron van de krachten van de Necropolis, maar na de nederlaag van de Lich lijkt het al zijn krachten verloren te hebben. Maar wanneer je het in je handen houdt, gaat er een vreemde gedachte door je heen: \&quot;Het Hongert\&quot;.</string>
     <string name="BlackSkull_Name">zwarte schedel</string>
     <string name="BlackSkull_Ressurrect">De Zwarte Schedel Heeft Dode Wezens Herrezen Om Je Te Dienen!</string>
+    <string name="Blacksmith_GetLost">Ik heb het druk. Wegwezen!</string>
     <string name="Blacksmith_Gold1">Hey mens! Wil je nuttig zijn, hé? Pak die houweel en ontgin voor me wat _donker gouderts_, _15 stukken_ zou genoeg moeten zijn. Wat bedoel je, hoe ga ik betalen? Je gierige...\nOké, oké, ik heb geen geld om te betalen, maar ik kan wat smeden voor je. Reken je gelukkig, ik ben de enige smid in de buurt.</string>
     <string name="Blacksmith_LooksBetter">je %s ziet er nu zeker beter uit</string>
     <string name="Blacksmith_Verify3">Ik moet weten waarmee ik werk, identificeer ze eerst!</string>
@@ -174,6 +175,7 @@
     <string name="BloodTransfusion_Drained">De levensessentie vloeit van je huisdier naar jou.</string>
     <string name="BloodTransfusion_Name">Bloedtransfusie</string>
     <string name="BloodTransfusion_WontAgreed">Het slachtoffer weerst het onttrekken van zijn levensessentie.</string>
+    <string name="BodyArmorBuff_Info">De pantser wordt verhoogd ten koste van bewegingssnelheid.</string>
     <string name="BodyArmorBuff_Name">Lichaamspantser</string>
     <string name="BoneSaw_Info">Een precisie-geengineerde chirurgische zaag ontworpen voor snelle ontleding. De schade en aanvalsnelheid worden dodelijker met de vaardigheid van de Pestdokter. Critische treffers snijden extra oogstbare delen van vijanden, en het slaat met ruthloze efficiëntie tegen gelamde vijanden.</string>
     <string name="Boomerang_Gender">masculine</string>
@@ -338,6 +340,7 @@
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">dolk</string>
     <string name="Damage_Reduction">Schadevermindering</string>
+    <string name="DarkSacrifice_Resist">Je hebt geen macht over mij!</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Name">dart</string>
     <string name="DashSpell_Info">Das naar een aangewezen richting terwijl je met vijanden botst, schade toebrengend en verstommeling veroorzakend.</string>
@@ -573,6 +576,7 @@
     <string name="InnKeeperNPC_Name_Objective">herbergier</string>
     <string name="InnServant_Phrase_1">Bah, nog zoveel te doen!</string>
     <string name="InnServant_Phrase_2">Deze dronken drijft me in de waanzin!</string>
+    <string name="InnServant_Phrase_4">Oh jee, zoveel gasten vandaag!</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
     <string name="InterLevelScene_Returning">Terugkeren...</string>
@@ -674,6 +678,7 @@
     <string name="Mace_Name">knots</string>
     <string name="MageArmor_ACSpecial">GESMOLTEN AARDE</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
+    <string name="MageArmor_Name">magiër\'s robe</string>
     <string name="MagicArrow_Name">Magische pijl</string>
     <string name="MailArmor_Name">maliënkolder</string>
     <string name="ManaPotion_Info">Deze drank herstelt je spirituele energie.</string>
@@ -850,6 +855,7 @@
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
     <string name="Potion_SelectForMoisten">Selecteer een item om te bevochtigen</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
+    <string name="Potion_Yes">Ja, ik weet wat ik doe</string>
     <string name="Prison_TileDescBookshelf">Dit is waarschijnlijk een overblijfsel van een gevangenisbibliotheek. Zou het branden?</string>
     <string name="Prison_TileDescDeco">Er zijn oude bloedvlekken op de vloer.</string>
     <string name="PseudoPasty_Info">Dit is een authentiek Cornish pasty met de traditionele vulling van rundvlees en aardappelen.</string>
@@ -895,6 +901,7 @@
     <string name="ResultDescriptions_Boss">Vermoord door de %1$s op niveau %2$d</string>
     <string name="ResultDescriptions_Burning">Verbrand op niveau %d</string>
     <string name="ResultDescriptions_Fall">Ter dood gevallen op niveau %d</string>
+    <string name="ResultDescriptions_Gas">Gestorven door giftig gas op niveau %d</string>
     <string name="ResultDescriptions_Immured">Ingemureerd in steen op niveau %d</string>
     <string name="ResultDescriptions_Necromancy">Uitgeput van levenskracht tijdens het proberen een lijk te animeren op niveau %d</string>
     <string name="ResultDescriptions_Necrotism">Gestorven door Necrotisme op niveau %d</string>
@@ -1024,6 +1031,7 @@
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">schildgedrocht</string>
+    <string name="Shopkeeper_Buy">Selecteer item om te kopen</string>
     <string name="Shopkeeper_BuyPrompt">Laat me je inventaris zien</string>
     <string name="Shopkeeper_Name">winkelier</string>
     <string name="Shopkeeper_SellPrompt">Ik heb spullen te verkopen</string>
@@ -1340,6 +1348,7 @@
     <string name="WndPortal_Warning_Title">Portaal Waarschuwing!</string>
     <string name="WndPremiumSettings_banners">Selecteer het materiaal van de banieren</string>
     <string name="WndPremiumSettings_chrome">Selecteer GUI-materiaal</string>
+    <string name="WndPremiumSettings_gold">goud</string>
     <string name="WndPremiumSettings_marble">marmer</string>
     <string name="WndPremiumSettings_ruby">robijn</string>
     <string name="WndPremiumSettings_status">Selecteer materiaal van de statusbalk</string>
@@ -1535,6 +1544,16 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
