@@ -46,6 +46,29 @@ Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
   probe hooks still injected in build/webapp (wiped by re-running
   make_webapp.py) — the verified state was not the shipped state. This
   session verified on a clean reassembled webapp.
+- **Slot background colors fixed (67412177e)**: html `BitmapData.eraseColor`,
+  `clear` and `setPixel` passed raw 0xAARRGGBB ints to Pixmap while gdx2d
+  expects desktop's `color()`-converted (r<<24|g<<16|b<<8|a) packing. All
+  solid-color textures (`TextureCache.createSolid` → `eraseColor`) rendered
+  channel-scrambled with corrupted alpha: backpack slot backgrounds maroon
+  instead of sage 0xFF4A4D44 / 0xFF63665B, quickslot panel teal instead of
+  0x7B8073 (the corrupted alpha blended them over the dark window, masking
+  the swap). Fixed to desktop parity. RULE for the port: any html
+  BitmapData method taking a color int must apply `color()` first
+  (makeCircleMask/makeHalo already do). Verified in browser: slot row now
+  measures exactly (99,102,91)/(74,77,68) and the quickslot bar
+  (123,128,115) — pixel-exact vs the constants (harness `slot_check.js`:
+  boots, opens the backpack, captures).
+- **Headless harnesses** (`scripts/stuff/htmlport/`, puppeteer +
+  swiftshader, run against serve.py :8081): `shot_town.js` / `walk_town.js`
+  / `verify_roof.js` (town boots + roof walk), `ep_shot.js "<query>"
+  <out.png>` (boot any entrypoint + capture), `ep_diag.js` (scene/raf/error
+  state dump), `ring.js` (filter `__errors` ring), `probe_mask.js` (GL
+  texture readback + bufferData stats), `slot_check.js` (open backpack +
+  capture slot colors).
+- Session 8 commits: 2eb715c6f (roof blend-NONE mask, halo,
+  isResourceExist, level/x/y entrypoints) + 67412177e (color conversion).
+  bd snap-u1z closed (random levels playable).
 - Desktop reference instance: move_hero/screenshot endpoints hang on the
   current one (game alive, get_game_state works); screenshots were taken
   manually by Mike.
@@ -291,24 +314,31 @@ Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 - Browser loop: reload → evaluate `window.__errors` (console.error capture),
   `window.__jsErrLog`. Error count stable = boot OK.
 
-## Remaining / next steps
+## Remaining / next steps (for session 9)
 
-1. **New game → dungeon generation → gameplay loop** (the next big rock;
-   StartScene renders, so the path is: New Game click → level gen → game
-   scene with tilemap/items/mobs).
-2. RU/other-locale text: strings_ru.json loads, Cyrillic glyphs come from
-   langNames in getAllCharsAsString — verify a switched locale renders.
-3. CJK fallback font (LXGWWenKaiScreen.ttf, 18MB) — currently not shipped;
-   CJK falls back to the pixel font (missing glyphs). Decide: ship lazily
-   (fetch on demand) or accept missing CJK on web.
-4. Title screen layout vs desktop: camera is 800x480 here, 480x320 on
-   desktop. Re-check proportions now that text measures correctly.
-5. Saves (HtmlPreferences works? localStorage; `save_io_exception` already
-   logged at boot), sound (stubs), mods (listResources empty).
-6. Keys flow now enqueues events but is unverified live (Escape/back).
-7. Remove debug breadcrumbs (jsErrLog hook ok to keep, cheap; System.setOut
-   merge worth keeping while porting) and build with
-   `-Pteavm.obfuscated=true` before shipping.
+State: boot → title → new game → town → dungeon levels (random gen) all
+work on web; combat, items, windows, quickslots render desktop-identical
+in the verified spots. Committed through 67412177e on html-port-runnable.
+
+1. **Level 2+ flow**: verify descend/ascend between levels (stairs,
+   InterlevelScene), depth-2+ tilesets (tiles1_x, tiles2_x... — same
+   fallback family as the tiles0_x fix), boss levels.
+2. **RU/other-locale text**: strings_ru.json loads, Cyrillic glyphs come
+   from langNames in getAllCharsAsString — verify a switched locale
+   renders (desktop reference runs RU).
+3. **Saves**: `save_io_exception` still logged at boot; verify
+   HtmlPreferences/localStorage round-trip + continue-game flow.
+4. **CJK fallback font** (LXGWWenKaiScreen.ttf, 18MB) — not shipped; CJK
+   falls back to the pixel font. Decide: lazy fetch vs accept missing CJK.
+5. **Title screen layout vs desktop**: camera 800x480 here, 480x320 on
+   desktop — re-check proportions (bd snap-5z8).
+6. **Sound** (html audio shims stubs, `isSoundExists` blindly true) and
+   **mods** (`listResources` empty) — per goal, low priority.
+7. **Keys flow** enqueues events but is unverified live (Escape/back).
+8. **Before shipping**: strip `EP2` slogs + DebugEntryPoints telemetry,
+   keep `__jsErrLog`/`System.setOut` merge (cheap, useful), build with
+   `-Pteavm.obfuscated=true`, re-check the 1px line only if Mike revives
+   it.
 
 ## Browser-testing notes (in-app pane)
 
