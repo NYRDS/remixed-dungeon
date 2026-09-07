@@ -4,6 +4,52 @@ Branch: `html-port-runnable` (work in progress, see git log)
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
+## Current state (as of 2026-09-07, session 8)
+
+- **Roof transparency fixed (the real root cause)**: html
+  `BitmapData.makeCircleMask` painted the concentric circles without
+  disabling Pixmap blending — TeaVM's gdx2d (wasm, same semantics as
+  desktop native) defaults to SourceOver, so the inner alpha-0 circle was a
+  NO-OP and the whole CircleMask texture came out fully opaque (verified by
+  GL readback: alpha histogram was {255:16384}). Roof layer then multiplied
+  by 1.0 everywhere → roofs never fade near the hero, hero invisible inside
+  buildings. Session 7's "makeCircleMask implemented" was insufficient (and
+  its per-pixel fillCircle was O(n²) — every drawPixel triggered a full
+  heap→buffer copy). Fix: `pixmap.setBlending(Blending.None)` + native
+  `fillCircle`s; restored SourceOver after. Verified via GL texture readback
+  (harness `probe_mask.js`): histogram now {0:3305, 119:4072, 247:5630,
+  255:3377} ≈ desktop math (π·r² rings). Visual: web now matches desktop —
+  farmyard interior revealed through faded roof next to the hero, red
+  shingles beyond ~2 tiles.
+- **Halo implemented** (hero/torch light halo, the white ellipse behind the
+  hero on desktop): html `BitmapData.makeHalo` was an empty stub →
+  all-transparent texture. Same blend-NONE + native fillCircle pattern.
+- **Random dungeon levels now work on web** (was the "next big rock"):
+  html `ModdingMode.isResourceExist` was `return true` → the variative
+  tilemap desc fallback (`tilemapDesc/tiles0_x.json` →
+  `tiles_x_default.json`) never fired; the missing file read yielded an
+  empty JSONObject and `XTilemapConfiguration` crashed on
+  `JSONObject["SECRET_TRAP"] not found` inside GameScene.createTerrain →
+  InterlevelScene stuck on "Returning...". Fixed to `Assets.exists(fileName)`
+  (the SAME check getInputStream already uses — callers build fallback
+  chains on it). `isResourceExistInMod` → false (no mods on web). Verified:
+  `?ep=newgame&level=1` generates + renders SewerLevel with fog, items,
+  combat. bd snap-u1z closed.
+- **Debug entrypoints extended**: `?ep=newgame&level=<levelId>&x=<n>&y=<n>`
+  (or `&cell=<n>`; level/x/y independently optional) — after boot the hero
+  is placed via `Hero.teleportTo(Position)`: same levelId blinks (fog
+  updates), different levelId goes through InterlevelScene(RETURN). Level
+  ids are Dungeon.json "Levels" keys (`town_2`, `0`, `1`, `cinema_2`, ... —
+  NOT class kinds; a bad id lands in rescue mode and reloads the autosave).
+  Harness: `scripts/stuff/htmlport/ep_shot.js "<query>" <out.png>`.
+- GL instrumentation note: session 7's roof "verification" ran with temp GL
+  probe hooks still injected in build/webapp (wiped by re-running
+  make_webapp.py) — the verified state was not the shipped state. This
+  session verified on a clean reassembled webapp.
+- Desktop reference instance: move_hero/screenshot endpoints hang on the
+  current one (game alive, get_game_state works); screenshots were taken
+  manually by Mike.
+
 ## Current state (as of 2026-09-07, session 7)
 
 - **StatusPane defect (bd snap-4o4) CLOSED** — three stacked web-only causes:

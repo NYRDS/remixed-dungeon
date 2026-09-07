@@ -57,13 +57,14 @@ public class ModdingMode extends ModdingBase {
     
     // Additional methods needed for HTML version
     public static boolean isResourceExist(String fileName) {
-        // In HTML version, we assume all resources exist
-        return true;
+        // must match getInputStream: callers build fallback chains on this
+        // (e.g. the variative tilemap desc falls back to tiles_x_default.json)
+        return Assets.exists(fileName);
     }
-    
+
     public static boolean isResourceExistInMod(String resName) {
-        // In HTML version, we assume all resources exist
-        return true;
+        // no mod directories on web
+        return false;
     }
     
     public static InputStream getInputStream(String fileName) {

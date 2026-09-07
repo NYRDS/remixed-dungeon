@@ -105,30 +105,38 @@ public class BitmapData {
         if (pixmap == null) {
             return;
         }
-        // desktop Gdx2d semantics: opaque fill, concentric circles painted
-        // outer->inner, later fills overwrite earlier ones
+        // desktop gdx2d semantics: paint the concentric circles with blending
+        // disabled - with the default SourceOver the transparent inner circle
+        // would blend to a no-op and the mask would stay fully opaque
+        pixmap.setBlending(Pixmap.Blending.None);
         pixmap.setColor(color(0xffffffff));
         pixmap.fill();
 
         int centerX = radius;
         int centerY = radius;
-        fillCircle(centerX, centerY, radius, c3);
-        fillCircle(centerX, centerY, (int) (0.75f * radius), c2);
-        fillCircle(centerX, centerY, (int) (0.5f * radius), c1);
-    }
-
-    private void fillCircle(int cx, int cy, int r, int argbColor) {
-        int rgba = color(argbColor);
-        for (int dy = -r; dy <= r; dy++) {
-            int span = (int) Math.floor(Math.sqrt((double) r * r - (double) dy * dy));
-            for (int x = cx - span; x <= cx + span; x++) {
-                pixmap.drawPixel(x, cy + dy, rgba);
-            }
-        }
+        pixmap.setColor(color(c3));
+        pixmap.fillCircle(centerX, centerY, radius);
+        pixmap.setColor(color(c2));
+        pixmap.fillCircle(centerX, centerY, (int) (0.75f * radius));
+        pixmap.setColor(color(c1));
+        pixmap.fillCircle(centerX, centerY, (int) (0.5f * radius));
+        pixmap.setBlending(Pixmap.Blending.SourceOver);
     }
     
     public void makeHalo(int radius, int c1, int c2) {
-        // Simple implementation for HTML version
+        if (pixmap == null) {
+            return;
+        }
+        // desktop semantics: transparent base, opaque inner disc over a
+        // translucent outer ring, blending disabled so colors replace
+        pixmap.setBlending(Pixmap.Blending.None);
+        pixmap.setColor(0);
+        pixmap.fill();
+        pixmap.setColor(color(c1));
+        pixmap.fillCircle(radius, radius, radius);
+        pixmap.setColor(color(c2));
+        pixmap.fillCircle(radius, radius, (int) (0.75f * radius));
+        pixmap.setBlending(Pixmap.Blending.SourceOver);
     }
     
     public void dispose() {
