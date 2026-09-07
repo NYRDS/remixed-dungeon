@@ -485,6 +485,7 @@
     <string name="HeroClass_HunPerks_3">Jachtvrouwjes krijgen meer gezondheid van dauwdruppels.</string>
     <string name="HeroClass_HunPerks_4">Jachtvrouwen voelen buurmonsters zelfs als ze achter obstakels verstopt zitten.</string>
     <string name="HeroClass_Mag">magier</string>
+    <string name="HeroClass_MagPerks_2">Wanneer gegeten, herstelt elk stuk voedsel 1 lading voor alle staven in de inventaris.</string>
     <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
     <string name="HeroClass_MagPerks_5">De scrollen van identificatie zijn vanaf het begin geïdentificeerd.</string>
     <string name="HeroClass_NecromancerPerks_1">Necromanten gebruiken mana om Doodsspreuken te spreken.</string>
@@ -667,6 +668,7 @@
     <string name="MedicineMask_Obtained">Chirurgisch masker verkregen</string>
     <string name="MeleeWeapon_Info1c">een opgewaardeerd</string>
     <string name="MeleeWeapon_Info2a">De gemiddelde schade is %d punten per slag.</string>
+    <string name="MeleeWeapon_Info2b">De typische gemiddelde schade is %1$d punten per slag en vereist meestal %2$d punten kracht.</string>
     <string name="MeleeWeapon_Info3a">Dit is een nogal %s wapen.</string>
     <string name="MeleeWeapon_Info3d">en</string>
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
@@ -765,6 +767,7 @@
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te delven!</string>
     <string name="Pickaxe_Name">houweel</string>
     <string name="Pickaxe_NothingToMine">Hier is niets om te delven!</string>
+    <string name="Piercing_Name_0">Doorborend %s</string>
     <string name="Piercing_Name_2">Doorborende %s</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
@@ -1505,6 +1508,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 

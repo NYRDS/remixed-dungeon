@@ -237,6 +237,7 @@
     <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">Lưỡi của thanh kiếm này được tạo nên từ hỗn loạn thuần khiết và thỉnh thoảng lại rung nhẹ. Sức mạnh vĩ đại ẩn chứa trong vũ khí này có thể chém đôi gần như mọi thứ. Tuy nhiên, cần kỹ năng phi thường mới có thể khuất phục được sức mạnh hùng hậu của nó.</string>
     <string name="ChaosSword_Name">kiếm hỗn loạn</string>
+    <string name="CharAction_Expel">đuổi ra</string>
     <string name="CharAction_Hit">đánh</string>
     <string name="CharAction_PetInventory">kho đồ</string>
     <string name="CharAction_Push">đẩy</string>
@@ -441,6 +442,7 @@
     <string name="GnollArmor_NotGnoll">Chỉ gnoll mới có thể trang bị Áo Giáp Gnoll!</string>
     <string name="GnollCostume_Info">Một bộ trang phục ấm áp và bồng bềnh cực kỳ. Ai mặc bộ trang phục này sẽ trông như... người đang cố gắng cải trang thành gnoll. Nhưng gnoll sẽ không bị lừa, chúng vẫn sẽ tấn công bạn.</string>
     <string name="GnollTamahawk_Gender">masculine</string>
+    <string name="GnollTamahawk_Info">Một chiếc Rìu Tomahawk truyền thống được tạo ra bởi các bậc thầy Gnoll, nơi mỗi bộ lạc có thiết kế độc đáo riêng. Chiếc Rìu này nhẹ hơn một chút so với các đối thủ của nó.</string>
     <string name="Gnoll_Gender">masculine</string>
     <string name="GoldenKey_Info">Những khía trên chiếc chìa khóa vàng này rất nhỏ và tinh xảo. Có lẽ nó có thể mở ổ khóa của một chiếc rương nào đó?</string>
     <string name="GoldenKey_Name">chìa khóa vàng</string>
@@ -1185,6 +1187,7 @@
     <string name="WarHammer_Name">Búa chiến tranh</string>
     <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">Tia bóng tối của %1$s đã giết bạn...</string>
+    <string name="WarriorArmor_Prompt">Chọn hướng để nhảy</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name_Objective">nguyên tố nước</string>
@@ -1453,6 +1456,9 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

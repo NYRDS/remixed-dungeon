@@ -578,6 +578,7 @@
     <string name="MeleeWeapon_Info2a">הנזק הממוצע שלה הוא %d נקודות לפגיעה.</string>
     <string name="MeleeWeapon_Info3d">ו</string>
     <string name="MeleeWeapon_Info5">זה מכושף.</string>
+    <string name="MeleeWeapon_Info6a">בגלל הכוח הלא מספק שלך, הדיוק והמהירות של ההתקפה שלך עם %s מופחתים.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">שכיר חרב</string>
     <string name="MimicAmulet_Gender">masculine</string>
@@ -964,6 +965,7 @@
     <string name="TownGuardNPC_Message3">אתה חושב שיש יותר מדי שומרים בעיר הזאת? ובכן, זה בגלל שזאת העיר היחידה עם מבוך ענק מלא מפלצות, לא?</string>
     <string name="TownGuardNPC_Name">שומר</string>
     <string name="TownPortal_Info">הלחש הזה מאפשר לך לחזור לבטחה באופן מיידי. עם זאת, מקורות קסם חזקים בקרבת מקום עלולים למנוע ממנו לפעול כמתוכנן.</string>
+    <string name="TownPortal_Name">פורטל עירוני</string>
     <string name="TownScript_NeedWeapon">אני לא אלך לצינוק בידיים ריקות!\nאולי כדאי לבקר בחנות העירונית קודם?</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Name">תושבי העיירה</string>
@@ -1033,6 +1035,7 @@
     <string name="WaterElemental_Name_Objective">יסוד מים</string>
     <string name="WaterOfAwareness_Info">כוח הידע קורן מהמים של הבאר הזו. קח לגימה ממנה כדי לחשוף את כל הסודות של הפריטים המצוידים שלך.</string>
     <string name="WaterOfHealth_Procced">כשאתה לוקח לגימה, אתה מרגיש שהפצעים שלך נרפאים לחלוטין.</string>
+    <string name="WaterOfTransmutation_Info">כוח השינוי קורן ממי הבאר הזו. זרוק פריט לתוך הבאר כדי להפוך אותו למשהו אחר.</string>
     <string name="WeaknessBuff_Name">נחלש</string>
     <string name="Weightstone_ACApply">החל</string>
     <string name="Weightstone_Info">בעזרת משקולת, אתה יכול לאזן את נשק הקרב שלך כדי להגביר את המהירות או הדיוק שלו.</string>
@@ -1569,6 +1572,9 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
 
 
 

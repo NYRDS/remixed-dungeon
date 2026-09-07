@@ -98,6 +98,7 @@
     <string name="Badges_StrengthAttained1">تم الحصول على 13 نقطة قوة</string>
     <string name="Badges_StrengthAttained3">تم تحقيق 17 نقطة من القوة</string>
     <string name="Badges_StrengthAttained4">تم بلوغ 19 نقطة من القوة</string>
+    <string name="Badges_Victory">تم الحصول على تميمة يندور</string>
     <string name="Badges_VictoryAll">تم الحصول على تميمة Yendor بواسطة جميع الفئات</string>
     <string name="Badges_Yasd">الموت من النار، السم، الغاز السام والجوع</string>
     <string name="Badges_Yog_Slain">تم القضاء على يوغ-زفا</string>
@@ -542,6 +543,7 @@
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">يرقة الإله</string>
     <string name="LastLevel_TileDescStatue">العمود مصنوع من جماجم بشرية حقيقية. مذهل.</string>
+    <string name="LastLevel_TileGrass">طحلب الجمر</string>
     <string name="LastShopLevel_TileDescExit">ممر يؤدي إلى الجحيم.</string>
     <string name="LastShopLevel_TileHighGrass">أزهار متفتحة عالية</string>
     <string name="LastShopLevel_TileWater">مياه مشبوهة اللون</string>
@@ -605,6 +607,7 @@
     <string name="MercenaryNPC_Name">مرتزق</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">مُقلِّد</string>
+    <string name="MimicAmulet_Name_Objective">المُقلِّد</string>
     <string name="MimicPie_Desc">الميماكس كائنات سحرية يمكنها اتخاذ أي شكل تريده. هذا يشبه فطيرة كبيرة ولذيذة.</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">ميميكي</string>
@@ -1260,6 +1263,9 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
 
 
 
