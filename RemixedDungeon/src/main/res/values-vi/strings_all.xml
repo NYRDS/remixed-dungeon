@@ -749,6 +749,7 @@
     <string name="PalaceServants_Hostile">Hầu cận trong cung điện quay lại tấn công bạn!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
     <string name="ParalysisArrow_Name">mũi tên gây tê liệt</string>
+    <string name="ParalysisBuff_Info">Hoàn toàn tê liệt!</string>
     <string name="ParalysisBuff_Name">Bị tê liệt</string>
     <string name="Paralysis_Name_0">%s choáng váng</string>
     <string name="PetInventory_GaveItem">Đã cho %1$s cho %2$s</string>
@@ -1235,6 +1236,7 @@
     <string name="WndHero_Exp">Kinh nghiệm</string>
     <string name="WndHero_StaCatalogus">Danh mục</string>
     <string name="WndHero_StaJournal">Nhật ký</string>
+    <string name="WndInfoItem_Inside">Bạn có thể thấy %s bên trong, nhưng để mở rương bạn cần một chìa khóa vàng.</string>
     <string name="WndInfoItem_NeedKey">Nhưng để mở nó, bạn cần một chìa khóa vàng.</string>
     <string name="WndInfoItem_Owner">Ngòi mộ cổ này có thể chứa vật hữu ích, nhưng chủ sở hữu chắc chắn sẽ phản đối việc kiểm tra.</string>
     <string name="WndInfoItem_Remains">Đây là tất cả những gì còn lại từ một trong những người đi trước bạn. Có thể đáng để kiểm tra xem có vật phẩm quý nào không.</string>
@@ -1451,6 +1453,8 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

@@ -500,6 +500,7 @@
     <string name="Item_ACPickup">לקחת</string>
     <string name="Item_DirThrow">בחר כיוון זריקה</string>
     <string name="Item_Info">משהו</string>
+    <string name="Item_PackFull">התיק שלך מלא מדי בשביל ה-%s</string>
     <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name">כד נשמות</string>
     <string name="Javelin_Gender">neuter</string>
@@ -977,6 +978,7 @@
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">המממ...</string>
     <string name="TownsfolkSilentNPC_Name">תושב העיר</string>
+    <string name="ToxicGas_Info1">מתת משאיפת גז רעיל..</string>
     <string name="ToxicGland_Info">בלוטה רעילה שנקצרה מאויב מובס. בלוטות אלו מלאות ברעלים חזקים וניתן להשתמש בהן בתהליכים אלכימיים.</string>
     <string name="ToxicGland_Name">בלוטה רעילה</string>
     <string name="TrapWnd_Step">האם אתה באמת רוצה לדרוך על המלכודת הזו? ייתכן שתמות.</string>
@@ -1567,6 +1569,8 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
 
 
 
