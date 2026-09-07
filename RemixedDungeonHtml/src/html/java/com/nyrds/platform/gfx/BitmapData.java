@@ -69,23 +69,22 @@ public class BitmapData {
     }
     
     public void eraseColor(int color) {
-        // Simple implementation for HTML version
         if (pixmap != null) {
-            pixmap.setColor(color);
+            pixmap.setColor(color(color));
             pixmap.fill();
         }
     }
-    
+
     public void clear(int color) {
         if (pixmap != null) {
-            pixmap.setColor(color);
+            pixmap.setColor(color(color));
             pixmap.fill();
         }
     }
-    
+
     public void setPixel(int x, int y, int color) {
         if (pixmap != null) {
-            pixmap.drawPixel(x, y, color);
+            pixmap.drawPixel(x, y, color(color));
         }
     }
     
