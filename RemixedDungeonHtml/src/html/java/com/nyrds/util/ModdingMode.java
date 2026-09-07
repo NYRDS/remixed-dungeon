@@ -98,8 +98,40 @@ public class ModdingMode extends ModdingBase {
     }
     
     public static boolean isSoundExists(String soundName) {
-        // In HTML version, we assume all sounds exist
-        return true;
+        String resourceId = "sound/" + soundName;
+        return !getSoundById(resourceId).isEmpty();
+    }
+
+    /**
+     * Desktop parity (minus mod branches): resolves a sound id to an actual
+     * asset file by trying .ogg/.mp3 suffixes, stripping an extension from
+     * the id if it already has one.
+     */
+    public static String getSoundById(String id) {
+        if (id.isEmpty()) {
+            return "";
+        }
+
+        String candidate = id + ".ogg";
+
+        if (isAssetExist(candidate)) {
+            return candidate;
+        }
+
+        candidate = id + ".mp3";
+        if (isAssetExist(candidate)) {
+            return candidate;
+        }
+
+        if (id.contains(".mp3")) {
+            return getSoundById(id.replace(".mp3", ""));
+        }
+
+        if (id.contains(".ogg")) {
+            return getSoundById(id.replace(".ogg", ""));
+        }
+
+        return "";
     }
 
     @org.teavm.jso.JSBody(params = "text", script = "console.error('MODDING: ' + text);")

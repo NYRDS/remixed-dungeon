@@ -7,8 +7,11 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
+import com.github.xpenatan.gdx.backends.teavm.TeaFiles;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.platform.audio.WebAudio;
+import com.nyrds.platform.storage.PersistedFileStorage;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
@@ -103,11 +106,26 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public void create() {
+        installPlatformBackingStores();
+
         SystemText.invalidate();
         TextureCache.clear();
         Gdx.input.setInputProcessor(this);
 
         resume();
+    }
+
+    // TeaApplication.initGdx() wires Gdx.files to a memory-only local storage
+    // (saves would die with the page) and leaves Gdx.audio null (sound is
+    // silent). Swap in the persisted local storage and the WebAudio factory
+    // before anything reads saves or plays audio.
+    private void installPlatformBackingStores() {
+        if (Gdx.files instanceof TeaFiles) {
+            ((TeaFiles) Gdx.files).localStorage = new PersistedFileStorage();
+        }
+        if (Gdx.audio == null) {
+            Gdx.audio = new WebAudio();
+        }
     }
 
     @Override

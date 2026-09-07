@@ -1,12 +1,15 @@
 package com.nyrds.platform.game;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.utils.Position;
+import com.nyrds.platform.storage.SaveUtils;
 import com.nyrds.platform.util.PUtil;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 
@@ -39,6 +42,11 @@ final class DebugEntryPoints {
 			return;
 		}
 
+		if ("continue".equals(param(search, "ep"))) {
+			scheduleContinue();
+			return;
+		}
+
 		if (!"newgame".equals(param(search, "ep"))) {
 			return;
 		}
@@ -60,6 +68,10 @@ final class DebugEntryPoints {
 		}
 
 		final String fLevel = param(search, "level");
+
+		// &save=1: run the real Dungeon.save once the hero is in the game
+		// (debug verification of the web save pipeline)
+		final boolean fSave = "1".equals(param(search, "save"));
 
 		int x = -1, y = -1, cell = -1;
 		try {
@@ -87,8 +99,13 @@ final class DebugEntryPoints {
 		final String fHero = hero;
 		final int fDifficulty = difficulty;
 
-		PUtil.slog("game", "entrypoint: newgame hero=" + hero + " difficulty=" + difficulty
-				+ (place ? " level=" + fLevel + " x=" + fX + " y=" + fY + " cell=" + fCell : ""));
+		if (place || fSave) {
+			PUtil.slog("game", "entrypoint: newgame hero=" + hero + " difficulty=" + difficulty
+					+ (place ? " level=" + fLevel + " x=" + fX + " y=" + fY + " cell=" + fCell : "")
+					+ (fSave ? " save=1" : ""));
+		} else {
+			PUtil.slog("game", "entrypoint: newgame hero=" + hero + " difficulty=" + difficulty);
+		}
 
 		GameLoop.pushUiTask(new Runnable() {
 
@@ -115,13 +132,13 @@ final class DebugEntryPoints {
 					GameControl.startNewGame(fHero, fDifficulty, false);
 					PUtil.slog("EP2", "startNewGame returned");
 					fired = true;
-					if (!place) {
+					if (!place && !fSave) {
 						return;
 					}
 					Gdx.app.postRunnable(this);
 					return;
 				}
-				// placement phase: wait for GameScene with a valid hero
+				// placement/save phase: wait for GameScene with a valid hero
 				if (!(GameLoop.scene() instanceof GameScene)) {
 					if (GameLoop.scene() instanceof TitleScene || ++polls > MAX_GAME_SCENE_POLLS) {
 						PUtil.slog("EP2", "entrypoint: game scene never came up, placement skipped");
@@ -138,7 +155,65 @@ final class DebugEntryPoints {
 					Gdx.app.postRunnable(this);
 					return;
 				}
+				if (fSave) {
+					try {
+						PUtil.slog("EP2", "saving game");
+						Dungeon.save(false);
+						PUtil.slog("EP2", "game saved");
+						FileHandle[] rootList = Gdx.files.local("/").list();
+						StringBuilder names = new StringBuilder();
+						for (FileHandle f : rootList) {
+							names.append(f.path()).append("(").append(f.name()).append(") ");
+						}
+						PUtil.slog("EP2", "root list [n=" + rootList.length + "]: " + names);
+						PUtil.slog("EP2", "slotUsed = " + SaveUtils.slotUsed(
+								SaveUtils.getAutoSave(), Dungeon.heroClass));
+					} catch (Exception e) {
+						PUtil.slog("EP2", "save failed: " + e.getMessage());
+					}
+					if (!place) {
+						return;
+					}
+				}
 				placeHero(fLevel, fX, fY, fCell);
+			}
+		});
+	}
+
+	private static void scheduleContinue() {
+		PUtil.slog("game", "entrypoint: continue");
+		GameLoop.pushUiTask(new Runnable() {
+
+			private int polls;
+
+			@Override
+			public void run() {
+				bumpPollCount();
+				if (!(GameLoop.scene() instanceof TitleScene)) {
+					if (++polls > MAX_GAME_SCENE_POLLS) {
+						PUtil.slog("EP2", "continue: title scene never came up");
+						return;
+					}
+					Gdx.app.postRunnable(this);
+					return;
+				}
+				// GameLoop.difficulty is only set by the difficulty-select UI
+				// (or ?ep=newgame) - scan the sane range instead of trusting it
+				for (int difficulty = 0; difficulty <= 5; difficulty++) {
+					String slot = SaveUtils.buildSlotFromTag("autoSave", difficulty);
+					for (HeroClass heroClass : HeroClass.values()) {
+						if (SaveUtils.slotUsed(slot, heroClass)) {
+							PUtil.slog("EP2", "continue: loading " + slot + " for " + heroClass);
+							// deleteGame inside loadGame reads Dungeon.heroClass -
+							// the menu flow sets it before loading, so must we
+							Dungeon.heroClass = heroClass;
+							GameLoop.setDifficulty(difficulty);
+							SaveUtils.loadGame(slot, heroClass);
+							return;
+						}
+					}
+				}
+				PUtil.slog("EP2", "continue: no autosave found");
 			}
 		});
 	}

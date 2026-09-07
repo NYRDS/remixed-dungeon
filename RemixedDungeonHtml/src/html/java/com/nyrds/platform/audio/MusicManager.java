@@ -2,120 +2,139 @@ package com.nyrds.platform.audio;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
-import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.LuaInterface;
-import java.util.HashMap;
-import java.util.Map;
+import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.platform.EventCollector;
+import com.nyrds.util.ModdingMode;
+import com.nyrds.util.Util;
+import org.jetbrains.annotations.Nullable;
 
+/**
+ * Desktop parity: single music track, id resolved through
+ * ModdingMode.getSoundById, volume scaled by the music preference.
+ * Playback is WebAudio-backed; decoded buffers are cached by WebAudio so
+ * scene switches don't re-fetch.
+ */
 @LuaInterface
 public enum MusicManager {
-    INSTANCE;
 
-    private Map<String, Music> musicCache = new HashMap<>();
-    private Music currentMusic;
-    private boolean isMuted = false;
-    private float volume = 1.0f;
+	INSTANCE;
 
-    public void play(String assetName, boolean looping) {
-        if (isMuted) return;
+	@Nullable
+	private Music music;
 
-        stop(); // Stop any currently playing music
+	@Nullable
+	private String lastPlayed;
+	private boolean lastLooping;
 
-        Music music = musicCache.get(assetName);
-        if (music == null) {
-            try {
-                FileHandle file = Gdx.files.internal(assetName);
-                if (file.exists()) {
-                    music = Gdx.audio.newMusic(file);
-                    music.setLooping(looping);
-                    musicCache.put(assetName, music);
-                }
-            } catch (Exception e) {
-                // Failed to load music
-                return;
-            }
-        }
+	private boolean enabled = true;
 
-        if (music != null) {
-            currentMusic = music;
-            currentMusic.setVolume(volume);
-            currentMusic.play();
-        }
-    }
+	private float volume = 1;
 
-    public void stop() {
-        if (currentMusic != null) {
-            currentMusic.stop();
-            currentMusic = null;
-        }
-    }
+	public void play(String assetName, boolean looping) {
+		if (!enabled) {
+			lastPlayed = assetName;
+			return;
+		}
 
-    public void pause() {
-        if (currentMusic != null) {
-            currentMusic.pause();
-        }
-    }
+		if (isPlaying() && assetName.equals(lastPlayed)) {
+			volume(1);
+			return;
+		}
 
-    public void resume() {
-        if (currentMusic != null && !isMuted) {
-            currentMusic.play();
-        }
-    }
+		String assetFilename = ModdingMode.getSoundById("sound/" + assetName);
 
-    public void mute() {
-        isMuted = true;
-        if (currentMusic != null) {
-            currentMusic.setVolume(0f);
-        }
-    }
+		if (assetFilename.isEmpty()) {
+			return;
+		}
 
-    public void unMute() {
-        isMuted = false;
-        if (currentMusic != null) {
-            currentMusic.setVolume(volume);
-        }
-    }
+		stop();
 
-    public boolean isMuted() {
-        return isMuted;
-    }
+		lastPlayed = assetName;
+		lastLooping = looping;
 
-    public void volume(float value) {
-        this.volume = value;
-        if (currentMusic != null) {
-            currentMusic.setVolume(isMuted ? 0f : value);
-        }
-    }
+		try {
+			music = Gdx.audio.newMusic(Gdx.files.internal(assetFilename));
+			music.setLooping(looping);
+			volume(1);
+			music.play();
+		} catch (Exception e) {
+			if (music != null) {
+				music.dispose();
+				music = null;
+			}
+			EventCollector.logException(e, assetName);
+		}
+	}
 
-    public void setVolume(float volume) {
-        this.volume = volume;
-        if (currentMusic != null) {
-            currentMusic.setVolume(isMuted ? 0f : volume);
-        }
-    }
+	public void mute() {
+		lastPlayed = null;
+		stop();
+	}
 
-    public float getVolume() {
-        return volume;
-    }
+	public void pause() {
+		if (isPlaying()) {
+			music.pause();
+		}
+	}
 
-    public boolean isPlaying() {
-        return currentMusic != null && currentMusic.isPlaying();
-    }
+	public void resume() {
+		if (music != null && enabled) {
+			volume(volume);
+			music.play();
+		}
+	}
 
-    public void clearCache() {
-        stop();
-        for (Music music : musicCache.values()) {
-            music.dispose();
-        }
-        musicCache.clear();
-    }
+	public void volume(float vl) {
+		volume = vl;
+		try {
+			if (music != null) {
+				float val = value(vl);
+				music.setVolume(val);
+			}
+		} catch (Exception e) {
+			EventCollector.logException(e);
+		}
+	}
 
-    // Method needed for HTML version
-    public void enable(boolean value) {
-        if (value) {
-            unMute();
-        } else {
-            mute();
-        }
-    }
+	private float value(float vl) {
+		float val = vl * GamePreferences.musicVolume() / 10f;
+		return Util.clamp(val, 0, 1);
+	}
+
+	public void enable(boolean value) {
+		enabled = value;
+		if (isPlaying() && !value) {
+			stop();
+		} else if (!isPlaying() && value) {
+			if (lastPlayed != null) {
+				play(lastPlayed, lastLooping);
+			}
+		}
+	}
+
+	public boolean isMuted() {
+		return !enabled;
+	}
+
+	public boolean isPlaying() {
+		try {
+			return music != null && music.isPlaying();
+		} catch (Exception e) {
+			EventCollector.logException(e);
+		}
+		return false;
+	}
+
+	public void clearCache() {
+		stop();
+	}
+
+	private void stop() {
+		if (music != null) {
+			music.stop();
+			music.dispose();
+			music = null;
+		}
+	}
 }

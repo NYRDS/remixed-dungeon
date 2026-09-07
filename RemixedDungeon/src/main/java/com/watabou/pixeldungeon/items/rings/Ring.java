@@ -80,7 +80,9 @@ public class Ring extends Artifact implements UnknownItem {
     }
 
     public void syncGem() {
-        image = handler.index(this);
+        if (handler != null) {
+            image = handler.index(this);
+        }
         gem = StringsManager.getVars(R.array.Ring_Gems)[ItemStatusHandler.indexByImage(image, images)];
     }
 

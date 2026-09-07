@@ -252,7 +252,7 @@ INDEX_HTML = """<!DOCTYPE html>
                     r = cb(synthT);
                 } catch (e) {
                     window.__rafShimStats.err++;
-                    window.__errors.push('shim cb error: ' + e);
+                    window.__errors.push('shim cb error: ' + e + ' :: ' + (e && e.stack ? String(e.stack).split('\\n').slice(0, 8).join(' | ') : 'no stack'));
                     return;
                 }
                 if (viaRaf) { window.__rafShimStats.viaRaf++; synthT = t; }

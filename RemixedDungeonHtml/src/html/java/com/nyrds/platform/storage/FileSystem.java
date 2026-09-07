@@ -3,6 +3,7 @@ package com.nyrds.platform.storage;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -140,16 +141,15 @@ public class FileSystem {
         return new File(Gdx.files.local(fileName).path());
     }
     
-    static public InputStream getInputStream(String filename) {
-        try {
-            FileHandle file = Gdx.files.local(filename);
-            if (file.exists()) {
-                return file.read();
-            }
-        } catch (Exception e) {
-            // File operations are limited in HTML
+    static public InputStream getInputStream(String filename) throws FileNotFoundException {
+        FileHandle file = Gdx.files.local(filename);
+        if (file.exists()) {
+            return file.read();
         }
-        return null;
+        // desktop parity: callers guard on FileNotFoundException; returning
+        // null here fed Bundle.read an empty stream and logged
+        // save_io_exception noise at every boot
+        throw new FileNotFoundException(filename);
     }
     
     public static String getExternalStorageFileName(String fileName) {

@@ -4,6 +4,65 @@ Branch: `html-port-runnable` (work in progress, see git log)
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
+## Current state (as of 2026-09-07, session 9)
+
+- **SAVES WORK** (bd snap-01u closed): game files, level files, library,
+  badges and autosave-slot copies persist in window.localStorage and survive
+  reload; ?ep=continue loads the autosave into a playing GameScene
+  (verified headless, screenshot). Stack of fixes:
+  1. **PersistedFileStorage** (new, `com/nyrds/platform/storage/`): TeaVM
+     backend's `Gdx.files.local` is a plain in-memory `MemoryFileStorage` —
+     everything died with the page. Subclass mirrors every mutation into
+     localStorage (`rdg_file_<path>` keys, base64, dir markers) by
+     overriding the `putFile`/`removeFile` hooks (backend routes ALL
+     mutations through them: writeInternal/append/delete/deleteDirectory/
+     rename/mkdirs) and restores at construction. `paths()` is overridden:
+     the backend's own list() walks `TeaFileHandle.parent()`, which with
+     canonical `/dir/name/` paths returns the entry itself → list() was
+     always empty → slot machinery silently no-oped.
+  2. **SaveUtils (html) path fixes**: TeaFileHandle canonicalizes paths to
+     `/name/` (leading AND trailing slash) and `name()` returns "" → all
+     `endsWith(".dat")`/name matching never matched (added `plain()/
+     fileName()` helpers). And the root mismatch: html FileSystem does NOT
+     prefix SAVES_PATH (desktop does) so game files live at storage root
+     while SaveUtils looked under `./saves//` — `local()` now maps to root.
+  3. **HtmlPreferences** was never flushed (no exit path on web) — puts now
+     write through immediately.
+  4. **FileSystem.getInputStream** throws FileNotFoundException (desktop
+     parity; it returned null → Bundle.read(null) → "Stream is closed" →
+     `save_io_exception` ×3 at every boot, now 0).
+- **SOUND WORKS** (bd snap-hei closed): backend leaves `Gdx.audio` null and
+  has NO Sound/Music implementations. Added `WebAudio` (com.badlogic.gdx.Audio
+  over `org.teavm.jso.webaudio` — note gdx 1.13 moved Audio to
+  `com.badlogic.gdx.Audio` with a changed method set), `WebSound`
+  (BufferSource→Gain→StereoPanner, per-voice ids, pending-play on async
+  decode), `WebMusic` (loop, pause/resume via playback offset). Shared
+  AudioContext + decode cache + one-time pointerdown/keydown resume hook
+  (autoplay policy); `window.__audioCtx` exposes state. Sample/MusicManager
+  (html) rewritten to desktop parity: `ModdingMode.getSoundById` resolution
+  (isSoundExists no longer blindly true), GamePreferences volume scaling.
+  Verified: ctx running @48kHz, 0 decode failures, no "Sound not found".
+- **Shared-code load fixes** (desktop+android compile green):
+  - Wand/Ring/Potion/Scroll ctors null-guard the static ItemStatusHandler:
+    `Dungeon.reset()` doesn't init handlers, and CharsList.restoreFromBundle
+    (followers' belongings) runs before `*.restore(bundle)` — the null deref
+    is a JS TypeError on web that escapes `catch (Exception)`.
+  - Dungeon deserializeGameData/deserializeLevelData/loadModData wrapped:
+    web luaj throws on serpent's intentionally-failing first `load("return
+    "..data)` attempt instead of returning nil → degrade to default storage
+    state like the lua-side `or {}` fallback.
+- **Debug entrypoints added**: `?ep=newgame&...&save=1` (runs the real
+  Dungeon.save + dumps root list / slotUsed via EP2 slogs — note PUtil.slog
+  renders as `slog: <message>`, the tag is NOT in the console line) and
+  `?ep=continue` (scans difficulties 0-5 for an autosave slot, sets
+  Dungeon.heroClass — deleteGame inside loadGame reads it! — then
+  SaveUtils.loadGame). rAF-shim cb errors now log the JS stack.
+- Harness: `scripts/stuff/htmlport/av_check.js` (audio + save roundtrip,
+  gunzips warrior.dat from localStorage to prove the bundle).
+- Headless limits: swiftshader headless doesn't enforce the autoplay gate
+  (ctx "running" without gesture) — the gesture hook is installed but its
+  engaged path needs a real-browser QA pass; actual audibility untested.
+
 ## Current state (as of 2026-09-07, session 8)
 
 - **Roof transparency fixed (the real root cause)**: html
@@ -314,29 +373,30 @@ Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 - Browser loop: reload → evaluate `window.__errors` (console.error capture),
   `window.__jsErrLog`. Error count stable = boot OK.
 
-## Remaining / next steps (for session 9)
+## Remaining / next steps (for session 10)
 
-State: boot → title → new game → town → dungeon levels (random gen) all
-work on web; combat, items, windows, quickslots render desktop-identical
-in the verified spots. Committed through 67412177e on html-port-runnable.
+State: saves persist (localStorage) and continue works; sound/music play
+through Web Audio; committed on html-port-runnable (session 9).
 
-1. **Level 2+ flow**: verify descend/ascend between levels (stairs,
-   InterlevelScene), depth-2+ tilesets (tiles1_x, tiles2_x... — same
-   fallback family as the tiles0_x fix), boss levels.
-2. **RU/other-locale text**: strings_ru.json loads, Cyrillic glyphs come
+1. **Real-browser QA** of sound (audibility, autoplay-gate resume after
+   click, music loop) and the continue flow (title → dashboard → Load).
+2. **Level 2+ flow**: verify descend/ascend between levels (stairs,
+   InterlevelScene), depth-2+ tilesets, boss levels — with saves now
+   persisting, the level-file fallback path is worth a pass.
+3. **RU/other-locale text**: strings_ru.json loads, Cyrillic glyphs come
    from langNames in getAllCharsAsString — verify a switched locale
    renders (desktop reference runs RU).
-3. **Saves**: `save_io_exception` still logged at boot; verify
-   HtmlPreferences/localStorage round-trip + continue-game flow.
 4. **CJK fallback font** (LXGWWenKaiScreen.ttf, 18MB) — not shipped; CJK
    falls back to the pixel font. Decide: lazy fetch vs accept missing CJK.
 5. **Title screen layout vs desktop**: camera 800x480 here, 480x320 on
    desktop — re-check proportions (bd snap-5z8).
-6. **Sound** (html audio shims stubs, `isSoundExists` blindly true) and
-   **mods** (`listResources` empty) — per goal, low priority.
+6. **Sound polish** (low): music position/pan edges, sound on tab-hide
+   (Game.pause → Sample.reset disposes voices; resume replays pending?),
+   mod sounds (listResources still empty).
 7. **Keys flow** enqueues events but is unverified live (Escape/back).
-8. **Before shipping**: strip `EP2` slogs + DebugEntryPoints telemetry,
-   keep `__jsErrLog`/`System.setOut` merge (cheap, useful), build with
+8. **Before shipping**: strip `EP2` slogs + DebugEntryPoints telemetry
+   (&save=1 root-list probe, &ep=continue), keep
+   `__jsErrLog`/`System.setOut` merge (cheap, useful), build with
    `-Pteavm.obfuscated=true`, re-check the 1px line only if Mike revives
    it.
 

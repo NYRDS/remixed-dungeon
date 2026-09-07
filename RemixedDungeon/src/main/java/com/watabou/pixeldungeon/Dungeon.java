@@ -731,7 +731,14 @@ public class Dungeon {
         Statistics.restoreFromBundle(bundle);
         Journal.restoreFromBundle(bundle);
         Logbook.restoreFromBundle(bundle);
-        LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
+        try {
+            LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeGameData").call(bundle.getString(SCRIPTS_DATA));
+        } catch (Exception e) {
+            // web luaj throws on serpent's intentionally-failing first compile
+            // attempt instead of returning nil - degrade to default storage
+            // state like the lua-side "or {}" fallback would
+            EventCollector.logEvent("lua_deserializeGameData_failed");
+        }
 
         moveTimeoutIndex = GamePreferences.limitTimeoutIndex(bundle.optInt(MOVE_TIMEOUT, Integer.MAX_VALUE));
     }
@@ -758,7 +765,12 @@ public class Dungeon {
     private static void loadModData() {
         val modBundle = gameBundle(SaveUtils.modDataFile());
         if (modBundle.isPresent()) {
-            LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeModData").call(modBundle.get().getString(SCRIPTS_DATA));
+            try {
+                LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeModData").call(modBundle.get().getString(SCRIPTS_DATA));
+            } catch (Exception e) {
+                // see loadGameFromBundle - web luaj throws where serpent expects nil
+                EventCollector.logEvent("lua_deserializeModData_failed");
+            }
         }
     }
 
@@ -797,7 +809,13 @@ public class Dungeon {
                     Bundle bundle = Bundle.read(input);
 
                     Level level = (Level) bundle.get("level");
-                    LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
+                    try {
+                        LuaEngine.require(LuaEngine.SCRIPTS_LIB_STORAGE).get("deserializeLevelData").call(bundle.getString(SCRIPTS_DATA));
+                    } catch (Exception e) {
+                        // see loadGameFromBundle - web luaj throws where
+                        // serpent expects nil
+                        EventCollector.logEvent("lua_deserializeLevelData_failed");
+                    }
 
                     if (level == null) {
                         level = newLevel(next);
