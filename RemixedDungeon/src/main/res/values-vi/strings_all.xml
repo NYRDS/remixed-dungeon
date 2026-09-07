@@ -108,6 +108,7 @@
     <string name="BardNPC_Desc">Nhạc sĩ thị trấn đang chơi đàn luýt của mình.</string>
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">bard</string>
+    <string name="BardNPC_Name_Objective">nhạc sĩ</string>
     <string name="Barrel_Name">thùng gỗ</string>
     <string name="Barrel_Pumpkin_Name">bí ngô</string>
     <string name="Bat_Gender">masculine</string>
@@ -117,6 +118,8 @@
     <string name="BattleAxe_Info">Đầu rìu thép khổng lồ của chiếc rìu chiến này mang lại trọng lượng đáng kể cho mỗi cú gảy.</string>
     <string name="BattleAxe_Name">rìu chiến đấu</string>
     <string name="Bee_Gender">masculine</string>
+    <string name="Bee_Name">ong</string>
+    <string name="Bee_Name_Objective">ong</string>
     <string name="BellaNPC_Amulet_F">Chào cô nàng xinh đẹp, ngươi có gì ở đó? Ah, một bùa thật tuyệt vời! Và ngươi... ngươi rực rỡ hơn bất kỳ ai. Thế nào nếu chúng ta đi dạo và bàn về tương lai chung?</string>
     <string name="BellaNPC_Amulet_M">Chào anh chàng đẹp trai, ngươi có gì ở đó? Ah, một bùa thật tuyệt vời! Và ngươi... ngươi đứng trên những kẻ phàm nhân kia. Thế nào nếu chúng ta đi dạo và bàn về tương lai chung?</string>
     <string name="BellaNPC_Angry">Dám... ngươi kẻ nhục nát!</string>
@@ -238,6 +241,7 @@
     <string name="ChaosSword_Info">Lưỡi của thanh kiếm này được tạo nên từ hỗn loạn thuần khiết và thỉnh thoảng lại rung nhẹ. Sức mạnh vĩ đại ẩn chứa trong vũ khí này có thể chém đôi gần như mọi thứ. Tuy nhiên, cần kỹ năng phi thường mới có thể khuất phục được sức mạnh hùng hậu của nó.</string>
     <string name="ChaosSword_Name">kiếm hỗn loạn</string>
     <string name="CharAction_Expel">đuổi ra</string>
+    <string name="CharAction_Give">đưa</string>
     <string name="CharAction_Hit">đánh</string>
     <string name="CharAction_PetInventory">kho đồ</string>
     <string name="CharAction_Push">đẩy</string>
@@ -283,6 +287,7 @@
     <string name="Claymore_Name">Kiếm Claymore</string>
     <string name="CloakSpell_Info">Bước vào bóng tối để trở nên vô hình. Giảm đáng kể cơ hội bị phát hiện. Không thể sử dụng khi kẻ địch ở gần.</string>
     <string name="ClothArmor_Desc">Bộ giáp nhẹ này chỉ cung cấp khả năng bảo vệ cơ bản.</string>
+    <string name="Codex_ACRead">ĐỌC</string>
     <string name="Codex_Info">Một trong nhiều cuốn sách có thể tìm thấy ở bất kỳ thư viện nào</string>
     <string name="Codex_Story_10">Glyph Entangle - Anh hùng có thể nhận được giáp thảo mộc, nhưng đồng thời cũng có thể bị rễ cây trói chân.</string>
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
@@ -445,6 +450,7 @@
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">Một chiếc Rìu Tomahawk truyền thống được tạo ra bởi các bậc thầy Gnoll, nơi mỗi bộ lạc có thiết kế độc đáo riêng. Chiếc Rìu này nhẹ hơn một chút so với các đối thủ của nó.</string>
     <string name="Gnoll_Gender">masculine</string>
+    <string name="Gold_Name">vàng</string>
     <string name="GoldenKey_Info">Những khía trên chiếc chìa khóa vàng này rất nhỏ và tinh xảo. Có lẽ nó có thể mở ổ khóa của một chiếc rương nào đó?</string>
     <string name="GoldenKey_Name">chìa khóa vàng</string>
     <string name="GoldenStatue_Gender">feminine</string>
@@ -463,6 +469,7 @@
     <string name="Halls_TileStatue">Cột</string>
     <string name="Heal_Cast">%s đã được chữa trị.</string>
     <string name="Heal_Info">Một phép thuật khá hữu ích trong ngục, phải không?</string>
+    <string name="Heal_Name">Chữa lành</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Chữa trị miễn phí cho mọi phiêu lưu giả!</string>
     <string name="HealerNPC_Message2">Quay lại bất cứ khi nào bạn cảm thấy ốm hoặc đói nhé!</string>
@@ -479,6 +486,7 @@
     <string name="Hedgehog_Info1">Cậu có đang tìm chú Gấu không?</string>
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
     <string name="HeroClass_Doctor">Bác Sĩ Dịch Hạch</string>
+    <string name="HeroClass_Elf">yêu tinh</string>
     <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
     <string name="HeroClass_ElfPerks_2">Tiên nữ bắt đầu với một cây cung gỗ được nâng cấp và một lứa tên.</string>
     <string name="HeroClass_ElfPerks_5">Yếu tinh kém thành thạo hơn với vũ khí cận chiến.</string>
@@ -512,6 +520,7 @@
     <string name="HeroSubClass_NameFreR">kẻ chạy tự do</string>
     <string name="HeroSubClass_NameGuardian">thủ vệ</string>
     <string name="HeroSubClass_NameLich">Lich</string>
+    <string name="HeroSubClass_NameNone">không</string>
     <string name="HeroSubClass_NameSnip">xạ thủ</string>
     <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="HeroSubClass_NameWitchdoctor">thầy pháp</string>
@@ -663,6 +672,7 @@
     <string name="Longsword_Gender">masculine</string>
     <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">Phần đầu sắt của vũ khí này gây sát thương đáng kể.</string>
+    <string name="Mace_Name">chùy</string>
     <string name="MageArmor_ACSpecial">ĐẤT NONG</string>
     <string name="MageArmor_Desc">Mặc chiếc áo choàng lộng lẫy này, một pháp sư có thể niệm phép đất nóng chảy: mọi kẻ thù trong tầm nhìn sẽ bị thiêu cháy và đồng thời không thể di chuyển.</string>
     <string name="MageArmor_NotMage">Chỉ pháp sư mới có thể sử dụng giáp này!</string>
@@ -679,8 +689,10 @@
     <string name="MeleeWeapon_Info1d">yếu</string>
     <string name="MeleeWeapon_Info2a">Sát thương trung bình là %d điểm mỗi lần đánh.</string>
     <string name="MeleeWeapon_Info3a">Đây là một vũ khí khá %s.</string>
+    <string name="MeleeWeapon_Info3b">nhanh</string>
     <string name="MeleeWeapon_Info3c">chậm</string>
     <string name="MeleeWeapon_Info3d">và</string>
+    <string name="MeleeWeapon_Info3e">nhưng</string>
     <string name="MeleeWeapon_Info3g">kém chính xác</string>
     <string name="MeleeWeapon_Info6b">Do sức mạnh dư thừa, sát thương tấn công của bạn với %s này được tăng lên.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
@@ -885,6 +897,7 @@
     <string name="RingOfSatiety_Name">Nhẫn No Đủ</string>
     <string name="RingOfShadows_Info">Kẻ thù sẽ khó nhận ra bạn hơn khi bạn đeo nhẫn này. Nhẫn Bóng Tối xuống cấp sẽ báo động cho kẻ thù mà lẽ ra chúng không hề để ý đến sự hiện diện của bạn.</string>
     <string name="Ring_BuffKnown">Đây là %s</string>
+    <string name="Ring_Gems_1">opal</string>
     <string name="Ring_Gems_10">thạch anh</string>
     <string name="Ring_Gems_11">mã não</string>
     <string name="Ring_Gems_7">tourmalin</string>
@@ -1312,6 +1325,7 @@
     <string name="WndSettings_ThirdQuickslot">Khoản truy cập nhanh thứ ba</string>
     <string name="WndSettings_UiScale">Tỷ lệ giao diện</string>
     <string name="WndSettings_UiSettings">Cài đặt giao diện</string>
+    <string name="WndSettings_ZoomIn">+</string>
     <string name="WndSettings_ZoomOut">-</string>
     <string name="WndStory_Guts">Thần Cổ bị đánh bại, vỡ vụn thành trăm mảnh nhưng chưa bị tiêu diệt hoàn toàn, đã bị phong ấn tại những tầng sâu nhất của hầm ngục. Nhưng gần đây con dấu đã bị phá vỡ, mở toang lối đi đến tổ của quỷ dữ. Những con quái vật ác mộng mà Thần Cổ tạo ra trong giấc ngủ của ngài đông đến mức chẳng còn lối thoát, chúng buộc phải hợp nhất với nhau tạo nên những đại sảnh kỳ dị này. Và khi bạn bước trên lớp thịt sống của chúng, bạn có thể cảm nhận nhịp đập trái tim của Thần Cổ vang vọng khắp nơi.</string>
     <string name="WndStory_Metropolis">Thành phố Lục phủ Mat người lùn từng là lớn nhất trong các thành bang của người lùn. Vào thời kỳ thịnh vượng, quân đội cơ giới của người lùn đã đẩy lùi thành công cuộc xâm lược của vị thần cổ xưa và quân đoàn quỷ của ngài. Người ta nói rằng, các chiến binh trở về đã mang theo những hạt giống của sự tàn phá, và chiến thắng đó là khởi đầu của sự chấm dứt cho vương quốc dưới đất.</string>
@@ -1413,6 +1427,7 @@
     <string name="town_deco_locked_door_name">Cửa khóa</string>
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
     <string name="town_deco_mud_desc">Đất đã tan chảy trong vùng băng vĩnh cửu này.</string>
+    <string name="town_deco_mud_name">Bùn</string>
     <string name="town_deco_painting_desc">Một tác phẩm nghệ thuật đẹp đẽ.</string>
     <string name="town_deco_painting_name">Bức Tranh</string>
     <string name="town_deco_pathway_name">đường mòn</string>
@@ -1428,6 +1443,7 @@
     <string name="town_deco_red_carpet_name">Thảm đỏ</string>
     <string name="town_deco_rope_name">dây thừng</string>
     <string name="town_deco_rug_desc">Được thiết kế với phong cách tinh tế.</string>
+    <string name="town_deco_rug_name">Thảm</string>
     <string name="town_deco_scrolls_name">Cuộn</string>
     <string name="town_deco_shelf_full_name">Kệ sách</string>
     <string name="town_deco_shelf_name">Các kệ sách</string>
@@ -1458,6 +1474,22 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

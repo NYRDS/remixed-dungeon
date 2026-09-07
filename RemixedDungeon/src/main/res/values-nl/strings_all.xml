@@ -118,6 +118,8 @@
     <string name="Bandit_Name">gekke bandiet</string>
     <string name="Bandit_Name_Objective">gekke bandiet</string>
     <string name="BardNPC_Gender">masculine</string>
+    <string name="BardNPC_Name">bard</string>
+    <string name="BardNPC_Name_Objective">bard</string>
     <string name="BarkskinBuff_Info">Het lichaam is bedekt met bast die een deel van de ontvangen schade blokkeert.</string>
     <string name="Barrel_Name">vat</string>
     <string name="Barrel_Pumpkin_Name">pompoen</string>
@@ -130,6 +132,8 @@
     <string name="BattleAxe_Info">Het enorme staande hoofd van deze strijdbijl geeft een aanzienlijk gewicht achter elke slag.</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
     <string name="Bee_Gender">masculine</string>
+    <string name="Bee_Name">bij</string>
+    <string name="Bee_Name_Objective">bij</string>
     <string name="BellaNPC_Amulet_F">Waarom hallo daar schatje, wat heb je daar? Ah, zo\'n uitmuntende amulet! En jij... je schittert zo veel helderder dan iedereen. Wat als we een wandeling maken en ons gezamenlijke toekomst bespreken?</string>
     <string name="BellaNPC_Amulet_M">Waarom hallo daar knapkerel, wat heb je daar? Ah, zo\'n uitmuntende amulet! En jij... je staat hoofd en schouders boven die plebejers. Wat als we een wandeling maken en ons gezamenlijke toekomst bespreken?</string>
     <string name="BellaNPC_Angry">Hoe durf je... je plebejer!</string>
@@ -240,11 +244,13 @@
     <string name="ChaosStaff_Info">Een staf doordrenkt met de Kracht van de Chaos! Waar kan een magiër nog van dromen — of bang voor zijn?</string>
     <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Name">chaoszwaard</string>
+    <string name="CharAction_Give">geven</string>
     <string name="CharAction_Hit">slaan</string>
     <string name="CharAction_PetInventory">inventaris</string>
     <string name="CharAction_Push">duwen</string>
     <string name="CharAction_Scare">bang maken</string>
     <string name="CharAction_Steal">stelen</string>
+    <string name="CharAction_Take">pakken</string>
     <string name="CharAction_Taunt">uitdagen</string>
     <string name="CharInfo_Level">Dit is een %2$s op niveau %1$d.</string>
     <string name="Char_Hit_0">%1$s raakte %2$s</string>
@@ -288,6 +294,7 @@
     <string name="CloakBuff_Name">Verguld</string>
     <string name="ClothArmor_Desc">Deze lichte bepantsering biedt eenvoudige bescherming.</string>
     <string name="ClothArmor_Name">stoffen pantser</string>
+    <string name="Codex_ACRead">LEZEN</string>
     <string name="Codex_Info">Een van de vele boeken die in elke bibliotheek te vinden zijn</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
@@ -446,6 +453,7 @@
     <string name="Gnoll_Name">gnol verkenner</string>
     <string name="Gnoll_Name_Objective">gnol verkenner</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
+    <string name="Gold_Name">goud</string>
     <string name="GoldenKey_Info">De inkepingen op deze gouden sleutel zijn klein en ingewikkeld. Misschien kan hij een kistslot openen?</string>
     <string name="GoldenKey_Name">Gouden sleutel</string>
     <string name="GoldenStatue_Gender">feminine</string>
@@ -463,6 +471,7 @@
     <string name="Halls_TileDescStatue">De paal is gemaakt van echte menselijke schedels. Geweldig.</string>
     <string name="Halls_TileStatue">Pilaar</string>
     <string name="Heal_Cast">%s is genezen.</string>
+    <string name="Heal_Name">Genezing</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Gratis behandeling voor elke avonturier!</string>
     <string name="HealthArrow_Gender">feminine</string>
@@ -473,6 +482,7 @@
     <string name="HeartOfDarkness_Info">Het zwart pulserende hart van de Bedrieglijke Geest.</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
     <string name="HeroClass_Doctor">Pestdokter</string>
+    <string name="HeroClass_Elf">elf</string>
     <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
     <string name="HeroClass_ElfPerks_2">Elven beginnen met een verbeterde houten boog en een hoop pijlen.</string>
     <string name="HeroClass_ElfPerks_5">Elfen zijn minder bedreven met naiwapens.</string>
@@ -509,6 +519,7 @@
     <string name="HeroSubClass_NameFreR">freerunner</string>
     <string name="HeroSubClass_NameGlad">gladiator</string>
     <string name="HeroSubClass_NameLich">Lich</string>
+    <string name="HeroSubClass_NameNone">geen</string>
     <string name="HeroSubClass_NameSnip">sluipschutter</string>
     <string name="HeroSubClass_NameWitchdoctor">toverdokter</string>
     <string name="Hero_AnotherTry">Je bent gestorven.\n Wil je het opnieuw proberen?</string>
@@ -570,6 +581,7 @@
     <string name="InvisibilityBuff_Info">Volledig onzichtbaar, wat kan helpen gevaren te vermijden of er een te worden.</string>
     <string name="InvisibilityBuff_Name">Onzichtbaar</string>
     <string name="IronKey_FromDepth">ijzeren sleutel van diepte %d</string>
+    <string name="Item_ACDrop">LATEN VALLEN</string>
     <string name="Item_DirThrow">Kies de richting van de worp</string>
     <string name="Item_Info">iets</string>
     <string name="Item_Info2">iets</string>
@@ -649,6 +661,7 @@
     <string name="LightningBolt_Name">Bliksemschicht</string>
     <string name="LightningTrap_Name">Bliksemval</string>
     <string name="LloidsBeacon_ACReturn">TERUGKEER</string>
+    <string name="LloidsBeacon_ACSet">PLAATSEN</string>
     <string name="LloidsBeacon_Info">De baken van Lloyd is een ingewikkeld magisch apparaat waarmee je kunt terugkeren naar een plek waar je al eerder bent geweest.</string>
     <string name="LloidsBeacon_Preventing">Een soort sterke magische aura die hier aanwezig is voorkomt dat je Lloyds boei kunt gebruiken!</string>
     <string name="LloidsBeacon_Return">De baken van Lloyd is succesvol geplaatst op je huidige locatie, nu kun je hier altijd terugkeren.</string>
@@ -658,6 +671,7 @@
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">De ijzeren kop van dit wapen richt aanzienlijke schade aan.</string>
+    <string name="Mace_Name">knots</string>
     <string name="MageArmor_ACSpecial">GESMOLTEN AARDE</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
     <string name="MagicArrow_Name">Magische pijl</string>
@@ -671,7 +685,10 @@
     <string name="MeleeWeapon_Info2a">De gemiddelde schade is %d punten per slag.</string>
     <string name="MeleeWeapon_Info2b">De typische gemiddelde schade is %1$d punten per slag en vereist meestal %2$d punten kracht.</string>
     <string name="MeleeWeapon_Info3a">Dit is een nogal %s wapen.</string>
+    <string name="MeleeWeapon_Info3b">snel</string>
+    <string name="MeleeWeapon_Info3c">langzaam</string>
     <string name="MeleeWeapon_Info3d">en</string>
+    <string name="MeleeWeapon_Info3e">maar</string>
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
     <string name="MeleeWeapon_Info6a">Vanwege je onvoldoende kracht is de nauwkeurigheid en snelheid van je aanval met dit %s verminderd.</string>
     <string name="MeleeWeapon_Info6b">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
@@ -897,6 +914,7 @@
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
     <string name="Ring_BuffKnown">Dit is een %1$s</string>
     <string name="Ring_Gems_0">diamant</string>
+    <string name="Ring_Gems_1">opaal</string>
     <string name="Ring_Gems_11">agaat</string>
     <string name="Ring_Gems_3">robijn</string>
     <string name="Ring_Gems_4">amethist</string>
@@ -1363,6 +1381,8 @@
     <string name="WndSettings_ThirdQuickslot">Derde sneltoets</string>
     <string name="WndSettings_UiScale">Schaal van de interface</string>
     <string name="WndSettings_UiSettings">Interface-instellingen</string>
+    <string name="WndSettings_ZoomIn">+</string>
+    <string name="WndSettings_ZoomOut">-</string>
     <string name="WndStory_Guts">Verslagen, verstrooid in stukken, maar niet volledig vernietigd, werd de Oude God verzegeld in de diepste niveaus van de kerker. Maar onlangs werd het zegel gebroken, waardoor de toegang tot de demonenhoeve wijd open stond. De nachtmerrieachtige monsters, geschapen door de Oude God in zijn slummer, waren zo talrijk dat, zonder een manier om te vluchten, ze gedwongen waren om met elkaar te smelten en deze gruwelijke hallen te vormen. En terwijl je over hun levende vlees loopt, kun je de klop van een Ouds Gods hart door hen heen voelen.</string>
     <string name="WndTilesKind_Title">Nog één ding:</string>
     <string name="WndTradeItem_Bought">Je hebt %1$s gekocht voor %2$dg</string>
@@ -1459,6 +1479,7 @@
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
     <string name="town_deco_glass_stained_name">Glas in lood</string>
     <string name="town_deco_hay_desc">Een klein hoopje lekker ruikend hooi.</string>
+    <string name="town_deco_hay_name">hooi</string>
     <string name="town_deco_inn_bed_desc">Ziet eruit als een heel comfortabel bed.</string>
     <string name="town_deco_inn_bed_name">Bed</string>
     <string name="town_deco_ladder_desc">Een oude ladder, onbetrouwbaar van uiterlijk.</string>
@@ -1469,12 +1490,14 @@
     <string name="town_deco_magenta_carpet_desc">De magenta kleur van dit tapijt doet denken aan lokale wijn.</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
     <string name="town_deco_mud_desc">Ontdooide grond in dit permafrostgebied.</string>
+    <string name="town_deco_mud_name">modder</string>
     <string name="town_deco_painting_name">Schilderij</string>
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_pedestal_name">Postament</string>
     <string name="town_deco_pole_desc">Een hoge paal ontworpen om de touw te spannen.</string>
     <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_rope_name">touw</string>
+    <string name="town_deco_rug_name">kleed</string>
     <string name="town_deco_shelf_name">Planken</string>
     <string name="town_deco_shelving_desc">Een indrukwekkend groot rek, waarvan de planken gevuld zijn met diverse dranken en versnaperingen.</string>
     <string name="town_deco_shelving_name">rekken</string>
@@ -1512,6 +1535,29 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

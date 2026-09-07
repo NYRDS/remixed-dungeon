@@ -95,12 +95,15 @@
     <string name="Bandit_Desc">המפלסים העמוקים יותר של המבוך שימשו תמיד מקום מסתור לכל מיני פושעים. לא כולם שמרו על דעת צלולה בתקופות הארוכות שבילו הרחק מאור היום. לפני זמן רב שכחו הגנבים והשודדים המשוגעים האלה מי הם ומדוע הם גונבים. נראה שהשודד הזה ציפה את פגיונו במשהו!</string>
     <string name="Bandit_Gender">masculine</string>
     <string name="BardNPC_Gender">masculine</string>
+    <string name="BardNPC_Name">בארד</string>
+    <string name="BardNPC_Name_Objective">בארד</string>
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">עטלף ערפד</string>
     <string name="Bat_Name_Objective">עטלף ערפד</string>
     <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">ראש הפלדה העצום של גרזן הקרב הזה מקנה משקל רב לכל מכה.</string>
     <string name="Bee_Gender">masculine</string>
+    <string name="Bee_Name">דבורה</string>
     <string name="Bee_Name_Objective">דבורה</string>
     <string name="BellaNPC_Angry">איך אתה מעז... אתה פשוט עני!</string>
     <string name="BellaNPC_Desc">נערה שנראית מאוד אלגנטית. כל המראה שלה אומר לך \&quot;אני טובה מדי עבור כולם.\&quot;</string>
@@ -209,9 +212,11 @@
     <string name="ChaosStaff_Name">צוות כאוס</string>
     <string name="ChaosSword_Gender">masculine</string>
     <string name="CharAction_Charm">לְקַסֵּם</string>
+    <string name="CharAction_Give">לתת</string>
     <string name="CharAction_PetInventory">מלאי</string>
     <string name="CharAction_Push">לדחוף</string>
     <string name="CharAction_Steal">לגנוב</string>
+    <string name="CharAction_Take">לקחת</string>
     <string name="Char_Hit_0">%1 היכה את %2</string>
     <string name="Char_Hit_1">%1$s היכה את %2$s</string>
     <string name="Char_Hit_2">%1$s היכה את %2$s</string>
@@ -247,6 +252,7 @@
     <string name="CloakSpell_Name">גלימה</string>
     <string name="ClothArmor_Desc">השריון הקל הזה מציע הגנה בסיסית.</string>
     <string name="ClothArmor_Name">שריון בד</string>
+    <string name="Codex_ACRead">לקרוא</string>
     <string name="Codex_Info">אחד מהספרים הרבים שניתן למצוא בכל ספרייה</string>
     <string name="Codex_Story_12">נשק בוער - בפגיעה מוצלחת, גורם נזק נוסף למטרה ועלול לשרוף אותה.</string>
     <string name="Codex_Story_16">נשק בר מזל - כמעט מתעלם לחלוטין משריון האויב, וגורם להרבה יותר נזק.</string>
@@ -393,6 +399,7 @@
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gnoll_Desc">גנולים הם דמויי צבועים. הם שוכנים בביובים ובמבוכים, ויוצאים לפשוט על פני השטח מדי פעם. סיירי הגנולים הם חברים רגילים בלהקה, הם לא חזקים כמו בריונים ולא חכמים כמו שאמאנים.</string>
     <string name="Gnoll_Gender">masculine</string>
+    <string name="Gold_Name">זהב</string>
     <string name="GoldenKey_Info">החריצים במפתח הזהב הזעיר והמסובך. אולי הוא יכול לפתוח מנעול של תיבה כלשהי?</string>
     <string name="GoldenKey_Name">מפתח זהב</string>
     <string name="GoldenStatue_Gender">feminine</string>
@@ -412,6 +419,7 @@
     <string name="Halls_TileDescBookshelf">ספרים בשפות עתיקות בוערים במדף הספרים.</string>
     <string name="Halls_TileStatue">עמוד</string>
     <string name="Heal_Cast">%s נרפא.</string>
+    <string name="Heal_Name">ריפוי</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">טיפול חינם לכל מטייל!</string>
     <string name="HealthArrow_Gender">feminine</string>
@@ -451,6 +459,7 @@
     <string name="HeroSubClass_NameFreR">רץ חופשי</string>
     <string name="HeroSubClass_NameGuardian">שומר</string>
     <string name="HeroSubClass_NameLich">ליץ\'</string>
+    <string name="HeroSubClass_NameNone">אין</string>
     <string name="HeroSubClass_NameWard">שומרת</string>
     <string name="HeroSubClass_NameWitchdoctor">רופא אליל</string>
     <string name="Hero_AnotherTry">מתת.\n האם תרצה לנסות שוב?</string>
@@ -498,6 +507,7 @@
     <string name="InterLevelScene_Returning">חוזר...</string>
     <string name="InventoryScroll_No">לא, שיניתי את דעתי</string>
     <string name="InvisibilityBuff_Info">בלתי נראה לחלוטין, מה שיכול לעזור להימנע מסכנות או להפוך לאחת.</string>
+    <string name="Item_ACDrop">להפיל</string>
     <string name="Item_ACPickup">לקחת</string>
     <string name="Item_DirThrow">בחר כיוון זריקה</string>
     <string name="Item_Info">משהו</string>
@@ -560,12 +570,14 @@
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
     <string name="LightningTrap_Name">מלכודת ברק</string>
+    <string name="LloidsBeacon_ACSet">להציב</string>
     <string name="LloidsBeacon_Preventing">אאורה קסומה חזקה הנמצאת כאן מונעת ממך להשתמש במגדלור של לויד!</string>
     <string name="LloidsBeacon_Set">\n\nמאור זה הוגדר אי שם ברמה %d של Remixed Dungeon.</string>
     <string name="Longsword_Gender">masculine</string>
     <string name="Luck_Name_0">בן מזל %s</string>
     <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">ראש הברזל של נשק זה גורם נזק משמעותי.</string>
+    <string name="Mace_Name">אלה</string>
     <string name="MageArmor_ACSpecial">אדמה מותכת</string>
     <string name="MageArmor_Name">גלימת קוסם</string>
     <string name="MagicTorch_Name">לפיד קסם</string>
@@ -577,7 +589,10 @@
     <string name="MeleeWeapon_Info1c">משודרג</string>
     <string name="MeleeWeapon_Info1d">מוחלש</string>
     <string name="MeleeWeapon_Info2a">הנזק הממוצע שלה הוא %d נקודות לפגיעה.</string>
+    <string name="MeleeWeapon_Info3b">מהיר</string>
+    <string name="MeleeWeapon_Info3c">איטי</string>
     <string name="MeleeWeapon_Info3d">ו</string>
+    <string name="MeleeWeapon_Info3e">אבל</string>
     <string name="MeleeWeapon_Info5">זה מכושף.</string>
     <string name="MeleeWeapon_Info6a">בגלל הכוח הלא מספק שלך, הדיוק והמהירות של ההתקפה שלך עם %s מופחתים.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
@@ -765,6 +780,7 @@
     <string name="RingOfStoneWalking_Info">הטבעת המוזרה הזו עשויה מאבן עמידה. מה שחשבת בהתחלה שהוא אודם הוא למעשה דם נוזלי שמוחזק במקום! בפנים יש חץ שמצביע על מה שנראה כמו קיר, לצד לב שבור... מה זה עשוי לעשות?</string>
     <string name="RingOfThorns_Name">טבעת קוצים</string>
     <string name="Ring_Gems_0">יהלום</string>
+    <string name="Ring_Gems_1">אופל</string>
     <string name="Ring_Identify">כעת אתה מכיר מספיק את %1$s כדי לזהות אותו. זהו %2$s.</string>
     <string name="Ring_Info2">ה-%1$s שלך מתהדק סביב האצבע שלך בכאב</string>
     <string name="Roar_Name">שאגה</string>
@@ -1129,6 +1145,8 @@
     <string name="WndSettings_ThirdQuickslot">חריץ שלישי</string>
     <string name="WndSettings_UiScale">קנה מידה של ממשק המשתמש</string>
     <string name="WndSettings_ZoomDef">זום ברירת מחדל</string>
+    <string name="WndSettings_ZoomIn">+</string>
+    <string name="WndSettings_ZoomOut">-</string>
     <string name="WndStory_Guts">מובס, מרוסק לחתיכים אך לא הושמד כליל, האל העתיק נחתם במעמקי המבוך ביותר. אך לאחרונה החותם נשבר, והותיר את הדרך אל קן השדים פתוחה לרווחה. המפלצות מהסיוטים שנבראו בשנתו של האל העתיק היו רבות כל כך, עד שלא נותרה להן דרך מילוט והן נאלצו להתמזג יחדיו וליצור את האולמות המרתיעים האלה. וככל שאתה דורך על בשרם החי, אתה מרגיש את פעימות לבו של האל העתיק מהדהדות בתוכם.</string>
 
     <string name="WndStory_Prision">לפני שנים רבות נבנה כאן כלא תת-קרקעי עבור הפושעים המסוכנים ביותר. בזמנו זה נראה רעיון חכם מאוד, כי המקום הזה אכן היה קשה מאוד לבריחה. אבל עד מהרה מיאזמה אפלה החלה לחלחל מלמטה, מטריפה את דעתם של אסירים ושומרים כאחד. בסופו של דבר הכלא ננטש, אף שכמה אסירים נותרו נעולים כאן.</string>
@@ -1200,6 +1218,7 @@
     <string name="town_deco_glass_stained_desc">יוצר הזכוכית הזו כנראה השקיע בה מאמץ רב.</string>
     <string name="town_deco_glass_stained_name">זכוכית משובצת</string>
     <string name="town_deco_hay_desc">ערימה קטנה של שחת ריחני</string>
+    <string name="town_deco_hay_name">חציר</string>
     <string name="town_deco_library_books_name">חומר קריאה</string>
     <string name="town_deco_library_sign_desc">נראה שיש ספרייה בתוך הבניין הזה.</string>
     <string name="town_deco_library_sign_name">שלט ספרייה</string>
@@ -1207,6 +1226,7 @@
     <string name="town_deco_movies_door_desc">דלת זו נראית עשויה היטב במיוחד. סביר להניח שהיא מובילה למשהו מדהים.</string>
     <string name="town_deco_movies_door_name">דלת</string>
     <string name="town_deco_mud_desc">אדמה מופשרת באזור קפוא-עד זה.</string>
+    <string name="town_deco_mud_name">בוץ</string>
     <string name="town_deco_painting_name">ציור</string>
     <string name="town_deco_pathway_name">שביל</string>
     <string name="town_deco_pedestal_desc">כן עם ספר קודש מונח עליו.</string>
@@ -1216,6 +1236,7 @@
     <string name="town_deco_poster_desc">מודעות המכריזות על הקרנות עתידיות בקולנוע.</string>
     <string name="town_deco_red_carpet_desc">השמועה אומרת ששטיחים אדומים דומים מקשטים את אולמות המטרופולין הגמדי.</string>
     <string name="town_deco_rope_name">חבל</string>
+    <string name="town_deco_rug_name">שטיח</string>
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
     <string name="town_deco_shieldboard_desc">מגינים שונים תלויים על הלוח. עדיין לא למכירה.</string>
     <string name="town_deco_shieldboard_name">מגנים</string>
@@ -1574,6 +1595,27 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

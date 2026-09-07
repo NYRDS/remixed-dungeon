@@ -106,6 +106,8 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="BardNPC_Desc">يعزف باردة المدينة على العود.</string>
     <string name="BardNPC_Gender">masculine</string>
+    <string name="BardNPC_Name">شاعر</string>
+    <string name="BardNPC_Name_Objective">شاعراً</string>
     <string name="BarkskinBuff_Name">لحاء الجلد</string>
     <string name="Barrel_Name">برميل</string>
     <string name="Bat_Desc">هؤلاء السكان السريعون والعنيدون في قباب الكهوف قد يهزمون خصوماً أكبر بكثير من خلال تجديد صحتهم مع كل ضربة ناجحة.</string>
@@ -115,6 +117,8 @@
     <string name="BattleAxe_Gender">masculine</string>
     <string name="BattleAxe_Info">رأس هذه الفأس الحربية الفولاذي الضخم يمنح قوة كبيرة لكل ضربة.</string>
     <string name="Bee_Gender">masculine</string>
+    <string name="Bee_Name">نحلة</string>
+    <string name="Bee_Name_Objective">نحلة</string>
     <string name="BellaNPC_Angry">كيف تجرؤ... أنت دهماء!</string>
     <string name="BellaNPC_Desc">فتاة تبدو راقية جداً. مظهرها بالكامل يخبرك \&quot;أنا جيدة جداً للجميع.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
@@ -261,6 +265,7 @@
     <string name="City_TileDescEntrance">منحدر يؤدي إلى العمق العلوي.</string>
     <string name="Claymore_Gender">masculine</string>
     <string name="CloakSpell_Name">العباءة</string>
+    <string name="Codex_ACRead">قراءة</string>
     <string name="Codex_Story_10">غليف التشابك - قد يحصل البطل على درع عشبي، لكنه في الوقت نفسه قد تُقيّده الجذور.</string>
     <string name="Codex_Story_12">سلاح مشتعل - عند ضربة ناجحة، يلحق ضررًا إضافيًا بالهدف وقد يحرقه.</string>
     <string name="Codex_Story_16">سلاح محظوظ - يتجاهل درع العدو تقريباً بالكامل، ويسبب ضرراً أكبر بكثير.</string>
@@ -420,6 +425,7 @@
     <string name="Halls_TileWater">لावा باردة</string>
     <string name="Haste_Name">سرعة قصوى</string>
     <string name="Heal_Cast">تم شفاء %s.</string>
+    <string name="Heal_Name">شفاء</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">علاج مجاني لكل مغامر!</string>
     <string name="HealerNPC_Name_Objective">كاهن البلدة</string>
@@ -508,6 +514,7 @@
     <string name="InterLevelScene_Returning">عودة...</string>
     <string name="InventoryScroll_No">لا، غيّرت رأيي</string>
     <string name="InvisibilityBuff_Info">مخفي تماماً، مما قد يساعد في تجنب الأخطار أو أن تصبح خطراً بحد ذاته.</string>
+    <string name="Item_ACDrop">إسقاط</string>
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
     <string name="Item_Info">شيء</string>
     <string name="Item_Name">شيء ما</string>
@@ -590,6 +597,7 @@
     <string name="Luck_Name_0">محظوظ %s</string>
     <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">رأس هذا السلاح الحديدي يلحق أضراراً جسيمة.</string>
+    <string name="Mace_Name">هراوة</string>
     <string name="MageArmor_ACSpecial">أرض منصهرة</string>
     <string name="MageArmor_Name">رداء الساحر</string>
     <string name="MailArmor_Name">درع حلقي</string>
@@ -600,6 +608,7 @@
     <string name="MeleeWeapon_Info3b">سريع</string>
     <string name="MeleeWeapon_Info3c">بطيء</string>
     <string name="MeleeWeapon_Info3d">و</string>
+    <string name="MeleeWeapon_Info3e">لكن</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
     <string name="MeleeWeapon_Info6b">بسبب قوتك الزائدة، تم زيادة ضرر هجومك بهذا %s.</string>
     <string name="MeleeWeapon_Info7c">يمكنك الشعور بسحر شرير يكمن داخل %s.</string>
@@ -1135,6 +1144,7 @@
     <string name="WndSettings_ThirdQuickslot">الفتحة السريعة الثالثة</string>
     <string name="WndSettings_UiScale">مقياس واجهة المستخدم</string>
     <string name="WndSettings_ZoomIn">+</string>
+    <string name="WndSettings_ZoomOut">-</string>
     <string name="WndStory_Caves">الكهوف الممتدة تحت السجن المهجور قليلة السكان. تقع في عمق كبير جدًا بحيث لا تستطيع المدينة استغلالها، وهي فقيرة جدًا بالمعادن لإثارة اهتمام الأقزام. في الماضي، كانت هناك نقطة تجارية هنا على الطريق بين هاتين الدولتين، لكنها اندثرت منذ تراجع عاصمة الأقزام. لم يسكنها الآن سوى بنات آوى المتواجدين في كل مكان والحيوانات تحت الأرض.</string>
     <string name="WndStory_Guts">بعد هزيمته وتحطّمه إلى شظايا دون أن يُدمَّر تمامًا، خُتم الإله القديم في أعمق طوابق الزنزانة. لكن مؤخرًا انكسر الختم، فاتسع الممر نحو عشّ الشياطين على مصراعيه. الوحوش الكابوسية التي وُلدت من أحلام الإله القديم أثناء سُباته كانت كثيرة لدرجة أنه لم يكن أمامها مفر، فاضطرت إلى الاندماج معًا مكوِّنة هذه القاعات البشعة. وبينما تسير فوق لحومها الحية، تشعر بنبض قلب الإله القديم يصدح عبرها.</string>
 
@@ -1221,17 +1231,20 @@
     <string name="town_deco_firewood_name">حطب</string>
     <string name="town_deco_flowerinthepot_desc">زهرة زينة ذات نكهة حلوة</string>
     <string name="town_deco_flowerinthepot_name">زهرة في وعاء</string>
+    <string name="town_deco_hay_name">قش</string>
     <string name="town_deco_ladder_desc">سلم قديم، يبدو غير موثوق به.</string>
     <string name="town_deco_library_books_name">مادة للقراءة</string>
     <string name="town_deco_library_sign_name">لافتة المكتبة</string>
     <string name="town_deco_movies_door_name">باب</string>
     <string name="town_deco_mud_desc">تربة ذائبة في هذه المنطقة دائمة التجمد.</string>
+    <string name="town_deco_mud_name">طين</string>
     <string name="town_deco_painting_name">لوحة</string>
     <string name="town_deco_pathway_name">مسار</string>
     <string name="town_deco_pillar_desc">في الماضي، كان هذا العمود يُستخدم كدعم ممتاز وزخرفة.</string>
     <string name="town_deco_porch_desc">شرفة مصنوعة من الخشب.</string>
     <string name="town_deco_rope_name">حبل</string>
     <string name="town_deco_rug_desc">مصمم بذوق رفيع</string>
+    <string name="town_deco_rug_name">سجادة</string>
     <string name="town_deco_screen_name">فاصل</string>
     <string name="town_deco_scrolls_desc">رف مغبر مليء بأنواع مختلفة من اللفائف والكتب.</string>
     <string name="town_deco_shelf_full_desc">على هذا الرف توجد مقتنيات صغيرة متنوعة.</string>
@@ -1263,6 +1276,19 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
