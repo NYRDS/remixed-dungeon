@@ -402,6 +402,7 @@
     <string name="FetidRat_Name">chuột hôi</string>
     <string name="FetidRat_Name_Objective">chuột hôi</string>
     <string name="Fez_Name">Mũ Fez</string>
+    <string name="FilteredMask_Info">Khẩu trang lọc là thiết bị được thiết kế để bảo vệ người đeo không hít phải không khí độc hại, bao gồm khói, hơi, khí và bụi bẩn cũng như vi sinh vật trong không khí.\n\nTuy nhiên chiếc mặt nạ này chỉ phục vụ mục đích trang trí.</string>
     <string name="FilteredMask_Name">Khẩu trang N95</string>
     <string name="FireArrow_Gender">feminine</string>
     <string name="FireElemental_Gender">masculine</string>
@@ -1317,6 +1318,7 @@
     <string name="WndTilesKind_ClassicLook">Giao diện cổ điển</string>
     <string name="WndTilesKind_text">Bạn sắp bước vào một Hầm ngục bị xâm chiếm bởi ma thuật bóp méo, nhưng bây giờ bạn có thể chọn cách nhìn nó:\n Bạn có muốn dùng dạng giả 3D hiện đại hay dạng phẳng cổ điển không?\nBạn có thể thay đổi sau trong menu tùy chọn trò chơi.</string>
     <string name="WndTradeItem_Buy">Mua với %d vàng</string>
+    <string name="WndTradeItem_Cancel">Bỏ qua</string>
     <string name="WndTradeItem_SellAll">Bán tất cả cho %dg</string>
     <string name="WndTradeItem_SellN">Bán %1$d cho %2$dg</string>
     <string name="WndWandmaker_Battle">Gậy chiến đấu</string>
@@ -1456,6 +1458,8 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

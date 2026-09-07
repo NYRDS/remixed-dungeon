@@ -138,6 +138,7 @@
     <string name="BellaNPC_Message">Ik heb geen interesse in plebejers zoals jij!</string>
     <string name="BellaNPC_Yes_End_Game">Zeker (Beëindig het spel)</string>
     <string name="Belongings_CantWearBoth">Je kunt %1$s en %2$s niet tegelijkertijd uitrusten!</string>
+    <string name="BishopNPC_Desc">Bisschop van de Heilige Kerk van Santa de Heer der Diepten</string>
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="Bishop_no_money">Je kunt er niet voor betalen.</string>
@@ -913,6 +914,7 @@
     <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="RottingFist_Desc">Verrottende Vuist van de Oude God</string>
     <string name="RottingFist_Gender">masculine</string>
+    <string name="RottingFist_Name">verrotte vuist</string>
     <string name="RottingFist_Name_Objective">vergaande vuist</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Alleen de grootste bogenschutters kunnen deze robijnboog gebruiken. Bijna elke pijl doorboort de vijand, een groot gat in zijn lichaam achterlatend, maar extreme kracht is nodig om de boogteef te spannen.</string>
@@ -1181,6 +1183,7 @@
     <string name="VampireSkull_Info">Deze masker is gemaakt van een volledig natuurlijke vampierschedel. Eigenlijk is het een vampierschedel... schedel van een grootkopige vampier. Griezelig.</string>
     <string name="VampireSkull_Name">Vampierschedel</string>
     <string name="Viscosity_Txt">%s van viscositeit</string>
+    <string name="WandMaker_Berry2">Iemand geluk met een Gniestoel zaadje, %s? Nee? Maak je geen zorgen, ik heb het niet eilig.</string>
     <string name="WandMaker_Desc">Deze oude maar kerngezonde heer draagt een lichtelijk verwarde uitdrukking. Hij wordt beschermd door een magisch schild.</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
@@ -1287,6 +1290,7 @@
     <string name="WndInfoItem_Owner">Deze oude graf kan iets nuttigs bevatten, maar de eigenaar zal zich zeker verzetten tegen het controleren ervan.</string>
     <string name="WndInfoItem_Remains">Dit is alles wat overblijft van een van je voorgangers. Misschien is het de moeite waard om te kijken of er waardevolle items in zitten.</string>
     <string name="WndInfoItem_Skeleton">Skelettenresten</string>
+    <string name="WndInstallingMod_copying_file">Kopiëren van %s naar Remixed Dungeon opslag</string>
     <string name="WndInstallingMod_skipping_file">Overslaan %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Recept uitvoeren</string>
     <string name="WndItemAlchemy_NoRecipes">Geen recepten beschikbaar met dit item en je huidige inventaris.</string>
@@ -1508,6 +1512,10 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
 
 
 

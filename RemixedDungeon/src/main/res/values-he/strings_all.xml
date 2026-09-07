@@ -174,6 +174,7 @@
     <string name="Challenges_Descriptions_1">ההתקפה היא ההגנה הטובה ביותר. בעקבות תורות אלה, אתה יוצא למבוך, כשהאמונה היא השומר החזק ביותר של גופך.</string>
     <string name="Challenges_Descriptions_2">כמאמין בהתחדשות טבעית של הגוף הרגיל, תמיד הייתם זהירים מפני שיקויים בעלי תכונות רפואיות. עדיף להיות בטוחים מאשר להצטער!</string>
     <string name="Challenges_Descriptions_3">האדמות סביב הצינוק נגועות זה מכבר ברוע, המונע צמיחת זרעים של עשבי מרפא וצמחים שונים. מי יודע כמה זמן יעבור עד שהצמח האחרון יחדל מלהתקיים באדמות שוממות אלה.</string>
+    <string name="Challenges_Descriptions_5">הדבר הראשון שהגיע עם הרוע, היה ערפל סמיך ובלתי חדיר, שמקשה כמעט לחלוטין לנווט בבירור במסדרונות האינסופיים של המבוך.</string>
     <string name="Challenges_Descriptions_7">התרגלת לעובדה שהחזקה ושימוש בנשק אינם נכונים מבחינה מוסרית, אך מה עוד יכול להגן עלייך מפני היצורים המשוטטים למטה?</string>
     <string name="Challenges_Names_0">דיאטה</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
@@ -780,6 +781,7 @@
     <string name="RottenPumpkinPie_Info">לא משנה כמה טוב זה היה כשהיה טרי, אין סיכוי שזה עדיין אכיל.</string>
     <string name="RottenPumpkinPie_Name">עוגת דלעת רקובה</string>
     <string name="RottenRation_Name">מנה רקובה</string>
+    <string name="RottingFist_Desc">אגרוף נרקב של האל העתיק</string>
     <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">אגרוף מרקיב</string>
     <string name="RottingFist_Name_Objective">אגרוף נרקב</string>
@@ -1572,6 +1574,8 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
 
 
 
