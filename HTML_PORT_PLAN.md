@@ -4,6 +4,42 @@ Branch: `html-port-runnable` (work in progress, see git log)
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
+## Current state (as of 2026-09-08, session 11)
+
+- **"First attack of mob on any level feels laggy" — root cause found and
+  partially mitigated** (committed cddd42c34). Attribution chain (fight
+  repro via `?ep=newgame&level=0&fight=1` + EP2 timing markers + CDP
+  profiler + `&nosound=1` control): the stall (~350-520ms at strike 2,
+  6-9ms at strike 3+) is INSIDE the game thread but NOT audio (persists
+  with sound disabled) and NOT lua handlers - it is a **V8 major GC
+  pause**. TeaVM JS objects are plain JS objects, the heap sits at
+  140-250MB (40MB teavm-app.js source + 1337 assets + game structures),
+  and after each level's allocation burst V8 runs a major GC right when
+  the player starts fighting. Heap sawtooth measured via
+  performance.memory sampling (fight_lag.js/attack_lag.js harnesses).
+  - **Audio switched to HTMLAudioElement** (WebSound/WebMusic/WebAudio
+    rewritten): decodeAudioData was measured BLOCKING the game thread
+    ~500-1000ms per first-played file (each fresh file), and element
+    playback offloads fetch+decode to the browser. Volume/rate/loop
+    native; pan folded into volume; blocked autoplay retried on first
+    gesture. NOTE: headless Chromium lacks mp3 codecs (NotSupportedError)
+    - ogg plays everywhere, mp3 needs a real browser (Mike's is fine).
+  - **LuaEngine loadfile prototype cache**: per-entity lua modules
+    (LuaScript.asInstance -> dofile) recompiled the same source per new
+    object; compiled chunks are now cached per file, repeat instances
+    ~1ms. First-instance compile+GC (~350ms) still lands once per file.
+  - **PUtil.gcHint()**: GameScene end-of-build hook; html schedules
+    performance.measureMemory (nudges V8 to collect during the level
+    transition). Desktop/android no-ops. An earlier aggressive variant
+    (48MB allocation burst) THRASHED the renderer and hung the tab -
+    do not use allocation bursts.
+  - Obfuscated build (-Pteavm.obfuscated=true): source 40MB -> 10.5MB but
+    heap/stalls unchanged (assets dominate, not code) - obfuscation is
+    still right for shipping (load time), just not a GC fix.
+  - REMAINING: the first lua-instance hit per file is ~350ms of V8 GC +
+    compile; durable fix = heap diet (asset retention audit, lazy big
+    assets, TeaVM upstream GC work).
+
 ## Current state (as of 2026-09-08, session 10)
 
 - **Isometric tile-variant re-roll FIXED** (Mike report: "after each hero
