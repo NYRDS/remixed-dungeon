@@ -62,6 +62,7 @@
     <string name="AzuterronNPC_Name_Objective">người lạ</string>
     <string name="AzuterronNPC_Quest_End">Tuyệt vời. Đây, uống bình thuốc này đi, chắc chắn nó sẽ có ích cho bạn.</string>
     <string name="AzuterronNPC_Quest_Reminder">Giúp tôi và tôi sẽ giúp bạn.</string>
+    <string name="Backstab_Aware">Nạn nhân không nên nhận ra bạn để thực hiện đâm lén tốt.</string>
     <string name="Backstab_Name">đâm lén</string>
     <string name="BadgesScene_Title">Huy hiệu của bạn</string>
     <string name="Badges_AllBags">Đã mua tất cả túi</string>
@@ -81,6 +82,7 @@
     <string name="Badges_GamesPlayed5">Đã chơi 5000 ván</string>
     <string name="Badges_GoldColleted3">Đã thu thập 2500 vàng</string>
     <string name="Badges_GoldColleted4">Đã thu thập 7500 vàng</string>
+    <string name="Badges_GrimWepon">Quái vật bị giết bởi vũ khí Grim</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
     <string name="Badges_ItemLvl2">Đã có vật phẩm cấp 6</string>
     <string name="Badges_ItemLvl3">Đã nhận vật phẩm cấp 9</string>
@@ -212,6 +214,7 @@
     <string name="Challenges_Descriptions_2">Là một tín徒 của sự hồi phục tự nhiên của cơ thể bình thường, bạn luôn cảnh giác với những loại thuốc có tác dụng chữa bệnh. Thà phòng còn hơn chữa!</string>
     <string name="Challenges_Descriptions_3">Vùng đất xung quanh hầm ngục đã lâu bị ác ý xâm nhiễm, ngăn cản sự nảy mầm của hạt giống cho các loại thảo mộc và thực vật. Ai biết được còn bao lâu nữa cây cối cuối cùng sẽ ngừng tồn tại trên vùng đất hoang tàn này.</string>
     <string name="Challenges_Descriptions_4">Một hiện diện tà ác đang ẩn nấp trong tâm trí của tất cả sinh vật trong hầm ngục, khiến chúng nhận thức được những sự kiện xảy ra với nhau.</string>
+    <string name="Challenges_Descriptions_8">Hành trình của bạn sẽ bắt đầu ở hố ga đen tối và nguy hiểm của thành phố, với lối duy nhất ra mặt đất bị chặn. Để tr tình trạng tồi tệ hơn, bạn chỉ có thể sử dụng trang bị tìm thấy trong ngục. Với tài nguyên và trang bị giới hạn, sự sống còn của bạn sẽ phụ thuộc vào kỹ năng và chiến lược của bạn.</string>
     <string name="Challenges_Names_1">Niềm tin là giáp trụ của tôi</string>
     <string name="Challenges_Names_4">Trí tuệ bầy đàn</string>
     <string name="Challenges_Names_5">Vào bóng tối</string>
@@ -467,6 +470,7 @@
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">golem</string>
     <string name="Goo_Gender">feminine</string>
+    <string name="Goo_Info1">Goo đang bơm hơi cho mình!</string>
     <string name="Goo_Info3">Ọp-ọp!</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
     <string name="Guts_TileGrass">Bụi cây khô</string>
@@ -545,12 +549,14 @@
     <string name="Hero_StaFury">Ngươi trở nên cuồng bạo!</string>
     <string name="Hero_StaOoze">Bùn ăn mòn ăn mòn cơ thể bạn. Rửa sạch nó đi!</string>
     <string name="Hero_StaRoots">Bạn không thể di chuyển!</string>
+    <string name="Hero_StaVertigo">Mọi thứ đang quay xoay quanh bạn!</string>
     <string name="Hero_Wait">...</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Ngay cả tôi cũng không thể ẩn nấp ngay trước mũi.</string>
     <string name="Horror_Name_0">Quái dị %s</string>
     <string name="Horror_Name_1">%s rùng rợn</string>
     <string name="Horror_Name_2">%s rùng rợn</string>
     <string name="HungerBuff_Info1">Bạn đang đói!</string>
+    <string name="HungerBuff_Info2">Bạn đang chết đói! Bạn cần ăn!</string>
     <string name="HungerBuff_Name1">Đói</string>
     <string name="Hunger_Hungry_0">Bạn đang đói.</string>
     <string name="Hunger_Starving_0">Bạn đang chết đói!</string>
@@ -977,6 +983,7 @@
     <string name="ScrollOfSummoning_Info">Khi đọc to, cuộn giấy này sẽ triệu hồi một con quái vật từ tầng hầm ngục hiện tại. Và nếu ý chí của nó đủ yếu, nó sẽ trở thành tôi tớ của bạn.</string>
     <string name="ScrollOfTeleportation_NoTeleport">Sức mạnh ma pháp của nơi này ngăn cản việc dịch chuyển của bạn!</string>
     <string name="ScrollOfTeleportation_Teleport">Trong nháy mắt, bạn đã được dịch chuyển đến một vị trí khác trên cấp độ này.</string>
+    <string name="ScrollOfTeleportation_Teleport2">Chỉ trong một nháy mắt %s đã bị dịch chuyển đến một vị trí khác của tầng.</string>
     <string name="ScrollOfTerror_Info2">Cuộn giấy bắn ra một tia chớp đỏ rực và %s bỏ chạy!</string>
     <string name="ScrollOfTerror_Info3">Cuộn giấy phát ra một tia sáng đỏ rực và lũ quái vật bỏ chạy!</string>
     <string name="ScrollOfUpgrade_Info">Cuộn giấy này sẽ nâng cấp một vật phẩm duy nhất, cải thiện chất lượng của nó. Một cây đũa phép sẽ tăng sức mạnh và số lượng điện tích; một vũ khí sẽ gây thêm sát thương hoặc tìm điểm yếu thường xuyên hơn; một bộ giáp sẽ đỡ thêm nhiều đòn; hiệu quả của chiếc nhẫn lên người đeo sẽ được tăng cường. Vũ khí và giáp cũng sẽ yêu cầu ít sức mạnh hơn để sử dụng, và mọi lời nguyền trên vật phẩm sẽ được hóa giải.</string>
@@ -1206,6 +1213,7 @@
     <string name="WandOfMagicMissile_Info">Cây gậy này phóng ra các tên lửa năng lượng ma thuật thuần khiết, gây sát thương trung bình cho mục tiêu.</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
+    <string name="WandOfRegrowth_Name">Gậy hồi sinh</string>
     <string name="WandOfSlowness_Info">Cây gậy này khiến sinh vật bị trúng di chuyển và tấn công chậm hơn một nửa cho đến khi hiệu ứng kết thúc.</string>
     <string name="WandOfSlowness_Info1">Không có gì xảy ra.</string>
     <string name="WandOfTelekinesis_Name">Gậy Thôi Miên</string>
@@ -1216,6 +1224,7 @@
     <string name="Wand_Name">%s phép thuật</string>
     <string name="Wand_Prompt">Chọn hướng để phóng phép</string>
     <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
+    <string name="Wand_Weapon">Bạn có thể sử dụng cây gậy phép này như một vũ khí cận chiến.</string>
     <string name="Wand_Wood_Types_10">sồi</string>
     <string name="Wand_Wood_Types_2">gỗ mun</string>
     <string name="Wand_Wood_Types_4">gỗ tếch</string>
@@ -1312,6 +1321,7 @@
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
     <string name="WndMovieTheatre_Title">Rạp Phim</string>
     <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">Chọn thú cưng</string>
     <string name="WndPlayGames_Connecting">Đang kết nối với Google Play Games, vui lòng chờ một chút</string>
     <string name="WndPlayGames_Show_Badges">Hiện huy hiệu</string>
     <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
@@ -1475,6 +1485,7 @@
     <string name="town_deco_projector_name">Máy chiếu phim</string>
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
     <string name="town_deco_red_carpet_name">Thảm đỏ</string>
+    <string name="town_deco_roof_name">Mái nhà</string>
     <string name="town_deco_rope_name">dây thừng</string>
     <string name="town_deco_rug_desc">Được thiết kế với phong cách tinh tế.</string>
     <string name="town_deco_rug_name">Thảm</string>
@@ -1509,5 +1520,16 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
+
 
 </resources>

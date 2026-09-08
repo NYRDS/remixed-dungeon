@@ -53,6 +53,7 @@
     <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name_Objective">זר</string>
     <string name="AzuterronNPC_Quest_Reminder">עזור לי ואני אעזור לך.</string>
+    <string name="Backstab_Aware">הקורבן לא אמור להיות מודע אליך כדי לבצע דקירה אחורית טובה.</string>
     <string name="BadgesScene_Title">התגים שלך</string>
     <string name="Badges_AllBags">כל התיקים נקנו</string>
     <string name="Badges_AllItems">כל השיקויים, המגילות, הטבעות והמטות זוהו</string>
@@ -140,6 +141,7 @@
     <string name="BloodTransfusion_Info">מנקז כמעט את כל הדם ממטרה כדי לרפא את עצמך. טקס אפל של הקרבה והישרדות.</string>
     <string name="BloodTransfusion_Name">עירוי דם</string>
     <string name="BodyArmorBuff_Info">השריון גדל על חשבון מהירות התנועה.</string>
+    <string name="BoneSaw_Name">מסור עצמות</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Bounce_Txt">%s של הקפצה</string>
     <string name="Bow_Info1">זהו נשק טווח. הוא חסר תועלת לכולם מלבד אלפים בטווח קרוב מאוד. כשקשת מצוידת אפשר לירות חצים.\n\n</string>
@@ -158,6 +160,7 @@
     <string name="CagedKobold_Intro">היי... היי! אתה אותו הרפתקן, נכון? תעזור לי, חבר, הצבאיים הארורים האלה נעלו אותי פה! הם מתכוונים להפעיל מחדש נשק עתיק כדי לכבוש את בני האדם על פני השטח! אבל בהתחשב בכמה שזה מסוכן, התנגדתי, אז הם פשוט זרקו אותי ונעלו אותי בכלוב! אני מתחנן שתמצא את המפתח לתא, ובתמורה, אעזור לך כמיטב יכולתי.</string>
     <string name="CagedKobold_Message1">בבקשה...</string>
     <string name="CagedKobold_Message2">אתה חייב לעזור לי לצאת, חבר</string>
+    <string name="CagedKobold_Message3">אני שונא הכול בכלוב הזה</string>
     <string name="CagedKobold_Name">קובולד כלוא</string>
     <string name="CagedKobold_Name_Objective">קובולד בכלוב</string>
     <string name="CagedKobold_Quest_End">אוי, תודה לך, תודה רבה! איך הצלחת למצוא את המפתח? אתה... אתה השמדת את הנשק?! זה מדהים! אתה יודע מה, אמרתי שאעזור לך, ואני חושב שאני יודע את הדרך הטובה ביותר. אני אשאר איתך לזמן מה. * הקובולד הכלוא הפך לנר</string>
@@ -183,6 +186,7 @@
     <string name="Challenges_Descriptions_3">האדמות סביב הצינוק נגועות זה מכבר ברוע, המונע צמיחת זרעים של עשבי מרפא וצמחים שונים. מי יודע כמה זמן יעבור עד שהצמח האחרון יחדל מלהתקיים באדמות שוממות אלה.</string>
     <string name="Challenges_Descriptions_5">הדבר הראשון שהגיע עם הרוע, היה ערפל סמיך ובלתי חדיר, שמקשה כמעט לחלוטין לנווט בבירור במסדרונות האינסופיים של המבוך.</string>
     <string name="Challenges_Descriptions_7">התרגלת לעובדה שהחזקה ושימוש בנשק אינם נכונים מבחינה מוסרית, אך מה עוד יכול להגן עלייך מפני היצורים המשוטטים למטה?</string>
+    <string name="Challenges_Descriptions_8">המסע שלך יתחיל בביוב האפל והמסוכן של העיר, עם הדרך היחידה לפני השטח חסומה. כדי להחמיר את המצב, תוכל להשתמש רק בציוד שאתה מוצא בתוך המבוך. עם משאבים וציוד מוגבלים, ההישרדות שלך תלויה בכישורים ובאסטרטגיה שלך.</string>
     <string name="Challenges_Names_0">דיאטה</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
     <string name="Challenges_Names_4">אינטליגנציית הלהקה</string>
@@ -254,6 +258,7 @@
     <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Name">Claymore</string>
     <string name="CloakBuff_Name">מוסתר</string>
+    <string name="CloakSpell_EnemiesNearby">אי אפשר להיכנס לצל כשאויבים נמצאים בקרבת מקום.</string>
     <string name="CloakSpell_Name">גלימה</string>
     <string name="ClothArmor_Desc">השריון הקל הזה מציע הגנה בסיסית.</string>
     <string name="ClothArmor_Name">שריון בד</string>
@@ -383,6 +388,7 @@
     <string name="FriedFish_Name">דג מטוגן</string>
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Name">הילת כפור</string>
+    <string name="FrostBuff_Name">קפוא</string>
     <string name="Frost_Shatter">הקור גורם ל-%s להתנפץ!</string>
     <string name="FrozenCarpaccio_Info3">מרענן!</string>
     <string name="FullFaceMask_Info">מסכת גז היא מסכה המשמשת להגנה על הלובש מפני שאיפת מזהמים באוויר וגזים רעילים. המסכה יוצרת כיסוי אטום על האף, הפה והעיניים.\n\nמסננים חסרים ממסכה זו אבל היא עדיין נראית מגניבה.</string>
@@ -417,6 +423,7 @@
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">גולם</string>
     <string name="Goo_Gender">feminine</string>
+    <string name="Goo_Info1">הגוו מתנפח!</string>
     <string name="Goo_Info3">גלורפ-גלורפ!</string>
     <string name="Goo_Name">גוגו</string>
     <string name="GothicArmor_Name">שריון גותי</string>
@@ -432,6 +439,7 @@
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">טיפול חינם לכל מטייל!</string>
     <string name="HealthArrow_Gender">feminine</string>
+    <string name="HealthArrow_Info">קצה החץ הזה מכוסה בשיקוי ריפוי.</string>
     <string name="HealthDart_Gender">masculine</string>
     <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Name">לב החושך</string>
@@ -448,6 +456,7 @@
     <string name="HeroClass_Hun">ציידת</string>
     <string name="HeroClass_HunPerks_1">ציידות מתחילות עם בומרנג ייחודי שניתן לשדרג.</string>
     <string name="HeroClass_HunPerks_3">ציידות מרוויחות יותר בריאות מטללים.</string>
+    <string name="HeroClass_HunPerks_4">ציידות חשות מפלצות סמוכות אפילו אם הן מוסתרות מאחורי מכשולים.</string>
     <string name="HeroClass_MagPerks_4">מכשפים משתמשים במאנה כדי להטיל כישופים יסודיים.</string>
     <string name="HeroClass_MagPerks_5">מגילות הזיהוי כבר מזוהות מההתחלה.</string>
     <string name="HeroClass_NecromancerPerks_0">נקרומנטרים מתחילים עם 15 נקודות בריאות.</string>
@@ -485,6 +494,7 @@
     <string name="Hero_Wait">...</string>
     <string name="Horror_Name_1">אימתני %s</string>
     <string name="HungerBuff_Info1">אתה רעב!</string>
+    <string name="HungerBuff_Info2">אתה גווע ברעב! אתה צריך לאכול!</string>
     <string name="HungerBuff_Name2">מורעב</string>
     <string name="Hunger_Hungry_0">אתה רעב.</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
@@ -1054,6 +1064,7 @@
     <string name="WandOfPoison_Info1">שום דבר לא קרה</string>
     <string name="WandOfPoison_Name">שרביט רעל</string>
     <string name="WandOfRegrowth_Info1">שום דבר לא קרה</string>
+    <string name="WandOfRegrowth_Name">שרביט הצמיחה</string>
     <string name="WandOfShadowbolt_Info">שרביט זה פולט אנרגיה אפלה וזדונית.</string>
     <string name="WandOfSlowness_Info1">שום דבר לא קרה</string>
     <string name="WandOfTeleportation_Info1">שום דבר לא קרה</string>
@@ -1125,6 +1136,7 @@
     <string name="WndLocalModInstall_title">התקן מוד ממחלקה מקומית</string>
     <string name="WndModInstall_Version">גרסה</string>
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
+    <string name="WndPetSelect_Title">בחר חיית מחמד</string>
     <string name="WndPlayGames_Show_Badges">הצג הישגים</string>
     <string name="WndPlayGames_Show_Error">הפעולה נכשלה. משהו השתבש...</string>
     <string name="WndPlayGames_Title">Google Play משחקים</string>
@@ -1217,6 +1229,7 @@
     <string name="gdpr_title">התאם אישית את חוויית הפרסום שלך</string>
     <string name="town_deco_armoronhanger_name">שריון</string>
     <string name="town_deco_armorstand_leather_desc">שריון עור אמין יהיה רכישה מצוינת לפני היציאה לצינוק.</string>
+    <string name="town_deco_armorstand_plate_desc">לדברי הסוחר, שריון הלוחות הכבד הזה היה פעם שייך ללוחם גדול.</string>
     <string name="town_deco_banner_desc">כרזה אלגנטית המתארת את סמלי המסבאה הזו.</string>
     <string name="town_deco_barrel_wine_desc">משמשת לאחסון משקה יקר ערך כמו יין.</string>
     <string name="town_deco_barrel_wine_name">חבית יין</string>
@@ -1284,6 +1297,7 @@
     <string name="town_deco_wall_desc">קיר פשוט עשוי בולי עץ.</string>
     <string name="town_deco_wallpaper_name">טפט</string>
     <string name="town_deco_window_name">חלון</string>
+    <string name="town_deco_wood_wall_desc">קיר בולי עץ בעל מראה חזק.</string>
     <string name="town_deco_wooden_bench_name">ספסל עץ</string>
     <string name="town_deco_wooden_chair_name">כיסא עץ</string>
 
@@ -1621,6 +1635,20 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

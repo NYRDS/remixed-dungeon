@@ -61,6 +61,7 @@
     <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name_Objective">غريباً</string>
     <string name="AzuterronNPC_Quest_Reminder">ساعدني وسأساعدك.</string>
+    <string name="Backstab_Aware">يجب ألا تكون الضحية على دراية بك من أجل طعنة خلفية ناجحة.</string>
     <string name="BadgesScene_Title">شاراتك</string>
     <string name="Badges_AllBags">تم شراء جميع الحقائب</string>
     <string name="Badges_AllItems">تم التعرف على جميع الجرعات، اللفائف، الخواتم والعصي</string>
@@ -78,6 +79,7 @@
     <string name="Badges_GoldColleted1">100 ذهب جُمع</string>
     <string name="Badges_GoldColleted3">تم جمع 2500 ذهب</string>
     <string name="Badges_GoldColleted4">تم جمع 7500 ذهب</string>
+    <string name="Badges_GrimWepon">تم قتل وحش بواسطة سلاح كئيب</string>
     <string name="Badges_HappyEnd">نهاية سعيدة</string>
     <string name="Badges_Ice_Guardian_Slain">تم القضاء على حارس الجليد</string>
     <string name="Badges_Info2">شارة فائقة جديدة: %s</string>
@@ -124,6 +126,7 @@
     <string name="BellaNPC_Desc">فتاة تبدو راقية جداً. مظهرها بالكامل يخبرك \&quot;أنا جيدة جداً للجميع.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">أنا لا أهتم بعامة الناس مثلك!</string>
+    <string name="BellaNPC_Name_Objective">بيلا</string>
     <string name="BellaNPC_No">لا، ليس معك</string>
     <string name="Belongings_CantWearBoth">لا يمكنك تجهيز %1 و %2 في نفس الوقت!</string>
     <string name="Belongings_Name">حقيبة ظهر</string>
@@ -177,6 +180,7 @@
     <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">مرحباً... مرحباً! أنت ذلك المغامر، صحيح؟ ساعدني يا صديقي، هؤلاء العسكريون الملاعين حبسوني هنا! إنهم ينوون إعادة تنشيط سلاح قديم لغزو البشر على السطح! لكن نظراً لخطورة الأمر، عارضتهم، فرموني وسجنوني في قفص! أتوسل إليك أن تجد مفتاح الزنزانة، وفي المقابل، سأساعدك بأقصى ما أستطيع.</string>
     <string name="CagedKobold_Message1">من فضلك...</string>
+    <string name="CagedKobold_Message3">أكره كل شيء في هذا القفص</string>
     <string name="CagedKobold_Name">كوبولد مسجون</string>
     <string name="CagedKobold_Name_Objective">كوبولد مسجون</string>
     <string name="Calm_Cast">%s يهدأ.</string>
@@ -423,6 +427,7 @@
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">غول</string>
     <string name="Goo_Gender">feminine</string>
+    <string name="Goo_Info1">الجيلي يملأ نفسه!</string>
     <string name="Goo_Info3">جلرب-جلرب!</string>
     <string name="Goo_Name">الهلام</string>
     <string name="Guts_TileWater">سائل لزج غريب</string>
@@ -451,6 +456,7 @@
     <string name="HeroClass_GnollPerks_2">يبدأ الغنول بدون أي درع ولكن مع فأس حربية فريدة</string>
     <string name="HeroClass_GnollPerks_3">لا يستطيع الغنول القراءة أو الكتابة.</string>
     <string name="HeroClass_HunPerks_1">تبدأ الصيادات ببوميرانغ فريد قابل للترقية.</string>
+    <string name="HeroClass_HunPerks_4">تستطيع الصيادات الإحساس بالوحوش المجاورة حتى لو كانت مختبئة خلف العوائق.</string>
     <string name="HeroClass_MagPerks_3">يمكن للسحرة استخدام العصي السحرية كسلاح قتال قريب.</string>
     <string name="HeroClass_MagPerks_4">يستخدم السحرة المانا لإلقاء التعاويذ العنصرية.</string>
     <string name="HeroClass_MagPerks_5">تتم التعرف على لفافات التعريف منذ البداية.</string>
@@ -478,10 +484,12 @@
     <string name="Hero_StaFurious">غاضب</string>
     <string name="Hero_StaFury">لقد أصبحت متوحشًا!</string>
     <string name="Hero_StaRoots">لا يمكنك التحرك!</string>
+    <string name="Hero_StaVertigo">كل شيء يدور حولك!</string>
     <string name="Hero_Wait">انتظار...</string>
     <string name="HideInGrassSpell_NeedGrassToHide">حتى أنا لا أستطيع الاختباء في العراء</string>
     <string name="Horror_Name_1">%s مخيف</string>
     <string name="HungerBuff_Info1">أنت جائع!</string>
+    <string name="HungerBuff_Info2">أنت تموت جوعاً! تحتاج إلى تناول الطعام!</string>
     <string name="HungerBuff_Name2">يموت من الجوع</string>
     <string name="Hunger_Hungry_0">أنت جائع.</string>
     <string name="HuntressArmor_Desc">يمكن للصياد في مثل هذا الرداء أن يخلق مروحة من الشفرات الشبحية. سيستهدف كل من هذه الشفرات عدواً واحداً في مجال رؤية الصياد، مسبباً ضرراً يعتمد على سلاحه القريب الحالي.</string>
@@ -515,6 +523,7 @@
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">صاحب الحانة</string>
     <string name="InnKeeperNPC_Name_Objective">صاحب الحانة</string>
+    <string name="InnServant_Phrase_2">هذا السكران يدفعني للجنون!</string>
     <string name="Instability_Name_0">غير مستقر %s</string>
     <string name="Instability_Name_2">غير مستقر %s</string>
     <string name="InterLevelScene_Descending">ننزلق...</string>
@@ -569,6 +578,7 @@
     <string name="Level_TileAlarmTrap">فخ إنذار</string>
     <string name="Level_TileBarricade">متاريس</string>
     <string name="Level_TileChasm">هاوية</string>
+    <string name="Level_TileDescBarricade">الحاجز الخشبي مثبت بإحكام لكنه جف عبر السنين. هل قد يحترق؟</string>
     <string name="Level_TileDescChasm">لا تستطيع رؤية القاع.</string>
     <string name="Level_TileDescInactiveTrap">لقد تم تفعيل الفخ من قبل وهو لم يعد خطيراً.</string>
     <string name="Level_TileDescLockedDoor">هذا الباب مغلق، تحتاج إلى مفتاح مطابق لفتحه.</string>
@@ -853,6 +863,7 @@
     <string name="ScrollOfMirrorImage_Info">سيؤدي التعويذة الموجودة على هذه اللفافة إلى إنشاء توأم وهمي للقارئ، والذي سيطارد أعداءه.</string>
     <string name="ScrollOfPsionicBlast_Info">تحتوي هذه اللفيفة على طاقة مدمرة، يمكن توجيهها نفسانياً لإلحاق ضرر هائل بجميع المخلوقات في نطاق الرؤية. ستُصاحبها ومضة ضوء تُعمى مؤقتاً كل من في منطقة التأثير، بما في ذلك قارئ اللفيفة.</string>
     <string name="ScrollOfTeleportation_Teleport">في غمضة عين، تم نقلك فجأة إلى موقع آخر من المستوى.</string>
+    <string name="ScrollOfTeleportation_Teleport2">في لمح البصر تم نقل %s إلى موقع آخر في المستوى.</string>
     <string name="ScrollOfTerror_Info2">يصدر المخطوطة وميضاً ساطعاً من الضوء الأحمر ويهرب %s!</string>
     <string name="ScrollOfTerror_Info3">يصدر المخطوط وميضاً أحمر ساطعاً وتفر الوحوش!</string>
     <string name="ScrollOfUpgrade_LooksBetter">أصبح %s بالتأكيد يبدو أفضل الآن</string>
@@ -1050,6 +1061,7 @@
     <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية النقية، مما يلحق ضرراً متوسطاً بالهدف.</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
     <string name="WandOfRegrowth_Info">عندما تنتهي حياة ما، تبدأ حياة جديدة بالنمو... الدورة الأبدية لا تنتهي!</string>
+    <string name="WandOfRegrowth_Name">عصا التجدد</string>
     <string name="WandOfSlowness_Info">تجعل هذه العصا الكائن المستهدف يتحرك ويهاجم بنصف سرعته المعتادة حتى ينتهي التأثير.</string>
     <string name="WandOfTeleportation_Info2">لم يحدث شيء</string>
     <string name="Wand_ACZap">زَاب</string>
@@ -1126,6 +1138,7 @@
     <string name="WndLocalModInstall_text">اختر الدليل لتثبيت المود منه</string>
     <string name="WndLocalModInstall_title">تثبيت التعديل من دليل محلي</string>
     <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \&quot;إعلان\&quot; مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
+    <string name="WndPetSelect_Title">اختر الحيوان الأليف</string>
     <string name="WndPlayGames_BackupProgress">نسخ احتياطي لتقدم اللعبة</string>
     <string name="WndPlayGames_Connecting">جاري الاتصال بـ Google Play Games، يرجى الانتظار قليلاً</string>
 
@@ -1289,6 +1302,7 @@
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
     <string name="town_deco_wardrobe_desc">خزانة خشبية كبيرة.</string>
     <string name="town_deco_window_name">نافذة</string>
+    <string name="town_deco_wood_wall_desc">جدار خشبي قوي المظهر.</string>
     <string name="town_deco_wooden_bench_desc">مقعد، مصنوع من الخشب، يبدو غير مريح للجلوس.</string>
     <string name="town_deco_wooden_bench_name">مجلس خشبي</string>
     <string name="town_deco_wooden_chair_name">كرسي خشبي</string>
@@ -1298,6 +1312,20 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

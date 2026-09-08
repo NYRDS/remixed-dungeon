@@ -179,6 +179,7 @@
     <string name="BodyArmorBuff_Info">De pantser wordt verhoogd ten koste van bewegingssnelheid.</string>
     <string name="BodyArmorBuff_Name">Lichaamspantser</string>
     <string name="BoneSaw_Info">Een precisie-geengineerde chirurgische zaag ontworpen voor snelle ontleding. De schade en aanvalsnelheid worden dodelijker met de vaardigheid van de Pestdokter. Critische treffers snijden extra oogstbare delen van vijanden, en het slaat met ruthloze efficiëntie tegen gelamde vijanden.</string>
+    <string name="BoneSaw_Name">botenzaag</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Bow_Info1">Dit is een afstandswapen. Het is nutteloos voor iedereen behalve elfen op zeer korte afstand. Met een boog uitgerust kun je pijlen afschieten.\n\n</string>
@@ -223,6 +224,7 @@
     <string name="Challenges_Descriptions_3">Het land rond de kerker is al lang besmet met boosaardigheid, waardoor de zaden van allerlei kruiden en planten niet kunnen groeien. Wie weet hoe lang het nog duurt voordat de laatste plant op deze barre gronden ophoudt te bestaan.</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Descriptions_6">De oude kunst van runen lezen is verboden en wordt tegen alle kosten vermeden, vanwege de vloek die rust op elk perkament dat de kelder of haar omgeving binnenbereikt.</string>
+    <string name="Challenges_Descriptions_8">Je reis begint in de donkere en gevaarlijke rioleringen van de stad, met de enige weg naar de oppervlakte geblokkeerd. Om het erger te maken, kun je alleen uitrusting gebruiken die je in de kelder vindt. Met beperkte middelen en uitrusting hangt je overleving af van je vaardigheden en strategie.</string>
     <string name="Challenges_Names_3">Woestijn</string>
     <string name="Challenges_Names_5">In de duisternis</string>
     <string name="Challenges_Names_8">Geen stad</string>
@@ -375,6 +377,7 @@
     <string name="DrunkardNPC_Desc">Vaste klant van de herberg in natuurlijke staat.</string>
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">dronkaard</string>
+    <string name="Drunkard_Phrase_3">Dit bier smaakt als modder</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_DeadEnd">Wat doe je hier?!</string>
     <string name="Dungeon_NoTips">De tekst is onleesbaar...</string>
@@ -545,6 +548,7 @@
     <string name="Hero_StaParalysis">Je bent gelamd!</string>
     <string name="Hero_StaPoison">Je bent vergiftigd!</string>
     <string name="Hero_StaRoots">Je kunt je niet bewegen!</string>
+    <string name="Hero_StaVertigo">Alles draait om je heen!</string>
     <string name="Hero_StaWeakness">Je voelt je verzwakt!</string>
     <string name="Hero_Wait">...</string>
     <string name="Horror_Name_1">Griezelige %s</string>
@@ -808,6 +812,7 @@
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze gebukte persoon is verborgen onder een leer overall. Van hem komt een bittere geur van medicijnen en... knoflook?</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">pestarts</string>
+    <string name="PlagueDoctorNPC_Name_Objective">pestdokter</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Breng me %d rattenhuiden.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Kun je het geloven?! Die idiooten hebben nog steeds niet door hoe gevaarlijk deze verdomde riool is! Alsof bewakers en avonturiers de stad kunnen beschermen tegen wat dan ook. Hah! Geen wapen kan de ziekte tegenhouden. Maar ik heb bewijzen nodig, misschien kun je me helpen? Breng me %d rattenvellen, zodat ik extra tests kan doen.</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, je bent terug! _Vijf dode ratten_, perfect! Hun huiden zullen cruciaal zijn voor mijn onderzoek. En zoals beloofd, voor je dappere inspanning heb ik dit harnas voor je gemaakt van hun eigen vellen. Het is doordrenkt met een vleugje van de pest, maar maak je geen zorgen! Het is gecontroleerd, het beschermt! Ga nu! Bescherm de stad!</string>
@@ -986,6 +991,7 @@
     <string name="ScrollOfSummoning_Info_2">Het monster heeft je oproep beantwoord!</string>
     <string name="ScrollOfSummoning_Name">Oproeprol</string>
     <string name="ScrollOfTeleportation_Teleport">In een oogwenk ben je geteleporteerd naar een andere plek op dit niveau.</string>
+    <string name="ScrollOfTeleportation_Teleport2">In een oogwenk werd %s geteleporteerd naar een andere locatie in het niveau.</string>
     <string name="ScrollOfTerror_Info1">De perkamentrol flitst met een fel rood licht</string>
     <string name="ScrollOfTerror_Info3">De rol zendt een felle flits van rood licht uit en de monsters vluchten!</string>
     <string name="ScrollOfUpgrade_InvTitle">Kies een voorwerp om te upgraden</string>
@@ -1353,6 +1359,7 @@
     <string name="WndMovieTheatre_Instruction">Groetjes en welkom in onze bioscoop! Wij bieden een speciale dienst aan, waarbij je gratis een speciale film kunt kijken genaamd \'reclame\'. En als je die helemaal kijkt, krijg je %d goudmunten als beloning!</string>
     <string name="WndMovieTheatre_Sorry">Er is iets misgegaan en we konden uw beloning niet bezorgen...</string>
     <string name="WndMovieTheatre_Thank_You">Dank u voor uw deelname!</string>
+    <string name="WndPetSelect_Title">Selecteer huisdier</string>
     <string name="WndPlayGames_RestoreProgress">Spelvoortgang herstellen</string>
     <string name="WndPlayGames_Show_Badges">Toon insignes</string>
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
@@ -1553,6 +1560,7 @@
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
     <string name="town_deco_weaponrack_name">Wapenrek</string>
     <string name="town_deco_window_name">Raam</string>
+    <string name="town_deco_wood_wall_desc">Een stevig uitziende stammenmuur.</string>
     <string name="town_deco_wooden_bench_desc">Houten bank, ziet er ongemakkelijk uit om op te zitten.</string>
     <string name="town_deco_wooden_bench_name">Houten bank</string>
     <string name="town_deco_wooden_chair_name">Houten stoel</string>
@@ -1562,5 +1570,13 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
 
 </resources>
