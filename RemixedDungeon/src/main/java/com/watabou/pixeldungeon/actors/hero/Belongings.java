@@ -660,6 +660,10 @@ public class Belongings implements Iterable<Item>, Bundlable {
     }
 
     public void dropAll() {
+        dropAll(owner.getPos());
+    }
+
+    public void dropAll(int cell) {
         var itemsToDrop = new ArrayList<Item>();
 
         for (Item item : this) {
@@ -669,7 +673,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
         }
 
         for (Item item : itemsToDrop) {
-            item.doDrop(owner);
+            owner.level().animatedDrop(item.detachAll(owner.getBelongings().backpack), cell);
         }
     }
 

@@ -1130,29 +1130,21 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return bonus[0];
     }
 
-    public void placeTo(int cell) {
+	public void placeTo(int cell) {
+		setPos(cell);
 
-        final int oldPos = getPos();
-        if (level().cellValid(oldPos)) {
-            if (level().map[oldPos] == Terrain.OPEN_DOOR) {
-                Door.leave(oldPos);
-            }
-        }
+		if (!isFlying()) {
+			level().press(cell, this);
+		}
 
-        setPos(cell);
+		if (isFlying() && level().map[cell] == Terrain.DOOR) {
+			Door.enter(getPos());
+		}
 
-        if (!isFlying()) {
-            level().press(cell, this);
-        }
-
-        if (isFlying() && level().map[cell] == Terrain.DOOR) {
-            Door.enter(getPos());
-        }
-
-        if (this != Dungeon.hero) {
-            getSprite().setVisible(Dungeon.isCellVisible(cell) && invisible >= 0);
-        }
-    }
+		if (this != Dungeon.hero) {
+			getSprite().setVisible(Dungeon.isCellVisible(cell) && invisible >= 0);
+		}
+	}
 
     public void move(int step) {
         if (!isMovable() || hasBuff(Roots.class)) {
@@ -1441,15 +1433,29 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
     }
 
-    public void setPos(int pos) {
-        if (pos == Level.INVALID_CELL) { // level may be not yet available here
-            throw new TrackedRuntimeException("Trying to set invalid pos " + pos + " for " + getEntityKind());
-        }
-        prevPos = this.pos;
-        freeCell(this);
-        this.pos = pos;
-        occupyCell(this);
-    }
+	public void setPos(int pos) {
+		if (pos == Level.INVALID_CELL) { // level may be not yet available here
+			throw new TrackedRuntimeException("Trying to set invalid pos " + pos + " for " + getEntityKind());
+		}
+		final int oldPos = this.pos;
+		prevPos = this.pos;
+		freeCell(this);
+		this.pos = pos;
+		occupyCell(this);
+		closeDoorBehind(oldPos);
+	}
+
+	// every position change (walk, swap, blink, teleport, spawn reposition) closes
+	// the door it left; runs after freeCell so the mover no longer counts as
+	// standing in the doorway
+	private void closeDoorBehind(int oldPos) {
+		if (!GameScene.isSceneReady()) {
+			return;
+		}
+		if (level().cellValid(oldPos) && level().map[oldPos] == Terrain.OPEN_DOOR) {
+			Door.leave(oldPos);
+		}
+	}
 
     public boolean collect(@NotNull Item item) {
         item = Treasury.get().check(item);

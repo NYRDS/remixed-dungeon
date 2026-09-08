@@ -46,6 +46,7 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.features.Chasm;
+import com.watabou.pixeldungeon.levels.features.Door;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
@@ -403,16 +404,19 @@ public abstract class Mob extends Char {
         if (!(cause instanceof Chasm)) {
             // caveman: no carcass if the body just came back (BlackSkull), and
             // pets never leave one - reanimating a pet carcass is an undead factory
+            // drops go to a nearby cell off the doorway - a heap on the tile would
+            // wedge the door open (Door.leave refuses while a heap sits there)
+            final int dropCell = Door.avoidDoor(getPos());
             if (!resurrectedOnDeath
                 && getOwnerId() == getId()
                 && Random.Float(1) <= carcassChance) {
                 Item carcass = carcass();
                 if (carcass.valid()) {
-                    level().drop(carcass, getPos());
+                    level().drop(carcass, dropCell);
                 }
             }
 
-            getBelongings().dropAll();
+            getBelongings().dropAll(dropCell);
         }
 
         if (hero.isAlive() && !CharUtils.isVisible(this)) {

@@ -28,6 +28,30 @@ Line numbers refer to the working tree at the time of analysis (master, post `c0
 
 ### 1. Doors never close after you leave the door tile
 
+> **FIXED (2026-09-08):** the main culprit was an ordering bug: `placeTo` called
+> `Door.leave(oldPos)` *before* `setPos` freed the mover's old cell, so
+> `Door.leave`'s `Actor.findChar(pos) == null` guard always saw the mover itself
+> and refused — doors never closed even on plain walk-out. Now every position
+> change closes the door it left: `Char.setPos` calls the new `closeDoorBehind`
+> *after* `occupyCell` (i.e. after `freeCell(this)`), guarded by
+> `GameScene.isSceneReady()` so level gen/transitions don't observe() early.
+> `placeTo`'s inline pre-close block is gone (its fly-onto-door handling stays).
+> Covers walk, swap, blink (`WandOfBlink.appear` routes through `placeTo`),
+> `_stepBack`, spawn repositioning and script `setPos`.
+>
+> Door-wedging heaps are avoided at the source: `Mob.die` now drops the carcass
+> and gear via `Door.avoidDoor(getPos())` (new helper — nearest non-door,
+> standable cell; falls back to the door cell if none) and
+> `Belongings.dropAll(cell)` places heaps there. A player-dropped heap on a door
+> still pins it until picked up (classic behavior). An occupied doorway stays
+> open by design; a door whose occupant *died* on it stays open until the next
+> char passes through, then closes.
+>
+> Verified live on the desktop debug server (SewerLevel): closed 5 → hero steps
+> on, 6 → hero leaves, back to 5 (two doors); rat killed on a doorway dropped
+> carcass+gold onto adjacent grass cells, door tile clean, and closed when the
+> hero next walked through.
+
 The close path is intact and unchanged since the classic import:
 
 - `features/Door.java:25-34` — `Door.leave(pos)` sets `Terrain.DOOR`, but **silently does nothing if a heap sits on the tile**.
